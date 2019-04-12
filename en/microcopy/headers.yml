@@ -1,0 +1,32 @@
+---
+primary_header: 
+  navigation_links: 
+    - text: Get Started
+      url: https://developer.box.com/docs/quickstart-guides
+    - text: Guides
+      url: https://developer.box.com/docs
+    - text: API Reference
+      url: /en/reference/
+    - text: SDKs & CLI
+      url: https://developer.box.com/docs/sdks
+  console_button:
+    text: Manage Applications
+    url: https://account.box.com/developers/services
+
+secondary_header:
+  root: 
+    alt: Box Developer Documentation
+    url: /en/
+  new_label:
+    text: new
+  legacy_link:
+    text: Back to old site
+    url: https://developer.box.com/reference
+  navigation_links:
+    - text: Blog
+      url: https://medium.com/box-developer-blog
+    - text: Forum
+      url: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+    - text: Feedback
+      url: https://box.uservoice.com/forums/909778-product-feedback?category_id=330838
+      

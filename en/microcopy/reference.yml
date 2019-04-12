@@ -1,0 +1,38 @@
+---
+groups:
+  api_reference: API Reference
+  other_resources: Other Resources
+content:
+  api_reference: API Reference
+  copy: Copy
+  request: Request
+  response: Response
+  example: example
+  example_key: example key
+  optional: optional
+  required: required
+  default: Default
+  max_length: Max Length
+  range: Range
+  request_example: Request Example
+  response_example: Response Example
+  value_is_always: Value is always
+  value_is_any_of: Value is any of
+  value_is_one_of: Value is one of
+  none: none
+  in:
+    body: in body
+    path: in path
+    header: in header
+    cookie: in cookie
+    query: in query
+  boolean: boolean
+  string: string
+  object: object
+  array: array
+  associative_array: associative array
+  date-time: date/time
+  int64: int64
+  email: email
+  integer: integer
+
