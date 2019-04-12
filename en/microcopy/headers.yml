@@ -21,7 +21,7 @@ secondary_header:
     text: new
   legacy_link:
     text: Back to old site
-    url: https://developer.box.com/reference
+    url: https://developer.box.com/reference/
   navigation_links:
     - text: Blog
       url: https://medium.com/box-developer-blog
