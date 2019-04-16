@@ -36,4 +36,5 @@ content:
   int32: int32
   email: email
   integer: integer
+  uuid: uuid
 
