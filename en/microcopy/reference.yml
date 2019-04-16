@@ -33,6 +33,7 @@ content:
   associative_array: associative array
   date-time: date/time
   int64: int64
+  int32: int32
   email: email
   integer: integer
 
