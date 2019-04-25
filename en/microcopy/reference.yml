@@ -37,4 +37,11 @@ content:
   email: email
   integer: integer
   uuid: uuid
-
+  welcome: |-
+    Welcome to our new developer documentation. This new site is still a 
+    work in progress and for now it only contains our reference documentation
+    while we grow it out over time.
+    
+    For now, have a look around and please send us any feedback
+    on [Twitter](https://twitter.com/boxplatform)
+    or [GitHub](https://twitter.com/developer.box.com).
