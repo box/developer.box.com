@@ -38,10 +38,10 @@ content:
   integer: integer
   uuid: uuid
   welcome: |-
-    Welcome to our new developer documentation. This new site is still a 
-    work in progress and for now it only contains our reference documentation
-    while we grow it out over time.
+    Welcome to our updated developer documentation, which is still very
+    much a work in progress. For now it only contains our reference documentation
+    while we work on moving more of our documentation over to this site.
     
-    For now, have a look around and please send us any feedback
+    Have a look around and please send us any feedback
     on [Twitter](https://twitter.com/boxplatform)
     or [GitHub](https://twitter.com/developer.box.com).
