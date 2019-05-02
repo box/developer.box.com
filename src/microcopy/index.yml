@@ -1,5 +1,9 @@
 ---
-- $ref: "./head.yml"
-- $ref: "./refresh_notification.yml"
-- $ref: "./headers.yml"
-- $ref: "./reference.yml"
+head: 
+  $ref: "./head.yml"
+refresh_notification:
+  $ref: "./refresh_notification.yml"
+headers:
+  $ref: "./headers.yml"
+reference:
+  $ref: "./reference.yml"
