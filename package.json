@@ -17,9 +17,19 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "start": "http-server . -p 8081"
+    "test": "yamllint ./",
+    "watch": "watch 'yarn build' src",
+    "clean": "rm -rf compiled && mkdir compiled",
+    "prebuild": "yarn clean",
+    "build": "node -e 'require(\"./build/compiler\").write()'",
+    "serve": "http-server -p 8081 ./compiled",
+    "start": "concurrently 'yarn serve' 'yarn watch'"
   },
   "dependencies": {
-    "http-server": "^0.11.1"
+    "@stoplight/json-ref-resolver": "^1.4.1",
+    "concurrently": "^4.1.0",
+    "http-server": "^0.11.1",
+    "js-yaml": "^3.13.1",
+    "watch": "^1.0.2"
   }
 }
