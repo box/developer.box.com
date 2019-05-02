@@ -43,7 +43,6 @@ class Compiler {
    * Write the resolved config to file
    */
   async write() {
-    console.dir('Compiling')
     const target = 'compiled'
     const config = await this.load()
 
@@ -53,7 +52,7 @@ class Compiler {
     }
 
     // Pretty print the config, with a tab size of 2
-    fs.writeFileSync(`./${target}/config.json`, JSON.stringify(config, null, 2))
+    fs.writeFileSync(`./${target}/index.json`, JSON.stringify(config, null, 2))
   }
 }
 

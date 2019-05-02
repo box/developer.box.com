@@ -1,6 +1,6 @@
 ---
-primary_header: 
-  navigation_links: 
+primary_header:
+  navigation_links:
     - text: Get Started
       url: https://developer.box.com/docs/quickstart-guides
     - text: Guides
@@ -14,7 +14,7 @@ primary_header:
     url: https://account.box.com/developers/services
 
 secondary_header:
-  root: 
+  root:
     alt: Box Developer Documentation
     url: /en/
   new_label:
@@ -27,7 +27,8 @@ secondary_header:
     - text: Blog
       url: https://medium.com/box-developer-blog
     - text: Forum
-      url: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+      url: "https://community.box.com/t5/Platform-and-Development\
+        -Forum/bd-p/DeveloperForum"
     - text: Feedback
-      url: https://box.uservoice.com/forums/909778-product-feedback?category_id=330838
-      
+      url: "https://box.uservoice.com/forums/909778-product\
+        -feedback?category_id=330838"
