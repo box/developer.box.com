@@ -12,7 +12,7 @@ node_js:
 - 11
 before_deploy: yarn build
 deploy:
-- provider: pages
+  provider: pages
   local-dir: compiled
   target_branch: en
   github-token: "$GITHUB_TOKEN"
