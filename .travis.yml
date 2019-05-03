@@ -18,6 +18,8 @@ deploy:
   github-token: "$GITHUB_TOKEN"
   skip-cleanup: true
   keep-history: true
+  edge:
+    branch: v1.9.1
   on:
     branch: master
     node: 11
