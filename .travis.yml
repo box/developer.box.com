@@ -1,11 +1,9 @@
 language: node_js
-dist: xenial
 cache:
   directories:
   - node_modules
 before_install:
-- sudo apt-get update
-- sudo apt-get install -y yamllint
+- pip install --user yamllint
 install:
 - yarn install
 node_js:
@@ -18,8 +16,6 @@ deploy:
   github-token: "$GITHUB_TOKEN"
   skip-cleanup: true
   keep-history: true
-  edge:
-    branch: v1.9.1
   on:
     branch: master
     node: 11
