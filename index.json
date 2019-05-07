@@ -7,7 +7,8 @@
     "head": {
       "title": "Box Developer Portal",
       "description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
-      "lang": "en-US"
+      "lang": "en-US",
+      "twitter": "@boxplatform"
     },
     "refresh_notification": {
       "message": "This site has updated in the background",
