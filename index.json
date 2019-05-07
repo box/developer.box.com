@@ -5,8 +5,9 @@
   },
   "microcopy": {
     "head": {
-      "title": "Box Developer Portal",
+      "title": "Box Developer Documentation Portal",
       "description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
+      "keywords": "box,platform,api,sdk,files,folders",
       "lang": "en-US",
       "twitter": "@boxplatform"
     },
