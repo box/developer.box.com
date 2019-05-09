@@ -37,6 +37,11 @@ content:
   email: email
   integer: integer
   uuid: uuid
+  parameter_types:
+    path_params: Path Parameters
+    query_params: Query Parameters
+    body_params: Request Body
+    header_params: Request Headers
   welcome: |-
     Welcome to our updated developer documentation, which
     is still very much a work in progress. For now it only
