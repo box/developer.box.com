@@ -7,3 +7,5 @@ headers:
   $ref: "./headers.yml"
 reference:
   $ref: "./reference.yml"
+pages:
+  $ref: "./pages.yml"
