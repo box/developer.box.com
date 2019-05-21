@@ -119,6 +119,11 @@
         },
         "welcome": "Welcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter](https://twitter.com/boxplatform)\nor [GitHub](https://github.com/box/developer.box.com)."
       }
+    },
+    "pages": {
+      "auth": {
+        "title": "Logging in..."
+      }
     }
   }
 }
