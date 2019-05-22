@@ -1,5 +1,7 @@
 ---
 primary_header:
+  navigation:
+    title: Docs
   navigation_links:
     - text: Get Started
       url: https://developer.box.com/docs/quickstart-guides
