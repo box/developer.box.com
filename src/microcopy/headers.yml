@@ -23,6 +23,9 @@ secondary_header:
     text: Back to old site
     url: https://developer.box.com/reference/
   elsewhere: Elsewhere
+  loginout_button:
+    login: Log In
+    logout: Log Out
   navigation_links:
     - text: Blog
       url: https://medium.com/box-developer-blog
