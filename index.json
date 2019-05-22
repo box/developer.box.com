@@ -18,6 +18,9 @@
     },
     "headers": {
       "primary_header": {
+        "navigation": {
+          "title": "Docs"
+        },
         "navigation_links": [
           {
             "text": "Get Started",
