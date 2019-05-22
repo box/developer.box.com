@@ -54,6 +54,10 @@
           "url": "https://developer.box.com/reference/"
         },
         "elsewhere": "Elsewhere",
+        "loginout_button": {
+          "login": "Log In",
+          "logout": "Log Out"
+        },
         "navigation_links": [
           {
             "text": "Blog",
