@@ -123,9 +123,9 @@
           "standard": "Standard",
           "full": "Full"
         },
-        "variant_copy": {
+        "variant_explanation": {
           "title": "About variants",
-          "description": "This resource has 3 variations that can be returned by the API, depending on the endpoint used, and the usage of the `fields` parameter.\nThe `mini` variant is often used when the resource is nested within another resource. For example, the mini variant of a `User` is often nested within other resources to represent the ownership of an item.\nThe `standard` variant represents the  default set of attributes that are returned for this resource when requesting it via the API. For example. when retrieving a `File` resource by ID, it will return these fields by default.\nThe `full` variant represents all the attributes that can be requested by API endpoints that support the `fields` parameter. For example, by defining the `fields` parameter as `id,type` when requesting a `File` by ID, only those fields will be returned in the API response."
+          "description": "This resource has 3 variations that can be returned by the API,\ndepending on the endpoint used, and the usage of the `fields`\nparameter.\n\nThe `mini` variant is often used when the\nresource is nested within another resource. For example, the\nmini variant of a `User` is often nested within other resources\nto represent the ownership of an item.\n\nThe `standard` variant represents the  default set of attributes\nthat are returned for this resource when requesting it via the API.\nFor example. when retrieving a `File` resource by ID, it will return\nthese fields by default.\n\nThe `full` variant represents all the attributes that can be\nrequested by API endpoints that support the `fields` parameter. For\nexample, by defining the `fields` parameter as `id,type` when requesting\na `File` by ID, only those fields will be returned in the API response."
         },
         "parameter_types": {
           "path_params": "Path Parameters",
