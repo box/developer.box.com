@@ -41,9 +41,9 @@ content:
     mini: Mini
     standard: Standard
     full: Full
-  variant_copy:
+  variant_explanation:
     title: About variants
-    description:
+    description: |-
       This resource has 3 variations that can be returned by the API,
       depending on the endpoint used, and the usage of the `fields`
       parameter.
