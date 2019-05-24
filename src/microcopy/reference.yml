@@ -37,6 +37,10 @@ content:
   email: email
   integer: integer
   uuid: uuid
+  resource_variants:
+    mini: Mini
+    standard: Standard
+    full: Full
   parameter_types:
     path_params: Path Parameters
     query_params: Query Parameters
