@@ -9,3 +9,5 @@ reference:
   $ref: "./reference.yml"
 pages:
   $ref: "./pages.yml"
+messages:
+  $ref: "./messages.yml"
