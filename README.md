@@ -1,7 +1,7 @@
 # Box Developer Documentation - Configuration
 
 [![Build Status](https://travis-ci.com/box/developer.box.com.svg?branch=master)](https://travis-ci.com/box/developer.box.com)
-[![Project Status](https://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
+[![Project Status](https://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges) [![Greenkeeper badge](https://badges.greenkeeper.io/box/developer.box.com.svg)](https://greenkeeper.io/)
 
 This repository contains the microcopy content and configuration for the Box Developer Documentation.
 
