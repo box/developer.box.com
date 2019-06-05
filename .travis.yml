@@ -2,6 +2,8 @@ language: node_js
 cache:
   directories:
   - node_modules
+before_install:
+- pip install --user yamllint
 install:
 - yarn install
 node_js:
