@@ -81,3 +81,8 @@ content:
     Have a look around and please send us any feedback
     on [Twitter](https://twitter.com/boxplatform)
     or [GitHub](https://github.com/box/developer.box.com).
+  environments:
+    node: node
+    dotnet: .NET
+    java: Java
+    python: Python
