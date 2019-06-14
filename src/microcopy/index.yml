@@ -1,13 +1,18 @@
 ---
+locales:
+  $ref: "src/microcopy/locales.yml"
+
 head:
-  $ref: "./head.yml"
+  $ref: "src/microcopy/head.yml"
+
 refresh_notification:
-  $ref: "./refresh_notification.yml"
-headers:
-  $ref: "./headers.yml"
-reference:
-  $ref: "./reference.yml"
-pages:
-  $ref: "./pages.yml"
+  $ref: "src/microcopy/refresh_notification.yml"
+
 messages:
-  $ref: "./messages.yml"
+  $ref: "src/microcopy/messages.yml"
+
+reference:
+  $ref: "src/microcopy/reference.yml"
+
+headers:
+  $ref: "src/microcopy/headers.yml"

@@ -1,6 +1,0 @@
----
-locale:
-  name: English
-  code: en
-microcopy:
-  $ref: "./microcopy/index.yml"
