@@ -1,39 +1,92 @@
 ---
-primary_header:
-  navigation:
-    title: Docs
-  navigation_links:
-    - text: Get Started
-      url: https://developer.box.com/docs/quickstart-guides
-    - text: Guides
-      url: https://developer.box.com/docs
-    - text: API Reference
-      url: /en/reference/
-    - text: SDKs & CLI
-      url: https://developer.box.com/docs/sdks
-  console_button:
-    text: Manage Applications
-    url: https://account.box.com/developers/services
+primary:
+  links:
+    get_started:
+      // text: The text for the link to the old Get Started guides
+      text: Get Started
 
-secondary_header:
-  root:
-    alt: Box Developer Documentation
-    url: /en/
-  new_label:
-    text: new
-  legacy_link:
-    text: Back to old site
-    url: https://developer.box.com/reference/
-  elsewhere: Elsewhere
-  loginout_button:
-    login: Log In
-    logout: Log Out
-  navigation_links:
-    - text: Blog
+      // url: The URL to the old Get Started guides
+      url: https://developer.box.com/docs/quickstart-guides
+
+    guides:
+      // text: The text for the link to the old generic guides
+      text: Guides
+
+      // url: The URL to the old generic guides
+      url: https://developer.box.com/docs
+
+    api_reference:
+      // text: The text for the link the new API Reference docs
+      text: API Reference
+      // url: The url to the root of the reference
+      url: "/en/reference/"
+
+    sdks_and_tools:
+      // text: The text for the link to the old page on SDKs
+      text: SDKs & Tools
+
+      // url: The URL to the old page on SDKs
+      url: https://developer.box.com/docs/sdks
+
+  buttons:
+    console:
+      // text: The text for the link to the developer console
+      text: Manage Applications
+
+      // url: The URL to the developer console
+      url: https://account.box.com/developers/services
+
+secondary:
+  images:
+    logo:
+      // alt_text: The HTML alt-text for the site logo
+      alt_text: Box Developer Documentation
+
+  labels:
+    // new: A short label to signify that this page is new
+    new: new
+
+  links:
+    blog:
+      // text: The text for the link to the developer blog
+      text: Blog
+
+      // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
-    - text: Forum
+
+    forum:
+      // text: The text for the link to the developer forum
+      text: Forum
+
+      // url: The URL to the developer forum
       url: "https://community.box.com/t5/Platform-and-Development\
         -Forum/bd-p/DeveloperForum"
-    - text: Feedback
+
+    feedback:
+      // text: The text for the link to the developer feedback site
+      text: Feedback
+
+      // url: The URL to the developer feedback site
       url: "https://box.uservoice.com/forums/909778-product\
         -feedback?category_id=330838"
+
+  dropdowns:
+    // docs: |-
+      A short title for the dropdown to select a documentation type on mobile
+    docs: Docs
+
+    // api_reference: |-
+      A title for the dropdown to select a sub-page of the API reference
+      on mobile
+    api_reference: API Reference
+
+    // elsewhere: |-
+      A short title for the dropdown to select an external link on mobile
+    elsewhere: Elsewhere
+
+  buttons:
+    // login: Label for the log in button
+    login: Log In
+
+    // logout: Label for the log in button
+    logout: Log Out

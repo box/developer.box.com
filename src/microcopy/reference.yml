@@ -1,88 +1,193 @@
 ---
-groups:
+titles:
+  // api_reference: The title for the API referene page
   api_reference: API Reference
+
+  // other_resources: The title for the resources page
   other_resources: Resources
-content:
-  api_reference: API Reference
-  copy: Copy
+
+  // request: The title for the HTTP Request section of an endpoint
   request: Request
+
+  // response: The title for the HTTP Response section of an endpoint
   response: Response
-  example: example
-  example_key: example key
-  optional: optional
-  required: required
-  default: Default
-  max_length: Max Length
-  range: Range
+
+  // request_example: |-
+    The title for the section of an endpoint that shows a
+    how to make requests to our API
   request_example: Request Example
+
+  // response_example: |-
+    The title for the section of an endpoint that shows
+    what response our API will return
   response_example: Response Example
-  value_is_always: Value is always
-  value_is_any_of: Value is any of
-  value_is_one_of: Value is one of
-  none: none
-  in:
-    body: in body
-    path: in path
-    header: in header
-    cookie: in cookie
-    query: in query
+
+  // resource_example: |-
+    The title for the section of a resource that shows
+    what a typical resource looks like
+  resource_example: Response Example
+
+buttons:
+  // copy: |-
+    The label for a button that allows a user to
+    copy (and then paste) a value
+  copy: Copy
+
+parameter_groups:
+  // path_params: |-
+    Describes all endpoint parameters that are part
+    of the URL path
+  path_params: Path Parameters
+
+  // query_params: |-
+    Describes all endpoint parameters that are part
+    of the URL query
+  query_params: Query Parameters
+
+  // body_params: |-
+    Describes all endpoint parameters that are
+    sent in the HTTP body
+  body_params: Request Body
+
+  // header_params: |-
+    Describes all endpoint parameters that are
+    sent in the HTTP headers
+  header_params: Request Headers
+
+parameter_location:
+  // path: |-
+    Describes a specific parameter that is
+    sent in the URL path
+  path: in path
+
+  // query: |-
+    Describes a specific parameter that is
+    sent in the URL query
+  query: in query
+
+  // body: |-
+    Describes a specific parameter that is sent
+    in the HTTP body
+  body: in body
+
+  // header: |-
+    Describes a specific parameter that is
+    sent in a HTTP header
+  header: in header
+
+parameter_types:
+  // boolean: Describes a boolean parameter type
   boolean: boolean
+
+  // string: Describes a string parameter type
   string: string
+
+  // object: Describes an object parameter type
   object: object
+
+  // array: Describes an array parameter type
   array: array
+
+  // associative_array: |-
+    Describes an associative array (dictionary, hash,
+    key value pairs) parameter type
   associative_array: associative array
-  date-time: date/time
-  int64: int64
+
+  // date-time: Describes a date-time parameter type
+  date-time: date-time
+
+  // int64: Describes a 64-bit integer parameter type
+  int64: 64-bit integer
+
+  // int32: Describes a 32-bit integer parameter type
   int32: int32
+
+  // email: Describes a parameter type formatted as an email
   email: email
+
+  // integer: Describes an integer parameter type
   integer: integer
-  uuid: uuid
-  resource_variants:
-    - Mini
-    - Standard
-    - Full
-  variant_explanation: |-
-    Variations
-    ==========
 
-    This resource has 3 variations that can be encountered when
-    using the API.
+  // uuid: Describes a parameter formatted as a UUID
+  uuid: UUID
 
-    * The `mini` variant is used when the resource is nested within the
-      response for another resource. For example, the mini variant of a
-      `User` is often nested within other resources to represent
-      ownership of an item.
+parameter_details:
+  // example: The label for an example
+  example: example
 
-    * The `standard` variant represents the  default set of attributes
-      that are returned requesting the resource it via its API endpoints.
-      For example. when retrieving a `File` by ID, it will return
-      these the `standard` fields by default, unless the `fields`
-      request parameter has been specified.
+  // example_key: The label for an example key
+  example_key: example key
 
-    * The `full` variant represents all the attributes that can be
-      requested by API endpoints that support the `fields` parameter.
-      For example, by defining the `fields` request parameter as
-      `id,type` when requesting a `File` by ID, only those fields will
-      be returned in the API response.
-  parameter_types:
-    path_params: Path Parameters
-    query_params: Query Parameters
-    body_params: Request Body
-    header_params: Request Headers
-  welcome: |-
-    What's new?
-    ===========
+  // optional: The label for an optional parameter
+  optional: optional
 
-    Welcome to our updated developer documentation, which
-    is still very much a work in progress. For now it only
-    contains our reference documentation while we work on
-    moving more of our documentation over to this site.
+  // required: The label for a required parameter
+  required: required
 
-    Have a look around and please send us any feedback
-    on [Twitter](https://twitter.com/boxplatform)
-    or [GitHub](https://github.com/box/developer.box.com).
-  environments:
-    node: Node
-    dotnet: .NET
-    java: Java
-    python: Python
+  // default: The label for a default parameter value
+  default: Default
+
+  // max_length: The label for the max length of a parameter value
+  max_length: Max Length
+
+  // range: The label for the range of a parameter value
+  range: Range
+
+content_type:
+  // none: |-
+    Describes it when there is no content type as there
+    is no body request or response body
+  none: none
+
+enum:
+  // value_is_always: |-
+    Describes the situation where a parameter can
+    only be one specific value
+  value_is_always: Value is always
+
+  // value_is_any_of: |-
+    Describes the situation where a parameter can be one
+    or many specific values
+  value_is_any_of: Value is any of
+
+  // value_is_one_of: |-
+    Describes the situation where a parameter can
+    be only one of many values
+  value_is_one_of: Value is one of
+
+environments:
+  // node: |-
+    Describes the Node JS programming language when selecting
+    a code sample
+  node: Node
+
+  // dotnet: |-
+    Describes the .NET programming language when selecting
+    a code sample
+  dotnet: .NET
+
+  // java: |-
+    Describes the Java programming language when selecting
+    a code sample
+  java: Java
+
+  // python: |-
+    Describes the Python programming language when
+    selecting a code sample
+  python: Python
+
+resource_variants:
+  // mini: |-
+    Describes the minimal set of fields that can be returned
+    for a resource in an API response
+  mini: Mini
+
+  // standard: |-
+    Describes the standard set of fields that are returned for a
+    resource in an API response
+  standard: Standard
+
+  // full: |-
+    Describes the full set of fields that can be returned
+    for a resource in an API response
+  full: Full
