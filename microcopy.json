@@ -1,160 +1,476 @@
 {
-  // The name of the English locale, in this locale
+  "// locales.names.en": [
+    [
+      "// The name of the English locale, in this locale"
+    ]
+  ],
   "locales.names.en": "English",
-  // The name of the Japanese locale, in this locale
+  "// locales.names.jp": [
+    [
+      "// The name of the Japanese locale, in this locale"
+    ]
+  ],
   "locales.names.jp": "Japanese",
-  // The HTML <title> of the site, as shown in search results
+  "// head.title": [
+    [
+      "// The HTML <title> of the site, as shown in search results"
+    ]
+  ],
   "head.title": "Box Developer Documentation Portal",
-  // The HTML <meta> description of a site, as shownin search results.
+  "// head.description": [
+    [
+      "// The HTML <meta> description of a site, as shownin search results."
+    ]
+  ],
   "head.description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
-  // The HTML <meta> tags for a site, used for SEO purposes.
+  "// head.keywords": [
+    [
+      "// The HTML <meta> tags for a site, used for SEO purposes."
+    ]
+  ],
   "head.keywords": "box,platform,api,sdk,files,folders",
-  // The twitter account for Box Platform in this localeas used in by Twitter cards when the site is shared.
+  "// head.twitter": [
+    [
+      "// The twitter account for Box Platform in this localeas used in by Twitter cards when the site is shared."
+    ]
+  ],
   "head.twitter": "@boxplatform",
-  // A message to show that the site has updated in the background
+  "// refresh_notification.message": [
+    [
+      "// A message to show that the site has updated in the background"
+    ]
+  ],
   "refresh_notification.message": "This site has updated in the background",
-  // The text on the link to refresh the page
+  "// refresh_notification.link_text": [
+    [
+      "// The text on the link to refresh the page"
+    ]
+  ],
   "refresh_notification.link_text": "Refresh",
-  // Text to signify that more content is available byclicking this link or button
+  "// messages.read_more": [
+    [
+      "// Text to signify that more content is available byclicking this link or button"
+    ]
+  ],
   "messages.read_more": "Read more",
-  // A full description of why we have differentresource variants (mini/standard/full)
+  "// messages.resource_variant_description": [
+    [
+      "// A full description of why we have differentresource variants (mini/standard/full)"
+    ]
+  ],
   "messages.resource_variant_description": "Variations\n==========\n\nThis resource has 3 variations that can be encountered when\nusing the API.\n\n* The **mini** variant is used when the resource is nested within the\n  response for another resource. For example, the mini variant of a\n  `User` is often nested within other resources to represent\n  ownership of an item.\n\n* The **standard** variant represents the  default set of attributes\n  that are returned requesting the resource it via its API endpoints.\n  For example. when retrieving a `File` by ID, it will return\n  these the **standard** fields by default, unless the `fields`\n  request parameter has been specified.\n\n* The **full** variant represents all the attributes that can be\n  requested by API endpoints that support the `fields` parameter.\n  For example, by defining the `fields` request parameter as\n  `id,type` when requesting a `File` by ID, only those fields will\n  be returned in the API response.",
-  // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
+  "// messages.welcome_message": [
+    [
+      "// A temporary welcome message at the top of the page that explains what the state of the new developer docs is"
+    ]
+  ],
   "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
-  // The title for the API referene page
+  "// reference.titles.api_reference": [
+    [
+      "// The title for the API referene page"
+    ]
+  ],
   "reference.titles.api_reference": "API Reference",
-  // The title for the resources page
+  "// reference.titles.other_resources": [
+    [
+      "// The title for the resources page"
+    ]
+  ],
   "reference.titles.other_resources": "Resources",
-  // The title for the HTTP Request section of an endpoint
+  "// reference.titles.request": [
+    [
+      "// The title for the HTTP Request section of an endpoint"
+    ]
+  ],
   "reference.titles.request": "Request",
-  // The title for the HTTP Response section of an endpoint
+  "// reference.titles.response": [
+    [
+      "// The title for the HTTP Response section of an endpoint"
+    ]
+  ],
   "reference.titles.response": "Response",
-  // The title for the section of an endpoint that shows ahow to make requests to our API
+  "// reference.titles.request_example": [
+    [
+      "// The title for the section of an endpoint that shows ahow to make requests to our API"
+    ]
+  ],
   "reference.titles.request_example": "Request Example",
-  // The title for the section of an endpoint that showswhat response our API will return
+  "// reference.titles.response_example": [
+    [
+      "// The title for the section of an endpoint that showswhat response our API will return"
+    ]
+  ],
   "reference.titles.response_example": "Response Example",
-  // The title for the section of a resource that showswhat a typical resource looks like
+  "// reference.titles.resource_example": [
+    [
+      "// The title for the section of a resource that showswhat a typical resource looks like"
+    ]
+  ],
   "reference.titles.resource_example": "Response Example",
-  // The label for a button that allows a user tocopy (and then paste) a value
+  "// reference.buttons.copy": [
+    [
+      "// The label for a button that allows a user tocopy (and then paste) a value"
+    ]
+  ],
   "reference.buttons.copy": "Copy",
-  // Describes all endpoint parameters that are partof the URL path
+  "// reference.parameter_groups.path_params": [
+    [
+      "// Describes all endpoint parameters that are partof the URL path"
+    ]
+  ],
   "reference.parameter_groups.path_params": "Path Parameters",
-  // Describes all endpoint parameters that are partof the URL query
+  "// reference.parameter_groups.query_params": [
+    [
+      "// Describes all endpoint parameters that are partof the URL query"
+    ]
+  ],
   "reference.parameter_groups.query_params": "Query Parameters",
-  // Describes all endpoint parameters that aresent in the HTTP body
+  "// reference.parameter_groups.body_params": [
+    [
+      "// Describes all endpoint parameters that aresent in the HTTP body"
+    ]
+  ],
   "reference.parameter_groups.body_params": "Request Body",
-  // Describes all endpoint parameters that aresent in the HTTP headers
+  "// reference.parameter_groups.header_params": [
+    [
+      "// Describes all endpoint parameters that aresent in the HTTP headers"
+    ]
+  ],
   "reference.parameter_groups.header_params": "Request Headers",
-  // Describes a specific parameter that issent in the URL path
+  "// reference.parameter_location.path": [
+    [
+      "// Describes a specific parameter that issent in the URL path"
+    ]
+  ],
   "reference.parameter_location.path": "in path",
-  // Describes a specific parameter that issent in the URL query
+  "// reference.parameter_location.query": [
+    [
+      "// Describes a specific parameter that issent in the URL query"
+    ]
+  ],
   "reference.parameter_location.query": "in query",
-  // Describes a specific parameter that is sentin the HTTP body
+  "// reference.parameter_location.body": [
+    [
+      "// Describes a specific parameter that is sentin the HTTP body"
+    ]
+  ],
   "reference.parameter_location.body": "in body",
-  // Describes a specific parameter that issent in a HTTP header
+  "// reference.parameter_location.header": [
+    [
+      "// Describes a specific parameter that issent in a HTTP header"
+    ]
+  ],
   "reference.parameter_location.header": "in header",
-  // Describes a boolean parameter type
+  "// reference.parameter_types.boolean": [
+    [
+      "// Describes a boolean parameter type"
+    ]
+  ],
   "reference.parameter_types.boolean": "boolean",
-  // Describes a string parameter type
+  "// reference.parameter_types.string": [
+    [
+      "// Describes a string parameter type"
+    ]
+  ],
   "reference.parameter_types.string": "string",
-  // Describes an object parameter type
+  "// reference.parameter_types.object": [
+    [
+      "// Describes an object parameter type"
+    ]
+  ],
   "reference.parameter_types.object": "object",
-  // Describes an array parameter type
+  "// reference.parameter_types.array": [
+    [
+      "// Describes an array parameter type"
+    ]
+  ],
   "reference.parameter_types.array": "array",
-  // Describes an associative array (dictionary, hash,key value pairs) parameter type
+  "// reference.parameter_types.associative_array": [
+    [
+      "// Describes an associative array (dictionary, hash,key value pairs) parameter type"
+    ]
+  ],
   "reference.parameter_types.associative_array": "associative array",
-  // Describes a date-time parameter type
+  "// reference.parameter_types.date-time": [
+    [
+      "// Describes a date-time parameter type"
+    ]
+  ],
   "reference.parameter_types.date-time": "date-time",
-  // Describes a 64-bit integer parameter type
+  "// reference.parameter_types.int64": [
+    [
+      "// Describes a 64-bit integer parameter type"
+    ]
+  ],
   "reference.parameter_types.int64": "64-bit integer",
-  // Describes a 32-bit integer parameter type
+  "// reference.parameter_types.int32": [
+    [
+      "// Describes a 32-bit integer parameter type"
+    ]
+  ],
   "reference.parameter_types.int32": "int32",
-  // Describes a parameter type formatted as an email
+  "// reference.parameter_types.email": [
+    [
+      "// Describes a parameter type formatted as an email"
+    ]
+  ],
   "reference.parameter_types.email": "email",
-  // Describes an integer parameter type
+  "// reference.parameter_types.integer": [
+    [
+      "// Describes an integer parameter type"
+    ]
+  ],
   "reference.parameter_types.integer": "integer",
-  // Describes a parameter formatted as a UUID
+  "// reference.parameter_types.uuid": [
+    [
+      "// Describes a parameter formatted as a UUID"
+    ]
+  ],
   "reference.parameter_types.uuid": "UUID",
-  // The label for an example
+  "// reference.parameter_details.example": [
+    [
+      "// The label for an example"
+    ]
+  ],
   "reference.parameter_details.example": "example",
-  // The label for an example key
+  "// reference.parameter_details.example_key": [
+    [
+      "// The label for an example key"
+    ]
+  ],
   "reference.parameter_details.example_key": "example key",
-  // The label for an optional parameter
+  "// reference.parameter_details.optional": [
+    [
+      "// The label for an optional parameter"
+    ]
+  ],
   "reference.parameter_details.optional": "optional",
-  // The label for a required parameter
+  "// reference.parameter_details.required": [
+    [
+      "// The label for a required parameter"
+    ]
+  ],
   "reference.parameter_details.required": "required",
-  // The label for a default parameter value
+  "// reference.parameter_details.default": [
+    [
+      "// The label for a default parameter value"
+    ]
+  ],
   "reference.parameter_details.default": "Default",
-  // The label for the max length of a parameter value
+  "// reference.parameter_details.max_length": [
+    [
+      "// The label for the max length of a parameter value"
+    ]
+  ],
   "reference.parameter_details.max_length": "Max Length",
-  // The label for the range of a parameter value
+  "// reference.parameter_details.range": [
+    [
+      "// The label for the range of a parameter value"
+    ]
+  ],
   "reference.parameter_details.range": "Range",
-  // Describes it when there is no content type as thereis no body request or response body
+  "// reference.content_type.none": [
+    [
+      "// Describes it when there is no content type as thereis no body request or response body"
+    ]
+  ],
   "reference.content_type.none": "none",
-  // Describes the situation where a parameter canonly be one specific value
+  "// reference.enum.value_is_always": [
+    [
+      "// Describes the situation where a parameter canonly be one specific value"
+    ]
+  ],
   "reference.enum.value_is_always": "Value is always",
-  // Describes the situation where a parameter can be oneor many specific values
+  "// reference.enum.value_is_any_of": [
+    [
+      "// Describes the situation where a parameter can be oneor many specific values"
+    ]
+  ],
   "reference.enum.value_is_any_of": "Value is any of",
-  // Describes the situation where a parameter canbe only one of many values
+  "// reference.enum.value_is_one_of": [
+    [
+      "// Describes the situation where a parameter canbe only one of many values"
+    ]
+  ],
   "reference.enum.value_is_one_of": "Value is one of",
-  // Describes the Node JS programming language when selectinga code sample
+  "// reference.environments.node": [
+    [
+      "// Describes the Node JS programming language when selectinga code sample"
+    ]
+  ],
   "reference.environments.node": "Node",
-  // Describes the .NET programming language when selectinga code sample
+  "// reference.environments.dotnet": [
+    [
+      "// Describes the .NET programming language when selectinga code sample"
+    ]
+  ],
   "reference.environments.dotnet": ".NET",
-  // Describes the Java programming language when selectinga code sample
+  "// reference.environments.java": [
+    [
+      "// Describes the Java programming language when selectinga code sample"
+    ]
+  ],
   "reference.environments.java": "Java",
-  // Describes the Python programming language whenselecting a code sample
+  "// reference.environments.python": [
+    [
+      "// Describes the Python programming language whenselecting a code sample"
+    ]
+  ],
   "reference.environments.python": "Python",
-  // Describes the minimal set of fields that can be returnedfor a resource in an API response
+  "// reference.resource_variants.mini": [
+    [
+      "// Describes the minimal set of fields that can be returnedfor a resource in an API response"
+    ]
+  ],
   "reference.resource_variants.mini": "Mini",
-  // Describes the standard set of fields that are returned for aresource in an API response
+  "// reference.resource_variants.standard": [
+    [
+      "// Describes the standard set of fields that are returned for aresource in an API response"
+    ]
+  ],
   "reference.resource_variants.standard": "Standard",
-  // Describes the full set of fields that can be returnedfor a resource in an API response
+  "// reference.resource_variants.full": [
+    [
+      "// Describes the full set of fields that can be returnedfor a resource in an API response"
+    ]
+  ],
   "reference.resource_variants.full": "Full",
-  // The text for the link to the old Get Started guides
+  "// headers.primary.links.get_started.text": [
+    [
+      "// The text for the link to the old Get Started guides"
+    ]
+  ],
   "headers.primary.links.get_started.text": "Get Started",
-  // The URL to the old Get Started guides
+  "// headers.primary.links.get_started.url": [
+    [
+      "// The URL to the old Get Started guides"
+    ]
+  ],
   "headers.primary.links.get_started.url": "https://developer.box.com/docs/quickstart-guides",
-  // The text for the link to the old generic guides
+  "// headers.primary.links.guides.text": [
+    [
+      "// The text for the link to the old generic guides"
+    ]
+  ],
   "headers.primary.links.guides.text": "Guides",
-  // The URL to the old generic guides
+  "// headers.primary.links.guides.url": [
+    [
+      "// The URL to the old generic guides"
+    ]
+  ],
   "headers.primary.links.guides.url": "https://developer.box.com/docs",
-  // The text for the link the new API Reference docs
+  "// headers.primary.links.api_reference.text": [
+    [
+      "// The text for the link the new API Reference docs"
+    ]
+  ],
   "headers.primary.links.api_reference.text": "API Reference",
-  // The url to the root of the reference
+  "// headers.primary.links.api_reference.url": [
+    [
+      "// The url to the root of the reference"
+    ]
+  ],
   "headers.primary.links.api_reference.url": "/en/reference/",
-  // The text for the link to the old page on SDKs
+  "// headers.primary.links.sdks_and_tools.text": [
+    [
+      "// The text for the link to the old page on SDKs"
+    ]
+  ],
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
-  // The URL to the old page on SDKs
+  "// headers.primary.links.sdks_and_tools.url": [
+    [
+      "// The URL to the old page on SDKs"
+    ]
+  ],
   "headers.primary.links.sdks_and_tools.url": "https://developer.box.com/docs/sdks",
-  // The text for the link to the developer console
+  "// headers.primary.buttons.console.text": [
+    [
+      "// The text for the link to the developer console"
+    ]
+  ],
   "headers.primary.buttons.console.text": "Manage Applications",
-  // The URL to the developer console
+  "// headers.primary.buttons.console.url": [
+    [
+      "// The URL to the developer console"
+    ]
+  ],
   "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
-  // The HTML alt-text for the site logo
+  "// headers.secondary.images.logo.alt_text": [
+    [
+      "// The HTML alt-text for the site logo"
+    ]
+  ],
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
-  // A short label to signify that this page is new
+  "// headers.secondary.labels.new": [
+    [
+      "// A short label to signify that this page is new"
+    ]
+  ],
   "headers.secondary.labels.new": "new",
-  // The text for the link to the developer blog
+  "// headers.secondary.links.blog.text": [
+    [
+      "// The text for the link to the developer blog"
+    ]
+  ],
   "headers.secondary.links.blog.text": "Blog",
-  // The URL to the developer blog
+  "// headers.secondary.links.blog.url": [
+    [
+      "// The URL to the developer blog"
+    ]
+  ],
   "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
-  // The text for the link to the developer forum
+  "// headers.secondary.links.forum.text": [
+    [
+      "// The text for the link to the developer forum"
+    ]
+  ],
   "headers.secondary.links.forum.text": "Forum",
-  // The URL to the developer forum
+  "// headers.secondary.links.forum.url": [
+    [
+      "// The URL to the developer forum"
+    ]
+  ],
   "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
-  // The text for the link to the developer feedback site
+  "// headers.secondary.links.feedback.text": [
+    [
+      "// The text for the link to the developer feedback site"
+    ]
+  ],
   "headers.secondary.links.feedback.text": "Feedback",
-  // The URL to the developer feedback site
+  "// headers.secondary.links.feedback.url": [
+    [
+      "// The URL to the developer feedback site"
+    ]
+  ],
   "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
-  // A short title for the dropdown to select a documentation type on mobile
+  "// headers.secondary.dropdowns.docs": [
+    [
+      "// A short title for the dropdown to select a documentation type on mobile"
+    ]
+  ],
   "headers.secondary.dropdowns.docs": "Docs",
-  // A title for the dropdown to select a sub-page of the API referenceon mobile
+  "// headers.secondary.dropdowns.api_reference": [
+    [
+      "// A title for the dropdown to select a sub-page of the API referenceon mobile"
+    ]
+  ],
   "headers.secondary.dropdowns.api_reference": "API Reference",
-  // A short title for the dropdown to select an external link on mobile
+  "// headers.secondary.dropdowns.elsewhere": [
+    [
+      "// A short title for the dropdown to select an external link on mobile"
+    ]
+  ],
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
-  // Label for the log in button
+  "// headers.secondary.buttons.login": [
+    [
+      "// Label for the log in button"
+    ]
+  ],
   "headers.secondary.buttons.login": "Log In",
-  // Label for the log in button
+  "// headers.secondary.buttons.logout": [
+    [
+      "// Label for the log in button"
+    ]
+  ],
   "headers.secondary.buttons.logout": "Log Out"
 }
