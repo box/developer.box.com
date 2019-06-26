@@ -4,33 +4,34 @@
   clicking this link or button
 read_more: Read more
 
-// resource_variant_description: |-
-  A full description of why we have different
-  resource variants (mini/standard/full)
-resource_variant_description: |-
-  Variations
-  ==========
 
-  This resource has 3 variations that can be encountered when
-  using the API.
+resource_variant_descriptions:
+  // mini: |-
+    Describes the mini-resource variant
+  mini: |-
+    This resource has 3 variations that can be encountered when
+    using the API.
 
-  * The **mini** variant is used when the resource is nested within the
-    response for another resource. For example, the mini variant of a
-    `User` is often nested within other resources to represent
-    ownership of an item.
+    The fields that are part of the **mini** variant are generally
+    returned when the resource is nested within the response for
+    another resource.
 
-  * The **standard** variant represents the  default set of attributes
-    that are returned requesting the resource it via its API endpoints.
-    For example. when retrieving a `File` by ID, it will return
-    these the **standard** fields by default, unless the `fields`
-    request parameter has been specified.
+  // standard: |-
+    Describes the standard-resource variant
+  standard: |-
+    The fields that are part of the **standard** variant are generally
+    returned when the resource is requested via its own API endpoints.
+    For example, when retrieving a file by ID, it will return
+    these fields unless the `fields` parameter has been specified.
 
-  * The **full** variant represents all the attributes that can be
-    requested by API endpoints that support the `fields` parameter.
-    For example, by defining the `fields` request parameter as
-    `id,type` when requesting a `File` by ID, only those fields will
+  // full: |-
+    Describes the full-resource variant
+  full: |-
+    The fields that are part of the **full** variant can be returned
+    by API endpoints that support the `fields` parameter. For example,
+    by defining the `fields` request parameter as
+    `id,type` when requesting a file by ID, only those fields will
     be returned in the API response.
-
 
 // welcome_message:
   A temporary welcome message at the top of the page that
