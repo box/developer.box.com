@@ -53,12 +53,24 @@
     ]
   ],
   "messages.read_more": "Read more",
-  "// messages.resource_variant_description": [
+  "// messages.resource_variant_descriptions.mini": [
     [
-      "// A full description of why we have differentresource variants (mini/standard/full)"
+      "// Describes the mini-resource variant"
     ]
   ],
-  "messages.resource_variant_description": "Variations\n==========\n\nThis resource has 3 variations that can be encountered when\nusing the API.\n\n* The **mini** variant is used when the resource is nested within the\n  response for another resource. For example, the mini variant of a\n  `User` is often nested within other resources to represent\n  ownership of an item.\n\n* The **standard** variant represents the  default set of attributes\n  that are returned requesting the resource it via its API endpoints.\n  For example. when retrieving a `File` by ID, it will return\n  these the **standard** fields by default, unless the `fields`\n  request parameter has been specified.\n\n* The **full** variant represents all the attributes that can be\n  requested by API endpoints that support the `fields` parameter.\n  For example, by defining the `fields` request parameter as\n  `id,type` when requesting a `File` by ID, only those fields will\n  be returned in the API response.",
+  "messages.resource_variant_descriptions.mini": "This resource has 3 variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **mini** variant are generally\nreturned when the resource is nested within the response for\nanother resource.",
+  "// messages.resource_variant_descriptions.standard": [
+    [
+      "// Describes the standard-resource variant"
+    ]
+  ],
+  "messages.resource_variant_descriptions.standard": "The fields that are part of the **standard** variant are generally\nreturned when the resource is requested via its own API endpoints.\nFor example, when retrieving a file by ID, it will return\nthese fields unless the `fields` parameter has been specified.",
+  "// messages.resource_variant_descriptions.full": [
+    [
+      "// Describes the full-resource variant"
+    ]
+  ],
+  "messages.resource_variant_descriptions.full": "The fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
   "// messages.welcome_message": [
     [
       "// A temporary welcome message at the top of the page that explains what the state of the new developer docs is"
