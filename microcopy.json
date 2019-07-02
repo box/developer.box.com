@@ -113,6 +113,12 @@
     ]
   ],
   "reference.titles.response_example": "Response Example",
+  "// reference.titles.response_output": [
+    [
+      "// The title for the section of an endpoint that showsa live API response created with an API explorer"
+    ]
+  ],
+  "reference.titles.response_output": "Output",
   "// reference.titles.resource_example": [
     [
       "// The title for the section of a resource that showswhat a typical resource looks like"
@@ -125,30 +131,30 @@
     ]
   ],
   "reference.buttons.copy": "Copy",
-  "// reference.parameter_groups.path_params": [
+  "// reference.parameter_groups.path": [
     [
       "// Describes all endpoint parameters that are partof the URL path"
     ]
   ],
-  "reference.parameter_groups.path_params": "Path Parameters",
-  "// reference.parameter_groups.query_params": [
+  "reference.parameter_groups.path": "Path Parameters",
+  "// reference.parameter_groups.query": [
     [
       "// Describes all endpoint parameters that are partof the URL query"
     ]
   ],
-  "reference.parameter_groups.query_params": "Query Parameters",
-  "// reference.parameter_groups.body_params": [
+  "reference.parameter_groups.query": "Query Parameters",
+  "// reference.parameter_groups.body": [
     [
       "// Describes all endpoint parameters that aresent in the HTTP body"
     ]
   ],
-  "reference.parameter_groups.body_params": "Request Body",
-  "// reference.parameter_groups.header_params": [
+  "reference.parameter_groups.body": "Request Body",
+  "// reference.parameter_groups.header": [
     [
       "// Describes all endpoint parameters that aresent in the HTTP headers"
     ]
   ],
-  "reference.parameter_groups.header_params": "Request Headers",
+  "reference.parameter_groups.header": "Request Headers",
   "// reference.parameter_location.path": [
     [
       "// Describes a specific parameter that issent in the URL path"
@@ -473,16 +479,40 @@
     ]
   ],
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
-  "// headers.secondary.buttons.login": [
+  "// explorer.buttons.login": [
     [
       "// Label for the log in button"
     ]
   ],
-  "headers.secondary.buttons.login": "Log In",
-  "// headers.secondary.buttons.logout": [
+  "explorer.buttons.login": "Log In",
+  "// explorer.buttons.logout": [
     [
       "// Label for the log in button"
     ]
   ],
-  "headers.secondary.buttons.logout": "Log Out"
+  "explorer.buttons.logout": "Log Out",
+  "// explorer.buttons.run": [
+    [
+      "// Label for the button to run a live API call"
+    ]
+  ],
+  "explorer.buttons.run": "Run",
+  "// explorer.buttons.try": [
+    [
+      "// Label for the button to start the API explorer"
+    ]
+  ],
+  "explorer.buttons.try": "Try this API",
+  "// explorer.messages.missing_params": [
+    [
+      "// Short 1-sentence message to tell a user to fill in all params"
+    ]
+  ],
+  "explorer.messages.missing_params": "Please fill in all required parameters",
+  "// explorer.messages.response_received": [
+    [
+      "// Short 1-sentence message to tell a user to that a response was received"
+    ]
+  ],
+  "explorer.messages.response_received": "Response received"
 }
