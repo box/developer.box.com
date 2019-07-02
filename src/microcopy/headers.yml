@@ -83,10 +83,3 @@ secondary:
     // elsewhere: |-
       A short title for the dropdown to select an external link on mobile
     elsewhere: Elsewhere
-
-  buttons:
-    // login: Label for the log in button
-    login: Log In
-
-    // logout: Label for the log in button
-    logout: Log Out

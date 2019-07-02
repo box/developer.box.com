@@ -1,0 +1,22 @@
+---
+buttons:
+  // login: Label for the log in button
+  login: Log In
+
+  // logout: Label for the log in button
+  logout: Log Out
+
+  // run: Label for the button to run a live API call
+  run: Run
+
+  // try: Label for the button to start the API explorer
+  try: Try this API
+
+messages:
+  // missing_params: |-
+    Short 1-sentence message to tell a user to fill in all params
+  missing_params: Please fill in all required parameters
+
+  // response_received: |-
+    Short 1-sentence message to tell a user to that a response was received
+  response_received: Response received

@@ -22,6 +22,11 @@ titles:
     what response our API will return
   response_example: Response Example
 
+  // response_output: |-
+    The title for the section of an endpoint that shows
+    a live API response created with an API explorer
+  response_output: Output
+
   // resource_example: |-
     The title for the section of a resource that shows
     what a typical resource looks like
@@ -34,25 +39,25 @@ buttons:
   copy: Copy
 
 parameter_groups:
-  // path_params: |-
+  // path: |-
     Describes all endpoint parameters that are part
     of the URL path
-  path_params: Path Parameters
+  path: Path Parameters
 
-  // query_params: |-
+  // query: |-
     Describes all endpoint parameters that are part
     of the URL query
-  query_params: Query Parameters
+  query: Query Parameters
 
-  // body_params: |-
+  // body: |-
     Describes all endpoint parameters that are
     sent in the HTTP body
-  body_params: Request Body
+  body: Request Body
 
-  // header_params: |-
+  // header: |-
     Describes all endpoint parameters that are
     sent in the HTTP headers
-  header_params: Request Headers
+  header: Request Headers
 
 parameter_location:
   // path: |-

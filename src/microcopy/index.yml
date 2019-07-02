@@ -16,3 +16,6 @@ reference:
 
 headers:
   $ref: "src/microcopy/headers.yml"
+
+explorer:
+  $ref: "src/microcopy/explorer.yml"
