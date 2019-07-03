@@ -30,7 +30,7 @@
     "start": "concurrently 'yarn watch' 'yarn serve'"
   },
   "dependencies": {
-    "@stoplight/json-ref-resolver": "2.0.0",
+    "@stoplight/json-ref-resolver": "2.0.2",
     "comment-json": "^2.0.0",
     "concurrently": "^4.1.0",
     "http-server": "^0.11.1",

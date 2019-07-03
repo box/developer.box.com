@@ -290,10 +290,10 @@
   resolved "https://registry.yarnpkg.com/@stoplight/fast-safe-stringify/-/fast-safe-stringify-2.1.2.tgz#2811eff4989c3d4c5c9a3789f057e25358db0899"
   integrity sha512-ayw3qQ9KNn2K5q6ggrLclh+rdZsSLwYIUz3uAer1NzaCpalJLR4g32G845ylgq7Xy2AunMHnNfD3FC3s0rUcsA==
 
-"@stoplight/json-ref-resolver@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@stoplight/json-ref-resolver/-/json-ref-resolver-2.0.0.tgz#9ba116bb788ee0facdbb9eaeb23b9718722ca591"
-  integrity sha512-csJillLL9aJkGl2RxWOoWyv/A/Qa9Q+KLUTRKZWXjFnPRtk4gK3MFsXyqxdo/2sevsbmEjqqWz1d4XjqohCHkw==
+"@stoplight/json-ref-resolver@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@stoplight/json-ref-resolver/-/json-ref-resolver-2.0.2.tgz#508cf634f5bdab0c4cbe638df7a9f604bacdc560"
+  integrity sha512-vqi8R4RmnYqgEPGrISlgAPFDWPqoZb3i39l4qhhFGT7YIPprgxqtBrRhCcPOrG808720jomjz/R18+nS0EjBPw==
   dependencies:
     "@stoplight/json" "2.x.x"
     "@types/urijs" "1.x.x"
@@ -378,9 +378,9 @@
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
 "@types/urijs@1.x.x":
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.1.tgz#da69e8479eec0bb4580c7cc218d218f107d2d526"
-  integrity sha512-5waMuQ9z8pH8+5yAyX05bsA7SOl50l5ZkeMripxoOgN2+nSQb4TOSuhWoRlPt7FPIIohk6iBrX/rEktUJa8KfQ==
+  version "1.19.2"
+  resolved "https://registry.yarnpkg.com/@types/urijs/-/urijs-1.19.2.tgz#45212f53c3f14f1d90ca823a719b164748ad413b"
+  integrity sha512-8Q7e4XLsVuqWkvl5Q9osdxi4R2nciXOu2sNWaroAY1rL58PEiSFU23q/elrAAUQdsHMaHk4kwsiOZh1rZ+7APA==
 
 "@types/yargs@^12.0.2", "@types/yargs@^12.0.9":
   version "12.0.12"
