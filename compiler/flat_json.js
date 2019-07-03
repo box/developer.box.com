@@ -74,9 +74,9 @@ const flattenAndInsertComments = (data, output = {}, parentKeys = []) => {
       // if this is a comment, create a new key
       // that comment-json will treat as a comment
       if (key.startsWith('//')) { 
-        fullKey = `// ${fullKey.replace('// ', '')}` 
+        fullKey = Symbol.for(`before:${fullKey.replace('// ', '')}`)
         // write the value in a format comment-json will understand
-        output[fullKey] = [[`// ${value.replace('\n', '')}`]]
+        output[fullKey] = [{ type: 'LineComment', value: ` ${value.replace('\n', '')}`, inline: false }]
       } else {
         // otherwise we just write the data
         output[fullKey] = value
