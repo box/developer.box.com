@@ -17,7 +17,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "test": "yamllint ./src",
+    "pretest": "yamllint ./src",
+    "test": "jest ./tests",
     "watch": "concurrently 'yarn:watch:*'",
     "watch:build": "watch 'yarn build' src compiler",
     "watch:test": "watch 'yarn test' src",
@@ -33,6 +34,7 @@
     "comment-json": "^2.0.0",
     "concurrently": "^4.1.0",
     "http-server": "^0.11.1",
+    "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
     "watch": "^1.0.2"
   }
