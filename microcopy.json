@@ -164,9 +164,11 @@
   // Label for the log in button
   "explorer.buttons.logout": "Log Out",
   // Label for the button to run a live API call
-  "explorer.buttons.run": "Run",
+  "explorer.buttons.run": "Make API Call",
   // Label for the button to start the API explorer
   "explorer.buttons.try": "Try this API",
+  // Provides a short intro to the API explorer
+  "explorer.messages.intro": "You can now try out some of our APIs live, right\nhere in the documentation.",
   // Short 1-sentence message to tell a user to fill in all params
   "explorer.messages.missing_params": "Please fill in all required parameters",
   // Short 1-sentence message to tell a user to that a response was received
