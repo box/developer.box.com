@@ -7,7 +7,7 @@ buttons:
   logout: Log Out
 
   // run: Label for the button to run a live API call
-  run: Run
+  run: Make API Call
 
   // try: Label for the button to start the API explorer
   try: Try this API
