@@ -170,5 +170,11 @@
   // Short 1-sentence message to tell a user to fill in all params
   "explorer.messages.missing_params": "Please fill in all required parameters",
   // Short 1-sentence message to tell a user to that a response was received
-  "explorer.messages.response_received": "Response received"
+  "explorer.messages.response_received": "Response received",
+  // Describes the API explorer response
+  "explorer.titles.response": "API Response",
+  // Describes the HTTP headers returned by the API explorer
+  "explorer.titles.headers": "Response Headers",
+  // Describes the response body returned by the API explorer
+  "explorer.titles.body": "Response Body"
 }
