@@ -15,7 +15,7 @@ buttons:
 messages:
   // intro: Provides a short intro to the API explorer
   intro: |-
-    You can now try out some of our APIs live, right 
+    You can now try out some of our APIs live, right
     here in the documentation.
 
   // missing_params: |-
