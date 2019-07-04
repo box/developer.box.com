@@ -20,3 +20,13 @@ messages:
   // response_received: |-
     Short 1-sentence message to tell a user to that a response was received
   response_received: Response received
+
+titles:
+  // response: Describes the API explorer response
+  response: API Response
+
+  // headers: Describes the HTTP headers returned by the API explorer
+  headers: Response Headers
+
+  // body: Describes the response body returned by the API explorer
+  body: Response Body
