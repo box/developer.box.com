@@ -13,6 +13,11 @@ buttons:
   try: Try this API
 
 messages:
+  // intro: Provides a short intro to the API explorer
+  intro: |-
+    You can now try out some of our APIs live, right 
+    here in the documentation.
+
   // missing_params: |-
     Short 1-sentence message to tell a user to fill in all params
   missing_params: Please fill in all required parameters
