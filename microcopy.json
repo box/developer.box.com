@@ -167,6 +167,8 @@
   "explorer.buttons.run": "Make API Call",
   // Label for the button to start the API explorer
   "explorer.buttons.try": "Try this API",
+  // Label for the button to close the API explorer
+  "explorer.buttons.close": "Close the API explorer",
   // Provides a short intro to the API explorer
   "explorer.messages.intro": "You can now try out some of our APIs live, right\nhere in the documentation.",
   // Short 1-sentence message to tell a user to fill in all params
