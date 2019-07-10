@@ -12,6 +12,9 @@ buttons:
   // try: Label for the button to start the API explorer
   try: Try this API
 
+  // close: Label for the button to close the API explorer
+  close: Close the API explorer
+
 messages:
   // intro: Provides a short intro to the API explorer
   intro: |-
