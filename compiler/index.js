@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const yaml = require('js-yaml')
 
 const resolver = require('./resolver')
@@ -25,7 +25,7 @@ class Compiler {
 
     // ensure the folder exists
     if (!fs.existsSync(target)){
-      fs.mkdirSync(target);
+      fs.mkdirpSync(target);
     }
 
     // Pretty print the config
