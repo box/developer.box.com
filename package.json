@@ -19,15 +19,17 @@
   "scripts": {
     "pretest": "yamllint ./src",
     "test": "jest ./tests",
-    "watch": "concurrently 'yarn:watch:*'",
-    "watch:build": "watch 'yarn build' src compiler",
-    "watch:test": "watch 'yarn test' src",
+    "watch": "concurrently 'yarn:watch:microcopy' 'yarn:watch:guides'",
+    "watch:microcopy": "watch 'yarn build:microcopy' src/microcopy compiler --interval=0.2",
+    "watch:guides": "watch 'yarn build:guides' src/guides --interval=0.2",
+    "watch:test": "watch 'yarn test' src --interval=1",
     "clean": "rm -rf compiled && mkdir compiled",
     "prebuild": "yarn clean",
     "build": "concurrently 'yarn:build:*'",
     "build:microcopy": "node -e 'require(\"./compiler\").write()'",
+    "build:guides": "rsync -r --checksum src/guides/ compiled/guides/",
     "serve": "http-server -p 8081 ./compiled",
-    "start": "concurrently 'yarn watch' 'yarn serve'"
+    "start": "concurrently 'yarn watch' 'yarn watch:test' 'yarn serve'"
   },
   "dependencies": {
     "@stoplight/json-ref-resolver": "2.0.3",

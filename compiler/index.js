@@ -20,7 +20,7 @@ class Compiler {
   /**
    * Write the resolved config to file
    */
-  async write(target = './compiled', fileName = 'microcopy.json') {
+  async write(target = './compiled/microcopy', fileName = 'microcopy.json') {
     const config = await this.load()
 
     // ensure the folder exists

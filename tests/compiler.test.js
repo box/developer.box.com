@@ -5,11 +5,11 @@ const compiler = require('../compiler/index')
 const { parse } = require('../compiler/flat_json')
 
 beforeAll(async () => {
-  await compiler.write(target = './compiled', fileName = 'microcopy.json')
+  await compiler.write(target = './compiled/microcopy', fileName = 'microcopy.json')
 })
 
 test('Expect the compiler to output flattened JSON5', async () => {
-  const content = fs.readFileSync('./compiled/microcopy.json').toString()
+  const content = fs.readFileSync('./compiled/microcopy/microcopy.json').toString()
   const lines = content.split('\n')
   expect(lines[0]).toEqual('{')
   expect(lines[1].startsWith('  // ')).toBeTruthy()
@@ -18,7 +18,7 @@ test('Expect the compiler to output flattened JSON5', async () => {
 })
 
 test('Expect the compiler to only have objects or strings as values', async () => {
-  let result = parse(fs.readFileSync('./compiled/microcopy.json').toString())
+  let result = parse(fs.readFileSync('./compiled/microcopy/microcopy.json').toString())
 
   jp.nodes(result, '$..*').forEach(({ value }) => {
     expect(typeof value === 'string' || value.constructor.name === 'Object').toBeTruthy()

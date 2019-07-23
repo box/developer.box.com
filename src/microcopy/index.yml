@@ -14,6 +14,9 @@ messages:
 reference:
   $ref: "src/microcopy/reference.yml"
 
+guides:
+  $ref: "src/microcopy/guides.yml"
+
 headers:
   $ref: "src/microcopy/headers.yml"
 

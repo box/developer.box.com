@@ -13,7 +13,7 @@ primary:
       text: Guides
 
       // url: The URL to the old generic guides
-      url: https://developer.box.com/docs
+      url: /en/guides/
 
     api_reference:
       // text: The text for the link the new API Reference docs
