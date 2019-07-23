@@ -117,6 +117,8 @@
   "reference.resource_variants.standard": "Standard",
   // Describes the full set of fields that can be returnedfor a resource in an API response
   "reference.resource_variants.full": "Full",
+  // The title for the guides section
+  "guides.titles.guides": "Guides",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides
@@ -124,7 +126,7 @@
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "Guides",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "https://developer.box.com/docs",
+  "headers.primary.links.guides.url": "/en/guides/",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "API Reference",
   // The url to the root of the reference
