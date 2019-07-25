@@ -15,7 +15,7 @@ requires:
 
 To create a folder in Box you will need to provide our API with a `name` for the new folder, as well as the `id` of the `parent` folder that you would like to create the new folder within.
 
-<Samples id='post_folder_id'></Sample>
+<Samples id='post_folders_id'></Samples>
 
 <Message type='notice'>
   # Name restrictions
