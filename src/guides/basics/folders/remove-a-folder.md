@@ -2,13 +2,13 @@
 rank: 3
 
 related_endpoints:
-  - post_folders_id
+  - delete_folders_id
 related_guides:
   - folders/find-a-folder-id
   - folders/get-folder-items
 requires:
-  - sdk/install
-  - sdk/initialize
+  - basics/sdks/install
+  - basics/sdks/initialize
 ---
 
 # Remove a folder

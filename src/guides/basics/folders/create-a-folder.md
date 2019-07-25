@@ -4,11 +4,11 @@ rank: 1
 related_endpoints:
   - post_folders_id
 related_guides:
-  - folders/find-a-folder-id
-  - folders/get-folder-items
+  - basics/folders/find-a-folder-id
+  - basics/folders/get-folder-items
 requires:
-  - sdk/install
-  - sdk/initialize
+  - basics/sdks/install
+  - basics/sdks/initialize
 ---
 
 # Create a folder
