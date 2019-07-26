@@ -4,11 +4,11 @@ rank: 3
 related_endpoints:
   - delete_folders_id
 related_guides:
-  - folders/find-a-folder-id
-  - folders/get-folder-items
-requires:
-  - basics/sdks/install
-  - basics/sdks/initialize
+  - basics/folders/create-a-folder
+  - basics/folders/remove-a-folder
+required_guides:
+  - basics/folders/create-a-folder
+  - basics/folders/remove-a-folder
 ---
 
 # Remove a folder

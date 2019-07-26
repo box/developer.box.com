@@ -3,11 +3,11 @@ rank: 2
 related_endpoints:
   - post_folders_id_copy
 related_guides:
-  - basics/folders/find-a-folder-id
-  - basics/folders/get-folder-items
-requires:
-  - basics/sdks/install
-  - basics/sdks/initialize
+  - basics/folders/create-a-folder
+  - basics/folders/remove-a-folder
+required_guides:
+  - basics/folders/create-a-folder
+  - basics/folders/remove-a-folder
 ---
 
 # Copy a folder
