@@ -119,6 +119,10 @@
   "reference.resource_variants.full": "Full",
   // The title for the guides section
   "guides.titles.guides": "Guides",
+  // A title for a set of links describing things to read before
+  "guides.titles.prerequisites": "Read before",
+  // A title for a set of links describing things to read after
+  "guides.titles.next_reads": "Read after",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides
