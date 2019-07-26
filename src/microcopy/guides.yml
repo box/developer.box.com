@@ -2,3 +2,9 @@
 titles:
   // guides: The title for the guides section
   guides: Guides
+
+  // prerequisites: A title for a set of links describing things to read before
+  prerequisites: Read before
+
+  // next_reads: A title for a set of links describing things to read after
+  next_reads: Read after
