@@ -32,7 +32,7 @@
     "start": "concurrently 'yarn watch' 'yarn watch:test' 'yarn serve'"
   },
   "dependencies": {
-    "@stoplight/json-ref-resolver": "2.0.3",
+    "@stoplight/json-ref-resolver": "2.1.0",
     "comment-json": "^2.0.0",
     "concurrently": "^4.1.0",
     "fs-extra": "^8.1.0",
