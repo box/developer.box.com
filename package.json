@@ -17,8 +17,12 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "pretest": "yamllint ./src",
+    "pretest": "concurrently 'yarn:pretest:*'",
+    "pretest:markdown": "yarn lint:markdown",
+    "pretest:yaml": "yarn lint:yaml",
     "test": "jest ./tests",
+    "lint:markdown": "markdownlint -c markdownlintrc.json ./src",
+    "lint:yaml": "yamllint ./src",
     "watch": "concurrently 'yarn:watch:microcopy' 'yarn:watch:guides'",
     "watch:microcopy": "watch 'yarn build:microcopy' src/microcopy compiler --interval=0.2",
     "watch:guides": "watch 'yarn build:guides' src/guides --interval=0.2",
@@ -40,6 +44,7 @@
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
     "jsonpath": "^1.0.2",
+    "markdownlint-cli": "^0.17.0",
     "watch": "^1.0.2"
   }
 }
