@@ -11,7 +11,8 @@ required_guides:
 
 # Delete a webhook
 
-To remove a webhook from a file or folder in Box you will need to provide our API with the ID of the webhook to remove.
+To remove a webhook from a file or folder in Box you will need to provide our
+API with the ID of the webhook to remove.
 
 <Samples id='delete_webhooks_id'></Samples>
 

@@ -11,8 +11,10 @@ required_guides:
 
 # List of event types
 
-The following is a list of event triggers available when creating webhooks. Some events are only availabe for files, while others are only available for folders.
+The following is a list of event triggers available when creating webhooks. Some
+events are only availabe for files, while others are only available for folders.
 
+<!-- markdownlint-disable line-length -->
 | Event                       | Triggered                                                                                                           | File? | Folder? |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
 | `FILE.UPLOADED`             | A file is uploaded to this folder                                                                                   | No    | Yes     |
@@ -51,3 +53,4 @@ The following is a list of event triggers available when creating webhooks. Some
 | `SHARED_LINK.DELETED`       | A shared link was deleted                                                                                           | Yes   | Yes     |
 | `SHARED_LINK.CREATED`       | A shared link was created                                                                                           | Yes   | Yes     |
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
+<!-- markdownlint-enable line-length -->
