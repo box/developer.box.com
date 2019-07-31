@@ -1,14 +1,12 @@
 ---
 rank: 1
-
+tag: folders
 related_endpoints:
   - post_folders_id
 related_guides:
-  - basics/folders/create-a-folder
-  - basics/folders/remove-a-folder
-required_guides:
-  - basics/folders/create-a-folder
-  - basics/folders/remove-a-folder
+  - basics/folders/-folder
+  - basics/folders/copy-a-folder
+required_guides: []
 ---
 
 # Create a folder
