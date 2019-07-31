@@ -1,26 +1,31 @@
 ---
 rank: 2
+tag: webhooks
 related_endpoints:
-  - post_folders_id
+  - post_webhooks
 related_guides:
-  - basics/folders/create-a-folder
-  - basics/folders/remove-a-folder
-required_guides:
-  - basics/folders/create-a-folder
-  - basics/folders/remove-a-folder
+  - automation-and-events/webhooks/list-of-event-types
+  - automation-and-events/webhooks/parse-a-webhook
+  - automation-and-events/webhooks/delete-a-webhook
+required_guides: []
 ---
 
 # Create a webhook
 
-To create a folder in Box you will need to provide our API with a `name` for the new folder, as well as the `id` of the `parent` folder that you would like to create the new folder within.
+To attach a webhook to an item, call the [Create webhook][1] endpoint
+with the type and ID of the item, a URL to send webhook notifications to, 
+and a list of triggers that will cause the webhook to activate.
 
-<Samples id='post_folders_id'></Samples>
+<Samples id='post_webhooks'></Samples>
 
-<Message type='notice'>
-  # Name restrictions
-  
-  There are some restrictions to the file name. Names containing non-printable ASCII characters, forward
-  and backward slashes (`/`, `\`), as well as names with trailing spaces are prohibited.
+The current types supported are `file` and `folder`.
 
-  Additionally, the special names `.` and `..` are reserved names and therefore also prohibited.
-</Message>
+The notification URL must be a valid HTTPS URL that you specify when you create a webhook. Every time one of the triggers is activated, this
+URL will be called.
+
+The triggers are a list of strings that speficy the events that will cause the webhook to be triggered. For example, if you want the webhook to be triggered when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
+
+A list of available triggers is available in the [in this guide][2].
+
+[1]: ../../../reference/automation-and-events/#post-webhooks
+[2]: ../../../reference/automation-and-events/#post_webhooks-triggers

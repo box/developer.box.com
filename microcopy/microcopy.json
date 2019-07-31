@@ -120,9 +120,9 @@
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before
-  "guides.titles.prerequisites": "Read before",
+  "guides.titles.prerequisites": "Things to read first",
   // A title for a set of links describing things to read after
-  "guides.titles.next_reads": "Read after",
+  "guides.titles.next_reads": "Next things to read",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides
