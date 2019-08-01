@@ -18,7 +18,6 @@ create the new folder within.
 <Samples id='post_folders'></Samples>
 
 <Message>
-
   # Name restrictions
   
   There are some restrictions to the file name. Names containing non-printable
@@ -27,5 +26,4 @@ create the new folder within.
 
   Additionally, the special names `.` and `..` are reserved names and therefore
   also prohibited.
-  
 </Message>
