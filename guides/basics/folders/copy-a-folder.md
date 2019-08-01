@@ -23,14 +23,12 @@ Optionally, you can provide a different name for the new folder.
 
 <Message>
 
-  # Name restrictions
-  
-  There are some restrictions to the file name. Names containing non-printable
-  ASCII characters, forward and backward slashes (`/`, `\`), as well as names
-  with trailing spaces are prohibited.
+# Name restrictions
 
-  Additionally, the special names `.` and `..` are reserved names and therefore
-  also prohibited.
+There are some restrictions to the file name. Names containing non-printable
+ASCII characters, forward and backward slashes (`/`, `\`), as well as nameswith trailing spaces are prohibited.
+
+Additionally, the special names `.` and `..` are reserved names and thereforealso prohibited.
 
 </Message>
 

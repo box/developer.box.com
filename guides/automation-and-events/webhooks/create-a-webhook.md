@@ -30,4 +30,5 @@ when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
 A list of available triggers is available in the [in this guide][2].
 
 [1]: ../../../reference/automation-and-events/#post-webhooks
+
 [2]: ../../../reference/automation-and-events/#post_webhooks-triggers

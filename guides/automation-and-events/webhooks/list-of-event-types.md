@@ -15,8 +15,9 @@ The following is a list of event triggers available when creating webhooks. Some
 events are only availabe for files, while others are only available for folders.
 
 <!-- markdownlint-disable line-length -->
+
 | Event                       | Triggered                                                                                                           | File? | Folder? |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----- | ------- |
 | `FILE.UPLOADED`             | A file is uploaded to this folder                                                                                   | No    | Yes     |
 | `FILE.PREVIEWED`            | A file is previewed                                                                                                 | Yes   | Yes     |
 | `FILE.DOWNLOADED`           | A file is downloaded                                                                                                | Yes   | Yes     |
@@ -53,4 +54,5 @@ events are only availabe for files, while others are only available for folders.
 | `SHARED_LINK.DELETED`       | A shared link was deleted                                                                                           | Yes   | Yes     |
 | `SHARED_LINK.CREATED`       | A shared link was created                                                                                           | Yes   | Yes     |
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
+
 <!-- markdownlint-enable line-length -->

@@ -18,14 +18,10 @@ create the new folder within.
 <Samples id='post_folders'></Samples>
 
 <Message>
+# Name restrictions
 
-  # Name restrictions
-  
-  There are some restrictions to the file name. Names containing non-printable
-  ASCII characters, forward and backward slashes (`/`, `\`), as well as names
-  with trailing spaces are prohibited.
+There are some restrictions to the file name. Names containing non-printable
+ASCII characters, forward and backward slashes (`/`, `\`), as well as names
+with trailing spaces are prohibited.
 
-  Additionally, the special names `.` and `..` are reserved names and therefore
-  also prohibited.
-  
-</Message>
+Additionally, the special names `.` and `..` are reserved names and thereforealso prohibited.</Message>
