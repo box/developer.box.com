@@ -36,7 +36,7 @@
     "start": "concurrently 'yarn watch' 'yarn watch:test' 'yarn serve'"
   },
   "dependencies": {
-    "@stoplight/json-ref-resolver": "2.1.0",
+    "@stoplight/json-ref-resolver": "2.1.1",
     "comment-json": "^2.0.0",
     "concurrently": "^4.1.0",
     "fs-extra": "^8.1.0",
@@ -51,7 +51,7 @@
     "remark-stringify": "^7.0.1",
     "unified": "^8.3.2",
     "unist-util-find-all-before": "^2.0.4",
-    "unist-util-visit": "^1.4.1",
+    "unist-util-visit": "2.0.0",
     "watch": "^1.0.2"
   }
 }
