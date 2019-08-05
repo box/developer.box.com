@@ -111,6 +111,8 @@
   "reference.environments.java": "Java",
   // Describes the Python programming language whenselecting a code sample
   "reference.environments.python": "Python",
+  // Describes the command line interface whenselecting a code sample
+  "reference.environments.cli": "CLI",
   // Describes the minimal set of fields that can be returnedfor a resource in an API response
   "reference.resource_variants.mini": "Mini",
   // Describes the standard set of fields that are returned for aresource in an API response
