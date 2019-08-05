@@ -16,7 +16,7 @@ To attach a webhook to an item, call the [Create webhook][1] endpoint with the
 type and ID of the item, a URL to send webhook notifications to, and a list of
 triggers that will cause the webhook to activate.
 
-<Samples id='post_webhooks'></Samples>
+<Samples id='post_webhooks' />
 
 The current types supported are `file` and `folder`.
 

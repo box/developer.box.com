@@ -1,11 +1,8 @@
 const fs = require('fs-extra')
 const path = require('path')
-const unified = require('unified')
-const markdown = require('remark-parse')
-const toMarkdown = require('remark-stringify')
-const frontmatter = require('remark-frontmatter')
 const padNestedMarkdownWithNewlines = require('./padNestedMarkdown')
 const unIndentNestedMarkdown = require('./unIndentNestedMarkdown')
+const expandSelfClosingTags = require('./expandSelfClosingTags')
 
 class MarkdownProcessor {
   constructor({ sourcePath }) {
@@ -16,39 +13,38 @@ class MarkdownProcessor {
    * Writes a markdown file from `from` to the `to`
    * folder, applying transformations in the process.
    */
-  async write({ 
+  write({ 
     from, 
     to 
   }) {
-    const contents = fs.readFileSync(this.sourcePath)
-    const transformedContents = await this.transform({ contents })
-
+    // read the content and transform it
+    const contents = fs.readFileSync(this.sourcePath).toString()
+    const transformedContents = this.transform({ contents })
+    // determine the source
     const sourceName = this.sourcePath.replace(from, '')
-
+    // determine the destination
     const destinationPath = path.resolve(to, sourceName)
     const destinationDirectory = path.dirname(destinationPath)
 
+    // ensure the destination folder exists
     if (!fs.existsSync(destinationDirectory)) { 
       fs.mkdirpSync(destinationDirectory)
     }
 
+    // write the new content to the destination
     fs.writeFileSync(destinationPath, transformedContents)
   }
 
-  async transform({ 
+  /**
+   * Applies some transformation to every markdown file
+   */
+  transform({ 
     contents 
   }) {
-    const processor = unified()
-      .use(markdown)
-      .use(toMarkdown)
-      .use(padNestedMarkdownWithNewlines)
-      .use(unIndentNestedMarkdown)
-      .use(frontmatter, ['yaml'])
-      
-
-    const processed = await processor.process(contents)
-    
-    return processed.contents
+    contents = expandSelfClosingTags(contents)
+    contents = padNestedMarkdownWithNewlines(contents)
+    contents = unIndentNestedMarkdown(contents)
+    return contents    
   }
 }
 

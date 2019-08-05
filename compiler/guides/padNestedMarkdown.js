@@ -1,38 +1,47 @@
-var visit = require('unist-util-visit')
+const openRegex = new RegExp(/< *([\w]+) *[\w=\"']* *>/, 'g')
+const closeRegex = new RegExp(/ *<\/ *([\w]+) *>/, 'g')
 
-/**
- * A unified plugin that padds html elements with new lines
- * when needed, to ensure the body is parsed as markdown
- */
-const attacher = () => (
-  (tree) => {
-    // visits every node
-    const visitor = (node) => {
-      // check if the string starts with a HTML open tag
-      let openTagMatch
-      const openRegex = new RegExp(/^ *< *([\w ]+) *>/, 'm')
-
-      if (openTagMatch = node.value.match(openRegex)) {
-        // if so, see if the string ends with a matching closing tag
-        let closeTagMatch
-        const closeRegex = new RegExp(`</ *${openTagMatch[1]} *> *$`, 'm')
-
-        if (closeTagMatch = node.value.match(closeRegex)) {
-          // if it does, pad the content of the element with some extra newlines
-          const open = openTagMatch[0]
-          const close = closeTagMatch[0]
-
-          node.value = node.value
-            .replace(open, `${open}\n`)
-            .replace(close, `\n${close}`)
-        }
-      }
-      return node
-    }
-
-    // visit all HTML nodes
-    visit(tree, 'html', visitor)
+if (!String.prototype.splice) {
+  String.prototype.splice = function(start, delCount, newSubStr) {
+      return this.slice(0, start) + newSubStr + this.slice(start + Math.abs(delCount))
   }
-)
+}
 
-module.exports = attacher
+const padNestedMarkdownWithNewlines = (contents) => {
+  contents = padOpeningLines(contents)
+  contents = padClosingLines(contents)
+  return contents
+}
+
+const padOpeningLines = (contents) => {
+  while ((match = openRegex.exec(contents)) !== null) {
+    const nextChars = contents.substring(openRegex.lastIndex, openRegex.lastIndex+2)
+    const followedByClosingTag = (nextChars === '</')
+    const followedByTwoNewLines = (nextChars === '\n\n')
+    const followedByOneNewLine = (nextChars.startsWith('\n'))
+
+    if (!followedByClosingTag && !followedByTwoNewLines && !followedByOneNewLine) {
+      contents = contents.splice(openRegex.lastIndex+1, 0, '\n\n')
+    } else if (!followedByClosingTag && !followedByTwoNewLines && followedByOneNewLine) {
+      contents = contents.splice(openRegex.lastIndex+1, 0, '\n')
+    }
+  }
+  return contents
+}
+
+const padClosingLines = (contents) => {
+  while ((match = closeRegex.exec(contents)) !== null) {
+    const prevChars = contents.substring(0, match.index)
+    const precededByTwoNewLines = /\n\n$/.test(prevChars)
+    const precededByOneNewLine = /\n$/.test(prevChars)
+
+    if (!precededByTwoNewLines && !precededByOneNewLine) {
+      contents = contents.splice(match.index, 0, '\n\n')
+    } else if (!precededByTwoNewLines && precededByOneNewLine) {
+      contents = contents.splice(match.index, 0, '\n')
+    }
+  }
+  return contents
+}
+
+module.exports = padNestedMarkdownWithNewlines

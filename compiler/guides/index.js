@@ -8,7 +8,7 @@ class Compiler {
   /**
    * Transform and write markdown files
    */
-  async write(target = './compiled/guides/', source = './src/guides/') {
+  write(target = './compiled/guides/', source = './src/guides/') {
     glob.sync(`${source}/**/*.md`).forEach(filename => {
       new MarkdownProcessor({ 
         sourcePath: filename

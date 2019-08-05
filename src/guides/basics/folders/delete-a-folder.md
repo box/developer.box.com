@@ -13,7 +13,7 @@ required_guides:
 
 To remove a folder in Box you will need to provide our API with the ID of the folder.
 
-<Samples id='delete_folders_id'></Samples>
+<Samples id='delete_folders_id' />
 
 <Message>
   # Deleting non-empty folders

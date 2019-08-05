@@ -15,14 +15,13 @@ required_guides:
 To copy a folder in Box you will need to provide our API with an the `id` of the
 `parent` folder that you would like to copy the folder into.
 
-<Samples id='post_folders_id_copy'></Samples>
+<Samples id='post_folders_id_copy' />
 
 Optionally, you can provide a different name for the new folder.
 
-<Samples id='post_folders_id_copy' variant='with_name'></Samples>
+<Samples id='post_folders_id_copy' variant='with_name' />
 
 <Message>
-
   # Name restrictions
   
   There are some restrictions to the file name. Names containing non-printable
@@ -31,7 +30,6 @@ Optionally, you can provide a different name for the new folder.
 
   Additionally, the special names `.` and `..` are reserved names and therefore
   also prohibited.
-
 </Message>
 
 ## Asynchronous copying
