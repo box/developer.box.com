@@ -16,7 +16,9 @@ To attach a webhook to an item, call the [Create webhook][1] endpoint with the
 type and ID of the item, a URL to send webhook notifications to, and a list of
 triggers that will cause the webhook to activate.
 
-<Samples id='post_webhooks'></Samples>
+<Samples id='post_webhooks' >
+
+</Samples>
 
 The current types supported are `file` and `folder`.
 
@@ -30,5 +32,4 @@ when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
 A list of available triggers is available in the [in this guide][2].
 
 [1]: ../../../reference/automation-and-events/#post-webhooks
-
 [2]: ../../../reference/automation-and-events/#post_webhooks-triggers
