@@ -181,6 +181,11 @@ environments:
     selecting a code sample
   python: Python
 
+  // cli: |-
+    Describes the command line interface when
+    selecting a code sample
+  cli: CLI
+
 resource_variants:
   // mini: |-
     Describes the minimal set of fields that can be returned
