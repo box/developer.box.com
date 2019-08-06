@@ -186,6 +186,11 @@ environments:
     selecting a code sample
   cli: CLI
 
+  // curl: |-
+    Describes the cURL tool when
+    selecting a code sample
+  curl: cURL
+
 resource_variants:
   // mini: |-
     Describes the minimal set of fields that can be returned
