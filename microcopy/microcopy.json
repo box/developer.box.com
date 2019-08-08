@@ -1,4 +1,4 @@
-{
+﻿{
   // The name of the English locale, in this locale
   "locales.names.en": "English",
   // The name of the Japanese locale, in this locale
@@ -24,7 +24,7 @@
   // Describes the full-resource variant
   "messages.resource_variant_descriptions.full": "The fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
   // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
-  "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
+  "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https:\/\/twitter.com\/boxplatform\n[2]: https:\/\/github.com\/box\/developer.box.com",
   // The title for the API referene page
   "reference.titles.api_reference": "API Reference",
   // The title for the resources page
@@ -130,23 +130,23 @@
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides
-  "headers.primary.links.get_started.url": "https://developer.box.com/docs/quickstart-guides",
+  "headers.primary.links.get_started.url": "https:\/\/developer.box.com\/docs\/quickstart-guides",
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "Guides",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "/en/guides/",
+  "headers.primary.links.guides.url": "\/en\/guides\/",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "API Reference",
   // The url to the root of the reference
-  "headers.primary.links.api_reference.url": "/en/reference/",
+  "headers.primary.links.api_reference.url": "\/en\/reference\/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
   // The URL to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.url": "https://developer.box.com/docs/sdks",
+  "headers.primary.links.sdks_and_tools.url": "https:\/\/developer.box.com\/docs\/sdks",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "Manage Applications",
   // The URL to the developer console
-  "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
+  "headers.primary.buttons.console.url": "https:\/\/account.box.com\/developers\/services",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
@@ -154,15 +154,15 @@
   // The text for the link to the developer blog
   "headers.secondary.links.blog.text": "Blog",
   // The URL to the developer blog
-  "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
+  "headers.secondary.links.blog.url": "https:\/\/medium.com\/box-developer-blog",
   // The text for the link to the developer forum
   "headers.secondary.links.forum.text": "Forum",
   // The URL to the developer forum
-  "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
+  "headers.secondary.links.forum.url": "https:\/\/community.box.com\/t5\/Platform-and-Development-Forum\/bd-p\/DeveloperForum",
   // The text for the link to the developer feedback site
   "headers.secondary.links.feedback.text": "Feedback",
   // The URL to the developer feedback site
-  "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
+  "headers.secondary.links.feedback.url": "https:\/\/box.uservoice.com\/forums\/909778-product-feedback?category_id=330838",
   // A short title for the dropdown to select a documentation type on mobile
   "headers.secondary.dropdowns.docs": "Docs",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
