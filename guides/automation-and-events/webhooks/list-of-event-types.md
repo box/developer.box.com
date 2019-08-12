@@ -12,7 +12,7 @@ required_guides:
 # List of event types
 
 The following is a list of event triggers available when creating webhooks. Some
-events are only availabe for files, while others are only available for folders.
+events are only available for files, while others are only available for folders.
 
 <!-- markdownlint-disable line-length -->
 | Event                       | Triggered                                                                                                           | File? | Folder? |

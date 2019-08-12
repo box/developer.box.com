@@ -12,7 +12,7 @@ required_guides:
 
 # Copy a folder
 
-To copy a folder in Box you will need to provide our API with an the `id` of the
+To copy a folder in Box you will need to provide our API with the `id` of the
 `parent` folder that you would like to copy the folder into.
 
 <Samples id='post_folders_id_copy' >

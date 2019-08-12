@@ -25,7 +25,7 @@ The current types supported are `file` and `folder`.
 The notification URL must be a valid HTTPS URL that you specify when you create
 a webhook. Every time one of the triggers is activated, this URL will be called.
 
-The triggers are a list of strings that speficy the events that will cause the
+The triggers are a list of strings that specify the events that will cause the
 webhook to be triggered. For example, if you want the webhook to be triggered
 when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
 
