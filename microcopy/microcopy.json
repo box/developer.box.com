@@ -190,5 +190,15 @@
   // Describes the HTTP headers returned by the API explorer
   "explorer.titles.headers": "Response Headers",
   // Describes the response body returned by the API explorer
-  "explorer.titles.body": "Response Body"
+  "explorer.titles.body": "Response Body",
+  // A short name for the resource type to be shown in search results
+  "search.result_types.resource": "resource",
+  // A short name for the endpoint type to be shown in search results
+  "search.result_types.endpoint": "endpoint",
+  // A short name for the guide type to be shown in search results
+  "search.result_types.guide": "guide",
+  // A short name for the param type to be shown in search results
+  "search.result_types.param": "param",
+  // A short name for the field type to be shown in search results
+  "search.result_types.field": "field"
 }
