@@ -22,3 +22,6 @@ headers:
 
 explorer:
   $ref: "src/microcopy/explorer.yml"
+
+search:
+  $ref: "src/microcopy/search.yml"

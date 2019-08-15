@@ -1,0 +1,16 @@
+---
+result_types:
+  // resource: A short name for the resource type to be shown in search results
+  resource: resource
+
+  // endpoint: A short name for the endpoint type to be shown in search results
+  endpoint: endpoint
+
+  // guide: A short name for the guide type to be shown in search results
+  guide: guide
+
+  // param: A short name for the param type to be shown in search results
+  param: param
+
+  // field: A short name for the field type to be shown in search results
+  field: field
