@@ -134,11 +134,11 @@
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "ガイド",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "\/ja\/guides\/",
+  "headers.primary.links.guides.url": "\/{locale}\/guides\/",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "APIリファレンス",
   // The url to the root of the reference
-  "headers.primary.links.api_reference.url": "\/ja\/reference\/",
+  "headers.primary.links.api_reference.url": "\/{locale}\/reference\/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKとツール",
   // The URL to the old page on SDKs
