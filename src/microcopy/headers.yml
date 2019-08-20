@@ -18,7 +18,7 @@ primary:
     api_reference:
       // text: The text for the link the new API Reference docs
       text: API Reference
-      // url: The url to the root of the reference
+      // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/{locale}/reference/"
 
     sdks_and_tools:
