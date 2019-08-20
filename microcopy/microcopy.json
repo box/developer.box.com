@@ -103,11 +103,11 @@
   "reference.enum.value_is_any_of": "次の値のいずれか:",
   // Describes the situation where a parameter canbe only one of many values
   "reference.enum.value_is_one_of": "次の値のいずれか1つ:",
-  // Describes the Node JS programming language when selectinga code sample
-  "reference.environments.node": "ノード",
-  // Describes the .NET programming language when selectinga code sample
+  // Describes the Node JS programming language when selectinga code sample - DO NOT TRANSLATE
+  "reference.environments.node": "Node",
+  // Describes the .NET programming language when selectinga code sample - DO NOT TRANSLATE
   "reference.environments.dotnet": ".NET",
-  // Describes the Java programming language when selectinga code sample
+  // Describes the Java programming language when selectinga code sample - DO NOT TRANSLATE
   "reference.environments.java": "Java",
   // Describes the Python programming language whenselecting a code sample
   "reference.environments.python": "Python",
