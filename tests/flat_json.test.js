@@ -1,4 +1,4 @@
-const json = require('../compiler/flat_json')
+const json = require('../src/flat_json')
 const raw = `{
   // a test comment
   "test": "value"

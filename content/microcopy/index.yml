@@ -1,0 +1,27 @@
+---
+locales:
+  $ref: "content/microcopy/locales.yml"
+
+head:
+  $ref: "content/microcopy/head.yml"
+
+refresh_notification:
+  $ref: "content/microcopy/refresh_notification.yml"
+
+messages:
+  $ref: "content/microcopy/messages.yml"
+
+reference:
+  $ref: "content/microcopy/reference.yml"
+
+guides:
+  $ref: "content/microcopy/guides.yml"
+
+headers:
+  $ref: "content/microcopy/headers.yml"
+
+explorer:
+  $ref: "content/microcopy/explorer.yml"
+
+search:
+  $ref: "content/microcopy/search.yml"

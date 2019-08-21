@@ -12,7 +12,7 @@ class Compiler {
   /**
    * Load the specification from file and resolve the references
    */
-  async load(source = './src/microcopy/index.yml') {
+  async load(source = './content/microcopy/index.yml') {
     const root = yaml.load(fs.readFileSync(source))
     return await resolver.resolve(root).then(resolved => resolved.result)
   }
