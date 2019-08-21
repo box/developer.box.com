@@ -1,6 +1,5 @@
 ---
 rank: 2
-tag: webhooks
 related_endpoints:
   - post_webhooks
 related_guides:
