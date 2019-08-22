@@ -142,13 +142,13 @@ yarn new path/to/index "Index page title"
 ```
 
 This will add a new empty guide file in `./content/guides/path/to/index.md` and
-map to the url `https://box.dev/guides/path/to/`.
+map to the URL `https://box.dev/guides/path/to/`.
 
 ### <a name='Addingmicrocopy'></a>Adding microcopy
 
 To add microcopy, find the relevant file in `./content/microcopy` to add the new
 file to. Make sure to add a comment for every entry to provide a hint to the
-translation tream on how to translate the value.
+translation stream on how to translate the value.
 
 ```yaml
 // foobar: A hint for the "foobar" key that is passed to the translation team.
