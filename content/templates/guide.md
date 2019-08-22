@@ -40,7 +40,7 @@ related_guides:
 required_guides: []
 ---
 
-# My Title
+# Title
 
 From here everything is Markdown.
 
