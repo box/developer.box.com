@@ -9,6 +9,9 @@
 	* [Prerequisites](#Prerequisites)
 	* [Start local server](#Startlocalserver)
 	* [Adding a guide](#Addingaguide)
+	* [Adding index pages](#Addingindexpages)
+	* [Adding microcopy](#Addingmicrocopy)
+		* [Adding new Microcopy files.](#AddingnewMicrocopyfiles.)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -126,7 +129,7 @@ yarn new:guide:example path/to/file "My long title"
 Make sure the server is started with `yarn start` and make changes to the guide.
 Make sure all tests and linting passes before committing changes.
 
-### Adding index pages
+### <a name='Addingindexpages'></a>Adding index pages
 
 Guides are rendered slightly different when they are index pages. Index pages
 are simply pages named `index.md` and will automatically list all guides and
@@ -141,7 +144,7 @@ yarn new path/to/index "Index page title"
 This will add a new empty guide file in `./content/guides/path/to/index.md` and
 map to the url `https://box.dev/guides/path/to/`.
 
-### Adding microcopy
+### <a name='Addingmicrocopy'></a>Adding microcopy
 
 To add microcopy, find the relevant file in `./content/microcopy` to add the new
 file to. Make sure to add a comment for every entry to provide a hint to the
@@ -155,7 +158,7 @@ foobar: The actual value for the "foobar" key
 Make sure the server is started with `yarn start` and make your changes.
 Make sure all tests and linting passes before committing changes.
 
-#### Adding new Microcopy files.
+#### <a name='AddingnewMicrocopyfiles.'></a>Adding new Microcopy files.
 
 Generally, microcopy is held within files that keep related keys together. To
 add a new file, create a Yaml file with your content, and then add a new entry
