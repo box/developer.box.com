@@ -178,13 +178,13 @@ environments:
 
   // python: |-
     Describes the Python programming language when
-    selecting a code sample
-  python: Python - DO NOT TRANSLATE
+    selecting a code sample - DO NOT TRANSLATE
+  python: Python
 
   // cli: |-
     Describes the command line interface when
-    selecting a code sample
-  cli: CLI - DO NOT TRANSLATE
+    selecting a code sample - DO NOT TRANSLATE
+  cli: CLI
 
   // curl: |-
     Describes the cURL tool when
