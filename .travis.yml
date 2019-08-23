@@ -14,7 +14,7 @@ before_deploy: yarn build
 deploy:
   - provider: pages
     local-dir: compiled
-    target_branch: en
+    target_branch: "en"
     github-token: "$GITHUB_TOKEN"
     skip-cleanup: true
     keep-history: true
@@ -23,7 +23,7 @@ deploy:
       node: 12
   - provider: pages
     local-dir: compiled
-    target_branch: en-staging
+    target_branch: "en-staging"
     github-token: "$GITHUB_TOKEN"
     skip-cleanup: true
     keep-history: true
