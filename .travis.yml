@@ -27,8 +27,6 @@ deploy:
     github-token: "$GITHUB_TOKEN"
     skip-cleanup: true
     keep-history: true
-    edge:
-      branch: master
     on:
       branch: staging
       node: 12
