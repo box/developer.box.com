@@ -179,6 +179,10 @@
   "explorer.buttons.try": "このAPIを試す",
   // Label for the button to close the API explorer
   "explorer.buttons.close": "APIエクスプローラを閉じる",
+  // A label to expand the code, making it full screen
+  "explorer.buttons.expand": "Expand",
+  // A label to collapse a viewing, making it smaller.
+  "explorer.buttons.collapse": "Collapse",
   // Provides a short intro to the API explorer
   "explorer.messages.intro": "このドキュメント内で直接一部のAPIを試せるように\nなりました。",
   // Short 1-sentence message to tell a user to fill in all params
