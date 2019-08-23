@@ -1,0 +1,204 @@
+{
+  // The name of the English locale, in this locale
+  "locales.names.en": "English",
+  // The name of the Japanese locale, in this locale
+  "locales.names.jp": "Japanese",
+  // The HTML <title> of the site, as shown in search results
+  "head.title": "Box Developer Documentation Portal",
+  // The HTML <meta> description of a site, as shownin search results.
+  "head.description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
+  // The HTML <meta> tags for a site, used for SEO purposes.
+  "head.keywords": "box,platform,api,sdk,files,folders",
+  // The twitter account for Box Platform in this localeas used in by Twitter cards when the site is shared.
+  "head.twitter": "@boxplatform",
+  // A message to show that the site has updated in the background
+  "refresh_notification.message": "This site has updated in the background",
+  // The text on the link to refresh the page
+  "refresh_notification.link_text": "Refresh",
+  // Text to signify that more content is available byclicking this link or button
+  "messages.read_more": "Read more",
+  // Describes the mini-resource variant
+  "messages.resource_variant_descriptions.mini": "This resource has 3 variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **mini** variant are generally\nreturned when the resource is nested within the response for\nanother resource.",
+  // Describes the standard-resource variant
+  "messages.resource_variant_descriptions.standard": "The fields that are part of the **standard** variant are generally\nreturned when the resource is requested via its own API endpoints.\nFor example, when retrieving a file by ID, it will return\nthese fields unless the `fields` parameter has been specified.",
+  // Describes the full-resource variant
+  "messages.resource_variant_descriptions.full": "The fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
+  // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
+  "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
+  // The title for the API referene page
+  "reference.titles.api_reference": "API Reference",
+  // The title for the resources page
+  "reference.titles.other_resources": "Resources",
+  // The title for the HTTP Request section of an endpoint
+  "reference.titles.request": "Request",
+  // The title for the HTTP Response section of an endpoint
+  "reference.titles.response": "Response",
+  // The title for the section of an endpoint that shows ahow to make requests to our API
+  "reference.titles.request_example": "Request Example",
+  // The title for the section of an endpoint that showswhat response our API will return
+  "reference.titles.response_example": "Response Example",
+  // The title for the section of an endpoint that showsa live API response created with an API explorer
+  "reference.titles.response_output": "Output",
+  // The title for the section of a resource that showswhat a typical resource looks like
+  "reference.titles.resource_example": "Response Example",
+  // The label for a button that allows a user tocopy (and then paste) a value
+  "reference.buttons.copy": "Copy",
+  // Describes all endpoint parameters that are partof the URL path
+  "reference.parameter_groups.path": "Path Parameters",
+  // Describes all endpoint parameters that are partof the URL query
+  "reference.parameter_groups.query": "Query Parameters",
+  // Describes all endpoint parameters that aresent in the HTTP body
+  "reference.parameter_groups.body": "Request Body",
+  // Describes all endpoint parameters that aresent in the HTTP headers
+  "reference.parameter_groups.header": "Request Headers",
+  // Describes a specific parameter that issent in the URL path
+  "reference.parameter_location.path": "in path",
+  // Describes a specific parameter that issent in the URL query
+  "reference.parameter_location.query": "in query",
+  // Describes a specific parameter that is sentin the HTTP body
+  "reference.parameter_location.body": "in body",
+  // Describes a specific parameter that issent in a HTTP header
+  "reference.parameter_location.header": "in header",
+  // Describes a boolean parameter type
+  "reference.parameter_types.boolean": "boolean",
+  // Describes a string parameter type
+  "reference.parameter_types.string": "string",
+  // Describes an object parameter type
+  "reference.parameter_types.object": "object",
+  // Describes an array parameter type
+  "reference.parameter_types.array": "array",
+  // Describes an associative array (dictionary, hash,key value pairs) parameter type
+  "reference.parameter_types.associative_array": "associative array",
+  // Describes a date-time parameter type
+  "reference.parameter_types.date-time": "date-time",
+  // Describes a 64-bit integer parameter type
+  "reference.parameter_types.int64": "64-bit integer",
+  // Describes a 32-bit integer parameter type
+  "reference.parameter_types.int32": "int32",
+  // Describes a parameter type formatted as an email
+  "reference.parameter_types.email": "email",
+  // Describes an integer parameter type
+  "reference.parameter_types.integer": "integer",
+  // Describes a parameter formatted as a UUID
+  "reference.parameter_types.uuid": "UUID",
+  // The label for an example
+  "reference.parameter_details.example": "example",
+  // The label for an example key
+  "reference.parameter_details.example_key": "example key",
+  // The label for an optional parameter
+  "reference.parameter_details.optional": "optional",
+  // The label for a required parameter
+  "reference.parameter_details.required": "required",
+  // The label for a default parameter value
+  "reference.parameter_details.default": "Default",
+  // The label for the max length of a parameter value
+  "reference.parameter_details.max_length": "Max Length",
+  // The label for the range of a parameter value
+  "reference.parameter_details.range": "Range",
+  // Describes it when there is no content type as thereis no body request or response body
+  "reference.content_type.none": "none",
+  // Describes the situation where a parameter canonly be one specific value
+  "reference.enum.value_is_always": "Value is always",
+  // Describes the situation where a parameter can be oneor many specific values
+  "reference.enum.value_is_any_of": "Value is any of",
+  // Describes the situation where a parameter canbe only one of many values
+  "reference.enum.value_is_one_of": "Value is one of",
+  // Describes the Node JS programming language when selectinga code sample - DO NOT TRANSLATE
+  "reference.environments.node": "Node",
+  // Describes the .NET programming language when selectinga code sample - DO NOT TRANSLATE
+  "reference.environments.dotnet": ".NET",
+  // Describes the Java programming language when selectinga code sample - DO NOT TRANSLATE
+  "reference.environments.java": "Java",
+  // Describes the Python programming language whenselecting a code sample - DO NOT TRANSLATE
+  "reference.environments.python": "Python",
+  // Describes the command line interface whenselecting a code sample - DO NOT TRANSLATE
+  "reference.environments.cli": "CLI",
+  // Describes the cURL tool whenselecting a code sample
+  "reference.environments.curl": "cURL",
+  // Describes the minimal set of fields that can be returnedfor a resource in an API response
+  "reference.resource_variants.mini": "Mini",
+  // Describes the standard set of fields that are returned for aresource in an API response
+  "reference.resource_variants.standard": "Standard",
+  // Describes the full set of fields that can be returnedfor a resource in an API response
+  "reference.resource_variants.full": "Full",
+  // The title for the guides section
+  "guides.titles.guides": "Guides",
+  // A title for a set of links describing things to read before
+  "guides.titles.prerequisites": "Things to read first",
+  // A title for a set of links describing things to read after
+  "guides.titles.next_reads": "Next things to read",
+  // The text for the link to the old Get Started guides
+  "headers.primary.links.get_started.text": "Get Started",
+  // The URL to the old Get Started guides
+  "headers.primary.links.get_started.url": "https://developer.box.com/docs/quickstart-guides",
+  // The text for the link to the old generic guides
+  "headers.primary.links.guides.text": "Guides",
+  // The URL to the old generic guides
+  "headers.primary.links.guides.url": "/{locale}/guides/",
+  // The text for the link the new API Reference docs
+  "headers.primary.links.api_reference.text": "API Reference",
+  // The url to the root of the reference - DO NOT TRANSLATE
+  "headers.primary.links.api_reference.url": "/{locale}/reference/",
+  // The text for the link to the old page on SDKs
+  "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
+  // The URL to the old page on SDKs
+  "headers.primary.links.sdks_and_tools.url": "https://developer.box.com/docs/sdks",
+  // The text for the link to the developer console
+  "headers.primary.buttons.console.text": "Manage Applications",
+  // The URL to the developer console
+  "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
+  // The HTML alt-text for the site logo
+  "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
+  // A short label to signify that this page is new
+  "headers.secondary.labels.new": "new",
+  // The text for the link to the developer blog
+  "headers.secondary.links.blog.text": "Blog",
+  // The URL to the developer blog
+  "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
+  // The text for the link to the developer forum
+  "headers.secondary.links.forum.text": "Forum",
+  // The URL to the developer forum
+  "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
+  // The text for the link to the developer feedback site
+  "headers.secondary.links.feedback.text": "Feedback",
+  // The URL to the developer feedback site
+  "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
+  // A short title for the dropdown to select a documentation type on mobile
+  "headers.secondary.dropdowns.docs": "Docs",
+  // A title for the dropdown to select a sub-page of the API referenceon mobile
+  "headers.secondary.dropdowns.api_reference": "API Reference",
+  // A short title for the dropdown to select an external link on mobile
+  "headers.secondary.dropdowns.elsewhere": "Elsewhere",
+  // Label for the log in button
+  "explorer.buttons.login": "Log In",
+  // Label for the log in button
+  "explorer.buttons.logout": "Log Out",
+  // Label for the button to run a live API call
+  "explorer.buttons.run": "Make API Call",
+  // Label for the button to start the API explorer
+  "explorer.buttons.try": "Try this API",
+  // Label for the button to close the API explorer
+  "explorer.buttons.close": "Close the API explorer",
+  // Provides a short intro to the API explorer
+  "explorer.messages.intro": "You can now try out some of our APIs live, right\nhere in the documentation.",
+  // Short 1-sentence message to tell a user to fill in all params
+  "explorer.messages.missing_params": "Please fill in all required parameters",
+  // Short 1-sentence message to tell a user to that a response was received
+  "explorer.messages.response_received": "Response received",
+  // Describes the API explorer response
+  "explorer.titles.response": "API Response",
+  // Describes the HTTP headers returned by the API explorer
+  "explorer.titles.headers": "Response Headers",
+  // Describes the response body returned by the API explorer
+  "explorer.titles.body": "Response Body",
+  // A short name for the resource type to be shown in search results
+  "search.result_types.resource": "resource",
+  // A short name for the endpoint type to be shown in search results
+  "search.result_types.endpoint": "endpoint",
+  // A short name for the guide type to be shown in search results
+  "search.result_types.guide": "guide",
+  // A short name for the param type to be shown in search results
+  "search.result_types.param": "param",
+  // A short name for the field type to be shown in search results
+  "search.result_types.field": "field"
+}
