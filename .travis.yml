@@ -23,7 +23,7 @@ deploy:
       node: 12
   - provider: pages
     local-dir: compiled
-    target_branch: "en/staging"
+    target_branch: test
     github-token: "$GITHUB_TOKEN"
     skip-cleanup: true
     keep-history: true
