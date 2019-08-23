@@ -15,6 +15,12 @@ buttons:
   // close: Label for the button to close the API explorer
   close: Close the API explorer
 
+  // expand: A label to expand the code, making it full screen
+  expand: Expand
+
+  // collapse: A label to collapse a viewing, making it smaller.
+  collapse: Collapse
+
 messages:
   // intro: Provides a short intro to the API explorer
   intro: |-
