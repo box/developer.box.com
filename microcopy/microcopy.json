@@ -179,6 +179,10 @@
   "explorer.buttons.try": "Try this API",
   // Label for the button to close the API explorer
   "explorer.buttons.close": "Close the API explorer",
+  // A label to expand the code, making it full screen
+  "explorer.buttons.expand": "Expand",
+  // A label to collapse a viewing, making it smaller.
+  "explorer.buttons.collapse": "Collapse",
   // Provides a short intro to the API explorer
   "explorer.messages.intro": "You can now try out some of our APIs live, right\nhere in the documentation.",
   // Short 1-sentence message to tell a user to fill in all params
