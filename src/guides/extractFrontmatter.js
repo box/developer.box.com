@@ -12,7 +12,7 @@ const extractFrontmatter = (contents, sourcePath) => {
 }
 
 const id = (path) => (
-  path.split('/').splice(3).join('/').replace('.md', '')
+  path.split('/').splice(3).join('/').replace('.md', '').replace(/\/index$/, '').replace(/^index$/, '')
 )
 
 const cId = (path) => (
