@@ -7,6 +7,10 @@ related_guides:
   - basics/folders/-folder
   - basics/folders/copy-a-folder
 required_guides: []
+id: basics/folders/create-a-folder
+cId: basics
+scId: basics/folders
+isIndex: false
 ---
 
 # Create a folder

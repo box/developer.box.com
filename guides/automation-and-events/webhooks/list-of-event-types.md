@@ -2,11 +2,15 @@
 rank: 4
 tag: webhooks
 related_endpoints:
-- post_webhooks
+  - post_webhooks
 related_guides:
-- automation-and-events/webhooks/create-a-webhook
+  - automation-and-events/webhooks/create-a-webhook
 required_guides:
-- automation-and-events/webhooks/create-a-webhook
+  - automation-and-events/webhooks/create-a-webhook
+id: automation-and-events/webhooks/list-of-event-types
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: false
 ---
 
 # List of event types

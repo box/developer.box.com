@@ -1,5 +1,9 @@
 ---
 rank: 1
+id: automation-and-events/webhooks/index
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: true
 ---
 
 # Webhooks
