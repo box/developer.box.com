@@ -1,6 +1,6 @@
 ---
 rank: 1
-id: index
+id: ''
 cId: null
 scId: null
 isIndex: true

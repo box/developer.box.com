@@ -1,6 +1,6 @@
 ---
 rank: 1
-id: basics/folders/index
+id: basics/folders
 cId: basics
 scId: basics/folders
 isIndex: true
