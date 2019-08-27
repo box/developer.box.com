@@ -3,6 +3,7 @@ const path = require('path')
 const padNestedMarkdownWithNewlines = require('./padNestedMarkdown')
 const unIndentNestedMarkdown = require('./unIndentNestedMarkdown')
 const expandSelfClosingTags = require('./expandSelfClosingTags')
+const extractFrontmatter = require('./extractFrontmatter')
 
 class MarkdownProcessor {
   constructor({ sourcePath }) {
@@ -42,8 +43,9 @@ class MarkdownProcessor {
     contents 
   }) {
     contents = expandSelfClosingTags(contents)
-    contents = padNestedMarkdownWithNewlines(contents)
     contents = unIndentNestedMarkdown(contents)
+    contents = padNestedMarkdownWithNewlines(contents)
+    contents = extractFrontmatter(contents, this.sourcePath)
     return contents    
   }
 }
