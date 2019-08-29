@@ -1,4 +1,7 @@
 ---
+// prompt: The text used to prompt a user to start searching
+prompt: Search...
+
 result_types:
   // resource: A short name for the resource type to be shown in search results
   resource: resource
