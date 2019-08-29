@@ -195,6 +195,8 @@
   "explorer.titles.headers": "レスポンスヘッダー",
   // Describes the response body returned by the API explorer
   "explorer.titles.body": "レスポンス本文",
+  // The text used to prompt a user to start searching
+  "search.prompt": "Search...",
   // A short name for the resource type to be shown in search results
   "search.result_types.resource": "リソース",
   // A short name for the endpoint type to be shown in search results
