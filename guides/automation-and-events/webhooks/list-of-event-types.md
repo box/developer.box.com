@@ -2,17 +2,22 @@
 rank: 4
 tag: webhooks
 related_endpoints:
-- post_webhooks
+  - post_webhooks
 related_guides:
-- automation-and-events/webhooks/create-a-webhook
+  - automation-and-events/webhooks/create-a-webhook
 required_guides:
-- automation-and-events/webhooks/create-a-webhook
+  - automation-and-events/webhooks/create-a-webhook
+alias_paths: []
+id: automation-and-events/webhooks/list-of-event-types
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: false
 ---
 
 # List of event types
 
 The following is a list of event triggers available when creating webhooks. Some
-events are only availabe for files, while others are only available for folders.
+events are only available for files, while others are only available for folders.
 
 <!-- markdownlint-disable line-length -->
 | Event                       | Triggered                                                                                                           | File? | Folder? |

@@ -1,6 +1,5 @@
 ---
 rank: 2
-tag: webhooks
 related_endpoints:
   - post_webhooks
 related_guides:
@@ -8,6 +7,11 @@ related_guides:
   - automation-and-events/webhooks/parse-a-webhook
   - automation-and-events/webhooks/delete-a-webhook
 required_guides: []
+alias_paths: []
+id: automation-and-events/webhooks/create-a-webhook
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: false
 ---
 
 # Create a webhook
@@ -25,7 +29,7 @@ The current types supported are `file` and `folder`.
 The notification URL must be a valid HTTPS URL that you specify when you create
 a webhook. Every time one of the triggers is activated, this URL will be called.
 
-The triggers are a list of strings that speficy the events that will cause the
+The triggers are a list of strings that specify the events that will cause the
 webhook to be triggered. For example, if you want the webhook to be triggered
 when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
 

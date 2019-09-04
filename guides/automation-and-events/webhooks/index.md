@@ -1,5 +1,15 @@
 ---
 rank: 1
+related_endpoints: []
+related_guides: []
+required_guides: []
+alias_paths:
+  - /docs/work-with-webhooks
+  - /docs/file-workflow-with-webhooks
+id: automation-and-events/webhooks
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: true
 ---
 
 # Webhooks
