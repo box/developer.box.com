@@ -7,6 +7,7 @@ related_guides:
   - automation-and-events/webhooks/list-all-webhooks
 required_guides:
   - automation-and-events/webhooks/create-a-webhook
+alias_paths: []
 id: automation-and-events/webhooks/delete-a-webhook
 cId: automation-and-events
 scId: automation-and-events/webhooks
