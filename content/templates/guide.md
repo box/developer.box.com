@@ -38,6 +38,18 @@ related_guides:
 # For example, for the /content/guides/foo/bar/baz.md file,
 # the ID would be foo/bar/baz.
 required_guides: []
+# TODO/CHANGE: Set to any number of URLs or []
+# to redirect from to this page.
+#
+# This is used to maintain backwards compatibility with
+# older URLs, allowing us to change URLs and still maintain
+# paths. 
+#
+# This generally only works for the primary locale,
+# in this case English. Translared guides wont redirect.
+alias_paths: 
+  - /old/path
+  - /another/old/path
 ---
 
 # Title

@@ -7,6 +7,7 @@ related_guides:
   - basics/folders/create-a-folder
 required_guides:
   - basics/folders/create-a-folder
+alias_paths: []
 ---
 
 # Delete a folder

@@ -7,6 +7,7 @@ related_guides:
   - basics/folders/-folder
   - basics/folders/copy-a-folder
 required_guides: []
+alias_paths: []
 ---
 
 # Create a folder
