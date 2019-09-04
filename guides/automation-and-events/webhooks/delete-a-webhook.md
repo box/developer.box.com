@@ -7,6 +7,11 @@ related_guides:
   - automation-and-events/webhooks/list-all-webhooks
 required_guides:
   - automation-and-events/webhooks/create-a-webhook
+alias_paths: []
+id: automation-and-events/webhooks/delete-a-webhook
+cId: automation-and-events
+scId: automation-and-events/webhooks
+isIndex: false
 ---
 
 # Delete a webhook
@@ -14,25 +19,9 @@ required_guides:
 To remove a webhook from a file or folder in Box you will need to provide our
 API with the ID of the webhook to remove.
 
-<Samples id='delete_webhooks_id' >
+<Samples id='delete_webhooks_id'>
 
 </Samples>
-
-<Tabs>
-
-<Tab id='node'>
-
-```js
-console.log('!')
-
-[1,2].forEach(a => {
-  console.log(a)
-})
-```
-
-</Tab>
-
-</Tabs>
 
 <Message>
 

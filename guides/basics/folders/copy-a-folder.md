@@ -8,11 +8,16 @@ related_guides:
   - basics/folders/delete-a-folder
 required_guides:
   - basics/folders/create-a-folder
+alias_paths: []
+id: basics/folders/copy-a-folder
+cId: basics
+scId: basics/folders
+isIndex: false
 ---
 
 # Copy a folder
 
-To copy a folder in Box you will need to provide our API with an the `id` of the
+To copy a folder in Box you will need to provide our API with the `id` of the
 `parent` folder that you would like to copy the folder into.
 
 <Samples id='post_folders_id_copy' >
