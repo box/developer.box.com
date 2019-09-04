@@ -8,6 +8,7 @@ related_guides:
   - basics/folders/delete-a-folder
 required_guides:
   - basics/folders/create-a-folder
+alias_paths: []
 id: basics/folders/copy-a-folder
 cId: basics
 scId: basics/folders
