@@ -8,3 +8,9 @@ titles:
 
   // next_reads: A title for a set of links describing things to read after
   next_reads: Next things to read
+
+  // related_guides: A title for a set of links describing related guides
+  related_guides: Related guides
+
+  // api_endpoints: A title for a set of links describing related API endpoints
+  api_endpoints: Related APIs
