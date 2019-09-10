@@ -6,12 +6,20 @@ read_more: Read more
 
 
 resource_variant_descriptions:
+  // reference: |-
+    Describes the reference-resource variant
+  reference: |-
+    This resource has a few variations that can be encountered when
+    using the API.
+
+    The fields that are part of the **reference** variant represent
+    the default fields that are always returned when using the `fields`
+    query parameter, additional to the fields specified in the
+    parameter.
+
   // mini: |-
     Describes the mini-resource variant
   mini: |-
-    This resource has 3 variations that can be encountered when
-    using the API.
-
     The fields that are part of the **mini** variant are generally
     returned when the resource is nested within the response for
     another resource.
