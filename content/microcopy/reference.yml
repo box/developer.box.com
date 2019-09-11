@@ -192,10 +192,10 @@ environments:
   curl: cURL
 
 resource_variants:
-  // reference: |-
+  // base: |-
     Describes the smallest set of fields that are returned
     for a resource in an API response
-  reference: Reference
+  base: Base
 
   // mini: |-
     Describes the set of fields that can be returned
