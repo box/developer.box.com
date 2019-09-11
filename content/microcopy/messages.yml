@@ -6,10 +6,21 @@ read_more: Read more
 
 
 resource_variant_descriptions:
+  // base: |-
+    Describes the base-resource variant
+  base: |-
+    This resource has a few variations that can be encountered when
+    using the API.
+
+    The fields that are part of the **base** variant represent
+    the default fields that are always returned when using the `fields`
+    query parameter, additional to the fields specified in the
+    parameter.
+
   // mini: |-
     Describes the mini-resource variant
   mini: |-
-    This resource has 3 variations that can be encountered when
+    This resource has a few variations that can be encountered when
     using the API.
 
     The fields that are part of the **mini** variant are generally
@@ -19,6 +30,9 @@ resource_variant_descriptions:
   // standard: |-
     Describes the standard-resource variant
   standard: |-
+    This resource has a few variations that can be encountered when
+    using the API.
+
     The fields that are part of the **standard** variant are generally
     returned when the resource is requested via its own API endpoints.
     For example, when retrieving a file by ID, it will return
@@ -27,6 +41,9 @@ resource_variant_descriptions:
   // full: |-
     Describes the full-resource variant
   full: |-
+    This resource has a few variations that can be encountered when
+    using the API.
+
     The fields that are part of the **full** variant can be returned
     by API endpoints that support the `fields` parameter. For example,
     by defining the `fields` request parameter as

@@ -13,8 +13,8 @@ titles:
     A title for usage on a block of guides, marking the index/overview page
   overview: Overview
 
-  // api_endpoints: A title for related endpoints to this category
-  api_endpoints: API Endpoints
-
   // related_guides: A title for related guides to this category
   related_guides: Related Guides
+
+  // api_endpoints: A title for a set of links describing related API endpoints
+  api_endpoints: Related APIs
