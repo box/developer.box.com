@@ -1,7 +1,7 @@
 ---
 rank: 2
 related_endpoints: []
-related_guides: []
+related_guides: null
 required_guides: []
 alias_paths: []
 id: automation-and-events

@@ -131,8 +131,10 @@
   "guides.titles.prerequisites": "Things to read first",
   // A title for a set of links describing things to read after
   "guides.titles.next_reads": "Next things to read",
-  // A title for a set of links describing related guides
-  "guides.titles.related_guides": "Related guides",
+  // A title for usage on a block of guides, marking the index/overview page
+  "guides.titles.overview": "Overview",
+  // A title for related guides to this category
+  "guides.titles.related_guides": "Related Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // The text for the link to the old Get Started guides
