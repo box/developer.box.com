@@ -1,11 +1,13 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - get_files_id
 related_guides:
   - representations/supported-file-types
 required_guides:
-  - representations/priciples
+  - representations/list-all-representations
+  - representations/request-a-representation
+  - representations/download-a-representation
 alias_paths: []
 ---
 
@@ -15,131 +17,77 @@ A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
 an application as a representation of the file, for example as a placeholder for
 a link that downloads or previews the file.
 
-## 1. List all thumbnail representations
+All thumbnail representations except `1024x1024` and `2048x2048` PNGs are
+generated upon uploading the source file to Box.
 
-To see what thumbnails are available for a file, first call the `GET /files/:id`
-endpoint, requesting the `representations` field.
+## Requesting a thumbnail representation
 
-```sh
-curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "Authorization: Bearer <AccessToken>"
-```
+To get a thumbnail representation follow the following steps
 
-If the file supports thumbnails the response will include a few representations
-that are thumbnails.
+- [List all representations](./list-all-representations)
+- [Request a thumbnail](./request-a-representation) by passing the
+  `X-Ref-Hints`-header for the desired thumbnail format and size, for example
+  `[jpg?dimensions=32x32]`.
+- [Download the thumbnail](./download-a-representation) by calling the
+  `url_template`, replacing the `{+asset_path}` with an empty string.
 
-```json
-...
-{
-  "info": {
-    "url": "https://api.box.com/2.0/internal_files/123/versions/345/representations/jpg_thumb_32x32"
-  },
-  "properties": {
-      "dimensions": "32x32",
-      "paged": "false",
-      "thumb": "true"
-  },
-  "representation": "jpg"
-},
-{
-  "info": {
-    "url": "https://api.box.com/2.0/internal_files/123/versions/345/representations/jpg_thumb_94x94"
-  },
-  "properties": {
-    "dimensions": "94x94",
-    "paged": "false",
-    "thumb": "true"
-  },
-  "representation": "jpg"
-},
-...
-```
+## Example `X-Rep-Hints` headers
 
-## 2. Request the desired representation
+The following a some example `X-Rep-Hints`-header values
 
-To fetch a specific thumbnail representation, first call the same endpoint but
-this time add a `X-Rep-Hints`-header for the file type and size.
+- `X-Rep-Hints: [jpg?dimensions=32x32]` returns a `32x32` JPEG thumbnail
+- `X-Rep-Hints: [jpg?dimensions=32x32][jpg?dimensions=1024x1024]` returns
+  `32x32` and `1024x1024` JPEG thumbnails
+- `X-Rep-Hints: [jpg?dimensions=32x32][png?dimensions=2048x2048]` returns
+  a `32x32` JPEG and a `2048x2048` PNG thumbnail
+- `X-Rep-Hints: [jpg?dimensions=2048x2048,png?dimensions=2048x2048]` returns
+  a `2048x2048` JPEG or a `2048x2048` PNG thumbnail, returning the first
+  representation that is available. If neither is available it returns no
+  representations
 
-```sh
-curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "X-Rep-Hints: [jpg?dimensions=32x32]" \
-  -H "Authorization: Bearer <AccessToken>"
-```
+## Supported file sizes
 
-<Message type="notice">
-  Multiple representations can be fetched by chaining the `X-Rep-Hints` header
-  as follows. `[jpg?dimensions=32x32][jpg?dimensions=94x94]`
-</Message>
-
-The result will be one or more representations with a `url_template` value that
-includes a `{+asset_path}` value.
-
-```json
-{
-  "etag": "1",
-  "id": "123",
-  "representations": {
-    "entries": [
-      {
-        "content": {
-          "url_template": "https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_thumb_32x32/content/{+asset_path}"
-        },
-        "info": {
-          "url": "https://api.box.com/2.0/internal_files/123/versions/345/representations/jpg_thumb_32x32"
-        },
-        "properties": {
-          "dimensions": "32x32",
-          "paged": "false",
-          "thumb": "true"
-        },
-        "representation": "jpg",
-        "status": {
-          "state": "success"
-        }
-      }
-    ]
-  },
-  "type": "file"
-}
-```
-
-<Message type='notice'>
-  # Opaque URLs
-
-The `url_template` in this response is an opaque URL. This URL format might
-change over time and no assumptions should be made about its format except for
-the presence of the `{+asset_path}` variable.
-
-</Message>
-
-## 3. Request the thumbnail
-
-Finally, to fetch the actual thumbnail, replace the `{+asset_path}` in the
-`url_template` for the representation with an empty string.
+The following formats and sizes of thumbnails are available.
 
 <!-- markdownlint-disable line-length -->
-```sh
-  curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_thumb_32x32/content \
-    -H "Authorization: Bearer <AccessToken>"
-```
+
+| File Type | Dimensions                                                         |
+| --------- | ------------------------------------------------------------------ |
+| JPG       | `32x32`, `94x94`, `160x160`, `320x320`, `1024x1024`, `2048x2048`\* |
+| PNG       | `1024x1024`\*, `2048x2048`\*                                       |
+
 <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
-  # Optional query parameters
+## File size restrictions
 
-  We support the following two optional headers that developers can use while
-  invoking the opaque URL.
+### JPEG `2048x2048`
 
-  ## `set_content_disposition_type`
+The JPEG `2048x2048` size is only available when the
+original file is a JPEG. We recommend either requesting a PNG or both a PNG
+and a JPEG for this dimension.
 
-  Options: `inline` / `attachment`
+### Video file restrictions
 
-  Sets the `Content-Disposition` header in the API response with the specified
-  value.
+JPEG `2048x2048`, PNG `2048x20148` and PNG `1024x1024` representations are not
+available for video files.
 
-  A disposition type of `attachment` causes most web browsers to prompt the user
-  to save the response to their device, where the type `inline` will open the
-  file in the browser.
+### Original file size
 
-  If not supplied, the `Content-Disposition` header is not included in the response.
-</Message>
+Thumbnails are not scaled up. If the original file size of the file uploaded to
+Box is smaller than the representation dimensions, the resulting thumbnail is
+capped at the size of the original file.
+
+## Supported file types
+
+At this time the following file types are supported.
+
+<!-- markdownlint-disable line-length -->
+
+| File Type | File Extensions                                                                                                                                                 |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Documents | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
+| Images    | `ai`, `bmp`, `gif`, `eps`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `tif`, `tiff`, `dcm`, `dicm`, `svs`, `tga`                                                 |
+| Audio     | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
+| Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
+
+<!-- markdownlint-enable line-length -->
