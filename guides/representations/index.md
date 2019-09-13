@@ -11,7 +11,7 @@ scId: null
 isIndex: true
 ---
 
-# Representations
+# Thumbnails & Representations
 
 A representation is an alternative asset for a file stored in Box. These assets
 can be PDFs, thumbnails, or text extractions.

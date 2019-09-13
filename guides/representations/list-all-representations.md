@@ -17,10 +17,10 @@ isIndex: false
 # List all representations for a file
 
 To see what representations are available for a file you can call the
-[`GET /files/:id`][get_files_id] endpoint while requesting the `representations`
-field.
+[`GET /files/:id`][get_files_id] endpoint while requesting the
+[`representations`][file_representations] field.
 
-```sh
+```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
   -H "Authorization: Bearer <AccessToken>"
 
@@ -61,4 +61,5 @@ representation.
 * The optional `thumb` field specifies if this representation is suitable
   as a file thumbnail.
 
-[get_files_id]: (/reference/get-files-id/)
+[get_files_id]: endpoint://get-files-id
+[file_representations]: resource://file#param-representations
