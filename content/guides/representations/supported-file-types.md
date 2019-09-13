@@ -4,7 +4,7 @@ related_endpoints:
   - get_files_id
 related_guides: 
   - representations/pdf
-  - representations/thumbnail
+  - representations/thumbnail-representation
   - representations/text
 required_guides: []
 alias_paths: []

@@ -124,3 +124,10 @@ This would [look like this][1].
 At the end of the document, define the link.
 
 [1]: https://box.com
+
+We provide some easy ways to link to guides, endpoints,
+and resources without hardcoding the locale.
+
+[Get a file by ID][endpoint://get-files-id]
+[File resource][resource://file]
+[Yet another guide][guide://automation/events/all-event-types]
