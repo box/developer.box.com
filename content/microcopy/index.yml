@@ -25,3 +25,6 @@ explorer:
 
 search:
   $ref: "content/microcopy/search.yml"
+
+footer:
+  $ref: "content/microcopy/footer.yml"

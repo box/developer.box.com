@@ -1,0 +1,181 @@
+---
+categories:
+  company:
+    // title: |-
+      A title for a footer section on Box's role in the community
+    title: Box & Community
+
+    links:
+      about_us:
+        // text: A label for a link that links to the about page
+        text: About Us
+        // url: The URL for the company's about page
+        url: https://www.box.com/about-us
+
+      get_started:
+        // text: Text for a link to the Platform twitter account
+        text: Platform Twitter
+        // url: A link to the Platform twitter account
+        url: https://twitter.com/boxplatform
+
+      devblog:
+        // text: Text for a link to the Platform blog
+        text: Developer Blog
+        // url: A link to our developer blog
+        url: https://medium.com/box-developer-blog
+
+      engblog:
+        // text: Text for a link to the engineering blog
+        text: Engineering Blog
+        // url: A link to our engineering blog
+        url: https://blog.box.com/category/engineering
+
+      newsletter:
+        // text: Text for a link to the newsletter page
+        text: Newsletter
+        // url: A link to the newsletter page
+        url: /{locale}/newsletter/
+
+      github:
+        // text: Text for a link to the github org
+        text: GitHub
+        // url: Link to the github org
+        url: https://github.com/box
+
+      github_community:
+        // text: Text for a link to the github community org
+        text: Community GitHub
+        // url: Link to the github community org
+        url: https://github.com/box-community
+
+  tooling:
+    // title: |-
+      A title for a footer section on our tooling options
+    title: Tooling
+
+    links:
+      node_sdk:
+        // text: Text for link to the Node SDK
+        text: Node SDK
+        // url: link to the Node SDK
+        url: https://github.com/box/box-node-sdk
+
+      java_sdk:
+        // text: Text for link to the Java SDK
+        text: Java SDK
+        // url: link to the Java SDK
+        url: https://github.com/box/box-java-sdk
+
+      python_sdk:
+        // text: Text for link to the Python SDK
+        text: Python SDK
+        // url: link to the Python SDK
+        url: https://github.com/box/box-python-sdk
+
+      dotnet_sdk:
+        // text: Text for link to the .NET SDK
+        text: .NET SDK
+        // url: link to the .Net SDK
+        url: https://github.com/box/box-windows-sdk-v2
+
+      cli:
+        // text: Text for link to the Box CLI
+        text: Box CLI
+        // url: link to the Box CLI
+        url: https://github.com/box/boxcli
+
+      skills_kit:
+        // text: Text for link to the Box Skills kit
+        text: Box Skills Kit
+        // url: link to the Box Skills Kit
+        url: https://github.com/box/box-skills-kit-nodejs
+
+  code:
+    // title: |-
+      A title for a footer section on our available code samples
+    title: Samples
+
+    links:
+      samples:
+        // text: Text for link to our code samples
+        text: Platform Samples
+        // url: Link to our code samples
+        url: https://github.com/box/samples
+
+      skills_samples:
+        // text: Text for link to our Box skills code samples
+        text: Skills Samples
+        // url: Link to our Box skills code samples
+        url: https://github.com/box-community?utf8=%E2%9C%93&q=\
+          sample-*-skills&type=&language=
+
+  support:
+    // title: |-
+      A title for a footer section on our support channels
+    title: Support
+
+    links:
+      ticket:
+        // text: Text for link to create a support ticket
+        text: Create a ticket
+        // url: Link to create a support ticket
+        url: https://community.box.com/t5/custom/page/page-id\
+          /BoxSearchLithiumTKB
+
+      forum:
+        // text: Text for link to go to our support forum
+        text: Platform Forum
+        // url: Link to go to our support forum
+        url: https://community.box.com/t5/Platform-and-Development\
+          -Forum/bd-p/DeveloperForum
+
+      feedback:
+        // text: Text for link to go to our feedback site
+        text: Product Feedback
+        // url: Link to go to our feedback site
+        url: https://pulse.box.com/forums/\
+          909778-product-feedback?category_id=330838
+
+      status:
+        // text: Text for link to go to our status page
+        text: API Status
+        // url: Link to go to our status page
+        url: https://status.box.com/
+
+  internation:
+    // title: |-
+      A title for a footer section on our available translations of
+      this site
+    title: International sites
+
+bottom:
+  links:
+    sitemap:
+      // text: Text for link to the page sitemap
+      text: Sitemap
+      // url: Link to the page sitemap
+      url: /sitemap.xml
+
+    subscriptions:
+      // text: Text for link to update user notification preferences
+      text: Subscriptions
+      // url: Link to update user notification preferences
+      url: https://go.box.com/preferences.html
+
+    terms:
+      // text: Text for link to our terms of use
+      text: Terms of Use
+      // url: Link to our terms of use
+      url: https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9
+
+    privacy:
+      // text: Text for link to our privacy policy
+      text: Privacy Policy
+      // url: Link to our privacy policy
+      url: https://account.box.com/legal_text/privacy_policy
+
+    cookies:
+      // text: Text for link to our cookie notification settings
+      text: Cookie Notification
+      // url: Link to our cookie notification settings
+      url: https://www.box.com/legal/cookie-notification
