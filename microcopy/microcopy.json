@@ -216,5 +216,111 @@
   // A short name for the param type to be shown in search results
   "search.result_types.param": "param",
   // A short name for the field type to be shown in search results
-  "search.result_types.field": "field"
+  "search.result_types.field": "field",
+  // A title for a footer section on Box's role in the community
+  "footer.categories.company.title": "Box & Community",
+  // A label for a link that links to the about page
+  "footer.categories.company.links.about_us.text": "About Us",
+  // The URL for the company's about page
+  "footer.categories.company.links.about_us.url": "https://www.box.com/about-us",
+  // Text for a link to the Platform twitter account
+  "footer.categories.company.links.get_started.text": "Platform Twitter",
+  // A link to the Platform twitter account
+  "footer.categories.company.links.get_started.url": "https://twitter.com/boxplatform",
+  // Text for a link to the Platform blog
+  "footer.categories.company.links.devblog.text": "Developer Blog",
+  // A link to our developer blog
+  "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
+  // Text for a link to the engineering blog
+  "footer.categories.company.links.engblog.text": "Engineering Blog",
+  // A link to our engineering blog
+  "footer.categories.company.links.engblog.url": "https://blog.box.com/category/engineering",
+  // Text for a link to the newsletter page
+  "footer.categories.company.links.newsletter.text": "Newsletter",
+  // A link to the newsletter page
+  "footer.categories.company.links.newsletter.url": "/{locale}/newsletter/",
+  // Text for a link to the github org
+  "footer.categories.company.links.github.text": "GitHub",
+  // Link to the github org
+  "footer.categories.company.links.github.url": "https://github.com/box",
+  // Text for a link to the github community org
+  "footer.categories.company.links.github_community.text": "Community GitHub",
+  // Link to the github community org
+  "footer.categories.company.links.github_community.url": "https://github.com/box-community",
+  // A title for a footer section on our tooling options
+  "footer.categories.tooling.title": "Tooling",
+  // Text for link to the Node SDK
+  "footer.categories.tooling.links.node_sdk.text": "Node SDK",
+  // link to the Node SDK
+  "footer.categories.tooling.links.node_sdk.url": "https://github.com/box/box-node-sdk",
+  // Text for link to the Java SDK
+  "footer.categories.tooling.links.java_sdk.text": "Java SDK",
+  // link to the Java SDK
+  "footer.categories.tooling.links.java_sdk.url": "https://github.com/box/box-java-sdk",
+  // Text for link to the Python SDK
+  "footer.categories.tooling.links.python_sdk.text": "Python SDK",
+  // link to the Python SDK
+  "footer.categories.tooling.links.python_sdk.url": "https://github.com/box/box-python-sdk",
+  // Text for link to the .NET SDK
+  "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
+  // link to the .Net SDK
+  "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
+  // Text for link to the Box CLI
+  "footer.categories.tooling.links.cli.text": "Box CLI",
+  // link to the Box CLI
+  "footer.categories.tooling.links.cli.url": "https://github.com/box/boxcli",
+  // Text for link to the Box Skills kit
+  "footer.categories.tooling.links.skills_kit.text": "Box Skills Kit",
+  // link to the Box Skills Kit
+  "footer.categories.tooling.links.skills_kit.url": "https://github.com/box/box-skills-kit-nodejs",
+  // A title for a footer section on our available code samples
+  "footer.categories.code.title": "Samples",
+  // Text for link to our code samples
+  "footer.categories.code.links.samples.text": "Platform Samples",
+  // Link to our code samples
+  "footer.categories.code.links.samples.url": "https://github.com/box/samples",
+  // Text for link to our Box skills code samples
+  "footer.categories.code.links.skills_samples.text": "Skills Samples",
+  // Link to our Box skills code samples
+  "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
+  // A title for a footer section on our support channels
+  "footer.categories.support.title": "Support",
+  // Text for link to create a support ticket
+  "footer.categories.support.links.ticket.text": "Create a ticket",
+  // Link to create a support ticket
+  "footer.categories.support.links.ticket.url": "https://community.box.com/t5/custom/page/page-id\\ /BoxSearchLithiumTKB",
+  // Text for link to go to our support forum
+  "footer.categories.support.links.forum.text": "Platform Forum",
+  // Link to go to our support forum
+  "footer.categories.support.links.forum.url": "https://community.box.com/t5/Platform-and-Development\\ -Forum/bd-p/DeveloperForum",
+  // Text for link to go to our feedback site
+  "footer.categories.support.links.feedback.text": "Product Feedback",
+  // Link to go to our feedback site
+  "footer.categories.support.links.feedback.url": "https://pulse.box.com/forums/\\ 909778-product-feedback?category_id=330838",
+  // Text for link to go to our status page
+  "footer.categories.support.links.status.text": "API Status",
+  // Link to go to our status page
+  "footer.categories.support.links.status.url": "https://status.box.com/",
+  // A title for a footer section on our available translations ofthis site
+  "footer.categories.internation.title": "International sites",
+  // Text for link to the page sitemap
+  "footer.bottom.links.sitemap.text": "Sitemap",
+  // Link to the page sitemap
+  "footer.bottom.links.sitemap.url": "/sitemap.xml",
+  // Text for link to update user notification preferences
+  "footer.bottom.links.subscriptions.text": "Subscriptions",
+  // Link to update user notification preferences
+  "footer.bottom.links.subscriptions.url": "https://go.box.com/preferences.html",
+  // Text for link to our terms of use
+  "footer.bottom.links.terms.text": "Terms of Use",
+  // Link to our terms of use
+  "footer.bottom.links.terms.url": "https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9",
+  // Text for link to our privacy policy
+  "footer.bottom.links.privacy.text": "Privacy Policy",
+  // Link to our privacy policy
+  "footer.bottom.links.privacy.url": "https://account.box.com/legal_text/privacy_policy",
+  // Text for link to our cookie notification settings
+  "footer.bottom.links.cookies.text": "Cookie Notification",
+  // Link to our cookie notification settings
+  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification"
 }
