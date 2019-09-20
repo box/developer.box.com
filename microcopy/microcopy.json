@@ -224,9 +224,9 @@
   // The URL for the company's about page
   "footer.categories.company.links.about_us.url": "https://www.box.com/about-us",
   // Text for a link to the Platform twitter account
-  "footer.categories.company.links.get_started.text": "Platform Twitter",
+  "footer.categories.company.links.twitter.text": "Platform Twitter",
   // A link to the Platform twitter account
-  "footer.categories.company.links.get_started.url": "https://twitter.com/boxplatform",
+  "footer.categories.company.links.twitter.url": "https://twitter.com/boxplatform",
   // Text for a link to the Platform blog
   "footer.categories.company.links.devblog.text": "Developer Blog",
   // A link to our developer blog
@@ -302,7 +302,7 @@
   // Link to go to our status page
   "footer.categories.support.links.status.url": "https://status.box.com/",
   // A title for a footer section on our available translations ofthis site
-  "footer.categories.internation.title": "International sites",
+  "footer.categories.international.title": "International sites",
   // Text for link to the page sitemap
   "footer.bottom.links.sitemap.text": "Sitemap",
   // Link to the page sitemap
