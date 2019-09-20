@@ -12,7 +12,7 @@ categories:
         // url: The URL for the company's about page
         url: https://www.box.com/about-us
 
-      get_started:
+      twitter:
         // text: Text for a link to the Platform twitter account
         text: Platform Twitter
         // url: A link to the Platform twitter account
@@ -142,7 +142,7 @@ categories:
         // url: Link to go to our status page
         url: https://status.box.com/
 
-  internation:
+  international:
     // title: |-
       A title for a footer section on our available translations of
       this site
