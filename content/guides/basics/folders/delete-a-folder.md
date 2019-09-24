@@ -1,6 +1,5 @@
 ---
 rank: 3
-tag: folders
 related_endpoints:
   - delete_folders_id
 related_guides:

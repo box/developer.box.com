@@ -1,18 +1,17 @@
 ---
-rank: 4
-tag: webhooks
+rank: 6
 related_endpoints:
 - post_webhooks
 related_guides:
-- automation-and-events/webhooks/create-a-webhook
+- webhooks/manage/create
 required_guides:
-- automation-and-events/webhooks/create-a-webhook
+- webhooks/manage/create
 alias_paths: []
 ---
 
 # List of event types
 
-The following is a list of event triggers available when creating webhooks. Some
+The following is a list of events that can trigger webhooks. Some
 events are only available for files, while others are only available for folders.
 
 <!-- markdownlint-disable line-length -->
@@ -55,3 +54,8 @@ events are only available for files, while others are only available for folders
 | `SHARED_LINK.CREATED`       | A shared link was created                                                                                           | Yes   | Yes     |
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
 <!-- markdownlint-enable line-length -->
+
+<Message>
+  When the permissions on an item prevent an action from occurring,
+  no notification is sent for the attempted action.
+</Mesage>

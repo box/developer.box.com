@@ -25,7 +25,7 @@ related_endpoints:
 # For example, for the /content/guides/foo/bar/baz.md file,
 # the ID would be foo/bar/baz.
 related_guides:
-  - automation-and-events/webhooks/list-of-event-types
+  - automation-and-events/webhooks/list-of-triggers
   - automation-and-events/webhooks/parse-a-webhook
   - automation-and-events/webhooks/delete-a-webhook
 # TODO/CHANGE: Set to any number of guides or []
@@ -130,4 +130,4 @@ and resources without hardcoding the locale.
 
 [Get a file by ID][endpoint://get-files-id]
 [File resource][resource://file]
-[Yet another guide][guide://automation/events/all-event-types]
+[Yet another guide][guide://automation/events/all-triggers]
