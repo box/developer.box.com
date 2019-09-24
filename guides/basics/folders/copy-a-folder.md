@@ -1,6 +1,5 @@
 ---
 rank: 2
-tag: folders
 related_endpoints:
   - post_folders_id_copy
 related_guides:
