@@ -27,7 +27,9 @@ not been changed in transport.
 Although it is possible to verify SDKs manually using your own code, convenience
 methods are provided in our SDKs.
 
-<Samples id='x_webhooks' variant='validate_signatures' />
+<Samples id='x_webhooks' variant='validate_signatures' >
+
+</Samples>
 
 ## Verify manually
 

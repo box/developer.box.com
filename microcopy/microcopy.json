@@ -133,10 +133,16 @@
   "guides.titles.next_reads": "Next things to read",
   // A title for usage on a block of guides, marking the index/overview page
   "guides.titles.overview": "Overview",
-  // A title for related guides to this category
-  "guides.titles.related_guides": "Related Guides",
+  // A title for other guides to this category
+  "guides.titles.other_guides": "Other Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
+  // A short name for a group of guides
+  "guides.titles.category": "Category",
+  // A short name for a sub group of guides
+  "guides.titles.subcategory": "Subcategory",
+  // A short name for a single guide
+  "guides.titles.guide": "Guide",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides

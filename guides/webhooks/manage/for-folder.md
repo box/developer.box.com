@@ -20,9 +20,11 @@ To attach a webhook to an folder, call the [Create webhook][1] endpoint with the
 type of `folder`, the ID of the folder, a URL to send webhook notifications to, and
 a list of triggers that will cause the webhook to activate.
 
-<Samples id='post_webhooks' variant='for_folder' />
+<Samples id='post_webhooks' variant='for_folder' >
 
-<Message>
+</Samples>
+
+<Message type='warning'>
 
 This API requires the application to have the "Manage
 webhooks" scope enabled.

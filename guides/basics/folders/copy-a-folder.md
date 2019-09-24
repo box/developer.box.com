@@ -25,7 +25,9 @@ To copy a folder in Box you will need to provide our API with the `id` of the
 
 Optionally, you can provide a different name for the new folder.
 
-<Samples id='post_folders_id_copy' variant='with_name' />
+<Samples id='post_folders_id_copy' variant='with_name' >
+
+</Samples>
 
 <Message>
 
