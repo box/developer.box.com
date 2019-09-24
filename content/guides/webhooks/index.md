@@ -1,8 +1,11 @@
 ---
 rank: 20
 related_endpoints: 
+  - get_webhooks
   - get_webhooks_id
   - post_webhooks
+  - put_webhooks_id
+  - delete_webhooks_id
 related_guides: 
 required_guides: []
 alias_paths: 

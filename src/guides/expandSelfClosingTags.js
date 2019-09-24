@@ -1,4 +1,4 @@
-const regex = new RegExp(/< *([\w]+) *[\w=\"']* *\/>/, 'g')
+const regex = new RegExp(/< *([\w]+) *[\w=\"' ]* *\/>/, 'g')
 
 const expandSelfClosingTags = (contents) => {
   while ((match = regex.exec(contents)) !== null) {

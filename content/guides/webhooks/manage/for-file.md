@@ -18,7 +18,7 @@ a list of triggers that will cause the webhook to activate.
 
 <Samples id='post_webhooks' />
 
-<Message>
+<Message type='warning'>
   This API requires the application to have the "Manage
   webhooks" scope enabled.
 
