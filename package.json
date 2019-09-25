@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@stoplight/json-ref-resolver": "^2.1.1",
-    "comment-json": "^2.0.0",
+    "comment-json": "^2.2.0",
     "concurrently": "^4.1.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.4",

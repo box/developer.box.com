@@ -1214,10 +1214,10 @@ commander@~2.9.0:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-comment-json@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/comment-json/-/comment-json-2.1.0.tgz#ed8c23d591652eb5229f693c177077f1377059a9"
-  integrity sha512-OcO+nJnUtp29j9SwHVcP/F8t/9piiOQj7APXTj75cK/qFAgX7PtGV31ullzwZbBwiA5Rmj25C32FaFgwcu1Uwg==
+comment-json@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/comment-json/-/comment-json-2.2.0.tgz#ab3013f95ec141ae8ae0af62847690aebf02dad4"
+  integrity sha512-C8Xm1HF5d4/Hg1MYM8xvae9qtFFpOn1Q3dTCzmFbFaj8VCtcSliu7oYtfYcmOnbxqU+vvxj7MN5Srwpr6qCmvw==
   dependencies:
     core-util-is "^1.0.2"
     esprima "^4.0.1"
