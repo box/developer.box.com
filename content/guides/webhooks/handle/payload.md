@@ -1,5 +1,7 @@
 ---
 rank: 2
+related_endpoints:
+  - post_webhooks
 related_guides:
   - webhooks/manage/create
   - webhooks/handle/setup-signatures
