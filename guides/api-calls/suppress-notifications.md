@@ -19,7 +19,7 @@ including a `Box-Notifications: off` header with the API call.
 
 <Tab title='cURL'>
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/folders \
   -H "Box-Notifications: off" \
   -H "Authorization: Bearer <ACCESS_TOKEN>"

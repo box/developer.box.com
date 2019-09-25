@@ -30,7 +30,7 @@ API return an `etag` value for the item.
 
 For example, a file resource returns an `etag` in the JSON response.
 
-```sh
+```curl
 curl https://api.box.com/2.0/files/12345 \
   -H "Authorization: Bearer <ACCESS_TOKEN>"
 
@@ -55,7 +55,7 @@ received, or to prevent unnecessary downloads for items that haven't changed.
 For example, to fetch the same file only if it has changed, pass in the `etag`
 value in a `If-None-Match` header.
 
-```sh
+```curl
 curl https://api.box.com/2.0/files/12345 \
   -H "Authorization: Bearer <ACCESS_TOKEN>"
 
