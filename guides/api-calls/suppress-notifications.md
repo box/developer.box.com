@@ -64,5 +64,5 @@ to properly work.
 
 Some notifications can not be suppressed, most notable the creation is users,
 comments, collaborations, task assignments, and when changing a user's login.
-<Message>
 
+</Message>
