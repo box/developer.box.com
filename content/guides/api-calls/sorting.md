@@ -15,8 +15,9 @@ responses.
 Use the `sort` and `direction` query parameters to sort the collection either in
 ascending or descending order.
 
-```sh
-curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC
+```curl
+curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 <Message type='warning'>
