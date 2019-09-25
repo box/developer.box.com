@@ -33,7 +33,7 @@ receiving an email informing them of the download.
 
 All actions will still appear in users updates feed and the audit-logs.
 
-<Message style='warning'>
+<Message type='warning'>
 # Scope requirement
 
 Notification suppression is available for approved applications only. Contact
