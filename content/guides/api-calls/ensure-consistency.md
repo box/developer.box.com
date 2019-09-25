@@ -31,7 +31,7 @@ For example, a file resource returns an `etag` in the JSON response.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -54,7 +54,7 @@ value in a `If-None-Match` header.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
   -H "If-None-Match: 1"
 ```
 
