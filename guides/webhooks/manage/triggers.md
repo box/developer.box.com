@@ -13,7 +13,7 @@ scId: webhooks/manage
 isIndex: false
 ---
 
-# List of event types
+# List of event triggers
 
 The following is a list of events that can trigger webhooks. Some
 events are only available for files, while others are only available for folders.
