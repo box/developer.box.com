@@ -103,7 +103,7 @@ generally are formatted as follows.
 
 ## Request IDs
 
-When your API call returns in an error, our API will return an error 
+When your API call returns in an error, our API will return an error
 object with a `request_id` field.
 
 ```json
