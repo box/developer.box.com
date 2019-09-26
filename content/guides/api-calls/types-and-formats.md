@@ -103,6 +103,30 @@ generally are formatted as follows.
 
 ## Request IDs
 
+When your API call returns in an error, our API will return an error 
+object with a `request_id` field.
+
+```json
+{
+  "type": "error",
+  "status": 400,
+  "code": "item_name_invalid",
+  "help_url": "http://developers.box.com/docs/#errors",
+  "message": "Method Not Allowed",
+  "request_id": "abcdef123456"
+}
+```
+
+When reaching out to support about specific error, please provide the full API
+response including the `request_id` to help our support team to quickly find your
+request.
+
+<Message>
+  Most API calls also return a `BOX-REQUEST-ID` response header. The value of
+  this header should not be confused with the `request_id` value in the body of
+  an error response.
+</Message>
+
 ## Date and times
 
 The Box APIs support [RFC 3339][rfc3339] timestamps. The preferred way to format
