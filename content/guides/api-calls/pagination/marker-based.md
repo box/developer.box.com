@@ -2,6 +2,12 @@
 rank: 2
 related_endpoints:
   - get_folders_id_items
+  - get_files_id_collaborations
+  - get_webhooks
+  - get_metadata_templates_enterprise
+  - get_recent_items
+  - get_legal_hold_policies
+  - get_enterprises_id_device_pinners
 related_guides:
   - api-call/sorting
   - api-calls/pagination/offset-based

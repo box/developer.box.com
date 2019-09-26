@@ -2,6 +2,17 @@
 rank: 1
 related_endpoints:
   - get_folders_id_items
+  - get_files_id_versions
+  - get_files_id_comments
+  - get_folders_trash_items
+  - get_search
+  - get_users
+  - get_groups_id_memberships
+  - get_users_id_memberships
+  - get_groups
+  - get_groups_id_collaborations
+  - get_collaborations
+  - get_collections_id_items
 related_guides:
   - api-call/sorting
   - api-calls/pagination/marker-based
