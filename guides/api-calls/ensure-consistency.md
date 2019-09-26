@@ -100,13 +100,13 @@ and whether the `etag` value matches the most recent version.
 
 <Message type='warning'>
 
-  # Moving items
+# Moving items
 
-  The `If-Match` header can not be used to prevent moving of files, folders,
-  or web links. Instead, Box will always ensure that the latest item is moved to
-  the new location.
+The `If-Match` header can not be used to prevent moving of files, folders,
+or web links. Instead, Box will always ensure that the latest item is moved to
+the new location.
 
-</Moving>
+</Message>
 
 ## Prevent unnecessary request downloads
 
