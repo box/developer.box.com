@@ -3,14 +3,16 @@ rank: 2
 related_endpoints:
   - post_folders_id_copy
 related_guides:
-  - basics/folders/create-a-folder
-  - basics/folders/delete-a-folder
+  - folders/create
+  - folders/delete
 required_guides:
-  - basics/folders/create-a-folder
+  - folders/create
+related_resources:
+  - folder
 alias_paths: []
-id: basics/folders/copy-a-folder
-cId: basics
-scId: basics/folders
+id: folders/copy
+cId: folders
+scId: null
 isIndex: false
 ---
 

@@ -1,13 +1,16 @@
 ---
-rank: 1
+rank: 50
 related_endpoints: []
 related_guides: []
 required_guides: []
+related_resources:
+  - folder
+  - folders
 alias_paths:
   - /docs/work-with-folders
-id: basics/folders
-cId: basics
-scId: basics/folders
+id: folders
+cId: folders
+scId: null
 isIndex: true
 ---
 

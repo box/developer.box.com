@@ -3,13 +3,15 @@ rank: 3
 related_endpoints:
   - delete_folders_id
 related_guides:
-  - basics/folders/create-a-folder
+  - folders/create
 required_guides:
-  - basics/folders/create-a-folder
+  - folders/create
 alias_paths: []
-id: basics/folders/delete-a-folder
-cId: basics
-scId: basics/folders
+related_resources:
+  - folder
+id: folders/delete
+cId: folders
+scId: null
 isIndex: false
 ---
 
