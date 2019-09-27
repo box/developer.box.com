@@ -4,6 +4,8 @@ related_endpoints:
   - get_webhooks
 related_guides:
   - webhooks/manage/create
+related_resources:
+  - webhook
 required_guides: []
 alias_paths: []
 id: webhooks/manage/list-all

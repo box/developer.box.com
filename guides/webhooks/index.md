@@ -6,6 +6,8 @@ related_endpoints:
   - post_webhooks
   - put_webhooks_id
   - delete_webhooks_id
+related_resources:
+  - webhook
 related_guides: null
 required_guides: []
 alias_paths:
