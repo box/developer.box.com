@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 2
 related_endpoints:
   - get_folders_id_items
 related_guides: []
