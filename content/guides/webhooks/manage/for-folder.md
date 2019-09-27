@@ -6,6 +6,8 @@ related_guides:
   - webhooks/manage/triggers
   - webhooks/handle/payload
   - webhooks/manage/delete
+related_resources: 
+  - webhook
 required_guides: []
 alias_paths: []
 ---

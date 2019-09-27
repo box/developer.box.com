@@ -3,6 +3,8 @@ rank: 1
 related_endpoints:
   - post_webhooks
   - delete_webhooks_id
+related_resources: 
+  - webhook
 related_guides: []
 required_guides: []
 alias_paths:

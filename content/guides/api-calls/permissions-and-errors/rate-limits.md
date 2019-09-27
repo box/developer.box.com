@@ -5,6 +5,8 @@ related_endpoints:
   - put_files_content
 related_guides: 
   - api-calls/errors
+related_resources: 
+  - client_error
 required_guides: []
 alias_paths: []
 ---

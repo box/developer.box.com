@@ -7,6 +7,8 @@ related_guides:
   - webhooks/manage/list-all
 required_guides:
   - webhooks/manage/create
+related_resources: 
+  - webhook
 alias_paths: []
 ---
 
