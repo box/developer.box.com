@@ -8,13 +8,13 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/requesting-extra-fields
+id: api-calls/request-extra-fields
 cId: api-calls
 scId: null
 isIndex: false
 ---
 
-# Requesting extra fields
+# Request extra fields
 
 The number of fields returned for a resource can depend on the API endpoint used
 to request the resource.

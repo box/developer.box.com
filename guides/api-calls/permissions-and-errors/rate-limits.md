@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints:
   - get_search
   - put_files_content
@@ -7,9 +7,9 @@ related_guides:
   - api-calls/errors
 required_guides: []
 alias_paths: []
-id: api-calls/rate-limits
+id: api-calls/permissions-and-errors/rate-limits
 cId: api-calls
-scId: null
+scId: api-calls/permissions-and-errors
 isIndex: false
 ---
 
