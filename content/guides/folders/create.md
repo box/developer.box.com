@@ -3,9 +3,11 @@ rank: 1
 related_endpoints:
   - post_folders_id
 related_guides:
-  - basics/folders/-folder
-  - basics/folders/copy-a-folder
+  - folders/update
+  - folders/copy
 required_guides: []
+related_resources:
+  - folder
 alias_paths: []
 ---
 
