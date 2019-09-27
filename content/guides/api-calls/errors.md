@@ -3,7 +3,8 @@ rank: 1
 related_endpoints: []
 related_guides: []
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /docs/error-codes
 notes: |-
   Lazy copy of old docs. Needs rethinking.
 ---
