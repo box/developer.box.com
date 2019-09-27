@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 3
 related_endpoints:
   - get_files_id
   - get_folders_id
