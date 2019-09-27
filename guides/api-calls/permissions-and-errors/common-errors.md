@@ -8,13 +8,13 @@ related_resources:
 alias_paths:
   - /docs/error-codes
 notes: Lazy copy of old docs. Needs rethinking.
-id: api-calls/permissions-and-errors/errors
+id: api-calls/permissions-and-errors/common-errors
 cId: api-calls
 scId: api-calls/permissions-and-errors
 isIndex: false
 ---
 
-# Errors
+# Common Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
 has been successfully processed or not.
