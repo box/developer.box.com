@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: 
   - get_search
   - put_files_content

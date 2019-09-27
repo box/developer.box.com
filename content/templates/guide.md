@@ -15,6 +15,15 @@ rank: 1
 # as "operationId".
 related_endpoints:
   - get_files_id
+# TODO/CHANGE: Set to any number of resource IDs or []
+# to be shown at the end of a Guide as being related.
+#
+# Resource IDs can be found in the OpenAPI spec
+# as the key of the resource in the components list
+related_resources:
+  - file
+  - folder
+  - web_link
 # TODO/CHANGE: Set to any number of guides or []
 # to be shown at the end of a Guide as being related.
 #
