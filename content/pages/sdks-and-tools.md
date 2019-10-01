@@ -3,12 +3,12 @@ alias_paths:
   - /sdks
 ---
 
-# Official Box Tools
+# SDKs & Tools
 
 The following tools are actively developed and supported by Box. These tools
 receive regular product updates, as well as security updates.
 
-## SDK Client Libraries & CLIs
+## Official SDKs & CLIs
 
 | Platform                          | Maintained? | Parity? |
 | --------------------------------- | ----------- | ------- |
@@ -33,7 +33,7 @@ these projects to full parity.
 
 </Message>
 
-## UI Libraries
+## Official UI Libraries
 
 Extend your application with pre-built UI components to browse, share, and
 preview files on Box.
