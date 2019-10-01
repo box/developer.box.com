@@ -18,9 +18,9 @@ related_guides:
   - api-calls/pagination/marker-based
 required_guides: []
 alias_paths: []
-id: api-calls/pagination/offset-based
 cId: api-calls
 scId: api-calls/pagination
+id: api-calls/pagination/offset-based
 isIndex: false
 ---
 
@@ -52,7 +52,7 @@ curl https://api.box.com/2.0/folders/0/items?offset=101&limit=100 \
   -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message>
+<Message type='notice'>
 
 Note that the `offset` should be increased by the previous `limit` and not by
 the size of the entries in the response array, as this may be less than the
@@ -78,7 +78,7 @@ The following query parameters are used to paginate a collection.
 
 <!-- markdownlint-enable line-length -->
 
-<Message>
+<Message type='notice'>
 
 The maximum `offset` for offset-based pagination is `300000`. Marker-based
 pagination is recommended when a higher offset is needed.

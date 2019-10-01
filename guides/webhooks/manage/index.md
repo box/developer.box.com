@@ -10,9 +10,9 @@ required_guides: []
 alias_paths:
   - /docs/work-with-webhooks
   - /docs/file-workflow-with-webhooks
-id: webhooks/manage
 cId: webhooks
 scId: webhooks/manage
+id: webhooks/manage
 isIndex: true
 ---
 

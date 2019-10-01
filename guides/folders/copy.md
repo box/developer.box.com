@@ -10,9 +10,9 @@ required_guides:
 related_resources:
   - folder
 alias_paths: []
-id: folders/copy
 cId: folders
 scId: null
+id: folders/copy
 isIndex: false
 ---
 
@@ -31,7 +31,7 @@ Optionally, you can provide a different name for the new folder.
 
 </Samples>
 
-<Message>
+<Message type='notice'>
 
 # Name restrictions
 

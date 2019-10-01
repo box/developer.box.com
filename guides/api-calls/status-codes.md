@@ -6,9 +6,9 @@ related_guides:
   - api-calls/permissions-and-errors/rate-limits
 required_guides: []
 alias_paths: []
-id: api-calls/status-codes
 cId: api-calls
 scId: null
+id: api-calls/status-codes
 isIndex: false
 ---
 

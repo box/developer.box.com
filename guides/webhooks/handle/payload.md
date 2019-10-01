@@ -9,9 +9,9 @@ related_guides:
 required_guides:
   - webhooks/manage/create
 alias_paths: []
-id: webhooks/handle/payload
 cId: webhooks
 scId: webhooks/handle
+id: webhooks/handle/payload
 isIndex: false
 ---
 
@@ -50,7 +50,7 @@ BOX-SIGNATURE-ALGORITHM:  HmacSHA256
 USER-AGENT:               Box-WH-Client/0.1
 ```
 
-<Message>
+<Message type='notice'>
 
 We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs]
 of the webhook payloads.

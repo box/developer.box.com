@@ -9,9 +9,9 @@ related_guides:
 required_guides:
   - representations/list-all-representations
 alias_paths: []
-id: representations/request-a-representation
 cId: representations
 scId: null
+id: representations/request-a-representation
 isIndex: false
 ---
 

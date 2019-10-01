@@ -9,9 +9,9 @@ required_guides: []
 related_resources:
   - folder
 alias_paths: []
-id: folders/create
 cId: folders
 scId: null
+id: folders/create
 isIndex: false
 ---
 
@@ -25,7 +25,7 @@ create the new folder within.
 
 </Samples>
 
-<Message>
+<Message type='notice'>
 
 # Name restrictions
 

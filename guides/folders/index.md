@@ -8,9 +8,9 @@ related_resources:
   - folders
 alias_paths:
   - /docs/work-with-folders
-id: folders
 cId: folders
 scId: null
+id: folders
 isIndex: true
 ---
 

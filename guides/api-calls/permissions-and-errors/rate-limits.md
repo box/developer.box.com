@@ -9,9 +9,9 @@ related_resources:
   - client_error
 required_guides: []
 alias_paths: []
-id: api-calls/permissions-and-errors/rate-limits
 cId: api-calls
 scId: api-calls/permissions-and-errors
+id: api-calls/permissions-and-errors/rate-limits
 isIndex: false
 ---
 
@@ -58,7 +58,7 @@ Retry-After: 100
 
 Please see the [Client Error resource](resource://client_error) for more details.
 
-<Message>
+<Message type='notice'>
 
 The `Retry-After` header provides guidance on when the API call can be
 retried. In general, we advise using an exponential back-off strategy for

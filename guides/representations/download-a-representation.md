@@ -9,9 +9,9 @@ related_guides:
 required_guides:
   - representations/request-a-representation
 alias_paths: []
-id: representations/download-a-representation
 cId: representations
 scId: null
+id: representations/download-a-representation
 isIndex: false
 ---
 

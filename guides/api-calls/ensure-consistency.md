@@ -15,9 +15,9 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/ensure-consistency
 cId: api-calls
 scId: null
+id: api-calls/ensure-consistency
 isIndex: false
 ---
 

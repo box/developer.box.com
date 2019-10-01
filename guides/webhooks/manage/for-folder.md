@@ -10,9 +10,9 @@ related_resources:
   - webhook
 required_guides: []
 alias_paths: []
-id: webhooks/manage/for-folder
 cId: webhooks
 scId: webhooks/manage
+id: webhooks/manage/for-folder
 isIndex: false
 ---
 

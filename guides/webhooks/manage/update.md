@@ -10,9 +10,9 @@ required_guides:
 related_resources:
   - webhook
 alias_paths: []
-id: webhooks/manage/update
 cId: webhooks
 scId: webhooks/manage
+id: webhooks/manage/update
 isIndex: false
 ---
 
@@ -26,7 +26,7 @@ as well as an optional new `address` to send webhooks to.
 
 </Samples>
 
-<Message>
+<Message type='notice'>
 
 # Webhook ID
 

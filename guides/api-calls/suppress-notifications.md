@@ -4,9 +4,9 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/suppress-notifications
 cId: api-calls
 scId: null
+id: api-calls/suppress-notifications
 isIndex: false
 ---
 
@@ -58,7 +58,7 @@ to properly work.
 
 </Message>
 
-<Message>
+<Message type='notice'>
 
 Some notifications can not be suppressed, most notable the creation is users,
 comments, collaborations, task assignments, and when changing a user's login.

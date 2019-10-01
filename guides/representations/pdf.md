@@ -11,9 +11,9 @@ required_guides:
   - representations/request-a-representation
   - representations/download-a-representation
 alias_paths: []
-id: representations/pdf
 cId: representations
 scId: null
+id: representations/pdf
 isIndex: false
 ---
 

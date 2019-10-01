@@ -6,9 +6,9 @@ related_guides:
   - webhooks/manage/list-all
 required_guides: []
 alias_paths: []
-id: webhooks/manage/manually
 cId: webhooks
 scId: webhooks/manage
+id: webhooks/manage/manually
 isIndex: false
 ---
 

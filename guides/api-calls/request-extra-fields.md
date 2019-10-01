@@ -8,9 +8,9 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/request-extra-fields
 cId: api-calls
 scId: null
+id: api-calls/request-extra-fields
 isIndex: false
 ---
 
@@ -147,7 +147,7 @@ curl https://api.box.com/2.0/files/12345 \
 }
 ```
 
-<Message>
+<Message type='notice'>
 
 To request more information for a nested resource we recommend calling the
 API for that resource to request it by ID, and optionally pass along the

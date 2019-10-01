@@ -5,9 +5,9 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/sorting
 cId: api-calls
 scId: null
+id: api-calls/sorting
 isIndex: false
 ---
 
@@ -37,7 +37,7 @@ sorting the results.
 The field to sort on is defined by the `sort` query parameter. Check the API
 endpoint's documentation for the possible options for this value.
 
-<Message>
+<Message type='notice'>
 
 In some APIs the `sort` field is the second criteria by which the items are
 sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]

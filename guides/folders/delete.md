@@ -9,9 +9,9 @@ required_guides:
 alias_paths: []
 related_resources:
   - folder
-id: folders/delete
 cId: folders
 scId: null
+id: folders/delete
 isIndex: false
 ---
 
@@ -23,7 +23,7 @@ To remove a folder in Box you will need to provide our API with the ID of the fo
 
 </Samples>
 
-<Message>
+<Message type='notice'>
 
 # Deleting non-empty folders
 

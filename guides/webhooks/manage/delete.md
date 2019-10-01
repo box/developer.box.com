@@ -8,9 +8,9 @@ related_guides:
 required_guides:
   - webhooks/manage/create
 alias_paths: []
-id: webhooks/manage/delete
 cId: webhooks
 scId: webhooks/manage
+id: webhooks/manage/delete
 isIndex: false
 ---
 
@@ -23,7 +23,7 @@ API with the ID of the webhook to remove.
 
 </Samples>
 
-<Message>
+<Message type='notice'>
 
 # Webhook ID
 

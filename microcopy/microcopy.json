@@ -159,8 +159,8 @@
   "headers.primary.links.api_reference.url": "/{locale}/reference/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
-  // The URL to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.url": "https://developer.box.com/docs/sdks",
+  // The URL to the old page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.sdks_and_tools.url": "/{locale}/sdks-and-tools/",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "Manage Applications",
   // The URL to the developer console

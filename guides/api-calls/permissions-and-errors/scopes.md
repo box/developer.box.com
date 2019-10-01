@@ -5,9 +5,9 @@ related_guides: []
 required_guides: []
 alias_paths:
   - /docs/scopes
-id: api-calls/permissions-and-errors/scopes
 cId: api-calls
 scId: api-calls/permissions-and-errors
+id: api-calls/permissions-and-errors/scopes
 isIndex: false
 ---
 
@@ -112,6 +112,8 @@ Gives an application permission to manage standard (managed) Box users. It
 allows the app to change the user's primary login, reset their password, and
 change roles for managed users.
 
+<Message type='notice'>
+
 Although this gives an application access to a user, it does mean that the
 authenticated user needs to have permissions to access these users. In the case
 of a client-side authenticated application this means that the user needs be an
@@ -119,6 +121,8 @@ admin or co-admin.
 
 In the case of a JWT application, this means that the application needs to
 additionally be configured to have "Enterprise"-level application access.
+
+</Message>
 
 |                       |                    |
 | --------------------- | ------------------ |
@@ -143,6 +147,8 @@ Gives an application permission to manage an enterprise's group. It
 allows the app to change the create, update, and delete groups, as well as add
 and remove users to groups.
 
+<Message type='notice'>
+
 Although this gives an application access to user groups, it does mean that the
 authenticated user needs to have permissions to access these users. In the case
 of a client-side authenticated application this means that the user needs be an
@@ -150,6 +156,8 @@ admin or co-admin.
 
 In the case of a JWT application, this means that the application needs to
 additionally be configured to have "Enterprise"-level application access.
+
+</Message>
 
 ### Manage webhooks
 
@@ -173,8 +181,12 @@ Gives an application permission to view the enterprise event stream, as well as
 view and edit the enterprise's attributes and reports. It also allows the
 application to edit and delete device pinners.
 
-Although this gives an application access to user groups, it does mean that the
-authenticated user needs to have permissions to access these users.
+<Message type="notice">
+
+Although this gives an application access to user groups, it does mean that
+the authenticated user needs to have permissions to access these users.
+
+</Message>
 
 ### Manage retention policies
 
@@ -188,8 +200,12 @@ Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased Box
 Governance.
 
+<Message type="warning">
+
 This scope depends on the `gcm` scope to function properly. This scope can be
 requested by opening a ticket via our support channels.
+
+</Message>
 
 ## Available on request
 
@@ -212,8 +228,12 @@ Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased Box
 Governance.
 
+<Message type="notice">
+
 This scope depends on the `gcm` scope to function properly. This scope can be
 requested by opening a ticket via our support channels.
+
+</Message>
 
 ### Suppress email notifications
 
@@ -255,7 +275,7 @@ level, especially when a token needs to be exposed to a client-side, public
 environment like a browser. The primary example for this is when using [Box UI
 Elements][ui-elements] which requires an Access Token in the user's browser.
 
-The following is a list of tokens that can be used with the
+The following is a list of **additional** scopes that can be used with the
 [`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an
 existing access token.
 
@@ -277,6 +297,23 @@ existing access token.
 | `item_rename`          | Explorer            | Allows files and folders to be renamed                                              |
 | `item_share`           | Explorer, Picker    | Allows the item specified under `resource` of the token exchange to be shared       |
 | `item_upload`          | Picker              | Allows upload in the content picker                                                 |
+
+<!-- markdownlint-enable line-length -->
+
+The standard OAuth scopes are also supported when downscoping.
+
+<!-- markdownlint-disable line-length -->
+
+| OAuth Scope                    | Description                                        |
+| ------------------------------ | -------------------------------------------------- |
+| `root_readonly`                | Read all files and folders stored in Box           |
+| `root_readwrite`               | Read and write all files and folders stored in Box |
+| `manage_managed_users`         | Manage managed users                               |
+| `manage_app_users`             | Manage app users                                   |
+| `manage_groups`                | Manage groups                                      |
+| `manage_webhooks`              | Manage webhooks                                    |
+| `manage_enterprise_properties` | Manage enterprise properties                       |
+| `manage_data_retention`        | Manage retention policies                          |
 
 <!-- markdownlint-enable line-length -->
 

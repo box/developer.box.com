@@ -8,9 +8,9 @@ related_resources:
 alias_paths:
   - /docs/error-codes
 notes: Lazy copy of old docs. Needs rethinking.
-id: api-calls/permissions-and-errors/common-errors
 cId: api-calls
 scId: api-calls/permissions-and-errors
+id: api-calls/permissions-and-errors/common-errors
 isIndex: false
 ---
 

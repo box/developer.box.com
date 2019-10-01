@@ -4,9 +4,9 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
-id: api-calls/pagination
 cId: api-calls
 scId: api-calls/pagination
+id: api-calls/pagination
 isIndex: true
 ---
 

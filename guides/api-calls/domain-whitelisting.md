@@ -8,9 +8,9 @@ related_guides: []
 required_guides: []
 alias_paths:
   - /docs/domain-whitelisting
-id: api-calls/domain-whitelisting
 cId: api-calls
 scId: null
+id: api-calls/domain-whitelisting
 isIndex: false
 ---
 
@@ -37,7 +37,7 @@ The following API domains are used to download files via the Box API.
 - `dl.boxcloud.com` to actually download files for authenticated users
 - `public.boxcloud.com` to actually download files for unauthenticated users
 
-<Message>
+<Message type='warning'>
 
 Ensuring access to these domains is only a first step to downloading a file.
 To download a file the users need to have proper access permissions and need

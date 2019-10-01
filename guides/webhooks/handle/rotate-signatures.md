@@ -9,9 +9,9 @@ required_guides:
   - webhooks/manage/create
   - webhooks/handle/setup-signatures
 alias_paths: []
-id: webhooks/handle/rotate-signatures
 cId: webhooks
 scId: webhooks/handle
+id: webhooks/handle/rotate-signatures
 isIndex: false
 ---
 

@@ -5,9 +5,9 @@ related_guides:
   - webhooks/handle/payload
 required_guides: []
 alias_paths: []
-id: webhooks/handle/retries
 cId: webhooks
 scId: webhooks/handle
+id: webhooks/handle/retries
 isIndex: false
 ---
 
@@ -25,7 +25,7 @@ server.
 By using exponential back- off, Box will wait an increasingly longer time for
 every retry.
 
-<Message>
+<Message type='notice'>
 
 Box will retry webhook deliveries up to 10 times. This number could be subject
 to change.

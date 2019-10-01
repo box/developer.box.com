@@ -8,9 +8,9 @@ related_guides:
   - representations/text
 required_guides: []
 alias_paths: []
-id: representations/supported-file-types
 cId: representations
 scId: null
+id: representations/supported-file-types
 isIndex: false
 ---
 
