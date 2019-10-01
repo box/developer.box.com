@@ -4,6 +4,7 @@ alias_paths:
 id: sdks-and-tools
 isIndex: false
 ---
+<Centered>
 
 # SDKs & Tools
 
@@ -96,6 +97,8 @@ support plan, please contact customer services for any urgent feature requests
 for these tools.
 
 </Message>
+
+</Centered>
 
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
