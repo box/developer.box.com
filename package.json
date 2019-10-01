@@ -36,6 +36,7 @@
     "build": "concurrently 'yarn:build:*'",
     "build:microcopy": "node -e 'require(\"./src/microcopy\").write()'",
     "build:guides": "node -e 'require(\"./src/guides\").write()'",
+    "build:pages": "mkdir compiled/pages",
     "serve": "http-server -p 8081 ./compiled",
     "start": "concurrently 'yarn watch' 'yarn watch:test' 'yarn serve'",
     "new": "yarn new:guide:empty",
