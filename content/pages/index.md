@@ -1,4 +1,5 @@
 ---
+hide_title: true
 alias_paths:
   - /reference
 ---
@@ -11,4 +12,9 @@ alias_paths:
   Integrate, extend and build apps with the power of Box
 </Hero>
 
-<GuideCategories limit='6' />
+<Centered wide>
+  <Header stroke centered>
+    Guides
+  </Header>
+  <GuideCategories limit='3' />
+</Centered>
