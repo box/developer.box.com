@@ -54,7 +54,7 @@ Retry-After: 100
 
 Please see the [Client Error resource](resource://client_error) for more details.
 
-<Message>
+<Message type='notice'>
   The `Retry-After` header provides guidance on when the API call can be
   retried. In general, we advise using an exponential back-off strategy for
   retrying API calls.

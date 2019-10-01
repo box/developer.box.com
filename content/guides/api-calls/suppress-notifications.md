@@ -48,7 +48,7 @@ to properly work.
 * Co-admin permissions of **Edit settings for your company**.
 </Message>
 
-<Message>
+<Message type='notice'>
 Some notifications can not be suppressed, most notable the creation is users,
 comments, collaborations, task assignments, and when changing a user's login.
 </Message>

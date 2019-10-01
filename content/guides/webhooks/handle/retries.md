@@ -21,7 +21,7 @@ server.
 By using exponential back- off, Box will wait an increasingly longer time for
 every retry.
 
-<Message>
+<Message type='notice'>
   Box will retry webhook deliveries up to 10 times. This number could be subject
   to change.
 </Message>

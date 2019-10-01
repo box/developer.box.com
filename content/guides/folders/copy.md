@@ -23,7 +23,7 @@ Optionally, you can provide a different name for the new folder.
 
 <Samples id='post_folders_id_copy' variant='with_name' />
 
-<Message>
+<Message type='notice'>
   # Name restrictions
   
   There are some restrictions to the file name. Names containing non-printable

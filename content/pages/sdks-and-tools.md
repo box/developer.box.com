@@ -10,15 +10,15 @@ receive regular product updates, as well as security updates.
 
 ## SDK Client Libraries & CLIs
 
-| Platform                       | Maintained? | Parity? |
-| ------------------------------ | ----------- | ------- |
-| [Java SDK][javasdk]            | Yes         | Full    |
-| [.NET SDK][dotnetsdk]          | Yes         | Full    |
-| [PythonSDK][pythonsdk]         | Yes         | Full    |
-| [Node SDK][nodesdk]            | Yes         | Full    |
-| [CLI][cli]                     | Yes         | Full    |
-| [iOS Content SDK][iossdk]      | Yes         | Partial |
-| [Android Content SDK][android] | Yes         | Partial |
+| Platform                          | Maintained? | Parity? |
+| --------------------------------- | ----------- | ------- |
+| [Java SDK][javasdk]               | Yes         | Full    |
+| [.NET SDK][dotnetsdk]             | Yes         | Full    |
+| [PythonSDK][pythonsdk]            | Yes         | Full    |
+| [Node SDK][nodesdk]               | Yes         | Full    |
+| [CLI][cli]                        | Yes         | Full    |
+| [iOS Content SDK][iossdk]         | Yes         | Partial |
+| [Android Content SDK][androidsdk] | Yes         | Partial |
 
 <Message type="notice">
 
@@ -40,15 +40,16 @@ preview files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-|                                                                                        |                                                                                                |                                                                                                             |
-| -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| ![Browse][browseimg] Navigate and manipulate your files on Box using our pre-built UI. | ![Share][shareimg] Share files with our pre-built UI elements for file & folder collaboration. | ![Preview][previewimg] review over 120 files types, from PDFs to HD videos, with a rich preview experience. |
+|                                                                   |                                                                             |                                                                                      |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| ![Browse][browseimg]                                              | ![Share][shareimg]                                                          | ![Preview][previewimg]                                                               |
+| Navigate and manipulate your files on Box using our pre-built UI. | Share files with our pre-built UI elements for file & folder collaboration. | Review over 120 files types, from PDFs to HD videos, with a rich preview experience. |
 
-| Platform   |                                                                                                                                                                                                 |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| iOS        | [Browse SDK][iosbrowsesdk] <br/> [Share SDK][iossharesdk] <br/> [Preview SDK][ios-preview-sdk]                                                                                                  |
-| Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk) <br/> [Share SDK](https://github.com/box/box-android-share-sdk) <br/> [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](doc:box-ui-elements)                                                                                                                                                          |
+| Platform   |                                                                                                                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
+| Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
+| Javascript | [Box UI Elements](doc:box-ui-elements)                                                                                                                                                |
 
 <!-- markdownlint-enable line-length -->
 

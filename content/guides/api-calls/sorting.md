@@ -31,7 +31,7 @@ curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
 The field to sort on is defined by the `sort` query parameter. Check the API
 endpoint's documentation for the possible options for this value.
 
-<Message>
+<Message type='notice'>
   In some APIs the `sort` field is the second criteria by which the items are
   sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]
   endpoint the results are always sorted by their type first before any other

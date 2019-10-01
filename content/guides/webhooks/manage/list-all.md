@@ -16,7 +16,7 @@ To fetch all for the authenticated user, use the [List Webhooks][1] API.
 
 <Samples id='get_webhooks' />
 
-<Message>
+<Message type='warning'>
   This API requires the application to have the "Manage
   webhooks" scope enabled.
 </Message>

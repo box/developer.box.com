@@ -19,7 +19,7 @@ create the new folder within.
 
 <Samples id='post_folders' />
 
-<Message>
+<Message type='notice'>
   # Name restrictions
   
   There are some restrictions to the file name. Names containing non-printable

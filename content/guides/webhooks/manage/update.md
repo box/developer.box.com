@@ -20,7 +20,7 @@ as well as an optional new `address` to send webhooks to.
 
 <Samples id='put_webhooks_id'></Samples>
 
-<Message>
+<Message type='notice'>
   # Webhook ID
 
   To find the ID of the webhook, use the [List all webhooks][1] endpoint.

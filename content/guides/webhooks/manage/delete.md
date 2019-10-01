@@ -17,7 +17,7 @@ API with the ID of the webhook to remove.
 
 <Samples id='delete_webhooks_id'></Samples>
 
-<Message>
+<Message type='notice'>
   # Webhook ID
 
   To find the ID of the webhook, use the [List all webhooks][1] endpoint.

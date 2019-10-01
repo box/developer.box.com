@@ -20,7 +20,7 @@ to this rule:
   [`POST /files/content`][post-files-content] endpoint, expect data to be sent
   as form data with a content type of `multipart/form-data`.
 
-<Message>
+<Message type='notice'>
   Although not required, we highly recommend passing a header with each API
   request to define the content type of the data sent, for example
   `Content-Type: application/json`.
@@ -37,7 +37,7 @@ exceptions to this rule:
   binary data attached, or a `202 Accepted`, or `302 Found` status code with no
   body and a `Location` header pointing to the actual binary file.
 
-<Message>
+<Message type='notice'>
   The `Content-Type` response header can be used to understand the type of
   content returned in the API. Additionally, every API endpoint has it's
   response type documented in our API reference documentation.
@@ -121,7 +121,7 @@ When reaching out to support about specific error, please provide the full API
 response including the `request_id` to help our support team to quickly find your
 request.
 
-<Message>
+<Message type='notice'>
   Most API calls also return a `BOX-REQUEST-ID` response header. The value of
   this header should not be confused with the `request_id` value in the body of
   an error response.

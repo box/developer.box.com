@@ -35,7 +35,7 @@ curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
   -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message>
+<Message type='notice'>
   APIs that support both offset-based pagination and marker-based pagination
   require the `usemarker` query parameter to be set to `true` to ensure
   marker-based pagination is used.
@@ -57,7 +57,7 @@ curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker
 The final page of items has been requested when the next `next_marker` value is
 `null` in the response object. At this point there are no more items to fetch.
 
-<Message>
+<Message  type='notice'>
   With marker-based paging there is no way to determine the total number of
   entries in a collection except by fetching them all. Applications should not
   retain the `next_marker` value long-term as the internal implementation of the

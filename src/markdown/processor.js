@@ -16,11 +16,12 @@ class MarkdownProcessor {
    */
   write({ 
     from, 
-    to 
+    to,
+    isGuide = false
   }) {
     // read the content and transform it
     const contents = fs.readFileSync(this.sourcePath).toString()
-    const transformedContents = this.transform({ contents })
+    const transformedContents = this.transform({ contents, isGuide })
     // determine the source
     const sourceName = this.sourcePath.replace(from, '')
     // determine the destination
@@ -40,12 +41,13 @@ class MarkdownProcessor {
    * Applies some transformation to every markdown file
    */
   transform({ 
-    contents 
+    contents,
+    isGuide
   }) {
     contents = expandSelfClosingTags(contents)
     contents = unIndentNestedMarkdown(contents)
     contents = padNestedMarkdownWithNewlines(contents)
-    contents = extractFrontmatter(contents, this.sourcePath)
+    contents = extractFrontmatter(contents, this.sourcePath, isGuide)
     return contents    
   }
 }

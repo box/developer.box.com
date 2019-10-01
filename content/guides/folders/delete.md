@@ -17,7 +17,7 @@ To remove a folder in Box you will need to provide our API with the ID of the fo
 
 <Samples id='delete_folders_id' />
 
-<Message>
+<Message type='notice'>
   # Deleting non-empty folders
   
   When deleting a folder, you can pass in the `recursive` parameter to

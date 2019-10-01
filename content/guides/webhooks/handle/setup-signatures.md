@@ -30,7 +30,7 @@ Webhook signatures help ensure that a webhook payload was sent by Box and has
 not been tampered with in transit. Signatures greatly reduce the likelihood of a
 successful man-in-the-middle or replay attack.
 
-<Message>
+<Message type='notice'>
   An extra level of protection can be achieved by frequently changing the
   signature keys. To enable a smooth switch between the old and new keys we
   supports two simultaneous signature keys to be configured for

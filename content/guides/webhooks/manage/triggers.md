@@ -55,7 +55,7 @@ events are only available for files, while others are only available for folders
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
 <!-- markdownlint-enable line-length -->
 
-<Message>
+<Message type='notice'>
   When the permissions on an item prevent an action from occurring,
   no notification is sent for the attempted action.
 </Mesage>
