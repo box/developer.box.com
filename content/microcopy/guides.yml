@@ -30,3 +30,6 @@ titles:
 
   // guide: A short name for a single guide
   guide: Guide
+
+  // edit_source: The text for a link to edit the source of the page
+  edit_source: Edit this page
