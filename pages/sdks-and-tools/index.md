@@ -2,8 +2,9 @@
 alias_paths:
   - /sdks
 id: sdks-and-tools
-isIndex: false
+isIndex: true
 ---
+
 <Centered>
 
 # SDKs & Tools
@@ -45,6 +46,7 @@ preview files on Box.
 
 |                                                                   |                                                                             |                                                                                      |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Browse                                                            | Share                                                                       | Preview                                                                              |
 | ![Browse][browseimg]                                              | ![Share][shareimg]                                                          | ![Preview][previewimg]                                                               |
 | Navigate and manipulate your files on Box using our pre-built UI. | Share files with our pre-built UI elements for file & folder collaboration. | Review over 120 files types, from PDFs to HD videos, with a rich preview experience. |
 
@@ -54,23 +56,23 @@ preview files on Box.
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
 | Javascript | [Box UI Elements](doc:box-ui-elements)                                                                                                                                                |
 
-<!-- markdownlint-enable line-length -->
+  <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
+  <Message type='notice'>
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features.  For support with these
 projects please visit GitHub or [our Platform support
 forum][forum]."
 
-</Message>
+  </Message>
 
 ## Unofficial & Community Tools
 
 The following tools are developed by Box and maintained by Box and its community
 members. These tools do not receive regular product updates or security updates.
 
-<!-- markdownlint-disable line-length -->
+  <!-- markdownlint-disable line-length -->
 
 | Platform                        | Maintained?                           | Parity  |
 | ------------------------------- | ------------------------------------- | ------- |
@@ -79,9 +81,9 @@ members. These tools do not receive regular product updates or security updates.
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
 | [Chrome App SDK][chromesdk]     | Limited, by Box and community members | Partial |
 
-<!-- markdownlint-enable line-length -->
+  <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
+  <Message type='notice'>
 
 **Maintained:** Projects with limited maintenance are updated by Box in
 collaboration with the community. They receive irregular security updates. If
@@ -96,7 +98,7 @@ become available for the Box Platform. If you are a Box customer on a premium
 support plan, please contact customer services for any urgent feature requests
 for these tools.
 
-</Message>
+  </Message>
 
 </Centered>
 
@@ -108,9 +110,9 @@ for these tools.
 [androidsdk]: https://github.com/box/box-android-sdk
 [cli]: https://github.com/box/boxcli
 [forum]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
-[browseimg]: https://files.readme.io/nl2S6R2RIJoAlDTEK5Qp_Browse-UI@2x.jpg
-[shareimg]: https://files.readme.io/E1T8KAsQmOS3zfBGuSdw_Share-UI.jpg
-[previewimg]: https://files.readme.io/wD0EhcV1SCCH0laCQTzr_Preview-UI@2x.jpg
+[browseimg]: ./browse.jpg
+[shareimg]: ./share.jpg
+[previewimg]: ./preview.jpg
 [iosbrowsesdk]: https://github.com/box/box-ios-browse-sdk
 [iossharesdk]: https://github.com/box/box-ios-share-sdk
 [iospreviewsdk]: https://github.com/box/box-ios-preview-sdk
