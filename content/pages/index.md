@@ -13,7 +13,7 @@ alias_paths:
 </Hero>
 
 <Centered wide>
-  <Header stroke centered>
+  <Header stroke centered to='/guides' expand='see all'>
     Guides
   </Header>
   <GuideCategories limit='3' />
