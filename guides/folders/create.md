@@ -1,7 +1,7 @@
 ---
 rank: 1
 related_endpoints:
-  - post_folders
+  - post_folders_id
 related_guides:
   - folders/update
   - folders/copy
