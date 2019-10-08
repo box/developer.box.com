@@ -149,12 +149,12 @@ curl https://api.box.com/2.0/files/12345 \
 
 <Message type='notice'>
 
-To request more information for a nested resource we recommend calling the
-API for that resource to request it by ID, and optionally pass along the
-`field` query parameter.
+  To request more information for a nested resource we recommend calling the
+  API for that resource to request it by ID, and optionally pass along the
+  `field` query parameter.
 
-For example, to get the owner of a file returned when listing the items in a
-folder, request that file by ID with the query parameter `field=owned_by`.
+  For example, to get the owner of a file returned when listing the items in a
+  folder, request that file by ID with the query parameter `field=owned_by`.
 
 </Message>
 

@@ -78,7 +78,8 @@ Client-side authentication is the ideal authentication method for apps that:
 Server-side authentication using JSON Web Tokens (JWT) is only available to
 Custom Apps and Enterprise Integrations. It does not involve a user into the
 authorization flow and as such can be used to act on behalf of any user in an
-enterprise. JWT uses an RSA to verify the application's permissions.
+enterprise. JWT uses a public/private key pair verify the application's
+permissions.
 
 <ImageFrame center shadow border>
 
@@ -92,7 +93,7 @@ enterprise. JWT uses an RSA to verify the application's permissions.
 
 Server-side authentication with JWT is the ideal authentication method for apps that:
 
-- Work with users that don't a Box account
+- Work with users that don't have a Box account
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data within the application's Box account and not within the the
@@ -109,9 +110,9 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 
 A server-side App Token is an authentication method where the application only
 has access to read and write data to its own account. This is mainly used by Box
-View applications, or apps that use Box UI Elements. By using this
-authentication method there is no need to authorize a user as the application is
-automatically authenticated as the Service Account that belongs to that application.
+View applications. By using this authentication method there is no need to
+authorize a user as the application is automatically authenticated as the
+Service Account that belongs to that application.
 
 <Message>
 

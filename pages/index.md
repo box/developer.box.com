@@ -18,11 +18,11 @@ Integrate, extend and build apps with the power of Box
 
 <Centered wide>
 
-<Header stroke centered to='/guides' expand='see all'>
-  Guides
+  <Header stroke centered to='/guides' expand='see all'>
+    Guides
 
-</Header>
-<GuideCategories limit='3' >
+  </Header>
+  <GuideCategories limit='3' >
 
 </GuideCategories>
 

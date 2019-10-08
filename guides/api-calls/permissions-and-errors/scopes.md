@@ -202,8 +202,8 @@ Governance.
 
 <Message type="warning">
 
-This scope depends on the `gcm` scope to function properly. This scope can be
-requested by opening a ticket via our support channels.
+  This scope depends on the `gcm` scope to function properly. This scope can be
+  requested by opening a ticket via our support channels.
 
 </Message>
 
@@ -230,8 +230,8 @@ Governance.
 
 <Message type="notice">
 
-This scope depends on the `gcm` scope to function properly. This scope can be
-requested by opening a ticket via our support channels.
+  This scope depends on the `gcm` scope to function properly. This scope can be
+  requested by opening a ticket via our support channels.
 
 </Message>
 

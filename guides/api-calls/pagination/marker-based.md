@@ -65,10 +65,10 @@ The final page of items has been requested when the next `next_marker` value is
 
 <Message  type='notice'>
 
-With marker-based paging there is no way to determine the total number of
-entries in a collection except by fetching them all. Applications should not
-retain the `next_marker` value long-term as the internal implementation of the
-markers may change over time.
+  Withmarker-based paging there is no way to determine the total number of
+ entries in a collection except by fetching them all. Applications should not
+ retain the `next_marker` value long-term as the internal implementation of the
+ markers may change over time.
 
 </Message>
 

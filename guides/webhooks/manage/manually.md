@@ -54,11 +54,11 @@ The following steps create a new webhook through the [developer console][devcons
 
 <Message type='warning'>
 
-# Callback parameters
+  # Callback parameters
 
-Unlike the V2 Webhooks, these manual webhooks need to be configured with the
-data you'd like to sent along. This data will be sent as a query string either
-in the body or as a query parameter, for example `name=Contract.pdf&type=file`
+  Unlike the V2 Webhooks, these manual webhooks need to be configured with the
+  data you'd like to sent along. This data will be sent as a query string either
+  in the body or as a query parameter, for example `name=Contract.pdf&type=file`
 
 </Message>
 
@@ -67,11 +67,11 @@ within the user's account.
 
 <Message type='error'>
 
-# Developer Mode
+  # Developer Mode
 
-By default V1 webhooks only work for users that are developers of the
-application and have access to the app in the developer console. To enable
-these webhooks for all users, please contact support.
+  By default V1 webhooks only work for users that are developers of the
+  application and have access to the app in the developer console. To enable
+  these webhooks for all users, please contact support.
 
 </Message>
 

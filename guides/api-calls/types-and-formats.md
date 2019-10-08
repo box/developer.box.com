@@ -45,9 +45,9 @@ exceptions to this rule:
 
 <Message type='notice'>
 
-The `Content-Type` response header can be used to understand the type of
-content returned in the API. Additionally, every API endpoint has it's
-response type documented in our API reference documentation.
+  The `Content-Type` response header can be used to understand the type of
+  content returned in the API. Additionally, every API endpoint has it's
+  response type documented in our API reference documentation.
 
 </Message>
 
@@ -131,9 +131,9 @@ request.
 
 <Message type='notice'>
 
-Most API calls also return a `BOX-REQUEST-ID` response header. The value of
-this header should not be confused with the `request_id` value in the body of
-an error response.
+  MostAPI calls also return a `BOX-REQUEST-ID` response header. The value of
+ this header should not be confused with the `request_id` value in the body of
+ an error response.
 
 </Message>
 

@@ -39,10 +39,10 @@ endpoint's documentation for the possible options for this value.
 
 <Message type='notice'>
 
-In some APIs the `sort` field is the second criteria by which the items are
-sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]
-endpoint the results are always sorted by their type first before any other
-criteria.
+  In some APIs the `sort` field is the second criteria by which the items are
+  sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]
+  endpoint the results are always sorted by their type first before any other
+  criteria.
 
 </Message>
 
