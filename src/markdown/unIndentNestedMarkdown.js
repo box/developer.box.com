@@ -1,5 +1,5 @@
 const unindent = require('strip-indent')
-const openRegex = new RegExp(/< *([\w]+) *[\w=\"']* *>/, 'g')
+const openRegex = new RegExp(/< *([\w]+) *[\w="' ]* *>/, 'g')
 
 const unIndentNestedMarkdown = (contents) => {
   while ((match = openRegex.exec(contents)) !== null) {
