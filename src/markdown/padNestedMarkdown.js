@@ -19,10 +19,11 @@ const padOpeningLines = (contents) => {
     const followedByClosingTag = (nextChars === '</')
     const followedByTwoNewLines = (nextChars === '\n\n')
     const followedByOneNewLine = (nextChars.startsWith('\n'))
+    const precededByTicks = (contents.slice(0, match.index).split('`').length-1) % 2 === 1
 
-    if (!followedByClosingTag && !followedByTwoNewLines && !followedByOneNewLine) {
+    if (!followedByClosingTag && !followedByTwoNewLines && !followedByOneNewLine && !precededByTicks) {
       contents = contents.splice(openRegex.lastIndex+1, 0, '\n\n')
-    } else if (!followedByClosingTag && !followedByTwoNewLines && followedByOneNewLine) {
+    } else if (!followedByClosingTag && !followedByTwoNewLines && followedByOneNewLine && !precededByTicks) {
       contents = contents.splice(openRegex.lastIndex+1, 0, '\n')
     }
   }
@@ -34,10 +35,11 @@ const padClosingLines = (contents) => {
     const prevChars = contents.substring(0, match.index)
     const precededByTwoNewLines = /\n\n$/.test(prevChars)
     const precededByOneNewLine = /\n$/.test(prevChars)
-
-    if (!precededByTwoNewLines && !precededByOneNewLine) {
+    const precededByTicks = (contents.slice(0, match.index).split('`').length-1) % 2 === 1
+    
+    if (!precededByTwoNewLines && !precededByOneNewLine && !precededByTicks) {
       contents = contents.splice(match.index, 0, '\n\n')
-    } else if (!precededByTwoNewLines && precededByOneNewLine) {
+    } else if (!precededByTwoNewLines && precededByOneNewLine && !precededByTicks) {
       contents = contents.splice(match.index, 0, '\n')
     }
   }
