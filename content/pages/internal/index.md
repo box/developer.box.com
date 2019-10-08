@@ -118,13 +118,12 @@ variations exist.
 <Samples id='post_folders_id_copy' variant='with_name' />
 </H>
 
-
 ## Code samples
 
 Not all code samples exist in the SDKs/CLI. You can add new code samples
 in basic backticks.
 
-~~~
+~~~sh
 ```js
 console.log('Hello, World!')
 ```
