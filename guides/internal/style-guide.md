@@ -1,12 +1,15 @@
 ---
-alias_paths: []
-id: internal
-isIndex: true
+rank: 1
+hide: true
+cId: internal
+scId: null
+id: internal/style-guide
+isIndex: false
 ---
 
-<Centered>
-
 # Style Guide
+
+<!-- does not need translation -->
 
 The following is an overview of custom React components supported in these docs.
 
@@ -29,7 +32,7 @@ A message is an easy way to show a user that something is important.
 ### Notice messages
 
 The lowest level of message is a notice. Either explicitly set the type, or
-ommit the type.
+omit the type.
 
 ```html
 <Message>
@@ -50,6 +53,48 @@ ommit the type.
 </Message>
 
 </H>
+
+### Warning message
+
+The next level of message is a warning.
+
+```html
+<Message type='warning'>
+  A warning note
+</Message>
+```
+
+<H>
+
+<Message type='warning'>
+
+  A warning note
+
+</Message>
+
+</H>
+
+### Danger message
+
+The final level of message is a danger warning.
+
+```html
+<Message type='danger'>
+  Danger zone!
+</Message>
+```
+
+<H>
+
+<Message type='danger'>
+
+  Danger zone!
+
+</Message>
+
+</H>
+
+### Title
 
 A message can have a title.
 
@@ -73,49 +118,10 @@ A message can have a title.
 
 </H>
 
-Other variations are available for warnings and danger.
-
-```html
-<Message type='warning'>
-  # Warning
-
-  A warning message
-</Message>
-<Message type='warning'>
-  # Danger
-
-  A danger message
-</Message>
-```
-
-<H>
-
-<Message type='warning'>
-
-  # Warning
-
-  A warning message
-
-</Message>
-
-</H>
-
-<H>
-
-<Message type='danger'>
-
-  # Danger
-
-  A danger message
-
-</Message>
-
-</H>
-
 ## Samples
 
 Samples represent a set of sample code blocks extracted from the CLI, SDK, and
-cURL repos.
+cURL repositories.
 
 ```html
 <Samples id='get_files_id'></Samples>
@@ -126,6 +132,8 @@ cURL repos.
 <Samples id='get_files_id'/>
 
 </H>
+
+### Variants
 
 By default the `default` variant is chosen. For some samples different
 variations exist.
@@ -143,7 +151,7 @@ variations exist.
 ## Code samples
 
 Not all code samples exist in the SDKs/CLI. You can add new code samples
-in basic backticks.
+in basic back ticks.
 
 ~~~sh
 ```js
@@ -204,9 +212,10 @@ To link to internal guides, references, and endpoints, please use the following
 syntax.
 
 ```json
-[Get a file by ID](reference://get_files_id)
+[Get a file by ID](endpoint://get_files_id)
 [A file](resource://file)
 [Copy a file](guide://files/advanced/copy)
+[Box](https://box.com)
 ```
 
 <H>
@@ -217,7 +226,14 @@ syntax.
 
 [Copy a file](guide://files/advanced/copy)
 
+[Box](https://box.com)
+
 </H>
+
+Note that this automatically adds the locale to the path. This ensures links are
+translated correctly in each locale.
+
+### Reference links
 
 Please try to use reference links where possible, moving the actual links to the
 bottom of the page.
@@ -251,6 +267,72 @@ Links can be wrapped in a Call to action to create visible buttons.
 
 ## Table
 
+Table's can be created with the usual markdown syntax.
+
+```md
+| Header | Header | Header |
+| ------ | ------ | ------ |
+| Row 1  | Row 1  | Row 1  |
+| Row 2  | Row 2  | Row 2  |
+| Row 3  | Row 3  | Row 3  |
+```
+
+<H>
+
+| Header | Header | Header |
+| ------ | ------ | ------ |
+| Row 1  | Row 1  | Row 1  |
+| Row 2  | Row 2  | Row 2  |
+| Row 3  | Row 3  | Row 3  |
+
+</H>
+
+### Hiding headers
+
+To hide the headers, just leave them empty.
+
+```md
+|        |        |        |
+| ------ | ------ | ------ |
+| Row 1  | Row 1  | Row 1  |
+| Row 2  | Row 2  | Row 2  |
+| Row 3  | Row 3  | Row 3  |
+```
+
+<H>
+
+|        |        |        |
+| ------ | ------ | ------ |
+| Row 1  | Row 1  | Row 1  |
+| Row 2  | Row 2  | Row 2  |
+| Row 3  | Row 3  | Row 3  |
+
+</H>
+
+### Wide tables
+
+Finally, wide tables are automatically set to scroll horizontally. To allow for
+long tables in code you might want to add some hints to the markdown linter to
+allow for long lines.
+
+```md
+<!-- markdownlint-disable line-length -->
+| Header                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
+<!-- markdownlint-enable line-length -->
+```
+
+<H>
+
+<!-- markdownlint-disable line-length -->
+| Header                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
+<!-- markdownlint-enable line-length -->
+
+</H>
+
 ## Image Frame
 
 An image can be easily wrapped into a frame.
@@ -271,8 +353,8 @@ An image can be easily wrapped into a frame.
 
 </H>
 
-Options include a border, wether to center the image, wether to add a shadow,
-and a max-width of 200 or 400.
+Options include a border, whether to center the image, whether to add a shadow,
+and a max-width of `200` or `400` pixels.
 
 ## Centered
 
@@ -292,5 +374,3 @@ parsing of the markdown.
 
 The `wide` attribute is optional and toggles the content between a `800px` and
 `1200px` max width.
-
-</Centered>
