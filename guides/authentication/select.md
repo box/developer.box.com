@@ -17,7 +17,12 @@ isIndex: false
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
-## Supported methods
+<CTA to='guide://applications/select'>Learn how to select the application type
+for your app
+
+</CTA>
+
+## Available methods
 
 The following authorization methods are available to each Box Application type.
 
@@ -43,7 +48,7 @@ make the API calls.
 
 </Message>
 
-## Client-side OAuth 2.0
+### Client-side OAuth 2.0
 
 Client-side OAuth 2.0 is only available to Custom Apps and Enterprise
 Integrations. It requires the application to redirect a user to the Box website
@@ -73,7 +78,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 </CTA>
 
-## Server-side JWT
+### Server-side JWT
 
 Server-side authentication using JSON Web Tokens (JWT) is only available to
 Custom Apps and Enterprise Integrations. It does not involve a user into the
@@ -106,7 +111,7 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 
 </CTA>
 
-## Server-side App Tokens
+### Server-side App Tokens
 
 A server-side App Token is an authentication method where the application only
 has access to read and write data to its own account. This is mainly used by Box
@@ -134,7 +139,7 @@ for apps that:
 
 </CTA>
 
-## Developer Token
+### Developer Token
 
 A server-side Developer Token is a short-lived authentication available to
 developers creating Custom Apps and Enterprise Integrations. It is an Access
