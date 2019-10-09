@@ -47,7 +47,7 @@ admin approval before they can be used in an enterprise.
 
 </Message>
 
-## Box view / Partner Integrations
+## Box View / Partner Integrations
 
 A Service Account is also automatically tied to an application when a Partner
 Integration (for Box View) is created in the developer console.
