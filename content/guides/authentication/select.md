@@ -8,7 +8,7 @@ alias_paths:
   - /docs/authentication-types-and-security
 ---
 
-# Select an authorization method
+# Select auth method
 
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
