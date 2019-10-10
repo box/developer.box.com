@@ -10,7 +10,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Access Token Resource
+# Access Token Object
 
 When an Access Token is requested through the OAuth 2.0 or JWT methods, an
 Access Token resource is returned via the API.
