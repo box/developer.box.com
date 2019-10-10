@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 5
 related_endpoints:
   - get_users_id
   - get_users
