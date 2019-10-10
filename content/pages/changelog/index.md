@@ -1,0 +1,104 @@
+# Changelog
+
+For historical changelog entries, please see [2018 Release Notes](pages://changelog/changelog-2018).
+
+##2019-09-18 New security enhancements to the token revocation API
+
+We have enhanced the capabilities of the [token revocation](endpoint://post-oauth2-revoke/) to permit [downscoped tokens](guides://authentication/access-tokens/downscope) to be revoked prior to their expiration time. Previous to this update only fully scoped access tokens could be revoked through the /revoke endpoint. With this new enhancement downscoped tokens may now be revoked in addition to the fully scoped access tokens.
+
+More information is available [here](blog_token_revocation).
+
+##2019-09-11 New completion_rule field for Tasks
+
+A new optional field has been made available within the Task object, completion_rule. This field may be set through the use of the the [Create Task](endpoint://post-tasks) and [Update Task](endpoint://put-tasks-id) endpoints, and will be returned as part of the standard [Task object](endpoint://resources/task/).
+
+The purpose of this field is to set the conditions under which a task is completed, based on user involvement. When a task is created with a completion rule of "all_assignees" (default), the task will only be considered completed when all assignees have completed the task. When a task is created with a completion rule of "any_assignee", the task will be considered completed when one assignee has completed the task.
+
+##2019-06-26 New supported values in Tasks API
+
+On June 26th, Box released support for a new task type, general tasks. When creating or updating a task, the `action` field can either be `review` for approval tasks or `complete` for the new general tasks. 
+
+This change also affects the accepted values when updating a task assignment. If you want to update an approval/review task, the `resolution_state` can be set to `incomplete`, `approved`, or `rejected`. A general/complete task can have a `resolution_state` of `incomplete` or `completed`.
+
+The Tasks API doesn't refer to tasks as "General" or "Approval" within the response body. This is reflected only within Box's UI.
+
+Docs can be found [here](endpoint://resources/task/).
+
+##2019-05-31 Replaced Obsolete Field in Collaborations API
+
+In 2018 a new field, `acceptance_requirements_status` was added to the GET collaborations/id API endpoint to support additional notification use cases. This field includes terms of service, 2-factor auth, and strong password requirements. The existing `acceptance_requirements` field, which only contains ToS requirements, have been replaced with the new `acceptance_requirements_status`.
+
+Previously a call to `GET /collaboration/<collaboration_id>?fields=acceptance_requirements` would return an object like the following:
+
+```js
+"acceptance_requirements": {
+    "terms_of_service": {
+        "type": "terms_of_service",
+        "id": <tos_id>
+    }
+}
+```
+
+With the new field, the request `GET /collaboration/<collaboration_id>?fields=acceptance_requirements_status` would return the following:
+
+```js
+ "acceptance_requirements_status": {
+    "terms_of_service_requirement": {
+        "is_accepted": true,
+        "terms_of_service": {
+            "type": "terms_of_service",
+            "id": <tos_id>
+        }
+    },
+    "strong_password_requirement": {
+        "enterprise_has_strong_password_required_for_external_users": true,
+        "user_has_strong_password": false
+    },
+    "two_factor_authentication_requirement": {
+        "enterprise_has_two_factor_auth_enabled": true,
+        "user_has_two_factor_authentication_enabled" true
+    }
+}
+```
+
+##2019-05-15 TLS 1.0 has now been deprecated
+On May 13th, 2019, Box began the process of disabling TLS 1.0 requests to Box APIs. As of today, all TLS 1.0 API requests will be returning a response stating that a secure connection could not be established when making API calls.
+ 
+Impacted developers will have been notified through multiple channels over the last 6-12 months, but should your application be impacted you will need to update your systems to again be able to make API requests to Box.
+
+Please see our [TLS 1.0 deprecation guide](pages://changelog/tls-1.1) to upgrade your systems to TLS 1.2.
+ 
+For any questions or for addition support, please [file a support ticket](support_ticket).
+
+##2019-04-15 Changes to return values of Get Task and Get Task Assignment API endpoints
+We have released an update to the API responses of the [Get Task](endpoint://get-tasks-id) and [Get Task Assignment](endpoint://get-task-assignments-id) endpoints. 
+
+Prior to this change, if a call was made to get a task or task assignment with a valid task ID, and that file was deleted or your permissions changed to prevent viewing the file, you would receive a 404 error because the tasks would be deleted with the file. 
+
+With this new change, the response returned will be the task object with a `null` response where the item would be, rather than a 404 error response.
+
+##2019-03-29 Box CLI v2.1.0 Released
+A new version of the Box CLI has been released, taking the version from 2.0.0 to 2.1.0. This release includes a number of feature enhancements and bug fixes:
+
+* Fixed paging for events commands ([link](github_cli_p126))
+* Updated lodash version ([link](github_cli_p129))
+* Send fields param to API when `--fields` flag is used ([link](github_cli_p113))
+* Fix event-types flag ([link](github_cli_p120))
+* Added build npm script ([link](github_cli_commit))
+
+##2019-01-18 New Sidebar UI Element released and Open With Element now in GA
+Two major releases have been made to the Box UI Elements:
+
+1. New Sidebar Element: This new element provides capabilities for incorporating the metadata sidebar for a file directly into your own application or website. Documentation is available [here](guides://applications/other/ui-elements/sidebar).
+2. GA of Open With Element: The Open With element has been moved from beta to general availability. Open With delivers an individual button or an integration into the existing Content Explorer element to launch file content with Adobe Sign, G Suite, or Box Edit. Documentation is available [here](guides://applications/other/ui-elements/open-with).
+
+Full release announcement is available [here](blog_new_element).
+
+[support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
+[blog_token_revocation]: https://medium.com/box-developer-blog/new-security-enhancements-for-revoking-access-tokens-79b9960a7ce2
+[blog_new_element]: https://medium.com/box-developer-blog/new-sidebar-element-the-ga-of-open-with-935936a0628f
+[github_cli_p126]: https://github.com/box/boxcli/pull/126
+[github_cli_p129]: https://github.com/box/boxcli/pull/129
+[github_cli_p113]: https://github.com/box/boxcli/pull/113
+[github_cli_p120]: https://github.com/box/boxcli/pull/120
+[github_cli_commit]: https://github.com/box/boxcli/commit/f0f88f66e3014afba616b5a2994157d435094b56
