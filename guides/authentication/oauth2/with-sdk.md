@@ -72,7 +72,7 @@ your choice.
 <Tabs>
 
   <Tab title='.NET'>
-  
+
 ```dotnet
 var redirectUrl = "https://[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
