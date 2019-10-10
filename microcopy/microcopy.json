@@ -133,8 +133,10 @@
   "guides.titles.next_reads": "Next things to read",
   // A title for usage on a block of guides, marking the index/overview page
   "guides.titles.overview": "Overview",
-  // A title for other guides to this category
+  // A title for other guides in this category
   "guides.titles.other_guides": "Other Guides",
+  // A title for related guides to this category
+  "guides.titles.related_guides": "Related Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // A title for a set of links describing related API resources
