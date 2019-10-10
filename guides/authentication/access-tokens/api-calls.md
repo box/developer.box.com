@@ -1,8 +1,7 @@
 ---
 rank: 2
 related_endpoints: []
-related_resources:
-  - access_token
+related_resources: []
 related_guides:
   - authentication
 required_guides:
@@ -14,7 +13,7 @@ id: authentication/access-tokens/api-calls
 isIndex: false
 ---
 
-# Using tokens in API calls
+# Using a token
 
 Every authenticated API call requires an Access Token to be passed in the
 `Authorization` header as a `Bearer Token` or it will return a `401 Unautorized`

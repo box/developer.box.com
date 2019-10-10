@@ -1,8 +1,7 @@
 ---
 rank: 4
 related_endpoints: []
-related_resources:
-  - access_token
+related_resources: []
 related_guides:
   - authentication/select
 required_guides:
@@ -47,10 +46,14 @@ basic API client.
 
 </Samples>
 
-## Limits & Considerations
+<Message type='danger'>
+
+# Developer tokens should not be used in production environments
 
 The Developer Token should only be used for development and testing purposes. As
 tokens automatically expire and can not be refreshed automatically they are of
 limited use in a production environment.
+
+</Message>
 
 [devconsole]: https://app.box.com/developers/console

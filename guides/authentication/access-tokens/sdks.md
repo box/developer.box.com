@@ -15,7 +15,7 @@ id: authentication/access-tokens/sdks
 isIndex: false
 ---
 
-# Using tokens in SDKs
+# Using in SDKs
 
 The SDKs have direct support for JWT and OAuth 2.0 authentication, yet in some
 cases your application might need to provide an Access Token to the SDK directly.

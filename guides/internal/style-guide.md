@@ -62,11 +62,15 @@ The next level of message is a warning.
 <Message type='warning'>
   A warning note
 </Message>
+
+<Message warning>
+  A warning note
+</Message>
 ```
 
 <H>
 
-<Message type='warning'>
+<Message warning>
 
   A warning note
 
@@ -82,11 +86,15 @@ The final level of message is a danger warning.
 <Message type='danger'>
   Danger zone!
 </Message>
+
+<Message danger>
+  Danger zone!
+</Message>
 ```
 
 <H>
 
-<Message type='danger'>
+<Message danger>
 
   Danger zone!
 
