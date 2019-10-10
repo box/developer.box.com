@@ -1,3 +1,8 @@
+---
+alias_paths:
+  - /changelog
+---
+
 # Changelog
 
 For historical changelog entries, please see
@@ -6,7 +11,7 @@ For historical changelog entries, please see
 ## 2019-09-18 New security enhancements to the token revocation API
 
 We have enhanced the capabilities of the [token
-revocation](endpoint://post-oauth2-revoke/) to permit
+revocation](endpoint://post-oauth2-revoke/) endpoint to permit
 [downscoped tokens](guides://authentication/access-tokens/downscope) to be
 revoked prior to their expiration time. Previous to this update only fully
 scoped access tokens could be revoked through the /revoke endpoint. With this
@@ -140,12 +145,12 @@ Two major releases have been made to the Box UI Elements:
 1. New Sidebar Element: This new element provides capabilities for
 incorporating the metadata sidebar for a file directly into your own
 application or website. Documentation is available
-[here](guides://applications/other/ui-elements/sidebar).
+[here](guides://applications/other/ui-elements).
 2. GA of Open With Element: The Open With element has been moved from beta to
 general availability. Open With delivers an individual button or an integration
 into the existing Content Explorer element to launch file content with Adobe
 Sign, G Suite, or Box Edit. Documentation is available
-[here](guides://applications/other/ui-elements/open-with).
+[here](guides://applications/other/ui-elements).
 
 Full release announcement is available [here](blog_new_element).
 
