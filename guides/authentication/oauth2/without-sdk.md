@@ -54,7 +54,18 @@ make API calls on behalf of this user.
   come from this application, and the user needs to have access to any file or
   folder the application tries to access with this token.
 
+  It is possible to [act as another user](g://authentication/oauth2/as-user)
+  using the `As-User` header.
+
 </Message>
+
+## Prerequisites
+
+Before continuing you will need to have completed the following steps.
+
+* Create a Box Application within the developer console with the OAuth 2.0
+  authentication method.
+* Copy the `client_id` and `client_secret` values and keep them handy.
 
 ## Parameters
 
@@ -307,7 +318,17 @@ let accessToken = await axios.post(
 
 </Tabs>
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+## Summary
+
+By now the application should be able to authorize a user using OAuth 2.0 without
+using any of the SDKs, by using the following steps.
+
+1. [Configure the authorization URL](#1-configure-authorization-url)
+2. [Redirect the user to the Box website](#2-redirect-user)
+3. [The user grants the application access](#3-user-grants-application-access)
+4. [Exchange the authorization code for an access token](#4-exchange-code)
+
+To learn how to use this token head over to the guide on [Making API
+calls](g://authentication/api-calls).
 
 [tokens]: guide://authentication/tokens
