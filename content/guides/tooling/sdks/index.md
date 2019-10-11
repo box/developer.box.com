@@ -9,4 +9,3 @@ alias_paths:
 ---
 
 # Install the SDK
-
