@@ -1,6 +1,7 @@
 ---
 rank: 1
-related_endpoints: []
+related_endpoints: 
+  - get_authorize
 related_guides:
   - applications/select
   - authentication/select
@@ -219,7 +220,7 @@ var client = new BoxClient(config, session);
   <Tab title='Java'>
 
 ```java
-BoxAPIConnection api = new BoxAPIConnection(
+BoxAPIConnection client = new BoxAPIConnection(
   "[CLIENT_ID]",
   "[CLIENT_SECRET]",
   "[CODE]"
