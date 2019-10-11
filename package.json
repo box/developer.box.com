@@ -25,7 +25,7 @@
     "lint": "concurrently 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:yaml'",
     "lint:markdown": "markdownlint -c markdownlintrc.json ./content ./templates",
     "lint:spelling": "yarn lint:spelling:interactive -r",
-    "lint:spelling:interactive": "mdspell 'content/guides/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
+    "lint:spelling:interactive": "mdspell 'content/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
     "lint:yaml": "yamllint ./content",
     "watch": "concurrently 'yarn:watch:microcopy' 'yarn:watch:guides' 'yarn:watch:pages'",
     "watch:microcopy": "watch 'yarn build:microcopy' content/microcopy src --interval=0.2",

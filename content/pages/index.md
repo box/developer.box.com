@@ -14,7 +14,7 @@ alias_paths:
 
 <Centered wide>
   <Header stroke centered to='/guides' expand='see all'>
-    Guides
+    Learn
   </Header>
   <GuideCategories limit='3' />
 </Centered>

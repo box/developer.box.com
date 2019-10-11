@@ -1,6 +1,7 @@
 ---
 rank: 1
-related_endpoints: []
+related_endpoints: 
+  - get_authorize
 related_guides:
   - applications/select
   - authentication/select
@@ -17,14 +18,14 @@ alias_paths: []
 
 The Box SDKs have built-in support for client-side OAuth 2.0.
 
+<ImageFrame border>
+  ![the OAuth 2.0 flow](./oauth2-flow.png)
+</ImageFrame>
+
 In the process a user is redirected to the Box web app in a browser where they
 log in and authorize the application access to their data before they are
 redirected back to the applications `redirect_url`. This last step requires the
 application to be running on a web server somewhere accessible to the user.
-
-<ImageFrame border>
-  ![the OAuth 2.0 flow](./oauth2-flow.png)
-</ImageFrame>
 
 ## Overview
 
@@ -32,7 +33,8 @@ To complete an OAuth 2.0 flow the following steps need to be completed.
 
 1. [Configure the Box SDK](#1-configure-sdk)
 2. [Redirect the user to the Box website](#2-redirect-user)
-3. [Exchange the authorization code for an access token](#4-exchange-code)
+3. [The user grants the application access](#3-user-grants-application-access)
+4. [Exchange the authorization code for an access token](#4-exchange-code)
 
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
@@ -65,7 +67,7 @@ your choice.
   <Tab title='.NET'>
 
 ```dotnet
-var redirectUrl = "https://[REDIRECT_URI]";
+var redirectUrl = "[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
 var sdk = new BoxClient(config);
 ```
@@ -77,7 +79,7 @@ var sdk = new BoxClient(config);
 ```java
 import com.box.sdk.BoxAPIConnection;
 
-String redirectUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
+String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -121,8 +123,8 @@ simple way to get the authorization URL for an SDK client.
   <Tab title='.NET'>
 
 ```dotnet
-var redirectUrl = "https://[REDIRECT_URI]";
-// redirectTo(redirectUrl);
+var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
+// redirectTo(authorizationUrl);
 ```
 
   </Tab>
@@ -130,9 +132,9 @@ var redirectUrl = "https://[REDIRECT_URI]";
 
 <!-- markdownlint-disable line-length -->
 ```java
-String redirectUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
+String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
-// response.redirect(redirectUrl);
+// response.redirect(authorizationUrl);
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -140,7 +142,7 @@ String redirectUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CL
   <Tab title='Python'>
 
 ```python
-auth_url, csrf_token = sdk.get_authorization_url('http://[REDIRECT_URL]')
+auth_url, csrf_token = sdk.get_authorization_url('[REDIRECT_URL]')
 
 // redirect(auth_url, code=302)
 ```
@@ -182,7 +184,7 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
   documentation](endpoint://get-authorize) for more information.
 </Message>
 
-## User grants application access
+## 3. User grants application access
 
 Once the user is redirected to the Box web app they will have to log in. After
 they logged in they are presented with a screen to approve your application.
@@ -218,7 +220,7 @@ var client = new BoxClient(config, session);
   <Tab title='Java'>
 
 ```java
-BoxAPIConnection api = new BoxAPIConnection(
+BoxAPIConnection client = new BoxAPIConnection(
   "[CLIENT_ID]",
   "[CLIENT_SECRET]",
   "[CODE]"
@@ -246,5 +248,8 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 
   </Tab>
 </Tabs>
+
+At the end of this flow, the application has an Access Token that can be used to
+make API calls on behalf of this user.
 
 [tokens]: guide://authentication/tokens

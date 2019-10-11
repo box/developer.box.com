@@ -36,6 +36,12 @@ categories:
         // url: A link to the newsletter page
         url: /{locale}/newsletter/
 
+      changelog:
+        // text: Text for a link to the changelog page
+        text: Changelog
+        // url: A link to the changelog page
+        url: /{locale}/changelog/
+
       github:
         // text: Text for a link to the github org
         text: GitHub

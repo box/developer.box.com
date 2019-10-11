@@ -13,8 +13,8 @@ alias_paths: []
 # OAuth 2.0
 
 Client-side OAuth 2.0 is one of the easiest ways to authenticate a user for the
-Box API. It is an open standard designed to allow users to provide applications
-access to their data in other applications.
+Box API. It is an [open standard](https://oauth.net/2/) designed to allow users
+to provide applications access to their data in other applications.
 
 If you've ever logged in to a website with Twitter, Facebook, or Google you've
 most likely used OAuth 2.0.
