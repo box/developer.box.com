@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# As other user
+# As-User Header
 
 It is possible to for an OAuth 2.0 application to act on behalf of another user
 through the `As-User` header.
