@@ -19,7 +19,7 @@ Integrate, extend and build apps with the power of Box
 <Centered wide>
 
   <Header stroke centered to='/guides' expand='see all'>
-    Guides
+    Learn
 
   </Header>
   <GuideCategories limit='3' >

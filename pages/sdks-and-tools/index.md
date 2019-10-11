@@ -1,11 +1,10 @@
 ---
 alias_paths:
   - /sdks
+centered: true
 id: sdks-and-tools
 isIndex: true
 ---
-
-<Centered>
 
 # SDKs & Tools
 
@@ -18,7 +17,7 @@ receive regular product updates, as well as security updates.
 | --------------------------------- | ----------- | ------- |
 | [Java SDK][javasdk]               | Yes         | Full    |
 | [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [PythonSDK][pythonsdk]            | Yes         | Full    |
+| [Python SDK][pythonsdk]           | Yes         | Full    |
 | [Node SDK][nodesdk]               | Yes         | Full    |
 | [CLI][cli]                        | Yes         | Full    |
 | [iOS Content SDK][iossdk]         | Yes         | Partial |
@@ -83,7 +82,7 @@ members. These tools do not receive regular product updates or security updates.
 
   <!-- markdownlint-enable line-length -->
 
-  <Message type='notice'>
+<Message type='notice'>
 
 **Maintained:** Projects with limited maintenance are updated by Box in
 collaboration with the community. They receive irregular security updates. If
@@ -98,9 +97,7 @@ become available for the Box Platform. If you are a Box customer on a premium
 support plan, please contact customer services for any urgent feature requests
 for these tools.
 
-  </Message>
-
-</Centered>
+</Message>
 
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2

@@ -251,6 +251,10 @@
   "footer.categories.company.links.newsletter.text": "Newsletter",
   // A link to the newsletter page
   "footer.categories.company.links.newsletter.url": "/{locale}/newsletter/",
+  // Text for a link to the changelog page
+  "footer.categories.company.links.changelog.text": "Changelog",
+  // A link to the changelog page
+  "footer.categories.company.links.changelog.url": "/{locale}/changelog/",
   // Text for a link to the github org
   "footer.categories.company.links.github.text": "GitHub",
   // Link to the github org
