@@ -135,7 +135,7 @@ At the end of the document, define the link.
 [1]: https://box.com
 
 We provide some easy ways to link to guides, endpoints,
-and resources without hardcoding the locale.
+and resources without hard-coding the locale.
 
 [Get a file by ID][endpoint://get-files-id]
 [File resource][resource://file]
