@@ -1,6 +1,7 @@
 ---
-rank: 1
-related_endpoints: []
+rank: 2
+related_endpoints:
+  - get_authorize
 related_guides:
   - applications/select
   - authentication/select
