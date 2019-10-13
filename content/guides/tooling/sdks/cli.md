@@ -1,13 +1,16 @@
 ---
-rank: 2
+rank: 5
 related_endpoints: []
-related_guides: []
+related_guides: 
+  - /application/jwt
+  - /application/jwt/setup
 related_pages:
  - sdks-and-tools
-required_guides: []
+required_guides: 
+  - /application/jwt/setup
 related_resources: []
 alias_paths:
- - docs/box-cli
+ - /docs/box-cli
 ---
 
 # Install the Box CLI
@@ -15,32 +18,65 @@ alias_paths:
 The Box Command Line Interface (CLI) is a tool for making requests to
 Box APIs from your terminal window or command prompt.
 
-The Box CLI has standalone installer options for Windows and Mac, as well as
-raw source code options for building the CLI in alternate environments.
+Installers are available for Windows and macOS, and the raw source-code is
+available for building the CLI in other environments.
 
-## Standalone Installers
+## Windows & macOS Installers
 
-* [Windows Installer (32-bit)][win-32-installer]
-* [Windows Installer (64-bit)][win-64-installer]
-* [Mac OS Installer][macos-installer]
+To install the latest CLI on your machine, download the latest
+`.exe` for Windows or `.pkg` for macOS for the latest release.
+
+<CTA to="https://github.com/box/boxcli/releases" narrow>
+  Download the latest CLI installer
+</CTA>
 
 ## Source Code
 
-* [Zip file][source-zip]
-* [Tarball][source-tarball]
+The source code for the CLI is also available via [the GitHub page][cli].
 
-## Setup and Commands
+## Quick Start
+
+To get started, first [set up a Box Custom App][jwt-guide] using Server-side
+Authentication with JWT and download the JSON configuration file from the
+Configuration page of your app in the [developer Console][devconsole]. Then, set
+up the CLI by pointing it to your configuration file:.
+
+```cli
+box configure:environments:add [PATH_TO_CONFIG_FILE]
+```
+
+Next, make your first API call by listing the content of the JWT app's Service
+Account.
+
+```cli
+box folders:get 0
+```
+
+<Message>
+  The root folder for any account always has ID `0`. A JWT application does not
+  automatically authenticate as an actual managed user, instead it uses a
+  Service Account. See [User Types](g://authentication/user-types) for more details.
+</Message>
+
+## Setup & Commands
 
 For a complete list of steps to set up your CLI environment and start working
-with the CLI post-install, see the following links:
+with the CLI post-install are available on our [Box CLI GitHub page][cli].
 
-* [Getting Started][cli-getting-started]: Configuring the Box CLI for first use.
-* [Command Topics][cli-commands]: Complete list of CLI commands and options.
+The GitHub page also has some additional guides that might be of interest to an
+advanced CLI user.
 
-[win-32-installer]: https://github.com/box/boxcli/releases/download/v2.4.0/box-v2.4.0-x86.exe
-[win-64-installer]: https://github.com/box/boxcli/releases/download/v2.4.0/box-v2.4.0-x64.exe
-[macos-installer]: https://github.com/box/boxcli/releases/download/v2.4.0/box-v2.4.0.pkg
-[source-zip]: https://github.com/box/boxcli/archive/v2.4.0.zip
-[source-tarball]: https://github.com/box/boxcli/archive/v2.4.0.tar.gz
+* [Setup autocomplete][cli-autocomplete]
+* [Configure another app][cli-add-config]
+* [Switch accounts][cli-switch]
+* [A full list of commands][cli-commands]
+
+[cli]: https://github.com/box/boxcli
+[cli-releases]: https://github.com/box/boxcli/releases
 [cli-getting-started]: https://github.com/box/boxcli#getting-started
 [cli-commands]: https://github.com/box/boxcli#command-topics
+[jwt-guide]: g://application/jwt/setup
+[devconsole]: https://app.box.com/developers/console
+[cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+[cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
+[cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path

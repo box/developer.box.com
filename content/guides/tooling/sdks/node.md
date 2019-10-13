@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints: []
 related_guides:
  - authentication/jwt
@@ -13,11 +13,33 @@ alias_paths: []
 
 # Install the Node SDK
 
-To install the Box Node SDK run the following command from your terminal
+The Box Node SDK can be used to make API calls to the Box APIs in a Node
+project.
+
+<CTA to="https://github.com/box/box-node-sdk">
+  Learn more about the Node SDK on GitHub
+</CTA>
+
+## NPM installation
+
+To install the Node SDK run the following command from your terminal
 window or command prompt using the [Node Package Manager][npm].
 
 ```sh
-npm install --save box-node-sdk
+npm install box-node-sdk --save
 ```
 
+## Yarn installation
+
+Similarly, the SDK can be installed using the [Yarn package][yarn] manager.
+
+```sh
+yarn add box-node-sdk
+```
+
+<CTA to="https://github.com/box/box-node-sdk">
+  Learn more about the Node SDK on GitHub
+</CTA>
+
 [npm]: https://www.npmjs.com/
+[yarn]: https://yarnpkg.com/

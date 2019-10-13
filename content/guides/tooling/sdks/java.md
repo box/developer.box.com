@@ -2,10 +2,10 @@
 rank: 2
 related_endpoints: []
 related_guides:
- - authentication/jwt
- - authentication/oauth2
+  - authentication/jwt
+  - authentication/oauth2
 related_pages:
- - sdks-and-tools
+  - sdks-and-tools
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -13,26 +13,33 @@ alias_paths: []
 
 # Install the Java SDK
 
-The installation of the Box Java SDK may be accomplished by adding a Gradle
-dependency, Maven dependency, cloning the source into your project, or by
+The Box Java SDK can be used to make API calls to the Box APIs in a Java
+project.
+
+The SDK can be installed by adding a Gradle dependency or Maven dependency, or
+by cloning the source into a project. Additionally it can be installed by
 downloading one of the precompiled JARs from the releases page on GitHub.
+
+<CTA to="https://github.com/box/box-java-sdk">
+  Learn more about the Java SDK on GitHub
+</CTA>
+
+## Gradle
+
+Add the following dependency to the `build.gradle` file.
+
+```sh
+compile 'com.box:box-java-sdk:2.32.0'
+```
 
 <Message>
   For the most up-to-date version number of the Java SDK, please refer to the
   [Java SDK Open Source page][java-os].
 </Message>
 
-## Gradle
-
-Add the following dependency to your `build.gradle` file.
-
-```sh
-compile 'com.box:box-java-sdk:2.32.0'
-```
-
 ## Maven
 
-Add the following to your Maven dependencies.
+Add the following to Maven dependency.
 
 ```xml
 <dependency>
@@ -42,25 +49,39 @@ Add the following to your Maven dependencies.
 </dependency>
 ```
 
-## Cloning from Source
+<Message>
+  For the most up-to-date version number of the Java SDK, please refer to the
+  [Java SDK Open Source page][java-os].
+</Message>
 
-Download the SDK source directly from the
-[Java SDK Github repository][java-sdk-src] and add it to your existing project.
+## Installation from source
+
+Download the SDK source from the [Java SDK GitHub repository][java-sdk-src] and
+add it to a project.
 
 ## Precompiled JAR
 
-Download one of the available JARs from the Java SDK [releases page][java-sdk-releases].
+Download one of the precompiled JARs for the Java SDK from the GitHub [releases
+page][java-sdk-releases].
 
-When using one of the precompiled JARs, you will also need to include the
-following dependencies:
+When using one of the precompiled JARs, it is important to also add the
+following additional dependencies to the project.
 
-| Dependency | Maven / Gradle |
-| ------ | ------ |
-| [minimal-json v0.9.1][dependency-min-json] | `com.eclipsesource.minimal-json:minimal-json:0.9.1` |
-| [jose4j v0.4.4][dependency-jose] | `org.bitbucket.b_c:jose4j:0.4.4` |
-| [bouncycastle bcprov-jdk15on v1.52][dependency-bcprov] | `org.bouncycastle:bcprov-jdk15on:1.52` |
-| [bouncycastle bcpkix-jdk15on v1.52][dependency-bcpkix] | `org.bouncycastle:bcpkix-jdk15on:1.52` |
-| [Java Cryptography Extension (JCE)][dependency-crypto] |
+<!-- markdownlint-disable line-length -->
+
+| Dependency                                               |
+| -------------------------------------------------------- |
+| [`minimal-json v0.9.1`][dependency-min-json]             |
+| [`jose4j v0.4.4`][dependency-jose]                       |
+| [`bouncycastle bcprov-jdk15on v1.52`][dependency-bcprov] |
+| [`bouncycastle bcpkix-jdk15on v1.52`][dependency-bcpkix] |
+| [`Java Cryptography Extension (JCE)`][dependency-crypto] |
+
+<!-- markdownlint-enable line-length -->
+
+<CTA to="https://github.com/box/box-java-sdk">
+  Learn more about the Java SDK on GitHub
+</CTA>
 
 [npm]: https://www.npmjs.com/
 [java-os]: http://opensource.box.com/box-java-sdk/

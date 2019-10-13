@@ -18,10 +18,6 @@ alias_paths: []
 
 The Box SDKs have built-in support for client-side OAuth 2.0.
 
-<ImageFrame border>
-  ![the OAuth 2.0 flow](./oauth2-flow.png)
-</ImageFrame>
-
 In the process a user is redirected to the Box web app in a browser where they
 log in and authorize the application access to their data before they are
 redirected back to the applications `redirect_url`. This last step requires the

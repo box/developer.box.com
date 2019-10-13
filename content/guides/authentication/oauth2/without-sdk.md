@@ -19,10 +19,6 @@ If you are not ready to use any of the official Box SDKs, or an SDK is not
 available in your language of choice, it is totally possible to use the Box APIs
 without them.
 
-<ImageFrame border>
-  ![the OAuth 2.0 flow](./oauth2-flow.png)
-</ImageFrame>
-
 To authenticate a user using OAuth 2.0. the user is redirected to the Box web
 app in a browser where they log in and grant the application access to their
 data before they are redirected back to the applications `redirect_url`. This
