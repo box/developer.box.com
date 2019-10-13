@@ -1,31 +1,28 @@
 ---
-rank: 2
+rank: 1
 related_endpoints:
   - get_search
 related_guides:
   - metadata
   - users
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /docs/search-for-content
 cId: search
 scId: null
-id: search/search-content
+id: search/full-text-search
 isIndex: false
 ---
 
-# Search for content
+# Full-text search
 
-This guide will take you through the methods of searching through content
-within a Box account.
-
-## Searching by terms
-
-To find files and folders within a Box account by using a given search query,
+To find files and folders within a Box account that match a given search query,
 use the query search method within the SDK, passing in keywords and filters as needed.
 
-Define your search terms and filters by using the available fields. Next, call
+Define your search terms and filters by using the available `fields`. Next, call
 the search endpoint with the defined criteria to return the give files and
 folders that are matched.
+
 <Samples id='get_search' >
 
 </Samples>
