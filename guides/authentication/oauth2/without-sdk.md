@@ -23,12 +23,6 @@ If you are not ready to use any of the official Box SDKs, or an SDK is not
 available in your language of choice, it is totally possible to use the Box APIs
 without them.
 
-<ImageFrame border>
-
-![the OAuth 2.0 flow](./oauth2-flow.png)
-
-</ImageFrame>
-
 To authenticate a user using OAuth 2.0. the user is redirected to the Box web
 app in a browser where they log in and grant the application access to their
 data before they are redirected back to the applications `redirect_url`. This
@@ -49,13 +43,13 @@ make API calls on behalf of this user.
 
 <Message notice>
 
-  The action token acquired through OAuth 2.0 is inherently tied to the user who
-  authorized the application. Any API call made with this token will seem to
-  come from this application, and the user needs to have access to any file or
-  folder the application tries to access with this token.
+The action token acquired through OAuth 2.0 is inherently tied to the user who
+authorized the application. Any API call made with this token will seem to
+come from this application, and the user needs to have access to any file or
+folder the application tries to access with this token.
 
-  It is possible to [act as another user](g://authentication/oauth2/as-user)
-  using the `As-User` header.
+It is possible to [act as another user](g://authentication/oauth2/as-user)
+using the `As-User` header.
 
 </Message>
 
@@ -184,9 +178,9 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
 
-  Additional query parameters can be passed along when redirecting the user to
-  limit down the scope, or pass along some extra state. See the [reference
-  documentation](endpoint://get-authorize) for more information.
+  Additionalquery parameters can be passed along when redirecting the user to
+ limit down the scope, or pass along some extra state. See the [reference
+ documentation](endpoint://get-authorize) for more information.
 
 </Message>
 
