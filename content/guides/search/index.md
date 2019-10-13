@@ -1,9 +1,16 @@
 ---
-rank: 1
-related_endpoints: []
-related_guides: []
+rank: 110
+related_endpoints:
+ - get_search
+related_guides:
+ - metadata
+ - users
 required_guides: []
-alias_paths: []
+alias_paths: 
+  - /docs/search-for-content
 ---
 
 # Search
+
+The Box APIs provides a few ways to search using both full-text search and
+metadata search.
