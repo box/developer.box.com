@@ -19,8 +19,6 @@ If you are not ready to use any of the official Box SDKs, or an SDK is not
 available in your language of choice, it is totally possible to use the Box APIs
 without them.
 
-<ImageFrame border>![The JWT 2.0 flow](./jwt-flow.png)</ImageFrame>
-
 This guide will take you through user authentication using JWT without the use
 of the Box SDKs. JWT authentication is designed for working directly with the
 Box API without requiring a user to redirect through Box to authorize your
@@ -39,7 +37,7 @@ At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of the application.
 
 <Message notice>
-  The action token acquired through JWT is inherently tied to the Service
+  The access token acquired through JWT is inherently tied to the Service
   Account for the application. Any API call made with this token will seem to
   come from this application and will not have access to files and folders from
   other users without explicitly getting access them.
