@@ -44,7 +44,7 @@
     "new:guide:empty": "node -e 'require(\"./src/scripts/new-guide\").run(\"guide-empty.md\")'"
   },
   "dependencies": {
-    "@stoplight/json-ref-resolver": "^2.3.0",
+    "@stoplight/json-ref-resolver": "^3.0.1",
     "comment-json": "^2.2.0",
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",
