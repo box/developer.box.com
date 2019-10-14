@@ -10,7 +10,8 @@ required_guides:
   - authentication/select
   - appplications/oauth2/setup
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /docs/construct-jwt-claim-manually
 cId: authentication
 scId: authentication/jwt
 id: authentication/jwt/without-sdk
