@@ -40,7 +40,6 @@ without any issues.
    over to the  [developer console][console] and hit the "Revoke" button for the
    Primary App Token.
 
-
 <Message>
   Repeat the same process with the tokens switched to roll back from the
   Secondary App Token to the Primary App Token.
