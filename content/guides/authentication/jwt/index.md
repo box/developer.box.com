@@ -8,10 +8,11 @@ related_guides:
 required_guides:
   - authentication/select
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /docs/authenticate-with-jwt
 ---
 
-# JWT
+# JWT auth
 
 Server-side authentication using JWT one of the most powerful ways to
 authenticate to the Box API. JWT is an [open standard](https://jwt.io/)

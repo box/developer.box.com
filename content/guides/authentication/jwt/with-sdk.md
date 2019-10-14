@@ -15,7 +15,7 @@ alias_paths: []
 
 # JWT with SDKs
 
-the official Box SDKs have build-in support for JWT authentication.
+The official Box SDKs have build-in support for JWT authentication.
 
 This guide will take you through user authentication using JWT with the use
 of the Box SDKs. JWT authentication is designed for working directly with the
