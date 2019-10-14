@@ -41,7 +41,7 @@ In most cases, the claim simply states that the server is allowed to act on
 behalf of the Box application.
 
 For this reason a every application that uses JWT has an associated [Service
-Account][g://authentication/user-types] that is the default user that it
+Account](g://authentication/user-types) that is the default user that it
 authenticates as. This user is an admin-like user and for this
 reason JWT applications require an actual Box admin's approval before they can
 be used.
