@@ -80,13 +80,13 @@ automatic spell checks.
 
 On a Mac with Homebrew installed, you can install these as follows.
 
-```sh
+```shell
 brew install hunspell yamllint
 ```
 
 Finally, this project depends on Yarn, the Node package manager.
 
-```sh
+```shell
 npm install -g yarn
 ```
 
@@ -113,7 +113,7 @@ on [localhost:8081](localhost:8081).
 
 To add a guide, run the following. The title is optional.
 
-```sh
+```shell
 yarn new path/to/file "My long title"
 ```
 
@@ -122,7 +122,7 @@ as provided. When published, this file will match to a page at `https://box.dev/
 
 To get a more rich template, use the following template instead:
 
-```sh
+```shell
 yarn new:guide:example path/to/file "My long title"
 ```
 
@@ -137,7 +137,7 @@ nested in that folder (and any folders within that folder).
 
 To create an index page, simply run:
 
-```sh
+```shell
 yarn new path/to/index "Index page title"
 ```
 

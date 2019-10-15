@@ -12,9 +12,9 @@ alias_paths:
   - /docs/setting-up-an-oauth-app
 ---
 
-# Setup Custom App with OAuth 2.0
+# Setup with OAuth 2.0
 
-A Custom Web app can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to='g://authentication/oauth2'>
   Learn how OAuth 2.0 authentication works
@@ -40,7 +40,7 @@ Select the "Custom App" option from the list of application types and select
 "Next".
 
 <ImageFrame border>
-  ![Application selection screen](./app-types.png)
+  ![Application selection screen](../images/app-types.png)
 </ImageFrame>
 
 ### 3. Select OAuth 2.0 authentication
@@ -49,7 +49,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 "Next".
 
 <ImageFrame border width="400" center>
-  ![Auth selection screen](./auth-types.png)
+  ![Auth selection screen](../images/auth-types.png)
 </ImageFrame>
 
 ### 4. Provide a name
@@ -58,7 +58,7 @@ Finally, provide a unique name for your application. This name needs to be
 unique across all applications on Box.
 
 <ImageFrame border width="600" center>
-  ![App name form](./app-name.png)
+  ![App name form](../images/app-name.png)
 </ImageFrame>
 
 <Message>
@@ -82,7 +82,7 @@ This URI can be any secure HTTPS URL, or a less secure HTTP URL for a server
 running on `localhost`.
 
 <ImageFrame border width="600" center>
-  ![App name form](./app-redirect-uri.png)
+  ![App name form](../images/app-redirect-uri.png)
 </ImageFrame>
 
 ### Application Scopes
@@ -91,7 +91,7 @@ These options define what permissions your application has to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
-  ![App name form](./app-scopes.png)
+  ![App name form](../images/app-scopes.png)
 </ImageFrame>
 
 ### CORS Domains
@@ -105,7 +105,7 @@ application to make these kind of requests. If all requests will be made from
 server-side code, this section may be left blank.
 
 <ImageFrame border>
-  ![App name form](./app-cors.png)
+  ![App name form](../images/app-cors.png)
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console

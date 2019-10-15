@@ -24,7 +24,7 @@ select the "General" link from the left sidebar in your application
 and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
-  ![Add and Manage keys](./app-authorization.png)
+  ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
 By submitting the application for approval it will send an email to your
@@ -55,14 +55,14 @@ As the admin, head over to the [admin console][adminconsole] select the "Apps"
 tab.
 
 <ImageFrame border center>
-  ![Apps tab](./apps.png)
+  ![Apps tab](../images/apps.png)
 </ImageFrame>
 
 Scroll down to the "Custom Applications" section and click on the "Authorize New
 App" button.
 
 <ImageFrame border center>
-  ![Custom Apps section](./custom-apps.png)
+  ![Custom Apps section](../images/custom-apps.png)
 </ImageFrame>
 
 When asked for the API key, enter the client ID for the application that the
@@ -78,7 +78,7 @@ In the same section where the application was initially authorized, the admin ca
 re-authorize the same application.
 
 <ImageFrame border center>
-  ![Re-authorize app](./app-reauthorize.png)
+  ![Re-authorize app](../images/app-reauthorize.png)
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console

@@ -12,9 +12,9 @@ alias_paths:
   - /docs/setting-up-a-jwt-app
 ---
 
-# Setup Custom App with JWT
+# Setup with JWT
 
-A Custom Web app can be set up to use server-side authentication with
+A Custom App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
@@ -41,7 +41,7 @@ Select the "Custom App" option from the list of application types and select
 "Next".
 
 <ImageFrame border>
-  ![Application selection screen](./app-types.png)
+  ![Application selection screen](../images/app-types.png)
 </ImageFrame>
 
 ### 3. Select OAuth 2.0 authentication
@@ -50,7 +50,7 @@ On the next screen, select "OAuth 2.0 with JWT (Server Authentication)" and sele
 "Next".
 
 <ImageFrame border width="400" center>
-  ![Auth selection screen](./auth-types-jwt.png)
+  ![Auth selection screen](../images/auth-types-jwt.png)
 </ImageFrame>
 
 ### 4. Provide a name
@@ -59,7 +59,7 @@ Finally, provide a unique name for your application. This name needs to be
 unique across all applications on Box.
 
 <ImageFrame border width="600" center>
-  ![App name form](./app-name.png)
+  ![App name form](../images/app-name.png)
 </ImageFrame>
 
 ## JWT keypair
@@ -79,7 +79,7 @@ Click on the "Configuration" option from the left sidebar in your application
 and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
-  ![Add and Manage keys](./app-add-keys.png)
+  ![Add and Manage keys](../images/app-add-keys.png)
 </ImageFrame>
 
 Click the "Generate a Public/Private Keypair" button to have Box generate a
@@ -99,7 +99,7 @@ generate a keypair and upload the public key to the Box developer console.
 To create the keypair using OpenSSL, open a terminal window and run the
 following commands.
 
-```sh
+```shell
 openssl genrsa -des3 -out private.pem 2048
 openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 ```
@@ -115,7 +115,7 @@ select the"Configuration" link from the left sidebar in your application
 and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
-  ![Add and Manage keys](./app-add-keys.png)
+  ![Add and Manage keys](../images/app-add-keys.png)
 </ImageFrame>
 
 Click the "Add a Public Key" button to have Box upload the public key you
@@ -131,7 +131,7 @@ select the "General" link from the left sidebar in your application
 and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
-  ![Add and Manage keys](./app-authorization.png)
+  ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
 This will send an email to your enterprise admin to have them enable your
@@ -157,7 +157,7 @@ existing Managed Users in the entire enterprise the application needs to be
 enabled for "Enterprise Access".
 
 <ImageFrame border>
-  ![App access level](./app-access-level.png)
+  ![App access level](../images/app-access-level.png)
 </ImageFrame>
 
 ### Application Scopes
@@ -166,7 +166,7 @@ These options define what permissions your application has to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
-  ![App scopes](./app-scopes.png)
+  ![App scopes](../images/app-scopes.png)
 </ImageFrame>
 
 ### CORS Domains
@@ -180,7 +180,7 @@ application to make these kind of requests. If all requests will be made from
 server-side code, this section may be left blank.
 
 <ImageFrame border>
-  ![App CORS config](./app-cors.png)
+  ![App CORS config](../images/app-cors.png)
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console

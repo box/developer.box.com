@@ -36,7 +36,7 @@ The payload sent by a webhook has the following Box-specific headers.
 
 For example:
 
-```sh
+```shell
 BOX-DELIVERY-ID:          673a081b-bb4b-4d45-b4f1-4131a29c1d07
 BOX-DELIVERY-TIMESTAMP:   2016-07-11T10:10:33-07:00
 BOX-SIGNATURE-PRIMARY:    isCeDp7mLR41/MjcSEFLag9bWmpJkgmN80Je4VIESdo=

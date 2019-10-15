@@ -14,7 +14,7 @@ service you are trying to create determine the type of Box App you will want to 
 The following is quick overview of the different Box Application types.
 
 <ImageFrame border center>
-  ![Application Types](./app-types.png)
+  ![Application Types](./images/app-types.png)
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
