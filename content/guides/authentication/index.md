@@ -13,13 +13,20 @@ use-case as well as the type of application that has been created in the develop
 console.
 
 <!-- markdownlint-disable line-length -->
-| Box Application Type   | Authorization methods                                     |
-| ---------------------- | --------------------------------------------------------- |
-| Custom App             | [OAuth 2.0][oauth2], [JWT][jwt], or [App token][apptoken] |
-| Enterprise Integration | [OAuth 2.0][oauth2], [JWT][jwt]                           |
-| Partner Integration    | [App token][apptoken]                                     |
-| Custom Skill           | No authorization needed                                   |
+
+| Box Application Type         | Authorization methods                                     |
+| ---------------------------- | --------------------------------------------------------- |
+| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [App token][apptoken] |
+| [Custom Skill][custom-skill] | No authorization needed                                   |
+| Enterprise Integration       | [OAuth 2.0][oauth2], [JWT][jwt]                           |
+| Partner Integration          | [App token][apptoken]                                     |
+
 <!-- markdownlint-enable line-length -->
+
+<Message warning>
+  Enterprise and Partner Integrations exist for legacy purposes. Please use
+  Custom Apps instead and use the relevant authentication method where needed.
+</Message>
 
 <CTA to="guide://authentication/select">
   Learn how to select an authorization type
@@ -47,3 +54,5 @@ short-lived [Developer Token][devtoken].
 [jwt]: guide://authentication/jwt
 [apptoken]: guide://authentication/app-token
 [devtoken]: guide://authentication/access-tokens/developer-tokens
+[custom-app]: guide://applications/custom-apps
+[custom-skill]: guide://applications/custom-skills

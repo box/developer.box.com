@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -9,4 +9,4 @@ alias_paths:
   - /docs/setting-up-a-jwt-app
 ---
 
-# Setup
+# Setup with JWT

@@ -19,7 +19,7 @@ The following is quick overview of the different Box Application types.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type          | Authorization method    | Features & Limitations                             |
+| App Type                      | Auth Method             | Features & Limitations                             |
 | ----------------------------- | ----------------------- | -------------------------------------------------- |
 | [Custom App][custom-apps]     | [OAuth 2.0][oauth2]     | Web App Integrations, App Gallery, Webhooks        |
 | [Custom App][custom-apps]     | [JWT][jwt]              | Webhooks                                           |
@@ -39,7 +39,7 @@ as specified below.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type   | Authorization method  | Description                                                    |
+| App Type               | Auth Method           | Description                                                    |
 | ---------------------- | --------------------- | -------------------------------------------------------------- |
 | Enterprise Integration | [OAuth 2.0][oauth2]   | Equal to a Custom App configured with OAuth 2.0 authentication |
 | Enterprise Integration | [JWT][jwt]            | Equal to a Custom App configured with JWT authentication       |
