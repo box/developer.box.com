@@ -69,37 +69,6 @@ Example use cases for Custom Apps include:
   recruiting portal then can then be routed to an appropriate employee for
   review.
 
-## Enterprise Integrations
-
-<!-- markdownlint-disable line-length -->
-
-|                            |                                                 |
-| -------------------------- | ----------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2] and [JWT][jwt]              |
-| **Features**               | Webhooks, App Gallery, and Web App Integrations |
-
-<!-- markdownlint-enable line-length -->
-
-Enterprise Integrations are similar to [Custom Apps][custom-apps] but restricted
-to [OAuth 2.0][oauth2] and [JWT][jwt] authentication. We recommend using a
-Custom Application and configuring the application accordingly.
-
-## Partner Integrations
-
-<!-- markdownlint-disable line-length -->
-
-|                            |                             |
-| -------------------------- | --------------------------- |
-| **Authentication methods** | [App Token][app-token] auth |
-| **Features**               | Limited API access          |
-
-<!-- markdownlint-enable line-length -->
-
-Partner Integrations are similar to [Custom Apps][custom-apps] but restricted to
-[App Token][app-token] authentication. We recommend using a Custom Application
-with [App Token][app-token] authentication and configuring the application
-accordingly.
-
 ## Custom Skills
 
 |                            |                                |
@@ -147,6 +116,37 @@ Example use cases for Custom Skills include:
 
 - A process that extracts audio from a video file and writes a transcript of the
   audio back to the file
+
+## Enterprise Integrations
+
+<!-- markdownlint-disable line-length -->
+
+|                            |                                                 |
+| -------------------------- | ----------------------------------------------- |
+| **Authentication methods** | [OAuth 2.0][oauth2] and [JWT][jwt]              |
+| **Features**               | Webhooks, App Gallery, and Web App Integrations |
+
+<!-- markdownlint-enable line-length -->
+
+Enterprise Integrations are similar to [Custom Apps][custom-apps] but restricted
+to [OAuth 2.0][oauth2] and [JWT][jwt] authentication. We recommend using a
+Custom Application and configuring the application accordingly.
+
+## Partner Integrations
+
+<!-- markdownlint-disable line-length -->
+
+|                            |                             |
+| -------------------------- | --------------------------- |
+| **Authentication methods** | [App Token][app-token] auth |
+| **Features**               | Limited API access          |
+
+<!-- markdownlint-enable line-length -->
+
+Partner Integrations are similar to [Custom Apps][custom-apps] but restricted to
+[App Token][app-token] authentication. We recommend using a Custom Application
+with [App Token][app-token] authentication and configuring the application
+accordingly.
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt

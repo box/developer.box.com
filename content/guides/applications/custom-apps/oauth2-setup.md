@@ -12,9 +12,13 @@ alias_paths:
   - /docs/setting-up-an-oauth-app
 ---
 
-# Setup with OAuth 2.0
+# Setup Custom App with OAuth 2.0
 
-A Custom Web app can be set up to use client-side OAuth 2.0 authentication.
+A Custom Web app can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+
+<CTA to='g://authentication/oauth2'>
+  Learn how OAuth 2.0 authentication works
+</CTA>
 
 ## Prerequisites
 
@@ -109,3 +113,4 @@ server-side code, this section may be left blank.
 [devtoken]: g://authentication/access-tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+[oauth2]: g://authentication/oauth2
