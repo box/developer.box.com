@@ -1,24 +1,27 @@
 ---
-rank: 3
+rank: 4
 related_endpoints: []
 related_guides: []
 required_guides:
-  - authentication/custom-apps/jwt-setup
+  - applications/custom-apps/app-token-setup
+  - applications/custom-apps/jwt-setup
 related_resources: []
 alias_paths: []
 cId: applications
 scId: applications/custom-apps
-id: applications/custom-apps/app-authorization
+id: applications/custom-apps/app-approval
 isIndex: false
 ---
 
-# JWT App authorization
+# App Approval
 
-Once a keypair has been created for a Custom App that uses JWT, the application
-will need to be authorized within the Box enterprise by the enterprise Admin
-User before it can be used.
+Custom App that are configured with [JWT][jwt] or [App Token][app-token]
+authentication will need to be authorized within the Box enterprise by the
+enterprise Admin User before it can be used.
 
 ## Approval Notifications
+
+A semi-automated process for app approval is available in the developer console.
 
 Head over to your application in the [developer console][devconsole] and
 select the "General" link from the left sidebar in your application
@@ -30,9 +33,9 @@ and scroll down to the "App Authorization" section.
 
 </ImageFrame>
 
-This will send an email to your enterprise admin to have them enable your
-application. More information on this process is available in our [community
-article on app authorization][app-auth].
+By submitting the application for approval it will send an email to your
+enterprise admin to have them enable the application. More information on this
+process is available in our [community article on app authorization][app-auth].
 
 ## Manual Approval
 
@@ -74,7 +77,7 @@ App" button.
 
 </ImageFrame>
 
-When asked for the API key, enter the client ID for the JWT application that the
+When asked for the API key, enter the client ID for the application that the
 developer provided.
 
 ## Re-authorization on changes
@@ -95,3 +98,5 @@ re-authorize the same application.
 [devconsole]: https://app.box.com/developers/console
 [settings]: https://app.box.com/account
 [adminconsole]: https://app.box.com/master/settings/custom
+[jwt]: g://authentication/jwt
+[app-token]: g://authentication/app-token

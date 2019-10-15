@@ -6,6 +6,7 @@ related_guides:
 required_guides:
   - authentication/select
   - authentication/custom-apps
+  - applications/custom-apps/app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
@@ -15,9 +16,15 @@ id: applications/custom-apps/jwt-setup
 isIndex: false
 ---
 
-# Setup with JWT
+# Setup Custom App with JWT
 
-A Custom Web app can be set up to use server-side authentication with JWT.
+A Custom Web app can be set up to use server-side authentication with
+[JWT][jwt].
+
+<CTA to='g://authentication/jwt'>
+  Learn how JWT authentication works
+
+</CTA>
 
 ## Prerequisites
 
@@ -65,13 +72,6 @@ unique across all applications on Box.
   ![App name form](./app-name.png)
 
 </ImageFrame>
-
-<Message>
-
-  Your application is now configured and ready to be used. You can use the
-  [Developer Token][devtoken] to immediately make API calls to your own account.
-
-</Message>
 
 ## JWT keypair
 
@@ -218,3 +218,4 @@ server-side code, this section may be left blank.
 [user-types]: g://authentication/user-types
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+[jwt]: g://authentication/jwt
