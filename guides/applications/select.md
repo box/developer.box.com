@@ -29,7 +29,7 @@ The following is a high level overview of the different types.
 <!-- markdownlint-enable line-length -->
 
 By far the more flexible way to use Box Platform is through a Custom App
-integration. Custom apps support various different authentication methods, and
+integration. Custom Apps support various different authentication methods, and
 allow for downloading, uploading, viewing, searching, and much more.
 
 A custom application typically presents Box functionality to a user within a

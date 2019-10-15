@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -9,8 +9,8 @@ alias_paths:
   - /docs/setting-up-a-jwt-app
 cId: applications
 scId: applications/custom-apps
-id: applications/custom-apps/setup
+id: applications/custom-apps/jwt-setup
 isIndex: false
 ---
 
-# Setup
+# Setup with JWT
