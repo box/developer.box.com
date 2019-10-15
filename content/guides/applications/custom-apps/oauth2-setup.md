@@ -1,8 +1,12 @@
 ---
 rank: 1
 related_endpoints: []
-related_guides: []
-required_guides: []
+related_guides: 
+  - authentication/select
+  - authorization/oauth2
+required_guides: 
+  - authentication/select
+  - authentication/custom-apps
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
