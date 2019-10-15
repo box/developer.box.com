@@ -47,7 +47,7 @@ Select the "App Gallery" panel from the left-hand sidebar.
 
 <ImageFrame center shadow border width='200'>
 
-![App Gallery panel](./app-sidebar.png)
+![App Gallery panel](./images/app-sidebar.png)
 
 </ImageFrame>
 
@@ -55,7 +55,7 @@ Click the button to "Submit My App".
 
 <ImageFrame center border shadow width='400'>
 
-  ![Submit My App button](./submit-app.png)
+  ![Submit My App button](./images/submit-app.png)
 
 </ImageFrame>
 
@@ -68,7 +68,7 @@ Select the "Preview" button to see a preview of your application listing.
 
 <ImageFrame center border shadow>
 
-  ![Preview and Submit](./submit-and-approve.png)
+  ![Preview and Submit](./images/submit-and-approve.png)
 
 </ImageFrame>
 

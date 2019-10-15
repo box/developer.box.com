@@ -1,6 +1,7 @@
 ---
 rank: 4
-alias_paths: []
+alias_paths:
+  - /docs/box-skills
 cId: applications
 scId: applications/custom-skills
 id: applications/custom-skills
@@ -14,17 +15,27 @@ processing for files uploaded to Box. Skills are designed to make it easy to use
 third-party Machine Learning services to automatically extract information from
 files uploaded to Box.
 
-Box Skills need to be enabled on a folder by a Box Admin. After this an event is
-sent to the Skill's application server every time a file is uploaded to the
+Custom Skills need to be enabled on a folder by a Box Admin. After this an event
+is sent to the Skill's application server every time a file is uploaded to the
 folder. This application can then download the file, inspect it or hand it off
 to a machine learning service, and write powerful metadata to the file.
 
 ## Authentication method
 
-Working with Box Skills is simplified by the pre-authorized API credentials
-that are provided with every Skill Event. For this reason though, Box Skills
+Working with Custom Skills is simplified by the pre-authorized API credentials
+that are provided with every Skill Event. For this reason though, Custom Skills
 allow for limited API access, mainly to read the file and write Metadata to the
 file.
+
+## Approval
+
+Before a Custom Skill can be used it needs to be assigned to a folder for which the
+skill should trigger.
+
+<CTA to='g://applications/custom-skills/approval'>
+  Learn more about approving Custom Skills
+
+</CTA>
 
 ## When to use Custom Skills
 

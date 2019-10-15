@@ -29,7 +29,7 @@ and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](./app-authorization.png)
+![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -64,7 +64,7 @@ tab.
 
 <ImageFrame border center>
 
-  ![Apps tab](./apps.png)
+  ![Apps tab](../images/apps.png)
 
 </ImageFrame>
 
@@ -73,7 +73,7 @@ App" button.
 
 <ImageFrame border center>
 
-  ![Custom Apps section](./custom-apps.png)
+  ![Custom Apps section](../images/custom-apps.png)
 
 </ImageFrame>
 
@@ -91,7 +91,7 @@ re-authorize the same application.
 
 <ImageFrame border center>
 
-  ![Re-authorize app](./app-reauthorize.png)
+  ![Re-authorize app](../images/app-reauthorize.png)
 
 </ImageFrame>
 

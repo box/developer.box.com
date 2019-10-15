@@ -30,7 +30,7 @@ project.
 To install the Python SDK run the following command from your terminal
 window or command prompt using [pip][pip].
 
-```sh
+```shell
 pip install boxsdk
 ```
 
@@ -39,7 +39,7 @@ pip install boxsdk
 When working with a Box App that uses server-side [JWT authentication][jwt], the
 following additional module needs to be installed.
 
-```sh
+```shell
 pip install "boxsdk[jwt]"
 ```
 

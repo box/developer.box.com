@@ -16,9 +16,9 @@ id: applications/custom-apps/oauth2-setup
 isIndex: false
 ---
 
-# Setup Custom App with OAuth 2.0
+# Setup with OAuth 2.0
 
-A Custom Web app can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to='g://authentication/oauth2'>
   Learn how OAuth 2.0 authentication works
@@ -46,7 +46,7 @@ Select the "Custom App" option from the list of application types and select
 
 <ImageFrame border>
 
-![Application selection screen](./app-types.png)
+![Application selection screen](../images/app-types.png)
 
 </ImageFrame>
 
@@ -57,7 +57,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](./auth-types.png)
+  ![Auth selection screen](../images/auth-types.png)
 
 </ImageFrame>
 
@@ -68,7 +68,7 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](./app-name.png)
+  ![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -96,7 +96,7 @@ running on `localhost`.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](./app-redirect-uri.png)
+  ![App name form](../images/app-redirect-uri.png)
 
 </ImageFrame>
 
@@ -107,7 +107,7 @@ the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](./app-scopes.png)
+  ![App name form](../images/app-scopes.png)
 
 </ImageFrame>
 
@@ -123,7 +123,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App name form](./app-cors.png)
+  ![App name form](../images/app-cors.png)
 
 </ImageFrame>
 

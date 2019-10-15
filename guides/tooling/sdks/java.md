@@ -33,7 +33,7 @@ downloading one of the precompiled JARs from the releases page on GitHub.
 
 Add the following dependency to the `build.gradle` file.
 
-```sh
+```shell
 compile 'com.box:box-java-sdk:2.32.0'
 ```
 

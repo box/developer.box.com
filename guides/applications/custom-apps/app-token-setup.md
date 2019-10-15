@@ -16,9 +16,9 @@ id: applications/custom-apps/app-token-setup
 isIndex: false
 ---
 
-# Setup Custom App with App Tokens
+# Setup with App Tokens
 
-A Custom Web app can be set up to use server-side
+A Custom App can be set up to use server-side
 [App Tokens][app-token] for authentication.
 
 <CTA to='g://authentication/app-token'>
@@ -47,7 +47,7 @@ Select the "Custom App" option from the list of application types and select
 
 <ImageFrame border>
 
-![Application selection screen](./app-types.png)
+![Application selection screen](../images/app-types.png)
 
 </ImageFrame>
 
@@ -58,7 +58,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](./auth-types-app-tokens.png)
+  ![Auth selection screen](../images/auth-types-app-tokens.png)
 
 </ImageFrame>
 
@@ -69,7 +69,7 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](./app-name.png)
+  ![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -85,7 +85,7 @@ and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
 
-  ![Add and Manage keys](./app-authorization.png)
+  ![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -110,7 +110,7 @@ Token by selecting the "Generate Key" button.
 
 <ImageFrame border width="600" center>
 
-  ![Create an app token](./app-generate-key.png)
+  ![Create an app token](../images/app-generate-key.png)
 
 </ImageFrame>
 
@@ -138,7 +138,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App name form](./app-cors.png)
+  ![App name form](../images/app-cors.png)
 
 </ImageFrame>
 

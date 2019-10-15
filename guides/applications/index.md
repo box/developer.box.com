@@ -19,7 +19,7 @@ The following is quick overview of the different Box Application types.
 
 <ImageFrame border center>
 
-![Application Types](./app-types.png)
+![Application Types](./images/app-types.png)
 
 </ImageFrame>
 

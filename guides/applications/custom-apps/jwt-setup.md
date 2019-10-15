@@ -16,9 +16,9 @@ id: applications/custom-apps/jwt-setup
 isIndex: false
 ---
 
-# Setup Custom App with JWT
+# Setup with JWT
 
-A Custom Web app can be set up to use server-side authentication with
+A Custom App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
@@ -47,7 +47,7 @@ Select the "Custom App" option from the list of application types and select
 
 <ImageFrame border>
 
-![Application selection screen](./app-types.png)
+![Application selection screen](../images/app-types.png)
 
 </ImageFrame>
 
@@ -58,7 +58,7 @@ On the next screen, select "OAuth 2.0 with JWT (Server Authentication)" and sele
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](./auth-types-jwt.png)
+  ![Auth selection screen](../images/auth-types-jwt.png)
 
 </ImageFrame>
 
@@ -69,7 +69,7 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](./app-name.png)
+  ![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -91,7 +91,7 @@ and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
 
-  ![Add and Manage keys](./app-add-keys.png)
+  ![Add and Manage keys](../images/app-add-keys.png)
 
 </ImageFrame>
 
@@ -114,7 +114,7 @@ generate a keypair and upload the public key to the Box developer console.
 To create the keypair using OpenSSL, open a terminal window and run the
 following commands.
 
-```sh
+```shell
 openssl genrsa -des3 -out private.pem 2048
 openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 ```
@@ -133,7 +133,7 @@ and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
 
-  ![Add and Manage keys](./app-add-keys.png)
+  ![Add and Manage keys](../images/app-add-keys.png)
 
 </ImageFrame>
 
@@ -151,7 +151,7 @@ and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
 
-  ![Add and Manage keys](./app-authorization.png)
+  ![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -179,7 +179,7 @@ enabled for "Enterprise Access".
 
 <ImageFrame border>
 
-  ![App access level](./app-access-level.png)
+  ![App access level](../images/app-access-level.png)
 
 </ImageFrame>
 
@@ -190,7 +190,7 @@ the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
 
-  ![App scopes](./app-scopes.png)
+  ![App scopes](../images/app-scopes.png)
 
 </ImageFrame>
 
@@ -206,7 +206,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App CORS config](./app-cors.png)
+  ![App CORS config](../images/app-cors.png)
 
 </ImageFrame>
 
