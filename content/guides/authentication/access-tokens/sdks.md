@@ -5,7 +5,7 @@ related_guides:
   - authentication/access-tokens/developer-tokens
   - authentication/select
 required_guides: 
-  - sdks/init
+  - tooling/sdks
 related_resources: 
   - access_token
 alias_paths: []
