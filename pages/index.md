@@ -22,7 +22,7 @@ Integrate, extend and build apps with the power of Box
     Learn
 
   </Header>
-  <GuideCategories limit='6' >
+  <GuideCategories limit='8' >
 
 </GuideCategories>
 
