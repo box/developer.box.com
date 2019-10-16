@@ -11,6 +11,10 @@ processing for files uploaded to Box. Skills are designed to make it easy to use
 third-party Machine Learning services to automatically extract information from
 files uploaded to Box.
 
+<ImageFrame shadow>
+  ![Skills example](./images/skills-example.png)
+</ImageFrame>
+
 Custom Skills need to be enabled on a folder by a Box Admin. After this an event
 is sent to the Skill's application server every time a file is uploaded to the
 folder. This application can then download the file, inspect it or hand it off
