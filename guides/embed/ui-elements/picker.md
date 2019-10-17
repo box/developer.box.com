@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -21,95 +21,33 @@ library fetches information about a specified folder through the Box API and
 renders the content in a folder view. Users can select files or folders and this
 content information is then passed to another part of the application.
 
-## Browser Support
+## Installation
 
-- Chrome, Firefox, Safari, and Edge (latest 2 versions)
-- Limited support for Internet Explorer 11 (requires a `ES2015/Intl polyfill`)
-- Mobile Chrome and Safari
+[Learn how to install](g://embed/ui-elements/installation) Box UI elements
+either through NPM or the Box CDN.
 
-<Message warning>
+<Message>
 
-  # ES2015
+  # Browser support
 
-Box UI Elements require an `ES2015`-capable browser supporting `Intl` (ECMAScript
-Internationalization API). If your application supports Internet Explorer 11
-or Safari 9, please include a polyfill library or a service like
-[`polyfill.io`](https://polyfill.io) to smartly load only the polyfills your
-users need. Box also hosts the `core-js` standard library at:
-
-[`https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js`][polyfill]
+UI elements have [limited support](g://embed/ui-elements/browser) for
+older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
-<Message warning>
+## Authentication
 
-  # Enabling Popups for Adobe Integrations
+The UI Elements are designed in an authentication agnostic way so whether
+you are using UI Elements for users who have Box accounts (Managed Users) or
+non-Box accounts (App Users), UI Elements should just work out of the box. The
+reason for this is that UI Elements only expect a "token" to be passed in for
+authentication, and Box provides two different ways to generate tokens - OAuth
+and JWT.
 
-The Adobe integration currently creates popups that are blocked by the
-browsers, enable popups for `echosign.integration.com` to prevent this.
+<CTA to="g://authentication/select">
+  Learn about selecting an authentication method
 
-</Message>
-
-## Assets
-
-### Current Version
-
-- 10.1.0
-
-### NPM
-
-- [`www.npmjs.com/package/box-ui-elements`][npm]
-- Use this when you are building a React based app and would like to import the
-  components directly into your app at build time.
-
-### Scripts and Stylesheets
-
-- Use this when you are not building a React based app or you don't want to
-  include the components as part of your app's build process.
-- You only need to include `picker.css` and one of `picker.js` or
-  `picker.no.react.js`.
-- [`picker.css`][style]
-  - Can also be used along with the NPM packaged component.
-- [`picker.js`][pickerjs]
-  - Includes React and ReactDOM libraries
-  - Use this when your project isn't already including React
-  - The file size of this asset will be larger than the one below
-- [`picker.no.react.js`][pickernoreactjs]
-  - Use this when both React and ReactDOM libraries are already loaded on the
-    page
-  - The content explorer expects `17 > version >= 16.2` of React and ReactDOM
-    available on the page
-
-## Supported Locales
-
-The above asset URLs use `en-US`. If you want to use another locale, then
-replace `en-US` in the URLs above with any of the following:
-
-`en-AU`, `en-CA`, `en-GB`, `da-DK`, `de-DE`, `es-ES`, `fi-FI`, `fr-CA`, `fr-FR`,
-`it-IT`, `ja-JP,`, `ko-KR`, `nb-NO`, `nl-NL`, `pl-PL`, `pt-BR`, `ru-RU`,
-`sv-SE`, `tr-TR`, `zh-CN`, `zh-TW`
-
-## Source Code & Releases
-
-Source code for the Open With Element is [hosted on GitHub][gh]. The repository
-contains detailed documentation for usage and development. Please file any bugs
-you encounter under the "Issues" tab with clear steps to reproduce. This
-repository also holds a list of [releases][releases].
-
-## Usage
-
-There are two ways to use the Box Content Pickers. If you’re looking to build
-something quick and simple, use it as a library as shown below in this
-documentation. Alternatively, if you are a building a React based app, you can
-pull in the component from our NPM package. For details refer to the NPM link
-above. As we continue to roll this out, we will provide some level of access to
-the source.
-
-## CORS
-
-To use UI elements an application needs to whitelist the domain the widget is
-used on for Cross Origin Resource sharing. See the [CORS guide][cors] for more
-details.
+</CTA>
 
 ## Sample HTML
 
@@ -223,20 +161,6 @@ to be updated under the JS tab in the demo.
 </Message>
 
 <!-- markdownlint-enable line-length -->
-
-## Authentication
-
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
-
-<CTA to="g://authentication/select">
-  Learn about selecting an authentication method
-
-</CTA>
 
 ## API
 
@@ -416,17 +340,5 @@ more, see [Special Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-enable line-length -->
 
-[polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
-[style]: https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/picker.css
-[pickerjs]: https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/picker.js
-[pickernoreactjs]: https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/picker.no.react.js
-[gh]: https://github.com/box/box-ui-elements
-[releases]: https://github.com/box/box-ui-elements/releases
-[cors]: guide//best-practices/cors
-[npm]: https://www.npmjs.com/package/box-ui-elements
 [downscope]: guide://authentication/access-tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes
-[community]: https://community.box.com/t5/Box-for-G-Suite-User-Guide/Introducing-Box-for-G-Suite/ta-p/60494
-[tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
-[custom-domains]: TODO
-[safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
