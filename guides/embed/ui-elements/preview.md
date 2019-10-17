@@ -377,3 +377,5 @@ more, see [Special Scopes for Box UI Elements][scopes].
 <!-- markdownlint-enable line-length -->
 
 [filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported
+[downscope]: guide://authentication/access-tokens/downscope
+[scopes]: g://api-calls/permissions-and-errors/scopes
