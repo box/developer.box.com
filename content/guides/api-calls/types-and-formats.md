@@ -8,9 +8,12 @@ alias_paths: []
 
 # Types & Formats
 
-## JSON Request Bodies
+Th efollowing sections explain some basic concepts about the types and formats
+that can be encountered within the Box APIs.
 
-The Box APIs use JSON for requests bodies. There are a few notable exceptions
+## JSON Requests
+
+The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
 - The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens
@@ -26,10 +29,10 @@ to this rule:
   `Content-Type: application/json`.
 </Message>
 
-## JSON Response Bodies
+## JSON Responses
 
-The Box APIs generally use JSON as the response body. There are a few notable
-exceptions to this rule:
+The Box APIs generally returns JSON in the response body. There are a few notable
+exceptions to this rule as well.
 
 - APIs that delete items return an empty body with a `204 No Content` HTTP
   status code.
@@ -45,7 +48,7 @@ exceptions to this rule:
 
 ### Resources
 
-Most standard API responses where the only one resource is returned follow the
+Most standard API responses where only one resource is returned follow the
 following format.
 
 ```json
