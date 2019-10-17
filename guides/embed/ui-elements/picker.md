@@ -154,7 +154,7 @@ and JWT.
 
   # Access Token
 
-This demos may not fully function until you provide a valid access token. For
+These demos may not fully function until you provide a valid access token. For
 testing purposes, you can use your temporary developer token. This will need
 to be updated under the JS tab in the demo.
 
