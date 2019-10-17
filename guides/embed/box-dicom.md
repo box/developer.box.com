@@ -18,9 +18,9 @@ The Box DICOM Viewer allows developers to store, view and share DICOM files like
 X-rays, CT scans, Ultrasounds and MRIs securely with Box while still embedding
 the viewer into their own application.
 
-<ImageFrame>!
+<ImageFrame>
 
-[Box DICOM viewer](./box-dicom.png)
+![Box DICOM viewer](./box-dicom.png)
 
 </ImageFrame>
 
@@ -108,8 +108,8 @@ The following is an example of an `iframe` embed.
 
 <Message warning>
 
-# `allowfullscreen` is required The `allowfullscreen` attribute is required
-for the Box DICOM viewer's full-screen function to work properly.
+  # `allowfullscreen` is required The `allowfullscreen` attribute is required
+  for the Box DICOM viewer's full-screen function to work properly.
 
 </Message>
 
