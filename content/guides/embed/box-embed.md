@@ -22,11 +22,15 @@ To grab your Box Embed code from the Box web app, navigate to the folder of
 choice, click on the ellipsis beside the folder, go to More Actions, and click
 Embed Widget.
 
-<ImageFrame>![Box Embed](./box-embed.png)</ImageFrame>
+<ImageFrame border>
+  ![Box Embed](./box-embed.png)
+</ImageFrame>
 
 You are presented with options to adjust the size, view, and sorting.
 
-<ImageFrame>![Box Embed Configuration](./box-embed-2.png)</ImageFrame>
+<ImageFrame border>
+  ![Box Embed Configuration](./box-embed-2.png)
+</ImageFrame>
 
 Once you are done customizing the embed widget, all you will need to do is copy
 and paste the embed code into your site or web application.
@@ -58,7 +62,9 @@ The first step to building an embed `iframe` programmatically is to generate or
 find the value for the shared link. One way to find this value is by using the Box
 web app.
 
-<ImageFrame>![Box Share](./box-share.png)</ImageFrame>
+<ImageFrame border>
+  ![Box Share](./box-share.png)
+</ImageFrame>
 
 Additionally, you can also find this shared link value through the API using the
 [`GET /files/:id`](e://get-files-id) endpoint.
