@@ -14,7 +14,11 @@ The Box DICOM Viewer allows developers to store, view and share DICOM files like
 X-rays, CT scans, Ultrasounds and MRIs securely with Box while still embedding
 the viewer into their own application.
 
-<ImageFrame>![Box DICOM viewer](./box-dicom.png)</ImageFrame>
+<ImageFrame>
+
+  ![Box DICOM viewer](./box-dicom.png)
+  
+</ImageFrame>
 
 The Box DICOM Viewer is an FDA cleared Class II Medical Device for diagnostic
 viewing. It is a zero-footprint HTML5 viewer and can be embedded into an
