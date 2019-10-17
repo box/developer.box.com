@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 10
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -9,7 +9,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Custom Logo
+# Customize Logo
 
 Each of the Box UI Elements allow for specifying a custom logo to place in the
 top-left corner of the embedded container.
