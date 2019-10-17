@@ -8,10 +8,10 @@ alias_paths: []
 
 # Types & Formats
 
-Th efollowing sections explain some basic concepts about the types and formats
+The following sections explain some basic concepts about the types and formats
 that can be encountered within the Box APIs.
 
-## JSON Requests
+## Requests
 
 The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
@@ -29,7 +29,30 @@ to this rule:
   `Content-Type: application/json`.
 </Message>
 
-## JSON Responses
+### GZip compression
+
+By default data sent from Box is not compressed. To improve bandwidth and
+response times it's possible to compress the API responses by including
+a `Accept-Encoding: gzip, deflate` request header.
+
+### Date and times
+
+The Box APIs support [RFC 3339][rfc3339] timestamps. The preferred way to format
+a date in a request is to convert the time to UTC, for example `2013-04-17T09:12:36-00:00`.
+
+In those cases where timestamps are rounded to a given day, the time component
+can be omitted. In this case, `2013-04-17T13:35:01+00:00` would become
+`2013-04-17`. In those cases where timestamps support millisecond precision the expected
+request format should be as followed `2013-04-17T09:12:36.123-00:00`.
+
+When making requests, when a timezone is omitted and a time has been provided
+the Pacific timezone is assumed. In responses, the timezone is based on your
+enterprise settings.
+
+Timestamps are restricted to dates after the start of the Unix epoch, `00:00:00
+UTC` on January 1, 1970.
+
+## Responses
 
 The Box APIs generally returns JSON in the response body. There are a few notable
 exceptions to this rule as well.
@@ -104,7 +127,7 @@ generally are formatted as follows.
 
 <!-- markdownlint-enable line-length -->
 
-## Request IDs
+### Request IDs
 
 When your API call returns in an error, our API will return an error
 object with a `request_id` field.
@@ -130,24 +153,7 @@ request.
   an error response.
 </Message>
 
-## Date and times
-
-The Box APIs support [RFC 3339][rfc3339] timestamps. The preferred way to format
-a date in a request is to convert the time to UTC, for example `2013-04-17T09:12:36-00:00`.
-
-In those cases where timestamps are rounded to a given day, the time component
-can be omitted. In this case, `2013-04-17T13:35:01+00:00` would become
-`2013-04-17`. In those cases where timestamps support millisecond precision the expected
-request format should be as followed `2013-04-17T09:12:36.123-00:00`.
-
-When making requests, when a timezone is omitted and a time has been provided
-the Pacific timezone is assumed. In responses, the timezone is based on your
-enterprise settings.
-
-Timestamps are restricted to dates after the start of the Unix epoch, `00:00:00
-UTC` on January 1, 1970.
-
-## Large numbers
+### Large numbers
 
 In some cases the API can return extremely large numbers for a field. For
 example, a folder's size might have grown to many terabytes of data and
@@ -156,14 +162,6 @@ number.
 
 In these cases these numbers are returned in [IEEE754][numbers] format for
 example `1.2318237429383e+31`.
-
-## GZip compression
-
-By default data sent from Box is not compressed. To improve bandwidth and
-response times it's possible to compress the API responses by including
-a `Accept-Encoding: gzip, deflate` request header.
-
-Explain date formats
 
 [post-oauth2-token]: endpoint://post-oauth2-token
 [post-files-content]: endpoint://post-files-content
