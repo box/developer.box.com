@@ -1,5 +1,5 @@
 ---
-rank: 40
+rank: 2
 related_guides:
   - embed/box-view/create-preview
 required_guides:
@@ -15,10 +15,10 @@ alias_paths: []
 Once a file has been uploaded to the app token application, it may be previewed
 using two different methods:
 
-* Direct embed: A simple HTML iframe component with a custom embed link.
+* Direct embed: A simple HTML `<iframe>` component with a custom embed link.
 * Customized previewer: A fully customized preview widget using Box UI Elements.
 
-## Direct Embed (iframe)
+## Direct Embed (`iframe`)
 
 The direct embed link is a light-weight API method that provides limited
 options to customize the preview experience in your application. Due to the
@@ -26,10 +26,10 @@ light-weight nature of the method, the API doesn't give you options to respond
 to client-side actions such as scrolling in the case of documents, play/pause
 interactivity for videos, rotating an image, etc.
 
-There are two steps towards creating a direct iframe embed for Box View:
+There are two steps towards creating a direct `<iframe>` embed for Box View:
 
 1. Generate an embed URL for the file
-2. Add the embed URL to an iframe
+2. Add the embed URL to an `<iframe>`
 
 ### Generate an embed URL for the file
 
@@ -39,36 +39,53 @@ directly to the APIs.
 
 <Message type='notice'>
   When generating the embed URL directly from the APIs, use the
-  [Get File Information endpoint](endpoint://get_files_id) and request
+  [Get File Information endpoint](e://get_files_id) and request
   `expiring_embed_link` via the `fields` parameter.
 </Message>
 
 <Tabs>
   <Tab title='cURL'>
-    curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
-    -H "Authorization: Bearer APP_TOKEN"
-  </Tab>
-  <Tab title='Node'>
-    const fileId = '12345678';
-    client.files.getEmbedLink(fileId).then(embedURL => {
-      // URL available in embedURL
-    });
+
+```curl
+curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
+  -H "Authorization: Bearer [APP_TOKEN]"
+```
+
   </Tab>
   <Tab title='.NET'>
-    String fileId = "12345678";
-    Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
-    // URL available in embedUri
+
+```dotnet
+String fileId = "12345678";
+Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
+```
+
   </Tab>
   <Tab title='Java'>
-    String fileID = "12345678";
-    BoxFile file = new BoxFile(api, fileID);
-    URL embedLink = file.getPreviewLink();
-    //URL available in embedLink
+
+```java
+String fileID = "12345678";
+BoxFile file = new BoxFile(api, fileID);
+URL embedLink = file.getPreviewLink();
+```
+
   </Tab>
   <Tab title='Python'>
-    file_id = '12345678'
-    embed_url = client.file(file_id).get_embed_url()
-    # URL available in embed_url
+
+```pyton
+file_id = '12345678'
+embed_url = client.file(file_id).get_embed_url()
+```
+
+  </Tab>
+  <Tab title='Node'>
+
+```js
+const fileId = '12345678';
+client.files.getEmbedLink(fileId).then(embedURL => {
+  // ...
+});
+```
+
   </Tab>
 </Tabs>
 
@@ -86,7 +103,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
   should be immediately embedded in the app once generated.
 </Message>
 
-### Add the embed URL to an iframe
+### Add the embed URL to an `<iframe>`
 
 Within the HTML of your application, create an `iframe` elements with the `src`
 attribute set to the embed URL generated previously.
@@ -124,9 +141,9 @@ preview.show("FILE_ID", "ACCESS_TOKEN", {
 To set up the Preview Element with a file stored within your App Token
 application, replace the placeholders in the code sample with the following:
 
-* FILE_ID: The ID of the file uploaded to the app token application, which may
+* `FILE_ID`: The ID of the file uploaded to the app token application, which may
 be obtained from the object returned when uploading the file.
-* ACCESS_TOKEN: The primary access token set up when configuring the
+* `ACCESS_TOKEN`: The primary access token set up when configuring the
 application or a downscoped version of the token.
 
 <Message type='warning'>

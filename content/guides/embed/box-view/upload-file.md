@@ -1,5 +1,5 @@
 ---
-rank: 40
+rank: 3
 related_guides:
   - embed/box-view/create-preview
 required_guides:

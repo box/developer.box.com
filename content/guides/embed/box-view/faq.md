@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 5
 related_endpoints:
   - get_files_id
 related_guides:

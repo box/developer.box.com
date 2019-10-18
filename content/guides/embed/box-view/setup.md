@@ -1,5 +1,5 @@
 ---
-rank: 40
+rank: 1
 related_guides:
   - embed/box-view/upload-file
 required_guides: []
@@ -39,15 +39,15 @@ With your application loaded, click on the **Configuration** option in the left
 navigation menu. The configuration page for your application should look like
 the following.
 
-<ImageFrame border center shadow width='200'>
-  ![Image](./app_token_config.png)
+<ImageFrame border>
+  ![Image](./images/app_token_config.png)
 </ImageFrame>
 
 Click on the **Generate Key** button within the **Primary Access Token**
 section.
 
-<ImageFrame border center shadow width='200'>
-  ![Image](./app_token_generate_key.png)
+<ImageFrame border>
+  ![Image](./images/app_token_generate_key.png)
 </ImageFrame>
 
 <Message type='notice'>
@@ -59,8 +59,8 @@ section.
 Choose the expiration period for your token, either 30 days, 60 days, or set the
 token to never expire.
 
-<ImageFrame border center shadow width='200'>
-  ![Image](./app_token_expiry.png)
+<ImageFrame border width='600' shadow center>
+  ![Image](./images/app_token_expiry.png)
 </ImageFrame>
 
 Once the app token is generated, copy and store it securely. It won’t be

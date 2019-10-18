@@ -1,5 +1,5 @@
 ---
-rank: 40
+rank: 2
 related_guides:
   - embed/box-view/setup
   - embed/box-view/faq
@@ -17,7 +17,7 @@ file viewer with web and mobile applications.
 ### View Any File
 
 Embed documents, images, videos, 360-degree videos and images, 3D models, and
-dozens of other files in any web or mobile app using a simple iframe or
+dozens of other files in any web or mobile app using a simple `<iframe>` or
 JavaScript SDK.
 
 ### Optimized Viewing Experience
@@ -45,7 +45,7 @@ encryption.
 2. Files are converted into HTML5 compatible assets upon upload, which are
 designed to render crisply and responsively.
 3. An embeddable URL is requested to access the file rendering. Previews can be
-embedded directly in your application using an iframe URL or with the
+embedded directly in your application using an `<iframe>` URL or with the
 Javascript SDK.
 
 ## Customize Your Experience with Box Content Preview
