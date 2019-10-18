@@ -398,5 +398,5 @@ contentOpenWith.removeAllListeners();
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 [community]: https://community.box.com/t5/Box-for-G-Suite-User-Guide/Introducing-Box-for-G-Suite/ta-p/60494
 [tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
-[custom-domains]: TODO
+[custom-domains]: g://embed/ui-elements/custom-domains
 [safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143

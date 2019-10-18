@@ -5,6 +5,7 @@ related_guides:
   - embed/box-view/faq
 alias_paths:
   - /docs/box-view
+  - /docs/getting-started-box-view
 ---
 
 # Box View
