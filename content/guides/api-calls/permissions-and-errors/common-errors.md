@@ -3,7 +3,7 @@ rank: 1
 related_endpoints: []
 related_guides: []
 required_guides: []
-related_resources: 
+related_resources:
   - client_error
 alias_paths:
   - /docs/error-codes
@@ -63,7 +63,7 @@ for solution to common errors encountered when working with the Box APIs.
 |              |                                                                                                                                                                                                                                                                                                                                                                           |
 | **Error**    | `cyclical_folder_structure`                                                                                                                                                                                                                                                                                                                                               |
 | **Message**  | Folder move creates cyclical folder structure                                                                                                                                                                                                                                                                                                                             |
-| **Solution** | The folder ID specified in the folder move would create a cyclical folder structure (for example moving a folder to a sub-folder within itself). Change the folder ID for the folder move request.                                                                                                                                                                        |
+| **Solution** | The folder ID specified in the folder move would create a cyclical folder structure (for example moving a folder to a subfolder within itself). Change the folder ID for the folder move request.                                                                                                                                                                         |
 |              |                                                                                                                                                                                                                                                                                                                                                                           |
 | **Error**    | `folder_not_empty`                                                                                                                                                                                                                                                                                                                                                        |
 | **Message**  | Cannot delete – folder not empty                                                                                                                                                                                                                                                                                                                                          |
