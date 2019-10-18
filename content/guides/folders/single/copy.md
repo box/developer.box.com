@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 5
 related_endpoints:
   - post_folders_id_copy
 related_guides:

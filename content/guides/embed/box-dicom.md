@@ -275,7 +275,7 @@ You can show / hide the worklist using the visible property.
 
 ## DICOM Import Javascript SDK
 
-The Box DICOM Import tool intelligently crawls through folders and sub-folders to
+The Box DICOM Import tool intelligently crawls through folders and subfolders to
 find your DICOM data. It can recognize non-DICOM to avoid uploading unwanted
 content such as executables. The resulting files are organized by patient and
 study details.
