@@ -6,7 +6,8 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: []
+alias_paths: 
+  - /docs/box-content-picker
 ---
 
 # Content Picker

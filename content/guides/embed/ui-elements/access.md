@@ -6,7 +6,8 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: []
+alias_paths: 
+  - /docs/customizing-access-for-box-ui-elements
 ---
 
 # Customize Access
@@ -87,7 +88,7 @@ the input arguments.
   ![Downscope overview](./images/downscope-2.png)
 </ImageFrame>
 
-### Developer Flow
+## Developer Flow
 
 Now that you understand the different scopes, let's walk through a simple
 scenario for using Token Exchange with a UI Element.
@@ -133,7 +134,7 @@ curl https://api.box.com/2.0/collaborations \
   and `item_preview` scopes enabled for the specific `folder_id` `123456`.  We
   strongly recommend performing this step on the application server.
 
-#### Request
+### Request
 
 ```curl
 curl https://api.box.com/oauth2/token \
@@ -145,7 +146,7 @@ curl https://api.box.com/oauth2/token \
   -X POST
 ```
 
-#### Response
+### Response
 
 ```json
 {
@@ -254,14 +255,12 @@ button as it would have with the parent (user) token.
   child tokens in any way.
 </Message>
 
-## Example Use Cases
+## Example Scenarios
 
-### Scenario #1: Making API calls from the client more secure
+### Scenario #1: More secure client API calls
 
 An equity-investment firm is building out a partner/investor portal to broadcast
 information (view-only access) to investors published by the employees.
-
-#### 1.1 How they use Token Exchange
 
 They create app users for each of their external customers and employees have
 provisioned Box accounts which they used to publish content. All app users are
@@ -277,13 +276,11 @@ is trying to perform. This ensures that if the token is compromised, data
 leakage is minimized thereby improving the overall security posture of the
 application.
 
-### Scenario #2: Establishing a custom permissions model
+### Scenario #2: A custom permissions model
 
 A large fin-tech company is building a secure client vault to manage investments
 for their clients. They are also using Box UI Elements to build out the content
 management front end of their application.
-
-#### 2.1 How they use Token Exchange
 
 They create app users as usual for each one of their clients and app advisors.
 When they wanted to share content across app users, they collaborate the app
@@ -300,7 +297,7 @@ downscoped token that limits:
   share, etc.) and/or
 * the specific files that the user should have access to
 
-### Scenario #3: Establishing a Process Flow using Box Platform
+### Scenario #3: Process Flows
 
 A not-for-profit union bank is developing a loan processing application using
 Box's secure content layer to facilitate the sharing of documents between loan
@@ -314,8 +311,6 @@ process is as follows:
 * Internal employees need to upload files for customers
 * Internal employees can access documents through a custom web portal as well
   as Box Web app
-
-#### 3.1 How they use Token Exchange
 
 The application developers used Token Exchange along with UI Elements to build
 out a loan process management solution, where the application server downscopes
@@ -337,8 +332,6 @@ this case, the application developer is using a sliver of Box's overall
 capabilities (for example Preview) transactionally and none of the other secure
 content sharing and collaboration capabilities. In fact, this is a key use case
 for many customers.
-
-#### 4.1 How they use Token Exchange
 
 Consider a straightforward use case of the application - the end user needs to
 upload a file and then preview it in the application itself. To do this the
@@ -362,13 +355,13 @@ challenging, your application less secure or performing or both. If you find
 yourself implementing any of these patterns on your app, please reach out to us
 via Box support so we can help you out.
 
-### Passing down privileged tokens to the client
+### Passing privileged tokens to client
 
 Please NEVER DO THIS. This can potentially compromise the security of content in
 your Box enterprise. Always use token exchange to provide end users with the
 exact set of permissions.
 
-### Proxying/filtering API responses from Box to the client via the App Server
+### Proxying/filtering API responses
 
 If you are proxying/filtering API responses from Box only to limit data/content
 exposure to the client, you should try to see if using Token Exchange allows you
