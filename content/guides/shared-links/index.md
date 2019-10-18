@@ -1,16 +1,11 @@
 ---
 rank: 110
 related_endpoints: []
-related_guides:
-  - shared-links/create
-  - shared-links/update
-  - shared-links/find-for-item
-  - shared-links/remove
+related_guides: []
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths: 
-  - /docs/box-for-salesforce-developer-toolkit
+alias_paths: []
 ---
 
 # Shared Links
