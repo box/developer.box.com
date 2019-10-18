@@ -14,9 +14,9 @@ id: embed/ui-elements/viewers-and-events
 isIndex: false
 ---
 
-<!-- markdownlint-disable no-duplicate-header -->
+# Preview - Viewers & Events
 
-# Content Preview - Viewers & Events
+<!-- markdownlint-disable no-duplicate-header -->
 
 This page describes the preview experience for each file type. It also lists the
 events you can listen for by viewer type.
