@@ -6,7 +6,7 @@ related_guides:
   - web-links/delete
 required_guides: []
 related_resources:
-  - web-link
+  - web_link
 alias_paths: []
 ---
 

@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 2
 related_endpoints:
   - delete_web_links_id
 related_guides:
@@ -8,7 +8,7 @@ required_guides:
   - web-links/create
 alias_paths: []
 related_resources:
-  - web-link
+  - web_link
 ---
 
 # Delete a web link
