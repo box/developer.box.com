@@ -1,27 +1,25 @@
 ---
-rank: 1
+rank: 3
 related_endpoints:
-  - post_folders
+  - put_folders_id
 related_guides:
   - folders/update
-  - folders/copy
 required_guides: []
 related_resources:
   - folder
 alias_paths: []
 cId: folders
 scId: null
-id: folders/create
+id: folders/rename
 isIndex: false
 ---
 
-# Create a folder
+# Rename a folder
 
-To create a folder in Box you will need to provide our API with a `name` for the
-new folder, as well as the `id` of the `parent` folder that you would like to
-create the new folder within.
+To rename a folder in Box you will need to provide our API with a new `name` for
+the folder.
 
-<Samples id='post_folders' >
+<Samples id='put_folders_id' variant='rename' >
 
 </Samples>
 
