@@ -10,8 +10,8 @@ related_guides:
 required_guides: []
 alias_paths: []
 cId: folders
-scId: null
-id: folders/move
+scId: folders/single
+id: folders/single/move
 isIndex: false
 ---
 

@@ -1,29 +1,33 @@
 ---
-rank: 2
+rank: 1
 related_endpoints:
-  - put_folders_id
+  - post_folders
 related_guides:
   - folders/update
-required_guides:
-  - folders/create
+  - folders/copy
+required_guides: []
 related_resources:
   - folder
 alias_paths: []
 cId: folders
-scId: null
-id: folders/update
+scId: folders/single
+id: folders/single/create
 isIndex: false
 ---
 
-# Update a folder
+# Create a folder
 
-To update a folder in Box you will need to call the following API.
+To create a folder in Box you will need to provide our API with a `name` for the
+new folder, as well as the `id` of the `parent` folder that you would like to
+create the new folder within.
 
-<Samples id='put_folders_id' >
+<Samples id='post_folders' >
 
 </Samples>
 
-## Name restrictions
+<Message type='notice'>
+
+# Name restrictions
 
 There are some restrictions to the file name. Names containing non-printable
 ASCII characters, forward and backward slashes (`/`, `\`), as well as names
@@ -32,7 +36,4 @@ with trailing spaces are prohibited.
 Additionally, the special names `.` and `..` are reserved names and therefore
 also prohibited.
 
-## Timeout
-
-Timeout for this operation is 60 seconds. The operation will complete
-after a `HTTP 503` has been returned.
+</Message>

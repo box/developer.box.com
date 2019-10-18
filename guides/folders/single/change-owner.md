@@ -9,8 +9,8 @@ related_resources:
   - folder
 alias_paths: []
 cId: folders
-scId: null
-id: folders/change-owner
+scId: folders/single
+id: folders/single/change-owner
 isIndex: false
 ---
 

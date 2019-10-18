@@ -11,8 +11,8 @@ related_resources:
   - folder
 alias_paths: []
 cId: folders
-scId: null
-id: folders/copy
+scId: folders/single
+id: folders/single/copy
 isIndex: false
 ---
 

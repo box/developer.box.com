@@ -10,8 +10,8 @@ alias_paths: []
 related_resources:
   - folder
 cId: folders
-scId: null
-id: folders/delete
+scId: folders/single
+id: folders/single/delete
 isIndex: false
 ---
 
