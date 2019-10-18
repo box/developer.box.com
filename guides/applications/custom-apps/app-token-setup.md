@@ -102,8 +102,8 @@ required.
 
 Authentication in this kind of application is done through preconfigured [App
 Tokens][app-token]. To configure an app token, head over to the [developer
-console], select your application, and select the "Configuration" panel from the
-left-hand sidebar.
+console][devconsole], select your application, and select the "Configuration"
+panel from the left-hand sidebar.
 
 Now scroll down to the "Primary Access Token" section and create a first Access
 Token by selecting the "Generate Key" button.
