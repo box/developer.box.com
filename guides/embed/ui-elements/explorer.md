@@ -36,6 +36,20 @@ older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 </Message>
 
+## Authentication
+
+The UI Elements are designed in an authentication agnostic way so whether
+you are using UI Elements for users who have Box accounts (Managed Users) or
+non-Box accounts (App Users), UI Elements should just work out of the box. The
+reason for this is that UI Elements only expect a "token" to be passed in for
+authentication, and Box provides two different ways to generate tokens - OAuth
+and JWT.
+
+<CTA to="g://authentication/select">
+  Learn about selecting an authentication method
+
+</CTA>
+
 ## Sample HTML
 
 <!-- markdownlint-disable line-length -->
