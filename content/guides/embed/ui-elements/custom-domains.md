@@ -144,7 +144,7 @@ To **add** whitelisted domains, execute the following command in a terminal:
 
 To **remove** whitelisted domains, execute the following command in a terminal:
 
-```
+```sh
 ./OpenWith.sh -r domain1 domain2 ...
 ```
 
