@@ -11,11 +11,11 @@ alias_paths:
   - /docs/download-all-files-from-a-folder-1
 cId: downloads
 scId: null
-id: downloads/download-folder
+id: downloads/folder
 isIndex: false
 ---
 
-# Download all files from folder
+# Download a folder's files
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every
