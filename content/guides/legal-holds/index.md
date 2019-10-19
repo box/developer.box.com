@@ -13,6 +13,11 @@ Box.
 Legal Holds can be managed and assigned to folders and files through the Box
 APIs.
 
+<Message>
+  Legal Holds are a feature of the [Box Governance[governance]] package, which
+  can be added on to any Business Plus or Enterprise account.
+</Message>
+
 ## Policies, Assignments, and Holds
 
 Working with Legal Hold Policies requires a developer to work with three
@@ -29,7 +34,7 @@ distinct resources.
   folder.
 * **Holds**: A [File Version Legal Hold][hold] represents all the policies that
   are assigned to a specific file version. Note that every file version can have
-  a maximum of one file version legal hold and this hold contains a list of ever
+  a maximum of one file version legal hold and this hold contains a list of
   every assigned policy.
 
 ## Example Use Case
@@ -50,4 +55,5 @@ support.
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [policy]: r://legal_hold_policy
 [assignment]: r://legal_hold_assignment
-[hold]: r://legal_hold
+[hold]: r://file_version_legal_hold
+[governance]: https://www.box.com/security/governance-and-compliance
