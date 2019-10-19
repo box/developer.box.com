@@ -10,4 +10,4 @@ related_resources: []
 alias_paths: []
 ---
 
-# Transfer Files and Folders
+# Transfer Files & Folders

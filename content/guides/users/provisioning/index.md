@@ -8,7 +8,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# User Provisioning and Deprovisioning
+# (De-)Provisioning Users
 
 Managing the onboarding and offboarding of employees, customers, and users is a
 common requirement in the lifespan of a Box application.
