@@ -26,6 +26,9 @@ looks something like this.
 https://dl.boxcloud.com/d/1/[long-random-string]/download
 ```
 
+By using the `-L` flag in cURL we are able to automatically follow this
+redirect.
+
 <Message>
   In our SDKs this will result in the binary data to be downloaded. In the API
   this will result in a download URL being returned via the `Location` header.
