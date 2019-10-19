@@ -13,7 +13,7 @@ id: applications/web-app-integrations/types
 isIndex: false
 ---
 
-# Integrations types
+# Integrations Types
 
 There are two kinds of integration a Web App Integration can offer.
 

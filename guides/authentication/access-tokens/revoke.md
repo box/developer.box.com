@@ -13,7 +13,7 @@ id: authentication/access-tokens/revoke
 isIndex: false
 ---
 
-# Revoke a token
+# Revoke a Token
 
 An Access Token can be revoked at any time by either sending the Access Token or
 Refresh Token the [`POST

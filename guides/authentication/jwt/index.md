@@ -16,7 +16,7 @@ id: authentication/jwt
 isIndex: true
 ---
 
-# JWT auth
+# JWT Auth
 
 Server-side authentication using JWT one of the most powerful ways to
 authenticate to the Box API. JWT is an [open standard](https://jwt.io/)

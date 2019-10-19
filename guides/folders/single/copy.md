@@ -16,7 +16,7 @@ id: folders/single/copy
 isIndex: false
 ---
 
-# Copy a folder
+# Copy Folder
 
 To copy a folder in Box you will need to provide our API with the `id` of the
 `parent` folder that you would like to copy the folder into.

@@ -14,7 +14,7 @@ id: api-calls/domain-whitelisting
 isIndex: false
 ---
 
-# Domain whitelisting
+# Domain Whitelisting
 
 To use the Box APIs it is important that your application and users have access
 to the following domains, where needed.

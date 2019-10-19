@@ -15,7 +15,7 @@ id: representations/request-a-representation
 isIndex: false
 ---
 
-# Request a desired representation
+# Request Desired Representation
 
 To select a specific representation call the [`GET /files/:id`][get_files_id]
 endpoint with a [`X-Rep-Hints`][x-rep-hints]-header defining the

@@ -14,7 +14,7 @@ id: web-links/create
 isIndex: false
 ---
 
-# Create a web link
+# Create Web Link
 
 To create a web link in Box, you will need to provide our API with a folder
 `id` and the `url` you want the web link to be linked to. The `url` must start

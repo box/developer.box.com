@@ -14,7 +14,7 @@ id: downloads/get-url
 isIndex: false
 ---
 
-# Get download URL
+# Get Download URL
 
 The official Box SDKs return the binary data when downloading a file. To get the
 download URL for the data instead, use the following SDK methods.

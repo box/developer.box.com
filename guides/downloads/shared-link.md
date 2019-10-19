@@ -15,7 +15,7 @@ id: downloads/shared-link
 isIndex: false
 ---
 
-# Download a shared link
+# Download Shared Link
 
 To download the file for a [Shared Link][shared-link], first [determine the
 file][get-file] for the link.

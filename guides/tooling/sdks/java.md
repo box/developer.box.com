@@ -15,7 +15,7 @@ id: tooling/sdks/java
 isIndex: false
 ---
 
-# Install the Java SDK
+# Install Java SDK
 
 The Box Java SDK can be used to make API calls to the Box APIs in a Java
 project.

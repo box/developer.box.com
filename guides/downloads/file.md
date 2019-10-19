@@ -13,7 +13,7 @@ id: downloads/file
 isIndex: false
 ---
 
-# Download a file
+# Download File
 
 To download a file, pass the [`GET /files/:id/content`][api] the ID of the file
 to get the content for.

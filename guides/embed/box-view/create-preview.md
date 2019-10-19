@@ -14,7 +14,7 @@ id: embed/box-view/create-preview
 isIndex: false
 ---
 
-# Creating a File Preview
+# Create File Preview
 
 Once a file has been uploaded to the app token application, it may be previewed
 using two different methods:

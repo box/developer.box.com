@@ -14,7 +14,7 @@ id: downloads/file-version
 isIndex: false
 ---
 
-# Download a file version
+# Download File Version
 
 To download a specific file version, pass the [`GET /files/:id/content`][api]
 the ID of the file to get the content for, as well as its version ID.

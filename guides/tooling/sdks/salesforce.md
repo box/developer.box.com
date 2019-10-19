@@ -16,7 +16,7 @@ id: tooling/sdks/salesforce
 isIndex: false
 ---
 
-# Install the Salesforce SDK
+# Install Salesforce SDK
 
 The Salesforce SDK can be deployed directly to Sandbox or Developer
 Organizations by clicking using the [Deploy to Salesforce][deploy_salesforce]

@@ -16,7 +16,7 @@ id: webhooks/manage/for-folder
 isIndex: false
 ---
 
-# Create a webhook for a folder
+# Create Webhook for Folder
 
 To attach a webhook to an folder, call the [Create webhook][1] endpoint with the
 type of `folder`, the ID of the folder, a URL to send webhook notifications to, and

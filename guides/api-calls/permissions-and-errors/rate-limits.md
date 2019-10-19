@@ -15,7 +15,7 @@ id: api-calls/permissions-and-errors/rate-limits
 isIndex: false
 ---
 
-# Rate limits
+# Rate Limits
 
 Most of the Box APIs have rate limits in place in order to prevent abuse by
 third-party services or users.

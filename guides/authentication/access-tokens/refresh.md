@@ -15,7 +15,7 @@ id: authentication/access-tokens/refresh
 isIndex: false
 ---
 
-# Refresh a token
+# Refresh a Token
 
 An Access Token can be refreshed by using the Refresh Token that came with the
 Access Token. This can be done before or after the Access Token expires.

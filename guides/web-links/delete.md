@@ -15,7 +15,7 @@ id: web-links/delete
 isIndex: false
 ---
 
-# Delete a web link
+# Delete Web Link
 
 To remove a web link in Box you will need to provide our API with the ID of
 the web link.

@@ -11,7 +11,7 @@ id: webhooks/handle/retries
 isIndex: false
 ---
 
-# Webhook retries
+# Webhook Retries
 
 Delivery of a webhook payload has failed when Box does not receive a
 response with a HTTP status code in the `200` to `299` range within 30 seconds

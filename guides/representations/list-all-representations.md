@@ -14,7 +14,7 @@ id: representations/list-all-representations
 isIndex: false
 ---
 
-# List all representations for a file
+# List All Representations for File
 
 To see what representations are available for a file you can call the
 [`GET /files/:id`][get_files_id] endpoint while requesting the

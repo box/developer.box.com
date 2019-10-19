@@ -11,7 +11,7 @@ id: embed/box-view/upload-file
 isIndex: false
 ---
 
-# Uploading Files for Box View
+# Upload Files
 
 To generate a preview embed link for a file, that file needs to be uploaded to
 Box to be converted for us. Conversion is triggered automatically upon upload

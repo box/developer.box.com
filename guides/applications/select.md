@@ -12,7 +12,7 @@ id: applications/select
 isIndex: false
 ---
 
-# Select app type
+# Select App Type
 
 The type of Box Application to select depends on the use case for the project.
 The following is a high level overview of the different types.

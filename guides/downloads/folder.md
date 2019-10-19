@@ -15,7 +15,7 @@ id: downloads/folder
 isIndex: false
 ---
 
-# Download a folder's files
+# Download All Files in Folder
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every

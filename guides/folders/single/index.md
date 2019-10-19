@@ -12,4 +12,4 @@ id: folders/single
 isIndex: true
 ---
 
-# Single folders
+# Single Folders

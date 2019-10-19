@@ -11,7 +11,7 @@ id: embed/box-view/setup
 isIndex: false
 ---
 
-# Box View Setup
+# Setup
 
 Before uploading files to Box and previewing them using Box View, a Box
 application must be created and an access token be generated for that

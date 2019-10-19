@@ -15,7 +15,7 @@ id: folders/single/move
 isIndex: false
 ---
 
-# Move a folder
+# Move Folder
 
 To move a folder, update the ID of its parent folder.
 

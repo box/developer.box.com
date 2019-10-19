@@ -12,7 +12,7 @@ id: embed/box-view/best-practices
 isIndex: false
 ---
 
-# Box View Best Practices
+# Best Practices
 
 ## Regenerate and Rollover App Tokens
 

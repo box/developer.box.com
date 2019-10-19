@@ -16,4 +16,4 @@ id: users/provisioning/provision-user
 isIndex: false
 ---
 
-# Provision a User
+# Provision User

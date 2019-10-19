@@ -16,7 +16,7 @@ id: embed/box-view/faq
 isIndex: false
 ---
 
-# Box View FAQ
+# FAQ
 
 ## General
 

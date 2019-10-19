@@ -14,7 +14,7 @@ id: webhooks/manage/delete
 isIndex: false
 ---
 
-# Delete a webhook
+# Delete Webhook
 
 To remove a webhook from a file or folder in Box you will need to provide our
 API with the ID of the webhook to remove.

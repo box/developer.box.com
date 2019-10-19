@@ -14,7 +14,7 @@ id: applications/web-app-integrations/configure
 isIndex: false
 ---
 
-# Create a Web App Integration
+# Create Web App Integration
 
 The following guide explains how to set up a Web App Integration for a Custom
 App.

@@ -15,7 +15,7 @@ id: users/provisioning/delete-user
 isIndex: false
 ---
 
-# Delete a User
+# Delete User
 
 The process for deleting both app and managed users is the same. To delete a
 user account, supply the user ID for the account that should be

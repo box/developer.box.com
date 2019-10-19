@@ -14,7 +14,7 @@ id: search/full-text-search
 isIndex: false
 ---
 
-# Full-text search
+# Full-Text Search
 
 To find files and folders within a Box account that match a given search query,
 use the query search method within the SDK, passing in keywords and filters as needed.

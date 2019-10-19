@@ -12,4 +12,4 @@ id: folders/bulk
 isIndex: true
 ---
 
-# Bulk manipulation
+# Bulk Manipulation

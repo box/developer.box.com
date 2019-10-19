@@ -11,7 +11,7 @@ id: api-calls/sorting
 isIndex: false
 ---
 
-# Sorting responses
+# Sorting Responses
 
 Where an API returns a collection of items it often supports sorting of API
 responses.

@@ -14,7 +14,7 @@ id: authentication/oauth2
 isIndex: true
 ---
 
-# OAuth 2.0 auth
+# OAuth 2.0 Auth
 
 Client-side OAuth 2.0 is one of the easiest ways to authenticate a user for the
 Box API. It is an [open standard](https://oauth.net/2/) designed to allow users

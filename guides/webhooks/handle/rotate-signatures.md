@@ -15,7 +15,7 @@ id: webhooks/handle/rotate-signatures
 isIndex: false
 ---
 
-# Rotate webhook signatures
+# Rotate Webhook Signatures
 
 By updating one of your application's webhook signatures keys at a time you can
 rotate the keys without running into any conflicts.

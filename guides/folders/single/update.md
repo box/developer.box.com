@@ -15,7 +15,7 @@ id: folders/single/update
 isIndex: false
 ---
 
-# Update a folder
+# Update Folder
 
 To update a folder in Box you will need to call the following API.
 

@@ -21,7 +21,7 @@ id: api-calls/ensure-consistency
 isIndex: false
 ---
 
-# Ensure consistency
+# Ensure Consistency
 
 A few of the Box APIs support special headers to ensure consistency between your
 application and Box.

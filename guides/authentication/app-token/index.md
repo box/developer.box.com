@@ -16,7 +16,7 @@ id: authentication/app-token
 isIndex: true
 ---
 
-# App Token auth
+# App Token Auth
 
 Server-side authentication using App Tokens is an alternative way to
 authenticate to the Box API with fixed, long-lived Access Tokens that are

@@ -19,7 +19,7 @@ id: api-calls/pagination/marker-based
 isIndex: false
 ---
 
-# Marker-based pagination
+# Marker-based Pagination
 
 APIs that use marker-based paging use the `marker` and `limit` query parameters
 to paginate through items in a collection.

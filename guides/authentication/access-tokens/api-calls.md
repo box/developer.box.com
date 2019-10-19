@@ -13,7 +13,7 @@ id: authentication/access-tokens/api-calls
 isIndex: false
 ---
 
-# Using a token
+# Use a Token
 
 Every authenticated API call requires an Access Token to be passed in the
 `Authorization` header as a `Bearer Token` or it will return a `401 Unautorized`

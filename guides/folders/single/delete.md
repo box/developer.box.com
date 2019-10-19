@@ -15,7 +15,7 @@ id: folders/single/delete
 isIndex: false
 ---
 
-# Delete a folder
+# Delete Folder
 
 To remove a folder in Box you will need to provide our API with the ID of the
 folder.

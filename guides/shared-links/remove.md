@@ -16,7 +16,7 @@ id: shared-links/remove
 isIndex: false
 ---
 
-# Remove a Shared Link
+# Remove Shared Link
 
 A shared link may be removed from a resource by calling the
 [update file](endpoint://put_files_id) or
@@ -31,7 +31,7 @@ the resource.
 
 </Message>
 
-## Remove a Shared Link on a File
+## Remove Shared Link on File
 
 To remove a shared link on a file, specify the ID of file to set the
 `shared_link` field to `null`.
@@ -40,7 +40,7 @@ To remove a shared link on a file, specify the ID of file to set the
 
 </Samples>
 
-## Remove a Shared Link on a Folder
+## Remove Shared Link on Folder
 
 To remove a shared link on a folder, specify the ID of folder to set the
 `shared_link` field to `null`.

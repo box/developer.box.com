@@ -16,7 +16,7 @@ id: authentication/access-tokens/downscope
 isIndex: false
 ---
 
-# Downscope a token
+# Downscope a Token
 
 Downscoping is a way to exchange an existing Access Token for a new one that is
 more restricted.

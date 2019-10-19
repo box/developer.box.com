@@ -15,7 +15,7 @@ id: webhooks/handle/verify-signatures
 isIndex: false
 ---
 
-# Verify webhook signatures
+# Verify Webhook Signatures
 
 To protect your application against man-in-the-middle and replay attacks it is
 essential to verify webhook signatures. Verification ensures that the webhook

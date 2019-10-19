@@ -15,4 +15,4 @@ id: users/provisioning/deprovision-user
 isIndex: false
 ---
 
-# Deprovision a User
+# Deprovision User

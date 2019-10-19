@@ -15,7 +15,7 @@ id: representations/text
 isIndex: false
 ---
 
-# Get a text representation
+# Get Text Representation
 
 A text representation provides an easy and way to extract plain text
 from a document.
