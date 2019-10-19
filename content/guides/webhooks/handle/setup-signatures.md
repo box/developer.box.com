@@ -9,7 +9,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Set up webhook signatures
+# Setup Webhook Signatures
 
 You can configure webhooks to use signatures to protect your application from
 malicious attacks where you might receive data that did not originate at Box.

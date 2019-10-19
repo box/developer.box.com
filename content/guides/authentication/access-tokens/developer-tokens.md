@@ -16,7 +16,7 @@ A Developer Token is an Access Token available to developers during development
 and testing. These tokens are short lived as they expire after 60 minutes and
 can not be refreshed automatically.
 
-## Create a Developer Token
+## Create Developer Token
 
 To create a Developer Token for an application:
 
@@ -25,7 +25,7 @@ To create a Developer Token for an application:
 - From the sidebar select "Configuration".
 - In the "Developer Token" section select "Generate Developer Token".
 
-## Using a Developer Token
+## Using Developer Token
 
 A Developer Token can be used like any Access Token in the `Authorization`
 header of an API call.

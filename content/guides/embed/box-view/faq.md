@@ -12,7 +12,7 @@ alias_paths:
   - /docs/box-view-faqs
 ---
 
-# Box View FAQ
+# FAQ
 
 ## General
 

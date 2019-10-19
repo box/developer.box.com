@@ -8,7 +8,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Manually create webhook
+# Manually Create Webhook
 
 Additionally to creating webhooks via the Box APIs it is possible to
 create  webhooks via the developer console manually. This process is

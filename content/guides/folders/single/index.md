@@ -8,4 +8,4 @@ related_resources:
 alias_paths: []
 ---
 
-# Single folders
+# Single Folders

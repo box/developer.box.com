@@ -6,7 +6,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Suppress notifications
+# Suppress Notifications
 
 For some API calls, email and webhook notifications can be prevented by
 including a `Box-Notifications: off` header with the API call.

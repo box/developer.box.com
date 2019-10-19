@@ -11,7 +11,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Get a text representation
+# Get Text Representation
 
 A text representation provides an easy and way to extract plain text
 from a document.

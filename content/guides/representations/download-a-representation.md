@@ -11,7 +11,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Download a file representation
+# Download File Representation
 
 Use the`url_template` that was received when
 [selecting the representation][select_representation] to download

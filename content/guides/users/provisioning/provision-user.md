@@ -12,4 +12,4 @@ alias_paths:
   - /docs/provision-user-accounts
 ---
 
-# Provision a User
+# Provision User

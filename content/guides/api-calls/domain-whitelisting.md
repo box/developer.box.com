@@ -10,7 +10,7 @@ alias_paths:
   - /docs/domain-whitelisting
 ---
 
-# Domain whitelisting
+# Domain Whitelisting
 
 To use the Box APIs it is important that your application and users have access
 to the following domains, where needed.

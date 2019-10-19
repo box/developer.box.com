@@ -6,7 +6,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Handle webhooks
+# Handle Webhooks
 
 Once a webhook has been set up it will call your application at the webhook's
 configured `address` every time an event is triggered. It's up to your

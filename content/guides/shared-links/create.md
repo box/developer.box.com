@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Create a Shared Link
+# Create Shared Link
 
 Shared links may be created directly for file or folder resources to generate a
 read-only URL to permit users with the appropriate access level to view the
@@ -41,14 +41,14 @@ Optionally when creating a shared link the following may be specified:
   the default access level specified by the enterprise admin.
 </Message>
 
-## Create a Shared Link for a File
+## Create Shared Link for File
 
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
 <Samples id='put_files_id_shared_link_create' />
 
-## Create a Shared Link for a Folder
+## Create Shared Link for Folder
 
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.

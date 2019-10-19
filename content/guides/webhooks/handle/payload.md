@@ -11,7 +11,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Webhook payload
+# Webhook Payload
 
 When an event triggers a webhook for a file or a folder, it make a HTTP call to the
 `address` specified when the webhook was created. The payload of this call

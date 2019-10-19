@@ -12,7 +12,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Get a basic thumbnail
+# Get Basic Thumbnail
 
 A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
 an application as a representation of the file, for example as a placeholder for

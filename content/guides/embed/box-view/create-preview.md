@@ -10,7 +10,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Creating a File Preview
+# Create File Preview
 
 Once a file has been uploaded to the app token application, it may be previewed
 using two different methods:

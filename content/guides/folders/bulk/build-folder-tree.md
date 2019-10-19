@@ -12,7 +12,7 @@ alias_paths:
   - /docs/build-a-folder-tree
 ---
 
-# Build a folder tree
+# Build Folder Tree
 
 The following examples provide an example on how to create a JSON representation
 of a folder tree. A folder tree is the name of a folder, and every subfolder

@@ -8,7 +8,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Box View Best Practices
+# Best Practices
 
 ## Regenerate and Rollover App Tokens
 

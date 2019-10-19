@@ -11,7 +11,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Update a folder
+# Update Folder
 
 To update a folder in Box you will need to call the following API.
 

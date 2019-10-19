@@ -13,7 +13,7 @@ alias_paths:
  - /docs/box-cli
 ---
 
-# Install the Box CLI
+# Install Box CLI
 
 The Box Command Line Interface (CLI) is a tool for making requests to
 Box APIs from your terminal window or command prompt.

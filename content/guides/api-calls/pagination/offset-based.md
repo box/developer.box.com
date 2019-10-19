@@ -20,7 +20,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Offset-based pagination
+# Offset-based Pagination
 
 APIs that use offset-based paging use the `offset` and `limit` query parameters
 to paginate through items in a collection.

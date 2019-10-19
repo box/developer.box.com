@@ -11,4 +11,4 @@ alias_paths:
   - /docs/deprovision-user-accounts
 ---
 
-# Deprovision a User
+# Deprovision User

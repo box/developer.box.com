@@ -11,7 +11,7 @@ related_resources:
   - web_link
 ---
 
-# Delete a web link
+# Delete Web Link
 
 To remove a web link in Box you will need to provide our API with the ID of
 the web link.

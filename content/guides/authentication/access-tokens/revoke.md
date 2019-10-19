@@ -9,7 +9,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Revoke a token
+# Revoke a Token
 
 An Access Token can be revoked at any time by either sending the Access Token or
 Refresh Token the [`POST

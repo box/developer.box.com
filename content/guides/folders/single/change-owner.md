@@ -10,7 +10,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Change a folder's owner
+# Change Folder Owner
 
 To change the owner of a folder, update the ID of its owner user.
 

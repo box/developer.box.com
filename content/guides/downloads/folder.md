@@ -11,7 +11,7 @@ alias_paths:
   - /docs/download-all-files-from-a-folder-1
 ---
 
-# Download a folder's files
+# Download All Files in Folder
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every

@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Remove a Shared Link
+# Remove Shared Link
 
 A shared link may be removed from a resource by calling the
 [update file](endpoint://put_files_id) or
@@ -25,14 +25,14 @@ A shared link may be removed from a resource by calling the
   the resource.
 </Message>
 
-## Remove a Shared Link on a File
+## Remove Shared Link on File
 
 To remove a shared link on a file, specify the ID of file to set the
 `shared_link` field to `null`.
 
 <Samples id='put_files_id_shared_link_remove' />
 
-## Remove a Shared Link on a Folder
+## Remove Shared Link on Folder
 
 To remove a shared link on a folder, specify the ID of folder to set the
 `shared_link` field to `null`.

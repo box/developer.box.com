@@ -9,7 +9,7 @@ required_guides:
 alias_paths: []
 ---
 
-# List of event triggers
+# Webhook Event Triggers
 
 The following is a list of events that can trigger webhooks. Some
 events are only available for files, while others are only available for folders.

@@ -11,7 +11,7 @@ required_guides:
 alias_paths: []
 ---
 
-# Refresh a token
+# Refresh a Token
 
 An Access Token can be refreshed by using the Refresh Token that came with the
 Access Token. This can be done before or after the Access Token expires.

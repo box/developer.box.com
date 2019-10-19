@@ -12,7 +12,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Update a webhook
+# Update Webhook
 
 To update a webhook you will need to provide the
 API with the ID of the webhook to change, and the new `target` file or folder,

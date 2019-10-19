@@ -12,7 +12,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Create a webhook for a file
+# Create Webhook for File
 
 To attach a webhook to an file, call the [Create webhook][1] endpoint with the
 type of `file`, the ID of the file, a URL to send webhook notifications to, and

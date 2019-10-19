@@ -12,7 +12,7 @@ alias_paths:
   - /docs/user-types
 ---
 
-# User types
+# User Types
 
 There are a few types of users that an application might encounter. The key
 differences the admin-level permissions of a user, and whether a user represents

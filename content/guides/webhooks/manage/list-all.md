@@ -10,7 +10,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# List all webhooks
+# List All Webhooks
 
 To fetch all for the authenticated user, use the [List Webhooks][1] API.
 

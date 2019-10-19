@@ -11,7 +11,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Move a folder
+# Move Folder
 
 To move a folder, update the ID of its parent folder.
 

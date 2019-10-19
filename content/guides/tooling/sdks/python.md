@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install the Python SDK
+# Install Python SDK
 
 The Box Python SDK can be used to make API calls to the Box APIs in a Python
 project.

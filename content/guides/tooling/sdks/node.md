@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install the Node SDK
+# Install Node SDK
 
 The Box Node SDK can be used to make API calls to the Box APIs in a Node
 project.

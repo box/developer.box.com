@@ -10,7 +10,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Rename a folder
+# Rename Folder
 
 To rename a folder in Box you will need to provide our API with a new `name` for
 the folder.

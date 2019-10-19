@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install the .NET SDK
+# Install .NET SDK
 
 The Box .NET SDK can be used to make API calls to the Box APIs in a .NET
 project.

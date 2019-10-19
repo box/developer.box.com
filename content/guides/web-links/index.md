@@ -8,7 +8,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Web links
+# Web Links
 
 Web links are objects that point to URLs. These objects are also known as
 bookmarks within the Box web application.

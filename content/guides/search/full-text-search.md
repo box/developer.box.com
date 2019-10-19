@@ -10,7 +10,7 @@ alias_paths:
   - /docs/search-for-content
 ---
 
-# Full-text search
+# Full-Text Search
 
 To find files and folders within a Box account that match a given search query,
 use the query search method within the SDK, passing in keywords and filters as needed.

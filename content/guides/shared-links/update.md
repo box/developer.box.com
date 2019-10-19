@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Update a Shared Link
+# Update Shared Link
 
 A shared link may be updated from a resource by calling the
 [update file](endpoint://put_files_id) or
@@ -26,14 +26,14 @@ parameters.
   users who already have the URL.
 </Message>
 
-## Update a Shared Link on a File
+## Update Shared Link on File
 
 To update a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
 <Samples id='put_files_id_shared_link_create' />
 
-## Update a Shared Link on a Folder
+## Update Shared Link on Folder
 
 To update a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.

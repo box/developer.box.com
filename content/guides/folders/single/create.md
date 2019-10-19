@@ -11,7 +11,7 @@ related_resources:
 alias_paths: []
 ---
 
-# Create a folder
+# Create Folder
 
 To create a folder in Box you will need to provide our API with a `name` for the
 new folder, as well as the `id` of the `parent` folder that you would like to

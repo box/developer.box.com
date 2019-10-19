@@ -10,7 +10,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Request extra fields
+# Request Extra Fields
 
 The number of fields returned for a resource can depend on the API endpoint used
 to request the resource.

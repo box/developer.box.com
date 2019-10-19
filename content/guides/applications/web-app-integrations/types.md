@@ -9,7 +9,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Integrations types
+# Integrations Types
 
 There are two kinds of integration a Web App Integration can offer.
 
