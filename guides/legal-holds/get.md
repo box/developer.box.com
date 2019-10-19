@@ -14,13 +14,13 @@ id: legal-holds/get
 isIndex: false
 ---
 
-# Get a Legal Hold Policy
+# Get Legal Hold Policy
 
 To get the information for a specific Legal Hold policy that has been created in
-an enterprise, call the [`GET /legal_hold_policies/id`][legal_hold] API endpoint
-with the `id` of the policy.
+an enterprise, call the [`GET /legal_hold_policies/:id`][legal_hold] API
+endpoint with the `id` of the policy.
 
-<Samples id='get_legal_hold_policies' >
+<Samples id='get_legal_hold_policies_i' >
 
 </Samples>
 
