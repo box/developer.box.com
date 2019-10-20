@@ -19,7 +19,7 @@ APIs.
 
 <Message>
 
-Legal Holds are a feature of the [Box Governance[governance]] package, which
+Legal Holds are a feature of the [Box Governance][governance] package, which
 can be added on to any Business Plus or Enterprise account.
 
 </Message>
