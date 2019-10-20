@@ -44,5 +44,16 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
 </Message>
 
+<Message warning>
+
+  # Downscope Token
+
+  Using this method would expose the Access Token to the end user, allowing them
+  to potentially use this token to do more than intended. For this reason we
+  recommend [downscoping][downscoping] this token accordingly.
+
+</Message>
+
 [durl]: g://downloads/get-url
 [cors]: g://best-practices/cors
+[downscoping]: g://authentication/access-tokens/downscope
