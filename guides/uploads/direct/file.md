@@ -68,6 +68,14 @@ Test file text.
 --------------------------9fd09388d840fef1--
 ```
 
+<Message warning>
+
+  The `attributes` JSON part of the multi-part body must come before the `file`
+  part of the multipart form data. When out of order, the API will return a HTTP
+  `400` status code with an error code of `metadata_after_file_contents`.
+
+</Message>
+
 ## Options
 
 To learn more about all the parameters available when uploading files, head over
