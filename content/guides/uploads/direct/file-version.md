@@ -60,6 +60,12 @@ Test file text.
 --------------------------9fd09388d840fef1--
 ```
 
+<Message warning>
+  The `attributes` JSON part of the multi-part body must come before the `file`
+  part of the multipart form data. When out of order, the API will return a HTTP
+  `400` status code with an error code of `metadata_after_file_contents`.
+</Message>
+
 ## Options
 
 To learn more about all the parameters available when uploading files, head over
@@ -67,6 +73,10 @@ to the [reference documentation for this API call][upload]. These parameters
 include a `Content-MD5` that can be set to ensure a file is not corrupted in
 transit, and the ability to explicitly specify the file creation time at a
 different time than the upload time.
+
+For file versions an additional [`If-Match` header][consistency] can be passed
+along to prevent overwriting a file that has already been updated since the
+application last inspected the content.
 
 ## Restrictions
 
@@ -79,4 +89,5 @@ More information can be found [in our community article on this topic][fsizes].
 [preflight]: g://uploads/check
 [chunked]: g://uploads/chunked
 [upload]: e://post_files_id_content
+[consistency]: g://api-calls/ensure-consistency
 [fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590
