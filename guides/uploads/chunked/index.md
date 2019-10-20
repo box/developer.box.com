@@ -23,14 +23,21 @@ in parallel, allowing for a potential performance improvement.
 
 Chunked uploads require a sequence of API calls to be made.
 
-1. **Create an upload session**: The application creates an upload session
-   for a [new file][newsession] or [new version of a file][newversion]. The
-   session defines the (new) name  of the file, its size, and the parent folder.
-2. **Upload parts**: The application [uploads the separate pars][uploadparts] of
-   the file as chunks.
-3. **Commit session:** The application [commits the session][commit], at which
+1. **[Create an upload session][newsession]**: The application creates an upload
+   session for a new file or new version of a file. The session defines the
+   (new) name  of the file, its size, and the parent folder.
+2. **[Upload parts][uploadparts]**: The application uploads the separate parts
+   of the file as chunks.
+3. **[Commit session][commit]**: The application commits the session, at which
    moment the integrity of the file is checked before it is placed in the
    location specified when the session was created.
+
+<Message>
+
+Most of [the Box SDKs support chunked uploads][sdks] out of the Box, removing
+the complexity from the application code.
+
+</Message>
 
 ## Restrictions
 
@@ -48,6 +55,6 @@ make sure that the underlying file has not been changed on disk since beginning
 the upload.
 
 [newsession]: g://uploads/chunked/create-session
-[newversion]: g://uploads/chunked/create-session-for-existing-file
 [uploadparts]: g://uploads/chunked/upload-part
-[commit: g://uploads/chunked/commit-session
+[commit]: g://uploads/chunked/commit-session
+[sdks]: g://uploads/chunked/with-sdks

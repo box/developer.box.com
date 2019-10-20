@@ -55,6 +55,12 @@ parameters (except for the binary content) as if uploading an actual file.
 
 </Samples>
 
+## Checks & Chunk Uploads
+
+When performing a [chunked upload][chunked], performing a preflight check is not
+required as [creating an Upload Session][chunkedsession] also performs a
+preflight check.
+
 ## Response codes
 
 When the API call detects any problems, a HTTP `409 Conflict` status code is
@@ -76,3 +82,6 @@ when a conflict has been detected. For example, when a name collision has been
 detected, the application can use the `SHA-1` that is returned in the error
 response to check if the existing file is identical to the one it is trying to
 upload.
+
+[chunked]: g://uploads/chunked
+[chunkedsession]: g://uploads/chunked/create-session

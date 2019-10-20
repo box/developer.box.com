@@ -8,7 +8,8 @@ related_guides:
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /docs/upload-all-files-from-a-folder
 cId: uploads
 scId: uploads/chunked
 id: uploads/chunked/folder
