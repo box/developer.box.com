@@ -25,3 +25,6 @@ Once the file ID has been determined, the file can be downloaded by passing the
   To get the Shared Link for an item the user must have at least viewer-level
   access to the item.
 </Message>
+
+[shared-link]: g://shared-links
+[get-file]: g://shared-links/find-for-item
