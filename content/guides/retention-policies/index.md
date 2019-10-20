@@ -12,7 +12,7 @@ keep data for as long as is needed, and then automatically delete the content
 permanently when the data can no longer be legally held.
 
 <Message>
-  Retention Policies are a feature of the [Box Governance[governance]] package,
+  Retention Policies are a feature of the [Box Governance][governance] package,
   which   can be added on to any Business Plus or Enterprise account.
 </Message>
 
