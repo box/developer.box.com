@@ -34,6 +34,9 @@ header or an actual access token for that user.
 
 ## Long Polling
 
+The user event stream supports long-polling
+[through the `OPTIONS /events` API][longpoll].
+
 ## Stream Types
 
 The user event stream support 3 types of stream.
@@ -103,3 +106,5 @@ The following events can be triggered for a user.
 | `GROUP_REMOVE_USER`          | Removed user from group                                                         | Available in `sync` and `changes` feeds |
 
 <!-- markdownlint-enable line-length -->
+
+[longpoll]: g://events/polling
