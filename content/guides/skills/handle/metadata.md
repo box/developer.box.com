@@ -9,4 +9,4 @@ related_resources: []
 alias_paths: []
 ---
 
-# Writing Skills Metadata Back to Files
+# Write Skills Metadata

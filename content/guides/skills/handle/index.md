@@ -1,12 +1,11 @@
 ---
 rank: 1
-related_endpoints: []
-related_guides: []
-related_pages: []
-required_guides:
-  - applications/custom-skills
-related_resources: []
 alias_paths: []
 ---
 
-# Handling Skills Events
+# Handle Skills Events
+
+Once a Box Skill has been set up it will call your application at the application's
+configured `invocation_url` every time a file is uploaded. It's up to your
+application to parse the payload, pass the file to any other service, and write
+back any metadata.
