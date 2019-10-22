@@ -2,14 +2,14 @@
 rank: 2
 related_endpoints: []
 related_guides:
-  - users/provisioning/provision-user/populate-content
+  - users/provision/populate-content
 related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
 ---
 
-# Creating an Architecture Skeleton
+# Create Architecture Skeleton
 
 Our first requirement is to copy general files and folders into each individual
 user's root folder on account creation. This problem has been solved within
@@ -28,20 +28,22 @@ don't have to use a Service Account strictly for developing custom applications
 for users, and instead, can use a Service Account in more of an automation
 capacity.
 
-<Message type="notice">
-  # Box Custom Application Requirements
+<Message>
 
-  When creating your JWT-based custom Box application for this recipe, you'll
-  need to enable the following scopes:
+    # Box Custom Application Requirements
 
-* Manage users
-* Manage groups
-* Perform Actions as Users
-* Generate User Access Tokens
+    When creating your JWT-based custom Box application for this recipe, you'll
+    need to enable the following scopes:
 
-  See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
-  more information on creating a JWT-based Box application and the scopes in a
-  Box application.
+    * Manage users
+    * Manage groups
+    * Perform Actions as Users
+    * Generate User Access Tokens
+
+    See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
+    more information on creating a JWT-based Box application and the scopes in a
+    Box application.
+
 </Message>
 
 We'll start by creating the `etc` and `skel` folders and granting ownership of

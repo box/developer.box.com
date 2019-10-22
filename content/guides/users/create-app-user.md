@@ -3,14 +3,13 @@ rank: 2
 related_endpoints:
   - post_users
 related_guides:
-  - users/provisioning/create-managed-user
-  - users/provisioning/deprovision-user
-  - users/provisioning/transfer-folders
+  - users/create-managed-user
+  - users/deprovision/user
+  - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []
 related_resources:
-  - post-users
-  - get-users-id
+  - user
 alias_paths: []
 ---
 

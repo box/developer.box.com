@@ -1,10 +1,10 @@
 ---
-rank: 4
+rank: 3
 related_endpoints:
-  - delete-users-id
+  - delete_users_id
 related_guides:
-  - users/provisioning/deprovision-user
-  - users/provisioning/transfer-folders
+  - users/deprovision/user
+  - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []
 related_resources: []
@@ -30,6 +30,6 @@ deleted.
 <Message type='notice'>
   The delete user request will fail if the user account still has content in
   it. To resolve this, either
-  [transfer all files or folders](guides://users/provisioning/transfer-folders)
+  [transfer all files or folders](g://users/deprovision/transfer-folders)
   to another account or use the optional `force` parameter.
 </Message>

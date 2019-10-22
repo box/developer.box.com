@@ -1,17 +1,10 @@
 ---
-rank: 1
-related_endpoints:
-  - post_users
-related_guides:
-  - users/provisioning/provision-user/architecture
-related_pages: []
-required_guides: []
-related_resources: []
+rank: 2
 alias_paths:
-  - /docs/provision-user-accounts
+  - /docs/deprovision-user-accounts
 ---
 
-# Provision User Accounts
+# Deprovision Users
 
 When setting up a brand new Box user account, a common need is to have that new
 account be populated with standard folders, collaborations, and group

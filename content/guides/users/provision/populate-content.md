@@ -2,14 +2,14 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - users/provisioning/provision-user/shared-folders
+  - users/provision/shared-folders
 related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
 ---
 
-# Populate Content into New User Account
+# Populate Content
 
 Once the architecture files have been defined through the `etc/skel`
 structure in your service account, you can now use the following script to copy
