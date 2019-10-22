@@ -46,12 +46,12 @@
     "new:guide:empty": "node -e 'require(\"./src/scripts/new-guide\").run(\"guide-empty.md\")'"
   },
   "dependencies": {
-    "@stoplight/json-ref-resolver": "^3.0.0",
+    "@stoplight/json-ref-resolver": "^3.0.1",
     "box-node-sdk": "^1.29.1",
     "comment-json": "^2.2.0",
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",
-    "glob": "^7.1.4",
+    "glob": "^7.1.5",
     "http-server": "^0.11.1",
     "ilib-loctool-ghfm": "^1.2.0",
     "jest": "^24.8.0",
@@ -59,7 +59,7 @@
     "jsonpath": "^1.0.2",
     "loctool": "^2.2.0",
     "markdown-spellcheck": "^1.3.1",
-    "markdownlint-cli": "^0.18.0",
+    "markdownlint-cli": "^0.19.0",
     "strip-indent": "^3.0.0",
     "watch": "^1.0.2"
   }
