@@ -1,4 +1,5 @@
 {
   "no-inline-html": false,
-  "heading-start-left": false
+  "heading-start-left": false,
+  "code-block-style": "fenced"
 }

@@ -29,21 +29,15 @@ for users, and instead, can use a Service Account in more of an automation
 capacity.
 
 <Message>
+  # Box Custom Application Requirements
 
-    # Box Custom Application Requirements
+  When creating your JWT-based custom Box application for this recipe, you'll
+  need to enable the following scopes: **Manage users**, **Manage groups**,
+  **Perform Actions as Users**, and **Generate User Access Tokens**.
 
-    When creating your JWT-based custom Box application for this recipe, you'll
-    need to enable the following scopes:
-
-    * Manage users
-    * Manage groups
-    * Perform Actions as Users
-    * Generate User Access Tokens
-
-    See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
-    more information on creating a JWT-based Box application and the scopes in a
-    Box application.
-
+  See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
+  more information on creating a JWT-based Box application and the scopes in a
+  Box application.
 </Message>
 
 We'll start by creating the `etc` and `skel` folders and granting ownership of
