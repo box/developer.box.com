@@ -26,6 +26,9 @@ To get a user's events, authenticate as any user and make a call to the
 
 ## Long Polling
 
+The user event stream supports long-polling
+[through the `OPTIONS /events` API][longpoll].
+
 ## Stream Types
 
 The user event stream support 3 types of stream.
@@ -95,3 +98,5 @@ The following events can be triggered for a user.
 | `GROUP_REMOVE_USER`          | Removed user from group                                                         | Available in `sync` and `changes` feeds |
 
 <!-- markdownlint-enable line-length -->
+
+[longpoll]: g://events/polling
