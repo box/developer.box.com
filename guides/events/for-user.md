@@ -69,41 +69,48 @@ The following events can be triggered for a user.
 
 <!-- markdownlint-disable line-length -->
 
-| Event name                   | Description                                                                     |                                         |
-| ---------------------------- | ------------------------------------------------------------------------------- | --------------------------------------- |
-| `ITEM_CREATE`                | A folder or File was created                                                    | Available in `sync` and `changes` feeds |
-| `ITEM_UPLOAD`                | A folder or File was uploaded                                                   | Available in `sync` and `changes` feeds |
-| `COMMENT_CREATE`             | A comment was created on a folder, file, or other comment                       |                                         |
-| `COMMENT_DELETE`             | A comment was deleted on folder, file, or other comment                         |                                         |
-| `ITEM_DOWNLOAD`              | A file or folder was downloaded                                                 |                                         |
-| `ITEM_PREVIEW`               | A file was previewed                                                            |                                         |
-| `ITEM_MOVE`                  | A file or folder was moved                                                      | Available in `sync` and `changes` feeds |
-| `ITEM_COPY`                  | A file or folder was copied                                                     | Available in `sync` and `changes` feeds |
-| `TASK_ASSIGNMENT_CREATE`     | A task was assigned                                                             |                                         |
-| `TASK_CREATE`                | A task was created                                                              |                                         |
-| `LOCK_CREATE`                | A file was locked                                                               | Available in `sync` and `changes` feeds |
-| `LOCK_DESTROY`               | A file was unlocked. If a locked file is deleted, the source file will be null. | Available in `sync` and `changes` feeds |
-| `ITEM_TRASH`                 | A file or folder was marked as deleted                                          | Available in `sync` and `changes` feeds |
-| `ITEM_UNDELETE_VIA_TRASH`    | A file or folder was recovered out of the trash                                 | Available in `sync` and `changes` feeds |
-| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder                                            | Available in `sync` and `changes` feeds |
-| `COLLAB_ROLE_CHANGE`         | A collaborator had their role changed                                           | Available in `sync` and `changes` feeds |
-| `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          | Available in `sync` and `changes` feeds |
-| `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                        | Available in `sync` and `changes` feeds |
-| `ITEM_SYNC`                  | A folder was marked for sync                                                    | Available in `sync` and `changes` feeds |
-| `ITEM_UNSYNC`                | A folder was unmarked for sync                                                  | Available in `sync` and `changes` feeds |
-| `ITEM_RENAME`                | A file or folder was renamed                                                    | Available in `sync` and `changes` feeds |
-| `ITEM_SHARED_CREATE`         | A file or folder was enabled for sharing                                        |                                         |
-| `ITEM_SHARED_UNSHARE`        | A file or folder was disabled for sharing                                       |                                         |
-| `ITEM_SHARED`                | A folder was shared                                                             |                                         |
-| `ITEM_MAKE_CURRENT_VERSION`  | A previous version of a file was promoted to the current version                | Available in `sync` and `changes` feeds |
-| `TAG_ITEM_CREATE`            | A Tag was added to a file or folder                                             |                                         |
-| `ENABLE_TWO_FACTOR_AUTH`     | 2 factor authentication enabled by user.                                        |                                         |
-| `MASTER_INVITE_ACCEPT`       | Free user accepts invitation to become a managed user.                          |                                         |
-| `MASTER_INVITE_REJECT`       | Free user rejects invitation to become a managed user.                          |                                         |
-| `ACCESS_GRANTED`             | Granted Box access to account.                                                  |                                         |
-| `ACCESS_REVOKED`             | Revoke Box access to account.                                                   |                                         |
-| `GROUP_ADD_USER`             | Added user to group                                                             | Available in `sync` and `changes` feeds |
-| `GROUP_REMOVE_USER`          | Removed user from group                                                         | Available in `sync` and `changes` feeds |
+The following events are available in all feeds.
+
+| Event name                   | Description                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| `ITEM_UPLOAD`                | A folder or File was uploaded                                                   |
+| `ITEM_MOVE`                  | A file or folder was moved                                                      |
+| `ITEM_COPY`                  | A file or folder was copied                                                     |
+| `LOCK_CREATE`                | A file was locked                                                               |
+| `LOCK_DESTROY`               | A file was unlocked. If a locked file is deleted, the source file will be null. |
+| `ITEM_TRASH`                 | A file or folder was marked as deleted                                          |
+| `ITEM_UNDELETE_VIA_TRASH`    | A file or folder was recovered out of the trash                                 |
+| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder                                            |
+| `COLLAB_ROLE_CHANGE`         | A collaborator had their role changed                                           |
+| `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          |
+| `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                        |
+| `ITEM_SYNC`                  | A folder was marked for sync                                                    |
+| `ITEM_UNSYNC`                | A folder was unmarked for sync                                                  |
+| `ITEM_RENAME`                | A file or folder was renamed                                                    |
+| `ITEM_MAKE_CURRENT_VERSION`  | A previous version of a file was promoted to the current version                |
+| `GROUP_ADD_USER`             | Added user to group                                                             |
+| `GROUP_REMOVE_USER`          | Removed user from group                                                         |
+
+The following events are only available in the `all` feed.
+
+| Event name               | Description                                               |
+| ------------------------ | --------------------------------------------------------- |
+| `ITEM_CREATE`            | A folder or File was created                              |
+| `COMMENT_CREATE`         | A comment was created on a folder, file, or other comment |
+| `COMMENT_DELETE`         | A comment was deleted on folder, file, or other comment   |
+| `ITEM_DOWNLOAD`          | A file or folder was downloaded                           |
+| `ITEM_PREVIEW`           | A file was previewed                                      |
+| `TASK_ASSIGNMENT_CREATE` | A task was assigned                                       |
+| `TASK_CREATE`            | A task was created                                        |
+| `ITEM_SHARED_CREATE`     | A file or folder was enabled for sharing                  |
+| `ITEM_SHARED_UNSHARE`    | A file or folder was disabled for sharing                 |
+| `ITEM_SHARED`            | A folder was shared                                       |
+| `TAG_ITEM_CREATE`        | A Tag was added to a file or folder                       |
+| `ENABLE_TWO_FACTOR_AUTH` | 2 factor authentication enabled by user.                  |
+| `MASTER_INVITE_ACCEPT`   | Free user accepts invitation to become a managed user.    |
+| `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user.    |
+| `ACCESS_GRANTED`         | Granted Box access to account.                            |
+| `ACCESS_REVOKED`         | Revoke Box access to account.                             |
 
 <!-- markdownlint-enable line-length -->
 
