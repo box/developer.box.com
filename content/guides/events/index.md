@@ -29,11 +29,11 @@ streams for different purposes.
 
 <!-- markdownlint-disable line-length -->
 
-| `stream_type` |                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------- |
-| `all`         | Returns everything for a user (default)                                                 |
-| `changes`     | Returns events that may cause file tree changes such as file updates or collaborations. |
-| `sync`        | Is similar to changes but only applies to synced folders                                |
+| Stream Type |                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------- |
+| `all`       | Returns everything for a user (default)                                                 |
+| `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
+| `sync`      | Is similar to changes but only applies to synced folders                                |
 
 <!-- markdownlint-enable line-length -->
 
