@@ -23,32 +23,33 @@ folders. We'll use a Market Department as an example.
 
 <Tabs>
 
-<Tab title='marketing_folders.json'>
-  ```json
-    {
-        "name": "Marketing Department",
-        "parent": {
-            "id": "0"
-        },
-        "children": [
-            {
-                "name": "Projects",
-                "children": []
-            },
-            {
-                "name": "Newsletter",
-                "children": [
-                    {
-                        "name": "Drafts",
-                        "children": []
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+  <Tab title='marketing_folders.json'>
 
-</Tab>
+```json
+{
+  "name": "Marketing Department",
+  "parent": {
+    "id": "0"
+  },
+  "children": [
+    {
+      "name": "Projects",
+      "children": []
+    },
+    {
+      "name": "Newsletter",
+      "children": [
+        {
+          "name": "Drafts",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
+```
+
+  </Tab>
 
 </Tabs>
 
@@ -66,486 +67,506 @@ create two groups and give them these permissions.
 
   <Tab title='Node'>
 
-    ```js
-    'use strict'
-    const fs = require('fs');
-    const box = require('box-node-sdk');
+```js
+"use strict";
+const fs = require("fs");
+const box = require("box-node-sdk");
 
-    let configFile = fs.readFileSync('config.json');
-    configFile = JSON.parse(configFile);
+let configFile = fs.readFileSync("config.json");
+configFile = JSON.parse(configFile);
 
-    let session = box.getPreconfiguredInstance(configFile);
-    let serviceAccountClient = session.getAppAuthClient("enterprise");
+let session = box.getPreconfiguredInstance(configFile);
+let serviceAccountClient = session.getAppAuthClient("enterprise");
 
-    const marketingDeptFolderID = "45765309069";
-    const marketingProjectsFolderID = "45765461670";
-    const marketingManagersGroupName = "Marketing Managers";
-    const marketingProjectManagersGroupName = "Marketing Project Managers";
+const marketingDeptFolderID = "45765309069";
+const marketingProjectsFolderID = "45765461670";
+const marketingManagersGroupName = "Marketing Managers";
+const marketingProjectManagersGroupName = "Marketing Project Managers";
 
-    (async () => {
-        let marketingManagerGroup;
-        try {
-            marketingManagerGroup = await 
-                serviceAccountClient.groups.create(marketingManagersGroupName,{
-                description: "For Marketing department leadership team.",
-                invitability_level: "admins_only",
-                member_viewability_level: "admins_only"
-            });
-        } catch (e) {
-            marketingManagerGroup = await 
-                handleGroupConflictError(e, marketingManagersGroupName, 
-                serviceAccountClient);
-        }
+(async () => {
+  let marketingManagerGroup;
+  try {
+    marketingManagerGroup = await serviceAccountClient.groups.create(
+      marketingManagersGroupName,
+      {
+        description: "For Marketing department leadership team.",
+        invitability_level: "admins_only",
+        member_viewability_level: "admins_only"
+      }
+    );
+  } catch (e) {
+    marketingManagerGroup = await handleGroupConflictError(
+      e,
+      marketingManagersGroupName,
+      serviceAccountClient
+    );
+  }
 
-        console.log(marketingManagerGroup);
+  console.log(marketingManagerGroup);
 
-        let marketingProjectManagerGroup;
-        try {
-            marketingProjectManagerGroup = await 
-                serviceAccountClient.groups.create(marketingProjectManagersGroupName,{
-                description: "All team members who manage Marketing projects.",
-                invitability_level: "admins_and_members",
-                member_viewability_level: "admins_and_members"
-            });
-        } catch (e) {
-            marketingProjectManagerGroup = await 
-                handleGroupConflictError(e, 
-                marketingProjectManagersGroupName, 
-                serviceAccountClient);
-        }
+  let marketingProjectManagerGroup;
+  try {
+    marketingProjectManagerGroup = await serviceAccountClient.groups.create(
+      marketingProjectManagersGroupName,
+      {
+        description: "All team members who manage Marketing projects.",
+        invitability_level: "admins_and_members",
+        member_viewability_level: "admins_and_members"
+      }
+    );
+  } catch (e) {
+    marketingProjectManagerGroup = await handleGroupConflictError(
+      e,
+      marketingProjectManagersGroupName,
+      serviceAccountClient
+    );
+  }
 
-        console.log(marketingProjectManagerGroup);
+  console.log(marketingProjectManagerGroup);
 
-        let collabMarketingManagers;
-        try {
-            collabMarketingManagers = await 
-                serviceAccountClient.collaborations.createWithGroupID(marketingManagerGroup.id,
-                  marketingDeptFolderID, 
-                  serviceAccountClient.collaborationRoles.EDITOR);
-        } catch (e) {
-            collabMarketingManagers = await 
-                handleFolderCollaborationConflictError(e, 
-                marketingDeptFolderID, marketingManagerGroup.id, 
-                serviceAccountClient);
-        }
-        console.log(collabMarketingManagers);
+  let collabMarketingManagers;
+  try {
+    collabMarketingManagers = await serviceAccountClient.collaborations.createWithGroupID(
+      marketingManagerGroup.id,
+      marketingDeptFolderID,
+      serviceAccountClient.collaborationRoles.EDITOR
+    );
+  } catch (e) {
+    collabMarketingManagers = await handleFolderCollaborationConflictError(
+      e,
+      marketingDeptFolderID,
+      marketingManagerGroup.id,
+      serviceAccountClient
+    );
+  }
+  console.log(collabMarketingManagers);
 
-        let collabMarketingProjectManagers;
-        try {
-            collabMarketingProjectManagers = await 
-                serviceAccountClient.collaborations.createWithGroupID(marketingProjectManagerGroup.id,
-                marketingProjectsFolderID,
-                serviceAccountClient.collaborationRoles.EDITOR);
-        } catch (e) {
-            collabMarketingProjectManagers = await 
-                handleFolderCollaborationConflictError(e, 
-                marketingProjectsFolderID, marketingProjectManagerGroup.id,
-                serviceAccountClient);
-        }
-        console.log(collabMarketingProjectManagers);
-    })();
+  let collabMarketingProjectManagers;
+  try {
+    collabMarketingProjectManagers = await serviceAccountClient.collaborations.createWithGroupID(
+      marketingProjectManagerGroup.id,
+      marketingProjectsFolderID,
+      serviceAccountClient.collaborationRoles.EDITOR
+    );
+  } catch (e) {
+    collabMarketingProjectManagers = await handleFolderCollaborationConflictError(
+      e,
+      marketingProjectsFolderID,
+      marketingProjectManagerGroup.id,
+      serviceAccountClient
+    );
+  }
+  console.log(collabMarketingProjectManagers);
+})();
 
-    async function autoPage(iterator, collection = []) {
-        let moveToNextItem = async () => {
-            let item = await iterator.next();
-            if (item.value) {
-                collection.push(item.value);
-            }
-
-            if (item.done !== true) {
-                return moveToNextItem();
-            } else {
-                return collection;
-            }
-        }
-        return moveToNextItem();
+async function autoPage(iterator, collection = []) {
+  let moveToNextItem = async () => {
+    let item = await iterator.next();
+    if (item.value) {
+      collection.push(item.value);
     }
 
-    async function handleGroupConflictError(e, groupName, boxClient) {
-        let storeIteratorSetting = boxClient._useIterators;
-        if (e && e.response 
-            && e.response.body 
-            && e.response.body.status === 409) {
-            boxClient._useIterators = true;
-            let groupsIterator = await boxClient.groups.getAll({
-                name: groupName
-            });
-            let groups = await autoPage(groupsIterator);
-            let results = groups.filter((group) => {
-                return group.name === groupName;
-            });
-            if (results.length > 0) {
-                boxClient._useIterators = storeIteratorSetting;
-                return results[0];
-            } else {
-                throw new Error("Couldn't create group or find existing group.");
+    if (item.done !== true) {
+      return moveToNextItem();
+    } else {
+      return collection;
+    }
+  };
+  return moveToNextItem();
+}
+
+async function handleGroupConflictError(e, groupName, boxClient) {
+  let storeIteratorSetting = boxClient._useIterators;
+  if (e && e.response && e.response.body && e.response.body.status === 409) {
+    boxClient._useIterators = true;
+    let groupsIterator = await boxClient.groups.getAll({
+      name: groupName
+    });
+    let groups = await autoPage(groupsIterator);
+    let results = groups.filter(group => {
+      return group.name === groupName;
+    });
+    if (results.length > 0) {
+      boxClient._useIterators = storeIteratorSetting;
+      return results[0];
+    } else {
+      throw new Error("Couldn't create group or find existing group.");
+    }
+  } else {
+    throw e;
+  }
+}
+
+async function handleFolderCollaborationConflictError(
+  e,
+  folderID,
+  groupID,
+  boxClient
+) {
+  let storeIteratorSetting = boxClient._useIterators;
+  if (e && e.response && e.response.body && e.response.body.status === 409) {
+    boxClient._useIterators = true;
+    let collaborationsIterator = await boxClient.folders.getCollaborations(
+      folderID
+    );
+    let collaborations = await autoPage(collaborationsIterator);
+    let results = collaborations.filter(collaboration => {
+      return collaboration.accessible_by.id === groupID;
+    });
+    console.log(results);
+    if (results.length > 0) {
+      boxClient._useIterators = storeIteratorSetting;
+      return results[0];
+    } else {
+      throw new Error(
+        "Couldn't create new collaboration or located existing collaboration."
+      );
+    }
+  } else {
+    throw e;
+  }
+}
+```
+
+  </Tab>
+  <Tab title='Java'>
+
+```java
+package com.box;
+
+import java.io.BufferedReader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.Optional;
+import com.box.sdk.BoxAPIException;
+import com.box.sdk.BoxCollaboration;
+import com.box.sdk.BoxConfig;
+import com.box.sdk.BoxDeveloperEditionAPIConnection;
+import com.box.sdk.BoxFolder;
+import com.box.sdk.BoxGroup;
+import com.eclipsesource.json.JsonObject;
+
+public class BoxPlayground {
+
+    public static void main(String[] args) throws Exception {
+        Path configPath = Paths.get("config.json");
+        try (BufferedReader reader =
+            Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
+            String marketingDeptFolderID = "45765309069";
+            String marketingProjectsFolderID = "45765461670";
+            String marketingManagersGroupName = "Marketing Managers";
+            String marketingProjectManagersGroupName = "Marketing Project Managers";
+
+            BoxConfig boxConfig = BoxConfig.readFrom(reader);
+            BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
+                .getAppEnterpriseConnection(boxConfig);
+
+            BoxGroup.Info marketingManagerGroup;
+            try {
+                marketingManagerGroup = BoxGroup.createGroup(serviceAccountClient,
+                    marketingManagersGroupName, null,
+                    null, "For Marketing department leadership team.",
+                    "admins_only", "admins_only");
+            } catch (BoxAPIException e) {
+                JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
+                int status = errorMessage.get("status").asInt();
+                if (status == 409) {
+                    marketingManagerGroup =
+                        handleGroupConflictError(marketingManagersGroupName,
+                        serviceAccountClient);
+                } else {
+                    throw e;
+                }
             }
+            System.out.println(marketingManagerGroup.getID());
+
+            BoxGroup.Info marketingProjectManagerGroup;
+            try {
+                marketingProjectManagerGroup = BoxGroup.createGroup(serviceAccountClient,
+                    marketingProjectManagersGroupName, null, null,
+                    "All team members who manage Marketing projects.",
+                    "admins_and_members", "admins_and_members");
+            } catch (BoxAPIException e) {
+                JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
+                int status = errorMessage.get("status").asInt();
+                if (status == 409) {
+                    marketingProjectManagerGroup = handleGroupConflictError(marketingProjectManagersGroupName,
+                        serviceAccountClient);
+                } else {
+                    throw e;
+                }
+            }
+            System.out.println(marketingProjectManagerGroup.getID());
+
+            BoxFolder marketDeptFolder =
+                new BoxFolder(serviceAccountClient, marketingDeptFolderID);
+            BoxCollaboration.Info marketingDeptFolderCollaboration;
+            try {
+                marketingDeptFolderCollaboration = marketDeptFolder.collaborate(
+                    new BoxGroup(serviceAccountClient, marketingManagerGroup.getID()),
+                    BoxCollaboration.Role.EDITOR);
+            } catch (BoxAPIException e) {
+                System.out.println("Searching for existing collaborator.");
+                JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
+                int status = errorMessage.get("status").asInt();
+                if (status == 409) {
+                    marketingDeptFolderCollaboration = handleFolderCollaborationConflict(marketDeptFolder,
+                        marketingManagerGroup.getID());
+                } else {
+                    throw e;
+                }
+            }
+            System.out.println(marketingDeptFolderCollaboration.getID());
+
+            BoxFolder marketingProjectsFolder =
+                new BoxFolder(serviceAccountClient, marketingProjectsFolderID);
+            BoxCollaboration.Info marketingProjectsFolderCollaboration;
+            try {
+                marketingProjectsFolderCollaboration = marketingProjectsFolder.collaborate(
+                    new BoxGroup(serviceAccountClient, marketingProjectManagerGroup.getID()),
+                    BoxCollaboration.Role.EDITOR);
+            } catch (BoxAPIException e) {
+                System.out.println("Searching for existing collaborator.");
+                JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
+                int status = errorMessage.get("status").asInt();
+                if (status == 409) {
+                    marketingProjectsFolderCollaboration = handleFolderCollaborationConflict(marketingProjectsFolder,
+                        marketingProjectManagerGroup.getID());
+                } else {
+                    throw e;
+                }
+            }
+            System.out.println(marketingProjectsFolderCollaboration.getID());
+
+        }
+    }
+
+    private static BoxCollaboration.Info
+        handleFolderCollaborationConflict(BoxFolder folder, String groupID)
+    throws Exception {
+        System.out.println("Already collaborated...");
+        Collection<BoxCollaboration.Info > collaborations = folder.getCollaborations();
+        Optional<BoxCollaboration.Info > results =
+            collaborations.stream().filter(c -> {
+            return c.getAccessibleBy().getID().intern() == groupID.intern();
+        }).findFirst();
+        if (results.isPresent()) {
+            return results.get();
         } else {
-            throw e;
+            throw new Exception("Couldn't create new
+                collaboration or find existing collaboration.");
         }
     }
 
-    async function handleFolderCollaborationConflictError(e, 
-        folderID, groupID, boxClient) {
-        let storeIteratorSetting = boxClient._useIterators;
-        if (e && e.response 
-            && e.response.body 
-            && e.response.body.status === 409) {
-            boxClient._useIterators = true;
-            let collaborationsIterator = await boxClient.folders.getCollaborations(folderID);
-            let collaborations = await autoPage(collaborationsIterator);
-            let results = collaborations.filter((collaboration) => {
-                return collaboration.accessible_by.id === groupID;
-            });
-            console.log(results);
-            if (results.length > 0) {
-                boxClient._useIterators = storeIteratorSetting;
-                return results[0];
-            } else {
-                throw new Error("Couldn't create new collaboration 
-                    or located existing collaboration.");
+    private static BoxGroup.Info handleGroupConflictError(String groupName,
+        BoxDeveloperEditionAPIConnection boxClient)
+    throws Exception {
+        Iterable<BoxGroup.Info > groups =
+            BoxGroup.getAllGroupsByName(boxClient, groupName);
+        BoxGroup.Info foundGroup = null;
+        for (BoxGroup.Info group: groups) {
+            if (group.getName().intern() == groupName) {
+                foundGroup = group;
+                break;
             }
+        }
+        if (foundGroup != null) {
+            return foundGroup;
         } else {
-            throw e;
+            throw new Exception("Couldn't create group or find existing group.");
         }
     }
-    ```
+}
+```
 
-</Tab>
-<Tab title='Java'>
+  </Tab>
+  <Tab title='.NET'>
 
-  ```java
-    package com.box;
+<!-- markdownlint-disable line-length -->
 
-    import java.io.BufferedReader;
-    import java.nio.charset.Charset;
-    import java.nio.file.Files;
-    import java.nio.file.Path;
-    import java.nio.file.Paths;
-    import java.util.Collection;
-    import java.util.Optional;
-    import com.box.sdk.BoxAPIException;
-    import com.box.sdk.BoxCollaboration;
-    import com.box.sdk.BoxConfig;
-    import com.box.sdk.BoxDeveloperEditionAPIConnection;
-    import com.box.sdk.BoxFolder;
-    import com.box.sdk.BoxGroup;
-    import com.eclipsesource.json.JsonObject;
+```csharp
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Box.V2;
+using Box.V2.Config;
+using Box.V2.Exceptions;
+using Box.V2.JWTAuth;
+using Box.V2.Models;
+using Box.V2.Models.Request;
+using Newtonsoft.Json.Linq;
 
-    public class BoxPlayground {
+namespace BoxPlayground {
+    public class Program {
+        static void Main(string[] args) {
+            ExecuteMainAsync().Wait();
+        }
 
-        public static void main(String[] args) throws Exception {
-            Path configPath = Paths.get("config.json");
-            try (BufferedReader reader = 
-                Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
-                String marketingDeptFolderID = "45765309069";
-                String marketingProjectsFolderID = "45765461670";
-                String marketingManagersGroupName = "Marketing Managers";
-                String marketingProjectManagersGroupName = "Marketing Project Managers";
+        private static async Task ExecuteMainAsync() {
+            using(FileStream fs =
+                new FileStream("./config.json", FileMode.Open)) {
+                var marketingDeptFolderId = "45765309069";
+                var marketingProjectsFolderId = "45765461670";
+                var marketingManagersGroupName = "Marketing Managers";
+                var marketingProjectManagersGroupName = "Marketing Project Managers";
 
-                BoxConfig boxConfig = BoxConfig.readFrom(reader);
-                BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
-                    .getAppEnterpriseConnection(boxConfig);
+                var session = new BoxJWTAuth(BoxConfig.CreateFromJsonFile(fs));
+                var serviceAccountClient = session.AdminClient(session.AdminToken());
 
-                BoxGroup.Info marketingManagerGroup;
+                BoxGroup marketingManagerGroup;
                 try {
-                    marketingManagerGroup = BoxGroup.createGroup(serviceAccountClient,
-                        marketingManagersGroupName, null,
-                        null, "For Marketing department leadership team.", 
-                        "admins_only", "admins_only");
-                } catch (BoxAPIException e) {
-                    JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
-                    int status = errorMessage.get("status").asInt();
-                    if (status == 409) {
-                        marketingManagerGroup =
-                            handleGroupConflictError(marketingManagersGroupName,
+                    marketingManagerGroup = await
+                        serviceAccountClient.GroupsManager.CreateAsync(new
+                            BoxGroupRequest {
+                        Name = marketingManagersGroupName,
+                        InvitabilityLevel = "admins_only",
+                        MemberViewabilityLevel = "admins_only"
+                    });
+                }
+                catch(BoxException e) {
+                    var errorMessage = JObject.Parse(e.Message);
+                    if (errorMessage.GetValue("status").ToObject < int >
+                        () == 409) {
+                        marketingManagerGroup = await
+                            HandleGroupConflictError(marketingManagersGroupName,
                             serviceAccountClient);
-                    } else {
+                    }
+                    else {
                         throw e;
                     }
                 }
-                System.out.println(marketingManagerGroup.getID());
+                System.Console.WriteLine(marketingManagerGroup.Id);
 
-                BoxGroup.Info marketingProjectManagerGroup;
+                BoxGroup marketingProjectsManagerGroup;
                 try {
-                    marketingProjectManagerGroup = BoxGroup.createGroup(serviceAccountClient,
-                        marketingProjectManagersGroupName, null, null,
-                        "All team members who manage Marketing projects.", 
-                        "admins_and_members", "admins_and_members");
-                } catch (BoxAPIException e) {
-                    JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
-                    int status = errorMessage.get("status").asInt();
-                    if (status == 409) {
-                        marketingProjectManagerGroup = handleGroupConflictError(marketingProjectManagersGroupName,
+                    marketingProjectsManagerGroup = await
+                        serviceAccountClient.GroupsManager.CreateAsync(new
+                            BoxGroupRequest {
+                        Name = marketingProjectManagersGroupName,
+                        InvitabilityLevel = "admins_and_members",
+                        MemberViewabilityLevel = "admins_and_members"
+                    });
+                }
+                catch(BoxException e) {
+                    var errorMessage = JObject.Parse(e.Message);
+                    if (errorMessage.GetValue("status").ToObject < int >
+                        () == 409) {
+                        marketingProjectsManagerGroup = await
+                            HandleGroupConflictError(marketingProjectManagersGroupName,
                             serviceAccountClient);
-                    } else {
+                    }
+                    else {
                         throw e;
                     }
                 }
-                System.out.println(marketingProjectManagerGroup.getID());
+                System.Console.WriteLine(marketingProjectsManagerGroup.Id);
 
-                BoxFolder marketDeptFolder = 
-                    new BoxFolder(serviceAccountClient, marketingDeptFolderID);
-                BoxCollaboration.Info marketingDeptFolderCollaboration;
+                BoxCollaboration marketingManagerCollab;
                 try {
-                    marketingDeptFolderCollaboration = marketDeptFolder.collaborate(
-                        new BoxGroup(serviceAccountClient, marketingManagerGroup.getID()),
-                        BoxCollaboration.Role.EDITOR);
-                } catch (BoxAPIException e) {
-                    System.out.println("Searching for existing collaborator.");
-                    JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
-                    int status = errorMessage.get("status").asInt();
-                    if (status == 409) {
-                        marketingDeptFolderCollaboration = handleFolderCollaborationConflict(marketDeptFolder,
-                            marketingManagerGroup.getID());
-                    } else {
+                    marketingManagerCollab = await serviceAccountClient.CollaborationsManager.AddCollaborationAsync(
+                    new BoxCollaborationRequest {
+                        AccessibleBy = new BoxCollaborationUserRequest {
+                            Id = marketingManagerGroup.Id,
+                            Type = BoxType.group
+                        },
+                        Item = new BoxRequestEntity {
+                            Id = marketingDeptFolderId,
+                            Type = BoxType.folder
+                        },
+                        Role = BoxCollaborationRole.Editor.ToString()
+                    });
+                }
+                catch(BoxException e) {
+                    var errorMessage = JObject.Parse(e.Message);
+                    if (errorMessage.GetValue("status").ToObject < int >
+                        () == 409) {
+                        marketingManagerCollab = await
+                            HandleFolderCollaborationConflictError(marketingDeptFolderId,
+                            marketingManagerGroup.Id, serviceAccountClient);
+                    }
+                    else {
                         throw e;
                     }
                 }
-                System.out.println(marketingDeptFolderCollaboration.getID());
+                System.Console.WriteLine(marketingManagerCollab.Id);
 
-                BoxFolder marketingProjectsFolder = 
-                    new BoxFolder(serviceAccountClient, marketingProjectsFolderID);
-                BoxCollaboration.Info marketingProjectsFolderCollaboration;
+                BoxCollaboration marketingProjectsManagerCollab;
                 try {
-                    marketingProjectsFolderCollaboration = marketingProjectsFolder.collaborate(
-                        new BoxGroup(serviceAccountClient, marketingProjectManagerGroup.getID()),
-                        BoxCollaboration.Role.EDITOR);
-                } catch (BoxAPIException e) {
-                    System.out.println("Searching for existing collaborator.");
-                    JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
-                    int status = errorMessage.get("status").asInt();
-                    if (status == 409) {
-                        marketingProjectsFolderCollaboration = handleFolderCollaborationConflict(marketingProjectsFolder,
-                            marketingProjectManagerGroup.getID());
-                    } else {
+                    marketingProjectsManagerCollab = await serviceAccountClient.CollaborationsManager.AddCollaborationAsync(
+                    new BoxCollaborationRequest {
+                        AccessibleBy = new BoxCollaborationUserRequest {
+                            Id = marketingProjectsManagerGroup.Id,
+                            Type = BoxType.group
+                        },
+                        Item = new BoxRequestEntity {
+                            Id = marketingProjectsFolderId,
+                            Type = BoxType.folder
+                        },
+                        Role = BoxCollaborationRole.Editor.ToString()
+                    });
+                }
+                catch(BoxException e) {
+                    var errorMessage = JObject.Parse(e.Message);
+                    if (errorMessage.GetValue("status").ToObject < int >
+                        () == 409) {
+                        marketingProjectsManagerCollab = await
+                            HandleFolderCollaborationConflictError(marketingProjectsFolderId,
+                                marketingProjectsManagerGroup.Id, serviceAccountClient);
+                    }
+                    else {
                         throw e;
                     }
                 }
-                System.out.println(marketingProjectsFolderCollaboration.getID());
-
+                System.Console.WriteLine(marketingProjectsManagerCollab.Id);
             }
         }
 
-        private static BoxCollaboration.Info 
-            handleFolderCollaborationConflict(BoxFolder folder, String groupID)
-        throws Exception {
-            System.out.println("Already collaborated...");
-            Collection<BoxCollaboration.Info > collaborations = folder.getCollaborations();
-            Optional<BoxCollaboration.Info > results = 
-                collaborations.stream().filter(c -> {
-                return c.getAccessibleBy().getID().intern() == groupID.intern();
-            }).findFirst();
-            if (results.isPresent()) {
-                return results.get();
-            } else {
-                throw new Exception("Couldn't create new 
-                    collaboration or find existing collaboration.");
-            }
+        public async static Task < BoxGroup >
+            HandleGroupConflictError(string groupName, BoxClient boxClient) {
+            System.Console.WriteLine("Found conflict.");
+            var groups = await
+                boxClient.GroupsManager.GetAllGroupsAsync(autoPaginate: true);
+            return groups.Entries.Find((group) = >{
+                return group.Name == groupName;
+            });
         }
-
-        private static BoxGroup.Info handleGroupConflictError(String groupName,
-            BoxDeveloperEditionAPIConnection boxClient)
-        throws Exception {
-            Iterable<BoxGroup.Info > groups = 
-                BoxGroup.getAllGroupsByName(boxClient, groupName);
-            BoxGroup.Info foundGroup = null;
-            for (BoxGroup.Info group: groups) {
-                if (group.getName().intern() == groupName) {
-                    foundGroup = group;
-                    break;
-                }
+        public async static Task < BoxCollaboration >
+            HandleFolderCollaborationConflictError(string folderId,
+            string groupId, BoxClient boxClient) {
+            System.Console.WriteLine("Already a collaborator");
+            var collaborations = await boxClient.FoldersManager.GetCollaborationsAsync(folderId);
+            var existingCollab =
+                collaborations.Entries.Find((collaboration) = >{
+                return collaboration.AccessibleBy.Id == groupId;
+            });
+            if (existingCollab != null) {
+                return existingCollab;
             }
-            if (foundGroup != null) {
-                return foundGroup;
-            } else {
-                throw new Exception("Couldn't create group or find existing group.");
+            else {
+                throw new Exception("Couldn't create new collaboration or find existing collaboration");
             }
         }
     }
-    ```
+}
+```
 
-</Tab>
-<Tab title='.NET'>
-  ```csharp
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Box.V2;
-    using Box.V2.Config;
-    using Box.V2.Exceptions;
-    using Box.V2.JWTAuth;
-    using Box.V2.Models;
-    using Box.V2.Models.Request;
-    using Newtonsoft.Json.Linq;
+<!-- markdownlint-enable line-length -->
 
-    namespace BoxPlayground {
-        public class Program {
-            static void Main(string[] args) {
-                ExecuteMainAsync().Wait();
-            }
+  </Tab>
+  <Tab title='CLI'>
 
-            private static async Task ExecuteMainAsync() {
-                using(FileStream fs = 
-                    new FileStream("./config.json", FileMode.Open)) {
-                    var marketingDeptFolderId = "45765309069";
-                    var marketingProjectsFolderId = "45765461670";
-                    var marketingManagersGroupName = "Marketing Managers";
-                    var marketingProjectManagersGroupName = "Marketing Project Managers";
+```shell
+box groups:create "Marketing Managers" --invite=admins_only --view-members=admins_only
+box groups:create "Marketing Project Managers" --invite=admins_and_members --view-members=admins_and_members
+```
 
-                    var session = new BoxJWTAuth(BoxConfig.CreateFromJsonFile(fs));
-                    var serviceAccountClient = session.AdminClient(session.AdminToken());
-
-                    BoxGroup marketingManagerGroup;
-                    try {
-                        marketingManagerGroup = await 
-                            serviceAccountClient.GroupsManager.CreateAsync(new 
-                                BoxGroupRequest {
-                            Name = marketingManagersGroupName,
-                            InvitabilityLevel = "admins_only",
-                            MemberViewabilityLevel = "admins_only"
-                        });
-                    }
-                    catch(BoxException e) {
-                        var errorMessage = JObject.Parse(e.Message);
-                        if (errorMessage.GetValue("status").ToObject < int > 
-                            () == 409) {
-                            marketingManagerGroup = await 
-                                HandleGroupConflictError(marketingManagersGroupName,
-                                serviceAccountClient);
-                        }
-                        else {
-                            throw e;
-                        }
-                    }
-                    System.Console.WriteLine(marketingManagerGroup.Id);
-
-                    BoxGroup marketingProjectsManagerGroup;
-                    try {
-                        marketingProjectsManagerGroup = await 
-                            serviceAccountClient.GroupsManager.CreateAsync(new
-                                BoxGroupRequest {
-                            Name = marketingProjectManagersGroupName,
-                            InvitabilityLevel = "admins_and_members",
-                            MemberViewabilityLevel = "admins_and_members"
-                        });
-                    }
-                    catch(BoxException e) {
-                        var errorMessage = JObject.Parse(e.Message);
-                        if (errorMessage.GetValue("status").ToObject < int > 
-                            () == 409) {
-                            marketingProjectsManagerGroup = await 
-                                HandleGroupConflictError(marketingProjectManagersGroupName,
-                                serviceAccountClient);
-                        }
-                        else {
-                            throw e;
-                        }
-                    }
-                    System.Console.WriteLine(marketingProjectsManagerGroup.Id);
-
-                    BoxCollaboration marketingManagerCollab;
-                    try {
-                        marketingManagerCollab = await serviceAccountClient.CollaborationsManager.AddCollaborationAsync(
-                        new BoxCollaborationRequest {
-                            AccessibleBy = new BoxCollaborationUserRequest {
-                                Id = marketingManagerGroup.Id,
-                                Type = BoxType.group
-                            },
-                            Item = new BoxRequestEntity {
-                                Id = marketingDeptFolderId,
-                                Type = BoxType.folder
-                            },
-                            Role = BoxCollaborationRole.Editor.ToString()
-                        });
-                    }
-                    catch(BoxException e) {
-                        var errorMessage = JObject.Parse(e.Message);
-                        if (errorMessage.GetValue("status").ToObject < int > 
-                            () == 409) {
-                            marketingManagerCollab = await 
-                                HandleFolderCollaborationConflictError(marketingDeptFolderId,
-                                marketingManagerGroup.Id, serviceAccountClient);
-                        }
-                        else {
-                            throw e;
-                        }
-                    }
-                    System.Console.WriteLine(marketingManagerCollab.Id);
-
-                    BoxCollaboration marketingProjectsManagerCollab;
-                    try {
-                        marketingProjectsManagerCollab = await serviceAccountClient.CollaborationsManager.AddCollaborationAsync(
-                        new BoxCollaborationRequest {
-                            AccessibleBy = new BoxCollaborationUserRequest {
-                                Id = marketingProjectsManagerGroup.Id,
-                                Type = BoxType.group
-                            },
-                            Item = new BoxRequestEntity {
-                                Id = marketingProjectsFolderId,
-                                Type = BoxType.folder
-                            },
-                            Role = BoxCollaborationRole.Editor.ToString()
-                        });
-                    }
-                    catch(BoxException e) {
-                        var errorMessage = JObject.Parse(e.Message);
-                        if (errorMessage.GetValue("status").ToObject < int > 
-                            () == 409) {
-                            marketingProjectsManagerCollab = await 
-                                HandleFolderCollaborationConflictError(marketingProjectsFolderId,
-                                  marketingProjectsManagerGroup.Id, serviceAccountClient);
-                        }
-                        else {
-                            throw e;
-                        }
-                    }
-                    System.Console.WriteLine(marketingProjectsManagerCollab.Id);
-                }
-            }
-
-            public async static Task < BoxGroup >
-                HandleGroupConflictError(string groupName, BoxClient boxClient) {
-                System.Console.WriteLine("Found conflict.");
-                var groups = await
-                    boxClient.GroupsManager.GetAllGroupsAsync(autoPaginate: true);
-                return groups.Entries.Find((group) = >{
-                    return group.Name == groupName;
-                });
-            }
-            public async static Task < BoxCollaboration > 
-                HandleFolderCollaborationConflictError(string folderId, 
-                string groupId, BoxClient boxClient) {
-                System.Console.WriteLine("Already a collaborator");
-                var collaborations = await boxClient.FoldersManager.GetCollaborationsAsync(folderId);
-                var existingCollab = 
-                    collaborations.Entries.Find((collaboration) = >{
-                    return collaboration.AccessibleBy.Id == groupId;
-                });
-                if (existingCollab != null) {
-                    return existingCollab;
-                }
-                else {
-                    throw new Exception("Couldn't create new collaboration 
-                        or find existing collaboration");
-                }
-            }
-        }
-    }
-    ```
-
-</Tab>
-<Tab title='CLI'>
-
-  ```shell
-    box groups:create "Marketing Managers" --invite=admins_only --view-members=admins_only
-    box groups:create "Marketing Project Managers" --invite=admins_and_members --view-members=admins_and_members
-    ```
-
-</Tab>
+  </Tab>
 
 </Tabs>
 
@@ -557,225 +578,229 @@ account.
 
   <Tab title='Node'>
 
-    ```js
-    'use strict'
-    const fs = require('fs');
-    const box = require('box-node-sdk');
+<!-- markdownlint-disable line-length -->
 
-    let configFile = fs.readFileSync('config.json');
-    configFile = JSON.parse(configFile);
+```js
+'use strict'
+const fs = require('fs');
+const box = require('box-node-sdk');
 
-    let session = box.getPreconfiguredInstance(configFile);
-    let serviceAccountClient = session.getAppAuthClient("enterprise");
+let configFile = fs.readFileSync('config.json');
+configFile = JSON.parse(configFile);
 
-    const marketingManagerGroupID = "839790214";
-    const marketingManagerUserID = "275111793";
+let session = box.getPreconfiguredInstance(configFile);
+let serviceAccountClient = session.getAppAuthClient("enterprise");
 
-    (async () => {
-        let addedUser;
-        try {
-            addedUser = await 
-                serviceAccountClient.groups.addUser(marketingManagerGroupID, 
-                marketingManagerUserID, {
-                role: serviceAccountClient.groups.userRoles.ADMIN
-            });
-        } catch (e) {
-            addedUser = 
-                await handleGroupMembershipConflictError(e, 
-                marketingManagerGroupID, marketingManagerUserID, serviceAccountClient);
-        }
-        console.log(addedUser);
-    })();
+const marketingManagerGroupID = "839790214";
+const marketingManagerUserID = "275111793";
 
-    async function autoPage(iterator, collection = []) {
-        let moveToNextItem = async () => {
-            let item = await iterator.next();
-            if (item.value) {
-                collection.push(item.value);
-            }
-
-            if (item.done !== true) {
-                return moveToNextItem();
-            } else {
-                return collection;
-            }
-        }
-        return moveToNextItem();
+(async () => {
+    let addedUser;
+    try {
+        addedUser = await
+            serviceAccountClient.groups.addUser(marketingManagerGroupID,
+            marketingManagerUserID, {
+            role: serviceAccountClient.groups.userRoles.ADMIN
+        });
+    } catch (e) {
+        addedUser =
+            await handleGroupMembershipConflictError(e,
+            marketingManagerGroupID, marketingManagerUserID, serviceAccountClient);
     }
+    console.log(addedUser);
+})();
 
-    async function handleGroupMembershipConflictError(e, 
-        groupID, userID, boxClient) {
-        let storeIteratorSetting = boxClient._useIterators;
-        if (e && e.response 
-            && e.response.body 
-            && e.response.body.status === 409) {
-            boxClient._useIterators = true;
-            let groupMembershipsIterator = await boxClient.groups.getMemberships(groupID);
-            let groupMemberships = await autoPage(groupMembershipsIterator);
-            let results = groupMemberships.filter((groupMembership) => {
-                return groupMembership.user.id === userID;
-            });
-            if (results.length > 0) {
-                boxClient._useIterators = storeIteratorSetting;
-                return results[0];
-            } else {
-                throw new Error("Couldn't create group membership 
-                    or find existing group membership.");
-            }
+async function autoPage(iterator, collection = []) {
+    let moveToNextItem = async () => {
+        let item = await iterator.next();
+        if (item.value) {
+            collection.push(item.value);
+        }
+
+        if (item.done !== true) {
+            return moveToNextItem();
         } else {
-            throw e;
+            return collection;
         }
     }
-    ```
+    return moveToNextItem();
+}
 
-</Tab>
-<Tab title='Java'>
+async function handleGroupMembershipConflictError(e,
+    groupID, userID, boxClient) {
+    let storeIteratorSetting = boxClient._useIterators;
+    if (e && e.response
+        && e.response.body
+        && e.response.body.status === 409) {
+        boxClient._useIterators = true;
+        let groupMembershipsIterator = await boxClient.groups.getMemberships(groupID);
+        let groupMemberships = await autoPage(groupMembershipsIterator);
+        let results = groupMemberships.filter((groupMembership) => {
+            return groupMembership.user.id === userID;
+        });
+        if (results.length > 0) {
+            boxClient._useIterators = storeIteratorSetting;
+            return results[0];
+        } else {
+            throw new Error("Couldn't create group membership or find existing group membership.");
+        }
+    } else {
+        throw e;
+    }
+}
+```
 
-  ```java
-    package com.box;
+<!-- markdownlint-disable line-length -->
 
-    import java.io.BufferedReader;
-    import java.nio.charset.Charset;
-    import java.nio.file.Files;
-    import java.nio.file.Path;
-    import java.nio.file.Paths;
-    import com.box.sdk.BoxAPIException;
-    import com.box.sdk.BoxConfig;
-    import com.box.sdk.BoxDeveloperEditionAPIConnection;
-    import com.box.sdk.BoxGroup;
-    import com.box.sdk.BoxGroupMembership;
-    import com.box.sdk.BoxUser;
-    import com.box.sdk.BoxGroupMembership.Role;
-    import com.eclipsesource.json.JsonObject;
+  </Tab>
+  <Tab title='Java'>
 
-    public class BoxPlayground {
+```java
+package com.box;
 
-        public static void main(String[] args) throws Exception {
-            Path configPath = Paths.get("config.json");
-            try (BufferedReader reader = 
-                Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
-                String marketingManagerGroupID = "839982796";
-                String marketingManagerUserID = "275111793";
+import java.io.BufferedReader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import com.box.sdk.BoxAPIException;
+import com.box.sdk.BoxConfig;
+import com.box.sdk.BoxDeveloperEditionAPIConnection;
+import com.box.sdk.BoxGroup;
+import com.box.sdk.BoxGroupMembership;
+import com.box.sdk.BoxUser;
+import com.box.sdk.BoxGroupMembership.Role;
+import com.eclipsesource.json.JsonObject;
 
-                BoxConfig boxConfig = BoxConfig.readFrom(reader);
-                BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
-                    .getAppEnterpriseConnection(boxConfig);
+public class BoxPlayground {
 
-                BoxGroupMembership.Info marketingManagerMembership = null;
-                BoxGroup marketingManagerGroup = 
-                    new BoxGroup(serviceAccountClient, marketingManagerGroupID);
+    public static void main(String[] args) throws Exception {
+        Path configPath = Paths.get("config.json");
+        try (BufferedReader reader =
+            Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
+            String marketingManagerGroupID = "839982796";
+            String marketingManagerUserID = "275111793";
+
+            BoxConfig boxConfig = BoxConfig.readFrom(reader);
+            BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
+                .getAppEnterpriseConnection(boxConfig);
+
+            BoxGroupMembership.Info marketingManagerMembership = null;
+            BoxGroup marketingManagerGroup =
+                new BoxGroup(serviceAccountClient, marketingManagerGroupID);
+            try {
+                marketingManagerMembership = marketingManagerGroup
+                    .addMembership(new BoxUser(serviceAccountClient,
+                    marketingManagerUserID), Role.ADMIN);
+            } catch (BoxAPIException e) {
+                JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
+                int status = errorMessage.get("status").asInt();
+                if (status == 409) {
+                    System.out.println("Found existing membership");
+                    Iterable<BoxGroupMembership.Info > memberships = marketingManagerGroup.getAllMemberships();
+                    for (BoxGroupMembership.Info membership: memberships) {
+                        if (membership.getUser().getID().intern()
+                            == marketingManagerUserID) {
+                            marketingManagerMembership = membership;
+                            break;
+                        }
+                    }
+                    if (marketingManagerMembership == null) {
+                        throw new Exception("Couldn't add user to
+                            group or find existing membership");
+                    }
+                } else {
+                    throw e;
+                }
+            }
+            System.out.println(marketingManagerMembership.getID());
+            System.out.println(marketingManagerMembership.getRole());
+        }
+    }
+}
+```
+
+  </Tab>
+  <Tab title='.NET'>
+
+```csharp
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Box.V2;
+using Box.V2.Config;
+using Box.V2.Exceptions;
+using Box.V2.JWTAuth;
+using Box.V2.Models;
+using Box.V2.Models.Request;
+using Newtonsoft.Json.Linq;
+
+namespace BoxPlayground {
+    public class Program {
+        static void Main(string[] args) {
+            ExecuteMainAsync().Wait();
+        }
+
+        private static async Task ExecuteMainAsync() {
+            using(FileStream fs =
+                new FileStream("./config.json", FileMode.Open)) {
+                var marketingManagerGroupId = "839982796";
+                var marketingManagerUserId = "275111793";
+
+                var session = new BoxJWTAuth(BoxConfig.CreateFromJsonFile(fs));
+                var serviceAccountClient = session.AdminClient(session.AdminToken());
+                BoxGroupMembership marketingManagerMembership;
                 try {
-                    marketingManagerMembership = marketingManagerGroup
-                        .addMembership(new BoxUser(serviceAccountClient, 
-                        marketingManagerUserID), Role.ADMIN);
-                } catch (BoxAPIException e) {
-                    JsonObject errorMessage = JsonObject.readFrom(e.getResponse());
-                    int status = errorMessage.get("status").asInt();
-                    if (status == 409) {
-                        System.out.println("Found existing membership");
-                        Iterable<BoxGroupMembership.Info > memberships = marketingManagerGroup.getAllMemberships();
-                        for (BoxGroupMembership.Info membership: memberships) {
-                            if (membership.getUser().getID().intern() 
-                                == marketingManagerUserID) {
-                                marketingManagerMembership = membership;
-                                break;
-                            }
-                        }
+                    marketingManagerMembership = await
+                        serviceAccountClient.GroupsManager.AddMemberToGroupAsync(new
+                        BoxGroupMembershipRequest {
+                        User = new BoxRequestEntity {
+                            Id = marketingManagerUserId
+                        },
+                        Group = new BoxGroupRequest {
+                            Id = marketingManagerGroupId
+                        },
+                        Role = "admin"
+                    });
+                }
+                catch(BoxException e) {
+                    var errorMessage = JObject.Parse(e.Message);
+                    if (errorMessage.GetValue("status").ToObject
+                        < int > () == 409) {
+                        var groups = await
+                            serviceAccountClient.GroupsManager.GetAllGroupMembershipsForGroupAsync(marketingManagerGroupId,
+                            autoPaginate: true);
+                        marketingManagerMembership =
+                            groups.Entries.Find((group) = >{
+                            return group.User.Id == marketingManagerUserId;
+                        });
+
                         if (marketingManagerMembership == null) {
-                            throw new Exception("Couldn't add user to 
-                                group or find existing membership");
+                            throw new Exception("Couldn't create new
+                                collaboration or find existing collaboration");
                         }
-                    } else {
+                    }
+                    else {
                         throw e;
                     }
                 }
-                System.out.println(marketingManagerMembership.getID());
-                System.out.println(marketingManagerMembership.getRole());
+                System.Console.WriteLine(marketingManagerMembership.Id);
             }
         }
     }
-    ```
+}
+```
 
-</Tab>
-<Tab title='.NET'>
-  ```csharp
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Box.V2;
-    using Box.V2.Config;
-    using Box.V2.Exceptions;
-    using Box.V2.JWTAuth;
-    using Box.V2.Models;
-    using Box.V2.Models.Request;
-    using Newtonsoft.Json.Linq;
+  </Tab>
+  <Tab title='CLI'>
 
-    namespace BoxPlayground {
-        public class Program {
-            static void Main(string[] args) {
-                ExecuteMainAsync().Wait();
-            }
+```shell
+box groups:membership:add $user_id $group_id --role=admin
+```
 
-            private static async Task ExecuteMainAsync() {
-                using(FileStream fs = 
-                    new FileStream("./config.json", FileMode.Open)) {
-                    var marketingManagerGroupId = "839982796";
-                    var marketingManagerUserId = "275111793";
-
-                    var session = new BoxJWTAuth(BoxConfig.CreateFromJsonFile(fs));
-                    var serviceAccountClient = session.AdminClient(session.AdminToken());
-                    BoxGroupMembership marketingManagerMembership;
-                    try {
-                        marketingManagerMembership = await
-                            serviceAccountClient.GroupsManager.AddMemberToGroupAsync(new
-                            BoxGroupMembershipRequest {
-                            User = new BoxRequestEntity {
-                                Id = marketingManagerUserId
-                            },
-                            Group = new BoxGroupRequest {
-                                Id = marketingManagerGroupId
-                            },
-                            Role = "admin"
-                        });
-                    }
-                    catch(BoxException e) {
-                        var errorMessage = JObject.Parse(e.Message);
-                        if (errorMessage.GetValue("status").ToObject
-                            < int > () == 409) {
-                            var groups = await 
-                                serviceAccountClient.GroupsManager.GetAllGroupMembershipsForGroupAsync(marketingManagerGroupId,
-                                autoPaginate: true);
-                            marketingManagerMembership = 
-                                groups.Entries.Find((group) = >{
-                                return group.User.Id == marketingManagerUserId;
-                            });
-
-                            if (marketingManagerMembership == null) {
-                                throw new Exception("Couldn't create new 
-                                    collaboration or find existing collaboration");
-                            }
-                        }
-                        else {
-                            throw e;
-                        }
-                    }
-                    System.Console.WriteLine(marketingManagerMembership.Id);
-                }
-            }
-        }
-    }
-    ```
-
-</Tab>
-<Tab title='CLI'>
-
-  ```shell
-    box groups:membership:add $user_id $group_id --role=admin
-    ```
-
-</Tab>
+  </Tab>
 
 </Tabs>
