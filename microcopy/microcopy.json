@@ -152,7 +152,7 @@
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Get Started",
   // The URL to the old Get Started guides
-  "headers.primary.links.get_started.url": "https://developer.box.com/docs/quickstart-guides",
+  "headers.primary.links.get_started.url": "/{locale}/guides/applications/",
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "Guides",
   // The URL to the old generic guides
