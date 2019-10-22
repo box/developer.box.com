@@ -1,6 +1,10 @@
 ---
 rank: 170
-alias_paths: []
+alias_paths:
+  - /page/box-skills-kit
+  - /docs/box-skills
+  - /docs/configure-a-box-skill
+  - /docs/build-a-box-skill
 cId: skills
 scId: null
 id: skills
