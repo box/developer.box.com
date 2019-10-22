@@ -24,7 +24,7 @@ flow:
 | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [App Setup](guide://applications/custom-skills/setup) | A Custom Skills app is created to listen for upload events within the entire enterprise or one or more folders.                                                         |
 | [Invocation URL Setup](guide://skills/invocation-url) | When the Custom Skills app is created an invocation URL is set, which Box will notify when a new file is uploaded.                                                      |
-| [Parse Event](guide://skills/handle/payload)          | When a file is uploaded an event payload is sent to your invocation URL. This provides tokens to access the uploaded file in Box and store metadata back onto the file. |
+| [Parse Event](guide://skills/handle/payload)          | When a file is uploaded, copied, or moved into a folder an event payload is sent to your invocation URL. This provides tokens to access the uploaded file in Box and store metadata back onto the file. |
 | [Send File for Processing](guide://skills/examples)   | The file content is sent to an external service for insight processing, such as a machine learning system.                                                              |
 | [Store Metadata](guide://skills/handle/metadata)      | Once the processing system is complete, those insights are stored back on the uploaded file as metadata.                                                                |
 

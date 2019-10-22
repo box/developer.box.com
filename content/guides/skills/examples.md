@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides:
   - applications/custom-skills
@@ -52,13 +52,13 @@ Box Skills samples for processing image files on Box.
 
 | Name                                                                  | Description                                                                                                                                                                                                                                 |
 | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Acuant AssureID Government ID Data Extraction][image_acuant] ( Node) | Uses [Acuant AssureID][image_acuant_ml] to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.        |
-| [Amazon Rekognition Labels Detection][image_rekognition] ( Node)      | Uses the [Amazon Rekognition API][image_rekognition_ml] to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards. |
-| [EXIF/XMP `MetaInfo` Extraction][image_exif] ( Node)                  | Uses the Javascript rewrite of the decade long open-source developed [Exiftool][image_exif_ml] to read dozens of `MetaInfo` from files. Works for all Image, Audio, Video files.                                                            |
-| [Google Product Search recognition][image_google_prod] ( Node)        | Uses the [Google Cloud Vision Product Search][image_google_prod_ml] to compare images in Box with the images in a pre-trained product catalog.                                                                                              |
-| [Google Image Text and Topics][image_google_image] ( Node)            | Uses the [Google Cloud Vision API][image_google_image_ml] to extract image texts and topics, using generic Google Image Search ML model for identification.                                                                                 |
-| [Hive Predict face recognition][image_hive] ( Node)                   | Uses the [Hive Predict API][image_hive_ml] to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.                                                                      |
-| [Microsoft Image Text and Topics][image_ms_image] ( Node)             | Uses the [Microsoft Vision API][image_ms_image_ml] to extract image texts and topics, using generic Bing Image Search ML model for identification.                                                                                          |
+| [Acuant AssureID Government ID Data Extraction][image_acuant] (Node) | Uses [Acuant AssureID][image_acuant_ml] to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.        |
+| [Amazon Rekognition Labels Detection][image_rekognition] (Node)      | Uses the [Amazon Rekognition API][image_rekognition_ml] to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards. |
+| [EXIF/XMP `MetaInfo` Extraction][image_exif] (Node)                  | Uses the Javascript rewrite of the decade long open-source developed [Exiftool][image_exif_ml] to read dozens of `MetaInfo` from files. Works for all Image, Audio, Video files.                                                            |
+| [Google Product Search recognition][image_google_prod] (Node)        | Uses the [Google Cloud Vision Product Search][image_google_prod_ml] to compare images in Box with the images in a pre-trained product catalog.                                                                                              |
+| [Google Image Text and Topics][image_google_image] (Node)            | Uses the [Google Cloud Vision API][image_google_image_ml] to extract image texts and topics, using generic Google Image Search ML model for identification.                                                                                 |
+| [Hive Predict face recognition][image_hive] (Node)                   | Uses the [Hive Predict API][image_hive_ml] to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.                                                                      |
+| [Microsoft Image Text and Topics][image_ms_image] (Node)             | Uses the [Microsoft Vision API][image_ms_image_ml] to extract image texts and topics, using generic Bing Image Search ML model for identification.                                                                                          |
 
 <!-- markdownlint-enable line-length -->
 
