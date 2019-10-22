@@ -1,21 +1,20 @@
 ---
-rank: 7
+rank: 1
 related_endpoints:
   - delete_users_id
 related_guides:
-  - users/provisioning/transfer-folders
+  - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths:
-  - /docs/deprovision-user-accounts
+alias_paths: []
 cId: users
-scId: users/provisioning
-id: users/provisioning/deprovision-user
+scId: users/deprovision
+id: users/deprovision/user
 isIndex: false
 ---
 
-# Deprovision User Accounts
+# Deprovision User
 
 Part of regular Box enterprise maintenance is removing accounts for users that
 are no longer active in your enterprise. When removing a user from your

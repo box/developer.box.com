@@ -1,18 +1,18 @@
 ---
-rank: 3
+rank: 1
 related_endpoints:
   - post_users
 related_guides:
-  - users/provisioning/create-app-user
-  - users/provisioning/deprovision-user
-  - users/provisioning/transfer-folders
+  - users/create-app-user
+  - users/deprovision/user
+  - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
 cId: users
-scId: users/provisioning
-id: users/provisioning/create-managed-user
+scId: null
+id: users/create-managed-user
 isIndex: false
 ---
 

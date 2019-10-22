@@ -2,18 +2,18 @@
 rank: 2
 related_endpoints: []
 related_guides:
-  - users/provisioning/provision-user/populate-content
+  - users/provision/populate-content
 related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
 cId: users
-scId: users/provisioning
-id: users/provisioning/provision-user/architecture
+scId: users/provision
+id: users/provision/architecture
 isIndex: false
 ---
 
-# Creating an Architecture Skeleton
+# Create Architecture Skeleton
 
 Our first requirement is to copy general files and folders into each individual
 user's root folder on account creation. This problem has been solved within
@@ -32,21 +32,21 @@ don't have to use a Service Account strictly for developing custom applications
 for users, and instead, can use a Service Account in more of an automation
 capacity.
 
-<Message type="notice">
+<Message>
 
-  # Box Custom Application Requirements
+# Box Custom Application Requirements
 
-  When creating your JWT-based custom Box application for this recipe, you'll
-  need to enable the following scopes:
+When creating your JWT-based custom Box application for this recipe, you'll
+need to enable the following scopes:
 
 * Manage users
 * Manage groups
 * Perform Actions as Users
 * Generate User Access Tokens
 
-  See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
-  more information on creating a JWT-based Box application and the scopes in a
-  Box application.
+See [JWT Application Setup](guide://applications/custom-apps/setup-jwt) for
+more information on creating a JWT-based Box application and the scopes in a
+Box application.
 
 </Message>
 
@@ -55,8 +55,8 @@ the folders to the Service Account.
 
 <Tabs>
 
-<Tab title='etc_skel.json'>
-  ```json
+  <Tab title='etc_skel.json'>
+    ```json
     {
         "name": "etc",
         "parent": {
@@ -71,9 +71,9 @@ the folders to the Service Account.
     }
     ```
 
-</Tab>
-<Tab title='skel_sub_directories.json'>
-  ```json
+  </Tab>
+  <Tab title='skel_sub_directories.json'>
+    ```json
     [
         {
             "name": "Market Research",
@@ -105,7 +105,7 @@ the folders to the Service Account.
     ]
     ```
 
-</Tab>
+  </Tab>
 
 </Tabs>
 
@@ -338,7 +338,7 @@ as the JSON objects above demonstrate.
     }
     ```
 
-</Tab>
+  </Tab>
   <Tab title='.NET'>
     ```csharp
     using System;

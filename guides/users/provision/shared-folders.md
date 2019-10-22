@@ -2,13 +2,15 @@
 rank: 4
 related_endpoints: []
 related_guides: []
-related_pages: []
+related_pages:
+  - user/provision/architecture
+  - user/provision/transfer-folders
 required_guides: []
 related_resources: []
 alias_paths: []
 cId: users
-scId: users/provisioning
-id: users/provisioning/provision-user/shared-folders
+scId: users/provision
+id: users/provision/shared-folders
 isIndex: false
 ---
 
