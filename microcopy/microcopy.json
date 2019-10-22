@@ -4,7 +4,7 @@
   // The name of the Japanese locale, in this locale
   "locales.names.jp": "Japanese",
   // The HTML <title> of the site, as shown in search results
-  "head.title": "Box Developer Documentation Portal",
+  "head.title": "Box Developer Documentation",
   // The HTML <meta> description of a site, as shownin search results.
   "head.description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
   // The HTML <meta> tags for a site, used for SEO purposes.
