@@ -43,11 +43,11 @@ The user event stream support 3 types of stream.
 
 <!-- markdownlint-disable line-length -->
 
-| `stream_type` |                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------- |
-| `all`         | Returns everything for a user (default)                                                 |
-| `changes`     | Returns events that may cause file tree changes such as file updates or collaborations. |
-| `sync`        | Is similar to changes but only applies to synced folders                                |
+| Stream Type |                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------- |
+| `all`       | Returns everything for a user (default)                                                 |
+| `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
+| `sync`      | Is similar to changes but only applies to synced folders                                |
 
 <!-- markdownlint-enable line-length -->
 
@@ -90,7 +90,7 @@ The following events can be triggered for a user.
 | `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          | Available in `sync` and `changes` feeds |
 | `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                        | Available in `sync` and `changes` feeds |
 | `ITEM_SYNC`                  | A folder was marked for sync                                                    | Available in `sync` and `changes` feeds |
-| `ITEM_UNSYNC`                | A folder was unmarked for sync                                                 | Available in `sync` and `changes` feeds |
+| `ITEM_UNSYNC`                | A folder was unmarked for sync                                                  | Available in `sync` and `changes` feeds |
 | `ITEM_RENAME`                | A file or folder was renamed                                                    | Available in `sync` and `changes` feeds |
 | `ITEM_SHARED_CREATE`         | A file or folder was enabled for sharing                                        |                                         |
 | `ITEM_SHARED_UNSHARE`        | A file or folder was disabled for sharing                                       |                                         |
