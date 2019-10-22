@@ -17,4 +17,7 @@ alias_paths:
     Learn
   </Header>
   <GuideCategories limit='8' />
+  <More to='/{locale}/guides' right>
+    More guides
+  </More>
 </Centered>
