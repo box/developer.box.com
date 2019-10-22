@@ -1,8 +1,8 @@
 ---
 rank: 1
 related_endpoints:
-  - put_files_id_metadata_templates_id_id
-  - put_folders_id_metadata_templates_id_id
+  - put_files_id_metadata_id_id
+  - put_folders_id_metadata_id_id
 related_guides: []
 related_resource:
   - metadata
@@ -15,13 +15,13 @@ alias_paths: []
 Updating metadata on a file can be achieved by passing a set of JSON operations
 to the [`PUT /files/:id/metadata_templates/:id/:id`][files_endpoint] API.
 
-<Samples id="put_files_id_metadata_templates_id_id" />
+<Samples id="put_files_id_metadata_id_id" />
 
 Similarly, metadata assigned to a folder can be updated by passing a set of JSON
 operations to the [`PUT /files/:id/metadata_templates/:id/:id`][folders_endpoint]
 API.
 
-<Samples id="put_folders_id_metadata_templates_id_id" />
+<Samples id="put_folders_id_metadata_id_id" />
 
 ## JSON Operations
 
@@ -63,7 +63,7 @@ Folder metadata operations on user's root folder with ID `0` are not allowed.
 Attempts to perform metadata operations on this will result in a `403` HTTP
 status code.
 
-[files_endpoint]: e://put_files_id_metadata_templates_id_id
-[folders_endpoint]: e://put_folders_id_metadata_templates_id_id
+[files_endpoint]: e://put_files_id_metadata_id_id
+[folders_endpoint]: e://put_folders_id_metadata_id_id
 [jsonpatch]: https://tools.ietf.org/html/rfc6902
 [pointer]: https://tools.ietf.org/html/rfc6901
