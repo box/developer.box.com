@@ -25,5 +25,9 @@ Integrate, extend and build apps with the power of Box
   <GuideCategories limit='8' >
 
 </GuideCategories>
+  <More to='/{locale}/guides' right>
+    More guides
+
+  </More>
 
 </Centered>
