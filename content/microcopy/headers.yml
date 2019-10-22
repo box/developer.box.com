@@ -6,7 +6,7 @@ primary:
       text: Get Started
 
       // url: The URL to the old Get Started guides
-      url: https://developer.box.com/docs/quickstart-guides
+      url: /{locale}/guides/applications/
 
     guides:
       // text: The text for the link to the old generic guides
