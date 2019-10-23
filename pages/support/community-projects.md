@@ -4,7 +4,7 @@ alias_paths:
   - /docs/api-connectors
 centered: true
 rank: 1
-id: support-and-community/community-projects
+id: support/community-projects
 isIndex: false
 ---
 

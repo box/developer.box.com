@@ -2,7 +2,7 @@
 alias_paths: []
 centered: true
 rank: 0
-id: support-and-community
+id: support
 isIndex: true
 ---
 
