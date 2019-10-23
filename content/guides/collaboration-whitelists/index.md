@@ -10,7 +10,7 @@ alias_paths: []
 
 # Collaboration Whitelists
 
-Within the content and sharing settings, an enterprise admin can specify
+Within the content and sharing settings for an enterprise, an admin can specify
 [collaboration restrictions][collab-restrictions] for the enterprise. These
 settings include the ability to limit collaborations to only a series of
 whitelisted domains.
