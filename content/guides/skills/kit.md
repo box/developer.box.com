@@ -8,6 +8,7 @@ related_resources: []
 alias_paths:
   - /docs/build-a-box-skill
   - /page/box-skills-kit
+  - /docs/creating-a-box-skill-using-the-box-skills-kit-node-sdk-and-serverless
 ---
 
 # Box Skills Kit

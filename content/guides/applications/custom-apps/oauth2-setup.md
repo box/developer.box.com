@@ -10,6 +10,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
+  - /docs/oauth-20
 ---
 
 # Setup with OAuth 2.0

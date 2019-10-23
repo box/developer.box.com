@@ -2,6 +2,16 @@
 hide_title: true
 alias_paths:
   - /reference
+  - /docs/faqs
+  - /docs/frequently-asked-questions
+  - /incubator/FAQs
+  - /box-hack-day
+  - /boxdev
+  - /box-dev 
+  - /incubator 
+  - /console
+  - /ja_JP/home
+  - /api
 ---
 
 # Box Platform

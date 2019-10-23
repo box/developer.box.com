@@ -5,7 +5,9 @@ related_guides:
   - authentication/select
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths: 
+  - /docs/use-case-recipes
+  - /v2/docs/box-api-recipes
 ---
 
 # Select App Type

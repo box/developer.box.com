@@ -1,6 +1,7 @@
 ---
 rank: 40
-alias_paths: []
+alias_paths:  
+  - /widgets
 ---
 
 # Embed Box

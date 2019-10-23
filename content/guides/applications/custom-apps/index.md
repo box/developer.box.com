@@ -4,6 +4,8 @@ alias_paths:
   - /docs/custom-applications
   - /docs/custom-integrations
   - /docs/partner-integrations
+  - /docs/getting-started-box-platform
+  - /docs/box-platform
 ---
 
 # Customs Apps

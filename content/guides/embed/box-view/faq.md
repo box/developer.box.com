@@ -10,6 +10,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-view-faqs
+  - /docs/box-view-faq
 ---
 
 # FAQ

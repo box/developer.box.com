@@ -6,6 +6,11 @@ related_guides:
 alias_paths:
   - /docs/box-view
   - /docs/getting-started-box-view
+  - /docs/get-started-with-the-view-api
+  - /docs/viewing-your-first-document
+  - /docs/getting-started-with-new-box-view
+  - /docs/advanced-file-viewers
+  - /page/vr
 ---
 
 # Box View
