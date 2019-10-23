@@ -22,7 +22,7 @@ Each operation in the list provided to the API performs a transformation of the
 template, changing it's schema. The following is a list of operations that can
 be used in this API and won't affect any previous templates.
 
-### Edit base properties
+### Edit template properties
 
 The operation `editTemplate` allows for editing of the base properties of the
 template, like the `displayName`.
@@ -136,6 +136,61 @@ The operation `reorderEnumOptions` reorders the list of options in an enum.
 This will reorder the enum options for field category to have `option2` first,
 followed by `option1`, then `option3`.
 
+### Reorder multi select options
+
+The operation `reorderMultiSelectOptions` reorders the list of options in a
+multi select.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter               |                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------- |
+| `fieldKey`              | The key of the field to reorder the options for. This must be an multi select field |
+| `multiSelectOptionKeys` | The new list of multi select option keys in the requested order                     |
+
+<!-- markdownlint-enable line-length -->
+
+```json
+{
+  "op": "reorderMultiSelectOptions",
+  "fieldKey": "category",
+  "multiSelectOptionKeys": [
+    "option2",
+    "option1",
+    "option3"
+  ]
+}.
+```
+
+This will reorder the multi select options for field category to have `option2`
+first, followed by `option1`, then `option3`.
+
+### Add multi-select option
+
+The `addMultiSelectOption` operation adds a multi select option at the end of
+the multi select option list for the specified field.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter  |                                                                           |
+| ---------- | ------------------------------------------------------------------------- |
+| `fieldKey` | The key of the field to add an item to. This must be a multi select field |
+| `data`     | The new item to add to the multi select                                   |
+
+<!-- markdownlint-enable line-length -->
+
+```json
+{
+  "op": "addMultiSelectOption",
+  "fieldKey": "category",
+  "data": {
+    "key": "Technology"
+  }
+}
+```
+
+This will add a new multi select option **Technology** under the field `category`.
+
 ## Hazardous Operations
 
 Each operation in the list provided to the API performs a transformation of the
@@ -174,9 +229,7 @@ This will update the field `category` to have a new display name of
 field are migrated to the new key. The search index will be updated yet it can
 take time depending on how many files are affected by the change.
 
-<Message warning>
-  This may affect existing instances of this template.
-</Message>
+<Message warning>This may affect existing instances of this template.</Message>
 
 ### Remove a field
 
@@ -201,9 +254,7 @@ This will remove the field `brand` from the template as well as all instances of
 the template. The search index will be updated yet it can take time depending on
 how many files are affected by the change.
 
-<Message warning>
-  This will affect existing instances of this template.
-</Message>
+<Message warning>This will affect existing instances of this template.</Message>
 
 ### Edit an enum option
 
@@ -235,9 +286,7 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message warning>
-  This will affect existing instances of this template.
-</Message>
+<Message warning>This will affect existing instances of this template.</Message>
 
 ### Remove an enum option
 
@@ -267,8 +316,69 @@ instance of the template was set to this option then the value will be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message warning>
-  This will affect existing instances of this template.
-</Message>
+<Message warning>This will affect existing instances of this template.</Message>
+
+### Edit a multi select option
+
+The operation `editMultiSelectOption` edits an option for a multi select.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter              |                                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| `data`                 | An object with the new key of the option                                                     |
+| `fieldKey`             | The key of the field the multi select option belongs to. Must refer to an multi select field |
+| `multiSelectOptionKey` | The key of the multi select option to be edited                                              |
+
+<!-- markdownlint-enable line-length -->
+
+```json
+{
+  "op": "editMultiSelectOption",
+  "fieldKey": "fy",
+  "multiSelectOptionKey": "FY11",
+  "data": {
+    "key": "FY16"
+  }
+}
+```
+
+This will rename the `multiSelectOption` `FY11` to `FY16`. Existing instances of
+the template with the value set will be migrated to the new option. The search
+index will be updated yet it can take time depending on how many files are
+affected by the change.
+
+<Message warning>This will affect existing instances of this template.</Message>
+
+### Remove a multi select option
+
+The operation `removeMultiSelectOption` removes an option for an multi select.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter              |                                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| `fieldKey`             | The key of the field the multi select option belongs to. Must refer to an multi select field |
+| `multiSelectOptionKey` | The key of the multi select option to be removed                                             |
+
+<!-- markdownlint-enable line-length -->
+
+```json
+{
+  "op": "removeMultiSelectOption",
+  "fieldKey": "fy",
+  "multiSelectOptionKey": "FY11"
+}
+```
+
+This will remove the `multiSelectOption` `FY11` from the field `fy`. It will
+also remove the `multiSelectOption` from all instances of the template. If the
+field on an instance of the template was set to this option then the value will
+be unset.
+
+The search index will be updated yet it can take time depending on how many
+files are affected by the change.
+
+<Message warning>This will affect existing instances of this template.</Message>
 
 [endpoint]: e://put_metadata_templates_id_id_schema
