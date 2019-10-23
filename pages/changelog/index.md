@@ -12,6 +12,20 @@ isIndex: true
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-10-23 / New Shield Error Code
+
+A new error code for [Box Shield][box-shield] has been released. The new
+`403 - forbidden_by_policy` error code will be raised when the enterprise has
+applied Shield access policies that prevent the action, such as downloading
+items.
+
+The resolution path is to contact your Box admin to adjust the Shield access
+policies if the action is required.
+
+See the
+[error code documentation][guide://api-calls/permissions-and-errors/common-errors]
+for more details and solution path.
+
 ## 2019-10-18 / Relay API Endpoints will EOL on December 31st, 2019
 
 On December 31st, 2019, Box will end of life all Relay Classic API endpoints,
@@ -174,6 +188,7 @@ Sign, G Suite, or Box Edit. Documentation is available
 
 Full release announcement is available [here][blog_new_element].
 
+[box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
 [blog_token_revocation]: https://medium.com/box-developer-blog/new-security-enhancements-for-revoking-access-tokens-79b9960a7ce2
 [blog_new_element]: https://medium.com/box-developer-blog/new-sidebar-element-the-ga-of-open-with-935936a0628f
