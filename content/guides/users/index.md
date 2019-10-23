@@ -7,6 +7,7 @@ required_guides: []
 related_resources: []
 alias_paths: 
   - /docs/work-with-users 
+  - /docs/get-all-users
 ---
 
 # Users

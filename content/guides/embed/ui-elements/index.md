@@ -2,6 +2,10 @@
 rank: 1
 alias_paths:
   - /docs/box-ui-elements
+  - /page/box-ui-element
+  - /docs/ui-elements
+  - /box-ui-kit
+  - /docs/box-ui-kit
 ---
 
 # UI Elements

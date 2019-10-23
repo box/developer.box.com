@@ -9,6 +9,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/explore-box-skill-samples
+  - /docs/sample-box-skills-projects
 ---
 
 # Community Sample Skills

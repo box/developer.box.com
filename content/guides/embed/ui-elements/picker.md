@@ -8,6 +8,7 @@ required_guides:
 related_resources: []
 alias_paths: 
   - /docs/box-content-picker
+  - /docs/content-picker
 ---
 
 # Content Picker

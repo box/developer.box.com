@@ -6,6 +6,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/deep-linking
+  - /docs/deep-linking-to-box-mobile-apps
 ---
 
 # Mobile Deep Linking

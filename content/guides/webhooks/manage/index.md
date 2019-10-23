@@ -8,7 +8,6 @@ related_resources:
 related_guides: []
 required_guides: []
 alias_paths:
-  - /docs/work-with-webhooks
   - /docs/file-workflow-with-webhooks
 ---
 

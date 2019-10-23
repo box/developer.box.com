@@ -2,7 +2,8 @@
 rank: 30
 related_endpoints: []
 required_guides: []
-alias_paths: []
+alias_paths: 
+  - /docs/how-to-get-an-api-key
 ---
 
 # API Calls

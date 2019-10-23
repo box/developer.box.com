@@ -1,6 +1,11 @@
 ---
 alias_paths:
   - /sdks
+  - /docs/sdks-and-tools
+  - /docs/sdks
+  - /docs/box-sdks 
+  - /docs/mobile-sdks
+  - /page/sdks
 centered: true
 ---
 

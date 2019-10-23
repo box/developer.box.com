@@ -8,6 +8,7 @@ required_guides:
 related_resources: []
 alias_paths: 
   - /docs/box-content-explorer
+  - /docs/content-explorer
 ---
 
 # Content Explorer
