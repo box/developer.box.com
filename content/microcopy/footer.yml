@@ -121,6 +121,12 @@ categories:
     title: Support
 
     links:
+      support:
+        // text: Text for link to go to our support page
+        text: Support & Community
+        // url: Link to go to our status page
+        url: /{locale}/support
+
       ticket:
         // text: Text for link to create a support ticket
         text: Create a ticket

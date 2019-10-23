@@ -7,6 +7,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/build-a-box-skill
+  - /page/box-skills-kit
 ---
 
 # Box Skills Kit

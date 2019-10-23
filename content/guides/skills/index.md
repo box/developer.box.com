@@ -1,10 +1,7 @@
 ---
 rank: 170
-alias_paths: 
-  - /page/box-skills-kit	
-  - /docs/box-skills
+alias_paths: 	
   - /docs/configure-a-box-skill	
-  - /docs/build-a-box-skill	
 ---
 
 # Box Skills

@@ -16,7 +16,7 @@ step is to write data back to the file stored on Box as metadata. This process
 involves three steps:
 
 1. Set up a Box client using the write token sent via the original
-[event payload](guide://skills/handle/payload).
+   [event payload](guide://skills/handle/payload).
 2. Prepare the Skills metadata in the appropriate format.
 3. Write the metadata back to the file.
 
@@ -27,7 +27,7 @@ Once the write token has been extracted from the
 client in the same way as you would with a developer token. This client will
 provide you with access to write metadata to the file.
 
-<Samples id='x_auth' variant='init_with_dev_token' />
+<Samples id="x_auth" variant="init_with_dev_token" />
 
 ## Prepare the Skills Metadata
 
@@ -37,7 +37,7 @@ structure that will be stored on the associated files.
 
 ```json
 "cards": [{
-    "created_at": {{CURRENT_TIMESTAMP}},
+    "created_at": "{{CURRENT_TIMESTAMP}}",
     "type": "skill_card",
     "skill_card_type": "{{SKILLS_CARD_TYPE}}",
     "skill_card_title": {
@@ -51,8 +51,8 @@ structure that will be stored on the associated files.
         "type": "skill_invocation",
         "id": "{{FILE_ID}}"
     },
-    "duration": {{DURATION_IN_SECONDS}},
-    "entries": {{CARD_ENTRIES}}
+    "duration": "{{DURATION_IN_SECONDS}}",
+    "entries": "{{CARD_ENTRIES}}"
 }]}
 ```
 
@@ -62,21 +62,21 @@ applied to the metadata at a given time.
 Within the sample above are several dynamic values, wrapped as `{{ VALUE }}`,
 which will need to be replaced. These values are:
 
-* `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
-current timestamp.
-* `SKILLS_CARD_TYPE`: The type of card that would like to create. See
-[Skills Card Types](#skills-card-types) for the available options.
-* `CARD_TITLE`: The title of the card that is being written. This may be
-anything that you wish to title the content as.
-* `SKILL_ID`: The ID of the Skill. This should be set to your Skills
-application name.
-* `FILE_ID`: The ID of the file that the metadata is being written to. This is
-extracted from the [event payload](guide://skills/handle/payload).
-* `DURATION_IN_SECONDS` (OPTIONAL): This optional parameter is used only if you
-have content with a duration, such as video or audio files. If used, this
-should be the length of the content in seconds.
-* `CARD_ENTRIES`: The data that comes from the machine learning system. This
-value is an array of objects. See [Skills Card Entries](#skills-card-entries)
+- `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
+  current timestamp.
+- `SKILLS_CARD_TYPE`: The type of card that would like to create. See
+  [Skills Card Types](#skills-card-types) for the available options.
+- `CARD_TITLE`: The title of the card that is being written. This may be
+  anything that you wish to title the content as.
+- `SKILL_ID`: The ID of the Skill. This should be set to your Skills
+  application name.
+- `FILE_ID`: The ID of the file that the metadata is being written to. This is
+  extracted from the [event payload](guide://skills/handle/payload).
+- `DURATION_IN_SECONDS` (OPTIONAL): This optional parameter is used only if you
+  have content with a duration, such as video or audio files. If used, this
+  should be the length of the content in seconds.
+- `CARD_ENTRIES`: The data that comes from the machine learning system. This
+  value is an array of objects. See [Skills Card Entries](#skills-card-entries)
 
 ### Skills Card Types
 
@@ -86,11 +86,11 @@ for the card from the table below.
 
 <!-- markdownlint-disable line-length -->
 
-| Card Type | Metadata Value | Description |
-| ------ | ------ | ------ |
-| Keyword | `keyword` | Presents a list of keywords to be shown in association with a file, optionally with relevant timestamps for when those keywords appear. |
-| Transcript | `transcript` | Displays a set of images with their relevant timestamps on a media file. |
-| Faces | `timeline` | Displays a transcript with the corresponding timestamps. |
+| Card Type  | Metadata Value | Description                                                                                                                             |
+| ---------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Keyword    | `keyword`      | Presents a list of keywords to be shown in association with a file, optionally with relevant timestamps for when those keywords appear. |
+| Transcript | `transcript`   | Displays a set of images with their relevant timestamps on a media file.                                                                |
+| Faces      | `timeline`     | Displays a transcript with the corresponding timestamps.                                                                                |
 
 <!-- markdownlint-enable line-length -->
 
@@ -103,14 +103,14 @@ object.
 
 #### Keyword Card Entries
 
-<ImageFrame border center shadow width='200'>
+<ImageFrame border center shadow width="200">
   ![Image](./skills-card-keyword.png)
 </ImageFrame>
 
 The keyword card entries contain two values per object:
 
-* `text`: The keyword text to be displayed.
-* `type`: Always `text`.
+- `text`: The keyword text to be displayed.
+- `type`: Always `text`.
 
 ```json
 [
@@ -122,17 +122,17 @@ The keyword card entries contain two values per object:
 
 #### Transcript Card Entries
 
-<ImageFrame border center shadow width='200'>
+<ImageFrame border center shadow width="200">
   ![Image](./skills-card-transcript.png)
 </ImageFrame>
 
 The transcript card entries contain several values:
 
-* `text`: The text to display in the transcript line entry.
-* `appears`: An array of objects containing the start and end time for the line
-entry.
-  * `start`: The start time in seconds.
-  * `end`: The end time in seconds.
+- `text`: The text to display in the transcript line entry.
+- `appears`: An array of objects containing the start and end time for the line
+  entry.
+  - `start`: The start time in seconds.
+  - `end`: The end time in seconds.
 
 ```json
 [
@@ -144,18 +144,18 @@ entry.
 
 #### Faces Card Entries
 
-<ImageFrame border center shadow width='200'>
+<ImageFrame border center shadow width="200">
   ![Image](./skills-card-faces.png)
 </ImageFrame>
 
 The faces card entries contain several values:
 
-* `text`: The text to display for the item.
-* `appears`: An array of objects containing the start and end time for the line
-entry.
-  * `start`: The start time in seconds.
-  * `end`: The end time in seconds.
-* `image_url` (OPTIONAL): An image to display beside the item.
+- `text`: The text to display for the item.
+- `appears`: An array of objects containing the start and end time for the line
+  entry.
+  - `start`: The start time in seconds.
+  - `end`: The end time in seconds.
+- `image_url` (OPTIONAL): An image to display beside the item.
 
 ```json
 [
@@ -165,7 +165,7 @@ entry.
         "image_url": "https://mysite.com/image1.jpg"
     },
     {
-        "text": 'Callout 2',
+        "text": "Callout 2",
         "appears": [{ "start": 11, "end": 20 }],
         "image_url": "https://mysite.com/image2.jpg"
     },
@@ -183,10 +183,10 @@ to `boxSkillsCards` and the metadata to the object that was created above.
 
 <Samples id='post_files_id_metadata_id_id'>
 
-<Message type='notice'>
+<Message type="notice">
   If you are applying metadata to a file that already has it applied you will
-  receive for `409 Conflict: tuple_already_exists` error. When creating
-  metadata on a file you should catch any errors. If that error occurs you will
-  instead want to make a request to
-  [update metadata](endpoint://put_metadata_templates_id_id) on the file.
+  receive for `409 Conflict: tuple_already_exists` error. When creating metadata
+  on a file you should catch any errors. If that error occurs you will instead
+  want to make a request to [update
+  metadata](endpoint://put_metadata_templates_id_id) on the file.
 </Message>
