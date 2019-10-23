@@ -6,7 +6,8 @@ related_guides:
   - authentication
 required_guides:
   - applications/select
-alias_paths: []
+alias_paths:
+  - /docs/how-to-get-an-api-key
 cId: authentication
 scId: authentication/access-tokens
 id: authentication/access-tokens/api-calls

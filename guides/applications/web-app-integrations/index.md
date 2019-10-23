@@ -6,6 +6,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/web-application-integrations
+  - /docs/box-web-application-integrations
 cId: applications
 scId: applications/web-app-integrations
 id: applications/web-app-integrations

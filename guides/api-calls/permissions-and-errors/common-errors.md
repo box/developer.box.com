@@ -7,6 +7,8 @@ related_resources:
   - client_error
 alias_paths:
   - /docs/error-codes
+  - /docs/detailed-error-messages
+  - /docs
 notes: Lazy copy of old docs. Needs rethinking.
 cId: api-calls
 scId: api-calls/permissions-and-errors

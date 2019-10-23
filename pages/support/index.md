@@ -1,5 +1,6 @@
 ---
-alias_paths: []
+alias_paths:
+  - /page/support
 centered: true
 rank: 0
 id: support

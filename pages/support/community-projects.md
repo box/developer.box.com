@@ -2,6 +2,9 @@
 alias_paths:
   - /docs/community-supported-projects
   - /docs/api-connectors
+  - /docs/amazon-web-services
+  - /docs/aws
+  - /page/showcase
 centered: true
 rank: 1
 id: support/community-projects

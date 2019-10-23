@@ -8,6 +8,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/box-content-uploader
+  - /docs/content-uploader
 cId: embed
 scId: embed/ui-elements
 id: embed/ui-elements/uploader

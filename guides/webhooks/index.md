@@ -13,6 +13,8 @@ required_guides: []
 alias_paths:
   - /docs/work-with-webhooks
   - /docs/file-workflow-with-webhooks
+  - /docs/webhooks
+  - /docs/getting-started-with-webhooks-v2
 cId: webhooks
 scId: null
 id: webhooks

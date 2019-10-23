@@ -8,6 +8,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/annotations
+  - /annotations-beta
 cId: embed
 scId: embed/ui-elements
 id: embed/ui-elements/annotations

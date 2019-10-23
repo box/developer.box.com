@@ -11,6 +11,9 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/box-cli
+  - /docs/installation-and-setup
+  - /docs/commands-and-actions
+  - /docs/command-line-interface-cli
 cId: tooling
 scId: tooling/sdks
 id: tooling/sdks/cli

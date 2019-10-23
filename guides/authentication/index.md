@@ -2,6 +2,7 @@
 rank: 20
 alias_paths:
   - /docs/application-setup
+  - /docs/authentication
 cId: authentication
 scId: null
 id: authentication

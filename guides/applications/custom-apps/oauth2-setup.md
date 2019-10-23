@@ -10,6 +10,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
+  - /docs/oauth-20
 cId: applications
 scId: applications/custom-apps
 id: applications/custom-apps/oauth2-setup

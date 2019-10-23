@@ -10,6 +10,7 @@ related_resources:
   - user
 alias_paths:
   - /docs/user-types
+  - /docs/app-users
 cId: authentication
 scId: authentication/user-types
 id: authentication/user-types

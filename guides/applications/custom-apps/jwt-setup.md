@@ -10,6 +10,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
+  - /docs/authentication-with-jwt
 cId: applications
 scId: applications/custom-apps
 id: applications/custom-apps/jwt-setup

@@ -1,6 +1,7 @@
 ---
 rank: 250
-alias_paths: []
+alias_paths:
+  - /security-and-governance-apis
 cId: security
 scId: null
 id: security

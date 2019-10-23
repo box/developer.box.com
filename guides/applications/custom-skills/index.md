@@ -2,6 +2,10 @@
 rank: 3
 alias_paths:
   - /docs/box-skills
+  - /page/box-skills-kit
+  - /docs/getting-started-with-box-skills
+  - /docs/box-skills-1
+  - /skills
 cId: applications
 scId: applications/custom-skills
 id: applications/custom-skills

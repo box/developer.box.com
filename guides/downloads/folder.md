@@ -9,6 +9,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/download-all-files-from-a-folder-1
+  - /docs/get-all-files
 cId: downloads
 scId: null
 id: downloads/folder

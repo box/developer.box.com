@@ -8,6 +8,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/box-content-preview
+  - /docs/content-preview
 cId: embed
 scId: embed/ui-elements
 id: embed/ui-elements/preview

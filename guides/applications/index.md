@@ -2,6 +2,11 @@
 rank: 10
 alias_paths:
   - /docs/usage-patterns
+  - /docs/quickstart-guides
+  - /docs/getting-started-box-integration
+  - /docs/get-started-with-the-box-api
+  - /docs/app-management
+  - /docs/configuring-box-platform
 cId: applications
 scId: null
 id: applications
