@@ -5,7 +5,8 @@ related_guides: []
 related_pages: []
 required_guides:
   - applications/custom-skills
-related_resources: []
+related_resources:
+  - skill_invocation
 alias_paths: []
 cId: skills
 scId: skills/handle
@@ -15,9 +16,9 @@ isIndex: false
 
 # Parse Skills Payload
 
-When a new file is uploaded to a folder monitored by a Skills app, the
-invocation URL that was specified during application setup and authentication
-will receive an event payload from Box.
+When a new file is uploaded, copied, or moved to a folder monitored by a Skills
+app, the invocation URL that was specified during application setup and
+authentication will receive an event payload from Box.
 
 The event payload will contain all information needed to read in the content of
 the uploaded file to send to a processing system, such as a machine learning

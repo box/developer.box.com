@@ -150,7 +150,7 @@
   // The text for a link to edit the source of the page
   "guides.titles.edit_source": "Edit this page",
   // The text for the link to the old Get Started guides
-  "headers.primary.links.get_started.text": "Get Started",
+  "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
   "headers.primary.links.get_started.url": "/{locale}/guides/applications/",
   // The text for the link to the old generic guides
@@ -162,9 +162,13 @@
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/{locale}/reference/",
   // The text for the link to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
-  // The URL to the old page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.sdks_and_tools.text": "SDKs/Tools",
+  // The URL to the new page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.sdks_and_tools.url": "/{locale}/sdks-and-tools/",
+  // The text for the link to the old page on SDKs
+  "headers.primary.links.support.text": "Support",
+  // The URL to the old page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.support.url": "/{locale}/support/",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "My Apps",
   // The URL to the developer console
@@ -301,6 +305,10 @@
   "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
+  // Text for link to go to our support page
+  "footer.categories.support.links.support.text": "Support & Community",
+  // Link to go to our status page
+  "footer.categories.support.links.support.url": "/{locale}/support",
   // Text for link to create a support ticket
   "footer.categories.support.links.ticket.text": "Create a ticket",
   // Link to create a support ticket
