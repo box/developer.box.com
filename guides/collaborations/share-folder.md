@@ -1,10 +1,10 @@
 ---
-rank: 10
+rank: 2
 related_endpoints:
   - post_collaborations
 related_guides:
   - collaborations/share-file
-  - collaborations/users
+  - collaborations/groups
 required_guides: []
 related_resources:
   - collaboration

@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 3
 related_endpoints:
   - post_collaborations
 related_guides:
