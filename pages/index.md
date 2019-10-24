@@ -18,7 +18,7 @@ isIndex: true
 
 # Box Platform
 
-<Hero>
+<Hero search>
 
 # Build with the Box Platform
 
@@ -28,7 +28,7 @@ Integrate, extend and build apps with the power of Box
 
 <Centered wide>
 
-  <Header stroke centered to='/guides'>
+  <Header stroke to='/guides'>
     Developer News
 
   </Header>
@@ -38,21 +38,83 @@ Integrate, extend and build apps with the power of Box
 </BlogCards>
 
   <More to='https://medium.com/box-developer-blog' right>
-    More news
+    Developer Blog
 
   </More>
 
-  <Header stroke centered to='/guides'>
+</Centered>
+
+<Dark>
+
+<Centered wide>
+
+<HorizontalList centered>
+
+## Stay up to date
+
+* [Developer Blog](https://medium.com/box-developer-blog)
+* [Newsletter](/en/newsletter/)
+* [Changelog & Release Notes](/en/changelog/)
+* [Twitter](https://twitter.com/boxplatform/)
+* [API Status](https://status.box.com/)
+
+</HorizontalList>
+
+</Centered>
+
+</Dark>
+
+<Centered wide>
+
+  <Header stroke to='/guides'>
     Guides
 
   </Header>
-
+  
   <GuideCategories limit='8' >
 
 </GuideCategories>
 
   <More to='/{locale}/guides' right>
-    More guides
+    All guides
+
+  </More>
+
+</Centered>
+
+<Dark>
+
+<Centered wide>
+
+<HorizontalList centered>
+
+## Elsewhere
+
+* [Support](http://localhost:8000/en/support)
+* [Feedback](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
+* [GitHub](https://github.com/box)
+* [Developer Blog](https://medium.com/box-developer-blog)
+* [Twitter](https://twitter.com/boxplatform/)
+
+</HorizontalList>
+
+</Centered>
+
+</Dark>
+
+<Centered wide>
+
+  <Header stroke to='/guides'>
+    API Reference
+
+  </Header>
+  
+  <ReferenceCategories limit='3' >
+
+</ReferenceCategories>
+
+  <More to='/{locale}/reference/list' right>
+    Full API Reference
 
   </More>
 
