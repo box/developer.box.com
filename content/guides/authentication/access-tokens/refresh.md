@@ -44,7 +44,7 @@ curl -X POST https://api.box.com/oauth2/token \
   token and refresh token only once. If the access token and refresh token are
   not refreshed within 60 days, the user will need to be re-authorized.
 
-  Every time an application uses the refresh token to get a new acces token the
+  Every time an application uses the refresh token to get a new access token the
   refresh token is invalidated and a new refresh token is returned with the
   new access token.
 
