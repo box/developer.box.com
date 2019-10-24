@@ -1,10 +1,10 @@
 ---
-rank: 5
+rank: 1
 related_endpoints:
 - post_collaborations
 related_guides:
 - collaborations/share-folder
-- collaborations/users
+- collaborations/groups
 required_guides: []
 related_resources:
   - collaboration
@@ -19,6 +19,8 @@ have when accessing the file. The collaboration roles are `editor`, `viewer`,
 `previewer`, `uploader`, `previewer uploader`, `viewer uploader`, `co-owner`,
 or `owner`. For a full description of each role, please refer to our
 [support documentation].
+
+<Samples id='post_collaborations' />
 
 <Message>
   The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
