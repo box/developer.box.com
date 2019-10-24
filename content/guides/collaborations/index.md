@@ -1,6 +1,5 @@
 ---
 rank: 200
-
 ---
 
 # Collaborations

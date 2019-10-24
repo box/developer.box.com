@@ -7,8 +7,8 @@ related_guides:
 - collaborations/users
 required_guides: []
 related_resources:
-  - collaborations
-  - folders
+  - collaboration
+  - folder
 ---
 
 # Share Folder With User
@@ -20,13 +20,24 @@ user should have when accessing the folder. The collaboration roles are
 `viewer uploader`, `co-owner`, or `owner`. For a full description of each
 role, please refer to our [support documentation].
 
-When creating a collaboration, there are two nested objects within the request
-body: `accessible_by` and `item`. The `accessible_by` object specifies who the
-item should be shared with; this includes a user `id` or email address and the
-`type` field should be set to `"user"`. The `item` object specifies what is
-being shared. It includes a `type` field which should be set as `"folder"` with
-the `id` of the folder.
-
 <Samples id='post_collaborations' />
+
+<Message>
+  The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
+  `previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
+  description of each role, please refer to our [support documentation].
+</Message>
+
+## Nested objects
+
+When creating a collaboration there are two nested objects within the request
+body: `accessible_by` and `item`.
+
+The `accessible_by` object specifies who the item should be shared with and
+includes a group `id` and the `type`. The `type` field should always be set to
+`user`.
+
+The `item` object specifies what is being shared. It includes a `type` field
+which should be set as `folder` and an `id` for that folder.
 
 [support documentation]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
