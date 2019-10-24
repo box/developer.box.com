@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 6
 related_endpoints:
   - delete_users_id
 related_guides:
