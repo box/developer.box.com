@@ -33,9 +33,9 @@ Integrate, extend and build apps with the power of Box
 
   </Header>
 
-  <BlogCard0>
+  <BlogCards >
 
-</BlogCard0>
+</BlogCards>
 
   <More to='https://medium.com/box-developer-blog' right>
     More news
