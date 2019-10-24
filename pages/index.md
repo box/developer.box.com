@@ -29,12 +29,28 @@ Integrate, extend and build apps with the power of Box
 <Centered wide>
 
   <Header stroke centered to='/guides'>
-    Learn
+    Developer News
 
   </Header>
+
+  <BlogCard0>
+
+</BlogCard0>
+
+  <More to='https://medium.com/box-developer-blog' right>
+    More news
+
+  </More>
+
+  <Header stroke centered to='/guides'>
+    Guides
+
+  </Header>
+
   <GuideCategories limit='8' >
 
 </GuideCategories>
+
   <More to='/{locale}/guides' right>
     More guides
 

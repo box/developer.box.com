@@ -346,5 +346,7 @@
   // Text for link to our cookie notification settings
   "footer.bottom.links.cookies.text": "Cookie Notification",
   // Link to our cookie notification settings
-  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification"
+  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification",
+  // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
+  "pages.blog.minute_read": "%s min read"
 }
