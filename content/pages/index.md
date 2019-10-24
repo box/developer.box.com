@@ -27,7 +27,7 @@ alias_paths:
     Developer News
   </Header>
 
-  <BlogCard0/>
+  <BlogCards />
 
   <More to='https://medium.com/box-developer-blog' right>
     More news
