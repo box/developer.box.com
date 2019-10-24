@@ -12,7 +12,7 @@ related_resources:
   - folder
 cId: collaborations
 scId: null
-id: collaborations/users
+id: collaborations/groups
 isIndex: false
 ---
 
