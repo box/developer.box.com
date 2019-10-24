@@ -1,0 +1,6 @@
+---
+blog:
+  // minute_read: |-
+    Text to show how long it will be to read something, e.g.
+    a "1 min read". Contains a variable for the number.
+  minute_read: "%s min read"
