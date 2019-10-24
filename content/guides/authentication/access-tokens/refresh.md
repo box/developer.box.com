@@ -40,9 +40,10 @@ curl -X POST https://api.box.com/oauth2/token \
 <Message danger>
   # Refresh token expiration
 
-  Refresh tokens are only valid for 1 use within 60 days of creation. After 60 days
-  the user will need to be reauthorized completely. 
-  
+  A refresh token is valid for 60 days and can be used to obtain a new access
+  token and refresh token only once. If the access token and refresh token are
+  not refreshed within 60 days, the user will need to be re-authorized.
+
   Every time an application uses the refresh token to get a new acces token the
   refresh token is invalidated and a new refresh token is returned with the
   new access token.
