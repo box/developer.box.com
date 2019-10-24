@@ -7,8 +7,8 @@ related_guides:
   - collaborations/users
 required_guides: []
 related_resources:
-  - collaborations
-  - files
+  - collaboration
+  - file
 cId: collaborations
 scId: null
 id: collaborations/share-file
@@ -24,15 +24,24 @@ have when accessing the file. The collaboration roles are `editor`, `viewer`,
 or `owner`. For a full description of each role, please refer to our
 [support documentation].
 
-When creating a collaboration, there are two nested objects within the request
-body: `accessible_by` and `item`. The `accessible_by` object specifies who the
-item should be shared with; this includes a user `id` or email address and the
-`type` field should be set to `"user"`. The `item` object specifies what is
-being shared. It includes a `type` field which should be set as `"file"` with
-the `id` of the file.
+<Message>
 
-<Samples id='post_collaborations' >
+The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
+`previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
+description of each role, please refer to our [support documentation].
 
-</Samples>
+</Message>
+
+## Nested objects
+
+When creating a collaboration there are two nested objects within the request
+body: `accessible_by` and `item`.
+
+The `accessible_by` object specifies who the item should be shared with and
+includes a group `id` and the `type`. The `type` field should always be set to
+`user`.
+
+The `item` object specifies what is being shared. It includes a `type` field
+which should be set as `file` and an `id` for that file.
 
 [support documentation]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
