@@ -47,7 +47,9 @@ request format should be as followed `2013-04-17T09:12:36.123-00:00`.
 
 When making requests, when a timezone is omitted and a time has been provided
 the Pacific timezone is assumed. In responses, the timezone is based on your
-enterprise settings.
+enterprise settings. It will be the default user settings set by your admin.
+Please note that even if a managed user changes their timezone in their account
+settings, this this will have no affect on the timezone returned by the API.
 
 Timestamps are restricted to dates after the start of the Unix epoch, `00:00:00
 UTC` on January 1, 1970.
