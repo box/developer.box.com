@@ -23,7 +23,7 @@ The resolution path is to contact your Box admin to adjust the Shield access
 policies if the action is required.
 
 See the
-[error code documentation][guide://api-calls/permissions-and-errors/common-errors]
+[error code documentation](guide://api-calls/permissions-and-errors/common-errors)
 for more details and solution path.
 
 ## 2019-10-18 / Relay API Endpoints will EOL on December 31st, 2019
