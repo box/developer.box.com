@@ -31,3 +31,5 @@ content owned within an external enterprise.
 * `both`: Both of the above.
 
 Supply both parameter to set up the new collaboration whitelist.
+
+<Samples id='post_collaboration_whitelist_entries' />
