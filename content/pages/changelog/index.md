@@ -10,6 +10,25 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-10-25 / New fields for File Versions
+
+New optional fields have been made available within the File Version object,
+namely `trashed_by`, `restored_by` and `restored_at`.
+
+The fields will be returned as part of the standard
+[File Version object](endpoint://resources/file-version/).
+
+The purpose of these fields is to have a better understanding of when file
+versions have been moved in and out of the trash, and by whom.
+
+## 2019-10-25 / New parameters for Search API
+
+New optional query parameters have been made available for the
+[Search API](e://get-search), namely `sort` and `direction`.
+
+The purpose of these parameters is to allow applications to sort items by their
+`modified_at` date in ascending or descending order.
+
 ## 2019-10-23 / New Shield Error Code
 
 A new error code for [Box Shield][box-shield] has been released. The new
