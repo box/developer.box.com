@@ -47,7 +47,6 @@
   },
   "dependencies": {
     "@stoplight/json-ref-resolver": "^3.0.1",
-    "box-node-sdk": "^1.29.1",
     "comment-json": "^2.2.0",
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",
