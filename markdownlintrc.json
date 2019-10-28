@@ -1,5 +1,6 @@
 {
   "no-inline-html": false,
   "heading-start-left": false,
-  "code-block-style": "fenced"
+  "code-block-style": "fenced",
+  "no-duplicate-header": false
 }

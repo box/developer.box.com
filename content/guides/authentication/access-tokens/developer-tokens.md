@@ -2,11 +2,11 @@
 rank: 4
 related_endpoints: []
 related_resources: []
-related_guides: 
+related_guides:
   - authentication/select
 required_guides:
   - applications/select
-alias_paths: 
+alias_paths:
   - /docs/authenticate-with-developer-token
 ---
 
@@ -15,6 +15,10 @@ alias_paths:
 A Developer Token is an Access Token available to developers during development
 and testing. These tokens are short lived as they expire after 60 minutes and
 can not be refreshed automatically.
+
+Developer tokens are **always authenticated as the developer's user account**,
+not any other user. This is different from most of the other authentication
+methods.
 
 ## Create Developer Token
 
@@ -34,6 +38,11 @@ header of an API call.
 curl https://api.box.com/2.0/users/me \
   -H "Authorization: Bearer [DEVELOPER_TOKEN]"
 ```
+
+<Message warning>
+  Please be aware that the developer token is associated to the user (developer)
+  that was logged in to the developer console when the token was created.
+</Message>
 
 Most of our SDKs can be initialized with a Developer Token as well to create a
 basic API client.
