@@ -6,6 +6,7 @@ alias_paths:
   - /docs/box-sdks 
   - /docs/mobile-sdks
   - /page/sdks
+  - /docs/box-sdk-license
 centered: true
 ---
 

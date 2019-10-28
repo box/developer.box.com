@@ -11,6 +11,7 @@ related_resources:
 alias_paths:
   - /docs/user-types
   - /docs/app-users
+  - /docs/service-account
 ---
 
 # User Types

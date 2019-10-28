@@ -1,6 +1,6 @@
 ---
 alias_paths:
-  - /tls-1.1
+  - /tls-1
 centered: true
 rank: 2
 ---

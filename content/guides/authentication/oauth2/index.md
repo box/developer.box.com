@@ -7,7 +7,8 @@ related_guides:
 required_guides:
   - authentication/select
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /docs/authenticate-with-oauth-2
 ---
 
 # OAuth 2.0 Auth
