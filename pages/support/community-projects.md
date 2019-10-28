@@ -3,6 +3,7 @@ alias_paths:
   - /docs/community-supported-projects
   - /docs/api-connectors
   - /docs/amazon-web-services
+  - /docs/microsoft-azure
   - /docs/aws
   - /page/showcase
 centered: true

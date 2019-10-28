@@ -1,7 +1,7 @@
 ---
 rank: 60
 alias_paths:
-  - /docs/work-with-
+  - /docs/work-with-files
   - /docs/upload-files
 cId: files
 scId: null

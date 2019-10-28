@@ -1,6 +1,7 @@
 ---
 alias_paths:
-  - /tls-1.1
+  - /docs/tls-1
+  - /docs/tls-11-deprecation
 centered: true
 rank: 2
 id: changelog/tls-1.1
