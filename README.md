@@ -6,7 +6,7 @@
 
 This project contain the guides, pages, and microcopy for the Box Developer Documentation.
 
-Visit [developer.box.com][boxdev] for more details on the Box API Platform.
+Visit [`developer.box.com`][boxdev] for more details on the Box API Platform.
 
 ## Contributing
 
