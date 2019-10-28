@@ -31,7 +31,7 @@ primary:
   buttons:
     console:
       // text: The text for the link to the developer console
-      text: Manage Applications
+      text: My Apps
 
       // url: The URL to the developer console
       url: https://account.box.com/developers/services
