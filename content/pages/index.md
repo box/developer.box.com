@@ -12,6 +12,7 @@ alias_paths:
   - /console
   - /ja_JP/home
   - /api
+  - /docs/overview
 ---
 
 # Box Platform
