@@ -197,5 +197,5 @@ authentication the token defaults to a Service Account.
 
 </Message>
 
-[custom-app]: guide://applications/custom-app
-[custom-skill]: guide://applications/custom-skill
+[custom-app]: guide://applications/custom-apps
+[custom-skill]: guide://applications/custom-skills
