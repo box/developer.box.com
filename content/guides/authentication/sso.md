@@ -21,13 +21,12 @@ being built.
 
 ## Custom Apps with Client-side Authentication
 
-When using an application configured as a [Custom App][custom_app] that uses
+When using a [Custom App][custom_app] that uses
 client-side [OAuth 2.0] to authenticate users, the Box API will automatically
-redirect a user's browser to the configured SSO log-in screen.
+redirect a user's browser to their enterprise's configured SSO log-in screen.
 
-If the enterprise is configured to require SSO, rather than just enabled, then
-every user that wants to log in  must have a SSO user profile associated their
-Box account.
+Users who are a part of enterprises that require SSO, versus only enabling  
+SSO, must have an SSO user profile associated with their Box account.
 
 <Message warning>
   It is not possible to exempt a user from any SSO requirements if it is only
@@ -38,11 +37,12 @@ Box account.
 ## Custom Apps with Server-side Authentication
 
 In any other situation a Custom App is authenticated using server-side
-technology and no actual Managed User is involved. For this reason, SSO is not
-involved in this process. These applications often
+technology and no actual Managed User is involved. These applications often  
+utilize their own user-facing authentication flows.
 
 This means that for [Custom Apps][custom_app] that use [JWT][jwt] or [App
-Token][app_token] authentication no SSO log-in is involved.
+Token][app_token] authentication, SSO with Box is not involved during the  
+authentication flow.
 
 Instead, these applications authenticate as a [Service Account][user-types] that
 does not have access to any Managed User's data. For these applications to have
