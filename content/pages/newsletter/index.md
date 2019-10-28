@@ -17,6 +17,6 @@ events, product releases, and community highlights.
 
 | Year | Quarter | Download                |
 | ---- | ------- | ----------------------- |
-| 2019 | Q3      | [Download][newsletters] |
+| 2019 | Q3      | [Download][download-2019-q3] |
 
-[newsletters]: https://community.box.com/t5/Box-Newsletters/bg-p/Newsletters
+[download-2019-q3]: https://cloud.box.com/s/m7i1r21wudyl2cjnhotgvggou36w8rbx
