@@ -28,7 +28,7 @@ to their own enterprise's configured SSO log-in screen.
 
 ### SSO Enabled vs Required
 
-Enterprises on Box can be configured to use SSO in two ways: **SSO Required** 
+Enterprises on Box can be configured to use SSO in two ways: **SSO Required**
 or **SSO Enabled**.
 
 In an enterprise that has set **SSO only as enabled**, users will have the option
@@ -43,14 +43,14 @@ Box won't know what SSO provider to send a user to, or the SSO provider won't
 recognize the user's login.
 
 <Message warning>
-  It is not possible to exempt a user from SSO in an enterprise with SSO 
+  It is not possible to exempt a user from SSO in an enterprise with SSO
   set to be required, even if it is only used for platform use cases.
 </Message>
 
 ## Custom Apps with Server-side Authentication
 
-For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token] 
-authentication, SSO is not used to authenticate with Box. 
+For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token]
+authentication, SSO is not used to authenticate with Box.
 
 Custom apps using server-side authentication only use server-to-server API
 calls to communicate with Box. In this scenario, the way in which an end user
