@@ -22,46 +22,48 @@ being built.
 ## Custom Apps with Client-side Authentication
 
 When users authenticate with a [Custom App][custom_app] configured to use
-client-side [OAuth 2.0], Box's OAuth2 grant page will detect if a user's
+client-side [OAuth 2.0] Box will detect if a user's
 enterprise is configured to use SSO. If so, Box will redirect the user's browser
 to their own enterprise's configured SSO log-in screen.
 
-Enterprises on Box can be configured to use SSO in two ways:
-* SSO Required
-* SSO Enabled
+### SSO Enabled vs Required
 
-In an SSO Enabled state, users will have the option to use either a Box username
-and password or be redirected to their SSO provider's authentication flow.
+Enterprises on Box can be configured to use SSO in two ways: **SSO Required** 
+or **SSO Enabled**.
 
-In an SSO Required state, Box enforces redirection to the user's SSO provider's
-authentication flow. Thus, any Box users who are a part of an enterprise that is
-SSO required must have a profile with the SSO provider, or else they will be
-unable to authenticate while at the SSO provider's login screen. This is most 
-relevant for applications who utilize managed users that are only used for 
-platform use cases.
+In an enterprise that has set **SSO only as enabled**, users will have the option
+to either use a regular Box username and password or to be redirected to their
+SSO provider.
+
+In an enterprise that has **SSO set to be required**, Box will force users
+to log in with their enterprise's configured SSO provider. In this case, any
+user that tries to log in must already have both a Box account and an account
+with their SSO provider. Without either of these the log in will fail as either
+Box won't know what SSO provider to send a user to, or the SSO provider won't
+recognize the user's login.
 
 <Message warning>
   It is not possible to exempt a user from SSO in an enterprise with SSO 
-  required state, even if it is only used for platform use cases.
+  set to be required, even if it is only used for platform use cases.
 </Message>
 
 ## Custom Apps with Server-side Authentication
 
 For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token] 
-authentication, SSO is not used to authenticate [Platform-only user types][user-types]
-with Box. 
+authentication, SSO is not used to authenticate with Box. 
 
-Custom apps using server-side authentication only utilize server-to-server API
-calls to authenticate with Box. In this scenario, the method of end user
-authentication is determined by the application and not Box. 
+Custom apps using server-side authentication only use server-to-server API
+calls to communicate with Box. In this scenario, the way in which an end user
+is authenticated is determined by the application and not by Box.
 
 In other words, end user authentication with the application is determined by
-the application, while application's authorization to Box is determined by the
-authentication type.
+the application, while application's authorization to Box is a different
+matter completely.
 
-Platform-only user types do not have access to any Managed User's data by
-default. For these applications to have access to other managed user's data they
-will need explicit [admin approval][admin-approval].
+In these use cases the application authenticates not as a regular Managed User
+but as a Service Account or App User. These user types do not have access to any
+Managed User's data by default. For these applications to have access to other Managed
+User's data they will need explicit [admin approval][admin-approval].
 
 ## Custom Skills
 
