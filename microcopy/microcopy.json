@@ -173,6 +173,10 @@
   "headers.primary.buttons.console.text": "My Apps",
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
+  // The text for the link to the developer signup
+  "headers.primary.buttons.signup.text": "Sign Up",
+  // The URL to the developer signup - DO NOT TRANSLATE
+  "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
