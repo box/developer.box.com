@@ -235,9 +235,9 @@ This will update the field `category` to have a new display name of
 field are migrated to the new key. The search index will be updated yet it can
 take time depending on how many files are affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his may affect existing instances of this template.
+This may affect existing instances of this template.
 
 </Message>
 
@@ -264,9 +264,9 @@ This will remove the field `brand` from the template as well as all instances of
 the template. The search index will be updated yet it can take time depending on
 how many files are affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his will affect existing instances of this template.
+  This will affect existing instances of this template.
 
 </Message>
 
@@ -300,9 +300,9 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his will affect existing instances of this template.
+  This will affect existing instances of this template.
 
 </Message>
 
@@ -334,9 +334,9 @@ instance of the template was set to this option then the value will be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his will affect existing instances of this template.
+  This will affect existing instances of this template.
 
 </Message>
 
@@ -370,9 +370,9 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his will affect existing instances of this template.
+  This will affect existing instances of this template.
 
 </Message>
 
