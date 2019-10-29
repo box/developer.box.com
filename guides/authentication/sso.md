@@ -25,34 +25,51 @@ being built.
 
 ## Custom Apps with Client-side Authentication
 
-When using an application configured as a [Custom App][custom_app] that uses
-client-side [OAuth 2.0] to authenticate users, the Box API will automatically
-redirect a user's browser to the configured SSO log-in screen.
+When users authenticate with a [Custom App][custom_app] configured to use
+client-side [OAuth 2.0] Box will detect if a user's
+enterprise is configured to use SSO. If so, Box will redirect the user's browser
+to their own enterprise's configured SSO log-in screen.
 
-If the enterprise is configured to require SSO, rather than just enabled, then
-every user that wants to log in  must have a SSO user profile associated their
-Box account.
+### SSO Enabled vs Required
+
+Enterprises on Box can be configured to use SSO in two ways: **SSO Required**
+or **SSO Enabled**.
+
+In an enterprise that has set **SSO only as enabled**, users will have the option
+to either use a regular Box username and password or to be redirected to their
+SSO provider.
+
+In an enterprise that has **SSO set to be required**, Box will force users
+to log in with their enterprise's configured SSO provider. In this case, any
+user that tries to log in must already have both a Box account and an account
+with their SSO provider. Without either of these the log in will fail as either
+Box won't know what SSO provider to send a user to, or the SSO provider won't
+recognize the user's login.
 
 <Message warning>
 
-It is not possible to exempt a user from any SSO requirements if it is only
-used for platform use cases. In these scenarios we recommend using server-side
-authentication.
+It is not possible to exempt a user from SSO in an enterprise with SSO
+set to be required, even if it is only used for platform use cases.
 
 </Message>
 
 ## Custom Apps with Server-side Authentication
 
-In any other situation a Custom App is authenticated using server-side
-technology and no actual Managed User is involved. For this reason, SSO is not
-involved in this process. These applications often
+For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token]
+authentication, SSO is not used to authenticate with Box.
 
-This means that for [Custom Apps][custom_app] that use [JWT][jwt] or [App
-Token][app_token] authentication no SSO log-in is involved.
+Custom apps using server-side authentication only use server-to-server API
+calls to communicate with Box. In this scenario, the way in which an end user
+is authenticated is determined by the application and not by Box.
 
-Instead, these applications authenticate as a [Service Account][user-types] that
-does not have access to any Managed User's data. For these applications to have
-access to other user's data they will need explicit [admin approval][admin-approval].
+In other words, end user authentication with the application is determined by
+the application, while application's authorization to Box is a different
+matter completely.
+
+In these use cases the application authenticates not as a regular Managed User
+but as a Service Account or App User. These user types do not have access to any
+Managed User's data by default. For these applications to have access to other Managed
+User's data they will need explicit [admin approval][admin-approval].
 
 ## Custom Skills
 
@@ -65,9 +82,9 @@ therefore SSO is not involved.
 
 <Message>
 
-  Evenwhen using Skills, a user uploading a file to a folder that might trigger
- a Skill event would still need to log in to the web or mobile app. This log in
- would require them to use SSO where needed.
+  Even when using Skills, a user uploading a file to a folder that might trigger
+  a Skill event would still need to log in to the web or mobile app. This log in
+  would require them to use SSO where needed.
 
 </Message>
 
