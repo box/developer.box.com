@@ -229,7 +229,9 @@ This will update the field `category` to have a new display name of
 field are migrated to the new key. The search index will be updated yet it can
 take time depending on how many files are affected by the change.
 
-<Message warning>This may affect existing instances of this template.</Message>
+<Message warning>
+  This may affect existing instances of this template.
+</Message>
 
 ### Remove a field
 
@@ -254,7 +256,9 @@ This will remove the field `brand` from the template as well as all instances of
 the template. The search index will be updated yet it can take time depending on
 how many files are affected by the change.
 
-<Message warning>This will affect existing instances of this template.</Message>
+<Message warning>
+  This will affect existing instances of this template.
+</Message>
 
 ### Edit an enum option
 
@@ -286,7 +290,9 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message warning>This will affect existing instances of this template.</Message>
+<Message warning>
+  This will affect existing instances of this template.
+</Message>
 
 ### Remove an enum option
 
@@ -316,7 +322,9 @@ instance of the template was set to this option then the value will be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message warning>This will affect existing instances of this template.</Message>
+<Message warning>
+  This will affect existing instances of this template.
+</Message>
 
 ### Edit a multi select option
 
@@ -348,7 +356,9 @@ the template with the value set will be migrated to the new option. The search
 index will be updated yet it can take time depending on how many files are
 affected by the change.
 
-<Message warning>This will affect existing instances of this template.</Message>
+<Message warning>
+  This will affect existing instances of this template.
+</Message>
 
 ### Remove a multi select option
 

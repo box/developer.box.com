@@ -1,8 +1,8 @@
 ---
 rank: 60
 alias_paths: 
-  - /docs/work-with-
-  - /docs/upload-files 
+  - /docs/work-with-files
+  - /docs/upload-files
 ---
 
 # Files
