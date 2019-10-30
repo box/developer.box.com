@@ -99,7 +99,7 @@ specify specific file extensions to trigger the Skill for, scroll down to the
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-file-extentions.png)
+  ![App name form](../images/app-file-extensions.png)
 
 </ImageFrame>
 

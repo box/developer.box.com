@@ -55,13 +55,14 @@ includes a mini `terms_of_service` object.
 
 <Message>
 
-  This information is only returned if the Terms of Service for external users is
-  enabled for the enterprise, and the user making the request has the
-  [permission][permissions] to see the Terms of Service. This holds true for
-  both admin and end users, even though admins can generally view Terms of User
-  information via the API even if the specific Terms of Service type is
-  disabled.
-<Message>
+This information is only returned if the Terms of Service for external users is
+enabled for the enterprise, and the user making the request has the
+[permission][permissions] to see the Terms of Service. This holds true for
+both admin and end users, even though admins can generally view Terms of User
+information via the API even if the specific Terms of Service type is
+disabled.
+
+</Message>
 
 If the Terms of Service type is not enabled, the API will return an empty
 result.
@@ -78,8 +79,8 @@ result.
 
 <Message>
 
-The `terms_of_service` information is returned within the
-`acceptance_requirements` even if they have already been accepted by the user.
+  The `terms_of_service` information is returned within the
+  `acceptance_requirements` even if they have already been accepted by the user.
 
 </Message>
 
