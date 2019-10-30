@@ -54,7 +54,7 @@ includes a mini `terms_of_service` object.
   both admin and end users, even though admins can generally view Terms of User
   information via the API even if the specific Terms of Service type is
   disabled.
-<Message>
+</Message>
 
 If the Terms of Service type is not enabled, the API will return an empty
 result.

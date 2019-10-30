@@ -87,7 +87,7 @@ specify specific file extensions to trigger the Skill for, scroll down to the
 "File Extensions" section of the "Configuration" panel of your application.
 
 <ImageFrame border width="600" center>
-  ![App name form](../images/app-file-extentions.png)
+  ![App name form](../images/app-file-extensions.png)
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
