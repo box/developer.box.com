@@ -19,7 +19,7 @@ generic Toolkit method:
 
 <Tabs>
   <Tab title='Apex'>
-    
+
 ```java
 // Instantiate the Toolkit object
 box.Toolkit toolkit = new box.Toolkit();
@@ -62,7 +62,7 @@ The following code will create a folder for a specific Salesforce record Id:
 
 <Tabs>
   <Tab title='Apex'>
-    
+
 ```java
 // Instantiate the Toolkit object
 box.Toolkit boxToolkit = new box.Toolkit();
@@ -110,7 +110,7 @@ system.debug('Legal Folder id: ' + legalFolderId);
 String pictureFolderId = boxToolkit.createFolder('Pictures', accountFolderId, null);
 system.debug('Picture Folder id: ' + pictureFolderId);
 
-// Collaborate the current user on the account folder. Note that we're sending false for the optCreateFolder param that shouldn't actually matter since the folder(s) already exists 
+// Collaborate the current user on the account folder. Note that we're sending false for the optCreateFolder param that shouldn't actually matter since the folder(s) already exists
 Id userId = UserInfo.getUserId();
 box.Toolkit.CollaborationType collabType = box.Toolkit.CollaborationType.EDITOR;
 String collabId = boxToolkit.createCollaborationOnRecord(userId, accountId, collabType, false);
