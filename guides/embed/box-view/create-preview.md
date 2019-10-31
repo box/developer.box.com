@@ -78,7 +78,7 @@ URL embedLink = file.getPreviewLink();
   </Tab>
   <Tab title='Python'>
 
-```pyton
+```python
 file_id = '12345678'
 embed_url = client.file(file_id).get_embed_url()
 ```
