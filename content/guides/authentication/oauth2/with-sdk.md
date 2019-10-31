@@ -72,11 +72,13 @@ var sdk = new BoxClient(config);
   <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
+
 ```java
 import com.box.sdk.BoxAPIConnection;
 
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
@@ -127,11 +129,13 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
   <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
+
 ```java
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 // response.redirect(authorizationUrl);
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
