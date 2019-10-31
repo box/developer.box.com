@@ -122,12 +122,14 @@ Sharing should be disabled.
   to the folder so you can skip the collaboration step.
 
 <!-- markdownlint-disable line-length -->
+
 ```curl
 curl https://api.box.com/2.0/collaborations \
   -H "Authorization: Bearer [ACCESS_TOKEN]" \
   -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
   -X POST
 ```
+
 <!-- markdownlint-enable line-length -->
 
 <Message>
