@@ -100,7 +100,6 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 String baseUrl = "https://account.box.com/api/oauth2/authorize";
 String clientId = "[CLIENT_ID]";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
-
 ```
 
 <!-- markdownlint-enable line-length -->
