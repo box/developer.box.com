@@ -1,4 +1,4 @@
-# Box Developer Documentation - Configuration
+# Box Developer Documentation
 
 [![Build Status][travis_img]][travis]
 [![Project Status][opensource_img]][opensource]
@@ -6,7 +6,7 @@
 
 This project contain the guides, pages, and microcopy for the Box Developer Documentation.
 
-Visit [box.dev][boxdev] for more details on the Box API Platform.
+Visit [`developer.box.com`][boxdev] for more details on the Box API Platform.
 
 ## Contributing
 
@@ -27,7 +27,7 @@ new Box developer documentation available on [Box.dev][boxdev].
 
 [license]: LICENSE
 [contrib]: CONTRIBUTING.md
-[boxdev]: https://box.dev
+[boxdev]: https://developer.box.com
 [greenkeeper]: https://greenkeeper.io/
 [opensource]: http://opensource.box.com/badges
 [travis]: https://travis-ci.com/box/developer.box.com
