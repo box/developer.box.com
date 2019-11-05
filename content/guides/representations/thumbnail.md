@@ -81,4 +81,4 @@ At this time the following file types are supported.
 <!-- markdownlint-enable line-length -->
 
 [get_files_id_thumbnail_id]: endpoint://get_files_id_thumbnail_id
-[thumb_representations]: guide://representations/thumbnail-representations
+[thumb_representations]: guide://representations/thumbnail-representation

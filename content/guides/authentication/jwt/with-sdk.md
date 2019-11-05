@@ -188,4 +188,4 @@ with any of our official SDKs, by using the following steps.
 2. [Initialize an SDK client](#2-initialize-sdk-client)
 
 To learn how to use this client head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).

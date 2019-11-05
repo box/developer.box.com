@@ -18,7 +18,7 @@ from within the embedded Box preview in their application. Box Annotations fit a
 wide range of use cases and can be used to draw the previewer's attention and/or
 provide feedback on specific parts of a document or images.
 
-<CTA to="g://embed/ui-elements/content-preview">
+<CTA to="g://embed/ui-elements/preview">
   Learn more about Content Preview
 </CTA>
 

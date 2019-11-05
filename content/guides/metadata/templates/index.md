@@ -58,4 +58,5 @@ For more information on how to structure a metadata template, please refer to
 [this Box Community page][community].
 
 [instance]: g://metadata/instances
+[template]: g://metadata/templates
 [community]: https://community.box.com/t5/How-to-Guides-for-Admins/How-to-Create-the-Right-Metadata-Structure-for-your-Enterprise/ta-p/43960

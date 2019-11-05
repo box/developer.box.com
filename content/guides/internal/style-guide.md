@@ -191,7 +191,7 @@ syntax.
 ```json
 [Get a file by ID](endpoint://get_files_id)
 [A file](resource://file)
-[Copy a file](guide://files/advanced/copy)
+[Get a file](guide://files/get)
 [Box](https://box.com)
 ```
 
@@ -200,7 +200,7 @@ syntax.
 
 [A file](resource://file)
 
-[Copy a file](guide://files/advanced/copy)
+[Get a file](guide://files/get)
 
 [Box](https://box.com)
 </H>
@@ -226,13 +226,13 @@ Some text with a [link][link_name]. And some more content.
 Links can be wrapped in a Call to action to create visible buttons.
 
 ```html
-<CTA to='guide://files/advanced/copy'>
+<CTA to='guide://files/get'>
   Learn more about copying files
 </CTA>
 ```
 
 <H>
-<CTA to='guide://files/advanced/copy'>
+<CTA to='guide://files/get'>
   Learn more about copying files
 </CTA>
 </H>

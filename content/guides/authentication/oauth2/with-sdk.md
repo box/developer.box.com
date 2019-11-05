@@ -252,4 +252,4 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
-[tokens]: guide://authentication/tokens
+[tokens]: guide://authentication/access-tokens

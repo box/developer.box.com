@@ -30,6 +30,6 @@ application.
 Once an authenticated client has been created, it may be used to upload files
 directly to the app token application to be converted.
 
-<CTA to='guide://uploads/direct/for-new-file/'>
+<CTA to='guide://uploads/direct/file/'>
   Upload files to Box
 </CTA>
