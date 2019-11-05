@@ -30,19 +30,19 @@ Integrate, extend and build apps with the power of Box
 
 <Centered wide>
 
-  <Header stroke to='/guides'>
-    Developer News
+<Header stroke to='/guides'>
+Developer News
 
-  </Header>
+</Header>
 
-  <BlogCards >
+<BlogCards >
 
 </BlogCards>
 
-  <More to='https://medium.com/box-developer-blog' right>
-    Developer Blog
+<More to='https://medium.com/box-developer-blog' right>
+Developer Blog
 
-  </More>
+</More>
 
 </Centered>
 
@@ -68,19 +68,19 @@ Integrate, extend and build apps with the power of Box
 
 <Centered wide>
 
-  <Header stroke to='/guides'>
-    Guides
+<Header stroke to='/guides'>
+Guides
 
-  </Header>
-  
-  <GuideCategories limit='8' >
+</Header>
+
+<GuideCategories limit='8' >
 
 </GuideCategories>
 
-  <More to='/{locale}/guides' right>
-    All guides
+<More to='/{locale}/guides' right>
+All guides
 
-  </More>
+</More>
 
 </Centered>
 
@@ -106,18 +106,18 @@ Integrate, extend and build apps with the power of Box
 
 <Centered wide>
 
-  <Header stroke to='/guides'>
-    API Reference
+<Header stroke to='/guides'>
+API Reference
 
-  </Header>
-  
-  <ReferenceCategories limit='3' >
+</Header>
+
+<ReferenceCategories limit='3' >
 
 </ReferenceCategories>
 
-  <More to='/{locale}/reference/list' right>
-    Full API Reference
+<More to='/{locale}/reference/list' right>
+Full API Reference
 
-  </More>
+</More>
 
 </Centered>

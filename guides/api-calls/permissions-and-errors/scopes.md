@@ -30,7 +30,7 @@ performing tasks you did not intend it to do.
 
 <Message type='notice'>
 
-  # User permissions and scopes
+# User permissions and scopes
 
 It is important to understand that even if an application has the right scopes
 to perform an action, the user authenticated in the API call needs to have
@@ -202,8 +202,8 @@ Governance.
 
 <Message type="warning">
 
-  This scope depends on the `gcm` scope to function properly. This scope can be
-  requested by opening a ticket via our support channels.
+This scope depends on the `gcm` scope to function properly. This scope can be
+requested by opening a ticket via our support channels.
 
 </Message>
 
@@ -230,8 +230,8 @@ Governance.
 
 <Message type="notice">
 
-  This scope depends on the `gcm` scope to function properly. This scope can be
-  requested by opening a ticket via our support channels.
+This scope depends on the `gcm` scope to function properly. This scope can be
+requested by opening a ticket via our support channels.
 
 </Message>
 
@@ -257,7 +257,7 @@ with retention policies and legal holds.
 
 <Message type='danger'>
 
-  # Side effects
+# Side effects
 
 Enabling this scope on an application changes the behavior of some API calls,
 and most notable makes it impossible to write content without explicitly

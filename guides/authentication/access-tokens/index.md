@@ -18,7 +18,7 @@ authenticated user to the Box servers and determine what files and folders an
 application has access to.
 
 <CTA to="guide://authentication/select">
-  Learn about the different ways an app can get authorized
+Learn about the different ways an app can get authorized
 
 </CTA>
 

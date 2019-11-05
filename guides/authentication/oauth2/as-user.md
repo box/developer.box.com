@@ -55,14 +55,14 @@ Types](g://authentication/user-types) for more details.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -73,31 +73,31 @@ client.asUser([USER_ID]");
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 user_to_impersonate = client.user(user_id='[USER_ID]')
 user_client = client.as_user(user_to_impersonate)
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 client.asUser('[USER_ID]');
 // client.asSelf();
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message warning>
 
-  Please note that some of our SDKs create new clients for the other user, while
-  others modify the existing client and provide a way to return to a state where
-  the client authenticates for the original user itself.
+Please note that some of our SDKs create new clients for the other user, while
+others modify the existing client and provide a way to return to a state where
+the client authenticates for the original user itself.
 
 </Message>
 

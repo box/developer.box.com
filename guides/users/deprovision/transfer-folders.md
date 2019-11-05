@@ -56,9 +56,9 @@ ownership of a single file or folder from one user to another instantaneously.
 
 <Message type='notice'>
 
-  Thismethod will perform an instantaneous transfer of ownership of a single
- file or folder, but **cannot** be used to transfer the root (all files and
- folders) from one user to another.
+This method will perform an instantaneous transfer of ownership of a single
+file or folder, but **cannot** be used to transfer the root (all files and
+folders) from one user to another.
 
 </Message>
 

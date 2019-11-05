@@ -30,11 +30,11 @@ This functionality is part of the latest Box for
 
 <Message type='warning'>
 
-  # What the Toolkit does NOT provide
+# What the Toolkit does NOT provide
 
-  The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
-  this is what you are looking for, have a look at the
-  [Box SDK for Salesforce][sf-sdk].
+The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
+this is what you are looking for, have a look at the
+[Box SDK for Salesforce][sf-sdk].
 
 </Message>
 

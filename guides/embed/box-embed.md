@@ -36,7 +36,7 @@ You are presented with options to adjust the size, view, and sorting.
 
 <ImageFrame border>
 
-  ![Box Embed Configuration](./box-embed-2.png)
+![Box Embed Configuration](./box-embed-2.png)
 
 </ImageFrame>
 
@@ -72,7 +72,7 @@ web app.
 
 <ImageFrame border>
 
-  ![Box Share](./box-share.png)
+![Box Share](./box-share.png)
 
 </ImageFrame>
 

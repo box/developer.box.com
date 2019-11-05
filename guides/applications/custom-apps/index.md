@@ -45,7 +45,7 @@ overview of the key differences.
 <!-- markdownlint-enable line-length -->
 
 <CTA to='g://authentication/select'>
-  Learn more about the different types of authentication
+Learn more about the different types of authentication
 
 </CTA>
 
@@ -56,7 +56,7 @@ A Custom App is best used when the application:
 - Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
-  other users, even external users.
+other users, even external users.
 - Wants the option to list the application in the Box App Gallery
 - Wants to provide integration into the Box Web App
 

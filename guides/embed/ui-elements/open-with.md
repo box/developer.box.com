@@ -38,7 +38,7 @@ either through NPM or the Box CDN.
 
 <Message>
 
-  # Browser support
+# Browser support
 
 UI elements have [limited support](g://embed/ui-elements/browser) for
 older browsers. Make sure to add the right polyfills for your targeted browsers.
@@ -53,10 +53,10 @@ to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
 - The application's domain must be whitelisted by Box Tools. Instructions can be
-  found [here][custom-domains]. The ideal workflow is to bundle these steps
-  within an installer that also installs Box Tools.
+found [here][custom-domains]. The ideal workflow is to bundle these steps
+within an installer that also installs Box Tools.
 - Safari requires a browser extension to connect to box tools. More details can
-  be found [here][safari].
+be found [here][safari].
 
 ## G Suite
 
@@ -260,14 +260,14 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 ### Open With Example
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box Open With Example"
-  src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box Open With Example"
+src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
@@ -275,21 +275,21 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 ### Content Explorer + Open With Example
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box Content Explorer Example + Open With"
-  src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box Content Explorer Example + Open With"
+src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
 
 <Message>
 
-  # Access Token
+# Access Token
 
 These demos may not fully function until you provide a valid access token. For
 testing purposes, you can use your temporary developer token. This will need
@@ -309,7 +309,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
-  Learn about selecting an authentication method
+Learn about selecting an authentication method
 
 </CTA>
 

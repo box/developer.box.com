@@ -67,7 +67,7 @@ your choice.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 var redirectUrl = "[REDIRECT_URI]";
@@ -75,8 +75,8 @@ var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl
 var sdk = new BoxClient(config);
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -88,8 +88,8 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 from boxsdk import OAuth2
@@ -100,8 +100,8 @@ sdk = OAuth2(
 )
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 var BoxSDK = require("box-node-sdk");
@@ -112,12 +112,12 @@ var sdk = new BoxSDK({
 });
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <CTA to="guide://tooling/sdks">
-  Learn more about installing an SDK for your environment
+Learn more about installing an SDK for your environment
 
 </CTA>
 
@@ -128,15 +128,15 @@ simple way to get the authorization URL for an SDK client.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 // redirectTo(authorizationUrl);
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -148,8 +148,8 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 auth_url, csrf_token = sdk.get_authorization_url('[REDIRECT_URL]')
@@ -157,8 +157,8 @@ auth_url, csrf_token = sdk.get_authorization_url('[REDIRECT_URL]')
 // redirect(auth_url, code=302)
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
@@ -168,15 +168,15 @@ var authorize_url = sdk.getAuthorizeURL({
 // res.redirect(authorize_url)
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message>
 
-  The way in which a user is redirected to a URL depends on the application
-  framework used. Most framework documentation provides extensive guidance on
-  this topic.
+The way in which a user is redirected to a URL depends on the application
+framework used. Most framework documentation provides extensive guidance on
+this topic.
 
 </Message>
 
@@ -193,9 +193,9 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
 
 <Message>
 
-  Additional query parameters can be passed along when redirecting the user to
-  limit down the scope, or pass along some extra state. See the [reference
-  documentation](endpoint://get-authorize) for more information.
+Additional query parameters can be passed along when redirecting the user to
+limit down the scope, or pass along some extra state. See the [reference
+documentation](endpoint://get-authorize) for more information.
 
 </Message>
 
@@ -206,7 +206,7 @@ they logged in they are presented with a screen to approve your application.
 
 <ImageFrame border center shadow width="400">
 
-  ![Example OAuth 2.0 approval screen](./oauth2-grant.png)
+![Example OAuth 2.0 approval screen](./oauth2-grant.png)
 
 </ImageFrame>
 
@@ -227,15 +227,15 @@ The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 var session = await sdk.Auth.AuthenticateAsync("[CODE]");
 var client = new BoxClient(config, session);
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 BoxAPIConnection client = new BoxAPIConnection(
@@ -245,16 +245,16 @@ BoxAPIConnection client = new BoxAPIConnection(
 );
 ```
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 oauth.authenticate('[CODE]')
 client = Client(oauth)
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 var code = "...";
@@ -264,7 +264,7 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 });
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

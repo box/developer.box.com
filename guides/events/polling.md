@@ -38,8 +38,8 @@ updated responses.
 
 <Message>
 
-  The SDKs have built-in support for turning the event feeds into an event
-  stream by long polling for new events.
+The SDKs have built-in support for turning the event feeds into an event
+stream by long polling for new events.
 
 </Message>
 

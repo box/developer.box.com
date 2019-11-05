@@ -60,8 +60,8 @@ uploaded.
 
 <Message warning>
 
-  The client is recommended to log keep all the JSON responses from all part
-  uploads as they are needed to [commit the session][commit].
+The client is recommended to log keep all the JSON responses from all part
+uploads as they are needed to [commit the session][commit].
 
 </Message>
 

@@ -45,21 +45,21 @@ operate.
 
 <ImageFrame border>
 
-  ![Select a skill to add](./images/skills-select.png)
+![Select a skill to add](./images/skills-select.png)
 
 </ImageFrame>
 
 There are two options here:
 
 * **All content in your company** authorizes the Skill at the root folder of
-  every user. This results in every file uploaded to any folder being processed
-  by the Box Skill application
+every user. This results in every file uploaded to any folder being processed
+by the Box Skill application
 * **Select a whitelist of folders** enables the application to a specific folder
-  or set of folders on which the Skill application operates.
+or set of folders on which the Skill application operates.
 
 <ImageFrame border>
 
-  ![Select a skill to add](./images/skills-confirm.png)
+![Select a skill to add](./images/skills-confirm.png)
 
 </ImageFrame>
 
@@ -70,10 +70,10 @@ Console.
 
 <Message>
 
-  # 10 Skill applications per enterprise
+# 10 Skill applications per enterprise
 
-  There is a limit of 10 enabled Skills per enterprise at any given time. Please
-  contact your Box Sales Representative to enable more skills in an enterprise.
+There is a limit of 10 enabled Skills per enterprise at any given time. Please
+contact your Box Sales Representative to enable more skills in an enterprise.
 
 </Message>
 

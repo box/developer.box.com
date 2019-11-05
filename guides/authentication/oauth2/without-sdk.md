@@ -58,7 +58,7 @@ using the `As-User` header.
 Before continuing you will need to have completed the following steps.
 
 * Create a Box Application within the developer console with the OAuth 2.0
-  authentication method.
+authentication method.
 * Copy the `client_id` and `client_secret` values and keep them handy.
 
 ## Parameters
@@ -79,7 +79,7 @@ The first step is to configure the authorization URL of your application.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -91,8 +91,8 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -104,8 +104,8 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 base_url = 'https://account.box.com/api/oauth2/authorize'
@@ -113,8 +113,8 @@ client_id = '[CLIENT_ID]';
 authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
@@ -122,12 +122,12 @@ var clientId = "[CLIENT_ID]";
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <CTA to="e://get-authorize">
-  Learn more about the authorization URL
+Learn more about the authorization URL
 
 </CTA>
 
@@ -139,15 +139,15 @@ documentation provides extensive guidance on this topic.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 // redirectTo(authorizationUrl);
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -159,23 +159,23 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 // redirect(auth_url, code=302)
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 // res.redirect(authorize_url)
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -183,9 +183,9 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
 
-  Additionalquery parameters can be passed along when redirecting the user to
- limit down the scope, or pass along some extra state. See the [reference
- documentation](endpoint://get-authorize) for more information.
+Additional query parameters can be passed along when redirecting the user to
+limit down the scope, or pass along some extra state. See the [reference
+documentation](endpoint://get-authorize) for more information.
 
 </Message>
 
@@ -196,7 +196,7 @@ they logged in they are presented with a screen to approve your application.
 
 <ImageFrame border center shadow width="400">
 
-  ![Example OAuth 2.0 approval screen](./oauth2-grant.png)
+![Example OAuth 2.0 approval screen](./oauth2-grant.png)
 
 </ImageFrame>
 
@@ -217,7 +217,7 @@ The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 using System.Net;
@@ -247,8 +247,8 @@ var token = JsonConvert.DeserializeObject<Token>(data);
 var accessToken = token.access_token;
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 String authenticationUrl = "https://api.box.com/oauth2/token";
@@ -279,8 +279,8 @@ Token token = (Token) gson.fromJson(response, Token.class);
 String accessToken = token.access_token;
 ```
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 authentication_url = "https://api.box.com/oauth2/token";
@@ -297,8 +297,8 @@ response = urlopen(request).read()
 access_token = json.loads(response)['access_token']
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 let accessToken = await axios.post(
@@ -313,7 +313,7 @@ let accessToken = await axios.post(
 .then(response => response.data.access_token)
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

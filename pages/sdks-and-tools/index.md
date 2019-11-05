@@ -61,23 +61,23 @@ preview files on Box.
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
 | Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                                |
 
-  <!-- markdownlint-enable line-length -->
+<!-- markdownlint-enable line-length -->
 
-  <Message type='notice'>
+<Message type='notice'>
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features.  For support with these
 projects please visit GitHub or [our Platform support
 forum][forum]."
 
-  </Message>
+</Message>
 
 ## Unofficial & Community Tools
 
 The following tools are developed by Box and maintained by Box and its community
 members. These tools do not receive regular product updates or security updates.
 
-  <!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable line-length -->
 
 | Platform                        | Maintained?                           | Parity  |
 | ------------------------------- | ------------------------------------- | ------- |
@@ -86,7 +86,7 @@ members. These tools do not receive regular product updates or security updates.
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
 | [Chrome App SDK][chromesdk]     | Limited, by Box and community members | Partial |
 
-  <!-- markdownlint-enable line-length -->
+<!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
 

@@ -39,7 +39,7 @@ permissions and manage both Managed Users and App Users.
 
 <Message type='warning'>
 
-  # Admin Approval
+# Admin Approval
 
 With the right scopes enabled a Service Account can perform many of the tasks that
 Admin Users are able to perform. For this reason JWT applications need explicit
@@ -56,8 +56,8 @@ This Service Account has some additional restrictions that a Service Account
 within a Custom App does not.
 
 - All content used within the Partner Integration must be uploaded and owned by
-  this Service Account
+this Service Account
 - The Service Account can not access any other user's information or content
 - The Service Account can not create or otherwise manage any type of new user
 - The Service Account can only access a subset of APIs related to previewing
-  content
+content

@@ -26,7 +26,7 @@ file and downloading it accordingly.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 using System;
@@ -81,8 +81,8 @@ namespace BoxDownloadAllFiles {
 }
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -146,8 +146,8 @@ public class Playground {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 "use strict";
@@ -244,7 +244,7 @@ function autoPage(iterator) {
 }
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

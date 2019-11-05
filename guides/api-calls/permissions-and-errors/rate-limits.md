@@ -25,14 +25,14 @@ third-party services or users.
 There are currently a few distinct rate limits in place within the Box API.
 
 * General API calls
-  * 1000 API requests per minute, per user
+* 1000 API requests per minute, per user
 * Uploads
-  * 240 file upload requests per minute, per user
+* 240 file upload requests per minute, per user
 * Search
-  * 360 search requests per minute, per user, to the
-    [search endpoint](endpoint://get_search)
-  * An additional limit of 60 searches per minute, per user
-  * An additional 720 searches per minute, per enterprise
+* 360 search requests per minute, per user, to the
+[search endpoint](endpoint://get_search)
+* An additional limit of 60 searches per minute, per user
+* An additional 720 searches per minute, per enterprise
 
 ## Rate limit error
 

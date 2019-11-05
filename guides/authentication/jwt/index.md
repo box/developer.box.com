@@ -57,4 +57,4 @@ that:
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data within the application's Box account and not within the the
-  user's Box account
+user's Box account

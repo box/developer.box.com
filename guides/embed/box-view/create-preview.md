@@ -51,23 +51,23 @@ When generating the embed URL directly from the APIs, use the
 
 <Tabs>
 
-  <Tab title='cURL'>
+<Tab title='cURL'>
 
 ```curl
 curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
   -H "Authorization: Bearer [APP_TOKEN]"
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 ```dotnet
 String fileId = "12345678";
 Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 String fileID = "12345678";
@@ -75,16 +75,16 @@ BoxFile file = new BoxFile(api, fileID);
 URL embedLink = file.getPreviewLink();
 ```
 
-  </Tab>
-  <Tab title='Python'>
+</Tab>
+<Tab title='Python'>
 
 ```python
 file_id = '12345678'
 embed_url = client.file(file_id).get_embed_url()
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 const fileId = '12345678';
@@ -93,7 +93,7 @@ client.files.getEmbedLink(fileId).then(embedURL => {
 });
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -108,8 +108,8 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
 
 <Message type='warning'>
 
-  For security reasons, the generated embed link will expire after 1 minute and
-  should be immediately embedded in the app once generated.
+For security reasons, the generated embed link will expire after 1 minute and
+should be immediately embedded in the app once generated.
 
 </Message>
 
@@ -134,7 +134,7 @@ To set up the Preview Element, start by installing the required components for
 the Content Preview Element.
 
 <CTA to='guide://embed/ui-elements/installation'>
-  Install Box Elements and Preview
+Install Box Elements and Preview
 
 </CTA>
 
@@ -159,9 +159,9 @@ application or a downscoped version of the token.
 
 <Message type='warning'>
 
-  Due to the elevated privileges of the primary access token it's highly
-  recommended that you use a downscoped version of the token in the Javascript
-  code. See
-  [best practices for downscoping](guide://embed/box-view/best-practices#use-downscoped-tokens).
+Due to the elevated privileges of the primary access token it's highly
+recommended that you use a downscoped version of the token in the Javascript
+code. See
+[best practices for downscoping](guide://embed/box-view/best-practices#use-downscoped-tokens).
 
 </Message>

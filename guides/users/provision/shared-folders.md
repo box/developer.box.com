@@ -23,7 +23,7 @@ folders. We'll use a Market Department as an example.
 
 <Tabs>
 
-  <Tab title='marketing_folders.json'>
+<Tab title='marketing_folders.json'>
 
 ```json
 {
@@ -49,7 +49,7 @@ folders. We'll use a Market Department as an example.
 }
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -65,7 +65,7 @@ create two groups and give them these permissions.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 "use strict";
@@ -228,8 +228,8 @@ async function handleFolderCollaborationConflictError(
 }
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -382,8 +382,8 @@ public class BoxPlayground {
 }
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -558,15 +558,15 @@ namespace BoxPlayground {
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
-  <Tab title='CLI'>
+</Tab>
+<Tab title='CLI'>
 
 ```shell
 box groups:create "Marketing Managers" --invite=admins_only --view-members=admins_only
 box groups:create "Marketing Project Managers" --invite=admins_and_members --view-members=admins_and_members
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -576,7 +576,7 @@ account.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -652,8 +652,8 @@ async function handleGroupMembershipConflictError(e,
 
 <!-- markdownlint-disable line-length -->
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -720,8 +720,8 @@ public class BoxPlayground {
 }
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 ```csharp
 using System;
@@ -794,13 +794,13 @@ namespace BoxPlayground {
 }
 ```
 
-  </Tab>
-  <Tab title='CLI'>
+</Tab>
+<Tab title='CLI'>
 
 ```shell
 box groups:membership:add $user_id $group_id --role=admin
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>

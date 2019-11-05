@@ -20,7 +20,7 @@ cases we recommend using one of the ways to embed the Box experience straight
 into your application.
 
 <CTA to="g://embed/">
-  Learn more about embedding Box
+Learn more about embedding Box
 
 </CTA>
 
@@ -35,6 +35,6 @@ If this user does not have access to the file the application will receive a
 `404 Not Found` error.
 
 <CTA to="g://authentication/user-types">
-  Learn more about different User Types
+Learn more about different User Types
 
 </CTA>

@@ -23,18 +23,18 @@ Working with Metadata requires a developer to work with three
 distinct types of resources.
 
 * **Templates:**  A [Metadata Template][template] describes a set of key/value
-  pairs that can be assigned to a file. For example, an `invoiceData` template
-  might hold data about an invoice, having a field for the invoice ID as well as
-  the purchase order ID.
+pairs that can be assigned to a file. For example, an `invoiceData` template
+might hold data about an invoice, having a field for the invoice ID as well as
+the purchase order ID.
 * **Instances:** A [Metadata Instance][instance] describes the relation between
-  a template and a file or folder, including the metadata values. For example, a
-  user might have assigned an `invoiceData` metadata template to a file and
-  provided 2 values, one for the invoice ID and one for the purchase order ID.
+a template and a file or folder, including the metadata values. For example, a
+user might have assigned an `invoiceData` metadata template to a file and
+provided 2 values, one for the invoice ID and one for the purchase order ID.
 * **Cascades**: A [Metadata Cascade Policy][cascade] describes automatic
-  cascading behavior for a metadata template on a folder. For example, a user
-  might assign the same `invoiceData` metadata template to a project folder
-  (including the 2 values), allowing them to automatically apply to all the
-  files and folders within that folder.
+cascading behavior for a metadata template on a folder. For example, a user
+might assign the same `invoiceData` metadata template to a project folder
+(including the 2 values), allowing them to automatically apply to all the
+files and folders within that folder.
 
 ## Reasons to use metadata
 

@@ -21,7 +21,7 @@ The Box Node SDK can be used to make API calls to the Box APIs in a Node
 project.
 
 <CTA to="https://github.com/box/box-node-sdk">
-  Learn more about the Node SDK on GitHub
+Learn more about the Node SDK on GitHub
 
 </CTA>
 
@@ -43,7 +43,7 @@ yarn add box-node-sdk
 ```
 
 <CTA to="https://github.com/box/box-node-sdk">
-  Learn more about the Node SDK on GitHub
+Learn more about the Node SDK on GitHub
 
 </CTA>
 

@@ -30,7 +30,7 @@ is authenticated by allowing the passing in of an initialized SDK client.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 using System;
@@ -218,8 +218,8 @@ namespace BoxPlayground
 }
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -484,8 +484,8 @@ public class BoxFolderTreeBuilder {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 class BoxFolderTreeBuilder {
@@ -615,7 +615,7 @@ folderTreeBuilder.buildFolderTreeWithFlatLists()
   })
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

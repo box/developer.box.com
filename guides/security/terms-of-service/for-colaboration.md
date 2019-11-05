@@ -24,14 +24,14 @@ parameter `fields=acceptance_requirements_status`.
 
 <Tabs>
 
-  <Tab title='cURL'>
+<Tab title='cURL'>
 
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -79,8 +79,8 @@ result.
 
 <Message>
 
-  The `terms_of_service` information is returned within the
-  `acceptance_requirements` even if they have already been accepted by the user.
+The `terms_of_service` information is returned within the
+`acceptance_requirements` even if they have already been accepted by the user.
 
 </Message>
 

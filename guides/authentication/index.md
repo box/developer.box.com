@@ -36,7 +36,7 @@ Custom Apps instead and use the relevant authentication method where needed.
 </Message>
 
 <CTA to="guide://authentication/select">
-  Learn how to select an authorization type
+Learn how to select an authorization type
 
 </CTA>
 

@@ -26,7 +26,7 @@ file and uploading it accordingly.
 
 <Tabs>
 
-  <Tab title='.NET'>
+<Tab title='.NET'>
 
 ```dotnet
 using System;
@@ -137,8 +137,8 @@ namespace BoxPlayground {
 }
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 public class UploadAllFilesInFolder {
@@ -253,8 +253,8 @@ public class UploadAllFilesInFolder {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 "use strict";
@@ -461,14 +461,14 @@ function handleFolderConflictError(e) {
 }
 ```
 
-  </Tab>
-  <Tab title='CLI'>
+</Tab>
+<Tab title='CLI'>
 
 ```sh
 box folders:upload ./folder_name_to_upload --parent-folder=$folder_id
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

@@ -37,20 +37,20 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
 <Message warning>
 
-  # CORS
+# CORS
 
-  For this to work the application needs to have the domain of the web site
-  hosting this file whitelisted in the [CORS settings][cors].
+For this to work the application needs to have the domain of the web site
+hosting this file whitelisted in the [CORS settings][cors].
 
 </Message>
 
 <Message warning>
 
-  # Downscope Token
+# Downscope Token
 
-  Using this method would expose the Access Token to the end user, allowing them
-  to potentially use this token to do more than intended. For this reason we
-  recommend [downscoping][downscoping] this token accordingly.
+Using this method would expose the Access Token to the end user, allowing them
+to potentially use this token to do more than intended. For this reason we
+recommend [downscoping][downscoping] this token accordingly.
 
 </Message>
 

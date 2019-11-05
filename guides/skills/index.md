@@ -33,7 +33,7 @@ flow:
 
 <Message>
 
-  # Skills Kit
+# Skills Kit
 
 To simplify your integration with Box Skills, a [Skills
 Kit](guide://skills/kit) has been made available to obfuscate many

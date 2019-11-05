@@ -23,7 +23,7 @@ generic Toolkit method:
 
 <Tabs>
 
-  <Tab title='Apex'>
+<Tab title='Apex'>
 
 ```java
 // Instantiate the Toolkit object
@@ -54,7 +54,7 @@ request.setHeader('Content-Type', 'application/json');
 HttpResponse response = toolkit.sendRequest(request);
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -68,7 +68,7 @@ The following code will create a folder for a specific Salesforce record Id:
 
 <Tabs>
 
-  <Tab title='Apex'>
+<Tab title='Apex'>
 
 ```java
 // Instantiate the Toolkit object
@@ -87,7 +87,7 @@ system.debug('most recent error: ' + boxToolkit.mostRecentError);
 boxToolkit.commitChanges();
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -102,7 +102,7 @@ template), and collaborate the current user:
 
 <Tabs>
 
-  <Tab title='Apex'>
+<Tab title='Apex'>
 
 ```java
 // Instantiate the Toolkit object
@@ -129,7 +129,7 @@ system.debug('new collaboration id: ' + collabId);
 boxToolkit.commitChanges();
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

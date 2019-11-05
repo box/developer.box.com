@@ -21,7 +21,7 @@ The Box Python SDK can be used to make API calls to the Box APIs in a Python
 project.
 
 <CTA to="https://github.com/box/box-python-sdk">
-  Learn more about the Python SDK on GitHub
+Learn more about the Python SDK on GitHub
 
 </CTA>
 
@@ -44,7 +44,7 @@ pip install "boxsdk[jwt]"
 ```
 
 <CTA to="https://github.com/box/box-python-sdk">
-  Learn more about the Python SDK on GitHub
+Learn more about the Python SDK on GitHub
 
 </CTA>
 

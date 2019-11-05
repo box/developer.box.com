@@ -43,10 +43,10 @@ make API calls on behalf of the application.
 
 <Message notice>
 
-  The access token acquired through JWT is inherently tied to the Service
-  Account for the application. Any API call made with this token will seem to
-  come from this application and will not have access to files and folders from
-  other users without explicitly getting access them.
+The access token acquired through JWT is inherently tied to the Service
+Account for the application. Any API call made with this token will seem to
+come from this application and will not have access to files and folders from
+other users without explicitly getting access them.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `As-User` header or by requesting a
@@ -60,7 +60,7 @@ Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
 - Create and download the private key configuration file for your application
-  and save it as `config.json`
+and save it as `config.json`
 - Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
@@ -70,7 +70,7 @@ the application's private key and other details. The following is an example.
 
 <Tabs>
 
-  <Tab title='config.json'>
+<Tab title='config.json'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -91,7 +91,7 @@ the application's private key and other details. The following is an example.
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -99,7 +99,7 @@ To use this object in the application it needs to be read from file.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 using System;
@@ -129,9 +129,9 @@ var json = reader.ReadToEnd();
 var config = JsonConvert.DeserializeObject<Config>(json);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 import java.io.FileReader;
@@ -162,9 +162,9 @@ Gson gson = new GsonBuilder().create();
 Config config = (Config) gson.fromJson(reader, Config.class);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 import json
@@ -173,8 +173,8 @@ import os
 config = json.load(open('config.json'))
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 const fs = require("fs");
@@ -182,8 +182,8 @@ const fs = require("fs");
 const config = JSON.parse(fs.readFileSync("config.json"));
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 require 'json'
@@ -193,21 +193,21 @@ config = JSON.parse(
 )
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $json = file_get_contents('config.json');
 $config = json_decode($json);
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message>
 
-  # Parsing JSON
+# Parsing JSON
 
 In some programming languages there is more than one way to read and parse
 JSON from a file. Refer to guides on your preferred programming language for
@@ -224,7 +224,7 @@ object.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 using System.Security.Cryptography;
@@ -282,9 +282,9 @@ public byte[] ConvertRSAParametersField(BigInteger n, int size)
 var key = CreateRSAProvider(ToRSAParameters(keyParams));
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 import java.io.StringReader;
@@ -319,9 +319,9 @@ PrivateKeyInfo keyInfo
 PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 from cryptography.hazmat.backends import default_backend
@@ -339,8 +339,8 @@ key = load_pem_private_key(
 )
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 let key = {
@@ -349,8 +349,8 @@ let key = {
 };
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 require "openssl"
@@ -362,8 +362,8 @@ key = OpenSSL::PKey::RSA.new(
 )
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $private_key = $config->boxAppSettings->appAuth->privateKey;
@@ -371,13 +371,13 @@ $passphrase = $config->boxAppSettings->appAuth->passphrase;
 $key = openssl_pkey_get_private($private_key, $passphrase);
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message>
 
-  # An alternative to loading private key from file
+# An alternative to loading private key from file
 
 the application might not want to keep both the private key and password
 stored on disk. An alternative option would be to pass in the password as an
@@ -397,7 +397,7 @@ sometimes also referred to as the `payload`.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 using System.IdentityModel.Tokens.Jwt;
@@ -417,9 +417,9 @@ var claims = new List<Claim>{
 };
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 import org.jose4j.jwt.JwtClaims;
@@ -435,9 +435,9 @@ claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 import time
@@ -455,8 +455,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 const crypto = require("crypto");
@@ -473,8 +473,8 @@ let claims = {
 };
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 require 'securerandom'
@@ -491,8 +491,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $authenticationUrl = 'https://api.box.com/oauth2/token';
@@ -508,7 +508,7 @@ $claims = [
 ];
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -533,7 +533,7 @@ encryption algorithm and the ID of the public key used to sign the claims.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 using Microsoft.IdentityModel.Tokens;
@@ -559,9 +559,9 @@ var tokenHandler = new JwtSecurityTokenHandler();
 string assertion = tokenHandler.WriteToken(jst);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 import org.jose4j.jws.AlgorithmIdentifiers;
@@ -577,9 +577,9 @@ jws.setHeader("kid", config.boxAppSettings.appAuth.publicKeyID);
 String assertion = jws.getCompactSerialization();
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 import jwt
@@ -596,8 +596,8 @@ assertion = jwt.encode(
 )
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 const jwt = require('jsonwebtoken')
@@ -612,8 +612,8 @@ let headers = {
 let assertion = jwt.sign(claims, key, headers)
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 require 'jwt'
@@ -621,15 +621,15 @@ keyId = appAuth['publicKeyID']
 assertion = JWT.encode(claims, key, 'RS512', { kid: keyId })
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 use \Firebase\JWT\JWT;
 $assertion = JWT::encode($claims, $key, 'RS512');
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -662,7 +662,7 @@ assertion as a parameter.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 using System.Net;
@@ -693,9 +693,9 @@ var token = JsonConvert.DeserializeObject<Token>(data);
 var accessToken = token.access_token;
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 import java.util.ArrayList;
@@ -739,9 +739,9 @@ Token token = (Token) gson.fromJson(response, Token.class);
 String accessToken = token.access_token;
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 import json
@@ -762,8 +762,8 @@ response = urlopen(request).read()
 access_token = json.loads(response)['access_token']
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 const axios = require('axios')
@@ -781,8 +781,8 @@ let accessToken = await axios.post(
 .then(response => response.data.access_token)
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 require 'json'
@@ -805,8 +805,8 @@ response = http.request(request)
 access_token = JSON.parse(response.body)['access_token']
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 use GuzzleHttp\Client;
@@ -827,7 +827,7 @@ $data = $response->getBody()->getContents();
 $access_token = json_decode($data)->access_token;
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 

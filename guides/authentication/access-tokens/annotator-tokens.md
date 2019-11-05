@@ -45,10 +45,10 @@ unique user ID and display name.
 
 <Message warning>
 
-  Since a preview session generated using an annotator token is tied to a
-  specific external user, it is strongly recommended that an application
-  generates different preview sessions using different annotator tokens for
-  different end users of an application.
+Since a preview session generated using an annotator token is tied to a
+specific external user, it is strongly recommended that an application
+generates different preview sessions using different annotator tokens for
+different end users of an application.
 
 </Message>
 
@@ -68,7 +68,7 @@ JWT claim with the following data.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var claims = new List<Claim>{
@@ -79,9 +79,9 @@ var claims = new List<Claim>{
 };
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 JwtClaims claims = new JwtClaims();
@@ -94,9 +94,9 @@ claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 claims = {
@@ -110,8 +110,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 let claims = {
@@ -125,8 +125,8 @@ let claims = {
 };
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 claims = {
@@ -140,8 +140,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $claims = [
@@ -156,7 +156,7 @@ $claims = [
 ];
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -177,7 +177,7 @@ as well as a set of scopes, and the resource for which to create the token.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var content = new FormUrlEncodedContent(new[]
@@ -199,9 +199,9 @@ var content = new FormUrlEncodedContent(new[]
 });
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -222,9 +222,9 @@ params.add(new BasicNameValuePair(
   "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"));
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 params = urlencode({
@@ -238,8 +238,8 @@ params = urlencode({
 }).encode()
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 let accessToken = await axios
@@ -258,8 +258,8 @@ let accessToken = await axios
   .then(response => response.data.access_token);
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 params = URI.encode_www_form({
@@ -273,8 +273,8 @@ params = URI.encode_www_form({
 })
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $params = [
@@ -288,7 +288,7 @@ $params = [
 ];
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -309,7 +309,7 @@ active token for another token.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 var options = {
@@ -330,6 +330,6 @@ client
   });
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>

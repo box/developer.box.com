@@ -28,17 +28,17 @@ folders in an application.
 The available UI Elements are:
 
 * [Content Explorer][explorer]- Allow users to search and browse through files
-  and folders
+and folders
 * [Content Open With][openwith] - Allow users to open content stored in box with
-  a partner application using an embedded dropdown
+a partner application using an embedded dropdown
 * [Content Picker][picker] - Allow users to select files or folders from their
-  Box account
+Box account
 * [Content Preview][preview] - Display interactive viewers for documents,
-  images, audio, video, and more
+images, audio, video, and more
 * [Content Sidebar][sidebar] - Display a sidebar for file metadata and activity
-  feed information
+feed information
 * [Content Uploader][uploader] - Allow users to upload files by selecting or
-  using drag-and-drop
+using drag-and-drop
 
 UI Elements can be used in isolation or joined together to construct common user
 flows with content, such as uploading and then viewing a file.

@@ -36,7 +36,7 @@ either through NPM or the Box CDN.
 
 <Message>
 
-  # Browser support
+# Browser support
 
 UI elements have [limited support](g://embed/ui-elements/browser) for
 older browsers. Make sure to add the right polyfills for your targeted browsers.
@@ -53,7 +53,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
-  Learn about selecting an authentication method
+Learn about selecting an authentication method
 
 </CTA>
 
@@ -80,15 +80,15 @@ Use the navigation arrows to preview different file types.
 <!-- markdownlint-disable line-length -->
 
 <iframe
-  width="100%"
-  height="560"
-  scrolling="no"
-  frameborder="no"
-  title="Box Content Preview Demo"
-  src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+width="100%"
+height="560"
+scrolling="no"
+frameborder="no"
+title="Box Content Preview Demo"
+src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
@@ -250,11 +250,11 @@ preview.removeListener(EVENTNAME, listener);
 `EVENTNAME` can be one of the following:
 
 - `viewer` event will be fired when we have the viewer instance first available.
-  This will be the same object that is also a property included in the `load`
-  event. Preview fires this event before `load` so that clients can attach their
-  listeners before the `load` event is fired.
+This will be the same object that is also a property included in the `load`
+event. Preview fires this event before `load` so that clients can attach their
+listeners before the `load` event is fired.
 - `load` event will be fired on every preview load when `show()` is called or if
-  inter-preview navigation occurs. The event data will contain:
+inter-preview navigation occurs. The event data will contain:
 
 ```js
 error: 'message', // Error message if any error occurred while loading
@@ -264,11 +264,11 @@ file: {...}       // Box file object with properties defined in file.js
 ```
 
 - `navigate` event will be fired when navigation happens. The event includes the
-  file ID of the file being navigated to, and this event will fire before
-  `load`.
+file ID of the file being navigated to, and this event will fire before
+`load`.
 - `notification` event will be fired when either the preview wrapper or one of
-  the viewers wants to notify something like a warning or non-fatal error. The
-  event data will contain:
+the viewers wants to notify something like a warning or non-fatal error. The
+event data will contain:
 
 ```js
 message: 'message', // Message to show
@@ -276,9 +276,9 @@ type: 'warning'    // 'warning', 'notice', or 'error'
 ```
 
 - `viewerevent` Each viewer will fire its own sets of events. For example, the
-  Image viewer will fire `rotate` or `resize`, etc. while other viewers may fire
-  another set of events. The preview wrapper will also re-emit events at the
-  preview level, with event data containing:
+Image viewer will fire `rotate` or `resize`, etc. while other viewers may fire
+another set of events. The preview wrapper will also re-emit events at the
+preview level, with event data containing:
 
 ```js
 event: EVENTNAME,         // Event name
@@ -359,9 +359,9 @@ more, see [Special Scopes for Box UI Elements][scopes].
 
 <Message>
 
-  # Enablehighlight annotations with scopes The highlight scope is not included
- with `annotation_edit` and `annotation_view_all` scopes. The downscoped access
- token will need to include the `item_download` scope to enable highlighting.
+# Enable highlight annotations with scopes The highlight scope is not included
+with `annotation_edit` and `annotation_view_all` scopes. The downscoped access
+token will need to include the `item_download` scope to enable highlighting.
 
 </Message>
 

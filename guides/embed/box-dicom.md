@@ -42,7 +42,7 @@ The current version for Box DICOM is
 
 <Message warning>
 
-  # Update to `v1.3.0` or higher
+# Update to `v1.3.0` or higher
 
 If you are using a version of the DICOM Viewer prior to `v1.3.0`, please
 upgrade to `v1.3.0` or higher.
@@ -108,8 +108,8 @@ The following is an example of an `iframe` embed.
 
 <Message warning>
 
-  # `allowfullscreen` is required The `allowfullscreen` attribute is required
-  for the Box DICOM viewer's full-screen function to work properly.
+# `allowfullscreen` is required The `allowfullscreen` attribute is required
+for the Box DICOM viewer's full-screen function to work properly.
 
 </Message>
 
@@ -120,15 +120,15 @@ The following is an example of an `iframe` embed.
 <!-- markdownlint-disable line-length -->
 
 <iframe
-  width="100%"
-  height="550"
-  scrolling="no"
-  title="Box DICOM JS SDK Viewer Demo"
-  src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+width="100%"
+height="550"
+scrolling="no"
+title="Box DICOM JS SDK Viewer Demo"
+src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>

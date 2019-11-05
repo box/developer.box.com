@@ -29,7 +29,7 @@ accepted by Box before it uploads any bytes. It can both be used for new files,
 as well as uploading new versions of existing files.
 
 <CTA to='g://uploads/check'>
-  Learn more about pre-flight checks
+Learn more about pre-flight checks
 
 </CTA>
 

@@ -22,7 +22,7 @@ isIndex: false
 A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to='g://authentication/oauth2'>
-  Learn how OAuth 2.0 authentication works
+Learn how OAuth 2.0 authentication works
 
 </CTA>
 
@@ -32,7 +32,7 @@ To set up a Custom App using OAuth 2.0 authentication you will need to pass the
 following requirements.
 
 * You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
@@ -58,7 +58,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](../images/auth-types.png)
+![Auth selection screen](../images/auth-types.png)
 
 </ImageFrame>
 
@@ -69,14 +69,14 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-name.png)
+![App name form](../images/app-name.png)
 
 </ImageFrame>
 
 <Message>
 
-  Your application is now configured and ready to be used. You can use the
-  [Developer Token][devtoken] to immediately make API calls to your own account.
+Your application is now configured and ready to be used. You can use the
+[Developer Token][devtoken] to immediately make API calls to your own account.
 
 </Message>
 
@@ -97,7 +97,7 @@ running on `localhost`.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-redirect-uri.png)
+![App name form](../images/app-redirect-uri.png)
 
 </ImageFrame>
 
@@ -108,7 +108,7 @@ the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-scopes.png)
+![App name form](../images/app-scopes.png)
 
 </ImageFrame>
 
@@ -124,7 +124,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App name form](../images/app-cors.png)
+![App name form](../images/app-cors.png)
 
 </ImageFrame>
 

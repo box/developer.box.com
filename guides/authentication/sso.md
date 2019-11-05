@@ -82,9 +82,9 @@ therefore SSO is not involved.
 
 <Message>
 
-  Even when using Skills, a user uploading a file to a folder that might trigger
-  a Skill event would still need to log in to the web or mobile app. This log in
-  would require them to use SSO where needed.
+Even when using Skills, a user uploading a file to a folder that might trigger
+a Skill event would still need to log in to the web or mobile app. This log in
+would require them to use SSO where needed.
 
 </Message>
 

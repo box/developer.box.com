@@ -19,11 +19,11 @@ Although we try to make sure all variations work, we've noticed a few issues
 with embedded React in Markdown.
 
 1. React components can be self closing or have an open and close tag. We try to
-   fix this for you on build time.
+fix this for you on build time.
 2. Nested React components work, but it is advised not to indent the body, as
-   indented content is treated as a blockquote in Markdown.
+indented content is treated as a blockquote in Markdown.
 3. React component names are not case sensitive. Feel free to use `message` or
-   `Message`.
+`Message`.
 
 ## Messages
 
@@ -46,9 +46,9 @@ omit the type.
 
 <H>
 
-  <Message>
+<Message>
 
-  A simple note
+A simple note
 
 </Message>
 
@@ -72,7 +72,7 @@ The next level of message is a warning.
 
 <Message warning>
 
-  A warning note
+A warning note
 
 </Message>
 
@@ -96,7 +96,7 @@ The final level of message is a danger warning.
 
 <Message danger>
 
-  Danger zone!
+Danger zone!
 
 </Message>
 
@@ -118,9 +118,9 @@ A message can have a title.
 
 <Message>
 
-  # A title
+# A title
 
-  A simple note
+A simple note
 
 </Message>
 
@@ -195,15 +195,15 @@ multiple `Tab` items with titles.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
-    Node
+Node
 
-  </Tab>
-  <Tab title='.NET'>
-    .NET
+</Tab>
+<Tab title='.NET'>
+.NET
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -267,7 +267,7 @@ Links can be wrapped in a Call to action to create visible buttons.
 <H>
 
 <CTA to='guide://files/advanced/copy'>
-  Learn more about copying files
+Learn more about copying files
 
 </CTA>
 
@@ -355,7 +355,7 @@ An image can be easily wrapped into a frame.
 
 <ImageFrame border center shadow width='200'>
 
-  ![Image](./box.jpg)
+![Image](./box.jpg)
 
 </ImageFrame>
 

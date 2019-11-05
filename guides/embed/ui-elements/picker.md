@@ -30,7 +30,7 @@ either through NPM or the Box CDN.
 
 <Message>
 
-  # Browser support
+# Browser support
 
 UI elements have [limited support](g://embed/ui-elements/browser) for
 older browsers. Make sure to add the right polyfills for your targeted browsers.
@@ -47,7 +47,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
-  Learn about selecting an authentication method
+Learn about selecting an authentication method
 
 </CTA>
 
@@ -95,14 +95,14 @@ and JWT.
 ### File Selection Demo
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box File Picker"
-  src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box File Picker"
+src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
@@ -110,14 +110,14 @@ and JWT.
 ### Folder Selection Demo
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box Folder Picker"
-  src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box Folder Picker"
+src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
@@ -125,14 +125,14 @@ and JWT.
 ### File Selection + Preview Demo
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box File Picker + Box Preview"
-  src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box File Picker + Box Preview"
+src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
@@ -140,21 +140,21 @@ and JWT.
 ### File Selection as a popup
 
 <iframe
-  height="560"
-  scrolling="no"
-  title="Box File Picker and Uploader as popups"
-  src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
+height="560"
+scrolling="no"
+title="Box File Picker and Uploader as popups"
+src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+frameborder="no"
+allowtransparency="true"
+allowfullscreen="true"
+style="width: 100%;"
 >
 
 </iframe>
 
 <Message>
 
-  # Access Token
+# Access Token
 
 These demos may not fully function until you provide a valid access token. For
 testing purposes, you can use your temporary developer token. This will need

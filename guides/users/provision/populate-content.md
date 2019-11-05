@@ -21,7 +21,7 @@ anything under the `skel` directly to the new user's root directory.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 'use strict'
@@ -169,8 +169,8 @@ async function copySkelDirectoryForUser(userID, skelFolderId, boxClient) {
 }
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -299,8 +299,8 @@ public class BoxPlayground {
 }
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 ```csharp
 using System;
@@ -448,6 +448,6 @@ namespace BoxPlayground {
 }
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>

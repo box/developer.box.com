@@ -24,7 +24,7 @@ The SDK is available for both .NET Framework 4.5 and .NET Core 1.0 or
 above. The installation of the SDK depends on the framework used.
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
-  Learn more about the .NET SDK on GitHub
+Learn more about the .NET SDK on GitHub
 
 </CTA>
 
@@ -47,7 +47,7 @@ PM> Install-Package Box.V2.Core
 ```
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
-  Learn more about the .NET SDK on GitHub
+Learn more about the .NET SDK on GitHub
 
 </CTA>
 

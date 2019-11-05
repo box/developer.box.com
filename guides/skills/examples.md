@@ -35,7 +35,7 @@ Want to submit your project? Please review the
 [Contribution Guidelines][contributing_guidelines].
 
 <CTA to="https://github.com/box-community">
-  See a full directory of Skills samples on GitHub
+See a full directory of Skills samples on GitHub
 
 </CTA>
 

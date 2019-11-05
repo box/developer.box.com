@@ -61,7 +61,7 @@ events are only available for files, while others are only available for folders
 
 <Message type='notice'>
 
-  When the permissions on an item prevent an action from occurring,
-  no notification is sent for the attempted action.
+When the permissions on an item prevent an action from occurring,
+no notification is sent for the attempted action.
 
 </Mesage>

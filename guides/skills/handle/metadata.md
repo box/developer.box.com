@@ -20,7 +20,7 @@ step is to write data back to the file stored on Box as metadata. This process
 involves three steps:
 
 1. Set up a Box client using the write token sent via the original
-   [event payload](guide://skills/handle/payload).
+[event payload](guide://skills/handle/payload).
 2. Prepare the Skills metadata in the appropriate format.
 3. Write the metadata back to the file.
 
@@ -69,20 +69,20 @@ Within the sample above are several dynamic values, wrapped as `{{ VALUE }}`,
 which will need to be replaced. These values are:
 
 - `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
-  current timestamp.
+current timestamp.
 - `SKILLS_CARD_TYPE`: The type of card that would like to create. See
-  [Skills Card Types](#skills-card-types) for the available options.
+[Skills Card Types](#skills-card-types) for the available options.
 - `CARD_TITLE`: The title of the card that is being written. This may be
-  anything that you wish to title the content as.
+anything that you wish to title the content as.
 - `SKILL_ID`: The ID of the Skill. This should be set to your Skills
-  application name.
+application name.
 - `FILE_ID`: The ID of the file that the metadata is being written to. This is
-  extracted from the [event payload](guide://skills/handle/payload).
+extracted from the [event payload](guide://skills/handle/payload).
 - `DURATION_IN_SECONDS` (OPTIONAL): This optional parameter is used only if you
-  have content with a duration, such as video or audio files. If used, this
-  should be the length of the content in seconds.
+have content with a duration, such as video or audio files. If used, this
+should be the length of the content in seconds.
 - `CARD_ENTRIES`: The data that comes from the machine learning system. This
-  value is an array of objects. See [Skills Card Entries](#skills-card-entries)
+value is an array of objects. See [Skills Card Entries](#skills-card-entries)
 
 ### Skills Card Types
 
@@ -132,7 +132,7 @@ The keyword card entries contain two values per object:
 
 <ImageFrame border center shadow width="200">
 
-  ![Image](./skills-card-transcript.png)
+![Image](./skills-card-transcript.png)
 
 </ImageFrame>
 
@@ -140,9 +140,9 @@ The transcript card entries contain several values:
 
 - `text`: The text to display in the transcript line entry.
 - `appears`: An array of objects containing the start and end time for the line
-  entry.
-  - `start`: The start time in seconds.
-  - `end`: The end time in seconds.
+entry.
+- `start`: The start time in seconds.
+- `end`: The end time in seconds.
 
 ```json
 [
@@ -156,7 +156,7 @@ The transcript card entries contain several values:
 
 <ImageFrame border center shadow width="200">
 
-  ![Image](./skills-card-faces.png)
+![Image](./skills-card-faces.png)
 
 </ImageFrame>
 
@@ -164,9 +164,9 @@ The faces card entries contain several values:
 
 - `text`: The text to display for the item.
 - `appears`: An array of objects containing the start and end time for the line
-  entry.
-  - `start`: The start time in seconds.
-  - `end`: The end time in seconds.
+entry.
+- `start`: The start time in seconds.
+- `end`: The end time in seconds.
 - `image_url` (OPTIONAL): An image to display beside the item.
 
 ```json
@@ -197,10 +197,10 @@ to `boxSkillsCards` and the metadata to the object that was created above.
 
 <Message type="notice">
 
-  If you are applying metadata to a file that already has it applied you will
-  receive for `409 Conflict: tuple_already_exists` error. When creating metadata
-  on a file you should catch any errors. If that error occurs you will instead
-  want to make a request to [update
-  metadata](endpoint://put_metadata_templates_id_id) on the file.
+If you are applying metadata to a file that already has it applied you will
+receive for `409 Conflict: tuple_already_exists` error. When creating metadata
+on a file you should catch any errors. If that error occurs you will instead
+want to make a request to [update
+metadata](endpoint://put_metadata_templates_id_id) on the file.
 
 </Message>

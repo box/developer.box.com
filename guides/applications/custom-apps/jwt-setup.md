@@ -23,7 +23,7 @@ A Custom App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
-  Learn how JWT authentication works
+Learn how JWT authentication works
 
 </CTA>
 
@@ -33,7 +33,7 @@ To set up a Custom App using JWT authentication you will need to pass the
 following requirements.
 
 * You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
@@ -59,7 +59,7 @@ On the next screen, select "OAuth 2.0 with JWT (Server Authentication)" and sele
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](../images/auth-types-jwt.png)
+![Auth selection screen](../images/auth-types-jwt.png)
 
 </ImageFrame>
 
@@ -70,7 +70,7 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-name.png)
+![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -92,7 +92,7 @@ and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
 
-  ![Add and Manage keys](../images/app-add-keys.png)
+![Add and Manage keys](../images/app-add-keys.png)
 
 </ImageFrame>
 
@@ -102,8 +102,8 @@ can move to your application code.
 
 <Message danger>
 
-  Box will not store your private key as this would be a security concern.
-  Please do not loose your private key or the entire keypair needs to be reset.
+Box will not store your private key as this would be a security concern.
+Please do not loose your private key or the entire keypair needs to be reset.
 
 </Message>
 
@@ -122,7 +122,7 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 
 <Message>
 
- #For Windows Systems
+# For Windows Systems
 
 Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 
@@ -134,7 +134,7 @@ and scroll down to the "Add and Manage Public Keys" section.
 
 <ImageFrame border width="600" center>
 
-  ![Add and Manage keys](../images/app-add-keys.png)
+![Add and Manage keys](../images/app-add-keys.png)
 
 </ImageFrame>
 
@@ -152,7 +152,7 @@ and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
 
-  ![Add and Manage keys](../images/app-authorization.png)
+![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -180,7 +180,7 @@ enabled for "Enterprise Access".
 
 <ImageFrame border>
 
-  ![App access level](../images/app-access-level.png)
+![App access level](../images/app-access-level.png)
 
 </ImageFrame>
 
@@ -191,7 +191,7 @@ the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
 
-  ![App scopes](../images/app-scopes.png)
+![App scopes](../images/app-scopes.png)
 
 </ImageFrame>
 
@@ -207,7 +207,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App CORS config](../images/app-cors.png)
+![App CORS config](../images/app-cors.png)
 
 </ImageFrame>
 

@@ -29,7 +29,7 @@ completed.
 
 <Tabs>
 
-  <Tab title='Skills JSON Payload'>
+<Tab title='Skills JSON Payload'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -128,7 +128,7 @@ completed.
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -158,12 +158,12 @@ At a bare minimum, the following three pieces of information needed to download
 the file and update metadata for the file:
 
 - **Read token**: Located within the `token` object, the read token will allow
-  you   to call the [download file endpoint](endpoint://get_files_id) to
-  download the file content to send to the processing system.
+you   to call the [download file endpoint](endpoint://get_files_id) to
+download the file content to send to the processing system.
 - **Write token**: Located within the `token` object, the write token will allow
-  you to call the
-  [create metadata on file endpoint](e://post_files_id_metadata_id_id)
-  once the file processing has completed.
+you to call the
+[create metadata on file endpoint](e://post_files_id_metadata_id_id)
+once the file processing has completed.
 - **File ID**: Located within the `source` object, the file ID will be needed by
-  the above two endpoints to determine which file should be downloaded or have
-  metadata applied to it.
+the above two endpoints to determine which file should be downloaded or have
+metadata applied to it.

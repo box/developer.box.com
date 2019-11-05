@@ -40,7 +40,7 @@ The following is quick overview of the different Box Application types.
 <!-- markdownlint-enable line-length -->
 
 <CTA to="guide://applications/select">
-  Learn how to select an application type
+Learn how to select an application type
 
 </CTA>
 

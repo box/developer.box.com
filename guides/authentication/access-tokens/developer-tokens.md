@@ -29,7 +29,7 @@ methods.
 To create a Developer Token for an application:
 
 - Go to the Box [developer console][devconsole] and select the application to
-  create a Developer Token for.
+create a Developer Token for.
 - From the sidebar select "Configuration".
 - In the "Developer Token" section select "Generate Developer Token".
 
@@ -59,11 +59,11 @@ basic API client.
 
 <Message type='danger'>
 
-  # Developer tokens should not be used in production environments
+# Developer tokens should not be used in production environments
 
-  The Developer Token should only be used for development and testing purposes. As
-  tokens automatically expire and can not be refreshed automatically they are of
-  limited use in a production environment.
+The Developer Token should only be used for development and testing purposes. As
+tokens automatically expire and can not be refreshed automatically they are of
+limited use in a production environment.
 
 </Message>
 

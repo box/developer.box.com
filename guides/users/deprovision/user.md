@@ -44,7 +44,7 @@ destination user's root folder following this pattern:
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 'use strict'
@@ -67,8 +67,8 @@ const transferUserID = '3278487052';
 })();
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 Path configPath = Paths.get("config.json");
@@ -90,8 +90,8 @@ try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName(
 }
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 ```csharp
 using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
@@ -109,14 +109,14 @@ using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
 }
 ```
 
-  </Tab>
-  <Tab title='CLI'>
+</Tab>
+<Tab title='CLI'>
 
 ```shell
 box users:transfer-content $transfer_from_user_id $transfer_to_user_id
 box users:delete $transfer_from_user_id --yes
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>

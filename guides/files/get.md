@@ -33,6 +33,6 @@ To get more of the fields for a file, make sure to pass along the `fields`
 query parameter.
 
 <CTA to='g://api-calls/request-extra-fields'>
-  Learn about requesting extra fields
+Learn about requesting extra fields
 
 </CTA>

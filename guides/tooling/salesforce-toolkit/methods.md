@@ -137,11 +137,11 @@ Service Account. In this case, check `mostRecentError`.
 
 <Message type='notice'>
 
-  Available in version 3.46 and above.
+Available in version 3.46 and above.
 
-  Salesforce has a String length limit of 6 million characters. Due to string
-  bloat in the base64 encoding/decoding process, this results in an effective
-  file size limit of 4.3 megabytes.
+Salesforce has a String length limit of 6 million characters. Due to string
+bloat in the base64 encoding/decoding process, this results in an effective
+file size limit of 4.3 megabytes.
 
 </Message>
 
@@ -368,9 +368,9 @@ with multiple records or vice versa.
 
 <Message type='warning'>
 
-  Collaborations created by the Box for Salesforce Developer Toolkit will not
-  send collaboration emails to collaborators. Only the service account used for
-  the Box for Salesforce integration will receive a collaboration email.
+Collaborations created by the Box for Salesforce Developer Toolkit will not
+send collaboration emails to collaborators. Only the service account used for
+the Box for Salesforce integration will receive a collaboration email.
 
 </Message>
 

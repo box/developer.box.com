@@ -36,12 +36,12 @@ By following these steps you can configure your application with two new keys
 without any conflicts.
 
 1. Change the primary key in the [developer console][console] of your
-   application. Head to the webhooks section of your application configuration
-   screen and click the "Reset" button for the primary key.
+application. Head to the webhooks section of your application configuration
+screen and click the "Reset" button for the primary key.
 2. Update your application with the new primary key. Your application might
-   still receive notifications with the old primary key but your webhooks should
-   still be processed correctly as the secondary key is still valid.
+still receive notifications with the old primary key but your webhooks should
+still be processed correctly as the secondary key is still valid.
 3. Once you are confident that no webhooks with the old primary key are
-   in-flight, you can update the secondary key with the same process.
+in-flight, you can update the secondary key with the same process.
 
 [console]: https://app.box.com/developers/console

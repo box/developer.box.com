@@ -34,7 +34,7 @@ To install the latest CLI on your machine, download the latest
 `.exe` for Windows or `.pkg` for macOS for the latest release.
 
 <CTA to="https://github.com/box/boxcli/releases" narrow>
-  Download the latest CLI installer
+Download the latest CLI installer
 
 </CTA>
 

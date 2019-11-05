@@ -21,7 +21,7 @@ Setting up a Custom Skill is a multi-step process.
 To set up a Custom Skill you will need to pass the following requirements.
 
 * You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
@@ -47,7 +47,7 @@ to be unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-name.png)
+![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -57,7 +57,7 @@ Before a Custom Skill can be used it needs to be assigned to a folder for which 
 skill should trigger.
 
 <CTA to='g://applications/custom-skills/approval'>
-  Learn more about approving Custom Skills
+Learn more about approving Custom Skills
 
 </CTA>
 
@@ -84,7 +84,7 @@ Scroll down to the "Invocation URL" section.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-invocation-url.png)
+![App name form](../images/app-invocation-url.png)
 
 </ImageFrame>
 
@@ -99,7 +99,7 @@ specify specific file extensions to trigger the Skill for, scroll down to the
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-file-extensions.png)
+![App name form](../images/app-file-extensions.png)
 
 </ImageFrame>
 

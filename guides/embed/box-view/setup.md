@@ -28,7 +28,7 @@ The first step is to create the application and authorize it through your admin
 to begin making API requests to Box.
 
 <CTA to='guide://applications/custom-apps/app-token-setup/'>
-  Setup and authorize App Token app
+Setup and authorize App Token app
 
 </CTA>
 
@@ -48,7 +48,7 @@ the following.
 
 <ImageFrame border>
 
-  ![Image](./images/app_token_config.png)
+![Image](./images/app_token_config.png)
 
 </ImageFrame>
 
@@ -57,15 +57,15 @@ section.
 
 <ImageFrame border>
 
-  ![Image](./images/app_token_generate_key.png)
+![Image](./images/app_token_generate_key.png)
 
 </ImageFrame>
 
 <Message type='notice'>
 
-  If you don't have 2FA setup for your developer account, you will be prompted
-  to set up 2FA before you can successfully generate App Tokens. Follow the
-  prompt to set up 2FA.
+If you don't have 2FA setup for your developer account, you will be prompted
+to set up 2FA before you can successfully generate App Tokens. Follow the
+prompt to set up 2FA.
 
 </Message>
 
@@ -74,7 +74,7 @@ token to never expire.
 
 <ImageFrame border width='600' shadow center>
 
-  ![Image](./images/app_token_expiry.png)
+![Image](./images/app_token_expiry.png)
 
 </ImageFrame>
 

@@ -28,7 +28,7 @@ during [application setup](guide://embed/box-view/setup) to authenticate your
 application.
 
 <CTA to='guide://authentication/app-token/'>
-  Authenticate your application
+Authenticate your application
 
 </CTA>
 
@@ -36,6 +36,6 @@ Once an authenticated client has been created, it may be used to upload files
 directly to the app token application to be converted.
 
 <CTA to='guide://uploads/direct/for-new-file/'>
-  Upload files to Box
+Upload files to Box
 
 </CTA>

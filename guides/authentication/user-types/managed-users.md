@@ -32,7 +32,7 @@ templates via the API, while regular Managed Users can not.
 
 <Message>
 
-  # Log in as Admin User
+# Log in as Admin User
 
 Some applications require an Admin User to log in as the application requires
 permissions that only Admin Users have to properly operate.
@@ -62,8 +62,8 @@ applications can not create, edit, or otherwise manage External Users.
 There are a few limitations when using Managed Users via the Box API.
 
 - It is not possible to access or a Managed User's data when using
-  JWT authentication unless the application has been configured to have
-  "Enterprise"-level "Application Access" in the developer dashboard.
+JWT authentication unless the application has been configured to have
+"Enterprise"-level "Application Access" in the developer dashboard.
 - It is not possible to act on behalf of a Managed User's when using
-  JWT authentication unless the application has been configured to "Perform
-  Actions as Users" or "Generate User Access Tokens".
+JWT authentication unless the application has been configured to "Perform
+Actions as Users" or "Generate User Access Tokens".

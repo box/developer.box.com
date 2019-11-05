@@ -51,7 +51,7 @@ the folders to the Service Account.
 
 <Tabs>
 
-  <Tab title='etc_skel.json'>
+<Tab title='etc_skel.json'>
 
 ```json
 {
@@ -68,8 +68,8 @@ the folders to the Service Account.
 }
 ```
 
-  </Tab>
-  <Tab title='skel_sub_directories.json'>
+</Tab>
+<Tab title='skel_sub_directories.json'>
 
 ```json
 [
@@ -105,7 +105,7 @@ the folders to the Service Account.
 ]
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -114,7 +114,7 @@ as the JSON objects above demonstrate.
 
 <Tabs>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 "use strict";
@@ -212,8 +212,8 @@ let treeCreator = new BoxFolderTreeCreator(serviceAccountClient);
 })();
 ```
 
-  </Tab>
-  <Tab title='Java'>
+</Tab>
+<Tab title='Java'>
 
 ```java
 package com.box;
@@ -339,8 +339,8 @@ public class BoxFolderTreeCreator {
 }
 ```
 
-  </Tab>
-  <Tab title='.NET'>
+</Tab>
+<Tab title='.NET'>
 
 ```csharp
 using System;
@@ -464,6 +464,6 @@ namespace BoxPlayground {
 }
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>

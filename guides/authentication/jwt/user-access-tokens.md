@@ -56,7 +56,7 @@ SDK guide](g://authentication/jwt/with-sdk) but instead of creating an
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var userId = "12345";
@@ -65,9 +65,9 @@ var token = sdk.UserToken(appUserID);
 BoxClient client = boxJWT.UserClient(userToken, userId);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -78,9 +78,9 @@ BoxDeveloperEditionAPIConnection api = new BoxDeveloperEditionAPIConnection.getA
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 user = client.user(user_id='12345')
@@ -97,21 +97,21 @@ auth.authenticate_user()
 user_client = Client(auth)
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
 var client = sdk.getAppAuthClient('user', '12345');
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <CTA to='g://authentication/jwt/with-sdk'>
-  Learn more about using the Box SDKs for JWT
+Learn more about using the Box SDKs for JWT
 
 </CTA>
 
@@ -124,7 +124,7 @@ a claim for the enterprise, create one for a specific user ID.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var userId = "12345";
@@ -136,9 +136,9 @@ var claims = new List<Claim>{
 };
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 String userId = "12345";
@@ -152,9 +152,9 @@ claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 user_id = '12345';
@@ -169,8 +169,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='Node'>
+</Tab>
+<Tab title='Node'>
 
 ```js
 let user_id = '12345';
@@ -185,8 +185,8 @@ let claims = {
 };
 ```
 
-  </Tab>
-  <Tab title='Ruby'>
+</Tab>
+<Tab title='Ruby'>
 
 ```ruby
 user_id = '12345'
@@ -201,8 +201,8 @@ claims = {
 }
 ```
 
-  </Tab>
-  <Tab title='PHP'>
+</Tab>
+<Tab title='PHP'>
 
 ```php
 $userId = '12345';
@@ -218,12 +218,12 @@ $claims = [
 ];
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <CTA to='g://authentication/jwt/with-sdk'>
-  Learn more about manually using JWT authentication
+Learn more about manually using JWT authentication
 
 </CTA>
 

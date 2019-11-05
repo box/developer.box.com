@@ -32,7 +32,7 @@ The invocation URL should:
 
 - Be publicly available. Notifications cannot be sent to `localhost`.
 - Have code that is listening for `HTTP POST` requests directly to the URL. Box
-  Skills will send the event notification via an `HTTP POST request.
+Skills will send the event notification via an `HTTP POST request.
 
 ## Common Hosting Methods Behind an Invocation URL
 
@@ -45,7 +45,7 @@ Typically this middleware service will need to do the following:
 - Download the file from Box and send it to the processing system.
 - Listen for the response from the machine learning system.
 - Format the response from the machine learning system into a Box metadata
-  format.
+format.
 - Apply the new metadata back to the file stored on Box.
 
 Depending on security requirements and approved services at your company, we

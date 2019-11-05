@@ -25,7 +25,7 @@ by cloning the source into a project. Additionally it can be installed by
 downloading one of the precompiled JARs from the releases page on GitHub.
 
 <CTA to="https://github.com/box/box-java-sdk">
-  Learn more about the Java SDK on GitHub
+Learn more about the Java SDK on GitHub
 
 </CTA>
 
@@ -58,8 +58,8 @@ Add the following to Maven dependency.
 
 <Message>
 
-  For the most up-to-date version number of the Java SDK, please refer to the
-  [Java SDK Open Source page][java-os].
+For the most up-to-date version number of the Java SDK, please refer to the
+[Java SDK Open Source page][java-os].
 
 </Message>
 
@@ -89,7 +89,7 @@ following additional dependencies to the project.
 <!-- markdownlint-enable line-length -->
 
 <CTA to="https://github.com/box/box-java-sdk">
-  Learn more about the Java SDK on GitHub
+Learn more about the Java SDK on GitHub
 
 </CTA>
 

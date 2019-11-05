@@ -18,7 +18,7 @@ The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
 <CTA to="guide://applications/select">
-  Learn how to select the application type for your app
+Learn how to select the application type for your app
 
 </CTA>
 
@@ -64,25 +64,25 @@ Box website to grant the application's access to their data.
 
 <ImageFrame center width="400" shadow border>
 
-  ![Box OAuth 2.0 approval](./oauth2-grant.png)
+![Box OAuth 2.0 approval](./oauth2-grant.png)
 
 </ImageFrame>
 
 <Message>
 
-  # When to use OAuth 2.0?
+# When to use OAuth 2.0?
 
 Client-side authentication is the ideal authentication method for apps that:
 
 - Work with users that already have existing Box accounts
 - Want or require users to know that they are using Box
 - Want to store data within the user's Box account and not within the the
-  application's Box account
+application's Box account
 
 </Message>
 
 <CTA to="guide://authentication/oauth2">
-  Learn about client-side authentication with OAuth 2.0
+Learn about client-side authentication with OAuth 2.0
 
 </CTA>
 
@@ -102,7 +102,7 @@ application's permissions.
 
 <Message>
 
-  # When to use JWT?
+# When to use JWT?
 
 Server-side authentication with JWT is the ideal authentication method for apps that:
 
@@ -110,12 +110,12 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data within the application's Box account and not within the the
-  user's Box account
+user's Box account
 
 </Message>
 
 <CTA to="guide://authentication/jwt">
-  Learn about server-side authentication with JWT
+Learn about server-side authentication with JWT
 
 </CTA>
 
@@ -129,13 +129,13 @@ Service Account that belongs to that application.
 
 <Message>
 
-  # When to use App Tokens?
+# When to use App Tokens?
 
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
 - Work in an environment that either has no user model, or has users that don't
-  have Box accounts
+have Box accounts
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data in the application's Service Account and not a user's account
@@ -143,7 +143,7 @@ for apps that:
 </Message>
 
 <CTA to="guide://authentication/app-token">
-  Learn about server-side authentication with App Tokens
+Learn about server-side authentication with App Tokens
 
 </CTA>
 
@@ -156,7 +156,7 @@ created the token.
 
 <Message>
 
-  # When to use a Developer Token?
+# When to use a Developer Token?
 
 A Developer Token is the ideal authentication method during development and
 testing. It is ideal in situations where the developer:

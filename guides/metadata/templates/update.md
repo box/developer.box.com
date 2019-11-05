@@ -266,7 +266,7 @@ how many files are affected by the change.
 
 <Message warning>
 
-  This will affect existing instances of this template.
+This will affect existing instances of this template.
 
 </Message>
 
@@ -302,7 +302,7 @@ affected by the change.
 
 <Message warning>
 
-  This will affect existing instances of this template.
+This will affect existing instances of this template.
 
 </Message>
 
@@ -336,7 +336,7 @@ files are affected by the change.
 
 <Message warning>
 
-  This will affect existing instances of this template.
+This will affect existing instances of this template.
 
 </Message>
 
@@ -372,7 +372,7 @@ affected by the change.
 
 <Message warning>
 
-  This will affect existing instances of this template.
+This will affect existing instances of this template.
 
 </Message>
 
@@ -405,9 +405,9 @@ be unset.
 The search index will be updated yet it can take time depending on how many
 files are affected by the change.
 
-<Message warning>T
+<Message warning>
 
-his will affect existing instances of this template.
+This will affect existing instances of this template.
 
 </Message>
 

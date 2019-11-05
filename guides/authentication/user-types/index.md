@@ -42,7 +42,7 @@ The following is a quick overview of the types of users available in the Box API
 
 <Message>
 
-  # What type of user does my application use?
+# What type of user does my application use?
 
 The type of user that an application is authenticated as is highly dependent
 on the type of application created, as well as the type of authentication used

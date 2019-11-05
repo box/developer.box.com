@@ -39,13 +39,13 @@ Open `Add_OpenWith_WhiteListed_Domain.reg` in a text editor.
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-1.png)
+![Box Tools](./images/box-tools-1.png)
 
 </ImageFrame>
 
 <Message>
 
-  Additional entries can be added on a new line.
+Additional entries can be added on a new line.
 
 </Message>
 
@@ -58,7 +58,7 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-3.png)
+![Box Tools](./images/box-tools-3.png)
 
 </ImageFrame>
 
@@ -73,13 +73,13 @@ Replace the placeholder domain with the domain you would like whitelisted.
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-4.png)
+![Box Tools](./images/box-tools-4.png)
 
 </ImageFrame>
 
 <Message>
 
-  Additional entries may be added on a new line.
+Additional entries may be added on a new line.
 
 </Message>
 
@@ -92,7 +92,7 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-6.png)
+![Box Tools](./images/box-tools-6.png)
 
 </ImageFrame>
 
@@ -108,7 +108,7 @@ In a command prompt, enter:
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-7.png)
+![Box Tools](./images/box-tools-7.png)
 
 </ImageFrame>
 
@@ -118,7 +118,7 @@ Press `Windows + R` and type `services.msc`.
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-8.png)
+![Box Tools](./images/box-tools-8.png)
 
 </ImageFrame>
 
@@ -126,7 +126,7 @@ Restart `Box Edit.exe` by finding `Box Edit` in the system tray.
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-9.png)
+![Box Tools](./images/box-tools-9.png)
 
 </ImageFrame>
 
@@ -136,17 +136,17 @@ Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
 
 <ImageFrame border>
 
-  ![Box Tools](./images/box-tools-10.png)
+![Box Tools](./images/box-tools-10.png)
 
 </ImageFrame>
 
 ### Removing
 
 * Execute `Remove_ALL_OpenWith_WhiteListed_Domain.reg` to remove all domains
-  at once
+at once
 * Execute `Remove_OpenWith_WhiteListed_Domain.reg` to remove specific
-  domains. Use the instructions above to add domains to this .reg, which will
-  remove domains.
+domains. Use the instructions above to add domains to this .reg, which will
+remove domains.
 
 ## Whitelisting on MacOS
 
@@ -190,12 +190,12 @@ To **list** whitelisted domains, execute the following command in a terminal:
 ### Notes
 
 * When whitelisting domains ensure you are entering the domains without the HTTP
-  protocol (for example without `https://`) or any trailing path like
-  `yourdomain.com/page/3`).
+protocol (for example without `https://`) or any trailing path like
+`yourdomain.com/page/3`).
 * All requests most come from a secure origin via HTTPS.
 * Whitelisting subdomains and ports is possible as the wildcard `*` is supported.
-  For example, all subdomains could be whitelisted by adding `*.yourdomain.com` to
-  your whitelist.
+For example, all subdomains could be whitelisted by adding `*.yourdomain.com` to
+your whitelist.
 
 ## Uninstalling
 

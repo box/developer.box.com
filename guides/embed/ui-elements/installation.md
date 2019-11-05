@@ -44,13 +44,13 @@ npm install box-ui-elements
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
-  Learn more on the NPM website
+Learn more on the NPM website
 
 </CTA>
 
 <Message warning>
 
-  # Content Preview
+# Content Preview
 
 The content Content Preview element is currently not available via NPM.
 
@@ -151,21 +151,21 @@ For Box Preview, the sample would look slightly different.
 Most of the UI elements have 2 distinct versions.
 
 - A standard `*.js` file (for example `explore.js`) that includes React and
-  ReactDOM in the bundle.
-  - Use this when you are not building a React based app or you don't want to
-    include the components as part of your app's build process.
-  - It includes React and ReactDOM libraries
-  - The file size of this asset will be larger than the one below
+ReactDOM in the bundle.
+- Use this when you are not building a React based app or you don't want to
+include the components as part of your app's build process.
+- It includes React and ReactDOM libraries
+- The file size of this asset will be larger than the one below
 - A smaller `*.no.react.js` file (for example `explore.no.react.js`) that does
-  not get bundled with React and ReactDOM
-  - Use this when both React and ReactDOM libraries are already loaded on the
-    application
-  - These libraries expect a React and ReactDOM `>= 16.2` and `< 17`
+not get bundled with React and ReactDOM
+- Use this when both React and ReactDOM libraries are already loaded on the
+application
+- These libraries expect a React and ReactDOM `>= 16.2` and `< 17`
 
 <message>
 
-  Only one of the 2 `js` files, and the additional `css` file need to be added
-  to a project.
+Only one of the 2 `js` files, and the additional `css` file need to be added
+to a project.
 
 </message>
 
@@ -189,7 +189,7 @@ download the specific version as a zip.
 
 - Check out a specific version with `git checkout v2.13.0`
 - Download a specific version as a zip from the [releases][preview-releases]
-  page.
+page.
 
 ### 2. Install dependencies
 

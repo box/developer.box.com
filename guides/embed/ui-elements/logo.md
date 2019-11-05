@@ -49,10 +49,10 @@ preview.show(fileId, accessToken, {
 
 <Message>
 
-  # Box Logo
+# Box Logo
 
-  To present the Box logo in a UI Element, specify the string `box` as the
-  `logoURL` option.
+To present the Box logo in a UI Element, specify the string `box` as the
+`logoURL` option.
 
 </Message>
 

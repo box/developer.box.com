@@ -36,13 +36,13 @@ By following these steps you can configure your application with two new tokens
 without any issues.
 
 1. Assuming your application is using the Primary App Token, go to [developer
-   console][console] application. Head to the "Configuration" section of your
-   application "Generate Key" button for the Secondary App Token.
+console][console] application. Head to the "Configuration" section of your
+application "Generate Key" button for the Secondary App Token.
 2. Update your application with the Secondary Token. Ensure your application is
-   configured with this new token completely before moving on to the next step.
+configured with this new token completely before moving on to the next step.
 3. Once you are confident that the Primary App token is no longer in use, head
-   over to the  [developer console][console] and hit the "Revoke" button for the
-   Primary App Token.
+over to the  [developer console][console] and hit the "Revoke" button for the
+Primary App Token.
 
 <Message>
 

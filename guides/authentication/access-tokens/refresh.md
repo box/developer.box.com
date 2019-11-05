@@ -45,16 +45,16 @@ applications.
 
 <Message danger>
 
-  # Refresh token expiration
+# Refresh token expiration
 
-  A refresh token is valid for 60 days and can be used to obtain a new access
-  token and refresh token only once. If the access token and refresh token are
-  not refreshed within 60 days, the user will need to be re-authorized.
+A refresh token is valid for 60 days and can be used to obtain a new access
+token and refresh token only once. If the access token and refresh token are
+not refreshed within 60 days, the user will need to be re-authorized.
 
-  Every time an application uses the refresh token to get a new access token the
-  refresh token is invalidated and a new refresh token is returned with the
-  new access token.
+Every time an application uses the refresh token to get a new access token the
+refresh token is invalidated and a new refresh token is returned with the
+new access token.
 
-  This new refresh token is then again only valid for 1 use within 60 days.
+This new refresh token is then again only valid for 1 use within 60 days.
 
 </Message>

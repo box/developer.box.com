@@ -80,8 +80,8 @@ The following query parameters are used to paginate a collection.
 
 <Message type='notice'>
 
-  The maximum `offset` for offset-based pagination is `300000`. Marker-based
-  pagination is recommended when a higher offset is needed.
+The maximum `offset` for offset-based pagination is `300000`. Marker-based
+pagination is recommended when a higher offset is needed.
 
 </Message>
 

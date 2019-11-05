@@ -22,11 +22,11 @@ The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
 - The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens
-  and as per the OAuth 2.0 specification it accepts the body to be sent
-  with a content type of `application/x-www-form-urlencoded`.
+and as per the OAuth 2.0 specification it accepts the body to be sent
+with a content type of `application/x-www-form-urlencoded`.
 - Most of the APIs that are used to upload binary data, like the
-  [`POST /files/content`][post-files-content] endpoint, expect data to be sent
-  as form data with a content type of `multipart/form-data`.
+[`POST /files/content`][post-files-content] endpoint, expect data to be sent
+as form data with a content type of `multipart/form-data`.
 
 <Message type='notice'>
 
@@ -67,16 +67,16 @@ The Box APIs generally returns JSON in the response body. There are a few notabl
 exceptions to this rule as well.
 
 - APIs that delete items return an empty body with a `204 No Content` HTTP
-  status code.
+status code.
 - APIs used to request binary data either return a `200 OK` status code with the
-  binary data attached, or a `202 Accepted`, or `302 Found` status code with no
-  body and a `Location` header pointing to the actual binary file.
+binary data attached, or a `202 Accepted`, or `302 Found` status code with no
+body and a `Location` header pointing to the actual binary file.
 
 <Message type='notice'>
 
-  The `Content-Type` response header can be used to understand the type of
-  content returned in the API. Additionally, every API endpoint has it's
-  response type documented in our API reference documentation.
+The `Content-Type` response header can be used to understand the type of
+content returned in the API. Additionally, every API endpoint has it's
+response type documented in our API reference documentation.
 
 </Message>
 
@@ -160,9 +160,9 @@ request.
 
 <Message type='notice'>
 
-  MostAPI calls also return a `BOX-REQUEST-ID` response header. The value of
- this header should not be confused with the `request_id` value in the body of
- an error response.
+Most API calls also return a `BOX-REQUEST-ID` response header. The value of
+this header should not be confused with the `request_id` value in the body of
+an error response.
 
 </Message>
 

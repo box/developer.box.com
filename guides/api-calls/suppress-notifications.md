@@ -17,7 +17,7 @@ including a `Box-Notifications: off` header with the API call.
 
 <Tabs>
 
-  <Tab title='cURL'>
+<Tab title='cURL'>
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
@@ -31,7 +31,7 @@ curl -X POST https://api.box.com/2.0/folders \
     }'
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -52,7 +52,7 @@ The following settings need to be configured for your application for this featu
 to properly work.
 
 * **Can suppress email notifications from API calls** - available on request
-  via support
+via support
 * **Manage Enterprise Properties** - available via the developer console
 * Co-admin permissions of **Edit settings for your company**.
 

@@ -43,7 +43,7 @@ Before a Custom Skill can be used it needs to be assigned to a folder for which 
 skill should trigger.
 
 <CTA to='g://applications/custom-skills/approval'>
-  Learn more about approving Custom Skills
+Learn more about approving Custom Skills
 
 </CTA>
 
@@ -54,4 +54,4 @@ A Custom Skill is best used when the application:
 - Wants to only add metadata to files uploaded to Box
 - Does not want to upload new files or perform any other API calls
 - Wants to have a simple way to pass files to Machine Learning services without
-  having to handle authentication
+having to handle authentication

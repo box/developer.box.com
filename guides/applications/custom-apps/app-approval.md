@@ -49,11 +49,11 @@ console][devconsole] and copy the app's client ID and provide this to your admin
 
 <Message>
 
-  # Finding a Box Admin
+# Finding a Box Admin
 
-  If you don't know your enterprise admin, go to the Box [account
-  settings][settings] page  and scroll to the bottom. If an admin contact is set
-  you should see contact  information under "Admin Contact".
+If you don't know your enterprise admin, go to the Box [account
+settings][settings] page  and scroll to the bottom. If an admin contact is set
+you should see contact  information under "Admin Contact".
 
 </Message>
 
@@ -64,7 +64,7 @@ tab.
 
 <ImageFrame border center>
 
-  ![Apps tab](../images/apps.png)
+![Apps tab](../images/apps.png)
 
 </ImageFrame>
 
@@ -73,7 +73,7 @@ App" button.
 
 <ImageFrame border center>
 
-  ![Custom Apps section](../images/custom-apps.png)
+![Custom Apps section](../images/custom-apps.png)
 
 </ImageFrame>
 
@@ -91,7 +91,7 @@ re-authorize the same application.
 
 <ImageFrame border center>
 
-  ![Re-authorize app](../images/app-reauthorize.png)
+![Re-authorize app](../images/app-reauthorize.png)
 
 </ImageFrame>
 

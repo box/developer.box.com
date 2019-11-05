@@ -45,7 +45,7 @@ in a `pending` state until that action has taken place.
 
 <Message type='notice'>
 
-  For security reasons passwords cannot be supplied when creating a new managed
-  user
+For security reasons passwords cannot be supplied when creating a new managed
+user
 
 </Message>

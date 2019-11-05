@@ -51,7 +51,7 @@ Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
 - Create and download the private key configuration file for your application
-  and save it as `config.json`
+and save it as `config.json`
 - Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
@@ -61,7 +61,7 @@ the application's private key and other details. The following is an example.
 
 <Tabs>
 
-  <Tab title='config.json'>
+<Tab title='config.json'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -82,7 +82,7 @@ the application's private key and other details. The following is an example.
 
 <!-- markdownlint-enable line-length -->
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
@@ -90,7 +90,7 @@ To use this object in the application it needs to be read from file. Most
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var reader = new StreamReader("path/to/config.json");
@@ -98,18 +98,18 @@ var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 Reader reader = new FileReader("path/to/config.json");
 BoxConfig config = BoxConfig.readFrom(reader);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 from boxsdk import JWTAuth
@@ -117,21 +117,21 @@ from boxsdk import JWTAuth
 config = JWTAuth.from_settings_file('path/to/config.json')
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 var config = require('path/to/config.json');
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message>
 
-  # Parsing JSON
+# Parsing JSON
 
 In some programming languages there is more than one way to read and parse
 JSON from a file. Refer to guides on your preferred programming language for
@@ -146,7 +146,7 @@ initialize the client to connect as the application.
 
 <Tabs>
 
-  <Tab title='.Net'>
+<Tab title='.Net'>
 
 ```dotnet
 var sdk = new BoxJWTAuth(config);
@@ -154,43 +154,43 @@ var token = sdk.AdminToken();
 BoxClient client = session.AdminClient(token);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Java'>
+<Tab title='Java'>
 
 ```java
 BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(config);
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Python'>
+<Tab title='Python'>
 
 ```python
 client = Client(config)
 ```
 
-  </Tab>
+</Tab>
 
-  <Tab title='Node'>
+<Tab title='Node'>
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
 var client = sdk.getAppAuthClient('enterprise');
 ```
 
-  </Tab>
+</Tab>
 
 </Tabs>
 
 <Message warning>
 
-  # Service Accounts
+# Service Accounts
 
-  At this point the application is authenticated as an application user, not as
-  a managed or app user. Head over to our guide on [User
-  Types][g://authentication/user-types] to learn more about the different types
-  of users.
+At this point the application is authenticated as an application user, not as
+a managed or app user. Head over to our guide on [User
+Types][g://authentication/user-types] to learn more about the different types
+of users.
 
 </Message>
 

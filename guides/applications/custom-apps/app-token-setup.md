@@ -22,7 +22,7 @@ A Custom App can be set up to use server-side
 [App Tokens][app-token] for authentication.
 
 <CTA to='g://authentication/app-token'>
-  Learn how App Token authentication works
+Learn how App Token authentication works
 
 </CTA>
 
@@ -32,7 +32,7 @@ To set up a Custom App using App Token authentication you will need to pass the
 following requirements.
 
 * You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 
@@ -58,7 +58,7 @@ On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
 
 <ImageFrame border width="400" center>
 
-  ![Auth selection screen](../images/auth-types-app-tokens.png)
+![Auth selection screen](../images/auth-types-app-tokens.png)
 
 </ImageFrame>
 
@@ -69,7 +69,7 @@ unique across all applications on Box.
 
 <ImageFrame border width="600" center>
 
-  ![App name form](../images/app-name.png)
+![App name form](../images/app-name.png)
 
 </ImageFrame>
 
@@ -85,7 +85,7 @@ and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
 
-  ![Add and Manage keys](../images/app-authorization.png)
+![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -110,7 +110,7 @@ Token by selecting the "Generate Key" button.
 
 <ImageFrame border width="600" center>
 
-  ![Create an app token](../images/app-generate-key.png)
+![Create an app token](../images/app-generate-key.png)
 
 </ImageFrame>
 
@@ -120,9 +120,9 @@ calls][api-calls].
 
 <Message warning>
 
-  # App authorization
+# App authorization
 
-  App Tokens can not be generated until the application has been authorized.
+App Tokens can not be generated until the application has been authorized.
 
 </Message>
 
@@ -138,7 +138,7 @@ server-side code, this section may be left blank.
 
 <ImageFrame border>
 
-  ![App name form](../images/app-cors.png)
+![App name form](../images/app-cors.png)
 
 </ImageFrame>
 
