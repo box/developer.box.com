@@ -1,8 +1,8 @@
 const fs = require('fs')
 const jp = require('jsonpath')
 
-const compiler = require('../src/microcopy/index')
-const { parse } = require('../src/microcopy/flat_json')
+const compiler = require('../../src/microcopy/index')
+const { parse } = require('../../src/microcopy/flat_json')
 
 beforeAll(async () => {
   await compiler.write(target = './compiled/microcopy', fileName = 'microcopy.json')

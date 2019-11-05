@@ -28,9 +28,12 @@ microcopy for the [Box.dev][boxdev] site.
 
 * `./content` - the source content (guides and microcopy), as well as some
   templates and spellcheck dictionaries.
-  * `./content/dicrionaries` - The US English Hunspell dictionaries, used for
+  * `./content/dictionaries` - The US English Hunspell dictionaries, used for
     spell checking.
-  * `./content/guides` - A nested set of folders containing markdown files, before they are spellchecked and sanitized.
+  * `./content/guides` - A nested set of folders containing markdown files for
+    guides before they are spellchecked and sanitized.
+  * `./content/pages` - A nested set of folders containing markdown files for
+    pages before they are spellchecked and sanitized.
   * `./content/microcopy` - A nested set of folders containing YAML files,
     before they combined into one file. These represent all the small bits of
     content on the site, mostly the text on buttons, in headers, and in links.
@@ -47,6 +50,9 @@ Additionally, the following folder is created at build time:
   * `./compiled/microcopy/microcopy.json` - a resolved and flattened JSON
     version of all the microcopy YAML files. This file is in JSON5 format.
   * `./compiled/guides` - a copy of `./content/guides` but with some small
+    transformations applied. Mainly, MDX tags are sanitized to add padding and
+    remove unwanted indentation.
+  * `./compiled/pages` - a copy of `./content/pages` but with some small
     transformations applied. Mainly, MDX tags are sanitized to add padding and
     remove unwanted indentation.
 	

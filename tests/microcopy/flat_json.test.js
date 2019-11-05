@@ -1,4 +1,4 @@
-const json = require('../src/microcopy/flat_json')
+const json = require('../../src/microcopy/flat_json')
 const raw = `{
   // a test comment
   "test": "value"

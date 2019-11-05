@@ -1,7 +1,6 @@
 const yaml = require('js-yaml')
 
-const extractFrontmatter = (contents, sourcePath, isGuide) => {
-  let [_, frontmatter, markdown] = contents.split('---\n')
+const extractFrontmatter = (frontmatter, sourcePath, isGuide) => {
   frontmatter = yaml.load(frontmatter)
   if (isGuide) {
     frontmatter.cId = cId(sourcePath)
@@ -9,8 +8,7 @@ const extractFrontmatter = (contents, sourcePath, isGuide) => {
   }
   frontmatter.id = id(sourcePath)
   frontmatter.isIndex = isIndex(sourcePath)
-  frontmatter = yaml.dump(frontmatter)
-  return [_, frontmatter, markdown].join('---\n')
+  return yaml.dump(frontmatter)
 }
 
 const id = (path) => (
