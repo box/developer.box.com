@@ -71,8 +71,8 @@ All the UI elements are also available directly from the Box CDN.
 | [Content Uploader](g://embed/ui-elements/uploader)   | `10.1.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.css)                              |
 |                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js)                      |
 |                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.no.react.js) |
-| [Content Preview](g://embed/ui-elements/preview)     | `2.13.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.1.13/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.1.13/en-US/preview.css)                                  |
-|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.1.13/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.1.13/en-us/preview.js)                                     |
+| [Content Preview](g://embed/ui-elements/preview)     | `2.13.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.css)                                  |
+|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.js)                                     |
 
 Use these links to either download the elements code to your application's
 code, or embed them straight into your page from the CDN.
@@ -198,7 +198,7 @@ folder as `2.13.0`.
 For example, if you self-host using a `box-assets` directory, these URLs must
 be accessible:
 
-- `https://cdn.YOUR_SITE.com/box*assets/2.13.0/en-US/preview.js`
+- `https://cdn.YOUR_SITE.com/box-assets/2.13.0/en-US/preview.js`
 - `https://cdn.YOUR_SITE.com/box-assets/third-party/text/0.114.0/papaparse.min.js`
 - `https://cdn.YOUR_SITE.com/box-assets/third-party/model3d/1.12.0/three.min.js`
 
