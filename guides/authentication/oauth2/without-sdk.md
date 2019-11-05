@@ -328,6 +328,6 @@ using any of the SDKs, by using the following steps.
 4. [Exchange the authorization code for an access token](#4-exchange-code)
 
 To learn how to use this token head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).
 
-[tokens]: guide://authentication/tokens
+[tokens]: guide://authentication/access-tokens

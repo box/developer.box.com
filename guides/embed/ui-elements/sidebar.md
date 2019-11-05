@@ -279,3 +279,6 @@ more, see [Special Scopes for Box UI Elements][scopes].
 | `item_task`    | Allows creating and resolving of tasks. |
 
 <!-- markdownlint-enable line-length -->
+
+[downscope]: guide://authentication/access-tokens/downscope
+[scopes]: guide://api-calls/permissions-and-errors/scopes

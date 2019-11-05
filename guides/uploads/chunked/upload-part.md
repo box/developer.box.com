@@ -84,4 +84,4 @@ of parts, ordered by byte offset. If a part upload fails, it should be retried
 before later parts are uploaded.
 
 [commit]: g://uploads/chunked/commit-session
-[createsession]: g://upload/chunked/create-session
+[createsession]: g://uploads/chunked/create-session

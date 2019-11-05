@@ -77,4 +77,4 @@ these webhooks for all users, please contact support.
 
 [devconsole]: https://app.box.com/developers/console
 [list_webhooks]: guide://webhooks/manage/list-all
-[create_webhook]: guide://webhooks/manage/create-file
+[create_webhook]: guide://webhooks/manage/for-file

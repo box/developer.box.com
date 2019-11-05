@@ -106,5 +106,5 @@ results as an array, as well as some information about the current page of resul
 Some endpoints that support offset-based pagination are:
 
 - [List items for a folder](endpoint://get_folders_id_items)
-- [List a file's comments](endpoint:///get-files-id-comments)
+- [List a file's comments](endpoint://get-files-id-comments)
 - [List all items in the trash](endpoint://get-folders-trash-items)

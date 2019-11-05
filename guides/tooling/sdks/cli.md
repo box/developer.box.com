@@ -85,7 +85,7 @@ advanced CLI user.
 [cli-releases]: https://github.com/box/boxcli/releases
 [cli-getting-started]: https://github.com/box/boxcli#getting-started
 [cli-commands]: https://github.com/box/boxcli#command-topics
-[jwt-guide]: g://application/jwt/setup
+[jwt-guide]: g://applications/custom-apps/jwt-setup
 [devconsole]: https://app.box.com/developers/console
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid

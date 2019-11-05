@@ -50,7 +50,7 @@ other users without explicitly getting access them.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `As-User` header or by requesting a
-[User Access Token](g://authentication/jwt/user-token).
+[User Access Token](g://authentication/jwt/user-access-tokens).
 
 </Message>
 
@@ -842,7 +842,7 @@ without using any of the SDKs, by using the following steps.
 4. [Request the Access Token](#4-request-access-token)
 
 To learn how to use this token head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).
 
 ## Code Samples
 
