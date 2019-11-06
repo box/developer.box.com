@@ -77,7 +77,7 @@ Client-side authentication is the ideal authentication method for apps that:
 - Work with users that already have existing Box accounts
 - Want or require users to know that they are using Box
 - Want to store data within the user's Box account and not within the the
-application's Box account
+  application's Box account
 
 </Message>
 
@@ -110,7 +110,7 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data within the application's Box account and not within the the
-user's Box account
+  user's Box account
 
 </Message>
 
@@ -135,7 +135,7 @@ Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
 - Work in an environment that either has no user model, or has users that don't
-have Box accounts
+  have Box accounts
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data in the application's Service Account and not a user's account

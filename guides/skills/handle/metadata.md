@@ -69,20 +69,20 @@ Within the sample above are several dynamic values, wrapped as `{{ VALUE }}`,
 which will need to be replaced. These values are:
 
 - `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
-current timestamp.
+  current timestamp.
 - `SKILLS_CARD_TYPE`: The type of card that would like to create. See
-[Skills Card Types](#skills-card-types) for the available options.
+  [Skills Card Types](#skills-card-types) for the available options.
 - `CARD_TITLE`: The title of the card that is being written. This may be
-anything that you wish to title the content as.
+  anything that you wish to title the content as.
 - `SKILL_ID`: The ID of the Skill. This should be set to your Skills
-application name.
+  application name.
 - `FILE_ID`: The ID of the file that the metadata is being written to. This is
-extracted from the [event payload](guide://skills/handle/payload).
+  extracted from the [event payload](guide://skills/handle/payload).
 - `DURATION_IN_SECONDS` (OPTIONAL): This optional parameter is used only if you
-have content with a duration, such as video or audio files. If used, this
-should be the length of the content in seconds.
+  have content with a duration, such as video or audio files. If used, this
+  should be the length of the content in seconds.
 - `CARD_ENTRIES`: The data that comes from the machine learning system. This
-value is an array of objects. See [Skills Card Entries](#skills-card-entries)
+  value is an array of objects. See [Skills Card Entries](#skills-card-entries)
 
 ### Skills Card Types
 
@@ -140,9 +140,9 @@ The transcript card entries contain several values:
 
 - `text`: The text to display in the transcript line entry.
 - `appears`: An array of objects containing the start and end time for the line
-entry.
-- `start`: The start time in seconds.
-- `end`: The end time in seconds.
+  entry.
+  - `start`: The start time in seconds.
+  - `end`: The end time in seconds.
 
 ```json
 [
@@ -164,7 +164,7 @@ The faces card entries contain several values:
 
 - `text`: The text to display for the item.
 - `appears`: An array of objects containing the start and end time for the line
-entry.
+  entry.
   - `start`: The start time in seconds.
   - `end`: The end time in seconds.
 - `image_url` (OPTIONAL): An image to display beside the item.

@@ -48,7 +48,7 @@ A Custom App is best used when the application:
 - Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
-other users, even external users.
+  other users, even external users.
 - Wants the option to list the application in the Box App Gallery
 - Wants to provide integration into the Box Web App
 
@@ -63,20 +63,20 @@ other users, even external users.
 Example use cases for Custom Apps include:
 
 - A file vault in an application that allows an end user to access files that
-have been shared with them, while also providing access for employees to the
-same files through the Box Web app.
+  have been shared with them, while also providing access for employees to the
+  same files through the Box Web app.
 
-An example of this would be a financial advisor sharing statements and
-investment prospectuses with investors that can be viewed and commented on
-within a custom-built application.
+  An example of this would be a financial advisor sharing statements and
+  investment prospectuses with investors that can be viewed and commented on
+  within a custom-built application.
 
 - A file upload feature in an application that allows an end user to submit and
-upload files from within a custom-built application to Box that then initiates
-a business process with the Box Web app.
+  upload files from within a custom-built application to Box that then initiates
+  a business process with the Box Web app.
 
-An example of this would be a candidate submitting a PDF of a resume to a
-recruiting portal then can then be routed to an appropriate employee for
-review.
+  An example of this would be a candidate submitting a PDF of a resume to a
+  recruiting portal then can then be routed to an appropriate employee for
+  review.
 
 ## Custom Skills
 
@@ -108,7 +108,7 @@ A Custom Skill is best used when the application:
 - Wants to only add metadata to files uploaded to Box
 - Does not want to upload new files or perform any other API calls
 - Wants to have a simple way to pass files to Machine Learning services without
-having to handle authentication
+  having to handle authentication
 
 </Message>
 
@@ -121,13 +121,13 @@ having to handle authentication
 Example use cases for Custom Skills include:
 
 - A process that automatically extracts license plate details from images and
-writes the details back to the file as keywords
+  writes the details back to the file as keywords
 
 - A process that automatically detects faces in videos, and writes the timestamps
-at which these faces occur back to the file as a timeline
+  at which these faces occur back to the file as a timeline
 
 - A process that extracts audio from a video file and writes a transcript of the
-audio back to the file
+  audio back to the file
 
 ## Enterprise Integrations
 

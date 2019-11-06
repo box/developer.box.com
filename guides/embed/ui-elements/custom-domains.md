@@ -143,10 +143,10 @@ Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
 ### Removing
 
 * Execute `Remove_ALL_OpenWith_WhiteListed_Domain.reg` to remove all domains
-at once
+  at once
 * Execute `Remove_OpenWith_WhiteListed_Domain.reg` to remove specific
-domains. Use the instructions above to add domains to this .reg, which will
-remove domains.
+  domains. Use the instructions above to add domains to this .reg, which will
+  remove domains.
 
 ## Whitelisting on MacOS
 
@@ -190,12 +190,12 @@ To **list** whitelisted domains, execute the following command in a terminal:
 ### Notes
 
 * When whitelisting domains ensure you are entering the domains without the HTTP
-protocol (for example without `https://`) or any trailing path like
-`yourdomain.com/page/3`).
+  protocol (for example without `https://`) or any trailing path like
+  `yourdomain.com/page/3`).
 * All requests most come from a secure origin via HTTPS.
 * Whitelisting subdomains and ports is possible as the wildcard `*` is supported.
-For example, all subdomains could be whitelisted by adding `*.yourdomain.com` to
-your whitelist.
+  For example, all subdomains could be whitelisted by adding `*.yourdomain.com` to
+  your whitelist.
 
 ## Uninstalling
 

@@ -47,25 +47,25 @@ for your company** permissions can view, create, and edit Terms of Services for
 their enterprise via the API.
 
 * [`GET /terms_of_services/:id`](e://get-terms-of-services-id):
-To get the information for a specific Terms of Service
+  To get the information for a specific Terms of Service
 * [`GET /terms_of_services`](e://get-terms-of-services):
-To get a list of all the Terms of Services used within an enterprise, either
-for managed or external users.
+  To get a list of all the Terms of Services used within an enterprise, either
+  for managed or external users.
 * [`POST /terms_of_services`](e://post-terms-of-services):
-To create Terms of Service settings for either an external or managed user.
+  To create Terms of Service settings for either an external or managed user.
 * [`PUT /terms_of_services/:id`](e://put-terms-of-services-id):
-To update a specific Terms of Service setting
+  To update a specific Terms of Service setting
 
 Additionally, application can view and accept Terms of Services for a regular
 user via the API.
 
 * [`GET /terms_of_service_user_statuses`][euserstatuses]:
-To get a list of all the accepted and rejected Terms of Services for a user
+  To get a list of all the accepted and rejected Terms of Services for a user
 * [`POST /terms_of_service_user_statuses`][euserstatuses_post]:
-To accept or reject a specific Terms of Service for the first time
+  To accept or reject a specific Terms of Service for the first time
 * [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]:
-To accept or reject a specific Terms of Service that had been previously
-accepted or rejected.
+  To accept or reject a specific Terms of Service that had been previously
+  accepted or rejected.
 
 ## Scopes
 

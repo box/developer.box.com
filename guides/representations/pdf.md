@@ -33,10 +33,10 @@ To get a PDF representation follow the following steps
 
 - [List all representations](guide://representations/list-all-representations)
 - [Request a PDF](guide://representations/request-a-representation) by passing the
-`X-Ref-Hints`-header for the desired file type `[pdf]`.
+  `X-Ref-Hints`-header for the desired file type `[pdf]`.
 - [Download the PDF](guide://representations/download-a-representation) by
-calling the `url_template`, replacing the `{+asset_path}` with an the page
-of the PDF to request, for example `1.pdf`.
+  calling the `url_template`, replacing the `{+asset_path}` with an the page
+  of the PDF to request, for example `1.pdf`.
 
 ## Watermarked PDFs
 

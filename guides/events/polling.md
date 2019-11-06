@@ -50,7 +50,7 @@ To use long polling, first send an request to the
 
 ```curl
 curl -X OPTIONS https://api.box.com/2.0/events \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+    -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

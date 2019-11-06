@@ -27,10 +27,10 @@ documentation][community].
 The Box API allows for device pins to be inspected and removed.
 
 * [`GET /enterprise/:id/device_pinners`](e://get-enterprises-id-device-pinners):
-Retrieves all the device pins within an enterprise.
+  Retrieves all the device pins within an enterprise.
 * [`GET /device_pinners/:id`](e://get-device-pinners-id): Retrieves information
-about an individual device pin.
+  about an individual device pin.
 * [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): Deletes an
-individual device pin.
+  individual device pin.
 
 [community]: https://community.box.com/t5/How-to-Guides-for-Admins/Device-Pinning-Settings/ta-p/172

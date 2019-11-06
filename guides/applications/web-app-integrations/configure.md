@@ -24,9 +24,9 @@ App.
 Before we can get started, we the following requirements need to be met.
 
 - You need to be a be able to access the [Developer Console][devconsole] for
-your enterprise, or sign up for a [developer account][devaccount].
+  your enterprise, or sign up for a [developer account][devaccount].
 - You need to have created a Custom App with
-[OAuth 2.0 authentication][custom-oauth2] on the developer console.
+  [OAuth 2.0 authentication][custom-oauth2] on the developer console.
 
 ## 1. Create a New Integration
 
@@ -67,16 +67,16 @@ each value.
 The status of this integration.
 
 - **Development**: The integration is visible and available only to developers
-assigned to the application. This option is best used when the application is
-still in development and the developer wants to test the integration.
+  assigned to the application. This option is best used when the application is
+  still in development and the developer wants to test the integration.
 - **Online**: The integration is visible and available to all Box users. This
-option is best used when development has completed and the application is
-ready to be publish in the App Gallery.
+  option is best used when development has completed and the application is
+  ready to be publish in the App Gallery.
 - **Maintenance**: The integration is visible and available only to developers
-assigned to the application. This option is best used after the integration
-has been publicly released yet needs to perform maintenance updates or
-troubleshoot problems. Use this option to temporarily take the integration
-offline for everyone except the integration's developers.
+  assigned to the application. This option is best used after the integration
+  has been publicly released yet needs to perform maintenance updates or
+  troubleshoot problems. Use this option to temporarily take the integration
+  offline for everyone except the integration's developers.
 
 ### Callback Parameters
 
@@ -110,24 +110,24 @@ client can't get all the data it needs from the first request.
 The following example does not require a client callback URL:
 
 - The popup integration executes a REST call using a `download_file_url`
-callback parameter.
+  callback parameter.
 - The user clicks OK in the confirmation prompt to accept the popup.
 - Box sends a request to the following URL (the primary callback URL plus the
-callback parameter):
-`http://www.doceditor.com/service?apikey=abc&file=&redirect=`.
+  callback parameter):
+  `http://www.doceditor.com/service?apikey=abc&file=&redirect=`.
 - The response from the callback URL displays a user interface to the user who
-made the request. The popup has all the information needed to continue the
-action and an additional client callback is not needed.
+  made the request. The popup has all the information needed to continue the
+  action and an additional client callback is not needed.
 
 The following example requires a client callback URL:
 
 - The popup integration executes a REST call using a file-callback parameter.
 - The user clicks OK in the confirmation prompt to accept the popup.
 - The popup displays a page in which Box sends a POST request with the contents
-of a file along with the callback parameters to the remote server.
+  of a file along with the callback parameters to the remote server.
 - Box receives the response from the remote server and directs the client to
-POST the response to the client callback URL. The server identified by the URL
-interprets the response and redirects the user with the correct session ID.
+  POST the response to the client callback URL. The server identified by the URL
+  interprets the response and redirects the user with the correct session ID.
 
 ## Client-callback URL Request Format
 

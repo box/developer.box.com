@@ -53,10 +53,10 @@ to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
 - The application's domain must be whitelisted by Box Tools. Instructions can be
-found [here][custom-domains]. The ideal workflow is to bundle these steps
-within an installer that also installs Box Tools.
+  found [here][custom-domains]. The ideal workflow is to bundle these steps
+  within an installer that also installs Box Tools.
 - Safari requires a browser extension to connect to box tools. More details can
-be found [here][safari].
+  be found [here][safari].
 
 ## G Suite
 
@@ -97,7 +97,7 @@ integrations that are available. This `GET` request can be made with the followi
 
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+      -H 'Authorization: Bearer [ACCESS_TOKEN]'
 ```
 
 ```json
@@ -206,7 +206,7 @@ previous step.
 
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
- -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
 ```
 
 ```sh

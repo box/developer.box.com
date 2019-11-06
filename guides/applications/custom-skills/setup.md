@@ -21,7 +21,7 @@ Setting up a Custom Skill is a multi-step process.
 To set up a Custom Skill you will need to pass the following requirements.
 
 * You need to be a be able to access the [Developer Console][devconsole] for
-your enterprise, or sign up for a [developer account][devaccount].
+  your enterprise, or sign up for a [developer account][devaccount].
 
 ## Create the app
 

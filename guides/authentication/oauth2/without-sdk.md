@@ -58,7 +58,7 @@ using the `As-User` header.
 Before continuing you will need to have completed the following steps.
 
 * Create a Box Application within the developer console with the OAuth 2.0
-authentication method.
+  authentication method.
 * Copy the `client_id` and `client_secret` values and keep them handy.
 
 ## Parameters

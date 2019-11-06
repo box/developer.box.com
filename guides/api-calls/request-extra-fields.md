@@ -41,7 +41,7 @@ value of this parameter is a comma separated list of field names.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+          -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

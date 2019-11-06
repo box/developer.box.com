@@ -82,7 +82,7 @@ endpoint and passing in the query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+    -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

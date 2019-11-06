@@ -22,7 +22,7 @@ HTTP status.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "Authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+    -H "Authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
 <Message>

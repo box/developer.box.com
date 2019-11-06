@@ -236,25 +236,25 @@ possible annotators.
 
 - `annotator.init()` initializes the annotator.
 - `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the
-current annotation mode is enabled for the current viewer/annotator.
+  current annotation mode is enabled for the current viewer/annotator.
 - `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the
-annotate button for the specified annotation mode.
+  annotate button for the specified annotation mode.
 - `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the
-annotation button element.
+  annotation button element.
 - `annotator.showAnnotations()` fetches and shows saved annotations.
 - `annotator.hideAnnotations()` hides annotations.
 - `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a
-specified page.
+  specified page.
 - `annotator.setScale()` sets the zoom scale.
 - `annotator.toggleAnnotationHandler()` toggles annotation modes on and off.
-When an annotation mode is on, annotation threads will be created at that
-location.
+  When an annotation mode is on, annotation threads will be created at that
+  location.
 - `annotator.disableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` disables the specified annotation mode.
 - `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` enables the specified annotation mode.
 - `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the
-annotated element in the viewer.
+  annotated element in the viewer.
 - `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`
-creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
+  creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
 
 <!-- markdownlint-enable line-length -->
 
@@ -291,13 +291,13 @@ annotator.removeListener(EVENTNAME, listener);
 `EVENTNAME` can be one of the following
 
 - `annotator` event will be fired when we have the annotator instance first
-available. Box Annotations fires this event before `load` so that clients can
-attach their listeners before the `load` event is fired from Box Content
-Preview.
+  available. Box Annotations fires this event before `load` so that clients can
+  attach their listeners before the `load` event is fired from Box Content
+  Preview.
 - `annotationsfetched` event will be fired when annotations have been fetched
-from the Box API.
+  from the Box API.
 - `annotationmodeenter` event will be fired on when an annotation mode is
-entered. The event data will contain:
+  entered. The event data will contain:
 
 ```js
 {

@@ -32,9 +32,9 @@ To publish an application you will need to pass the following requirements.
 
 * The application needs to be in a finished state, ready for production usage
 * The application should use OAuth 2.0 authentication as the App Gallery does
-not support JWT or App Token authentication.
+  not support JWT or App Token authentication.
 * You need to be a developer with access to the application in the
-[Developer Console][devconsole].
+  [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
