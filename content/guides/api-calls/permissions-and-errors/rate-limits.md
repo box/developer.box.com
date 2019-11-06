@@ -25,8 +25,7 @@ There are currently a few distinct rate limits in place within the Box API.
 * Uploads
   * 240 file upload requests per minute, per user
 * Search
-  * 360 search requests per minute, per user, to the
-    [search endpoint](endpoint://get_search)
+  * 360 search requests per minute, per user, to the [search endpoint][search]
   * An additional limit of 60 searches per minute, per user
   * An additional 720 searches per minute, per enterprise
 
@@ -59,3 +58,5 @@ Please see the [Client Error resource](resource://client_error) for more details
   retried. In general, we advise using an exponential back-off strategy for
   retrying API calls.
 </Message>
+
+[search]: e://get_search

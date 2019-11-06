@@ -135,12 +135,24 @@ test('should not unindent bullet points', () => {
   const input = `
   <Tabs>
     <Tab id='Test>
+
       This is a string.
       * This should be at base level
         * This should be at indented level
 
       * This should be at base level
         * This should be at indented level
+          as well.
+
+          For real!
+
+<Message>
+* And it should work for
+  * Unindented lists
+    as well
+* I'm, sure!
+</Message>
+
     </Tab>
   </Tabs>
 `
@@ -148,12 +160,24 @@ test('should not unindent bullet points', () => {
   expect(output).toEqual(`
 <Tabs>
 <Tab id='Test>
+
 This is a string.
 * This should be at base level
   * This should be at indented level
 
 * This should be at base level
   * This should be at indented level
+    as well.
+
+    For real!
+
+<Message>
+* And it should work for
+  * Unindented lists
+    as well
+* I'm, sure!
+</Message>
+
 </Tab>
 </Tabs>
 `)
