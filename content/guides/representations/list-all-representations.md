@@ -24,6 +24,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 The response will include a list of representations in the following format
 
 <!-- markdownlint-disable line-length -->
+
 ```json
 ...
 {
@@ -39,6 +40,7 @@ The response will include a list of representations in the following format
 }
 ...
 ```
+
 <!-- markdownlint-enable line-length -->
 
 ## Response fields

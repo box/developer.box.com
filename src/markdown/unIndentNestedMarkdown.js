@@ -1,25 +1,24 @@
 const unindent = require('strip-indent')
-const openRegex = new RegExp(/< *([\w]+) *[\w="' ]* *>/, 'g')
 
 const unIndentNestedMarkdown = (contents) => {
-  let newContents = `${contents}`
+  const newContents = contents
+    .split('\n')
+    .map(row => row.trim())
+    .join('\n')
 
-  while ((match = openRegex.exec(contents)) !== null) {
-    const tagName = match[1]
-    const startIndex = openRegex.lastIndex+1
-    const after = newContents.substring(startIndex)
-    const [body] = after.split(new RegExp(`<\/ *${tagName} *>`, 'ig'), 2)
-    const unindentedBody = unindent(body)
-    newContents = newContents.replace(body, unindentedBody)
-  }
+  const oldParts = contents.split(/ *```/g)
+  const newParts = newContents.split(/ *```/g)
 
-  const oldParts = contents.split('```')
-  const newParts = newContents.split('```')
-  
-  return newParts.map((_, index) => {
-    if (index % 2 === 0) return newParts[index]
-    else return oldParts[index]
-  }).join('```')
+  return newParts.map((newPart, index) => (
+    (index % 2 === 0) ? newPart : unindentCode(oldParts[index])
+  )).join('```')
+}
+
+const unindentCode = (block) => {
+  const lines = block.split('\n')
+  const lang = unindent(lines[0])
+  const code = unindent(lines.splice(1).join('\n'))
+  return [lang, code].join('\n')
 }
 
 module.exports = unIndentNestedMarkdown

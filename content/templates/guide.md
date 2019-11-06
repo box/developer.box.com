@@ -52,11 +52,11 @@ required_guides: []
 #
 # This is used to maintain backwards compatibility with
 # older URLs, allowing us to change URLs and still maintain
-# paths. 
+# paths.
 #
 # This generally only works for the primary locale,
 # in this case English. Translared guides wont redirect.
-alias_paths: 
+alias_paths:
   - /old/path
   - /another/old/path
 ---
@@ -113,14 +113,18 @@ for each language as follows.
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    console.log('!')
-    ```
+
+```js
+console.log('!')
+```
+
   </Tab>
   <Tab title='.NET'>
-    ```dotnet
-    // some .NET code
-    ```
+
+```dotnet
+// some .NET code
+```
+
   </Tab>
 </Tabs>
 

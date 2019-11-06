@@ -45,7 +45,7 @@ make API calls on behalf of the application.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `As-User` header or by requesting a
-[User Access Token](g://authentication/jwt/user-token).
+[User Access Token](g://authentication/jwt/user-access-tokens).
 
 </Message>
 
@@ -67,6 +67,7 @@ the application's private key and other details. The following is an example.
   <Tab title='config.json'>
 
 <!-- markdownlint-disable line-length -->
+
 ```json
 {
   "boxAppSettings": {
@@ -81,6 +82,7 @@ the application's private key and other details. The following is an example.
   "enterpriseID": "1234567"
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
@@ -819,7 +821,7 @@ without using any of the SDKs, by using the following steps.
 4. [Request the Access Token](#4-request-access-token)
 
 To learn how to use this token head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).
 
 ## Code Samples
 

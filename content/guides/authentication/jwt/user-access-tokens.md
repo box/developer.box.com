@@ -61,10 +61,12 @@ BoxClient client = boxJWT.UserClient(userToken, userId);
   <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
+
 ```java
 String userId = "12345";
 BoxDeveloperEditionAPIConnection api = new BoxDeveloperEditionAPIConnection.getAppUserConnection(userId, config)
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>

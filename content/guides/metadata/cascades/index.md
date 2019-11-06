@@ -25,4 +25,4 @@ one metadata instance on that folder.
 There is some delay from file upload to the metadata being applied. This very
 much depends on the number of items in a folder.
 
-[template]: g://metadata/instances
+[instance]: g://metadata/instances

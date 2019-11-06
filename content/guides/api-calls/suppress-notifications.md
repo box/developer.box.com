@@ -13,17 +13,19 @@ including a `Box-Notifications: off` header with the API call.
 
 <Tabs>
   <Tab title='cURL'>
-  ```curl
-  curl -X POST https://api.box.com/2.0/folders \
-    -H "Box-Notifications: off" \
-    -H "Authorization: Bearer ACCESS_TOKEN" \
-    -d '{
-       "name": "New Folder",
-       "parent": {
-         "id": "0"
-       }
-     }'
-  ```
+
+```curl
+curl -X POST https://api.box.com/2.0/folders \
+  -H "Box-Notifications: off" \
+  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -d '{
+      "name": "New Folder",
+      "parent": {
+        "id": "0"
+      }
+    }'
+```
+
   </Tab>
 </Tabs>
 

@@ -1,4 +1,4 @@
-const openRegex = new RegExp(/< *[\w]*[\w '"=]*>/, 'g')
+const openRegex = new RegExp(/< *[\w]*[\w '"\-=]*>/, 'g')
 const closeRegex = new RegExp(/ *<\/ *([\w]+) *>/, 'g')
 
 if (!String.prototype.splice) {
@@ -20,9 +20,9 @@ const padOpeningLines = (contents) => {
     const followedByTwoNewLines = (nextChars === '\n\n')
     const followedByOneNewLine = (nextChars.startsWith('\n'))
     const precededByTicks = (contents.slice(0, match.index).split('`').length-1) % 2 === 1
-
+  
     if (!followedByClosingTag && !followedByTwoNewLines && !followedByOneNewLine && !precededByTicks) {
-      contents = contents.splice(openRegex.lastIndex+1, 0, '\n\n')
+      contents = contents.splice(openRegex.lastIndex, 0, '\n\n')
     } else if (!followedByClosingTag && !followedByTwoNewLines && followedByOneNewLine && !precededByTicks) {
       contents = contents.splice(openRegex.lastIndex+1, 0, '\n')
     }

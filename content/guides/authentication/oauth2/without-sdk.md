@@ -75,23 +75,26 @@ The first step is to configure the authorization URL of your application.
   <Tab title='.Net'>
 
 <!-- markdownlint-disable line-length -->
+
 ```dotnet
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
 var clientId = "[CLIENT_ID]";
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
+
 ```java
 String baseUrl = "https://account.box.com/api/oauth2/authorize";
 String clientId = "[CLIENT_ID]";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
-
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
@@ -138,11 +141,13 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
   <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
+
 ```java
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 
 // response.redirect(authorizationUrl);
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
@@ -307,6 +312,6 @@ using any of the SDKs, by using the following steps.
 4. [Exchange the authorization code for an access token](#4-exchange-code)
 
 To learn how to use this token head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).
 
-[tokens]: guide://authentication/tokens
+[tokens]: guide://authentication/access-tokens

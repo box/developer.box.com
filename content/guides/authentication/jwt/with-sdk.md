@@ -57,6 +57,7 @@ the application's private key and other details. The following is an example.
   <Tab title='config.json'>
 
 <!-- markdownlint-disable line-length -->
+
 ```json
 {
   "boxAppSettings": {
@@ -71,6 +72,7 @@ the application's private key and other details. The following is an example.
   "enterpriseID": "1234567"
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
   </Tab>
@@ -186,4 +188,4 @@ with any of our official SDKs, by using the following steps.
 2. [Initialize an SDK client](#2-initialize-sdk-client)
 
 To learn how to use this client head over to the guide on [Making API
-calls](g://authentication/api-calls).
+calls](g://api-calls).

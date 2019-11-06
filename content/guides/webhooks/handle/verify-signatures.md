@@ -37,27 +37,31 @@ payload is no older than ten minutes.
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    var timestamp = headers['BOX-DELIVERY-TIMESTAMP'];
-    var date = Date.parse(timestamp);
-    var expired = Date.now() - date > 10*60*1000;
-    ```
+
+```js
+var timestamp = headers['BOX-DELIVERY-TIMESTAMP'];
+var date = Date.parse(timestamp);
+var expired = Date.now() - date > 10*60*1000;
+```
+
   </Tab>
   <Tab title='Python'>
-    ```py
-    import dateutil.parser
-    import pytz
-    import datetime
 
-    timestamp = headers["BOX-DELIVERY-TIMESTAMP"]
-    date = dateutil.parser.parse(timestamp).astimezone(pytz.utc)
+```py
+import dateutil.parser
+import pytz
+import datetime
 
-    now = datetime.datetime.now(pytz.utc)
-    delta = datetime.timedelta(minutes=10)
-    expiry_date = now - deltaMinutes
+timestamp = headers["BOX-DELIVERY-TIMESTAMP"]
+date = dateutil.parser.parse(timestamp).astimezone(pytz.utc)
 
-    expired = date >= expiry_date
-    ```
+now = datetime.datetime.now(pytz.utc)
+delta = datetime.timedelta(minutes=10)
+expiry_date = now - deltaMinutes
+
+expired = date >= expiry_date
+```
+
   </Tab>
 </Tabs>
 
@@ -71,38 +75,42 @@ bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    var crypto = require('crypto');
 
-    var primaryKey = '...';
-    var secondaryKey = '...';
+```js
+var crypto = require('crypto');
 
-    var payload = '{"type":"webhook_event"...}';
+var primaryKey = '...';
+var secondaryKey = '...';
 
-    var hmac1 = crypto.createHmac('sha256', primaryKey);
-    hmac1.update(payload);
-    hmac1.update(timestamp);
+var payload = '{"type":"webhook_event"...}';
 
-    var hmac2 = crypto.createHmac('sha256', secondaryKey);
-    hmac2.update(payload);
-    hmac2.update(timestamp);
-    ```
+var hmac1 = crypto.createHmac('sha256', primaryKey);
+hmac1.update(payload);
+hmac1.update(timestamp);
+
+var hmac2 = crypto.createHmac('sha256', secondaryKey);
+hmac2.update(payload);
+hmac2.update(timestamp);
+```
+
   </Tab>
   <Tab title='Python'>
-    ```py
-    import hmac
-    import hashlib
 
-    primary_key = '...'
-    secondary_key = '...'
+```py
+import hmac
+import hashlib
 
-    payload = "{\"type\":\"webhook_event\"...}"
+primary_key = '...'
+secondary_key = '...'
 
-    bytes = bytes(payload, 'utf-8') + bytes(timestamp, 'utf-8')
-    
-    hmac1 = hmac.new(primary_key, bytes, hashlib.sha256).digest()
-    hmac2 = hmac.new(secondary_key, bytes, hashlib.sha256).digest()
-    ```
+payload = "{\"type\":\"webhook_event\"...}"
+
+bytes = bytes(payload, 'utf-8') + bytes(timestamp, 'utf-8')
+
+hmac1 = hmac.new(primary_key, bytes, hashlib.sha256).digest()
+hmac2 = hmac.new(secondary_key, bytes, hashlib.sha256).digest()
+```
+
   </Tab>
 </Tabs>
 
@@ -112,18 +120,22 @@ Make sure to convert the HMAC to a `Base64` encoded digest.
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    var digest1 = hmac1.digest('base64');
-    var digest2 = hmac2.digest('base64');
-    ```
+
+```js
+var digest1 = hmac1.digest('base64');
+var digest2 = hmac2.digest('base64');
+```
+
   </Tab>
   <Tab title='Python'>
-    ```py
-    import base64
 
-    digest1 = base64.b64encode(hmac1)
-    digest2 = base64.b64encode(hmac2)
-    ```
+```py
+import base64
+
+digest1 = base64.b64encode(hmac1)
+digest2 = base64.b64encode(hmac2)
+```
+
   </Tab>
 </Tabs>
 
@@ -138,26 +150,30 @@ to the digest created with the primary key, and the value of the
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    var signature1 = headers['BOX-SIGNATURE-SECONDARY'];
-    var signature2 = headers['BOX-SIGNATURE-PRIMARY'];
 
-    var primarySignatureValid = digest1 === signature1
-    var secondarySignatureValid = digest2 === signature2
+```js
+var signature1 = headers['BOX-SIGNATURE-SECONDARY'];
+var signature2 = headers['BOX-SIGNATURE-PRIMARY'];
 
-    var valid = !expired && (primarySignatureValid || secondarySignatureValid)
-    ```
+var primarySignatureValid = digest1 === signature1
+var secondarySignatureValid = digest2 === signature2
+
+var valid = !expired && (primarySignatureValid || secondarySignatureValid)
+```
+
   </Tab>
   <Tab title='Python'>
-    ```py
-    signature1 = headers["BOX-SIGNATURE-SECONDARY"]
-    signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 
-    primary_sig_valid = digest1 === signature1
-    secondary_sig_valid = digest2 === signature2
+```py
+signature1 = headers["BOX-SIGNATURE-SECONDARY"]
+signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 
-    valid = !expired && (primary_sig_valid || secondary_sig_valid)
-    ```
+primary_sig_valid = digest1 === signature1
+secondary_sig_valid = digest2 === signature2
+
+valid = !expired && (primary_sig_valid || secondary_sig_valid)
+```
+
   </Tab>
 </Tabs>
 

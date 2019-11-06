@@ -210,3 +210,6 @@ more, see [Special Scopes for Box UI Elements][scopes].
 | User wants to upload files to a Box folder | `base_upload` |
 
 <!-- markdownlint-enable line-length -->
+
+[downscope]: guide://authentication/access-tokens/downscope
+[scopes]: guide://api-calls/permissions-and-errors/scopes

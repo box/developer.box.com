@@ -55,7 +55,7 @@ updated display name.
 ## Create without SDKs
 
 To create an annotator token, follow the instructions for [manually
-authenticating through JWT](g://authentication/jwt/without-sdks) but replace the
+authenticating through JWT](g://authentication/jwt/without-sdk) but replace the
 JWT claim with the following data.
 
 <Tabs>
