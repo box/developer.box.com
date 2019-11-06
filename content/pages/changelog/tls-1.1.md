@@ -12,7 +12,7 @@ rank: 2
 
 To keep your API communications with Box secure, Box will no longer provide
 support for products and services that rely on the Transport Layer Security
-(TLS) 1.1 encryption protocol as of March 1, 2019.
+(TLS) 1.1 encryption protocol as of March 31, 2020.
 
 ## General Testing Instructions
 
