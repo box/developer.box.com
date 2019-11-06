@@ -13,8 +13,26 @@ titles:
     A title for usage on a block of guides, marking the index/overview page
   overview: Overview
 
+  // other_guides: A title for other guides in this category
+  other_guides: Other Guides
+
   // related_guides: A title for related guides to this category
-  related_guides: Related Guides
+  related_guides: More Guides
 
   // api_endpoints: A title for a set of links describing related API endpoints
   api_endpoints: Related APIs
+
+  // resources: A title for a set of links describing related API resources
+  resources: Related Resources
+
+  // category: A short name for a group of guides
+  category: Category
+
+  // subcategory: A short name for a sub group of guides
+  subcategory: Subcategory
+
+  // guide: A short name for a single guide
+  guide: Guide
+
+  // edit_source: The text for a link to edit the source of the page
+  edit_source: Edit this page

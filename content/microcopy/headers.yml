@@ -3,10 +3,10 @@ primary:
   links:
     get_started:
       // text: The text for the link to the old Get Started guides
-      text: Get Started
+      text: Quick Start
 
       // url: The URL to the old Get Started guides
-      url: https://developer.box.com/docs/quickstart-guides
+      url: /{locale}/guides/applications/
 
     guides:
       // text: The text for the link to the old generic guides
@@ -23,10 +23,17 @@ primary:
 
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
-      text: SDKs & Tools
+      text: SDKs/Tools
 
-      // url: The URL to the old page on SDKs
-      url: https://developer.box.com/docs/sdks
+      // url: The URL to the new page on SDKs - DO NOT TRANSLATE
+      url: "/{locale}/sdks-and-tools/"
+
+    support:
+      // text: The text for the link to the old page on SDKs
+      text: Support
+
+      // url: The URL to the old page on SDKs - DO NOT TRANSLATE
+      url: "/{locale}/support/"
 
   buttons:
     console:
