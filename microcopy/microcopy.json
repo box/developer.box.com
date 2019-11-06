@@ -4,7 +4,7 @@
   // The name of the Japanese locale, in this locale
   "locales.names.jp": "Japanese",
   // The HTML <title> of the site, as shown in search results
-  "head.title": "Box Developer Documentation Portal",
+  "head.title": "Box Developer Documentation",
   // The HTML <meta> description of a site, as shownin search results.
   "head.description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
   // The HTML <meta> tags for a site, used for SEO purposes.
@@ -133,14 +133,26 @@
   "guides.titles.next_reads": "Next things to read",
   // A title for usage on a block of guides, marking the index/overview page
   "guides.titles.overview": "Overview",
+  // A title for other guides in this category
+  "guides.titles.other_guides": "Other Guides",
   // A title for related guides to this category
-  "guides.titles.related_guides": "Related Guides",
+  "guides.titles.related_guides": "More Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
+  // A title for a set of links describing related API resources
+  "guides.titles.resources": "Related Resources",
+  // A short name for a group of guides
+  "guides.titles.category": "Category",
+  // A short name for a sub group of guides
+  "guides.titles.subcategory": "Subcategory",
+  // A short name for a single guide
+  "guides.titles.guide": "Guide",
+  // The text for a link to edit the source of the page
+  "guides.titles.edit_source": "Edit this page",
   // The text for the link to the old Get Started guides
-  "headers.primary.links.get_started.text": "Get Started",
+  "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
-  "headers.primary.links.get_started.url": "https://developer.box.com/docs/quickstart-guides",
+  "headers.primary.links.get_started.url": "/{locale}/guides/applications/",
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "Guides",
   // The URL to the old generic guides
@@ -150,9 +162,13 @@
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/{locale}/reference/",
   // The text for the link to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
-  // The URL to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.url": "https://developer.box.com/docs/sdks",
+  "headers.primary.links.sdks_and_tools.text": "SDKs/Tools",
+  // The URL to the new page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.sdks_and_tools.url": "/{locale}/sdks-and-tools/",
+  // The text for the link to the old page on SDKs
+  "headers.primary.links.support.text": "Support",
+  // The URL to the old page on SDKs - DO NOT TRANSLATE
+  "headers.primary.links.support.url": "/{locale}/support/",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "My Apps",
   // The URL to the developer console
@@ -243,6 +259,10 @@
   "footer.categories.company.links.newsletter.text": "Newsletter",
   // A link to the newsletter page
   "footer.categories.company.links.newsletter.url": "/{locale}/newsletter/",
+  // Text for a link to the changelog page
+  "footer.categories.company.links.changelog.text": "Changelog",
+  // A link to the changelog page
+  "footer.categories.company.links.changelog.url": "/{locale}/changelog/",
   // Text for a link to the github org
   "footer.categories.company.links.github.text": "GitHub",
   // Link to the github org
@@ -289,6 +309,10 @@
   "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
+  // Text for link to go to our support page
+  "footer.categories.support.links.support.text": "Support & Community",
+  // Link to go to our status page
+  "footer.categories.support.links.support.url": "/{locale}/support",
   // Text for link to create a support ticket
   "footer.categories.support.links.ticket.text": "Create a ticket",
   // Link to create a support ticket
@@ -326,5 +350,7 @@
   // Text for link to our cookie notification settings
   "footer.bottom.links.cookies.text": "Cookie Notification",
   // Link to our cookie notification settings
-  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification"
+  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification",
+  // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
+  "pages.blog.minute_read": "%s min read"
 }

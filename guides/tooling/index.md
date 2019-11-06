@@ -1,13 +1,15 @@
 ---
-rank: 1
+rank: 40
 related_endpoints: []
 related_guides: []
 required_guides: []
-alias_paths: []
-cId: null
+related_resources: []
+alias_paths:
+  - /sdks
+cId: tooling
 scId: null
-id: ''
+id: tooling
 isIndex: true
 ---
 
-# Guides
+# Tooling
