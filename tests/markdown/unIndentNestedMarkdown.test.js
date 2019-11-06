@@ -129,3 +129,32 @@ test('should deal with nested tabs', () => {
 </Tabs>
 `)
 })
+
+
+test('should not unindent bullet points', () => {
+  const input = `
+  <Tabs>
+    <Tab id='Test>
+      This is a string.
+      * This should be at base level
+        * This should be at indented level
+
+      * This should be at base level
+        * This should be at indented level
+    </Tab>
+  </Tabs>
+`
+  const output = unpad(input)
+  expect(output).toEqual(`
+<Tabs>
+<Tab id='Test>
+This is a string.
+* This should be at base level
+  * This should be at indented level
+
+* This should be at base level
+  * This should be at indented level
+</Tab>
+</Tabs>
+`)
+})
