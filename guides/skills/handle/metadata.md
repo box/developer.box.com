@@ -165,8 +165,8 @@ The faces card entries contain several values:
 - `text`: The text to display for the item.
 - `appears`: An array of objects containing the start and end time for the line
 entry.
-- `start`: The start time in seconds.
-- `end`: The end time in seconds.
+  - `start`: The start time in seconds.
+  - `end`: The end time in seconds.
 - `image_url` (OPTIONAL): An image to display beside the item.
 
 ```json
