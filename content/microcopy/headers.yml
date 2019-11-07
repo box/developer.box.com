@@ -51,11 +51,11 @@ primary:
       url: https://account.box.com/signup/n/developer#ty9l3
 
   signup:
-      // text: The text for the link to the developer signup
-      text: Sign Up
+    // text: The text for the link to the developer signup
+    text: Sign Up
 
-      // url: The URL to the developer signup - DO NOT TRANSLATE
-      url: https://account.box.com/signup/n/developer#ty9l3
+    // url: The URL to the developer signup - DO NOT TRANSLATE
+    url: https://account.box.com/signup/n/developer#ty9l3
 
 secondary:
   images:
