@@ -30,8 +30,8 @@ be used in this API and won't affect any previous templates.
 
 ### Edit template properties
 
-The operation `editTemplate` allows for editing of the base properties of the
-template, like the `displayName`.
+The operation `editTemplate` allows for editing any of the base properties of
+the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
 
 | Parameter |                                                 |
 | --------- | ----------------------------------------------- |
@@ -41,7 +41,8 @@ template, like the `displayName`.
 {
   "op": "editTemplate",
   "data": {
-    "displayName": "Client"
+    "displayName": "Client",
+    "copyInstanceOnItemCopy": true
   }
 }
 ```
