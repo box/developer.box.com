@@ -3,7 +3,7 @@ rank: 3
 related_endpoints:
   - put_folders_id
 related_guides:
-  - folders/update
+  - folders/single/update
 required_guides: []
 related_resources:
   - folder

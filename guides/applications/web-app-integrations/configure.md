@@ -2,7 +2,7 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - application/custom-apps/oauth2-setup
+  - applications/custom-apps/oauth2-setup
   - authentication/access-tokens
 required_guides: []
 related_resources: []

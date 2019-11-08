@@ -3,7 +3,7 @@ rank: 4
 related_endpoints: []
 related_guides: []
 required_guides:
-  - appplications/app-token/setup
+  - applications/custom-apps/app-token-setup
 related_resources: []
 alias_paths: []
 cId: authentication

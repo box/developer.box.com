@@ -9,7 +9,7 @@ related_endpoints:
   - get_legal_hold_policies
   - get_enterprises_id_device_pinners
 related_guides:
-  - api-call/sorting
+  - api-calls/sorting
   - api-calls/pagination/offset-based
 required_guides: []
 alias_paths: []

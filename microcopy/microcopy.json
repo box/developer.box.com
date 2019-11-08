@@ -136,7 +136,9 @@
   // A title for other guides in this category
   "guides.titles.other_guides": "Other Guides",
   // A title for related guides to this category
-  "guides.titles.related_guides": "More Guides",
+  "guides.titles.more_guides": "More Guides",
+  // A title for related guides to this category
+  "guides.titles.related_guides": "Related Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // A title for a set of links describing related API resources

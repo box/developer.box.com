@@ -1,7 +1,7 @@
 ---
 rank: 3
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/handle/payload
 required_guides: []
 alias_paths: []

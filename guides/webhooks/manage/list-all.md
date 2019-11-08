@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_webhooks
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
 related_resources:
   - webhook
 required_guides: []

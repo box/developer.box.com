@@ -100,3 +100,4 @@ re-authorize the same application.
 [adminconsole]: https://app.box.com/master/settings/custom
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
+[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
