@@ -3,9 +3,9 @@ rank: 2
 related_endpoints:
   - put_folders_id
 related_guides:
-  - folders/update
+  - folders/single/update
 required_guides: 
-  - folders/create
+  - folders/single/create
 related_resources:
   - folder
 alias_paths: []

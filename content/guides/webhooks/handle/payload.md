@@ -3,11 +3,11 @@ rank: 2
 related_endpoints:
   - post_webhooks
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/handle/setup-signatures
   - webhooks/handle/verify-signatures
 required_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
 alias_paths: []
 ---
 

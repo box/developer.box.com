@@ -3,10 +3,10 @@ rank: 5
 related_endpoints:
   - put_webhooks_id
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/manage/list-all
 required_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
 related_resources: 
   - webhook
 alias_paths: []

@@ -4,7 +4,7 @@ related_endpoints:
   - get_search
   - put_files_content
 related_guides: 
-  - api-calls/errors
+  - api-calls/permissions-and-errors/common-errors
 related_resources: 
   - client_error
 required_guides: []

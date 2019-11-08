@@ -3,10 +3,10 @@ rank: 5
 related_endpoints:
   - post_folders_id_copy
 related_guides:
-  - folders/create
-  - folders/delete
+  - folders/single/create
+  - folders/single/delete
 required_guides:
-  - folders/create
+  - folders/single/create
 related_resources:
   - folder
 alias_paths: []

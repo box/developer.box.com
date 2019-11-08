@@ -3,9 +3,9 @@ rank: 6
 related_endpoints:
 - post_webhooks
 related_guides:
-- webhooks/manage/create
+- webhooks/manage/for-file
 required_guides:
-- webhooks/manage/create
+- webhooks/manage/for-file
 alias_paths: []
 ---
 

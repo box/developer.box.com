@@ -2,7 +2,7 @@
 rank: 2
 related_endpoints: []
 related_guides:
-  - api-calls/permissions-and-errors/errors
+  - api-calls/permissions-and-errors/common-errors
   - api-calls/permissions-and-errors/rate-limits
 required_guides: []
 alias_paths: []

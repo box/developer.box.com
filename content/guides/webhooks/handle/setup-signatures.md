@@ -1,7 +1,7 @@
 ---
 rank: 4
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/handle/payload
   - webhooks/handle/rotate-signatures
   - webhooks/handle/verify-signatures

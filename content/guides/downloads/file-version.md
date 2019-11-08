@@ -4,7 +4,7 @@ related_endpoints:
   - get_files_id_content
 related_guides:
   - downloads/file
-  - uploads/file
+  - uploads/direct/file
 required_guides: []
 related_resources: []
 alias_paths: []

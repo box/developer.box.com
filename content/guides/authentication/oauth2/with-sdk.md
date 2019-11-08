@@ -5,11 +5,11 @@ related_endpoints:
 related_guides:
   - applications/select
   - authentication/select
-  - appplications/oauth2/setup
+  - applications/custom-apps/oauth2-setup
 required_guides:
   - tooling/sdks
   - authentication/select
-  - appplications/oauth2/setup
+  - applications/custom-apps/oauth2-setup
 related_resources: []
 alias_paths: []
 ---

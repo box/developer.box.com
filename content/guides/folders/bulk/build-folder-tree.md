@@ -3,8 +3,8 @@ rank: 5
 related_endpoints:
   - get_folders_id
 related_guides:
-  - folders/create
-  - folders/delete
+  - folders/single/create
+  - folders/single/delete
 required_guides: []
 related_resources:
   - folder

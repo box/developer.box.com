@@ -4,7 +4,7 @@ related_endpoints:
   - put_users_id_folder_id
 related_guides: []
 required_guides:
-  - folders/create
+  - folders/single/create
 related_resources:
   - folder
 alias_paths: []

@@ -2,7 +2,7 @@
 rank: 1
 related_endpoints: []
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/manage/update
 required_guides: []
 alias_paths: []

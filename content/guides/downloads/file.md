@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_files_id_content
 related_guides:
-  - upload/file
+  - uploads/direct/file
 required_guides: []
 related_resources: []
 alias_paths: []

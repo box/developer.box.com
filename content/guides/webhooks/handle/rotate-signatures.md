@@ -1,12 +1,12 @@
 ---
 rank: 6
 related_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/handle/payload
   - webhooks/handle/setup-signatures
   - webhooks/handle/verify-signatures
 required_guides:
-  - webhooks/manage/create
+  - webhooks/manage/for-file
   - webhooks/handle/setup-signatures
 alias_paths: []
 ---

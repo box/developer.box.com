@@ -2,10 +2,10 @@
 rank: 2
 related_endpoints: []
 related_guides: 
-  - authorization/jwt 
+  - authentication/jwt 
 required_guides: 
   - authentication/select
-  - authentication/custom-apps
+  - applications/custom-apps
   - applications/custom-apps/app-approval
 related_resources: []
 alias_paths:

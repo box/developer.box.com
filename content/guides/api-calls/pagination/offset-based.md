@@ -14,7 +14,7 @@ related_endpoints:
   - get_collaborations
   - get_collections_id_items
 related_guides:
-  - api-call/sorting
+  - api-calls/sorting
   - api-calls/pagination/marker-based
 required_guides: []
 alias_paths: []

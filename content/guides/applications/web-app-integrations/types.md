@@ -2,8 +2,8 @@
 rank: 1
 related_endpoints: []
 related_guides:
-  - application
-  - application/select
+  - applications
+  - applications/select
 required_guides: []
 related_resources: []
 alias_paths: []

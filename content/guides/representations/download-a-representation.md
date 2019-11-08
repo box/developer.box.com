@@ -5,7 +5,6 @@ related_endpoints:
 related_guides:
   - representations/thumbnail-representation
   - representations/supported-file-types
-  - representations/x-rep-hints
 required_guides:
   - representations/request-a-representation
 alias_paths: []

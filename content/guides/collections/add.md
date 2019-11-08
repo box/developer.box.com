@@ -4,9 +4,9 @@ related_endpoints:
   - put_files_id
   - put_folders_id
   - put_web_links_id
-related_guides: []
-required_guides:
   - get_collections
+related_guides: []
+required_guides: [] 
 related_resources:
   - file
   - folder
