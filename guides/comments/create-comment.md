@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - post_comments
 related_guides:
-  - comments/reply
+  - comments/create-reply
 required_guides: []
 related_resources:
   - comment

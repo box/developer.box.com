@@ -4,9 +4,9 @@ tag: folders
 related_endpoints:
   - put_folders_id
 related_guides:
-  - basics/folders/create
-  - basics/folders/update
-  - basics/folders/delete
+  - folders/single/create
+  - folders/single/update
+  - folders/single/delete
 required_guides: []
 alias_paths: []
 cId: folders

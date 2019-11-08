@@ -3,8 +3,8 @@ rank: 1
 related_endpoints:
   - post_folders
 related_guides:
-  - folders/update
-  - folders/copy
+  - folders/single/update
+  - folders/single/copy
 required_guides: []
 related_resources:
   - folder

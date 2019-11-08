@@ -3,11 +3,11 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/select
-  - authorization/oauth2
+  - authentication/oauth2
   - applications/custom-apps/app-approval
 required_guides:
   - authentication/select
-  - authentication/custom-apps
+  - applications/custom-apps
 related_resources: []
 alias_paths: []
 cId: applications
@@ -149,3 +149,4 @@ server-side code, this section may be left blank.
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [app-token]: g://authentication/app-token
 [api-calls]: g://api-calls
+[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
