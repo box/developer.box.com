@@ -3,7 +3,7 @@ const path = require('path')
 const yaml = require('js-yaml')
 
 // checks for "[text](./local/link)", capturing the link url
-const LOCAL_LINK_REGEX = new RegExp(/\[.*\]\((\.\/.*)\)/, 'mg')
+const LOCAL_LINK_REGEX = new RegExp(/\[.*\]\(((\.\/)|\/.*)\)/, 'mg')
 // checks for "[text]: ./local/link", capturing the link url
 const LOCAL_REFERENCE_LINK_REGEX = new RegExp(/\[.*\]: *(\.\/.*)/, 'mg')
 // checks for "[text][reference]", capturing the reference

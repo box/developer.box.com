@@ -17,7 +17,7 @@ support for products and services that rely on the Transport Layer Security
 ## General Testing Instructions
 
 To confirm your application will work when we remove support for TLS 1.1, we
-created a new base URL [https://api-test.box.com/2.0/][tls_test_url] that you
+created a new base URL [`https://api-test.box.com/2.0/`][tls_test_url] that you
 can test with any Box API endpoint to confirm your application supports TLS 1.2
 or higher. This test endpoint will refuse any requests made with TLS 1.1.
 

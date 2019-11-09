@@ -43,8 +43,8 @@ alias_paths:
 ## Stay up to date
 
 * [Developer Blog](https://medium.com/box-developer-blog)
-* [Newsletter](/en/newsletter/)
-* [Changelog & Release Notes](/en/changelog/)
+* [Newsletter](page://newsletter)
+* [Changelog & Release Notes](page://changelog)
 * [Twitter](https://twitter.com/boxplatform/)
 * [API Status](https://status.box.com/)
 
@@ -70,7 +70,7 @@ alias_paths:
 
 ## Elsewhere
 
-* [Support](http://localhost:8000/en/support)
+* [Support](page://support)
 * [Feedback](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
 * [GitHub](https://github.com/box)
 * [Developer Blog](https://medium.com/box-developer-blog)

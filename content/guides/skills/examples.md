@@ -107,11 +107,11 @@ Box Skills samples for processing audio files on Box.
 [image_exif_ml]: https://github.com/exiftool/exiftool
 [image_google_prod]: https://github.com/box-community/sample-image-skills/blob/master/google-product-search-integration
 [image_google_prod_ml]: https://cloud.google.com/vision/product-search/docs/
-[image_google_image]: https://github.com/box-community/sample-image-skills/blob/master/google-vision-ocr-topics-detection
+[image_google_image]: https://github.com/box-community/sample-image-skills/blob/master/google-vision-text-topics-detection
 [image_google_image_ml]: https://cloud.google.com/vision
 [image_hive]: https://github.com/box-community/sample-image-skills/blob/master/hive-predict-face-recognition
 [image_hive_ml]: https://thehive.ai/predict
-[image_ms_image]: https://github.com/box-community/sample-image-skills/blob/master/microsoft-vision-ocr-topics-detection
+[image_ms_image]: https://github.com/box-community/sample-image-skills/blob/master/microsoft-vision-text-topics-detection
 [image_ms_image_ml]: https://cloud.google.com/vision/
 [video_azure_video]: https://github.com/box-community/sample-video-skills/blob/master/microsoft-azure-faces-transcript-topics-detection
 [video_azure_video_ml]: https://docs.microsoft.com/en-us/azure/media-services/latest/analyzing-video-audio-files-concept
