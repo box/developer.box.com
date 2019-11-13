@@ -8,7 +8,7 @@ alias_paths:
   - /docs/box-platform
 ---
 
-# Customs Apps
+# Custom Apps
 
 By far the more flexible way to use Box Platform is through a **Custom App**
 integration.
