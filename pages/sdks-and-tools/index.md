@@ -26,7 +26,7 @@ receive regular product updates, as well as security updates.
 | [Python SDK][pythonsdk]           | Yes         | Full    |
 | [Node SDK][nodesdk]               | Yes         | Full    |
 | [CLI][cli]                        | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Partial |
+| [iOS Content SDK][iossdk]         | Yes         | Full    |
 | [Android Content SDK][androidsdk] | Yes         | Partial |
 
 <Message type="notice">
