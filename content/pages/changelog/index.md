@@ -10,6 +10,17 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-11-18 / New iOS SDK Now Available
+
+A new major release of the iOS SDK has been released and is now generally 
+available. The new SDK includes a number of major revisions:
+
+* Fully rebuilt using Swift.
+* Support for Cocoapods, Carthage, and the Swift Package Manager.
+* SDK now maintains full API feature parity.
+
+See the [release blog post][ios-sdk-release-blog] for more information.
+
 ## 2019-10-25 / New fields for File Versions
 
 New optional fields have been made available within the File Version object,
@@ -205,6 +216,7 @@ Sign, G Suite, or Box Edit. Documentation is available
 
 Full release announcement is available [here][blog_new_element].
 
+[ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
 [blog_token_revocation]: https://medium.com/box-developer-blog/new-security-enhancements-for-revoking-access-tokens-79b9960a7ce2
