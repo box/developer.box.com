@@ -229,7 +229,7 @@ Sign, G Suite, or Box Edit. Documentation is available
 Full release announcement is available [here][blog_new_element].
 
 [ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
-[preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0gh
+[preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
