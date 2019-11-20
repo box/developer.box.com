@@ -10,6 +10,16 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-11-20 / Preview SDK `v2.26.0` Released
+
+Version `2.26.0` of the Preview SDK has been released. New JavaScript and CSS
+Preview files have been made available. To adopt new changes, please see the
+[UI Elements manual installation][ui-elements-manual-install] links for Content
+Preview.
+
+Please see the `v2.26.0` [release notes][preview-2.26-release-notes] for a list
+of all feature changes.
+
 ## 2019-11-18 / New iOS SDK Now Available
 
 A new major release of the iOS SDK has been released and is now generally 
@@ -216,6 +226,8 @@ Sign, G Suite, or Box Edit. Documentation is available
 
 Full release announcement is available [here][blog_new_element].
 
+[ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
+[preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0gh
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
