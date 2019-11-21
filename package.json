@@ -50,7 +50,7 @@
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
-    "ilib-loctool-ghfm": "^1.2.0",
+    "ilib-loctool-ghfm": "^1.2.2",
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
     "jsonpath": "^1.0.2",
