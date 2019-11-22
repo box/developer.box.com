@@ -233,6 +233,18 @@
   "explorer.titles.body": "Response Body",
   // The text used to prompt a user to start searching
   "search.prompt": "Search...",
+  // Text to indicate that search results are filtered by these types
+  "search.only_show": "Only show",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.resources": "Resources",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.endpoints": "Endpoints",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.guides": "Guides",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.params": "Params",
+  // A short name for the filter type to be shown in filters
+  "search.filter_types.fields": "Fields",
   // A short name for the resource type to be shown in search results
   "search.result_types.resource": "resource",
   // A short name for the endpoint type to be shown in search results
