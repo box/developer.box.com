@@ -27,7 +27,7 @@ A message is an easy way to show a user that something is important.
 
 ### Default message
 
-The lowest level of message is default messae. Either explicitly set the type, or
+The lowest level of message is default message. Either explicitly set the type, or
 omit the type.
 
 ```html
@@ -45,7 +45,6 @@ omit the type.
     A simple note
   </Message>
 </H>
-
 
 ### Notice message
 
