@@ -2,6 +2,25 @@
 // prompt: The text used to prompt a user to start searching
 prompt: Search...
 
+// only_show: Text to indicate that search results are filtered by these types
+only_show: Only show
+
+filter_types:
+  // resources: A short name for the filter type to be shown in filter selection screen
+  resources: Resources
+
+  // endpoints: A short name for the filter type to be shown in filter selection screen
+  endpoints: Endpoints
+
+  // guides: A short name for the filter type to be shown in filter selection screen
+  guides: Guides
+
+  // params: A short name for the filter type to be shown in filter selection screen
+  params: Params
+
+  // fields: A short name for the filter type to be shown in filter selection screen
+  fields: Fields
+
 result_types:
   // resource: A short name for the resource type to be shown in search results
   resource: resource
