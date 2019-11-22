@@ -2,6 +2,7 @@
 rank: 5
 related_endpoints:
   - post_folders_id
+  - delete_folders_id
 related_guides:
   - trash/permanently-delete-folder
 required_guides: []
