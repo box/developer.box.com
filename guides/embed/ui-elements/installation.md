@@ -79,8 +79,8 @@ All the UI elements are also available directly from the Box CDN.
 | [Content Uploader](g://embed/ui-elements/uploader)   | `10.1.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.css)                              |
 |                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js)                      |
 |                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.no.react.js) |
-| [Content Preview](g://embed/ui-elements/preview)     | `2.13.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.css)                                  |
-|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.13.0/en-US/preview.js)                                     |
+| [Content Preview](g://embed/ui-elements/preview)     | `2.26.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.26.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.26.0/en-US/preview.css)                                  |
+|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.26.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.26.0/en-US/preview.js)                                     |
 
 Use these links to either download the elements code to your application's
 code, or embed them straight into your page from the CDN.
@@ -187,7 +187,7 @@ To self-host the Box Content Preview library, follow these steps.
 Either fork the repository and check out the version you want to host or
 download the specific version as a zip.
 
-- Check out a specific version with `git checkout v2.13.0`
+- Check out a specific version with `git checkout v2.26.0`
 - Download a specific version as a zip from the [releases][preview-releases]
   page.
 
@@ -203,12 +203,12 @@ yarn install && yarn build:18n && yarn:build:prod
 
 Self-host everything except for the `dev` folder from the `/dist` folder. You
 must not alter the folder structure and `third-party` needs to be in the same
-folder as `2.13.0`.
+folder as `2.26.0`.
 
 For example, if you self-host using a `box-assets` directory, these URLs must
 be accessible:
 
-- `https://cdn.YOUR_SITE.com/box-assets/2.13.0/en-US/preview.js`
+- `https://cdn.YOUR_SITE.com/box-assets/2.26.0/en-US/preview.js`
 - `https://cdn.YOUR_SITE.com/box-assets/third-party/text/0.114.0/papaparse.min.js`
 - `https://cdn.YOUR_SITE.com/box-assets/third-party/model3d/1.12.0/three.min.js`
 

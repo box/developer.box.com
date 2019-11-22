@@ -29,9 +29,9 @@ indented content is treated as a blockquote in Markdown.
 
 A message is an easy way to show a user that something is important.
 
-### Notice messages
+### Default message
 
-The lowest level of message is a notice. Either explicitly set the type, or
+The lowest level of message is default message. Either explicitly set the type, or
 omit the type.
 
 ```html
@@ -39,7 +39,7 @@ omit the type.
   A simple note
 </Message>
 
-<Message type='notice'>
+<Message type='default'>
   A simple note
 </Message>
 ```
@@ -49,6 +49,31 @@ omit the type.
 <Message>
 
 A simple note
+
+</Message>
+
+</H>
+
+### Notice message
+
+The next level is a notice.
+
+```html
+<Message type='notice'>
+  A notice message
+</Message>
+
+<Message notice>
+  A notice message
+</Message>
+
+```
+
+<H>
+
+<Message Notice>
+
+A notice message
 
 </Message>
 

@@ -12,6 +12,27 @@ isIndex: true
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-11-20 / Preview SDK `v2.26.0` Released
+
+Version `2.26.0` of the Preview SDK has been released. New JavaScript and CSS
+Preview files have been made available. To adopt new changes, please see the
+[UI Elements manual installation][ui-elements-manual-install] links for Content
+Preview.
+
+Please see the `v2.26.0` [release notes][preview-2.26-release-notes] for a list
+of all feature changes.
+
+## 2019-11-18 / New iOS SDK Now Available
+
+A new major release of the iOS SDK has been released and is now generally
+available. The new SDK includes a number of major revisions:
+
+* Fully rebuilt using Swift.
+* Support for Cocoapods, Carthage, and the Swift Package Manager.
+* SDK now maintains full API feature parity.
+
+See the [release blog post][ios-sdk-release-blog] for more information.
+
 ## 2019-10-25 / New fields for File Versions
 
 New optional fields have been made available within the File Version object,
@@ -207,6 +228,9 @@ Sign, G Suite, or Box Edit. Documentation is available
 
 Full release announcement is available [here][blog_new_element].
 
+[ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
+[preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
+[ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
 [blog_token_revocation]: https://medium.com/box-developer-blog/new-security-enhancements-for-revoking-access-tokens-79b9960a7ce2
