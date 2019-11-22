@@ -1,9 +1,10 @@
 ---
 rank: 1
 related_endpoints:
- - post_files_id
+  - post_files_id
+  - delete_files_id
 related_guides:
-- trash/permanently-delete-file
+  - trash/permanently-delete-file
 required_guides: []
 related_resources:
   - files
