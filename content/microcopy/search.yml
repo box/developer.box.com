@@ -6,19 +6,19 @@ prompt: Search...
 only_show: Only show
 
 filter_types:
-  // resources: A short name for the filter type to be shown in filter selection screen
+  // resources: A short name for the filter type to be shown in filters
   resources: Resources
 
-  // endpoints: A short name for the filter type to be shown in filter selection screen
+  // endpoints: A short name for the filter type to be shown in filters
   endpoints: Endpoints
 
-  // guides: A short name for the filter type to be shown in filter selection screen
+  // guides: A short name for the filter type to be shown in filters
   guides: Guides
 
-  // params: A short name for the filter type to be shown in filter selection screen
+  // params: A short name for the filter type to be shown in filters
   params: Params
 
-  // fields: A short name for the filter type to be shown in filter selection screen
+  // fields: A short name for the filter type to be shown in filters
   fields: Fields
 
 result_types:
