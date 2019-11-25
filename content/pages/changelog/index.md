@@ -27,6 +27,24 @@ issue where trash folders have become unresponsive for users with more than
 For these users an application will need to use [marker-based
 pagination](g://api-calls/pagination/marker-based) to work around the limitation.
 
+## 2019-11-25 / Elements `v11.0` Released
+
+Box UI Elements version 11.0 has been released. This update includes three
+major new feature enhancements:
+
+* Content Explorer Grid View.
+* New Tasks Experience within the Preview Sidebar.
+* Visual Versions for the Preview Sidebar.
+
+Updated JavaScript and CSS files links for this release are available within
+the [UI Elements manual installation instructions][ui-elements-manual-install].
+
+For full information on changes in this release please see the following
+resources:
+
+* [Release notes][elements-11-release-notes]
+* [Announcement blog post][elements-11-blog]
+
 ## 2019-11-20 / Preview SDK `v2.26.0` Released
 
 Version `2.26.0` of the Preview SDK has been released. New JavaScript and CSS
@@ -243,6 +261,8 @@ Sign, G Suite, or Box Edit. Documentation is available
 
 Full release announcement is available [here][blog_new_element].
 
+[elements-11-release-notes]: https://github.com/box/box-ui-elements/releases/tag/v11.0.0
+[elements-11-blog]: https://medium.com/box-developer-blog/announcing-elements-11-88ee900125fd
 [ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
 [preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
