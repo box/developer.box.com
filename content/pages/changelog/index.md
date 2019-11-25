@@ -10,6 +10,23 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-11-25 / Marker-based Pagination Support for Trash API
+
+The [Trash API](e://get_folders_trash_item) now support [marker-based
+pagination](g://api-calls/pagination/marker-based). Marker-based pagination can
+be used to access any user's trash and is the required pagination option for
+users with more than 100,000 items in their trash.
+
+## 2019-11-25 / New Trash Scale-Limit Error Code
+
+The [Trash API](e://get_folders_trash_items) will now return a new `403
+Forbidden` error when accessing very large trash folders. This error resolves an
+issue where trash folders have become unresponsive for users with more than
+100,00 items in their trash folder.
+
+For these users an application will need to use [marker-based
+pagination](g://api-calls/pagination/marker-based) to work around the limitation.
+
 ## 2019-11-20 / Preview SDK `v2.26.0` Released
 
 Version `2.26.0` of the Preview SDK has been released. New JavaScript and CSS
@@ -22,7 +39,7 @@ of all feature changes.
 
 ## 2019-11-18 / New iOS SDK Now Available
 
-A new major release of the iOS SDK has been released and is now generally 
+A new major release of the iOS SDK has been released and is now generally
 available. The new SDK includes a number of major revisions:
 
 * Fully rebuilt using Swift.
