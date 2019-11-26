@@ -42,7 +42,7 @@ of all feature changes.
 
 ## 2019-11-18 / New iOS SDK Now Available
 
-A new major release of the iOS SDK has been released and is now generally 
+A new major release of the iOS SDK has been released and is now generally
 available. The new SDK includes a number of major revisions:
 
 * Fully rebuilt using Swift.
