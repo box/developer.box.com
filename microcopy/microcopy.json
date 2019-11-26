@@ -91,6 +91,8 @@
   "reference.parameter_details.optional": "optional",
   // The label for a required parameter
   "reference.parameter_details.required": "required",
+  // The label for a conditionally required param
+  "reference.parameter_details.conditionally_required": "conditionally required",
   // The label for a default parameter value
   "reference.parameter_details.default": "Default",
   // The label for the max length of a parameter value
