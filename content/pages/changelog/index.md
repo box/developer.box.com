@@ -10,6 +10,13 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-12-05 / Marker-based Pagination Support for Users API
+
+The [Users API](e://get_users) now supports [marker-based
+pagination](g://api-calls/pagination/marker-based). Marker-based pagination is
+an alternative to regular offset-based pagination and provides an alternative
+way to get users for enterprises with a large volume of users.  
+
 ## 2019-11-25 / Elements `v11.0` Released
 
 Box UI Elements version 11.0 has been released. This update includes three
