@@ -129,6 +129,9 @@ parameter_details:
   // required: The label for a required parameter
   required: required
 
+  // conditionally_required: The label for a conditionally required param
+  conditionally_required: conditionally required
+
   // default: The label for a default parameter value
   default: Default
 
