@@ -12,7 +12,7 @@ For historical changelog entries, please see
 
 ## 2019-11-25 / Marker-based Pagination Support for Trash API
 
-The [Trash API](e://get_folders_trash_item) now support [marker-based
+The [Trash API](e://get_folders_trash_item) now supports [marker-based
 pagination](g://api-calls/pagination/marker-based). Marker-based pagination can
 be used to access any user's trash and is the required pagination option for
 users with more than 100,000 items in their trash.
@@ -22,7 +22,7 @@ users with more than 100,000 items in their trash.
 The [Trash API](e://get_folders_trash_items) will now return a new `403
 Forbidden` error when accessing very large trash folders. This error resolves an
 issue where trash folders have become unresponsive for users with more than
-100,00 items in their trash folder.
+100,000 items in their trash folder.
 
 For these users an application will need to use [marker-based
 pagination](g://api-calls/pagination/marker-based) to work around the limitation.
