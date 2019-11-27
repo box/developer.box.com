@@ -104,7 +104,7 @@ results as an array, as well as some information about the current page of resul
 
 ## Example endpoints
 
-Some endpoints that support offset-based pagination are:
+Some endpoints that support marker-based pagination are:
 
 - [List items for a folder](endpoint://get_folders_id_items)
 - [List a file's collaborations](endpoint://get-files-id-collaborations)
