@@ -9,6 +9,7 @@ related_endpoints:
   - get_legal_hold_policies
   - get_enterprises_id_device_pinners
   - get_folders_trash_items
+  - get_users
 related_guides:
   - api-calls/sorting
   - api-calls/pagination/offset-based
