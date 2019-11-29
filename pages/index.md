@@ -1,6 +1,5 @@
 ---
 hide_title: true
-hide_search: true
 alias_paths:
   - /reference
   - /docs/faqs
