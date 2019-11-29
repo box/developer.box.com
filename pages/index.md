@@ -1,4 +1,5 @@
 ---
+hide_search: false
 hide_title: true
 alias_paths:
   - /reference
