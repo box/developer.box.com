@@ -177,7 +177,7 @@ To self-host the Box Content Preview library, follow these steps.
 Either fork the repository and check out the version you want to host or
 download the specific version as a zip.
 
-- Check out a specific version with `git checkout v2.29.0`
+- Check out a specific version with `git checkout v2.29.0`.
 - Download a specific version as a zip from the [releases][preview-releases]
   page.
 
