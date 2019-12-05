@@ -10,6 +10,13 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-12-05 / Marker-based Pagination Support for Users API
+
+The [Users API](e://get_users) now supports [marker-based
+pagination](g://api-calls/pagination/marker-based). Marker-based pagination is
+an alternative to regular offset-based pagination and provides an alternative
+way to get users for enterprises with a large volume of users.  
+
 ## 2019-12-03 / Preview SDK `v2.29.0` Released
 
 Version `2.29.0` of the Preview SDK has been released. New JavaScript and CSS
