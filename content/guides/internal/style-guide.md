@@ -189,14 +189,19 @@ multiple `Tab` items with titles.
 ```
 
 <H>
+   
 <Tabs>
-  <Tab title='Node'>
-    Node
-  </Tab>
-  <Tab title='.NET'>
-    .NET
-  </Tab>
+   
+<Tab title='Node'>
+ Node
+</Tab>
+   
+<Tab title='.NET'>
+ .NET
+</Tab>
+
 </Tabs>
+
 </H>
 
 Tabs use cookies to try and remember the user's choice. Please use the standard
