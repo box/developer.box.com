@@ -100,6 +100,7 @@ The following events can be triggered for an enterprise.
 | `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
 | `COLLABORATION_INVITE`                         | Invited                                                                                         |
 | `COLLABORATION_EXPIRATION`                     | Set collaborator expiration                                                                     |
+| `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                    |
 | `ITEM_SYNC`                                    | Synced folder                                                                                   |
 | `ITEM_UNSYNC`                                  | Unmarked folder for synced                                                                      |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we haven’t seen before                                       |
