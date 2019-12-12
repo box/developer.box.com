@@ -15,6 +15,15 @@ rank: 1
 # as "operationId".
 related_endpoints:
   - get_files_id
+# TODO/CHANGE: Set to any number of resource IDs or []
+# to be shown at the end of a Guide as being related.
+#
+# Resource IDs can be found in the OpenAPI spec
+# as the key of the resource in the components list
+related_resources:
+  - file
+  - folder
+  - web_link
 # TODO/CHANGE: Set to any number of guides or []
 # to be shown at the end of a Guide as being related.
 #
@@ -25,7 +34,7 @@ related_endpoints:
 # For example, for the /content/guides/foo/bar/baz.md file,
 # the ID would be foo/bar/baz.
 related_guides:
-  - automation-and-events/webhooks/list-of-event-types
+  - automation-and-events/webhooks/list-of-triggers
   - automation-and-events/webhooks/parse-a-webhook
   - automation-and-events/webhooks/delete-a-webhook
 # TODO/CHANGE: Set to any number of guides or []
@@ -43,11 +52,11 @@ required_guides: []
 #
 # This is used to maintain backwards compatibility with
 # older URLs, allowing us to change URLs and still maintain
-# paths. 
+# paths.
 #
 # This generally only works for the primary locale,
 # in this case English. Translared guides wont redirect.
-alias_paths: 
+alias_paths:
   - /old/path
   - /another/old/path
 ---
@@ -104,14 +113,18 @@ for each language as follows.
 
 <Tabs>
   <Tab title='Node'>
-    ```js
-    console.log('!')
-    ```
+
+```js
+console.log('!')
+```
+
   </Tab>
   <Tab title='.NET'>
-    ```dotnet
-    // some .NET code
-    ```
+
+```dotnet
+// some .NET code
+```
+
   </Tab>
 </Tabs>
 
@@ -124,3 +137,10 @@ This would [look like this][1].
 At the end of the document, define the link.
 
 [1]: https://box.com
+
+We provide some easy ways to link to guides, endpoints,
+and resources without hard-coding the locale.
+
+[Get a file by ID][endpoint://get-files-id]
+[File resource][resource://file]
+[Yet another guide][guide://automation/events/all-triggers]

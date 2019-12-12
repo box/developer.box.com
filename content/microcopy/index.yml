@@ -28,3 +28,6 @@ search:
 
 footer:
   $ref: "content/microcopy/footer.yml"
+
+pages:
+  $ref: "content/microcopy/pages.yml"
