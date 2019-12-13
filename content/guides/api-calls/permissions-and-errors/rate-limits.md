@@ -13,7 +13,7 @@ alias_paths: []
 
 # Rate Limits
 
-Most of the Box APIs have rate limits in place in order to prevent abuse by
+Most of the Box APIs have rate limits in place in order to prevent misuse by
 third-party services or users.
 
 ## Per API rate limits

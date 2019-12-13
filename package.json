@@ -19,10 +19,11 @@
   "scripts": {
     "test": "yarn lint",
     "test:compiler": "jest ./tests",
-    "lint": "concurrently 'yarn lint:links' 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:yaml'",
+    "lint": "concurrently 'yarn lint:links' 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:yaml' 'yarn lint:alex'",
     "lint:markdown": "markdownlint -c markdownlintrc.json ./content ./templates",
     "lint:spelling": "yarn lint:spelling:interactive -r",
     "lint:spelling:interactive": "mdspell 'content/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
+    "lint:alex": "alex . -d -q",
     "lint:yaml": "yamllint ./content",
     "lint:links": "jest ./src/markdown/* --silent",
     "watch:content": "concurrently 'yarn:watch:microcopy' 'yarn:watch:guides' 'yarn:watch:pages' 'yarn:watch:lint'",
@@ -46,6 +47,7 @@
   },
   "dependencies": {
     "@stoplight/json-ref-resolver": "^3.0.1",
+    "alex": "^8.1.0",
     "comment-json": "^2.2.0",
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",

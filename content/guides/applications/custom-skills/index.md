@@ -11,9 +11,9 @@ alias_paths:
 # Customs Skills
 
 A Custom Skill, or Box Skill is a type of application that performs custom
-processing for files uploaded to Box. Skills are designed to make it easy to use
-third-party Machine Learning services to automatically extract information from
-files uploaded to Box.
+processing for files uploaded to Box. Skills are designed to make it
+straightforward to use third-party Machine Learning services to automatically
+extract information from files uploaded to Box.
 
 <ImageFrame shadow>
   ![Skills example](./images/skills-example.png)
@@ -46,5 +46,5 @@ A Custom Skill is best used when the application:
 
 - Wants to only add metadata to files uploaded to Box
 - Does not want to upload new files or perform any other API calls
-- Wants to have a simple way to pass files to Machine Learning services without
+- Wants to have way to pass files to Machine Learning services without
   having to handle authentication

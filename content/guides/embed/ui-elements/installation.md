@@ -20,7 +20,7 @@ direct download.
 
 <Message>
   There are two ways to use the Box UI elements. If you’re looking to build
-  something quick and simple, use it as a library as shown below in this
+  something quickly, use it as a library as shown below in this
   documentation. Alternatively, if you are a building a React based app, you can
   pull in the component from our NPM package. For details refer to the NPM link
   above. As we continue to roll this out, we will provide some level of access
@@ -170,11 +170,12 @@ replace `en-US` in the URLs above with any of the following:
 
 ## Self-hosting Content Preview
 
-To self-host the Box Content Preview library, follow these steps.
+To serve the Box Content Preview library from your own server, follow these
+steps.
 
 ### 1. Download release
 
-Either fork the repository and check out the version you want to host or
+Either fork the repository and check out the version you want to serve or
 download the specific version as a zip.
 
 - Check out a specific version with `git checkout v2.26.0`
@@ -189,9 +190,9 @@ Install the dependencies and build the library with the following command.
 yarn install && yarn build:18n && yarn:build:prod
 ```
 
-### 3. Host files
+### 3. Serve files
 
-Self-host everything except for the `dev` folder from the `/dist` folder. You
+Self-serve everything except for the `dev` folder from the `/dist` folder. You
 must not alter the folder structure and `third-party` needs to be in the same
 folder as `2.26.0`.
 
@@ -220,7 +221,7 @@ For testing purposes, a [Developer Token][devtoken] can be used.
 
 ## CORS
 
-To use UI elements an application needs to whitelist the domain the widget is
+To use UI elements an application needs to allow the domain the widget is
 used on for Cross Origin Resource sharing. See the [CORS guide][cors] for more
 details.
 

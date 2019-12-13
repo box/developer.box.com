@@ -12,6 +12,8 @@ related_resources: []
 alias_paths: []
 ---
 
+<!-- alex disable whitelist -->
+
 # Create Collaboration Whitelist
 
 Creating a new collaboration whitelist will set a new domain, such as

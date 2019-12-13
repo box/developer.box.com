@@ -37,7 +37,7 @@ distinct resources.
 ## File Deletion with Retention Policies
 
 Files under retention can be deleted from folders, but they will be retained in
-the trash until the retention period expires. When the retention period expires,
+the trash until the retention expires. When the retention expires,
 you can choose to have the content automatically deleted or for the policy to be
 removed.
 

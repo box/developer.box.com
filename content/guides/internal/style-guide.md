@@ -23,7 +23,7 @@ with embedded React in Markdown.
 
 ## Messages
 
-A message is an easy way to show a user that something is important.
+A message is a way to show a user that something is important.
 
 ### Default message
 
@@ -32,17 +32,17 @@ omit the type.
 
 ```html
 <Message>
-  A simple note
+  A default note
 </Message>
 
-<Message type='default'>
-  A simple note
+<default type='default'>
+  A default note
 </Message>
 ```
 
 <H>
   <Message>
-    A simple note
+    A default note
   </Message>
 </H>
 
@@ -115,7 +115,7 @@ A message can have a title.
 <Message>
   # A title
 
-  A simple note
+  A default note
 </Message>
 ```
 
@@ -123,7 +123,7 @@ A message can have a title.
 <Message>
   # A title
 
-  A simple note
+  A default note
 </Message>
 </H>
 
@@ -280,7 +280,7 @@ Table's can be created with the usual markdown syntax.
 
 ### Hiding headers
 
-To hide the headers, just leave them empty.
+To hide the headers leave them empty.
 
 ```md
 |        |        |        |
@@ -322,7 +322,7 @@ allow for long lines.
 
 ## Image Frame
 
-An image can be easily wrapped into a frame.
+An image can be wrapped into a frame.
 
 ```html
 <ImageFrame border center shadow width='200'>

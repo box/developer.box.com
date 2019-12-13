@@ -9,6 +9,8 @@ required_guides: []
 alias_paths: []
 ---
 
+<!-- alex disable aattacks -->
+
 # Setup Webhook Signatures
 
 You can configure webhooks to use signatures to protect your application from

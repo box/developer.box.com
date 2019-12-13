@@ -1,3 +1,5 @@
+<!-- alex disable japanese -->
+
 # Contributing
 
 <!-- vscode-markdown-toc -->
@@ -21,8 +23,8 @@
 
 ## <a name='Background'></a>Background
 
-The key purpose for this project is to allow for easy creation and deployment of
-microcopy for the [Box.dev][boxdev] site.
+The key purpose for this project is to allow for the creation and deployment of
+microcopy, guides, and pages for the [Box.dev][boxdev] site.
 
 ### <a name='Projectlayout'></a>Project layout
 
@@ -138,10 +140,10 @@ Make sure all tests and linting passes before committing changes.
 ### <a name='Addingindexpages'></a>Adding index pages
 
 Guides are rendered slightly different when they are index pages. Index pages
-are simply pages named `index.md` and will automatically list all guides and
+are pages named `index.md` and will automatically list all guides and
 nested in that folder (and any folders within that folder).
 
-To create an index page, simply run:
+To create an index page run:
 
 ```shell
 yarn new path/to/index "Index page title"

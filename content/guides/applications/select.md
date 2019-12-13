@@ -5,7 +5,7 @@ related_guides:
   - authentication/select
 required_guides: []
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/use-case-recipes
   - /v2/docs/box-api-recipes
 ---
@@ -79,9 +79,9 @@ Example use cases for Custom Apps include:
 | **Features**               | Limited API access             |
 
 A Custom Skill, or Box Skill is a type of application that performs custom
-processing for files uploaded to Box. Skills are designed to make it easy to use
-third-party Machine Learning services to automatically extract information from
-files uploaded to Box.
+processing for files uploaded to Box. Skills are designed to make it possible to
+use third-party Machine Learning services to automatically extract information
+from files uploaded to Box.
 
 Box Skills need to be enabled on a folder by a Box Admin. After this an event is
 sent to the Skill's application server every time a file is uploaded to the
@@ -99,7 +99,7 @@ A Custom Skill is best used when the application:
 
 - Wants to only add metadata to files uploaded to Box
 - Does not want to upload new files or perform any other API calls
-- Wants to have a simple way to pass files to Machine Learning services without
+- Wants to have a way to pass files to Machine Learning services without
   having to handle authentication
 
 </Message>

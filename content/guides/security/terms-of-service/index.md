@@ -3,6 +3,8 @@ rank: 1
 alias_paths: []
 ---
 
+<!-- alex disable reject -->
+
 # Terms of Service
 
 The Box API allows administrators to configure Terms of Services for working on
@@ -17,7 +19,7 @@ A Terms of Service is a enterprise-level record that represent the conditions
 within which all users are allowed to work with an enterprise's data in Box.
 
 There are currently two types of Terms of Service for any enterprise that can be
-enabled and disabled independently. The **Managed Terms of Service** can be
+enabled independently. The **Managed Terms of Service** can be
 enabled for the enterprise's own users, where the **External Terms of Service*
 can be enabled for users from other enterprises that collaborated in on the
 primary enterprise's data.
@@ -56,7 +58,7 @@ Additionally, application can view and accept Terms of Services for a regular
 user via the API.
 
 * [`GET /terms_of_service_user_statuses`][euserstatuses]:
-  To get a list of all the accepted and rejected Terms of Services for a user
+  To get a list of all the Terms of Services for a user
 * [`POST /terms_of_service_user_statuses`][euserstatuses_post]:
   To accept or reject a specific Terms of Service for the first time
 * [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]:
@@ -68,8 +70,8 @@ user via the API.
 The following scopes should be granted to the application in order to take the
 outlined actions.
 
-* **Manage Enterprise Properties**: Required to enable, edit, or disable the
-  enterprise'S settings for Terms of Services as well as to view them for
+* **Manage Enterprise Properties**: Required to enable or edit the
+  enterprise's settings for Terms of Services as well as to view them for
   external users.
 * **Manage Users**: Required to accept Terms of Services for other users.
 

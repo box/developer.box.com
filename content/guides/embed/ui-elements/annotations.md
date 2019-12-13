@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/annotations
   - /annotations-beta
 ---
@@ -62,7 +62,7 @@ more details on viewer specific annotation configurations.
 
 The UI Elements are designed in an authentication agnostic way so whether
 you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
+non-Box accounts (App Users), UI Elements should work out of the box. The
 reason for this is that UI Elements only expect a "token" to be passed in for
 authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
@@ -81,7 +81,7 @@ initializing Annotations.
 Below are a set of new Annotation-specific scopes to go alongside Downscoping.
 These allow developers to enable/disable functionality on Box
 Annotations by configuring the appropriate scopes on the downscoped token. To
-learn more, see [Special Scopes for the Box UI
+learn more, see [Dedicated scopes for the Box UI
 Elements](g://embed/ui-elements/scopes).
 
 ## Parameters & Options
@@ -163,7 +163,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 
 ## Enabling/Disabling Annotations and Annotation Types
 
-Annotation types can be selectively disabled through preview options. Viewer
+Annotation types can be selectively turned off through preview options. Viewer
 options override global `showAnnotations` value, for that viewer. See [Box
 Content Preview](g://embed/ui-elements/preview) for more details on how to
 set up the Preview instances that are used with Box Annotations here.
@@ -189,7 +189,7 @@ preview.show(..., {
 });
 ```
 
-This enables or disabled the annotations if `enabled` is set. This respects the
+This turns the annotations on if `enabled` is set to `true`. This respects the
 `showAnnotations` value if empty. The `enabledTypes` value is a list of
 annotation types to enable for this viewer. If empty, will respect default types
 for that annotator.
@@ -284,13 +284,13 @@ annotator.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following
 
-- `annotator` event will be fired when we have the annotator instance first
-  available. Box Annotations fires this event before `load` so that clients can
-  attach their listeners before the `load` event is fired from Box Content
+- `annotator` event will be triggered when we have the annotator instance first
+  available. Box Annotations trigger this event before `load` so that clients can
+  attach their listeners before the `load` event is triggered from Box Content
   Preview.
-- `annotationsfetched` event will be fired when annotations have been fetched
+- `annotationsfetched` event will be triggered when annotations have been fetched
   from the Box API.
-- `annotationmodeenter` event will be fired on when an annotation mode is
+- `annotationmodeenter` event will be triggered on when an annotation mode is
   entered. The event data will contain:
 
 ```js
@@ -302,7 +302,7 @@ annotator.removeListener(EVENTNAME, listener);
 }
 ```
 
-`annotationmodeexit` event will be fired on when an annotation mode is exited.
+`annotationmodeexit` event will be triggered on when an annotation mode is exited.
 The event data will contain:
 
 ```js
@@ -314,8 +314,8 @@ The event data will contain:
 }
 ```
 
-`annotationerror` event will be fired when an annotation error has occurred. The
-event data will contain:
+`annotationerror` event will be triggered when an annotation error has occurred.
+The event data will contain:
 
 ```js
 {
@@ -323,7 +323,7 @@ event data will contain:
 }
 ```
 
-`annotationpending` event will be fired when an annotation thread was created
+`annotationpending` event will be triggered when an annotation thread was created
 but has not yet been saved on the server. The event data will contain:
 
 ```js
@@ -337,7 +337,7 @@ but has not yet been saved on the server. The event data will contain:
 }
 ```
 
-`annotationthreadsaved` event will be fired when an annotation thread was saved
+`annotationthreadsaved` event will be triggered when an annotation thread was saved
 on the server. The event data will contain:
 
 ```js
@@ -351,7 +351,7 @@ on the server. The event data will contain:
 }
 ```
 
-`annotationthreaddeleted` event will be fired when an annotation thread was
+`annotationthreaddeleted` event will be triggered when an annotation thread was
 deleted on the server. The event data will contain:
 
 ```js
@@ -365,7 +365,7 @@ deleted on the server. The event data will contain:
 }
 ```
 
-`annotationsaved` event will be fired when an annotation is added and saved to
+`annotationsaved` event will be triggered when an annotation is added and saved to
 an existing annotation thread on the server. The event data will contain:
 
 ```js
@@ -379,7 +379,7 @@ an existing annotation thread on the server. The event data will contain:
 }
 ```
 
-`annotationdeleted` event will be fired when an annotation is deleted from an
+`annotationdeleted` event will be triggered when an annotation is deleted from an
 existing thread on the server. The entire annotation thread is not deleted. The
 event data will contain:
 
@@ -394,7 +394,7 @@ event data will contain:
 }
 ```
 
-`annotationcanceled` event will be fired when an annotation is canceled from
+`annotationcanceled` event will be triggered when an annotation is canceled from
 posting on either a new or existing thread. The event data will contain:
 
 ```js
@@ -408,7 +408,7 @@ posting on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationdeleteerror` event will be fired when an error occurs while deleting
+`annotationdeleteerror` event will be triggered when an error occurs while deleting
 an annotation on either a new or existing thread. The event data will contain:
 
 ```js
@@ -422,7 +422,7 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationcreateerror` event will be fired when an error occurs while posting
+`annotationcreateerror` event will be triggered when an error occurs while posting
 an annotation on either a new or existing thread. The event data will contain:
 
 ```js
@@ -436,9 +436,9 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotatorevent` Each annotator will fire its own sets of events. For example,
-the Image Annotator will fire `rotate` or `resize`, etc. while other annotator
-may fire another set of events. The Annotator wrapper will also re-emit events
+`annotatorevent` Each annotator will trigger its own sets of events. For example,
+the Image Annotator will trigger `rotate` or `resize`, etc. while other annotator
+may trigger another set of events. The Annotator wrapper will also re-emit events
 at the Preview level in Box Content Preview, with event data containing:
 
 ```js
@@ -531,7 +531,7 @@ The following methods are available for the annotation threads.
 
 ### Thread Events
 
-All annotation threads fire the following events. The event data will contain:
+All annotation threads trigger the following events. The event data will contain:
 
 ```js
 {

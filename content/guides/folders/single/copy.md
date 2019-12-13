@@ -30,7 +30,7 @@ Optionally, you can provide a different name for the new folder.
   ASCII characters, forward and backward slashes (`/`, `\`), as well as names
   with trailing spaces are prohibited.
 
-  Additionally, the special names `.` and `..` are reserved names and therefore
+  Additionally, the names `.` and `..` are reserved names and therefore
   also prohibited.
 </Message>
 
@@ -40,7 +40,7 @@ If the folder being copied contains up to 500 items the copy will happen
 synchronously with the API call. The call will not return until the copy
 operation has completed.
 
-If the folder contains more than 500 items the copy operation will be executed
+If the folder contains more than 500 items the copy operation will be run
 asynchronously and the API call will return directly yet before the copy
 operation has completed. We currently have no API to check when a copy operation
 has finished.

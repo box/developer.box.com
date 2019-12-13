@@ -13,14 +13,14 @@ alias_paths: []
 
 # Get Text Representation
 
-A text representation provides an easy and way to extract plain text
+A text representation provides a way to extract plain text
 from a document.
 
 Text is generated for all document file types including plain text and
 code files supported by Box. This does not include image files as these
 do not have a text layer.
 
-Text representations are generated upon upload of the file just like PDFs
+Text representations are generated upon upload of the file, similarly to PDFs
 and thumbnails. They are not generated for files larger than 500
 megabytes.
 

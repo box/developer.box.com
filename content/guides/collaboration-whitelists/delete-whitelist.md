@@ -12,6 +12,8 @@ related_resources: []
 alias_paths: []
 ---
 
+<!-- alex disable whitelist -->
+
 # Delete Collaboration Whitelist
 
 Deleting a collaboration whitelist entry will remove the ability for
@@ -19,9 +21,10 @@ collaborations to be created between your enterprise and the domain listed in
 that whitelist.
 
 To delete a collaboration whitelist, supply the domain whitelist entry ID to
-the delete request, which is returned when
-[creating a new whitelist entry](guide://collaboration-whitelists/create-whitelist)
-or
-[listing whitelists in the enterprise](guide://collaboration-whitelists/list-whitelists);
+the delete request, which is returned when [creating a new whitelist entry][create]
+or [listing whitelists in the enterprise][list];
 
 <Samples id='delete_collaboration_whitelist_entries_id' />
+
+[create]: guide://collaboration-whitelists/create-whitelist
+[list]: guide://collaboration-whitelists/list-whitelists

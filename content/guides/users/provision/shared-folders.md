@@ -562,7 +562,7 @@ box groups:create "Marketing Project Managers" --invite=admins_and_members --vie
   </Tab>
 </Tabs>
 
-Once the groups are created, simply add the user to that group and they will
+Once the groups are created, add the user to that group and they will
 have the prescribed access to the shared folders created within the service
 account.
 

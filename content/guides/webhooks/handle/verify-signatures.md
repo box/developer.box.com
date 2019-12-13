@@ -11,6 +11,8 @@ required_guides:
 alias_paths: []
 ---
 
+<!-- alex disable attacks -->
+
 # Verify Webhook Signatures
 
 To protect your application against man-in-the-middle and replay attacks it is

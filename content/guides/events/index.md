@@ -10,7 +10,7 @@ performed by any user or users in an enterprise.
 
 ## User vs Admin events
 
-The [`GET /events`](e://get_events) API provides a simple way to subscribe to
+The [`GET /events`](e://get_events) API provides a way to subscribe to
 events by users. By passing along a `stream_type` the application can subscribe
 to a set of different event.
 

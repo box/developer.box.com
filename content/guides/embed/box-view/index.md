@@ -23,7 +23,7 @@ file viewer with web and mobile applications.
 ### View Any File
 
 Embed documents, images, videos, 360-degree videos and images, 3D models, and
-dozens of other files in any web or mobile app using a simple `<iframe>` or
+dozens of other files in any web or mobile app using a standard `<iframe>` or
 JavaScript SDK.
 
 ### Optimized Viewing Experience
@@ -31,9 +31,9 @@ JavaScript SDK.
 Our Javascript SDK dynamically selects the appropriate viewer for your file to
 render instantly and crisply on any web or mobile device.
 
-### Easy to Use
+### Ease of Use
 
-Simply upload files to Box via a secure API and receive an embeddable HTML5
+Upload files to Box via a secure API and receive an embeddable HTML5
 snippet to place into your application's user interface. Plus, your files are
 securely stored and manageable in Box.
 

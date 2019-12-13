@@ -15,9 +15,9 @@ scopes.
 
 ## About scopes
 
-Just as users have certain permissions to access items like files and folders
-within Box, applications have their own set of permissions to perform certain
-actions on behalf of a Box user or a Box enterprise.
+Similar to how users have certain permissions to access items like files and
+folders within Box, applications have their own set of permissions to perform
+certain actions on behalf of a Box user or a Box enterprise.
 
 The name for a set of permissions for an application is a "scope". By selecting
 the correct scopes for your application you can enable your application to

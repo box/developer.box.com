@@ -10,7 +10,7 @@ alias_paths:
   - /docs/special-scopes-for-box-ui-elements
 ---
 
-# Special Scopes
+# Dedicated Scopes
 
 When working with Box UI Elements many developers have shown interest in being
 able to implement their own permission model, different from [Access
@@ -28,7 +28,7 @@ developers to control which UI controls are available to end
 users in applications leveraging UI Element.
 
 The Box UI Element has been designed to respect the permission enforced via
-these scopes, so UI controls are enabled or disabled automatically depending on
+these scopes, so UI controls are turned on or off automatically depending on
 whether or not the token allows the corresponding functionality or not.
 
 Another advantage of these new scopes is that since the tokens are scoped to the
@@ -82,7 +82,7 @@ with access to a scope only gives them permission to perform the corresponding
 action and nothing else.
 
 Now that you understand what Base Scopes and Feature Scopes are, refer to the
-documentation for each of the UI Elements to learn more about their special
+documentation for each of the UI Elements to learn more about their dedicated
 scopes.
 
 [acl]: https://community.box.com/t5/How-To-Guides-for-Sharing/What-Are-The-Different-Access-Levels-For-Collaborators/ta-p/144
