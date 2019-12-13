@@ -17,7 +17,7 @@ isIndex: false
 
 Our first requirement is to copy general files and folders into each individual
 user's root folder on account creation. This problem has been solved within
-standard Linux distributions through a special directory called `/etc/skel`,
+standard Linux distributions through a directory called `/etc/skel`,
 which we'll emulate with a Box specific solution here. When adding a new user in
 Linux, the files and folders within `/etc/skel` are copied to the new user's
 home directory.

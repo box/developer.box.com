@@ -18,7 +18,7 @@ isIndex: false
 
 When creating a new
 [Box Skills application](guide://applications/custom-skills) you will be asked
-to supply an invocation URL. The invocation is simply a location where Box will
+to supply an invocation URL. The invocation is a location where Box will
 sent an [event notification payload](guide://skills/handle/payload) when a file
 is uploaded, copied, or moved within a folder monitored by the Skills app.
 

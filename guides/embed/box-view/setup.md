@@ -19,10 +19,10 @@ application.
 
 ## Create App Token App
 
-Box View uses an authentication mechanism called **App Token Auth** to host
-files directly within the application as opposed to a specific Box user. This
-permits the previewing of files without having to associate the content with a
-user.
+Box View uses an authentication mechanism called **App Token Auth** to store
+files directly within the account of the application as opposed to a specific
+Box user. This permits the previewing of files without having to associate the
+content with a user.
 
 The first step is to create the application and authorize it through your admin
 to begin making API requests to Box.
@@ -69,7 +69,7 @@ prompt to set up 2FA.
 
 </Message>
 
-Choose the expiration period for your token, either 30 days, 60 days, or set the
+Choose the expiration time for your token, either 30 days, 60 days, or set the
 token to never expire.
 
 <ImageFrame border width='600' shadow center>

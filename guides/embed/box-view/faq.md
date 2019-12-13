@@ -77,8 +77,8 @@ long as you want to be able to display them.
 
 ### How do I fix the CORS error Box gives me when I embed a Box UI Element
 
-To fix the CORS error, you have to whitelist each domain you wish to allow to
-make CORS requests. You can whitelist the domain on your application's
+To fix the CORS error, you have to allow each domain you wish to allow to
+make CORS requests. You can allow the domain on your application's
 configuration page within the Box developer console. If you have many
 subdomains that you want to use the UI element on, you can use a wildcard for
 the subdomain (`https://*.domain.com`). See the

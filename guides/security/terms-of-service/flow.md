@@ -13,6 +13,8 @@ id: security/terms-of-service/flow
 isIndex: false
 ---
 
+<!-- alex disable reject -->
+
 # Application Flow
 
 In general, applications use Terms of Services as follows.

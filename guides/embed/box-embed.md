@@ -14,8 +14,8 @@ isIndex: false
 
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it easy to embed the entire Box
-experience anywhere people work. Box Embed provides the ability to upload,
+Box Embed is a HTML-based framework that makes it possible to embed the entire
+Box experience anywhere people work. Box Embed provides the ability to upload,
 search, comment, share, tag, and most importantly edit files using Box Edit.
 
 ## Configure

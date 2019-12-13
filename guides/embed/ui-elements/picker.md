@@ -41,7 +41,7 @@ older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 The UI Elements are designed in an authentication agnostic way so whether
 you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
+non-Box accounts (App Users), UI Elements should work out of the box. The
 reason for this is that UI Elements only expect a "token" to be passed in for
 authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
@@ -316,7 +316,7 @@ client initializing the Content Picker.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Picker by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Special Scopes for Box UI Elements][scopes].
+more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-disable line-length -->
 
@@ -335,7 +335,7 @@ more, see [Special Scopes for Box UI Elements][scopes].
 
 | Scenario                                                                                                                                         | Scopes                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
-| User just wants to navigate a folder structure and pick a file / folder                                                                          | `base_picker`                                |
+| User wants to only navigate a folder structure and pick a file / folder                                                                          | `base_picker`                                |
 | User wants to navigate a folder structure, pick a file / folder and also set access level                                                        | `base_picker` + `item_share`                 |
 | User wants to navigate a folder structure, pick a file / folder and also upload a file / folder                                                  | `base_picker` + `item_upload`                |
 | User should be able to navigate a folder structure and pick a file / folder, upload a file / folder, and also set access level for a file/folder | `base_picker` + `item_share` + `item_upload` |

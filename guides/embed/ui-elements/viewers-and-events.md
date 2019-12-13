@@ -14,6 +14,8 @@ id: embed/ui-elements/viewers-and-events
 isIndex: false
 ---
 
+<!-- alex disable black -->
+
 # Preview - Viewers & Events
 
 <!-- markdownlint-disable no-duplicate-header -->
@@ -38,7 +40,7 @@ the zoom in and out buttons will increase and decrease font size respectively.
 
 This viewer supports printing and will attempt to print with appropriate syntax
 highlighting when either `print()` is invoked or the print button is pressed.
-Note that printing large files may cause some browsers to hang for a few
+Note that printing large files may cause some browsers to freeze for a few
 seconds.
 
 ### Controls
@@ -58,7 +60,7 @@ seconds.
 
 ### Events
 
-The text viewer fires the following events.
+The text viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -81,10 +83,10 @@ The text viewer fires the following events.
 
 <!-- markdownlint-enable line-length -->
 
-## 60 Video Viewer
+## 360 Video Viewer
 
 The 360 video viewer renders a preview of a video stored as an equirectangular
-projection (often recorded with a special camera).
+projection (often recorded with a 360 camera).
 
 ### Behavior
 
@@ -114,7 +116,7 @@ viewer rather than the standard video preview.
 
 ### Events
 
-The 360 video viewer fires the following events.
+The 360 video viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -153,7 +155,7 @@ be rendered.
 
 ### Events
 
-The SWF viewer fires the following events.
+The SWF viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -211,7 +213,7 @@ is removed.
 
 ### Events
 
-The presentation viewer fires the following events.
+The presentation viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -270,7 +272,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The MP4 viewer fires the following events.
+The MP4 viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -321,7 +323,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The MP3 viewer fires the following events.
+The MP3 viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -368,7 +370,7 @@ There are several limitations at the moment:
 
 ### Events
 
-The Office viewer fires the following events.
+The Office viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -410,7 +412,7 @@ Re-sizing the viewer window will reflow the markdown to fit the available space.
 Also, this viewer supports printing and will attempt to print the parsed
 markdown and with syntax highlighting on code when either `print()` is invoked
 or the print button is pressed. Note that printing large files may cause some
-browsers to hang for a few seconds.
+browsers to freeze for a few seconds.
 
 ### Controls
 
@@ -422,7 +424,7 @@ browsers to hang for a few seconds.
 
 ### Events
 
-The Markdown viewer fires the following events.
+The Markdown viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -496,7 +498,7 @@ within Box will be included in the resulting package.
 
 ### Events
 
-The `Model3D` viewer fires the following events.
+The `Model3D` viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -518,7 +520,7 @@ The `Model3D` viewer fires the following events.
 ## 360 Image viewer
 
 The 360 image viewer renders a preview of an image stored as an equirectangular
-projection (often taken with a special camera).
+projection (often taken with a 360 camera).
 
 ### Behavior
 
@@ -549,7 +551,7 @@ viewer rather than the standard image viewer.
 
 ### Events
 
-The 360 image viewer fires the following events.
+The 360 image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -602,7 +604,7 @@ the document will zoom in until the original zoom level is reached.
 
 ### Events
 
-The image viewer fires the following events.
+The image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -664,7 +666,7 @@ reached.
 
 ### Events
 
-The image viewer fires the following events.
+The image viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -746,7 +748,7 @@ and entering text
 
 ### Events
 
-The document viewer fires the following events.
+The document viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -814,7 +816,7 @@ Box Note or Box DICOM file.
 
 ### Events
 
-The `<iframe>` viewer fires the following events.
+The `<iframe>` viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -866,7 +868,7 @@ Settings are available through the cog icon in the preview toolbar.
 
 ### Events
 
-The DASH viewer fires the following events.
+The DASH viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 
@@ -919,7 +921,7 @@ This viewer does not support printing.
 
 ### Events
 
-The CSV viewer fires the following events.
+The CSV viewer triggers the following events.
 
 <!-- markdownlint-disable line-length -->
 

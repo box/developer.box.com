@@ -19,7 +19,7 @@ isIndex: false
 Once a file has been uploaded to the app token application, it may be previewed
 using two different methods:
 
-* Direct embed: A simple HTML `<iframe>` component with a custom embed link.
+* Direct embed: A standard HTML `<iframe>` component with a custom embed link.
 * Customized previewer: A fully customized preview widget using Box UI Elements.
 
 ## Direct Embed (`iframe`)

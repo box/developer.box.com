@@ -16,6 +16,8 @@ id: api-calls/permissions-and-errors/common-errors
 isIndex: false
 ---
 
+<!-- alex disable failed -->
+
 # Common Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request

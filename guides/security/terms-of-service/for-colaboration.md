@@ -60,7 +60,7 @@ enabled for the enterprise, and the user making the request has the
 [permission][permissions] to see the Terms of Service. This holds true for
 both admin and end users, even though admins can generally view Terms of User
 information via the API even if the specific Terms of Service type is
-disabled.
+turned off.
 
 </Message>
 

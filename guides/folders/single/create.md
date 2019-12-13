@@ -33,7 +33,7 @@ There are some restrictions to the file name. Names containing non-printable
 ASCII characters, forward and backward slashes (`/`, `\`), as well as names
 with trailing spaces are prohibited.
 
-Additionally, the special names `.` and `..` are reserved names and therefore
+Additionally, the names `.` and `..` are reserved names and therefore
 also prohibited.
 
 </Message>

@@ -16,6 +16,8 @@ id: collaboration-whitelists/create-whitelist
 isIndex: false
 ---
 
+<!-- alex disable whitelist -->
+
 # Create Collaboration Whitelist
 
 Creating a new collaboration whitelist will set a new domain, such as

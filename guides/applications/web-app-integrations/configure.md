@@ -109,7 +109,7 @@ client can't get all the data it needs from the first request.
 
 The following example does not require a client callback URL:
 
-- The popup integration executes a REST call using a `download_file_url`
+- The popup integration performs a REST call using a `download_file_url`
   callback parameter.
 - The user clicks OK in the confirmation prompt to accept the popup.
 - Box sends a request to the following URL (the primary callback URL plus the
@@ -121,7 +121,7 @@ The following example does not require a client callback URL:
 
 The following example requires a client callback URL:
 
-- The popup integration executes a REST call using a file-callback parameter.
+- The popup integration performs a REST call using a file-callback parameter.
 - The user clicks OK in the confirmation prompt to accept the popup.
 - The popup displays a page in which Box sends a POST request with the contents
   of a file along with the callback parameters to the remote server.

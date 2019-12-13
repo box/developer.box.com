@@ -11,6 +11,8 @@ id: applications/custom-skills/approval
 isIndex: false
 ---
 
+<!-- alex disable whitelist -->
+
 # Approval
 
 Custom Skills will need to be enabled on a folder by the enterprise's Box Admin
