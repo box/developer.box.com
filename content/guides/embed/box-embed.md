@@ -196,7 +196,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 Paid Box customers have the option to remove the Box logo in the file Preview.
 To do so, visit the **Admin Console**m **Enterprise Settings**, **Custom
-Settings** and toggle the **Embed widget customization** off to hide the Box
+Setup** and toggle the **Embed widget customization** off to hide the Box
 logo.
 
 ## Limitations
