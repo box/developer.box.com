@@ -19,7 +19,7 @@ alias_paths: []
 
 # Ensure Consistency
 
-A few of the Box APIs support special headers to ensure consistency between your
+A few of the Box APIs support headers to control consistency between your
 application and Box.
 
 ## Etag, If-Match, and If-None-Match

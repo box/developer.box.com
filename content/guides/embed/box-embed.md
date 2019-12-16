@@ -10,8 +10,8 @@ alias_paths:
 
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it easy to embed the entire Box
-experience anywhere people work. Box Embed provides the ability to upload,
+Box Embed is a HTML-based framework that makes it possible to embed the entire
+Box experience anywhere people work. Box Embed provides the ability to upload,
 search, comment, share, tag, and most importantly edit files using Box Edit.
 
 ## Configure
@@ -194,9 +194,10 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## Custom Logo
 
-Paid Box customers have the option to change the Box logo in the file Preview to
-their own custom logo. The logo is inherited from your Enterprise Settings and
-can be set by following [these admin instructions][logo].
+Paid Box customers have the option to remove the Box logo in the file Preview.
+To do so, visit the **Admin Console**, **Enterprise Settings**, **Custom
+Setup** and toggle the **Embed widget customization** off to hide the Box
+logo.
 
 ## Limitations
 

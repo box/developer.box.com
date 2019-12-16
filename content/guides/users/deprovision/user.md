@@ -26,7 +26,7 @@ account before deleting the user account.
 The standard best practice when decommissioning a user account is to move all
 content owned by that user into another admin level account or into the
 application service account. Once moved, you can transfer ownership of the
-content to a different user or simply collaborate a user on the content if
+content to a different user or collaborate a different user on the content if
 needed.
 
 ## Deprovisioning Example

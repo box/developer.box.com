@@ -13,6 +13,8 @@ notes: |-
   Lazy copy of old docs. Needs rethinking.
 ---
 
+<!-- alex disable failed -->
+
 # Common Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request

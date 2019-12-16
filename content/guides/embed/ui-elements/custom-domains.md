@@ -13,17 +13,17 @@ alias_paths:
 # Box Edit Custom Domains
 
 In order to integrate a third party web application with Box Tools, you will
-need to whitelist your application's URL. On Windows, this is achieved by adding
-a special registry key. On MacOS, you will need to run few terminal commands to
+need to explicitly add your application's URL. On Windows, this is achieved by
+adding a registry key. On MacOS, you will need to run few terminal commands to
 add and remove domains.
 
 <Message>
-  Whitelisted domains were added in **Box Tools version 4.5.0**.
+  Adding domains to a safelist was added in **Box Tools version 4.5.0**.
 </Message>
 
-## Whitelisting on Windows
+## Safelisting on Windows
 
-Before starting the domain whitelisting installation, please download the
+Before starting the domain safelisting installation, please download the
 required scripts from the provided `.rar`
 [here](https://cloud.box.com/s/kvc9cysgq1y2yldpvciwlpt7093ho78l).
 
@@ -57,7 +57,7 @@ Open the following file in a text editor:
 * `x64`: `Per Machine\64 bit\Add_OpenWith_WhiteListed_Domain.reg`
 * `x86`: `Per Machine\32 bit\Add_OpenWith_WhiteListed_Domain.reg`
 
-Replace the placeholder domain with the domain you would like whitelisted.
+Replace the placeholder domain with the domain you would like allow.
 
 <ImageFrame border>
   ![Box Tools](./images/box-tools-4.png)
@@ -116,13 +116,13 @@ Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
 
 ### Removing
 
-* Execute `Remove_ALL_OpenWith_WhiteListed_Domain.reg` to remove all domains
+* Run `Remove_ALL_OpenWith_WhiteListed_Domain.reg` to remove all domains
   at once
-* Execute `Remove_OpenWith_WhiteListed_Domain.reg` to remove specific
+* Run `Remove_OpenWith_WhiteListed_Domain.reg` to remove specific
   domains. Use the instructions above to add domains to this .reg, which will
   remove domains.
 
-## Whitelisting on MacOS
+## Safelisting on MacOS
 
 ### Steps
 
@@ -130,32 +130,32 @@ Download the bash script
 [here](https://cloud.box.com/s/z5qhc7rts6mzrhzfx6cpxeb5ed4ve5u6).
 
 Open the Terminal, go to the folder where the bash script was downloaded, and
-add read and execution permissions by executing this command:
+add the right permissions by running this command:
 
 ```sh
 chmod u+rx OpenWith.sh
 ```
 
-To **add** whitelisted domains, execute the following command in a terminal:
+To **add** domains, run the following command in a terminal:
 
 ```sh
 ./OpenWith.sh -a domain1 domain2 ...
 ```
 
-To **remove** whitelisted domains, execute the following command in a terminal:
+To **remove** domains, run the following command in a terminal:
 
 ```sh
 ./OpenWith.sh -r domain1 domain2 ...
 ```
 
-To **clear all** whitelisted domains, execute the following command in a
+To **clear all** domains, run the following command in a
 terminal:
 
 ```sh
 ./OpenWith.sh -c
 ```
 
-To **list** whitelisted domains, execute the following command in a terminal:
+To **list** all domains, run the following command in a terminal:
 
 ```sh
 ./OpenWith.sh -l
@@ -163,14 +163,14 @@ To **list** whitelisted domains, execute the following command in a terminal:
 
 ### Notes
 
-* When whitelisting domains ensure you are entering the domains without the HTTP
+* When safelisting domains ensure you are entering the domains without the HTTP
   protocol (for example without `https://`) or any trailing path like
   `yourdomain.com/page/3`).
 * All requests most come from a secure origin via HTTPS.
-* Whitelisting subdomains and ports is possible as the wildcard `*` is supported.
-  For example, all subdomains could be whitelisted by adding `*.yourdomain.com` to
-  your whitelist.
+* Safelisting subdomains and ports is possible as the wildcard `*` is supported.
+  For example, all subdomains could be safelisted by adding `*.yourdomain.com` to
+  your list.
 
 ## Uninstalling
 
-When Box Tools is uninstalled, all whitelisted domain will be removed.
+When Box Tools is uninstalled, all domains will be removed.

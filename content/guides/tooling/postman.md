@@ -9,6 +9,8 @@ alias_paths:
   - /docs/box-postman-collection
 ---
 
+<!-- alex disable postman-postwoman -->
+
 # Postman Collection
 
 [Postman][postman] is a tool that lets you build and test HTTP requests in an

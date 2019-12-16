@@ -115,7 +115,7 @@ var sdk = new BoxSDK({
 ## 2. Redirect user
 
 Next, redirect the user to the authorization URL. Most of the SDKs support a
-simple way to get the authorization URL for an SDK client.
+way to get the authorization URL for an SDK client.
 
 <Tabs>
   <Tab title='.NET'>

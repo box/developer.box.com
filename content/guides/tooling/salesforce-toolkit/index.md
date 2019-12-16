@@ -32,7 +32,7 @@ record to Box folder mapping and handle permission management.
 
 ## Authentication
 
-A solution for simple Authentication is to allow API calls to use the service
+A solution for authentication is to allow API calls to use the service
 account credentials.
 
 This means that Salesforce Admins need to restrict access to the Toolkit global
@@ -46,7 +46,7 @@ account credentials by sending `null` for the `accessToken` value.
 If a value is passed in `accessToken`, the API call to Box will be done with
 the access token sent. It is up to the developer to ensure the token being
 passed is valid and the user associated with the token has permissions to
-execute the requested operation.
+perform the requested operation.
 
 [sf-package]: https://community.box.com/t5/For-Admins/Box-For-Salesforce-Installation/ta-p/180
 [sf-sdk]: https://github.com/box/box-salesforce-sdk

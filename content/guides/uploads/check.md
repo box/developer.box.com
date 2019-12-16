@@ -14,6 +14,8 @@ related_resources: []
 alias_paths: []
 ---
 
+<!-- alex disable failed -->
+
 # Preflight Check
 
 The Pre-flight check API allows an application to verify that a file will be

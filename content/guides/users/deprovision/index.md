@@ -36,7 +36,7 @@ In this scenario we'll focus on provisioning a new
 [Box Managed User](guide://authentication/user-types/managed-users), as there
 are very different considerations when provisioning Box App User accounts.
 
-We'll start with solving the most easily repeatable aspects of
+We'll start with solving the most repeatable aspects of
 provisioning a user's account, creating a general folder and file structure
 that everyone will have on first login, using groups to control access to
 shared files and folders for users.

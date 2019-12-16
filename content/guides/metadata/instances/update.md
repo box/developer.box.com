@@ -54,7 +54,7 @@ depending on the operation being made.
   When editing metadata, only values that adhere to the metadata template schema
   will be accepted. The update is applied completely or not at all. If any
   errors occur during the application of the update operations, the metadata
-  instance remains unchanged.
+  instance is not changed.
 </Message>
 
 ## Limitations

@@ -22,7 +22,7 @@ authentication and the user is very much tied to the application that created it
 
 ## Service Accounts
 
-A Service Account is a special kind of App User that is similar to an Admin User
+A Service Account is a unique kind of App User that is similar to an Admin User
 yet has no login credentials and can only access Box via the API.
 
 Service Accounts are automatically created when a Custom App is created in the

@@ -15,8 +15,8 @@ events, product releases, and community highlights.
 
 ## Past Newsletters
 
-| Year | Quarter | Download                |
-| ---- | ------- | ----------------------- |
-| 2019 | Q3      | [Download][download-2019-q3] |
+| Year | Month     | Archive                     |
+| ---- | --------- | --------------------------- |
+| 2019 | September | [Preview][download-2019-q3] |
 
 [download-2019-q3]: https://cloud.box.com/s/m7i1r21wudyl2cjnhotgvggou36w8rbx

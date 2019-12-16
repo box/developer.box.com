@@ -18,7 +18,7 @@ associated with it, such as a `marketingCollateral` template instance and a
 ## Template & Key Name
 
 When a metadata template is created a `templateKey` is automatically generated
-from the `name` of the template, removing any spaces and special characters in
+from the `name` of the template, removing any spaces and irregular characters in
 the name, and transforming it to camel case format.
 
 For example, a metadata template that is named

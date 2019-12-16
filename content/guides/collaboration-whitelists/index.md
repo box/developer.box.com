@@ -8,6 +8,8 @@ related_resources: []
 alias_paths: []
 ---
 
+<!-- alex disable whitelist -->
+
 # Collaboration Whitelists
 
 Within the content and sharing settings for an enterprise, an admin can specify

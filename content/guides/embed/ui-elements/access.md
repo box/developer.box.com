@@ -75,7 +75,7 @@ to those exact set of scopes and the respective file/folder ID, if present in
 the input arguments.
 
 <Messsage>
-  # Special Scopes designed for UI Elements
+  # Dedicated scopes designed for UI Elements
 
   We have designed a set of scopes that work seamlessly with the UI Elements.
   While token exchange works with all Box scopes, we recommend using these
@@ -90,12 +90,12 @@ the input arguments.
 
 ## Developer Flow
 
-Now that you understand the different scopes, let's walk through a simple
+Now that you understand the different scopes, let's walk through a
 scenario for using Token Exchange with a UI Element.
 
 **Scenario:** Provide a user with the ability to browse a folder tree using the
 Box Content Explorer UI Element and allow them to preview and download files.
-Sharing should be disabled.
+Sharing should be turned off.
 
 **Steps:**
 
@@ -218,7 +218,7 @@ button as it would have with the parent (user) token.
 ## When NOT to use Token Exchange
 
 * **Does not replace Users or Groups in Box:** We recommend not using Token
-  Exchange as a replacement to creating users in Box. An easy way to determine
+  Exchange as a replacement to creating users in Box. One way to determine
   whether you should create Box users, is by doing an assessment to determine if
   it makes logical sense for every end user of your application to have a copy
   of their own content. Here are some benefits of maintaining user level
