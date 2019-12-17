@@ -1,5 +1,6 @@
 ---
 rank: 3
+type: guide
 related_endpoints: []
 related_guides: 
   - authentication/select
