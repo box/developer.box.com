@@ -6,5 +6,14 @@ type: quick-start
 
 # Install Postman
 
-<Report />
-<Next>I have installed Postman</Next>
+<Observer>
+  <Trigger event='download'>
+    [Text](https://google.com)
+  </Trigger>
+
+  <Observe event='download'>
+    <Next>
+      I have installed Postman
+    </Next>
+  </Observe>
+<Observer>

@@ -6,5 +6,4 @@ type: quick-start
 
 # Load Postman Collection
 
-<Report />
 <Next>I have loaded my tokens into Postman</Next>
