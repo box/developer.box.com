@@ -13,12 +13,7 @@ interface without configuring a full development environment. The Box Postman
 Collection is a set of preconfigured requests that make it easy to get started
 with the Box API from Postman.
 
-<Message notice>
-  This quick start guide will take you through setting up Postman for usage with
-  Box.
-</Message>
-
-<ImageFrame border>
+<ImageFrame width={200}>
   ![An example of the Postman app](./images/postman-example.png)
 </ImageFrame>
 
@@ -38,4 +33,6 @@ This quick start guide will take us through the following steps.
 5. [Make your first API call](g://tooling/postman/quick-start/make-api-call/)
    to the Box API with the Postman app.
 
-<Next>I am ready to get started</Next>
+<Next>
+  I am ready to get started
+</Next>
