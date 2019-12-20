@@ -18,7 +18,7 @@ Box uses a two-stage process to remove or **trash** [files], [folders], and
 [web links] before permanently deleting them.
 
 By default, items can be restored after they are **trashed** within a 30 day
-period before they are **purged**. The purge window can be modified by
+time frame before they are **purged**. The purge window can be modified by
 an enterprise administrator.
 
 More details can be found in the Box community article on [Managing Trash]

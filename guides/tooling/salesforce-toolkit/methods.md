@@ -12,6 +12,8 @@ id: tooling/salesforce-toolkit/methods
 isIndex: false
 ---
 
+<!-- alex disable failed -->
+
 # Methods and Operations
 
 ## Toolkit Details

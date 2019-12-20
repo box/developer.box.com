@@ -15,6 +15,8 @@ id: webhooks/handle/verify-signatures
 isIndex: false
 ---
 
+<!-- alex disable attacks -->
+
 # Verify Webhook Signatures
 
 To protect your application against man-in-the-middle and replay attacks it is

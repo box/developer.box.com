@@ -17,7 +17,7 @@ isIndex: false
 
 # Content Preview
 
-The Box Content Preview UI Element allows developers to easily embed high
+The Box Content Preview UI Element allows developers to embed high
 quality and interactive previews of Box files in their desktop or mobile web
 application. The library fetches information about the file and its converted
 representations through the Box API, chooses the appropriate viewer for the file
@@ -47,7 +47,7 @@ older browsers. Make sure to add the right polyfills for your targeted browsers.
 
 The UI Elements are designed in an authentication agnostic way so whether
 you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
+non-Box accounts (App Users), UI Elements should work out of the box. The
 reason for this is that UI Elements only expect a "token" to be passed in for
 authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
@@ -249,12 +249,12 @@ preview.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following:
 
-- `viewer` event will be fired when we have the viewer instance first available.
-  This will be the same object that is also a property included in the `load`
-  event. Preview fires this event before `load` so that clients can attach their
-  listeners before the `load` event is fired.
-- `load` event will be fired on every preview load when `show()` is called or if
-  inter-preview navigation occurs. The event data will contain:
+- `viewer` event will be triggered when we have the viewer instance first
+  available. This will be the same object that is also a property included in
+  the `load` event. Preview triggers this event before `load` so that clients
+  can attach their listeners before the `load` event is triggered.
+- `load` event will be triggered on every preview load when `show()` is called
+  or if inter-preview navigation occurs. The event data will contain:
 
 ```js
 error: 'message', // Error message if any error occurred while loading
@@ -263,11 +263,11 @@ metrics: {...},   // Performance metrics
 file: {...}       // Box file object with properties defined in file.js
 ```
 
-- `navigate` event will be fired when navigation happens. The event includes the
-  file ID of the file being navigated to, and this event will fire before
+- `navigate` event will be triggered when navigation happens. The event includes
+  the file ID of the file being navigated to, and this event will trigger before
   `load`.
-- `notification` event will be fired when either the preview wrapper or one of
-  the viewers wants to notify something like a warning or non-fatal error. The
+- `notification` event will be triggered when either the preview wrapper or one
+  of the viewers wants to notify something like a warning or non-fatal error. The
   event data will contain:
 
 ```js
@@ -275,8 +275,8 @@ message: 'message', // Message to show
 type: 'warning'    // 'warning', 'notice', or 'error'
 ```
 
-- `viewerevent` Each viewer will fire its own sets of events. For example, the
-  Image viewer will fire `rotate` or `resize`, etc. while other viewers may fire
+- `viewerevent` Each viewer will trigger its own sets of events. For example, the
+  Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger
   another set of events. The preview wrapper will also re-emit events at the
   preview level, with event data containing:
 
@@ -338,7 +338,7 @@ client initializing the Content Explorer.
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Explorer by
 configuring the appropriate scopes on the downscoped token. To learn
-more, see [Special Scopes for Box UI Elements][scopes].
+more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 

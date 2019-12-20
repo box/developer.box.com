@@ -17,8 +17,8 @@ isIndex: false
 
 # Chunked Upload with SDKs
 
-The Box SDKs make it easy to perform a chunked upload with their built-in
-methods.
+The Box SDKs make it possible to perform a chunked upload with the built-in
+SDK methods.
 
 <Samples id='x_chunked_uploads' variant='automatic' >
 

@@ -19,7 +19,7 @@ isIndex: false
 
 # Get PDF Representation
 
-A PDF representation provides an easy and predictable way to embed documents
+A PDF representation provides a predictable way to embed documents
 in mobile and web applications. PDF representations support watermarks
 if the original file has been watermarked.
 

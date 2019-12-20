@@ -8,6 +8,9 @@ related_endpoints:
   - get_recent_items
   - get_legal_hold_policies
   - get_enterprises_id_device_pinners
+  - get_users
+  - get_folders_trash_items
+  - get_users
 related_guides:
   - api-calls/sorting
   - api-calls/pagination/offset-based
@@ -103,8 +106,10 @@ results as an array, as well as some information about the current page of resul
 
 ## Example endpoints
 
-Some endpoints that support offset-based pagination are:
+Some endpoints that support marker-based pagination are:
 
 - [List items for a folder](endpoint://get_folders_id_items)
 - [List a file's collaborations](endpoint://get-files-id-collaborations)
 - [List all webhooks for a user](endpoint://get-webhooks)
+- [List all users in an enterprise](endpoint://get-users)
+- [List all items in the trash](endpoit://get-folders-trash-items)

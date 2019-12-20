@@ -303,7 +303,7 @@ to be updated under the JS tab in the demo.
 
 The UI Elements are designed in an authentication agnostic way so whether
 you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should just work out of the box. The
+non-Box accounts (App Users), UI Elements should work out of the box. The
 reason for this is that UI Elements only expect a "token" to be passed in for
 authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
@@ -315,7 +315,7 @@ Learn about selecting an authentication method
 
 ## Scopes
 
-To execute integrations with downscoped tokens, you must include the
+To run integrations with downscoped tokens, you must include the
 `item_execute_integration` scope as well as the scope required by the specific
 integration you would like to use.
 

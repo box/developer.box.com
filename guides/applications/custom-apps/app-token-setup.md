@@ -1,5 +1,7 @@
 ---
 rank: 3
+type: guide
+hide_step_number: false
 related_endpoints: []
 related_guides:
   - authentication/select

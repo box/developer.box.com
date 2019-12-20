@@ -75,7 +75,7 @@ an event occurs in an account that is being monitored the application will
 receive a response with the value `new_change`. The response contains no other
 details.
 
-This single response simply serves as a prompt to take further action such as
+This single response serves as a prompt to take further action such as
 sending a request to the `GET /events` endpoint with the last known
 `stream_position`.
 
