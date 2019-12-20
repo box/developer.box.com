@@ -14,7 +14,7 @@ const extractFrontmatter = (frontmatter, sourcePath, isGuide) => {
 }
 
 const id = (path) => (
-  path.split('/').splice(3).join('/').replace('.md', '').replace(/\/index$/, '').replace(/^index$/, '').replace(/\/\d*-/, '/')
+  path.split('/').splice(3).join('/').replace('.md', '').replace(/\/\d*-/, '/').replace(/\/index$/, '').replace(/^index$/, '')
 )
 
 const cId = (path) => (
@@ -39,7 +39,7 @@ const rank = (frontmatter, sourcePath) => {
 }
 
 const isIndex = (path) => (
-  path.endsWith('/index.md')
+  path.endsWith('/index.md') || path.endsWith('-index.md')
 )
 
 module.exports = extractFrontmatter
