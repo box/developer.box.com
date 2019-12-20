@@ -13,8 +13,8 @@ interface without configuring a full development environment. The Box Postman
 Collection is a set of preconfigured requests that make it easy to get started
 with the Box API from Postman.
 
-<ImageFrame width={200}>
-  ![An example of the Postman app](./images/postman-example.png)
+<ImageFrame center>
+  ![An example of the Postman app](./postman-example.png)
 </ImageFrame>
 
 ## Overview

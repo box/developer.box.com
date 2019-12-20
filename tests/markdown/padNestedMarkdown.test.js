@@ -104,13 +104,13 @@ test('should deal with embedded reference images', () => {
 
 test('should deal with embedded regular images', () => {
   const input = `
-<Foobar>
+<Foobar border width={200}>
 ![Test](./img.png)
 </Foobar>
 `
   const output = pad(input)
   expect(output).toEqual(`
-<Foobar>
+<Foobar border width={200}>
 
 ![Test](./img.png)
 

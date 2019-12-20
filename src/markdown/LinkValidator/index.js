@@ -1,6 +1,7 @@
 const fs = require('fs-extra')
 const path = require('path')
 const yaml = require('js-yaml')
+const glob = require('glob')
 
 // checks for "[text](./local/link)", capturing the link url
 const LOCAL_LINK_REGEX = new RegExp(/\[.*\]\(((\.\/)|\/.*)\)/, 'mg')
@@ -93,12 +94,15 @@ class LinkValidator {
       const filename = link.resolved
       const indexFilename = [filename, '/index', '.md'].join('')
       const markdownFilename = [filename, '.md'].join('')
+      const lastSlashIndex = markdownFilename.lastIndexOf('/')
+      const indexedFileName = [markdownFilename.substring(0, lastSlashIndex), '/*-', markdownFilename.substring(lastSlashIndex+1)].join('')
 
       // check of any of the variations exists
       if (
         !fs.existsSync(filename) && 
         !fs.existsSync(markdownFilename) && 
-        !fs.existsSync(indexFilename)
+        !fs.existsSync(indexFilename) &&
+        !glob.sync(indexedFileName)[0]
       ) {
         return {
           source: this.source,
