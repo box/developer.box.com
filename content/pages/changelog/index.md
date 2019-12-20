@@ -10,6 +10,23 @@ rank: 0
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2019-12-31 / EOL of Classic Relay API Endpoints
+
+As [previously communicated][changelog-eol-relay-apis], Classic Relay API
+endpoints are officially at an end of life state as of today.
+
+The following endpoints are affected by this EOL and will now start responding
+with error responses in applications making requests to them:
+
+* Get list of published Relay Classic templates.
+* Get list of Relay Classic workflows.
+* Launch a Relay Classic workflow.
+
+For any application encountering these error responses, please remove all calls
+to the Relay Classic APIs listed above.
+
+[changelog-eol-relay-apis]: https://developer.box.com/en/changelog/#2019-10-18--relay-api-endpoints-will-eol-on-december-31st-2019
+
 ## 2019-12-05 / Marker-based Pagination Support for Users API
 
 The [Users API](e://get_users) now supports [marker-based
