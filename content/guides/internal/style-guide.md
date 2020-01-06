@@ -158,11 +158,15 @@ variations exist.
 Not all code samples exist in the SDKs/CLI. You can add new code samples
 in basic back ticks.
 
+<!-- markdownlint-disable code-fence-style -->
+
 ~~~sh
 ```js
 console.log('Hello, World!')
 ```
 ~~~
+
+<!-- markdownlint-enable code-fence-style -->
 
 <H>
 
