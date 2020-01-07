@@ -1,4 +1,4 @@
-const openRegex = new RegExp(/< *[\w]*[\w '"\-={}]*>/, 'g')
+const openRegex = new RegExp(/< *[\w]*[\w :'"\-_={}\.]*>/, 'g')
 const closeRegex = new RegExp(/ *<\/ *([\w]+) *>/, 'g')
 
 if (!String.prototype.splice) {

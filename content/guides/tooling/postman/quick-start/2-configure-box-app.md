@@ -3,6 +3,8 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
+<!-- alex disable postman-postwoman -->
+
 # Configure a Box App
 
 <Message> 
@@ -21,7 +23,7 @@ Postman app.
 ## Select an app to configure
 
 <Grid columns='2'>
-  <Choose option='own' color='blue'>
+  <Choose store='postman.app_type' option='own' color='blue'>
     # Configure your own Box app
 
     With this method your Postman app will be
@@ -31,9 +33,10 @@ Postman app.
 
     This method requires more initial setup, yet less
     ongoing maintenance to keep using.
+
   </Choose>
 
-  <Choose option='box' color='red'>
+  <Choose store='postman.app_type' option='box' color='red'>
     # Use our preconfigured Box app
 
     With this method your Postman app will be
@@ -42,6 +45,7 @@ Postman app.
 
     This method requires less initial setup but requires
     more work to keep working.
+
   </Choose>
 </Grid>
 
@@ -55,43 +59,42 @@ Postman app.
   developer][signup] account for testing purposes.
 
   1. Go to the [Developer Console][devconsole]
-  1. Select **Create new app**
-  1. Select **Custom app** as the type of application to create, and click **Next**
+  1. Select **Create New App**
+  1. Select **Custom App** as the type of application to create, and click **Next**
   1. Select **Standard OAuth 2.0** as the authentication method, and click
      **Next**
-  1. Give your Box app a unique name and click **Create app**
-  1. Go to the app's configuration by clicking **View your app**.
+  1. Give your Box app a unique name and click **Create App**
+  1. Go to the app's configuration by clicking **View Your App**.
   1. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-     **Redirect URI** to the value `https://developer.box.com`.
-  1. At the top of the page click the button to **Save changes**
+     **Redirect URI** to the value `https://developer.box.com/auth/callback`.
+  1. At the top of the page click the button to **Save Changes**
 </Choice>
 
 <Choice option='own' color='blue'>
   # Copy your API credentials
 
-  With the Box App created and configured the last step remaining is to copy
-  your app's client ID and secret and provide it to us here.
-
-  Continuing from the previous steps, scroll to the **OAuth 2.0 credentials**
-  section and copy the **Client ID** and **Client Secret** into the inputs
-  below.
+  Continuing from the previous steps, scroll to the **OAuth 2.0 Credentials**
+  section of your Box app and copy the **Client ID** and **Client Secret** into
+  the input fields below.
 
   <Store 
-    id='custom_app_client_id' 
+    id='postman.client_id' 
     placeholder='zECq2EkYBjZ...'
     pattern='\w{32}'>
     Client ID
   </Store>
   
   <Store 
-    id='custom_app_client_secret' 
+    id='postman.client_secret' 
     placeholder='913td9hr6jo...'
     pattern='\w{32}'>
     Client Secret
   </Store>
+
+  We will use these credentials to authenticate your application in the next step.
 </Choice>
 
-<Observe option='box,own'>
+<Observe event='box,own'>
   <Next>I have configured a Box app</Next>
 </Observe>
 
