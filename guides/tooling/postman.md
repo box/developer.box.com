@@ -41,7 +41,7 @@ from the new collection.
 ## New Beta Collection
 
 Clicking the following button will install our new, Beta Postman
-collection. It is an complete Postman collection that covers every API endpoint
+collection. It is a complete Postman collection that covers every API endpoint
 and is auto-generated from our [OpenAPI specification][openapi]. It is expected
 to get many more updates including some to make authentication a lot easier.
 
