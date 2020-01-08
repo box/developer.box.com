@@ -1,5 +1,6 @@
 ---
 type: quick-start
+hide_in_page_nav: true
 ---
 
 <!-- alex disable postman-postwoman -->
@@ -13,7 +14,7 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![Windows Logo](./windows.png) Windows (x32)
 
-    <Trigger event='download'>
+    <Trigger option='postman.downloaded' value='win32'>
       [Download](https://dl.pstmn.io/download/latest/win32) 
     </Trigger>
   </Download>
@@ -21,7 +22,7 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![Windows Logo](./windows.png) Windows (x64)
 
-    <Trigger event='download'>
+    <Trigger option='postman.downloaded' value='win64'>
       [Download](https://dl.pstmn.io/download/latest/win64) 
     </Trigger>
   </Download>
@@ -29,7 +30,7 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![MacOS Logo](./macos.png) MacOS
 
-    <Trigger event='download'>
+    <Trigger option='postman.downloaded' value='macos'>
       [Download](https://dl.pstmn.io/download/latest/macos) 
     </Trigger>
   </Download>
@@ -37,7 +38,7 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![Linux Logo](./linux.png) Linux (x64)
 
-    <Trigger event='download'>
+    <Trigger option='postman.downloaded' value='linux64'>
       [Download](https://dl.pstmn.io/download/latest/linux64) 
     </Trigger>
   </Download>
@@ -50,15 +51,13 @@ Next, install the Postman app on your machine and (optionally)
   ![The Postman app](./postman-example.png)
 </ImageFrame>
 
-<hr />
+## Summary
 
-At the end of this step you should have:
+* You installed the Postman app
+* You created a Postman account (optional) 
+* You logged into the Postman app with your Postman account
 
-* Installed the Postman app
-* Created a Postman account (optional) 
-* Logged into the Postman app with your Postman account
-
-<Observe event='download'>
+<Observe option='postman.downloaded' value='win32,win64,macos,linux64'>
   <Next>
     I have installed Postman
   </Next>

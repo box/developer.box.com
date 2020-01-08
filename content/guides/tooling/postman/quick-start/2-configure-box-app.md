@@ -1,6 +1,8 @@
 ---
 type: quick-start
 hide_in_page_nav: true
+related_guides:
+  - applications/custom-apps
 ---
 
 <!-- alex disable postman-postwoman -->
@@ -23,7 +25,7 @@ Postman app.
 ## Select an app to configure
 
 <Grid columns='2'>
-  <Choose store='postman.app_type' option='own' color='blue'>
+  <Choose option='postman.app_type' value='use_own' color='blue'>
     # Configure your own Box app
 
     With this method your Postman app will be
@@ -36,7 +38,7 @@ Postman app.
 
   </Choose>
 
-  <Choose store='postman.app_type' option='box' color='red'>
+  <Choose option='postman.app_type' value='use_box' color='red'>
     # Use our preconfigured Box app
 
     With this method your Postman app will be
@@ -49,7 +51,7 @@ Postman app.
   </Choose>
 </Grid>
 
-<Choice option='own' color='blue'>
+<Choice option='postman.app_type' value='use_own' color='blue'>
   # Create a Box app
 
   You've selected to configure your own Box app. For this step we will create a
@@ -70,7 +72,7 @@ Postman app.
   1. At the top of the page click the button to **Save Changes**
 </Choice>
 
-<Choice option='own' color='blue'>
+<Choice option='postman.app_type' value='use_own' color='blue' last>
   # Copy your API credentials
 
   Continuing from the previous steps, scroll to the **OAuth 2.0 Credentials**
@@ -78,14 +80,14 @@ Postman app.
   the input fields below.
 
   <Store 
-    id='postman.client_id' 
+    id='postman_credentials.client_id' 
     placeholder='zECq2EkYBjZ...'
     pattern='\w{32}'>
     Client ID
   </Store>
   
   <Store 
-    id='postman.client_secret' 
+    id='postman_credentials.client_secret' 
     placeholder='913td9hr6jo...'
     pattern='\w{32}'>
     Client Secret
@@ -94,7 +96,17 @@ Postman app.
   We will use these credentials to authenticate your application in the next step.
 </Choice>
 
-<Observe event='box,own'>
+## Summary
+
+* You either selected to use your own **Box App**
+  * Signed up for a developer account (Optional)
+  * Accessed the Developer Console
+  * Created a **Custom App** that uses **OAuth 2.0** authentication
+  * Set up the **redirect URL** for the application
+  * Copied the **Client ID** and **Client Secret** onto this page
+* Or selected to use our **preconfigured Box App**
+
+<Observe option='postman.app_type' value='use_box,use_own'>
   <Next>I have configured a Box app</Next>
 </Observe>
 
