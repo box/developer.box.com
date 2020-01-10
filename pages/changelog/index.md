@@ -3,6 +3,8 @@ alias_paths:
   - /docs/api-changelog
 centered: true
 rank: 0
+category_id: changelog
+subcategory_id: null
 id: changelog
 type: page
 is_index: true

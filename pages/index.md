@@ -14,6 +14,8 @@ alias_paths:
   - /ja_JP/home
   - /api
   - /docs/overview
+category_id: null
+subcategory_id: null
 id: pages
 type: page
 is_index: true

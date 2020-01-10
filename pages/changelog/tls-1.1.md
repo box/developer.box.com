@@ -4,6 +4,8 @@ alias_paths:
   - /docs/tls-11-deprecation
 centered: true
 rank: 2
+category_id: changelog
+subcategory_id: null
 id: changelog/tls-1.1
 type: page
 is_index: false

@@ -2,6 +2,8 @@
 alias_paths:
   - /docs/developer-newsletter
 centered: true
+category_id: newsletter
+subcategory_id: null
 id: newsletter
 type: page
 is_index: true

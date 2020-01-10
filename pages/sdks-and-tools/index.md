@@ -8,6 +8,8 @@ alias_paths:
   - /page/sdks
   - /docs/box-sdk-license
 centered: true
+category_id: sdks-and-tools
+subcategory_id: null
 id: sdks-and-tools
 type: page
 is_index: true
