@@ -31,12 +31,12 @@ permissions.
 
 ## JWT Restrictions
 
-Server-side authorization using JWT works by creating a claim on the
+Server-side authentication using JWT works by creating a claim on the
 application's server and then signing this using the application's secret key.
 In most cases, the claim is that the server is allowed to act on
 behalf of the Box application.
 
-For this reason a every application that uses JWT has an associated [Service
+For this reason every application that uses JWT has an associated [Service
 Account](g://authentication/user-types) that is the default user that it
 authenticates as. This user is an admin-like user and for this
 reason JWT applications require an actual Box admin's approval before they can
