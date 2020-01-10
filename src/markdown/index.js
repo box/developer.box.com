@@ -2,6 +2,7 @@ const glob = require('glob')
 const path = require('path')
 const fs = require('fs-extra')
 const MarkdownProcessor = require('./processor')
+const { sync } = require('sha1-from-file')
 
 /**
  * A helper class for reading markdown files and transpiling them
@@ -41,7 +42,13 @@ const copyAssets = (sourceDir, targetDir, source) => {
   const destination = `${targetDir}${source.replace(sourceDir, '')}`
   const destinationDir = path.dirname(destination)
   fs.mkdirpSync(destinationDir)
-  fs.copyFileSync(source, destination)
+  
+  const sourceHash = sync(fs.readFileSync(source))
+  const destinationHash = fs.existsSync(destination) ? sync(fs.readFileSync(destination)) : ''
+
+  if (sourceHash !== destinationHash) {
+    fs.copyFileSync(source, destination)
+  }
 }
 
 // export a new loader
