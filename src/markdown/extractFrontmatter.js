@@ -10,10 +10,8 @@ TYPES = {
 
 const extractFrontmatter = (frontmatter, sourcePath, isGuide) => {
   frontmatter = yaml.load(frontmatter)
-  if (isGuide) {
-    frontmatter.category_id = categoryId(sourcePath)
-    frontmatter.subcategory_id = subcategoryId(sourcePath)
-  }
+  frontmatter.category_id = categoryId(sourcePath)
+  frontmatter.subcategory_id = subcategoryId(sourcePath)
   frontmatter.id = id(sourcePath)
   frontmatter.type = type(sourcePath, frontmatter)
   frontmatter.is_index = isIndex(sourcePath)
