@@ -10,20 +10,16 @@ related_endpoints:
 
 # Log in to Box
 
-<Message>
-  # This is part 3 of a multi-part guide
-
-  We highly recommend starting at the beginning of this quick start guide.
-</Message>
-
 <Choice option='postman.app_type' value='use_own' color='none'>
-  In the previous step you set up your own **Box App**. In this step, we will
-  use the **Client ID** and **Client Secret** of your app to
-  authenticate you, the **User**.
+  In the previous step you chose to use your own **Box App** for authenticating
+  yourself in the Postman app.
 
-  ## Why login is needed
+  In this step, we will use the **Client ID** and **Client Secret** you provided
+  to log you in and create an **Access Token** for your user.
 
-  Currently you have provided us with the following bits of information.
+  ## The reason to log in
+
+  Currently you have provided us with the following information.
 
   <Store disabled inline id='postman_credentials.client_id'>
     Client ID
@@ -33,12 +29,15 @@ related_endpoints:
     Client Secret
   </Store>
 
-  These **credentials** allow any program to authenticate itself to the **Box
-  API** as the specific **Box App** you created, but they don't tell the API who
-  you (the **User**) are.
+  These **credentials** allow any program or piece of code to authenticate
+  itself to the **Box API**. It represents the **Box App** you created but it
+  doesn't tell the API who you, the **User**, are.
 
-  To authenticate yourself we will need to send your browser to the Box login
-  screen to authorize your **Box App** access to your **User** account.
+  To authenticate yourself you will need to send your browser to the Box login
+  screen to authorize your **Box App** to access to your **User** account.
+
+  Setup this flow up can be hard, which is why we have made this straightforward
+  for you with the button below.
 
   ## Log into your Box app
 
@@ -49,14 +48,13 @@ related_endpoints:
   <LoggedIn id='postman_credentials'>
     ## You are now logged in
 
-    We just sent your browser to the **[Box Authorization](e://get-authorize)**
-    screen where you granted our application access to your user account. Ater
-    you granted us access, the browser redirected back to the
-    `developer.box.com` site together with a `code`.
+    We just sent your browser to the [Box Authorization](e://get-authorize)
+    screen where you granted your application access to your user account. Ater
+    you granted it access the browser redirected back to this site with a `code`.
 
-    We then [exchanged](e://post-oauth2-token) this short lived `code` for a
+    We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
     longer lived **Access Token** and **Refresh Token**. These tokens represent
-    you, the user with the following name, to the Box API when making API calls.
+    you, the **User**.
 
     <Store disabled inline id='postman_credentials' field='name'>
       Your name
@@ -70,27 +68,33 @@ related_endpoints:
       Refresh Token
     </Store>
 
-    <Store disabled inline id='postman_credentials' field='expires_at'>
-      Expires At
-    </Store>
+    <Message danger>
+      # Security notice
+
+      We will store these credentials in the browser for you for now. We highly
+      recommend clearing out this storage by clicking the **Reset** button in the
+      final step of this guide.
+    </Message>
   </LoggedIn>
 </Choice>
 
 <Choice option='postman.app_type' value='use_box' color='none'>
-  In the previous step you chose to use our preconfigured **Box App**. In this
-  step, we will use the **Client ID** and **Client Secret** of your app to
-  authenticate you, the **User**.
+  In the previous step you chose to use our preconfigured **Box App**.
 
-  ## Why login is needed
+  In this step, we will use the **Client ID** and **Client Secret** of this app
+  to authenticate you, the **User**. Because this application is owned by us,
+  you will not be able to see the app's **Client ID** and **Client Secret** and
+  you will need to come back to this page every hour to re-authenticate your app.
 
-  Because this application is owned by us, you will not be able to see the app's
-  **Client ID** and **Client Secret**. These **credentials** allow any
-  application to authenticate itself to the **Box API** as the specific **Box
-  App** we created, yet they don't tell the API who the authenticating **User**
-  (you) is.
+  ## The reason to log in
 
-  To authenticate yourself we will need to send your browser to the Box login
-  screen to authorize your **Box App** access to your **User** account.
+  Currently we have no idea who you, the **User are** and therefore we can't
+  authenticate you when making API calls to the Box API. To authenticate
+  yourself you will need to send your browser to the Box login screen to
+  authorize our **Box App** to access to your **User** account.
+
+  Setup this flow up can be hard, which is why we have made this
+  straightforward for you with the button below.
 
   ## Log into your Box app
 
@@ -101,14 +105,13 @@ related_endpoints:
   <LoggedIn>
     ## You are now logged in
 
-    We just sent your browser to the **[Box Authorization](e://get-authorize)**
+    We just sent your browser to the [Box Authorization](e://get-authorize)
     screen where you granted our application access to your user account. Ater
-    you granted us access, the browser redirected back to the
-    `developer.box.com` site together with a `code`.
+    you granted it access the browser redirected back to this site with a `code`.
 
-    We then [exchanged](e://post-oauth2-token) this short lived `code` for a
+    We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
     longer lived **Access Token** and **Refresh Token**. These tokens represent
-    you, the user with the following name, to the Box API when making API calls.
+    you, the **User**.
 
     <Store disabled inline id='credentials' field='name'>
       Your name
@@ -122,11 +125,26 @@ related_endpoints:
       Refresh Token
     </Store>
 
-    <Store disabled inline id='credentials' field='expires_at'>
-      Expires At
-    </Store>
+    <Message danger>
+      # Security notice
+
+      We will store these credentials in the browser for you for now. We highly
+      recommend clearing out this storage by clicking the **Reset** button in the
+      final step of this guide.
+    </Message>
   </LoggedIn>
 </Choice>
+
+<Choice option='postman.app_type' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+
+    Please complete the previous step to select the type of **Box App** you want
+    to use.
+  </Message>
+</Choice>
+
+<Choice option='postman.app_type' value='use_box,use_own' color='none'>
 
 ## Summary
 
@@ -135,6 +153,8 @@ related_endpoints:
 * You granted the **Box App** access to your account
 * You are able to see your account's **Access Token** and **Refresh Token**
   on this page
+
+</Choice>
 
 <Observe option='postman.login' value='clicked'>
   <Next>I have logged in to Box</Next>

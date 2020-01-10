@@ -56,6 +56,7 @@ Next, install the Postman app on your machine and (optionally)
 * You installed the Postman app
 * You created a Postman account (optional) 
 * You logged into the Postman app with your Postman account
+</>
 
 <Observe option='postman.downloaded' value='win32,win64,macos,linux64'>
   <Next>

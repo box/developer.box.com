@@ -25,6 +25,9 @@ titles:
   // api_endpoints: A title for a set of links describing related API endpoints
   api_endpoints: Related APIs
 
+  // endpoints: A title for a set of links describing related API endpoints
+  endpoints: Endpoints
+
   // resources: A title for a set of links describing related API resources
   resources: Related Resources
 

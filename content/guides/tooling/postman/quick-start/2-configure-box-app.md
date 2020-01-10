@@ -9,33 +9,29 @@ related_guides:
 
 # Configure a Box App
 
-<Message> 
-  # This is part 2 of a multi-part guide
+To use the **Postman Collection** you will need to authenticate yourself to the
+Box API using an **Access Token**. The simplest way to get an Access Token is
+by logging in to Box using a **Box App**.
 
-  We highly recommend starting at the beginning of this quick start guide.
-</Message>
+A **Box App** is an application that can be used for making API calls. When
+using the **Postman Collection** you can choose to either set up your own Box
+App or use our preconfigured one. The benefit of setting up your own Box App is
+that you won't need to go through login every hour, but it does require a few
+extra steps to set up.
 
-The next step is to create and configure a Box app for usage with the Postman
-app.
-
-A Box app is a set of configurations for accessing Box through in a programmatic
-way. For this quick start we provide two different ways to configure your
-Postman app.
-
-## Select an app to configure
+## Select a Box App to use
 
 <Grid columns='2'>
   <Choose option='postman.app_type' value='use_own' color='blue'>
-    # Configure your own Box app
+    # Use your own Box app
 
     With this method your Postman app will be
     able to make API calls to Box **indefinitely**
     as long as you use the app at least once
-    every 60 days.
+    **every 60 days**.
 
-    This method requires more initial setup, yet less
-    ongoing maintenance to keep using.
-
+    This method requires a bit more initial setup, yet
+    requires less maintenance.
   </Choose>
 
   <Choose option='postman.app_type' value='use_box' color='red'>
@@ -54,10 +50,10 @@ Postman app.
 <Choice option='postman.app_type' value='use_own' color='blue'>
   # Create a Box app
 
-  You've selected to configure your own Box app. For this step we will create a
-  new Box app in the Box developer console.
+  To use your own **Box App** you will need create a
+  new Box App in the **Box Developer Console**.
   
-  If you do not have a Box account yet you can sign up for a [free
+  If you do not have a Box account you can sign up for a [free
   developer][signup] account for testing purposes.
 
   1. Go to the [Developer Console][devconsole]
@@ -72,12 +68,12 @@ Postman app.
   1. At the top of the page click the button to **Save Changes**
 </Choice>
 
-<Choice option='postman.app_type' value='use_own' color='blue' last>
-  # Copy your API credentials
+<Choice option='postman.app_type' value='use_own' color='blue'>
+  # Copy API credentials
 
-  Continuing from the previous steps, scroll to the **OAuth 2.0 Credentials**
-  section of your Box app and copy the **Client ID** and **Client Secret** into
-  the input fields below.
+  Once you've created a Box app, scroll to the **OAuth 2.0 Credentials**
+  section of your **Box App** and copy the **Client ID** and **Client Secret** into
+  the fields below.
 
   <Store 
     id='postman_credentials.client_id' 
@@ -96,6 +92,20 @@ Postman app.
   We will use these credentials to authenticate your application in the next step.
 </Choice>
 
+<Choice option='postman.app_type' value='use_own' color='none'>
+
+<Message danger>
+  # Security notice
+
+  We will store these credentials in the browser for you for now. We highly
+  recommend clearing out this storage by clicking the **Reset** button in the
+  final step of this guide.
+</Message>
+
+</Choice>
+
+<Choice option='postman.app_type' value='use_box,use_own' color='none'>
+
 ## Summary
 
 * You either selected to use your own **Box App**
@@ -105,6 +115,8 @@ Postman app.
   * Set up the **redirect URL** for the application
   * Copied the **Client ID** and **Client Secret** onto this page
 * Or selected to use our **preconfigured Box App**
+
+</Choice>
 
 <Observe option='postman.app_type' value='use_box,use_own'>
   <Next>I have configured a Box app</Next>
