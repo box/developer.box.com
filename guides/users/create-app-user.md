@@ -11,10 +11,16 @@ required_guides: []
 related_resources:
   - user
 alias_paths: []
-cId: users
-scId: null
+category_id: users
+subcategory_id: null
 id: users/create-app-user
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: users
+parent_id: users
+next_page_id: users/delete-user
+previous_page_id: users/create-managed-user
 ---
 
 # Create App User

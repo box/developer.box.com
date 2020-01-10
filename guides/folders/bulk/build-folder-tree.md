@@ -10,10 +10,16 @@ related_resources:
   - folder
 alias_paths:
   - /docs/build-a-folder-tree
-cId: folders
-scId: folders/bulk
+category_id: folders
+subcategory_id: folders/bulk
 id: folders/bulk/build-folder-tree
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: folders/bulk
+parent_id: folders/bulk
+next_page_id: ''
+previous_page_id: folders/bulk
 ---
 
 # Build Folder Tree

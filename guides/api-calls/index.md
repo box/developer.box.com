@@ -4,10 +4,16 @@ related_endpoints: []
 required_guides: []
 alias_paths:
   - /docs/how-to-get-an-api-key
-cId: api-calls
-scId: null
+category_id: api-calls
+subcategory_id: null
 id: api-calls
-isIndex: true
+type: guide
+is_index: true
+total_steps: 7
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: api-calls/suppress-notifications
 ---
 
 # API Calls

@@ -8,10 +8,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/special-scopes-for-box-ui-elements
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/scopes
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/viewers-and-events
+previous_page_id: embed/ui-elements/access
 ---
 
 # Dedicated Scopes

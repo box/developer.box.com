@@ -9,10 +9,16 @@ required_guides:
 alias_paths: []
 related_resources:
   - web_link
-cId: web-links
-scId: null
+category_id: web-links
+subcategory_id: null
 id: web-links/delete
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: web-links
+parent_id: web-links
+next_page_id: web-links
+previous_page_id: web-links/create
 ---
 
 # Delete Web Link

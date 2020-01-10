@@ -9,10 +9,16 @@ required_guides:
 alias_paths: []
 related_resources:
   - folder
-cId: folders
-scId: folders/single
+category_id: folders
+subcategory_id: folders/single
 id: folders/single/delete
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: folders/single
+parent_id: folders/single
+next_page_id: folders/single/change-owner
+previous_page_id: folders/single/copy
 ---
 
 # Delete Folder

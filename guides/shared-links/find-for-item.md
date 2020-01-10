@@ -10,10 +10,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: shared-links
-scId: null
+category_id: shared-links
+subcategory_id: null
 id: shared-links/find-for-item
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: shared-links
+parent_id: shared-links
+next_page_id: shared-links/remove
+previous_page_id: shared-links/update
 ---
 
 # Find Item from Shared Link

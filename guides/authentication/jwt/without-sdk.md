@@ -12,10 +12,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-cId: authentication
-scId: authentication/jwt
+category_id: authentication
+subcategory_id: authentication/jwt
 id: authentication/jwt/without-sdk
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: authentication/jwt
+parent_id: authentication/jwt
+next_page_id: authentication/jwt/as-user
+previous_page_id: authentication/jwt/with-sdk
 ---
 
 # JWT without SDKs

@@ -8,10 +8,16 @@ alias_paths:
   - /docs/install-the-sdk
   - /docs/open-source-projects
   - /docs/community-supported-projects
-cId: tooling
-scId: tooling/sdks
+category_id: tooling
+subcategory_id: tooling/sdks
 id: tooling/sdks
-isIndex: true
+type: guide
+is_index: true
+total_steps: 6
+sibling_id: tooling
+parent_id: tooling
+next_page_id: ''
+previous_page_id: tooling/sdks/cli
 ---
 
 # SDKs & CLI

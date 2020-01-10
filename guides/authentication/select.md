@@ -6,10 +6,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/authentication-types-and-security
-cId: authentication
-scId: null
+category_id: authentication
+subcategory_id: null
 id: authentication/select
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication/sso
+previous_page_id: ''
 ---
 
 # Select Auth Method

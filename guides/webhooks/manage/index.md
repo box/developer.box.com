@@ -9,10 +9,16 @@ related_guides: []
 required_guides: []
 alias_paths:
   - /docs/file-workflow-with-webhooks
-cId: webhooks
-scId: webhooks/manage
+category_id: webhooks
+subcategory_id: webhooks/manage
 id: webhooks/manage
-isIndex: true
+type: guide
+is_index: true
+total_steps: 7
+sibling_id: webhooks
+parent_id: webhooks
+next_page_id: webhooks/manage/list-all
+previous_page_id: ''
 ---
 
 # Manage Webhooks

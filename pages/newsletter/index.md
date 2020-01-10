@@ -3,7 +3,14 @@ alias_paths:
   - /docs/developer-newsletter
 centered: true
 id: newsletter
-isIndex: true
+type: page
+is_index: true
+rank: 0
+total_steps: 0
+sibling_id: pages
+parent_id: pages
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Newsletter

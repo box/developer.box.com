@@ -6,10 +6,16 @@ required_guides: []
 related_resources:
   - folder
 alias_paths: []
-cId: folders
-scId: folders/bulk
+category_id: folders
+subcategory_id: folders/bulk
 id: folders/bulk
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: folders
+parent_id: folders
+next_page_id: folders/bulk/build-folder-tree
+previous_page_id: ''
 ---
 
 # Bulk Manipulation

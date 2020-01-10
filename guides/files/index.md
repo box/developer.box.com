@@ -3,10 +3,16 @@ rank: 60
 alias_paths:
   - /docs/work-with-files
   - /docs/upload-files
-cId: files
-scId: null
+category_id: files
+subcategory_id: null
 id: files
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: files/limitations
+previous_page_id: files/get
 ---
 
 # Files

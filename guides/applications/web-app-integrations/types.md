@@ -7,10 +7,16 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: applications
-scId: applications/web-app-integrations
+category_id: applications
+subcategory_id: applications/web-app-integrations
 id: applications/web-app-integrations/types
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: applications/web-app-integrations
+parent_id: applications/web-app-integrations
+next_page_id: applications/web-app-integrations/user-experience
+previous_page_id: ''
 ---
 
 # Integrations Types

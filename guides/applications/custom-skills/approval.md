@@ -5,10 +5,16 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: applications
-scId: applications/custom-skills
+category_id: applications
+subcategory_id: applications/custom-skills
 id: applications/custom-skills/approval
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: applications/custom-skills
+parent_id: applications/custom-skills
+next_page_id: applications/custom-skills
+previous_page_id: applications/custom-skills/setup
 ---
 
 <!-- alex disable whitelist -->

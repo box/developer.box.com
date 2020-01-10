@@ -1,10 +1,16 @@
 ---
 rank: 240
 alias_paths: []
-cId: retention-policies
-scId: null
+category_id: retention-policies
+subcategory_id: null
 id: retention-policies
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: retention-policies/get
 ---
 
 # Retention Policies

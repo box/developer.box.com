@@ -6,10 +6,16 @@ required_guides: []
 related_resources:
   - web-link
 alias_paths: []
-cId: web-links
-scId: null
+category_id: web-links
+subcategory_id: null
 id: web-links
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: web-links/delete
 ---
 
 # Web Links

@@ -1,9 +1,15 @@
 ---
 rank: 150
-cId: trash
-scId: null
+category_id: trash
+subcategory_id: null
 id: trash
-isIndex: true
+type: guide
+is_index: true
+total_steps: 6
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: trash/permanently-delete-web-link
 ---
 
 # Trash

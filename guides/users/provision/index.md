@@ -2,10 +2,16 @@
 rank: 1
 alias_paths:
   - /docs/provision-user-accounts
-cId: users
-scId: users/provision
+category_id: users
+subcategory_id: users/provision
 id: users/provision
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: users
+parent_id: users
+next_page_id: users/provision/architecture
+previous_page_id: ''
 ---
 
 # Provision Users

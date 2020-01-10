@@ -9,10 +9,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/download-all-files-from-a-folder-1
-cId: downloads
-scId: null
+category_id: downloads
+subcategory_id: null
 id: downloads/in-browser
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: downloads
+parent_id: downloads
+next_page_id: downloads
+previous_page_id: downloads/get-url
 ---
 
 # Download in Browser

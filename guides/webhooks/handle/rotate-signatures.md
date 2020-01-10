@@ -9,10 +9,16 @@ required_guides:
   - webhooks/manage/for-file
   - webhooks/handle/setup-signatures
 alias_paths: []
-cId: webhooks
-scId: webhooks/handle
+category_id: webhooks
+subcategory_id: webhooks/handle
 id: webhooks/handle/rotate-signatures
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: webhooks/handle
+parent_id: webhooks/handle
+next_page_id: ''
+previous_page_id: webhooks/handle/verify-signatures
 ---
 
 # Rotate Webhook Signatures

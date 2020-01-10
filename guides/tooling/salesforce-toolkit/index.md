@@ -7,10 +7,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-for-salesforce-developer-toolkit
-cId: tooling
-scId: tooling/salesforce-toolkit
+category_id: tooling
+subcategory_id: tooling/salesforce-toolkit
 id: tooling/salesforce-toolkit
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: tooling
+parent_id: tooling
+next_page_id: tooling/salesforce-toolkit/methods
+previous_page_id: ''
 ---
 
 # Salesforce Developer Toolkit

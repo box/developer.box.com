@@ -1,10 +1,16 @@
 ---
 rank: 2
 alias_paths: []
-cId: uploads
-scId: uploads/chunked
+category_id: uploads
+subcategory_id: uploads/chunked
 id: uploads/chunked
-isIndex: true
+type: guide
+is_index: true
+total_steps: 5
+sibling_id: uploads
+parent_id: uploads
+next_page_id: uploads/chunked/commit-session
+previous_page_id: ''
 ---
 
 <!-- alex disable corruption -->

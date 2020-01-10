@@ -8,10 +8,16 @@ related_guides:
 required_guides:
   - webhooks/manage/for-file
 alias_paths: []
-cId: webhooks
-scId: webhooks/manage
+category_id: webhooks
+subcategory_id: webhooks/manage
 id: webhooks/manage/delete
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: webhooks/manage
+parent_id: webhooks/manage
+next_page_id: webhooks/manage/manually
+previous_page_id: webhooks/manage/update
 ---
 
 # Delete Webhook

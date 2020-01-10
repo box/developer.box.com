@@ -11,10 +11,16 @@ related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
   - /docs/oauth-20
-cId: applications
-scId: applications/custom-apps
+category_id: applications
+subcategory_id: applications/custom-apps
 id: applications/custom-apps/oauth2-setup
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: applications/custom-apps
+parent_id: applications/custom-apps
+next_page_id: applications/custom-apps/jwt-setup
+previous_page_id: ''
 ---
 
 # Setup with OAuth 2.0

@@ -9,10 +9,16 @@ required_guides:
   - uploads/check
 related_resources: []
 alias_paths: []
-cId: uploads
-scId: uploads/direct
+category_id: uploads
+subcategory_id: uploads/direct
 id: uploads/direct/file-version
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: uploads/direct
+parent_id: uploads/direct
+next_page_id: ''
+previous_page_id: uploads/direct/file
 ---
 
 # Upload File Version

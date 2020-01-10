@@ -10,10 +10,16 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: null
+category_id: authentication
+subcategory_id: null
 id: authentication/sso
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication
+previous_page_id: authentication/select
 ---
 
 # Box API & SSO

@@ -12,10 +12,16 @@ alias_paths:
   - /docs/user-types
   - /docs/app-users
   - /docs/service-account
-cId: authentication
-scId: authentication/user-types
+category_id: authentication
+subcategory_id: authentication/user-types
 id: authentication/user-types
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: authentication
+parent_id: authentication
+next_page_id: ''
+previous_page_id: authentication/user-types/app-users
 ---
 
 # User Types

@@ -16,10 +16,16 @@ related_guides:
   - api-calls/pagination/offset-based
 required_guides: []
 alias_paths: []
-cId: api-calls
-scId: api-calls/pagination
+category_id: api-calls
+subcategory_id: api-calls/pagination
 id: api-calls/pagination/marker-based
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: api-calls/pagination
+parent_id: api-calls/pagination
+next_page_id: ''
+previous_page_id: api-calls/pagination
 ---
 
 # Marker-based Pagination

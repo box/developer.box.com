@@ -7,10 +7,16 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/app-token
+category_id: authentication
+subcategory_id: authentication/app-token
 id: authentication/app-token/endpoints
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: authentication/app-token
+parent_id: authentication/app-token
+next_page_id: authentication/app-token/rollover
+previous_page_id: authentication/app-token/without-sdk
 ---
 
 # Supported Endpoints

@@ -143,6 +143,8 @@
   "guides.titles.related_guides": "Related Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
+  // A title for a set of links describing related API endpoints
+  "guides.titles.endpoints": "Endpoints",
   // A title for a set of links describing related API resources
   "guides.titles.resources": "Related Resources",
   // A short name for a group of guides

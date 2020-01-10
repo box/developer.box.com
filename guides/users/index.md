@@ -8,10 +8,16 @@ related_resources: []
 alias_paths:
   - /docs/work-with-users
   - /docs/get-all-users
-cId: users
-scId: null
+category_id: users
+subcategory_id: null
 id: users
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: users/delete-user
 ---
 
 # Users

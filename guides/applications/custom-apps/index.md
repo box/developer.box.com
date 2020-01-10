@@ -6,10 +6,16 @@ alias_paths:
   - /docs/partner-integrations
   - /docs/getting-started-box-platform
   - /docs/box-platform
-cId: applications
-scId: applications/custom-apps
+category_id: applications
+subcategory_id: applications/custom-apps
 id: applications/custom-apps
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: applications
+parent_id: applications
+next_page_id: applications/custom-apps/jwt-setup
+previous_page_id: ''
 ---
 
 # Custom Apps

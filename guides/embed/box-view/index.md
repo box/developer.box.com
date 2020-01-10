@@ -11,10 +11,16 @@ alias_paths:
   - /docs/getting-started-with-new-box-view
   - /docs/advanced-file-viewers
   - /page/vr
-cId: embed
-scId: embed/box-view
+category_id: embed
+subcategory_id: embed/box-view
 id: embed/box-view
-isIndex: true
+type: guide
+is_index: true
+total_steps: 5
+sibling_id: embed
+parent_id: embed
+next_page_id: embed/box-view/upload-file
+previous_page_id: embed/box-view/setup
 ---
 
 # Box View

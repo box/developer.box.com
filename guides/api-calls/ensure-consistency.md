@@ -15,10 +15,16 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-cId: api-calls
-scId: null
+category_id: api-calls
+subcategory_id: null
 id: api-calls/ensure-consistency
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: api-calls
+parent_id: api-calls
+next_page_id: api-calls/domain-whitelisting
+previous_page_id: api-calls/request-extra-fields
 ---
 
 # Ensure Consistency

@@ -9,10 +9,16 @@ related_resources:
   - client_error
 required_guides: []
 alias_paths: []
-cId: api-calls
-scId: api-calls/permissions-and-errors
+category_id: api-calls
+subcategory_id: api-calls/permissions-and-errors
 id: api-calls/permissions-and-errors/rate-limits
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: api-calls/permissions-and-errors
+parent_id: api-calls/permissions-and-errors
+next_page_id: api-calls/permissions-and-errors/scopes
+previous_page_id: api-calls/permissions-and-errors/common-errors
 ---
 
 # Rate Limits

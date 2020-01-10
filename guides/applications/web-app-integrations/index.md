@@ -7,10 +7,16 @@ related_resources: []
 alias_paths:
   - /docs/web-application-integrations
   - /docs/box-web-application-integrations
-cId: applications
-scId: applications/web-app-integrations
+category_id: applications
+subcategory_id: applications/web-app-integrations
 id: applications/web-app-integrations
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: applications
+parent_id: applications
+next_page_id: ''
+previous_page_id: applications/web-app-integrations/configure
 ---
 
 # Web App Integration

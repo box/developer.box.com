@@ -8,10 +8,16 @@ required_guides: []
 related_resources:
   - comment
 alias_paths: []
-cId: comments
-scId: null
+category_id: comments
+subcategory_id: null
 id: comments/create-comment
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: comments
+parent_id: comments
+next_page_id: comments/create-reply
+previous_page_id: ''
 ---
 
 # Create Comment

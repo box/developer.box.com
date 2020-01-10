@@ -6,10 +6,16 @@ related_endpoints:
 related_guides: []
 required_guides: []
 alias_paths: []
-cId: representations
-scId: null
+category_id: representations
+subcategory_id: null
 id: representations
-isIndex: true
+type: guide
+is_index: true
+total_steps: 8
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: representations/supported-file-types
 ---
 
 # Representations

@@ -4,7 +4,13 @@ alias_paths:
 centered: true
 rank: 0
 id: changelog
-isIndex: true
+type: page
+is_index: true
+total_steps: 2
+sibling_id: pages
+parent_id: pages
+next_page_id: changelog/2018
+previous_page_id: ''
 ---
 
 # Changelog

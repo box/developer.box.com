@@ -9,7 +9,13 @@ alias_paths:
 centered: true
 rank: 1
 id: support/community-projects
-isIndex: false
+type: page
+is_index: false
+total_steps: 1
+sibling_id: support
+parent_id: support
+next_page_id: ''
+previous_page_id: support
 ---
 
 # Community Projects

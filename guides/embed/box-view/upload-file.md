@@ -5,10 +5,16 @@ related_guides:
 required_guides:
   - embed/box-view/setup
 alias_paths: []
-cId: embed
-scId: embed/box-view
+category_id: embed
+subcategory_id: embed/box-view
 id: embed/box-view/upload-file
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: embed/box-view
+parent_id: embed/box-view
+next_page_id: embed/box-view/best-practices
+previous_page_id: embed/box-view/create-preview
 ---
 
 # Upload Files

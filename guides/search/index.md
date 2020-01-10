@@ -8,10 +8,16 @@ related_guides:
 required_guides: []
 alias_paths:
   - /docs/search-for-content
-cId: search
-scId: null
+category_id: search
+subcategory_id: null
 id: search
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: search/full-text-search
 ---
 
 # Search

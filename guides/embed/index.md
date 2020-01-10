@@ -2,10 +2,16 @@
 rank: 40
 alias_paths:
   - /widgets
-cId: embed
-scId: null
+category_id: embed
+subcategory_id: null
 id: embed
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: embed/box-embed
 ---
 
 # Embed Box

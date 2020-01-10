@@ -7,10 +7,16 @@ related_resource:
   - metadata_template
 required_guides: []
 alias_paths: []
-cId: metadata
-scId: metadata/templates
+category_id: metadata
+subcategory_id: metadata/templates
 id: metadata/templates/update
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: metadata/templates
+parent_id: metadata/templates
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Update Metadata Template

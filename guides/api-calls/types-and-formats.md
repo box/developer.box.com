@@ -5,10 +5,16 @@ related_guides: []
 required_guides: []
 alias_paths:
   - /docs/object-model
-cId: api-calls
-scId: null
+category_id: api-calls
+subcategory_id: null
 id: api-calls/types-and-formats
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: api-calls
+parent_id: api-calls
+next_page_id: api-calls/status-codes
+previous_page_id: ''
 ---
 
 # Types & Formats

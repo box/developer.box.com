@@ -9,10 +9,16 @@ required_guides:
   - authentication/app-token
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/access-tokens
+category_id: authentication
+subcategory_id: authentication/access-tokens
 id: authentication/access-tokens/annotator-tokens
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: authentication/access-tokens
+parent_id: authentication/access-tokens
+next_page_id: ''
+previous_page_id: authentication/access-tokens/downscope
 ---
 
 # Annotator Tokens

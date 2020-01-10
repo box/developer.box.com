@@ -8,10 +8,16 @@ required_guides:
 related_resources:
   - skill_invocation
 alias_paths: []
-cId: skills
-scId: skills/handle
+category_id: skills
+subcategory_id: skills/handle
 id: skills/handle/payload
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: skills/handle
+parent_id: skills/handle
+next_page_id: skills/handle/metadata
+previous_page_id: skills/handle
 ---
 
 # Parse Skills Payload

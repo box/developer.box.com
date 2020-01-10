@@ -8,10 +8,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: users
-scId: users/deprovision
+category_id: users
+subcategory_id: users/deprovision
 id: users/deprovision/user
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: users/deprovision
+parent_id: users/deprovision
+next_page_id: users/deprovision
+previous_page_id: ''
 ---
 
 # Deprovision User

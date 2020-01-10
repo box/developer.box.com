@@ -8,10 +8,16 @@ related_guides:
   - representations/text
 required_guides: []
 alias_paths: []
-cId: representations
-scId: null
+category_id: representations
+subcategory_id: null
 id: representations/supported-file-types
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: representations
+parent_id: representations
+next_page_id: representations
+previous_page_id: representations/text
 ---
 
 # Supported File Types

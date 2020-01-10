@@ -7,10 +7,16 @@ alias_paths:
   - /docs/get-started-with-the-box-api
   - /docs/app-management
   - /docs/configuring-box-platform
-cId: applications
-scId: null
+category_id: applications
+subcategory_id: null
 id: applications
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: applications/app-gallery
 ---
 
 # Applications

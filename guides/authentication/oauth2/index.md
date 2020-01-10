@@ -9,10 +9,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/authenticate-with-oauth-2
-cId: authentication
-scId: authentication/oauth2
+category_id: authentication
+subcategory_id: authentication/oauth2
 id: authentication/oauth2
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication/oauth2/without-sdk
+previous_page_id: ''
 ---
 
 # OAuth 2.0 Auth

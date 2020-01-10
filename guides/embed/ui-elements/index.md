@@ -6,10 +6,16 @@ alias_paths:
   - /docs/ui-elements
   - /box-ui-kit
   - /docs/box-ui-kit
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements
-isIndex: true
+type: guide
+is_index: true
+total_steps: 14
+sibling_id: embed
+parent_id: embed
+next_page_id: embed/ui-elements/browser
+previous_page_id: ''
 ---
 
 # UI Elements

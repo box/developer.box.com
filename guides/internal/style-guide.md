@@ -1,10 +1,16 @@
 ---
 rank: 1
 hide: true
-cId: internal
-scId: null
+category_id: internal
+subcategory_id: null
 id: internal/style-guide
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: internal
+parent_id: internal
+next_page_id: ''
+previous_page_id: internal
 ---
 
 # Style Guide
@@ -231,6 +237,7 @@ Node
 </Tab>
 
 <Tab title='.NET'>
+
 .NET
 
 </Tab>

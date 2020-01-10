@@ -7,10 +7,16 @@ related_resources:
   - terms_of_service
   - terms_of_service_user_status
 alias_paths: []
-cId: security
-scId: security/terms-of-service
+category_id: security
+subcategory_id: security/terms-of-service
 id: security/terms-of-service/permissions
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: security/terms-of-service
+parent_id: security/terms-of-service
+next_page_id: ''
+previous_page_id: security/terms-of-service/for-colaboration
 ---
 
 # Permissions

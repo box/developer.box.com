@@ -7,10 +7,16 @@ required_guides: []
 related_resources:
   - collection
 alias_paths: []
-cId: collections
-scId: null
+category_id: collections
+subcategory_id: null
 id: collections/list
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: collections
+parent_id: collections
+next_page_id: collections/list-items
+previous_page_id: ''
 ---
 
 # List User's Collections

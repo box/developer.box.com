@@ -5,7 +5,13 @@ alias_paths:
 centered: true
 rank: 2
 id: changelog/tls-1.1
-isIndex: false
+type: page
+is_index: false
+total_steps: 2
+sibling_id: changelog
+parent_id: changelog
+next_page_id: ''
+previous_page_id: changelog/2018
 ---
 
 # TLS 1.1 Deprecation Migration

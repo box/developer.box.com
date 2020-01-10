@@ -1,10 +1,16 @@
 ---
 rank: 120
 alias_paths: []
-cId: comments
-scId: null
+category_id: comments
+subcategory_id: null
 id: comments
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: comments/create-reply
 ---
 
 # Comments

@@ -1,9 +1,15 @@
 ---
 rank: 200
-cId: collaborations
-scId: null
+category_id: collaborations
+subcategory_id: null
 id: collaborations
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: collaborations/pending
 ---
 
 # Collaborations

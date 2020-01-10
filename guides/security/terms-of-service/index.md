@@ -1,10 +1,16 @@
 ---
 rank: 1
 alias_paths: []
-cId: security
-scId: security/terms-of-service
+category_id: security
+subcategory_id: security/terms-of-service
 id: security/terms-of-service
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: security
+parent_id: security
+next_page_id: security/terms-of-service/for-colaboration
+previous_page_id: ''
 ---
 
 <!-- alex disable reject -->

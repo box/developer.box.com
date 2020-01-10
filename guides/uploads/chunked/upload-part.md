@@ -10,10 +10,16 @@ required_guides:
 related_resources:
   - upload_part
 alias_paths: []
-cId: uploads
-scId: uploads/chunked
+category_id: uploads
+subcategory_id: uploads/chunked
 id: uploads/chunked/upload-part
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: uploads/chunked
+parent_id: uploads/chunked
+next_page_id: uploads/chunked/commit-session
+previous_page_id: ''
 ---
 
 # Upload Part

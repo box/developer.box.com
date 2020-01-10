@@ -9,10 +9,16 @@ related_guides:
   - events/pagination
 required_guides: []
 alias_paths: []
-cId: events
-scId: null
+category_id: events
+subcategory_id: null
 id: events/for-user
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: events
+parent_id: events
+next_page_id: events/for-enterprise
+previous_page_id: ''
 ---
 
 # Get User Events

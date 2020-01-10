@@ -10,10 +10,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: users
-scId: null
+category_id: users
+subcategory_id: null
 id: users/create-managed-user
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: users
+parent_id: users
+next_page_id: users/create-app-user
+previous_page_id: ''
 ---
 
 # Create Managed User

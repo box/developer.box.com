@@ -6,10 +6,16 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: tooling
-scId: tooling/salesforce-toolkit
+category_id: tooling
+subcategory_id: tooling/salesforce-toolkit
 id: tooling/salesforce-toolkit/methods
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: tooling/salesforce-toolkit
+parent_id: tooling/salesforce-toolkit
+next_page_id: tooling/salesforce-toolkit/samples
+previous_page_id: tooling/salesforce-toolkit
 ---
 
 <!-- alex disable failed -->

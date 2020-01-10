@@ -9,10 +9,16 @@ required_guides:
   - representations/request-a-representation
   - representations/download-a-representation
 alias_paths: []
-cId: representations
-scId: null
+category_id: representations
+subcategory_id: null
 id: representations/text
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: representations
+parent_id: representations
+next_page_id: representations/supported-file-types
+previous_page_id: representations/pdf
 ---
 
 # Get Text Representation

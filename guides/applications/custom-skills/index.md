@@ -6,10 +6,16 @@ alias_paths:
   - /docs/getting-started-with-box-skills
   - /docs/box-skills-1
   - /skills
-cId: applications
-scId: applications/custom-skills
+category_id: applications
+subcategory_id: applications/custom-skills
 id: applications/custom-skills
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: applications
+parent_id: applications
+next_page_id: ''
+previous_page_id: applications/custom-skills/approval
 ---
 
 # Customs Skills

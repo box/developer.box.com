@@ -12,10 +12,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: uploads
-scId: null
+category_id: uploads
+subcategory_id: null
 id: uploads/check
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: uploads
+parent_id: uploads
+next_page_id: uploads
+previous_page_id: ''
 ---
 
 <!-- alex disable failed -->

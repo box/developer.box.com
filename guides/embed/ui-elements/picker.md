@@ -9,10 +9,16 @@ related_resources: []
 alias_paths:
   - /docs/box-content-picker
   - /docs/content-picker
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/picker
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/preview
+previous_page_id: embed/ui-elements/open-with
 ---
 
 # Content Picker

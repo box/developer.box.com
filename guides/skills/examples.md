@@ -10,10 +10,16 @@ related_resources: []
 alias_paths:
   - /docs/explore-box-skill-samples
   - /docs/sample-box-skills-projects
-cId: skills
-scId: null
+category_id: skills
+subcategory_id: null
 id: skills/examples
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: skills
+parent_id: skills
+next_page_id: skills/kit
+previous_page_id: skills/invocation-url
 ---
 
 # Community Sample Skills

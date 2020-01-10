@@ -6,10 +6,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-embed
-cId: embed
-scId: null
+category_id: embed
+subcategory_id: null
 id: embed/box-embed
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: embed
+parent_id: embed
+next_page_id: embed
+previous_page_id: embed/box-dicom
 ---
 
 # Box Embed

@@ -9,10 +9,16 @@ required_guides:
   - shared-links/find-for-item
 related_resources: []
 alias_paths: []
-cId: downloads
-scId: null
+category_id: downloads
+subcategory_id: null
 id: downloads/shared-link
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: downloads
+parent_id: downloads
+next_page_id: downloads/folder
+previous_page_id: downloads/file-version
 ---
 
 # Download Shared Link

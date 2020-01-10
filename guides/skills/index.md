@@ -2,10 +2,16 @@
 rank: 170
 alias_paths:
   - /docs/configure-a-box-skill
-cId: skills
-scId: null
+category_id: skills
+subcategory_id: null
 id: skills
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: skills/kit
 ---
 
 # Box Skills

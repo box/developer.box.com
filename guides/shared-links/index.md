@@ -6,10 +6,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: shared-links
-scId: null
+category_id: shared-links
+subcategory_id: null
 id: shared-links
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: shared-links/remove
 ---
 
 # Shared Links

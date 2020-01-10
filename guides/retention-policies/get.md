@@ -8,10 +8,16 @@ related_resource:
   - retention_policy
 required_guides: []
 alias_paths: []
-cId: retention-policies
-scId: null
+category_id: retention-policies
+subcategory_id: null
 id: retention-policies/get
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: retention-policies
+parent_id: retention-policies
+next_page_id: retention-policies
+previous_page_id: retention-policies/list
 ---
 
 # Get Retention Policy

@@ -8,10 +8,16 @@ related_guides:
 required_guides:
   - authentication/access-tokens
 alias_paths: []
-cId: authentication
-scId: authentication/access-tokens
+category_id: authentication
+subcategory_id: authentication/access-tokens
 id: authentication/access-tokens/resource
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: authentication/access-tokens
+parent_id: authentication/access-tokens
+next_page_id: authentication/access-tokens/api-calls
+previous_page_id: ''
 ---
 
 # Access Token Object

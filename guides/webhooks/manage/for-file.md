@@ -10,10 +10,16 @@ related_resources:
   - webhook
 required_guides: []
 alias_paths: []
-cId: webhooks
-scId: webhooks/manage
+category_id: webhooks
+subcategory_id: webhooks/manage
 id: webhooks/manage/for-file
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: webhooks/manage
+parent_id: webhooks/manage
+next_page_id: webhooks/manage/for-folder
+previous_page_id: webhooks/manage/list-all
 ---
 
 # Create Webhook for File

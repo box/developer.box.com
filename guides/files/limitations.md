@@ -4,10 +4,16 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
-cId: files
-scId: null
+category_id: files
+subcategory_id: null
 id: files/limitations
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: files
+parent_id: files
+next_page_id: ''
+previous_page_id: files
 ---
 
 # Limitations

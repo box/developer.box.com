@@ -9,10 +9,16 @@ related_guides:
   - folders/single/delete
 required_guides: []
 alias_paths: []
-cId: folders
-scId: folders/single
+category_id: folders
+subcategory_id: folders/single
 id: folders/single/move
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: folders/single
+parent_id: folders/single
+next_page_id: folders/single/copy
+previous_page_id: folders/single/rename
 ---
 
 # Move Folder

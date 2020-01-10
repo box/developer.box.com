@@ -11,10 +11,16 @@ required_guides:
   - authentication/user-types
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/jwt
+category_id: authentication
+subcategory_id: authentication/jwt
 id: authentication/jwt/user-access-tokens
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: authentication/jwt
+parent_id: authentication/jwt
+next_page_id: ''
+previous_page_id: authentication/jwt/as-user
 ---
 
 # User Access Token
