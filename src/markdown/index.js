@@ -14,8 +14,7 @@ class Compiler {
         sourcePath: filename
        }).write({
         from: source,
-        to: target,
-        isGuide: true
+        to: target
       })
     })
     glob.sync(`${source}/**/*.+(jpg|jpeg|png|gif)`).forEach(filename => {

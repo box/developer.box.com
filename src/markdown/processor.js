@@ -18,12 +18,11 @@ class MarkdownProcessor {
    */
   write({ 
     from, 
-    to,
-    isGuide = false
+    to
   }) {
     // read the content and transform it
     const contents = fs.readFileSync(this.sourcePath).toString()
-    const transformedContents = this.transform({ contents, isGuide })
+    const transformedContents = this.transform({ contents  })
     // determine the source and replace any file rank (e.g. `foo/bar/1-foo.md`)
     const sourceName = this.sourcePath.replace(from, '').replace(/\/\d*-/, '/')
     // determine the destination
@@ -46,11 +45,10 @@ class MarkdownProcessor {
    * Applies some transformation to every markdown file
    */
   transform({ 
-    contents,
-    isGuide
+    contents
   }) {
     let [_, frontmatter, markdown] = contents.split('---\n')
-    frontmatter = extractFrontmatter(frontmatter, this.sourcePath, isGuide)
+    frontmatter = extractFrontmatter(frontmatter, this.sourcePath)
 
     markdown = addFinalLine(markdown)
     markdown = expandSelfClosingTags(markdown)

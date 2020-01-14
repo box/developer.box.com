@@ -8,7 +8,7 @@ TYPES = {
   guides: 'guide'
 }
 
-const extractFrontmatter = (frontmatter, sourcePath, isGuide) => {
+const extractFrontmatter = (frontmatter, sourcePath) => {
   frontmatter = yaml.load(frontmatter)
   frontmatter.category_id = categoryId(sourcePath)
   frontmatter.subcategory_id = subcategoryId(sourcePath)
