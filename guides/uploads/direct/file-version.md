@@ -54,7 +54,7 @@ parent folder.
 The following is an example a `test.txt` being uploaded to the root folder of
 the user.
 
-```text
+```sh
 POST /api/2.0/files/123/content HTTP/1.1
 Host: upload.box.com
 Authorization: Bearer [ACCESS_TOKEN]
