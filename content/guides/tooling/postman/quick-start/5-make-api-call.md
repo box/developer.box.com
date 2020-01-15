@@ -39,8 +39,8 @@ dropdown.
 ## Make an API request
 
 To make an API request, select a **Request** from the Box Postman Collection. In
-this example, we will use the **Get items in folder** API which can be found
-under **Basics**, **Folders**.
+this example, we will use the **List items in folder** API which can be found
+in the **Folders** folder.
 
 <ImageFrame border center shadow>
   ![Selecting an API request](./select-api-request.png)
@@ -67,7 +67,8 @@ in your folder in the response **Body** tab in the bottom half of the screen.
   # Authentication error
 
   At this point the Postman app might return an error instead of a list. Often,
-  this means your **Access Token** has expired.
+  this means your **Access Token** has expired. Check our guide on [refreshing
+  an access token in Postman](g://tooling/postman/refresh) for more details.
 </Message>
 
 ## Summary

@@ -36,8 +36,8 @@ related_endpoints:
   To authenticate yourself you will need to send your browser to the Box login
   screen to authorize your **Box App** to access to your **User** account.
 
-  Setup this flow up can be hard, which is why we have made this straightforward
-  for you with the button below.
+  Setting up this flow up can be hard, which is why we have made this
+  straightforward for you with the button below.
 
   ## Log into your Box app
 
@@ -71,9 +71,9 @@ related_endpoints:
     <Message danger>
       # Security notice
 
-      We will store these credentials in the browser for you for now. We highly
-      recommend clearing out this storage by clicking the **Reset** button in the
-      final step of this guide.
+      Your API credentials are now stored in the browser cache. We highly
+      recommend clearing out this storage by clicking the **Reset** button
+      later in this guide.
     </Message>
   </LoggedIn>
 </Choice>
@@ -81,10 +81,10 @@ related_endpoints:
 <Choice option='postman.app_type' value='use_box' color='none'>
   In the previous step you chose to use our preconfigured **Box App**.
 
-  In this step, we will use the **Client ID** and **Client Secret** of this app
-  to authenticate you, the **User**. Because this application is owned by us,
-  you will not be able to see the app's **Client ID** and **Client Secret** and
-  you will need to come back to this page every hour to re-authenticate your app.
+  In this step, we will use this app to authenticate you, the **User**. Because
+  this application is owned by us, you will not be able to see the app's
+  **Client ID** and **Client Secret** and you will need to come back to this
+  page every hour to re-authenticate your app.
 
   ## The reason to log in
 
@@ -93,7 +93,7 @@ related_endpoints:
   yourself you will need to send your browser to the Box login screen to
   authorize our **Box App** to access to your **User** account.
 
-  Setup this flow up can be hard, which is why we have made this
+  Setting up this flow up can be hard, which is why we have made this
   straightforward for you with the button below.
 
   ## Log into your Box app
@@ -128,9 +128,9 @@ related_endpoints:
     <Message danger>
       # Security notice
 
-      We will store these credentials in the browser for you for now. We highly
-      recommend clearing out this storage by clicking the **Reset** button in the
-      final step of this guide.
+      Your API credentials are now stored in the browser cache. We highly
+      recommend clearing out this storage by clicking the **Reset** button
+      later in this guide.
     </Message>
   </LoggedIn>
 </Choice>

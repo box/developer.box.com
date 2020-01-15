@@ -19,7 +19,7 @@ hide_in_page_nav: true
   Collection** into your Postman app. In the same click it will also load your
   **Access Token** into a Postman environment.
 
-  <Trigger option='postman.collection_downloaded' value='true'>
+  <Trigger option='postman_collection_downloaded' value='true'>
     <Postman id='62d85bbca8bf7bd5a48b' />
   </Trigger>
 </LoggedIn>
@@ -37,12 +37,22 @@ hide_in_page_nav: true
   **Access Token**, **Refresh Token**, **Client ID** and **Client Secret** into
   a Postman environment.
 
-  <Trigger option='postman.collection_downloaded' value='true'>
+  <Trigger option='postman_collection_downloaded' value='true'>
     <Postman id='62d85bbca8bf7bd5a48b' env='postman_credentials' />
   </Trigger>
 </LoggedIn>
 
-<Choice option='postman.collection_downloaded' value='true' color='none'>
+<Choice option='postman_collection_downloaded' value='true' color='none'>
+
+<Message warning>
+  ## Reset browser storage
+
+  First things first, now that you've imported the Box API credentials into your
+  Box Postman app we should take a moment to remove these credentials from your
+  browser cache.
+
+  <Reset id='postman' />
+</Message>
   
 ## Exploring the collection
 
@@ -75,7 +85,7 @@ endpoints.
 </Choice>
 
 <Choice option='postman.app_type' value='use_own' color='none'>
-  <LoggedIn  id='postman_credentials' reverse>
+  <LoggedIn id='postman_credentials' reverse>
     <Message danger>
       # Incomplete previous step
 
@@ -85,7 +95,7 @@ endpoints.
 </Choice>
 
 <Choice option='postman.app_type' unset color='none'>
-  <LoggedIn  id='postman_credentials' reverse>
+  <LoggedIn id='postman_credentials' reverse>
     <Message danger>
       # Incomplete previous step
 
@@ -94,6 +104,6 @@ endpoints.
   </LoggedIn>
 </Choice>
 
-<Observe option='postman.collection_downloaded' value='true'>
+<Observe option='postman_collection_downloaded' value='true'>
   <Next>I have imported the collection</Next>
 </Observe>

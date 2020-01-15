@@ -11,12 +11,12 @@ related_guides:
 
 To use the **Postman Collection** you will need to authenticate yourself to the
 Box API using an **Access Token**. The simplest way to get an Access Token is
-by logging in to Box using a **Box App**.
+by logging into Box using a **Box App**.
 
 A **Box App** is an application that can be used for making API calls. When
 using the **Postman Collection** you can choose to either set up your own Box
-App or use our preconfigured one. The benefit of setting up your own Box App is
-that you won't need to go through login every hour, but it does require a few
+App or use our preconfigured one. The key benefit of setting up your own Box App
+is that you won't need to go through login every hour, but it does require a few
 extra steps to set up.
 
 ## Select a Box App to use
@@ -43,7 +43,6 @@ extra steps to set up.
 
     This method requires less initial setup but requires
     more work to keep working.
-
   </Choose>
 </Grid>
 
@@ -71,7 +70,7 @@ extra steps to set up.
 <Choice option='postman.app_type' value='use_own' color='blue'>
   # Copy API credentials
 
-  Once you've created a Box app, scroll to the **OAuth 2.0 Credentials**
+  Once you've created a Box app, scroll down to the **OAuth 2.0 Credentials**
   section of your **Box App** and copy the **Client ID** and **Client Secret** into
   the fields below.
 
@@ -97,9 +96,9 @@ extra steps to set up.
 <Message danger>
   # Security notice
 
-  We will store these credentials in the browser for you for now. We highly
-  recommend clearing out this storage by clicking the **Reset** button in the
-  final step of this guide.
+  Your API credentials are now stored in the browser cache. We highly
+  recommend clearing out this storage by clicking the **Reset** button later in
+  this guide.
 </Message>
 
 </Choice>
@@ -108,7 +107,7 @@ extra steps to set up.
 
 ## Summary
 
-* You either selected to use your own **Box App**
+* You either selected to use your own **Box App** and
   * Signed up for a developer account (Optional)
   * Accessed the Developer Console
   * Created a **Custom App** that uses **OAuth 2.0** authentication
