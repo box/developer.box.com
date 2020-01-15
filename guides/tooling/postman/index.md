@@ -12,10 +12,10 @@ subcategory_id: tooling/postman
 id: tooling/postman
 type: guide
 is_index: true
-total_steps: 1
+total_steps: 2
 sibling_id: tooling
 parent_id: tooling
-next_page_id: ''
+next_page_id: tooling/postman/legacy
 previous_page_id: ''
 ---
 

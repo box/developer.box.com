@@ -17,7 +17,8 @@ previous_page_id: tooling/postman/quick-start
 
 # Install Postman
 
-The first step will be to install the [Postman][postman] app on your device.
+To use the **Box Postman Collection** you will need to have the
+[Postman][postman] app installed on your device.
 Postman is available for Windows, Mac, and Linux environments.
 
 <Grid columns='4'>
@@ -86,7 +87,6 @@ Next, install the Postman app on your machine and (optionally)
 * You installed the Postman app
 * You created a Postman account (optional) 
 * You logged into the Postman app with your Postman account
-</>
 
 <Observe option='postman.downloaded' value='win32,win64,macos,linux64'>
 <Next>

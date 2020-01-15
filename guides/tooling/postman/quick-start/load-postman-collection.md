@@ -30,7 +30,7 @@ By clicking the button below you will load the **Box Postman
 Collection** into your Postman app. In the same click it will also load your
 **Access Token** into a Postman environment.
 
-<Trigger option='postman.collection_downloaded' value='true'>
+<Trigger option='postman_collection_downloaded' value='true'>
 
 <Postman id='62d85bbca8bf7bd5a48b' >
 
@@ -54,7 +54,7 @@ Collection** into your Postman app. In the same click it will also load your
 **Access Token**, **Refresh Token**, **Client ID** and **Client Secret** into
 a Postman environment.
 
-<Trigger option='postman.collection_downloaded' value='true'>
+<Trigger option='postman_collection_downloaded' value='true'>
 
 <Postman id='62d85bbca8bf7bd5a48b' env='postman_credentials' >
 
@@ -64,7 +64,21 @@ a Postman environment.
 
 </LoggedIn>
 
-<Choice option='postman.collection_downloaded' value='true' color='none'>
+<Choice option='postman_collection_downloaded' value='true' color='none'>
+
+<Message warning>
+
+## Reset browser storage
+
+First things first, now that you've imported the Box API credentials into your
+Box Postman app we should take a moment to remove these credentials from your
+browser cache.
+
+<Reset id='postman' >
+
+</Reset>
+
+</Message>
 
 ## Exploring the collection
 
@@ -106,7 +120,7 @@ Please complete the previous steps to select and log in to a **Box App**.
 
 <Choice option='postman.app_type' value='use_own' color='none'>
 
-<LoggedIn  id='postman_credentials' reverse>
+<LoggedIn id='postman_credentials' reverse>
 
 <Message danger>
 
@@ -122,7 +136,7 @@ Please complete the previous steps to select and log in to a **Box App**.
 
 <Choice option='postman.app_type' unset color='none'>
 
-<LoggedIn  id='postman_credentials' reverse>
+<LoggedIn id='postman_credentials' reverse>
 
 <Message danger>
 
@@ -136,7 +150,7 @@ Please complete the previous steps to select and log in to a **Box App**.
 
 </Choice>
 
-<Observe option='postman.collection_downloaded' value='true'>
+<Observe option='postman_collection_downloaded' value='true'>
 
 <Next>
 
