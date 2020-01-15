@@ -66,19 +66,15 @@ a Postman environment.
 
 <Choice option='postman_collection_downloaded' value='true' color='none'>
 
-<Message warning>
-
 ## Reset browser storage
 
 First things first, now that you've imported the Box API credentials into your
 Box Postman app we should take a moment to remove these credentials from your
 browser cache.
 
-<Reset id='postman' >
+<ResetButton id='postman,credentials'>Clear credentials
 
-</Reset>
-
-</Message>
+</ResetButton>
 
 ## Exploring the collection
 
