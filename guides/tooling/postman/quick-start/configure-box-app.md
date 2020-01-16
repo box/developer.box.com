@@ -66,7 +66,7 @@ more work to keep working.
 
 # Create a Box app
 
-To use your own **Box App** you will need create a
+To use your own **Box App** you will need to create a
 new Box App in the **Box Developer Console**.
 
 If you do not have a Box account you can sign up for a [free
@@ -81,6 +81,8 @@ developer][signup] account for testing purposes.
 1. Go to the app's configuration by clicking **View Your App**.
 1. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
 **Redirect URI** to the value `https://developer.box.com/auth/callback`.
+1. Optionally, scroll to the **Application Scopes** section of the same screen
+and select any additional permissions you want to enable for this application.
 1. At the top of the page click the button to **Save Changes**
 
 </Choice>

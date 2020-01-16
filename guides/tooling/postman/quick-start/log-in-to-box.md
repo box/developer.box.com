@@ -51,7 +51,7 @@ doesn't tell the API who you, the **User**, are.
 To authenticate yourself you will need to send your browser to the Box login
 screen to authorize your **Box App** to access to your **User** account.
 
-Setting up this flow up can be hard, which is why we have made this
+Setting this flow up can be hard, which is why we have made this
 straightforward for you with the button below.
 
 ## Log into your Box app
@@ -124,7 +124,7 @@ authenticate you when making API calls to the Box API. To authenticate
 yourself you will need to send your browser to the Box login screen to
 authorize our **Box App** to access to your **User** account.
 
-Setting up this flow up can be hard, which is why we have made this
+Setting this flow up can be hard, which is why we have made this
 straightforward for you with the button below.
 
 ## Log into your Box app
