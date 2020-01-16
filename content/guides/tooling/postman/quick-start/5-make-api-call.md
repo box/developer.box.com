@@ -19,7 +19,9 @@ First things first, now that you've imported the Box API credentials into your
 Box Postman app we should take a moment to remove these credentials from your
 browser's storage.
 
-<ResetButton id='postman,credentials,observable_events'>Clear credentials</ResetButton>
+<ResetButton id='postman,credentials,observable_events'>
+  Clear credentials
+</ResetButton>
 
 <Message warning>
   Removing your API credentials from the browser storage ensures that no other
