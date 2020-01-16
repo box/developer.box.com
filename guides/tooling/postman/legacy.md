@@ -10,16 +10,16 @@ subcategory_id: tooling/postman
 id: tooling/postman/legacy
 type: guide
 is_index: false
-total_steps: 2
+total_steps: 4
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: ''
-previous_page_id: tooling/postman
+previous_page_id: tooling/postman/refresh
 ---
 
 <!-- alex disable postman-postwoman -->
 
-# Legacy Collection
+# Old Postman Collection
 
 Clicking the following button will install our [legacy Postman][legacy]
 collection. It is an incomplete Postman collection and is not expected to get

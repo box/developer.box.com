@@ -1,21 +1,25 @@
 ---
-type: quick-start
-hide_in_page_nav: true
+rank: 1
+related_endpoints: []
+related_guides: []
+required_guides: []
+related_resources: []
+alias_paths: []
 category_id: tooling
 subcategory_id: tooling/postman
-id: tooling/postman/quick-start/install-postman
+id: tooling/postman/install
+type: guide
 is_index: false
-rank: 1
-total_steps: 6
-sibling_id: tooling/postman/quick-start
-parent_id: tooling/postman/quick-start
-next_page_id: tooling/postman/quick-start/configure-box-app
-previous_page_id: tooling/postman/quick-start
+total_steps: 4
+sibling_id: tooling/postman
+parent_id: tooling/postman
+next_page_id: tooling/postman/make-api-call
+previous_page_id: ''
 ---
 
 <!-- alex disable postman-postwoman -->
 
-# Install Postman
+# Install Postman & Collection
 
 To use the **Box Postman Collection** you will need to have the
 [Postman][postman] app installed on your device.
@@ -27,11 +31,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 ![Windows Logo](./windows.png) Windows (x32)
 
-<Trigger option='postman.downloaded' value='win32'>
-
 [Download](https://dl.pstmn.io/download/latest/win32)
-
-</Trigger>
 
 </Download>
 
@@ -39,11 +39,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 ![Windows Logo](./windows.png) Windows (x64)
 
-<Trigger option='postman.downloaded' value='win64'>
-
 [Download](https://dl.pstmn.io/download/latest/win64)
-
-</Trigger>
 
 </Download>
 
@@ -51,11 +47,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 ![MacOS Logo](./macos.png) MacOS
 
-<Trigger option='postman.downloaded' value='osx'>
-
-[Download](https://dl.pstmn.io/download/latest/osx)
-
-</Trigger>
+[Download](https://dl.pstmn.io/download/latest/macos)
 
 </Download>
 
@@ -63,11 +55,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 ![Linux Logo](./linux.png) Linux (x64)
 
-<Trigger option='postman.downloaded' value='linux64'>
-
 [Download](https://dl.pstmn.io/download/latest/linux64)
-
-</Trigger>
 
 </Download>
 
@@ -82,20 +70,15 @@ Next, install the Postman app on your machine and (optionally)
 
 </ImageFrame>
 
-## Summary
+## Loading a collection and environment
 
-* You installed the Postman app
-* You created a Postman account (optional) 
-* You logged into the Postman app with your Postman account
+With the Postman App installed the **Box Postman Collection** can be loaded into
+it. Clicking the button below you will load the **Box Postman
+Collection** into the Postman app.
 
-<Observe option='postman.downloaded' value='win32,win64,osx,linux64'>
-<Next>
+<Postman id='62d85bbca8bf7bd5a48b' >
 
-I have installed Postman
-
-</Next>
-
-</Observe>
+</Postman>
 
 [register]: https://identity.getpostman.com/signup
 [postman]: https://getpostman.com

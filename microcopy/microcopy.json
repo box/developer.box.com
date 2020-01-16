@@ -141,6 +141,8 @@
   "guides.titles.more_guides": "More Guides",
   // A title for related guides to this category
   "guides.titles.related_guides": "Related Guides",
+  // A title for quick guides to this category
+  "guides.titles.quick_start_guides": "Quick Start Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // A title for a set of links describing related API endpoints
@@ -149,8 +151,12 @@
   "guides.titles.resources": "Related Resources",
   // A short name for a group of guides
   "guides.titles.category": "Category",
+  // A short name for a group of guides
+  "guides.titles.categories": "Categories",
   // A short name for a sub group of guides
   "guides.titles.subcategory": "Subcategory",
+  // A short name for a sub group of guides
+  "guides.titles.subcategories": "Subcategories",
   // A short name for a single guide
   "guides.titles.guide": "Guide",
   // The text for a link to edit the source of the page

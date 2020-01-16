@@ -23,6 +23,24 @@ With the **Box Postman Collection** loaded into the **Postman App** it is now
 possible to make API calls to the **Box API** on behalf of the user you logged
 in as.
 
+## First: Reset browser storage
+
+First things first, now that you've imported the Box API credentials into your
+Box Postman app we should take a moment to remove these credentials from your
+browser's storage.
+
+<ResetButton id='postman,credentials,observable_events'>Clear credentials
+
+</ResetButton>
+
+<Message warning>
+
+Removing your API credentials from the browser storage ensures that no other
+script can read your **Client ID**, **Client Secret**, **Access Token** or
+  **Refresh Token**.
+
+</Message>
+
 ## Select an environment
 
 Before an API call can be made it is important to select the right **Postman
