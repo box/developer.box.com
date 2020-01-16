@@ -28,11 +28,10 @@ There are currently a few distinct rate limits in place within the Box API.
   * 1000 API requests per minute, per user
 * Uploads
   * 240 file upload requests per minute, per user
-* Search
-  * 6 searches per second, per user, to the [search endpoint][search]
-  * Two additional limits are applied on top of the basic rate limit
-    * 60 searches per minute, per user
-    * 12 searches per second, per enterprise
+- Search
+  - 6 searches per second, per user, to the [search endpoint][search]
+  - Additionally, 60 searches per minute, per user
+  - Additionally, 12 searches per second, per enterprise
 
 ## Rate limit error
 
