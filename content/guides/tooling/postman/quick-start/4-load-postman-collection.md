@@ -47,7 +47,7 @@ hide_in_page_nav: true
 ## Exploring the collection
 
 When you clicked the button above it would have asked you to import the
-collection into your Postman app. Once importer, the collection should appear
+collection into your Postman app. Once imported, the collection should appear
 within the app in the left-hand sidebar.
 
 <ImageFrame border center shadow>
