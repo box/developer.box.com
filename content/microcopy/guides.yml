@@ -22,6 +22,9 @@ titles:
   // related_guides: A title for related guides to this category
   related_guides: Related Guides
 
+  // quick_start_guides: A title for quick guides to this category
+  quick_start_guides: Quick Start Guides
+
   // api_endpoints: A title for a set of links describing related API endpoints
   api_endpoints: Related APIs
 
@@ -34,8 +37,14 @@ titles:
   // category: A short name for a group of guides
   category: Category
 
+  // categories: A short name for a group of guides
+  categories: Categories
+
   // subcategory: A short name for a sub group of guides
   subcategory: Subcategory
+
+  // subcategories: A short name for a sub group of guides
+  subcategories: Subcategories
 
   // guide: A short name for a single guide
   guide: Guide

@@ -9,7 +9,7 @@ alias_paths: []
 
 <!-- alex disable postman-postwoman -->
 
-# Legacy Collection
+# Old Postman Collection
 
 Clicking the following button will install our [legacy Postman][legacy]
 collection. It is an incomplete Postman collection and is not expected to get

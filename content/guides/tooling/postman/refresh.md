@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 3
 related_endpoints: []
 related_guides: []
 required_guides: []

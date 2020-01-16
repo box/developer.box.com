@@ -31,8 +31,8 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![MacOS Logo](./macos.png) MacOS
 
-    <Trigger option='postman.downloaded' value='macos'>
-      [Download](https://dl.pstmn.io/download/latest/macos) 
+    <Trigger option='postman.downloaded' value='osx'>
+      [Download](https://dl.pstmn.io/download/latest/osx) 
     </Trigger>
   </Download>
 
@@ -58,7 +58,7 @@ Next, install the Postman app on your machine and (optionally)
 * You created a Postman account (optional) 
 * You logged into the Postman app with your Postman account
 
-<Observe option='postman.downloaded' value='win32,win64,macos,linux64'>
+<Observe option='postman.downloaded' value='win32,win64,osx,linux64'>
   <Next>
     I have installed Postman
   </Next>

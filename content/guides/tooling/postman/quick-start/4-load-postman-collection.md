@@ -43,14 +43,6 @@ hide_in_page_nav: true
 </LoggedIn>
 
 <Choice option='postman_collection_downloaded' value='true' color='none'>
-
-## Reset browser storage
-
-First things first, now that you've imported the Box API credentials into your
-Box Postman app we should take a moment to remove these credentials from your
-browser cache.
-
-<ResetButton id='postman,credentials'>Clear credentials</ResetButton>
   
 ## Exploring the collection
 
