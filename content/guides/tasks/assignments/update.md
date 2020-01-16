@@ -1,7 +1,8 @@
 ---
 rank: 4
 related_endpoints:
-related_guides:
+  - put_task_assignments_id
+related_guides: []
 required_guides: []
 alias_paths: []
 ---
