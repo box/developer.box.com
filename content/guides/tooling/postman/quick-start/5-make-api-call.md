@@ -15,9 +15,8 @@ in as.
 
 ## First: Reset browser storage
 
-First things first, now that you've imported the Box API credentials into your
-Box Postman app we should take a moment to remove these credentials from your
-browser's storage.
+Now that you've imported the Box API credentials into Postman you should take a
+moment to remove these credentials from your browser's storage.
 
 <ResetButton id='postman,credentials,observable_events'>
   Clear credentials
@@ -39,7 +38,7 @@ When you imported the **Box Postman collection** it automatically imported a
 recognize and use the variables in this environment for making API calls.
 
 To select the Box Postman environment, select **Box** from the dropdown in the
-top-right of the Postman app.
+top-right of Postman.
 
 <ImageFrame border center shadow>
   ![Select Postman environment](./select-environment.png)
@@ -82,7 +81,7 @@ in your folder in the response **Body** tab in the bottom half of the screen.
 <Message warning>
   # Authentication error
 
-  At this point the Postman app might return an error instead of a list. Often,
+  At this point Postman might return an error instead of a list. Often,
   this means your **Access Token** has expired. Check our guide on [refreshing
   an access token in Postman](g://tooling/postman/refresh) for more details.
 </Message>

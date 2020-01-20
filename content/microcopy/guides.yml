@@ -4,23 +4,20 @@ titles:
   guides: Guides
 
   // prerequisites: A title for a set of links describing things to read before
-  prerequisites: Things to read first
-
-  // next_reads: A title for a set of links describing things to read after
-  next_reads: Next things to read
+  prerequisites: Prerequisites
 
   // overview: |-
     A title for usage on a block of guides, marking the index/overview page
   overview: Overview
 
-  // other_guides: A title for other guides in this category
-  other_guides: Other Guides
-
-  // more_guides: A title for related guides to this category
-  more_guides: More Guides
+  // more: A title for other content
+  more: More
 
   // related_guides: A title for related guides to this category
   related_guides: Related Guides
+
+  // related: A title for generic related content
+  related: Related
 
   // quick_start_guides: A title for quick guides to this category
   quick_start_guides: Quick Start Guides
