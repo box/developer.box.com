@@ -35,7 +35,7 @@ Start** guide then your Box environment in Postman should include a valid
 
 <ImageFrame border center shadow>
 
-![A valid client ID and secret in the Postman environment](./inspect-environment.png)
+![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
 
 </ImageFrame>
 
@@ -44,7 +44,7 @@ the **Authorization** folder of the Postman collection.
 
 <ImageFrame border center shadow>
 
-![The refresh access token API call in Postmam](./select-refresh-access-token.png)
+![The refresh access token API call in Postmam](./quick-start/select-refresh-access-token.png)
 
 </ImageFrame>
 
@@ -52,7 +52,7 @@ Next, hit the **Send** button to request a new `access_token`.
 
 <ImageFrame border center shadow>
 
-![Postman Send button](./postman-send-button.png)
+![Postman Send button](./quick-start/postman-send-button.png)
 
 </ImageFrame>
 
@@ -84,7 +84,7 @@ environment variables.
 
 <ImageFrame border center shadow>
 
-![A valid client ID and secret in the Postman environment](./inspect-environment.png)
+![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
 
 </ImageFrame>
 
@@ -109,7 +109,7 @@ the list.
 
 <ImageFrame border center shadow>
 
-![Delete the Box Postman environment](./delete-environment.png)
+![Delete the Box Postman environment](./quick-start/delete-environment.png)
 
 </ImageFrame>
 

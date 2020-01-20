@@ -66,7 +66,7 @@ Next, install Postman on your machine and (optionally)
 
 <ImageFrame border center>
 
-![The Postman application](./postman-example.png)
+![The Postman application](./quick-start/postman-example.png)
 
 </ImageFrame>
 

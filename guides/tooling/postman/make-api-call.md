@@ -41,7 +41,7 @@ in the **Folders** folder.
 
 <ImageFrame border center shadow>
 
-![Selecting an API request](./select-api-request.png)
+![Selecting an API request](./quick-start/select-api-request.png)
 
 </ImageFrame>
 
@@ -53,7 +53,7 @@ Next, click the **Send** button in the top right to make the API request.
 
 <ImageFrame border center shadow>
 
-![Postman Send button](./postman-send-button.png)
+![Postman Send button](./quick-start/postman-send-button.png)
 
 </ImageFrame>
 
@@ -62,7 +62,7 @@ in your folder in the response **Body** tab in the bottom half of the screen.
 
 <ImageFrame border center shadow>
 
-![Postman response body](./postman-response-body.png)
+![Postman response body](./quick-start/postman-response-body.png)
 
 </ImageFrame>
 
