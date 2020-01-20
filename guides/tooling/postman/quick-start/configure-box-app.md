@@ -19,9 +19,9 @@ previous_page_id: tooling/postman/quick-start/install-postman
 
 # Configure a Box App
 
-To use the **Postman Collection** you will need to authenticate yourself to the
-Box API using an **Access Token**. The simplest way to get an Access Token is
-by logging into Box using a **Box App**.
+To use the **Postman Collection** the Postman application needs to authenticate
+to the Box API using an **Access Token**. The simplest way to get an Access
+Token is by logging into Box using a **Box App**.
 
 A **Box App** is an application that can be used for making API calls. When
 using the **Postman Collection** you can choose to either set up your own Box
@@ -43,7 +43,8 @@ as long as you use the app at least once
 **every 60 days**.
 
 This method requires a bit more initial setup, yet
-requires less maintenance.
+requires less maintenance, as it will allow Postman
+to keep your **Access Token** fresh indefinitely.
 
 </Choose>
 
@@ -55,8 +56,9 @@ With this method your Postman app will be
 able to make API calls to Box for **1 hour**
 before you need to go through this guide again.
 
-This method requires less initial setup but requires
-more work to keep working.
+This method requires less initial setup but is not able
+to automatically refresh the **Access Token**. You will
+need to come back to this guide every hour to refresh it.
 
 </Choose>
 
