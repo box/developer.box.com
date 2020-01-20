@@ -45,7 +45,7 @@ Next, install Postman on your machine and (optionally)
 [register for a Postman account and log in][register].
 
 <ImageFrame border center>
-  ![The Postman application](./postman-example.png)
+  ![The Postman application](./quick-start/postman-example.png)
 </ImageFrame>
 
 ## Loading a collection and environment

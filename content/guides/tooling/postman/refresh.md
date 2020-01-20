@@ -24,20 +24,20 @@ Start** guide then your Box environment in Postman should include a valid
 `refresh_token` can be used to create a new value for the `access_token`.
 
 <ImageFrame border center shadow>
-  ![A valid client ID and secret in the Postman environment](./inspect-environment.png)
+  ![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
 </ImageFrame>
 
 To refresh the access token, select the **Refresh access token** API call within
 the **Authorization** folder of the Postman collection.
 
 <ImageFrame border center shadow>
-  ![The refresh access token API call in Postmam](./select-refresh-access-token.png)
+  ![The refresh access token API call in Postmam](./quick-start/select-refresh-access-token.png)
 </ImageFrame>
 
 Next, hit the **Send** button to request a new `access_token`.
 
 <ImageFrame border center shadow>
-  ![Postman Send button](./postman-send-button.png)
+  ![Postman Send button](./quick-start/postman-send-button.png)
 </ImageFrame>
 
 At the end of this API call, your environment should have a new `access_token`
@@ -65,7 +65,7 @@ To set this value, hit the edit button in the top right of your Box Postman
 environment variables.
 
 <ImageFrame border center shadow>
-  ![A valid client ID and secret in the Postman environment](./inspect-environment.png)
+  ![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
 </ImageFrame>
 
 Find the row in the table for the `enable_auto_refresh_access_token` variable
@@ -88,7 +88,7 @@ click the little **gear** icon in the top right and select your environment from
 the list.
 
 <ImageFrame border center shadow>
-  ![Delete the Box Postman environment](./delete-environment.png)
+  ![Delete the Box Postman environment](./quick-start/delete-environment.png)
 </ImageFrame>
 
 Select **Delete** to delete the environment. Then, restart the Postman [Quick
