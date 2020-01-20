@@ -29,7 +29,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Download>
 
-![Windows Logo](./windows.png) Windows (x32)
+![Windows Logo](./quick-start/windows.png) Windows (x32)
 
 [Download](https://dl.pstmn.io/download/latest/win32)
 
@@ -37,7 +37,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Download>
 
-![Windows Logo](./windows.png) Windows (x64)
+![Windows Logo](./quick-start/windows.png) Windows (x64)
 
 [Download](https://dl.pstmn.io/download/latest/win64)
 
@@ -45,7 +45,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Download>
 
-![MacOS Logo](./macos.png) MacOS
+![MacOS Logo](./quick-start/macos.png) MacOS
 
 [Download](https://dl.pstmn.io/download/latest/macos)
 
@@ -53,7 +53,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Download>
 
-![Linux Logo](./linux.png) Linux (x64)
+![Linux Logo](./quick-start/linux.png) Linux (x64)
 
 [Download](https://dl.pstmn.io/download/latest/linux64)
 
