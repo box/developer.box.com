@@ -47,6 +47,7 @@ test: foo
 notes: Test
 id: ''
 isIndex: false
+rank: 0
 ---
 
 <Foobar id='no1' data-type="type" disabled>
