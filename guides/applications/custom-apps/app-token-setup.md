@@ -12,10 +12,15 @@ required_guides:
   - applications/custom-apps
 related_resources: []
 alias_paths: []
-cId: applications
-scId: applications/custom-apps
+category_id: applications
+subcategory_id: applications/custom-apps
 id: applications/custom-apps/app-token-setup
-isIndex: false
+is_index: false
+total_steps: 4
+sibling_id: applications/custom-apps
+parent_id: applications/custom-apps
+next_page_id: applications/custom-apps/app-approval
+previous_page_id: applications/custom-apps/jwt-setup
 ---
 
 # Setup with App Tokens

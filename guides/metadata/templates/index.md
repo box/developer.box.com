@@ -1,10 +1,16 @@
 ---
 rank: 1
 alias_paths: []
-cId: metadata
-scId: metadata/templates
+category_id: metadata
+subcategory_id: metadata/templates
 id: metadata/templates
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: metadata
+parent_id: metadata
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Metadata Templates

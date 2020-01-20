@@ -1,10 +1,16 @@
 ---
 rank: 3
 alias_paths: []
-cId: metadata
-scId: metadata/cascades
+category_id: metadata
+subcategory_id: metadata/cascades
 id: metadata/cascades
-isIndex: true
+type: guide
+is_index: true
+total_steps: 0
+sibling_id: metadata
+parent_id: metadata
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Metadata Cascade Policies

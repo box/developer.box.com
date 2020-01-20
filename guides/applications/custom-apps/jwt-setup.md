@@ -11,10 +11,16 @@ related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
-cId: applications
-scId: applications/custom-apps
+category_id: applications
+subcategory_id: applications/custom-apps
 id: applications/custom-apps/jwt-setup
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: applications/custom-apps
+parent_id: applications/custom-apps
+next_page_id: applications/custom-apps/app-token-setup
+previous_page_id: applications/custom-apps
 ---
 
 # Setup with JWT

@@ -1,10 +1,16 @@
 ---
 rank: 190
 alias_paths: []
-cId: events
-scId: null
+category_id: events
+subcategory_id: null
 id: events
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: events/pagination
 ---
 
 # Events

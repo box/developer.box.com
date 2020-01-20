@@ -8,10 +8,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/specifying-a-logo-for-box-ui-elements
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/logo
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/access
+previous_page_id: embed/ui-elements/annotations
 ---
 
 # Customize Logo

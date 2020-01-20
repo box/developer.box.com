@@ -8,10 +8,16 @@ required_guides:
   - applications/select
 alias_paths:
   - /docs/authenticate-with-developer-token
-cId: authentication
-scId: authentication/access-tokens
+category_id: authentication
+subcategory_id: authentication/access-tokens
 id: authentication/access-tokens/developer-tokens
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: authentication/access-tokens
+parent_id: authentication/access-tokens
+next_page_id: authentication/access-tokens/refresh
+previous_page_id: authentication/access-tokens/sdks
 ---
 
 # Developer Tokens

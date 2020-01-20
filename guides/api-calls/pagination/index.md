@@ -4,10 +4,16 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
-cId: api-calls
-scId: api-calls/pagination
+category_id: api-calls
+subcategory_id: api-calls/pagination
 id: api-calls/pagination
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: api-calls
+parent_id: api-calls
+next_page_id: api-calls/pagination/marker-based
+previous_page_id: ''
 ---
 
 # Pagination

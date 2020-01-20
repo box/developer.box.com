@@ -7,10 +7,16 @@ related_resources: []
 alias_paths:
   - /docs/deep-linking
   - /docs/deep-linking-to-box-mobile-apps
-cId: best-practices
-scId: null
+category_id: best-practices
+subcategory_id: null
 id: best-practices/mobile-deep-linking
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: best-practices
+parent_id: best-practices
+next_page_id: best-practices/branding-guidelines
+previous_page_id: ''
 ---
 
 # Mobile Deep Linking

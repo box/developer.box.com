@@ -6,10 +6,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
-cId: best-practices
-scId: null
+category_id: best-practices
+subcategory_id: null
 id: best-practices/branding-guidelines
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: best-practices
+parent_id: best-practices
+next_page_id: best-practices/cors
+previous_page_id: best-practices/mobile-deep-linking
 ---
 
 # Branding Guidelines

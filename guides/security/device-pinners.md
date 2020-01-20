@@ -5,10 +5,16 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: security
-scId: null
+category_id: security
+subcategory_id: null
 id: security/device-pinners
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: security
+parent_id: security
+next_page_id: security
+previous_page_id: ''
 ---
 
 # Device Pinners

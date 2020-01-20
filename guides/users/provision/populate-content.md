@@ -7,10 +7,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: users
-scId: users/provision
+category_id: users
+subcategory_id: users/provision
 id: users/provision/populate-content
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: users/provision
+parent_id: users/provision
+next_page_id: users/provision/shared-folders
+previous_page_id: users/provision/architecture
 ---
 
 # Populate Content

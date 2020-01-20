@@ -9,10 +9,16 @@ related_pages:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: tooling
-scId: tooling/sdks
+category_id: tooling
+subcategory_id: tooling/sdks
 id: tooling/sdks/node
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: tooling/sdks
+parent_id: tooling/sdks
+next_page_id: tooling/sdks/cli
+previous_page_id: tooling/sdks/python
 ---
 
 # Install Node SDK

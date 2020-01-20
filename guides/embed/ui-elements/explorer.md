@@ -9,10 +9,16 @@ related_resources: []
 alias_paths:
   - /docs/box-content-explorer
   - /docs/content-explorer
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/explorer
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/open-with
+previous_page_id: embed/ui-elements/browser
 ---
 
 # Content Explorer

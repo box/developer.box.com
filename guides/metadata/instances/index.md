@@ -1,10 +1,16 @@
 ---
 rank: 2
 alias_paths: []
-cId: metadata
-scId: metadata/instances
+category_id: metadata
+subcategory_id: metadata/instances
 id: metadata/instances
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: metadata
+parent_id: metadata
+next_page_id: ''
+previous_page_id: metadata/instances/update
 ---
 
 # Metadata Instances

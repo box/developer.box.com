@@ -3,10 +3,16 @@ rank: 250
 alias_paths:
   - /security-and-governance-apis
   - /docs/android-security-guidelines
-cId: security
-scId: null
+category_id: security
+subcategory_id: null
 id: security
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: security/device-pinners
 ---
 
 # Security

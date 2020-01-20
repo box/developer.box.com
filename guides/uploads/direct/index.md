@@ -1,10 +1,16 @@
 ---
 rank: 1
 alias_paths: []
-cId: uploads
-scId: uploads/direct
+category_id: uploads
+subcategory_id: uploads/direct
 id: uploads/direct
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: uploads
+parent_id: uploads
+next_page_id: uploads/direct/file-version
+previous_page_id: ''
 ---
 
 # Direct Uploads

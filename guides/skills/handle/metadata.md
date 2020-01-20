@@ -7,10 +7,16 @@ required_guides:
   - skills/handle/payload
 related_resources: []
 alias_paths: []
-cId: skills
-scId: skills/handle
+category_id: skills
+subcategory_id: skills/handle
 id: skills/handle/metadata
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: skills/handle
+parent_id: skills/handle
+next_page_id: ''
+previous_page_id: skills/handle/payload
 ---
 
 # Write Skills Metadata

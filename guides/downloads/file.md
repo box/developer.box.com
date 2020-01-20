@@ -7,10 +7,16 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: downloads
-scId: null
+category_id: downloads
+subcategory_id: null
 id: downloads/file
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: downloads
+parent_id: downloads
+next_page_id: downloads/file-version
+previous_page_id: ''
 ---
 
 # Download File

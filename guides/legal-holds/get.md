@@ -8,10 +8,16 @@ related_resource:
   - legal_hold_policy
 required_guides: []
 alias_paths: []
-cId: legal-holds
-scId: null
+category_id: legal-holds
+subcategory_id: null
 id: legal-holds/get
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: legal-holds
+parent_id: legal-holds
+next_page_id: legal-holds
+previous_page_id: legal-holds/list
 ---
 
 # Get Legal Hold Policy

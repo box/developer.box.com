@@ -10,10 +10,16 @@ required_guides:
   - authentication/access-tokens
 alias_paths:
   - /docs/downscope-tokens
-cId: authentication
-scId: authentication/access-tokens
+category_id: authentication
+subcategory_id: authentication/access-tokens
 id: authentication/access-tokens/downscope
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: authentication/access-tokens
+parent_id: authentication/access-tokens
+next_page_id: authentication/access-tokens/annotator-tokens
+previous_page_id: authentication/access-tokens/revoke
 ---
 
 # Downscope a Token

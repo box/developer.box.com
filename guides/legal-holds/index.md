@@ -1,10 +1,16 @@
 ---
 rank: 230
 alias_paths: []
-cId: legal-holds
-scId: null
+category_id: legal-holds
+subcategory_id: null
 id: legal-holds
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: legal-holds/get
 ---
 
 # Legal Holds

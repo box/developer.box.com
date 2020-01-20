@@ -4,8 +4,16 @@ alias_paths:
   - /docs/tls-11-deprecation
 centered: true
 rank: 2
+category_id: changelog
+subcategory_id: null
 id: changelog/tls-1.1
-isIndex: false
+type: page
+is_index: false
+total_steps: 2
+sibling_id: changelog
+parent_id: changelog
+next_page_id: ''
+previous_page_id: changelog/2018
 ---
 
 # TLS 1.1 Deprecation Migration

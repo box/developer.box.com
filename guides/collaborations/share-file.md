@@ -9,10 +9,16 @@ required_guides: []
 related_resources:
   - collaboration
   - file
-cId: collaborations
-scId: null
+category_id: collaborations
+subcategory_id: null
 id: collaborations/share-file
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: collaborations
+parent_id: collaborations
+next_page_id: collaborations/share-folder
+previous_page_id: ''
 ---
 
 # Share File With User

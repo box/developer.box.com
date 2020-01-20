@@ -9,10 +9,16 @@ related_resources: []
 alias_paths:
   - /docs/box-content-uploader
   - /docs/content-uploader
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/uploader
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/annotations
+previous_page_id: embed/ui-elements/sidebar
 ---
 
 # Content Uploader

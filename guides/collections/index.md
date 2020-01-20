@@ -1,10 +1,16 @@
 ---
 rank: 130
 alias_paths: []
-cId: collections
-scId: null
+category_id: collections
+subcategory_id: null
 id: collections
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: collections/remove
 ---
 
 # Collections

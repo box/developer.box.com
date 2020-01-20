@@ -9,10 +9,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: collaboration-whitelists
-scId: null
+category_id: collaboration-whitelists
+subcategory_id: null
 id: collaboration-whitelists/list-whitelists
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: collaboration-whitelists
+parent_id: collaboration-whitelists
+next_page_id: collaboration-whitelists/delete-whitelist
+previous_page_id: collaboration-whitelists/create-whitelist
 ---
 
 # List Collaboration Whitelists for an Enterprise

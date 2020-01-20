@@ -8,10 +8,16 @@ related_resources:
   - folders
 alias_paths:
   - /docs/work-with-folders
-cId: folders
-scId: null
+category_id: folders
+subcategory_id: null
 id: folders
-isIndex: true
+type: guide
+is_index: true
+total_steps: 0
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Folders

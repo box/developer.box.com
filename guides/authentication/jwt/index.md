@@ -11,10 +11,16 @@ related_resources: []
 alias_paths:
   - /docs/authenticate-with-jwt
   - /docs/app-auth
-cId: authentication
-scId: authentication/jwt
+category_id: authentication
+subcategory_id: authentication/jwt
 id: authentication/jwt
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication/jwt/as-user
+previous_page_id: authentication/jwt/with-sdk
 ---
 
 # JWT Auth

@@ -8,10 +8,16 @@ related_resources: []
 alias_paths:
   - /docs/use-case-recipes
   - /v2/docs/box-api-recipes
-cId: applications
-scId: null
+category_id: applications
+subcategory_id: null
 id: applications/select
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: applications
+parent_id: applications
+next_page_id: applications/app-gallery
+previous_page_id: ''
 ---
 
 # Select App Type

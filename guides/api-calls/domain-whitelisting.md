@@ -8,10 +8,16 @@ related_guides: []
 required_guides: []
 alias_paths:
   - /docs/domain-whitelisting
-cId: api-calls
-scId: null
+category_id: api-calls
+subcategory_id: null
 id: api-calls/domain-whitelisting
-isIndex: false
+type: guide
+is_index: false
+total_steps: 7
+sibling_id: api-calls
+parent_id: api-calls
+next_page_id: api-calls/suppress-notifications
+previous_page_id: api-calls/ensure-consistency
 ---
 
 # Domain Whitelisting

@@ -6,10 +6,16 @@ related_guides:
   - embed/box-view/create-preview
 required_guides: []
 alias_paths: []
-cId: embed
-scId: embed/box-view
+category_id: embed
+subcategory_id: embed/box-view
 id: embed/box-view/best-practices
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: embed/box-view
+parent_id: embed/box-view
+next_page_id: embed/box-view/faq
+previous_page_id: embed/box-view/upload-file
 ---
 
 # Best Practices

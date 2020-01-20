@@ -8,10 +8,16 @@ related_guides:
 required_guides:
   - representations/list-all-representations
 alias_paths: []
-cId: representations
-scId: null
+category_id: representations
+subcategory_id: null
 id: representations/request-a-representation
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: representations
+parent_id: representations
+next_page_id: representations/download-a-representation
+previous_page_id: representations/list-all-representations
 ---
 
 # Request Desired Representation

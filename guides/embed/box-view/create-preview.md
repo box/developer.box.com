@@ -8,10 +8,16 @@ required_guides:
   - embed/ui-elements/installation
   - embed/ui-elements/preview
 alias_paths: []
-cId: embed
-scId: embed/box-view
+category_id: embed
+subcategory_id: embed/box-view
 id: embed/box-view/create-preview
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: embed/box-view
+parent_id: embed/box-view
+next_page_id: embed/box-view/upload-file
+previous_page_id: embed/box-view/setup
 ---
 
 # Create File Preview

@@ -5,10 +5,16 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/access-tokens
+category_id: authentication
+subcategory_id: authentication/access-tokens
 id: authentication/access-tokens
-isIndex: true
+type: guide
+is_index: true
+total_steps: 8
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication/access-tokens/refresh
+previous_page_id: authentication/access-tokens/sdks
 ---
 
 # Access Tokens

@@ -3,10 +3,16 @@ rank: 0
 hide: true
 alias_paths:
   - /en/internal
-cId: internal
-scId: null
+category_id: internal
+subcategory_id: null
 id: internal
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: guides
+parent_id: guides
+next_page_id: internal/style-guide
+previous_page_id: ''
 ---
 
 # Internal

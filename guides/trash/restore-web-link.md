@@ -7,10 +7,16 @@ related_guides:
 required_guides: []
 related_resources:
   - web-link
-cId: trash
-scId: null
+category_id: trash
+subcategory_id: null
 id: trash/restore-web-link
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: trash
+parent_id: trash
+next_page_id: trash/permanently-delete-web-link
+previous_page_id: trash/permanently-delete-folder
 ---
 
 # Restore Web Link

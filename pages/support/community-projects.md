@@ -8,8 +8,16 @@ alias_paths:
   - /page/showcase
 centered: true
 rank: 1
+category_id: support
+subcategory_id: null
 id: support/community-projects
-isIndex: false
+type: page
+is_index: false
+total_steps: 1
+sibling_id: support
+parent_id: support
+next_page_id: ''
+previous_page_id: support
 ---
 
 # Community Projects

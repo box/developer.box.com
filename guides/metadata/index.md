@@ -2,10 +2,16 @@
 rank: 160
 alias_paths:
   - /docs/work-with-metadata
-cId: metadata
-scId: null
+category_id: metadata
+subcategory_id: null
 id: metadata
-isIndex: true
+type: guide
+is_index: true
+total_steps: 0
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Metadata

@@ -14,10 +14,16 @@ alias_paths:
   - /docs/installation-and-setup
   - /docs/commands-and-actions
   - /docs/command-line-interface-cli
-cId: tooling
-scId: tooling/sdks
+category_id: tooling
+subcategory_id: tooling/sdks
 id: tooling/sdks/cli
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: tooling/sdks
+parent_id: tooling/sdks
+next_page_id: tooling/sdks
+previous_page_id: tooling/sdks/node
 ---
 
 # Install Box CLI

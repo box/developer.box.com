@@ -9,10 +9,16 @@ alias_paths:
   - /docs/build-a-box-skill
   - /page/box-skills-kit
   - /docs/creating-a-box-skill-using-the-box-skills-kit-node-sdk-and-serverless
-cId: skills
-scId: null
+category_id: skills
+subcategory_id: null
 id: skills/kit
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: skills
+parent_id: skills
+next_page_id: skills
+previous_page_id: skills/examples
 ---
 
 # Box Skills Kit

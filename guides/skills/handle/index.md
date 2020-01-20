@@ -4,10 +4,16 @@ related_guides:
   - skills/handle/payload
   - skills/handle/metadata
 alias_paths: []
-cId: skills
-scId: skills/handle
+category_id: skills
+subcategory_id: skills/handle
 id: skills/handle
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: skills
+parent_id: skills
+next_page_id: skills/handle/payload
+previous_page_id: ''
 ---
 
 # Handle Skills Events

@@ -8,10 +8,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/box-content-sidebar
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/sidebar
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/uploader
+previous_page_id: embed/ui-elements/preview
 ---
 
 # Content Sidebar

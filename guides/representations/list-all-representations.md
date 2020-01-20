@@ -7,10 +7,16 @@ related_guides:
   - representations/supported-file-types
 required_guides: []
 alias_paths: []
-cId: representations
-scId: null
+category_id: representations
+subcategory_id: null
 id: representations/list-all-representations
-isIndex: false
+type: guide
+is_index: false
+total_steps: 8
+sibling_id: representations
+parent_id: representations
+next_page_id: representations/request-a-representation
+previous_page_id: ''
 ---
 
 # List All Representations for File

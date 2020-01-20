@@ -15,10 +15,16 @@ alias_paths:
   - /docs/file-workflow-with-webhooks
   - /docs/webhooks
   - /docs/getting-started-with-webhooks-v2
-cId: webhooks
-scId: null
+category_id: webhooks
+subcategory_id: null
 id: webhooks
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: webhooks/limitations
 ---
 
 # Webhooks

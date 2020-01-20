@@ -2,10 +2,16 @@
 rank: 2
 alias_paths:
   - /docs/deprovision-user-accounts
-cId: users
-scId: users/deprovision
+category_id: users
+subcategory_id: users/deprovision
 id: users/deprovision
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: users
+parent_id: users
+next_page_id: ''
+previous_page_id: users/deprovision/user
 ---
 
 # Deprovision Users

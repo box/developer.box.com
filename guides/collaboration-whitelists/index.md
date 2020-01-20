@@ -6,10 +6,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: collaboration-whitelists
-scId: null
+category_id: collaboration-whitelists
+subcategory_id: null
 id: collaboration-whitelists
-isIndex: true
+type: guide
+is_index: true
+total_steps: 3
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: collaboration-whitelists/delete-whitelist
 ---
 
 <!-- alex disable whitelist -->

@@ -8,10 +8,16 @@ required_guides: []
 related_resources: []
 alias_paths: []
 note: Needs a massive cleanup
-cId: applications
-scId: applications/web-app-integrations
+category_id: applications
+subcategory_id: applications/web-app-integrations
 id: applications/web-app-integrations/configure
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: applications/web-app-integrations
+parent_id: applications/web-app-integrations
+next_page_id: applications/web-app-integrations
+previous_page_id: applications/web-app-integrations/user-experience
 ---
 
 # Create Web App Integration

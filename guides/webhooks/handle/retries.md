@@ -5,10 +5,16 @@ related_guides:
   - webhooks/handle/payload
 required_guides: []
 alias_paths: []
-cId: webhooks
-scId: webhooks/handle
+category_id: webhooks
+subcategory_id: webhooks/handle
 id: webhooks/handle/retries
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: webhooks/handle
+parent_id: webhooks/handle
+next_page_id: webhooks/handle/setup-signatures
+previous_page_id: webhooks/handle
 ---
 
 <!-- alex disable failed -->

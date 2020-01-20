@@ -11,10 +11,16 @@ required_guides:
   - applications/custom-apps/oauth2-setup
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/oauth2
+category_id: authentication
+subcategory_id: authentication/oauth2
 id: authentication/oauth2/without-sdk
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: authentication/oauth2
+parent_id: authentication/oauth2
+next_page_id: authentication/oauth2/as-user
+previous_page_id: authentication/oauth2
 ---
 
 # OAuth 2.0 without SDKs

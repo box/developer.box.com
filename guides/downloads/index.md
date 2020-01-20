@@ -1,10 +1,16 @@
 ---
 rank: 70
 alias_paths: []
-cId: downloads
-scId: null
+category_id: downloads
+subcategory_id: null
 id: downloads
-isIndex: true
+type: guide
+is_index: true
+total_steps: 6
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: downloads/folder
 ---
 
 # Downloads

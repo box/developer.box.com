@@ -6,10 +6,16 @@ related_guides:
   - downloads/file
 required_guides: []
 alias_paths: []
-cId: files
-scId: null
+category_id: files
+subcategory_id: null
 id: files/get
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: files
+parent_id: files
+next_page_id: files
+previous_page_id: ''
 ---
 
 # Get File Information

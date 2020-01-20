@@ -10,10 +10,16 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths: []
-cId: shared-links
-scId: null
+category_id: shared-links
+subcategory_id: null
 id: shared-links/update
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: shared-links
+parent_id: shared-links
+next_page_id: shared-links/find-for-item
+previous_page_id: shared-links/create
 ---
 
 # Update Shared Link

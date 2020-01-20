@@ -7,10 +7,16 @@ required_guides:
   - applications/custom-apps/jwt-setup
 related_resources: []
 alias_paths: []
-cId: applications
-scId: applications/custom-apps
+category_id: applications
+subcategory_id: applications/custom-apps
 id: applications/custom-apps/app-approval
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: applications/custom-apps
+parent_id: applications/custom-apps
+next_page_id: ''
+previous_page_id: applications/custom-apps/app-token-setup
 ---
 
 # App Approval

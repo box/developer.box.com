@@ -8,10 +8,16 @@ related_resource:
   - metadata
 required_guides: []
 alias_paths: []
-cId: metadata
-scId: metadata/instances
+category_id: metadata
+subcategory_id: metadata/instances
 id: metadata/instances/update
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: metadata/instances
+parent_id: metadata/instances
+next_page_id: metadata/instances
+previous_page_id: ''
 ---
 
 # Update Metadata Instances

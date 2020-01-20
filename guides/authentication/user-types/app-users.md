@@ -8,10 +8,16 @@ related_guides:
 required_guides: []
 related_resources:
   - user
-cId: authentication
-scId: authentication/user-types
+category_id: authentication
+subcategory_id: authentication/user-types
 id: authentication/user-types/app-users
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: authentication/user-types
+parent_id: authentication/user-types
+next_page_id: authentication/user-types
+previous_page_id: ''
 ---
 
 # App Users & Service Accounts

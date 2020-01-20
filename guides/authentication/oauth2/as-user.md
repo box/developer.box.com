@@ -10,10 +10,16 @@ required_guides:
   - authentication/user-types
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/oauth2
+category_id: authentication
+subcategory_id: authentication/oauth2
 id: authentication/oauth2/as-user
-isIndex: false
+type: guide
+is_index: false
+total_steps: 3
+sibling_id: authentication/oauth2
+parent_id: authentication/oauth2
+next_page_id: ''
+previous_page_id: authentication/oauth2/without-sdk
 ---
 
 # As-User Header

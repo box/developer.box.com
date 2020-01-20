@@ -14,8 +14,17 @@ alias_paths:
   - /ja_JP/home
   - /api
   - /docs/overview
-id: ''
-isIndex: true
+category_id: null
+subcategory_id: null
+id: pages
+type: page
+is_index: true
+rank: 0
+total_steps: 0
+sibling_id: content
+parent_id: ''
+next_page_id: ''
+previous_page_id: ''
 ---
 
 # Box Platform

@@ -1,5 +1,6 @@
 ---
 rank: 13
+hide_in_page_nav: true
 related_endpoints: []
 related_guides:
   - embed/ui-elements
@@ -8,10 +9,16 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/file-types-events
-cId: embed
-scId: embed/ui-elements
+category_id: embed
+subcategory_id: embed/ui-elements
 id: embed/ui-elements/viewers-and-events
-isIndex: false
+type: guide
+is_index: false
+total_steps: 14
+sibling_id: embed/ui-elements
+parent_id: embed/ui-elements
+next_page_id: embed/ui-elements/custom-domains
+previous_page_id: embed/ui-elements/scopes
 ---
 
 <!-- alex disable black -->

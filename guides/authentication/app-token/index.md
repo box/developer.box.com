@@ -10,10 +10,16 @@ required_guides:
   - authentication/select
 related_resources: []
 alias_paths: []
-cId: authentication
-scId: authentication/app-token
+category_id: authentication
+subcategory_id: authentication/app-token
 id: authentication/app-token
-isIndex: true
+type: guide
+is_index: true
+total_steps: 4
+sibling_id: authentication
+parent_id: authentication
+next_page_id: authentication/app-token/rollover
+previous_page_id: authentication/app-token/without-sdk
 ---
 
 # App Token Auth

@@ -1,10 +1,16 @@
 ---
 rank: 80
 alias_paths: []
-cId: uploads
-scId: null
+category_id: uploads
+subcategory_id: null
 id: uploads
-isIndex: true
+type: guide
+is_index: true
+total_steps: 1
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: uploads/check
 ---
 
 # Uploads

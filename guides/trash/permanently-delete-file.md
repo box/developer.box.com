@@ -8,10 +8,16 @@ related_guides:
 required_guides: []
 related_resources:
   - files
-cId: trash
-scId: null
+category_id: trash
+subcategory_id: null
 id: trash/permanently-delete-file
-isIndex: false
+type: guide
+is_index: false
+total_steps: 6
+sibling_id: trash
+parent_id: trash
+next_page_id: trash/restore-folder
+previous_page_id: trash/restore-file
 ---
 
 # Permanently Delete File

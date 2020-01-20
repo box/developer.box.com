@@ -3,10 +3,16 @@ rank: 20
 alias_paths:
   - /docs/application-setup
   - /docs/authentication
-cId: authentication
-scId: null
+category_id: authentication
+subcategory_id: null
 id: authentication
-isIndex: true
+type: guide
+is_index: true
+total_steps: 2
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
+previous_page_id: authentication/sso
 ---
 
 # Authentication

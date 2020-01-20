@@ -9,10 +9,16 @@ related_guides:
 required_guides:
   - webhooks/manage/for-file
 alias_paths: []
-cId: webhooks
-scId: webhooks/handle
+category_id: webhooks
+subcategory_id: webhooks/handle
 id: webhooks/handle/payload
-isIndex: false
+type: guide
+is_index: false
+total_steps: 5
+sibling_id: webhooks/handle
+parent_id: webhooks/handle
+next_page_id: webhooks/handle/retries
+previous_page_id: ''
 ---
 
 # Webhook Payload

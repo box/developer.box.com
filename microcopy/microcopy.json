@@ -130,25 +130,31 @@
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before
-  "guides.titles.prerequisites": "Things to read first",
-  // A title for a set of links describing things to read after
-  "guides.titles.next_reads": "Next things to read",
+  "guides.titles.prerequisites": "Prerequisites",
   // A title for usage on a block of guides, marking the index/overview page
   "guides.titles.overview": "Overview",
-  // A title for other guides in this category
-  "guides.titles.other_guides": "Other Guides",
-  // A title for related guides to this category
-  "guides.titles.more_guides": "More Guides",
+  // A title for other content
+  "guides.titles.more": "More",
   // A title for related guides to this category
   "guides.titles.related_guides": "Related Guides",
+  // A title for generic related content
+  "guides.titles.related": "Related",
+  // A title for quick guides to this category
+  "guides.titles.quick_start_guides": "Quick Start Guides",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
+  // A title for a set of links describing related API endpoints
+  "guides.titles.endpoints": "Endpoints",
   // A title for a set of links describing related API resources
   "guides.titles.resources": "Related Resources",
   // A short name for a group of guides
   "guides.titles.category": "Category",
+  // A short name for a group of guides
+  "guides.titles.categories": "Categories",
   // A short name for a sub group of guides
   "guides.titles.subcategory": "Subcategory",
+  // A short name for a sub group of guides
+  "guides.titles.subcategories": "Subcategories",
   // A short name for a single guide
   "guides.titles.guide": "Guide",
   // The text for a link to edit the source of the page

@@ -4,10 +4,16 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
-cId: webhooks
-scId: webhooks/handle
+category_id: webhooks
+subcategory_id: webhooks/handle
 id: webhooks/handle
-isIndex: true
+type: guide
+is_index: true
+total_steps: 5
+sibling_id: webhooks
+parent_id: webhooks
+next_page_id: webhooks/handle/retries
+previous_page_id: ''
 ---
 
 # Handle Webhooks

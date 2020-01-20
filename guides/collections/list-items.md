@@ -10,10 +10,16 @@ related_resources:
   - folder
   - web_link
 alias_paths: []
-cId: collections
-scId: null
+category_id: collections
+subcategory_id: null
 id: collections/list-items
-isIndex: false
+type: guide
+is_index: false
+total_steps: 4
+sibling_id: collections
+parent_id: collections
+next_page_id: collections/add
+previous_page_id: collections/list
 ---
 
 # List Items in Collections

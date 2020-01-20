@@ -6,10 +6,16 @@ related_guides:
   - webhooks/manage/update
 required_guides: []
 alias_paths: []
-cId: webhooks
-scId: null
+category_id: webhooks
+subcategory_id: null
 id: webhooks/limitations
-isIndex: false
+type: guide
+is_index: false
+total_steps: 1
+sibling_id: webhooks
+parent_id: webhooks
+next_page_id: webhooks
+previous_page_id: ''
 ---
 
 # Limitations

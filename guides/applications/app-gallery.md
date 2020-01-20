@@ -8,10 +8,16 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/publishing-your-application
-cId: applications
-scId: null
+category_id: applications
+subcategory_id: null
 id: applications/app-gallery
-isIndex: false
+type: guide
+is_index: false
+total_steps: 2
+sibling_id: applications
+parent_id: applications
+next_page_id: applications
+previous_page_id: applications/select
 ---
 
 # App Gallery
