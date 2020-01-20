@@ -21,8 +21,8 @@ previous_page_id: ''
 
 # Install Postman & Collection
 
-To use the **Box Postman Collection** you will need to have the
-[Postman][postman] app installed on your device.
+To use the **Box Postman Collection** you will need to have
+[Postman][postman] installed on your device.
 Postman is available for Windows, Mac, and Linux environments.
 
 <Grid columns='4'>
@@ -61,12 +61,12 @@ Postman is available for Windows, Mac, and Linux environments.
 
 </Grid>
 
-Next, install the Postman app on your machine and (optionally)
+Next, install Postman on your machine and (optionally)
 [register for a Postman account and log in][register].
 
 <ImageFrame border center>
 
-![The Postman app](./postman-example.png)
+![The Postman application](./postman-example.png)
 
 </ImageFrame>
 
@@ -74,7 +74,7 @@ Next, install the Postman app on your machine and (optionally)
 
 With the Postman App installed the **Box Postman Collection** can be loaded into
 it. Clicking the button below you will load the **Box Postman
-Collection** into the Postman app.
+Collection** into Postman.
 
 <Postman id='62d85bbca8bf7bd5a48b' >
 

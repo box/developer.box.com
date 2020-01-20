@@ -23,7 +23,7 @@ previous_page_id: tooling/postman/quick-start/configure-box-app
 <Choice option='postman.app_type' value='use_own' color='none'>
 
 In the previous step you chose to use your own **Box App** for authenticating
-yourself in the Postman app.
+Postman.
 
 In this step, we will use the **Client ID** and **Client Secret** you provided
 to log you in and create an **Access Token** for your user.

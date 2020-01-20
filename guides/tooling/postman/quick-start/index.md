@@ -22,11 +22,11 @@ previous_page_id: ''
 requests in an easy-to-use
 interface without configuring a full development environment. The Box Postman
 Collection is a set of preconfigured requests that make it easy to get started
-with the Box API from the Postman app.
+with the Box API from Postman.
 
 <ImageFrame center>
 
-![An example of the Postman app](./postman-example.png)
+![An example of Postman](./postman-example.png)
 
 </ImageFrame>
 
@@ -34,8 +34,8 @@ with the Box API from the Postman app.
 
 This guide will take you through the following steps.
 
-1. [Install the Postman app](g://tooling/postman/quick-start/install-postman/)
-on your machine.
+1. [Install Postman](g://tooling/postman/quick-start/install-postman/)
+on your device.
 2. [Configure a Box App](g://tooling/postman/quick-start/configure-box-app/) so
 that Postman can access the Box API.
 3. [Log in](g://tooling/postman/quick-start/log-in-to-box/) to the Box App to
@@ -44,7 +44,7 @@ get the right API credentials.
 collection](g://tooling/postman/quick-start/load-postman-collection/) into
 Postman.
 5. [Make a first API call](g://tooling/postman/quick-start/make-api-call/)
-to the Box API with the Postman app.
+to the Box API with Postman.
 
 <Next>
 

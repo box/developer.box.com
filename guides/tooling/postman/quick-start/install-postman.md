@@ -73,20 +73,20 @@ Postman is available for Windows, Mac, and Linux environments.
 
 </Grid>
 
-Next, install the Postman app on your machine and (optionally)
+Next, install Postman on your machine and (optionally)
 [register for a Postman account and log in][register].
 
 <ImageFrame border center>
 
-![The Postman app](./postman-example.png)
+![Postman](./postman-example.png)
 
 </ImageFrame>
 
 ## Summary
 
-* You installed the Postman app
+* You installed Postman
 * You created a Postman account (optional) 
-* You logged into the Postman app with your Postman account
+* You logged into the Postman application with your Postman account
 
 <Observe option='postman.downloaded' value='win32,win64,osx,linux64'>
 <Next>

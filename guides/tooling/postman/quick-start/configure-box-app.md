@@ -37,7 +37,7 @@ extra steps to set up.
 
 # Use your own Box app
 
-With this method your Postman app will be
+By using this method Postman will be
 able to make API calls to Box **indefinitely**
 as long as you use the app at least once
 **every 60 days**.
@@ -52,7 +52,7 @@ to keep your **Access Token** fresh indefinitely.
 
 # Use our preconfigured Box app
 
-With this method your Postman app will be
+By using this method Postman will be
 able to make API calls to Box for **1 hour**
 before you need to go through this guide again.
 

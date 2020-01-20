@@ -22,13 +22,13 @@ previous_page_id: tooling/postman/quick-start/log-in-to-box
 Now that you are logged in we can load the **Box Postman Collection** into the
 **Postman App** that we installed previously. When we load the Postman
 Collection we will also automatically load your API credentials as a Postman
-environment. 
+environment.
 
 ## Loading a collection and environment
 
 By clicking the button below you will load the **Box Postman
-Collection** into your Postman app. In the same click it will also load your
-**Access Token** into a Postman environment.
+Collection** into your Postman application. In the same click it will also
+load your **Access Token** into a Postman environment.
 
 <Trigger option='postman_collection_downloaded' value='true'>
 
@@ -45,14 +45,14 @@ Collection** into your Postman app. In the same click it will also load your
 Now that you are logged in we can load the **Box Postman Collection** into the
 **Postman App** that we installed previously. When we load the Postman
 Collection we will also automatically load your API credentials as a Postman
-environment. 
+environment.
 
 ## Loading a collection and environment
 
 By clicking the button below you will load the **Box Postman
-Collection** into your Postman app. In the same click it will also load your
-**Access Token**, **Refresh Token**, **Client ID** and **Client Secret** into
-a Postman environment.
+Collection** into your Postman application. In the same click it will also
+load your **Access Token**, **Refresh Token**, **Client ID** and **Client
+Secret** into a Postman environment.
 
 <Trigger option='postman_collection_downloaded' value='true'>
 
@@ -69,12 +69,12 @@ a Postman environment.
 ## Exploring the collection
 
 When you clicked the button above it would have asked you to import the
-collection into your Postman app. Once imported, the collection should appear
-within the app in the left-hand sidebar.
+collection into the Postman application. Once imported, the collection should
+appear within the app in the left-hand sidebar.
 
 <ImageFrame border center shadow>
 
-![Box collection in Postman app](./collection-in-postman.png)
+![Box collection in Postman](./collection-in-postman.png)
 
 </ImageFrame>
 
@@ -83,8 +83,8 @@ endpoints.
 
 ## Summary
 
-* You loaded the Postman collection into your Postman app
-* You additionally loaded your Box Postman environment into the Postman app
+* You loaded the Postman collection into Postman
+* You additionally loaded your Box Postman environment into Postman
 
 </Choice>
 

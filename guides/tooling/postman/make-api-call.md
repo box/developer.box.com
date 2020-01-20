@@ -70,7 +70,7 @@ in your folder in the response **Body** tab in the bottom half of the screen.
 
 # Authentication error
 
-At this point the Postman app might return an error instead of a list. Often,
+At this point Postman might return an error instead of a list. Often,
 this means your **Access Token** has expired. Check our guide on [refreshing
 an access token in Postman](g://tooling/postman/refresh) for more details.
 
