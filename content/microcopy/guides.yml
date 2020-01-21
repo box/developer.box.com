@@ -19,7 +19,10 @@ titles:
   // related: A title for generic related content
   related: Related
 
-  // quick_start_guides: A title for quick guides to this category
+  // quick_start_guide: A title for a quick start guide
+  quick_start_guide: Quick Start Guide
+
+  // quick_start_guides: A title for quick guides
   quick_start_guides: Quick Start Guides
 
   // api_endpoints: A title for a set of links describing related API endpoints
