@@ -2,9 +2,9 @@
 hide: true
 ---
 
-# Internal links
-
 <!-- does not need translation -->
+
+# Internal links
 
 To link to the right internal guides, references, and endpoints, you can use the
 following syntax.
@@ -17,7 +17,7 @@ following syntax.
 ```
 
 <H>
-[Get a file by ID](reference://get_files_id)
+[Get a file by ID](endpoint://get_files_id)
 
 [A file](resource://file)
 
@@ -30,3 +30,24 @@ following syntax.
   This technique automatically adds the locale to the path. This ensures links
   work correctly when translated to other languages.
 </Message>
+
+## Short-hand
+
+Additionally, the syntax can be shortened as follows:
+
+```json
+[Get a file by ID](e://get_files_id)
+[A file](r://file)
+[Get a file](g://files/get)
+[Box](https://box.com)
+```
+
+<H>
+[Get a file by ID](e://get_files_id)
+
+[A file](r://file)
+
+[Get a file](g://files/get)
+
+[Box](https://box.com)
+</H>

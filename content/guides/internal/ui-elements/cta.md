@@ -2,9 +2,9 @@
 hide: true
 ---
 
-# Call to Action (CTA)
-
 <!-- does not need translation -->
+
+# Call to Action (CTA)
 
 Links can be wrapped in a Call to Action element to create visible buttons that
 stand out from the rest of the text.

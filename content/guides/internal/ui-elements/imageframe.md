@@ -2,6 +2,8 @@
 hide: true
 ---
 
+<!-- does not need translation -->
+
 # Image Frame
 
 An image can be wrapped into a frame.

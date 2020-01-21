@@ -1,10 +1,11 @@
 ---
 hide: true
---- 
+---
+
+<!-- does not need translation -->
 
 # Code Blocks
 
-<!-- does not need translation -->
 <!-- markdownlint-disable code-fence-style -->
 
 Not all code samples exist in the SDK or CLI documentation. You can add new code

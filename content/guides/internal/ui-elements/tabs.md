@@ -2,6 +2,8 @@
 hide: true
 ---
 
+<!-- does not need translation -->
+
 # Tabs
 
 To add items to a tab, first create a `Tabs` object and then within that

@@ -47,7 +47,10 @@ class MarkdownProcessor {
   transform({ 
     contents
   }) {
-    let [_, frontmatter, markdown] = contents.split('---\n')
+    let [_, frontmatter, markdown, ...rest] = contents.split('---\n')
+
+    markdown = [markdown, ...rest].join('---\n')
+
     frontmatter = extractFrontmatter(frontmatter, this.sourcePath)
 
     markdown = addFinalLine(markdown)

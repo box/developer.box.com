@@ -1,6 +1,5 @@
 ---
 rank: 4
-tag: folders
 related_endpoints:
   - put_folders_id
 related_guides:

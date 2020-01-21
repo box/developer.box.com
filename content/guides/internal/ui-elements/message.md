@@ -4,7 +4,7 @@ hide: true
 
 <!-- does not need translation -->
 
-# Messages
+# Message
 
 A message is a way to show a user that something is worth noting.
 

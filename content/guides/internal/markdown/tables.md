@@ -2,9 +2,9 @@
 hide:  true
 ---
 
-# Table
-
 <!-- does not need translation -->
+
+# Table
 
 Tables can be created with the regular markdown syntax.
 

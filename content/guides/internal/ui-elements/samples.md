@@ -2,6 +2,8 @@
 hide: true
 ---
 
+<!-- does not need translation -->
+
 # Samples
 
 Samples represent a set of sample code blocks extracted from the CLI, SDK, and
