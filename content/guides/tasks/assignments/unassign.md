@@ -10,6 +10,6 @@ alias_paths: []
 # Unassign a task
 
 To unassign a task, you will need to provide the Box API with the `id` of the
-assigned task.
+task assignment.
 
 <Samples id='delete_task_assignments_id' />
