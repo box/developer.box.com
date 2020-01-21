@@ -15,10 +15,31 @@ next_page_id: changelog/2018
 previous_page_id: ''
 ---
 
+<!-- alex disable postman-postwoman -->
+
 # Changelog
 
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
+
+## 2019-01-20 / Refreshed Postman Collection & Quick Start
+
+The Box Postman collection has been updated with new features and an integrated
+quick-start guide. Key features include:
+
+* An end-to-end [Postman quick-start guide][postman-quick-start-guide] that
+  helps users to install Postman, set up a Box App, and load their API
+  credentials into Postman. 
+* A [restructured Postman collection][postman-collection] for the Box APIs that
+  automatically detects when API credentials have expired and offers integrated
+  solutions for refreshing these credentials when needed.
+
+The [legacy Postman collection][legacy-postman-collection] will remain available
+for the foreseeable future.
+
+[postman-quick-start-guide]: g://tooling/postman/quick-start
+[postman-collection]: g://tooling/postman/install
+[legacy-postman-collection]: g://tooling/postman/legacy
 
 ## 2019-12-31 / EOL of Classic Relay API Endpoints
 
@@ -35,7 +56,7 @@ with error responses in applications making requests to them:
 For any application encountering these error responses, please remove all calls
 to the Relay Classic APIs listed above.
 
-[changelog-eol-relay-apis]: https://developer.box.com/en/changelog/#2019-10-18--relay-api-endpoints-will-eol-on-december-31st-2019
+[changelog-eol-relay-apis]: #2019-10-18--relay-api-endpoints-will-eol-on-december-31st-2019
 
 ## 2019-12-05 / Marker-based Pagination Support for Users API
 
@@ -290,7 +311,7 @@ Full release announcement is available [here][blog_new_element].
 
 [elements-11-release-notes]: https://github.com/box/box-ui-elements/releases/tag/v11.0.0
 [elements-11-blog]: https://medium.com/box-developer-blog/announcing-elements-11-88ee900125fd
-[ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
+[ui-elements-manual-install]: g://embed/ui-elements/installation/#manual-installation
 [preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
 [preview-2.29-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.29.0
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
