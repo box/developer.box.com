@@ -39,7 +39,7 @@ available for building the CLI in other environments.
 To install the latest CLI on your machine, download the latest
 `.exe` for Windows or `.pkg` for macOS for the latest release.
 
-<CTA to="https://github.com/box/boxcli/releases" narrow>
+<CTA to="https://github.com/box/boxcli/releases">
 Download the latest CLI installer
 
 </CTA>

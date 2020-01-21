@@ -7,7 +7,7 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-note: Needs a massive cleanup
+notes: Needs a massive cleanup
 category_id: applications
 subcategory_id: applications/web-app-integrations
 id: applications/web-app-integrations/configure

@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - put_metadata_templates_id_id_schema
 related_guides: []
-related_resource:
+related_resources:
   - metadata_template
 required_guides: []
 alias_paths: []
