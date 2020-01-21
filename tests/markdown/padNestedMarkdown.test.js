@@ -104,13 +104,13 @@ test('should deal with embedded reference images', () => {
 
 test('should deal with embedded regular images', () => {
   const input = `
-<Foobar>
+<Foobar border width={200}>
 ![Test](./img.png)
 </Foobar>
 `
   const output = pad(input)
   expect(output).toEqual(`
-<Foobar>
+<Foobar border width={200}>
 
 ![Test](./img.png)
 
@@ -134,11 +134,11 @@ test('should deal with inline regular images', () => {
 
 test('should deal with tag attributes', () => {
   const input = `
-<Foobar id='id' data-type="type" disabled>![Test](./img.png)</Foobar>
+<Foobar id='id' data-type="type" data-key='namespaced:value' disabled>![Test](./img.png)</Foobar>
 `
   const output = pad(input)
   expect(output).toEqual(`
-<Foobar id='id' data-type="type" disabled>
+<Foobar id='id' data-type="type" data-key='namespaced:value' disabled>
 
 ![Test](./img.png)
 

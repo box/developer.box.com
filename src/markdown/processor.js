@@ -8,6 +8,7 @@ const addFinalLine = require('./addFinalLine')
 
 class MarkdownProcessor {
   constructor({ sourcePath }) {
+    // remove the index from a filename
     this.sourcePath = sourcePath
   }
 
@@ -17,14 +18,13 @@ class MarkdownProcessor {
    */
   write({ 
     from, 
-    to,
-    isGuide = false
+    to
   }) {
     // read the content and transform it
     const contents = fs.readFileSync(this.sourcePath).toString()
-    const transformedContents = this.transform({ contents, isGuide })
-    // determine the source
-    const sourceName = this.sourcePath.replace(from, '')
+    const transformedContents = this.transform({ contents  })
+    // determine the source and replace any file rank (e.g. `foo/bar/1-foo.md`)
+    const sourceName = this.sourcePath.replace(from, '').replace(/\/\d*-/, '/')
     // determine the destination
     const destinationPath = path.resolve(to, sourceName)
     const destinationDirectory = path.dirname(destinationPath)
@@ -35,18 +35,23 @@ class MarkdownProcessor {
     }
 
     // write the new content to the destination
-    fs.writeFileSync(destinationPath, transformedContents)
+    const oldContents = fs.existsSync(destinationPath) ? String(fs.readFileSync(destinationPath)) : ''
+    if (oldContents !== transformedContents) {
+      fs.writeFileSync(destinationPath, transformedContents)
+    }
   }
 
   /**
    * Applies some transformation to every markdown file
    */
   transform({ 
-    contents,
-    isGuide
+    contents
   }) {
-    let [_, frontmatter, markdown] = contents.split('---\n')
-    frontmatter = extractFrontmatter(frontmatter, this.sourcePath, isGuide)
+    let [_, frontmatter, markdown, ...rest] = contents.split('---\n')
+
+    markdown = [markdown, ...rest].join('---\n')
+
+    frontmatter = extractFrontmatter(frontmatter, this.sourcePath)
 
     markdown = addFinalLine(markdown)
     markdown = expandSelfClosingTags(markdown)

@@ -1,5 +1,6 @@
 ---
 rank: 13
+hide_in_page_nav: true
 related_endpoints: []
 related_guides:
   - embed/ui-elements
