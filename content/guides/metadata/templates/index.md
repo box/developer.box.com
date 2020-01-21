@@ -3,7 +3,7 @@ rank: 1
 alias_paths: []
 ---
 
-# Metadata Templates
+# Metadata templates
 
 A [Metadata Template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
@@ -30,15 +30,11 @@ information or assign it to an item.
 
 ## Metadata Scopes
 
-Template instances are also grouped by into two distinct groups, or **scopes**.
+Template instances are also grouped into two distinct groups, or **scopes**.
 
-* **`global`**: a group of templates that is available to everyone using Box,
-  regardless of the enterprise they are in. An example is the
-  `global.properties` template that serves as a place to put free-form key/value
-  `string` pairs without any additional schema associated with it.
-* **`enterprise_*`**: a group of templates defined by that specific enterprise.
-  These templates are either created by admin's in the web application, or by
-  applications using the API.
+<CTA to='g://metadata/templates/scopes'>
+  Learn more about Metadata Scopes
+</CTA>
 
 ## Types
 

@@ -1,5 +1,4 @@
 ---
-rank: 1
 related_endpoints:
   - put_metadata_templates_id_id_schema
 related_guides: []
