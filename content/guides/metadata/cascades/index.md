@@ -1,9 +1,9 @@
 ---
-rank: 3
+rank: 4
 alias_paths: []
 ---
 
-# Metadata Cascade Policies
+# Metadata cascade policies
 
 A Metadata Cascade Policy describes automatic cascading behavior for a
 [Metadata Instance][instance] on a folder, allowing the metadata to

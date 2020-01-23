@@ -13,12 +13,12 @@ required_guides: []
 alias_paths: []
 ---
 
-# Multi Select Metadata Field
+# Multi Select metadata field
 
 A metadata field of type `miltiSelect` is displayed to a user as a dropdown
 list. The user can select multiple items from the list.
 
-<ImageFrame border shadow width='200'>
+<ImageFrame border center shadow width='400'>
 
   ![String field](./metadata-field-multi-select.png)
 

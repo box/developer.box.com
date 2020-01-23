@@ -1,6 +1,6 @@
 ---
 related_endpoints:
-  - post_metadata_templates
+  - post_metadata_templates_schema
 related_guides:
   - metadata/templates/scopes
   - metadata/templates/list

@@ -13,11 +13,11 @@ required_guides: []
 alias_paths: []
 ---
 
-# Date Metadata Field
+# Date metadata field
 
 A metadata field of type `date` is displayed to a user as a date picker. 
 
-<ImageFrame border shadow width='200'>
+<ImageFrame border center shadow width='400'>
 
   ![String field](./metadata-field-date.png)
 

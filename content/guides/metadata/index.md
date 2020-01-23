@@ -9,6 +9,12 @@ alias_paths:
 Metadata allows users and applications to define and store custom data
 associated with their files and folders.
 
+<ImageFrame border center>
+
+  ![String field](./metadata-example.png)
+
+</ImageFrame>
+
 Metadata consists of key/value pairs that belong to a file or folder folders.
 For example, an important contract may have key/value pairs of
 `clientNumber: 820183` and `clientName: bioMedicalCorp`.

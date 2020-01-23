@@ -13,12 +13,12 @@ required_guides: []
 alias_paths: []
 ---
 
-# Enum Metadata Field
+# Enum metadata field
 
 A metadata field of type `enum` is displayed to a user as a dropdown list. The
 user can select one item from the list.
 
-<ImageFrame border shadow width='200'>
+<ImageFrame border center shadow width='400'>
 
   ![String field](./metadata-field-enum.png)
 

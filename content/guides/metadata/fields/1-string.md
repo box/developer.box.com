@@ -13,11 +13,11 @@ required_guides: []
 alias_paths: []
 ---
 
-# String Metadata Field
+# String metadata field
 
 A metadata field of type `string` is displayed to a user as a standard text-field.
 
-<ImageFrame border shadow width='200'>
+<ImageFrame border center shadow width='400'>
 
   ![String field](./metadata-field-string.png)
 

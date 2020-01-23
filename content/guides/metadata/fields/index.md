@@ -1,8 +1,8 @@
 ---
-index: 0
+rank: 2
 ---
 
-# Metadata Fields
+# Metadata fields
 
 Every metadata template contains a list of `field`, representing items that a
 user (or an application) can fill in when the template is assigned to a file or

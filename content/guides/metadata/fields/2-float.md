@@ -13,12 +13,12 @@ required_guides: []
 alias_paths: []
 ---
 
-# Float Metadata Field
+# Float metadata field
 
 A metadata field of type `float` is displayed to a user as a standard text-field
 that only accepts numeric input.
 
-<ImageFrame border shadow width='200'>
+<ImageFrame border center shadow width='400'>
 
   ![String field](./metadata-field-float.png)
 
