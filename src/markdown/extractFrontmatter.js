@@ -9,13 +9,14 @@ TYPES = {
 }
 
 const extractFrontmatter = (frontmatter, sourcePath) => {
-  frontmatter = yaml.load(frontmatter)
+  frontmatter = yaml.load(frontmatter) || {}
+
   frontmatter.category_id = categoryId(sourcePath)
   frontmatter.subcategory_id = subcategoryId(sourcePath)
-  frontmatter.id = id(sourcePath)
-  frontmatter.type = type(sourcePath, frontmatter)
   frontmatter.is_index = isIndex(sourcePath)
+  frontmatter.id = id(sourcePath)
   frontmatter.rank = rank(frontmatter, sourcePath)
+  frontmatter.type = type(sourcePath, frontmatter)
   frontmatter.total_steps = totalSteps(sourcePath)
   frontmatter.sibling_id = siblingsId(sourcePath, frontmatter.is_index)
   frontmatter.parent_id = parentId(sourcePath, frontmatter.is_index)
@@ -56,7 +57,7 @@ const subcategoryId = (path) => {
 
 // Extracts the rank for this file from the filename
 const rank = (frontmatter, sourcePath) => {
-  if (frontmatter.rank) { return frontmatter.rank }
+  if (frontmatter && frontmatter.rank) { return frontmatter.rank }
   
   const filename = _path.basename(sourcePath)
   if (filename.match(/^\d*-/)) {
@@ -101,7 +102,7 @@ const nextPageId = (path, previousRank) => {
     .map(filename => {
       const content = String(fs.readFileSync(filename))
       const parts = content.split('---')
-      const frontmatter = yaml.load(parts[1])
+      const frontmatter = yaml.load(parts[1]) || {}
       frontmatter.rank = rank(frontmatter, filename)
       frontmatter.filename = filename
       return frontmatter
@@ -120,7 +121,7 @@ const previousPageId = (path, nextRank) => {
     .map(filename => {
       const content = String(fs.readFileSync(filename))
       const parts = content.split('---')
-      const frontmatter = yaml.load(parts[1])
+      const frontmatter = yaml.load(parts[1]) || {}
       frontmatter.rank = rank(frontmatter, filename)
       frontmatter.filename = filename
       return frontmatter

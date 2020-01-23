@@ -15,19 +15,6 @@ A file or folder can have multiple distinct template [instances][instance]
 associated with it, such as a `marketingCollateral` template instance and a
 `retentionPolicy` template instances.
 
-## Template & Key Name
-
-When a metadata template is created a `templateKey` is automatically generated
-from the `name` of the template, removing any spaces and irregular characters in
-the name, and transforming it to camel case format.
-
-For example, a metadata template that is named
-`Test Name (with-special_) Characters` will have a `templateKey` of
-`testNameWithspecialCharacters`.
-
-This template key is then used when making any API requests to get the template's
-information or assign it to an item.
-
 ## Metadata Scopes
 
 Template instances are also grouped into two distinct groups, or **scopes**.
@@ -36,17 +23,7 @@ Template instances are also grouped into two distinct groups, or **scopes**.
   Learn more about Metadata Scopes
 </CTA>
 
-## Types
-
-Templates support four attributes types: `string`, `enum`, `float`, and `date`.
-Dates are in a RFC3339 format with up to millisecond precision.
-
 ## Restrictions
-
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web app
-or the API to manage templates.
 
 There is a limit of 500 templates per enterprise.
 

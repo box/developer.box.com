@@ -16,7 +16,8 @@ and scope, or the template's identifier.
 <Message>
 
   The authenticated user can only get Information about metadata templates
-  [scoped][scopes] within the `global` scope or the `enterprise_:id` scope where `:id` is  the ID of their enterprise.
+  [scoped][scopes] within the `global` scope or the `enterprise_:id` scope where
+  `:id` is  the ID of their enterprise.
 
 </Message>
 

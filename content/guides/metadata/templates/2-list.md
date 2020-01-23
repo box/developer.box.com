@@ -8,7 +8,7 @@ related_guides:
   - metadata/templates/update
 ---
 
-# List All Metadata Templates
+# List all metadata templates
 
 Metadata templates can be listed for either the [enterprise or the global
 scope][scopes].

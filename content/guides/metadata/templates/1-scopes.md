@@ -1,7 +1,7 @@
 ---
 ---
 
-# Metadata Template Scopes
+# Metadata template scopes
 
 Metadata templates are grouped into two distinct groups, or **scopes**.
 
@@ -9,9 +9,11 @@ Metadata templates are grouped into two distinct groups, or **scopes**.
   regardless of the enterprise they are in. An example is the
   `global.properties` template that serves as a place to put free-form key/value
   `string` pairs without any additional schema associated with it.
-* **`enterprise_*`**: a group of templates defined by that specific enterprise.
+* **`enterprise`**: a group of templates defined by that specific enterprise.
   These templates are either created by admin's in the web application, or by
-  applications using the API.
+  applications using the API. When requesting information about a template in
+  this group the `scope` will often be listed as `enterprise_*` where `*` is the
+  ID of the enterprise.
 
 <Message warning>
   # Permissions 

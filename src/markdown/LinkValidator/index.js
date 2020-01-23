@@ -17,7 +17,7 @@ class LinkValidator {
     this.source = source
     this.content = String(fs.readFileSync(source))
     this.dirname = path.dirname(source)
-    this.frontmatter = yaml.load(this.content.split('---')[1])
+    this.frontmatter = yaml.load(this.content.split('---')[1]) || {}
   }
 
   // checks for local links (./foo/bar) in the body
