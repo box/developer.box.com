@@ -33,7 +33,7 @@ for the foreseeable future.
 
 ## 2019-12-31 / EOL of Classic Relay API Endpoints
 
-As [previously communicated][changelog-eol-relay-apis], Classic Relay API
+As previously communicated on October 18 2019, Classic Relay API
 endpoints are officially at an end of life state as of today.
 
 The following endpoints are affected by this EOL and will now start responding
@@ -45,8 +45,6 @@ with error responses in applications making requests to them:
 
 For any application encountering these error responses, please remove all calls
 to the Relay Classic APIs listed above.
-
-[changelog-eol-relay-apis]: #2019-10-18--relay-api-endpoints-will-eol-on-december-31st-2019
 
 ## 2019-12-05 / Marker-based Pagination Support for Users API
 
