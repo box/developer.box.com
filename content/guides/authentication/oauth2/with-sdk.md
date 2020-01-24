@@ -27,10 +27,10 @@ application to be running on a web server somewhere accessible to the user.
 
 To complete an OAuth 2.0 flow the following steps need to be completed.
 
-1. [Configure the Box SDK](#1-configure-sdk)
-2. [Redirect the user to the Box website](#2-redirect-user)
-3. [The user grants the application access](#3-user-grants-application-access)
-4. [Exchange the authorization code for an access token](#4-exchange-code)
+1. Configure the Box SDK
+2. Redirect the user to the Box website
+3. The user grants the application access
+4. Exchange the authorization code for an access token
 
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
