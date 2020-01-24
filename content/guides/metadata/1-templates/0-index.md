@@ -1,5 +1,4 @@
 ---
-rank: 1
 alias_paths: []
 ---
 

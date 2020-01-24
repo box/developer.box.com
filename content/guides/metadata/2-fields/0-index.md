@@ -1,5 +1,4 @@
 ---
-rank: 2
 ---
 
 # Metadata fields

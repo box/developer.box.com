@@ -1,5 +1,4 @@
 ---
-rank: 1
 related_endpoints:
   - put_files_id_metadata_id_id
   - put_folders_id_metadata_id_id
@@ -10,7 +9,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Update Metadata Instances
+# Update metadata on an item
 
 Updating metadata on a file can be achieved by passing a set of JSON operations
 to the [`PUT /files/:id/metadata_templates/:id/:id`][files_endpoint] API.

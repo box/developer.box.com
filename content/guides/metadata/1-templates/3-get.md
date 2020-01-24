@@ -33,8 +33,7 @@ template's `scope` and `templateKey`.
 
   To get the `scope` and `templateKey` for a template, either
   [list all metadata templates][g_list_templates], or
-  [list all instances on a file][g_list_instances_file] or
-  [folder][g_list_instances_folder].
+  [list all instances on an item][g_list_instances_item].
 
 </Message>
 
@@ -50,8 +49,7 @@ To get a metadata template by ID, you will need to pass both the template's
 
   To get the `id` for a template, either
   [list all metadata templates][g_list_templates], or
-  [list all instances on a file][g_list_instances_file] or
-  [folder][g_list_instances_folder].
+  [list all instances on an item][g_list_instances_item].
   
 </Message>
 
@@ -59,5 +57,4 @@ To get a metadata template by ID, you will need to pass both the template's
 [e_by_id]: e://get_metadata_templates_id
 [scopes]: g://metadata/templates/scopes
 [g_list_templates]: g://metadata/templates/list
-[g_list_instances_file]: g://metadata/instances/list-on-file
-[g_list_instances_folder]: g://metadata/instances/list-on-folder
+[g_list_instances_item]: g://metadata/instances/list

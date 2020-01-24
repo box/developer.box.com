@@ -60,7 +60,11 @@ const rank = (frontmatter, sourcePath) => {
   if (frontmatter && frontmatter.rank) { return frontmatter.rank }
   
   const filename = _path.basename(sourcePath)
-  if (filename.match(/^\d*-/)) {
+  const dirname = _path.dirname(sourcePath).split('/').pop()
+
+  if (isIndex(sourcePath) && dirname.match(/^\d*-/)) {
+    return Number(dirname.split('-')[0])
+  } else if (filename.match(/^\d*-/)) {
     return Number(filename.split('-')[0])
   } else {
     return 0

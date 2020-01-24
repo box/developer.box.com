@@ -24,7 +24,7 @@ class MarkdownProcessor {
     const contents = fs.readFileSync(this.sourcePath).toString()
     const transformedContents = this.transform({ contents  })
     // determine the source and replace any file rank (e.g. `foo/bar/1-foo.md`)
-    const sourceName = this.sourcePath.replace(from, '').replace(/\/\d*-/, '/')
+    const sourceName = this.sourcePath.replace(from, '').replace(/\/\d*-/g, '/')
     // determine the destination
     const destinationPath = path.resolve(to, sourceName)
     const destinationDirectory = path.dirname(destinationPath)

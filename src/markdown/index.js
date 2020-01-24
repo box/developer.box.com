@@ -38,7 +38,7 @@ class Compiler {
 }
 
 const copyAssets = (sourceDir, targetDir, source) => {
-  const destination = `${targetDir}${source.replace(sourceDir, '')}`
+  const destination = `${targetDir}${source.replace(sourceDir, '')}`.replace(/\/\d*-/g, '/')
   const destinationDir = path.dirname(destination)
   fs.mkdirpSync(destinationDir)
   
