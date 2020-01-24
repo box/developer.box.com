@@ -36,8 +36,8 @@ application.
 
 To complete a JWT authorization the following steps need to be completed.
 
-1. [Read the configuration file](#1-read-json-configuration)
-2. [Initialize an SDK client](#2-initialize-sdk-client)
+1. Read the configuration file
+2. Initialize an SDK client
 
 At the end of this flow, the application has a Box SDK client that can be used to
 make API calls on behalf of the application.
@@ -205,8 +205,8 @@ of users.
 By now the application should be able to authorize an application using JWT
 with any of our official SDKs, by using the following steps.
 
-1. [Read the configuration file](#1-read-json-configuration)
-2. [Initialize an SDK client](#2-initialize-sdk-client)
+1. Read the configuration file
+2. Initialize an SDK client
 
 To learn how to use this client head over to the guide on [Making API
 calls](g://api-calls).
