@@ -65,7 +65,7 @@ which will need to be replaced. These values are:
 - `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
   current timestamp.
 - `SKILLS_CARD_TYPE`: The type of card that would like to create. See
-  [Skills Card Types](#skills-card-types) for the available options.
+  the **Skills Card Types** section below for the available options.
 - `CARD_TITLE`: The title of the card that is being written. This may be
   anything that you wish to title the content as.
 - `SKILL_ID`: The ID of the Skill. This should be set to your Skills
@@ -76,7 +76,7 @@ which will need to be replaced. These values are:
   have content with a duration, such as video or audio files. If used, this
   should be the length of the content in seconds.
 - `CARD_ENTRIES`: The data that comes from the machine learning system. This
-  value is an array of objects. See [Skills Card Entries](#skills-card-entries)
+  value is an array of objects. See the **Skills Card Entries** section below.
 
 ### Skills Card Types
 
