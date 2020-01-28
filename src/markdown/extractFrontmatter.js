@@ -29,7 +29,7 @@ const extractFrontmatter = (frontmatter, sourcePath) => {
 // Creates a unique ID for this file
 const id = (path) => {
   if (!path) { return '' }
-  const id = path.split('/').splice(3).join('/').replace('.md', '').replace(/\/\d*-/, '/').replace(/\/index$/, '').replace(/^index$/, '')
+  const id = path.split('/').splice(3).join('/').replace('.md', '').replace(/\/\d*-/g, '/').replace(/\/index$/, '').replace(/^index$/, '')
   if (!id || id === '') { return path.split('/')[2] || path.split('/')[1] }
   else { return id }
 }
