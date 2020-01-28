@@ -9,9 +9,9 @@ required_guides: []
 alias_paths: []
 category_id: representations
 subcategory_id: null
+is_index: false
 id: representations/list-all-representations
 type: guide
-is_index: false
 total_steps: 8
 sibling_id: representations
 parent_id: representations

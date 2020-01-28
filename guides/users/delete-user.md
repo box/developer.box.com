@@ -11,9 +11,9 @@ related_resources: []
 alias_paths: []
 category_id: users
 subcategory_id: null
+is_index: false
 id: users/delete-user
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: users
 parent_id: users

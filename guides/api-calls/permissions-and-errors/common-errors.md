@@ -12,9 +12,9 @@ alias_paths:
 notes: Lazy copy of old docs. Needs rethinking.
 category_id: api-calls
 subcategory_id: api-calls/permissions-and-errors
+is_index: false
 id: api-calls/permissions-and-errors/common-errors
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors

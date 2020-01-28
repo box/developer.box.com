@@ -8,9 +8,9 @@ related_resources: []
 alias_paths: []
 category_id: shared-links
 subcategory_id: null
+is_index: true
 id: shared-links
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: guides
 parent_id: guides

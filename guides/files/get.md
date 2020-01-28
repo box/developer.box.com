@@ -8,9 +8,9 @@ required_guides: []
 alias_paths: []
 category_id: files
 subcategory_id: null
+is_index: false
 id: files/get
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: files
 parent_id: files

@@ -9,9 +9,9 @@ alias_paths:
   - /docs/box-for-salesforce-developer-toolkit
 category_id: tooling
 subcategory_id: tooling/salesforce-toolkit
+is_index: true
 id: tooling/salesforce-toolkit
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: tooling
 parent_id: tooling

@@ -7,9 +7,9 @@ related_resources: []
 alias_paths: []
 category_id: security
 subcategory_id: null
+is_index: false
 id: security/device-pinners
 type: guide
-is_index: false
 total_steps: 1
 sibling_id: security
 parent_id: security

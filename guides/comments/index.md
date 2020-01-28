@@ -3,9 +3,9 @@ rank: 120
 alias_paths: []
 category_id: comments
 subcategory_id: null
+is_index: true
 id: comments
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: guides
 parent_id: guides

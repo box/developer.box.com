@@ -8,8 +8,8 @@ related_endpoints:
   - post-oauth2-token
 category_id: tooling
 subcategory_id: tooling/postman
-id: tooling/postman/quick-start/log-in-to-box
 is_index: false
+id: tooling/postman/quick-start/log-in-to-box
 rank: 3
 total_steps: 6
 sibling_id: tooling/postman/quick-start

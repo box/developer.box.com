@@ -10,9 +10,9 @@ alias_paths:
   - /docs/box-content-open-with
 category_id: embed
 subcategory_id: embed/ui-elements
+is_index: false
 id: embed/ui-elements/open-with
 type: guide
-is_index: false
 total_steps: 14
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements

@@ -7,9 +7,9 @@ related_resources: []
 alias_paths: []
 category_id: tooling
 subcategory_id: tooling/postman
+is_index: false
 id: tooling/postman/install
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: tooling/postman
 parent_id: tooling/postman

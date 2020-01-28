@@ -2,10 +2,10 @@
 hide: true
 category_id: internal
 subcategory_id: internal/ui-elements
-id: internal/ui-elements/grid
-type: guide
 is_index: false
+id: internal/ui-elements/grid
 rank: 0
+type: guide
 total_steps: 8
 sibling_id: internal/ui-elements
 parent_id: internal/ui-elements

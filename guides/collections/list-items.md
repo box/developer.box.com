@@ -12,9 +12,9 @@ related_resources:
 alias_paths: []
 category_id: collections
 subcategory_id: null
+is_index: false
 id: collections/list-items
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: collections
 parent_id: collections

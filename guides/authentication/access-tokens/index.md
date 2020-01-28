@@ -7,9 +7,9 @@ related_resources: []
 alias_paths: []
 category_id: authentication
 subcategory_id: authentication/access-tokens
+is_index: true
 id: authentication/access-tokens
 type: guide
-is_index: true
 total_steps: 8
 sibling_id: authentication
 parent_id: authentication

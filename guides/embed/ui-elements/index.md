@@ -8,9 +8,9 @@ alias_paths:
   - /docs/box-ui-kit
 category_id: embed
 subcategory_id: embed/ui-elements
+is_index: true
 id: embed/ui-elements
 type: guide
-is_index: true
 total_steps: 14
 sibling_id: embed
 parent_id: embed

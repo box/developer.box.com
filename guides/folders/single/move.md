@@ -10,9 +10,9 @@ required_guides: []
 alias_paths: []
 category_id: folders
 subcategory_id: folders/single
+is_index: false
 id: folders/single/move
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: folders/single
 parent_id: folders/single

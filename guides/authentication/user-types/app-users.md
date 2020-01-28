@@ -10,9 +10,9 @@ related_resources:
   - user
 category_id: authentication
 subcategory_id: authentication/user-types
+is_index: false
 id: authentication/user-types/app-users
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: authentication/user-types
 parent_id: authentication/user-types

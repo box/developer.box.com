@@ -3,9 +3,9 @@ rank: 240
 alias_paths: []
 category_id: retention-policies
 subcategory_id: null
+is_index: true
 id: retention-policies
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: guides
 parent_id: guides

@@ -3,9 +3,9 @@ rank: 70
 alias_paths: []
 category_id: downloads
 subcategory_id: null
+is_index: true
 id: downloads
 type: guide
-is_index: true
 total_steps: 6
 sibling_id: guides
 parent_id: guides

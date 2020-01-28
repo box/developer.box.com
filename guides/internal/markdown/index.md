@@ -2,10 +2,10 @@
 hide: true
 category_id: internal
 subcategory_id: internal/markdown
-id: internal/markdown
-type: guide
 is_index: true
+id: internal/markdown
 rank: 0
+type: guide
 total_steps: 5
 sibling_id: internal
 parent_id: internal

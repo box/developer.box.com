@@ -16,10 +16,10 @@ alias_paths:
   - /docs/overview
 category_id: null
 subcategory_id: null
-id: pages
-type: page
 is_index: true
+id: pages
 rank: 0
+type: page
 total_steps: 0
 sibling_id: content
 parent_id: ''

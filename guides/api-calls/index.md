@@ -6,9 +6,9 @@ alias_paths:
   - /docs/how-to-get-an-api-key
 category_id: api-calls
 subcategory_id: null
+is_index: true
 id: api-calls
 type: guide
-is_index: true
 total_steps: 7
 sibling_id: guides
 parent_id: guides

@@ -10,9 +10,9 @@ alias_paths:
   - /docs/community-supported-projects
 category_id: tooling
 subcategory_id: tooling/sdks
+is_index: true
 id: tooling/sdks
 type: guide
-is_index: true
 total_steps: 6
 sibling_id: tooling
 parent_id: tooling

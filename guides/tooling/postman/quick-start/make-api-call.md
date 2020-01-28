@@ -5,8 +5,8 @@ related_endpoints:
   - get_folders_id_items
 category_id: tooling
 subcategory_id: tooling/postman
-id: tooling/postman/quick-start/make-api-call
 is_index: false
+id: tooling/postman/quick-start/make-api-call
 rank: 5
 total_steps: 6
 sibling_id: tooling/postman/quick-start

@@ -8,9 +8,9 @@ alias_paths:
   - /docs/branding-guidelines
 category_id: best-practices
 subcategory_id: null
+is_index: false
 id: best-practices/branding-guidelines
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: best-practices
 parent_id: best-practices

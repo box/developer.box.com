@@ -7,9 +7,9 @@ related_resources: []
 alias_paths: []
 category_id: applications
 subcategory_id: applications/web-app-integrations
+is_index: false
 id: applications/web-app-integrations/user-experience
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: applications/web-app-integrations
 parent_id: applications/web-app-integrations

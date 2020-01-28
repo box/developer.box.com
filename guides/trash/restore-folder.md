@@ -10,9 +10,9 @@ related_resources:
   - folders
 category_id: trash
 subcategory_id: null
+is_index: false
 id: trash/restore-folder
 type: guide
-is_index: false
 total_steps: 6
 sibling_id: trash
 parent_id: trash

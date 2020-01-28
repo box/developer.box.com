@@ -2,10 +2,10 @@
 hide: true
 category_id: internal
 subcategory_id: internal/flow
-id: internal/flow
-type: guide
 is_index: true
+id: internal/flow
 rank: 0
+type: guide
 total_steps: 5
 sibling_id: internal
 parent_id: internal

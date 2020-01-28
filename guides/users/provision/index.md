@@ -4,9 +4,9 @@ alias_paths:
   - /docs/provision-user-accounts
 category_id: users
 subcategory_id: users/provision
+is_index: true
 id: users/provision
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: users
 parent_id: users

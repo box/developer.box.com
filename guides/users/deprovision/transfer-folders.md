@@ -10,9 +10,9 @@ related_resources: []
 alias_paths: []
 category_id: users
 subcategory_id: users/deprovision
+is_index: false
 id: users/deprovision/transfer-folders
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: users/deprovision
 parent_id: users/deprovision

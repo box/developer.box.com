@@ -9,9 +9,9 @@ alias_paths:
   - /docs/box-postman-collection
 category_id: tooling
 subcategory_id: tooling/postman
+is_index: true
 id: tooling/postman
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: tooling
 parent_id: tooling

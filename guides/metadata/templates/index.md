@@ -1,66 +1,40 @@
 ---
-rank: 1
 alias_paths: []
 category_id: metadata
-subcategory_id: metadata/templates
-id: metadata/templates
-type: guide
+subcategory_id: metadata/1-templates
 is_index: true
-total_steps: 1
+id: metadata/templates
+rank: 1
+type: guide
+total_steps: 6
 sibling_id: metadata
 parent_id: metadata
-next_page_id: ''
+next_page_id: metadata/templates/list
 previous_page_id: ''
 ---
 
-# Metadata Templates
+# Metadata templates
 
-A [Metadata Template][template] describes a set of key/value
+A [metadata template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
 
 For example, an `invoiceData` template might hold data about an invoice, having
-a field for the invoice ID as well as the purchase order ID.
+a field for the invoice ID as well as the customer ID.
 
 A file or folder can have multiple distinct template [instances][instance]
-associated with it, such as a `marketingCollateral` template instance and a
-`retentionPolicy` template instances.
+associated with it, such as a `marketingCollateral` instance and a
+`retentionPolicy` instance.
 
-## Template & Key Name
+## Metadata scopes
 
-When a metadata template is created a `templateKey` is automatically generated
-from the `name` of the template, removing any spaces and irregular characters in
-the name, and transforming it to camel case format.
+Metadata templates are grouped into two distinct groups, or **scopes**.
 
-For example, a metadata template that is named
-`Test Name (with-special_) Characters` will have a `templateKey` of
-`testNameWithspecialCharacters`.
+<CTA to='g://metadata/templates/scopes'>
+Learn more about Metadata Scopes
 
-This template key is then used when making any API requests to get the template's
-information or assign it to an item.
-
-## Metadata Scopes
-
-Template instances are also grouped by into two distinct groups, or **scopes**.
-
-* **`global`**: a group of templates that is available to everyone using Box,
-  regardless of the enterprise they are in. An example is the
-  `global.properties` template that serves as a place to put free-form key/value
-  `string` pairs without any additional schema associated with it.
-* **`enterprise_*`**: a group of templates defined by that specific enterprise.
-  These templates are either created by admin's in the web application, or by
-  applications using the API.
-
-## Types
-
-Templates support four attributes types: `string`, `enum`, `float`, and `date`.
-Dates are in a RFC3339 format with up to millisecond precision.
+</CTA>
 
 ## Restrictions
-
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web app
-or the API to manage templates.
 
 There is a limit of 500 templates per enterprise.
 

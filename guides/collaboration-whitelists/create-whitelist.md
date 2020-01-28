@@ -12,9 +12,9 @@ related_resources: []
 alias_paths: []
 category_id: collaboration-whitelists
 subcategory_id: null
+is_index: false
 id: collaboration-whitelists/create-whitelist
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: collaboration-whitelists
 parent_id: collaboration-whitelists

@@ -5,9 +5,9 @@ alias_paths:
   - /docs/upload-files
 category_id: files
 subcategory_id: null
+is_index: true
 id: files
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: guides
 parent_id: guides

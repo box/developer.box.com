@@ -8,9 +8,9 @@ related_resources: []
 alias_paths: []
 category_id: collaboration-whitelists
 subcategory_id: null
+is_index: true
 id: collaboration-whitelists
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: guides
 parent_id: guides

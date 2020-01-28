@@ -11,9 +11,9 @@ alias_paths:
   - /docs/file-workflow-with-webhooks
 category_id: webhooks
 subcategory_id: webhooks/manage
+is_index: true
 id: webhooks/manage
 type: guide
-is_index: true
 total_steps: 7
 sibling_id: webhooks
 parent_id: webhooks

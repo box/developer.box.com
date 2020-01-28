@@ -10,9 +10,9 @@ alias_paths:
   - /docs/work-with-folders
 category_id: folders
 subcategory_id: null
+is_index: true
 id: folders
 type: guide
-is_index: true
 total_steps: 0
 sibling_id: guides
 parent_id: guides

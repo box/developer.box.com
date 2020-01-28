@@ -14,9 +14,9 @@ related_resources: []
 alias_paths: []
 category_id: authentication
 subcategory_id: authentication/oauth2
+is_index: false
 id: authentication/oauth2/with-sdk
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: authentication/oauth2
 parent_id: authentication/oauth2

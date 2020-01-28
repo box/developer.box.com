@@ -11,9 +11,9 @@ related_resources: []
 alias_paths: []
 category_id: tooling
 subcategory_id: tooling/sdks
+is_index: false
 id: tooling/sdks/java
 type: guide
-is_index: false
 total_steps: 6
 sibling_id: tooling/sdks
 parent_id: tooling/sdks

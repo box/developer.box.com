@@ -3,9 +3,9 @@ rank: 1
 alias_paths: []
 category_id: security
 subcategory_id: security/terms-of-service
+is_index: true
 id: security/terms-of-service
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: security
 parent_id: security

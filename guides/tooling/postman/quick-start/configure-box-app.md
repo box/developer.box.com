@@ -5,8 +5,8 @@ related_guides:
   - applications/custom-apps
 category_id: tooling
 subcategory_id: tooling/postman
-id: tooling/postman/quick-start/configure-box-app
 is_index: false
+id: tooling/postman/quick-start/configure-box-app
 rank: 2
 total_steps: 6
 sibling_id: tooling/postman/quick-start

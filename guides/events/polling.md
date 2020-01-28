@@ -10,9 +10,9 @@ required_guides: []
 alias_paths: []
 category_id: events
 subcategory_id: null
+is_index: false
 id: events/polling
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: events
 parent_id: events

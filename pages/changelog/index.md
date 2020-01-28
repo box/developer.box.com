@@ -5,9 +5,9 @@ centered: true
 rank: 0
 category_id: changelog
 subcategory_id: null
+is_index: true
 id: changelog
 type: page
-is_index: true
 total_steps: 2
 sibling_id: pages
 parent_id: pages

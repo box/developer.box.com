@@ -11,9 +11,9 @@ alias_paths:
   - /annotations-beta
 category_id: embed
 subcategory_id: embed/ui-elements
+is_index: false
 id: embed/ui-elements/annotations
 type: guide
-is_index: false
 total_steps: 14
 sibling_id: embed/ui-elements
 parent_id: embed/ui-elements

@@ -13,9 +13,9 @@ alias_paths:
   - /docs/authentication-with-jwt
 category_id: applications
 subcategory_id: applications/custom-apps
+is_index: false
 id: applications/custom-apps/jwt-setup
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: applications/custom-apps
 parent_id: applications/custom-apps

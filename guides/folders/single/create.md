@@ -11,9 +11,9 @@ related_resources:
 alias_paths: []
 category_id: folders
 subcategory_id: folders/single
+is_index: false
 id: folders/single/create
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: folders/single
 parent_id: folders/single

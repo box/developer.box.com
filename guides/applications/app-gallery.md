@@ -10,9 +10,9 @@ alias_paths:
   - /docs/publishing-your-application
 category_id: applications
 subcategory_id: null
+is_index: false
 id: applications/app-gallery
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: applications
 parent_id: applications

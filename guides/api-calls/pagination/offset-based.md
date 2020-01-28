@@ -20,9 +20,9 @@ required_guides: []
 alias_paths: []
 category_id: api-calls
 subcategory_id: api-calls/pagination
+is_index: false
 id: api-calls/pagination/offset-based
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: api-calls/pagination
 parent_id: api-calls/pagination

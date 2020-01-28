@@ -10,10 +10,10 @@ alias_paths:
 centered: true
 category_id: sdks-and-tools
 subcategory_id: null
-id: sdks-and-tools
-type: page
 is_index: true
+id: sdks-and-tools
 rank: 0
+type: page
 total_steps: 0
 sibling_id: pages
 parent_id: pages

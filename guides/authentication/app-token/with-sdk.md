@@ -11,9 +11,9 @@ related_resources: []
 alias_paths: []
 category_id: authentication
 subcategory_id: authentication/app-token
+is_index: false
 id: authentication/app-token/with-sdk
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: authentication/app-token
 parent_id: authentication/app-token

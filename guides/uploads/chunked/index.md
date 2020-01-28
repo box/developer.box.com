@@ -3,9 +3,9 @@ rank: 2
 alias_paths: []
 category_id: uploads
 subcategory_id: uploads/chunked
+is_index: true
 id: uploads/chunked
 type: guide
-is_index: true
 total_steps: 5
 sibling_id: uploads
 parent_id: uploads

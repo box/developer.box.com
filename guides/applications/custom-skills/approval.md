@@ -7,9 +7,9 @@ related_resources: []
 alias_paths: []
 category_id: applications
 subcategory_id: applications/custom-skills
+is_index: false
 id: applications/custom-skills/approval
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: applications/custom-skills
 parent_id: applications/custom-skills

@@ -8,9 +8,9 @@ alias_paths:
   - /docs/box-dicom
 category_id: embed
 subcategory_id: null
+is_index: false
 id: embed/box-dicom
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: embed
 parent_id: embed

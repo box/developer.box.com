@@ -1,26 +1,25 @@
 ---
-rank: 2
-alias_paths: []
 category_id: metadata
-subcategory_id: metadata/instances
-id: metadata/instances
-type: guide
+subcategory_id: metadata/3-instances
 is_index: true
-total_steps: 1
+id: metadata/instances
+rank: 3
+type: guide
+total_steps: 5
 sibling_id: metadata
 parent_id: metadata
-next_page_id: ''
-previous_page_id: metadata/instances/update
+next_page_id: metadata/instances/update
+previous_page_id: metadata/instances/get
 ---
 
-# Metadata Instances
+# Metadata instances
 
-A Metadata Instance describes the relation between
-a [MetaData Template][template] and a file or folder. It includes the values set
-for this file or folder for the metadata template
+A [metadata instance][instance] describes the relation between
+a [metadata template][template] and a file or folder. It includes the values
+that are assigned for every field of the template.
 
 For example, a user might have assigned an `invoiceData` metadata template to a
-file and provided 2 values, one for the invoice ID and one for the purchase
-order ID.
+file and provided 2 values, one for the invoice ID and one for the customer ID.
 
 [template]: g://metadata/templates
+[instance]: g://metadata/instances

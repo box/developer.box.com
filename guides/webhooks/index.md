@@ -17,9 +17,9 @@ alias_paths:
   - /docs/getting-started-with-webhooks-v2
 category_id: webhooks
 subcategory_id: null
+is_index: true
 id: webhooks
 type: guide
-is_index: true
 total_steps: 1
 sibling_id: guides
 parent_id: guides
