@@ -54,8 +54,7 @@ annotator.init(scale);
 ```
 
 Where `disabledAnnotationTypes` is a string of valid annotation types to
-disable. See [Enabling/Disabling Annotations and Annotation
-Types](#section-enabling-disabling-annotations-and-annotation-types) below for
+disable. See below for
 more details on viewer specific annotation configurations.
 
 ## Authentication

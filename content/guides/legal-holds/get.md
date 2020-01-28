@@ -4,7 +4,7 @@ related_endpoints:
   - get_legal_hold_policies_id
 related_guides: 
   - legal-holds/list
-related_resource:
+related_resources:
   - legal_hold_policy
 required_guides: []
 alias_paths: []
