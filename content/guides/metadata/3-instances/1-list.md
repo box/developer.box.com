@@ -1,4 +1,7 @@
 ---
+related_resources:
+  - metadata
+  - metadata_template
 related_endpoints:
   - get_files_id_metadata
   - get_folders_id_metadata

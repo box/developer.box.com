@@ -1,4 +1,6 @@
 ---
+required_guides:
+  - metadata/templates/scopes
 related_endpoints:
   - get_metadata_templates_enterprise
   - get_metadata_templates_global
@@ -6,6 +8,8 @@ related_guides:
   - metadata/templates/get
   - metadata/templates/create
   - metadata/templates/update
+related_resources: 
+  - metadata_templates
 ---
 
 # List all metadata templates

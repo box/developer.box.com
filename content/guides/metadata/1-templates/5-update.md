@@ -1,11 +1,13 @@
 ---
 related_endpoints:
   - put_metadata_templates_id_id_schema
-related_guides: []
+related_guides: 
+  - metadata/templates/create
+required_guides:
+  - metadata/templates/scopes
+  - metadata/templates/create
 related_resources:
   - metadata_template
-required_guides: []
-alias_paths: []
 ---
 
 # Update a metadata template

@@ -2,11 +2,15 @@
 related_endpoints:
   - delete_files_id_metadata_id_id
   - delete_folders_id_metadata_id_id
-related_guides: []
 related_resources:
   - metadata
-required_guides: []
-alias_paths: []
+  - metadata_template
+required_guides:
+  - metadata/instances/list
+related_guides:
+  - metadata/instances/list
+  - metadata/instances/create
+  - metadata/templates/scopes
 ---
 
 # Remove metadata from an item

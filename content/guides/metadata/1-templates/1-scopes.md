@@ -1,4 +1,13 @@
 ---
+related_endpoints:
+  - get_metadata_templates_global
+  - get_metadata_templates_enterprise
+related_guides: []
+related_resources:
+  - metadata
+  - metadata_template
+required_guides: []
+alias_paths: []
 ---
 
 # Metadata template scopes
@@ -19,7 +28,7 @@ Metadata templates are grouped into two distinct groups, or **scopes**.
   enterprise the template belongs to.
 
 <Message warning>
-  # Permissions 
+  # Permissions
 
   It is important to note that no metadata templates can be created within the
   `global` scope, and that metadata templates made within the user's enterprise

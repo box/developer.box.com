@@ -6,6 +6,8 @@ related_guides:
   - metadata/templates/scopes
   - metadata/templates/list
   - metadata/templates/create
+related_resources:
+  - metadata_templates
 ---
 
 # Get a metadata template

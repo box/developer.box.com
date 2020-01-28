@@ -5,6 +5,10 @@ related_guides:
   - metadata/templates/scopes
   - metadata/templates/list
   - metadata/templates/update
+required_guides:
+  - metadata/templates/scopes
+related_resources: 
+  - metadata_templates
 ---
 
 # Create a metadata template

@@ -7,10 +7,6 @@ related_guides:
   - metadata/templates/update
 related_resources:
   - metadata_template
-  - metadata_field
-  - metadata_option
-required_guides: []
-alias_paths: []
 ---
 
 # String metadata field

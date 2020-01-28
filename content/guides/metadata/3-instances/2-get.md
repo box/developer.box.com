@@ -1,13 +1,18 @@
 ---
+related_resources:
+  - metadata
+  - metadata_template
 related_endpoints:
   - get_files_id_metadata_id_id
   - get_folders_id_metadata_id_id
 related_guides:
   - metadata/instances/list
   - metadata/instances/create
+  - metadata/templates/scopes
+  - metadata/templates/list
 ---
 
-# Get metadata instance on item
+# Get metadata on item
 
 Information about an instance of a metadata template assigned to a file or
 folder can be retrieved using the item's `id`, and the template's `templateKey`

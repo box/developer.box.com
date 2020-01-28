@@ -1,5 +1,4 @@
 ---
-alias_paths: []
 ---
 
 # Metadata instances
