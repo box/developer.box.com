@@ -9,11 +9,14 @@ Metadata templates are grouped into two distinct groups, or **scopes**.
   regardless of the enterprise they are in. An example is the
   `global.properties` template that serves as a place to put free-form key/value
   `string` pairs without any additional schema associated with it.
-* **`enterprise`**: a group of templates defined by that specific enterprise.
-  These templates are either created by admin's in the web application, or by
-  applications using the API. When requesting information about a template in
-  this group the `scope` will often be listed as `enterprise_*` where `*` is the
-  ID of the enterprise.
+* **`enterprise`** or **`enterprise_*`: a group of templates defined by a user
+  within an enterprise. These templates are either created by admin's in the web
+  application, or by applications using the API. When accessing or creating
+  templates for within the authenticated user's enterprise a short-hand of
+  `enterprise` can be used. When accessing templates that belong to another
+  enterprise - for example when accessing metadata on files belonging to other
+  enterprises - the scope `enterprise_*` is used where `*` is the ID of the
+  enterprise the template belongs to.
 
 <Message warning>
   # Permissions 

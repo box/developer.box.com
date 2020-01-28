@@ -4,19 +4,19 @@ alias_paths: []
 
 # Metadata templates
 
-A [Metadata Template][template] describes a set of key/value
+A [metadata template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
 
 For example, an `invoiceData` template might hold data about an invoice, having
-a field for the invoice ID as well as the purchase order ID.
+a field for the invoice ID as well as the customer ID.
 
 A file or folder can have multiple distinct template [instances][instance]
-associated with it, such as a `marketingCollateral` template instance and a
-`retentionPolicy` template instances.
+associated with it, such as a `marketingCollateral` instance and a
+`retentionPolicy` instance.
 
-## Metadata Scopes
+## Metadata scopes
 
-Template instances are also grouped into two distinct groups, or **scopes**.
+Metadata templates are grouped into two distinct groups, or **scopes**.
 
 <CTA to='g://metadata/templates/scopes'>
   Learn more about Metadata Scopes
