@@ -15,9 +15,9 @@ related_guides:
 
 # Apply metadata to an item
 
-A metadata template can be applied to a file or folder using the item's `id`, the
-template's `templateKey` and `scope`, and a set of values for each field in the
-template.
+A metadata template can be applied to a file or folder using the item's `id`,
+the template's `templateKey` and `scope`, and a set of values for each field in
+the template.
 
 <Message>
 
@@ -69,6 +69,71 @@ optional set of values for each [field][fields] in the template.
 The body of the request can contain a value for each [field][fields] in the
 template. To inspect what fields are present on a template, [inspect a
 metadata metadata template][g_get_metadata_template].
+
+For example, let's assume the following template.
+
+```json
+{
+  "id": "8120731a-41e4-11ea-b77f-2e728ce88125",
+  "type": "metadata_template",
+  "templateKey": "productInfo",
+  "scope": "enterprise_1234567",
+  "displayName": "Product Info",
+  "hidden": false,
+  "copyInstanceOnItemCopy": true,
+  "fields": [
+    {
+      "id": "feed71de-41e5-11ea-b77f-2e728ce88125",
+      "type": "string",
+      "key": "name",
+      "displayName": "Name",
+      "hidden": false
+    },
+    {
+      "id": "02b36bb6-41e6-11ea-b77f-2e728ce88125",
+      "type": "enum",
+      "key": "category",
+      "displayName": "Category",
+      "hidden": false,
+      "options": [
+        {
+          "id": "06a7bcc2-41e6-11ea-b77f-2e728ce88125",
+          "key": "SUVs"
+        },
+        {
+          "id": "0a50df02-41e6-11ea-b77f-2e728ce88125",
+          "key": "Saloons"
+        },
+        {
+          "id": "0e466be0-41e6-11ea-b77f-2e728ce88125",
+          "key": "Cabriolets"
+        }
+      ]
+    }
+  ]
+}
+```
+
+This template has 2 [template fields][fields], `name` and `category`. The `name`
+field is a regular text field, and the `category` is an enum.
+
+The request body to assign this template to a file or folder can include a value
+for any of the fields on the template. It is possible for the body to have no
+values for no fields.
+
+In this case, a valid example would be the following request body.
+
+```json
+{
+  "name": "Model 3",
+  "category": "SUVs"
+}
+```
+
+<Message warning>
+  The `category` field in this example is an `enum` field and needs to be one of
+  the available options on the field.
+</Message>
 
 [fields]: g://metadata/fields
 [scopes]: g://metadata/templates/scopes
