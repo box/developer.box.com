@@ -22,13 +22,14 @@ Metadata templates are grouped into two distinct groups, or **scopes**.
   Learn more about Metadata Scopes
 </CTA>
 
-## Restrictions
+## Permissions and restrictions
 
 There is a limit of 500 templates per enterprise.
 
-For more information on how to structure a metadata template, please refer to
-[this Box Community page][community].
+Creating metadata templates is restricted to users with admin permission. This
+means that only admins, or co-admins who have been granted rights to **Create
+and edit metadata templates for your company** by the admin can use the web
+app or the API to manage templates.
 
 [instance]: g://metadata/instances
 [template]: g://metadata/templates
-[community]: https://community.box.com/t5/How-to-Guides-for-Admins/How-to-Create-the-Right-Metadata-Structure-for-your-Enterprise/ta-p/43960
