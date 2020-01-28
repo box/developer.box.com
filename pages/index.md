@@ -44,10 +44,6 @@ Developer News
 
 </Header>
 
-<BlogCards >
-
-</BlogCards>
-
 <More to='https://medium.com/box-developer-blog' right>
 Developer Blog
 
