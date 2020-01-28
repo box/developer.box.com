@@ -42,7 +42,7 @@ collection. It is a complete Postman collection that covers every API endpoint
 and is auto-generated from our [OpenAPI specification][openapi]. It is expected
 to get many more updates including some to make authentication a lot easier.
 
-<Postman id='62d85bbca8bf7bd5a48b' env='postman_credentials' >
+<Postman id='62d85bbca8bf7bd5a48b' anonymous >
 
 </Postman>
 

@@ -39,10 +39,10 @@ application.
 
 To complete a JWT authorization the following steps need to be completed.
 
-1. [Read the configuration file](#1-read-json-configuration)
-2. [Decrypt the private key](#2-decrypt-private-key)
-3. [Create the JWT assertion](#3-create-jwt-assertion)
-4. [Request the Access Token](#4-request-access-token)
+1. Read the configuration file
+2. Decrypt the private key
+3. Create the JWT assertion
+4. Request the Access Token
 
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of the application.
@@ -842,10 +842,10 @@ $access_token = json_decode($data)->access_token;
 By now the application should be able to authorize an application using JWT
 without using any of the SDKs, by using the following steps.
 
-1. [Read the configuration file](#1-read-json-configuration)
-2. [Decrypt the private key](#2-decrypt-private-key)
-3. [Create the JWT assertion](#3-create-jwt-assertion)
-4. [Request the Access Token](#4-request-access-token)
+1. Read the configuration file
+2. Decrypt the private key
+3. Create the JWT assertion
+4. Request the Access Token
 
 To learn how to use this token head over to the guide on [Making API
 calls](g://api-calls).

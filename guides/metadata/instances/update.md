@@ -4,7 +4,7 @@ related_endpoints:
   - put_files_id_metadata_id_id
   - put_folders_id_metadata_id_id
 related_guides: []
-related_resource:
+related_resources:
   - metadata
 required_guides: []
 alias_paths: []

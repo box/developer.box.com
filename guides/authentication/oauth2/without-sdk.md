@@ -39,10 +39,10 @@ accessible to the user.
 
 To complete an OAuth 2.0 flow the following steps need to be completed.
 
-1. [Configure the authorization URL](#1-configure-authorization-url)
-2. [Redirect the user to the Box website](#2-redirect-user)
-3. [The user grants the application access](#3-user-grants-application-access)
-4. [Exchange the authorization code for an access token](#4-exchange-code)
+1. Configure the authorization URL
+2. Redirect the user to the Box website
+3. The user grants the application access
+4. Exchange the authorization code for an access token
 
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
@@ -328,10 +328,10 @@ let accessToken = await axios.post(
 By now the application should be able to authorize a user using OAuth 2.0 without
 using any of the SDKs, by using the following steps.
 
-1. [Configure the authorization URL](#1-configure-authorization-url)
-2. [Redirect the user to the Box website](#2-redirect-user)
-3. [The user grants the application access](#3-user-grants-application-access)
-4. [Exchange the authorization code for an access token](#4-exchange-code)
+1. Configure the authorization URL
+2. Redirect the user to the Box website
+3. The user grants the application access
+4. Exchange the authorization code for an access token
 
 To learn how to use this token head over to the guide on [Making API
 calls](g://api-calls).

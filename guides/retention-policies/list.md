@@ -4,7 +4,7 @@ related_endpoints:
   - get_retention_policies
 related_guides:
   - retention-policies/get
-related_resource:
+related_resources:
   - retention_policies
 required_guides: []
 alias_paths: []
