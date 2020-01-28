@@ -76,7 +76,7 @@ With the Postman App installed the **Box Postman Collection** can be loaded into
 it. Clicking the button below you will load the **Box Postman
 Collection** into Postman.
 
-<Postman id='62d85bbca8bf7bd5a48b' >
+<Postman id='62d85bbca8bf7bd5a48b' anonymous >
 
 </Postman>
 
