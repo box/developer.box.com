@@ -2,7 +2,7 @@ const Processor = require('../../src/markdown/Processor')
 
 
 beforeAll(() => {
-  processor = new Processor({ sourcePath: '' })
+  processor = new Processor({ sourcePath: 'content/guides/foo.md' })
 })
 
 test('should transform a complicated use case', () => {
@@ -45,9 +45,17 @@ notes: |-
 ---
 test: foo
 notes: Test
-id: ''
-isIndex: false
+category_id: null
+subcategory_id: null
+id: foo.md
+type: guide
+is_index: false
 rank: 0
+total_steps: 0
+sibling_id: guides
+parent_id: index.md
+next_page_id: index.md
+previous_page_id: ''
 ---
 
 <Foobar id='no1' data-type="type" disabled>
