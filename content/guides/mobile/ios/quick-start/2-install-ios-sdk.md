@@ -5,7 +5,9 @@ hide_in_page_nav: true
 
 # Install the iOS SDK
 
-To use the **iOS SDK** you will need to import the required dependencies into your project using one of the available package manager options.
+With an iOS application in place, you will need to import the required **Box
+iOS SDK** dependencies into your project using one of the available package
+manager options.
 
 ## Select a package manager to use
 
@@ -14,7 +16,8 @@ To use the **iOS SDK** you will need to import the required dependencies into yo
     # Carthage
 
     Carthage is a decentralized dependency manager for Swift
-    and Objective-C Cocoa projects.
+    and Objective-C Cocoa projects. It is open-source and built
+    with Swift.
   </Choose>
 
   <Choose option='ios.pm_type' value='cocoapods' color='none'>
@@ -37,6 +40,17 @@ To use the **iOS SDK** you will need to import the required dependencies into yo
 
 <Choice option='ios.pm_type' value='carthage' color='blue'>
   # Install the iOS SDK using Carthage
+
+  1. From a terminal window, install Carthage: `brew install carthage`.
+    [See here](https://github.com/Carthage/Carthage#installing-carthage)
+    for other installation methods.
+  2. At the root of your iOS application folder, where the `APPNAME.xcodeproj`
+     is located, create a new file named `Cartfile`, without an extension.
+  3. Load `Cartfile`, add the **Box iOS SDK** dependency, then save and close
+     the file: `git "https://github.com/box/box-ios-sdk.git" ~> 3.0`.
+  4. From the terminal, in the folder where the `Cartfile` is present, update
+     all dependencies: `carthage update --platform iOS`.
+
 </Choice>
 
 <Choice option='ios.pm_type' value='cocoapods' color='none'>
@@ -50,7 +64,7 @@ To use the **iOS SDK** you will need to import the required dependencies into yo
 ## Summary
 
 * You either selected to install the iOS dependencies using Carthage
-  * TBD
+  * TB
 * Or selected to use **CocoaPods** and
   * TBD
 * Or selected to use the **Swift Package Manager** and
