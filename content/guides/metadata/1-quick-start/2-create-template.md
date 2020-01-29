@@ -207,7 +207,7 @@ The API will return the newly created metadata template.
 ```
 
 <Message notice>
-  ## Template key
+  # Template key
 
   Although you did not explicitly set the template key the key is automatically
   derived from the `displayName` value. In this case, the `templateKey` would be
