@@ -6,7 +6,8 @@ hide_in_page_nav: true
 # Create an iOS App
 
 Before installing the Box iOS SDK you'll need to have an iOS application
-available to add the dependencies into. 
+available to add the dependencies into. We'll create a new blank application
+now.
 
 ## Setup an iOS App
 
@@ -22,7 +23,8 @@ available to add the dependencies into.
   <Choose option='ios.app_setup' value='existing' color='none'>
     # Use an existing iOS application
 
-    If you have an existing iOS application created and would like 
+    If you have some iOS development experience and already have a blank
+    iOS application created.
   </Choose>
 </Grid>
 
@@ -46,7 +48,7 @@ available to add the dependencies into.
 <Choice option='ios.app_setup' value='existing' color='none'>
   # Use an existing iOS application
 
-  If you have an existing application, skip to the next step.
+  If you have an existing blank application, skip to the next step.
 </Choice>
 
 ## Summary

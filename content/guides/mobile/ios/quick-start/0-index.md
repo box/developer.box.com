@@ -26,7 +26,7 @@ This guide will take you through the following steps.
    into your project.
 3. [Configure a Box App](g://mobile/ios/quick-start/configure-box-app/)
    so that the iOS SDK can access the Box API.
-4. [Make a first API call](g://mobile/ios/quick-start/make-api-call/)
+4. [Make an API call](g://mobile/ios/quick-start/make-api-call/)
    to the Box API with the iOS SDK.
 
 <Next>
