@@ -10,7 +10,7 @@ required_guides:
 related_guides:
   - metadata/instances/list
   - metadata/instances/create
-  - metadata/templates/scopes
+  - metadata/scopes
 ---
 
 # Remove metadata from an item
@@ -51,4 +51,4 @@ the instance has been successfully removed from the folder.
 
 [e_on_file]: e://delete_files_id_metadata_id_id
 [e_on_folder]: e://delete_folders_id_metadata_id_id
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes

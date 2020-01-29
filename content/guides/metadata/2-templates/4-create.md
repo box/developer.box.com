@@ -2,11 +2,11 @@
 related_endpoints:
   - post_metadata_templates_schema
 related_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/list
   - metadata/templates/update
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
 related_resources: 
   - metadata_templates
 ---

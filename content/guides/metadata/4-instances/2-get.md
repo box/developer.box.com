@@ -8,7 +8,7 @@ related_endpoints:
 related_guides:
   - metadata/instances/list
   - metadata/instances/create
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/list
 ---
 
@@ -61,6 +61,6 @@ with the folder's `folder_id` and the template's `scope` and `templateKey`.
 
 [e_on_file]: e://get_files_id_metadata_id_id
 [e_on_folder]: e://get_folders_id_metadata_id_id
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes
 [g_list_templates]: g://metadata/templates/list
 [g_list_instances_item]: g://metadata/instances/list

@@ -10,7 +10,7 @@ required_guides:
 related_guides:
   - metadata/instances/list
   - metadata/instances/update
-  - metadata/templates/scopes
+  - metadata/scopes
 ---
 
 # Apply metadata to an item
@@ -136,7 +136,7 @@ In this case, a valid example would be the following request body.
 </Message>
 
 [fields]: g://metadata/fields
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes
 [e_on_file]: e://post_files_id_metadata_id_id
 [e_on_folder]: e://post_folders_id_metadata_id_id
 [g_list_templates]: g://metadata/templates/list

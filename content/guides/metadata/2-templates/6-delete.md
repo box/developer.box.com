@@ -2,12 +2,12 @@
 related_endpoints:
   - delete_metadata_templates_id_id_schema
 related_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/create
 related_resources:
   - metadata_template
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
 ---
 
 # Delete a metadata template

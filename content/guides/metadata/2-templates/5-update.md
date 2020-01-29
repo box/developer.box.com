@@ -4,7 +4,7 @@ related_endpoints:
 related_guides: 
   - metadata/templates/create
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/create
 related_resources:
   - metadata_template

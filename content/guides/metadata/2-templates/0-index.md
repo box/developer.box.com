@@ -18,7 +18,7 @@ associated with it, such as a `marketingCollateral` instance and a
 
 Metadata templates are grouped into two distinct groups, or **scopes**.
 
-<CTA to='g://metadata/templates/scopes'>
+<CTA to='g://metadata/scopes'>
   Learn more about Metadata Scopes
 </CTA>
 
