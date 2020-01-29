@@ -1,6 +1,4 @@
 ---
-related_guides:
- - 
 related_pages:
  - sdks-and-tools
 ---
@@ -36,14 +34,18 @@ dependencies {
 
 ## Clone the source
 
-The Box Android SDK source code may be obtained by cloning or downloading the [project from Github][android-sdk-github].
+The Box Android SDK source code may be obtained by cloning or downloading the
+[project from Github][android-sdk-github].
 
 ## Download precompiled JARs
 
-Precompiled JARs for the Android SDK may be obtained from the Github project [releases page][android-sdk-github-releases]
+Precompiled JARs for the Android SDK may be obtained from the Github project
+[releases page][android-sdk-github-releases]
 
 <Message warning>
-  If one of the precompiled JARs is being used, the Android SDK will also require the following dependency: `minimal-json v0.9.1` (for Maven: `com.eclipsesource.minimal-json:minimal-json:0.9.1`)
+  If one of the precompiled JARs is being used, the Android SDK will also
+  require the following dependency: `minimal-json v0.9.1` (for Maven:
+  `com.eclipsesource.minimal-json:minimal-json:0.9.1`)
 </Message>
 
 [android-sdk-github]: https://github.com/box/box-android-sdk/tree/master/box-content-sdk
