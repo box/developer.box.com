@@ -8,7 +8,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/4-cascades
+subcategory_id: metadata/5-cascades
 is_index: false
 id: metadata/cascades/create
 rank: 3
@@ -16,7 +16,7 @@ type: guide
 total_steps: 5
 sibling_id: metadata/cascades
 parent_id: metadata/cascades
-next_page_id: metadata/cascades
+next_page_id: metadata/cascades/force-apply
 previous_page_id: metadata/cascades/get
 ---
 

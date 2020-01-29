@@ -8,7 +8,7 @@ related_guides:
 related_resources:
   - metadata_template
 category_id: metadata
-subcategory_id: metadata/2-fields
+subcategory_id: metadata/3-fields
 is_index: false
 id: metadata/fields/multi-select
 rank: 5

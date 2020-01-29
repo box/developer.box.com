@@ -3,22 +3,22 @@ related_endpoints:
   - get_metadata_templates_id_id_schema
   - get_metadata_templates_id
 related_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/list
   - metadata/templates/create
 related_resources:
   - metadata_templates
 category_id: metadata
-subcategory_id: metadata/1-templates
+subcategory_id: metadata/2-templates
 is_index: false
 id: metadata/templates/get
 rank: 3
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/create
-previous_page_id: metadata/templates/list
+previous_page_id: metadata/templates
 ---
 
 # Get a metadata template
@@ -72,6 +72,6 @@ To get the `id` for a template, either
 
 [e_by_name]: e://get_metadata_templates_id_id_schema
 [e_by_id]: e://get_metadata_templates_id
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes
 [g_list_templates]: g://metadata/templates/list
 [g_list_instances_item]: g://metadata/instances/list

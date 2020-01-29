@@ -8,7 +8,7 @@ related_guides:
 related_resources:
   - metadata_template
 category_id: metadata
-subcategory_id: metadata/2-fields
+subcategory_id: metadata/3-fields
 is_index: false
 id: metadata/fields/enum
 rank: 4
@@ -17,7 +17,7 @@ total_steps: 5
 sibling_id: metadata/fields
 parent_id: metadata/fields
 next_page_id: metadata/fields/multi-select
-previous_page_id: metadata/fields/date
+previous_page_id: metadata/fields
 ---
 
 # Enum metadata field

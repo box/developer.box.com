@@ -10,7 +10,7 @@ related_guides:
   - metadata/instances/create
   - metadata/instances/update
 category_id: metadata
-subcategory_id: metadata/3-instances
+subcategory_id: metadata/4-instances
 is_index: false
 id: metadata/instances/list
 rank: 1

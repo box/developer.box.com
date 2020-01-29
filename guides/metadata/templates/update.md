@@ -4,17 +4,17 @@ related_endpoints:
 related_guides:
   - metadata/templates/create
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/create
 related_resources:
   - metadata_template
 category_id: metadata
-subcategory_id: metadata/1-templates
+subcategory_id: metadata/2-templates
 is_index: false
 id: metadata/templates/update
 rank: 5
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/delete

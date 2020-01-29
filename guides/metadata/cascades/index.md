@@ -1,15 +1,15 @@
 ---
 category_id: metadata
-subcategory_id: metadata/4-cascades
+subcategory_id: metadata/5-cascades
 is_index: true
 id: metadata/cascades
-rank: 4
+rank: 5
 type: guide
 total_steps: 5
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/cascades/delete
-previous_page_id: metadata/cascades/create
+next_page_id: ''
+previous_page_id: metadata/cascades/force-apply
 ---
 
 # Metadata cascade policies (Beta)

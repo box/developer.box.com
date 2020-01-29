@@ -7,7 +7,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/4-cascades
+subcategory_id: metadata/5-cascades
 is_index: false
 id: metadata/cascades/list
 rank: 1

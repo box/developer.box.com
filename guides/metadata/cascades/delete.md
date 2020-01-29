@@ -7,7 +7,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/4-cascades
+subcategory_id: metadata/5-cascades
 is_index: false
 id: metadata/cascades/delete
 rank: 5
@@ -16,7 +16,7 @@ total_steps: 5
 sibling_id: metadata/cascades
 parent_id: metadata/cascades
 next_page_id: ''
-previous_page_id: metadata/cascades
+previous_page_id: metadata/cascades/force-apply
 ---
 
 # Delete a metadata cascade policy

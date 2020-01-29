@@ -11,7 +11,7 @@ required_guides:
   - metadata/instances/create
   - metadata/templates/list
 category_id: metadata
-subcategory_id: metadata/3-instances
+subcategory_id: metadata/4-instances
 is_index: false
 id: metadata/instances/update
 rank: 4
@@ -20,7 +20,7 @@ total_steps: 5
 sibling_id: metadata/instances
 parent_id: metadata/instances
 next_page_id: metadata/instances/delete
-previous_page_id: metadata/instances
+previous_page_id: metadata/instances/create
 ---
 
 # Update metadata on an item

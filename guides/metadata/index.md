@@ -7,11 +7,11 @@ subcategory_id: null
 is_index: true
 id: metadata
 type: guide
-total_steps: 0
+total_steps: 1
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: ''
+previous_page_id: metadata/scopes
 ---
 
 # Metadata

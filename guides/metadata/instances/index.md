@@ -1,15 +1,15 @@
 ---
 category_id: metadata
-subcategory_id: metadata/3-instances
+subcategory_id: metadata/4-instances
 is_index: true
 id: metadata/instances
-rank: 3
+rank: 4
 type: guide
 total_steps: 5
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/instances/update
-previous_page_id: metadata/instances/get
+next_page_id: metadata/instances/delete
+previous_page_id: metadata/instances/create
 ---
 
 # Metadata instances

@@ -1,6 +1,6 @@
 ---
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
 related_endpoints:
   - get_metadata_templates_enterprise
   - get_metadata_templates_global
@@ -11,16 +11,16 @@ related_guides:
 related_resources:
   - metadata_templates
 category_id: metadata
-subcategory_id: metadata/1-templates
+subcategory_id: metadata/2-templates
 is_index: false
 id: metadata/templates/list
 rank: 2
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/get
-previous_page_id: metadata/templates
+previous_page_id: ''
 ---
 
 # List all metadata templates
@@ -67,7 +67,7 @@ This API uses [marker-based pagination][pagination] and can return a
 `next_marker` value in the response body to indicate that more templates might
 be available.
 
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes
 [get_global]: e://get_metadata_templates_global
 [get_enterprise]: e://get_metadata_templates_enterprise
 [pagination]: g://api-calls/pagination/marker-based

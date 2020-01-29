@@ -8,10 +8,10 @@ related_endpoints:
 related_guides:
   - metadata/instances/list
   - metadata/instances/create
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/list
 category_id: metadata
-subcategory_id: metadata/3-instances
+subcategory_id: metadata/4-instances
 is_index: false
 id: metadata/instances/get
 rank: 2
@@ -19,7 +19,7 @@ type: guide
 total_steps: 5
 sibling_id: metadata/instances
 parent_id: metadata/instances
-next_page_id: metadata/instances
+next_page_id: metadata/instances/create
 previous_page_id: metadata/instances/list
 ---
 
@@ -76,6 +76,6 @@ To get the `scope` and `templateKey` for a template, either
 
 [e_on_file]: e://get_files_id_metadata_id_id
 [e_on_folder]: e://get_folders_id_metadata_id_id
-[scopes]: g://metadata/templates/scopes
+[scopes]: g://metadata/scopes
 [g_list_templates]: g://metadata/templates/list
 [g_list_instances_item]: g://metadata/instances/list

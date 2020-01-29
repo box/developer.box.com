@@ -1,15 +1,15 @@
 ---
 alias_paths: []
 category_id: metadata
-subcategory_id: metadata/1-templates
+subcategory_id: metadata/2-templates
 is_index: true
 id: metadata/templates
-rank: 1
+rank: 2
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/templates/list
+next_page_id: metadata/templates/get
 previous_page_id: ''
 ---
 
@@ -29,18 +29,19 @@ associated with it, such as a `marketingCollateral` instance and a
 
 Metadata templates are grouped into two distinct groups, or **scopes**.
 
-<CTA to='g://metadata/templates/scopes'>
+<CTA to='g://metadata/scopes'>
 Learn more about Metadata Scopes
 
 </CTA>
 
-## Restrictions
+## Permissions and restrictions
 
 There is a limit of 500 templates per enterprise.
 
-For more information on how to structure a metadata template, please refer to
-[this Box Community page][community].
+Creating metadata templates is restricted to users with admin permission. This
+means that only admins, or co-admins who have been granted rights to **Create
+and edit metadata templates for your company** by the admin can use the web
+app or the API to manage templates.
 
 [instance]: g://metadata/instances
 [template]: g://metadata/templates
-[community]: https://community.box.com/t5/How-to-Guides-for-Admins/How-to-Create-the-Right-Metadata-Structure-for-your-Enterprise/ta-p/43960

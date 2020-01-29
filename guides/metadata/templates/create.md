@@ -2,20 +2,20 @@
 related_endpoints:
   - post_metadata_templates_schema
 related_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
   - metadata/templates/list
   - metadata/templates/update
 required_guides:
-  - metadata/templates/scopes
+  - metadata/scopes
 related_resources:
   - metadata_templates
 category_id: metadata
-subcategory_id: metadata/1-templates
+subcategory_id: metadata/2-templates
 is_index: false
 id: metadata/templates/create
 rank: 4
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/update

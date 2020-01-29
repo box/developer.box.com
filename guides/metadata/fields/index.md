@@ -1,15 +1,15 @@
 ---
 category_id: metadata
-subcategory_id: metadata/2-fields
+subcategory_id: metadata/3-fields
 is_index: true
 id: metadata/fields
-rank: 2
+rank: 3
 type: guide
 total_steps: 5
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/fields/date
-previous_page_id: metadata/fields/string
+next_page_id: metadata/fields/enum
+previous_page_id: metadata/fields/float
 ---
 
 # Metadata fields
