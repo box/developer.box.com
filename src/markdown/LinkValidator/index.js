@@ -13,11 +13,12 @@ const LOCAL_REFERENCE_REGEX = new RegExp(/\[.*\]\[([\w\-_]+)\]/, 'mg')
 const GUIDE_OR_PAGE_LINKS = new RegExp(/(guide|guides|g|page|pages|[^a-z]p):\/\/([a-z-_0-9.\/]*)/, 'ig')
 
 class LinkValidator {
-  constructor(source) {
+  constructor(source, allFiles) {
     this.source = source
     this.content = String(fs.readFileSync(source))
     this.dirname = path.dirname(source)
-    this.frontmatter = yaml.load(this.content.split('---')[1])
+    this.frontmatter = yaml.load(this.content.split('---')[1]) || {}
+    this.allFiles = allFiles.map(link => link.replace(/\/\d*-/g, '/'))
   }
 
   // checks for local links (./foo/bar) in the body
@@ -29,7 +30,7 @@ class LinkValidator {
       // get the full name for that file
       .map(link => ({
         original: link, 
-        resolved: path.resolve(this.dirname, link)
+        resolved: path.join(this.dirname, link)
       }))
   }
 
@@ -43,7 +44,7 @@ class LinkValidator {
       // get the full name for that file
       .map(link => ({
         original: link, 
-        resolved: path.resolve(this.dirname, link)
+        resolved: path.join(this.dirname, link)
       }))
   }
 
@@ -56,7 +57,7 @@ class LinkValidator {
         const type = match[1].startsWith('g') ? 'guide' : 'page'
         return ({
           original: match[0], 
-          resolved: path.resolve('content', `${type}s`, match[2])
+          resolved: path.join('content', `${type}s`, match[2])
         })
       })
   }
@@ -74,15 +75,15 @@ class LinkValidator {
     return [
       ...(this.frontmatter.related_guides || []).map(guide => ({ 
         original: guide, 
-        resolved: path.resolve('content', 'guides', guide)
+        resolved: path.join('content', 'guides', guide)
       })),
       ...(this.frontmatter.required_guides || []).map(guide => ({ 
         original: guide, 
-        resolved: path.resolve('content', 'guides', guide)
+        resolved: path.join('content', 'guides', guide)
       })),
       ...(this.frontmatter.related_pages || []).map(page => ({ 
         original: page, 
-        resolved: path.resolve('content', 'pages', page)
+        resolved: path.join('content', 'pages', page)
       }))
     ]
   }
@@ -92,17 +93,14 @@ class LinkValidator {
     return links.map(link => {
       // get the index and as well as the full markdown name
       const filename = link.resolved
-      const indexFilename = [filename, '/index', '.md'].join('')
-      const markdownFilename = [filename, '.md'].join('')
-      const lastSlashIndex = markdownFilename.lastIndexOf('/')
-      const indexedFileName = [markdownFilename.substring(0, lastSlashIndex), '/*-', markdownFilename.substring(lastSlashIndex+1)].join('')
+      const indexFilename = path.join(filename, 'index.md')
+      const markdownFilename = [filename.replace(/\/$/, ''), '.md'].join('')
 
       // check of any of the variations exists
       if (
-        !fs.existsSync(filename) && 
-        !fs.existsSync(markdownFilename) && 
-        !fs.existsSync(indexFilename) &&
-        !glob.sync(indexedFileName)[0]
+        !this.allFiles.includes(filename) && 
+        !this.allFiles.includes(markdownFilename) && 
+        !this.allFiles.includes(indexFilename) 
       ) {
         return {
           source: this.source,
@@ -114,9 +112,6 @@ class LinkValidator {
 
   validateReferences(references) {
     return references.map(reference => {
-      if (reference === 'status-code') {
-        console.dir(reference)
-      }
       if (!this.content.includes(`\n[${reference}]:`)) {
         return {
           source: this.source,

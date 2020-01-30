@@ -1,13 +1,13 @@
 const glob = require('glob')
-const fs = require('fs-extra')
-const path = require('path')
+
+const files = glob.sync('content/?(pages|guides)/**/*.md')
+const alLFiles = glob.sync('content/?(pages|guides)/**/*.?(png|gif|jpg|md|jpeg)')
 
 const LinkValidator = require('./LinkValidator')
 
-const files = glob.sync('content/?(pages|guides)/**/*.md')
 files.forEach(source => {
   test('check all local links are valid', () => {
-    const validator = new LinkValidator(source)
+    const validator = new LinkValidator(source, alLFiles)
     expect(validator).toHaveValidLocalLinks()
     expect(validator).toHaveValidLocalReferenceLinks()
     expect(validator).toHaveValidReferences()
