@@ -5,9 +5,9 @@ alias_paths:
   - /en/internal
 category_id: internal
 subcategory_id: null
+is_index: true
 id: internal
 type: guide
-is_index: true
 total_steps: 0
 sibling_id: guides
 parent_id: guides

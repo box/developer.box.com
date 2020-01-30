@@ -6,9 +6,9 @@ related_guides:
 alias_paths: []
 category_id: skills
 subcategory_id: skills/handle
+is_index: true
 id: skills/handle
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: skills
 parent_id: skills

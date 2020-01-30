@@ -3,9 +3,9 @@ rank: 130
 alias_paths: []
 category_id: collections
 subcategory_id: null
+is_index: true
 id: collections
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: guides
 parent_id: guides

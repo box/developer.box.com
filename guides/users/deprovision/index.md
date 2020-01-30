@@ -4,9 +4,9 @@ alias_paths:
   - /docs/deprovision-user-accounts
 category_id: users
 subcategory_id: users/deprovision
+is_index: true
 id: users/deprovision
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: users
 parent_id: users

@@ -4,10 +4,10 @@ alias_paths:
 centered: true
 category_id: newsletter
 subcategory_id: null
-id: newsletter
-type: page
 is_index: true
+id: newsletter
 rank: 0
+type: page
 total_steps: 0
 sibling_id: pages
 parent_id: pages

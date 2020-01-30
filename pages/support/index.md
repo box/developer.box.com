@@ -5,9 +5,9 @@ centered: true
 rank: 0
 category_id: support
 subcategory_id: null
+is_index: true
 id: support
 type: page
-is_index: true
 total_steps: 1
 sibling_id: pages
 parent_id: pages

@@ -6,9 +6,9 @@ required_guides: []
 alias_paths: []
 category_id: api-calls
 subcategory_id: api-calls/permissions-and-errors
+is_index: true
 id: api-calls/permissions-and-errors
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: api-calls
 parent_id: api-calls

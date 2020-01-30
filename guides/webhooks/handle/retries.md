@@ -7,9 +7,9 @@ required_guides: []
 alias_paths: []
 category_id: webhooks
 subcategory_id: webhooks/handle
+is_index: false
 id: webhooks/handle/retries
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: webhooks/handle
 parent_id: webhooks/handle

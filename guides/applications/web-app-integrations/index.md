@@ -9,9 +9,9 @@ alias_paths:
   - /docs/box-web-application-integrations
 category_id: applications
 subcategory_id: applications/web-app-integrations
+is_index: true
 id: applications/web-app-integrations
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: applications
 parent_id: applications

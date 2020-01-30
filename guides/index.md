@@ -6,9 +6,9 @@ required_guides: []
 alias_paths: []
 category_id: null
 subcategory_id: null
+is_index: true
 id: guides
 type: guide
-is_index: true
 total_steps: 0
 sibling_id: content
 parent_id: ''

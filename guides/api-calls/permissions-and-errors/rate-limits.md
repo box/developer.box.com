@@ -11,9 +11,9 @@ required_guides: []
 alias_paths: []
 category_id: api-calls
 subcategory_id: api-calls/permissions-and-errors
+is_index: false
 id: api-calls/permissions-and-errors/rate-limits
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors

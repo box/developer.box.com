@@ -11,9 +11,9 @@ related_resources:
   - folder
 category_id: folders
 subcategory_id: folders/single
+is_index: false
 id: folders/single/delete
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: folders/single
 parent_id: folders/single

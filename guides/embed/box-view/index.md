@@ -13,9 +13,9 @@ alias_paths:
   - /page/vr
 category_id: embed
 subcategory_id: embed/box-view
+is_index: true
 id: embed/box-view
 type: guide
-is_index: true
 total_steps: 5
 sibling_id: embed
 parent_id: embed

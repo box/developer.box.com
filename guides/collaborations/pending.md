@@ -11,9 +11,9 @@ related_resources:
   - user
 category_id: collaborations
 subcategory_id: null
+is_index: false
 id: collaborations/pending
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: collaborations
 parent_id: collaborations

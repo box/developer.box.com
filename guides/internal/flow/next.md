@@ -3,9 +3,9 @@ hide: true
 rank: 0
 category_id: internal
 subcategory_id: internal/flow
+is_index: false
 id: internal/flow/next
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: internal/flow
 parent_id: internal/flow

@@ -12,9 +12,9 @@ alias_paths:
   - /docs/upload-all-files-from-a-folder
 category_id: uploads
 subcategory_id: uploads/chunked
+is_index: false
 id: uploads/chunked/folder
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked

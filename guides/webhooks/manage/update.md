@@ -12,9 +12,9 @@ related_resources:
 alias_paths: []
 category_id: webhooks
 subcategory_id: webhooks/manage
+is_index: false
 id: webhooks/manage/update
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: webhooks/manage
 parent_id: webhooks/manage

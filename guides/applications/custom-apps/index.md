@@ -8,9 +8,9 @@ alias_paths:
   - /docs/box-platform
 category_id: applications
 subcategory_id: applications/custom-apps
+is_index: true
 id: applications/custom-apps
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: applications
 parent_id: applications

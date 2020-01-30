@@ -10,9 +10,9 @@ required_guides: []
 alias_paths: []
 category_id: legal-holds
 subcategory_id: null
+is_index: false
 id: legal-holds/get
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: legal-holds
 parent_id: legal-holds

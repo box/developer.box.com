@@ -14,8 +14,8 @@ related_resources: []
 alias_paths: []
 category_id: applications
 subcategory_id: applications/custom-apps
-id: applications/custom-apps/app-token-setup
 is_index: false
+id: applications/custom-apps/app-token-setup
 total_steps: 4
 sibling_id: applications/custom-apps
 parent_id: applications/custom-apps

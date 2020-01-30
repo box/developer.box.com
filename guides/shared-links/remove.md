@@ -12,9 +12,9 @@ related_resources: []
 alias_paths: []
 category_id: shared-links
 subcategory_id: null
+is_index: false
 id: shared-links/remove
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links

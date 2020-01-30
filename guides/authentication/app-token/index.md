@@ -12,9 +12,9 @@ related_resources: []
 alias_paths: []
 category_id: authentication
 subcategory_id: authentication/app-token
+is_index: true
 id: authentication/app-token
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: authentication
 parent_id: authentication

@@ -12,9 +12,9 @@ related_resources: []
 alias_paths: []
 category_id: authentication
 subcategory_id: null
+is_index: false
 id: authentication/sso
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: authentication
 parent_id: authentication

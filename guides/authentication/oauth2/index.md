@@ -11,9 +11,9 @@ alias_paths:
   - /docs/authenticate-with-oauth-2
 category_id: authentication
 subcategory_id: authentication/oauth2
+is_index: true
 id: authentication/oauth2
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: authentication
 parent_id: authentication

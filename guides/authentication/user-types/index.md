@@ -14,9 +14,9 @@ alias_paths:
   - /docs/service-account
 category_id: authentication
 subcategory_id: authentication/user-types
+is_index: true
 id: authentication/user-types
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: authentication
 parent_id: authentication

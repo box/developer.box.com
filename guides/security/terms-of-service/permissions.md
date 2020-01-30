@@ -9,9 +9,9 @@ related_resources:
 alias_paths: []
 category_id: security
 subcategory_id: security/terms-of-service
+is_index: false
 id: security/terms-of-service/permissions
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: security/terms-of-service
 parent_id: security/terms-of-service

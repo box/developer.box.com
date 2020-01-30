@@ -7,9 +7,9 @@ alias_paths:
   - /docs/object-model
 category_id: api-calls
 subcategory_id: null
+is_index: false
 id: api-calls/types-and-formats
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: api-calls
 parent_id: api-calls

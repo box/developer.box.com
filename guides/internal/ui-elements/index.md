@@ -3,9 +3,9 @@ rank: 1
 hide: true
 category_id: internal
 subcategory_id: internal/ui-elements
+is_index: true
 id: internal/ui-elements
 type: guide
-is_index: true
 total_steps: 8
 sibling_id: internal
 parent_id: internal

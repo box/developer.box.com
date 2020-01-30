@@ -11,9 +11,9 @@ related_resources: []
 alias_paths: []
 category_id: uploads
 subcategory_id: uploads/direct
+is_index: false
 id: uploads/direct/file
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: uploads/direct
 parent_id: uploads/direct

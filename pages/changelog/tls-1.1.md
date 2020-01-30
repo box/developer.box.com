@@ -6,9 +6,9 @@ centered: true
 rank: 2
 category_id: changelog
 subcategory_id: null
+is_index: false
 id: changelog/tls-1.1
 type: page
-is_index: false
 total_steps: 2
 sibling_id: changelog
 parent_id: changelog

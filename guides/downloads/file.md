@@ -9,9 +9,9 @@ related_resources: []
 alias_paths: []
 category_id: downloads
 subcategory_id: null
+is_index: false
 id: downloads/file
 type: guide
-is_index: false
 total_steps: 6
 sibling_id: downloads
 parent_id: downloads

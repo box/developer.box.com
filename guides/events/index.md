@@ -3,9 +3,9 @@ rank: 190
 alias_paths: []
 category_id: events
 subcategory_id: null
+is_index: true
 id: events
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: guides
 parent_id: guides

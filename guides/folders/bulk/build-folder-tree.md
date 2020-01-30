@@ -12,9 +12,9 @@ alias_paths:
   - /docs/build-a-folder-tree
 category_id: folders
 subcategory_id: folders/bulk
+is_index: false
 id: folders/bulk/build-folder-tree
 type: guide
-is_index: false
 total_steps: 1
 sibling_id: folders/bulk
 parent_id: folders/bulk

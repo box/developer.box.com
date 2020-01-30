@@ -9,9 +9,9 @@ related_resources: []
 alias_paths: []
 category_id: applications
 subcategory_id: applications/custom-apps
+is_index: false
 id: applications/custom-apps/app-approval
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: applications/custom-apps
 parent_id: applications/custom-apps

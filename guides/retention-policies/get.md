@@ -10,9 +10,9 @@ required_guides: []
 alias_paths: []
 category_id: retention-policies
 subcategory_id: null
+is_index: false
 id: retention-policies/get
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: retention-policies
 parent_id: retention-policies

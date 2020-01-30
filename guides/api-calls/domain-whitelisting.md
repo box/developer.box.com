@@ -10,9 +10,9 @@ alias_paths:
   - /docs/domain-whitelisting
 category_id: api-calls
 subcategory_id: null
+is_index: false
 id: api-calls/domain-whitelisting
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: api-calls
 parent_id: api-calls

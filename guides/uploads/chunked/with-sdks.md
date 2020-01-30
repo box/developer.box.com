@@ -11,9 +11,9 @@ related_resources: []
 alias_paths: []
 category_id: uploads
 subcategory_id: uploads/chunked
+is_index: false
 id: uploads/chunked/with-sdks
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked

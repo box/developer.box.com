@@ -14,9 +14,9 @@ alias_paths:
   - /docs/construct-jwt-claim-manually
 category_id: authentication
 subcategory_id: authentication/jwt
+is_index: false
 id: authentication/jwt/without-sdk
 type: guide
-is_index: false
 total_steps: 4
 sibling_id: authentication/jwt
 parent_id: authentication/jwt

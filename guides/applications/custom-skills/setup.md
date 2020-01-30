@@ -8,9 +8,9 @@ alias_paths:
   - /docs/configure-a-box-skill
 category_id: applications
 subcategory_id: applications/custom-skills
+is_index: false
 id: applications/custom-skills/setup
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: applications/custom-skills
 parent_id: applications/custom-skills

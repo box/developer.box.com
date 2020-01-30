@@ -10,9 +10,9 @@ alias_paths:
   - /docs/get-all-users
 category_id: users
 subcategory_id: null
+is_index: true
 id: users
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: guides
 parent_id: guides

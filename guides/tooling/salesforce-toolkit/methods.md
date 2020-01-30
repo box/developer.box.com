@@ -8,9 +8,9 @@ related_resources: []
 alias_paths: []
 category_id: tooling
 subcategory_id: tooling/salesforce-toolkit
+is_index: false
 id: tooling/salesforce-toolkit/methods
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit

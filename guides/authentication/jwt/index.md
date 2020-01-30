@@ -13,9 +13,9 @@ alias_paths:
   - /docs/app-auth
 category_id: authentication
 subcategory_id: authentication/jwt
+is_index: true
 id: authentication/jwt
 type: guide
-is_index: true
 total_steps: 4
 sibling_id: authentication
 parent_id: authentication

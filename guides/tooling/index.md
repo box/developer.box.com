@@ -8,9 +8,9 @@ alias_paths:
   - /sdks
 category_id: tooling
 subcategory_id: null
+is_index: true
 id: tooling
 type: guide
-is_index: true
 total_steps: 0
 sibling_id: guides
 parent_id: guides

@@ -10,9 +10,9 @@ related_resources: []
 alias_paths: []
 category_id: users
 subcategory_id: users/provision
+is_index: false
 id: users/provision/shared-folders
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: users/provision
 parent_id: users/provision

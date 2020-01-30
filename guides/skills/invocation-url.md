@@ -10,9 +10,9 @@ related_resources: []
 alias_paths: []
 category_id: skills
 subcategory_id: null
+is_index: false
 id: skills/invocation-url
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: skills
 parent_id: skills

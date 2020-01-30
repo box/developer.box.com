@@ -12,9 +12,9 @@ alias_paths:
   - /docs/sample-box-skills-projects
 category_id: skills
 subcategory_id: null
+is_index: false
 id: skills/examples
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: skills
 parent_id: skills

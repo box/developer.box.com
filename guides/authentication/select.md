@@ -8,9 +8,9 @@ alias_paths:
   - /docs/authentication-types-and-security
 category_id: authentication
 subcategory_id: null
+is_index: false
 id: authentication/select
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: authentication
 parent_id: authentication

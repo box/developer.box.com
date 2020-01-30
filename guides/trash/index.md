@@ -2,9 +2,9 @@
 rank: 150
 category_id: trash
 subcategory_id: null
+is_index: true
 id: trash
 type: guide
-is_index: true
 total_steps: 6
 sibling_id: guides
 parent_id: guides

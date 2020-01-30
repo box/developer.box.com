@@ -10,9 +10,9 @@ alias_paths:
   - /docs/search-for-content
 category_id: search
 subcategory_id: null
+is_index: true
 id: search
 type: guide
-is_index: true
 total_steps: 1
 sibling_id: guides
 parent_id: guides

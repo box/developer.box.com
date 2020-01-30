@@ -4,9 +4,9 @@ alias_paths:
   - /docs/configure-a-box-skill
 category_id: skills
 subcategory_id: null
+is_index: true
 id: skills
 type: guide
-is_index: true
 total_steps: 3
 sibling_id: guides
 parent_id: guides

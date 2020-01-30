@@ -9,9 +9,9 @@ alias_paths:
   - /docs/deep-linking-to-box-mobile-apps
 category_id: best-practices
 subcategory_id: null
+is_index: false
 id: best-practices/mobile-deep-linking
 type: guide
-is_index: false
 total_steps: 3
 sibling_id: best-practices
 parent_id: best-practices

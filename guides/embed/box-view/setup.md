@@ -7,9 +7,9 @@ alias_paths:
   - /docs/getting-started-box-view
 category_id: embed
 subcategory_id: embed/box-view
+is_index: false
 id: embed/box-view/setup
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: embed/box-view
 parent_id: embed/box-view

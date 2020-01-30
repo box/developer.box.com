@@ -10,9 +10,9 @@ related_resources:
 alias_paths: []
 category_id: web-links
 subcategory_id: null
+is_index: false
 id: web-links/create
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: web-links
 parent_id: web-links

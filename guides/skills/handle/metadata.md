@@ -9,9 +9,9 @@ related_resources: []
 alias_paths: []
 category_id: skills
 subcategory_id: skills/handle
+is_index: false
 id: skills/handle/metadata
 type: guide
-is_index: false
 total_steps: 2
 sibling_id: skills/handle
 parent_id: skills/handle

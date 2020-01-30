@@ -6,9 +6,9 @@ required_guides: []
 alias_paths: []
 category_id: api-calls
 subcategory_id: null
+is_index: false
 id: api-calls/suppress-notifications
 type: guide
-is_index: false
 total_steps: 7
 sibling_id: api-calls
 parent_id: api-calls

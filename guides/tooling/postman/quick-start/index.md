@@ -4,8 +4,8 @@ hide_step_number: true
 hide_in_page_nav: true
 category_id: tooling
 subcategory_id: tooling/postman
-id: tooling/postman/quick-start
 is_index: true
+id: tooling/postman/quick-start
 rank: 0
 total_steps: 6
 sibling_id: tooling/postman

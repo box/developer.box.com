@@ -4,9 +4,9 @@ alias_paths:
   - /widgets
 category_id: embed
 subcategory_id: null
+is_index: true
 id: embed
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: guides
 parent_id: guides

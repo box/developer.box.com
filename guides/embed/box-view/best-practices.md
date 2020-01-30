@@ -8,9 +8,9 @@ required_guides: []
 alias_paths: []
 category_id: embed
 subcategory_id: embed/box-view
+is_index: false
 id: embed/box-view/best-practices
 type: guide
-is_index: false
 total_steps: 5
 sibling_id: embed/box-view
 parent_id: embed/box-view

@@ -5,9 +5,9 @@ alias_paths:
   - /docs/authentication
 category_id: authentication
 subcategory_id: null
+is_index: true
 id: authentication
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: guides
 parent_id: guides

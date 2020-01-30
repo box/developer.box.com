@@ -11,9 +11,9 @@ alias_paths:
   - /docs/download-all-files-from-a-folder-1
 category_id: downloads
 subcategory_id: null
+is_index: false
 id: downloads/in-browser
 type: guide
-is_index: false
 total_steps: 6
 sibling_id: downloads
 parent_id: downloads

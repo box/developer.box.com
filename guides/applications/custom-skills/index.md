@@ -8,9 +8,9 @@ alias_paths:
   - /skills
 category_id: applications
 subcategory_id: applications/custom-skills
+is_index: true
 id: applications/custom-skills
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: applications
 parent_id: applications

@@ -3,9 +3,9 @@ rank: 1
 alias_paths: []
 category_id: uploads
 subcategory_id: uploads/direct
+is_index: true
 id: uploads/direct
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: uploads
 parent_id: uploads

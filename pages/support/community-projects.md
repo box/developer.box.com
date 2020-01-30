@@ -10,9 +10,9 @@ centered: true
 rank: 1
 category_id: support
 subcategory_id: null
+is_index: false
 id: support/community-projects
 type: page
-is_index: false
 total_steps: 1
 sibling_id: support
 parent_id: support

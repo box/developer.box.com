@@ -8,7 +8,6 @@ related_endpoints:
   - delete_webhooks_id
 related_resources:
   - webhook
-related_guides: null
 required_guides: []
 alias_paths:
   - /docs/work-with-webhooks
@@ -17,9 +16,9 @@ alias_paths:
   - /docs/getting-started-with-webhooks-v2
 category_id: webhooks
 subcategory_id: null
+is_index: true
 id: webhooks
 type: guide
-is_index: true
 total_steps: 1
 sibling_id: guides
 parent_id: guides

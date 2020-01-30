@@ -6,9 +6,9 @@ required_guides: []
 alias_paths: []
 category_id: api-calls
 subcategory_id: api-calls/pagination
+is_index: true
 id: api-calls/pagination
 type: guide
-is_index: true
 total_steps: 2
 sibling_id: api-calls
 parent_id: api-calls

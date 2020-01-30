@@ -5,9 +5,9 @@ alias_paths:
   - /docs/android-security-guidelines
 category_id: security
 subcategory_id: null
+is_index: true
 id: security
 type: guide
-is_index: true
 total_steps: 1
 sibling_id: guides
 parent_id: guides
