@@ -14,7 +14,7 @@ related_resources:
 <Message warning>
   Metadata cascade policies are currently in Beta and the syntax might change in
   the future.
-</Metadata>
+</Message>
 
 When a metadata cascade policy already exists on a folder the metadata instance
 can be force-applied to all items in a folder by calling the
