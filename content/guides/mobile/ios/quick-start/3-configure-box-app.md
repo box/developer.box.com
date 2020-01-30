@@ -20,17 +20,18 @@ valid for one hour before having to be manually refreshed.
     # Create a new Box app
 
     Create and configure a new Box JWT application from which a developer
-    token may be generated
+    token may be generated.
   </Choose>
 
   <Choose option='ios.app_type' value='use_own' color='red'>
     # Use an existing app
 
-    Use one of your existing Box JWT applications
+    Use one of your existing Box JWT applications from the Box developer
+    console.
   </Choose>
 </Grid>
 
-<Choice option='ios.app_type' value='use_own' color='blue'>
+<Choice option='ios.app_type' value='create_new' color='blue'>
   # Create a new Box app
 
   To create a new Box application that may be used to generate a developer

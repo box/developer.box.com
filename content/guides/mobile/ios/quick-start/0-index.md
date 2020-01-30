@@ -6,6 +6,10 @@ hide_in_page_nav: true
 
 # iOS SDK Quick Start
 
+<ImageFrame center>
+  ![iOS emulator](./xcode-code-snippet.png)
+</ImageFrame>
+
 The Box iOS SDK is a [Swift language](https://developer.apple.com/swift/)
 wrapper for adding the Box API into your iOS project.
 
