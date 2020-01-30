@@ -31,6 +31,13 @@ of `fields` to the [`POST /metadata_templates/schema`][e_create_template] API.
 
 </Samples>
 
+<Message notice>
+
+Metadata templates can only be created for the `enterprise` scope. Templates
+can not be created for the `global` scope.
+
+</Message>
+
 <Message warning>
 
 # Admin permissions required

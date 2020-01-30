@@ -18,8 +18,8 @@ A [metadata template field][r_field] describes a specific
 piece of data within a metadata template. For example, the ID of an invoice
 might be represented as an `id` field on an `invoiceData` template.
 
-Every metadata template contains a list of `field`, and each field is of one of
-the following types:
+Every metadata template contains a list of `field` objects, and each field is of
+one of the following types:
 
 <!-- markdownlint-disable line-length -->
 

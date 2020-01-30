@@ -58,9 +58,16 @@ To get the `scope` and `templateKey` for a template, either
 
 </Message>
 
-The body of the request can contain a value for each [field][fields] in the
-template. To inspect what fields are present on a template, [inspect a
-metadata metadata template][g_get_metadata_template].
+<Message warning>
+
+## Tuple already exists error
+
+When there is already metadata applied to this file for the given metadata
+template, a error is returned with the error code `tuple_already_exists`. In
+this case, it this case the instance needs to be [updated
+instead](g://metadata/instances/update).
+
+</Message>
 
 ## Apply metadata to a folder
 
@@ -80,6 +87,19 @@ To get the `scope` and `templateKey` for a template, either
 [list all instances on an folder][g_list_instances_item].
 
 </Message>
+
+<Message warning>
+
+## Tuple already exists error
+
+When there is already metadata applied to this folder for the given metadata
+template, a error is returned with the error code `tuple_already_exists`. In
+this case, it this case the instance needs to be [updated
+instead](g://metadata/instances/update).
+
+</Message>
+
+## Request body
 
 The body of the request can contain a value for each [field][fields] in the
 template. To inspect what fields are present on a template, [inspect a
@@ -144,6 +164,14 @@ In this case, a valid example would be the following request body.
   "category": "SUVs"
 }
 ```
+
+<Message notice>
+
+One exception is a `global` scoped template with the key `properties` that can
+be used to assign any data to a template. Using this template, any set of
+key/value pairs can be assigned to a template.
+
+</Message>
 
 <Message warning>
 
