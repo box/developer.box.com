@@ -3,7 +3,6 @@ rank: 195
 related_resources:
   - task
   - task_assignment
-alias_paths: null
 category_id: tasks
 subcategory_id: null
 is_index: true

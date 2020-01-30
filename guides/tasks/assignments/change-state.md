@@ -21,7 +21,7 @@ To update a task assignment in Box you will need to call the
 include a `resolution_state`, such as `completed`, `incomplete`,
 `approved`, or `rejected`.
 
-<Samples id='put_task_assignments_id' variation='resolution_state' >
+<Samples id='put_task_assignments_id' variant='resolution_state' >
 
 </Samples>
 

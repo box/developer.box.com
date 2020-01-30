@@ -20,6 +20,6 @@ To update a task assignment in Box you will need to call the
 [`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) API, and
 include the new `message` for the task assignment.
 
-<Samples id='put_task_assignments_id' variation='message' >
+<Samples id='put_task_assignments_id' variant='message' >
 
 </Samples>
