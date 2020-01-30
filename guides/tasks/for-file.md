@@ -2,12 +2,9 @@
 rank: 6
 related_endpoints:
   - get_files_id_tasks
-related_guides: null
-required_guides: []
 related_resources:
   - files
   - tasks
-alias_paths: []
 category_id: tasks
 subcategory_id: null
 is_index: false

@@ -1,9 +1,5 @@
 ---
 rank: 1
-related_endpoints: []
-related_guides: null
-required_guides: []
-alias_paths: []
 category_id: tasks
 subcategory_id: tasks/assignments
 is_index: true

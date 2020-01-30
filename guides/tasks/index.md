@@ -1,8 +1,5 @@
 ---
 rank: 195
-related_endpoints: []
-related_guides: []
-required_guides: []
 related_resources:
   - task
   - task_assignment

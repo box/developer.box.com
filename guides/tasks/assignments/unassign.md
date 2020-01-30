@@ -2,9 +2,6 @@
 rank: 3
 related_endpoints:
   - delete_task_assignments_id
-related_guides: []
-required_guides: []
-alias_paths: []
 category_id: tasks
 subcategory_id: tasks/assignments
 is_index: false
