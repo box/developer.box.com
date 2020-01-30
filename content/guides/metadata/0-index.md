@@ -15,7 +15,7 @@ associated with files and folders.
 
 </ImageFrame>
 
-Metadata consists of key/value pairs are assigned to a file or a folder.
+Metadata consists of key/value pairs that are assigned to a file or a folder.
 For example, an important contract may have the key/value pairs of
 `clientNumber: 820183` and `clientName: bioMedicalCorp`.
 

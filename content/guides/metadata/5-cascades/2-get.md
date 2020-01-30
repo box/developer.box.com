@@ -10,6 +10,11 @@ related_resources:
 
 # Get a metadata cascade policy
 
+<Message warning>
+  Metadata cascade policies are currently in Beta and the syntax might change in
+  the future.
+</Metadata>
+
 Information for a metadata cascade policy can be retrieved by calling the 
 [`GET /metadata_cascade_policies/:id`][e_get] API endpoint with the
 `id` of the policy.

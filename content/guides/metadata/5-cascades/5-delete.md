@@ -10,6 +10,11 @@ related_resources:
 
 # Delete a metadata cascade policy
 
+<Message warning>
+  Metadata cascade policies are currently in Beta and the syntax might change in
+  the future.
+</Metadata>
+
 A metadata cascade policy can be deleted by calling the 
 [`DELETE /metadata_cascade_policies/:id`][e_delete] API endpoint with the
 `id` of the policy to remove.

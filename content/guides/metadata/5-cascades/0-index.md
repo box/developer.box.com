@@ -3,6 +3,11 @@
 
 # Metadata cascade policies (Beta)
 
+<Message warning>
+  Metadata cascade policies are currently in Beta and the syntax might change in
+  the future.
+</Metadata>
+
 A metadata cascade policy describes how [metadata
 instances][instance] applied to a folder should be applied to any item
 within that folder. For example, a user might assign the same `invoiceData`
@@ -10,11 +15,6 @@ metadata template to a project folder allowing it to automatically apply to all
 the files and folders within that project folder.
 
 Every policy specifies exactly one metadata template instance and one folder.
-
-<Messsage warning>
-  Metadata cascade policies are currently in Beta and the syntax might change in
-  the future.
-</Message>
 
 ## Activation and permissions
 
@@ -29,6 +29,8 @@ policies can create metadata cascade policies for that given folder.
 ## Limitations
 
 There is some delay from file upload to the metadata being applied. This very
-much depends on the number of items in a folder.
+much depends on the number of items in a folder. Metadata cascade operations
+are performed asynchronously and there is currently no way to check when all
+metadata has been cascaded to all files.
 
 [instance]: g://metadata/instances
