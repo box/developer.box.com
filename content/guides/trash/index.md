@@ -20,7 +20,7 @@ an enterprise administrator.
 
 More details can be found in the Box community article on [Managing Trash]
 
-[files]: https://box.dev/en/reference/resources/file/
-[folders]: https://box.dev/en/reference/resources/folder/
-[web links]: https://box.dev/en/reference/resources/web-link/
+[files]: e://delete_files_id/
+[folders]: e://delete_folders_id/
+[web links]: e://delete_web_links_id/
 [Managing Trash]: https://community.box.com/t5/Managing-Files-and-Folders/Manage-Trash/ta-p/19212

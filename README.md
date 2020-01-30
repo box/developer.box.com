@@ -17,13 +17,16 @@ For more details on adding to this project, please see the
 
 ## Usage & License
 
-This project is provided under the [Apache License 2.0][license] license.
+Copyright 2020 Box, Inc. All rights reserved.
 
-As this project is a work in progress no rights can be derived from this
-specification and it may change without warning.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0.
 
-Currently the only recognized downstream dependency of this project is the
-new Box developer documentation available on [Box.dev][boxdev].
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
 
 [license]: LICENSE
 [contrib]: CONTRIBUTING.md

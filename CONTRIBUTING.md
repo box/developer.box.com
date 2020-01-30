@@ -24,7 +24,7 @@
 ## <a name='Background'></a>Background
 
 The key purpose for this project is to allow for the creation and deployment of
-microcopy, guides, and pages for the [Box.dev][boxdev] site.
+microcopy, guides, and pages for the [developer.box.com][boxdev] site.
 
 ### <a name='Projectlayout'></a>Project layout
 
@@ -65,7 +65,7 @@ pushed to the [`en`][en_branch] branch by
 [Travis][travis].
 
 This will then trigger a build by [Netlify][netlify] and push the changes to
-[Box.dev][boxdev]. 
+[developer.box.com][boxdev]. 
 
 To see this process in action, check the [#devrel-build][slack] channel in Slack.
 
@@ -126,7 +126,7 @@ yarn new path/to/file "My long title"
 ```
 
 This will add a new empty guide file in `./content/guides/path/to/file.md` with a title
-as provided. When published, this file will match to a page at `https://box.dev/guides/path/to/file`.
+as provided. When published, this file will match to a page at `https://developer.box.com/en/guides/path/to/file`.
 
 To get a more rich template, use the following template instead:
 
@@ -150,7 +150,7 @@ yarn new path/to/index "Index page title"
 ```
 
 This will add a new empty guide file in `./content/guides/path/to/index.md` and
-map to the URL `https://box.dev/guides/path/to/`.
+map to the URL `https://developer.box.com/en/guides/path/to/`.
 
 ### <a name='Addingmicrocopy'></a>Adding microcopy
 
@@ -180,5 +180,5 @@ new_file:
 [travis]: https://travis-ci.com/box/developer.box.com
 [en_branch]: https://github.com/box/developer.box.com/tree/en
 [jp_branch]: https://github.com/box/developer.box.com/tree/jp
-[boxdev]: https://box.dev
+[boxdev]: https://developer.box.com
 [slack]: https://box.slack.com/app_redirect?channel=CH921R38R
