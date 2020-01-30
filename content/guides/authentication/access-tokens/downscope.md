@@ -61,8 +61,8 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 
 ## Downscoped Access Token Object
 
-A downscoped Access Token returned by the \*\*\* endpoint contains extra
-information on the specific restrictions.
+A downscoped Access Token returned by the `POST /oauth2/token` endpoint contains
+extra information on the specific restrictions.
 
 ```json
 {
