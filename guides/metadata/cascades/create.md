@@ -27,7 +27,7 @@ previous_page_id: metadata/cascades/get
 Metadata cascade policies are currently in Beta and the syntax might change in
 the future.
 
-</Metadata>
+</Message>
 
 When a metadata template has been applied to a folder, a metadata cascade policy
 can be created by calling the  [`POST /metadata_cascade_policies`][e_post] API

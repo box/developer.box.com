@@ -19,7 +19,7 @@ previous_page_id: metadata/cascades/force-apply
 Metadata cascade policies are currently in Beta and the syntax might change in
 the future.
 
-</Metadata>
+</Message>
 
 A metadata cascade policy describes how [metadata
 instances][instance] applied to a folder should be applied to any item
