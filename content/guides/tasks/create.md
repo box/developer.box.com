@@ -2,7 +2,7 @@
 rank: 2
 related_endpoints:
   - post_tasks
-related_guides:
+related_guides: []
 required_guides: []
 alias_paths: []
 ---

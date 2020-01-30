@@ -2,7 +2,7 @@
 rank: 6
 related_endpoints:
   - get_files_id_tasks
-related_guides:
+related_guides: []
 required_guides: []
 related_resources:
   - files

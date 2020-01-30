@@ -1,7 +1,7 @@
 ---
 rank: 1
 related_endpoints: []
-related_guides:
+related_guides: []
 required_guides: []
 alias_paths: []
 ---

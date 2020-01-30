@@ -6,7 +6,6 @@ required_guides: []
 related_resources:
   - task
   - task_assignment
-alias_paths:
 ---
 
 # Tasks
