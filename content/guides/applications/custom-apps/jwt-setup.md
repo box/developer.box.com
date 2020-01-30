@@ -72,7 +72,7 @@ provide their own public key.
 ### Generate a keypair (Recommended)
 
 After a Custom App has been created to use JWT authentication, there is an
-available in the [Developer Console][devconsole] to have Box create a
+option available in the [Developer Console][devconsole] to have Box create a
 configuration file. This file will include the keypair as well as a number of
 other application details that are used used during authentication.
 

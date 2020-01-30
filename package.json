@@ -23,7 +23,7 @@
     "lint:markdown": "markdownlint -c markdownlintrc.json ./content ./templates",
     "lint:spelling": "yarn lint:spelling:interactive -r",
     "lint:spelling:interactive": "mdspell 'content/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
-    "lint:alex": "alex content/ -d -q",
+    "lint:alex": "alex content/ -q",
     "lint:yaml": "yamllint ./content",
     "lint:links": "jest ./src/markdown/* --silent",
     "watch:content": "concurrently 'yarn:watch:microcopy' 'yarn:watch:guides' 'yarn:watch:pages' 'yarn:watch:lint'",
@@ -52,11 +52,12 @@
     "concurrently": "^5.0.0",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
-    "jest": "^24.8.0",
+    "jest": "25.1.0",
     "js-yaml": "^3.13.1",
     "jsonpath": "^1.0.2",
     "markdown-spellcheck": "^1.3.1",
     "markdownlint-cli": "0.21.0",
+    "sha1-from-file": "^2.0.1",
     "strip-indent": "^3.0.0",
     "watch": "^1.0.2"
   }

@@ -10,6 +10,7 @@ HTTPS
 webhooks
 microcopy
 box.dev
+developer.box.com
 CONTRIBUTING.md
 yaml
 javascript
@@ -174,3 +175,7 @@ frontmatter
 Unassign
 unassign
 file-centric
+Xcode
+CocoaPods
+scalable
+Github

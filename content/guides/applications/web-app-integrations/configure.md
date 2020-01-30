@@ -7,7 +7,7 @@ related_guides:
 required_guides: []
 related_resources: []
 alias_paths: []
-note: |-
+notes: |-
   Needs a massive cleanup
 ---
 

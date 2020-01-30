@@ -5,14 +5,45 @@ centered: true
 rank: 0
 ---
 
+<!-- alex disable postman-postwoman -->
+
 # Changelog
 
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2020-01-22 / Preview SDK `v2.33.1` Released
+
+Version `2.33.1` of the Preview SDK has been released. New JavaScript and CSS
+Preview files have been made available. To adopt new changes, please see the
+[UI Elements manual installation][ui-elements-manual-install] links for Content
+Preview.
+
+Please see the `v2.33.1` [release notes][preview-2.33-release-notes] for a list
+of all feature changes.
+
+## 2020-01-20 / Refreshed Postman Collection & Quick Start
+
+The Box Postman collection has been updated with new features and an integrated
+quick-start guide. Key features include:
+
+* An end-to-end [Postman quick-start guide][postman-quick-start-guide] that
+  helps users to install Postman, set up a Box App, and load their API
+  credentials into Postman. 
+* A [restructured Postman collection][postman-collection] for the Box APIs that
+  automatically detects when API credentials have expired and offers integrated
+  solutions for refreshing these credentials when needed.
+
+The [legacy Postman collection][legacy-postman-collection] will remain available
+for the foreseeable future.
+
+[postman-quick-start-guide]: g://tooling/postman/quick-start
+[postman-collection]: g://tooling/postman/install
+[legacy-postman-collection]: g://tooling/postman/legacy
+
 ## 2019-12-31 / EOL of Classic Relay API Endpoints
 
-As [previously communicated][changelog-eol-relay-apis], Classic Relay API
+As previously communicated on October 18 2019, Classic Relay API
 endpoints are officially at an end of life state as of today.
 
 The following endpoints are affected by this EOL and will now start responding
@@ -24,8 +55,6 @@ with error responses in applications making requests to them:
 
 For any application encountering these error responses, please remove all calls
 to the Relay Classic APIs listed above.
-
-[changelog-eol-relay-apis]: https://developer.box.com/en/changelog/#2019-10-18--relay-api-endpoints-will-eol-on-december-31st-2019
 
 ## 2019-12-05 / Marker-based Pagination Support for Users API
 
@@ -280,9 +309,10 @@ Full release announcement is available [here][blog_new_element].
 
 [elements-11-release-notes]: https://github.com/box/box-ui-elements/releases/tag/v11.0.0
 [elements-11-blog]: https://medium.com/box-developer-blog/announcing-elements-11-88ee900125fd
-[ui-elements-manual-install]: https://developer.box.com/en/guides/embed/ui-elements/installation/#manual-installation
+[ui-elements-manual-install]: g://embed/ui-elements/installation/#manual-installation
 [preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
 [preview-2.29-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.29.0
+[preview-2.33-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.33.1
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
