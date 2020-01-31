@@ -62,7 +62,7 @@ manager options.
   7. Drag `BoxSDK.framework` from our Finder window over to the frameworks
      section.
 
-  <ImageFrame center>
+  <ImageFrame center shadow>
     ![Add framework to project](./framework-carthage-add.gif)
   </ImageFrame>
 
@@ -93,27 +93,44 @@ manager options.
      `https://github.com/box/box-ios-sdk.git` and click next.
   4. Leave the default settings and click next to finish importing.
 
-  <ImageFrame center>
+  <ImageFrame center shadow>
     ![Add framework to project](./import-sdk-spm.gif)
   </ImageFrame>
 
 </Choice>
 
+<Choice option='ios.pm_type' value='carthage' color='none'>
+
 ## Summary
 
-* You either selected to install the iOS dependencies using Carthage
+* You selected to install the iOS dependencies using Carthage
   * You installed Carthage
   * You create a `Cartfile` with the Box iOS SDK dependency
   * You installed the iOS SDK dependencies
   * You manually imported the built dependencies into the Xcode project
     framework list.
-* Or selected to use **CocoaPods** and
+
+</Choice>
+<Choice option='ios.pm_type' value='cocoapods' color='none'>
+
+## Summary
+
+* You selected to use **CocoaPods** and
   * You installed CocoaPods
   * You created a new `Podfile` with the Box iOS SDK dependency
   * You installed the iOS SDK dependencies
   * You built the project in Xcode
+
+</Choice>
+
+<Choice option='ios.pm_type' value='swift' color='none'>
+
+## Summary
+
 * Or selected to use the **Swift Package Manager** and
   * You imported the iOS SDK `.git` repository into the Swift packages
+
+</Choice>
 
 <Observe option='ios.pm_type' value='carthage,cocoapods,swift'>
   <Next>I've installed the Box iOS SDK dependencies</Next>

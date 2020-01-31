@@ -1,6 +1,5 @@
 ---
 type: quick-start
-hide_in_page_nav: true
 ---
 
 # Make an API call
@@ -91,7 +90,7 @@ Build and run your sample application in the iOS emulator.
   If you run this code an hour or more after you created the developer
   token in the last step, you will need to revoke and generate a new developer
   token using the same method in the
-  [previous step](g://mobile/ios/quick-start/configure-box-app/) as the
+  [previous step](g://mobile/ios-quick-start/configure-box-app/) as the
   developer token will only persist for 60 minutes.
 </Message>
 

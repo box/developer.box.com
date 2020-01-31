@@ -51,7 +51,7 @@ valid for one hour before having to be manually refreshed.
   1. At the top of the page click the button to **Save Changes**
 </Choice>
 
-<Choice option='ios.app_type' value='use_own' color='blue'>
+<Choice option='ios.app_type' value='use_own' color='red'>
   # Use an Existing JWT Box application
 
   If you have an existing JWT based Box application in your
@@ -76,7 +76,7 @@ APIs.
 * You created a new, or are using an existing, Box app
 * You have generated and copied the developer token
 
-<Observe option='ios.app_type' value='use_own,create_new_'>
+<Observe option='ios.app_type' value='use_own,create_new'>
   <Next>I have a developer token</Next>
 </Observe>
 

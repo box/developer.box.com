@@ -3,15 +3,22 @@ related_pages:
  - sdks-and-tools
 ---
 
-# Android SDK Installation
+# Android SDK
+
+The [Box Android SDK][android-sdk] provides native access to the Box API from
+within your Android project.
+
+[android-sdk]: https://github.com/box/box-android-sdk 
+
+## Installation
 
 The Android SDK may be obtained through several methods:
 
-* Adding as a Maven or Gradle dependency
+* Adding it as a Maven or Gradle dependency
 * Cloning the source into your project
 * Downloading one of the precompiled JARs
 
-## Add as a Maven dependency
+### Maven installation
 
 Add the following to your Maven dependencies.
 
@@ -22,7 +29,7 @@ Add the following to your Maven dependencies.
 </dependency>
 ```
 
-## Add as a Gradle dependency
+### Gradle installation
 
 Add the following to your `build.gradle` file.
 
@@ -32,12 +39,12 @@ dependencies {
 }
 ```
 
-## Clone the source
+### Clone the source
 
 The Box Android SDK source code may be obtained by cloning or downloading the
 [project from Github][android-sdk-github].
 
-## Download precompiled JARs
+### Precompiled JARs
 
 Precompiled JARs for the Android SDK may be obtained from the Github project
 [releases page][android-sdk-github-releases]
