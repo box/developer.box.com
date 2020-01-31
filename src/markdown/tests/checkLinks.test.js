@@ -3,7 +3,7 @@ const glob = require('glob')
 const files = glob.sync('content/?(pages|guides)/**/*.md')
 const alLFiles = glob.sync('content/?(pages|guides)/**/*.?(png|gif|jpg|md|jpeg)')
 
-const LinkValidator = require('./LinkValidator')
+const LinkValidator = require('../LinkValidator')
 
 files.forEach(source => {
   test('check all local links are valid', () => {

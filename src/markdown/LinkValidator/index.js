@@ -1,7 +1,6 @@
 const fs = require('fs-extra')
 const path = require('path')
 const yaml = require('js-yaml')
-const glob = require('glob')
 
 // checks for "[text](./local/link)", capturing the link url
 const LOCAL_LINK_REGEX = new RegExp(/\[.*\]\(((\.\/)|\/.*)\)/, 'mg')
