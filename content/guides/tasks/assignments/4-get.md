@@ -1,10 +1,10 @@
 ---
-rank: 5
 related_endpoints:
   - get_task_assignments_id
-related_guides: []
-required_guides: []
-alias_paths: []
+related_guides:
+  - tasks/assignments/assign
+  - tasks/assignments/unassign
+  - tasks/assignments/change-state
 ---
 
 # Get task assignment information

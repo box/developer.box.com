@@ -1,25 +1,25 @@
 ---
-rank: 195
-related_endpoints: []
-related_guides: []
-required_guides: []
+related_endpoints:
+  - put_tasks_id
+related_guides:
+  - tasks/create
+  - tasks/get
+  - tasks/delete
 related_resources:
+  - file
   - task
-  - task_assignment
 ---
 
 <!-- alex disable reject -->
 
-# Tasks
+# Make changes to an existing task
 
-Tasks allow users to request collaborators on a file to review a file or
-complete a piece of work. Tasks can be used by developers to create file-centric
-workflows. Learn more about tasks from the [**Adding Comments and
-Tasks**][community] article on our support site. 
+To update a task in Box you will need to call the
+[`PUT /tasks/:task_id`](e://put_tasks_id) API with the ID of the task. This API
+can be used to change the `action` type of the task, add a `message`, or change
+the due date.
 
-<ImageFrame border shadow width='400'>
-  ![Box Tasks in UI](./tasks-documentation.png)
-</ImageFrame>
+<Samples id='put_tasks_id' />
 
 ## Task actions
 
@@ -49,5 +49,3 @@ A task on a file can be assigned to more than one collaborator on the file, and
 a task has a `completion_rule` that can be used to define if all users who've
 been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
 need to complete the task.
-
-[community]: https://community.box.com/t5/Sharing-Content-with-Box/Adding-Comments-and-Tasks/ta-p/19815

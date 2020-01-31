@@ -1,25 +1,20 @@
 ---
-rank: 195
-related_endpoints: []
-related_guides: []
-required_guides: []
-related_resources:
-  - task
-  - task_assignment
+related_endpoints:
+  - post_tasks
+related_guides:
+  - tasks/for-file
+  - tasks/get
+  - tasks/update
 ---
-
 <!-- alex disable reject -->
 
-# Tasks
+# Create a task
 
-Tasks allow users to request collaborators on a file to review a file or
-complete a piece of work. Tasks can be used by developers to create file-centric
-workflows. Learn more about tasks from the [**Adding Comments and
-Tasks**][community] article on our support site. 
+To create a task, you will need to provide the [`POST /tasks`][post_tasks] API
+with the `action` for the task, as well as an `item` to represent the file to
+add the task to.
 
-<ImageFrame border shadow width='400'>
-  ![Box Tasks in UI](./tasks-documentation.png)
-</ImageFrame>
+<Samples id="post_tasks" />
 
 ## Task actions
 
@@ -50,4 +45,4 @@ a task has a `completion_rule` that can be used to define if all users who've
 been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
 need to complete the task.
 
-[community]: https://community.box.com/t5/Sharing-Content-with-Box/Adding-Comments-and-Tasks/ta-p/19815
+[post_tasks]: e://post_tasks

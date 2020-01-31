@@ -1,15 +1,15 @@
 ---
-rank: 4
 related_endpoints:
   - put_task_assignments_id
-related_guides: []
-required_guides: []
-alias_paths: []
+related_guides: 
+  - tasks/assignments/assign
+  - tasks/assignments/unassign
+  - tasks/assignments/change-state
 ---
 
-# Change a task assignment message
+# Change an assignment's message
 
-To update a task assignment in Box you will need to call the
+To update a task assignment's message call the
 [`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) API, and
 include the new `message` for the task assignment.
 

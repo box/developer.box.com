@@ -1,10 +1,10 @@
 ---
-rank: 3
 related_endpoints:
   - get_tasks_id
-related_guides: []
-required_guides: []
-alias_paths: []
+related_guides:
+  - tasks/create
+  - tasks/for-file
+  - tasks/update
 ---
 
 # Get information about a task

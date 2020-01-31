@@ -1,27 +1,23 @@
 ---
-rank: 195
-related_endpoints: []
-related_guides: []
-required_guides: []
-related_resources:
-  - task
-  - task_assignment
+related_endpoints:
+  - put_task_assignments_id
+related_guides: 
+  - tasks/assignments/assign
+  - tasks/assignments/unassign
 ---
 
 <!-- alex disable reject -->
 
-# Tasks
+# Change task assignment state
 
-Tasks allow users to request collaborators on a file to review a file or
-complete a piece of work. Tasks can be used by developers to create file-centric
-workflows. Learn more about tasks from the [**Adding Comments and
-Tasks**][community] article on our support site. 
+To update a task assignment's state call the
+[`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) API and
+include a `resolution_state`, such as `completed`, `incomplete`,
+`approved`, or `rejected`.
 
-<ImageFrame border shadow width='400'>
-  ![Box Tasks in UI](./tasks-documentation.png)
-</ImageFrame>
+<Samples id='put_task_assignments_id' />
 
-## Task actions
+## Resolution states
 
 Box currently supports two types of tasks defined by the `action` value:
 `review` tasks and `complete` tasks.
@@ -42,12 +38,3 @@ A `complete` task starts out in an `incomplete` state and can be marked
 `incomplete` or `completed`. Once a this task is marked completed, no
 further changes can be made to the task's state. In the user interface a user is
 provided with a text box and an button to mark the task as completed.
-
-## Completion rules
-
-A task on a file can be assigned to more than one collaborator on the file, and
-a task has a `completion_rule` that can be used to define if all users who've
-been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
-need to complete the task.
-
-[community]: https://community.box.com/t5/Sharing-Content-with-Box/Adding-Comments-and-Tasks/ta-p/19815
