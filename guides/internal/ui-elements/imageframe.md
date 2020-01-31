@@ -38,6 +38,7 @@ An image can be wrapped into a frame.
 <Message>
 
 Options include a `border`, whether to `center` the image, whether to add a
-`shadow`, and a max-`width` of `200` or `400` pixels on larger screens.
+`shadow`, and a max-`width` of `200`, `300`, `400`, or `600` pixels on larger
+screens.
 
 </Message>

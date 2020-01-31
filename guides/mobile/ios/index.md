@@ -2,16 +2,16 @@
 related_pages:
   - sdks-and-tools
 category_id: mobile
-subcategory_id: null
+subcategory_id: mobile/ios
 is_index: true
-id: mobile
+id: mobile/ios
 rank: 0
 type: guide
-total_steps: 3
-sibling_id: guides
-parent_id: guides
-next_page_id: mobile/ios
+total_steps: 0
+sibling_id: mobile
+parent_id: mobile
+next_page_id: ''
 previous_page_id: ''
 ---
 
-# Mobile
+# iOS
