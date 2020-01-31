@@ -7,7 +7,7 @@ is_index: false
 id: mobile/android
 rank: 2
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: mobile
 parent_id: mobile
 next_page_id: mobile

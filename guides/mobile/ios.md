@@ -7,11 +7,11 @@ is_index: false
 id: mobile/ios
 rank: 1
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: mobile
 parent_id: mobile
 next_page_id: mobile/android
-previous_page_id: mobile
+previous_page_id: ''
 ---
 
 # iOS SDK
