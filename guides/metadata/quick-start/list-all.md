@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 related_guides:
   - metadata/scopes
-related_endoints:
+related_endpoints:
   - get_metadata_templates_global
   - get_metadata_templates_enterprise
 category_id: metadata
