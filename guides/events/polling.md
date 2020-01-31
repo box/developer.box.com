@@ -91,7 +91,7 @@ After the server sends this response it closes the connection. The application
 must now repeat the long poll process to begin listening for events again.
 
 If no events occur for a while after the application connects to the real-time
-server the connection will close with a `reconect` value. When this happens the
+server the connection will close with a `reconnect` value. When this happens the
 application should make a new call to `OPTIONS /events` to restart the process.
 
 ### Timeouts & Retries
