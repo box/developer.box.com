@@ -10,13 +10,16 @@ related_guides:
 
 To assign a task to a user you will need to provide the 
 [`POST /task_assignments`](e://post_task_assignments) API with the `id` of the
-task and the `id` or `login` of the user.
+task and the user's details. For the user an application can either use the user
+`id` or the user's login email, which Box refers to as their `login`.
 
 <Samples id='post_task_assignments' />
 
 <Message notice>
-  When assigning a task to a user, you can either do so by user `id` or by
-  using their login email, which Box refers to as `login` within the API.
+  # Notifications
+
+  When creating a task an email notification is sent to the user who the task is
+  assigned to.
 </Message>
 
 <Message warning>

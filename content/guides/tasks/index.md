@@ -17,7 +17,7 @@ complete a piece of work. Tasks can be used by developers to create file-centric
 workflows. Learn more about tasks from the [**Adding Comments and
 Tasks**][community] article on our support site. 
 
-<ImageFrame border shadow width='400'>
+<ImageFrame border shadow width='300' center>
   ![Box Tasks in UI](./tasks-documentation.png)
 </ImageFrame>
 

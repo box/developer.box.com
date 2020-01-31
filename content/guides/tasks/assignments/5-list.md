@@ -1,7 +1,6 @@
 ---
-rank: 6
 related_endpoints:
-  - get_task_assignments_id
+  - get_task_assignments
 related_guides: 
   - tasks/assignments/assign
   - tasks/assignments/unassign
