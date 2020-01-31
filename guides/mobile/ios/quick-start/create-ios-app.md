@@ -21,44 +21,25 @@ now.
 
 ## Setup an iOS App
 
-<Grid columns='2'>
+Xcode will be the tool that we use to create and edit our iOS application
+during this quick-start guide. If you don't have Xcode, download it now from the
+[Apple developer site](https://developer.apple.com/xcode/).
 
-<Choose option='ios.app_setup' value='new' color='blue'>
+If this is the first application you're creating in Xcode or you already have
+application development experience in it, we'll start our integration of the
+Box iOS SDK with a new blank application.
 
-# Create a new iOS application
-
-If this is the first application you're creating in Xcode or you
-wish to use a new blank application for testing the SDK, this method
-will guide you through creating a new blank iOS application.
-
-</Choose>
-
-<Choose option='ios.app_setup' value='existing' color='none'>
-
-# Use an existing iOS application
-
-If you have some iOS development experience and already have a blank
-iOS application created.
-
-</Choose>
-
-</Grid>
-
-<Choice option='ios.app_setup' value='new' color='blue'>
-
-# Create a new iOS application
-
-1. Load Xcode
-2. From the top menu, select `File` -> `New` -> `Project...`
+1. Start Xcode
+2. From the top menu, select **File** -> **New** -> **Project...**
 3. Select the option for **Single View App**
-<ImageFrame border center>
+<ImageFrame center>
 
 ![Select iOS application type](./create-app-type.png)
 
 </ImageFrame>
-4. Enter your application configuration information, including the **Product
-Name**, **Organization Identifier**, and **Organization Name**
-<ImageFrame border center>
+4. Enter your application configuration information, including the
+`Product Name`, `Organization Identifier`, and `Organization Name`.
+<ImageFrame center>
 
 ![Configure iOS application](./create-app-config.png)
 
@@ -67,24 +48,12 @@ Name**, **Organization Identifier**, and **Organization Name**
 
 </Choice>
 
-<Choice option='ios.app_setup' value='existing' color='none'>
-
-# Use an existing iOS application
-
-If you have an existing blank application, skip to the next step.
-
-</Choice>
-
 ## Summary
 
-* You created and configured a new iOS application in Xcode, or
-* You used an existing iOS application
+* You created a new blank iOS application in Xcode
 
-<Observe option='ios.app_setup' value='new,existing'>
 <Next>
 
-I have an iOS application
+I created a blank iOS application
 
 </Next>
-
-</Observe>

@@ -23,8 +23,9 @@ a request to Box to fetch the name of the currently authenticated user.
 
 <Message warning>
 
-As you integrate Box API calls into your iOS app, this blocking method
-should be replaced with proper task delegation and non-blocking actions.
+Using a blocking actions as we use in these examples is slow. In a production
+app these blocking actions would need to be replaced with proper task
+delegation and non-blocking actions.
 
 </Message>
 
@@ -35,16 +36,20 @@ the file you will see a `struct` for `ContentView`, within which is a basic
 string that will be output to your iOS application if you run the app in an
 emulator.
 
-<ImageFrame border center>
+```swift
+import SwiftUI
 
-![ContentView struct](./first-call-contentview.png)
-
-</ImageFrame>
+struct ContentView: View {
+  var body: some View {
+    Text("Hello, World!")
+  }
+}
+```
 
 We'll first replace the `Text` output line with a button to be able to trigger
 off the call to get the current user. Replace that line with the below button.
 
-```js
+```swift
 Button(action: {
   // Perform some action
 }) {
@@ -56,13 +61,14 @@ Button(action: {
 .background(Color.blue)
 ```
 
-Our next step is to add an an action for the button, which will be our API call
-to Box.
+Our next step is to add an an action for the button which will fetch a user's
+details from Box.
 
 ## Add an API call button action
 
-We need to do two things add add the call to the Box API, add the import for
-the **Box iOS SDK** and add the button action to make the call.
+When a user clicks the button, we want to fetch the user's details. To achieve
+this we need to do two things, add the import for the **Box iOS SDK** and add
+the button action to make the call.
 
 At the top of the `ContentView.swift` file, add `import BoxSDK` with the other
 import statement.
@@ -76,11 +82,9 @@ for the request to complete.
 
 Replace `{{YOUR DEVELOPER TOKEN}}` with your developer token.
 
-```js
-// Authenticate new Box Client
+```swift
 let client = BoxSDK.getClient(token: "{{YOUR DEVELOPER TOKEN}}")
 
-// Get currently authenticated user
 client.users.getCurrent(fields:["name", "login"]) { (result: Result<User,
   BoxSDKError>) in
   guard case let .success(user) = result else {
@@ -90,7 +94,6 @@ client.users.getCurrent(fields:["name", "login"]) { (result: Result<User,
   print("Authenticated as \(user.name)")
 }
 
-// Wait for end of API request process
 sleep(5)
 ```
 
@@ -101,8 +104,8 @@ Build and run your sample application in the iOS emulator.
 If you run this code an hour or more after you created the developer
 token in the last step, you will need to revoke and generate a new developer
 token using the same method in the
-[last step](g://mobile/ios/quick-start/configure-box-app/) as the developer
-token will only persist for 60 minutes.
+[previous step](g://mobile/ios/quick-start/configure-box-app/) as the
+developer token will only persist for 60 minutes.
 
 </Message>
 
@@ -129,8 +132,8 @@ Authenticated as Optional("Test User")
 
 <Message notice>
 
-If you don't see the Xcode developer console, from the menu click `View` ->
-`Debug Area` -> `Activate Console`
+If you don't see the Xcode developer console, from the menu click **View** ->
+**Debug Area** -> **Activate Console**
 
 </Message>
 

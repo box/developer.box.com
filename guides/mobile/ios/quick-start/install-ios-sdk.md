@@ -47,9 +47,8 @@ with Ruby.
 
 # Swift Package Manager
 
-Included with Swift since version 3.0, the Swift Package
-Manager is a tool for managing the distribution of source
-code, aimed at making it easy to share your code and reuse
+The Swift Package Manager is a tool for managing the distribution
+of source code, making it easy to share your code and reuse
 others’ code.
 
 </Choose>
@@ -61,18 +60,18 @@ others’ code.
 # Install the iOS SDK using Carthage
 
 1. From a terminal window, install Carthage: `brew install carthage`.
-[See here](https://github.com/Carthage/Carthage#installing-carthage)
+Visit the [Carthage documentation][carthage-docs]
 for other installation methods.
 2. At the root of your iOS application folder, where the `{APPNAME}.xcodeproj`
 is located, create a new file named `Cartfile`, without an extension.
-3. Load `Cartfile`, add the **Box iOS SDK** dependency with
+3. Open the `Cartfile` and add the **Box iOS SDK** dependency with
 `git "https://github.com/box/box-ios-sdk.git" ~> 3.0`, then save and close
 the file.
 4. From the terminal, in the folder where the `Cartfile` is present, update
 all dependencies: `carthage update --platform iOS`. A `Cartfile.resolved`
 file and a `Carthage` directory will be created in the directory.
-5. Within a Finder or File Explorer window load the `Carthage` -> `Build` ->
-`iOS` directory. This should have a framework file named
+5. Within a Finder or File Explorer window load the **Carthage** -> **Build**
+-> **iOS** directory. This should have a framework file named
 `BoxSDK.framework`. Keep this window open as we'll use it to add the
 framework to our project in the next step.
 6. In your Xcode project, click on the name of your application at the top of
@@ -81,7 +80,8 @@ the name of your project under the **TARGETS** option. Scroll down to
 **Frameworks, Libraries, and Embedded Content**. 
 7. Drag `BoxSDK.framework` from our Finder window over to the frameworks
 section.
-<ImageFrame border center>
+
+<ImageFrame center>
 
 ![Add framework to project](./framework-carthage-add.gif)
 
@@ -89,7 +89,7 @@ section.
 
 </Choice>
 
-<Choice option='ios.pm_type' value='cocoapods' color='none'>
+<Choice option='ios.pm_type' value='cocoapods' color='blue'>
 
 # Install the iOS SDK using CocoaPods
 
@@ -116,7 +116,8 @@ the name of your project under the **PROJECT** option.
 3. Enter the following repository URL
 `https://github.com/box/box-ios-sdk.git` and click next.
 4. Leave the default settings and click next to finish importing.
-<ImageFrame border center>
+
+<ImageFrame center>
 
 ![Add framework to project](./import-sdk-spm.gif)
 
@@ -148,3 +149,5 @@ I've installed the Box iOS SDK dependencies
 </Next>
 
 </Observe>
+
+[carthage-docs]: https://github.com/Carthage/Carthage#installing-carthage
