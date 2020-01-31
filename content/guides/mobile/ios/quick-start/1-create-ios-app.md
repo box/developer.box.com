@@ -12,7 +12,7 @@ now.
 ## Setup an iOS App
 
 Xcode will be the tool that we use to create and edit our iOS application
-during this quickstart. If you don't have Xcode, download it now from the
+during this quick-start guide. If you don't have Xcode, download it now from the
 [Apple developer site](https://developer.apple.com/xcode/).
 
 If this is the first application you're creating in Xcode or you already have
