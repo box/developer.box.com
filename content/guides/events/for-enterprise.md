@@ -58,7 +58,7 @@ The following events can be triggered for an enterprise.
 <!-- markdownlint-disable line-length -->
 
 | Event name                                     | Description                                                                                     |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+|------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | `GROUP_ADD_USER`                               | Added user to group                                                                             |
 | `NEW_USER`                                     | Created user                                                                                    |
 | `GROUP_CREATION`                               | Created new group                                                                               |
@@ -100,7 +100,7 @@ The following events can be triggered for an enterprise.
 | `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
 | `COLLABORATION_INVITE`                         | Invited                                                                                         |
 | `COLLABORATION_EXPIRATION`                     | Set collaborator expiration                                                                     |
-| `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                    |
+| `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                             |
 | `ITEM_SYNC`                                    | Synced folder                                                                                   |
 | `ITEM_UNSYNC`                                  | Unmarked folder for synced                                                                      |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we haven’t seen before                                       |
@@ -111,7 +111,7 @@ The following events can be triggered for an enterprise.
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
 | `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance.                                                                    |
 | `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance.                                                                  |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, or location based on enterprise Shield Rules.          |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, or location based on enterprise Shield Rules.  |
 | `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment.                                                                    |
 | `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created.                                                                   |
 | `TASK_ASSIGNMENT_DELETE`                       | A task assignment is deleted.                                                                   |
@@ -150,6 +150,7 @@ The following events can be triggered for an enterprise.
 | `GROUP_REMOVE_ITEM`                            | Folders were removed from a group in the Admin console.                                         |
 | `GROUP_ADD_ITEM`                               | Folders were added to a group in the Admin console.                                             |
 | `FILE_WATERMARKED_DOWNLOAD`                    | A watermarked file was downloaded.                                                              |
+| `ENTERPRISE_APP_AUTHORIZATION_UPDATE`          | When a JWT application has been authorized or reauthorized                                      |
 
 <!-- markdownlint-enable line-length -->
 
