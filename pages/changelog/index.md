@@ -22,6 +22,16 @@ previous_page_id: ''
 For historical changelog entries, please see
 [2018 Release Notes](page://changelog/2018).
 
+## 2020-02-03 / Preview SDK `v2.34.0` Released
+
+Version `2.34.0` of the Preview SDK has been released. New JavaScript and CSS
+Preview files have been made available. To adopt new changes, please see the
+[UI Elements manual installation][ui-elements-manual-install] links for Content
+Preview.
+
+Please see the `v2.34.0` [release notes][preview-2.34-release-notes] for a list
+of all feature changes.
+
 ## 2020-01-22 / Preview SDK `v2.33.1` Released
 
 Version `2.33.1` of the Preview SDK has been released. New JavaScript and CSS
@@ -39,7 +49,7 @@ quick-start guide. Key features include:
 
 * An end-to-end [Postman quick-start guide][postman-quick-start-guide] that
   helps users to install Postman, set up a Box App, and load their API
-  credentials into Postman. 
+  credentials into Postman.
 * A [restructured Postman collection][postman-collection] for the Box APIs that
   automatically detects when API credentials have expired and offers integrated
   solutions for refreshing these credentials when needed.
@@ -71,7 +81,7 @@ to the Relay Classic APIs listed above.
 The [Users API](e://get_users) now supports [marker-based
 pagination](g://api-calls/pagination/marker-based). Marker-based pagination is
 an alternative to regular offset-based pagination and provides an alternative
-way to get users for enterprises with a large volume of users.  
+way to get users for enterprises with a large volume of users.
 
 ## 2019-12-03 / Preview SDK `v2.29.0` Released
 
@@ -323,6 +333,7 @@ Full release announcement is available [here][blog_new_element].
 [preview-2.26-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.26.0
 [preview-2.29-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.29.0
 [preview-2.33-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.33.1
+[preview-2.34-release-notes]: https://github.com/box/box-content-preview/releases/tag/v2.34.0
 [ios-sdk-release-blog]: https://medium.com/box-developer-blog/the-new-box-ios-sdk-now-available-baf624b289b4
 [box-shield]: https://www.box.com/shield
 [support_ticket]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
