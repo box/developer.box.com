@@ -76,8 +76,8 @@ Start](g://tooling/postman/quick-start) guide again.
 
 The Postman collection can automatically detect an expired `access_token` value
 and request a new one by using the `refresh_token`. By default this feature is
-disabled but it can be enabled by setting the `enable_auto_refresh_access_token`
-Postman environment variable to `true`.
+enabled but it can be turned off by setting the `enable_auto_refresh_access_token`
+Postman environment variable to `false`.
 
 To set this value, hit the edit button in the top right of your Box Postman
 environment variables.
