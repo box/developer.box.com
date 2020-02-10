@@ -38,6 +38,8 @@
     "build:microcopy": "node -e 'require(\"./src/microcopy\").write()'",
     "build:guides": "node -e 'require(\"./src/markdown\").writeGuides()'",
     "build:pages": "node -e 'require(\"./src/markdown\").writePages()'",
+    "postbuild": "yarn optimize:images",
+    "optimize:images": "node src/images/optimize.js",
     "start": "concurrently 'yarn watch:content'",
     "develop": "concurrently 'yarn watch:test:compiler'",
     "new": "yarn new:guide",
@@ -58,6 +60,7 @@
     "markdown-spellcheck": "^1.3.1",
     "markdownlint-cli": "0.21.0",
     "sha1-from-file": "^2.0.1",
+    "sharp": "^0.24.0",
     "strip-indent": "^3.0.0",
     "watch": "^1.0.2"
   }
