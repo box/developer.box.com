@@ -47,10 +47,10 @@ test: foo
 notes: Test
 category_id: null
 subcategory_id: null
-id: foo.md
-type: guide
 is_index: false
+id: foo.md
 rank: 0
+type: guide
 total_steps: 0
 sibling_id: guides
 parent_id: index.md
