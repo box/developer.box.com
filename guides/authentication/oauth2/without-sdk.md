@@ -293,7 +293,7 @@ authentication_url = "https://api.box.com/oauth2/token";
 
 params = urlencode({
   'grant_type': 'authorization_code',
-  'assertion': '[CODE]',
+  'code': '[CODE]',
   'client_id': '[CLIENT_ID]',
   'client_secret': '[CLIENT_SECRET]'
 }).encode()
@@ -311,7 +311,7 @@ let accessToken = await axios.post(
   authenticationUrl,
   querystring.stringify({
     grant_type: 'authorization_code',
-    assertion: '[CODE]',
+    code: '[CODE]',
     client_id: '[CLIENT_ID]',
     client_secret: '[CLIENT_SECRET]'
   })
