@@ -34,7 +34,7 @@ interact with any Box content and perform any action supported by Box. It can
 offer new features to Box users through [Recommended Apps][recommended-apps],
 which show up in Box Preview.
 
-<ImageFrame border shadow width='400' center>
+<ImageFrame border shadow center>
 
 ![Integration example](../images/recommended-apps-preview.png)
 
