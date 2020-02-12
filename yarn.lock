@@ -1159,10 +1159,10 @@ commander@~2.9.0:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-comment-json@^2.2.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/comment-json/-/comment-json-2.4.1.tgz#2b4223550dc2ec66d147fa43070a77228c86ff33"
-  integrity sha512-tqWF7AoTjxMFQwUaQu8qThLfpupmPTewqMWNYcadoG+XusPZ7LwWYdgEfbz0gVTxp+macmtKtX9v/a1remsxEA==
+comment-json@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/comment-json/-/comment-json-3.0.0.tgz#84e917b892ab5d8e4dd655299bc46937e876987e"
+  integrity sha512-KdzzQCDWJhmYq2NMJGaHzpzdo5e5gA3TCrt7D2klr1/M7R0RyOyS/k5Bya18pYfZwnlm3DjnB8O/KCAoirniMQ==
   dependencies:
     core-util-is "^1.0.2"
     esprima "^4.0.1"
