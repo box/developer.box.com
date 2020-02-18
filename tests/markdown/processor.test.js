@@ -2,7 +2,7 @@ const Processor = require('../../src/markdown/Processor')
 
 
 beforeAll(() => {
-  processor = new Processor({ sourcePath: 'content/guides/foo.md' })
+  processor = new Processor({ sourcePath: './content/guides/foo.md' })
 })
 
 test('should transform a complicated use case', () => {
@@ -48,13 +48,13 @@ notes: Test
 category_id: null
 subcategory_id: null
 is_index: false
-id: foo.md
+id: foo
 rank: 0
 type: guide
 total_steps: 0
 sibling_id: guides
-parent_id: index.md
-next_page_id: index.md
+parent_id: guides
+next_page_id: guides
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/master/content/guides/foo.md'
 ---
