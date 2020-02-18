@@ -121,7 +121,7 @@ API Reference
 
 </Header>
 
-<ReferenceCategories limit='3' >
+<ReferenceCategories limit='8' >
 
 </ReferenceCategories>
 
