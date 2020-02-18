@@ -21,6 +21,8 @@ sibling_id: users
 parent_id: users
 next_page_id: users/delete-user
 previous_page_id: users/create-managed-user
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/users/create-app-user.md
 ---
 
 # Create App User

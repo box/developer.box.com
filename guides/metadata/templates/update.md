@@ -19,6 +19,8 @@ sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/delete
 previous_page_id: metadata/templates/create
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/2-templates/5-update.md
 ---
 
 # Update a metadata template

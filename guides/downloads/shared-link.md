@@ -19,6 +19,8 @@ sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads/folder
 previous_page_id: downloads/file-version
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/downloads/shared-link.md
 ---
 
 # Download Shared Link

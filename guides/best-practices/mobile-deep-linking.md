@@ -17,6 +17,8 @@ sibling_id: best-practices
 parent_id: best-practices
 next_page_id: best-practices/branding-guidelines
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/best-practices/mobile-deep-linking.md
 ---
 
 # Mobile Deep Linking

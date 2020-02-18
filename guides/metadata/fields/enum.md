@@ -18,6 +18,8 @@ sibling_id: metadata/fields
 parent_id: metadata/fields
 next_page_id: metadata/fields/multi-select
 previous_page_id: metadata/fields
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/3-fields/4-enum.md
 ---
 
 # Enum metadata field

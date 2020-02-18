@@ -11,6 +11,8 @@ sibling_id: internal/ui-elements
 parent_id: internal/ui-elements
 next_page_id: internal/ui-elements
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/internal/ui-elements/message.md
 ---
 
 <!-- does not need translation -->

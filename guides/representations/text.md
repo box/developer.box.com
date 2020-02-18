@@ -19,6 +19,8 @@ sibling_id: representations
 parent_id: representations
 next_page_id: representations/supported-file-types
 previous_page_id: representations/pdf
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/representations/text.md
 ---
 
 # Get Text Representation

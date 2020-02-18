@@ -11,6 +11,8 @@ sibling_id: internal
 parent_id: internal
 next_page_id: ''
 previous_page_id: internal/ui-elements/cta
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/internal/ui-elements/index.md
 ---
 
 <!-- does not need translation -->

@@ -18,6 +18,8 @@ sibling_id: applications/web-app-integrations
 parent_id: applications/web-app-integrations
 next_page_id: applications/web-app-integrations
 previous_page_id: applications/web-app-integrations/user-experience
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/web-app-integrations/configure.md
 ---
 
 # Create Web App Integration

@@ -20,6 +20,8 @@ sibling_id: collections
 parent_id: collections
 next_page_id: collections/add
 previous_page_id: collections/list
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/collections/list-items.md
 ---
 
 # List Items in Collections

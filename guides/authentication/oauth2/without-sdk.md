@@ -21,6 +21,8 @@ sibling_id: authentication/oauth2
 parent_id: authentication/oauth2
 next_page_id: authentication/oauth2/as-user
 previous_page_id: authentication/oauth2
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/oauth2/without-sdk.md
 ---
 
 # OAuth 2.0 without SDKs
@@ -293,7 +295,7 @@ authentication_url = "https://api.box.com/oauth2/token";
 
 params = urlencode({
   'grant_type': 'authorization_code',
-  'assertion': '[CODE]',
+  'code': '[CODE]',
   'client_id': '[CLIENT_ID]',
   'client_secret': '[CLIENT_SECRET]'
 }).encode()
@@ -311,7 +313,7 @@ let accessToken = await axios.post(
   authenticationUrl,
   querystring.stringify({
     grant_type: 'authorization_code',
-    assertion: '[CODE]',
+    code: '[CODE]',
     client_id: '[CLIENT_ID]',
     client_secret: '[CLIENT_SECRET]'
   })

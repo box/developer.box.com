@@ -12,6 +12,8 @@ sibling_id: metadata
 parent_id: metadata
 next_page_id: metadata/quick-start/create-template
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/0-index.md
 ---
 
 # Metadata Quick Start

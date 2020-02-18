@@ -18,6 +18,8 @@ sibling_id: applications
 parent_id: applications
 next_page_id: applications
 previous_page_id: applications/select
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/app-gallery.md
 ---
 
 # App Gallery

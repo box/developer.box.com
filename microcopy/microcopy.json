@@ -119,6 +119,8 @@
   "reference.environments.cli": "CLI",
   // Describes the cURL tool whenselecting a code sample
   "reference.environments.curl": "cURL",
+  // Describes the iOS programming language whenselecting a code sample - DO NOT TRANSLATE
+  "reference.environments.ios": "iOS",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
   "reference.resource_variants.base": "Base",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource

@@ -16,6 +16,8 @@ sibling_id: guides
 parent_id: guides
 next_page_id: ''
 previous_page_id: collaboration-whitelists/delete-whitelist
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/collaboration-whitelists/index.md
 ---
 
 <!-- alex disable whitelist -->

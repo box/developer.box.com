@@ -19,6 +19,8 @@ sibling_id: events
 parent_id: events
 next_page_id: events/for-enterprise
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/events/for-user.md
 ---
 
 # Get User Events
@@ -50,7 +52,7 @@ The user event stream support 3 types of stream.
 <!-- markdownlint-disable line-length -->
 
 | Stream Type |                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------- |
+|-------------|-----------------------------------------------------------------------------------------|
 | `all`       | Returns everything for a user (default)                                                 |
 | `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
 | `sync`      | Is similar to changes but only applies to synced folders                                |
@@ -78,7 +80,8 @@ The following events can be triggered for a user.
 The following events are available in all feeds.
 
 | Event name                   | Description                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------- |
+|------------------------------|---------------------------------------------------------------------------------|
+| `ITEM_CREATE`                | A folder or File was created                                                    |
 | `ITEM_UPLOAD`                | A folder or File was uploaded                                                   |
 | `ITEM_MOVE`                  | A file or folder was moved                                                      |
 | `ITEM_COPY`                  | A file or folder was copied                                                     |
@@ -100,8 +103,7 @@ The following events are available in all feeds.
 The following events are only available in the `all` feed.
 
 | Event name               | Description                                               |
-| ------------------------ | --------------------------------------------------------- |
-| `ITEM_CREATE`            | A folder or File was created                              |
+|--------------------------|-----------------------------------------------------------|
 | `COMMENT_CREATE`         | A comment was created on a folder, file, or other comment |
 | `COMMENT_DELETE`         | A comment was deleted on folder, file, or other comment   |
 | `ITEM_DOWNLOAD`          | A file or folder was downloaded                           |

@@ -17,6 +17,8 @@ sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: authentication/app-token/rollover
 previous_page_id: authentication/app-token/without-sdk
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/app-token/endpoints.md
 ---
 
 # Supported Endpoints

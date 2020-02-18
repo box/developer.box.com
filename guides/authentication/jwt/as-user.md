@@ -20,6 +20,8 @@ sibling_id: authentication/jwt
 parent_id: authentication/jwt
 next_page_id: authentication/jwt/user-access-tokens
 previous_page_id: authentication/jwt
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/jwt/as-user.md
 ---
 
 # As-User Header

@@ -22,6 +22,8 @@ sibling_id: metadata/instances
 parent_id: metadata/instances
 next_page_id: metadata/instances
 previous_page_id: metadata/instances/get
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/4-instances/3-create.md
 ---
 
 # Apply metadata to an item

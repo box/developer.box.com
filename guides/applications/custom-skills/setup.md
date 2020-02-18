@@ -16,6 +16,8 @@ sibling_id: applications/custom-skills
 parent_id: applications/custom-skills
 next_page_id: applications/custom-skills/approval
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-skills/setup.md
 ---
 
 # Setup

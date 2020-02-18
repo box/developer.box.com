@@ -18,6 +18,8 @@ sibling_id: skills
 parent_id: skills
 next_page_id: skills/examples
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/skills/invocation-url.md
 ---
 
 # Box Skills Invocation URL

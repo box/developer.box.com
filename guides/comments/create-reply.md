@@ -18,6 +18,8 @@ sibling_id: comments
 parent_id: comments
 next_page_id: comments
 previous_page_id: comments/create-comment
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/comments/create-reply.md
 ---
 
 # Create Reply

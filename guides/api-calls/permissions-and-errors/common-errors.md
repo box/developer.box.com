@@ -20,6 +20,8 @@ sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors
 next_page_id: api-calls/permissions-and-errors
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/permissions-and-errors/common-errors.md
 ---
 
 <!-- alex disable failed -->

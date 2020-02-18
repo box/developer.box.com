@@ -18,6 +18,8 @@ sibling_id: metadata/fields
 parent_id: metadata/fields
 next_page_id: ''
 previous_page_id: metadata/fields/enum
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/3-fields/5-multi-select.md
 ---
 
 # Multi Select metadata field

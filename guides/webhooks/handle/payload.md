@@ -19,6 +19,8 @@ sibling_id: webhooks/handle
 parent_id: webhooks/handle
 next_page_id: webhooks/handle/retries
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/webhooks/handle/payload.md
 ---
 
 # Webhook Payload

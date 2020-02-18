@@ -11,6 +11,8 @@ sibling_id: internal/ui-elements
 parent_id: internal/ui-elements
 next_page_id: internal/ui-elements
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/internal/ui-elements/imageframe.md
 ---
 
 <!-- does not need translation -->
@@ -38,6 +40,7 @@ An image can be wrapped into a frame.
 <Message>
 
 Options include a `border`, whether to `center` the image, whether to add a
-`shadow`, and a max-`width` of `200` or `400` pixels on larger screens.
+`shadow`, and a max-`width` of `200`, `300`, `400`, or `600` pixels on larger
+screens.
 
 </Message>

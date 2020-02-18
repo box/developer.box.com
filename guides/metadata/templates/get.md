@@ -19,6 +19,8 @@ sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/create
 previous_page_id: metadata/templates
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/2-templates/3-get.md
 ---
 
 # Get a metadata template

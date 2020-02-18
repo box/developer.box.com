@@ -12,6 +12,8 @@ sibling_id: mobile
 parent_id: mobile
 next_page_id: ''
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/android/index.md
 ---
 
 # Android

@@ -20,6 +20,8 @@ sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/annotator-tokens
 previous_page_id: authentication/access-tokens/revoke
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/access-tokens/downscope.md
 ---
 
 # Downscope a Token
@@ -80,28 +82,35 @@ extra information on the specific restrictions.
 
 ```json
 {
-  "access_token": "c3FIOG9vSGV4VHo4QzAyg5T1JvNnJoZ3ExaVNyQWw6WjRsanRKZG5lQk9qUE1BVQ",
-  "expires_in": 3600,
-  "token_type": "bearer",
-  "restricted_to": [
-    {
-      "scope": "item_download",
-      "object": {
-        "id": 12345,
-        "etag": 1,
-        "type": "file",
-        "sequence_id": 3,
-        "name": "Contract.pdf"
-      }
-    }
-  ],
-  "refresh_token": "c3FIOG9vSGV4VHo4QzAyg5T1JvNnJoZ3ExaVNyQWw6WjRsanRKZG5lQk9qUE1BVQ",
-  "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
+    "access_token": "1!DgsZ6V9kMWZu2StrxwQDF5BudQNen-xUmU2cfcVKArE....",
+    "expires_in": 4175,
+    "token_type": "bearer",
+    "restricted_to": [
+        {
+            "scope": "item_preview",
+            "object": {
+                "type": "folder",
+                "id": "1234567890",
+                "sequence_id": "0",
+                "etag": "0",
+                "name": "Test"
+            }
+        }
+    ],
+    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
 ```
 
 Most importantly here is the list of `restricted_to` entries that will contain
 each combination of `object` and `scope` that the new token has the permissions for.
+
+<Message warning>
+
+A downscoped token does not include a refresh token. To get a new downscoped
+token, refresh the original refresh token and use that new token to get a
+downscoped token.
+
+</Message>
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 [scopes_down]: guide://api-calls/permissions-and-errors/scopes/#scopes-for-downscoping

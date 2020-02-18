@@ -16,6 +16,8 @@ sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: ''
 previous_page_id: authentication/app-token/endpoints
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/app-token/rollover.md
 ---
 
 # Rotating App Tokens

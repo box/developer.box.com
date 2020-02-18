@@ -17,6 +17,8 @@ sibling_id: users/provision
 parent_id: users/provision
 next_page_id: users/provision/shared-folders
 previous_page_id: users/provision/architecture
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/users/provision/populate-content.md
 ---
 
 # Populate Content

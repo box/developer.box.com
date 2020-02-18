@@ -16,6 +16,8 @@ sibling_id: best-practices
 parent_id: best-practices
 next_page_id: best-practices
 previous_page_id: best-practices/branding-guidelines
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/content/guides/best-practices/cors.md
 ---
 
 # Cross-Origin Resource Sharing
