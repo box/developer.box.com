@@ -172,6 +172,12 @@ safelisted
 Safelisted
 Frontmatter
 frontmatter
+<<<<<<< HEAD
+=======
+Unassign
+unassign
+file-centric
+>>>>>>> @{-1}
 Xcode
 CocoaPods
 scalable

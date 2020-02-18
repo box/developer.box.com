@@ -22,11 +22,10 @@ A metadata field of type `date` is displayed to a user as a date picker.
 <Message notice>
   Although dates are presented to users in the Box Web app as date-pickers, the
   actual dates are actually stored as in `RFC3339` format, with up to
-  millisecond precision. Dates can be set to include a timestamp when set
-  through the UI.
+  millisecond precision. The time part of the date is always set to `T00:00:00.000Z`.
 </Message>
 
-## Create a float field
+## Create a date field
 
 A `date` field can be added to a metadata template either when [creating a
 metadata template][g_create_template], or when [updating a

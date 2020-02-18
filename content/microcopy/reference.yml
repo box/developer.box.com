@@ -194,6 +194,11 @@ environments:
     selecting a code sample
   curl: cURL
 
+  // ios: |-
+    Describes the iOS programming language when
+    selecting a code sample - DO NOT TRANSLATE
+  ios: iOS
+
 resource_variants:
   // base: |-
     Describes the smallest set of fields that are returned

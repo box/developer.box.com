@@ -3,10 +3,12 @@ const _path = require('path')
 const glob = require('glob')
 const fs = require('fs')
 
-TYPES = {
+const TYPES = {
   pages: 'page',
   guides: 'guide'
 }
+
+const REPO_NAME = 'box/developer.box.com'
 
 const extractFrontmatter = (frontmatter, sourcePath) => {
   frontmatter = yaml.load(frontmatter) || {}
@@ -22,6 +24,7 @@ const extractFrontmatter = (frontmatter, sourcePath) => {
   frontmatter.parent_id = parentId(sourcePath, frontmatter.is_index)
   frontmatter.next_page_id = nextPageId(sourcePath, frontmatter.rank)
   frontmatter.previous_page_id = previousPageId(sourcePath, frontmatter.rank)
+  frontmatter.source_url = sourceUrl(sourcePath)
 
   return yaml.dump(frontmatter)
 }
@@ -139,5 +142,8 @@ const previousPageId = (path, nextRank) => {
 const checkIsIndex = (name) => (name.endsWith('/index.md') || name.endsWith('-index.md'))
 const not = (match) => (item) => item !== match
 
+const sourceUrl = (sourcePath) => {
+  return `https://github.com/${REPO_NAME}/blob/master/${sourcePath.replace('./', '')}`
+}
 
 module.exports = extractFrontmatter
