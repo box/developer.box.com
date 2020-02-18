@@ -56,6 +56,7 @@ sibling_id: guides
 parent_id: index.md
 next_page_id: index.md
 previous_page_id: ''
+source_url: 'https://github.com/box/developer.box.com/blob/master/content/guides/foo.md'
 ---
 
 <Foobar id='no1' data-type="type" disabled>
