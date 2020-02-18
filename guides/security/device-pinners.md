@@ -16,7 +16,7 @@ parent_id: security
 next_page_id: security
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/security/device-pinners.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/security/device-pinners.md
 ---
 
 # Device Pinners

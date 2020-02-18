@@ -13,7 +13,7 @@ parent_id: mobile
 next_page_id: mobile/ios-quick-start/create-ios-app
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/mobile/ios-quick-start/0-index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/0-index.md
 ---
 
 # iOS SDK Quick Start

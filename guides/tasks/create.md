@@ -17,7 +17,7 @@ parent_id: tasks
 next_page_id: tasks/get
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/tasks/1-create.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/tasks/1-create.md
 ---
 <!-- alex disable reject -->
 

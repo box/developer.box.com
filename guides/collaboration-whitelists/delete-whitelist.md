@@ -21,7 +21,7 @@ parent_id: collaboration-whitelists
 next_page_id: collaboration-whitelists
 previous_page_id: collaboration-whitelists/list-whitelists
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/collaboration-whitelists/delete-whitelist.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/collaboration-whitelists/delete-whitelist.md
 ---
 
 <!-- alex disable whitelist -->

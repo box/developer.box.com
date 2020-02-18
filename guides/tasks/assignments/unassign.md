@@ -16,7 +16,7 @@ parent_id: tasks/assignments
 next_page_id: tasks/assignments/update-message
 previous_page_id: tasks/assignments/assign
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/tasks/assignments/2-unassign.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/tasks/assignments/2-unassign.md
 ---
 
 # Unassign a task

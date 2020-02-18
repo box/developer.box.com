@@ -12,7 +12,7 @@ parent_id: internal/markdown
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/internal/markdown/code-blocks.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/internal/markdown/code-blocks.md
 ---
 
 <!-- does not need translation -->

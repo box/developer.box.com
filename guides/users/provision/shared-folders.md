@@ -19,7 +19,7 @@ parent_id: users/provision
 next_page_id: ''
 previous_page_id: users/provision/populate-content
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/users/provision/shared-folders.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/users/provision/shared-folders.md
 ---
 
 # Setup Shared Folders

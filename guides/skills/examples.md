@@ -21,7 +21,7 @@ parent_id: skills
 next_page_id: skills/kit
 previous_page_id: skills/invocation-url
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/skills/examples.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/skills/examples.md
 ---
 
 # Community Sample Skills

@@ -19,7 +19,7 @@ parent_id: comments
 next_page_id: comments/create-reply
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/comments/create-comment.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/comments/create-comment.md
 ---
 
 # Create Comment

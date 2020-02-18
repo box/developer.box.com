@@ -17,7 +17,7 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: applications/custom-skills/approval
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/applications/custom-skills/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-skills/index.md
 ---
 
 # Customs Skills

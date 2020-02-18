@@ -17,7 +17,7 @@ parent_id: api-calls
 next_page_id: api-calls/request-extra-fields
 previous_page_id: api-calls/types-and-formats
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/api-calls/status-codes.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/status-codes.md
 ---
 
 # Status Codes

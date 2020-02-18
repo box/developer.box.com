@@ -20,7 +20,7 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/custom-domains
 previous_page_id: embed/ui-elements/scopes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/ui-elements/viewers-and-events.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/viewers-and-events.md
 ---
 
 <!-- alex disable black -->

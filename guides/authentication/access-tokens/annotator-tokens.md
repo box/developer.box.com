@@ -20,7 +20,7 @@ parent_id: authentication/access-tokens
 next_page_id: ''
 previous_page_id: authentication/access-tokens/downscope
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/access-tokens/annotator-tokens.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/access-tokens/annotator-tokens.md
 ---
 
 # Annotator Tokens

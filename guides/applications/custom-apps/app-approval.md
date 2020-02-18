@@ -18,7 +18,7 @@ parent_id: applications/custom-apps
 next_page_id: ''
 previous_page_id: applications/custom-apps/app-token-setup
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/applications/custom-apps/app-approval.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-apps/app-approval.md
 ---
 
 # App Approval

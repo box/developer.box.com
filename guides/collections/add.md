@@ -23,7 +23,7 @@ parent_id: collections
 next_page_id: collections/remove
 previous_page_id: collections/list-items
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/collections/add.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/collections/add.md
 ---
 
 # Add Item to Collection

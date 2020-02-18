@@ -22,7 +22,7 @@ parent_id: authentication
 next_page_id: authentication/jwt/as-user
 previous_page_id: authentication/jwt/with-sdk
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/jwt/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/jwt/index.md
 ---
 
 # JWT Auth

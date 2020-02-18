@@ -16,7 +16,7 @@ parent_id: tooling/postman
 next_page_id: ''
 previous_page_id: tooling/postman/refresh
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/postman/legacy.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/postman/legacy.md
 ---
 
 <!-- alex disable postman-postwoman -->

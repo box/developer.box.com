@@ -13,7 +13,7 @@ parent_id: mobile
 next_page_id: mobile
 previous_page_id: mobile/ios
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/mobile/2-android.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/2-android.md
 ---
 
 # Android SDK

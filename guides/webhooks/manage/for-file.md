@@ -21,7 +21,7 @@ parent_id: webhooks/manage
 next_page_id: webhooks/manage/for-folder
 previous_page_id: webhooks/manage/list-all
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/webhooks/manage/for-file.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/webhooks/manage/for-file.md
 ---
 
 # Create Webhook for File

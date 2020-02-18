@@ -21,7 +21,7 @@ parent_id: uploads/chunked
 next_page_id: ''
 previous_page_id: uploads/chunked/commit-session
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/uploads/chunked/folder.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/uploads/chunked/folder.md
 ---
 
 # Upload All Files in Folder

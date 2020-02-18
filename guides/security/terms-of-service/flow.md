@@ -18,7 +18,7 @@ parent_id: security/terms-of-service
 next_page_id: security/terms-of-service/for-colaboration
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/security/terms-of-service/flow.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/security/terms-of-service/flow.md
 ---
 
 <!-- alex disable reject -->

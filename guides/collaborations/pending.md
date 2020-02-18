@@ -20,7 +20,7 @@ parent_id: collaborations
 next_page_id: collaborations
 previous_page_id: collaborations/groups
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/collaborations/pending.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/collaborations/pending.md
 ---
 
 # Get Pending Collaborations

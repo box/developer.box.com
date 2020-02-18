@@ -20,7 +20,7 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/sidebar
 previous_page_id: embed/ui-elements/picker
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/ui-elements/preview.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/preview.md
 ---
 
 # Content Preview

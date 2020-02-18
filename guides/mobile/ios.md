@@ -13,7 +13,7 @@ parent_id: mobile
 next_page_id: mobile/android
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/mobile/1-ios.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/1-ios.md
 ---
 
 # iOS SDK

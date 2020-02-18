@@ -19,7 +19,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: users/delete-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/users/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/users/index.md
 ---
 
 # Users

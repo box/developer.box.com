@@ -21,7 +21,7 @@ parent_id: authentication/oauth2
 next_page_id: ''
 previous_page_id: authentication/oauth2/without-sdk
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/oauth2/as-user.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/oauth2/as-user.md
 ---
 
 # As-User Header

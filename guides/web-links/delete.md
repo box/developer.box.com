@@ -20,7 +20,7 @@ parent_id: web-links
 next_page_id: web-links
 previous_page_id: web-links/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/web-links/delete.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/web-links/delete.md
 ---
 
 # Delete Web Link

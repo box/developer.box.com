@@ -12,7 +12,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: downloads/folder
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/downloads/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/downloads/index.md
 ---
 
 # Downloads

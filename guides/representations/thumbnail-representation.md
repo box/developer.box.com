@@ -21,7 +21,7 @@ parent_id: representations
 next_page_id: representations/pdf
 previous_page_id: representations/download-a-representation
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/representations/thumbnail-representation.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/representations/thumbnail-representation.md
 ---
 
 # Get Thumbnail Representation

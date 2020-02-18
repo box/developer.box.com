@@ -17,7 +17,7 @@ parent_id: authentication
 next_page_id: authentication/sso
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/select.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/select.md
 ---
 
 # Select Auth Method

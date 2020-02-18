@@ -19,7 +19,7 @@ parent_id: trash
 next_page_id: trash/permanently-delete-file
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/trash/restore-file.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/trash/restore-file.md
 ---
 
 # Restore File

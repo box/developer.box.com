@@ -19,7 +19,7 @@ parent_id: embed/ui-elements
 next_page_id: ''
 previous_page_id: embed/ui-elements/viewers-and-events
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/ui-elements/custom-domains.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/custom-domains.md
 ---
 
 # Box Edit Custom Domains

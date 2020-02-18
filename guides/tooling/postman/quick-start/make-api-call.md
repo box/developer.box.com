@@ -14,7 +14,7 @@ parent_id: tooling/postman/quick-start
 next_page_id: tooling/postman/quick-start/next-steps
 previous_page_id: tooling/postman/quick-start/load-postman-collection
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/postman/quick-start/5-make-api-call.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/postman/quick-start/5-make-api-call.md
 ---
 
 <!-- alex disable postman-postwoman -->

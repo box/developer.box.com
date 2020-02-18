@@ -27,7 +27,7 @@ parent_id: api-calls/pagination
 next_page_id: ''
 previous_page_id: api-calls/pagination
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/api-calls/pagination/marker-based.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/pagination/marker-based.md
 ---
 
 # Marker-based Pagination

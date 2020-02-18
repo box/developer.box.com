@@ -16,7 +16,7 @@ parent_id: applications/custom-skills
 next_page_id: applications/custom-skills
 previous_page_id: applications/custom-skills/setup
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/applications/custom-skills/approval.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-skills/approval.md
 ---
 
 <!-- alex disable whitelist -->

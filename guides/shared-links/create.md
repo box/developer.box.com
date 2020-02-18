@@ -21,7 +21,7 @@ parent_id: shared-links
 next_page_id: shared-links/update
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/shared-links/create.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/shared-links/create.md
 ---
 
 # Create Shared Link

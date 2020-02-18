@@ -21,7 +21,7 @@ parent_id: uploads/chunked
 next_page_id: uploads/chunked/commit-session
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/uploads/chunked/upload-part.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/uploads/chunked/upload-part.md
 ---
 
 # Upload Part

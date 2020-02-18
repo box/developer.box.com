@@ -16,7 +16,7 @@ parent_id: embed/box-view
 next_page_id: embed/box-view/create-preview
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/box-view/setup.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/embed/box-view/setup.md
 ---
 
 # Setup

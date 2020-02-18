@@ -19,7 +19,7 @@ parent_id: tooling
 next_page_id: ''
 previous_page_id: tooling/sdks/cli
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/sdks/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/sdks/index.md
 ---
 
 # SDKs & CLI

@@ -17,7 +17,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: web-links/delete
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/./content/guides/web-links/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/web-links/index.md
 ---
 
 # Web Links
