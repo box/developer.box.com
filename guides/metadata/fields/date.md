@@ -39,7 +39,7 @@ through the UI.
 
 </Message>
 
-## Create a float field
+## Create a date field
 
 A `date` field can be added to a metadata template either when [creating a
 metadata template][g_create_template], or when [updating a
