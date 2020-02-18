@@ -17,6 +17,8 @@ sibling_id: applications
 parent_id: applications
 next_page_id: ''
 previous_page_id: applications/web-app-integrations/configure
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/applications/web-app-integrations/index.md
 ---
 
 # Web App Integration

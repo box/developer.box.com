@@ -20,6 +20,8 @@ sibling_id: folders/bulk
 parent_id: folders/bulk
 next_page_id: ''
 previous_page_id: folders/bulk
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/folders/bulk/build-folder-tree.md
 ---
 
 # Build Folder Tree

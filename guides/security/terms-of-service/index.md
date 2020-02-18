@@ -11,6 +11,8 @@ sibling_id: security
 parent_id: security
 next_page_id: security/terms-of-service/for-colaboration
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/security/terms-of-service/index.md
 ---
 
 <!-- alex disable reject -->

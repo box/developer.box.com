@@ -19,6 +19,8 @@ sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/revoke
 previous_page_id: authentication/access-tokens/developer-tokens
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/access-tokens/refresh.md
 ---
 
 # Refresh a Token

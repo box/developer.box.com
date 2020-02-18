@@ -21,6 +21,8 @@ sibling_id: authentication/jwt
 parent_id: authentication/jwt
 next_page_id: ''
 previous_page_id: authentication/jwt/as-user
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/jwt/user-access-tokens.md
 ---
 
 # User Access Token

@@ -21,6 +21,8 @@ sibling_id: uploads/chunked
 parent_id: uploads/chunked
 next_page_id: uploads/chunked/folder
 previous_page_id: uploads/chunked/create-session
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/uploads/chunked/commit-session.md
 ---
 
 # Commit Upload Session

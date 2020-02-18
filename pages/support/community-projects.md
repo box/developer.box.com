@@ -18,6 +18,8 @@ sibling_id: support
 parent_id: support
 next_page_id: ''
 previous_page_id: support
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/pages/support/community-projects.md
 ---
 
 # Community Projects

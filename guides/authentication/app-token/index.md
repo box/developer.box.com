@@ -20,6 +20,8 @@ sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/app-token/rollover
 previous_page_id: authentication/app-token/without-sdk
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/app-token/index.md
 ---
 
 # App Token Auth

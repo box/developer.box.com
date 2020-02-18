@@ -11,6 +11,8 @@ sibling_id: internal/flow
 parent_id: internal/flow
 next_page_id: internal/flow/observer
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/internal/flow/next.md
 ---
 
 <!-- does not need translation -->

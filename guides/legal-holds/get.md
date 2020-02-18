@@ -18,6 +18,8 @@ sibling_id: legal-holds
 parent_id: legal-holds
 next_page_id: legal-holds
 previous_page_id: legal-holds/list
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/legal-holds/get.md
 ---
 
 # Get Legal Hold Policy

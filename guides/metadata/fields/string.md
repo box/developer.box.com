@@ -18,6 +18,8 @@ sibling_id: metadata/fields
 parent_id: metadata/fields
 next_page_id: metadata/fields/float
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/3-fields/1-string.md
 ---
 
 # String metadata field

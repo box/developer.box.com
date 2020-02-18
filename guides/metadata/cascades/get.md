@@ -17,6 +17,8 @@ sibling_id: metadata/cascades
 parent_id: metadata/cascades
 next_page_id: metadata/cascades/create
 previous_page_id: metadata/cascades/list
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/5-cascades/2-get.md
 ---
 
 # Get a metadata cascade policy

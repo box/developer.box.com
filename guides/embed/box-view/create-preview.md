@@ -18,6 +18,8 @@ sibling_id: embed/box-view
 parent_id: embed/box-view
 next_page_id: embed/box-view/upload-file
 previous_page_id: embed/box-view/setup
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/box-view/create-preview.md
 ---
 
 # Create File Preview

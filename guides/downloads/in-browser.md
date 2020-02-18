@@ -19,6 +19,8 @@ sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads
 previous_page_id: downloads/get-url
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/downloads/in-browser.md
 ---
 
 # Download in Browser

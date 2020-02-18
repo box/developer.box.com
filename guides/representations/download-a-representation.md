@@ -18,6 +18,8 @@ sibling_id: representations
 parent_id: representations
 next_page_id: representations/thumbnail-representation
 previous_page_id: representations/request-a-representation
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/representations/download-a-representation.md
 ---
 
 # Download File Representation

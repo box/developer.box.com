@@ -18,6 +18,8 @@ sibling_id: users/deprovision
 parent_id: users/deprovision
 next_page_id: users/deprovision
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/users/deprovision/user.md
 ---
 
 # Deprovision User

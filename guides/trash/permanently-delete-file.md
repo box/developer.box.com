@@ -18,6 +18,8 @@ sibling_id: trash
 parent_id: trash
 next_page_id: trash/restore-folder
 previous_page_id: trash/restore-file
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/trash/permanently-delete-file.md
 ---
 
 # Permanently Delete File

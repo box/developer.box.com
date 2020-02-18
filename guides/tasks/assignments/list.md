@@ -16,6 +16,8 @@ sibling_id: tasks/assignments
 parent_id: tasks/assignments
 next_page_id: tasks/assignments/change-state
 previous_page_id: tasks/assignments/get
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tasks/assignments/5-list.md
 ---
 
 # List a task's assignments

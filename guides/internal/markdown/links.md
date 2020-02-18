@@ -11,6 +11,8 @@ sibling_id: internal/markdown
 parent_id: internal/markdown
 next_page_id: ''
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/internal/markdown/links.md
 ---
 
 <!-- does not need translation -->

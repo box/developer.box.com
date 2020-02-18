@@ -16,6 +16,8 @@ sibling_id: embed
 parent_id: embed
 next_page_id: embed
 previous_page_id: embed/box-dicom
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/box-embed.md
 ---
 
 # Box Embed

@@ -10,6 +10,8 @@ sibling_id: metadata
 parent_id: metadata
 next_page_id: metadata/fields/enum
 previous_page_id: metadata/fields/float
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/3-fields/0-index.md
 ---
 
 # Metadata fields

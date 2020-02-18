@@ -15,6 +15,8 @@ sibling_id: embed/box-view
 parent_id: embed/box-view
 next_page_id: embed/box-view/best-practices
 previous_page_id: embed/box-view/create-preview
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/box-view/upload-file.md
 ---
 
 # Upload Files

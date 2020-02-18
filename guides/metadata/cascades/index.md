@@ -10,6 +10,8 @@ sibling_id: metadata
 parent_id: metadata
 next_page_id: ''
 previous_page_id: metadata/cascades/force-apply
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/5-cascades/0-index.md
 ---
 
 # Metadata cascade policies (Beta)

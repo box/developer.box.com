@@ -19,6 +19,8 @@ sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: authentication/app-token/endpoints
 previous_page_id: authentication/app-token/with-sdk
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/app-token/without-sdk.md
 ---
 
 # App Tokens without SDKs

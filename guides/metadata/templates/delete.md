@@ -19,6 +19,8 @@ sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: ''
 previous_page_id: metadata/templates/update
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/2-templates/6-delete.md
 ---
 
 # Delete a metadata template

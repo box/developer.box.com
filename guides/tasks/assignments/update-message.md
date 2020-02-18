@@ -16,6 +16,8 @@ sibling_id: tasks/assignments
 parent_id: tasks/assignments
 next_page_id: tasks/assignments/get
 previous_page_id: tasks/assignments/unassign
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tasks/assignments/3-update-message.md
 ---
 
 # Change an assignment's message

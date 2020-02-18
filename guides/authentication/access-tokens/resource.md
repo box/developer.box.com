@@ -18,6 +18,8 @@ sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/api-calls
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/access-tokens/resource.md
 ---
 
 # Access Token Object

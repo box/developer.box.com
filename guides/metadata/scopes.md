@@ -19,6 +19,8 @@ sibling_id: metadata
 parent_id: metadata
 next_page_id: metadata
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/1-scopes.md
 ---
 
 # Metadata template scopes

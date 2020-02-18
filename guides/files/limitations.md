@@ -14,6 +14,8 @@ sibling_id: files
 parent_id: files
 next_page_id: ''
 previous_page_id: files
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/files/limitations.md
 ---
 
 # Limitations

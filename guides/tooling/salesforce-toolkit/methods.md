@@ -16,6 +16,8 @@ sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
 next_page_id: tooling/salesforce-toolkit/samples
 previous_page_id: tooling/salesforce-toolkit
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/salesforce-toolkit/methods.md
 ---
 
 <!-- alex disable failed -->

@@ -13,6 +13,8 @@ sibling_id: tooling/postman/quick-start
 parent_id: tooling/postman/quick-start
 next_page_id: tooling/postman/quick-start/log-in-to-box
 previous_page_id: tooling/postman/quick-start/install-postman
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/postman/quick-start/2-configure-box-app.md
 ---
 
 <!-- alex disable postman-postwoman -->

@@ -15,6 +15,8 @@ sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/status-codes
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/api-calls/types-and-formats.md
 ---
 
 # Types & Formats

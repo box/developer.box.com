@@ -28,6 +28,8 @@ sibling_id: api-calls/pagination
 parent_id: api-calls/pagination
 next_page_id: api-calls/pagination/marker-based
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/api-calls/pagination/offset-based.md
 ---
 
 # Offset-based Pagination

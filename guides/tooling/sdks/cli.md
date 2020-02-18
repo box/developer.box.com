@@ -24,6 +24,8 @@ sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks
 previous_page_id: tooling/sdks/node
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/sdks/cli.md
 ---
 
 # Install Box CLI

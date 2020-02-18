@@ -20,6 +20,8 @@ sibling_id: collaboration-whitelists
 parent_id: collaboration-whitelists
 next_page_id: collaboration-whitelists/list-whitelists
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/collaboration-whitelists/create-whitelist.md
 ---
 
 <!-- alex disable whitelist -->

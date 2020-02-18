@@ -11,6 +11,8 @@ sibling_id: internal/flow
 parent_id: internal/flow
 next_page_id: ''
 previous_page_id: internal/flow/store
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/internal/flow/login.md
 ---
 
 <!-- does not need translation -->

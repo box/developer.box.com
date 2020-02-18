@@ -17,6 +17,8 @@ sibling_id: embed/ui-elements
 parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/browser
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/ui-elements/installation.md
 ---
 
 # Installation

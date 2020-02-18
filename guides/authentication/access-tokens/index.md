@@ -15,6 +15,8 @@ sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/access-tokens/refresh
 previous_page_id: authentication/access-tokens/sdks
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/access-tokens/index.md
 ---
 
 # Access Tokens

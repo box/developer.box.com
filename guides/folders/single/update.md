@@ -19,6 +19,8 @@ sibling_id: folders/single
 parent_id: folders/single
 next_page_id: folders/single/rename
 previous_page_id: folders/single/create
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/folders/single/update.md
 ---
 
 # Update Folder

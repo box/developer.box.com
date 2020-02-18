@@ -17,6 +17,8 @@ sibling_id: skills/handle
 parent_id: skills/handle
 next_page_id: ''
 previous_page_id: skills/handle/payload
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/skills/handle/metadata.md
 ---
 
 # Write Skills Metadata

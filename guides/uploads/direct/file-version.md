@@ -19,6 +19,8 @@ sibling_id: uploads/direct
 parent_id: uploads/direct
 next_page_id: ''
 previous_page_id: uploads/direct/file
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/uploads/direct/file-version.md
 ---
 
 # Upload File Version

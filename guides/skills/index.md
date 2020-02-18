@@ -12,6 +12,8 @@ sibling_id: guides
 parent_id: guides
 next_page_id: ''
 previous_page_id: skills/kit
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/skills/index.md
 ---
 
 # Box Skills

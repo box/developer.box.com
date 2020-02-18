@@ -17,6 +17,8 @@ sibling_id: metadata/cascades
 parent_id: metadata/cascades
 next_page_id: ''
 previous_page_id: metadata/cascades/force-apply
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/5-cascades/5-delete.md
 ---
 
 # Delete a metadata cascade policy

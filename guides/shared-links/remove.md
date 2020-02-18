@@ -20,6 +20,8 @@ sibling_id: shared-links
 parent_id: shared-links
 next_page_id: shared-links
 previous_page_id: shared-links/find-for-item
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/shared-links/remove.md
 ---
 
 # Remove Shared Link

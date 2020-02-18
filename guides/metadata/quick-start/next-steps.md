@@ -11,6 +11,8 @@ sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
 next_page_id: ''
 previous_page_id: metadata/quick-start/update-template
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/1-quick-start/6-next-steps.md
 ---
 
 # Next steps

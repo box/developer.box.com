@@ -18,6 +18,8 @@ sibling_id: webhooks/manage
 parent_id: webhooks/manage
 next_page_id: webhooks/manage/manually
 previous_page_id: webhooks/manage/update
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/webhooks/manage/delete.md
 ---
 
 # Delete Webhook

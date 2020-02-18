@@ -17,6 +17,8 @@ sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/salesforce-toolkit/methods
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tooling/salesforce-toolkit/index.md
 ---
 
 # Salesforce Developer Toolkit

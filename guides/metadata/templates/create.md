@@ -20,6 +20,8 @@ sibling_id: metadata/templates
 parent_id: metadata/templates
 next_page_id: metadata/templates/update
 previous_page_id: metadata/templates/get
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/metadata/2-templates/4-create.md
 ---
 
 # Create a metadata template

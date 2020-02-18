@@ -19,6 +19,8 @@ sibling_id: tasks
 parent_id: tasks
 next_page_id: tasks
 previous_page_id: tasks/update
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/tasks/5-delete.md
 ---
 
 # Delete a task

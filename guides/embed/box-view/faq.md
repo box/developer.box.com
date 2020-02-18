@@ -21,6 +21,8 @@ sibling_id: embed/box-view
 parent_id: embed/box-view
 next_page_id: ''
 previous_page_id: embed/box-view/best-practices
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/embed/box-view/faq.md
 ---
 
 # FAQ

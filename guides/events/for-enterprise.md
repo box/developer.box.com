@@ -19,6 +19,8 @@ sibling_id: events
 parent_id: events
 next_page_id: events/polling
 previous_page_id: events/for-user
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/events/for-enterprise.md
 ---
 
 # Get Enterprise Events

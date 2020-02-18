@@ -17,6 +17,8 @@ sibling_id: collections
 parent_id: collections
 next_page_id: collections/list-items
 previous_page_id: ''
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/collections/list.md
 ---
 
 # List User's Collections

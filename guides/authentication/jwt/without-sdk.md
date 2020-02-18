@@ -22,6 +22,8 @@ sibling_id: authentication/jwt
 parent_id: authentication/jwt
 next_page_id: authentication/jwt/as-user
 previous_page_id: authentication/jwt/with-sdk
+source_url: >-
+  https://github.com/box/developer.box.com/blob/master/./content/guides/authentication/jwt/without-sdk.md
 ---
 
 # JWT without SDKs
