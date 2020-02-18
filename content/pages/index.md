@@ -85,7 +85,7 @@ alias_paths:
     API Reference
   </Header>
   
-  <ReferenceCategories limit='3' />
+  <ReferenceCategories limit='8' />
 
   <More to='/{locale}/reference/list' right>
     Full API Reference
