@@ -66,6 +66,12 @@ enterprise settings. It will be the default user settings set by your admin.
 Please note that even if a managed user changes their timezone in their account
 settings, this this will have no affect on the timezone returned by the API.
 
+The timezone can differ between different files and folders because an
+enterprise's timezone can change over time. A common example is daylight saving
+time. Items created during standard time would have a different timezone than
+items created during daylight saving time. For this reason it's important to use
+a `RFC3339`-compliant date-time parser to handle dates returned by the API.
+
 Timestamps are restricted to dates after the start of the Unix epoch, `00:00:00
 UTC` on January 1, 1970.
 
