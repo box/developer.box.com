@@ -156,7 +156,7 @@ additionally be configured to have "Enterprise"-level application access.
 
 |                       |                   |
 | --------------------- | ----------------- |
-| **OAuth Scope**       | `manage_webhooks` |
+| **OAuth Scope**       | `manage_webhook` |
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
@@ -297,7 +297,7 @@ The standard OAuth scopes are also supported when downscoping.
 | `manage_managed_users`         | Manage managed users                               |
 | `manage_app_users`             | Manage app users                                   |
 | `manage_groups`                | Manage groups                                      |
-| `manage_webhooks`              | Manage webhooks                                    |
+| `manage_webhook`              | Manage webhooks                                    |
 | `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_data_retention`        | Manage retention policies                          |
 
