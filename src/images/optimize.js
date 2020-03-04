@@ -1,6 +1,7 @@
 const sharp = require(`sharp`)
 const glob = require(`glob`)
 const fs = require(`fs-extra`)
+const path = require(`path`)
 
 // Configure the desired quality
 const MAX_WIDTH = 1800
@@ -25,10 +26,19 @@ Promise.all(
       /(\..+)$/,
       (_, ext) => `-optimized${ext}`
     )
-    await stream
-      .resize(MAX_WIDTH)
-      .jpeg({ quality: QUALITY })
-      .toFile(tmpName)
+
+    if (path.extname(filename) === '.png') {
+      await stream
+        .resize(MAX_WIDTH)
+        .png({ quality: QUALITY })
+        .toFile(tmpName)
+    } else {
+      await stream
+        .resize(MAX_WIDTH)
+        .jpeg({ quality: QUALITY })
+        .toFile(tmpName)
+    }
+
 
     return fs.rename(tmpName, filename)
   })
