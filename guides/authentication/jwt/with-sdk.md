@@ -159,7 +159,7 @@ initialize the client to connect as the application.
 ```dotnet
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
-BoxClient client = session.AdminClient(token);
+BoxClient client = sdk.AdminClient(token);
 ```
 
 </Tab>
