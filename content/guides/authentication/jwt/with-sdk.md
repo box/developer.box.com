@@ -139,7 +139,7 @@ initialize the client to connect as the application.
 ```dotnet
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
-BoxClient client = session.AdminClient(token);
+BoxClient client = sdk.AdminClient(token);
 ```
 
   </Tab>
@@ -175,7 +175,7 @@ var client = sdk.getAppAuthClient('enterprise');
 
   At this point the application is authenticated as an application user, not as
   a managed or app user. Head over to our guide on [User
-  Types][g://authentication/user-types] to learn more about the different types
+  Types](g://authentication/user-types) to learn more about the different types
   of users.
 </Message>
 
