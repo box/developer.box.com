@@ -124,7 +124,7 @@ API Reference
 
 </ReferenceCategories>
 
-<More to='/{locale}/reference/list' right>
+<More to='/reference/' right>
 Full API Reference
 
 </More>
