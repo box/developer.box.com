@@ -86,7 +86,7 @@ alias_paths:
   
   <ReferenceCategories limit='8' />
 
-  <More to='/{locale}/reference/list' right>
+  <More to='/reference/' right>
     Full API Reference
   </More>
 </Centered>
