@@ -25,6 +25,8 @@ one of these available channels:
 - [Newsletter](page://newsletter): For quarterly notifications of major events,
   projects, and releases.
 
+<!-- i18n-enable localize-links -->
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
+<!-- i18n-disable localize-links -->
