@@ -17,14 +17,18 @@ alias_paths:
 
 # Box Platform
 
-<Hero search>
-  # Build with the Box Platform
+<Hero>
+  <Centered wide>
 
-  Integrate, extend and build apps with the power of Box
+    # Build with the Box Platform
+
+    Integrate, extend and build apps with the power of Box
+
+  </Centered>
 </Hero>
 
 <Centered wide>
-  <Header stroke to='/guides'>
+  <Header to='/guides'>
     Developer News
   </Header>
 
@@ -52,13 +56,13 @@ alias_paths:
 </Dark>
 
 <Centered wide>
-  <Header stroke to='/guides'>
+  <Header to='/guides'>
     Guides
   </Header>
   
-  <GuideCategories limit='8' />
+  <GuideCategories />
 
-  <More to='/{locale}/guides' right>
+  <More to='/guides' right>
     All guides
   </More>
 </Centered>
@@ -80,11 +84,11 @@ alias_paths:
 </Dark>
 
 <Centered wide>
-  <Header stroke to='/guides'>
+  <Header to='/reference'>
     API Reference
   </Header>
   
-  <ReferenceCategories limit='8' />
+  <ReferenceCategories />
 
   <More to='/reference/' right>
     Full API Reference

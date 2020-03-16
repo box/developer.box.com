@@ -34,13 +34,13 @@ categories:
         // text: Text for a link to the newsletter page
         text: Newsletter
         // url: A link to the newsletter page
-        url: /{locale}/newsletter/
+        url: /newsletter/
 
       changelog:
         // text: Text for a link to the changelog page
         text: Changelog
         // url: A link to the changelog page
-        url: /{locale}/changelog/
+        url: /changelog/
 
       github:
         // text: Text for a link to the github org
@@ -125,7 +125,7 @@ categories:
         // text: Text for link to go to our support page
         text: Support & Community
         // url: Link to go to our status page
-        url: /{locale}/support
+        url: /support
 
       ticket:
         // text: Text for link to create a support ticket
