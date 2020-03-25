@@ -51,3 +51,12 @@ titles:
 
   // edit_source: The text for a link to edit the source of the page
   edit_source: Edit this page
+
+  // next: The text for a link to the next step in a multi-step guide
+  next: Next
+
+  // previous: The text for a link to the previous step in a multi-step guide
+  previous: Previous
+
+  // start: The text for a link to the first step in a multi-step guide
+  start: Start
