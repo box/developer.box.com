@@ -15,7 +15,7 @@ alias_paths:
 # Install Salesforce SDK
 
 The Salesforce SDK can be deployed directly to Sandbox or Developer
-Organizations by clicking using the [Deploy to Salesforce][deploy_salesforce]
+organizations by using the [Deploy to Salesforce][deploy_salesforce]
 functionality.
 
 <Message type="notice">

@@ -6,34 +6,34 @@ primary:
       text: Quick Start
 
       // url: The URL to the old Get Started guides
-      url: /{locale}/guides/applications/
+      url: /guides/applications/
 
     guides:
       // text: The text for the link to the old generic guides
       text: Guides
 
       // url: The URL to the old generic guides
-      url: /{locale}/guides/
+      url: /guides/
 
     api_reference:
       // text: The text for the link the new API Reference docs
       text: API Reference
       // url: The url to the root of the reference - DO NOT TRANSLATE
-      url: "/{locale}/reference/"
+      url: "/reference/"
 
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
       text: SDKs/Tools
 
       // url: The URL to the new page on SDKs - DO NOT TRANSLATE
-      url: "/{locale}/sdks-and-tools/"
+      url: "/sdks-and-tools/"
 
     support:
       // text: The text for the link to the old page on SDKs
       text: Support
 
       // url: The URL to the old page on SDKs - DO NOT TRANSLATE
-      url: "/{locale}/support/"
+      url: "/support/"
 
   buttons:
     console:
