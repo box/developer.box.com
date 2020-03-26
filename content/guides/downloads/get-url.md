@@ -21,6 +21,8 @@ download URL for the data instead, use the following SDK methods.
 
 Although this download URL can be passed to a user's browser to allow them to
 download the file, the URL does expire and should be requested again for any
-further downloads.
+further downloads. In most cases the download URL is valid for 15 minutes, after
+which a new URL needs to be requested. This expiration time may be subject to
+change without any prior notification.
 
 [api]: e://get_files_id_content
