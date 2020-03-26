@@ -29,17 +29,21 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 
 # Box Platform
 
-<Hero search>
+<Hero>
+
+<Centered wide>
 
 # Build with the Box Platform
 
 Integrate, extend and build apps with the power of Box
 
+</Centered>
+
 </Hero>
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header to='/guides'>
 Developer News
 
 </Header>
@@ -77,16 +81,16 @@ Developer Blog
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header to='/guides'>
 Guides
 
 </Header>
 
-<GuideCategories limit='8' >
+<GuideCategories >
 
 </GuideCategories>
 
-<More to='/{locale}/guides' right>
+<More to='/guides' right>
 All guides
 
 </More>
@@ -115,16 +119,16 @@ All guides
 
 <Centered wide>
 
-<Header stroke to='/guides'>
+<Header to='/reference'>
 API Reference
 
 </Header>
 
-<ReferenceCategories limit='8' >
+<ReferenceCategories >
 
 </ReferenceCategories>
 
-<More to='/{locale}/reference/list' right>
+<More to='/reference/' right>
 Full API Reference
 
 </More>

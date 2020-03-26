@@ -163,26 +163,32 @@
   "guides.titles.guide": "Guide",
   // The text for a link to edit the source of the page
   "guides.titles.edit_source": "Edit this page",
+  // The text for a link to the next step in a multi-step guide
+  "guides.titles.next": "Next",
+  // The text for a link to the previous step in a multi-step guide
+  "guides.titles.previous": "Previous",
+  // The text for a link to the first step in a multi-step guide
+  "guides.titles.start": "Start",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
-  "headers.primary.links.get_started.url": "/{locale}/guides/applications/",
+  "headers.primary.links.get_started.url": "/guides/applications/",
   // The text for the link to the old generic guides
   "headers.primary.links.guides.text": "Guides",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "/{locale}/guides/",
+  "headers.primary.links.guides.url": "/guides/",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "API Reference",
   // The url to the root of the reference - DO NOT TRANSLATE
-  "headers.primary.links.api_reference.url": "/{locale}/reference/",
+  "headers.primary.links.api_reference.url": "/reference/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs/Tools",
   // The URL to the new page on SDKs - DO NOT TRANSLATE
-  "headers.primary.links.sdks_and_tools.url": "/{locale}/sdks-and-tools/",
+  "headers.primary.links.sdks_and_tools.url": "/sdks-and-tools/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.support.text": "Support",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
-  "headers.primary.links.support.url": "/{locale}/support/",
+  "headers.primary.links.support.url": "/support/",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "My Apps",
   // The URL to the developer console
@@ -288,11 +294,11 @@
   // Text for a link to the newsletter page
   "footer.categories.company.links.newsletter.text": "Newsletter",
   // A link to the newsletter page
-  "footer.categories.company.links.newsletter.url": "/{locale}/newsletter/",
+  "footer.categories.company.links.newsletter.url": "/newsletter/",
   // Text for a link to the changelog page
   "footer.categories.company.links.changelog.text": "Changelog",
   // A link to the changelog page
-  "footer.categories.company.links.changelog.url": "/{locale}/changelog/",
+  "footer.categories.company.links.changelog.url": "/changelog/",
   // Text for a link to the github org
   "footer.categories.company.links.github.text": "GitHub",
   // Link to the github org
@@ -342,7 +348,7 @@
   // Text for link to go to our support page
   "footer.categories.support.links.support.text": "Support & Community",
   // Link to go to our status page
-  "footer.categories.support.links.support.url": "/{locale}/support",
+  "footer.categories.support.links.support.url": "/support",
   // Text for link to create a support ticket
   "footer.categories.support.links.ticket.text": "Create a ticket",
   // Link to create a support ticket
