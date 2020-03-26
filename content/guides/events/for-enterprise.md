@@ -106,6 +106,7 @@ The following events can be triggered for an enterprise.
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we haven’t seen before                                       |
 | `REMOVE_LOGIN_ACTIVITY_DEVICE`                 | We invalidated a user session associated with an app                                            |
 | `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE` | An OAuth 2.0 access token has been created                                                      |
+| `OAUTH2_ACCESS_TOKEN_REVOKE`                   | An OAuth 2.0 access token has been revoked                                                      |
 | `CHANGE_ADMIN_ROLE`                            | When an admin role changes for a user                                                           |
 | `CONTENT_WORKFLOW_UPLOAD_POLICY_VIOLATION`     | A collaborator violated an admin-set upload policy                                              |
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
