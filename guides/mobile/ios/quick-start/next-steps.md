@@ -1,19 +1,18 @@
 ---
 type: quick-start
 hide_step_number: true
-hide_in_page_nav: true
 category_id: mobile
-subcategory_id: mobile/ios-quick-start
+subcategory_id: mobile/ios
 is_index: false
-id: mobile/ios-quick-start/next-steps
+id: mobile/ios/quick-start/next-steps
 rank: 5
 total_steps: 5
-sibling_id: mobile/ios-quick-start
-parent_id: mobile/ios-quick-start
+sibling_id: mobile/ios/quick-start
+parent_id: mobile/ios/quick-start
 next_page_id: ''
-previous_page_id: mobile/ios-quick-start/make-api-call
+previous_page_id: mobile/ios/quick-start/make-api-call
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/5-next-steps.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/5-next-steps.md
 ---
 
 # Next steps
@@ -21,12 +20,12 @@ source_url: >-
 You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
-1. [Created a new iOS app](g://mobile/ios-quick-start/create-ios-app/) in Xcode.
-2. [Installed the iOS SDK](g://mobile/ios-quick-start/install-ios-sdk/)
+1. [Created a new iOS app](g://mobile/ios/quick-start/create-ios-app/) in Xcode.
+2. [Installed the iOS SDK](g://mobile/ios/quick-start/install-ios-sdk/)
 into your project.
-3. [Configured a Box App](g://mobile/ios-quick-start/configure-box-app/)
+3. [Configured a Box App](g://mobile/ios/quick-start/configure-box-app/)
 so that the iOS SDK can access the Box API.
-4. [Made your first API call](g://mobile/ios-quick-start/make-api-call/)
+4. [Made your first API call](g://mobile/ios/quick-start/make-api-call/)
 to the Box API with the iOS SDK.
 
 ## Next things to do

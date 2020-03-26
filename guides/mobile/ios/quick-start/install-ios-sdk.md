@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: mobile
-subcategory_id: mobile/ios-quick-start
+subcategory_id: mobile/ios
 is_index: false
-id: mobile/ios-quick-start/install-ios-sdk
+id: mobile/ios/quick-start/install-ios-sdk
 rank: 2
 total_steps: 5
-sibling_id: mobile/ios-quick-start
-parent_id: mobile/ios-quick-start
-next_page_id: mobile/ios-quick-start/configure-box-app
-previous_page_id: mobile/ios-quick-start/create-ios-app
+sibling_id: mobile/ios/quick-start
+parent_id: mobile/ios/quick-start
+next_page_id: mobile/ios/quick-start/configure-box-app
+previous_page_id: mobile/ios/quick-start/create-ios-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/2-install-ios-sdk.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/2-install-ios-sdk.md
 ---
 
 # Install the iOS SDK
@@ -83,7 +83,7 @@ the name of your project under the **TARGETS** option. Scroll down to
 7. Drag `BoxSDK.framework` from our Finder window over to the frameworks
 section.
 
-<ImageFrame center shadow>
+<ImageFrame center>
 
 ![Add framework to project](./framework-carthage-add.gif)
 
@@ -119,7 +119,7 @@ the name of your project under the **PROJECT** option.
 `https://github.com/box/box-ios-sdk.git` and click next.
 4. Leave the default settings and click next to finish importing.
 
-<ImageFrame center shadow>
+<ImageFrame center>
 
 ![Add framework to project](./import-sdk-spm.gif)
 
@@ -127,38 +127,21 @@ the name of your project under the **PROJECT** option.
 
 </Choice>
 
-<Choice option='ios.pm_type' value='carthage' color='none'>
-
 ## Summary
 
-* You selected to install the iOS dependencies using Carthage
+* You either selected to install the iOS dependencies using Carthage
   * You installed Carthage
   * You create a `Cartfile` with the Box iOS SDK dependency
   * You installed the iOS SDK dependencies
   * You manually imported the built dependencies into the Xcode project
     framework list.
-
-</Choice>
-<Choice option='ios.pm_type' value='cocoapods' color='none'>
-
-## Summary
-
-* You selected to use **CocoaPods** and
+* Or selected to use **CocoaPods** and
   * You installed CocoaPods
   * You created a new `Podfile` with the Box iOS SDK dependency
   * You installed the iOS SDK dependencies
   * You built the project in Xcode
-
-</Choice>
-
-<Choice option='ios.pm_type' value='swift' color='none'>
-
-## Summary
-
 * Or selected to use the **Swift Package Manager** and
   * You imported the iOS SDK `.git` repository into the Swift packages
-
-</Choice>
 
 <Observe option='ios.pm_type' value='carthage,cocoapods,swift'>
 <Next>

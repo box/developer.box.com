@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: mobile
-subcategory_id: mobile/ios-quick-start
+subcategory_id: mobile/ios
 is_index: false
-id: mobile/ios-quick-start/configure-box-app
+id: mobile/ios/quick-start/configure-box-app
 rank: 3
 total_steps: 5
-sibling_id: mobile/ios-quick-start
-parent_id: mobile/ios-quick-start
-next_page_id: mobile/ios-quick-start/make-api-call
-previous_page_id: mobile/ios-quick-start/install-ios-sdk
+sibling_id: mobile/ios/quick-start
+parent_id: mobile/ios/quick-start
+next_page_id: mobile/ios/quick-start/make-api-call
+previous_page_id: mobile/ios/quick-start/install-ios-sdk
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/3-configure-box-app.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/3-configure-box-app.md
 ---
 
 # Configure a Box App
@@ -71,7 +71,7 @@ application.
 
 </Choice>
 
-<Choice option='ios.app_type' value='use_own' color='red'>
+<Choice option='ios.app_type' value='use_own' color='blue'>
 
 # Use an Existing JWT Box application
 
@@ -98,7 +98,7 @@ APIs.
 * You created a new, or are using an existing, Box app
 * You have generated and copied the developer token
 
-<Observe option='ios.app_type' value='use_own,create_new'>
+<Observe option='ios.app_type' value='use_own,create_new_'>
 <Next>
 
 I have a developer token

@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: mobile
-subcategory_id: mobile/ios-quick-start
+subcategory_id: mobile/ios
 is_index: false
-id: mobile/ios-quick-start/create-ios-app
+id: mobile/ios/quick-start/create-ios-app
 rank: 1
 total_steps: 5
-sibling_id: mobile/ios-quick-start
-parent_id: mobile/ios-quick-start
-next_page_id: mobile/ios-quick-start/install-ios-sdk
-previous_page_id: mobile/ios-quick-start
+sibling_id: mobile/ios/quick-start
+parent_id: mobile/ios/quick-start
+next_page_id: mobile/ios/quick-start/install-ios-sdk
+previous_page_id: mobile/ios/quick-start
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/1-create-ios-app.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/1-create-ios-app.md
 ---
 
 # Create an iOS App
@@ -32,25 +32,23 @@ application development experience in it, we'll start our integration of the
 Box iOS SDK with a new blank application.
 
 1. Start Xcode
-1. From the top menu, select **File** -> **New** -> **Project...**
-1. Select the option for **Single View App**
-
-<ImageFrame center shadow border>
+2. From the top menu, select **File** -> **New** -> **Project...**
+3. Select the option for **Single View App**
+<ImageFrame center>
 
 ![Select iOS application type](./create-app-type.png)
 
 </ImageFrame>
-
-1. Enter your application configuration information, including the
+4. Enter your application configuration information, including the
 `Product Name`, `Organization Identifier`, and `Organization Name`.
-
-<ImageFrame center shadow border>
+<ImageFrame center>
 
 ![Configure iOS application](./create-app-config.png)
 
 </ImageFrame>
+5. Select a local storage location for the application and click **Create**
 
-1. Select a local storage location for the application and click **Create**
+</Choice>
 
 ## Summary
 

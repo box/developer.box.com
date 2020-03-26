@@ -1,17 +1,18 @@
 ---
 type: quick-start
+hide_in_page_nav: true
 category_id: mobile
-subcategory_id: mobile/ios-quick-start
+subcategory_id: mobile/ios
 is_index: false
-id: mobile/ios-quick-start/make-api-call
+id: mobile/ios/quick-start/make-api-call
 rank: 4
 total_steps: 5
-sibling_id: mobile/ios-quick-start
-parent_id: mobile/ios-quick-start
-next_page_id: mobile/ios-quick-start/next-steps
-previous_page_id: mobile/ios-quick-start/configure-box-app
+sibling_id: mobile/ios/quick-start
+parent_id: mobile/ios/quick-start
+next_page_id: mobile/ios/quick-start/next-steps
+previous_page_id: mobile/ios/quick-start/configure-box-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios-quick-start/4-make-api-call.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/4-make-api-call.md
 ---
 
 # Make an API call
@@ -105,7 +106,7 @@ Build and run your sample application in the iOS emulator.
 If you run this code an hour or more after you created the developer
 token in the last step, you will need to revoke and generate a new developer
 token using the same method in the
-[previous step](g://mobile/ios-quick-start/configure-box-app/) as the
+[previous step](g://mobile/ios/quick-start/configure-box-app/) as the
 developer token will only persist for 60 minutes.
 
 </Message>

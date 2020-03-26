@@ -2,36 +2,29 @@
 related_pages:
   - sdks-and-tools
 category_id: mobile
-subcategory_id: null
+subcategory_id: mobile/android
 is_index: false
-id: mobile/android
-rank: 2
+id: mobile/android/install
+rank: 0
 type: guide
-total_steps: 2
-sibling_id: mobile
-parent_id: mobile
-next_page_id: mobile
-previous_page_id: mobile/ios
+total_steps: 1
+sibling_id: mobile/android
+parent_id: mobile/android
+next_page_id: ''
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/2-android.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/android/install.md
 ---
 
-# Android SDK
-
-The [Box Android SDK][android-sdk] provides native access to the Box API from
-within your Android project.
-
-[android-sdk]: https://github.com/box/box-android-sdk
-
-## Installation
+# Android SDK Installation
 
 The Android SDK may be obtained through several methods:
 
-* Adding it as a Maven or Gradle dependency
+* Adding as a Maven or Gradle dependency
 * Cloning the source into your project
 * Downloading one of the precompiled JARs
 
-### Maven installation
+## Add as a Maven dependency
 
 Add the following to your Maven dependencies.
 
@@ -42,7 +35,7 @@ Add the following to your Maven dependencies.
 </dependency>
 ```
 
-### Gradle installation
+## Add as a Gradle dependency
 
 Add the following to your `build.gradle` file.
 
@@ -52,12 +45,12 @@ dependencies {
 }
 ```
 
-### Clone the source
+## Clone the source
 
 The Box Android SDK source code may be obtained by cloning or downloading the
 [project from Github][android-sdk-github].
 
-### Precompiled JARs
+## Download precompiled JARs
 
 Precompiled JARs for the Android SDK may be obtained from the Github project
 [releases page][android-sdk-github-releases]
