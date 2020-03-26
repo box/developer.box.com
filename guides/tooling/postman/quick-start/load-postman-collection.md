@@ -74,7 +74,7 @@ When you clicked the button above it would have asked you to import the
 collection into the Postman application. Once imported, the collection should
 appear within the app in the left-hand sidebar.
 
-<ImageFrame border center shadow>
+<ImageFrame border center shadow width='600'>
 
 ![Box collection in Postman](./collection-in-postman.png)
 
