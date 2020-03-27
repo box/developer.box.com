@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: false
 id: changelog/tls-1.1
 type: page
-total_steps: 2
+total_steps: 3
 sibling_id: changelog
 parent_id: changelog
 next_page_id: ''
