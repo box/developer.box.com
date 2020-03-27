@@ -16,7 +16,7 @@ For historical changelog entries, please see our
 ## 2020-03-27 / Potential impactful changes to format of Metadata `date` fields
 
 As part of ongoing improvements to our Metadata infrastructure we will be
-rolling out two potential impactful changes to the format of `date` fields in
+rolling out three potential impactful changes to the format of `date` fields in
 metadata templates. These changes make the format our API returns more
 consistent between API calls.
 
@@ -44,6 +44,19 @@ For example:
   `2020-02-20T12:00:00.0Z`, `2020-02-20T12:00:00.00Z`or
   `2020-02-20T12:00:00.000Z`
 * From now on it will always return `2020-02-20T12:00:00.000Z`
+
+The final change affects the usage of the
+[`test`](g/metadata/instances/update/#Test-a-value) operation when updating a
+metadata instance. Previously the test would compare the date-time values using
+the literal string value. After this update they are compared using their UNIX
+timestamp in milliseconds.
+
+For example:
+
+* Previously `2020-01-21T19:20:00.123-08:00` would not be equivalent to
+  `2020-01-22T03:20:00.123Z`
+* From now on `2020-01-21T19:20:00.123-08:00` is equivalent to
+  `2020-01-22T03:20:00.123Z`
 
 ### How this can affect an application
 
