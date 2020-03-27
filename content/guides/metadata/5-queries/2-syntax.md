@@ -1,0 +1,93 @@
+---
+related_endpoints:
+  - post_metadata_queries_execute_read
+---
+
+# Query syntax
+
+The query syntax for the metadata query API is similar to that of a SQL
+database. To query for all files and folders that match a contract metadata
+template with a contract value of over \$100 the following metadata query could
+be created.
+
+```json
+{
+  "from": "enterprise_123456.contractTemplate",
+  "query": "amount >= :value",
+  "query_params": {
+    "value": 100
+  },
+  "ancestor_folder_id": "5555"
+}
+```
+
+In this case the `from` value represents the `scope` and `templateKey` of the
+metadata template, and the `ancestor_folder_id` represents the folder ID to
+search within, including its subfolders.
+
+## The `query` parameter
+
+The `query` parameter represents the SQL-like query to perform on the selected
+metadata instance. This parameter is optional, and without this parameter the
+API would return all files and folders for this template.
+
+Every left hand field name, like `amount`, needs to match the `key` of a
+field on the associated metadata template. In other words, you can only search
+for fields that are actually present on the associated metadata instance. Any
+other field name will result in the error returning an error.
+
+To make it easy to embed dynamic values into the query string, an argument can
+be defined using a colon syntax, like `:value`. Each argument that is specified
+like this needs a subsequent value with that key in the `query_params` object,
+for example `"query_params": { "value": 1000 }`.
+
+### Logical operators
+
+A query supports the following logical operators.
+
+| Operator   |                                                                                                                                                                                                                                                |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AND`      | Matches when all the conditions separated by `AND` are `TRUE`                                                                                                                                                                                  |
+| `OR`       | Matches when any of the conditions separated by `OR` is `TRUE`                                                                                                                                                                                 |
+| `NOT`      | Matches when the preceding condition(s) is **not** `TRUE`                                                                                                                                                                                      |
+| `LIKE`     | Matches when the template value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details                                                                                                |
+| `NOT LIKE` | Matches when the template value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details                                                                                     |
+| `ILIKE`    | Identical to `LIKE` but case insensitive                                                                                                                                                                                                       |
+| `NOT LIKE` | Identical to `NOT LIKE` but case insensitive                                                                                                                                                                                                   |
+| `IN`       | Matches when the template value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)` |
+| `NOT IN`   | Similar to `IN` but when the template value matches none of the arguments provided in the list                                                                                                                                                 |
+| `IS NULL`  | Matches when the template value is `null`                                                                                                                                                                                                      |  |
+| `IS NOT`   | Matches when the template value is not `null`                                                                                                                                                                                                  |  |
+
+<Message notice>
+
+Any match on a `string` or `enum` field is case sensitive except when using
+the `ILIKE` operator.
+
+</Message>
+
+### Comparison operators
+
+### Pattern matching
+
+The `LIKE`, `NOT LIKE`, `ILIKE`, and `NOT ILIKE` operators match a string
+to a pattern. The pattern supports the following special characters.
+
+- `%` The percent sign represents zero, one, or multiple characters, for example
+  `%Contract` matches `Contract`, `Sales Contract`, but not `Contract (Sales)`,
+- `_` The underscore represents a single character, for example
+  `Bo_` matches `Box`, `Bot`, but not `Bots`,
+
+Both of these special characters can be used before, after, or in between other
+characters. A pattern can include multiple special characters, for example
+`Box% (____)` would match `Box Contract (2020)`.
+
+<Message notice>
+
+The backslash character `\` can be used to escape the `%` or
+`_` characters if those need to be matched literally, for example
+`20\%` would match the literal value of `20%`.
+
+</Message>
+
+## The `query_params` parameter
