@@ -12,7 +12,7 @@ for, the `ancestor_folder_id` to specify the folder to search in, and the
 `query` to determine any template fields to search by.
 
 ```bash
-curl -X POST https://api.box.com/2.0/files/12345 \
+curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json" '
      -d '{
@@ -46,9 +46,9 @@ reference](e://post_metadata_queries_execute_read).
 Any files or folders that match the query are returned in the API response.
 The body of the response is a JSON object with a list of `entries` for each file
 or folder, and a `next_marker` value that you can use to find the next page of
-results. Each of the enties will have an `item` representing the file or folder,
-as well as a `metadata` instance containing the metadata attached to the file or
-folder.
+results. Each of the entries will have an `item` representing the file or
+folder, as well as a `metadata` instance containing the metadata attached to the
+file or folder. 
 
 ```json
 {
