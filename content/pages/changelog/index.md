@@ -13,7 +13,7 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-03-27 / Potential impactful changes to format of Metadata `date` fields
+## 2020-03-30 / Potential impactful changes to format of Metadata `date` fields
 
 As part of ongoing improvements to our Metadata infrastructure we will be
 rolling out three potential impactful changes to the format of `date` fields in
@@ -76,7 +76,7 @@ Although the metadata team will be monitoring potential impact, please reach out
 to your customer success manager or our support channels if you find yourself
 impacted.
 
-## 2020-03-27 / Change to metadata instance version
+## 2020-03-30 / Change to metadata instance version
 
 As part of ongoing improvements to our Metadata infrastructure we will be
 rolling out a small change to the [`version`](r:/metadata/#param-$version) value
