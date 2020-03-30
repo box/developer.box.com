@@ -309,7 +309,7 @@ integration you would like to use.
 - **Google**: `item_readwrite` on the parent folder
 - **Adobe**: `root_readwrite`
 - **Box Edit**: `item_readwrite` on the parent folder.
-- **Box Edit SFC**: `item_readwrite` on the file.
+- **Box Edit Single File Collaboration**: `item_readwrite` on the file.
 
 More information on scopes can be found [here][scopes].
 
