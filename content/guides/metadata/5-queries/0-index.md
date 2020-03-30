@@ -18,5 +18,5 @@ The metadata query API can be used by applications that have been authenticated
 using traditional [OAuth 2.0][oauth] or [JWT][jwt].
 
 [query]: g://metadata/queries
-[oauth2]: g://authentication/oauth2
+[oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
