@@ -14,7 +14,7 @@ for, the `ancestor_folder_id` to specify the folder to search in, and the
 ```bash
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
-     -H 'Content-Type: application/json" '
+     -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.contractTemplate",
        "query": "amount >= :value",
@@ -153,6 +153,7 @@ file or folder.
       }
     }
   ],
+  "limit": 20,
   "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
 ```
