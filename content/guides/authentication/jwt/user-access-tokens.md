@@ -15,7 +15,7 @@ alias_paths: []
 
 # User Access Token
 
-It is possible to for a JWT application to act on behalf of another user
+It is possible for a JWT application to act on behalf of another user
 by creating an access token for a specific user instead of the Service Account
 for the application.
 
