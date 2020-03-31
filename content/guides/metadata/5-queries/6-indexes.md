@@ -55,7 +55,7 @@ the information for the `​from`, `query`, and `order_by​` parameters.
 To query with an index, use the name of the index we provided when performing
 your query as the value for the [`use_index`][use_index] parameter.
 
-```bash
+```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json'
