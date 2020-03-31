@@ -27,7 +27,7 @@ getting more results and defining the order of the results.
 By default the API only returns the first page of 20 results. To request more
 results per page the `limit` query parameter can be send with the request.
 
-```bash
+```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json'
@@ -51,7 +51,7 @@ returns a `next_marker` value.
 This `next_marker` can be used to form a new request for the next page of
 results.
 
-```bash
+```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json'

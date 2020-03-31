@@ -38,7 +38,7 @@ value is more than $200,000.
 
 <Tab title='cURL'>
 
-```bash
+```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json'
