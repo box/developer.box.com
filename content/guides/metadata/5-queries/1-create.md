@@ -11,7 +11,7 @@ important here are the `from` attribute that specifies the template to search
 for, the `ancestor_folder_id` to specify the folder to search in, and the
 `query` to determine any template fields to search by.
 
-```bash
+```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
      -H 'Content-Type: application/json'
