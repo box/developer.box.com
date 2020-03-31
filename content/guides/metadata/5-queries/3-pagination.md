@@ -17,7 +17,7 @@ results per page the `limit` query parameter can be send with the request.
 ```bash
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
-     -H 'Content-Type: application/json" '
+     -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.contractTemplate",
        "ancestor_folder_id": "5555",
@@ -41,7 +41,7 @@ results.
 ```bash
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Authorization: Bearer <ACCESS_TOKEN>" '
-     -H 'Content-Type: application/json" '
+     -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.contractTemplate",
        "ancestor_folder_id": "5555",
