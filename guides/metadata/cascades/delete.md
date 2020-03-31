@@ -7,7 +7,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/5-cascades
+subcategory_id: metadata/6-cascades
 is_index: false
 id: metadata/cascades/delete
 rank: 5
@@ -15,10 +15,10 @@ type: guide
 total_steps: 5
 sibling_id: metadata/cascades
 parent_id: metadata/cascades
-next_page_id: ''
+next_page_id: metadata/cascades
 previous_page_id: metadata/cascades/force-apply
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-cascades/5-delete.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/5-delete.md
 ---
 
 # Delete a metadata cascade policy

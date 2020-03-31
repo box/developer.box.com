@@ -11,7 +11,7 @@ subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/list-all
 rank: 1
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/create-template

@@ -12,7 +12,7 @@ subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/create-instance
 rank: 3
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/update-instance
@@ -40,7 +40,8 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
      -H "Content-Type: application/json" \
      -d '{
        "name": "Box, Inc",
-       "industry": "Technology"
+       "industry": "Technology",
+       "tav": 1000000
      }'
 ```
 
@@ -51,7 +52,8 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
 var metadataValues = new Dictionary<string, object>()
 {
     { "name", "Box, Inc" },
-    { "industry", "Technology" }
+    { "industry", "Technology" },
+    { "tav", 100000 }
 };
 
 Dictionary<string, object> metadata = await client.MetadataManager
@@ -70,6 +72,7 @@ file.createMetadata(
   new Metadata()
     .add("name", "Box, Inc")
     .add("industry", "Technology")
+    .add("tav", 100000)
 );
 ```
 
@@ -80,6 +83,7 @@ file.createMetadata(
 metadata = {
   'name': 'Box, Inc',
   'industry': 'Technology',
+  'tav': 1000000
 }
 
 client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo').set(metadata)
@@ -95,7 +99,8 @@ client.files.addMetadata(
   "customerInfo", 
   {
     name: "Box, Inc",
-    industry: "Technology"
+    industry: "Technology",
+    tav: 1000000
   }
 ).then(metadata => {
   // ...
@@ -120,6 +125,7 @@ The API will return the newly created metadata instance.
 {
   "name": "Box, Inc",
   "industry": "Technology",
+  "tav": 1000000,
   "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
   "$parent": "folder_12345,",
   "$scope": "enterprise_34567",
