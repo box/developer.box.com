@@ -44,7 +44,7 @@ collection. It is a complete Postman collection that covers every API endpoint
 and is auto-generated from our [OpenAPI specification][openapi]. It is expected
 to get many more updates including some to make authentication a lot easier.
 
-<Postman id='87493998b8bbe053a8f9' anonymous >
+<Postman anonymous >
 
 </Postman>
 
