@@ -3,8 +3,8 @@ rank: 0
 related_endpoints:
   - post_users
 related_guides:
-  - users/create-app-user
-  - users/create-managed-user
+  - sso/connecting-users/create-association
+  - sso/connecting-users/search-associations
 ---
 
 # Connecting Users
@@ -62,18 +62,42 @@ within the SSO service and a Box user, placing the unique SSO user ID within
 the Box user `external_app_user_id` field, or using the unique SSO email address
 as the login email for the new user.
 
-## Using `external_app_user_id` (recommended method)
+## Using `external_app_user_id` (Recommended Method)
+
+The `external_app_user_id` field was designed to hold a string identifier to
+associate a Box user record with some external service, such as an SSO provider
+user record.
 
 Using the `external_app_user_id` field for associating the unique SSO user
 account with a Box user account is the preferred method of connecting the two
-accounts, for a number of reasons:
+accounts over email, for a number of reasons:
 
 * Email association is only viable for
- [managed users](guide://authentication/user-types/app-users/).
- [App users](guide://authentication/user-types/managed-users/) are
+ [managed users](guide://authentication/user-types/managed-users/).
+ [App users](guide://authentication/user-types/app-users/) are
  automatically assigned an email address by Box, meaning that you cannot assign
  the `login` to be the email from the SSO service. 
+* Emails have to be unique in Box. This means that if your SSO service user
+ signed up for Box using the same email address, which is not within your Box
+ enterprise, then you will not be able to create a user with that email and
+ won't be able to connect to that existing user.
+* The `external_app_user_id` field was designed for this purpose.
 
 ## Using `login`
 
-test
+Using the `login` field of a user object to create an account association is
+viable under a few conditions:
+
+* Only the [managed users](guide://authentication/user-types/managed-users/)
+ type is being used, not
+ [app users](guide://authentication/user-types/app-users/).
+* All email addresses and Box account creation requests are managed by your
+ enterprise, meaning that users cannot independently create Box accounts with
+ those email addresses.
+
+<Message warning>
+  Email addresses used for users in Box, under the `login` field, must be
+  unique. Making a request to create a user with an email that already exists
+  for another account will result in a `409 Conflict` error, stating that
+  `user_login_already_used`
+</Message>

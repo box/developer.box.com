@@ -4,4 +4,4 @@ related_guides:
   - users/provision/
 ---
 
-# Connecting your SSO Service to Box
+# Connecting SSO to Box
