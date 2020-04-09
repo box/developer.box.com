@@ -82,7 +82,7 @@ In this example, assume that there are 10 photographers, each of which have
 captured the same number of images that have the ​`catalogImages​` template
 applied.
 
-Now consider assume that there are 4,000 files in your Box enterprise
+Now assume that there are 4,000 files in your Box enterprise
 which have the `catalogImages` template ​applied and which are split evenly
 between the two folders,​ `Parts​` and `Products`, ​which are children of the
 parent folder `​Catalog​` as shown below.
