@@ -18,6 +18,15 @@ source_url: >-
 
 # Metadata queries
 
+<Message notice>
+
+This API will currently return an error for any enterprise for which it has
+not been enabled yet. This functionality is being rolled out to most customers
+in the coming weeks, and too enable this feature earlier please contact our
+[Metadata Query team](mailto://metadata-query-feedback@box.com).
+
+</Messsage>
+
 A [metadata query][query] provides a way to find files and
 folders by searching for the metadata attached to them.
 
