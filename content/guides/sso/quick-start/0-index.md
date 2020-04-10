@@ -24,10 +24,15 @@ identity system (Okta) and the Box APIs.
 
 This guide will take you through the following steps.
 
+1. [Create your local application.](g://sso/quick-start/create-local-app/)
 1. [Setup and configure your Okta application and users.](g://sso/quick-start/setup-okta/)
 1. [Setup and configure your Box application.](g://sso/quick-start/setup-box/)
 1. [Create a login for your Okta application to get user credentials.](g://sso/quick-start/okta-login/)
 1. [Create user management in Box that is unified to the Okta user accounts.](g://sso/quick-start/box-users/)
+
+<Next>
+  I am ready to get started
+</Next>
 
 [okta]: https://www.okta.com/
 [okta-dev]: https://developer.okta.com/
