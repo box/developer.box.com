@@ -10,16 +10,16 @@ test
 ## Create New App Users
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
@@ -64,7 +64,7 @@ test
       external_app_user_id: this.oktaRecord.sub
     }
   ).then(appUser => {
-    console.log(`New app user created with Box ID ${appUser.id}, Okta ID ${this.oktaRecord.sub}, and name ${appUser.name}`);
+    console.log(`New app user ${appUser.name} created`);
   });
 ```
 
@@ -72,20 +72,31 @@ test
 <Choice option='programming.platform' value='java'>
   
 ```java
+  static String validateUser(OidcUser user) throws IOException {
+    // TODO: VALIDATE USER
+  }
 
+  static String createUser(OidcUser user) {
+    # TODO: CREATE USER
+  }
+```
+
+```java
+  // No user found, create new app user from Okta record
+  String oktaName = (String) user.getAttributes().get("name");
+  Object oktaSub = user.getAttributes().get("sub");
+
+  CreateUserParams params = new CreateUserParams();
+  params.setExternalAppUserId((String) oktaSub);
+  BoxUser.Info createdUserInfo = BoxUser.createAppUser(api, oktaName, params);
+
+  return "New User Created: " + createdUserInfo.getName();
 ```
 
 </Choice>
 <Choice option='programming.platform' value='python'>
   
 ```python
-  # Box user verification
-  @app.route("/box_auth")
-  @oidc.require_login
-  def box_auth():
-    box = Box();
-    return box.validateUser(g)
-
   # Box user class
   class Box(object):
     def __init__(self):
@@ -117,16 +128,16 @@ test
 ## Validate Okta Users
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
@@ -150,14 +161,52 @@ test
 <Choice option='programming.platform' value='java'>
   
 ```java
+  // Set up Box enterprise client
+  Reader reader = new FileReader("config.json");
+  BoxConfig config = BoxConfig.readFrom(reader);
+  api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(config);
 
+  // Get Okta user sub for unique ID attachment to Box user
+  Object oktaSub = user.getAttributes().get("sub");
+
+  // Check enterprise users for matching external_app_user_id against Okta sub
+  URL url = new URL("https://api.box.com/2.0/users?external_app_user_id=" + oktaSub);
+  BoxAPIRequest request = new BoxAPIRequest(api, url, "GET");
+  BoxJSONResponse jsonResponse = (BoxJSONResponse) request.send();
+  JsonObject jsonObj = jsonResponse.getJsonObject();
+  JsonValue totalCount = jsonObj.get("total_count");
+
+  // Set return string
+  String outputString = "";
+
+  if (totalCount.asInt() > 0) {
+    // TODO: MAKE AUTHENTICATED USER CALL
+  } else {
+    outputString = createUser(user);
+  }
+
+  return outputString;
 ```
 
 </Choice>
 <Choice option='programming.platform' value='python'>
   
 ```python
+  # Fetch Okta user ID
+  uid = g.user.id
 
+  # Validate is user exists
+  url = f'https://api.box.com/2.0/users?external_app_user_id={uid}'
+  response = self.box_client.make_request('GET', url)
+  user_info = response.json()
+
+  # If user not found, create user, otherwise fetch user token
+  if (user_info['total_count'] == 0):
+    self.createUser(g.user)
+  else:
+    # TODO: MAKE AUTHENTICATED USER CALL
+
+  return 'Complete'
 ```
 
 </Choice>
@@ -165,16 +214,16 @@ test
 ## Make Authenticated Box User Calls
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
@@ -188,30 +237,55 @@ test
   this.userClient.users.get(this.userClient.CURRENT_USER_ID)
   .then(currentUser => {
     console.log(currentUser);
-	});
+  });
 ```
 
 </Choice>
 <Choice option='programming.platform' value='java'>
-  
-```java
+<!-- markdownlint-disable line-length -->
 
+```java
+  // User found, authenticate as user
+  // Fetch user ID
+  JsonArray entries = (JsonArray) jsonObj.get("entries");
+  JsonObject userRecord = (JsonObject) entries.get(0);
+  JsonValue userId = userRecord.get("id");
+
+  // Get user scoped access token and fetch current user with it
+  BoxDeveloperEditionAPIConnection userApi = BoxDeveloperEditionAPIConnection.getAppUserConnection(userId.asString(), config);
+  BoxUser currentUser = BoxUser.getCurrentUser(userApi);
+  BoxUser.Info currentUserInfo = currentUser.getInfo();
+
+  outputString = "Hello " + currentUserInfo.getName();
 ```
 
+<!-- markdownlint-enable line-length -->
 </Choice>
 <Choice option='programming.platform' value='python'>
   
 ```python
+  # Create user client based on discovered user
+  user = user_info['entries'][0]
+  user_to_impersonate = self.box_client.user(user_id=user['id'])
+  user_client = self.box_client.as_user(user_to_impersonate)
 
+  # Get current user
+  current_user = self.box_client.user().get()
+  print(current_user.id)
+
+  # Get all items in a folder
+  items = user_client.folder(folder_id='0').get_items()
+  for item in items:
+    print('{0} {1} is named "{2}"'.format(item.type.capitalize(), item.id, item.name))
 ```
 
 </Choice>
 
 ## Summary
 
-* You are validating whether an Okta user exists as a Box user.
-* You are creating a new app user if they don't exist.
-* You are making a Box API call with the valid new or existing Box user.
+* You've validated whether an Okta user exists as a Box user.
+* You've creating a new app user if they don't exist.
+* You're making a Box API call for an existing Box user.
 
 <Observe option='box.app_type' value='use_own,create_new_'>
   <Next>I have set up Box user validation and creation</Next>

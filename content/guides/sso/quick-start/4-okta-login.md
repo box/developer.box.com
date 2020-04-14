@@ -5,26 +5,42 @@ hide_in_page_nav: true
 
 # Create Okta Login Flow
 
-test
+With the Okta, Box, and basic application set up, we can turn our attention to
+the first step in the application code flow, the Okta login.
+
+During the Okta login we will employ the OpenID Connect (OIDC) frameworks of
+the language used to redirect the user to Okta to log in and pass Okta user
+information back to the application. Those Okta user details will in turn be
+used to validate and create Box users in the next step.
+
+This section will walk you through:
+
+* Setting up the application configuration skeleton.
+* Defining the routes for the chosen framework to handle user traffic.
+* Passing Okta user information to the next Box user validation step.
 
 ## Set up the Skeleton
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node'>
-  
+In your local application directory, load the `server.js` file created in
+step 1.
+
+Copy the following basic application structure into the file and save. 
+
 ```js
   const session = require('express-session');               // Express sessions
   const { ExpressOIDC } = require('@okta/oidc-middleware'); // Express OIDC
@@ -79,9 +95,24 @@ test
   });
 ```
 
+Beyond the package definitions, this skeleton will handle the following:
+
+* Configuration: Sets up the Express configuration and Okta OIDC connector
+ information. Express is set to use the OIDC connector and the Okta
+ information that we saved in step 2 of this quick start is used to configure
+ the connector for our Okta integration.
+* Routes: Defines the entry route for our application. When a user attempts to
+ visit our application root (`/`) the code within this route will be run.
+* Server: Initialized the Express server to listen for traffic.
+
 </Choice>
 <Choice option='programming.platform' value='java'>
-  
+In your local application directory, load the
+`/src/main/java/com/box/sample/Application.java` file created in step 1, or
+similar directory if an alternate application name was used.
+
+Copy the following basic application structure into the file and save.
+
 ```java
   package com.box.okta.sample;
 
@@ -110,7 +141,11 @@ test
   @RestController
   @EnableAutoConfiguration
   public class Application {
+    // Box API connection
+    static BoxDeveloperEditionAPIConnection api;
+
     @RequestMapping("/")
+    String home(@AuthenticationPrincipal OidcUser user) throws IOException {
       // TODO: HANDLE ROUTE
     }
 
@@ -120,9 +155,24 @@ test
   }
 ```
 
+Beyond the import statements, this skeleton will handle the following:
+
+* Box API connection: A standard shared Box API connection attribute, to be
+ defined in the next step.
+* Routes: Defines the entry route for our application. When a user attempts to
+ visit our application root (`/`) in a logged out state, the OIDC connector
+ will automatically push them through the Okta login, so we don't need to setup
+ a redirect. When the user is in a logged in state, the code within this route
+ will be run.
+* Server: Initialized the Spring Boot server to listen for traffic.
+
 </Choice>
 <Choice option='programming.platform' value='python'>
-  
+In your local application directory, load the `server.py` file created in step
+1.
+
+Copy the following basic application structure into the file and save.
+
 ```python
   from flask import Flask, redirect, g, url_for
   from flask_oidc import OpenIDConnect
@@ -154,31 +204,56 @@ test
   # Main application route
   @app.route('/')
   def start():
-    # TODO: HANDLE ROUTE
+    # TODO: HANDLE MAIN ROUTE
+
+  # Box user verification
+  @app.route("/box_auth")
+  @oidc.require_login
+  def box_auth():
+    # TODO: HANDLE BOX AUTH ROUTE
 
   return 'Complete'
 ```
+
+Beyond the import statements, this skeleton will handle the following:
+
+* Configuration: Sets up the Flask configuration, Okta client, and Okta OIDC
+ connector information. Flask is set to use the OIDC connector and the Okta
+ information that we saved in step 2 of this quick start is used to configure
+ the connector for our Okta integration.
+* Before request: Defines code that should be run before route handling is
+ engaged. We'll be using this to capture our Okta user information, if
+ available.
+* Routes: Defines the entry route for our application, as well as a `box_auth`
+ route. When a user attempts to visit our application root (`/`) the code
+ within this route will be run. When we validate an Okta user, the code within
+ the `box_auth` route will be run.
 
 </Choice>
 
 ## Setup Application Route
 
+We now need to define the code that will run when our main route (`/`) is
+engaged.
+
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node'>
-  
+
+Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+
 ```js
   if (req.userContext && req.userContext.userinfo) {
     const tokenSet = req.userContext.tokens;
@@ -195,18 +270,39 @@ test
   }
 ```
 
+What we are doing in the above is first checking to see if there is any Okta
+user information available from the OIDC connector. When a user logs in the
+connector will make the Okta user and configuration information available to
+our route within `req.userContext`. 
+
+If user information is present, meaning the user is logged in to Okta, we pass
+the user information to `box.validateUser` to see if there is an associated Box
+user available, which we'll define in the next step.
+
+If no user information is present, we redirect the user to `/login`. The OIDC
+connector will automatically handle this route and force the user through to
+the Okta login.
+
 </Choice>
 <Choice option='programming.platformn' value='java'>
-  
+
+Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+
 ```java
   // Validate OIDC user against Box
   return validateUser(user);
 ```
 
+The Java OIDC connector handles most of the heavy lifting for us. When a logged
+out user accesses this route they will automatically be pushed to the Okta
+login. Once logged in, an OIDC user object will be made available to the route.
+We pass that user object to a `validateUser` function, which we'll define in
+the next step.
+
 </Choice>
 <Choice option='programming.platform' value='python'>
 
-HANDLE BEFORE REQUEST
+Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following code.
 
 ```python
   if oidc.user_loggedin:
@@ -215,11 +311,31 @@ HANDLE BEFORE REQUEST
     g.user = None
 ```
 
-HANDLE MAIN ROUTE
+This will check if an OIDC user is available, meaning that the user has already
+logged in to Okta. If available we set a user object using the Okta client
+object, and if not we set the user object to `None`.
+
+Next, replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
 ```python
   return redirect(url_for(".box_auth"))
 ```
+
+When this code is engaged, if the user is not logged in to Okta they will be
+redirected to Okta to log in by the OIDC connector. After login, or if the user
+is already logged in, they will then be forwarded to the `box_auth` route code.
+
+Finally, replace `// TODO: HANDLE BOX AUTH ROUTE` in the `box_auth` route with
+the following code.
+
+```python
+  box = Box();
+  return box.validateUser(g)
+```
+
+This creates a new instance of the Box class and calls the `validateUser`
+method, passing in the Okta user object. We'll define this class and methods in
+the next step.
 
 </Choice>
 

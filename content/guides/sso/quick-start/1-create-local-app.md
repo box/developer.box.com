@@ -15,15 +15,15 @@ files.
 
 <Grid columns='3'>
   <Choose option='programming.platform' value='node'>
-    # Node + Express
+    # Node/Express
   </Choose>
 
   <Choose option='programming.platform' value='java'>
-    # Java + Spring Boot
+    # Java/Spring Boot
   </Choose>
   
   <Choose option='programming.platform' value='python'>
-    # Python + Flask
+    # Python/Flask
   </Choose>
 </Grid>
 

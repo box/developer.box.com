@@ -58,16 +58,16 @@ change.
 Fill out the application details with the following configuration settings:
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 
@@ -115,16 +115,16 @@ appropriate configuration files.
 </ImageFrame>
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
-    # Node + Express
+  <Choose option='programming.platform' value='node'>
+    # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
-    # Java + Spring Boot
+  <Choose option='programming.platform' value='java'>
+    # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
-    # Python + Flask
+  <Choose option='programming.platform' value='python'>
+    # Python/Flask
   </Choose>
 </Grid>
 

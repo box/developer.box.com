@@ -29,6 +29,7 @@ This guide will take you through the following steps.
 1. [Setup and configure your Box application.](g://sso/quick-start/setup-box/)
 1. [Create a login for your Okta application to get user credentials.](g://sso/quick-start/okta-login/)
 1. [Create user management in Box that is unified to the Okta user accounts.](g://sso/quick-start/box-users/)
+1. [Run the sample](g://sso/quick-start/run-sample/)
 
 <Next>
   I am ready to get started
