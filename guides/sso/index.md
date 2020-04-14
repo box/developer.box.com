@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: true
 id: sso
 type: guide
-total_steps: 2
+total_steps: 1
 sibling_id: guides
 parent_id: guides
 next_page_id: sso/connecting-sso
