@@ -64,8 +64,13 @@ class LinkValidator {
   // checks for local references ([text][reference]) to be defined somewhere
   // down the page as (e.g. "[reference]: ./foo/bar")
   localReferences()  {
+    // Split all code samples so we only match on text
+    const text = this.content
+      .split(/```\w*\n/g)
+      .filter((_, index) => index % 2 === 0)
+      .join('\n')
     // map over all items
-    return [...this.content.matchAll(LOCAL_REFERENCE_REGEX)]
+    return [...text.matchAll(LOCAL_REFERENCE_REGEX)]
       // get the actual captured part (the reference)
       .map(match => match[1])
   }
