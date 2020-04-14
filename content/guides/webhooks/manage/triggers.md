@@ -17,7 +17,7 @@ events are only available for files, while others are only available for folders
 <!-- markdownlint-disable line-length -->
 | Event                       | Triggered                                                                                                           | File? | Folder? |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
-| `FILE.UPLOADED`             | A file is uploaded to this folder                                                                                   | No    | Yes     |
+| `FILE.UPLOADED`             | A file is uploaded to or moved to this folder                                                                                   | No    | Yes     |
 | `FILE.PREVIEWED`            | A file is previewed                                                                                                 | Yes   | Yes     |
 | `FILE.DOWNLOADED`           | A file is downloaded                                                                                                | Yes   | Yes     |
 | `FILE.TRASHED`              | A file is moved to the trash                                                                                        | Yes   | Yes     |

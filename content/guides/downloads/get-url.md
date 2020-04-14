@@ -17,6 +17,15 @@ download URL for the data instead, use the following SDK methods.
 
 <Samples id='get_files_id_content' variant='get_url' />
 
+<Message warning>
+  # Redirects
+
+  If you are not using one of our SDKs its important to make sure your HTTP
+  client does not automatically follow HTTP redirects. When redirects are
+  automatically followed, your code will detect the `Location` header returned
+  by the API and follow it to get the binary data.
+</Message>
+
 ## Download URL expiry
 
 Although this download URL can be passed to a user's browser to allow them to
