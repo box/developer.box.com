@@ -5,26 +5,42 @@ hide_in_page_nav: true
 
 # Connect Okta to Box Users
 
-test
+At this point we have application code that will handle traffic from users
+visiting, forward them to Okta to login, provide Okta user information, before
+finally handing off to a yet to be created handler for Box.
+
+This section will cover the final Box components: 
+
+* Validating if an Okta user has an associated Box app user account.
+* Creating a new app user for the associated Okta record if they don't.
+* Fetching tokens for the Box user to make user-specific API calls.
 
 ## Create New App Users
 
+Before validating users we need a method for creating an associated Box user
+account if one doesn't already exist for the Okta user.
+
 <Grid columns='3'>
-  <Choose option='programming.platform' value='node'>
+  <Choose option='programming.platform' unset value='node'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java'>
+  <Choose option='programming.platform' unset value='java'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' value='python'>
+  <Choose option='programming.platform' unset value='python'>
     # Python/Flask
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node'>
-  
+
+In your local application directory, load the `server.js` file created in
+step 1.
+
+Add the following `box` object into the file and save. 
+
 ```js
   const box = (() => {
     // Instantiate new Box client
@@ -53,6 +69,18 @@ test
   })();
 ```
 
+This object defines a number of definitions:
+
+* Configuration: A new instance of the Box Node SDK is instantiated and made
+ available to the object functions, along with a number of variables.
+* `validateUser` function: Will house the code to validate whether a Box user
+ exists for an associated Okta user.
+* `createUser` function: Creates a new Box user bound to the associated Okta
+ user ID.
+
+With that structure defined, replace the `// TODO: CREATE USER` section with
+the following code.
+
 ```js
   const spaceAmount = 1073741824;   // ~ 1gb
 
@@ -68,9 +96,19 @@ test
   });
 ```
 
+This code will create a new Box app user and will set the
+`external_app_user_id` parameter of the user object to the unique Okta user ID,
+which will define the binding between the two user records.
+
 </Choice>
 <Choice option='programming.platform' value='java'>
-  
+
+In your local application directory, load the
+`/src/main/java/com/box/sample/Application.java` file created in step 1, or
+similar directory if an alternate application name was used.
+
+Within the `public class Application` definition, add the following methods:
+
 ```java
   static String validateUser(OidcUser user) throws IOException {
     // TODO: VALIDATE USER
@@ -80,6 +118,17 @@ test
     # TODO: CREATE USER
   }
 ```
+
+These methods will handle the Box user validation and creation. Breaking them
+down: 
+
+* `validateUser`: Will house the code to validate whether a Box user
+ exists for an associated Okta user.
+* `createUser`: Creates a new Box user bound to the associated Okta
+ user ID.
+
+With those methods defined, replace `# TODO: CREATE USER` with the following
+code:
 
 ```java
   // No user found, create new app user from Okta record
@@ -93,9 +142,19 @@ test
   return "New User Created: " + createdUserInfo.getName();
 ```
 
+This code will create a new Box app user and will set the
+`external_app_user_id` parameter of the user object to the unique Okta user ID,
+which will define the binding between the two user records.
+
 </Choice>
 <Choice option='programming.platform' value='python'>
-  
+
+In your local application directory, load the `server.py` file created in step
+1.
+
+Add the following `Box` class object to the existing code, below the route
+definitions.
+
 ```python
   # Box user class
   class Box(object):
@@ -113,6 +172,18 @@ test
      # TODO: CREATE USER
 ```
 
+This class defines:
+
+* `init`: When initialized, a new instance of the Box Python SDK is
+ instantiated and made available to the object methods.
+* `validateUser` method: Accepting a user object as input, this will house the
+ code to validate whether a Box user exists for an associated Okta user.
+* `createUser` method: Accepting a user object as input, this creates a new Box
+ user bound to the associated Okta user ID.
+
+With that class defined, replace the `# TODO: CREATE USER` section with
+the following code.
+
 ```python
   user_name = f'{ouser.profile.firstName} {ouser.profile.lastName}'
   uid = ouser.id
@@ -123,26 +194,37 @@ test
   print(f'user {user_name} created')
 ```
 
+This code will create a new Box app user and will set the
+`external_app_user_id` parameter of the user object to the unique Okta user ID,
+which will define the binding between the two user records.
+
 </Choice>
 
 ## Validate Okta Users
 
+With the create user functionality defined, let's turn our attention to
+defining the code for validating whether an Okta user record has an associated
+Box user record by searching all Box enterprise users for the associated
+`external_app_user_id`.
+
 <Grid columns='3'>
-  <Choose option='programming.platform' value='node'>
+  <Choose option='programming.platform' unset value='node'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java'>
+  <Choose option='programming.platform' unset value='java'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' value='python'>
+  <Choose option='programming.platform' unset value='python'>
     # Python/Flask
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node'>
-  
+
+Replace the `// TODO: VALIDATE USER` comment with the following:
+
 ```js
   this.oktaRecord = userInfo
 
@@ -157,9 +239,22 @@ test
   });
 ```
 
+Using the Box Node SDK, we call `enterprise.getUsers` to search all enterprise
+users, and pass in the unique Okta user ID as the `external_app_user_id` value
+to search specifically for that user.
+
+If found (number of records is greater than 0) we can make an
+authenticated call to the Box APIs using that user record, which will be
+defined in the next section. 
+
+If not found, we call the `createUser` function we defined in the last section
+to create a new Box user with that `external_app_user_id` association.
+
 </Choice>
 <Choice option='programming.platform' value='java'>
-  
+
+Replace the `// TODO: VALIDATE USER` comment with the following:
+
 ```java
   // Set up Box enterprise client
   Reader reader = new FileReader("config.json");
@@ -188,9 +283,23 @@ test
   return outputString;
 ```
 
+Using the Box Java SDK generic request method, we make a call directly to the
+`https://api.box.com/2.0/users` endpoint to search enterprise users, passing in
+the unique Okta user ID as the `external_app_user_id` value to search
+specifically for that user.
+
+If found (number of records is greater than 0) we can make an
+authenticated call to the Box APIs using that user record, which will be
+defined in the next section. 
+
+If not found, we call the `createUser` function we defined in the last section
+to create a new Box user with that `external_app_user_id` association.
+
 </Choice>
 <Choice option='programming.platform' value='python'>
-  
+
+Replace the `# TODO: VALIDATE USER` comment with the following:
+
 ```python
   # Fetch Okta user ID
   uid = g.user.id
@@ -209,26 +318,47 @@ test
   return 'Complete'
 ```
 
+Using the Box Python SDK generic request method, we make a call directly to the
+`https://api.box.com/2.0/users` endpoint to search enterprise users, passing in
+the unique Okta user ID as the `external_app_user_id` value to search
+specifically for that user.
+
+If found (number of records is greater than 0) we can make an
+authenticated call to the Box APIs using that user record, which will be
+defined in the next section. 
+
+If not found, we call the `createUser` function we defined in the last section
+to create a new Box user with that `external_app_user_id` association.
+
 </Choice>
 
 ## Make Authenticated Box User Calls
 
+Once an associated Box user is found for the Okta user we're going to generate
+an access token specifically
+[scoped for that user](g://authentication/jwt/user-access-tokens/) to make Box
+API calls, then make a call to get the current user to ensure that everything
+is working and that we have a valid user access token.
+
 <Grid columns='3'>
-  <Choose option='programming.platform' value='node'>
+  <Choose option='programming.platform' unset value='node'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java'>
+  <Choose option='programming.platform' unset value='java'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' value='python'>
+  <Choose option='programming.platform' unset value='python'>
     # Python/Flask
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node'>
-  
+
+Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
+the following:
+
 ```js
   // User found, get user ID and fetch user token
   this.userId = result.entries[0].id;
@@ -240,9 +370,17 @@ test
   });
 ```
 
+With a user found we capture the Box user ID, then generate a user client
+object scoped for that user. We finish by making a call to fetch the current
+user with the user client object, which should return the user profile
+information for the Okta associated Box app user.
+
 </Choice>
 <Choice option='programming.platform' value='java'>
 <!-- markdownlint-disable line-length -->
+
+Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
+the following:
 
 ```java
   // User found, authenticate as user
@@ -259,10 +397,18 @@ test
   outputString = "Hello " + currentUserInfo.getName();
 ```
 
+With a user found we capture the Box user ID, then generate a user client
+object scoped for that user. We finish by making a call to fetch the current
+user with the user client object, which should return the user profile
+information for the Okta associated Box app user.
+
 <!-- markdownlint-enable line-length -->
 </Choice>
 <Choice option='programming.platform' value='python'>
-  
+
+Replace `# TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
+the following:
+
 ```python
   # Create user client based on discovered user
   user = user_info['entries'][0]
@@ -272,12 +418,12 @@ test
   # Get current user
   current_user = self.box_client.user().get()
   print(current_user.id)
-
-  # Get all items in a folder
-  items = user_client.folder(folder_id='0').get_items()
-  for item in items:
-    print('{0} {1} is named "{2}"'.format(item.type.capitalize(), item.id, item.name))
 ```
+
+With a user found we capture the Box user ID, then generate a user client
+object scoped for that user. We finish by making a call to fetch the current
+user with the user client object, which should return the user profile
+information for the Okta associated Box app user.
 
 </Choice>
 

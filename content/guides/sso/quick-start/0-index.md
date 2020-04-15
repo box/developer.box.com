@@ -17,7 +17,7 @@ application, allowing you to have a unified experience between your unified
 identity system (Okta) and the Box APIs. 
 
 <ImageFrame noborder center shadow>
-  ![Okta Dashboard](./okta-dashboard.png)
+  ![Okta Dashboard](./img/okta-dashboard.png)
 </ImageFrame>
 
 ## Overview 
@@ -30,6 +30,9 @@ This guide will take you through the following steps.
 1. [Create a login for your Okta application to get user credentials.](g://sso/quick-start/okta-login/)
 1. [Create user management in Box that is unified to the Okta user accounts.](g://sso/quick-start/box-users/)
 1. [Run the sample](g://sso/quick-start/run-sample/)
+
+To simplify the required steps, we will forego UI component integrations and
+instead log output via the console / terminal or directly as text output.
 
 <Next>
   I am ready to get started

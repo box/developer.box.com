@@ -22,15 +22,15 @@ This section will walk you through:
 ## Set up the Skeleton
 
 <Grid columns='3'>
-  <Choose option='programming.platform' value='node'>
+  <Choose option='programming.platform' unset value='node'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java'>
+  <Choose option='programming.platform' unset value='java'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' value='python'>
+  <Choose option='programming.platform' unset value='python'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -237,15 +237,15 @@ We now need to define the code that will run when our main route (`/`) is
 engaged.
 
 <Grid columns='3'>
-  <Choose option='programming.platform' value='node'>
+  <Choose option='programming.platform' unset value='node'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java'>
+  <Choose option='programming.platform' unset value='java'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' value='python'>
+  <Choose option='programming.platform' unset value='python'>
     # Python/Flask
   </Choose>
 </Grid>
