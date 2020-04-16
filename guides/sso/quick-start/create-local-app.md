@@ -25,6 +25,8 @@ Depending on your language / framework preference, create a blank application,
 install the required dependencies, as well as all configuration and program
 files.
 
+Choose your preferred language / framework below to get started.
+
 <Grid columns='3'>
 
 <Choose option='programming.platform' value='node' color='blue'>
