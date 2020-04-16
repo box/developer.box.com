@@ -52,7 +52,7 @@ When successful, the API returns a HTTP `201 Created` status code with a
 
 In some cases, creating the parts might not be ready yet and the API will return
 a `202 Accepted` status code instead. In this case the application should check
-the `Retry-After` header and retry committing after the number of seconds
+the `retry-after` header and retry committing after the number of seconds
 specified.
 
 [e_commit]: e://post_files_upload_sessions_id_commit

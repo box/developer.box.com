@@ -37,7 +37,7 @@ download URL for the data instead, use the following SDK methods.
 
 If you are not using one of our SDKs its important to make sure your HTTP
 client does not automatically follow HTTP redirects. When redirects are
-automatically followed, your code will detect the `Location` header returned
+automatically followed, your code will detect the `location` header returned
 by the API and follow it to get the binary data.
 
 </Message>

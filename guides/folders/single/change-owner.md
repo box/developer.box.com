@@ -40,8 +40,8 @@ that invited user to `owner`.
 
 ```curl
 curl -X PUT https://api.box.com/2.0/collaborations/1234 \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -H "Content-Type: application/json" \
+     -H "authorization: Bearer <ACCESS_TOKEN>" \
+     -H "content-type: application/json" \
      -d '{
        "role": "owner"
      }'

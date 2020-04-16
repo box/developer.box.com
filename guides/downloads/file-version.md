@@ -34,7 +34,7 @@ the ID of the file to get the content for, as well as its version ID.
 ## Download URL
 
 When not using the SDKs, this API call will return a `HTTP 302 Found` status
-code, with a `Location` header containing a link to the download URL, which
+code, with a `location` header containing a link to the download URL, which
 looks something like this.
 
 ```sh
@@ -47,7 +47,7 @@ redirect.
 <Message>
 
 In our SDKs this will result in the binary data to be downloaded. In the API
-this will result in a download URL being returned via the `Location` header.
+this will result in a download URL being returned via the `location` header.
 
 It is possible to [get the download URL][downloadurl] via the SDKs as well.
 
@@ -61,7 +61,7 @@ further downloads.
 
 ## File not ready
 
-If the file is not ready to be downloaded yet a `Retry-After` header will be
+If the file is not ready to be downloaded yet a `retry-after` header will be
 returned indicating the time in seconds after which the file will be available
 for the client to download.
 

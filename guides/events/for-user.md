@@ -35,7 +35,7 @@ To get a user's events, authenticate as any user and make a call to the
 <Message>
 
 The events returned will only be for the user who's access token the API was
-made with. To get the event feed for a different user either use the `As-User`
+made with. To get the event feed for a different user either use the `as-user`
 header or an actual access token for that user.
 
 </Message>

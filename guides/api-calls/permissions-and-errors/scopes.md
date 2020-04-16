@@ -88,7 +88,7 @@ Although this gives an application the permission to read file and folder, the
 user making the API call does need to have access to the items being accessed.
 
 In the case of a JWT authenticated application accessing a managed user's
-items this means that the application needs to use the `As-User` header or
+items this means that the application needs to use the `as-user` header or
 create a **User Access Token** to authenticate as the user who has access to
 the item.
 
@@ -269,7 +269,7 @@ with retention policies and legal holds.
 
 Enabling this scope on an application changes the behavior of some API calls,
 and most notable makes it impossible to write content without explicitly
-authenticating as a user using the `As-User` header. Additionally, enabling this
+authenticating as a user using the `as-user` header. Additionally, enabling this
 scope disables accessing content that is owned by users in another enterprise.
 
 For this reason, this scope will not be provisioned unless absolutely necessary.
