@@ -33,8 +33,8 @@ of the template that might be applied to a file or folder.
 
 ```sh
 curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTemplate/schema \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -H "Content-Type: application/json" \
+     -H "authorization: Bearer <ACCESS_TOKEN>" \
+     -H "content-type: application/json" \
      -d '[
        {
          "op": "editField",

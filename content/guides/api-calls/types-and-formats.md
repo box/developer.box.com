@@ -27,7 +27,7 @@ to this rule:
 <Message type='notice'>
   Although not required, we highly recommend passing a header with each API
   request to define the content type of the data sent, for example
-  `Content-Type: application/json`.
+  `content-type: application/json`.
 </Message>
 
 ### Headers
@@ -35,7 +35,7 @@ to this rule:
 As per the HTTP specification, all request header names in the Box API are
 case-insensitive and can be provided in lowercase, uppercase, or any mixed case
 form. In other words, the content type header can be set as 
-`CONTENT-TYPE: application/json`, `Content-Type: application/json`, 
+`CONTENT-TYPE: application/json`, `content-type: application/json`, 
 `content-type: application/json` or even the slightly absurd 
 `cOnTeNt-TyPe: application/json`.
 
@@ -81,10 +81,10 @@ exceptions to this rule as well.
   status code.
 - APIs used to request binary data either return a `200 OK` status code with the
   binary data attached, or a `202 Accepted`, or `302 Found` status code with no
-  body and a `Location` header pointing to the actual binary file.
+  body and a `location` header pointing to the actual binary file.
 
 <Message type='notice'>
-  The `Content-Type` response header can be used to understand the type of
+  The `content-type` response header can be used to understand the type of
   content returned in the API. Additionally, every API endpoint has it's
   response type documented in our API reference documentation.
 </Message>
@@ -95,7 +95,7 @@ As per the HTTP specification, all response header names in the Box API are
 case-insensitive and could change over time.
 
 This means that the API might return responses with a content type header of 
-`CONTENT-TYPE: application/json`, `Content-Type: application/json` or 
+`CONTENT-TYPE: application/json`, `content-type: application/json` or 
 `content-type: application/json`. Ideally your application should convert header
 names to a standard case upon request and then use that standardized set of
 headers to look up values of the headers.
@@ -181,7 +181,7 @@ response including the `request_id` to help our support team to quickly find you
 request.
 
 <Message type='notice'>
-  Most API calls also return a `BOX-REQUEST-ID` response header. The value of
+  Most API calls also return a `box-request-id` response header. The value of
   this header should not be confused with the `request_id` value in the body of
   an error response.
 </Message>
