@@ -133,7 +133,7 @@ Sharing should be turned off.
 
 ```curl
 curl https://api.box.com/2.0/collaborations \
-  -H "Authorization: Bearer [ACCESS_TOKEN]" \
+  -H "authorization: Bearer [ACCESS_TOKEN]" \
   -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
   -X POST
 ```

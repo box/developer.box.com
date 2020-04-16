@@ -21,7 +21,7 @@ source_url: >-
 # Suppress Notifications
 
 For some API calls, email and webhook notifications can be prevented by
-including a `Box-Notifications: off` header with the API call.
+including a `box-notifications: off` header with the API call.
 
 <Tabs>
 
@@ -29,8 +29,8 @@ including a `Box-Notifications: off` header with the API call.
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
-  -H "Box-Notifications: off" \
-  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "box-notifications: off" \
+  -H "authorization: Bearer ACCESS_TOKEN" \
   -d '{
       "name": "New Folder",
       "parent": {

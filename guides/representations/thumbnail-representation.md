@@ -50,23 +50,23 @@ To get a thumbnail representation follow the following steps
 
 ## Examples
 
-The following a some example `X-Rep-Hints`-header values
+The following a some example `x-rep-hints`-header values
 
-| `X-Rep-Hints: [jpg?dimensions=32x32]` |
+| `x-rep-hints: [jpg?dimensions=32x32]` |
 | ------------------------------------- |
 | Returns a `32x32` JPEG thumbnail      |
 
-| `X-Rep-Hints: [jpg?dimensions=32x32][jpg?dimensions=1024x1024]` |
+| `x-rep-hints: [jpg?dimensions=32x32][jpg?dimensions=1024x1024]` |
 | --------------------------------------------------------------- |
 | Returns `32x32` and `1024x1024` JPEG thumbnails                 |
 
-| `X-Rep-Hints: [jpg?dimensions=32x32][png?dimensions=2048x2048]` |
+| `x-rep-hints: [jpg?dimensions=32x32][png?dimensions=2048x2048]` |
 | --------------------------------------------------------------- |
 | Returns a `32x32` JPEG and a `2048x2048` PNG thumbnail          |
 
 <!-- markdownlint-disable line-length -->
 
-| `X-Rep-Hints: [jpg?dimensions=2048x2048,png?dimensions=2048x2048]`                                                                                                     |
+| `x-rep-hints: [jpg?dimensions=2048x2048,png?dimensions=2048x2048]`                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Returns a `2048x2048` JPEG or a `2048x2048` PNG thumbnail, returning the first representation that is available. If neither is available it returns no representations |
 
