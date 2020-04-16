@@ -179,4 +179,10 @@ valid = !expired && (primary_sig_valid || secondary_sig_valid)
   </Tab>
 </Tabs>
 
+<Message warning>
+  HTTP header names are case insensitive and your client should ideally convert
+  all header names to a standardized lowercase or uppercase format before trying
+  to determine the value of a header.
+</Message>
+
 [console]: https://app.box.com/developers/console

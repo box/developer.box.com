@@ -44,16 +44,16 @@ the user.
 POST /api/2.0/files/123/content HTTP/1.1
 Host: upload.box.com
 Authorization: Bearer [ACCESS_TOKEN]
-Content-Length: 343
-Content-Type: multipart/form-data; boundary=------------------------9fd09388d840fef1
+content-length: 343
+content-type: multipart/form-data; boundary=------------------------9fd09388d840fef1
 
 --------------------------9fd09388d840fef1
-Content-Disposition: form-data; name="attributes"
+content-disposition: form-data; name="attributes"
 
 {"name":"test.txt", "parent":{"id":"0"}}
 --------------------------9fd09388d840fef1
-Content-Disposition: form-data; name="file"; filename="test.txt"
-Content-Type: text/plain
+content-disposition: form-data; name="file"; filename="test.txt"
+content-type: text/plain
 
 Test file text.
 
@@ -70,11 +70,11 @@ Test file text.
 
 To learn more about all the parameters available when uploading files, head over
 to the [reference documentation for this API call][upload]. These parameters
-include a `Content-MD5` that can be set to ensure a file is not corrupted in
+include a `content-md5` that can be set to ensure a file is not corrupted in
 transit, and the ability to explicitly specify the file creation time at a
 different time than the upload time.
 
-For file versions an additional [`If-Match` header][consistency] can be passed
+For file versions an additional [`if-match` header][consistency] can be passed
 along to prevent overwriting a file that has already been updated since the
 application last inspected the content.
 
