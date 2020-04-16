@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 255
 related_endpoints:
   - post_users
 related_guides:
@@ -9,7 +9,7 @@ related_guides:
   - users/create-managed-user
 ---
 
-# Integrating Single Sign-On (SSO) Systems with Box Applications
+# Identity Management (SSO)
 
 Single Sign-On (SSO) services are used as part of company Identity and Access
 Management (IAM) solutions. When deployed, these services grant users the
