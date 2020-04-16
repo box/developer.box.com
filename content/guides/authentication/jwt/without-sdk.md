@@ -44,7 +44,7 @@ make API calls on behalf of the application.
   other users without explicitly getting access them.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `As-User` header or by requesting a
+using the `as-user` header or by requesting a
 [User Access Token](g://authentication/jwt/user-access-tokens).
 
 </Message>

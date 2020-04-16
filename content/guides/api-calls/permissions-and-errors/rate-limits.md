@@ -38,7 +38,7 @@ a HTTP status code of `429 Too Many Requests`.
 The response will include the following headers and JSON body.
 
 ```yaml
-Retry-After: 100
+retry-after: 100
 ```
 
 ```json
@@ -55,7 +55,7 @@ Retry-After: 100
 Please see the [Client Error resource](resource://client_error) for more details.
 
 <Message type='notice'>
-  The `Retry-After` header provides guidance on when the API call can be
+  The `retry-after` header provides guidance on when the API call can be
   retried. In general, we advise using an exponential back-off strategy for
   retrying API calls.
 </Message>
