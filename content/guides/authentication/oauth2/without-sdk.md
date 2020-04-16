@@ -44,7 +44,7 @@ make API calls on behalf of this user.
   folder the application tries to access with this token.
 
   It is possible to [act as another user](g://authentication/oauth2/as-user)
-  using the `As-User` header.
+  using the `as-user` header.
 </Message>
 
 ## Prerequisites

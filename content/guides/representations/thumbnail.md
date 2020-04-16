@@ -35,11 +35,11 @@ in the body of the response as binary data.
 ## Asynchronous thumbnail creation
 
 Sometimes the thumbnail can not be created directly. Instead, the API will
-return a `HTTP 202` with a `Location` response header. The location
+return a `HTTP 202` with a `location` response header. The location
 is for a temporary image that can be used while the thumbnail is being
 generated.
 
-A `Retry-After` response header is also provided to present you with
+A `retry-after` response header is also provided to present you with
 an estimated amount of seconds before retrying this endpoint.
 
 ## Supported file sizes
