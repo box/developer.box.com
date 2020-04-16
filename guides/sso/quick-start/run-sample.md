@@ -139,23 +139,8 @@ more advanced capabilities that may be attached into the user creation and
 access process.
 
 * [User provisioning](g://users/provision/) best practices for advanced user
- folder architecture setup.
+folder architecture setup.
 * [User deprovisioning](g://users/deprovision/) best practices cleaning up
- inactive users and transferring user content to another account.
+inactive users and transferring user content to another account.
 * [Uploading content](g://uploads/) into Box, including running preflight
- checks and large file (chunked) uploading.
- 
- <Choice option='programming.platform' value='node,java,python' color='none'>
-<LoggedIn reverse>
-
-<Message danger>
-
-# Incomplete previous step
-
-Please select a preferred language / framework in step 1 to get started.
-
-</Message>
-
-</LoggedIn>
-
-</Choice>
+checks and large file (chunked) uploading.
