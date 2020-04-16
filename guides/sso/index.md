@@ -12,10 +12,10 @@ subcategory_id: null
 is_index: true
 id: sso
 type: guide
-total_steps: 1
+total_steps: 0
 sibling_id: guides
 parent_id: guides
-next_page_id: sso/connecting-sso
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/sso/index.md

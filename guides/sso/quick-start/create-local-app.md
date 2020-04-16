@@ -27,27 +27,27 @@ files.
 
 <Grid columns='3'>
 
-<Choose option='local.lang' value='node'>
+<Choose option='programming.platform' value='node'>
 
-# Node + Express
-
-</Choose>
-
-<Choose option='local.lang' value='java'>
-
-# Java + Spring Boot
+# Node/Express
 
 </Choose>
 
-<Choose option='local.lang' value='python'>
+<Choose option='programming.platform' value='java'>
 
-# Python + Flask
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python'>
+
+# Python/Flask
 
 </Choose>
 
 </Grid>
 
-<Choice option='local.lang' value='node' color='white'>
+<Choice option='programming.platform' value='node' color='white'>
 
 * Create a local directory for your application.
 * Create a `package.json` file inside the local directory, open it in your
@@ -88,7 +88,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
 
 </Choice>
-<Choice option='local.lang' value='java' color='blue'>
+<Choice option='programming.platform' value='java' color='blue'>
 
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `okta.sample` for this guide.
@@ -121,7 +121,7 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 ```
 
 </Choice>
-<Choice option='local.lang' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 * Create a local directory for your application.
 * Install needed dependencies using the following `pip` command from your
@@ -166,7 +166,7 @@ okta_callback_route = '/oidc/callback'
 * You created a new local application, files, and basic configuration details.
 * You installed all project dependencies.
 
-<Observe option='local.lang' value='node,java,python'>
+<Observe option='programming.platform' value='node,java,python'>
 <Next>
 
 I have my local application set up

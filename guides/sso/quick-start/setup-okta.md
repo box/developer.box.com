@@ -79,27 +79,27 @@ Fill out the application details with the following configuration settings:
 
 <Grid columns='3'>
 
-<Choose option='okta.app' value='node'>
+<Choose option='programming.platform' unset value='node'>
 
-# Node + Express
-
-</Choose>
-
-<Choose option='okta.app' value='java'>
-
-# Java + Spring Boot
+# Node/Express
 
 </Choose>
 
-<Choose option='okta.app' value='python'>
+<Choose option='programming.platform' unset value='java'>
 
-# Python + Flask
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' unset value='python'>
+
+# Python/Flask
 
 </Choose>
 
 </Grid>
 
-<Choice option='okta.app' value='node'>
+<Choice option='programming.platform' value='node'>
 
 Name: Any
 Base URIs: `http://localhost:3000/`
@@ -108,7 +108,7 @@ Logout redirect URIs: `http://localhost:3000/logout`
 Grant type allowed: Only **Authorization Code** selected
 
 </Choice>
-<Choice option='okta.app' value='java'>
+<Choice option='programming.platform' value='java'>
 
 Name: Any
 Base URIs: `http://localhost:8080/`
@@ -117,7 +117,7 @@ Logout redirect URIs: `http://localhost:8080/logout`
 Grant type allowed: Only **Authorization Code** selected
 
 </Choice>
-<Choice option='okta.app' value='python'>
+<Choice option='programming.platform' value='python'>
 
 Name: Any
 Base URIs: `http://127.0.0.1:5000/`
@@ -152,27 +152,27 @@ appropriate configuration files.
 
 <Grid columns='3'>
 
-<Choose option='okta.config' value='node'>
+<Choose option='programming.platform' unset value='node'>
 
-# Node + Express
-
-</Choose>
-
-<Choose option='okta.config' value='java'>
-
-# Java + Spring Boot
+# Node/Express
 
 </Choose>
 
-<Choose option='okta.config' value='python'>
+<Choose option='programming.platform' unset value='java'>
 
-# Python + Flask
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' unset value='python'>
+
+# Python/Flask
 
 </Choose>
 
 </Grid>
 
-<Choice option='okta.config' value='node'>
+<Choice option='programming.platform' value='node'>
 
 * Open `config.json` within the local application directory in your preferred
  editor.
@@ -185,7 +185,7 @@ appropriate configuration files.
 * Save the file.
 
 </Choice>
-<Choice option='okta.config' value='java'>
+<Choice option='programming.platform' value='java'>
 
 * Open the `/src/main/resources/application.properties` file and update the
  following lines:
@@ -200,7 +200,7 @@ appropriate configuration files.
 * Save the file
 
 </Choice>
-<Choice option='okta.config' value='python'>
+<Choice option='programming.platform' value='python'>
 
 In addition to the standard configuration information for the org and app, the
 Python / Flask integration requires an additional auth token.
@@ -273,7 +273,7 @@ practices for user creation and security.
 * You updated the Okta configuration information in the local application.
 * You created a test Okta user.
 
-<Observe option='okta.app' value='node,java,python'>
+<Observe option='programming.platform' value='node,java,python'>
 <Next>
 
 I've created my Okta app and set up user / local configuration
