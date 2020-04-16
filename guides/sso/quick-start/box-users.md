@@ -32,12 +32,34 @@ This section will cover the final Box components:
 Before validating users we need a method for creating an associated Box user
 account if one doesn't already exist for the Okta user.
 
+<Grid columns='3'>
+
+<Choose option='programming.platform' value='node' color='blue'>
+
+# Node/Express
+
+</Choose>
+
+<Choose option='programming.platform' value='java' color='white'>
+
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python' color='blue'>
+
+# Python/Flask
+
+</Choose>
+
+</Grid>
+
 <Choice option='programming.platform' value='node' color='blue'>
 
 In your local application directory, load the `server.js` file created in
 step 1.
 
-Add the following `box` object into the file and save. 
+Add the following `box` object into the file and save.
 
 ```js
 const box = (() => {
@@ -205,6 +227,28 @@ defining the code for validating whether an Okta user record has an associated
 Box user record by searching all Box enterprise users for the associated
 `external_app_user_id`.
 
+<Grid columns='3'>
+
+<Choose option='programming.platform' value='node' color='blue'>
+
+# Node/Express
+
+</Choose>
+
+<Choose option='programming.platform' value='java' color='white'>
+
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python' color='blue'>
+
+# Python/Flask
+
+</Choose>
+
+</Grid>
+
 <Choice option='programming.platform' value='node' color='blue'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
@@ -324,6 +368,28 @@ an access token specifically
 API calls, then make a call to get the current user to ensure that everything
 is working and that we have a valid user access token.
 
+<Grid columns='3'>
+
+<Choose option='programming.platform' value='node' color='blue'>
+
+# Node/Express
+
+</Choose>
+
+<Choose option='programming.platform' value='java' color='white'>
+
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python' color='blue'>
+
+# Python/Flask
+
+</Choose>
+
+</Grid>
+
 <Choice option='programming.platform' value='node' color='blue'>
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
@@ -396,16 +462,6 @@ With a user found we capture the Box user ID, then generate a user client
 object scoped for that user. We finish by making a call to fetch the current
 user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
-
-</Choice>
-
-<Choice option='programming.platform' value='node,java,python' color='none'>
-<Message danger>
-
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
-
-</Message>
 
 </Choice>
 

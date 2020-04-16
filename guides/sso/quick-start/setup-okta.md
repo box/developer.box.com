@@ -77,6 +77,28 @@ change.
 
 Fill out the application details with the following configuration settings:
 
+<Grid columns='3'>
+
+<Choose option='programming.platform' value='node' color='blue'>
+
+# Node/Express
+
+</Choose>
+
+<Choose option='programming.platform' value='java' color='white'>
+
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python' color='blue'>
+
+# Python/Flask
+
+</Choose>
+
+</Grid>
+
 <Choice option='programming.platform' value='node' color='blue'>
 
 * Name: Any
@@ -127,6 +149,28 @@ appropriate configuration files.
 ![Okta Org URL](./img/okta-qs-step1-org-url.png)
 
 </ImageFrame>
+
+<Grid columns='3'>
+
+<Choose option='programming.platform' value='node' color='blue'>
+
+# Node/Express
+
+</Choose>
+
+<Choose option='programming.platform' value='java' color='white'>
+
+# Java/Spring Boot
+
+</Choose>
+
+<Choose option='programming.platform' value='python' color='blue'>
+
+# Python/Flask
+
+</Choose>
+
+</Grid>
 
 <Choice option='programming.platform' value='node' color='blue'>
 
@@ -209,21 +253,10 @@ Lastly, update the Flask configuration file
 
 </Choice>
 
-<Choice option='programming.platform' value='node,java,python' color='none'>
-<Message danger>
-
-# Incomplete previous step
-
-Please select a preferred language / framework in step 1 to get started.
-
-</Message>
-
-</Choice>
-
 ## Create a User
 
 Our last step in the Okta setup is to create a test user that we will use to
-log in to the application.
+log in to the application. 
 
 1. Go to the **Users** section of the Okta admin dashboard.
 1. Click on the **Add Person** button.
