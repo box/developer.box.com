@@ -35,19 +35,19 @@ This section will walk you through:
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python/Flask
 
@@ -55,7 +55,7 @@ This section will walk you through:
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 In your local application directory, load the `server.js` file created in
 step 1.
@@ -127,7 +127,7 @@ Beyond the package definitions, this skeleton will handle the following:
 * Server: Initialized the Express server to listen for traffic.
 
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 In your local application directory, load the
 `/src/main/java/com/box/sample/Application.java` file created in step 1, or
@@ -189,7 +189,7 @@ Beyond the import statements, this skeleton will handle the following:
 * Server: Initialized the Spring Boot server to listen for traffic.
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 In your local application directory, load the `server.py` file created in step
 1.
@@ -261,19 +261,19 @@ engaged.
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python/Flask
 
@@ -281,7 +281,7 @@ engaged.
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
@@ -315,7 +315,7 @@ connector will automatically handle this route and force the user through to
 the Okta login.
 
 </Choice>
-<Choice option='programming.platformn' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
@@ -331,7 +331,7 @@ We pass that user object to a `validateUser` function, which we'll define in
 the next step.
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following code.
 

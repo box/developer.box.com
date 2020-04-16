@@ -33,7 +33,7 @@ Create and configure a new Box JWT application to start with a clean user list.
 
 </Choose>
 
-<Choose option='box.app_type' value='use_own' color='red'>
+<Choose option='box.app_type' value='use_own' color='white'>
 
 # Use an existing approved app
 
@@ -73,7 +73,7 @@ application approved in your enterprise.
 
 </Choice>
 
-<Choice option='box.app_type' value='use_own' color='blue'>
+<Choice option='box.app_type' value='use_own' color='white'>
 
 # Use an Existing JWT Box application
 
@@ -104,7 +104,7 @@ Store that file as `config.json` in a location accessible by your application.
 * You downloaded your application configuration file and stored it in a location
  accessible by your application.
 
-<Observe option='box.app_type' value='use_own,create_new_'>
+<Observe option='box.app_type' value='use_own,create_new'>
 <Next>
 
 I downloaded my application configuration file

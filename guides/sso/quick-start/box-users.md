@@ -34,19 +34,19 @@ account if one doesn't already exist for the Okta user.
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python/Flask
 
@@ -54,7 +54,7 @@ account if one doesn't already exist for the Okta user.
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 In your local application directory, load the `server.js` file created in
 step 1.
@@ -121,7 +121,7 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 In your local application directory, load the
 `/src/main/java/com/box/sample/Application.java` file created in step 1, or
@@ -167,7 +167,7 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 In your local application directory, load the `server.py` file created in step
 1.
@@ -229,19 +229,19 @@ Box user record by searching all Box enterprise users for the associated
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python/Flask
 
@@ -249,7 +249,7 @@ Box user record by searching all Box enterprise users for the associated
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
 
@@ -279,7 +279,7 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
 
@@ -324,7 +324,7 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 Replace the `# TODO: VALIDATE USER` comment with the following:
 
@@ -370,19 +370,19 @@ is working and that we have a valid user access token.
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python/Flask
 
@@ -390,7 +390,7 @@ is working and that we have a valid user access token.
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
@@ -412,7 +412,7 @@ user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 <!-- markdownlint-disable line-length -->
 
@@ -442,7 +442,7 @@ information for the Okta associated Box app user.
 <!-- markdownlint-enable line-length -->
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 Replace `# TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:

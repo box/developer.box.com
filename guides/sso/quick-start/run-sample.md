@@ -22,19 +22,19 @@ see if everything is working correctly.
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' unset value='node'>
+<Choose option='programming.platform' unset value='node' color='blue'>
 
 # Node + Express
 
 </Choose>
 
-<Choose option='programming.platform' unset value='java'>
+<Choose option='programming.platform' unset value='java' color='white'>
 
 # Java + Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' unset value='python'>
+<Choose option='programming.platform' unset value='python' color='blue'>
 
 # Python + Flask
 
@@ -42,7 +42,7 @@ see if everything is working correctly.
 
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 From the terminal / command prompt in the local application directory, type
 `node server.js` and click enter. The server will start up and output
@@ -68,7 +68,7 @@ will now see the user record for that newly created Box app user being output
 to the console / terminal.
 
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 
 From Eclipse (or your preferred editor) click to run the application. You will
 see console output stating that the Spring boot application is now running on
@@ -93,7 +93,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 
 From the terminal / command prompt in the local application directory, type
 `env FLASK_APP=server.py flask run` and click enter. The server will start up

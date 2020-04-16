@@ -27,19 +27,19 @@ files.
 
 <Grid columns='3'>
 
-<Choose option='programming.platform' value='node'>
+<Choose option='programming.platform' value='node' color='blue'>
 
 # Node/Express
 
 </Choose>
 
-<Choose option='programming.platform' value='java'>
+<Choose option='programming.platform' value='java' color='white'>
 
 # Java/Spring Boot
 
 </Choose>
 
-<Choose option='programming.platform' value='python'>
+<Choose option='programming.platform' value='python' color='blue'>
 
 # Python/Flask
 
@@ -47,7 +47,7 @@ files.
 
 </Grid>
 
-<Choice option='programming.platform' value='node' color='white'>
+<Choice option='programming.platform' value='node' color='blue'>
 
 * Create a local directory for your application.
 * Create a `package.json` file inside the local directory, open it in your
@@ -88,7 +88,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
 
 </Choice>
-<Choice option='programming.platform' value='java' color='blue'>
+<Choice option='programming.platform' value='java' color='white'>
 
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `okta.sample` for this guide.
