@@ -21,15 +21,15 @@ Before validating users we need a method for creating an associated Box user
 account if one doesn't already exist for the Okta user.
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -208,15 +208,15 @@ Box user record by searching all Box enterprise users for the associated
 `external_app_user_id`.
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -341,15 +341,15 @@ API calls, then make a call to get the current user to ensure that everything
 is working and that we have a valid user access token.
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -436,3 +436,13 @@ information for the Okta associated Box app user.
 <Observe option='box.app_type' value='use_own,create_new_'>
   <Next>I have set up Box user validation and creation</Next>
 </Observe>
+
+<Choice option='programming.platform' value='node,java,python' color='none'>
+  <LoggedIn reverse>
+    <Message danger>
+      # Incomplete previous step
+
+      Please select a preferred language / framework in step 1 to get started.
+    </Message>
+  </LoggedIn>
+</Choice>

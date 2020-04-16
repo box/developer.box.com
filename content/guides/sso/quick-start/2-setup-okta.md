@@ -58,15 +58,15 @@ change.
 Fill out the application details with the following configuration settings:
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -121,15 +121,15 @@ appropriate configuration files.
 </ImageFrame>
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -233,6 +233,16 @@ log in to the application.
 <Observe option='programming.platform' value='node,java,python'>
   <Next>I've created my Okta app and set up user / local configuration</Next>
 </Observe>
+
+<Choice option='programming.platform' value='node,java,python' color='none'>
+  <LoggedIn reverse>
+    <Message danger>
+      # Incomplete previous step
+
+      Please select a preferred language / framework in step 1 to get started.
+    </Message>
+  </LoggedIn>
+</Choice>
 
 [okta-dev]: https://developer.okta.com/
 [oauth2]: https://oauth.net/2/

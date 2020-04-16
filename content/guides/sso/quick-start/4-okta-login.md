@@ -22,15 +22,15 @@ This section will walk you through:
 ## Set up the Skeleton
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -237,15 +237,15 @@ We now need to define the code that will run when our main route (`/`) is
 engaged.
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
@@ -347,3 +347,13 @@ the next step.
 <Observe option='box.app_type' value='use_own,create_new_'>
   <Next>I have set up the Okta login</Next>
 </Observe>
+
+<Choice option='programming.platform' value='node,java,python' color='none'>
+  <LoggedIn reverse>
+    <Message danger>
+      # Incomplete previous step
+
+      Please select a preferred language / framework in step 1 to get started.
+    </Message>
+  </LoggedIn>
+</Choice>

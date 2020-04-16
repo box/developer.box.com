@@ -9,15 +9,15 @@ With all the components of the sample in place, it's time to run our program to
 see if everything is working correctly. 
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node' color='blue'>
+  <Choose option='programming.platform' value='node' color='blue'>
     # Node + Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='white'>
     # Java + Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python' color='blue'>
+  <Choose option='programming.platform' value='python' color='blue'>
     # Python + Flask
   </Choose>
 </Grid>
@@ -118,3 +118,13 @@ access process.
  inactive users and transferring user content to another account.
 * [Uploading content](g://uploads/) into Box, including running preflight
  checks and large file (chunked) uploading.
+ 
+ <Choice option='programming.platform' value='node,java,python' color='none'>
+   <LoggedIn reverse>
+     <Message danger>
+       # Incomplete previous step
+
+       Please select a preferred language / framework in step 1 to get started.
+     </Message>
+   </LoggedIn>
+ </Choice>
