@@ -18,7 +18,7 @@ create users that are associated with the Okta user account.
     Create and configure a new Box JWT application to start with a clean user list.
   </Choose>
 
-  <Choose option='box.app_type' value='use_own' color='red'>
+  <Choose option='box.app_type' value='use_own' color='white'>
     # Use an existing approved app
 
     Use one of your existing admin approved Box JWT applications from the Box developer
@@ -53,7 +53,7 @@ create users that are associated with the Okta user account.
   application approved in your enterprise.
 </Choice>
 
-<Choice option='box.app_type' value='use_own' color='blue'>
+<Choice option='box.app_type' value='use_own' color='white'>
   # Use an Existing JWT Box application
 
   If you have an existing JWT based Box application in your
@@ -82,7 +82,7 @@ Store that file as `config.json` in a location accessible by your application.
 * You downloaded your application configuration file and stored it in a location
  accessible by your application.
 
-<Observe option='box.app_type' value='use_own,create_new_'>
+<Observe option='box.app_type' value='use_own,create_new'>
   <Next>I downloaded my application configuration file</Next>
 </Observe>
 

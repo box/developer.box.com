@@ -58,39 +58,45 @@ change.
 Fill out the application details with the following configuration settings:
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
+  <Choose option='programming.platform' unset value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
+  <Choose option='programming.platform' unset value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
+  <Choose option='programming.platform' unset value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
 
-<Choice option='programming.platform' value='node'>
-  Name: Any
-  Base URIs: `http://localhost:3000/`
-  Login redirect URIs: `http://localhost:3000/authorization-code/callback`
-  Logout redirect URIs: `http://localhost:3000/logout`
-  Grant type allowed: Only **Authorization Code** selected
+<Choice option='programming.platform' value='node' color='blue'>
+
+* Name: Any
+* Base URIs: `http://localhost:3000/`
+* Login redirect URIs: `http://localhost:3000/authorization-code/callback`
+* Logout redirect URIs: `http://localhost:3000/logout`
+* Grant type allowed: Only **Authorization Code** selected
+
 </Choice>
-<Choice option='programming.platform' value='java'>
-  Name: Any
-  Base URIs: `http://localhost:8080/`
-  Login redirect URIs: `http://localhost:8080/authorization-code/callback`
-  Logout redirect URIs: `http://localhost:8080/logout`
-  Grant type allowed: Only **Authorization Code** selected
+<Choice option='programming.platform' value='java' color='white'>
+
+* Name: Any
+* Base URIs: `http://localhost:8080/`
+* Login redirect URIs: `http://localhost:8080/authorization-code/callback`
+* Logout redirect URIs: `http://localhost:8080/logout`
+* Grant type allowed: Only **Authorization Code** selected
+
 </Choice>
-<Choice option='programming.platform' value='python'>
-  Name: Any
-  Base URIs: `http://127.0.0.1:5000/`
-  Login redirect URIs: `http://127.0.0.1:5000/oidc/callback`
-  Logout redirect URIs: `http://127.0.0.1:5000/logout`
-  Grant type allowed: Only **Authorization Code** selected
+<Choice option='programming.platform' value='python' color='blue'>
+
+* Name: Any
+* Base URIs: `http://127.0.0.1:5000/`
+* Login redirect URIs: `http://127.0.0.1:5000/oidc/callback`
+* Logout redirect URIs: `http://127.0.0.1:5000/logout`
+* Grant type allowed: Only **Authorization Code** selected
+
 </Choice>
 
 Click the **Done** button to create the application and be dropped on to the
@@ -115,20 +121,20 @@ appropriate configuration files.
 </ImageFrame>
 
 <Grid columns='3'>
-  <Choose option='programming.platform' unset value='node'>
+  <Choose option='programming.platform' unset value='node' color='blue'>
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' unset value='java'>
+  <Choose option='programming.platform' unset value='java' color='white'>
     # Java/Spring Boot
   </Choose>
   
-  <Choose option='programming.platform' unset value='python'>
+  <Choose option='programming.platform' unset value='python' color='blue'>
     # Python/Flask
   </Choose>
 </Grid>
 
-<Choice option='programming.platform' value='node'>
+<Choice option='programming.platform' value='node' color='blue'>
 * Open `config.json` within the local application directory in your preferred
  editor.
 * Update the following line items with the appropriate Okta configuration info:
@@ -139,7 +145,7 @@ appropriate configuration files.
   * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
 * Save the file.
 </Choice>
-<Choice option='programming.platform' value='java'>
+<Choice option='programming.platform' value='java' color='white'>
 * Open the `/src/main/resources/application.properties` file and update the
  following lines:
   * `okta.oauth2.issuer`: Your Org URL, obtained from the top right of the main
@@ -152,7 +158,7 @@ appropriate configuration files.
    section of the application general settings.
 * Save the file
 </Choice>
-<Choice option='programming.platform' value='python'>
+<Choice option='programming.platform' value='python' color='blue'>
 In addition to the standard configuration information for the org and app, the
 Python / Flask integration requires an additional auth token.
 
