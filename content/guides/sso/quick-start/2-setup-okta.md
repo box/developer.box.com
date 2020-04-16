@@ -57,20 +57,6 @@ change.
 
 Fill out the application details with the following configuration settings:
 
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node/Express
-  </Choose>
-
-  <Choose option='programming.platform' value='java' color='white'>
-    # Java/Spring Boot
-  </Choose>
-  
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python/Flask
-  </Choose>
-</Grid>
-
 <Choice option='programming.platform' value='node' color='blue'>
 
 * Name: Any
@@ -119,20 +105,6 @@ appropriate configuration files.
 <ImageFrame noborder center shadow>
   ![Okta Org URL](./img/okta-qs-step1-org-url.png)
 </ImageFrame>
-
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node/Express
-  </Choose>
-
-  <Choose option='programming.platform' value='java' color='white'>
-    # Java/Spring Boot
-  </Choose>
-  
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python/Flask
-  </Choose>
-</Grid>
 
 <Choice option='programming.platform' value='node' color='blue'>
 * Open `config.json` within the local application directory in your preferred
@@ -210,6 +182,14 @@ Lastly, update the Flask configuration file
 
 </Choice>
 
+<Choice option='programming.platform' value='node,java,python' color='none'>
+  <Message danger>
+    # Incomplete previous step
+
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
+</Choice>
+
 ## Create a User
 
 Our last step in the Okta setup is to create a test user that we will use to
@@ -233,16 +213,6 @@ log in to the application.
 <Observe option='programming.platform' value='node,java,python'>
   <Next>I've created my Okta app and set up user / local configuration</Next>
 </Observe>
-
-<Choice option='programming.platform' value='node,java,python' color='none'>
-  <LoggedIn reverse>
-    <Message danger>
-      # Incomplete previous step
-
-      Please select a preferred language / framework in step 1 to get started.
-    </Message>
-  </LoggedIn>
-</Choice>
 
 [okta-dev]: https://developer.okta.com/
 [oauth2]: https://oauth.net/2/

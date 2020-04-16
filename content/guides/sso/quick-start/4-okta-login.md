@@ -21,20 +21,6 @@ This section will walk you through:
 
 ## Set up the Skeleton
 
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node/Express
-  </Choose>
-
-  <Choose option='programming.platform' value='java' color='white'>
-    # Java/Spring Boot
-  </Choose>
-  
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python/Flask
-  </Choose>
-</Grid>
-
 <Choice option='programming.platform' value='node' color='blue'>
 In your local application directory, load the `server.js` file created in
 step 1.
@@ -236,20 +222,6 @@ Beyond the import statements, this skeleton will handle the following:
 We now need to define the code that will run when our main route (`/`) is
 engaged.
 
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node/Express
-  </Choose>
-
-  <Choose option='programming.platform' value='java' color='white'>
-    # Java/Spring Boot
-  </Choose>
-  
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python/Flask
-  </Choose>
-</Grid>
-
 <Choice option='programming.platform' value='node' color='blue'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
@@ -339,6 +311,13 @@ the next step.
 
 </Choice>
 
+<Choice option='programming.platform' value='node,java,python' color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
+</Choice>
+
 ## Summary
 
 * You set up the skeleton routes and configuration for Okta.
@@ -347,13 +326,3 @@ the next step.
 <Observe option='box.app_type' value='use_own,create_new_'>
   <Next>I have set up the Okta login</Next>
 </Observe>
-
-<Choice option='programming.platform' value='node,java,python' color='none'>
-  <LoggedIn reverse>
-    <Message danger>
-      # Incomplete previous step
-
-      Please select a preferred language / framework in step 1 to get started.
-    </Message>
-  </LoggedIn>
-</Choice>
