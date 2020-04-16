@@ -20,7 +20,7 @@ hide_in_page_nav: true
   load your **Access Token** into a Postman environment.
 
   <Trigger option='postman_collection_downloaded' value='true'>
-    <Postman id='87493998b8bbe053a8f9' />
+    <Postman />
   </Trigger>
 </LoggedIn>
 
@@ -38,7 +38,7 @@ hide_in_page_nav: true
   Secret** into a Postman environment.
 
   <Trigger option='postman_collection_downloaded' value='true'>
-    <Postman id='87493998b8bbe053a8f9' env='postman_credentials' />
+    <Postman env='postman_credentials' />
   </Trigger>
 </LoggedIn>
 

@@ -34,8 +34,8 @@ the change.
 
 ```sh
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -H "Content-Type: application/json-patch+json" \
+     -H "authorization: Bearer <ACCESS_TOKEN>" \
+     -H "content-type: application/json-patch+json" \
      -d '[
         {
           "op": "test",
@@ -132,6 +132,7 @@ The API will return the updated metadata instance.
 {
   "name": "Box",
   "industry": "Technology",
+  "tav": 1000000,
   "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
   "$parent": "folder_12345,",
   "$scope": "enterprise_34567",

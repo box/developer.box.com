@@ -51,6 +51,12 @@ USER-AGENT:               Box-WH-Client/0.1
   of the webhook payloads.
 </Message>
 
+<Message warning>
+  HTTP header names are case insensitive and your client should ideally convert
+  all header names to a standardized lowercase or uppercase format before trying
+  to determine the value of a header.
+</Message>
+
 ## Payload body
 
 The body of a webhook payload is a JSON object that describes the file or folder
