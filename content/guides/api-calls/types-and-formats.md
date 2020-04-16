@@ -30,6 +30,17 @@ to this rule:
   `Content-Type: application/json`.
 </Message>
 
+### Headers
+
+As per the HTTP specification, all request header names in the Box API are
+case-insensitive and can be provided in lowercase, uppercase, or any mixed case
+form. In other words, the content type header can be set as 
+`CONTENT-TYPE: application/json`, `Content-Type: application/json`, 
+`content-type: application/json` or even the slightly absurd 
+`cOnTeNt-TyPe: application/json`.
+
+Header values **are** mostly case sensitive unless stated otherwise.
+
 ### GZip compression
 
 By default data sent from Box is not compressed. To improve bandwidth and
@@ -77,6 +88,19 @@ exceptions to this rule as well.
   content returned in the API. Additionally, every API endpoint has it's
   response type documented in our API reference documentation.
 </Message>
+
+### Headers
+
+As per the HTTP specification, all response header names in the Box API are
+case-insensitive and could change over time.
+
+This means that the API might return responses with a content type header of 
+`CONTENT-TYPE: application/json`, `Content-Type: application/json` or 
+`content-type: application/json`. Ideally your application should convert header
+names to a standard case upon request and then use that standardized set of
+headers to look up values of the headers.
+
+Header values **are** always case sensitive unless stated otherwise.
 
 ### Resources
 
