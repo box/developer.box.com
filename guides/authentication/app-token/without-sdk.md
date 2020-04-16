@@ -58,5 +58,5 @@ it would use any Access Token.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+  -H "Authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```

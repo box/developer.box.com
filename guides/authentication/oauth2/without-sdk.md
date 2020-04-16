@@ -57,7 +57,7 @@ come from this application, and the user needs to have access to any file or
 folder the application tries to access with this token.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `as-user` header.
+using the `As-User` header.
 
 </Message>
 

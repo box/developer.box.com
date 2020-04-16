@@ -29,4 +29,4 @@ Representations are automatically generated for the supported file types, either
 when uploading to Box or when requesting the asset.
 
 These representations are exposed through the `GET /files/:id` endpoint by using
-the `fields=representations` query parameter and the `x-rep-hints` header.
+the `fields=representations` query parameter and the `X-Rep-Hints` header.

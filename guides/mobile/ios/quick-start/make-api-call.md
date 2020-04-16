@@ -123,7 +123,7 @@ with the last line showing the user print statement that we specified.
     ◁ Cache-Control, Value: no-cache, no-store
     ◁ BOX-REQUEST-ID, Value: 1c55151238444132eca16b4c2346d005
     ◁ Transfer-Encoding, Value: Identity
-    ◁ content-type, Value: application/json
+    ◁ Content-Type, Value: application/json
     ◁ Connection, Value: keep-alive
     ◁ Strict-Transport-Security, Value: max-age=31536000
 ◁ Body: {"type":"user","id":"123456789","name":"Test

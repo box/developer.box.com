@@ -39,7 +39,7 @@ with the desired page number and the file extension, for example
 
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/pdf/content/3.pdf \
-  -H "authorization: Bearer ACCESS_TOKEN"
+  -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -53,7 +53,7 @@ an empty string.
 
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_32x32/content/ \
-  -H "authorization: Bearer ACCESS_TOKEN"
+  -H "Authorization: Bearer ACCESS_TOKEN"
 ```
 
 <!-- markdownlint-eable line-length -->
@@ -67,12 +67,12 @@ are supported.
 | ------------------------------ | ----------------------- | ------- |
 | `set_content_disposition_type` | `inline` / `attachment` | `null`  |
 
-Sets the `content-disposition` header in the API response with the specified
+Sets the `Content-Disposition` header in the API response with the specified
 value. A disposition type of `attachment` causes most web browsers to prompt
 the user to save the response to their device, where the type `inline`
 will open the file in the browser.
 
-If not supplied, the `content-disposition` header is not included in the
+If not supplied, the `Content-Disposition` header is not included in the
 response.
 
 | Parameter                      | Options                    | Default |

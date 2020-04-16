@@ -56,7 +56,7 @@ HttpRequest request = new HttpRequest();
 request.setMethod('POST');
 request.setEndpoint(endpoint);
 request.setBody(JSON.serialize(metadata));
-request.setHeader('content-type', 'application/json');
+request.setHeader('Content-Type', 'application/json');
 
 // Send the HttpRequest through the generic Toolkit method, which will handle the authentication details
 HttpResponse response = toolkit.sendRequest(request);

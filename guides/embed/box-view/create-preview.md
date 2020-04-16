@@ -63,7 +63,7 @@ When generating the embed URL directly from the APIs, use the
 
 ```curl
 curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
-    -H "authorization: Bearer [APP_TOKEN]"
+    -H "Authorization: Bearer [APP_TOKEN]"
 ```
 
 </Tab>

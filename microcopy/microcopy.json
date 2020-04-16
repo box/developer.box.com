@@ -129,8 +129,6 @@
   "reference.resource_variants.standard": "Standard",
   // Describes the full set of fields that can be returnedfor a resource in an API response
   "reference.resource_variants.full": "Full",
-  // Describes how a request header name is not case sensitive
-  "reference.tooltips.header": "Header names are never case sensitive",
   // The title for the guides section
   "guides.titles.guides": "Guides",
   // A title for a set of links describing things to read before
