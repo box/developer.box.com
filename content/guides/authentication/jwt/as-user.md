@@ -12,15 +12,15 @@ related_resources: []
 alias_paths: []
 ---
 
-# As-User Header
+# as-user Header
 
 It is possible to for a JWT application to act on behalf of another user
-through the `As-User` header.
+through the `as-user` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
-  -H "As-User: [USER_ID]"
-  -H "Authorization: Bearer [ACCESS_TOKEN]"
+  -H "as-user: [USER_ID]"
+  -H "authorization: Bearer [ACCESS_TOKEN]"
 ```
 
 <Message>
@@ -31,7 +31,7 @@ admins, or by calling the `GET /users/me` endpoint with an authenticated user se
 
 ## Preconditions
 
-Using the `As-User` header has a few requirements. Firstly, the application
+Using the `as-user` header has a few requirements. Firstly, the application
 needs to be configured to perform actions as users in the [developer
 console][devconsole].
 
@@ -43,9 +43,9 @@ Additionally, the authenticated user needs to be a user with admin permissions,
 meaning either an admin, co-admin, or service account. See our guide on [User
 Types](g://authentication/user-types) for more details.
 
-## As-User using SDKs
+## as-user using SDKs
 
-All of the official SDKs support acting on behalf of a user using the `As-User` header.
+All of the official SDKs support acting on behalf of a user using the `as-user` header.
 
 <Tabs>
   <Tab title='.NET'>
