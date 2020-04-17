@@ -1,5 +1,5 @@
 ---
-rank: 260
+rank: 250
 alias_paths:
   - /security-and-governance-apis
   - /docs/android-security-guidelines

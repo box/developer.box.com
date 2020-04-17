@@ -8,7 +8,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/6-cascades
+subcategory_id: metadata/5-cascades
 is_index: false
 id: metadata/cascades/create
 rank: 3
@@ -19,7 +19,7 @@ parent_id: metadata/cascades
 next_page_id: metadata/cascades/force-apply
 previous_page_id: metadata/cascades/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/3-create.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-cascades/3-create.md
 ---
 
 # Create a metadata cascade policy
