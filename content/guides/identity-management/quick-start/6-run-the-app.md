@@ -13,7 +13,7 @@ see if everything is working correctly.
     # Node + Express
   </Choose>
 
-  <Choose option='programming.platform' value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='blue'>
     # Java + Spring Boot
   </Choose>
   
@@ -22,7 +22,7 @@ see if everything is working correctly.
   </Choose>
 </Grid>
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 From the terminal / command prompt in the local application directory, type
 `node server.js` and click enter. The server will start up and output
@@ -46,7 +46,7 @@ will now see the user record for that newly created Box app user being output
 to the console / terminal. 
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 
 From Eclipse (or your preferred editor) click to run the application. You will
 see console output stating that the Spring boot application is now running on
@@ -69,7 +69,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 
 From the terminal / command prompt in the local application directory, type
 `env FLASK_APP=server.py flask run` and click enter. The server will start up
@@ -92,6 +92,12 @@ When attempting to log in with this user in subsequent attempts, you
 will now see the user ID for that newly created Box app user being output
 to the console / terminal.
 
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
 </Choice>
 
 ## Summary
@@ -123,16 +129,6 @@ access process.
  inactive users and transferring user content to another account.
 * [Uploading content](g://uploads/) into Box, including running preflight
  checks and large file (chunked) uploading.
- 
- <Choice option='programming.platform' value='node,java,python' color='none'>
-   <LoggedIn reverse>
-     <Message danger>
-       # Incomplete previous step
-
-       Please select a preferred language / framework in step 1 to get started.
-     </Message>
-   </LoggedIn>
- </Choice>
 
 [step1]: g://identity-management/quick-start/scaffold-application-code/
 [step2]: g://identity-management/quick-start/configure-okta/

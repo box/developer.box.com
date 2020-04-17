@@ -21,7 +21,7 @@ This section will walk you through:
 
 ## Set up the Skeleton
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 In your local application directory, load the `server.js` file created in
 step 1.
 
@@ -92,7 +92,7 @@ Beyond the package definitions, this skeleton will handle the following:
 * Server: Initialized the Express server to listen for traffic.
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 In your local application directory, load the
 `/src/main/java/com/box/sample/Application.java` file created in step 1, or
 similar directory if an alternate application name was used.
@@ -153,7 +153,7 @@ Beyond the import statements, this skeleton will handle the following:
 * Server: Initialized the Spring Boot server to listen for traffic.
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 In your local application directory, load the `server.py` file created in step
 1.
 
@@ -216,13 +216,19 @@ Beyond the import statements, this skeleton will handle the following:
  the `box_auth` route will be run.
 
 </Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
+</Choice>
 
 ## Setup Application Route
 
 We now need to define the code that will run when our main route (`/`) is
 engaged.
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
@@ -256,7 +262,7 @@ connector will automatically handle this route and force the user through to
 the Okta login.
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
@@ -272,7 +278,7 @@ We pass that user object to a `validateUser` function, which we'll define in
 the next step.
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 
 Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following code.
 
@@ -311,7 +317,7 @@ the next step.
 
 </Choice>
 
-<Choice option='programming.platform' value='node,java,python' color='none'>
+<Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
     Please select a preferred language / framework in step 1 to get started.

@@ -18,7 +18,7 @@ create users that are associated with the Okta user account.
     Create and configure a new Box JWT application to start with a clean user list.
   </Choose>
 
-  <Choose option='box.app_type' value='use_own' color='white'>
+  <Choose option='box.app_type' value='use_own' color='blue'>
     # Use an existing approved app
 
     Use one of your existing admin approved Box JWT applications from the Box developer
@@ -26,7 +26,7 @@ create users that are associated with the Okta user account.
   </Choose>
 </Grid>
 
-<Choice option='box.app_type' value='create_new' color='blue'>
+<Choice option='box.app_type' value='create_new' color='none'>
   # Create a new Box app
 
   To create a new Box application that may be used to call the Box APIs, use
@@ -53,7 +53,7 @@ create users that are associated with the Okta user account.
   application approved in your enterprise.
 </Choice>
 
-<Choice option='box.app_type' value='use_own' color='white'>
+<Choice option='box.app_type' value='use_own' color='none'>
   # Use an Existing JWT Box application
 
   If you have an existing JWT based Box application in your

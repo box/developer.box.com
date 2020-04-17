@@ -57,7 +57,7 @@ change.
 
 Fill out the application details with the following configuration settings:
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 * Name: Any
 * Base URIs: `http://localhost:3000/`
@@ -66,7 +66,7 @@ Fill out the application details with the following configuration settings:
 * Grant type allowed: Only **Authorization Code** selected
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 
 * Name: Any
 * Base URIs: `http://localhost:8080/`
@@ -75,7 +75,7 @@ Fill out the application details with the following configuration settings:
 * Grant type allowed: Only **Authorization Code** selected
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 
 * Name: Any
 * Base URIs: `http://127.0.0.1:5000/`
@@ -83,6 +83,12 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://127.0.0.1:5000/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
 </Choice>
 
 Click the **Done** button to create the application and be dropped on to the
@@ -106,7 +112,7 @@ appropriate configuration files.
   ![Okta Org URL](./img/okta-qs-step1-org-url.png)
 </ImageFrame>
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 * Open `config.json` within the local application directory in your preferred
  editor.
 * Update the following line items with the appropriate Okta configuration info:
@@ -117,7 +123,7 @@ appropriate configuration files.
   * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
 * Save the file.
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 * Open the `/src/main/resources/application.properties` file and update the
  following lines:
   * `okta.oauth2.issuer`: Your Org URL, obtained from the top right of the main
@@ -130,7 +136,7 @@ appropriate configuration files.
    section of the application general settings.
 * Save the file
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 In addition to the standard configuration information for the org and app, the
 Python / Flask integration requires an additional auth token.
 
@@ -182,10 +188,9 @@ Lastly, update the Flask configuration file
 
 </Choice>
 
-<Choice option='programming.platform' value='node,java,python' color='none'>
+<Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-
     Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>

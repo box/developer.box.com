@@ -20,7 +20,7 @@ Choose your preferred language / framework below to get started.
     # Node/Express
   </Choose>
 
-  <Choose option='programming.platform' value='java' color='white'>
+  <Choose option='programming.platform' value='java' color='blue'>
     # Java/Spring Boot
   </Choose>
   
@@ -29,7 +29,7 @@ Choose your preferred language / framework below to get started.
   </Choose>
 </Grid>
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 * Create a local directory for your application.
 * Create a `package.json` file inside the local directory, open it in your
  preferred editor, copy / paste the following into it, and save / exit the
@@ -69,7 +69,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `okta.sample` for this guide.
 * Open your `build.gradle` file and add the following dependencies. Once saved,
@@ -101,7 +101,7 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 ```
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 * Create a local directory for your application.
 * Install needed dependencies using the following `pip` command from your
  terminal / command prompt: `pip install flask flask_oidc okta boxsdk config`
@@ -138,6 +138,12 @@ okta_callback_route = '/oidc/callback'
 }
 ```
 
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework to get started.
+  </Message>
 </Choice>
 
 ## Summary
