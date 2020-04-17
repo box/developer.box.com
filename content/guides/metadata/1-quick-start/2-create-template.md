@@ -14,10 +14,10 @@ To create a custom metadata template for your enterprise you can use [our API
 directly](e://post_metadata_templates) or one of our SDKs to create a new
 template.
 
-For this `customerInfo` template, we're going to create a template with 3
-fields. The first field is a text field to hold the customer's `name`, the
+For this `customerInfo` template, we're going to create a template with 2
+fields. The first field is a text field to hold the customer's `name`, and the
 second is a dropdown list of the possible values for the `industry` the customer
-operates in, and the final field represents the total annual contract value (`tav`).
+operates in.
 
 <CTA to='g://metadata/fields'>Learn about the different field types</CTA>
 
@@ -49,11 +49,6 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
             {"key": "Healthcare"},
             {"key": "Legal"}
           ]
-        },
-        {
-          "type": "float",
-          "displayName": "Total account value",
-          "key": "tav"
         }
       ]
     }'
@@ -84,12 +79,6 @@ var templateParams = new BoxMetadataTemplate()
         new BoxMetadataTemplateFieldOption() { Key = "Healthcare" },
         new BoxMetadataTemplateFieldOption() { Key = "Legal" }
       }
-    },
-    new BoxMetadataTemplateField()
-    {
-      Type = "float",
-      DisplayName = "Total account value",
-      Key="tav"
     },
   }
 };
@@ -122,15 +111,9 @@ options.add(technology);
 options.add(healthcare);
 options.add(legal);
 
-MetadataTemplate.Field tav = new MetadataTemplate.Field();
-tav.setType("float");
-tav.setDisplayName("Total account value");
-tav.setKey("tav");
-
 List<MetadataTemplate.Field> fields = new ArrayList<MetadataTemplate.Field>();
 fields.add(name);
 fields.add(industry);
-fields.add(tav);
 
 MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterprise", "customerInfo", "Customer Info", false, fields);
 ```
@@ -167,11 +150,6 @@ client.metadata.createTemplate(
         {key: 'Healthcare'},
         {key: 'Legal'}
       ]
-    },
-    {
-      type: 'float',
-      displayName: 'Total account value',
-      key: 'tav'
     }
   ]
 ).then(template => {
@@ -222,13 +200,6 @@ The API will return the newly created metadata template.
         {"key": "Healthcare"},
         {"key": "Legal"}
       ],
-      "hidden": false
-    },
-    {
-      "id": "5c6a5906-4654-9deb-003b-472583fc2930",
-      "type": "float",
-      "key": "tav",
-      "displayName": "Total account value",
       "hidden": false
     }
   ]

@@ -132,7 +132,6 @@ The API will return the updated metadata instance.
 {
   "name": "Box",
   "industry": "Technology",
-  "tav": 1000000,
   "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
   "$parent": "folder_12345,",
   "$scope": "enterprise_34567",

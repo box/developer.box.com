@@ -20,8 +20,6 @@ the following steps.
    on a file, allowing you to change the data assigned to a file.
 5. [Updated a metadata template](g://metadata/quick-start/update-template/)
    and changed the data applied to all instances of this template.
-6. [Queried for files and folders](g://metadata/quick-start/create-query/)
-   by matching the values in the metadata instances attached to them.
 
 ## Next things to do
 

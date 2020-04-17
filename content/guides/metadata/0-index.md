@@ -19,7 +19,7 @@ Metadata consists of key/value pairs that are assigned to a file or a folder.
 For example, an important contract may have the key/value pairs of
 `clientNumber: 820183` and `clientName: bioMedicalCorp`.
 
-## Metadata terminology
+## Templates, Fields, Instances, and Cascade Policies
 
 Working with metadata requires a developer to work with a few
 distinct types of resources.
@@ -40,13 +40,7 @@ distinct types of resources.
   how metadata instances applied to a folder should be applied to any item
   within that folder. For example, a user might assign the same `invoiceData`
   metadata template to a project folder (including the 2 values), allowing them
-  to automatically apply to all the files and folders within that project
-  folder.
-* **Queries:** A [metadata query][query] provides a way to find files and
-  folders by searching for the metadata attached to them. For example, to find
-  the all files for an invoice with a certain ID, the query would look for all
-  files and folders with the `invoiceData` template attached to it and a value
-  of `id = :id`, where `:id` would be the value of the invoice.
+  to automatically apply to all the files and folders within that project folder.
 
 ## The purpose of metadata
 
@@ -66,4 +60,3 @@ To learn more, please visit [Box community articles][community].
 [instance]: g://metadata/instances
 [cascade]: g://metadata/cascades
 [field]: g://metadata/fields
-[query]: g://metadata/queries

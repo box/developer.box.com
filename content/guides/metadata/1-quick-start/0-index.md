@@ -30,8 +30,6 @@ This guide will take you through the following steps.
    on a file, allowing you to change the data assigned to a file.
 5. [Update a metadata template](g://metadata/quick-start/update-template/)
    and change the data applied to all instances of this template.
-6. [Create a query to find files by metadata](g://metadata/quick-start/create-query/)
-   and change the data applied to all instances of this template.
 
 <Next>
   I am ready to get started
