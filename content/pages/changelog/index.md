@@ -13,17 +13,6 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-05-01 / New Metadata Query APIs available
-
-A new API is now available that allows developers to query files and folders
-by the metadata attached to them. We've updated the reference documentation for
-this [Metadata Query API][e_mdq_api], as well as released some brand new
-[guides][g_mdq_api] and an update to the [metadata quick start guide][qs_mdq_api].
-
-[e_mdq_api]: e://post_metadata_queries_execute_read
-[g_mdq_api]: g://metadata/queries
-[qs_mdq_api]: g://metadata/quick-start
-
 ## 2020-03-30 / Potential impactful changes to format of Metadata `date` fields
 
 As part of ongoing improvements to our Metadata infrastructure we will be
