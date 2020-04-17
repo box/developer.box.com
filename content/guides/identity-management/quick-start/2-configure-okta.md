@@ -26,21 +26,21 @@ After logging in, you should see the Okta dashboard. Click on the **Admin**
 button at the top right.
 
 <ImageFrame noborder center shadow>
-  ![Okta Application Dashboard](./img/okta-qs-step1-dashboard.png)
+  ![Okta Application Dashboard](./img/okta-qs-step2-dashboard.png)
 </ImageFrame>
 
 You should now see the admin panel. Click on the **Applications** option at the
 top.
 
 <ImageFrame noborder center shadow>
-  ![Okta Admin Dashboard](./img/okta-qs-step1-admin-dashboard.png)
+  ![Okta Admin Dashboard](./img/okta-qs-step2-admin-dashboard.png)
 </ImageFrame>
 
 On the application page, click the **Add Application** button. Select **Web**
 as the application type and click the **Next** button.
 
 <ImageFrame noborder center shadow>
-  ![Okta App Types](./img/okta-qs-step1-app-type.png)
+  ![Okta App Types](./img/okta-qs-step2-app-type.png)
 </ImageFrame>
 
 Okta employs both [OAuth 2][oauth2] and [OpenID Connect][openid-connect] (OIDC)
@@ -65,6 +65,10 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://localhost:3000/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+<ImageFrame noborder center shadow>
+  ![Okta App Configuration](./img/okta-qs-step2-appconfig-node.png)
+</ImageFrame>
+
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
@@ -74,6 +78,10 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://localhost:8080/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+<ImageFrame noborder center shadow>
+  ![Okta App Configuration](./img/okta-qs-step2-appconfig-java.png)
+</ImageFrame>
+
 </Choice>
 <Choice option='programming.platform' value='python' color='none'>
 
@@ -82,6 +90,10 @@ Fill out the application details with the following configuration settings:
 * Login redirect URIs: `http://127.0.0.1:5000/oidc/callback`
 * Logout redirect URIs: `http://127.0.0.1:5000/logout`
 * Grant type allowed: Only **Authorization Code** selected
+
+<ImageFrame noborder center shadow>
+  ![Okta App Configuration](./img/okta-qs-step2-appconfig-python.png)
+</ImageFrame>
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -109,7 +121,7 @@ Depending on the language and framework previously chosen, we'll set up the
 appropriate configuration files.
 
 <ImageFrame noborder center shadow>
-  ![Okta Org URL](./img/okta-qs-step1-org-url.png)
+  ![Okta Org URL](./img/okta-qs-step2-org-url.png)
 </ImageFrame>
 
 <Choice option='programming.platform' value='node' color='none'>
