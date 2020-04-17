@@ -5,14 +5,14 @@ category_id: metadata
 subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/next-steps
-rank: 6
-total_steps: 6
+rank: 7
+total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
 next_page_id: ''
-previous_page_id: metadata/quick-start/update-template
+previous_page_id: metadata/quick-start/create-query
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/6-next-steps.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/7-next-steps.md
 ---
 
 # Next steps
@@ -32,6 +32,8 @@ to assign custom data to a file.
 on a file, allowing you to change the data assigned to a file.
 5. [Updated a metadata template](g://metadata/quick-start/update-template/)
 and changed the data applied to all instances of this template.
+6. [Queried for files and folders](g://metadata/quick-start/create-query/)
+by matching the values in the metadata instances attached to them.
 
 ## Next things to do
 
