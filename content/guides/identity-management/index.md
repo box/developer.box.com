@@ -20,6 +20,7 @@ once, with only one set of credentials (username and password).
 graph LR
    a[SSO user] --> b[Your app]
    b[Your app] --> c[Box user]
+   b --> c[Box user]
 ```
 
 Box is one of the applications that can be connected to the SSO service of a
