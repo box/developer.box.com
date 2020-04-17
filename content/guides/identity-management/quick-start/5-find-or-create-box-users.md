@@ -29,7 +29,6 @@ Add the following `box` object into the file and save.
 
 ```js
   const box = (() => {
-    // Instantiate new Box client
     const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../config.json')));
     const sdk = boxSDK.getPreconfiguredInstance(configJSON);
     const client = sdk.getAppAuthClient('enterprise');
@@ -38,12 +37,10 @@ Add the following `box` object into the file and save.
     let userId = '';
     let userClient;
 
-    // Validate whether an app user already exists for the Okta ID
     function validateUser(userInfo) {
       // TODO: VALIDATE USER
     }
 
-    // Create a new app user if an Okta record doesn't already exist
     function createUser() {
       // TODO: CREATE USER
     }
@@ -55,7 +52,7 @@ Add the following `box` object into the file and save.
   })();
 ```
 
-This object defines a number of definitions:
+This object adds defines a number of items:
 
 * Configuration: A new instance of the Box Node SDK is instantiated and made
  available to the object functions, along with a number of variables.
@@ -70,7 +67,6 @@ the following code.
 ```js
   const spaceAmount = 1073741824;   // ~ 1gb
 
-  // Create app user
   client.enterprise.addAppUser(
     this.oktaRecord.name, 
     {
@@ -101,7 +97,7 @@ Within the `public class Application` definition, add the following methods:
   }
 
   static String createUser(OidcUser user) {
-    # TODO: CREATE USER
+    // TODO: CREATE USER
   }
 ```
 
@@ -117,7 +113,6 @@ With those methods defined, replace `# TODO: CREATE USER` with the following
 code:
 
 ```java
-  // No user found, create new app user from Okta record
   String oktaName = (String) user.getAttributes().get("name");
   Object oktaSub = user.getAttributes().get("sub");
 
@@ -175,7 +170,6 @@ the following code.
   uid = ouser.id
   space = 1073741824
 
-  # Create app user
   user = self.box_client.create_user(user_name, None, space_amount=space, external_app_user_id=uid)
   print(f'user {user_name} created')
 ```
@@ -330,7 +324,6 @@ Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
 
 ```js
-  // User found, get user ID and fetch user token
   this.userId = result.entries[0].id;
   this.userClient = sdk.getAppAuthClient('user', this.userId);
 
