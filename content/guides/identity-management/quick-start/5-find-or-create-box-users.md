@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Connect Okta to Box Users
+# Find or create Box app users
 
 At this point we have application code that will handle traffic from users
 visiting, forward them to Okta to login, provide Okta user information, before

@@ -1,12 +1,11 @@
 ---
-rank: 2
 related_endpoints:
   - post_users
 related_guides:
-  - sso/connecting-users/search-associations
+  - identity-management/associating-users/find-associations
 ---
 
-# Create Associated User
+# Create associated user
 
 When a user signs in to a custom Box application for the first time using their
 SSO provider credentials a new Box user will need to be created and associated
@@ -21,13 +20,13 @@ To make that association, a Box account may be created in a few ways:
 * Using the `login` field of a Box user to store the unique email from the SSO
  provider (managed users only).
 
-## Create Association with `external_app_user_id`
+## Create association with `external_app_user_id`
 
 Using the `external_app_user_id` field of a Box user record is a viable option
 for both app users and managed users, and is the recommended method when
 associating a user record from an SSO provider with a Box user account.
 
-### App User
+### App user
 
 To create a new Box app user with an `external_app_user_id` association to a
 SSO user record you will need two pieces of information from the SSO provider:
@@ -84,7 +83,7 @@ Once available, make a request to create a new app user, supplying the optional
   </Tab>
 </Tabs>
 
-### Managed User
+### Managed user
 
 To create a new Box managed user with an `external_app_user_id` association to
 a SSO user record you will need two pieces of information from the SSO
@@ -141,7 +140,7 @@ SSO user record email address for the login.
   </Tab>
 </Tabs>
 
-## Create Association with `login`
+## Create association by email
 
 Creating a new [managed user](guide://authentication/user-types/managed-users/)
 that is associated by the SSO user email address is the same process as

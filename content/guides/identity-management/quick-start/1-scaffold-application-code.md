@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Create Local Application
+# Scaffold application code
 
 Our first step in this guide is to create a local application to house our code
 and configuration data as we start to create the Okta and Box applications that

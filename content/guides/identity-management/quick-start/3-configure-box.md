@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Setup Box Application
+# Configure Box
 
 Once we have created a login experience with Okta we need to have a Box
 application available that will permit us to use the Box APIs to search for and

@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Create Okta Login Flow
+# Logging into the app with Okta
 
 With the Okta, Box, and basic application set up, we can turn our attention to
 the first step in the application code flow, the Okta login.

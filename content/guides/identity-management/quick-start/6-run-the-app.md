@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Run Sample
+# Run the application
 
 With all the components of the sample in place, it's time to run our program to
 see if everything is working correctly. 
@@ -36,7 +36,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso/quick-start/setup-okta/).
+of [step 2](g://identity-management/quick-start/configure-okta/).
 
 Once signed in, you will see a message stating
 `New app user {{USERNAME}} created` output to the console / terminal. 
@@ -60,7 +60,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso/quick-start/setup-okta/).
+of [step 2](g://identity-management/quick-start/configure-okta/).
 
 Once signed in, you will see a message stating `New User Created: {{USERNAME}}`
 output to the browser. 
@@ -83,7 +83,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso/quick-start/setup-okta/).
+of [step 2](g://identity-management/quick-start/configure-okta/).
 
 Once signed in, you will see a message stating
 `user {{USER NAME}} created` output to the console / terminal. 
@@ -99,12 +99,17 @@ to the console / terminal.
 You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
-1. [Created your local application.](g://sso/quick-start/create-local-app/)
-1. [Setup and configured your Okta application and users.](g://sso/quick-start/setup-okta/)
-1. [Setup and configured your Box application.](g://sso/quick-start/setup-box/)
-1. [Created a login for your Okta application to get user credentials.](g://sso/quick-start/okta-login/)
-1. [Created user management in Box that is unified to the Okta user accounts.](g://sso/quick-start/box-users/)
-1. [Run the sample](g://sso/quick-start/run-sample/)
+1. [Created a web application scaffold][step1].
+1. [Setup and configured an Okta application][step2] and created
+   a first user that could be used to log into the web app.
+1. [Setup and configured a Box application][step3] so that the
+   web app can connect to Box.
+1. [Created a log in flow for the web application][step4],
+   allowing the Okta user to log in.
+1. [Added a check to find an existing Box user][step5], and optionally create a
+   Box user the first time that Okta user logs into the web application.
+1. [And finally, ran the application][step6] and saw
+   the complete flow in action.
 
 ## Next Steps
 
@@ -128,3 +133,10 @@ access process.
      </Message>
    </LoggedIn>
  </Choice>
+
+[step1]: g://identity-management/quick-start/scaffold-application-code/
+[step2]: g://identity-management/quick-start/configure-okta/
+[step3]: g://identity-management/quick-start/configure-box/
+[step4]: g://identity-management/quick-start/logging-into-app/
+[step5]: g://identity-management/quick-start/find-or-create-box-users/
+[step6]: g://identity-management/quick-start/run-the-app/

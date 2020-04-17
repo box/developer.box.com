@@ -3,15 +3,15 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Setup Okta Application
-
-<ImageFrame noborder center shadow>
-  ![Okta Application Dashboard](./img/okta-applications.png)
-</ImageFrame>
+# Configure Okta
 
 Our next step in the Okta / Box integration is to create and configure the Okta
 application and users, then extract a few pieces of information that we will
 need to connect to Okta in our application.
+
+<ImageFrame noborder center shadow>
+  ![Okta Application Dashboard](./img/okta-applications.png)
+</ImageFrame>
 
 For this tutorial we will be starting with a blank Okta application and user
 dashboard to avoid any negative effects on existing installations that may be

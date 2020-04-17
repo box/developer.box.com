@@ -1,12 +1,11 @@
 ---
-rank: 1
 related_endpoints:
   - get-users
 related_guides:
-  - sso/connecting-users/create-association
+  - identity-management/associating-users/create-association
 ---
 
-# Search for Existing SSO Users
+# Find associated user
 
 When a user logs into a Box custom application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a
@@ -25,7 +24,7 @@ endpoint may be used. Depending on whether you're using the
 `external_app_user_id` or `login` method your query will look slightly
 different.
 
-## Search for User by `external_app_user_id`
+## Find user by `external_app_user_id`
 
 To search for enterprise users by the stored `external_app_user_id` value you
 will need one piece of information from the SSO provider:
@@ -94,7 +93,7 @@ the `external_app_user_id` definition in the parameters.
   </Tab>
 </Tabs>
 
-## Search for User by Email
+## Find user by email address
 
 To search for enterprise users by their `login` email you
 will need one piece of information from the SSO provider:

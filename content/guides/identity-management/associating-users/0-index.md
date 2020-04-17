@@ -1,13 +1,9 @@
 ---
-rank: 0
 related_endpoints:
   - post_users
-related_guides:
-  - sso/connecting-users/create-association
-  - sso/connecting-users/search-associations
 ---
 
-# Connecting Users
+# Associate SSO users to Box users
 
 Your SSO service will have a unique user record for each person using it within
 your company. When accessing a Box application through this SSO service, if
@@ -62,7 +58,7 @@ within the SSO service and a Box user, placing the unique SSO user ID within
 the Box user `external_app_user_id` field, or using the unique SSO email address
 as the login email for the new user.
 
-## Using `external_app_user_id` (Recommended Method)
+## Using `external_app_user_id` (recommended method)
 
 The `external_app_user_id` field was designed to hold a string identifier to
 associate a Box user record with some external service, such as an SSO provider
@@ -83,7 +79,7 @@ accounts over email, for a number of reasons:
  won't be able to connect to that existing user.
 * The `external_app_user_id` field was designed for this purpose.
 
-## Using `login`
+## Using `login` (alternative method)
 
 Using the `login` field of a user object to create an account association is
 viable under a few conditions:
