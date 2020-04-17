@@ -2,7 +2,7 @@
 related_endpoints:
   - get-users
 related_guides:
-  - identity-management/associating-users/create-association
+  - identity-management/create-association
 ---
 
 # Find associated users
