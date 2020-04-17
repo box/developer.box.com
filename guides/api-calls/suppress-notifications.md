@@ -9,10 +9,10 @@ subcategory_id: null
 is_index: false
 id: api-calls/suppress-notifications
 type: guide
-total_steps: 7
+total_steps: 8
 sibling_id: api-calls
 parent_id: api-calls
-next_page_id: api-calls
+next_page_id: api-calls/language-codes
 previous_page_id: api-calls/domain-whitelisting
 source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/suppress-notifications.md
@@ -21,7 +21,7 @@ source_url: >-
 # Suppress Notifications
 
 For some API calls, email and webhook notifications can be prevented by
-including a `Box-Notifications: off` header with the API call.
+including a `box-notifications: off` header with the API call.
 
 <Tabs>
 
@@ -29,8 +29,8 @@ including a `Box-Notifications: off` header with the API call.
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
-  -H "Box-Notifications: off" \
-  -H "Authorization: Bearer ACCESS_TOKEN" \
+  -H "box-notifications: off" \
+  -H "authorization: Bearer ACCESS_TOKEN" \
   -d '{
       "name": "New Folder",
       "parent": {

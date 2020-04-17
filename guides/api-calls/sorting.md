@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/sorting
 type: guide
-total_steps: 7
+total_steps: 8
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/ensure-consistency
@@ -29,7 +29,7 @@ ascending or descending order.
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
-    -H "Authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='warning'>

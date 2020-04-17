@@ -13,7 +13,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/request-extra-fields
 type: guide
-total_steps: 7
+total_steps: 8
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/ensure-consistency
@@ -49,7 +49,7 @@ value of this parameter is a comma separated list of field names.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-          -H "Authorization: Bearer ACCESS_TOKEN"
+          -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -84,7 +84,7 @@ the standard variation of a file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -125,7 +125,7 @@ will return a mini variation of files and folders nested within the `item_collec
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -179,7 +179,7 @@ specified plus the basic fields for the file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

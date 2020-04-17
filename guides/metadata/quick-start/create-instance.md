@@ -36,8 +36,8 @@ template to.
 
 ```sh
 curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -H "Content-Type: application/json" \
+     -H "authorization: Bearer <ACCESS_TOKEN>" \
+     -H "content-type: application/json" \
      -d '{
        "name": "Box, Inc",
        "industry": "Technology"

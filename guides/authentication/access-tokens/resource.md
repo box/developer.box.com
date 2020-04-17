@@ -29,7 +29,7 @@ Access Token resource is returned via the API.
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
-  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "content-type: application/x-www-form-urlencoded" \
   -d '...'
 ```
 

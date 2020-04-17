@@ -337,11 +337,11 @@ function uploadAFile(client, folderId, fileName, toUploadFile) {
           .createHash("sha1")
           .update(toUploadFile)
           .digest("hex");
-        client.setCustomHeader("Content-MD5", fileSha);
+        client.setCustomHeader("content-md5", fileSha);
         return client.files.uploadFile(folderId, fileName, toUploadFile);
       } else {
         console.log("Using chunked upload...");
-        client.setCustomHeader("Content-MD5", null);
+        client.setCustomHeader("content-md5", null);
         return client.files
           .getChunkedUploader(
             folderId,
@@ -387,7 +387,7 @@ function uploadANewFileVersion(client, conflictId, toUploadFile) {
       .createHash("sha1")
       .update(toUploadFile)
       .digest("hex");
-    client.setCustomHeader("Content-MD5", fileSha);
+    client.setCustomHeader("content-md5", fileSha);
     // You can optionally rename a folder while uploading a new version.
     // let newFileName = "ubuntu-no-gui.iso";
     // let options = {
@@ -403,7 +403,7 @@ function uploadANewFileVersion(client, conflictId, toUploadFile) {
     //     name: newFileName
     // }
     // return client.files.getNewVersionChunkedUploader(conflictId, toUploadFile.length, toUploadFile, options)
-    client.setCustomHeader("Content-MD5", null);
+    client.setCustomHeader("content-md5", null);
     return client.files
       .getNewVersionChunkedUploader(
         conflictId,
@@ -495,7 +495,7 @@ Using the [Preflight][preflight] API the files are checked for conflicts and
 size restrictions before they are uploaded. If a naming conflict is found, the
 script instead uploads a new version of that file.
 
-Using the the `SHA` hash of the file the scripts add a `Content-MD5` header on
+Using the the `SHA` hash of the file the scripts add a `content-md5` header on
 upload to make sure the file is successfully uploaded to Box without any bytes
 lost or tampered with.
 
