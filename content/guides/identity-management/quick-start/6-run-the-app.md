@@ -8,20 +8,6 @@ hide_in_page_nav: true
 With all the components of the sample in place, it's time to run our program to
 see if everything is working correctly. 
 
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node + Express
-  </Choose>
-
-  <Choose option='programming.platform' value='java' color='blue'>
-    # Java + Spring Boot
-  </Choose>
-  
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python + Flask
-  </Choose>
-</Grid>
-
 <Choice option='programming.platform' value='node' color='none'>
 
 From the terminal / command prompt in the local application directory, type
