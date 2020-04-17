@@ -3,7 +3,7 @@ related_endpoints:
   - post_users
 ---
 
-# Associate SSO users to Box users
+# Associate SSO users to Box
 
 Your SSO service will have a unique user record for each person using it within
 your company. When accessing a Box application through this SSO service, if

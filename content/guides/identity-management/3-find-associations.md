@@ -5,7 +5,7 @@ related_guides:
   - identity-management/associating-users/create-association
 ---
 
-# Find associated user
+# Find associated users
 
 When a user logs into a Box custom application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a
