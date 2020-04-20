@@ -41,7 +41,7 @@ button at the top right.
 
 <ImageFrame noborder center shadow>
 
-![Okta Application Dashboard](./img/okta-qs-step1-dashboard.png)
+![Okta Application Dashboard](./img/okta-qs-step2-dashboard.png)
 
 </ImageFrame>
 
@@ -50,7 +50,7 @@ top.
 
 <ImageFrame noborder center shadow>
 
-![Okta Admin Dashboard](./img/okta-qs-step1-admin-dashboard.png)
+![Okta Admin Dashboard](./img/okta-qs-step2-admin-dashboard.png)
 
 </ImageFrame>
 
@@ -59,7 +59,7 @@ as the application type and click the **Next** button.
 
 <ImageFrame noborder center shadow>
 
-![Okta App Types](./img/okta-qs-step1-app-type.png)
+![Okta App Types](./img/okta-qs-step2-app-type.png)
 
 </ImageFrame>
 
@@ -77,7 +77,7 @@ change.
 
 Fill out the application details with the following configuration settings:
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 * Name: Any
 * Base URIs: `http://localhost:3000/`
@@ -85,8 +85,14 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://localhost:3000/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+<ImageFrame noborder center shadow>
+
+![Okta App Configuration](./img/okta-qs-step2-appconfig-node.png)
+
+</ImageFrame>
+
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 
 * Name: Any
 * Base URIs: `http://localhost:8080/`
@@ -94,8 +100,14 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://localhost:8080/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+<ImageFrame noborder center shadow>
+
+![Okta App Configuration](./img/okta-qs-step2-appconfig-java.png)
+
+</ImageFrame>
+
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 
 * Name: Any
 * Base URIs: `http://127.0.0.1:5000/`
@@ -103,12 +115,28 @@ Fill out the application details with the following configuration settings:
 * Logout redirect URIs: `http://127.0.0.1:5000/logout`
 * Grant type allowed: Only **Authorization Code** selected
 
+<ImageFrame noborder center shadow>
+
+![Okta App Configuration](./img/okta-qs-step2-appconfig-python.png)
+
+</ImageFrame>
+
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+
+<Message danger>
+
+# Incomplete previous step
+Please select a preferred language / framework in step 1 to get started.
+
+</Message>
+
 </Choice>
 
 Click the **Done** button to create the application and be dropped on to the
 general settings of the application.
 
-## Copy Application Credentials 
+## Copy Application Credentials
 
 Using the configuration files set up in the last step, we next have to add in
 the Okta application org and app details within the files.
@@ -124,11 +152,11 @@ appropriate configuration files.
 
 <ImageFrame noborder center shadow>
 
-![Okta Org URL](./img/okta-qs-step1-org-url.png)
+![Okta Org URL](./img/okta-qs-step2-org-url.png)
 
 </ImageFrame>
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 * Open `config.json` within the local application directory in your preferred
  editor.
@@ -141,7 +169,7 @@ appropriate configuration files.
 * Save the file.
 
 </Choice>
-<Choice option='programming.platform' value='java' color='white'>
+<Choice option='programming.platform' value='java' color='none'>
 
 * Open the `/src/main/resources/application.properties` file and update the
  following lines:
@@ -156,7 +184,7 @@ appropriate configuration files.
 * Save the file
 
 </Choice>
-<Choice option='programming.platform' value='python' color='blue'>
+<Choice option='programming.platform' value='python' color='none'>
 
 In addition to the standard configuration information for the org and app, the
 Python / Flask integration requires an additional auth token.
@@ -209,11 +237,11 @@ Lastly, update the Flask configuration file
 
 </Choice>
 
-<Choice option='programming.platform' value='node,java,python' color='none'>
+<Choice option='programming.platform' unset color='none'>
+
 <Message danger>
 
 # Incomplete previous step
-
 Please select a preferred language / framework in step 1 to get started.
 
 </Message>

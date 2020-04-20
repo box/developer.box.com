@@ -12,7 +12,7 @@ subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/update-instance
 rank: 4
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/update-template
@@ -148,7 +148,6 @@ The API will return the updated metadata instance.
 {
   "name": "Box",
   "industry": "Technology",
-  "tav": 1000000,
   "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
   "$parent": "folder_12345,",
   "$scope": "enterprise_34567",

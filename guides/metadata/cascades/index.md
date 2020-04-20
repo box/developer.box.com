@@ -1,17 +1,17 @@
 ---
 category_id: metadata
-subcategory_id: metadata/6-cascades
+subcategory_id: metadata/5-cascades
 is_index: true
 id: metadata/cascades
-rank: 6
+rank: 5
 type: guide
 total_steps: 5
 sibling_id: metadata
 parent_id: metadata
 next_page_id: ''
-previous_page_id: metadata/cascades/delete
+previous_page_id: metadata/cascades/force-apply
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/0-index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-cascades/0-index.md
 ---
 
 # Metadata cascade policies (Beta)

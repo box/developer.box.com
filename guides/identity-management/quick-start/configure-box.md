@@ -33,7 +33,7 @@ Create and configure a new Box JWT application to start with a clean user list.
 
 </Choose>
 
-<Choose option='box.app_type' value='use_own' color='white'>
+<Choose option='box.app_type' value='use_own' color='blue'>
 
 # Use an existing approved app
 
@@ -44,7 +44,7 @@ console.
 
 </Grid>
 
-<Choice option='box.app_type' value='create_new' color='blue'>
+<Choice option='box.app_type' value='create_new' color='none'>
 
 # Create a new Box app
 
@@ -73,7 +73,7 @@ application approved in your enterprise.
 
 </Choice>
 
-<Choice option='box.app_type' value='use_own' color='white'>
+<Choice option='box.app_type' value='use_own' color='none'>
 
 # Use an Existing JWT Box application
 

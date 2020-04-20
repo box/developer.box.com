@@ -7,7 +7,7 @@ subcategory_id: metadata/1-quick-start
 is_index: true
 id: metadata/quick-start
 rank: 1
-total_steps: 7
+total_steps: 6
 sibling_id: metadata
 parent_id: metadata
 next_page_id: metadata/quick-start/create-template
@@ -41,8 +41,6 @@ to a file, allowing you to assign custom data to a file.
 4. [Update metadata instance](g://metadata/quick-start/update-instance/)
 on a file, allowing you to change the data assigned to a file.
 5. [Update a metadata template](g://metadata/quick-start/update-template/)
-and change the data applied to all instances of this template.
-6. [Create a query to find files by metadata](g://metadata/quick-start/create-query/)
 and change the data applied to all instances of this template.
 
 <Next>
