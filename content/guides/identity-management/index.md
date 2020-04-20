@@ -16,11 +16,10 @@ and Access Management (IAM)** solution. When deployed, these services grant
 users the ability to securely authenticate multiple applications by logging in
 once, with only one set of credentials (username and password).
 
-```mermaid;height=100px,width=500px
+```mermaid;width=600px
 graph LR
-   a[SSO user] --> b[Your app]
-   b[Your app] --> c[Box user]
-   b --> c[Box user]
+   a[SSO User] --- b[Custom Box App]
+   b --- c[Box App User]
 ```
 
 Box is one of the applications that can be connected to the SSO service of a
@@ -38,6 +37,21 @@ knowing they have a Box account.
 
 When integrating SSO services into a Box application programmatically, we are
 referring to the following flow.
+
+```mermaid
+sequenceDiagram
+   participant Browser
+   participant Web Server
+   participant SSO Provider
+   Browser->>+Web Server: User visits web app
+   Web Server->>-Browser: Redirected to SSO
+   Browser->>+SSO Provider: User logs in
+   SSO Provider->>-Browser: Redirected back to web app
+   Browser->>+Web Server: Pass SSO user details
+   Web Server-->>+Box API: Find or create a new app user
+   Box API-->>-Web Server: Return app user details
+   Web Server->>-Browser: Display files to user
+```
 
 1. A user accesses your web or mobile application in a logged out state.
 2. The user is redirected to your SSO provider to log in, typically via
