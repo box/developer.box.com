@@ -13,7 +13,7 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-05-01 / New Metadata Query APIs available
+## 2020-04-21 / New Metadata Query APIs available
 
 A new API is now available that allows developers to query files and folders
 by the metadata attached to them. We've updated the reference documentation for
