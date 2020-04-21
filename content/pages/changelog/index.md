@@ -13,6 +13,22 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-04-28 / New shield alert events
+
+As of today, [Box Shield][box-shield] will begin producing new security events
+within the [enterprise event stream](g://events/for-enterprise/) for Shield
+customers who are configured to listen for the new events. 
+
+The possible incident events produced by Shield are:
+
+* Suspicious locations
+* Suspicious sessions
+* Anomalous download
+* Malicious content
+
+See the [shield alert events](g://events/shield-alert-events/) documentation
+for more information on the payloads produced within these events.
+
 ## 2020-03-30 / Potential impactful changes to format of Metadata `date` fields
 
 As part of ongoing improvements to our Metadata infrastructure we will be
@@ -130,6 +146,7 @@ quick-start guide. Key features include:
 The [legacy Postman collection][legacy-postman-collection] will remain available
 for the foreseeable future.
 
+[box-shield]: https://www.box.com/shield
 [postman-quick-start-guide]: g://tooling/postman/quick-start
 [postman-collection]: g://tooling/postman/install
 [legacy-postman-collection]: g://tooling/postman/legacy
