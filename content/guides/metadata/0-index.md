@@ -24,6 +24,16 @@ For example, an important contract may have the key/value pairs of
 Working with metadata requires a developer to work with a few
 distinct types of resources.
 
+```mermaid;width=80%
+graph LR
+  t[Metadata Template] -->|has many| i[Metadata Instance]
+  i --> |applied to| fs[Files/Folders]
+    c[Metadata Cascade Policy] --> |takes| i
+    c -.- |takes| fo[Folder]
+    fo -.- |nested| fi
+    c --> |applies metadata to| fi[Files and folders]
+```
+
 * **Templates:**  A [metadata template][template] describes a re-usable set of
   key/value pairs that can be assigned to a file. For example, an `invoiceData`
   template might hold data about an invoice, having a field for the invoice ID
