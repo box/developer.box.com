@@ -9,20 +9,20 @@ required_guides: []
 alias_paths: []
 ---
 
-# `SHIELD_ALERT` events
+# Shield alert events
 
-`SHIELD_ALERT` events provide information on security incidents in an
-enterprise with [Box Shield][box-shield] enabled and configured to listen for
-those events.
+Shield alert events provide details about security incidents in an
+enterprise with [Box Shield][box-shield] enabled, which are configured to
+listen for those incidents.
 
-The possible `SHIELD_ALERT` produced by Shield are:
+The possible incident alerts produced by Shield are:
 
 1. Suspicious locations
 1. Suspicious sessions
 1. Anomalous download
 1. Malicious content
 
-All `SHIELD_ALERT` events will be produced within the
+All shield alert events will be produced within the
 [enterprise event][g://events/for-enterprise/] stream (not the user stream) and
 will follow the standard event object schema, with the `event_type` value set
 to `SHIELD_ALERT`.
@@ -49,10 +49,10 @@ to `SHIELD_ALERT`.
 }
 ```
 
-Information about the specific type of `SHIELD_ALERT` that triggered the event
+Information about the specific type of shield alert that triggered the event
 will be supplied within the `additional_details` object.
 
-## Suspicious Locations Alert
+## Suspicious locations alert
 
 A suspicious locations alert will be produced when an account within the
 enterprise has been accessed from a suspicious location. It can be identified
@@ -103,7 +103,7 @@ The `additional_details` payload will provide the following details.
   }
 ```
 
-## Suspicious Sessions Alert
+## Suspicious sessions alert
 
 A suspicious locations alert will be produced when abnormal behavior has been
 detected in the account session. It can be identified by the `Suspicious
@@ -183,7 +183,7 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Anomalous Download Alert
+## Anomalous download alert
 
 A suspicious locations alert will be produced when anomalous content download
 behavior has been detected. It can be identified by the `Anomalous Download`
@@ -239,7 +239,7 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Malicious Content Alert
+## Malicious content alert
 
 A suspicious locations alert will be produced when malicious content has been
 identified, such as a virus being detected. It can be identified by the
