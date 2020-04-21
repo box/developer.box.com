@@ -26,8 +26,8 @@ distinct types of resources.
 
 ```mermaid;width=80%
 graph LR
-	t[Metadata Template] -->|has many| i[Metadata Instance]
-	i --> |applied to| fs[Files/Folders]
+  t[Metadata Template] -->|has many| i[Metadata Instance]
+  i --> |applied to| fs[Files/Folders]
     c[Metadata Cascade Policy] --> |takes| i
     c -.- |takes| fo[Folder]
     fo -.- |nested| fi
