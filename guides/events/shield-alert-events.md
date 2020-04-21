@@ -21,20 +21,20 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/events/shield-alert-events.md
 ---
 
-# `SHIELD_ALERT` events
+# Shield alert events
 
-`SHIELD_ALERT` events provide information on security incidents in an
-enterprise with [Box Shield][box-shield] enabled and configured to listen for
-those events.
+Shield alert events provide details about security incidents in an
+enterprise with [Box Shield][box-shield] enabled, which are configured to
+listen for those incidents.
 
-The possible `SHIELD_ALERT` produced by Shield are:
+The possible incident alerts produced by Shield are:
 
 1. Suspicious locations
 1. Suspicious sessions
 1. Anomalous download
 1. Malicious content
 
-All `SHIELD_ALERT` events will be produced within the
+All shield alert events will be produced within the
 [enterprise event][g://events/for-enterprise/] stream (not the user stream) and
 will follow the standard event object schema, with the `event_type` value set
 to `SHIELD_ALERT`.
@@ -61,7 +61,7 @@ to `SHIELD_ALERT`.
 }
 ```
 
-Information about the specific type of `SHIELD_ALERT` that triggered the event
+Information about the specific type of shield alert that triggered the event
 will be supplied within the `additional_details` object.
 
 ## Suspicious locations alert
