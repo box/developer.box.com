@@ -8,7 +8,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/5-cascades
+subcategory_id: metadata/6-cascades
 is_index: false
 id: metadata/cascades/force-apply
 rank: 4
@@ -16,10 +16,10 @@ type: guide
 total_steps: 5
 sibling_id: metadata/cascades
 parent_id: metadata/cascades
-next_page_id: metadata/cascades
+next_page_id: metadata/cascades/delete
 previous_page_id: metadata/cascades/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-cascades/4-force-apply.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/4-force-apply.md
 ---
 
 # Force-apply metadata to all items in a folder
