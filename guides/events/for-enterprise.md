@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: events/for-enterprise
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: events
 parent_id: events
 next_page_id: events/polling
@@ -128,7 +128,7 @@ The following events can be triggered for an enterprise.
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
 | `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance.                                                                    |
 | `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance.                                                                  |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, or location based on enterprise Shield Rules.  |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [`SHIELD_ALERT` events](g://events/shield-alert-events) for more information. |
 | `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment.                                                                    |
 | `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created.                                                                   |
 | `TASK_ASSIGNMENT_DELETE`                       | A task assignment is deleted.                                                                   |
