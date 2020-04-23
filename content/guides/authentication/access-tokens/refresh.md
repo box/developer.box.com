@@ -21,7 +21,7 @@ To do this, the application passes the `refresh_token` to the [`POST
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
-  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "content-type: application/x-www-form-urlencoded" \
   -d '{
     "client_id": "[CLIENT_ID]",
     "client_secret": "[CLIENT_SECRET]",

@@ -219,3 +219,9 @@ resource_variants:
     Describes the full set of fields that can be returned
     for a resource in an API response
   full: Full
+
+tooltips:
+  // header: |-
+    Describes how a request header name is not case sensitive
+  header: |-
+    Header names are never case sensitive

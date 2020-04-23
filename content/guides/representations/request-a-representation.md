@@ -13,13 +13,13 @@ alias_paths: []
 # Request Desired Representation
 
 To select a specific representation call the [`GET /files/:id`][get_files_id]
-endpoint with a [`X-Rep-Hints`][x-rep-hints]-header defining the
+endpoint with a [`x-rep-hints`][x-rep-hints]-header defining the
 required representation format.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "X-Rep-Hints: [pdf]" \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "x-rep-hints: [pdf]" \
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Multiple dimensions
@@ -30,19 +30,19 @@ header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "X-Rep-Hints: [jpg?dimensions=94x94]" \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "x-rep-hints: [jpg?dimensions=94x94]" \
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Multiple representations
 
 Multiple representations can be fetched by chaining the different
-types in the `X-Rep-Hints`-header.
+types in the `x-rep-hints`-header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "X-Rep-Hints: [pdf][jpg?dimensions=94x94]" \
-  -H "Authorization: Bearer ACCESS_TOKEN"
+  -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
+  -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## API Response
@@ -82,4 +82,4 @@ value that includes a `{+asset_path}` value.
 </Message>
 
 [get_files_id]: endpoint://get-files-id
-[x-rep-hints]: endpoint://get-files-id#param-X-Rep-Hints
+[x-rep-hints]: endpoint://get-files-id#param-x-rep-hints

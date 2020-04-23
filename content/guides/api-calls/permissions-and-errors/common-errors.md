@@ -31,7 +31,7 @@ returns a standard client error JSON object.
   "status": 400,
   "code": "bad_digest",
   "help_url": "http://developers.box.com/docs/#errors",
-  "message": "The specified Content-MD5 did not match what we received",
+  "message": "The specified content-md5 did not match what we received",
   "request_id": "abcdef123456"
 }
 ```
@@ -50,8 +50,8 @@ for solution to common errors encountered when working with the Box APIs.
 |              |                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Error**    | `bad_digest`                                                                                                                                                                                                                                                                                                                                                              |
-| **Message**  | The specified `Content-MD5` did not match what we received                                                                                                                                                                                                                                                                                                                |
-| **Solution** | While uploading a file, a `Content-MD5` header with the SHA-1 hash of the file can be supplied to ensure that the file is not corrupted in transit. The SHA-1 hash that was supplied in the request did not match what was received in the upload. Supply a valid SHA-1 hash of the uploaded file.                                                                        |
+| **Message**  | The specified `content-md5` did not match what we received                                                                                                                                                                                                                                                                                                                |
+| **Solution** | While uploading a file, a `content-md5` header with the SHA-1 hash of the file can be supplied to ensure that the file is not corrupted in transit. The SHA-1 hash that was supplied in the request did not match what was received in the upload. Supply a valid SHA-1 hash of the uploaded file.                                                                        |
 |              |                                                                                                                                                                                                                                                                                                                                                                           |
 | **Error**    | `bad_request`                                                                                                                                                                                                                                                                                                                                                             |
 | **Message**  |                                                                                                                                                                                                                                                                                                                                                                           |  |
@@ -294,7 +294,7 @@ for solution to common errors encountered when working with the Box APIs.
 |              |                                                         |
 | ------------ | ------------------------------------------------------- |
 | **Error**    | `length_required`                                       |
-| **Message**  | Content-Length header was required, but not provided.   |
+| **Message**  | content-length header was required, but not provided.   |
 | **Solution** | Supply a content-length header within your API request. |
 
 <!-- markdownlint-enable line-length -->
@@ -347,7 +347,7 @@ for solution to common errors encountered when working with the Box APIs.
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Error**    | `rate_limit_exceeded`                                                                                                                                                                                                                                                            |
 | **Message**  | Request rate limit exceeded, please try again later                                                                                                                                                                                                                              |
-| **Solution** | The client is performing operations too quickly and has been rate limited. Client is advised to retry their request after the amount of time specified by the Retry-After header. There are [four rate limits](g://api-calls/permissions-and-errors/rate-limits) to be aware of. |
+| **Solution** | The client is performing operations too quickly and has been rate limited. Client is advised to retry their request after the amount of time specified by the `retry-after` header. There are [four rate limits](g://api-calls/permissions-and-errors/rate-limits) to be aware of. |
 
 <!-- markdownlint-enable line-length -->
 

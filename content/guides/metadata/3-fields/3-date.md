@@ -40,7 +40,7 @@ The required attributes for a `date` field are a `type`, a `displayName` and a
   "displayName": "Contract",
   "fields": [
     {
-      "type": "float",
+      "type": "date",
       "key": "effective_date",
       "displayName": "Effective Date",
       "description": "The effective date when the contract goes in effect",
