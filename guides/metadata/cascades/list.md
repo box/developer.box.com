@@ -7,7 +7,7 @@ related_guides:
 related_resources:
   - metadata_cascade_policy
 category_id: metadata
-subcategory_id: metadata/5-cascades
+subcategory_id: metadata/6-cascades
 is_index: false
 id: metadata/cascades/list
 rank: 1
@@ -18,7 +18,7 @@ parent_id: metadata/cascades
 next_page_id: metadata/cascades/get
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-cascades/1-list.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/1-list.md
 ---
 
 # List metadata cascade policies

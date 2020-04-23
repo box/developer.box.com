@@ -144,6 +144,22 @@ Fill out the application details with the following configuration settings:
 </ImageFrame>
 
 </Choice>
+<Choice option='programming.platform' value='cs' color='none'>
+
+* Name: Any
+* Base URIs: `https://localhost:5001/`
+* Login redirect URIs: `https://localhost:5001/authorization-code/callback`
+* Logout redirect URIs: `https://localhost:5001/logout`
+* Grant type allowed: Only **Authorization Code** selected
+
+<ImageFrame noborder center shadow>
+
+![Okta App Configuration](./img/okta-qs-step2-appconfig-cs.png)
+
+</ImageFrame>
+
+</Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -277,6 +293,21 @@ Lastly, update the Flask configuration file
    admin dashboard page, followed by `/oauth2/default/userinfo`. For example,
    if your Org URL was `https://dev-123456.okta.com`, the issuer string should
    be `https://dev-123456.okta.com/oauth2/default/userinfo`.
+* Save the file.
+
+</Choice>
+
+<Choice option='programming.platform' value='cs' color='none'>
+
+* Open `Startup.cs` within the local application directory in your preferred
+ editor.
+* Update the following line items within the `ConfigureServices` method with
+ the appropriate Okta configuration info:
+  * `OktaDomain`: Obtained from the top right of the main admin dashboard page.
+  * `ClientId`: Obtained from the **Client Credentials** section of the
+   application general settings.
+  * `ClientSecret`: Obtained from the **Client Credentials** section of the
+   application general settings.
 * Save the file.
 
 </Choice>

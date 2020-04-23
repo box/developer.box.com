@@ -11,10 +11,10 @@ subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/update-template
 rank: 5
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
-next_page_id: metadata/quick-start/next-steps
+next_page_id: metadata/quick-start/create-query
 previous_page_id: metadata/quick-start/update-instance
 source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/5-update-template.md
@@ -22,7 +22,7 @@ source_url: >-
 
 # Update a metadata template
 
-As a final step, let's look at how we can update an existing metadata template.
+Let's look at how we can update an existing metadata template.
 
 Updates to metadata templates are performed through **operations** rather than
 directly changing the template itself. This method allows you to update any
@@ -161,6 +161,13 @@ The API will return the updated metadata template.
         {"key": "Legal"}
       ],
       "hidden": false
+    },
+    {
+      "id": "5c6a5906-4654-9deb-003b-472583fc2930",
+      "type": "float",
+      "key": "tav",
+      "displayName": "Total account value",
+      "hidden": false
     }
   ]
 }
@@ -174,6 +181,7 @@ created in previous steps would now look something like this.
 {
   "company_name": "Box",
   "industry": "Technology",
+  "tav": 1000000,
   "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
   "$parent": "folder_12345,",
   "$scope": "enterprise_34567",

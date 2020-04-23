@@ -266,6 +266,79 @@ within this route will be run. When we validate an Okta user, the code within
 the `box_auth` route will be run.
 
 </Choice>
+<Choice option='programming.platform' value='cs' color='none'>
+
+In your local application, load `Views` > `Shared` > `Layout.cshtml`. Once the
+ASP.NET application loads this will be the visual component that is rendered.
+At the top of the page, insert the following.
+
+```cs
+@using System.Security.Claims;
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p class="navbar-text">Hello, @User.Identity.Name</p>
+}
+else
+{
+    <a asp-controller="Account" asp-action="SignIn">Sign In</a>
+}
+```
+
+If a user who is logged in to Okta visits, they will see the hello message. If
+the user is not logged in a sign in link will be provided to them.
+
+Within the line `<a asp-controller="Account" asp-action="SignIn">Sign In</a>`,
+`asp-controller="Account"` means that the to be created Account controller will
+handle the request, and `asp-action="SignIn"` states that the `SignIn` method
+in that controller will be enacted. Save and close that file.
+
+Within the `Controllers` directory create a new file, `AccountController.cs`.
+This will be the controller that is enacted when that sign in link is clicked.
+
+Copy the following basic application structure into the file.
+
+```cs
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using Okta.AspNetCore;
+using Box.V2;
+using Box.V2.Config;
+using Box.V2.JWTAuth;
+using Box.V2.Models;
+
+public class AccountController : Controller
+{
+    public IActionResult SignIn()
+    {
+        if (!HttpContext.User.Identity.IsAuthenticated)
+        {
+            return Challenge(OktaDefaults.MvcAuthenticationScheme);
+        }
+
+        return RedirectToAction("Profile", "Account");
+    }
+
+    [Authorize]
+    [Route("~/profile")]
+    public IActionResult Profile()
+    {
+        // TODO: HANDLE ROUTE
+    }
+}
+```
+
+When the user clicks on the sign in link the `SignIn` method in this controller
+will be run. If the user is not already authenticated they will be sent to
+`Challenge`, which will redirect the user to Okta to log in. This functionality
+is handled by the routing framework and does not require any additional code to
+enact. If the user is authenticated, they will be redirected to the `Profile`
+routing method.
+
+</Choice>
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -392,7 +465,29 @@ method, passing in the Okta user object. We'll define this class and methods in
 the next step.
 
 </Choice>
+<Choice option='programming.platform' value='cs' color='none'>
 
+Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+
+```cs
+var subClaim = HttpContext.User.Claims.First(c => c.Type == "sub");
+var sub = subClaim.Value;
+
+var nameClaim = HttpContext.User.Claims.First(c => c.Type == "name");
+var name = nameClaim.Value;
+
+Task userSearch = validateUser(name, sub);
+
+Task.WaitAll(userSearch);
+
+return Content(name);
+```
+
+This block will capture the Okta user account sub (unique ID) and name, then
+sends that data to the to be created `validateUser` method to find a matching
+Box user, which will be created in the next step.
+
+</Choice>
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
