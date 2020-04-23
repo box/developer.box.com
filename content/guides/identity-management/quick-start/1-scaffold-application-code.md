@@ -15,7 +15,7 @@ files.
 
 Choose your preferred language / framework below to get started.
 
-<Grid columns='3'>
+<Grid columns='4'>
   <Choose option='programming.platform' value='node' color='blue'>
     # Node/Express
   </Choose>
@@ -26,6 +26,10 @@ Choose your preferred language / framework below to get started.
   
   <Choose option='programming.platform' value='python' color='blue'>
     # Python/Flask
+  </Choose>
+  
+  <Choose option='programming.platform' value='cs' color='blue'>
+    # C#/ASP.NET Core
   </Choose>
 </Grid>
 
@@ -139,6 +143,56 @@ okta_callback_route = '/oidc/callback'
 ```
 
 </Choice>
+<Choice option='programming.platform' value='cs' color='none'>
+* Create a local directory for your application.
+* Open a command prompt / terminal window and go to the local application
+directory. Using the [.NET Core CLI][dotnet-cli] type `dotnet new mvc` and hit
+enter. This will create the main scaffolding for a ASP.NET Core MVC
+(Model-View-Controller) web app. Alternately, create the application
+[directly from Visual Studio][vs-app-create].
+* From the command prompt / terminal window in the local application directory,
+add the Okta ASP.NET Core dependencies by typing
+`dotnet add package Okta.AspNetCore`and the Box dependencies by typing
+`dotnet add package Box.V2.Core`.
+* Load your new application into Visual Studio or your preferred editor.
+* Within the root of the project, open `Startup.cs`.
+* Add the following package declarations to the top of the file.
+
+```csharp
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Okta.AspNetCore;
+```
+
+* Replace the content of the `ConfigureServices` method with the following. We
+ will fill in the specific Okta application values in the next step.
+
+<!-- markdownlint-disable line-length -->
+```csharp
+  services.AddControllersWithViews();
+  services.AddAuthentication(options =>
+  {
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
+  })
+  .AddCookie()
+  .AddOktaMvc(new OktaMvcOptions
+  {
+    // Replace these values with your Okta configuration
+    OktaDomain = "",
+    ClientId = "",
+    ClientSecret = ""
+  });
+```
+<!-- markdownlint-enable line-length -->
+
+Add the following line to the **top** of the `Configure` method.
+
+```csharp
+  app.UseAuthentication();
+```
+
+</Choice>
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
@@ -154,3 +208,6 @@ okta_callback_route = '/oidc/callback'
 <Observe option='programming.platform' value='node,java,python'>
   <Next>I have my local application set up</Next>
 </Observe>
+
+[dotnet-cli]: https://docs.microsoft.com/en-us/dotnet/core/tools/
+[vs-app-create]: https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-aspnet-core

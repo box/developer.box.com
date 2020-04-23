@@ -79,6 +79,29 @@ will now see the user ID for that newly created Box app user being output
 to the console / terminal.
 
 </Choice>
+<Choice option='programming.platform' value='cs' color='none'>
+
+From Visual Studio Code (or your preferred editor) click `Run` ->
+`Start Debugging` from the menu. You will see debug console output as the
+application loads, then a browser window will be loaded with the application at
+`https://localhost:5001/`.
+
+Since this is the first time testing the application, the sign in link will be
+displayed. Once clicked, the Okta login will be automatically loaded.
+
+<ImageFrame noborder center shadow>
+  ![Okta Login](./img/okta-qs-step6-login.png)
+</ImageFrame>
+
+Sign in with the credentials for the Okta user you created in the last section
+of [step 2](g://identity-management/quick-start/configure-okta/).
+
+Once signed in, you will see a message in the debug console stating
+`New user created: {{USERNAME}}` output to the browser. 
+
+When attempting to log in with this user in subsequent attempts, you
+will now see `Current user name: {{USERNAME}}` output to the debug console.
+</Choice>
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step

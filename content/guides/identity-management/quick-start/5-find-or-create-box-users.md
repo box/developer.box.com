@@ -179,6 +179,67 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
+<Choice option='programming.platform' value='python' color='none'>
+Within the `Controllers` > `AccountController.cs` file, inside the associated
+`AccountController` class, add the following method.
+
+<!-- markdownlint-disable line-length -->
+```cs
+static async Task validateUser(string name, string sub)
+{
+  // Configure Box SDK instance
+  var reader = new StreamReader("config.json");
+  var json = reader.ReadToEnd();
+  var config = BoxConfig.CreateFromJsonString(json);
+  var sdk = new BoxJWTAuth(config);
+  var token = sdk.AdminToken();
+  BoxClient client = sdk.AdminClient(token);
+
+  // Search for matching Box app user for Okta ID
+  BoxCollection<BoxUser> users = await client.UsersManager.GetEnterpriseUsersAsync(externalAppUserId:sub);
+  System.Diagnostics.Debug.WriteLine(users.TotalCount);
+
+  if (users.TotalCount > 0)
+  {
+     // TODO: VALIDATE USER
+  }
+  else
+  {
+    // TODO: CREATE USER
+  }
+}
+```
+<!-- markdownlint-enable line-length -->
+
+Within the code block a new Box .NET SDK client is created using the
+`config.json` file downloaded in step 2. In the case of this code sample, that
+`config.json` file is stored at the root of the local application directory.
+
+That client is then used to search all users in the Box enterprise, passing in
+the Okta `sub` unique ID as the `externalAppUserId` search parameter. The
+number of users returned is then checked to see if a valid user was found.
+
+With that structure defined, replace the // TODO: CREATE USER section with the
+following code.
+
+```cs
+var userRequest = new BoxUserRequest()
+{
+  Name = name,
+  ExternalAppUserId = sub,
+  IsPlatformAccessOnly = true
+};
+var user = await client.UsersManager.CreateEnterpriseUserAsync(userRequest);
+System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
+```
+
+This code will create a new Box app user and will set the
+`external_app_user_id` parameter of the user object to the unique Okta user ID,
+which will define the binding between the two user records.
+
+A diagnostic message is then written back stating that the new user was created.
+
+</Choice>
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
@@ -303,6 +364,23 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
+<Choice option='programming.platform' value='node' color='none'>
+
+Replace the `// TODO: VALIDATE USER` comment with the following:
+
+```cs
+  var userId = users.Entries[0].Id;
+  var userToken = sdk.UserToken(userId);
+  BoxClient userClient = sdk.UserClient(userToken, userId);
+
+  // TODO: MAKE AUTHENTICATED USER CALL
+```
+
+If a valid user is found, the Box ID is extracted and used to generate a Box
+SDK client that is scoped specifically for that user, rather than the
+application.
+
+</Choice>
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
@@ -388,6 +466,19 @@ object scoped for that user. We finish by making a call to fetch the current
 user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
+</Choice>
+<Choice option='programming.platform' value='python' color='none'>
+Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
+the following:
+
+<!-- markdownlint-disable line-length -->
+```cs
+  BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
+  System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
+```
+
+  Using that user scoped client, the current user record is then extracted from
+  Box, and a diagnostic message is written back stating the current user name.
 </Choice>
 
 <Choice option='programming.platform' unset color='none'>
