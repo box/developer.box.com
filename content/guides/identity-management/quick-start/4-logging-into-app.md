@@ -235,6 +235,8 @@ ASP.NET application loads this will be the visual component that is rendered.
 At the top of the page, insert the following.
 
 ```cs
+@using System.Security.Claims;
+
 @if (User.Identity.IsAuthenticated)
 {
     <p class="navbar-text">Hello, @User.Identity.Name</p>
