@@ -25,6 +25,32 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-04-23 / New `classification` field for Files
+
+A new optional field has been made available within the `Field` object,
+`classification`. This field represents the classification that is currently
+applied to a file.
+
+The classification can be requested via any endpoint that returns a file, like
+the [Get file information](endpoint://get-files-id) and supports [requesting
+additional `fields`](g://api-calls/request-extra-fields).
+
+```js
+{
+  "id": "123456789",
+  "type": "file",
+  "etag": "1",
+  "classification": {     
+    "name": "Top Secret",     
+    "definition": "Content that should not be shared outside the company."
+  },
+  ...
+}
+```
+
+The classification can be set through the API, Box Shield, or by a user using
+the web application.
+
 ## 2020-04-23 / Add new `uploader_display_name` field to file and file versions
 
 A new field, `uploader_display_name` has been added to both file and file
