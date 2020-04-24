@@ -32,7 +32,7 @@ This section will cover the final Box components:
 Before validating users we need a method for creating an associated Box user
 account if one doesn't already exist for the Okta user.
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 In your local application directory, load the `server.js` file created in
 step 1.
@@ -271,7 +271,7 @@ defining the code for validating whether an Okta user record has an associated
 Box user record by searching all Box enterprise users for the associated
 `external_app_user_id`.
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
 
@@ -417,7 +417,7 @@ an access token specifically
 API calls, then make a call to get the current user to ensure that everything
 is working and that we have a valid user access token.
 
-<Choice option='programming.platform' value='node' color='blue'>
+<Choice option='programming.platform' value='node' color='none'>
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
