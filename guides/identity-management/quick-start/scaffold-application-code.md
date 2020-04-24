@@ -227,7 +227,7 @@ app.UseAuthentication();
 
 <Message danger>
 
-# Incomplete previous step
+# Incomplete step
 Please select a preferred language / framework to get started.
 
 </Message>

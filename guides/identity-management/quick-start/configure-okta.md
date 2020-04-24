@@ -194,28 +194,6 @@ appropriate configuration files.
 
 </ImageFrame>
 
-<Grid columns='3'>
-
-<Choose option='programming.platform' value='node' color='blue'>
-
-# Node/Express
-
-</Choose>
-
-<Choose option='programming.platform' value='java' color='white'>
-
-# Java/Spring Boot
-
-</Choose>
-
-<Choose option='programming.platform' value='python' color='blue'>
-
-# Python/Flask
-
-</Choose>
-
-</Grid>
-
 <Choice option='programming.platform' value='node' color='blue'>
 
 * Open `config.json` within the local application directory in your preferred
