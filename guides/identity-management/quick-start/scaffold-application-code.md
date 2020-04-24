@@ -31,25 +31,29 @@ Choose your preferred language / framework below to get started.
 
 <Choose option='programming.platform' value='node' color='blue'>
 
-# Node/Express
+# Node
+Using the Express.js framework.
 
 </Choose>
 
 <Choose option='programming.platform' value='java' color='blue'>
 
-# Java/Spring Boot
+# Java
+Using the Spring Boot framework.
 
 </Choose>
 
 <Choose option='programming.platform' value='python' color='blue'>
 
-# Python/Flask
+# Python
+Using the Flask framework.
 
 </Choose>
 
 <Choose option='programming.platform' value='cs' color='blue'>
 
-# C#/ASP.NET Core
+# .NET
+Using the ASP.NET Core framework.
 
 </Choose>
 
