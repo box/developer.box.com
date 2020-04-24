@@ -18,54 +18,51 @@ Choose your preferred language / framework below to get started.
 <Grid columns='4'>
   <Choose option='programming.platform' value='node' color='blue'>
     # Node
-
     Using the Express.js framework.
   </Choose>
 
   <Choose option='programming.platform' value='java' color='blue'>
     # Java
-
     Using the Spring Boot framework.
   </Choose>
   
   <Choose option='programming.platform' value='python' color='blue'>
     # Python
-
     Using the Flask framework.
   </Choose>
   
   <Choose option='programming.platform' value='cs' color='blue'>
     # .NET
-
     Using the ASP.NET Core framework.
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node' color='none'>
+
 * Create a local directory for your application.
 * Create a `package.json` file inside the local directory, open it in your
  preferred editor, copy / paste the following into it, and save / exit the
  file.
 
 ```js
-{
-  "name": "okta-box",
-  "version": "1.0.0",
-  "description": "Box / Okta sample integration",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "Box",
-  "license": "ISC",
-  "dependencies": {
-    "@okta/oidc-middleware": "^4.0.0",
-    "@okta/okta-sdk-nodejs": "^3.2.0",
-    "box-node-sdk": "^1.31.0",
-    "express-session": "^1.17.0"
+  {
+    "name": "okta-box",
+    "version": "1.0.0",
+    "description": "Box / Okta sample integration",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "author": "Box",
+    "license": "ISC",
+    "dependencies": {
+      "@okta/oidc-middleware": "^4.0.0",
+      "@okta/okta-sdk-nodejs": "^3.2.0",
+      "box-node-sdk": "^1.31.0",
+      "express-session": "^1.17.0"
+    }
   }
-}
 ```
 
 * Run `npm init` from the terminal / console to install dependencies.
