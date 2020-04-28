@@ -35,7 +35,7 @@
     "clean": "rm -rf compiled && mkdir compiled",
     "prebuild": "yarn clean",
     "build": "concurrently 'yarn:build:*'",
-    "build:microcopy": "node -e 'require(\"./src/microcopy\").write()'",
+    "build:microcopy": "node -e 'require(\"./src/microcopy\").write()' --no-warnings",
     "build:guides": "node -e 'require(\"./src/markdown\").writeGuides()'",
     "build:pages": "node -e 'require(\"./src/markdown\").writePages()'",
     "postbuild": "yarn optimize:images",
