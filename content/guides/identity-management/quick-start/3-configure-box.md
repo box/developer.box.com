@@ -42,12 +42,16 @@ create users that are associated with the Okta user account.
   1. Go to the app's configuration by clicking **View Your App**.
   1. Scroll to the **Application Scopes** section of the same screen
      and ensure that at least the following scopes are enabled:
+
      * Read and write all files and folders stored in Box
      * Manage Users
+
   1. At the top of the page click the button to **Save Changes**
 
-  Once the application is created it will still need to be approved by an
-  enterprise admin before you will be able to make calls to the Box APIs.
+  <Message type='warning'>
+    Once the application is created it will still need to be approved by an
+    enterprise admin before you will be able to make calls to the Box APIs.
+  </Message>
 
   Follow [this guide](g://applications/custom-apps/app-approval/) to have the
   application approved in your enterprise.

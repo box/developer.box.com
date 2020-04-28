@@ -25,11 +25,10 @@ Sign in with the credentials for the Okta user you created in the last section
 of [step 2](g://identity-management/quick-start/configure-okta/).
 
 Once signed in, you will see a message stating
-`New app user {{USERNAME}} created` output to the console / terminal. 
+`New user created: {{USERNAME}}` output to the browser.
 
 When attempting to log in with this user in subsequent attempts, you
-will now see the user record for that newly created Box app user being output
-to the console / terminal. 
+will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -72,11 +71,10 @@ Sign in with the credentials for the Okta user you created in the last section
 of [step 2](g://identity-management/quick-start/configure-okta/).
 
 Once signed in, you will see a message stating
-`user {{USER NAME}} created` output to the console / terminal. 
+`New user created: {{USERNAME}}` output to the browser.
 
 When attempting to log in with this user in subsequent attempts, you
-will now see the user ID for that newly created Box app user being output
-to the console / terminal.
+will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
 <Choice option='programming.platform' value='cs' color='none'>
@@ -100,7 +98,7 @@ Once signed in, you will see a message in the debug console stating
 `New user created: {{USERNAME}}` output to the browser. 
 
 When attempting to log in with this user in subsequent attempts, you
-will now see `Current user name: {{USERNAME}}` output to the debug console.
+will now see `Current user name: {{USERNAME}}` output to the browser.
 </Choice>
 <Choice option='programming.platform' unset color='none'>
   <Message danger>

@@ -50,10 +50,18 @@ This will take you through the following steps.
 1. [And finally, run the application][step6] and the see
    the complete flow in action.
 
+At the end of the tutorial we will output a single message to the browser. If
+this is the first time an Okta user logs in to Box via the application, an
+associated Box user will be created and the message
+`New user created: {{USERNAME}}` will be output to the browser.
+
+When attempting to log in with this user in subsequent attempts, a message
+stating `Hello {{USERNAME}}` will now be output to the browser.
+
 <Message warning>
   To simplify this guide we will not create any user interface for the web
   application. Instead we will provide some output via the application console /
-  terminal, or directly as text output in the browser.
+  terminal and directly as text output in the browser.
 </Message>
 
 <Next>

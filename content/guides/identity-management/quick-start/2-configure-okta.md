@@ -22,12 +22,15 @@ in place, and to ensure that we have admin rights to the instance.
 Starting from the [Okta developer site][okta-dev], sign up for a new developer
 account, or log in under your personal account if you already have one.
 
-After logging in, you should see the Okta dashboard. Click on the **Admin**
-button at the top right.
+If you're logging in with an existing account, you should see the Okta
+dashboard. Click on the **Admin** button at the top right.
 
 <ImageFrame noborder center shadow>
   ![Okta Application Dashboard](./img/okta-qs-step2-dashboard.png)
 </ImageFrame>
+
+If you've created a new developer account rather than logging into an existing
+account, you will have already be redirected to the admin dashboard.
 
 You should now see the admin panel. Click on the **Applications** option at the
 top.
@@ -147,6 +150,19 @@ appropriate configuration files.
    application general settings.
   * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
 * Save the file.
+
+Your `config.json` file should look similar to the following.
+
+<!-- markdownlint-disable line-length -->
+```js
+const oktaClientId = exports.oktaClientId = '0oa48567frkg5KW4x6';
+const oktaClientSecret = exports.oktaClientSecret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3';
+const oktaOrgUrl = exports.oktaOrgUrl = 'YOURDOMAIN.okta.com';
+const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
+const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
+```
+<!-- markdownlint-enable line-length -->
+
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 * Open the `/src/main/resources/application.properties` file and update the
@@ -160,6 +176,18 @@ appropriate configuration files.
   * `okta.oauth2.clientSecret`: Obtained from the **Client Credentials**
    section of the application general settings.
 * Save the file
+
+Your `/src/main/resources/application.properties` file should look similar to
+the following.
+
+```java
+okta.oauth2.redirect-uri=/authorization-code/callback
+okta.oauth2.issuer=https://YOURDOMAIN.okta.com/oauth2/default
+okta.oauth2.clientId=0oa48567frkg5KW4x6
+okta.oauth2.clientSecret=cugDJy2ERfIQHDXv-j2134DfTTes-Sa3
+security.oauth2.sso.loginPath=/authorization-code/callback
+```
+
 </Choice>
 <Choice option='programming.platform' value='python' color='none'>
 In addition to the standard configuration information for the org and app, the
@@ -183,6 +211,16 @@ Next, update the local application configuration file.
    page.
   * `okta_auth_token`: The token created above.
 * Save the file.
+
+Your `config.py` file should look similar to the following.
+
+```python
+okta_client_id = '0oa48567frkg5KW4x6'
+okta_client_secret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3'
+okta_org_url = 'http://YOURDOMAIN.okta.com'
+okta_auth_token = '01KkTQTRfs1yKLr4Ojy26iqoIjK_4fHyq132Dr5T'
+okta_callback_route = '/oidc/callback'
+```
 
 Lastly, update the Flask configuration file
 
@@ -211,6 +249,26 @@ Lastly, update the Flask configuration file
    be `https://dev-123456.okta.com/oauth2/default/userinfo`.
 * Save the file.
 
+Your `client_secrets.json` file should look similar to the following.
+
+<!-- markdownlint-disable line-length -->
+```js
+{
+  "web": {
+    "client_id": "0oa48567frkg5KW4x6",
+    "client_secret": "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3",
+    "auth_uri": "https://YOURDOMAIN.okta.com/oauth2/default/v1/authorize",
+    "token_uri": "https://YOURDOMAIN.okta.com/oauth2/default/v1/token",
+    "issuer": "https://YOURDOMAIN.okta.com/oauth2/default",
+    "userinfo_uri": "https://YOURDOMAIN.okta.com/oauth2/default/userinfo",
+    "redirect_uris": [
+      "http://127.0.0.1:5000/oidc/callback"
+    ]
+  }
+}
+```
+<!-- markdownlint-enable line-length -->
+
 </Choice>
 
 <Choice option='programming.platform' value='cs' color='none'>
@@ -224,6 +282,28 @@ Lastly, update the Flask configuration file
   * `ClientSecret`: Obtained from the **Client Credentials** section of the
    application general settings.
 * Save the file.
+
+Your `ConfigureServices` method should look similar to the following.
+
+<!-- markdownlint-disable line-length -->
+```dotnet
+services.AddControllersWithViews();
+services.AddAuthentication(options =>
+{
+  options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+  options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+  options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
+})
+.AddCookie()
+.AddOktaMvc(new OktaMvcOptions
+{
+  OktaDomain = "https://YOURDOMAIN.okta.com",
+  ClientId = "0oa48567frkg5KW4x6",
+  ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
+});
+```
+<!-- markdownlint-enable line-length -->
+
 </Choice>
 
 <Choice option='programming.platform' unset color='none'>
