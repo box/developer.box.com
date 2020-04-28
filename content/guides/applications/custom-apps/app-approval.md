@@ -52,17 +52,16 @@ console][devconsole] and copy the app's client ID and provide this to your admin
 ### As admin
 
 As the admin, head over to the [admin console][adminconsole] select the "Apps"
-tab.
+menu item.
 
 <ImageFrame border center>
   ![Apps tab](../images/apps.png)
 </ImageFrame>
 
-Scroll down to the "Custom Applications" section and click on the "Authorize New
-App" button.
+Click the "Custom Apps" tab and then click on the "Authorize New App" button.
 
 <ImageFrame border center>
-  ![Custom Apps section](../images/custom-apps.png)
+  ![Custom Apps section](../images/custom-apps-new.png)
 </ImageFrame>
 
 When asked for the API key, enter the client ID for the application that the
