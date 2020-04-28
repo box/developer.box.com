@@ -17,7 +17,7 @@ source_url: >-
 # Create a metadata query
 
 As a final step, let's look at how you can create a query to find specific files
-and folders based on the metadata attached to them.
+and folders based on the metadata attached to those files/folders.
 
 A [metadata query][query] provides a way to find files and
 folders by searching for the metadata attached to them. The search syntax
