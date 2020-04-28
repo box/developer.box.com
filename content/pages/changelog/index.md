@@ -13,6 +13,68 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-04-23 / New `classification` field for Files
+
+A new optional field has been made available within the `Field` object,
+`classification`. This field represents the classification that is currently
+applied to a file.
+
+The classification can be requested via any endpoint that returns a file, like
+the [Get file information](endpoint://get-files-id) and supports [requesting
+additional `fields`](g://api-calls/request-extra-fields).
+
+```js
+{
+  "id": "123456789",
+  "type": "file",
+  "etag": "1",
+  "classification": {     
+    "name": "Top Secret",     
+    "definition": "Content that should not be shared outside the company."
+  },
+  ...
+}
+```
+
+The classification can be set through the API, Box Shield, or by a user using
+the web application.
+
+## 2020-04-23 / Add new `uploader_display_name` field to file and file versions
+
+A new field, `uploader_display_name` has been added to both file and file
+version resources. This field provides the name of the user at the time of
+upload. 
+
+```json
+{
+  ...
+  "uploader_display_name": "Ellis Wiggins"
+}
+```
+
+This field can be requested on any of the file and file
+version endpoints by providing the `fields` query parameter, for example:
+
+```bash
+curl -X GET https://api.box.com/2.0/files/12345?fields=uploader_display_name \
+     -H 'Authorization: Bearer <ACCESS_TOKEN>'
+```
+
+When the file is uploaded by a logged out anonymous, the email of the
+user is returned instead. If no email is available then the field will default
+to the text `Someone`.
+
+## 2020-04-21 / New Metadata Query APIs available
+
+A new API is now available that allows developers to query files and folders
+by the metadata attached to them. We've updated the reference documentation for
+this [Metadata Query API][e_mdq_api], as well as released some brand new
+[guides][g_mdq_api] and an update to the [metadata quick start guide][qs_mdq_api].
+
+[e_mdq_api]: e://post_metadata_queries_execute_read
+[g_mdq_api]: g://metadata/queries
+[qs_mdq_api]: g://metadata/quick-start
+
 ## 2020-03-30 / Potential impactful changes to format of Metadata `date` fields
 
 As part of ongoing improvements to our Metadata infrastructure we will be
