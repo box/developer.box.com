@@ -27,7 +27,7 @@ files.
 
 Choose your preferred language / framework below to get started.
 
-<Grid columns='4'>
+<Grid columns='2'>
 
 <Choose option='programming.platform' value='node' color='blue'>
 
@@ -42,6 +42,9 @@ Using the Express.js framework.
 Using the Spring Boot framework.
 
 </Choose>
+
+</Grid>
+<Grid columns='2'>
 
 <Choose option='programming.platform' value='python' color='blue'>
 
@@ -188,7 +191,7 @@ add the Okta ASP.NET Core dependencies by typing
 * Within the root of the project, open `Startup.cs`.
 * Add the following package declarations to the top of the file.
 
-```csharp
+```dotnet
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 ```
@@ -197,7 +200,7 @@ using Okta.AspNetCore;
  will fill in the specific Okta application values in the next step.
 
 <!-- markdownlint-disable line-length -->
-```csharp
+```dotnet
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
 {
@@ -218,7 +221,7 @@ services.AddAuthentication(options =>
 
 Add the following line to the **top** of the `Configure` method.
 
-```csharp
+```dotnet
 app.UseAuthentication();
 ```
 

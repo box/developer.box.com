@@ -41,7 +41,7 @@ Add the following `box` object into the file and save.
 
 ```js
 const box = (() => {
-  const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './../config.json')));
+  const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
   const sdk = boxSDK.getPreconfiguredInstance(configJSON);
   const client = sdk.getAppAuthClient('enterprise');
 
@@ -49,11 +49,11 @@ const box = (() => {
   let userId = '';
   let userClient;
 
-  function validateUser(userInfo) {
+  function validateUser(userInfo, res) {
     // TODO: VALIDATE USER
   }
 
-  function createUser() {
+  function createUser(res) {
     // TODO: CREATE USER
   }
 
@@ -86,7 +86,7 @@ client.enterprise.addAppUser(
     external_app_user_id: this.oktaRecord.sub
   }
 ).then(appUser => {
-  console.log(`New app user ${appUser.name} created`);
+  res.send(`New user created: ${appUser.name}`);
 });
 ```
 
@@ -183,7 +183,7 @@ uid = ouser.id
 space = 1073741824
 
 user = self.box_client.create_user(user_name, None, space_amount=space, external_app_user_id=uid)
-print(f'user {user_name} created')
+return f'New user created: {user_name}'
 ```
 
 This code will create a new Box app user and will set the
@@ -191,13 +191,13 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option='programming.platform' value='cs' color='none'>
 
 Within the `Controllers` > `AccountController.cs` file, inside the associated
 `AccountController` class, add the following method.
 
 <!-- markdownlint-disable line-length -->
-```cs
+```dotnet
 static async Task validateUser(string name, string sub)
 {
   // Configure Box SDK instance
@@ -235,7 +235,7 @@ number of users returned is then checked to see if a valid user was found.
 With that structure defined, replace the // TODO: CREATE USER section with the
 following code.
 
-```cs
+```dotnet
 var userRequest = new BoxUserRequest()
 {
   Name = name,
@@ -364,8 +364,6 @@ if (user_info['total_count'] == 0):
   self.createUser(g.user)
 else:
   # TODO: MAKE AUTHENTICATED USER CALL
-
-return 'Complete'
 ```
 
 Using the Box Python SDK generic request method, we make a call directly to the
@@ -381,11 +379,11 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option='programming.platform' value='cs' color='none'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
 
-```cs
+```dotnet
 var userId = users.Entries[0].Id;
 var userToken = sdk.UserToken(userId);
 BoxClient userClient = sdk.UserClient(userToken, userId);
@@ -428,7 +426,7 @@ this.userClient = sdk.getAppAuthClient('user', this.userId);
 
 this.userClient.users.get(this.userClient.CURRENT_USER_ID)
 .then(currentUser => {
-  console.log(currentUser);
+  res.send(`Hello ${currentUser.name}`);
 });
 ```
 
@@ -480,8 +478,8 @@ user_to_impersonate = self.box_client.user(user_id=user['id'])
 user_client = self.box_client.as_user(user_to_impersonate)
 
 # Get current user
-current_user = self.box_client.user().get()
-print(current_user.id)
+current_user = user_client.user().get()
+return f'Hello {current_user.name}'
 ```
 
 With a user found we capture the Box user ID, then generate a user client
@@ -490,13 +488,13 @@ user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
 </Choice>
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option='programming.platform' value='cs' color='none'>
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
 
 <!-- markdownlint-disable line-length -->
-```cs
+```dotnet
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 ```
