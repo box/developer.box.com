@@ -9,6 +9,13 @@ At this point we have application code that will handle traffic from users
 visiting, forward them to Okta to login, provide Okta user information, before
 finally handing off to a yet to be created handler for Box.
 
+```mermaid
+graph LR
+  a[Okta login] --> b{{Has matching Box account?}}
+  b -- Yes --- c[Retrieve Box app user]
+  b -- No --- d[Create new Box app user]
+```
+
 This section will cover the final Box components: 
 
 * Validating if an Okta user has an associated Box app user account.
