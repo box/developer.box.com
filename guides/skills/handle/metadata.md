@@ -28,7 +28,7 @@ step is to write data back to the file stored on Box as metadata. This process
 involves three steps:
 
 1. Set up a Box client using the write token sent via the original
-[event payload](guide://skills/handle/payload).
+   [event payload](guide://skills/handle/payload).
 2. Prepare the Skills metadata in the appropriate format.
 3. Write the metadata back to the file.
 

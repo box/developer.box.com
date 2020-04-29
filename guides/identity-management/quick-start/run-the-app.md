@@ -139,15 +139,15 @@ the following steps.
 
 1. [Created a web application scaffold][step1].
 1. [Setup and configured an Okta application][step2] and created
-a first user that could be used to log into the web app.
+   a first user that could be used to log into the web app.
 1. [Setup and configured a Box application][step3] so that the
-web app can connect to Box.
+   web app can connect to Box.
 1. [Created a log in flow for the web application][step4],
-allowing the Okta user to log in.
+   allowing the Okta user to log in.
 1. [Added a check to find an existing Box user][step5], and optionally create a
-Box user the first time that Okta user logs into the web application.
+   Box user the first time that Okta user logs into the web application.
 1. [And finally, ran the application][step6] and saw
-the complete flow in action.
+   the complete flow in action.
 
 ## Next Steps
 

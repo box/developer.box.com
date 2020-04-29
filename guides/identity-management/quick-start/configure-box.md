@@ -54,17 +54,15 @@ the following steps.
 1. Go to the [Developer Console][devconsole]
 1. Select **Create New App**
 1. Select **Custom App** as the type of application to create, and click
-**Next**
+   **Next**
 1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-**Next**
+   **Next**
 1. Give your Box app a unique name and click **Create App**
 1. Go to the app's configuration by clicking **View Your App**.
 1. Scroll to the **Application Scopes** section of the same screen
-and ensure that at least the following scopes are enabled:
-
-* Read and write all files and folders stored in Box
-* Manage Users
-
+   and ensure that at least the following scopes are enabled:
+  * Read and write all files and folders stored in Box
+  * Manage Users
 1. At the top of the page click the button to **Save Changes**
 
 <Message type='warning'>

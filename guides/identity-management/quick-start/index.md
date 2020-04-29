@@ -50,18 +50,18 @@ graph LR
 This will take you through the following steps.
 
 1. [Scaffold your application code][step1] so that
-we have a web application that we can log in to.
+   we have a web application that we can log in to.
 1. [Setup and configure your Okta application][step2] and create
-a first user that we can use to log into the web app with, and eventually
-create a Box account for.
-1. [Setup and configure your Box application][step3] so that we
-can connect your web application to Box.
+   a first user that we can use to log into the web app with, and eventually
+   create a Box account for.
+1. [Setup and configure your Box application][step3] so that we 
+   can connect your web application to Box.
 1. [Create a log in flow for your application][step4],
-allowing the Okta user to log in to your web application.
+   allowing the Okta user to log in to your web application.
 1. [Find an existing Box user, and optionally create a Box user][step5] the
-first time that Okta user logs into your web application.
+   first time that Okta user logs into your web application.
 1. [And finally, run the application][step6] and the see
-the complete flow in action.
+   the complete flow in action.
 
 At the end of the tutorial we will output a single message to the browser. If
 this is the first time an Okta user logs in to Box via the application, an

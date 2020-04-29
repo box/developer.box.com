@@ -364,10 +364,10 @@ log in to the application.
 1. Go to the **Users** section of the Okta admin dashboard.
 1. Click on the **Add Person** button.
 1. Enter all appropriate user info. Under password, select **Set by admin** and
-input a password for the user. Also deselect the **User must change password
-on first login** option. You will use the username and password to log
-in. These settings will only be used for testing purposes and are not best
-practices for user creation and security.
+ input a password for the user. Also deselect the **User must change password
+ on first login** option. You will use the username and password to log
+ in. These settings will only be used for testing purposes and are not best
+ practices for user creation and security.
 1. Click the **Save** button to create the user.
 
 ## Summary
