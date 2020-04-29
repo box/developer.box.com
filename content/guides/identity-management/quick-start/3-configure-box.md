@@ -42,10 +42,8 @@ create users that are associated with the Okta user account.
   1. Go to the app's configuration by clicking **View Your App**.
   1. Scroll to the **Application Scopes** section of the same screen
      and ensure that at least the following scopes are enabled:
-
-     * Read and write all files and folders stored in Box
-     * Manage Users
-
+    * Read and write all files and folders stored in Box
+    * Manage Users
   1. At the top of the page click the button to **Save Changes**
 
   <Message type='warning'>
