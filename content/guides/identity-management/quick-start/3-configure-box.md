@@ -44,6 +44,8 @@ create users that are associated with the Okta user account.
      and ensure that at least the following scopes are enabled:
     * Read and write all files and folders stored in Box
     * Manage Users
+  1. Under **Advanced Features** ensure that both options are enabled to
+    perform actions as users and generate user access tokens.
   1. At the top of the page click the button to **Save Changes**
 
   <Message type='warning'>
@@ -59,8 +61,18 @@ create users that are associated with the Okta user account.
   # Use an Existing JWT Box application
 
   If you have an existing JWT based Box application in your
-  [developer console][devconsole] that you
-  would like to use, skip to the next step.
+  [developer console][devconsole] that you would like to use, ensure that the
+  following options are set in the **Configuration** section of your
+  application.
+
+* Authentication Method: Should be set to OAuth 2.0 with JWT (Server
+Authentication).
+* Application Scopes: Set at least the following scopes.
+  * Read and write all files and folders stored in Box
+  * Manage Users
+* Advanced Features: Both options should be enabled to
+  perform actions as users and generate user access tokens.
+
 </Choice>
 
 ## Download Required Data
