@@ -30,7 +30,8 @@ additional `fields`](g://api-calls/request-extra-fields).
   "etag": "1",
   "classification": {     
     "name": "Top Secret",     
-    "definition": "Content that should not be shared outside the company."
+    "definition": "Content that should not be shared outside the company.",
+    "color": "#FF0000"
   },
   ...
 }
