@@ -2,10 +2,10 @@
 related_endpoints:
   - get-users
 related_guides:
-  - identity-management/create-association
+  - sso-identities-and-app-users/create-app-user
 ---
 
-# Find associated users
+# Find app user for SSO identity
 
 When a user logs into a Box custom application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a

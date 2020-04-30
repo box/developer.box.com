@@ -9,7 +9,7 @@ related_guides:
   - users/create-managed-user
 ---
 
-# Identity management & Apps
+# SSO & App users
 
 Single Sign-On (SSO) services are often used as part of a company's **Identity
 and Access Management (IAM)** solution. When deployed, these services grant

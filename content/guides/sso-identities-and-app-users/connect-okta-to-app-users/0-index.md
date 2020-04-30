@@ -5,7 +5,7 @@ hide_step_number: true
 hide_in_page_nav: true
 ---
 
-# Okta app user provisioning
+# Connect Okta identities to Box App Users in a web app
 
 [Okta][okta] is a popular access management and identity platform used by
 companies to provide a unified method for managing and authenticating into
@@ -70,9 +70,9 @@ stating `Hello {{USERNAME}}` will now be output to the browser.
 
 [okta]: https://www.okta.com/
 [okta-dev]: https://developer.okta.com/
-[step1]: g://identity-management/quick-start/scaffold-application-code/
-[step2]: g://identity-management/quick-start/configure-okta/
-[step3]: g://identity-management/quick-start/configure-box/
-[step4]: g://identity-management/quick-start/logging-into-app/
-[step5]: g://identity-management/quick-start/find-or-create-box-users/
-[step6]: g://identity-management/quick-start/run-the-app/
+[step1]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/scaffold-application-code/
+[step2]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/configure-okta/
+[step3]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/configure-box/
+[step4]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/logging-into-app/
+[step5]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/find-or-create-box-users/
+[step6]: g://sso-identities-and-app-users/linking-okta-users-to-app-users/run-the-app/

@@ -2,10 +2,10 @@
 related_endpoints:
   - post_users
 related_guides:
-  - identity-management/find-associations
+  - sso-identities-and-app-users/find-app-user
 ---
 
-# Create associated user
+# Create connection between SSO identity and app user
 
 When a user signs in to a custom Box application for the first time using their
 SSO provider credentials a new Box user will need to be created and associated
