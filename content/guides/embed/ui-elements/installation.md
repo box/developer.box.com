@@ -71,8 +71,10 @@ All the UI elements are also available directly from the Box CDN.
 | [Content Uploader](g://embed/ui-elements/uploader)   | `11.0.2` | CSS [`https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.css)                              |
 |                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.js)                      |
 |                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/uploader.no.react.js) |
-| [Content Preview](g://embed/ui-elements/preview)     | `2.34.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.css)                                  |
-|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.js)                                     |
+| [Content Preview]()                                  | `11.0.2` | CSS [`https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/preview.css)                                  |
+|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/11.0.2/en-US/preview.js)                                     |
+| [Box Preview SDK](g://embed/ui-elements/preview)     | `2.40.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.40.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.css)                                  |
+|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.40.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.34.0/en-US/preview.js)                                     |
 
 Use these links to either download the elements code to your application's
 code, or embed them straight into your page from the CDN.
