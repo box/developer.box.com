@@ -144,9 +144,9 @@
   // A title for generic related content
   "guides.titles.related": "Related",
   // A title for a quick start guide
-  "guides.titles.quick_start_guide": "Quick Start Guide",
+  "guides.titles.quick_start_guide": "Quick Start",
   // A title for quick guides
-  "guides.titles.quick_start_guides": "Quick Start Guides",
+  "guides.titles.quick_start_guides": "Quick Starts",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // A title for a set of links describing related API endpoints

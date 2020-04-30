@@ -54,7 +54,7 @@ items, the API can only guarantee that it returns all all matching results if
 both the following conditions are met.
 
 1. The requesting user has at least **​Previewer** ​permission to all items in
-the result set
+   the result set
 2. The ancestor folder contains all of the files in the result set
 
 When sending a metadata query request for which the result set exceeds 2,000

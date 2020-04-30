@@ -56,18 +56,18 @@ console.
 To create a new Box application that may be used to generate a developer
 token, use the following steps.
 
-1. Go to the [Developer Console][devconsole]
-1. Select **Create New App**
-1. Select **Custom App** as the type of application to create, and click
-**Next**
-1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-**Next**
-1. Give your Box app a unique name and click **Create App**
-1. Go to the app's configuration by clicking **View Your App**.
-1. Optionally, scroll to the **Application Scopes** section of the same screen
-and select any additional permissions you want to enable for this
-application.
-1. At the top of the page click the button to **Save Changes**
+  1. Go to the [Developer Console][devconsole]
+  1. Select **Create New App**
+  1. Select **Custom App** as the type of application to create, and click
+     **Next**
+  1. Select **OAuth 2.0 with JWT** as the authentication method, and click
+     **Next**
+  1. Give your Box app a unique name and click **Create App**
+  1. Go to the app's configuration by clicking **View Your App**.
+  1. Optionally, scroll to the **Application Scopes** section of the same screen
+     and select any additional permissions you want to enable for this
+     application.
+  1. At the top of the page click the button to **Save Changes**
 
 </Choice>
 
