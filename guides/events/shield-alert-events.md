@@ -35,7 +35,7 @@ The possible incident alerts produced by Shield are:
 1. Malicious content
 
 All shield alert events will be produced within the
-[enterprise event](g://events/for-enterprise/) stream (not the user stream) and
+[enterprise event][g://events/for-enterprise/] stream (not the user stream) and
 will follow the standard event object schema, with the `event_type` value set
 to `SHIELD_ALERT`.
 
