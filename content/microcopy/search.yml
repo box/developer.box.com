@@ -36,3 +36,6 @@ result_types:
 
   // field: A short name for the field type to be shown in search results
   field: field
+
+  // quick-start: A short name for the quick start type to be shown in search results
+  quick-start: quick start
