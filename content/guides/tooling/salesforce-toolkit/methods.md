@@ -352,7 +352,7 @@ passed in.
 
 Returns:
 
-* `boxFRUPc` object - The FRUP object returned will be `null` if there was an
+* `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
 error (check `mostRecentError`). Upon calling the `commitChanges` method, this
 FRUP entry will be inserted into the database. This method ensures consistency
 with other folder associations by not allowing the same folder to be associated
