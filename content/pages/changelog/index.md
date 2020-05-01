@@ -13,7 +13,7 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-04-28 / New shield alert events
+## 2020-05-14 / New shield alert events
 
 As of today, [Box Shield][box-shield] will begin producing new security events
 within the [enterprise event stream](g://events/for-enterprise/) for Shield
