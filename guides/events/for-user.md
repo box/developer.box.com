@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: events/for-user
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: events
 parent_id: events
 next_page_id: events/for-enterprise

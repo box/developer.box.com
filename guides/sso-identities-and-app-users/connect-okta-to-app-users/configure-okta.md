@@ -1,18 +1,19 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: identity-management
-subcategory_id: identity-management/quick-start
+category_id: sso-identities-and-app-users
+subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: false
-id: identity-management/quick-start/configure-okta
+id: sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
 rank: 2
 total_steps: 6
-sibling_id: identity-management/quick-start
-parent_id: identity-management/quick-start
-next_page_id: identity-management/quick-start/configure-box
-previous_page_id: identity-management/quick-start/scaffold-application-code
+sibling_id: sso-identities-and-app-users/connect-okta-to-app-users
+parent_id: sso-identities-and-app-users/connect-okta-to-app-users
+next_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configure-box
+previous_page_id: >-
+  sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/quick-start/2-configure-okta.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/2-configure-okta.md
 ---
 
 # Configure Okta

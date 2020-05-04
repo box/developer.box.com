@@ -18,7 +18,7 @@ source_url: >-
 
 <!-- alex disable postman-postwoman -->
 
-# Postman Quick Start
+# Use Postman to make API calls
 
 [Postman](https://getpostman.com) is a tool that lets you build and test HTTP
 requests in an easy-to-use

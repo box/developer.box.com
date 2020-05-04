@@ -1,18 +1,19 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: identity-management
-subcategory_id: identity-management/quick-start
+category_id: sso-identities-and-app-users
+subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: false
-id: identity-management/quick-start/find-or-create-box-users
+id: >-
+  sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
 rank: 5
 total_steps: 6
-sibling_id: identity-management/quick-start
-parent_id: identity-management/quick-start
-next_page_id: identity-management/quick-start/run-the-app
-previous_page_id: identity-management/quick-start/logging-into-app
+sibling_id: sso-identities-and-app-users/connect-okta-to-app-users
+parent_id: sso-identities-and-app-users/connect-okta-to-app-users
+next_page_id: sso-identities-and-app-users/connect-okta-to-app-users/run-the-app
+previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/quick-start/5-find-or-create-box-users.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/5-find-or-create-box-users.md
 ---
 
 # Find or create Box app users

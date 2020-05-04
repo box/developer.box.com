@@ -2,23 +2,23 @@
 related_endpoints:
   - get-users
 related_guides:
-  - identity-management/create-association
-category_id: identity-management
+  - sso-identities-and-app-users/create-app-user
+category_id: sso-identities-and-app-users
 subcategory_id: null
 is_index: false
-id: identity-management/find-associations
+id: sso-identities-and-app-users/find-app-user
 rank: 3
 type: guide
 total_steps: 3
-sibling_id: identity-management
-parent_id: identity-management
-next_page_id: identity-management
-previous_page_id: identity-management/create-association
+sibling_id: sso-identities-and-app-users
+parent_id: sso-identities-and-app-users
+next_page_id: sso-identities-and-app-users
+previous_page_id: sso-identities-and-app-users/create-app-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/3-find-associations.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/3-find-app-user.md
 ---
 
-# Find associated users
+# Find app user for SSO identity
 
 When a user logs into a Box custom application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a

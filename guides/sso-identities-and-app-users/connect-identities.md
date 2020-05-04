@@ -1,22 +1,22 @@
 ---
 related_endpoints:
   - post_users
-category_id: identity-management
+category_id: sso-identities-and-app-users
 subcategory_id: null
 is_index: false
-id: identity-management/associate-users
+id: sso-identities-and-app-users/connect-identities
 rank: 1
 type: guide
 total_steps: 3
-sibling_id: identity-management
-parent_id: identity-management
-next_page_id: identity-management/create-association
+sibling_id: sso-identities-and-app-users
+parent_id: sso-identities-and-app-users
+next_page_id: sso-identities-and-app-users/create-app-user
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/1-associate-users.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/1-connect-identities.md
 ---
 
-# Associate SSO users to Box
+# Connect SSO identities to app users
 
 Your SSO service will have a unique user record for each person using it within
 your company. When accessing a Box application through this SSO service, if

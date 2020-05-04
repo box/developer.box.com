@@ -3,20 +3,21 @@ rank: 0
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
-category_id: identity-management
-subcategory_id: identity-management/quick-start
+category_id: sso-identities-and-app-users
+subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: true
-id: identity-management/quick-start
+id: sso-identities-and-app-users/connect-okta-to-app-users
 total_steps: 6
-sibling_id: identity-management
-parent_id: identity-management
-next_page_id: identity-management/quick-start/scaffold-application-code
+sibling_id: sso-identities-and-app-users
+parent_id: sso-identities-and-app-users
+next_page_id: >-
+  sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/quick-start/0-index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
 ---
 
-# Okta app user provisioning
+# Connect Okta identities to Box App Users in a web app
 
 [Okta][okta] is a popular access management and identity platform used by
 companies to provide a unified method for managing and authenticating into
@@ -36,7 +37,7 @@ identity system (Okta) and the Box APIs.
 
 ## Overview
 
-This guide will walk through how to programmatically use Okta to
+This quick start guide will walk through how to programmatically use Okta to
 log in to a Box application, provisioning an app user in Box that is linked to
 the Okta user, then make Box API calls on behalf of that user.
 
@@ -87,9 +88,9 @@ I am ready to get started
 
 [okta]: https://www.okta.com/
 [okta-dev]: https://developer.okta.com/
-[step1]: g://identity-management/quick-start/scaffold-application-code/
-[step2]: g://identity-management/quick-start/configure-okta/
-[step3]: g://identity-management/quick-start/configure-box/
-[step4]: g://identity-management/quick-start/logging-into-app/
-[step5]: g://identity-management/quick-start/find-or-create-box-users/
-[step6]: g://identity-management/quick-start/run-the-app/
+[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
+[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
+[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
+[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
+[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
+[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/

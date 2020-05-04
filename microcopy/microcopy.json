@@ -144,9 +144,9 @@
   // A title for generic related content
   "guides.titles.related": "Related",
   // A title for a quick start guide
-  "guides.titles.quick_start_guide": "Quick Start Guide",
+  "guides.titles.quick_start_guide": "Quick Start",
   // A title for quick guides
-  "guides.titles.quick_start_guides": "Quick Start Guides",
+  "guides.titles.quick_start_guides": "Quick Starts",
   // A title for a set of links describing related API endpoints
   "guides.titles.api_endpoints": "Related APIs",
   // A title for a set of links describing related API endpoints
@@ -275,6 +275,8 @@
   "search.result_types.param": "param",
   // A short name for the field type to be shown in search results
   "search.result_types.field": "field",
+  // A short name for the quick start type to be shown in results
+  "search.result_types.quick-start": "quick start",
   // A title for a footer section on Box's role in the community
   "footer.categories.company.title": "Box & Community",
   // A label for a link that links to the about page

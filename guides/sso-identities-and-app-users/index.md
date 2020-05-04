@@ -7,21 +7,21 @@ related_guides:
   - users/provision/
   - users/create-app-user
   - users/create-managed-user
-category_id: identity-management
+category_id: sso-identities-and-app-users
 subcategory_id: null
 is_index: true
-id: identity-management
+id: sso-identities-and-app-users
 type: guide
 total_steps: 3
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: identity-management/find-associations
+previous_page_id: sso-identities-and-app-users/find-app-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/index.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/index.md
 ---
 
-# Identity management & Apps
+# SSO & App users
 
 Single Sign-On (SSO) services are often used as part of a company's **Identity
 and Access Management (IAM)** solution. When deployed, these services grant

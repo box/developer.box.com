@@ -2,23 +2,23 @@
 related_endpoints:
   - post_users
 related_guides:
-  - identity-management/find-associations
-category_id: identity-management
+  - sso-identities-and-app-users/find-app-user
+category_id: sso-identities-and-app-users
 subcategory_id: null
 is_index: false
-id: identity-management/create-association
+id: sso-identities-and-app-users/create-app-user
 rank: 2
 type: guide
 total_steps: 3
-sibling_id: identity-management
-parent_id: identity-management
-next_page_id: identity-management/find-associations
-previous_page_id: identity-management/associate-users
+sibling_id: sso-identities-and-app-users
+parent_id: sso-identities-and-app-users
+next_page_id: sso-identities-and-app-users/find-app-user
+previous_page_id: sso-identities-and-app-users/connect-identities
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/2-create-association.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/2-create-app-user.md
 ---
 
-# Create associated user
+# Create connection between SSO identity and app user
 
 When a user signs in to a custom Box application for the first time using their
 SSO provider credentials a new Box user will need to be created and associated

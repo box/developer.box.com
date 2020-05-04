@@ -1,18 +1,19 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: identity-management
-subcategory_id: identity-management/quick-start
+category_id: sso-identities-and-app-users
+subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: false
-id: identity-management/quick-start/scaffold-application-code
+id: >-
+  sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 rank: 1
 total_steps: 6
-sibling_id: identity-management/quick-start
-parent_id: identity-management/quick-start
-next_page_id: identity-management/quick-start/configure-okta
-previous_page_id: identity-management/quick-start
+sibling_id: sso-identities-and-app-users/connect-okta-to-app-users
+parent_id: sso-identities-and-app-users/connect-okta-to-app-users
+next_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configure-okta
+previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/quick-start/1-scaffold-application-code.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/1-scaffold-application-code.md
 ---
 
 # Scaffold application code
@@ -31,13 +32,15 @@ Choose your preferred language / framework below to get started.
 
 <Choose option='programming.platform' value='node' color='blue'>
 
-# Node/Express.js
+# Node
+Using the Express.js framework.
 
 </Choose>
 
 <Choose option='programming.platform' value='java' color='blue'>
 
-# Java/Spring Boot
+# Java
+Using the Spring Boot framework.
 
 </Choose>
 
@@ -46,13 +49,15 @@ Choose your preferred language / framework below to get started.
 
 <Choose option='programming.platform' value='python' color='blue'>
 
-# Python/Flask
+# Python
+Using the Flask framework.
 
 </Choose>
 
 <Choose option='programming.platform' value='cs' color='blue'>
 
-# C#/ASP.NET
+# .NET
+Using the ASP.NET Core framework.
 
 </Choose>
 
@@ -226,7 +231,7 @@ app.UseAuthentication();
 
 <Message danger>
 
-# Incomplete step
+# Incomplete previous step
 Please select a preferred language / framework to get started.
 
 </Message>

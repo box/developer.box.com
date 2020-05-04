@@ -1,18 +1,19 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: identity-management
-subcategory_id: identity-management/quick-start
+category_id: sso-identities-and-app-users
+subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: false
-id: identity-management/quick-start/run-the-app
+id: sso-identities-and-app-users/connect-okta-to-app-users/run-the-app
 rank: 6
 total_steps: 6
-sibling_id: identity-management/quick-start
-parent_id: identity-management/quick-start
+sibling_id: sso-identities-and-app-users/connect-okta-to-app-users
+parent_id: sso-identities-and-app-users/connect-okta-to-app-users
 next_page_id: ''
-previous_page_id: identity-management/quick-start/find-or-create-box-users
+previous_page_id: >-
+  sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/identity-management/quick-start/6-run-the-app.md
+  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/6-run-the-app.md
 ---
 
 # Run the application
@@ -36,7 +37,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://identity-management/quick-start/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
 
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -61,7 +62,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://identity-management/quick-start/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
 
 Once signed in, you will see a message stating `New User Created: {{USERNAME}}`
 output to the browser.
@@ -86,7 +87,7 @@ we'll be testing out the user sign in flow, you'll see the Okta login.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://identity-management/quick-start/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
 
 Once signed in, you will see a message stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -112,7 +113,7 @@ displayed. Once clicked, the Okta login will be automatically loaded.
 </ImageFrame>
 
 Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://identity-management/quick-start/configure-okta/).
+of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
 
 Once signed in, you will see a message in the debug console stating
 `New user created: {{USERNAME}}` output to the browser.
@@ -162,9 +163,9 @@ access process.
 * [Uploading content](g://uploads/) into Box, including running preflight
  checks and large file (chunked) uploading.
 
-[step1]: g://identity-management/quick-start/scaffold-application-code/
-[step2]: g://identity-management/quick-start/configure-okta/
-[step3]: g://identity-management/quick-start/configure-box/
-[step4]: g://identity-management/quick-start/logging-into-app/
-[step5]: g://identity-management/quick-start/find-or-create-box-users/
-[step6]: g://identity-management/quick-start/run-the-app/
+[step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
+[step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
+[step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
+[step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
+[step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
+[step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/
