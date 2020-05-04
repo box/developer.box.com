@@ -171,6 +171,8 @@
   "guides.titles.previous": "Previous",
   // The text for a link to the first step in a multi-step guide
   "guides.titles.start": "Start",
+  // The text for a link that tells a user to get started
+  "guides.titles.get_started": "Get started",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
@@ -226,11 +228,11 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // Label for the log in button
-  "explorer.buttons.login": "Log In",
+  "explorer.buttons.login": "Log in",
   // Label for the log in button
-  "explorer.buttons.logout": "Log Out",
+  "explorer.buttons.logout": "Log out",
   // Label for the button to run a live API call
-  "explorer.buttons.run": "Make API Call",
+  "explorer.buttons.run": "Make API call",
   // Label for the button to start the API explorer
   "explorer.buttons.try": "Try this API",
   // Label for the button to close the API explorer
