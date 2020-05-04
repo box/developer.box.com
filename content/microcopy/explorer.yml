@@ -1,13 +1,13 @@
 ---
 buttons:
   // login: Label for the log in button
-  login: Log In
+  login: Log in
 
   // logout: Label for the log in button
-  logout: Log Out
+  logout: Log out
 
   // run: Label for the button to run a live API call
-  run: Make API Call
+  run: Make API call
 
   // try: Label for the button to start the API explorer
   try: Try this API
