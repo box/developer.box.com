@@ -31,13 +31,31 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 
 <Hero>
 
-<Centered wide>
+Developers
 
-# Box Platform
+<HeroTitle>
 
-Extend the power of Box with APIs
+Start building with **Box Platform**
 
-</Centered>
+</HeroTitle>
+<HeroTitle>
+
+Manage users with **Box Platform**
+
+</HeroTitle>
+<HeroTitle>
+
+Build experiences with **Box Platform**
+
+</HeroTitle>
+<HeroTitle>
+
+Power content portals with **Box Platform**
+
+</HeroTitle>
+
+Integrate apps and create new
+content experiences
 
 </Hero>
 
