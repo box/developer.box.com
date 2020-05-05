@@ -2,6 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiCpu
 category_id: tooling
 subcategory_id: tooling/postman
 is_index: true

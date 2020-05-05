@@ -9,10 +9,10 @@ subcategory_id: null
 is_index: true
 id: guides
 type: guide
-total_steps: 0
+total_steps: 1
 sibling_id: content
 parent_id: ''
-next_page_id: ''
+next_page_id: quick-starts
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/master/content/guides/index.md'
 ---

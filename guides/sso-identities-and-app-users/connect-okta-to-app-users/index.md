@@ -3,6 +3,7 @@ rank: 0
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiUsers
 category_id: sso-identities-and-app-users
 subcategory_id: sso-identities-and-app-users/connect-okta-to-app-users
 is_index: true
