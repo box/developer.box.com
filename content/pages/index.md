@@ -21,11 +21,18 @@ alias_paths:
 
   Developers
 
-  # Start building with **Box Platform**
-
-  # Manage users with **Box Platform**
-
-  # Build experiences with **Box Platform**
+  <HeroTitle>
+    Start building with **Box Platform**
+  </HeroTitle> 
+  <HeroTitle>
+    Manage users with **Box Platform**
+  </HeroTitle>
+  <HeroTitle>
+    Build experiences with **Box Platform**
+  </HeroTitle>
+  <HeroTitle>
+    Power content portals with **Box Platform**
+  </HeroTitle>
 
   Integrate apps and create new
   content experiences
