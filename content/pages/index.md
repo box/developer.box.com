@@ -7,8 +7,8 @@ alias_paths:
   - /incubator/FAQs
   - /box-hack-day
   - /boxdev
-  - /box-dev 
-  - /incubator 
+  - /box-dev
+  - /incubator
   - /console
   - /ja_JP/home
   - /api
@@ -18,13 +18,18 @@ alias_paths:
 # Box Platform
 
 <Hero>
-  <Centered wide>
 
-    # Box Platform
+  Developers
 
-    Extend the power of Box with APIs
+  # Start building with **Box Platform**
 
-  </Centered>
+  # Manage users with **Box Platform**
+
+  # Build experiences with **Box Platform**
+
+  Integrate apps and create new
+  content experiences
+
 </Hero>
 
 <Centered wide>
@@ -44,7 +49,7 @@ alias_paths:
   <Header to='/guides' centered>
     Guides
   </Header>
-  
+
   <GuideCategories />
 
   <More to='/guides' right>
@@ -57,7 +62,7 @@ alias_paths:
   <Header to='/reference' centered>
     API Reference
   </Header>
-  
+
   <ReferenceCategories />
 
   <More to='/reference/' right>
