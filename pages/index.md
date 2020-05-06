@@ -29,35 +29,41 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 
 # Box Platform
 
-<Hero>
+<Banner>
+
+<BannerTitle>
 
 Developers
 
-<HeroTitle>
-
 Start building with **Box Platform**
 
-</HeroTitle>
-<HeroTitle>
+</BannerTitle>
+<BannerTitle>
+
+Admins
 
 Manage users with **Box Platform**
 
-</HeroTitle>
-<HeroTitle>
+</BannerTitle>
+<BannerTitle>
+
+Developers
 
 Build experiences with **Box Platform**
 
-</HeroTitle>
-<HeroTitle>
+</BannerTitle>
+<BannerTitle>
+
+Enterprises
 
 Power content portals with **Box Platform**
 
-</HeroTitle>
+</BannerTitle>
 
 Integrate apps and create new
 content experiences
 
-</Hero>
+</Banner>
 
 <Centered wide>
 
