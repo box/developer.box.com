@@ -36,8 +36,8 @@ To install the latest CLI on your machine, download the latest
 ## Linux & Node install
 
 Additionally, the CLI can be installed as a Node package on any platform,
-including Linux. For this to work you will need to have Node.js
-installed on your machine.
+including Linux. For this to work you will need to have
+[Node JS](https://nodejs.org/) installed on your machine.
 
 ```bash
 npm install --global @box/cli
