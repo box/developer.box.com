@@ -33,6 +33,16 @@ To install the latest CLI on your machine, download the latest
   Download the latest CLI installer
 </CTA>
 
+## Linux & Node install
+
+Additionally, the CLI can be installed as a Node package on any platform,
+including Linux. For this to work you will need to have Node.js
+installed on your machine.
+
+```bash
+npm install --global @box/cli
+```
+
 ## Source Code
 
 The source code for the CLI is also available via [the GitHub page][cli].
