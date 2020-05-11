@@ -191,3 +191,9 @@ bottom:
       text: Cookie Notification
       // url: Link to our cookie notification settings
       url: https://www.box.com/legal/cookie-notification
+
+    sample_license:
+      // text: Text for link to creative commons code
+      text: Code samples provided under Unilicense
+      // url: Link to the license used
+      url: https://unlicense.org/
