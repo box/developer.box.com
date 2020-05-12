@@ -6,7 +6,7 @@ hide_in_page_nav: true
 
 <!-- alex disable postman-postwoman -->
 
-# Postman Quick Start
+# Use Postman to make API calls
 
 [Postman](https://getpostman.com) is a tool that lets you build and test HTTP
 requests in an easy-to-use
@@ -14,9 +14,7 @@ interface without configuring a full development environment. The Box Postman
 Collection is a set of preconfigured requests that make it easy to get started
 with the Box API from Postman.
 
-<ImageFrame center>
-  ![An example of Postman](./postman-example.png)
-</ImageFrame>
+<YouTube id='enUvXHt9qGU' />
 
 ## Overview
 
