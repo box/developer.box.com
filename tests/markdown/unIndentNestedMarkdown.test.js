@@ -153,6 +153,12 @@ test('should not unindent bullet points', () => {
 * I'm, sure!
 </Message>
 
+1. Finally it should also not do this thing right
+   when there are multiple lines
+  * Test 1
+  * Test 2
+1. Continued list
+
     </Tab>
   </Tabs>
 `
@@ -178,7 +184,13 @@ This is a string.
 * I'm, sure!
 </Message>
 
-</Tab>
+1. Finally it should also not do this thing right
+   when there are multiple lines
+  * Test 1
+  * Test 2
+1. Continued list
+
+    </Tab>
 </Tabs>
 `)
 })
