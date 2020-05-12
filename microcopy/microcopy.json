@@ -393,6 +393,10 @@
   "footer.bottom.links.cookies.text": "Cookie Notification",
   // Link to our cookie notification settings
   "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification",
+  // Text for link to creative commons code
+  "footer.bottom.links.sample_license.text": "Code samples provided under Unilicense",
+  // Link to the license used
+  "footer.bottom.links.sample_license.url": "https://unlicense.org/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
   "pages.blog.minute_read": "%s min read"
 }

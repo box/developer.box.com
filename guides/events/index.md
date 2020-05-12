@@ -6,7 +6,7 @@ subcategory_id: null
 is_index: true
 id: events
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: ''

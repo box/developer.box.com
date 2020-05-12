@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: false
 id: events/pagination
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: events
 parent_id: events
 next_page_id: events
-previous_page_id: events/polling
+previous_page_id: events/shield-alert-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/events/pagination.md
 ---
