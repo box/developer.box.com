@@ -312,3 +312,4 @@ The standard OAuth scopes are also supported when downscoping.
 
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
+[pricing]: https://www.box.com/pricing/platform
