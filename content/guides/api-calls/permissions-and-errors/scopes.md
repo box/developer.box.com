@@ -201,9 +201,16 @@ Governance.
 There are some additional scopes that are available on request which will
 enable some specific capabilities for your application.
 
-This scope can be requested by opening a ticket via our support team, who will
-review request on an individual basis and only provide approval of the use case
-requires the scope.
+These scopes can be requested by opening a ticket via our
+[support team](page://support), who will review requests on an individual
+basis and only provide approval if the use case requires the scope.
+
+<Message type='notice'>
+  Scopes which are only available on request are not available for activation
+  within free trial accounts. Before filing a support request for activation of
+  the following scopes, log in to your paid enterprise account or
+  [upgrade your free developer account][pricing] to an enterprise account tier.
+</Message>
 
 ### Manage Legal Holds
 
