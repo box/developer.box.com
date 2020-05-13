@@ -206,8 +206,7 @@ These scopes can be requested by opening a ticket via our
 basis and only provide approval if the use case requires the scope.
 
 <Message type='notice'>
-  Scopes which are only available on request are not available for activation
-  within free trial accounts. Before filing a support request for activation of
+  It is not possible to request extra scopes if your account is a free trial account. Before filing a support request for activation of
   the following scopes, log in to your paid enterprise account or
   [upgrade your free developer account][pricing] to an enterprise account tier.
 </Message>
