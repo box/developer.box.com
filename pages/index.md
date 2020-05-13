@@ -33,35 +33,31 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 
 <BannerTitle>
 
-Developers
-
 Start building with **Box Platform**
 
 </BannerTitle>
 <BannerTitle>
-
-Admins
 
 Manage users with **Box Platform**
 
 </BannerTitle>
 <BannerTitle>
 
-Developers
-
 Build experiences with **Box Platform**
 
 </BannerTitle>
 <BannerTitle>
 
-Enterprises
-
 Power content portals with **Box Platform**
 
 </BannerTitle>
+<BannerTitle>
 
-Integrate apps and create new
-content experiences
+Integrate apps with **Box Platform**
+
+</BannerTitle>
+
+Extend the power of Box with APIs
 
 </Banner>
 

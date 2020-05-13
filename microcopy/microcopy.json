@@ -171,8 +171,8 @@
   "guides.titles.previous": "Previous",
   // The text for a link to the first step in a multi-step guide
   "guides.titles.start": "Start",
-  // The text for a link that tells a user to get started
-  "guides.titles.get_started": "Get started",
+  // The text for a link that tells a user to start learning
+  "guides.titles.learn_more": "Learn more",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
@@ -198,13 +198,9 @@
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
   // The text for the link to the developer signup
-  "headers.primary.buttons.signup.text": "Sign Up",
+  "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
-  // The text for the link to the developer signup
-  "headers.primary.signup.text": "Sign Up",
-  // The URL to the developer signup - DO NOT TRANSLATE
-  "headers.primary.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
