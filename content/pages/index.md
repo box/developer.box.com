@@ -20,28 +20,22 @@ alias_paths:
 <Banner>
 
   <BannerTitle>
-    Developers
-
     Start building with **Box Platform**
   </BannerTitle>
   <BannerTitle>
-    Admins
-
     Manage users with **Box Platform**
   </BannerTitle>
   <BannerTitle>
-    Developers
-
     Build experiences with **Box Platform**
   </BannerTitle>
   <BannerTitle>
-    Enterprises
-
     Power content portals with **Box Platform**
   </BannerTitle>
+  <BannerTitle>
+    Integrate apps with **Box Platform**
+  </BannerTitle>
 
-  Integrate apps and create new
-  content experiences
+  Extend the power of Box with APIs
 
 </Banner>
 
