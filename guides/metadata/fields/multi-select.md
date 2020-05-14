@@ -24,7 +24,7 @@ source_url: >-
 
 # Multi Select metadata field
 
-A metadata field of type `miltiSelect` is displayed to a user as a dropdown
+A metadata field of type `multiSelect` is displayed to a user as a dropdown
 list. The user can select multiple items from the list.
 
 <ImageFrame border center shadow width='400'>
