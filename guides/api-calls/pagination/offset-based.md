@@ -56,7 +56,7 @@ an `offset` parameter that equals the sum of the previous `offset` value and
 limit returned in the previous result, `previous_offset + previous_limit`.
 
 ```curl
-curl https://api.box.com/2.0/folders/0/items?offset=101&limit=100 \
+curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
