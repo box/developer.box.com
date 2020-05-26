@@ -92,12 +92,12 @@ A query supports the following comparison operators.
 
 | Operator |                                                                                      |
 |----------|--------------------------------------------------------------------------------------|
-| `=`      | Ensures a template field value is **equal to** the a specified value                 |
-| `>`      | Ensures a template field value is **greater than to** the a specified value          |
-| `<`      | Ensures a template field value is **greater than to** the a specified value          |
-| `>=`     | Ensures a template field value is **greater than or equal to** the a specified value |
+| `=`      | Ensures a template field value is **equal to** the specified value                   |
+| `>`      | Ensures a template field value is **greater than** the specified value               |
+| `<`      | Ensures a template field value is **less than** the specified value                  |
+| `>=`     | Ensures a template field value is **greater than or equal to** the specified value   |
 | `<=`     | Ensures a template field value is **less than or equal to** the a specified value    |
-| `<>`     | Ensures a template field value is **not equal to** to the a specified value          |
+| `<>`     | Ensures a template field value is **not equal to** the a specified value             |
 
 <!-- markdownlint-enable line-length -->
 
