@@ -60,3 +60,6 @@ titles:
 
   // start: The text for a link to the first step in a multi-step guide
   start: Start
+
+  // learn_more: The text for a link that tells a user to start learning
+  learn_more: Learn more

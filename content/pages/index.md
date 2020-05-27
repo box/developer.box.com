@@ -7,8 +7,8 @@ alias_paths:
   - /incubator/FAQs
   - /box-hack-day
   - /boxdev
-  - /box-dev 
-  - /incubator 
+  - /box-dev
+  - /incubator
   - /console
   - /ja_JP/home
   - /api
@@ -17,18 +17,30 @@ alias_paths:
 
 # Box Platform
 
-<Hero>
-  <Centered wide>
+<Banner>
 
-    # Build with the Box Platform
+  <BannerTitle>
+    Start building with **Box Platform**
+  </BannerTitle>
+  <BannerTitle>
+    Manage users with **Box Platform**
+  </BannerTitle>
+  <BannerTitle>
+    Build experiences with **Box Platform**
+  </BannerTitle>
+  <BannerTitle>
+    Power content portals with **Box Platform**
+  </BannerTitle>
+  <BannerTitle>
+    Integrate apps with **Box Platform**
+  </BannerTitle>
 
-    Integrate, extend and build apps with the power of Box
+  Extend the power of Box with APIs
 
-  </Centered>
-</Hero>
+</Banner>
 
 <Centered wide>
-  <Header to='/guides'>
+  <Header to='/guides' centered>
     Developer News
   </Header>
 
@@ -41,53 +53,23 @@ alias_paths:
 
 <Dark>
 <Centered wide>
-<HorizontalList centered>
-
-## Stay up to date
-
-* [Developer Blog](https://medium.com/box-developer-blog)
-* [Newsletter](page://newsletter)
-* [Changelog & Release Notes](page://changelog)
-* [Twitter](https://twitter.com/boxplatform/)
-* [API Status](https://status.box.com/)
-
-</HorizontalList>
-</Centered>
-</Dark>
-
-<Centered wide>
-  <Header to='/guides'>
+  <Header to='/guides' centered>
     Guides
   </Header>
-  
+
   <GuideCategories />
 
   <More to='/guides' right>
     All guides
   </More>
 </Centered>
-
-<Dark>
-<Centered wide>
-<HorizontalList centered>
-
-## Elsewhere
-
-* [Support](page://support)
-* [Feedback](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
-* [GitHub](https://github.com/box)
-* [Developer Blog](https://medium.com/box-developer-blog)
-* [Twitter](https://twitter.com/boxplatform/)
-
-</HorizontalList>
-</Centered>
 </Dark>
 
 <Centered wide>
-  <Header to='/reference'>
+  <Header to='/reference' centered>
     API Reference
   </Header>
-  
+
   <ReferenceCategories />
 
   <More to='/reference/' right>
