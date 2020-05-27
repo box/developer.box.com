@@ -2,6 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiDatabase
 category_id: metadata
 subcategory_id: metadata/1-quick-start
 is_index: true
@@ -16,7 +17,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/0-index.md
 ---
 
-# Metadata Quick Start
+# Working with Metadata
 
 The Metadata APIs are a great tool to allow applications to automatically add
 additional information to files and folders.

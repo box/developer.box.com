@@ -171,6 +171,8 @@
   "guides.titles.previous": "Previous",
   // The text for a link to the first step in a multi-step guide
   "guides.titles.start": "Start",
+  // The text for a link that tells a user to start learning
+  "guides.titles.learn_more": "Learn more",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
@@ -184,7 +186,7 @@
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/reference/",
   // The text for the link to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.text": "SDKs/Tools",
+  "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
   // The URL to the new page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.sdks_and_tools.url": "/sdks-and-tools/",
   // The text for the link to the old page on SDKs
@@ -196,13 +198,9 @@
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
   // The text for the link to the developer signup
-  "headers.primary.buttons.signup.text": "Sign Up",
+  "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
-  // The text for the link to the developer signup
-  "headers.primary.signup.text": "Sign Up",
-  // The URL to the developer signup - DO NOT TRANSLATE
-  "headers.primary.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
@@ -226,11 +224,11 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // Label for the log in button
-  "explorer.buttons.login": "Log In",
+  "explorer.buttons.login": "Log in",
   // Label for the log in button
-  "explorer.buttons.logout": "Log Out",
+  "explorer.buttons.logout": "Log out",
   // Label for the button to run a live API call
-  "explorer.buttons.run": "Make API Call",
+  "explorer.buttons.run": "Make API call",
   // Label for the button to start the API explorer
   "explorer.buttons.try": "Try this API",
   // Label for the button to close the API explorer

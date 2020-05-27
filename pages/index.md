@@ -29,21 +29,41 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 
 # Box Platform
 
-<Hero>
+<Banner>
+
+<BannerTitle>
+
+Start building with **Box Platform**
+
+</BannerTitle>
+<BannerTitle>
+
+Manage users with **Box Platform**
+
+</BannerTitle>
+<BannerTitle>
+
+Build experiences with **Box Platform**
+
+</BannerTitle>
+<BannerTitle>
+
+Power content portals with **Box Platform**
+
+</BannerTitle>
+<BannerTitle>
+
+Integrate apps with **Box Platform**
+
+</BannerTitle>
+
+Extend the power of Box with APIs
+
+</Banner>
 
 <Centered wide>
 
-# Build with the Box Platform
-
-Integrate, extend and build apps with the power of Box
-
-</Centered>
-
-</Hero>
-
-<Centered wide>
-
-<Header to='/guides'>
+<Header to='/guides' centered>
 Developer News
 
 </Header>
@@ -63,25 +83,7 @@ Developer Blog
 
 <Centered wide>
 
-<HorizontalList centered>
-
-## Stay up to date
-
-* [Developer Blog](https://medium.com/box-developer-blog)
-* [Newsletter](page://newsletter)
-* [Changelog & Release Notes](page://changelog)
-* [Twitter](https://twitter.com/boxplatform/)
-* [API Status](https://status.box.com/)
-
-</HorizontalList>
-
-</Centered>
-
-</Dark>
-
-<Centered wide>
-
-<Header to='/guides'>
+<Header to='/guides' centered>
 Guides
 
 </Header>
@@ -97,29 +99,11 @@ All guides
 
 </Centered>
 
-<Dark>
-
-<Centered wide>
-
-<HorizontalList centered>
-
-## Elsewhere
-
-* [Support](page://support)
-* [Feedback](https://pulse.box.com/forums//%20909778-product-feedback?category_id=330838)
-* [GitHub](https://github.com/box)
-* [Developer Blog](https://medium.com/box-developer-blog)
-* [Twitter](https://twitter.com/boxplatform/)
-
-</HorizontalList>
-
-</Centered>
-
 </Dark>
 
 <Centered wide>
 
-<Header to='/reference'>
+<Header to='/reference' centered>
 API Reference
 
 </Header>

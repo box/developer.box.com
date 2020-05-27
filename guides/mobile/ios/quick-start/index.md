@@ -2,6 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiSmartphone
 category_id: mobile
 subcategory_id: mobile/ios
 is_index: true
@@ -16,7 +17,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/0-index.md
 ---
 
-# iOS SDK Quick Start
+# Learn to use the iOS SDK
 
 <ImageFrame center>
 
