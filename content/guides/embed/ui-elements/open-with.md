@@ -327,7 +327,7 @@ const contentOpenWith = new ContentOpenWith();
  * @param {Object} [options] - Options
  * @return {void}
  */
-contentOpenWith..show(fileId, accessToken, options);
+contentOpenWith.show(fileId, accessToken, options);
 
 /**
  * Hides the content open with element, removes all event listeners,
