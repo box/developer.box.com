@@ -32,7 +32,7 @@ webhook payloads are delivered.
 
 ## 1000 webhooks per application, per user
 
-There is a limit of 1000 webhooks per application, per user user.
+There is a limit of 1000 webhooks per application, per user.
 
 In other words, up to 1000 webhooks can be created by any application for any
 user and no more. To create more webhooks for a user, either create another
