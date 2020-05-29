@@ -21,7 +21,7 @@ form key-value pairs stored in the `​global.properties` template.
 ## Indexes for large result sets
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 1,000 files or folders.
+when the metadata template has been applied to more than 10,000 files or folders.
 
 <CTA to='g://metadata/queries/indexes'>
   Learn about creating and using search indexes
