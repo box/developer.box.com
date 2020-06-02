@@ -1,6 +1,6 @@
 # Box Developer Documentation
 
-![CI][ci_img]
+[![CI][ci_img]][ci]
 [![Project Status][opensource_img]][opensource]
 [![Greenkeeper Status][greenkeeper_img]][greenkeeper]
 
@@ -33,6 +33,7 @@ specific language governing permissions and limitations under the License.
 [boxdev]: https://developer.box.com
 [greenkeeper]: https://greenkeeper.io/
 [opensource]: http://opensource.box.com/badges
+[ci]: https://github.com/box/developer.box.com/actions
 
 [ci_img]: https://github.com/box/developer.box.com/workflows/CI/badge.svg
 [opensource_img]: https://opensource.box.com/badges/active.svg
