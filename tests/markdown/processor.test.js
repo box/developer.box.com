@@ -1,4 +1,4 @@
-const Processor = require('../../src/markdown/Processor')
+const Processor = require('../../src/markdown/processor')
 
 
 beforeAll(() => {
