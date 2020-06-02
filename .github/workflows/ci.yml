@@ -69,10 +69,10 @@ jobs:
         yarn test:compiler
 
     - name: Turn the build dir into an artifact for deployment
-        uses: actions/upload-artifact@v1
-        with:
-          name: compiled
-          path: compiled
+      uses: actions/upload-artifact@v1
+      with:
+        name: compiled
+        path: compiled
 
   # The deploy task actually deploys any changes to the en branch
   deploy:
