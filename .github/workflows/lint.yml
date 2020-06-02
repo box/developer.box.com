@@ -1,4 +1,4 @@
-name: Spellcheck and lint content
+name: Spellcheck & lint content
 
 on:
   push:
