@@ -1,6 +1,6 @@
 # Box Developer Documentation
 
-[![Build Status][travis_img]][travis]
+![CI][ci_img]
 [![Project Status][opensource_img]][opensource]
 [![Greenkeeper Status][greenkeeper_img]][greenkeeper]
 
@@ -33,8 +33,7 @@ specific language governing permissions and limitations under the License.
 [boxdev]: https://developer.box.com
 [greenkeeper]: https://greenkeeper.io/
 [opensource]: http://opensource.box.com/badges
-[travis]: https://travis-ci.com/box/developer.box.com
 
-[travis_img]: https://travis-ci.com/box/developer.box.com.svg?branch=master
+[ci_img]: https://github.com/box/developer.box.com/workflows/CI/badge.svg
 [opensource_img]: https://opensource.box.com/badges/active.svg
 [greenkeeper_img]: https://badges.greenkeeper.io/box/developer.box.com.svg
