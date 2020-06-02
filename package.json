@@ -17,9 +17,11 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "test": "yarn lint",
+    "test": "yarn lint:all",
+    "ci": "yarn lint:ci",
     "test:compiler": "jest ./tests",
-    "lint": "concurrently 'yarn lint:links' 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:yaml' 'yarn lint:alex'",
+    "lint:all": "concurrently 'yarn lint:ci' 'yarn lint:yaml'",
+    "lint:ci": "concurrently 'yarn lint:links' 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:alex'",
     "lint:markdown": "markdownlint -c markdownlintrc.json ./content ./templates",
     "lint:spelling": "yarn lint:spelling:interactive -r",
     "lint:spelling:interactive": "mdspell 'content/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
