@@ -1,4 +1,4 @@
-# The name of this GH action
+# The name of this GH action 
 name: CI
 
 # Defines when this action should be run
@@ -10,7 +10,7 @@ on:
     branches: [ master, staging ]
 
 jobs:
-  # The lint job checks that all content is sanitized,
+  # The lint job checks that all content is sanitized, 
   # spell checked, and without any obvious dead links
   lint:
     # We run this on the latest ubuntu
@@ -21,7 +21,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job
+    # The following steps are performed for each lint job 
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -52,7 +52,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job
+    # The following steps are performed for each lint job 
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -65,31 +65,33 @@ jobs:
     - name: Run the test
       run: |
         yarn install
-        yarn build
         yarn test:compiler
 
-    - name: Turn the build dir into an artifact for deployment
-      uses: actions/upload-artifact@v1
-      with:
-        name: compiled
-        path: compiled
 
   # The deploy task actually deploys any changes to the en branch
   deploy:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
 
+    # We use node 14.X
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     # Requires the lint and test jobs to pass first
-    needs:
+    needs: 
       - lint
       - test
 
-    # The following steps are performed for each lint job
+    # The following steps are performed for each lint job 
     steps:
-      - name: Download the compiled content
-        uses: actions/download-artifact@v1
-        with:
-          name: compiled
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Compile the content
+        run: |
+          yarn install
+          yarn build
 
       - name: Push compiled content
         uses: JamesIves/github-pages-deploy-action@releases/v3
