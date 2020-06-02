@@ -51,7 +51,7 @@
     "@stoplight/json-ref-resolver": "^3.0.1",
     "alex": "^8.1.0",
     "comment-json": "^3.0.2",
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.2.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "jest": "^26.0.1",
