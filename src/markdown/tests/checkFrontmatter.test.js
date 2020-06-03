@@ -23,7 +23,8 @@ files.forEach(source => {
       'type',
       'hide',
       'notes',
-      'note'
+      'note',
+      'icon'
     ])
 
     expect(validator).isArray('related_guides')

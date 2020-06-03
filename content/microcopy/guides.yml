@@ -20,10 +20,10 @@ titles:
   related: Related
 
   // quick_start_guide: A title for a quick start guide
-  quick_start_guide: Quick Start Guide
+  quick_start_guide: Quick Start
 
   // quick_start_guides: A title for quick guides
-  quick_start_guides: Quick Start Guides
+  quick_start_guides: Quick Starts
 
   // api_endpoints: A title for a set of links describing related API endpoints
   api_endpoints: Related APIs
@@ -60,3 +60,6 @@ titles:
 
   // start: The text for a link to the first step in a multi-step guide
   start: Start
+
+  // learn_more: The text for a link that tells a user to start learning
+  learn_more: Learn more

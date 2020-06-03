@@ -2,9 +2,10 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiDatabase
 ---
 
-# Metadata Quick Start
+# Working with Metadata
 
 The Metadata APIs are a great tool to allow applications to automatically add
 additional information to files and folders.

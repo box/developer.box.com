@@ -23,7 +23,7 @@ primary:
 
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
-      text: SDKs/Tools
+      text: SDKs & Tools
 
       // url: The URL to the new page on SDKs - DO NOT TRANSLATE
       url: "/sdks-and-tools/"
@@ -36,6 +36,13 @@ primary:
       url: "/support/"
 
   buttons:
+    dashboard:
+      // text: A longer description of getting to the developer console
+      text: Go to Dev Console
+
+      // url: The URL to the developer console
+      url: https://account.box.com/developers/services
+
     console:
       // text: The text for the link to the developer console
       text: My Apps
@@ -45,17 +52,10 @@ primary:
 
     signup:
       // text: The text for the link to the developer signup
-      text: Sign Up
+      text: Sign up
 
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
-
-  signup:
-    // text: The text for the link to the developer signup
-    text: Sign Up
-
-    // url: The URL to the developer signup - DO NOT TRANSLATE
-    url: https://account.box.com/signup/n/developer#ty9l3
 
 secondary:
   images:

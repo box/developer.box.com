@@ -1,4 +1,4 @@
-const Processor = require('../../src/markdown/Processor')
+const Processor = require('../../src/markdown/processor')
 
 
 beforeAll(() => {
@@ -51,7 +51,7 @@ is_index: false
 id: foo
 rank: 0
 type: guide
-total_steps: 0
+total_steps: 1
 sibling_id: guides
 parent_id: guides
 next_page_id: guides

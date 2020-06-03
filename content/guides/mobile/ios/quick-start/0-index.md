@@ -2,9 +2,10 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
+icon: FiSmartphone
 ---
 
-# iOS SDK Quick Start
+# Learn to use the iOS SDK
 
 <ImageFrame center>
   ![iOS emulator](./xcode-code-snippet.png)

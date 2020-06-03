@@ -17,7 +17,7 @@ To get a enterprise's events, authenticate a user with admin permission and make
 a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 `admin_logs`.
 
-<Samples id="get_events" />
+<Samples id="get_events" variant='enterprise' />
 
 <Message>
   This API requires the user to be an enterprise admin or co-admin with the
@@ -28,10 +28,7 @@ a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 
 The enterprise event feed support filtering by event type.
 
-```curl
-curl https://api.box.com/2.0/events?event_type=LOGIN,FAILED_LOGIN \
-  -H "authorization: Bearer ACCESS_TOKEN"
-```
+<Samples id="get_events" variant='enterprise_filter' />
 
 A full list of event types can be found below.
 
@@ -112,7 +109,7 @@ The following events can be triggered for an enterprise.
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
 | `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance.                                                                    |
 | `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance.                                                                  |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, or location based on enterprise Shield Rules.  |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
 | `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment.                                                                    |
 | `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created.                                                                   |
 | `TASK_ASSIGNMENT_DELETE`                       | A task assignment is deleted.                                                                   |

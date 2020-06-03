@@ -54,7 +54,7 @@ const findBulletLists = (contents) => {
 
   lines.forEach(line => {
     // if this is a clear bullet, add to current position
-    if (line.match(/^ *[\-*]/)) {
+    if (line.match(/^ *[\-*]/) || line.match(/^ *\d\./) ) {
       currentList.push(line)
       lastPadding = padDepth(line)
       lastHasBullet = true

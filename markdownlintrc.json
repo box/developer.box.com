@@ -4,5 +4,6 @@
   "code-block-style": "fenced",
   "no-duplicate-header": false,
   "no-trailing-spaces": false,
-  "single-trailing-newline": false
+  "single-trailing-newline": false,
+  "no-space-in-emphasis": false
 }
