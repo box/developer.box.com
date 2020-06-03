@@ -67,6 +67,14 @@ jobs:
         yarn install
         yarn test:compiler
 
+    - name: Send Slack notification
+      uses: Ilshidur/action-slack@2.0.2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: Box Dev
+        SLACK_AVATAR: "sender"
+      with:
+        args: "Markdown passed linting and testing"
 
   # The deploy task actually deploys any changes to the en branch
   deploy:
