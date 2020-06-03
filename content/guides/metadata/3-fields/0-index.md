@@ -34,4 +34,4 @@ lists. An `enum` field represents a list of predefined items that a user can
 select, while a `multiSelect` field represents a list of items where the user
 can select more than one value.
 
-[r_field]: r://metadata_field
+[r_field]: r://metadata-template/#param-fields
