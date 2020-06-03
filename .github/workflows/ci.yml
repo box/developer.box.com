@@ -108,7 +108,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: Box Dev
-          SLACK_AVATAR: "repository"
+          SLACK_AVATAR: "sender"
         with:
           args: "Pushed latest guides/page changes to `en-staging` branch :rocket:"
 
@@ -153,6 +153,6 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: Box Dev
-          SLACK_AVATAR: "repository"
+          SLACK_AVATAR: "sender"
         with:
           args: "Pushed latest guides/page changes to `en-staging` branch :rocket:"
