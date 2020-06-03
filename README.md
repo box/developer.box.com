@@ -2,7 +2,8 @@
 
 [![CI][ci_img]][ci]
 [![Project Status][opensource_img]][opensource]
-[![Greenkeeper Status][greenkeeper_img]][greenkeeper]
+[![Project
+Status](https://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
 
 This project contain the guides, pages, and microcopy for the Box Developer Documentation.
 
@@ -31,10 +32,8 @@ specific language governing permissions and limitations under the License.
 [license]: LICENSE
 [contrib]: CONTRIBUTING.md
 [boxdev]: https://developer.box.com
-[greenkeeper]: https://greenkeeper.io/
 [opensource]: http://opensource.box.com/badges
 [ci]: https://github.com/box/developer.box.com/actions
 
 [ci_img]: https://github.com/box/developer.box.com/workflows/CI/badge.svg
 [opensource_img]: https://opensource.box.com/badges/active.svg
-[greenkeeper_img]: https://badges.greenkeeper.io/box/developer.box.com.svg
