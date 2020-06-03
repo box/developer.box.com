@@ -110,7 +110,7 @@ jobs:
           SLACK_USERNAME: Box Dev
           SLACK_AVATAR: "sender"
         with:
-          args: "Pushed latest guides/page changes to `en-staging` branch :rocket:"
+          args: "Pushed latest Markdown to `en-staging` branch :rocket:"
 
   
   # The deploy task actually deploys any changes to the en-staging branch
@@ -155,4 +155,4 @@ jobs:
           SLACK_USERNAME: Box Dev
           SLACK_AVATAR: "sender"
         with:
-          args: "Pushed latest guides/page changes to `en-staging` branch :rocket:"
+          args: "Pushed latest Markdown to `en-staging` branch :rocket:"
