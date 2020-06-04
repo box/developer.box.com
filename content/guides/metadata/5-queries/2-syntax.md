@@ -49,7 +49,7 @@ is specified like this needs a subsequent value with that key in the
   "query": "amount >= :amount AND country = :country",
   "query_params": {
     "amount": 100,
-    "country": "US"
+    "country": "United States"
   },
   ...
 }
@@ -118,6 +118,20 @@ to a pattern. The pattern supports the following reserved characters.
 Both of these reserved characters can be used before, after, or in between other
 characters. A pattern can include multiple reserved characters, for example
 `Box% (____)` would match `Box Contract (2020)`.
+
+An example query would looks something like this. Note that the `%`-wrapped
+string is not in the `query` attribute but in the list of `query_params`. 
+
+```json
+{
+  ...,
+  "query": "country ILIKE :country",
+  "query_params": {
+    "country": "%United%"
+  },
+  ...
+}
+```
 
 <Message notice>
 
