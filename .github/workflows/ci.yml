@@ -15,6 +15,7 @@ jobs:
   lint:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
+    timeout-minutes: 3
 
     # We use node 14.X
     strategy:
@@ -46,6 +47,7 @@ jobs:
   test:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
+    timeout-minutes: 3
 
     # We use node 14.X
     strategy:
@@ -80,6 +82,7 @@ jobs:
   deploy:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
+    timeout-minutes: 3
 
     # Only run for the master branch
     if: github.ref == 'refs/heads/master'
