@@ -20,7 +20,7 @@ parent_id: uploads/chunked
 next_page_id: uploads/chunked/commit-session
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/uploads/chunked/with-sdks.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/with-sdks.md
 ---
 
 # Chunked Upload with SDKs

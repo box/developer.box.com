@@ -18,7 +18,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: applications/app-gallery
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/index.md
 ---
 
 # Applications

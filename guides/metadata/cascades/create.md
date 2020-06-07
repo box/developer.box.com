@@ -19,7 +19,7 @@ parent_id: metadata/cascades
 next_page_id: metadata/cascades/force-apply
 previous_page_id: metadata/cascades/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/3-create.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/3-create.md
 ---
 
 # Create a metadata cascade policy

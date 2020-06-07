@@ -11,7 +11,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: collaborations/pending
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collaborations/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/index.md
 ---
 
 # Collaborations

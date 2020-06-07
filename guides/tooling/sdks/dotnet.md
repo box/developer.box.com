@@ -20,7 +20,7 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/java
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/sdks/dotnet.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/dotnet.md
 ---
 
 # Install .NET SDK

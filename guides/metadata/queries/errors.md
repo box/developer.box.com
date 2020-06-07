@@ -13,7 +13,7 @@ parent_id: metadata/queries
 next_page_id: metadata/queries
 previous_page_id: metadata/queries/pagination
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-queries/4-errors.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/4-errors.md
 ---
 
 # Common errors

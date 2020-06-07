@@ -21,7 +21,7 @@ parent_id: authentication
 next_page_id: authentication
 previous_page_id: authentication/select
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/sso.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/sso.md
 ---
 
 # Box API & SSO

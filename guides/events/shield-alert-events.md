@@ -18,7 +18,7 @@ parent_id: events
 next_page_id: events/pagination
 previous_page_id: events/polling
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/events/shield-alert-events.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/events/shield-alert-events.md
 ---
 
 # Shield alert events

@@ -15,7 +15,7 @@ parent_id: sso-identities-and-app-users
 next_page_id: sso-identities-and-app-users
 previous_page_id: sso-identities-and-app-users/create-app-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/3-find-app-user.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/3-find-app-user.md
 ---
 
 # Find app user for SSO identity

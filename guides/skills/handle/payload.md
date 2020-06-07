@@ -19,7 +19,7 @@ parent_id: skills/handle
 next_page_id: skills/handle/metadata
 previous_page_id: skills/handle
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/skills/handle/payload.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/payload.md
 ---
 
 # Parse Skills Payload

@@ -15,7 +15,7 @@ parent_id: skills
 next_page_id: skills/handle/payload
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/skills/handle/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/index.md
 ---
 
 # Handle Skills Events

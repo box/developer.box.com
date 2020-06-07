@@ -11,7 +11,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: guides
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/get-started.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/get-started.md
 ---
 
 # Get started

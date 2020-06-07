@@ -14,7 +14,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: authentication/sso
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/index.md
 ---
 
 # Authentication

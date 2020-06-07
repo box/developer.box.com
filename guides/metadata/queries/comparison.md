@@ -13,7 +13,7 @@ parent_id: metadata/queries
 next_page_id: ''
 previous_page_id: metadata/queries/indexes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-queries/7-comparison.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/7-comparison.md
 ---
 
 # Comparison to regular search

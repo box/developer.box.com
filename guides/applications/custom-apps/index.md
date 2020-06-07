@@ -17,7 +17,7 @@ parent_id: applications
 next_page_id: applications/custom-apps/jwt-setup
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-apps/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/index.md
 ---
 
 # Custom Apps

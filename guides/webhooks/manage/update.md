@@ -21,7 +21,7 @@ parent_id: webhooks/manage
 next_page_id: webhooks/manage/delete
 previous_page_id: webhooks/manage/for-folder
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/webhooks/manage/update.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/update.md
 ---
 
 # Update Webhook

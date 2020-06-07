@@ -19,7 +19,7 @@ parent_id: users/deprovision
 next_page_id: ''
 previous_page_id: users/deprovision/user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/users/deprovision/transfer-folders.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/users/deprovision/transfer-folders.md
 ---
 
 # Transfer Files & Folders

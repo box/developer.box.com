@@ -23,7 +23,7 @@ parent_id: collections
 next_page_id: collections
 previous_page_id: collections/add
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collections/remove.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collections/remove.md
 ---
 
 # Remove Item from Collection

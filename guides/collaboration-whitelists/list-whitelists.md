@@ -20,7 +20,7 @@ parent_id: collaboration-whitelists
 next_page_id: collaboration-whitelists/delete-whitelist
 previous_page_id: collaboration-whitelists/create-whitelist
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collaboration-whitelists/list-whitelists.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collaboration-whitelists/list-whitelists.md
 ---
 
 # List Collaboration Whitelists for an Enterprise

@@ -18,7 +18,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: sso-identities-and-app-users/find-app-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/index.md
 ---
 
 # SSO & App users

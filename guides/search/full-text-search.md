@@ -19,7 +19,7 @@ parent_id: search
 next_page_id: search
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/search/full-text-search.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/search/full-text-search.md
 ---
 
 # Full-Text Search

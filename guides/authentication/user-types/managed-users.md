@@ -19,7 +19,7 @@ parent_id: authentication/user-types
 next_page_id: authentication/user-types
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/user-types/managed-users.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/managed-users.md
 ---
 
 # Managed Users

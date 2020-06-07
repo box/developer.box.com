@@ -21,7 +21,7 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/cli
 previous_page_id: tooling/sdks/python
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/sdks/salesforce.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/salesforce.md
 ---
 
 # Install Salesforce SDK

@@ -22,7 +22,7 @@ parent_id: authentication/oauth2
 next_page_id: authentication/oauth2/as-user
 previous_page_id: authentication/oauth2
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/oauth2/without-sdk.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/without-sdk.md
 ---
 
 # OAuth 2.0 without SDKs

@@ -15,7 +15,7 @@ next_page_id: >-
   sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
 ---
 
 # Connect Okta identities to Box App Users in a web app

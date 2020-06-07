@@ -18,7 +18,7 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/explorer
 previous_page_id: embed/ui-elements
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/browser.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/browser.md
 ---
 
 # Browser Support
