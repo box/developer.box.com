@@ -60,7 +60,7 @@ Additionally, the following folder is created at build time:
 	
 ### <a name='Deployingchanges'></a>Deploying changes
 
-By pushing to the `master` branch the source will automatically be compiled and
+By pushing to the `default` branch the source will automatically be compiled and
 pushed to the [`en`][en_branch] branch by
 [Travis][travis].
 
