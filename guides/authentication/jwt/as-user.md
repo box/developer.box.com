@@ -23,7 +23,6 @@ previous_page_id: authentication/jwt
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/as-user.md
 ---
-
 # as-user Header
 
 It is possible to for a JWT application to act on behalf of another user
@@ -72,6 +71,7 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -80,6 +80,7 @@ client.asUser([USER_ID]");
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -88,6 +89,7 @@ user_client = client.as_user(user_to_impersonate)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

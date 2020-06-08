@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/1-string.md
 ---
-
 # String metadata field
 
 A metadata field of type `string` is displayed to a user as a standard text-field.

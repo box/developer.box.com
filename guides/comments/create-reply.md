@@ -21,7 +21,6 @@ previous_page_id: comments/create-comment
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/comments/create-reply.md
 ---
-
 # Create Reply
 
 To create a reply to a previous comment, call the [`POST

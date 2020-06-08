@@ -19,7 +19,6 @@ previous_page_id: tasks/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/index.md
 ---
-
 <!-- alex disable reject -->
 
 # Tasks

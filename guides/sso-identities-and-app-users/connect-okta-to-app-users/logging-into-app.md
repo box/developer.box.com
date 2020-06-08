@@ -15,7 +15,6 @@ previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configu
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/4-logging-into-app.md
 ---
-
 # Logging into the app with Okta
 
 With the Okta, Box, and basic application set up, we can turn our attention to
@@ -103,6 +102,7 @@ http.createServer(express).listen(port, () => {
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 In your local application directory, load the
@@ -175,6 +175,7 @@ public static void main(String[] args) {
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 In your local application directory, load the `server.py` file created in step
@@ -245,6 +246,7 @@ within this route will be run. When we validate an Okta user, the code within
 the `box_auth` route will be run.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 In your local application, load `Views` > `Shared` > `Layout.cshtml`. Once the
@@ -318,6 +320,7 @@ enact. If the user is authenticated, they will be redirected to the `Profile`
 routing method.
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -369,6 +372,7 @@ connector will automatically handle this route and force the user through to
 the Okta login.
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
@@ -385,6 +389,7 @@ We pass that user object to a `validateUser` function, which we'll define in
 the next step.
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following code.
@@ -423,6 +428,7 @@ method, passing in the Okta user object. We'll define this class and methods in
 the next step.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
@@ -446,6 +452,7 @@ sends that data to the to be created `validateUser` method to find a matching
 Box user, which will be created in the next step.
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -463,6 +470,7 @@ Please select a preferred language / framework in step 1 to get started.
 * You set up the main route handler to pass to Box user verification.
 
 <Observe option='box.app_type' value='use_own,create_new_'>
+
 <Next>
 
 I have set up the Okta login

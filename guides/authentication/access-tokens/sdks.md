@@ -22,7 +22,6 @@ previous_page_id: authentication/access-tokens/api-calls
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/sdks.md
 ---
-
 # Using in SDKs
 
 The SDKs have direct support for JWT and OAuth 2.0 authentication, yet in some

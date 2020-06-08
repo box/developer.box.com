@@ -19,7 +19,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/files/get.md
 ---
-
 # Get File Information
 
 To get a file's information, not it's content, call the
@@ -41,6 +40,7 @@ To get more of the fields for a file, make sure to pass along the `fields`
 query parameter.
 
 <CTA to='g://api-calls/request-extra-fields'>
+
 Learn about requesting extra fields
 
 </CTA>

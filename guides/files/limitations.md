@@ -17,7 +17,6 @@ previous_page_id: files
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/files/limitations.md
 ---
-
 # Limitations
 
 A few limitations exists when working with files.

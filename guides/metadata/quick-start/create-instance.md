@@ -20,7 +20,6 @@ previous_page_id: metadata/quick-start/create-template
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/3-create-instance.md
 ---
-
 # Apply metadata to a file
 
 With your new `customerData` template in hand you can now apply this template to
@@ -46,6 +45,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```c#
@@ -61,6 +61,7 @@ Dictionary<string, object> metadata = await client.MetadataManager
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -77,6 +78,7 @@ file.createMetadata(
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -90,6 +92,7 @@ client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

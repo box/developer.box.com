@@ -23,7 +23,6 @@ previous_page_id: uploads/chunked/commit-session
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/folder.md
 ---
-
 # Upload All Files in Folder
 
 Sometimes an application might want to upload all files from a folder. To do so
@@ -262,6 +261,7 @@ public class UploadAllFilesInFolder {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -470,6 +470,7 @@ function handleFolderConflictError(e) {
 ```
 
 </Tab>
+
 <Tab title='CLI'>
 
 ```sh

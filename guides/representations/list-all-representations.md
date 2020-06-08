@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/list-all-representations.md
 ---
-
 # List All Representations for File
 
 To see what representations are available for a file you can call the

@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/1-list.md
 ---
-
 # List metadata cascade policies
 
 <Message warning>

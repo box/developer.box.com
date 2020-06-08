@@ -24,13 +24,13 @@ previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/jwt-setup.md
 ---
-
 # Setup with JWT
 
 A Custom App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
+
 Learn how JWT authentication works
 
 </CTA>

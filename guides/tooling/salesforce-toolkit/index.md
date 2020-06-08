@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/salesforce-toolkit/index.md
 ---
-
 # Salesforce Developer Toolkit
 
 The Box for Salesforce Developer Toolkit allows customers to programmatically

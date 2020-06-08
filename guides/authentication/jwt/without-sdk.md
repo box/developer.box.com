@@ -25,7 +25,6 @@ previous_page_id: authentication/jwt/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/without-sdk.md
 ---
-
 # JWT without SDKs
 
 If you are not ready to use any of the official Box SDKs, or an SDK is not
@@ -182,6 +181,7 @@ config = json.load(open('config.json'))
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -191,6 +191,7 @@ const config = JSON.parse(fs.readFileSync("config.json"));
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -202,6 +203,7 @@ config = JSON.parse(
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -348,6 +350,7 @@ key = load_pem_private_key(
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -358,6 +361,7 @@ let key = {
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -371,6 +375,7 @@ key = OpenSSL::PKey::RSA.new(
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -464,6 +469,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -482,6 +488,7 @@ let claims = {
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -500,6 +507,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -605,6 +613,7 @@ assertion = jwt.encode(
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -621,6 +630,7 @@ let assertion = jwt.sign(claims, key, headers)
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -630,6 +640,7 @@ assertion = JWT.encode(claims, key, 'RS512', { kid: keyId })
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -771,6 +782,7 @@ access_token = json.loads(response)['access_token']
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -790,6 +802,7 @@ let accessToken = await axios.post(
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -814,6 +827,7 @@ access_token = JSON.parse(response.body)['access_token']
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php

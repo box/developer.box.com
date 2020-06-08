@@ -17,7 +17,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/index.md
 ---
-
 # Handle Skills Events
 
 Within the application or site that is set up as your

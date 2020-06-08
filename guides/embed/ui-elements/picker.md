@@ -22,7 +22,6 @@ previous_page_id: embed/ui-elements/open-with
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/picker.md
 ---
-
 # Content Picker
 
 The Box Content Picker UI Element allows developers to add support for selecting
@@ -55,6 +54,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
+
 Learn about selecting an authentication method
 
 </CTA>

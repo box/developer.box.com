@@ -21,7 +21,6 @@ previous_page_id: skills/handle
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/payload.md
 ---
-
 # Parse Skills Payload
 
 When a new file is uploaded, copied, or moved to a folder monitored by a Skills

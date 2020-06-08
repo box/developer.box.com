@@ -20,7 +20,6 @@ previous_page_id: sso-identities-and-app-users/find-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/index.md
 ---
-
 # SSO & App users
 
 Single Sign-On (SSO) services are often used as part of a company's **Identity

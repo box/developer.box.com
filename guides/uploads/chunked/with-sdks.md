@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/with-sdks.md
 ---
-
 # Chunked Upload with SDKs
 
 The Box SDKs make it possible to perform a chunked upload with the built-in

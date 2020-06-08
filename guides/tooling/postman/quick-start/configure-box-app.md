@@ -16,7 +16,6 @@ previous_page_id: tooling/postman/quick-start/install-postman
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/quick-start/2-configure-box-app.md
 ---
-
 <!-- alex disable postman-postwoman -->
 
 # Configure a Box App
@@ -103,6 +102,7 @@ the fields below.
 id='postman_credentials.client_id'
 placeholder='zECq2EkYBjZ...'
 pattern='\w{32}'>
+
 Client ID
 
 </Store>
@@ -111,6 +111,7 @@ Client ID
 id='postman_credentials.client_secret'
 placeholder='913td9hr6jo...'
 pattern='\w{32}'>
+
 Client Secret
 
 </Store>
@@ -148,6 +149,7 @@ this guide.
 </Choice>
 
 <Observe option='postman.app_type' value='use_box,use_own'>
+
 <Next>
 
 I have configured a Box app

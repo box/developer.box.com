@@ -22,7 +22,6 @@ previous_page_id: folders/single/copy
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/delete.md
 ---
-
 # Delete Folder
 
 To remove a folder in Box you will need to provide our API with the ID of the

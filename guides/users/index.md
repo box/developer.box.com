@@ -21,7 +21,6 @@ previous_page_id: users/delete-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/index.md
 ---
-
 # Users
 
 The Box API supports a variety of users, ranging from real employees logging in
@@ -29,6 +28,7 @@ with their Managed User account, to applications using App Users to drive
 powerful automation workflows.
 
 <CTA to='g://authentication/user-types'>
+
 Learn more about user types
 
 </CTA>

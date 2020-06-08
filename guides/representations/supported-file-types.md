@@ -21,7 +21,6 @@ previous_page_id: representations/text
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/supported-file-types.md
 ---
-
 # Supported File Types
 
 The following file types are supported by the representation API.

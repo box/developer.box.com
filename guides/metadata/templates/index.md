@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/0-index.md
 ---
-
 # Metadata templates
 
 A [metadata template][template] describes a set of key/value
@@ -32,6 +31,7 @@ associated with it, such as a `marketingCollateral` instance and a
 Metadata templates are grouped into two distinct groups, or **scopes**.
 
 <CTA to='g://metadata/scopes'>
+
 Learn more about Metadata Scopes
 
 </CTA>

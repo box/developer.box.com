@@ -14,7 +14,6 @@ previous_page_id: tooling/postman/quick-start/log-in-to-box
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/quick-start/4-load-postman-collection.md
 ---
-
 <!-- alex disable postman-postwoman -->
 
 # Load Postman Collection

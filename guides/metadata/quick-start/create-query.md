@@ -13,7 +13,6 @@ previous_page_id: metadata/quick-start/update-template
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/6-create-query.md
 ---
-
 # Create a metadata query
 
 As a final step, let's look at how you can create a query to find specific files
@@ -25,6 +24,7 @@ is similar to SQL and it supports boolean operations and comparative operators
 to perform powerful searches.
 
 <CTA to='g://metadata/queries'>
+
 Learn more about creating queries
 
 </CTA>
@@ -151,6 +151,7 @@ By default this API returns `20` items per page, but more items can be requested
 using marker-based pagination.
 
 <CTA to='g://metadata/queries'>
+
 Learn more about metadata queries
 
 </CTA>

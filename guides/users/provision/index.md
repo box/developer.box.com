@@ -15,7 +15,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/index.md
 ---
-
 # Provision Users
 
 When setting up a brand new Box user account, a common need is to have that new

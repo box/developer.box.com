@@ -21,7 +21,6 @@ previous_page_id: trash/permanently-delete-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/restore-folder.md
 ---
-
 # Restore Folder
 
 To restore a folder that has been moved to the trash, but has not yet been

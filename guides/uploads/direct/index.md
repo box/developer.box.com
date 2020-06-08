@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/direct/index.md
 ---
-
 # Direct Uploads
 
 The most straightforward way to upload a file to Box is using a direct upload.

@@ -24,7 +24,6 @@ previous_page_id: authentication/jwt/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/index.md
 ---
-
 # JWT Auth
 
 Server-side authentication using JWT one of the most powerful ways to

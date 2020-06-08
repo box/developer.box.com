@@ -19,7 +19,6 @@ previous_page_id: tasks/assignments/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/5-list.md
 ---
-
 # List a task's assignments
 
 To list all of the assignments for a specific tasks, call the

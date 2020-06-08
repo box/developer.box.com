@@ -22,7 +22,6 @@ previous_page_id: collaboration-whitelists/create-whitelist
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaboration-whitelists/list-whitelists.md
 ---
-
 # List Collaboration Whitelists for an Enterprise
 
 Listing the collaboration whitelists will return all domains that permit

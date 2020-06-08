@@ -25,7 +25,6 @@ previous_page_id: collections/add
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/remove.md
 ---
-
 # Remove Item from Collection
 
 To remove an item from a collection, call the `PUT` endpoint for that specific

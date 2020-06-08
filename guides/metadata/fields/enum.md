@@ -21,7 +21,6 @@ previous_page_id: metadata/fields
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/4-enum.md
 ---
-
 # Enum metadata field
 
 A metadata field of type `enum` is displayed to a user as a dropdown list. The

@@ -15,7 +15,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/0-index.md
 ---
-
 # Mobile
 
 The Box mobile SDKs provide native access to the Box API from within your iOS

@@ -20,7 +20,6 @@ previous_page_id: embed/ui-elements
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/browser.md
 ---
-
 # Browser Support
 
 Box UI elements are supported in the following browsers.

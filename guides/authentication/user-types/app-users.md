@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/app-users.md
 ---
-
 # App Users & Service Accounts
 
 An App User is a virtual type of user that has no login credentials and

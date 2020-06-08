@@ -20,7 +20,6 @@ previous_page_id: trash/permanently-delete-folder
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/restore-web-link.md
 ---
-
 # Restore Web Link
 
 To restore a web link that has been moved to the trash, but has not yet been

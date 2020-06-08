@@ -23,7 +23,6 @@ previous_page_id: authentication/access-tokens/revoke
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/downscope.md
 ---
-
 # Downscope a Token
 
 Downscoping is a way to exchange an existing Access Token for a new one that is

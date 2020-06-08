@@ -15,7 +15,6 @@ previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/logging
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/5-find-or-create-box-users.md
 ---
-
 # Find or create Box app users
 
 At this point we have application code that will handle traffic from users
@@ -103,6 +102,7 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 In your local application directory, load the
@@ -148,6 +148,7 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 In your local application directory, load the `server.py` file created in step
@@ -199,12 +200,14 @@ This code will create a new Box app user and will set the
 which will define the binding between the two user records.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 Within the `Controllers` > `AccountController.cs` file, inside the associated
 `AccountController` class, add the following method.
 
 <!-- markdownlint-disable line-length -->
+
 ```dotnet
 static async Task validateUser(string name, string sub)
 {
@@ -261,6 +264,7 @@ which will define the binding between the two user records.
 A diagnostic message is then written back stating that the new user was created.
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -309,6 +313,7 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
@@ -354,6 +359,7 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 Replace the `# TODO: VALIDATE USER` comment with the following:
@@ -387,6 +393,7 @@ If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
@@ -404,6 +411,7 @@ SDK client that is scoped specifically for that user, rather than the
 application.
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -444,6 +452,7 @@ user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 <!-- markdownlint-disable line-length -->
@@ -474,6 +483,7 @@ information for the Okta associated Box app user.
 <!-- markdownlint-enable line-length -->
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 Replace `# TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
@@ -496,12 +506,14 @@ user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
 
 <!-- markdownlint-disable line-length -->
+
 ```dotnet
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
@@ -530,6 +542,7 @@ Please select a preferred language / framework in step 1 to get started.
 * You're making a Box API call for an existing Box user.
 
 <Observe option='box.app_type' value='use_own,create_new_'>
+
 <Next>
 
 I have set up Box user validation and creation

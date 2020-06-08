@@ -21,7 +21,6 @@ previous_page_id: api-calls/ensure-consistency
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/domain-whitelisting.md
 ---
-
 # Domain Whitelisting
 
 To use the Box APIs it is important that your application and users have access

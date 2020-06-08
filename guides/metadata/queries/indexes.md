@@ -15,7 +15,6 @@ previous_page_id: metadata/queries
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/6-indexes.md
 ---
-
 # Indexes
 
 Due to scale considerations a metadata query might return a `HTTP 403` error

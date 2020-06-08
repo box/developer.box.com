@@ -18,7 +18,6 @@ previous_page_id: webhooks/handle
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/retries.md
 ---
-
 <!-- alex disable failed -->
 
 # Webhook Retries

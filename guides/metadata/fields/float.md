@@ -21,7 +21,6 @@ previous_page_id: metadata/fields/string
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/2-float.md
 ---
-
 # Float metadata field
 
 A metadata field of type `float` is displayed to a user as a standard text-field

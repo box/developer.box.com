@@ -15,7 +15,6 @@ previous_page_id: >-
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/2-configure-okta.md
 ---
-
 # Configure Okta
 
 Our next step in the Okta / Box integration is to create and configure the Okta
@@ -96,6 +95,7 @@ Fill out the application details with the following configuration settings:
 </ImageFrame>
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 * Name: Any
@@ -111,6 +111,7 @@ Fill out the application details with the following configuration settings:
 </ImageFrame>
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 * Name: Any
@@ -126,6 +127,7 @@ Fill out the application details with the following configuration settings:
 </ImageFrame>
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 * Name: Any
@@ -191,6 +193,7 @@ appropriate configuration files.
 Your `config.json` file should look similar to the following.
 
 <!-- markdownlint-disable line-length -->
+
 ```js
 const oktaClientId = exports.oktaClientId = '0oa48567frkg5KW4x6';
 const oktaClientSecret = exports.oktaClientSecret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3';
@@ -201,6 +204,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 <!-- markdownlint-enable line-length -->
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 * Open the `/src/main/resources/application.properties` file and update the
@@ -227,6 +231,7 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 In addition to the standard configuration information for the org and app, the
@@ -291,6 +296,7 @@ Lastly, update the Flask configuration file
 Your `client_secrets.json` file should look similar to the following.
 
 <!-- markdownlint-disable line-length -->
+
 ```js
 {
   "web": {
@@ -326,6 +332,7 @@ Your `client_secrets.json` file should look similar to the following.
 Your `ConfigureServices` method should look similar to the following.
 
 <!-- markdownlint-disable line-length -->
+
 ```dotnet
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
@@ -378,6 +385,7 @@ log in to the application.
 * You created a test Okta user.
 
 <Observe option='programming.platform' value='node,java,python'>
+
 <Next>
 
 I've created my Okta app and set up user / local configuration

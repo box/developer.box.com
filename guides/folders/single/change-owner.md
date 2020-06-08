@@ -21,7 +21,6 @@ previous_page_id: folders/single/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/change-owner.md
 ---
-
 # Change Folder Owner
 
 To change the owner of a folder, first invite the user to transfer the folder to
@@ -48,6 +47,7 @@ curl -X PUT https://api.box.com/2.0/collaborations/1234 \
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```dotnet
@@ -60,6 +60,7 @@ BoxCollaboration collab = await client.CollaborationsManager.EditCollaborationAs
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -71,6 +72,7 @@ for (BoxCollaboration.Info collabInfo : pendingCollaborations) {
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -81,6 +83,7 @@ updated_collaboration = collaboration.update_info(CollaborationRole.OWNER)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

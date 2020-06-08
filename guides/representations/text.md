@@ -22,7 +22,6 @@ previous_page_id: representations/pdf
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/text.md
 ---
-
 # Get Text Representation
 
 A text representation provides a way to extract plain text

@@ -25,7 +25,6 @@ previous_page_id: authentication/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/index.md
 ---
-
 # User Types
 
 There are a few types of users that an application might encounter. The key

@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/pages/sdks-and-tools/index.md
 ---
-
 # SDKs & Tools
 
 The following tools are actively developed and supported by Box. These tools

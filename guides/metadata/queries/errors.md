@@ -15,7 +15,6 @@ previous_page_id: metadata/queries/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/4-errors.md
 ---
-
 # Common errors
 
 Metadata query API errors mostly are [similar to errors returned by other
@@ -92,6 +91,7 @@ result in an error. The error will inform the caller to specify a suitable index
 as the argument to the `​use_index​` parameter.
 
 <CTA to='g://metadata/queries/indexes'>
+
 Learn more about creating and using indexes
 
 </CTA>

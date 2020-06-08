@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/resource.md
 ---
-
 # Access Token Object
 
 When an Access Token is requested through the OAuth 2.0 or JWT methods, an

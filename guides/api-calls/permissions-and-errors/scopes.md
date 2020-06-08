@@ -18,7 +18,6 @@ previous_page_id: api-calls/permissions-and-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/scopes.md
 ---
-
 # Scopes
 
 It is important to select the correct permissions for a Box application

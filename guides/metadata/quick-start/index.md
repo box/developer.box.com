@@ -16,7 +16,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/0-index.md
 ---
-
 # Working with Metadata
 
 The Metadata APIs are a great tool to allow applications to automatically add

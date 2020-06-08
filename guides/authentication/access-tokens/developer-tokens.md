@@ -21,7 +21,6 @@ previous_page_id: authentication/access-tokens/sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/developer-tokens.md
 ---
-
 # Developer Tokens
 
 A Developer Token is an Access Token available to developers during development

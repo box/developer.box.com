@@ -21,7 +21,6 @@ previous_page_id: users/deprovision/user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/deprovision/transfer-folders.md
 ---
-
 # Transfer Files & Folders
 
 As part of user account deprovisioning, a common requirement is to transfer all

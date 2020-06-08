@@ -19,7 +19,6 @@ previous_page_id: embed/box-view/upload-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/best-practices.md
 ---
-
 # Best Practices
 
 ## Regenerate and Rollover App Tokens

@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/managed-users.md
 ---
-
 # Managed Users
 
 A Managed User is the most regular Box user. It's an employee of an enterprise

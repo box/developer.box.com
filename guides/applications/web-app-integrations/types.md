@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/types.md
 ---
-
 # Integrations Types
 
 There are two kinds of integration a Web App Integration can offer.

@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/index.md
 ---
-
 # OAuth 2.0 Auth
 
 Client-side OAuth 2.0 is one of the easiest ways to authenticate a user for the

@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/index.md
 ---
-
 <!-- alex disable corruption -->
 
 # Chunked Uploads

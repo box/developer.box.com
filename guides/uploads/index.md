@@ -14,7 +14,6 @@ previous_page_id: uploads/check
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/index.md
 ---
-
 # Uploads
 
 The Box API supports two distinct methods of file upload. The [direct file
@@ -37,6 +36,7 @@ accepted by Box before it uploads any bytes. It can both be used for new files,
 as well as uploading new versions of existing files.
 
 <CTA to='g://uploads/check'>
+
 Learn more about pre-flight checks
 
 </CTA>

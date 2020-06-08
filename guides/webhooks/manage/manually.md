@@ -19,7 +19,6 @@ previous_page_id: webhooks/manage/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/manually.md
 ---
-
 # Manually Create Webhook
 
 Additionally to creating webhooks via the Box APIs it is possible to

@@ -23,7 +23,6 @@ previous_page_id: shared-links/find-for-item
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/remove.md
 ---
-
 # Remove Shared Link
 
 A shared link may be removed from a resource by calling the

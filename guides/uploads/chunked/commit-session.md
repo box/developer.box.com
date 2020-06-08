@@ -24,7 +24,6 @@ previous_page_id: uploads/chunked/create-session
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/commit-session.md
 ---
-
 # Commit Upload Session
 
 The final step in a chunked upload is to commit the session.

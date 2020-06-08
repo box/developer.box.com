@@ -14,7 +14,6 @@ previous_page_id: retention-policies/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/retention-policies/index.md
 ---
-
 # Retention Policies
 
 A retention policy blocks permanent deletion of content for a specified amount

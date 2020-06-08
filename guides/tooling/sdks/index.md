@@ -21,7 +21,6 @@ previous_page_id: tooling/sdks/cli
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/index.md
 ---
-
 # SDKs & CLI
 
 To make working with the Box API easier we provide the following SDKs and CLI.

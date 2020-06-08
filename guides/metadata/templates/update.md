@@ -22,7 +22,6 @@ previous_page_id: metadata/templates/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/5-update.md
 ---
-
 # Update a metadata template
 
 Updating a metadata template can be achieved by passing an array of operations

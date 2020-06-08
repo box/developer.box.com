@@ -20,7 +20,6 @@ previous_page_id: security/terms-of-service/for-colaboration
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/security/terms-of-service/permissions.md
 ---
-
 # Permissions
 
 The following is a list of permissions users, admins, and co-admins need to have

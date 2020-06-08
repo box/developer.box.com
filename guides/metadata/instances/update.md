@@ -24,7 +24,6 @@ previous_page_id: metadata/instances/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/4-update.md
 ---
-
 # Update metadata on an item
 
 Updating the metadata applied to a file or folder can be done by using the

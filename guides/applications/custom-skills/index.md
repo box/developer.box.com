@@ -19,7 +19,6 @@ previous_page_id: applications/custom-skills/approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-skills/index.md
 ---
-
 # Customs Skills
 
 A Custom Skill, or Box Skill is a type of application that performs custom
@@ -51,6 +50,7 @@ Before a Custom Skill can be used it needs to be assigned to a folder for which 
 skill should trigger.
 
 <CTA to='g://applications/custom-skills/approval'>
+
 Learn more about approving Custom Skills
 
 </CTA>

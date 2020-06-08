@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/markdown/tables.md
 ---
-
 <!-- does not need translation -->
 
 # Table
@@ -78,6 +77,7 @@ linter to allow for long lines.
 <H>
 
 <!-- markdownlint-disable line-length -->
+
 | Header                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |

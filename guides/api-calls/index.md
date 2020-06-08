@@ -17,7 +17,6 @@ previous_page_id: api-calls/language-codes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/index.md
 ---
-
 # API Calls
 
 The Box API is a restful API that attempts to follow common HTTP standards

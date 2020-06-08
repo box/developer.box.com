@@ -18,7 +18,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/types-and-formats.md
 ---
-
 # Types & Formats
 
 The following sections explain some basic concepts about the types and formats

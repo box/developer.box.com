@@ -22,7 +22,6 @@ previous_page_id: tasks/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/5-delete.md
 ---
-
 # Delete a task
 
 To remove a task, call the [`DELETE /tasks/:task_id`](e://delete_tasks_id) API

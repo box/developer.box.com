@@ -22,7 +22,6 @@ previous_page_id: webhooks/handle/setup-signatures
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/verify-signatures.md
 ---
-
 <!-- alex disable attacks -->
 
 # Verify Webhook Signatures
@@ -62,6 +61,7 @@ var expired = Date.now() - date > 10*60*1000;
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -113,6 +113,7 @@ hmac2.update(timestamp);
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -148,6 +149,7 @@ var digest2 = hmac2.digest('base64');
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -185,6 +187,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py

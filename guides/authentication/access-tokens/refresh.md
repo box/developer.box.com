@@ -22,7 +22,6 @@ previous_page_id: authentication/access-tokens/developer-tokens
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/refresh.md
 ---
-
 # Refresh a Token
 
 An Access Token can be refreshed by using the Refresh Token that came with the

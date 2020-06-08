@@ -23,7 +23,6 @@ previous_page_id: representations/download-a-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/thumbnail.md
 ---
-
 # Get Basic Thumbnail
 
 A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in

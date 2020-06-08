@@ -17,7 +17,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
 ---
-
 # Connect Okta identities to Box App Users in a web app
 
 [Okta][okta] is a popular access management and identity platform used by

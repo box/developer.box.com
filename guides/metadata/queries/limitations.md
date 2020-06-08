@@ -15,7 +15,6 @@ previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/5-limitations.md
 ---
-
 # Limitations
 
 A few limits apply to the the metadata query APIs.
@@ -37,6 +36,7 @@ Due to scale considerations a metadata query might return a `HTTP 403` error
 when the metadata template has been applied to more than 10,000 files or folders.
 
 <CTA to='g://metadata/queries/indexes'>
+
 Learn about creating and using search indexes
 
 </CTA>

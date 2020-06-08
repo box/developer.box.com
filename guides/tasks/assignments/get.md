@@ -19,7 +19,6 @@ previous_page_id: tasks/assignments/update-message
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/4-get.md
 ---
-
 # Get task assignment information
 
 To get information about an assigned task, call the

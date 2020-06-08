@@ -23,7 +23,6 @@ previous_page_id: webhooks/manage/list-all
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/for-file.md
 ---
-
 # Create Webhook for File
 
 To attach a webhook to an file, call the [Create webhook][1] endpoint with the

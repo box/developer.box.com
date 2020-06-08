@@ -20,7 +20,6 @@ previous_page_id: webhooks/handle/retries
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/setup-signatures.md
 ---
-
 <!-- alex disable aattacks -->
 
 # Setup Webhook Signatures

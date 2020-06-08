@@ -15,7 +15,6 @@ previous_page_id: metadata/queries/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/2-syntax.md
 ---
-
 # Query syntax
 
 The query syntax for the metadata query API is similar to that of a SQL

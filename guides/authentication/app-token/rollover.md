@@ -19,7 +19,6 @@ previous_page_id: authentication/app-token/endpoints
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/rollover.md
 ---
-
 # Rotating App Tokens
 
 By updating one of the application's App Tokens at a time the application can

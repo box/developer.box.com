@@ -20,7 +20,6 @@ previous_page_id: security/terms-of-service/flow
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/security/terms-of-service/for-colaboration.md
 ---
-
 # Find Terms for Collaboration
 
 Information about the Terms of Service that is in effect for any

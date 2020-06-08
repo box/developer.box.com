@@ -13,7 +13,6 @@ previous_page_id: collaborations/pending
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/index.md
 ---
-
 # Collaborations
 
 Collaborations define access permissions for users and groups to files and

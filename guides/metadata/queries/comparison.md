@@ -15,7 +15,6 @@ previous_page_id: metadata/queries/indexes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/7-comparison.md
 ---
-
 # Comparison to regular search
 
 At the surface the [Metadata Query API][mdq_api] seems very similar to the

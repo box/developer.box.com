@@ -23,7 +23,6 @@ previous_page_id: authentication/app-token/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/index.md
 ---
-
 # App Token Auth
 
 Server-side authentication using App Tokens is an alternative way to

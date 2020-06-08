@@ -23,7 +23,6 @@ previous_page_id: folders/single/move
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/copy.md
 ---
-
 # Copy Folder
 
 To copy a folder in Box you will need to provide our API with the `id` of the

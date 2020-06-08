@@ -24,7 +24,6 @@ previous_page_id: metadata/instances/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/2-get.md
 ---
-
 # Get metadata on item
 
 Information about an instance of a metadata template assigned to a file or

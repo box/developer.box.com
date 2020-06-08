@@ -21,7 +21,6 @@ previous_page_id: support
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/pages/support/community-projects.md
 ---
-
 # Community Projects
 
 The community projects list publicly available tools and services that have

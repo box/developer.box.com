@@ -14,7 +14,6 @@ previous_page_id: metadata/quick-start/create-query
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/7-next-steps.md
 ---
-
 # Next steps
 
 You've reached the end of this Quick Start guide. By now you should have taken

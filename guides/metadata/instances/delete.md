@@ -25,7 +25,6 @@ previous_page_id: metadata/instances
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/5-delete.md
 ---
-
 # Remove metadata from an item
 
 Removing an instance of a metadata template assigned to a file or

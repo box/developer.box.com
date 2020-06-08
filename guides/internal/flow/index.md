@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/index.md
 ---
-
 <!-- does not need translation -->
 
 # Controlling Flow

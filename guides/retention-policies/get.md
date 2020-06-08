@@ -21,7 +21,6 @@ previous_page_id: retention-policies/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/retention-policies/get.md
 ---
-
 # Get Retention Policy
 
 To get the information for a specific Retention Policy that has been created in

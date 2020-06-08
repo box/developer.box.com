@@ -21,7 +21,6 @@ previous_page_id: applications/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/app-gallery.md
 ---
-
 # App Gallery
 
 The [Box App Gallery][app-gallery] is the first place for Box users to find out

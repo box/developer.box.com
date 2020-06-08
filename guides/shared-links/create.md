@@ -23,7 +23,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/create.md
 ---
-
 # Create Shared Link
 
 Shared links may be created directly for file or folder resources to generate a

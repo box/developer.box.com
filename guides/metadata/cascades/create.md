@@ -21,7 +21,6 @@ previous_page_id: metadata/cascades/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/3-create.md
 ---
-
 # Create a metadata cascade policy
 
 <Message warning>

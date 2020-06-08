@@ -24,7 +24,6 @@ previous_page_id: embed/box-view/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/index.md
 ---
-
 # Box View
 
 Box View is an embeddable service for displaying a high-fidelity interactive

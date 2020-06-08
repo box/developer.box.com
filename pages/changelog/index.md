@@ -16,7 +16,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/pages/changelog/index.md
 ---
-
 <!-- alex disable postman-postwoman -->
 
 # Changelog

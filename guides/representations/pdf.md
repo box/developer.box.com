@@ -24,7 +24,6 @@ previous_page_id: representations/thumbnail-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/pdf.md
 ---
-
 # Get PDF Representation
 
 A PDF representation provides a predictable way to embed documents

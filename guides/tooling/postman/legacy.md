@@ -18,7 +18,6 @@ previous_page_id: tooling/postman/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/legacy.md
 ---
-
 <!-- alex disable postman-postwoman -->
 
 # Legacy Postman Collection

@@ -14,7 +14,6 @@ previous_page_id: collections/remove
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/index.md
 ---
-
 # Collections
 
 Collections in Box are a way to group files, folders, and web links without

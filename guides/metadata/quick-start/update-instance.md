@@ -20,7 +20,6 @@ previous_page_id: metadata/quick-start/create-instance
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/4-update-instance.md
 ---
-
 # Update metadata on a file
 
 Once metadata has been applied to a file or folder there is often a need to
@@ -31,6 +30,7 @@ original data. These operations are performed atomically, ensuring that the
 changes are either all applied or not applied at all.
 
 <CTA to='g://metadata/instances/update'>
+
 Learn more about updating instances
 
 </CTA>
@@ -65,6 +65,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```c#
@@ -88,6 +89,7 @@ Dictionary<string, object> updatedMetadata = await client.MetadataManager
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -101,6 +103,7 @@ file.updateMetadata(
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -115,6 +118,7 @@ file.update(updates)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -138,6 +142,7 @@ client.files.updateMetadata(
 </Tabs>
 
 <CTA to='g://metadata/instances/update'>
+
 Learn more about all operations
 
 </CTA>

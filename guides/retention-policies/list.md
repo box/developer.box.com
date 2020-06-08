@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/retention-policies/list.md
 ---
-
 # List All Retention Policies
 
 To list all Retention Policies that have been created in an enterprise, call

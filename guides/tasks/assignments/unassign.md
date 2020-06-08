@@ -18,7 +18,6 @@ previous_page_id: tasks/assignments/assign
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/2-unassign.md
 ---
-
 # Unassign a task
 
 To unassign a task, you will need to provide the

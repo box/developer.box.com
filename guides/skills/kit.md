@@ -22,7 +22,6 @@ previous_page_id: skills/examples
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/skills/kit.md
 ---
-
 # Box Skills Kit
 
 The Box Skills Kit is a Node wrapper that is designed to abstract many of the

@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/payload.md
 ---
-
 # Webhook Payload
 
 When an event triggers a webhook for a file or a folder, it make a HTTP call to the

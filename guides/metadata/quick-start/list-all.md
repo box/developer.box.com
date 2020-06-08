@@ -19,7 +19,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/1-list-all.md
 ---
-
 # List all metadata templates
 
 It's likely your enterprise already has a list of metadata templates that you
@@ -29,7 +28,9 @@ In general, metadata templates are either available to only your enterprise o
 to every enterprise using Box. The `scope` of a template defines if a template
 is available to everyone (`global`) or only to your enterprise (`enterprise`).
 
-<CTA to='g://metadata/scopes'>Learn more about metadata scopes
+<CTA to='g://metadata/scopes'>
+
+Learn more about metadata scopes
 
 </CTA>
 

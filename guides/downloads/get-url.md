@@ -21,7 +21,6 @@ previous_page_id: downloads/file-version
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/downloads/get-url.md
 ---
-
 # Get Download URL
 
 The official Box SDKs return the binary data when downloading a file. To get the

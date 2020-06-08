@@ -18,7 +18,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/security/device-pinners.md
 ---
-
 # Device Pinners
 
 Building on the login tracking feature – which allows admins to set limits on

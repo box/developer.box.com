@@ -20,7 +20,6 @@ previous_page_id: users/provision/architecture
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/populate-content.md
 ---
-
 # Populate Content
 
 Once the architecture files have been defined through the `etc/skel`
@@ -178,6 +177,7 @@ async function copySkelDirectoryForUser(userID, skelFolderId, boxClient) {
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -308,6 +308,7 @@ public class BoxPlayground {
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```csharp

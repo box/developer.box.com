@@ -16,7 +16,6 @@ previous_page_id: files/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/files/index.md
 ---
-
 # Files
 
 Files, together with [Folders][folders], are at the core of the Box API. File

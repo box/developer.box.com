@@ -21,7 +21,6 @@ previous_page_id: users/provision/populate-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/shared-folders.md
 ---
-
 # Setup Shared Folders
 
 As a final step to manage access to shared folders, we'll create the folder
@@ -237,6 +236,7 @@ async function handleFolderCollaborationConflictError(
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -391,6 +391,7 @@ public class BoxPlayground {
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 <!-- markdownlint-disable line-length -->
@@ -567,6 +568,7 @@ namespace BoxPlayground {
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='CLI'>
 
 ```shell
@@ -661,6 +663,7 @@ async function handleGroupMembershipConflictError(e,
 <!-- markdownlint-disable line-length -->
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -729,6 +732,7 @@ public class BoxPlayground {
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```csharp
@@ -803,6 +807,7 @@ namespace BoxPlayground {
 ```
 
 </Tab>
+
 <Tab title='CLI'>
 
 ```shell

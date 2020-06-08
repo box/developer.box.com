@@ -22,7 +22,6 @@ previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/downloads/in-browser.md
 ---
-
 # Download in Browser
 
 Sometimes an application wants to embed a file into a page as a HTML element. An

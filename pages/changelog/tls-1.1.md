@@ -17,7 +17,6 @@ previous_page_id: changelog/2018
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/pages/changelog/tls-1.1.md
 ---
-
 # TLS 1.1 Deprecation Migration
 
 ## Overview

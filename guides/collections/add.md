@@ -25,7 +25,6 @@ previous_page_id: collections/list-items
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/add.md
 ---
-
 # Add Item to Collection
 
 To add an item to a collection, call the `PUT` endpoint for that specific type of

@@ -19,7 +19,6 @@ previous_page_id: web-links/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/web-links/index.md
 ---
-
 # Web Links
 
 Web links are objects that point to URLs. These objects are also known as

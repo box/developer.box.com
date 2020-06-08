@@ -24,7 +24,6 @@ previous_page_id: authentication/jwt/as-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/user-access-tokens.md
 ---
-
 # User Access Token
 
 It is possible for a JWT application to act on behalf of another user
@@ -119,6 +118,7 @@ var client = sdk.getAppAuthClient('user', '12345');
 </Tabs>
 
 <CTA to='g://authentication/jwt/with-sdk'>
+
 Learn more about using the Box SDKs for JWT
 
 </CTA>
@@ -178,6 +178,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -194,6 +195,7 @@ let claims = {
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -210,6 +212,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -231,6 +234,7 @@ $claims = [
 </Tabs>
 
 <CTA to='g://authentication/jwt/with-sdk'>
+
 Learn more about manually using JWT authentication
 
 </CTA>

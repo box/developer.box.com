@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/direct/file.md
 ---
-
 # Upload New File
 
 To upload a file to Box via direct upload, make an API call to the

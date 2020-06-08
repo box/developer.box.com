@@ -23,7 +23,6 @@ previous_page_id: shared-links/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/find-for-item.md
 ---
-
 # Find Item from Shared Link
 
 The [find item for shared link](endpoint://get_shared_items) API is designed to

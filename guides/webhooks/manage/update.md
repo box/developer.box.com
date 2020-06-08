@@ -23,7 +23,6 @@ previous_page_id: webhooks/manage/for-folder
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/update.md
 ---
-
 # Update Webhook
 
 To update a webhook you will need to provide the

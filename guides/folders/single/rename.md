@@ -21,7 +21,6 @@ previous_page_id: folders/single/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/rename.md
 ---
-
 # Rename Folder
 
 To rename a folder in Box you will need to provide our API with a new `name` for

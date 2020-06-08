@@ -22,7 +22,6 @@ previous_page_id: metadata/templates/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/6-delete.md
 ---
-
 # Delete a metadata template
 
 Deleting a metadata template can be achieved by calling the [`DELETE

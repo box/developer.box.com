@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/select.md
 ---
-
 # Select App Type
 
 The type of Box Application to select depends on the use case for the project.
@@ -62,7 +61,9 @@ A Custom App is best used when the application:
 
 </Message>
 
-<CTA to="g://applications/custom-apps">Learn more about Custom Apps
+<CTA to="g://applications/custom-apps">
+
+Learn more about Custom Apps
 
 </CTA>
 
@@ -120,7 +121,9 @@ A Custom Skill is best used when the application:
 
 </Message>
 
-<CTA to="g://applications/custom-skills">Learn more about Custom Skills
+<CTA to="g://applications/custom-skills">
+
+Learn more about Custom Skills
 
 </CTA>
 

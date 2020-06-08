@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/legal-holds/list.md
 ---
-
 # List All Legal Hold Policies
 
 To list all Legal Hold Policies that have been created in an enterprise, call

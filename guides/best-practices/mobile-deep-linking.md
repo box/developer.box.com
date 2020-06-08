@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/best-practices/mobile-deep-linking.md
 ---
-
 # Mobile Deep Linking
 
 Box’s mobile applications support deep linking into folder and file objects.

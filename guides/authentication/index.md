@@ -16,7 +16,6 @@ previous_page_id: authentication/sso
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/index.md
 ---
-
 # Authentication
 
 Authentication with the Box API uses an Access Token to identify a user. The
@@ -44,6 +43,7 @@ Custom Apps instead and use the relevant authentication method where needed.
 </Message>
 
 <CTA to="guide://authentication/select">
+
 Learn how to select an authorization type
 
 </CTA>

@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/web-links/create.md
 ---
-
 # Create Web Link
 
 To create a web link in Box, you will need to provide our API with a folder

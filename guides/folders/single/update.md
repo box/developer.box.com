@@ -22,7 +22,6 @@ previous_page_id: folders/single/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/update.md
 ---
-
 # Update Folder
 
 To update a folder in Box you will need to call the following API.

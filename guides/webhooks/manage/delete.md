@@ -21,7 +21,6 @@ previous_page_id: webhooks/manage/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/delete.md
 ---
-
 # Delete Webhook
 
 To remove a webhook from a file or folder in Box you will need to provide our

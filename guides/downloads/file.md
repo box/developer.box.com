@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/downloads/file.md
 ---
-
 # Download File
 
 To download a file, pass the [`GET /files/:id/content`][api] the ID of the file

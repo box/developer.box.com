@@ -17,7 +17,6 @@ previous_page_id: sso-identities-and-app-users/create-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/3-find-app-user.md
 ---
-
 # Find app user for SSO identity
 
 When a user logs into a Box custom application with their SSO provider, the
@@ -67,6 +66,7 @@ client.enterprise.getUsers({ "external_app_user_id": ssoUID })
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -91,6 +91,7 @@ if (totalCount.asInt() > 0) {
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -144,6 +145,7 @@ client.enterprise.getUsers({filter_term: ssoEmail})
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -153,6 +155,7 @@ Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(client, ssoEmail);
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python

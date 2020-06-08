@@ -14,7 +14,6 @@ previous_page_id: internal/flow
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/observer.md
 ---
-
 <!-- does not need translation -->
 
 # Observe & Trigger
@@ -103,6 +102,7 @@ list.
 </Trigger>
 
 <Observe option='example.multiple' value='win32,macos'>
+
 ...
 
 </Observe>

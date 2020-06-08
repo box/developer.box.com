@@ -13,7 +13,6 @@ previous_page_id: metadata/fields/float
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/0-index.md
 ---
-
 # Metadata fields
 
 A [metadata template field][r_field] describes a specific

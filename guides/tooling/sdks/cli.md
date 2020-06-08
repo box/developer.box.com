@@ -27,7 +27,6 @@ previous_page_id: tooling/sdks/node
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/cli.md
 ---
-
 # Install Box CLI
 
 The Box Command Line Interface (CLI) is a tool for making requests to
@@ -42,6 +41,7 @@ To install the latest CLI on your machine, download the latest
 `.exe` for Windows or `.pkg` for macOS for the latest release.
 
 <CTA to="https://github.com/box/boxcli/releases">
+
 Download the latest CLI installer
 
 </CTA>

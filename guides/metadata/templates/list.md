@@ -24,7 +24,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/2-list.md
 ---
-
 # List all metadata templates
 
 Metadata templates can be listed for either the [enterprise or the global

@@ -20,13 +20,13 @@ previous_page_id: webhooks/manage/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/triggers.md
 ---
-
 # Webhook Event Triggers
 
 The following is a list of events that can trigger webhooks. Some
 events are only available for files, while others are only available for folders.
 
 <!-- markdownlint-disable line-length -->
+
 | Event                       | Triggered                                                                                                           | File? | Folder? |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
 | `FILE.UPLOADED`             | A file is uploaded to or moved to this folder                                                                                   | No    | Yes     |

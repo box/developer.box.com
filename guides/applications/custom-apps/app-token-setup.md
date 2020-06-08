@@ -24,13 +24,13 @@ previous_page_id: applications/custom-apps/jwt-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/app-token-setup.md
 ---
-
 # Setup with App Tokens
 
 A Custom App can be set up to use server-side
 [App Tokens][app-token] for authentication.
 
 <CTA to='g://authentication/app-token'>
+
 Learn how App Token authentication works
 
 </CTA>

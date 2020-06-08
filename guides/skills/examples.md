@@ -23,7 +23,6 @@ previous_page_id: skills/invocation-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/skills/examples.md
 ---
-
 # Community Sample Skills
 
 The community sample skills lists publicly available Skills samples that have
@@ -43,6 +42,7 @@ Want to submit your project? Please review the
 [Contribution Guidelines][contributing_guidelines].
 
 <CTA to="https://github.com/box-community">
+
 See a full directory of Skills samples on GitHub
 
 </CTA>

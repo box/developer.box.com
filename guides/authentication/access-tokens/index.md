@@ -18,7 +18,6 @@ previous_page_id: authentication/access-tokens/sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/index.md
 ---
-
 # Access Tokens
 
 Access Tokens are at the core of every Box API call. They represent an
@@ -26,6 +25,7 @@ authenticated user to the Box servers and determine what files and folders an
 application has access to.
 
 <CTA to="guide://authentication/select">
+
 Learn about the different ways an app can get authorized
 
 </CTA>
@@ -36,6 +36,7 @@ The following shows how each application type is expected to create an Access
 Token.
 
 <!-- markdownlint-disable line-length -->
+
 | Box Application Type               | How to get Access Token                          |
 | ---------------------------------- | ------------------------------------------------ |
 | Custom App + OAuth 2.0             | [Explicit user grant][oauth2-with-sdk]           |

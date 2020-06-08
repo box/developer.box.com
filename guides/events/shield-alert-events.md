@@ -20,7 +20,6 @@ previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/shield-alert-events.md
 ---
-
 # Shield alert events
 
 Shield alert events provide details about security incidents in an
@@ -124,6 +123,7 @@ Sessions` value within `additional_details.shield_alert.rule_category`.
 The `additional_details` payload will provide the following details.
 
 <!-- markdownlint-disable line-length -->
+
 ```js
 "additional_details":{
   "shield_alert":{
@@ -204,6 +204,7 @@ value within `additional_details.shield_alert.rule_category`.
 The `additional_details` payload will provide the following details.
 
 <!-- markdownlint-disable line-length -->
+
 ```js
 "additional_details":{
   "shield_alert":{

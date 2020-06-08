@@ -24,7 +24,6 @@ previous_page_id: users/create-managed-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/create-app-user.md
 ---
-
 # Create App User
 
 App Users are programmatic user accounts that may only be created by apps that

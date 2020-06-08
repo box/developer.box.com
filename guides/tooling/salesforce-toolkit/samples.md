@@ -19,7 +19,6 @@ previous_page_id: tooling/salesforce-toolkit/methods
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/salesforce-toolkit/samples.md
 ---
-
 # Code Samples
 
 ## Generic Method

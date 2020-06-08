@@ -24,12 +24,12 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/oauth2-setup.md
 ---
-
 # Setup with OAuth 2.0
 
 A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
 
 <CTA to='g://authentication/oauth2'>
+
 Learn how OAuth 2.0 authentication works
 
 </CTA>

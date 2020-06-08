@@ -21,7 +21,6 @@ previous_page_id: embed/box-view/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/create-preview.md
 ---
-
 # Create File Preview
 
 Once a file has been uploaded to the app token application, it may be previewed
@@ -67,6 +66,7 @@ curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```dotnet
@@ -75,6 +75,7 @@ Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -84,6 +85,7 @@ URL embedLink = file.getPreviewLink();
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -92,6 +94,7 @@ embed_url = client.file(file_id).get_embed_url()
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -142,6 +145,7 @@ To set up the Preview Element, start by installing the required components for
 the Content Preview Element.
 
 <CTA to='guide://embed/ui-elements/installation'>
+
 Install Box Elements and Preview
 
 </CTA>

@@ -23,7 +23,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/1-list.md
 ---
-
 # List all metadata on an item
 
 Metadata instances can be listed for either a file or a folder.

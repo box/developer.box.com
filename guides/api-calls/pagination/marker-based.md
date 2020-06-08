@@ -29,7 +29,6 @@ previous_page_id: api-calls/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/pagination/marker-based.md
 ---
-
 # Marker-based Pagination
 
 APIs that use marker-based paging use the `marker` and `limit` query parameters

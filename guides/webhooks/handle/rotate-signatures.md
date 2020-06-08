@@ -22,7 +22,6 @@ previous_page_id: webhooks/handle/verify-signatures
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/rotate-signatures.md
 ---
-
 # Rotate Webhook Signatures
 
 By updating one of your application's webhook signatures keys at a time you can

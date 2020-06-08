@@ -23,7 +23,6 @@ previous_page_id: authentication/oauth2/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/as-user.md
 ---
-
 # As-User Header
 
 It is possible to for an OAuth 2.0 application to act on behalf of another user
@@ -70,6 +69,7 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
@@ -82,6 +82,7 @@ client.asUser([USER_ID]");
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -90,6 +91,7 @@ user_client = client.as_user(user_to_impersonate)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

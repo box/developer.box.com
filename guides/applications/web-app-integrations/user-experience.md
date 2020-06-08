@@ -18,7 +18,6 @@ previous_page_id: applications/web-app-integrations/types
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/user-experience.md
 ---
-
 # User Experience
 
 The following explains what a Web App Integration looks like from the point of

@@ -14,7 +14,6 @@ previous_page_id: internal/flow/store
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/login.md
 ---
-
 <!-- does not need translation -->
 
 # Log in

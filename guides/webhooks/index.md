@@ -27,7 +27,6 @@ previous_page_id: webhooks/limitations
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/index.md
 ---
-
 # Webhooks
 
 Webhooks enable you to attach event triggers to Box files and folders.

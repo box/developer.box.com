@@ -22,13 +22,13 @@ previous_page_id: tooling/sdks/java
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/python.md
 ---
-
 # Install Python SDK
 
 The Box Python SDK can be used to make API calls to the Box APIs in a Python
 project.
 
 <CTA to="https://github.com/box/box-python-sdk">
+
 Learn more about the Python SDK on GitHub
 
 </CTA>
@@ -52,6 +52,7 @@ pip install "boxsdk[jwt]"
 ```
 
 <CTA to="https://github.com/box/box-python-sdk">
+
 Learn more about the Python SDK on GitHub
 
 </CTA>

@@ -21,7 +21,6 @@ previous_page_id: events/shield-alert-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/pagination.md
 ---
-
 # Stream Position Pagination
 
 Paginating the event stream works through the use of the `stream_position`

@@ -21,7 +21,6 @@ previous_page_id: tasks/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/3-for-file.md
 ---
-
 # Lists all tasks for a file
 
 To list all of the tasks for a specific file, call the

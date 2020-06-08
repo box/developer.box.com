@@ -14,7 +14,6 @@ previous_page_id: mobile/ios/quick-start/make-api-call
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/5-next-steps.md
 ---
-
 # Next steps
 
 You've reached the end of this Quick Start guide. By now you should have taken

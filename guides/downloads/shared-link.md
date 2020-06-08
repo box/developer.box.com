@@ -22,7 +22,6 @@ previous_page_id: downloads/file-version
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/downloads/shared-link.md
 ---
-
 # Download Shared Link
 
 To download the file for a [Shared Link][shared-link], first [determine the

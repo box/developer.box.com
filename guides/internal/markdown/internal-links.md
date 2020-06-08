@@ -14,7 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/markdown/internal-links.md
 ---
-
 <!-- does not need translation -->
 
 # Internal links

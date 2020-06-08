@@ -31,7 +31,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/pagination/offset-based.md
 ---
-
 # Offset-based Pagination
 
 APIs that use offset-based paging use the `offset` and `limit` query parameters

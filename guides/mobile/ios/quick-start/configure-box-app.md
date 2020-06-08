@@ -14,7 +14,6 @@ previous_page_id: mobile/ios/quick-start/install-ios-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/3-configure-box-app.md
 ---
-
 # Configure a Box App
 
 To start making authenticated API calls to the Box API with the **Box iOS
@@ -99,6 +98,7 @@ APIs.
 * You have generated and copied the developer token
 
 <Observe option='ios.app_type' value='use_own,create_new_'>
+
 <Next>
 
 I have a developer token

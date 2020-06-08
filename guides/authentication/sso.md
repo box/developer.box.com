@@ -23,7 +23,6 @@ previous_page_id: authentication/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/sso.md
 ---
-
 # Box API & SSO
 
 Many Box Enterprises use **Single Sign On** (SSO) to authenticate

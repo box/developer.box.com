@@ -21,7 +21,6 @@ previous_page_id: metadata/fields/enum
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/5-multi-select.md
 ---
-
 # Multi Select metadata field
 
 A metadata field of type `multiSelect` is displayed to a user as a dropdown

@@ -21,7 +21,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/skills/invocation-url.md
 ---
-
 # Box Skills Invocation URL
 
 When creating a new

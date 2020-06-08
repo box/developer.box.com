@@ -19,7 +19,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/limitations.md
 ---
-
 # Limitations
 
 The following are a few limitations affecting webhooks in Box.

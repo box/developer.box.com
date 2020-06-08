@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/for-user.md
 ---
-
 # Get User Events
 
 To get a user's events, authenticate as any user and make a call to the

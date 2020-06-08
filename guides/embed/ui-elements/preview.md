@@ -22,7 +22,6 @@ previous_page_id: embed/ui-elements/picker
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/preview.md
 ---
-
 # Content Preview
 
 The Box Content Preview UI Element allows developers to embed high
@@ -61,6 +60,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
+
 Learn about selecting an authentication method
 
 </CTA>

@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/with-sdk.md
 ---
-
 # App Tokens with SDKs
 
 The official Box SDKs have build-in support for App Token authentication.

@@ -21,7 +21,6 @@ previous_page_id: webhooks/manage
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/list-all.md
 ---
-
 # List All Webhooks
 
 To fetch all for the authenticated user, use the [List Webhooks][1] API.

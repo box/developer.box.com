@@ -15,7 +15,6 @@ previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/1-scaffold-application-code.md
 ---
-
 # Scaffold application code
 
 Our first step in this guide is to create a local application to house our code
@@ -45,6 +44,7 @@ Using the Spring Boot framework.
 </Choose>
 
 </Grid>
+
 <Grid columns='2'>
 
 <Choose option='programming.platform' value='python' color='blue'>
@@ -104,6 +104,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 * From Eclipse, create a new project. When prompted, select a Gradle project.
@@ -137,6 +138,7 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 * Create a local directory for your application.
@@ -176,6 +178,7 @@ okta_callback_route = '/oidc/callback'
 ```
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 * Create a local directory for your application.
@@ -201,6 +204,7 @@ using Okta.AspNetCore;
  will fill in the specific Okta application values in the next step.
 
 <!-- markdownlint-disable line-length -->
+
 ```dotnet
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
@@ -227,6 +231,7 @@ app.UseAuthentication();
 ```
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>
@@ -244,6 +249,7 @@ Please select a preferred language / framework to get started.
 * You installed all project dependencies.
 
 <Observe option='programming.platform' value='node,java,python'>
+
 <Next>
 
 I have my local application set up

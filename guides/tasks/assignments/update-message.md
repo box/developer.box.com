@@ -19,7 +19,6 @@ previous_page_id: tasks/assignments/unassign
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/3-update-message.md
 ---
-
 # Change an assignment's message
 
 To update a task assignment's message call the

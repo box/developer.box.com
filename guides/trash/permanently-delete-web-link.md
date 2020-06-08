@@ -21,7 +21,6 @@ previous_page_id: trash/restore-web-link
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/permanently-delete-web-link.md
 ---
-
 # Permanently Delete Web Link
 
 Once a web link has been moved to the trash, it will stay in the trash for 30

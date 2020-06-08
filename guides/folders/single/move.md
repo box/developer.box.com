@@ -21,7 +21,6 @@ previous_page_id: folders/single/rename
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/move.md
 ---
-
 # Move Folder
 
 To move a folder, update the ID of its parent folder.

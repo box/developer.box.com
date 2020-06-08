@@ -23,7 +23,6 @@ previous_page_id: webhooks/manage/for-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/for-folder.md
 ---
-
 # Create Webhook for Folder
 
 To attach a webhook to an folder, call the [Create webhook][1] endpoint with the

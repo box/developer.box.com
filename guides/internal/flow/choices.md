@@ -14,7 +14,6 @@ previous_page_id: internal/flow/observer
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/choices.md
 ---
-
 <!-- does not need translation -->
 
 # Choose & Choice

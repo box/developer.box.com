@@ -22,7 +22,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/create.md
 ---
-
 # Create Folder
 
 To create a folder in Box you will need to provide our API with a `name` for the

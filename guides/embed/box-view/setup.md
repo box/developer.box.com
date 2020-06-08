@@ -18,7 +18,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/setup.md
 ---
-
 # Setup
 
 Before uploading files to Box and previewing them using Box View, a Box
@@ -36,6 +35,7 @@ The first step is to create the application and authorize it through your admin
 to begin making API requests to Box.
 
 <CTA to='guide://applications/custom-apps/app-token-setup/'>
+
 Setup and authorize App Token app
 
 </CTA>

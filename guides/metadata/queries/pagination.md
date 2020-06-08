@@ -15,7 +15,6 @@ previous_page_id: metadata/queries/syntax
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/3-pagination.md
 ---
-
 # Paginate and sort
 
 By default only 20 query results are returned per page and the order of these

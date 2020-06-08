@@ -22,7 +22,6 @@ previous_page_id: uploads/direct/file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/direct/file-version.md
 ---
-
 # Upload File Version
 
 To upload a new version of a file to Box via direct upload, make an API call to

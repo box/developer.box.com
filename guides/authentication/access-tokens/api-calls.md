@@ -21,7 +21,6 @@ previous_page_id: authentication/access-tokens/resource
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/api-calls.md
 ---
-
 # Use a Token
 
 Every authenticated API call requires an Access Token to be passed in the

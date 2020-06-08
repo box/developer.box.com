@@ -22,7 +22,6 @@ previous_page_id: tooling/sdks/dotnet
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/java.md
 ---
-
 # Install Java SDK
 
 The Box Java SDK can be used to make API calls to the Box APIs in a Java
@@ -33,6 +32,7 @@ by cloning the source into a project. Additionally it can be installed by
 downloading one of the precompiled JARs from the releases page on GitHub.
 
 <CTA to="https://github.com/box/box-java-sdk">
+
 Learn more about the Java SDK on GitHub
 
 </CTA>
@@ -97,6 +97,7 @@ following additional dependencies to the project.
 <!-- markdownlint-enable line-length -->
 
 <CTA to="https://github.com/box/box-java-sdk">
+
 Learn more about the Java SDK on GitHub
 
 </CTA>

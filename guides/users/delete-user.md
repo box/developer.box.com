@@ -22,7 +22,6 @@ previous_page_id: users/create-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/delete-user.md
 ---
-
 # Delete User
 
 The process for deleting both app and managed users is the same. To delete a

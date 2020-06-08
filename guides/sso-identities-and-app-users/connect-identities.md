@@ -15,7 +15,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/1-connect-identities.md
 ---
-
 # Connect SSO identities to app users
 
 Your SSO service will have a unique user record for each person using it within

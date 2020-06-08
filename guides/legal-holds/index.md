@@ -14,7 +14,6 @@ previous_page_id: legal-holds/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/legal-holds/index.md
 ---
-
 # Legal Holds
 
 A legal hold is a process that an enterprise can use to preserve all forms of

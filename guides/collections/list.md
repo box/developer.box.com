@@ -20,7 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/list.md
 ---
-
 # List User's Collections
 
 To list all collections for a user, call the [`GET
