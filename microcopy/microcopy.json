@@ -173,6 +173,8 @@
   "guides.titles.start": "Start",
   // The text for a link that tells a user to start learning
   "guides.titles.learn_more": "Learn more",
+  // The text for list that represent the sections on this page
+  "guides.titles.on_this_page": "On this page",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
