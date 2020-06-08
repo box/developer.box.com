@@ -1,4 +1,4 @@
-const openRegex = new RegExp(/< *[\w]*[\w :'"\-_={}\.]*>/, 'g')
+const openRegex = new RegExp(/< *[\w]* ?[^>]*>/, 'g')
 const closeRegex = new RegExp(/ *<\/ *([\w]+) *>/, 'g')
 
 if (!String.prototype.splice) {
@@ -10,7 +10,7 @@ if (!String.prototype.splice) {
 const padNestedMarkdownWithNewlines = (contents) => {
   contents = padOpeningLines(contents)
   contents = padClosingLines(contents)
-  return contents
+  return contents.trim()
 }
 
 const padOpeningLines = (contents) => {
