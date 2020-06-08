@@ -63,3 +63,6 @@ titles:
 
   // learn_more: The text for a link that tells a user to start learning
   learn_more: Learn more
+
+  // on_this_page: The text for list that represent the sections on this page
+  on_this_page: On this page
