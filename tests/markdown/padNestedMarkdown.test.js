@@ -7,13 +7,11 @@ Foobar
 </Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar>
+  expect(output).toEqual(`<Foobar>
 
 Foobar
 
-</Foobar>
-`)
+</Foobar>`)
 })
 
 test('should pad nested, indented content', () => {
@@ -23,13 +21,11 @@ test('should pad nested, indented content', () => {
 </Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar>
+  expect(output).toEqual(`<Foobar>
 
   Foobar
 
-</Foobar>
-`)
+</Foobar>`)
 })
 
 test('should pad nested tags', () => {
@@ -43,8 +39,7 @@ test('should pad nested tags', () => {
 </Foo>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foo>
+  expect(output).toEqual(`<Foo>
 
   Foobar
 
@@ -54,8 +49,7 @@ test('should pad nested tags', () => {
 
   </Bar>
 
-</Foo>
-`)
+</Foo>`)
 })
 
 
@@ -70,8 +64,7 @@ test('should pad nested tags with the same name', () => {
 </Foo>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foo>
+  expect(output).toEqual(`<Foo>
 
   Foobar
 
@@ -81,8 +74,7 @@ test('should pad nested tags with the same name', () => {
 
   </Foo>
 
-</Foo>
-`)
+</Foo>`)
 })
 
 test('should deal with embedded reference images', () => {
@@ -92,13 +84,11 @@ test('should deal with embedded reference images', () => {
 </Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar>
+  expect(output).toEqual(`<Foobar>
 
 ![Test][foobar_img]
 
-</Foobar>
-`)
+</Foobar>`)
 })
 
 
@@ -109,13 +99,11 @@ test('should deal with embedded regular images', () => {
 </Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar border width={200}>
+  expect(output).toEqual(`<Foobar border width={200}>
 
 ![Test](./img.png)
 
-</Foobar>
-`)
+</Foobar>`)
 })
 
 test('should deal with inline regular images', () => {
@@ -123,13 +111,11 @@ test('should deal with inline regular images', () => {
 <Foobar>![Test](./img.png)</Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar>
+  expect(output).toEqual(`<Foobar>
 
 ![Test](./img.png)
 
-</Foobar>
-`)
+</Foobar>`)
 })
 
 test('should deal with tag attributes', () => {
@@ -137,11 +123,9 @@ test('should deal with tag attributes', () => {
 <Foobar id='id' data-type="type" data-key='namespaced:value' disabled>![Test](./img.png)</Foobar>
 `
   const output = pad(input)
-  expect(output).toEqual(`
-<Foobar id='id' data-type="type" data-key='namespaced:value' disabled>
+  expect(output).toEqual(`<Foobar id='id' data-type="type" data-key='namespaced:value' disabled>
 
 ![Test](./img.png)
 
-</Foobar>
-`)
+</Foobar>`)
 })
