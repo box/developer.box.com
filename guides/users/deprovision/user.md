@@ -19,9 +19,8 @@ parent_id: users/deprovision
 next_page_id: users/deprovision
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/users/deprovision/user.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/users/deprovision/user.md
 ---
-
 # Deprovision User
 
 Part of regular Box enterprise maintenance is removing accounts for users that
@@ -76,6 +75,7 @@ const transferUserID = '3278487052';
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -99,6 +99,7 @@ try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName(
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```csharp
@@ -118,6 +119,7 @@ using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
 ```
 
 </Tab>
+
 <Tab title='CLI'>
 
 ```shell

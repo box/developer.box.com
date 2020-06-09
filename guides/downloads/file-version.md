@@ -19,9 +19,8 @@ parent_id: downloads
 next_page_id: downloads/get-url
 previous_page_id: downloads/file
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/downloads/file-version.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/downloads/file-version.md
 ---
-
 # Download File Version
 
 To download a specific file version, pass the [`GET /files/:id/content`][api]

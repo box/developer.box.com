@@ -12,9 +12,8 @@ parent_id: mobile/ios/quick-start
 next_page_id: mobile/ios/quick-start/install-ios-sdk
 previous_page_id: mobile/ios/quick-start
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/1-create-ios-app.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/1-create-ios-app.md
 ---
-
 # Create an iOS App
 
 Before installing the Box iOS SDK you'll need to have an iOS application
@@ -39,6 +38,7 @@ Box iOS SDK with a new blank application.
 ![Select iOS application type](./create-app-type.png)
 
 </ImageFrame>
+
 4. Enter your application configuration information, including the
   `Product Name`, `Organization Identifier`, and `Organization Name`.
 <ImageFrame center>
@@ -46,6 +46,7 @@ Box iOS SDK with a new blank application.
 ![Configure iOS application](./create-app-config.png)
 
 </ImageFrame>
+
 5. Select a local storage location for the application and click **Create**
 
 </Choice>

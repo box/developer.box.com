@@ -19,9 +19,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/viewers-and-events
 previous_page_id: embed/ui-elements/access
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/scopes.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/scopes.md
 ---
-
 # Dedicated Scopes
 
 When working with Box UI Elements many developers have shown interest in being

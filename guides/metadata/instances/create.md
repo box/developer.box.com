@@ -23,9 +23,8 @@ parent_id: metadata/instances
 next_page_id: metadata/instances
 previous_page_id: metadata/instances/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/4-instances/3-create.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/3-create.md
 ---
-
 # Apply metadata to an item
 
 A metadata template can be applied to a file or folder using the item's `id`,

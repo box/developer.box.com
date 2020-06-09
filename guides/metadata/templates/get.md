@@ -20,9 +20,8 @@ parent_id: metadata/templates
 next_page_id: metadata/templates/create
 previous_page_id: metadata/templates
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/2-templates/3-get.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/3-get.md
 ---
-
 # Get a metadata template
 
 Information for a metadata template can be retrieved using the template's name

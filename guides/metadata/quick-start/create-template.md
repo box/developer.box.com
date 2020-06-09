@@ -17,9 +17,8 @@ parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/create-instance
 previous_page_id: metadata/quick-start
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/2-create-template.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/2-create-template.md
 ---
-
 # Create a custom metadata template
 
 To create a custom metadata template for your enterprise you can use [our API
@@ -31,7 +30,9 @@ fields. The first field is a text field to hold the customer's `name`, the
 second is a dropdown list of the possible values for the `industry` the customer
 operates in, and the final field represents the total annual contract value (`tav`).
 
-<CTA to='g://metadata/fields'>Learn about the different field types
+<CTA to='g://metadata/fields'>
+
+Learn about the different field types
 
 </CTA>
 
@@ -75,6 +76,7 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```c#
@@ -112,6 +114,7 @@ BoxMetadataTemplate template = await  client.MetadataManager.CreateMetadataTempl
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -151,6 +154,7 @@ MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterp
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -164,6 +168,7 @@ template = client.create_metadata_template('Customer Info', fields)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

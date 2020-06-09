@@ -21,9 +21,8 @@ parent_id: collaborations
 next_page_id: collaborations/pending
 previous_page_id: collaborations/share-folder
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collaborations/groups.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/groups.md
 ---
-
 # Sharing With Groups
 
 To share a file or folder with a group of users, create a collaboration using

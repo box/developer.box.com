@@ -21,9 +21,8 @@ parent_id: downloads
 next_page_id: downloads
 previous_page_id: downloads/get-url
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/downloads/folder.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/downloads/folder.md
 ---
-
 # Download All Files in Folder
 
 Sometimes an application might want to download all files for a folder. To do so
@@ -90,6 +89,7 @@ namespace BoxDownloadAllFiles {
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -155,6 +155,7 @@ public class Playground {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

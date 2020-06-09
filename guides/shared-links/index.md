@@ -17,9 +17,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: shared-links/remove
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/shared-links/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/index.md
 ---
-
 # Shared Links
 
 Shared links are URLs that are generated for files or folders stored in Box,

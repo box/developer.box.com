@@ -20,9 +20,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/logo
 previous_page_id: embed/ui-elements/uploader
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/annotations.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/annotations.md
 ---
-
 # Annotations
 
 Box Annotations allow developers to provide collaboration capabilities right
@@ -31,6 +30,7 @@ wide range of use cases and can be used to draw the previewer's attention and/or
 provide feedback on specific parts of a document or images.
 
 <CTA to="g://embed/ui-elements/preview">
+
 Learn more about Content Preview
 
 </CTA>
@@ -80,6 +80,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
+
 Learn about selecting an authentication method
 
 </CTA>

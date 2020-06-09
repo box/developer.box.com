@@ -12,9 +12,8 @@ parent_id: internal/flow
 next_page_id: internal/flow/login
 previous_page_id: internal/flow/choices
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/internal/flow/store.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/store.md
 ---
-
 <!-- does not need translation -->
 
 # Store

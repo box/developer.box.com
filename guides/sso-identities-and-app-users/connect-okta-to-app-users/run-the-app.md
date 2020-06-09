@@ -13,9 +13,8 @@ next_page_id: ''
 previous_page_id: >-
   sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/6-run-the-app.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/6-run-the-app.md
 ---
-
 # Run the application
 
 With all the components of the sample in place, it's time to run our program to
@@ -46,6 +45,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
+
 <Choice option='programming.platform' value='java' color='none'>
 
 From Eclipse (or your preferred editor) click to run the application. You will
@@ -71,6 +71,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
+
 <Choice option='programming.platform' value='python' color='none'>
 
 From the terminal / command prompt in the local application directory, type
@@ -96,6 +97,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Hello {{USERNAME}}` output to the browser.
 
 </Choice>
+
 <Choice option='programming.platform' value='cs' color='none'>
 
 From Visual Studio Code (or your preferred editor) click `Run` ->
@@ -122,6 +124,7 @@ When attempting to log in with this user in subsequent attempts, you
 will now see `Current user name: {{USERNAME}}` output to the browser.
 
 </Choice>
+
 <Choice option='programming.platform' unset color='none'>
 
 <Message danger>

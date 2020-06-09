@@ -11,9 +11,8 @@ parent_id: metadata
 next_page_id: metadata/instances/delete
 previous_page_id: metadata/instances/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/4-instances/0-index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/0-index.md
 ---
-
 # Metadata instances
 
 A [metadata instance][instance] describes the relation between

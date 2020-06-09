@@ -19,9 +19,8 @@ parent_id: trash
 next_page_id: trash/restore-folder
 previous_page_id: trash/restore-file
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/trash/permanently-delete-file.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/trash/permanently-delete-file.md
 ---
-
 # Permanently Delete File
 
 Once a file has been moved to the trash, it will stay in the trash for 30

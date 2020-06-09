@@ -21,9 +21,8 @@ parent_id: metadata/templates
 next_page_id: metadata/templates/update
 previous_page_id: metadata/templates/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/2-templates/4-create.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/4-create.md
 ---
-
 # Create a metadata template
 
 To create a metadata template, pass a `scope`, `displayName` and an optional set
@@ -97,6 +96,7 @@ can select respectively one or many options from a list of items.
 ```
 
 <CTA to="g://metadata/fields">
+
 Learn more about Metadata Template Fields
 
 </CTA>

@@ -17,9 +17,8 @@ parent_id: best-practices
 next_page_id: best-practices/cors
 previous_page_id: best-practices/mobile-deep-linking
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/best-practices/branding-guidelines.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/best-practices/branding-guidelines.md
 ---
-
 # Branding Guidelines
 
 We’re glad you’re using the Box platform, and we want you to be able to

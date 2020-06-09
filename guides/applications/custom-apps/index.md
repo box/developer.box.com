@@ -17,9 +17,8 @@ parent_id: applications
 next_page_id: applications/custom-apps/jwt-setup
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-apps/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/index.md
 ---
-
 # Custom Apps
 
 By far the more flexible way to use Box Platform is through a **Custom App**
@@ -53,6 +52,7 @@ overview of the key differences.
 <!-- markdownlint-enable line-length -->
 
 <CTA to='g://authentication/select'>
+
 Learn more about the different types of authentication
 
 </CTA>

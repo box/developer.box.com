@@ -19,9 +19,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/uploader
 previous_page_id: embed/ui-elements/preview
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/sidebar.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/sidebar.md
 ---
-
 # Content Sidebar
 
 The Box Content Sidebar UI Element allows developers to add support for viewing
@@ -52,6 +51,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
+
 Learn about selecting an authentication method
 
 </CTA>

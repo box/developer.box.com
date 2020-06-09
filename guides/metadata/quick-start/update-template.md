@@ -17,9 +17,8 @@ parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/create-query
 previous_page_id: metadata/quick-start/update-instance
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/1-quick-start/5-update-template.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/5-update-template.md
 ---
-
 # Update a metadata template
 
 Let's look at how we can update an existing metadata template.
@@ -29,6 +28,7 @@ directly changing the template itself. This method allows you to update any
 existing metadata instances that are already applied to files and folders.
 
 <CTA to='g://metadata/templates/update'>
+
 Learn more about updating templates
 
 </CTA>
@@ -62,6 +62,7 @@ curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTempl
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```c#
@@ -82,6 +83,7 @@ BoxMetadataTemplate updatedTemplate = await client.MetadataManager
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -94,6 +96,7 @@ MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updat
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```py
@@ -104,6 +107,7 @@ template.update_info(updates)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

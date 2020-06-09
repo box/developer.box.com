@@ -11,9 +11,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: trash/permanently-delete-web-link
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/trash/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/trash/index.md
 ---
-
 # Trash
 
 Before items are deleted they might end up in a user's trash. The trash can be

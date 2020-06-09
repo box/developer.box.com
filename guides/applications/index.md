@@ -18,9 +18,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: applications/app-gallery
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/index.md
 ---
-
 # Applications
 
 Box Platform supports two distinctly different application types. The type of
@@ -48,6 +47,7 @@ The following is quick overview of the different Box Application types.
 <!-- markdownlint-enable line-length -->
 
 <CTA to="guide://applications/select">
+
 Learn how to select an application type
 
 </CTA>

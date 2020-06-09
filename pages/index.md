@@ -24,9 +24,8 @@ sibling_id: content
 parent_id: ''
 next_page_id: ''
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/index.md'
+source_url: 'https://github.com/box/developer.box.com/blob/default/content/pages/index.md'
 ---
-
 # Box Platform
 
 <Banner>
@@ -36,21 +35,25 @@ source_url: 'https://github.com/box/developer.box.com/blob/master/content/pages/
 Start building with **Box Platform**
 
 </BannerTitle>
+
 <BannerTitle>
 
 Manage users with **Box Platform**
 
 </BannerTitle>
+
 <BannerTitle>
 
 Build experiences with **Box Platform**
 
 </BannerTitle>
+
 <BannerTitle>
 
 Power content portals with **Box Platform**
 
 </BannerTitle>
+
 <BannerTitle>
 
 Integrate apps with **Box Platform**
@@ -64,6 +67,7 @@ Extend the power of Box with APIs
 <Centered wide>
 
 <Header to='/guides' centered>
+
 Developer News
 
 </Header>
@@ -73,6 +77,7 @@ Developer News
 </BlogCards>
 
 <More to='https://medium.com/box-developer-blog' right>
+
 Developer Blog
 
 </More>
@@ -84,9 +89,11 @@ Developer Blog
 <Centered wide>
 
 <Header to='/guides' centered>
+
 SDKS & Tools
 
 </Header>
+
 <SDKS>
 
 Development with Box Platform is made easier with SDKs for your
@@ -94,26 +101,37 @@ programming language, a command line interface, front-end UI elements,
 and much more.
 
 <SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
+
 Windows .NET SDK
 
 </SDK>
+
 <SDK language='java' href='https://github.com/box/box-java-sdk'>
+
 Java SDK
 
 </SDK>
+
 <SDK language='python' href='https://github.com/box/box-python-sdk'>
+
 Python SDK
 
 </SDK>
+
 <SDK language='node' href='https://github.com/box/box-node-sdk'>
+
 Node SDK
 
 </SDK>
+
 <SDK language='cli' href='https://github.com/box/boxcli'>
+
 Box CLI
 
 </SDK>
+
 <SDK language='uielements' href='https://github.com/box/box-ui-elements'>
+
 UI Elements
 
 </SDK>
@@ -121,6 +139,7 @@ UI Elements
 </SDKS>
 
 <More to='/sdks-and-tools' right>
+
 More SDKs & Tools
 
 </More>
@@ -132,6 +151,7 @@ More SDKs & Tools
 <Centered wide>
 
 <Header to='/guides' centered>
+
 Guides
 
 </Header>
@@ -141,6 +161,7 @@ Guides
 </GuideCategories>
 
 <More to='/guides' right>
+
 All guides
 
 </More>
@@ -152,6 +173,7 @@ All guides
 <Centered wide>
 
 <Header to='/reference' centered>
+
 API Reference
 
 </Header>
@@ -161,6 +183,7 @@ API Reference
 </ReferenceCategories>
 
 <More to='/reference/' right>
+
 Full API Reference
 
 </More>

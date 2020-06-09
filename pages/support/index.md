@@ -14,9 +14,8 @@ parent_id: pages
 next_page_id: support/community-projects
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/pages/support/index.md
+  https://github.com/box/developer.box.com/blob/default/content/pages/support/index.md
 ---
-
 # Support & Community
 
 Our community and support services are aimed to help ensure that your questions
@@ -38,6 +37,7 @@ one of these available channels:
   projects, and releases.
 
 <!-- i18n-enable localize-links -->
+
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://support.box.com/hc/en-us/requests/new

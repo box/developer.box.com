@@ -17,9 +17,8 @@ parent_id: embed
 next_page_id: embed/ui-elements/browser
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/index.md
 ---
-
 # UI Elements
 
 Box UI Elements are pre-built UI components that allow developers to add

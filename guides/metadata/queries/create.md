@@ -13,9 +13,8 @@ parent_id: metadata/queries
 next_page_id: metadata/queries/syntax
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-queries/1-create.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/1-create.md
 ---
-
 # Create a query
 
 A metadata query is a `POST` request to the ​`/metadata_queries/execute_read`-
@@ -51,6 +50,7 @@ For more details about all the available parameters, check out any of our other
 reference](e://post_metadata_queries_execute_read).
 
 <CTA to='g://metadata/queries/syntax'>
+
 Learn more about the query syntax
 
 </CTA>
@@ -176,6 +176,7 @@ By default this API returns `20` items per page, but more items can be requested
 using marker-based pagination.
 
 <CTA to='g://metadata/queries/pagination'>
+
 Learn more about paginating query results
 
 </CTA>

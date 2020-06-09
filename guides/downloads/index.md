@@ -12,9 +12,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: downloads/folder
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/downloads/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/downloads/index.md
 ---
-
 # Downloads
 
 The Box API allows for downloading files to the application's server, or directly
@@ -28,6 +27,7 @@ cases we recommend using one of the ways to embed the Box experience straight
 into your application.
 
 <CTA to="g://embed/">
+
 Learn more about embedding Box
 
 </CTA>
@@ -43,6 +43,7 @@ If this user does not have access to the file the application will receive a
 `404 Not Found` error.
 
 <CTA to="g://authentication/user-types">
+
 Learn more about different User Types
 
 </CTA>

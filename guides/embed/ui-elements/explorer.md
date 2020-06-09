@@ -20,9 +20,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/open-with
 previous_page_id: embed/ui-elements/browser
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/explorer.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/explorer.md
 ---
-
 # Content Explorer
 
 The Box Content Explorer UI Element allows developers to embed a folder view of
@@ -56,6 +55,7 @@ authentication, and Box provides two different ways to generate tokens - OAuth
 and JWT.
 
 <CTA to="g://authentication/select">
+
 Learn about selecting an authentication method
 
 </CTA>

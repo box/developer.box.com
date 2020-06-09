@@ -19,9 +19,8 @@ parent_id: events
 next_page_id: events/shield-alert-events
 previous_page_id: events/for-enterprise
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/events/polling.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/events/polling.md
 ---
-
 # Long-Poll Events
 
 To get real-time notification of activity in a Box account you can use the long

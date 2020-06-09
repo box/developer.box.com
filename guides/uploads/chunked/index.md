@@ -12,9 +12,8 @@ parent_id: uploads
 next_page_id: uploads/chunked/commit-session
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/uploads/chunked/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/index.md
 ---
-
 <!-- alex disable corruption -->
 
 # Chunked Uploads

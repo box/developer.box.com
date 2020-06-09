@@ -20,9 +20,8 @@ parent_id: folders/single
 next_page_id: folders/single/rename
 previous_page_id: folders/single/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/folders/single/update.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/update.md
 ---
-
 # Update Folder
 
 To update a folder in Box you will need to call the following API.

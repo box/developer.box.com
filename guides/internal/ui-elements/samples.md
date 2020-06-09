@@ -12,9 +12,8 @@ parent_id: internal/ui-elements
 next_page_id: internal/ui-elements
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/internal/ui-elements/samples.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/internal/ui-elements/samples.md
 ---
-
 <!-- does not need translation -->
 
 # Samples

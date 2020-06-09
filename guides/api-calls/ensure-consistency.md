@@ -26,9 +26,8 @@ parent_id: api-calls
 next_page_id: api-calls/domain-whitelisting
 previous_page_id: api-calls/request-extra-fields
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/ensure-consistency.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/ensure-consistency.md
 ---
-
 # Ensure Consistency
 
 A few of the Box APIs support headers to control consistency between your

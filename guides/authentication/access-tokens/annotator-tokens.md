@@ -20,9 +20,8 @@ parent_id: authentication/access-tokens
 next_page_id: ''
 previous_page_id: authentication/access-tokens/downscope
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/access-tokens/annotator-tokens.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/annotator-tokens.md
 ---
-
 # Annotator Tokens
 
 Annotations is one of the key features supported by new Box View, that allows
@@ -119,6 +118,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -134,6 +134,7 @@ let claims = {
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -149,6 +150,7 @@ claims = {
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php
@@ -247,6 +249,7 @@ params = urlencode({
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -267,6 +270,7 @@ let accessToken = await axios
 ```
 
 </Tab>
+
 <Tab title='Ruby'>
 
 ```ruby
@@ -282,6 +286,7 @@ params = URI.encode_www_form({
 ```
 
 </Tab>
+
 <Tab title='PHP'>
 
 ```php

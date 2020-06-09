@@ -15,9 +15,8 @@ parent_id: sso-identities-and-app-users
 next_page_id: sso-identities-and-app-users/find-app-user
 previous_page_id: sso-identities-and-app-users/connect-identities
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/sso-identities-and-app-users/2-create-app-user.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/2-create-app-user.md
 ---
-
 # Create connection between SSO identity and app user
 
 When a user signs in to a custom Box application for the first time using their
@@ -73,6 +72,7 @@ client.enterprise.addAppUser(
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -88,6 +88,7 @@ outputString = "New user created: " + createdUserInfo.getName();
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -139,6 +140,7 @@ client.enterprise.addUser(
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -153,6 +155,7 @@ outputString = "New user created: " + createdUserInfo.getName();
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python

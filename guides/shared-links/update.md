@@ -21,9 +21,8 @@ parent_id: shared-links
 next_page_id: shared-links/find-for-item
 previous_page_id: shared-links/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/shared-links/update.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/update.md
 ---
-
 # Update Shared Link
 
 A shared link may be updated from a resource by calling the

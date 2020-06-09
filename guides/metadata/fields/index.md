@@ -11,9 +11,8 @@ parent_id: metadata
 next_page_id: metadata/fields/enum
 previous_page_id: metadata/fields/float
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/3-fields/0-index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/0-index.md
 ---
-
 # Metadata fields
 
 A [metadata template field][r_field] describes a specific
@@ -47,4 +46,4 @@ lists. An `enum` field represents a list of predefined items that a user can
 select, while a `multiSelect` field represents a list of items where the user
 can select more than one value.
 
-[r_field]: r://metadata_field
+[r_field]: r://metadata-template/#param-fields

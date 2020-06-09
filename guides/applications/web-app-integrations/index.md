@@ -18,9 +18,8 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: applications/web-app-integrations/configure
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/web-app-integrations/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/index.md
 ---
-
 # Web App Integration
 
 Box Platform enables an application to provide features to Box users

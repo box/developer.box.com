@@ -18,9 +18,8 @@ parent_id: skills/handle
 next_page_id: ''
 previous_page_id: skills/handle/payload
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/skills/handle/metadata.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/metadata.md
 ---
-
 # Write Skills Metadata
 
 Once you have data insights from the machine learning system ready, the next

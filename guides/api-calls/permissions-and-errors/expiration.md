@@ -15,9 +15,8 @@ parent_id: api-calls/permissions-and-errors
 next_page_id: ''
 previous_page_id: api-calls/permissions-and-errors/scopes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/permissions-and-errors/expiration.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/expiration.md
 ---
-
 # Token & URL Expiration
 
 Across the Box API there are a few tokens, codes, and URLs that automatically

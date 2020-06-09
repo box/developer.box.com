@@ -21,9 +21,8 @@ parent_id: folders/bulk
 next_page_id: ''
 previous_page_id: folders/bulk
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/folders/bulk/build-folder-tree.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/folders/bulk/build-folder-tree.md
 ---
-
 # Build Folder Tree
 
 The following examples provide an example on how to create a JSON representation
@@ -227,6 +226,7 @@ namespace BoxPlayground
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -493,6 +493,7 @@ public class BoxFolderTreeBuilder {
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

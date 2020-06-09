@@ -19,9 +19,8 @@ parent_id: metadata/fields
 next_page_id: metadata/fields/enum
 previous_page_id: metadata/fields/float
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/3-fields/3-date.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/3-date.md
 ---
-
 # Date metadata field
 
 A metadata field of type `date` is displayed to a user as a date picker.

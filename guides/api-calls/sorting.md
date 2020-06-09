@@ -16,9 +16,8 @@ parent_id: api-calls
 next_page_id: api-calls/ensure-consistency
 previous_page_id: api-calls/status-codes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/sorting.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/sorting.md
 ---
-
 # Sorting Responses
 
 Where an API returns a collection of items it often supports sorting of API

@@ -12,9 +12,8 @@ parent_id: mobile/ios/quick-start
 next_page_id: mobile/ios/quick-start/configure-box-app
 previous_page_id: mobile/ios/quick-start/create-ios-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/quick-start/2-install-ios-sdk.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/2-install-ios-sdk.md
 ---
-
 # Install the iOS SDK
 
 With an iOS application in place, you will need to import the required **Box
@@ -144,6 +143,7 @@ others’ code.
   * You imported the iOS SDK `.git` repository into the Swift packages
 
 <Observe option='ios.pm_type' value='carthage,cocoapods,swift'>
+
 <Next>
 
 I've installed the Box iOS SDK dependencies

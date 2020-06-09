@@ -20,9 +20,8 @@ parent_id: tasks
 next_page_id: tasks/delete
 previous_page_id: tasks/for-file
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tasks/4-update.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/4-update.md
 ---
-
 <!-- alex disable reject -->
 
 # Make changes to an existing task

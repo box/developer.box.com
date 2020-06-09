@@ -14,9 +14,8 @@ parent_id: guides
 next_page_id: files/limitations
 previous_page_id: files/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/files/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/files/index.md
 ---
-
 # Files
 
 Files, together with [Folders][folders], are at the core of the Box API. File

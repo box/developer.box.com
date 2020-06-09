@@ -15,9 +15,8 @@ parent_id: webhooks
 next_page_id: webhooks/handle/retries
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/webhooks/handle/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/index.md
 ---
-
 # Handle Webhooks
 
 Once a webhook has been set up it will call your application at the webhook's

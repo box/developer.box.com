@@ -19,9 +19,8 @@ parent_id: metadata/cascades
 next_page_id: metadata/cascades/delete
 previous_page_id: metadata/cascades/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/4-force-apply.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/4-force-apply.md
 ---
-
 # Force-apply metadata to all items in a folder
 
 <Message warning>

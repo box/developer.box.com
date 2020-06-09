@@ -14,9 +14,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: security/device-pinners
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/security/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/security/index.md
 ---
-
 # Security
 
 The Box API offers a few important ways to ensure everyone working with your

@@ -17,9 +17,8 @@ parent_id: tooling/postman/quick-start
 next_page_id: tooling/postman/quick-start/load-postman-collection
 previous_page_id: tooling/postman/quick-start/configure-box-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/postman/quick-start/3-log-in-to-box.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/quick-start/3-log-in-to-box.md
 ---
-
 # Log in to Box
 
 <Choice option='postman.app_type' value='use_own' color='none'>

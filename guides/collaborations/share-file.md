@@ -20,9 +20,8 @@ parent_id: collaborations
 next_page_id: collaborations/share-folder
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collaborations/share-file.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/share-file.md
 ---
-
 # Share File With User
 
 To share a file with a user, create a collaboration using the user ID or email

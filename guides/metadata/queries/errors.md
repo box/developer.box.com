@@ -13,9 +13,8 @@ parent_id: metadata/queries
 next_page_id: metadata/queries
 previous_page_id: metadata/queries/pagination
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-queries/4-errors.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/4-errors.md
 ---
-
 # Common errors
 
 Metadata query API errors mostly are [similar to errors returned by other
@@ -83,15 +82,16 @@ match the field key. The only requirement is that it starts with a `:`.
 ## Missing search index
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 1,000 files or folders.
+when the metadata template has been applied to more than 10,000 files or folders.
 A search index can be created to resolve this error for a specific search query.
 
-If the number of metadata instances exceeds 1,000 then a metadata query request
+If the number of metadata instances exceeds 10,000 then a metadata query request
 which does not include a suitable **index** in the `​use_index​` parameter will
 result in an error. The error will inform the caller to specify a suitable index
 as the argument to the `​use_index​` parameter.
 
 <CTA to='g://metadata/queries/indexes'>
+
 Learn more about creating and using indexes
 
 </CTA>

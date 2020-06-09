@@ -19,9 +19,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/access
 previous_page_id: embed/ui-elements/annotations
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/logo.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/logo.md
 ---
-
 # Customize Logo
 
 Each of the Box UI Elements allow for specifying a custom logo to place in the

@@ -17,9 +17,8 @@ parent_id: applications/custom-skills
 next_page_id: applications/custom-skills/approval
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/custom-skills/setup.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-skills/setup.md
 ---
-
 # Setup
 
 Setting up a Custom Skill is a multi-step process.
@@ -65,6 +64,7 @@ Before a Custom Skill can be used it needs to be assigned to a folder for which 
 skill should trigger.
 
 <CTA to='g://applications/custom-skills/approval'>
+
 Learn more about approving Custom Skills
 
 </CTA>

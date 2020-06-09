@@ -19,9 +19,8 @@ parent_id: legal-holds
 next_page_id: legal-holds
 previous_page_id: legal-holds/list
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/legal-holds/get.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/legal-holds/get.md
 ---
-
 # Get Legal Hold Policy
 
 To get the information for a specific Legal Hold policy that has been created in

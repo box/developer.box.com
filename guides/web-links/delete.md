@@ -20,9 +20,8 @@ parent_id: web-links
 next_page_id: web-links
 previous_page_id: web-links/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/web-links/delete.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/web-links/delete.md
 ---
-
 # Delete Web Link
 
 To remove a web link in Box you will need to provide our API with the ID of

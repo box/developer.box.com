@@ -18,9 +18,8 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/browser
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/ui-elements/installation.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/installation.md
 ---
-
 # Installation
 
 UI Elements can be used either by downloading the Javascript libraries
@@ -52,6 +51,7 @@ npm install box-ui-elements
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
+
 Learn more on the NPM website
 
 </CTA>
@@ -171,7 +171,6 @@ Most of the UI elements have 2 distinct versions.
   - These libraries expect a React and ReactDOM `>= 16.2` and `< 17`.
 
 <message>
-
 Only one of the 2 `js` files, and the additional `css` file need to be added
 to a project.
 
@@ -226,7 +225,9 @@ be accessible:
 In order to initialize any of the UI Elements, an application will need to
 provide a valid Access Token.
 
-<CTA to="authentication/select">Learn how to authenticate an application
+<CTA to="authentication/select">
+
+Learn how to authenticate an application
 
 </CTA>
 

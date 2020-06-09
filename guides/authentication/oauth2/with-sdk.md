@@ -23,9 +23,8 @@ parent_id: authentication/oauth2
 next_page_id: authentication/oauth2/without-sdk
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/oauth2/with-sdk.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/with-sdk.md
 ---
-
 # OAuth 2.0 with SDKs
 
 The Box SDKs have built-in support for client-side OAuth 2.0.
@@ -84,6 +83,7 @@ var sdk = new BoxClient(config);
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
@@ -97,6 +97,7 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -109,6 +110,7 @@ sdk = OAuth2(
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -125,6 +127,7 @@ var sdk = new BoxSDK({
 </Tabs>
 
 <CTA to="guide://tooling/sdks">
+
 Learn more about installing an SDK for your environment
 
 </CTA>
@@ -144,6 +147,7 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
@@ -157,6 +161,7 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -166,6 +171,7 @@ auth_url, csrf_token = sdk.get_authorization_url('[REDIRECT_URL]')
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -243,6 +249,7 @@ var client = new BoxClient(config, session);
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -254,6 +261,7 @@ BoxAPIConnection client = new BoxAPIConnection(
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -262,6 +270,7 @@ client = Client(oauth)
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

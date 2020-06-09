@@ -16,9 +16,8 @@ parent_id: tasks/assignments
 next_page_id: ''
 previous_page_id: tasks/assignments/list
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tasks/assignments/6-change-state.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/6-change-state.md
 ---
-
 <!-- alex disable reject -->
 
 # Change task assignment state

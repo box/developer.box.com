@@ -13,9 +13,8 @@ parent_id: mobile/android
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/android/install.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/mobile/android/install.md
 ---
-
 # Android SDK Installation
 
 The Android SDK may be obtained through several methods:

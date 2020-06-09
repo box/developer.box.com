@@ -17,9 +17,8 @@ parent_id: embed
 next_page_id: embed/box-embed
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/box-dicom.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-dicom.md
 ---
-
 # Box DICOM
 
 The Box DICOM Viewer allows developers to store, view and share DICOM files like

@@ -21,9 +21,8 @@ parent_id: users
 next_page_id: users/create-app-user
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/users/create-managed-user.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/users/create-managed-user.md
 ---
-
 # Create Managed User
 
 To generate a new managed user, the minimal information that will be required

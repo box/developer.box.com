@@ -12,9 +12,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: events/pagination
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/events/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/events/index.md
 ---
-
 # Events
 
 The event feed provides a way for an application to subscribe to any actions

@@ -14,15 +14,15 @@ parent_id: pages
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/pages/newsletter/index.md
+  https://github.com/box/developer.box.com/blob/default/content/pages/newsletter/index.md
 ---
-
 # Newsletter
 
 Each quarter, we send out a newsletter to our community with the top developer
 events, product releases, and community highlights.
 
 <CTA to="https://community.box.com/t5/Box-Newsletters/bg-p/Newsletters">
+
 Sign Up for the Developer Newsletter
 
 </CTA>

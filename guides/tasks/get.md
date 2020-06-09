@@ -17,9 +17,8 @@ parent_id: tasks
 next_page_id: tasks/for-file
 previous_page_id: tasks/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tasks/2-get.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/2-get.md
 ---
-
 # Get information about a task
 
 To get information about an assigned task, call the

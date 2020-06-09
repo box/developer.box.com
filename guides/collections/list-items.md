@@ -21,9 +21,8 @@ parent_id: collections
 next_page_id: collections/add
 previous_page_id: collections/list
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/collections/list-items.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/collections/list-items.md
 ---
-
 # List Items in Collections
 
 To list all files, folders and web links in a folder call the [`GET

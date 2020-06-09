@@ -17,9 +17,8 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: representations/supported-file-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/representations/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/representations/index.md
 ---
-
 # Representations
 
 A representation is an alternative asset for a file stored in Box. These assets

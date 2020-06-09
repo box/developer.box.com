@@ -13,7 +13,6 @@ parent_id: mobile
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/mobile/ios/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/index.md
 ---
-
 # iOS

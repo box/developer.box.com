@@ -17,9 +17,8 @@ parent_id: embed
 next_page_id: embed
 previous_page_id: embed/box-dicom
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/box-embed.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-embed.md
 ---
-
 # Box Embed
 
 Box Embed is a HTML-based framework that makes it possible to embed the entire

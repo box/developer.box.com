@@ -20,9 +20,8 @@ parent_id: webhooks
 next_page_id: webhooks/manage/list-all
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/webhooks/manage/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/index.md
 ---
-
 # Manage Webhooks
 
 The Box API allows for programmatic creation and deletion of webhooks.

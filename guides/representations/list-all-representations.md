@@ -18,9 +18,8 @@ parent_id: representations
 next_page_id: representations/request-a-representation
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/representations/list-all-representations.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/representations/list-all-representations.md
 ---
-
 # List All Representations for File
 
 To see what representations are available for a file you can call the

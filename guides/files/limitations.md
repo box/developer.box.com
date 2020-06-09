@@ -15,9 +15,8 @@ parent_id: files
 next_page_id: ''
 previous_page_id: files
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/files/limitations.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/files/limitations.md
 ---
-
 # Limitations
 
 A few limitations exists when working with files.

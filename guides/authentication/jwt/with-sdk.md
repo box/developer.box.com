@@ -22,9 +22,8 @@ parent_id: authentication/jwt
 next_page_id: authentication/jwt
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/jwt/with-sdk.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/with-sdk.md
 ---
-
 # JWT with SDKs
 
 The official Box SDKs have build-in support for JWT authentication.

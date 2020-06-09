@@ -13,9 +13,8 @@ parent_id: metadata
 next_page_id: metadata/queries/indexes
 previous_page_id: metadata/queries/errors
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/5-queries/0-index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/0-index.md
 ---
-
 # Metadata queries
 
 A [metadata query][query] provides a way to find files and

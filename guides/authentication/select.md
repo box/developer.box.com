@@ -17,15 +17,15 @@ parent_id: authentication
 next_page_id: authentication/sso
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/select.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/select.md
 ---
-
 # Select Auth Method
 
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
 <CTA to="guide://applications/select">
+
 Learn how to select the application type for your app
 
 </CTA>
@@ -90,6 +90,7 @@ Client-side authentication is the ideal authentication method for apps that:
 </Message>
 
 <CTA to="guide://authentication/oauth2">
+
 Learn about client-side authentication with OAuth 2.0
 
 </CTA>
@@ -123,6 +124,7 @@ Server-side authentication with JWT is the ideal authentication method for apps 
 </Message>
 
 <CTA to="guide://authentication/jwt">
+
 Learn about server-side authentication with JWT
 
 </CTA>
@@ -151,6 +153,7 @@ for apps that:
 </Message>
 
 <CTA to="guide://authentication/app-token">
+
 Learn about server-side authentication with App Tokens
 
 </CTA>

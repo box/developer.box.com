@@ -22,9 +22,8 @@ parent_id: authentication/oauth2
 next_page_id: authentication/oauth2/as-user
 previous_page_id: authentication/oauth2
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/oauth2/without-sdk.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/without-sdk.md
 ---
-
 # OAuth 2.0 without SDKs
 
 If you are not ready to use any of the official Box SDKs, or an SDK is not
@@ -100,6 +99,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
@@ -113,6 +113,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -122,6 +123,7 @@ authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -135,6 +137,7 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 </Tabs>
 
 <CTA to="e://get-authorize">
+
 Learn more about the authorization URL
 
 </CTA>
@@ -155,6 +158,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 <!-- markdownlint-disable line-length -->
@@ -168,6 +172,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 <!-- markdownlint-enable line-length -->
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -176,6 +181,7 @@ auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js
@@ -256,6 +262,7 @@ var accessToken = token.access_token;
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -288,6 +295,7 @@ String accessToken = token.access_token;
 ```
 
 </Tab>
+
 <Tab title='Python'>
 
 ```python
@@ -306,6 +314,7 @@ access_token = json.loads(response)['access_token']
 ```
 
 </Tab>
+
 <Tab title='Node'>
 
 ```js

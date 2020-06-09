@@ -18,9 +18,8 @@ parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/downscope
 previous_page_id: authentication/access-tokens/refresh
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/authentication/access-tokens/revoke.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/revoke.md
 ---
-
 # Revoke a Token
 
 An Access Token can be revoked at any time by either sending the Access Token or

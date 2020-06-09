@@ -20,15 +20,15 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/cli
 previous_page_id: tooling/sdks/python
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/sdks/node.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/node.md
 ---
-
 # Install Node SDK
 
 The Box Node SDK can be used to make API calls to the Box APIs in a Node
 project.
 
 <CTA to="https://github.com/box/box-node-sdk">
+
 Learn more about the Node SDK on GitHub
 
 </CTA>
@@ -51,6 +51,7 @@ yarn add box-node-sdk
 ```
 
 <CTA to="https://github.com/box/box-node-sdk">
+
 Learn more about the Node SDK on GitHub
 
 </CTA>

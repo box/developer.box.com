@@ -19,9 +19,8 @@ parent_id: applications/web-app-integrations
 next_page_id: applications/web-app-integrations
 previous_page_id: applications/web-app-integrations/user-experience
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/applications/web-app-integrations/configure.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/configure.md
 ---
-
 # Create Web App Integration
 
 The following guide explains how to set up a Web App Integration for a Custom

@@ -18,9 +18,8 @@ parent_id: users/provision
 next_page_id: users/provision/populate-content
 previous_page_id: users/provision
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/users/provision/architecture.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/architecture.md
 ---
-
 # Create Architecture Skeleton
 
 Our first requirement is to copy general files and folders into each individual
@@ -77,6 +76,7 @@ the folders to the Service Account.
 ```
 
 </Tab>
+
 <Tab title='skel_sub_directories.json'>
 
 ```json
@@ -221,6 +221,7 @@ let treeCreator = new BoxFolderTreeCreator(serviceAccountClient);
 ```
 
 </Tab>
+
 <Tab title='Java'>
 
 ```java
@@ -348,6 +349,7 @@ public class BoxFolderTreeCreator {
 ```
 
 </Tab>
+
 <Tab title='.NET'>
 
 ```csharp

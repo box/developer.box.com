@@ -16,9 +16,8 @@ parent_id: embed/box-view
 next_page_id: embed/box-view/best-practices
 previous_page_id: embed/box-view/create-preview
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/embed/box-view/upload-file.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/upload-file.md
 ---
-
 # Upload Files
 
 To generate a preview embed link for a file, that file needs to be uploaded to
@@ -36,6 +35,7 @@ during [application setup](guide://embed/box-view/setup) to authenticate your
 application.
 
 <CTA to='guide://authentication/app-token/'>
+
 Authenticate your application
 
 </CTA>
@@ -44,6 +44,7 @@ Once an authenticated client has been created, it may be used to upload files
 directly to the app token application to be converted.
 
 <CTA to='guide://uploads/direct/file/'>
+
 Upload files to Box
 
 </CTA>

@@ -15,9 +15,8 @@ parent_id: api-calls
 next_page_id: api-calls/pagination/marker-based
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/pagination/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/pagination/index.md
 ---
-
 # Pagination
 
 The Box API supports two ways to paginate collections. The most common way to

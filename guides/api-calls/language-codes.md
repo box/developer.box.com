@@ -16,9 +16,8 @@ parent_id: api-calls
 next_page_id: api-calls
 previous_page_id: api-calls/suppress-notifications
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/language-codes.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/language-codes.md
 ---
-
 # Language Codes
 
 The Box API uses a modified version of the ISO 639-1 Language Code to specify a

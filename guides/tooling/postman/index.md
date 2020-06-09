@@ -18,9 +18,8 @@ parent_id: tooling
 next_page_id: tooling/postman/make-api-call
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/tooling/postman/index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/index.md
 ---
-
 <!-- alex disable postman-postwoman -->
 
 # Postman Collection
@@ -33,6 +32,7 @@ get started with the Box API.
 The simplest way to get started with Postman is with our Postman Quick Start guide.
 
 <CTA to='g://tooling/postman/quick-start'>
+
 Get Started with the Box Postman Collection
 
 </CTA>

@@ -15,9 +15,8 @@ parent_id: api-calls
 next_page_id: api-calls/language-codes
 previous_page_id: api-calls/domain-whitelisting
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/suppress-notifications.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/suppress-notifications.md
 ---
-
 # Suppress Notifications
 
 For some API calls, email and webhook notifications can be prevented by

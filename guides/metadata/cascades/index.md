@@ -11,9 +11,8 @@ parent_id: metadata
 next_page_id: ''
 previous_page_id: metadata/cascades/delete
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/metadata/6-cascades/0-index.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/0-index.md
 ---
-
 # Metadata cascade policies (Beta)
 
 <Message warning>

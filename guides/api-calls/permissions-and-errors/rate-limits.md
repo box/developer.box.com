@@ -20,9 +20,8 @@ parent_id: api-calls/permissions-and-errors
 next_page_id: api-calls/permissions-and-errors/scopes
 previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
-  https://github.com/box/developer.box.com/blob/master/content/guides/api-calls/permissions-and-errors/rate-limits.md
+  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/rate-limits.md
 ---
-
 # Rate Limits
 
 Most of the Box APIs have rate limits in place in order to prevent misuse by
