@@ -13,6 +13,23 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-06-11 / New enterprise events for tasks
+
+Starting today, the [enterprise event stream](g://events/for-enterprise/) will
+begin producing new task and task assignment events and some existing task
+events will return additional fields.
+
+New task and task assignment events:
+
+* Task update
+* Task assignment delete
+
+Existing task and task assignment events with new fields:
+
+* Task assignment create
+* Task assignment update
+* Task create
+
 ## 2020-05-12 / New shield alert events
 
 As of today, [Box Shield][box-shield] will begin producing new security events
