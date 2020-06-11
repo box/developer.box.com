@@ -21,6 +21,7 @@ To enable file preview, your application might need to load javascript file from
 the Box content delivery network (CDN). This file is loaded from the following
 domains.
 
+- `api.box.net`
 - `boxcdn.net`
 - `boxcloud.com`
 - `dl2.boxcloud.com` to `dl20.boxcloud.com`
