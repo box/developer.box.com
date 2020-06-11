@@ -16,19 +16,237 @@ For historical changelog entries, please see our
 ## 2020-06-11 / New enterprise events for tasks
 
 Starting today, the [enterprise event stream](g://events/for-enterprise/) will
-begin producing new task and task assignment events and some existing task
+begin producing new task and task assignment events, and some existing task
 events will return additional fields.
 
-New task and task assignment events:
+### New task and task assignment events
 
-* Task update
-* Task assignment delete
+#### Task update
 
-Existing task and task assignment events with new fields:
+```js
+{
+            "source": {
+                "item_type": "file",
+                "item_id": "123",
+                "item_name": "github_PNG20 (3) (2).png",
+                "parent": {
+                    "type": "folder",
+                    "name": "2020-02-27",
+                    "id": "1234"
+                },
+                "owned_by": {
+                    "type": "user",
+                    "id": "12345",
+                    "name": "Jane Doe",
+                    "login": "email@example.com"
+                }
+            },
+            "created_by": {
+                "type": "user",
+                "id": "12345",
+                "name": "Jane Doe",
+                "login": "email@example.com"
+            },
+            "action_by": null,
+            "created_at": "2020-04-02T22:26:55-07:00",
+            "event_id": "66585c35-97a8-4882-9fec-ce7e178b2e53",
+            "event_type": "TASK_UPDATE",
+            "type": "event",
+            "additional_details": {
+                "size": 67801,
+                "task": {
+                         "isCompleted": false,
+                         "due": "2020-07-06T10:49:44-07:00"
+"id": "1234567"
+"description": "task description"
+"creatorId": "567890"
+                },
+                "version_id": "26954851916",
+                "service_id": "12345",
+                "service_name": "Another App"
+            }
+        }
+```
 
-* Task assignment create
-* Task assignment update
-* Task create
+#### Task assignment delete
+
+```js
+        {
+            "source": {
+                "item_type": "file",
+                "item_id": "123",
+                "item_name": "football.png",
+                "parent": {
+                    "type": "folder",
+                    "name": "All Files",
+                    "id": "0"
+                },
+                "owned_by": {
+                    "type": "user",
+                    "id": "12345",
+                    "name": "Jane Doe",
+                    "login": "email@example.com"
+                }
+            },
+            "created_by": {
+                "type": "user",
+                "id": "12345",
+                "name": "Jane Doe",
+                "login": "email@example.com"
+            },
+            "action_by": null,
+            "created_at": "2020-05-28T15:53:28-07:00",
+            "event_id": "88c0f6fd-e644-468e-aac3-d8ad7fba4eff",
+            "event_type": "TASK_ASSIGNMENT_DELETE",
+            "ip_address": "Unknown IP",
+            "type": "event",
+            "session_id": null,
+            "additional_details": {
+                "size": 5875,
+                "version_id": "712094977889",
+                "service_id": "123",
+                "service_name": "Box Elements"
+            }
+        },
+```
+
+### Updated task and task assignment events with new fields
+
+#### Task assignment create
+
+```js
+        {
+            "source": {
+                "item_type": "file",
+                "item_id": "123",
+                "item_name": "football.png",
+                "parent": {
+                    "type": "folder",
+                    "name": "All Files",
+                    "id": "0"
+                },
+                "owned_by": {
+                    "type": "user",
+                    "id": "12345",
+                    "name": "Jane Doe",
+                    "login": "email@example.com"
+                }
+            },
+            "created_by": {
+                "type": "user",
+                "id": "12345",
+                "name": "Jane Doe",
+                "login": "email@example.com"
+            },
+            "action_by": null,
+            "created_at": "2020-05-28T14:52:01-07:00",
+            "event_id": "26ddebfa-259e-4593-a050-832fa039cd06",
+            "event_type": "TASK_ASSIGNMENT_CREATE",
+            "ip_address": "Unknown IP",
+            "type": "event",
+            "session_id": null,
+            "additional_details": {
+                "size": 5875,
+                "version_id": "712094977889",
+                "service_id": "123",
+                "service_name": "Box Elements"
+            }
+        },
+```
+
+#### Task assignment update
+
+```js
+{
+            "source": {
+                "item_type": "file",
+                "item_id": "123",
+                "item_name": "Caution.jpg",
+                "parent": {
+                    "type": "folder",
+                    "name": "All Files",
+                    "id": "0"
+                },
+                "owned_by": {
+                    "type": "user",
+                    "id": "12345",
+                    "name": "Jane Doe",
+                    "login": "email@example.com"
+                }
+            },
+            "created_by": {
+                "type": "user",
+                "id": "12345",
+                "name": "Jane Doe",
+                "login": "email@example.com"
+            },
+            "action_by": null,
+            "created_at": "2019-11-18T17:40:37-08:00",
+            "event_id": "2a451cb1-805a-43c5-b499-dd86e6212f87",
+            "event_type": "TASK_ASSIGNMENT_UPDATE",
+            "type": "event",
+            "additional_details": {
+                "size": 579820,
+                "task": {
+                       "isCompleted": false,
+               "due": "2020-07-06T10:49:44-07:00",
+"id": 1234567
+"description": "task description"
+"creator_id": 12346
+                        "assignee": {
+                        "login": "email@example.com",
+                        "id": 12345
+                        "status": "approved"
+                    }
+                },
+                "version_id": "26871636520",
+                "service_id": "12345",
+                "service_name": "Box Web App"
+            }
+        },
+```
+
+#### Task create
+
+```js
+        {
+            "source": {
+                "item_type": "file",
+                "item_id": "123",
+                "item_name": "football.png",
+                "parent": {
+                    "type": "folder",
+                    "name": "All Files",
+                    "id": "0"
+                },
+                "owned_by": {
+                    "type": "user",
+                    "id": "12345",
+                    "name": "Jane Doe",
+                    "login": "email@example.com"
+                }
+            },
+            "created_by": {
+                "type": "user",
+                "id": "12345",
+                "name": "Jane Doe",
+                "login": "email@example.com"
+            },
+            "action_by": null,
+            "created_at": "2020-05-28T14:52:00-07:00",
+            "event_id": "084153c4-3308-46ed-b00e-4205b13e1d11",
+            "event_type": "TASK_CREATE",
+            "ip_address": "Unknown IP",
+            "type": "event",
+            "session_id": null,
+            "additional_details": {
+                "size": 5875,
+                "version_id": "712094977889",
+                "service_id": "123",
+                "service_name": "Box Elements"
+            }
+        },
+```
 
 ## 2020-05-12 / New shield alert events
 
