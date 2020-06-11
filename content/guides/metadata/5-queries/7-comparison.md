@@ -70,4 +70,4 @@ supports mixing both fuzzy search (searching for "Sale") and the boolean
 expression matching metadata fields.
 
 [mdq_api]: e://post_metadata_queries_execute_read
-[search]: e://search
+[search]: e://get_search
