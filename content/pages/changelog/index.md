@@ -24,7 +24,7 @@ events will return additional fields.
 #### Task update
 
 ```js
-{
+      {
             "source": {
                 "item_type": "file",
                 "item_id": "123",
@@ -146,11 +146,26 @@ events will return additional fields.
             "type": "event",
             "session_id": null,
             "additional_details": {
-                "size": 5875,
-                "version_id": "712094977889",
-                "service_id": "123",
-                "service_name": "Box Elements"
-            }
+                "task": {
+                    "id": "1234567",
+                    "created_by": {
+                        "id": 12345,
+                        "login": "email@example.com"
+                    }
+                },
+                "task_assignment": {
+                    "assigned_to": {
+                        "id": 12346
+                        "login": "email+2@example.com"      
+                    },
+.                   "status": "NOT_STARTED",
+                    "message": "assignee message"
+                },
+                "size": 67801,
+                "version_id": "26954851916",
+                "service_id": "23141",
+                "service_name": "Box Web App"
+              }
         },
 ```
 
@@ -186,19 +201,21 @@ events will return additional fields.
             "event_type": "TASK_ASSIGNMENT_UPDATE",
             "type": "event",
             "additional_details": {
-                "size": 579820,
-                "task": {
-                       "isCompleted": false,
-               "due": "2020-07-06T10:49:44-07:00",
-"id": 1234567
-"description": "task description"
-"creator_id": 12346
-                        "assignee": {
-                        "login": "email@example.com",
-                        "id": 12345
-                        "status": "approved"
-                    }
-                },
+                "task": {
+                    "id": "1234567",
+                    "created_by": {
+                        "id": 12345,
+                        "login": "email@example.com"
+                    }
+                },
+                "task_assignment": {
+                    "assigned_to": {
+                        "id": 123456
+                        "login": "email+2@box.com"      
+                    },
+.                   "status": "NOT_STARTED",
+                    "message": "assignee message"
+                }
                 "version_id": "26871636520",
                 "service_id": "12345",
                 "service_name": "Box Web App"
@@ -240,6 +257,15 @@ events will return additional fields.
             "type": "event",
             "session_id": null,
             "additional_details": {
+              "task": {
+                 "id": "1234567",
+                 "due_at": "2020-07-06T10:49:44-07:00",
+                 "message": "task description",
+                 "created_by": {
+                     "id": 123456,
+                     "login": "email@example.com"
+                 }
+              },
                 "size": 5875,
                 "version_id": "712094977889",
                 "service_id": "123",
