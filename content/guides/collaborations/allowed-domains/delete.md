@@ -13,7 +13,7 @@ alias_paths:
   - /guides/collaboration-whitelists/delete-whitelist
 ---
 
-# Removed a previously allowed domain for collaboration
+# Remove a previously allowed domain for collaboration
 
 Deleting a domain from the list of allowed collaboration domains will remove the
 ability for collaborations to be created between your enterprise and users in
