@@ -47,7 +47,7 @@ application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
-- The application's domain must be whitelisted by Box Tools. Instructions can be
+- The application's domain must be allowed by Box Tools. Instructions can be
   found [here][custom-domains]. The ideal workflow is to bundle these steps
   within an installer that also installs Box Tools.
 - Safari requires a browser extension to connect to box tools. More details can
@@ -65,7 +65,7 @@ The `external_app_user_id` of an app user can be updated via the
 
 ## Setup
 
-The Open With UI Element is intended to be used after whitelisting your
+The Open With UI Element is intended to be used after allowing your
 application and enabling integrations for app users using Box API endpoints.
 
 ### Activate application

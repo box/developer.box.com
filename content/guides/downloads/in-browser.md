@@ -35,7 +35,8 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
   # CORS
 
   For this to work the application needs to have the domain of the web site
-  hosting this file whitelisted in the [CORS settings][cors].
+  hosting this file added to the list of allowed domains in the [CORS
+  settings][cors].
 </Message>
 
 <Message warning>
