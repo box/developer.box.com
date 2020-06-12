@@ -18,8 +18,6 @@ previous_page_id: applications/custom-skills/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-skills/approval.md
 ---
-<!-- alex disable whitelist -->
-
 # Approval
 
 Custom Skills will need to be enabled on a folder by the enterprise's Box Admin
@@ -63,7 +61,7 @@ There are two options here:
 * **All content in your company** authorizes the Skill at the root folder of
   every user. This results in every file uploaded to any folder being processed
   by the Box Skill application
-* **Select a whitelist of folders** enables the application to a specific folder
+* **Select a list of folders** enables the application to a specific folder
   or set of folders on which the Skill application operates.
 
 <ImageFrame border>
