@@ -105,7 +105,6 @@ jobs:
       - name: Compile the content
         run: |
           yarn install
-          yarn clean
           yarn build
 
       - name: Push compiled content
@@ -114,6 +113,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: en
           FOLDER: compiled
+          CLEAN: true
 
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
