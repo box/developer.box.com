@@ -13,7 +13,7 @@ total_steps: 8
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/language-codes
-previous_page_id: api-calls/domain-whitelisting
+previous_page_id: api-calls/allowing-domain-access
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/suppress-notifications.md
 ---

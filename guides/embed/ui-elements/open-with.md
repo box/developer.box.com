@@ -59,7 +59,7 @@ application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
-- The application's domain must be whitelisted by Box Tools. Instructions can be
+- The application's domain must be allowed by Box Tools. Instructions can be
   found [here][custom-domains]. The ideal workflow is to bundle these steps
   within an installer that also installs Box Tools.
 - Safari requires a browser extension to connect to box tools. More details can
@@ -77,7 +77,7 @@ The `external_app_user_id` of an app user can be updated via the
 
 ## Setup
 
-The Open With UI Element is intended to be used after whitelisting your
+The Open With UI Element is intended to be used after allowing your
 application and enabling integrations for app users using Box API endpoints.
 
 ### Activate application
@@ -266,31 +266,13 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 ### Open With Example
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Open With Example"
-src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Open With Example" src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### Content Explorer + Open With Example
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Content Explorer Example + Open With"
-src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Content Explorer Example + Open With" src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 

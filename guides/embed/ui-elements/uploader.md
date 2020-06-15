@@ -62,31 +62,13 @@ Learn about selecting an authentication method
 
 ### Uploader
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Content Uploader"
-src="//codepen.io/box-platform/embed/QvqGwr/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Content Uploader" src="//codepen.io/box-platform/embed/QvqGwr/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### Uploader as popup
 
-<iframe
-height="560"
-scrolling="no"
-title="Box File Picker and Uploader as popups"
-src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box File Picker and Uploader as popups" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 

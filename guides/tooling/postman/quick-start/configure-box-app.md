@@ -98,19 +98,13 @@ Once you've created a Box app, scroll down to the **OAuth 2.0 Credentials**
 section of your **Box App** and copy the **Client ID** and **Client Secret** into
 the fields below.
 
-<Store
-id='postman_credentials.client_id'
-placeholder='zECq2EkYBjZ...'
-pattern='\w{32}'>
+<Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
 
 Client ID
 
 </Store>
 
-<Store
-id='postman_credentials.client_secret'
-placeholder='913td9hr6jo...'
-pattern='\w{32}'>
+<Store id='postman_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
 
 Client Secret
 
