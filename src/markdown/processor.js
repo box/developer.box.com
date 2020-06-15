@@ -5,6 +5,7 @@ const unIndentNestedMarkdown = require('./unIndentNestedMarkdown')
 const expandSelfClosingTags = require('./expandSelfClosingTags')
 const extractFrontmatter = require('./extractFrontmatter')
 const addFinalLine = require('./addFinalLine')
+const inlineTags = require('./inlineTags')
 
 class MarkdownProcessor {
   constructor({ sourcePath }) {
@@ -57,6 +58,7 @@ class MarkdownProcessor {
     markdown = expandSelfClosingTags(markdown)
     markdown = unIndentNestedMarkdown(markdown)
     markdown = padNestedMarkdownWithNewlines(markdown)
+    markdown = inlineTags(markdown)
 
     return [_, frontmatter, markdown].join('---\n')
   }

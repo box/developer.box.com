@@ -96,11 +96,14 @@ This is a paragraph
 
 </Foobar>`)})
 
-test('lets see if I can break this', () => {
+test('should inline tags', () => {
   const contents = `
 ---
 ---
-<Header to='/guides' centered>
+<Header 
+  to='/guides'
+  centered
+>
   Developer News
 </Header>
 `
@@ -122,7 +125,7 @@ next_page_id: guides
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/default/content/guides/foo.md'
 ---
-<Header to='/guides' centered>
+<Header to='/guides' centered >
 
 Developer News
 
