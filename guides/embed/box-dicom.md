@@ -126,17 +126,7 @@ for the Box DICOM viewer's full-screen function to work properly.
 
 <!-- markdownlint-disable line-length -->
 
-<iframe
-width="100%"
-height="550"
-scrolling="no"
-title="Box DICOM JS SDK Viewer Demo"
-src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe width="100%" height="550" scrolling="no" title="Box DICOM JS SDK Viewer Demo" src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 

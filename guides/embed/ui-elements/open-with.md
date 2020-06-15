@@ -266,31 +266,13 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 ### Open With Example
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Open With Example"
-src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Open With Example" src="//codepen.io/box-platform/embed/984598a6fe6bf01785d02be770c5c96a/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### Content Explorer + Open With Example
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Content Explorer Example + Open With"
-src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Content Explorer Example + Open With" src="//codepen.io/box-platform/embed/519f67ba709fb581a93c3f73b64cf223/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 

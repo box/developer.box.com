@@ -87,17 +87,7 @@ Use the navigation arrows to preview different file types.
 
 <!-- markdownlint-disable line-length -->
 
-<iframe
-width="100%"
-height="560"
-scrolling="no"
-frameborder="no"
-title="Box Content Preview Demo"
-src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe width="100%" height="560" scrolling="no" frameborder="no" title="Box Content Preview Demo" src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 

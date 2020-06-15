@@ -102,61 +102,25 @@ Learn about selecting an authentication method
 
 ### File Selection Demo
 
-<iframe
-height="560"
-scrolling="no"
-title="Box File Picker"
-src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box File Picker" src="//codepen.io/box-platform/embed/PWPxBm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### Folder Selection Demo
 
-<iframe
-height="560"
-scrolling="no"
-title="Box Folder Picker"
-src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box Folder Picker" src="//codepen.io/box-platform/embed/WRQLey/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### File Selection + Preview Demo
 
-<iframe
-height="560"
-scrolling="no"
-title="Box File Picker + Box Preview"
-src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box File Picker + Box Preview" src="//codepen.io/box-platform/embed/oBjJgL/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
 ### File Selection as a popup
 
-<iframe
-height="560"
-scrolling="no"
-title="Box File Picker and Uploader as popups"
-src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-frameborder="no"
-allowtransparency="true"
-allowfullscreen="true"
-style="width: 100%;"
->
+<iframe height="560" scrolling="no" title="Box File Picker and Uploader as popups" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
 </iframe>
 
