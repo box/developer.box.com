@@ -35,3 +35,15 @@ the full shared link URL in the request.
 <Samples id='get_shared_items' >
 
 </Samples>
+
+<Message note>
+
+Please note that when the shared link is for a folder, the response of this
+API does not include the list of nested items within that folder.
+
+To further traverse the items in the folder, use the same `BoxApi` header to
+[get a nested folder's information](e://get-folders-id), [list the items in
+those folders](e://get-folders-id-items), [get a nested file's
+information](e://get-files-id), or [download a file](e://get-files-id-content)
+
+</Message>
