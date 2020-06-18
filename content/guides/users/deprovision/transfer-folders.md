@@ -29,7 +29,7 @@ folder at a time from one user to another.
   This also means that any shared content owned by the user may be inaccessible
   during the move. 
 
-  Depending on the volume of content, this operation may take a signficant
+  Depending on the volume of content, this operation may take a significant
   amount of time.
 </Message>
 
