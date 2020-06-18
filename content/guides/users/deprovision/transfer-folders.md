@@ -24,8 +24,13 @@ API, which will move all content from one user directly to another.
 * Using the collaboration transfer method to change ownership of one file or
 folder at a time from one user to another.
 
-<Message type='notice'>
-  Files owned by a user will be inaccessible while they are being transferred. This also means that any shared content owned by the user may be inaccessible during the move. Depending on the volume of content, this operation may take a signficant amount of time.
+<Message notice>
+  Files owned by a user will be inaccessible while they are being transferred.
+  This also means that any shared content owned by the user may be inaccessible
+  during the move. 
+
+  Depending on the volume of content, this operation may take a signficant
+  amount of time.
 </Message>
 
 ## Transfer Owned Folders API Method
