@@ -114,33 +114,15 @@ events will return additional fields.
 
 #### Task assignment create
 
+The task assignment create event now includes task ID, assignee user ID and
+login email, and task message within the `additional_details` object.
+
 ```js
         {
             "source": {
-                "item_type": "file",
-                "item_id": "123",
-                "item_name": "football.png",
-                "parent": {
-                    "type": "folder",
-                    "name": "All Files",
-                    "id": "0"
-                },
-                "owned_by": {
-                    "type": "user",
-                    "id": "12345",
-                    "name": "Jane Doe",
-                    "login": "email@example.com"
-                }
-            },
-            "created_by": {
-                "type": "user",
-                "id": "12345",
-                "name": "Jane Doe",
-                "login": "email@example.com"
-            },
-            "action_by": null,
-            "created_at": "2020-05-28T14:52:01-07:00",
-            "event_id": "26ddebfa-259e-4593-a050-832fa039cd06",
+              ...
+              ...
+              ...
             "event_type": "TASK_ASSIGNMENT_CREATE",
             "ip_address": "Unknown IP",
             "type": "event",
@@ -171,33 +153,15 @@ events will return additional fields.
 
 #### Task assignment update
 
+The task assignment update event now includes task ID, assignee user ID and
+login email, and task message within the `additional_details` object.
+
 ```js
 {
             "source": {
-                "item_type": "file",
-                "item_id": "123",
-                "item_name": "Caution.jpg",
-                "parent": {
-                    "type": "folder",
-                    "name": "All Files",
-                    "id": "0"
-                },
-                "owned_by": {
-                    "type": "user",
-                    "id": "12345",
-                    "name": "Jane Doe",
-                    "login": "email@example.com"
-                }
-            },
-            "created_by": {
-                "type": "user",
-                "id": "12345",
-                "name": "Jane Doe",
-                "login": "email@example.com"
-            },
-            "action_by": null,
-            "created_at": "2019-11-18T17:40:37-08:00",
-            "event_id": "2a451cb1-805a-43c5-b499-dd86e6212f87",
+             ...
+             ...
+             ...
             "event_type": "TASK_ASSIGNMENT_UPDATE",
             "type": "event",
             "additional_details": {
@@ -225,33 +189,15 @@ events will return additional fields.
 
 #### Task create
 
+The task create event now includes task ID, task creator ID, task description,
+and the due date within the `additional_details` object.
+
 ```js
         {
             "source": {
-                "item_type": "file",
-                "item_id": "123",
-                "item_name": "football.png",
-                "parent": {
-                    "type": "folder",
-                    "name": "All Files",
-                    "id": "0"
-                },
-                "owned_by": {
-                    "type": "user",
-                    "id": "12345",
-                    "name": "Jane Doe",
-                    "login": "email@example.com"
-                }
-            },
-            "created_by": {
-                "type": "user",
-                "id": "12345",
-                "name": "Jane Doe",
-                "login": "email@example.com"
-            },
-            "action_by": null,
-            "created_at": "2020-05-28T14:52:00-07:00",
-            "event_id": "084153c4-3308-46ed-b00e-4205b13e1d11",
+             ...
+             ...
+             ...
             "event_type": "TASK_CREATE",
             "ip_address": "Unknown IP",
             "type": "event",
