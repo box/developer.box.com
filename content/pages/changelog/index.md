@@ -22,13 +22,17 @@ events will return additional fields.
 ## New events
 
 * A new `TASK_UPDATE` event is triggered when a task is updated
-* A new `TASK_ASSIGNMENT_DELETE` event is triggered when a task is unassigned from a user
+* A new `TASK_ASSIGNMENT_DELETE` event is triggered when a task is unassigned
+  from a user
 
 ## Updated events
 
-### Changes to `TASK_CREATE` 
+### Changes to `TASK_CREATE`
 
-When a task is created, the event now includes the task's ID (`task.id`), the ID of the user who created the task (`task.created_by.id`), the task's description (`task.message`), and the optional due date of the task (`task.due_date`) within the `additional_details` object.
+When a task is created, the event now includes the task's ID (`task.id`), the ID
+of the user who created the task (`task.created_by.id`), the task's description
+(`task.message`), and the optional due date of the task  (`task.due_date`)
+within the `additional_details` object.
 
 ```json
 "additional_details": {
@@ -47,7 +51,11 @@ When a task is created, the event now includes the task's ID (`task.id`), the ID
 
 ## Changes to `TASK_ASSIGNMENT_CREATE` and `TASK_ASSIGNMENT_UPDATE`
 
-When a task assignment is created or updated, the event now includes the task's ID (`task.id`), the ID of the assigned user (`task_assignment.assigned_to.id`) and their login (`task_assignment.assigned_to.login`), the task's description (`task.message`), and the optional due date of the task (`task.due_date`) within the `additional_details` object.
+When a task assignment is created or updated, the event now includes the task's
+ID (`task.id`), the ID of the assigned user (`task_assignment.assigned_to.id`)
+and their login (`task_assignment.assigned_to.login`), the task's description
+(`task.message`), and the optional due date of the task (`task.due_date`) within
+the `additional_details` object.
 
 ```json
 "additional_details": {
@@ -70,14 +78,14 @@ When a task assignment is created or updated, the event now includes the task's 
 }
 ```
 
-See the [task events](g://events/ask-events/) documentation
+See the [task events](g://events/task-events/) documentation
 for more information on the payloads produced within these events.
 
 ## 2020-05-12 / New shield alert events
 
 As of today, [Box Shield][box-shield] will begin producing new security events
 within the [enterprise event stream](g://events/for-enterprise/) for Shield
-customers who are configured to listen for the new events. 
+customers who are configured to listen for the new events.
 
 The possible incident events produced by Shield are:
 
@@ -120,7 +128,7 @@ the web application.
 
 A new field, `uploader_display_name` has been added to both file and file
 version resources. This field provides the name of the user at the time of
-upload. 
+upload.
 
 ```json
 {
