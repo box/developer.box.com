@@ -13,212 +13,65 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-06-11 / New enterprise events for tasks
+## 2020-06-11 / Change to enterprise events for tasks
 
 Starting today, the [enterprise event stream](g://events/for-enterprise/) will
 begin producing new task and task assignment events, and some existing task
 events will return additional fields.
 
-### New task and task assignment events
+## New events
 
-#### Task update
+* A new `TASK_UPDATE` event is triggered when a task is updated
+* A new `TASK_ASSIGNMENT_DELETE` event is triggered when a task is unassigned from a user
 
-```js
-      {
-            "source": {
-                "item_type": "file",
-                "item_id": "123",
-                "item_name": "github_PNG20 (3) (2).png",
-                "parent": {
-                    "type": "folder",
-                    "name": "2020-02-27",
-                    "id": "1234"
-                },
-                "owned_by": {
-                    "type": "user",
-                    "id": "12345",
-                    "name": "Jane Doe",
-                    "login": "email@example.com"
-                }
-            },
-            "created_by": {
-                "type": "user",
-                "id": "12345",
-                "name": "Jane Doe",
-                "login": "email@example.com"
-            },
-            "action_by": null,
-            "created_at": "2020-04-02T22:26:55-07:00",
-            "event_id": "66585c35-97a8-4882-9fec-ce7e178b2e53",
-            "event_type": "TASK_UPDATE",
-            "type": "event",
-            "additional_details": {
-                "size": 67801,
-                "task": {
-                         "isCompleted": false,
-                         "due": "2020-07-06T10:49:44-07:00"
-"id": "1234567"
-"description": "task description"
-"creatorId": "567890"
-                },
-                "version_id": "26954851916",
-                "service_id": "12345",
-                "service_name": "Another App"
-            }
-        }
+## Updated events
+
+### Changes to `TASK_CREATE` 
+
+When a task is created, the event now includes the task's ID (`task.id`), the ID of the user who created the task (`task.created_by.id`), the task's description (`task.message`), and the optional due date of the task (`task.due_date`) within the `additional_details` object.
+
+```json
+"additional_details": {
+  "task": {
+    "id": "1234567",
+    "due_at": "2020-07-06T10:49:44-07:00",
+    "message": "task description",
+    "created_by": {
+      "id": 123456,
+      "login": "email@example.com"
+    },
+    ...
+  }
+}
 ```
 
-#### Task assignment delete
+## Changes to `TASK_ASSIGNMENT_CREATE` and `TASK_ASSIGNMENT_UPDATE`
 
-```js
-        {
-            "source": {
-                "item_type": "file",
-                "item_id": "123",
-                "item_name": "football.png",
-                "parent": {
-                    "type": "folder",
-                    "name": "All Files",
-                    "id": "0"
-                },
-                "owned_by": {
-                    "type": "user",
-                    "id": "12345",
-                    "name": "Jane Doe",
-                    "login": "email@example.com"
-                }
-            },
-            "created_by": {
-                "type": "user",
-                "id": "12345",
-                "name": "Jane Doe",
-                "login": "email@example.com"
-            },
-            "action_by": null,
-            "created_at": "2020-05-28T15:53:28-07:00",
-            "event_id": "88c0f6fd-e644-468e-aac3-d8ad7fba4eff",
-            "event_type": "TASK_ASSIGNMENT_DELETE",
-            "ip_address": "Unknown IP",
-            "type": "event",
-            "session_id": null,
-            "additional_details": {
-                "size": 5875,
-                "version_id": "712094977889",
-                "service_id": "123",
-                "service_name": "Box Elements"
-            }
-        },
+When a task assignment is created or updated, the event now includes the task's ID (`task.id`), the ID of the assigned user (`task_assignment.assigned_to.id`) and their login (`task_assignment.assigned_to.login`), the task's description (`task.message`), and the optional due date of the task (`task.due_date`) within the `additional_details` object.
+
+```json
+"additional_details": {
+  "task": {
+    "id": "1234567",
+    "created_by": {
+      "id": 12345,
+      "login": "email@example.com"
+    }
+  },
+  "task_assignment": {
+    "assigned_to": {
+      "id": 12346,
+      "login": "email+2@example.com"
+    },
+    "status": "NOT_STARTED",
+    "message": "assignee message"
+  },
+  ...
+}
 ```
 
-### Updated task and task assignment events with new fields
-
-#### Task assignment create
-
-The task assignment create event now includes task ID, assignee user ID and
-login email, and task message within the `additional_details` object.
-
-```js
-        {
-            "source": {
-              ...
-              ...
-              ...
-            "event_type": "TASK_ASSIGNMENT_CREATE",
-            "ip_address": "Unknown IP",
-            "type": "event",
-            "session_id": null,
-            "additional_details": {
-                "task": {
-                    "id": "1234567",
-                    "created_by": {
-                        "id": 12345,
-                        "login": "email@example.com"
-                    }
-                },
-                "task_assignment": {
-                    "assigned_to": {
-                        "id": 12346
-                        "login": "email+2@example.com"      
-                    },
-.                   "status": "NOT_STARTED",
-                    "message": "assignee message"
-                },
-                "size": 67801,
-                "version_id": "26954851916",
-                "service_id": "23141",
-                "service_name": "Box Web App"
-              }
-        },
-```
-
-#### Task assignment update
-
-The task assignment update event now includes task ID, assignee user ID and
-login email, and task message within the `additional_details` object.
-
-```js
-{
-            "source": {
-             ...
-             ...
-             ...
-            "event_type": "TASK_ASSIGNMENT_UPDATE",
-            "type": "event",
-            "additional_details": {
-                "task": {
-                    "id": "1234567",
-                    "created_by": {
-                        "id": 12345,
-                        "login": "email@example.com"
-                    }
-                },
-                "task_assignment": {
-                    "assigned_to": {
-                        "id": 123456
-                        "login": "email+2@box.com"      
-                    },
-.                   "status": "NOT_STARTED",
-                    "message": "assignee message"
-                }
-                "version_id": "26871636520",
-                "service_id": "12345",
-                "service_name": "Box Web App"
-            }
-        },
-```
-
-#### Task create
-
-The task create event now includes task ID, task creator ID, task description,
-and the due date within the `additional_details` object.
-
-```js
-        {
-            "source": {
-             ...
-             ...
-             ...
-            "event_type": "TASK_CREATE",
-            "ip_address": "Unknown IP",
-            "type": "event",
-            "session_id": null,
-            "additional_details": {
-              "task": {
-                 "id": "1234567",
-                 "due_at": "2020-07-06T10:49:44-07:00",
-                 "message": "task description",
-                 "created_by": {
-                     "id": 123456,
-                     "login": "email@example.com"
-                 }
-              },
-                "size": 5875,
-                "version_id": "712094977889",
-                "service_id": "123",
-                "service_name": "Box Elements"
-            }
-        },
-```
+See the [task events](g://events/ask-events/) documentation
+for more information on the payloads produced within these events.
 
 ## 2020-05-12 / New shield alert events
 
