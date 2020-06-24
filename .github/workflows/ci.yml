@@ -71,6 +71,7 @@ jobs:
 
     - name: Send Slack notification
       uses: Ilshidur/action-slack@2.0.2
+      if: github.ref == 'refs/heads/default
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: GitHub Actions
