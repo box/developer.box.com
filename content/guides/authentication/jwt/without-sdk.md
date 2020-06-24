@@ -156,7 +156,7 @@ Config config = (Config) gson.fromJson(reader, Config.class);
 
   </Tab>
 
-  <Tab title='Python'>
+  <Tab title='Python 3'>
 
 ```python
 import json
@@ -310,7 +310,7 @@ PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
 
   </Tab>
 
-  <Tab title='Python'>
+  <Tab title='Python 3'>
 
 ```python
 from cryptography.hazmat.backends import default_backend
@@ -423,11 +423,10 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
   </Tab>
 
-  <Tab title='Python'>
+  <Tab title='Python 3'>
 
 ```python
 import time
-# assuming you are using Python3
 import secrets
 
 authentication_url = 'https://api.box.com/oauth2/token'
@@ -564,7 +563,7 @@ String assertion = jws.getCompactSerialization();
 
   </Tab>
 
-  <Tab title='Python'>
+  <Tab title='Python 3'>
 
 ```python
 import jwt
@@ -722,7 +721,7 @@ String accessToken = token.access_token;
 
   </Tab>
 
-  <Tab title='Python'>
+  <Tab title='Python 3'>
 
 ```python
 # using urllib
