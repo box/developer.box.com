@@ -427,6 +427,7 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
 ```python
 import time
+# assuming you are using Python3
 import secrets
 
 authentication_url = 'https://api.box.com/oauth2/token'
@@ -724,8 +725,8 @@ String accessToken = token.access_token;
   <Tab title='Python'>
 
 ```python
+# using urllib
 import json
-
 from urllib.request import urlopen
 from urllib.request import Request
 from urllib.parse import urlencode
@@ -740,6 +741,19 @@ params = urlencode({
 request = Request(authentication_url, params)
 response = urlopen(request).read()
 access_token = json.loads(response)['access_token']
+
+# using requests
+import json
+import requests
+
+params = {
+    'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+    'assertion': assertion,
+    'client_id': config['boxAppSettings']['clientID'],
+    'client_secret': config['boxAppSettings']['clientSecret']
+}
+r = requests.post(authentication_url, params)
+print(r.text)
 ```
 
   </Tab>
