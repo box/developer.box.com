@@ -734,7 +734,7 @@ params = {
     'client_secret': config['boxAppSettings']['clientSecret']
 }
 response = requests.post(authentication_url, params)
-access_token = json.loads(response)['access_token']
+access_token = response.json()['access_token']
 ```
 
   </Tab>
