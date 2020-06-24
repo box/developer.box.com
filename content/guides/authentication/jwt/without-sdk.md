@@ -724,24 +724,6 @@ String accessToken = token.access_token;
   <Tab title='Python 3'>
 
 ```python
-# using urllib
-import json
-from urllib.request import urlopen
-from urllib.request import Request
-from urllib.parse import urlencode
-
-params = urlencode({
-  'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-  'assertion': assertion,
-  'client_id': config['boxAppSettings']['clientID'],
-  'client_secret': config['boxAppSettings']['clientSecret']
-}).encode()
-
-request = Request(authentication_url, params)
-response = urlopen(request).read()
-access_token = json.loads(response)['access_token']
-
-# using requests
 import json
 import requests
 
@@ -751,8 +733,8 @@ params = {
     'client_id': config['boxAppSettings']['clientID'],
     'client_secret': config['boxAppSettings']['clientSecret']
 }
-r = requests.post(authentication_url, params)
-print(r.text)
+response = requests.post(authentication_url, params)
+access_token = json.loads(response)['access_token']
 ```
 
   </Tab>
