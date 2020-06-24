@@ -318,6 +318,8 @@ access_token = json.loads(response)['access_token']
 <Tab title='Node'>
 
 ```js
+const authenticationUrl = 'https://api.box.com/oauth2/token';
+
 let accessToken = await axios.post(
   authenticationUrl,
   querystring.stringify({
