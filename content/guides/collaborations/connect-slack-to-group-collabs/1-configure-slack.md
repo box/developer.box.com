@@ -112,7 +112,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // handle challenge request
-app.post('/event', (req, res) => {
+app.post('/challenge', (req, res) => {
   console.log(req.body);
   if (req.body && req.body.token && req.body.challenge && req.body.type === 'url_verification') {
     const reply = { challenge: req.body.challenge };
@@ -168,7 +168,7 @@ following.
 Toggle "Enable Events" to "On"
 Under "Request URL" add in the public URL that you deployed the above code to, 
 and be aware that we are listening at `{APPROUTE}/event` (such as
-`https://myapp.com/event`).
+`https://myapp.com/challenge`).
 Once you add in the URL and click outside the field, Slack will immediately 
 send the challenge to the URL that you were hosting the code at above. If the
 code responds correctly, you will see a green verified note beside the "Request 
@@ -212,6 +212,35 @@ In the page that comes up, click **Create New Command** and input the following:
 </ImageFrame>
 
 Click "Save" to add the command to our Slack app.
+
+## Add Remaining Scopes
+
+When slash commands or notification events are sent to our application from Slack, they will contain a Slack user ID which relates to the action that was taken. To translate that ID to Box, we need to get the Slack user email. That requires two extra scopes.
+
+From your Slack application configuration, click on **OAuth & Permissions** in the left menu, then do the following.
+
+* Scroll down to the **Scopes** section.
+* Click on the **Add an OAuth Scope** button under **Bot Token Scopes**..
+* Search for and add `users:read` and `users:read.email`.
+
+## Deploy Bot to Slack Workspace
+
+With the configuration settings in place, the last step is to install the
+application into your Slack workspace. From the "Basic Information" page of the
+app, expand the "Install your app to your workspace" section. 
+
+<ImageFrame noborder center shadow>
+  ![Enable Slack Event Subscriptions](./img/slack_5_install_workspace.png)
+</ImageFrame>
+
+Click the button to "Install App to Workspace".
+
+<ImageFrame noborder center shadow>
+  ![Enable Slack Event Subscriptions](./img/slack_5_install_workspace_allow.png)
+</ImageFrame>
+
+Once the "Allow" button is clicked you should see a success message. Your bot
+is now installed within the workplace.
 
 [slack-apps]: https://api.slack.com/apps
 [slack-events]: https://api.slack.com/events
