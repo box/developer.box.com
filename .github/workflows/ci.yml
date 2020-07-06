@@ -172,11 +172,12 @@ jobs:
           yarn build
 
       - name: Push compiled content
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: s0/git-publish-subdir-action@develop
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: self
           BRANCH: en-staging
           FOLDER: compiled
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
         uses: jasongitmail/fast-webhook@v1
