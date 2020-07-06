@@ -1,0 +1,242 @@
+# The name of this GH action 
+name: CI
+
+# Defines when this action should be run
+on:
+  # Run on any Push
+  push: {}
+  # Run for PRs on default and staging
+  pull_request:
+    branches: [ default, staging ]
+
+jobs:
+  # The lint job checks that all content is sanitized, 
+  # spell checked, and without any obvious dead links
+  lint:
+    # We run this on the latest ubuntu
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    # We use node 14.X
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    # The following steps are performed for each lint job 
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Lint the yaml files in ./content
+      uses: karancode/yamllint-github-action@master
+      with:
+        yamllint_file_or_dir: ./content
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Lint the content
+      run: |
+        yarn install
+        yarn ci
+
+  # The test job ensures that the markdown and yaml compilers
+  # work according to specifiction
+  test:
+    # We run this on the latest ubuntu
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    # We use node 14.X
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    # The following steps are performed for each lint job 
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Run the test
+      run: |
+        yarn install
+        yarn test:compiler
+
+    - name: Send Slack notification
+      uses: Ilshidur/action-slack@2.0.2
+      if: github.ref == 'refs/heads/default'
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: GitHub Actions
+        SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+      with:
+        args: "Markdown passed linting and testing"
+
+  # The deploy task actually deploys any changes to the en branch
+  push-to-en:
+    # We run this on the latest ubuntu
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+
+    # Only run for the default branch
+    if: github.ref == 'refs/heads/default'
+
+    # We use node 14.X
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    # Requires the lint and test jobs to pass first
+    needs: 
+      - lint
+      - test
+
+    # The following steps are performed for each lint job 
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Compile the content
+        run: |
+          yarn install
+          yarn build
+
+      - name: Push compiled content
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: en
+          FOLDER: compiled
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Trigger Netlify deployment'
+        uses: jasongitmail/fast-webhook@v1
+        with:
+          url: ${{ secrets.NETLIFY_BOXDEV_WEBHOOK }}
+          json: '{}'
+      
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Pushed latest Markdown to `en` branch :rocket:"
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        if: ${{ failure() }}
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Error running `deploy` job in OpenAPI CI"
+
+
+  
+  # The deploy task actually deploys any changes to the en-staging branch
+  push-to-en-staging:
+    # We run this on the latest ubuntu
+    runs-on: ubuntu-latest
+
+    # Only run for the staging branch
+    if: github.ref == 'refs/heads/staging'
+
+    # We use node 14.X
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    # Requires the lint and test jobs to pass first
+    needs: 
+      - lint
+      - test
+
+    # The following steps are performed for each lint job 
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Compile the content
+        run: |
+          yarn install
+          yarn build
+
+      - name: Push compiled content
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: en-staging
+          FOLDER: compiled
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 'Trigger Netlify deployment'
+        uses: jasongitmail/fast-webhook@v1
+        with:
+          url: ${{ secrets.NETLIFY_BOXDEV_STAGING_WEBHOOK }}
+          json: '{}'
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Pushed latest Markdown to `en-staging` branch :rocket:"
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        if: ${{ failure() }}
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Error running `deploy-staging` job in OpenAPI CI"
+
+  # A task that notifies Netlify of changes to the jp branch
+  notify-from-jp:
+    # We run this on the latest ubuntu
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/jp'
+    timeout-minutes: 3
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - name: 'Trigger Netlify deployment'
+        uses: jasongitmail/fast-webhook@v1
+        with:
+          url: ${{ secrets.NETLIFY_BOXDEV_JP_WEBHOOK }}
+          json: '{}'
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Pushed latest Markdown to `jp` branch :rocket:"
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        if: ${{ failure() }}
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Error running `deploy-jp` job in OpenAPI CI"
