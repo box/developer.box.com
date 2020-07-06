@@ -72,8 +72,8 @@ matching results exist.
 <Message warning>
 
 To use the `next_marker` it is important to use the exact same query for the
-next page of results. The API will return an error any of the parameters like
-the `query`, `query_params`, or others are changed.
+next page of results. The API will return an error if any of the parameters
+like the `query`, `query_params`, or others are changed.
 
 </Message>
 

@@ -171,7 +171,7 @@ Config config = (Config) gson.fromJson(reader, Config.class);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title='Python 3'>
 
 ```python
 import json
@@ -331,7 +331,7 @@ PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title='Python 3'>
 
 ```python
 from cryptography.hazmat.backends import default_backend
@@ -450,7 +450,7 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title='Python 3'>
 
 ```python
 import time
@@ -595,7 +595,7 @@ String assertion = jws.getCompactSerialization();
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title='Python 3'>
 
 ```python
 import jwt
@@ -760,25 +760,20 @@ String accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title='Python 3'>
 
 ```python
 import json
+import requests
 
-from urllib.request import urlopen
-from urllib.request import Request
-from urllib.parse import urlencode
-
-params = urlencode({
-  'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-  'assertion': assertion,
-  'client_id': config['boxAppSettings']['clientID'],
-  'client_secret': config['boxAppSettings']['clientSecret']
-}).encode()
-
-request = Request(authentication_url, params)
-response = urlopen(request).read()
-access_token = json.loads(response)['access_token']
+params = {
+    'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+    'assertion': assertion,
+    'client_id': config['boxAppSettings']['clientID'],
+    'client_secret': config['boxAppSettings']['clientSecret']
+}
+response = requests.post(authentication_url, params)
+access_token = response.json()['access_token']
 ```
 
 </Tab>

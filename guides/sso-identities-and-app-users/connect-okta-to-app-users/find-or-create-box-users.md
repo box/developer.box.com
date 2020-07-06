@@ -71,7 +71,7 @@ const box = (() => {
 })();
 ```
 
-This object adds defines a number of items:
+This object defines a number of items:
 
 * Configuration: A new instance of the Box Node SDK is instantiated and made
  available to the object functions, along with a number of variables.
