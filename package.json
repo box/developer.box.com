@@ -40,6 +40,7 @@
     "build:microcopy": "node -e 'require(\"./src/microcopy\").write()' --no-warnings",
     "build:guides": "node -e 'require(\"./src/markdown\").writeGuides()'",
     "build:pages": "node -e 'require(\"./src/markdown\").writePages()'",
+    "build:actions": "cp -rf .github ./compiled",
     "postbuild": "yarn optimize:images",
     "optimize:images": "node src/images/optimize.js",
     "start": "yarn watch:content",
