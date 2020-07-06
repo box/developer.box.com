@@ -19,15 +19,15 @@ Starting today, the [enterprise event stream](g://events/for-enterprise/) will
 begin producing new task and task assignment events, and some existing task
 events will return additional fields.
 
-## New events
+### New events
 
 * A new `TASK_UPDATE` event is triggered when a task is updated
 * A new `TASK_ASSIGNMENT_DELETE` event is triggered when a task is unassigned
   from a user
 
-## Updated events
+### Updated events
 
-### Changes to `TASK_CREATE`
+#### Changes to `TASK_CREATE`
 
 When a task is created, the event now includes the task's ID (`task.id`), the ID
 of the user who created the task (`task.created_by.id`), the task's description
@@ -49,7 +49,7 @@ within the `additional_details` object.
 }
 ```
 
-## Changes to `TASK_ASSIGNMENT_CREATE` and `TASK_ASSIGNMENT_UPDATE`
+#### Changes to `TASK_ASSIGNMENT_CREATE` and `TASK_ASSIGNMENT_UPDATE`
 
 When a task assignment is created or updated, the event now includes the task's
 ID (`task.id`), the ID of the assigned user (`task_assignment.assigned_to.id`)
