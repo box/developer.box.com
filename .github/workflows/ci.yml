@@ -80,7 +80,7 @@ jobs:
         args: "Markdown passed linting and testing"
 
   # The deploy task actually deploys any changes to the en branch
-  deploy:
+  push-to-en:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
     timeout-minutes: 3
@@ -110,7 +110,7 @@ jobs:
 
       - name: Push compiled content
         uses: s0/git-publish-subdir-action@develop
-        with:
+        env:
           REPO: self
           BRANCH: en
           FOLDER: compiled
@@ -144,7 +144,7 @@ jobs:
 
   
   # The deploy task actually deploys any changes to the en-staging branch
-  deploy-staging:
+  push-to-en-staging:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
 
@@ -173,7 +173,7 @@ jobs:
 
       - name: Push compiled content
         uses: s0/git-publish-subdir-action@develop
-        with:
+        env:
           REPO: self
           BRANCH: en-staging
           FOLDER: compiled
@@ -205,7 +205,7 @@ jobs:
           args: "Error running `deploy-staging` job in OpenAPI CI"
 
   # A task that notifies Netlify of changes to the jp branch
-  notify-jp:
+  notify-from-jp:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/jp'
