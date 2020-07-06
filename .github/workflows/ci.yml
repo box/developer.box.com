@@ -67,7 +67,7 @@ jobs:
     - name: Run the test
       run: |
         yarn install
-        yarn test:compiler
+        yarn test
 
     - name: Send Slack notification
       uses: Ilshidur/action-slack@2.0.2
