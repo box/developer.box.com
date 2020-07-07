@@ -39,6 +39,6 @@ to get many more updates including some to make authentication a lot easier.
   Postman Chrome application. 
 </Mesage>
 
-[postman]: https://getpostman.com
-[legacy]: https://www.getpostman.com/collections/768279fde466dffc5511
+[postman]: https://postman.com
+[legacy]: https://www.postman.com/collections/768279fde466dffc5511
 [openapi]: https://github.com/box/box-openapi
