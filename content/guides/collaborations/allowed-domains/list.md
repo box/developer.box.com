@@ -4,17 +4,18 @@ related_endpoints:
   - get_collaboration_whitelist_entries
 related_guides:
   - collaborations
-  - collaboration-whitelists/delete-whitelist
+  - collaborations/allowed-domains/delete
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/collaboration-whitelists/list-whitelists
 ---
 
-# List Collaboration Whitelists for an Enterprise
+# List allowed domains for collaboration
 
-Listing the collaboration whitelists will return all domains that permit
-collaborations to be created with the current enterprise.
+Listing the domains that are allowed for collaboration will return all domains
+that permit collaborations to be created with the current enterprise.
 
 There are no required parameters for the request, but `limit` and `market`
 parameters may optionally be set to limit and page through the full result set.

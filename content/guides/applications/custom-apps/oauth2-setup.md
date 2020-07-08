@@ -99,7 +99,7 @@ the [scopes guide][scopes] for detailed information on each option.
 
 If your application is making API calls from front-end browser code in
 Javascript then the domain that these calls will be made from will need to be
-whitelisted for [Cross Origin Resource Sharing][cors], also known as CORS.
+allowed due to [Cross Origin Resource Sharing][cors], also known as CORS.
 
 Fill in the full URI(s) of the domains that should be enabled in your
 application to make these kind of requests. If all requests will be made from

@@ -77,7 +77,7 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 ```json
 "shared_link": {
-  "url": "https://cloud.box.com/s/bxtkjxgiq6v50zfap4h1xez5qthn186u",
+  "url": "https://app.box.com/s/dsbJFzdO7qZxdfOHFzdO7qZxdfOH",
   "download_url": null,
   "vanity_url": null,
   ...

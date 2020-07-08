@@ -4,25 +4,25 @@ related_endpoints:
   - post_collaboration_whitelist_entries
 related_guides:
   - collaborations
-  - collaboration-whitelists/list-whitelists
-  - collaboration-whitelists/delete-whitelist
+  - collaborations/allowed-domains/list
+  - collaborations/allowed-domains/delete
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/collaboration-whitelists/create-whitelist
 ---
 
-<!-- alex disable whitelist -->
+# Allow a domain for collaboration
 
-# Create Collaboration Whitelist
-
-Creating a new collaboration whitelist will set a new domain, such as
-`example.com`, for which collaborations may be created within the enterprise.
+An enterprise that normally restricts creating collaborations can
+add domains, such as `example.com`, to a list for which collaborations may be
+created within the enterprise. 
 
 <Samples id='post_collaboration_whitelist_entries' />
 
 The
-[create collaboration whitelist endpoint](endpoint://post_collaboration_whitelist_entries)
+[endpoint](endpoint://post_collaboration_whitelist_entries)
 will require the `domain` to allow the collaborations between, and a
 `direction`, which may be set to:
 
@@ -32,6 +32,6 @@ enterprise.
 content owned within an external enterprise.
 * `both`: Both of the above.
 
-Supply both parameter to set up the new collaboration whitelist.
+Supply both parameter to set up the new allowed domain.
 
 <Samples id='post_collaboration_whitelist_entries' />
