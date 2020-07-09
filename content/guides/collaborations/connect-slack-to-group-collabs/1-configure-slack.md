@@ -111,8 +111,7 @@ const http = require('http'); 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// handle challenge request
-app.post('/challenge', (req, res) => {
+app.post('/process', (req, res) => {
   console.log(req.body);
   if (req.body && req.body.token && req.body.challenge && req.body.type === 'url_verification') {
     const reply = { challenge: req.body.challenge };
@@ -120,7 +119,6 @@ app.post('/challenge', (req, res) => {
   }
 });
 
-// Create server
 const port = process.env.PORT || 3000;
 http.createServer(app).listen(port, () => {
   console.log(`Server started: Listening on port ${port}`);
@@ -167,8 +165,8 @@ following.
 
 Toggle "Enable Events" to "On"
 Under "Request URL" add in the public URL that you deployed the above code to, 
-and be aware that we are listening at `{APPROUTE}/event` (such as
-`https://myapp.com/challenge`).
+and be aware that we are listening at `{APPROUTE}/process` (such as
+`https://myapp.com/process`).
 Once you add in the URL and click outside the field, Slack will immediately 
 send the challenge to the URL that you were hosting the code at above. If the
 code responds correctly, you will see a green verified note beside the "Request 

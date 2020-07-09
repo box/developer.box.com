@@ -16,7 +16,7 @@ hide_in_page_nav: true
   user_id: 'U016JCDPN56',
   user_name: 'joncleblanc',
   command: '/boxadd',
-  text: '123456',
+  text: 'file 123456',
   response_url: 'https://hooks.slack.com/commands/T015DQSV48P/1204206313778/ankvsRb57WKnKPRp00lFeyTx',
   trigger_id: '1189463708855.1183842990295.cca20c3ca1ea193dab286ad8e9e36540'
 }
