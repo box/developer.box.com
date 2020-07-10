@@ -1,6 +1,7 @@
 ---
 rank: 1
-related_endpoints: []
+related_endpoints:
+  - post_files_id_metadata_global_boxSkillsCards
 related_guides: []
 required_guides: []
 related_resources: []
@@ -34,12 +35,12 @@ To set up a Custom Skill you will need to pass the following requirements.
 
 ### 1. Log in to the Developer Console
 
-Head over to the [Developer Console][devconsole] and select "Create New App".
+Head over to the [Developer Console][devconsole] and select **Create New App**.
 
 ### 2. Create a Custom Skill
 
-Select the "Custom Skill" option from the list of application types and select
-"Next".
+Select the **Custom Skill** option from the list of application types and select
+**Next**.
 
 <ImageFrame border>
 
@@ -60,8 +61,8 @@ to be unique across all applications on Box.
 
 ## Approval
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
+Before a Custom Skill can be used it needs to be assigned to a folder for which
+the skill should trigger.
 
 <CTA to='g://applications/custom-skills/approval'>
 

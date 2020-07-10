@@ -27,17 +27,8 @@ source_url: >-
 The Box Skills Kit is a Node wrapper that is designed to abstract many of the
 common complex operations required during the Box Skills development process.
 
-These complex operation abstractions include:
+<CTA to="https://github.com/box/box-skills-kit-nodejs/tree/master/skills-kit-library">
 
-* Interpreting and extracting relevant data from the notification payload sent
-from Box.
-* Making authenticated calls using the downscoped tokens in the
-[Skills event payload](guide://skills/handle/payload) to download the file
-stored in Box.
-* Simplifying the operations around storing metadata back to the file stored in
-Box.
+Visit the Skills Kit on GitHub
 
-For a complete overview of the Node Box Skills kit, see the
-[GitHub documentation][github-skills-kit].
-
-[github-skills-kit]: https://github.com/box/box-skills-kit-nodejs/tree/master/skills-kit-library
+</CTA>
