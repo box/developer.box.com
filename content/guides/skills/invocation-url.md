@@ -24,10 +24,10 @@ garner insight from the file, such as the machine learning system.
 
 ## Requirements
 
-*-* The invocation URL should be publicly available. Notifications cannot be sent
+* The invocation URL should be publicly available. Notifications cannot be sent
   to `localhost` or `127.0.0.1` as this address is not accessible by Box's
   servers.
-*-* The server behind the invocation URL should be listening to HTTP `POST`
+* The server behind the invocation URL should be listening to HTTP `POST`
   requests. Box Skills will send the event notification via a `POST` request
   using a `JSON` body.
 
