@@ -8,7 +8,7 @@ subcategory_id: null
 is_index: true
 id: changelog
 type: page
-total_steps: 3
+total_steps: 2
 sibling_id: pages
 parent_id: pages
 next_page_id: changelog/2018

@@ -47,7 +47,7 @@ A default note
 
 </H>
 
-## Notice message
+## Tip message
 
 The next level is a tip. Use this message type for messages that are general
 good tips and best practices.
