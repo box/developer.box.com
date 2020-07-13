@@ -213,9 +213,13 @@ Click "Save" to add the command to our Slack app.
 
 ## Add Remaining Scopes
 
-When slash commands or notification events are sent to our application from Slack, they will contain a Slack user ID which relates to the action that was taken. To translate that ID to Box, we need to get the Slack user email. That requires two extra scopes.
+When slash commands or notification events are sent to our application from
+Slack, they will contain a Slack user ID which relates to the action that was
+taken. To translate that ID to Box, we need to get the Slack user email. That
+requires two extra scopes.
 
-From your Slack application configuration, click on **OAuth & Permissions** in the left menu, then do the following.
+From your Slack application configuration, click on **OAuth & Permissions** in
+the left menu, then do the following.
 
 * Scroll down to the **Scopes** section.
 * Click on the **Add an OAuth Scope** button under **Bot Token Scopes**..
@@ -239,6 +243,17 @@ Click the button to "Install App to Workspace".
 
 Once the "Allow" button is clicked you should see a success message. Your bot
 is now installed within the workplace.
+
+## Summary
+
+* You've created your Slack application.
+* You've configured user event notifications, slash commands, and additional
+  scoping.
+* You deployed your Slack bot to your workspace.
+
+<Observe option='programming.platform' value='node,java,python,dotnet,ruby'>
+  <Next>I have my local application set up</Next>
+</Observe>
 
 [slack-apps]: https://api.slack.com/apps
 [slack-events]: https://api.slack.com/events

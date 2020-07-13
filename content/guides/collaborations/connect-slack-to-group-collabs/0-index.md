@@ -65,8 +65,9 @@ your application code.
 [slack-event-api]: https://api.slack.com/events-api
 [step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
 [step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
-[step3]: g://collaborations/connect-slack-to-group-collabs/handle-slack-events
-[step4]: g://collaborations/connect-slack-to-group-collabs/connect-box-functions
-[step5]: g://collaborations/connect-slack-to-group-collabs/deploy-to-workspace
+[step3]: g://collaborations/connect-slack-to-group-collabs/scaffold-application-code
+[step4]: g://collaborations/connect-slack-to-group-collabs/handle-slack-events
+[step5]: g://collaborations/connect-slack-to-group-collabs/connect-box-functions
+[step6]: g://collaborations/connect-slack-to-group-collabs/test-bot
 [heroku]: https://heroku.com/
 [aws-lambda]: https://aws.amazon.com/lambda/

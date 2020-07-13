@@ -3,7 +3,7 @@ type: quick-start
 hide_in_page_nav: true
 ---
 
-# Deploy Bot to Slack Workspace
+# Test the bot
 
 With the configuration settings in place, the last step is to install the
 application into your Slack workspace. From the "Basic Information" page of the
