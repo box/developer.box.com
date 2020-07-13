@@ -53,7 +53,6 @@ good tips and best practices.
   </Message>
 </H>
 
-
 ## Notice message
 
 The next level is a notice. Use this message type for messages that are notices
