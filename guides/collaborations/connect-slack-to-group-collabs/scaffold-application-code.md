@@ -80,18 +80,17 @@ was auto-populated once the bot was added to your Slack workspace.
  save the file.
 
 ```javascript
-const bodyParser = require('body-parser');
 const boxSDK = require('box-node-sdk');
 const config = require('./config.js')
-const app = require('express')();
+const express = require('express'); 
+const app = express();
 const axios = require('axios');
-const http = require('http');
 const path = require('path');
 const util = require('util');
 const fs = require('fs');
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // INSTANTIATE BOX CLIENT
 
@@ -138,8 +137,8 @@ const handler = (() => {
 })();
 
 const port = process.env.PORT || 3000;
-http.createServer(app).listen(port, () => {
-  console.log(`Server started: Listening on port ${port}`);
+app.listen(port, function(err) { 
+  console.log("Server listening on PORT", port); 
 });
 ```
 

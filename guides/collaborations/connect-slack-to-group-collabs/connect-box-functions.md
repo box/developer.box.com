@@ -126,7 +126,6 @@ client.enterprise.getUsers({filter_term: email}).then(users => {
       }
     }).catch(function (err) {
       console.log(err.response.body);
-      //POSSIBLE ERRORS - 409 CONFLICT
     });
   } else {
     console.log('No Box user found to add to group');
@@ -308,7 +307,6 @@ client.groups.getAll().then(groups => {
 
   if (groupId === 0) { 
     client.groups.create(groupName, { description: 'Slack channel collaboration group', invitability_level: 'all_managed_users' }).then(group => {
-      console.log(group);
       groupId = group.id;
       _callback(groupId);
     });
@@ -393,7 +391,6 @@ getGroupId(channel, function (gid){
   
   client.enterprise.getUsers({filter_term: email}).then(users => {
     if (users.entries.length > 0) {
-      console.log(users.entries[0].id);
       client.asUser(users.entries[0].id);
       const collabRole = client.collaborationRoles.VIEWER;
       const collabOptions = { type: type };
@@ -402,7 +399,6 @@ getGroupId(channel, function (gid){
         console.log(`Content added with collaboration ID ${collaboration.id}`);
       }).catch(function (err) {
         console.log(util.inspect(err.response.body, {showHidden: false, depth: null}))
-        //POSSIBLE ERRORS - 404 NOT FOUND, 409 CONFLICT, 403 FORBIDDEN IF NEW UPLOAD
       });
     }
   });
