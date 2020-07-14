@@ -17,8 +17,10 @@ bot.
 * Content add functions: When a user enters a valid `/boxadd` slash command,
  that content should be shared with the group through a new collaboration.
 
-If you haven't done so already, ensure that all code in the previous step is
-deployed to your publicly accessible hosting location.
+<Message type='notice'>
+  If you haven't done so already, ensure that all code in the previous step is
+  deployed to your publicly accessible hosting location.
+</Message>
 
 ## Testing group creation
 
@@ -59,8 +61,8 @@ If you see your group and members, this step is a success.
 
 ## Testing user event functions
 
-Keep the the [Users and Groups][box-users-groups] section of the Box admin
-console open, and take not of the number in the **Members** column beside your
+Keep the [Users and Groups][box-users-groups] section of the Box admin
+console open and take note of the number in the **Members** column beside your
 Slack group. 
 
 From the Slack channel with the bot invited, add or remove someone other than

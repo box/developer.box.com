@@ -25,7 +25,7 @@ our application code under three circumstances.
 
 * A user joins a channel.
 * A user leaves a channel.
-* A user entered a `/boxadd` Slash command.
+* A user enters a `/boxadd` Slash command.
 
 Our application needs to have a public route that listens for those messages
 from Slack, which will contain similar payloads to the below.
@@ -101,8 +101,8 @@ from Slack, which will contain similar payloads to the below.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-* Load up `process.js`.
-* In the `/event` listener, replace the `/HANDLE INCOMING EVENTS` comment with
+* Load `process.js` in your preferred editor.
+* In the `/event` listener, replace the `// HANDLE INCOMING EVENTS` comment with
  the following.
 
 ```javascript
@@ -113,7 +113,7 @@ if (req.body.token !== config.verificationToken) {
 handler.process(res, req.body);
 ```
 
-When an event comes through, the listener verifies that the messages came from
+When an event comes through, the listener verifies that the message came from
 Slack, using the verification token from our Slack application. If it's a valid
 request, the event payload is sent to our event process function.
 
@@ -149,7 +149,7 @@ request, the event payload is sent to our event process function.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
@@ -203,16 +203,16 @@ If the payload is a user event, denoted by `data.type` being set to
  (`member_left_channel`) or joining (`member_joined_channel`) the channel. 
 * `channel`: The channel ID, which will be used as the Box group name.
 * `userId`: The ID of the user, to look up their profile email which will bind
- to their user profile in Box.
+ to a user profile in Box that uses the same email.
 
 The process function then fetches the profile of the user by calling
 `getSlackUser`, and once obtained that user profile is sent to the
 `processUser` function to add or remove them from the Box group.
 
 If the payload is a slash command, denoted by `data.command` being set to
-`/boxadd`, the content of the command that denotes the Box ID and whether it's
-a file or folder, such as `file 1234`, is extracted and pulled apart. Those values
-are validated for proper content.
+`/boxadd`, the content of the command that represents the Box ID and whether
+it's a file or folder, such as `file 1234`, is extracted and split to get the
+individual values. Those values are validated for proper content.
 
 Once validated, the profile of the Slack user is obtained to get the email,
 then the user profile is sent to `processContent` to collaborate the Box
@@ -257,7 +257,7 @@ content in with the Box group so that everyone has access.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
@@ -328,15 +328,15 @@ This function runs a number of actions in sequence.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
 ## Fetch Slack user profile
 
 The last Slack related function is a utility mechanism used by the other
-functions above, and that's the call the Slack API to fetch the user profile
-given the user IDs provided by either Slack events / commands or when fetching
+functions above, and that's to call the Slack API to fetch the user profile
+given the user ID provided by either Slack event / command or when fetching
 a list of channel users. Since we're matching Slack users to Box users via
 their email address, that is the field that we care about from the user profile
 lookup.
@@ -398,7 +398,7 @@ user profile information (if valid) to the specified callback.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
@@ -406,7 +406,7 @@ user profile information (if valid) to the specified callback.
 
 * You're verifying incoming events and forwarding them to be processed.
 * You're processing events and routing to the appropriate function.
-* You have functions for processing all users in a channel and for fetching the
+* You have a function for processing all users in a channel and for fetching the
  Slack profile of a single user.
 
 <Observe option='programming.platform' value='node,java,python,dotnet,ruby'>

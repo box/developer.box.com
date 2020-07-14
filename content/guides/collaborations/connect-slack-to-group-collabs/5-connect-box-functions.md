@@ -6,16 +6,17 @@ hide_in_page_nav: true
 # Connect Bot to Box
 
 We're now handling and processing events coming from Slack, then obtaining all
-information needed to connect with Box users and Box groups. We now need to
-connect that to Box functions.
+information needed to connect with Box users and groups. We now need to
+connect that functionality to Box functions.
 
-In this step we'll expand several functions from the last step.
+In this step we'll expand several functions from the last step to incorporate
+new Box features.
 
-* Instantiate a Box client
+* Instantiate a Box client.
 * Add a Box user to a Box group.
 * Remove a Box user from a Box group.
 * Fetch a Box group ID from a group name.
-* Add content shared to a group.
+* Add content that is shared to a group.
 
 ## Instantiate a Box Client
 
@@ -74,15 +75,15 @@ used to make API calls. At this point it is scoped to the
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
 ## Add a Box user to a group
 
 When a bot is added to a channel and needs to create a Box group with all
-users, or when a single user joins the channel after that action, this function
-will perform that task.
+users of the channel, or when a single user joins the channel after that
+action, this function will perform that task.
 
 <Choice option='programming.platform' value='node' color='none'>
 
@@ -120,7 +121,7 @@ client.enterprise.getUsers({filter_term: email}).then(users => {
   `filter_term` option to the email address you're searching for.
 </Message>
 
-Since we're matching a Slack user and Box user via their email address, we
+Since we're matching a Slack user to a Box user via their email address, we
 first find a matching Box user using the Slack profile email. If found, a call
 is made to add that user to the channel group. The group was created when the
 bot was first added.
@@ -157,7 +158,7 @@ bot was first added.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
@@ -232,13 +233,13 @@ group using their membership ID.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
 ## Fetch a Box group ID from a group name
 
-The last Box function we need has two main purposes.
+The next Box function we need has two main purposes.
 
 * Return the Box group ID of an existing group.
 * If a group doesn't exist, create the Box group and return the ID.
@@ -276,12 +277,12 @@ client.groups.getAll().then(groups => {
 The function will capture all groups in the enterprise, then loop through each
 one. 
 
-If the group name matches the Slack channel name, the group ID is returned.
+If the group name matches the Slack channel ID, the group ID is returned.
 
 If there are no matches, a new Box group is created and the ID of the group is
 returned for use. The group will be named after the Slack channel ID since that
 is a constant that is returned with both slash commands and user events, making
-it easier to lookup.
+it easier to lookup without additional functions.
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -315,15 +316,15 @@ it easier to lookup.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 
 ## Add shared content to a group
 
-Despite all of the user and group management functionality that was built, the
-purpose of this bot is to allow users to share files and folders from their own
-Box accounts with everyone in a group.
+The root purpose of this bot is to allow users to share files and folders from
+their own Box accounts with everyone in a group. Building upon all previous
+functionality, this function performs that task.
 
 <Choice option='programming.platform' value='node' color='none'>
 
@@ -398,7 +399,7 @@ tell the API whether the Box content being shared is a file or a folder.
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 

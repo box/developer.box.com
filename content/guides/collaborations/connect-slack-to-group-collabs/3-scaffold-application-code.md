@@ -5,8 +5,8 @@ hide_in_page_nav: true
 
 # Scaffold application code
 
-With our Slack and Box applications set up, we're ready to set up our
-application to start listening for incoming slash commands and events from
+With our Slack and Box applications set up, we're ready to set up the
+application which will listen for incoming slash commands and events from
 Slack.
 
 This application will be split up into three parts:
@@ -47,16 +47,7 @@ start the application.
 
 * Run `npm init` from the terminal / console to install dependencies.
 * Create two files, `process.js` and `config.js` in the local directory.
-* Open `config.js` and save the following default configuration. There are two
- values above that will need to be replaced with details from your Slack
- application. Replace the `TOKEN` strings with the appropriate values.
-  * `verificationToken`: Load up your Slack application configuration page.
-   Within the **Basic Information** page, scroll down to the
-   **App Credentials** section. The `Verification Token` string will be
-   available there.
-  * `botToken`: Within your Slack application, go to the **OAuth & Permissions**
-   page. The **Bot User OAuth Access Token** string is available at the top and
-  was auto-populated once the bot was added to your Slack workspace.
+* Open `config.js` and save the following default configuration. 
 
 ```javascript
 // Okta application credentials
@@ -64,6 +55,16 @@ const verificationToken = exports.verificationToken = 'TOKEN';
 const botToken = exports.botToken = 'TOKEN';
 ```
 
+* There are two values above that will need to be replaced with details from
+ your Slack application. Replace the `TOKEN` strings with the appropriate
+ values.
+  * `verificationToken`: Load up your Slack application configuration page.
+   Within the **Basic Information** page, scroll down to the
+   **App Credentials** section. The **Verification Token** string will be
+   available there.
+  * `botToken`: Within your Slack application, go to the **OAuth & Permissions**
+   page. The **Bot User OAuth Access Token** string is available at the top and
+  was auto-populated once the bot was added to your Slack workspace.
 * Open up the blank `process.js` file, copy and paste the following code, and
  save the file.
 
@@ -136,7 +137,7 @@ process events between Slack and Box. From top to bottom, functions include:
 
 * `/event` handler: Captures all incoming Slack traffic, verifies the content,
  and routes to `process`.
-* `process`: Parses apart the Slack event and routes to either Box group
+* `process`: Parses the Slack event and routes to either Box group
  processing (user channel events) or to add Box content to the group (slash
  commands).
 * `processUser`: Handles user event requirements to either add or remove a user
@@ -181,7 +182,7 @@ process events between Slack and Box. From top to bottom, functions include:
 <Choice option='programming.platform' unset color='none'>
   <Message danger>
     # Incomplete previous step
-    Please select a preferred language / framework to get started.
+    Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
 

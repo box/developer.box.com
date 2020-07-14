@@ -40,7 +40,8 @@ This will take you through the following steps.
 At the end of this tutorial we will have a Slack bot that will be deployed to a
 channel in our workspace. This bot will create a Box group from all of the
 people present in the channel, then listen for `/boxadd` slash commands in the
-channel to collaborate Box files and folders with the group.
+channel to collaborate Box files and folders from the user with the entire
+group.
 
 ## Requirements
 
@@ -48,8 +49,8 @@ The quick start guide has two requirements around your Slack / Box setup, and
 your application code.
 
 1. User email: Since we are connecting a Slack user account to a Box user
- account via the Slack user email address, a user account using the same email
- address must be present in the Box enterprise 
+ account via the Slack user email address, a matching Box user account using
+ the same email address must be present in the Box enterprise.
 1. Publicly accessible server: Slack will send event and command notification
  data to a public URL, where our application will be hosted. This guide assumes
  that you have a public location where your application code will be hosted,
