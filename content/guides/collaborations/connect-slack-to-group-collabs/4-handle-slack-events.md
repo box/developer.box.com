@@ -107,7 +107,7 @@ from Slack, which will contain similar payloads to the below.
 
 ```javascript
 if (req.body.token !== config.verificationToken) {
-  res.status(200).send('Slack Verification Failed');
+  res.send('Slack Verification Failed');
 }
 
 handler.process(res, req.body);
@@ -164,7 +164,10 @@ following.
 ```javascript
 let userId;
 
-if (data.type && data.type === 'event_callback') {
+if (
+  data.type && 
+  data.type === 'event_callback'
+) {
   const eventType = data.event.type;
   const channel = data.event.channel;
   userId = data.event.user;
@@ -173,21 +176,27 @@ if (data.type && data.type === 'event_callback') {
     processUser(user, eventType, channel);
   });
 
-  res.status(200).send();
-} else if (data.command && data.command === '/boxadd') {
+  res.send();
+} else if (
+  data.command && 
+  data.command === '/boxadd'
+) {
   textOptions = data.text.split(' ');
-  if (['file', 'folder'].indexOf(textOptions[0]) >= 0 && isNaN(textOptions[1]) === false) {
+  if (
+    ['file', 'folder'].indexOf(textOptions[0]) >= 0 && 
+    isNaN(textOptions[1]) === false
+  ) {
     userId = data.user_id;
 
     getSlackUser(userId, function(user) {
       processContent(user, data.channel_id, textOptions[0], textOptions[1]);
     });
-    res.status(200).send('Adding content');
+    res.send('Adding content');
   } else {
-    res.status(200).send('Invalid input. Example usage: /boxadd file 123456');
+    res.send('Invalid input. Example usage: /boxadd file 123456');
   }
 } else {
-  res.status(200).send('Invalid action');
+  res.send('Invalid action');
 }
 ```
 <!-- markdownlint-enable line-length -->
@@ -355,7 +364,10 @@ with the following.
 const userPath = `https://slack.com/api/users.info?token=${config.botToken}&user=${userId}`;
 
 axios.get(userPath).then((response) => {
-  if (response.data.user && response.data.user.profile) {
+  if (
+    response.data.user && 
+    response.data.user.profile
+  ) {
     _callback(response.data.user);
   } else {
     console.log('No user data found');

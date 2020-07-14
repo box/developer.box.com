@@ -105,24 +105,31 @@ Deploy the following code to your public endpoint.
 <Choice option='programming.platform' value='node' color='none'>
 
 ```javascript
-const bodyParser = require('body-parser');
-const app = require('express')();
-const http = require('http'); 
+const express = require('express'); 
+const app = express();
+const port = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.post('/event', (req, res) => {
-  console.log(req.body);
-  if (req.body && req.body.token && req.body.challenge && req.body.type === 'url_verification') {
-    const reply = { challenge: req.body.challenge };
-    res.status(200).send(reply);
+  if (
+    req.body && 
+    req.body.challenge && 
+    req.body.type === 'url_verification'
+  ) {
+    res.send({ 
+      challenge: req.body.challenge 
+    });
+  } else {
+    res.status(400).send({ 
+      error: "Unrecognized request"
+    });
   }
 });
 
-const port = process.env.PORT || 3000;
-http.createServer(app).listen(port, () => {
-  console.log(`Server started: Listening on port ${port}`);
+app.listen(port, function(err) { 
+  console.log("Server listening on PORT", port); 
 });
 ```
 
@@ -154,6 +161,12 @@ http.createServer(app).listen(port, () => {
 
 ```
 
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework above to get started.
+  </Message>
 </Choice>
 <!-- markdownlint-enable line-length -->
 
