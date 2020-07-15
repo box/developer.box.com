@@ -20,6 +20,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.contractTemplate",
+       "fields": ["name"],
        "ancestor_folder_id": "5555",
        "limit": 100
      }'
@@ -44,6 +45,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.contractTemplate",
+       "fields": ["name"], 
        "ancestor_folder_id": "5555",
        "limit": 100,
        "marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
@@ -57,8 +59,8 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 <Message warning>
   To use the `next_marker` it is important to use the exact same query for the
-  next page of results. The API will return an error any of the parameters like
-  the `query`, `query_params`, or others are changed. 
+  next page of results. The API will return an error if any of the parameters
+  like the `query`, `query_params`, or others are changed.
 </Message>
 
 ## Sort

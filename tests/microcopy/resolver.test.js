@@ -6,7 +6,6 @@ const resolver = require('../../src/microcopy/resolver')
 
 test('Expect the resolver to resolve every item', async () => {
   const root = yaml.load(fs.readFileSync('./content/microcopy/index.yml'))
-  const result = await resolver.resolve(root).then(resolved => resolved.result)
-  
+  const result = await resolver.dereference(root)
   expect(jp.query(result, "$..['$ref']")).toEqual([])
 })

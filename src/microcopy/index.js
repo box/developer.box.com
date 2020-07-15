@@ -14,7 +14,7 @@ class Compiler {
    */
   async load(source = './content/microcopy/index.yml') {
     const root = yaml.load(fs.readFileSync(source))
-    return await resolver.resolve(root).then(resolved => resolved.result)
+    return await resolver.dereference(root)
   }
 
   /**
