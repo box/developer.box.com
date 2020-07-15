@@ -13,6 +13,19 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-07-16 / Change to enterprise events for content access
+
+Starting today, the [enterprise event stream](g://events/for-enterprise/) will
+begin producing new content access events.
+
+### New event
+
+* A new `CONTENT_ACCESS` event is triggered when a file was accessed by an
+ authorized user or programmatically by a Box application.
+
+See the [enterprise events](g://events/for-enterprise/) documentation
+for more information on other event types.
+
 ## 2020-07-15 / Changes to Metadata Query API syntax
 
 The [Metadata Query API][g_mdq_api] has been updated to **require explicitly
@@ -391,6 +404,7 @@ quick-start guide. Key features include:
 The [legacy Postman collection][legacy-postman-collection] will remain available
 for the foreseeable future.
 
+[enterprise-events]: g:///events/for-enterprise
 [box-shield]: https://www.box.com/shield
 [postman-quick-start-guide]: g://tooling/postman/quick-start
 [postman-collection]: g://tooling/postman/install
