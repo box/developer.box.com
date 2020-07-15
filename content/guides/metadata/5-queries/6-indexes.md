@@ -61,6 +61,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.customerInfo",
+       "fields": ["name"],
        "query": "accountNumber = :argAccountNum AND status = :argStatus",
        "query_params": {
          "argAccountNum": 12345,
