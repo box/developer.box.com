@@ -67,10 +67,11 @@ jobs:
     - name: Run the test
       run: |
         yarn install
-        yarn test:compiler
+        yarn test
 
     - name: Send Slack notification
       uses: Ilshidur/action-slack@2.0.2
+      if: github.ref == 'refs/heads/default'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: GitHub Actions
@@ -79,7 +80,7 @@ jobs:
         args: "Markdown passed linting and testing"
 
   # The deploy task actually deploys any changes to the en branch
-  deploy:
+  push-to-en:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
     timeout-minutes: 3
@@ -108,12 +109,12 @@ jobs:
           yarn build
 
       - name: Push compiled content
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
           BRANCH: en
           FOLDER: compiled
-          CLEAN: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
         uses: jasongitmail/fast-webhook@v1
@@ -143,7 +144,7 @@ jobs:
 
   
   # The deploy task actually deploys any changes to the en-staging branch
-  deploy-staging:
+  push-to-en-staging:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
 
@@ -171,11 +172,12 @@ jobs:
           yarn build
 
       - name: Push compiled content
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
           BRANCH: en-staging
           FOLDER: compiled
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
         uses: jasongitmail/fast-webhook@v1
@@ -202,12 +204,16 @@ jobs:
         with:
           args: "Error running `deploy-staging` job in OpenAPI CI"
 
-  # The deploy task actually deploys any changes to the jp branch
-  deploy-jp:
+  # A task that notifies Netlify of changes to the jp branch
+  notify-from-jp:
     # We run this on the latest ubuntu
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/jp'
     timeout-minutes: 3
+
+    strategy:
+      matrix:
+        node-version: [14.x]
 
     steps:
       - name: 'Trigger Netlify deployment'
@@ -215,6 +221,15 @@ jobs:
         with:
           url: ${{ secrets.NETLIFY_BOXDEV_JP_WEBHOOK }}
           json: '{}'
+
+      - name: Send Slack notification
+        uses: Ilshidur/action-slack@2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: GitHub Actions
+          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
+        with:
+          args: "Pushed latest Markdown to `jp` branch :rocket:"
 
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2

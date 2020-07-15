@@ -31,6 +31,28 @@ omit the type. Use this message type for messages that are not essential to be r
   </Message>
 </H>
 
+## Tip message
+
+The next level is a tip. Use this message type for messages that are general
+good tips and best practices.
+
+```html
+<Message type='tip'>
+  A tip message
+</Message>
+
+<Message tip>
+  A tip message
+</Message>
+
+```
+
+<H>
+  <Message tip>
+    A tip message
+  </Message>
+</H>
+
 ## Notice message
 
 The next level is a notice. Use this message type for messages that are notices

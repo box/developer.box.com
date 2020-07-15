@@ -1,6 +1,7 @@
 ---
 rank: 2
-related_endpoints: []
+related_endpoints:
+  - post_files_id_metadata_global_boxSkillsCards
 related_guides: []
 required_guides: []
 related_resources: []
