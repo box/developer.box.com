@@ -28,6 +28,11 @@ value is more than $200,000.
          -H 'Content-Type: application/json'
          -d '{
            "from": "enterprise_123456.customerInfo",
+           "fields": [
+             "name",
+             "enterprise_123456.customerInfo.name"
+             "enterprise_123456.customerInfo.tav"
+           ],
            "query": "tav >= :value",
            "query_params": {
              "value": 200000
@@ -45,80 +50,18 @@ metadata that matched the query for that file.
 {
   "entries":[
     {
-      "item":{
-        "type":"file",
-        "id":"11111",
-        "file_version":{
-          "type":"file_version",
-          "id":"222222",
-          "sha1":"69888bb1bff455d1b2f8afea75ed1ff0b4879bf6"
-        },
-        "sequence_id":"0",
-        "etag":"0",
-        "sha1":"69888bb1bff455d1b2f8afea75ed1ff0b4879bf6",
-        "name":"Contract.docx",
-        "description":"",
-        "size":25600,
-        "path_collection":{
-          "total_count":4,
-          "entries":[
-            {
-              "type":"folder",
-              "id":"0",
-              "sequence_id":null,
-              "etag":null,
-              "name":"All Files"
-            }
-          ]
-        },
-        "created_at":"2017-04-20T12:55:27-07:00",
-        "modified_at":"2017-04-20T12:55:27-07:00",
-        "trashed_at":null,
-        "purged_at":null,
-        "content_created_at":"2017-01-06T17:59:01-08:00",
-        "content_modified_at":"2017-01-06T17:59:01-08:00",
-        "created_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@example.com"
-        },
-        "modified_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@example.com"
-        },
-        "owned_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@example.com"
-        },
-        "shared_link":null,
-        "parent":{
-          "type":"folder",
-          "id":"0",
-          "sequence_id":"0",
-          "etag":"0",
-          "name":"All Files"
-        },
-        "item_status":"active"
-      },
+      "type":"file",
+      "id":"11111",
+      "etag":"0",
       "metadata":{
         "enterprise_123456":{
-          "someTemplate":{
+          "customerInfo":{
             "name": "Box",
-            "industry": "Technology",
             "tav": 1000000,
-            "$id": "01234500-12f1-1234-aa12-b1d234cb567e",
             "$parent": "folder_12345,",
-            "$scope": "enterprise_34567",
+            "$scope": "enterprise_123456",
             "$template": "customerInfo",
-            "$type": "customerInfo-6bcba49f-ca6d-4d2a-a758-57fe6edf44d0",
-            "$typeVersion": 2,
-            "$version": 1,
-            "$canEdit": true
+            "$version": 1
           }
         }
       }
