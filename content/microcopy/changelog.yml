@@ -57,3 +57,7 @@ levels:
 
 // all: Defines all entries
 all: All
+
+messages:
+  // no_entries: A message that is shown when we can not find any entries for a search
+  no_entries: It seems we don't have any entries for this selection.
