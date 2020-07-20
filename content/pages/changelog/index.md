@@ -15,9 +15,9 @@ For historical changelog entries, please see our
 
 ## 2020-07-20 / Updates to Search Relevance & Performance
 
-In January, updates were to Box's search [tokenizer](wiki-tokenizer) to improve
-the relevancy of search results and performance. This change does not effect
-how metadata is tokenized.
+In January, updates were released to Box's search [tokenizer](wiki-tokenizer),
+improving the relevancy of search results and performance. This change does not
+effect how metadata is tokenized.
 
 Notable changes to the API-initiated searches include:
 * Ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
