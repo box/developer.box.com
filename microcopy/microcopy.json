@@ -400,5 +400,45 @@
   // Link to the license used
   "footer.bottom.links.sample_license.url": "https://unlicense.org/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
-  "pages.blog.minute_read": "%s min read"
+  "pages.blog.minute_read": "%s min read",
+  // The label for all things API
+  "changelog.labels.api": "API",
+  // The label for all things SDKS
+  "changelog.labels.sdks": "SDKs",
+  // The label for all things Java
+  "changelog.labels.java": "Java",
+  // The label for all things Windows
+  "changelog.labels.windows": "Windows",
+  // The label for all things Python
+  "changelog.labels.python": "Python",
+  // The label for all things Node
+  "changelog.labels.node": "Node",
+  // The label for all things CLI
+  "changelog.labels.cli": "CLI",
+  // The label for all things Mobile
+  "changelog.labels.mobile": "Mobile",
+  // The label for all things iOS
+  "changelog.labels.ios": "iOS",
+  // The label for all things Android
+  "changelog.labels.android": "Android",
+  // The label for all things Content Preview
+  "changelog.labels.content-preview": "Content Preview",
+  // The label for all things UI Elements
+  "changelog.labels.ui-elements": "UI Elements",
+  // The label for all things Postman (app)
+  "changelog.labels.postman": "Postman",
+  // The label for all things Salesforce (app)
+  "changelog.labels.salesforce": "Salesforce",
+  // The label for all things Reports
+  "changelog.labels.reports": "Reports",
+  // The label for all other things
+  "changelog.labels.other": "Other",
+  // Defines if this is a new feature
+  "changelog.levels.is_new_feature": "New feature",
+  // Defines if this is a breaking change
+  "changelog.levels.is_impactful": "Impactful change",
+  // Defines all entries
+  "changelog.all": "All",
+  // A message that is shown when we can notfind any entries for a search
+  "changelog.messages.no_entries": "It seems we don't have any entries for this selection."
 }
