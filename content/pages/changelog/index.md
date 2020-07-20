@@ -13,6 +13,19 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-07-20 / Updates to Search Relevance & Performance
+
+In January, updates were to Box's search [tokenizer](wiki-tokenizer) to improve
+the relevancy of search results and performance. This change does not effect
+how metadata is tokenized.
+
+Notable changes to the API-initiated searches include:
+* Ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
+* Improved Japanese search
+
+See the [full-text search](g://search/full-text-search) documentation for more
+information on how to search using Box's API.
+
 ## 2020-07-16 / Change to enterprise events for content access
 
 Starting today, the [enterprise event stream](g://events/for-enterprise/) will
@@ -404,6 +417,8 @@ quick-start guide. Key features include:
 The [legacy Postman collection][legacy-postman-collection] will remain available
 for the foreseeable future.
 
+[wiki-stop-words]: https://en.wikipedia.org/wiki/Stop_words
+[wiki-tokenizer]: https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization
 [box-shield]: https://www.box.com/shield
 [postman-quick-start-guide]: g://tooling/postman/quick-start
 [postman-collection]: g://tooling/postman/install
