@@ -68,6 +68,9 @@ all: All
 // unread: A label applied to a changelog entry that specifies if it's unread
 unread: Unread
 
+// title: The title of the developer changelog section
+title: Developer Changelog
+
 messages:
   // no_entries: |-
     A message that is shown when we can not
