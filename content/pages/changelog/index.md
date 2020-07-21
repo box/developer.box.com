@@ -20,7 +20,7 @@ improving the relevancy of search results and performance. This change does not
 effect how metadata is tokenized.
 
 Notable changes to the API-initiated searches include:
-* Ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
+* The ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
 * Improved Japanese search
 
 See the [full-text search](g://search/full-text-search) documentation for more
