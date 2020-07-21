@@ -445,6 +445,8 @@
   "changelog.all": "All",
   // A label applied to a changelog entry that specifies if it's unread
   "changelog.unread": "Unread",
+  // The title of the developer changelog section
+  "changelog.title": "Developer Changelog",
   // A message that is shown when we can notfind any entries for a search
   "changelog.messages.no_entries": "It seems we don't have any entries for this selection."
 }
