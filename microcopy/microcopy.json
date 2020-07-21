@@ -434,9 +434,13 @@
   // The label for all other things
   "changelog.labels.other": "Other",
   // Defines if this is a new feature
-  "changelog.levels.is_new_feature": "New feature",
+  "changelog.levels.is_new_feature": "New features",
   // Defines if this is a breaking change
-  "changelog.levels.is_impactful": "Impactful change",
+  "changelog.levels.is_impactful": "Impactful changes",
+  // Defines if this is a new feature (short version)
+  "changelog.levels.short.is_new_feature": "New",
+  // Defines if this is a breaking change (short version)
+  "changelog.levels.short.is_impactful": "Impactful",
   // Defines all entries
   "changelog.all": "All",
   // A message that is shown when we can notfind any entries for a search
