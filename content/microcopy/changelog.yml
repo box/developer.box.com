@@ -65,6 +65,9 @@ levels:
 // all: Defines all entries
 all: All
 
+// unread: A label applied to a changelog entry that specifies if it's unread
+unread: Unread
+
 messages:
   // no_entries: |-
     A message that is shown when we can not
