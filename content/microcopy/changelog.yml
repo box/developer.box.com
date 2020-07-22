@@ -57,7 +57,7 @@ levels:
 
   short:
     // is_new_feature: Defines if this is a new feature (short version)
-    is_new_feature: New
+    is_new_feature: Feature
 
     // is_impactful: Defines if this is a breaking change (short version)
     is_impactful: Impactful
