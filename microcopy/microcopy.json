@@ -438,7 +438,7 @@
   // Defines if this is a breaking change
   "changelog.levels.is_impactful": "Impactful changes",
   // Defines if this is a new feature (short version)
-  "changelog.levels.short.is_new_feature": "New",
+  "changelog.levels.short.is_new_feature": "Feature",
   // Defines if this is a breaking change (short version)
   "changelog.levels.short.is_impactful": "Impactful",
   // Defines all entries
