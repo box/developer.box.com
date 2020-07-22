@@ -24,6 +24,16 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-07-22 / New Zip Download APIs available
+
+A new collection of APIs are now available that allows developers to create a
+Zip file containing a specified list of files and folders. We've updated the
+reference documentation for this [Zip Download API][zip_downloads_api]. SDK
+support for these new endpoints is currently in development and scheduled
+to be released in the next 3 months.
+
+[zip_downloads_api]: e://post_zip_downloads
+
 ## 2020-07-16 / Change to enterprise events for content access
 
 Starting today, the [enterprise event stream](g://events/for-enterprise/) will
