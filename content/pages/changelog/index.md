@@ -19,7 +19,7 @@ In January, updates were released to Box's search [tokenizer](wiki-tokenizer),
 improving the relevancy of search results and performance. This change does not
 effect how metadata is tokenized.
 
-Notable changes to the API-initiated searches include:
+Notable changes to searches include:
 * The ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
 * Improved Japanese search
 
