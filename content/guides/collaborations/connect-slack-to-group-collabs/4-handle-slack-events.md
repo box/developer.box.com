@@ -102,15 +102,16 @@ from Slack, which will contain similar payloads to the below.
 <Choice option='programming.platform' value='node' color='none'>
 
 * Load `process.js` in your preferred editor.
-* In the `/event` listener, replace the `// HANDLE INCOMING EVENTS` comment with
- the following.
+* Replace the `app.post("/event" ...` listener with the following. 
 
 ```javascript
-if (req.body.token !== config.verificationToken) {
-  res.send('Slack Verification Failed');
-}
+app.post("/event", (req, res) => {
+  if (req.body.token !== slackConfig.verificationToken) {
+    res.send("Slack Verification Failed");
+  }
 
-handler.process(res, req.body);
+  handler.process(res, req.body);
+});
 ```
 
 When an event comes through, the listener verifies that the message came from
@@ -155,48 +156,41 @@ request, the event payload is sent to our event process function.
 
 ## Process Slack events
 
+Next, we will want to determine what event was received and pass this on to the
+right part of our application.
+
 <Choice option='programming.platform' value='node' color='none'>
 
-In the `process` function, replace the `// PROCESS EVENTS` comment with the
-following.
+Replace the `process` function with the following.
 
 <!-- markdownlint-disable line-length -->
 ```javascript
-let userId;
+function process(res, data) {
+  if (data.type && data.type === "event_callback") {
+    const eventType = data.event.type;
+    const channel = data.event.channel;
+    const userId = data.event.user;
 
-if (
-  data.type && 
-  data.type === 'event_callback'
-) {
-  const eventType = data.event.type;
-  const channel = data.event.channel;
-  userId = data.event.user;
-
-  getSlackUser(userId, function(user) {
-    processUser(user, eventType, channel);
-  });
-
-  res.send();
-} else if (
-  data.command && 
-  data.command === '/boxadd'
-) {
-  textOptions = data.text.split(' ');
-  if (
-    ['file', 'folder'].indexOf(textOptions[0]) >= 0 && 
-    isNaN(textOptions[1]) === false
-  ) {
-    userId = data.user_id;
-
-    getSlackUser(userId, function(user) {
-      processContent(user, data.channel_id, textOptions[0], textOptions[1]);
+    getSlackUser(userId, function (user) {
+      processUser(user, eventType, channel);
     });
-    res.send('Adding content');
+
+    res.send();
+  } else if (data.command && data.command === "/boxadd") {
+    const [itemType, itemId] = data.text.split(" ");
+    if (["file", "folder"].includes(itemType) && !isNaN(itemId)) {
+      const userId = data.user_id;
+
+      getSlackUser(userId, function (user) {
+        processContent(user, data.channel_id, itemType, itemId);
+      });
+      res.send("Adding content");
+    } else {
+      res.send("Invalid input. Example usage: /boxadd file 123456");
+    }
   } else {
-    res.send('Invalid input. Example usage: /boxadd file 123456');
+    res.send("Invalid action");
   }
-} else {
-  res.send('Invalid action');
 }
 ```
 <!-- markdownlint-enable line-length -->
@@ -270,6 +264,90 @@ content in with the Box group so that everyone has access.
   </Message>
 </Choice>
 
+## Process Slack user
+
+Now we need to define how users should be processed. There are three instances
+that we need to account for: 
+
+* The bot was added to the channel.
+* A regular user joined the channel.
+* A regular user left the channel.
+
+<Choice option='programming.platform' value='node' color='none'>
+
+Replace the `processUser` function with the following.
+
+<!-- markdownlint-disable line-length -->
+```javascript
+function processUser(user, event, channel) {
+  getGroupId(channel, function (groupId) {
+    // if bot was added, add all channel users
+    if (user.is_bot) {
+      processSlackChannel(channel, groupId);
+    } else if (
+      user.profile &&
+      user.profile.email &&
+      event === "member_joined_channel"
+    ) {
+      addGroupUser(groupId, user.profile.email);
+    } else if (
+      user.profile &&
+      user.profile.email &&
+      event === "member_left_channel"
+    ) {
+      removeGroupUser(groupId, user.profile.email);
+    }
+  });
+}
+```
+<!-- markdownlint-enable line-length -->
+
+</Choice>
+<Choice option='programming.platform' value='java' color='none'>
+
+```java
+
+```
+
+</Choice>
+<Choice option='programming.platform' value='dotnet' color='none'>
+
+```dotnet
+
+```
+
+</Choice>
+<Choice option='programming.platform' value='python' color='none'>
+
+```python
+
+```
+
+</Choice>
+<Choice option='programming.platform' value='ruby' color='none'>
+
+```ruby
+
+```
+
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
+</Choice>
+
+The function starts by fetching the current Box group ID, which will be defined
+in the next step. Once obtained, we process users in the following way:
+
+* If the user is a bot, we need to initialize the Box group and add all current
+ users of the channel as Box users in the group. This is to account for the bot
+ being added to existing channels, and this initializing is ignored if the bot
+ is being re-added to a channel that they were already present in.
+* If the user joined the channel we send them to be added to the group.
+* If the user left the channel we send them to be removed from the group.
+
 ## Process Slack channel users
 
 <Choice option='programming.platform' value='node' color='none'>
@@ -278,23 +356,23 @@ When a bot is first added to a channel, it needs to run an audit of all users
 currently in the channel and create a Box group with those people in order to
 create a baseline for the channel.
 
-In the `processSlackChannel` function, replace the
-`// ADD ALL SLACK CHANNEL USERS TO GROUP` comment with the following.
+Replace the `processSlackChannel` function with the following.
 
 ```javascript
-const limit = 100;
-const channelUsersPath = `https://slack.com/api/conversations.members?token=${config.botToken}&channel=${channel}&limit=${limit}`;
-let userPath = '';
+function processSlackChannel(channel, groupId) {
+  const limit = 100;
+  const channelUsersPath = `https://slack.com/api/conversations.members?token=${slackConfig.botToken}&channel=${channel}&limit=${limit}`;
 
-axios.get(channelUsersPath).then((response) => {
-  response.data.members.forEach(uid => {
-    getSlackUser(uid, function(user) {
-      if (user.profile.email && user.is_bot === false) {
-        addGroupUser(gid, user.profile.email);
-      }
+  axios.get(channelUsersPath).then((response) => {
+    response.data.members.forEach((uid) => {
+      getSlackUser(uid, function (user) {
+        if (user.profile.email && !user.is_bot) {
+          addGroupUser(groupId, user.profile.email);
+        }
+      });
     });
   });
-});
+}
 ```
 
 This function runs a number of actions in sequence.
@@ -357,22 +435,20 @@ lookup.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-In the `getSlackUser` function, replace the `// GET SLACK USER PROFILE` comment
-with the following.
+Replace the `getSlackUser` function with the following.
 
 ```javascript
-const userPath = `https://slack.com/api/users.info?token=${config.botToken}&user=${userId}`;
+function getSlackUser(userId, callback) {
+  const userPath = `https://slack.com/api/users.info?token=${slackConfig.botToken}&user=${userId}`;
 
-axios.get(userPath).then((response) => {
-  if (
-    response.data.user && 
-    response.data.user.profile
-  ) {
-    _callback(response.data.user);
-  } else {
-    console.log('No user data found');
-  }
-});
+  axios.get(userPath).then((response) => {
+    if (response.data.user && response.data.user.profile) {
+      callback(response.data.user);
+    } else {
+      console.log("No user data found");
+    }
+  });
+}
 ```
 
 This function makes a call to the Slack user profile endpoint, then sends the

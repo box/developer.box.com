@@ -11,18 +11,22 @@ Slack.
 
 This application will be split up into three parts:
 
-* Setting up the initial application skeleton and configuration information.
-* Setting up the Slack event and command handlers.
-* Connecting those handlers to the required functions in Box.
+* Set up the initial application skeleton and configuration information.
+* Set up the Slack event and command handlers.
+* Connect those handlers to the required functions in Box.
+
+## Add dependencies and scaffold code
 
 This first step will walk through creating the files and information needed to
 start the application.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-* Create a local directory for your application.
-* Create a `package.json` file inside the local directory, open it in your
- preferred editor, copy / paste the following into it, and save / exit the file.
+* Either create a new local directory for your application or load the existing
+ code created for the Slack event URL challenge from [step 1][step1].
+* Create a new `package.json` file, or update the existing one, inside the
+ local directory, open it in your preferred editor, copy / paste the following
+ into it, and save / exit the file.
 
 ```javascript
 {
@@ -45,14 +49,15 @@ start the application.
 }
 ```
 
-* Run `npm init` from the terminal / console to install dependencies.
-* Create two files, `process.js` and `config.js` in the local directory.
-* Open `config.js` and save the following default configuration. 
+* Run `npm install` from the terminal / console to install dependencies.
+* Create two files, `process.js` and `slackConfig.js` in the local directory.
+* Open `slackConfig.js` and save the following default configuration. 
 
-```javascript
-// Okta application credentials
-const verificationToken = exports.verificationToken = 'TOKEN';
-const botToken = exports.botToken = 'TOKEN';
+```json
+{
+  "verificationToken": "TOKEN",
+  "botToken": "TOKEN"
+}
 ```
 
 * There are two values above that will need to be replaced with details from
@@ -69,14 +74,15 @@ const botToken = exports.botToken = 'TOKEN';
  save the file.
 
 ```javascript
-const boxSDK = require('box-node-sdk');
-const config = require('./config.js')
-const express = require('express'); 
+const box = require("box-node-sdk");
+
+const slackConfig = require("./slackConfig.json");
+const boxConfig = require("./boxConfig.json");
+
+const express = require("express");
 const app = express();
-const axios = require('axios');
-const path = require('path');
-const util = require('util');
-const fs = require('fs');
+const axios = require("axios");
+const util = require("util");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -193,3 +199,5 @@ process events between Slack and Box. From top to bottom, functions include:
 <Observe option='programming.platform' value='node,java,python,dotnet,ruby'>
   <Next>I have my local application set up</Next>
 </Observe>
+
+[step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack

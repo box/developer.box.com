@@ -12,39 +12,12 @@ share Box files and folders with the group.
 
 This section will walk you through several steps.
 
-* Creating the bare Slack application.
-* Configuring a `/boxadd` slash command to share Box files and folders with the
- channel group in Box.
-* Configuring the Slack event listener to send notifications to our application
+* Create the bare Slack application.
+* Configure the Slack event listener to send notifications to our application
  whenever a user joins or leaves the channel, so that the Box group can be
  updated.
-
-Choose your preferred language / framework below to get started.
-
-<Grid columns='3'>
-  <Choose option='programming.platform' value='node' color='blue'>
-    # Node
-    Using the Express.js framework.
-  </Choose>
-  <Choose option='programming.platform' value='java' color='blue'>
-    # Java
-    Using the Spring Boot framework.
-  </Choose>
-  <Choose option='programming.platform' value='dotnet' color='blue'>
-    # .NET
-    Using the ASP.NET Core framework.
-  </Choose>
-</Grid>
-<Grid columns='3'>
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python
-    Using the Flask framework.
-  </Choose>
-  <Choose option='programming.platform' value='ruby' color='blue'>
-    # Ruby
-    Using the Sinatra framework.
-  </Choose>
-</Grid>
+* Configure a `/boxadd` slash command to share Box files and folders with the
+ channel group in Box.
 
 ## Create the app
 
@@ -65,7 +38,9 @@ in your workspace.
 
 Where slash commands will allow Slack channel users to share Box content 
 with everyone in the channel, the event listener will allow us to monitor for 
-passive events within the channel. For this bot, we want to monitor three 
+passive events within the channel. 
+
+For this bot, we want to monitor three 
 [Slack events][slack-events] to produce actions within Box.
 
 * [`bot_added`][slack-event-bot-added]: When the bot is first added to a
@@ -99,10 +74,40 @@ Slack during this step. The payload will look similar to the following.
 HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P"}
 ```
 
-Deploy the following code to your public endpoint.
+To do this we will deploy a small bit of code to respond to the challenge
+event. Choose your preferred language / framework below to get started.
+
+<Grid columns='3'>
+  <Choose option='programming.platform' value='node' color='blue'>
+    # Node
+    Using the Express.js framework.
+  </Choose>
+  <Choose option='programming.platform' value='java' color='blue'>
+    # Java
+    Using the Spring Boot framework.
+  </Choose>
+  <Choose option='programming.platform' value='dotnet' color='blue'>
+    # .NET
+    Using the ASP.NET Core framework.
+  </Choose>
+</Grid>
+<Grid columns='3'>
+  <Choose option='programming.platform' value='python' color='blue'>
+    # Python
+    Using the Flask framework.
+  </Choose>
+  <Choose option='programming.platform' value='ruby' color='blue'>
+    # Ruby
+    Using the Sinatra framework.
+  </Choose>
+</Grid>
 
 <!-- markdownlint-disable line-length -->
 <Choice option='programming.platform' value='node' color='none'>
+  
+Within the project directory, run `npm install express --save` to install the
+Express dependency, then deploy the following code to your public endpoint
+along with the appropriate Node modules.
 
 ```javascript
 const express = require('express'); 
@@ -179,7 +184,7 @@ From your Slack application **Basic Information** tab, under
 
 * Toggle **Enable Events** to **On**.
 * Under **Request URL** add in the public URL that you deployed the above code
- to, and be aware that we are listening at `{APPROUTE}/event` (such as
+ to, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as
  `https://myapp.com/event`). Once you add the URL and click outside the field,
  Slack will immediately send the challenge to the URL that you were hosting the
  code at above. If the code responds correctly, you will see a green verified
@@ -227,7 +232,7 @@ In the page that comes up, click **Create New Command** and input the following:
 
 Click **Save** to add the command to our Slack app.
 
-## Add Remaining Scopes
+## Add Additional Scopes
 
 When slash commands or notifications are sent to our application from
 Slack they will contain a Slack user ID, which relates to the person that took

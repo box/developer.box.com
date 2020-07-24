@@ -28,15 +28,15 @@ Within `process.js`, replace the `// INSTANTIATE BOX CLIENT` comment at the top
 with the following.
 
 ```javascript
-const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
-const sdk = boxSDK.getPreconfiguredInstance(configJSON);
-const client = sdk.getAppAuthClient('enterprise');
+const boxConfig = require("./boxConfig.json");
+const sdk = box.getPreconfiguredInstance(boxConfig);
+const client = sdk.getAppAuthClient("enterprise");
 ```
 
-The first `configJSON` assignment line will use the `config.json` file you
+The first `boxConfig` assignment line will use the `boxConfig.json` file you
 downloaded from your Box app at the end of [step 2][step2]. The sample above is
 assuming that you have it stored in the same folder as `process.js`. If that's
-not that case, change the path to point to where your `config.json` file is,
+not that case, change the path to point to where your `boxConfig.json` file is,
 and what it may be named.
 
 The last `client` assignment line is creating a Box client object which may be
@@ -87,29 +87,33 @@ action, this function will perform that task.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-Within the `addGroupUser` function, replace the `// ADD USER TO BOX GROUP`
-comment with the following.
+Replace the `addGroupUser` function with the following.
 
 <!-- markdownlint-disable line-length -->
 ```javascript
-client.enterprise.getUsers({filter_term: email}).then(users => {
-  if (users.entries.length > 0) {
-    const userId = users.entries[0].id;
-    const groupRole = client.groups.userRoles.MEMBER;
+function addGroupUser(groupId, email) {
+  client.enterprise.getUsers({ filter_term: email }).then((users) => {
+    if (users.entries.length > 0) {
+      const userId = users.entries[0].id;
+      const groupRole = client.groups.userRoles.MEMBER;
 
-    client.groups.addUser(groupId, userId, {role: groupRole}).then(membership => {
-      if (membership.id) {
-        console.log(`Member added with membership ID: ${membership.id}`);
-      } else {
-        console.log(`Member not added`);
-      }
-    }).catch(function (err) {
-      console.log(err.response.body);
-    });
-  } else {
-    console.log('No Box user found to add to group');
-  }
-});
+      client.groups
+        .addUser(groupId, userId, { role: groupRole })
+        .then((membership) => {
+          if (membership.id) {
+            console.log(`Member added with membership ID: ${membership.id}`);
+          } else {
+            console.log(`Member not added`);
+          }
+        })
+        .catch(function (err) {
+          console.log(err.response.body);
+        });
+    } else {
+      console.log("No Box user found to add to group");
+    }
+  });
+}
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -169,20 +173,32 @@ content.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-In the `removeGroupUser` function, replace the `// REMOVE USER FROM BOX GROUP`
-comment with the following.
+Replace the `removeGroupUser` function with the following.
 
 ```javascript
-client.groups.getMemberships(groupId).then(memberships => {
-  for (let i = 0; i < memberships.entries.length; i++) {
-    if (memberships.entries[i].user.login === email) {
-      client.groups.removeMembership(memberships.entries[i].id).then(() => {
-        console.log('Group user removed')
-      });
-      break;
+function removeGroupUser(groupId, email) {
+  client.enterprise.getUsers({ filter_term: email }).then((users) => {
+    if (users.entries.length > 0) {
+      const userId = users.entries[0].id;
+      const groupRole = client.groups.userRoles.MEMBER;
+
+      client.groups
+        .addUser(groupId, userId, { role: groupRole })
+        .then((membership) => {
+          if (membership.id) {
+            console.log(`Member added with membership ID: ${membership.id}`);
+          } else {
+            console.log(`Member not added`);
+          }
+        })
+        .catch(function (err) {
+          console.log(err.response.body);
+        });
+    } else {
+      console.log("No Box user found to add to group");
     }
-  }
-});
+  });
+}
 ```
 
 This code will take the group ID, which will be the Slack channel ID, and get
@@ -245,30 +261,28 @@ The next Box function we need has two main purposes.
 
 <Choice option='programming.platform' value='node' color='none'>
   
-In the `getGroupId` function, replace the `// GET AND CREATE BOX GROUP` comment
-with the following.
+Replace the `getGroupId` function with the following.
 
 <!-- markdownlint-disable line-length -->
 ```javascript
-let groupId = 0;
+function getGroupId(groupName, callback) {
+  client.groups.getAll().then((groups) => {
+    const group = groups.entries.filter((g) => g.name === groupName)[0];
 
-client.groups.getAll().then(groups => {
-  for (let i = 0; i < groups.entries.length; i++) {
-    if (groups.entries[i].name === groupName) {
-      groupId = groups.entries[i].id;
-      break;
+    if (!group) {
+      client.groups
+        .create(groupName, {
+          description: "Slack channel collaboration group",
+          invitability_level: "all_managed_users",
+        })
+        .then((group) => {
+          callback(group.id);
+        });
+    } else {
+      callback(group.id);
     }
-  }
-
-  if (groupId === 0) { 
-    client.groups.create(groupName, { description: 'Slack channel collaboration group', invitability_level: 'all_managed_users' }).then(group => {
-      groupId = group.id;
-      _callback(groupId);
-    });
-  } else {
-    _callback(groupId);
-  }
-});
+  });
+}
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -326,28 +340,39 @@ functionality, this function performs that task.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-In the `processContent` function, replace the
-`// COLLABORATE CONTENT WITH GROUP` comment with the following.
+Replace the `processContent` function with the following.
 
 <!-- markdownlint-disable line-length -->
 ```javascript
-getGroupId(channel, function (gid){
-  const email = user.profile.email;
-  
-  client.enterprise.getUsers({filter_term: email}).then(users => {
-    if (users.entries.length > 0) {
-      client.asUser(users.entries[0].id);
-      const collabRole = client.collaborationRoles.VIEWER;
-      const collabOptions = { type: type };
+function processContent(user, channel, itemType, itemId) {
+  getGroupId(channel, function (groupId) {
+    const email = user.profile.email;
 
-      client.collaborations.createWithGroupID(gid, fid, collabRole, collabOptions).then(collaboration => {
-        console.log(`Content added with collaboration ID ${collaboration.id}`);
-      }).catch(function (err) {
-        console.log(util.inspect(err.response.body, {showHidden: false, depth: null}))
-      });
-    }
+    client.enterprise.getUsers({ filter_term: email }).then((users) => {
+      if (users.entries.length > 0) {
+        client.asUser(users.entries[0].id);
+        const collabRole = client.collaborationRoles.VIEWER;
+        const collabOptions = { type: itemType };
+
+        client.collaborations
+          .createWithGroupID(groupId, itemId, collabRole, collabOptions)
+          .then((collaboration) => {
+            console.log(
+              `Content added with collaboration ID ${collaboration.id}`
+            );
+          })
+          .catch(function (err) {
+            console.log(
+              util.inspect(err.response.body, {
+                showHidden: false,
+                depth: null,
+              })
+            );
+          });
+      }
+    });
   });
-});
+}
 ```
 <!-- markdownlint-enable line-length -->
 
