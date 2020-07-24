@@ -102,7 +102,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 ```python
 base_url = 'https://account.box.com/api/oauth2/authorize'
-client_id = '[CLIENT_ID]';
+client_id = '[CLIENT_ID]'
 authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 ```
 
@@ -286,6 +286,8 @@ access_token = json.loads(response)['access_token']
   <Tab title='Node'>
 
 ```js
+const authenticationUrl = 'https://api.box.com/oauth2/token';
+
 let accessToken = await axios.post(
   authenticationUrl,
   querystring.stringify({

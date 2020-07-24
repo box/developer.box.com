@@ -9,184 +9,350 @@ related_resources: []
 alias_paths: []
 ---
 
-# Write Skills Metadata
+# Skills Cards Metadata 
 
-Once you have data insights from the machine learning system ready, the next
-step is to write data back to the file stored on Box as metadata. This process
-involves three steps:
+Once a processing service has determined the metadata for the file, your
+application can write that data back to the file stored on Box as metadata. 
 
-1. Set up a Box client using the write token sent via the original
-   [event payload](guide://skills/handle/payload).
-2. Prepare the Skills metadata in the appropriate format.
-3. Write the metadata back to the file.
+This process involves the following steps.
 
-## Set up a Box Client with the Write Token
+1. Prepare the Skill Cards metadata
+2. Write the metadata to the file
 
-Once the write token has been extracted from the
-[event payload](guide://skills/handle/payload), you can create a new basic Box
-client in the same way as you would with a developer token. This client will
-provide you with access to write metadata to the file.
-
-<Samples id="x_auth" variant="init_with_dev_token" />
-
-## Prepare the Skills Metadata
+## Prepare Skill Cards metadata
 
 The Skills metadata uses a globally available metadata template called
 `boxSkillsCards`. This template follows a specific format for the JSON
 structure that will be stored on the associated files.
 
-```json
-"cards": [{
-    "created_at": "{{CURRENT_TIMESTAMP}}",
-    "type": "skill_card",
-    "skill_card_type": "{{SKILLS_CARD_TYPE}}",
-    "skill_card_title": {
-        "message": "{{CARD_TITLE}}"
-    },
-    "skill": {
-        "type": "service",
-        "id": "{{SKILL_ID}}"
-    },
-    "invocation": {
-        "type": "skill_invocation",
-        "id": "{{FILE_ID}}"
-    },
-    "duration": "{{DURATION_IN_SECONDS}}",
-    "entries": "{{CARD_ENTRIES}}"
-}]}
-```
-
-The root `cards` object is an array of objects, so one or more cards may be
-applied to the metadata at a given time.
-
-Within the sample above are several dynamic values, wrapped as `{{ VALUE }}`,
-which will need to be replaced. These values are:
-
-- `CURRENT_TIMESTAMP`: When the metadata was created. This should be set to the
-  current timestamp.
-- `SKILLS_CARD_TYPE`: The type of card that would like to create. See
-  the **Skills Card Types** section below for the available options.
-- `CARD_TITLE`: The title of the card that is being written. This may be
-  anything that you wish to title the content as.
-- `SKILL_ID`: The ID of the Skill. This should be set to your Skills
-  application name.
-- `FILE_ID`: The ID of the file that the metadata is being written to. This is
-  extracted from the [event payload](guide://skills/handle/payload).
-- `DURATION_IN_SECONDS` (OPTIONAL): This optional parameter is used only if you
-  have content with a duration, such as video or audio files. If used, this
-  should be the length of the content in seconds.
-- `CARD_ENTRIES`: The data that comes from the machine learning system. This
-  value is an array of objects. See the **Skills Card Entries** section below.
-
-### Skills Card Types
-
-The following is a list of all card types available in Box Skills. Replace the
-`SKILLS_CARD_TYPE` value in the metadata JSON object with the metadata value
-for the card from the table below.
+Box currently supports 4 kinds of cards.
 
 <!-- markdownlint-disable line-length -->
 
-| Card Type  | Metadata Value | Description                                                                                                                             |
-| ---------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Keyword    | `keyword`      | Presents a list of keywords to be shown in association with a file, optionally with relevant timestamps for when those keywords appear. |
-| Transcript | `transcript`   | Displays a set of images with their relevant timestamps on a media file.                                                                |
-| Faces      | `timeline`     | Displays a transcript with the corresponding timestamps.                                                                                |
+|                                         |                                                                                                                                 |                                        |
+|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| [Keyword](r://keyword-skill-card)       | Displays a list of keywords next to the file.                                                                                   | ![Image](./skills-card-keyword.png)    |
+| [Timeline](r://timeline-skill-card)     | Displays a set of text/images, and when clicked shows when those images appear in a timeline.                                   | ![Image](./skills-card-timeline.png)   |
+| [Transcript](r://transcript-skill-card) | Displays a transcript with the corresponding timestamps.                                                                        | ![Image](./skills-card-transcript.png) |
+| [Status](r://status-skill-card)         | Displays a status to the user, which can be used to inform the user of the status of the Skill while it is processing the file. |                                        |
 
 <!-- markdownlint-enable line-length -->
 
-### Skills Card Entries
+## Write metadata cards to file
 
-The `CARD_ENTRIES` field will contain all data for the card type in a specific
-format. Entries should be an array of objects containing any associated data.
-Depending on the card type, use one of the following formats for the entries
-object.
+To write one or more cards to a file, you can use the [`POST
+/files/:id/metadata/global/boxSkillsCards`](e://post_files_id_metadata_global_boxSkillsCards)
+API and pass along a list of Box Skill `cards`.
 
-#### Keyword Card Entries
+<!-- markdownlint-enable line-length -->
 
-<ImageFrame border center shadow width="200">
-  ![Image](./skills-card-keyword.png)
-</ImageFrame>
+<Tabs>
+  <Tab title='cURL'> 
 
-The keyword card entries contain two values per object:
-
-- `text`: The keyword text to be displayed.
-- `type`: Always `text`.
-
-```json
-[
-    { "text": "Keyword1", "type": "text" },
-    { "text": "Keyword2", "type": "text" },
-    ...
-]
+```curl
+curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
+     -H 'Authorization: Bearer <ACCESS_TOKEN>'
+     -H 'Content-Type: application/json'
+     -d '{
+       "cards": [{
+         "type": "skill_card",
+         "skill_card_type": "keyword",
+         "skill_card_title": {
+           "code": "license-plates",
+           "message": "Licence Plates"
+         },
+         "skill": {
+           "type": "service"
+           "id": "license-plates-service"
+         },
+         "invocation": {
+           "type": "skill_invocation"
+           "id": "license-plates-service-123"
+         },
+         "entries": {
+           { "text": "DD-26-YT" },
+           { "text": "DN86 BOX" }
+         }
+       }],
+     }'
 ```
 
-#### Transcript Card Entries
+  </Tab>
+  <Tab title='Node'>
 
-<ImageFrame border center shadow width="200">
-  ![Image](./skills-card-transcript.png)
-</ImageFrame>
-
-The transcript card entries contain several values:
-
-- `text`: The text to display in the transcript line entry.
-- `appears`: An array of objects containing the start and end time for the line
-  entry.
-  - `start`: The start time in seconds.
-  - `end`: The end time in seconds.
-
-```json
-[
-    { "text": "Line1", "appears": [{ "start": 0, "end": 10 }] },
-    { "text": "Line2", "appears": [{ "start": 11, "end": 20 }] },
-    ...
-]
-```
-
-#### Faces Card Entries
-
-<ImageFrame border center shadow width="200">
-  ![Image](./skills-card-faces.png)
-</ImageFrame>
-
-The faces card entries contain several values:
-
-- `text`: The text to display for the item.
-- `appears`: An array of objects containing the start and end time for the line
-  entry.
-  - `start`: The start time in seconds.
-  - `end`: The end time in seconds.
-- `image_url` (OPTIONAL): An image to display beside the item.
-
-```json
-[
-    {
-        "text": "Callout 1",
-        "appears": [{ "start": 0, "end": 10 }],
-        "image_url": "https://mysite.com/image1.jpg"
+```js
+const metadata = { 
+  cards: [{
+    "type": "skill_card",
+    "skill_card_type": "keyword",
+    "skill_card_title": {
+      "code": "license-plates",
+      "message": "Licence Plates"
     },
-    {
-        "text": "Callout 2",
-        "appears": [{ "start": 11, "end": 20 }],
-        "image_url": "https://mysite.com/image2.jpg"
+    "skill": {
+      "type": "service"
+      "id": "license-plates-service"
     },
-    ...
-]
+    "invocation": {
+      "type": "skill_invocation"
+      "id": "license-plates-service-123"
+    },
+    "entries": {
+      { "text": "DD-26-YT" },
+      { "text": "DN86 BOX" }
+    }
+  }] 
+}
+
+client.files.addMetadata('12345', 'global', 'boxSkillsCards', metadata)
+  .then(metadata => { 
+    // ...
+  })
 ```
 
-## Write the Skills Metadata to the File
+  </Tab>
+  <Tab title='Python'>
 
-To apply the metadata object back on the file in Box, use the client object
-created with the write token to make a request to create metadata on the file.
+```py
+metadata = { 
+  cards: [{
+    "type": "skill_card",
+    "skill_card_type": "keyword",
+    "skill_card_title": {
+      "code": "license-plates",
+      "message": "Licence Plates"
+    },
+    "skill": {
+      "type": "service"
+      "id": "license-plates-service"
+    },
+    "invocation": {
+      "type": "skill_invocation"
+      "id": "license-plates-service-123"
+    },
+    "entries": {
+      { "text": "DD-26-YT" },
+      { "text": "DN86 BOX" }
+    }
+  }] 
+}
 
-When making the method call to create the metadata, set the metadata template
-to `boxSkillsCards` and the metadata to the object that was created above.
+client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards').create(metadata)
+```
 
-<Samples id='post_files_id_metadata_id_id'>
+  </Tab>
+  <Tab title='Java'>
 
-<Message type="notice">
-  If you are applying metadata to a file that already has it applied you will
-  receive for `409 Conflict: tuple_already_exists` error. When creating metadata
-  on a file you should catch any errors. If that error occurs you will instead
-  want to make a request to [update
-  metadata](endpoint://put_metadata_templates_id_id) on the file.
+```java
+BoxFile file = new BoxFile(api, "12345");
+Metadata metadata = new Metadata()
+file.createMetadata("global", "boxSkillsCards", metadata);
+```
+
+  </Tab>
+  <Tab title='.NET'>
+
+```cs
+var metadataValues = new Dictionary<string, object>()
+{ 
+  cards: [{
+    "type": "skill_card",
+    "skill_card_type": "keyword",
+    "skill_card_title": {
+      "code": "license-plates",
+      "message": "Licence Plates"
+    },
+    "skill": {
+      "type": "service"
+      "id": "license-plates-service"
+    },
+    "invocation": {
+      "type": "skill_invocation"
+      "id": "license-plates-service-123"
+    },
+    "entries": {
+      { "text": "DD-26-YT" },
+      { "text": "DN86 BOX" }
+    }
+  }] 
+};
+Dictionary<string, object> metadata = await client.MetadataManager
+    .CreateFileMetadataAsync(fileId: "12345", metadataValues, "global", "boxSkillsCards");
+```
+
+  </Tab>
+</Tabs>
+
+<!-- markdownlint-enable line-length -->
+
+<Message warning>
+  If Box Skill cards have already been applied to this file, this API call will
+  return an error with a HTTP status code of `409`.
 </Message>
+
+## Update metadata card on file
+
+If Box Skill cards have already been applied to to a file then it can be updated
+using the [`PUT
+/files/:id/metadata/global/boxSkillsCards`][update_skills]  
+API. This API accepts a number of operations (`op`) to perform, and each
+operation can be used to replace a card at a position (`path`).
+
+<!-- markdownlint-disable line-length -->
+
+<Tabs>
+  <Tab title='cURL'> 
+
+```curl
+curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
+     -H 'Authorization: Bearer <ACCESS_TOKEN>'
+     -H 'Content-Type: application/json-patch+json'
+     -d '[
+       "op": "replace",
+       "path": "/cards/0",
+       "value": {
+         "type": "skill_card",
+         "skill_card_type": "keyword",
+         "skill_card_title": {
+           "code": "license-plates",
+           "message": "Licence Plates"
+         },
+         "skill": {
+           "type": "service"
+           "id": "license-plates-service"
+         },
+         "invocation": {
+           "type": "skill_invocation"
+           "id": "license-plates-service-123"
+         },
+         "entries": {
+           { "text": "DD-26-YT" },
+           { "text": "DN86 BOX" }
+         }
+       }
+     ]'
+```
+
+  </Tab>
+  <Tab title='Node'>
+
+```js
+const updates = [
+  { 
+    'op': 'replace', 
+    'path': '/cards/0',
+    'value': {
+      "type": "skill_card",
+      "skill_card_type": "keyword",
+      "skill_card_title": {
+        "code": "license-plates",
+        "message": "Licence Plates"
+      },
+      "skill": {
+        "type": "service"
+        "id": "license-plates-service"
+      },
+      "invocation": {
+        "type": "skill_invocation"
+        "id": "license-plates-service-123"
+      },
+      "entries": {
+        { "text": "DD-26-YT" },
+        { "text": "DN86 BOX" }
+      }
+    }
+  }
+]
+
+client.files.updateMetadata('12345', 'global', 'boxSkillsCards', updates)
+  .then(metadata => { 
+    // ...
+  })
+```
+
+  </Tab>
+  <Tab title='Python'>
+
+```py
+file_metadata = client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards')
+
+card = {
+  "type": "skill_card",
+  "skill_card_type": "keyword",
+  "skill_card_title": {
+    "code": "license-plates",
+    "message": "Licence Plates"
+  },
+  "skill": {
+    "type": "service"
+    "id": "license-plates-service"
+  },
+  "invocation": {
+    "type": "skill_invocation"
+    "id": "license-plates-service-123"
+  },
+  "entries": {
+    { "text": "DD-26-YT" },
+    { "text": "DN86 BOX" }
+  }
+}
+
+
+updates = file_metadata.start_update()
+updates.replace('/cards/0', card)
+file_metadata.update(updates)
+```
+
+  </Tab>
+  <Tab title='Java'>
+
+```java
+BoxFile file = new BoxFile(api, "12345");
+Metadata metadata = new Metadata()
+file.updateMetadata("global", "boxSkillsCards", metadata);
+```
+
+  </Tab>
+  <Tab title='.NET'>
+
+```cs
+var card = new Dictionary<string, object>()
+{
+  "type": "skill_card",
+  "skill_card_type": "keyword",
+  "skill_card_title": {
+    "code": "license-plates",
+    "message": "Licence Plates"
+  },
+  "skill": {
+    "type": "service"
+    "id": "license-plates-service"
+  },
+  "invocation": {
+    "type": "skill_invocation"
+    "id": "license-plates-service-123"
+  },
+  "entries": {
+    { "text": "DD-26-YT" },
+    { "text": "DN86 BOX" }
+  }
+};
+var updates = new List<BoxMetadataUpdate>()
+{
+    new BoxMetadataUpdate()
+    {
+        Op = MetadataUpdateOp.replace,
+        Path = "/cards/0",
+        Value = card
+    }
+};
+Dictionary<string, object> updatedMetadata = await client.MetadataManager
+    .UpdateFileMetadataAsync("12345", updates, "global", "boxSkillsCards");
+```
+
+  </Tab>
+</Tabs>
+
+<!-- markdownlint-enable line-length -->
+
+[update_skills]: e://put_files_id_metadata_global_boxSkillsCards
