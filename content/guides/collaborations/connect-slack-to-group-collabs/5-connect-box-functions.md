@@ -177,25 +177,16 @@ Replace the `removeGroupUser` function with the following.
 
 ```javascript
 function removeGroupUser(groupId, email) {
-  client.enterprise.getUsers({ filter_term: email }).then((users) => {
-    if (users.entries.length > 0) {
-      const userId = users.entries[0].id;
-      const groupRole = client.groups.userRoles.MEMBER;
-
-      client.groups
-        .addUser(groupId, userId, { role: groupRole })
-        .then((membership) => {
-          if (membership.id) {
-            console.log(`Member added with membership ID: ${membership.id}`);
-          } else {
-            console.log(`Member not added`);
-          }
-        })
-        .catch(function (err) {
-          console.log(err.response.body);
+  client.groups.getMemberships(groupId).then(memberships => {
+    for (let i = 0; i < memberships.entries.length; i++) {
+      if (memberships.entries[i].user.login === email) {
+        client.groups
+        .removeMembership(memberships.entries[i].id)
+        .then(() => {
+          console.log('Group user removed')
         });
-    } else {
-      console.log("No Box user found to add to group");
+        break;
+      }
     }
   });
 }
