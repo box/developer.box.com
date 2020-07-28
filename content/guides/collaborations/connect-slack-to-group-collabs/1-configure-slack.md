@@ -77,7 +77,7 @@ HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV259
 To do this we will deploy a small bit of code to respond to the challenge
 event. Choose your preferred language / framework below to get started.
 
-<Grid columns='3'>
+<Grid columns='2'>
   <Choose option='programming.platform' value='node' color='blue'>
     # Node
     Using the Express.js framework.
@@ -85,20 +85,6 @@ event. Choose your preferred language / framework below to get started.
   <Choose option='programming.platform' value='java' color='blue'>
     # Java
     Using the Spring Boot framework.
-  </Choose>
-  <Choose option='programming.platform' value='dotnet' color='blue'>
-    # .NET
-    Using the ASP.NET Core framework.
-  </Choose>
-</Grid>
-<Grid columns='3'>
-  <Choose option='programming.platform' value='python' color='blue'>
-    # Python
-    Using the Flask framework.
-  </Choose>
-  <Choose option='programming.platform' value='ruby' color='blue'>
-    # Ruby
-    Using the Sinatra framework.
   </Choose>
 </Grid>
 
