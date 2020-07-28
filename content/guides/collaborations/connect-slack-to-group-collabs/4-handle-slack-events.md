@@ -121,30 +121,91 @@ request, the event payload is sent to our event process function.
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Load `Application.java` in your preferred editor, then replace the
+`@PostMapping("/event")` block with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
+@PostMapping("/event")
+@ResponseBody
+public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
+  int code = HttpServletResponse.SC_OK;
+  java.io.PrintWriter wr = response.getWriter();
+  response.setStatus(code);
 
+  if (contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
+    wr.write("Adding content to group");
+  } else {
+    wr.print(response);
+  }
+
+  wr.flush();
+  wr.close();
+
+  if (! contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
+    JSONObject returnJSON = new JSONObject();
+    String[] inputParts = data.split("&");
+
+    for (String part: inputParts) {           
+      String[] keyval = part.split("=");
+
+      try {
+        keyval[1] = java.net.URLDecoder.decode(keyval[1], StandardCharsets.UTF_8.name());
+      } catch (UnsupportedEncodingException e) {
+        System.err.println(e);
+      }
+
+      returnJSON.put(keyval[0], keyval[1]);
+    }
+
+    data = returnJSON.toString();
+  }
+
+  processEvent(data);
+}
+```
+<!-- markdownlint-enable line-length -->
+
+When an event comes through, the handler will send an immediate 200 response
+back before code processing. Slash commands will be sent as URL encoded
+strings, while member join / leave events will be sent as JSON. If a Slash
+command is encountered we respond with a processing message, otherwise we send
+the `HttpServletResponse` response.
+
+<Message type='notice'>
+  An HTTP 200 response is sent before code processing due to the fact that
+  Slack requires a response to an event within 3 seconds from dispatch. If the
+  code execution goes beyond that a duplicate event will be dispatched by Slack
+  during retry.
+</Message>
+
+To make event processing easier, we want to standardize all event objects as
+JSON. If a content type isn't JSON it'll be the URL encoded string. If that's
+encountered the string is converted into a JSON object before being sent to
+`processEvent`.
+
+Replace `processEvent` with the following.
+
+```java
+@Async
+public void processEvent(String data) throws Exception {
+  Object dataObj = new JSONParser().parse(data); 
+  JSONObject inputJSON = (JSONObject) dataObj; 
+  String token = (String) inputJSON.get("token");
+
+  if (token.equals(slackConfig.verificationToken)) {
+    // INSTANTIATE BOX CLIENT
+
+    process(inputJSON);
+  } else {
+    System.err.println("Invalid event source");
+  }
+}
 ```
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+This method will convert the JSON event string to a JSON object, then verify
+that the event came from Slack by comparing the verification token. If valid,
+the event is routed to `process`.
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -231,30 +292,65 @@ content in with the Box group so that everyone has access.
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `process` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
+public void process(JSONObject inputJSON) throws Exception {
+  if (inputJSON.containsKey("event")) {
+    JSONObject event = (JSONObject) inputJSON.get("event");
+    String eventType = (String) event.get("type");
+    String eventUserId = (String) event.get("user");
+    String eventChannel = (String) event.get("channel");
 
+    processUser(getSlackUser(eventUserId), eventType, eventChannel);
+  } else if (inputJSON.containsKey("command")) {
+    String eventCommand = (String) inputJSON.get("command");
+    if (eventCommand.equals("/boxadd")) {
+      String eventChannelId = (String) inputJSON.get("channel_id");
+      String eventUserId = (String) inputJSON.get("user_id");
+      String cInput = (String) inputJSON.get("text");
+      String[] cInputParts = cInput.split(" ");
+
+      if (cInputParts[0].matches("file|folder")) {
+        processContent(getSlackUser(eventUserId), eventChannelId, cInputParts[0], cInputParts[1]);
+      }
+    }
+  } else {
+    System.err.println("Invalid event action");
+  }
+}
 ```
+<!-- markdownlint-enable line-length -->
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
+The purpose of this method is to figure out if the payload from Slack is a
+user event or a Slash command, fetch any needed information, then route to the
+appropriate method to process the results.
 
-```dotnet
+If the payload is a user event, denoted by the event node being present in the
+JSON payload, we extract a few pieces of information.
 
-```
+* `eventType`: The type of event to determine if a user is leaving
+ (`member_left_channel`) or joining (`member_joined_channel`) the channel.
+* `eventUserId`: The ID of the user, to look up their profile email which will 
+ bind to a user profile in Box that uses the same email.
+* `eventChannel`: The channel ID, which will be used as the Box group name.
 
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
+We then route to `processUser`, passing in the return value
+from the `getSlackUser` method (a user object), the type of event, and the
+channel.
 
-```python
+If the payload is a slash command, denoted by the `command` node being present
+in the JSON payload, we extract a few pieces of information.
 
-```
+* `eventChannelId`: The Slack channel ID, to be used as the Box group name.
+* `eventUserId`: The ID of the user who issued the command.
+* `cInputParts`: The type and ID of the command input, from a string such as
+ `file 1234`.
 
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+We then route to `processContent`, passing in the return value
+from the `getSlackUser` method (a user object), the channel ID, the content
+type (file or folder), and the content ID for the file or folder stored in Box.
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -305,30 +401,29 @@ function processUser(user, event, channel) {
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `processUser` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
+public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
+  String groupId = getGroupId(channel);
 
+  JSONObject userObj = (JSONObject) userResponse.get("user");
+
+  Boolean isBot = (Boolean) userObj.get("is_bot");
+  JSONObject userProfile = (JSONObject) userObj.get("profile");
+  String userEmail = (String) userProfile.get("email");
+
+  if (isBot) {
+    processSlackChannel(channel, groupId);
+  } else if (event.equals("member_joined_channel")) {
+    addGroupUser(groupId, userEmail);
+  } else if (event.equals("member_left_channel")) {
+    removeGroupUser(groupId, userEmail);
+  }
+}
 ```
-
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -338,7 +433,7 @@ function processUser(user, event, channel) {
   </Message>
 </Choice>
 
-The function starts by fetching the current Box group ID, which will be defined
+The code starts by fetching the current Box group ID, which will be defined
 in the next step. Once obtained, we process users in the following way:
 
 * If the user is a bot, we need to initialize the Box group and add all current
@@ -350,11 +445,11 @@ in the next step. Once obtained, we process users in the following way:
 
 ## Process Slack channel users
 
-<Choice option='programming.platform' value='node' color='none'>
-
 When a bot is first added to a channel, it needs to run an audit of all users
 currently in the channel and create a Box group with those people in order to
 create a baseline for the channel.
+
+<Choice option='programming.platform' value='node' color='none'>
 
 Replace the `processSlackChannel` function with the following.
 
@@ -375,41 +470,42 @@ function processSlackChannel(channel, groupId) {
 }
 ```
 
-This function runs a number of actions in sequence.
-
-* First, we call the Slack APIs to fetch all members of the channel. `limit`
- may be adjusted to collect more users in the channel.
-* For every user that is found, we then call the `getSlackUser` function to get
- their profile, specifically for the email address to map to a Box user.
-* Each user is then sent to `addGroupUser` to add them into the group.
-
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `processSlackChannel` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
+public void processSlackChannel(String channel, String groupId) throws Exception {
+  String limit = "100";
+  String channelUsersPath = String.format("%s/conversations.members?token=%s&channel=%s&limit=%s", slackConfig.slackApiUrl, slackConfig.botToken, channel, limit);
 
+  JSONObject channelUserList = sendGETRequest(channelUsersPath);
+  JSONArray channelUserIds = (JSONArray) channelUserList.get("members");
+
+  @SuppressWarnings("rawtypes")
+  Iterator i = channelUserIds.iterator();
+  while(i.hasNext()) {
+    String uid = (String)i.next();
+
+    JSONObject userResponse = (JSONObject) getSlackUser(uid.toString());
+    JSONObject userObj = (JSONObject) userResponse.get("user");
+    JSONObject userProfile = (JSONObject) userObj.get("profile");
+    Boolean isBot = (Boolean) userObj.get("is_bot");
+
+    String userEmail = new String();
+    if (!isBot) {
+      userEmail = (String) userProfile.get("email");
+    }
+
+    if (!userEmail.isEmpty() && !isBot) {
+      addGroupUser(groupId, userEmail);
+    }
+  }
+}
 ```
-
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -418,6 +514,14 @@ This function runs a number of actions in sequence.
     Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
+
+This code runs a number of actions in sequence.
+
+* First, we call the Slack APIs to fetch all members of the channel. `limit`
+ may be adjusted to collect more users in the channel.
+* For every user that is found, we  call `getSlackUser` to get
+ their profile, specifically for the email address to map to a Box user.
+* Each user is then sent to `addGroupUser` to add them into the group.
 
 ## Fetch Slack user profile
 
@@ -457,30 +561,19 @@ user profile information (if valid) to the specified callback.
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `getSlackUser` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
-
+public JSONObject getSlackUser(String userId) throws Exception {
+  String usersPath = String.format("%s/users.info?token=%s&user=%s", slackConfig.slackApiUrl, slackConfig.botToken, userId);
+  return sendGETRequest(usersPath);
+}
 ```
+<!-- markdownlint-enable line-length -->
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+This method sends a request to Slack to capture the user profile, then returns
+the response from that request, which should be a user profile JSON object.
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -497,6 +590,6 @@ user profile information (if valid) to the specified callback.
 * You have a function for processing all users in a channel and for fetching the
  Slack profile of a single user.
 
-<Observe option='programming.platform' value='node,java,python,dotnet,ruby'>
+<Observe option='programming.platform' value='node,java'>
   <Next>I've set up my Slack functions</Next>
 </Observe>

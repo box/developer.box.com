@@ -102,7 +102,6 @@ event. Choose your preferred language / framework below to get started.
   </Choose>
 </Grid>
 
-<!-- markdownlint-disable line-length -->
 <Choice option='programming.platform' value='node' color='none'>
   
 Within the project directory, run `npm install express --save` to install the
@@ -124,7 +123,7 @@ app.post('/event', (req, res) => {
     req.body.type === 'url_verification'
   ) {
     res.send({ 
-      challenge: req.body.challenge 
+      challenge: req.body.challenge
     });
   } else {
     res.status(400).send({ 
@@ -141,28 +140,86 @@ app.listen(port, function(err) {
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+<Message type='tip'>
+  [`Spring Initializr`][spring-initializr] is a useful service for
+  auto-generating a new Spring boot application with all dependencies defined.
+  This may be used instead of creating a blank Java application.
+</Message>
+
+* From Eclipse, create a new project. When prompted, select a Gradle project.
+* Enter a unique name for the project, we used `slack.box` for this guide.
+* Open your `build.gradle` file and add the following. Ensure that the group
+ matches the group that you used for the application. Once saved, refresh the
+ Gradle project.
+ 
+ ```java
+ plugins {
+     id 'org.springframework.boot' version '2.3.1.RELEASE'
+     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+     id 'java'
+ }
+
+ group = 'com.box'
+ version = '0.0.1-SNAPSHOT'
+ sourceCompatibility = '1.8'
+
+ repositories {
+     mavenCentral()
+ }
+
+ dependencies {
+     implementation 'org.springframework.boot:spring-boot-starter-web'
+     testImplementation('org.springframework.boot:spring-boot-starter-test') {
+         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+     }
+     compile 'com.box:box-java-sdk:2.44.1'
+ }
+
+ test {
+     useJUnitPlatform()
+ }
+ ```
+
+* Within your `src/main/java` path, create a new Java class file named
+ `Application.java`.
+* Open the file, add the following code, and save. 
+
 ```java
+package com.box.slack.box;
 
-```
+import org.jose4j.json.internal.json_simple.JSONObject;
+import org.jose4j.json.internal.json_simple.parser.JSONParser;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
+@RestController
+@EnableAutoConfiguration
+public class Application {
+  @PostMapping("/event")
+  public JSONObject challenge(@RequestBody String data) throws Exception {
+    JSONObject returnJSON = new JSONObject();
 
-```dotnet
+    Object dataObj = new JSONParser().parse(data); 
+    JSONObject inputJSON = (JSONObject) dataObj; 
+    String challenge = (String) inputJSON.get("challenge"); 
+    String type = (String) inputJSON.get("type"); 
 
-```
+    if (type.equals("url_verification")) {
+      returnJSON.put("challenge", challenge);
+    } else {
+      System.err.println("Invalid input");
+    }
 
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
+    return returnJSON;
+  }
 
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
+}
 
 ```
 
@@ -173,7 +230,6 @@ app.listen(port, function(err) {
     Please select a preferred language / framework above to get started.
   </Message>
 </Choice>
-<!-- markdownlint-enable line-length -->
 
 Now that we have the code to respond to the Slack challenge when adding an 
 event URL, we can configure that within the Slack application.
@@ -273,7 +329,7 @@ is now installed within the workplace.
   scoping.
 * You've deployed your Slack bot to your workspace.
 
-<Observe option='programming.platform' value='node,java,python,dotnet,ruby'>
+<Observe option='programming.platform' value='node,java'>
   <Next>I have my local application set up</Next>
 </Observe>
 
@@ -283,3 +339,4 @@ is now installed within the workplace.
 [slack-event-member-joined]: https://api.slack.com/events/member_joined_channel
 [slack-event-member-left]: https://api.slack.com/events/member_left_channel
 [step3]: g://collaborations/connect-slack-to-group-collabs/scaffold-application-code
+[spring-initializr]: https://start.spring.io/

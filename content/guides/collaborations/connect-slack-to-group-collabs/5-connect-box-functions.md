@@ -33,10 +33,10 @@ const sdk = box.getPreconfiguredInstance(boxConfig);
 const client = sdk.getAppAuthClient("enterprise");
 ```
 
-The first `boxConfig` assignment line will use the `boxConfig.json` file you
+The `boxConfig` assignment line will use the `boxConfig.json` file you
 downloaded from your Box app at the end of [step 2][step2]. The sample above is
 assuming that you have it stored in the same folder as `process.js`. If that's
-not that case, change the path to point to where your `boxConfig.json` file is,
+not the case, change the path to point to where your `boxConfig.json` file is,
 and what it may be named.
 
 The last `client` assignment line is creating a Box client object which may be
@@ -46,30 +46,26 @@ used to make API calls. At this point it is scoped to the
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Within `Application.java`, replace the `// INSTANTIATE BOX CLIENT` comment
+within the `processEvent` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
-
+this.fileReader = new FileReader("boxConfig.json");
+this.boxConfig = BoxConfig.readFrom(fileReader);
+this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
 ```
+<!-- markdownlint-enable line-length -->
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
+The `boxConfig` assignment line will use the `boxConfig.json` file you
+downloaded from your Box app at the end of [step 2][step2]. The sample above is
+assuming that you have it stored at the root of the Java project. If that's
+not the case, change the path in the `fileReader` assignment to point to where
+your `boxConfig.json` file is, and what it may be named.
 
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+The last `boxAPI` assignment line is creating a Box client object which may be
+used to make API calls. At this point it is scoped to the
+[service account][service-account] of the application, and not a specific user.
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -117,44 +113,27 @@ function addGroupUser(groupId, email) {
 ```
 <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
-  The Box [Get User](endpoint://get-users-id) endpoint only permits user lookup
-  by user ID. To lookup a user by email address, use the
-  [List Enterprise Users](endpoint://get-users) endpoint and set the
-  `filter_term` option to the email address you're searching for.
-</Message>
-
-Since we're matching a Slack user to a Box user via their email address, we
-first find a matching Box user using the Slack profile email. If found, a call
-is made to add that user to the channel group. The group was created when the
-bot was first added.
-
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `addGroupUser` method with the following.
+
 ```java
+public void addGroupUser(String groupId, String userEmail) {
+  Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
 
-```
-
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
+  for (BoxUser.Info user : users) {
+    if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
+      try {
+        BoxGroup group = new BoxGroup(boxAPI, groupId);
+        BoxUser boxUser = new BoxUser(this.boxAPI, user.getID());
+        BoxGroupMembership.Info groupMembershipInfo = group.addMembership(boxUser);
+      } catch (Exception ex) {
+        System.err.println("User already present");
+      }
+    }
+  }
+}
 ```
 
 </Choice>
@@ -164,6 +143,18 @@ bot was first added.
     Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
+
+Since we're matching a Slack user to a Box user via their email address, we
+first find a matching Box user using the Slack profile email. If found, a call
+is made to add that user to the channel group. The group was created when the
+bot was first added.
+
+<Message type='tip'>
+  The Box [Get User](endpoint://get-users-id) endpoint only permits user lookup
+  by user ID. To lookup a user by email address, use the
+  [List Enterprise Users](endpoint://get-users) endpoint and set the
+  `filter_term` option to the email address you're searching for.
+</Message>
 
 ## Remove a Box user to a group
 
@@ -192,6 +183,34 @@ function removeGroupUser(groupId, email) {
 }
 ```
 
+</Choice>
+<Choice option='programming.platform' value='java' color='none'>
+
+Replace the `removeGroupUser` method with the following.
+
+<!-- markdownlint-disable line-length -->
+```java
+public void removeGroupUser(String groupId, String userEmail) {
+  BoxGroup boxGroup = new BoxGroup(this.boxAPI, groupId);
+  Iterable<BoxGroupMembership.Info> memberships = boxGroup.getAllMemberships();
+  for (BoxGroupMembership.Info membershipInfo : memberships) {
+    if (membershipInfo.getUser().getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
+      BoxGroupMembership membership = new BoxGroupMembership(this.boxAPI, membershipInfo.getID());
+      membership.delete();
+    }
+  }
+}
+```
+<!-- markdownlint-enable line-length -->
+
+</Choice>
+<Choice option='programming.platform' unset color='none'>
+  <Message danger>
+    # Incomplete previous step
+    Please select a preferred language / framework in step 1 to get started.
+  </Message>
+</Choice>
+
 This code will take the group ID, which will be the Slack channel ID, and get
 all members of the group. If a matching member is found for the person that
 left the Slack channel, based on email address, that person is removed from the
@@ -206,42 +225,6 @@ group using their membership ID.
   This way the membership ID can be retrieved from the data store rather than
   having to call Box APIs to search for the membership ID.
 </Message>
-
-</Choice>
-<Choice option='programming.platform' value='java' color='none'>
-
-```java
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
-
-</Choice>
-<Choice option='programming.platform' unset color='none'>
-  <Message danger>
-    # Incomplete previous step
-    Please select a preferred language / framework in step 1 to get started.
-  </Message>
-</Choice>
 
 ## Fetch a Box group ID from a group name
 
@@ -277,42 +260,29 @@ function getGroupId(groupName, callback) {
 ```
 <!-- markdownlint-enable line-length -->
 
-The function will capture all groups in the enterprise, then loop through each
-one. 
-
-If the group name matches the Slack channel ID, the group ID is returned.
-
-If there are no matches, a new Box group is created and the ID of the group is
-returned for use. The group will be named after the Slack channel ID since that
-is a constant that is returned with both slash commands and user events, making
-it easier to lookup without additional functions.
-
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `getGroupId` method with the following.
+
 ```java
+public String getGroupId(String groupName) {
+  String groupId = new String();
 
-```
+  Iterable<BoxGroup.Info> groups = BoxGroup.getAllGroups(this.boxAPI);
+  for (BoxGroup.Info groupInfo : groups) {
+    if (groupInfo.getName().toUpperCase().equals(groupName)) {
+      groupId = groupInfo.getID();
+    }
+  }
 
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
+  if (groupId.isEmpty()) {
+    BoxGroup.Info groupInfo = BoxGroup.createGroup(boxAPI, groupName);
+    groupId = groupInfo.getID();
+  }
 
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
+  return groupId;
+}
 ```
 
 </Choice>
@@ -322,6 +292,16 @@ it easier to lookup without additional functions.
     Please select a preferred language / framework in step 1 to get started.
   </Message>
 </Choice>
+
+The code will capture all groups in the enterprise, then loop through each
+one. 
+
+If the group name matches the Slack channel ID, the group ID is returned.
+
+If there are no matches, a new Box group is created and the ID of the group is
+returned for use. The group will be named after the Slack channel ID since that
+is a constant that is returned with both slash commands and user events, making
+it easier to lookup without additional functions.
 
 ## Add shared content to a group
 
@@ -367,45 +347,47 @@ function processContent(user, channel, itemType, itemId) {
 ```
 <!-- markdownlint-enable line-length -->
 
-The function starts by capturing the Box group ID for the Slack channel, which
-is where content will be shared to.
-
-Since we want to share files and folders from the Box account of the person who
-sent the slash command, we next capture their Box user profile based on their
-email address.
-
-Lastly, we make a call to collaborate content with the group via the group ID.
-`collabRole` defines that we want to assign folks in the group with viewer
-permissions for the content, and `collabOptions` defines the type, which will
-tell the API whether the Box content being shared is a file or a folder.
-
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
+Replace the `processContent` method with the following.
+
+<!-- markdownlint-disable line-length -->
 ```java
+public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
+  String groupId = getGroupId(channel);
 
+  JSONObject userObj = (JSONObject) userResponse.get("user");
+  JSONObject userProfile = (JSONObject) userObj.get("profile");
+  String userEmail = (String) userProfile.get("email");
+
+  Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
+
+  for (BoxUser.Info user : users) {
+    if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
+      String uid = user.getID();
+      boxAPI.asUser(uid);
+
+      BoxCollaborator collabGroup = new BoxGroup(boxAPI, groupId);
+
+      try {
+        if (fType.equals("file")) {
+          BoxFile file = new BoxFile(boxAPI, fId);
+          file.collaborate(collabGroup, BoxCollaboration.Role.VIEWER, false, false);
+        } else if (fType.equals("folder")) {
+          BoxFolder folder = new BoxFolder(boxAPI, fId);
+          folder.collaborate(collabGroup, BoxCollaboration.Role.VIEWER);
+        }
+      } catch (Exception ex) {
+        System.err.println("Collaboration failed");
+      }
+
+      boxAPI.asSelf();
+    }
+  }
+}
 ```
-
-</Choice>
-<Choice option='programming.platform' value='dotnet' color='none'>
-
-```dotnet
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='python' color='none'>
-
-```python
-
-```
-
-</Choice>
-<Choice option='programming.platform' value='ruby' color='none'>
-
-```ruby
-
-```
+<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -415,13 +397,22 @@ tell the API whether the Box content being shared is a file or a folder.
   </Message>
 </Choice>
 
+The code starts by capturing the Box group ID for the Slack channel, which
+is where content will be shared to.
+
+Since we want to share files and folders from the Box account of the person who
+sent the slash command, we next capture their Box user profile based on their
+email address.
+
+Lastly, we make a call to collaborate content with the group via the group ID.
+
 ## Summary
 
 * You've instantiated a Box client
 * You've created Box group user add and remove functions.
 * You've created a function to share content with the group.
 
-<Observe option='programming.platform' value='node,java,python,dotnet,ruby'>
+<Observe option='programming.platform' value='node,java'>
   <Next>I've set up my Box functions</Next>
 </Observe>
 
