@@ -23,9 +23,9 @@ coordination when working with individuals or groups in and outside of the
 company.
 
 When connected to a custom Box application, the Slack channel structure, along
-with the [slash command][slack-slash-commands] and [event API] systems, may be
-used to provide a logical grouping and collaboration system for Box files and
-folders.
+with the [slash command][slack-slash-commands] and [event API][slack-event-api]
+systems, may be used to provide a logical grouping and collaboration system for
+Box files and folders.
 
 ## Overview
 
@@ -58,15 +58,17 @@ group.
 The quick start guide has two requirements around your Slack / Box setup, and
 your application code.
 
-1. User email: Since we are connecting a Slack user account to a Box user
- account via the Slack user email address, a matching Box user account using
- the same email address must be present in the Box enterprise.
-1. Publicly accessible server: Slack will send event and command notification
- data to a public URL, where our application will be hosted. This guide assumes
- that you have a public location where your application code will be hosted,
- such as `https://mysite.com/`. If you don't have one, application platforms
- like [Heroku][heroku], or serverless options like [AWS lambda][aws-lambda] are
- viable options.
+1. **User emails need to match between Box and Slack**: Since we are connecting
+ a Slack user account to a Box user account via the Slack user email address, a
+ matching Box user account using the same email address must be present in the
+ Box enterprise.
+1. **You must have a publicly accessible server**: Slack will send event and
+ command notification data to a public URL, where our application will be
+ hosted. This guide assumes that you have a public location where your
+ application code will be hosted, such as `https://mysite.com/`. If you don't
+ have one, application platforms like [Heroku][heroku], serverless options
+ like [AWS lambda][aws-lambda], or exposing localhost with services like
+ [ngrok][ngrok] are all viable options.
 
 <Next>
 
@@ -84,3 +86,4 @@ I am ready to get started
 [step6]: g://collaborations/connect-slack-to-group-collabs/test-bot
 [heroku]: https://heroku.com/
 [aws-lambda]: https://aws.amazon.com/lambda/
+[ngrok]: https://ngrok.com/

@@ -59,12 +59,14 @@ the following steps.
    **Next**
 1. Give your Box app a unique name and click **Create App**
 1. Go to the app's configuration by clicking **View Your App**.
+1. Scroll down to **Application Access** and ensure that **Enterprise** is
+   selected.
 1. Scroll to the **Application Scopes** section of the same screen
    and ensure that at least the following scopes are enabled:
    `Read and write all files and folders stored in Box`, `Manage users`, and
    `Manage groups`.
-1. Under **Advanced Features** ensure that both options are enabled to
-  perform actions as users and generate user access tokens.
+1. Under **Advanced Features** ensure that **Perform Actions as Users** is
+   enabled to perform actions on behalf of Box users.
 1. At the top of the page click the button to **Save Changes**
 
 <Message type='warning'>
@@ -99,7 +101,7 @@ Authentication).
 
 </Choice>
 
-## Download Required Data
+## Download app configuration
 
 To begin working with the Box SDKs used in this tutorial, you will need the
 application configuration file from the **Configuration** page of your
@@ -111,7 +113,8 @@ page, click to **Generate a Public/Private Keypair**. This will send you
 through 2FA verification before downloading the configuration file for your
 application.
 
-Store that file as `config.json` in a location accessible by your application.
+Store that file as `boxConfig.json` in a location accessible by your
+application.
 
 ## Summary
 
