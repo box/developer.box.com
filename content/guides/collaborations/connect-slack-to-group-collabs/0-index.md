@@ -24,6 +24,16 @@ channels they are in within a Slack workspace, then permit individuals within
 those Slack channels to share Box files and folders with the group with Slack
 slash commands.
 
+At the end of this tutorial we will have a Slack bot that will be deployed to a
+channel in our workspace. This bot will create a Box group from all of the
+people present in the channel, then listen for `/boxadd` slash commands in the
+channel to collaborate Box files and folders from the user with the entire
+group.
+
+<ImageFrame noborder center shadow>
+  ![/boxadd command in Slack](./img/slack_0_boxadd_command.png)
+</ImageFrame>
+
 This will take you through the following steps.
 
 1. [Setup and configure your Slack app][step1] to set up the event notification
@@ -37,11 +47,6 @@ This will take you through the following steps.
 1. [And finally, deploy the application to your workspace][step5] and invite
  the Slack app bot to your channels to begin listening for events.
 
-At the end of this tutorial we will have a Slack bot that will be deployed to a
-channel in our workspace. This bot will create a Box group from all of the
-people present in the channel, then listen for `/boxadd` slash commands in the
-channel to collaborate Box files and folders from the user with the entire
-group.
 
 ## Requirements
 
