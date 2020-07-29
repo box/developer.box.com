@@ -50,13 +50,26 @@ labels:
 
 levels:
   // is_new_feature: Defines if this is a new feature
-  is_new_feature: New feature
+  is_new_feature: New features
 
   // is_impactful: Defines if this is a breaking change
-  is_impactful: Impactful change
+  is_impactful: Impactful changes
+
+  short:
+    // is_new_feature: Defines if this is a new feature (short version)
+    is_new_feature: New
+
+    // is_impactful: Defines if this is a breaking change (short version)
+    is_impactful: Impactful
 
 // all: Defines all entries
 all: All
+
+// unread: A label applied to a changelog entry that specifies if it's unread
+unread: Unread
+
+// title: The title of the developer changelog section
+title: Developer Changelog
 
 messages:
   // no_entries: |-
