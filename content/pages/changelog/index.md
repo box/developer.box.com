@@ -13,7 +13,7 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
-## 2020-07-20 / Updates to Search Relevance & Performance
+## 2020-07-30 / Updates to Search Relevance & Performance
 
 In January, updates were released to Box's search [tokenizer](wiki-tokenizer),
 improving the relevancy of search results and performance. This change does not
@@ -21,12 +21,22 @@ effect how metadata is tokenized.
 
 Notable changes to the API-initiated searches include:
 
-* The ability to use "[stop words](wiki-stop-words)", for example "the", "is
+* The ability to use "[stop words](wiki-stop-words)", for example "the", "is"
   "at", "which", and "on".
 * Improved Japanese text tokenization and improved search results. 
 
 See the [full-text search](g://search/full-text-search) documentation for more
 information on how to search using Box's API.
+
+## 2020-07-22 / New Zip Download APIs available
+
+A new collection of APIs are now available that allows developers to create a
+Zip file containing a specified list of files and folders. We've updated the
+reference documentation for this [Zip Download API][zip_downloads_api]. SDK
+support for these new endpoints is currently in development and scheduled
+to be released in the next 3 months.
+
+[zip_downloads_api]: e://post_zip_downloads
 
 ## 2020-07-16 / Change to enterprise events for content access
 
@@ -94,7 +104,7 @@ rather than listed side-by-side with the item. Only fields specified in the
 ### Legacy syntax
 
 For reference, the API would previously return all standard fields for an item
-as well as the matched metadata. 
+as well as the matched metadata.
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
@@ -227,7 +237,7 @@ for more information on other event types.
 
 As of today, [Box Shield][box-shield] will begin producing new security events
 within the [enterprise event stream](g://events/for-enterprise/) for Shield
-customers who are configured to listen for the new events. 
+customers who are configured to listen for the new events.
 
 The possible incident events produced by Shield are:
 
@@ -270,7 +280,7 @@ the web application.
 
 A new field, `uploader_display_name` has been added to both file and file
 version resources. This field provides the name of the user at the time of
-upload. 
+upload.
 
 ```json
 {
