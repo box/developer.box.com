@@ -354,4 +354,4 @@ functions are:
   <Next>I have my local application set up</Next>
 </Observe>
 
-[step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
+[step1]: g://collaborations/quick-start-share-with-slack-users-groups/configure-slack

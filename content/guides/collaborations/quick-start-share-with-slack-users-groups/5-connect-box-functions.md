@@ -421,5 +421,5 @@ Lastly, we make a call to collaborate content with the group via the group ID.
   <Next>I've set up my Box functions</Next>
 </Observe>
 
-[step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
+[step2]: g://collaborations/quick-start-share-with-slack-users-groups/configure-box
 [service-account]: g://authentication/user-types/app-users/

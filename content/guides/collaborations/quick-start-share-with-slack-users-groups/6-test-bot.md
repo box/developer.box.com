@@ -123,7 +123,7 @@ journey may include any number of different expansion areas.
 * Adding new slash commands for allowing people in the channel to
  [comment on the files][next-steps-comment] that are shared with the group.
 
-[step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
+[step1]: g://collaborations/quick-start-share-with-slack-users-groups/configure-slack
 [box-users-groups]: https://app.box.com/master/groups
 [next-steps-shared-link]: g://shared-links/create/
 [next-steps-retention-policy]: r://post-retention-policies

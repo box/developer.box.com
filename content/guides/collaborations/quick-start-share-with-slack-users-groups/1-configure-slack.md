@@ -322,5 +322,5 @@ is now installed within the workplace.
 [slack-event-bot-added]: https://api.slack.com/events/bot_added
 [slack-event-member-joined]: https://api.slack.com/events/member_joined_channel
 [slack-event-member-left]: https://api.slack.com/events/member_left_channel
-[step3]: g://collaborations/connect-slack-to-group-collabs/scaffold-application-code
+[step3]: g://collaborations/quick-start-share-with-slack-users-groups/scaffold-application-code
 [spring-initializr]: https://start.spring.io/
