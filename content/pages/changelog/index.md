@@ -19,15 +19,11 @@ In January, updates were released to Box's search [tokenizer](wiki-tokenizer),
 improving the relevancy of search results and performance. This change does not
 effect how metadata is tokenized.
 
-<<<<<<< HEAD
 Notable changes to the API-initiated searches include:
 
-* Ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
-=======
-Notable changes to searches include:
-* The ability to use "[stop words](wiki-stop-words)" (e.g. to do list)
->>>>>>> 8bb4862dfab3362ff733974ec4ffe344f9c8ed34
-* Improved Japanese search
+* The ability to use "[stop words](wiki-stop-words)", for example "the", "is
+  "at", "which", and "on".
+* Improved Japanese text tokenization and improved search results. 
 
 See the [full-text search](g://search/full-text-search) documentation for more
 information on how to search using Box's API.
