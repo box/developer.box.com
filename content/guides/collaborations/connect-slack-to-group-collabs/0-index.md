@@ -10,59 +10,58 @@ icon: FiUsers
 
 Slack is a popular communication and productivity tool, allowing for real-time
 coordination when working with individuals or groups in and outside of the
-company. 
+company.
 
 When connected to a custom Box application, the Slack channel structure, along
 with the [slash command][slack-slash-commands] and [event API][slack-event-api]
-systems, may be used to provide a logical grouping and collaboration system for
+systems, can be used to provide a logical grouping and collaboration system for
 Box files and folders.
 
 ## Overview
 
-This quick start guide will walk through how to group Box users based on the
-channels they are in within a Slack workspace, then permit individuals within
-those Slack channels to share Box files and folders with the group with Slack
-slash commands.
+This quick start guide will walk you through all the steps needed to group Box
+users based on the channels they are in within a Slack workspace, and then
+permit individuals within those Slack channels to share Box files and folders
+with that group using a Slack slash command.
 
-At the end of this tutorial we will have a Slack bot that will be deployed to a
-channel in our workspace. This bot will create a Box group from all of the
-people present in the channel, then listen for `/boxadd` slash commands in the
-channel to collaborate Box files and folders from the user with the entire
-group.
+At the end of this tutorial you will have a Slack bot that will be deployed to a
+channel in your workspace. This bot will create a Box group containing all the
+people present in the channel, and then listen for a `/boxadd` command in the
+channel. It will then parse that command and automatically collaborate the Box
+fie or folder with the entire group of users in the channel.
 
 <ImageFrame noborder center shadow>
   ![/boxadd command in Slack](./img/slack_0_boxadd_command.png)
 </ImageFrame>
 
-This will take you through the following steps.
+This guide will take you through the following steps.
 
-1. [Setup and configure your Slack app][step1] to set up the event notification
- and Slash command structures. 
-1. [Setup and configure your Box application][step2] so that we connect the web
- application to Box. 
+1. [Setup and configure your Slack app][step1] to handle the event notification
+ and Slash command structures.
+1. [Setup and configure your Box application][step2] to connect the web
+ application to Box.
 1. [Listen for Slack events and commands][step3] when users join and leave
- channels, or share Box files and folders with the group.
+ channels, or share a Box file or folder with the group.
 1. [Structure Box groups and file / folder collaborations][step4] based on the
- Slack events or slash commands. 
+ Slack events or slash commands.
 1. [And finally, deploy the application to your workspace][step5] and invite
  the Slack app bot to your channels to begin listening for events.
 
 ## Requirements
 
-The quick start guide has two requirements around your Slack / Box setup, and
-your application code.
+This quick start guide has two requirements that are worth noting before we proceed.
 
-1. **User emails need to match between Box and Slack**: Since we are connecting
- a Slack user account to a Box user account via the Slack user email address, a
- matching Box user account using the same email address must be present in the
- Box enterprise.
-1. **You must have a publicly accessible server**: Slack will send event and
- command notification data to a public URL, where our application will be
- hosted. This guide assumes that you have a public location where your
- application code will be hosted, such as `https://mysite.com/`. If you don't
- have one, application platforms like [Heroku][heroku], serverless options
- like [AWS lambda][aws-lambda], or exposing localhost with services like
- [ngrok][ngrok] are all viable options.
+1. **User emails need to match between Box and Slack**: We are connecting
+ a Slack user account to a Box user account by comparing the Slack user email
+ address. Therefore, a matching Box user account using the same email address
+ must be present in your Box enterprise.
+1. **You must have a publicly accessible server**: Slack will need to send
+ event and command notification data to a public URL for your application. This
+ guide assumes that you have a public location where your application code will
+ be hosted, such as `https://mysite.com/`. If you don't have access to any
+ public hosting then application platforms like [Heroku][heroku], serverless
+ options like [AWS lambda][aws-lambda], or exposing localhost with services like
+ [ngrok][ngrok] are all options that you might want to consider.
 
 <Next>
   I am ready to get started

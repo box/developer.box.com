@@ -5,25 +5,25 @@ hide_in_page_nav: true
 
 # Configure Slack
 
-The first step in this guide is to create and configure a Slack application,
-which will set up a Slack bot to listen for user events in Slack
-channels, as well as respond to slash commands by users in those channels to
-share Box files and folders with the group.
+The first step in this guide is to create and configure a Slack application.
+This Slack application will act as a bot that listens for user events in Slack
+channels, and responds to **slash commands** by users in those channels -
+allowing them to share Box files and folders with the group.
 
-This section will walk you through several steps.
+This section will take you through the following steps.
 
-* Create the bare Slack application.
-* Configure the Slack event listener to send notifications to our application
- whenever a user joins or leaves the channel, so that the Box group can be
- updated.
-* Configure a `/boxadd` slash command to share Box files and folders with the
- channel group in Box.
+* Create a minimal Slack application within the Slack API dashboard
+* Configure the Slack application to send notifications to our application
+  whenever a user joins or leaves the channel - allowing our code to update the
+  Box Box group.
+* Configure a `/boxadd` **slash command** that will allow users to share a
+  Box file or folder with all the users in the channel.
 
-## Create the app
+## Create a minimal Slack app
 
-Go to the [Slack apps page][slack-apps] and click **Create New App**. Add an
-**App Name**, select your **Development Slack Workspace** from the dropdown
-list where the application bot will be deployed to, then click **Create App**.
+Go to the **[Slack apps page][slack-apps]** and click **Create New App**. Add
+an **App Name**, select your **Development Slack Workspace** from the dropdown
+list where the bot will be deployed to, then click **Create App**.
 
 <ImageFrame noborder center shadow>
   ![Create a Slack App](./img/slack_1_create_slack_app.png)
@@ -34,27 +34,25 @@ application. You may adjust the icon and description of your app within the
 **Display Information** section at the bottom to customize the application
 in your workspace.
 
-## Configure the Slack app event listener
+## Configure the Slack app's event listener
 
-Where slash commands will allow Slack channel users to share Box content 
-with everyone in the channel, the event listener will allow us to monitor for 
-passive events within the channel. 
-
-For this bot, we want to monitor three 
-[Slack events][slack-events] to produce actions within Box.
+Setting up an event listener for our Slack app will allow us to monitor for
+events within the channel. For this bot, we want to monitor three
+[Slack events][slack-events] in order to perform actions within Box.
 
 * [`bot_added`][slack-event-bot-added]: When the bot is first added to a
  channel, it will get a list of all users in the channel, then create a
- Box group for those users. Content will be added to the group through the
- Slash commands.
-* [`member_joined_channel`][slack-event-member-joined]: When a new Slack user
- joins a channel they will be added to the Box group.
-* [`member_left_channel`][slack-event-member-left]: When a channel user leaves
- or is removed, they will be removed from the Box group.
+ Box group for those users. We can then use this group later on to add that
+ group to any content that is shared with the **slash command**.
+* [`member_joined_channel`][slack-event-member-joined]: When a new user
+ joins a Slack channel they will be added to the Box group.
+* [`member_left_channel`][slack-event-member-left]: When a user leaves a
+  Slack channel, or the user is removed, they will be removed from the Box
+  group.
 
-To set up a notification URL to which new Slack event payloads will 
+To set up a notification URL to which these Slack event payloads will
 be sent, Slack requires a verification step. When you set an event listener URL
-for your bot application code, Slack will immediately send a challenge to that 
+for your bot application code, Slack will immediately send a challenge to that
 URL to verify that it's valid. This will be an HTTP POST with a payload that
 looks something like the following:
 
@@ -66,7 +64,7 @@ looks something like the following:
 }
 ```
 
-To set up the URL for the event listener, that URL that is set needs 
+To set up the URL for the event listener, that URL that is set needs
 to respond with a verification payload containing the challenge value back to
 Slack during this step. The payload will look similar to the following.
 
@@ -77,25 +75,23 @@ HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV259
 To do this we will deploy a small bit of code to respond to the challenge
 event. Choose your preferred language / framework below to get started.
 
-<Grid columns='2'>
+<Grid columns='1' compact>
   <Choose option='programming.platform' value='node' color='blue'>
-    # Node
-    Using the Express.js framework.
+    # Node (Express Framework)
   </Choose>
   <Choose option='programming.platform' value='java' color='blue'>
-    # Java
-    Using the Spring Boot framework.
+    # Java (Spring Boot Framework)
   </Choose>
 </Grid>
 
 <Choice option='programming.platform' value='node' color='none'>
-  
+
 Within the project directory, run `npm install express --save` to install the
 Express dependency, then deploy the following code to your public endpoint
 along with the appropriate Node modules.
 
 ```javascript
-const express = require('express'); 
+const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -104,22 +100,22 @@ app.use(express.json());
 
 app.post('/event', (req, res) => {
   if (
-    req.body && 
-    req.body.challenge && 
+    req.body &&
+    req.body.challenge &&
     req.body.type === 'url_verification'
   ) {
-    res.send({ 
+    res.send({
       challenge: req.body.challenge
     });
   } else {
-    res.status(400).send({ 
+    res.status(400).send({
       error: "Unrecognized request"
     });
   }
 });
 
-app.listen(port, function(err) { 
-  console.log("Server listening on PORT", port); 
+app.listen(port, function(err) {
+  console.log("Server listening on PORT", port);
 });
 ```
 
@@ -137,7 +133,7 @@ app.listen(port, function(err) {
 * Open your `build.gradle` file and add the following. Ensure that the group
  matches the group that you used for the application. Once saved, refresh the
  Gradle project.
- 
+
  ```java
  plugins {
      id 'org.springframework.boot' version '2.3.1.RELEASE'
@@ -168,7 +164,7 @@ app.listen(port, function(err) {
 
 * Within your `src/main/java` path, create a new Java class file named
  `Application.java`.
-* Open the file, add the following code, and save. 
+* Open the file, add the following code, and save.
 
 ```java
 package com.box.slack.box;
@@ -188,10 +184,10 @@ public class Application {
   public JSONObject challenge(@RequestBody String data) throws Exception {
     JSONObject returnJSON = new JSONObject();
 
-    Object dataObj = new JSONParser().parse(data); 
-    JSONObject inputJSON = (JSONObject) dataObj; 
-    String challenge = (String) inputJSON.get("challenge"); 
-    String type = (String) inputJSON.get("type"); 
+    Object dataObj = new JSONParser().parse(data);
+    JSONObject inputJSON = (JSONObject) dataObj;
+    String challenge = (String) inputJSON.get("challenge");
+    String type = (String) inputJSON.get("type");
 
     if (type.equals("url_verification")) {
       returnJSON.put("challenge", challenge);
@@ -217,7 +213,7 @@ public class Application {
   </Message>
 </Choice>
 
-Now that we have the code to respond to the Slack challenge when adding an 
+Now that we have the code to respond to the Slack challenge when adding an
 event URL, we can configure that within the Slack application.
 
 From your Slack application **Basic Information** tab, under
@@ -245,27 +241,28 @@ From your Slack application **Basic Information** tab, under
 
 ## Configure the Slack app slash command
 
-To associate files or folders in Box with the Slack channels, we can use Slack
-slash commands. This will allow any person in the channel to share content they
-own in Box with the rest of the channel through a manually input command.
+To provide every user in a Slack channel access to a file or folder in Box, we
+can use a Slack **"slash commands"**. A slash command will allow any person in
+the channel to share content they own in Box with the rest of the channel.
 
 Through this command, a channel member will be able to type
-`/boxadd [file / folder] [id]`, such as `boxadd file 1459732312`, into the
-channel to share the file / folder with the channel using Box groups and
-collaborations.
+`/boxadd [file / folder] [id]`, for example `boxadd file 1459732312`, into the
+channel to share the file / folder with every user in the channel. To do this,
+the file is automatically collaborated with the Box group of users that are in
+that channel.
 
 From the **Basic Information** tab of your application, under **Add features and
 functionality**, click on the button titled **Slash Commands**. 
 
 In the page that comes up, click **Create New Command** and input the following:
 
-* Command: This is the command that a channel user will use to share
+* **Command**: This is the command that a channel user will use to share
  a Box file / folder ID with the channel. Use `/boxadd` for this quick start.
-* Request URL: The URL that is listening for and responding to slash
+* **Request URL**: The URL that is listening for and responding to slash
  commands in our Slack bot. In this quick start we use the same event URL that
  was used for the app event listener section above.
-* Short Description: A description of what the Slash command will do.
-* Usage Hint: Additional parameters that may be passed to the command. In 
+* **Short Description**: A description of what the Slash command will do.
+* **Usage Hint**: Additional parameters that may be passed to the command. In
  our case, that's the Box file / folder ID and type of content.
 
 <ImageFrame noborder center shadow>
@@ -278,9 +275,10 @@ Click **Save** to add the command to our Slack app.
 
 When slash commands or notifications are sent to our application from
 Slack they will contain a Slack user ID, which relates to the person that took
-or was affected by the action. To translate that ID to Box, we need to get the
-Slack user email, which will be how we associate Slack users to Box users. That 
-requires two extra scopes in the Slack application.
+or was affected by the action. To translate that ID to a Box user we need to 
+get the Slack user's email, which we can then use to associate that Slack user 
+to a corresponding Box user. This action requires two extra scopes in the Slack 
+application configuration.
 
 From your Slack application configuration, click on **OAuth & Permissions** in
 the left menu, then do the following.

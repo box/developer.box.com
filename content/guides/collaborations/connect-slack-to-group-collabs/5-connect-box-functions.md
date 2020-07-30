@@ -77,9 +77,10 @@ used to make API calls. At this point it is scoped to the
 
 ## Add a Box user to a group
 
-When a bot is added to a channel and needs to create a Box group with all
-users of the channel, or when a single user joins the channel after that
-action, this function will perform that task.
+Let's add a function that adds a Box user to a group. When a bot is added to a 
+channel and needs to create a Box group with all users of the channel, or when 
+a single user joins the channel after that action, this function will perform 
+that task.
 
 <Choice option='programming.platform' value='node' color='none'>
 
@@ -217,16 +218,19 @@ left the Slack channel, based on email address, that person is removed from the
 group using their membership ID.
 
 <Message type='tip'>
-  # Improvement Tip
+  # Improving performance with a data store
 
   While looking up group memberships to obtain a membership ID negates the need
-  to store membership IDs in a data store, you can make this more efficient by
-  having a data store that saves the Box membership ID with the user record.
-  This way the membership ID can be retrieved from the data store rather than
-  having to call Box APIs to search for the membership ID.
+  to store membership IDs in a local data store (like a database), this code
+  can be made more efficient by having a data store that saves the Box 
+  membership ID with the user record.
+
+  By using a local data store, the membership ID can be retrieved from the data 
+  store rather than having to call the Box API repeatedly to search for the 
+  membership ID. 
 </Message>
 
-## Fetch a Box group ID from a group name
+## Fetch a Box group ID for a group name
 
 The next Box function we need has two main purposes.
 
@@ -293,10 +297,9 @@ public String getGroupId(String groupName) {
   </Message>
 </Choice>
 
-The code will capture all groups in the enterprise, then loop through each
-one. 
-
-If the group name matches the Slack channel ID, the group ID is returned.
+The code fetches all the groups in the enterprise, and then tries to match the 
+Slack channel ID to the group name. If any of the groups matches, the group ID 
+is returned.
 
 If there are no matches, a new Box group is created and the ID of the group is
 returned for use. The group will be named after the Slack channel ID since that
@@ -305,9 +308,11 @@ it easier to lookup without additional functions.
 
 ## Add shared content to a group
 
-The root purpose of this bot is to allow users to share files and folders from
-their own Box accounts with everyone in a group. Building upon all previous
-functionality, this function performs that task.
+Finally, the main purpose of our whole application is to allow users to share 
+files and folders from their own Box accounts with everyone else in the group. 
+
+Building upon all previous functionality, the following function performs that 
+task. 
 
 <Choice option='programming.platform' value='node' color='none'>
 

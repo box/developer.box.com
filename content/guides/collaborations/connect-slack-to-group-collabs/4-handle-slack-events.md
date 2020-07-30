@@ -5,12 +5,13 @@ hide_in_page_nav: true
 
 # Handle Slack Events
 
-With the application scaffolding and function outlines in place, the next step
-is to build the handling and processing functionality for user events and
-commands coming from Slack, which will then be passed to Box functions to
-perform group and content collaboration tasks.
+With the application scaffold in place, the next step is to build the handling
+and processing functionality for user events, as well as the handling of slash
+commands coming from Slack. Each one of these will eventually be passed to a
+Box API endpoint to perform group and content collaboration tasks.
 
-In this step we'll expand several functions from the last step.
+In this step we'll expand the empty functions we wrote in the last step. These
+functions will perform the following tasks.
 
 * Listen for new events and slash commands from Slack.
 * Process those events and commands to route to the appropriate function.
@@ -21,78 +22,78 @@ In this step we'll expand several functions from the last step.
 ## Listen for Slack events
 
 When the Slack application was configured, it was instructed to send events to
-our application code under three circumstances.
+our application code for three events.
 
-* A user joins a channel.
-* A user leaves a channel.
-* A user enters a `/boxadd` Slash command.
+* When a user joins a channel.
+* When a user leaves a channel.
+* When a user enters a `/boxadd` Slash command.
 
 Our application needs to have a public route that listens for those messages
-from Slack, which will contain similar payloads to the below.
+from Slack. The payloads of these messages will like something like this.
 
 <Tabs>
-  <Tab title='/boxadd Command'>
+  <Tab title='"/boxadd"-command'>
 
-```javascript
+```json
 {
-  token: 'cF1PwB1eIMcRHZWwFHJR1tgs',
-  team_id: 'T932DQSV12P',
-  team_domain: 'slacktest',
-  channel_id: 'C078N43MFHU',
-  channel_name: 'bottest',
-  user_id: 'U016JCDPN56',
-  user_name: 'testuser',
-  command: '/boxadd',
-  text: 'file 123456',
-  response_url: 'https://hooks.slack.com/commands/T541DQSV12P/3977594927231/ankvsRb42WKnKPRp002FeyTx',
-  trigger_id: '1189442196855.1183332180295.cca20c3ca1ea193dab432ad8e9e95431'
+  "token": "cF1PwB1eIMcRHZWwFHJR1tgs",
+  "team_id": "T932DQSV12P",
+  "team_domain": "slacktest",
+  "channel_id": "C078N43MFHU",
+  "channel_name": "bottest",
+  "user_id": "U016JCDPN56",
+  "user_name": "testuser",
+  "command": "/boxadd",
+  "text": "file 123456",
+  "response_url": "https://hooks.slack.com/commands/T541DQSV12P/3977594927231/ankvsRb42WKnKPRp002FeyTx",
+  "trigger_id": "1189442196855.1183332180295.cca20c3ca1ea193dab432ad8e9e95431"
 }
 ```
 
   </Tab>
-  <Tab title='User Joined Channel Event'>
+  <Tab title='"member_joined_channel"-event'>
 
-```javascript
+```json
 {
-  token: 'cF1PwB1eIMcRHZWwFHJR1tgs',
-  team_id: 'T932DQSV12P',
-  api_app_id: 'A321V573PQT',
-  event: {
-    type: 'member_joined_channel',
-    user: 'U0431JM4RLZ',
-    channel: 'C078N43MFHU',
-    channel_type: 'C',
-    team: 'T932DQSV12P',
-    inviter: 'U016JCDPN56',
-    event_ts: '1592858788.000700'
+  "token": "cF1PwB1eIMcRHZWwFHJR1tgs",
+  "team_id": "T932DQSV12P",
+  "api_app_id": "A321V573PQT",
+  "event": {
+    "type": "member_joined_channel",
+    "user": "U0431JM4RLZ",
+    "channel": "C078N43MFHU",
+    "channel_type": "C",
+    "team": "T932DQSV12P",
+    "inviter": "U016JCDPN56",
+    "event_ts": "1592858788.000700"
   },
-  type: 'event_callback',
-  event_id: 'Ev032NRJYASJ',
-  event_time: 1592858788,
-  authed_users: [ 'U0431JM4RLZ' ]
+  "type": "event_callback",
+  "event_id": "Ev032NRJYASJ",
+  "event_time": 1592858788,
+  "authed_users": [ "U0431JM4RLZ" ]
 }
 ```
 
   </Tab>
-  <Tab title='User Left Channel Event'>
+  <Tab title='"member_left_channel"-event'>
 
-```javascript
+```json
 {
-  token: 'cF1PwB1eIMcRHZWwFHJR1tgs',
-  team_id: 'T932DQSV12P',
-  api_app_id: 'A321V573PQT',
-  event: {
-    type: 'member_left_channel',
-    user: 'U0431JM4RLZ',
-    channel: 'C078N43MFHU',
-    channel_type: 'C',
-    team: 'T932DQSV12P',
-    event_ts: '1593033236.000600'
+  "token": "cF1PwB1eIMcRHZWwFHJR1tgs",
+  "team_id": "T932DQSV12P",
+  "api_app_id": "A321V573PQT",
+  "event": {
+    "type": "member_left_channel",
+    "user": "U0431JM4RLZ",
+    "channel": "C078N43MFHU",
+    "channel_type": "C",
+    "team": "T932DQSV12P",
+    "event_ts": "1593033236.000600"
   },
-  type: 'event_callback',
-  event_id: 'Ev032NRJYASJ',
-  event_time: 1593033236,
-  authed_users: [ 'U0431JM4RLZ' ]
+  "type": "event_callback",
+  "event_id": "Ev032NRJYASJ",
+  "event_time": 1593033236,
+  "authed_users": [ "U0431JM4RLZ" ]
 }
 ```
 
@@ -101,8 +102,8 @@ from Slack, which will contain similar payloads to the below.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-* Load `process.js` in your preferred editor.
-* Replace the `app.post("/event" ...` listener with the following. 
+To start processing these events, load `process.js` in your preferred editor
+and replace the `app.post("/event" ...` listener with the following.
 
 ```javascript
 app.post("/event", (req, res) => {
@@ -146,7 +147,7 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
     JSONObject returnJSON = new JSONObject();
     String[] inputParts = data.split("&");
 
-    for (String part: inputParts) {           
+    for (String part: inputParts) {
       String[] keyval = part.split("=");
 
       try {
@@ -168,15 +169,15 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
 
 When an event comes through, the handler will send an immediate 200 response
 back before code processing. Slash commands will be sent as URL encoded
-strings, while member join / leave events will be sent as JSON. If a Slash
+strings, while member join / leave events will be sent as JSON. If a slash
 command is encountered we respond with a processing message, otherwise we send
 the `HttpServletResponse` response.
 
 <Message type='notice'>
-  An HTTP 200 response is sent before code processing due to the fact that
-  Slack requires a response to an event within 3 seconds from dispatch. If the
-  code execution goes beyond that a duplicate event will be dispatched by Slack
-  during retry.
+  In this example we send a `HTTP 200` response before the event is fully
+  processed. This is done because Slack requires a response to an event within
+  3 seconds from dispatch. When the code execution takes longer than 3 seconds
+  then duplicate event will be dispatched by Slack.
 </Message>
 
 To make event processing easier, we want to standardize all event objects as
@@ -189,8 +190,8 @@ Replace `processEvent` with the following.
 ```java
 @Async
 public void processEvent(String data) throws Exception {
-  Object dataObj = new JSONParser().parse(data); 
-  JSONObject inputJSON = (JSONObject) dataObj; 
+  Object dataObj = new JSONParser().parse(data);
+  JSONObject inputJSON = (JSONObject) dataObj;
   String token = (String) inputJSON.get("token");
 
   if (token.equals(slackConfig.verificationToken)) {
@@ -264,7 +265,7 @@ If the payload is a user event, denoted by `data.type` being set to
 `event_callback`, we extract a few pieces of information.
 
 * `eventType`: The type of event to determine if a user is leaving
- (`member_left_channel`) or joining (`member_joined_channel`) the channel. 
+ (`member_left_channel`) or joining (`member_joined_channel`) the channel.
 * `channel`: The channel ID, which will be used as the Box group name.
 * `userId`: The ID of the user, to look up their profile email which will bind
  to a user profile in Box that uses the same email.
@@ -280,13 +281,16 @@ individual values. Those values are validated for proper content.
 
 Once validated, the profile of the Slack user is obtained to get the email,
 then the user profile is sent to `processContent` to collaborate the Box
-content in with the Box group so that everyone has access. 
+content in with the Box group so that everyone has access.
 
 <Message type='notice'>
-  The reason we want to obtain the Slack email here is that when we're sharing
-  content to the group we want users to be able to share files and folders from
-  their own accounts, not the application service account. We need to match the
-  Slack email against the Box user account email to do that.
+  The reason for fetching the Slack user's email in this step is because the
+  file or folder is owned by the user, not by the application's service
+  account. When we share content (by creating a collaboration) the action will
+  need to be performed by a user who has sharing permissions on that file or
+  folder. For this reason, we need to match the Slack user's email address
+  against a Box user's email address so that we can create the collaboration on
+  their behalf.
 </Message>
 
 </Choice>
@@ -332,7 +336,7 @@ JSON payload, we extract a few pieces of information.
 
 * `eventType`: The type of event to determine if a user is leaving
  (`member_left_channel`) or joining (`member_joined_channel`) the channel.
-* `eventUserId`: The ID of the user, to look up their profile email which will 
+* `eventUserId`: The ID of the user, to look up their profile email which will
  bind to a user profile in Box that uses the same email.
 * `eventChannel`: The channel ID, which will be used as the Box group name.
 
@@ -362,8 +366,8 @@ type (file or folder), and the content ID for the file or folder stored in Box.
 
 ## Process Slack user
 
-Now we need to define how users should be processed. There are three instances
-that we need to account for: 
+Next, we need to define how user events should be processed. There are three
+events that we need to account for:
 
 * The bot was added to the channel.
 * A regular user joined the channel.
@@ -433,19 +437,19 @@ public void processUser(JSONObject userResponse, String event, String channel) t
   </Message>
 </Choice>
 
-The code starts by fetching the current Box group ID, which will be defined
-in the next step. Once obtained, we process users in the following way:
+The code starts by fetching the Box group ID for the channel, which will be
+defining in the next step. Once obtained, it processes users as follows.
 
-* If the user is a bot, we need to initialize the Box group and add all current
+* If the user is a bot, it needs to initialize the Box group and add all current
  users of the channel as Box users in the group. This is to account for the bot
- being added to existing channels, and this initializing is ignored if the bot
- is being re-added to a channel that they were already present in.
-* If the user joined the channel we send them to be added to the group.
-* If the user left the channel we send them to be removed from the group.
+ being added to existing channels, and this is ignored if the bot
+ is being re-added to a channel that they were already present in previously.
+* If the user joined the channel it needs to add them to the group.
+* If the user left the channel it needs to remove them from the group.
 
 ## Process Slack channel users
 
-When a bot is first added to a channel, it needs to run an audit of all users
+When a bot is first added to a channel, it needs to list all users
 currently in the channel and create a Box group with those people in order to
 create a baseline for the channel.
 
@@ -517,16 +521,17 @@ public void processSlackChannel(String channel, String groupId) throws Exception
 
 This code runs a number of actions in sequence.
 
-* First, we call the Slack APIs to fetch all members of the channel. `limit`
- may be adjusted to collect more users in the channel.
-* For every user that is found, we  call `getSlackUser` to get
- their profile, specifically for the email address to map to a Box user.
+* First, it calls the Slack APIs to fetch all members of the channel. The
+* `limit` can be adjusted to collect more users in the channel.
+* For every user that is found, it calls `getSlackUser` to get
+ their profile, allow it to map their email address to a Box user's email
+ address.
 * Each user is then sent to `addGroupUser` to add them into the group.
 
 ## Fetch Slack user profile
 
 The last Slack related function is a utility mechanism used by the other
-functions above, and that's to call the Slack API to fetch the user profile
+functions. It calls the Slack API to fetch the user profile
 given the user ID provided by either Slack event / command or when fetching
 a list of channel users. Since we're matching Slack users to Box users via
 their email address, that is the field that we care about from the user profile
@@ -585,10 +590,10 @@ the response from that request, which should be a user profile JSON object.
 
 ## Summary
 
-* You're verifying incoming events and forwarding them to be processed.
-* You're processing events and routing to the appropriate function.
-* You have a function for processing all users in a channel and for fetching the
- Slack profile of a single user.
+* You've verified incoming events and forwarded them to be processed.
+* You've processed events and routed to the appropriate function.
+* You've implemented functions for processing all users in a channel and for
+  fetching the Slack profile of a single user.
 
 <Observe option='programming.platform' value='node,java'>
   <Next>I've set up my Slack functions</Next>

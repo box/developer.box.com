@@ -8,18 +8,18 @@ hide_in_page_nav: true
 In this last section we'll test the full range of functionality of the Slack
 bot.
 
-* Group creation: When a bot is added to a channel, a new Box group should be
- created with all of the current channel participants. Only those
+* **Group creation**: When a bot is added to a channel, a new Box group should
+ be created with all of the current channel participants. Only those
  people in the channel with matching Box accounts (based on email address
  matching) should be added.
-* User event functions: When a user enters or leaves a channel, they should be
- added or removed from the channel group.
-* Content add functions: When a user enters a valid `/boxadd` slash command,
+* **User event functions**: When a user enters or leaves a channel, they should
+ be added or removed from the channel group.
+* **Content add functions**: When a user enters a valid `/boxadd` slash command,
  that content should be shared with the group through a new collaboration.
 
 <Message type='notice'>
-  If you haven't done so already, ensure that all code in the previous step is
-  deployed to your publicly accessible hosting location.
+  If you haven't done so already, ensure that all the code we've written so far
+  is deployed as an application that is publicly accessible.
 </Message>
 
 ## Testing group creation
@@ -38,7 +38,7 @@ using a `/invite @bot_app_name` command.
 
 Once added, verify that the group is created in Box and members have been
 added. From a Box enterprise admin account, go to the
-[Users and Groups][box-users-groups] section of the admin console. If
+**[Users and Groups][box-users-groups**] section of the admin console. If
 successful, you will see a group with an random alpha-numeric string as the
 group name. This is the Slack channel ID, which is mirrored in the group name.
 
@@ -61,12 +61,12 @@ If you see your group and members, this step is a success.
 
 ## Testing user event functions
 
-Keep the [Users and Groups][box-users-groups] section of the Box admin
+Keep the **[Users and Groups][box-users-groups]** section of the Box admin
 console open and take note of the number in the **Members** column beside your
-Slack group. 
+Slack group.
 
 From the Slack channel with the bot invited, add or remove someone other than
-the bot from the channel. 
+the bot from the channel.
 
 Refresh the users and groups section of the Box admin console and you should
 see the members number drop or increase depending on if you added or removed a
@@ -84,16 +84,17 @@ verify that the content was shared.
 From the Slack channel with the bot invited, type in the slash command to share
 files or folders with the group, in the format of
 `/boxadd [file/folder] [ID of file/folder]`, such as
-`/boxadd folder 324554221`. 
+`/boxadd folder 324554221`.
 
 <Message type='notice'>
   The file or folder ID specified needs to be content within the Box account of
-  the person sharing it. 
+  the person sharing it.
 </Message>
 
 To find the ID of a file or folder in a Box account, load up the file or folder
 within [the Box site](https://box.com), then look at the URL. The ID will be the
-last string in the URL.
+last string in the URL, often right after a section which includes either
+`/file/` or `/folder/`.
 
 <ImageFrame noborder center shadow>
   ![Get File or Folder ID](./img/slack_6_file_id.png)
@@ -108,14 +109,14 @@ success.
 
 ## Next Steps
 
-With our basic bot deployed we can now think about ways to improve the
-experience on top of the content share that we've created. Next steps in this
-journey may include any number of different areas of the Box landscape, such as
-the following.
+With our minima bot deployed we can now think about ways to improve the
+experience on top of what we've created so far. Next steps in this
+journey may include any number of different expansion areas.
 
-* Adding new slash commands for [creating shared links][next-steps-shared-link]
+* Add new slash commands for [creating shared links][next-steps-shared-link]
  for the files and folders shared with the group, allowing you to share the
- content with others who are not in the group.
+ content with others who are not in the group and people outside your
+ enterprise.
 * [Creating retention policies][next-steps-retention-policy] and
  [assigning them][next-steps-policy-assign] to any content shared with the
  group, allowing you to control the lifespan and governance of shared content.

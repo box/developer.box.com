@@ -5,20 +5,20 @@ hide_in_page_nav: true
 
 # Scaffold application code
 
-With our Slack and Box applications set up, we're ready to set up the
-application which will listen for incoming slash commands and events from
-Slack.
+With our Slack and Box applications configured, we're ready to write the code
+for our application which will listen for incoming slash commands and events 
+from Slack.
 
 This application will be split up into three parts:
 
 * Set up the initial application skeleton and configuration information.
-* Set up the Slack event and command handlers.
+* Set up the handlers for Slack events and slash commands.
 * Connect those handlers to the required functions in Box.
 
 ## Add dependencies and scaffold code
 
-This first step will walk through creating the files and information needed to
-start the application.
+Let's start by scaffolding the files and minimal code needed to
+run the application.
 
 <Choice option='programming.platform' value='node' color='none'>
 
@@ -49,9 +49,9 @@ start the application.
 }
 ```
 
-* Run `npm install` from the terminal / console to install dependencies.
-* Create two files, `process.js` and `slackConfig.js` in the local directory.
-* Open `slackConfig.js` and save the following default configuration. 
+* Run `npm install` from the terminal / console to install the dependencies.
+* Create two files, `process.js` and `slackConfig.json` in the local directory.
+* Open `slackConfig.json` and save the following default configuration. 
 
 ```json
 {
@@ -137,22 +137,23 @@ app.listen(port, function(err) {
 });
 ```
 
-This code houses all of the main functions that will be needed to handle and
-process events between Slack and Box. From top to bottom, functions include:
+This code contains all of the main functions that will be needed to handle and
+process the communication between Slack and Box. From top to bottom, the 
+functions are: 
 
 * `/event` handler: Captures all incoming Slack traffic, verifies the content,
- and routes to `process`.
-* `process`: Parses the Slack event and routes to either Box group
+ and routes them to the `process` function.
+* `process`: Parses the Slack event and routes the event to either Box group
  processing (user channel events) or to add Box content to the group (slash
  commands).
-* `processUser`: Handles user event requirements to either add or remove a user
- to a Box group by routing to the appropriate functions.
+* `processUser`: Handles user events, either adding or removing a user
+ from a Box group by routing to the appropriate functions.
 * `addGroupUser`: Adds a user to a Box group.
 * `removeGroupUser`: Removes a user from a Box group. 
 * `processContent`: Collaborates Box content with the Box group.
 * `processSlackChannel`: Adds all Slack channel users to a Box group.
-* `getSlackUser`: Utility function to fetch a Slack user profile from a Slack
- user ID.
+* `getSlackUser`: Utility function to fetch a Slack user's profile from their
+  Slack user ID.
 * `getGroupId`: Utility function to fetch a Box group ID from a Box group name.
 
 </Choice>
@@ -310,8 +311,9 @@ public class Application extends slackConfig {
 ```
 <!-- markdownlint-enable line-length -->
 
-This code houses all of the main functions that will be needed to handle and
-process events between Slack and Box. From top to bottom, functions include:
+This code contains all of the main functions that will be needed to handle and
+process the communication between Slack and Box. From top to bottom, the 
+functions are: 
 
 * `handleEvent`: Captures all incoming Slack traffic and responds with an HTTP
  200 response to notify Slack that the event was received. Since slash
@@ -344,8 +346,9 @@ process events between Slack and Box. From top to bottom, functions include:
 
 ## Summary
 
-* You created a new local application, files, and basic configuration details.
-* You installed all project dependencies.
+* You created a minimal application scaffold, and provided the basic 
+  configuration details. 
+* You installed all the project dependencies.
 
 <Observe option='programming.platform' value='node,java'>
   <Next>I have my local application set up</Next>

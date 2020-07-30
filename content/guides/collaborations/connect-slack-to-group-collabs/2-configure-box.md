@@ -5,9 +5,8 @@ hide_in_page_nav: true
 
 # Configure Box
 
-Once we have created a login experience with Okta we need to have a Box
-application available that will permit us to use the Box APIs to search for and
-create users that are associated with the Okta user account.
+We will need to set up a Box application to manage Box groups and add
+collaborators to files and folders in Box.
 
 ## Set up a Box app
 
@@ -15,22 +14,21 @@ create users that are associated with the Okta user account.
   <Choose option='box.app_type' value='create_new' color='blue'>
     # Create a new Box app
 
-    Create and configure a new Box JWT application to start with a clean application
-    installation.
+    Create and configure a new Box JWT application to use for this integration.
   </Choose>
 
   <Choose option='box.app_type' value='use_own' color='blue'>
     # Use an existing approved app
 
-    Use one of your existing admin approved Box JWT applications from the Box developer
-    console.
+    Use one of your existing admin-approved Box JWT applications from the Box
+    developer console.
   </Choose>
 </Grid>
 
 <Choice option='box.app_type' value='create_new' color='none'>
   # Create a new Box app
 
-  To create a new Box application that may be used to call the Box APIs, use
+  To create a new Box application that can be used to call the Box APIs, use
   the following steps.
 
   1. Go to the [Developer Console][devconsole]
@@ -52,12 +50,15 @@ create users that are associated with the Okta user account.
   1. At the top of the page click the button to **Save Changes**
 
   <Message type='warning'>
+    # App approval
+
     Once the application is created it will still need to be approved by an
     enterprise admin before you will be able to make calls to the Box APIs.
+
+    Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+    application approved in your enterprise.
   </Message>
 
-  Follow [this guide](g://applications/custom-apps/app-approval/) to have the
-  application approved in your enterprise.
 </Choice>
 
 <Choice option='box.app_type' value='use_own' color='none'>
@@ -76,6 +77,17 @@ Authentication).
   * Manage groups
 * Advanced Features: Both options should be enabled to
   perform actions as users and generate user access tokens.
+
+  <Message type='warning'>
+    # App approval
+
+    Once the application is updated it will need to be re-approved by an
+    enterprise admin before you will be able to make calls to any of the Box 
+    APIs that need any of the new permissions.
+
+    Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+    application approved in your enterprise.
+  </Message>
 
 </Choice>
 
