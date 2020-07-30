@@ -47,7 +47,7 @@ available to all enterprises.
 
 ## List current enterprise's templates
 
-To list all templates metadata templates created for usage within the current
+To list all metadata templates created for usage within the current
 enterprise, call the [`GET  /metadata_templates/enterprise`][get_enterprise] API
 endpoint.
 

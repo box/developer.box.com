@@ -117,8 +117,8 @@ This will affect existing instances of this template.
 
 Adding an option to a `multiSelect` field can be achieved through the
 `addMultiSelectOption` operation. The operation expects the `fieldKey` to be set
-to the key of the `enum` field to change, and a `data` object with the `key` of
-the new option to add.
+to the key of the `multiSelect` field to change, and a `data` object with the
+`key` of the new option to add.
 
 ```json
 [
@@ -155,8 +155,8 @@ This will affect existing instances of this template.
 
 Reordering the options in an `multiSelect` field can be achieved through the
 `reorderMultiSelectOptions` operation. The operation expects the `fieldKey` to
-be set to the key of the `enum` field to change, and an `multiSelectOptionKeys`
-array with the keys of the options in order.
+be set to the key of the `multiSelect` field to change, and an
+`multiSelectOptionKeys` array with the keys of the options in order.
 
 ```json
 [
@@ -195,11 +195,11 @@ instances of this template.
 
 ### Edit an option
 
-Editing an option of an `multiSelect` field can be achieved through the
+Editing an option of a `multiSelect` field can be achieved through the
 `editMultiSelectOption` operation. The operation expects the `fieldKey` to be
-set  to the key of the `enum` field to change, and an `multiSelectOptionKey` to
-be set to the key of the field option. Finally, it expects a `data` object with
-the new `key` of the field option.
+set  to the key of the `multiSelect` field to change, and an
+`multiSelectOptionKey` to be set to the key of the field option. Finally, it
+expects a `data` object with the new `key` of the field option.
 
 ```json
 [
@@ -237,8 +237,8 @@ This will affect existing instances of this template.
 
 Removing an option from an `multiSelect` field can be achieved through the
 `removeMultiSelectOption` operation. The operation expects `fieldKey` to be set
-to the key of the `enum` field to change, and an `multiSelectOptionKey` to be
-set to the key of the field option to remove.
+to the key of the `multiSelect` field to change, and an `multiSelectOptionKey`
+to be set to the key of the field option to remove.
 
 ```json
 [

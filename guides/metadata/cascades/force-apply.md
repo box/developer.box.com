@@ -30,7 +30,7 @@ the future.
 
 </Message>
 
-When a metadata cascade policy already exists on a folder the metadata instance
+When a metadata cascade policy already exists on a folder, the metadata instance
 can be force-applied to all items in a folder by calling the
 [`POST /metadata_cascade_policies/:id/apply`][e_post] API endpoint with the
 `id` of the metadata cascade policy.
