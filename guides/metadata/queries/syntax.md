@@ -31,7 +31,7 @@ be created.
   },
   "fields": [
     "name",
-    "enterprise_123456.contractTemplate.amount"
+    "metadata.enterprise_123456.contractTemplate.amount"
   ],
   "ancestor_folder_id": "5555"
 }
