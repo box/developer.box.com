@@ -2,6 +2,7 @@ const glob = require('glob')
 
 const files = glob.sync('content/?(pages|guides)/**/*.md')
 const alLFiles = glob.sync('content/?(pages|guides)/**/*.?(png|gif|jpg|md|jpeg)')
+alLFiles.push('content/pages/changelog/index.md')
 
 const LinkValidator = require('../LinkValidator')
 
