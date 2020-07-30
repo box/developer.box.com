@@ -47,7 +47,6 @@ This will take you through the following steps.
 1. [And finally, deploy the application to your workspace][step5] and invite
  the Slack app bot to your channels to begin listening for events.
 
-
 ## Requirements
 
 The quick start guide has two requirements around your Slack / Box setup, and
