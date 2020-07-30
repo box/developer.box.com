@@ -6,7 +6,7 @@ hide_in_page_nav: true
 icon: FiUsers
 ---
 
-# Share content with synced Slack user groups
+# Share with synced Slack user groups
 
 Slack is a popular communication and productivity tool, allowing for real-time
 coordination when working with individuals or groups in and outside of the
