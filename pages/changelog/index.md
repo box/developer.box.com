@@ -24,6 +24,21 @@ For historical changelog entries, please see our
 [2019](page://changelog/2019) and
 [2018 release notes](page://changelog/2018).
 
+## 2020-07-30 / Updates to Search Relevance & Performance
+
+In January, updates were released to Box's search [tokenizer](wiki-tokenizer),
+improving the relevancy of search results and performance. This change does not
+effect how metadata is tokenized.
+
+Notable changes to the API-initiated searches include:
+
+* The ability to use "[stop words](wiki-stop-words)", for example "the", "is"
+  "at", "which", and "on".
+* Improved Japanese text tokenization and improved search results. 
+
+See the [full-text search](g://search/full-text-search) documentation for more
+information on how to search using Box's API.
+
 ## 2020-07-22 / New Zip Download APIs available
 
 A new collection of APIs are now available that allows developers to create a
@@ -425,6 +440,8 @@ quick-start guide. Key features include:
 The [legacy Postman collection][legacy-postman-collection] will remain available
 for the foreseeable future.
 
+[wiki-stop-words]: https://en.wikipedia.org/wiki/Stop_words
+[wiki-tokenizer]: https://en.wikipedia.org/wiki/Lexical_analysis#Tokenization
 [box-shield]: https://www.box.com/shield
 [postman-quick-start-guide]: g://tooling/postman/quick-start
 [postman-collection]: g://tooling/postman/install
