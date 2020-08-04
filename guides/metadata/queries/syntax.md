@@ -100,34 +100,10 @@ A query supports the following logical operators.
 | `AND`                   | Matches when all the conditions separated by `AND` are `TRUE`.                                                                                                                                                                                        |
 | `OR`                    | Matches when any of the conditions separated by `OR` is `TRUE`.                                                                                                                                                                                       |
 | `NOT`                   | Matches when the preceding condition(s) is **not** `TRUE`.                                                                                                                                                                                            |
-| `LIKE`<sup>
-
-1
-
-</sup>
-
-      | Matches when the template field value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details.                                                                                                |
-| `NOT LIKE`<sup>
-
-1
-
-</sup>
-
-  | Matches when the template field value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details.                                                                                     |
-| `ILIKE`<sup>
-
-1
-
-</sup>
-
-     | Identical to `LIKE` but case insensitive.                                                                                                                                                                                                             |
-| `NOT ILIKE`<sup>
-
-1
-
-</sup>
-
- | Identical to `NOT LIKE` but case insensitive.                                                                                                                                                                                                         |
+| `LIKE`*                 | Matches when the template field value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details.                                                                                                |
+| `NOT LIKE`*             | Matches when the template field value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details.                                                                                     |
+| `ILIKE`*                | Identical to `LIKE` but case insensitive.                                                                                                                                                                                                             |
+| `NOT ILIKE`*            | Identical to `NOT LIKE` but case insensitive.                                                                                                                                                                                                         |
 | `IN`                    | Matches when the template field value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)`. |
 | `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
 | `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
@@ -144,13 +120,7 @@ the `ILIKE` operator.
 
 <Message warning>
 
-<sup>
-
-1
-
-</sup>
-
- The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
+`*` The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
 be used on templates with metadata instance counts greater than 10,000 items.
 Queries of this size require an [index](g://metadata/queries/indexes) and these
 operators are not compatible with indexes.
