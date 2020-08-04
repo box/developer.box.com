@@ -1,4 +1,4 @@
-# The name of this GH action 
+# The name of this GH action
 name: CI
 
 # Defines when this action should be run
@@ -10,7 +10,7 @@ on:
     branches: [ default, staging ]
 
 jobs:
-  # The lint job checks that all content is sanitized, 
+  # The lint job checks that all content is sanitized,
   # spell checked, and without any obvious dead links
   lint:
     # We run this on the latest ubuntu
@@ -22,7 +22,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -54,7 +54,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -94,11 +94,11 @@ jobs:
         node-version: [14.x]
 
     # Requires the lint and test jobs to pass first
-    needs: 
+    needs:
       - lint
       - test
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -117,11 +117,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_WEBHOOK }}
-          json: '{}'
-      
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_WEBHOOK }}
+          data: '{}'
+
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
         env:
@@ -142,7 +142,7 @@ jobs:
           args: "Error running `deploy` job in OpenAPI CI"
 
 
-  
+
   # The deploy task actually deploys any changes to the en-staging branch
   push-to-en-staging:
     # We run this on the latest ubuntu
@@ -157,11 +157,11 @@ jobs:
         node-version: [14.x]
 
     # Requires the lint and test jobs to pass first
-    needs: 
+    needs:
       - lint
       - test
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -180,10 +180,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_STAGING_WEBHOOK }}
-          json: '{}'
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_STAGING_WEBHOOK }}
+          data: '{}'
 
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
@@ -217,10 +217,10 @@ jobs:
 
     steps:
       - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_JP_WEBHOOK }}
-          json: '{}'
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_JP_WEBHOOK }}
+          data: '{}'
 
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
