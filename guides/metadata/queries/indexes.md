@@ -48,6 +48,13 @@ request.
 If you prefer to specify a name for the index please provide that name upon
 requesting the index.
 
+<Message warning>
+
+The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
+be used in the query for an index.
+
+</Message>
+
 ### Example index request
 
 The following is an example request for an index. It is essential to include all
