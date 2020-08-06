@@ -30,6 +30,14 @@ A metadata query only works with metadata templates that have been created by
 that enterprise. A query will not return results based on the content of free
 form key-value pairs stored in the `​global.properties` template.
 
+## Classification metadata templates
+
+Box uses metadata templates to power its content classification. These metadata
+templates can not be used in metadata queries, as they will most likely run
+into issues regarding large results sets. More on this next.
+
+There are no immediate plans to start supporting these queries in the future.
+
 ## Indexes for large result sets
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
