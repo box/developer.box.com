@@ -26,7 +26,7 @@ one of these available channels:
   projects, and releases.
 
 <!-- i18n-enable localize-links -->
-[forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
+[forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->
