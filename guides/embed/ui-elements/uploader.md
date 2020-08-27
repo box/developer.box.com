@@ -145,7 +145,7 @@ uploader.removeAllListeners();
 | Parameter     | Type   | Description                                                                                                                                                                  |
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`    | String | Box Folder ID. This will be the ID of the folder from which you want files to be uploaded to. If you want to use the Box All Files folder, then use `0` as the `folderId`.   |
-| `accessToken` | String | Box API access token to use. This should have upload access to the folder above. The value passed in for the token is assumed to never expire while the uploader is visible. |
+| `accessToken` | String | Box API access token to use. This should have upload access to the folder above. |
 | `options`     | Object | Optional options. See below for details.                                                                                                                                     |
 
 ### Options
