@@ -21,56 +21,37 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/managed-users.md
 ---
-# Managed Users
+# 管理対象ユーザー
 
-A Managed User is the most regular Box user. It's an employee of an enterprise
-that can log in to the Box web and mobile apps. There are a few variations of
-Managed Users.
+管理対象ユーザーは、最も一般的なBoxユーザーです。このユーザーは、BoxウェブアプリやBoxモバイルアプリにログインできる会社の従業員です。管理対象ユーザーにはいくつかのバリエーションがあります。
 
-## Admin & co-admin roles
+## 管理者ロールと共同管理者ロール
 
-A Managed User with an admin or co-admin role is often referred to as an Admin
-User.
+管理者ロールまたは共同管理者ロールを持つ管理対象ユーザーは、管理者ユーザーとよく呼ばれます。
 
-The admin and co-admins for a Box Enterprise are the maintainers of the Box
-instance and therefore are granted more access than a regular user. This means
-that Admin Users can manage some resources like groups, users, and metadata
-templates via the API, while regular Managed Users can not.
+Box Enterpriseの管理者と共同管理者は、Boxインスタンスのメンテナンス担当であるため、通常のユーザーよりも多くのアクセス権限が付与されます。つまり、管理者ユーザーは、グループ、ユーザー、メタデータテンプレートなどのリソースをAPIを介して管理できますが、通常の管理対象ユーザーはそれができません。
 
 <Message>
 
-# Log in as Admin User
+# 管理者ユーザーとしてログイン
 
-Some applications require an Admin User to log in as the application requires
-permissions that only Admin Users have to properly operate.
+アプリケーションによっては、管理者ユーザーだけが適切に管理する必要のある権限が必要とされるため、管理者ユーザーによるログインが必要になる場合があります。
 
-An example of this would be a security application that monitors an enterprise's
-event feed and takes action on suspicious events. To monitor the enterprise feed
-and take actions on other user's files the application would need admin level
-access.
+この一例として、会社のイベントフィードを監視し、不審なイベントに対して措置を講じるセキュリティアプリケーションがあります。会社のフィードを監視し、他のユーザーのファイルに対して措置を講じるには、アプリケーションに管理者レベルのアクセス権限が必要です。
 
 </Message>
 
-## External Users
+## 外部ユーザー
 
-An externally managed user, or External User, is a Managed
-User that belongs to a different enterprise than the application.
+外部で管理されているユーザー(つまり、外部ユーザー)は、アプリケーションとは別の会社に属している管理対象ユーザーです。
 
-External users are often encountered when they are collaborated in on content
-owned by a user of the application's enterprise, or when they authorize your
-application via OAuth 2.0.
+外部ユーザーによく遭遇するのは、外部ユーザーが、アプリケーションの会社のユーザーが所有するコンテンツでコラボレーションしている場合やOAuth 2.0を介してアプリケーションを承認する場合です。
 
-As External Users do not belong to the application's enterprise they don't
-appear when retrieving a list of all users for an enterprise. Similarly,
-applications can not create, edit, or otherwise manage External Users.
+外部ユーザーは、アプリケーションの会社に属していないため、会社のすべてのユーザーのリストを取得しても表示されません。同様に、アプリケーションは外部ユーザーを作成、編集、管理できません。
 
-## Limitations & Considerations
+## 制限と注意事項
 
-There are a few limitations when using Managed Users via the Box API.
+Box APIを介して管理対象ユーザーを使用する際はいくつかの制限があります。
 
-- It is not possible to access or a Managed User's data when using
-JWT authentication unless the application has been configured to have
-"Enterprise"-level "Application Access" in the developer dashboard.
-- It is not possible to act on behalf of a Managed User's when using
-JWT authentication unless the application has been configured to "Perform
-Actions as Users" or "Generate User Access Tokens".
+* 開発者ダッシュボードでアプリケーションが「会社」レベルの「アプリケーションアクセス」を持つよう構成されている場合を除き、JWT認証の使用時に管理対象ユーザーのデータにアクセスすることはできません。
+* アプリケーションが「ユーザーとして操作を実行」または「ユーザーアクセストークンを生成」するよう構成されている場合を除き、JWT認証の使用時に管理対象ユーザーの代わりに操作を実行することはできません。

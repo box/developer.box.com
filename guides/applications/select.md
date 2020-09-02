@@ -21,157 +21,128 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/select.md
 ---
-# Select App Type
+# アプリの種類の選択
 
-The type of Box Application to select depends on the use case for the project.
-The following is a high level overview of the different types.
+選択するBoxアプリケーションの種類は、プロジェクトのユースケースによって異なります。以下に、各種の概要を示します。
 
-## Custom Apps
+## カスタムアプリ
 
 <!-- markdownlint-disable line-length -->
 
-|                            |                                                                            |
-| -------------------------- | -------------------------------------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], and [App Token][app-token] Authentication |
-| **Features**               | Webhooks, App Gallery, and Web App Integrations                            |
+|          |                                                          |
+| -------- | -------------------------------------------------------- |
+| **認証方式** | [OAuth 2.0][oauth2]、[JWT][jwt]、および[アプリトークン][app-token]認証 |
+| **機能**   | Webhook、アプリギャラリー、ウェブアプリ統合                                |
 
 <!-- markdownlint-enable line-length -->
 
-By far the more flexible way to use Box Platform is through a Custom App
-integration. Custom Apps support various different authentication methods, and
-allow for downloading, uploading, viewing, searching, and much more.
+Box Platformを使用する非常に柔軟な方法は、間違いなくカスタムアプリ統合です。カスタムアプリはさまざまな認証方式をサポートするほか、ダウンロード、アップロード、表示、検索などの操作を可能にします。
 
-A custom application typically presents Box functionality to a user within a
-custom interface. Box offers pre-built user interface components known as UI
-Elements for functionality like browsing, search, viewing and more that can be
-customized, or you can build your own.
+カスタムアプリケーションは、通常、カスタムインターフェイス内でBox機能をユーザーに表示します。Boxでは、閲覧、検索、表示などのカスタマイズ可能な機能にUI Elementと呼ばれるあらかじめ作成されたユーザーインターフェイスが用意されています。また、独自のユーザーインターフェイスを作成することもできます。
 
 <Message>
 
-# When to use a Custom App
+# カスタムアプリを使用する場合
 
-A Custom App is best used when the application:
+アプリケーションが以下のような場合に、カスタムアプリを使用すると最も効果的です。
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
-- Wants to upload and download files
-- Wants the freedom to access both their own files, as well as files owned by
-  other users, even external users.
-- Wants the option to list the application in the Box App Gallery
-- Wants to provide integration into the Box Web App
+* [OAuth 2.0][oauth2]、[JWT][jwt]、または[アプリトークン][app-token]認証を使用する
+* ファイルをアップロードおよびダウンロードする
+* 自分が所有するファイルにも、他のユーザー(外部ユーザーを含む)が所有するファイルにも自由にアクセスする
+* Boxアプリギャラリーにアプリケーションを掲載する
+* Boxウェブアプリとの統合を可能にする
 
 </Message>
 
 <CTA to="g://applications/custom-apps">
 
-Learn more about Custom Apps
+カスタムアプリの詳細を確認する
 
 </CTA>
 
-### App Use Cases
+### アプリのユースケース
 
-Example use cases for Custom Apps include:
+以下は、カスタムアプリのユースケースの例です。
 
-- A file vault in an application that allows an end user to access files that
-  have been shared with them, while also providing access for employees to the
-  same files through the Box Web app.
+* アプリケーション内のファイル保存場所。これにより、エンドユーザーが自分と共有されているファイルにアクセスできると同時に、従業員にもBoxウェブアプリを介して同じファイルへのアクセス権限が提供されます。
 
-  An example of this would be a financial advisor sharing statements and
-  investment prospectuses with investors that can be viewed and commented on
-  within a custom-built application.
+  この一例として、ファイナンシャルアドバイザーは、独自に構築したアプリケーション内で閲覧またはコメントが可能な取引明細書や投資目論見書を投資家と共有します。
 
-- A file upload feature in an application that allows an end user to submit and
-  upload files from within a custom-built application to Box that then initiates
-  a business process with the Box Web app.
+* アプリケーションのファイルアップロード機能。これにより、エンドユーザーは、独自に構築したアプリケーション内からBoxにファイルの送信とアップロードを行い、Boxウェブアプリを使用してビジネスプロセスを開始できます。
 
-  An example of this would be a candidate submitting a PDF of a resume to a
-  recruiting portal then can then be routed to an appropriate employee for
-  review.
+  この一例として、候補者が採用ポータルに送信した経歴書のPDFは、審査のため適切な従業員に転送されます。
 
-## Custom Skills
+## カスタムスキル
 
-|                            |                                |
-| -------------------------- | ------------------------------ |
-| **Authentication methods** | Access Tokens in Skills events |
-| **Features**               | Limited API access             |
+|          |                     |
+| -------- | ------------------- |
+| **認証方式** | スキルイベントにおけるアクセストークン |
+| **機能**   | 制限されたAPIアクセス        |
 
-A Custom Skill, or Box Skill is a type of application that performs custom
-processing for files uploaded to Box. Skills are designed to make it possible to
-use third-party Machine Learning services to automatically extract information
-from files uploaded to Box.
+カスタムスキル(Box Skill)とは、Boxにアップロードされたファイルに対してカスタマイズした処理を実行する一種のアプリケーションです。スキルは、サードパーティの機械学習サービスを使用して、Boxにアップロードされたファイルから情報を自動的に抽出できるようにすることを目的としています。
 
-Box Skills need to be enabled on a folder by a Box Admin. After this an event is
-sent to the Skill's application server every time a file is uploaded to the
-folder. This application can then download the file, inspect it or hand it off
-to a machine learning service, and write powerful metadata to the file.
+Box Skillsは、Box管理者がフォルダに対して有効にする必要があります。そうすると、ファイルがフォルダにアップロードされるたびに、イベントがSkillのアプリケーションサーバーに送信されます。その後、このアプリケーションはファイルをダウンロードするか、調査するか、機械学習サービスに渡し、効果的なメタデータをファイルに書き込むことができます。
 
-Working with Box Skills simplified by providing pre-authorized API credentials
-with every Skill Event. For this reason though, Box Skills allow for limited API
-access, mainly to read the file and write Metadata to the file.
+Box Skillsの操作は、各スキルイベントに事前承認済みのAPI資格情報を提供することによって簡素化されます。ただし、このような理由により、Box SkillsでのAPIアクセスは、主にファイルの読み取りとファイルへのメタデータの書き込みに制限されます。
 
 <Message>
 
-# When to use Custom Skills
+# カスタムスキルを使用する場合
 
-A Custom Skill is best used when the application:
+アプリケーションが以下のような場合に、カスタムスキルを使用すると最も効果的です。
 
-- Wants to only add metadata to files uploaded to Box
-- Does not want to upload new files or perform any other API calls
-- Wants to have a way to pass files to Machine Learning services without
-  having to handle authentication
+* Boxにアップロードされたファイルにメタデータの追加のみを行う
+* 新しいファイルをアップロードしない、またはその他のAPI呼び出しを実行しない
+* 認証を処理する必要なく、機械学習サービスにファイルを渡せるようにする
 
 </Message>
 
 <CTA to="g://applications/custom-skills">
 
-Learn more about Custom Skills
+カスタムスキルの詳細を確認する
 
 </CTA>
 
-### Skill Use Cases
+### スキルのユースケース
 
-Example use cases for Custom Skills include:
+以下は、カスタムスキルのユースケースの例です。
 
-- A process that automatically extracts license plate details from images and
-  writes the details back to the file as keywords
+* 画像からナンバープレートの詳細を自動的に抽出し、その詳細をキーワードとしてファイルに書き込むプロセス
 
-- A process that automatically detects faces in videos, and writes the timestamps
-  at which these faces occur back to the file as a timeline
+* 動画内で顔を自動的に検出し、検出した顔が表示された時点のタイムスタンプをタイムラインとしてファイルに書き込むプロセス
 
-- A process that extracts audio from a video file and writes a transcript of the
-  audio back to the file
+* 動画ファイルから音声を抽出し、音声の書き起こしをそのファイルに書き込むプロセス
 
-## Enterprise Integrations
+## 企業統合
 
 <!-- markdownlint-disable line-length -->
 
-|                            |                                                 |
-| -------------------------- | ----------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2] and [JWT][jwt]              |
-| **Features**               | Webhooks, App Gallery, and Web App Integrations |
+|          |                                |
+| -------- | ------------------------------ |
+| **認証方式** | [OAuth 2.0][oauth2]と[JWT][jwt] |
+| **機能**   | Webhook、アプリギャラリー、ウェブアプリ統合      |
 
 <!-- markdownlint-enable line-length -->
 
-Enterprise Integrations are similar to [Custom Apps][custom-apps] but restricted
-to [OAuth 2.0][oauth2] and [JWT][jwt] authentication. We recommend using a
-Custom Application and configuring the application accordingly.
+企業統合は[カスタムアプリ][custom-apps]に似ていますが、[OAuth 2.0][oauth2]および[JWT][jwt]認証に限定されています。そのため、カスタムアプリケーションを使用し、構成することをお勧めします。
 
-## Partner Integrations
+## パートナーの統合
 
 <!-- markdownlint-disable line-length -->
 
-|                            |                             |
-| -------------------------- | --------------------------- |
-| **Authentication methods** | [App Token][app-token] auth |
-| **Features**               | Limited API access          |
+|          |                        |
+| -------- | ---------------------- |
+| **認証方式** | [アプリトークン][app-token]認証 |
+| **機能**   | 制限されたAPIアクセス           |
 
 <!-- markdownlint-enable line-length -->
 
-Partner Integrations are similar to [Custom Apps][custom-apps] but restricted to
-[App Token][app-token] authentication. We recommend using a Custom Application
-with [App Token][app-token] authentication and configuring the application
-accordingly.
+パートナーの統合は[カスタムアプリ][custom-apps]に似ていますが、[アプリトークン][app-token]認証に限定されています。そのため、[アプリトークン][app-token]認証でカスタムアプリケーションを使用し、構成することをお勧めします。
 
 [oauth2]: g://authentication/oauth2
+
 [jwt]: g://authentication/jwt
+
 [app-token]: g://authentication/app-token
+
 [custom-apps]: g://applications/custom-apps

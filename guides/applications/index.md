@@ -20,56 +20,59 @@ previous_page_id: applications/app-gallery
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/index.md
 ---
-# Applications
+# アプリケーション
 
-Box Platform supports two distinctly different application types. The type of
-service you are trying to create determine the type of Box App you will want to configure.
+Box Platformでは、明らかに異なるアプリケーションの種類が2つサポートされています。作成しようとするサービスの種類によって、構成するBoxアプリの種類が決まります。
 
-## Overview
+## 概要
 
-The following is quick overview of the different Box Application types.
+以下に、さまざまなBoxアプリケーションの種類の概要を示します。
 
 <ImageFrame border center>
 
-![Application Types](./images/app-types.png)
+![アプリケーションの種類](./images/app-types.png)
 
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
 
-| App Type                      | Auth Method             | Features & Limitations                             |
-| ----------------------------- | ----------------------- | -------------------------------------------------- |
-| [Custom App][custom-apps]     | [OAuth 2.0][oauth2]     | Web App Integrations, App Gallery, Webhooks        |
-| [Custom App][custom-apps]     | [JWT][jwt]              | Webhooks                                           |
-| [Custom App][custom-apps]     | [App token][apptoken]   | Web App Integrations, Webhooks, Limited API access |
-| [Custom Skill][custom-skills] | No authorization needed | Limited API access                                 |
+| アプリの種類                   | 認証方式                | 機能と制限                         |
+| ------------------------ | ------------------- | ----------------------------- |
+| [カスタムアプリ][custom-apps]   | [OAuth 2.0][oauth2] | ウェブアプリ統合、アプリギャラリー、Webhook     |
+| [カスタムアプリ][custom-apps]   | [JWT][jwt]          | Webhook                       |
+| [カスタムアプリ][custom-apps]   | [アプリトークン][apptoken] | ウェブアプリ統合、Webhook、制限されたAPIアクセス |
+| [カスタムスキル][custom-skills] | 承認不要                | 制限されたAPIアクセス                  |
 
 <!-- markdownlint-enable line-length -->
 
 <CTA to="guide://applications/select">
 
-Learn how to select an application type
+アプリケーションの種類の選択方法を確認する
 
 </CTA>
 
-## Additional App Types
+## その他のアプリの種類
 
-A few addition App Types exist for legacy purposes. Please use the alternatives
-as specified below.
+従来の目的でさらにいくつかのアプリの種類が存在します。以下に示す代替方法を使用してください。
 
 <!-- markdownlint-disable line-length -->
 
-| App Type               | Auth Method           | Description                                                    |
-| ---------------------- | --------------------- | -------------------------------------------------------------- |
-| Enterprise Integration | [OAuth 2.0][oauth2]   | Equal to a Custom App configured with OAuth 2.0 authentication |
-| Enterprise Integration | [JWT][jwt]            | Equal to a Custom App configured with JWT authentication       |
-| Partner Integration    | [App token][apptoken] | Equal to a Custom App configured with App Token authentication |
+| アプリの種類   | 認証方式                | 説明                              |
+| -------- | ------------------- | ------------------------------- |
+| 企業統合     | [OAuth 2.0][oauth2] | OAuth 2.0認証を使用して構成されたカスタムアプリと同等 |
+| 企業統合     | [JWT][jwt]          | JWT認証を使用して構成されたカスタムアプリと同等       |
+| パートナーの統合 | [アプリトークン][apptoken] | アプリトークン認証を使用して構成されたカスタムアプリと同等   |
 
 <!-- markdownlint-enable line-length -->
 
 [oauth2]: guide://authentication/oauth2
+
 [jwt]: guide://authentication/jwt
+
 [apptoken]: guide://authentication/app-token
+
 [devtoken]: guide://authentication/access-tokens/developer-tokens
+
 [custom-apps]: g://applications/custom-apps
+
 [custom-skills]: g://applications/custom-skills

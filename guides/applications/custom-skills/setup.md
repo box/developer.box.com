@@ -20,97 +20,84 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-skills/setup.md
 ---
-# Setup
+# 設定
 
-Setting up a Custom Skill is a multi-step process.
+カスタムスキルの設定は、複数の手順からなるプロセスです。
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom Skill you will need to pass the following requirements.
+カスタムスキルを設定するには、以下の要件を満たす必要があります。
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+* 会社の[開発者コンソール][devconsole]にアクセスできる必要があります。アクセスできない場合は、[Developerアカウント][devaccount]にサインアップしてください。
 
-## Create the app
+## アプリの作成
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Head over to the [Developer Console][devconsole] and select **Create New App**.
+[開発者コンソール][devconsole]に移動し、\[**アプリの新規作成**] を選択します。
 
-### 2. Create a Custom Skill
+### 2. カスタムスキルを作成する
 
-Select the **Custom Skill** option from the list of application types and select
-**Next**.
+アプリケーションの種類のリストから \[**カスタムスキル**] オプションを選択し、\[**次へ**] を選択します。
 
 <ImageFrame border>
 
-![Application selection screen](../images/app-types-skill.png)
+![アプリケーションの選択画面](../images/app-types-skill.png)
 
 </ImageFrame>
 
-### 3. Provide a name
+### 3. 名前を入力する
 
-On the next screen, provide a unique name for your application. This name needs
-to be unique across all applications on Box.
+次の画面で、アプリケーションの一意の名前を入力します。この名前は、Box上のすべてのアプリケーションで一意である必要があります。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-name.png)
+![アプリ名のフォーム](../images/app-name.png)
 
 </ImageFrame>
 
-## Approval
+## 承認
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which
-the skill should trigger.
+カスタムスキルを使用するには、スキルがトリガーされるフォルダに割り当てておく必要があります。
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to="g://applications/custom-skills/approval">
 
-Learn more about approving Custom Skills
+カスタムスキルの承認の詳細を確認する
 
 </CTA>
 
-## Basic configuration
+## 基本的な構成
 
-Before a Custom Skill can be enabled enabled on a folder, some basic additional
-configuration needs to be set up.
+カスタムスキルをフォルダに対して有効にするには、事前にいくつかの基本的な追加構成を設定する必要があります。
 
-### Invocation URL
+### 呼び出しURL
 
-Custom Skills work by sending a payload for every file uploaded a remote URL.
-This URL is called the invocation URL.
+カスタムスキルは、アップロードされた各ファイルのペイロードをリモートURLに送信することで動作します。このURLは、呼び出しURLと呼ばれます。
 
-The Invocation URL can be any HTTP endpoint representing a server, development
-machine, or serverless function. The only condition is that the URL is publicly
-available and accessible by the Box servers. For this reason, `localhost` is not
-a valid address.
+呼び出しURLには、サーバー、開発マシン、またはサーバーレス関数を表す任意のHTTPエンドポイントを指定できます。唯一の条件は、URLが公開されていて、Boxサーバーからアクセスできることです。そのため、`localhost`は有効なアドレスではありません。
 
-To set up the Invocation URL, head over to the [Developer Console][devconsole],
-select your application, and select on the "Configuration" panel on the left
-hand side.
+呼び出しURLを設定するには、[開発者コンソール][devconsole]に移動し、アプリケーションを選択して、左側にある\[構成]パネルで選択します。
 
-Scroll down to the "Invocation URL" section.
+\[呼び出しURL]セクションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-invocation-url.png)
+![アプリ名のフォーム](../images/app-invocation-url.png)
 
 </ImageFrame>
 
-Fill in a secure HTTPs address and save the form. The invocation URL has now
-been configured.
+セキュアなHTTPSアドレスを入力し、フォームを保存します。これで、呼び出しURLが構成されました。
 
-### File Extensions
+### ファイル拡張子
 
-By default a Custom Skill will trigger for any file type in the folder. To
-specify specific file extensions to trigger the Skill for, scroll down to the
-"File Extensions" section of the "Configuration" panel of your application.
+デフォルトでは、フォルダ内の任意のファイルの種類に対してカスタムスキルがトリガーされます。スキルがトリガーされる対象となる特定のファイル拡張子を指定するには、アプリケーションの\[構成]パネルの\[ファイル拡張子]セッションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-file-extensions.png)
+![アプリ名のフォーム](../images/app-file-extensions.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer

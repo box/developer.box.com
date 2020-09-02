@@ -16,9 +16,9 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Image Frame
+# 画像フレーム
 
-An image can be wrapped into a frame.
+画像は、フレーム内にラップすることができます。
 
 ```html
 <ImageFrame border center shadow width='200'>
@@ -28,9 +28,9 @@ An image can be wrapped into a frame.
 
 <H>
 
-<ImageFrame border center shadow width='200'>
+<ImageFrame border center shadow width="200">
 
-![Image](./box.jpg)
+![画像](./box.jpg)
 
 </ImageFrame>
 
@@ -38,8 +38,6 @@ An image can be wrapped into a frame.
 
 <Message>
 
-Options include a `border`, whether to `center` the image, whether to add a
-`shadow`, and a max-`width` of `200`, `300`, `400`, or `600` pixels on larger
-screens.
+オプションには、`border`、画像の`center`、`shadow`の追加、画面の拡大に応じた`width`の最大値`200`、`300`、`400`、または`600`ピクセルがあります。
 
 </Message>

@@ -24,69 +24,57 @@ previous_page_id: authentication/oauth2
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/without-sdk.md
 ---
-# OAuth 2.0 without SDKs
+# SDKを使用しないOAuth 2.0
 
-If you are not ready to use any of the official Box SDKs, or an SDK is not
-available in your language of choice, it is totally possible to use the Box APIs
-without them.
+Box公式SDKのいずれも使用できるようになっていない場合や選択した言語のSDKがない場合は、SDKがなくてもBox APIを使用できます。
 
-To authenticate a user using OAuth 2.0. the user is redirected to the Box web
-app in a browser where they log in and grant the application access to their
-data before they are redirected back to the applications `redirect_url`. This
-last step requires the application to be running on a web server somewhere
-accessible to the user.
+OAuth 2.0を使用してユーザーを認証するために、ユーザーはブラウザでBoxウェブアプリにリダイレクトされます。そこで、ユーザーはログインし、アプリケーションに対して自分のデータへのアクセス権限を付与すると、アプリケーションの`redirect_url`に再度リダイレクトされます。この最後の手順では、ユーザーがアクセス可能な場所にあるウェブサーバー上でアプリケーションが実行されている必要があります。
 
-## Overview
+## 概要
 
-To complete an OAuth 2.0 flow the following steps need to be completed.
+OAuth 2.0フローを完了するには、以下の手順を完了する必要があります。
 
-1. Configure the authorization URL
-2. Redirect the user to the Box website
-3. The user grants the application access
-4. Exchange the authorization code for an access token
+1. 承認URLを構成する
+2. ユーザーをBoxウェブサイトにリダイレクトする
+3. ユーザーがアプリケーションにアクセス権限を付与する
+4. 承認コードをアクセストークンと交換する
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+このフローが終了すると、アプリケーションには、このユーザーの代わりにAPI呼び出しを実行するために使用できるアクセストークンが用意されます。
 
 <Message notice>
 
-The action token acquired through OAuth 2.0 is inherently tied to the user who
-authorized the application. Any API call made with this token will seem to
-come from this application, and the user needs to have access to any file or
-folder the application tries to access with this token.
+OAuth 2.0を介して取得した操作トークンは、もともとアプリケーションを承認したユーザーに関連付けられています。このトークンを使用して実行されるAPI呼び出しはどれも、このアプリケーションから実行されているように見えるため、ユーザーには、アプリケーションがこのトークンを使用してアクセスしようとするファイルやフォルダへのアクセス権限が必要です。
 
-It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `as-user` header.
+`as-user`ヘッダーを使用して、[別のユーザーとして処理を実行](g://authentication/oauth2/as-user)できます。
 
 </Message>
 
-## Prerequisites
+## 前提条件
 
-Before continuing you will need to have completed the following steps.
+続行する前に、以下の手順を完了しておく必要があります。
 
-* Create a Box Application within the developer console with the OAuth 2.0
-  authentication method.
-* Copy the `client_id` and `client_secret` values and keep them handy.
+* OAuth 2.0認証方式を使用して、開発者コンソール内でBoxアプリケーションを作成する。
+* `client_id`値と`client_secret`値をコピーし、手元に用意しておく。
 
-## Parameters
+## パラメータ
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter       | Description                                                                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLIENT_ID`     | The client ID or API key for the application                                                                                                                  |
-| `CLIENT_SECRET` | The client secret or API secret for the application                                                                                                           |
-| `REDIRECT_URI`  | The redirect URL for your application that a user will be sent to after they have authorized the application. This can be configured in the developer console |
+| パラメータ           | 説明                                                              |
+| --------------- | --------------------------------------------------------------- |
+| `CLIENT_ID`     | アプリケーションのクライアントIDまたはAPIキー                                       |
+| `CLIENT_SECRET` | アプリケーションのクライアントシークレットまたはAPIシークレット                               |
+| `REDIRECT_URI`  | ユーザーがアプリケーションを承認した後に送信されるアプリケーションのリダイレクトURL。これは開発者コンソールで構成できます。 |
 
 <!-- markdownlint-enable line-length -->
 
-## 1. Configure authorization URL
+## 1. 承認URLを構成する
 
-The first step is to configure the authorization URL of your application.
+最初の手順では、アプリケーションの承認URLを構成します。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 <!-- markdownlint-disable line-length -->
 
@@ -100,7 +88,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 <!-- markdownlint-disable line-length -->
 
@@ -114,7 +102,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 base_url = 'https://account.box.com/api/oauth2/authorize'
@@ -124,7 +112,7 @@ authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
@@ -138,19 +126,17 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <CTA to="e://get-authorize">
 
-Learn more about the authorization URL
+承認URLの詳細を確認する
 
 </CTA>
 
-## 2. Redirect user
+## 2. ユーザーをリダイレクトする
 
-Next, redirect the user to the authorization URL. The way in which a user is
-redirected to a URL depends on the application framework used. Most framework
-documentation provides extensive guidance on this topic.
+次に、ユーザーを承認URLにリダイレクトします。ユーザーがURLにリダイレクトされる方法は、使用されるアプリケーションフレームワークによって異なります。このトピックの詳細については、ほとんどのフレームワークのドキュメントで説明されています。
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
@@ -159,7 +145,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 <!-- markdownlint-disable line-length -->
 
@@ -173,7 +159,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
@@ -182,7 +168,7 @@ auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
@@ -197,41 +183,35 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
 
-Additional query parameters can be passed along when redirecting the user to
-limit down the scope, or pass along some extra state. See the [reference
-documentation](endpoint://get-authorize) for more information.
+スコープを制限したり追加の状態を渡したりするためにユーザーをリダイレクトするときに、追加のクエリパラメータを渡すことができます。詳細については、[リファレンスドキュメント](endpoint://get-authorize)を参照してください。
 
 </Message>
 
-## 3. User grants application access
+## 3. ユーザーがアプリケーションにアクセス権限を付与する
 
-Once the user is redirected to the Box web app they will have to log in. After
-they logged in they are presented with a screen to approve your application.
+ユーザーはBoxウェブアプリにリダイレクトされると、ログインする必要があります。ログイン後、ユーザーにはアプリケーションを承認するための画面が表示されます。
 
 <ImageFrame border center shadow width="400">
 
-![Example OAuth 2.0 approval screen](./oauth2-grant.png)
+![OAuth 2.0承認画面の例](./oauth2-grant.png)
 
 </ImageFrame>
 
-When the user accepts this requests and clicks the button, the browser will
-redirect to your application's redirect URL as configured in the developer console.
+ユーザーがこのリクエストを承認し、ボタンをクリックすると、ブラウザは、開発者コンソールで構成されたとおりにアプリケーションのリダイレクトURLにリダイレクトされます。
 
-## 4. Exchange code
+## 4. コードを交換する
 
-The user is redirected to your application's redirect URL with a query parameter
-containing a short-lived authorization code.
+ユーザーは、有効期間の短い承認コードを含むクエリパラメータが指定されたアプリケーションのリダイレクトURLにリダイレクトされます。
 
 ```curl
 https://your.domain.com/path?code=1234567
 ```
 
-This code is not an [Access Token][tokens] and is only valid for a few seconds.
-The SDKs can be used to exchange the code for an actual Access Token.
+このコードは[アクセストークン][tokens]ではなく、有効期間はほんの数秒です。SDKを使用すると、このコードを実際のアクセストークンと交換できます。
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 using System.Net;
@@ -263,7 +243,7 @@ var accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String authenticationUrl = "https://api.box.com/oauth2/token";
@@ -296,7 +276,7 @@ String accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 authentication_url = "https://api.box.com/oauth2/token";
@@ -315,7 +295,7 @@ access_token = json.loads(response)['access_token']
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const authenticationUrl = 'https://api.box.com/oauth2/token';
@@ -336,17 +316,15 @@ let accessToken = await axios.post(
 
 </Tabs>
 
-## Summary
+## まとめ
 
-By now the application should be able to authorize a user using OAuth 2.0 without
-using any of the SDKs, by using the following steps.
+以下の手順に従うことで、アプリケーションはSDKを使用せず、OAuth 2.0を使用したユーザーの承認を実行できるようになりました。
 
-1. Configure the authorization URL
-2. Redirect the user to the Box website
-3. The user grants the application access
-4. Exchange the authorization code for an access token
+1. 承認URLを構成する
+2. ユーザーをBoxウェブサイトにリダイレクトする
+3. ユーザーがアプリケーションにアクセス権限を付与する
+4. 承認コードをアクセストークンと交換する
 
-To learn how to use this token head over to the guide on [Making API
-calls](g://api-calls).
+このトークンの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドをご覧ください。
 
 [tokens]: guide://authentication/access-tokens

@@ -18,321 +18,252 @@ previous_page_id: api-calls/permissions-and-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/scopes.md
 ---
-# Scopes
+# スコープ
 
-It is important to select the correct permissions for a Box application
-when setting it up in the [developer console][console] by selecting the correct
-scopes.
+重要なのは、[開発者コンソール][console]でBoxアプリケーションを設定するときに適切なスコープを選択してそのアプリケーションに対する適切な権限を選択することです。
 
-## About scopes
+## スコープについて
 
-Similar to how users have certain permissions to access items like files and
-folders within Box, applications have their own set of permissions to perform
-certain actions on behalf of a Box user or a Box enterprise.
+ユーザーがBox内のファイルやフォルダなどの項目に対する特定のアクセス権限を持つように、アプリケーションも、BoxユーザーまたはBoxを使用する会社に代わって特定のアクションを実行するための権限を独自に持ちます。
 
-The name for a set of permissions for an application is a "scope". By selecting
-the correct scopes for your application you can enable your application to
-perform certain tasks for a user, as well as restrict an application from
-performing tasks you did not intend it to do.
+アプリケーションに対する権限セットの名前を「スコープ」と言います。アプリケーションに適切なスコープを選択することで、ユーザーの特定のタスクをそのアプリケーションで実行できるほか、自分が意図しないタスクを実行しないようアプリケーションを制限することもできます。
 
-<Message type='notice'>
+<Message type="notice">
 
-# User permissions and scopes
+# ユーザー権限とスコープ
 
-It is important to understand that even if an application has the right scopes
-to perform an action, the user authenticated in the API call needs to have
-permission to perform that action as well, and vice versa.
+アクションを実行するための適切なスコープがアプリケーションに設定されている場合でも、API呼び出しで認証されたユーザーにはそのアクションを実行するための権限が必要であり、逆の場合も同様であることを理解することが重要です。
 
-For example, if your application is set up to read files, the
-authenticated user does need to have permission to read the file you are
-trying to access.
+たとえば、ファイルを読み取るようにアプリケーションが設定されている場合、アクセスしようとするファイルの読み取り権限が認証済みユーザーにも必要です。
 
 </Message>
 
-## Scopes & OAuth 2 authorization
+## スコープとOAuth 2承認
 
-When sending a user through a client-side OAuth 2 flow to authorize your
-application it is possible to append a set of scopes to the authorization URL to
-further restrict the user's access token.
+アプリケーションを承認するためにクライアント側のOAuth 2フローを介してユーザーを送信する際は、承認URLに一連のスコープを追加してユーザーのアクセストークンをさらに制限できます。
 
-For example, if you application has the `root_readonly` and `root_readwrite`
-scopes enabled, it is possible to restrict a user's access token to
-`root_readonly` by specifying this scope when redirecting the user.
+たとえば、アプリケーションで`root_readonly`および`root_readwrite`スコープが有効になっている場合は、ユーザーのリダイレクト時にこのスコープを指定することで、ユーザーのアクセストークンを`root_readonly`に制限できます。
 
 ```js
 GET https://account.box.com/api/oauth2/authorize?scope=root_readonly&client_id=....
 ```
 
-When the scope parameter is omitted the application will use the scopes that
-were set when the application was created.
+スコープパラメータが省略されている場合、アプリケーションでは、そのアプリケーションの作成時に設定されたスコープが使用されます。
 
-## Self-service scopes
+## セルフサービススコープ
 
-These scopes are available through the developer console when configuring a
-custom application. Head over to the "Application Scopes" section of the
-"Configuration" page of your application settings and select one of the
-following scope.
+これらのスコープは、カスタムアプリケーションの設定時に開発者コンソールから使用できます。アプリケーション設定の\[構成]ページにある\[アプリケーションスコープ]セクションに移動して、以下のいずれかのスコープを選択します。
 
-### Read all files and folders
+### すべてのファイルとフォルダの読み取り
 
-|                       |                                          |
-| --------------------- | ---------------------------------------- |
-| **OAuth Scope**       | `root_readonly`                          |
-| **Application Scope** | Read all files and folders stored in Box |
+|                  |                               |
+| ---------------- | ----------------------------- |
+| **OAuthスコープ**    | `root_readonly`               |
+| **アプリケーションスコープ** | Boxに格納されているすべてのファイルとフォルダの読み取り |
 
-Gives an application the ability to read all the files/folders for an
-authenticated user.
+アプリケーションで、認証済みユーザーはすべてのファイル/フォルダを読み取ることができるようになります。
 
-Although this gives an application the permission to read file and folder, the
-user making the API call does need to have access to the items being accessed.
+これにより、アプリケーションにはファイルとフォルダに対する読み取り権限が付与されますが、API呼び出しを実行するユーザーには、アクセス対象の項目に対するアクセス権限が必要です。
 
-In the case of a JWT authenticated application accessing a managed user's
-items this means that the application needs to use the `as-user` header or
-create a **User Access Token** to authenticate as the user who has access to
-the item.
+つまり、JWT認証済みのアプリケーションが管理対象ユーザーの項目にアクセスする場合、アプリケーションは、その項目にアクセスできるユーザーとして認証されるように`as-user`ヘッダーを使用するか、**ユーザーアクセストークン**を作成する必要があります。
 
-### Read and write all files and folders
+### すべてのファイルとフォルダの読み取りと書き込み
 
-|                       |                                                    |
-| --------------------- | -------------------------------------------------- |
-| **OAuth Scope**       | `root_readwrite`                                   |
-| **Application Scope** | Read and write all files and folders stored in Box |
+|                  |                                    |
+| ---------------- | ---------------------------------- |
+| **OAuthスコープ**    | `root_readwrite`                   |
+| **アプリケーションスコープ** | Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み |
 
-Gives an application write access for the authenticated user. This allows the
-application to upload files, new versions of files, create new folders, create,
-edit, and delete collaborations, create comments, tasks, collection, and more.
+アプリケーションには、認証済みユーザーの書き込みアクセス権限が付与されます。これにより、アプリケーションでは、ファイルのアップロード、新しいバージョンのファイルのアップロード、新しいフォルダの作成、コラボレーションの作成、編集、削除、コメント、タスク、コレクションの作成などを実行できます。
 
-Although this gives an application read/write access to items, the
-user making the API call does need to have access to the items being accessed.
+これにより、アプリケーションには項目に対する読み取り/書き込みアクセス権限が付与されますが、API呼び出しを行うユーザーには、アクセス対象の項目に対するアクセス権限が必要です。
 
-### Manage users
+### ユーザーを管理
 
-The manage users application scope option in the developer console actually maps
-to two OAuth scopes.
+開発者コンソールにある「ユーザーを管理」アプリケーションスコープオプションは、実際に2つのOAuthスコープにマップされます。
 
-|                       |                        |
-| --------------------- | ---------------------- |
-| **OAuth Scope**       | `manage_managed_users` |
-| **Application Scope** | Manage users           |
+|                  |                        |
+| ---------------- | ---------------------- |
+| **OAuthスコープ**    | `manage_managed_users` |
+| **アプリケーションスコープ** | ユーザーを管理                |
 
-Gives an application permission to manage standard (managed) Box users. It
-allows the app to change the user's primary login, reset their password, and
-change roles for managed users.
-
-<Message type='notice'>
-
-Although this gives an application access to a user, it does mean that the
-authenticated user needs to have permissions to access these users. In the case
-of a client-side authenticated application this means that the user needs be an
-admin or co-admin.
-
-In the case of a JWT application, this means that the application needs to
-additionally be configured to have "Enterprise"-level application access.
-
-</Message>
-
-|                       |                    |
-| --------------------- | ------------------ |
-| **OAuth Scope**       | `manage_app_users` |
-| **Application Scope** | Manage users       |
-
-Gives an application permission to manage standard App users. App users are
-different from regular (managed) users and can not log in to the Box web app.
-Instead, they are virtual users that can be used by an application to separate
-data in a server-side authenticated application.
-
-This scope only applies to server-side authenticated (JWT) applications.
-
-### Manage groups
-
-|                       |                 |
-| --------------------- | --------------- |
-| **OAuth Scope**       | `manage_groups` |
-| **Application Scope** | Manage groups   |
-
-Gives an application permission to manage an enterprise's group. It
-allows the app to change the create, update, and delete groups, as well as add
-and remove users to groups.
-
-<Message type='notice'>
-
-Although this gives an application access to user groups, it does mean that the
-authenticated user needs to have permissions to access these users. In the case
-of a client-side authenticated application this means that the user needs be an
-admin or co-admin.
-
-In the case of a JWT application, this means that the application needs to
-additionally be configured to have "Enterprise"-level application access.
-
-</Message>
-
-### Manage webhooks
-
-|                       |                   |
-| --------------------- | ----------------- |
-| **OAuth Scope**       | `manage_webhook` |
-| **Application Scope** | Manage webhooks   |
-
-Gives an application permission to create webhooks for a user.
-Some [limitations exists](guide://webhooks/limitations) for webhooks, most
-notably there is a limit of 1000 webhooks per application, per user.
-
-### Manage enterprise properties
-
-|                       |                                |
-| --------------------- | ------------------------------ |
-| **OAuth Scope**       | `manage_enterprise_properties` |
-| **Application Scope** | Manage enterprise properties   |
-
-Gives an application permission to view the enterprise event stream, as well as
-view and edit the enterprise's attributes and reports. It also allows the
-application to edit and delete device pinners.
+アプリケーションには、標準(管理対象)のBoxユーザーを管理するための権限が付与されます。これにより、このアプリでは、ユーザーのプライマリログインの変更、ユーザーのパスワードのリセット、管理対象ユーザーのロールの変更を実行できます。
 
 <Message type="notice">
 
-Although this gives an application access to user groups, it does mean that
-the authenticated user needs to have permissions to access these users.
+これにより、アプリケーションにはユーザーへのアクセス権限が付与されますが、認証済みユーザーにはこれらのユーザーへのアクセス権限が必要です。クライアント側の認証済みアプリケーションの場合は、ユーザーが管理者または共同管理者である必要があります。
+
+つまり、JWTアプリケーションの場合は、「会社」レベルのアプリケーションアクセスが可能になるように追加でアプリケーションを構成する必要があります。
 
 </Message>
 
-### Manage retention policies
+|                  |                    |
+| ---------------- | ------------------ |
+| **OAuthスコープ**    | `manage_app_users` |
+| **アプリケーションスコープ** | ユーザーを管理            |
 
-|                       |                           |
-| --------------------- | ------------------------- |
-| **OAuth Scope**       | `manage_data_retention`   |
-| **Application Scope** | Manage retention policies |
-| **Depends on**        | `gcm`-scope               |
+アプリケーションには、標準のApp Userを管理するための権限が付与されます。App Userは通常の(管理対象)ユーザーとは異なり、Boxウェブアプリにログインできません。代わりに、App Userは仮想ユーザーとして、アプリケーションがサーバー側の認証済みアプリケーションにデータを分離するために使用できます。
 
-Gives an application permission to view and create retention policies
-with Box Governance. This requires the enterprise to have purchased Box
-Governance.
+このスコープは、サーバー側で認証されている(JWT)アプリケーションのみに適用されます。
+
+### グループを管理
+
+|                  |                 |
+| ---------------- | --------------- |
+| **OAuthスコープ**    | `manage_groups` |
+| **アプリケーションスコープ** | グループを管理         |
+
+アプリケーションには、会社のグループを管理するための権限が付与されます。これにより、このアプリでは、グループの作成、更新、削除のほか、グループでのユーザーの追加と削除を実行できます。
+
+<Message type="notice">
+
+これにより、アプリケーションにはユーザーグループへのアクセス権限が付与されますが、認証済みユーザーにはこれらのユーザーへのアクセス権限が必要です。つまり、クライアント側の認証済みアプリケーションの場合は、ユーザーが管理者または共同管理者である必要があります。
+
+つまり、JWTアプリケーションの場合は、「会社」レベルのアプリケーションアクセスが可能になるように追加でアプリケーションを構成する必要があります。
+
+</Message>
+
+### Webhookを管理
+
+|                  |                  |
+| ---------------- | ---------------- |
+| **OAuthスコープ**    | `manage_webhook` |
+| **アプリケーションスコープ** | Webhookを管理       |
+
+アプリケーションには、ユーザーのWebhookを作成するための権限が付与されます。Webhookにはいくつかの[制限があります](guide://webhooks/limitations)。注目すべきは、1ユーザーにつき1つのアプリケーションあたりWebhookは1,000個までという制限があることです。
+
+### エンタープライズのプロパティを管理
+
+|                  |                                |
+| ---------------- | ------------------------------ |
+| **OAuthスコープ**    | `manage_enterprise_properties` |
+| **アプリケーションスコープ** | エンタープライズのプロパティを管理              |
+
+アプリケーションには、エンタープライズイベントストリームを表示するための権限に加え、エンタープライズの属性とレポートを表示および編集するための権限が付与されます。さらに、アプリケーションでは、Device Pinnerの編集と削除も実行できます。
+
+<Message type="notice">
+
+これにより、アプリケーションにはユーザーグループへのアクセス権限が付与されますが、認証済みユーザーにはこれらのユーザーへのアクセス権限が必要です。
+
+</Message>
+
+### リテンションポリシーを管理
+
+|                  |                         |
+| ---------------- | ----------------------- |
+| **OAuthスコープ**    | `manage_data_retention` |
+| **アプリケーションスコープ** | リテンションポリシーを管理           |
+| **依存先**          | `gcm`スコープ               |
+
+アプリケーションには、Box Governanceでリテンションポリシーを表示および作成するための権限が付与されます。そのため、会社ではBox Governanceを購入しておく必要があります。
 
 <Message type="warning">
 
-This scope depends on the `gcm` scope to function properly. This scope can be
-requested by opening a ticket via our support channels.
+このスコープが適切に機能するには、`gcm`スコープを必要とします。このスコープは、当社のサポートチャネルでチケットを作成してリクエストできます。
 
 </Message>
 
-## Available on request
+## リクエストに応じて使用可能
 
-There are some additional scopes that are available on request which will
-enable some specific capabilities for your application.
+アプリケーションに対して特定の機能を有効にするリクエストで使用可能な追加のスコープがいくつかあります。
 
-These scopes can be requested by opening a ticket via our
-[support team](page://support), who will review requests on an individual
-basis and only provide approval if the use case requires the scope.
-
-<Message type='notice'>
-
-It is not possible to request extra scopes if your account is a free trial
-account. Before filing a support request for activation of the following
-scopes, log in to your paid enterprise account or
-[upgrade your free developer account][pricing] to an enterprise account tier.
-
-</Message>
-
-### Manage Legal Holds
-
-|                       |                           |
-| --------------------- | ------------------------- |
-| **OAuth Scope**       | `manage_legal_holds`      |
-| **Application Scope** | Manage retention policies |
-| **Depends on**        | `gcm`-scope               |
-
-Gives an application permission to view and create retention policies
-with Box Governance. This requires the enterprise to have purchased Box
-Governance.
+これらのスコープは、Boxの[サポートチーム](page://support)を通じてチケットを作成することでリクエストできます。サポートチームは、個別にリクエストを確認し、ユースケースにスコープが必要な場合のみ承認を行います。
 
 <Message type="notice">
 
-This scope depends on the `gcm` scope to function properly. This scope can be
-requested by opening a ticket via our support channels.
+無料トライアルのアカウントでは、スコープを追加でリクエストすることはできません。以下に示すスコープの有効化についてサポートリクエストを申請する前に、有料のEnterpriseアカウントにログインするか、[無料のDeveloperアカウントをEnterpriseアカウントプランにアップグレード][pricing]してください。
 
 </Message>
 
-### Suppress email notifications
+### リーガルホールドの管理
 
-|                       |                                                 |
-| --------------------- | ----------------------------------------------- |
-| **Application Scope** | Can suppress email notifications from API calls |
+|                  |                      |
+| ---------------- | -------------------- |
+| **OAuthスコープ**    | `manage_legal_holds` |
+| **アプリケーションスコープ** | リテンションポリシーを管理        |
+| **依存先**          | `gcm`スコープ            |
 
-Allows email notifications to be suppressed when API calls are made.
+アプリケーションには、Box Governanceでリテンションポリシーを表示および作成するための権限が付与されます。そのため、会社ではBox Governanceを購入しておく必要があります。
 
-### Global Content Manager
+<Message type="notice">
 
-|                       |                        |
-| --------------------- | ---------------------- |
-| **OAuth Scope**       | `gcm`                  |
-| **Application Scope** | Global Content Manager |
-
-Allows admins and service accounts to retrieve any content within their
-enterprise without having to explicitly authenticated as a user who has access
-to that content. This scope may be required for certain applications that work
-with retention policies and legal holds.
-
-<Message type='danger'>
-
-# Side effects
-
-Enabling this scope on an application changes the behavior of some API calls,
-and most notable makes it impossible to write content without explicitly
-authenticating as a user using the `as-user` header. Additionally, enabling this
-scope disables accessing content that is owned by users in another enterprise.
-
-For this reason, this scope will not be provisioned unless absolutely necessary.
+このスコープが適切に機能するには、`gcm`スコープを必要とします。このスコープは、当社のサポートチャネルでチケットを作成してリクエストできます。
 
 </Message>
 
-## Scopes for downscoping
+### メール通知の抑制
 
-In some cases an Access Token needs to be downscoped to a more strict permission
-level, especially when a token needs to be exposed to a client-side, public
-environment like a browser. The primary example for this is when using [Box UI
-Elements][ui-elements] which requires an Access Token in the user's browser.
+|                  |                     |
+| ---------------- | ------------------- |
+| **アプリケーションスコープ** | API呼び出しからメール通知を抑制可能 |
 
-The following is a list of **additional** scopes that can be used with the
-[`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an
-existing access token.
+API呼び出しが行われるときにメール通知を抑制できます。
+
+### グローバルコンテンツマネージャ
+
+|                  |                 |
+| ---------------- | --------------- |
+| **OAuthスコープ**    | `gcm`           |
+| **アプリケーションスコープ** | グローバルコンテンツマネージャ |
+
+社内のコンテンツへのアクセス権限を持つユーザーとして明示的に認証されていなくても、管理者とサービスアカウントは社内のすべてのコンテンツを取得できます。このスコープは、リテンションポリシーとリーガルホールドを使用する特定のアプリケーションで必要になる場合があります。
+
+<Message type="danger">
+
+# 副次的影響
+
+アプリケーションに対してこのスコープを有効にすると、一部のAPI呼び出しの動作が変更されます。その最も顕著な例として、`as-user`ヘッダーを使用してユーザーとして明示的に認証しないとコンテンツを書き込めなくなることが挙げられます。また、このスコープを有効にすると、別の会社のユーザーが所有するコンテンツにはアクセスできなくなります。
+
+そのため、やむを得ない場合を除き、このスコープはプロビジョニングされません。
+
+</Message>
+
+## ダウンスコープ用のスコープ
+
+特にトークンをクライアント側(ブラウザなどの公開された環境)に公開する必要がある場合など、アクセストークンをより厳格な権限レベルにダウンスコープしなければならないことがあります。その主な例として、ユーザーのブラウザでアクセストークンが必要となる[Box UI Elements][ui-elements]を使用する場合が挙げられます。
+
+既存のアクセストークンをダウンスコープするために[`POST /oauth2/token`](endpoint://post-oauth2-token)エンドポイントで使用できる**追加**のスコープのリストを以下に示します。
 
 <!-- markdownlint-disable line-length -->
 
-| OAuth Scope            | UI Element affected | Description                                                                         |
-| ---------------------- | ------------------- | ----------------------------------------------------------------------------------- |
-| `annotation_edit`      | Preview             | Allow user to edit & delete annotations                                             |
-| `annotation_view_all`  | Preview             | Allows user to view annotations by all users                                        |
-| `annotation_view_self` | Preview             | Allows user to view their own annotations only                                      |
-| `base_explorer`        | Explorer            | Allows access to content in the folder tree based on user/file/token permissions    |
-| `base_picker`          | Picker              | Allows access to content in the folder tree based on user/file/token permissions    |
-| `base_preview`         | Preview             | Allows the user to preview the file, nothing else                                   |
-| `base_sidebar`         | Sidebar             | Allows the user to get basic file info needed for the sidebar UI element            |
-| `base_upload`          | Uploader            | Allows upload into the folder specified under `resource` when downscoping the token |
-| `item_delete`          | Explorer            | Allows files and folders to be deleted                                              |
-| `item_download`        | Explorer, Preview   | Allows files or a folder's content to be downloaded                                 |
-| `item_preview`         | Explorer            | Enables preview of a file                                                           |
-| `item_rename`          | Explorer            | Allows files and folders to be renamed                                              |
-| `item_share`           | Explorer, Picker    | Allows the item specified under `resource` of the token exchange to be shared       |
-| `item_upload`          | Picker              | Allows upload in the content picker                                                 |
+| OAuthスコープ              | 影響を受けるUI Element | 説明                                                   |
+| ---------------------- | ---------------- | ---------------------------------------------------- |
+| `annotation_edit`      | Preview          | 注釈の編集と削除をユーザーに許可します。                                 |
+| `annotation_view_all`  | Preview          | すべてのユーザーによる注釈の表示をユーザーに許可します。                         |
+| `annotation_view_self` | Preview          | ユーザーに自分の注釈のみの表示を許可します。                               |
+| `base_explorer`        | Explorer         | ユーザー/ファイル/トークンの権限に基づいて、フォルダツリー内のコンテンツへのアクセスを許可します。   |
+| `base_picker`          | Picker           | ユーザー/ファイル/トークンの権限に基づいて、フォルダツリー内のコンテンツへのアクセスを許可します。   |
+| `base_preview`         | Preview          | ファイルのプレビューのみをユーザーに許可します。                             |
+| `base_sidebar`         | Sidebar          | サイドバーUI Elementに必要なファイルの基本情報の取得をユーザーに許可します。          |
+| `base_upload`          | Uploader         | トークンのダウンスコープ時に、`resource`の下で指定されたフォルダへのアップロードを許可します。 |
+| `item_delete`          | Explorer         | ファイルとフォルダの削除を許可します。                                  |
+| `item_download`        | Explorer、Preview | ファイルまたはフォルダのコンテンツのダウンロードを許可します。                      |
+| `item_preview`         | Explorer         | ファイルのプレビューを有効にします。                                   |
+| `item_rename`          | Explorer         | ファイルとフォルダの名前変更を許可します。                                |
+| `item_share`           | Explorer、Picker  | トークン交換の`resource`で指定された項目の共有を許可します。                  |
+| `item_upload`          | Picker           | Content Pickerでのアップロードを許可します。                        |
 
 <!-- markdownlint-enable line-length -->
 
-The standard OAuth scopes are also supported when downscoping.
+また、ダウンスコープ時には標準OAuthスコープもサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| OAuth Scope                    | Description                                        |
-| ------------------------------ | -------------------------------------------------- |
-| `root_readonly`                | Read all files and folders stored in Box           |
-| `root_readwrite`               | Read and write all files and folders stored in Box |
-| `manage_managed_users`         | Manage managed users                               |
-| `manage_app_users`             | Manage app users                                   |
-| `manage_groups`                | Manage groups                                      |
-| `manage_webhook`              | Manage webhooks                                    |
-| `manage_enterprise_properties` | Manage enterprise properties                       |
-| `manage_data_retention`        | Manage retention policies                          |
+| OAuthスコープ                      | 説明                                 |
+| ------------------------------ | ---------------------------------- |
+| `root_readonly`                | Boxに格納されているすべてのファイルとフォルダの読み取り      |
+| `root_readwrite`               | Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み |
+| `manage_managed_users`         | 管理対象ユーザーを管理                        |
+| `manage_app_users`             | App Userを管理                        |
+| `manage_groups`                | グループを管理                            |
+| `manage_webhook`               | Webhookを管理                         |
+| `manage_enterprise_properties` | エンタープライズのプロパティを管理                  |
+| `manage_data_retention`        | リテンションポリシーを管理                      |
 
 <!-- markdownlint-enable line-length -->
 
 [console]: https://app.box.com/developers/console
+
 [ui-elements]: https://github.com/box/box-ui-elements
+
 [pricing]: https://www.box.com/pricing/platform

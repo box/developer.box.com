@@ -28,17 +28,15 @@ previous_page_id: api-calls/request-extra-fields
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/ensure-consistency.md
 ---
-# Ensure Consistency
+# 一貫性の確保
 
-A few of the Box APIs support headers to control consistency between your
-application and Box.
+いくつかのBox APIでは、アプリケーションとBox間の一貫性を制御するためのヘッダーがサポートされています。
 
-## `etag`, `if-match`, and `if-none-match`
+## `etag`、`if-match`、および`if-none-match`
 
-Many of the file system items (files or folders) that can be requested via the
-API return an `etag` value for the item.
+APIを介してリクエスト可能なファイルシステムの項目(ファイルまたはフォルダ)の多くは、項目の`etag`値を返します。
 
-For example, a file resource returns an `etag` in the JSON response.
+たとえば、ファイルリソースはJSON応答で`etag`を返します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -56,12 +54,9 @@ curl https://api.box.com/2.0/files/12345 \
 }
 ```
 
-This `etag` can be used as the value of a `if-match` or `if-none-match`
-header to either ensure a resource hasn't changed since the `etag` value was
-received, or to prevent unnecessary downloads for items that haven't changed.
+この`etag`を`if-match`または`if-none-match`ヘッダーの値として使用できるのは、`etag`値が受信されてからリソースが変更されていないことを確認するためか、または変更されていない項目を不必要にダウンロードしないようにするためです。
 
-For example, to fetch the same file only if it has changed, pass in the `etag`
-value in a `if-none-match` header.
+たとえば、同じファイルを取得するのはそのファイルが変更された場合のみにするには、`if-none-match`ヘッダーで`etag`値を渡します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -69,76 +64,65 @@ curl https://api.box.com/2.0/files/12345 \
   -H "if-none-match: 1"
 ```
 
-This API call would result in an empty response if the file had not changed.
+ファイルが変更されていない場合、このAPI呼び出しでは空の応答が返されます。
 
-## Ensure consistent changes
+## 一貫性のある変更の確保
 
-The `if-match` header allows your application to ensure that no changes are
-made to items when another application or a user has made changes to the item
-since your application last inspected it. This helps ensure that
-changes aren't lost when two applications or users are changing items at the
-same time.
+`if-match`ヘッダーを使用すると、アプリケーションは、最後に調べた項目がその後別のアプリケーションまたはユーザーによって変更が加えられても、項目が変更されないようにすることができます。これにより、2つのアプリケーションまたは2人のユーザーが項目を同時に変更しても変更が失われることはありません。
 
-The following endpoints support this header.
+このヘッダーは、以下のエンドポイントでサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| `if-match` capable endpoints                                  |                                 |
-| ------------------------------------------------------------- | ------------------------------- |
-| [`POST /files/:id/content`](endpoint://post_files_id_content) | Upload a new file version       |
-| [`PUT /files/:id`](endpoint://put_files_id)                   | Update a file's information     |
-| [`DELETE /files/:id`](endpoint://delete_files_id)             | Delete a file                   |
-| [`PUT /folders/:id`](endpoint://put_folders_id)               | Update a folder's information   |
-| [`DELETE /folders/:id`](endpoint://delete_folders_id)         | Delete a folder                 |
-| [`PUT /web_links/:id`](endpoint://put_web_links_id)           | Update a web link's information |
-| [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | Delete a web link               |
+| `if-match`対応のエンドポイント                                          |                     |
+| ------------------------------------------------------------- | ------------------- |
+| [`POST /files/:id/content`](endpoint://post_files_id_content) | 新しいファイルバージョンをアップロード |
+| [`PUT /files/:id`](endpoint://put_files_id)                   | ファイルの情報を更新          |
+| [`DELETE /files/:id`](endpoint://delete_files_id)             | ファイルを削除             |
+| [`PUT /folders/:id`](endpoint://put_folders_id)               | フォルダの情報を更新          |
+| [`DELETE /folders/:id`](endpoint://delete_folders_id)         | フォルダの削除             |
+| [`PUT /web_links/:id`](endpoint://put_web_links_id)           | ウェブリンクの情報を更新        |
+| [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | ウェブリンクを削除           |
 
 <!-- markdownlint-enable line-length -->
 
-The response of these APIs calls depends on the existence of the item,
-and whether the `etag` value matches the most recent version.
+これらのAPI呼び出しの応答は、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
-| Item found? | Etag match? | HTTP Status |
-| ----------- | ----------- | ----------- |
-| Yes         | Yes         | 200         |
-| Yes         | No          | 412         |
-| No          | Yes         | 412         |
-| No          | No          | 404         |
+| 項目があるか? | Etagが一致するか? | HTTPステータス |
+| ------- | ----------- | --------- |
+| はい      | はい          | 200       |
+| はい      | いいえ         | 412       |
+| いいえ     | はい          | 412       |
+| いいえ     | いいえ         | 404       |
 
-<Message type='warning'>
+<Message type="warning">
 
-# Moving items
+# 項目の移動
 
-The `if-match` header can not be used to prevent moving of files, folders,
-or web links. Instead, Box will always ensure that the latest item is moved to
-the new location.
+`if-match`ヘッダーを使用してファイル、フォルダ、またはウェブリンクの移動を防ぐことはできません。Boxでは、必ず最新の項目が新しい場所に移動されます。
 
 </Message>
 
-## Prevent unnecessary request downloads
+## リクエストによる不要なダウンロードの防止
 
-The `if-none-match` header allows your application to ensure that no information
-is downloaded for items that have not changed since your application last
-inspected it. This helps ensure no unnecessary information is downloaded,
-speeding up your application and saving on bandwidth.
+`if-none-match`ヘッダーを使用すると、アプリケーションは、最後に調べてから変更されていない項目の情報がダウンロードされないようにすることができます。これにより、不要な情報がダウンロードされなくなるため、アプリケーションの速度が向上し、帯域幅が節約されます。
 
 <!-- markdownlint-disable line-length -->
 
-| `if-none-match` capable endpoints                   |                                 |
-| --------------------------------------------------- | ------------------------------- |
-| [`GET /files/:id`](endpoint://get_files_id)         | Get a file's information        |
-| [`GET /folders/:id`](endpoint://get_folder_id)      | Get a folder's information      |
-| [`GET /web_links/:id`](endpoint://get_web_links_id) | Get a web link's information    |
-| [`GET /shared_items`](endpoint://get_shared_items)  | Get a shared item's information |
+| `if-none-match`対応のエンドポイント                           |              |
+| --------------------------------------------------- | ------------ |
+| [`GET /files/:id`](endpoint://get_files_id)         | ファイルの情報を取得   |
+| [`GET /folders/:id`](endpoint://get_folder_id)      | フォルダの情報を取得   |
+| [`GET /web_links/:id`](endpoint://get_web_links_id) | ウェブリンクの情報を取得 |
+| [`GET /shared_items`](endpoint://get_shared_items)  | 共有項目の情報を取得   |
 
 <!-- markdownlint-enable line-length -->
 
-The response of these APIs calls depends on the existence of the item,
-and whether the `etag` value matches the most recent version.
+これらのAPI呼び出しの応答は、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
-| Item found? | Etag match? | HTTP Status |
-| ----------- | ----------- | ----------- |
-| Yes         | Yes         | 304         |
-| Yes         | No          | 200         |
-| No          | Yes         | 404         |
-| No          | No          | 404         |
+| 項目があるか? | Etagが一致するか? | HTTPステータス |
+| ------- | ----------- | --------- |
+| はい      | はい          | 304       |
+| はい      | いいえ         | 200       |
+| いいえ     | はい          | 404       |
+| いいえ     | いいえ         | 404       |

@@ -24,138 +24,122 @@ previous_page_id: applications/custom-apps/jwt-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/app-token-setup.md
 ---
-# Setup with App Tokens
+# アプリトークンを使用した設定
 
-A Custom App can be set up to use server-side
-[App Tokens][app-token] for authentication.
+カスタムアプリは、認証にサーバー側の[アプリトークン][app-token]を使用するよう設定できます。
 
-<CTA to='g://authentication/app-token'>
+<CTA to="g://authentication/app-token">
 
-Learn how App Token authentication works
+アプリトークン認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using App Token authentication you will need to pass the
-following requirements.
+アプリトークン認証を使用するカスタムアプリを設定するには、以下の要件を満たす必要があります。
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+* 会社の[開発者コンソール][devconsole]にアクセスできる必要があります。アクセスできない場合は、[Developerアカウント][devaccount]にサインアップしてください。
 
-## Create the app
+## アプリの作成
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Head over to the [Developer Console][devconsole] and select "Create New App".
+[開発者コンソール][devconsole]に移動し、\[アプリの新規作成]を選択します。
 
-### 2. Create a Custom App
+### 2. カスタムアプリを作成する
 
-Select the "Custom App" option from the list of application types and select
-"Next".
+アプリケーションの種類のリストから\[カスタムアプリ]オプションを選択し、\[次へ]を選択します。
 
 <ImageFrame border>
 
-![Application selection screen](../images/app-types.png)
+![アプリケーションの選択画面](../images/app-types.png)
 
 </ImageFrame>
 
-### 3. Select App Token authentication
+### 3. アプリトークンの認証を選択する
 
-On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
-"Next".
+次の画面で\[標準OAuth 2.0 (ユーザー認証)]を選択し、\[次へ]を選択します。
 
 <ImageFrame border width="400" center>
 
-![Auth selection screen](../images/auth-types-app-tokens.png)
+![認証の選択画面](../images/auth-types-app-tokens.png)
 
 </ImageFrame>
 
-### 4. Provide a name
+### 4. 名前を入力する
 
-Finally, provide a unique name for your application. This name needs to be
-unique across all applications on Box.
+最後に、アプリケーションの一意の名前を入力します。この名前は、Box上のすべてのアプリケーションで一意である必要があります。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-name.png)
+![アプリ名のフォーム](../images/app-name.png)
 
 </ImageFrame>
 
-## App Authorization
+## アプリの承認
 
-Before the application can be used and App Tokens can be created, the
-application will need to be authorized within the Box enterprise by the
-enterprise Admin User.
+アプリケーションの使用とアプリトークンの作成を可能にするには、Boxに登録されている会社内で会社の管理者ユーザーがそのアプリケーションを承認しておく必要があります。
 
-Head over to your application in the [developer console][devconsole] and
-select the "General" link from the left sidebar in your application
-and scroll down to the "App Authorization" section.
+[開発者コンソール][devconsole]でアプリケーションに移動し、アプリケーションの左側のサイドバーで\[一般]リンクを選択して、\[アプリの承認]セクションまで下にスクロールします。
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![キーの追加と管理](../images/app-authorization.png)
 
 </ImageFrame>
 
-By submitting the application for authorization you  will send an email to your
-enterprise admin to have them enable your application. More information on this
-process is available in our [community article on app authorization][app-auth].
+承認用にアプリケーションを送信すると、会社の管理者にはアプリケーションを有効にするようメールが送信されます。このプロセスの詳細については、[アプリの承認に関するコミュニティ記事][app-auth]を参照してください。
 
-## Basic configuration
+## 基本的な構成
 
-Before the application can be used, some basic additional configuration might be
-required.
+アプリケーションを使用するには、事前にいくつかの基本的な追加構成が必要になる場合があります。
 
-### Primary and Secondary App Tokens
+### プライマリおよびセカンダリアプリトークン
 
-Authentication in this kind of application is done through preconfigured [App
-Tokens][app-token]. To configure an app token, head over to the [developer
-console][devconsole], select your application, and select the "Configuration"
-panel from the left-hand sidebar.
+このようなアプリケーションにおける認証は、あらかじめ構成された[アプリトークン][app-token]を使用して行われます。アプリトークンを構成するには、[開発者コンソール][devconsole]に移動してアプリケーションを選択し、左側のサイドバーから\[構成]パネルを選択します。
 
-Now scroll down to the "Primary Access Token" section and create a first Access
-Token by selecting the "Generate Key" button.
+ここで、\[プライマリアクセストークン]セクションまで下にスクロールし、\[キーを生成]ボタンを選択して最初のアクセストークンを作成します。
 
 <ImageFrame border width="600" center>
 
-![Create an app token](../images/app-generate-key.png)
+![アプリトークンの作成](../images/app-generate-key.png)
 
 </ImageFrame>
 
-Tokens can be configured to automatically expire or be valid indefinitely.
-After creation, the key will be enabled and can be used to make [API
-calls][api-calls].
+トークンは、自動的に期限切れになるよう構成することも、有効期限なしで構成することもできます。作成後は、キーが有効になるため、[API呼び出し][api-calls]の実行に使用できます。
 
 <Message warning>
 
-# App authorization
+# アプリの承認
 
-App Tokens can not be generated until the application has been authorized.
+アプリトークンは、アプリケーションが承認されるまで生成できません。
 
 </Message>
 
-### CORS Domains
+### CORSドメイン
 
-If your application is making API calls from front-end browser code in
-Javascript then the domain that these calls will be made from will need to be
-allowed due to [Cross Origin Resource Sharing][cors], also known as CORS.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合、それらの呼び出しの実行元となるドメインを、[クロスオリジンリソース共有][cors](CORS)のため許可する必要があります。
 
-Fill in the full URI(s) of the domains that should be enabled in your
-application to make these kind of requests. If all requests will be made from
-server-side code, this section may be left blank.
+このようなリクエストを発行するには、アプリケーションで有効にする必要があるドメインのURIをすべて入力します。すべてのリクエストがサーバー側のコードから発行される場合、このセクションは空白のままになっている可能性があります。
 
 <ImageFrame border>
 
-![App name form](../images/app-cors.png)
+![アプリ名のフォーム](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [devtoken]: g://authentication/access-tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [app-token]: g://authentication/app-token
+
 [api-calls]: g://api-calls
+
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293

@@ -20,35 +20,24 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/types.md
 ---
-# Integrations Types
+# 統合の種類
 
-There are two kinds of integration a Web App Integration can offer.
+ウェブアプリ統合に用意されている統合には2種類あります。
 
-## Popup Integrations
+## ポップアップ統合
 
-In a popup integration, Box opens a panel and loads the application's callback
-URL configured for the integration. The application can display its own user
-interface for the integration in the popup.
+ポップアップ統合の場合、Boxによってパネルが開き、統合用に構成されたアプリケーションのコールバックURLが読み込まれます。アプリケーションでは、ポップアップに統合のための独自のユーザーインターフェイスが表示されます。
 
-The integration receives a short-lived authorization code with this request,
-which can be used to connect to the Box APIs, exchange the code for an Access
-Token, and then use that to make API calls to Box.
+統合は、このリクエストとともに有効期間の短い承認コードを受信します。この承認コードを使用すると、Box APIに接続し、コードをアクセストークンに交換してから、BoxへのAPI呼び出しを実行できます。
 
 <Message warning>
 
-Popup panels use HTML `<iframe>` tags to display the embedded content. To
-protect the security of Box's content, callback URLs should use SSL, and the
-response from the callback URL should include an `X-Frame-Options` header set
-to a random string value.
+ポップアップパネルでは、HTMLの`<iframe>`タグを使用し、埋め込みコンテンツを表示します。Boxのコンテンツのセキュリティを保護するには、コールバックURLでSSLを使用する必要があります。また、コールバックURLからの応答には、ランダムな文字列値に設定された`X-Frame-Options`ヘッダーを含める必要があります。
 
 </Message>
 
-## Server-side Integration
+## サーバー側統合
 
-In a server integration, accepting the confirmation prompt sends a request to
-the final callback URL of the application without providing any extra UI to the
-user.
+サーバー側統合の場合、確認プロンプトを受け入れると、ユーザーに追加のUIを表示することなく、アプリケーションの最終コールバックのURLにリクエストが送信されます。
 
-The integration receives a short-lived authorization code with this request,
-which can be used to connect to the Box APIs, exchange the code for an Access
-Token, and then use that to make API calls to Box.
+統合は、このリクエストとともに有効期間の短い承認コードを受信します。この承認コードを使用すると、Box APIに接続し、コードをアクセストークンに交換してから、BoxへのAPI呼び出しを実行できます。

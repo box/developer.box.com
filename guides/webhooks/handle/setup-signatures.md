@@ -22,54 +22,40 @@ source_url: >-
 ---
 <!-- alex disable aattacks -->
 
-# Setup Webhook Signatures
+# Webhook署名の設定
 
-You can configure webhooks to use signatures to protect your application from
-malicious attacks where you might receive data that did not originate at Box.
+署名を使用するようWebhookを構成することで、Boxから送信されていないデータを受信する可能性がある悪意のある攻撃からアプリケーションを保護することができます。
 
-## Webhook signatures
+## Webhook署名
 
-When you configure a webhook to use a signature, Box generates
-a cryptographic digest of the notification's body and attaches it the header of
-the webhook payload.
+署名を使用するようにWebhookを設定すると、Boxは通知の本文の暗号化ダイジェストを生成し、これをWebhookペイロードのヘッダーに添付します。
 
-When your application receives the payload it is advised to [verify][sigver] the
-signatures by calculating the same digest and comparing it to the one received.
-If the digests are not identical then the payload should not be trusted.
+アプリケーションがペイロードを受信したら、同じダイジェストを計算し、それを受信したダイジェストと比較することにより、署名を[検証][sigver]することをお勧めします。ダイジェストが同一でない場合、ペイロードは信頼できません。
 
-## Man-in-the-middle attacks
+## 中間者攻撃
 
-Webhook signatures help ensure that a webhook payload was sent by Box and has
-not been tampered with in transit. Signatures greatly reduce the likelihood of a
-successful man-in-the-middle or replay attack.
+Webhook署名は、Boxから送信されたWebhookペイロードが送信中に改ざんされていないことを確認するために役立ちます。署名により、中間者攻撃または再生攻撃が成功する可能性を大幅に低減できます。
 
-<Message type='notice'>
+<Message type="notice">
 
-An extra level of protection can be achieved by frequently changing the
-signature keys. To enable a smooth switch between the old and new keys we
-supports two simultaneous signature keys to be configured for
-[signature rotation][sigrot].
+署名キーを頻繁に変更することで、保護レベルをさらに高めることができます。古いキーと新しいキーをスムーズに切り替えられるよう、Boxでは[署名のローテーション][sigrot]用に同時に2つの署名キーを設定できます。
 
 </Message>
 
-## Enable signatures
+## 署名の有効化
 
-In order to attach signatures to an application's notifications you must first
-generate signature keys for your application. Each application can have two
-signature keys configured in order to support [signature rotation][sigrot].
+アプリケーションの通知に署名を添付するためには、初めにアプリケーション用の署名キーを生成する必要があります。[署名のローテーション][sigrot]をサポートするために、各アプリケーションに2つの署名キーを設定できます。
 
-To configure your application's keys, head over to the [developer
-console][console] and select the application you want to configure.
+アプリケーションのキーを設定するには、[開発者コンソール][console]に移動して、設定するアプリケーションを選択します。
 
-In the "Webhooks" section of your application, find the buttons labeled
-"Generate primary key" and "Generate secondary key" to generate the keys.
+アプリケーションの\[Webhook]セクションで、\[プライマリキーを生成]および\[セカンダリキーを生成]というラベルの付いたボタンを見つけてキーを生成します。
 
-Once either of these keys has been configured, copy the key values as you will
-need these to [verify the webhook payloads][sigver]. Every webhook will now
-include a [`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header]
-[payload].
+いずれかのキーを設定したら、そのキー値をコピーして、[Webhookペイロードの検証][sigver]に使用できるようにします。これで、すべてのWebhookに[`BOX-SIGNATURE-PRIMARY`と`BOX-SIGNATURE-SECONDARY`ヘッダー][`BOX-SIGNATURE-PRIMARY` and a `BOX-SIGNATURE-SECONDARY` header][ペイロード][payload]が含まれるようになります。
 
 [payload]: guide://webhooks/handle/payload
+
 [sigrot]: guide://webhooks/handle/rotate-signatures
+
 [sigver]: guide://webhooks/handle/verify-signatures
+
 [console]: https://app.box.com/developers/console

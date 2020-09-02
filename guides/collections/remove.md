@@ -25,43 +25,36 @@ previous_page_id: collections/add
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/remove.md
 ---
-# Remove Item from Collection
+# コレクションからの項目の削除
 
-To remove an item from a collection, call the `PUT` endpoint for that specific
-type of item and pass along a list of collection IDs that does not include the
-ID of the collection that needs to be removed.
+コレクションから項目を削除するには、その特定のタイプの項目に対して`PUT`エンドポイントを呼び出し、削除するコレクションのIDが含まれていない、コレクションIDのリストを渡します。
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection and therefore to remove an item from this collection can be
-achieved by passing the API an empty array of collections.
+APIを介して使用できるコレクションは「Favorites」コレクションのみであるため、このコレクションから項目を削除するには、APIにコレクションの空の配列を渡してください。
 
 </Message>
 
-## Remove file from collection
+## コレクションからのファイルの削除
 
-To add a file to a collection, call the `PUT /files/:id` API and pass an empty
-array of collection IDs.
+コレクションにファイルを追加するには、`PUT /files/:id` APIを呼び出し、コレクションIDの空の配列を渡します。
 
-<Samples id='put_files_id' variant='remove_from_collection' >
-
-</Samples>
-
-## Remove folder from collection
-
-To add a folder to a collection, call the `PUT /folders/:id` API and pass an
-empty array of collection IDs.
-
-<Samples id='put_folders_id' variant='remove_from_collection' >
+<Samples id="put_files_id" variant="remove_from_collection">
 
 </Samples>
 
-## Remove web link from collection
+## コレクションからのフォルダの削除
 
-To add a web link to a collection, call the `PUT /web_links/:id` API and pass an
-empty array of collection IDs.
+コレクションにフォルダを追加するには、`PUT /folders/:id` APIを呼び出し、コレクションIDの空の配列を渡します。
 
-<Samples id='put_web_links_id' variant='remove_from_collection' >
+<Samples id="put_folders_id" variant="remove_from_collection">
+
+</Samples>
+
+## コレクションからのウェブリンクの削除
+
+コレクションにウェブリンクを追加するには、`PUT /web_links/:id` APIを呼び出し、コレクションIDの空の配列を渡します。
+
+<Samples id="put_web_links_id" variant="remove_from_collection">
 
 </Samples>

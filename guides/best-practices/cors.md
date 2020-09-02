@@ -19,42 +19,26 @@ previous_page_id: best-practices/branding-guidelines
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/best-practices/cors.md
 ---
-# Cross-Origin Resource Sharing
+# クロスオリジンリソース共有
 
-Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP
-headers to tell browsers to give a web application running at one origin, access
-to selected resources from a different origin. A web application performs a
-cross-origin HTTP request when it requests a resource that has a different
-origin (domain, protocol, or port) from its own.
+クロスオリジンリソース共有(CORS)とは、追加のHTTPヘッダーを使用して、あるオリジンで動作しているウェブアプリケーションに、別のオリジンから選択されたリソースへのアクセス権限を与えるようブラウザに指示するメカニズムです。ウェブアプリケーションは、それ自体のオリジンとは異なるオリジン(ドメイン、プロトコル、またはポート)のリソースをリクエストするときに、クロスオリジンHTTPリクエストを実行します。
 
-In the case of Box, CORS comes into play when a web application tries to contact
-the Box APIs from a browser environment. The Box API enforces CORS on an
-app-by-app basis and by default does not send the right HTTP headers to allow
-your browser to complete the request.
+Boxの場合、CORSが機能するのは、アプリケーションがブラウザ環境からBox APIにアクセスしようとするときです。Box APIでは、アプリごとにCORSを適用し、デフォルトではブラウザがリクエストを完了するための適切なHTTPヘッダーが送信されません。
 
 <Message warning>
 
-Cross-Origin Resource Sharing, or CORS is only applicable to Box API requests
-made by a web page using a browser, and it relies on the `HTTP Origin` header
-being passed along by the browser.
+クロスオリジンリソース共有(CORS)は、ブラウザを使用してウェブページから送信されるBox APIリクエストのみに適用でき、ブラウザによって渡される`HTTP Origin`ヘッダーを利用します。
 
 </Message>
 
-## Enabling CORS for your domain
+## ドメインのCORSの有効化
 
-To enable CORS for the domain your application runs on, head over to the
-developer console, select your application, and scroll down to the bottom of the
-"Configuration" panel to find the CORS Domains setting.
+アプリケーションが動作するドメインでCORSを有効にするには、開発者コンソールに移動して、アプリケーションを選択し、\[構成]パネルの一番の下までスクロールしてCORSドメインの設定を見つけます。
 
-Add a comma separated list of all the origins that you expect your application
-to be making Box API requests from. Domains require the schema (`http` or
-`https`) and can include wildcards for subdomains, for example `*.example.com`.
+アプリケーションでのAPIリクエストの発信元になると予想されるすべてのオリジンをカンマ区切りリストとして追加します。ドメインにはスキーマ(`http`または`https`)が必要で、`*.example.com`のようにサブドメインのワイルドカードを含めることができます。
 
-## CORS-like Errors
+## CORSに類似したエラー
 
-Some browsers will return a CORS-like error, even when CORS is enabled for your
-application.
+ブラウザによっては、CORSがアプリケーションに対して有効になっている場合でも、CORSに類似したエラーが返されることがあります。
 
-In these scenarios, an HTTP response code will often be included (for example `400`
-or `401`) which will provide further direction where you may want to
-focus troubleshooting.
+そのような場合は、HTTP応答コード(`400`や`401`など)が含まれることがよくあり、トラブルシューティングの際に注目すべき方向が示されます。

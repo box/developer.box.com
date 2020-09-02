@@ -16,12 +16,11 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Observe & Trigger
+# ObserveとTrigger
 
-The `Observe` and `Trigger` elements can be used to observe changes in a page.
+`Observe`要素と`Trigger`要素を使用すると、ページ内の変更を監視できます。
 
-In this example, we wrap some download links in a Trigger, and show a message
-when the download link has been clicked.
+この例では、いくつかのダウンロードリンクをTriggerでラップし、ダウンロードリンクがクリックされたときにメッセージを表示します。
 
 ```html
 <Trigger option="example.trigger" value="win32">
@@ -35,13 +34,13 @@ when the download link has been clicked.
 
 <H>
 
-<Trigger option='example.trigger' value='win32'>
+<Trigger option="example.trigger" value="win32">
 
-[Download](https://dl.pstmn.io/download/latest/win32)
+[ダウンロード](https://dl.pstmn.io/download/latest/win32)
 
 </Trigger>
 
-<Observe option='example.trigger' value='win32'>
+<Observe option="example.trigger" value="win32">
 
 ...
 
@@ -51,27 +50,21 @@ when the download link has been clicked.
 
 <Message notice>
 
-Events are tracked across pages and persisted over time within local storage
-using the key `com.box.developer.observable_events`. It is important to use
-unique option names and values across guides.
+イベントはページを越えて追跡され、キー`com.box.developer.observable_events`を使用してローカルストレージに一定期間保持されます。ガイド全体で一意のオプション名と値を使用することが重要です。
 
 </Message>
 
 <Message warning>
 
-The `Observe` object does not show or hide its child content automatically,
-instead it adds a `[data-triggered=true]` attribute around its children that
-can be used to apply nested styling.
+`Observe`オブジェクトがその子コンテンツの表示/非表示を自動的に切り替えることはありません。その代わり、子の周囲に`[data-triggered=true]`属性を追加すると、それを使用してネストされたスタイルを適用できます。
 
-To keep track of a user's choice, please use the `Choice` and `Choices`
-elements instead.
+ユーザーの選択を追跡するには、代わりに`Choice`要素と`Choices`要素を使用してください。
 
 </Message>
 
-## Observe multiple values
+## 複数の値の監視
 
-The `Observe` element can listen to multiple values by using a comma-separated
-list.
+`Observe`要素は、カンマ区切りリストを使用して複数の値をリッスンできます。
 
 ```html
 <Trigger option="example.multiple" value="win32">
@@ -89,19 +82,19 @@ list.
 
 <H>
 
-<Trigger option='example.multiple' value='win32'>
+<Trigger option="example.multiple" value="win32">
 
-[Download](https://dl.pstmn.io/download/latest/win32)
-
-</Trigger>
-
-<Trigger option='example.multiple' value='macos'>
-
-[Download](https://dl.pstmn.io/download/latest/macos)
+[ダウンロード](https://dl.pstmn.io/download/latest/win32)
 
 </Trigger>
 
-<Observe option='example.multiple' value='win32,macos'>
+<Trigger option="example.multiple" value="macos">
+
+[ダウンロード](https://dl.pstmn.io/download/latest/macos)
+
+</Trigger>
+
+<Observe option="example.multiple" value="win32,macos">
 
 ...
 
@@ -109,11 +102,9 @@ list.
 
 </H>
 
-## Observe unset values
+## 設定されていない値の監視
 
-Sometimes you might want to do something when a value has not been set yet. In
-this case, use the `unset` option to set an element to listen to the event
-instead.
+場合によっては、値がまだ設定されていないときに何らかの操作を実行することもできます。この場合は、`unset`オプションを使用して、代わりにイベントをリッスンするよう要素を設定します。
 
 ```html
 <Observe option="example.unset" unset>
@@ -123,7 +114,7 @@ instead.
 
 <H>
 
-<Observe option='example.unset' unset>
+<Observe option="example.unset" unset>
 
 ...
 

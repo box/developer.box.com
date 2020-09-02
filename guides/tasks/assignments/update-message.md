@@ -19,12 +19,10 @@ previous_page_id: tasks/assignments/unassign
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/3-update-message.md
 ---
-# Change an assignment's message
+# 割り当てのメッセージの変更
 
-To update a task assignment's message call the
-[`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) API, and
-include the new `message` for the task assignment.
+タスク割り当てのメッセージを更新するには、[`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) APIを呼び出し、タスク割り当ての新しい`message`を含めます。
 
-<Samples id='put_task_assignments_id' variant='message' >
+<Samples id="put_task_assignments_id" variant="message">
 
 </Samples>

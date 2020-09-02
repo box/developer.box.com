@@ -14,31 +14,20 @@ previous_page_id: metadata/quick-start/create-query
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/7-next-steps.md
 ---
-# Next steps
+# 次の手順
 
-You've reached the end of this Quick Start guide. By now you should have taken
-the following steps.
+このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. [Listed all templates](g://metadata/quick-start/list-all/)
-   available to you.
-2. [Created a custom metadata
-   template](g://metadata/quick-start/create-template/) to hold data specific
-   to your enterprise.
-3. [Applied a custom metadata
-   template](g://metadata/quick-start/create-instance/) to a file, allowing you
-   to assign custom data to a file.
-4. [Updated a metadata instance](g://metadata/quick-start/update-instance/)
-   on a file, allowing you to change the data assigned to a file.
-5. [Updated a metadata template](g://metadata/quick-start/update-template/)
-   and changed the data applied to all instances of this template.
-6. [Queried for files and folders](g://metadata/quick-start/create-query/)
-   by matching the values in the metadata instances attached to them.
+1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all/)しました。
+2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template/)しました。
+3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance/)し、カスタムデータをファイルに割り当てられるようにしました。
+4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance/)し、ファイルに割り当てられたデータを変更できるようにしました。
+5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更しました。
+6. [ファイルやフォルダに対してクエリを実行](g://metadata/quick-start/create-query/)し、ファイルとフォルダに適用されているメタデータインスタンスの値と照合しました。
 
-## Next things to do
+## 次に行うべきこと
 
-We recommend the following resource for anyone who wants to learn more about
-using metadata with the Box API.
+Box APIでのメタデータの使用について詳しく知りたい方には、次のリソースをお勧めします。
 
-* [Learn more about metadata scopes](g://metadata/scopes)
-* [Learn more about the different field types](g://metadata/fields) that can be
-used on a template.
+* [メタデータのスコープの詳細](g://metadata/scopes)
+* テンプレートで使用できる[各種フィールドタイプの詳細](g://metadata/fields)

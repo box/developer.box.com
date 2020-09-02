@@ -17,29 +17,21 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
 ---
-# Connect Okta identities to Box App Users in a web app
+# ウェブアプリでOkta IDをBoxアプリユーザーに関連付ける
 
-[Okta][okta] is a popular access management and identity platform used by
-companies to provide a unified method for managing and authenticating into
-multiple applications with a single set of credentials and a single secure
-dashboard.
+[Okta][okta]は、企業に広く採用されているアクセス管理およびIDプラットフォームです。資格情報一式と1つの安全なダッシュボードを使用して複数のアプリケーションを管理および認証するための統合された方法を提供しています。
 
-When connected to a custom Box application, the [Okta APIs][okta-dev] may be
-used to provide a single login mechanism to identify users within the Box
-application, allowing you to have a unified experience between your unified
-identity system (Okta) and the Box APIs.
+カスタムBoxアプリケーションに接続している場合、[Okta API][okta-dev]を使用して、そのBoxアプリケーション内でユーザーの本人確認を行うためのシングルサインオンメカニズムを提供できます。これにより、統合IDシステム(Okta)とBox APIの間のエクスペリエンスが統一されます。
 
 <ImageFrame noborder center shadow>
 
-![Okta Dashboard](./img/okta-dashboard.png)
+![Oktaのダッシュボード](./img/okta-dashboard.png)
 
 </ImageFrame>
 
-## Overview
+## 概要
 
-This quick start guide will walk through how to programmatically use Okta to
-log in to a Box application, provisioning an app user in Box that is linked to
-the Okta user, then make Box API calls on behalf of that user.
+このクイックスタートガイドでは、プログラムでOktaを使用してBoxアプリケーションにログインする方法を説明します。その際、OktaユーザーにリンクされているBoxのアプリユーザーをプロビジョニングしてから、そのユーザーに代わってBox API呼び出しを実行します。
 
 ```mermaid;height=100px,width=500px
 graph LR
@@ -48,49 +40,43 @@ graph LR
    c[Box user] --> d[Box APIs]
 ```
 
-This will take you through the following steps.
+ここでは、以下の手順を説明します。
 
-1. [Scaffold your application code][step1] so that
-   we have a web application that we can log in to.
-1. [Setup and configure your Okta application][step2] and create
-   a first user that we can use to log into the web app with, and eventually
-   create a Box account for.
-1. [Setup and configure your Box application][step3] so that we 
-   can connect your web application to Box.
-1. [Create a log in flow for your application][step4],
-   allowing the Okta user to log in to your web application.
-1. [Find an existing Box user, and optionally create a Box user][step5] the
-   first time that Okta user logs into your web application.
-1. [And finally, run the application][step6] and the see
-   the complete flow in action.
+1. [アプリケーションコードをスキャフォールディング][step1]して、ログインできるウェブアプリケーションを作成します。
+2. [Oktaアプリケーションを設定および構成][step2]してウェブアプリへのログインに使用できる1人目のユーザーを作成し、最終的にそのユーザーのBoxアカウントを作成します。
+3. [Boxアプリケーションを設定および構成][step3]して、ウェブアプリケーションをBoxに接続できるようにします。
+4. [アプリケーションのログインフローを作成][step4]して、Oktaユーザーがウェブアプリケーションにログインできるようにします。
+5. Oktaユーザーが初めてウェブアプリケーションにログインするときに、[既存のBoxユーザーを検索し、必要に応じてBoxユーザーを作成][step5]します。
+6. [最後にアプリケーションを実行][step6]して、フロー全体の動作を確認します。
 
-At the end of the tutorial we will output a single message to the browser. If
-this is the first time an Okta user logs in to Box via the application, an
-associated Box user will be created and the message
-`New user created: {{USERNAME}}` will be output to the browser.
+このチュートリアルが完了すると、ブラウザに1つのメッセージが出力されます。今回Oktaユーザーが初めてアプリケーション経由でBoxにログインした場合は、関連付けられたBoxユーザーが作成され、`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
-When attempting to log in with this user in subsequent attempts, a message
-stating `Hello {{USERNAME}}` will now be output to the browser.
+その後このユーザーでログインを試みると、`Hello {{USERNAME}}`というメッセージがブラウザに出力されるようになります。
 
 <Message warning>
 
-To simplify this guide we will not create any user interface for the web
-application. Instead we will provide some output via the application console /
-terminal and directly as text output in the browser.
+このガイドを簡略化するため、ここでは、ウェブアプリケーションのユーザーインターフェイスは作成しません。代わりに、出力はアプリケーションコンソール/ターミナルを通じて表示されるほか、ブラウザで直接テキスト出力として表示されます。
 
 </Message>
 
 <Next>
 
-I am ready to get started
+開始する準備ができました
 
 </Next>
 
 [okta]: https://www.okta.com/
+
 [okta-dev]: https://developer.okta.com/
+
 [step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
+
 [step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
+
 [step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
+
 [step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
+
 [step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
+
 [step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/

@@ -22,29 +22,17 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-scopes.md
 ---
-# Metadata template scopes
+# メタデータテンプレートのスコープ
 
-Metadata templates are grouped into two distinct groups, or **scopes**.
+メタデータテンプレートは、2つの異なるグループ、つまり**スコープ**にグループ化されます。
 
-* **`global`**: a group of templates that is available to everyone using Box,
-  regardless of the enterprise they are in. An example is the
-  `global.properties` template that serves as a place to put free-form key/value
-  `string` pairs without any additional schema associated with it.
-* **`enterprise`** or **`enterprise_*`**: a group of templates defined by a user
-  within an enterprise. These templates are either created by admin's in the web
-  application, or by applications using the API. When accessing or creating
-  templates for within the authenticated user's enterprise a short-hand of
-  `enterprise` can be used. When accessing templates that belong to another
-  enterprise - for example when accessing metadata on files belonging to other
-  enterprises - the scope `enterprise_*` is used where `*` is the ID of the
-  enterprise the template belongs to.
+* **`global`**: 所属する会社に関係なく、Boxを使用するすべてのユーザーが使用できるテンプレートのグループ。たとえば、追加のスキーマを関連付けずに自由形式のキー/値の`string`ペアを配置する場所として使用される`global.properties`テンプレートがあります。
+* **`enterprise`**または**`enterprise_*`**: 社内のユーザーによって定義されたテンプレートのグループ。これらのテンプレートは、管理者がウェブアプリケーションで作成したものか、アプリケーションがAPIを使用して作成したものです。認証済みユーザーの会社内用のテンプレートにアクセスまたは作成する場合は、省略形の`enterprise`を使用できます。別の会社に属するテンプレートにアクセスする場合は(例: 他の企業に属するファイルのメタデータにアクセスする場合)、`enterprise_*`スコープを使用します(`*`はテンプレートが属する会社のIDです)。
 
 <Message warning>
 
-# Permissions
+# 権限
 
-It is important to note that no metadata templates can be created within the
-`global` scope, and that metadata templates made within the user's enterprise
-can only be accessed by users with access to that enterprise.
+`global`スコープ内ではメタデータテンプレートを作成できないことと、ユーザーの会社内で作成されたメタデータテンプレートにアクセスできるのはその会社へのアクセス権限を持つユーザーのみであることに注意してください。
 
 </Message>

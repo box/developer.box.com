@@ -27,70 +27,52 @@ source_url: >-
 ---
 <!-- alex disable failed -->
 
-# Preflight Check
+# 事前チェック
 
-The Pre-flight check API allows an application to verify that a file will be
-accepted by Box before it uploads any bytes. It can both be used for new files,
-as well as uploading new versions of existing files.
+事前チェックAPIを使用すると、アプリケーションでアップロードを開始する前にそのファイルがBoxに受け入れられるかどうかを確認できます。このAPIは、新しいファイルにも、既存ファイルの新しいバージョンのアップロードにも使用できます。
 
-## Checklist
+## チェックリスト
 
-Preflight checks perform all the same checks as if the file was
-actually uploaded including:
+事前チェックでは、ファイルが実際にアップロードされるときと同じように、以下のすべてのチェックが実行されます。
 
-* The permission of the application and the user to upload to the folder
-* Any file name collisions
-* Any file size caps and limits
-* Any folder and file name restrictions
-* Any folder and account storage quotas
+* フォルダにアップロードするアプリケーションおよびユーザーの権限
+* ファイル名の競合
+* ファイルサイズの上限や制限
+* フォルダおよびファイルの名前に関する制約事項
+* フォルダおよびアカウントのストレージクォータ
 
-## Check for new file
+## 新しいファイルのチェック
 
-To perform a check for a new file, call the
-[`OPTIONS /files/content`](e://options_files_content) API with the same
-parameters (except for the binary content) as if uploading an actual file.
+新しいファイルのチェックを実行するには、実際のファイルをアップロードする場合と同じパラメータ(バイナリコンテンツを除く)を使用して[`OPTIONS /files/content`](e://options_files_content) APIを呼び出してください。
 
-<Samples id='options_files_content' >
+<Samples id="options_files_content">
 
 </Samples>
 
-## Check for new file version
+## 新しいファイルバージョンのチェック
 
-To perform a check for a new version of a file, call the
-[`OPTIONS /files/:id/content`](e://options_files_content) API with the same
-parameters (except for the binary content) as if uploading an actual file.
+新しいファイルバージョンのチェックを実行するには、実際のファイルをアップロードする場合と同じパラメータ(バイナリコンテンツを除く)を使用して[`OPTIONS /files/:id/content`](e://options_files_content) APIを呼び出してください。
 
-<Samples id='options_files_id_content' >
+<Samples id="options_files_id_content">
 
 </Samples>
 
-## Checks & Chunk Uploads
+## チェックと分割アップロード
 
-When performing a [chunked upload][chunked], performing a preflight check is not
-required as [creating an Upload Session][chunkedsession] also performs a
-preflight check.
+[分割アップロード][chunked]を実行する場合、[アップロードセッションの作成][chunkedsession]でも事前チェックが実行されるため、事前チェックは必須ではありません。
 
-## Response codes
+## 応答コード
 
-When the API call detects any problems, a HTTP `409 Conflict` status code is
-returned with a message to describe the possible conflict. If no problems were
-discovered, it returns a HTTP `200 OK` status code and the upload can proceed.
+API呼び出しで問題が検出されると、HTTP `409 Conflict`ステータスコードとともに可能性のある競合を説明するメッセージが返されます。問題が検出されなかった場合、HTTP `200 OK`ステータスコードが返され、アップロードを続行できます。
 
-A `200 OK` response does not guarantee that the upload call will actually
-succeed. Pre-flight checks have show to reduce failed uploads by over 99%, yet
-concurrency issues still come into play when uploading a file.
+`200 OK`応答は、アップロード呼び出しが実際に成功することを保証するものではありません。事前チェックによりアップロードの失敗が99%以上削減されることが実証されていますが、ファイルのアップロード時に同時実行の問題が発生する可能性は残っています。
 
-Highly active folders, common filenames, and accounts near their quota
-limits may get a `200 OK` for the preflight check, and then have a real conflict
-during the actual upload.
+非常にアクティブで、クォータ制限に近づいているフォルダ、一般的なファイル名、およびアカウントの場合、事前チェックで`200 OK`が返されたとしても、実際のアップロード中に競合が発生する可能性があります。
 
-## Response body
+## 応答の本文
 
-In many cases, the preflight check will return valuable data in the API response
-when a conflict has been detected. For example, when a name collision has been
-detected, the application can use the `SHA-1` that is returned in the error
-response to check if the existing file is identical to the one it is trying to
-upload.
+事前チェックでは多くの場合、競合が検出されるとAPI応答で有益なデータが返されます。たとえば名前の競合が検出された場合、アプリケーションではエラー応答で返される`SHA-1`を使用して、アップロードしようとしているファイルと既存ファイルが同一であるかどうかを確認できます。
 
 [chunked]: g://uploads/chunked
+
 [chunkedsession]: g://uploads/chunked/create-session

@@ -24,43 +24,31 @@ source_url: >-
 ---
 # Content Explorer
 
-The Box Content Explorer UI Element allows developers to embed a folder view of
-content stored on Box in their desktop or mobile web application. The library
-fetches information about a specified folder through the Box API and then
-renders the content in a folder view, similar to the main Box web application.
-Users can then navigate through the folder hierarchy and perform file operations
-like rename, delete, and share.
+Box Content Explorer UI Elementを使用すると、開発者は、Boxに保存されているコンテンツのフォルダビューをデスクトップまたはモバイルウェブアプリに埋め込むことができます。ライブラリはBox APIを介して指定されたフォルダに関する情報を取得した後、メインのBoxウェブアプリと同様にそのコンテンツをフォルダビューにレンダリングします。ユーザーは、そのフォルダ階層内を移動し、名前の変更、削除、共有などのファイル操作を実行できます。
 
-## Installation
+## インストール
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
 
 <Message>
 
-# Browser support
+# ブラウザのサポート
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+古いブラウザでは、UI Elementの[サポートは限定的](g://embed/ui-elements/browser)です。目的のブラウザに合ったpolyfillを必ず追加してください。
 
 </Message>
 
-## Authentication
+## 認証
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
 
 <CTA to="g://authentication/select">
 
-Learn about selecting an authentication method
+認証方式の選択について確認する
 
 </CTA>
 
-## Sample HTML
+## サンプルHTML
 
 <!-- markdownlint-disable line-length -->
 
@@ -99,9 +87,9 @@ Learn about selecting an authentication method
 </html>
 ```
 
-## Demo
+## デモ
 
-<iframe height="560" scrolling="no" title="Box Content Explorer" src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
+<iframe height="560" scrolling="no" title="Box Content Explorer" src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
@@ -170,122 +158,113 @@ contentExplorer.removeAllListeners();
 
 <!-- markdownlint-disable line-length -->
 
-### Parameters
+### パラメータ
 
-| Parameter     | Type   | Description                                                                                                                                                                      |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `folderId`    | String | Box Folder ID. This will be the ID of the folder you want to navigate. If you want to use the Box All Files folder, then use `0` as the `folderId`.                              |
-| `accessToken` | String | Box API access token to use. This should have read/write access to the folder above. The value passed in for the token is assumed to never expire while the explorer is visible. |
-| `options`     | Object | Optional options. See below for details. For example: `contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})` would be used to hide the delete option.                      |
+| パラメータ         | 型      | 説明                                                                                                                  |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
+| `folderId`    | String | BoxフォルダのID。中を移動するフォルダのIDになります。Boxの\[すべてのファイル]フォルダを使用する場合は、`folderId`として`0`を使用します。                                   |
+| `accessToken` | String | 使用するBox APIアクセストークン。このトークンには、上記のフォルダに対する読み取り/書き込みアクセス権限が必要です。このトークンのために渡される値は、エクスプローラの表示中は有効期限切れにならないことが前提となっています。  |
+| `options`     | Object | 省略可能なオプション。詳細は以下を参照してください。たとえば、`contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})`を使用すると、削除オプションが非表示になります。 |
 
-### Options
+### オプション
 
-| Parameter              | Type     | Default                                                    | Description                                                                                                                                                                                                                                                                                                                                         |
-| ---------------------- | -------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `container`            | String   | `document.body`                                            | CSS selector of the container in which the content explorer should be placed. Calling hide() will clear out this container.                                                                                                                                                                                                                         |
-| `sortBy`               | String   | `name`                                                     | The initial sort by option for the content list. Value can be either `id`, `name`, `date` or `size`.                                                                                                                                                                                                                                                |
-| `sortDirection`        | String   | `ASC`                                                      | The initial sort direction option for the content list. Value should be either `ASC` or `DESC`.                                                                                                                                                                                                                                                     |
-| `logoUrl`              | String   |                                                            | URL of custom logo to show in header. If this value is the string box then the box logo will show.                                                                                                                                                                                                                                                  |
-| `canPreview`           | Boolean  | `true`                                                     | If this option is set to `true` AND `can_preview` permission on the file is `true`, files on the content explorer will be clickable. Clicking on a file will launch preview of that file. This option has no effect when the file permission `can_preview` is set to `false`. This is only applicable to files that can be previewed.               |
-| `canDownload`          | Boolean  | `true`                                                     | Visually hides the download option if this is set to `false`. Hiding the option alone will not prevent deleting unless the file permissions also set `can_download` to `false`. This option has no effect when the file permission `can_download` is set to `false`. This is only applicable to files.                                              |
-| `canDelete`            | Boolean  | `true`                                                     | Visually hides the delete option if this is set to `false`. Hiding the option alone will not prevent deleting unless the item permissions also set `can_delete` to `false`. This option has no effect when the item permission `can_delete` is set to `false`.                                                                                      |
-| `canRename`            | Boolean  | `true`                                                     | Visually hides the rename option if this is set to `false`. Hiding the option alone will not prevent uploading unless the item permissions also set `can_rename` to `false`.                                                                                                                                                                        |
-| `canUpload`            | Boolean  | `true`                                                     | Visually hides the upload option if this is set to `false`. Hiding the option alone will not prevent uploading unless the current folder permissions also set `can_upload` to `false`. This option has no effect when the folder permission `can_upload` is set to `false`.                                                                         |
-| `canCreateNewFolder`   | Boolean  | `true`                                                     | Visually hides the create new folder option. Hiding the option alone will not prevent creating a new folder unless the folder item permissions also set `can_upload` to `false`. This option has no effect when the folder item permission `can_upload` is set to `false`.                                                                          |
-| `canShare`             | Boolean  | `true`                                                     | Visually hides the share button if set to `false`. Hiding the button alone will not prevent sharing unless the item `permissions` also set `can_share` to false. This option has no effect when the item permission `can_share` is set to `false`.                                                                                                  |
-| `canSetShareAccess`    | Boolean  | `true`                                                     | Visually hides the sharing drop down select that allows changing share access, if set to `false`. Hiding the select drop down alone will not prevent changing the share access unless the item permissions also set `can_set_share_access` to `false`. This option has no effect when the item permission `can_set_share_access` is set to `false`. |
-| `sharedLink`           | String   |                                                            | Shared link URL, required if folder is shared and the access token doesn't belong to an owner or collaborator of the file.                                                                                                                                                                                                                          |
-| `sharedLinkPassword`   | String   |                                                            | Shared link password, required if shared link has a password.                                                                                                                                                                                                                                                                                       |
-| `size`                 | String   | `undefined`                                                | Indicates to the content explorer to fit within a small or large width container. Value can be absent or one of `small` or `large`. If absent the UI Element will adapt to its container and automatically switch between `small` width or `large` width mode.                                                                                      |
-| `isTouch`              | Boolean  | Defaults to the browser and device's default touch support | Indicates to the content explorer that it's is being rendered on a touch enabled device.                                                                                                                                                                                                                                                            |
-| `autoFocus`            | Boolean  | `false`                                                    | When set to `true`, the item grid will get focus on initial load.                                                                                                                                                                                                                                                                                   |
-| `defaultView`          | String   | `files`                                                    | Value should either be `files` or `recents`. When set to `recents`, by default you will see recent items instead of the regular file/folder structure.                                                                                                                                                                                              |
-| `requestInterceptor`   | Function |                                                            | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                           |
-| `responseInterceptor`  | Function |                                                            | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                          |
-| `ContentOpenWithProps` | Object   | `{ show: false }`                                          | Allows you to show the Open With Element when previewing via the explorer.                                                                                                                                                                                                                                                                          |
+| パラメータ                  | 型        | デフォルト                                   | 説明                                                                                                                                                                                                                       |
+| ---------------------- | -------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `container`            | String   | `document.body`                         | Content Explorerが配置されるコンテナのCSSセレクタ。hide()を呼び出すと、このコンテナは空になります。                                                                                                                                                           |
+| `sortBy`               | String   | `name`                                  | コンテンツリストの最初の並べ替え基準オプション。値は`id`、`name`、`date`または`size`になります。                                                                                                                                                              |
+| `sortDirection`        | String   | `ASC`                                   | コンテンツリストの最初の並べ替え方向オプション。値は`ASC`または`DESC`になります。                                                                                                                                                                           |
+| `logoUrl`              | String   |                                         | ヘッダーに表示するカスタムロゴのURL。この値が「box」という文字列の場合は、Boxのロゴが表示されます。                                                                                                                                                                   |
+| `canPreview`           | Boolean  | `true`                                  | このオプションが`true`に設定されていて、ファイルに対する`can_preview`権限が`true`の場合、Content Explorerでファイルをクリックできます。ファイルをクリックするとそのファイルのプレビューが開始されます。ファイルに対する権限`can_preview`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、プレビュー可能なファイルのみに適用できます。     |
+| `canDownload`          | Boolean  | `true`                                  | これを`false`に設定すると、ダウンロードオプションが非表示になります。このオプションを非表示にするだけでは削除を防ぐことはできず、ファイルに対する権限でも`can_download`を`false`に設定する必要があります。ファイルに対する権限`can_download`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、ファイルのみに適用できます。                 |
+| `canDelete`            | Boolean  | `true`                                  | これを`false`に設定すると、削除オプションが非表示になります。このオプションを非表示にするだけでは削除を防ぐことはできず、項目に対する権限でも`can_delete`を`false`に設定する必要があります。項目に対する権限`can_delete`が`false`に設定されている場合、このオプションによる効果はありません。                                                    |
+| `canRename`            | Boolean  | `true`                                  | これを`false`に設定すると、名前の変更オプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、項目に対する権限でも`can_rename`を`false`に設定する必要があります。                                                                                                       |
+| `canUpload`            | Boolean  | `true`                                  | これを`false`に設定すると、アップロードオプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、現在のフォルダに対する権限でも`can_upload`を`false`に設定する必要があります。フォルダに対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                     |
+| `canCreateNewFolder`   | Boolean  | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                               |
+| `canShare`             | Boolean  | `true`                                  | `false`に設定すると、共有ボタンが非表示になります。このボタンを非表示にするだけでは共有を防ぐことはできず、項目の`permissions`でも`can_share`をfalseに設定する必要があります。項目に対する権限`can_share`が`false`に設定されている場合、このオプションによる効果はありません。                                                       |
+| `canSetShareAccess`    | Boolean  | `true`                                  | `false`に設定すると、共有アクセス権限の変更を許可する共有ドロップダウン選択が非表示になります。この選択のドロップダウンを非表示にするだけでは共有アクセス権限の変更を防ぐことはできず、項目に対する権限でも`can_set_share_access`を`false`に設定する必要があります。項目に対する権限`can_set_share_access`が`false`に設定されている場合、このオプションによる効果はありません。 |
+| `sharedLink`           | String   |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                                         |
+| `sharedLinkPassword`   | String   |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                                  |
+| `size`                 | String   | `undefined`                             | Content Explorerがコンテナの幅の大小に合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動で`small`の幅と`large`の幅が切り替わります。                                                                           |
+| `isTouch`              | Boolean  | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | Content Explorerがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                                             |
+| `autoFocus`            | Boolean  | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                                   |
+| `defaultView`          | String   | `files`                                 | 値は`files`または`recents`になります。`recents`に設定すると、デフォルトで、通常のファイル/フォルダ構造ではなく最近使用した項目が表示されます。                                                                                                                                     |
+| `requestInterceptor`   | Function |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                             |
+| `responseInterceptor`  | Function |                                         | 応答をインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                                |
+| `ContentOpenWithProps` | Object   | `{ show: false }`                       | エクスプローラからプレビューする際にOpen With Elementを表示できます。                                                                                                                                                                              |
 
-### Events
+### イベント
 
-| Event Name | Event Data                    | Description                                 |
-| ---------- | ----------------------------- | ------------------------------------------- |
-| `select`   | `Array<File|Web Link|Folder>` | Will be fired when item rows are selected.  |
-| `rename`   | `File|Web Link|Folder`        | Will be fired when an item is renamed.      |
-| `preview`  | `File`                        | Will be fired when a file is previewed.     |
-| `download` | `Array<File>`                 | Will be fired when items are downloaded.    |
-| `delete`   | `Array<File>`                 | Will be fired when items are deleted.       |
-| `upload`   | `Array<File>`                 | Will be fired when items are uploaded.      |
-| `navigate` | `Folder`                      | Will be fired when navigating into folders. |
-| `create`   | Folder                        | Will be fired when a new folder is created  |
+| イベント名      | イベントデータ                       | 説明                     |
+| ---------- | ----------------------------- | ---------------------- |
+| `select`   | `Array<File|Web Link|Folder>` | 項目行が選択されたときに発生します。     |
+| `rename`   | `File|Web Link|Folder`        | 項目の名前が変更されたときに発生します。   |
+| `preview`  | `File`                        | ファイルがプレビューされたときに発生します。 |
+| `download` | `Array<File>`                 | 項目がダウンロードされたときに発生します。  |
+| `delete`   | `Array<File>`                 | 項目が削除されたときに発生します。      |
+| `upload`   | `Array<File>`                 | 項目がアップロードされたときに発生します。  |
+| `navigate` | `Folder`                      | フォルダ内に移動したときに発生します。    |
+| `create`   | フォルダ                          | 新しいフォルダが作成されたときに発生します。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Keyboard Shortcuts
+## キーボードショートカット
 
-When the item grid has focus, either manually by clicking on it or
-programmatically via javascript or via the above mentioned `autoFocus` prop, the
-following keyboard shortcuts will work if their corresponding operations are
-applicable and allowed.
+クリックによって手動で、またはJavaScriptや上記の`autoFocus`プロパティによってプログラムで項目グリッドがフォーカスされていると、以下のキーボードショットカットが機能します(対応する操作が適切で許可されている場合)。
 
-| Key                     | Action                             |
-| ----------------------- | ---------------------------------- |
-| `Arrow Up`              | Previous item row                  |
-| `Arrow Down`            | Next item row                      |
-| `Ctrl/Cmd + Arrow Up`   | First item row                     |
-| `Ctrl/Cmd + Arrow Down` | Last item row                      |
-| `/`                     | Search                             |
-| `Shift + X`             | Select an item row                 |
-| `Delete`                | Delete the selected item           |
-| `Enter`                 | Open the selected item             |
-| `Shift + R`             | Rename the selected item           |
-| `Shift + S`             | Share the selected item            |
-| `Shift + D`             | Download the selected item         |
-| `g then f`              | Navigates to the root folder       |
-| `g then u`              | Upload to the current folder       |
-| `g then b`              | Focuses the root folder breadcrumb |
-| `g then r`              | Recent items                       |
+| キー                      | 動作                  |
+| ----------------------- | ------------------- |
+| `Arrow Up`              | 前の項目行               |
+| `Arrow Down`            | 次の項目行               |
+| `Ctrl/Cmd + Arrow Up`   | 最初の項目行              |
+| `Ctrl/Cmd + Arrow Down` | 最後の項目行              |
+| `/`                     | 検索                  |
+| `Shift + X`             | 項目行を選択              |
+| `Delete`                | 選択した項目を削除           |
+| `Enter`                 | 選択した項目を開く           |
+| `Shift + R`             | 選択した項目の名前を変更        |
+| `Shift + S`             | 選択した項目を共有           |
+| `Shift + D`             | 選択した項目をダウンロード       |
+| `g then f`              | ルートフォルダに移動          |
+| `g then u`              | 現在のフォルダにアップロード      |
+| `g then b`              | ルートフォルダの階層リンクをフォーカス |
+| `g then r`              | 最近使用した項目            |
 
-## Scopes
+## スコープ
 
-If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
-appropriately downscope the Access Token to a resulting token that has the
-desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+アプリケーションで、エンドユーザーがContent Explorer機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Explorerを初期化するエンドユーザークライアントに安全に渡すことができます。
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
-configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content ExplorerのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
 
-### Base Scope
+### 基本スコープ
 
 <!-- markdownlint-disable line-length -->
 
-| Scope Name      | Permissions granted                                                               |
-| --------------- | --------------------------------------------------------------------------------- |
-| `base_explorer` | Allows access to content in the folder tree based on user/file/token permissions. |
+| スコープ名           | 付与される権限                                            |
+| --------------- | -------------------------------------------------- |
+| `base_explorer` | ユーザー/ファイル/トークンの権限に基づいて、フォルダツリー内のコンテンツへのアクセスを許可します。 |
 
-### Feature Scopes
+### 機能のスコープ
 
-| Scope Name      | Permissions granted                                                                                       |
-| --------------- | --------------------------------------------------------------------------------------------------------- |
-| `item_preview`  | Automatically enables preview of the file, upon user click (requires Preview UI Element to be referenced) |
-| `item_download` | Allows files/folders contents to be downloaded                                                            |
-| `item_rename`   | Allows files/folders to be renamed                                                                        |
-| `item_share`    | Allows sharing of resource specified under "resource" of the downscope request.                           |
-| `item_delete`   | Allows file/folders to be deleted                                                                         |
+| スコープ名           | 付与される権限                                                            |
+| --------------- | ------------------------------------------------------------------ |
+| `item_preview`  | ユーザーがクリックしたときにファイルのプレビューを自動的に有効にします (プレビューUI Elementを参照する必要があります)。 |
+| `item_download` | ファイル/フォルダのコンテンツのダウンロードを許可します。                                      |
+| `item_rename`   | ファイル/フォルダの名前変更を許可します。                                              |
+| `item_share`    | ダウンスコープリクエストの「resource」で指定されたリソースの共有を許可します。                        |
+| `item_delete`   | ファイル/フォルダの削除を許可します。                                                |
 
-### Sample Scenarios
+### サンプルのシナリオ
 
-| Scenario                                                                                  | Scopes                                                                                                            |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| User want to navigate folder structure (basic functionality)                              | `base_explorer`                                                                                                   |
-| User want basic functionality + preview                                                   | `base_explorer` + `item_preview`                                                                                  |
-| User want basic functionality + preview + download                                        | `base_explorer` + `item_preview` + `item_download`                                                                |
-| User want basic functionality + preview + download + rename file/folder names             | `base_explorer` + `item_preview` + `item_download` + `item_rename`                                                |
-| User wants all functionality (basic, preview, download, rename, share, upload and delete) | `base_explorer` + `item_preview` + `item_download` + `item_rename` + `item_delete` + `item_share` + `item_upload` |
+| シナリオ                                                     | スコープ                                                                                                              |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| ユーザーがフォルダ構造内を移動する(基本機能)                                  | `base_explorer`                                                                                                   |
+| ユーザーが基本機能とプレビューを必要とする                                    | `base_explorer` + `item_preview`                                                                                  |
+| ユーザーが基本機能、プレビュー、およびダウンロードを必要とする                          | `base_explorer` + `item_preview` + `item_download`                                                                |
+| ユーザーが基本機能、プレビュー、ダウンロード、およびファイル/フォルダ名の変更を必要とする            | `base_explorer` + `item_preview` + `item_download` + `item_rename`                                                |
+| ユーザーがすべての機能(基本、プレビュー、ダウンロード、名前の変更、共有、アップロード、および削除)を必要とする | `base_explorer` + `item_preview` + `item_download` + `item_rename` + `item_delete` + `item_share` + `item_upload` |
 
 <!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/access-tokens/downscope
+
 [scopes]: guide://api-calls/permissions-and-errors/scopes

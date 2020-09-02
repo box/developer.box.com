@@ -25,39 +25,37 @@ previous_page_id: authentication/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/index.md
 ---
-# User Types
+# ユーザータイプ
 
-There are a few types of users that an application might encounter. The key
-differences the admin-level permissions of a user, and whether a user represents
-a real Box user or a virtual user that is only visible to platform applications.
+アプリケーションが直面する可能性のあるユーザーのタイプにはいくつかあります。その主な違いは、ユーザーの管理者レベルの権限と、ユーザーが実際のBoxユーザーとプラットフォームアプリケーションのみに表示される仮想ユーザーのどちらを表しているかという点にあります。
 
-The type of user affects the type of data an application has access to, as a
-user with admin permissions will have different permissions than a regular user.
+管理者権限を持つユーザーには通常のユーザーとは異なる権限があるため、ユーザーのタイプは、アプリケーションからアクセスできるデータの種類に影響します。
 
-## Overview
+## 概要
 
 <!-- markdownlint-disable line-length -->
 
-The following is a quick overview of the types of users available in the Box API.
+以下に、Box APIで使用可能なユーザーのタイプの概要を示します。
 
-|                  | Admin privileges                   | No admin privileges         |
-| ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user | [Admin User][admin-user]           | [Managed User][managed-user] |
-| Platform only    | [Service Account][service-account] | [App User][app-user]        |
+|            | 管理者権限                        | 管理者以外の権限                 |
+| ---------- | ---------------------------- | ------------------------ |
+| 従来のユーザー    | [管理者ユーザー][admin-user]        | [管理対象ユーザー][managed-user] |
+| プラットフォームのみ | [サービスアカウント][service-account] | [App User][app-user]     |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-# What type of user does my application use?
+# 自分のアプリケーションで使用するユーザーのタイプ
 
-The type of user that an application is authenticated as is highly dependent
-on the type of application created, as well as the type of authentication used
-to create an Access Token.
+アプリケーションがどのタイプのユーザーとして認証されるかは、作成したアプリケーションの種類と、アクセストークンの作成で使用した認証の種類に大きく依存します。
 
 </Message>
 
 [admin-user]: guide://authentication/user-types/managed-users/#admin--co-admin-roles
+
 [service-account]: guide://authentication/user-types/app-users/#service-accounts
+
 [managed-user]: guide://authentication/user-types/managed-users
+
 [app-user]: guide://authentication/user-types/app-users

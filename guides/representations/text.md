@@ -22,27 +22,18 @@ previous_page_id: representations/pdf
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/text.md
 ---
-# Get Text Representation
+# テキストレプリゼンテーションの取得
 
-A text representation provides a way to extract plain text
-from a document.
+テキストレプリゼンテーションでは、ドキュメントからプレーンテキストを抽出できます。
 
-Text is generated for all document file types including plain text and
-code files supported by Box. This does not include image files as these
-do not have a text layer.
+テキストは、プレーンテキストを含むさまざまな種類のドキュメントファイルやBoxでサポートされているコードファイルに対して生成されます。テキストレイヤがないため、画像ファイルは含まれません。
 
-Text representations are generated upon upload of the file, similarly to PDFs
-and thumbnails. They are not generated for files larger than 500
-megabytes.
+テキストレプリゼンテーションは、PDFやサムネイルと同様に、ファイルのアップロード時に生成されます。ただし、500MBを超えるファイルに対しては生成されません。
 
-## The process
+## 手順
 
-To get a text representation follow the following steps
+テキストレプリゼンテーションを取得するには、以下の手順に従います。
 
-- [List all representations](guide://representations/list-all-representations)
-- [Request a text
-representation](guide://representations/request-a-representation)
-by passing the `X-Ref-Hints`-header with the value `[extracted_text]`.
-- [Download the text](guide://representations/download-a-representation)
-by calling the `url_template`, replacing the `{+asset_path}` with an
-empty string.
+* [すべてのレプリゼンテーションのリストを取得する](guide://representations/list-all-representations)
+* 値`[extracted_text]`を指定した`X-Ref-Hints`ヘッダーを渡して、[テキストレプリゼンテーションをリクエスト](guide://representations/request-a-representation)する
+* `url_template`を呼び出して[テキストをダウンロード](guide://representations/download-a-representation)する。その際、`{+asset_path}`を空の文字列に置き換えます。

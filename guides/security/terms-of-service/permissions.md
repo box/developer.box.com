@@ -20,73 +20,60 @@ previous_page_id: security/terms-of-service/for-colaboration
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/security/terms-of-service/permissions.md
 ---
-# Permissions
+# 権限
 
-The following is a list of permissions users, admins, and co-admins need to have
-when working with Terms of Services and Terms of Service Statuses.
+以下は、ユーザー、管理者、および共同管理者が利用規約および利用規約ステータスを操作する際に必要な権限のリストです。
 
-## Terms of Service
+## 利用規約
 
-An end user is considered subject to Terms of Service when:
+エンドユーザーは、以下の場合に利用規約の対象であると見なされます。
 
-* User belongs to or is collaborated into an enterprise that has a Terms of
-  Service enabled
-* The type of Terms of Service reflects the user's relationship to the
-  Enterprise
-  * A managed Terms of Service for a user that is part of the same enterprise
-  * An external Terms of Service for users collaborating into the enterprise
+* 利用規約が有効になっている会社に属している、またはその会社とコラボレーションしている
+* 利用規約のタイプがユーザーと会社との関係を示している
+  * 同じ会社に属するユーザー向けの管理対象の利用規約
+  * 会社とコラボレーションしているユーザー向けの外部利用規約
 
-Terms of Service settings can be viewed by an end user if:
+エンドユーザーは以下の場合に利用規約の設定を表示できます。
 
-* The user is subject to a  Terms of Service; and
-* The Terms of Service Type is enabled on the enterprise
+* そのユーザーが利用規約の対象となっており、かつ
+* 会社でその利用規約タイプが有効になっている
 
-A Terms of Service's settings can be viewed by an enterprise admin or co-admin
-if:
+会社の管理者または共同管理者は、以下の場合に利用規約の設定を表示できます。
 
-* They have **View settings for your company** permissions
-* The application has the **Manage enterprise properties** scope enabled
-* The Terms of Service belongs to their enterprise
+* **会社の設定を表示**権限を持っている
+* アプリケーションの**エンタープライズのプロパティを管理**スコープが有効になっている
+* その利用規約が自分の会社に属している
 
-Terms of Service settings can be edited by an enterprise admin or co-admin if:
+会社の管理者または共同管理者は、以下の場合に利用規約の設定を編集できます。
 
-* They have **'Edit settings for your company** permissions
-* The application has the **Manage enterprise properties** scope enabled
-* The Terms of Service belongs to their enterprise
+* **会社の設定を編集**権限を持っている
+* アプリケーションの**エンタープライズのプロパティを管理**スコープが有効になっている
+* その利用規約が自分の会社に属している
 
-Enterprise admins and co-admins can view, create, and edit Terms of Service
-settings for both external and managed Terms of Service without having accepted
-managed the managed Terms of Service for their own enterprise.
+会社の管理者および共同管理者は、自社の管理対象の利用規約を承認していなくても、外部と管理対象の両方の利用規約設定を表示、作成、編集できます。
 
-## Terms of Service User Status
+## 利用規約ユーザーステータス
 
-Terms of Service User Status can be viewed and edited by an end user if:
+エンドユーザーは以下の場合に利用規約ユーザーステータスを表示および編集できます。
 
-* The User Status belongs to the end user
-* The Terms of Service type is enabled on the enterprise
-* The end user is subject to the Terms of Service
+* ユーザーステータスがそのエンドユーザーに属している
+* 会社でその利用規約タイプが有効になっている
+* そのエンドユーザーが利用規約の対象である
 
-Terms of Service User Statuses belonging to other users can be viewed by
-enterprise admins and co-admins if:
+会社の管理者および共同管理者は、以下の場合に他のユーザーに属する利用規約ユーザーステータスを表示できます。
 
-* They have **Manager users** permissions
-* The application has the **Manage users** scope enabled
-* The Terms of Service belongs to their enterprise
-* They have accepted the managed Terms of Service for their own enterprise, if
-  applicable
+* **ユーザーの管理**権限を持っている
+* アプリケーションの**ユーザーの管理**スコープが有効になっている
+* その利用規約が自分の会社に属している
+* 自社の管理対象の利用規約を承認済みである(該当する場合)
 
-Terms of Service User Status belonging to other users can be edited by
-enterprise admins and co-admins if:
+会社の管理者および共同管理者は、以下の場合に他のユーザーに属する利用規約ユーザーステータスを編集できます。
 
-* They have **Manager users** permissions
-* The application has the **Manage users** scope enabled
-* The end user is subject to the Terms of Service
-* The end user is not an admin or co-admin
-* The Terms of Service belongs to their enterprise
-* They have accepted the managed Terms of Service for their own enterprise, if
-  applicable
+* **ユーザーの管理**権限を持っている
+* アプリケーションの**ユーザーの管理**スコープが有効になっている
+* そのエンドユーザーが利用規約の対象である
+* そのエンドユーザーが管理者または共同管理者ではない
+* その利用規約が自分の会社に属している
+* 自社の管理対象の利用規約を承認済みである(該当する場合)
 
-An end user cannot accept, reject, view external Terms of Service settings for
-an enterprise they are collaborating into until the end user accepts the managed
-Terms of service for their own enterprise, where applicable. Trying to do so
-will result in a `TERMS_OF_SERVICE_REQUIRED` error.
+エンドユーザーは、自社の管理対象の利用規約を承認するまで、コラボレーションしている会社の外部利用規約の設定を承認、拒否、表示できません(該当する場合)。そのような操作を行おうとすると、`TERMS_OF_SERVICE_REQUIRED`エラーが発生します。

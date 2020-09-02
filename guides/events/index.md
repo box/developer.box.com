@@ -14,49 +14,36 @@ previous_page_id: events/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/index.md
 ---
-# Events
+# イベント
 
-The event feed provides a way for an application to subscribe to any actions
-performed by any user or users in an enterprise.
+アプリケーションはイベントフィードを使用して、社内の任意のユーザーが実行する操作をすべて登録できます。
 
-## User vs Admin events
+## ユーザーイベントと管理者イベント
 
-The [`GET /events`](e://get_events) API provides a way to subscribe to
-events by users. By passing along a `stream_type` the application can subscribe
-to a set of different event.
+[`GET /events`](e://get_events) APIを使用すると、ユーザーによるイベントを登録できます。`stream_type`を渡すことで、アプリケーションは一連の異なるイベントを登録できます。
 
-### User events
+### ユーザーイベント
 
-User Events provide low latency stream of events for the currently authenticated
-user.
+ユーザーイベントは、現在認証されているユーザーに対して、低レイテンシのイベントストリームを提供します。
 
-The emphasis of this feed is to return the complete results quickly, which means
-that Box may return events more than once or out of order. Duplicate events can
-be identified by their event IDs.
+このフィードでは、完全な結果を迅速に返すことを重視しています。つまり、Boxではイベントを複数回または異なる順序で返す可能性があります。重複するイベントは、イベントIDによって識別できます。
 
-The user events stream does not support filtering for specific events (like
-`ITEM_CREATE`) but does support filtering by `stream_type` to provide different
-streams for different purposes.
+ユーザーイベントのストリームでは、特定のイベント(`ITEM_CREATE`など)のフィルタはサポートされていませんが、目的に応じて異なるストリームを提供するための`stream_type`によるフィルタはサポートされています。
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Type |                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------- |
-| `all`       | Returns everything for a user (default)                                                 |
-| `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
-| `sync`      | Is similar to changes but only applies to synced folders                                |
+| ストリームタイプ  |                                                 |
+| --------- | ----------------------------------------------- |
+| `all`     | ユーザーに関するすべてのイベントを返します(デフォルト)。                   |
+| `changes` | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します。 |
+| `sync`    | 変更に似ていますが、同期対象フォルダにのみ適用されます。                    |
 
 <!-- markdownlint-enable line-length -->
 
-### Admin events
+### 管理者イベント
 
-Admin Events provide an event feed for all users and content in an enterprise.
+管理者イベントは、社内のすべてのユーザーとコンテンツのイベントフィードを提供します。
 
-It requires the `stream_type` to be set to `admin_logs` and for the call to be
-made by a user with admin permissions to **Run new reports and access existing
-reports**.
+イベントフィードを使用するには、`stream_type`を`admin_logs`に設定するほか、管理者権限を持つユーザーによる呼び出しで**新規レポートの実行と既存レポートへのアクセス**を行う必要があります。
 
-The emphasis for this feed is on completeness over latency, which means that Box
-may deliver admin events with higher latency than the user feed. Unlike the user
-events stream, the admin events stream supports filtering for specific events
-but does not support long polling.
+このフィードでは、レイテンシよりも完全性を重視しています。つまり、Boxでは管理者イベントをユーザーフィードよりも高いレイテンシで配信することがあります。ユーザーイベントストリームとは違い、管理者イベントストリームでは、特定のイベントに対するフィルタが可能ですが、ロングポーリングはサポートされていません。

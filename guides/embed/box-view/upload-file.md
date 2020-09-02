@@ -18,33 +18,24 @@ previous_page_id: embed/box-view/create-preview
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/upload-file.md
 ---
-# Upload Files
+# ファイルのアップロード
 
-To generate a preview embed link for a file, that file needs to be uploaded to
-Box to be converted for us. Conversion is triggered automatically upon upload
-(for most document types) or on first preview (for video and 3D) and no
-explicit action is required by the user to convert once the file is uploaded.
-In either case, conversion is triggered only once per file, and the generated
-assets are available for as long as the original file is present in Box.
+ファイルに対してプレビューの埋め込みリンクを生成するには、そのファイルをBoxにアップロードして変換する必要があります。変換はアップロード時(ほとんどのドキュメントタイプの場合)または最初のプレビュー時(動画と3Dの場合)に自動的に開始されるため、ファイルがアップロードされた後、ユーザーが変換のために明示的な操作を行う必要はありません。いずれの場合も、変換は1ファイルにつき1回だけ開始され、元のファイルがBoxに保存されている間は、生成されたアセットを使用できます。
 
-## Uploading a File
+## ファイルのアップロード
 
-To upload a file using the [Box SDKs](pages://sdks-and-tools/) or directly with
-the APIs, you need to use the client ID and app token that were generated
-during [application setup](guide://embed/box-view/setup) to authenticate your
-application.
+[Box SDK](pages://sdks-and-tools/)を使用してファイルをアップロードするか、または直接APIを使用してファイルをアップロードするには、[アプリケーションの設定](guide://embed/box-view/setup)中に生成されたクライアントIDとアプリトークンを使用してアプリケーションを認証する必要があります。
 
-<CTA to='guide://authentication/app-token/'>
+<CTA to="guide://authentication/app-token/">
 
-Authenticate your application
+アプリケーションの認証
 
 </CTA>
 
-Once an authenticated client has been created, it may be used to upload files
-directly to the app token application to be converted.
+認証済みクライアントが作成されたら、そのクライアントを使用して、変換するファイルをアプリトークンアプリケーションに直接アップロードできます。
 
-<CTA to='guide://uploads/direct/file/'>
+<CTA to="guide://uploads/direct/file/">
 
-Upload files to Box
+Boxへのファイルのアップロード
 
 </CTA>

@@ -23,27 +23,20 @@ previous_page_id: shared-links/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/find-for-item.md
 ---
-# Find Item from Shared Link
+# 共有リンクの項目の検索
 
-The [find item for shared link](endpoint://get_shared_items) API is designed to
-accept a shared link as an input using a `BoxApi` header and return the file or
-folder object that the shared link is set for.
+[共有リンクの項目を検索](endpoint://get_shared_items)APIは、`BoxApi`ヘッダーを使用して共有リンクを入力として受け取り、その共有リンクが設定されているファイルまたはフォルダオブジェクトを返します。
 
-To get the file or folder object associated with a shared link, supply
-the full shared link URL in the request.
+共有リンクに関連付けられているファイルオブジェクトまたはフォルダオブジェクトを取得するには、リクエストの際に共有リンクの完全なURLを指定します。
 
-<Samples id='get_shared_items' >
+<Samples id="get_shared_items">
 
 </Samples>
 
 <Message note>
 
-Please note that when the shared link is for a folder, the response of this
-API does not include the list of nested items within that folder.
+共有リンクがフォルダに対するものである場合、このAPIの応答には、そのフォルダ内のネストされた項目のリストが含まれないことに注意してください。
 
-To further traverse the items in the folder, use the same `BoxApi` header to
-[get a nested folder's information](e://get-folders-id), [list the items in
-those folders](e://get-folders-id-items), [get a nested file's
-information](e://get-files-id), or [download a file](e://get-files-id-content)
+フォルダ内の項目をさらにトラバースするには、同じ`BoxApi`ヘッダーを使用して、[ネストされたフォルダ情報を取得する](e://get-folders-id)、[これらのフォルダ内の項目をリストする](e://get-folders-id-items)、[ネストされたファイル情報を取得する](e://get-files-id)、または[ファイルをダウンロード](e://get-files-id-content)してください。
 
 </Message>

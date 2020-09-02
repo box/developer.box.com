@@ -31,87 +31,74 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/pagination/offset-based.md
 ---
-# Offset-based Pagination
+# オフセットベースのページ割り
 
-APIs that use offset-based paging use the `offset` and `limit` query parameters
-to paginate through items in a collection.
+オフセットベースのページングを使用するAPIは、`offset`および`limit`クエリパラメータを使用してコレクション内の項目のページ割りを行います。
 
-Offset-based pagination is often used where the list of items is of a fixed and
-predetermined length.
+オフセットベースのページ割りは、項目のリストがあらかじめ決められた固定長の場合によく使用されます。
 
-## Paging
+## ページング
 
-To fetch the first page of entries in a collection the API needs to be called
-either without the `offset` parameter, or with the `offset` set to `0`. The
-`limit` field is optional.
+コレクション内のエントリの最初のページを取得するには、APIを`offset`パラメータを指定せずに呼び出すか、`offset`を`0`に設定して呼び出す必要があります。`limit`フィールドは省略可能です。
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-To fetch the next page of entries the API needs to be called with
-an `offset` parameter that equals the sum of the previous `offset` value and
-limit returned in the previous result, `previous_offset + previous_limit`.
+エントリの次のページを取得するには、以前の`offset`値と以前の結果で返された制限の合計(`previous_offset + previous_limit`)と等しい`offset`パラメータを指定して、APIを呼び出す必要があります。
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-Note that the `offset` should be increased by the previous `limit` and not by
-the size of the entries in the response array, as this may be less than the
-limit. Generally we advise using the value of the `limit` in the response
-object to increase the `offset` value.
+`offset`は、応答配列内のエントリのサイズではなく、以前の`limit`分だけ加算されますので注意してください。これは制限を下回る可能性があるためです。一般的には、応答オブジェクトの`limit`の値を使用して`offset`値を加算することをお勧めします。
 
 </Message>
 
-The final page of items has been requested when the next `offset` value exceeds
-the `total_count` value in the response object. At this point there are no more
-items to fetch.
+次の`offset`値が応答オブジェクト内の`total_count`値を超えている場合、項目の最終ページはリクエスト済みです。この時点では、これ以上取得する項目がありません。
 
-## Offset & Limit
+## オフセットと制限
 
-The following query parameters are used to paginate a collection.
+以下のクエリパラメータは、コレクションのページ割りに使用されます。
 
 <!-- markdownlint-disable line-length -->
 
-| Query parameter | Type    | Default        |                                                                                                                 |
-| --------------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `offset`        | Integer | `0`            | The (zero-based) offset of the first item in the collection to return                                           |
-| `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used. |
+| クエリパラメータ | 型       | デフォルト      |                                      |
+| -------- | ------- | ---------- | ------------------------------------ |
+| `offset` | Integer | `0`        | コレクション内の最初に返される項目の(ゼロベースの)オフセット      |
+| `limit`  | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
+<Message type="notice">
 
-The maximum `offset` for offset-based pagination is `300000`. Marker-based
-pagination is recommended when a higher offset is needed.
+オフセットベースのページ割りの最大`offset`は`300000`です。さらに大きいオフセットが必要な場合はマーカーベースのページ割りをお勧めします。
 
 </Message>
 
-## Collections
+## コレクション
 
-When paginating collections, the API returns an object that contains the set of
-results as an array, as well as some information about the current page of results.
+コレクションのページ割りを行うと、APIによって、結果のセットを配列として含むオブジェクトのほか、結果の現在のページに関する情報が返されます。
 
 <!-- markdownlint-disable line-length -->
 
-| Field         | Type    |                                                                                                                                                                   |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                             |
-| `offset`      | Integer | The offset used for this page of results                                                                                                                          |
-| `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint. |
-| `total_count` | Integer | One greater than the offset of the last item in the entire collection. The total number of items in the collection may be less than `total_count`.                |
+| フィールド         | 型       |                                                                                 |
+| ------------- | ------- | ------------------------------------------------------------------------------- |
+| `entries`     | Array   | このページの項目を含むページ。結果がない場合は空の配列になります。                                               |
+| `offset`      | Integer | 結果の現在のページに使用されるオフセット                                                            |
+| `limit`       | Integer | 結果の現在のページに使用される制限。この制限は、このAPIエンドポイントに許可されている最大値を超えない限り、`limit`クエリパラメータと同じになります。 |
+| `total_count` | Integer | コレクション全体の最後の項目のオフセットに1を加算した値。コレクション内の項目の合計数は、`total_count`よりも少ない場合があります。        |
 
 <!-- markdownlint-enable line-length -->
 
-## Example endpoints
+## エンドポイントの例
 
-Some endpoints that support offset-based pagination are:
+以下は、オフセットベースのページ割りをサポートするエンドポイントの例です。
 
-- [List items for a folder](endpoint://get_folders_id_items)
-- [List a file's comments](endpoint://get-files-id-comments)
-- [List all items in the trash](endpoint://get-folders-trash-items)
+* [フォルダ内の項目を取得](endpoint://get_folders_id_items)
+* [ファイルのコメントのリストを取得](endpoint://get-files-id-comments)
+* [ごみ箱にあるすべての項目のリストを取得](endpoint://get-folders-trash-items)

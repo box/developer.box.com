@@ -21,13 +21,10 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/restore-file.md
 ---
-# Restore File
+# ファイルの復元
 
-To restore a file that has been moved to the trash, but has not yet been
-purged, make a `POST` request to the `/files/:file_id` endpoint. This will
-place the file in the original folder if it is still available, or you
-optionally can specify a `parent` folder.
+ごみ箱に移動されたが削除されていないファイルを復元するには、`/files/:file_id`エンドポイントに`POST`リクエストを送信します。これにより、ファイルがまだ使用可能であれば元のフォルダに戻されます。または、オプションとして`parent`フォルダを指定することもできます。
 
-<Samples id='post_files_id' >
+<Samples id="post_files_id">
 
 </Samples>

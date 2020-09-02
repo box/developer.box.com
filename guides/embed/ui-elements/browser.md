@@ -20,32 +20,26 @@ previous_page_id: embed/ui-elements
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/browser.md
 ---
-# Browser Support
+# ブラウザのサポート
 
-Box UI elements are supported in the following browsers.
+Box UI Elementsは、以下のブラウザでサポートされています。
 
-- Chrome, Firefox, Safari, and Edge (latest 2 versions)
-- Limited support for Internet Explorer 11 (requires a `ES2015/Intl polyfill`)
-- Mobile Chrome and Safari
+* Chrome、Firefox、Safari、およびEdge (直近の2バージョン)
+* Internet Explorer 11では限定的サポート(`ES2015/Intl polyfill`が必要)
+* Mobile ChromeおよびSafari
 
 ## ES2015 `Intl` Polyfill
 
-Most Box UI Elements require an `ES2015`-capable browser supporting `Intl`
-(ECMAScript Internationalization API). If your application needs to support
-Internet Explorer 11 or Safari 9, please include a polyfill library or a service
-like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills
-your users need. Box also provides the `core-js` standard library at:
+ほとんどのBox UI Elementsには、`Intl` (ECMAScript Internationalization API)をサポートする`ES2015`対応ブラウザが必要です。アプリケーションでInternet Explorer 11またはSafari 9をサポートする必要がある場合、polyfillライブラリまたは[`polyfill.io`](https://polyfill.io)などのサービスをインクルードして、ユーザーが必要とするpolyfillだけがスマートに読み込まれるようにしてください。Boxは、次の場所にある`core-js`標準ライブラリも提供しています。
 
 [`https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js`][polyfill]
 
-## Promises Polyfill
+## Promisesのpolyfill
 
-The Preview UI Element uses Promises. If your application needs to supports
-Internet Explorer 11, please include your favorite polyfill library or a service
-like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills
-your users need. Box also provides a copy of the Bluebird promise library at:
+プレビューUI ElementではPromisesを使用します。使用するアプリケーションでInternet Explorer 11をサポートする必要がある場合、好みのpolyfillライブラリまたは[`polyfill.io`](https://polyfill.io)などのサービスをインクルードして、ユーザーが必要とするpolyfillだけが効率良く読み込まれるようにしてください。Boxは、以下にあるBluebird Promiseライブラリのコピーも提供しています。
 
 [`https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js`][bluebird]
 
 [polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
+
 [bluebird]: https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js

@@ -16,4 +16,4 @@ next_page_id: get-started
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/default/content/guides/index.md'
 ---
-# Guides
+# ガイド

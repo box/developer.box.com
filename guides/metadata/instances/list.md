@@ -23,41 +23,38 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/1-list.md
 ---
-# List all metadata on an item
+# 項目のすべてのメタデータのリストの取得
 
-Metadata instances can be listed for either a file or a folder.
+ファイルまたはフォルダのメタデータインスタンスのリストを取得できます。
 
-## List metadata on a file
+## ファイルのメタデータのリストを取得
 
-To list all metadata instances on a file, call the
-[`GET /files/:file_id/metadata`][get_metadata_file] API endpoint.
+ファイルのすべてのメタデータインスタンスのリストを取得するには、[`GET /files/:file_id/metadata`][get_metadata_file] APIエンドポイントを呼び出します。
 
-<Samples id="get_files_id_metadata" >
+<Samples id="get_files_id_metadata">
 
 </Samples>
 
 <Message warning>
 
-This API does not support paging and it will always return all of the metadata
-instances for this file.
+このAPIはページングをサポートしておらず、常にこのファイルのすべてのメタデータインスタンスを返します。
 
 </Message>
 
-## List metadata on a folder
+## フォルダのメタデータのリストを取得
 
-To list all metadata instances on any folder (except for the root folder), call
-the [`GET /folders/:file_id/metadata`][get_metadata_file] API endpoint.
+任意のフォルダ(ルートフォルダを除く)のすべてのメタデータインスタンスのリストを取得するには、[`GET /folders/:file_id/metadata`][get_metadata_file] APIエンドポイントを呼び出します。
 
-<Samples id="get_folders_id_metadata" >
+<Samples id="get_folders_id_metadata">
 
 </Samples>
 
 <Message warning>
 
-This API does not support paging and it will always return all of the metadata
-instances for this file. This API can not be used on the root folder with ID `0`.
+このAPIはページングをサポートしておらず、常にこのファイルのすべてのメタデータインスタンスを返します。このAPIは、IDが`0`のルートフォルダには使用できません。
 
 </Message>
 
 [get_metadata_file]: e://get_files_id_metadata
+
 [get_metadata_folder]: e://get_folders_id_metadata

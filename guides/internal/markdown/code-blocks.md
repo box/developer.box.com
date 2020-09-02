@@ -16,18 +16,17 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Code Blocks
+# コードブロック
 
 <!-- markdownlint-disable code-fence-style -->
 
-Not all code samples exist in the SDK or CLI documentation. You can add new code
-samples using standard Markdown back ticks.
+SDKまたはCLIのドキュメントにすべてのコードサンプルが含まれているわけではありません。新しいコードサンプルを追加するには、標準のマークダウンバッククォートで囲みます。
 
-~~~sh
+````sh
 ```js
 console.log('Hello, World!')
 ```
-~~~
+````
 
 <H>
 
@@ -39,23 +38,21 @@ console.log('Hello, World!')
 
 <Message>
 
-Please make sure to add a valid language (`js` in this example) to every
-code block to ensure appropriate syntax highlighting is applied.
+適切な構文の強調表示が適用されるように、すべてのコードブロックに有効な言語 (この例では`js`) を追加してください。
 
 </Message>
 
-## Highlighting a line
+## 行を強調表示する
 
-To highlight a line in the code sample we support Prism's
-[line-highlight](https://prismjs.com/plugins/line-highlight/) plugin.
+コードサンプルの行を強調表示するには、Prismの[line-highlight](https://prismjs.com/plugins/line-highlight/)プラグインをサポートします。
 
-~~~sh
+````sh
 ```js;highlight=2
 let value = 1
 value+=1
 console.dir(value)
 ```
-~~~
+````
 
 <H>
 

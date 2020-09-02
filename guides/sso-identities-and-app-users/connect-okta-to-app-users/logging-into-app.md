@@ -15,31 +15,25 @@ previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configu
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/4-logging-into-app.md
 ---
-# Logging into the app with Okta
+# Oktaによるアプリへのログイン
 
-With the Okta, Box, and basic application set up, we can turn our attention to
-the first step in the application code flow, the Okta login.
+Okta、Box、基本のアプリケーションを設定したら、次は、アプリケーションコードフローにおける最初のステップ、Oktaログインに目を向けます。
 
-During the Okta login we will employ the OpenID Connect (OIDC) frameworks of
-the language used to redirect the user to Okta to log in and pass Okta user
-information back to the application. Those Okta user details will in turn be
-used to validate and create Box users in the next step.
+Oktaログインでは、ログインのためにユーザーをOktaにリダイレクトする際に使用される言語のOpenID Connect (OIDC)フレームワークを使用して、Oktaのユーザー情報をアプリケーションに返します。こうしたOktaのユーザー情報は、次の手順でBoxユーザーの検証と作成に使用されます。
 
-This section will walk you through:
+このセクションでは、以下の操作について説明します。
 
-* Setting up the application configuration skeleton.
-* Defining the routes for the chosen framework to handle user traffic.
-* Passing Okta user information to the next Box user validation step.
+* アプリケーション構成のスケルトンを設定します。
+* ユーザートラフィックを処理するために選択したフレームワークのルートを定義します。
+* Oktaのユーザー情報を、Boxユーザーを検証する次の手順に渡します。
 
-## Set up the Skeleton
+## スケルトンの設定
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-In your local application directory, load the `server.js` file created in
-step 1.
+ローカルアプリケーションディレクトリで、手順1で作成した`server.js`ファイルを読み込みます。
 
-Start by copying the following package definitions and configuration
-information into the file.
+まず、以下のパッケージ定義と構成情報をファイルにコピーします。
 
 ```js
 const session = require('express-session');
@@ -74,12 +68,9 @@ express.use(bodyParser.urlencoded({
 }));
 ```
 
-This sets up the Express configuration and Okta OIDC connector
-information. Express is set to use the OIDC connector and the Okta
-information that we saved in step 2 of this quick start is used to configure
-the connector for our Okta integration.
+これにより、Express構成とOkta OIDCコネクタの情報が設定されます。ExpressはOIDCコネクタを使用するよう設定され、このクイックスタートガイドの手順2で保存したOktaの情報はOkta統合のコネクタの構成に使用されます。
 
-Now add the routing details.
+次に、ルーティングの詳細を追加します。
 
 ```js
 // Redirect to Okta login
@@ -88,10 +79,9 @@ express.get('/', (req, res) => {
 });
 ```
 
-This defines the entry route for our application. When a user attempts to
-visit our application root (`/`) the code within this route will be run.
+これにより、アプリケーションのエントリルートが定義されます。ユーザーがアプリケーションのルート(`/`)にアクセスを試みると、このルート内のコードが実行されます。
 
-Lastly, add the Express server initialization to listen for traffic.
+最後に、Expressサーバーの初期化を追加してトラフィックをリッスンします。
 
 ```js
 // Create server
@@ -103,13 +93,11 @@ http.createServer(express).listen(port, () => {
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-In your local application directory, load the
-`/src/main/java/com/box/sample/Application.java` file created in step 1, or
-similar directory if an alternate application name was used.
+ローカルアプリケーションディレクトリで、手順1で作成した`/src/main/java/com/box/sample/Application.java`ファイルを読み込みます。別のアプリケーション名を使用している場合は、同等のディレクトリを読み込みます。
 
-Copy the following basic application structure into the file.
+以下の基本的なアプリケーション構造をファイルにコピーします。
 
 ```java
 package com.box.okta.sample;
@@ -147,10 +135,9 @@ public class Application {
 }
 ```
 
-This sets up the needed imports, the `Application` class, and a standard shared
-Box API connection attribute, to be defined in the next step.
+これにより、必要なimport、`Application`クラス、標準的な共有Box APIの接続属性が設定されます。これらは次の手順で定義します。
 
-Replace `// TODO: SET ROUTE` with the following.
+`// TODO: SET ROUTE`を以下の内容に置き換えます。
 
 ```java
 @RequestMapping("/")
@@ -159,14 +146,9 @@ String home(@AuthenticationPrincipal OidcUser user) throws IOException {
 }
 ```
 
-The route mapping defines the entry route for our application. When a user
-attempts to visit our application root (`/`) in a logged out state, the OIDC
-connector will automatically push them through the Okta login, so we don't need
-to setup a redirect. When the user is in a logged in state, the code within
-this route will be run.
+このルートマッピングではアプリケーションのエントリルートを定義します。ユーザーがログアウトした状態でアプリケーションのルート(`/`)にアクセスを試みると、OIDCコネクタによってユーザーは自動的にOktaログインにプッシュされるため、リダイレクトを設定する必要がありません。ユーザーがログイン状態の場合は、このルート内のコードが実行されます。
 
-Replace `// TODO: INITIALIZE SERVER` with the following to initialize the
-Spring Boot server to listen for traffic.
+`// TODO: INITIALIZE SERVER`を以下の内容に置き換えて、Spring Bootサーバーを初期化してトラフィックをリッスンします。
 
 ```java
 public static void main(String[] args) {
@@ -176,12 +158,13 @@ public static void main(String[] args) {
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-In your local application directory, load the `server.py` file created in step
+ローカルアプリケーションディレクトリで、手順1で作成した`server.py`ファイルを読み込みます。
+
 1.
 
-Copy the following basic application structure into the file.
+以下の基本的なアプリケーション構造をファイルにコピーします。
 
 ```python
 from flask import Flask, redirect, g, url_for
@@ -207,24 +190,18 @@ oidc = OpenIDConnect(app)
 okta_client = UsersClient(config.okta_org_url, config.okta_auth_token)
 ```
 
-This sets up the Flask configuration, Okta client, and Okta OIDC
-connector information. Flask is set to use the OIDC connector and the Okta
-information that we saved in step 2 of this quick start is used to configure
-the connector for our Okta integration.
+これにより、Flask構成、Oktaクライアント、Okta OIDCコネクタの情報が設定されます。FlaskはOIDCコネクタを使用するよう設定され、このクイックスタートガイドの手順2で保存したOktaの情報はOkta統合のコネクタの構成に使用されます。
 
-Next, add a `before_request` definition to be run before route handling is
-engaged. We'll be using this to capture our Okta user information, if available.
+次に、ルート処理が行われる前に実行する`before_request`定義を追加します。ここでは、この定義を使用してOktaのユーザー情報(存在する場合)をキャプチャします。
 
 ```python
-
 # Fetch Okta user record if logged in
 @app.before_request
 def before_request():
   # TODO: HANDLE BEFORE REQUEST
 ```
 
-Lastly, define the entry route for our application, as well as a `box_auth`
-route.
+最後に、アプリケーションのエントリルートと`box_auth`ルートを定義します。
 
 ```python
 # Main application route
@@ -241,17 +218,13 @@ def box_auth():
 return 'Complete'
 ```
 
-When a user attempts to visit our application root (`/`) the code
-within this route will be run. When we validate an Okta user, the code within
-the `box_auth` route will be run.
+ユーザーがアプリケーションのルート(`/`)にアクセスを試みると、このルート内のコードが実行されます。Oktaユーザーを検証する際は、`box_auth`ルート内のコードが実行されます。
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-In your local application, load `Views` > `Shared` > `Layout.cshtml`. Once the
-ASP.NET application loads this will be the visual component that is rendered.
-At the top of the page, insert the following.
+ローカルアプリケーションで、`Views` > `Shared` > `Layout.cshtml`を読み込みます。これは、ASP.NETアプリケーションが読み込まれるとレンダリングされるビジュアルコンポーネントになります。ページの先頭に以下のコードを挿入します。
 
 ```dotnet
 @using System.Security.Claims;
@@ -266,18 +239,13 @@ else
 }
 ```
 
-If a user who is logged in to Okta visits, they will see the hello message. If
-the user is not logged in a sign in link will be provided to them.
+Oktaにログインしているユーザーがアクセスすると、Helloというメッセージが表示されます。ログインしていない場合は、サインインリンクが表示されます。
 
-Within the line `<a asp-controller="Account" asp-action="SignIn">Sign In</a>`,
-`asp-controller="Account"` means that the to be created Account controller will
-handle the request, and `asp-action="SignIn"` states that the `SignIn` method
-in that controller will be enacted. Save and close that file.
+`<a asp-controller="Account" asp-action="SignIn">Sign In</a>`という行に含まれる`asp-controller="Account"`は、作成予定のAccountコントローラでリクエストを処理することを意味します。また、`asp-action="SignIn"`は、このコントローラの`SignIn`メソッドが実行されることを意味します。このファイルを保存して閉じます。
 
-Within the `Controllers` directory create a new file, `AccountController.cs`.
-This will be the controller that is enacted when that sign in link is clicked.
+`Controllers`ディレクトリ内に、`AccountController.cs`という新しいファイルを作成します。これは、サインインリンクがクリックされたときに実行されるコントローラになります。
 
-Copy the following basic application structure into the file.
+以下の基本的なアプリケーション構造をファイルにコピーします。
 
 ```dotnet
 using System.IO;
@@ -312,34 +280,29 @@ public class AccountController : Controller
 }
 ```
 
-When the user clicks on the sign in link the `SignIn` method in this controller
-will be run. If the user is not already authenticated they will be sent to
-`Challenge`, which will redirect the user to Okta to log in. This functionality
-is handled by the routing framework and does not require any additional code to
-enact. If the user is authenticated, they will be redirected to the `Profile`
-routing method.
+ユーザーがサインインリンクをクリックすると、このコントローラの`SignIn`メソッドが実行されます。ユーザーがまだ認証されていない場合は`Challenge`に送信され、ユーザーはログインするためにOktaにリダイレクトされます。この機能はルーティングフレームワークによって処理されるため、追加で実行するコードは必要ありません。ユーザーが認証済みの場合は`Profile`ルーティングメソッドにリダイレクトされます。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Setup Application Route
+## アプリケーションルートの設定
 
-We now need to define the code that will run when our main route (`/`) is
-engaged.
+今度は、メインのルート(`/`)に入ったときに実行されるコードを定義する必要があります。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
 
 ```js
 if (req.userContext && req.userContext.userinfo) {
@@ -357,42 +320,30 @@ if (req.userContext && req.userContext.userinfo) {
 }
 ```
 
-What we are doing in the above is first checking to see if there is any Okta
-user information available from the OIDC connector. When a user logs in the
-connector will make the Okta user and configuration information available to
-our route within `req.userContext`.
+上記のコードでは、まず、OIDCコネクタから入手できるOktaのユーザー情報があるかどうかを確認しています。ユーザーがログインすると、このコネクタにより、Oktaのユーザーと構成の情報が`req.userContext`内のルートで使用できるようになります。
 
-If user information is present, meaning the user is logged in to Okta, we pass
-the user information to `box.validateUser` along with the Express response
-object to see if there is an associated Box user available, which we'll define
-in the next step.
+ユーザー情報が存在する場合、つまりユーザーがOktaにログインしている場合は、ユーザー情報をExpressのレスポンスオブジェクトと共に`box.validateUser`に渡して、関連付けられたBoxユーザーが存在するかどうかを確認します。これは次の手順で定義します。
 
-If no user information is present, we redirect the user to `/login`. The OIDC
-connector will automatically handle this route and force the user through to
-the Okta login.
+ユーザー情報が存在しない場合、ユーザーは`/login`にリダイレクトされます。OIDCコネクタは自動的にこのルートを処理し、そのユーザーにOktaログインを強制します。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
 
 ```java
 // Validate OIDC user against Box
 return validateUser(user);
 ```
 
-The Java OIDC connector handles most of the heavy lifting for us. When a logged
-out user accesses this route they will automatically be pushed to the Okta
-login. Once logged in, an OIDC user object will be made available to the route.
-We pass that user object to a `validateUser` function, which we'll define in
-the next step.
+Java OIDCコネクタは、手間のかかる部分のほとんどを代わりに処理してくれます。ログアウトしたユーザーがこのルートにアクセスすると、自動的にOktaログインにプッシュされます。ログインすると、OIDCユーザーオブジェクトがこのルートに使用できるようになります。そのユーザーオブジェクトは、次の手順で定義する`validateUser`関数に渡します。
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following code.
+メインのルート内の`// TODO: HANDLE BEFORE REQUEST`を以下のコードに置き換えます。
 
 ```python
 if oidc.user_loggedin:
@@ -401,37 +352,30 @@ else:
   g.user = None
 ```
 
-This will check if an OIDC user is available, meaning that the user has already
-logged in to Okta. If available we set a user object using the Okta client
-object, and if not we set the user object to `None`.
+これにより、OIDCユーザーが存在するかどうか、つまりユーザーがすでにOktaにログインしているかどうかが確認されます。存在する場合は、Oktaクライアントオブジェクトを使用してユーザーオブジェクトを設定し、存在しない場合はユーザーオブジェクトを`None`に設定します。
 
-Next, replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+次に、メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
 
 ```python
 return redirect(url_for(".box_auth"))
 ```
 
-When this code is engaged, if the user is not logged in to Okta they will be
-redirected to Okta to log in by the OIDC connector. After login, or if the user
-is already logged in, they will then be forwarded to the `box_auth` route code.
+このコードに入ると、ユーザーはOktaにログインしていない場合に、ログインするためにOIDCコネクタによってOktaにリダイレクトされます。ログイン後(またはユーザーがすでにログインしている場合)は、`box_auth`ルートコードに転送されます。
 
-Finally, replace `// TODO: HANDLE BOX AUTH ROUTE` in the `box_auth` route with
-the following code.
+最後に、`box_auth`ルート内の`// TODO: HANDLE BOX AUTH ROUTE`を以下のコードに置き換えます。
 
 ```python
 box = Box();
 return box.validateUser(g)
 ```
 
-This creates a new instance of the Box class and calls the `validateUser`
-method, passing in the Okta user object. We'll define this class and methods in
-the next step.
+これにより、Oktaユーザーオブジェクトが渡されることで、Boxクラスの新しいインスタンスが作成され、`validateUser`メソッドが呼び出されます。このクラスとメソッドは次の手順で定義します。
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
 
 ```dotnet
 var subClaim = HttpContext.User.Claims.First(c => c.Type == "sub");
@@ -447,33 +391,32 @@ Task.WaitAll(userSearch);
 return Content(name);
 ```
 
-This block will capture the Okta user account sub (unique ID) and name, then
-sends that data to the to be created `validateUser` method to find a matching
-Box user, which will be created in the next step.
+このブロックでは、Oktaユーザーアカウントのsub (一意のID)とnameをキャプチャし、次の手順で作成する`validateUser`メソッドにそのデータを送信して、一致するBoxユーザーを検出します。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Summary
+## まとめ
 
-* You set up the skeleton routes and configuration for Okta.
-* You set up the main route handler to pass to Box user verification.
+* Oktaのスケルトンルートと構成を設定しました。
+* Boxユーザーの確認に渡すメインのルートハンドラを設定しました。
 
-<Observe option='box.app_type' value='use_own,create_new_'>
+<Observe option="box.app_type" value="use_own,create_new_">
 
 <Next>
 
-I have set up the Okta login
+Oktaログインを設定しました
 
 </Next>
 

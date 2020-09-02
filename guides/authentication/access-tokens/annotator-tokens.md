@@ -22,60 +22,41 @@ previous_page_id: authentication/access-tokens/downscope
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/annotator-tokens.md
 ---
-# Annotator Tokens
+# 注釈トークン
 
-Annotations is one of the key features supported by new Box View, that allows
-developers to provide collaboration capabilities right from within the embedded
-Box preview in their application.
+注釈は、新しいBox Viewでサポートされる主な機能の1つです。開発者はこの機能を使用して、アプリケーションに埋め込まれたプレビュー内から直接、コラボレーション機能を提供できます。
 
-Box View supports three annotation types: highlight only, highlight
-annotation, and point annotation. Annotations are only supported on document
-and image previews.
+Box Viewでは、ハイライトのみ、ハイライト注釈、およびポイント注釈という3つの注釈の種類をサポートしています。注釈はドキュメントと画像のプレビューのみでサポートされます。
 
 <ImageFrame border>
 
-![How annotator tokens work](./annotator-tokens.png)
+![注釈トークンのしくみ](./annotator-tokens.png)
 
 </ImageFrame>
 
-## What is an Annotator Token
+## 注釈トークンとは
 
-An Annotator Token is an Access Token that allows an application to create a
-Preview Embed Link for a file that a user can make annotations on. As an
-application might not create a new App User for every one of the application's
-users, the Annotator token allows the application to track which of their
-own users made the annotations.
+注釈トークンとは、ユーザーが注釈を付けることができるファイルに対してアプリケーションがプレビューの埋め込みリンクを作成できるようにするアクセストークンです。アプリケーションでは、アプリケーションのユーザーそれぞれに新しいApp Userが作成されない可能性があるため、注釈トークンを使用すると、注釈を付けたユーザーを追跡できます。
 
-The Annotator Token is used instead of a regular Access Token, App Token, or File
-Token to generate a preview session (an expiring embed link) that is linked to a
-unique user ID and display name.
+注釈トークンは、一意のユーザーIDと表示名にリンクされているプレビューセッション(有効期限付き埋め込みリンク)を生成するために、通常のアクセストークン、アプリトークン、またはファイルトークンの代わりに使用されます。
 
 <Message warning>
 
-Since a preview session generated using an annotator token is tied to a
-specific external user, it is strongly recommended that an application
-generates different preview sessions using different annotator tokens for
-different end users of an application.
+注釈トークンを使用して生成されたプレビューセッションは特定の外部ユーザーに関連付けられるため、アプリケーションでは、アプリケーションのエンドユーザーごとに異なる注釈トークンを使用して、個別にプレビューセッションを生成することを強くお勧めします。
 
 </Message>
 
-## External user info
+## 外部ユーザー情報
 
-The external display name associated with an annotation is essentially a
-stateless "label" appended to the annotation. This means that once an annotation
-has been added, the display name is permanently associated with the annotation
-and cannot be updated unless the annotation is deleted and added again with the
-updated display name.
+注釈に関連付けられた外部の表示名は、実際のところ、注釈に追加されるステートレスな「ラベル」です。つまり、注釈が追加されると、その表示名は完全に注釈と関連付けられるため、注釈を削除し、更新した表示名を使用して再度追加しなければ更新できません。
 
-## Create without SDKs
+## SDKを使用せずに作成
 
-To create an annotator token, follow the instructions for [manually
-authenticating through JWT](g://authentication/jwt/without-sdk) but replace the
-JWT claim with the following data.
+注釈トークンを作成するには、[JWTを使用して手動で認証する](g://authentication/jwt/without-sdk)手順に従いますが、その際、JWTクレームを次のデータに置き換えます。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 var claims = new List<Claim>{
@@ -88,7 +69,7 @@ var claims = new List<Claim>{
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 JwtClaims claims = new JwtClaims();
@@ -103,7 +84,7 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 claims = {
@@ -119,7 +100,7 @@ claims = {
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 let claims = {
@@ -135,7 +116,7 @@ let claims = {
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 claims = {
@@ -151,7 +132,7 @@ claims = {
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 $claims = [
@@ -172,22 +153,19 @@ $claims = [
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter      | Type   | Description                                                                                             |
-| -------------- | ------ | ------------------------------------------------------------------------------------------------------- |
-| `sub`          | String | The external user ID to tie this annotation to. This can be any arbitrary ID tracked by the application |
-| `box_sub_type` | String | `external` to signify an external user ID                                                               |
-| `box_sub_type` | String | The external user name to tie this annotation to. This will be displayed in the Box UI                  |
+| パラメータ          | 型      | 説明                                                    |
+| -------------- | ------ | ----------------------------------------------------- |
+| `sub`          | String | この注釈を関連付ける外部ユーザーID。このIDには、アプリケーションで追跡される任意のIDを使用できます。 |
+| `box_sub_type` | String | 外部ユーザーIDを示す場合は`external`                              |
+| `box_sub_type` | String | この注釈を関連付ける外部ユーザー名。これはBox UIに表示されます。                   |
 
 <!-- markdownlint-enable line-length -->
 
-Then, convert this claim to an assertion according to the guide and pass this
-assertion to the [`POST /oauth2/token`](e://post-oauth2-token)
-endpoint together with an existing valid Access Token, App Token, or File Token,
-as well as a set of scopes, and the resource for which to create the token.
+その後、ガイドに従ってこのクレームをアサーションに変換し、このアサーションを、既存の有効なアクセストークン、アプリトークン、またはファイルトークンのほか、スコープのセット、トークンの作成対象となるリソースとともに[`POST /oauth2/token`](e://post-oauth2-token)エンドポイントに渡します。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 var content = new FormUrlEncodedContent(new[]
@@ -211,7 +189,7 @@ var content = new FormUrlEncodedContent(new[]
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -234,7 +212,7 @@ params.add(new BasicNameValuePair(
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 params = urlencode({
@@ -250,7 +228,7 @@ params = urlencode({
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 let accessToken = await axios
@@ -271,7 +249,7 @@ let accessToken = await axios
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 params = URI.encode_www_form({
@@ -287,7 +265,7 @@ params = URI.encode_www_form({
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 $params = [
@@ -307,22 +285,21 @@ $params = [
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter          | Description                                                              |
-| ------------------ | ------------------------------------------------------------------------ |
-| `resource`         | An optional full URL path to the file the token should be restricted to. |
-| `actor_token`      | The JWT assertion created earlier                                        |
-| `actor_token_type` | Always set to `urn:ietf:params:oauth:token-type:id_token`                |
+| パラメータ              | 説明                                                   |
+| ------------------ | ---------------------------------------------------- |
+| `resource`         | トークンが制限されるファイルへの完全なURLパス(省略可)。                       |
+| `actor_token`      | 以前に作成されたJWTアサーション                                    |
+| `actor_token_type` | 常に`urn:ietf:params:oauth:token-type:id_token`に設定します。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Create with SDKs
+## SDKを使用して作成
 
-To create a JWT annotator token with an SDK an application can exchange any
-active token for another token.
+SDKを使用してJWT注釈トークンを作成するために、アプリケーションはアクティブなトークンを別のトークンと交換できます。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var options = {

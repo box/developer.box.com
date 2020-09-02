@@ -24,35 +24,29 @@ source_url: >-
 ---
 <!-- alex disable attacks -->
 
-# Verify Webhook Signatures
+# Webhook署名の検証
 
-To protect your application against man-in-the-middle and replay attacks it is
-essential to verify webhook signatures. Verification ensures that the webhook
-payloads were actually sent by Box and that the contents of the payloads have
-not been changed in transport.
+中間者攻撃や再生攻撃からアプリケーションを保護するには、Webhook署名の検証が非常に重要です。検証により、Webhookペイロードが実際にBoxから送信されたものであること、およびペイロードの内容が転送中に変更されていないことを確認できます。
 
-## Verify with SDK
+## SDKによる検証
 
-Although it is possible to verify SDKs manually using your own code, convenience
-methods are provided in our SDKs.
+独自のコードを使用して手動でSDKを検証することもできますが、SDKには便利なメソッドが用意されています。
 
-<Samples id='x_webhooks' variant='validate_signatures' >
+<Samples id="x_webhooks" variant="validate_signatures">
 
 </Samples>
 
-## Verify manually
+## 手動での検証
 
-If using our SDKs is not an option the following steps describe the basics of
-how to verify a signature.
+SDKのメソッドを使用しない場合、署名の検証は基本的に以下の手順で行います。
 
-### 1. Ensure valid timestamp
+### 1. 有効なタイムスタンプの確認
 
-Firstly, ensure that the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the
-payload is no older than ten minutes.
+初めに、ペイロードの`BOX-DELIVERY-TIMESTAMP`ヘッダーのタイムスタンプが10分以内のものであることを確認します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var timestamp = headers['BOX-DELIVERY-TIMESTAMP'];
@@ -62,7 +56,7 @@ var expired = Date.now() - date > 10*60*1000;
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 import dateutil.parser
@@ -83,17 +77,15 @@ expired = date >= expiry_date
 
 </Tabs>
 
-### 2. Calculate HMAC signature
+### 2. HMAC署名の計算
 
-Then, calculate the HMAC of the payload using either of the two signatures
-found in the application's configuration on the [developer console][console].
+次に、[開発者コンソール][console]のアプリケーションの設定にある2つの署名のいずれかを使用して、ペイロードのHMACを計算します。
 
-Make sure to append the bytes of the body of the payload first, and then the
-bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
+最初にペイロードの本文のバイトを追加し、次に`BOX-DELIVERY-TIMESTAMP`ヘッダーにあるタイムスタンプのバイトを追加します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var crypto = require('crypto');
@@ -114,7 +106,7 @@ hmac2.update(timestamp);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 import hmac
@@ -135,13 +127,13 @@ hmac2 = hmac.new(secondary_key, bytes, hashlib.sha256).digest()
 
 </Tabs>
 
-### 4. Convert to Base64
+### 4. base64への変換
 
-Make sure to convert the HMAC to a `Base64` encoded digest.
+HMACを`Base64`でエンコードされたダイジェストに変換します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var digest1 = hmac1.digest('base64');
@@ -150,7 +142,7 @@ var digest2 = hmac2.digest('base64');
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 import base64
@@ -163,18 +155,15 @@ digest2 = base64.b64encode(hmac2)
 
 </Tabs>
 
-### 5. Compare signatures
+### 5. 署名の比較
 
-Finally, compare the encoded digest with the value of the
-`BOX-SIGNATURE-PRIMARY` or `BOX-SIGNATURE-SECONDARY` headers.
+最後に、エンコードされたダイジェストを`BOX-SIGNATURE-PRIMARY`または`BOX-SIGNATURE-SECONDARY`ヘッダーの値と比較します。
 
-Make sure to compare the value of the `BOX-SIGNATURE-PRIMARY` header
-to the digest created with the primary key, and the value of the
-`BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
+`BOX-SIGNATURE-PRIMARY`ヘッダーの値はプライマリキーで作成されたダイジェストと比較し、`BOX-SIGNATURE-SECONDARY`ヘッダーの値はセカンダリキーで作成されたダイジェストと比較してください。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var signature1 = headers['BOX-SIGNATURE-SECONDARY'];
@@ -188,7 +177,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
@@ -206,9 +195,7 @@ valid = !expired && (primary_sig_valid || secondary_sig_valid)
 
 <Message warning>
 
-HTTP header names are case insensitive and your client should ideally convert
-all header names to a standardized lowercase or uppercase format before trying
-to determine the value of a header.
+HTTPヘッダー名では大文字と小文字が区別されないため、クライアントでは、すべてのヘッダーの名前を標準化された小文字または大文字の形式に変換してから、ヘッダーの値を確認するのが理想的です。
 
 </Message>
 

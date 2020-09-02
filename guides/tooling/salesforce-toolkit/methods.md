@@ -21,365 +21,322 @@ source_url: >-
 ---
 <!-- alex disable failed -->
 
-# Methods and Operations
+# メソッドと操作
 
-## Toolkit Details
+## ツールキットの詳細
 
-Class Name: `box.Toolkit`
+クラス名: `box.Toolkit`
 
-## Instance Variables
+## インスタンス変数
 
 ### `mostRecentError`
 
-String to indicate the most recent error that occurred when calling instance
-methods.
+インスタンスメソッドの呼び出し時に発生した最新のエラーを示す文字列。
 
-The presence of this string does not mean the operation failed. It is possible
-the error was recoverable; however, the lack of a value in this string does
-indicate the operation was successful.
+この文字列が存在しても、操作が失敗したことを意味するわけではありません。そのエラーが回復可能であった可能性もあります。ただし、この文字列に値がない場合は、操作が成功したことを示しています。
 
 ### `Enum CollaborationType`
 
-Enum to indicate the [type of collaboration][collab-type].
+[コラボレーションのタイプ][collab-type]を示す列挙型。
 
-Possible values: `EDITOR`, `VIEWER`, `PREVIEWER`, `UPLOADER`, `COOWNER`,
-`OWNER`, `PREVIEWERUPLOADER`, or `VIEWERUPLOADER`
+可能性のある値: `EDITOR`、`VIEWER`、`PREVIEWER`、`UPLOADER`、`COOWNER`、`OWNER`、`PREVIEWERUPLOADER`、`VIEWERUPLOADER`
 
-## Static Methods
+## 静的メソッド
 
 ### `deleteServiceUserAssociation`
 
-Method to clear association between Service Account and Box for Salesforce
-integration. This can be used to change the service account if an incorrect one
-is being used.
+サービスアカウントとBox for Salesforce統合の関連付けをクリアするメソッド。間違ったサービスアカウントが使用されている場合、このメソッドを使用してアカウントを変更できます。
 
-Parameters:
+パラメータ:
 
-* None
+* なし
 
-Returns:
+戻り値:
 
-* `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
-because it didn't exist).
+* ユーザーのアカウントが存在していたが削除された場合は`true`。
+* ユーザーのアカウントが何らかの理由(存在しなかった場合を含む)で削除されなかった場合は`false`。
 
 ### `deleteUserAssociation`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `userId` | id | The Id of the user whose credentials are to be cleared. |
+| パラメータ    | 型   | 説明                  |
+| -------- | --- | ------------------- |
+| `userId` | id  | 資格情報がクリアされるユーザーのID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
-because it didn't exist).
+* ユーザーのアカウントが存在していたが削除された場合は`true`。
+* ユーザーのアカウントが何らかの理由(存在しなかった場合を含む)で削除されなかった場合は`false`。
 
-## Instance Methods (Constructors / Destructors)
+## インスタンスメソッド(コンストラクタ/デストラクタ)
 
 ### `box.Toolkit()`
 
-Parameters:
+パラメータ:
 
-* None
+* なし
 
 ### `commitChanges`
 
-Treat this method as a destructor for the `box.Toolkit()` method.
+このメソッドは`box.Toolkit()`メソッドのデストラクタとして扱います。
 
-<Message type='warning'>
+<Message type="warning">
 
-This method is critical. It must be called after all folder / collaboration
-operations are complete. Every time. No Exceptions.
+このメソッドは重要です。すべてのフォルダ/コラボレーション操作が完了した後、毎回、例外なくこのメソッドを呼び出す必要があります。
 
 </Message>
 
-Since Salesforce doesn't allow callouts after database updates / inserts /
-deletes have occurred, the Toolkit class maintains some collections of objects
-to be inserted once all callout operations are complete. If this method is not
-called, those objects won't be in the database, and the tables that keep track
-of user / record / folder associations will be out of sync and will need some
-advanced debugging to fix.
+Salesforceではデータベースの更新/挿入/削除の後の呼び出しは許可されないため、Toolkitクラスではすべての呼び出し操作が完了した後で挿入するオブジェクトのコレクションが保持されます。このメソッドを呼び出さない場合、このようなオブジェクトがデータベースから消去され、ユーザー/レコード/フォルダの関連付けを追跡するテーブルの同期も失われて、高度なデバッグによる修正が必要になります。
 
-Parameters:
+パラメータ:
 
-* None
+* なし
 
-Returns:
+戻り値:
 
 * `Void`
 
-## Generic Methods
+## ジェネリックメソッド
 
-The Box for Salesforce Developer Toolkit provides a global method that accepts
-an [HttpRequest][sf-httprequest] object as a parameter and returns an
-[HttpResponse][sf-httpresponse] object. This method will utilize the
-authentication details of the Service Account to make callouts to Box's APIs,
-allowing you to focus on the business logic of your integration.
+Box for Salesforce Developer Toolkitは、パラメータとして[HttpRequest][sf-httprequest]オブジェクトを受け取り、[HttpResponse][sf-httpresponse]オブジェクトを返すグローバルメソッドを提供します。このメソッドではサービスアカウントの認証の詳細情報を利用してBoxのAPIを呼び出すため、開発者は統合のビジネスロジックに集中して取り組むことができます。
 
 ### `sendRequest`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `request` | [HttpRequest][sf-httprequest] | An HttpRequest object with a set endpoint and method. |
+| パラメータ     | 型                             | 説明                                   |
+| --------- | ----------------------------- | ------------------------------------ |
+| `request` | [HttpRequest][sf-httprequest] | エンドポイントとメソッドが設定されたHttpRequestオブジェクト。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* An [HttpResponse][sf-httpresponse] object with the response details from
-calling Box's APIs.
-* `Toolkit.BoxApiException` if there is any missing information from the
-HttpRequest input.
-* `null` if there was an issue getting the authentication details for the
-Service Account. In this case, check `mostRecentError`.
+* BoxのAPI呼び出しからの応答の詳細情報が含まれた[HttpResponse][sf-httpresponse]オブジェクト。
+* HttpRequestのインプットの情報が不足している場合は`Toolkit.BoxApiException`。
+* サービスアカウントの認証の詳細情報を取得する際に問題が発生した場合は`null`。この場合は、`mostRecentError`を確認してください。
 
-## File Operations
+## ファイル操作
 
 ### `createFileFromAttachment`
 
-<Message type='notice'>
+<Message type="notice">
 
-Available in version 3.46 and above.
+バージョン3.46以降で使用可能です。
 
-Salesforce has a String length limit of 6 million characters. Due to string
-bloat in the base64 encoding/decoding process, this results in an effective
-file size limit of 4.3 megabytes.
+Salesforceの文字列長の上限は600万文字です。base64エンコード/デコードプロセスでは文字列が膨張するため、有効なファイルサイズの上限は4.3MBとなっています。
 
 </Message>
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `att` | `Attachment` | The attachment to be converted into a File in Box. |
-| `fileNameOverride` | `string` | Optional - Name of the new file. If no value is passed in, the name of the attachment is used. |
-| `folderIdOverride` | `string` | Optional - Box folder id to place this attachment in. If no value is passed in, the file will be placed in the folder associated with the record that is the `parentId` of the attachment. If the record-specific folder doesn't exist, it will be created. |
-| `accessToken` | `string` | Optional - if `accessToken` is sent, that value is used for the Box API call. Otherwise, the default account credentials are used. |
+| パラメータ              | 型            | 説明                                                                                                                           |
+| ------------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `att`              | `Attachment` | Box内のファイルに変換される添付ファイル。                                                                                                       |
+| `fileNameOverride` | `string`     | 省略可 - 新しいファイルの名前。値が渡されなかった場合、添付ファイルの名前が使用されます。                                                                               |
+| `folderIdOverride` | `string`     | 省略可 - この添付ファイルの配置先であるBoxフォルダID。値が渡されなかった場合、ファイルは添付ファイルの`parentId`に当たるレコードに関連付けられているフォルダに配置されます。レコード固有のフォルダが存在していない場合は作成されます。 |
+| `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                         |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the id of the Box file that was created.
-* `null` if there was an error. In this case, check `mostRecentError`.
+* `string`。作成されたBoxファイルのIDが返されます。
+* エラーが発生した場合は`null`。この場合には、`mostRecentError`を確認してください。
 
 ### `getObjectFolderByRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+| パラメータ      | 型    | 説明                                    |
+| ---------- | ---- | ------------------------------------- |
+| `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id of the object root folder for the
-record id passed in.
+* `string`。レコードIDが渡されたオブジェクトルートフォルダのBoxフォルダIDが返されます。
 
-## Folder Operations
+## フォルダ操作
 
 ### `getRootFolderId`
 
-Parameters:
+パラメータ:
 
-* None
+* なし
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id of the Salesforce root folder.
+* `string`。SalesforceルートフォルダのBoxフォルダIDが返されます。
 
 ### `getObjectFolderByRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+| パラメータ      | 型    | 説明                                    |
+| ---------- | ---- | ------------------------------------- |
+| `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id of the object root folder for the
-record id passed in.
+* `string`。レコードIDが渡されたオブジェクトルートフォルダのBoxフォルダIDが返されます。
 
 ### `getFolderUrl`
 
-* This method gets the embed widget URL for a particular record so customers
-can use their own embed logic if desired.
-* This method respects seamless login settings so the URL will automatically
-log the user in if seamless login is enabled.
+* このメソッドは、特定のレコードの埋め込みウィジェットURLを取得します。このため、必要に応じて独自の埋め込みロジックを使用できます。
+* このメソッドではシームレスなログインの設定が優先されます。このため、シームレスなログインが有効になっている場合、ユーザーはURLに自動的にログインされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
-| `isMobileContext` | `boolean` | Boolean to indicate whether the URL should be mobile (true) or not (false). |
+| パラメータ             | 型         | 説明                                    |
+| ----------------- | --------- | ------------------------------------- |
+| `recordId`        | `id`      | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
+| `isMobileContext` | `boolean` | URLがモバイル(true)か、それ以外(false)かを示すブール値。  |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is a URL that points to the folder associated with the
-Salesforce record Id passed. This URL is for the Box Embed Widget and can be
-embedded in any Visualforce page.
+* `string`。渡されたSalesforceレコードIDに関連付けられているフォルダを表すURLが返されます。このURLをBox埋め込みウィジェットで使用して、任意のVisualforceページに埋め込むことができます。
 
 ### `createObjectFolderForRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+| パラメータ      | 型    | 説明                                    |
+| ---------- | ---- | ------------------------------------- |
+| `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder Id of the root folder that was created.
-* If the root folder already existed, the value returned is the Box folder id
-of the root folder that already existed.
+* `string`。作成されたルートフォルダのBoxフォルダIDが返されます。
+* ルートフォルダがすでに存在していた場合、そのルートフォルダのBoxフォルダIDが返されます。
 
 ### `createFolder`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderName` | `string` | Name of the folder to be created. Folder names are subject to some restrictions. [See here for more details.](endpoint://post_folders) |
-| `parentFolderId` | `string` | Parent Box folder this folder will be created in. |
-| `accessToken` | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call,; otherwise, the default service account credentials are used. |
+| パラメータ            | 型        | 説明                                                                                        |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------- |
+| `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                    |
+| `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                     |
+| `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
-`mostRecentError` for details.
+* `string`。作成されたフォルダのBoxフォルダIDが返されます。
+* フォルダが作成されなかった場合は`null`が返されます。この場合、`mostRecentError`で詳細を確認してください。
 
 ### `createFolderForRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id that a Box folder will be created for. |
-| `folderNameOverride` | `string` | By default, the record's name will be the folder name. If you want to name it something else, send that value here. |
-| `optCreateRootFolder` | `boolean` | Boolean to indicate whether to create the object root folder if it doesn't exist. If false is sent and the root folder does not exist, the call will fail. |
+| パラメータ                 | 型         | 説明                                                                                |
+| --------------------- | --------- | --------------------------------------------------------------------------------- |
+| `recordId`            | `id`      | Boxフォルダの作成に使用されるSalesforceレコードID。                                                 |
+| `folderNameOverride`  | `string`  | デフォルトでは、レコード名がフォルダ名になります。別の名前を付ける場合は、ここでその値を送信します。                                |
+| `optCreateRootFolder` | `boolean` | オブジェクトのルートフォルダが存在しない場合に、それを作成するかどうかを示すブール値。falseを送信した場合、ルートフォルダが存在しないと呼び出しは失敗します。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
-`mostRecentError` for details.
-* If the Salesforce record was already associated with a Box folder, the
-existing Box folder id is returned.
+* `string`。作成されたフォルダのBoxフォルダIDが返されます。
+* フォルダが作成されなかった場合は`null`が返されます。この場合、`mostRecentError`で詳細を確認してください。
+* SalesforceレコードがすでにBoxフォルダに関連付けられている場合、既存のBoxフォルダIDが返されます。
 
 ### `moveFolder`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderId` | `string` | Box folder Id of the folder to be moved. |
-| `newParentFolderId` | `string` | Box folder Id of the folder that will be the new parent folder. |
-| `accessToken` | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call. Otherwise, the default service account credentials are used. |
+| パラメータ               | 型        | 説明                                                                                   |
+| ------------------- | -------- | ------------------------------------------------------------------------------------ |
+| `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                  |
+| `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                           |
+| `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox API呼び出しに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `true` if the folder was moved successfully.
-* `false` if the folder was not moved successfully. Check `mostRecentError` for details.
+* フォルダが正常に移動された場合は`true`。
+* フォルダが正常に移動されなかった場合は`false`。`mostRecentError`で詳細を確認してください。
 
-## Folder Association Methods
+## フォルダ関連付けメソッド
 
 ### `getFolderAssociationsByRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id that the folder mapping entries returned are related to. |
+| パラメータ      | 型    | 説明                                         |
+| ---------- | ---- | ------------------------------------------ |
+| `recordId` | `id` | 返されるフォルダマッピングエントリが関連付けられるSalesforceレコードID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* List returned is a collection of all folder mapping entries associated with
-this record.
-* Generally, it will be an empty list if no folder mapping entries exist, but
-under some circumstances, it could be `null`.
+* 返されるリストは、このレコードに関連付けられているすべてのフォルダマッピングエントリのコレクションです。
+* 一般に、フォルダマッピングエントリが存在しない場合は空のリストになりますが、状況によって`null`になる場合があります。
 
 ### `getFolderIdByRecordId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose folder id you wish to get. |
+| パラメータ      | 型    | 説明                           |
+| ---------- | ---- | ---------------------------- |
+| `recordId` | `id` | フォルダIDを取得するSalesforceレコードID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the Box folder id associated with the Salesforce record
-id passed in.
+* `string`。渡されたSalesforceレコードIDに関連付けられたBoxフォルダIDが返されます。
 
 ### `getRecordIdByFolderId`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderId` | `string` | Box folder id. |
+| パラメータ      | 型        | 説明         |
+| ---------- | -------- | ---------- |
+| `folderId` | `string` | BoxフォルダID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `id` returned is the Salesforce record id associated with the Box folder id
-passed in.
+* `id`。渡されたBoxフォルダIDに関連付けられたSalesforceレコードIDが返されます。
 
 ### `createFolderAssociation`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record Id that is being associated with a box folder. |
-| `folderId` | `string` | Box folder Id being associated with a Salesforce record. |
+| パラメータ      | 型        | 説明                             |
+| ---------- | -------- | ------------------------------ |
+| `recordId` | `id`     | Boxフォルダに関連付けるSalesforceレコードID。 |
+| `folderId` | `string` | Salesforceレコードに関連付けるBoxフォルダID。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
-error (check `mostRecentError`). Upon calling the `commitChanges` method, this
-FRUP entry will be inserted into the database. This method ensures consistency
-with other folder associations by not allowing the same folder to be associated
-with multiple records or vice versa.
+* `box__FRUP__c`オブジェクト - エラーが発生した場合(`mostRecentError`を確認)、返されるFRUPオブジェクトは`null`になります。このFRUPエントリは、`commitChanges`メソッドの呼び出し時にデータベースに挿入されます。このメソッドでは、同じフォルダの複数レコードへの関連付けやその逆の関連付けが許可されないため、他のフォルダの関連付けとの一貫性が保証されます。
 
-## Collaboration Methods
+## コラボレーションメソッド
 
-<Message type='warning'>
+<Message type="warning">
 
-Collaborations created by the Box for Salesforce Developer Toolkit will not
-send collaboration emails to collaborators. Only the service account used for
-the Box for Salesforce integration will receive a collaboration email.
+Box for Salesforce Developer Toolkitによって作成されたコラボレーションは、コラボレータにコラボレーションメールを送信しません。Box for Salesforce統合に使用されるサービスアカウントのみがコラボレーションメールを受け取ります。
 
 </Message>
 
@@ -387,39 +344,41 @@ the Box for Salesforce integration will receive a collaboration email.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderId` | `string` | Box folder id to create a collaboration on. |
-| `boxUserId` | `string` | Box user id to be collaborated (either `boxUserId` or `emailAddress` is required but not both). |
-| `emailAddress` | `box.Toolkit.CollaborationType` | Email address of the box user to be. |
-| `collabType` | `string` | Type of collaboration (see the `CollaborationType` enum definition). |
-| `accessToken` | `string` | Optional - If sent, this value is used for authentication for the box API call; if `null`, the service account credentials are used. |
+| パラメータ          | 型                               | 説明                                                                      |
+| -------------- | ------------------------------- | ----------------------------------------------------------------------- |
+| `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                                |
+| `boxUserId`    | `string`                        | コラボレーションするBoxユーザーのID (`boxUserId`または`emailAddress`のどちらか一方のみ必要)。         |
+| `emailAddress` | `box.Toolkit.CollaborationType` | Boxユーザーのメールアドレス。                                                        |
+| `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                            |
+| `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox API呼び出しの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the id of the box collaboration that was created.
-* `null` returned if there was an error. In this case, check `mostRecentError`.
+* `string`。作成されたBoxコラボレーションのIDが返されます。
+* エラーが発生した場合は`null`が返されます。その場合、`mostRecentError`を確認してください。
 
 ### `createCollaborationOnRecord`
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `userId` | `id` | Salesforce user id to be collaborated. |
-| `recordId` | `id` | Salesforce record id of the record folder to be collaborated on. |
-| `collabType` | `box.Toolkit.CollaborationType` | Type of collaboration (see the `CollaborationType` enum definition). |
-| `optCreateFolder` | `boolean` | Boolean to indicate whether to create the Box folder associated for the Salesforce record id if it does not already exist. This also creates the root folder if it did not already exist. If set to `false` and the folder does not already exist, the call will fail. |
+| パラメータ             | 型                               | 説明                                                                                                                                    |
+| ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `userId`          | `id`                            | コラボレーションするSalesforceユーザーID。                                                                                                           |
+| `recordId`        | `id`                            | コラボレーションするレコードフォルダのSalesforceレコードID。                                                                                                  |
+| `collabType`      | `box.Toolkit.CollaborationType` | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                                                                                          |
+| `optCreateFolder` | `boolean`                       | SalesforceレコードIDに関連付けられたBoxフォルダがまだ存在しない場合に、それを作成するかどうかを示すブール値。ルートフォルダが存在しない場合は、ルートフォルダも作成されます。`false`に設定した場合、フォルダがまだ存在しないと呼び出しが失敗します。 |
 
 <!-- markdownlint-enable line-length -->
 
-Returns:
+戻り値:
 
-* `string` returned is the id of the Box collaboration that was created.
-* `null` returned if there was an error. In this case, check `mostRecentError`.
+* `string`。作成されたBoxコラボレーションのIDが返されます。
+* エラーが発生した場合は`null`が返されます。その場合、`mostRecentError`を確認してください。
 
 [collab-type]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
+
 [sf-httprequest]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httprequest.htm
+
 [sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse

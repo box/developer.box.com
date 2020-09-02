@@ -21,24 +21,19 @@ previous_page_id: embed/ui-elements/annotations
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/logo.md
 ---
-# Customize Logo
+# ロゴのカスタマイズ
 
-Each of the Box UI Elements allow for specifying a custom logo to place in the
-top-left corner of the embedded container.
+それぞれのBox UI Elementsでは、埋め込まれたコンテナの左上隅に配置するカスタムロゴを指定できます。
 
 <ImageFrame border>
 
-![Custom logo](./images/elements-logo.png)
+![カスタムロゴ](./images/elements-logo.png)
 
 </ImageFrame>
 
-By default, each of the UI Elements uses a generic placeholder as a logo. This
-is meant to be replaced by either a Box logo or a custom logo, such as a
-company's logo.
+デフォルトでは、それぞれのUI Elementでロゴとして汎用的なプレースホルダが使用されます。このプレースホルダは、Boxのロゴまたはカスタムロゴ(会社のロゴなど)に置き換えられます。
 
-To add a logo to a UI Element, supply a URL for a logo as an option in in the
-Javascript setup code. The following is an example of how to do this with the
-Content Preview UI Element.
+UI Elementにロゴを追加するには、JavaScript設定コードでロゴのURLをオプションとして指定します。コンテンツプレビューUI Elementを使用したこの追加方法の例を以下に示します。
 
 ```js
 var preview = new Box.Preview();
@@ -56,14 +51,12 @@ preview.show(fileId, accessToken, {
 
 <Message>
 
-# Box Logo
+# Boxのロゴ
 
-To present the Box logo in a UI Element, specify the string `box` as the
-`logoURL` option.
+UI ElementにBoxのロゴを表示するには、文字列`box`を`logoURL`オプションとして指定してください。
 
 </Message>
 
-## Image size
+## 画像サイズ
 
-Images files will be fitted to a maximum height of 32 pixels and a maximum width
-of 80 pixels. Larger images will be shrunk to fit these dimensions.
+画像ファイルは、高さの最大値32ピクセル、幅の最大値80ピクセルに収まります。画像がそれより大きい場合は、このサイズに合わせて縮小されます。

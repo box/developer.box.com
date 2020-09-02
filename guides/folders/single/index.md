@@ -19,4 +19,4 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/index.md
 ---
-# Single Folders
+# 単一フォルダ

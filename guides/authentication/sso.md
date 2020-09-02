@@ -23,83 +23,62 @@ previous_page_id: authentication/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/sso.md
 ---
-# Box API & SSO
+# Box APIとSSO
 
-Many Box Enterprises use **Single Sign On** (SSO) to authenticate
-[Managed Users][user-types] logging in to Box. The way applications built on
-Box Platform interact with the SSO provider depends on the type of application
-being built.
+多くのBox Enterpriseでは、**シングルサインオン**(SSO)を使用してBoxにログインしている[管理対象ユーザー][user-types]を認証します。Box Platformに作成されたアプリケーションとSSOプロバイダの対話方法は、作成されるアプリケーションの種類によって異なります。
 
-## Custom Apps with Client-side Authentication
+## クライアント側認証を使用するカスタムアプリ
 
-When users authenticate with a [Custom App][custom_app] configured to use
-client-side [OAuth 2.0] Box will detect if a user's
-enterprise is configured to use SSO. If so, Box will redirect the user's browser
-to their own enterprise's configured SSO log-in screen.
+クライアント側[OAuth 2.0][OAuth 2.0]を使用するよう構成された[カスタムアプリ][custom_app]でユーザーが認証されると、Boxは、ユーザーの会社がSSOを使用するよう構成されているかどうかを検出します。構成されている場合、ユーザーのブラウザは、自社の構成済みのSSOログイン画面にリダイレクトされます。
 
-### SSO Enabled vs Required
+### SSOの有効化とSSO必須モード
 
-Enterprises on Box can be configured to use SSO in two ways: **SSO Required**
-or **SSO Enabled**.
+Boxを使用する会社では、SSOの使用を構成する方法として、**SSO必須モード**と**SSOの有効化**の2つがあります。
 
-In an enterprise that has set **SSO only as enabled**, users will have the option
-to either use a regular Box username and password or to be redirected to their
-SSO provider.
+**SSOのみを有効化として**設定した会社では、ユーザーは、通常のBoxユーザー名とパスワードを使用するか、SSOプロバイダにリダイレクトされるかを選択できます。
 
-In an enterprise that has **SSO set to be required**, Box will force users
-to log in with their enterprise's configured SSO provider. In this case, any
-user that tries to log in must already have both a Box account and an account
-with their SSO provider. Without either of these the log in will fail as either
-Box won't know what SSO provider to send a user to, or the SSO provider won't
-recognize the user's login.
+**SSOが必須に設定されている**会社では、Boxにより、ユーザーは会社の構成済みSSOプロバイダでログインするよう強制されます。この場合、ログインしようとするユーザーはBoxアカウントとSSOプロバイダのアカウントの両方を既に所有している必要があります。どちらか一方がなければログインは失敗します。これは、Boxがユーザーのリダイレクト先となるSSOプロバイダを判断できないか、SSOプロバイダがユーザーのログインを認識できないからです。
 
 <Message warning>
 
-It is not possible to exempt a user from SSO in an enterprise with SSO
-set to be required, even if it is only used for platform use cases.
+SSOが必須に設定されている会社では、SSOからユーザーを除外することはできません。これは、プラットフォームのユースケースのみで使用されている場合でも当てはまります。
 
 </Message>
 
-## Custom Apps with Server-side Authentication
+## サーバー側認証を使用するカスタムアプリ
 
-For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token]
-authentication, SSO is not used to authenticate with Box.
+[JWT][jwt]または[アプリトークン][app_token]認証を使用する[カスタムアプリ][custom_app]の場合、SSOはBoxでの認証に使用されません。
 
-Custom apps using server-side authentication only use server-to-server API
-calls to communicate with Box. In this scenario, the way in which an end user
-is authenticated is determined by the application and not by Box.
+サーバー側認証を使用するカスタムアプリは、Boxとの通信にサーバー間のAPI呼び出しのみを使用します。このシナリオでのエンドユーザーの認証方法は、Boxではなくアプリケーションによって決まります。
 
-In other words, end user authentication with the application is determined by
-the application, while application's authorization to Box is a different
-matter completely.
+つまり、アプリケーションによるエンドユーザーの認証はそのアプリケーションによって決まりますが、アプリケーションによるBoxの承認とはまったく異なります。
 
-In these use cases the application authenticates not as a regular Managed User
-but as a Service Account or App User. These user types do not have access to any
-Managed User's data by default. For these applications to have access to other Managed
-User's data they will need explicit [admin approval][admin-approval].
+これらのユースケースでは、アプリケーションは通常の管理対象ユーザーとしてではなく、サービスアカウントまたはApp Userとして認証します。このようなユーザータイプには、デフォルトでは管理対象ユーザーのデータへのアクセス権限がありません。これらのアプリケーションから他の管理対象ユーザーのデータにアクセスできるようにするには、明示的な[管理者の承認][admin-approval]が必要です。
 
-## Custom Skills
+## カスタムスキル
 
-[Custom Skills][custom_skills] are authenticated in a unique way where the
-application is provided with a unique set of access tokens for every skill
-event.
+[カスタムスキル][custom_skills]は、独自の方法で認証されます。この方法では、スキルイベントごとに固有のアクセストークンセットがアプリケーションに提供されます。
 
-In this case, the application does not directly interact with the users and
-therefore SSO is not involved.
+この場合、アプリケーションはユーザーと直接やり取りしないため、SSOは関与しません。
 
 <Message>
 
-Even when using Skills, a user uploading a file to a folder that might trigger
-a Skill event would still need to log in to the web or mobile app. This log in
-would require them to use SSO where needed.
+Skillsを使用した場合でも、スキルイベントをトリガーする可能性があるフォルダにファイルをアップロードするユーザーは、ウェブアプリまたはモバイルアプリにログインする必要があります。このログインでは、必要に応じてSSOの使用が求められます。
 
 </Message>
 
 [user-types]: g://authentication/user-types
+
 [admin-approval]: g://applications/custom-apps/app-approval
+
 [jwt]: g://authentication/jwt
+
 [oauth2]: g://authentication/oauth2
+
 [app_token]: g://authentication/app-token
+
 [custom_app]: g://applications/custom-apps
+
 [custom_skills]: g://applications/custom-skills
+
 [jwt]: g://applications/custom-apps/jwt-setup

@@ -23,19 +23,17 @@ previous_page_id: collections/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collections/list-items.md
 ---
-# List Items in Collections
+# コレクション内の項目のリストの取得
 
-To list all files, folders and web links in a folder call the [`GET
-/collections/:id/items`](e://get_collections_id_items) API.
+フォルダ内のすべてのファイル、フォルダ、およびウェブリンクのリストを取得するには、[`GET
+/collections/:id/items`](e://get_collections_id_items) APIを呼び出します。
 
-<Samples id='get_collections_id_items' >
+<Samples id="get_collections_id_items">
 
 </Samples>
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection. The ID of this collection is [different for every
-user](g://collections/list).
+APIを介して使用できるコレクションは「Favorites」コレクションのみです。このコレクションのIDは[ユーザーごとに異なります](g://collections/list)。
 
 </Message>

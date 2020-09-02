@@ -24,61 +24,49 @@ source_url: >-
 ---
 # Content Uploader
 
-The Box Content Uploader UI Element allows developers to embed an upload widget
-in their desktop or mobile web application. Users can select files or use drag
-and drop to upload. Large files will be uploaded with the [Chunked
-Upload](e://post-files-upload-sessions) API.
+Box Content Uploader UI Elementを使用すると、開発者は、デスクトップまたはモバイルウェブアプリにアップロードウィジェットを埋め込むことができます。ユーザーはファイルを選択するかドラッグアンドドロップしてアップロードできます。サイズの大きなファイルのアップロードには、[分割アップロード](e://post-files-upload-sessions)APIを使用します。
 
-## Installation
+## インストール
 
-[Learn how to install](g://embed/ui-elements/installation) Box UI elements
-either through NPM or the Box CDN.
+NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
 
 <Message>
 
-# Browser support
+# ブラウザのサポート
 
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
+古いブラウザでは、UI Elementの[サポートは限定的](g://embed/ui-elements/browser)です。目的のブラウザに合ったpolyfillを必ず追加してください。
 
 </Message>
 
-## Authentication
+## 認証
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
 
 <CTA to="g://authentication/select">
 
-Learn about selecting an authentication method
+認証方式の選択について確認する
 
 </CTA>
 
-## Demo
+## デモ
 
 ### Uploader
 
-<iframe height="560" scrolling="no" title="Box Content Uploader" src="//codepen.io/box-platform/embed/QvqGwr/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
+<iframe height="560" scrolling="no" title="Box Content Uploader" src="//codepen.io/box-platform/embed/QvqGwr/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
-### Uploader as popup
+### ポップアップ形式のアップローダー
 
-<iframe height="560" scrolling="no" title="Box File Picker and Uploader as popups" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
+<iframe height="560" scrolling="no" title="ポップアップ形式のBoxのファイル選択機能とアップローダー" src="//codepen.io/box-platform/embed/oWEKdq/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 <Message>
 
-# Access Token
+# アクセストークン
 
-These demos may not fully function until you provide a valid access token. For
-testing purposes, you can use your temporary developer token. This will need
-to be updated under the JS tab in the demo.
+上記のデモは、有効なアクセストークンを指定しなければ、完全に動作しない可能性があります。テスト目的の場合は、一時的な開発者トークンを使用できます。このトークンは、デモにある\[JS]タブで更新する必要があります。
 
 </Message>
 
@@ -140,77 +128,71 @@ uploader.removeAllListeners();
 
 <!-- markdownlint-disable line-length -->
 
-### Parameters
+### パラメータ
 
-| Parameter     | Type   | Description                                                                                                                                                                  |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `folderId`    | String | Box Folder ID. This will be the ID of the folder from which you want files to be uploaded to. If you want to use the Box All Files folder, then use `0` as the `folderId`.   |
-| `accessToken` | String | Box API access token to use. This should have upload access to the folder above. |
-| `options`     | Object | Optional options. See below for details.                                                                                                                                     |
+| パラメータ         | 型      | 説明                                                                                          |
+| ------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `folderId`    | String | BoxフォルダのID。アップロードするファイルが含まれているフォルダのIDです。Boxの\[すべてのファイル]フォルダを使用する場合は、`folderId`として`0`を使用します。 |
+| `accessToken` | String | 使用するBox APIアクセストークン。このトークンには、上記のフォルダに対するアップロード権限が必要です。                                      |
+| `options`     | Object | 省略可能なオプション。詳細については、以下を参照してください。                                                             |
 
-### Options
+### オプション
 
-| Parameter             | Type     | Default                                                    | Description                                                                                                                                                                                                                                                   |
-| --------------------- | -------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `container`           | String   | `document.body`                                            | CSS selector of the container in which the content uploader should be placed. Calling `hide()` will clear out this container.                                                                                                                                 |
-| `sharedLink`          | String   |                                                            | Shared link URL, required if folder is shared and the access token doesn't belong to an owner or collaborator of the file.                                                                                                                                    |
-| `sharedLinkPassword`  | String   |                                                            | Shared link password, required if shared link has a password.                                                                                                                                                                                                 |
-| `onClose`             | Function |                                                            | Callback function for 'Close' button, which will appear when there are no files to upload or when all uploads are complete. If this option is not defined, the button will not appear.                                                                        |
-| `modal`               | Object   |                                                            | When the modal attribute is specified, then the content uploader will not be created in-place. Instead a button will be created in the container and clicking this button will launch the content uploader in a modal popup. See below for the modal options. |
-| `size`                | String   | `undefined`                                                | Indicates to the content uploader to fit within a small or large width container. Value can be absent or one of `small` or `large`. If absent the UI Element will adapt to its container and automatically switch between small width or large width mode.    |
-| `isTouch`             | Boolean  | Defaults to the browser and device's default touch support | Indicates to the content explorer that it's is being rendered on a touch enabled device.                                                                                                                                                                      |
-| `fileLimit`           | Number   | 100                                                        | The maximum number of files that can be uploaded at once. If more than `fileLimit` files are selected for upload, any beyond the first `fileLimit` files will not be included for uploaded. A warning message will be shown in the footer when this happens.  |
-| `requestInterceptor`  | Function |                                                            | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).     |
-| `responseInterceptor` | Function |                                                            | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).    |
+| パラメータ                 | 型        | デフォルト                                   | 説明                                                                                                                                                                                           |
+| --------------------- | -------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `container`           | String   | `document.body`                         | Content Uploaderが配置されるコンテナのCSSセレクタ。`hide()`を呼び出すと、このコンテナは空になります。                                                                                                                             |
+| `sharedLink`          | String   |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                             |
+| `sharedLinkPassword`  | String   |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                      |
+| `onClose`             | Function |                                         | アップロードするファイルがない場合やすべてのアップロードが完了している場合に表示される\[閉じる]ボタンのコールバック関数。このオプションが定義されていない場合、ボタンは表示されません。                                                                                                |
+| `modal`               | Object   |                                         | モーダル属性を指定すると、Content Uploaderは所定の位置に作成されません。代わりに、コンテナ内にボタンが作成され、そのボタンをクリックすると、モーダルポップアップでContent Uploaderが起動します。モーダルオプションについては、以下を参照してください。                                                  |
+| `size`                | String   | `undefined`                             | Content Uploaderがコンテナの幅の大小に合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動でsmallの幅とlargeの幅が切り替わります。                                                   |
+| `isTouch`             | Boolean  | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | Content Explorerがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                 |
+| `fileLimit`           | Number   | 100                                     | 一度にアップロードできるファイルの最大数。`fileLimit`を超えるファイルをアップロードのために選択した場合、最初の`fileLimit`を超えるファイルはアップロードに含まれません。この状況が発生した場合、フッターに警告メッセージが表示されます。                                                              |
+| `requestInterceptor`  | Function |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。 |
+| `responseInterceptor` | Function |                                         | 応答をインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。    |
 
-### Modal Options
+### モーダルオプション
 
-| Parameter          | Type     | Default         | Description                                   |
-| ------------------ | -------- | --------------- | --------------------------------------------- |
-| `buttonLabel`      | `String` |                 | Label for the button                          |
-| `buttonClassName`  | `String` | Box Blue Button | CSS class to decorate the button              |
-| `modalClassName`   | `String` |                 | CSS class to decorate the modal popup content |
-| `overlayClassName` | `String` |                 | CSS class to decorate the modal popup overlay |
+| パラメータ              | 型        | デフォルト     | 説明                             |
+| ------------------ | -------- | --------- | ------------------------------ |
+| `buttonLabel`      | `String` |           | ボタンのラベル                        |
+| `buttonClassName`  | `String` | Boxの青いボタン | ボタンを装飾するためのCSSクラス              |
+| `modalClassName`   | `String` |           | モーダルポップアップコンテンツを装飾するためのCSSクラス  |
+| `overlayClassName` | `String` |           | モーダルポップアップオーバーレイを装飾するためのCSSクラス |
 
-### Events
+### イベント
 
-| Event Name | Event Data    | Description                                                                                                                                       |
-| ---------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `close`    |               | Will be fired when 'Close' button is clicked.                                                                                                     |
-| `complete` | `Array<File>` | Will be fired when all uploads in the current view are complete. Event data will be an array of File Object.                                      |
-| `upload`   | File          | Fired when a single file is successfully uploaded. Event data will be a File Object.                                                              |
-| `error`    | Object        | Fired when a single file has an upload error. Event data will be an object with properties file from the File Web API and the error object error. |
+| イベント名      | イベントデータ       | 説明                                                                                        |
+| ---------- | ------------- | ----------------------------------------------------------------------------------------- |
+| `close`    |               | \[閉じる]ボタンがクリックされたときに発生します。                                                                |
+| `complete` | `Array<File>` | 現在のビューにあるアップロードがすべて完了したときに発生します。イベントデータはファイルオブジェクトの配列になります。                               |
+| `upload`   | ファイル          | 1つのファイルが正常にアップロードされたときに発生します。イベントデータはファイルオブジェクトになります。                                     |
+| `error`    | Object        | 1つのファイルでアップロードエラーが生じたときに発生します。イベントデータはFile Web APIのプロパティファイルとエラーオブジェクトのエラーを含むオブジェクトになります。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Scopes
+## スコープ
 
-If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
-appropriately downscope the Access Token to a resulting token that has the
-desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+アプリケーションで、エンドユーザーがContent Explorer機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Explorerを初期化するエンドユーザークライアントに安全に渡すことができます。
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
-configuring the appropriate scopes on the downscoped token. To learn
-more, see [Dedicated Scopes for Box UI Elements][scopes].
+以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content ExplorerのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
 
-### Base Scope
+### 基本スコープ
 
 <!-- markdownlint-disable line-length -->
 
-| Scope Name    | Permissions granted                                                                    |
-| ------------- | -------------------------------------------------------------------------------------- |
-| `base_upload` | Allows upload into the folder specific under "resource" of the Token Exchange request. |
+| スコープ名         | 付与される権限                                         |
+| ------------- | ----------------------------------------------- |
+| `base_upload` | トークン交換リクエストの「resource」で指定されたフォルダへのアップロードを許可します。 |
 
-### Sample Scenarios
+### サンプルのシナリオ
 
-| Scenario                                   | Scopes        |
-| ------------------------------------------ | ------------- |
-| User wants to upload files to a Box folder | `base_upload` |
+| シナリオ                       | スコープ          |
+| -------------------------- | ------------- |
+| ユーザーがファイルをBoxフォルダにアップロードする | `base_upload` |
 
 <!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/access-tokens/downscope
+
 [scopes]: guide://api-calls/permissions-and-errors/scopes

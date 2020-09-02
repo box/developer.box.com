@@ -24,19 +24,16 @@ previous_page_id: collaborations/allowed-domains/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/allowed-domains/delete.md
 ---
-# Remove a previously allowed domain for collaboration
+# 以前コラボレーションが許可されたドメインの削除
 
-Deleting a domain from the list of allowed collaboration domains will remove the
-ability for collaborations to be created between your enterprise and users in
-that domain.
+コラボレーションの許可されたドメインのリストからドメインを削除すると、自分の会社とそのドメイン内のユーザーとの間にコラボレーションを作成できなくなります。
 
-To remove a domain from the allowed list, supply the ID of the list entry to
-the delete request. This ID is returned when [allowing a new domain][create]
-or [listing the allowed domains in the enterprise][list];
+許可リストからドメインを削除するには、リストのエントリのIDを削除リクエストに指定します。このIDは、[新しいドメインを許可する][create]か[社内で許可されているドメインのリストを取得する][list]と返されます。
 
-<Samples id='delete_collaboration_whitelist_entries_id' >
+<Samples id="delete_collaboration_whitelist_entries_id">
 
 </Samples>
 
 [create]: guide://collaborations/allowed-domains/create
+
 [list]: guide://collaborations/allowed-domains/list

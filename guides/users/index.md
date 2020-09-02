@@ -21,30 +21,26 @@ previous_page_id: users/delete-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/index.md
 ---
-# Users
+# ユーザー
 
-The Box API supports a variety of users, ranging from real employees logging in
-with their Managed User account, to applications using App Users to drive
-powerful automation workflows.
+Box APIは、管理対象ユーザーアカウントでログインする実際の従業員や、App Userを使用して強力な自動化ワークフローを推進するアプリケーションなど、さまざまなユーザーをサポートしています。
 
-<CTA to='g://authentication/user-types'>
+<CTA to="g://authentication/user-types">
 
-Learn more about user types
+ユーザータイプの詳細を確認する
 
 </CTA>
 
-## (De-)Provision Users
+## ユーザーのプロビジョニング(プロビジョニング解除)
 
-Managing the onboarding and offboarding of employees, customers, and users is a
-common requirement in the lifespan of a Box application.
+従業員、顧客、ユーザーのオンボーディングとオフボーディングの管理は、Boxアプリケーションの一般的な要件です。
 
-During account provisioning the main tasks that will be needed will be:
+アカウントのプロビジョニングで必要となる主なタスクは以下のとおりです。
 
-* How to create new app and managed user accounts to represent the users.
-* How to instantiate the new user account with common or repeatable folder and
-file architectures.
+* ユーザーを表す新しいアプリと管理対象ユーザーアカウントを作成する。
+* 共通の、または繰り返しが可能なフォルダおよびファイルアーキテクチャを使用して、新しいユーザーアカウントをインスタンス化する。
 
-During account deprovisioning the main tasks that will be needed will be:
+アカウントのプロビジョニング解除で必要となる主なタスクは以下のとおりです。
 
-* How to transfer files and folders from one account to another for offboarding.
-* How to delete user accounts.
+* オフボーディングのため、1つのアカウントから別のアカウントにファイルとフォルダを転送する。
+* ユーザーアカウントを削除する。

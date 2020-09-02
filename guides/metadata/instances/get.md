@@ -24,59 +24,50 @@ previous_page_id: metadata/instances/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/2-get.md
 ---
-# Get metadata on item
+# 項目のメタデータの取得
 
-Information about an instance of a metadata template assigned to a file or
-folder can be retrieved using the item's `id`, and the template's `templateKey`
-and `scope`.
+ファイルまたはフォルダに割り当てられたメタデータテンプレートのインスタンスに関する情報を取得するには、項目の`id`に加え、テンプレートの`templateKey`と`scope`を使用します。
 
 <Message>
 
-Metadata [scopes][scopes] can be either `global` for templates available to
-all enterprises, `enterprise` for templates available to the current
-enterprise, or the `enterprise_:id` for templates belonging to an enterprise
-whose ID is the `:id` value in the scope name.
+メタデータの[スコープ][scopes]には、`global` (すべての会社が利用できるテンプレートの場合)、`enterprise` (現在の会社が利用できるテンプレートの場合)、または`enterprise_:id` (IDがスコープ名の`:id`である会社に属するテンプレートの場合)のいずれかを指定できます。
 
 </Message>
 
-## Get metadata instance on file
+## ファイルのメタデータインスタンスを取得
 
-To get an instance of a metadata template on a file, call the
-[`GET /files/:file_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
-with the file's `file_id` and the template's `scope` and `templateKey`.
+ファイルのメタデータテンプレートのインスタンスを取得するには、ファイルの`file_id`およびテンプレートの`scope`と`templateKey`を指定して、[`GET /files/:file_id/metadata/:scope/:templateKey`][e_on_file] APIエンドポイントを呼び出します。
 
-<Samples id='get_files_id_metadata_id_id' >
+<Samples id="get_files_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an file][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[ファイルのすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
-## Get metadata instance on folder
+## フォルダのメタデータインスタンスを取得
 
-To get an instance of a metadata template on a folder, call the
-[`GET /folders/:folder_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
-with the folder's `folder_id` and the template's `scope` and `templateKey`.
+フォルダのメタデータテンプレートのインスタンスを取得するには、フォルダの`folder_id`およびテンプレートの`scope`と`templateKey`を指定して、[`GET /folders/:folder_id/metadata/:scope/:templateKey`][e_on_file] APIエンドポイントを呼び出します。
 
-<Samples id='get_folders_id_metadata_id_id' >
+<Samples id="get_folders_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an folder][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[フォルダのすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
 [e_on_file]: e://get_files_id_metadata_id_id
+
 [e_on_folder]: e://get_folders_id_metadata_id_id
+
 [scopes]: g://metadata/scopes
+
 [g_list_templates]: g://metadata/templates/list
+
 [g_list_instances_item]: g://metadata/instances/list

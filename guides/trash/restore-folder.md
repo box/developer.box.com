@@ -21,24 +21,18 @@ previous_page_id: trash/permanently-delete-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/restore-folder.md
 ---
-# Restore Folder
+# フォルダの復元
 
-To restore a folder that has been moved to the trash, but has not yet been
-purged, make a `POST` request to the `/folders/:folder_id` endpoint. This will
-place the folder in the original parent folder if it is still available, or you
-optionally can specify a `parent` folder.
+ごみ箱に移動されたが削除されていないフォルダを復元するには、`/folders/:folder_id`エンドポイントに`POST`リクエストを送信します。これにより、フォルダがまだ使用可能であれば元の親フォルダに戻されます。または、オプションとして`parent`フォルダを指定することもできます。
 
-<Samples id='post_folders_id' >
+<Samples id="post_folders_id">
 
 </Samples>
 
 <Message warning>
 
-During a folder restoration operation, part of the file tree will be locked,
-such as the source folder for the request and all of its descendants, as
-well as the destination folder.
+フォルダ復元の進行中は、ファイルツリーの一部がロックされます。ロックされるのは、リクエストの元のフォルダとその子孫フォルダ、および宛先フォルダです。
 
-During the restoration of the folder, no other move, copy, delete, or
-restore operation can be performed on the locked folders.
+フォルダの復元中、ロックされているフォルダに対して、それ以外の移動、コピー、削除、復元の操作を実行することはできません。
 
 </Message>

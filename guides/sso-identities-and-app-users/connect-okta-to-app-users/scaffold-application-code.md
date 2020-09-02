@@ -15,60 +15,58 @@ previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/1-scaffold-application-code.md
 ---
-# Scaffold application code
+# アプリケーションコードのスキャフォールディング
 
-Our first step in this guide is to create a local application to house our code
-and configuration data as we start to create the Okta and Box applications that
-will be needed.
+このガイドではまず、必要となるOktaとBoxのアプリケーションを作成するにあたり、コードと構成データを格納するローカルアプリケーションを作成します。
 
-Depending on your language / framework preference, create a blank application,
-install the required dependencies, as well as all configuration and program
-files.
+言語/フレームワークの設定に応じて、空のアプリケーションを作成し、必要な依存関係のほか、すべての構成ファイルとプログラムファイルをインストールします。
 
-Choose your preferred language / framework below to get started.
+まずは、以下からお好みの言語/フレームワークを選択してください。
 
-<Grid columns='2'>
+<Grid columns="2">
 
-<Choose option='programming.platform' value='node' color='blue'>
+<Choose option="programming.platform" value="node" color="blue">
 
 # Node
-Using the Express.js framework.
+
+Express.jsフレームワークを使用します。
 
 </Choose>
 
-<Choose option='programming.platform' value='java' color='blue'>
+<Choose option="programming.platform" value="java" color="blue">
 
 # Java
-Using the Spring Boot framework.
+
+Spring Bootフレームワークを使用します。
 
 </Choose>
 
 </Grid>
 
-<Grid columns='2'>
+<Grid columns="2">
 
-<Choose option='programming.platform' value='python' color='blue'>
+<Choose option="programming.platform" value="python" color="blue">
 
 # Python
-Using the Flask framework.
+
+Flaskフレームワークを使用します。
 
 </Choose>
 
-<Choose option='programming.platform' value='cs' color='blue'>
+<Choose option="programming.platform" value="cs" color="blue">
 
 # .NET
-Using the ASP.NET Core framework.
+
+ASP.NET Coreフレームワークを使用します。
 
 </Choose>
 
 </Grid>
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-* Create a local directory for your application.
-* Create a `package.json` file inside the local directory, open it in your
- preferred editor, copy / paste the following into it, and save / exit the
- file.
+* アプリケーション用にローカルディレクトリを作成します。
+* そのローカルディレクトリの中に`package.json`ファイルを作成し、お好みのエディタで開いたら、以下の内容をコピーして貼り付け、ファイルを保存して閉じます。
 
 ```js
 {
@@ -91,9 +89,9 @@ Using the ASP.NET Core framework.
 }
 ```
 
-* Run `npm init` from the terminal / console to install dependencies.
-* Create two files, `server.js` and `config.js` in the local directory.
-* Open `config.js` and save the following default configuration.
+* ターミナル/コンソールから`npm init`を実行して依存関係をインストールします。
+* ローカルディレクトリに2つのファイル(`server.js`および`config.js`)を作成します。
+* `config.js`を開いて、以下のデフォルト構成を保存します。
 
 ```js
 const oktaClientId = exports.oktaClientId = '';
@@ -105,12 +103,11 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-* From Eclipse, create a new project. When prompted, select a Gradle project.
-* Enter a unique name for the project, we used `okta.sample` for this guide.
-* Open your `build.gradle` file and add the following dependencies. Once saved,
- refresh the Gradle project.
+* Eclipseで新しいプロジェクトを作成します。求められたら、Gradleプロジェクトを選択します。
+* プロジェクトの一意の名前を入力します。このガイドでは`okta.sample`という名前を使用しています。
+* `build.gradle`ファイルを開いて以下の依存関係を追加します。保存したら、Gradleプロジェクトを更新します。
 
 ```java
 dependencies {
@@ -125,8 +122,7 @@ dependencies {
 }
 ```
 
-* Open your `/src/main/resources/application.properties` file and save the
- following defaults.
+* `/src/main/resources/application.properties`ファイルを開いて以下のデフォルトを保存します。
 
 ```java
 okta.oauth2.redirect-uri=/authorization-code/callback
@@ -139,16 +135,12 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-* Create a local directory for your application.
-* Install needed dependencies using the following `pip` command from your
- terminal / command prompt: `pip install flask flask_oidc okta boxsdk config`
-* Create three files in the local directory, `client_secrets.json`,
- `config.py`, and `server.py`.
-* Open `config.py` and save the following into it. This will be some of Okta
- app configuration information needed. We'll fill in the remaining information
- in the next step.
+* アプリケーション用にローカルディレクトリを作成します。
+* ターミナル/コマンドプロンプトで`pip`コマンド(`pip install flask flask_oidc okta boxsdk config`)を使用して、必要な依存関係をインストールします。
+* ローカルディレクトリに3つのファイル(`client_secrets.json`、`config.py`、`server.py`)を作成します。
+* `config.py`を開いて以下の内容を保存します。これは、必要となるOktaアプリの構成情報の一部です。残りの情報については、次の手順で設定します。
 
 ```python
 okta_client_secret = 'YOUR OKTA CLIENT SECRET'
@@ -157,9 +149,7 @@ okta_auth_token = 'YOUR OKTA APP TOKEN'
 okta_callback_route = '/oidc/callback'
 ```
 
-* Open `client_secrets.json` and save the following into it. This will be a
- standard object that the Flask OpenID Connect integration will use during
- configuration. We'll fill in the remaining information in the next step.
+* `client_secrets.json`を開いて以下の内容を保存します。これは、構成時にFlask OpenID Connect統合で使用される標準のオブジェクトです。残りの情報については、次の手順で設定します。
 
 ```js
 {
@@ -179,29 +169,21 @@ okta_callback_route = '/oidc/callback'
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-* Create a local directory for your application.
-* Open a command prompt / terminal window and go to the local application
-directory. Using the [.NET Core CLI][dotnet-cli] type `dotnet new mvc` and hit
-enter. This will create the main scaffolding for a ASP.NET Core MVC
-(Model-View-Controller) web app. Alternately, create the application
-[directly from Visual Studio][vs-app-create].
-* From the command prompt / terminal window in the local application directory,
-add the Okta ASP.NET Core dependencies by typing
-`dotnet add package Okta.AspNetCore`and the Box dependencies by typing
-`dotnet add package Box.V2.Core`.
-* Load your new application into Visual Studio or your preferred editor.
-* Within the root of the project, open `Startup.cs`.
-* Add the following package declarations to the top of the file.
+* アプリケーション用にローカルディレクトリを作成します。
+* コマンドプロンプト/ターミナルウィンドウを開いて、ローカルアプリケーションディレクトリに移動します。[.NET Core CLI][dotnet-cli]を使用して、`dotnet new mvc`と入力してEnterキーを押します。これにより、ASP.NET Core MVC (Model-View-Controller)ウェブアプリに主要なスキャフォールディングが作成されます。または、[Visual Studioから直接][vs-app-create]このアプリケーションを作成することもできます。
+* コマンドプロンプト/ターミナルウィンドウで、ローカルアプリケーションディレクトリに`dotnet add package Okta.AspNetCore`と入力してOkta ASP.NET Coreの依存関係を追加し、`dotnet add package Box.V2.Core`と入力してBoxの依存関係を追加します。
+* Visual Studioまたはお好みのエディタに新しいアプリケーションを読み込みます。
+* プロジェクトのルート内で`Startup.cs`を開きます。
+* ファイルの先頭に以下のパッケージ宣言を追加します。
 
 ```dotnet
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 ```
 
-* Replace the content of the `ConfigureServices` method with the following. We
- will fill in the specific Okta application values in the next step.
+* `ConfigureServices`メソッドの内容を以下の内容に置き換えます。具体的なOktaアプリケーションの値は次の手順で設定します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -222,9 +204,10 @@ services.AddAuthentication(options =>
   ClientSecret = ""
 });
 ```
+
 <!-- markdownlint-enable line-length -->
 
-Add the following line to the **top** of the `Configure` method.
+次の行を`Configure`メソッドの**先頭**に追加します。
 
 ```dotnet
 app.UseAuthentication();
@@ -232,31 +215,33 @@ app.UseAuthentication();
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework to get started.
+# 前の手順が完了していません
+
+開始するには、お好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Summary
+## まとめ
 
-* You created a new local application, files, and basic configuration details.
-* You installed all project dependencies.
+* 新しいローカルアプリケーション、ファイル、基本的な構成の詳細を作成しました。
+* プロジェクトの依存関係をすべてインストールしました。
 
-<Observe option='programming.platform' value='node,java,python'>
+<Observe option="programming.platform" value="node,java,python">
 
 <Next>
 
-I have my local application set up
+ローカルアプリケーションの設定が完了しました
 
 </Next>
 
 </Observe>
 
 [dotnet-cli]: https://docs.microsoft.com/en-us/dotnet/core/tools/
+
 [vs-app-create]: https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-aspnet-core

@@ -18,44 +18,35 @@ previous_page_id: api-calls/status-codes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/sorting.md
 ---
-# Sorting Responses
+# 応答の並べ替え
 
-Where an API returns a collection of items it often supports sorting of API
-responses.
+APIから項目のコレクションが返される場合は、API応答の並べ替えがサポートされることがよくあります。
 
-Use the `sort` and `direction` query parameters to sort the collection either in
-ascending or descending order.
+`sort`および`direction`クエリパラメータを使用すると、昇順または降順のいずれかでコレクションを並べ替えることができます。
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
     -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message type='warning'>
+<Message type="warning">
 
-Not all API endpoints that return collections have support for sorting.
-Especially endpoints that use marker-based pagination often lack support for
-sorting the results.
+コレクションを返すすべてのAPIエンドポイントが並べ替えをサポートしているわけではありません。特にマーカーベースのページ割りを使用するエンドポイントでは、結果の並べ替えがサポートされないことがよくあります。
 
 </Message>
 
-## Sorting criteria
+## 並べ替え基準
 
-The field to sort on is defined by the `sort` query parameter. Check the API
-endpoint's documentation for the possible options for this value.
+並べ替えの基準となるフィールドは`sort`クエリパラメータによって定義されます。この値に使用できるオプションについては、APIエンドポイントのドキュメントを確認してください。
 
-<Message type='notice'>
+<Message type="notice">
 
-In some APIs the `sort` field is the second criteria by which the items are
-sorted. For example for the [`GET /folders/:id/items`][get_folders_id_items]
-endpoint the results are always sorted by their type first before any other
-criteria.
+一部のAPIでは、`sort`フィールドが項目の並べ替えの2番目の基準になっています。たとえば、[`GET /folders/:id/items`][get_folders_id_items]エンドポイントの場合、結果は常に、まずその種類で並べ替えられてから、他の基準で並べ替えられます。
 
 </Message>
 
-## Sorting direction
+## 並べ替えの方向
 
-The sorting direction supports two values, either `ASC` for ascending order, or
-`DESC` for the reverse.
+並べ替えの方向では、`ASC` (昇順の場合)と`DESC` (降順の場合)という2つの値がサポートされます。
 
 [get_folders_id_items]: endpoint://get_folders_id_items

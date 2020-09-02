@@ -29,37 +29,28 @@ previous_page_id: api-calls/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/pagination/marker-based.md
 ---
-# Marker-based Pagination
+# マーカーベースのページ割り
 
-APIs that use marker-based paging use the `marker` and `limit` query parameters
-to paginate through items in a collection.
+マーカーベースのページングを使用するAPIは、`marker`および`limit`クエリパラメータを使用してコレクション内の項目のページ割りを行います。
 
-Marker-based pagination is often used in cases where the length of the total set
-of items is either changing frequently, or where the total length might not be
-known upfront.
+マーカーベースのページ割りがよく使用されるのは、項目の全セットの長さが頻繁に変更される場合や全体の長さが事前にわからない可能性がある場合です。
 
-## Paging
+## ページング
 
-To fetch the first page of entries in a collection the API needs to be called
-either without the `marker` parameter, or with the `marker` set to `0`. The
-`limit` parameter is optional.
+コレクション内のエントリの最初のページを取得するには、APIを`marker`パラメータを指定せずに呼び出すか、`marker`を`0`に設定して呼び出す必要があります。`limit`パラメータは省略可能です。
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
     -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-APIs that support both offset-based pagination and marker-based pagination
-require the `usemarker` query parameter to be set to `true` to ensure
-marker-based pagination is used.
+オフセットベースのページ割りとマーカーベースのページ割りの両方をサポートするAPIでは、マーカーベースのページ割りが使用されるように`usemarker`クエリパラメータを`true`に設定する必要があります。
 
 </Message>
 
-To fetch the next page of entries the API needs to be called with
-an `marker` parameter that equals value of the `next_marker` value that was
-received in the API response.
+エントリの次のページを取得するには、API応答で受け取った`next_marker`値の値に等しい`marker`パラメータを指定して、APIを呼び出す必要があります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -70,53 +61,48 @@ curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker
 
 <!-- markdownlint-enable line-length -->
 
-The final page of items has been requested when the next `next_marker` value is
-`null` in the response object. At this point there are no more items to fetch.
+次の`next_marker`値が応答オブジェクト内で`null`になっている場合、項目の最終ページはリクエスト済みです。この時点では、これ以上取得する項目がありません。
 
-<Message  type='notice'>
+<Message type="notice">
 
-With marker-based paging there is no way to determine the total number of
-entries in a collection except by fetching them all. Applications should not
-retain the `next_marker` value long-term as the internal implementation of the
-markers may change over time.
+マーカーベースのページングを使用する場合、コレクション内のエントリの合計数を確認するには、エントリをすべて取得するしかありません。マーカーの内部実装は今後変更される可能性があるため、アプリケーションでは`next_marker`値を長期にわたって保持しないでください。
 
 </Message>
 
-## Marker & Limit
+## マーカーと制限
 
-The following query parameters are used to paginate a collection.
-
-<!-- markdownlint-disable line-length -->
-
-| Query parameter | Type    | Default        |                                                                                                                                                                                    |
-| --------------- | ------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `marker`        | Integer | `0`            | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
-| `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used.                                                                    |
-| `usemarker`     | Boolean |                | An optional query parameter that can be used with API endpoints that support both types of pagination to select pagination type. Set to `true` to enforce marker-based pagination. |
-
-<!-- markdownlint-enable line-length -->
-
-## Collections
-
-When paginating collections, the API returns an object that contains the set of
-results as an array, as well as some information about the current page of results.
+以下のクエリパラメータは、コレクションのページ割りに使用されます。
 
 <!-- markdownlint-disable line-length -->
 
-| Field         | Type    |                                                                                                                                                                    |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                              |
-| `next_marker` | Integer | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
-| `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint.  |
+| クエリパラメータ    | 型       | デフォルト      |                                                                                                     |
+| ----------- | ------- | ---------- | --------------------------------------------------------------------------------------------------- |
+| `marker`    | Integer | `0`        | コレクション内で最初に結果を返す位置。これは前のリクエストで返された値です。                                                              |
+| `limit`     | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。                                                                |
+| `usemarker` | Boolean |            | ページ割りのタイプを選択するために、両タイプのページ割りをサポートするAPIエンドポイントで使用可能なクエリパラメータ(省略可)。`true`に設定すると、マーカーベースのページ割りが適用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Example endpoints
+## コレクション
 
-Some endpoints that support marker-based pagination are:
+コレクションのページ割りを行うと、APIによって、結果のセットを配列として含むオブジェクトのほか、結果の現在のページに関する情報が返されます。
 
-- [List items for a folder](endpoint://get_folders_id_items)
-- [List a file's collaborations](endpoint://get-files-id-collaborations)
-- [List all webhooks for a user](endpoint://get-webhooks)
-- [List all users in an enterprise](endpoint://get-users)
-- [List all items in the trash](endpoit://get-folders-trash-items)
+<!-- markdownlint-disable line-length -->
+
+| フィールド         | 型       |                                                                                 |
+| ------------- | ------- | ------------------------------------------------------------------------------- |
+| `entries`     | Array   | このページの項目を含むページ。結果がない場合は空の配列になります。                                               |
+| `next_marker` | Integer | 結果の次のページを取得するために`marker`値として使用できる値。この値が`null`または空の文字列の場合は、これ以上取得する結果がありません。     |
+| `limit`       | Integer | 結果の現在のページに使用される制限。この制限は、このAPIエンドポイントに許可されている最大値を超えない限り、`limit`クエリパラメータと同じになります。 |
+
+<!-- markdownlint-enable line-length -->
+
+## エンドポイントの例
+
+以下は、マーカーベースのページ割りをサポートするエンドポイントの例です。
+
+* [フォルダ内の項目を取得](endpoint://get_folders_id_items)
+* [ファイルのコラボレーションのリストを取得](endpoint://get-files-id-collaborations)
+* [ユーザーのすべてのWebhookのリストを取得](endpoint://get-webhooks)
+* [社内のすべてのユーザーのリストを取得](endpoint://get-users)
+* [ごみ箱にあるすべての項目のリストを取得](endpoit://get-folders-trash-items)

@@ -24,36 +24,27 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/create-session.md
 ---
-# Create Upload Session
+# アップロードセッションの作成
 
-To create an upload session, call the
-[`POST /files/upload_sessions`][createsession] API with the desired `file_name`
-and `folder_id` to put the file in, as well as the `file_size` of the file to be
-uploaded.
+アップロードセッションを作成するには、目的の`file_name`とそのファイルを配置する`folder_id`、およびアップロードするファイルの`file_size`を指定して[`POST /files/upload_sessions`][createsession] APIを呼び出します。
 
-<Samples sample='post_files_upload_sessions' >
+<Samples sample="post_files_upload_sessions">
 
 </Samples>
 
-To create a session for a new version of an existing file, call the
-[`POST /files/:id/upload_sessions`][createsessionversion] API instead. In this
-case, the `file_name` and `folder_id` are only required when renaming or moving
-the file in the process.
+既存ファイルの新しいバージョン用のセッションを作成するには、代わりに[`POST /files/:id/upload_sessions`][createsessionversion] APIを呼び出します。この場合、`file_name`と`folder_id`は、プロセスでファイルの名前変更または移動を行う場合にのみ必要となります。
 
-<Samples sample='post_files_id_upload_sessions' >
+<Samples sample="post_files_id_upload_sessions">
 
 </Samples>
 
-## Pre-flight Check
+## 事前チェック
 
-Creating an upload session also performs a [preflight check][check], making it
-unnecessary to do so separately when working with chunked uploads.
+アップロードセッションの作成によって[事前チェック][check]も実行されるため、分割アップロードを行う際に個別に行う必要はありません。
 
-## Response
+## レスポンス
 
-When a session is created successfully the response includes an [Upload
-Session][uploadsession] that includes a session ID, the number of parts, the
-part sizes, as well as links to the relevant next API endpoints to use.
+セッションが正常に作成されると、応答には、セッションID、パーツ数、パーツサイズ、および使用する関連する次のAPIエンドポイントへのリンクを含む[アップロードセッション][uploadsession]が含まれます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -78,10 +69,12 @@ part sizes, as well as links to the relevant next API endpoints to use.
 
 <!-- markdownlint-enable line-length -->
 
-The upload session defines the size of the parts to use when uploading the
-individual parts.
+アップロードセッションは、個々のパーツをアップロードするときに使用するパーツのサイズを定義します。
 
 [createsession]: e://post_files_upload_sessions
+
 [createsessionversion]: e://post_files_id_upload_sessions
+
 [check]: g://uploads/check
+
 [uploadsession]: r://upload_session

@@ -21,19 +21,18 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/retention-policies/list.md
 ---
-# List All Retention Policies
+# すべてのリテンションポリシーのリストの取得
 
-To list all Retention Policies that have been created in an enterprise, call
-the [`GET /retention_policies`][retention_policies] API endpoint.
+会社内に作成されたすべてのリテンションポリシーのリストを取得するには、[`GET /retention_policies`][retention_policies] APIエンドポイントを呼び出します。
 
-<Samples id='get_retention_policies' >
+<Samples id="get_retention_policies">
 
 </Samples>
 
-## Required Scopes
+## 必須のスコープ
 
-Before using any of the Retention Policy APIs, an application must have the
-right scopes enabled. See [Required Scopes][scopes] for more details.
+リテンションポリシーAPIのいずれかを使用する前に、アプリケーションでは適切なスコープを有効にしておく必要があります。詳細については、[必須のスコープ][scopes]を参照してください。
 
 [retention_policies]: e://get_retention_policies
+
 [scopes]: g://retention-policies#required-scopes

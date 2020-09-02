@@ -21,39 +21,34 @@ previous_page_id: metadata/cascades/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/3-create.md
 ---
-# Create a metadata cascade policy
+# メタデータカスケードポリシーの作成
 
 <Message warning>
 
-Metadata cascade policies are currently in Beta and the syntax might change in
-the future.
+メタデータカスケードポリシーは現在ベータ版であり、構文が今後変更される可能性があります。
 
 </Message>
 
-When a metadata template has been applied to a folder, a metadata cascade policy
-can be created by calling the  [`POST /metadata_cascade_policies`][e_post] API
-endpoint with the `folder_id` of the folder to apply the policy to, and the
-`scope` and `templateKey` of metadata template to.
+メタデータテンプレートがフォルダに適用されたら、メタデータカスケードポリシーを作成できます。それには、ポリシーの適用先となるフォルダの`folder_id`と、メタデータテンプレートの`scope`および`templateKey`を指定して、[`POST /metadata_cascade_policies`][e_post] APIエンドポイントを呼び出します。
 
-<Samples id='post_metadata_cascade_policies' >
+<Samples id="post_metadata_cascade_policies">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an file][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[ファイルのすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
 <Message warning>
 
-A cascade policy can only be created if a metadata instance has already been
-applied to the folder with the given `scope` and `templateKey`.
+カスケードポリシーを作成できるのは、指定した`scope`と`templateKey`のフォルダにメタデータインスタンスがすでに適用されている場合のみです。
 
 </Message>
 
 [e_post]: e://post_metadata_cascade_policies
+
 [g_list_templates]: g://metadata/templates/list
+
 [g_list_instances_item]: g://metadata/instances/list

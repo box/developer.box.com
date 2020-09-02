@@ -16,59 +16,54 @@ previous_page_id: authentication/sso
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/index.md
 ---
-# Authentication
+# 認証
 
-Authentication with the Box API uses an Access Token to identify a user. The
-way in which an Access Token is acquired depends on the method used to authorize
-a user. The type of authorization available to an application depends on the
-use-case as well as the type of application that has been created in the developer
-console.
+Box APIを使用する認証では、ユーザーの本人確認にアクセストークンを使用します。アクセストークンの取得方法は、ユーザーの承認に使用した方法によって異なります。アプリケーションで利用できる承認の種類は、ユースケースのほか、開発者コンソールで作成されたアプリケーションの種類に応じて異なります。
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Authorization methods                                     |
-| ---------------------------- | --------------------------------------------------------- |
-| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [App token][apptoken] |
-| [Custom Skill][custom-skill] | No authorization needed                                   |
-| Enterprise Integration       | [OAuth 2.0][oauth2], [JWT][jwt]                           |
-| Partner Integration          | [App token][apptoken]                                     |
+| Boxアプリケーションの種類          | 承認方法                                                  |
+| ----------------------- | ----------------------------------------------------- |
+| [カスタムアプリ][custom-app]   | [OAuth 2.0][oauth2]、[JWT][jwt]、または[アプリトークン][apptoken] |
+| [カスタムスキル][custom-skill] | 承認不要                                                  |
+| 企業統合                    | [OAuth 2.0][oauth2]、[JWT][jwt]                        |
+| パートナーの統合                | [アプリトークン][apptoken]                                   |
 
 <!-- markdownlint-enable line-length -->
 
 <Message warning>
 
-Enterprise and Partner Integrations exist for legacy purposes. Please use
-Custom Apps instead and use the relevant authentication method where needed.
+企業統合またはパートナーの統合は、従来の目的で存在します。代わりにカスタムアプリを使用し、必要に応じて関連する認証方式を使用してください。
 
 </Message>
 
 <CTA to="guide://authentication/select">
 
-Learn how to select an authorization type
+承認の種類の選択方法を確認する
 
 </CTA>
 
-## Access Tokens for Authentication
+## 認証のアクセストークン
 
-Every API endpoint requires a valid and active **Access Token** to make API
-calls. An Access Token is a unique string that identifies an authenticated Box
-user to the API endpoints.
+各APIエンドポイントには、API呼び出しを実行するために有効でアクティブな**アクセストークン**が必要です。アクセストークンは、APIエンドポイントに対して認証済みBoxユーザーを識別する一意の文字列です。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
   -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
-## User Authorization
+## ユーザー承認
 
-There are a few ways to get an an Access Token for a user. There is
-client-side authorization through [OAuth 2.0][oauth2], server-side authorization
-using [JWT][jwt], as well as a long lived [App Token][apptoken] and a
-short-lived [Developer Token][devtoken].
+ユーザーのアクセストークンを取得する方法はいくつかあります。[OAuth 2.0][oauth2]を介したクライアント側の承認、[JWT][jwt]を使用したサーバー側の承認のほか、有効期間が長い[アプリトークン][apptoken]や有効期間が短い[開発者トークン][devtoken]があります。
 
 [oauth2]: guide://authentication/oauth2
+
 [jwt]: guide://authentication/jwt
+
 [apptoken]: guide://authentication/app-token
+
 [devtoken]: guide://authentication/access-tokens/developer-tokens
+
 [custom-app]: guide://applications/custom-apps
+
 [custom-skill]: guide://applications/custom-skills

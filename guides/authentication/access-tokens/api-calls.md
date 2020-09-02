@@ -21,11 +21,9 @@ previous_page_id: authentication/access-tokens/resource
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/api-calls.md
 ---
-# Use a Token
+# トークンの使用
 
-Every authenticated API call requires an Access Token to be passed in the
-`Authorization` header as a `Bearer Token` or it will return a `401 Unautorized`
-HTTP status.
+すべての認証済みAPI呼び出しでは、`Bearer Token`としてアクセストークンを`Authorization`ヘッダーに含めて渡す必要があります。そうしないと、`401 Unautorized` HTTPステータスが返されます。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
@@ -34,7 +32,6 @@ curl https://api.box.com/2.0/users/me \
 
 <Message>
 
-Use the [`GET /users/me`](endpoint://get-users-id) endpoint to inspect what
-user an Access Token is authenticated for.
+アクセストークンが認証されるユーザーを調べるには、[`GET /users/me`](endpoint://get-users-id)エンドポイントを使用してください。
 
 </Message>

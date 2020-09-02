@@ -16,9 +16,9 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Header
+# ヘッダー
 
-On pages a header can be created. Please do not use this in guides.
+ページでヘッダーを作成できます。ガイドではヘッダーを使用しないでください。
 
 ```html
 <Header to='/guides'>
@@ -28,9 +28,9 @@ On pages a header can be created. Please do not use this in guides.
 
 <H>
 
-<Header to='/guides' stroke centered uppercase>
+<Header to="/guides" stroke centered uppercase>
 
-Guides
+ガイド
 
 </Header>
 
@@ -38,8 +38,6 @@ Guides
 
 <Message>
 
-Optionally the header ca be `centered`, given a `stroke`, aligned `right`, be
-sized `small`, be automatically turned into `uppercase` and shown in a `light`
-variant.
+オプションとして、ヘッダーに`centered`、`stroke`、`right`揃え、サイズ`small`を指定できるほか、ヘッダーを`uppercase`に自動変換したり、`light`バリアントで表示したりすることもできます。
 
 </Message>

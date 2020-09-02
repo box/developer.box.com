@@ -15,66 +15,52 @@ previous_page_id: metadata/queries
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/6-indexes.md
 ---
-# Indexes
+# インデックス
 
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
-A search index can be created to resolve this error for a specific search query.
+規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されている場合、メタデータクエリによって`HTTP 403`エラーが返される可能性があります。検索インデックスを作成すると、特定の検索クエリでこのエラーを解決することができます。
 
-If the number of metadata instances exceeds 10,000 then a metadata query request
-which does not include a suitable **index** in the `​use_index​` parameter will
-result in an error. The error will inform the caller to specify a suitable index
-as the argument to the `​use_index​` parameter.
+メタデータインスタンスの数が10,000個を超えると、`​use_index​`パラメータに適切な**インデックス**が含まれていないメタデータクエリリクエストではエラーが発生します。このエラーは呼び出し元に対して、`​use_index​`パラメータの引数として適切なインデックスを指定するよう通知します。
 
 <Message notice>
 
-We expect this limit to be raised but not to be eliminated in the future.
+Boxは、将来この制限を廃止するのではなく、引き上げる予定です。
 
 </Message>
 
-## Request an index
+## インデックスのリクエスト
 
-At this time you will need to contact Box to create an search index. Please
-reach out to your customer success manager or the Box [support team][support].
+現時点では、検索インデックスを作成するには、Boxにお問い合わせいただく必要があります。カスタマーサクセスマネージャまたはBox[サポートチーム][support]にご連絡ください。
 
-To create an index, we will need to be informed of the intended query will be
-run including the exact values for the `from​`, `​query​`, and `​order_by​`
-parameters of the request.
+インデックスを作成するには、リクエストの`from​`、`​query​`、および`​order_by​`パラメータに適した値を含め、実行されるクエリについてBoxに知らせる必要があります。
 
-An index will then be created and you will be provided with the the name of this
-index which then needs be used in the `​use_index​` parameter of a query
-request.
+その後、インデックスが作成されると、その名前が提供されます。これは、クエリリクエストの`​use_index​`パラメータで使用する必要があります。
 
-If you prefer to specify a name for the index please provide that name upon
-requesting the index.
+インデックスの名前を指定したい場合は、インデックスをリクエストする際にその名前をお知らせください。
 
 <Message warning>
 
-The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
-be used in the query for an index.
+`LIKE`、`ILIKE`、`NOT LIKE`、および`NOT ILIKE`演算子は、インデックスのクエリでは使用できません。
 
 </Message>
 
-### Example index request
+### インデックスリクエストの例
 
-The following is an example request for an index. It is essential to include all
-the information for the `​from`, `query`, and `order_by​` parameters.
+以下は、インデックスのリクエストの例です。`​from`、`query`および`order_by​`パラメータに関するすべての情報を含める必要があります。
 
 <!-- markdownlint-disable line-length -->
 
-|                   |                                                                                                                                                                                    |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Query description | Returns files of the type Customer Submission which are associated with a specific Account Number and for which the Status is Pending. Orders the response by the Submission Date. |
-| `from`            | `enterprise_123456.customerInfo`                                                                                                                                                   |
-| `query`           | `accountNumber = :argAccountNum AND status = :argStatus`                                                                                                                           |
-| `order_by`        | `[{ "field_key": "submissionDate","direction": "desc" }]`                                                                                                                          |
+|            |                                                                            |
+| ---------- | -------------------------------------------------------------------------- |
+| クエリの説明     | 特定のアカウント番号に関連付けられ、ステータスが保留中になっている、「顧客による送信」というタイプのファイルを返します。応答は送信日で並べられます。 |
+| `from`     | `enterprise_123456.customerInfo`                                           |
+| `query`    | `accountNumber = :argAccountNum AND status = :argStatus`                   |
+| `order_by` | `[{ "field_key": "submissionDate","direction": "desc" }]`                  |
 
 <!-- markdownlint-enable line-length -->
 
-## Query with an index
+## インデックスを使用したクエリの実行
 
-To query with an index, use the name of the index we provided when performing
-your query as the value for the [`use_index`][use_index] parameter.
+インデックスを使用してクエリを実行するには、クエリの実行時に提供されるインデックスの名前を、[`use_index`][use_index]パラメータの値として使用します。
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
@@ -101,10 +87,10 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 <Message warning>
 
-The parameters used in a query must match exactly what was provided
-for the creation of the index.
+クエリで使用するパラメータは、インデックスの作成に指定されたものとまったく同じにする必要があります。
 
 </Message>
 
 [support]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
+
 [use_index]: e://post-metadata-queries-execute-read/#param-use_index

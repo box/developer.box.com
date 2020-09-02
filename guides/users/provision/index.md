@@ -15,41 +15,27 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/index.md
 ---
-# Provision Users
+# ユーザーのプロビジョニング
 
-When setting up a brand new Box user account, a common need is to have that new
-account be populated with standard folders, collaborations, and group
-associations.
+新しいBoxユーザーアカウントを設定する際、一般にはこの新しいアカウントに標準のフォルダ、コラボレーション、グループ関連付けを作成する必要があります。
 
-Typically there are some common questions that may be asked about the user
-account to determine when standard setup may be needed for the account:
+通常、アカウントの標準設定が必要なタイミングを判断するには、ユーザーアカウントについて以下の事項を検討します。
 
-* Will the user need access to standard company files or folders immediately?
-* Are collaborations associated individually or through groups? If through a
-group association, are there any standard groups that the user should be added
-to?
-* Should the user be assigned any tasks to complete?
-* Would any instructional comments on any files be helpful?
+* ユーザーが標準の会社のファイルまたはフォルダに即座にアクセスする必要があるか。
+* コラボレーションを個別に関連付けるか、グループを介して関連付けるか。グループの関連付けを介する場合、ユーザーを追加する必要がある標準グループがあるか。
+* ユーザーに完了すべきタスクを割り当てる必要があるか。
+* ファイルに関する説明的なコメントが役に立つか。
 
 <Message danger>
 
-# New User Password Resets and Email Confirmation
+# 新しいユーザーのパスワードリセットとメール確認
 
-You may experience some errors when creating users and immediately trying to
-take actions with that user through the API. For example, a common error to
-receive is `user_email_confirmation_required` or `password_reset_required`.
-These kinds of errors may block some actions within the API, but you can
-still add the user as a collaborator on folders, add the user to groups, etc.
+ユーザーを作成した後、すぐにAPIを介してそのユーザーによるアクションを実行しようとすると、エラーが発生する場合があります。たとえば、`user_email_confirmation_required`や`password_reset_required`といったエラーがよく発生します。このようなエラーが発生するとAPI内の一部のアクションがブロックされる場合がありますが、そのユーザーをフォルダのコラボレータとして追加したり、グループに追加したりすることはできます。
 
 </Message>
 
-## Sample Overview
+## サンプル概要
 
-In this scenario we'll focus on provisioning a new
-[Box Managed User](guide://authentication/user-types/managed-users), as there
-are very different considerations when provisioning Box App User accounts.
+Box App Userアカウントをプロビジョニングする際の注意事項は非常に多岐にわたるため、このシナリオでは、新しい[Box管理対象ユーザー](guide://authentication/user-types/managed-users)のプロビジョニングを中心に検討します。
 
-We'll start with solving the most repeatable aspects of
-provisioning a user's account, creating a general folder and file structure
-that everyone will have on first login, using groups to control access to
-shared files and folders for users.
+初めに、ユーザーアカウントのプロビジョニングで繰り返せる部分の大半を解決し、すべてのユーザーが最初にログインした時点で与えられる一般的なフォルダおよびファイル構造を作成し、グループを使用してユーザーの共有ファイルとフォルダへのアクセスを制御します。

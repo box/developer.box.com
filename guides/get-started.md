@@ -13,4 +13,4 @@ previous_page_id: guides
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/get-started.md
 ---
-# Get started
+# はじめに

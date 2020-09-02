@@ -16,28 +16,18 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Documentation UI
+# ドキュメントUI
 
-The following is an overview of some custom React components that are supported
-in these docs.
+以下に、これらのドキュメントでサポートされているカスタムReactコンポーネントの概要を示します。
 
-## Technical Implementation
+## 技術的実装
 
-These custom UI elements all look like HTML but under the hood they are all
-plain React components.
+これらのカスタムUI ElementはすべてHTMLに似ていますが、実際はすべてプレーンなReactコンポーネントです。
 
-Within the Box Developer Documentation Framework a component is registered with
-a name and a component, and when the markdown is parsed the content of these
-components is passed to the React component. Only registered components are
-recognized.
+Box開発者向けドキュメントフレームワーク内では、コンポーネントが名前付きで登録されており、マークダウンが解析されると、これらのコンポーネントのコンテンツがそのReactコンポーネントに渡されます。認識されるのは、登録済みのコンポーネントのみです。
 
-## Common Issues
+## 一般的な問題
 
-There are a few known issues with the markdown parser. For example, the markdown
-parser expects the components to have a closing tag (`<Foo></Foo>`) while
-self-closing tags are not allowed (`<Foo />`). To make things easier for you,
-the build system will try and covert any self closing tags to the right format.
+マークダウンパーサーには既知の問題がいくつかあります。たとえば、マークダウンパーサーではコンポーネントに終了タグ(`<Foo></Foo>`)があることが求められるのに対し、自己終了タグ(`<Foo />`)は許可されていません。作業が簡単になるように、ビルドシステムでは自己終了タグを適切な形式に変換しようとします。
 
-Other issues are known and have been resolved during the build process. If you
-come across any more rendering issues please solve them in the markdown
-compiler, not within the React site.
+この他にも既知の問題があり、ビルドプロセスで解決されています。今後レンダリングの問題が発生した場合は、Reactサイト内ではなくマークダウンコンパイラで解決してください。

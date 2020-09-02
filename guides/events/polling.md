@@ -21,39 +21,33 @@ previous_page_id: events/for-enterprise
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/polling.md
 ---
-# Long-Poll Events
+# ロングポーリングイベント
 
-To get real-time notification of activity in a Box account you can use the long
-poll feature of the [`OPTIONS /events`](e://options_events) API.
+Boxアカウントでアクティビティのリアルタイム通知を取得するために、[`OPTIONS /events`](e://options_events) APIのロングポーリング機能を使用できます。
 
-<Samples id='options_events' >
+<Samples id="options_events">
 
 </Samples>
 
 <Message warning>
 
-Long polling is only available for user events. Enterprise events do not
-support long polling.
+ロングポーリングはユーザーイベントにのみ使用できます。エンタープライズイベントではロングポーリングがサポートされません。
 
 </Message>
 
-## Long Polling
+## ロングポーリング
 
-Long polling involves opening an HTTP request and keeping it open until the
-server sends a response, then repeating the process over and over to receive
-updated responses.
+ロングポーリングでは、HTTPリクエストを開き、サーバーが応答を送信するまでそのリクエストを開いたままにして、そのプロセスを何度も繰り返して更新された応答を受信します。
 
 <Message>
 
-The SDKs have built-in support for turning the event feeds into an event
-stream by long polling for new events.
+SDKには、新しいイベントに対するロングポーリングにより、イベントフィードをイベントストリームに変換するためのサポートが組み込まれています。
 
 </Message>
 
-### Long Poll URL
+### ロングポーリングURL
 
-To use long polling, first send an request to the
-[`OPTIONS /events`](e://options_events) API to retrieve the long poll URL.
+ロングポーリングを使用するには、まず、リクエストを[`OPTIONS /events`](e://options_events) APIに送信し、ロングポーリングURLを取得します。
 
 ```curl
 curl -X OPTIONS https://api.box.com/2.0/events \
@@ -75,32 +69,20 @@ curl -X OPTIONS https://api.box.com/2.0/events \
 }
 ```
 
-### Real-Time Servers
+### リアルタイムサーバー
 
-Next, make a `GET` request to the provided URL to begin listening for events. If
-an event occurs in an account that is being monitored the application will
-receive a response with the value `new_change`. The response contains no other
-details.
+次に、指定されたURLに`GET`リクエストを実行してイベントのリッスンを開始します。監視対象のアカウントでイベントが発生すると、`new_change`という値を持つ応答が送信されます。応答にはその他の詳細は含まれていません。
 
-This single response serves as a prompt to take further action such as
-sending a request to the `GET /events` endpoint with the last known
-`stream_position`.
+この単一の応答は、最新の既知の`stream_position`を使用して`GET /events`エンドポイントにリクエストを送信するなど、後続の処理を促すことを目的としています。
 
-### Disconnect & Reconnect
+### 切断と再接続
 
-After the server sends this response it closes the connection. The application
-must now repeat the long poll process to begin listening for events again.
+サーバーは、この応答を送信した後に接続を閉じます。この時点でアプリケーションがイベントのリッスンを再開するには、ロングポーリングのプロセスを繰り返す必要があります。
 
-If no events occur for a while after the application connects to the real-time
-server the connection will close with a `reconnect` value. When this happens the
-application should make a new call to `OPTIONS /events` to restart the process.
+アプリケーションがリアルタイムサーバーに接続してもその後しばらくイベントが発生しないと、接続が閉じられ、`reconnect`という値が返されます。この状況になると、アプリケーションはプロセスを再開するために`OPTIONS /events`に対する新しい呼び出しを実行する必要があります。
 
-### Timeouts & Retries
+### タイムアウトと再試行
 
-If the application receive no events in `retry_timeout` seconds then the
-application can reconnect to the real-time server. This might be necessary in
-due to network errors.
+`retry_timeout`で指定した秒数以内にアプリケーションがイベントを受け取らなければ、アプリケーションはリアルタイムサーバーに再接続できます。これは、ネットワークエラーが発生すると必要になる場合があります。
 
-If the application receive a `max_retries` error when making a `GET` request to
-the real-time server then it must restart the process by making an `OPTIONS` call
-to the `/events` API.
+アプリケーションがリアルタイムサーバーに対して`GET`リクエストを送信したときに`max_retries`エラーが返された場合は、`/events` APIに対して`OPTIONS`呼び出しを実行してプロセスを再開する必要があります。

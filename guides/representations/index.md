@@ -19,13 +19,10 @@ previous_page_id: representations/supported-file-types
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/index.md
 ---
-# Representations
+# レプリゼンテーション
 
-A representation is an alternative asset for a file stored in Box. These assets
-can be PDFs, thumbnails, or text extractions.
+レプリゼンテーションとは、Boxに保存されているファイルの代替アセットです。このようなアセットには、PDF、サムネイル、またはテキスト抽出を使用できます。
 
-Representations are automatically generated for the supported file types, either
-when uploading to Box or when requesting the asset.
+レプリゼンテーションは、Boxへのアップロード時またはアセットのリクエスト時に、サポートされているファイルタイプに対して自動的に生成されます。
 
-These representations are exposed through the `GET /files/:id` endpoint by using
-the `fields=representations` query parameter and the `x-rep-hints` header.
+このようなレプリゼンテーションは、`fields=representations`クエリパラメータと`x-rep-hints`ヘッダーを使用することで、`GET /files/:id`エンドポイントを介して公開されます。

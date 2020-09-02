@@ -24,40 +24,31 @@ source_url: >-
 ---
 <!-- alex disable black -->
 
-# Preview - Viewers & Events
+# プレビュー - ビューアーとイベント
 
 <!-- markdownlint-disable no-duplicate-header -->
 
-This page describes the preview experience for each file type. It also lists the
-events you can listen for by viewer type.
+このページでは、ファイルタイプごとのプレビュー機能について説明します。また、ビューアーの種類別にリッスンできるイベントのリストも示します。
 
-## Text Viewer
+## テキストビューアー
 
-The text viewer renders previews of text files. For code files like `py` or
-`rb`, it uses [`highlight.js`](https://github.com/isagalaev/highlight.js) to add
-syntax highlighting.
+テキストビューアーでは、テキストファイルのプレビューがレンダリングされます。`py`や`rb`のようなコードファイルの場合は、構文の強調表示を追加するために[`highlight.js`](https://github.com/isagalaev/highlight.js)が使用されます。
 
-### Behavior
+### 動作
 
-The text viewer displays the first 192 KB of text in the file. Additional text is
-truncated and a notification and download button are appended to the bottom of
-the preview.
+テキストビューアーには、ファイル内のテキストのうち最初の192KBが表示されます。その他のテキストは省略され、通知とダウンロードボタンがプレビューの最下部に追加されます。
 
-Re-sizing the viewer window will reflow the text to fit the available space and
-the zoom in and out buttons will increase and decrease font size respectively.
+ビューアーウィンドウのサイズを変更すると、使用可能なスペースに収まるようテキストの再流し込みが行われます。また、拡大ボタンと縮小ボタンにより、フォントサイズがそれぞれ縮小または拡大されます。
 
-This viewer supports printing and will attempt to print with appropriate syntax
-highlighting when either `print()` is invoked or the print button is pressed.
-Note that printing large files may cause some browsers to freeze for a few
-seconds.
+このビューアーでは印刷がサポートされており、`print()`が呼び出されるか印刷ボタンが押されると、適切な構文を強調表示した状態で印刷が行われます。サイズの大きなファイルを印刷すると、一部のブラウザでは数秒間動作が停止する場合があります。
 
-### Controls
+### コントロール
 
-- Zoom In
-- Zoom Out
-- Fullscreen: can be exited with the escape key
+* 拡大
+* 縮小
+* 全画面: Escキーを押すと終了可能
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `as`, `as3as`, `asmas`, `batas`, `cas`, `ccas`, `cmakeas`, `cppas`, `csas`,
 `cssas`, `cxxas`, `diffas`, `erbas`, `groovyas`, `has`, `hamlas`, `hhas`,
@@ -66,675 +57,598 @@ seconds.
 `sassas`, `scalaas`, `scriptas`, `scmas`, `smlas`, `sqlas`, `shas`, `vias`,
 `vimas`, `webdocas`, `xhtmlas`, `yaml`,
 
-### Events
+### イベント
 
-The text viewer triggers the following events.
+テキストビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                                | Event Data                                                            |
-| -------------- | ------------------------------------------ | --------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed     |                                                                       |
-| `load`         | The preview loads                          | 1. `{string}` **`error`** (optional): error message                   |
-|                |                                            | 2. `{object}` **`file`**: current file                                |
-|                |                                            | 3. `{object}` **`metrics`**: information from the logger              |
-|                |                                            | 4. `{object}` **`viewer`**: current viewer                            |
-| `notification` | A notification is displayed                |                                                                       |
-| `navigate`     | The preview is shown for a given index     | `{object}` file                                                       |
-| `reload`       | The preview reloads                        |                                                                       |
-| `resize`       | The preview resizes                        | 1. `{number}` **`height`**: window height                             |
-|                |                                            | 2. `{number}` **`width`**: window width                               |
-| `zoom`         | The preview zooms in or out                | 1. `{number}` **`zoom`**: new zoom value                              |
-|                |                                            | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
-|                |                                            | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-| `printsuccess` | An attempt to print triggered successfully |                                                                       |
+| イベント名          | 説明                       | イベントデータ                                                |
+| -------------- | ------------------------ | ------------------------------------------------------ |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                                        |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ              |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル                      |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報                  |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー                   |
+| `notification` | 通知が表示されます。               |                                                        |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                                         |
+| `reload`       | プレビューが再読み込みされます。         |                                                        |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ                   |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅                     |
+| `zoom`         | プレビューが拡大または縮小されます。       | 1. `{number}` **`zoom`**: 新しい拡大/縮小値                    |
+|                |                          | 2. `{boolean}` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能  |
+|                |                          | 3. `{boolean}` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能 |
+| `printsuccess` | 印刷が正常に開始されました。           |                                                        |
 
 <!-- markdownlint-enable line-length -->
 
-## 360 Video Viewer
+## 360度動画ビューアー
 
-The 360 video viewer renders a preview of a video stored as an equirectangular
-projection (often recorded with a 360 camera).
+360度動画ビューアーでは、正距円筒図法を使用して保存された動画(ほとんどの場合に360度カメラで撮影)のプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-This viewer gives you an interactive view of the 360 degree video.
+このビューアーでは、360度動画がインタラクティブに表示されます。
 
-### Controls
+### コントロール
 
-- Change the view direction with the left mouse button (single touch on
-  touch-enabled device).
+* マウスの左ボタンで表示方向を変更します(タッチ対応デバイスでは1回タッチ)。
 
-### VR button
+### VRボタン
 
-When using a browser that supports WebVR and a suitable VR device is attached to
-your computer, a VR button will be available to allow toggling in and out of VR
-mode.
+WebVRをサポートするブラウザの使用時に、対応するVRデバイスがコンピュータに接続されると、VRボタンを使用して、VRモードの開始と終了を切り替えることができます。
 
-### Limitations
+### 制限
 
-Currently, this previewer requires that the file be named with a `.360`
-preceding the file extension. This is so that Preview SDK knows to run this
-viewer rather than the standard video preview.
+現在、このプレビューアーを使用するには、ファイルの名前を付ける際にファイル拡張子の前に`.360`を付ける必要があります。こうすることで、Preview SDKは、標準の動画プレビューではなく、このビューアーを実行することを認識します。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `360.3g2`, `360.3gp`, `360.avi`, `360.m2v`, `360.m2ts`, `360.m4v`, `360.mkv`,
 `360.mov`, `360.mp4`, `360.mpeg`, `360.mpg`, `360.mts`, `360.qt`, `360.wmv`
 
-### Events
+### イベント
 
-The 360 video viewer triggers the following events.
-
-<!-- markdownlint-disable line-length -->
-
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
-
-## SWF Viewer
-
-The SWF viewer uses [`SWFObject`](https://github.com/swfobject/swfobject) to embed
-SWF files.
-
-### Behavior
-
-If the user has the Adobe Flash Player plugin, `SWFObject` will embed the SWF file
-and allow the plugin to render relevant content.
-
-Note that all network requests made by the flash content will be blocked due to
-security constraints, so any content that requires network connectivity will not
-be rendered.
-
-### Supported File Extensions
-
-- `swf`
-
-### Events
-
-The SWF viewer triggers the following events.
+360度動画ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
 
 <!-- markdownlint-enable line-length -->
 
-## Presentation viewer
+## SWFビューアー
 
-The presentation viewer renders previews of PowerPoint files.
+SWFビューアーは、[`SWFObject`](https://github.com/swfobject/swfobject)を使用してSWFファイルを埋め込みます。
 
-### Behavior
+### 動作
 
-The presentation viewer remembers which slide you were viewing upon closing the
-preview. The next time that file is opened, you will immediately be brought to
-that slide. Scrolling the mouse up and down, or swiping up and down on mobile
-will transition between slides. Zooming in or out will increase or decrease the
-size of the slide respectively. If the zoom level causes the content to
-overflow, scrolling the mouse will allow you to scroll around the slide. To
-return to normal scrolling behavior, the user must zoom out until the overflow
-is removed.
+ユーザーがAdobe Flash Playerプラグインを使用している場合、`SWFObject`はSWFファイルを埋め込み、このプラグインで関連するコンテンツをレンダリングできるようにします。
 
-### Controls
+Flashコンテンツによるネットワークリクエストはすべて、セキュリティの制約によってブロックされるため、ネットワーク接続を必要とするコンテンツはレンダリングされないことに注意してください。
 
-- Zoom In
-- Zoom Out
-- Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
-- Fullscreen: can be exited with the escape key
+### サポートされているファイル拡張子
 
-### Supported File Extensions
+* `swf`
+
+### イベント
+
+SWFビューアーでは、以下のイベントがトリガーされます。
+
+<!-- markdownlint-disable line-length -->
+
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
+
+<!-- markdownlint-enable line-length -->
+
+## プレゼンテーションビューアー
+
+プレゼンテーションビューアーでは、PowerPointファイルのプレビューがレンダリングされます。
+
+### 動作
+
+プレゼンテーションビューアーには、プレビューを閉じるときに表示していたスライドが記憶されます。次回そのファイルを開くと、すぐにそのスライドが表示されます。マウスで上下にスクロールするか、モバイルデバイスで上下にスワイプすると、スライド間を移動します。ビューアーを拡大または縮小すると、スライドのサイズもそれぞれ拡大または縮小されます。ズームレベルが原因でコンテンツがはみ出す場合は、マウスをスクロールすると、スライドをスクロールできます。通常のスクロール動作に戻すには、はみ出さなくなるまで縮小する必要があります。
+
+### コントロール
+
+* 拡大
+* 縮小
+* ページの設定: 上矢印と下矢印を使用するか、ページ番号をクリックしてテキストを入力します。
+* 全画面: Escキーを押すと終了可能
+
+### サポートされているファイル拡張子
 
 `ppt`, `pptx`, `odp`
 
-### Options
+### オプション
 
 <!-- markdownlint-disable line-length -->
 
-| Option        | Type    | Description                                                             |
-| ------------- | ------- | ----------------------------------------------------------------------- |
-| `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
+| オプション         | 型       | 説明                                      |
+| ------------- | ------- | --------------------------------------- |
+| `annotations` | boolean | 省略可。コンテンツの注釈を表示するかどうか。デフォルト値は`false`です。 |
 
 <!-- markdownlint-enable line-length -->
 
-### Events
+### イベント
 
-The presentation viewer triggers the following events.
+プレゼンテーションビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                                                    |
-| -------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                                               |
-| `load`         | The preview loads                      | 1. `string` **`error`** (optional): error message                             |
-|                |                                        | 2. `object` **`file`**: current file                                          |
-|                |                                        | 3. `object` **`metrics`**: information from the logger                        |
-|                |                                        | 4. `object` **`viewer`**: current viewer                                      |
-| `notification` | A notification is displayed            |                                                                               |
-| `navigate`     | The preview is shown for a given index | `object` file                                                                 |
-| `reload`       | The preview reloads                    |                                                                               |
-| `resize`       | The preview resizes                    | 1. `number` **`height`**: window height                                       |
-|                |                                        | 2. `number` **`width`**: window width                                         |
-| `zoom`         | The preview zooms in or out            | 1. `number` **`zoom`**: new zoom value                                        |
-|                |                                        | 2. `boolean` **`canZoomIn`**: true if the viewer can zoom in more             |
-|                |                                        | 3. `boolean` **`canZoomOut`**: true if the viewer can zoom out more           |
-| `pagerender`   | A page renders                         | `number` page number of rendered page                                         |
-| `pagefocus`    | A page is visible                      | `number` page number of focused page                                          |
-| `scrollstart`  | The viewer starts to scroll            | 1. `number` **`scrollTop`**: number of pixels scrolled from top of viewport   |
-|                |                                        | 2. `number` **`scrollLeft`**: number of pixels scrolled from left of viewport |
-| `scrollend`    | The viewer stops scrolling             | 1. `number` **`scrollTop`**: number of pixels scrolled from top of viewport   |
-|                |                                        | 2. `number` **`scrollLeft`**: number of pixels scrolled from left of viewport |
+| イベント名          | 説明                       | イベントデータ                                               |
+| -------------- | ------------------------ | ----------------------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                                       |
+| `load`         | プレビューが読み込まれます。           | 1. `string` **`error`** (省略可): エラーメッセージ               |
+|                |                          | 2. `object` **`file`**: 現在のファイル                       |
+|                |                          | 3. `object` **`metrics`**: ロガーからの情報                   |
+|                |                          | 4. `object` **`viewer`**: 現在のビューアー                    |
+| `notification` | 通知が表示されます。               |                                                       |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `object`ファイル                                          |
+| `reload`       | プレビューが再読み込みされます。         |                                                       |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `number` **`height`**: ウィンドウの高さ                    |
+|                |                          | 2. `number` **`width`**: ウィンドウの幅                      |
+| `zoom`         | プレビューが拡大または縮小されます。       | 1. `number` **`zoom`**: 新しい拡大/縮小値                     |
+|                |                          | 2. `boolean` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能   |
+|                |                          | 3. `boolean` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能  |
+| `pagerender`   | ページがレンダリングされます。          | `number` レンダリングされたページのページ番号                           |
+| `pagefocus`    | ページが表示可能です。              | `number` フォーカスされたページのページ番号                            |
+| `scrollstart`  | ビューアーでスクロールを開始します。       | 1. `number` **`scrollTop`**: ビューポートの上部からスクロールしたピクセル数  |
+|                |                          | 2. `number` **`scrollLeft`**: ビューポートの左側からスクロールしたピクセル数 |
+| `scrollend`    | ビューアーでスクロールを停止します。       | 1. `number` **`scrollTop`**: ビューポートの上部からスクロールしたピクセル数  |
+|                |                          | 2. `number` **`scrollLeft`**: ビューポートの左側からスクロールしたピクセル数 |
 
 <!-- markdownlint-enable line-length -->
 
-## MP4 Viewer
+## MP4ビューアー
 
-The MP4 viewer renders previews for video files.
+MP4ビューアーでは、動画ファイルのプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-The MP4 viewer uses a black background to create a better viewing experience.
-Volume can be muted or unmuted by clicking the volume icon, or changed by
-dragging the volume scrubber. The position of the video can be changed by
-clicking or dragging the playback scrubber.
+MP4ビューアーは、黒い背景を使用して見やすくしています。音量は、音量アイコンをクリックしてミュートまたはミュート解除したり、音量スクラバをドラッグして変更したりできます。動画の位置は、再生スクラバをクリックまたはドラッグして変更できます。
 
-### Controls
+### コントロール
 
-- Play/Pause
-- Volume
-- Settings
-- Fullscreen (can be exited with the escape key)
+* 再生/一時停止
+* 音量
+* 設定
+* 全画面(Escキーを押すと終了可能)
 
-### Settings
+### 設定
 
-Settings are available through the cog icon in the preview toolbar.
+設定は、プレビューツールバーにある歯車アイコンから使用できます。
 
-- Video speed values: `0.25`, `0.5`, normal (`1`), `1.25`, `1.5`, `2.0`
+* 動画速度の値: `0.25`、`0.5`、標準(`1`)、`1.25`、`1.5`、`2.0`
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`,
 `ogg`, `mts`, `qt`, `wmv`
 
-### Events
+### イベント
 
-The MP4 viewer triggers the following events.
+MP4ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                             |
-| -------------- | -------------------------------------- | ------------------------------------------------------ |
-| `destroy`      | The preview is intentionally destroyed |                                                        |
-| `load`         | The preview loads                      | 1. `string` **`error`** (optional): error message      |
-|                |                                        | 2. `object` **`file`**: current file                   |
-|                |                                        | 3. `object` **`metrics`**: information from the logger |
-|                |                                        | 4. `object` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                        |
-| `navigate`     | The preview is shown for a given index | `object` file                                          |
-| `reload`       | The preview reloads                    |                                                        |
-| `resize`       | The preview resizes                    | 1. `number` **`height`**: window height                |
-|                |                                        | 2. `number` **`width`**: window width                  |
-| `speedchange`  | Media speed changes                    | `string` playback speed                                |
-| `play`         | The video plays                        |                                                        |
-| `pause`        | The video pauses                       |                                                        |
-| `seek`         | The video skips to a time              | `number` time                                          |
+| イベント名          | 説明                       | イベントデータ                                 |
+| -------------- | ------------------------ | --------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                         |
+| `load`         | プレビューが読み込まれます。           | 1. `string` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `object` **`file`**: 現在のファイル         |
+|                |                          | 3. `object` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `object` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                         |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `object`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                         |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `number` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `number` **`width`**: ウィンドウの幅        |
+| `speedchange`  | メディアの速度が変更されます。          | `string` 再生速度                           |
+| `play`         | 動画が再生されます。               |                                         |
+| `pause`        | 動画が一時停止されます。             |                                         |
+| `seek`         | 動画は任意の時点までスキップします。       | `number` 時刻                             |
 
 <!-- markdownlint-enable line-length -->
 
-## MP3 Viewer
+## MP3ビューアー
 
-The MP3 viewer displays previews for audio files.
+MP3ビューアーでは、オーディオファイルのプレビューが表示されます。
 
-### Behavior
+### 動作
 
-Volume can be muted or unmuted by clicking the volume icon, or changed by
-dragging the volume scrubber. The position of the audio can be changed by
-clicking or dragging the playback scrubber.
+音量は、音量アイコンをクリックしてミュートまたはミュート解除したり、音量スクラバをドラッグして変更したりできます。音声の位置は、再生スクラバをクリックまたはドラッグして変更できます。
 
-### Controls
+### コントロール
 
-- Play/Pause
-- Volume
-- Settings
+* 再生/一時停止
+* 音量
+* 設定
 
-### Settings
+### 設定
 
-Settings are available through the cog icon in the preview toolbar.
+設定は、プレビューツールバーにある歯車アイコンから使用できます。
 
-- Audio Speed: `0.25`, `0.5`, normal (`1`), `1.25`, `1.5`, `2.0`
+* 音声速度: `0.25`、`0.5`、標準(`1`)、`1.25`、`1.5`、`2.0`
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `aac`, `aif`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ra`, `wav`, `wma`
 
-### Events
+### イベント
 
-The MP3 viewer triggers the following events.
+MP3ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                             |
-| -------------- | -------------------------------------- | ------------------------------------------------------ |
-| `destroy`      | The preview is intentionally destroyed |                                                        |
-| `load`         | The preview loads                      | 1. `string` **`error`** (optional): error message      |
-|                |                                        | 2. `object` **`file`**: current file                   |
-|                |                                        | 3. `object` **`metrics`**: information from the logger |
-|                |                                        | 4. `object` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                        |
-| `navigate`     | The preview is shown for a given index | `object` file                                          |
-| `reload`       | The preview reloads                    |                                                        |
-| `resize`       | The preview resizes                    | 1. `number` **`height`**: window height                |
-|                |                                        | 2. `number` **`width`**: window width                  |
-| `speedchange`  | Media speed changes                    | `string` playback speed                                |
-| `play`         | The video plays                        |                                                        |
-| `pause`        | The video pauses                       |                                                        |
-| `seek`         | The video skips to a time              | `number` time                                          |
+| イベント名          | 説明                       | イベントデータ                                 |
+| -------------- | ------------------------ | --------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                         |
+| `load`         | プレビューが読み込まれます。           | 1. `string` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `object` **`file`**: 現在のファイル         |
+|                |                          | 3. `object` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `object` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                         |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `object`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                         |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `number` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `number` **`width`**: ウィンドウの幅        |
+| `speedchange`  | メディアの速度が変更されます。          | `string` 再生速度                           |
+| `play`         | 動画が再生されます。               |                                         |
+| `pause`        | 動画が一時停止されます。             |                                         |
+| `seek`         | 動画は任意の時点までスキップします。       | `number` 時刻                             |
 
 <!-- markdownlint-enable line-length -->
 
-## Office Viewer
+## Officeビューアー
 
-The Office viewer renders previews of Microsoft Office documents by embedding an
-`<iframe>` of Microsoft's Office Online viewer.
+Officeビューアーでは、MicrosoftのOffice Onlineビューアーの`<iframe>`を埋め込むことで、Microsoft Officeドキュメントのプレビューをレンダリングします。
 
-### Behavior
+### 動作
 
-The Office viewer currently supports previews of Excel files using Microsoft
-Office Online from within the Box Web Application. Support for platform use
-cases and other Office file formats is in progress.
+現在、Officeビューアーでは、Boxウェブアプリ内からMicrosoft Office Onlineを使用したExcelファイルのプレビューがサポートされています。プラットフォームのユースケースおよび他のOfficeファイル形式のサポートは開発中です。
 
-There are several limitations at the moment:
+現時点では、次のように、いくつかの制限があります。
 
-- File must be downloadable
-- File size cannot be greater than 5MB
-- File cannot be shared via a Box shared link with a password (shared links
-  without passwords are okay)
+* ファイルはダウンロード可能にする必要があります。
+* ファイルのサイズは5MB未満にする必要があります。
+* ファイルは、パスワード付きのBox共有リンクで共有できません(パスワードのない共有リンクは問題ありません)。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `xlsx`
 
-### Events
+### イベント
 
-The Office viewer triggers the following events.
+Officeビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
 
 <!-- markdownlint-enable line-length -->
 
-## Markdown Viewer
+## Markdownビューアー
 
-The Markdown viewer uses
-[`Remarkable`](https://github.com/jonschlinkert/remarkable) to parse markdown
-files and [`highlight.js`](https://github.com/isagalaev/highlight.js) to add
-syntax highlighting to code blocks contained within.
+Markdownビューアーでは、[`Remarkable`](https://github.com/jonschlinkert/remarkable)を使用してマークダウンファイルと[`highlight.js`](https://github.com/isagalaev/highlight.js)を解析し、ビューアーに表示されるコードブロックに構文の強調表示を追加します。
 
-### Behavior
+### 動作
 
-The Markdown viewer parses the first 192KB of raw markdown in the file and
-renders it using GitHub's Markdown style. Additional content is truncated and a
-notification along with a download button are appended to the bottom of the
-preview.
+Markdownビューアーでは、ファイル内の未加工のマークダウンのうち最初の192KBを解析し、GitHubのMarkdownスタイルを使用してレンダリングします。その多のコンテンツは省略され、ダウンロードボタンとともに通知がプレビューの最下部に追加されます。
 
-The viewer supports
-[GitHub Flavored
-Markdown](https://guides.github.com/features/mastering-markdown/) including
-tables, syntax highlighting, and automatic URL linking.
+このビューアーは、テーブル、構文の強調表示、自動URLリンクなど、[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)をサポートします。
 
-Re-sizing the viewer window will reflow the markdown to fit the available space.
-Also, this viewer supports printing and will attempt to print the parsed
-markdown and with syntax highlighting on code when either `print()` is invoked
-or the print button is pressed. Note that printing large files may cause some
-browsers to freeze for a few seconds.
+ビューアーウィンドウのサイズを変更すると、使用可能なスペースに収まるようマークダウンの再流し込みが行われます。また、このビューアーでは印刷がサポートされており、解析されたマークダウンが印刷されます。さらに、`print()`が呼び出されるか印刷ボタンが押されると、コード上で構文が強調表示されます。サイズの大きなファイルを印刷すると、一部のブラウザでは数秒間動作が停止する場合があります。
 
-### Controls
+### コントロール
 
-- Fullscreen (can be exited with the escape key)
+* 全画面(Escキーを押すと終了可能)
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `md`
 
-### Events
+### イベント
 
-The Markdown viewer triggers the following events.
+Markdownビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                                | Event Data                                               |
-| -------------- | ------------------------------------------ | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed     |                                                          |
-| `load`         | The preview loads                          | 1. `{string}` **`error`** (optional): error message      |
-|                |                                            | 2. `{object}` **`file`**: current file                   |
-|                |                                            | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                            | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed                |                                                          |
-| `navigate`     | The preview is shown for a given index     | `{object}` file                                          |
-| `reload`       | The preview reloads                        |                                                          |
-| `resize`       | The preview resizes                        | 1. `{number}` **`height`**: window height                |
-|                |                                            | 2. `{number}` **`width`**: window width                  |
-| `printsuccess` | An attempt to print triggered successfully |                                                          |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
+| `printsuccess` | 印刷が正常に開始されました。           |                                           |
 
 <!-- markdownlint-enable line-length -->
 
-## `Model3D` viewer
+## `Model3D`ビューアー
 
-The `Model3D` viewer renders previews of 3D model files and allows you to enable
-different rendering modes to inspect various aspects of the model. for example
-wireframe, texture coordinates, and more. Animation data is also supported for
-files that contain it (for example `box3d`, `fbx`, `dae`).
+`Model3D`ビューアーでは、3Dモデルファイルのプレビューがレンダリングされるほか、各種レンダリングモードを有効にして、ワイヤフレームやテクスチャ座標など、モデルのさまざまな側面を調査できます。また、アニメーションデータは、それを含むファイル(`box3d`、`fbx`、`dae`など)でサポートされています。
 
-### Behavior
+### 動作
 
-The `Model3D` viewer gives you an interactive view of the model. The left mouse
-button allows you to orbit about the model (single touch on touch-enabled
-device). Double-clicking somewhere on the model allows you to change orbit
-focus.
+`Model3D`ビューアーでは、モデルがインタラクティブに表示されます。マウスの左ボタンを使用すると、モデルを回転させることができます(タッチ対応デバイスでは1回タッチ)。モデルの任意の場所をクリックすると、軌道のフォーカスを変更できます。
 
-### Controls
+### コントロール
 
-- Zoom (change distance to the model) with the mouse wheel (or two-finger scroll
-  on a touch-enabled device).
-- Pan (lateral movement) with the right mouse button (or three-finger swipe on a
-  touch-enabled device).
-- Animation Selection: If the model that is being viewed contains animations,
-  two animation buttons will be visible in the toolbar. The first allows you to
-  play and pause the animation and the second allows the selection of the
-  current animation.
-- VR button: If using a browser that supports WebVR and a suitable VR device is
-  attached to your computer, the VR button will allow toggling in and out of VR
-  mode.
+* マウスホイールを使用(またはタッチ対応デバイスの場合は2本指でスクロール)して拡大/縮小(モデルまでの距離を変更)。
+* マウスの右ボタンを使用(またはタッチ対応デバイスの場合は3本指でスワイプ)して平行移動(横方向の移動)。
+* アニメーションの選択: 表示中のモデルにアニメーションが含まれている場合、ツールバーには2つのアニメーションボタンが表示されます。1つはアニメーションを再生/一時停止できるボタン、もう1つは現在のアニメーションを選択できるボタンです。
+* VRボタン: WebVRをサポートするブラウザを使用していて、対応するVRデバイスがコンピュータに接続された場合、VRボタンを使用すると、VRモードの開始と終了を切り替えることができます。
 
-### Settings
+### 設定
 
-Settings are available through the cog icon in the preview toolbar.
+設定は、プレビューツールバーにある歯車アイコンから使用できます。
 
-- Render Mode: Lit, Unlit, Normal, Shape, UV Overlay
-- Toggle Wireframe
-- Toggle Skeleton
-- Camera Projection: Perspective, Orthographic
-- Render Quality: Auto, Full
-- Rotate Model: X, Y, Z
+* レンダリングモード: ライティングあり、ライティングなし、標準、シェイプ、UVオーバーレイ
+* ワイヤフレームの切り替え
+* スケルトンの切り替え
+* カメラ投影: 透視投影、平行投影
+* レンダリング品質: 自動、詳細
+* モデルの回転: X、Y、Z
 
-## `Box3D` Packages
+## `Box3D`パッケージ
 
-Preview gives users the ability to view a single file within Box so, by default,
-you can't view textures on your model. However, the Box web application gives
-users the ability to create a Box3D package that combines all dependent files
-into a single file that can be shared and previewed. To do this, right-click the
-model file within Box and choose "Create 3D Package". All referenced files found
-within Box will be included in the resulting package.
+プレビューを使用すると、ユーザーはBox内に1つのファイルを表示できるため、デフォルトでは、モデルでテクスチャを表示できません。ただし、Boxウェブアプリを使用すると、ユーザーは、Box3Dパッケージを作成できます。このパッケージでは、依存するすべてのファイルが、共有およびプレビュー可能な1つファイルに統合されます。このパッケージを作成するには、Box内でモデルファイルを右クリックし、\[3Dパッケージの作成]を選択します。Box内にある参照ファイルはすべて、作成されるパッケージに含まれます。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `box3d`, `fbx`, `dae`, `3ds`, `obj`, `stl`, `ply`
 
-### Events
+### イベント
 
-The `Model3D` viewer triggers the following events.
+`Model3D`ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
 
 <!-- markdownlint-enable line-length -->
 
-## 360 Image viewer
+## 360度画像ビューアー
 
-The 360 image viewer renders a preview of an image stored as an equirectangular
-projection (often taken with a 360 camera).
+360度画像ビューアーでは、正距円筒図法を使用して保存された画像(ほとんどの場合に360度カメラで撮影)のプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-This viewer gives you an interactive view of a 360 degree image. First, a low
-resolution version of the image is loaded to give a quick view before the full
-resolution image is finished loading. Clicking and dragging with the left mouse
-button will change the view direction (single touch and drag on touch-enabled
-device).
+このビューアーでは、360度画像がインタラクティブに表示されます。まず、低解像度バージョンの画像が読み込まれ、フル解像度の画像の読み込みが終了するまで簡易表示されます。マウスの左ボタンでクリックしてドラッグすると、表示方向が変更されます(タッチ対応デバイスでは1回タッチしてドラッグ)。
 
-### Controls
+### コントロール
 
-- Fullscreen (can be exited with the escape key)
-- VR Button: When using a browser that supports WebVR and a suitable VR device
-  is attached to your computer, a VR button will be available to allow toggling
-  in and out of VR mode.
+* 全画面(Escキーを押すと終了可能)
+* VRボタン: WebVRをサポートするブラウザの使用時に、対応するVRデバイスがコンピュータに接続されると、VRボタンを使用して、VRモードの開始と終了を切り替えることができます。
 
-### Limitations
+### 制限
 
-Currently, this previewer requires that the file be named with a '.360'
-preceding the file extension. This is so that Preview SDK knows to run this
-viewer rather than the standard image viewer.
+現在、このプレビューアーを使用するには、ファイルの名前を付ける際にファイル拡張子の前に「.360」を付ける必要があります。こうすることで、Preview SDKは、標準の画像ビューアーではなく、このビューアーを実行することを認識します。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `360.jpg`, `360.jpeg`, `360.png`, `360.ai`, `360.bmp`, `360.dcm`, `360.eps`,
 `360.gif`, `360.ps`, `360.psd`, `360.svg`, `360.svs`, `360.tga`, `360.tif`,
 `360.tiff`
 
-### Events
+### イベント
 
-The 360 image viewer triggers the following events.
+360度画像ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
 
 <!-- markdownlint-enable line-length -->
 
-## Image viewer
+## 画像ビューアー
 
-The image viewer renders previews of image files.
+画像ビューアーでは、画像ファイルのプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-Rotating the viewer will rotate the image 90 degrees clockwise. At the default
-zoom level, clicking on the image will zoom in once. When zoomed in, clicking on
-the document will return to the default zoom level. When zoomed out, clicking on
-the document will zoom in until the original zoom level is reached.
+ビューアーを回転させると、画像が右へ90度回転します。デフォルトのズームレベルでは、画像をクリックすると1回拡大されます。拡大されたドキュメントをクリックすると、デフォルトのズームレベルに戻ります。縮小されたドキュメントをクリックすると、元のズームレベルになるまで拡大されます。
 
-### Controls
+### コントロール
 
-- Zoom In
-- Zoom Out
-- Rotate
-- Fullscreen: can be exited with the escape key
+* 拡大
+* 縮小
+* 回転
+* 全画面: Escキーを押すと終了可能
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`, `psd`, `svs`, `tga`
 
-### Options
+### オプション
 
 <!-- markdownlint-disable line-length -->
 
-| Option        | Type    | Description                                                             |
-| ------------- | ------- | ----------------------------------------------------------------------- |
-| `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
+| オプション         | 型       | 説明                                      |
+| ------------- | ------- | --------------------------------------- |
+| `annotations` | boolean | 省略可。コンテンツの注釈を表示するかどうか。デフォルト値は`false`です。 |
 
 <!-- markdownlint-enable line-length -->
 
-### Events
+### イベント
 
-The image viewer triggers the following events.
+画像ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                                | Event Data                                                            |
-| -------------- | ------------------------------------------ | --------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed     |                                                                       |
-| `load`         | The preview loads                          | 1. `{string}` **`error`** (optional): error message                   |
-|                |                                            | 2. `{object}` **`file`**: current file                                |
-|                |                                            | 3. `{object}` **`metrics`**: information from the logger              |
-|                |                                            | 4. `{object}` **`viewer`**: current viewer                            |
-| `notification` | A notification is displayed                |                                                                       |
-| `navigate`     | The preview is shown for a given index     | `{object}` file                                                       |
-| `reload`       | The preview reloads                        |                                                                       |
-| `resize`       | The preview resizes                        | 1. `{number}` **`height`**: window height                             |
-|                |                                            | 2. `{number}` **`width`**: window width                               |
-| `zoom`         | The preview zooms in or out                | 1. `{number}` **`zoom`**: new zoom value                              |
-|                |                                            | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
-|                |                                            | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-| `pan`          | The preview is panning                     |                                                                       |
-| `panstart`     | Panning starts                             |                                                                       |
-| `panend`       | Panning ends                               |                                                                       |
-| `rotate`       | The image rotates                          |                                                                       |
-| `printsuccess` | An attempt to print triggered successfully |                                                                       |
+| イベント名          | 説明                       | イベントデータ                                                |
+| -------------- | ------------------------ | ------------------------------------------------------ |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                                        |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ              |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル                      |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報                  |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー                   |
+| `notification` | 通知が表示されます。               |                                                        |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                                         |
+| `reload`       | プレビューが再読み込みされます。         |                                                        |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ                   |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅                     |
+| `zoom`         | プレビューが拡大または縮小されます。       | 1. `{number}` **`zoom`**: 新しい拡大/縮小値                    |
+|                |                          | 2. `{boolean}` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能  |
+|                |                          | 3. `{boolean}` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能 |
+| `pan`          | プレビューが平行移動します。           |                                                        |
+| `panstart`     | 平行移動が開始されます。             |                                                        |
+| `panend`       | 平行移動が終了します。              |                                                        |
+| `rotate`       | 画像が回転します。                |                                                        |
+| `printsuccess` | 印刷が正常に開始されました。           |                                                        |
 
 <!-- markdownlint-enable line-length -->
 
-## Multi-image viewer
+## 複数画像ビューアー
 
-The multi-image viewer renders previews of multi-image files (`tiff`, `tif`).
+複数画像ビューアーでは、複数画像のファイル(`tiff`、`tif`)のプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-At the default zoom level, clicking on the image will zoom in once. When zoomed
-in, clicking on the document will return to the default zoom level. When zoomed
-out, clicking on the document will zoom in until the original zoom level is
-reached.
+デフォルトのズームレベルでは、画像をクリックすると1回拡大されます。拡大されたドキュメントをクリックすると、デフォルトのズームレベルに戻ります。縮小されたドキュメントをクリックすると、元のズームレベルになるまで拡大されます。
 
-### Controls
+### コントロール
 
-- Zoom In
-- Zoom Out
-- Fullscreen: can be exited with the escape key
-- Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+* 拡大
+* 縮小
+* 全画面: Escキーを押すと終了可能
+* ページの設定: 上矢印と下矢印を使用するか、ページ番号をクリックしてテキストを入力します。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `tif`, `tiff`
 
-### Options
+### オプション
 
 <!-- markdownlint-disable line-length -->
 
-| Option        | Type    | Description                                                             |
-| ------------- | ------- | ----------------------------------------------------------------------- |
-| `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
+| オプション         | 型       | 説明                                      |
+| ------------- | ------- | --------------------------------------- |
+| `annotations` | boolean | 省略可。コンテンツの注釈を表示するかどうか。デフォルト値は`false`です。 |
 
 <!-- markdownlint-enable line-length -->
 
-### Events
+### イベント
 
-The image viewer triggers the following events.
+画像ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                                            |
-| -------------- | -------------------------------------- | --------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                                       |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message                   |
-|                |                                        | 2. `{object}` **`file`**: current file                                |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger              |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer                            |
-| `notification` | A notification is displayed            |                                                                       |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                                       |
-| `reload`       | The preview reloads                    |                                                                       |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                             |
-|                |                                        | 2. `{number}` **`width`**: window width                               |
-| `zoom`         | The preview zooms in or out            | 1. `{number}` **`zoom`**: new zoom value                              |
-|                |                                        | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
-|                |                                        | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-| `pagefocus`    | `{number}` page number of focused page |                                                                       |
-| `pan`          | The preview is panning                 |                                                                       |
-| `panstart`     | Panning starts                         |                                                                       |
-| `panend`       | Panning ends                           |                                                                       |
+| イベント名          | 説明                           | イベントデータ                                                |
+| -------------- | ---------------------------- | ------------------------------------------------------ |
+| `destroy`      | プレビューは意図的に破棄されます。            |                                                        |
+| `load`         | プレビューが読み込まれます。               | 1. `{string}` **`error`** (省略可): エラーメッセージ              |
+|                |                              | 2. `{object}` **`file`**: 現在のファイル                      |
+|                |                              | 3. `{object}` **`metrics`**: ロガーからの情報                  |
+|                |                              | 4. `{object}` **`viewer`**: 現在のビューアー                   |
+| `notification` | 通知が表示されます。                   |                                                        |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。     | `{object}`ファイル                                         |
+| `reload`       | プレビューが再読み込みされます。             |                                                        |
+| `resize`       | プレビューのサイズが変更されます。            | 1. `{number}` **`height`**: ウィンドウの高さ                   |
+|                |                              | 2. `{number}` **`width`**: ウィンドウの幅                     |
+| `zoom`         | プレビューが拡大または縮小されます。           | 1. `{number}` **`zoom`**: 新しい拡大/縮小値                    |
+|                |                              | 2. `{boolean}` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能  |
+|                |                              | 3. `{boolean}` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能 |
+| `pagefocus`    | `{number}` フォーカスされたページのページ番号 |                                                        |
+| `pan`          | プレビューが平行移動します。               |                                                        |
+| `panstart`     | 平行移動が開始されます。                 |                                                        |
+| `panend`       | 平行移動が終了します。                  |                                                        |
 
 <!-- markdownlint-enable line-length -->
 
-### Methods
+### メソッド
 
-The following methods are available for the multi-page image viewer.
-
-<!-- markdownlint-disable line-length -->
-
-| Method Name        | Explanation                    | Method Parameters                  |
-| ------------------ | ------------------------------ | ---------------------------------- |
-| `zoom`             | Zooms the image                | `{string}` 'in', 'out', or 'reset' |
-| `previousPage`     | Navigates to the previous page |                                    |
-| `nextPage`         | Navigates to the next page     |                                    |
-| `setPage`          | Navigates to a given page      | `{number}` page number             |
-| `toggleFullscreen` | Toggles full screen mode       |                                    |
+複数ページの画像ビューアーでは以下のメソッドを使用できます。
 
 <!-- markdownlint-disable line-length -->
 
-## Document viewer
+| メソッド名              | 説明             | メソッドのパラメータ                       |
+| ------------------ | -------------- | -------------------------------- |
+| `zoom`             | 画像を拡大/縮小します。   | `{string}` 「in」、「out」、または「reset」 |
+| `previousPage`     | 前のページに移動します。   |                                  |
+| `nextPage`         | 次のページに移動します。   |                                  |
+| `setPage`          | 指定したページに移動します。 | `{number}` ページ番号                 |
+| `toggleFullscreen` | 全画面モードを切り替えます。 |                                  |
 
-The document viewer renders previews for a variety of document types.
+<!-- markdownlint-disable line-length -->
 
-### Behavior
+## ドキュメントビューアー
 
-The document viewer remembers which page you were viewing upon closing the
-preview. The next time that file is opened, you will immediately be brought to
-that page. Resizing the viewer window will cause the document to resize.
+ドキュメントビューアーでは、さまざまなドキュメントタイプのプレビューがレンダリングされます。
 
-### Controls
+### 動作
 
-- Zoom In
-- Zoom Out
-- Set Page: either with the up and down arrows, or by clicking the page number
-and entering text
-- Fullscreen (can be exited with the escape key)
+ドキュメントビューアーには、プレビューを閉じるときに表示していたページが記憶されます。次回そのファイルを開くと、すぐにそのページが表示されます。ビューアーウィンドウのサイズを変更すると、ドキュメントのサイズが変更されます。
 
-### Supported File Extensions
+### コントロール
+
+* 拡大
+* 縮小
+* ページの設定: 上矢印と下矢印を使用するか、ページ番号をクリックしてテキストを入力します。
+* 全画面(Escキーを押すと終了可能)
+
+### サポートされているファイル拡張子
 
 `as`, `as3`, `asm`, `bat`, `c`, `cc`, `cmake`, `cpp`, `cs`, `css`, `csv`, `cxx`,
 `diff`, `doc`, `docx`, `erb`, `gdoc`, `groovy`, `gsheet`, `h`, `haml`, `hh`,
@@ -744,214 +658,199 @@ and entering text
 `sml`, `sql`, `tsv`, `txt`, `vi`, `vim`, `webdoc`, `wpd`, `xhtml`, `xls`,
 `xlsm`, `xlsx`, `xml`, `xsd`, `xsl`, `yaml`
 
-### Options
+### オプション
 
 <!-- markdownlint-disable line-length -->
 
-| Option        | Type    | Description                                                             |
-| ------------- | ------- | ----------------------------------------------------------------------- |
-| `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
+| オプション         | 型       | 説明                                      |
+| ------------- | ------- | --------------------------------------- |
+| `annotations` | boolean | 省略可。コンテンツの注釈を表示するかどうか。デフォルト値は`false`です。 |
 
 <!-- markdownlint-enable line-length -->
 
-### Events
+### イベント
 
-The document viewer triggers the following events.
+ドキュメントビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                                | Event Data                                                                      |
-| -------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed     |                                                                                 |
-| `load`         | The preview loads                          | 1. `{string}` **`error`** (optional): error message                             |
-|                |                                            | 2. `{object}` **`file`**: current file                                          |
-|                |                                            | 3. `{object}` **`metrics`**: information from the logger                        |
-|                |                                            | 4. `{object}` **`viewer`**: current viewer                                      |
-| `notification` | A notification is displayed                |                                                                                 |
-| `navigate`     | The preview is shown for a given index     | `{object}` file                                                                 |
-| `reload`       | The preview reloads                        |                                                                                 |
-| `resize`       | The preview resizes                        | 1. `{number}` **`height`**: window height                                       |
-|                |                                            | 2. `{number}` **`width`**: window width                                         |
-| `zoom`         | The preview zooms in or out                | 1. `{number}` **`newScale`**: new zoom value                                    |
-|                |                                            | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more             |
-|                |                                            | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more           |
-| `pagerender`   | A page is rendered                         | `{number}` page number of rendered page                                         |
-| `pagefocus`    | A page is visible                          | `{number}` page number of focused page                                          |
-| `scrollstart`  | The viewer starts to scroll                | 1. `{number}` **`scrollTop`**: number of pixels scrolled from top of viewport   |
-|                |                                            | 2. `{number}` **`scrollLeft`**: number of pixels scrolled from left of viewport |
-| `scrollend`    | The viewer stops scrolling                 | 1. `{number}` **`scrollTop`**: number of pixels scrolled from top of viewport   |
-|                |                                            | 2. `{number}` **`scrollLeft`**: number of pixels scrolled from left of viewport |
-| `printsuccess` | An attempt to print triggered successfully |                                                                                 |
-| `printsuccess` | An attempt to print failed                 |                                                                                 |
+| イベント名          | 説明                       | イベントデータ                                                 |
+| -------------- | ------------------------ | ------------------------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                                         |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ               |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル                       |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報                   |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー                    |
+| `notification` | 通知が表示されます。               |                                                         |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                                          |
+| `reload`       | プレビューが再読み込みされます。         |                                                         |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ                    |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅                      |
+| `zoom`         | プレビューが拡大または縮小されます。       | 1. `{number}` **`newScale`**: 新しい拡大/縮小値                 |
+|                |                          | 2. `{boolean}` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能   |
+|                |                          | 3. `{boolean}` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能  |
+| `pagerender`   | ページがレンダリングされます。          | `{number}` レンダリングされたページのページ番号                           |
+| `pagefocus`    | ページが表示可能です。              | `{number}` フォーカスされたページのページ番号                            |
+| `scrollstart`  | ビューアーでスクロールを開始します。       | 1. `{number}` **`scrollTop`**: ビューポートの上部からスクロールしたピクセル数  |
+|                |                          | 2. `{number}` **`scrollLeft`**: ビューポートの左側からスクロールしたピクセル数 |
+| `scrollend`    | ビューアーでスクロールを停止します。       | 1. `{number}` **`scrollTop`**: ビューポートの上部からスクロールしたピクセル数  |
+|                |                          | 2. `{number}` **`scrollLeft`**: ビューポートの左側からスクロールしたピクセル数 |
+| `printsuccess` | 印刷が正常に開始されました。           |                                                         |
+| `printsuccess` | 印刷に失敗しました。               |                                                         |
 
 <!-- markdownlint-enable line-length -->
 
-### Annotations
+### 注釈
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name                 | Explanation                                                                                                                                | Event Data |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
-| `annotationdraw`           | Text is highlighted                                                                                                                        |            |
-| `annotationcommentpending` | User hovers back into a dialog that has a pending comment                                                                                  |            |
-| `annotationcreate`         | Annotation is created                                                                                                                      |            |
-| `annotationcancel`         | An annotation was started but then abandoned before it was created                                                                         |            |
-| `annotationdelete`         | Annotation with provided `AnnotationID` is deleted. If no ID is provided, deletes the first (and only remaining) annotation in the thread. |            |
+| イベント名                      | 説明                                                                               | イベントデータ |
+| -------------------------- | -------------------------------------------------------------------------------- | ------- |
+| `annotationdraw`           | テキストが強調表示されます。                                                                   |         |
+| `annotationcommentpending` | ユーザーは、保留中のコメントが表示されているダイアログに戻ります。                                                |         |
+| `annotationcreate`         | 注釈が作成されます。                                                                       |         |
+| `annotationcancel`         | 注釈が開始されましたが、作成前に破棄されました。                                                         |         |
+| `annotationdelete`         | `AnnotationID`が指定されている注釈が削除されます。IDが指定されていない場合は、スレッド内にある最初の(かつ残っている唯一の)注釈が削除されます。 |         |
 
 <!-- markdownlint-enable line-length -->
 
-## `<iframe>` viewer
+## `<iframe>`ビューアー
 
-The `<iframe>` viewer embeds an frame to show content rendered from an external
-source.
+`<iframe>`ビューアーは、外部ソースからレンダリングされたコンテンツを表示するためのフレームを埋め込みます。
 
-### Behavior
+### 動作
 
-The `<iframe>` viewer is used for previews of Box Notes and Box DICOM files, and
-these previews currently only work from within the Box Web Application. Platform
-customers should use the [Box DICOM Viewer](https://boxdicom.com/#viewer) to
-preview DICOM studies over the API.
+`<iframe>`ビューアーは、Box NotesおよびBox DICOMファイルのプレビューに使用されるため、これらのプレビューは現在Boxウェブアプリ内からのみ動作します。プラットフォームのお客様は、[Box DICOM Viewer](https://boxdicom.com/#viewer)を使用してAPI経由でDICOMスタディをプレビューしてください。
 
-Both Box Notes and Box DICOM have full-featured viewers within the main Box Web
-Application, but these full viewers are not initialized when users navigate from
-previews of other files that may be in the same directory as the Notes and DICOM
-files. In this situation, the `<iframe>` viewer embeds an view-only render of the
-Box Note or Box DICOM file.
+Box NotesとBox DICOMの両方で、メインのBoxウェブアプリ内にフル機能搭載のビューアーを備えています。ただし、このようなフル機能搭載のビューアーは、NotesやDICOMのファイルと同じディレクトリ内にある他のファイルのプレビューから移動しても初期化されません。この場合、`<iframe>`ビューアーは、Box NoteまたはBox DICOMファイルの表示専用のレンダリング機能を埋め込みます。
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `boxnote`, `boxdicom`
 
-### Events
+### イベント
 
-The `<iframe>` viewer triggers the following events.
+`<iframe>`ビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                               |
-| -------------- | -------------------------------------- | -------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                          |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message      |
-|                |                                        | 2. `{object}` **`file`**: current file                   |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer               |
-| `notification` | A notification is displayed            |                                                          |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                          |
-| `reload`       | The preview reloads                    |                                                          |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
-|                |                                        | 2. `{number}` **`width`**: window width                  |
+| イベント名          | 説明                       | イベントデータ                                   |
+| -------------- | ------------------------ | ----------------------------------------- |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                           |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル         |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification` | 通知が表示されます。               |                                           |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                            |
+| `reload`       | プレビューが再読み込みされます。         |                                           |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅        |
 
 <!-- markdownlint-enable line-length -->
 
-## DASH viewer
+## DASHビューアー
 
-The DASH viewer renders previews for video files using [`Shaka Player`][shaka].
+DASHビューアーでは、[`Shaka Player`][shaka]を使用して、動画ファイルのプレビューがレンダリングされます。
 
-### Behavior
+### 動作
 
-The DASH viewer uses a black background to create a more native viewing
-experience. Video is streamed in chunks of bytes at an initial quality
-determined automatically. Volume can be muted or unmuted by clicking the volume
-icon, or changed by dragging the volume scrubber. The position of the video can
-be changed by clicking or dragging the playback scrubber.
+DASHビューアーは、黒い背景を使用して、より自然な表示を実現しています。動画は、自動的に決まる初期の品質で、数バイトのチャンクに分割されてストリーミングされます。音量は、音量アイコンをクリックしてミュートまたはミュート解除したり、音量スクラバをドラッグして変更したりできます。動画の位置は、再生スクラバをクリックまたはドラッグして変更できます。
 
-### Controls
+### コントロール
 
-- Play/Pause
-- Volume
-- Settings
-- Fullscreen (can be exited with the escape key)
+* 再生/一時停止
+* 音量
+* 設定
+* 全画面(Escキーを押すと終了可能)
 
-### Settings
+### 設定
 
-Settings are available through the cog icon in the preview toolbar.
+設定は、プレビューツールバーにある歯車アイコンから使用できます。
 
-- Video Speed: `0.25`, `0.5`, normal (`1`), `1.25`, `1.5`, `2.0`
-- Video Quality: `480p`, `1080p`, `auto`
+* 動画速度: `0.25`、`0.5`、標準(`1`)、`1.25`、`1.5`、`2.0`
+* 動画品質: `480p`、`1080p`、`auto`
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`,
 `ogg`, `mts`, `qt`, `wmv`
 
-### Events
+### イベント
 
-The DASH viewer triggers the following events.
+DASHビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name         | Explanation                                                   | Event Data                                               |
-| ------------------ | ------------------------------------------------------------- | -------------------------------------------------------- |
-| `destroy`          | The preview is intentionally destroyed                        |                                                          |
-| `load`             | The preview loads                                             | 1. `{string}` **`error`** (optional): error message      |
-|                    |                                                               | 2. `{object}` **`file`**: current file                   |
-|                    |                                                               | 3. `{object}` **`metrics`**: information from the logger |
-|                    |                                                               | 4. `{object}` **`viewer`**: current viewer               |
-| `notification`     | A notification is displayed                                   |                                                          |
-| `navigate`         | The preview is shown for a given index                        | `{object}` file                                          |
-| `reload`           | The preview reloads                                           |                                                          |
-| `resize`           | The preview resizes                                           | 1. `{number}` **`height`**: window height                |
-|                    |                                                               | 2. `{number}` **`width`**: window width                  |
-| `speedchange`      | The media speed changes                                       | `{string}` playback speed                                |
-| `qualitychange`    | The video quality changes                                     | `{string}` media quality                                 |
-| `bandwidthhistory` | Gives bandwidth history when the preview is destroyed         | `{array}` bandwidth information                          |
-| `switchhistory`    | Gives quality switching history when the preview is destroyed | `{array}` quality switch objects                         |
-| `adaptation`       | Quality adapts to a change in bandwidth                       | `{number}` bandwidth                                     |
-| `play`             | The video plays                                               |                                                          |
-| `pause`            | The video pauses                                              |                                                          |
-| `seek`             | The video skips to a time                                     | `{number}` time                                          |
+| イベント名              | 説明                              | イベントデータ                                   |
+| ------------------ | ------------------------------- | ----------------------------------------- |
+| `destroy`          | プレビューは意図的に破棄されます。               |                                           |
+| `load`             | プレビューが読み込まれます。                  | 1. `{string}` **`error`** (省略可): エラーメッセージ |
+|                    |                                 | 2. `{object}` **`file`**: 現在のファイル         |
+|                    |                                 | 3. `{object}` **`metrics`**: ロガーからの情報     |
+|                    |                                 | 4. `{object}` **`viewer`**: 現在のビューアー      |
+| `notification`     | 通知が表示されます。                      |                                           |
+| `navigate`         | 指定したインデックスのプレビューが表示されます。        | `{object}`ファイル                            |
+| `reload`           | プレビューが再読み込みされます。                |                                           |
+| `resize`           | プレビューのサイズが変更されます。               | 1. `{number}` **`height`**: ウィンドウの高さ      |
+|                    |                                 | 2. `{number}` **`width`**: ウィンドウの幅        |
+| `speedchange`      | メディアの速度が変更されます。                 | `{string}` 再生速度                           |
+| `qualitychange`    | 動画品質が変更されます。                    | `{string}` メディア品質                         |
+| `bandwidthhistory` | プレビューが破棄されたときに、帯域幅の履歴を提供します。    | `{array}` 帯域幅情報                           |
+| `switchhistory`    | プレビューが破棄されたときに、品質の切り替え履歴を提供します。 | `{array}` 品質切り替えオブジェクト                    |
+| `adaptation`       | 品質が帯域幅の変更に適合されます。               | `{number}` 帯域幅                            |
+| `play`             | 動画が再生されます。                      |                                           |
+| `pause`            | 動画が一時停止されます。                    |                                           |
+| `seek`             | 動画は任意の時点までスキップします。              | `{number}` 時刻                             |
 
 <!-- markdownlint-enable line-length -->
 
-## CSV viewer
+## CSVビューアー
 
-The CSV viewer uses [`PapaParse`](https://github.com/mholt/PapaParse) to parse
-CSV and TSV files and [`React Virtualized`][reactv] to display the parsed data
-in a table.
+CSVビューアーでは、[`PapaParse`](https://github.com/mholt/PapaParse)を使用してCSVおよびTSVファイルを解析し、[`React Virtualized`][reactv]を使用して解析後のデータを表形式で表示します。
 
-### Behavior
+### 動作
 
-Resizing the viewer window will cause the table to resize, and the zoom in and
-out buttons will increase and decrease font size respectively. Currently, column
-and row sizes are fixed and overflowing text will be truncated.
+ビューアーウィンドウのサイズを変更すると、表のサイズが変更されます。拡大ボタンと縮小ボタンにより、フォントサイズがそれぞれ縮小または拡大されます。現在、列と行のサイズは固定されているため、はみ出すテキストは省略されます。
 
-This viewer does not support printing.
+このビューアーは、印刷をサポートしていません。
 
-### Controls
+### コントロール
 
-- Zoom In
-- Zoom Out
-- Fullscreen (can be exited with the escape key)
+* 拡大
+* 縮小
+* 全画面(Escキーを押すと終了可能)
 
-### Supported File Extensions
+### サポートされているファイル拡張子
 
 `csv`, `tsv`
 
-### Events
+### イベント
 
-The CSV viewer triggers the following events.
+CSVビューアーでは、以下のイベントがトリガーされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name     | Explanation                            | Event Data                                                            |
-| -------------- | -------------------------------------- | --------------------------------------------------------------------- |
-| `destroy`      | The preview is intentionally destroyed |                                                                       |
-| `load`         | The preview loads                      | 1. `{string}` **`error`** (optional): error message                   |
-|                |                                        | 2. `{object}` **`file`**: current file                                |
-|                |                                        | 3. `{object}` **`metrics`**: information from the logger              |
-|                |                                        | 4. `{object}` **`viewer`**: current viewer                            |
-| `notification` | A notification is displayed            |                                                                       |
-| `navigate`     | The preview is shown for a given index | `{object}` file                                                       |
-| `reload`       | The preview reloads                    |                                                                       |
-| `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                             |
-|                |                                        | 2. `{number}` **`width`**: window width                               |
-| `zoom`         | The preview zooms in or out            | 1. `{number}` **`zoom`**: new zoom value                              |
-|                |                                        | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
-|                |                                        | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
+| イベント名          | 説明                       | イベントデータ                                                |
+| -------------- | ------------------------ | ------------------------------------------------------ |
+| `destroy`      | プレビューは意図的に破棄されます。        |                                                        |
+| `load`         | プレビューが読み込まれます。           | 1. `{string}` **`error`** (省略可): エラーメッセージ              |
+|                |                          | 2. `{object}` **`file`**: 現在のファイル                      |
+|                |                          | 3. `{object}` **`metrics`**: ロガーからの情報                  |
+|                |                          | 4. `{object}` **`viewer`**: 現在のビューアー                   |
+| `notification` | 通知が表示されます。               |                                                        |
+| `navigate`     | 指定したインデックスのプレビューが表示されます。 | `{object}`ファイル                                         |
+| `reload`       | プレビューが再読み込みされます。         |                                                        |
+| `resize`       | プレビューのサイズが変更されます。        | 1. `{number}` **`height`**: ウィンドウの高さ                   |
+|                |                          | 2. `{number}` **`width`**: ウィンドウの幅                     |
+| `zoom`         | プレビューが拡大または縮小されます。       | 1. `{number}` **`zoom`**: 新しい拡大/縮小値                    |
+|                |                          | 2. `{boolean}` **`canZoomIn`**: trueにするとビューアーをさらに拡大可能  |
+|                |                          | 3. `{boolean}` **`canZoomOut`**: trueにするとビューアーをさらに縮小可能 |
 
 <!-- markdownlint-enable line-length -->
 
 <!-- markdownlint-enable no-duplicate-header -->
 
 [reactv]: https://github.com/bvaughn/react-virtualized
+
 [shaka]: https://github.com/google/shaka-player

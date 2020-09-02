@@ -19,55 +19,48 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/index.md
 ---
-# Custom Apps
+# カスタムアプリ
 
-By far the more flexible way to use Box Platform is through a **Custom App**
-integration.
+Box Platformを使用するには、**カスタムアプリ**統合を使用する方法が間違いなく融通がききます。
 
-Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and [App Token][app-token]
-authentication. They allow the application to manipulate files and folders, as
-well as interact with tasks, legal holds, and other enterprise-level properties.
+カスタムアプリでは、[OAuth 2.0][oauth2]、[JWT][jwt]、および[アプリトークン][app-token]認証がサポートされます。これらの認証によって、アプリケーションは、ファイルやフォルダを操作するだけでなく、タスク、リーガルホールドなどの会社レベルのプロパティを操作できるようになります。
 
-A custom application typically presents Box functionality to a user within a
-custom interface. Box offers pre-built user interface components known as UI
-Elements for functionality like browsing, search, viewing and more that can be
-customized, or you can build your own.
+カスタムアプリケーションは、通常、カスタムインターフェイス内でBox機能をユーザーに表示します。Boxでは、閲覧、検索、表示などのカスタマイズ可能な機能にUI Elementと呼ばれるあらかじめ作成されたユーザーインターフェイスが用意されています。また、独自のユーザーインターフェイスを作成することもできます。
 
-## Authentication methods
+## 認証方式
 
-Custom Apps support three different types of authentication that determine the
-abilities and restrictions of your application. The following is a quick
-overview of the key differences.
+カスタムアプリでは、アプリケーションの機能と制限を決定する3種類の認証がサポートされています。主な違いの概要を以下に示します。
 
 <!-- markdownlint-disable line-length -->
 
-|                                   | OAuth 2.0 | JWT | App Tokens |
-| --------------------------------- | --------- | --- | ---------- |
-| Requires user involvement?        | Yes       | No  | No         |
-| Requires admin approval?          | No        | Yes | Yes        |
-| Can act on behalf of other users? | Yes       | Yes | No         |
-| Do users see Box?                 | Yes       | No  | No         |
-| Can create App Users?             | No        | Yes | No         |
+|                 | OAuth 2.0 | JWT | アプリトークン |
+| --------------- | --------- | --- | ------- |
+| ユーザーの関与が必要?     | はい        | いいえ | いいえ     |
+| 管理者の承認が必要?      | いいえ       | はい  | はい      |
+| 他のユーザーの代理で操作可能? | はい        | はい  | いいえ     |
+| ユーザーにBoxを表示?    | はい        | いいえ | いいえ     |
+| App Userを作成可能?  | いいえ       | はい  | いいえ     |
 
 <!-- markdownlint-enable line-length -->
 
-<CTA to='g://authentication/select'>
+<CTA to="g://authentication/select">
 
-Learn more about the different types of authentication
+各種認証の詳細を確認する
 
 </CTA>
 
-## When to use a Custom App
+## カスタムアプリを使用する場合
 
-A Custom App is best used when the application:
+アプリケーションが以下のような場合に、カスタムアプリを使用すると最も効果的です。
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
-- Wants to upload and download files
-- Wants the freedom to access both their own files, as well as files owned by
-other users, even external users.
-- Wants the option to list the application in the Box App Gallery
-- Wants to provide integration into the Box Web App
+* [OAuth 2.0][oauth2]、[JWT][jwt]、または[アプリトークン][app-token]認証を使用する
+* ファイルをアップロードおよびダウンロードする
+* 自分が所有するファイルにも、他のユーザー(外部ユーザーを含む)が所有するファイルにも自由にアクセスする
+* Boxアプリギャラリーにアプリケーションを掲載する
+* Boxウェブアプリとの統合を可能にする
 
 [oauth2]: guide://authentication/oauth2
+
 [jwt]: guide://authentication/jwt
+
 [app-token]: guide://authentication/app-token

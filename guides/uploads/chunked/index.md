@@ -16,54 +16,42 @@ source_url: >-
 ---
 <!-- alex disable corruption -->
 
-# Chunked Uploads
+# 分割アップロード
 
-The Chunked Upload API provides a way to reliably upload large files to Box by
-chunking them into a sequence of parts that can be uploaded individually.
+大きなファイルでも、Chunked Upload APIを使用して一連のパーツに分割して個別にアップロードすることで、Boxに確実にアップロードできます。
 
-By using this API the application uploads a file in part, allowing it to recover
-from a failed request more reliably. It means an application only needs to
-retry the upload of a single part instead of the entire file.
+このAPIを使用することにより、アプリケーションではファイルを分割してアップロードできるため、失敗したリクエストからより確実に回復できるようになります。つまり、アプリケーションがファイル全体ではなく単一のパーツのアップロードを再試行するだけで済む、ということです。
 
-An additional benefit of chunked uploads is that parts can be uploaded
-in parallel, allowing for a potential performance improvement.
+分割アップロードのもう1つの利点は、パーツを並行してアップロードできるため、パフォーマンスが向上することです。
 
-## Overview
+## 概要
 
-Chunked uploads require a sequence of API calls to be made.
+分割アップロードでは、以下の一連のAPI呼び出しを行う必要があります。
 
-1. **[Create an upload session][newsession]**: The application creates an upload
-   session for a new file or new version of a file. The session defines the
-   (new) name  of the file, its size, and the parent folder.
-2. **[Upload parts][uploadparts]**: The application uploads the separate parts
-   of the file as chunks.
-3. **[Commit session][commit]**: The application commits the session, at which
-   moment the integrity of the file is checked before it is placed in the
-   location specified when the session was created.
+1. **[アップロードセッションを作成する][newsession]**: アプリケーションが新しいファイルまたはファイルの新しいバージョンのアップロードセッションを作成します。このセッションにより、ファイルの(新しい)名前、サイズ、および親フォルダを定義します。
+2. **[Upload part][uploadparts]**: アプリケーションがファイルの個々のパーツをチャンクとしてアップロードします。
+3. **[セッションをコミットする][commit]**: アプリケーションがセッションをコミットします。このときにファイルの整合性がチェックされた後、セッションが作成されたときに指定された場所にファイルが配置されます。
 
 <Message>
 
-Most of [the Box SDKs support chunked uploads][sdks] out of the Box, removing
-the complexity from the application code.
+ほとんどの[Box SDKではBoxからの分割アップロードがサポートされている][sdks]ため、アプリケーションコードの複雑さが解消されます。
 
 </Message>
 
-## Restrictions
+## 制約事項
 
-The Chunked Upload API is intended for large files with a minimum size of 20MB.
-The API does not support uploads of files with a size smaller than this.
+Chunked Upload APIは、サイズが20MB以上の大きいファイルを対象としています。これより小さいサイズのファイルのアップロードはサポートされていません。
 
-This API does not support re-uploading or overwriting of parts in a session.
-Once a part has been uploaded, it is immutable.
+このAPIは、セッション内でのパーツの再アップロードまたは上書きをサポートしていません。アップロード後のパーツは変更できません。
 
-The lifetime of an upload session is 7 days. During this time, the client can
-upload parts at their own pace.
+アップロードセッションの有効期間は7日間です。この期間に、クライアントは自身のペースでパーツをアップロードできます。
 
-To avoid wasting resources, and avoid potential data corruption, client should
-make sure that the underlying file has not been changed on disk since beginning
-the upload.
+リソースの浪費やデータ破損を避けるために、クライアントは、アップロードの開始以降、ディスク上の基になるファイルが変更されていないことを確認する必要があります。
 
 [newsession]: g://uploads/chunked/create-session
+
 [uploadparts]: g://uploads/chunked/upload-part
+
 [commit]: g://uploads/chunked/commit-session
+
 [sdks]: g://uploads/chunked/with-sdks

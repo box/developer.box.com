@@ -17,14 +17,13 @@ previous_page_id: api-calls/allowing-domain-access
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/suppress-notifications.md
 ---
-# Suppress Notifications
+# 通知の抑制
 
-For some API calls, email and webhook notifications can be prevented by
-including a `box-notifications: off` header with the API call.
+一部のAPI呼び出しでは、API呼び出しに`box-notifications: off`ヘッダーを指定することで、メール通知およびWebhook通知を抑制できます。
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
@@ -42,32 +41,26 @@ curl -X POST https://api.box.com/2.0/folders \
 
 </Tabs>
 
-As an example, this can be used for a virus-scanning tool to download copies
-every user's files in an enterprise without every collaborator on the file
-receiving an email informing them of the download.
+たとえば、これをウイルススキャンツールに使用すると、社内でユーザーのファイルのコピーをダウンロードするたびに、そのファイルのすべてのコラボレータにダウンロードに関する通知メールが届くことはなくなります。
 
-All actions will still appear in users updates feed and the audit-logs.
+この場合でも、すべてのアクションがユーザーの更新フィードと監査ログに表示されます。
 
-<Message type='warning'>
+<Message type="warning">
 
-# Scope requirement
+# スコープの要件
 
-Notification suppression is available for approved applications only. Contact
-support to request the required scopes to be enabled for your application.
+通知の抑制は、承認されたアプリケーションでのみ使用できます。アプリケーションに対して有効にする必要なスコープをリクエストするには、サポートに連絡してください。
 
-The following settings need to be configured for your application for this feature
-to properly work.
+この機能を正しく動作させるには、アプリケーションに対して以下の設定を構成する必要があります。
 
-* **Can suppress email notifications from API calls** - available on request
-via support
-* **Manage Enterprise Properties** - available via the developer console
-* Co-admin permissions of **Edit settings for your company**.
+* **API呼び出しからメール通知を抑制可能** - サポート経由のリクエストで対応可能
+* **エンタープライズのプロパティを管理** - 開発者コンソールから使用可能
+* **会社の設定の編集**の共同管理者権限
 
 </Message>
 
-<Message type='notice'>
+<Message type="notice">
 
-Some notifications can not be suppressed, most notable the creation is users,
-comments, collaborations, task assignments, and when changing a user's login.
+一部の通知は抑制できません。その代表として、ユーザー、コメント、コラボレーション、タスク割り当ての作成のほか、ユーザーのログインの変更時があります。
 
 </Message>

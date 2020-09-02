@@ -25,46 +25,38 @@ previous_page_id: metadata/instances
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/5-delete.md
 ---
-# Remove metadata from an item
+# 項目からのメタデータの削除
 
-Removing an instance of a metadata template assigned to a file or
-folder can be done using the item's `id`, and the template's `templateKey`
-and `scope`.
+ファイルまたはフォルダに割り当てられたメタデータテンプレートのインスタンスを削除するには、項目の`id`に加え、テンプレートの`templateKey`と`scope`を使用します。
 
 <Message>
 
-Metadata [scopes][scopes] can be either `global` for templates available to
-all enterprises, `enterprise` for templates available to the current
-enterprise, or the `enterprise_:id` for templates belonging to an enterprise
-whose ID is the `:id` value in the scope name.
+メタデータの[スコープ][scopes]には、`global` (すべての会社が利用できるテンプレートの場合)、`enterprise` (現在の会社が利用できるテンプレートの場合)、または`enterprise_:id` (IDがスコープ名の`:id`である会社に属するテンプレートの場合)のいずれかを指定できます。
 
 </Message>
 
-## Remove metadata from an file
+## ファイルからメタデータを削除
 
-Deleting an instance of a metadata template from a file be achieved by calling
-the [`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] API.
+ファイルからメタデータテンプレートのインスタンスを削除するには、[`DELETE /files/:file_id/metadata/:templateKey/schema`][e_on_file] APIを呼び出します。
 
-<Samples id="delete_files_id_metadata_id_id" >
-
-</Samples>
-
-This API returns a `204 No Content` API response with no response body when
-the instance has been successfully removed from the file.
-
-## Remove metadata from an folder
-
-Deleting an instance of a metadata template from a folder be achieved by calling
-the [`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder]
-API.
-
-<Samples id="delete_folders_id_metadata_id_id" >
+<Samples id="delete_files_id_metadata_id_id">
 
 </Samples>
 
-This API returns a `204 No Content` API response with no response body when
-the instance has been successfully removed from the folder.
+ファイルからインスタンスが正常に削除されている場合、このAPIは、応答の本文がない`204 No Content` API応答を返します。
+
+## フォルダからメタデータを削除
+
+フォルダからメタデータテンプレートのインスタンスを削除するには、[`DELETE /folders/:folder_id/metadata/:templateKey/schema`][e_on_folder] APIを呼び出します。
+
+<Samples id="delete_folders_id_metadata_id_id">
+
+</Samples>
+
+フォルダからインスタンスが正常に削除されている場合、このAPIは、応答の本文がない`204 No Content` API応答を返します。
 
 [e_on_file]: e://delete_files_id_metadata_id_id
+
 [e_on_folder]: e://delete_folders_id_metadata_id_id
+
 [scopes]: g://metadata/scopes

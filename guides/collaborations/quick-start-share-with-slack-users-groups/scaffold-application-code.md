@@ -15,30 +15,24 @@ previous_page_id: collaborations/quick-start-share-with-slack-users-groups/confi
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/3-scaffold-application-code.md
 ---
-# Scaffold application code
+# アプリケーションコードのスキャフォールディング
 
-With our Slack and Box applications configured, we're ready to write the code
-for our application which will listen for incoming slash commands and events
-from Slack.
+SlackおよびBoxアプリケーションを構成したら、Slackから送信されるスラッシュコマンドやイベントをリッスンするアプリケーションのコードを作成できます。
 
-This application will be split up into three parts:
+このアプリケーションは、以下の3つの機能に分割されます。
 
-* Set up the initial application skeleton and configuration information.
-* Set up the handlers for Slack events and slash commands.
-* Connect those handlers to the required functions in Box.
+* 最初のアプリケーションスケルトンと構成情報を設定する
+* Slackイベントとスラッシュコマンドのハンドラを設定する
+* このハンドラをBoxの必要な関数に関連付ける
 
-## Add dependencies and scaffold code
+## 依存関係とスキャフォールドコードの追加
 
-Let's start by scaffolding the files and minimal code needed to
-run the application.
+最初に、アプリケーションの実行に必要なファイルと最小限のコードのスキャフォールディングを行います。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-* Either create a new local directory for your application or load the existing
- code created for the Slack event URL challenge from [step 1][step1].
-* Create a new `package.json` file, or update the existing one, inside the
- local directory, open it in your preferred editor, copy / paste the following
- into it, and save / exit the file.
+* アプリケーション用に新しいローカルディレクトリを作成するか、[手順1][step1]のSlackイベントURLチャレンジ用に作成した既存のコードを読み込みます。
+* ローカルディレクトリ内で新しい`package.json`ファイルを作成するか既存のファイルを更新します。任意のエディタでそのファイルを開き、以下の内容をコピーして貼り付け、ファイルを保存して終了します。
 
 ```javascript
 {
@@ -61,9 +55,9 @@ run the application.
 }
 ```
 
-* Run `npm install` from the terminal / console to install the dependencies.
-* Create two files, `process.js` and `slackConfig.json` in the local directory.
-* Open `slackConfig.json` and save the following default configuration. 
+* ターミナル/コンソールから`npm install`を実行し、依存関係をインストールします。
+* ローカルディレクトリに2つのファイル(`process.js`および`slackConfig.json`)を作成します。
+* `slackConfig.json`を開いて、以下のデフォルト構成を保存します。 
 
 ```json
 {
@@ -72,18 +66,10 @@ run the application.
 }
 ```
 
-* There are two values above that will need to be replaced with details from
- your Slack application. Replace the `TOKEN` strings with the appropriate
- values.
-  * `verificationToken`: Load up your Slack application configuration page.
-   Within the **Basic Information** page, scroll down to the
-   **App Credentials** section. The **Verification Token** string will be
-   available there.
-  * `botToken`: Within your Slack application, go to the **OAuth & Permissions**
-   page. The **Bot User OAuth Access Token** string is available at the top and
-was auto-populated once the bot was added to your Slack workspace.
-* Open up the blank `process.js` file, copy and paste the following code, and
- save the file.
+* 上記の2つの値は、Slackアプリケーションから取得した詳細情報に置き換える必要があります。`TOKEN`文字列を適切な値に置き換えてください。
+  * `verificationToken`: Slackアプリケーションの構成ページを読み込みます。\[**Basic Information (基本情報)**] ページで、\[**App Credentials (アプリの資格情報)**] セクションまで下にスクロールし、\[**Verification Token (確認トークン)**] の文字列を使用できます。
+  * `botToken`: Slackアプリケーションで、\[**OAuth & Permissions (OAuthと権限)**] ページに移動し、上部にある \[**Bot User OAuth Access Token (ボットユーザーOAuthアクセストークン)**] の文字列を使用できます。この文字列は、ボットがSlackワークスペースに追加されたときに自動入力されています。
+* 空の`process.js`ファイルを開き、次のコードをコピーして貼り付け、ファイルを保存します。
 
 ```javascript
 const box = require("box-node-sdk");
@@ -149,35 +135,26 @@ app.listen(port, function(err) {
 });
 ```
 
-This code contains all of the main functions that will be needed to handle and
-process the communication between Slack and Box. From top to bottom, the
-functions are:
+このコードには、SlackとBox間の通信を処理するのに必要となる主要な関数がすべて含まれています。これらの関数について、上から順に説明します。
 
-* `/event` handler: Captures all incoming Slack traffic, verifies the content,
- and routes them to the `process` function.
-* `process`: Parses the Slack event and routes the event to either Box group
- processing (user channel events) or to add Box content to the group (slash
- commands).
-* `processUser`: Handles user events, either adding or removing a user
- from a Box group by routing to the appropriate functions.
-* `addGroupUser`: Adds a user to a Box group.
-* `removeGroupUser`: Removes a user from a Box group. 
-* `processContent`: Collaborates Box content with the Box group.
-* `processSlackChannel`: Adds all Slack channel users to a Box group.
-* `getSlackUser`: Utility function to fetch a Slack user's profile from their
-  Slack user ID.
-* `getGroupId`: Utility function to fetch a Box group ID from a Box group name.
+* `/event`ハンドラ: 入ってくるSlackトラフィックをすべて取得し、内容を確認して、`process`関数に転送します。
+* `process`: Slackイベントを解析し、Boxグループの処理 (ユーザーチャンネルイベント) またはグループへのBoxコンテンツの追加 (スラッシュコマンド) のいずれかにそのイベントを転送します。
+* `processUser`: 適切な関数に転送することでBoxグループのユーザーを追加または削除して、ユーザーイベントを処理します。
+* `addGroupUser`: Boxグループにユーザーを追加します。
+* `removeGroupUser`: Boxグループからユーザーを削除します。 
+* `processContent`: BoxグループとBoxコンテンツのコラボレーションを行います。
+* `processSlackChannel`: すべてのSlackチャンネルユーザーをBoxグループに追加します。
+* `getSlackUser`: SlackユーザーのプロフィールをSlackユーザーIDから取得するユーティリティ関数。
+* `getGroupId`: Boxグループ名からBoxグループIDを取得するユーティリティ関数。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-A configuration file needs to be created to house our Slack credentials and
-URLs.
+Slackの資格情報とURLを保持するための構成ファイルを作成する必要があります。
 
-* Within your `src/main/java` path, where your `Application.java` file is
- located, create a new Java class file named `slackConfig.java`.
-* Open the file and save the following into it.
+* `Application.java`ファイルが配置されている`src/main/java`パスに、`slackConfig.java`という名前の新しいJavaクラスファイルを作成します。
+* ファイルを開き、次の内容を保存します。
 
 ```java
 package com.box.slack.box;
@@ -189,18 +166,10 @@ public class slackConfig {
 }
 ```
 
-* There are two values above that will need to be replaced with details from
- your Slack application. Replace the `TOKEN` strings with the appropriate
- values.
-  * `verificationToken`: Load up your Slack application configuration page.
-   Within the **Basic Information** page, scroll down to the
-   **App Credentials** section. The **Verification Token** string will be
-   available there.
-  * `botToken`: Within your Slack application, go to the **OAuth & Permissions**
-   page. The **Bot User OAuth Access Token** string is available at the top and
-was auto-populated once the bot was added to your Slack workspace.
-* Open up the `Application.java` file that was created for the previous Slack
- event challenge setup and replace the content of the file with the following.
+* 上記の2つの値は、Slackアプリケーションから取得した詳細情報に置き換える必要があります。`TOKEN`文字列を適切な値に置き換えてください。
+  * `verificationToken`: Slackアプリケーションの構成ページを読み込みます。\[**Basic Information (基本情報)**] ページで、\[**App Credentials (アプリの資格情報)**] セクションまで下にスクロールし、\[**Verification Token (確認トークン)**] の文字列を使用できます。
+  * `botToken`: Slackアプリケーションで、\[**OAuth & Permissions (OAuthと権限)**] ページに移動し、上部にある \[**Bot User OAuth Access Token (ボットユーザーOAuthアクセストークン)**] の文字列を使用できます。この文字列は、ボットがSlackワークスペースに追加されたときに自動入力されています。
+* 以前のSlackイベントチャレンジの設定で作成した`Application.java`ファイルを開き、ファイルの内容を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -323,57 +292,47 @@ public class Application extends slackConfig {
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-This code contains all of the main functions that will be needed to handle and
-process the communication between Slack and Box. From top to bottom, the
-functions are:
+このコードには、SlackとBox間の通信を処理するのに必要となる主要な関数がすべて含まれています。これらの関数について、上から順に説明します。
 
-* `handleEvent`: Captures all incoming Slack traffic and responds with an HTTP
- 200 response to notify Slack that the event was received. Since slash
- commands will transmit their payload as `application/x-www-form-urlencoded`
- rather than `application/json`, we convert those payloads to JSON objects to
- standardize the input.
-* `processEvent`: Verifies that the event is from Slack, instantiates a Box
- client, and routes for processing.
-* `process`: Parses the Slack event and routes to either Box group
- processing (user channel events) or to add Box content to the group (slash
- commands).
-* `processUser`: Handles user event requirements to either add or remove a user
- to a Box group by routing to the appropriate functions.
-* `addGroupUser`: Adds a user to a Box group.
-* `removeGroupUser`: Removes a user from a Box group. 
-* `processContent`: Collaborates Box content with the Box group.
-* `processSlackChannel`: Adds all Slack channel users to a Box group.
-* `getSlackUser`: Utility function to fetch a Slack user profile from a Slack
- user ID.
-* `getGroupId`: Utility function to fetch a Box group ID from a Box group name.
-* `sendGETRequest`: Utility function to send an HTTP GET request.
+* `handleEvent`: 入ってくるSlackトラフィックをすべて取得し、HTTP 200応答で応答して、イベントが受信されたことをSlackに通知します。スラッシュコマンドにより、ペイロードが`application/json`ではなく`application/x-www-form-urlencoded`として送信されるため、そのペイロードをJSONオブジェクトに変換して入力を標準化します。
+* `processEvent`: イベントがSlackから送信されたかどうかを確認し、Boxクライアントをインスタンス化して、処理のために転送します。
+* `process`: Slackイベントを解析し、Boxグループの処理 (ユーザーチャンネルイベント) またはグループへのBoxコンテンツの追加 (スラッシュコマンド) のいずれかに転送します。
+* `processUser`: 適切な関数に転送することで、Boxグループのユーザーを追加または削除するためのユーザーイベントの要件を処理します。
+* `addGroupUser`: Boxグループにユーザーを追加します。
+* `removeGroupUser`: Boxグループからユーザーを削除します。 
+* `processContent`: BoxグループとBoxコンテンツのコラボレーションを行います。
+* `processSlackChannel`: すべてのSlackチャンネルユーザーをBoxグループに追加します。
+* `getSlackUser`: SlackユーザープロフィールをSlackユーザーIDから取得するユーティリティ関数。
+* `getGroupId`: Boxグループ名からBoxグループIDを取得するユーティリティ関数。
+* `sendGETRequest`: HTTP GETリクエストを送信するユーティリティ関数。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Summary
+## まとめ
 
-* You created a minimal application scaffold, and provided the basic 
-  configuration details. 
-* You installed all the project dependencies.
+* 最小限のアプリケーションスキャフォールドを作成し、基本的な構成の詳細を指定しました。 
+* プロジェクトの依存関係をすべてインストールしました。
 
-<Observe option='programming.platform' value='node,java'>
+<Observe option="programming.platform" value="node,java">
 
 <Next>
 
-I have my local application set up
+ローカルアプリケーションの設定が完了しました
 
 </Next>
 

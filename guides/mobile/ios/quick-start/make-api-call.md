@@ -14,28 +14,21 @@ previous_page_id: mobile/ios/quick-start/configure-box-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/4-make-api-call.md
 ---
-# Make an API call
+# API呼び出しの実行
 
-With our Box and iOS applications created and configured with the **Box iOS
-SDK** we can now make our first call to Box APIs.
+BoxアプリケーションとiOSアプリケーションが**Box iOS SDK**を使用して作成、設定されたら、初めてのBox API呼び出しを実行できるようになります。
 
-Using our blank iOS application, we will create a button to trigger
-a request to Box to fetch the name of the currently authenticated user.
+空のiOSアプリケーションを使用して、現在認証されているユーザーの名前を取得するためのリクエストをBoxに対してトリガーするボタンを作成します。
 
 <Message warning>
 
-Using a blocking actions as we use in these examples is slow. In a production
-app these blocking actions would need to be replaced with proper task
-delegation and non-blocking actions.
+これらの例で使用されているブロックアクションを使用した場合、処理は遅くなります。本番アプリでは、これらのブロックアクションを適切なタスク委任アクションやブロック以外のアクションに置き換える必要があります。
 
 </Message>
 
-## Create a button
+## ボタンの作成
 
-Within your Swift application in Xcode, load `ContentView.swift`. At the top of
-the file you will see a `struct` for `ContentView`, within which is a basic
-string that will be output to your iOS application if you run the app in an
-emulator.
+XcodeのSwiftアプリケーション内で、`ContentView.swift`を読み込みます。ファイルの先頭に`ContentView`の`struct`が表示されます。その中には、アプリをエミュレータで実行した場合にiOSアプリケーションに出力される基本の文字列があります。
 
 ```swift
 import SwiftUI
@@ -47,8 +40,7 @@ struct ContentView: View {
 }
 ```
 
-We'll first replace the `Text` output line with a button to be able to trigger
-off the call to get the current user. Replace that line with the below button.
+最初に、現在のユーザーを取得するための呼び出しをトリガーできるように、`Text`の出力行をボタンに置き換えます。その行を以下のボタンに置き換えます。
 
 ```swift
 Button(action: {
@@ -62,26 +54,17 @@ Button(action: {
 .background(Color.blue)
 ```
 
-Our next step is to add an an action for the button which will fetch a user's
-details from Box.
+次の手順では、Boxからユーザーの詳細を取得するアクションをボタンに追加します。
 
-## Add an API call button action
+## API呼び出しのボタンアクションの追加
 
-When a user clicks the button, we want to fetch the user's details. To achieve
-this we need to do two things, add the import for the **Box iOS SDK** and add
-the button action to make the call.
+ユーザーがボタンをクリックしたときに、ユーザーの詳細が取得されるようにします。そのためには、**Box iOS SDK**のインポートを追加することと呼び出しを実行するボタンアクションを追加することという2つの処理が必要です。
 
-At the top of the `ContentView.swift` file, add `import BoxSDK` with the other
-import statement.
+`ContentView.swift`ファイルの先頭に、他のimportステートメントとともに`import BoxSDK`を追加します。
 
-Next, within the button action, where we currently have a comment placeholder,
-add a call to the iOS SDK to fetch the current user. When the API call
-completes it will print an authentication message to the developer console. For
-ease of implementation, we have a blocking `sleep(5)` call in place in order to
-test that the iOS SDK can make calls from our iOS SDK by providing enough time
-for the request to complete.
+次に、現在はコメントのプレースホルダがあるボタンアクション内に、現在のユーザーを取得するためのiOS SDKへの呼び出しを追加します。API呼び出しが完了すると、開発者コンソールに認証メッセージが出力されます。実装を容易にするため、処理をブロックする`sleep(5)`呼び出しを配置しています。これは、リクエストが完了するのに十分な時間をとることで、Box iOS SDKから呼び出しを実行できるかどうかをテストするためです。
 
-Replace `{{YOUR DEVELOPER TOKEN}}` with your developer token.
+`{{YOUR DEVELOPER TOKEN}}`を実際の開発者トークンに置き換えます。
 
 ```swift
 let client = BoxSDK.getClient(token: "{{YOUR DEVELOPER TOKEN}}")
@@ -98,23 +81,17 @@ client.users.getCurrent(fields:["name", "login"]) { (result: Result<User,
 sleep(5)
 ```
 
-Build and run your sample application in the iOS emulator.
+iOSエミュレータでサンプルアプリケーションをビルドして実行します。
 
 <Message warning>
 
-If you run this code an hour or more after you created the developer
-token in the last step, you will need to revoke and generate a new developer
-token using the same method in the
-[previous step](g://mobile/ios/quick-start/configure-box-app/) as the
-developer token will only persist for 60 minutes.
+最後の手順で開発者トークンを作成してから1時間以上後にこのコードを実行する場合、開発者トークンは60分間しか保持されないため、[前の手順](g://mobile/ios/quick-start/configure-box-app/)と同じ方法を使用して、開発者トークンを取り消して新たに生成する必要があります。
 
 </Message>
 
-Once the application loads in the emulator you should see the button we
-created. Click it to start the API request.
+アプリケーションがエミュレータに読み込まれると、作成したボタンが表示されます。そのボタンをクリックしてAPIリクエストを開始します。
 
-Within the Xcode developer console you should see the API request and response,
-with the last line showing the user print statement that we specified.
+Xcodeの開発者コンソール内にAPIリクエストと応答が表示されます。最後の行には、指定したユーザーのprintステートメントが表示されています。
 
 ```bash
 ◁ Status code: 200: no error
@@ -133,21 +110,19 @@ Authenticated as Optional("Test User")
 
 <Message notice>
 
-If you don't see the Xcode developer console, from the menu click **View** ->
-**Debug Area** -> **Activate Console**
+Xcodeの開発者コンソールが表示されない場合は、メニューから\[**View**] -> \[**Debug Area**] -> \[**Activate Console**]をクリックします。
 
 </Message>
 
-Congratulations, you've now configured the **Box iOS SDK** and have made your
-first call to the Box API.
+これで、**Box iOS SDK**の設定が完了し、Box APIへの最初の呼び出しを実行できました。
 
-## Summary
+## まとめ
 
-* You added a button to your blank iOS application
-* You added a request to fetch the current user using the iOS SDK
+* 空のiOSアプリケーションにボタンを追加しました。
+* iOS SDKを使用して現在のユーザーを取得するリクエストを追加しました。
 
 <Next>
 
-I made an API call
+API呼び出しが完了しました
 
 </Next>

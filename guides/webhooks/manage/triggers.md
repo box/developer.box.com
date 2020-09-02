@@ -20,56 +20,55 @@ previous_page_id: webhooks/manage/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/triggers.md
 ---
-# Webhook Event Triggers
+# Webhookイベントトリガー
 
-The following is a list of events that can trigger webhooks. Some
-events are only available for files, while others are only available for folders.
+以下は、Webhookをトリガーできるイベントのリストです。ファイルに対してのみ使用できるイベントや、フォルダに対してのみ使用できるイベントもあります。
 
 <!-- markdownlint-disable line-length -->
 
-| Event                       | Triggered                                                                                                           | File? | Folder? |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
-| `FILE.UPLOADED`             | A file is uploaded to or moved to this folder                                                                                   | No    | Yes     |
-| `FILE.PREVIEWED`            | A file is previewed                                                                                                 | Yes   | Yes     |
-| `FILE.DOWNLOADED`           | A file is downloaded                                                                                                | Yes   | Yes     |
-| `FILE.TRASHED`              | A file is moved to the trash                                                                                        | Yes   | Yes     |
-| `FILE.DELETED`              | A file is permanently deleted                                                                                       | Yes   | Yes     |
-| `FILE.RESTORED`             | A file is restored from the trash                                                                                   | Yes   | Yes     |
-| `FILE.COPIED`               | A file is copied                                                                                                    | Yes   | Yes     |
-| `FILE.MOVED`                | A file is moved from one folder to another                                                                          | Yes   | Yes     |
-| `FILE.LOCKED`               | A file is locked                                                                                                    | Yes   | Yes     |
-| `FILE.UNLOCKED`             | A file is unlocked                                                                                                  | Yes   | Yes     |
-| `FILE.RENAMED`              | A file was renamed.                                                                                                 | Yes   | Yes     |
-| `COMMENT.CREATED`           | A comment object is created                                                                                         | Yes   | Yes     |
-| `COMMENT.UPDATED`           | A comment object is edited                                                                                          | Yes   | Yes     |
-| `COMMENT.DELETED`           | A comment object is removed                                                                                         | Yes   | Yes     |
-| `TASK_ASSIGNMENT.CREATED`   | A task is created                                                                                                   | Yes   | Yes     |
-| `TASK_ASSIGNMENT.UPDATED`   | A task assignment is changed                                                                                        | Yes   | Yes     |
-| `METADATA_INSTANCE.CREATED` | A new metadata template instance is associated with a file or folder                                                | Yes   | Yes     |
-| `METADATA_INSTANCE.UPDATED` | An attribute (value) is updated/deleted for an existing metadata template instance associated with a file or folder | Yes   | Yes     |
-| `METADATA_INSTANCE.DELETED` | An existing metadata template instance associated with a file or folder is deleted                                  | Yes   | Yes     |
-| `FOLDER.CREATED`            | A folder is created                                                                                                 | No    | Yes     |
-| `FOLDER.RENAMED`            | A folder was renamed.                                                                                               | No    | Yes     |
-| `FOLDER.DOWNLOADED`         | A folder is downloaded                                                                                              | No    | Yes     |
-| `FOLDER.RESTORED`           | A folder is restored from the trash                                                                                 | No    | Yes     |
-| `FOLDER.DELETED`            | A folder is permanently removed                                                                                     | No    | Yes     |
-| `FOLDER.COPIED`             | A copy of a folder is made                                                                                          | No    | Yes     |
-| `FOLDER.MOVED`              | A folder is moved to a different folder                                                                             | No    | Yes     |
-| `FOLDER.TRASHED`            | A folder is moved to the trash                                                                                      | No    | Yes     |
-| `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
-| `COLLABORATION.CREATED`     | A collaboration is created                                                                                          | No    | Yes     |
-| `COLLABORATION.ACCEPTED`    | A collaboration has been accepted                                                                                   | No    | Yes     |
-| `COLLABORATION.REJECTED`    | A collaboration has been rejected                                                                                   | No    | Yes     |
-| `COLLABORATION.REMOVED`     | A collaboration has been removed                                                                                    | No    | Yes     |
-| `COLLABORATION.UPDATED`     | A collaboration has been updated.                                                                                   | No    | Yes     |
-| `SHARED_LINK.DELETED`       | A shared link was deleted                                                                                           | Yes   | Yes     |
-| `SHARED_LINK.CREATED`       | A shared link was created                                                                                           | Yes   | Yes     |
-| `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
+| イベント                        | トリガー                                                     | ファイル? | フォルダ? |
+| --------------------------- | -------------------------------------------------------- | ----- | ----- |
+| `FILE.UPLOADED`             | ファイルがこのフォルダにアップロードまたは移動される                               | いいえ   | はい    |
+| `FILE.PREVIEWED`            | ファイルがプレビューされる                                            | はい    | はい    |
+| `FILE.DOWNLOADED`           | ファイルがダウンロードされる                                           | はい    | はい    |
+| `FILE.TRASHED`              | ファイルがごみ箱に移動される                                           | はい    | はい    |
+| `FILE.DELETED`              | ファイルが完全に削除される                                            | はい    | はい    |
+| `FILE.RESTORED`             | ファイルがごみ箱から復元される                                          | はい    | はい    |
+| `FILE.COPIED`               | ファイルがコピーされる                                              | はい    | はい    |
+| `FILE.MOVED`                | ファイルが別のフォルダに移動される                                        | はい    | はい    |
+| `FILE.LOCKED`               | ファイルがロックされる                                              | はい    | はい    |
+| `FILE.UNLOCKED`             | ファイルのロックが解除される                                           | はい    | はい    |
+| `FILE.RENAMED`              | ファイル名が変更された                                              | はい    | はい    |
+| `COMMENT.CREATED`           | コメントオブジェクトが作成される                                         | はい    | はい    |
+| `COMMENT.UPDATED`           | コメントオブジェクトが編集される                                         | はい    | はい    |
+| `COMMENT.DELETED`           | コメントオブジェクトが削除される                                         | はい    | はい    |
+| `TASK_ASSIGNMENT.CREATED`   | タスクが作成される                                                | はい    | はい    |
+| `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される                                            | はい    | はい    |
+| `METADATA_INSTANCE.CREATED` | ファイルまたはフォルダに新しいメタデータテンプレートインスタンスが関連付けられる                 | はい    | はい    |
+| `METADATA_INSTANCE.UPDATED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスの属性(値)が更新/削除される | はい    | はい    |
+| `METADATA_INSTANCE.DELETED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスが削除される          | はい    | はい    |
+| `FOLDER.CREATED`            | フォルダが作成される                                               | いいえ   | はい    |
+| `FOLDER.RENAMED`            | フォルダ名が変更された                                              | いいえ   | はい    |
+| `FOLDER.DOWNLOADED`         | フォルダがダウンロードされる                                           | いいえ   | はい    |
+| `FOLDER.RESTORED`           | フォルダがごみ箱から復元される                                          | いいえ   | はい    |
+| `FOLDER.DELETED`            | フォルダが完全に削除される                                            | いいえ   | はい    |
+| `FOLDER.COPIED`             | フォルダのコピーが作成される                                           | いいえ   | はい    |
+| `FOLDER.MOVED`              | フォルダが別のフォルダに移動される                                        | いいえ   | はい    |
+| `FOLDER.TRASHED`            | フォルダがごみ箱に移動される                                           | いいえ   | はい    |
+| `WEBHOOK.DELETED`           | Webhookが削除されたとき                                          | いいえ   | いいえ   |
+| `COLLABORATION.CREATED`     | コラボレーションが作成される                                           | いいえ   | はい    |
+| `COLLABORATION.ACCEPTED`    | コラボレーションが同意された                                           | いいえ   | はい    |
+| `COLLABORATION.REJECTED`    | コラボレーションが拒否された                                           | いいえ   | はい    |
+| `COLLABORATION.REMOVED`     | コラボレーションが削除された                                           | いいえ   | はい    |
+| `COLLABORATION.UPDATED`     | コラボレーションが更新された                                           | いいえ   | はい    |
+| `SHARED_LINK.DELETED`       | 共有リンクが削除された                                              | はい    | はい    |
+| `SHARED_LINK.CREATED`       | 共有リンクが作成された                                              | はい    | はい    |
+| `SHARED_LINK.UPDATED`       | 共有リンクが更新された                                              | はい    | はい    |
+
 <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
+<Message type="notice">
 
-When the permissions on an item prevent an action from occurring,
-no notification is sent for the attempted action.
+項目の権限が原因でアクションを実行できない場合、試行されたアクションについての通知は送信されません。
 
 </Mesage>

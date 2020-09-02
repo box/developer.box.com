@@ -18,32 +18,14 @@ previous_page_id: applications/web-app-integrations/types
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/web-app-integrations/user-experience.md
 ---
-# User Experience
+# ユーザーエクスペリエンス
 
-The following explains what a Web App Integration looks like from the point of
-view of a user.
+以下に、ユーザーの視点からウェブアプリ統合がどのように見えるかについて説明します。
 
-1. Box users can discover applications in the Box App Gallery. They can visit
-   the gallery directly, or select the "Apps" menu from various places in the
-   Box Web App UI.
-2. On the App Gallery, they select the application of choice to add. Every Box
-   application has a public profile page with detailed information about it,
-   including the integrations it provides.
-3. They add the application to their account. Users can add an application's
-   integrations to their accounts by clicking the "Add" button in the App
-   Gallery. Once an  application is added to an account, all its integrations
-   become available to the user.
-4. Select an integration from the "More Actions" dropdown. To see available
-   integrations, a user can right-click a file and select the "More Actions"
-   sub-menu. Selecting an item from this sub-menu performs the corresponding
-   feature feature provided by the integration.
-5. Grant the integration access to the file. After selecting an integration from
-   the menu, Box will ask your permission to share the file or folder with the
-   application. Box displays a confirmation prompt that must accepted before the
-   integration can be performed.
+1. Boxユーザーは、Boxアプリギャラリーでアプリケーションを見つけることができます。直接ギャラリーにアクセスするか、BoxウェブアプリのUIのさまざまな場所で\[アプリ]メニューを選択できます。
+2. ユーザーはアプリギャラリーで、追加したいアプリケーションを選択します。どのBoxアプリケーションにも、提供されている統合など、そのアプリケーションの詳細を含む公開プロフィールページが用意されています。
+3. 自分のアカウントにアプリケーションを追加します。ユーザーはアプリギャラリーで\[追加]ボタンをクリックすることで、自分のアカウントにアプリケーションの統合を追加できます。アプリケーションがアカウントに追加されると、その統合すべてをユーザーは使用できるようになります。
+4. \[その他の操作]ドロップダウンから統合を選択します。使用可能な統合を表示するには、ファイルを右クリックし、\[その他の操作]サブメニューを選択します。このサブメニューから項目を選択すると、統合で提供される対応する機能が実行されます。
+5. ファイルへのアクセス権限を統合に付与します。メニューから統合を選択すると、Boxから、ファイルまたはフォルダをアプリケーションと共有するための権限が求められます。Boxで確認プロンプトが表示されるので、統合を実行する前にこの確認プロンプトを受け入れる必要があります。
 
-After you accept the confirmation prompt Box runs the integration,
-passing the data to the application. The application might display a popup
-panel that enables you to complete the action, or it might run a
-server-based process to complete it. The method of completion depends on the
-type of integration.
+確認プロンプトを受け入れると、Boxによって統合が実行され、アプリケーションにデータが渡されます。アプリケーションでは、処理を完了できるポップアップパネルが表示されるか、処理を完了するためにサーバーベースのプロセスが実行される可能性があります。完了の方法は統合の種類によって異なります。

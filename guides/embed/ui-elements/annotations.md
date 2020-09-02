@@ -22,35 +22,27 @@ previous_page_id: embed/ui-elements/uploader
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/annotations.md
 ---
-# Annotations
+# 注釈
 
-Box Annotations allow developers to provide collaboration capabilities right
-from within the embedded Box preview in their application. Box Annotations fit a
-wide range of use cases and can be used to draw the previewer's attention and/or
-provide feedback on specific parts of a document or images.
+Boxの注釈を使用すると、開発者はアプリケーションに埋め込まれたBoxプレビュー内から直接コラボレーション機能を提供できます。Boxの注釈は幅広いユースケースに対応するため、使用するとプレビューアーの注意を引いたり、ドキュメントや画像の特定の部分に関するフィードバックを提供したりできます。
 
 <CTA to="g://embed/ui-elements/preview">
 
-Learn more about Content Preview
+Content Previewの詳細を確認する
 
 </CTA>
 
-Box Content Preview currently supports four annotation types - highlight
-comment, highlight only, draw, and point annotation. Box Annotations are today
-supported on documents and image previews only. You can find the full list of
-supported file types for Box Content Preview [here][filetypes].
+現在、Box Content Previewは、コメントのハイライト、ハイライトのみ、描画、ポイント注釈という4種類の注釈をサポートしています。Boxの注釈は、現在、ドキュメントと画像のプレビューでのみサポートされています。Box Content Previewでサポートされるファイルタイプの詳細なリストについては、[こちら][filetypes]で確認できます。
 
-## Browser support
+## ブラウザのサポート
 
-[Learn more about browser support](g://embed/ui-elements/browser) for Box UI
-element.
+Box UI Elementの[ブラウザのサポートの詳細](g://embed/ui-elements/browser)を確認してください。
 
-## Usage
+## 使用方法
 
-Box Annotations can be used by pulling from our [NPM
-package](https://www.npmjs.com/package/box-annotations).
+Boxの注釈は、[NPMパッケージ](https://www.npmjs.com/package/box-annotations)から取り込むと使用できます。
 
-## Initialization
+## 初期化
 
 ```js
 /* global BoxAnnotations */
@@ -66,39 +58,23 @@ const annotator = new annotatorConf.CONSTRUCTOR(options);
 annotator.init(scale);
 ```
 
-Where `disabledAnnotationTypes` is a string of valid annotation types to
-disable. See below for
-more details on viewer specific annotation configurations.
+ここで、`disabledAnnotationTypes`は、無効にする有効な注釈の種類の文字列です。ビューアー固有の注釈の構成の詳細については、以下を参照してください。
 
-## Authentication
+## 認証
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
 
 <CTA to="g://authentication/select">
 
-Learn about selecting an authentication method
+認証方式の選択について確認する
 
 </CTA>
 
-If your application requires the end user to only be able to access a subset of
-the Annotations functionality, you can use
-[Downscoping](g://authentication/access-tokens/downscope) to appropriately
-downscope your Access Token to a resulting token that has the desired set of
-permissions, and can thus, be securely passed to the end user client
-initializing Annotations.
+アプリケーションでエンドユーザーが注釈機能のサブセットだけにアクセスできるようにする必要がある場合は、[ダウンスコープ](g://authentication/access-tokens/downscope)を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、注釈を初期化するエンドユーザークライアントに安全に渡すことができます。
 
-Below are a set of new Annotation-specific scopes to go alongside Downscoping.
-These allow developers to enable/disable functionality on Box
-Annotations by configuring the appropriate scopes on the downscoped token. To
-learn more, see [Dedicated scopes for the Box UI
-Elements](g://embed/ui-elements/scopes).
+以下は、ダウンスコープと一緒に使用する、注釈固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Boxの注釈に対する機能を有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ](g://embed/ui-elements/scopes)を参照してください。
 
-## Parameters & Options
+## パラメータとオプション
 
 ```js
 const annotator = new annotatorConf.CONSTRUCTOR({
@@ -130,57 +106,54 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter              | Default | Description                                                                                            |
-| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| `annotator`            |         | Viewer-specific annotator configurations object                                                        |
-| `apiHost`              |         | Host for Box API calls for example `https://app.box.com/api`                                           |
-| `fileId`               |         | Box file ID                                                                                            |
-| `token`                |         | A string auth token, see below for details on how to generate annotator tokens with appropriate scopes |
-| `container`            |         | DOM node or selector where Preview should be placed                                                    |
-| `file`                 |         | File metadata object                                                                                   |
-| `file.id`              |         | String `Box_File` id                                                                                   |
-| `file.file_version.id` |         | String `Box_File_Version` id                                                                           |
-| `file.permissions`     |         | File permissions object, see below on how to scope permissions                                         |
+| パラメータ                  | デフォルト | 説明                                                     |
+| ---------------------- | ----- | ------------------------------------------------------ |
+| `annotator`            |       | ビューアー固有の注釈構成オブジェクト                                     |
+| `apiHost`              |       | Box API呼び出しのホスト(`https://app.box.com/api`など)           |
+| `fileId`               |       | BoxファイルID                                              |
+| `token`                |       | 文字列認証トークン。適切なスコープを使用した注釈トークンの生成方法の詳細については、以下を参照してください。 |
+| `container`            |       | プレビューが配置されるDOMノードまたはセレクタ                               |
+| `file`                 |       | ファイルメタデータオブジェクト                                        |
+| `file.id`              |       | 文字列`Box_File` ID                                       |
+| `file.file_version.id` |       | 文字列`Box_File_Version` ID                               |
+| `file.permissions`     |       | ファイル権限オブジェクト。権限のスコープを設定する方法については、以下を参照してください。          |
 
-| Option        | Default | Description                                                                                                                         |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `modeButtons` |         | Object containing a CSS selector and accessibility message for the annotation mode button, see parameters and options example above |
-| `isMobile`    | `false` | Whether the user's browser is on a mobile device                                                                                    |
-| `hasTouch`    | `false` | Whether the mobile browser has touch enabled                                                                                        |
-| `locale`      | `en-US` | Shared link URL                                                                                                                     |
+| オプション         | デフォルト   | 説明                                                               |
+| ------------- | ------- | ---------------------------------------------------------------- |
+| `modeButtons` |         | 注釈モードボタンのCSSセレクタとアクセシビリティメッセージを含むオブジェクト。上記のパラメータとオプションを参照してください。 |
+| `isMobile`    | `false` | ユーザーのブラウザがモバイルデバイスにあるかどうか                                        |
+| `hasTouch`    | `false` | モバイルブラウザがタッチ対応かどうか                                               |
+| `locale`      | `en-US` | 共有リンクのURL                                                        |
 
-### Base Scope
+### 基本スコープ
 
-| Scope Name     | What permissions does it grant?                                                           |
-| -------------- | ----------------------------------------------------------------------------------------- |
-| `base_preview` | Allows preview access to a file or files in a folder based on user/file/token permissions |
+| スコープ名          | 付与される権限                                                 |
+| -------------- | ------------------------------------------------------- |
+| `base_preview` | ユーザー/ファイル/トークンの権限に基づいて、フォルダ内のファイルに対するプレビューアクセス権限を許可します。 |
 
-### Feature Scopes
+### 機能のスコープ
 
-| Scope Name             | What permissions does it grant?                                             |
-| ---------------------- | --------------------------------------------------------------------------- |
-| `item_download`        | Allows files/folders contents to be downloaded                              |
-| `annotation_view_self` | Allows user to view their own annotations                                   |
-| `annotation_view_all`  | Allows user to view all annotations on the file                             |
-| `annotation_edit`      | Allows user to edit their own annotations (includes `annotation_view_self`) |
+| スコープ名                  | 付与される権限                                         |
+| ---------------------- | ----------------------------------------------- |
+| `item_download`        | ファイル/フォルダのコンテンツのダウンロードを許可します。                   |
+| `annotation_view_self` | ユーザーに自分の注釈の表示を許可します。                            |
+| `annotation_view_all`  | ユーザーにファイルに付いているすべての注釈の表示を許可します。                 |
+| `annotation_edit`      | ユーザーに自分の注釈の編集を許可します(`annotation_view_self`を含む)。 |
 
-### Sample Scenarios
+### サンプルのシナリオ
 
-| Scenario                                                                                                       | Scope Combinations                                         |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| User wants basic preview functionality + ability to edit own annotations                                       | `base_preview` + `annotation_edit`                         |
-| User wants basic preview functionality + ability to edit own annotations + ability to select text on documents | `base_preview` + `annotation_edit` + `item_download`       |
-| User wants basic preview functionality + ability to view all annotations + ability to edit own annotations     | `base_preview` + `annotation_view_all` + `annotation_edit` |
-| User wants basic preview functionality + ability to view only their own annotations                            | `base_preview` + `annotation_view_self`                    |
+| シナリオ                                                  | スコープの組み合わせ                                                 |
+| ----------------------------------------------------- | ---------------------------------------------------------- |
+| ユーザーが基本的なプレビュー機能と自分の注釈の編集機能を必要とする                     | `base_preview` + `annotation_edit`                         |
+| ユーザーが基本的なプレビュー機能、自分の注釈の編集機能、およびドキュメントのテキストの選択機能を必要とする | `base_preview` + `annotation_edit` + `item_download`       |
+| ユーザーが基本的なプレビュー機能、すべての注釈の表示機能、および自分の注釈の編集機能を必要とする      | `base_preview` + `annotation_view_all` + `annotation_edit` |
+| ユーザーが基本的なプレビュー機能と自分の注釈のみを表示する機能を必要とする                 | `base_preview` + `annotation_view_self`                    |
 
 <!-- markdownlint-enable line-length -->
 
-## Enabling/Disabling Annotations and Annotation Types
+## 注釈の有効化/無効化と注釈の種類
 
-Annotation types can be selectively turned off through preview options. Viewer
-options override global `showAnnotations` value, for that viewer. See [Box
-Content Preview](g://embed/ui-elements/preview) for more details on how to
-set up the Preview instances that are used with Box Annotations here.
+注釈の種類は、プレビューオプションで選択して無効にすることができます。ビューアーオプションによって、そのビューアーに対してグローバルな`showAnnotations`の値が上書きされます。ここでBoxの注釈とともに使用するプレビューインスタンスを設定する方法の詳細については、[Box Content Preview](g://embed/ui-elements/preview)を参照してください。
 
 ```js
 preview.show(..., {
@@ -188,7 +161,7 @@ preview.show(..., {
 });
 ```
 
-Combined with the following:
+次と組み合わせます。
 
 ```js
 preview.show(..., {
@@ -203,15 +176,11 @@ preview.show(..., {
 });
 ```
 
-This turns the annotations on if `enabled` is set to `true`. This respects the
-`showAnnotations` value if empty. The `enabledTypes` value is a list of
-annotation types to enable for this viewer. If empty, will respect default types
-for that annotator.
+これにより、`enabled`が`true`に設定されている場合は、注釈が有効になります。空の場合は`showAnnotations`の値に従います。`enabledTypes`の値は、このビューアーに対して有効にする注釈の種類のリストです。空の場合は、その注釈者のデフォルトの種類に従います。
 
-### Example
+### 例
 
-Enable all annotations, turn off for Image Viewers, and enable only point
-annotations on Document viewer:
+すべての注釈を有効にし、画像ビューアーに対してはオフにします。また、ドキュメントビューアーに対してはポイント注釈のみ有効にします。
 
 ```js
 preview.show(fileId, token, {
@@ -232,45 +201,33 @@ preview.show(fileId, token, {
 });
 ```
 
-## Annotators
+## 注釈者
 
-The name of an annotator can be one of the following `DocAnnotator` or
-`ImageAnnotator`. Call `boxAnnotations.getAnnotators()` to get the list of
-possible annotators.
+注釈者の名前には、`DocAnnotator`と`ImageAnnotator`のいずれかを指定することができます。`boxAnnotations.getAnnotators()`を呼び出すと、使用できる注釈のリストを取得できます。
 
-## Additional Methods
+## その他のメソッド
 
 <!-- markdownlint-disable line-length -->
 
-- `annotator.init()` initializes the annotator.
-- `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the
-  current annotation mode is enabled for the current viewer/annotator.
-- `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the
-  annotate button for the specified annotation mode.
-- `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the
-  annotation button element.
-- `annotator.showAnnotations()` fetches and shows saved annotations.
-- `annotator.hideAnnotations()` hides annotations.
-- `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a
-  specified page.
-- `annotator.setScale()` sets the zoom scale.
-- `annotator.toggleAnnotationHandler()` toggles annotation modes on and off.
-  When an annotation mode is on, annotation threads will be created at that
-  location.
-- `annotator.disableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` disables the specified annotation mode.
-- `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` enables the specified annotation mode.
-- `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the
-  annotated element in the viewer.
-- `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`
-  creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
+* `annotator.init()`: 注釈者を初期化します。
+* `annotator.isModeAnnotatable(/* String */ type)`: 現在のビューアー/注釈者で現在の注釈モードが有効になっているかどうかを返します。
+* `annotator.showModeAnnotateButton(/* String */ currentMode)`: 指定した注釈モードの注釈ボタンを示します。
+* `annotator.getAnnotateButton(/* String */ annotatorSelector)`: 注釈ボタンの要素を取得します。
+* `annotator.showAnnotations()`: 保存されている注釈を取得して表示します。
+* `annotator.hideAnnotations()`: 注釈を非表示にします。
+* `annotator.hideAnnotationsOnPage(/* number */ pageNum)`: 指定したページで注釈を非表示にします。
+* `annotator.setScale()`: 拡大/縮小倍率を設定します。
+* `annotator.toggleAnnotationHandler()`: 注釈モードのオンとオフを切り替えます。注釈モードがオンの場合は、その場所に注釈スレッドが作成されます。
+* `annotator.disableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)`: 指定した注釈モードを無効にします。
+* `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)`: 指定した注釈モードを有効にします。
+* `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)`: ビューアー内の注釈付きの要素を特定します。
+* `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`: 適切な種類の注釈スレッドを作成し、インメモリのマップに追加して返します。
 
 <!-- markdownlint-enable line-length -->
 
-## Events
+## イベント
 
-Events can be bound to the annotator object with `addListener` and removed with
-`removeListener`. Event listeners should be bound before `showAnnotations()` is
-called, otherwise events can be missed.
+イベントは、`addListener`を使用して注釈者オブジェクトにバインドし、`removeListener`を使用して削除することができます。イベントリスナーは`showAnnotations()`が呼び出される前にバインドする必要があります。そうしないと、イベントが見つからない可能性があります。
 
 ```js
 /* global BoxAnnotations */
@@ -296,16 +253,11 @@ annotator.showAnnotations();
 annotator.removeListener(EVENTNAME, listener);
 ```
 
-`EVENTNAME` can be one of the following
+`EVENTNAME`には、以下のいずれかを指定できます。
 
-- `annotator` event will be triggered when we have the annotator instance first
-  available. Box Annotations trigger this event before `load` so that clients can
-  attach their listeners before the `load` event is triggered from Box Content
-  Preview.
-- `annotationsfetched` event will be triggered when annotations have been fetched
-  from the Box API.
-- `annotationmodeenter` event will be triggered on when an annotation mode is
-  entered. The event data will contain:
+* `annotator`イベントは、注釈者インスタンスが最初に使用可能になったときにトリガーされます。Boxの注釈により、`load`の前にこのイベントがトリガーされるため、クライアントは、`load`イベントがBox Content Previewからトリガーされる前にそのリスナーをアタッチできます。
+* `annotationsfetched`イベントは、Box APIから注釈が取得されているときにトリガーされます。
+* `annotationmodeenter`イベントは、注釈モードに入るとトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -316,8 +268,7 @@ annotator.removeListener(EVENTNAME, listener);
 }
 ```
 
-`annotationmodeexit` event will be triggered on when an annotation mode is exited.
-The event data will contain:
+`annotationmodeexit`イベントは、注釈モードが終了するとトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -328,8 +279,7 @@ The event data will contain:
 }
 ```
 
-`annotationerror` event will be triggered when an annotation error has occurred.
-The event data will contain:
+`annotationerror`イベントは、注釈エラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -337,8 +287,7 @@ The event data will contain:
 }
 ```
 
-`annotationpending` event will be triggered when an annotation thread was created
-but has not yet been saved on the server. The event data will contain:
+`annotationpending`イベントは、注釈スレッドが作成されたにもかかわらず、まだサーバーに保存されていない場合にトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -351,8 +300,7 @@ but has not yet been saved on the server. The event data will contain:
 }
 ```
 
-`annotationthreadsaved` event will be triggered when an annotation thread was saved
-on the server. The event data will contain:
+`annotationthreadsaved`イベントは、注釈スレッドがサーバーに保存されたときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -365,8 +313,7 @@ on the server. The event data will contain:
 }
 ```
 
-`annotationthreaddeleted` event will be triggered when an annotation thread was
-deleted on the server. The event data will contain:
+`annotationthreaddeleted`イベントは、注釈スレッドがサーバーで削除されたときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -379,8 +326,7 @@ deleted on the server. The event data will contain:
 }
 ```
 
-`annotationsaved` event will be triggered when an annotation is added and saved to
-an existing annotation thread on the server. The event data will contain:
+`annotationsaved`イベントは、注釈が追加され、サーバー上の既存の注釈スレッドに保存されたときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -393,9 +339,7 @@ an existing annotation thread on the server. The event data will contain:
 }
 ```
 
-`annotationdeleted` event will be triggered when an annotation is deleted from an
-existing thread on the server. The entire annotation thread is not deleted. The
-event data will contain:
+`annotationdeleted`イベントは、サーバー上の既存のスレッドから注釈が削除されたときにトリガーされます。注釈スレッド全体は削除されません。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -408,8 +352,7 @@ event data will contain:
 }
 ```
 
-`annotationcanceled` event will be triggered when an annotation is canceled from
-posting on either a new or existing thread. The event data will contain:
+`annotationcanceled`イベントは、新しいスレッドまたは既存のスレッドで注釈の投稿がキャンセルされたときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -422,8 +365,7 @@ posting on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationdeleteerror` event will be triggered when an error occurs while deleting
-an annotation on either a new or existing thread. The event data will contain:
+`annotationdeleteerror`イベントは、新しいスレッドまたは既存のスレッドで注釈の削除中にエラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -436,8 +378,7 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotationcreateerror` event will be triggered when an error occurs while posting
-an annotation on either a new or existing thread. The event data will contain:
+`annotationcreateerror`イベントは、新しいスレッドまたは既存のスレッドで注釈の投稿中にエラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -450,10 +391,7 @@ an annotation on either a new or existing thread. The event data will contain:
 }
 ```
 
-`annotatorevent` Each annotator will trigger its own sets of events. For example,
-the Image Annotator will trigger `rotate` or `resize`, etc. while other annotator
-may trigger another set of events. The Annotator wrapper will also re-emit events
-at the Preview level in Box Content Preview, with event data containing:
+`annotatorevent`: 注釈者ごとに、一連の独自のイベントがトリガーされます。たとえば、画像の注釈者では`rotate`や`resize`などがトリガーされるのに対し、別の注釈者では別の一連のイベントがトリガーされる場合があります。また、注釈者ラッパーは、以下を含むイベントデータとともに、Box Content Previewのプレビューレベルでイベントを再発行します。
 
 ```js
 {
@@ -465,7 +403,7 @@ at the Preview level in Box Content Preview, with event data containing:
 }
 ```
 
-### Example event usage
+### イベントの使用例
 
 ```js
 preview.addListener("annotator", viewer => {
@@ -522,30 +460,30 @@ preview.addListener("annotationsfetched", data => {
 });
 ```
 
-## Annotation Thread
+## 注釈スレッド
 
-### Thread Methods
+### スレッドのメソッド
 
-The following methods are available for the annotation threads.
+注釈スレッドには、以下のメソッドを使用できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Method Name        | Explanation                                     | Method Parameters                                                                  |
-| ------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `createDialog`     | Creates the dialog for the thread               |                                                                                    |
-| `show`             | Shows the annotation indicator                  |                                                                                    |
-| `hide`             | Hides the annotation indicator                  |                                                                                    |
-| `reset`            | Resets thread state to 'inactive'               |                                                                                    |
-| `showDialog`       | Shows the appropriate dialog for this thread    |                                                                                    |
-| `hideDialog`       | Hides the appropriate indicator for this thread |                                                                                    |
-| `saveAnnotation`   | Saves an annotation locally and on the server   | {string} annotation type, {text} text of annotation to save                        |
-| `deleteAnnotation` | Deletes an annotation                           | {string} annotation ID, {boolean} whether or not to delete on server, default true |
+| メソッド名              | 説明                          | メソッドのパラメータ                                         |
+| ------------------ | --------------------------- | -------------------------------------------------- |
+| `createDialog`     | スレッドのダイアログボックスを作成します。       |                                                    |
+| `show`             | 注釈インジケータを表示します。             |                                                    |
+| `hide`             | 注釈インジケータを非表示にします。           |                                                    |
+| `reset`            | スレッドの状態を「inactive」にリセットします。 |                                                    |
+| `showDialog`       | このスレッドに適切なダイアログを表示します。      |                                                    |
+| `hideDialog`       | このスレッドに適切なダイアログを非表示にします。    |                                                    |
+| `saveAnnotation`   | 注釈をローカルとサーバーに保存します。         | {string} 注釈の種類、{text} 保存する注釈のテキスト                  |
+| `deleteAnnotation` | 注釈を削除します。                   | {string} 注釈ID、{boolean} サーバー上で削除するかどうか(デフォルトはtrue) |
 
 <!-- markdownlint-enable line-length -->
 
-### Thread Events
+### スレッドのイベント
 
-All annotation threads trigger the following events. The event data will contain:
+すべての注釈スレッドでは以下のイベントがトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
 {
@@ -560,51 +498,47 @@ All annotation threads trigger the following events. The event data will contain
 
 <!-- markdownlint-disable line-length -->
 
-| Event Name                | Explanation                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `annotationpending`       | An annotation thread was created but has not yet been saved on the server.                                           |
-| `annotationthreadsaved`   | An annotation thread was saved on the server.                                                                        |
-| `annotationthreaddeleted` | An annotation thread was deleted on the server.                                                                      |
-| `annotationsaved`         | An annotation thread was added and saved to an existing annotation thread on the server                              |
-| `annotationdeleted`       | An annotation thread was deleted from an existing thread on the server. The entire annotation thread is not deleted. |
-| `annotationcanceled`      | An annotation thread was canceled from posting on either a new or existing thread.                                   |
-| `annotationdeleteerror`   | An error occurs while deleting an annotation on either a new or existing thread.                                     |
-| `annotationcreateerror`   | An error occurs while posting an annotation on either a new or existing thread.                                      |
+| イベント名                     | 説明                                                |
+| ------------------------- | ------------------------------------------------- |
+| `annotationpending`       | 注釈スレッドは作成されましたが、まだサーバーに保存されていません。                 |
+| `annotationthreadsaved`   | 注釈スレッドはサーバーに保存されました。                              |
+| `annotationthreaddeleted` | 注釈スレッドはサーバーで削除されました。                              |
+| `annotationsaved`         | 注釈スレッドは追加され、サーバー上の既存の注釈スレッドに保存されました。              |
+| `annotationdeleted`       | 注釈スレッドはサーバー上の既存のスレッドから削除されました。注釈スレッド全体は削除されていません。 |
+| `annotationcanceled`      | 新しいスレッドまたは既存のスレッドで注釈スレッドの投稿がキャンセルされました。           |
+| `annotationdeleteerror`   | 新しいスレッドまたは既存のスレッドで注釈の削除中にエラーが発生しました。              |
+| `annotationcreateerror`   | 新しいスレッドまたは既存のスレッドで注釈の投稿中にエラーが発生しました。              |
 
 <!-- markdownlint-enable line-length -->
 
-See the **Events** section above for example event usage.
+イベントの使用例については、上記の「**イベント**」セクションを参照してください。
 
-## Annotation Dialog
+## 注釈ダイアログ
 
-### Dialog Methods
+### ダイアログのメソッド
 
-The following methods are available for the annotation dialog.
+注釈ダイアログには、以下のメソッドを使用できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Method Name        | Explanation                               | Method Parameters                |
-| ------------------ | ----------------------------------------- | -------------------------------- |
-| `show`             | Positions and shows the dialog            |                                  |
-| `hide`             | Hides the dialog                          |                                  |
-| `hideMobileDialog` | Hides and resets the shared mobile dialog |                                  |
-| `addAnnotation`    | Adds an annotation to the dialog          | {Annotation} annotation to add   |
-| `removeAnnotation` | Removes an annotation from the dialog     | {string} annotation ID           |
-| `postAnnotation`   | Posts an annotation in the dialog         | {string} annotation text to post |
-| `position`         | Positions the dialog                      |                                  |
+| メソッド名              | 説明                         | メソッドのパラメータ          |
+| ------------------ | -------------------------- | ------------------- |
+| `show`             | ダイアログを配置して表示します。           |                     |
+| `hide`             | ダイアログを非表示にします。             |                     |
+| `hideMobileDialog` | 共有モバイルダイアログを非表示にしてリセットします。 |                     |
+| `addAnnotation`    | 注釈をダイアログに追加します。            | {Annotation} 追加する注釈 |
+| `removeAnnotation` | 注釈をダイアログから削除します。           | {string} 注釈ID       |
+| `postAnnotation`   | 注釈をダイアログで投稿します。            | {string} 投稿する注釈テキスト |
+| `position`         | ダイアログを配置します。               |                     |
 
 <!-- markdownlint-enable line-length -->
 
-## Supported Annotation Types
+## サポートされている注釈の種類
 
-Point annotations are supported on both document and image formats. Highlight
-comment, highlight only, and draw annotations are only supported on document
-formats.
+ポイント注釈は、ドキュメント形式と画像形式の両方でサポートされています。コメントのハイライト、ハイライトのみ、描画注釈はドキュメント形式でのみサポートされています。
 
-Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`,
-`xls`, `xlsm`.
+サポートされているドキュメントのファイル拡張子: `pdf`、`doc`、`docx`、`ppt`、`pptx`、`xlsx`、`xls`、`xlsm`。
 
-Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`,
-`psd`, `svs`, `tga`, `tif`, `tiff`.
+サポートされている画像のファイル拡張子: `ai`、`bmp`、`dcm`、`eps`、`gif`、`png`、`ps`、`psd`、`svs`、`tga`、`tif`、`tiff`。
 
 [filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported

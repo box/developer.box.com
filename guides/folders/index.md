@@ -21,36 +21,26 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/folders/index.md
 ---
-# Folders
+# フォルダ
 
-Creates a copy of a folder within a destination folder.
+フォルダのコピーを宛先フォルダ内に作成します。
 
-The original folder will not be changed.
+元のフォルダは変更されません。
 
-## Asynchronous copying
+## 非同期コピー
 
-If the folder being copied contains up to 500 items the copy will happen
-synchronously with the API call. The call will not return until the copy
-operation has completed.
+コピーされるフォルダに含まれる項目が500個以下の場合は、API呼び出しと同時にコピーが実行されます。呼び出しはコピー操作が完了するまで復帰しません。
 
-If the folder contains more than 500 items the copy operation will be run
-asynchronously and the API call will return directly yet before the copy
-operation has completed. We currently have no API to check when a copy operation
-has finished.
+コピー元のフォルダに500個を超える項目が含まれる場合は、非同期的にコピー操作が実行され、API呼び出しはコピー操作が完了していなくても直ちに復帰します。現時点では、コピー操作がいつ終了したのかを確認するAPIはありません。
 
-## Folder locking
+## フォルダのロック
 
-During this operation, part of the file tree will be locked, mainly the source
-folder and all of its descendants, as well as the destination folder.
+この操作の進行中は、ファイルツリーの一部がロックされます。ロックされるのは、主に元のフォルダとその子孫フォルダ、および宛先フォルダです。
 
-For the duration of the operation, no other move, copy, delete, or restore
-operation can performed on any of the locked folders. Most importantly, this
-means that the same folder can not be copied to two different parts of the
-folder tree at the same time.
+操作の進行中は、ロックされているどのフォルダに対しても、他の移動、コピー、削除、または復元操作を実行できません。最も重要な点は、同じフォルダをフォルダツリーの2つの異なる部分に同時にコピーすることはできないということです。
 
-## Metadata
+## メタデータ
 
-If the destination folder has a metadata cascade policy attached to any of the
-parent folders a metadata cascade operation will be kicked off asynchronously.
+宛先フォルダのいずれかの親フォルダにメタデータカスケードポリシーが適用されている場合は、メタデータカスケード操作が非同期的に開始されます。
 
-We currently have no API to check when this operation has finished.
+現時点では、この操作がいつ終了したのかを確認するAPIはありません。

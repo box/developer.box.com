@@ -19,69 +19,52 @@ previous_page_id: webhooks/manage/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/manually.md
 ---
-# Manually Create Webhook
+# 手動によるWebhookの作成
 
-Additionally to creating webhooks via the Box APIs it is possible to
-create  webhooks via the developer console manually. This process is
-often referred to as Webhooks V1.
+Box APIを介してWebhookを作成する方法に加えて、開発者コンソールから手動でWebhookを作成することもできます。このプロセスは、多くの場合Webhook V1と呼ばれます。
 
-## Restrictions
+## 制約事項
 
-Webhooks created using the developer console will monitor changes to all
-files and folders within a user's account. When creating one of these webhooks
-it is not possible specify a specific object to bind the webhook to.
+開発者コンソールを使用して作成されたWebhookは、ユーザーのアカウント内のすべてのファイルとフォルダに対する変更を監視します。このようなWebhookを作成する際は、Webhookをバインドする特定のオブジェクトを指定することはできません。
 
-To create a webhook for a single file or folder please use the
-[webhook APIs][create_webhook].
+単一のファイルまたはフォルダにWebhookを作成するには、[WebhookのAPI][create_webhook]を使用してください。
 
-<Message type='warning'>
+<Message type="warning">
 
-Webhooks created through this process will not show when listing
-[all webhooks][list_webhooks] for a user.
+このプロセスで作成されたWebhookは、ユーザーの[すべてのWebhook][list_webhooks]のリストを作成しても表示されません。
 
 </Message>
 
-## Create a V1 webhook
+## V1 Webhookの作成
 
-The following steps create a new webhook through the [developer console][devconsole].
+[開発者コンソール][devconsole]を使用して新しいWebhookを作成するには、以下の手順に従います。
 
-1. Visit the [developer console][devconsole] and select the app to add webhooks to.
-2. From the sidebar select "Webhooks".
-3. Click the "Create a new Webhook" button.
-4. Fill in the form to create the webhook and save the form. Make sure to fill
-   in a endpoint URL for the webhook to call. Also make sure to select 1 or more
-   callback parameters with the data you'd like to add to your webhook.
-5. Visit your app's installation URL on
-   `https://[enterprise_name].app.box.com/services/[service_short_name]`. In
-   this the `enterprise_name` is your enterprise's subdomain which you can see
-   by visiting the Box web app and inspecting the domain that your browser
-   redirects to. Your `service_short_name` is the name of your
-   application, lowercase, with non-alphanumeric characters replaced by
-   underscores, for example `Your App Name [Dev]` becomes `your_app_name_dev`.
+1. [開発者コンソール][devconsole]に移動し、Webhookを追加するアプリを選択します。
+2. サイドバーから\[Webhook]を選択します。
+3. \[新規Webhookの作成]ボタンをクリックします。
+4. フォームに入力してWebhookを作成し、フォームを保存します。Webhookが呼び出すエンドポイントURLを必ず入力します。また、1つ以上のコールバックパラメータとWebhookに追加するデータも必ず選択します。
+5. アプリのインストールURL `https://[enterprise_name].app.box.com/services/[service_short_name]`にアクセスします。ここで、`enterprise_name`は会社のサブドメインであり、Boxウェブアプリにアクセスして、ブラウザがリダイレクトされるドメインを調べることで確認できます。`service_short_name`は、アプリケーションの名前をすべて小文字にし、英数字以外の文字をアンダースコアに置き換えたものです。たとえば、`Your App Name [Dev]`は`your_app_name_dev`になります。
 
-<Message type='warning'>
+<Message type="warning">
 
-# Callback parameters
+# コールバックパラメータ
 
-Unlike the V2 Webhooks, these manual webhooks need to be configured with the
-data you'd like to sent along. This data will be sent as a query string either
-in the body or as a query parameter, for example `name=Contract.pdf&type=file`
+V2 Webhookとは異なり、これらの手動によるWebhookは、送信するデータを設定する必要があります。このデータは、本文のクエリ文字列として、または`name=Contract.pdf&type=file`のようなクエリパラメータとして送信されます。
 
 </Message>
 
-Webhooks will now be triggered for any events that are happen for any objects
-within the user's account.
+これで、ユーザーのアカウント内のオブジェクトで発生したイベントに対してWebhookがトリガーされるようになりました。
 
-<Message type='error'>
+<Message type="error">
 
-# Developer Mode
+# 開発者モード
 
-By default V1 webhooks only work for users that are developers of the
-application and have access to the app in the developer console. To enable
-these webhooks for all users, please contact support.
+デフォルトでは、V1 Webhookは、アプリケーションの開発者であり、開発者コンソールでアプリにアクセスできるユーザーに対してのみ機能します。これらのWebhookをすべてのユーザーに対して有効にするには、サポートにお問い合わせください。
 
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
+
 [list_webhooks]: guide://webhooks/manage/list-all
+
 [create_webhook]: guide://webhooks/manage/for-file

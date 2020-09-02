@@ -20,45 +20,27 @@ previous_page_id: users/provision
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/architecture.md
 ---
-# Create Architecture Skeleton
+# アーキテクチャスケルトンの作成
 
-Our first requirement is to copy general files and folders into each individual
-user's root folder on account creation. This problem has been solved within
-standard Linux distributions through a directory called `/etc/skel`,
-which we'll emulate with a Box specific solution here. When adding a new user in
-Linux, the files and folders within `/etc/skel` are copied to the new user's
-home directory.
+最初の要件は、アカウントの作成時に一般的なファイルとフォルダを個々のユーザーのルートフォルダにコピーすることです。この問題は、標準のLinuxディストリビューション内の`/etc/skel`と呼ばれるディレクトリを介して解決されています。このディレクトリは、Box固有のソリューションによってエミュレートされます。Linuxで新しいユーザーを追加すると、`/etc/skel`内のファイルとフォルダが新しいユーザーのホームディレクトリにコピーされます。
 
-When creating a
-[JWT-based Box application](guide://applications/custom-apps/jwt-setup), a
-[Service Account](guide://authentication/user-types/app-users) is created
-within the Box Enterprise. A Service Account is similar in functionality to a
-co-admin within a Box Enterprise, and most useful to this use case, can own,
-copy, and collaborate other users on files and folders. More importantly, you
-don't have to use a Service Account strictly for developing custom applications
-for users, and instead, can use a Service Account in more of an automation
-capacity.
+[ JWTベースのBoxアプリケーション](guide://applications/custom-apps/jwt-setup)を作成すると、Box Enterprise内に[サービスアカウント](guide://authentication/user-types/app-users)が作成されます。サービスアカウントはBox Enterpriseの共同管理者に似た機能を持っており、このユースケースに最も有用で、ファイルおよびフォルダに対し、所有、コピー、および他のユーザーとのコラボレーションを行うことができます。さらに重要な点は、ユーザー向けのカスタムアプリケーションの開発では厳密にはサービスアカウントを使用する必要がないことです。代わりに、自動化機能でさらにサービスアカウントを活用できます。
 
 <Message>
 
-# Box Custom Application Requirements
+# Boxカスタムアプリケーションの要件
 
-When creating your JWT-based custom Box application for this recipe, you'll
-need to enable the following scopes: **Manage users**, **Manage groups**,
-**Perform Actions as Users**, and **Generate User Access Tokens**.
+この手順のためにJWTベースのカスタムBoxアプリケーションを作成する場合、**ユーザーを管理**、**グループを管理**、**ユーザーとして操作を実行**、および**ユーザーアクセストークンを生成**スコープを有効にする必要があります。
 
-See [JWT Application Setup](guide://applications/custom-apps/jwt-setup) for
-more information on creating a JWT-based Box application and the scopes in a
-Box application.
+JWTベースのBoxアプリケーションとBoxアプリケーションのスコープの作成の詳細については、[JWTアプリケーションの設定](guide://applications/custom-apps/jwt-setup)を参照してください。
 
 </Message>
 
-We'll start by creating the `etc` and `skel` folders and granting ownership of
-the folders to the Service Account.
+初めに、`etc`フォルダと`skel`フォルダを作成し、サービスアカウントにフォルダの所有権を付与します。
 
 <Tabs>
 
-<Tab title='etc_skel.json'>
+<Tab title="etc_skel.json">
 
 ```json
 {
@@ -77,7 +59,7 @@ the folders to the Service Account.
 
 </Tab>
 
-<Tab title='skel_sub_directories.json'>
+<Tab title="skel_sub_directories.json">
 
 ```json
 [
@@ -117,12 +99,11 @@ the folders to the Service Account.
 
 </Tabs>
 
-The code here can optionally be reused to build any folder structure formatted
-as the JSON objects above demonstrate.
+このコードを再利用して、上のJSONオブジェクトが示すフォーマットのフォルダ構造を構築することもできます。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 "use strict";
@@ -222,7 +203,7 @@ let treeCreator = new BoxFolderTreeCreator(serviceAccountClient);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 package com.box;
@@ -350,7 +331,7 @@ public class BoxFolderTreeCreator {
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 using System;

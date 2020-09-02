@@ -21,43 +21,31 @@ source_url: >-
 ---
 <!-- alex disable reject -->
 
-# Create a task
+# タスクの作成
 
-To create a task, you will need to provide the [`POST /tasks`][post_tasks] API
-with the `action` for the task, as well as an `item` to represent the file to
-add the task to.
+タスクを作成するには、タスクの`action`と、タスクの追加先となるファイルを表す`item`を指定して[`POST /tasks`][post_tasks] APIを呼び出す必要があります。
 
-<Samples id="post_tasks" >
+<Samples id="post_tasks">
 
 </Samples>
 
-## Task actions
+## タスクのアクション
 
-Box currently supports two types of tasks defined by the `action` value:
-`review` tasks and `complete` tasks.
+Boxは現在、`action`値によって定義される、`review`と`complete`という2種類のタスクをサポートしています。
 
-The type of task determines the possible resolution states a task can be in and
-the interface shown to a user in the web and mobile apps.
+タスクのタイプによって、タスクがなりうる解決状態と、ウェブアプリおよびモバイルアプリでユーザーに表示されるインターフェイスが決まります。
 
-| Task action | Possible resolution states           |
-|-------------|--------------------------------------|
-| `review`    | `incomplete`, `approved`, `rejected` |
-| `complete`  | `incomplete`, `complete`             |
+| タスクのアクション  | 考えられる解決状態                            |
+| ---------- | ------------------------------------ |
+| `review`   | `incomplete`, `approved`, `rejected` |
+| `complete` | `incomplete`, `complete`             |
 
-A `review` task starts out in an `incomplete` state and can be marked as
-`incomplete`, `approved`, or `rejected`. In the user interface a user is
-provided with a text box and an pair of buttons to approve or reject the task.
+`review`タスクは`incomplete`状態で開始され、`incomplete`、`approved`、または`rejected`としてマークすることができます。ユーザーインターフェイスには、テキストボックスのほか、タスクを承認または拒否する1組のボタンが表示されます。
 
-A `complete` task starts out in an `incomplete` state and can be marked
-`incomplete` or `completed`. Once a this task is marked completed, no
-further changes can be made to the task's state. In the user interface a user is
-provided with a text box and an button to mark the task as completed.
+`complete`タスクは`incomplete`状態で開始され、`incomplete`または`completed`としてマークすることができます。このタスクが完了済みとしてマークされると、タスクの状態をそれ以上変更することはできなくなります。ユーザーインターフェイスには、テキストボックスのほか、タスクを完了済みとしてマークするためのボタンが表示されます。
 
-## Completion rules
+## 完了のルール
 
-A task on a file can be assigned to more than one collaborator on the file, and
-a task has a `completion_rule` that can be used to define if all users who've
-been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
-need to complete the task.
+ファイルに関連するタスクは、そのファイルの複数のコラボレータに割り当てることができます。また、タスクの`completion_rule`を使用すると、タスクを完了する必要があるのはタスクが割り当てられているすべてのユーザー(`all_assignees`)か1人の担当者のみ(`any_assignee`)かを定義できます。
 
 [post_tasks]: e://post_tasks

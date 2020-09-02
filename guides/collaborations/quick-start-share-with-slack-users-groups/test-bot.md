@@ -14,139 +14,99 @@ previous_page_id: collaborations/quick-start-share-with-slack-users-groups/conne
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/6-test-bot.md
 ---
-# Test the bot
+# ボットのテスト
 
-In this last section we'll test the full range of functionality of the Slack
-bot.
+この最後のセクションでは、Slackボットのあらゆる機能をテストします。
 
-* **Group creation**: When a bot is added to a channel, a new Box group should
- be created with all of the current channel participants. Only those
- people in the channel with matching Box accounts (based on email address
- matching) should be added.
-* **User event functions**: When a user enters or leaves a channel, they should
- be added or removed from the channel group.
-* **Content add functions**: When a user enters a valid `/boxadd` slash command,
- that content should be shared with the group through a new collaboration.
+* **グループの作成**: ボットがチャンネルに追加されると、現在のチャンネル参加者全員を含む新しいBoxグループが作成されます。このチャンネル内で (メールアドレスの照合を基に) 一致するBoxアカウントを持つユーザーのみが追加される必要があります。
+* **ユーザーイベント関数**: ユーザーは、チャンネルに参加した場合またはチャンネルから退出した場合に、チャンネルグループから追加または削除される必要があります。
+* **コンテンツ追加関数**: ユーザーが有効な`/boxadd`スラッシュコマンドを入力すると、新しいコラボレーションによってそのコンテンツがグループと共有される必要があります。
 
-<Message type='notice'>
+<Message type="notice">
 
-If you haven't done so already, ensure that all the code we've written so far
-is deployed as an application that is publicly accessible.
+上記の内容がまだできていない場合は、これまでに作成したすべてのコードが、一般公開されているアプリケーションとして展開されていることを確認します。
 
 </Message>
 
-## Testing group creation
+## グループの作成のテスト
 
-When a bot is first added to a channel, there are a number of expectations.
+ボットが初めてチャンネルに追加されるときに、予想されることがいくつかあります。
 
-* A new group is created with a name that matches the Slack channel ID.
-* All people currently in the channel are added to the group, as long as their
- Slack email address matches an enterprise account with the same email.
+* SlackチャンネルIDと一致する名前で新しいグループが作成されます。
+* 現在チャンネルに存在するすべてのユーザーがグループに追加されます (Slackメールアドレスが同じメールアドレスでEnterpriseアカウントと一致する限り)
 
-When the Slack bot was configured in [step 1][step1], we installed it within
-the Slack workspace. To test group creation we need to add it to a channel.
+Slackボットを[手順1][step1]で構成した際に、SlackボットをSlackワークスペースにインストールしました。グループの作成をテストするには、Slackボットをチャンネルに追加する必要があります。
 
-From any Slack channel, invite the Slack bot, either through the Slack UI or
-using a `/invite @bot_app_name` command.
+Slack UIまたは`/invite @bot_app_name`コマンドを使用して、任意のSlackチャンネルからSlackボットを招待します。
 
-Once added, verify that the group is created in Box and members have been
-added. From a Box enterprise admin account, go to the
-**[Users and Groups][box-users-groups**] section of the admin console. If
-successful, you will see a group with an random alpha-numeric string as the
-group name. This is the Slack channel ID, which is mirrored in the group name.
+追加後、Boxにグループが作成され、メンバーが追加されていることを確認します。Box Enterprise管理者アカウントで、管理コンソールの **[ユーザーとグループ][Users and Groups]box-users-groups**] セクションに移動します。成功した場合は、表示されるグループには、グループ名としてランダムな英数字の文字列が使用されます。これはSlackのチャンネルIDで、グループ名に反映されています。
 
 <ImageFrame noborder center shadow>
 
-![View Box Groups](./img/slack_6_groups.png)
+![Boxグループの表示](./img/slack_6_groups.png)
 
 </ImageFrame>
 
-Under the **Members** column, you should also see a number indicating the
-number of Box users with matching email addresses that were found in the
-enterprise and added to the group during group creation.
+\[**メンバー**] 列には、グループ作成時に社内で検出されてグループに追加された、一致するメールアドレスを持つBoxユーザーの数も表示されます。
 
-If you see your group and members, this step is a success.
+グループとメンバーが表示されていれば、この手順は成功です。
 
-<Message type='notice'>
+<Message type="notice">
 
-If you see no members added to the group, and no errors being returned from
-the bot application, the most likely cause is email mismatch. Ensure that the
-email addresses used by the accounts in Slack match the emails used by users
-in your Box enterprise.
+グループに追加したメンバーが表示されず、ボットアプリケーションからエラーが返されない場合、最も可能性が高い原因として、メールアドレスの不一致が考えられます。Slackのアカウントで使用されているメールアドレスが、Box Enterpriseのユーザーで使用されているメールアドレスと一致することを確認してください。
 
 </Message>
 
-## Testing user event functions
+## ユーザーイベント関数のテスト
 
-Keep the **[Users and Groups][box-users-groups]** section of the Box admin
-console open and take note of the number in the **Members** column beside your
-Slack group.
+Box管理コンソールの \[**[ユーザーとグループ][box-users-groups]**] セクションを開いたまま、Slackグループの横にある \[**メンバー**] 列の数値を書き留めます。
 
-From the Slack channel with the bot invited, add or remove someone other than
-the bot from the channel.
+ボットを招待したSlackチャンネルから、ボット以外のユーザーを追加または削除します。
 
-Refresh the users and groups section of the Box admin console and you should
-see the members number drop or increase depending on if you added or removed a
-user.
+Box管理コンソールの \[ユーザーとグループ] セクションを更新すると、ユーザーの追加または削除に応じたメンバー数の増減がわかります。
 
-If the number of members changes, this step is a success.
+メンバーの数が変化していれば、この手順は成功です。
 
-## Testing content add functions
+## コンテンツ追加関数のテスト
 
-To test the functionality of sharing content with the group, you will need
-access to two users in the channel, one person to share the content from their
-Box account, and another person in the group to view their list of files to
-verify that the content was shared.
+グループとコンテンツを共有する機能をテストするには、チャンネル内の2人のユーザーに対するアクセス権限が必要です。1人はBoxアカウントからコンテンツを共有するユーザー、もう1人は、コンテンツが共有されたことを確認するためにファイルのリストを表示する、グループ内の別のユーザーです。
 
-From the Slack channel with the bot invited, type in the slash command to share
-files or folders with the group, in the format of
-`/boxadd [file/folder] [ID of file/folder]`, such as
-`/boxadd folder 324554221`.
+ボットを招待したSlackチャンネルで、ファイルやフォルダをグループと共有するためのスラッシュコマンドを`/boxadd [file/folder] [ID of file/folder]`形式 (`/boxadd folder 324554221`など) で入力します。
 
-<Message type='notice'>
+<Message type="notice">
 
-The file or folder ID specified needs to be content within the Box account of
-the person sharing it.
+指定されるファイルまたはフォルダIDは、ファイルまたはフォルダを共有するユーザーのBoxアカウント内のコンテンツである必要があります。
 
 </Message>
 
-To find the ID of a file or folder in a Box account, load up the file or folder
-within [the Box site](https://box.com), then look at the URL. The ID will be the
-last string in the URL, often right after a section which includes either
-`/file/` or `/folder/`.
+Boxアカウント内のファイルまたはフォルダのIDを調べるには、[Boxサイト](https://box.com)内でファイルまたはフォルダを読み込み、URLを確認します。IDはURLの最後の文字列で、多くの場合、`/file/`または`/folder/`を含むセクションの直後に表示されます。
 
 <ImageFrame noborder center shadow>
 
-![Get File or Folder ID](./img/slack_6_file_id.png)
+![ファイルIDまたはフォルダIDの取得](./img/slack_6_file_id.png)
 
 </ImageFrame>
 
-Once the command is typed in, go to the [the Box site](https://box.com) account
-of another person within the Slack channel and Box group. The content that was
-shared should now be available to that account.
+コマンドを入力したら、SlackチャンネルとBoxグループ内で別のユーザーの[Boxサイト](https://box.com)アカウントに移動します。共有したコンテンツがそのアカウントで使用できるようになっているはずです。
 
-If the shared content is available to others in the group, this step is a
-success.
+共有したコンテンツをグループ内の他のユーザーが使用できれば、この手順は成功です。
 
-## Next Steps
+## 次の手順
 
-With our minima bot deployed we can now think about ways to improve the
-experience on top of what we've created so far. Next steps in this
-journey may include any number of different expansion areas.
+最小限のボットが展開されたので、ここまでに作成した機能に加えて、操作性を向上させる方法を検討できるようになりました。この工程における次の手順として、さまざまな領域を拡張することもできます。
 
-* Add new slash commands for [creating shared links][next-steps-shared-link]
- for the files and folders shared with the group, allowing you to share the
- content with others who are not in the group and people outside your
- enterprise.
-* [Creating retention policies][next-steps-retention-policy] and
- [assigning them][next-steps-policy-assign] to any content shared with the
- group, allowing you to control the lifespan and governance of shared content.
-* Adding new slash commands for allowing people in the channel to
- [comment on the files][next-steps-comment] that are shared with the group.
+* グループと共有されたファイルやフォルダの[共有リンクを作成][next-steps-shared-link]するための新しいスラッシュコマンドを追加することで、そのグループに属していない他のユーザーや社外のユーザーとコンテンツを共有できるようにします。
+* [リテンションポリシーを作成][next-steps-retention-policy]し、グループと共有されたコンテンツに[割り当てる][next-steps-policy-assign]ことで、共有コンテンツの寿命とガバナンスを制御できるようにします。
+* チャンネル内のユーザーが、グループと共有されている[ファイルにコメント][next-steps-comment]できるように新しいスラッシュコマンドを追加します。
 
 [step1]: g://collaborations/quick-start-share-with-slack-users-groups/configure-slack
+
 [box-users-groups]: https://app.box.com/master/groups
+
 [next-steps-shared-link]: g://shared-links/create/
+
 [next-steps-retention-policy]: r://post-retention-policies
+
 [next-steps-policy-assign]: r://post-retention-policy-assignments
+
 [next-steps-comment]: r://post-comments

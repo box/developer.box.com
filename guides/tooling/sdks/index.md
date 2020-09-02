@@ -21,38 +21,40 @@ previous_page_id: tooling/sdks/cli
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/index.md
 ---
-# SDKs & CLI
+# SDKとCLI
 
-To make working with the Box API easier we provide the following SDKs and CLI.
+Box APIの操作を簡易化するために、以下のSDKとCLIが用意されています。
 
-| Platform                          | Maintained? | Parity? |
-| --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [CLI][cli]                        | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Partial |
-| [Android Content SDK][androidsdk] | Yes         | Partial |
+| プラットフォーム                          | メンテナンスの有無 | パリティの状況 |
+| --------------------------------- | --------- | ------- |
+| [Java SDK][javasdk]               | はい        | 詳細      |
+| [.NET SDK][dotnetsdk]             | はい        | 詳細      |
+| [Python SDK][pythonsdk]           | はい        | 詳細      |
+| [Node SDK][nodesdk]               | はい        | 詳細      |
+| [CLI][cli]                        | はい        | 詳細      |
+| [iOS Content SDK][iossdk]         | はい        | 部分的     |
+| [Android Content SDK][androidsdk] | はい        | 部分的     |
 
 <Message type="notice">
 
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
 
-**API Parity**: Projects with full API parity are actively updated with all
-platform functionality as this becomes available on the Box Platform. Projects
-with partial API parity lack some functionality while we work on bringing
-these projects to full parity.
+**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
 
 </Message>
 
 [javasdk]: https://github.com/box/box-java-sdk
+
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
+
 [pythonsdk]: https://github.com/box/box-python-sdk
+
 [nodesdk]: https://github.com/box/box-node-sdk
+
 [iossdk]: https://github.com/box/box-ios-sdk
+
 [androidsdk]: https://github.com/box/box-android-sdk
+
 [cli]: https://github.com/box/boxcli
+
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum

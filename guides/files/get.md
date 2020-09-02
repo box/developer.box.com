@@ -19,28 +19,24 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/files/get.md
 ---
-# Get File Information
+# ファイル情報の取得
 
-To get a file's information, not it's content, call the
-[`GET /files/:id`](e://get-files-id) API with the `id` of the file.
+ファイルのコンテンツではなく、ファイル自体の情報を取得するには、ファイルの`id`を指定して[`GET /files/:id`](e://get-files-id) APIを呼び出します。
 
-<Samples id='get_files_id' >
+<Samples id="get_files_id">
 
 </Samples>
 
-## File ID
+## ファイルID
 
-The `id` for any file can be determined by visiting a file in the web
-application and copying the `id` from the URL. For example, for the URL
-`https://*.app.box.com/file/123` the `file_id` is `123`.
+ファイルの`id`を確認するには、ウェブアプリでファイルにアクセスして、URLから`id`をコピーします。たとえば、URLが`https://*.app.box.com/file/123`の場合、`file_id`は`123`です。
 
-## Additional fields
+## その他のフィールド
 
-To get more of the fields for a file, make sure to pass along the `fields`
-query parameter.
+ファイルのフィールドをさらに取得するには、必ず`fields`クエリパラメータを渡してください。
 
-<CTA to='g://api-calls/request-extra-fields'>
+<CTA to="g://api-calls/request-extra-fields">
 
-Learn about requesting extra fields
+追加フィールドのリクエストについて確認する
 
 </CTA>

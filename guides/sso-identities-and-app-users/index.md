@@ -20,12 +20,9 @@ previous_page_id: sso-identities-and-app-users/find-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/index.md
 ---
-# SSO & App users
+# SSOとApp User
 
-Single Sign-On (SSO) services are often used as part of a company's **Identity
-and Access Management (IAM)** solution. When deployed, these services grant
-users the ability to securely authenticate multiple applications by logging in
-once, with only one set of credentials (username and password).
+シングルサインオン(SSO)サービスは、会社の**Identity and Access Management (IAM)**ソリューションの一環として使用されることがよくあります。SSOサービスが展開されると、ユーザーは、1つの資格情報セット(ユーザー名とパスワード)だけを使用して1回ログインすれば、複数のアプリケーションの認証を安全に行うことができます。
 
 ```mermaid;width=600px
 graph LR
@@ -33,23 +30,17 @@ graph LR
    b --- c[Box App User]
 ```
 
-Box is one of the applications that can be connected to the SSO service of a
-company. Integrating these applications into your custom apps will allow you to
-provision Box users on the fly for any of your end users, without those users
-knowing they have a Box account.
+Boxは、会社のSSOサービスに接続可能なアプリケーションの1つです。こうしたアプリケーションをカスタムアプリに統合すれば、いずれのエンドユーザーに対しても即座にBoxユーザーがプロビジョニングされます。その際、このエンドユーザーにはBoxアカウントが用意されたことが知らされません。
 
 <Message notice>
 
-Popular SSO services include `Okta`, `Auth0`, `Microsoft Azure AD`,
-`OneLogin`, `G Suite`, and `Ping Identity`, but there are many others that may
-be deployed.
+一般的なSSOサービスには`Okta`、`Auth0`、`Microsoft Azure AD`、`OneLogin`、`G Suite`、`Ping Identity`などがありますが、これ以外にも展開可能なサービスは多数あります。
 
 </Message>
 
-## Connecting SSO to apps
+## SSOをアプリに接続する
 
-When integrating SSO services into a Box application programmatically, we are
-referring to the following flow.
+プログラムによってSSOサービスをBoxアプリケーションに統合する際のフローは以下のとおりです。
 
 ```mermaid
 sequenceDiagram
@@ -66,29 +57,18 @@ sequenceDiagram
    Web Server->>-Browser: Display files to user
 ```
 
-1. A user accesses your web or mobile application in a logged out state.
-2. The user is redirected to your SSO provider to log in, typically via
-   `OAuth 2` and `OpenID Connect`.
-3. After login, the user is redirected back to your application along with
-   their SSO identity credentials.
-4. Your application does a check to see if an associated Box account already
-   exists for this user.
-5. If an existing Box account already exists for this user, the application
-   uses the SSO identity to make API calls on behalf of that user in Box.
-6. If there is not already an associated Box account for this user, a
-   new Box user account is created based on the SSO identity. The unique user ID
-   from the SSO service is then linked to the new Box user, creating an
-   association between the two accounts. This new Box user is then API calls on
-   behalf of that user in Box.
+1. ユーザーはログアウトした状態でウェブアプリケーションやモバイルアプリケーションにアクセスします。
+2. ユーザーは、通常`OAuth 2`や`OpenID Connect`を介して、ログインのためにSSOプロバイダにリダイレクトされます。
+3. ログイン後、ユーザーはSSO ID資格情報と共にアプリケーションに再度リダイレクトされます。
+4. アプリケーションでは、このユーザーに関連付けられたBoxアカウントが既に存在するかどうかを確認します。
+5. このユーザーに既存のBoxアカウントがある場合、アプリケーションはSSO IDを使用して、Boxでそのユーザーに代わってAPI呼び出しを実行します。
+6. このユーザーに関連付けられたBoxアカウントがまだない場合は、SSO IDに基づいて新しいBoxユーザーアカウントが作成されます。SSOサービスの一意のユーザーIDが新しいBoxユーザーにリンクされ、2つのアカウントの間に関連付けが作成されます。その後、この新しいBoxユーザーがBoxでそのユーザーに代わってAPI呼び出しを実行します。
 
 <Message notice>
 
-# Box web app and SSO
+# BoxウェブアプリとSSO
 
-If you wish to connect your SSO service to the Box website instead of a Box
-application, Box provides a number of [integration options][sso-support] for
-supporting SSO integrations of the [Box web application](https://www.box.com)
-via SAML 2.0.
+SSOサービスをBoxアプリケーションではなくBoxウェブサイトに接続したい方のために、Boxでは、SAML 2.0を通じて[Boxウェブアプリケーション](https://www.box.com)のSSO統合をサポートするための[統合オプション][sso-support]を多数用意しています。
 
 </Message>
 

@@ -14,4 +14,4 @@ previous_page_id: best-practices/cors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/best-practices/index.md
 ---
-# Best Practices
+# ベストプラクティス

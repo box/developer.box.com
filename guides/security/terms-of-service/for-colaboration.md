@@ -20,18 +20,15 @@ previous_page_id: security/terms-of-service/flow
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/security/terms-of-service/for-colaboration.md
 ---
-# Find Terms for Collaboration
+# コラボレーションの利用規約の検索
 
-Information about the Terms of Service that is in effect for any
-[Collaboration](r://collaboration) can be inspected by calling the
-[`GET /collaborations/:id`](e://get-collaborations-id) API and passing the query
-parameter `fields=acceptance_requirements_status`.
+[コラボレーション](r://collaboration)に効力のある利用規約に関する情報を調べるには、[`GET /collaborations/:id`](e://get-collaborations-id) APIを呼び出してクエリパラメータ`fields=acceptance_requirements_status`を渡します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
@@ -44,8 +41,7 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
 <!-- markdownlint-enable line-length -->
 
-The resulting response will include a new `acceptance_requirements` object that
-includes a mini `terms_of_service` object.
+返される応答には、簡易版の`terms_of_service`オブジェクトを含む新しい`acceptance_requirements`オブジェクトが含まれます。
 
 ```json
 {
@@ -62,17 +58,11 @@ includes a mini `terms_of_service` object.
 
 <Message>
 
-This information is only returned if the Terms of Service for external users is
-enabled for the enterprise, and the user making the request has the
-[permission][permissions] to see the Terms of Service. This holds true for
-both admin and end users, even though admins can generally view Terms of User
-information via the API even if the specific Terms of Service type is
-turned off.
+この情報が返されるのは、外部ユーザーの利用規約が会社で有効になっており、リクエストを実行するユーザーに利用規約を表示するための[権限][permissions]がある場合のみです。これは、管理者とエンドユーザーの両方に当てはまりますが、特定の利用規約タイプが無効になっている場合でも、一般的に、管理者はAPIを介してユーザーの利用規約情報を表示できます。
 
 </Message>
 
-If the Terms of Service type is not enabled, the API will return an empty
-result.
+利用規約タイプが有効になっていない場合は、APIによって空の結果が返されます。
 
 ```json
 {
@@ -86,8 +76,7 @@ result.
 
 <Message>
 
-The `terms_of_service` information is returned within the
-`acceptance_requirements` even if they have already been accepted by the user.
+すでにユーザーが同意している場合でも、`terms_of_service`の情報は`acceptance_requirements`内で返されます。
 
 </Message>
 

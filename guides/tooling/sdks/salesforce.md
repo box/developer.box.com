@@ -23,31 +23,29 @@ previous_page_id: tooling/sdks/python
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/salesforce.md
 ---
-# Install Salesforce SDK
+# Salesforce SDKのインストール
 
-The Salesforce SDK can be deployed directly to Sandbox or Developer
-organizations by using the [Deploy to Salesforce][deploy_salesforce]
-functionality.
+Salesforce SDKは、Deploy to Salesforce機能を使用して、サンドボックスまたは開発者組織に直接展開できます。
 
 <Message type="notice">
 
-"Deploy to Salesforce" functionality is not owned or maintained by Box.
+「Deploy to Salesforce」機能はBoxが所有または管理する機能ではありません。
 
 </Message>
 
-The SDK is also distributed as an unmanaged package:
+このSDKは、以下の非管理型パッケージとしても配布されています。
 
-- [Production/Developer Package][salesforce_pkg_prod]
-- [Sandbox Package][salesforce_pkg_sandbox]
+* [実稼働環境/開発者パッケージ][salesforce_pkg_prod]
+* [サンドボックスパッケージ][salesforce_pkg_sandbox]
 
 <Message type="warning">
 
-Unmanaged packages can't be upgraded once installed in a Salesforce org so
-future upgrades will have to be applied by cloning the repositories locally
-and updating classes from your IDE.
+非管理型パッケージは、Salesforce組織にインストールするとアップグレードできなくなります。そのため、以後のアップグレードは、リポジトリをローカルで複製してIDEからクラスを更新することにより適用する必要があります。
 
 </Message>
 
 [deploy_salesforce]: https://githubsfdeploy.herokuapp.com/?owner=box&repo=box-salesforce-sdk
+
 [salesforce_pkg_prod]: https://cloud.box.com/Box-Apex-SDK
+
 [salesforce_pkg_sandbox]: https://cloud.box.com/Box-Apex-SDK-Sandbox

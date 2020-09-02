@@ -15,37 +15,30 @@ previous_page_id: >-
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/4-handle-slack-events.md
 ---
-# Handle Slack Events
+# Slackイベントの処理
 
-With the application scaffold in place, the next step is to build the handling
-and processing functionality for user events, as well as the handling of slash
-commands coming from Slack. Each one of these will eventually be passed to a
-Box API endpoint to perform group and content collaboration tasks.
+アプリケーションのスキャフォールドを設定したら、次に、ユーザーイベントの処理機能と、Slackから送信されるスラッシュコマンドの処理機能を構築します。最終的に、これらの機能はそれぞれBox APIエンドポイントに渡されて、グループおよびコンテンツのコラボレーションタスクを実行します。
 
-In this step we'll expand the empty functions we wrote in the last step. These
-functions will perform the following tasks.
+この手順では、直前の手順で作成した空の関数を拡張します。これらの関数では、以下のタスクを実行します。
 
-* Listen for new events and slash commands from Slack.
-* Process those events and commands to route to the appropriate function.
-* Process all Slack users in a channel to be added to a Box group when the
- bot is first added to a channel.
-* Fetch profile information for a Slack user to get their email.
+* Slackからの新しいイベントとスラッシュコマンドをリッスンする
+* これらのイベントとコマンドを処理して適切な関数に送る
+* ボットが初めてチャンネルに追加されたときにBoxグループに追加されるようにチャンネル内のすべてのSlackユーザーを処理する
+* Slackユーザーのプロフィール情報を取得してそのメールアドレスを取得する
 
-## Listen for Slack events
+## Slackイベントのリッスン
 
-When the Slack application was configured, it was instructed to send events to
-our application code for three events.
+Slackアプリケーションを構成したときに、3つのイベントのアプリケーションコードにイベントを送信するようSlackアプリケーションに指示しました。
 
-* When a user joins a channel.
-* When a user leaves a channel.
-* When a user enters a `/boxadd` Slash command.
+* ユーザーがチャンネルに参加したとき。
+* ユーザーがチャンネルから退出したとき。
+* ユーザーが`/boxadd`スラッシュコマンドを入力したとき。
 
-Our application needs to have a public route that listens for those messages
-from Slack. The payloads of these messages will like something like this.
+このアプリケーションには、Slackからのこれらのメッセージをリッスンする公開ルートが必要です。このメッセージのペイロードは、次のようになります。
 
 <Tabs>
 
-<Tab title='"/boxadd"-command'>
+<Tab title="「/boxadd」コマンド">
 
 ```json
 {
@@ -65,7 +58,7 @@ from Slack. The payloads of these messages will like something like this.
 
 </Tab>
 
-<Tab title='"member_joined_channel"-event'>
+<Tab title="「member_joined_channel」イベント">
 
 ```json
 {
@@ -90,7 +83,7 @@ from Slack. The payloads of these messages will like something like this.
 
 </Tab>
 
-<Tab title='"member_left_channel"-event'>
+<Tab title="「member_left_channel」イベント">
 
 ```json
 {
@@ -116,10 +109,9 @@ from Slack. The payloads of these messages will like something like this.
 
 </Tabs>
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-To start processing these events, load `process.js` in your preferred editor
-and replace the `app.post("/event" ...` listener with the following.
+これらのイベントの処理を開始するには、任意のエディタに`process.js`を読み込み、`app.post("/event" ...`リスナーを次の内容に置き換えます。
 
 ```javascript
 app.post("/event", (req, res) => {
@@ -131,16 +123,13 @@ app.post("/event", (req, res) => {
 });
 ```
 
-When an event comes through, the listener verifies that the message came from
-Slack, using the verification token from our Slack application. If it's a valid
-request, the event payload is sent to our event process function.
+イベントが成功すると、リスナーではSlackアプリケーションからの確認トークンを使用して、メッセージがSlackから届いたことを確認します。メッセージが有効なリクエストであれば、イベントペイロードがイベント処理関数に送信されます。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Load `Application.java` in your preferred editor, then replace the
-`@PostMapping("/event")` block with the following.
+任意のエディタに`Application.java`を読み込み、`@PostMapping("/event")`ブロックを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -183,29 +172,20 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
   processEvent(data);
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-When an event comes through, the handler will send an immediate 200 response
-back before code processing. Slash commands will be sent as URL encoded
-strings, while member join / leave events will be sent as JSON. If a slash
-command is encountered we respond with a processing message, otherwise we send
-the `HttpServletResponse` response.
+イベントが成功すると、ハンドラは、コードを処理する前に、直ちにHTTP200応答を返します。スラッシュコマンドはURLでエンコードされた文字列として送信されるのに対し、メンバーの参加/退出イベントはJSONとして送信されます。スラッシュコマンドが検出されると、処理中のメッセージで応答します。それ以外の場合は、`HttpServletResponse`応答を送信します。
 
-<Message type='notice'>
+<Message type="notice">
 
-In this example we send a `HTTP 200` response before the event is fully
-processed. This is done because Slack requires a response to an event within
-3 seconds from dispatch. When the code execution takes longer than 3 seconds
-then duplicate event will be dispatched by Slack.
+この例では、イベントが完全に処理される前に`HTTP 200`応答が送信されます。その理由は、Slackではイベントの送信後3秒以内に応答する必要があるためです。コードの実行時間が3秒を超える場合は、重複したイベントがSlackによって送信されます。
 
 </Message>
 
-To make event processing easier, we want to standardize all event objects as
-JSON. If a content type isn't JSON it'll be the URL encoded string. If that's
-encountered the string is converted into a JSON object before being sent to
-`processEvent`.
+イベント処理を容易にするには、すべてのイベントオブジェクトをJSONに標準化します。コンテンツタイプがJSONでない場合は、URLでエンコードされた文字列になります。それが検出されると、その文字列は、JSONオブジェクトに変換されてから`processEvent`に送信されます。
 
-Replace `processEvent` with the following.
+`processEvent`を以下の内容に置き換えます。
 
 ```java
 @Async
@@ -224,31 +204,29 @@ public void processEvent(String data) throws Exception {
 }
 ```
 
-This method will convert the JSON event string to a JSON object, then verify
-that the event came from Slack by comparing the verification token. If valid,
-the event is routed to `process`.
+このメソッドは、JSONイベント文字列をJSONオブジェクトに変換した後、確認トークンを比較して、イベントがSlackから送信されたかどうかを確認します。有効な場合は、イベントが`process`に転送されます。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Process Slack events
+## Slackイベントの処理
 
-Next, we will want to determine what event was received and pass this on to the
-right part of our application.
+次に、受信したイベントを判定し、アプリケーションの適切な機能にそのイベントを渡します。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `process` function with the following.
+`process`関数を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -281,51 +259,34 @@ function process(res, data) {
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-The purpose of this function is to figure out if the payload from Slack is a
-user event or a Slash command, fetch any needed information, then route to the
-appropriate function to process the results.
+この関数の目的は、Slackからのペイロードがユーザーイベントとスラッシュコマンドのどちらであるかを判断し、必要な情報をすべて取得して、結果を処理するために適切な関数に転送することです。
 
-If the payload is a user event, denoted by `data.type` being set to
-`event_callback`, we extract a few pieces of information.
+ペイロードがユーザーイベントの場合 (`event_callback`に設定されている`data.type`によって示されます)、いくつかの情報を抽出します。
 
-* `eventType`: The type of event to determine if a user is leaving
- (`member_left_channel`) or joining (`member_joined_channel`) the channel.
-* `channel`: The channel ID, which will be used as the Box group name.
-* `userId`: The ID of the user, to look up their profile email which will bind
- to a user profile in Box that uses the same email.
+* `eventType`: ユーザーがチャンネルから退出する (`member_left_channel`) かチャンネルに参加する (`member_joined_channel`) かを決定するイベントのタイプ。
+* `channel`: チャンネルID。Boxグループ名として使用されます。
+* `userId`: ユーザーのID。同じメールアドレスを使用するBoxのユーザープロフィールにバインドされるプロフィールのメールアドレスを検索するためのものです。
 
-The process function then fetches the profile of the user by calling
-`getSlackUser`, and once obtained that user profile is sent to the
-`processUser` function to add or remove them from the Box group.
+その後、process関数は`getSlackUser`を呼び出してユーザーのプロフィールを取得します。取得したユーザープロフィールは`processUser`関数に送信され、Boxグループでユーザーが追加または削除されます。
 
-If the payload is a slash command, denoted by `data.command` being set to
-`/boxadd`, the content of the command that represents the Box ID and whether
-it's a file or folder, such as `file 1234`, is extracted and split to get the
-individual values. Those values are validated for proper content.
+ペイロードがスラッシュコマンドの場合 (`/boxadd`に設定されている`data.command`によって示されます)、`file 1234`のように、Box IDとファイルかフォルダかを表すコマンドのコンテンツは抽出され、個々の値を取得するために分割されます。これらの値は、適切なコンテンツであるかどうかが検証されます。
 
-Once validated, the profile of the Slack user is obtained to get the email,
-then the user profile is sent to `processContent` to collaborate the Box
-content in with the Box group so that everyone has access.
+検証後、Slackユーザーのプロフィールは、メールアドレスを取得するために取得されます。その後、このユーザープロフィールは、BoxグループとBoxコンテンツでコラボレーションするために`processContent`に送信され、すべてのユーザーにアクセス権限が付与されます。
 
-<Message type='notice'>
+<Message type="notice">
 
-The reason for fetching the Slack user's email in this step is because the
-file or folder is owned by the user, not by the application's service
-account. When we share content (by creating a collaboration) the action will
-need to be performed by a user who has sharing permissions on that file or
-folder. For this reason, we need to match the Slack user's email address
-against a Box user's email address so that we can create the collaboration on
-their behalf.
+この手順でSlackユーザーのメールアドレスを取得する理由は、ファイルまたはフォルダの所有者がアプリケーションのサービスアカウントではなくユーザーであるためです。(コラボレーションの作成によって) コンテンツを共有する際は、そのファイルまたはフォルダに対して共有権限を持つユーザーが操作を行う必要があります。そのため、Slackユーザーの代理でコラボレーションを作成できるように、SlackユーザーのメールアドレスをBoxユーザーのメールアドレスと照合する必要があります。
 
 </Message>
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `process` method with the following.
+`process`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -355,62 +316,52 @@ public void process(JSONObject inputJSON) throws Exception {
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-The purpose of this method is to figure out if the payload from Slack is a
-user event or a Slash command, fetch any needed information, then route to the
-appropriate method to process the results.
+このメソッドの目的は、Slackからのペイロードがユーザーイベントとスラッシュコマンドのどちらであるかを判断し、必要な情報をすべて取得して、結果を処理するために適切なメソッドに転送することです。
 
-If the payload is a user event, denoted by the event node being present in the
-JSON payload, we extract a few pieces of information.
+ペイロードがユーザーイベントの場合 (JSONペイロードに存在するイベントノードによって示されます)、いくつかの情報を抽出します。
 
-* `eventType`: The type of event to determine if a user is leaving
- (`member_left_channel`) or joining (`member_joined_channel`) the channel.
-* `eventUserId`: The ID of the user, to look up their profile email which will
- bind to a user profile in Box that uses the same email.
-* `eventChannel`: The channel ID, which will be used as the Box group name.
+* `eventType`: ユーザーがチャンネルから退出する (`member_left_channel`) かチャンネルに参加する (`member_joined_channel`) かを決定するイベントのタイプ。
+* `eventUserId`: ユーザーのID。同じメールアドレスを使用するBoxのユーザープロフィールにバインドされるプロフィールのメールアドレスを検索するためのものです。
+* `eventChannel`: チャンネルID。Boxグループ名として使用されます。
 
-We then route to `processUser`, passing in the return value
-from the `getSlackUser` method (a user object), the type of event, and the
-channel.
+その後、`processUser`に転送し、`getSlackUser`メソッドからの戻り値 (ユーザーオブジェクト)、イベントのタイプ、チャンネルを渡します。
 
-If the payload is a slash command, denoted by the `command` node being present
-in the JSON payload, we extract a few pieces of information.
+ペイロードがスラッシュコマンドの場合 (JSONペイロードに存在する`command`ノードによって示されます)、いくつかの情報を抽出します。
 
-* `eventChannelId`: The Slack channel ID, to be used as the Box group name.
-* `eventUserId`: The ID of the user who issued the command.
-* `cInputParts`: The type and ID of the command input, from a string such as
- `file 1234`.
+* `eventChannelId`: Boxグループ名として使用するSlackチャンネルID。
+* `eventUserId`: コマンドを発行したユーザーのID。
+* `cInputParts`: `file 1234`などの文字列からのコマンド入力のタイプとID。
 
-We then route to `processContent`, passing in the return value
-from the `getSlackUser` method (a user object), the channel ID, the content
-type (file or folder), and the content ID for the file or folder stored in Box.
+その後、`processContent`に転送し、`getSlackUser`メソッドからの戻り値 (ユーザーオブジェクト)、チャンネルID、コンテンツタイプ (ファイルまたはフォルダ)、およびBoxに保存されているファイルまたはフォルダのコンテンツIDを渡します。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Process Slack user
+## Slackユーザーの処理
 
-Next, we need to define how user events should be processed. There are three
-events that we need to account for:
+次に、ユーザーイベントの処理方法を定義する必要があります。ここで説明すべきイベントは以下の3つです。
 
-* The bot was added to the channel.
-* A regular user joined the channel.
-* A regular user left the channel.
+* ボットがチャンネルに追加された。
+* 通常のユーザーがチャンネルに参加した。
+* 通常のユーザーがチャンネルから退出した。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `processUser` function with the following.
+`processUser`関数を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -436,13 +387,14 @@ function processUser(user, event, channel) {
   });
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `processUser` method with the following.
+`processUser`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -465,40 +417,36 @@ public void processUser(JSONObject userResponse, String event, String channel) t
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-The code starts by fetching the Box group ID for the channel, which will be
-defining in the next step. Once obtained, it processes users as follows.
+このコードでは、最初に、この次の手順で定義するチャンネルのBoxグループIDを取得します。取得後、以下のようにユーザーが処理されます。
 
-* If the user is a bot, it needs to initialize the Box group and add all current
- users of the channel as Box users in the group. This is to account for the bot
- being added to existing channels, and this is ignored if the bot
- is being re-added to a channel that they were already present in previously.
-* If the user joined the channel it needs to add them to the group.
-* If the user left the channel it needs to remove them from the group.
+* ユーザーがボットの場合は、Boxグループを初期化し、チャンネルの現在のユーザーをすべてBoxユーザーとしてグループに追加する必要があります。これは、既存のチャンネルに追加されるボットを構成するためです。この処理は、以前ユーザーが存在していたチャンネルにボットが再度追加される場合には無視されます。
+* ユーザーがチャンネルに参加した場合は、グループにユーザーを追加する必要があります。
+* ユーザーがチャンネルから退出した場合は、グループからユーザーを削除する必要があります。
 
-## Process Slack channel users
+## Slackチャンネルユーザーの処理
 
-When a bot is first added to a channel, it needs to list all users
-currently in the channel and create a Box group with those people in order to
-create a baseline for the channel.
+ボットは、初めてチャンネルに追加されたときに、現在チャンネルに含まれている全ユーザーのリストを取得し、そのユーザーを含むBoxグループを作成してチャンネルの基礎を作成する必要があります。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `processSlackChannel` function with the following.
+`processSlackChannel`関数を次の内容に置き換えます。
 
 ```javascript
 function processSlackChannel(channel, groupId) {
@@ -519,9 +467,9 @@ function processSlackChannel(channel, groupId) {
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `processSlackChannel` method with the following.
+`processSlackChannel`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -554,49 +502,43 @@ public void processSlackChannel(String channel, String groupId) throws Exception
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-This code runs a number of actions in sequence.
+このコードは、複数の処理を順番に実行します。
 
-* First, it calls the Slack APIs to fetch all members of the channel. The
-* `limit` can be adjusted to collect more users in the channel.
-* For every user that is found, it calls `getSlackUser` to get
- their profile, allow it to map their email address to a Box user's email
- address.
-* Each user is then sent to `addGroupUser` to add them into the group.
+* 最初に、Slack APIを呼び出し、チャンネルのすべてのメンバーを取得します。
+* `limit`を調整して、チャネルのユーザーをさらに収集できます。
+* 見つかったユーザーごとに、`getSlackUser`を呼び出してそのユーザーのプロフィールを取得し、メールアドレスをBoxユーザーのメールアドレスにマップできます。
+* 各ユーザーは`addGroupUser`に送信され、グループに追加されます。
 
-## Fetch Slack user profile
+## Slackユーザープロフィールの取得
 
-The last Slack related function is a utility mechanism used by the other
-functions. It calls the Slack API to fetch the user profile
-given the user ID provided by either Slack event / command or when fetching
-a list of channel users. Since we're matching Slack users to Box users via
-their email address, that is the field that we care about from the user profile
-lookup.
+Slackに関連した最後の関数は、他の関数によって使用されるユーティリティメカニズムです。この関数は、Slack APIを呼び出して、Slackイベント/コマンドが提供するユーザーIDまたはチャンネルユーザーのリストを取得したときに提供されるユーザーIDが指定されたユーザープロフィールを取得します。メールアドレスを使用してSlackユーザーをBoxユーザーと照合しているため、ユーザープロフィールの検索では、メールアドレスのフィールドに注意します。
 
-<Message type='notice'>
+<Message type="notice">
 
-Email addresses in Box are unique and cannot be used for multiple accounts,
-meaning that they can be used effectively for user account lookup.
+Boxのメールアドレスは一意であり、複数のアカウントに使用することはできません。つまり、ユーザーアカウントの検索に使用すると効果的です。
 
 </Message>
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `getSlackUser` function with the following.
+`getSlackUser`関数を次の内容に置き換えます。
 
 ```javascript
 function getSlackUser(userId, callback) {
@@ -612,14 +554,13 @@ function getSlackUser(userId, callback) {
 }
 ```
 
-This function makes a call to the Slack user profile endpoint, then sends the
-user profile information (if valid) to the specified callback.
+この関数では、Slackユーザープロフィールエンドポイントを呼び出した後、指定したコールバックにユーザープロフィール情報 (有効な場合) を送信します。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `getSlackUser` method with the following.
+`getSlackUser`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -629,36 +570,36 @@ public JSONObject getSlackUser(String userId) throws Exception {
   return sendGETRequest(usersPath);
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-This method sends a request to Slack to capture the user profile, then returns
-the response from that request, which should be a user profile JSON object.
+このメソッドでは、ユーザープロフィールを取得するようSlackにリクエストを送信した後、そのリクエストの応答を返します。この応答はユーザープロフィールJSONオブジェクトになります。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Summary
+## まとめ
 
-* You've verified incoming events and forwarded them to be processed.
-* You've processed events and routed to the appropriate function.
-* You've implemented functions for processing all users in a channel and for
-  fetching the Slack profile of a single user.
+* 受信イベントを確認し、処理するために転送しました。
+* イベントを処理し、適切な関数に転送しました。
+* チャンネル内のすべてのユーザーを処理する関数と1人のユーザーのSlackプロフィールを取得する関数を実装しました。
 
-<Observe option='programming.platform' value='node,java'>
+<Observe option="programming.platform" value="node,java">
 
 <Next>
 
-I've set up my Slack functions
+Slack関数を設定しました
 
 </Next>
 

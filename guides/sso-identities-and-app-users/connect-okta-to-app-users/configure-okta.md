@@ -15,182 +15,156 @@ previous_page_id: >-
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/2-configure-okta.md
 ---
-# Configure Okta
+# Oktaの構成
 
-Our next step in the Okta / Box integration is to create and configure the Okta
-application and users, then extract a few pieces of information that we will
-need to connect to Okta in our application.
+OktaとBoxの統合における次の手順では、Oktaアプリケーションとユーザーを作成して構成した後、アプリケーション内でOktaに接続するために必要となるいくつかの情報を抽出します。
 
 <ImageFrame noborder center shadow>
 
-![Okta Application Dashboard](./img/okta-applications.png)
+![Oktaのアプリケーションダッシュボード](./img/okta-applications.png)
 
 </ImageFrame>
 
-For this tutorial we will be starting with a blank Okta application and user
-dashboard to avoid any negative effects on existing installations that may be
-in place, and to ensure that we have admin rights to the instance.
+このチュートリアルでは、空のアプリケーションとユーザーダッシュボードから開始します。これは、準備が整っている可能性のある既存のインストールへの悪影響を避け、インスタンスへの管理者権限を確保するためです。
 
-## Create an Okta Application
+## Oktaアプリケーションの作成
 
-Starting from the [Okta developer site][okta-dev], sign up for a new developer
-account, or log in under your personal account if you already have one.
+まず[Oktaの開発者向けサイト][okta-dev]で、新しい開発者アカウントにサインアップします。すでにアカウントを持っている場合は個人アカウントでログインします。
 
-If you're logging in with an existing account, you should see the Okta
-dashboard. Click on the **Admin** button at the top right.
+既存のアカウントでログインした場合は、Oktaのダッシュボードが表示されるので、右上の\[**Admin (管理)**]ボタンをクリックします。
 
 <ImageFrame noborder center shadow>
 
-![Okta Application Dashboard](./img/okta-qs-step2-dashboard.png)
+![Oktaのアプリケーションダッシュボード](./img/okta-qs-step2-dashboard.png)
 
 </ImageFrame>
 
-If you've created a new developer account rather than logging into an existing
-account, you will have already be redirected to the admin dashboard.
+新しい開発者アカウントを作成した場合は、管理ダッシュボードにリダイレクトされます。
 
-You should now see the admin panel. Click on the **Applications** option at the
-top.
+管理パネルが表示されたら、上部の\[**Applications (アプリケーション)**]オプションをクリックします。
 
 <ImageFrame noborder center shadow>
 
-![Okta Admin Dashboard](./img/okta-qs-step2-admin-dashboard.png)
+![Oktaの管理ダッシュボード](./img/okta-qs-step2-admin-dashboard.png)
 
 </ImageFrame>
 
-On the application page, click the **Add Application** button. Select **Web**
-as the application type and click the **Next** button.
+アプリケーションページで\[**Add Application (アプリケーションの追加)**]ボタンをクリックします。アプリケーションの種類として\[**Web (ウェブ)**]を選択し、\[**Next (次へ)**]ボタンをクリックします。
 
 <ImageFrame noborder center shadow>
 
-![Okta App Types](./img/okta-qs-step2-app-type.png)
+![Oktaのアプリの種類](./img/okta-qs-step2-app-type.png)
 
 </ImageFrame>
 
-Okta employs both [OAuth 2][oauth2] and [OpenID Connect][openid-connect] (OIDC)
-for application authorization and user authentication, respectively. The OpenID
-Connect integration allows us to use baked in OIDC connectors within a number
-of popular language frameworks to simplify application and user management by
-handling the callback routes and providing methods for logging in,
-logging out, and protecting routes into your application.
+Oktaは、アプリケーションの承認とユーザーの認証それぞれに、[OAuth 2][oauth2]と[OpenID Connect][openid-connect] (OIDC)の両方を使用します。OpenID Connectの統合では、多数の一般的な言語フレームワーク内で組み込みのOIDCコネクタを使用でき、コールバックルートの処理、ログインおよびログアウト方法の提供、アプリケーションへのルートの保護によってアプリケーションとユーザーの管理が簡略化されます。
 
-To simplify this first integration, we're going to use the default callback
-routes and settings for the language and framework OIDC connector. Depending on
-your preferred integration type, the configuration settings will slightly
-change.
+この初回の統合を簡略化するために、言語とフレームワークのOIDCコネクタにデフォルトのコールバックルートと設定を使用します。どの統合の種類を選択するかによって、構成設定が若干変わります。
 
-Fill out the application details with the following configuration settings:
+以下の構成設定を使用して、アプリケーションの詳細を入力します。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-* Name: Any
-* Base URIs: `http://localhost:3000/`
-* Login redirect URIs: `http://localhost:3000/authorization-code/callback`
-* Logout redirect URIs: `http://localhost:3000/logout`
-* Grant type allowed: Only **Authorization Code** selected
+* 名前: 任意
+* 基本URI: `http://localhost:3000/`
+* ログインリダイレクトURI: `http://localhost:3000/authorization-code/callback`
+* ログアウトリダイレクトURI: `http://localhost:3000/logout`
+* 使用できる許可タイプ: \[**Authorization Code (承認コード)**]のみを選択
 
 <ImageFrame noborder center shadow>
 
-![Okta App Configuration](./img/okta-qs-step2-appconfig-node.png)
+![Oktaアプリの構成](./img/okta-qs-step2-appconfig-node.png)
 
 </ImageFrame>
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-* Name: Any
-* Base URIs: `http://localhost:8080/`
-* Login redirect URIs: `http://localhost:8080/authorization-code/callback`
-* Logout redirect URIs: `http://localhost:8080/logout`
-* Grant type allowed: Only **Authorization Code** selected
+* 名前: 任意
+* 基本URI: `http://localhost:8080/`
+* ログインリダイレクトURI: `http://localhost:8080/authorization-code/callback`
+* ログアウトリダイレクトURI: `http://localhost:8080/logout`
+* 使用できる許可タイプ: \[**Authorization Code (承認コード)**]のみを選択
 
 <ImageFrame noborder center shadow>
 
-![Okta App Configuration](./img/okta-qs-step2-appconfig-java.png)
+![Oktaアプリの構成](./img/okta-qs-step2-appconfig-java.png)
 
 </ImageFrame>
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-* Name: Any
-* Base URIs: `http://127.0.0.1:5000/`
-* Login redirect URIs: `http://127.0.0.1:5000/oidc/callback`
-* Logout redirect URIs: `http://127.0.0.1:5000/logout`
-* Grant type allowed: Only **Authorization Code** selected
+* 名前: 任意
+* 基本URI: `http://127.0.0.1:5000/`
+* ログインリダイレクトURI: `http://127.0.0.1:5000/oidc/callback`
+* ログアウトリダイレクトURI: `http://127.0.0.1:5000/logout`
+* 使用できる許可タイプ: \[**Authorization Code (承認コード)**]のみを選択
 
 <ImageFrame noborder center shadow>
 
-![Okta App Configuration](./img/okta-qs-step2-appconfig-python.png)
+![Oktaアプリの構成](./img/okta-qs-step2-appconfig-python.png)
 
 </ImageFrame>
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-* Name: Any
-* Base URIs: `https://localhost:5001/`
-* Login redirect URIs: `https://localhost:5001/authorization-code/callback`
-* Logout redirect URIs: `https://localhost:5001/logout`
-* Grant type allowed: Only **Authorization Code** selected
+* 名前: 任意
+* 基本URI: `https://localhost:5001/`
+* ログインリダイレクトURI: `https://localhost:5001/authorization-code/callback`
+* ログアウトリダイレクトURI: `https://localhost:5001/logout`
+* 使用できる許可タイプ: \[**Authorization Code (承認コード)**]のみを選択
 
 <ImageFrame noborder center shadow>
 
-![Okta App Configuration](./img/okta-qs-step2-appconfig-cs.png)
+![Oktaアプリの構成](./img/okta-qs-step2-appconfig-cs.png)
 
 </ImageFrame>
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-Click the **Done** button to create the application and be dropped on to the
-general settings of the application.
+\[**Done (完了)**]ボタンをクリックしてアプリケーションを作成し、アプリケーションの一般設定に移動します。
 
-## Copy Application Credentials
+## アプリケーション資格情報のコピー
 
-Using the configuration files set up in the last step, we next have to add in
-the Okta application org and app details within the files.
+次に、1つ前の手順で設定した構成ファイルを使用して、ファイル内にOktaのアプリケーション組織とアプリの詳細を追加します。
 
-Most Okta application information can be found on the general settings page,
-with the exception of the `Org URL` that is used in the configuration URIs to
-reference back to your Okta organization. To obtain the `Org URL`, go to the
-dashboard of your Okta admin console. The `Org URL` will be in the top right
-corner of the screen.
+Oktaアプリケーションの情報はほとんどが一般設定ページにありますが、Okta組織を後方参照するために構成URIで使用されている`Org URL`は例外です。`Org URL`を取得するには、Okta管理コンソールのダッシュボードに移動します。`Org URL`は画面の右上隅に表示されます。
 
-Depending on the language and framework previously chosen, we'll set up the
-appropriate configuration files.
+前の手順で選択した言語とフレームワークに応じて、適切な構成ファイルを設定します。
 
 <ImageFrame noborder center shadow>
 
-![Okta Org URL](./img/okta-qs-step2-org-url.png)
+![OktaのOrg URL](./img/okta-qs-step2-org-url.png)
 
 </ImageFrame>
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-* Open `config.json` within the local application directory in your preferred
- editor.
-* Update the following line items with the appropriate Okta configuration info:
-  * `oktaClientId`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `oktaClientSecret`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
-* Save the file.
+* 任意のエディタで、ローカルアプリケーションディレクトリ内の`config.json`を開きます。
+* 以下の行項目を、Oktaの構成情報で適宜更新します。
+  * `oktaClientId`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `oktaClientSecret`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `oktaOrgUrl`: 管理ダッシュボードのメインページで右上から取得。
+* ファイルを保存します。
 
-Your `config.json` file should look similar to the following.
+`config.json`ファイルは次のようになります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -201,26 +175,20 @@ const oktaOrgUrl = exports.oktaOrgUrl = 'YOURDOMAIN.okta.com';
 const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
 const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-* Open the `/src/main/resources/application.properties` file and update the
- following lines:
-  * `okta.oauth2.issuer`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default`. For example, if your
-   Org URL was `https://dev-123456.okta.com`, the issuer string should be
-   `https://dev-123456.okta.com/oauth2/default`.
-  * `okta.oauth2.clientId`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `okta.oauth2.clientSecret`: Obtained from the **Client Credentials**
-   section of the application general settings.
-* Save the file
+* `/src/main/resources/application.properties`ファイルを開き、以下の行を更新します。
+  * `okta.oauth2.issuer`: 管理ダッシュボードのメインページの右上から取得したOrg URLの後に`/oauth2/default`を付けたもの。たとえばOrg URLが`https://dev-123456.okta.com`の場合、この発行者文字列は`https://dev-123456.okta.com/oauth2/default`になります。
+  * `okta.oauth2.clientId`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `okta.oauth2.clientSecret`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+* ファイルを保存します。
 
-Your `/src/main/resources/application.properties` file should look similar to
-the following.
+`/src/main/resources/application.properties`ファイルは次のようになります。
 
 ```java
 okta.oauth2.redirect-uri=/authorization-code/callback
@@ -232,31 +200,27 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-In addition to the standard configuration information for the org and app, the
-Python / Flask integration requires an additional auth token.
+Python/Flaskの統合では、組織とアプリの標準的な構成情報に加え、追加の認証トークンが必要です。
 
-To create an auth token:
+認証トークンを作成するには、次の手順に従います。
 
-* Go to the **API** -> **Token** section of the Okta admin dashboard.
-* Click the **Create Token** button.
-* Enter a name for the token and click **Create**.
-* Copy the token that is generated.
+* Oktaの管理ダッシュボードの\[**API**] -> \[**Token (トークン)**]セクションに移動します。
+* \[**Create Token (トークンの作成)**]ボタンをクリックします。
+* トークンの名前を入力し、\[**Create (作成)**]をクリックします。
+* 生成されたトークンをコピーします。
 
-Next, update the local application configuration file.
+次に、ローカルのアプリケーション構成ファイルを更新します。
 
-* Open `config.py` within the local application directory in your preferred
- editor.
-* Update the following line items with the appropriate Okta configuration info:
-  * `okta_client_secret`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `okta_org_url`: Obtained from the top right of the main admin dashboard
-   page.
-  * `okta_auth_token`: The token created above.
-* Save the file.
+* 任意のエディタで、ローカルアプリケーションディレクトリ内の`config.py`を開きます。
+* 以下の行項目を、Oktaの構成情報で適宜更新します。
+  * `okta_client_secret`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `okta_org_url`: 管理ダッシュボードのメインページで右上から取得。
+  * `okta_auth_token`: 上記で作成したトークン。
+* ファイルを保存します。
 
-Your `config.py` file should look similar to the following.
+`config.py`ファイルは次のようになります。
 
 ```python
 okta_client_id = '0oa48567frkg5KW4x6'
@@ -266,34 +230,19 @@ okta_auth_token = '01KkTQTRfs1yKLr4Ojy26iqoIjK_4fHyq132Dr5T'
 okta_callback_route = '/oidc/callback'
 ```
 
-Lastly, update the Flask configuration file
+最後に、Flask構成ファイルを更新します。
 
-* Open `client_secrets.json` within the local application directory in your
- preferred editor.
-* Update the following line items with the appropriate Okta configuration info:
-  * `client_id`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `client_secret`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `auth_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/v1/authorize`. For
-   example, if your Org URL was `https://dev-123456.okta.com`, the issuer
-   string should be `https://dev-123456.okta.com/oauth2/default/v1/authorize`.
-  * `token_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/v1/token`. For example,
-   if your Org URL was `https://dev-123456.okta.com`, the issuer string should
-   be `https://dev-123456.okta.com/oauth2/default/v1/token`.
-  * `issuer`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default`. For example, if your
-   Org URL was `https://dev-123456.okta.com`, the issuer string should be
-   `https://dev-123456.okta.com/oauth2/default`.
-  * `userinfo_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/userinfo`. For example,
-   if your Org URL was `https://dev-123456.okta.com`, the issuer string should
-   be `https://dev-123456.okta.com/oauth2/default/userinfo`.
-* Save the file.
+* 任意のエディタで、ローカルアプリケーションディレクトリ内の`client_secrets.json`を開きます。
+* 以下の行項目を、Oktaの構成情報で適宜更新します。
+  * `client_id`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `client_secret`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `auth_uri`: 管理ダッシュボードのメインページの右上から取得したOrg URLの後に`/oauth2/default/v1/authorize`を付けたもの。たとえばOrg URLが`https://dev-123456.okta.com`の場合、この発行者文字列は`https://dev-123456.okta.com/oauth2/default/v1/authorize`になります。
+  * `token_uri`: 管理ダッシュボードのメインページの右上から取得したOrg URLの後に`/oauth2/default/v1/token`を付けたもの。たとえばOrg URLが`https://dev-123456.okta.com`の場合、この発行者文字列は`https://dev-123456.okta.com/oauth2/default/v1/token`になります。
+  * `issuer`: 管理ダッシュボードのメインページの右上から取得したOrg URLの後に`/oauth2/default`を付けたもの。たとえばOrg URLが`https://dev-123456.okta.com`の場合、この発行者文字列は`https://dev-123456.okta.com/oauth2/default`になります。
+  * `userinfo_uri`: 管理ダッシュボードのメインページの右上から取得したOrg URLの後に`/oauth2/default/userinfo`を付けたもの。たとえばOrg URLが`https://dev-123456.okta.com`の場合、この発行者文字列は`https://dev-123456.okta.com/oauth2/default/userinfo`になります。
+* ファイルを保存します。
 
-Your `client_secrets.json` file should look similar to the following.
+`client_secrets.json`ファイルは次のようになります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -312,24 +261,21 @@ Your `client_secrets.json` file should look similar to the following.
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-* Open `Startup.cs` within the local application directory in your preferred
- editor.
-* Update the following line items within the `ConfigureServices` method with
- the appropriate Okta configuration info:
-  * `OktaDomain`: Obtained from the top right of the main admin dashboard page.
-  * `ClientId`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `ClientSecret`: Obtained from the **Client Credentials** section of the
-   application general settings.
-* Save the file.
+* 任意のエディタで、ローカルアプリケーションディレクトリ内の`Startup.cs`を開きます。
+* `ConfigureServices`メソッド内の以下の行項目を、Oktaの構成情報で適宜更新します。
+  * `OktaDomain`: 管理ダッシュボードのメインページで右上から取得。
+  * `ClientId`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+  * `ClientSecret`: アプリケーションの一般設定の\[**Client Credentials (クライアント資格情報)**]セクションから取得。
+* ファイルを保存します。
 
-Your `ConfigureServices` method should look similar to the following.
+`ConfigureServices`メソッドは次のようになります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -349,51 +295,50 @@ services.AddAuthentication(options =>
   ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
 });
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Create a User
+## ユーザーの作成
 
-Our last step in the Okta setup is to create a test user that we will use to
-log in to the application.
+Oktaの設定における最後の手順では、アプリケーションへのログインに使用するテストユーザーを作成します。
 
-1. Go to the **Users** section of the Okta admin dashboard.
-1. Click on the **Add Person** button.
-1. Enter all appropriate user info. Under password, select **Set by admin** and
- input a password for the user. Also deselect the **User must change password
- on first login** option. You will use the username and password to log
- in. These settings will only be used for testing purposes and are not best
- practices for user creation and security.
-1. Click the **Save** button to create the user.
+1. Oktaの管理ダッシュボードの\[**Users (ユーザー)**]セクションに移動します。
+2. \[**Add Person (ユーザーの追加)**]ボタンをクリックします。
+3. 適切なユーザー情報をすべて入力します。パスワードには\[**Set by admin (管理者が設定)**]を選択し、ユーザーのパスワードを入力します。また、\[**User must change password on first login (ユーザーは初回ログイン時にパスワードの変更が必要)**]オプションの選択を解除します。ログインにはユーザー名とパスワードを使用します。これらの設定はテスト目的のみで使用されるため、ユーザーの作成とセキュリティのベストプラクティスではありません。
+4. \[**Save (保存)**]ボタンをクリックしてユーザーを作成します。
 
-## Summary
+## まとめ
 
-* You created an Okta application.
-* You updated the Okta configuration information in the local application.
-* You created a test Okta user.
+* Oktaアプリケーションを作成しました。
+* ローカルアプリケーションでOktaの構成情報を更新しました。
+* Oktaのテストユーザーを作成しました。
 
-<Observe option='programming.platform' value='node,java,python'>
+<Observe option="programming.platform" value="node,java,python">
 
 <Next>
 
-I've created my Okta app and set up user / local configuration
+Oktaアプリを作成し、ユーザー/ローカル構成を設定しました
 
 </Next>
 
 </Observe>
 
 [okta-dev]: https://developer.okta.com/
+
 [oauth2]: https://oauth.net/2/
+
 [openid-connect]: https://openid.net/

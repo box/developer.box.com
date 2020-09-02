@@ -16,12 +16,11 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Links
+# リンク
 
-## Reference Links
+## 参照リンク
 
-Please try to use reference links where possible using the `[text][link_name]`
-syntax, and move the actual links to the bottom of the page.
+可能であれば`[text][link_name]`構文を使用して参照リンクを使用し、実際のリンクをページの一番下に移動するようにしてください。
 
 ```md
 # Title

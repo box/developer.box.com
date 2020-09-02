@@ -24,36 +24,30 @@ previous_page_id: uploads/chunked/create-session
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/chunked/commit-session.md
 ---
-# Commit Upload Session
+# アップロードセッションのコミット
 
-The final step in a chunked upload is to commit the session.
+分割アップロードの最後の手順はセッションのコミットです。
 
-To commit a file upload session, call the
-[`POST /files/upload_sessions/:id/commit`][e_commit] with a list of uploaded
-parts to commit.
+ファイルアップロードセッションをコミットするには、コミットするアップロード済みパーツのリストを指定して[`POST /files/upload_sessions/:id/commit`][e_commit]を呼び出します。
 
-<Samples id='post_files_upload_sessions_id_commit' >
+<Samples id="post_files_upload_sessions_id_commit">
 
 </Samples>
 
 <Message>
 
-Additionally, any file `attributes` can be passed along with the `parts` to
-further add information to the file. See the [`POST /files/content`][e_file]
-API for more details.
+加えて、ファイルの`attributes`を`parts`とともに渡すことで、ファイルに情報を追加できます。詳細については、[`POST /files/content`][e_file] APIを参照してください。
 
 </Message>
 
-## Response
+## レスポンス
 
-When successful, the API returns a HTTP `201 Created` status code with a
-[`File`][r_file] object.
+成功すると、APIはHTTP `201 Created`ステータスコードと[`File`][r_file]オブジェクトを返します。
 
-In some cases, creating the parts might not be ready yet and the API will return
-a `202 Accepted` status code instead. In this case the application should check
-the `retry-after` header and retry committing after the number of seconds
-specified.
+場合によっては、パーツの作成がまだ準備できておらず、代わりに`202 Accepted`ステータスコードが返されることがあります。この場合、アプリケーションは`retry-after`ヘッダを確認し、指定された秒数後にコミットを再試行する必要があります。
 
 [e_commit]: e://post_files_upload_sessions_id_commit
+
 [e_file]: e://post_files_content
+
 [r_file]: r://file

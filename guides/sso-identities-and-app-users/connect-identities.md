@@ -15,21 +15,13 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/1-connect-identities.md
 ---
-# Connect SSO identities to app users
+# SSO IDをApp Userに関連付ける
 
-Your SSO service will have a unique user record for each person using it within
-your company. When accessing a Box application through this SSO service, if
-we're creating a Box user for each SSO user, then we need to create an
-association between the SSO user and Box user records.
+SSOサービスでは、社内でこのサービスを利用する各ユーザーに一意のユーザーレコードが作成されます。このSSOサービスを介してBoxアプリケーションにアクセスする際、SSOユーザーごとにBoxユーザーを作成している場合は、SSOユーザーとBoxユーザーレコードの間に関連付けを作成する必要があります。
 
-When a user logs in to Box through the SSO service we will first search for the
-user by the association. If a Box user record is found we can begin making
-calls as that user to Box APIs. If there is no Box user found will then create
-a new Box user with the association to the unique SSO user account.
+ユーザーがSSOサービスを介してBoxにログインすると、Boxはまず関連付けを使用してユーザーを検索します。Boxユーザーレコードが見つかれば、そのユーザーとしてBox APIに対する呼び出しを開始することができます。Boxユーザーが見つからない場合は、一意のSSOユーザーアカウントに関連付けられた新しいBoxユーザーが作成されます。
 
-Exploring the top level of a Box [user object](ref://resources/user/) we can see
-the available options for adding the unique identifier from the SSO service
-user object into the Box user object to bind the two together.
+Boxユーザーオブジェクトの最上位を探索すると、SSOサービスのユーザーオブジェクトからBox[ユーザーオブジェクト](ref://resources/user/)に一意の識別子を追加して双方を関連付けるために使用できるオプションがわかります。
 
 ```json
 {
@@ -65,49 +57,27 @@ user object into the Box user object to bind the two together.
 }
 ```
 
-There are two recommended methods for creating a binding between a unique user
-within the SSO service and a Box user, placing the unique SSO user ID within
-the Box user `external_app_user_id` field, or using the unique SSO email address
-as the login email for the new user.
+SSOサービス内の一意のユーザーとBoxユーザーの関連付けを作成するには、2つの方法が推奨されています。Boxユーザーの`external_app_user_id`フィールド内に一意のSSOユーザーIDを設定するか、一意のSSOメールアドレスを新しいユーザーのログインメールとして使用してください。
 
-## Using `external_app_user_id` (recommended method)
+## `external_app_user_id`の使用(推奨方法)
 
-The `external_app_user_id` field was designed to hold a string identifier to
-associate a Box user record with some external service, such as an SSO provider
-user record.
+`external_app_user_id`フィールドは、SSOプロバイダのユーザーレコードなどの何らかの外部サービスとBoxユーザーレコードを関連付ける、文字列識別子を保持するよう設計されています。
 
-Using the `external_app_user_id` field for associating the unique SSO user
-account with a Box user account is the preferred method of connecting the two
-accounts over email, for a number of reasons:
+一意のSSOユーザーアカウントとBoxユーザーアカウントの関連付けに`external_app_user_id`フィールドを使用することは、この2つのアカウントを関連付ける方法としてメールよりも推奨されています。これには、以下のように複数の理由があります。
 
-* Email association is only viable for
- [managed users](guide://authentication/user-types/managed-users/).
- [App users](guide://authentication/user-types/app-users/) are
- automatically assigned an email address by Box, meaning that you cannot assign
- the `login` to be the email from the SSO service. 
-* Emails have to be unique in Box. This means that if your SSO service user
- signed up for Box using the same email address, which is not within your Box
- enterprise, then you will not be able to create a user with that email and
- won't be able to connect to that existing user.
-* The `external_app_user_id` field was designed for this purpose.
+* メールアドレスによる関連付けを実行できるのは[管理対象ユーザー](guide://authentication/user-types/managed-users/)のみです。[App User](guide://authentication/user-types/app-users/)にはBoxによって自動的にメールアドレスが割り当てられるため、`login`をSSOサービスのメールアドレスになるよう割り当てることはできません。 
+* メールアドレスはBoxにおいて一意でなければなりません。つまり、SSOサービスユーザーが(Boxを使用する社内に存在しない)同じメールアドレスを使用してBoxにサインアップした場合は、そのアドレスでユーザーを作成することも、既存のSSOサービスユーザーに接続することもできなくなります。
+* `external_app_user_id`フィールドはこのために設計されています。
 
-## Using `login` (alternative method)
+## `login`の使用(代替方法)
 
-Using the `login` field of a user object to create an account association is
-viable under a few conditions:
+ユーザーオブジェクトの`login`フィールドを使用してアカウントの関連付けを作成する方法は、以下の限られた状況において使用可能です。
 
-* Only the [managed users](guide://authentication/user-types/managed-users/)
- type is being used, not
- [app users](guide://authentication/user-types/app-users/).
-* All email addresses and Box account creation requests are managed by your
- enterprise, meaning that users cannot independently create Box accounts with
- those email addresses.
+* [App User](guide://authentication/user-types/app-users/)ではなく[管理対象ユーザー](guide://authentication/user-types/managed-users/)タイプのみが使用されている。
+* メールアドレスとBoxアカウントの作成リクエストがすべて会社によって管理されている。つまり、ユーザーは自身のメールアドレスで独自にBoxアカウントを作成することができません。
 
 <Message warning>
 
-Email addresses used for users in Box, under the `login` field, must be
-unique. Making a request to create a user with an email that already exists
-for another account will result in a `409 Conflict` error, stating that
-`user_login_already_used`
+`login`フィールドで、Boxのユーザーに使用されるメールアドレスは一意である必要があります。すでに別のアカウント用に存在するメールアドレスを使用してユーザーを作成するようリクエストすると、`user_login_already_used`という`409 Conflict`エラーが発生します。
 
 </Message>

@@ -23,36 +23,28 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/create-managed-user.md
 ---
-# Create Managed User
+# 管理対象ユーザーの作成
 
-To generate a new managed user, the minimal information that will be required
-will be a name and an email address for the managed user.
+新しい管理対象ユーザーを生成するには、最低でも管理対象ユーザーの名前とメールアドレスが必要になります。
 
-<Message type='notice'>
+<Message type="notice">
 
-The email address supplied when creating a managed user must be unique. It
-cannot already be associated with an existing Box user.
+管理対象ユーザーの作成時に指定するメールアドレスは一意である必要があります。既存のBoxユーザーにすでに関連付けられているメールアドレスは使用できません。
 
 </Message>
 
-<Samples id='post_users' >
+<Samples id="post_users">
 
 </Samples>
 
-To see all available optional parameters that may be set when creating an app
-user, see the [create user endpoint](endpoint://post-users).
+App Userの作成時に設定できるすべての使用可能なオプションパラメータを確認するには、[ユーザーエンドポイントの作成](endpoint://post-users)を参照してください。
 
-A user object will be returned from the create user request. Within the user
-object is an ID for the managed user, which may be used to make API requests to
-modify the user in the future.
+ユーザー作成リクエストから、ユーザーオブジェクトが返されます。このユーザーオブジェクトには管理対象ユーザーのIDが含まれています。これは、今後ユーザーを変更するAPIリクエストを実行するために使用できます。
 
-Once a new managed user is created the email address used will receive an email
-from Box asking them to create a password for the account. The account will be
-in a `pending` state until that action has taken place.
+新しい管理対象ユーザーが作成されると、使用されているメールアドレス宛てに、アカウントのパスワードの作成を求めるメールがBoxから届きます。このアクションが実行されるまで、アカウントは`pending`状態になります。
 
-<Message type='notice'>
+<Message type="notice">
 
-For security reasons passwords cannot be supplied when creating a new managed
-user
+セキュリティ上の理由から、新しい管理対象ユーザーの作成時にパスワードを指定することはできません。
 
 </Message>

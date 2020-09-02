@@ -24,33 +24,24 @@ previous_page_id: representations/thumbnail-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/pdf.md
 ---
-# Get PDF Representation
+# PDFレプリゼンテーションの取得
 
-A PDF representation provides a predictable way to embed documents
-in mobile and web applications. PDF representations support watermarks
-if the original file has been watermarked.
+PDFレプリゼンテーションでは、予測しやすい方法でモバイルアプリとウェブアプリにドキュメントを埋め込むことができます。PDFレプリゼンテーションでは、元のファイルに電子すかしが適用されている場合に電子すかしがサポートされます。
 
-PDF representations are generated upon uploading the source file to Box, though
-a watermarked PDF is generated upon fetching the watermarked file for
-the first time.
+PDFレプリゼンテーションは、元のファイルをBoxにアップロードしたときに生成されますが、電子すかし付きPDFは、電子すかし付きファイルを初めて取得したときに生成されます。
 
-## The process
+## 手順
 
-To get a PDF representation follow the following steps
+PDFレプリゼンテーションを取得するには、以下の手順に従います。
 
-- [List all representations](guide://representations/list-all-representations)
-- [Request a PDF](guide://representations/request-a-representation) by passing the
-  `X-Ref-Hints`-header for the desired file type `[pdf]`.
-- [Download the PDF](guide://representations/download-a-representation) by
-  calling the `url_template`, replacing the `{+asset_path}` with an the page
-  of the PDF to request, for example `1.pdf`.
+* [すべてのレプリゼンテーションのリストを取得する](guide://representations/list-all-representations)
+* 目的のファイルタイプ`[pdf]`を表す`X-Ref-Hints`ヘッダーを渡して、[PDFをリクエスト](guide://representations/request-a-representation)する
+* `url_template`を呼び出して[PDFをダウンロード](guide://representations/download-a-representation)する。その際、`{+asset_path}`は、リクエストするPDFのページ(`1.pdf`など)に置き換えます。
 
-## Watermarked PDFs
+## 電子すかし付きPDF
 
-To retrieve a watermarked PDF the underlying file itself needs to be
-watermarked in Box. You can watermark a file either via the Box web application
-or using the [`PUT /files/:id/watermark/`][put_files_id_watermark] API.
+電子すかし付きPDFを取得するには、Boxで元のファイル自体に電子すかしを適用する必要があります。ファイルに電子すかしを適用するには、Boxウェブアプリまたは[`PUT /files/:id/watermark/`][put_files_id_watermark] APIを使用します。
 
-Once watermarked, a watermarked PDF representation of the file is generated.
+電子すかしが適用されると、そのファイルの電子すかし付きPDFレプリゼンテーションが生成されます。
 
 [put_files_id_watermark]: endpoint://put-files-id-watermark

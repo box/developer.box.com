@@ -15,7 +15,6 @@ previous_page_id: embed/box-embed
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/index.md
 ---
-# Embed Box
+# Boxの埋め込み
 
-Box supports a few different ways to embed files and folders straight into your
-front-end application.
+Boxでは、フロントエンドアプリケーションに直接ファイルやフォルダを埋め込むためのいくつかの方法をサポートしています。

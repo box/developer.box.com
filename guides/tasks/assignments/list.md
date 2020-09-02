@@ -19,12 +19,10 @@ previous_page_id: tasks/assignments/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/5-list.md
 ---
-# List a task's assignments
+# タスクの割り当てのリストの取得
 
-To list all of the assignments for a specific tasks, call the
-[`GET /tasks/:task_id/assignments`](e://get_task_assignments_id) with the task
-`id`.
+特定のタスクのすべての割り当てのリストを取得するには、タスク`id`を指定して[`GET /tasks/:task_id/assignments`](e://get_task_assignments_id)を呼び出します。
 
-<Samples id='get_task_assignments_id' >
+<Samples id="get_task_assignments_id">
 
 </Samples>

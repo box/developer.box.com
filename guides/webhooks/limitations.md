@@ -19,48 +19,32 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/limitations.md
 ---
-# Limitations
+# 制限
 
-The following are a few limitations affecting webhooks in Box.
+次に、BoxのWebhookに適用される制限をいくつか説明します。
 
-## One webhook per item
+## Webhookは1項目につき1つ
 
-There's a limit of one webhook per item (file or folder) per application per
-authenticated user.
+Webhookは、1人の認証済みユーザーの1つのアプリケーションで、1つの項目(ファイルまたはフォルダ)につき1つだけという制限があります。
 
-Once a webhook has been attached to an item no second webhook can be attached,
-even if this second webhook would respond to a different trigger event.
+ある項目にWebhookを1つ追加した後は、たとえ別のトリガーイベントに応答するWebhookであっても、2つ目を追加することはできません。
 
-For example, let's assume a webhook has been set up to watch for `FILE.UPLOADED`
-events in a folder with the name `Junk`, by an application with the name
-`MyGreatApp` and for a the user `John Doe`. At that point, no second webhook can
-be added to the same folder, for the same app, and for the same user, even if it
-is to trigger for a `FILE.DOWNLOADED` event.
+たとえば、ユーザー`John Doe`のアプリケーション`MyGreatApp`で、`Junk`というフォルダ内の`FILE.UPLOADED`イベントを監視するWebhookが1つ設定されているとします。このとき、`FILE.DOWNLOADED`イベントでトリガーするWebhookであったとしても、同じユーザーの同じアプリケーションの同じフォルダに2つ目のWebhookを追加することはできません。
 
-To listen to another event, either update the existing webhook, create a new
-application, or ideally parse the different events in your application when the
-webhook payloads are delivered.
+別のイベントをリッスンするには、既存のWebhookを更新するか、新しいアプリケーションを作成します。または、Webhookペイロードが配信された時点でアプリケーション内のさまざまなイベントを解析するのが理想的です。
 
-## 1000 webhooks per application, per user
+## 1つのアプリケーション、1人のユーザーあたり1000個のWebhook
 
-There is a limit of 1000 webhooks per application, per user.
+1つのアプリケーション、1人のユーザーあたりのWebhookの数は1,000個までという制限があります。
 
-In other words, up to 1000 webhooks can be created by any application for any
-user and no more. To create more webhooks for a user, either create another
-application or apply the webhook to a higher level item in the folder structure.
+つまり、1人のユーザーの1つのアプリケーションで最大1000個のWebhookを作成でき、それ以上は作成できません。1人のユーザーでそれ以上の数のWebhookを作成するには、別のアプリケーションを作成するか、Webhookをフォルダ構造内のより上位の項目に適用します。
 
-## Notification URL restrictions
+## 通知URLに関する制約事項
 
-The notification URL, or `address` for a webhook must be a valid HTTPS URL that
-resolves to a valid IP address and should have a certificate signed by a
-reputable certificate authority. Box does not support self-signed SSL
-certificates.
+Webhookの通知URL (`address`)は、有効なIPアドレスに解決される有効なHTTPS URLであることが求められ、信頼できる認証局によって署名された証明書が必要です。Boxは、自己署名SSL証明書をサポートしていません。
 
-The IP address of the server must be publicly accessible from the internet and
-it must not be a `(*.)box.com` address. The port used in the URL must be the
-standard HTTPS port (`443`). Notifications will not be delivered to other ports.
+サーバーのIPアドレスは、インターネットからパブリックにアクセスできる必要があり、`(*.)box.com`アドレスであってはなりません。URLで使用されるポートは、標準HTTPSポート(`443`)でなければなりません。通知は他のポートには配信されません。
 
-## No webhooks on root folder
+## ルートフォルダにはWebhookを追加できない
 
-Webhooks can not be created on the root folder of a user, which is the folder
-with the ID of `0`.
+Webhookをユーザーのルートフォルダ(IDが`0`のフォルダ)に作成することはできません。

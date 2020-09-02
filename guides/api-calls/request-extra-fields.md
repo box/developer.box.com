@@ -21,30 +21,25 @@ previous_page_id: api-calls/status-codes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/request-extra-fields.md
 ---
-# Request Extra Fields
+# 追加フィールドのリクエスト
 
-The number of fields returned for a resource can depend on the API endpoint used
-to request the resource.
+リソースに対して返されるフィールドの数は、リソースのリクエストに使用されるAPIエンドポイントに応じて異なります。
 
 <!-- markdownlint-disable line-length -->
 
-| Variant  |                                                                                                                                                                                                                                                                  |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard | The standard set of fields returned when requesting a resource for its own endpoints, for example when requesting a file through the [`GET /files/:id`](endpoint://get_files_id) endpoint                                                                        |
-| Full     | The full set of fields that can be returned through a resource's own endpoints by using the `field` query parameter                                                                                                                                              |
-| Mini     | A subset of fields that is returned when a resource is returned as a nested part of another resource, for example when a file is returned when requesting all items in a folder through the [`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint |
+| バリアント |                                                                                                                                                                 |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 標準    | [`GET /files/:id`](endpoint://get_files_id)エンドポイントを介してファイルをリクエストする場合など、リソースを固有のエンドポイントに対してリクエストしたときに返される標準のフィールドセット                                             |
+| 詳細    | `field`クエリパラメータを使用して、リソースの固有のエンドポイントを介して返すことができる詳細なフィールドセット                                                                                                     |
+| 簡易    | [`GET /folders/:id/items`](endpoint://get_folders_id_items)エンドポイントを介してフォルダ内にあるすべての項目をリクエストしたときにファイルが返される場合など、リソースが別のリソースのネストされた部分としてリソースが返されたときに返されるフィールドのサブセット |
 
 <!-- markdownlint-enable line-length -->
 
-The API reference documentation has each of these variations labeled in more
-detail. Most notably, the file, folder, web link, and user items have full and
-mini variations.
+APIリファレンスドキュメントでは、このようにラベルの付いたバリエーションを詳しく説明しています。特に、ファイル、フォルダ、ウェブリンク、およびユーザー項目には詳細と簡易というバリエーションがあります。
 
-## Using the field query parameter
+## フィールドクエリパラメータの使用
 
-To request a specific field for a resource that is not returned by default in
-the standard response, append the `field` query parameter to your request. The
-value of this parameter is a comma separated list of field names.
+標準の応答にデフォルトでは含まれない、リソースの特定のフィールドをリクエストするには、`field`クエリパラメータをリクエストに追加します。このパラメータの値は、フィールド名のカンマ区切りリストです。
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
@@ -63,23 +58,17 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 <Message type="notice">
 
-It is important to note that when a specific field is requested no other
-fields are returned except for those requested and the "base" set of fields.
-For a file, this base set is comprised of the `etag`, `id`, and `type` values.
+特定のフィールドがリクエストされると、リクエストされたフィールドとフィールドの「基本」のフィールド以外のフィールドが返されない点に注意してください。ファイルの場合、この基本セットは`etag`、`id`、および`type`値で構成されます。
 
 </Message>
 
-## Resource
+## リソース
 
-The following resource variants are available via our API.
+以下のリソースバリアントは、BoxのAPIで使用できます。
 
-### Standard
+### 標準
 
-The default set of fields returned in an API response is commonly known as the
-standard resource variant. It is generally returned when requesting a resource
-through the main APIs available for that resource. For example, when requesting
-the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return
-the standard variation of a file.
+API応答で返されるデフォルトのフィールドセットは、一般に、標準リソースバリアントと呼ばれます。通常、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -112,15 +101,11 @@ curl https://api.box.com/2.0/files/12345 \
 }
 ```
 
-### Mini
+### 簡易
 
-Where a resource is returned as a nested part of another response it is often
-reduced in size, only returning some of the more essential fields. This variant
-is commonly known as the mini resource variant.
+別の応答のネストされた部分としてリソースが返される場合は、サイズが縮小され、重要なフィールドの一部のみが返されることがよくあります。このバリアントは、一般に簡易リソースバリアントと呼ばれます。
 
-For example, when requesting the
-[`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint the API
-will return a mini variation of files and folders nested within the `item_collection`.
+たとえば、[`GET /folders/:id/items`](endpoint://get_folders_id_items)エンドポイントをリクエストすると、APIは`item_collection`内でネストされたファイルとフォルダの簡易バリエーションを返します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -154,27 +139,19 @@ curl https://api.box.com/2.0/files/12345 \
 }
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-To request more information for a nested resource we recommend calling the
-API for that resource to request it by ID, and optionally pass along the
-`field` query parameter.
+ネストされたリソースの詳細をリクエストするには、そのリソースに対してAPIを呼び出して、IDでそのリソースをリクエストすることをお勧めします。その際、オプションで`field`クエリパラメータを渡すこともできます。
 
-For example, to get the owner of a file returned when listing the items in a
-folder, request that file by ID with the query parameter `field=owned_by`.
+たとえば、フォルダ内の項目のリストを取得するときに返されるファイルの所有者を取得する場合は、クエリパラメータ`field=owned_by`を指定して、IDでそのファイルをリクエストします。
 
 </Message>
 
-### Full
+### 詳細
 
-The total set of fields that can be returned in an API response is commonly known
-as the full resource variant. It can generally be returned when requesting a resource
-through the main APIs available for that resource and by appending the `fields`
-query parameter.
+API応答で返すことができるフィールドセット全体は、一般に、詳細リソースバリアントと呼ばれます。通常、リソースに対して使用できるメインのAPIを介し、`fields`クエリパラメータを追加してそのリソースをリクエストしたときに返されます。
 
-For example, when requesting the [`GET /files/:id`](endpoint://get_files_id)
-endpoint with the `fields=is_package,lock` parameter the API will return the fields
-specified plus the basic fields for the file.
+たとえば、`fields=is_package,lock`パラメータを指定して[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIは、指定されたフィールドに加えて、そのファイルの基本的なフィールドを返します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \

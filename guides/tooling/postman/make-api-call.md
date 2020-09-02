@@ -20,60 +20,48 @@ source_url: >-
 ---
 <!-- alex disable postman-postwoman -->
 
-# Make an API call
+# API呼び出しの実行
 
-With the **Box Postman Collection** loaded into the **Postman App** it is
-possible to make API calls to the **Box API** on behalf of the user logged
-in as.
+**Box Postmanコレクション**が**Postmanアプリ**に読み込まれたら、Postmanアプリがログインユーザーに代わって**Box API**へのAPI呼び出しを実行できるようになります。
 
 <Message warning>
 
-The Box Postman Collection will require a valid `access_token` environment
-variable to make API calls. To get your Postman App set up with a valid Access
-Token we recommend following our [Quick
-Start](g://tooling/postman/quick-start) guide.
+API呼び出しを実行するには、Box Postmanコレクションに有効な`access_token`環境変数が必要です。有効なアクセストークンを使用してPostmanアプリが設定されるように、[クイックスタート](g://tooling/postman/quick-start)ガイドに従うことをお勧めします。
 
 </Message>
 
-## Make an API request
+## APIリクエストの実行
 
-To make an API request, select a **Request** from the Box Postman Collection. In
-this example, we will use the **List items in folder** API which can be found
-in the **Folders** folder.
+APIリクエストを実行するには、Box Postmanコレクションから**リクエスト**を選択します。この例では、\[**Folders**]フォルダにある\[**List items in folder**] APIを使用します。
 
 <ImageFrame border center shadow>
 
-![Selecting an API request](./quick-start/select-api-request.png)
+![APIリクエストの選択](./quick-start/select-api-request.png)
 
 </ImageFrame>
 
-By default the `folder_id` for this API endpoint is set to `0` which represents
-every user's root folder. You can leave this value as is or set it to the folder
-ID of a folder you want to inspect.
+デフォルトでは、このAPIエンドポイントの`folder_id`は、すべてのユーザーのルートフォルダを表す`0`に設定されています。この値は、そのまま使用することも、調べたいフォルダのフォルダIDに設定することもできます。
 
-Next, click the **Send** button in the top right to make the API request.
+次に、右上にある\[**Send**]ボタンをクリックしてAPIリクエストを送信します。
 
 <ImageFrame border center shadow>
 
-![Postman Send button](./quick-start/postman-send-button.png)
+![Postmanの\[Send\]ボタン](./quick-start/postman-send-button.png)
 
 </ImageFrame>
 
-The API call should return quickly and show you a list of items
-in your folder in the response **Body** tab in the bottom half of the screen.
+このAPI呼び出しはすぐに制御が戻り、画面の下半分にある応答の\[**Body**]タブにフォルダ内の項目のリストが表示されます。
 
 <ImageFrame border center shadow>
 
-![Postman response body](./quick-start/postman-response-body.png)
+![Postmanの応答本文](./quick-start/postman-response-body.png)
 
 </ImageFrame>
 
 <Message warning>
 
-# Authentication error
+# 認証エラー
 
-At this point Postman might return an error instead of a list. Often,
-this means your **Access Token** has expired. Check our guide on [refreshing
-an access token in Postman](g://tooling/postman/refresh) for more details.
+この時点で、Postmanがリストではなくエラーを返す場合があります。これは多くの場合、**アクセストークン**の有効期限が切れていることを意味します。詳細については、[Postmanでのアクセストークンの更新](g://tooling/postman/refresh)に関するガイドを参照してください。
 
 </Message>

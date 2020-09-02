@@ -17,42 +17,31 @@ previous_page_id: sso-identities-and-app-users/connect-identities
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/2-create-app-user.md
 ---
-# Create connection between SSO identity and app user
+# SSO IDとApp Userの関連付け
 
-When a user signs in to a custom Box application for the first time using their
-SSO provider credentials a new Box user will need to be created and associated
-with their SSO user record using some piece of unique information from that SSO
-user record. Typically the data that is used to make the association between
-those two accounts is either a unique ID or an email address.
+ユーザーがSSOプロバイダの資格情報を使用してカスタムのBoxアプリケーションに初めてサインインするときに、新しいBoxユーザーを作成し、ユーザーのSSOユーザーレコードと関連付ける必要があります。その際、このSSOユーザーレコードの一意の情報の一部を使用します。通常、この2つのアカウントの関連付けに使用されるデータは、一意のIDとメールアドレスのいずれかです。
 
-To make that association, a Box account may be created in a few ways:
+この関連付けを行うためにBoxアカウントを作成する方法がいくつかあります。
 
-* Using the `external_app_user_id` field of a Box user to store the unique ID
- from the SSO provider.
-* Using the `login` field of a Box user to store the unique email from the SSO
- provider (managed users only).
+* Boxユーザーの`external_app_user_id`フィールドを使用して、SSOプロバイダの一意のIDを格納します。
+* Boxユーザーの`login`フィールドを使用して、SSOプロバイダの一意のメールアドレスを格納します(管理対象ユーザーのみ)。
 
-## Create association with `external_app_user_id`
+## `external_app_user_id`による関連付け
 
-Using the `external_app_user_id` field of a Box user record is a viable option
-for both app users and managed users, and is the recommended method when
-associating a user record from an SSO provider with a Box user account.
+Boxユーザーレコードの`external_app_user_id`フィールドを使用する方法は、App Userと管理対象ユーザーの両方に使用可能なオプションで、SSOプロバイダのユーザーレコードをBoxユーザーアカウントに関連付ける際に推奨される方法です。
 
-### App user
+### App User
 
-To create a new Box app user with an `external_app_user_id` association to a
-SSO user record you will need two pieces of information from the SSO provider:
+`external_app_user_id`によってSSOユーザーレコードに関連付けられた新しいBox App Userを作成するには、SSOプロバイダから以下の2つの情報が必要になります。
 
-* UID (required): The unique identifier from the SSO user record.
-* Name (optional): To maintain uniformity between the records, the SSO user
- name may be extracted to associate with the Box user record.
+* UID (必須): SSOユーザーレコードの一意の識別子です。
+* 名前(省略可): レコードの一貫性を保つために、Boxユーザーレコードと関連付けるSSOユーザー名を抽出します。
 
-Once available, make a request to create a new app user, supplying the optional
-`external_app_user_id` definition in the user parameters.
+取得したら、ユーザーパラメータでオプションの`external_app_user_id`定義を指定して、新しいApp Userを作成するリクエストを実行します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const ssoName = 'SSO User Name';
@@ -73,7 +62,7 @@ client.enterprise.addAppUser(
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String ssoName = "SSO User Name";
@@ -89,7 +78,7 @@ outputString = "New user created: " + createdUserInfo.getName();
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 sso_name = 'SSO User Name'
@@ -105,22 +94,18 @@ print('New user created: {name}')
 
 </Tabs>
 
-### Managed user
+### 管理対象ユーザー
 
-To create a new Box managed user with an `external_app_user_id` association to
-a SSO user record you will need two pieces of information from the SSO
-provider:
+`external_app_user_id`によってSSOユーザーレコードに関連付けられた新しい管理対象ユーザーを作成するには、SSOプロバイダから以下の2つの情報が必要になります。
 
-* Email (required): The unique email from the SSO user record.
-* Name (optional): To maintain uniformity between the records, the SSO user
- name may be extracted to associate with the Box user record.
+* メールアドレス(必須): SSOユーザーレコードの一意のメールアドレスです。
+* 名前(省略可): レコードの一貫性を保つために、Boxユーザーレコードと関連付けるSSOユーザー名を抽出します。
 
-Once available, make a request to create a new managed user, supplying the
-SSO user record email address for the login.
+取得したら、ログイン用のSSOユーザーレコードのメールアドレスを指定して、新しい管理対象ユーザーを作成するリクエストを実行します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const ssoName = 'SSO User Name';
@@ -141,7 +126,7 @@ client.enterprise.addUser(
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String ssoName = "SSO User Name";
@@ -156,7 +141,7 @@ outputString = "New user created: " + createdUserInfo.getName();
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 sso_name = 'SSO User Name'
@@ -172,16 +157,12 @@ print('New user created: {name}')
 
 </Tabs>
 
-## Create association by email
+## メールアドレスによる関連付け
 
-Creating a new [managed user](guide://authentication/user-types/managed-users/)
-that is associated by the SSO user email address is the same process as
-creating a standard managed user.
+SSOユーザーのメールアドレスによって関連付けられている新しい[管理対象ユーザー](guide://authentication/user-types/managed-users/)の作成は、標準的な管理対象ユーザーの作成プロセスと同じです。
 
-After the user logs in via your SSO provider, if the user doesn't already exist
-as a Box user, extract the email address from the SSO user record and make a
-request to create a new Box managed user.
+ユーザーは、SSOプロバイダを介してログインした後、まだBoxユーザーとして存在しない場合に、SSOユーザーレコードからメールアドレスを抽出して、新しいBox管理対象ユーザーを作成するリクエストを実行します。
 
-<Samples id='post_users'>
+<Samples id="post_users">
 
 </Samples>

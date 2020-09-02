@@ -23,61 +23,51 @@ previous_page_id: authentication/access-tokens/revoke
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/downscope.md
 ---
-# Downscope a Token
+# トークンのダウンスコープ
 
-Downscoping is a way to exchange an existing Access Token for a new one that is
-more restricted.
+ダウンスコープは、既存のアクセストークンをより制限の厳しい新しいトークンと交換するための方法です。
 
-## Reasons to downscope
+## ダウンスコープする理由
 
-An application might need to share the Access Token with an
-environment that it does not fully control. A common example of this would be
-when using Box UI Elements in a web browser.
+アプリケーションは、完全に制御できない環境とアクセストークンを共有しなければならないことがあります。その一般的な例として、ウェブブラウザでBox UI Elementsを使用する場合があります。
 
-When an application needs to pass an Access Token to the browser there is a
-potential security risk that needs to be resolved. In order to limit this risk the
-Access Token can be exchanged for a new token with much stricter permissions.
+アプリケーションがアクセストークンをブラウザに渡す必要がある場合、解決が必要となるセキュリティリスクが生じる可能性があります。このリスクを抑制するために、アクセストークンを、権限がより厳格な新しいトークンと交換できます。
 
-## High-level overview
+## 概要
 
-A downscoped token is a token that has fewer permissions (scopes) than the
-original token, as well as the optional additional restriction to only allow
-access to a specific file.
+ダウンスコープされたトークンは、元のトークンよりも権限(スコープ)が少ないトークンです。また、オプションで、特定のファイルへのアクセスのみを許可するようさらに制限される場合もあります。
 
 <ImageFrame border>
 
-![Downscoping overview](./downscope.png)
+![ダウンスコープの概要](./downscope.png)
 
 </ImageFrame>
 
-The new token takes the permissions of the original token and restricts them
-to the tokens passed in, as well as the resource provided.
+新しいトークンは、元のトークンの権限を取得し、渡されたトークンのほか、提供されたリソースにその権限を制限します。
 
-## Downscoping in practice
+## ダウンスコープの実例
 
-To downscope a token, pass the `POST /oauth2/token` endpoint an existing Access
-Token, a list of scopes, as well as an optional file URL to restrict the token to.
+トークンをダウンスコープするには、`POST /oauth2/token`エンドポイントに既存のアクセストークン、スコープのリストのほか、トークンを制限するファイルのURL(省略可)を渡します。
 
-<Samples id="post_oauth2_token" variant="downscope_token" >
+<Samples id="post_oauth2_token" variant="downscope_token">
 
 </Samples>
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter            | Description                                                                                                                                                                                           |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                     |
-| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes for Box UI elements][scopes_down] is available |
-| `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                                              |
-| `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                         |
-| `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                       |
+| パラメータ                | 説明                                                                                                                      |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `subject_token`      | ダウンスコープする元のトークン。これには、OAuth 2.0やJWTトークン交換で取得したトークン、またはアプリトークンとして取得されたトークンを使用できます。                                        |
+| `scope`              | 新しいトークンを制限するための[スコープ][scopes]のスペース区切りリスト。アプリケーションに有効な任意のスコープを使用できますが、[Box UI Elementsのスコープ][scopes_down]の特殊なセットも使用可能です。 |
+| `resource`           | トークンが制限されるファイルへの完全なURLパス(省略可)。                                                                                          |
+| `subject_token_type` | 常に`urn:ietf:params:oauth:token-type:access_token`に設定します。                                                                |
+| `grant_type`         | 常に`urn:ietf:params:oauth:grant-type:token-exchange`に設定します。                                                              |
 
 <!-- markdownlint-enable line-length -->
 
-## Downscoped Access Token Object
+## ダウンスコープされたアクセストークンオブジェクト
 
-A downscoped Access Token returned by the `POST /oauth2/token` endpoint contains
-extra information on the specific restrictions.
+`POST /oauth2/token`エンドポイントで返されるダウンスコープされたアクセストークンには、特定の制限に関する追加情報が含まれます。
 
 ```json
 {
@@ -100,16 +90,14 @@ extra information on the specific restrictions.
 }
 ```
 
-Most importantly here is the list of `restricted_to` entries that will contain
-each combination of `object` and `scope` that the new token has the permissions for.
+ここで最も重要なのは、`restricted_to`エントリのリストです。このリストには、新しいトークンが権限を持つ`object`と`scope`の各組み合わせが含まれます。
 
 <Message warning>
 
-A downscoped token does not include a refresh token. To get a new downscoped
-token, refresh the original refresh token and use that new token to get a
-downscoped token.
+ダウンスコープされたトークンに更新トークンは含まれません。新しいダウンスコープされたトークンを取得するには、元の更新トークンを更新し、その新しいトークンを使用してダウンスコープされたトークンを取得します。
 
 </Message>
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
+
 [scopes_down]: guide://api-calls/permissions-and-errors/scopes/#scopes-for-downscoping

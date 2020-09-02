@@ -18,109 +18,70 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/types-and-formats.md
 ---
-# Types & Formats
+# タイプと形式
 
-The following sections explain some basic concepts about the types and formats
-that can be encountered within the Box APIs.
+以下のセクションでは、Box API内で使用される可能性があるタイプと形式に関する基本的なコンセプトについて説明します。
 
-## Requests
+## リクエスト
 
-The Box APIs use JSON in the requests bodies. There are a few notable exceptions
-to this rule:
+Box APIは、リクエスト本文でJSONを使用します。このルールには注目すべき例外がいくつかあります。
 
-- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens
-  and as per the OAuth 2.0 specification it accepts the body to be sent
-  with a content type of `application/x-www-form-urlencoded`.
-- Most of the APIs that are used to upload binary data, like the
-  [`POST /files/content`][post-files-content] endpoint, expect data to be sent
-  as form data with a content type of `multipart/form-data`.
+* [`POST /oauth2/token`][post-oauth2-token]はアクセストークンのリクエストに使用され、OAuth 2.0の仕様に従って、コンテンツタイプ`application/x-www-form-urlencoded`で送信される本文を受け入れます。
+* [`POST /files/content`][post-files-content]エンドポイントなど、バイナリデータをアップロードするのに使用されるほとんどのAPIでは、コンテンツタイプが`multipart/form-data`のフォームデータとしてデータが送信されることを予期します。
 
-<Message type='notice'>
+<Message type="notice">
 
-Although not required, we highly recommend passing a header with each API
-request to define the content type of the data sent, for example
-`content-type: application/json`.
+必須ではありませんが、`content-type: application/json`のように、送信されるデータのコンテンツタイプを定義するヘッダーを各APIリクエストで渡すことを強くお勧めします。
 
 </Message>
 
-### Headers
+### ヘッダー
 
-As per the HTTP specification, all request header names in the Box API are
-case-insensitive and can be provided in lowercase, uppercase, or any mixed case
-form. In other words, the content type header can be set as
-`CONTENT-TYPE: application/json`, `content-type: application/json`,
-`content-type: application/json` or even the slightly absurd
-`cOnTeNt-TyPe: application/json`.
+HTTP仕様に従い、Box APIのすべてのリクエストヘッダー名では大文字と小文字が区別されないため、小文字、大文字、または両方を組み合わせた形で指定できます。つまり、コンテンツタイプヘッダーは、`CONTENT-TYPE: application/json`、`content-type: application/json`、`content-type: application/json`、または多少変わった`cOnTeNt-TyPe: application/json`としても設定できます。
 
-Header values **are** mostly case sensitive unless stated otherwise.
+ヘッダーの値****では、特に記載のない限り、大文字と小文字が区別されることがほとんどです。
 
-### GZip compression
+### GZip圧縮
 
-By default data sent from Box is not compressed. To improve bandwidth and
-response times it's possible to compress the API responses by including
-a `Accept-Encoding: gzip, deflate` request header.
+デフォルトでは、Boxから送信されるデータは圧縮されません。帯域幅と応答時間を改善するには、`Accept-Encoding: gzip, deflate`リクエストヘッダーを含めることでAPI応答を圧縮できます。
 
-### Date and times
+### 日付と時刻
 
-The Box APIs support [RFC 3339][rfc3339] timestamps. The preferred way to format
-a date in a request is to convert the time to UTC, for example `2013-04-17T09:12:36-00:00`.
+Box APIは[RFC 3339][rfc3339]タイムスタンプをサポートします。リクエスト内の日付の形式を設定するには、`2013-04-17T09:12:36-00:00`のように時刻をUTCに変換する方法をお勧めします。
 
-In those cases where timestamps are rounded to a given day, the time component
-can be omitted. In this case, `2013-04-17T13:35:01+00:00` would become
-`2013-04-17`. In those cases where timestamps support millisecond precision the expected
-request format should be as followed `2013-04-17T09:12:36.123-00:00`.
+タイムスタンプが特定の日に丸められる場合は、時刻部分を省略できます。この場合、`2013-04-17T13:35:01+00:00`は`2013-04-17`になります。タイムスタンプがミリ秒までサポートする場合、予期されるリクエストの形式は`2013-04-17T09:12:36.123-00:00`のようになります。
 
-When making requests, when a timezone is omitted and a time has been provided
-the Pacific timezone is assumed. In responses, the timezone is based on your
-enterprise settings. It will be the default user settings set by your admin.
-Please note that even if a managed user changes their timezone in their account
-settings, this this will have no affect on the timezone returned by the API.
+リクエストを発行する際、タイムゾーンが省略され、時刻が指定されていると、太平洋標準時のタイムゾーンが想定されます。応答では、タイムゾーンが会社の設定に基づいています。これは、管理者が設定したデフォルトのユーザー設定になります。管理対象ユーザーが自分のアカウント設定でタイムゾーンを変更した場合でも、APIによって返されるタイムゾーンには影響しないことに注意してください。
 
-The timezone can differ between different files and folders because an
-enterprise's timezone can change over time. A common example is daylight saving
-time. Items created during standard time would have a different timezone than
-items created during daylight saving time. For this reason it's important to use
-a `RFC3339`-compliant date-time parser to handle dates returned by the API.
+企業のタイムゾーンは経時的に変化するため、タイムゾーンはファイルやフォルダによって異なる場合があります。一般的な例は、夏時間です。標準時に作成された項目のタイムゾーンは、夏時間中に作成された項目とは異なります。このため、APIから返された日付を処理するには、`RFC3339`準拠の日時パーサーを使用することが重要です。
 
-Timestamps are restricted to dates after the start of the Unix epoch, `00:00:00
-UTC` on January 1, 1970.
+タイムスタンプは、Unixエポック(1970年1月1日)の`00:00:00
+UTC`の開始後の日付に制限されます。
 
-## Responses
+## 応答
 
-The Box APIs generally returns JSON in the response body. There are a few notable
-exceptions to this rule as well.
+一般的に、Box APIは応答本文でJSONを返します。このルールにも注目すべき例外がいくつかあります。
 
-- APIs that delete items return an empty body with a `204 No Content` HTTP
-  status code.
-- APIs used to request binary data either return a `200 OK` status code with the
-  binary data attached, or a `202 Accepted`, or `302 Found` status code with no
-  body and a `location` header pointing to the actual binary file.
+* 項目を削除するAPIでは、HTTPステータスコード`204 No Content`とともに空の本文が返されます。
+* バイナリデータのリクエストに使用されるAPIでは、バイナリデータが添付されたステータスコード`200 OK`が返されるか、`202 Accepted`が返されるか、またはステータスコード`302 Found`とともに実際のバイナリファイルを指す`location`ヘッダーのみ(本文なし)が返されます。
 
-<Message type='notice'>
+<Message type="notice">
 
-The `content-type` response header can be used to understand the type of
-content returned in the API. Additionally, every API endpoint has it's
-response type documented in our API reference documentation.
+`content-type`応答ヘッダーを使用すると、APIで返されるコンテンツのタイプがわかります。さらに、各APIエンドポイントの応答タイプについては、APIリファレンスドキュメントで説明されています。
 
 </Message>
 
-### Headers
+### ヘッダー
 
-As per the HTTP specification, all response header names in the Box API are
-case-insensitive and could change over time.
+HTTP仕様に従い、Box APIのすべての応答ヘッダー名では、大文字と小文字が区別されないため、今後変更される可能性があります。
 
-This means that the API might return responses with a content type header of
-`CONTENT-TYPE: application/json`, `content-type: application/json` or
-`content-type: application/json`. Ideally your application should convert header
-names to a standard case upon request and then use that standardized set of
-headers to look up values of the headers.
+つまり、APIでは、`CONTENT-TYPE: application/json`、`content-type: application/json`、または`content-type: application/json`というコンテンツタイプヘッダーが付いた応答が返される可能性があります。リクエスト時にアプリケーションによってヘッダー名を標準の文字に変換された後、標準化されたそのヘッダーのセットを使用してヘッダーの値を検索できるのが理想的です。
 
-Header values **are** always case sensitive unless stated otherwise.
+ヘッダーの値****では、特に記載のない限り、必ず大文字と小文字が区別されます。
 
-### Resources
+### リソース
 
-Most standard API responses where only one resource is returned follow the
-following format.
+1つしかリソースが返されない標準的なAPI応答のほとんどは、次の形式に従っています。
 
 ```json
 {
@@ -130,13 +91,11 @@ following format.
 }
 ```
 
-Every one of these resources will always return an ID and the type of the resource.
+これらのリソースはすべて、常に1つのIDとリソースのタイプを返します。
 
-### Collections
+### コレクション
 
-Where an API response returns multiple items a collection is returned. Although
-the exact format of these collections can change from endpoint to endpoint they
-generally are formatted as follows.
+API応答で複数の項目が返される場合は、コレクションが返されます。これらのコレクションの正確な形式はエンドポイントごとに変わる場合がありますが、一般的には以下の形式になります。
 
 ```json
 {
@@ -163,22 +122,21 @@ generally are formatted as follows.
 
 <!-- markdownlint-disable line-length -->
 
-| Field         | Always present? |                                                                                                                          |
-| ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `entries`     | Yes             | A list of entries in the collection                                                                                      |
-| `total_count` | No              | The total numbers in the collection that can be requested. This can be larger than this page of results                  |
-| `limit`       | No              | For endpoints that support offset-based pagination, this specifies the limit to the number of results returned           |
-| `offset`      | No              | For endpoints that support offset-based pagination, this specifies the offset of results returned                        |
-| `order`       | No              | For endpoints that support sorting, this specifies the order the results are returned in                                 |
-| `next_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the next page that can be returned     |
-| `prev_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the previous page that can be returned |
+| フィールド         | 必須かどうか? |                                                           |
+| ------------- | ------- | --------------------------------------------------------- |
+| `entries`     | はい      | コレクション内のエントリのリスト                                          |
+| `total_count` | いいえ     | リクエスト可能なコレクション内の合計数。このページの結果数よりも大きくてもかまいません。              |
+| `limit`       | いいえ     | オフセットベースのページ割りをサポートするエンドポイントに対して、返される結果の数の制限を指定します。       |
+| `offset`      | いいえ     | オフセットベースのページ割りをサポートするエンドポイントに対して、返される結果のオフセットを指定します。      |
+| `order`       | いいえ     | 並べ替えをサポートするエンドポイントに対して、結果が返される順番を指定します。                   |
+| `next_marker` | いいえ     | マーカーベースのページ割りをサポートするエンドポイントに対して、返すことができる次のページのマーカーを指定します。 |
+| `prev_marker` | いいえ     | マーカーベースのページ割りをサポートするエンドポイントに対して、返すことができる前のページのマーカーを指定します。 |
 
 <!-- markdownlint-enable line-length -->
 
-### Request IDs
+### リクエストID
 
-When your API call returns in an error, our API will return an error
-object with a `request_id` field.
+API呼び出しがエラーで返されると、BoxのAPIから`request_id`フィールドを含むエラーオブジェクトが返されます。
 
 ```json
 {
@@ -191,29 +149,24 @@ object with a `request_id` field.
 }
 ```
 
-When reaching out to support about specific error, please provide the full API
-response including the `request_id` to help our support team to quickly find your
-request.
+特定のエラーについてサポートに連絡する場合は、サポートチームがリクエストをすぐに見つけられるよう、`request_id`を含むAPI応答全体を提供してください。
 
-<Message type='notice'>
+<Message type="notice">
 
-Most API calls also return a `box-request-id` response header. The value of
-this header should not be confused with the `request_id` value in the body of
-an error response.
+ほとんどのAPI呼び出しでは、`box-request-id`応答ヘッダーも返されます。このヘッダーの値を、エラー応答の本文に含まれる`request_id`値と混同しないでください。
 
 </Message>
 
-### Large numbers
+### 大きな数値
 
-In some cases the API can return extremely large numbers for a field. For
-example, a folder's size might have grown to many terabytes of data and
-as a result the `size` field of the folder might have grown to a very large
-number.
+場合によっては、APIでフィールドに対して極端に大きな数値が返されることがあります。たとえば、フォルダのサイズがテラバイト級のデータまで大きくなった場合、結果として、フォルダの`size`フィールドが、非常に大きな数値になっている可能性があります。
 
-In these cases these numbers are returned in [IEEE754][numbers] format for
-example `1.2318237429383e+31`.
+このような場合は、これらの数値は`1.2318237429383e+31`などの[IEEE754][numbers]形式で返されます。
 
 [post-oauth2-token]: endpoint://post-oauth2-token
+
 [post-files-content]: endpoint://post-files-content
+
 [numbers]: https://en.wikipedia.org/wiki/IEEE_754
+
 [rfc3339]: https://www.ietf.org/rfc/rfc3339.txt

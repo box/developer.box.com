@@ -19,89 +19,77 @@ previous_page_id: tooling/postman/quick-start/configure-box-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/quick-start/3-log-in-to-box.md
 ---
-# Log in to Box
+# Boxへのログイン
 
-<Choice option='postman.app_type' value='use_own' color='none'>
+<Choice option="postman.app_type" value="use_own" color="none">
 
-In the previous step you chose to use your own **Box App** for authenticating
-Postman.
+前の手順では、Postmanを認証するために独自の**Boxアプリ**を選択しました。
 
-In this step, we will use the **Client ID** and **Client Secret** you provided
-to log you in and create an **Access Token** for your user.
+この手順では、前の手順で入力した**クライアントID**と**クライアント機密コード**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
-## The reason to log in
+## ログインする理由
 
-Currently you have provided us with the following information.
+現時点では、以下の情報が提示されています。
 
-<Store disabled inline id='postman_credentials.client_id'>
+<Store disabled inline id="postman_credentials.client_id">
 
-Client ID
+クライアントID
 
 </Store>
 
-<Store disabled inline obscured id='postman_credentials.client_secret'>
+<Store disabled inline obscured id="postman_credentials.client_secret">
 
-Client Secret
+クライアント機密コード
 
 </Store>
 
-These **credentials** allow any program or piece of code to authenticate
-itself to the **Box API**. It represents the **Box App** you created but it
-doesn't tell the API who you, the **User**, are.
+任意のプログラムやコードは、これらの**資格情報**を使用することで、**Box API**から認証を受けることができます。これは、作成した**Boxアプリ**を表しますが、**ユーザー**に関する情報をAPIに伝えることはありません。
 
-To authenticate yourself you will need to send your browser to the Box login
-screen to authorize your **Box App** to access to your **User** account.
+ユーザー自身が認証を受けるには、ブラウザでBoxのログイン画面を開き、自分の**ユーザー**アカウントへのアクセスを**Boxアプリ**に承認する必要があります。
 
-Setting this flow up can be hard, which is why we have made this
-straightforward for you with the button below.
+このフローの設定は難しい場合があるため、簡単に行えるように下のボタンを用意しました。
 
-## Log into your Box app
+## Boxアプリへのログイン
 
-<Trigger option='postman.login' value='clicked'>
+<Trigger option="postman.login" value="clicked">
 
-<LoginButton id='postman_credentials' >
+<LoginButton id="postman_credentials">
 
 </LoginButton>
 
 </Trigger>
 
-<LoggedIn id='postman_credentials'>
+<LoggedIn id="postman_credentials">
 
-## You are now logged in
+## ログインしています
 
-We just sent your browser to the [Box Authorization](e://get-authorize)
-screen where you granted your application access to your user account. Ater
-you granted it access the browser redirected back to this site with a `code`.
+ブラウザで[Boxの承認](e://get-authorize)画面が開かれ、そこで、アプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`によりこのサイトにリダイレクトされました。
 
-We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
-longer lived **Access Token** and **Refresh Token**. These tokens represent
-you, the **User**.
+その後、この有効期間が短い`code`が有効期間が長い**アクセストークン**と**更新トークン**に[交換されました](e://post-oauth2-token)。これらのトークンは**ユーザー**を表します。
 
-<Store disabled inline id='postman_credentials' field='name'>
+<Store disabled inline id="postman_credentials" field="name">
 
-Your name
+名前
 
 </Store>
 
-<Store disabled inline obscured id='postman_credentials' field='access_token'>
+<Store disabled inline obscured id="postman_credentials" field="access_token">
 
-Access Token
+アクセストークン
 
 </Store>
 
-<Store disabled inline obscured id='postman_credentials' field='refresh_token'>
+<Store disabled inline obscured id="postman_credentials" field="refresh_token">
 
-Refresh Token
+更新トークン
 
 </Store>
 
 <Message danger>
 
-# Security notice
+# セキュリティに関する注意
 
-Your API credentials are now stored in the browser cache. We highly
-recommend clearing out this storage by clicking the **Reset** button
-later in this guide.
+API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
 
 </Message>
 
@@ -109,30 +97,23 @@ later in this guide.
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_box' color='none'>
+<Choice option="postman.app_type" value="use_box" color="none">
 
-In the previous step you chose to use our preconfigured **Box App**.
+前の手順では、あらかじめ設定されている**Boxアプリ**を選択しました。
 
-In this step, we will use this app to authenticate you, the **User**. Because
-this application is owned by us, you will not be able to see the app's
-**Client ID** and **Client Secret** and you will need to come back to this
-page every hour to re-authenticate your app.
+この手順では、このアプリを使用して**ユーザー**の認証を行います。このアプリケーションの所有者はBoxであるため、ユーザーがアプリの**クライアントID**と**クライアント機密コード**を確認することはできません。1時間ごとにこのページに戻り、アプリを再認証する必要があります。
 
-## The reason to log in
+## ログインする理由
 
-Currently we have no idea who you, the **User are** and therefore we can't
-authenticate you when making API calls to the Box API. To authenticate
-yourself you will need to send your browser to the Box login screen to
-authorize our **Box App** to access to your **User** account.
+現時点では、**ユーザー**に関する情報がまったくないため、Box APIに対してAPI呼び出しを実行する際にBoxがユーザーを認証することができません。ユーザー自身が認証を受けるには、ブラウザでBoxのログイン画面を開き、自分の**ユーザー**アカウントへのアクセスを**Boxアプリ**に承認する必要があります。
 
-Setting this flow up can be hard, which is why we have made this
-straightforward for you with the button below.
+このフローの設定は難しい場合があるため、簡単に行えるように下のボタンを用意しました。
 
-## Log into your Box app
+## Boxアプリへのログイン
 
-<Trigger option='postman.login' value='clicked'>
+<Trigger option="postman.login" value="clicked">
 
-<LoginButton >
+<LoginButton>
 
 </LoginButton>
 
@@ -140,41 +121,35 @@ straightforward for you with the button below.
 
 <LoggedIn>
 
-## You are now logged in
+## ログインしています
 
-We just sent your browser to the [Box Authorization](e://get-authorize)
-screen where you granted our application access to your user account. Ater
-you granted it access the browser redirected back to this site with a `code`.
+ブラウザでは[Boxの承認](e://get-authorize)画面が開かれ、そこで、Boxのアプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`でこのサイトにリダイレクトされました。
 
-We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
-longer lived **Access Token** and **Refresh Token**. These tokens represent
-you, the **User**.
+その後、この有効期間が短い`code`が有効期間が長い**アクセストークン**と**更新トークン**に[交換されました](e://post-oauth2-token)。これらのトークンは**ユーザー**を表します。
 
-<Store disabled inline id='credentials' field='name'>
+<Store disabled inline id="credentials" field="name">
 
-Your name
+名前
 
 </Store>
 
-<Store disabled inline obscured id='credentials' field='access_token'>
+<Store disabled inline obscured id="credentials" field="access_token">
 
-Access Token
+アクセストークン
 
 </Store>
 
-<Store disabled inline obscured id='credentials' field='refresh_token'>
+<Store disabled inline obscured id="credentials" field="refresh_token">
 
-Refresh Token
+更新トークン
 
 </Store>
 
 <Message danger>
 
-# Security notice
+# セキュリティに関する注意
 
-Your API credentials are now stored in the browser cache. We highly
-recommend clearing out this storage by clicking the **Reset** button
-later in this guide.
+API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
 
 </Message>
 
@@ -182,36 +157,33 @@ later in this guide.
 
 </Choice>
 
-<Choice option='postman.app_type' unset color='none'>
+<Choice option="postman.app_type" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
+# 前の手順が完了していません
 
-Please complete the previous step to select the type of **Box App** you want
-to use.
+前の手順を完了し、使用する**Boxアプリ**の種類を選択してください。
 
 </Message>
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_box,use_own' color='none'>
+<Choice option="postman.app_type" value="use_box,use_own" color="none">
 
-## Summary
+## まとめ
 
-* You logged into your **Box account** using your own **Box App** or our
-  preconfigured app
-* You granted the **Box App** access to your account
-* You are able to see your account's **Access Token** and **Refresh Token**
-  on this page
+* 独自の**Boxアプリ**またはあらかじめ設定されているアプリを使用して**Boxアカウント**にログインしました
+* **Boxアプリ**にユーザーアカウントへのアクセスを許可しました
+* このページでユーザーアカウントの**アクセストークン**と**更新トークン**を参照できるようになりました
 
 </Choice>
 
-<Observe option='postman.login' value='clicked'>
+<Observe option="postman.login" value="clicked">
 
 <Next>
 
-I have logged in to Box
+Boxへのログインが完了しました
 
 </Next>
 

@@ -20,13 +20,10 @@ previous_page_id: trash/permanently-delete-folder
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/restore-web-link.md
 ---
-# Restore Web Link
+# ウェブリンクの復元
 
-To restore a web link that has been moved to the trash, but has not yet been
-purged, make a `POST` request to the `/web_links/:web_link_id` endpoint. This
-will place the web link in the original parent folder if it is still
-available, you optionally can specify a `parent` folder.
+ごみ箱に移動されたが削除されていないウェブリンクを復元するには、`/web_links/:web_link_id`エンドポイントに`POST`リクエストを送信します。これにより、ウェブリンクがまだ使用可能であれば元の親フォルダに戻されます。オプションとして`parent`フォルダを指定することもできます。
 
-<Samples id='post_web_links_id' >
+<Samples id="post_web_links_id">
 
 </Samples>

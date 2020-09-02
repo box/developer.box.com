@@ -23,75 +23,65 @@ previous_page_id: representations/download-a-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/thumbnail.md
 ---
-# Get Basic Thumbnail
+# 基本的なサムネイルの取得
 
-A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
-an application as a representation of the file, for example as a placeholder for
-a link that downloads or previews the file.
+サムネイルとは小さい画像のことで、アプリケーション内でファイルのレプリゼンテーションとして使用できる`.png`または`.jpg`で表されます。たとえば、ファイルをダウンロードまたはプレビューするリンクのプレースホルダとして使用されます。
 
-An alternative way to get a thumbnail for a file is using the
-[representations API][thumb_representations].
+ファイルのサムネイルは、[レプリゼンテーションAPI][thumb_representations]を使用して取得することもできます。
 
-## Requesting
+## リクエスト
 
-To request a file thumbnail use the [`GET
-/files/:id/thumbnail.:extension`][get_files_id_thumbnail_id]
-endpoint.
+ファイルのサムネイルをリクエストするには、[`GET
+/files/:id/thumbnail.:extension`][get_files_id_thumbnail_id]エンドポイントを使用します。
 
-<Samples id='get_files_id_thumbnail_id' >
+<Samples id="get_files_id_thumbnail_id">
 
 </Samples>
 
-When a thumbnail was successfully created, this will return the thumbnail
-in the body of the response as binary data.
+サムネイルの作成に成功すると、そのサムネイルが応答の本文内でバイナリデータとして返されます。
 
-## Asynchronous thumbnail creation
+## サムネイルの非同期的な作成
 
-Sometimes the thumbnail can not be created directly. Instead, the API will
-return a `HTTP 202` with a `location` response header. The location
-is for a temporary image that can be used while the thumbnail is being
-generated.
+場合によっては、サムネイルを直接作成できないこともあります。代わりに、APIから`location`応答ヘッダーで`HTTP 202`が返されます。この場所は、サムネイルの生成中に使用できる一時的な画像のためのものです。
 
-A `retry-after` response header is also provided to present you with
-an estimated amount of seconds before retrying this endpoint.
+このエンドポイントを再試行するまでの推定秒数を示す`retry-after`応答ヘッダーも返されます。
 
-## Supported file sizes
+## サポートされているファイルサイズ
 
-The following formats and sizes of thumbnails are available.
+以下のサムネイルの形式とサイズが使用可能です。
 
 <!-- markdownlint-disable line-length -->
 
-| File Type | Dimensions                                                         |
-| --------- | ------------------------------------------------------------------ |
-| JPG       | `32x32`, `94x94`, `160x160`, `320x320`, `1024x1024`, `2048x2048`\* |
-| PNG       | `1024x1024`\*, `2048x2048`\*                                       |
+| ファイルタイプ | サイズ                                                                |
+| ------- | ------------------------------------------------------------------ |
+| JPG     | `32x32`, `94x94`, `160x160`, `320x320`, `1024x1024`, `2048x2048`\* |
+| PNG     | `1024x1024`\*, `2048x2048`\*                                       |
 
-Some restrictions apply to the sizes marked as `*`.
+`*`が付いているサイズには、いくつかの制限があります。
 
 <!-- markdownlint-enable line-length -->
 
-## File size restrictions
+## ファイルサイズの制限
 
-### Original file size
+### 元のファイルサイズ
 
-Thumbnails are not scaled up. If the original file size of the file uploaded to
-Box is smaller than the representation dimensions, the resulting thumbnail is
-capped at the size of the original file.
+サムネイルは拡大されません。Boxにアップロードされたファイルの元のファイルサイズがレプリゼンテーションのサイズより小さい場合は、作成されるサムネイルのサイズの上限は元のファイルのサイズになります。
 
-## Supported file types
+## サポートされているファイルタイプ
 
-At this time the following file types are supported.
+現時点でサポートされているファイルタイプは以下のとおりです。
 
 <!-- markdownlint-disable line-length -->
 
-| File Type | File Extensions                                                                                                                                                 |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Documents | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
-| Images    | `ai`, `bmp`, `gif`, `eps`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `tif`, `tiff`, `dcm`, `dicm`, `svs`, `tga`                                                 |
-| Audio     | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
-| Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
+| ファイルタイプ | ファイル拡張子                                                                                                                                                         |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ドキュメント  | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
+| 画像      | `ai`, `bmp`, `gif`, `eps`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `tif`, `tiff`, `dcm`, `dicm`, `svs`, `tga`                                                 |
+| オーディオ   | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
+| 動画      | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
 
 <!-- markdownlint-enable line-length -->
 
 [get_files_id_thumbnail_id]: endpoint://get_files_id_thumbnail_id
+
 [thumb_representations]: guide://representations/thumbnail-representation

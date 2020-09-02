@@ -22,41 +22,36 @@ previous_page_id: api-calls/ensure-consistency
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/allowing-domain-access.md
 ---
-# Allowing Domain Access
+# ドメインへのアクセスの許可
 
-To use the Box APIs it is important that your application and users have access
-to the following domains, where needed.
+Box APIを使用する際に重要なのは、必要に応じてアプリケーションとユーザーが以下のドメインにアクセスできることです。
 
-## File Preview
+## ファイルのプレビュー
 
-To enable file preview, your application might need to load javascript file from
-the Box content delivery network (CDN). This file is loaded from the following
-domains.
+ファイルプレビュー機能を有効にするために、アプリケーションは、Boxコンテンツ配信ネットワーク(CDN)からJavaScriptファイルを読み込むことが必要になる場合があります。このファイルは、以下のドメインから読み込まれます。
 
-- `api.box.com`
-- `boxcdn.net`
-- `boxcloud.com`
-- `dl2.boxcloud.com` to `dl20.boxcloud.com`
+* `api.box.com`
+* `boxcdn.net`
+* `boxcloud.com`
+* `dl2.boxcloud.com`～`dl20.boxcloud.com`
 
-## File downloads
+## ファイルのダウンロード
 
-The following API domains are used to download files via the Box API.
+以下のAPIドメインは、Box APIを介してファイルをダウンロードする目的で使用されます。
 
-- `api.box.com` to initially request a file to download
-- `dl.boxcloud.com` to actually download files for authenticated users
-- `public.boxcloud.com` to actually download files for unauthenticated users
+* `api.box.com` - ダウンロードするファイルを最初にリクエストする
+* `dl.boxcloud.com` - 認証済みユーザー用のファイルを実際にダウンロードする
+* `public.boxcloud.com` - 認証されていないユーザー用のファイルを実際にダウンロードする
 
-<Message type='warning'>
+<Message type="warning">
 
-Ensuring access to these domains is only a first step to downloading a file.
-To download a file the users need to have proper access permissions and need
-to be fully authenticated where needed.
+これらのドメインへのアクセス権限の確認は、ファイルをダウンロードするための最初のステップにすぎません。ファイルをダウンロードするには、ユーザーは適切なアクセス権限を持ち、必要に応じて完全に認証されている必要があります。
 
 </Message>
 
-## File uploads
+## ファイルのアップロード
 
-The following API domains are used to upload files via the Box API.
+以下のAPIドメインは、Box APIを介してファイルをアップロードする目的で使用されます。
 
-- `api.box.com` to start a file upload
-- `upload.app.box.com` and `upload.box.com` to upload the file to Box
+* `api.box.com` - ファイルのアップロードを開始する
+* `upload.app.box.com`と`upload.box.com` - Boxにファイルをアップロードする

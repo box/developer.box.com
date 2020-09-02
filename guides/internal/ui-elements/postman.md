@@ -20,7 +20,7 @@ source_url: >-
 
 # Postman
 
-The Postman element can be used to show a **Load in Postman** button.
+Postman要素を使用すると、\[**Load in Postman**]ボタンを表示できます。
 
 ```html
 <Postman id='abc123' ></Postman>
@@ -28,39 +28,33 @@ The Postman element can be used to show a **Load in Postman** button.
 
 <H>
 
-<Postman id='abc123' />
+<Postman id="abc123">
 
 </H>
 
-## Credentials
+## 資格情報
 
-By default the button will try to share an `access_token`, `refresh_token`,
-`expires_at`, `client_id`, and `client_secret` as a Postman environment. The
-values for these variables are loaded from local storage in the browser, and
-default to the following keys.
+デフォルトでは、このボタンを使用すると、`access_token`、`refresh_token`、`expires_at`、`client_id`、および`client_secret`がPostman環境と共有されます。これらの変数の値はブラウザのローカルストレージから読み込まれ、デフォルトでは以下のキーになります。
 
-* `com.box.developer.credentials` for the `access_token`, `refresh_token`, and
-`expires_at` values.
-* `com.box.developer.credentials.client_id` for the `client_id`
-* `com.box.developer.credentials.client_secret` for the `client_secret`
+* `access_token`、`refresh_token`、および`expires_at`の値は`com.box.developer.credentials`。
+* `client_id`は`com.box.developer.credentials.client_id`。
+* `client_secret`は`com.box.developer.credentials.client_secret`。
 
-To configure a different set of values to use, specify a `env` option.
+使用するそれぞれの値のセットを設定するには、`env`オプションを指定します。
 
 ```html
 <Postman id='abc123' env='example_name' />
 ```
 
-In this case the values will be read from the following keys in local storage.
+この場合、値はローカルストレージの以下のキーから読み取られます。
 
-* `com.box.developer.example_name` for the `access_token`, `refresh_token`, and
-`expires_at` values.
-* `com.box.developer.example_name.client_id` for the `client_id`
-* `com.box.developer.example_name.client_secret` for the `client_secret`
+* `access_token`、`refresh_token`、および`expires_at`の値は`com.box.developer.example_name`。
+* `client_id`は`com.box.developer.example_name.client_id`。
+* `client_secret`は`com.box.developer.example_name.client_secret`。
 
-## Postman Environment Name
+## Postman環境の名前
 
-By default the credentials are exported into Postman with the name `Box`. To
-change this, provide a `envtitle` attribute to the element.
+デフォルトで、資格情報は`Box`という名前でPostmanにエクスポートされます。この名前を変更するには、要素に`envtitle`属性を指定します。
 
 ```html
 <Postman id='abc123' envtitle='Box.com' />

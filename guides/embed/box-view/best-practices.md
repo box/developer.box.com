@@ -19,40 +19,24 @@ previous_page_id: embed/box-view/upload-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/best-practices.md
 ---
-# Best Practices
+# ベストプラクティス
 
-## Regenerate and Rollover App Tokens
+## アプリトークンの再生成とロールオーバー
 
-The app token is a highly privileged token. To keep your application
-functional, you may want to regenerate your app token (for example by revoking
-an existing token and creating a new one) if it is about to expire. If you are
-using non-expiring tokens, you may still want to rollover your App Token if it
-gets compromised.
+アプリトークンは、非常に権限が強いトークンです。アプリケーションが継続して動作するよう、有効期限に近づいた場合に、アプリトークンを再生成できます(たとえば、既存のトークンを取り消して、新しいトークンを作成します)。有効期限がないトークンを使用している場合でも、アプリトークンのセキュリティが侵害されるとアプリトークンをロールオーバーすることができます。
 
-A secondary app token is provided on the application configuration page that
-works exactly the same as the primary app token and can be used to rollover
-your app token without incurring any application downtime through regenerating
-the existing token.
+セカンダリアプリトークンは、アプリケーション構成ページで提供され、プライマリアプリトークンとまったく同じように機能します。このトークンを使用すると、既存のトークンを再生成することにより、アプリケーションのダウンタイムなくアプリトークンをロールオーバーできます。
 
-We suggest the following workflow for rolling over your Primary App Token:
+プライマリアプリトークンのロールオーバーでは次のワークフローに従うことをお勧めします。
 
-* Generate the Secondary App Token through the Developer Console UI.
-* Replace the Secondary App Token in your application and roll out the change.
-* Once your application starts using the secondary App Token, regenerate the
-Primary App Token.
+* 開発者コンソールUIを使用してセカンダリアプリトークンを生成します。
+* アプリケーションでセカンダリアプリトークンを置き換えて変更をリリースします。
+* アプリケーションでセカンダリアプリトークンの使用が開始されたら、プライマリアプリトークンを再生成します。
 
-## Use Downscope Tokens
+## ダウンスコープトークンの使用
 
-App Tokens are a set of two tokens (primary and secondary) that hold elevated
-privileges over the content managed by your application. They are essentially
-your application's gateway to using Box View services. App Tokens can be used
-by your application to upload, download, preview and modify any content into
-Box.
+アプリトークンは、2つのトークン(プライマリとセカンダリ)からなるセットで、アプリケーションで管理されているコンテンツに対して高度な権限を保持しています。アプリトークンは、本来、Box Viewサービスを使用するためのアプリケーションのゲートウェイです。アプリケーションでアプリトークンを使用すると、Boxで任意のコンテンツをアップロード、ダウンロード、プレビュー、および変更できます。
 
-Due to the elevated privileges granted to the application tokens, if you need
-to make the token available on the client side for any reason (for example if
-you are using the Box Preview UI Element), we strongly recommend that you use a
-downscoped version of the original app token.
+アプリケーションのトークンに付与される高度な権限により、何らかの理由でトークンをクライアント側で利用できるようにする必要がある場合(Box Preview UI Elementを使用している場合など)、元のアプリトークンのダウンスコープしたバージョンを使用することを強くお勧めします。
 
-See the [downscoping guide](guide://authentication/access-tokens/downscope) for
-information on that process.
+そのプロセスについては、[ダウンスコープのガイド](guide://authentication/access-tokens/downscope)を参照してください。

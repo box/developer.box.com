@@ -17,4 +17,4 @@ previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/index.md
 ---
-# Permissions & Errors
+# 権限とエラー

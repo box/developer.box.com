@@ -15,20 +15,18 @@ previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/0-index.md
 ---
-# Metadata queries
+# メタデータクエリ
 
-A [metadata query][query] provides a way to find files and
-folders by searching for the metadata attached to them.
+[メタデータクエリ][query]を使用すると、ファイルやフォルダに追加されているメタデータを検索して、そのファイルやフォルダを見つけることができます。
 
-For example, to find the all files for an invoice with a certain ID, the query
-would look for all files and folders with the `invoiceData` template attached to
-it and a value of `id = :id`, where `:id` would be the value of the invoice.
+たとえば、特定のIDが付いた請求書についてすべてのファイルを検索するには、クエリで、その請求書に適用されている`invoiceData`テンプレートと値`id = :id` (この場合、`:id`は請求書の値)が設定されたすべてのファイルとフォルダを検索することができます。
 
-## Authentication
+## 認証
 
-The metadata query API can be used by applications that have been authenticated
-using traditional [OAuth 2.0][oauth] or [JWT][jwt].
+メタデータクエリAPIは、従来の[OAuth 2.0][oauth]または[JWT][jwt]を使用して認証されたアプリケーションで使用できます。
 
 [query]: g://metadata/queries
+
 [oauth]: g://authentication/oauth2
+
 [jwt]: g://authentication/jwt

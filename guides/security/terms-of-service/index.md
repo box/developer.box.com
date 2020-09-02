@@ -16,76 +16,50 @@ source_url: >-
 ---
 <!-- alex disable reject -->
 
-# Terms of Service
+# 利用規約
 
-The Box API allows administrators to configure Terms of Services for working on
-Box, and for users to accept & re-accept Terms of Services for custom
-applications.
+Box APIを使用すると、管理者はBoxの使用に関する利用規約を設定できます。また、ユーザーは、カスタムアプリケーションの利用規約に同意および再同意できます。
 
-## Terminology
+## 用語
 
-### Terms of Services
+### 利用規約
 
-A Terms of Service is a enterprise-level record that represent the conditions
-within which all users are allowed to work with an enterprise's data in Box.
+利用規約とは、Boxに保存されている会社のデータをすべてのユーザーが使用できる条件を表す、会社レベルの記録文書です。
 
-There are currently two types of Terms of Service for any enterprise that can be
-enabled independently. The **Managed Terms of Service** can be
-enabled for the enterprise's own users, where the **External Terms of Service*
-can be enabled for users from other enterprises that collaborated in on the
-primary enterprise's data.
+現在、どの会社にも2種類の利用規約があり、個別に有効にすることが可能です。**管理対象ユーザーの利用規約**は、会社のユーザーに対して有効にすることができます。一方、\*_外部ユーザーの利用規約_は、プライマリ会社のデータでコラボレーションする他の会社のユーザーに対して有効にすることができます。
 
-## Terms of Service User Statuses
+## 利用規約ユーザーステータス
 
-A Terms of Service User Status represents the status of the Terms of Service
-acceptance for a specific user. There is exactly one Terms of Service User
-Status for any given combination of Terms of Service and a user.
+利用規約ユーザーステータスは、特定のユーザーによる利用規約への同意のステータスを表します。利用規約とユーザーをどのように組み合わせた場合でも、利用規約ユーザーステータスは1つだけです。
 
-There are multiple Terms of Service User Statuses for any Terms of Service,
-specifically one for each each user.
+1 つの利用規約に、利用規約ユーザーステータスが複数あります(ユーザー1人につき1つ)。
 
-There could be multiple Terms of Service User Statuses for a given user. The
-user could accept or reject multiple External Terms of Services for different
-enterprises they have been collaborated into, in addition to accepting or
-rejecting their own enterprise’s Managed Terms of Service.
+1人のユーザーに、利用規約ユーザーステータスが複数存在する場合もあります。ユーザーは、自分の会社の管理対象の利用規約を承認または拒否できるだけでなく、コラボレーションしているさまざまな会社の複数の外部利用規約も承認または拒否できます。
 
-## APIs
+## API
 
-Applications that are authenticated as a Box Admin that has the **Edit settings
-for your company** permissions can view, create, and edit Terms of Services for
-their enterprise via the API.
+**会社の設定を編集**権限を持つBox管理者として認証されているアプリケーションは、APIを介して会社の利用規約を表示、作成、編集できます。
 
-* [`GET /terms_of_services/:id`](e://get-terms-of-services-id):
-  To get the information for a specific Terms of Service
-* [`GET /terms_of_services`](e://get-terms-of-services):
-  To get a list of all the Terms of Services used within an enterprise, either
-  for managed or external users.
-* [`POST /terms_of_services`](e://post-terms-of-services):
-  To create Terms of Service settings for either an external or managed user.
-* [`PUT /terms_of_services/:id`](e://put-terms-of-services-id):
-  To update a specific Terms of Service setting
+* [`GET /terms_of_services/:id`](e://get-terms-of-services-id): 特定の利用規約の情報を取得します。
+* [`GET /terms_of_services`](e://get-terms-of-services): 管理対象ユーザーまたは外部ユーザー用に、会社内で使用されているすべての利用規約のリストを取得します。
+* [`POST /terms_of_services`](e://post-terms-of-services): 外部ユーザーまたは管理対象ユーザー用に利用規約設定を作成します。
+* [`PUT /terms_of_services/:id`](e://put-terms-of-services-id): 特定の利用規約設定を更新します。
 
-Additionally, application can view and accept Terms of Services for a regular
-user via the API.
+さらに、アプリケーションは、APIを介して通常のユーザーの利用規約を表示し承認することができます。
 
-* [`GET /terms_of_service_user_statuses`][euserstatuses]:
-  To get a list of all the Terms of Services for a user
-* [`POST /terms_of_service_user_statuses`][euserstatuses_post]:
-  To accept or reject a specific Terms of Service for the first time
-* [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]:
-  To accept or reject a specific Terms of Service that had been previously
-  accepted or rejected.
+* [`GET /terms_of_service_user_statuses`][euserstatuses]: ユーザーのすべての利用規約のリストを取得します。
+* [`POST /terms_of_service_user_statuses`][euserstatuses_post]: 特定の利用規約を初めて承認または拒否します。
+* [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]: 以前に承認または拒否された特定の利用規約を承認または拒否します。
 
-## Scopes
+## スコープ
 
-The following scopes should be granted to the application in order to take the
-outlined actions.
+説明されているアクションを実行するには、アプリケーションに以下のスコープを許可する必要があります。
 
-* **Manage Enterprise Properties**: Required to enable or edit the
-enterprise's settings for Terms of Services as well as to view them for
-external users.
-* **Manage Users**: Required to accept Terms of Services for other users.
+* **エンタープライズのプロパティを管理**: 会社の利用規約の設定を有効化または編集するためと、外部ユーザーに利用規約の設定を表示するために必要です。
+* **ユーザーを管理**: 他のユーザーの利用規約を承認するために必要です。
 
 [euserstatuses]: e://get-terms-of-service-user-statuses
+
 [euserstatuses_put]: e://put-terms-of-service-user-statuses-id
+
 [euserstatuses_post]: e://post-terms-of-service-user-statuses

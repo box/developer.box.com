@@ -19,31 +19,25 @@ previous_page_id: metadata/quick-start
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/2-create-template.md
 ---
-# Create a custom metadata template
+# カスタムメタデータテンプレートの作成
 
-To create a custom metadata template for your enterprise you can use [our API
-directly](e://post_metadata_templates) or one of our SDKs to create a new
-template.
+会社用のカスタムメタデータテンプレートを作成するには、[直接BoxのAPI](e://post_metadata_templates)を使用するかBox SDKのいずれかを使用して新しいテンプレートを作成します。
 
-For this `customerInfo` template, we're going to create a template with 3
-fields. The first field is a text field to hold the customer's `name`, the
-second is a dropdown list of the possible values for the `industry` the customer
-operates in, and the final field represents the total annual contract value (`tav`).
+この`customerInfo`テンプレートでは、3つのフィールドを持つテンプレートを作成します。1つ目のフィールドは顧客の`name`を保持するテキストフィールド、2つ目のフィールドは顧客の業種`industry`に使用できる値のドロップダウンリスト、3つ目のフィールドは年間契約額の合計(`tav`)を表します。
 
-<CTA to='g://metadata/fields'>
+<CTA to="g://metadata/fields">
 
-Learn about the different field types
+各種フィールドタイプについて確認する
 
 </CTA>
 
-To create this template we need to pass in the configuration for the fields, as
-well as a display name for the field.
+このテンプレートを作成するには、フィールドの構成と各フィールドの表示名を渡す必要があります。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```sh
 curl -X POST https://api.box.com/2.0/metadata_templates/schema \
@@ -77,7 +71,7 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```c#
 var templateParams = new BoxMetadataTemplate()
@@ -115,7 +109,7 @@ BoxMetadataTemplate template = await  client.MetadataManager.CreateMetadataTempl
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 MetadataTemplate.Field name = new MetadataTemplate.Field();
@@ -155,7 +149,7 @@ MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterp
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 from boxsdk.object.metadata_template import MetadataField, MetadataFieldType
@@ -169,7 +163,7 @@ template = client.create_metadata_template('Customer Info', fields)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.metadata.createTemplate(
@@ -207,16 +201,13 @@ client.metadata.createTemplate(
 
 <Message warning>
 
-# Admin permissions required
+# 管理者権限が必須
 
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web
-app or the API to manage templates.
+メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートの作成および編集**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
 
 </Message>
 
-The API will return the newly created metadata template.
+このAPIにより、新しく作成されたメタデータテンプレートが返されます。
 
 ```json
 {
@@ -260,16 +251,14 @@ The API will return the newly created metadata template.
 
 <Message notice>
 
-# Template key
+# テンプレートキー
 
-Although you did not explicitly set the template key the key is automatically
-derived from the `displayName` value. In this case, the `templateKey` would be
-`customerInfo`.
+テンプレートキーは、明示的に設定しませんでしたが、`displayName`値から自動的に派生します。この場合、`templateKey`は`customerInfo`になります。
 
 </Message>
 
 <Next>
 
-I've created a custom template
+カスタムテンプレートを作成しました
 
 </Next>

@@ -22,13 +22,11 @@ source_url: >-
 ---
 <!-- alex disable reject -->
 
-# Application Flow
+# アプリケーションフロー
 
-In general, applications use Terms of Services as follows.
+一般的に、アプリケーションでは以下のように利用規約を使用します。
 
-When an application, authenticated as a user, tries to access an item in Box that
-requires the user to have accepted the relevant Terms of Service it receives a
-`TERMS_OF_SERVICE_REQUIRED`  error.
+ユーザーとして認証されたアプリケーションが、関連する利用規約にユーザーが同意している必要があるBox内の項目にアクセスしようとすると、`TERMS_OF_SERVICE_REQUIRED`エラーが返されます。
 
 ```json
 {
@@ -45,8 +43,7 @@ requires the user to have accepted the relevant Terms of Service it receives a
 }
 ```
 
-The application requests the Terms of Service's information by calling
-[`GET /terms_of_services/:id`][get_tos_id].
+アプリケーションは、[`GET /terms_of_services/:id`][get_tos_id]を呼び出して利用規約の情報をリクエストします。
 
 ```json
 {
@@ -65,13 +62,12 @@ The application requests the Terms of Service's information by calling
 }
 ```
 
-The application can then show the text from the Terms of Service to the user.
+その後、アプリケーションは利用規約のテキストをユーザーに表示できます。
 
-When the user accepts or rejects the terms, it makes a call to either
-[`PUT /terms_of_service_user_statuses/:id`][put_tosus] or
-[`POST /terms_of_service_user_statuses`][post_tosus] depending on if the initial
-error returned a `tos_user_status_id` in the response.
+ユーザーが利用規約を同意または拒否すると、最初のエラーによって応答で`tos_user_status_id`が返されたかどうかに応じて、[`PUT /terms_of_service_user_statuses/:id`][put_tosus]または[`POST /terms_of_service_user_statuses`][post_tosus]が呼び出されます。
 
 [put_tosus]: e://put_terms_of_service_user_statuses_id
+
 [post_tosus]: e://post_terms_of_service_user_statuses
+
 [get_tos_id]: e://get_terms_of_services_id

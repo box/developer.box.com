@@ -23,10 +23,9 @@ previous_page_id: authentication/oauth2/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/oauth2/as-user.md
 ---
-# As-User Header
+# As-Userヘッダー
 
-It is possible to for an OAuth 2.0 application to act on behalf of another user
-through the `as-user` header.
+`as-user`ヘッダーを使用すると、OAuth 2.0アプリケーションは別のユーザーの代理になることができます。
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -36,33 +35,27 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-In this situation the user ID is the Box identifier for a user. User IDs can
-found for any user via the `GET /users` endpoint, which is only available to
-admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
+この場合、ユーザーIDはユーザーのBox識別子です。どのユーザーでも、ユーザーIDは、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
 
 </Message>
 
-## Preconditions
+## 前提条件
 
-Using the `as-user` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [developer
-console][devconsole].
+`as-user`ヘッダーを使用するには、いくつかの要件があります。最初に、アプリケーションは、[開発者コンソール][devconsole]でユーザーとして操作を行うよう構成する必要があります。
 
 <ImageFrame border center>
 
-![Advanced Features](./enable-perform-actions-as-users.png)
+![高度な機能](./enable-perform-actions-as-users.png)
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with admin permissions,
-meaning either an admin, co-admin, or service account. See our guide on [User
-Types](g://authentication/user-types) for more details.
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、またはサービスアカウントのいずれかである必要があります。詳細については、[ユーザータイプ](g://authentication/user-types)のガイドを参照してください。
 
-## as-user using SDKs
+## SDKを使用したas-user
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
@@ -70,7 +63,7 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 <!-- markdownlint-disable line-length -->
 
@@ -83,7 +76,7 @@ client.asUser([USER_ID]");
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 user_to_impersonate = client.user(user_id='[USER_ID]')
@@ -92,7 +85,7 @@ user_client = client.as_user(user_to_impersonate)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.asUser('[USER_ID]');
@@ -105,9 +98,7 @@ client.asUser('[USER_ID]');
 
 <Message warning>
 
-Please note that some of our SDKs create new clients for the other user, while
-others modify the existing client and provide a way to return to a state where
-the client authenticates for the original user itself.
+SDKには、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
 
 </Message>
 

@@ -20,18 +20,16 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/list-all-representations.md
 ---
-# List All Representations for File
+# ファイルのすべてのレプリゼンテーションのリストの取得
 
-To see what representations are available for a file you can call the
-[`GET /files/:id`][get_files_id] endpoint while requesting the
-[`representations`][file_representations] field.
+ファイルに使用できるレプリゼンテーションを確認するには、[`representations`][file_representations]フィールドのリクエスト中に[`GET /files/:id`][get_files_id]エンドポイントを呼び出します。
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
     -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-The response will include a list of representations in the following format
+この応答には、次の形式でレプリゼンテーションのリストが含まれます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -53,19 +51,16 @@ The response will include a list of representations in the following format
 
 <!-- markdownlint-enable line-length -->
 
-## Response fields
+## 応答のフィールド
 
-Every representation will include a set of properties and the type of
-representation.
+どのレプリゼンテーションにも一連のプロパティとレプリゼンテーションのタイプが含まれます。
 
-* The optional `dimensions` field represents the file's dimensions in
-  pixels as width by height.
+* `dimensions`フィールド(省略可)は、ファイルのサイズをピクセル単位の幅と高さで表します。
 
-* The optional `paged` field specifies if this representation is a paged
-  document. Some images and PDFs will often be paged documents.
+* `paged`フィールド(省略可)は、このレプリゼンテーションがページ割りされたドキュメントかどうかを指定します。画像やPDFによっては、ページ割りされたドキュメントになることがよくあります。
 
-* The optional `thumb` field specifies if this representation is suitable
-  as a file thumbnail.
+* `thumb`フィールド(省略可)は、このレプリゼンテーションがファイルのサムネイルとして適しているかどうかを指定します。
 
 [get_files_id]: endpoint://get-files-id
+
 [file_representations]: resource://file#param-representations

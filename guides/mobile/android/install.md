@@ -15,17 +15,17 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/android/install.md
 ---
-# Android SDK Installation
+# Android SDKのインストール
 
-The Android SDK may be obtained through several methods:
+Android SDKは、次のように、いくつかの方法で入手できます。
 
-* Adding as a Maven or Gradle dependency
-* Cloning the source into your project
-* Downloading one of the precompiled JARs
+* MavenまたはGradle依存関係として追加する
+* ソースをプロジェクトに複製する
+* プリコンパイル済みJARの1つをダウンロードする
 
-## Add as a Maven dependency
+## Maven依存関係として追加する
 
-Add the following to your Maven dependencies.
+以下のMaven依存関係を追加します。
 
 ```xml
 <dependency>
@@ -34,9 +34,9 @@ Add the following to your Maven dependencies.
 </dependency>
 ```
 
-## Add as a Gradle dependency
+## Gradle依存関係として追加
 
-Add the following to your `build.gradle` file.
+`build.gradle`ファイルに以下を追加します。
 
 ```js
 dependencies {
@@ -44,23 +44,20 @@ dependencies {
 }
 ```
 
-## Clone the source
+## ソースの複製
 
-The Box Android SDK source code may be obtained by cloning or downloading the
-[project from Github][android-sdk-github].
+Box Android SDKのソースコードは、[GitHubにあるプロジェクト][android-sdk-github]を複製またはダウンロードすることで入手できます。
 
-## Download precompiled JARs
+## プリコンパイル済みJARのダウンロード
 
-Precompiled JARs for the Android SDK may be obtained from the Github project
-[releases page][android-sdk-github-releases]
+Android SDK用のプリコンパイル済みJARは、GitHubプロジェクトの[リリースに関するページ][android-sdk-github-releases]から入手できます。
 
 <Message warning>
 
-If one of the precompiled JARs is being used, the Android SDK will also
-require the following dependency: `minimal-json v0.9.1` (for Maven:
-`com.eclipsesource.minimal-json:minimal-json:0.9.1`)
+プリコンパイル済みJARのいずれかが使用されている場合、Android SDKでは依存関係`minimal-json v0.9.1` (Mavenの場合は`com.eclipsesource.minimal-json:minimal-json:0.9.1`)も必要になります。
 
 </Message>
 
 [android-sdk-github]: https://github.com/box/box-android-sdk/tree/master/box-content-sdk
+
 [android-sdk-github-releases]: https://github.com/box/box-android-sdk/releases

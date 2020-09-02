@@ -27,52 +27,43 @@ previous_page_id: tooling/sdks/node
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/cli.md
 ---
-# Install Box CLI
+# Box CLIのインストール
 
-The Box Command Line Interface (CLI) is a tool for making requests to
-Box APIs from your terminal window or command prompt.
+Box Command Line Interface (CLI)は、ターミナルウィンドウまたはコマンドプロンプトからBox APIにリクエストを行うためのツールです。
 
-Installers are available for Windows and macOS, and the raw source-code is
-available for building the CLI in other environments.
+Windows用およびmacOS用のインストーラが提供されていますが、その他の環境でもCLIを構築するためのRawソースコードを利用できます。
 
-## Windows & macOS Installers
+## Windows用およびmacOS用インストーラ 
 
-To install the latest CLI on your machine, download the latest
-`.exe` for Windows or `.pkg` for macOS for the latest release.
+お使いのマシンに最新のCLIをインストールするには、最新リリースに対応する最新の`.exe`(Windowsの場合)または`.pkg`(macOSの場合)をダウンロードします。
 
 <CTA to="https://github.com/box/boxcli/releases">
 
-Download the latest CLI installer
+最新のCLIインストーラをダウンロード
 
 </CTA>
 
-## Linux & Node install
+## LinuxとNodeのインストール
 
-Additionally, the CLI can be installed as a Node package on any platform,
-including Linux. For this to work you will need to have
-[Node JS](https://nodejs.org/) installed on your machine.
+さらに、CLIは、任意のプラットフォーム(Linuxなど)にNodeパッケージとしてインストールすることができます。このためには、[Node JS](https://nodejs.org/)をマシンにインストールしておく必要があります。
 
 ```bash
 npm install --global @box/cli
 ```
 
-## Source Code
+## ソースコード
 
-The source code for the CLI is also available via [the GitHub page][cli].
+[GitHubページ][cli]でCLIのソースコードも提供されています。
 
-## Quick Start
+## はじめに
 
-To get started, first [set up a Box Custom App][jwt-guide] using Server-side
-Authentication with JWT and download the JSON configuration file from the
-Configuration page of your app in the [developer Console][devconsole]. Then, set
-up the CLI by pointing it to your configuration file:.
+最初に、JWTでサーバー側認証を使用して[Boxカスタムアプリを設定][jwt-guide]し、[開発者コンソール][devconsole]のアプリの設定ページからJSON構成ファイルをダウンロードします。次に、構成ファイルを指定してCLIをセットアップします。
 
 ```cli
 box configure:environments:add [PATH_TO_CONFIG_FILE]
 ```
 
-Next, make your first API call by listing the content of the JWT app's Service
-Account.
+次に、JWTアプリのサービスアカウントのコンテンツのリストを指定して、最初のAPI呼び出しを行います。
 
 ```cli
 box folders:get 0
@@ -80,31 +71,35 @@ box folders:get 0
 
 <Message>
 
-The root folder for any account always has ID `0`. A JWT application does not
-automatically authenticate as an actual managed user, instead it uses a
-Service Account. See [User Types](g://authentication/user-types) for more details.
+すべてのアカウントのルートフォルダのIDは常に`0`です。JWTアプリケーションは、実際の管理対象ユーザーとして自動的に認証するのではなく、代わりにサービスアカウントを使用します。詳細については、[ユーザータイプ](g://authentication/user-types)を参照してください。
 
 </Message>
 
-## Setup & Commands
+## 設定とコマンド
 
-For a complete list of steps to set up your CLI environment and start working
-with the CLI post-install are available on our [Box CLI GitHub page][cli].
+CLI環境をセットアップし、CLIインストール後の操作を開始する手順については、[Box CLIに関するGitHubページ][cli]を参照してください。
 
-The GitHub page also has some additional guides that might be of interest to an
-advanced CLI user.
+このGitHubページには、上級CLIユーザーの参考となりそうなその他のガイドも用意されています。
 
-* [Setup autocomplete][cli-autocomplete]
-* [Configure another app][cli-add-config]
-* [Switch accounts][cli-switch]
-* [A full list of commands][cli-commands]
+* [オートコンプリートの設定][cli-autocomplete]
+* [別のアプリの構成][cli-add-config]
+* [アカウントの切り替え][cli-switch]
+* [コマンドの全一覧][cli-commands]
 
 [cli]: https://github.com/box/boxcli
+
 [cli-releases]: https://github.com/box/boxcli/releases
+
 [cli-getting-started]: https://github.com/box/boxcli#getting-started
+
 [cli-commands]: https://github.com/box/boxcli#command-topics
+
 [jwt-guide]: g://applications/custom-apps/jwt-setup
+
 [devconsole]: https://app.box.com/developers/console
+
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+
 [cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
+
 [cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path

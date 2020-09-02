@@ -23,30 +23,21 @@ previous_page_id: authentication/app-token/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/index.md
 ---
-# App Token Auth
+# アプリトークン認証
 
-Server-side authentication using App Tokens is an alternative way to
-authenticate to the Box API with fixed, long-lived Access Tokens that are
-restricted to the application's Service Account.
+アプリトークンを使用するサーバー側認証は、Box APIに対して認証するための代替方法で、アプリケーションのサービスアカウントに制限されている、有効期間の長い固定のアクセストークンを使用します。
 
-## App Token Restrictions
+## アプリトークンの制限
 
-A server-side App Token is an authentication method where the application only
-has access to read and write data to its own account. App Token auth is mainly
-intended to be used by Box View applications.
+サーバー側アプリトークンは、アプリケーションのアクセス権限がその所有アカウントに対するデータの読み取りおよび書き込みのみになる認証方式です。アプリトークン認証は、主にBox Viewアプリケーションでの使用を目的としています。
 
-By using this authentication method there is no need to authorize a user as the
-application is automatically authenticated as the Service Account that belongs
-to that application.
+この認証方式を使用すると、アプリケーションはそのアプリケーションに属しているサービスアカウントとして自動的に認証されるため、ユーザーを承認する必要はありません。
 
-## When to use App Tokens
+## アプリトークンを使用する場合
 
-Server-side authentication with App Tokens is the ideal authentication method
-for apps that:
+アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work in an environment that either has no user model, or has users that don't
-have Box accounts
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data in the application's Service Account and not a user's
-account
+* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する

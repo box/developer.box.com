@@ -18,10 +18,9 @@ source_url: >-
 
 # Store
 
-A `Store` is an element that can be used to collect and display user provided
-values.
+`Store`は、ユーザーが指定した値を収集して表示するための要素です。
 
-By displaying a store a user is provided with a text field
+ストアを表示すると、ユーザーにテキストフィールドが示されます。
 
 ```html
 <Store placeholder='e.g. John' id='example.store_a'>
@@ -31,9 +30,9 @@ By displaying a store a user is provided with a text field
 
 <H>
 
-<Store placeholder='e.g. John' id='example.store_a'>
+<Store placeholder="e.g. John" id="example.store_a">
 
-Your name
+名前
 
 </Store>
 
@@ -41,17 +40,13 @@ Your name
 
 <Message>
 
-Text typed into a store is saved in the browser's local storage with the key
-`com.box.developer.$id` where `$id` is the ID provided with the store.
+ストアに入力されたテキストは、キー`com.box.developer.$id` (`$id`はストアで提供されるID)とともにブラウザのローカルストレージに保存されます。
 
 </Message>
 
-## Setting a field
+## フィールドの設定
 
-In some advanced cases you might want to set a field on an object stored in
-local storage instead. For example, the local storage key
-`com.box.developer.example.store_b` might contain an object `{}` and the store
-should save the user's entry to the field `name` as follows.
+ローカルストレージに保存されたオブジェクトにフィールドを設定するという高度な例もあります。たとえば、ローカルストレージのキー`com.box.developer.example.store_b`にオブジェクト`{}`が含まれていると、以下のように、ストアではユーザーの入力内容がフィールド`name`に保存されます。
 
 ```html
 <Store placeholder='e.g. John' id='example.store_b' field='name'>
@@ -61,18 +56,15 @@ should save the user's entry to the field `name` as follows.
 
 ## Placeholder
 
-A store supports a `placeholder` that is passed to the child `<input />` field.
+ストアでは、`<input />`子フィールドに渡される`placeholder`がサポートされます。
 
-## Validating a store
+## ストアの検証
 
-A store supports a `pattern` that is passed to the child `<input />` field and
-us used to validate the field.
+ストアでは、`<input />`子フィールドに渡され、フィールドの検証に使用される`pattern`がサポートされます。
 
-## Displaying a store
+## ストアの表示
 
-Sometimes you might want to display the value provided earlier back to a user.
-In these cases you can create an in-line version of the store, disable editing,
-and obscure any sensitive data as follows.
+以前に入力された値をユーザーに再度表示したい場合もあります。このような場合は、以下のように、ストアのインラインバージョンを作成し、編集を無効にして、機密情報をわかりにくくすることができます。
 
 ```html
 <Store id='example.store_a' disabled inline obscured>
@@ -82,19 +74,17 @@ and obscure any sensitive data as follows.
 
 <H>
 
-<Store id='example.store_a' disabled inline obscured>
+<Store id="example.store_a" disabled inline obscured>
 
-Your name
+名前
 
 </Store>
 
 </H>
 
-## Resetting values
+## 値のリセット
 
-A reset button can be shown to allow a user to clear a value. It matches any key
-in local storage that starts with `com.box.developer.$id` where `$id` is the ID
-passed in.
+ユーザーが値をクリアできるようにリセットボタンを表示できます。これは、`com.box.developer.$id` (`$id`は渡されたID)で始まる、ローカルストレージ内の任意のキーと一致します。
 
 ```html
 <ResetButton id='example'>
@@ -104,15 +94,15 @@ passed in.
 
 <H>
 
-<ResetButton id='example'>
+<ResetButton id="example">
 
-Reset all IDs starting with example.
+exampleで始まるすべてのIDをリセット。
 
 </ResetButton>
 
 </H>
 
-Multiple IDs can be passed in as a comma-separated list.
+複数のIDは、カンマ区切りリストとして渡すことができます。
 
 ```html
 <ResetButton id='example1,example2'>

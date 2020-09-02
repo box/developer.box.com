@@ -21,17 +21,13 @@ source_url: >-
 ---
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it possible to embed the entire
-Box experience anywhere people work. Box Embed provides the ability to upload,
-search, comment, share, tag, and most importantly edit files using Box Edit.
+Box EmbedはHTMLベースのフレームワークで、Boxの機能全体を埋め込み、場所を問わずに使えるようにします。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、最も重要な操作としてBox Editを使用したファイルの編集も可能になります。
 
-## Configure
+## 構成
 
-### From the web
+### ウェブから構成
 
-To grab your Box Embed code from the Box web app, navigate to the folder of
-choice, click on the ellipsis beside the folder, go to More Actions, and click
-Embed Widget.
+BoxウェブアプリからBox Embedのコードを取得するには、目的のフォルダに移動し、フォルダの横にある省略記号をクリックして、\[その他の操作]に移動し、\[埋め込みウィジェット]をクリックします。
 
 <ImageFrame border>
 
@@ -39,21 +35,19 @@ Embed Widget.
 
 </ImageFrame>
 
-You are presented with options to adjust the size, view, and sorting.
+サイズ、表示方法、および並べ替えを調整するためのオプションが表示されます。
 
 <ImageFrame border>
 
-![Box Embed Configuration](./box-embed-2.png)
+![Box Embedの構成](./box-embed-2.png)
 
 </ImageFrame>
 
-Once you are done customizing the embed widget, all you will need to do is copy
-and paste the embed code into your site or web application.
+埋め込みウィジェットのカスタマイズが完了したら、あとは埋め込みコードをコピーしてサイトまたはウェブアプリケーションに貼り付けるだけです。
 
-## Programmatically
+## プログラムを使用して構成
 
-If you want to add more customization to Box Embed, you have the ability to
-build it programmatically. The format for an embed snippet is as follows.
+Box Embedをさらにカスタマイズする場合は、プログラムを使用してカスタマイズできます。埋め込みのスニペットの形式は次のとおりです。
 
 <!-- markdownlint-disable line-length -->
 
@@ -71,21 +65,17 @@ build it programmatically. The format for an embed snippet is as follows.
 
 <!-- markdownlint-enable line-length -->
 
-### Finding your shared link value
+### 共有リンクの値の検索
 
-The first step to building an embed `iframe` programmatically is to generate or
-find the value for the shared link. One way to find this value is by using the Box
-web app.
+プログラムを使用して埋め込み`iframe`を構築するには、まず、共有リンクの値を生成または検索します。この値を検索する1つの方法として、Boxウェブアプリを使用します。
 
 <ImageFrame border>
 
-![Box Share](./box-share.png)
+![Boxの共有](./box-share.png)
 
 </ImageFrame>
 
-Additionally, you can also find this shared link value through the API using the
-[`GET /files/:id`](e://get-files-id) or [`GET /folders/:id`](e://get-folders-id)
-endpoint and passing in the query parameter `fields=shared_link`.
+また、[`GET /files/:id`](e://get-files-id)または[`GET /folders/:id`](e://get-folders-id)エンドポイントを使用してクエリパラメータ`fields=shared_link`を渡すことにより、APIを介してこの共有リンクの値を検索することもできます。
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
@@ -101,39 +91,35 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 }
 ```
 
-### Parameters
+### パラメータ
 
-Next, you will want to choose your view customization options. The following is
-a list of optional parameters you can configure.
+次に、表示のカスタマイズオプションを選択します。構成可能なパラメータ(省略可)のリストを以下に示します。
 
 <!-- markdownlint-disable line-length -->
 
-|                       |                                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------- |
-| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`.                  |
-| `sortColumn`          | The order the files or folders are sorted in. Can be `name`, `date` (default), or `size`.    |
-| `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
-| `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
-| `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
+|                       |                                                              |
+| --------------------- | ------------------------------------------------------------ |
+| `view`                | ファイルまたはフォルダの表示方法の種類。`list`(デフォルト)または`icon`を指定できます。           |
+| `sortColumn`          | ファイルまたはフォルダを並べ替える順番。`name`、`date`(デフォルト)、または、`size`を指定できます。  |
+| `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC`(デフォルト)または`DESC`を指定できます。            |
+| `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false`(デフォルト)を指定できます。 |
+| `showItemFeedActions` | ファイルのコメントまたはタスクを非表示または表示します。true(デフォルト)またはfalseを指定できます。      |
 
 <!-- markdownlint-enable line-length -->
 
-### Full Screen Capabilities
+### 全画面表示機能
 
-To enable full screen capabilities for the Box Embed snippet, include one or more
-of the following parameters if you want the object to be viewable in full screen
-within an `<iframe>`:
+Box Embedスニペットの全画面表示機能を有効にするために、オブジェクトを全画面に表示可能にする場合は、以下のパラメータの1つ以上を`<iframe>`に含めてください。
 
-- `allowfullscreen`
-- `webkitallowfullscreen`
-- `mozallowfullscreen`
-- `oallowfullscreen`
-- `msallowfullscreen`
+* `allowfullscreen`
+* `webkitallowfullscreen`
+* `mozallowfullscreen`
+* `oallowfullscreen`
+* `msallowfullscreen`
 
-## Expiring Embed Links
+## 有効期限付き埋め込みリンク
 
-For files, another option is to call the [`GET /files/:id`](e://get-files-id)
-and request an `expiring_embed_link` using the `fields` query parameter.
+ファイルの場合、[`GET /files/:id`](e://get-files-id)を呼び出し、`fields`クエリパラメータを使用して`expiring_embed_link`をリクエストすることもできます。
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
@@ -175,8 +161,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
 }
 ```
 
-The `url` attribute can be used in an `<iframe>` to embed an auto expiring Box
-Embed interface.
+`url`属性を`<iframe>`内で使用すると、自動で期限切れになるBox Embedインターフェイスを埋め込むことができます。
 
 ```html
 <iframe
@@ -190,11 +175,9 @@ Embed interface.
 />
 ```
 
-### Parameters
+### パラメータ
 
-Extra parameters can be added to this URL as well to customize the UI. To do so,
-add the following parameters to the `url` as query parameters. The eventual URL
-would look something like this.
+UIをカスタマイズするために、このURLにさらにパラメータを追加することもできます。そのためには、以下のパラメータをクエリパラメータとして`url`に追加します。最終的なURLは、次のようになります。
 
 ```sh
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
@@ -202,24 +185,19 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 <!-- markdownlint-disable line-length -->
 
-|                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
-| `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
+|                   |                                                                                                                                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `showDownload`    | ファイルをダウンロードするための権限がビューアーにある場合は、埋め込まれたヘッダーバーにダウンロードボタンが表示されます。また、印刷とダウンロードが同じ権限で管理されているため、ドキュメントのファイルタイプには印刷ボタンも表示されます。デフォルトでは`false`になります。                                                          |
+| `showAnnotations` | プレビュー以上の権限を持つユーザーは、ドキュメントと画像のプレビューに注釈を付けることができます。また、すでにドキュメントに付けられている注釈も表示されます。注釈が利用可能なファイルタイプおよび注釈の種類の詳細については、注釈ページを参照してください。現在、注釈はウェブブラウザでのみ使用できます。モバイルブラウザでは、ユーザーは注釈を表示できますが、新しい注釈を作成することはできません。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Custom Logo
+## カスタムロゴ
 
-Paid Box customers have the option to remove the Box logo in the file Preview.
-To do so, visit the **Admin Console**, **Enterprise Settings**, **Custom
-Setup** and toggle the **Embed widget customization** off to hide the Box
-logo.
+有料のBoxをお使いの場合は、ファイルのプレビューに表示されるBoxのロゴを削除できます。削除するには、**管理コンソール**の\[**Enterprise設定**]、\[**カスタム設定**]に移動し、\[**埋め込みウィジェットのカスタマイズ**]をオフに切り替えてBoxのロゴを非表示にします。
 
-## Limitations
+## 制限
 
-Box Embed is not optimized for mobile browsers and should not be used in web
-experiences designed for mobile devices. Many UI elements, like the **download**
-and **print** options might not show in mobile browsers.
+Box Embedは、モバイルブラウザ向けには最適化されていないため、モバイルデバイス用に設計されたウェブエクスペリエンスでは使用しないでください。多くのUI Element (**ダウンロード**オプションや**印刷**オプションなど) はモバイルブラウザに表示されない可能性があります。
 
 [logo]: https://community.box.com/t5/Get-Started-Guide-for-New-Admins/Customize-Your-Account-s-Branding/ta-p/301

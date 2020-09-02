@@ -21,51 +21,42 @@ previous_page_id: downloads/file
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/downloads/file-version.md
 ---
-# Download File Version
+# ファイルバージョンのダウンロード
 
-To download a specific file version, pass the [`GET /files/:id/content`][api]
-the ID of the file to get the content for, as well as its version ID.
+特定のファイルバージョンをダウンロードするには、取得するコンテンツが含まれるファイルのIDとそのファイルのバージョンIDを[`GET /files/:id/content`][api]に渡します。
 
-<Samples id='get_files_id_content' variant='for_version' >
+<Samples id="get_files_id_content" variant="for_version">
 
 </Samples>
 
-## Download URL
+## ダウンロードURL
 
-When not using the SDKs, this API call will return a `HTTP 302 Found` status
-code, with a `location` header containing a link to the download URL, which
-looks something like this.
+SDKを使用しない場合、このAPI呼び出しでは、`HTTP 302 Found`ステータスコードとともに、次のようなダウンロードURLへのリンクを含む`location`ヘッダーが返されます。
 
 ```sh
 https://dl.boxcloud.com/d/1/[long-random-string]/download
 ```
 
-By using the `-L` flag in cURL we are able to automatically follow this
-redirect.
+cURLで`-L`フラグを使用することで、自動的にこのリダイレクトに従うことができます。
 
 <Message>
 
-In our SDKs this will result in the binary data to be downloaded. In the API
-this will result in a download URL being returned via the `location` header.
+SDKでは、結果として、バイナリデータがダウンロードされます。APIでは、ダウンロードURLが`location`ヘッダーを介して返されます。
 
-It is possible to [get the download URL][downloadurl] via the SDKs as well.
+また、SDKを介して[ダウンロードURLを取得][downloadurl]することも可能です。
 
 </Message>
 
-## Download URL expiry
+## ダウンロードURLの有効期限
 
-Although this download URL can be passed to a user's browser to allow them to
-download the file, the URL does expire and should be requested again for any
-further downloads.
+このダウンロードURLは、ファイルのダウンロードを許可するためにユーザーのブラウザに渡すことができますが、このURLが期限切れになると、その後でダウンロードするには再度リクエストする必要があります。
 
-## File not ready
+## ファイルの準備ができていない
 
-If the file is not ready to be downloaded yet a `retry-after` header will be
-returned indicating the time in seconds after which the file will be available
-for the client to download.
+ファイルをダウンロードする準備がまだできていない場合は、クライアントがファイルをダウンロードできるようになるまでの秒数を示す`retry-after`ヘッダーが返されます。
 
-This response can occur when the file was uploaded immediately before the
-download request.
+この応答は、ダウンロードリクエストの直前にファイルがアップロードされた場合に発生することがあります。
 
 [api]: e://get_files_id_content
+
 [downloadurl]: g://downloads/get-url

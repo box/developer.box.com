@@ -19,42 +19,32 @@ previous_page_id: authentication/app-token/endpoints
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/rollover.md
 ---
-# Rotating App Tokens
+# アプリトークンの循環
 
-By updating one of the application's App Tokens at a time the application can
-rotate the tokens without running into any conflicts.
+アプリケーションのアプリトークンを1つずつ更新することで、アプリケーションではトークンの循環が可能となり、競合が発生することはありません。
 
-## Why rotate tokens
+## トークンを循環させる理由
 
-There are a few reasons to rotate App Tokens on a fixed interval.
+一定の間隔でアプリトークンを循環させる理由はいくつかあります。
 
-1. To replace tokens that have been configured to auto-expire
-2. To limit the effects of any compromised tokens
+1. 有効期限が自動的に切れるよう構成されているトークンを交換するため
+2. セキュリティ侵害を受けたトークンによる影響を抑えるため
 
-In either case, Box supports having two active App Tokens at any time, allowing
-for a seamless rotation from the old to the new tokens.
+どちらの場合も、Boxでは、いつでも2つのアクティブなアプリトークンがサポートされているため、古いトークンから新しいトークンへのシームレスな循環が可能です。
 
-## Rotation steps
+## 循環の手順
 
-These instructions assume that you have already created a primary and secondary
-App Token before and are ready to replace either of them.
+以下の手順では、すでにプライマリアプリトークンとセカンダリアプリトークンを作成済みで、いずれか一方を置き換える準備が整っていることを前提としています。
 
-By following these steps you can configure your application with two new tokens
-without any issues.
+以下の手順に従うと、2つの新しいトークンを使用して、問題なくアプリケーションを構成できます。
 
-1. Assuming your application is using the Primary App Token, go to [developer
-   console][console] application. Head to the "Configuration" section of your
-   application "Generate Key" button for the Secondary App Token.
-2. Update your application with the Secondary Token. Ensure your application is
-   configured with this new token completely before moving on to the next step.
-3. Once you are confident that the Primary App token is no longer in use, head
-   over to the  [developer console][console] and hit the "Revoke" button for the
-   Primary App Token.
+1. アプリケーションでプライマリアプリトークンを使用していることを前提に、[開発者コンソール][console]アプリケーションに移動します。アプリケーションの\[構成]セクションに移動し、セカンダリアプリトークンの\[キーを生成]ボタンを選択します。
+2. セカンダリアプリトークンを使用してアプリケーションを更新します。次の手順に進む前に、この新しいトークンでアプリケーションが完全に構成されていることを確認します。
+3. プライマリアプリトークンが使用されていないことを確信したら、[開発者コンソール][console]に移動して、プライマリアプリトークンの\[取り消し]ボタンを選択します。
 
 <Message>
 
-Repeat the same process with the tokens switched to roll back from the
-Secondary App Token to the Primary App Token.
+セカンダリアプリトークンからプライマリアプリトークンにロールバックするには、トークンが交換された状態で同じ手順を繰り返します。
 
 </Message>
 

@@ -24,121 +24,110 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/oauth2-setup.md
 ---
-# Setup with OAuth 2.0
+# OAuth 2.0を使用した設定
 
-A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+カスタムアプリは、クライアント側の[OAuth 2.0][oauth2]認証を使用するよう設定できます。
 
-<CTA to='g://authentication/oauth2'>
+<CTA to="g://authentication/oauth2">
 
-Learn how OAuth 2.0 authentication works
+OAuth 2.0認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using OAuth 2.0 authentication you will need to pass the
-following requirements.
+OAuth 2.0認証を使用するカスタムアプリを設定するには、以下の要件を満たす必要があります。
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+* 会社の[開発者コンソール][devconsole]にアクセスできる必要があります。アクセスできない場合は、[Developerアカウント][devaccount]にサインアップしてください。
 
-## Create the app
+## アプリの作成
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Head over to the [Developer Console][devconsole] and select "Create New App".
+[開発者コンソール][devconsole]に移動し、\[アプリの新規作成]を選択します。
 
-### 2. Create a Custom App
+### 2. カスタムアプリを作成する
 
-Select the "Custom App" option from the list of application types and select
-"Next".
+アプリケーションの種類のリストから\[カスタムアプリ]オプションを選択し、\[次へ]を選択します。
 
 <ImageFrame border>
 
-![Application selection screen](../images/app-types.png)
+![アプリケーションの選択画面](../images/app-types.png)
 
 </ImageFrame>
 
-### 3. Select OAuth 2.0 authentication
+### 3. OAuth 2.0認証を選択する
 
-On the next screen, select "Standard OAuth 2.0 (User Authentication)" and select
-"Next".
+次の画面で\[標準OAuth 2.0 (ユーザー認証)]を選択し、\[次へ]を選択します。
 
 <ImageFrame border width="400" center>
 
-![Auth selection screen](../images/auth-types.png)
+![認証の選択画面](../images/auth-types.png)
 
 </ImageFrame>
 
-### 4. Provide a name
+### 4. 名前を入力する
 
-Finally, provide a unique name for your application. This name needs to be
-unique across all applications on Box.
+最後に、アプリケーションの一意の名前を入力します。この名前は、Box上のすべてのアプリケーションで一意である必要があります。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-name.png)
+![アプリ名のフォーム](../images/app-name.png)
 
 </ImageFrame>
 
 <Message>
 
-Your application is now configured and ready to be used. You can use the
-[Developer Token][devtoken] to immediately make API calls to your own account.
+アプリケーションは構成され、使用できる状態になりました。[開発者トークン][devtoken]を使用すると、自分のアカウントに対してすぐにAPI呼び出しを実行できます。
 
 </Message>
 
-## Basic configuration
+## 基本的な構成
 
-Before the application can be used, some basic additional configuration might be
-required.
+アプリケーションを使用するには、事前にいくつかの基本的な追加構成が必要になる場合があります。
 
-### Redirect URI
+### リダイレクトURI
 
-During the OAuth 2.0 flow a user will need to be redirected to the Box web app
-in the browser to provide their login credentials and authorize your application
-access to their data.
+OAuth 2.0フローの間、ユーザーは、ログイン資格情報を指定し、自分のデータへのアプリケーションアクセスを承認するために、ブラウザでBoxウェブアプリにリダイレクトされる必要があります。
 
-After this, the user is redirected back to the redirect URI of your application.
-This URI can be any secure HTTPS URL, or a less secure HTTP URL for a server
-running on `localhost`.
+この後で、ユーザーはアプリケーションのリダイレクトURIに再度リダイレクトされます。このURIには、セキュアなHTTPS URLか、あまりセキュアではない、`localhost`で実行されているサーバーのHTTP URLを使用できます。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-redirect-uri.png)
+![アプリ名のフォーム](../images/app-redirect-uri.png)
 
 </ImageFrame>
 
-### Application Scopes
+### アプリケーションスコープ
 
-These options define what permissions your application has to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+これらのオプションでは、アプリケーションがデータにアクセスするのに必要な権限を定義します。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-scopes.png)
+![アプリ名のフォーム](../images/app-scopes.png)
 
 </ImageFrame>
 
-### CORS Domains
+### CORSドメイン
 
-If your application is making API calls from front-end browser code in
-Javascript then the domain that these calls will be made from will need to be
-allowed due to [Cross Origin Resource Sharing][cors], also known as CORS.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合、それらの呼び出しの実行元となるドメインを、[クロスオリジンリソース共有][cors](CORS)のため許可する必要があります。
 
-Fill in the full URI(s) of the domains that should be enabled in your
-application to make these kind of requests. If all requests will be made from
-server-side code, this section may be left blank.
+このようなリクエストを発行するには、アプリケーションで有効にする必要があるドメインのURIをすべて入力します。すべてのリクエストがサーバー側のコードから発行される場合、このセクションは空白のままになっている可能性があります。
 
 <ImageFrame border>
 
-![App name form](../images/app-cors.png)
+![アプリ名のフォーム](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [devtoken]: g://authentication/access-tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [oauth2]: g://authentication/oauth2

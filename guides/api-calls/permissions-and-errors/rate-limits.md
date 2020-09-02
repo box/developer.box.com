@@ -22,31 +22,29 @@ previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/rate-limits.md
 ---
-# Rate Limits
+# レート制限
 
-Most of the Box APIs have rate limits in place in order to prevent misuse by
-third-party services or users.
+ほとんどのBox APIには、サードパーティのサービスやユーザーによる乱用を防ぐためのレート制限が設けられています。
 
-## Per API rate limits
+## APIごとのレート制限
 
-There are currently a few distinct rate limits in place within the Box API.
+現在、Box APIにはいくつかの異なるレート制限があります。
 
-* General API calls
-  * 1000 API requests per minute, per user
-* Uploads
-  * 240 file upload requests per minute, per user
-* Search
-  * 6 searches per second, per user, to the [search endpoint][search]
-  * Two additional limits are applied on top of the basic rate limit
-    * 60 searches per minute, per user
-    * 12 searches per second, per enterprise
+* 一般的なAPI呼び出し
+  * 1ユーザーあたりのAPIリクエストは1000件/分
+* アップロード
+  * 1ユーザーあたりのファイルアップロードリクエストは240件/分
+* 検索
+  * [検索エンドポイント][search]に対して、1ユーザーあたりの検索数は6件/秒
+  * 基本のレート制限に加えてさらに2つの制限が適用されます
+    * 1ユーザーあたりの検索数は60件/分
+    * 会社あたりの検索数は12件/秒
 
-## Rate limit error
+## レート制限エラー
 
-When an application hits a rate limit, the API will return an API response with
-a HTTP status code of `429 Too Many Requests`.
+アプリケーションがレート制限に達すると、APIは、HTTPステータスコードが`429 Too Many Requests`のAPI応答を返します。
 
-The response will include the following headers and JSON body.
+応答には以下のヘッダーとJSON本文が含まれます。
 
 ```yaml
 retry-after: 100
@@ -63,13 +61,11 @@ retry-after: 100
 }
 ```
 
-Please see the [Client Error resource](resource://client_error) for more details.
+詳細については、[クライアントエラーのリソース](resource://client_error)を参照してください。
 
-<Message type='notice'>
+<Message type="notice">
 
-The `retry-after` header provides guidance on when the API call can be
-retried. In general, we advise using an exponential back-off strategy for
-retrying API calls.
+`retry-after`ヘッダーは、API呼び出しの再試行のタイミングに関するガイダンスを提供します。一般的には、API呼び出しの再試行に指数バックオフ戦略を使用することをお勧めします。
 
 </Message>
 

@@ -23,53 +23,48 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/shared-links/create.md
 ---
-# Create Shared Link
+# 共有リンクの作成
 
-Shared links may be created directly for file or folder resources to generate a
-read-only URL to permit users with the appropriate access level to view the
-content.
+ファイルリソースまたはフォルダリソースの共有リンクを直接作成して、適切なアクセスレベルを持つユーザーにコンテンツの表示を許可するための読み取り専用URLを生成できます。
 
-<Message type='notice'>
+<Message type="notice">
 
-You may only have one active shared link for a file or folder at any time.
+ファイルまたはフォルダのアクティブな共有リンクは、常に1つのみ保持できます。
 
 </Message>
 
-At minimum the information needed to create a shared link will be:
+共有リンクの作成には少なくとも以下の情報が必要です。
 
-* The type of resource, either a file or folder.
-* The ID of that resource.
+* リソースのタイプ(ファイルまたはフォルダ)。
+* リソースのID。
 
-Optionally when creating a shared link the following may be specified:
+共有リンクの作成時には、以下の情報もオプションとして指定できます。
 
-* The access level, which may be one of:
-  * open: A public shared link. Anyone with the link may access the link.
-  * company: Anyone within your enterprise may access the link.
-  * collaboration: Anyone collaborated on the content may access the link.
-* An expiration time when the shared link will automatically disable.
-* A password required to access the resource.
+* 以下のいずれかのアクセスレベル。
+  * open: パブリックな共有リンク。そのリンクを知っているすべてのユーザーがアクセスできます。
+  * company: 会社内のすべてのユーザーがアクセスできます。
+  * collaboration: コンテンツのコラボレーションに参加しているすべてのユーザーがアクセスできます。
+* 有効期限。その日時から、共有リンクが自動的に無効になります。
+* リソースへのアクセスに必要なパスワード。
 
-<Message type='notice'>
+<Message type="notice">
 
-If an access level is not specified when creating a shared link it will use
-the default access level specified by the enterprise admin.
+共有リンクの作成時にアクセスレベルを指定しなかった場合、会社の管理者が指定したデフォルトのアクセスレベルが使用されます。
 
 </Message>
 
-## Create Shared Link for File
+## ファイルの共有リンクの作成
 
-To create a shared link on a file, specify the ID of the file with any optional
-shared link parameters.
+ファイルの共有リンクを作成するには、ファイルのIDとオプションの共有リンクパラメータを指定します。
 
-<Samples id='put_files_id_shared_link_create' >
+<Samples id="put_files_id_shared_link_create">
 
 </Samples>
 
-## Create Shared Link for Folder
+## フォルダの共有リンクの作成
 
-To create a shared link on a folder, specify the ID of the folder with any
-optional shared link parameters.
+フォルダの共有リンクを作成するには、フォルダのIDとオプションの共有リンクパラメータを指定します。
 
-<Samples id='put_folders_id_shared_link_create' >
+<Samples id="put_folders_id_shared_link_create">
 
 </Samples>

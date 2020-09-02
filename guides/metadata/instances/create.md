@@ -25,88 +25,65 @@ previous_page_id: metadata/instances/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/3-create.md
 ---
-# Apply metadata to an item
+# 項目へのメタデータの適用
 
-A metadata template can be applied to a file or folder using the item's `id`,
-the template's `templateKey` and `scope`, and a set of values for each field in
-the template.
+メタデータテンプレートは、項目の`id`、テンプレートの`templateKey`と`scope`、およびテンプレート内の各フィールドの値のセットを使用してファイルまたはフォルダに適用できます。
 
 <Message>
 
-Metadata [scopes][scopes] can be either `global` for templates available to
-all enterprises, `enterprise` for templates available to the current
-enterprise, or the `enterprise_:id` for templates belonging to an enterprise
-whose ID is the `:id` value in the scope name.
+メタデータの[スコープ][scopes]には、`global` (すべての会社が利用できるテンプレートの場合)、`enterprise` (現在の会社が利用できるテンプレートの場合)、または`enterprise_:id` (IDがスコープ名の`:id`である会社に属するテンプレートの場合)のいずれかを指定できます。
 
 </Message>
 
-## Apply metadata to a file
+## ファイルにメタデータを適用
 
-To apply an instance of a metadata template to a file, call the
-[`POST /files/:file_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
-with the file's `file_id`, the template's `scope` and `templateKey`,  and an
-optional set of values for each [field][fields] in the template.
+メタデータテンプレートのインスタンスをファイルに適用するには、ファイルの`file_id`、テンプレートの`scope`と`templateKey`、および必要に応じてテンプレート内の各[フィールド][fields]の値のセットを指定して[`POST /files/:file_id/metadata/:scope/:templateKey`][e_on_file] APIエンドポイントを呼び出します。
 
-<Samples id='post_files_id_metadata_id_id' >
+<Samples id="post_files_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an file][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[ファイルのすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
 <Message warning>
 
-## Tuple already exists error
+## タプルがすでに存在することを示すエラー
 
-When there is already metadata applied to this file for the given metadata
-template, a error is returned with the error code `tuple_already_exists`. In
-this case, it this case the instance needs to be [updated
-instead](g://metadata/instances/update).
+指定されたメタデータテンプレートでこのファイルにすでにメタデータが適用されている場合、エラーコード`tuple_already_exists`でエラーが返されます。この場合は、インスタンスを[代わりに更新する](g://metadata/instances/update)必要があります。
 
 </Message>
 
-## Apply metadata to a folder
+## フォルダにメタデータを適用
 
-To apply an instance of a metadata template to a folder, call the
-[`POST /folders/:folder_id/metadata/:scope/:templateKey`][e_on_folder] API endpoint
-with the folder's `folder_id`, the template's `scope` and `templateKey`,  and an
-optional set of values for each [field][fields] in the template.
+メタデータテンプレートのインスタンスをフォルダに適用するには、フォルダの`folder_id`、テンプレートの`scope`と`templateKey`、および必要に応じてテンプレート内の各[フィールド][fields]の値のセットを指定して[`POST /folders/:folder_id/metadata/:scope/:templateKey`][e_on_folder] APIエンドポイントを呼び出します。
 
-<Samples id='post_folders_id_metadata_id_id' >
+<Samples id="post_folders_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an folder][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[フォルダのすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
 <Message warning>
 
-## Tuple already exists error
+## タプルがすでに存在することを示すエラー
 
-When there is already metadata applied to this folder for the given metadata
-template, a error is returned with the error code `tuple_already_exists`. In
-this case, it this case the instance needs to be [updated
-instead](g://metadata/instances/update).
+指定されたメタデータテンプレートでこのフォルダにすでにメタデータが適用されている場合、エラーコード`tuple_already_exists`でエラーが返されます。この場合は、インスタンスを[代わりに更新する](g://metadata/instances/update)必要があります。
 
 </Message>
 
-## Request body
+## リクエスト本文
 
-The body of the request can contain a value for each [field][fields] in the
-template. To inspect what fields are present on a template, [inspect a
-metadata metadata template][g_get_metadata_template].
+リクエストの本文には、テンプレート内の各[フィールド][fields]の値を含めることができます。テンプレートに存在するフィールドを調べるには、[メタデータテンプレートの調査][g_get_metadata_template]してください。
 
-For example, let's assume the following template.
+たとえば、次のテンプレートについて考えましょう。
 
 ```json
 {
@@ -150,14 +127,11 @@ For example, let's assume the following template.
 }
 ```
 
-This template has 2 [template fields][fields], `name` and `category`. The `name`
-field is a regular text field, and the `category` is an enum.
+このテンプレートには、2つの[テンプレートフィールド][fields]として`name`と`category`があります。`name`フィールドは通常のテキストフィールドで、`category`は列挙型フィールドです。
 
-The request body to assign this template to a file or folder can include a value
-for any of the fields on the template. It is possible for the body to have no
-values for no fields.
+このテンプレートをファイルまたはフォルダに割り当てるリクエストの本文には、テンプレートの任意のフィールドの値を含めることができます。本文にフィールドも値も含めないことも可能です。
 
-In this case, a valid example would be the following request body.
+この場合、次のリクエスト本文は有効な例です。
 
 ```json
 {
@@ -168,23 +142,26 @@ In this case, a valid example would be the following request body.
 
 <Message notice>
 
-One exception is a `global` scoped template with the key `properties` that can
-be used to assign any data to a template. Using this template, any set of
-key/value pairs can be assigned to a template.
+キー`properties`を使用してスコープが`global`に設定されたテンプレートは例外で、テンプレートに任意のデータを割り当てることができます。このテンプレートを使用すると、一連のキー/値ペアをテンプレートに割り当てることができます。
 
 </Message>
 
 <Message warning>
 
-The `category` field in this example is an `enum` field and needs to be one of
-the available options on the field.
+この例の`category`フィールドは`enum`フィールドで、このフィールドで使用できるオプションのいずれかを指定する必要があります。
 
 </Message>
 
 [fields]: g://metadata/fields
+
 [scopes]: g://metadata/scopes
+
 [e_on_file]: e://post_files_id_metadata_id_id
+
 [e_on_folder]: e://post_folders_id_metadata_id_id
+
 [g_list_templates]: g://metadata/templates/list
+
 [g_list_instances_item]: g://metadata/instances/list
+
 [g_get_metadata_template]: g://metadata/templates/get

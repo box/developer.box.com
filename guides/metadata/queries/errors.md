@@ -15,55 +15,35 @@ previous_page_id: metadata/queries/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/4-errors.md
 ---
-# Common errors
+# 一般的なエラー
 
-Metadata query API errors mostly are [similar to errors returned by other
-APIs][errors], however at this time some incorrect client requests may result in
-a server-side error with a HTTP status code in the `5XX` range rather than an
-appropriate `400 Bad Request` error.
+メタデータクエリAPIのエラーのほとんどは、[他のAPIによって返されるエラーに似ています][errors]。ただし、現在、一部の正しくないクライアントリクエストでは、適切な`400 Bad Request`エラーではなく、サーバー側のエラーとともに、`5XX`の範囲のHTTPステータスコードが返される場合があります。
 
-This is a known issue which will be addressed soon.
+これは既知の問題であり、近日中に解決される予定です。
 
-## Incorrect template key and scope
+## テンプレートキーとスコープが正しくない
 
-A common error is to use an incorrect value for the the `from` value in the
-request, which can result in various errors in the `HTTP 4XX` range.
+一般的なエラーとして、リクエストの`from`値に誤った値が使用されると、`HTTP 4XX`の範囲のさまざまなエラーが生じる可能性があります。
 
-Without a correct `from` value the API does not know what template to search
-for. The value in `from` must be formed as `scope.templateKey`.
+正しい`from`値を使用しないと、APIは検索対象のテンプレートを認識できません。`from`の値は、`scope.templateKey`の形式にする必要があります。
 
-In this case `scope` is your enterprise's template scope, which looks something
-like `enterprise_123456`. The numeric value here is your enterprise's ID. Any
-scope that does not match this format, including the `global` scope and the
-`enterprise` shorthand scope, will return an error.
+この場合、`scope`は会社のテンプレートのスコープで、`enterprise_123456`のようになります。ここでの数値は会社のIDです。`global`スコープや短縮形の`enterprise`スコープなど、この形式に一致しないスコープではエラーが返されます。
 
-The `templateKey` is the unique key for the metadata template within your
-enterprise. The API returns an error when a template with the given key does not
-exist, or when the key is used within the wrong enterprise were the key does not
-exist.
+`templateKey`は、社内のメタデータテンプレートの一意のキーです。指定したキーを持つテンプレートが存在しない場合、またはキーが存在しないのにそのキーが誤った会社で使用されている場合は、このAPIによってエラーが返されます。
 
 <Message notice>
 
-The [`GET /metadata_templates/enterprise`[get-templates]] API can be used to
-list all enterprises available in your enterprise, including their `scope` and
-`templateKey`.
+\[`GET /metadata_templates/enterprise`[get-templates][get-templates]] APIを使用すると、`scope`と`templateKey`を含む、社内で使用できるすべての会社のリストを取得できます。
 
 </Message>
 
-## Missing value in `query_param`
+## `query_param`に値がない
 
-A common error is to forget to include a query argument in the `query_params`
-object, which results in a `HTTP 400` error with a code of
-`unexpected_json_type`.
+一般的なエラーとして、`query_params`オブジェクトにクエリ引数を含めるのを忘れると、`unexpected_json_type`というコードとともに`HTTP 400`エラーが返されます。
 
-Without all arguments present in the `query_params` the API can not compile your
-request into a full query.
+`query_params`にすべての引数が存在しないと、APIはリクエストを完全なクエリにコンパイルできません。
 
-For example, assume your search `query` is as follows
-`amount >= :value AND status = :status`. All of the arguments that start with a
-colon `:` will need to be present in the `query_params`. In this case your query
-parameters would have to look something like this. Missing out on any of these
-values will result in an error.
+たとえば、検索`query`が`amount >= :value AND status = :status`のようになっているとします。コロン`:`で始まる引数はすべて、`query_params`に存在する必要があります。この場合、クエリパラメータは次のようになります。これらの値のいずれかを忘れると、エラーが発生します。
 
 ```json
 "query_params": {
@@ -74,36 +54,28 @@ values will result in an error.
 
 <Message notice>
 
-The name of each argument can configured to your liking and does not need to
-match the field key. The only requirement is that it starts with a `:`.
+各引数の名前は開発者の好みに合わせて構成できるため、フィールドキーと一致させる必要はありません。必要なのは、先頭に`:`を付けることだけです。
 
 </Message>
 
-## Missing search index
+## 検索インデックスがない
 
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
-A search index can be created to resolve this error for a specific search query.
+規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されている場合、メタデータクエリによって`HTTP 403`エラーが返される可能性があります。検索インデックスを作成すると、特定の検索クエリでこのエラーを解決することができます。
 
-If the number of metadata instances exceeds 10,000 then a metadata query request
-which does not include a suitable **index** in the `​use_index​` parameter will
-result in an error. The error will inform the caller to specify a suitable index
-as the argument to the `​use_index​` parameter.
+メタデータインスタンスの数が10,000個を超えると、`​use_index​`パラメータに適切な**インデックス**が含まれていないメタデータクエリリクエストではエラーが発生します。このエラーは呼び出し元に対して、`​use_index​`パラメータの引数として適切なインデックスを指定するよう通知します。
 
-<CTA to='g://metadata/queries/indexes'>
+<CTA to="g://metadata/queries/indexes">
 
-Learn more about creating and using indexes
+インデックスの作成と使用の詳細を確認する
 
 </CTA>
 
-## Missing `ancestor_folder_id`
+## `ancestor_folder_id`がない
 
-A common error is to forget the `ancestor_folder_id` in the request, which
-results in a `HTTP 400` error with a code of `bad_request`.
+一般的なエラーとして、リクエストに`ancestor_folder_id`を指定し忘れると、`bad_request`というコードとともに`HTTP 400`エラーが返されます。
 
-Without the `ancestor_folder_id` value the API does not know what folder to
-search for results in. When in doubt a value of `0` can be used for the user's
-root folder.
+`ancestor_folder_id`値がないと、APIは、検索対象の結果が含まれているフォルダを認識できません。よくわからない場合は、値`0`を使用すると、ユーザーのルートフォルダを指定できます。
 
 [errors]: g://api-calls/permissions-and-errors/common-errors
+
 [get-templates]: r://get-metadata-templates-enterprise

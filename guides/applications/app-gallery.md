@@ -21,91 +21,78 @@ previous_page_id: applications/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/app-gallery.md
 ---
-# App Gallery
+# アプリギャラリー
 
-The [Box App Gallery][app-gallery] is the first place for Box users to find out
-about applications that they can use in combination with Box. If your
-application is suited to be used by other enterprises, listing your service in
-the App Gallery can be a great way to find new users.
+[Boxアプリギャラリー][app-gallery]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に調べる場所です。アプリケーションが他の会社での使用にも適している場合は、アプリギャラリーにサービスを登録すると、新しいユーザーを見つけるのに役立ちます。
 
-## Publishing an app
+## アプリの公開
 
-Use the following steps to publish an application in the [App
-Gallery][app-gallery].
+[アプリギャラリー][app-gallery]でアプリケーションを公開するには、以下の手順に従います。
 
-### Prerequisites
+### 前提条件
 
-To publish an application you will need to pass the following requirements.
+アプリケーションを公開するには、以下の要件を満たす必要があります。
 
-* The application needs to be in a finished state, ready for production usage
-* The application should use OAuth 2.0 authentication as the App Gallery does
-  not support JWT or App Token authentication.
-* You need to be a developer with access to the application in the
-  [Developer Console][devconsole].
+* アプリケーションは完成した状態で、実稼働環境での使用準備ができている必要があります。
+* アプリギャラリーでは、JWTまたはアプリトークンでの認証がサポートされていないため、アプリケーションはOAuth 2.0認証を使用する必要があります。
+* [開発者コンソール][devconsole]でアプリケーションにアクセスできる開発者である必要があります。
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Head over to the [Developer Console][devconsole] and select your application to
-submit to the gallery.
+[開発者コンソール][devconsole]に移動して、ギャラリーに送信するアプリケーションを選択します。
 
-### 2. Fill in the form
+### 2. フォームに入力する
 
-Select the "App Gallery" panel from the left-hand sidebar.
+左側のサイドバーから\[アプリギャラリー]パネルを選択します。
 
-<ImageFrame center shadow border width='200'>
+<ImageFrame center shadow border width="200">
 
-![App Gallery panel](./images/app-sidebar.png)
+![\[アプリギャラリー\]パネル](./images/app-sidebar.png)
 
 </ImageFrame>
 
-Click the button to "Submit My App".
+\[アプリを送信]ボタンをクリックします。
 
-<ImageFrame center border shadow width='400'>
+<ImageFrame center border shadow width="400">
 
-![Submit My App button](./images/submit-app.png)
+![\[アプリを送信\]ボタン](./images/submit-app.png)
 
 </ImageFrame>
 
-Then, fill in the form with your application's categories, a short and a long
-description, some screenshots and an app icon.
+次に、フォームにアプリケーションのカテゴリ、短い説明と長い説明、いくつかのスクリーンショット、アプリのアイコンを入力します。
 
-### 3. Preview the listing
+### 3. 掲載内容をプレビューする
 
-Select the "Preview" button to see a preview of your application listing.
+\[プレビュー]ボタンを選択して、アプリケーションの掲載内容のプレビューを表示します。
 
 <ImageFrame center border shadow>
 
-![Preview and Submit](./images/submit-and-approve.png)
+![プレビューと送信](./images/submit-and-approve.png)
 
 </ImageFrame>
 
-### 4. Submit for approval
+### 4. 承認用に送信する
 
-Finally, submit the application for approval by clicking the "Submit for
-Approval" button.
+最後に、\[承認用に送信]ボタンをクリックして、アプリケーションを承認用に送信します。
 
 <Message>
 
-# Approval completion
+# 承認の完了
 
-Once an approval has been submitted, the partner team at Box will be notified
-about your request. They will follow up with the request to arrange for any
-testing instructions if needed. Similarly, the partner team will also reach
-out when the application has been published in the App Gallery.
+承認が送信されたら、Boxのパートナーチームにリクエストに関する通知が届きます。パートナーチームはリクエストのフォローアップを行い、必要に応じてテスト手順の手配をします。同様に、パートナーチームは、アプリケーションがアプリギャラリーで公開された場合にもサポートします。
 
-For any questions, please feel free to email [`integrate@box.com`][email] or the
-[forum][forum].
+質問がある場合は、[`integrate@box.com`][email]までメールをお送りいただくか、[フォーラム][forum]でご質問ください。
 
 </Message>
 
-## Unpublishing an app
+## アプリの非公開
 
-Once approved and published, an application can be unpublished from the same
-control panel. Head over to the [Developer Console][devconsole] and select
-your application. Then, select the "App Gallery" panel from the left-hand
-sidebar. The app can be unpublished from this page.
+承認されて公開されたアプリケーションは、同じコントロールパネルから非公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[アプリギャラリー] パネルを選択します。このページからアプリを非公開にすることができます。
 
 [app-gallery]: https://app.box.com/services
+
 [devconsole]: https://account.box.com/developers/services
+
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
+
 [email]: mailto:integrate@box.com

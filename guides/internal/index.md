@@ -18,6 +18,6 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Internal
+# 内部
 
-The following pages are for internal usage only.
+以下のページは内部使用のみを目的としています。

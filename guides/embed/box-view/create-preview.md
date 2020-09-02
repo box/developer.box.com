@@ -21,44 +21,35 @@ previous_page_id: embed/box-view/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-view/create-preview.md
 ---
-# Create File Preview
+# ファイルのプレビューの作成
 
-Once a file has been uploaded to the app token application, it may be previewed
-using two different methods:
+ファイルはアプリトークンアプリケーションにアップロードされると、以下の2つの方法でプレビューすることができます。
 
-* Direct embed: A standard HTML `<iframe>` component with a custom embed link.
-* Customized previewer: A fully customized preview widget using Box UI Elements.
+* 直接埋め込み: カスタムの埋め込みリンクを使用した標準のHTML `<iframe>`コンポーネント。
+* カスタマイズされたプレビューアー: Box UI Elementsを使用して完全にカスタマイズされたプレビューウィジェット。
 
-## Direct Embed (`iframe`)
+## 直接埋め込み(`iframe`)
 
-The direct embed link is a light-weight API method that provides limited
-options to customize the preview experience in your application. Due to the
-light-weight nature of the method, the API doesn't give you options to respond
-to client-side actions such as scrolling in the case of documents, play/pause
-interactivity for videos, rotating an image, etc.
+直接埋め込みリンクは、アプリケーションでのプレビュー操作をカスタマイズするための制限されたオプションを提供する軽量のAPIメソッドです。このメソッドの性質が軽量であるため、このAPIには、ドキュメントでのスクロール、動画のインタラクティブな再生や一時停止、画像の回転など、クライアント側の処理に応答するオプションはありません。
 
-There are two steps towards creating a direct `<iframe>` embed for Box View:
+Box Viewの直接`<iframe>`埋め込みを作成するには、以下の2つの手順を実行します。
 
-1. Generate an embed URL for the file
-2. Add the embed URL to an `<iframe>`
+1. ファイル用に埋め込みURLを生成する
+2. 生成した埋め込みURLを`<iframe>`に追加する
 
-### Generate an embed URL for the file
+### ファイル用に埋め込みURLを生成する
 
-To create a public file preview URL for a file that was uploaded to the app
-token application, you may either use a direct SDK method or make the request
-directly to the APIs.
+アプリトークンアプリケーションにアップロードされたファイルの公開ファイルプレビューURLを作成するには、直接のSDKメソッドを使用するか、APIに直接リクエストを発行します。
 
-<Message type='notice'>
+<Message type="notice">
 
-When generating the embed URL directly from the APIs, use the
-[Get File Information endpoint](e://get_files_id) and request
-`expiring_embed_link` via the `fields` parameter.
+埋め込みURLをAPIから直接生成する場合は、[ファイル情報の取得エンドポイント](e://get_files_id)を使用して、`fields`パラメータを介して`expiring_embed_link`をリクエストします。
 
 </Message>
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
@@ -67,7 +58,7 @@ curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 String fileId = "12345678";
@@ -76,7 +67,7 @@ Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String fileID = "12345678";
@@ -86,7 +77,7 @@ URL embedLink = file.getPreviewLink();
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 file_id = '12345678'
@@ -95,7 +86,7 @@ embed_url = client.file(file_id).get_embed_url()
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const fileId = '12345678';
@@ -108,7 +99,7 @@ client.files.getEmbedLink(fileId).then(embedURL => {
 
 </Tabs>
 
-Within the response object will be a public embed URL like the following:
+応答オブジェクト内では、公開埋め込みURLが次のようになります。
 
 ```shell
 https://app.box.com/preview/expiring_embed/gvoct6FE!YT_X1LauQ8ulDTad96hTl9xLCRYJ
@@ -117,17 +108,15 @@ cfhp3jdLYrK5hnr6KMq5H6r-AW31AcFtDJi1lnT0M4b3bvvZUaE2RRJGGINMauvS6MAT2luae5PvbFSx
 Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
 ```
 
-<Message type='warning'>
+<Message type="warning">
 
-For security reasons, the generated embed link will expire after 1 minute and
-should be immediately embedded in the app once generated.
+セキュリティ上の理由により、生成された埋め込みリンクは1分後に期限切れになるため、生成されたらすぐにアプリに埋め込む必要があります。
 
 </Message>
 
-### Add the embed URL to an `<iframe>`
+### 生成した埋め込みURLを`<iframe>`に追加する
 
-Within the HTML of your application, create an `iframe` elements with the `src`
-attribute set to the embed URL generated previously.
+アプリケーションのHTML内で、`src`属性をあらかじめ生成した埋め込みURLに設定して、`iframe`要素を作成します。
 
 ```html
 <iframe src="https://app.box.com/preview/expiring_embed/gvoct6FE!ixgtCKQAziW
@@ -136,22 +125,19 @@ attribute set to the embed URL generated previously.
   4EWshcyYYBhDbJmYMrq61RtU_kvBe5P..."></iframe>
 ```
 
-## Customized Previewer (UI Elements)
+## カスタマイズされたプレビューアー  (UI Element)
 
-To leverage advanced preview customization and event handling capabilities, the
-[Box UI Preview Element](guide://embed/ui-elements/preview/) is available.
+高度なプレビューのカスタマイズ機能やイベント処理機能を活用するには、[Box UI Preview Element](guide://embed/ui-elements/preview/)を使用できます。
 
-To set up the Preview Element, start by installing the required components for
-the Content Preview Element.
+このプレビューElementを設定するには、まず、コンテンツプレビューUI Elementの必須コンポーネントをインストールします。
 
-<CTA to='guide://embed/ui-elements/installation'>
+<CTA to="guide://embed/ui-elements/installation">
 
-Install Box Elements and Preview
+Box Elementsとプレビューのインストール
 
 </CTA>
 
-When adding the JavaScript code to display a new previewer, the basic code will
-look something like the following:
+新しいプレビューアーを表示するためのJavaScriptコードを追加すると、基本的なコードは次のようになります。
 
 ```js
 var preview = new Box.Preview();
@@ -161,19 +147,13 @@ preview.show("FILE_ID", "ACCESS_TOKEN", {
 });
 ```
 
-To set up the Preview Element with a file stored within your App Token
-application, replace the placeholders in the code sample with the following:
+アプリトークンアプリケーション内に保存されたファイルを使用してプレビューElementを設定するには、コードサンプル内のプレースホルダを以下のように置き換えます。
 
-* `FILE_ID`: The ID of the file uploaded to the app token application, which may
-be obtained from the object returned when uploading the file.
-* `ACCESS_TOKEN`: The primary access token set up when configuring the
-application or a downscoped version of the token.
+* `FILE_ID`: アプリトークンアプリケーションにアップロードされたファイルのID。ファイルのアップロード時に返されるオブジェクトから取得できます。
+* `ACCESS_TOKEN`: アプリケーションまたはダウンスコープされたバージョンのトークンの構成時に設定されるプライマリアクセストークン。
 
-<Message type='warning'>
+<Message type="warning">
 
-Due to the elevated privileges of the primary access token it's highly
-recommended that you use a downscoped version of the token in the Javascript
-code. See
-[best practices for downscoping](guide://embed/box-view/best-practices#use-downscoped-tokens).
+プライマリアクセストークンの高度な権限により、JavaScriptコードでは、ダウンスコープされたバージョンのトークンを使用することを強くお勧めします。[ダウンスコープのベストプラクティス](guide://embed/box-view/best-practices#use-downscoped-tokens)を参照してください。
 
 </Message>

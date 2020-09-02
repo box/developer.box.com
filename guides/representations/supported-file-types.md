@@ -21,177 +21,177 @@ previous_page_id: representations/text
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/supported-file-types.md
 ---
-# Supported File Types
+# サポートされているファイルタイプ
 
-The following file types are supported by the representation API.
+レプリゼンテーションAPIでサポートされているファイルタイプは以下のとおりです。
 
-## Documents
+## ドキュメント
 
-| File Type  | PDF Support? | Thumbnails? | Text? |
-| ---------- | ------------ | ----------- | ----- |
-| `.doc`     | Yes          | Yes         | Yes   |
-| `.docx`    | Yes          | Yes         | Yes   |
-| `.gdoc`    | Yes          | Yes         | Yes   |
-| `.gsheet`  | Yes          | Yes         | Yes   |
-| `.numbers` | Yes          | Yes         | Yes   |
-| `.ods`     | Yes          | Yes         | Yes   |
-| `.odt`     | Yes          | Yes         | Yes   |
-| `.pages`   | Yes          | Yes         | Yes   |
-| `.pdf`     | Yes          | Yes         | Yes   |
-| `.rtf`     | Yes          | Yes         | Yes   |
-| `.wpd`     | Yes          | Yes         | Yes   |
-| `.xls`     | Yes          | Yes         | Yes   |
-| `.xlsm`    | Yes          | Yes         | Yes   |
-| `.xlsx`    | Yes          | Yes         | Yes   |
+| ファイルタイプ    | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ---------- | --------------- | ----------------- | ---------------- |
+| `.doc`     | はい              | はい                | はい               |
+| `.docx`    | はい              | はい                | はい               |
+| `.gdoc`    | はい              | はい                | はい               |
+| `.gsheet`  | はい              | はい                | はい               |
+| `.numbers` | はい              | はい                | はい               |
+| `.ods`     | はい              | はい                | はい               |
+| `.odt`     | はい              | はい                | はい               |
+| `.pages`   | はい              | はい                | はい               |
+| `.pdf`     | はい              | はい                | はい               |
+| `.rtf`     | はい              | はい                | はい               |
+| `.wpd`     | はい              | はい                | はい               |
+| `.xls`     | はい              | はい                | はい               |
+| `.xlsm`    | はい              | はい                | はい               |
+| `.xlsx`    | はい              | はい                | はい               |
 
-## Text-Based Files
+## テキストベースのファイル
 
-| File Type     | PDF Support? | Thumbnails? | Text? |
-| ------------- | ------------ | ----------- | ----- |
-| `.as`         | Yes          | Yes         | Yes   |
-| `.as3`        | Yes          | Yes         | Yes   |
-| `.asm`        | Yes          | Yes         | Yes   |
-| `.bat`        | Yes          | Yes         | Yes   |
-| `.c`          | Yes          | Yes         | Yes   |
-| `.cc`         | Yes          | Yes         | Yes   |
-| `.cmake`      | Yes          | Yes         | Yes   |
-| `.cpp`        | Yes          | Yes         | Yes   |
-| `.cs`         | Yes          | Yes         | Yes   |
-| `.css`        | Yes          | Yes         | Yes   |
-| `.csv`        | Yes          | Yes         | Yes   |
-| `.cxx`        | Yes          | Yes         | Yes   |
-| `.diff`       | Yes          | Yes         | Yes   |
-| `.erb`        | Yes          | Yes         | Yes   |
-| `.groovy`     | Yes          | Yes         | Yes   |
-| `.h`          | Yes          | Yes         | Yes   |
-| `.haml`       | Yes          | Yes         | Yes   |
-| `.hh`         | Yes          | Yes         | Yes   |
-| `.htm`        | Yes          | Yes         | Yes   |
-| `.html`       | Yes          | Yes         | Yes   |
-| `.java`       | Yes          | Yes         | Yes   |
-| `.js`         | Yes          | Yes         | Yes   |
-| `.json`       | Yes          | Yes         | Yes   |
-| `.less`       | Yes          | Yes         | Yes   |
-| `.log`        | Yes          | Yes         | Yes   |
-| `.m`          | Yes          | Yes         | Yes   |
-| `.make`       | Yes          | Yes         | Yes   |
-| `.md`         | Yes          | Yes         | Yes   |
-| `.ml`         | Yes          | Yes         | Yes   |
-| `.mm`         | Yes          | Yes         | Yes   |
-| `.msg`        | Yes          | Yes         | Yes   |
-| `.php`        | Yes          | Yes         | Yes   |
-| `.pl`         | Yes          | Yes         | Yes   |
-| `.properties` | Yes          | Yes         | Yes   |
-| `.py`         | Yes          | Yes         | Yes   |
-| `.rb`         | Yes          | Yes         | Yes   |
-| `.rst`        | Yes          | Yes         | Yes   |
-| `.sass`       | Yes          | Yes         | Yes   |
-| `.scala`      | Yes          | Yes         | Yes   |
-| `.scm`        | Yes          | Yes         | Yes   |
-| `.script`     | Yes          | Yes         | Yes   |
-| `.sh`         | Yes          | Yes         | Yes   |
-| `.sml`        | Yes          | Yes         | Yes   |
-| `.sql`        | Yes          | Yes         | Yes   |
-| `.txt`        | Yes          | Yes         | Yes   |
-| `.vi`         | Yes          | Yes         | Yes   |
-| `.vim`        | Yes          | Yes         | Yes   |
-| `.webdoc`     | Yes          | Yes         | Yes   |
-| `.xhtml`      | Yes          | Yes         | Yes   |
-| `.xlsb`       | Yes          | Yes         | Yes   |
-| `.xml`        | Yes          | Yes         | Yes   |
-| `.xsd`        | Yes          | Yes         | Yes   |
-| `.xsl`        | Yes          | Yes         | Yes   |
-| `.yaml`       | Yes          | Yes         | Yes   |
+| ファイルタイプ       | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ------------- | --------------- | ----------------- | ---------------- |
+| `.as`         | はい              | はい                | はい               |
+| `.as3`        | はい              | はい                | はい               |
+| `.asm`        | はい              | はい                | はい               |
+| `.bat`        | はい              | はい                | はい               |
+| `.c`          | はい              | はい                | はい               |
+| `.cc`         | はい              | はい                | はい               |
+| `.cmake`      | はい              | はい                | はい               |
+| `.cpp`        | はい              | はい                | はい               |
+| `.cs`         | はい              | はい                | はい               |
+| `.css`        | はい              | はい                | はい               |
+| `.csv`        | はい              | はい                | はい               |
+| `.cxx`        | はい              | はい                | はい               |
+| `.diff`       | はい              | はい                | はい               |
+| `.erb`        | はい              | はい                | はい               |
+| `.groovy`     | はい              | はい                | はい               |
+| `.h`          | はい              | はい                | はい               |
+| `.haml`       | はい              | はい                | はい               |
+| `.hh`         | はい              | はい                | はい               |
+| `.htm`        | はい              | はい                | はい               |
+| `.html`       | はい              | はい                | はい               |
+| `.java`       | はい              | はい                | はい               |
+| `.js`         | はい              | はい                | はい               |
+| `.json`       | はい              | はい                | はい               |
+| `.less`       | はい              | はい                | はい               |
+| `.log`        | はい              | はい                | はい               |
+| `.m`          | はい              | はい                | はい               |
+| `.make`       | はい              | はい                | はい               |
+| `.md`         | はい              | はい                | はい               |
+| `.ml`         | はい              | はい                | はい               |
+| `.mm`         | はい              | はい                | はい               |
+| `.msg`        | はい              | はい                | はい               |
+| `.php`        | はい              | はい                | はい               |
+| `.pl`         | はい              | はい                | はい               |
+| `.properties` | はい              | はい                | はい               |
+| `.py`         | はい              | はい                | はい               |
+| `.rb`         | はい              | はい                | はい               |
+| `.rst`        | はい              | はい                | はい               |
+| `.sass`       | はい              | はい                | はい               |
+| `.scala`      | はい              | はい                | はい               |
+| `.scm`        | はい              | はい                | はい               |
+| `.script`     | はい              | はい                | はい               |
+| `.sh`         | はい              | はい                | はい               |
+| `.sml`        | はい              | はい                | はい               |
+| `.sql`        | はい              | はい                | はい               |
+| `.txt`        | はい              | はい                | はい               |
+| `.vi`         | はい              | はい                | はい               |
+| `.vim`        | はい              | はい                | はい               |
+| `.webdoc`     | はい              | はい                | はい               |
+| `.xhtml`      | はい              | はい                | はい               |
+| `.xlsb`       | はい              | はい                | はい               |
+| `.xml`        | はい              | はい                | はい               |
+| `.xsd`        | はい              | はい                | はい               |
+| `.xsl`        | はい              | はい                | はい               |
+| `.yaml`       | はい              | はい                | はい               |
 
-## Presentations
+## プレゼンテーション
 
-| File Type  | PDF Support? | Thumbnails? | Text? |
-| ---------- | ------------ | ----------- | ----- |
-| `.gslide`  | Yes          | Yes         | Yes   |
-| `.gslides` | Yes          | Yes         | Yes   |
-| `.key`     | Yes          | Yes         | Yes   |
-| `.odp`     | Yes          | Yes         | Yes   |
-| `.ppt`     | Yes          | Yes         | Yes   |
-| `.pptx`    | Yes          | Yes         | Yes   |
+| ファイルタイプ    | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ---------- | --------------- | ----------------- | ---------------- |
+| `.gslide`  | はい              | はい                | はい               |
+| `.gslides` | はい              | はい                | はい               |
+| `.key`     | はい              | はい                | はい               |
+| `.odp`     | はい              | はい                | はい               |
+| `.ppt`     | はい              | はい                | はい               |
+| `.pptx`    | はい              | はい                | はい               |
 
-## Images
+## 画像
 
-| File Type | PDF Support? | Thumbnails? | Text? |
-| --------- | ------------ | ----------- | ----- |
-| `.ai`     | No           | Yes         | No    |
-| `.bmp`    | No           | Yes         | No    |
-| `.gif`    | No           | Yes         | No    |
-| `.eps`    | No           | Yes         | No    |
-| `.heic`   | No           | Yes         | No    |
-| `.jpeg`   | No           | Yes         | No    |
-| `.jpg`    | No           | Yes         | No    |
-| `.png`    | No           | Yes         | No    |
-| `.ps`     | No           | Yes         | No    |
-| `.psd`    | No           | Yes         | No    |
-| `.svg`    | No           | Yes         | No    |
-| `.tif`    | No           | Yes         | No    |
-| `.tiff`   | No           | Yes         | No    |
-| `.dcm`    | No           | Yes         | No    |
-| `.dicm`   | No           | Yes         | No    |
-| `.dicom`  | No           | Yes         | No    |
-| `.svs`    | No           | Yes         | No    |
-| `.tga`    | No           | Yes         | No    |
+| ファイルタイプ  | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| -------- | --------------- | ----------------- | ---------------- |
+| `.ai`    | いいえ             | はい                | いいえ              |
+| `.bmp`   | いいえ             | はい                | いいえ              |
+| `.gif`   | いいえ             | はい                | いいえ              |
+| `.eps`   | いいえ             | はい                | いいえ              |
+| `.heic`  | いいえ             | はい                | いいえ              |
+| `.jpeg`  | いいえ             | はい                | いいえ              |
+| `.jpg`   | いいえ             | はい                | いいえ              |
+| `.png`   | いいえ             | はい                | いいえ              |
+| `.ps`    | いいえ             | はい                | いいえ              |
+| `.psd`   | いいえ             | はい                | いいえ              |
+| `.svg`   | いいえ             | はい                | いいえ              |
+| `.tif`   | いいえ             | はい                | いいえ              |
+| `.tiff`  | いいえ             | はい                | いいえ              |
+| `.dcm`   | いいえ             | はい                | いいえ              |
+| `.dicm`  | いいえ             | はい                | いいえ              |
+| `.dicom` | いいえ             | はい                | いいえ              |
+| `.svs`   | いいえ             | はい                | いいえ              |
+| `.tga`   | いいえ             | はい                | いいえ              |
 
-## Audio Files
+## オーディオファイル
 
-| File Type | PDF Support? | Thumbnails? | Text? |
-| --------- | ------------ | ----------- | ----- |
-| `.aac`    | No           | Yes         | No    |
-| `.aif`    | No           | Yes         | No    |
-| `.aifc`   | No           | Yes         | No    |
-| `.aiff`   | No           | Yes         | No    |
-| `.amr`    | No           | Yes         | No    |
-| `.au`     | No           | Yes         | No    |
-| `.flac`   | No           | Yes         | No    |
-| `.m4a`    | No           | Yes         | No    |
-| `.mp3`    | No           | Yes         | No    |
-| `.ogg`    | No           | Yes         | No    |
-| `.ra`     | No           | Yes         | No    |
-| `.wav`    | No           | Yes         | No    |
-| `.wma`    | No           | Yes         | No    |
+| ファイルタイプ | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ------- | --------------- | ----------------- | ---------------- |
+| `.aac`  | いいえ             | はい                | いいえ              |
+| `.aif`  | いいえ             | はい                | いいえ              |
+| `.aifc` | いいえ             | はい                | いいえ              |
+| `.aiff` | いいえ             | はい                | いいえ              |
+| `.amr`  | いいえ             | はい                | いいえ              |
+| `.au`   | いいえ             | はい                | いいえ              |
+| `.flac` | いいえ             | はい                | いいえ              |
+| `.m4a`  | いいえ             | はい                | いいえ              |
+| `.mp3`  | いいえ             | はい                | いいえ              |
+| `.ogg`  | いいえ             | はい                | いいえ              |
+| `.ra`   | いいえ             | はい                | いいえ              |
+| `.wav`  | いいえ             | はい                | いいえ              |
+| `.wma`  | いいえ             | はい                | いいえ              |
 
-## Video Files
+## 動画ファイル
 
-| File Type | PDF Support? | Thumbnails? | Text? |
-| --------- | ------------ | ----------- | ----- |
-| `.3g2`    | No           | Yes         | No    |
-| `.3gp`    | No           | Yes         | No    |
-| `.avi`    | No           | Yes         | No    |
-| `.m2v`    | No           | Yes         | No    |
-| `.m2ts`   | No           | Yes         | No    |
-| `.m4v`    | No           | Yes         | No    |
-| `.mkv`    | No           | Yes         | No    |
-| `.mov`    | No           | Yes         | No    |
-| `.mp4`    | No           | Yes         | No    |
-| `.mpeg`   | No           | Yes         | No    |
-| `.mpg`    | No           | Yes         | No    |
-| `.ogg`    | No           | Yes         | No    |
-| `.mts`    | No           | Yes         | No    |
-| `.qt`     | No           | Yes         | No    |
-| `.ts`     | No           | Yes         | No    |
-| `.wmv`    | No           | Yes         | No    |
+| ファイルタイプ | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ------- | --------------- | ----------------- | ---------------- |
+| `.3g2`  | いいえ             | はい                | いいえ              |
+| `.3gp`  | いいえ             | はい                | いいえ              |
+| `.avi`  | いいえ             | はい                | いいえ              |
+| `.m2v`  | いいえ             | はい                | いいえ              |
+| `.m2ts` | いいえ             | はい                | いいえ              |
+| `.m4v`  | いいえ             | はい                | いいえ              |
+| `.mkv`  | いいえ             | はい                | いいえ              |
+| `.mov`  | いいえ             | はい                | いいえ              |
+| `.mp4`  | いいえ             | はい                | いいえ              |
+| `.mpeg` | いいえ             | はい                | いいえ              |
+| `.mpg`  | いいえ             | はい                | いいえ              |
+| `.ogg`  | いいえ             | はい                | いいえ              |
+| `.mts`  | いいえ             | はい                | いいえ              |
+| `.qt`   | いいえ             | はい                | いいえ              |
+| `.ts`   | いいえ             | はい                | いいえ              |
+| `.wmv`  | いいえ             | はい                | いいえ              |
 
-## Flash/Mobile Video Files
+## Flash/モバイル動画ファイル
 
-| File Type | PDF Support? | Thumbnails? | Text? |
-| --------- | ------------ | ----------- | ----- |
-| `.flv`    | No           | No          | No    |
-| `.swf`    | No           | No          | No    |
+| ファイルタイプ | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| ------- | --------------- | ----------------- | ---------------- |
+| `.flv`  | いいえ             | いいえ               | いいえ              |
+| `.swf`  | いいえ             | いいえ               | いいえ              |
 
-## 3D Graphics and Modeling Files
+## 3Dグラフィックスとモデリングファイル
 
-| File Type | PDF Support? | Thumbnails? | Text? |
-| --------- | ------------ | ----------- | ----- |
-| `.3ds`    | No           | No          | No    |
-| `.box3d`  | No           | No          | No    |
-| `.dwg`    | No           | No          | No    |
-| `.obj`    | No           | No          | No    |
-| `.stl`    | No           | No          | No    |
-| `.fbx`    | No           | No          | No    |
-| `.dae`    | No           | No          | No    |
-| `.ply`    | No           | No          | No    |
+| ファイルタイプ  | PDFはサポートされているか? | サムネイルはサポートされているか? | テキストはサポートされているか? |
+| -------- | --------------- | ----------------- | ---------------- |
+| `.3ds`   | いいえ             | いいえ               | いいえ              |
+| `.box3d` | いいえ             | いいえ               | いいえ              |
+| `.dwg`   | いいえ             | いいえ               | いいえ              |
+| `.obj`   | いいえ             | いいえ               | いいえ              |
+| `.stl`   | いいえ             | いいえ               | いいえ              |
+| `.fbx`   | いいえ             | いいえ               | いいえ              |
+| `.dae`   | いいえ             | いいえ               | いいえ              |
+| `.ply`   | いいえ             | いいえ               | いいえ              |

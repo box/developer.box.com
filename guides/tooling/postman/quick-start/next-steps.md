@@ -16,29 +16,19 @@ source_url: >-
 ---
 <!-- alex disable postman-postwoman -->
 
-# Next steps
+# 次の手順
 
-You've reached the end of this Quick Start guide. By now you should have taken
-the following steps.
+このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. [Installed Postman](g://tooling/postman/quick-start/install-postman/)
-   on your device.
-2. [Configured a Box App](g://tooling/postman/quick-start/configure-box-app/) in
-   order to be able to authenticate a Postman App for accessing Box.
-3. [Logged in](g://tooling/postman/quick-start/log-in-to-box/) to the Box App to
-   get the right API credentials.
-4. [Loaded Box's Postman
-   collection](g://tooling/postman/quick-start/load-postman-collection/) into
-   Postman, and with it all the credentials needed to make API calls.
-5. [Made your first API call](g://tooling/postman/quick-start/make-api-call/)
-   to the Box API with Postman.
+1. デバイスに[Postmanをインストール](g://tooling/postman/quick-start/install-postman/)しました。
+2. BoxへのアクセスについてPostmanアプリを認証できるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app/)しました。
+3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box/)して適切なAPI資格情報を取得しました。
+4. Postmanに、API呼び出しに必要なすべての資格情報とともに[BoxのPostmanコレクションを読み込み](g://tooling/postman/quick-start/load-postman-collection/)ました。
+5. Postmanを使用して、Box APIへの[最初のAPI呼び出しを実行](g://tooling/postman/quick-start/make-api-call/)しました。
 
-## Next things to do
+## 次に行うべきこと
 
-We recommend the following resource for anyone who wants to learn more about
-using Postman with the Box API.
+Box APIとPostmanの使用についてさらに詳しく知りたい方には、以下のリソースをお勧めします。
 
-* [The official Postman Get Started
-guide](https://learning.getpostman.com/getting-started/) from the Postman
-team.
-* [Learn how to refresh your access token](g://tooling/postman/refresh) within Postman.
+* Postmanチームが提供する[公式のPostman入門ガイド](https://learning.getpostman.com/getting-started/)。
+* Postman内で[アクセストークンを更新する方法](g://tooling/postman/refresh)。

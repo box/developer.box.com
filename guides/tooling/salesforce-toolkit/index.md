@@ -20,48 +20,34 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/salesforce-toolkit/index.md
 ---
-# Salesforce Developer Toolkit
+# Salesforce開発者ツールキット
 
-The Box for Salesforce Developer Toolkit allows customers to programmatically
-customize the behavior of the Box for Salesforce integration. The Toolkit
-consists of several global APEX methods that can be used to trigger and extend
-the default behavior. The global methods can update the internal Salesforce
-record to Box folder mapping and handle permission management.
+Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動作をプログラムによりカスタマイズできます。このツールキットに含まれる複数のグローバルAPEXメソッドを使用して、デフォルトの動作をトリガーしたり、拡張したりできます。このグローバルメソッドにより、内部のSalesforceレコードとBoxフォルダのマッピングを更新し、権限の管理を処理できます。
 
-<Message type='notice'>
+<Message type="notice">
 
-This functionality is part of the latest Box for
-[Salesforce package][sf-package].
+この機能は最新のBox for [Salesforceパッケージ][sf-package]に含まれています。
 
 </Message>
 
-<Message type='warning'>
+<Message type="warning">
 
-# What the Toolkit does NOT provide
+# このツールキットに含まれない機能
 
-The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
-this is what you are looking for, have a look at the
-[Box SDK for Salesforce][sf-sdk].
+このツールキットは、BOX Content API用のフル機能を備えたAPEXラッパーではありません。このようなラッパーをお求めの場合は、[Box SDK for Salesforce][sf-sdk]を参照してください。
 
 </Message>
 
-## Authentication
+## 認証
 
-A solution for authentication is to allow API calls to use the service
-account credentials.
+認証を行うには、API呼び出しでのサービスアカウント資格情報の使用を許可するという方法があります。
 
-This means that Salesforce Admins need to restrict access to the Toolkit global
-APEX class. As these methods allow direct modification of Box content and
-collaborations, Salesforce administrators should take appropriate precautions
-by restricting access to the global Toolkit APEX class.
+この場合、Salesforce管理者がツールキットのグローバルAPEXクラスへのアクセスを制限する必要があります。このような方法を使用することで、Boxのコンテンツとコラボレーションを直接変更できるため、Salesforce管理者はグローバルなツールキットAPEXクラスへのアクセスを制限して、適切な措置を講じる必要があります。
 
-Toolkit methods that take `accessToken` as a parameter can use the service
-account credentials by sending `null` for the `accessToken` value.
+`accessToken`をパラメータとして取得するツールキットメソッドでは、`accessToken`の値として`null`を送信することによって、サービスアカウント資格情報を使用できます。
 
-If a value is passed in `accessToken`, the API call to Box will be done with
-the access token sent. It is up to the developer to ensure the token being
-passed is valid and the user associated with the token has permissions to
-perform the requested operation.
+`accessToken`に値が渡された場合、BoxへのAPI呼び出しは送信されたアクセストークンを使用して行われます。渡されるトークンが有効であるかどうか、およびトークンに関連付けられているユーザーに要求された操作を実行する権限があるかどうかは、開発者が確認する必要があります。
 
 [sf-package]: https://community.box.com/t5/For-Admins/Box-For-Salesforce-Installation/ta-p/180
+
 [sf-sdk]: https://github.com/box/box-salesforce-sdk

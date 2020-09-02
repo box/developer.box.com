@@ -16,15 +16,13 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Samples
+# サンプル
 
-Samples represent a set of sample code blocks extracted from the CLI, SDK, and
-cURL repositories. These code samples are automatically extracted from the
-various markdown files in these repositories.
+サンプルは、CLI、SDK、およびcURLのリポジトリから抽出された一連のサンプルコードブロックを表します。これらのコードサンプルは、これらのリポジトリにあるさまざまなマークダウンファイルから自動的に抽出されます。
 
-## IDs
+## ID
 
-Samples are specified by using the ID of the endpoint.
+サンプルはエンドポイントのIDを使用して指定されます。
 
 ```html
 <Samples id='get_files_id'></Samples>
@@ -32,14 +30,13 @@ Samples are specified by using the ID of the endpoint.
 
 <H>
 
-<Samples id='get_files_id'/>
+<Samples id="get_files_id">
 
 </H>
 
-## Variants
+## バリアント
 
-By default the `default` variant is selected for a sample. For some samples
-different variations exist. They can be specified by passing a `variant` name in.
+デフォルトでは、サンプルに`default`バリアントが選択されています。一部のサンプルには、別のバリアントが存在します。これらは、`variant`の名前を渡すことで指定できます。
 
 ```html
 <Samples id='post_folders_id_copy' variant='with_name' ></Samples>
@@ -47,6 +44,6 @@ different variations exist. They can be specified by passing a `variant` name in
 
 <H>
 
-<Samples id='post_folders_id_copy' variant='with_name' />
+<Samples id="post_folders_id_copy" variant="with_name">
 
 </H>

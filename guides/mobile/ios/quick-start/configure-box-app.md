@@ -14,94 +14,79 @@ previous_page_id: mobile/ios/quick-start/install-ios-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/3-configure-box-app.md
 ---
-# Configure a Box App
+# Boxアプリの設定
 
-To start making authenticated API calls to the Box API with the **Box iOS
-SDK**, an **Access Token** will be needed. The simplest way to generate a valid
-token is to generate a new **Box App** and manually generate a short lived
-developer token.
+**Box iOS SDK**を使用してBox APIに対する認証済みAPI呼び出しを開始するには、**アクセストークン**が必要になります。有効なトークンを生成するには、新しい**Boxアプリ**を生成し、有効期間が短い開発者トークンを手動で生成するのが最も簡単な方法です。
 
-The developer token is generated through the developer console UI and will be
-valid for one hour before having to be manually refreshed.
+開発者トークンは、開発者コンソールのUIを介して生成されます。有効期間は1時間で、その後は手動で更新する必要があります。
 
-## Set up a Box app
+## Boxアプリのセットアップ
 
-<Grid columns='2'>
+<Grid columns="2">
 
-<Choose option='ios.app_type' value='create_new' color='blue'>
+<Choose option="ios.app_type" value="create_new" color="blue">
 
-# Create a new Box app
+# 新しいBoxアプリを作成する
 
-Create and configure a new Box JWT application from which a developer
-token may be generated.
+開発者トークンの生成に使用する新しいBox JWTアプリケーションを作成して構成します。
 
 </Choose>
 
-<Choose option='ios.app_type' value='use_own' color='red'>
+<Choose option="ios.app_type" value="use_own" color="red">
 
-# Use an existing app
+# 既存のアプリを使用する
 
-Use one of your existing Box JWT applications from the Box developer
-console.
+Box開発者コンソールから既存のBox JWTアプリケーションのいずれかを使用します。
 
 </Choose>
 
 </Grid>
 
-<Choice option='ios.app_type' value='create_new' color='blue'>
+<Choice option="ios.app_type" value="create_new" color="blue">
 
-# Create a new Box app
+# 新しいBoxアプリを作成する
 
-To create a new Box application that may be used to generate a developer
-token, use the following steps.
+開発者トークンの生成に使用できる新しいBoxアプリケーションを作成するには、以下の手順に従います。
 
-  1. Go to the [Developer Console][devconsole]
-  1. Select **Create New App**
-  1. Select **Custom App** as the type of application to create, and click
-     **Next**
-  1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-     **Next**
-  1. Give your Box app a unique name and click **Create App**
-  1. Go to the app's configuration by clicking **View Your App**.
-  1. Optionally, scroll to the **Application Scopes** section of the same screen
-     and select any additional permissions you want to enable for this
-     application.
-  1. At the top of the page click the button to **Save Changes**
+1. [開発者コンソール][devconsole]に移動します。
+2. \[**アプリの新規作成**]を選択します。
+3. 作成するアプリケーションの種類として\[**カスタムアプリ**]を選択し、\[**次へ**]をクリックします。
+4. 認証方式として\[**JWTを使用したOAuth 2.0**]を選択し、\[**次へ**]をクリックします。
+5. Boxアプリに一意の名前を付け、\[**アプリの作成**]をクリックします。
+6. \[**アプリの表示**]をクリックしてアプリの設定に移動します。
+7. 必要に応じて、同じ画面の\[**アプリケーションスコープ**]セクションまでスクロールし、このアプリケーションに対して有効にする必要がある追加の権限を選択します。
+8. ページ上部にある\[**変更を保存**]ボタンをクリックします。
 
 </Choice>
 
-<Choice option='ios.app_type' value='use_own' color='blue'>
+<Choice option="ios.app_type" value="use_own" color="blue">
 
-# Use an Existing JWT Box application
+# 既存のJWT Boxアプリケーションを使用する
 
-If you have an existing JWT based Box application in your
-[developer console][devconsole] that you
-would like to use, skip to the next step.
+[開発者コンソール][devconsole]に、使用したい既存のJWTベースのBoxアプリケーションがある場合は、以下の手順に従います。
 
 </Choice>
 
-## Generate a developer token
+## 開発者トークンの生成
 
-Now that an application is available, we need to create a developer token that
-may be used to authenticate the Box iOS SDK to start making calls to the Box
-APIs.
+アプリケーションが使用可能になったら、開発者トークンを作成する必要があります。開発者トークンは、Box iOS SDKを認証してBox APIに対する呼び出しを開始するために使用できます。
 
-1. Go to the [Developer Console][devconsole]
-1. Load the application that you would like to use
-1. In the left navigation menu, click on **Configuration**
-1. Under **Developer Token**, click the **Generate Developer Token** button
-1. Copy the token for the next step to make an API call
+1. [開発者コンソール][devconsole]に移動します。
+2. 使用するアプリケーションを読み込みます。
+3. 左のナビゲーションメニューで\[**構成**]をクリックします。
+4. \[**開発者トークン**]で、\[**開発者トークンを生成**]ボタンをクリックします。
+5. 次の手順でAPI呼び出しを行うためにトークンをコピーします。
 
-## Summary
+## まとめ
 
-* You created a new, or are using an existing, Box app
-* You have generated and copied the developer token
+* 新しいBoxアプリを作成したか、既存のBoxアプリ使用しています。
+* 開発者トークンを生成してコピーしました。
 
-<Observe option='ios.app_type' value='use_own,create_new_'>
+<Observe option="ios.app_type" value="use_own,create_new_">
 
 <Next>
 
-I have a developer token
+開発者トークンを用意できました。
 
 </Next>
 

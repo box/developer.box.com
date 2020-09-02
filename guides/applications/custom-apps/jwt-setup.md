@@ -24,104 +24,87 @@ previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/jwt-setup.md
 ---
-# Setup with JWT
+# JWTを使用した設定
 
-A Custom App can be set up to use server-side authentication with
-[JWT][jwt].
+カスタムアプリは、[JWT][jwt]によるサーバー側認証を使用するよう設定できます。
 
-<CTA to='g://authentication/jwt'>
+<CTA to="g://authentication/jwt">
 
-Learn how JWT authentication works
+JWT認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using JWT authentication you will need to pass the
-following requirements.
+JWT認証を使用するカスタムアプリを設定するには、以下の要件を満たす必要があります。
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+* 会社の[開発者コンソール][devconsole]にアクセスできる必要があります。アクセスできない場合は、[Developerアカウント][devaccount]にサインアップしてください。
 
-## Create the app
+## アプリの作成
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Head over to the [Developer Console][devconsole] and select "Create New App".
+[開発者コンソール][devconsole]に移動し、\[アプリの新規作成]を選択します。
 
-### 2. Create a Custom App
+### 2. カスタムアプリを作成する
 
-Select the "Custom App" option from the list of application types and select
-"Next".
+アプリケーションの種類のリストから\[カスタムアプリ]オプションを選択し、\[次へ]を選択します。
 
 <ImageFrame border>
 
-![Application selection screen](../images/app-types.png)
+![アプリケーションの選択画面](../images/app-types.png)
 
 </ImageFrame>
 
-### 3. Select OAuth 2.0 authentication
+### 3. OAuth 2.0認証を選択する
 
-On the next screen, select "OAuth 2.0 with JWT (Server Authentication)" and select
-"Next".
+次の画面で\[JWTを使用したOAuth 2.0 (サーバー認証)]を選択し、\[次へ]を選択します。
 
 <ImageFrame border width="400" center>
 
-![Auth selection screen](../images/auth-types-jwt.png)
+![認証の選択画面](../images/auth-types-jwt.png)
 
 </ImageFrame>
 
-### 4. Provide a name
+### 4. 名前を入力する
 
-Finally, provide a unique name for your application. This name needs to be
-unique across all applications on Box.
+最後に、アプリケーションの一意の名前を入力します。この名前は、Box上のすべてのアプリケーションで一意である必要があります。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-name.png)
+![アプリ名のフォーム](../images/app-name.png)
 
 </ImageFrame>
 
-## JWT keypair
+## JWTキーペア
 
-JWT authentication work through a public/private RSA keypair. This keypair can
-be generated on the developer console, or alternatively the developer can
-provide their own public key.
+JWT認証は、公開/秘密RSAキーペアを使用して機能します。このキーペアは開発者コンソールで生成できます。また、開発者が独自の公開キーを提供することもできます。
 
-### Generate a keypair (Recommended)
+### キーペアの生成(推奨)
 
-After a Custom App has been created to use JWT authentication, there is an
-option available in the [Developer Console][devconsole] to have Box create a
-configuration file. This file will include the keypair as well as a number of
-other application details that are used used during authentication.
+カスタムアプリがJWT認証を使用するように作成されたら、[開発者コンソール][devconsole]では、Boxに構成ファイルを作成させるためのオプションを使用できます。この構成ファイルには、キーペアに加え、認証で使用されるさまざまなアプリケーションの詳細が含まれています。
 
-Click on the "Configuration" option from the left sidebar in your application
-and scroll down to the "Add and Manage Public Keys" section.
+アプリケーションの左側のサイドバーで\[構成]オプションをクリックし、\[公開キーの追加と管理]セクションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![Add and Manage keys](../images/app-add-keys.png)
+![キーの追加と管理](../images/app-add-keys.png)
 
 </ImageFrame>
 
-Click the "Generate a Public/Private Keypair" button to have Box generate a
-keypair. This will trigger the download of a JSON configuration file that you
-can move to your application code.
+\[公開/秘密キーペアを生成]ボタンをクリックして、Boxでキーペアを生成します。これにより、アプリケーションコードに移動できるJSON構成ファイルのダウンロードが開始されます。
 
 <Message danger>
 
-Box will not store your private key as this would be a security concern.
-Please do not loose your private key or the entire keypair needs to be reset.
+Boxは、セキュリティ上の懸念事項となるため、秘密キーを保存しません。秘密キーは解放しないでください。そうしないと、キーペア全体のリセットが必要になります。
 
 </Message>
 
-### Manually add keypair
+### 手動によるキーペアの追加
 
-An alternative to having Box generate the public/private keypair is to manually
-generate a keypair and upload the public key to the Box developer console.
+Boxに公開/秘密キーペアを生成させる代わりに、手動でキーペアを作成し、公開キーをBox開発者コンソールにアップロードする方法もあります。
 
-To create the keypair using OpenSSL, open a terminal window and run the
-following commands.
+OpenSSLを使用してキーペアを作成するには、ターミナルウィンドウを開き、以下のコマンドを実行します。
 
 ```shell
 openssl genrsa -des3 -out private.pem 2048
@@ -130,101 +113,90 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 
 <Message>
 
-# For Windows Systems
+# Windowsシステムの場合
 
-Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
+Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールして使用することで、OpenSSLを実行できます。
 
 </Message>
 
-Next, head over to your application in the [developer console][devconsole] and
-select the"Configuration" link from the left sidebar in your application
-and scroll down to the "Add and Manage Public Keys" section.
+次に、[開発者コンソール][devconsole]でアプリケーションに移動し、アプリケーションの左側のサイドバーから\[構成]リンクを選択して、\[公開キーの追加と管理]セクションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![Add and Manage keys](../images/app-add-keys.png)
+![キーの追加と管理](../images/app-add-keys.png)
 
 </ImageFrame>
 
-Click the "Add a Public Key" button to have Box upload the public key you
-created before.
+\[公開キーを追加]ボタンをクリックすると、Boxでは、先ほど作成した公開キーがアップロードされます。
 
-## App Authorization
+## アプリの承認
 
-Once a keypair has been added to the application it will need to be authorized
-within the Box enterprise by the enterprise Admin User.
+キーペアがアプリケーションに追加されたら、そのキーペアは、Boxに登録されている会社内で会社の管理ユーザーが承認する必要があります。
 
-Head over to your application in the [developer console][devconsole] and
-select the "General" link from the left sidebar in your application
-and scroll down to the "App Authorization" section.
+[開発者コンソール][devconsole]でアプリケーションに移動し、アプリケーションの左側のサイドバーで\[一般]リンクを選択して、\[アプリの承認]セクションまで下にスクロールします。
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![キーの追加と管理](../images/app-authorization.png)
 
 </ImageFrame>
 
-This will send an email to your enterprise admin to have them enable your
-application. More information on this process is available in our [community
-article on app authorization][app-auth].
+これにより、会社の管理者にはアプリケーションを有効にするようメールが送信されます。このプロセスの詳細については、[アプリの承認に関するコミュニティ記事][app-auth]を参照してください。
 
-### Re-authorization on changes
+### 変更の再承認
 
-When the application's scopes or access level change the application needs to be
-re-authorized. Repeat the process above and request a new Access Token for the
-new changes to take effect.
+アプリケーションのスコープまたはアクセスレベルが変更された場合は、アプリケーションを再承認する必要があります。新しい変更を有効にするには、上記のプロセスを繰り返して新しいアクセストークンをリクエストしてください。
 
-## Basic configuration
+## 基本的な構成
 
-Before the application can be used, some basic additional configuration might be
-required.
+アプリケーションを使用するには、事前にいくつかの基本的な追加構成が必要になる場合があります。
 
-### Application Access
+### アプリケーションアクセス
 
-By default the application will will only be able to work with its own data and
-the data of any [App Users][user-types] that it creates. To also work with
-existing Managed Users in the entire enterprise the application needs to be
-enabled for "Enterprise Access".
+デフォルトでは、アプリケーションで操作できるのは、そのアプリケーション自体のデータと、アプリケーションによって作成される[App User][user-types]のデータのみです。会社全体の既存の管理対象ユーザーも操作するには、アプリケーションで「会社のアクセス権」を有効にする必要があります。
 
 <ImageFrame border>
 
-![App access level](../images/app-access-level.png)
+![アプリのアクセスレベル](../images/app-access-level.png)
 
 </ImageFrame>
 
-### Application Scopes
+### アプリケーションスコープ
 
-These options define what permissions your application has to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+これらのオプションでは、アプリケーションがデータにアクセスするのに必要な権限を定義します。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
 <ImageFrame border width="600" center>
 
-![App scopes](../images/app-scopes.png)
+![アプリスコープ](../images/app-scopes.png)
 
 </ImageFrame>
 
-### CORS Domains
+### CORSドメイン
 
-If your application is making API calls from front-end browser code in
-Javascript then the domain that these calls will be made from will need to be
-allow due to [Cross Origin Resource Sharing][cors], also known as CORS.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合、それらの呼び出しの実行元となるドメインを、[クロスオリジンリソース共有][cors](CORS)のため許可する必要があります。
 
-Fill in the full URI(s) of the domains that should be enabled in your
-application to make these kind of requests. If all requests will be made from
-server-side code, this section may be left blank.
+このようなリクエストを発行するには、アプリケーションで有効にする必要があるドメインのURIをすべて入力します。すべてのリクエストがサーバー側のコードから発行される場合、このセクションは空白のままになっている可能性があります。
 
 <ImageFrame border>
 
-![App CORS config](../images/app-cors.png)
+![アプリのCORS設定](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [devtoken]: g://authentication/access-tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [user-types]: g://authentication/user-types
+
 [cygwin]: http://www.cygwin.com/
+
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+
 [jwt]: g://authentication/jwt

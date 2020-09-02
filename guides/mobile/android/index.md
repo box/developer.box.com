@@ -17,7 +17,6 @@ source_url: >-
 ---
 # Android
 
-The [Box Android SDK][android-sdk] provides native access to the Box API from
-within your Android project.
+[Box Android SDK][android-sdk]は、Androidプロジェクト内からBox APIへのネイティブアクセスを提供します。
 
 [android-sdk]: https://github.com/box/box-android-sdk

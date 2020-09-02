@@ -23,42 +23,34 @@ previous_page_id: webhooks/manage/list-all
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/for-file.md
 ---
-# Create Webhook for File
+# ファイルへのWebhookの作成
 
-To attach a webhook to an file, call the [Create webhook][1] endpoint with the
-type of `file`, the ID of the file, a URL to send webhook notifications to, and
-a list of triggers that will cause the webhook to activate.
+ファイルにWebhookを追加するには、`file`の種類、ファイルのID、Webhook通知の送信先URL、およびWebhookをアクティブにするトリガーのリストを指定して[Webhookを作成][1]エンドポイントを呼び出します。
 
-<Samples id='post_webhooks' >
+<Samples id="post_webhooks">
 
 </Samples>
 
-<Message type='warning'>
+<Message type="warning">
 
-This API requires the application to have the "Manage
-webhooks" scope enabled.
+このAPIを使用するには、アプリケーションの\[webhookを管理]スコープが有効になっている必要があります。
 
-The address for the webhook needs to be a HTTPS URL.
+WebhookのアドレスはHTTPS URLである必要があります。
 
 </Message>
 
-## Webhook address
+## Webhookアドレス
 
-The notification URL specified in the `address` parameter must be a
-valid HTTPS URL that you specify when you create a webhook. Every
-time one of the triggers is activated, this URL will be called.
+`address`パラメータで指定する通知URLは、Webhookの作成時に指定した有効なHTTPS URLである必要があります。このURLは、いずれかのトリガーがアクティブになるたびに呼び出されます。
 
-The notification URL must use the standard HTTPS port, `443` and should be the
-should return an HTTP status in the range of `200` to `299` within 30 seconds
-of receiving the webhook payload.
+通知URLは標準HTTPSポート`443`を使用する必要があり、Webhookペイロードの受信から30秒以内に`200`～`299`の範囲のHTTPステータスを返す必要があります。
 
-## Webhook triggers
+## Webhookトリガー
 
-The triggers are a list of strings that specify the events that will cause the
-webhook to be triggered. For example, if you want the webhook to be triggered
-when a user uploads a file you'd pass in the `FILE.UPLOADED` trigger name.
+トリガーのリストでは、Webhookをトリガーするイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには、トリガー名として`FILE.UPLOADED`を渡します。
 
-A list of available triggers is available in the [in this guide][2].
+使用可能なトリガーのリストは、[このガイド][2]にあります。
 
 [1]: endpoint://post_webhooks
+
 [2]: guide://webhooks/manage/triggers

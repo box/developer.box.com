@@ -20,23 +20,16 @@ source_url: >-
 ---
 <!-- alex disable failed -->
 
-# Webhook Retries
+# Webhookの再試行
 
-Delivery of a webhook payload has failed when Box does not receive a
-response with a HTTP status code in the `200` to `299` range within 30 seconds
-of sending the payload.
+Boxがペイロードを送信してから30秒以内に、`200`から`299`の範囲のHTTPステータスコードを含む応答が受信されない場合、Webhookペイロードの配信は失敗しています。
 
-When delivery of a webhook fails Box will resend it up to 10 times. The
-initial retry will take place 5 minutes after the failure and from there an
-exponential back-off strategy will be used to avoid overloading the destination
-server.
+Webhookの配信が失敗した場合、Boxはこれを最大10回まで再送信します。1 回目の再試行は失敗の5分後に実行し、それ以降は、送信先サーバーに負荷がかからないよう、エクスポネンシャルバックオフ戦略を使用します。
 
-By using exponential back- off, Box will wait an increasingly longer time for
-every retry.
+エクスポネンシャルバックオフ戦略に基づき、Boxは再試行ごとに待機時間を増やします。
 
-<Message type='notice'>
+<Message type="notice">
 
-Box will retry webhook deliveries up to 10 times. This number could be subject
-to change.
+BoxはWebhook配信を最大10回再試行します。この回数は今後変更される可能性があります。
 
 </Message>

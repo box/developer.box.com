@@ -21,15 +21,10 @@ previous_page_id: trash/restore-folder
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/trash/permanently-delete-folder.md
 ---
-# Permanently Delete Folder
+# フォルダを完全に削除
 
-Once a folder has been moved to the trash, it will stay in the trash for 30
-days by default before being purged. Administrators of Business or
-Enterprise accounts can alter the purge window. If you wish to permanently
-delete the folder from the trash before the purge window expires, make a
-`DELETE` request to `/folders/:folder_id/trash` using the trashed folder's `ID`
-.
+ごみ箱に移動されたフォルダは、デフォルトで30日間ごみ箱に保持された後で削除されます。BusinessアカウントまたはEnterpriseアカウントの管理者は、削除までの期間を変更できます。削除までの期間が経過する前にごみ箱からフォルダを完全に削除する場合は、ごみ箱に移動されたフォルダの`ID`を使用して`DELETE`リクエストを`/folders/:folder_id/trash`に送信します。
 
-<Samples id='delete_folders_id_trash' >
+<Samples id="delete_folders_id_trash">
 
 </Samples>

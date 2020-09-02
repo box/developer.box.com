@@ -21,28 +21,23 @@ previous_page_id: embed/ui-elements/viewers-and-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/custom-domains.md
 ---
-# Box Edit Custom Domains
+# Box Editのカスタムドメイン
 
-In order to integrate a third party web application with Box Tools, you will
-need to explicitly add your application's URL. On Windows, this is achieved by
-adding a registry key. On MacOS, you will need to run few terminal commands to
-add and remove domains.
+サードパーティ製ウェブアプリとBox Toolsを統合するには、アプリケーションのURLを明示的に追加する必要があります。Windowsでは、そのためにレジストリキーを追加します。MacOSでは、ターミナルコマンドをいくつか実行してドメインの追加と削除を実行する必要があります。
 
 <Message>
 
-Adding domains to a safelist was added in **Box Tools version 4.5.0**.
+セーフリストへのドメインの追加機能は、**Box Toolsバージョン4.5.0**で追加されました。
 
 </Message>
 
-## Safelisting on Windows
+## セーフリストへの追加(Windowsの場合)
 
-Before starting the domain safelisting installation, please download the
-required scripts from the provided `.rar`
-[here](https://cloud.box.com/s/kvc9cysgq1y2yldpvciwlpt7093ho78l).
+セーフリストへのドメインの追加を開始する前に、[こちら](https://cloud.box.com/s/kvc9cysgq1y2yldpvciwlpt7093ho78l)で提供されている`.rar`から必要なスクリプトをダウンロードしてください。
 
-### Per User Installation
+### ユーザーごとの設定
 
-Open `Add_OpenWith_WhiteListed_Domain.reg` in a text editor.
+テキストエディタで`Add_OpenWith_WhiteListed_Domain.reg`を開きます。
 
 <ImageFrame border>
 
@@ -52,12 +47,11 @@ Open `Add_OpenWith_WhiteListed_Domain.reg` in a text editor.
 
 <Message>
 
-Additional entries can be added on a new line.
+エントリを追加する際は、改行して追加します。
 
 </Message>
 
-Close the file (save changes), open a command prompt with admin privileges, and
-navigate to the .reg file and type the following command.
+ファイルを閉じて(変更を保存して)、管理者権限でコマンドプロンプトを開き、.regファイルに移動して次のコマンドを入力します。
 
 ```sh
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
@@ -69,14 +63,14 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 </ImageFrame>
 
-### Per Machine Installation
+### マシンごとの設定
 
-Open the following file in a text editor:
+テキストエディタで次のファイルを開きます。
 
 * `x64`: `Per Machine\64 bit\Add_OpenWith_WhiteListed_Domain.reg`
 * `x86`: `Per Machine\32 bit\Add_OpenWith_WhiteListed_Domain.reg`
 
-Replace the placeholder domain with the domain you would like allow.
+プレースホルダのドメインを、許可したいドメインに置き換えます。
 
 <ImageFrame border>
 
@@ -86,12 +80,11 @@ Replace the placeholder domain with the domain you would like allow.
 
 <Message>
 
-Additional entries may be added on a new line.
+エントリを追加する際は、改行して追加します。
 
 </Message>
 
-Close the file (save changes), open a  command prompt with admin privileges, and
-navigate the .reg file and type the following command:
+ファイルを閉じて(変更を保存して)、管理者権限でコマンドプロンプトを開き、.regファイルに移動して次のコマンドを入力します。
 
 ```sh
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
@@ -103,12 +96,11 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 </ImageFrame>
 
-Restart the Windows service: **Box Local Com Service** (`Box Edit.exe`) using
-one of the following methods.
+以下のいずれかの方法を使用して、Windowsサービスである**Box Local Com Service** (`Box Edit.exe`)を再起動します。
 
-#### Via the command prompt
+#### コマンドプロンプトを使用する場合
 
-In a command prompt, enter:
+コマンドプロンプトで、以下のコマンドを入力します。
 
 * `net stop "Box Local Com Service"`
 * `net start "Box Local Com Service"`
@@ -119,9 +111,9 @@ In a command prompt, enter:
 
 </ImageFrame>
 
-#### Via the UI
+#### UIを使用する場合
 
-Press `Windows + R` and type `services.msc`.
+`Windows + R`を押して、`services.msc`を入力します。
 
 <ImageFrame border>
 
@@ -129,7 +121,7 @@ Press `Windows + R` and type `services.msc`.
 
 </ImageFrame>
 
-Restart `Box Edit.exe` by finding `Box Edit` in the system tray.
+システムトレイで`Box Edit`を見つけて`Box Edit.exe`を再起動します。
 
 <ImageFrame border>
 
@@ -137,9 +129,9 @@ Restart `Box Edit.exe` by finding `Box Edit` in the system tray.
 
 </ImageFrame>
 
-Right click and select **Quit**.
+右クリックして\[**終了**]を選択します。
 
-Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
+`%programfiles%\Box\Box Edit`を開いて、`Box Edit.exe`を実行します。
 
 <ImageFrame border>
 
@@ -147,63 +139,53 @@ Open `%programfiles%\Box\Box Edit` and run `Box Edit.exe`.
 
 </ImageFrame>
 
-### Removing
+### 削除
 
-* Run `Remove_ALL_OpenWith_WhiteListed_Domain.reg` to remove all domains
-  at once
-* Run `Remove_OpenWith_WhiteListed_Domain.reg` to remove specific
-  domains. Use the instructions above to add domains to this .reg, which will
-  remove domains.
+* すべてのドメインを一度に削除するには、`Remove_ALL_OpenWith_WhiteListed_Domain.reg`を実行します。
+* 特定のドメインを削除するには、`Remove_OpenWith_WhiteListed_Domain.reg`を実行します。上記の手順に従ってこの.regにドメインに追加すると、ドメインが削除されます。
 
-## Safelisting on MacOS
+## セーフリストへの追加(MacOSの場合)
 
-### Steps
+### 手順
 
-Download the bash script
-[here](https://cloud.box.com/s/z5qhc7rts6mzrhzfx6cpxeb5ed4ve5u6).
+[こちら](https://cloud.box.com/s/z5qhc7rts6mzrhzfx6cpxeb5ed4ve5u6)からbashスクリプトをダウンロードします。
 
-Open the Terminal, go to the folder where the bash script was downloaded, and
-add the right permissions by running this command:
+ターミナルを開いて、bashスクリプトをダウンロードしたフォルダに移動し、次のコマンドを実行して適切な権限を追加します。
 
 ```sh
 chmod u+rx OpenWith.sh
 ```
 
-To **add** domains, run the following command in a terminal:
+ドメインを**追加**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -a domain1 domain2 ...
 ```
 
-To **remove** domains, run the following command in a terminal:
+ドメインを**削除**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -r domain1 domain2 ...
 ```
 
-To **clear all** domains, run the following command in a
-terminal:
+ドメインを**すべてクリア**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -c
 ```
 
-To **list** all domains, run the following command in a terminal:
+すべてのドメインの**リストを取得**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -l
 ```
 
-### Notes
+### 注
 
-* When safelisting domains ensure you are entering the domains without the HTTP
-  protocol (for example without `https://`) or any trailing path like
-  `yourdomain.com/page/3`).
-* All requests most come from a secure origin via HTTPS.
-* Safelisting subdomains and ports is possible as the wildcard `*` is supported.
-  For example, all subdomains could be safelisted by adding `*.yourdomain.com` to
-  your list.
+* セーフリストにドメインを追加する際は、必ず、HTTPプロトコル(`https://`など)または末尾のパス(`yourdomain.com/page/3`など)を付けずにドメインを入力してください。
+* すべてのリクエストは、主にHTTPS経由のセキュアなオリジンから送信されます。
+* ワイルドカード`*`がサポートされているため、セーフリストにサブドメインとポートを追加できます。たとえば、リストに`*.yourdomain.com`を追加することで、すべてのサブドメインをセーフリストに追加できます。
 
-## Uninstalling
+## アンインストール
 
-When Box Tools is uninstalled, all domains will be removed.
+Box Toolsをアンインストールすると、すべてのドメインが削除されます。

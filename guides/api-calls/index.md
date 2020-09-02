@@ -17,9 +17,6 @@ previous_page_id: api-calls/language-codes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/index.md
 ---
-# API Calls
+# API呼び出し
 
-The Box API is a restful API that attempts to follow common HTTP standards
-where possible. The following guides take a look at some of the useful
-features and common mistakes that a developer can encounter when working with
-these APIs.
+Box APIは、可能であれば共通のHTTP標準に準拠しようとするRESTful APIです。以下のガイドでは、開発者がこれらのAPIを使用する際に利用できる便利な機能と直面するよくある間違いに注目します。

@@ -21,108 +21,79 @@ previous_page_id: users/deprovision/user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/users/deprovision/transfer-folders.md
 ---
-# Transfer Files & Folders
+# ファイルとフォルダの転送
 
-As part of user account deprovisioning, a common requirement is to transfer all
-files and folders that are stored within the user account to another user
-account or into a location for long term storage, such as into the service
-account.
+ユーザーアカウントのプロビジョニング解除における一般的な要件の1つが、ユーザーアカウント内に保存されているすべてのファイルとフォルダを別のユーザーアカウント、またはサービスアカウントなどの長期保存用の場所に転送することです。
 
-There are two general methods that are employed to accomplish this within Box:
+Box内でこれを実行するのに使用される一般的な方法は以下の2つです。
 
-* Using the direct [transfer owned folders](e://put_users_id_folders_id)
-API, which will move all content from one user directly to another.
-* Using the collaboration transfer method to change ownership of one file or
-folder at a time from one user to another.
+* すべてのコンテンツをあるユーザーから別のユーザーに直接移動する、[所有フォルダを移行](e://put_users_id_folders_id)APIを使用する。
+* コラボレーション転送の方法を使用して、一度に1つのファイルまたはフォルダの所有権を、あるユーザーから別のユーザーに変更する。
 
 <Message notice>
 
-Files owned by a user will be inaccessible while they are being transferred.
-This also means that any shared content owned by the user may be inaccessible
-during the move.
+転送中は、ユーザーが所有するファイルにアクセスできなくなります。また、移動中もユーザーが所有する共有コンテンツにアクセスできない可能性があります。
 
-Depending on the volume of content, this operation may take a significant
-amount of time.
+コンテンツの量によっては、この操作にかなりの時間がかかる場合があります。
 
 </Message>
 
-## Transfer Owned Folders API Method
+## 所有フォルダを移行APIの使用
 
-The [transfer owned folders endpoint](e://put_users_id_folders_id) is
-designed to move the entirety of content owned by one user over to another user.
+[所有フォルダを移行エンドポイント](e://put_users_id_folders_id)は、あるユーザーが所有するコンテンツ全体を別のユーザーに移動することを目的に設計されています。
 
-<Message type='notice'>
+<Message type="notice">
 
-The transfer owned folders API is performed as a synchronous process, which
-might lead to a slow response when the source user has a large number of
-items in all of its folders.
+所有フォルダを移行APIは、同期プロセスとして実行されるため、ソースユーザーのフォルダ全体に多数の項目がある場合、応答が遅くなる可能性があります。
 
 </Message>
 
-To call the transfer endpoint, you will supply the user ID to transfer from and
-the user ID to transfer to.
+転送エンドポイントを呼び出すには、転送元のユーザーIDと転送先のユーザーIDを指定します。
 
-<Samples id='put_users_id_folders_id' >
+<Samples id="put_users_id_folders_id">
 
 </Samples>
 
-## Collaboration Transfer Method
+## コラボレーション転送の使用
 
-The collaboration transfer method is a process that uses the
-[collaboration endpoint](e://post_collaborations) to change the
-ownership of a single file or folder from one user to another instantaneously.
+コラボレーション転送は、[コラボレーションエンドポイント](e://post_collaborations)を使用して、単一のファイルまたはフォルダの所有権をあるユーザーから別のユーザーに即座に変更するプロセスです。
 
-<Message type='notice'>
+<Message type="notice">
 
-This method will perform an instantaneous transfer of ownership of a single
-file or folder, but **cannot** be used to transfer the root (all files and
-folders) from one user to another.
+この方法では、単一のファイルまたはフォルダの所有権を即時に転送します。ただし、この方法でルート(すべてのファイルおよびフォルダ)を別のユーザーに転送することは**できません**。
 
 </Message>
 
-The general process, between `transfer_from_user` to `transfer_to_user`, will
-follow these steps:
+`transfer_from_user`から`transfer_to_user`への転送の一般的なプロセスは以下の手順に従います。
 
-### Add Transfer To User as Co-Owner
+### 転送先ユーザーを共同所有者として追加
 
-The first step is to add the `transfer_to_user` account as a collaborator with
-`co-owner` access on the file or folder that should be transferred.
+最初の手順は、転送するファイルまたはフォルダへの`co-owner`アクセス権限を持つコラボレータとして、`transfer_to_user`アカウントを追加することです。
 
-Making the call as the `transfer_from_user` account, add the `transfer_to_user`
-as a co-owner using the
-[add collaboration endpoint](e://post_collaborations).
+`transfer_from_user`アカウントとして呼び出しを行い、[コラボレーションを追加](e://post_collaborations)エンドポイントを使用して`transfer_to_user`を共同所有者として追加します。
 
-<Samples id='post_collaborations' >
+<Samples id="post_collaborations">
 
 </Samples>
 
-### Fetch Collaboration ID as Transfer To User
+### 転送先ユーザーとしてコラボレーションIDを取得
 
-The next step is make a request to get the collaboration information, making
-the request as the `transfer_to_user` account. The collaboration object
-returned will include a collaboration ID, which is used for the last step.
+次のステップでは、コラボレーション情報を取得するリクエストを`transfer_to_user`アカウントとして実行します。返されるコラボレーションオブジェクトには、最後のステップで使用するコラボレーションIDが含まれます。
 
-Making the call as the `transfer_to_user` account, get the collaboration on the
-file or folder ID being transferred, using the
-[get collaboration endpoint](e://get_collaborations_id). Capture the
-collaboration ID.
+`transfer_to_user`アカウントとして呼び出しを実行し、[コラボレーションを取得エンドポイント](e://get_collaborations_id)を使用して、転送するファイルまたはフォルダのIDのコラボレーションを取得します。コラボレーションIDをキャプチャします。
 
-<Sample id='get_collaborations_id' >
+<Sample id="get_collaborations_id">
 
 </Sample>
 
-### Remove Transfer From User as Owner
+### 転送元ユーザーを所有者として削除
 
-The final step is to remove the `transfer_from_user` account as an owner of the
-file or folder, which is accomplished using the
-[delete collaboration endpoint](e://delete_collaborations_id).
+最後の手順は、ファイルまたはフォルダの所有者として`transfer_from_user`アカウントを削除することです。これは、[コラボレーションを削除エンドポイント](e://delete_collaborations_id)を使用して行います。
 
-Making call as the `transfer_to_user` account, remove the `transfer_from_user`
-as a collaborator on the file or folder.
+`transfer_to_user`アカウントとして呼び出しを実行し、ファイルまたはフォルダのコラボレータとして`transfer_from_user`を削除します。
 
-<Sample id='delete_collaborations_id' >
+<Sample id="delete_collaborations_id">
 
 </Sample>
 
-The file or folder is now owned by the `transfer_to_user` account, and the
-`transfer_from_user` account no longer has access.
+これにより、ファイルまたはフォルダの所有者は`transfer_to_user`アカウントになり、`transfer_from_user`アカウントはアクセスできなくなります。

@@ -22,30 +22,28 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/payload.md
 ---
-# Webhook Payload
+# Webhookペイロード
 
-When an event triggers a webhook for a file or a folder, it make a HTTP call to the
-`address` specified when the webhook was created. The payload of this call
-contains some request headers, and a JSON body.
+イベントによってファイルまたはフォルダのWebhookがトリガーされると、Webhookの作成時に指定した`address`に対してHTTP呼び出しが実行されます。この呼び出しのペイロードには、いくつかのリクエストヘッダーとJSON本文が含まれます。
 
-## Payload headers
+## ペイロードヘッダー
 
-The payload sent by a webhook has the following Box-specific headers.
+Webhookによって送信されたペイロードには、以下のBox固有のヘッダーが含まれます。
 
 <!-- markdownlint-disable line-length -->
 
-| Header                    | Description                                                                                                                                                                          |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `BOX-DELIVERY-ID`         | A unique ID assigned by Box that identifies the delivered webhook payload. When Box retries a webhook this ID will change, while the ID in the body of the payload remains the same. |
-| `BOX-DELIVERY-TIMESTAMP`  | An RFC-3339 timestamp that identifies the time that the payload was sent at.                                                                                                         |
-| `BOX-SIGNATURE-PRIMARY`   | A [signature][verify_sigs] created using the primary signature key configured for this webhook.                                                                                                     |
-| `BOX-SIGNATURE-SECONDARY` | A [signature][verify_sigs] created using the secondary signature key configured for this webhook.                                                                                                   |
-| `BOX-SIGNATURE-VERSION`   | Value is always `1`.                                                                                                                                                                 |
-| `BOX-SIGNATURE-ALGORITHM` | Value is always `HmacSHA256` .                                                                                                                                                       |
+| ヘッダー                      | 説明                                                                                            |
+| ------------------------- | --------------------------------------------------------------------------------------------- |
+| `BOX-DELIVERY-ID`         | 配信されたWebhookペイロードを識別する、Boxによって割り当てられた一意のID。BoxがWebhookを再試行すると、このIDが変わりますが、ペイロードの本文のIDは変わりません。 |
+| `BOX-DELIVERY-TIMESTAMP`  | ペイロードが送信された時刻を識別するRFC-3339タイムスタンプ。                                                            |
+| `BOX-SIGNATURE-PRIMARY`   | このWebhook用に設定されたプライマリ署名キーを使用して作成された[署名][verify_sigs]。                                         |
+| `BOX-SIGNATURE-SECONDARY` | このWebhook用に設定されたセカンダリ署名キーを使用して作成された[署名][verify_sigs]。                                         |
+| `BOX-SIGNATURE-VERSION`   | 値は常に`1`です。                                                                                    |
+| `BOX-SIGNATURE-ALGORITHM` | 値は常に`HmacSHA256`です。                                                                           |
 
 <!-- markdownlint-enable line-length -->
 
-For example:
+例:
 
 ```shell
 BOX-DELIVERY-ID:          673a081b-bb4b-4d45-b4f1-4131a29c1d07
@@ -57,42 +55,37 @@ BOX-SIGNATURE-ALGORITHM:  HmacSHA256
 USER-AGENT:               Box-WH-Client/0.1
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-We recommend [setting up][setup_sigs] and [verifying signatures][verify_sigs]
-of the webhook payloads.
+Webhookペイロードの[設定][setup_sigs]と[署名の検証][verify_sigs]を行うことをお勧めします。
 
 </Message>
 
 <Message warning>
 
-HTTP header names are case insensitive and your client should ideally convert
-all header names to a standardized lowercase or uppercase format before trying
-to determine the value of a header.
+HTTPヘッダー名では大文字と小文字が区別されないため、クライアントでは、すべてのヘッダーの名前を標準化された小文字または大文字の形式に変換してから、ヘッダーの値を確認するのが理想的です。
 
 </Message>
 
-## Payload body
+## ペイロード本文
 
-The body of a webhook payload is a JSON object that describes the file or folder
-(target) that triggered the webhook, as well as the event that has been
-triggered.
+Webhookペイロードの本文は、Webhookをトリガーしたファイルまたはフォルダ(ターゲット)、およびトリガーされたイベントを記述するJSONオブジェクトです。
 
 <!-- markdownlint-disable line-length -->
 
-| Field        | Description                                                                                                                                                  |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `type`       | Value is always `webhook_event`.                                                                                                                             |
-| `id`         | A unique ID assigned by Box that identifies the event. When Box retries a webhook this ID will not change, while the ID in the header changes between calls. |
-| `created_at` | The time/date that the event was triggered at.                                                                                                               |
-| `trigger`    | The name of the event that triggered the event, for example `FILE.UPLOADED`.                                                                                 |
-| `webhook`    | The webhook for which this event triggered.                                                                                                                  |
-| `created_by` | The user that triggered this event.                                                                                                                          |
-| `source`     | The item that triggered this event, for example the file that was uploaded to the target folder                                                              |
+| フィールド        | 説明                                                                                   |
+| ------------ | ------------------------------------------------------------------------------------ |
+| `type`       | 値は常に`webhook_event`です。                                                               |
+| `id`         | イベントを識別する、Boxによって割り当てられた一意のID。BoxがWebhookを再試行しても、このIDは変わりませんが、ヘッダーのIDは呼び出しのたびに変わります。 |
+| `created_at` | イベントがトリガーされた日時。                                                                      |
+| `trigger`    | イベントをトリガーしたイベントの名前(例: `FILE.UPLOADED`)。                                              |
+| `webhook`    | このイベントがトリガーされたWebhook。                                                               |
+| `created_by` | このイベントをトリガーしたユーザー。                                                                   |
+| `source`     | このイベントをトリガーした項目(例: ターゲットフォルダにアップロードされたファイル)。                                         |
 
 <!-- markdownlint-enable line-length -->
 
-For example:
+例:
 
 ```json
 {
@@ -196,4 +189,5 @@ For example:
 ```
 
 [setup_sigs]: guide://webhooks/handle/setup-signatures
+
 [verify_sigs]: guide://webhooks/handle/verify-signatures

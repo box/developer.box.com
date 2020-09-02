@@ -21,35 +21,29 @@ previous_page_id: events/shield-alert-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/pagination.md
 ---
-# Stream Position Pagination
+# ストリーム位置のページ割り
 
-Paginating the event stream works through the use of the `stream_position`
-parameter.
+イベントストリームのページ割りは、`stream_position`パラメータの使用によって機能します。
 
-First, send a request to the [`GET /events`](e://get_events) API without a
-`stream_position` query parameter.
+最初に、`stream_position`クエリパラメータを指定せずにリクエストを[`GET /events`](e://get_events) APIに送信します。
 
 ```curl
 curl https://api.box.com/2.0/events \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-The API will return all available events beginning with the oldest. The response
-will also include a `next_stream_position` value that can be used to make the
-next API call for the next place in the stream.
+このAPIにより、使用可能なすべてのイベントが古い方から順に返されます。応答には`next_stream_position`値も含まれており、これを使用して、ストリーム内の次の位置に対する次のAPI呼び出しを実行できます。
 
 ```curl
 curl https://api.box.com/2.0/events?stream_position=388720462721 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-The `stream_position` can also be set to `now` to return the most recent stream
-position.
+`stream_position`は、最も近いストリーム位置が返されるよう`now`に設定することもできます。
 
 ```curl
 curl https://api.box.com/2.0/events?stream_position=now \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-In this case, the API returns an empty list and a `next_stream_position` that
-can be used for the next call.
+この場合、APIによって空のリストと、次の呼び出しに使用できる`next_stream_position`が返されます。

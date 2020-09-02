@@ -15,12 +15,9 @@ previous_page_id: metadata/queries/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/2-syntax.md
 ---
-# Query syntax
+# クエリ構文
 
-The query syntax for the metadata query API is similar to that of a SQL
-database. To query for all files and folders that match a contract metadata
-template with a contract value of over \$100 the following metadata query could
-be created.
+メタデータクエリAPIのクエリ構文はSQLデータベースのクエリ構文と似ています。契約金額が100ドルを超える契約メタデータテンプレートに一致するすべてのファイルとフォルダに対してクエリを実行するには、以下のメタデータクエリを作成します。
 
 ```json
 {
@@ -37,45 +34,27 @@ be created.
 }
 ```
 
-In this case the `from` value represents the `scope` and `templateKey` of the
-metadata template, and the `ancestor_folder_id` represents the folder ID to
-search within, including its subfolders.
+この場合、`from`値はメタデータテンプレートの`scope`と`templateKey`を表し、`ancestor_folder_id`はサブフォルダを含む検索範囲となるフォルダIDを表します。
 
-## The `fields` parameter
+## `fields`パラメータ
 
-By default, this API will only return the base-representation of a file or
-folder, which includes their `id`, `type`, and `etag` values. To request any
-additional data the `fields` parameter can be used to query any additional
-fields, as well as any metadata associated to the item.
+デフォルトでは、このAPIで返されるのは、`id`、`type`、および`etag`の値を含む、ファイルまたはフォルダの基本レプリゼンテーションのみです。その他のデータをリクエストするには、`fields`パラメータを使用すると、追加のフィールドや、その項目に関連付けられたメタデータに対してクエリを実行できます。
 
-For example:
+例:
 
-* `created_by` will add the details of the user who created the item to
-the response.
-* `metadata.<scope>.<templateKey>` will return the base-representation
-of the metadata instance identified by the `scope` and `templateKey`.
-* `metadata.<scope>.<templateKey>.<field>` will return all fields in the
-  base-representation of the metadata instance identified by the `scope` and
-  `templateKey` plus the field specified by the `field` name. Multiple fields
-  for the same `scope` and `templateKey` can be defined.
+* `created_by`では、項目を作成したユーザーの詳細が応答に追加されます。
+* `metadata.<scope>.<templateKey>`では、`scope`と`templateKey`によって識別されたメタデータインスタンスの基本レプリゼンテーションが返されます。
+* `metadata.<scope>.<templateKey>.<field>`では、`scope`と`templateKey`によって識別されたメタデータインスタンスの基本レプリゼンテーションのすべてのフィールドに加え、`field`の名前によって指定されたフィールドが返されます。同じ`scope`および`templateKey`の複数のフィールドを定義できます。
 
-## The `query` parameter
+## `query`パラメータ
 
-The `query` parameter represents the SQL-like query to perform on the selected
-metadata instance. This parameter is optional, and without this parameter the
-API would return all files and folders for this template.
+`query`パラメータは、選択したメタデータインスタンスに対して実行する、SQLに似たクエリを表します。このパラメータは省略可能で、このパラメータを指定しない場合、APIはこのテンプレートに対してすべてのファイルとフォルダを返します。
 
-Every left hand field name, like `amount`, needs to match the `key` of a
-field on the associated metadata template. In other words, you can only search
-for fields that are actually present on the associated metadata instance. Any
-other field name will result in the error returning an error.
+左側の各フィールド名(`amount`など)は、関連付けられたメタデータテンプレートのフィールドの`key`に一致する必要があります。つまり、関連付けられたメタデータインスタンスに実際に存在するフィールドだけを検索できます。その他のフィールド名を指定するとエラーが発生し、エラーが返されます。
 
-### The `query_params` parameter
+### `query_params`パラメータ
 
-To make it less complicated to embed dynamic values into the query string, an
-argument can be defined using a colon syntax, like `:value`. Each argument that
-is specified like this needs a subsequent value with that key in the
-`query_params` object, for example:
+クエリ文字列への動的な値の埋め込みをわかりやすくするために、`:value`のように、コロン構文を使用して引数を定義できます。たとえば、次のように指定された各引数では、`query_params`オブジェクトにそのキーを使用した後続の値が必要です。
 
 ```json
 {
@@ -89,83 +68,73 @@ is specified like this needs a subsequent value with that key in the
 }
 ```
 
-### Logical operators
+### 論理演算子
 
-A query supports the following logical operators.
+クエリでは、以下の論理演算子がサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Operator                |                                                                                                                                                                                                                                                       |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `AND`                   | Matches when all the conditions separated by `AND` are `TRUE`.                                                                                                                                                                                        |
-| `OR`                    | Matches when any of the conditions separated by `OR` is `TRUE`.                                                                                                                                                                                       |
-| `NOT`                   | Matches when the preceding condition(s) is **not** `TRUE`.                                                                                                                                                                                            |
-| `LIKE`                  | Matches when the template field value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details. See additional limitations below.                                                              |
-| `NOT LIKE`              | Matches when the template field value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details. See additional limitations below.                                                   |
-| `ILIKE`                 | Identical to `LIKE` but case insensitive. See additional limitations below.                                                                                                                                                                           |
-| `NOT ILIKE`             | Identical to `NOT LIKE` but case insensitive. See additional limitations below.                                                                                                                                                                       |
-| `IN`                    | Matches when the template field value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)`. |
-| `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
-| `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
-| `IS NOT`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
+| 演算子         |                                                                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AND`       | `AND`で区切られたすべての条件が`TRUE`の場合に一致となります。                                                                                                        |
+| `OR`        | `OR`で区切られた条件のいずれかが`TRUE`の場合に一致となります。                                                                                                        |
+| `NOT`       | 先行する条件が`TRUE`**でない**場合に一致となります。                                                                                                             |
+| `LIKE`      | テンプレートフィールドの値がパターンと一致する場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                         |
+| `NOT LIKE`  | テンプレートフィールドの値がパターンと一致**しない**場合に一致となります。文字列値のみに対応します。詳細については、[パターン一致](#pattern-matching)を参照してください。その他の制限については以下を参照してください。                    |
+| `ILIKE`     | `LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                        |
+| `NOT ILIKE` | `NOT LIKE`と同じですが、大文字と小文字が区別されません。その他の制限については以下を参照してください。                                                                                    |
+| `IN`        | テンプレートフィールドの値は、指定された引数のリストのいずれかと等しい場合に一致となります。この形式では、`amount NOT IN (:arg1, :arg2, :arg3)`のように、リスト内の各項目は`query_params`引数として明示的に定義する必要があります。 |
+| `NOT IN`    | `IN`に似ていますが、テンプレートフィールドの値は、リストに指定されたどの引数にも一致しません。                                                                                           |
+| `IS NULL`   | テンプレートフィールドの値が`null`の場合に一致となります。                                                                                                            |
+| `IS NOT`    | テンプレートフィールドの値が`null`でない場合に一致となります。                                                                                                          |
 
 <!-- markdownlint-enable line-length -->
 
 <Message notice>
 
-Any match on a `string` or `enum` field is case sensitive except when using
-the `ILIKE` operator.
+`ILIKE`演算子を使用した場合を除き、`string`または`enum`フィールドでの一致は、どれも大文字小文字が区別されます。
 
 </Message>
 
 <Message warning>
 
-The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
-be used on templates with metadata instance counts greater than 10,000 items.
-Queries of this size require an [index](g://metadata/queries/indexes) and these
-operators are not compatible with indexes.
+`LIKE`、`ILIKE`、`NOT LIKE`、および`NOT ILIKE`演算子は、メタデータインスタンスの数が10,000項目を超えるテンプレートでは使用できません。このサイズのクエリには[インデックス](g://metadata/queries/indexes)が必要です。また、これらの演算子はインデックスと互換性がありません。
 
 </Message>
 
-### Comparison operators
+### 比較演算子
 
-A query supports the following comparison operators.
+クエリでは、以下の比較演算子がサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Operator |                                                                                    |
-|----------|------------------------------------------------------------------------------------|
-| `=`      | Ensures a template field value is **equal to** the specified value                 |
-| `>`      | Ensures a template field value is **greater than** the specified value             |
-| `<`      | Ensures a template field value is **less than** the specified value                |
-| `>=`     | Ensures a template field value is **greater than or equal to** the specified value |
-| `<=`     | Ensures a template field value is **less than or equal to** the a specified value  |
-| `<>`     | Ensures a template field value is **not equal to** the a specified value           |
+| 演算子  |                                        |
+| ---- | -------------------------------------- |
+| `=`  | テンプレートフィールドの値が、指定した値と**等しい**ことを表します。   |
+| `>`  | テンプレートフィールドの値が、指定した値よりも**大きい**ことを表します。 |
+| `<`  | テンプレートフィールドの値が、指定した値よりも**小さい**ことを表します。 |
+| `>=` | テンプレートフィールドの値が、指定した値**以上**であることを表します。  |
+| `<=` | テンプレートフィールドの値が、指定した値**以下**であることを表します。  |
+| `<>` | テンプレートフィールドの値が、指定した値と**等しくない**ことを表します。 |
 
 <!-- markdownlint-enable line-length -->
 
 <Message warning>
 
-Bit-wise and arithmetic operators are not supported by the Metadata Query API.
+ビット単位演算子および算術演算子は、メタデータクエリAPIではサポートされていません。
 
 </Message>
 
-### Pattern matching
+### パターン一致
 
-The `LIKE`, `NOT LIKE`, `ILIKE`, and `NOT ILIKE` operators match a string
-to a pattern. The pattern supports the following reserved characters.
+`LIKE`、`NOT LIKE`、`ILIKE`および`NOT ILIKE`演算子は、パターンに対して文字列が一致するかどうかを照合します。このパターンでは、以下の予約文字をサポートします。
 
-* `%` The percent sign represents zero, one, or multiple characters, for example
-  `%Contract` matches `Contract`, `Sales Contract`, but not `Contract (Sales)`,
-* `_` The underscore represents a single character, for example
-  `Bo_` matches `Box`, `Bot`, but not `Bots`,
+* `%` パーセント記号は0個、1個または複数個の文字を表します。たとえば、`%Contract`の場合、`Contract`、`Sales Contract`は一致しますが、`Contract (Sales)`は一致しません。
+* `_` アンダースコアは1文字を表します。たとえば、`Bo_`の場合、`Box`、`Bot`は一致しますが、`Bots`は一致しません。
 
-Both of these reserved characters can be used before, after, or in between other
-characters. A pattern can include multiple reserved characters, for example
-`Box% (____)` would match `Box Contract (2020)`.
+上記の文字はどちらも、他の文字の前後または文字の間に使用できます。パターンには、複数の予約文字を含めることができます。たとえば、`Box% (____)`の場合は`Box Contract (2020)`が一致します。
 
-An example query would looks something like this. Note that the `%`-wrapped
-string is not in the `query` attribute but in the list of `query_params`.
+クエリの例は次のようになります。`%`でラップされた文字列は`query`属性ではなく`query_params`のリストに含まれていることに注意してください。
 
 ```json
 {
@@ -180,8 +149,6 @@ string is not in the `query` attribute but in the list of `query_params`.
 
 <Message notice>
 
-The backslash character `\` can be used to escape the `%` or
-`_` characters if those need to be matched literally, for example
-`20\%` would match the literal value of `20%`.
+`%`または`_`文字を、その文字として照合する必要がある場合は、エスケープするためにバックスラッシュ文字`\`を使用できます。たとえば、`20\%`の場合は、リテラル値`20%`が一致します。
 
 </Message>

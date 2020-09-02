@@ -16,20 +16,19 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/pages/newsletter/index.md
 ---
-# Newsletter
+# ニュースレター
 
-Each quarter, we send out a newsletter to our community with the top developer
-events, product releases, and community highlights.
+当社ではトップ開発者のイベント、製品リリース、コミュニティのハイライトを掲載したニュースレターを、四半期ごとにコミュニティに送信しています。
 
 <CTA to="https://community.box.com/t5/Box-Newsletters/bg-p/Newsletters">
 
-Sign Up for the Developer Newsletter
+開発者向けニュースレターにサインアップ
 
 </CTA>
 
-## Past Newsletters
+## 過去のニュースレター
 
-| Year | Month     | Archive                     |
+| 年    | Month     | Archive                     |
 | ---- | --------- | --------------------------- |
 | 2019 | September | [Preview][download-2019-q3] |
 

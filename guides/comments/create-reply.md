@@ -21,24 +21,20 @@ previous_page_id: comments/create-comment
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/comments/create-reply.md
 ---
-# Create Reply
+# 返信の作成
 
-To create a reply to a previous comment, call the [`POST
-/comments`][post_comments] API with the message of the new comment, as well as
-the ID of the previous comment to leave the reply on.
+以前のコメントへの返信を作成するには、新しいコメントのメッセージと、返信を残す以前のコメントのIDを指定して[`POST
+/comments`][post_comments] APIを呼び出します。
 
-<Samples id='post_comments' variant='as_reply' >
+<Samples id="post_comments" variant="as_reply">
 
 </Samples>
 
-A reply's message can also mentions users using the `@` sign. To do so, add
-the string `@[userid:name]` anywhere within the message. The `user_id` is the
-target user's ID, where the `name` can be any custom phrase. In the Box UI this
-name will link to the user's profile.
+返信のメッセージでは、`@`記号を使用してユーザーをメンションすることもできます。そのためには、メッセージ内の任意の場所に`@[userid:name]`という文字列を追加します。`user_id`はターゲットユーザーのIDで、`name`には任意のカスタムフレーズを使用できます。Box UIでは、この名前がユーザーのプロフィールにリンクされます。
 
-Then, pass this string as the `tagged_message` instead of the `message`.
+次に、この文字列を`message`ではなく`tagged_message`として渡します。
 
-<Samples id='post_comments' variant='as_reply_tag_user' >
+<Samples id="post_comments" variant="as_reply_tag_user">
 
 </Samples>
 

@@ -20,35 +20,25 @@ source_url: >-
 ---
 <!-- alex disable reject -->
 
-# Change task assignment state
+# タスク割り当て状態の変更
 
-To update a task assignment's state call the
-[`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) API and
-include a `resolution_state`, such as `completed`, `incomplete`,
-`approved`, or `rejected`.
+タスク割り当ての状態を更新するには、[`PUT /tasks/:task_id/assignments`](e://put_task_assignments_id) APIを呼び出し、`completed`、`incomplete`、`approved`、`rejected`などの`resolution_state`を含めます。
 
-<Samples id='put_task_assignments_id' >
+<Samples id="put_task_assignments_id">
 
 </Samples>
 
-## Resolution states
+## 解決状態
 
-Box currently supports two types of tasks defined by the `action` value:
-`review` tasks and `complete` tasks.
+Boxは現在、`action`値によって定義される、`review`と`complete`という2種類のタスクをサポートしています。
 
-The type of task determines the possible resolution states a task can be in and
-the interface shown to a user in the web and mobile apps.
+タスクのタイプによって、タスクがなりうる解決状態と、ウェブアプリおよびモバイルアプリでユーザーに表示されるインターフェイスが決まります。
 
-| Task action | Possible resolution states           |
-|-------------|--------------------------------------|
-| `review`    | `incomplete`, `approved`, `rejected` |
-| `complete`  | `incomplete`, `complete`             |
+| タスクのアクション  | 考えられる解決状態                            |
+| ---------- | ------------------------------------ |
+| `review`   | `incomplete`, `approved`, `rejected` |
+| `complete` | `incomplete`, `complete`             |
 
-A `review` task starts out in an `incomplete` state and can be marked as
-`incomplete`, `approved`, or `rejected`. In the user interface a user is
-provided with a text box and an pair of buttons to approve or reject the task.
+`review`タスクは`incomplete`状態で開始され、`incomplete`、`approved`、または`rejected`としてマークすることができます。ユーザーインターフェイスには、テキストボックスのほか、タスクを承認または拒否する1組のボタンが表示されます。
 
-A `complete` task starts out in an `incomplete` state and can be marked
-`incomplete` or `completed`. Once a this task is marked completed, no
-further changes can be made to the task's state. In the user interface a user is
-provided with a text box and an button to mark the task as completed.
+`complete`タスクは`incomplete`状態で開始され、`incomplete`または`completed`としてマークすることができます。このタスクが完了済みとしてマークされると、タスクの状態をそれ以上変更することはできなくなります。ユーザーインターフェイスには、テキストボックスのほか、タスクを完了済みとしてマークするためのボタンが表示されます。

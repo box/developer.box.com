@@ -21,22 +21,20 @@ previous_page_id: webhooks/manage
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/list-all.md
 ---
-# List All Webhooks
+# すべてのWebhookのリストを取得
 
-To fetch all for the authenticated user, use the [List Webhooks][1] API.
+認証済みユーザーのすべてのWebhookのリストを取得するには、[すべてのWebhookのリストを取得][1]APIを使用します。
 
-<Samples id='get_webhooks' >
+<Samples id="get_webhooks">
 
 </Samples>
 
-<Message type='warning'>
+<Message type="warning">
 
-This API requires the application to have the "Manage
-webhooks" scope enabled.
+このAPIを使用するには、アプリケーションの\[webhookを管理]スコープが有効になっている必要があります。
 
 </Message>
 
-This API call will only list the webhooks for the authenticated user, not
-for any other users in the enterprise.
+このAPI呼び出しは、認証済みユーザーのWebhookのみをリストし、会社内の他のユーザーのWebhookはリストしません。
 
 [1]: endpoint://get_webhooks

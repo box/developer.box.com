@@ -15,25 +15,21 @@ previous_page_id: metadata/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/0-index.md
 ---
-# Metadata
+# メタデータ
 
-Metadata allows users and applications to define and store custom data
-associated with files and folders.
+メタデータを使用すると、ユーザーやアプリケーションは、ファイルやフォルダに関連付けられたカスタムデータを定義、格納できます。
 
 <ImageFrame border center>
 
-![String field](./metadata-example.png)
+![文字列フィールド](./metadata-example.png)
 
 </ImageFrame>
 
-Metadata consists of key/value pairs that are assigned to a file or a folder.
-For example, an important contract may have the key/value pairs of
-`clientNumber: 820183` and `clientName: bioMedicalCorp`.
+メタデータは、ファイルまたはフォルダに割り当てられているキー/値ペアで構成されます。たとえば、重要な契約には、`clientNumber: 820183`と`clientName: bioMedicalCorp`のキー/値ペアが使用されている場合があります。
 
-## Metadata terminology
+## メタデータの用語
 
-Working with metadata requires a developer to work with a few
-distinct types of resources.
+メタデータを操作するには、開発者は異なる数種類のリソースを使用する必要があります。
 
 ```mermaid;width=80%
 graph LR
@@ -45,46 +41,28 @@ graph LR
     c --> |applies metadata to| fi[Files and folders]
 ```
 
-* **Templates:**  A [metadata template][template] describes a re-usable set of
-  key/value pairs that can be assigned to a file. For example, an `invoiceData`
-  template might hold data about an invoice, having a field for the invoice ID
-  as well as the customer ID.
-  * **Fields:**  A [metadata template field][field] describes a specific
-    piece of data within a metadata template. For example, the ID of an invoice
-    might be represented as an `id` field on an `invoiceData` template.
-* **Instances:** A [metadata instance][instance] describes the relation between
-  a template and a file or folder, including the values that are assigned for
-  every field. For example, a user might have assigned an `invoiceData` metadata
-  template to a file and provided 2 values, one for the invoice ID and one for
-  the customer ID.
-* **Cascade Policies**: A [metadata cascade policy][cascade] describes
-  how metadata instances applied to a folder should be applied to any item
-  within that folder. For example, a user might assign the same `invoiceData`
-  metadata template to a project folder (including the 2 values), allowing them
-  to automatically apply to all the files and folders within that project
-  folder.
-* **Queries:** A [metadata query][query] provides a way to find files and
-  folders by searching for the metadata attached to them. For example, to find
-  the all files for an invoice with a certain ID, the query would look for all
-  files and folders with the `invoiceData` template attached to it and a value
-  of `id = :id`, where `:id` would be the value of the invoice.
+* **テンプレート:** [メタデータテンプレート][template]には、ファイルに割り当てることができる再利用可能な一連のキー/値ペアが記載されています。たとえば、`invoiceData`テンプレートでは、請求書に関するデータを保持するため、請求書IDと顧客IDのフィールドが設定されています。
+  * **フィールド:** [メタデータテンプレートフィールド][field]には、メタデータテンプレート内の特定のデータが記載されています。たとえば、請求書のIDを`invoiceData`テンプレートの`id`フィールドとして表すことができます。
+* **インスタンス:** [メタデータインスタンス][instance]には、各フィールドに割り当てられている値など、テンプレートとファイルやフォルダ間の関係が記載されています。たとえば、ユーザーは、`invoiceData`メタデータテンプレートをファイルに割り当て、2つの値を指定しています。この場合、1つは請求書ID用、もう1つは顧客ID用です。
+* **カスケードポリシー**: [メタデータカスケードポリシー][cascade]には、フォルダに適用されているメタデータインスタンスを、そのフォルダ内の項目にどのように適用するかが記載されています。たとえば、ユーザーは、同じ`invoiceData`メタデータテンプレートをプロジェクトフォルダに割り当てると(2つの値を含む)、そのプロジェクトフォルダ内のすべてのファイルとフォルダに自動的に適用できます。
+* **クエリ:** [メタデータクエリ][query]を使用すると、ファイルやフォルダに追加されているメタデータを検索して、そのファイルやフォルダを見つけることができます。たとえば、特定のIDが付いた請求書についてすべてのファイルを検索するには、クエリで、その請求書に適用されている`invoiceData`テンプレートと値`id = :id` (この場合、`:id`は請求書の値)が設定されたすべてのファイルとフォルダを検索することができます。
 
-## The purpose of metadata
+## メタデータの目的
 
-Metadata can be used for many purposes. Enterprises may want to have a better
-way to organize their digital assets for their marketing teams, or developers
-may want to provide advanced content functionality such as facilitating
-workflows or approvals.
+メタデータは多くの目的で使用できます。会社がマーケティングチーム向けにデジタルアセットを効率よく編成する場合もあれば、開発者がワークフローや承認の促進のような高度なコンテンツ機能を提供する場合もあります。
 
-For example, a `marketingCollateral` template may define where and when specific
-marketing content should be used. Users can see a representation of the
-template in the Box web application while navigating to a file preview.
+たとえば、`marketingCollateral`テンプレートでは、特定のマーケティングコンテンツを使用する状況とタイミングを定義できます。ユーザーは、Boxウェブアプリでテンプレートのレプリゼンテーションを確認すると同時に、ファイルのプレビューに移動できます。
 
-To learn more, please visit [Box community articles][community].
+詳細については、[Boxコミュニティの記事][community]を参照してください。
 
 [community]: https://community.box.com/t5/Organizing-and-Tracking-Content/Using-Metadata/ta-p/30765
+
 [template]: g://metadata/templates
+
 [instance]: g://metadata/instances
+
 [cascade]: g://metadata/cascades
+
 [field]: g://metadata/fields
+
 [query]: g://metadata/queries

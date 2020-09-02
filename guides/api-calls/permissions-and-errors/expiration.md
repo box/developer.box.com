@@ -17,21 +17,23 @@ previous_page_id: api-calls/permissions-and-errors/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/permissions-and-errors/expiration.md
 ---
-# Token & URL Expiration
+# トークンおよびURLの有効期限
 
-Across the Box API there are a few tokens, codes, and URLs that automatically
-expire. The following is a quick overview of their respective expiration times.
+Box APIには、自動的に有効期限が切れるトークン、コード、およびURLがいくつかあります。以下に、それぞれの有効期間の概要を示します。
 
-|                       |                                |
-| --------------------- | ------------------------------ |
-| [Authorization Codes] | Expires after 30 seconds       |
-| [Access Tokens]       | expires after 60 minutes       |
-| [Refresh Tokens]      | Expires after 60 days or 1 use |
-| [Download URLs]       | Expires after 15 minutes       |
+|                              |                      |
+| ---------------------------- | -------------------- |
+| [承認コード][Authorization Codes] | 30秒後に有効期限切れ          |
+| [アクセストークン][Access Tokens]    | 60分後に有効期限切れ          |
+| [更新トークン][Refresh Tokens]     | 60日後または1回の使用後に有効期限切れ |
+| [ダウンロードURL][Download URLs]   | 15分後に有効期限切れ          |
 
-See each respective guide for more details.
+詳細については、それぞれのガイドを参照してください。
 
 [Authorization Codes]: g://authentication/oauth2
+
 [Access Tokens]: g://authentication/access-tokens
+
 [Refresh Tokens]: g://authentication/access-tokens/refresh
+
 [Download URLs]: g://downloads

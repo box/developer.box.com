@@ -14,139 +14,109 @@ previous_page_id: mobile/ios/quick-start/create-ios-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/mobile/ios/quick-start/2-install-ios-sdk.md
 ---
-# Install the iOS SDK
+# iOS SDKのインストール
 
-With an iOS application in place, you will need to import the required **Box
-iOS SDK** dependencies into your project using one of the available package
-manager options.
+iOSアプリケーションを設定したら、使用可能なパッケージマネージャオプションのいずれかを使用して、必要な**Box iOS SDK**依存関係をプロジェクトにインポートする必要があります。
 
-## Select a package manager to use
+## 使用するパッケージマネージャの選択
 
-<Grid columns='3'>
+<Grid columns="3">
 
-<Choose option='ios.pm_type' value='carthage' color='blue'>
+<Choose option="ios.pm_type" value="carthage" color="blue">
 
 # Carthage
 
-Carthage is a decentralized dependency manager for Swift
-and Objective-C Cocoa projects. It is open-source and built
-with Swift.
+Carthageは、SwiftプロジェクトおよびObjective-C Cocoaプロジェクト向けの分散型の依存関係マネージャです。これは、オープンソースで、Swiftで構築されています。
 
 </Choose>
 
-<Choose option='ios.pm_type' value='cocoapods' color='none'>
+<Choose option="ios.pm_type" value="cocoapods" color="none">
 
 # CocoaPods
 
-CocoaPods is a centralized dependency manager for Swift and
-Objective-C Cocoa projects. It is open-source and was built
-with Ruby.
+CocoaPodsは、SwiftプロジェクトおよびObjective-C Cocoaプロジェクト向けの集中型の依存関係マネージャです。これは、オープンソースで、Rubyで構築されています。
 
 </Choose>
 
-<Choose option='ios.pm_type' value='swift' color='blue'>
+<Choose option="ios.pm_type" value="swift" color="blue">
 
 # Swift Package Manager
 
-The Swift Package Manager is a tool for managing the distribution
-of source code, making it easy to share your code and reuse
-others’ code.
+Swift Package Managerは、ソースコードの配布を管理するためのツールで、自作のコードの共有や他の人のコードの再利用を容易にします。
 
 </Choose>
 
 </Grid>
 
-<Choice option='ios.pm_type' value='carthage' color='blue'>
+<Choice option="ios.pm_type" value="carthage" color="blue">
 
-# Install the iOS SDK using Carthage
+# Carthageを使用してiOS SDKをインストールする
 
-1. From a terminal window, install Carthage: `brew install carthage`.
-  Visit the [Carthage documentation][carthage-docs]
-  for other installation methods.
-2. At the root of your iOS application folder, where the `{APPNAME}.xcodeproj`
-   is located, create a new file named `Cartfile`, without an extension.
-3. Open the `Cartfile` and add the **Box iOS SDK** dependency with
-   `git "https://github.com/box/box-ios-sdk.git" ~> 3.0`, then save and close
-   the file.
-4. From the terminal, in the folder where the `Cartfile` is present, update
-   all dependencies: `carthage update --platform iOS`. A `Cartfile.resolved`
-   file and a `Carthage` directory will be created in the directory. 
-5. Within a Finder or File Explorer window load the **Carthage** -> **Build**
-   -> **iOS** directory. This should have a framework file named
-   `BoxSDK.framework`. Keep this window open as we'll use it to add the
-   framework to our project in the next step.
-6. In your Xcode project, click on the name of your application at the top of
-   the project navigator on the left. In the content that displays, click on
-   the name of your project under the **TARGETS** option. Scroll down to
-   **Frameworks, Libraries, and Embedded Content**. 
-7. Drag `BoxSDK.framework` from our Finder window over to the frameworks
-   section.
+1. ターミナルウィンドウから`brew install carthage`を実行して、Carthageをインストールします。他のインストール方法については、[Carthageのドキュメント][carthage-docs]を参照してください。
+2. `{APPNAME}.xcodeproj`がある、iOSアプリケーションフォルダのルートに、`Cartfile`という名前の新しいファイルを拡張子なしで作成します。
+3. `Cartfile`を開き、`git "https://github.com/box/box-ios-sdk.git" ~> 3.0`を使用して**Box iOS SDK**の依存関係を追加した後、ファイルを保存して閉じます。
+4. ターミナルから、`Cartfile`が存在するフォルダで、`carthage update --platform iOS`を実行してすべての依存関係を更新します。このディレクトリに`Cartfile.resolved`ファイルと`Carthage`ディレクトリが作成されます。 
+5. Finderまたはエクスプローラウィンドウで、**Carthage** -> **Build** -> **iOS**ディレクトリを読み込みます。ここには、`BoxSDK.framework`という名前のフレームワークファイルがあります。このウィンドウは、次の手順でこのフレームワークをプロジェクトに追加する際に使用するため、開いたままにしておきます。
+6. Xcodeプロジェクトで、左側のプロジェクトナビゲータの上部にあるアプリケーションの名前をクリックします。表示されるコンテンツで、\[**TARGETS**]オプションの下にあるプロジェクトの名前をクリックします。\[**Frameworks, Libraries, and Embedded Content**]まで下にスクロールします。 
+7. Finderウィンドウから`BoxSDK.framework`をフレームワークセクション上にドラッグします。
 
 <ImageFrame center>
 
-![Add framework to project](./framework-carthage-add.gif)
+![プロジェクトへのフレームワークの追加](./framework-carthage-add.gif)
 
 </ImageFrame>
 
 </Choice>
 
-<Choice option='ios.pm_type' value='cocoapods' color='blue'>
+<Choice option="ios.pm_type" value="cocoapods" color="blue">
 
-# Install the iOS SDK using CocoaPods
+# CocoaPodsを使用してiOS SDKをインストールする
 
-1. From a terminal window, install CocoaPods: `sudo gem install cocoapods`.
-2. At the root of your iOS application folder, where the `APPNAME.xcodeproj`
-   is located, run `pod init` to create a new `Podfile` with smart defaults.
-3. Load `Podfile`, add the **Box iOS SDK** dependency under
-   `# Pods for {APPNAME}` with `pod 'BoxSDK', '~> 3.0'`, then save and close.
-4. From the terminal, in the folder where the `Podfile` is present, download
-   all dependencies: `pod install`.
-5. Open `.xcworkspace` in Xcode: `open {APPNAME}.xcworkspace` and build the
-   project.
+1. ターミナルウィンドウから`sudo gem install cocoapods`を実行して、CocoaPodsをインストールします。
+2. `APPNAME.xcodeproj`がある、iOSアプリケーションフォルダのルートで、`pod init`を実行して、スマートデフォルトで新しい`Podfile`を作成します。
+3. `Podfile`を読み込み、`pod 'BoxSDK', '~> 3.0'`を実行して`# Pods for {APPNAME}`の下に**Box iOS SDK**の依存関係を追加した後、保存して閉じます。
+4. ターミナルから、`Podfile`が存在するフォルダで、`pod install`を実行してすべての依存関係をダウンロードします。
+5. `open {APPNAME}.xcworkspace`を実行して`.xcworkspace`をXcodeで開き、プロジェクトをビルドします。
 
 </Choice>
 
-<Choice option='ios.pm_type' value='swift' color='blue'>
+<Choice option="ios.pm_type" value="swift" color="blue">
 
-# Install the iOS SDK using the Swift Package Manager
+# Swift Package Managerを使用してiOS SDKをインストールする
 
-1. In your Xcode project, click on the name of your application at the top of
-   the project navigator on the left. In the content that displays, click on
-   the name of your project under the **PROJECT** option.
-2. Click on **Swift Packages** and click on the `+` to add a package.
-3. Enter the following repository URL
-   `https://github.com/box/box-ios-sdk.git` and click next.
-4. Leave the default settings and click next to finish importing.
+1. Xcodeプロジェクトで、左側のプロジェクトナビゲータの上部にあるアプリケーションの名前をクリックします。表示されるコンテンツで、\[**PROJECT**]オプションの下にあるプロジェクトの名前をクリックします。
+2. \[**Swift Packages**]をクリックし、`+`をクリックしてパッケージを追加します。
+3. リポジトリのURL `https://github.com/box/box-ios-sdk.git`を入力し、\[Next]をクリックします。
+4. デフォルト設定のままにし、\[Next]をクリックしてインポートを終了します。
 
 <ImageFrame center>
 
-![Add framework to project](./import-sdk-spm.gif)
+![プロジェクトへのフレームワークの追加](./import-sdk-spm.gif)
 
 </ImageFrame>
 
 </Choice>
 
-## Summary
+## まとめ
 
-* You either selected to install the iOS dependencies using Carthage
-  * You installed Carthage
-  * You create a `Cartfile` with the Box iOS SDK dependency
-  * You installed the iOS SDK dependencies
-  * You manually imported the built dependencies into the Xcode project
-    framework list.
-* Or selected to use **CocoaPods** and
-  * You installed CocoaPods
-  * You created a new `Podfile` with the Box iOS SDK dependency
-  * You installed the iOS SDK dependencies
-  * You built the project in Xcode
-* Or selected to use the **Swift Package Manager** and
-  * You imported the iOS SDK `.git` repository into the Swift packages
+* Carthageを使用したiOS依存関係のインストールを選択しました。
+  * Carthageをインストールしました。
+  * Box iOS SDKの依存関係を持つ`Cartfile`を作成しました。
+  * iOS SDKの依存関係をインストールしました。
+  * 構築した依存関係をXcodeプロジェクトのフレームワークリストに手動でインポートしました。
+* **CocoaPods**の使用を選択しました。
+  * CocoaPodsをインストールしました。
+  * Box iOS SDKの依存関係を持つ新しい`Podfile`を作成しました。
+  * iOS SDKの依存関係をインストールしました。
+  * Xcodeでプロジェクトをビルドしました。
+* **Swift Package Manager**の使用を選択しました。
+  * SwiftパッケージにiOS SDKの`.git`リポジトリをインポートしました。
 
-<Observe option='ios.pm_type' value='carthage,cocoapods,swift'>
+<Observe option="ios.pm_type" value="carthage,cocoapods,swift">
 
 <Next>
 
-I've installed the Box iOS SDK dependencies
+Box iOS SDKの依存関係をインストールしました
 
 </Next>
 

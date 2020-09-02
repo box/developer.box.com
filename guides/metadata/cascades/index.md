@@ -13,38 +13,26 @@ previous_page_id: metadata/cascades/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/6-cascades/0-index.md
 ---
-# Metadata cascade policies (Beta)
+# メタデータカスケードポリシー(ベータ)
 
 <Message warning>
 
-Metadata cascade policies are currently in Beta and the syntax might change in
-the future.
+メタデータカスケードポリシーは現在ベータ版であり、構文が今後変更される可能性があります。
 
 </Message>
 
-A metadata cascade policy describes how [metadata
-instances][instance] applied to a folder should be applied to any item
-within that folder. For example, a user might assign the same `invoiceData`
-metadata template to a project folder allowing it to automatically apply to all
-the files and folders within that project folder.
+メタデータカスケードポリシーは、フォルダに適用された[メタデータインスタンス][instance]をそのフォルダ内の項目にどのように適用するかを記述したものです。たとえば、ユーザーがプロジェクトフォルダに同じ`invoiceData`メタデータテンプレートを割り当てると、そのプロジェクトフォルダ内のすべてのファイルとフォルダに自動的に適用することができます。
 
-Every policy specifies exactly one metadata template instance and one folder.
+各ポリシーで指定するメタデータテンプレートインスタンスとフォルダはそれぞれ1つだけです。
 
-## Activation and permissions
+## 有効化と権限
 
-To use metadata cascade policies, an enterprise admin needs to enable them for
-the entire enterprise. In the **Admin Console**, select **Enterprise Settings**,
-**Content & Sharing**, **Cascading Folder Level Metadata**. Click the **Edit
-configuration** button and pick who can apply cascade policies to folders.
+メタデータカスケードポリシーを使用するには、会社の管理者が会社全体に対してそのポリシーを有効化する必要があります。**管理コンソール**で\[**Enterprise設定**]、\[**コンテンツと共有**]、\[**フォルダレベルメタデータのカスケード**]の順に選択します。\[**構成の編集**]ボタンをクリックして、フォルダにカスケードポリシーを適用できるユーザーを選択します。
 
-Any user with edit permissions on a folder and the ability to create cascade
-policies can create metadata cascade policies for that given folder.
+フォルダの編集権限を持ち、カスケードポリシーを作成できるユーザーは、その特定のフォルダ用にメタデータカスケードポリシーを作成できます。
 
-## Limitations
+## 制限
 
-There is some delay from file upload to the metadata being applied. This very
-much depends on the number of items in a folder. Metadata cascade operations
-are performed asynchronously and there is currently no way to check when all
-metadata has been cascaded to all files.
+ファイルのアップロードからメタデータの適用まで、若干の遅延が生じます。この遅延の程度はフォルダ内の項目の数によって大きく変わります。メタデータカスケード操作は非同期で実行され、現時点では、すべてのメタデータがいつすべてのファイルにカスケードされたかを確認する方法はありません。
 
 [instance]: g://metadata/instances

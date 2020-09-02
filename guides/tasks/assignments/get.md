@@ -19,12 +19,10 @@ previous_page_id: tasks/assignments/update-message
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/4-get.md
 ---
-# Get task assignment information
+# タスク割り当てに関する情報の取得
 
-To get information about an assigned task, call the
-[`GET /tasks/:task_id/assignments`](e://get_task_assignments_id) API with the
-`id` of the task assignment.
+割り当てられたタスクに関する情報を取得するには、タスク割り当ての`id`を指定して[`GET /tasks/:task_id/assignments`](e://get_task_assignments_id) APIを呼び出します。
 
-<Samples id='get_task_assignments_id' >
+<Samples id="get_task_assignments_id">
 
 </Samples>

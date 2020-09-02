@@ -20,23 +20,18 @@ previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/events/shield-alert-events.md
 ---
-# Shield alert events
+# Shieldアラートイベント
 
-Shield alert events provide details about security incidents in an
-enterprise with [Box Shield][box-shield] enabled, which are configured to
-listen for those incidents.
+Shieldアラートイベントは、[Box Shield][box-shield]が有効になっている会社のセキュリティインシデントをリッスンするよう構成されており、その詳細を提供します。
 
-The possible incident alerts produced by Shield are:
+Shieldによって生成される可能性があるインシデントアラートは以下のとおりです。
 
-1. Suspicious locations
-1. Suspicious sessions
-1. Anomalous download
-1. Malicious content
+1. 不審な場所
+2. 不審なセッション
+3. 異常なダウンロード
+4. 悪意のあるコンテンツ
 
-All shield alert events will be produced within the
-[enterprise event][g://events/for-enterprise/] stream (not the user stream) and
-will follow the standard event object schema, with the `event_type` value set
-to `SHIELD_ALERT`.
+`event_type`値が`SHIELD_ALERT`に設定されることで、Shieldアラートイベントはすべて(ユーザーストリームではなく)[エンタープライズイベント][g://events/for-enterprise/]ストリーム内で生成され、標準のイベントオブジェクトスキーマに従います。
 
 ```js
 {
@@ -60,17 +55,13 @@ to `SHIELD_ALERT`.
 }
 ```
 
-Information about the specific type of shield alert that triggered the event
-will be supplied within the `additional_details` object.
+イベントをトリガーした特定の種類のShieldアラートに関する情報は、`additional_details`オブジェクト内で提供されます。
 
-## Suspicious locations alert
+## 不審な場所に関するアラート
 
-A suspicious locations alert will be produced when an account within the
-enterprise has been accessed from a suspicious location. It can be identified
-by the `Suspicious Locations` value within
-`additional_details.shield_alert.rule_category`.
+不審な場所に関するアラートは、社内アカウントに不審な場所からのアクセスがあったときに生成されます。`additional_details.shield_alert.rule_category`内の`Suspicious Locations`値によって識別できます。
 
-The `additional_details` payload will provide the following details.
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details":{
@@ -114,13 +105,12 @@ The `additional_details` payload will provide the following details.
 }
 ```
 
-## Suspicious sessions alert
+## 不審なセッションに関するアラート
 
-A suspicious locations alert will be produced when abnormal behavior has been
-detected in the account session. It can be identified by the `Suspicious
-Sessions` value within `additional_details.shield_alert.rule_category`.
+不審な場所に関するアラートは、アカウントセッションで異常な動作が検出されたときに生成されます。`additional_details.shield_alert.rule_category`内の`Suspicious
+Sessions`値によって識別できます。
 
-The `additional_details` payload will provide the following details.
+`additional_details`ペイロードは以下の詳細を示します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -193,15 +183,14 @@ The `additional_details` payload will provide the following details.
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-## Anomalous download alert
+## 異常なダウンロードに関するアラート
 
-A suspicious locations alert will be produced when anomalous content download
-behavior has been detected. It can be identified by the `Anomalous Download`
-value within `additional_details.shield_alert.rule_category`.
+不審な場所に関するアラートは、コンテンツの異常なダウンロード動作が検出されたときに生成されます。`additional_details.shield_alert.rule_category`内の`Anomalous Download`値によって識別できます。
 
-The `additional_details` payload will provide the following details.
+`additional_details`ペイロードは以下の詳細を示します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -250,16 +239,14 @@ The `additional_details` payload will provide the following details.
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-## Malicious content alert
+## 悪意のあるコンテンツに関するアラート
 
-A suspicious locations alert will be produced when malicious content has been
-identified, such as a virus being detected. It can be identified by the
-`Malicious Content` value within
-`additional_details.shield_alert.rule_category`.
+不審な場所に関するアラートは、検出されるウイルスなど、悪意のあるコンテンツが特定されたときに生成されます。`additional_details.shield_alert.rule_category`内の`Malicious Content`値によって識別できます。
 
-The `additional_details` payload will provide the following details.
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details":{

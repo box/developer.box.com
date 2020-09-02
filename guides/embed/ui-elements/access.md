@@ -21,112 +21,61 @@ previous_page_id: embed/ui-elements/logo
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/access.md
 ---
-# Customize Access
+# アクセスのカスタマイズ
 
-## Motivation
+## 動機
 
-Box UI Elements are initialized on the client and make API calls directly to
-Box. Thus, a valid access token must live on the client because all Box API
-requests need to be authenticated.
+Box UI Elementsは、クライアントで初期化され、Boxに対して直接API呼び出しを実行します。したがって、すべてのBox APIリクエストが認証されなければならないため、有効なアクセストークンがクライアントにある必要があります。
 
-[Token Exchange](g://authentication/access-tokens/downscope) is a mechanism to
-exchange a "parent token" (a token for your managed or app user, service
-account, or application) to a "child token" which is scoped down to the minimum
-set of required permissions so it can be securely sent down to the client
-without elevating client privileges.
+[トークン交換](g://authentication/access-tokens/downscope)とは、「親トークン」(管理対象ユーザー、App User、サービスアカウント、またはアプリケーションのトークン)を「子トークン」に交換するためのメカニズムです。「子トークン」は、クライアントの権限を引き上げることなく安全にクライアントに送信できるように、必要最小限の権限のセットにダウンスコープしたものです。
 
-The Box UI Elements are designed to adapt to the permissions on the token, so an
-additional advantage of using Token Exchange with them is that front-end
-developers won't have to manually toggle UI controls on/off as long as the
-correct set of permissions are present on the client token. This behavior mimics
-the experience in the Box application as well. For example, if a user with
-"Preview only" permissions to a folder does not see the "Download" button
-present in the UI.
+Box UI Elementsは、トークンの権限に対応するよう設計されています。そのため、Box UI Elementsとともにトークン交換を使用すると、クライアントトークンに対する適切な権限セットがあれば、フロントエンドの開発者が手動でUIコントロールのオン/オフを切り替える必要はないという別のメリットがもたらされます。この動作は、Boxアプリケーションでの動作にも似ています。たとえば、フォルダに対して「プレビューのみ」の権限を持つユーザーの場合、UIに\[ダウンロード]ボタンは表示されません。
 
-This blueprint covers how to use Token Exchange with UI Elements in your
-application and example use cases.
+次の設計図では、アプリケーションでUI Elementとともにトークン交換を使用する方法と、ユースケースの例を示しています。
 
 <ImageFrame border>
 
-![Downscope overview](./images/downscope-1.png)
+![ダウンスコープの概要](./images/downscope-1.png)
 
 </ImageFrame>
 
-* **Making API calls from client more secure:** As a general security practice,
-  we recommend generating and sending downscoped tokens per every action
-  performed by the user to limit exposure on the client. For example, even if a
-  user should have preview and share access to a file, instead of sending the
-  user token to the client which would give them complete user-level access, we
-  suggest downscoping the token using Token Exchange and sending them a "preview
-  only" token when they wish to preview a file and a "share" token when they
-  want to share a file.
-* **Creating a custom permissions model:** If you are building an application
-  using UI Elements and the default Box access levels don't fit your permission
-  model, you can start out with a fully scoped token for all your users and trim
-  them down using Token Exchange on the fly to map to your custom permissions
-  model.
-* **Using Box services transactionally (no Box user accounts):** If you are not
-  creating users in Box and are using Box services transactionally, you won't
-  have access to user level tokens. In such cases, you can use Token Exchange to
-  scope down the Service Account token to an appropriately scoped token.
-* **Creating a user only to give them access to another user's content:** If you
-  need to provide an end user "one time" access to another app/managed user's
-  content, Token Exchange can be used to downscope the app/managed user token to
-  the specific permissions and file/folders you want to give the end user access
-  to, and pass it down to UI Elements to give them access to that content. For
-  example, using Token Exchange, you can downscope a user token to have
-  read-only access to content and pass it down to another user.
+* **クライアントからのAPI呼び出しのセキュリティ強化:** 一般的なセキュリティ対策として、ユーザーによってアクションが実行されるたびにダウンスコープされたトークンを生成して送信し、クライアントができるだけ危険にさらされないようにすることをお勧めします。たとえば、ユーザーがファイルに対するプレビューおよび共有アクセス権限を必要とする場合でも、クライアントにユーザートークンを送信してユーザーに完全なユーザーレベルのアクセス権限を付与するのではなく、トークン交換を使用してトークンをダウンスコープし、ユーザーがファイルをプレビューしたい場合は「プレビューのみ」のトークンを、ファイルを共有したい場合は「共有」トークンを送信することをお勧めします。
+* **カスタム権限モデルの作成:** UI Elementを使用してアプリケーションを構築していて、デフォルトのBoxアクセスレベルが実際の権限モデルに合わない場合は、すべてのユーザーに対する完全なスコープのトークンから始め、適宜トークン交換を使用して、独自の権限モデルに対応するようダウンスコープしていくことができます。
+* **Boxサービスをトランザクションで使用(Boxユーザーアカウントがない場合):** Boxにユーザーを作成しないでBoxサービスをトランザクションで使用している場合、ユーザーレベルのトークンにはアクセスできません。このような場合は、トークン交換を使用してサービスアカウントトークンを適切なスコープのトークンにダウンスコープできます。
+* **別のユーザーのコンテンツへのアクセス権限を付与することのみを目的としたユーザーの作成:** エンドユーザーに別のアプリ/管理対象ユーザーのコンテンツへの「1回限り」のアクセス権限を与える必要がある場合は、トークン交換を使用すると、アプリ/管理対象ユーザーのトークンを、エンドユーザーにアクセスを許可したい特定の権限とファイル/フォルダにダウンスコープし、そのトークンをUI Elementに渡してエンドユーザーがそのコンテンツにアクセスできるようにすることができます。たとえば、トークン交換を使用した場合、ユーザートークンを、コンテンツに対するアクセス権限が読み取り専用になるようダウンスコープし、そのトークンを別のユーザーに渡すことができます。
 
-## Implementation
+## 実装
 
-The solution for all of the above is using Token Exchange to exchange a parent
-token for a downscoped token and initializing the UI Element using that token.
+上記のすべてに対する解決策として、トークン交換を使用して親トークンをダウンスコープされたトークンに交換し、そのトークンを使用してUI Elementを初期化します。
 
-Token Exchange takes in the "parent token", "list of scopes" and optionally a
-file/folder ID as the input arguments, and returns a token that is scoped down
-to those exact set of scopes and the respective file/folder ID, if present in
-the input arguments.
+トークン交換では、「親トークン」、「スコープのリスト」、およびファイル/フォルダID (省略可)を入力引数として受け取り、これらの厳密なスコープのセットとそれぞれのファイル/フォルダID (入力引数に指定されている場合)にダウンスコープされたトークンが返されます。
 
 <Messsage>
 
-# Dedicated scopes designed for UI Elements
+# UI Element向けに設計された専用スコープ
 
-We have designed a set of scopes that work seamlessly with the UI Elements.
-While token exchange works with all Box scopes, we recommend using these
-scopes along with UI Elements since they include the exact set of permissions
-required for base functionality as well as incremental permissions for added
-functionality.
+Boxでは、UI Elementとシームレスに連動する一連のスコープを設計しました。トークン交換はすべてのBoxスコープで動作しますが、設計したスコープには、基本機能に必要な権限セットに加えて、追加機能のための増分の権限も含まれているため、UI Elementと一緒にこれらのスコープを使用することをお勧めします。
 
 </Message>
 
 <ImageFrame border>
 
-![Downscope overview](./images/downscope-2.png)
+![ダウンスコープの概要](./images/downscope-2.png)
 
 </ImageFrame>
 
-## Developer Flow
+## 開発者のフロー
 
-Now that you understand the different scopes, let's walk through a
-scenario for using Token Exchange with a UI Element.
+さまざまなスコープについて説明したので、ここからはUI Elementでトークン交換を使用するシナリオを見ていきましょう。
 
-**Scenario:** Provide a user with the ability to browse a folder tree using the
-Box Content Explorer UI Element and allow them to preview and download files.
-Sharing should be turned off.
+**シナリオ:** Box Content Explorer UI Elementを使用してユーザーがフォルダツリーを閲覧できるようにして、ユーザーによるファイルのプレビューとダウンロードを許可します。共有は無効にする必要があります。
 
-**Steps:**
+**手順:**
 
-* Create a Managed User, App User or Service Account depending on your use case.
-  You will use this user or application's token as the parent token for Token
-  Exchange. To generate the user token follow:
-  * Authentication with OAuth guide if you would like to create a Managed User
-  * Authentication with JWT guide if you would like to create an App User or
-    Service Account
-* Add the user you created above as a Collaborator to the content using the
-  Create Collaborator API as shown below. This step gives the user access to the
-  content if not already under the user's account. If the file/folder was
-  created under this user's account, then the user by default has "Owner" access
-  to the folder so you can skip the collaboration step.
+* ユースケースに応じて、管理対象ユーザー、App User、またはサービスアカウントを作成します。このユーザーまたはアプリケーションのトークンをトークン交換の親トークンとして使用します。ユーザートークンを生成するには、以下に従います。
+  * 管理対象ユーザーを作成する場合は、OAuthを使用した認証のガイド
+  * App Userまたはサービスアカウントを作成する場合は、JWTを使用した認証のガイド
+* 以下に示すようにコラボレータの作成APIを使用して、上で作成したユーザーをコラボレータとしてコンテンツに追加します。この手順では、ユーザーアカウントでユーザーにコンテンツに対するアクセス権限が与えられていない場合は、アクセス権限が与えられます。このユーザーのアカウントでファイル/フォルダが作成されている場合は、ユーザーはデフォルトでフォルダに対する「所有者」アクセス権限を持っているため、このコラボレーションの手順をスキップしてかまいません。
 
 <!-- markdownlint-disable line-length -->
 
@@ -141,21 +90,15 @@ curl https://api.box.com/2.0/collaborations \
 
 <Message>
 
-# Access Levels in Box
+# Boxでのアクセスレベル
 
-There are [7 different access levels][accesslevels] that a Box user can be
-collaborated as on a file/folder in Box. If the file/folder was created under
-this user's account, then the user has "Owner" access to the folder by
-default so you can skip the collaboration step.
+BoxユーザーがBox内のファイル/フォルダでコラボレーションする場合に[7種類のアクセスレベル][accesslevels]を使用できます。このユーザーのアカウントでファイル/フォルダが作成されている場合は、ユーザーはデフォルトでフォルダに対する「所有者」アクセス権限を持っているため、このコラボレーションの手順をスキップしてかまいません。
 
 </Message>
 
-* Use the Token Exchange API to exchange the parent token for a child token that
-  contains the base scope for Content Explorer (`base_explorer`), `item_download`
-  and `item_preview` scopes enabled for the specific `folder_id` `123456`.  We
-  strongly recommend performing this step on the application server.
+* トークン交換APIを使用して親トークンを、Content Explorerの基本スコープ(`base_explorer`)と特定の`folder_id` `123456`に有効な`item_download`および`item_preview`スコープを含む子トークンに交換します。この手順はアプリケーションサーバー上で実行することを強くお勧めします。
 
-### Request
+### リクエスト
 
 ```curl
 curl https://api.box.com/oauth2/token \
@@ -167,7 +110,7 @@ curl https://api.box.com/oauth2/token \
   -X POST
 ```
 
-### Response
+### レスポンス
 
 ```json
 {
@@ -210,192 +153,95 @@ curl https://api.box.com/oauth2/token \
 }
 ```
 
-The `CHILD_TOKEN` obtained above is scoped down to only include download and
-preview permissions for folder id `123456` and its children.
+上で取得した`CHILD_TOKEN`はダウンスコープされ、フォルダID`123456`とその子に対するダウンロードおよびプレビューの権限のみが含まれています。
 
-Use this `CHILD_TOKEN` in your Content Explorer UI Element. To see a quick demo,
-you can use our [Content Explorer UI Element CodePen
-Sample](https://codepen.io/box-platform/pen/wdWWdN) and replace the access token
-and folder id values in the JS Tab.
+この`CHILD_TOKEN`をコンテンツエクスプローラUI Elementで使用します。簡単なデモを確認するには、[コンテンツエクスプローラUI Element CodePenのサンプル](https://codepen.io/box-platform/pen/wdWWdN)を使用して、\[JS]タブでアクセストークンの値とフォルダIDの値を置き換えてください。
 
 <ImageFrame border>
 
-![Downscope overview](./images/downscope-3.png)
+![ダウンスコープの概要](./images/downscope-3.png)
 
 </ImageFrame>
 
-Click "Run". You should see the Content Explorer initialized at the folder you
-specified. Also, notice that your Content Explorer no longer shows the "Share"
-button as it would have with the parent (user) token.
+\[Run]をクリックします。指定したフォルダでContent Explorerが初期化されることがわかります。また、Content Explorerには、親(ユーザー)トークンの使用時に表示される\[共有]ボタンが表示されなくなることに注意してください。
 
 <ImageFrame border>
 
-![Downscope overview](./images/downscope-4.png)
+![ダウンスコープの概要](./images/downscope-4.png)
 
 </ImageFrame>
 
 <ImageFrame border>
 
-![Downscope overview](./images/downscope-5.png)
+![ダウンスコープの概要](./images/downscope-5.png)
 
 </ImageFrame>
 
-## When NOT to use Token Exchange
+## トークン交換を使用すべきでない場合
 
-* **Does not replace Users or Groups in Box:** We recommend not using Token
-  Exchange as a replacement to creating users in Box. One way to determine
-  whether you should create Box users, is by doing an assessment to determine if
-  it makes logical sense for every end user of your application to have a copy
-  of their own content. Here are some benefits of maintaining user level
-  accounts in Box, which you wouldn't get by using Token Exchange alone.
-  * **Content isolation/security:** It's better to have user level accounts
-    since in the case of the parent token accidentally leaking, you would only
-    be compromising the content of a single user vs. all users of your
-    enterprise.
-  * **Performance:** Creating users/groups in Box is also useful as your
-    application does not have to determine the appropriate permissions at the
-    time of accessing content since that is likely to affect the performance
-    of your application.
-  * **User level tracking/auditing:** Several Box features such as auditing,
-    access stats, retention, etc. leverage Box's user model. If it is
-    essential for you to use those features for you then you would have to
-    create user-level accounts.
-* **Does not replace Collaborations in Box:** Collaborations is a more standard
-  and easier to scale way to provide Box users with access to content. Also,
-  managing content access through collaborations in Box requires your
-  application to manage lesser code/data on which user should have access to
-  what content. If you are using Token Exchange as a replacement to
-  Collaborations, you will need to keep a mapping of every user -> every file
-  and folder that they should have access to and that could get out of control
-  pretty quickly.
-* **Caching the downscoped tokens:** If performance is critical to your
-  application, you should pre-cache downscoped tokens on the server side. If you
-  are pre-caching tokens, we recommend implementing retries as the tokens expire
-  within 1 hour.
+* **Box内のユーザーまたはグループを置き換えない:** Boxにユーザーを作成する代わりにトークン交換を使用することはお勧めしません。Boxユーザーを作成する必要があるかどうかを判断するには、アプリケーションのすべてのエンドユーザーが自身のコンテンツのコピーを保持することが妥当かどうかを評価します。以下に、Boxにユーザーレベルのアカウントを維持することで得られるメリットを示します。トークン交換だけでは、これらのメリットを得ることはできません。
+  * **コンテンツの分離とセキュリティ:** ユーザーレベルのアカウントの使用がより適しているのは、親トークンが誤って漏えいした場合でも、会社の全ユーザーではなく、1人のユーザーのコンテンツのセキュリティが侵害されるだけで済むからです。
+  * **パフォーマンス:** Boxにユーザーやグループを作成すると、アプリケーションでコンテンツにアクセスするときに適切な権限を決定する必要がなくなるので便利です。適切な権限を決定する処理は、アプリケーションのパフォーマンスに影響を及ぼす可能性が高くなります。
+  * **ユーザーレベルの追跡と監査:** 監査、アクセス統計情報、リテンションなど、いくつかのBox機能では、Boxのユーザーモデルが利用されます。これらの機能の使用が必須の場合は、ユーザーレベルのアカウントを作成する必要があります。
+* **Boxでのコラボレーションを置き換えない:** コラボレーションは、コンテンツに対するアクセス権限をBoxユーザーに提供するためのより標準的で拡張しやすい方法です。また、Boxでコラボレーションを使用してコンテンツへのアクセス権限を管理する場合、アプリケーションでは、どのユーザーにどのコンテンツへのアクセス権限が必要かについて、管理が必要なコードやデータの量が少なくなります。コラボレーションの代わりにトークン交換を使用すると、各ユーザーから、各ユーザーがアクセスできるすべてのファイルやフォルダへのマッピングを維持する必要があり、すべてのファイルやフォルダはすぐに制御できなくなる可能性があります。
+* **ダウンスコープされたトークンのキャッシュ:** アプリケーションにとってパフォーマンスが重要な場合は、ダウンスコープされたトークンをサーバー側で事前にキャッシュする必要があります。トークンを事前にキャッシュする場合は、トークンが1時間以内に期限切れになるため、再試行を実装することをお勧めします。
 
 <Message>
 
-# Token Lifespan
+# トークンの寿命
 
-The lifespan of parent and child tokens are not mutually dependent, for
-example when generating a child token doesn't render the parent token
-inactive. Similarly, generating more child tokens doesn't impact the previous
-child tokens in any way.
+親トークンおよび子トークンの寿命は互いに依存していません。たとえば、子トークンを生成しても親トークンが非アクティブになることはありません。同様に、子トークンをさらに生成しても、以前の子トークンにはまったく影響しません。
 
 </Message>
 
-## Example Scenarios
+## シナリオの例
 
-### Scenario #1: More secure client API calls
+### シナリオ1: クライアントのAPI呼び出しのセキュリティ強化
 
-An equity-investment firm is building out a partner/investor portal to broadcast
-information (view-only access) to investors published by the employees.
+ある株式投資会社は、従業員が公開する情報を投資家に配信する目的(表示のみのアクセス権限を使用)で、パートナーおよび投資家向けポータルを構築しています。
 
-They create app users for each of their external customers and employees have
-provisioned Box accounts which they used to publish content. All app users are
-collaborated on published content as Viewer Uploader, so they can both preview
-as well as upload content in their account as needed. Once an investor/partner
-signs in they are taken to a portal where they can view as well as upload
-information.
+この会社は外部の顧客それぞれにApp Userを作成し、従業員はコンテンツの公開に使用したBoxアカウントをプロビジョニングしました。すべてのApp Userは、公開されたコンテンツでビューアー/アップローダーとしてコラボレーションしているため、必要に応じて自分のアカウントでコンテンツのプレビューとアップロードの両方を実行することができます。投資家やパートナーはサインインすると、情報を表示およびアップロードできるポータルが表示されます。
 
-Since both preview and upload require the API calls to be made via the client,
-instead of passing down a “Viewer Uploader” token, the application uses Token
-Exchange to downscope the token appropriately based on the action that the user
-is trying to perform. This ensures that if the token is compromised, data
-leakage is minimized thereby improving the overall security posture of the
-application.
+プレビューとアップロードの両方では、「ビューアー/アップローダー」トークンを渡す代わりに、クライアントを介してAPI呼び出しを実行する必要があるため、アプリケーションではトークン交換を使用して、ユーザーが実行しようとしている処理に応じて適宜トークンをダウンスコープします。これにより、トークンのセキュリティが侵害された場合に、データ漏えいは最小限に抑えられ、アプリケーションの全体的なセキュリティ対策が強化されます。
 
-### Scenario #2: A custom permissions model
+### シナリオ2: カスタム権限モデル
 
-A large fin-tech company is building a secure client vault to manage investments
-for their clients. They are also using Box UI Elements to build out the content
-management front end of their application.
+ある大規模なフィンテック企業では、クライアントへの投資を管理するために、クライアントのセキュアな格納庫を構築しています。また、Box UI Elementsを使用してアプリケーションのコンテンツ管理フロントエンドも構築しています。
 
-They create app users as usual for each one of their clients and app advisors.
-When they wanted to share content across app users, they collaborate the app
-user(s) as "Editor" role (Box's role). This guarantees that every app user had
-full access to every other user’s content.
+この会社では、通常どおりクライアントとアプリアドバイザーごとにApp Userを作成します。App User間でコンテンツを共有する場合は、App Userを「編集者」ロール(Boxのロール)としてコラボレーションさせます。こうすることで、各App Userは自分以外のすべてのユーザーのコンテンツすべてにアクセスできるようになります。
 
-To enable a user to access content via the UI Elements, the application does not
-provide the app user token to the client directly as the app user may be
-collaborated as an "Editor" into other user's content (highly privileged).
-Instead, it uses Token Exchange using the app user token to generate a
-downscoped token that limits:
+ユーザーがUI Elementを介してコンテンツにアクセスできるように、アプリケーションがクライアントに直接App Userトークンを提供することはありません。これは、App Userが他のユーザーのコンテンツで「編集者」としてコラボレーションしている(強い権限を持っている)可能性があるためです。代わりに、App Userトークンを使用したトークン交換により、ダウンスコープされたトークンが生成され、以下が制限されます。
 
-* the scope of what the token can be used for (view, upload, download, browse,
-  share, etc.) and/or
-* the specific files that the user should have access to
+* トークンの使用目的を示すスコープ(表示、アップロード、ダウンロード、閲覧、共有など)
+* ユーザーがアクセスできる特定のファイル
 
-### Scenario #3: Process Flows
+### シナリオ3: プロセスフロー
 
-A not-for-profit union bank is developing a loan processing application using
-Box's secure content layer to facilitate the sharing of documents between loan
-applicants and internal users (loan processors and underwriters). The basic
-process is as follows:
+ある非営利の信用組合では、ローン処理アプリケーションを開発しています。このアプリケーションでは、Boxのセキュアなコンテンツレイヤを使用して、ローン申請者と社内ユーザー(ローン事務担当者とローン引受人)の間のドキュメントの共有を容易にします。基本的なプロセスは以下のとおりです。
 
-* When customers apply for a loan they must submit documents through a
-  custom-built web portal as a part of the process (proof of income, identity
-  etc.)
-* Box is used as the intermediary for sending/receiving docs
-* Internal employees need to upload files for customers
-* Internal employees can access documents through a custom web portal as well
-  as Box Web app
+* 顧客はローンを申請する際、申請手続きの一環として、独自に構築されたウェブポータルからドキュメント(収入証明や身分証明など)を提出します。
+* Boxは、ドキュメントの送受信を仲介する機能として使用されます。
+* 社内の従業員は、顧客に代わってファイルをアップロードする必要があります。
+* 社内の従業員は、カスタムのウェブポータルとBoxウェブアプリからドキュメントにアクセスできます。
 
-The application developers used Token Exchange along with UI Elements to build
-out a loan process management solution, where the application server downscopes
-the loan application's app user token based on which operations the client needs
-to perform, and passes it down to the clients (customers and loan officers).
-Using these downscoped tokens, the UI Elements are able to show the right
-controls/buttons to indicate to the user which actions they can perform
-(example: upload button is grayed out from the content explorer UI Elements if
-the downscoped token passed doesn't contain upload permissions).
+アプリケーション開発者は、UI Elementとともにトークン交換を使用して、ローン処理管理ソリューションを構築しました。このソリューションで、アプリケーションサーバーは、ローン申請のApp Userトークンを、クライアントが実行する必要のある処理に基づいてダウンスコープし、そのダウンスコープされたトークンをクライアント (顧客とローン担当者) に渡します。このようにダウンスコープされたトークンを使用すると、UI Elementは適切なコントロールやボタンを表示し、ユーザーに対して実行可能な操作を示すことができます (例: ダウンスコープされて渡されたトークンにアップロード権限が含まれていない場合、コンテンツエクスプローラUI Elementではアップロードボタンがグレー表示になります)。
 
-### Scenario #4: Transactional Flows
+### シナリオ4: トランザクションフロー
 
-A Learning Management System provider is using Box Platform to power preview in
-their application. All users and associated permissions are managed by the
-application outside Box. From Box's perspective, all API calls made by the
-application are on its own behalf (any not any individual user), and all content
-stored and previewed belongs to the application and not to a single user. In
-this case, the application developer is using a sliver of Box's overall
-capabilities (for example Preview) transactionally and none of the other secure
-content sharing and collaboration capabilities. In fact, this is a key use case
-for many customers.
+ある学習管理システムプロバイダは、Box Platformを使用して自社のアプリケーションのプレビュー機能を強化しています。すべてのユーザーおよび関連付けられている権限は、Box以外のアプリケーションで管理されています。Boxから見ると、そのアプリケーションからのAPI呼び出しはすべて、(個々のユーザーではなく)そのアプリケーションのためのもので、保存およびプレビューされるコンテンツはすべて、個々のユーザーではなくアプリケーションに属しています。この場合、アプリケーション開発者は、Box全体の機能のうち一部(プレビューなど)をトランザクションで使用していますが、その他のセキュアなコンテンツ共有機能やコラボレーション機能は使用していません。実際に、これは多くの顧客にとって重要なユースケースです。
 
-Consider a straightforward use case of the application - the end user needs to
-upload a file and then preview it in the application itself. To do this the
-application is using the Content Upload and Content Preview UI Elements,
-respectively. Since both preview + upload are bandwidth heavy operations, the
-application should not proxy the traffic and instead allow the client to perform
-these operations directly against Box. To make calls against Box, all UI
-Elements require a valid access token to be available on the client. But the
-application should never pass down the privileged "service account" token to the
-client which would give the client access to all content ever uploaded through
-the application. Instead, the application uses Token Exchange to down-scope it's
-service account token to an upload-only token to allow the client to upload
-files via the Upload UI Element, and a separate preview-only token to let the
-client preview via the Preview UI Element.
+このアプリケーションの簡単なユースケースを考えてください。エンドユーザーはファイルをアップロードした後、アプリケーション自体でプレビューする必要があるとします。そのために、アプリケーションではコンテンツアップロードUI ElementとコンテンツプレビューUI Elementをそれぞれ使用しています。プレビューとアップロードはどちらも帯域幅を大量に消費する処理であるため、アプリケーションは、トラフィックをプロキシするのではなく、クライアントがこれらの処理を直接Boxに対して実行できるようにする必要があります。Boxに対して呼び出しを実行するために、すべてのUI Elementは、有効なアクセストークンをクライアント上で使用できる必要があります。ただし、アプリケーションは、権限のある「サービスアカウント」トークンをクライアントに渡さないようにしてください。渡した場合、クライアントは、アプリケーションを介してアップロードされたすべてのコンテンツにアクセスできるようになるためです。代わりに、アプリケーションではトークン交換を使用して、そのサービスアカウントトークンをアップロードのみのトークンにダウンスコープし、クライアントがアップロードUI Elementを使用してファイルをアップロードできるようにします。さらに、別途プレビューのみのトークンにダウンスコープし、クライアントがプレビューUI Elementを使用してプレビューできるようにします。
 
-## Anti-patterns
+## アンチパターン
 
-These anti-patterns have been included here to help you identify patterns that
-we do not recommend as they will either make your app development more
-challenging, your application less secure or performing or both. If you find
-yourself implementing any of these patterns on your app, please reach out to us
-via Box support so we can help you out.
+以下に示すアンチパターンは、アプリ開発をさらに難しいものにしたり、アプリケーションのセキュリティやパフォーマンスを低下させたりするため推奨されないパターンをお客様が識別するのに役立ちます。アプリにこれらのパターンの実装が確認された場合は、Boxサポートに連絡して支援を求めてください。
 
-### Passing privileged tokens to client
+### 権限のあるトークンをクライアントに渡す
 
-Please NEVER DO THIS. This can potentially compromise the security of content in
-your Box enterprise. Always use token exchange to provide end users with the
-exact set of permissions.
+これは絶対に行わないでください。お客様のBox Enterpriseでのコンテンツのセキュリティが侵害される可能性があります。必ずトークン交換を使用して、正確な権限セットをエンドユーザーに提供してください。
 
-### Proxying/filtering API responses
+### API応答のプロキシとフィルタリング
 
-If you are proxying/filtering API responses from Box only to limit data/content
-exposure to the client, you should try to see if using Token Exchange allows you
-to limit the exposure. This is especially true for high-bandwidth operations
-such as preview, download, and upload which are bandwidth intensive and so we
-recommend that the client performs those operations directly with Box.
+BoxからのAPI応答をプロキシ/フィルタリングして、クライアントへのデータやコンテンツの公開を制限するだけの場合は、トークン交換を使用することで公開を制限できるかどうかを確認してみてください。特に、プレビュー、ダウンロード、アップロードなどの帯域幅を集中的に使用する、高帯域幅の処理に当てはまります。そのため、Boxでは、クライアントがBoxを使用してこれらの処理を直接実行することをお勧めします。
 
 [accesslevels]: https://community.box.com/t5/How-To-Guides-for-Sharing/What-Are-The-Different-Access-Levels-For-Collaborators/ta-p/144

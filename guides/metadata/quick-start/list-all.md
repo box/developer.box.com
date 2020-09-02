@@ -19,46 +19,37 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/1-list-all.md
 ---
-# List all metadata templates
+# すべてのメタデータテンプレートのリストを取得
 
-It's likely your enterprise already has a list of metadata templates that you
-can use right off-the-shelve without having to create your own.
+会社には、ユーザーが独自に作成しなくてもすぐに使用できるメタデータテンプレートのリストがすでに存在することがよくあります。
 
-In general, metadata templates are either available to only your enterprise o
-to every enterprise using Box. The `scope` of a template defines if a template
-is available to everyone (`global`) or only to your enterprise (`enterprise`).
+一般に、メタデータテンプレートには、自社のみで使用できるものと、Boxを使用するすべての会社が使用できるものがあります。テンプレートの`scope`により、テンプレートはすべての人が利用可能か(`global`)、自社のみで利用可能か(`enterprise`)が定義されます。
 
-<CTA to='g://metadata/scopes'>
+<CTA to="g://metadata/scopes">
 
-Learn more about metadata scopes
+メタデータのスコープの詳細
 
 </CTA>
 
-## Listing templates
+## テンプレートのリストの取得
 
-A few [global templates](e://get_metadata_templates_global) are available to all
-customers.
+すべてのユーザーが使用できる[グローバルテンプレート](e://get_metadata_templates_global)はいくつかあります。
 
-<Samples id="get_metadata_templates_global" >
-
-</Samples>
-
-Many of these templates are for Box's internal use, yet your application can use
-and apply these. More useful are templates [created by applications and admins
-within your enterprise](e://get_metadata_templates_enterprise) to hold data
-specific to your enterprise's needs.
-
-<Samples id="get_metadata_templates_enterprise" >
+<Samples id="get_metadata_templates_global">
 
 </Samples>
 
-## A metadata template
+これらのテンプレートの多くはBoxの内部使用を目的としたものですが、アプリケーションでこれらを使用したり適用したりすることもできます。会社のニーズに固有のデータを保持するには、[社内のアプリケーションや管理者が作成した](e://get_metadata_templates_enterprise)テンプレートがより便利です。
 
-A [metadata template][template] describes a set of key/value
-pairs that can be assigned to a file or folder.
+<Samples id="get_metadata_templates_enterprise">
 
-For example, an `customerInfo` template might hold data about an customer,
-having a field for the customer name as well as the customer's industry.
+</Samples>
+
+## メタデータテンプレート
+
+[メタデータテンプレート][template]には、ファイルまたはフォルダに割り当てることができる一連のキー/値ペアが記載されています。
+
+たとえば、`customerInfo`テンプレートは顧客に関するデータを保持しており、顧客名と顧客の業種のフィールドがあるとします。
 
 ```json
 {
@@ -95,7 +86,7 @@ having a field for the customer name as well as the customer's industry.
 
 <Next>
 
-I've listed the templates available to me
+使用できるテンプレートのリストを取得しました
 
 </Next>
 

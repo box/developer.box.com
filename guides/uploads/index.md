@@ -14,39 +14,32 @@ previous_page_id: uploads/check
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/uploads/index.md
 ---
-# Uploads
+# アップロード
 
-The Box API supports two distinct methods of file upload. The [direct file
-upload API][direct] supports files up to 50MB in size and sends all the binary
-data to the Box API in 1 API request.
+Box APIは、2つのファイルアップロード方法をサポートしています。[直接ファイルアップロードAPI][direct]は最大50MBのファイルをサポートしており、1回のAPIリクエストですべてのバイナリデータをBox APIに送信します。
 
-The [chunked upload APIs][chunked] support files from 20MB in size and allow an
-application to upload the file in parts, allowing for more control to catch any
-errors and retry parts individually.
+[分割アップロードAPI][chunked]は20MB以上のファイルをサポートしており、アプリケーションではファイルを複数のパーツに分割してアップロードすることで、エラーのキャッチと個別のパーツの再送信を詳細に制御できます。
 
-## Upload limits
+## アップロードの制限
 
-Upload limits are dictated by the type of account of the authenticated user.
-More information can be found [in our community article on this topic][fsizes].
+アップロードの上限は、認証済みユーザーのアカウントの種類によって決まります。詳細については、[このトピックに関するBoxコミュニティの記事][fsizes]を参照してください。
 
-## Preflight check
+## 事前チェック
 
-The Pre-flight check API allows an application to verify that a file will be
-accepted by Box before it uploads any bytes. It can both be used for new files,
-as well as uploading new versions of existing files.
+事前チェックAPIを使用すると、アプリケーションでアップロードを開始する前にそのファイルがBoxに受け入れられるかどうかを確認できます。このAPIは、新しいファイルにも、既存ファイルの新しいバージョンのアップロードにも使用できます。
 
-<CTA to='g://uploads/check'>
+<CTA to="g://uploads/check">
 
-Learn more about pre-flight checks
+事前チェックの詳細を確認する
 
 </CTA>
 
-## Upload domain
+## アップロードドメイン
 
-Uploads to Box happen via a different domain (`upload.box.com`) than regular API
-calls. This is something to keep in mind when writing your own upload code. All
-the Box SDKs will take care of choosing the right domain for the right API call.
+Boxへのアップロードは、通常のAPI呼び出しとは異なるドメイン(`upload.box.com`)を介して行われます。アップロードコードを作成するときは、この点に注意する必要があります。すべてのBox SDKで、API呼び出しに適切なドメインが選択されます。
 
 [direct]: g://uploads/direct
+
 [chunked]: g://uploads/chunked
+
 [fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590

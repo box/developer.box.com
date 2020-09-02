@@ -16,10 +16,9 @@ source_url: >-
 ---
 <!-- does not need translation -->
 
-# Log in
+# ログイン
 
-Sometimes a user needs to be logged in. A log in button can be shown to allow a
-user to log in to the default Box app.
+場合によっては、ユーザーがログインしなければならないことがあります。ユーザーがデフォルトのBoxアプリにログインできるように、ログインボタンを表示できます。
 
 ```html
 <LoginButton />
@@ -29,33 +28,30 @@ user to log in to the default Box app.
 
 </LoginButton>
 
-## Custom Log-in button
+## カスタムログインボタン
 
-By default, the `LoginButton` uses the API credentials for the default Box app.
-It can though be configured to use the `client_id` and `client_secret` the user
-configured earlier using a `Store`.
+デフォルトでは、`LoginButton`はデフォルトのBoxアプリのAPI資格情報を使用します。ただし、ユーザーが`Store`を使用して以前設定した`client_id`と`client_secret`を使用するよう設定することもできます。
 
 ```html
 <LoginButton id='a_custom_id' />
 ```
 
-In this case, it will use the following client ID and secret from local storage:
+この場合は、ローカルストレージにある以下のクライアントIDとクライアント機密コードが使用されます。
 
 * `com.box.developer.a_custom_id.client_id` 
 * `com.box.developer.a_custom_id.client_secret`
 
-After log in, the user's access token, refresh token, name, and expiry date will
-be saved in an object in `com.box.developer.a_custom_id`.
+ログイン後、ユーザーのアクセストークン、更新トークン、名前、および有効期限は、`com.box.developer.a_custom_id`のオブジェクトに保存されます。
 
 <Message>
 
-A `Store` can be used to collect the custom client ID and secret.
+`Store`を使用すると、カスタムのクライアントIDとクライアント機密コードを収集できます。
 
 </Message>
 
-## Show when logged in or out
+## ログイン/ログアウト時に表示
 
-A block can be shown or hidden based on whether the user is logged in or not.
+ユーザーがログインしているかどうかに基づいて、ブロックを表示または非表示にすることができます。
 
 ```html
 <LoggedIn>
@@ -67,8 +63,7 @@ A block can be shown or hidden based on whether the user is logged in or not.
 </LoggedIn>
 ```
 
-If the log in was performed with a custom set of credentials, the ID of the
-credentials must be passed in.
+一連のカスタム資格情報でログインが実行された場合は、その資格情報のIDを渡す必要があります。
 
 ```html
 <LoginButton id='a_custom_id' />
@@ -82,9 +77,9 @@ credentials must be passed in.
 </LoggedIn>
 ```
 
-## Resetting values
+## 値のリセット
 
-A reset button can be shown to allow a user to clear their credentials.
+ユーザーが資格情報をクリアできるようにリセットボタンを表示できます。
 
 ```html
 <ResetButton id='credentials'>
@@ -94,15 +89,15 @@ A reset button can be shown to allow a user to clear their credentials.
 
 <H>
 
-<ResetButton id='credentials'>
+<ResetButton id="credentials">
 
-Reset all credentials
+すべての資格情報をリセット
 
 </ResetButton>
 
 </H>
 
-If a custom ID was provided, make sure to pass in that ID.
+カスタムIDが指定された場合は、そのIDを必ず渡してください。
 
 ```html
 <ResetButton id='a_custom_id'>

@@ -26,104 +26,65 @@ source_url: >-
 ---
 # FAQ
 
-## General
+## 全般
 
-### What is Box View
+### Box Viewについて教えてください
 
-Box View is an API service that allows customers and developers to
-display high-fidelity, interactive viewers for documents, images, videos, 360
-images and videos, 3D files and more in custom web and mobile applications.
-Using Box View, customers and developers can display nearly any file
-type in their app without having to build their own viewers.
+Box Viewとは、お客様と開発者がカスタムのウェブアプリやモバイルアプリでドキュメント、画像、動画、360度画像や動画、3Dファイルなどに対応する忠実度の高いインタラクティブなビューアーを表示するできるようにするAPIサービスです。Box Viewを使用すると、お客様や開発者は独自のビューアーを構築しなくても、アプリ内でほぼすべての種類のファイルを表示できます。
 
-## Product
+## 製品
 
-### How does the new Box View work
+### 新しいBox Viewはどのように動作しますか
 
-To get started with the New Box View, follow our guide
-[here](guide://embed/box-view/setup).
+新しいBox Viewを使用するには、[こちら](guide://embed/box-view/setup)のガイドに従ってください。
 
-### Which Preview method, Embed Link or UI Element, is right for me
+### 埋め込みリンクとUI Elementのうち、どちらのプレビュー方法が用途に適していますか
 
-Please follow our guide [here](guide://embed/box-view/create-preview) to choose
-the best method for your use case.
+[こちら](guide://embed/box-view/create-preview)のガイドに従い、自分のユースケースに最適な方法を選択してください。
 
-### What file types are supported in the new Box View
+### 新しいBox Viewでサポートされているファイルタイプを教えてください
 
-Click [here][file_types] to see all supported file types.
+[ここ][file_types]をクリックすると、サポートされているファイルタイプがすべて表示されます。
 
-### Which file types are not supported on mobile in the new Box View
+### モバイルで使用する場合に新しいBox Viewでサポートされていないファイルタイプを教えてください
 
-* All documents supported on web preview are supported on mobile browsers
-(Safari for iOS and Chrome).
-* Full annotations support is available for mobile via the
-[Content Preview UI Element](guide://embed/ui-elements/preview), which
-leverages Box Annotations.
-* Mobile SDKs (for iOS and Android) do not support 360 Videos/Images, and 3D.
-* Mobile SDKs (for iOS and Android) do not support annotations (both read and
-write).
+* ウェブプレビューでサポートされているドキュメントはすべて、モバイルブラウザ(iOSのSafariとChrome)でサポートされます。
+* モバイル向けの注釈の全面的なサポートは、Boxの注釈を活用する[コンテンツプレビューUI Element](guide://embed/ui-elements/preview)を介して利用できます。
+* モバイルSDK(iOSおよびAndroid用)では、360度動画/画像、および3Dがサポートされていません。
+* モバイルSDK(iOSおよびAndroid用)では、注釈(読み取りと書き込み両方)がサポートされていません。
 
-### What are annotations
+### 注釈とは何ですか
 
-Annotations are mark up notes on a file rendering generated from Box View.
-Annotations allow end users to collaborate on a file rendering.
+注釈とは、Box Viewから生成されるファイルレンダリングに関するマークアップです。注釈を使用すると、エンドユーザーがファイルのレンダリングでコラボレーションできます。
 
-### After uploading a file, how can my application get file representations
+### ファイルのアップロード後にアプリケーションでファイルレプリゼンテーションを取得するにはどうすればよいですか
 
-[Box Representations](guide://representations) lets you get
-the digital assets created for files stored in Box. You can use these endpoints
-to get PDF, text, image, and thumbnail representations for a file.
+[Boxのレプリゼンテーション](guide://representations)を使用すると、Boxに保存されているファイル用に作成されたデジタルアセットを取得できます。これらのエンドポイントを使用することで、ファイルのPDF、テキスト、画像、およびサムネイルという種類のレプリゼンテーションを取得できます。
 
-### Can I use the new Box View with storage providers other than Box
+### 新しいBox ViewをBox以外のストレージプロバイダとともに使用できますか
 
-Currently, the new Box View is only compatible with files that are stored in
-Box. You can delete the files from Box once you no longer need to display them.
-However, you would need to upload it again in order to generate the preview.
-For this reason, we recommend keeping the files stored in Box for at least as
-long as you want to be able to display them.
+現在、新しいBox Viewは、Boxに保存されているファイルとだけ互換性があります。表示する必要がなくなったファイルは、Boxから削除できます。ただし、プレビューを生成するには再度ファイルをアップロードする必要があります。そのため、少なくともファイルを表示できるようにしたい間は、Boxにファイルを保存しておくことをお勧めします。
 
-### How do I fix the CORS error Box gives me when I embed a Box UI Element
+### Box UI Elementを埋め込むときに発生するCORSエラーの修正方法を教えてください
 
-To fix the CORS error, you have to allow each domain you wish to allow to
-make CORS requests. You can allow the domain on your application's
-configuration page within the Box developer console. If you have many
-subdomains that you want to use the UI element on, you can use a wildcard for
-the subdomain (`https://*.domain.com`). See the
-[CORS guide](guide://best-practices/cors) for more information.
+CORSエラーを修正するには、CORSリクエストを送信できるようにしたい各ドメインを許可する必要があります。ドメインは、Box開発者コンソールのアプリケーションの構成ページで許可できます。UI Elementを使用したいサブドメインが多数ある場合は、サブドメインにワイルドカード(`https://*.domain.com`)を使用できます。詳細については、[CORSガイド](guide://best-practices/cors)を参照してください。
 
-### How can I replace the Box logo that shows up on preview
+### プレビューに表示されるBoxのロゴは置き換えるにはどうすればよいですか
 
-See this guide for information on customizing the logo within a
-[Preview UI Element](guide://embed/ui-elements/logo/).
+[プレビューUI Element](guide://embed/ui-elements/logo/)内でのロゴのカスタマイズについては、このガイドを参照してください。
 
-## Pricing
+## 価格
 
-### How is the new Box View priced
+### 新しいBox Viewの価格はどうなりますか
 
-The new Box View is priced based on the number of API calls, total storage, and
-bandwidth that an application will require to upload, convert, and display
-files within an application. A conversion occurs when a file is uploaded via
-the API to Box and is prepared to be displayed in an app. A conversion happens
-only one time per file.
+新しいBox Viewの価格は、1つのアプリケーション内でファイルをアップロード、変換、および表示するために必要になるAPI呼び出しの数、合計ストレージ、および帯域幅に基づいて決定されます。変換は、ファイルがAPI経由でBoxにアップロードされ、アプリで表示するための準備が行われるときに発生します。変換は、1ファイルにつき1回だけ発生します。
 
-Customers will license appropriate levels of API calls, storage, and bandwidth
-to meet their use case. We estimate the resource allocation based on the number
-of files a customer estimates will be uploaded and converted each month. We
-offer volume discounts as customers purchase more API calls, storage, or
-bandwidth. Additional resources can be purchased as needed depending on the
-customer's use case.
+お客様には、それぞれのユースケースに合わせて適切なレベルのAPI呼び出し、ストレージ、および帯域幅のライセンスが付与されます。毎月アップロードおよび変換されるファイルの数としてお客様が想定している値に基づいて、リソースの割り当てが見積もられます。お客様がより多くのAPI呼び出し、ストレージ、または帯域幅を購入すると、ボリュームディスカウントが提供されます。お客様のユースケースによっては、必要に応じて追加リソースを購入することもできます。
 
-For example, if a customer estimates that they will be converting 250,000
-documents per month, it will require 1,250,000 API calls, 110 GB of total
-storage, and 1.637 TB of bandwidth per month. These calculations are based on
-common patterns in our API usage. Once we have an estimate of the number of
-files they will be converting, we can generate a quote.
+たとえば、お客様が、毎月25万部のドキュメントを変換すると想定している場合、125万回のAPI呼び出し、110GBの合計ストレージ、および1.637TBの帯域幅が毎月必要になります。この計算は、API使用状況の一般的なパターンに基づいています。変換されるファイルの数を想定すると、見積りを生成できます。
 
-INPUT - Estimated Monthly Conversions: 250,000
+入力 - 推定される月間の変換数: 250,000
 
-Monthly API Calls: 1,250,000
-Total Storage (TB): 0.110
-Monthly Bandwidth (TB): 1.637
-List Price Total: $3,297 per month
+月間のAPI呼び出し数: 1,250,000、合計ストレージ(TB): 0.110、月間の帯域幅(TB): 1.637、価格合計: 3,297ドル/月
 
 [file_types]: https://community.box.com/t5/Migrating-and-Previewing-Content/Viewing-Different-File-Types-Supported-in-Box-Content-Preview/ta-p/327

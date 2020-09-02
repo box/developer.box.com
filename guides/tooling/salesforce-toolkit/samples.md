@@ -19,18 +19,17 @@ previous_page_id: tooling/salesforce-toolkit/methods
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tooling/salesforce-toolkit/samples.md
 ---
-# Code Samples
+# コードサンプル
 
-## Generic Method
+## 汎用メソッド
 
-The following code will create metadata on a Box folder in Salesforce using the
-generic Toolkit method:
+以下のコードは、汎用Toolkitメソッドを使用してSalesforceのBoxフォルダにメタデータを作成します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='Apex'>
+<Tab title="Apex">
 
 ```java
 // Instantiate the Toolkit object
@@ -67,15 +66,15 @@ HttpResponse response = toolkit.sendRequest(request);
 
 <!-- markdownlint-enable line-length -->
 
-## New Folder Association
+## 新しいフォルダの関連付け
 
-The following code will create a folder for a specific Salesforce record Id:
+以下のコードは、特定のSalesforceレコードID用のフォルダを作成します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='Apex'>
+<Tab title="Apex">
 
 ```java
 // Instantiate the Toolkit object
@@ -100,16 +99,15 @@ boxToolkit.commitChanges();
 
 <!-- markdownlint-enable line-length -->
 
-## Folder Templates
+## フォルダテンプレート
 
-The following code will create a folder for a record, create subfolders (folder
-template), and collaborate the current user:
+以下のコードは、レコード用のフォルダを作成し、サブフォルダ(フォルダテンプレート)を作成して現在のユーザーとコラボレーションします。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='Apex'>
+<Tab title="Apex">
 
 ```java
 // Instantiate the Toolkit object

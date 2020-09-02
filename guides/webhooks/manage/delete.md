@@ -21,37 +21,33 @@ previous_page_id: webhooks/manage/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/delete.md
 ---
-# Delete Webhook
+# Webhookの削除
 
-To remove a webhook from a file or folder in Box you will need to provide our
-API with the ID of the webhook to remove.
+Box上のファイルやフォルダからWebhookを削除するには、削除するWebhookのIDをAPIに渡す必要があります。
 
-<Samples id='delete_webhooks_id'>
+<Samples id="delete_webhooks_id">
 
 </Samples>
 
-<Message type='notice'>
+<Message type="notice">
 
 # Webhook ID
 
-To find the ID of the webhook, use the [List all webhooks][1] endpoint.
+WebhookのIDを調べるには、[すべてのWebhookのリストを取得][1]エンドポイントを使用します。
 
 </Message>
 
-## Additional reasons for deletion
+## その他の削除の理由
 
-Using the API is not the only way a webhook can be deleted.
+APIを使用していなくても、Webhookが削除される場合があります。
 
-The following reasons can cause webhooks to be deleted.
+Webhookは以下の理由で削除される可能性があります。
 
-1. Deleting a Box application deletes all webhooks associated with the application.
-2. Deleting all access tokens associated with a webhook.
-3. If webhooks could not be delivered for a system-determined amount of time
-   then Box automatically removes the webhook.
+1. Boxアプリケーションを削除すると、アプリケーションに関連付けられているすべてのWebhookが削除されます。
+2. Webhookに関連付けられているすべてのアクセストークンを削除した場合。
+3. システムで決められている時間内にWebhookを配信できなかった場合、BoxによってそのWebhookが自動的に削除されます。
 
-In all of these cases Box would send a webhook payload with the `WEBHOOK.DELETED`
-event name to the notification URL. In this case the body of the payload will
-include the following additional information.
+これらのすべてのケースで、Boxは`WEBHOOK.DELETED`イベント名を含むWebhookペイロードを通知URLに送信します。この場合、ペイロードの本体には以下の追加情報が含まれます。
 
 ```json
 "additional_info": {

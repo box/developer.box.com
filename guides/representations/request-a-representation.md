@@ -21,11 +21,9 @@ previous_page_id: representations/list-all-representations
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/representations/request-a-representation.md
 ---
-# Request Desired Representation
+# 目的のレプリゼンテーションのリクエスト
 
-To select a specific representation call the [`GET /files/:id`][get_files_id]
-endpoint with a [`x-rep-hints`][x-rep-hints]-header defining the
-required representation format.
+特定のレプリゼンテーションを選択するには、必要なレプリゼンテーション形式を定義する[`x-rep-hints`][x-rep-hints]ヘッダーを使用して[`GET /files/:id`][get_files_id]エンドポイントを呼び出します。
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -33,11 +31,9 @@ curl https://api.box.com/2.0/files/123?fields=representations \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-## Multiple dimensions
+## 複数のサイズ
 
-Some formats will require the `dimensions` to be passed in to select a
-specific size. This can be achieved by appending the `dimensions` to the
-header.
+形式によっては、特定のサイズを選択するために、`dimensions`を渡すことが必要になる場合があります。そのためには、ヘッダーに`dimensions`を追加します。
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -45,10 +41,9 @@ curl https://api.box.com/2.0/files/123?fields=representations \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-## Multiple representations
+## 複数のレプリゼンテーション
 
-Multiple representations can be fetched by chaining the different
-types in the `x-rep-hints`-header.
+`x-rep-hints`ヘッダーでさまざまなタイプを続けて指定することで、複数のレプリゼンテーションを取得できます。
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
@@ -56,10 +51,9 @@ curl https://api.box.com/2.0/files/123?fields=representations \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-## API Response
+## API応答
 
-This API call will result in one or more representations with a `url_template`
-value that includes a `{+asset_path}` value.
+このAPI呼び出しの結果、`{+asset_path}`値を含む`url_template`値を使用して1つ以上のレプリゼンテーションが返されます。
 
 ```json
 {
@@ -86,13 +80,12 @@ value that includes a `{+asset_path}` value.
 }
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-The `url_template` in this response is an **opaque** URL. This URL format
-might change over time and no assumptions should be made about its format
-except for the presence of the `{+asset_path}` variable.
+この応答の`url_template`は、**不明瞭な**URLです。このURL形式は、時間が経つと変わる可能性があるため、`{+asset_path}`変数の有無を除き、この形式についてさまざまな憶測を立てないようにしてください。
 
 </Message>
 
 [get_files_id]: endpoint://get-files-id
+
 [x-rep-hints]: endpoint://get-files-id#param-x-rep-hints

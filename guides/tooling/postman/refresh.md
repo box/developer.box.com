@@ -20,108 +20,78 @@ source_url: >-
 ---
 <!-- alex disable postman-postwoman -->
 
-# Refresh an Access Token
+# アクセストークンの更新
 
-To authenticate to the Box API the Postman collection will use an **Access
-Token** to identify you, the **User** to the API. Access tokens expire after 1
-hour and therefore need to be refreshed every hour.
+Box APIから認証を受けるために、Postmanコレクションは**アクセストークン**を使用してAPIに対して**ユーザー**の本人確認を行います。アクセストークンは1時間で有効期限が切れるため、1時間ごとに更新する必要があります。
 
-## Using a Refresh Token
+## 更新トークンの使用
 
-If you set up your own **Box App** in [step
-2](g://tooling/postman/quick-start/configure-box-app) of the **Postman Quick
-Start** guide then your Box environment in Postman should include a valid
-`client_id` and `client_secret`. These client credentials and the
-`refresh_token` can be used to create a new value for the `access_token`.
+**Postmanクイックスタート**ガイドの[手順2](g://tooling/postman/quick-start/configure-box-app)で独自の**Boxアプリ**を設定した場合、PostmanのBox環境には有効な`client_id`と`client_secret`を用意する必要があります。これらのクライアント資格情報と`refresh_token`を使用すると、`access_token`の新しい値を作成できます。
 
 <ImageFrame border center shadow>
 
-![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
+![Postman環境で有効なクライアントIDと機密コード](./quick-start/inspect-environment.png)
 
 </ImageFrame>
 
-To refresh the access token, select the **Refresh access token** API call within
-the **Authorization** folder of the Postman collection.
+アクセストークンを更新するには、Postmanコレクションの\[**Authorization**]フォルダ内で\[**Refresh access token**] API呼び出しを選択します。
 
 <ImageFrame border center shadow>
 
-![The refresh access token API call in Postmam](./quick-start/select-refresh-access-token.png)
+![PostmamのRefresh access token API呼び出し](./quick-start/select-refresh-access-token.png)
 
 </ImageFrame>
 
-Next, hit the **Send** button to request a new `access_token`.
+次に、\[**Send**]ボタンをクリックして新しい`access_token`をリクエストします。
 
 <ImageFrame border center shadow>
 
-![Postman Send button](./quick-start/postman-send-button.png)
+![Postmanの\[Send\]ボタン](./quick-start/postman-send-button.png)
 
 </ImageFrame>
 
-At the end of this API call, your environment should have a new `access_token`
-and `refresh_token` value, and you should be able to make any of the other API
-calls.
+このAPI呼び出しが終了すると、環境に`access_token`と`refresh_token`の新しい値が作成され、その他のAPI呼び出しを実行できるようになります。
 
 <Message warning>
 
-Refresh tokens are only valid once and need to be used within 60 days. If used
-within 60 days, a new one is created together with a new access token and the
-60 day period starts again.
+更新トークンは1回のみ有効で、60日以内に使用する必要があります。60日以内に使用すれば、新しい更新トークンが新しいアクセストークンとともに作成され、そこから再び60日の有効期間が始まります。
 
-A refresh token expires if not used within 60 days, after which a new refresh token
-and access token need to be requested by going through the [Quick
-Start](g://tooling/postman/quick-start) guide again.
+更新トークンは60日以内に使用されなければ期限切れになります。その後は、[クイックスタート](g://tooling/postman/quick-start)ガイドの手順を再度実行して、新しい更新トークンとアクセストークンをリクエストする必要があります。
 
 </Message>
 
-## Automatically refreshing an access token
+## アクセストークンの自動更新
 
-The Postman collection can automatically detect an expired `access_token` value
-and request a new one by using the `refresh_token`. By default this feature is
-enabled but it can be turned off by setting the `enable_auto_refresh_access_token`
-Postman environment variable to `false`.
+Postmanコレクションは自動的に期限切れの`access_token`値を検出し、`refresh_token`を使用して新しい値をリクエストできます。この機能は、デフォルトで有効になっていますが、`enable_auto_refresh_access_token` Postman環境変数を`false`に設定することで無効にできます。
 
-To set this value, hit the edit button in the top right of your Box Postman
-environment variables.
+この値を設定するには、Box Postman環境変数の右上にある編集ボタンをクリックします。
 
 <ImageFrame border center shadow>
 
-![A valid client ID and secret in the Postman environment](./quick-start/inspect-environment.png)
+![Postman環境で有効なクライアントIDと機密コード](./quick-start/inspect-environment.png)
 
 </ImageFrame>
 
-Find the row in the table for the `enable_auto_refresh_access_token` variable
-and set the **Current Value** to `true`. Next, click **Update** to save your
-changes.
+テーブルで`enable_auto_refresh_access_token`変数の行を見つけて、\[**Current Value**]を`true`に設定します。次に、\[**Update**]をクリックして変更を保存します。
 
-From now on, any time you make any API call the **Postman collection** will
-check if your `access_token` has expired and try to refresh it automatically
-before making your desired API call.
+その後、API呼び出しを実行するたびに、**Postmanコレクション**は`access_token`の有効期限が切れているかどうかを確認し、目的のAPI呼び出しを行う前に自動的に更新しようとします。
 
-## Re-authenticating your Postman collection
+## Postmanコレクションの再認証
 
-In some cases you might need to re-authenticate your Postman collection by going
-through the [Quick Start](g://tooling/postman/quick-start) guide again. A common
-reason for this is because you haven't used the Postman collection in over 60
-days and your `refresh_token` has expired.
+[クイックスタート](g://tooling/postman/quick-start)ガイドの手順を再び実行することで、Postmanコレクションの再認証が必要になる場合があります。そのよくある理由として、Postmanコレクションを使用しないまま60日が経過し、`refresh_token`の有効期限が切れたことが挙げられます。
 
-To re-authenticate, first remove your old **Box Postman environment**. To do so,
-click the little **gear** icon in the top right and select your environment from
-the list.
+再認証するためには、まず古い**Box Postman環境**を削除します。これには、右上の小さな**歯車**アイコンをクリックし、リストからその環境を選択します。
 
 <ImageFrame border center shadow>
 
-![Delete the Box Postman environment](./quick-start/delete-environment.png)
+![Box Postman環境の削除](./quick-start/delete-environment.png)
 
 </ImageFrame>
 
-Select **Delete** to delete the environment. Then, restart the Postman [Quick
-Start](g://tooling/postman/quick-start) guide again from the start.
+\[**Delete**]を選択して環境を削除します。その後、Postman[クイックスタート](g://tooling/postman/quick-start)ガイドの手順を再び最初から実行します。
 
 <Message warning>
 
-When re-importing the **Box Postman Collection** for a second time the Postman
-app might ask you to import the new collection as a copy or replace the old
-one. We recommend importing it as a copy in order to preserve any custom
-configuration you might have made to any of the APIs.
+**Box Postmanコレクション**の2回目のインポート時には、Postmanアプリで、新しいコレクションをコピーとしてインポートするか、古いコレクションを置き換えるかを確認される場合があります。APIに対してこれまでに行ったカスタム設定を保持するため、コピーとしてインポートすることをお勧めします。
 
 </Message>

@@ -22,37 +22,26 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/share-file.md
 ---
-# Share File With User
+# ユーザーとのファイルの共有
 
-To share a file with a user, create a collaboration using the user ID or email
-address, the ID of the file, and the role or permissions level the user should
-have when accessing the file. The collaboration roles are `editor`, `viewer`,
-`previewer`, `uploader`, `previewer uploader`, `viewer uploader`, `co-owner`,
-or `owner`. For a full description of each role, please refer to our
-[support documentation].
+ファイルをユーザーと共有するには、ユーザーIDまたはメールアドレス、ファイルのIDのほか、ユーザーがファイルにアクセスする際に必要なロールまたは権限を使用してコラボレーションを作成します。コラボレーションロールは`editor`、`viewer`、`previewer`、`uploader`、`previewer uploader`、`viewer uploader`、`co-owner`、または`owner`です。各ロールについての詳しい説明は、Boxの[サポートドキュメント][support documentation]を参照してください。
 
-<Samples id='post_collaborations' >
+<Samples id="post_collaborations">
 
 </Samples>
 
 <Message>
 
-The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
-`previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
-description of each role, please refer to our [support documentation].
+コラボレーションロールは`editor`、`viewer`、`previewer`、`uploader`、`previewer uploader`、`viewer uploader`、`co-owner`、または`owner`です。各ロールについての詳しい説明は、Boxの[サポートドキュメント][support documentation]を参照してください。
 
 </Message>
 
-## Nested objects
+## ネストされたオブジェクト
 
-When creating a collaboration there are two nested objects within the request
-body: `accessible_by` and `item`.
+コラボレーションの作成時には、リクエスト本文に`accessible_by`と`item`という2つのネストされたオブジェクトを使用します。
 
-The `accessible_by` object specifies who the item should be shared with and
-includes a group `id` and the `type`. The `type` field should always be set to
-`user`.
+`accessible_by`オブジェクトは、この項目の共有相手を指定し、グループ`id`と`type`を含みます。`type`フィールドは常に`user`に設定する必要があります。
 
-The `item` object specifies what is being shared. It includes a `type` field
-which should be set as `file` and an `id` for that file.
+`item`オブジェクトは、共有する項目を指定します。このオブジェクトには、`file`として設定する必要がある`type`フィールドと、そのファイルの`id`フィールドがあります。
 
 [support documentation]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144

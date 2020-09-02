@@ -20,24 +20,22 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/best-practices/mobile-deep-linking.md
 ---
-# Mobile Deep Linking
+# モバイルディープリンク
 
-Box’s mobile applications support deep linking into folder and file objects.
-From a web page or native app it is possible to deep link to open an object
-directly in Box.
+Boxのモバイルアプリでは、フォルダオブジェクトとファイルオブジェクトへのディープリンクがサポートされています。ウェブページまたはネイティブアプリからディープリンクを使用してBoxで直接オブジェクトを開くことができます。
 
-The following URLs are supported in Box’s mobile applications:
+Boxのモバイルアプリでは、以下のURLがサポートされています。
 
 <!-- markdownlint-disable line-length -->
 
-| Application     | Object Type | Deep Link URL                          | iOS & Android |
-| --------------- | ----------- | -------------------------------------- | ------------- |
-| **Box**         | Folder      | `boxapp://folder?id=[folderid]`        | Version 3.7+  |
-|                 | File        | `boxapp://file?id=[fileid]`            |               |
-|                 | Shared Link | `boxapp://sharedlink?url=[sharedlink]` |               |
-|                 |             |                                        |               |
-| **Box for EMM** | Folder      | `boxemm://folder?id=[folderid]`        | Version 3.7+  |
-|                 | File        | `boxemm://file?id=[fileid]`            |               |
-|                 | Shared Link | `boxemm://sharedlink?url=[sharedlink]` |               |
+| アプリケーション        | オブジェクトタイプ | ディープリンクのURL                            | iOSおよびAndroid |
+| --------------- | --------- | -------------------------------------- | ------------- |
+| **Box**         | フォルダ      | `boxapp://folder?id=[folderid]`        | バージョン3.7以降    |
+|                 | ファイル      | `boxapp://file?id=[fileid]`            |               |
+|                 | 共有リンク     | `boxapp://sharedlink?url=[sharedlink]` |               |
+|                 |           |                                        |               |
+| **Box for EMM** | フォルダ      | `boxemm://folder?id=[folderid]`        | バージョン3.7以降    |
+|                 | ファイル      | `boxemm://file?id=[fileid]`            |               |
+|                 | 共有リンク     | `boxemm://sharedlink?url=[sharedlink]` |               |
 
 <!-- markdownlint-enable line-length -->

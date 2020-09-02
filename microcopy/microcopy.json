@@ -1,66 +1,66 @@
-{
+﻿{
   // The name of the English locale, in this locale
-  "locales.names.en": "English",
+  "locales.names.en": "英語",
   // The name of the Japanese locale, in this locale
-  "locales.names.jp": "Japanese",
+  "locales.names.jp": "日本語",
   // The HTML <title> of the site, as shown in search results
-  "head.title": "Box Developer Documentation",
+  "head.title": "Box開発者向けドキュメントポータル",
   // The HTML <meta> description of a site, as shownin search results.
-  "head.description": "Explore the Box APIs and SDKs to use for app development,\nAPI documentation, developer support resources, and access\nthe Box Developer Console",
+  "head.description": "ここではアプリの開発に使用できるBoxのAPIやSDK、\nAPIドキュメント、開発者向けサポートリソースを探したり、\nBox開発者コンソールにアクセスしたりすることができます",
   // The HTML <meta> tags for a site, used for SEO purposes.
-  "head.keywords": "box,platform,api,sdk,files,folders",
+  "head.keywords": "box,プラットフォーム,api,sdk,ファイル,フォルダ",
   // The twitter account for Box Platform in this localeas used in by Twitter cards when the site is shared.
   "head.twitter": "@boxplatform",
   // A message to show that the site has updated in the background
-  "refresh_notification.message": "This site has updated in the background",
+  "refresh_notification.message": "このサイトはバックグラウンドで更新されています",
   // The text on the link to refresh the page
-  "refresh_notification.link_text": "Refresh",
+  "refresh_notification.link_text": "更新",
   // Text to signify that more content is available byclicking this link or button
-  "messages.read_more": "Read more",
+  "messages.read_more": "もっと見る",
   // Describes the base-resource variant
-  "messages.resource_variant_descriptions.base": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **base** variant represent\nthe default fields that are always returned when using the `fields`\nquery parameter, additional to the fields specified in the\nparameter.",
+  "messages.resource_variant_descriptions.base": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n**基本**バリアントに含まれるフィールドは、`fields`クエリパラメータで指定されたフィールドのほかに、そのパラメータを使用しているときに必ず返されるデフォルトのフィールドを表します。",
   // Describes the mini-resource variant
-  "messages.resource_variant_descriptions.mini": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **mini** variant are generally\nreturned when the resource is nested within the response for\nanother resource.",
+  "messages.resource_variant_descriptions.mini": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n通常、**簡易**バリアントに含まれるフィールドは、このリソースが別のリソースの応答内にネストされている場合に返されます。",
   // Describes the standard-resource variant
-  "messages.resource_variant_descriptions.standard": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **standard** variant are generally\nreturned when the resource is requested via its own API endpoints.\nFor example, when retrieving a file by ID, it will return\nthese fields unless the `fields` parameter has been specified.",
+  "messages.resource_variant_descriptions.standard": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n通常、**標準**バリアントに含まれるフィールドは、固有のAPIエンドポイントを介してこのリソースがリクエストされたときに返されます。\nたとえば、`fields`パラメータが指定されていない場合、IDでファイルを取得すると、これらのフィールドが返されます。",
   // Describes the full-resource variant
-  "messages.resource_variant_descriptions.full": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
+  "messages.resource_variant_descriptions.full": "このリソースにはAPIの使用時に発生する可能性があるいくつかのバリエーションがあります。\n\n**詳細**バリアントに含まれるフィールドは、`fields`パラメータをサポートするAPIエンドポイントによって返すことができます。たとえば、IDでファイルを取得するときに、`fields`リクエストパラメータを`id,type`に設定すると、これらのフィールドのみがAPI応答で返されます。",
   // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
-  "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
+  "messages.welcome_message": "最新情報\n===========\n\n開発者向けドキュメントが大幅にアップデートされました。現時点ではリファレンスドキュメントのみをご覧いただけますが、\nその他のドキュメントも順次このサイトに移行する予定です。\n\nドキュメントに関してお気付きの点やご意見がございましたら、\n[Twitter][1]または[GitHub][2]までお知らせください。\n\n[1]: https:\/\/twitter.com\/boxplatform\n[2]: https:\/\/github.com\/box\/developer.box.com",
   // The title for the API referene page
-  "reference.titles.api_reference": "API Reference",
+  "reference.titles.api_reference": "APIリファレンス",
   // The title for the resources page
-  "reference.titles.other_resources": "Resources",
+  "reference.titles.other_resources": "リソースの一覧",
   // The title for the HTTP Request section of an endpoint
-  "reference.titles.request": "Request",
+  "reference.titles.request": "リクエスト",
   // The title for the HTTP Response section of an endpoint
-  "reference.titles.response": "Response",
+  "reference.titles.response": "レスポンス",
   // The title for the section of an endpoint that shows ahow to make requests to our API
-  "reference.titles.request_example": "Request Example",
+  "reference.titles.request_example": "リクエストの例",
   // The title for the section of an endpoint that showswhat response our API will return
-  "reference.titles.response_example": "Response Example",
+  "reference.titles.response_example": "レスポンスの例",
   // The title for the section of an endpoint that showsa live API response created with an API explorer
-  "reference.titles.response_output": "Output",
+  "reference.titles.response_output": "出力",
   // The title for the section of a resource that showswhat a typical resource looks like
-  "reference.titles.resource_example": "Response Example",
+  "reference.titles.resource_example": "レスポンスの例",
   // The label for a button that allows a user tocopy (and then paste) a value
-  "reference.buttons.copy": "Copy",
+  "reference.buttons.copy": "コピー",
   // Describes all endpoint parameters that are partof the URL path
-  "reference.parameter_groups.path": "Path Parameters",
+  "reference.parameter_groups.path": "パスパラメータ",
   // Describes all endpoint parameters that are partof the URL query
-  "reference.parameter_groups.query": "Query Parameters",
+  "reference.parameter_groups.query": "クエリパラメータ",
   // Describes all endpoint parameters that aresent in the HTTP body
-  "reference.parameter_groups.body": "Request Body",
+  "reference.parameter_groups.body": "リクエスト本文",
   // Describes all endpoint parameters that aresent in the HTTP headers
-  "reference.parameter_groups.header": "Request Headers",
+  "reference.parameter_groups.header": "リクエストヘッダー",
   // Describes a specific parameter that issent in the URL path
-  "reference.parameter_location.path": "in path",
+  "reference.parameter_location.path": "パス内",
   // Describes a specific parameter that issent in the URL query
-  "reference.parameter_location.query": "in query",
+  "reference.parameter_location.query": "クエリ内",
   // Describes a specific parameter that is sentin the HTTP body
-  "reference.parameter_location.body": "in body",
+  "reference.parameter_location.body": "本文内",
   // Describes a specific parameter that issent in a HTTP header
-  "reference.parameter_location.header": "in header",
+  "reference.parameter_location.header": "ヘッダー内",
   // Describes a boolean parameter type
   "reference.parameter_types.boolean": "boolean",
   // Describes a string parameter type
@@ -72,41 +72,41 @@
   // Describes an associative array (dictionary, hash,key value pairs) parameter type
   "reference.parameter_types.associative_array": "associative array",
   // Describes a date-time parameter type
-  "reference.parameter_types.date-time": "date-time",
+  "reference.parameter_types.date-time": "日時",
   // Describes a 64-bit integer parameter type
-  "reference.parameter_types.int64": "64-bit integer",
+  "reference.parameter_types.int64": "64ビット整数",
   // Describes a 32-bit integer parameter type
   "reference.parameter_types.int32": "int32",
   // Describes a parameter type formatted as an email
-  "reference.parameter_types.email": "email",
+  "reference.parameter_types.email": "メール",
   // Describes an integer parameter type
   "reference.parameter_types.integer": "integer",
   // Describes a parameter formatted as a UUID
   "reference.parameter_types.uuid": "UUID",
   // The label for an example
-  "reference.parameter_details.example": "example",
+  "reference.parameter_details.example": "例",
   // The label for an example key
-  "reference.parameter_details.example_key": "example key",
+  "reference.parameter_details.example_key": "キーの例",
   // The label for an optional parameter
-  "reference.parameter_details.optional": "optional",
+  "reference.parameter_details.optional": "省略可能",
   // The label for a required parameter
-  "reference.parameter_details.required": "required",
+  "reference.parameter_details.required": "必須",
   // The label for a conditionally required param
-  "reference.parameter_details.conditionally_required": "conditionally required",
+  "reference.parameter_details.conditionally_required": "条件付きで必須",
   // The label for a default parameter value
-  "reference.parameter_details.default": "Default",
+  "reference.parameter_details.default": "デフォルト",
   // The label for the max length of a parameter value
-  "reference.parameter_details.max_length": "Max Length",
+  "reference.parameter_details.max_length": "最大長",
   // The label for the range of a parameter value
-  "reference.parameter_details.range": "Range",
+  "reference.parameter_details.range": "範囲",
   // Describes it when there is no content type as thereis no body request or response body
   "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
-  "reference.enum.value_is_always": "Value is always",
+  "reference.enum.value_is_always": "次の値に固定:",
   // Describes the situation where a parameter can be oneor many specific values
-  "reference.enum.value_is_any_of": "Value is any of",
+  "reference.enum.value_is_any_of": "次の値のいずれか:",
   // Describes the situation where a parameter canbe only one of many values
-  "reference.enum.value_is_one_of": "Value is one of",
+  "reference.enum.value_is_one_of": "次の値のいずれか1つ:",
   // Describes the Node JS programming language when selectinga code sample - DO NOT TRANSLATE
   "reference.environments.node": "Node",
   // Describes the .NET programming language when selectinga code sample - DO NOT TRANSLATE
@@ -122,289 +122,289 @@
   // Describes the iOS programming language whenselecting a code sample - DO NOT TRANSLATE
   "reference.environments.ios": "iOS",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
-  "reference.resource_variants.base": "Base",
+  "reference.resource_variants.base": "基本",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource
-  "reference.resource_variants.mini": "Mini",
+  "reference.resource_variants.mini": "簡易",
   // Describes the standard set of fields that are returned for aresource in an API response
-  "reference.resource_variants.standard": "Standard",
+  "reference.resource_variants.standard": "標準",
   // Describes the full set of fields that can be returnedfor a resource in an API response
-  "reference.resource_variants.full": "Full",
+  "reference.resource_variants.full": "詳細",
   // Describes how a request header name is not case sensitive
-  "reference.tooltips.header": "Header names are never case sensitive",
+  "reference.tooltips.header": "ヘッダー名は大文字と小文字が区別されません",
   // The title for the guides section
-  "guides.titles.guides": "Guides",
+  "guides.titles.guides": "ガイド",
   // A title for a set of links describing things to read before
-  "guides.titles.prerequisites": "Prerequisites",
+  "guides.titles.prerequisites": "最初に読む",
   // A title for usage on a block of guides, marking the index/overview page
-  "guides.titles.overview": "Overview",
+  "guides.titles.overview": "概要",
   // A title for other content
-  "guides.titles.more": "More",
+  "guides.titles.more": "詳細",
   // A title for related guides to this category
-  "guides.titles.related_guides": "Related Guides",
+  "guides.titles.related_guides": "関連するガイド",
   // A title for generic related content
-  "guides.titles.related": "Related",
+  "guides.titles.related": "関連記事",
   // A title for a quick start guide
-  "guides.titles.quick_start_guide": "Quick Start",
+  "guides.titles.quick_start_guide": "クイックスタート",
   // A title for quick guides
-  "guides.titles.quick_start_guides": "Quick Starts",
+  "guides.titles.quick_start_guides": "クイックスタート",
   // A title for a set of links describing related API endpoints
-  "guides.titles.api_endpoints": "Related APIs",
+  "guides.titles.api_endpoints": "関連するAPI",
   // A title for a set of links describing related API endpoints
-  "guides.titles.endpoints": "Endpoints",
+  "guides.titles.endpoints": "エンドポイント",
   // A title for a set of links describing related API resources
-  "guides.titles.resources": "Related Resources",
+  "guides.titles.resources": "関連するリソース",
   // A short name for a group of guides
-  "guides.titles.category": "Category",
+  "guides.titles.category": "カテゴリ",
   // A short name for a group of guides
-  "guides.titles.categories": "Categories",
+  "guides.titles.categories": "カテゴリ",
   // A short name for a sub group of guides
-  "guides.titles.subcategory": "Subcategory",
+  "guides.titles.subcategory": "サブカテゴリ",
   // A short name for a sub group of guides
-  "guides.titles.subcategories": "Subcategories",
+  "guides.titles.subcategories": "サブカテゴリ",
   // A short name for a single guide
-  "guides.titles.guide": "Guide",
+  "guides.titles.guide": "ガイド",
   // The text for a link to edit the source of the page
-  "guides.titles.edit_source": "Edit this page",
+  "guides.titles.edit_source": "このページを編集",
   // The text for a link to the next step in a multi-step guide
-  "guides.titles.next": "Next",
+  "guides.titles.next": "次へ",
   // The text for a link to the previous step in a multi-step guide
-  "guides.titles.previous": "Previous",
+  "guides.titles.previous": "前へ",
   // The text for a link to the first step in a multi-step guide
-  "guides.titles.start": "Start",
+  "guides.titles.start": "開始",
   // The text for a link that tells a user to start learning
-  "guides.titles.learn_more": "Learn more",
+  "guides.titles.learn_more": "詳細を表示",
   // The text for list that represent the sections on this page
-  "guides.titles.on_this_page": "On this page",
+  "guides.titles.on_this_page": "このページの他のセクション",
   // The text for the link to the old Get Started guides
-  "headers.primary.links.get_started.text": "Quick Start",
+  "headers.primary.links.get_started.text": "クイックスタート",
   // The URL to the old Get Started guides
-  "headers.primary.links.get_started.url": "/guides/applications/",
+  "headers.primary.links.get_started.url": "\/guides\/applications\/",
   // The text for the link to the old generic guides
-  "headers.primary.links.guides.text": "Guides",
+  "headers.primary.links.guides.text": "ガイド",
   // The URL to the old generic guides
-  "headers.primary.links.guides.url": "/guides/",
+  "headers.primary.links.guides.url": "\/guides\/",
   // The text for the link the new API Reference docs
-  "headers.primary.links.api_reference.text": "API Reference",
+  "headers.primary.links.api_reference.text": "APIリファレンス",
   // The url to the root of the reference - DO NOT TRANSLATE
-  "headers.primary.links.api_reference.url": "/reference/",
+  "headers.primary.links.api_reference.url": "\/reference\/",
   // The text for the link to the old page on SDKs
-  "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
+  "headers.primary.links.sdks_and_tools.text": "SDKとツール",
   // The URL to the new page on SDKs - DO NOT TRANSLATE
-  "headers.primary.links.sdks_and_tools.url": "/sdks-and-tools/",
+  "headers.primary.links.sdks_and_tools.url": "\/sdks-and-tools\/",
   // The text for the link to the old page on SDKs
-  "headers.primary.links.support.text": "Support",
+  "headers.primary.links.support.text": "サポート",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
-  "headers.primary.links.support.url": "/support/",
+  "headers.primary.links.support.url": "\/support\/",
   // A longer description of getting to the developer console
-  "headers.primary.buttons.dashboard.text": "Go to Dev Console",
+  "headers.primary.buttons.dashboard.text": "開発者コンソールに移動",
   // The URL to the developer console
-  "headers.primary.buttons.dashboard.url": "https://account.box.com/developers/services",
+  "headers.primary.buttons.dashboard.url": "https:\/\/account.box.com\/developers\/services",
   // The text for the link to the developer console
-  "headers.primary.buttons.console.text": "My Apps",
+  "headers.primary.buttons.console.text": "マイアプリ",
   // The URL to the developer console
-  "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
+  "headers.primary.buttons.console.url": "https:\/\/account.box.com\/developers\/services",
   // The text for the link to the developer signup
-  "headers.primary.buttons.signup.text": "Sign up",
+  "headers.primary.buttons.signup.text": "サインアップ",
   // The URL to the developer signup - DO NOT TRANSLATE
-  "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
+  "headers.primary.buttons.signup.url": "https:\/\/account.box.com\/signup\/n\/developer#ty9l3",
   // The HTML alt-text for the site logo
-  "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
+  "headers.secondary.images.logo.alt_text": "Box開発者向けドキュメント",
   // A short label to signify that this page is new
-  "headers.secondary.labels.new": "new",
+  "headers.secondary.labels.new": "新規",
   // The text for the link to the developer blog
-  "headers.secondary.links.blog.text": "Blog",
+  "headers.secondary.links.blog.text": "ブログ",
   // The URL to the developer blog
-  "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
+  "headers.secondary.links.blog.url": "https:\/\/medium.com\/box-developer-blog",
   // The text for the link to the developer forum
-  "headers.secondary.links.forum.text": "Forum",
+  "headers.secondary.links.forum.text": "フォーラム",
   // The URL to the developer forum
-  "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
+  "headers.secondary.links.forum.url": "https:\/\/community.box.com\/t5\/Platform-and-Development-Forum\/bd-p\/DeveloperForum",
   // The text for the link to the developer feedback site
-  "headers.secondary.links.feedback.text": "Feedback",
+  "headers.secondary.links.feedback.text": "フィードバック",
   // The URL to the developer feedback site
-  "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
+  "headers.secondary.links.feedback.url": "https:\/\/box.uservoice.com\/forums\/909778-product-feedback?category_id=330838",
   // A short title for the dropdown to select a documentation type on mobile
-  "headers.secondary.dropdowns.docs": "Docs",
+  "headers.secondary.dropdowns.docs": "ドキュメント",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
-  "headers.secondary.dropdowns.api_reference": "API Reference",
+  "headers.secondary.dropdowns.api_reference": "APIリファレンス",
   // A short title for the dropdown to select an external link on mobile
-  "headers.secondary.dropdowns.elsewhere": "Elsewhere",
+  "headers.secondary.dropdowns.elsewhere": "外部サイトへのリンク",
   // Label for the log in button
-  "explorer.buttons.login": "Log in",
+  "explorer.buttons.login": "ログイン",
   // Label for the log in button
-  "explorer.buttons.logout": "Log out",
+  "explorer.buttons.logout": "ログアウト",
   // Label for the button to run a live API call
-  "explorer.buttons.run": "Make API call",
+  "explorer.buttons.run": "API呼び出しの実行",
   // Label for the button to start the API explorer
-  "explorer.buttons.try": "Try this API",
+  "explorer.buttons.try": "このAPIを試す",
   // Label for the button to close the API explorer
-  "explorer.buttons.close": "Close the API explorer",
+  "explorer.buttons.close": "APIエクスプローラを閉じる",
   // A label to expand the code, making it full screen
-  "explorer.buttons.expand": "Expand",
+  "explorer.buttons.expand": "拡大",
   // A label to collapse a viewing, making it smaller.
-  "explorer.buttons.collapse": "Collapse",
+  "explorer.buttons.collapse": "縮小",
   // Provides a short intro to the API explorer
-  "explorer.messages.intro": "You can now try out some of our APIs live, right\nhere in the documentation.",
+  "explorer.messages.intro": "このドキュメント内で一部のAPIを試せるようになりました。",
   // Short 1-sentence message to tell a user to fill in all params
-  "explorer.messages.missing_params": "Please fill in all required parameters",
+  "explorer.messages.missing_params": "必須パラメータをすべて指定してください。",
   // Short 1-sentence message to tell a user to that a response was received
-  "explorer.messages.response_received": "Response received",
+  "explorer.messages.response_received": "レスポンスを受信しました",
   // Describes the API explorer response
-  "explorer.titles.response": "API Response",
+  "explorer.titles.response": "APIレスポンス",
   // Describes the HTTP headers returned by the API explorer
-  "explorer.titles.headers": "Response Headers",
+  "explorer.titles.headers": "レスポンスヘッダー",
   // Describes the response body returned by the API explorer
-  "explorer.titles.body": "Response Body",
+  "explorer.titles.body": "レスポンス本文",
   // The text used to prompt a user to start searching
-  "search.prompt": "Search...",
+  "search.prompt": "検索...",
   // Text to indicate that search results are filtered by these types
-  "search.only_show": "Only show",
+  "search.only_show": "表示対象:",
   // A short name for the filter type to be shown in filters
-  "search.filter_types.resources": "Resources",
+  "search.filter_types.resources": "リソースの一覧",
   // A short name for the filter type to be shown in filters
-  "search.filter_types.endpoints": "Endpoints",
+  "search.filter_types.endpoints": "エンドポイント",
   // A short name for the filter type to be shown in filters
-  "search.filter_types.guides": "Guides",
+  "search.filter_types.guides": "ガイド",
   // A short name for the filter type to be shown in filters
-  "search.filter_types.params": "Params",
+  "search.filter_types.params": "パラメータ",
   // A short name for the filter type to be shown in filters
-  "search.filter_types.fields": "Fields",
+  "search.filter_types.fields": "フィールド",
   // A short name for the resource type to be shown in search results
-  "search.result_types.resource": "resource",
+  "search.result_types.resource": "リソース",
   // A short name for the endpoint type to be shown in search results
-  "search.result_types.endpoint": "endpoint",
+  "search.result_types.endpoint": "エンドポイント",
   // A short name for the guide type to be shown in search results
-  "search.result_types.guide": "guide",
+  "search.result_types.guide": "ガイド",
   // A short name for the param type to be shown in search results
-  "search.result_types.param": "param",
+  "search.result_types.param": "パラメータ",
   // A short name for the field type to be shown in search results
-  "search.result_types.field": "field",
+  "search.result_types.field": "フィールド",
   // A short name for the quick start type to be shown in results
-  "search.result_types.quick-start": "quick start",
+  "search.result_types.quick-start": "クイックスタート",
   // A title for a footer section on Box's role in the community
-  "footer.categories.company.title": "Box & Community",
+  "footer.categories.company.title": "Boxとコミュニティ",
   // A label for a link that links to the about page
-  "footer.categories.company.links.about_us.text": "About Us",
+  "footer.categories.company.links.about_us.text": "Boxについて",
   // The URL for the company's about page
-  "footer.categories.company.links.about_us.url": "https://www.box.com/about-us",
+  "footer.categories.company.links.about_us.url": "https:\/\/www.box.com\/about-us",
   // Text for a link to the Platform twitter account
   "footer.categories.company.links.twitter.text": "Platform Twitter",
   // A link to the Platform twitter account
-  "footer.categories.company.links.twitter.url": "https://twitter.com/boxplatform",
+  "footer.categories.company.links.twitter.url": "https:\/\/twitter.com\/boxplatform",
   // Text for a link to the Platform blog
-  "footer.categories.company.links.devblog.text": "Developer Blog",
+  "footer.categories.company.links.devblog.text": "開発者向けブログ",
   // A link to our developer blog
-  "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
+  "footer.categories.company.links.devblog.url": "https:\/\/medium.com\/box-developer-blog",
   // Text for a link to the engineering blog
-  "footer.categories.company.links.engblog.text": "Engineering Blog",
+  "footer.categories.company.links.engblog.text": "エンジニア向けブログ",
   // A link to our engineering blog
-  "footer.categories.company.links.engblog.url": "https://blog.box.com/category/engineering",
+  "footer.categories.company.links.engblog.url": "https:\/\/blog.box.com\/category\/engineering",
   // Text for a link to the newsletter page
-  "footer.categories.company.links.newsletter.text": "Newsletter",
+  "footer.categories.company.links.newsletter.text": "ニュースレター",
   // A link to the newsletter page
-  "footer.categories.company.links.newsletter.url": "/newsletter/",
+  "footer.categories.company.links.newsletter.url": "\/newsletter\/",
   // Text for a link to the changelog page
-  "footer.categories.company.links.changelog.text": "Changelog",
+  "footer.categories.company.links.changelog.text": "変更ログ",
   // A link to the changelog page
-  "footer.categories.company.links.changelog.url": "/changelog/",
+  "footer.categories.company.links.changelog.url": "\/changelog\/",
   // Text for a link to the github org
   "footer.categories.company.links.github.text": "GitHub",
   // Link to the github org
-  "footer.categories.company.links.github.url": "https://github.com/box",
+  "footer.categories.company.links.github.url": "https:\/\/github.com\/box",
   // Text for a link to the github community org
-  "footer.categories.company.links.github_community.text": "Community GitHub",
+  "footer.categories.company.links.github_community.text": "コミュニティGitHub",
   // Link to the github community org
-  "footer.categories.company.links.github_community.url": "https://github.com/box-community",
+  "footer.categories.company.links.github_community.url": "https:\/\/github.com\/box-community",
   // A title for a footer section on our tooling options
-  "footer.categories.tooling.title": "Tooling",
+  "footer.categories.tooling.title": "ツール",
   // Text for link to the Node SDK
   "footer.categories.tooling.links.node_sdk.text": "Node SDK",
   // link to the Node SDK
-  "footer.categories.tooling.links.node_sdk.url": "https://github.com/box/box-node-sdk",
+  "footer.categories.tooling.links.node_sdk.url": "https:\/\/github.com\/box\/box-node-sdk",
   // Text for link to the Java SDK
   "footer.categories.tooling.links.java_sdk.text": "Java SDK",
   // link to the Java SDK
-  "footer.categories.tooling.links.java_sdk.url": "https://github.com/box/box-java-sdk",
+  "footer.categories.tooling.links.java_sdk.url": "https:\/\/github.com\/box\/box-java-sdk",
   // Text for link to the Python SDK
   "footer.categories.tooling.links.python_sdk.text": "Python SDK",
   // link to the Python SDK
-  "footer.categories.tooling.links.python_sdk.url": "https://github.com/box/box-python-sdk",
+  "footer.categories.tooling.links.python_sdk.url": "https:\/\/github.com\/box\/box-python-sdk",
   // Text for link to the .NET SDK
   "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
   // link to the .Net SDK
-  "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
+  "footer.categories.tooling.links.dotnet_sdk.url": "https:\/\/github.com\/box\/box-windows-sdk-v2",
   // Text for link to the Box CLI
   "footer.categories.tooling.links.cli.text": "Box CLI",
   // link to the Box CLI
-  "footer.categories.tooling.links.cli.url": "https://github.com/box/boxcli",
+  "footer.categories.tooling.links.cli.url": "https:\/\/github.com\/box\/boxcli",
   // Text for link to the Box Skills kit
   "footer.categories.tooling.links.skills_kit.text": "Box Skills Kit",
   // link to the Box Skills Kit
-  "footer.categories.tooling.links.skills_kit.url": "https://github.com/box/box-skills-kit-nodejs",
+  "footer.categories.tooling.links.skills_kit.url": "https:\/\/github.com\/box\/box-skills-kit-nodejs",
   // A title for a footer section on our available code samples
-  "footer.categories.code.title": "Samples",
+  "footer.categories.code.title": "サンプル",
   // Text for link to our code samples
-  "footer.categories.code.links.samples.text": "Platform Samples",
+  "footer.categories.code.links.samples.text": "Platformサンプル",
   // Link to our code samples
-  "footer.categories.code.links.samples.url": "https://github.com/box/samples",
+  "footer.categories.code.links.samples.url": "https:\/\/github.com\/box\/samples",
   // Text for link to our Box skills code samples
-  "footer.categories.code.links.skills_samples.text": "Skills Samples",
+  "footer.categories.code.links.skills_samples.text": "Skillsサンプル",
   // Link to our Box skills code samples
-  "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
+  "footer.categories.code.links.skills_samples.url": "https:\/\/github.com\/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
-  "footer.categories.support.title": "Support",
+  "footer.categories.support.title": "サポート",
   // Text for link to go to our support page
-  "footer.categories.support.links.support.text": "Support & Community",
+  "footer.categories.support.links.support.text": "サポートとコミュニティ",
   // Link to go to our status page
-  "footer.categories.support.links.support.url": "/support",
+  "footer.categories.support.links.support.url": "\/support",
   // Text for link to create a support ticket
-  "footer.categories.support.links.ticket.text": "Create a ticket",
+  "footer.categories.support.links.ticket.text": "チケットの作成",
   // Link to create a support ticket
-  "footer.categories.support.links.ticket.url": "https://community.box.com/t5/custom/page/page-id\\ /BoxSearchLithiumTKB",
+  "footer.categories.support.links.ticket.url": "https:\/\/community.box.com\/t5\/custom\/page\/page-id\\ \/BoxSearchLithiumTKB",
   // Text for link to go to our support forum
-  "footer.categories.support.links.forum.text": "Platform Forum",
+  "footer.categories.support.links.forum.text": "Platformフォーラム",
   // Link to go to our support forum
-  "footer.categories.support.links.forum.url": "https://community.box.com/t5/Platform-and-Development\\ -Forum/bd-p/DeveloperForum",
+  "footer.categories.support.links.forum.url": "https:\/\/community.box.com\/t5\/Platform-and-Development\\ -Forum\/bd-p\/DeveloperForum",
   // Text for link to go to our feedback site
-  "footer.categories.support.links.feedback.text": "Product Feedback",
+  "footer.categories.support.links.feedback.text": "製品フィードバック",
   // Link to go to our feedback site
-  "footer.categories.support.links.feedback.url": "https://pulse.box.com/forums/\\ 909778-product-feedback?category_id=330838",
+  "footer.categories.support.links.feedback.url": "https:\/\/pulse.box.com\/forums\/\\ 909778-product-feedback?category_id=330838",
   // Text for link to go to our status page
-  "footer.categories.support.links.status.text": "API Status",
+  "footer.categories.support.links.status.text": "APIステータス",
   // Link to go to our status page
-  "footer.categories.support.links.status.url": "https://status.box.com/",
+  "footer.categories.support.links.status.url": "https:\/\/status.box.com\/",
   // A title for a footer section on our available translations ofthis site
-  "footer.categories.international.title": "International sites",
+  "footer.categories.international.title": "各国のサイト",
   // Text for link to the page sitemap
-  "footer.bottom.links.sitemap.text": "Sitemap",
+  "footer.bottom.links.sitemap.text": "サイトマップ",
   // Link to the page sitemap
-  "footer.bottom.links.sitemap.url": "/sitemap.xml",
+  "footer.bottom.links.sitemap.url": "\/sitemap.xml",
   // Text for link to update user notification preferences
-  "footer.bottom.links.subscriptions.text": "Subscriptions",
+  "footer.bottom.links.subscriptions.text": "サブスクリプション",
   // Link to update user notification preferences
-  "footer.bottom.links.subscriptions.url": "https://go.box.com/preferences.html",
+  "footer.bottom.links.subscriptions.url": "https:\/\/go.box.com\/preferences.html",
   // Text for link to our terms of use
-  "footer.bottom.links.terms.text": "Terms of Use",
+  "footer.bottom.links.terms.text": "利用規約",
   // Link to our terms of use
-  "footer.bottom.links.terms.url": "https://cloud.app.box.com/s/rmwxu64h1ipr41u49w3bbuvbsa29wku9",
+  "footer.bottom.links.terms.url": "https:\/\/cloud.app.box.com\/s\/rmwxu64h1ipr41u49w3bbuvbsa29wku9",
   // Text for link to our privacy policy
-  "footer.bottom.links.privacy.text": "Privacy Policy",
+  "footer.bottom.links.privacy.text": "プライバシーポリシー",
   // Link to our privacy policy
-  "footer.bottom.links.privacy.url": "https://account.box.com/legal_text/privacy_policy",
+  "footer.bottom.links.privacy.url": "https:\/\/account.box.com\/legal_text\/privacy_policy",
   // Text for link to our cookie notification settings
-  "footer.bottom.links.cookies.text": "Cookie Notification",
+  "footer.bottom.links.cookies.text": "Cookie通知",
   // Link to our cookie notification settings
-  "footer.bottom.links.cookies.url": "https://www.box.com/legal/cookie-notification",
+  "footer.bottom.links.cookies.url": "https:\/\/www.box.com\/legal\/cookie-notification",
   // Text for link to creative commons code
-  "footer.bottom.links.sample_license.text": "Code samples provided under Unilicense",
+  "footer.bottom.links.sample_license.text": "Unilicenseで提供されるコードサンプル",
   // Link to the license used
-  "footer.bottom.links.sample_license.url": "https://unlicense.org/",
+  "footer.bottom.links.sample_license.url": "https:\/\/unlicense.org\/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
-  "pages.blog.minute_read": "%s min read",
+  "pages.blog.minute_read": "読了までの所要時間: %s分",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
-  "changelog.labels.sdks": "SDKs",
+  "changelog.labels.sdks": "SDK",
   // The label for all things Java
   "changelog.labels.java": "Java",
   // The label for all things Windows
@@ -416,37 +416,37 @@
   // The label for all things CLI
   "changelog.labels.cli": "CLI",
   // The label for all things Mobile
-  "changelog.labels.mobile": "Mobile",
+  "changelog.labels.mobile": "モバイル",
   // The label for all things iOS
   "changelog.labels.ios": "iOS",
   // The label for all things Android
   "changelog.labels.android": "Android",
   // The label for all things Content Preview
-  "changelog.labels.content-preview": "Content Preview",
+  "changelog.labels.content-preview": "コンテンツプレビュー",
   // The label for all things UI Elements
-  "changelog.labels.ui-elements": "UI Elements",
+  "changelog.labels.ui-elements": "UI Element",
   // The label for all things Postman (app)
   "changelog.labels.postman": "Postman",
   // The label for all things Salesforce (app)
   "changelog.labels.salesforce": "Salesforce",
   // The label for all things Reports
-  "changelog.labels.reports": "Reports",
+  "changelog.labels.reports": "レポート",
   // The label for all other things
-  "changelog.labels.other": "Other",
+  "changelog.labels.other": "その他",
   // Defines if this is a new feature
-  "changelog.levels.is_new_feature": "New features",
+  "changelog.levels.is_new_feature": "新機能",
   // Defines if this is a breaking change
-  "changelog.levels.is_impactful": "Impactful changes",
+  "changelog.levels.is_impactful": "影響度の高い変更",
   // Defines if this is a new feature (short version)
-  "changelog.levels.short.is_new_feature": "Feature",
+  "changelog.levels.short.is_new_feature": "新機能",
   // Defines if this is a breaking change (short version)
-  "changelog.levels.short.is_impactful": "Impactful",
+  "changelog.levels.short.is_impactful": "影響度の高い変更",
   // Defines all entries
-  "changelog.all": "All",
+  "changelog.all": "すべて",
   // A label applied to a changelog entry that specifies if it's unread
-  "changelog.unread": "Unread",
+  "changelog.unread": "未読",
   // The title of the developer changelog section
-  "changelog.title": "Developer Changelog",
+  "changelog.title": "開発者向け変更ログ",
   // A message that is shown when we can notfind any entries for a search
-  "changelog.messages.no_entries": "It seems we don't have any entries for this selection."
+  "changelog.messages.no_entries": "この選択にはエントリがありません。"
 }

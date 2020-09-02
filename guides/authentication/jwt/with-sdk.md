@@ -24,51 +24,42 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/with-sdk.md
 ---
-# JWT with SDKs
+# SDKを使用したJWT
 
-The official Box SDKs have build-in support for JWT authentication.
+Box公式SDKには、JWT認証のサポートが組み込まれています。
 
-This guide will take you through user authentication using JWT with the use
-of the Box SDKs. JWT authentication is designed for working directly with the
-Box API without requiring a user to redirect through Box to authorize your
-application.
+このガイドでは、Box SDKを使用したJWTによるユーザー認証について説明します。JWT認証はBox APIを直接操作するよう設計されており、ユーザーがアプリケーションを承認するためにBoxを介してリダイレクトする必要はありません。
 
-## Overview
+## 概要
 
-To complete a JWT authorization the following steps need to be completed.
+JWT承認を完了するには、以下の手順を完了する必要があります。
 
-1. Read the configuration file
-2. Initialize an SDK client
+1. 構成ファイルを読み取る
+2. SDKクライアントを初期化する
 
-At the end of this flow, the application has a Box SDK client that can be used to
-make API calls on behalf of the application.
+このフローが終了すると、アプリケーションには、アプリケーションの代わりにAPI呼び出しを実行するために使用できるBox SDKクライアントが用意されます。
 
 <Message notice>
 
-The default method of authentication through JWT is inherently tied to the Service
-Account for the application. Any API call made with this token will seem to
-come from this application and will not have access to files and folders from
-other users without explicitly getting access them.
+JWTを使用したデフォルトの認証方式は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPI呼び出しはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
 
 </Message>
 
-## Prerequisites
+## 前提条件
 
-Before we can get started, you will need to have completed the following steps.
+開始する前に、以下の手順を完了しておく必要があります。
 
-- Create a Box Application within the developer console
-- Create and download the private key configuration file for your application
-  and save it as `config.json`
-- Ensure your Box Application is approved for usage within your enterprise
+* 開発者コンソール内でBoxアプリケーションを作成する
+* アプリケーション用に秘密キーの構成ファイルを作成してダウンロードし、`config.json`として保存する
+* 社内で使用するためにBoxアプリケーションが承認されていることを確認する
 
-## 1. Read JSON configuration
+## 1. JSON構成を読み取る
 
-After creating a Box Application there should be a `config.json` file containing
-the application's private key and other details. The following is an example.
+Boxアプリケーションを作成すると、アプリケーションの秘密キーとその他の詳細を含む`config.json`ファイルも作成されます。以下に、その例を示します。
 
 <Tabs>
 
-<Tab title='config.json'>
+<Tab title="config.json">
 
 <!-- markdownlint-disable line-length -->
 
@@ -93,11 +84,11 @@ the application's private key and other details. The following is an example.
 
 </Tabs>
 
-To use this object in the application it needs to be read from file. Most
+このオブジェクトをアプリケーションで使用するには、ファイルから読み取る必要があります。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 var reader = new StreamReader("path/to/config.json");
@@ -107,7 +98,7 @@ var config = BoxConfig.CreateFromJsonString(json);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 Reader reader = new FileReader("path/to/config.json");
@@ -116,7 +107,7 @@ BoxConfig config = BoxConfig.readFrom(reader);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 from boxsdk import JWTAuth
@@ -126,7 +117,7 @@ config = JWTAuth.from_settings_file('path/to/config.json')
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var config = require('path/to/config.json');
@@ -138,22 +129,19 @@ var config = require('path/to/config.json');
 
 <Message>
 
-# Parsing JSON
+# JSONの解析
 
-In some programming languages there is more than one way to read and parse
-JSON from a file. Refer to guides on your preferred programming language for
-more complete guides, including error handling.
+プログラミング言語によっては、ファイルからJSONを読み取って解析する方法が複数ある場合があります。エラー処理など、さらに詳細な説明については、使用するプログラミング言語のガイドを参照してください。
 
 </Message>
 
-## 2. Initialize SDK client
+## 2. SDKクライアントを初期化する
 
-The next step is to configure the Box SDK with the configuration and then
-initialize the client to connect as the application.
+次の手順では、作成した構成を使用してBox SDKを構成し、アプリケーションとして接続するためにクライアントを初期化します。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 var sdk = new BoxJWTAuth(config);
@@ -163,7 +151,7 @@ BoxClient client = sdk.AdminClient(token);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(config);
@@ -171,7 +159,7 @@ BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEn
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 client = Client(config)
@@ -179,7 +167,7 @@ client = Client(config)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
@@ -192,22 +180,17 @@ var client = sdk.getAppAuthClient('enterprise');
 
 <Message warning>
 
-# Service Accounts
+# サービスアカウント
 
-At this point the application is authenticated as an application user, not as
-a managed or app user. Head over to our guide on [User
-Types](g://authentication/user-types) to learn more about the different types
-of users.
+この時点では、アプリケーションは、管理対象ユーザーまたはApp Userとしてではなく、アプリケーションユーザーとして認証されます。各種ユーザーの詳細については、[ユーザータイプ](g://authentication/user-types)に関するガイドをご覧ください。
 
 </Message>
 
-## Summary
+## まとめ
 
-By now the application should be able to authorize an application using JWT
-with any of our official SDKs, by using the following steps.
+以下の手順に従うことで、アプリケーションはBox公式SDKのいずれかにより、JWTを使用したアプリケーションの承認を実行できるようになりました。
 
-1. Read the configuration file
-2. Initialize an SDK client
+1. 構成ファイルを読み取る
+2. SDKクライアントを初期化する
 
-To learn how to use this client head over to the guide on [Making API
-calls](g://api-calls).
+このクライアントの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドをご覧ください。

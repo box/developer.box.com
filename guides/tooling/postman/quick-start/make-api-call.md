@@ -18,109 +18,91 @@ source_url: >-
 ---
 <!-- alex disable postman-postwoman -->
 
-# Make an API call
+# API呼び出しの実行
 
-With the **Box Postman Collection** loaded into the **Postman App** it is now
-possible to make API calls to the **Box API** on behalf of the user you logged
-in as.
+**Box Postmanコレクション**が**Postmanアプリ**に読み込まれたため、Postmanアプリがログインユーザーに代わって**Box API**へのAPI呼び出しを実行できるようになりました。
 
-## First: Reset browser storage
+## はじめに: ブラウザのストレージをリセットする
 
-Now that you've imported the Box API credentials into Postman you should take a
-moment to remove these credentials from your browser's storage.
+Box API資格情報をPostmanにインポートしたので、これらの資格情報をブラウザのストレージから削除することをお勧めします。
 
-<ResetButton id='postman,credentials,observable_events'>
+<ResetButton id="postman,credentials,observable_events">
 
-Clear credentials
+資格情報をクリア
 
 </ResetButton>
 
 <Message warning>
 
-Removing your API credentials from the browser storage ensures that no other
-script can read your **Client ID**, **Client Secret**, **Access Token** or
-  **Refresh Token**.
+API資格情報をブラウザのストレージから削除すると、**クライアントID**、**クライアント機密コード**、**アクセストークン**、または**更新トークン**を他のスクリプトから読み取ることができなくなります。
 
 </Message>
 
-## Select an environment
+## 環境の選択
 
-Before an API call can be made it is important to select the right **Postman
-environment** to use when making API calls.
+API呼び出しを実行する前に、API呼び出し時に使用する適切な**Postman環境**を選択することが重要です。
 
-When you imported the **Box Postman collection** it automatically imported a
-`Box` Postman environment for you to use. The collection will automatically
-recognize and use the variables in this environment for making API calls.
+**Box Postmanコレクション**のインポート時には、使用すべき`Box` Postman環境も自動的にインポートされました。このコレクションは、この環境内の変数を自動的に認識してAPI呼び出しに使用します。
 
-To select the Box Postman environment, select **Box** from the dropdown in the
-top-right of Postman.
+Box Postman環境を選択するには、Postmanの右上にあるドロップダウンから\[**Box**]を選択します。
 
 <ImageFrame border center shadow>
 
-![Select Postman environment](./select-environment.png)
+![Postman環境の選択](./select-environment.png)
 
 </ImageFrame>
 
-You can inspect the environment by clicking the **eye** icon to the right of the
-dropdown.
+ドロップダウンの右にある**目**のアイコンをクリックすると、その環境の詳細を確認できます。
 
 <ImageFrame border center shadow>
 
-![Inspect Postman environment](./inspect-environment.png)
+![Postman環境の詳細の確認](./inspect-environment.png)
 
 </ImageFrame>
 
-## Make an API request
+## APIリクエストの実行
 
-To make an API request, select a **Request** from the Box Postman Collection. In
-this example, we will use the **List items in folder** API which can be found
-in the **Folders** folder.
+APIリクエストを実行するには、Box Postmanコレクションから**リクエスト**を選択します。この例では、\[**Folders**]フォルダにある\[**List items in folder**] APIを使用します。
 
 <ImageFrame border center shadow>
 
-![Selecting an API request](./select-api-request.png)
+![APIリクエストの選択](./select-api-request.png)
 
 </ImageFrame>
 
-By default the `folder_id` for this API endpoint is set to `0` which represents
-every user's root folder. You can leave this value as is or set it to the folder
-ID of a folder you want to inspect.
+デフォルトでは、このAPIエンドポイントの`folder_id`は、すべてのユーザーのルートフォルダを表す`0`に設定されています。この値は、そのまま使用することも、調べたいフォルダのフォルダIDに設定することもできます。
 
-Next, click the **Send** button in the top right to make the API request.
+次に、右上にある\[**Send**]ボタンをクリックしてAPIリクエストを送信します。
 
 <ImageFrame border center shadow>
 
-![Postman Send button](./postman-send-button.png)
+![Postmanの\[Send\]ボタン](./postman-send-button.png)
 
 </ImageFrame>
 
-The API call should return quickly and show you a list of items
-in your folder in the response **Body** tab in the bottom half of the screen.
+このAPI呼び出しはすぐに制御が戻り、画面の下半分にある応答の\[**Body**]タブにフォルダ内の項目のリストが表示されます。
 
 <ImageFrame border center shadow>
 
-![Postman response body](./postman-response-body.png)
+![Postmanの応答本文](./postman-response-body.png)
 
 </ImageFrame>
 
 <Message warning>
 
-# Authentication error
+# 認証エラー
 
-At this point Postman might return an error instead of a list. Often,
-this means your **Access Token** has expired. Check our guide on [refreshing
-an access token in Postman](g://tooling/postman/refresh) for more details.
+この時点で、Postmanがリストではなくエラーを返す場合があります。これは多くの場合、**アクセストークン**の有効期限が切れていることを意味します。詳細については、[Postmanでのアクセストークンの更新](g://tooling/postman/refresh)に関するガイドを参照してください。
 
 </Message>
 
-## Summary
+## まとめ
 
-* You selected the Postman environment to use for making API calls to Box
-* You made your first API call to Box, requesting the folder items for your
-  user's root folder.
+* BoxへのAPI呼び出しに使用するPostman環境を選択しました
+* Boxへの最初のAPI呼び出しを実行し、ユーザーのルートフォルダのフォルダ項目をリクエストしました
 
 <Next>
 
-I made an API call
+API呼び出しが完了しました
 
 </Next>

@@ -18,36 +18,36 @@ previous_page_id: authentication/access-tokens/sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/index.md
 ---
-# Access Tokens
+# アクセストークン
 
-Access Tokens are at the core of every Box API call. They represent an
-authenticated user to the Box servers and determine what files and folders an
-application has access to.
+アクセストークンは、すべてのBox API呼び出しの中核となります。Boxサーバーに対して認証済みユーザーを表し、アプリケーションからアクセスできるファイルやフォルダを決定します。
 
 <CTA to="guide://authentication/select">
 
-Learn about the different ways an app can get authorized
+アプリを承認する各種方法について確認する
 
 </CTA>
 
-## Application Types & Access Tokens
+## アプリケーションの種類とアクセストークン
 
-The following shows how each application type is expected to create an Access
-Token.
+それぞれのアプリケーションの種類でどのようにアクセストークンが作成されるのかを以下に示します。
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type               | How to get Access Token                          |
-| ---------------------------------- | ------------------------------------------------ |
-| Custom App + OAuth 2.0             | [Explicit user grant][oauth2-with-sdk]           |
-| Custom App + JWT                   | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Custom App + App Token             | [Configure token in developer console][devtoken] |
-| Enterprise Integration + OAuth 2.0 | [Explicit user grant][oauth2-with-sdk]           |
-| Enterprise Integration + JWT       | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Partner Integration + App Token    | Configure token in developer console             |
-| Custom Skill                       | Access Token in event payload                    |
+| Boxアプリケーションの種類    | アクセストークンの取得方法                    |
+| ----------------- | -------------------------------- |
+| カスタムアプリとOAuth 2.0 | [明示的なユーザーによる付与][oauth2-with-sdk] |
+| カスタムアプリとJWT       | [JWTアサーションを交換する][jwt-with-sdk]   |
+| カスタムアプリとアプリトークン   | [開発者コンソールでトークンを構成する][devtoken]   |
+| 企業統合とOAuth 2.0    | [明示的なユーザーによる付与][oauth2-with-sdk] |
+| 企業統合とJWT          | [JWTアサーションを交換する][jwt-with-sdk]   |
+| パートナーの統合とアプリトークン  | 開発者コンソールでトークンを構成する               |
+| カスタムスキル           | イベントペイロードのアクセストークン               |
+
 <!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/jwt/with-sdk
+
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
+
 [devtoken]: g://authentication/access-tokens/developer-tokens

@@ -21,32 +21,27 @@ previous_page_id: metadata/fields/float
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/3-date.md
 ---
-# Date metadata field
+# 日付メタデータフィールド
 
-A metadata field of type `date` is displayed to a user as a date picker.
+`date`タイプのメタデータフィールドは、日付選択機能としてユーザーに表示されます。
 
-<ImageFrame border center shadow width='400'>
+<ImageFrame border center shadow width="400">
 
-![String field](./metadata-field-date.png)
+![文字列フィールド](./metadata-field-date.png)
 
 </ImageFrame>
 
 <Message notice>
 
-Although dates are presented to users in the Box Web app as date-pickers, the
-actual dates are actually stored as in `RFC3339` format, with up to
-millisecond precision. The time part of the date is always set to `T00:00:00.000Z`.
+Boxウェブアプリでは日付が日付選択機能として表示されますが、実際の日付は、ミリ秒の形式で保存されています。日付の時間部分は、常に`T00:00:00.000Z`に設定されています。
 
 </Message>
 
-## Create a date field
+## 日付フィールドの作成
 
-A `date` field can be added to a metadata template either when [creating a
-metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+`date`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-The required attributes for a `date` field are a `type`, a `displayName` and a
-`key`.
+`date`フィールドの必須属性は、`type`、`displayName`、および`key`です。
 
 ```json
 {
@@ -64,20 +59,13 @@ The required attributes for a `date` field are a `type`, a `displayName` and a
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
-and the field can be set to `hidden` to hide it from users in the web and mobile
-apps.
+必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
-## Update a date field
+## 日付フィールドの更新
 
-A `date` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
-**operations** to ensure that any template that is already assigned to a file or
-folder is updated as well.
+`date`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
-When updating a `date` metadata field the only relevant operation is the
-`editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+`date`メタデータフィールドを更新する際、関連する操作は、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作のみです。
 
 ```json
 [
@@ -96,9 +84,10 @@ When updating a `date` metadata field the only relevant operation is the
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
 [g_create_template]: g://metadata/templates/create
+
 [g_update_template]: g://metadata/templates/update

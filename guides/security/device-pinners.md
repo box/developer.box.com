@@ -20,24 +20,16 @@ source_url: >-
 ---
 # Device Pinners
 
-Building on the login tracking feature – which allows admins to set limits on
-the number of devices a user can access Box from and sends alerts to them and
-the user whenever a new device is used to access that Box account – Box has
-additional device management functionality to increase security when accessing
-Box on mobile or desktop devices: device pinning.
+デバイスの管理と呼ばれる、モバイルデバイスまたはデスクトップデバイスからBoxにアクセスする際のセキュリティを強化するデバイス管理機能を追加しました。これは、ユーザーがBoxへのアクセスに使用するデバイス数の上限を管理者が設定できるようにし、そのBoxアカウントへのアクセスに新しいデバイスが使用されるたびに管理者とユーザーにアラートを送信するログイン追跡機能に基づいています。
 
-To learn more about device pinning, please see our [community
-documentation][community].
+デバイスの管理の詳細については、Boxの[コミュニティのドキュメント][community]を参照してください。
 
-## APIs
+## API
 
-The Box API allows for device pins to be inspected and removed.
+Box APIを使用すると、デバイスピンを検査したり削除したりすることができます。
 
-* [`GET /enterprise/:id/device_pinners`](e://get-enterprises-id-device-pinners):
-  Retrieves all the device pins within an enterprise.
-* [`GET /device_pinners/:id`](e://get-device-pinners-id): Retrieves information
-  about an individual device pin.
-* [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): Deletes an
-  individual device pin.
+* [`GET /enterprise/:id/device_pinners`](e://get-enterprises-id-device-pinners): 会社内のすべてのデバイスピンを取得します。
+* [`GET /device_pinners/:id`](e://get-device-pinners-id): 個々のデバイスピンに関する情報を取得します。
+* [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): 個々のデバイスピンを削除します。
 
 [community]: https://community.box.com/t5/How-to-Guides-for-Admins/Device-Pinning-Settings/ta-p/172

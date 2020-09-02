@@ -21,11 +21,10 @@ previous_page_id: tasks/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/tasks/3-for-file.md
 ---
-# Lists all tasks for a file
+# ファイルのすべてのタスクのリストの取得
 
-To list all of the tasks for a specific file, call the
-[`GET /files/:id/tasks`](e://get_files_id_tasks) with the `id` of the file.
+特定のファイルのすべてのタスクのリストを取得するには、ファイルの`id`を指定して[`GET /files/:id/tasks`](e://get_files_id_tasks)を呼び出します。
 
-<Samples id='get_files_id_tasks' >
+<Samples id="get_files_id_tasks">
 
 </Samples>

@@ -22,57 +22,52 @@ previous_page_id: metadata/templates
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/3-get.md
 ---
-# Get a metadata template
+# メタデータテンプレートの取得
 
-Information for a metadata template can be retrieved using the template's name
-and scope, or the template's identifier.
+メタデータテンプレートに関する情報を取得するには、テンプレートの名前とスコープ、またはテンプレートの識別子を使用します。
 
 <Message>
 
-The authenticated user can only get Information about metadata templates
-[scoped][scopes] within the `global` scope or the `enterprise_:id` scope where
-`:id` is  the ID of their enterprise.
+認証済みユーザーが取得できるのは、`global`スコープまたは`enterprise_:id`スコープ(`:id`は会社のID)の中で[スコープ][scopes]が設定されたメタデータテンプレートに関する情報のみです。
 
 </Message>
 
-## Get a metadata template by name
+## 名前を指定してメタデータテンプレートを取得
 
-To get a metadata template by name, call the [`GET
-/metadata_templates/:scope/:templateKey`][e_by_name] API endpoint with the
-template's `scope` and `templateKey`.
+名前を指定してメタデータテンプレートを取得するには、テンプレートの`scope`と`templateKey`を指定して[`GET
+/metadata_templates/:scope/:templateKey`][e_by_name] APIエンドポイントを呼び出します。
 
-<Samples id='get_metadata_templates_id_id_schema' >
+<Samples id="get_metadata_templates_id_id_schema">
 
 </Samples>
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an item][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[項目のすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
-## Get a metadata template by ID
+## IDを指定してメタデータテンプレートを取得
 
-To get a metadata template by ID, you will need to pass both the template's
-`scope` and `templateKey` to the [`GET
-/metadata_templates/:id`][e_by_id] API endpoint.
+IDを指定してメタデータテンプレートを取得するには、テンプレートの`scope`と`templateKey`の両方を[`GET
+/metadata_templates/:id`][e_by_id] APIエンドポイントに渡す必要があります。
 
-<Samples id='get_metadata_templates_id' >
+<Samples id="get_metadata_templates_id">
 
 </Samples>
 
 <Message>
 
-To get the `id` for a template, either
-[list all metadata templates][g_list_templates], or
-[list all instances on an item][g_list_instances_item].
+テンプレートの`id`を取得するには、[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[項目のすべてのインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
 [e_by_name]: e://get_metadata_templates_id_id_schema
+
 [e_by_id]: e://get_metadata_templates_id
+
 [scopes]: g://metadata/scopes
+
 [g_list_templates]: g://metadata/templates/list
+
 [g_list_instances_item]: g://metadata/instances/list

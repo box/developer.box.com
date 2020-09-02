@@ -15,133 +15,104 @@ previous_page_id: collaborations/quick-start-share-with-slack-users-groups/confi
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/2-configure-box.md
 ---
-# Configure Box
+# Boxの構成
 
-We will need to set up a Box application to manage Box groups and add
-collaborators to files and folders in Box.
+Boxグループの管理とBox内のファイルやフォルダへのコラボレータの追加を行うためにBoxアプリケーションを設定する必要があります。
 
-## Set up a Box app
+## Boxアプリのセットアップ
 
-<Grid columns='2'>
+<Grid columns="2">
 
-<Choose option='box.app_type' value='create_new' color='blue'>
+<Choose option="box.app_type" value="create_new" color="blue">
 
-# Create a new Box app
+# 新しいBoxアプリを作成する
 
-Create and configure a new Box JWT application to use for this integration.
+この統合に使用する新しいBox JWTアプリケーションを作成して構成します。
 
 </Choose>
 
-<Choose option='box.app_type' value='use_own' color='blue'>
+<Choose option="box.app_type" value="use_own" color="blue">
 
-# Use an existing approved app
+# 承認済みの既存のアプリを使用する
 
-Use one of your existing admin-approved Box JWT applications from the Box
-developer console.
+Box開発者コンソールから、管理者が承認した既存のBox JWTアプリケーションのいずれかを使用します。
 
 </Choose>
 
 </Grid>
 
-<Choice option='box.app_type' value='create_new' color='none'>
+<Choice option="box.app_type" value="create_new" color="none">
 
-# Create a new Box app
+# 新しいBoxアプリを作成する
 
-To create a new Box application that can be used to call the Box APIs, use
-the following steps.
+Box APIの呼び出しに使用できる新しいBoxアプリケーションを作成するには、以下の手順に従います。
 
-1. Go to the [Developer Console][devconsole]
-1. Select **Create New App**
-1. Select **Custom App** as the type of application to create, and click
-   **Next**
-1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-   **Next**
-1. Give your Box app a unique name and click **Create App**
-1. Go to the app's configuration by clicking **View Your App**.
-1. Scroll down to **Application Access** and ensure that **Enterprise** is
-   selected.
-1. Scroll to the **Application Scopes** section of the same screen
-   and ensure that at least the following scopes are enabled:
-   `Read and write all files and folders stored in Box`, `Manage users`, and
-   `Manage groups`.
-1. Under **Advanced Features** ensure that **Perform Actions as Users** is
-   enabled to perform actions on behalf of Box users.
-1. At the top of the page click the button to **Save Changes**
+1. [開発者コンソール][devconsole]に移動します。
+2. \[**アプリの新規作成**]を選択します。
+3. 作成するアプリケーションの種類として\[**カスタムアプリ**]を選択し、\[**次へ**]をクリックします。
+4. 認証方式として\[**JWTを使用したOAuth 2.0**]を選択し、\[**次へ**]をクリックします。
+5. Boxアプリに一意の名前を付け、\[**アプリの作成**]をクリックします。
+6. \[**アプリの表示**]をクリックしてアプリの設定に移動します。
+7. \[**アプリケーションアクセス**] まで下にスクロールし、\[**Enterprise**] が選択されていることを確認します。
+8. 同じ画面の \[**アプリケーションスコープ**] セクションまでスクロールし、少なくとも`Read and write all files and folders stored in Box`、`Manage users`、および`Manage groups`というスコープが有効になっていることを確認します。
+9. \[**高度な機能**] で、Boxユーザーの代わりに操作を行うために \[**ユーザーとして操作を実行**] が有効になっていることを確認します。
+10. ページ上部にある\[**変更を保存**]ボタンをクリックします。
 
-<Message type='warning'>
+<Message type="warning">
 
-# App approval
+# アプリの承認
 
-Once the application is created it will still need to be approved by an
-enterprise admin before you will be able to make calls to the Box APIs.
+アプリケーションの作成後も、Box APIの呼び出しを行うには会社の管理者による承認が必要です。
 
-Follow [this guide](g://applications/custom-apps/app-approval/) to have the
-application approved in your enterprise.
+アプリケーションを社内で承認してもらうには、[このガイド](g://applications/custom-apps/app-approval/)に従ってください。
 
 </Message>
 
 </Choice>
 
-<Choice option='box.app_type' value='use_own' color='none'>
+<Choice option="box.app_type" value="use_own" color="none">
 
-# Use an Existing JWT Box application
+# 既存のJWT Boxアプリケーションを使用する
 
-If you have an existing JWT based Box application in your
-[developer console][devconsole] that you would like to use, ensure that the
-following options are set in the **Configuration** section of your
-application.
+[開発者コンソール][devconsole]に、使用したい既存のJWTベースのBoxアプリケーションがある場合は、アプリケーションの\[**構成**]セクションで以下のオプションが設定されていることを確認してください。
 
-* Authentication Method: Should be set to OAuth 2.0 with JWT (Server
-Authentication).
-* Application Scopes: Set at least the following scopes.
-  * Read and write all files and folders stored in Box
-  * Manage users
-  * Manage groups
-* Advanced Features: Both options should be enabled to
-  perform actions as users and generate user access tokens.
+* \[認証方法]: \[JWTを使用したOAuth 2.0 (サーバー認証)]に設定します。
+* \[アプリケーションスコープ]: 少なくとも以下のスコープを設定します。
+  * Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
+  * ユーザーを管理
+  * グループを管理
+* \[高度な機能]: ユーザーとして操作を実行するオプションとユーザーアクセストークンを生成するオプションの両方を有効にします。
 
-  <Message type='warning'>
+  <Message type="warning">
 
-# App approval
+# アプリの承認
 
-Once the application is updated it will need to be re-approved by an
-enterprise admin before you will be able to make calls to any of the Box
-APIs that need any of the new permissions.
+アプリケーションは更新後、会社の管理者による再承認が必要になります。再承認後、新しい権限のいずれかを必要とする任意のBox APIを呼び出すことができます。
 
-Follow [this guide](g://applications/custom-apps/app-approval/) to have the
-application approved in your enterprise.
+アプリケーションを社内で承認してもらうには、[このガイド](g://applications/custom-apps/app-approval/)に従ってください。
 
 </Message>
 
 </Choice>
 
-## Download app configuration
+## アプリの構成のダウンロード
 
-To begin working with the Box SDKs used in this tutorial, you will need the
-application configuration file from the **Configuration** page of your
-application. This will include all information needed to verify your
-application to start making API requests with the Box SDKs.
+このチュートリアルで使用されているBox SDKの使用を開始するには、アプリケーションの\[**構成**]ページにあるアプリケーション構成ファイルが必要です。この中には、アプリケーションを検証して、Box SDKを使用してAPIリクエストを開始するために必要なすべての情報が含まれます。
 
-Within the **Add and Manage Public Keys** section of the **Configuration**
-page, click to **Generate a Public/Private Keypair**. This will send you
-through 2FA verification before downloading the configuration file for your
-application.
+\[\<C1>構成\</c1>]ページの\[**公開キーの追加と管理**]セクションで、\[**公開/秘密キーペアを生成**]をクリックします。これにより、アプリケーションの構成ファイルをダウンロードする前に2FAが行われます。
 
-Store that file as `boxConfig.json` in a location accessible by your
-application.
+そのファイルを`boxConfig.json`として、アプリケーションがアクセス可能な場所に保存します。
 
-## Summary
+## まとめ
 
-* You created a new, or are using an existing, Box app which is approved by an
- enterprise admin.
-* You downloaded your application configuration file and stored it in a location
- accessible by your application.
+* 会社の管理者によって承認されている、新しいBoxアプリを作成しました。または、会社の管理者によって承認されている既存のBoxアプリを使用しています。
+* アプリケーション構成ファイルをダウンロードして、アプリケーションがアクセス可能な場所に保存しました。
 
-<Observe option='box.app_type' value='use_own,create_new'>
+<Observe option="box.app_type" value="use_own,create_new">
 
 <Next>
 
-I downloaded my application configuration file
+アプリケーション構成ファイルをダウンロードしました
 
 </Next>
 

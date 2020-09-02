@@ -15,160 +15,129 @@ previous_page_id: >-
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/6-run-the-app.md
 ---
-# Run the application
+# アプリケーションの実行
 
-With all the components of the sample in place, it's time to run our program to
-see if everything is working correctly.
+サンプルの構成コンポーネントがすべて設定できたら、プログラムを実行してすべてが正常に動作していることを確認します。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-From the terminal / command prompt in the local application directory, type
-`node server.js` and click enter. The server will start up and output
-`Server started: Listening on port 3000`.
+ターミナル/コマンドプロンプトで、ローカルアプリケーションディレクトリに`node server.js`と入力してEnterキーを押します。サーバーが起動し、`Server started: Listening on port 3000`と出力されます。
 
-From your browser, go to `http://localhost:3000/`. Since this is the first time
-we'll be testing out the user sign in flow, you'll see the Okta login.
+ブラウザで`http://localhost:3000/`にアクセスします。ユーザーのサインインフローを試すのは今回が初めてなので、Oktaログインが表示されます。
 
 <ImageFrame noborder center shadow>
 
-![Okta Login](./img/okta-qs-step6-login.png)
+![Oktaログイン](./img/okta-qs-step6-login.png)
 
 </ImageFrame>
 
-Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のサクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
-Once signed in, you will see a message stating
-`New user created: {{USERNAME}}` output to the browser.
+サインインしたら、`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
-When attempting to log in with this user in subsequent attempts, you
-will now see `Hello {{USERNAME}}` output to the browser.
+その後このユーザーでログインを試みると、ブラウザに`Hello {{USERNAME}}`と出力されるようになります。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-From Eclipse (or your preferred editor) click to run the application. You will
-see console output stating that the Spring boot application is now running on
-port 8080.
+Eclipse (またはお好みのエディタ)で、クリックしてアプリケーションを実行します。Spring Bootアプリケーションがポート8080で実行されていることを示すコンソール出力が表示されます。
 
-From your browser, go to `http://localhost:8080/`. Since this is the first time
-we'll be testing out the user sign in flow, you'll see the Okta login.
+ブラウザで`http://localhost:8080/`にアクセスします。ユーザーのサインインフローを試すのは今回が初めてなので、Oktaログインが表示されます。
 
 <ImageFrame noborder center shadow>
 
-![Okta Login](./img/okta-qs-step6-login.png)
+![Oktaログイン](./img/okta-qs-step6-login.png)
 
 </ImageFrame>
 
-Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のサクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
-Once signed in, you will see a message stating `New User Created: {{USERNAME}}`
-output to the browser.
+サインインしたら、`New User Created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
-When attempting to log in with this user in subsequent attempts, you
-will now see `Hello {{USERNAME}}` output to the browser.
+その後このユーザーでログインを試みると、ブラウザに`Hello {{USERNAME}}`と出力されるようになります。
 
 </Choice>
 
-<Choice option='programming.platform' value='python' color='none'>
+<Choice option="programming.platform" value="python" color="none">
 
-From the terminal / command prompt in the local application directory, type
-`env FLASK_APP=server.py flask run` and click enter. The server will start up
-and output `Running on http://127.0.0.1:5000/`.
+ターミナル/コマンドプロンプトで、ローカルアプリケーションディレクトリに`env FLASK_APP=server.py flask run`と入力してEnterキーを押します。サーバーが起動し、`Running on http://127.0.0.1:5000/`と出力されます。
 
-From your browser, go to `http://127.0.0.1:5000/`. Since this is the first time
-we'll be testing out the user sign in flow, you'll see the Okta login.
+ブラウザで`http://127.0.0.1:5000/`にアクセスします。ユーザーのサインインフローを試すのは今回が初めてなので、Oktaログインが表示されます。
 
 <ImageFrame noborder center shadow>
 
-![Okta Login](./img/okta-qs-step6-login.png)
+![Oktaログイン](./img/okta-qs-step6-login.png)
 
 </ImageFrame>
 
-Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のサクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
-Once signed in, you will see a message stating
-`New user created: {{USERNAME}}` output to the browser.
+サインインしたら、`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
-When attempting to log in with this user in subsequent attempts, you
-will now see `Hello {{USERNAME}}` output to the browser.
+その後このユーザーでログインを試みると、ブラウザに`Hello {{USERNAME}}`と出力されるようになります。
 
 </Choice>
 
-<Choice option='programming.platform' value='cs' color='none'>
+<Choice option="programming.platform" value="cs" color="none">
 
-From Visual Studio Code (or your preferred editor) click `Run` ->
-`Start Debugging` from the menu. You will see debug console output as the
-application loads, then a browser window will be loaded with the application at
-`https://localhost:5001/`.
+Visual Studio Code (またはお好みのエディタ)で、メニューから\[`Run`] -> \[`Start Debugging`]をクリックします。アプリケーションが読み込まれるとデバッグコンソール出力が表示され、その後、ブラウザウィンドウでは、`https://localhost:5001/`でアプリケーションが表示されます。
 
-Since this is the first time testing the application, the sign in link will be
-displayed. Once clicked, the Okta login will be automatically loaded.
+アプリケーションをテストするのは今回が初めてなので、サインインリンクが表示されます。クリックすると、Oktaログインが自動的に読み込まれます。
 
 <ImageFrame noborder center shadow>
 
-![Okta Login](./img/okta-qs-step6-login.png)
+![Oktaログイン](./img/okta-qs-step6-login.png)
 
 </ImageFrame>
 
-Sign in with the credentials for the Okta user you created in the last section
-of [step 2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/).
+[手順2](g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/)の最後のサクションで作成したOktaユーザーの資格情報を使用してサインインします。
 
-Once signed in, you will see a message in the debug console stating
-`New user created: {{USERNAME}}` output to the browser.
+サインインしたら、デバッグコンソールの`New user created: {{USERNAME}}`というメッセージがブラウザに出力されます。
 
-When attempting to log in with this user in subsequent attempts, you
-will now see `Current user name: {{USERNAME}}` output to the browser.
+その後このユーザーでログインを試みると、ブラウザに`Current user name: {{USERNAME}}`と出力されるようになります。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Summary
+## まとめ
 
-You've reached the end of this Quick Start guide. By now you should have taken
-the following steps.
+このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. [Created a web application scaffold][step1].
-1. [Setup and configured an Okta application][step2] and created
-   a first user that could be used to log into the web app.
-1. [Setup and configured a Box application][step3] so that the
-   web app can connect to Box.
-1. [Created a log in flow for the web application][step4],
-   allowing the Okta user to log in.
-1. [Added a check to find an existing Box user][step5], and optionally create a
-   Box user the first time that Okta user logs into the web application.
-1. [And finally, ran the application][step6] and saw
-   the complete flow in action.
+1. [ウェブアプリケーションのスキャフォールディングを作成しました][step1]。
+2. [Oktaアプリケーションを設定および構成][step2]して、ウェブアプリへのログインに使用できる1人目のユーザーを作成しました。
+3. [Boxアプリケーションを設定および構成][step3]して、ウェブアプリからBoxに接続できるようにしました。
+4. [ウェブアプリケーションのログインフローを作成][step4]して、Oktaユーザーがログインできるようにしました。
+5. Oktaユーザーが初めてウェブアプリケーションにログインするときに、[既存のBoxユーザーを検索し、必要に応じてBoxユーザーを作成するためのチェックを追加][step5]しました。
+6. [最後にアプリケーションを実行][step6]して、フロー全体の動作を確認しました。
 
-## Next Steps
+## 次の手順
 
-We recommend the following resource for anyone who wants to learn more about
-more advanced capabilities that may be attached into the user creation and
-access process.
+ユーザーの作成とアクセスのプロセスに関連したより高度な機能について詳しく知りたい方には、以下のリソースをお勧めします。
 
-* [User provisioning](g://users/provision/) best practices for advanced user
- folder architecture setup.
-* [User deprovisioning](g://users/deprovision/) best practices cleaning up
- inactive users and transferring user content to another account.
-* [Uploading content](g://uploads/) into Box, including running preflight
- checks and large file (chunked) uploading.
+* ユーザーフォルダのアーキテクチャの詳細な設定に関する、[ユーザープロビジョニング](g://users/provision/)のベストプラクティス。
+* 非アクティブなユーザーの削除と別のアカウントへのユーザーコンテンツの転送に関する、[ユーザーのプロビジョニング解除](g://users/deprovision/)のベストプラクティス。
+* 事前チェックや大容量ファイルの(分割)アップロードなど、Boxへの[コンテンツのアップロード](g://uploads/)。
 
 [step1]: g://sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code/
+
 [step2]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-okta/
+
 [step3]: g://sso-identities-and-app-users/connect-okta-to-app-users/configure-box/
+
 [step4]: g://sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app/
+
 [step5]: g://sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users/
+
 [step6]: g://sso-identities-and-app-users/connect-okta-to-app-users/run-the-app/

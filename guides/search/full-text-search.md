@@ -21,15 +21,12 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/search/full-text-search.md
 ---
-# Full-Text Search
+# 全文検索
 
-To find files and folders within a Box account that match a given search query,
-use the query search method within the SDK, passing in keywords and filters as needed.
+指定した検索クエリに一致するファイルとフォルダをBoxアカウント内で検索するには、SDK内でクエリ検索メソッドを使用し、必要に応じてキーワードやフィルタを渡します。
 
-Define your search terms and filters by using the available `fields`. Next, call
-the search endpoint with the defined criteria to return the give files and
-folders that are matched.
+使用可能な`fields`を使用して、検索用語と検索フィルタを定義します。次に、定義した条件を使用して検索エンドポイントを呼び出すと、一致するファイルとフォルダが返されます。
 
-<Samples id='get_search' >
+<Samples id="get_search">
 
 </Samples>

@@ -20,66 +20,62 @@ source_url: >-
 ---
 <!-- alex disable postman-postwoman -->
 
-# Install Postman & Collection
+# Postmanとコレクションのインストール
 
-To use the **Box Postman Collection** you will need to have
-[Postman][postman] installed on your device.
-Postman is available for Windows, Mac, and Linux environments.
+**Box Postmanコレクション**を使用するには、デバイスに[Postman][postman]がインストールされている必要があります。PostmanはWindows、Mac、およびLinux環境で利用できます。
 
-<Grid columns='4'>
+<Grid columns="4">
 
 <Download>
 
-![Windows Logo](./quick-start/windows.png) Windows (x32)
+![Windowsロゴ](./quick-start/windows.png) Windows (x32)
 
-[Download](https://dl.pstmn.io/download/latest/win32)
+[ダウンロード](https://dl.pstmn.io/download/latest/win32)
 
 </Download>
 
 <Download>
 
-![Windows Logo](./quick-start/windows.png) Windows (x64)
+![Windowsロゴ](./quick-start/windows.png) Windows (x64)
 
-[Download](https://dl.pstmn.io/download/latest/win64)
-
-</Download>
-
-<Download>
-
-![MacOS Logo](./quick-start/macos.png) MacOS
-
-[Download](https://dl.pstmn.io/download/latest/macos)
+[ダウンロード](https://dl.pstmn.io/download/latest/win64)
 
 </Download>
 
 <Download>
 
-![Linux Logo](./quick-start/linux.png) Linux (x64)
+![MacOSロゴ](./quick-start/macos.png) MacOS
 
-[Download](https://dl.pstmn.io/download/latest/linux64)
+[ダウンロード](https://dl.pstmn.io/download/latest/macos)
+
+</Download>
+
+<Download>
+
+![Linuxロゴ](./quick-start/linux.png) Linux (x64)
+
+[ダウンロード](https://dl.pstmn.io/download/latest/linux64)
 
 </Download>
 
 </Grid>
 
-Next, install Postman on your machine and (optionally)
-[register for a Postman account and log in][register].
+次に、お使いのマシンにPostmanをインストールし、(必要に応じて) [Postmanアカウントを登録してログインします][register]。
 
 <ImageFrame border center>
 
-![The Postman application](./quick-start/postman-example.png)
+![Postmanアプリケーション](./quick-start/postman-example.png)
 
 </ImageFrame>
 
-## Loading a collection and environment
+## コレクションと環境の読み込み
 
-With the Postman App installed the **Box Postman Collection** can be loaded into
-it. Clicking the button below you will load the **Box Postman
-Collection** into Postman.
+Postmanアプリがインストールされていれば、そのアプリに**Box Postmanコレクション**を読み込むことができます。下のボタンをクリックすると、Postmanに**Box Postmanコレクション**が読み込まれます。
 
-<Postman anonymous >
+<Postman anonymous>
 
 </Postman>
 
 [register]: https://identity.getpostman.com/signup
+
 [postman]: https://getpostman.com

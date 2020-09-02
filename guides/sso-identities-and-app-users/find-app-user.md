@@ -17,38 +17,27 @@ previous_page_id: sso-identities-and-app-users/create-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/3-find-app-user.md
 ---
-# Find app user for SSO identity
+# SSO IDのApp Userの検索
 
-When a user logs into a Box custom application with their SSO provider, the
-first step that should be taken is to see if that user already exists from a
-previous login attempt where a Box user record was already created.
+ユーザーがSSOプロバイダを使用してBoxカスタムアプリケーションにログインする際、まず必要なのは、Boxユーザーレコードが作成された前回のログイン試行から、そのユーザーがすでに存在するかどうかを確認することです。
 
-If a Box user is found you should
-[create a user access token](guide://authentication/jwt/user-access-tokens/),
-or make [as user calls](guide://authentication/jwt/as-user/), to access Box
-APIs as that user.
+Boxユーザーが検出されたら、そのユーザーとしてBox APIにアクセスするために、[ユーザーアクセストークンを作成](guide://authentication/jwt/user-access-tokens/)するか[as-user呼び出し](guide://authentication/jwt/as-user/)を実行する必要があります。
 
-If a Box user is not found you should create a new user with an association to
-the SSO user record.
+Boxユーザーが検出されない場合は、そのSSOユーザーレコードに関連付けられた新しいユーザーを作成する必要があります。
 
-To search for existing users the [List Enterprise Users](ref://get-users/)
-endpoint may be used. Depending on whether you're using the
-`external_app_user_id` or `login` method your query will look slightly
-different.
+既存のユーザーの検索には、[会社ユーザーのリストを取得](ref://get-users/)エンドポイントを使用できます。`external_app_user_id`と`login`のどちらのメソッドを使用しているかによって、クエリは若干異なります。
 
-## Find user by `external_app_user_id`
+## `external_app_user_id`を使用したユーザーの検索
 
-To search for enterprise users by the stored `external_app_user_id` value you
-will need one piece of information from the SSO provider:
+格納されている`external_app_user_id`値を使用して会社ユーザーを検索するには、SSOプロバイダーの次の情報が必要になります。
 
-* UID (required): The unique identifier from the SSO user record.
+* UID (必須): SSOユーザーレコードの一意の識別子です。
 
-Once available, make a request to the list enterprise users endpoint, supplying
-the `external_app_user_id` definition in the parameters.
+取得したら、パラメータで`external_app_user_id`定義を指定して、会社ユーザーのリストを取得エンドポイントにリクエストを実行します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const ssoUID = 'SSO User Unique ID';
@@ -67,7 +56,7 @@ client.enterprise.getUsers({ "external_app_user_id": ssoUID })
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String ssoUID = "SSO User Unique ID";
@@ -92,7 +81,7 @@ if (totalCount.asInt() > 0) {
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 sso_uid = 'SSO User Unique ID'
@@ -115,20 +104,17 @@ else:
 
 </Tabs>
 
-## Find user by email address
+## メールアドレスを使用したユーザーの検索
 
-To search for enterprise users by their `login` email you
-will need one piece of information from the SSO provider:
+`login`のメールアドレスを使用して会社ユーザーを検索するには、SSOプロバイダーの次の情報が必要になります。
 
-* Email (required): The unique email from the SSO user record.
+* メールアドレス(必須): SSOユーザーレコードの一意のメールアドレスです。
 
-Once available, make a request to the list enterprise users endpoint, supplying
-the email address as the `filter_term`, which is made available to search by
-email or name.
+取得したら、`filter_term`としてメールアドレスを指定して、会社ユーザーのリストを取得エンドポイントにリクエストを実行します。これは、メールアドレスまたは名前を使用した検索に使用できるようになります。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const ssoEmail = 'ssouser@email.com';
@@ -146,7 +132,7 @@ client.enterprise.getUsers({filter_term: ssoEmail})
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String ssoEmail = "ssouser@email.com";
@@ -156,7 +142,7 @@ Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(client, ssoEmail);
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 sso_email = 'ssouser@email.com'

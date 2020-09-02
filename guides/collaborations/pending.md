@@ -22,18 +22,16 @@ previous_page_id: collaborations/groups
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/pending.md
 ---
-# Get Pending Collaborations
+# 保留中のコラボレーションの取得
 
-To get the pending collaborations for a user, call the `GET /collaborations` API
-with a `status` of `pending`.
+ユーザーの保留中のコラボレーションを取得するには、`status`に`pending`を指定して`GET /collaborations`APIを呼び出します。
 
-<Samples id='get_collaborations' >
+<Samples id="get_collaborations">
 
 </Samples>
 
 <Message warning>
 
-This only returns the current list of pending collaborations for a user. This
-API does not allow for returning all collaborations for a user.
+これにより、ユーザーの保留中のコラボレーションを表示する現在のリストのみが返されます。このAPIでは、ユーザーのすべてのコラボレーションを返すことは許可されていません。
 
 </Message>

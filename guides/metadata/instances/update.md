@@ -24,57 +24,43 @@ previous_page_id: metadata/instances/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/4-update.md
 ---
-# Update metadata on an item
+# 項目のメタデータの更新
 
-Updating the metadata applied to a file or folder can be done by using the
-item's `id`, the template's `templateKey` and `scope`, and a set of JSON
-operations to manipulate the data on the template instance.
+ファイルまたはフォルダに適用されたメタデータを更新するには、項目の`id`、テンプレートの`templateKey`と`scope`に加え、テンプレートインスタンスのデータを操作するための一連のJSON操作を使用します。
 
-## Update metadata on a file
+## ファイルのメタデータを更新
 
-To update the metadata to a file, call the
-[`PUT /files/:file_id/metadata/:scope/:templateKey`][e_on_file] API endpoint
-with the file's `file_id`, the template's `scope` and `templateKey`, set of JSON
-operations to manipulate the data on the template instance.
+ファイルのメタデータを更新するには、ファイルの`file_id`、テンプレートの`scope`と`templateKey`、およびテンプレートインスタンスのデータを操作するための一連のJSON操作を指定して[`PUT /files/:file_id/metadata/:scope/:templateKey`][e_on_file] APIエンドポイントを呼び出します。
 
-<Samples id="put_files_id_metadata_id_id" >
+<Samples id="put_files_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-The authenticated user needs to have write access on the file to be able to
-write changes to the metadata on a file.
+認証済みユーザーがファイルのメタデータに対する変更を書き込めるようにするには、ファイルへの書き込みアクセス権限が必要です。
 
 </Message>
 
-## Update metadata on a folder
+## フォルダのメタデータを更新
 
-To update the metadata to a folder, call the
-[`PUT /folders/:folder_id/metadata/:scope/:templateKey`][e_on_folder] API
-endpoint with the folder's `folder_id`, the template's `scope` and
-`templateKey`, set of JSON operations to manipulate the data on the template instance.
+フォルダのメタデータを更新するには、フォルダの`folder_id`、テンプレートの`scope`と`templateKey`、およびテンプレートインスタンスのデータを操作するための一連のJSON操作を指定して[`PUT /folders/:folder_id/metadata/:scope/:templateKey`][e_on_folder] APIエンドポイントを呼び出します。
 
-<Samples id="put_folders_id_metadata_id_id" >
+<Samples id="put_folders_id_metadata_id_id">
 
 </Samples>
 
 <Message>
 
-The authenticated user needs to have write access on the file to be able to
-write changes to the metadata on a file.
+認証済みユーザーがファイルのメタデータに対する変更を書き込めるようにするには、ファイルへの書き込みアクセス権限が必要です。
 
 </Message>
 
-## JSON Operations
+## JSON操作
 
-Updating an piece of metadata follow the [JSON-Patch specification][jsonpatch],
-which is represented as a list of operation objects.
+メタデータを更新する場合は、[JSON-Patchの仕様][jsonpatch]に従う必要があります。これは、操作オブジェクトのリストとして表されます。
 
-For metadata instances, these operations can be either `add`, `replace`,
-`remove` , `test`, `move`, or `copy`. Every operation exists out of an `op`
-name, the [JSON Pointer][pointer] `path` that points to the field to changes,
-and an optional `value` or `from` value depending on the operation being made.
+メタデータインスタンスの場合、これらの操作には`add`、`replace`、`remove`、`test`、`move`、`copy`のいずれかを指定できます。どの操作も、`op`の名前、変更対象のフィールドを指す[JSON Pointer][pointer] `path`のほか、実行される操作に応じた`value`または`from`値(省略可)で構成されます。
 
 ```json
 [
@@ -91,19 +77,15 @@ and an optional `value` or `from` value depending on the operation being made.
 
 <Message warning>
 
-When editing metadata, only values that adhere to the metadata template schema
-will be accepted. The update is applied completely or not at all. If any
-errors occur during the application of the update operations, the metadata
-instance is not changed.
+メタデータを編集する際には、メタデータテンプレートのスキーマに準拠した値のみを使用できます。更新は完全に適用されるか、まったく適用されないかのどちらかです。更新操作の適用中にエラーが発生した場合、メタデータインスタンスは変更されません。
 
-The template instance can only be updated if the template has already been
-assigned to the file or folder.
+テンプレートインスタンスを更新できるのは、テンプレートがすでにファイルまたはフォルダに割り当てられている場合のみです。
 
 </Message>
 
-### Add a new value
+### 新しい値の追加
 
-To add a new value on a template, use the `add` operation.
+テンプレートに新しい値を追加するには、`add`操作を使用します。
 
 ```json
 [
@@ -115,8 +97,7 @@ To add a new value on a template, use the `add` operation.
 ]
 ```
 
-This will add the `name` field with a value of `Model 3` . Before this
-operation, the template did not have a value for the `name` field.
+これにより、値が`Model 3`の`name`フィールドが追加されます。この操作の前は、テンプレートの`name`フィールドに値がありませんでした。
 
 ```js
 {
@@ -136,14 +117,13 @@ operation, the template did not have a value for the `name` field.
 
 <Message warning>
 
-For `enum` and `multiSelect` fields this new value needs to be one of the
-valid options for the field.
+`enum`および`multiSelect`フィールドの場合、この新しい値には、そのフィールドに有効なオプションのいずれかを指定する必要があります。
 
 </Message>
 
-### Replace a value
+### 値の置き換え
 
-To replace a value on a template, use the `replace` operation.
+テンプレート上の値を置き換えるには、`replace`操作を使用します。
 
 ```json
 [
@@ -155,8 +135,8 @@ To replace a value on a template, use the `replace` operation.
 ]
 ```
 
-This will replace the `name` field value `Model 3` with a new value of `Model
-4`.
+これにより、`name`フィールドの値`Model 3`が新しい値`Model
+4`に置き換えられます。
 
 ```js
 {
@@ -176,14 +156,13 @@ This will replace the `name` field value `Model 3` with a new value of `Model
 
 <Message warning>
 
-For `enum` and `multiSelect` fields this new value needs to be one of the
-valid options for the field.
+`enum`および`multiSelect`フィールドの場合、この新しい値には、そのフィールドに有効なオプションのいずれかを指定する必要があります。
 
 </Message>
 
-### Copy a value
+### 値のコピー
 
-To copy a value from one field to another, use the `copy` operation.
+値をあるフィールドから別のフィールドにコピーするには、`copy`操作を使用します。
 
 ```json
 [
@@ -195,9 +174,7 @@ To copy a value from one field to another, use the `copy` operation.
 ]
 ```
 
-This will add the `displayName` field with a value that matches the value of the
-`name` field. Before this operation, the template did not have a value for the
-`displayName` field.
+これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。
 
 ```js
 {
@@ -217,14 +194,13 @@ This will add the `displayName` field with a value that matches the value of the
 
 <Message warning>
 
-For `enum` and `multiSelect` fields this new value needs to be one of the
-valid options for the field.
+`enum`および`multiSelect`フィールドの場合、この新しい値には、そのフィールドに有効なオプションのいずれかを指定する必要があります。
 
 </Message>
 
-### Move a value
+### 値の移動
 
-To move a value from one field to another, use the `move` operation.
+値をあるフィールドから別のフィールドに移動するには、`move`操作を使用します。
 
 ```json
 [
@@ -236,9 +212,7 @@ To move a value from one field to another, use the `move` operation.
 ]
 ```
 
-This will add the `displayName` field with a value that matches the value of the
-`name` field. Before this operation, the template did not have a value for the
-`displayName` field. After this operation, the `name` field no longer exists.
+これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。この操作の後、`name`フィールドはすでに存在しません。
 
 ```js
 {
@@ -258,14 +232,13 @@ This will add the `displayName` field with a value that matches the value of the
 
 <Message warning>
 
-For `enum` and `multiSelect` fields this new value needs to be one of the
-valid options for the field.
+`enum`および`multiSelect`フィールドの場合、この新しい値には、そのフィールドに有効なオプションのいずれかを指定する必要があります。
 
 </Message>
 
-### Remove a value
+### 値の削除
 
-To remove a value from the metadata instance, use the `remove` operation.
+メタデータインスタンスから値を削除するには、`remove`操作を使用します。
 
 ```json
 [
@@ -276,7 +249,7 @@ To remove a value from the metadata instance, use the `remove` operation.
 ]
 ```
 
-This will remove the `name` field completely from the metadata instance.
+これにより、`name`フィールドがメタデータインスタンスから完全に削除されます。
 
 ```js
 {
@@ -295,14 +268,13 @@ This will remove the `name` field completely from the metadata instance.
 
 <Message warning>
 
-For `enum` and `multiSelect` fields this new value needs to be one of the
-valid options for the field.
+`enum`および`multiSelect`フィールドの場合、この新しい値には、そのフィールドに有効なオプションのいずれかを指定する必要があります。
 
 </Message>
 
-### Test a value
+### 値のテスト
 
-To test that a field has the value you expect, use the `test` operation.
+フィールドに期待する値が設定されていることをテストするには、`test`操作を使用します。
 
 ```json
 [
@@ -314,8 +286,7 @@ To test that a field has the value you expect, use the `test` operation.
 ]
 ```
 
-When a test fails the API will not perform any of the operations and return a
-`409 Conflict` HTTP status with the following error.
+テストに失敗すると、APIはいずれの操作も実行せず、次のエラーとともにHTTPステータス`409 Conflict`を返します。
 
 ```json
 {
@@ -325,12 +296,12 @@ When a test fails the API will not perform any of the operations and return a
 }
 ```
 
-The main purpose of this operation is to validate that the values on the
-metadata instance are as expected before any operations are performed. The Box
-API either performs all changes or none, and therefore a failing test is very
-useful to ensure all values are expected before any transformation is applied.
+この操作の主な目的は、何らかの操作が実行される前に、メタデータインスタンスの値が予想どおりであることを確認することです。Box APIでは、変更がすべて実行されるかまったく実行されないかのいずれかであるため、テストの失敗は、変換が適用される前にすべての値が予想どおりかどうかを確認するのに非常に役立ちます。
 
 [e_on_file]: e://put_files_id_metadata_id_id
+
 [e_on_folder]: e://put_folders_id_metadata_id_id
+
 [jsonpatch]: https://tools.ietf.org/html/rfc6902
+
 [pointer]: https://tools.ietf.org/html/rfc6901

@@ -21,32 +21,27 @@ previous_page_id: metadata/fields
 source_url: >-
   https://github.com/box/developer.box.com/blob/default/content/guides/metadata/3-fields/4-enum.md
 ---
-# Enum metadata field
+# 列挙型メタデータフィールド
 
-A metadata field of type `enum` is displayed to a user as a dropdown list. The
-user can select one item from the list.
+`enum`タイプのメタデータフィールドは、ドロップダウンリストとしてユーザーに表示されます。ユーザーはリストから項目を1つ選択できます。
 
-<ImageFrame border center shadow width='400'>
+<ImageFrame border center shadow width="400">
 
-![String field](./metadata-field-enum.png)
+![文字列フィールド](./metadata-field-enum.png)
 
 </ImageFrame>
 
 <Message notice>
 
-An `enum` allows a user to select zero or 1 value. To allow a user to select
-multiple values, use the [`multiSelect`][g_multi_select] template field.
+`enum`を使用すると、ユーザーは0個または1個の値を選択できます。ユーザーが複数の値を選択できるようにするには、[`multiSelect`][g_multi_select]テンプレートフィールドを使用します。
 
 </Message>
 
-## Create an `enum` field
+## `enum`フィールドの作成
 
-An `enum` field can be added to a metadata template either when [creating a
-metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+`enum`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-The required attributes for a `enum` field are a `type`, a `displayName`, a
-`key`, and a list of options.
+`enum`フィールドの必須属性は、`type`、`displayName`、`key`、およびオプションのリストです。
 
 ```json
 {
@@ -69,22 +64,15 @@ The required attributes for a `enum` field are a `type`, a `displayName`, a
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
-and the field can be set to `hidden` to hide it from users in the web and mobile
-apps.
+必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
-## Update an `enum` field
+## `enum`フィールドの更新
 
-An `enum` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
-**operations** to ensure that any template that is already assigned to a file or
-folder is updated as well.
+`enum`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
-### Change basic field values
+### 基本的なフィールド値の変更
 
-When updating an `enum` metadata field one of the possible operations is the
-`editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+`enum`メタデータフィールドを更新する際に可能な操作の1つとして、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作があります。
 
 ```json
 [
@@ -101,23 +89,19 @@ When updating an `enum` metadata field one of the possible operations is the
 
 <Message>
 
-The `fieldKey` here represents the original key of the field to change. The
-`data.key` field is the new key of the field.
+ここにある`fieldKey`は、変更するフィールドの元のキーを表します。`data.key`フィールドはフィールドの新しいキーです。
 
 </Message>
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Add an option
+### オプションの追加
 
-Adding an option to an `enum` field can be achieved through the
-`addEnumOption` operation. The operation expects the `fieldKey` to be set to the
-key of the `enum` field to change, and a `data` object with the `key` of the new
-option to add.
+`enum`フィールドにオプションを追加するには、`addEnumOption`操作を使用します。この操作では、`fieldKey`に、変更する`enum`フィールドのキーを設定するほか、`data`オブジェクトには、追加する新しいオプションの`key`を指定する必要があります。
 
 ```json
 [
@@ -131,7 +115,7 @@ option to add.
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -146,16 +130,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Reorder options
+### オプションの並べ替え
 
-Reordering the options in an `enum` field can be achieved through the
-`reorderEnumOptions` operation. The operation expects the `fieldKey` to be set
-to the key of the `enum` field to change, and an `enumOptionKeys` array with the
-keys of the options in order.
+`enum`フィールドでオプションを並べ替えるには、`reorderEnumOptions`操作を使用します。この操作では、`fieldKey`に、変更する`enum`フィールドのキーを設定するほか、`enumOptionKeys`配列にはオプションのキーが順番に指定する必要があります。
 
 ```json
 [
@@ -172,7 +153,7 @@ keys of the options in order.
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -187,18 +168,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-New options can not be added with this operation. This will affect existing
-instances of this template.
+この操作では、新しいオプションを追加することはできません。これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Edit an option
+### オプションの編集
 
-Editing an option of an `enum` field can be achieved through the
-`editEnumOption` operation. The operation expects the `fieldKey` to be set
-to the key of the `enum` field to change, and an `enumOptionKey` to be set to
-the key of the field option. Finally, it expects a `data` object with the new
-`key` of the field option.
+`enum`フィールドのオプションを編集するには、`editEnumOption`操作を使用します。この操作では、`fieldKey`に、変更する`enum`フィールドのキーを設定し、`enumOptionKey`に、フィールドオプションのキーを設定する必要があります。最後に、`data`オブジェクトには、フィールドオプションの新しい`key`を指定する必要があります。
 
 ```json
 [
@@ -213,7 +189,7 @@ the key of the field option. Finally, it expects a `data` object with the new
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -228,16 +204,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Remove an option
+### オプションの削除
 
-Removing an option from an `enum` field can be achieved through the
-`removeEnumOption` operation. The operation expects `fieldKey` to be set to the
-key of the `enum` field to change, and an `enumOptionKey` to be set to the key
-of the field option to remove.
+`enum`フィールドからオプションを削除するには、`removeEnumOption`操作を使用します。この操作では、`fieldKey`に、変更する`enum`フィールドのキーを設定し、`enumOptionKey`に、削除するフィールドオプションのキーを設定します。
 
 ```json
 [
@@ -249,7 +222,7 @@ of the field option to remove.
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -263,11 +236,12 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template. Any fields that were set
-to this value will have the value reset to `null`.
+これは、このテンプレートの既存のインスタンスに影響します。この値に設定されたすべてのフィールドでは、値が`null`にリセットされます。
 
 </Message>
 
 [g_create_template]: g://metadata/templates/create
+
 [g_update_template]: g://metadata/templates/update
+
 [g_multi_select]: g://metadata/fields/multi-select
