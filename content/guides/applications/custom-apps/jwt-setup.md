@@ -11,6 +11,7 @@ related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
+  - /docs/app-auth
 ---
 
 # Setup with JWT

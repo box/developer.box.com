@@ -5,9 +5,9 @@ name: CI
 on:
   # Run on any Push
   push: {}
-  # Run for PRs on default and staging
+  # Run for PRs on main and staging
   pull_request:
-    branches: [ default, staging ]
+    branches: [ main, staging ]
 
 jobs:
   # The lint job checks that all content is sanitized,
@@ -71,7 +71,7 @@ jobs:
 
     - name: Send Slack notification
       uses: Ilshidur/action-slack@2.0.2
-      if: github.ref == 'refs/heads/default'
+      if: github.ref == 'refs/heads/main'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: GitHub Actions
@@ -85,8 +85,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
 
-    # Only run for the default branch
-    if: github.ref == 'refs/heads/default'
+    # Only run for the main branch
+    if: github.ref == 'refs/heads/main'
 
     # We use node 14.X
     strategy:

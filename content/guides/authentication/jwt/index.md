@@ -10,7 +10,6 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/authenticate-with-jwt
-  - /docs/app-auth
 ---
 
 # JWT Auth
