@@ -123,7 +123,7 @@ sibling_id: guides
 parent_id: guides
 next_page_id: guides
 previous_page_id: ''
-source_url: 'https://github.com/box/developer.box.com/blob/default/content/guides/foo.md'
+source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/foo.md'
 ---
 <Header to='/guides' centered >
 
