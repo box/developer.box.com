@@ -143,7 +143,7 @@ const checkIsIndex = (name) => (name.endsWith('/index.md') || name.endsWith('-in
 const not = (match) => (item) => item !== match
 
 const sourceUrl = (sourcePath) => {
-  return `https://github.com/${REPO_NAME}/blob/default/${sourcePath.replace('./', '')}`
+  return `https://github.com/${REPO_NAME}/blob/main/${sourcePath.replace('./', '')}`
 }
 
 module.exports = extractFrontmatter
