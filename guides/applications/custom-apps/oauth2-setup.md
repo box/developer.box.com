@@ -22,7 +22,7 @@ parent_id: applications/custom-apps
 next_page_id: applications/custom-apps/jwt-setup
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/oauth2-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/oauth2-setup.md
 ---
 # Setup with OAuth 2.0
 

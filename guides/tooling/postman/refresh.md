@@ -16,7 +16,7 @@ parent_id: tooling/postman
 next_page_id: tooling/postman/legacy
 previous_page_id: tooling/postman/make-api-call
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/refresh.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/refresh.md
 ---
 <!-- alex disable postman-postwoman -->
 
@@ -49,7 +49,7 @@ the **Authorization** folder of the Postman collection.
 
 </ImageFrame>
 
-Next, hit the **Send** button to request a new `access_token`.
+Next, click the **Send** button to request a new `access_token`.
 
 <ImageFrame border center shadow>
 
@@ -80,7 +80,7 @@ and request a new one by using the `refresh_token`. By default this feature is
 enabled but it can be turned off by setting the `enable_auto_refresh_access_token`
 Postman environment variable to `false`.
 
-To set this value, hit the edit button in the top right of your Box Postman
+To set this value, click the edit button in the top right of your Box Postman
 environment variables.
 
 <ImageFrame border center shadow>

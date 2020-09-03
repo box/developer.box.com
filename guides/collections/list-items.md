@@ -21,7 +21,7 @@ parent_id: collections
 next_page_id: collections/add
 previous_page_id: collections/list
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collections/list-items.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collections/list-items.md
 ---
 # List Items in Collections
 

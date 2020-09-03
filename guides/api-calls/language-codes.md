@@ -16,7 +16,7 @@ parent_id: api-calls
 next_page_id: api-calls
 previous_page_id: api-calls/suppress-notifications
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/language-codes.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/language-codes.md
 ---
 # Language Codes
 

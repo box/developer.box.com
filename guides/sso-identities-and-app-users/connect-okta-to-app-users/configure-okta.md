@@ -13,7 +13,7 @@ next_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configure-b
 previous_page_id: >-
   sso-identities-and-app-users/connect-okta-to-app-users/scaffold-application-code
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/2-configure-okta.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/2-configure-okta.md
 ---
 # Configure Okta
 

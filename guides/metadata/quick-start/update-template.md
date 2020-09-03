@@ -17,7 +17,7 @@ parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/create-query
 previous_page_id: metadata/quick-start/update-instance
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/5-update-template.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/5-update-template.md
 ---
 # Update a metadata template
 

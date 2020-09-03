@@ -19,7 +19,7 @@ parent_id: folders/single
 next_page_id: folders/single/move
 previous_page_id: folders/single/update
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/rename.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/rename.md
 ---
 # Rename Folder
 

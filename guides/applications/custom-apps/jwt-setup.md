@@ -11,6 +11,7 @@ related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
+  - /docs/app-auth
 category_id: applications
 subcategory_id: applications/custom-apps
 is_index: false
@@ -22,7 +23,7 @@ parent_id: applications/custom-apps
 next_page_id: applications/custom-apps/app-token-setup
 previous_page_id: applications/custom-apps
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/applications/custom-apps/jwt-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/jwt-setup.md
 ---
 # Setup with JWT
 

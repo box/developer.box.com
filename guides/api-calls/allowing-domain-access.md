@@ -20,7 +20,7 @@ parent_id: api-calls
 next_page_id: api-calls/suppress-notifications
 previous_page_id: api-calls/ensure-consistency
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/allowing-domain-access.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/allowing-domain-access.md
 ---
 # Allowing Domain Access
 

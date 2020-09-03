@@ -19,7 +19,7 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/picker
 previous_page_id: embed/ui-elements/explorer
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/open-with.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/open-with.md
 ---
 # Content Open With
 
@@ -389,14 +389,6 @@ contentOpenWith.removeAllListeners();
 | `onError`             | `Function`     | A callback that executes when an error occurs.                                                                                                                                                                                                             |
 | `requestInterceptor`  | `Function`     | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).  |
 | `responseInterceptor` | `Function`     | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors). |
-
-<Message warning>
-
-Currently the `onError` and `onExecute` events are subject to a known bug. We recommend
-using `openWith.addListener('execute', callback)` and
-`openWith.addListener('error', callback)` as a temporary workaround.
-
-</Message>
 
 ### Events
 

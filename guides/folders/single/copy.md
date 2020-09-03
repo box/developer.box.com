@@ -21,7 +21,7 @@ parent_id: folders/single
 next_page_id: folders/single/delete
 previous_page_id: folders/single/move
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/copy.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/copy.md
 ---
 # Copy Folder
 

@@ -19,7 +19,7 @@ parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/refresh
 previous_page_id: authentication/access-tokens/sdks
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/developer-tokens.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/developer-tokens.md
 ---
 # Developer Tokens
 

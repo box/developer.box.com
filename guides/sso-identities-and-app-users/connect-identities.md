@@ -13,7 +13,7 @@ parent_id: sso-identities-and-app-users
 next_page_id: sso-identities-and-app-users/create-app-user
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/1-connect-identities.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/1-connect-identities.md
 ---
 # Connect SSO identities to app users
 

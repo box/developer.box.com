@@ -22,7 +22,7 @@ parent_id: representations
 next_page_id: representations/text
 previous_page_id: representations/thumbnail-representation
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/representations/pdf.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/representations/pdf.md
 ---
 # Get PDF Representation
 

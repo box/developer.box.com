@@ -13,7 +13,7 @@ parent_id: collaborations/quick-start-share-with-slack-users-groups
 next_page_id: collaborations/quick-start-share-with-slack-users-groups/handle-slack-events
 previous_page_id: collaborations/quick-start-share-with-slack-users-groups/configure-box
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/3-scaffold-application-code.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/3-scaffold-application-code.md
 ---
 # Scaffold application code
 

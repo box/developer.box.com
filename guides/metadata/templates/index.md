@@ -12,7 +12,7 @@ parent_id: metadata
 next_page_id: metadata/templates/get
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/2-templates/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/0-index.md
 ---
 # Metadata templates
 

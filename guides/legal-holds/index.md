@@ -12,7 +12,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: legal-holds/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/legal-holds/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/legal-holds/index.md
 ---
 # Legal Holds
 

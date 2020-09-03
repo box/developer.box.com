@@ -21,7 +21,7 @@ parent_id: metadata/instances
 next_page_id: metadata/instances/get
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/1-list.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/4-instances/1-list.md
 ---
 # List all metadata on an item
 

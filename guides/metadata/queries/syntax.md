@@ -13,7 +13,7 @@ parent_id: metadata/queries
 next_page_id: metadata/queries/pagination
 previous_page_id: metadata/queries/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/2-syntax.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/2-syntax.md
 ---
 # Query syntax
 

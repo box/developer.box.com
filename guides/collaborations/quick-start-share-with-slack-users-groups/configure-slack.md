@@ -12,7 +12,7 @@ parent_id: collaborations/quick-start-share-with-slack-users-groups
 next_page_id: collaborations/quick-start-share-with-slack-users-groups/configure-box
 previous_page_id: collaborations/quick-start-share-with-slack-users-groups
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/1-configure-slack.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/1-configure-slack.md
 ---
 # Configure Slack
 

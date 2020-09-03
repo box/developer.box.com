@@ -20,7 +20,7 @@ parent_id: folders/single
 next_page_id: folders/single/update
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/create.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/create.md
 ---
 # Create Folder
 

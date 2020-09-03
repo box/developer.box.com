@@ -13,7 +13,7 @@ parent_id: sso-identities-and-app-users/connect-okta-to-app-users
 next_page_id: sso-identities-and-app-users/connect-okta-to-app-users/run-the-app
 previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/logging-into-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/5-find-or-create-box-users.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/5-find-or-create-box-users.md
 ---
 # Find or create Box app users
 

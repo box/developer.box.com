@@ -17,7 +17,7 @@ parent_id: embed
 next_page_id: embed/box-embed
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/embed/box-dicom.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-dicom.md
 ---
 # Box DICOM
 

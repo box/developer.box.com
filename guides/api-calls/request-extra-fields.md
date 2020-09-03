@@ -19,7 +19,7 @@ parent_id: api-calls
 next_page_id: api-calls/ensure-consistency
 previous_page_id: api-calls/status-codes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/api-calls/request-extra-fields.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/request-extra-fields.md
 ---
 # Request Extra Fields
 

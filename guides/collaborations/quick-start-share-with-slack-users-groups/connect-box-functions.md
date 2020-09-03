@@ -12,7 +12,7 @@ parent_id: collaborations/quick-start-share-with-slack-users-groups
 next_page_id: collaborations/quick-start-share-with-slack-users-groups/test-bot
 previous_page_id: collaborations/quick-start-share-with-slack-users-groups/handle-slack-events
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/5-connect-box-functions.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/5-connect-box-functions.md
 ---
 # Connect Bot to Box
 

@@ -13,7 +13,7 @@ next_page_id: >-
   sso-identities-and-app-users/connect-okta-to-app-users/find-or-create-box-users
 previous_page_id: sso-identities-and-app-users/connect-okta-to-app-users/configure-box
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/4-logging-into-app.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/4-logging-into-app.md
 ---
 # Logging into the app with Okta
 

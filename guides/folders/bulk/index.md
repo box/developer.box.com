@@ -17,6 +17,6 @@ parent_id: folders
 next_page_id: folders/bulk/build-folder-tree
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/folders/bulk/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/bulk/index.md
 ---
 # Bulk Manipulation

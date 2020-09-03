@@ -12,7 +12,7 @@ parent_id: collaborations/quick-start-share-with-slack-users-groups
 next_page_id: ''
 previous_page_id: collaborations/quick-start-share-with-slack-users-groups/connect-box-functions
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/6-test-bot.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/6-test-bot.md
 ---
 # Test the bot
 

@@ -14,7 +14,7 @@ parent_id: pages
 next_page_id: support/community-projects
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/pages/support/index.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/support/index.md
 ---
 # Support & Community
 
@@ -38,7 +38,7 @@ one of these available channels:
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+[forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->

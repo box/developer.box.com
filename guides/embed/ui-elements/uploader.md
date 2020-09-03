@@ -20,7 +20,7 @@ parent_id: embed/ui-elements
 next_page_id: embed/ui-elements/annotations
 previous_page_id: embed/ui-elements/sidebar
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/embed/ui-elements/uploader.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/uploader.md
 ---
 # Content Uploader
 
@@ -145,7 +145,7 @@ uploader.removeAllListeners();
 | Parameter     | Type   | Description                                                                                                                                                                  |
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`    | String | Box Folder ID. This will be the ID of the folder from which you want files to be uploaded to. If you want to use the Box All Files folder, then use `0` as the `folderId`.   |
-| `accessToken` | String | Box API access token to use. This should have upload access to the folder above. |
+| `accessToken` | String | Box API access token to use. This should have upload access to the folder above. The value passed in for the token is assumed to never expire while the uploader is visible. |
 | `options`     | Object | Optional options. See below for details.                                                                                                                                     |
 
 ### Options

@@ -19,7 +19,7 @@ parent_id: tasks
 next_page_id: tasks/update
 previous_page_id: tasks/get
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/3-for-file.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tasks/3-for-file.md
 ---
 # Lists all tasks for a file
 

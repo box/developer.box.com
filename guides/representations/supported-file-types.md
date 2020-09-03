@@ -19,7 +19,7 @@ parent_id: representations
 next_page_id: representations
 previous_page_id: representations/text
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/representations/supported-file-types.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/representations/supported-file-types.md
 ---
 # Supported File Types
 

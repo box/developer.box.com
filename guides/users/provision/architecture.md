@@ -18,7 +18,7 @@ parent_id: users/provision
 next_page_id: users/provision/populate-content
 previous_page_id: users/provision
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/users/provision/architecture.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/users/provision/architecture.md
 ---
 # Create Architecture Skeleton
 

@@ -11,7 +11,7 @@ parent_id: tasks
 next_page_id: tasks/assignments/assign
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tasks/assignments/0-index.md
 ---
 # Assigning tasks
 

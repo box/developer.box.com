@@ -17,7 +17,7 @@ parent_id: metadata/quick-start
 next_page_id: metadata/quick-start/create-instance
 previous_page_id: metadata/quick-start
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/1-quick-start/2-create-template.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/2-create-template.md
 ---
 # Create a custom metadata template
 

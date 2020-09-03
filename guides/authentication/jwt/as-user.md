@@ -21,7 +21,7 @@ parent_id: authentication/jwt
 next_page_id: authentication/jwt/user-access-tokens
 previous_page_id: authentication/jwt
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/jwt/as-user.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/as-user.md
 ---
 # as-user Header
 

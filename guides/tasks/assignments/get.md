@@ -17,7 +17,7 @@ parent_id: tasks/assignments
 next_page_id: tasks/assignments/list
 previous_page_id: tasks/assignments/update-message
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/4-get.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tasks/assignments/4-get.md
 ---
 # Get task assignment information
 
