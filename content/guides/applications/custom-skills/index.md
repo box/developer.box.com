@@ -6,6 +6,8 @@ alias_paths:
   - /docs/getting-started-with-box-skills
   - /docs/box-skills-1 
   - /skills
+related_endpoints:
+  - post_files_id_metadata_global_boxSkillsCards
 ---
 
 # Customs Skills
@@ -13,16 +15,23 @@ alias_paths:
 A Custom Skill, or Box Skill is a type of application that performs custom
 processing for files uploaded to Box. Skills are designed to make it
 straightforward to use third-party Machine Learning services to automatically
-extract information from files uploaded to Box.
+extract information from files uploaded to Box and apply the resulting data as
+metadata on the file.
 
 <ImageFrame shadow>
-  ![Skills example](./images/skills-example.png)
+
+![Skills example](./images/skills-example.png)
+
 </ImageFrame>
 
 Custom Skills need to be enabled on a folder by a Box Admin. After this an event
 is sent to the Skill's application server every time a file is uploaded to the
 folder. This application can then download the file, inspect it or hand it off
 to a machine learning service, and write powerful metadata to the file.
+
+<CTA to='g://skills/'>
+  Start building a Custom Skill
+</CTA>
 
 ## Authentication method
 

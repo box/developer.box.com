@@ -1,13 +1,14 @@
 const glob = require('glob')
 
 const files = glob.sync('content/?(pages|guides)/**/*.md')
-const alLFiles = glob.sync('content/?(pages|guides)/**/*.?(png|gif|jpg|md|jpeg)')
+const allFiles = glob.sync('content/?(pages|guides)/**/*.?(png|gif|jpg|md|jpeg)')
+allFiles.push('content/pages/changelog/index.md')
 
 const LinkValidator = require('../LinkValidator')
 
 files.forEach(source => {
   test('check all local links are valid', () => {
-    const validator = new LinkValidator(source, alLFiles)
+    const validator = new LinkValidator(source, allFiles)
     expect(validator).toHaveValidLocalLinks()
     expect(validator).toHaveValidLocalReferenceLinks()
     expect(validator).toHaveValidReferences()

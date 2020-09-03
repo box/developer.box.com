@@ -21,6 +21,11 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
        "query_params": {
          "value": 100
        },
+       "fields": [
+         "name",
+         "metadata.enterprise_123456.contractTemplate.customerName",
+         "metadata.enterprise_123456.contractTemplate.amount" 
+       ],
        "ancestor_folder_id": "5555",
        "use_index": "amountAsc",
        "order_by": [
@@ -46,108 +51,26 @@ reference](e://post_metadata_queries_execute_read).
 Any files or folders that match the query are returned in the API response.
 The body of the response is a JSON object with a list of `entries` for each file
 or folder, and a `next_marker` value that you can use to find the next page of
-results. Each of the entries will have an `item` representing the file or
-folder, as well as a `metadata` instance containing the metadata attached to the
-file or folder. 
+results. Each of the entries will represent the file or
+folder that matched the query, and only any fields explicitly requested in the
+`field` parameter are returned.
 
 ```json
 {
   "entries":[
     {
-      "item":{
-        "type":"file",
-        "id":"1617554169109",
-        "file_version":{
-          "type":"file_version",
-          "id":"1451884469385",
-          "sha1":"69888bb1bff455d1b2f8afea75ed1ff0b4879bf6"
-        },
-        "sequence_id":"0",
-        "etag":"0",
-        "sha1":"69888bb1bff455d1b2f8afea75ed1ff0b4879bf6",
-        "name":"My Contract.docx",
-        "description":"",
-        "size":25600,
-        "path_collection":{
-          "total_count":4,
-          "entries":[
-            {
-              "type":"folder",
-              "id":"0",
-              "sequence_id":null,
-              "etag":null,
-              "name":"All Files"
-            },
-            {
-              "type":"folder",
-              "id":"15017998644",
-              "sequence_id":"0",
-              "etag":"0",
-              "name":"Contracts"
-            },
-            {
-              "type":"folder",
-              "id":"15286891196",
-              "sequence_id":"1",
-              "etag":"1",
-              "name":"North America"
-            },
-            {
-              "type":"folder",
-              "id":"16125613433",
-              "sequence_id":"0",
-              "etag":"0",
-              "name":"2017"
-            }
-          ]
-        },
-        "created_at":"2017-04-20T12:55:27-07:00",
-        "modified_at":"2017-04-20T12:55:27-07:00",
-        "trashed_at":null,
-        "purged_at":null,
-        "content_created_at":"2017-01-06T17:59:01-08:00",
-        "content_modified_at":"2017-01-06T17:59:01-08:00",
-        "created_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@company.com"
-        },
-        "modified_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@company.com"
-        },
-        "owned_by":{
-          "type":"user",
-          "id":"193973366",
-          "name":"Box Admin",
-          "login":"admin@company.com"
-        },
-        "shared_link":null,
-        "parent":{
-          "type":"folder",
-          "id":"16125613433",
-          "sequence_id":"0",
-          "etag":"0",
-          "name":"2017"
-        },
-        "item_status":"active"
-      },
+      "type": "file",
+      "id": "1617554169109",
+      "name": "My Contract.docx",
       "metadata":{
         "enterprise_123456":{
-          "someTemplate":{
-            "$parent":"file_161753469109",
+          "contractTemplate":{
+            "$parent": "file_161753469109",
+            "$scope": "enterprise_123456",
+            "$template": "contractTemplate",
             "$version":0,
             "customerName":"Phoenix Corp",
-            "$type":"someTemplate-3d5fcaca-f496-4bb6-9046-d25c37bc5594",
-            "$typeVersion":0,
-            "$id":"ba52e2cc-371d-4659-8d53-50f1ac642e35",
-            "amount":100,
-            "claimDate":"2016-04-10T00:00:00Z",
-            "region":"West",
-            "$typeScope":"enterprise_123456"
+            "amount":100
           }
         }
       }

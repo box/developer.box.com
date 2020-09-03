@@ -31,3 +31,6 @@ footer:
 
 pages:
   $ref: "content/microcopy/pages.yml"
+
+changelog:
+  $ref: "content/microcopy/changelog.yml"

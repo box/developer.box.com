@@ -34,6 +34,13 @@ request.
 If you prefer to specify a name for the index please provide that name upon
 requesting the index.
 
+<Message warning>
+
+The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
+be used in the query for an index.
+
+</Message>
+
 ### Example index request
 
 The following is an example request for an index. It is essential to include all
@@ -61,6 +68,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      -H 'Content-Type: application/json'
      -d '{
        "from": "enterprise_123456.customerInfo",
+       "fields": ["name"],
        "query": "accountNumber = :argAccountNum AND status = :argStatus",
        "query_params": {
          "argAccountNum": 12345,

@@ -84,7 +84,7 @@ Want to submit your project? Please review the
 [connector-kloudless]: https://kloudless.com/products/cloud-storage/
 [connector-mendix]: https://appstore.home.mendix.com/link/app/40977/
 [connector-ms-flow]: https://flow.microsoft.com/en-us/services/shared_box/box/
-[connector-mulesoft]: https://docs.mulesoft.com/mule-user-guide/v/3.8/box-connector
+[connector-mulesoft]: https://docs.mulesoft.com/box-connector/4.0/
 [connector-stamplay]: https://github.com/box/mojito
 [connector-workato]: https://www.workato.com/integrations/box
 [tools-sharex]: https://github.com/ShareX/ShareX

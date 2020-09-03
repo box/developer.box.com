@@ -79,6 +79,13 @@ Approval" button.
   [forum][forum].
 </Message>
 
+## Unpublishing an app
+
+Once approved and published, an application can be unpublished from the same
+control panel. Head over to the [Developer Console][devconsole] and select
+your application. Then, select the "App Gallery" panel from the left-hand
+sidebar. The app can be unpublished from this page.
+
 [app-gallery]: https://app.box.com/services
 [devconsole]: https://account.box.com/developers/services
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum

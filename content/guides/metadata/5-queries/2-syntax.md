@@ -17,6 +17,10 @@ be created.
   "query_params": {
     "value": 100
   },
+  "fields": [
+    "name",
+    "metadata.enterprise_123456.contractTemplate.amount"
+  ],
   "ancestor_folder_id": "5555"
 }
 ```
@@ -24,6 +28,24 @@ be created.
 In this case the `from` value represents the `scope` and `templateKey` of the
 metadata template, and the `ancestor_folder_id` represents the folder ID to
 search within, including its subfolders.
+
+## The `fields` parameter
+
+By default, this API will only return the base-representation of a file or
+folder, which includes their `id`, `type`, and `etag` values. To request any
+additional data the `fields` parameter can be used to query any additional
+fields, as well as any metadata associated to the item.
+
+For example:
+
+* `created_by` will add the details of the user who created the item to
+the response.
+* `metadata.<scope>.<templateKey>` will return the base-representation
+of the metadata instance identified by the `scope` and `templateKey`.
+* `metadata.<scope>.<templateKey>.<field>` will return all fields in the
+  base-representation of the metadata instance identified by the `scope` and
+  `templateKey` plus the field specified by the `field` name. Multiple fields
+  for the same `scope` and `templateKey` can be defined.
 
 ## The `query` parameter
 
@@ -61,19 +83,19 @@ A query supports the following logical operators.
 
 <!-- markdownlint-disable line-length -->
 
-| Operator   |                                                                                                                                                                                                                                                      |
-|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `AND`      | Matches when all the conditions separated by `AND` are `TRUE`                                                                                                                                                                                        |
-| `OR`       | Matches when any of the conditions separated by `OR` is `TRUE`                                                                                                                                                                                       |
-| `NOT`      | Matches when the preceding condition(s) is **not** `TRUE`                                                                                                                                                                                            |
-| `LIKE`     | Matches when the template field value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details                                                                                                |
-| `NOT LIKE` | Matches when the template field value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details                                                                                     |
-| `ILIKE`    | Identical to `LIKE` but case insensitive                                                                                                                                                                                                             |
-| `NOT ILIKE` | Identical to `NOT LIKE` but case insensitive                                                                                                                                                                                                         |
-| `IN`       | Matches when the template field value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)` |
-| `NOT IN`   | Similar to `IN` but when the template field value matches none of the arguments provided in the list                                                                                                                                                 |
-| `IS NULL`  | Matches when the template field value is `null`                                                                                                                                                                                                      |  |
-| `IS NOT`   | Matches when the template field value is not `null`                                                                                                                                                                                                  |  |
+| Operator                |                                                                                                                                                                                                                                                       |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `AND`                   | Matches when all the conditions separated by `AND` are `TRUE`.                                                                                                                                                                                        |
+| `OR`                    | Matches when any of the conditions separated by `OR` is `TRUE`.                                                                                                                                                                                       |
+| `NOT`                   | Matches when the preceding condition(s) is **not** `TRUE`.                                                                                                                                                                                            |
+| `LIKE`                  | Matches when the template field value matches a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details. See additional limitations below.                                                              |
+| `NOT LIKE`              | Matches when the template field value does **not** match a pattern. Only supported for string values. See [pattern matching](#pattern-matching) for more details. See additional limitations below.                                                   |
+| `ILIKE`                 | Identical to `LIKE` but case insensitive. See additional limitations below.                                                                                                                                                                           |
+| `NOT ILIKE`             | Identical to `NOT LIKE` but case insensitive. See additional limitations below.                                                                                                                                                                       |
+| `IN`                    | Matches when the template field value is equal to any one of a list of arguments provided. The format for this requires each item in the list to be an explicitly defined `query_params` argument, for example `amount NOT IN (:arg1, :arg2, :arg3)`. |
+| `NOT IN`                | Similar to `IN` but when the template field value matches none of the arguments provided in the list.                                                                                                                                                 |
+| `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
+| `IS NOT`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -84,20 +106,29 @@ the `ILIKE` operator.
 
 </Message>
 
+<Message warning>
+
+The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
+be used on templates with metadata instance counts greater than 10,000 items.
+Queries of this size require an [index](g://metadata/queries/indexes) and these
+operators are not compatible with indexes.
+
+</Message>
+
 ### Comparison operators
 
 A query supports the following comparison operators.
 
 <!-- markdownlint-disable line-length -->
 
-| Operator |                                                                                      |
-|----------|--------------------------------------------------------------------------------------|
-| `=`      | Ensures a template field value is **equal to** the specified value                   |
-| `>`      | Ensures a template field value is **greater than** the specified value               |
-| `<`      | Ensures a template field value is **less than** the specified value                  |
-| `>=`     | Ensures a template field value is **greater than or equal to** the specified value   |
-| `<=`     | Ensures a template field value is **less than or equal to** the a specified value    |
-| `<>`     | Ensures a template field value is **not equal to** the a specified value             |
+| Operator |                                                                                    |
+|----------|------------------------------------------------------------------------------------|
+| `=`      | Ensures a template field value is **equal to** the specified value                 |
+| `>`      | Ensures a template field value is **greater than** the specified value             |
+| `<`      | Ensures a template field value is **less than** the specified value                |
+| `>=`     | Ensures a template field value is **greater than or equal to** the specified value |
+| `<=`     | Ensures a template field value is **less than or equal to** the a specified value  |
+| `<>`     | Ensures a template field value is **not equal to** the a specified value           |
 
 <!-- markdownlint-enable line-length -->
 
@@ -110,9 +141,9 @@ A query supports the following comparison operators.
 The `LIKE`, `NOT LIKE`, `ILIKE`, and `NOT ILIKE` operators match a string
 to a pattern. The pattern supports the following reserved characters.
 
-- `%` The percent sign represents zero, one, or multiple characters, for example
+* `%` The percent sign represents zero, one, or multiple characters, for example
   `%Contract` matches `Contract`, `Sales Contract`, but not `Contract (Sales)`,
-- `_` The underscore represents a single character, for example
+* `_` The underscore represents a single character, for example
   `Bo_` matches `Box`, `Bot`, but not `Bots`,
 
 Both of these reserved characters can be used before, after, or in between other
@@ -120,7 +151,7 @@ characters. A pattern can include multiple reserved characters, for example
 `Box% (____)` would match `Box Contract (2020)`.
 
 An example query would looks something like this. Note that the `%`-wrapped
-string is not in the `query` attribute but in the list of `query_params`. 
+string is not in the `query` attribute but in the list of `query_params`.
 
 ```json
 {

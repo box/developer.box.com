@@ -3,17 +3,18 @@
 # Contributing
 
 <!-- vscode-markdown-toc -->
-* [Background](#Background)
-	* [Project layout](#Projectlayout)
-	* [Deploying changes](#Deployingchanges)
-	* [Internationalization](#Internationalization)
-* [Local development](#Localdevelopment)
-	* [Prerequisites](#Prerequisites)
-	* [Start local server](#Startlocalserver)
-	* [Adding a guide](#Addingaguide)
-	* [Adding index pages](#Addingindexpages)
-	* [Adding microcopy](#Addingmicrocopy)
-		* [Adding new Microcopy files.](#AddingnewMicrocopyfiles.)
+- [Contributing](#contributing)
+  - [<a name='Background'></a>Background](#background)
+    - [<a name='Projectlayout'></a>Project layout](#project-layout)
+    - [<a name='Deployingchanges'></a>Deploying changes](#deploying-changes)
+    - [<a name='Internationalization'></a>Internationalization](#internationalization)
+  - [<a name='Localdevelopment'></a>Local development](#local-development)
+    - [<a name='Prerequisites'></a>Prerequisites](#prerequisites)
+    - [<a name='Startlocalserver'></a>Start local server](#start-local-server)
+    - [<a name='Addingaguide'></a>Adding a guide](#adding-a-guide)
+    - [<a name='Addingindexpages'></a>Adding index pages](#adding-index-pages)
+    - [<a name='Addingmicrocopy'></a>Adding microcopy](#adding-microcopy)
+      - [<a name='AddingnewMicrocopyfiles.'></a>Adding new Microcopy files.](#adding-new-microcopy-files)
 
 <!-- vscode-markdown-toc-config
 	numbering=false
@@ -60,7 +61,7 @@ Additionally, the following folder is created at build time:
 	
 ### <a name='Deployingchanges'></a>Deploying changes
 
-By pushing to the `default` branch the source will automatically be compiled and
+By pushing to the `main` branch the source will automatically be compiled and
 pushed to the [`en`][en_branch] branch by
 [Travis][travis].
 
