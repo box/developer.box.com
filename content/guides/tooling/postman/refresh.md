@@ -34,7 +34,7 @@ the **Authorization** folder of the Postman collection.
   ![The refresh access token API call in Postmam](./quick-start/select-refresh-access-token.png)
 </ImageFrame>
 
-Next, hit the **Send** button to request a new `access_token`.
+Next, click the **Send** button to request a new `access_token`.
 
 <ImageFrame border center shadow>
   ![Postman Send button](./quick-start/postman-send-button.png)
@@ -61,7 +61,7 @@ and request a new one by using the `refresh_token`. By default this feature is
 enabled but it can be turned off by setting the `enable_auto_refresh_access_token`
 Postman environment variable to `false`.
 
-To set this value, hit the edit button in the top right of your Box Postman
+To set this value, click the edit button in the top right of your Box Postman
 environment variables.
 
 <ImageFrame border center shadow>
