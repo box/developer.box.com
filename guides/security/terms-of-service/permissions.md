@@ -18,7 +18,7 @@ parent_id: security/terms-of-service
 next_page_id: ''
 previous_page_id: security/terms-of-service/for-colaboration
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/security/terms-of-service/permissions.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/security/terms-of-service/permissions.md
 ---
 # Permissions
 

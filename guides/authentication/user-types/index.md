@@ -23,7 +23,7 @@ parent_id: authentication
 next_page_id: ''
 previous_page_id: authentication/user-types/app-users
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/user-types/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/index.md
 ---
 # User Types
 

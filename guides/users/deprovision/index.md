@@ -13,7 +13,7 @@ parent_id: users
 next_page_id: ''
 previous_page_id: users/deprovision/user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/users/deprovision/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/users/deprovision/index.md
 ---
 # Deprovision Users
 

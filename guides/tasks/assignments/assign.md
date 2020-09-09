@@ -16,7 +16,7 @@ parent_id: tasks/assignments
 next_page_id: tasks/assignments/unassign
 previous_page_id: tasks/assignments
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/assignments/1-assign.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tasks/assignments/1-assign.md
 ---
 # Assign a task to a user
 

@@ -22,7 +22,7 @@ parent_id: collaborations/allowed-domains
 next_page_id: collaborations/allowed-domains/list
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/allowed-domains/create.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/allowed-domains/create.md
 ---
 # Allow a domain for collaboration
 

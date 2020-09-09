@@ -16,7 +16,7 @@ parent_id: webhooks/handle
 next_page_id: webhooks/handle/setup-signatures
 previous_page_id: webhooks/handle
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/handle/retries.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/handle/retries.md
 ---
 <!-- alex disable failed -->
 

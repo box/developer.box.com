@@ -16,7 +16,7 @@ parent_id: tooling/postman
 next_page_id: tooling/postman/refresh
 previous_page_id: tooling/postman
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/postman/make-api-call.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/make-api-call.md
 ---
 <!-- alex disable postman-postwoman -->
 

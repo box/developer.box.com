@@ -19,7 +19,7 @@ parent_id: applications
 next_page_id: applications
 previous_page_id: applications/select
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/applications/app-gallery.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-gallery.md
 ---
 # App Gallery
 
@@ -97,6 +97,13 @@ For any questions, please feel free to email [`integrate@box.com`][email] or the
 [forum][forum].
 
 </Message>
+
+## Unpublishing an app
+
+Once approved and published, an application can be unpublished from the same
+control panel. Head over to the [Developer Console][devconsole] and select
+your application. Then, select the "App Gallery" panel from the left-hand
+sidebar. The app can be unpublished from this page.
 
 [app-gallery]: https://app.box.com/services
 [devconsole]: https://account.box.com/developers/services

@@ -21,7 +21,7 @@ parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/annotator-tokens
 previous_page_id: authentication/access-tokens/revoke
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/access-tokens/downscope.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/downscope.md
 ---
 # Downscope a Token
 

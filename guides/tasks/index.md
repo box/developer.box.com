@@ -17,7 +17,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: tasks/delete
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tasks/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tasks/index.md
 ---
 <!-- alex disable reject -->
 

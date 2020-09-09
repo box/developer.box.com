@@ -22,7 +22,7 @@ parent_id: metadata/instances
 next_page_id: metadata/instances/delete
 previous_page_id: metadata/instances/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/4-instances/4-update.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/4-instances/4-update.md
 ---
 # Update metadata on an item
 

@@ -23,7 +23,7 @@ parent_id: uploads
 next_page_id: uploads
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/uploads/check.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/uploads/check.md
 ---
 <!-- alex disable failed -->
 

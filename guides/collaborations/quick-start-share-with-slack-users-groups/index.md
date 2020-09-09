@@ -14,7 +14,7 @@ parent_id: collaborations
 next_page_id: collaborations/quick-start-share-with-slack-users-groups/configure-slack
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/0-index.md
 ---
 # Share with synced Slack user groups
 

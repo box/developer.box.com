@@ -18,7 +18,7 @@ parent_id: skills/handle
 next_page_id: ''
 previous_page_id: skills/handle/payload
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/skills/handle/metadata.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/skills/handle/metadata.md
 ---
 # Skills Cards Metadata
 

@@ -12,7 +12,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: comments/create-reply
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/comments/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/comments/index.md
 ---
 # Comments
 

@@ -19,7 +19,7 @@ parent_id: representations
 next_page_id: representations/download-a-representation
 previous_page_id: representations/list-all-representations
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/representations/request-a-representation.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/representations/request-a-representation.md
 ---
 # Request Desired Representation
 

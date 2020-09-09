@@ -17,7 +17,7 @@ parent_id: authentication/app-token
 next_page_id: ''
 previous_page_id: authentication/app-token/endpoints
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/authentication/app-token/rollover.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/rollover.md
 ---
 # Rotating App Tokens
 
@@ -48,8 +48,8 @@ without any issues.
 2. Update your application with the Secondary Token. Ensure your application is
    configured with this new token completely before moving on to the next step.
 3. Once you are confident that the Primary App token is no longer in use, head
-   over to the  [developer console][console] and hit the "Revoke" button for the
-   Primary App Token.
+   over to the  [developer console][console] and click the "Revoke" button for
+   the Primary App Token.
 
 <Message>
 

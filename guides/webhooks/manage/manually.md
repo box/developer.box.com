@@ -17,7 +17,7 @@ parent_id: webhooks/manage
 next_page_id: ''
 previous_page_id: webhooks/manage/delete
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/webhooks/manage/manually.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/manage/manually.md
 ---
 # Manually Create Webhook
 

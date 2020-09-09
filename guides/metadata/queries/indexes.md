@@ -13,7 +13,7 @@ parent_id: metadata/queries
 next_page_id: metadata/queries/comparison
 previous_page_id: metadata/queries
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/6-indexes.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/6-indexes.md
 ---
 # Indexes
 
@@ -47,6 +47,13 @@ request.
 
 If you prefer to specify a name for the index please provide that name upon
 requesting the index.
+
+<Message warning>
+
+The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
+be used in the query for an index.
+
+</Message>
 
 ### Example index request
 

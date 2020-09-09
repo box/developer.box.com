@@ -20,7 +20,7 @@ parent_id: folders/single
 next_page_id: folders/single/change-owner
 previous_page_id: folders/single/copy
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/folders/single/delete.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/delete.md
 ---
 # Delete Folder
 

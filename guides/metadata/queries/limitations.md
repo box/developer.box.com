@@ -13,7 +13,7 @@ parent_id: metadata/queries
 next_page_id: metadata/queries/indexes
 previous_page_id: metadata/queries/errors
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/metadata/5-queries/5-limitations.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/5-limitations.md
 ---
 # Limitations
 
@@ -29,6 +29,14 @@ requesting user has at least `previewer` access.
 A metadata query only works with metadata templates that have been created by
 that enterprise. A query will not return results based on the content of free
 form key-value pairs stored in the `​global.properties` template.
+
+## Classification metadata templates
+
+Box uses metadata templates to power its content classification. These metadata
+templates can not be used in metadata queries, as they will most likely run
+into issues regarding large results sets. More on this next.
+
+There are no immediate plans to start supporting these queries in the future.
 
 ## Indexes for large result sets
 

@@ -21,7 +21,7 @@ parent_id: collaborations/allowed-domains
 next_page_id: collaborations/allowed-domains/delete
 previous_page_id: collaborations/allowed-domains/create
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/allowed-domains/list.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/allowed-domains/list.md
 ---
 # List allowed domains for collaboration
 

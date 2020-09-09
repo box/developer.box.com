@@ -19,7 +19,7 @@ parent_id: applications
 next_page_id: applications/app-gallery
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/applications/select.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/select.md
 ---
 # Select App Type
 

@@ -19,7 +19,7 @@ parent_id: retention-policies
 next_page_id: retention-policies
 previous_page_id: retention-policies/list
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/retention-policies/get.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/retention-policies/get.md
 ---
 # Get Retention Policy
 

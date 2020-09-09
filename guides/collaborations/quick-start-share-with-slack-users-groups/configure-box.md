@@ -13,7 +13,7 @@ next_page_id: >-
   collaborations/quick-start-share-with-slack-users-groups/scaffold-application-code
 previous_page_id: collaborations/quick-start-share-with-slack-users-groups/configure-slack
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/2-configure-box.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/2-configure-box.md
 ---
 # Configure Box
 

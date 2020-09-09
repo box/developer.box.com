@@ -12,7 +12,7 @@ parent_id: internal/flow
 next_page_id: ''
 previous_page_id: internal/flow/store
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/internal/flow/login.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/login.md
 ---
 <!-- does not need translation -->
 

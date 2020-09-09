@@ -20,7 +20,7 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/python
 previous_page_id: tooling/sdks/dotnet
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/tooling/sdks/java.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/java.md
 ---
 # Install Java SDK
 

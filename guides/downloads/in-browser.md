@@ -20,7 +20,7 @@ parent_id: downloads
 next_page_id: downloads
 previous_page_id: downloads/get-url
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/downloads/in-browser.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/downloads/in-browser.md
 ---
 # Download in Browser
 

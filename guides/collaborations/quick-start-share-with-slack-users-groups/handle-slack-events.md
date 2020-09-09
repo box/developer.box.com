@@ -13,7 +13,7 @@ next_page_id: collaborations/quick-start-share-with-slack-users-groups/connect-b
 previous_page_id: >-
   collaborations/quick-start-share-with-slack-users-groups/scaffold-application-code
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/quick-start-share-with-slack-users-groups/4-handle-slack-events.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/quick-start-share-with-slack-users-groups/4-handle-slack-events.md
 ---
 # Handle Slack Events
 

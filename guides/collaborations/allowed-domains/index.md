@@ -18,7 +18,7 @@ parent_id: collaborations
 next_page_id: ''
 previous_page_id: collaborations/allowed-domains/delete
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/collaborations/allowed-domains/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/allowed-domains/index.md
 ---
 # Allowed collaboration domains
 

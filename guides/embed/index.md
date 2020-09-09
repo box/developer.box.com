@@ -13,7 +13,7 @@ parent_id: guides
 next_page_id: ''
 previous_page_id: embed/box-embed
 source_url: >-
-  https://github.com/box/developer.box.com/blob/default/content/guides/embed/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/embed/index.md
 ---
 # Embed Box
 
