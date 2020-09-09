@@ -8,8 +8,9 @@ on:
     branches:
       - jp
     
-# A task that notifies Netlify of changes to the jp branch
-notify-from-jp:
+jobs:
+  # A task that notifies Netlify of changes to the jp branch
+  notify-from-jp:
   # We run this on the latest ubuntu
   runs-on: ubuntu-latest
   timeout-minutes: 3
