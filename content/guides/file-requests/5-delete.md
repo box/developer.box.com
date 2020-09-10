@@ -13,10 +13,7 @@ related_resources:
 
 To delete a file request, all you need is its unique ID.
 
-```curl
-curl -i -X DELETE "https://api.box.com/2.0/file_requests/42037322" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
-```
+<Samples id='delete_file_requests_id' />
 
 <Message notice>
 

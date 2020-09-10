@@ -14,15 +14,7 @@ To create a copy of an existing [template](g://file-requests/template) file
 request, all you need is its unique ID, and the ID of the folder to apply the 
 new file request to.
 
-```curl
-curl -i -X POST "https://api.box.com/2.0/file_requests/42037322/copy" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -d '{
-       "folder": {
-         "id": "2233212"
-       }
-     }'
-```
+<Samples id='post_file_requests_id_copy' />
 
 <Message notice>
 

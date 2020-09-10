@@ -14,17 +14,7 @@ related_resources:
 To update some of the basic details for an existing 
 file request, all you need is its unique ID.
 
-```curl
-curl -i -X PUT "https://api.box.com/2.0/file_requests/42037322" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -d '{
-       "title": "Please upload required documents",
-       "description": "Please upload required documents",
-       "status": "ACTIVE",
-       "is_email_required": true,
-       "is_description_required": false
-     }'
-```
+<Samples id='put_file_requests_id' />
 
 For more details on the different fields that can be updated when creating
 a template, please see the reference documentation for the
