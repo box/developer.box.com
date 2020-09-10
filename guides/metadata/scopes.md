@@ -14,10 +14,10 @@ is_index: false
 id: metadata/scopes
 rank: 1
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata
+next_page_id: metadata/classifications
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-scopes.md
