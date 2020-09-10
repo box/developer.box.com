@@ -7,11 +7,11 @@ subcategory_id: null
 is_index: true
 id: metadata
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: metadata/scopes
+previous_page_id: metadata/classifications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/0-index.md
 ---
