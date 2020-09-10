@@ -25,10 +25,9 @@ source_url: >-
 To get details about an existing [file request](g://file-requests/template),
 all you need is its unique ID.
 
-```curl
-curl -i -X GET "https://api.box.com/2.0/file_requests/42037322" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
-```
+<Samples id='get_file_requests_id' >
+
+</Samples>
 
 <Message notice>
 
