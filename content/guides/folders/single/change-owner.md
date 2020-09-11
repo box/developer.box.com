@@ -12,8 +12,8 @@ alias_paths: []
 
 # Change Folder Owner
 
-To change the owner of a folder, first invite the user you wish to transfer the folder to
-as a collaborator on the folder.
+To change the owner of a folder, first invite the user you wish to
+transfer the folder to as a collaborator on the folder.
 
 <Samples id='post_collaborations' />
 
