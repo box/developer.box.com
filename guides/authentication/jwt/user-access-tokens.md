@@ -69,7 +69,7 @@ SDK guide](g://authentication/jwt/with-sdk) but instead of creating an
 var userId = "12345";
 var sdk = new BoxJWTAuth(config);
 var token = sdk.UserToken(appUserID);
-BoxClient client = boxJWT.UserClient(userToken, userId);
+BoxClient client = sdk.UserClient(userToken, userId);
 ```
 
 </Tab>
