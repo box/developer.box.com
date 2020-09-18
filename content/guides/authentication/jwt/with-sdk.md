@@ -78,7 +78,7 @@ the application's private key and other details. The following is an example.
   </Tab>
 </Tabs>
 
-To use this object in the application it needs to be read from file. Most
+To use this object in the application it needs to be read from file.
 
 <Tabs>
   <Tab title='.Net'>
