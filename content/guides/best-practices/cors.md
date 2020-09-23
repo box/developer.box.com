@@ -8,7 +8,7 @@ alias_paths:
   - /docs/branding-guidelines
 ---
 
-# Cross-Origin Resource Sharing
+# Cross-Origin Resource Sharing (CORS)
 
 [Cross-Origin Resource Sharing (CORS)][mdn_cors] is a security mechanism used
 by web browsers to prevent malicious websites from accessing data on other
