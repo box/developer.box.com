@@ -31,7 +31,7 @@ images, files, or even API resources from another domain (`box.com`)
 the web browser will prevent access to any of those assets unless the right
 CORS headers are present.
 
-```mermaid;width=600px
+```mermaid;width=1000px
 sequenceDiagram
     participant b as Browser (company.com)
     participant s1 as Server (company.com)
