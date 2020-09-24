@@ -6,15 +6,15 @@ category_id: search
 subcategory_id: null
 is_index: false
 id: search/indexing
-rank: 2
+rank: 1
 type: guide
 total_steps: 2
 sibling_id: search
 parent_id: search
-next_page_id: search
-previous_page_id: search/logical-operators
+next_page_id: search/logical-operators
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/2-indexing.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/1-indexing.md
 ---
 <!-- alex disable chinese -->
 

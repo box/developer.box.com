@@ -6,15 +6,15 @@ category_id: search
 subcategory_id: null
 is_index: false
 id: search/logical-operators
-rank: 1
+rank: 2
 type: guide
 total_steps: 2
 sibling_id: search
 parent_id: search
-next_page_id: search/indexing
-previous_page_id: ''
+next_page_id: search
+previous_page_id: search/indexing
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/1-logical-operators.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/2-logical-operators.md
 ---
 # Logical search operators
 
