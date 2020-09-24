@@ -1,16 +1,22 @@
-# The name of this GH action 
+# The name of this GH action
 name: CI
 
 # Defines when this action should be run
 on:
   # Run on any Push
-  push: {}
-  # Run for PRs on default and staging
+  push: 
+    branches-ignore:
+      - en
+      - en-staging
+      - en-snapshot
+      - jp
+      - jp-partial
+  # Run for PRs on main and staging
   pull_request:
-    branches: [ default, staging ]
+    branches: [ main, staging ]
 
 jobs:
-  # The lint job checks that all content is sanitized, 
+  # The lint job checks that all content is sanitized,
   # spell checked, and without any obvious dead links
   lint:
     # We run this on the latest ubuntu
@@ -22,7 +28,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -54,7 +60,7 @@ jobs:
       matrix:
         node-version: [14.x]
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -71,7 +77,7 @@ jobs:
 
     - name: Send Slack notification
       uses: Ilshidur/action-slack@2.0.2
-      if: github.ref == 'refs/heads/default'
+      if: github.ref == 'refs/heads/main'
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_USERNAME: GitHub Actions
@@ -85,8 +91,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
 
-    # Only run for the default branch
-    if: github.ref == 'refs/heads/default'
+    # Only run for the main branch
+    if: github.ref == 'refs/heads/main'
 
     # We use node 14.X
     strategy:
@@ -94,11 +100,11 @@ jobs:
         node-version: [14.x]
 
     # Requires the lint and test jobs to pass first
-    needs: 
+    needs:
       - lint
       - test
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -117,11 +123,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_WEBHOOK }}
-          json: '{}'
-      
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_WEBHOOK }}
+          data: '{}'
+
+      - name: 'Trigger Netlify deployment (Box.dev mirror)'
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_MIRROR_WEBHOOK }}
+          data: '{}'
+
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
         env:
@@ -141,8 +153,6 @@ jobs:
         with:
           args: "Error running `deploy` job in OpenAPI CI"
 
-
-  
   # The deploy task actually deploys any changes to the en-staging branch
   push-to-en-staging:
     # We run this on the latest ubuntu
@@ -157,11 +167,11 @@ jobs:
         node-version: [14.x]
 
     # Requires the lint and test jobs to pass first
-    needs: 
+    needs:
       - lint
       - test
 
-    # The following steps are performed for each lint job 
+    # The following steps are performed for each lint job
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -180,10 +190,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_STAGING_WEBHOOK }}
-          json: '{}'
+        uses: joelwmale/webhook-action@master
+        env:
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_STAGING_WEBHOOK }}
+          data: '{}'
 
       - name: Send Slack notification
         uses: Ilshidur/action-slack@2.0.2
@@ -203,40 +213,3 @@ jobs:
           SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
         with:
           args: "Error running `deploy-staging` job in OpenAPI CI"
-
-  # A task that notifies Netlify of changes to the jp branch
-  notify-from-jp:
-    # We run this on the latest ubuntu
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/jp'
-    timeout-minutes: 3
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
-      - name: 'Trigger Netlify deployment'
-        uses: jasongitmail/fast-webhook@v1
-        with:
-          url: ${{ secrets.NETLIFY_BOXDEV_JP_WEBHOOK }}
-          json: '{}'
-
-      - name: Send Slack notification
-        uses: Ilshidur/action-slack@2.0.2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_USERNAME: GitHub Actions
-          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
-        with:
-          args: "Pushed latest Markdown to `jp` branch :rocket:"
-
-      - name: Send Slack notification
-        uses: Ilshidur/action-slack@2.0.2
-        if: ${{ failure() }}
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_USERNAME: GitHub Actions
-          SLACK_AVATAR: "https://avatars3.githubusercontent.com/u/8659759?s=200&v=4"
-        with:
-          args: "Error running `deploy-jp` job in OpenAPI CI"
