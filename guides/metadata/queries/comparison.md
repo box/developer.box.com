@@ -18,7 +18,7 @@ source_url: >-
 # Comparison to regular search
 
 At the surface the [Metadata Query API][mdq_api] seems very similar to the
-[Search for content API][search] API, but there are several important
+[Search for content API][search], but there are several important
 differences in how they operate. At a high level the Metadata Query API is
 optimized for exactness and throughput, while regular search is optimized for
 relevance to a human user.

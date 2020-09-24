@@ -52,7 +52,9 @@ manually approve the application.
 ### As developer
 
 As the developer, head over to the application in the [developer
-console][devconsole] and copy the app's client ID and provide this to your admin.
+console][devconsole], click on "Configuration" in the left sidebar, copy the
+app's client ID within the "OAuth 2.0 Credentials" section and provide this to
+your admin.
 
 <Message>
 
@@ -66,8 +68,9 @@ you should see contact  information under "Admin Contact".
 
 ### As admin
 
-As the admin, head over to the [admin console][adminconsole] select the "Apps"
-tab.
+As the admin, head over to the [admin console][adminconsole], select the "Apps"
+navigation item in the left sidebar (1) and then click the "Custom Apps" tab at
+the top (2).
 
 <ImageFrame border center>
 
@@ -75,8 +78,8 @@ tab.
 
 </ImageFrame>
 
-Scroll down to the "Custom Applications" section and click on the "Authorize New
-App" button.
+On the "Custom Apps" page click on the "+" button at the top right to authorize
+a new app.
 
 <ImageFrame border center>
 
@@ -84,8 +87,8 @@ App" button.
 
 </ImageFrame>
 
-When asked for the API key, enter the client ID for the application that the
-developer provided.
+In the popup that appears, enter the client ID for the application that the
+developer provided from the app.
 
 ## Re-authorization on changes
 
@@ -93,8 +96,9 @@ When the application's scopes or access level change the application needs to be
 re-authorized. Repeat the process above and request a new Access Token for the
 new changes to take effect.
 
-In the same section where the application was initially authorized, the admin can
-re-authorize the same application.
+In the same section where the application was initially authorized, the admin
+can re-authorize the same application by clicking on the ellipses to the right
+of the application name and selecting "Reauthorize App".
 
 <ImageFrame border center>
 
