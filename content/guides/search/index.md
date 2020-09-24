@@ -71,7 +71,7 @@ for relevance to a human user.
 <!-- markdownlint-enable line-length -->
 
 <CTA to='g://metadata/queries/comparison'>
-  Learn more about the key differences
+  Learn more about the metadata query API
 </CTA>
 
 [mdq]: g://metadata/queries
