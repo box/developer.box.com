@@ -13,37 +13,56 @@ subcategory_id: null
 is_index: true
 id: search
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: search/logical-operators
+previous_page_id: search/indexing
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/index.md
 ---
 # Search
 
 The Box API provides a way to find content in Box using
-full-text search queries.
+full-text search queries. Support for the Box search API is available
+in all our supported SDKs and the CLI.
 
-<Sample id='get_search' >
+<Samples id='get_search' >
 
-</Sample>
+</Samples>
 
-<CTA to='e://get_search'>
+<Message notice>
 
-Explore the search API reference documentation
+Explore the [reference documentation](e://get_search) to learn more
+about all the different features available to the search API.
 
-</CTA>
+</Message>
 
 ## Logical operators
 
-The search API supports a few different search operators, including
-`AND`, `OR`, `NOT` and `""`.
+The search API supports a few different
+[search operators](g://search/logical-operators), including
+`AND`, `OR`, `NOT` and `""`. These operators can be used to refine the search
+results to only return items that match a more complicated combination of
+search terms.
 
 <CTA to='g://search/logical-operators'>
 
 Learn more about using logical operators
+
+</CTA>
+
+## Search Indexing
+
+Box keeps a search index for any files or folder stored in Box.
+Every time a file or folder is changed, those words are added to
+the index. When a search is performed, the API looks in the search
+index for files and folders that match the query. When content is added,
+updated, or deleted in Box, the search index is updated accordingly.
+
+<CTA to='g://search/indexing'>
+
+Learn more about the Box search index
 
 </CTA>
 

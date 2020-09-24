@@ -8,10 +8,10 @@ is_index: false
 id: search/logical-operators
 rank: 1
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: search
 parent_id: search
-next_page_id: search
+next_page_id: search/indexing
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/1-logical-operators.md
@@ -72,3 +72,9 @@ Please note that we do not support lower case (that is,
 operators.
 
 </Message>
+
+<CTA to='https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content'>
+
+Check our community article with the latest details on Search in Box
+
+</CTA>
