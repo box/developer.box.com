@@ -19,8 +19,8 @@ enterprise Admin User before it can be used.
 
 A semi-automated process for app approval is available in the developer console.
 
-Head over to your application in the [developer console][devconsole] and
-select the "General" link from the left sidebar in your application
+Go to your application in the [developer console][devconsole], select the
+"General" link from the left sidebar in your application
 and scroll down to the "App Authorization" section.
 
 <ImageFrame border width="400" center>
