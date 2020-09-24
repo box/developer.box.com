@@ -91,7 +91,7 @@ for relevance to a human user.
 
 <CTA to='g://metadata/queries/comparison'>
 
-Learn more about the key differences
+Learn more about the metadata query API
 
 </CTA>
 
