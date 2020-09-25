@@ -23,15 +23,20 @@ in all our supported SDKs and the CLI.
   about all the different features available to the search API.
 </Message>
 
-## Logical operators
+## Query operators
 
 The search API supports a few different
-[search operators](g://search/logical-operators), including
+[search operators](g://search/query-operators), including
 `AND`, `OR`, `NOT` and `""`. These operators can be used to refine the search
 results to only return items that match a more complicated combination of
 search terms.
 
-<CTA to='g://search/logical-operators'>
+```curl
+curl -i -X GET "https://api.box.com/2.0/search?query=box%20AND%20sales" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+<CTA to='g://search/query-operators'>
   Learn more about using logical operators
 </CTA>
 
@@ -46,6 +51,14 @@ updated, or deleted in Box, the search index is updated accordingly.
 <CTA to='g://search/indexing'>
   Learn more about the Box search index
 </CTA>
+
+<Message info>
+
+In some cases an index might not be updated even after 10 minutes.
+In those cases we recommend reaching out to [Box Support][support]
+to get the issue resolved.
+
+</Message>
 
 ## Comparison to Metadata Queries
 
@@ -77,3 +90,4 @@ for relevance to a human user.
 [mdq]: g://metadata/queries
 [mdq_api]: e://post_metadata_queries_execute_read
 [search]: e://get_search
+[support]: p://support

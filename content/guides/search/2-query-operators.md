@@ -4,10 +4,10 @@ related_endpoints:
 required_guides: []
 ---
 
-# Logical search operators 
+# Query operators 
 
 The [`GET /search`](e://get_search) API supports a variety of 
-different logical operators to help refining the results returned
+different query operators to help refining the results returned
 by the API.
 
 All of these operations are passed into the `query` parameter when
