@@ -136,7 +136,7 @@ associated with files and folders.
 
 <ImageFrame border center>
 
-![String field](../metadata/metadata-example.png/metadata-example.png)
+![String field](../metadata/metadata-example.png)
 
 </ImageFrame>
 
