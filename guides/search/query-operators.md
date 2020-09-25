@@ -8,10 +8,10 @@ is_index: false
 id: search/query-operators
 rank: 2
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: search
 parent_id: search
-next_page_id: search
+next_page_id: search/metadata-filters
 previous_page_id: search/indexing
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/2-query-operators.md

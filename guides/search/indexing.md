@@ -8,7 +8,7 @@ is_index: false
 id: search/indexing
 rank: 1
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: search
 parent_id: search
 next_page_id: search/query-operators
