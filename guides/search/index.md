@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: true
 id: search
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: search/logical-operators
+previous_page_id: search/metadata-filters
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/index.md
 ---
@@ -38,15 +38,20 @@ about all the different features available to the search API.
 
 </Message>
 
-## Logical operators
+## Query operators
 
 The search API supports a few different
-[search operators](g://search/logical-operators), including
+[search operators](g://search/query-operators), including
 `AND`, `OR`, `NOT` and `""`. These operators can be used to refine the search
 results to only return items that match a more complicated combination of
 search terms.
 
-<CTA to='g://search/logical-operators'>
+```curl
+curl -i -X GET "https://api.box.com/2.0/search?query=box%20AND%20sales" \
+     -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+<CTA to='g://search/query-operators'>
 
 Learn more about using logical operators
 
@@ -65,6 +70,14 @@ updated, or deleted in Box, the search index is updated accordingly.
 Learn more about the Box search index
 
 </CTA>
+
+<Message info>
+
+In some cases an index might not be updated even after 10 minutes.
+In those cases we recommend reaching out to [Box Support][support]
+to get the issue resolved.
+
+</Message>
 
 ## Comparison to Metadata Queries
 
@@ -98,3 +111,4 @@ Learn more about the metadata query API
 [mdq]: g://metadata/queries
 [mdq_api]: e://post_metadata_queries_execute_read
 [search]: e://get_search
+[support]: p://support

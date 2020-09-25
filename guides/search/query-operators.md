@@ -5,21 +5,21 @@ required_guides: []
 category_id: search
 subcategory_id: null
 is_index: false
-id: search/logical-operators
+id: search/query-operators
 rank: 2
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: search
 parent_id: search
-next_page_id: search
+next_page_id: search/metadata-filters
 previous_page_id: search/indexing
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/2-logical-operators.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/2-query-operators.md
 ---
-# Logical search operators
+# Query operators
 
 The [`GET /search`](e://get_search) API supports a variety of
-different logical operators to help refining the results returned
+different query operators to help refining the results returned
 by the API.
 
 All of these operations are passed into the `query` parameter when
