@@ -8,7 +8,7 @@ is_index: false
 id: search/indexing
 rank: 1
 type: guide
-total_steps: 3
+total_steps: 9
 sibling_id: search
 parent_id: search
 next_page_id: search/query-operators
@@ -78,14 +78,25 @@ search on `running` may return a document containing `run` in the title.
 
 The content within files is also stored
 within the Box search index. The following file types allow searching for
-their content: `boxnote`, `csv`, `doc`, `docx`, `gdoc`, `gsheet`, `gslide`,
-`gslides`, `htm`, `html`, `msg`, `odp`, `odt`, `ods`, `pdf`, `ppt`, `pptx`,
-`rtf`, `tsv`, `wpd`, `xhtml`, `xls`, `xlsm`, `xlsx`, `xml`, `xsd`, `xsl`,
-`as`, `as3`, `asm`, `bat`, `c`, `cc`, `cmake`, `cpp`, `cs`, `css`, `cxx`,
-`diff`, `erb`, `groovy`, `h`, `haml`, `hh`, `java`, `js`, `json`, `less`,
-`log`, `m`, `make`, `md`, `ml`, `mm`, `php`, `pl`, `plist`, `properties`,
-`py`, `rb`, `rst`, `sass`, `scala`, `script`, `scm`, `sml`, `sql`, `sh`,
-`txt`, `vi`, `vim`, `webdoc`, `yaml`
+their content:
+
+|           |          |              |          |        |
+| --------- | -------- | ------------ | -------- | ------ |
+| `boxnote` | `csv`    | `doc`        | `docx`   | `gdoc` |
+| `gsheet`  | `gslide` | `gslides`    | `htm`    | `html` |
+| `msg`     | `odp`    | `odt`        | `ods`    | `pdf`  |
+| `ppt`     | `pptx`   | `rtf`        | `tsv`    | `wpd`  |
+| `xhtml`   | `xls`    | `xlsm`       | `xlsx`   | `xml`  |
+| `xsd`     | `xsl`    | `as`         | `as3`    | `asm`  |
+| `bat`     | `c`      | `cc`         | `cmake`  | `cpp`  |
+| `cs`      | `css`    | `cxx`        | `diff`   | `erb`  |
+| `groovy`  | `h`      | `haml`       | `hh`     | `java` |
+| `js`      | `json`   | `less`       | `log`    | `m`    |
+| `make`    | `md`     | `ml`         | `mm`     | `php`  |
+| `pl`      | `plist`  | `properties` | `py`     | `rb`   |
+| `rst`     | `sass`   | `scala`      | `script` | `scm`  |
+| `sml`     | `sql`    | `sh`         | `txt`    | `vi`   |
+| `vim`     | `webdoc` | `yaml`       |          |        |
 
 ## Indexed Text per Document
 
