@@ -1,7 +1,7 @@
 ---
 related_endpoints:
   - put_metadata_templates_id_id_schema
-related_guides: 
+related_guides:
   - metadata/templates/create
 required_guides:
   - metadata/scopes
@@ -199,10 +199,10 @@ some additional operations to change the options of the fields.
 | [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | Edits an `enum` field option                    |
 | [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | Re-orders the options on an `enum` field        |
 | [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | Removes an `enum` field options                 |
-| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | Adds an option to an `multiSelect` field        |
-| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | Edits an `multiSelect` field option             |
-| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | Re-orders the options on an `multiSelect` field |
-| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes an `multiSelect` field options          |
+| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | Adds an option to a `multiSelect` field        |
+| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | Edits a `multiSelect` field option             |
+| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | Re-orders the options on a `multiSelect` field |
+| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field options          |
 
 <!-- markdownlint-enable line-length -->
 
