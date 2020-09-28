@@ -45,11 +45,16 @@ to get the issue resolved.
 ## Search Access
 
 Only content that the authenticated user has access to
-(items the can preview and/or view) will display in search. In other words,
-if a user doesn't have access to a file or folder within the web or mobile
-app, it also won’t show up in any search results for that user. The only
-exception to this is that files that have been recently accessed via a shared
-link can also appear in the search results.
+(items they can preview and/or view) will be returned in the search results.
+
+In other words, a user needs to either own an item or be a collaborated in on an
+item for it to show up in the search results. If a user doesn't have access to
+an item, or if they have been shared the item via a shared link, then the item
+will also not appear in the search results.
+
+One exception is that items that have been recently accessed via a shared link
+can be requested in the search results by setting the
+`include_recent_shared_links` query parameter to `true`.
 
 ## Prefix Matching and Wildcard Search
 
