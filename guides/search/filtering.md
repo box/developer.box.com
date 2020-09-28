@@ -114,8 +114,8 @@ client.search.query(
 
 ## Filter by date
 
-By default, a search returns items for that have been created or updated at any
-time. It is possible to filter results by both the date the file or folder was
+By default, search returns files created at any time, and updated at any time.
+It is possible to filter results by both the date the file or folder was
 last updated or when it was created.
 
 <!-- markdownlint-disable line-length -->
@@ -524,7 +524,7 @@ client.search.query(
 ## Filter by parent folder
 
 By default, a search returns all the items in any folder the user has access
-toe. To narrow down the results to only items in specific folders, use the
+to. To narrow down the results to only items in specific folders, use the
 `ancestor_folder_ids` query parameter.
 
 <!-- markdownlint-disable line-length -->

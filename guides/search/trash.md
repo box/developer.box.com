@@ -91,6 +91,6 @@ client.search.query(
 
 Currently the API only supports searching for content not in the trash
 (`non_trashed_only`, default) or in the user's trash (`trashed_only`). It is
-currently not possible to for items in both locations at once.
+currently not possible to search for items in both locations at once.
 
 </Message >
