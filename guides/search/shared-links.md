@@ -16,7 +16,7 @@ previous_page_id: search/trash
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/8-shared-links.md
 ---
-# Finding shared links
+# Finding recent shared links
 
 By default, the search API only returns items that are either owned by the user
 or items that the user has been explicitly collaborated on. These search results
