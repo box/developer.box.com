@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: true
 id: search
 type: guide
-total_steps: 3
+total_steps: 8
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: search/metadata-filters
+previous_page_id: search/fields
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/index.md
 ---

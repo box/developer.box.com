@@ -6,15 +6,15 @@ category_id: search
 subcategory_id: null
 is_index: false
 id: search/metadata-filters
-rank: 3
+rank: 5
 type: guide
-total_steps: 3
+total_steps: 8
 sibling_id: search
 parent_id: search
-next_page_id: search
-previous_page_id: search/query-operators
+next_page_id: search/enterprise
+previous_page_id: search/pagination
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/3-metadata-filters.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
 ---
 # Metadata filters
 

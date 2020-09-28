@@ -8,10 +8,10 @@ is_index: false
 id: search/query-operators
 rank: 2
 type: guide
-total_steps: 3
+total_steps: 8
 sibling_id: search
 parent_id: search
-next_page_id: search/metadata-filters
+next_page_id: search/filtering
 previous_page_id: search/indexing
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/2-query-operators.md
@@ -25,7 +25,7 @@ by the API.
 All of these operations are passed into the `query` parameter when
 creating the search.
 
-## Exact matches
+## Exact matches with `""`
 
 By wrapping a query in double quotes (`""`) only exact matches are
 returned by the API. Exact searches do not return search matches
@@ -37,7 +37,7 @@ including the sequence `"blue.box"`, `"Blue Box"`, and `"Blue-Box"`;
 any item containing the words `Blue` and `Box` consecutively, in
 the order specified.
 
-## Matching multiple search terms
+## Matching multiple terms with `AND`
 
 When the `AND` operator is used, the search returns items that
 contain both the search terms on the left and right of the operator.
@@ -46,7 +46,7 @@ For example, a search for `marketing AND BoxWorks` returns items
 that have both `marketing` and `BoxWorks` within its text in any order.
 It does not return a result that only has `BoxWorks` in its text.
 
-## Matching either search term
+## Matching either search term with `OR`
 
 When the `OR` operator is used, the search returns items that
 contain either the search terms on the left or right of the operator.
@@ -56,7 +56,7 @@ has either `marketing` or `BoxWorks` within its text. Using this
 operator is not necessary as we implicitly interpret multi-word
 queries as `OR` unless another supported boolean term is used.
 
-## Excluding search terms
+## Excluding search terms with `NOT`
 
 When the `NOT` operator is used, the search returns items that
 do not contain the term that follows the operator.
