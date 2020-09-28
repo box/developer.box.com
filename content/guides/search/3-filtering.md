@@ -13,7 +13,7 @@ different ways to filter the results returned by the API.
 
 By default, a search returns items for which either the name, description, file
 content, tags, or comments match the query provided. By setting the
-`content_types` parameter the search can be narrowed down to just the items that
+`content_types` parameter the search can be narrowed down to only the items that
 match the query for the content type defined.
 
 <!-- markdownlint-disable line-length -->
@@ -384,6 +384,16 @@ client.search.query(
 
 <!-- markdownlint-enable line-length -->
 
+## Filter by metadata
+
+It is possible to filter search results by their associated metadata, or even
+perform entire searches based on only the metadata, all using the `mdfilters`
+query parameter.
+
+<CTA to="g://search/metadata-filters">
+  Learn more about metadata filters
+</CTA>
+
 ## Filter by owner
 
 By default, a search returns all the items the authenticated user has access to,
@@ -527,7 +537,3 @@ client.search.query(
 </Tabs>
 
 <!-- markdownlint-enable line-length -->
-
-## Metadata filters
-
-<CTA>
