@@ -22,8 +22,9 @@ as the argument to the `​use_index​` parameter.
 
 <Message info>
 
-At this time you will need to contact the [Box Metadata Query team]
-(mailto:metadata-query-feedback@box.com) to create an search index.
+At this time you will need to contact the
+[Box Metadata Query team](mailto:metadata-query-feedback@box.com)
+to create an search index.
 
 </Message>
 
