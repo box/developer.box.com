@@ -34,8 +34,13 @@ We expect this limit to be raised but not to be eliminated in the future.
 
 ## Request an index
 
-At this time you will need to contact Box to create an search index. Please
-reach out to your customer success manager or the Box [support team][support].
+<Message info>
+
+At this time you will need to contact the
+[Box Metadata Query team](mailto:metadata-query-feedback@box.com)
+to create an search index.
+
+</Message>
 
 To create an index, we will need to be informed of the intended query will be
 run including the exact values for the `from​`, `​query​`, and `​order_by​`
