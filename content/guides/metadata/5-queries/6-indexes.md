@@ -12,7 +12,7 @@ A search index can be created to resolve this error for a specific search query.
 If the number of metadata instances exceeds 10,000 then a metadata query request
 which does not include a suitable **index** in the `​use_index​` parameter will
 result in an error. The error will inform the caller to specify a suitable index
-as the argument to the `​use_index​` parameter. 
+as the argument to the `​use_index​` parameter.
 
 <Message notice>
   We expect this limit to be raised but not to be eliminated in the future.
@@ -20,16 +20,20 @@ as the argument to the `​use_index​` parameter.
 
 ## Request an index
 
-At this time you will need to contact Box to create an search index. Please
-reach out to your customer success manager or the Box [support team][support].
+<Message info>
+
+At this time you will need to contact the [Box Metadata Query team]
+(mailto:metadata-query-feedback@box.com) to create an search index.
+
+</Message>
 
 To create an index, we will need to be informed of the intended query will be
 run including the exact values for the `from​`, `​query​`, and `​order_by​`
-parameters of the request. 
+parameters of the request.
 
 An index will then be created and you will be provided with the the name of this
 index which then needs be used in the `​use_index​` parameter of a query
-request. 
+request.
 
 If you prefer to specify a name for the index please provide that name upon
 requesting the index.
