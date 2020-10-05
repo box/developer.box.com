@@ -11,7 +11,7 @@ related_resources:
 # Copy a File Request
 
 To create a copy of an existing [template](g://file-requests/template) file
-request, all you need is its unique ID, and the ID of the folder to apply the 
+request, all you need is its unique ID, and the ID of the folder to apply the
 new file request to.
 
 <Samples id='post_file_requests_id_copy' />
@@ -42,7 +42,7 @@ curl -i -X POST "https://api.box.com/2.0/file_requests/2342235/copy" \
      -d '{
        "title": "Please upload required documents",
        "description": "Please upload required documents",
-       "status": "ACTIVE",
+       "status": "active",
        "is_email_required": true,
        "is_description_required": false,
        "folder": {
