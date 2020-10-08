@@ -8,7 +8,7 @@ required_guides: []
 
 # Search indexing
 
-Box keeps a search index for any files or folder stored in Box.
+Box keeps a search index for any files or folders stored in Box.
 Every time a file or folder is changed, those words are added to the index.
 When a search is performed, the API looks in the search index for files and
 folders that match the query. When content is added, updated, or deleted in
@@ -18,7 +18,7 @@ Box, the search index is updated accordingly.
 
 It can take time between uploading or modifying a
 file for it to be fully indexed and ready to be searched. In most cases,
-a newly added or changed files can be expected to be available via Box search
+newly added or changed files can be expected to be available via Box search
 in 10 minutes. The current service load determines the index time and it may
 take more than 10 minutes in some cases.
 
@@ -33,11 +33,16 @@ to get the issue resolved.
 ## Search Access
 
 Only content that the authenticated user has access to
-(items the can preview and/or view) will display in search. In other words,
-if a user doesn't have access to a file or folder within the web or mobile
-app, it also won’t show up in any search results for that user. The only
-exception to this is that files that have been recently accessed via a shared
-link can also appear in the search results.
+(items they can preview and/or view) will be returned in the search results.
+
+In other words, a user needs to either own an item or be a collaborated in on an
+item for it to show up in the search results. If a user doesn't have access to
+an item, or if they have been shared the item via a shared link, then the item
+will also not appear in the search results.
+
+One exception is that items that have been recently accessed via a shared link
+can be requested in the search results by setting the
+`include_recent_shared_links` query parameter to `true`.
 
 ## Prefix Matching and Wildcard Search
 
@@ -59,7 +64,7 @@ with **file body contents** of prefixes, infixes, or suffixes including
 Box Search uses stemming to match terms from the query to terms
 in the index. Because of this, words that include the same stem may be
 included in the result set, even if the words do not contain the exact form
-in the query.  For example, `run` and `running` map to the same stem, so a
+in the query. For example, `run` and `running` map to the same stem, so a
 search on `running` may return a document containing `run` in the title.
 
 ## File Content Searching

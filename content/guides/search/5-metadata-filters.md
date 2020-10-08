@@ -124,8 +124,8 @@ Metadata consists of key/value pairs that are assigned to a file or a folder.
 For example, an important contract may have the key/value pairs of
 `clientNumber: 820183` and `category: online`.
 
-The `mdfilters` query parameter allows developers to find files and folder that
-match have a specific piece of metadata attached to them.
+The `mdfilters` query parameter allows developers to find files and folders that
+have a specific piece of metadata attached to them.
 
 <CTA to='g://metadata'>Learn more about metadata templates and instances</CTA>
 
@@ -285,9 +285,9 @@ direct value by specifying a `gt` (greater-than) and/or `lt` (lower-than) value.
 
 This example will find all files and folders that have an instance of the
 `enterprise.contract` template applied to it, and for which the field with the
-key `expirationDate` is set to date after or exactly `2016-08-01T00:00:00Z` and
-and before or exactly `2017-08-01T00:00:00Z`. Please note that `gt` and `lt` are
-inclusive and do not need to both be set.
+key `expirationDate` is set to a date after or exactly `2016-08-01T00:00:00Z`
+and before or exactly `2017-08-01T00:00:00Z`. Please note that `gt` and
+`lt` are inclusive and do not need to both be set.
 
 </Message>
 

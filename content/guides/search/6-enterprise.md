@@ -72,7 +72,7 @@ client.search.query(
 
 The `enterprise_content` scope can be requested by an admin through our
 [support channels](p://support). Once this scope has been enabled for a user, it
-will allow that use to query for content across the entire enterprise and not
+will allow that user to query for content across the entire enterprise and not
 only the content that they have access to.
 
 </Message >

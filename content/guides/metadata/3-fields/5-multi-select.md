@@ -139,7 +139,7 @@ This will affect existing instances of this template.
 
 ### Reorder options
 
-Reordering the options in an `multiSelect` field can be achieved through the
+Reordering the options in a `multiSelect` field can be achieved through the
 `reorderMultiSelectOptions` operation. The operation expects the `fieldKey` to
 be set to the key of the `multiSelect` field to change, and an
 `multiSelectOptionKeys` array with the keys of the options in order.
@@ -221,9 +221,9 @@ This will affect existing instances of this template.
 
 ### Remove an option
 
-Removing an option from an `multiSelect` field can be achieved through the
+Removing an option from a `multiSelect` field can be achieved through the
 `removeMultiSelectOption` operation. The operation expects `fieldKey` to be set
-to the key of the `multiSelect` field to change, and an `multiSelectOptionKey`
+to the key of the `multiSelect` field to change, and a `multiSelectOptionKey`
 to be set to the key of the field option to remove.
 
 ```json
