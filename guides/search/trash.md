@@ -8,10 +8,10 @@ is_index: false
 id: search/trash
 rank: 7
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: search
 parent_id: search
-next_page_id: search/fields
+next_page_id: search/shared-links
 previous_page_id: search/enterprise
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/7-trash.md
