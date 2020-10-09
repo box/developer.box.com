@@ -71,7 +71,7 @@ and JWT.
     <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/sidebar.js"></script>
     <script>
       var fileId = "123";
-      var token = "abc";
+      var accessToken = "abc";
 
       // At least one of the sub-sidebars (details, activity feed, skills, metadata) need to be turned on for something to render. Details is iteself further divided into notices, properties, access stats and versions, one of which need to be enabled for the details sidebar to render.
       var sidebar = new Box.ContentSidebar();
