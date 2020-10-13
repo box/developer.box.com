@@ -1,16 +1,16 @@
 const fs = require('fs-extra')
 const path = require('path')
 
-class NewGuide {
-  run(templateName='guide.md') {
+class FromTemplate {
+  run(templateName='template.md', folder='guides') {
     // Extract the name and title from the args
     const [_, name, title] = process.argv
-    
+
     // Ensure a name was provided
     if (!name) { return console.error('Expected a path for a file, e.g automation/webhook/create ')}
-    
+
     // Determine the file and dir name
-    const filename = `./content/guides/${name}.md`
+    const filename = `./content/${folder}/${name}.md`
     const dirname = path.dirname(filename)
 
     // Ensure the dir exists
@@ -29,4 +29,4 @@ class NewGuide {
   }
 }
 
-module.exports = new NewGuide()
+module.exports = new FromTemplate()
