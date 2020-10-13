@@ -1,7 +1,7 @@
 # Markdown styleguide
 
 [**Previous:** Contributing a pull request](./pull-request.md) |
-[**Next:** Updating dependencies](./depdendencies.md)
+[**Next:** Updating dependencies](./dependencies.md)
 
 ---
 
@@ -97,3 +97,5 @@ names.
 | Add `owner` Field to Files | Add `owner` field to files |
 | Allow File API To Use JWT  | Allow file API to use JWT  |
 | Box CLI `3.0.0` Release    | Box CLI `3.0.0` release    |
+
+[**Next:** Updating dependencies](./dependencies.md)
