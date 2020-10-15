@@ -28,7 +28,7 @@ To create a lock on a folder in Box you will need to provide our API with the
 `id` of the folder for which the lock should be applied. Optionally you may
 supply the specific `locked_operations` to be applied with the folder lock.
 
-<Samples id='post_folder_locks_folder_id' >
+<Samples id='post_folder_locks' >
 
 </Samples>
 
@@ -42,7 +42,7 @@ the object will produce an error.
 
 </Message>
 
-## Locked Operations
+## Lock Operations
 
 There are two possible lock operations that may be applied to a folder, `move`
 and `delete`.

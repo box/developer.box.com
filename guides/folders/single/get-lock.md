@@ -27,7 +27,7 @@ source_url: >-
 To get a list of the current locks on a folder in Box, call the
 `GET /folder_locks/?folder_id=:id` API with the id of the folder.
 
-<Samples id='get_folder_locks_folder_id' >
+<Samples id='get_folder_locks' >
 
 </Samples>
 
