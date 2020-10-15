@@ -19,6 +19,7 @@ To get a list of the current locks on a folder in Box, call the
 <Samples id='get_folder_locks_folder_id' />
 
 ## File ID
+
 The `id` of any folder can be determined by visiting a folder in the web
 application and copying the `id` from the URL. For example, for the URL
 `https://*.app.box.com/folder/123` the `folder_id` is `123`.
