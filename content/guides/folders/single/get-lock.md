@@ -1,7 +1,7 @@
 ---
 rank: 9
 related_endpoints:
-  - get_folder_locks_folder_id
+  - get_folder_lock
 related_guides:
   - folders/single/create-lock
   - folders/single/delete-lock
