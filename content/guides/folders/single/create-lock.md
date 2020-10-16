@@ -19,7 +19,7 @@ supply the specific `locked_operations` to be applied with the folder lock.
 
 <Samples id='post_folder_locks' />
 
-<Message type='notice'>
+<Message type='warning'>
   # Setting Locked Operations
 
   If the `locked_operations` object is included with a folder lock request,
