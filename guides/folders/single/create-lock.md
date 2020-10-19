@@ -37,8 +37,10 @@ supply the specific `locked_operations` to be applied with the folder lock.
 # Setting Locked Operations
 
 If the `locked_operations` object is included with a folder lock request,
-both `move` and `delete` need to be set. Supplying only one lock operation in
-the object will produce an error.
+both `move` and `delete` need to be set to 'true'. Supplying only one lock
+operation in the object, or setting the values of both to something other
+than `true` will produce an error. These options are in place to allow
+for additional operations in the future.
 
 </Message>
 
