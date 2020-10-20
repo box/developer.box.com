@@ -1,13 +1,13 @@
 ---
 rank: 8
 related_endpoints:
-  - post_folder_lock
+  - post_folder_locks
 related_guides:
-  - folders/single/get-lock
+  - folders/single/get-locks
   - folders/single/delete-lock
 required_guides: []
 related_resources:
-  - folder-lock
+  - folder_lock
 alias_paths: []
 category_id: folders
 subcategory_id: folders/single
@@ -17,7 +17,7 @@ type: guide
 total_steps: 10
 sibling_id: folders/single
 parent_id: folders/single
-next_page_id: folders/single/get-lock
+next_page_id: folders/single/get-locks
 previous_page_id: folders/single/change-owner
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/create-lock.md
@@ -37,7 +37,7 @@ supply the specific `locked_operations` to be applied with the folder lock.
 # Setting Locked Operations
 
 If the `locked_operations` object is included with a folder lock request,
-both `move` and `delete` need to be set to 'true'. Supplying only one lock
+both `move` and `delete` need to be set to `true`. Supplying only one lock
 operation in the object, or setting the values of both to something other
 than `true` will produce an error. These options are in place to allow
 for additional operations in the future.

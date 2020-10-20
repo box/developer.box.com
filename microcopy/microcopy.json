@@ -364,7 +364,7 @@
   // Text for link to go to our support forum
   "footer.categories.support.links.forum.text": "Platform Forum",
   // Link to go to our support forum
-  "footer.categories.support.links.forum.url": "https://community.box.com/t5/Platform-and-Development\\ -Forum/bd-p/DeveloperForum",
+  "footer.categories.support.links.forum.url": "https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum",
   // Text for link to go to our feedback site
   "footer.categories.support.links.feedback.text": "Product Feedback",
   // Link to go to our feedback site

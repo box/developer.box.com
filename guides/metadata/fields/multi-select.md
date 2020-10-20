@@ -123,7 +123,7 @@ to the key of the `multiSelect` field to change, and a `data` object with the
 ```json
 [
   {
-    "op": "addEnumOption",
+    "op": "addMultiSelectOption",
     "fieldKey": "box_entity",
     "data": {
       "key": "Box (NL) BV"

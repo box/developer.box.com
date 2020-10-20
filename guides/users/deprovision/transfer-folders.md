@@ -1,7 +1,7 @@
 ---
 rank: 2
 related_endpoints:
-  - put_users_id_folders_id
+  - put_users_id_folders_0
 related_guides:
   - users/deprovision/user
 related_pages: []
@@ -48,7 +48,7 @@ amount of time.
 
 ## Transfer Owned Folders API Method
 
-The [transfer owned folders endpoint](e://put_users_id_folders_id) is
+The [transfer owned folders endpoint](e://put_users_id_folders_0) is
 designed to move the entirety of content owned by one user over to another user.
 
 <Message type='notice'>
@@ -62,7 +62,7 @@ items in all of its folders.
 To call the transfer endpoint, you will supply the user ID to transfer from and
 the user ID to transfer to.
 
-<Samples id='put_users_id_folders_id' >
+<Samples id='put_users_id_folders_0' >
 
 </Samples>
 

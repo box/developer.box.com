@@ -1,18 +1,18 @@
 ---
 rank: 9
 related_endpoints:
-  - get_folder_lock
+  - get_folder_locks
 related_guides:
   - folders/single/create-lock
   - folders/single/delete-lock
 required_guides: []
 related_resources:
-  - folder-locks
+  - folder_locks
 alias_paths: []
 category_id: folders
 subcategory_id: folders/single
 is_index: false
-id: folders/single/get-lock
+id: folders/single/get-locks
 type: guide
 total_steps: 10
 sibling_id: folders/single
@@ -20,7 +20,7 @@ parent_id: folders/single
 next_page_id: folders/single/delete-lock
 previous_page_id: folders/single/create-lock
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/get-lock.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/get-locks.md
 ---
 # Get Folder Lock
 
