@@ -66,8 +66,11 @@ extra steps to set up.
   1. Go to the app's configuration by clicking **View Your App**.
   1. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
      **Redirect URI** to the value `https://developer.box.com/auth/callback`.
-  1. Optionally, scroll to the **Application Scopes** section of the same screen
+  1. Scroll to the **Application Scopes** section of the same screen
      and select any additional permissions you want to enable for this application.
+     **Your application must have at least one or more of the following scopes:** 
+     manage users,read all files and folders stored in Box, read and write all files 
+     and folders in Box.
   1. At the top of the page click the button to **Save Changes**
 </Choice>
 
