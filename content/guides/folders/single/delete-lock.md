@@ -7,7 +7,7 @@ related_guides:
   - folders/single/get-lock
 alias_paths: []
 related_resources:
-  - folder-lock
+  - folder_locks
 ---
 
 # Delete Folder Lock
