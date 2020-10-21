@@ -48,9 +48,9 @@ The notification URL specified in the `address` parameter must be a
 valid HTTPS URL that you specify when you create a webhook. Every
 time one of the triggers is activated, this URL will be called.
 
-The notification URL must use the standard HTTPS port, `443` and should be the
-should return an HTTP status in the range of `200` to `299` within 30 seconds
-of receiving the webhook payload.
+The notification URL must use the standard HTTPS port, `443` and should return
+an HTTP status in the range of `200` to `299` within 30 seconds of receiving
+the webhook payload.
 
 ## Webhook triggers
 
