@@ -4,18 +4,13 @@ related_endpoints:
 related_guides:
   - metadata/cascades/list
   - metadata/cascades/create
-related_resources: 
+related_resources:
   - metadata_cascade_policy
 ---
 
 # Get a metadata cascade policy
 
-<Message warning>
-  Metadata cascade policies are currently in Beta and the syntax might change in
-  the future.
-</Message>
-
-Information for a metadata cascade policy can be retrieved by calling the 
+Information for a metadata cascade policy can be retrieved by calling the
 [`GET /metadata_cascade_policies/:id`][e_get] API endpoint with the
 `id` of the policy.
 
