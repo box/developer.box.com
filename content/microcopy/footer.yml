@@ -138,8 +138,8 @@ categories:
         // text: Text for link to go to our support forum
         text: Platform Forum
         // url: Link to go to our support forum
-        url: https://community.box.com/t5/Platform-and-Development\
-          -Forum/bd-p/DeveloperForum
+        url: |-
+          https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
 
       feedback:
         // text: Text for link to go to our feedback site

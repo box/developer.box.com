@@ -1,42 +1,115 @@
 ---
 rank: 2
+related_endpoints:
+  - delete_users_id
+related_guides:
+  - users/deprovision/transfer-folders
+related_pages: []
+required_guides: []
+related_resources: []
 alias_paths:
-  - /docs/deprovision-user-accounts
+  - /guides/users/deprovision/user
 ---
 
 # Deprovision Users
 
-When setting up a brand new Box user account, a common need is to have that new
-account be populated with standard folders, collaborations, and group
-associations.
+Part of regular Box enterprise maintenance is removing accounts for users that
+are no longer active in your enterprise. When removing a user from your
+enterprise, you'll need to move all content owned by the user into another
+account before deleting the user account.
 
-Typically there are some common questions that may be asked about the user
-account to determine when standard setup may be needed for the account:
-
-* Will the user need access to standard company files or folders immediately?
-* Are collaborations associated individually or through groups? If through a
-group association, are there any standard groups that the user should be added
-to?
-* Should the user be assigned any tasks to complete?
-* Would any instructional comments on any files be helpful?
-
-<Message type="danger">
-  # New User Password Resets and Email Confirmation
-
-  You may experience some errors when creating users and immediately trying to
-  take actions with that user through the API. For example, a common error to
-  receive is `user_email_confirmation_required` or `password_reset_required`.
-  These kinds of errors may block some actions within the API, but you can
-  still add the user as a collaborator on folders, add the user to groups, etc.
+<Message type='notice'>
+  The delete user request will fail if the user account still has content in
+  it. An optional `force` parameter is available in the API call, which will
+  force delete the user account along with all content in the account.
 </Message>
 
-## Sample Overview
+The standard best practice when decommissioning a user account is to move all
+content owned by that user into another admin level account or into the
+application service account. Once moved, you can transfer ownership of the
+content to a different user or collaborate a different user on the content if
+needed.
 
-In this scenario we'll focus on provisioning a new
-[Box Managed User](guide://authentication/user-types/managed-users), as there
-are very different considerations when provisioning Box App User accounts.
+## Deprovisioning Example
 
-We'll start with solving the most repeatable aspects of
-provisioning a user's account, creating a general folder and file structure
-that everyone will have on first login, using groups to control access to
-shared files and folders for users.
+Use the following code samples to transfer a user's content and then delete the
+user. When content is being transferred, a new folder is created in the
+destination user's root folder following this pattern:
+`employee_email@email.com - employee_name's Files and Folders`
+
+<Tabs>
+  <Tab title='Node'>
+
+```js
+'use strict'
+const box = require('box-node-sdk');
+const fs = require('fs');
+
+let configFile = fs.readFileSync('config.json');
+configFile = JSON.parse(configFile);
+
+let session = box.getPreconfiguredInstance(configFile);
+let serviceAccountClient = session.getAppAuthClient('enterprise');
+
+const transferUserID = '3278487052';
+(async () => {
+  let serviceAccount = await serviceAccountClient.users.get('me');
+  let transferredFolder = await serviceAccountClient.enterprise.transferUserContent(transferUserID,serviceAccount.id);
+  console.log(transferredFolder);
+  await serviceAccountClient.users.delete(transferUserID, null);
+  console.log('Completed');
+})();
+```
+
+  </Tab>
+  <Tab title='Java'>
+
+```java
+Path configPath = Paths.get("config.json");
+try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName("UTF-8"))){
+  String transferUserId = "3277722534";
+
+  BoxConfig boxConfig = BoxConfig.readFrom(reader);
+  BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
+    .getAppEnterpriseConnection(boxConfig);
+
+  BoxUser destinationUser = new BoxUser(serviceAccountClient,
+    BoxUser.getCurrentUser(serviceAccountClient).getID());
+  try {
+    destinationUser.moveFolderToUser(transferUserId);
+  } catch (BoxAPIException e) {}
+
+  BoxUser removeUser = new BoxUser(serviceAccountClient, transferUserId);
+  removeUser.delete(false, false);
+}
+```
+
+  </Tab>
+  <Tab title='.NET'>
+
+```csharp
+using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
+  var config = BoxConfig.CreateFromJsonFile(fs);
+  var session = new BoxJWTAuth(config);
+  var serviceAccountClient = session.AdminClient(session.AdminToken());
+
+  var transferUserId = "3276247601";
+
+  var serviceAccount = await serviceAccountClient.UsersManager.GetCurrentUserInformationAsync();
+  var moveAction = await serviceAccountClient.UsersManager.MoveUserFolderAsync(transferUserId,serviceAccount.Id);
+
+  System.Console.WriteLine(moveAction.Name);
+  await serviceAccountClient.UsersManager.DeleteEnterpriseUserAsync(transferUserId,false,false);
+}
+```
+
+  </Tab>
+  <Tab title='CLI'>
+
+```shell
+box users:transfer-content $transfer_from_user_id $transfer_to_user_id
+box users:delete $transfer_from_user_id --yes
+```
+
+  </Tab>
+</Tabs>
