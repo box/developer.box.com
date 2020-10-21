@@ -13,14 +13,7 @@ previous_page_id: metadata/cascades/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/6-cascades/0-index.md
 ---
-# Metadata cascade policies (Beta)
-
-<Message warning>
-
-Metadata cascade policies are currently in Beta and the syntax might change in
-the future.
-
-</Message>
+# Metadata cascade policies
 
 A metadata cascade policy describes how [metadata
 instances][instance] applied to a folder should be applied to any item
