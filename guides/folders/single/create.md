@@ -14,7 +14,7 @@ subcategory_id: folders/single
 is_index: false
 id: folders/single/create
 type: guide
-total_steps: 7
+total_steps: 10
 sibling_id: folders/single
 parent_id: folders/single
 next_page_id: folders/single/update
