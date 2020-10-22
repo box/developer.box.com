@@ -11,11 +11,6 @@ related_resources:
 
 # Force-apply metadata to all items in a folder
 
-<Message warning>
-  Metadata cascade policies are currently in Beta and the syntax might change in
-  the future.
-</Message>
-
 When a metadata cascade policy already exists on a folder, the metadata instance
 can be force-applied to all items in a folder by calling the
 [`POST /metadata_cascade_policies/:id/apply`][e_post] API endpoint with the

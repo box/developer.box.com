@@ -4,18 +4,13 @@ related_endpoints:
 related_guides:
   - metadata/cascades/list
   - metadata/cascades/create
-related_resources: 
+related_resources:
   - metadata_cascade_policy
 ---
 
 # Delete a metadata cascade policy
 
-<Message warning>
-  Metadata cascade policies are currently in Beta and the syntax might change in
-  the future.
-</Message>
-
-A metadata cascade policy can be deleted by calling the 
+A metadata cascade policy can be deleted by calling the
 [`DELETE /metadata_cascade_policies/:id`][e_delete] API endpoint with the
 `id` of the policy to remove.
 

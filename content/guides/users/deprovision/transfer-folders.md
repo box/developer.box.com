@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - put_users_id_folders_0
 related_guides:
-  - users/deprovision/user
+  - users/deprovision
 related_pages: []
 required_guides: []
 related_resources: []
