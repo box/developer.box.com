@@ -2,9 +2,16 @@
 // title: Title of the create-app modal
 title: Create an app
 
-butttons:
+buttons:
   // close: Label of the close buttton
   close: close
+
+credentials:
+  // client_id: The label for the field that holds the client ID
+  client_id: Client ID
+
+  // client_secret: The label for the field that holds the client secret
+  client_secret: Client Secret
 
 logged_out:
   // description: The description at the top of the app log in screen.
