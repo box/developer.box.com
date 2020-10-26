@@ -63,10 +63,13 @@ logged_in:
 
   app_types:
     // auth_code_grant: Describes a standard OAuth 2.0 app
-    auth_code_grant: Custom App using client-side OAuth 2.0'
+    auth_code_grant: User Authentication (OAuth 2.0)
 
-    // app_token_auth: Desribes a limited access app
-    app_token_auth: Limited Access App using app token auth
+    // jwt_grant: Describes a standard JWT app
+    jwt_grant: Server Authentication (with JWT)
+
+    // app_token_auth: Describes a limited access app
+    app_token_auth: App Token Authentication
 
   scopes:
     // root_readonly: Label for the root_readonly scope
