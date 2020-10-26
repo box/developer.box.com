@@ -7,23 +7,6 @@ hide_in_page_nav: true
 
 # Load Postman Collection
 
-<LoggedIn>
-  Now that you are logged in we can load the **Box Postman Collection** into the
-  **Postman App** that we installed previously. When we load the Postman
-  Collection we will also automatically load your API credentials as a Postman
-  environment.
-
-  ## Loading a collection and environment
-
-  By clicking the button below you will load the **Box Postman
-  Collection** into your Postman application. In the same click it will also
-  load your **Access Token** into a Postman environment.
-
-  <Trigger option='postman_collection_downloaded' value='true'>
-    <Postman />
-  </Trigger>
-</LoggedIn>
-
 <LoggedIn id='postman_credentials'>
   Now that you are logged in we can load the **Box Postman Collection** into the
   **Postman App** that we installed previously. When we load the Postman

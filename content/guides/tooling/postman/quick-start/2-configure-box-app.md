@@ -47,9 +47,9 @@ extra steps to set up.
 
   <Trigger option="postman.login_button" value="clicked">
     <AppButton
-      id='postman_app'
+      id='postman'
       name='Postman'
-      scopes='root_readwrite,manage_managed_users'
+      scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties'
       can_act_as_user
       authentication_type='auth_code_grant'
       redirect_url='https://developer.box.com/auth/callback'
@@ -64,7 +64,7 @@ extra steps to set up.
   </Observe>
 </Choice>
 
-<Choice option='postman.app_type' value='use_existing' color='blue'>
+<Choice option='postman.app_type' value='use_existing' color='red'>
   # Use existing Box app
 
   If you have already created a Box App before you can use that as well. We
