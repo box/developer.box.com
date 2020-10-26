@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - put_users_id_folders_0
 related_guides:
-  - users/deprovision/user
+  - users/deprovision
 related_pages: []
 required_guides: []
 related_resources: []
@@ -13,11 +13,11 @@ subcategory_id: users/deprovision
 is_index: false
 id: users/deprovision/transfer-folders
 type: guide
-total_steps: 2
+total_steps: 1
 sibling_id: users/deprovision
 parent_id: users/deprovision
 next_page_id: ''
-previous_page_id: users/deprovision/user
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/deprovision/transfer-folders.md
 ---

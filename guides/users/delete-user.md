@@ -3,7 +3,7 @@ rank: 6
 related_endpoints:
   - delete_users_id
 related_guides:
-  - users/deprovision/user
+  - users/deprovision
   - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []

@@ -55,7 +55,8 @@ console][devconsole].
 </ImageFrame>
 
 Additionally, the authenticated user needs to be a user with admin permissions,
-meaning either an admin, co-admin, or service account. See our guide on [User
+meaning either an admin, co-admin, or service account. Co-admin users will also
+need the 'Manage Users' permission scope. See our guide on [User
 Types](g://authentication/user-types) for more details.
 
 ## as-user using SDKs
