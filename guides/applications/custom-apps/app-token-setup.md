@@ -11,7 +11,8 @@ required_guides:
   - authentication/select
   - applications/custom-apps
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/applications/limited-access-apps
 category_id: applications
 subcategory_id: applications/custom-apps
 is_index: false
