@@ -6,7 +6,7 @@ is_index: true
 id: internal/flow
 rank: 0
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: internal
 parent_id: internal
 next_page_id: internal/flow/observer

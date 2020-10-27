@@ -21,13 +21,10 @@ source_url: >-
 ---
 # Log in to Box
 
-<Choice option='postman.app_type' value='use_own' color='none'>
+<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
 
-In the previous step you chose to use your own **Box App** for authenticating
-Postman.
-
-In this step, we will use the **Client ID** and **Client Secret** you provided
-to log you in and create an **Access Token** for your user.
+In this step, we will use the **Client ID** and **Client Secret** from the
+previous step to log you in and create an **Access Token** for your user.
 
 ## The reason to log in
 
@@ -109,93 +106,20 @@ later in this guide.
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_box' color='none'>
-
-In the previous step you chose to use our preconfigured **Box App**.
-
-In this step, we will use this app to authenticate you, the **User**. Because
-this application is owned by us, you will not be able to see the app's
-**Client ID** and **Client Secret** and you will need to come back to this
-page every hour to re-authenticate your app.
-
-## The reason to log in
-
-Currently we have no idea who you, the **User are** and therefore we can't
-authenticate you when making API calls to the Box API. To authenticate
-yourself you will need to send your browser to the Box login screen to
-authorize our **Box App** to access to your **User** account.
-
-Setting this flow up can be hard, which is why we have made this
-straightforward for you with the button below.
-
-## Log into your Box app
-
-<Trigger option='postman.login' value='clicked'>
-
-<LoginButton >
-
-</LoginButton>
-
-</Trigger>
-
-<LoggedIn>
-
-## You are now logged in
-
-We just sent your browser to the [Box Authorization](e://get-authorize)
-screen where you granted our application access to your user account. Ater
-you granted it access the browser redirected back to this site with a `code`.
-
-We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
-longer lived **Access Token** and **Refresh Token**. These tokens represent
-you, the **User**.
-
-<Store disabled inline id='credentials' field='name'>
-
-Your name
-
-</Store>
-
-<Store disabled inline obscured id='credentials' field='access_token'>
-
-Access Token
-
-</Store>
-
-<Store disabled inline obscured id='credentials' field='refresh_token'>
-
-Refresh Token
-
-</Store>
-
-<Message danger>
-
-# Security notice
-
-Your API credentials are now stored in the browser cache. We highly
-recommend clearing out this storage by clicking the **Reset** button
-later in this guide.
-
-</Message>
-
-</LoggedIn>
-
-</Choice>
-
 <Choice option='postman.app_type' unset color='none'>
 
 <Message danger>
 
 # Incomplete previous step
 
-Please complete the previous step to select the type of **Box App** you want
+Please complete the previous step to set up the **Box App** you want
 to use.
 
 </Message>
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_box,use_own' color='none'>
+<Choice option='postman.login' value='clicked' color='none'>
 
 ## Summary
 

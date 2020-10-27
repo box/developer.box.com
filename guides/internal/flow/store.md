@@ -6,7 +6,7 @@ subcategory_id: internal/flow
 is_index: false
 id: internal/flow/store
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: internal/flow
 parent_id: internal/flow
 next_page_id: internal/flow/login

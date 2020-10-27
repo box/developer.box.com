@@ -6,10 +6,10 @@ subcategory_id: internal/flow
 is_index: false
 id: internal/flow/login
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: internal/flow
 parent_id: internal/flow
-next_page_id: ''
+next_page_id: internal/flow/app-button
 previous_page_id: internal/flow/store
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/login.md

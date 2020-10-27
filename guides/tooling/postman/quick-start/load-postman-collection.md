@@ -18,29 +18,6 @@ source_url: >-
 
 # Load Postman Collection
 
-<LoggedIn>
-
-Now that you are logged in we can load the **Box Postman Collection** into the
-**Postman App** that we installed previously. When we load the Postman
-Collection we will also automatically load your API credentials as a Postman
-environment.
-
-## Loading a collection and environment
-
-By clicking the button below you will load the **Box Postman
-Collection** into your Postman application. In the same click it will also
-load your **Access Token** into a Postman environment.
-
-<Trigger option='postman_collection_downloaded' value='true'>
-
-<Postman >
-
-</Postman>
-
-</Trigger>
-
-</LoggedIn>
-
 <LoggedIn id='postman_credentials'>
 
 Now that you are logged in we can load the **Box Postman Collection** into the
@@ -89,41 +66,9 @@ endpoints.
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_box' color='none'>
+<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
 
 <LoggedIn reverse>
-
-<Message danger>
-
-# Incomplete previous step
-
-Please complete the previous steps to select and log in to a **Box App**.
-
-</Message>
-
-</LoggedIn>
-
-</Choice>
-
-<Choice option='postman.app_type' value='use_own' color='none'>
-
-<LoggedIn id='postman_credentials' reverse>
-
-<Message danger>
-
-# Incomplete previous step
-
-Please complete the previous steps to select and log in to a **Box App**.
-
-</Message>
-
-</LoggedIn>
-
-</Choice>
-
-<Choice option='postman.app_type' unset color='none'>
-
-<LoggedIn id='postman_credentials' reverse>
 
 <Message danger>
 
