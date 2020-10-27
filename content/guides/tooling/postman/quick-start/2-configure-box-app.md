@@ -82,7 +82,6 @@ extra steps to set up.
      **of the following scopes:** manage users, read all files and folders
      stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
-</Choice>
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
