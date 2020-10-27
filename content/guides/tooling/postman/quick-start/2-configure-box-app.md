@@ -77,17 +77,11 @@ extra steps to set up.
      authentication method
   5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
      **Redirect URI** to the value `https://developer.box.com/auth/callback`.
-<<<<<<< Updated upstream
-  1. Optionally, scroll to the **Application Scopes** section of the same screen
-     and select any additional permissions you want to enable for this application.
-  1. At the top of the page click the button to **Save Changes**
-=======
   6. Scroll down to the **Application Scopes** section to select your desired
      [permissions][scopes]. **Your application must have at least one or more**
      **of the following scopes:** manage users, read all files and folders
      stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
->>>>>>> Stashed changes
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
@@ -133,3 +127,4 @@ extra steps to set up.
 
 [devconsole]: https://account.box.com/developers/services
 [signup]: https://account.box.com/signup/n/developer
+[scopes]: g://api-calls/permissions-and-errors/scopes
