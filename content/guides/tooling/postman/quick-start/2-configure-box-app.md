@@ -52,7 +52,7 @@ extra steps to set up.
       scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties'
       can_act_as_user
       authentication_type='auth_code_grant'
-      redirect_url='https://developer.box.com/auth/callback'
+      redirect_url='/auth/callback'
       cors_origins=''>
       Create an app
     </AppButton>
@@ -71,15 +71,23 @@ extra steps to set up.
   require a few settings to be set for this to work.
 
   1. Go to the [Developer Console][devconsole]
-  1. Select your application
-  1. Go to the app's configuration section
-  1. Make sure your application uses **Standard OAuth 2.0** as the
+  2. Select your application
+  3. Go to the app's configuration section
+  4. Make sure your application uses **Standard OAuth 2.0** as the
      authentication method
-  1. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
+  5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
      **Redirect URI** to the value `https://developer.box.com/auth/callback`.
+<<<<<<< Updated upstream
   1. Optionally, scroll to the **Application Scopes** section of the same screen
      and select any additional permissions you want to enable for this application.
   1. At the top of the page click the button to **Save Changes**
+=======
+  6. Scroll down to the **Application Scopes** section to select your desired
+     [permissions][scopes]. **Your application must have at least one or more**
+     **of the following scopes:** manage users, read all files and folders
+     stored in Box, read and write all files and folders in Box.
+  7. At the top of the page click the button to **Save Changes**
+>>>>>>> Stashed changes
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
