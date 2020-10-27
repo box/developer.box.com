@@ -46,16 +46,19 @@
     "start": "yarn watch:content",
     "develop": "concurrently 'yarn watch:test'",
     "new": "yarn new:guide",
-    "new:guide": "yarn new:guide:empty",
-    "new:guide:example": "node -e 'require(\"./src/scripts/new-guide\").run(\"guide.md\")'",
-    "new:guide:empty": "node -e 'require(\"./src/scripts/new-guide\").run(\"guide-empty.md\")'"
+    "new:guide": "yarn new:guide:example",
+    "new:guide:example": "node -e 'require(\"./src/scripts/from-template\").run(\"template.md\", \"guides\")'",
+    "new:guide:empty": "node -e 'require(\"./src/scripts/from-template\").run(\"template-empty.md\", \"guides\")'",
+    "new:page": "yarn new:page:example",
+    "new:page:example": "node -e 'require(\"./src/scripts/from-template\").run(\"template.md\", \"pages\")'",
+    "new:page:empty": "node -e 'require(\"./src/scripts/from-template\").run(\"template-empty.md\", \"pages\")'"
   },
   "dependencies": {
     "@apidevtools/json-schema-ref-parser": "^9.0.1",
     "alex": "^9.0.1",
     "axios": "^0.20.0",
     "comment-json": "^4.0.4",
-    "concurrently": "^5.2.0",
+    "concurrently": "^5.3.0",
     "dot-prop": "^5.1.1",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6",

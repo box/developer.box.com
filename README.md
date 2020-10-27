@@ -2,19 +2,26 @@
 
 [![CI][ci_img]][ci]
 [![Project Status][opensource_img]][opensource]
-[![Project
-Status](https://opensource.box.com/badges/active.svg)](http://opensource.box.com/badges)
 
 This project contain the guides, pages, and microcopy for the Box Developer Documentation.
 
 Visit [`developer.box.com`][boxdev] for more details on the Box API Platform.
 
-## Contributing
+## Development & Contribution
 
-To add or edit any of the guides, please have a look at the [`./content`](./content) folder.
+Please follow the [contribution guidelines](./CONTRIBUTING.md) when contributing
+to the source of this project.
 
-For more details on adding to this project, please see the
-[CONTRIBUTING.md][contrib] guide.
+1. [Installation & setup](./docs/index.md)
+1. [Notes for Box employees](./docs/boxers.md)
+1. [The project structure and frontmatter](./docs/structure.md)
+1. [Adding a new guide](./docs/add-guide.md)
+1. [Adding a new page](./docs/add-page.md)
+1. [Adding a new quick start guide](./docs/add-quick-start-guide.md)
+2. [Adding microcopy](./docs/add-microcopy.md)
+3. [Contributing a pull request](./docs/pull-request.md)
+4. [Markdown styleguide](./docs/markdown.md)
+5. [Updating dependencies](./docs/dependencies.md)
 
 ## Usage & License
 

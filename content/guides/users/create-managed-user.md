@@ -4,7 +4,7 @@ related_endpoints:
   - post_users
 related_guides:
   - users/create-app-user
-  - users/deprovision/user
+  - users/deprovision
   - users/deprovision/transfer-folders
 related_pages: []
 required_guides: []

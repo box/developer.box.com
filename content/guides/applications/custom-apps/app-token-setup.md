@@ -11,7 +11,8 @@ required_guides:
   - authentication/select
   - applications/custom-apps
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/applications/limited-access-apps
 ---
 
 # Setup with App Tokens

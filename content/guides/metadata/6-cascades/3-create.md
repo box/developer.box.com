@@ -5,16 +5,11 @@ related_guides:
   - metadata/cascades/list
   - metadata/cascades/force-apply
   - metadata/cascades/delete
-related_resources: 
+related_resources:
   - metadata_cascade_policy
 ---
 
 # Create a metadata cascade policy
-
-<Message warning>
-  Metadata cascade policies are currently in Beta and the syntax might change in
-  the future.
-</Message>
 
 When a metadata template has been applied to a folder, a metadata cascade policy
 can be created by calling the  [`POST /metadata_cascade_policies`][e_post] API

@@ -82,6 +82,7 @@ extra steps to set up.
      **of the following scopes:** manage users, read all files and folders
      stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
+</Choice>
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
@@ -127,4 +128,4 @@ extra steps to set up.
 
 [devconsole]: https://account.box.com/developers/services
 [signup]: https://account.box.com/signup/n/developer
-[scopes]: g://api-calls/permissions-and-errors/scopes
+[scopes]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/
