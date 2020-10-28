@@ -12,8 +12,11 @@ alias_paths:
 
 # Select App Type
 
-The type of Box Application to select depends on the use case for the project.
-The following is a high level overview of the different types.
+Upon creating a new Box application in the
+[Developer Console][https://app.box.com/developers/console], you must select
+one of the following types of applications. The type of application you select
+is dependent on the use case for your project and will only impact the
+available authentication methods when configuring your application. 
 
 ## Custom Apps
 
@@ -21,14 +24,14 @@ The following is a high level overview of the different types.
 
 |                            |                                                                            |
 | -------------------------- | -------------------------------------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], and [App Token][app-token] Authentication |
+| **Authentication methods** | [OAuth 2.0][oauth2] or [JWT][jwt] Authentication |
 | **Features**               | Webhooks, App Gallery, and Web App Integrations                            |
 
 <!-- markdownlint-enable line-length -->
 
-By far the more flexible way to use Box Platform is through a Custom App
-integration. Custom Apps support various different authentication methods, and
-allow for downloading, uploading, viewing, searching, and much more.
+Custom Apps encompases most use cases and is the most flexible option.
+This application type allows for interaction with our 150+ endpoints.
+For example, downloading/uploading, searching, applying metadata and much more.
 
 A custom application typically presents Box functionality to a user within a
 custom interface. Box offers pre-built user interface components known as UI
@@ -40,7 +43,7 @@ customized, or you can build your own.
 
 A Custom App is best used when the application:
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
+- Wants to use [OAuth 2.0][oauth2] or [JWT][jwt] authentication
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
   other users, even external users.
@@ -71,8 +74,19 @@ Example use cases for Custom Apps include:
   recruiting portal then can then be routed to an appropriate employee for
   review.
 
-## Custom Skills
+##Limited Access App
 
+|                            |                                       |
+| -------------------------- | ------------------------------------- |
+| **Authentication methods** | [App Token][app-token]                |
+| **Features**               | Limited API access                    |
+
+A Limited Access App is best for leveraging
+[Box View][https://developer.box.com/guides/embed/box-view/] or previewing
+Box content within another application. This type of application can only
+interact with a limited number of endpoints. 
+
+##Custom Skills
 |                            |                                |
 | -------------------------- | ------------------------------ |
 | **Authentication methods** | Access Tokens in Skills events |
@@ -117,40 +131,3 @@ Example use cases for Custom Skills include:
   at which these faces occur back to the file as a timeline
 
 - A process that extracts audio from a video file and writes a transcript of the
-  audio back to the file
-
-## Enterprise Integrations
-
-<!-- markdownlint-disable line-length -->
-
-|                            |                                                 |
-| -------------------------- | ----------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2] and [JWT][jwt]              |
-| **Features**               | Webhooks, App Gallery, and Web App Integrations |
-
-<!-- markdownlint-enable line-length -->
-
-Enterprise Integrations are similar to [Custom Apps][custom-apps] but restricted
-to [OAuth 2.0][oauth2] and [JWT][jwt] authentication. We recommend using a
-Custom Application and configuring the application accordingly.
-
-## Partner Integrations
-
-<!-- markdownlint-disable line-length -->
-
-|                            |                             |
-| -------------------------- | --------------------------- |
-| **Authentication methods** | [App Token][app-token] auth |
-| **Features**               | Limited API access          |
-
-<!-- markdownlint-enable line-length -->
-
-Partner Integrations are similar to [Custom Apps][custom-apps] but restricted to
-[App Token][app-token] authentication. We recommend using a Custom Application
-with [App Token][app-token] authentication and configuring the application
-accordingly.
-
-[oauth2]: g://authentication/oauth2
-[jwt]: g://authentication/jwt
-[app-token]: g://authentication/app-token
-[custom-apps]: g://applications/custom-apps
