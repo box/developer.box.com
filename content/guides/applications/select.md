@@ -18,7 +18,11 @@ one of the following types of applications. The type of application you select
 is dependent on the use case for your project and will only impact the
 available authentication methods when configuring your application. 
 
-## Custom Apps
+<ImageFrame border width="400" center>
+  ![App Type Selection](../images/select-app-type.png)
+</ImageFrame>
+
+## Custom Apps 
 
 <!-- markdownlint-disable line-length -->
 
@@ -29,7 +33,7 @@ available authentication methods when configuring your application.
 
 <!-- markdownlint-enable line-length -->
 
-Custom Apps encompases most use cases and is the most flexible option.
+Custom Apps encompass most use cases and is the most flexible option.
 This application type allows for interaction with our 150+ endpoints.
 For example, downloading/uploading, searching, applying metadata and much more.
 
@@ -54,7 +58,7 @@ A Custom App is best used when the application:
 
 <CTA to="g://applications/custom-apps">Learn more about Custom Apps</CTA>
 
-### App Use Cases
+### Use Cases
 
 Example use cases for Custom Apps include:
 
@@ -74,7 +78,7 @@ Example use cases for Custom Apps include:
   recruiting portal then can then be routed to an appropriate employee for
   review.
 
-##Limited Access App
+## Limited Access App
 
 |                            |                                       |
 | -------------------------- | ------------------------------------- |
@@ -86,7 +90,7 @@ A Limited Access App is best for leveraging
 Box content within another application. This type of application can only
 interact with a limited number of endpoints. 
 
-##Custom Skills
+## Custom Skills
 |                            |                                |
 | -------------------------- | ------------------------------ |
 | **Authentication methods** | Access Tokens in Skills events |
@@ -120,7 +124,7 @@ A Custom Skill is best used when the application:
 
 <CTA to="g://applications/custom-skills">Learn more about Custom Skills</CTA>
 
-### Skill Use Cases
+### Use Cases
 
 Example use cases for Custom Skills include:
 
@@ -131,3 +135,8 @@ Example use cases for Custom Skills include:
   at which these faces occur back to the file as a timeline
 
 - A process that extracts audio from a video file and writes a transcript of the
+
+[oauth2]: g://authentication/oauth2
+[jwt]: g://authentication/jwt
+[app-token]: g://authentication/app-token
+[custom-apps]: g://applications/custom-apps
