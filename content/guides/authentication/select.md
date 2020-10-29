@@ -25,35 +25,17 @@ The following authorization methods are available to each Box Application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
 | ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | Yes        | Yes              |
+| [Custom App][custom-app]     | Yes                 | Yes  | No         | Yes              |
+| [Limited Access App][la-app] | No                  | No   | Yes        | No               |
 | [Custom Skill][custom-skill] | No                  | No   | No         | No               |
-| Enterprise Integration       | Yes                 | Yes  | No         | Yes              |
-| Partner Integration          | No                  | No   | Yes        | No               |
 
 <!-- markdownlint-enable line-length -->
 
-<Message warning>
-  Enterprise and Partner Integrations exist for legacy purposes. Please use
-  Custom Apps instead and use the relevant authentication method where needed.
-</Message>
-
-<Message>
-
-When you are creating a [Custom Skill][custom-skill] or Partner Integration
-application there is no need to select a authentication method as there is no
-choice to be made.
-
-In the case of Custom Skills, there isn't even a need to set up anything further
-as every Skills Event-payload will include an Access Token that can be used to
-make the API calls.
-
-</Message>
-
 ### Client-side OAuth 2.0
 
-Client-side OAuth 2.0 is only available to [Custom Apps][custom-app] and
-Enterprise Integrations. It requires the application to redirect a user to the
-Box website to grant the application's access to their data.
+Client-side OAuth 2.0 requires the application to redirect end-users to their
+browser to login to Box and authorize the application to take actions on their
+behalf. 
 
 <ImageFrame center width="400" shadow border>
   ![Box OAuth 2.0 approval](./oauth2-grant.png)
@@ -77,9 +59,8 @@ Client-side authentication is the ideal authentication method for apps that:
 
 ### Server-side JWT
 
-Server-side authentication using JSON Web Tokens (JWT) is only available to
-[Custom Apps][custom-app] and Enterprise Integrations. It does not involve a
-user into the authorization flow and as such can be used to act on behalf of any
+Server-side authentication using JSON Web Tokens (JWT) does not involve a
+user in the authorization flow and therefore can be used to act on behalf of any
 user in an enterprise. JWT uses a public/private key pair verify the
 application's permissions.
 
@@ -92,7 +73,8 @@ application's permissions.
 <Message>
   # When to use JWT?
 
-Server-side authentication with JWT is the ideal authentication method for apps that:
+Server-side authentication with JWT is the ideal authentication method for apps
+that:
 
 - Work with users that don't have a Box account
 - Want to use their own identity system
@@ -177,9 +159,10 @@ obtained determines who that user is.
 
 For example, when using client-side authentication the token represents the
 user who granted access to their account, while while when using server-side
-authentication the token defaults to a Service Account.
+authentication the token defaults to the application's Service Account.
 
 </Message>
 
 [custom-app]: guide://applications/custom-apps
 [custom-skill]: guide://applications/custom-skills
+[la-app]: guide://applications/web-app-integrations

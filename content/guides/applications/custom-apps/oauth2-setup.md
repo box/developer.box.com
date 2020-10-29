@@ -23,9 +23,9 @@ A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication
 
 ## Prerequisites
 
-To set up a Custom App using OAuth 2.0 authentication, you will need to ensure 
-you have access the [Developer Console][devconsole] from your enterprise account, 
-or sign up for a [developer account][devaccount].
+To set up a Custom App using OAuth 2.0 authentication, you will need to ensure
+you have access the [Developer Console][devconsole] from your Box enterprise 
+account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
@@ -81,13 +81,15 @@ the [scopes guide][scopes] for detailed information on each option.
 
 ### CORS Domains
 
-If your application is making API calls from front-end browser code in
-Javascript then the domain that these calls will be made from will need to be
-allowed due to [Cross Origin Resource Sharing][cors], also known as CORS.
+If your application makes API calls from front-end browser code in
+Javascript, the domain that these calls are made from will need to be
+added to an allow-list due to [Cross Origin Resource Sharing][cors],
+also known as CORS. If all requests will be made from server-side code,
+you may skip this section.
 
-Fill in the full URI(s) of the domains that should be enabled in your
-application to make these kind of requests. If all requests will be made from
-server-side code, this section may be left blank.
+To add the full URI(s) to the allow-list, navigate to the **CORS Domain** 
+section at the bottom of the **Configuration** tab in the
+[Developer console][devconsole].
 
 <ImageFrame border>
   ![App name form](../images/app-cors.png)

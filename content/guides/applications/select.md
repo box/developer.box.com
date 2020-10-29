@@ -91,6 +91,7 @@ Box content within another application. This type of application can only
 interact with a limited number of endpoints. 
 
 ## Custom Skills
+
 |                            |                                |
 | -------------------------- | ------------------------------ |
 | **Authentication methods** | Access Tokens in Skills events |
