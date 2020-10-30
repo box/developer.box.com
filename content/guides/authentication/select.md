@@ -26,7 +26,7 @@ The following authorization methods are available to each Box Application type.
 | Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
 | ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
 | [Custom App][custom-app]     | Yes                 | Yes  | No         | Yes              |
-| [Limited Access App][la-app] | No                  | No   | Yes        | No               |
+| [Limited Access App][la-app] | No                  | Yes  | Yes        | No               |
 | [Custom Skill][custom-skill] | No                  | No   | No         | No               |
 
 <!-- markdownlint-enable line-length -->
