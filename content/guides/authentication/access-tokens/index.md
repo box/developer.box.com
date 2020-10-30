@@ -27,13 +27,9 @@ Token.
 | ---------------------------------- | ------------------------------------------------ |
 | Custom App + OAuth 2.0             | [Explicit user grant][oauth2-with-sdk]           |
 | Custom App + JWT                   | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Custom App + App Token             | [Configure token in developer console][devtoken] |
-| Enterprise Integration + OAuth 2.0 | [Explicit user grant][oauth2-with-sdk]           |
-| Enterprise Integration + JWT       | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Partner Integration + App Token    | Configure token in developer console             |
+| Limited Access App + App Token     | Configure token in developer console             |
 | Custom Skill                       | Access Token in event payload                    |
 <!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/jwt/with-sdk
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
-[devtoken]: g://authentication/access-tokens/developer-tokens
