@@ -1,0 +1,99 @@
+---
+// title: Title of the create-app modal
+title: Create an app
+
+buttons:
+  // close: Label of the close buttton
+  close: close
+
+credentials:
+  // client_id: The label for the field that holds the client ID
+  client_id: Client ID
+
+  // client_secret: The label for the field that holds the client secret
+  client_secret: Client Secret
+
+logged_out:
+  // description: The description at the top of the app log in screen.
+  description: |-
+    Let us take care of the hard parts for you. Before we can
+    create an app for you we will need you to log in.
+
+logged_in:
+  // description: The description at the top of the app creation screen.
+  description: |-
+    Let us take care of the hard parts for you. We can set up an app for you
+    with a few clicks.
+
+  values:
+    // none: Text used to show that no value was set
+    none: None
+
+    // allowed: Text used to show that something is allowed
+    allowed: Allowed
+
+    // not_allowed: Text used to show that something is not allowed
+    not_allowed: Not allowed
+
+  buttons:
+    // logout: Log out button label
+    logout: Logout
+
+    // create_app: Create app button label
+    create_app: Create app
+
+  labels:
+    // application: Label for the application type
+    application: Application
+
+    // name: Label for the name of an app
+    name: Name
+
+    // scopes: Label for the scopes of an app
+    scopes: Scopes
+
+    // can_act_as_user: Label for the can_act_as_user setting
+    can_act_as_user: Can act as a user
+
+    // redirect_url: Label for the redirect URL
+    redirect_url: Redirect URL
+
+    // cors_origins: Label for the CORS Origins
+    cors_origins: CORS Origins
+
+  app_types:
+    // auth_code_grant: Describes a standard OAuth 2.0 app
+    auth_code_grant: User Authentication (OAuth 2.0)
+
+    // jwt_grant: Describes a standard JWT app
+    jwt_grant: Server Authentication (with JWT)
+
+    // app_token_auth: Describes a limited access app
+    app_token_auth: App Token Authentication
+
+  scopes:
+    // root_readonly: Label for the root_readonly scope
+    root_readonly: Read all files and folders
+
+    // root_readwrite: Label for the root_readwrite scope
+    root_readwrite: Read and write all files and folders
+
+    // manage_managed_users: Label for the manage_managed_users scope
+    manage_managed_users: Manage users
+
+    // manage_app_users: Label for the manage_app_users scope
+    manage_app_users: Manage app users
+
+    // manage_groups: Label for the manage_groups scope
+    manage_groups: Manage groups
+
+    // manage_webhooks: Label for the manage_webhooks scope
+    manage_webhook: Manage webhooks
+
+    // manage_enterprise_properties: |-
+      Label for the manage_enterprise_properties scope
+    manage_enterprise_properties: Manage enterprise properties
+
+    // manage_retention_policies: |-
+      Label for the manage_retention_policies scope
+    manage_retention_policies: Manage retention policies

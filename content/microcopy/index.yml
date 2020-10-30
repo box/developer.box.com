@@ -34,3 +34,6 @@ pages:
 
 changelog:
   $ref: "content/microcopy/changelog.yml"
+
+app_button:
+  $ref: "content/microcopy/app_button.yml"
