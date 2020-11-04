@@ -409,4 +409,4 @@ using `openWith.addListener('execute', callback)` and
 [tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
 [custom-domains]: g://embed/ui-elements/custom-domains
 [safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
-[service-account]: https://developer.box.com/guides/authentication/user-types/
+[service-account]: g://authentication/user-types/
