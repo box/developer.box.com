@@ -13,13 +13,13 @@ alias_paths:
 # Select App Type
 
 Upon creating a new Box application in the
-[Developer Console][https://app.box.com/developers/console], you must select
+[Developer Console][dev-console], you must select
 one of the following types of applications. The type of application you select
 is dependent on the use case for your project and will only impact the
 available authentication methods when configuring your application. 
 
 <ImageFrame border width="400" center>
-  ![App Type Selection](../images/select-app-type.png)
+  ![App Type Selection](images/select-app-type.png)
 </ImageFrame>
 
 ## Custom Apps 
@@ -86,7 +86,7 @@ Example use cases for Custom Apps include:
 | **Features**               | Limited API access                    |
 
 A Limited Access App is best for leveraging
-[Box View][https://developer.box.com/guides/embed/box-view/] or previewing
+[Box View][view-app] or previewing
 Box content within another application. This type of application can only
 interact with a limited number of endpoints. 
 
@@ -141,3 +141,5 @@ Example use cases for Custom Skills include:
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
 [custom-apps]: g://applications/custom-apps
+[dev-console]: https://app.box.com/developers/console
+[view-app]: https://developer.box.com/guides/embed/box-view/
