@@ -104,7 +104,7 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
  Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 </Message>
 
-Then, navigate to configuration tab for your application in the
+Then, navigate to the configuration tab for your application in the
 [Developer console][devconsole] and scroll down to the
 **Add and Manage Public Keys** section.
 
