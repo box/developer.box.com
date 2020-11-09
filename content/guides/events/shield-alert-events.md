@@ -333,7 +333,7 @@ All shield management events are produced within the
 follow the standard event object schema, with the `event_type` value set
 to `SHIELD_JUSTIFICATION_APPROVAL`.
 
-Information about the specific justificatoin event is supplied within
+Information about the specific justification event is supplied within
 the `additional_details` object.
 
 ### Justification approval
