@@ -25,80 +25,72 @@ A Custom App can be set up to use server-side authentication with
 
 ## Prerequisites
 
-To set up a Custom App using JWT authentication you will need to pass the
-following requirements.
+To set up a Custom App using server-side authentication, you will need to ensure
+you have access the [Developer Console][devconsole] from your Box enterprise 
+account. Alternatively, you may sign up for a [developer account][devaccount].
 
-* You need to be a be able to access the [Developer Console][devconsole] for
-  your enterprise, or sign up for a [developer account][devaccount].
+## App creation steps
 
-## Create the app
+### 1. Navigate to the Developer Console
 
-### 1. Log in to the Developer Console
+Log into Box and navigate to the [Developer Console][devconsole]. 
+Select **Create New App**.
 
-Head over to the [Developer Console][devconsole] and select "Create New App".
+### 2. Select the type of application
 
-### 2. Create a Custom App
-
-Select the "Custom App" option from the list of application types and select
-"Next".
-
-<ImageFrame border>
-  ![Application selection screen](../images/app-types.png)
-</ImageFrame>
-
-### 3. Select OAuth 2.0 authentication
-
-On the next screen, select "OAuth 2.0 with JWT (Server Authentication)" and select
-"Next".
+Select **Custom App** from the list of application types. A modal will appear to
+prompt a selection for the next step.
 
 <ImageFrame border width="400" center>
-  ![Auth selection screen](../images/auth-types-jwt.png)
+  ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
-### 4. Provide a name
+### 3. Select the type of authentication and app name
 
-Finally, provide a unique name for your application. This name needs to be
-unique across all applications on Box.
+Select **Server Authentication (with JWT)** and provide a unique name for your
+application. Click **Create App**.
 
 <ImageFrame border width="600" center>
-  ![App name form](../images/app-name.png)
+  ![App name form](../images/custom-app-selection-jwt.png)
 </ImageFrame>
 
 ## JWT keypair
 
-JWT authentication work through a public/private RSA keypair. This keypair can
-be generated on the developer console, or alternatively the developer can
-provide their own public key.
+JWT authentication works through a public/private RSA keypair.
+Once a Custom App is created leveraging JWT authentication, a keypair can
+be generated via the [Developer Console][devconsole] or you can generate your
+own and supply Box with the public key.
 
 ### Generate a keypair (Recommended)
 
-After a Custom App has been created to use JWT authentication, there is an
-option available in the [Developer Console][devconsole] to have Box create a
-configuration file. This file will include the keypair as well as a number of
-other application details that are used used during authentication.
+If you would like to use a Box generated keypair, navigate to the
+[Developer Console][devconsole] where you can generate a configuration file.
+This file includes a public/private keypair and a number of other application
+details that are necessary for authentication.
 
-Click on the "Configuration" option from the left sidebar in your application
-and scroll down to the "Add and Manage Public Keys" section.
+To generate this file, navigate to the **Configuration** tab of the
+[Developer Console][devconsole] and scroll down to the
+**Add and Manage Public Keys** section.
 
 <ImageFrame border width="600" center>
   ![Add and Manage keys](../images/app-add-keys.png)
 </ImageFrame>
 
-Click the "Generate a Public/Private Keypair" button to have Box generate a
-keypair. This will trigger the download of a JSON configuration file that you
-can move to your application code.
+Click the **Generate a Public/Private Keypair** button to have Box generate a
+keypair you. This will trigger the download of a JSON configuration file that 
+you can move to your application code.
 
 <Message danger>
-  Box will not store your private key as this would be a security concern.
-  Please do not loose your private key or the entire keypair needs to be reset.
+  For security reasons, Box will not store your private key. If you lose your 
+  private key, you will need to reset the entire keypair.
 </Message>
 
 ### Manually add keypair
 
-An alternative to having Box generate the public/private keypair is to manually
-generate a keypair and upload the public key to the Box developer console.
+Alternatively, you may generate your own keypair and then upload the public key
+to the [Developer Console][devconsole].
 
-To create the keypair using OpenSSL, open a terminal window and run the
+To create a keypair using OpenSSL, open a terminal window and run the
 following commands.
 
 ```shell
@@ -112,35 +104,35 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
  Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 </Message>
 
-Next, head over to your application in the [developer console][devconsole] and
-select the"Configuration" link from the left sidebar in your application
-and scroll down to the "Add and Manage Public Keys" section.
+Then, navigate to the configuration tab for your application in the
+[Developer console][devconsole] and scroll down to the
+**Add and Manage Public Keys** section.
 
 <ImageFrame border width="600" center>
   ![Add and Manage keys](../images/app-add-keys.png)
 </ImageFrame>
 
-Click the "Add a Public Key" button to have Box upload the public key you
-created before.
+Click the **Add a Public Key** button, enter the public key generated using the
+steps above and click **Verify and Save**.
 
 ## App Authorization
 
-Once a keypair has been added to the application it will need to be authorized
-within the Box enterprise by the enterprise Admin User.
+Once a keypair is successfully added to your application your Box enterprise
+Admin needs to authorize the application within the Box Admin Console.
 
-Head over to your application in the [developer console][devconsole] and
-select the "General" link from the left sidebar in your application
-and scroll down to the "App Authorization" section.
+Navigate to the **General Settings** tab for your application within the
+[developer console][devconsole] and scroll down to the **App Authorization**
+section.
 
 <ImageFrame border width="400" center>
   ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
-This will send an email to your enterprise admin to have them enable your
-application. More information on this process is available in our [community
-article on app authorization][app-auth].
+Click **Submit and Review** to send an email to your Box enterprise Admin for
+approval. More information on this process is available in our 
+[support article for app authorization][app-auth].
 
-### Re-authorization on changes
+### Re-authorization after making configuration changes
 
 When the application's scopes or access level change the application needs to be
 re-authorized. Repeat the process above and request a new Access Token for the
@@ -148,15 +140,16 @@ new changes to take effect.
 
 ## Basic configuration
 
-Before the application can be used, some basic additional configuration might be
+Before the application can be used, some additional configuration is
 required.
 
 ### Application Access
 
-By default the application will will only be able to work with its own data and
-the data of any [App Users][user-types] that it creates. To also work with
-existing Managed Users in the entire enterprise the application needs to be
-enabled for "Enterprise Access".
+By default, an application can only successfully interact with its own data and
+the data of any [App Users][user-types]. To also work with
+existing Managed Users of the enterprise, navigate to the 
+**Application Access** settings accessible via the **Configuration** tab of the
+[Developer console][devconsole]. Set to **Enterprise**. 
 
 <ImageFrame border>
   ![App access level](../images/app-access-level.png)
@@ -164,7 +157,7 @@ enabled for "Enterprise Access".
 
 ### Application Scopes
 
-These options define what permissions your application has to access data. See
+Scopes define what permissions your application has in order to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
 <ImageFrame border width="600" center>
@@ -173,13 +166,15 @@ the [scopes guide][scopes] for detailed information on each option.
 
 ### CORS Domains
 
-If your application is making API calls from front-end browser code in
-Javascript then the domain that these calls will be made from will need to be
-allow due to [Cross Origin Resource Sharing][cors], also known as CORS.
+If your application makes API calls from front-end browser code in
+Javascript, the domain that these calls are made from will need to be
+added to an allow-list due to [Cross Origin Resource Sharing][cors],
+also known as CORS. If all requests will be made from server-side code,
+you may skip this section.
 
-Fill in the full URI(s) of the domains that should be enabled in your
-application to make these kind of requests. If all requests will be made from
-server-side code, this section may be left blank.
+To add the full URI(s) to the allow-list, navigate to the **CORS Domain** 
+section at the bottom of the **Configuration** tab in the
+[Developer console][devconsole].
 
 <ImageFrame border>
   ![App CORS config](../images/app-cors.png)
