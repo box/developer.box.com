@@ -21,7 +21,6 @@ console.
 | [Limited Access App]         | [App token][apptoken]                                     |
 | [Custom Skill][custom-skill] | No authorization needed                                   |
 
-
 <!-- markdownlint-enable line-length -->
 
 <CTA to="guide://authentication/select">
