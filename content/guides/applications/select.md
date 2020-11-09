@@ -18,7 +18,7 @@ one of the following types of applications. The type of application you select
 is dependent on the use case for your project and will only impact the
 available authentication methods when configuring your application. 
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
   ![App Type Selection](images/select-app-type.png)
 </ImageFrame>
 
