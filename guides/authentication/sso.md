@@ -62,7 +62,8 @@ set to be required, even if it is only used for platform use cases.
 
 ## Custom Apps with Server-side Authentication
 
-For [Custom Apps][custom_app] that use [JWT][jwt] or [App Token][app_token]
+For [Custom Apps][custom_app] that use [JWT][jwt] or
+[Limited Access Apps][la-app] that use [App Token][app_token]
 authentication, SSO is not used to authenticate with Box.
 
 Custom apps using server-side authentication only use server-to-server API
@@ -75,8 +76,8 @@ matter completely.
 
 In these use cases the application authenticates not as a regular Managed User
 but as a Service Account or App User. These user types do not have access to any
-Managed User's data by default. For these applications to have access to other Managed
-User's data they will need explicit [admin approval][admin-approval].
+Managed User's data by default. For these applications to have access to other
+Managed User's data they will need explicit [admin approval][admin-approval].
 
 ## Custom Skills
 
@@ -99,6 +100,7 @@ would require them to use SSO where needed.
 [admin-approval]: g://applications/custom-apps/app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
+[la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
 [custom_app]: g://applications/custom-apps
 [custom_skills]: g://applications/custom-skills
