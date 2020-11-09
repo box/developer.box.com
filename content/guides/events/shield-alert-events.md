@@ -9,7 +9,9 @@ required_guides: []
 alias_paths: []
 ---
 
-# Shield alert events
+# Shield events
+
+## Alert events
 
 Shield alert events provide details about security incidents in an
 enterprise with [Box Shield][box-shield] enabled, which are configured to
@@ -21,11 +23,10 @@ The possible incident alerts produced by Shield are:
 1. Suspicious sessions
 1. Anomalous download
 1. Malicious content
-1. Justification approval
 
-All shield alert events is produced within the
+All shield alert events are produced within the
 [enterprise event][g://events/for-enterprise/] stream (not the user stream) and
-follows the standard event object schema, with the `event_type` value set
+follow the standard event object schema, with the `event_type` value set
 to `SHIELD_ALERT`.
 
 ```js
@@ -53,7 +54,7 @@ to `SHIELD_ALERT`.
 Information about the specific type of shield alert that triggered the event
 will be supplied within the `additional_details` object.
 
-## Suspicious locations alert
+### Suspicious locations alert
 
 A suspicious locations alert is produced when an account within the
 enterprise is been accessed from a suspicious location. It can be identified
@@ -104,7 +105,7 @@ The `additional_details` payload will provide the following details.
   }
 ```
 
-## Suspicious sessions alert
+### Suspicious sessions alert
 
 A suspicious locations alert is produced when abnormal behavior is
 detected in the account session. It can be identified by the `Suspicious
@@ -184,7 +185,7 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Anomalous download alert
+### Anomalous download alert
 
 A suspicious locations alert is produced when anomalous content download
 behavior has been detected. It can be identified by the `Anomalous Download`
@@ -240,7 +241,7 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Malicious content alert
+### Malicious content alert
 
 A suspicious locations alert is produced when malicious content has been
 identified, such as a virus being detected. It can be identified by the
@@ -325,7 +326,17 @@ The `additional_details` payload will provide the following details.
   }
 ```
 
-## Justification approval
+## Management events
+
+All shield management events are produced within the
+[enterprise event][g://events/for-enterprise/] stream (not the user stream) and
+follow the standard event object schema, with the `event_type` value set
+to `SHIELD_JUSTIFICATION_APPROVAL`.
+
+Information about the specific justificatoin event is supplied within
+the `additional_details` object.
+
+### Justification approval
 
 A Shield justification alert is produced when a Shield justification is
 approved. 
