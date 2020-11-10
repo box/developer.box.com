@@ -280,9 +280,9 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 # Access Token
 
-These demos may not fully function until you provide a valid access token. For
-testing purposes, you can use your temporary developer token. This will need
-to be updated under the JS tab in the demo.
+These demos may not fully function until you provide a valid access token under
+the JS tab of the demo. For the Open With element, you must provide a valid
+[Service Account][service-account] Access Token.
 
 </Message>
 
@@ -412,3 +412,4 @@ using `openWith.addListener('execute', callback)` and
 [tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
 [custom-domains]: g://embed/ui-elements/custom-domains
 [safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
+[service-account]: g://authentication/user-types/

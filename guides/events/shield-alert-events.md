@@ -20,7 +20,9 @@ previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/shield-alert-events.md
 ---
-# Shield alert events
+# Shield events
+
+## Alert events
 
 Shield alert events provide details about security incidents in an
 enterprise with [Box Shield][box-shield] enabled, which are configured to
@@ -33,9 +35,9 @@ The possible incident alerts produced by Shield are:
 1. Anomalous download
 1. Malicious content
 
-All shield alert events will be produced within the
+All shield alert events are produced within the
 [enterprise event][g://events/for-enterprise/] stream (not the user stream) and
-will follow the standard event object schema, with the `event_type` value set
+follow the standard event object schema, with the `event_type` value set
 to `SHIELD_ALERT`.
 
 ```js
@@ -63,10 +65,10 @@ to `SHIELD_ALERT`.
 Information about the specific type of shield alert that triggered the event
 will be supplied within the `additional_details` object.
 
-## Suspicious locations alert
+### Suspicious locations alert
 
-A suspicious locations alert will be produced when an account within the
-enterprise has been accessed from a suspicious location. It can be identified
+A suspicious locations alert is produced when an account within the
+enterprise is been accessed from a suspicious location. It can be identified
 by the `Suspicious Locations` value within
 `additional_details.shield_alert.rule_category`.
 
@@ -114,9 +116,9 @@ The `additional_details` payload will provide the following details.
 }
 ```
 
-## Suspicious sessions alert
+### Suspicious sessions alert
 
-A suspicious locations alert will be produced when abnormal behavior has been
+A suspicious locations alert is produced when abnormal behavior is
 detected in the account session. It can be identified by the `Suspicious
 Sessions` value within `additional_details.shield_alert.rule_category`.
 
@@ -195,9 +197,9 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Anomalous download alert
+### Anomalous download alert
 
-A suspicious locations alert will be produced when anomalous content download
+A suspicious locations alert is produced when anomalous content download
 behavior has been detected. It can be identified by the `Anomalous Download`
 value within `additional_details.shield_alert.rule_category`.
 
@@ -252,9 +254,9 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Malicious content alert
+### Malicious content alert
 
-A suspicious locations alert will be produced when malicious content has been
+A suspicious locations alert is produced when malicious content has been
 identified, such as a virus being detected. It can be identified by the
 `Malicious Content` value within
 `additional_details.shield_alert.rule_category`.
@@ -334,6 +336,67 @@ The `additional_details` payload will provide the following details.
     "link":"https://app.box.com/master/shield/alerts/2398",
     "created_at":"2019-12-20T11:37:15-08:00"
   }
+}
+```
+
+## Management events
+
+All shield management events are produced within the
+[enterprise event][g://events/for-enterprise/] stream (not the user stream) and
+follow the standard event object schema, with the `event_type` value set
+to `SHIELD_JUSTIFICATION_APPROVAL`.
+
+Information about the specific justification event is supplied within
+the `additional_details` object.
+
+### Justification approval
+
+A Shield justification alert is produced when a Shield justification is
+approved.
+
+The `additional_details` payload will provide the following details.
+
+```js
+ "additional_details": {
+    "shield_justification": {
+        "justification_id": 1234,
+        "request_at": 1600708864,
+        "requested_by": {
+            "type": "user",
+            "id": 123456789,
+            "name": "Some Name",
+            "login": "some@email.com"
+        },
+        "request_type": "EXTERNAL_COLLAB",
+        "item": {
+            "type": "file",
+            "id": 987654321,
+            "name": "example.docx",
+            "file_version_id": 192837465,
+            "size": 0,
+            "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        "user": {
+            "type": "user",
+            "id": 123456789,
+            "name": "Some Name",
+            "login": "some@email.com"
+        },
+        "title": "Some Title",
+        "description": null,
+        "details": null,
+        "additional_info": null,
+        "approved_by": {
+            "type": "user",
+            "id": 123456789,
+            "name": "Some Name",
+            "login": "some@email.com"
+        },
+        "action": "APPROVED",
+        "action_at": 1600476617
+    },
+    "service_id": "1234",
+    "service_name": "ServiceName"
 }
 ```
 

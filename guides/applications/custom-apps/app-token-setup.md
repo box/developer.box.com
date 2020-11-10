@@ -98,7 +98,7 @@ required.
 
 Authentication with Limited Access Apps is done through preconfigured [App
 Tokens][app-token]. To configure an app token, navigate to the **Configuration**
-tab for your application within the[Developer console][devconsole].
+tab for your application within the [Developer console][devconsole].
 
 Scroll down to the **Primary Access Token** section and click the
 **Generate Key** button.

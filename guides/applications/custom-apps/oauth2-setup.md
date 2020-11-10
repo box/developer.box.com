@@ -60,7 +60,7 @@ prompt a selection for the next step.
 
 ### 3. Select the type of authentication and app name
 
-Select **User Authentication (OAuth 2.0** and provide a unique name for your
+Select **User Authentication (OAuth 2.0)** and provide a unique name for your
 application. Click **Create App**.
 
 <ImageFrame border width="400" center>
@@ -71,7 +71,7 @@ application. Click **Create App**.
 
 ## Basic configuration
 
-Before the application can be used, some additional, basic configuration is
+Before the application can be used, some additional configuration is
 required.
 
 ### Redirect URI
