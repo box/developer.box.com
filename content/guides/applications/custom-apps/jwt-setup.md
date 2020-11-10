@@ -104,8 +104,8 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
  Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 </Message>
 
-Then, navigate to configuration tab for your application in the
-[Developer console][devconsole]and scroll down to the
+Then, navigate to the configuration tab for your application in the
+[Developer console][devconsole] and scroll down to the
 **Add and Manage Public Keys** section.
 
 <ImageFrame border width="600" center>
@@ -140,14 +140,14 @@ new changes to take effect.
 
 ## Basic configuration
 
-Before the application can be used, some additional, basic configuration is
+Before the application can be used, some additional configuration is
 required.
 
 ### Application Access
 
 By default, an application can only successfully interact with its own data and
 the data of any [App Users][user-types]. To also work with
-existing Managed Users in the entire enterprise the application navigate to the 
+existing Managed Users of the enterprise, navigate to the 
 **Application Access** settings accessible via the **Configuration** tab of the
 [Developer console][devconsole]. Set to **Enterprise**. 
 

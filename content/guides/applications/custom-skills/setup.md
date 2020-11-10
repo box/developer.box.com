@@ -71,7 +71,7 @@ machine, or serverless function. The only requirement is that the URL is
 publicly available and accessible by Box servers. For this reason, `localhost` 
 is not a valid address.
 
-To set up the Invocation URL, navigate to the ** Configuration** tab of the 
+To set up the Invocation URL, navigate to the **Configuration** tab of the 
 [Developer Console][devconsole] and scroll down to the "Invocation URL" section.
 
 <ImageFrame border width="600" center>
@@ -80,8 +80,8 @@ To set up the Invocation URL, navigate to the ** Configuration** tab of the
 
 </ImageFrame>
 
-Fill in a secure HTTPs address and save the form. The invocation URL is now
-been configured.
+Fill in a secure HTTPS address and save the form. The invocation URL is now
+configured.
 
 ### File Extensions
 
