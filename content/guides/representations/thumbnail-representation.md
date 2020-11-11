@@ -39,8 +39,7 @@ To get a thumbnail representation follow the following steps
 - [Download the thumbnail][download-a-representation]
   by calling the `url_template`, replacing the `{+asset_path}` with an empty
   string.
-  
- 
+
 <Message warning>
 
 Sometimes the thumbnail can not be created directly. Instead, 
@@ -50,7 +49,8 @@ is being generated.
 
 </Message>
 
-A retry-after response header is also provided to present you with an estimated amount of seconds before retrying this endpoint.
+A retry-after response header is also provided to present you with an
+estimated amount of seconds before retrying this endpoint.
 
 ## Examples
 
