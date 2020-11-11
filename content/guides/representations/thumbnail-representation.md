@@ -21,8 +21,12 @@ a link that downloads or previews the file.
 All thumbnail representations except `1024x1024` and `2048x2048` PNGs are
 generated upon uploading the source file to Box.
 
-An alternative way to get a thumbnail for a file is using the
+<Message warning>
+
+An deprecated way to get a thumbnail for a file is using the
 [thumbnail API][thumbnail_api].
+
+</Message>
 
 ## The process
 
