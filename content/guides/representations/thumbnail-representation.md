@@ -125,6 +125,13 @@ At this time the following file types are supported.
 
 <!-- markdownlint-enable line-length -->
 
+<Message warning>
+
+For **document** file types the representation returned will be a placeholder
+icon and not an actual thumbnail.
+
+</Message>
+
 [list-all-representations]: guide://representations/list-all-representations
 [request-a-representation]: guide://representations/request-a-representation
 [download-a-representation]: guide://representations/download-a-representation
