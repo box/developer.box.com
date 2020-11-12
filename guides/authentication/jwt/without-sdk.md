@@ -27,20 +27,24 @@ source_url: >-
 ---
 # JWT without SDKs
 
-This guide takes you through authenticating with JWT without using the Box SDKs.
+This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
 directly with the Box API.
 
-To verify an application's permissions, you can either use a:
+To verify an application's identity, you can either use a:
 
 1. public/private keypair
-1. client id and client secret
+1. client ID and client secret
 
-Regardless of the method you choose from above, at the end of this flow, you
-will have an Access Token that can be used to make API calls on behalf of
-the application.
+Using your client ID and client secret is the easiest and fastest verification
+method for prototyping or scripting against your Enterprise. Using a
+keypair is a more complex process, but does provides the same functionality.
 
-To learn how to use this token head over to the guide on [Making API
+Regardless of the verification method you select from above, at the end of this
+process you will have an Access Token that can be used to make API calls on
+behalf of the application. 
+
+To learn how to use this token visit our guide on [Making API
 calls](g://api-calls).
 
 <Message notice>
@@ -48,7 +52,7 @@ calls](g://api-calls).
 By default, the access token acquired with JWT is tied to the Service
 Account for the application. Any API call made with this token will come
 from the application. This account does not have access to any existing files
-or folders until the service account is added as a collaborator.
+or folders until the App's Service Account is added as a collaborator.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `as-user` header or by requesting a
@@ -56,20 +60,15 @@ using the `as-user` header or by requesting a
 
 </Message>
 
-## Code Samples
-
-All of the code in this guide is available on [GitHub][samples].
-
 ## Using a keypair
 
 ### Prerequisites
 
-Before we can get started, you will need to complete the following steps.
-
-- Create a JWT Custom Application within the Developer Console
+- Create a JWT Custom Application within the [Developer Console][devconsole].
 - Create or download the private key configuration file for your application
-  and save it as `config.json`
-- Ensure your Box Application is authorized within the Box Admin Console
+  and save it as `config.json`. You will need to have [2FA][2fa] enabled on your
+  Box account in order to complete this step. 
+- Ensure your Box Application is authorized within the Box Admin Console.
 
 ### 1. Read JSON configuration
 
@@ -853,10 +852,30 @@ $access_token = json_decode($data)->access_token;
 
 ### Prerequisites
 
-Before we can get started, you will need to complete the following steps.
+- Create a Custom Application using Client Credentials Grant authentication
+ within the[Developer Console][devconsole]
+- [2FA][2fa] must be enabled on your Box account in order to view/copy your 
+ client secret.
+- Ensure your Box Application is authorized within the Box Admin Console.
 
-- Create a Client Credentials Custom Application within the Developer Console
-- Ensure your Box Application is authorized within the Box Admin Console
+<Message notice>
+
+You must protect your client secret. Because this is how we securely identify 
+an application's rights and identity when obtaining an Access Token, you do not
+want to freely distribute a client secret. This includes email, public forums 
+and code repositories, distributed native applications, or client-side code. 
+
+</Message>
+
+When making your API call to obtain an [Access Token][access token], your 
+request body will need to contain your client ID and client Secret. Set the
+`grant_type` to `client_credentials`.
+
+If you would like to authenticate as the App's [Service Account][sa], set
+`box_subject_type` to `enterprise` and `box_subject_id` to the enterprise ID.
+
+If you would like to authenticate as a Managed User, set 
+`box_subject_type` to `user` and `box_subject_id` to the user ID.
 
 <Tabs>
 
@@ -880,4 +899,12 @@ curl --location --request POST ‘https://api.box.com/oauth2/token’ \
 
 </Tabs>
 
+## Code Samples
+
+All of the code in this guide is available on [GitHub][samples].
+
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api
+[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+[devconsole]: https://app.box.com/developers/console
+[accesstoken]: e://post-oauth2-token/
+[sa]: g://authentication/user-types/app-users/#service-accounts

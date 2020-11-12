@@ -61,5 +61,10 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
+The easiest way to authenticate with JWT is by using your client id and client
+secret to verify an application's identity. This method is best if you are
+writing scrips for your Box enterprise and want to store data within the
+application's Box account instead of within a user's Box account.
+
 [app-type]: g://applications/select/
 [user-types]: g://authentication/user-types
