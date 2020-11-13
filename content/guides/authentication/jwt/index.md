@@ -27,18 +27,19 @@ Server-side authentication using JWT is only available to the Custom Application
 interaction and, if granted the proper privileges, can be used
 to act on behalf of any user in an enterprise. 
 
-To verify an application's permissions, you can either use a: 
+There are two ways you can verify an application's permissions:
 
-1. public/private keypair
-1. client id and client secret
+- using a public and private key pair
+- using a client id and client secret (Client Credentials Grant)
 
+At this time, our SDKs do not support the Client Credential Grant.
 To learn more about these options visit our guide on using
 [JWT without SDKs][jwtnosdk].
 
 Upon authorizing a JWT application in the Box Admin Console, a 
-[Service Account][user-types]is automatically generated and is the default token
-used when authenticating. This is an admin-like user and why applications
-leveraging JWT require explicit Box Admin approval before use.
+[Service Account][user-types] is automatically generated and is the default
+Access Token used when authenticating. This is an admin-like user and why
+applications leveraging JWT require explicit Box Admin approval before use.
 
 ## When to use JWT
 
