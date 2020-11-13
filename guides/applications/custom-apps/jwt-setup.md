@@ -62,8 +62,14 @@ prompt a selection for the next step.
 
 ### 3. Select the type of authentication and app name
 
-Select **Server Authentication (with JWT)** and provide a unique name for your
-application. Click **Create App**.
+Select **Server Authentication (with JWT)** if you would like to verify
+application identity via a key pair. Select
+**Server Authentication (Client Credentials Grant)** if you would like to verify
+application identity via a client id and client secret. Then, provide a name
+for your application and click **Create App**.
+
+Once you make a selection, you will not be able to change to a different 
+authentication method without creating a new application.
 
 <ImageFrame border width="600" center>
 
@@ -71,12 +77,13 @@ application. Click **Create App**.
 
 </ImageFrame>
 
-## JWT keypair
+## Public and private key pair
 
-JWT authentication works through a public/private RSA keypair.
-Once a Custom App is created leveraging JWT authentication, a keypair can
-be generated via the [Developer Console][devconsole] or you can generate your
-own and supply Box with the public key.
+Once a Custom App is created leveraging Server Authentication with JWT, a key
+pair can be generated via the configuration tab within the
+[Developer Console][devconsole]. Alternatively, you can generate your
+own and supply Box with the public key. Regardless of the method you select,
+your Box account will need to have [2FA][2fa] enabled for security purposes.
 
 ### Generate a keypair (Recommended)
 
@@ -108,8 +115,8 @@ private key, you will need to reset the entire keypair.
 
 ### Manually add keypair
 
-Alternatively, you may generate your own keypair and then upload the public key
-to the [Developer Console][devconsole].
+Alternatively, you may generate your own keypair and upload the public key to
+the [Developer Console][devconsole].
 
 To create a keypair using OpenSSL, open a terminal window and run the
 following commands.
@@ -127,7 +134,7 @@ Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 
 </Message>
 
-Then, navigate to the configuration tab for your application in the
+Then, navigate to the configuration tab for your application within the
 [Developer console][devconsole] and scroll down to the
 **Add and Manage Public Keys** section.
 
@@ -142,11 +149,11 @@ steps above and click **Verify and Save**.
 
 ## App Authorization
 
-Once a keypair is successfully added to your application your Box enterprise
-Admin needs to authorize the application within the Box Admin Console.
+Before the application can be used, a Box Admin needs to authorize the
+application within the Box Admin Console.
 
 Navigate to the **General Settings** tab for your application within the
-[developer console][devconsole] and scroll down to the **App Authorization**
+[Developer Console][devconsole] and scroll down to the **App Authorization**
 section.
 
 <ImageFrame border width="400" center>
@@ -161,14 +168,12 @@ approval. More information on this process is available in our
 
 ### Re-authorization after making configuration changes
 
-When the application's scopes or access level change the application needs to be
-re-authorized. Repeat the process above and request a new Access Token for the
-new changes to take effect.
+As a general rule of thumb, applications require re-authorization, in the Box
+Admin console, after making any configuration changes within the Developer
+Console. If this step is skipped, any generated Access Tokens will not reflect
+the configuration changes.
 
 ## Basic configuration
-
-Before the application can be used, some additional configuration is
-required.
 
 ### Application Access
 
@@ -222,3 +227,4 @@ section at the bottom of the **Configuration** tab in the
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt
+[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
