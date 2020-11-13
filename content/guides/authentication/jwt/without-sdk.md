@@ -26,12 +26,9 @@ To verify an application's identity, you can either use a:
 1. client ID and client secret
 
 Using your client ID and client secret is the easiest and fastest verification
-method for prototyping or scripting against your Enterprise. Using a
-keypair is a more complex process, but does provides the same functionality.
-
-Regardless of the verification method you select from above, at the end of this
-process you will have an Access Token that can be used to make API calls on
-behalf of the application. 
+method for prototyping or scripting against your Box enterprise. Regardless of
+the verification method you select from above, the end result is an Access Token
+that can be used to make API calls on behalf of the application. 
 
 To learn how to use this token visit our guide on [Making API
 calls](g://api-calls).
@@ -40,7 +37,7 @@ calls](g://api-calls).
   By default, the access token acquired with JWT is tied to the Service
   Account for the application. Any API call made with this token will come
   from the application. This account does not have access to any existing files
-  or folders until the App's Service Account is added as a collaborator.
+  or folders until the application's Service Account is added as a collaborator.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `as-user` header or by requesting a
@@ -48,15 +45,17 @@ using the `as-user` header or by requesting a
 
 </Message>
 
-## Using a keypair
+## Verification using a keypair
+
+Follow the steps below if you would like to verify your application's identity
+using a public/private keypair.
 
 ### Prerequisites
 
-- Create a JWT Custom Application within the [Developer Console][devconsole].
-- Create or download the private key configuration file for your application
-  and save it as `config.json`. You will need to have [2FA][2fa] enabled on your
-  Box account in order to complete this step. 
-- Ensure your Box Application is authorized within the Box Admin Console.
+1. A Custom Application using JWT authentication within the Box
+ [Developer Console][devconsole]
+1. A private key [configuration file][configfile] named `config.json`
+1. Ensure your application is authorized within the Box Admin Console
 
 ### 1. Read JSON configuration
 
@@ -805,34 +804,38 @@ $access_token = json_decode($data)->access_token;
   </Tab>
 </Tabs>
 
-## Using a client ID and client secret
+## Verification using a client ID and client secret
+
+Follow the steps below if you would like to verify your application's identity
+using a client ID and client secret.
 
 ### Prerequisites
 
-- Create a Custom Application using Client Credentials Grant authentication
- within the[Developer Console][devconsole]
-- [2FA][2fa] must be enabled on your Box account in order to view/copy your 
- client secret.
-- Ensure your Box Application is authorized within the Box Admin Console.
+1. A Custom Application using Client Credentials Grant authentication
+ within the Box [Developer Console][devconsole]
+1. 2FA enabled on your Box account in order to view/copy your client secret from
+the configuration tab
+1. Ensure your application is authorized within the Box Admin Console
 
 <Message notice>
 
-You must protect your client secret. Because this is how we securely identify 
-an application's rights and identity when obtaining an Access Token, you do not
-want to freely distribute a client secret. This includes email, public forums 
-and code repositories, distributed native applications, or client-side code. 
+Your client secret is confidential and needs to be protected. Because this is
+how we securely identify an application's identity when obtaining an
+Access Token, you do not want to freely distribute a client secret. This
+includes via email, public forums and code repositories, distributed native
+applications, or client-side code. 
 
 </Message>
 
-When making your API call to obtain an [Access Token][access token], your 
-request body will need to contain your client ID and client Secret. Set the
+When making your API call to obtain an [Access Token][accesstoken], your 
+request body needs to contain your client ID and client Secret. Set the
 `grant_type` to `client_credentials`.
 
-If you would like to authenticate as the App's [Service Account][sa], set
-`box_subject_type` to `enterprise` and `box_subject_id` to the enterprise ID.
+If you would like to authenticate as the application's [Service Account][sa]:
+set`box_subject_type` to `enterprise` and `box_subject_id` to the enterprise ID
 
-If you would like to authenticate as a Managed User, set 
-`box_subject_type` to `user` and `box_subject_id` to the user ID.
+If you would like to authenticate as a Managed User:
+set `box_subject_type` to `user` and `box_subject_id` to the user ID
 
 <Tabs>
   <Tab title='cURL'>
@@ -863,3 +866,4 @@ All of the code in this guide is available on [GitHub][samples].
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://authentication/user-types/app-users/#service-accounts
+[configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
