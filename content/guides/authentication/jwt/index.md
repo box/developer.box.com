@@ -14,7 +14,7 @@ alias_paths:
 
 # JWT Auth
 
-Server-side authentication using JWT is the most common way to
+Server-side authentication using JSON Web Tokens (JWT) is the most common way to
 authenticate to the Box API. JWT is an [open standard](https://jwt.io/)
 designed to allow powerful server-to-server authentication.
 
@@ -22,15 +22,18 @@ designed to allow powerful server-to-server authentication.
   ![The JWT flow](./jwt-flow.png)
 </ImageFrame>
 
-Server-side authentication using JSON Web Tokens (JWT) is only available to the
-Custom Application [app type][app-type]. This authentication method does not 
-require end-user interaction and therefore can be used to act on behalf of
-any user in an enterprise. 
+Server-side authentication using JWT is only available to the Custom Application
+[app type][app-type]. This authentication method does not require end-user
+interaction and, if granted the proper privileges, can be used
+to act on behalf of any user in an enterprise. 
 
 To verify an application's permissions, you can either use a: 
 
 1. public/private keypair
 1. client id and client secret
+
+To learn more about these options visit our guide on using
+[JWT without SDKs][jwtnosdk].
 
 Upon authorizing a JWT application in the Box Admin Console, a 
 [Service Account][user-types]is automatically generated and is the default token
@@ -48,10 +51,6 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-The easiest way to authenticate with JWT is by using your client id and client
-secret to verify an application's identity. This method is best if you are
-writing scrips for your Box enterprise and want to store data within the
-application's Box account instead of within a user's Box account. 
-
 [app-type]: g://applications/select/
 [user-types]: g://authentication/user-types
+[jwtnosdk]: g://authentication/jwt/without-sdk/
