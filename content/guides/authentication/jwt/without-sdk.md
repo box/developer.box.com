@@ -20,21 +20,21 @@ This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
 directly with the Box API. 
 
-To verify an application's identity, you can either use a: 
+There are two ways you can verify an application's permissions:
 
-1. public/private keypair
-1. client ID and client secret
+- using a public and private key pair
+- using a client id and client secret (Client Credentials Grant)
 
-Using your client ID and client secret is the easiest and fastest verification
+Using a Client Credentials Grant is the easiest and fastest verification
 method for prototyping or scripting against your Box enterprise. Regardless of
 the verification method you select from above, the end result is an Access Token
-that can be used to make API calls on behalf of the application. 
+which can be used to make API calls on behalf of the application. 
 
 To learn how to use this token visit our guide on [Making API
 calls](g://api-calls).
 
 <Message notice>
-  By default, the access token acquired with JWT is tied to the Service
+  By default, the Access Token acquired with JWT is tied to the Service
   Account for the application. Any API call made with this token will come
   from the application. This account does not have access to any existing files
   or folders until the application's Service Account is added as a collaborator.
@@ -45,17 +45,17 @@ using the `as-user` header or by requesting a
 
 </Message>
 
-## Verification using a keypair
+## Using a key pair
 
 Follow the steps below if you would like to verify your application's identity
-using a public/private keypair.
+using a public and private key pair.
 
 ### Prerequisites
 
-1. A Custom Application using JWT authentication within the Box
+- A Custom Application using JWT authentication within the Box
  [Developer Console][devconsole]
-1. A private key [configuration file][configfile] named `config.json`
-1. Ensure your application is authorized within the Box Admin Console
+- A private key [configuration file][configfile] named `config.json`
+- Ensure your application is authorized within the Box Admin Console
 
 ### 1. Read JSON configuration
 
@@ -804,18 +804,18 @@ $access_token = json_decode($data)->access_token;
   </Tab>
 </Tabs>
 
-## Verification using a client ID and client secret
+## Client credentials grant
 
 Follow the steps below if you would like to verify your application's identity
 using a client ID and client secret.
 
 ### Prerequisites
 
-1. A Custom Application using Client Credentials Grant authentication
+- A Custom Application using Client Credentials Grant authentication
  within the Box [Developer Console][devconsole]
-1. 2FA enabled on your Box account in order to view/copy your client secret from
+- 2FA enabled on your Box account in order to view/copy your client secret from
 the configuration tab
-1. Ensure your application is authorized within the Box Admin Console
+- Ensure your application is authorized within the Box Admin Console
 
 <Message notice>
 
@@ -832,10 +832,14 @@ request body needs to contain your client ID and client Secret. Set the
 `grant_type` to `client_credentials`.
 
 If you would like to authenticate as the application's [Service Account][sa]:
-set`box_subject_type` to `enterprise` and `box_subject_id` to the enterprise ID
+
+- set `box_subject_type` to `enterprise`
+- set `box_subject_id` to the enterprise ID
 
 If you would like to authenticate as a Managed User:
-set `box_subject_type` to `user` and `box_subject_id` to the user ID
+
+- set `box_subject_type` to `user` 
+- set `box_subject_id` to the user ID
 
 <Tabs>
   <Tab title='cURL'>
@@ -859,7 +863,7 @@ curl --location --request POST ‘https://api.box.com/oauth2/token’ \
 
 ## Code Samples
 
-All of the code in this guide is available on [GitHub][samples].
+The code in this guide is available on [GitHub][samples].
 
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
