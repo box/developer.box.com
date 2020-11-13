@@ -41,7 +41,7 @@ Select **Create New App**.
 Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
   ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
