@@ -41,16 +41,16 @@ Select **Create New App**.
 Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
   ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
 ### 3. Select the type of authentication and app name
 
 Select **Server Authentication (with JWT)** if you would like to verify 
-application identity via a key pair. Select 
+application identity with a key pair. Select 
 **Server Authentication (Client Credentials Grant)** if you would like to verify
-application identity via a client id and client secret. Then, provide a name
+application identity with your client id and client secret. Then, provide a name
 for your application and click **Create App**.
 
 Once you make a selection, you will not be able to change to a different 
