@@ -48,19 +48,26 @@ prompt a selection for the next step.
 ### 3. Select the type of authentication and app name
 
 Select **Server Authentication (with JWT)** if you would like to verify 
-application identity with a key pair. Select 
+application identity [with a key pair][kp]. Select 
 **Server Authentication (Client Credentials Grant)** if you would like to verify
-application identity with your client id and client secret. Then, provide a name
-for your application and click **Create App**.
+application identity [with your client id and client secret][ccg]. Then, provide
+a name for your application and click **Create App**.
 
+<Message warning>
 Once you make a selection, you will not be able to change to a different 
 authentication method without creating a new application.
+</Message>
 
 <ImageFrame border width="600" center>
-  ![App name form](../images/custom-app-selection-jwt.png)
+  ![App name form](../images/jwt-three-options.png)
 </ImageFrame>
 
 ## Public and private key pair
+
+<Message>
+  This section can be skipped if you selected Server Authentication
+  (Client Credentials Grant) as your authentication method.
+</Message>
 
 Once a Custom App is created leveraging Server Authentication with JWT, a key 
 pair can be generated via the configuration tab within the
@@ -195,3 +202,6 @@ section at the bottom of the **Configuration** tab in the
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+[kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
+[ccg]: g//authentication/jwt/without-sdk/#client-credentials-grant
+

@@ -17,17 +17,16 @@ The following is an overview of the different Box Application types you can
 create. 
 
 <ImageFrame border center>
-  ![Application Types](./images/app-types.png)
+  ![Application Types](./images/select-app-type.png)
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
 
-| Application Type              | Authentication Methods  |
-| ----------------------------- | ----------------------- |
-| [Custom App][custom-apps]     | [OAuth 2.0][oauth2]     |
-| [Custom App][custom-apps]     | [JWT][jwt]              |
-| Limited Access App            | [App token][apptoken]   |
-| [Custom Skill][custom-skills] | No authorization needed |
+| Application Type              | Authentication Methods            |
+| ----------------------------- | ----------------------------------|
+| [Custom App][custom-apps]     | [OAuth 2.0][oauth2] or [JWT][jwt] |
+| Limited Access App            | [App token][apptoken]             |
+| [Custom Skill][custom-skills] | No authorization needed           |
 
 <!-- markdownlint-enable line-length -->
 

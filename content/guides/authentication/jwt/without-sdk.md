@@ -22,8 +22,8 @@ directly with the Box API.
 
 There are two ways you can verify an application's permissions:
 
-- using a public and private key pair
-- using a client id and client secret (Client Credentials Grant)
+- using a [public and private key pair][keypair]
+- using a [client id and client secret][ccg] (Client Credentials Grant)
 
 Using a Client Credentials Grant is the easiest and fastest verification
 method for prototyping or scripting against your Box enterprise. Regardless of
@@ -871,3 +871,5 @@ The code in this guide is available on [GitHub][samples].
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://authentication/user-types/app-users/#service-accounts
 [configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
+[keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
+[ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
