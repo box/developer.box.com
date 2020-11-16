@@ -33,8 +33,11 @@ There are two ways you can verify an application's permissions:
 - using a client id and client secret (Client Credentials Grant)
 
 To learn more about these options visit our guide on using
-[JWT without SDKs][jwtnosdk]. At this time, our SDKs do not support the Client 
-Credential Grant.
+[JWT without SDKs][jwtnosdk]. 
+
+<Message warning>
+ At this time, our SDKs do not support the Client Credential Grant.
+</Message>
 
 Upon authorizing a JWT application in the Box Admin Console, a 
 [Service Account][user-types] is automatically generated and is the default
