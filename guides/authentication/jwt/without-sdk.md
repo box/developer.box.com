@@ -856,8 +856,8 @@ using a client ID and client secret.
 
 - A Custom Application using Client Credentials Grant authentication
  within the Box [Developer Console][devconsole]
-- 2FA enabled on your Box account in order to view/copy your client secret from
-the configuration tab
+- [2FA][2fa] enabled on your Box account in order to view/copy your client
+ secret from the configuration tab
 - Ensure your application is authorized within the Box Admin Console
 
 <Message notice>

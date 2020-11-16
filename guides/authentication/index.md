@@ -29,7 +29,7 @@ console.
 | Box Application Type         | Authorization methods                                     |
 | ---------------------------- | --------------------------------------------------------- |
 | [Custom App][custom-app]     | [OAuth 2.0][oauth2] or [JWT][jwt]                         |
-| [Limited Access App]         | [App token][apptoken]                                     |
+|  Limited Access App          | [App token][apptoken]                                     |
 | [Custom Skill][custom-skill] | No authorization needed                                   |
 
 <!-- markdownlint-enable line-length -->
