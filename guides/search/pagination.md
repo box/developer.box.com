@@ -19,7 +19,7 @@ source_url: >-
 # Pagination
 
 The search API supports offset-based pagination using the `offset` and `limit`
-query parameters.
+query parameters. Marker-based pagination is not supported.
 
 ## API Pagination
 
