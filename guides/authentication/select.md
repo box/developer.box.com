@@ -77,10 +77,14 @@ Learn about client-side authentication with OAuth 2.0
 
 ### Server-side JWT
 
-Server-side authentication using JSON Web Tokens (JWT) does not involve a
-user in the authorization flow and therefore can be used to act on behalf of any
-user in an enterprise. JWT uses a public/private key pair verify the
-application's permissions.
+This authentication method does not require end-user
+interaction and, if granted the proper privileges, can be used
+to act on behalf of any user in an enterprise.
+
+Server-side authentication using JSON Web Tokens (JWT) does not require end-user
+interaction and, if granted the proper privileges, can be used to act on behalf
+of any user in an enterprise. You can use a public and private key pair or your
+client ID and client secret to verify the application's permissions.
 
 <ImageFrame center shadow border>
 

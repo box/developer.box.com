@@ -29,7 +29,7 @@ console.
 | Box Application Type         | Authorization methods                                     |
 | ---------------------------- | --------------------------------------------------------- |
 | [Custom App][custom-app]     | [OAuth 2.0][oauth2] or [JWT][jwt]                         |
-| [Limited Access App]         | [App token][apptoken]                                     |
+| [Limited Access App][la]     | [App token][apptoken]                                     |
 | [Custom Skill][custom-skill] | No authorization needed                                   |
 
 <!-- markdownlint-enable line-length -->
@@ -64,3 +64,4 @@ short-lived [Developer Token][devtoken].
 [devtoken]: guide://authentication/access-tokens/developer-tokens
 [custom-app]: guide://applications/custom-apps
 [custom-skill]: guide://applications/custom-skills
+[la]: g://applications/select/#limited-access-app

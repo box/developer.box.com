@@ -37,14 +37,16 @@ Token.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type               | How to get Access Token                          |
-| ---------------------------------- | ------------------------------------------------ |
-| Custom App + OAuth 2.0             | [Explicit user grant][oauth2-with-sdk]           |
-| Custom App + JWT                   | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Limited Access App + App Token     | Configure token in [Developer Console][devcon]           |
-| Custom Skill                       | Access Token in event payload                    |
+| Box Application Type                  | How to get Access Token                          |
+| ------------------------------------- | ------------------------------------------------ |
+| Custom App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
+| Custom App + JWT                      | [Exchange a JWT assertion][jwt-with-sdk]         |
+| Custom App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
+| Limited Access App + App Token        | Configure token in [Developer Console][devcon]   |
+| Custom Skill                          | Access Token in event payload                    |
 <!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/jwt/with-sdk
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
 [devcon]: https://app.box.com/developers/console
+[clientcred]: g://authentication/jwt/without-sdk/#client-credentials-grant

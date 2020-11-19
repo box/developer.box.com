@@ -25,7 +25,7 @@ source_url: >-
 ---
 # JWT Auth
 
-Server-side authentication using JWT one of the most powerful ways to
+Server-side authentication using JSON Web Tokens (JWT) is the most common way to
 authenticate to the Box API. JWT is an [open standard](https://jwt.io/)
 designed to allow powerful server-to-server authentication.
 
@@ -35,24 +35,29 @@ designed to allow powerful server-to-server authentication.
 
 </ImageFrame>
 
-Server-side authentication using JSON Web Tokens (JWT) is only available to
-Custom Apps and Enterprise Integrations. It does not involve a user into the
-authorization flow and as such can be used to act on behalf of any user in an
-enterprise. JWT uses a public/private key pair verify the application's
-permissions.
+Server-side authentication using JWT is only available to the Custom Application
+[app type][app-type]. This authentication method does not require end-user
+interaction and, if granted the proper privileges, can be used
+to act on behalf of any user in an enterprise.
 
-## JWT Restrictions
+There are two ways you can verify an application's permissions:
 
-Server-side authentication using JWT works by creating a claim on the
-application's server and then signing this using the application's secret key.
-In most cases, the claim is that the server is allowed to act on
-behalf of the Box application.
+- using a public and private key pair
+- using a client id and client secret (Client Credentials Grant)
 
-For this reason every application that uses JWT has an associated [Service
-Account](g://authentication/user-types) that is the default user that it
-authenticates as. This user is an admin-like user and for this
-reason JWT applications require an actual Box admin's approval before they can
-be used.
+To learn more about these options visit our guide on using
+[JWT without SDKs][jwtnosdk]. 
+
+<Message warning>
+
+At this time, our SDKs do not support the Client Credential Grant.
+
+</Message>
+
+Upon authorizing a JWT application in the Box Admin Console, a
+[Service Account][user-types] is automatically generated and is the default
+Access Token used when authenticating. This is an admin-like user and why
+applications leveraging JWT require explicit Box Admin approval before use.
 
 ## When to use JWT
 
@@ -63,4 +68,8 @@ that:
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
 - Want to store data within the application's Box account and not within the the
-user's Box account
+  user's Box account
+
+[app-type]: g://applications/select/
+[user-types]: g://authentication/user-types
+[jwtnosdk]: g://authentication/jwt/without-sdk/
