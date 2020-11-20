@@ -17,17 +17,11 @@ console.
 
 | Box Application Type         | Authorization methods                                     |
 | ---------------------------- | --------------------------------------------------------- |
-| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [App token][apptoken] |
+| [Custom App][custom-app]     | [OAuth 2.0][oauth2] or [JWT][jwt]                         |
+| [Limited Access App][la]     | [App token][apptoken]                                     |
 | [Custom Skill][custom-skill] | No authorization needed                                   |
-| Enterprise Integration       | [OAuth 2.0][oauth2], [JWT][jwt]                           |
-| Partner Integration          | [App token][apptoken]                                     |
 
 <!-- markdownlint-enable line-length -->
-
-<Message warning>
-  Enterprise and Partner Integrations exist for legacy purposes. Please use
-  Custom Apps instead and use the relevant authentication method where needed.
-</Message>
 
 <CTA to="guide://authentication/select">
   Learn how to select an authorization type
@@ -57,3 +51,4 @@ short-lived [Developer Token][devtoken].
 [devtoken]: guide://authentication/access-tokens/developer-tokens
 [custom-app]: guide://applications/custom-apps
 [custom-skill]: guide://applications/custom-skills
+[la]: g://applications/select/#limited-access-app

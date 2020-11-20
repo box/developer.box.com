@@ -87,8 +87,8 @@ the item.
 | **Application Scope** | Read and write all files and folders stored in Box |
 
 Gives an application write access for the authenticated user. This allows the
-application to upload files, new versions of files, create new folders, create,
-edit, and delete collaborations, create comments, tasks, collection, and more.
+application to upload files or new file versions, download content, create new
+folders, update or delete collaborations, create comments or tasks, and more.
 
 Although this gives an application read/write access to items, the
 user making the API call does need to have access to the items being accessed.

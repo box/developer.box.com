@@ -10,10 +10,9 @@ alias_paths:
 
 # Custom Apps
 
-By far the more flexible way to use Box Platform is through a **Custom App**
-integration.
+Custom Apps encompass most use cases and is the most flexible application type.
 
-Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and [App Token][app-token]
+Custom Apps support [OAuth 2.0][oauth2] and [JWT][jwt]
 authentication. They allow the application to manipulate files and folders, as
 well as interact with tasks, legal holds, and other enterprise-level properties.
 
@@ -48,7 +47,7 @@ overview of the key differences.
 
 A Custom App is best used when the application:
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt], or [App Token][app-token] authentication
+- Wants to use [OAuth 2.0][oauth2] or [JWT][jwt] authentication
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
   other users, even external users.
@@ -57,4 +56,3 @@ A Custom App is best used when the application:
 
 [oauth2]: guide://authentication/oauth2
 [jwt]: guide://authentication/jwt
-[app-token]: guide://authentication/app-token
