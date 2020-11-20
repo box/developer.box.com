@@ -448,5 +448,60 @@
   // The title of the developer changelog section
   "changelog.title": "Developer Changelog",
   // A message that is shown when we can notfind any entries for a search
-  "changelog.messages.no_entries": "It seems we don't have any entries for this selection."
+  "changelog.messages.no_entries": "It seems we don't have any entries for this selection.",
+  // Title of the create-app modal
+  "app_button.title": "Create an app",
+  // Label of the close buttton
+  "app_button.buttons.close": "close",
+  // The label for the field that holds the client ID
+  "app_button.credentials.client_id": "Client ID",
+  // The label for the field that holds the client secret
+  "app_button.credentials.client_secret": "Client Secret",
+  // The description at the top of the app log in screen.
+  "app_button.logged_out.description": "Let us take care of the hard parts for you. Before we can\ncreate an app for you we will need you to log in.",
+  // The description at the top of the app creation screen.
+  "app_button.logged_in.description": "Let us take care of the hard parts for you. We can set up an app for you\nwith a few clicks.",
+  // Text used to show that no value was set
+  "app_button.logged_in.values.none": "None",
+  // Text used to show that something is allowed
+  "app_button.logged_in.values.allowed": "Allowed",
+  // Text used to show that something is not allowed
+  "app_button.logged_in.values.not_allowed": "Not allowed",
+  // Log out button label
+  "app_button.logged_in.buttons.logout": "Logout",
+  // Create app button label
+  "app_button.logged_in.buttons.create_app": "Create app",
+  // Label for the application type
+  "app_button.logged_in.labels.application": "Application",
+  // Label for the name of an app
+  "app_button.logged_in.labels.name": "Name",
+  // Label for the scopes of an app
+  "app_button.logged_in.labels.scopes": "Scopes",
+  // Label for the can_act_as_user setting
+  "app_button.logged_in.labels.can_act_as_user": "Can act as a user",
+  // Label for the redirect URL
+  "app_button.logged_in.labels.redirect_url": "Redirect URL",
+  // Label for the CORS Origins
+  "app_button.logged_in.labels.cors_origins": "CORS Origins",
+  // Describes a standard OAuth 2.0 app
+  "app_button.logged_in.app_types.auth_code_grant": "User Authentication (OAuth 2.0)",
+  // Describes a standard JWT app
+  "app_button.logged_in.app_types.jwt_grant": "Server Authentication (with JWT)",
+  // Describes a limited access app
+  "app_button.logged_in.app_types.app_token_auth": "App Token Authentication",
+  // Label for the root_readonly scope
+  "app_button.logged_in.scopes.root_readonly": "Read all files and folders",
+  // Label for the root_readwrite scope
+  "app_button.logged_in.scopes.root_readwrite": "Read and write all files and folders",
+  // Label for the manage_managed_users scope
+  "app_button.logged_in.scopes.manage_managed_users": "Manage users",
+  // Label for the manage_app_users scope
+  "app_button.logged_in.scopes.manage_app_users": "Manage app users",
+  // Label for the manage_groups scope
+  "app_button.logged_in.scopes.manage_groups": "Manage groups",
+  "app_button.logged_in.scopes.manage_webhook": "Manage webhooks",
+  // Label for the manage_enterprise_properties scope
+  "app_button.logged_in.scopes.manage_enterprise_properties": "Manage enterprise properties",
+  // Label for the manage_retention_policies scope
+  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies"
 }
