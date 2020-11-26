@@ -23,8 +23,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/common-errors.md
 ---
-<!-- alex disable failed -->
-
 # Common Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
@@ -293,15 +291,15 @@ for solution to common errors encountered when working with the Box APIs.
 
 <!-- markdownlint-disable line-length -->
 
-|              |                                                                                                                                                                                                                                                                                                                                                |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Error**    | `session_expired`                                                                                                                                                                                                                                                                                                                              |
-| **Message**  |                                                                                                                                                                                                                                                                                                                                                |
-| **Solution** | The upload session associated with the given upload session ID has expired and can no longer be accessed.                                                                                                                                                                                                                                      |
-|              |                                                                                                                                                                                                                                                                                                                                                |
-| **Error**    | `upload_failed`                                                                                                                                                                                                                                                                                                                                |
-| **Message**  |                                                                                                                                                                                                                                                                                                                                                |
-| **Solution** | The upload session is in an unrecoverable failed state and cannot continue. This or other requests have resulted in the upload session reaching a bad state (for example parts overlapping). Possible situations where this may arise include when the maximum number of parts has been exceeded or when overlapping parts have been uploaded. |
+|              |                                                                                                                                                                                                                                                                                                                                         |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Error**    | `session_expired`                                                                                                                                                                                                                                                                                                                       |
+| **Message**  |                                                                                                                                                                                                                                                                                                                                         |
+| **Solution** | The upload session associated with the given upload session ID has expired and can no longer be accessed.                                                                                                                                                                                                                               |
+|              |                                                                                                                                                                                                                                                                                                                                         |
+| **Error**    | `upload_failed`                                                                                                                                                                                                                                                                                                                         |
+| **Message**  |                                                                                                                                                                                                                                                                                                                                         |
+| **Solution** | The upload session is in an unrecoverable state and cannot continue. This or other requests have resulted in the upload session reaching a bad state (for example parts overlapping). Possible situations where this may arise include when the maximum number of parts has been exceeded or when overlapping parts have been uploaded. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -316,6 +314,8 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | Supply a content-length header within your API request. |
 
 <!-- markdownlint-enable line-length -->
+
+<!--alex ignore failed-->
 
 ### 412 Precondition Failed
 

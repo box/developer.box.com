@@ -20,8 +20,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/terms-of-service/flow.md
 ---
-<!-- alex disable reject -->
-
 # Application Flow
 
 In general, applications use Terms of Services as follows.

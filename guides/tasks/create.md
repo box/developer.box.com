@@ -19,8 +19,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tasks/1-create.md
 ---
-<!-- alex disable reject -->
-
 # Create a task
 
 To create a task, you will need to provide the [`POST /tasks`][post_tasks] API
@@ -40,7 +38,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 

@@ -18,8 +18,6 @@ previous_page_id: tooling/postman
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/make-api-call.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Make an API call
 
 With the **Box Postman Collection** loaded into the **Postman App** it is

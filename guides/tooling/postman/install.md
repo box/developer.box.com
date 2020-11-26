@@ -18,8 +18,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/install.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Install Postman & Collection
 
 To use the **Box Postman Collection** you will need to have

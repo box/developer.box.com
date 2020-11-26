@@ -22,9 +22,9 @@ previous_page_id: webhooks/handle/setup-signatures
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/handle/verify-signatures.md
 ---
-<!-- alex disable attacks -->
-
 # Verify Webhook Signatures
+
+<!--alex ignore attacks-->
 
 To protect your application against man-in-the-middle and replay attacks it is
 essential to verify webhook signatures. Verification ensures that the webhook

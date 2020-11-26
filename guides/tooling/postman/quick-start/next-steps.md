@@ -14,8 +14,6 @@ previous_page_id: tooling/postman/quick-start/make-api-call
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/6-next-steps.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Next steps
 
 You've reached the end of this Quick Start guide. By now you should have taken

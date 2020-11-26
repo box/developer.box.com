@@ -22,8 +22,6 @@ previous_page_id: embed/ui-elements/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/viewers-and-events.md
 ---
-<!-- alex disable black -->
-
 # Preview - Viewers & Events
 
 <!-- markdownlint-disable no-duplicate-header -->
@@ -254,6 +252,8 @@ The presentation viewer triggers the following events.
 The MP4 viewer renders previews for video files.
 
 ### Behavior
+
+<!--alex ignore black-->
 
 The MP4 viewer uses a black background to create a better viewing experience.
 Volume can be muted or unmuted by clicking the volume icon, or changed by
@@ -848,6 +848,8 @@ The `<iframe>` viewer triggers the following events.
 The DASH viewer renders previews for video files using [`Shaka Player`][shaka].
 
 ### Behavior
+
+<!-- alex ignore black -->
 
 The DASH viewer uses a black background to create a more native viewing
 experience. Video is streamed in chunks of bytes at an initial quality

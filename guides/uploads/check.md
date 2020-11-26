@@ -25,8 +25,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/check.md
 ---
-<!-- alex disable failed -->
-
 # Preflight Check
 
 The Pre-flight check API allows an application to verify that a file will be
@@ -75,6 +73,8 @@ preflight check.
 When the API call detects any problems, a HTTP `409 Conflict` status code is
 returned with a message to describe the possible conflict. If no problems were
 discovered, it returns a HTTP `200 OK` status code and the upload can proceed.
+
+<!--alex ignore failed-->
 
 A `200 OK` response does not guarantee that the upload call will actually
 succeed. Pre-flight checks have show to reduce failed uploads by over 99%, yet

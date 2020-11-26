@@ -16,8 +16,6 @@ previous_page_id: tooling/postman/quick-start/install-postman
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/2-configure-box-app.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Configure a Box App
 
 To use the **Postman Collection** the Postman application needs to authenticate
