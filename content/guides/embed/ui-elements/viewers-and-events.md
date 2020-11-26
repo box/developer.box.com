@@ -11,8 +11,6 @@ alias_paths:
   - /docs/file-types-events
 ---
 
-<!-- alex disable black -->
-
 # Preview - Viewers & Events
 
 <!-- markdownlint-disable no-duplicate-header -->
@@ -244,6 +242,7 @@ The MP4 viewer renders previews for video files.
 
 ### Behavior
 
+<!--alex ignore black-->
 The MP4 viewer uses a black background to create a better viewing experience.
 Volume can be muted or unmuted by clicking the volume icon, or changed by
 dragging the volume scrubber. The position of the video can be changed by
@@ -838,6 +837,7 @@ The DASH viewer renders previews for video files using [`Shaka Player`][shaka].
 
 ### Behavior
 
+<!-- alex ignore black -->
 The DASH viewer uses a black background to create a more native viewing
 experience. Video is streamed in chunks of bytes at an initial quality
 determined automatically. Volume can be muted or unmuted by clicking the volume

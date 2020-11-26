@@ -7,8 +7,6 @@ related_resources: []
 alias_paths: []
 ---
 
-<!-- alex disable postman-postwoman -->
-
 # Install Postman & Collection
 
 To use the **Box Postman Collection** you will need to have
@@ -19,25 +17,25 @@ Postman is available for Windows, Mac, and Linux environments.
   <Download>
     ![Windows Logo](./quick-start/windows.png) Windows (x32)
 
-    [Download](https://dl.pstmn.io/download/latest/win32) 
+    [Download](https://dl.pstmn.io/download/latest/win32)
   </Download>
 
   <Download>
     ![Windows Logo](./quick-start/windows.png) Windows (x64)
 
-    [Download](https://dl.pstmn.io/download/latest/win64) 
+    [Download](https://dl.pstmn.io/download/latest/win64)
   </Download>
 
   <Download>
     ![MacOS Logo](./quick-start/macos.png) MacOS
 
-    [Download](https://dl.pstmn.io/download/latest/macos) 
+    [Download](https://dl.pstmn.io/download/latest/macos)
   </Download>
 
   <Download>
     ![Linux Logo](./quick-start/linux.png) Linux (x64)
 
-    [Download](https://dl.pstmn.io/download/latest/linux64) 
+    [Download](https://dl.pstmn.io/download/latest/linux64)
   </Download>
 </Grid>
 

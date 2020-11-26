@@ -3,8 +3,6 @@ rank: 1
 alias_paths: []
 ---
 
-<!-- alex disable reject -->
-
 # Terms of Service
 
 The Box API allows administrators to configure Terms of Services for working on

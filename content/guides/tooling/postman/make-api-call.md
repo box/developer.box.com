@@ -6,8 +6,6 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
-<!-- alex disable postman-postwoman -->
-
 # Make an API call
 
 With the **Box Postman Collection** loaded into the **Postman App** it is

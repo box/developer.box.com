@@ -5,8 +5,6 @@ related_guides:
   - applications/custom-apps
 ---
 
-<!-- alex disable postman-postwoman -->
-
 # Configure a Box App
 
 To use the **Postman Collection** the Postman application needs to authenticate

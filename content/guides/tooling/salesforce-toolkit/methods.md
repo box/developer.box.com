@@ -1,14 +1,12 @@
 ---
 rank: 1
 related_endpoints: []
-related_guides: 
+related_guides:
   - tooling/sdks/salesforce
 required_guides: []
 related_resources: []
 alias_paths: []
 ---
-
-<!-- alex disable failed -->
 
 # Methods and Operations
 
@@ -23,9 +21,9 @@ Class Name: `box.Toolkit`
 String to indicate the most recent error that occurred when calling instance
 methods.
 
-The presence of this string does not mean the operation failed. It is possible
-the error was recoverable; however, the lack of a value in this string does
-indicate the operation was successful.
+The presence of this string does not mean the operation did not succeed. It is
+possible the error was recoverable; however, the lack of a value in this string
+does indicate the operation was successful.
 
 ### `Enum CollaborationType`
 
@@ -56,9 +54,9 @@ because it didn't exist).
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `userId` | id | The Id of the user whose credentials are to be cleared. |
+| Parameter | Type | Description                                             |
+| --------- | ---- | ------------------------------------------------------- |
+| `userId`  | id   | The Id of the user whose credentials are to be cleared. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -112,8 +110,8 @@ allowing you to focus on the business logic of your integration.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter | Type                          | Description                                           |
+| --------- | ----------------------------- | ----------------------------------------------------- |
 | `request` | [HttpRequest][sf-httprequest] | An HttpRequest object with a set endpoint and method. |
 
 <!-- markdownlint-enable line-length -->
@@ -141,12 +139,12 @@ Service Account. In this case, check `mostRecentError`.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `att` | `Attachment` | The attachment to be converted into a File in Box. |
-| `fileNameOverride` | `string` | Optional - Name of the new file. If no value is passed in, the name of the attachment is used. |
-| `folderIdOverride` | `string` | Optional - Box folder id to place this attachment in. If no value is passed in, the file will be placed in the folder associated with the record that is the `parentId` of the attachment. If the record-specific folder doesn't exist, it will be created. |
-| `accessToken` | `string` | Optional - if `accessToken` is sent, that value is used for the Box API call. Otherwise, the default account credentials are used. |
+| Parameter          | Type         | Description                                                                                                                                                                                                                                                 |
+| ------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `att`              | `Attachment` | The attachment to be converted into a File in Box.                                                                                                                                                                                                          |
+| `fileNameOverride` | `string`     | Optional - Name of the new file. If no value is passed in, the name of the attachment is used.                                                                                                                                                              |
+| `folderIdOverride` | `string`     | Optional - Box folder id to place this attachment in. If no value is passed in, the file will be placed in the folder associated with the record that is the `parentId` of the attachment. If the record-specific folder doesn't exist, it will be created. |
+| `accessToken`      | `string`     | Optional - if `accessToken` is sent, that value is used for the Box API call. Otherwise, the default account credentials are used.                                                                                                                          |
 
 <!-- markdownlint-enable line-length -->
 
@@ -159,8 +157,8 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type | Description                                                |
+| ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
 
 <!-- markdownlint-enable line-length -->
@@ -186,8 +184,8 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type | Description                                                |
+| ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
 
 <!-- markdownlint-enable line-length -->
@@ -206,9 +204,9 @@ log the user in if seamless login is enabled.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+| Parameter         | Type      | Description                                                                 |
+| ----------------- | --------- | --------------------------------------------------------------------------- |
+| `recordId`        | `id`      | Salesforce record id whose root folder id you want to get.                  |
 | `isMobileContext` | `boolean` | Boolean to indicate whether the URL should be mobile (true) or not (false). |
 
 <!-- markdownlint-enable line-length -->
@@ -223,8 +221,8 @@ embedded in any Visualforce page.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type | Description                                                |
+| ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
 
 <!-- markdownlint-enable line-length -->
@@ -239,11 +237,11 @@ of the root folder that already existed.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderName` | `string` | Name of the folder to be created. Folder names are subject to some restrictions. [See here for more details.](endpoint://post_folders) |
-| `parentFolderId` | `string` | Parent Box folder this folder will be created in. |
-| `accessToken` | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call,; otherwise, the default service account credentials are used. |
+| Parameter        | Type     | Description                                                                                                                                 |
+| ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderName`     | `string` | Name of the folder to be created. Folder names are subject to some restrictions. [See here for more details.](endpoint://post_folders)      |
+| `parentFolderId` | `string` | Parent Box folder this folder will be created in.                                                                                           |
+| `accessToken`    | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call,; otherwise, the default service account credentials are used. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -257,10 +255,10 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record id that a Box folder will be created for. |
-| `folderNameOverride` | `string` | By default, the record's name will be the folder name. If you want to name it something else, send that value here. |
+| Parameter             | Type      | Description                                                                                                                                                |
+| --------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `recordId`            | `id`      | Salesforce record id that a Box folder will be created for.                                                                                                |
+| `folderNameOverride`  | `string`  | By default, the record's name will be the folder name. If you want to name it something else, send that value here.                                        |
 | `optCreateRootFolder` | `boolean` | Boolean to indicate whether to create the object root folder if it doesn't exist. If false is sent and the root folder does not exist, the call will fail. |
 
 <!-- markdownlint-enable line-length -->
@@ -277,11 +275,11 @@ existing Box folder id is returned.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderId` | `string` | Box folder Id of the folder to be moved. |
-| `newParentFolderId` | `string` | Box folder Id of the folder that will be the new parent folder. |
-| `accessToken` | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call. Otherwise, the default service account credentials are used. |
+| Parameter           | Type     | Description                                                                                                                                |
+| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `folderId`          | `string` | Box folder Id of the folder to be moved.                                                                                                   |
+| `newParentFolderId` | `string` | Box folder Id of the folder that will be the new parent folder.                                                                            |
+| `accessToken`       | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call. Otherwise, the default service account credentials are used. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -296,8 +294,8 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type | Description                                                                   |
+| ---------- | ---- | ----------------------------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id that the folder mapping entries returned are related to. |
 
 <!-- markdownlint-enable line-length -->
@@ -313,8 +311,8 @@ under some circumstances, it could be `null`.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type | Description                                           |
+| ---------- | ---- | ----------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose folder id you wish to get. |
 
 <!-- markdownlint-enable line-length -->
@@ -328,8 +326,8 @@ id passed in.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
+| Parameter  | Type     | Description    |
+| ---------- | -------- | -------------- |
 | `folderId` | `string` | Box folder id. |
 
 <!-- markdownlint-enable line-length -->
@@ -343,10 +341,10 @@ passed in.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `recordId` | `id` | Salesforce record Id that is being associated with a box folder. |
-| `folderId` | `string` | Box folder Id being associated with a Salesforce record. |
+| Parameter  | Type     | Description                                                      |
+| ---------- | -------- | ---------------------------------------------------------------- |
+| `recordId` | `id`     | Salesforce record Id that is being associated with a box folder. |
+| `folderId` | `string` | Box folder Id being associated with a Salesforce record.         |
 
 <!-- markdownlint-enable line-length -->
 
@@ -370,13 +368,13 @@ with multiple records or vice versa.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `folderId` | `string` | Box folder id to create a collaboration on. |
-| `boxUserId` | `string` | Box user id to be collaborated (either `boxUserId` or `emailAddress` is required but not both). |
-| `emailAddress` | `box.Toolkit.CollaborationType` | Email address of the box user to be. |
-| `collabType` | `string` | Type of collaboration (see the `CollaborationType` enum definition). |
-| `accessToken` | `string` | Optional - If sent, this value is used for authentication for the box API call; if `null`, the service account credentials are used. |
+| Parameter      | Type                            | Description                                                                                                                          |
+| -------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `folderId`     | `string`                        | Box folder id to create a collaboration on.                                                                                          |
+| `boxUserId`    | `string`                        | Box user id to be collaborated (either `boxUserId` or `emailAddress` is required but not both).                                      |
+| `emailAddress` | `box.Toolkit.CollaborationType` | Email address of the box user to be.                                                                                                 |
+| `collabType`   | `string`                        | Type of collaboration (see the `CollaborationType` enum definition).                                                                 |
+| `accessToken`  | `string`                        | Optional - If sent, this value is used for authentication for the box API call; if `null`, the service account credentials are used. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -389,12 +387,12 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `userId` | `id` | Salesforce user id to be collaborated. |
-| `recordId` | `id` | Salesforce record id of the record folder to be collaborated on. |
-| `collabType` | `box.Toolkit.CollaborationType` | Type of collaboration (see the `CollaborationType` enum definition). |
-| `optCreateFolder` | `boolean` | Boolean to indicate whether to create the Box folder associated for the Salesforce record id if it does not already exist. This also creates the root folder if it did not already exist. If set to `false` and the folder does not already exist, the call will fail. |
+| Parameter         | Type                            | Description                                                                                                                                                                                                                                                            |
+| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `userId`          | `id`                            | Salesforce user id to be collaborated.                                                                                                                                                                                                                                 |
+| `recordId`        | `id`                            | Salesforce record id of the record folder to be collaborated on.                                                                                                                                                                                                       |
+| `collabType`      | `box.Toolkit.CollaborationType` | Type of collaboration (see the `CollaborationType` enum definition).                                                                                                                                                                                                   |
+| `optCreateFolder` | `boolean`                       | Boolean to indicate whether to create the Box folder associated for the Salesforce record id if it does not already exist. This also creates the root folder if it did not already exist. If set to `false` and the folder does not already exist, the call will fail. |
 
 <!-- markdownlint-enable line-length -->
 
