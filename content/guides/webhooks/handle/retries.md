@@ -7,14 +7,14 @@ required_guides: []
 alias_paths: []
 ---
 
-<!-- alex disable failed -->
-
 # Webhook Retries
 
+<!--alex ignore failed-->
 Delivery of a webhook payload has failed when Box does not receive a
 response with a HTTP status code in the `200` to `299` range within 30 seconds
 of sending the payload.
 
+<!--alex ignore failure-->
 When delivery of a webhook fails Box will resend it up to 10 times. The
 initial retry will take place 5 minutes after the failure and from there an
 exponential back-off strategy will be used to avoid overloading the destination

@@ -4,16 +4,14 @@ hide_step_number: true
 hide_in_page_nav: true
 icon: FiCpu
 ---
-
-<!-- alex disable postman-postwoman -->
-
 # Use Postman to make API calls
 
 [Postman](https://getpostman.com) is a tool that lets you build and test HTTP
 requests in an easy-to-use
 interface without configuring a full development environment. The Box Postman
-Collection is a set of preconfigured requests that make it easy to get started
-with the Box API from Postman.
+Collection is a set of preconfigured requests that make it possible to get
+started with the Box API from Postman without having to manually configure the
+requests.
 
 <YouTube id='enUvXHt9qGU' />
 
