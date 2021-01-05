@@ -32,8 +32,8 @@ These rate limits are designed to protect the quality of service of our
 infrastructure. If there is resource contention in the infrastructure, we
 introduce automatic rate limits to prevent system degradation and outages.
 For instance, if an application happens to be accessing the same physical
-database server (e.g. the use of a file migration tool accessing related
-resources that access the same underlying physical resources), Box may impose
+database server, such as the use of a file migration tool accessing related
+resources that access the same underlying physical resources, Box may impose
 temporary rate-limits when load spikes and adjust them as the system recovers.
 
 ## Licensing based
