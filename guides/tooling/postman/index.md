@@ -20,14 +20,13 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/index.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Postman Collection
 
 [Postman][postman] is a tool that lets you build and test HTTP requests in an
 easy-to-use interface without configuring a full development environment. The
-**Box Postman Collection** is a set of preconfigured requests that make it easy to
-get started with the Box API.
+**Box Postman Collection** is a set of preconfigured requests that make it
+possible to get started with the Box API without having to manually configure
+the requests.
 
 The simplest way to get started with Postman is with our Postman Quick Start guide.
 

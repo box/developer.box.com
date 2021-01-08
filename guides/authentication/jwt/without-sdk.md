@@ -12,6 +12,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
+  - /guides/authentication/client-credentials
 category_id: authentication
 subcategory_id: authentication/jwt
 is_index: false

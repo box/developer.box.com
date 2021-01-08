@@ -16,8 +16,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/1-indexing.md
 ---
-<!-- alex disable chinese -->
-
 # Search indexing
 
 Box keeps a search index for any files or folders stored in Box.
@@ -122,6 +120,8 @@ search results of outdated documents. You cannot use search to query
 non-current versions of a document.
 
 ## Language Support
+
+<!--alex ignore chinese-->
 
 Box search supports the following languages: Chinese,
 English, French, German, Italian, Japanese, and Spanish. Box does not support

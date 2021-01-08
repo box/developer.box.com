@@ -14,8 +14,6 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/terms-of-service/index.md
 ---
-<!-- alex disable reject -->
-
 # Terms of Service
 
 The Box API allows administrators to configure Terms of Services for working on

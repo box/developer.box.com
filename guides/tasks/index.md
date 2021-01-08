@@ -19,8 +19,6 @@ previous_page_id: tasks/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tasks/index.md
 ---
-<!-- alex disable reject -->
-
 # Tasks
 
 Tasks allow users to request collaborators on a file to review a file or
@@ -43,7 +41,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 

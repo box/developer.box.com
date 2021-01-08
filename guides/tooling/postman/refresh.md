@@ -18,8 +18,6 @@ previous_page_id: tooling/postman/make-api-call
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/refresh.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Refresh an Access Token
 
 To authenticate to the Box API the Postman collection will use an **Access

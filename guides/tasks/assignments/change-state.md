@@ -18,8 +18,6 @@ previous_page_id: tasks/assignments/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tasks/assignments/6-change-state.md
 ---
-<!-- alex disable reject -->
-
 # Change task assignment state
 
 To update a task assignment's state call the
@@ -40,7 +38,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 

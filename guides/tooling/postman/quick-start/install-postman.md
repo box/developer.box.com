@@ -14,8 +14,6 @@ previous_page_id: tooling/postman/quick-start
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/1-install-postman.md
 ---
-<!-- alex disable postman-postwoman -->
-
 # Install Postman
 
 To use the **Box Postman Collection** you will need to have the
@@ -86,7 +84,7 @@ Next, install Postman on your machine and (optionally)
 ## Summary
 
 * You installed Postman
-* You created a Postman account (optional) 
+* You created a Postman account (optional)
 * You logged into the Postman application with your Postman account
 
 <Observe option='postman.downloaded' value='win32,win64,osx,linux64'>
