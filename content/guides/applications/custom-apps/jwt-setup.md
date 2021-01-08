@@ -45,7 +45,7 @@ prompt a selection for the next step.
   ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
-### 3. Select the type of authentication and app name
+### 3. Select the type of authentication and application name
 
 Select **Server Authentication (with JWT)** if you would like to verify 
 application identity [with a key pair][kp]. Select 
@@ -157,11 +157,12 @@ the configuration changes.
 
 ### Application Access
 
-By default, an application can only successfully interact with its own data and
-the data of any [App Users][user-types]. To also work with
-existing Managed Users of the enterprise, navigate to the 
+An application's access level determines which users and content your app may
+access. By default, an application can only successfully interact with the
+content of its [Service Account][sa] and any [App Users][user-types]. To also
+access existing Managed Users of an enterprise, navigate to the 
 **Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole]. Set to **Enterprise**. 
+[Developer console][devconsole] and set to **App + Enterprise Access**. 
 
 <ImageFrame border>
   ![App access level](../images/app-access-level.png)
@@ -169,8 +170,9 @@ existing Managed Users of the enterprise, navigate to the
 
 ### Application Scopes
 
-Scopes define what permissions your application has in order to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+An application's scopes determine which endpoints and resources an application
+can successfully call. See the [scopes guide][scopes] for detailed information
+on each option.
 
 <ImageFrame border width="600" center>
   ![App scopes](../images/app-scopes.png)
@@ -198,6 +200,7 @@ section at the bottom of the **Configuration** tab in the
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [user-types]: g://authentication/user-types
+[sa]: g//authentication/user-types/app-users/#service-accounts
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt
