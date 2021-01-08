@@ -13,8 +13,40 @@ alias_paths: []
 
 # Rate Limits
 
-Most of the Box APIs have rate limits in place in order to prevent misuse by
-third-party services or users.
+There are three common types of API call rate limitations that Box may use at 
+its discretion to best protect network resources and preserve the quality of our
+customer experience. 
+
+## User based
+
+These rate limits protect our service from issues that may arise when a single
+user generates too much traffic. The number of API calls that a user can make in
+a minute is limited as described below. These limits apply to all Box user
+accounts and are the most common. Generally, they are initiated when a
+user exceeds approximately 1000 API/calls/minute, but certain API endpoints may
+have different rate limits.
+
+## Quality of service
+
+These rate limits are designed to protect the quality of service of our
+infrastructure. If there is resource contention in the infrastructure, we
+introduce automatic rate limits to prevent system degradation and outages.
+For instance, if an application happens to be accessing the same physical
+database server, such as the use of a file migration tool accessing related
+resources that access the same underlying physical resources, Box may impose
+temporary rate-limits when load spikes and adjust them as the system recovers.
+
+## Licensing based
+
+All Box Business Plans come with a licensed number of permitted API calls per
+enterprise per month. These license based rate limits are designed to prevent
+excessive overages and misuse of network resources. If Box's infrastructure
+detects that a tool used by or on behalf of a customer has exceeded that
+customer's API license allocation or is intending to circumvent network
+controls, additional selective rate-limiting may be imposed. You can see the
+default API allocations licensed with a particular account level at our
+[pricing page][pricing], but note that some customers purchase Platform API
+Pricing plans that increase their allocation. 
 
 ## Per API rate limits
 
@@ -61,3 +93,4 @@ Please see the [Client Error resource](resource://client_error) for more details
 </Message>
 
 [search]: e://get_search
+[pricing]: https://www.box.com/pricing
