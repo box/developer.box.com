@@ -3,13 +3,12 @@ rank: 2
 alias_paths: []
 ---
 
-<!-- alex disable corruption -->
-
 # Chunked Uploads
 
 The Chunked Upload API provides a way to reliably upload large files to Box by
 chunking them into a sequence of parts that can be uploaded individually.
 
+<!--alex ignore failed-->
 By using this API the application uploads a file in part, allowing it to recover
 from a failed request more reliably. It means an application only needs to
 retry the upload of a single part instead of the entire file.
@@ -46,6 +45,7 @@ Once a part has been uploaded, it is immutable.
 The lifetime of an upload session is 7 days. During this time, the client can
 upload parts at their own pace.
 
+<!--alex ignore corruption-->
 To avoid wasting resources, and avoid potential data corruption, client should
 make sure that the underlying file has not been changed on disk since beginning
 the upload.

@@ -7,8 +7,6 @@ related_resources: []
 alias_paths: []
 ---
 
-<!-- alex disable postman-postwoman -->
-
 # Refresh an Access Token
 
 To authenticate to the Box API the Postman collection will use an **Access

@@ -9,8 +9,6 @@ related_resources:
 alias_paths: []
 ---
 
-<!-- alex disable reject -->
-
 # Application Flow
 
 In general, applications use Terms of Services as follows.

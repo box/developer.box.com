@@ -9,10 +9,9 @@ required_guides: []
 alias_paths: []
 ---
 
-<!-- alex disable aattacks -->
-
 # Setup Webhook Signatures
 
+<!--alex ignore attacks-->
 You can configure webhooks to use signatures to protect your application from
 malicious attacks where you might receive data that did not originate at Box.
 
@@ -26,8 +25,10 @@ When your application receives the payload it is advised to [verify][sigver] the
 signatures by calculating the same digest and comparing it to the one received.
 If the digests are not identical then the payload should not be trusted.
 
+<!--alex ignore attacks-->
 ## Man-in-the-middle attacks
 
+<!--alex ignore attack-->
 Webhook signatures help ensure that a webhook payload was sent by Box and has
 not been tampered with in transit. Signatures greatly reduce the likelihood of a
 successful man-in-the-middle or replay attack.

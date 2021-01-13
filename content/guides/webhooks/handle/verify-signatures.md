@@ -11,10 +11,9 @@ required_guides:
 alias_paths: []
 ---
 
-<!-- alex disable attacks -->
-
 # Verify Webhook Signatures
 
+<!--alex ignore attacks-->
 To protect your application against man-in-the-middle and replay attacks it is
 essential to verify webhook signatures. Verification ensures that the webhook
 payloads were actually sent by Box and that the contents of the payloads have

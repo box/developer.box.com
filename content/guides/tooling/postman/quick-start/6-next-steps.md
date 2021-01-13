@@ -3,8 +3,6 @@ type: quick-start
 hide_step_number: true
 ---
 
-<!-- alex disable postman-postwoman -->
-
 # Next steps
 
 You've reached the end of this Quick Start guide. By now you should have taken

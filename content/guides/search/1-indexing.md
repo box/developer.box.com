@@ -4,8 +4,6 @@ related_endpoints:
 required_guides: []
 ---
 
-<!-- alex disable chinese -->
-
 # Search indexing
 
 Box keeps a search index for any files or folders stored in Box.
@@ -111,6 +109,7 @@ non-current versions of a document.
 
 ## Language Support
 
+<!--alex ignore chinese-->
 Box search supports the following languages: Chinese,
 English, French, German, Italian, Japanese, and Spanish. Box does not support
 indexing of multiple languages within a single document.

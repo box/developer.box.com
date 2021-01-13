@@ -12,6 +12,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
+  - /guides/authentication/client-credentials
 ---
 
 # JWT without SDKs
@@ -872,4 +873,8 @@ The code in this guide is available on [GitHub][samples].
 [sa]: g://authentication/user-types/app-users/#service-accounts
 [configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
 [keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
+<<<<<<< HEAD
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+=======
+[ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+>>>>>>> 207bcd69a51ea1f48a2363b3bfe5ab4f0fa2680b
