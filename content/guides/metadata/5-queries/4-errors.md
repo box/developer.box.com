@@ -66,13 +66,9 @@ values will result in an error.
 ## Missing search index
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
-A search index can be created to resolve this error for a specific search query.
-
-If the number of metadata instances exceeds 10,000 then a metadata query request
-which does not include a suitable **index** in the `​use_index​` parameter will
-result in an error. The error will inform the caller to specify a suitable index
-as the argument to the `​use_index​` parameter.
+when the metadata template has been applied to more than 10,000 files or
+folders. A search index can be created to resolve this error for a specific
+search query.
 
 <CTA to='g://metadata/queries/indexes'>
   Learn more about creating and using indexes

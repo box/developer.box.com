@@ -874,7 +874,11 @@ The code in this guide is available on [GitHub][samples].
 [configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
 [keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
 =======
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
 >>>>>>> 207bcd69a51ea1f48a2363b3bfe5ab4f0fa2680b
+=======
+[ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+>>>>>>> 80ba7b207e4913631b6208c708f1536c756b6661
