@@ -134,15 +134,14 @@ steps above and click **Verify and Save**.
 Before the application can be used, a Box Admin needs to authorize the
 application within the Box Admin Console.
 
-Navigate to the **General Settings** tab for your application within the
-[Developer Console][devconsole] and scroll down to the **App Authorization**
-section.
+Navigate to the **Authorization** tab for your application within the
+[Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
   ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
-Click **Submit and Review** to send an email to your Box enterprise Admin for
+Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our 
 [support article for app authorization][app-auth].
 
