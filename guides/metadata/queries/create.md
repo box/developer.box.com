@@ -39,7 +39,6 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
          "metadata.enterprise_123456.contractTemplate.amount" 
        ],
        "ancestor_folder_id": "5555",
-       "use_index": "amountAsc",
        "order_by": [
          {
            "field_key": "amount",
