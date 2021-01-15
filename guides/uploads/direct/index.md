@@ -25,9 +25,9 @@ enterprise's Box plan, which at the time of writing is as follows.
 
 * Free personal: 250 MB
 * Starter: 2 GB
-* Business/Enterprise: 5 GB
-* Digital Workplace Suite: 5 GB
-* Digital Workplace Global Suite: 5 GB
+* Business/Enterprise: 15 GB
+* Digital Workplace Suite: 15 GB
+* Digital Workplace Global Suite: 15 GB
 * Digital Business Suite: 32 GB
 
 ## Upload domain
