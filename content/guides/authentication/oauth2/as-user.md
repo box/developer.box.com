@@ -24,7 +24,7 @@ curl https://api.box.com/2.0/folders/0 \
 ```
 
 <Message>
-In this situation the user ID is the Box identifier for a user. User IDs can
+In this situation the user ID is the Box identifier for a user. User IDs can be
 found for any user via the `GET /users` endpoint, which is only available to
 admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
 </Message>
