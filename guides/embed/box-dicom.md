@@ -371,6 +371,6 @@ box.dicom.createImportWidget("my-dicom-import-container", {
 `box.dicom.viewer.Toolbar.Buttons.Overlay`,
 `box.dicom.viewer.Toolbar.Buttons.More`
 
-[email]: dicom-sales@box.com
+[email]: mailto:dicom-sales@box.com
 [js]: https://boxdicom.com/dist/1.3.5/dicom-en-US.min.js
 [css]: https://boxdicom.com/dist/1.3.5/dicom.min.css
