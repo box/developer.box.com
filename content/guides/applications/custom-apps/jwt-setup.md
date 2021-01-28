@@ -41,25 +41,39 @@ Select **Create New App**.
 Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
   ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
-### 3. Select the type of authentication and app name
+### 3. Select the type of authentication and application name
 
-Select **Server Authentication (with JWT)** and provide a unique name for your
-application. Click **Create App**.
+Select **Server Authentication (with JWT)** if you would like to verify 
+application identity [with a key pair][kp]. Select 
+**Server Authentication (Client Credentials Grant)** if you would like to verify
+application identity [with your client id and client secret][ccg]. Then, provide
+a name for your application and click **Create App**.
+
+<Message warning>
+Once you make a selection, you will not be able to change to a different 
+authentication method without creating a new application.
+</Message>
 
 <ImageFrame border width="600" center>
-  ![App name form](../images/custom-app-selection-jwt.png)
+  ![App name form](../images/jwt-three-options.png)
 </ImageFrame>
 
-## JWT keypair
+## Public and private key pair
 
-JWT authentication works through a public/private RSA keypair.
-Once a Custom App is created leveraging JWT authentication, a keypair can
-be generated via the [Developer Console][devconsole] or you can generate your
-own and supply Box with the public key.
+<Message>
+  This section can be skipped if you selected Server Authentication
+  (Client Credentials Grant) as your authentication method.
+</Message>
+
+Once a Custom App is created leveraging Server Authentication with JWT, a key 
+pair can be generated via the configuration tab within the
+[Developer Console][devconsole]. Alternatively, you can generate your
+own and supply Box with the public key. Regardless of the method you select,
+your Box account will need to have [2FA][2fa] enabled for security purposes.
 
 ### Generate a keypair (Recommended)
 
@@ -87,8 +101,8 @@ you can move to your application code.
 
 ### Manually add keypair
 
-Alternatively, you may generate your own keypair and then upload the public key
-to the [Developer Console][devconsole].
+Alternatively, you may generate your own keypair and upload the public key to
+the [Developer Console][devconsole].
 
 To create a keypair using OpenSSL, open a terminal window and run the
 following commands.
@@ -104,7 +118,7 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
  Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 </Message>
 
-Then, navigate to the configuration tab for your application in the
+Then, navigate to the configuration tab for your application within the
 [Developer console][devconsole] and scroll down to the
 **Add and Manage Public Keys** section.
 
@@ -117,39 +131,37 @@ steps above and click **Verify and Save**.
 
 ## App Authorization
 
-Once a keypair is successfully added to your application your Box enterprise
-Admin needs to authorize the application within the Box Admin Console.
+Before the application can be used, a Box Admin needs to authorize the
+application within the Box Admin Console.
 
-Navigate to the **General Settings** tab for your application within the
-[developer console][devconsole] and scroll down to the **App Authorization**
-section.
+Navigate to the **Authorization** tab for your application within the
+[Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
   ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
-Click **Submit and Review** to send an email to your Box enterprise Admin for
+Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our 
 [support article for app authorization][app-auth].
 
 ### Re-authorization after making configuration changes
 
-When the application's scopes or access level change the application needs to be
-re-authorized. Repeat the process above and request a new Access Token for the
-new changes to take effect.
+As a general rule of thumb, applications require re-authorization, in the Box
+Admin console, after making any configuration changes within the Developer
+Console. If this step is skipped, any generated Access Tokens will not reflect
+the configuration changes. 
 
 ## Basic configuration
 
-Before the application can be used, some additional configuration is
-required.
-
 ### Application Access
 
-By default, an application can only successfully interact with its own data and
-the data of any [App Users][user-types]. To also work with
-existing Managed Users of the enterprise, navigate to the 
+An application's access level determines which users and content your app may
+access. By default, an application can only successfully interact with the
+content of its [Service Account][sa] and any [App Users][user-types]. To also
+access existing Managed Users of an enterprise, navigate to the 
 **Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole]. Set to **Enterprise**. 
+[Developer console][devconsole] and set to **App + Enterprise Access**. 
 
 <ImageFrame border>
   ![App access level](../images/app-access-level.png)
@@ -157,8 +169,9 @@ existing Managed Users of the enterprise, navigate to the
 
 ### Application Scopes
 
-Scopes define what permissions your application has in order to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+An application's scopes determine which endpoints and resources an application
+can successfully call. See the [scopes guide][scopes] for detailed information
+on each option.
 
 <ImageFrame border width="600" center>
   ![App scopes](../images/app-scopes.png)
@@ -186,6 +199,10 @@ section at the bottom of the **Configuration** tab in the
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [user-types]: g://authentication/user-types
+[sa]: g//authentication/user-types/app-users/#service-accounts
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt
+[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+[kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
+[ccg]: g//authentication/jwt/without-sdk/#client-credentials-grant

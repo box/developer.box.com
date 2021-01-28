@@ -10,8 +10,6 @@ related_resources:
   - task
 ---
 
-<!-- alex disable reject -->
-
 # Make changes to an existing task
 
 To update a task in Box you will need to call the
@@ -30,7 +28,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 

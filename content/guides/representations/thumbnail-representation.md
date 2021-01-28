@@ -21,8 +21,12 @@ a link that downloads or previews the file.
 All thumbnail representations except `1024x1024` and `2048x2048` PNGs are
 generated upon uploading the source file to Box.
 
-An alternative way to get a thumbnail for a file is using the
+<Message warning>
+
+An deprecated way to get a thumbnail for a file is using the
 [thumbnail API][thumbnail_api].
+
+</Message>
 
 ## The process
 
@@ -35,6 +39,18 @@ To get a thumbnail representation follow the following steps
 - [Download the thumbnail][download-a-representation]
   by calling the `url_template`, replacing the `{+asset_path}` with an empty
   string.
+
+<Message warning>
+
+Sometimes the thumbnail can not be created directly. Instead, 
+the API will return a `HTTP 202` with a `location` response header. 
+The location is for a temporary image that can be used while the thumbnail 
+is being generated.
+
+</Message>
+
+A retry-after response header is also provided to present you with an
+estimated amount of seconds before retrying this endpoint.
 
 ## Examples
 
@@ -108,6 +124,13 @@ At this time the following file types are supported.
 | Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
 
 <!-- markdownlint-enable line-length -->
+
+<Message warning>
+
+For **document** file types the representation returned will be a placeholder
+icon and not an actual thumbnail.
+
+</Message>
 
 [list-all-representations]: guide://representations/list-all-representations
 [request-a-representation]: guide://representations/request-a-representation

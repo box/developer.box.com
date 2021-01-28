@@ -6,9 +6,6 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
-
-<!-- alex disable postman-postwoman -->
-
 # Legacy Postman Collection
 
 Clicking the following button will install our [legacy Postman][legacy]

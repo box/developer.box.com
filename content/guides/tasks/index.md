@@ -8,14 +8,12 @@ related_resources:
   - task_assignment
 ---
 
-<!-- alex disable reject -->
-
 # Tasks
 
 Tasks allow users to request collaborators on a file to review a file or
 complete a piece of work. Tasks can be used by developers to create file-centric
 workflows. Learn more about tasks from the [**Adding Comments and
-Tasks**][community] article on our support site. 
+Tasks**][community] article on our support site.
 
 <ImageFrame border shadow width='300' center>
   ![Box Tasks in UI](./tasks-documentation.png)
@@ -30,7 +28,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 

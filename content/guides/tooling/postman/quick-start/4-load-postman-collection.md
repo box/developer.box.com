@@ -2,9 +2,6 @@
 type: quick-start
 hide_in_page_nav: true
 ---
-
-<!-- alex disable postman-postwoman -->
-
 # Load Postman Collection
 
 <LoggedIn id='postman_credentials'>

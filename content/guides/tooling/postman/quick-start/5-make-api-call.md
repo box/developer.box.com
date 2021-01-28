@@ -4,9 +4,6 @@ hide_in_page_nav: true
 related_endpoints:
   - get_folders_id_items
 ---
-
-<!-- alex disable postman-postwoman -->
-
 # Make an API call
 
 With the **Box Postman Collection** loaded into the **Postman App** it is now

@@ -18,8 +18,12 @@ A thumbnail is a small image, either as `.png` or as `.jpg` that can be used in
 an application as a representation of the file, for example as a placeholder for
 a link that downloads or previews the file.
 
-An alternative way to get a thumbnail for a file is using the
+<Message info>
+
+The preferred way to get a thumbnail for a file is using the
 [representations API][thumb_representations].
+
+</Message>
 
 ## Requesting
 

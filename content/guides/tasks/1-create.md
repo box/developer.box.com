@@ -6,7 +6,6 @@ related_guides:
   - tasks/get
   - tasks/update
 ---
-<!-- alex disable reject -->
 
 # Create a task
 
@@ -25,7 +24,7 @@ The type of task determines the possible resolution states a task can be in and
 the interface shown to a user in the web and mobile apps.
 
 | Task action | Possible resolution states           |
-|-------------|--------------------------------------|
+| ----------- | ------------------------------------ |
 | `review`    | `incomplete`, `approved`, `rejected` |
 | `complete`  | `incomplete`, `complete`             |
 
