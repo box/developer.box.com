@@ -265,30 +265,9 @@ both be set.
 ### Filter by `date` field
 
 To filter by a field of type `date` a filter will need to define the `key` of
-the field and the desired value to find items for.
-
-```json
-[
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "expirationDate": "2016-08-01T00:00:00Z"
-    }
-  }
-]
-```
-
-<Message info>
-
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `expirationDate` is set to the value `2016-08-01T00:00:00Z`.
-
-</Message>
-
-Additionally, filter for a `date` field can instead define a range instead of a
-direct value by specifying a `gt` (greater-than) and/or `lt` (lower-than) value.
+the field and the desired range to find items by specifying a `gt`
+(greater-than) and `lt` (lower-than) value. Please note that `gt` and `lt` are
+inclusive.
 
 ```json
 [
@@ -308,10 +287,9 @@ direct value by specifying a `gt` (greater-than) and/or `lt` (lower-than) value.
 <Message info>
 
 This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `expirationDate` is set to a date after or exactly `2016-08-01T00:00:00Z`
-and before or exactly `2017-08-01T00:00:00Z`. Please note that `gt` and
-`lt` are inclusive and do not need to both be set.
+`enterprise.contract` template applied and have an `expirationDate` set to
+a date after or exactly `2016-08-01T00:00:00Z`
+and before or exactly `2017-08-01T00:00:00Z`.
 
 </Message>
 
