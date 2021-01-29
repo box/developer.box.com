@@ -390,7 +390,7 @@ for solution to common errors encountered when working with the Box APIs.
 | ------------ | ---------------------------------------------------------------------------- |
 | **Error**    | `unavailable`                                                                |
 | **Message**  | Unavailable                                                                  |
-| **Solution** | Please check our [API status page](https://status.box.com/) for information. |
+| **Solution** | The client should retry the request according to the value returned in the `Retry-After` header. In rare situations, a write operation (create, update, or delete) may eventually persist its changes after the 503 response is received by the client, so the client should handle this case upon retry. If the issue persists, check our [status page](https://status.box.com/) for known outage information. |
 
 <!-- markdownlint-enable line-length -->
 
