@@ -59,7 +59,7 @@ will be supplied within the `additional_details` object.
 ### Suspicious locations alert
 
 A suspicious locations alert is produced when when Shield detects a user
-accessing content from an unusual, excluded geographic location, or host IP
+accessing content from an unusual, excluded geographic location, or 'host' IP
 address. It can be identified by the `Suspicious Locations` value
 within `additional_details.shield_alert.rule_category`.
 
