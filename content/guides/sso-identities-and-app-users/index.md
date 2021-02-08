@@ -16,12 +16,6 @@ and Access Management (IAM)** solution. When deployed, these services grant
 users the ability to securely authenticate multiple applications by logging in
 once, with only one set of credentials (username and password).
 
-```mermaid;width=600px
-graph LR
-   a[SSO User] --- b[Custom Box App]
-   b --- c[Box App User]
-```
-
 Box is one of the applications that can be connected to the SSO service of a
 company. Integrating these applications into your custom apps will allow you to
 provision Box users on the fly for any of your end users, without those users
