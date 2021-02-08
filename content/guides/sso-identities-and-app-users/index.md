@@ -32,21 +32,6 @@ knowing they have a Box account.
 When integrating SSO services into a Box application programmatically, we are
 referring to the following flow.
 
-```mermaid
-sequenceDiagram
-   participant Browser
-   participant Web Server
-   participant SSO Provider
-   Browser->>+Web Server: User visits web app
-   Web Server->>-Browser: Redirected to SSO
-   Browser->>+SSO Provider: User logs in
-   SSO Provider->>-Browser: Redirected back to web app
-   Browser->>+Web Server: Pass SSO user details
-   Web Server-->>+Box API: Find or create a new app user
-   Box API-->>-Web Server: Return app user details
-   Web Server->>-Browser: Display files to user
-```
-
 1. A user accesses your web or mobile application in a logged out state.
 2. The user is redirected to your SSO provider to log in, typically via
    `OAuth 2` and `OpenID Connect`.
