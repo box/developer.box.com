@@ -344,7 +344,7 @@ content from being unintentionally leaked.
 ### External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
-within the [enterprise event][schema] stream. This follows
+within the [enterprise event][events] stream. This follows
 the standard event object schema, with the `event_type` value set
 to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`, 
 `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`, 
@@ -607,5 +607,4 @@ The `additional_details` payload will provide the following details:
 
 [box-shield]: https://www.box.com/shield
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
-[schema]:  g://events/for-enterprise/
 [events]: g://events/for-enterprise/
