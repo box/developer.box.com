@@ -28,13 +28,6 @@ This quick start guide will walk through how to programmatically use Okta to
 log in to a Box application, provisioning an app user in Box that is linked to
 the Okta user, then make Box API calls on behalf of that user. 
 
-```mermaid;height=100px,width=500px
-graph LR
-   a[Okta user] --> b[Your app]
-   b[Your app] --> c[Box user]
-   c[Box user] --> d[Box APIs]
-```
-
 This will take you through the following steps.
 
 1. [Scaffold your application code][step1] so that

@@ -23,7 +23,7 @@ These rate limits protect our service from issues that may arise when a single
 user generates too much traffic. The number of API calls that a user can make in
 a minute is limited as described below. These limits apply to all Box user
 accounts and are the most common. Generally, they are initiated when a
-user exceeds approximately 1000 API/calls/minute, but certain API endpoints may
+user exceeds approximately 1000 API calls/minute, but certain API endpoints may
 have different rate limits.
 
 ## Quality of service
