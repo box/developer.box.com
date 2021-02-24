@@ -21,12 +21,6 @@ source_url: >-
 Each quarter, we send out a newsletter to our community with the top developer
 events, product releases, and community highlights.
 
-<CTA to="https://community.box.com/t5/Box-Newsletters/bg-p/Newsletters">
-
-Sign Up for the Developer Newsletter
-
-</CTA>
-
 ## Past Newsletters
 
 | Year | Month     | Archive                     |

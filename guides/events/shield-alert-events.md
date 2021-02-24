@@ -20,7 +20,7 @@ previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/shield-alert-events.md
 ---
-# Shield events
+# Shield Events
 
 [Box Shield][box-shield] must be purchased and enabled on a Box enterprise in
 order to take advantage of the advanced security offerings outlined below.
@@ -69,10 +69,14 @@ will be supplied within the `additional_details` object.
 
 ### Suspicious locations alert
 
+<!--alex ignore-->
+
 A suspicious locations alert is produced when when Shield detects a user
 accessing content from an unusual, excluded geographic location, or 'host' IP
 address. It can be identified by the `Suspicious Locations` value
 within `additional_details.shield_alert.rule_category`.
+
+<!--alex enable-->
 
 The `additional_details` payload will provide the following details:
 
@@ -353,7 +357,7 @@ content from being unintentionally leaked.
 ### External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
-within the [enterprise event][g://events/for-enterprise/] stream. This follows
+within the [enterprise event][schema] stream. This follows
 the standard event object schema, with the `event_type` value set
 to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
 `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`,
@@ -361,113 +365,161 @@ to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`, or
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`.
 
-The `additional_details` payload will provide the following details if the
-invite is blocked:
+If an external collaboration invitation is blocked, the `addition-details`
+payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED` or
+`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` will provide
+the following details:
 
 ```js
 "additional_details": {
-                "shield_external_collab_enforcement": {
-                    "item": {
-                        "type": "file",
-                        "id": 123456789,
-                        "name": "Welcome to Box.pdf",
-                        "file_version_id": 987654321,
-                        "size": 5206506,
-                        "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
-                    },
-                    "inviter": {
-                        "type": "user",
-                        "id": 02912083489,
-                        "name": "Some Name",
-                        "login": "somename@box.com"
-                    },
-                    "invitee": {
-                        "type": "user",
-                        "id": 10340918347,
-                        "name": "John Doe",
-                        "login": "johndoe@box.com"
-                    },
-                    "accessUser": null,
-                    "service": [],
-                    "additionalInfo": "",
-                    "createdAt": null,
-                    "justification": null,
-                    "classification": "Test"
-                }
-            }
+   "shield_external_collab_enforcement": {
+   "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
+    },
+    "inviter": {
+       "type": "user",
+       "id": 02912083489,
+       "name": "Some Name",
+       "login": "somename@box.com"
+    },
+    "invitee": {
+       "type": "user",
+       "id": 10340918347,
+       "name": "John Doe",
+       "login": "johndoe@box.com"
+    },
+   "accessUser": null,
+   "service": [],
+   "additionalInfo": "",
+   "createdAt": null,
+   "justification": null,
+   "classification": "Test"
+    }
+ }
 ```
 
-The `additional_details` payload will provide the following details if the
-invite is justified:
+If an external collaboration invitation is justified, the `additional_details`
+payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event will provide the
+following details:
 
 ```js
 "additional_details": {
-                "shield_external_collab_enforcement": {
-                    "item": {
-                        "type": "file",
-                        "id": 123456789,
-                        "name": "Welcome to Box.pdf",
-                        "file_version_id": 987654321,
-                        "size": 5206506,
-                        "sha1": "92c9614354519c993b8b52a2a1da4e2d078dca89"
-                    },
-                    "inviter": {
-                        "type": "user",
-                        "id": 02912083489,
-                        "name": "Some Name",
-                        "login": "somename@box.com"
-                    },
-                    "invitee": {
-                        "type": "user",
-                        "id": 10340918347,
-                        "name": "John Doe",
-                        "login": "johndoe@box.com"
-                    },
-                    "accessUser": null,
-                    "service": [],
-                    "additionalInfo": "",
-                    "createdAt": null,
-                    "justification": {
-                        "justification_id": "4050170",
-                        "request_at": 1611619097,
-                        "requested_by": {
-                            "type": "user",
-                            "id": 10340918347,
-                            "name": "John Doe",
-                            "login": "johndoe@box.com"
-                        },
-                        "request_type": "EXTERNAL_COLLAB",
-                        "item": {
-                            "type": "file",
-                            "id": 540117896508,
-                            "name": "Welcome to Box.pdf",
-                            "file_version_id": 987654321,
-                            "size": 5206506,
-                            "sha1": "92c9614354519c993b8b52a2a1da4e2d078dca89"
-                        },
-                        "user": {
-                            "type": "user",
-                            "id": 10340918347,
-                            "name": "John Doe",
-                            "login": "johndoe@box.com"
-                        },
-                        "title": "TEST",
-                        "description": "",
-                        "additional_info": null,
-                        "approved_by": {
-                            "type": "user",
-                             "id": 02912083489,
-                            "name": "Some Name",
-                            "login": "somename@box.com"
-                        },
-                        "action": "APPROVED",
-                        "action_at": 1611619097,
-                        "details": null
-                    },
-                    "classification": "Test"
-                }
-            }
-        }
+   "shield_external_collab_enforcement": {
+   "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
+    },
+    "inviter": {
+       "type": "user",
+       "id": 02912083489,
+       "name": "Some Name",
+       "login": "somename@box.com"
+    },
+    "invitee": {
+       "type": "user",
+       "id": 10340918347,
+       "name": "John Doe",
+       "login": "johndoe@box.com"
+    },
+   "accessUser": null,
+   "service": [],
+   "additionalInfo": "",
+   "createdAt": null,
+   "justification": null,
+   "classification": "Test",
+   "justification": {
+      "justification_id": "4050170",
+      "request_at": 1611619097,
+      "requested_by": {
+         "type": "user",
+         "id": 10340918347,
+         "name": "John Doe",
+         "login": "johndoe@box.com"
+    },
+    "request_type": "EXTERNAL_COLLAB",
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+    },
+    "user": {
+      "type": "user",
+          "id": 10340918347,
+          "name": "John Doe",
+          "login": "johndoe@box.com"
+    },
+    "title": "TEST",
+    "description": "",
+    "additional_info": null,
+    "approved_by": {
+      "type": "user",
+      "id": 02912083489,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "action": "APPROVED",
+    "action_at": 1611619097,
+    "details": null
+  },
+  "classification": "Example"
+  }
+}
+```
+
+If external collaboration access is blocked, the `additional_details`
+payload of the `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED` or
+`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` event will provide
+the following details:
+
+```js
+"additional_details": {
+        "shield_external_collab_enforcement": {
+            "item": {
+                "type": "folder",
+                "id": 60909312704,
+                "name": "Exmaple Folder",
+                "file_version_id": null,
+                "size": 410874,
+                "sha1": null
+            },
+            "inviter": {
+                "type": "user",
+                "id": 987654321,
+                "name": "John Doe",
+                "login": "johndoe@box.com"
+            },
+            "invitee": {
+                "type": "user",
+                "id": 123456,
+                "name": "Example User",
+                "login": "example@box.com"
+            },
+            "accessUser": null,
+            "service": {
+                "service": 12345,
+                "name": "Box Web App",
+                "apiKey": "fomp6n5qhqpnt6rw2h3yu12g01qswae"
+            },
+            "additionalInfo": "",
+            "createdAt": null,
+            "justification": null,
+            "classification": "Company and Collaborators Only"
+        },
+        "service_id": "12345",
+        "service_name": "Box Web App"
+ }
 ```
 
 If a Shield justification is approved, an event is produced within the
@@ -532,3 +584,4 @@ a justification is chosen from the share modal. For example, one
 
 [box-shield]: https://www.box.com/shield
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
+[schema]:  g://events/for-enterprise/
