@@ -38,29 +38,29 @@ The possible alerts produced by Shield are for:
 1. Malicious content
 
 All Shield threat detection alert events are produced within the
-[enterprise event][g://events/for-enterprise/] stream. They follow the
+[enterprise event][events] stream. They follow the
 standard event object schema and the `event_type` value is set to
 `SHIELD_ALERT`.
 
 ```js
 {
-   "source":null,
-   "created_by":{
-      "type":"user",
-      "id":"2",
-      "name":"Unknown User",
-      "login":""
-   },
-   "action_by":null,
-   "created_at":"2019-12-20T11:38:56-08:00",
-   "event_id":"97f1b31f-f143-4777-81f8-1b557b39ca33",
-   "event_type":"SHIELD_ALERT",
-   "ip_address":"10.1.2.3",
-   "type":"event",
-   "session_id":null,
-   "additional_details":{
-      ...
-   }
+  "source":null,
+  "created_by":{
+    "type":"user",
+    "id":"2",
+    "name":"Unknown User",
+    "login":""
+  },
+  "action_by":null,
+  "created_at":"2019-12-20T11:38:56-08:00",
+  "event_id":"97f1b31f-f143-4777-81f8-1b557b39ca33",
+  "event_type":"SHIELD_ALERT",
+  "ip_address":"10.1.2.3",
+  "type":"event",
+  "session_id":null,
+  "additional_details":{
+    "..."
+  }
 }
 ```
 
@@ -398,9 +398,47 @@ the following details:
    "additionalInfo": "",
    "createdAt": null,
    "justification": null,
-   "classification": "Test"
-    }
- }
+   "classification": "Test",
+   "justification": {
+      "justification_id": "4050170",
+      "request_at": 1611619097,
+      "requested_by": {
+         "type": "user",
+         "id": 10340918347,
+         "name": "John Doe",
+         "login": "johndoe@box.com"
+    },
+    "request_type": "EXTERNAL_COLLAB",
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+    },
+    "user": {
+      "type": "user",
+          "id": 10340918347,
+          "name": "John Doe",
+          "login": "johndoe@box.com"
+    },
+    "title": "TEST",
+    "description": "",
+    "additional_info": null,
+    "approved_by": {
+      "type": "user",
+      "id": 02912083489,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "action": "APPROVED",
+    "action_at": 1611619097,
+    "details": null
+  },
+  "classification": "Example"
+  }
+}
 ```
 
 If an external collaboration invitation is justified, the `additional_details`
@@ -523,53 +561,53 @@ the following details:
 ```
 
 If a Shield justification is approved, an event is produced within the
-[enterprise event][g://events/for-enterprise/] stream. This follows the
+[enterprise event][events] stream. This follows the
 standard event object schema, with the `event_type` value set
 to `SHIELD_JUSTIFICATION_APPROVAL`.
 
 The `additional_details` payload will provide the following details:
 
 ```js
-"additional_details": {
-    "shield_justification": {
-        "justification_id": 1234,
-        "request_at": 1600708864,
-        "requested_by": {
-            "type": "user",
-            "id": 1357924680,
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "request_type": "EXTERNAL_COLLAB",
-        "item": {
-            "type": "file",
-            "id": 123456789,
-            "name": "testFile.docx",
-            "file_version_id": 987654321,
-            "size": 0,
-            "sha1": "da39a3ee5e6b4b0d325ojofef95601890afd80709"
-        },
-        "user": {
-            "type": "user",
-            "id": 0975312468,
-            "name": "Some Name",
-            "login": "somename@box.com"
-        },
-        "title": "Some Title",
-        "description": null,
-        "details": null,
-        "additional_info": null,
-        "approved_by": {
-            "type": "user",
-            "id": 0975312468,
-            "name": "Some Name",
-            "login": "somename@box.com"
-        },
-        "action": "APPROVED",
-        "action_at": 1600476617
+"additional_details":{
+  "shield_justification":{
+    "justification_id":1234,
+    "request_at":1600708864,
+    "requested_by":{
+      "type":"user",
+      "id":1357924680,
+      "name":"John Doe",
+      "login":"johndoe@box.com"
     },
-    "service_id": "123456",
-    "service_name": "Service Name"
+    "request_type":"EXTERNAL_COLLAB",
+    "item":{
+      "type":"file",
+      "id":123456789,
+      "name":"testFile.docx",
+      "file_version_id":987654321,
+      "size":0,
+      "sha1":"da39a3ee5e6b4b0d325ojofef95601890afd80709"
+    },
+    "user":{
+      "type":"user",
+      "id":0975312468,
+      "name":"Some Name",
+      "login":"somename@box.com"
+    },
+    "title":"Some Title",
+    "description":null,
+    "details":null,
+    "additional_info":null,
+    "approved_by":{
+      "type":"user",
+      "id":0975312468,
+      "name":"Some Name",
+      "login":"somename@box.com"
+    },
+    "action":"APPROVED",
+    "action_at":1600476617
+  },
+  "service_id":"123456",
+  "service_name":"Service Name"
 }
 ```
 
@@ -585,3 +623,4 @@ a justification is chosen from the share modal. For example, one
 [box-shield]: https://www.box.com/shield
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
 [schema]:  g://events/for-enterprise/
+[events]: g://events/for-enterprise/
