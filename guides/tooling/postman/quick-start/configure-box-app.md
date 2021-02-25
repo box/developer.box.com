@@ -63,7 +63,7 @@ will set them up for you. At the end you will have a **Client ID** and
 
 <Trigger option="postman.login_button" value="clicked">
 
-<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_uri='/auth/callback' cors_origins=''>
+<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
 
 Create an app
 
