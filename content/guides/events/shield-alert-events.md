@@ -16,8 +16,9 @@ order to take advantage of the advanced security offerings outlined below.
 
 ## Threat detection alerts
 
-Shield threat detection delivers context-rich alerts on potential threats such
-as compromised accounts and data theft, based on anomalous user behavior.
+Shield [threat detection][threatdetect] delivers context-rich alerts on
+potential threats, such as compromised accounts and data theft, based on
+anomalous user behavior.
 
 The possible alerts produced by Shield are for:
 
@@ -27,7 +28,7 @@ The possible alerts produced by Shield are for:
 1. Malicious content
 
 All Shield threat detection alert events are produced within the
-[enterprise event][events] stream. They follow the
+[enterprise event][events] stream. These events follow the
 standard event object schema and the `event_type` value is set to
 `SHIELD_ALERT`.
 
@@ -338,13 +339,13 @@ The `additional_details` payload will provide the following details:
 ## Smart access
 
 [Smart Access][smartaccess] enables Box Admins to define and enforce
-classification-based access policies to control actions to prevent sensitive
-content from being unintentionally leaked.
+classification-based access policies to control actions and prevent the
+unintentional leakage of sensitive content.
 
 ### External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
-within the [enterprise event][events] stream. This follows
+within the [enterprise event][events] stream. These events follow
 the standard event object schema, with the `event_type` value set
 to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`, 
 `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`, 
@@ -352,9 +353,9 @@ to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`, or
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`. 
 
-If an external collaboration invitation is blocked, the `addition-details`
+If an external collaboration invitation is blocked, the `additional-details`
 payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED` or 
-`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` will provide
+`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` event will provide
 the following details: 
 
 ```js
@@ -548,8 +549,8 @@ the following details:
 ```
 
 If a Shield justification is approved, an event is produced within the
-[enterprise event][events] stream. This follows the
-standard event object schema, with the `event_type` value set
+[enterprise event][events] stream. These events follow the
+standard event object schema and the `event_type` value set
 to `SHIELD_JUSTIFICATION_APPROVAL`.
 
 The `additional_details` payload will provide the following details:
@@ -606,5 +607,6 @@ The `additional_details` payload will provide the following details:
 </Message>
 
 [box-shield]: https://www.box.com/shield
+[threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
 [events]: g://events/for-enterprise/
