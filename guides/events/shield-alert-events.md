@@ -20,57 +20,66 @@ previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/shield-alert-events.md
 ---
-# Shield alert events
+# Shield Events
 
-Shield alert events provide details about security incidents in an
-enterprise with [Box Shield][box-shield] enabled, which are configured to
-listen for those incidents.
+[Box Shield][box-shield] must be purchased and enabled on a Box enterprise in
+order to take advantage of the advanced security offerings outlined below.
 
-The possible incident alerts produced by Shield are:
+## Threat detection alerts
+
+Shield [threat detection][threatdetect] delivers context-rich alerts on
+potential threats, such as compromised accounts and data theft, based on
+anomalous user behavior.
+
+The possible alerts produced by Shield are for:
 
 1. Suspicious locations
 1. Suspicious sessions
-1. Anomalous download
+1. Anomalous downloads
 1. Malicious content
 
-All shield alert events will be produced within the
-[enterprise event][g://events/for-enterprise/] stream (not the user stream) and
-will follow the standard event object schema, with the `event_type` value set
-to `SHIELD_ALERT`.
+All Shield threat detection alert events are produced within the
+[enterprise event][events] stream. These events follow the
+standard event object schema and the `event_type` value is set to
+`SHIELD_ALERT`.
 
 ```js
 {
-   "source":null,
-   "created_by":{
-      "type":"user",
-      "id":"2",
-      "name":"Unknown User",
-      "login":""
-   },
-   "action_by":null,
-   "created_at":"2019-12-20T11:38:56-08:00",
-   "event_id":"97f1b31f-f143-4777-81f8-1b557b39ca33",
-   "event_type":"SHIELD_ALERT",
-   "ip_address":"10.1.2.3",
-   "type":"event",
-   "session_id":null,
-   "additional_details":{
-      ...
-   }
+  "source":null,
+  "created_by":{
+    "type":"user",
+    "id":"2",
+    "name":"Unknown User",
+    "login":""
+  },
+  "action_by":null,
+  "created_at":"2019-12-20T11:38:56-08:00",
+  "event_id":"97f1b31f-f143-4777-81f8-1b557b39ca33",
+  "event_type":"SHIELD_ALERT",
+  "ip_address":"10.1.2.3",
+  "type":"event",
+  "session_id":null,
+  "additional_details":{
+    "..."
+  }
 }
 ```
 
 Information about the specific type of shield alert that triggered the event
 will be supplied within the `additional_details` object.
 
-## Suspicious locations alert
+### Suspicious locations alert
 
-A suspicious locations alert will be produced when an account within the
-enterprise has been accessed from a suspicious location. It can be identified
-by the `Suspicious Locations` value within
-`additional_details.shield_alert.rule_category`.
+<!--alex ignore-->
 
-The `additional_details` payload will provide the following details.
+A suspicious locations alert is produced when when Shield detects a user
+accessing content from an unusual, excluded geographic location, or 'host' IP
+address. It can be identified by the `Suspicious Locations` value
+within `additional_details.shield_alert.rule_category`.
+
+<!--alex enable-->
+
+The `additional_details` payload will provide the following details:
 
 ```js
 "additional_details":{
@@ -114,13 +123,15 @@ The `additional_details` payload will provide the following details.
 }
 ```
 
-## Suspicious sessions alert
+### Suspicious sessions alert
 
-A suspicious locations alert will be produced when abnormal behavior has been
-detected in the account session. It can be identified by the `Suspicious
+A suspicious locations alert is produced when Shield detects a user accessing
+content in a session characterized by unusual user-agent strings, unusual IDs,
+uncommon types of applications, new IP addresses, and an improbably rapid change
+in the person's log-in location. It can be identified by the `Suspicious
 Sessions` value within `additional_details.shield_alert.rule_category`.
 
-The `additional_details` payload will provide the following details.
+The `additional_details` payload will provide the following details:
 
 <!-- markdownlint-disable line-length -->
 
@@ -195,13 +206,14 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Anomalous download alert
+### Anomalous download alert
 
-A suspicious locations alert will be produced when anomalous content download
-behavior has been detected. It can be identified by the `Anomalous Download`
-value within `additional_details.shield_alert.rule_category`.
+A suspicious locations alert is produced when Shield detects an account holder
+who may be stealing sensitive content. It can be identified by the
+`Anomalous Download` value within
+`additional_details.shield_alert.rule_category`.
 
-The `additional_details` payload will provide the following details.
+The `additional_details` payload will provide the following details:
 
 <!-- markdownlint-disable line-length -->
 
@@ -252,14 +264,14 @@ The `additional_details` payload will provide the following details.
 ```
 <!-- markdownlint-enable line-length -->
 
-## Malicious content alert
+### Malicious content alert
 
-A suspicious locations alert will be produced when malicious content has been
-identified, such as a virus being detected. It can be identified by the
+A suspicious locations alert is produced when Shield detects potential malware
+in content uploading to an account. It can be identified by the
 `Malicious Content` value within
 `additional_details.shield_alert.rule_category`.
 
-The `additional_details` payload will provide the following details.
+The `additional_details` payload will provide the following details:
 
 ```js
 "additional_details":{
@@ -337,4 +349,279 @@ The `additional_details` payload will provide the following details.
 }
 ```
 
+## Smart access
+
+[Smart Access][smartaccess] enables Box Admins to define and enforce
+classification-based access policies to control actions and prevent the
+unintentional leakage of sensitive content.
+
+### External collaboration restriction
+
+If an external collaboration invitation is restricted, an event is produced
+within the [enterprise event][events] stream. These events follow
+the standard event object schema, with the `event_type` value set
+to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
+`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`,
+`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`
+`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`, or
+`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`.
+
+If an external collaboration invitation is blocked, the `additional-details`
+payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED` or
+`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` event will provide
+the following details:
+
+```js
+"additional_details": {
+   "shield_external_collab_enforcement": {
+   "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
+    },
+    "inviter": {
+       "type": "user",
+       "id": 02912083489,
+       "name": "Some Name",
+       "login": "somename@box.com"
+    },
+    "invitee": {
+       "type": "user",
+       "id": 10340918347,
+       "name": "John Doe",
+       "login": "johndoe@box.com"
+    },
+   "accessUser": null,
+   "service": [],
+   "additionalInfo": "",
+   "createdAt": null,
+   "justification": null,
+   "classification": "Test",
+   "justification": {
+      "justification_id": "4050170",
+      "request_at": 1611619097,
+      "requested_by": {
+         "type": "user",
+         "id": 10340918347,
+         "name": "John Doe",
+         "login": "johndoe@box.com"
+    },
+    "request_type": "EXTERNAL_COLLAB",
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+    },
+    "user": {
+      "type": "user",
+          "id": 10340918347,
+          "name": "John Doe",
+          "login": "johndoe@box.com"
+    },
+    "title": "TEST",
+    "description": "",
+    "additional_info": null,
+    "approved_by": {
+      "type": "user",
+      "id": 02912083489,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "action": "APPROVED",
+    "action_at": 1611619097,
+    "details": null
+  },
+  "classification": "Example"
+  }
+}
+```
+
+If an external collaboration invitation is justified, the `additional_details`
+payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event will provide the
+following details:
+
+```js
+"additional_details": {
+   "shield_external_collab_enforcement": {
+   "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
+    },
+    "inviter": {
+       "type": "user",
+       "id": 02912083489,
+       "name": "Some Name",
+       "login": "somename@box.com"
+    },
+    "invitee": {
+       "type": "user",
+       "id": 10340918347,
+       "name": "John Doe",
+       "login": "johndoe@box.com"
+    },
+   "accessUser": null,
+   "service": [],
+   "additionalInfo": "",
+   "createdAt": null,
+   "justification": null,
+   "classification": "Test",
+   "justification": {
+      "justification_id": "4050170",
+      "request_at": 1611619097,
+      "requested_by": {
+         "type": "user",
+         "id": 10340918347,
+         "name": "John Doe",
+         "login": "johndoe@box.com"
+    },
+    "request_type": "EXTERNAL_COLLAB",
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "Welcome to Box.pdf",
+      "file_version_id": 987654321,
+      "size": 5206506,
+      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+    },
+    "user": {
+      "type": "user",
+          "id": 10340918347,
+          "name": "John Doe",
+          "login": "johndoe@box.com"
+    },
+    "title": "TEST",
+    "description": "",
+    "additional_info": null,
+    "approved_by": {
+      "type": "user",
+      "id": 02912083489,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "action": "APPROVED",
+    "action_at": 1611619097,
+    "details": null
+  },
+  "classification": "Example"
+  }
+}
+```
+
+If external collaboration access is blocked, the `additional_details`
+payload of the `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED` or
+`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` event will provide
+the following details:
+
+```js
+"additional_details": {
+        "shield_external_collab_enforcement": {
+            "item": {
+                "type": "folder",
+                "id": 60909312704,
+                "name": "Exmaple Folder",
+                "file_version_id": null,
+                "size": 410874,
+                "sha1": null
+            },
+            "inviter": {
+                "type": "user",
+                "id": 987654321,
+                "name": "John Doe",
+                "login": "johndoe@box.com"
+            },
+            "invitee": {
+                "type": "user",
+                "id": 123456,
+                "name": "Example User",
+                "login": "example@box.com"
+            },
+            "accessUser": null,
+            "service": {
+                "service": 12345,
+                "name": "Box Web App",
+                "apiKey": "fomp6n5qhqpnt6rw2h3yu12g01qswae"
+            },
+            "additionalInfo": "",
+            "createdAt": null,
+            "justification": null,
+            "classification": "Company and Collaborators Only"
+        },
+        "service_id": "12345",
+        "service_name": "Box Web App"
+ }
+```
+
+If a Shield justification is approved, an event is produced within the
+[enterprise event][events] stream. These events follow the
+standard event object schema and the `event_type` value set
+to `SHIELD_JUSTIFICATION_APPROVAL`.
+
+The `additional_details` payload will provide the following details:
+
+```js
+"additional_details":{
+  "shield_justification":{
+    "justification_id":1234,
+    "request_at":1600708864,
+    "requested_by":{
+      "type":"user",
+      "id":1357924680,
+      "name":"John Doe",
+      "login":"johndoe@box.com"
+    },
+    "request_type":"EXTERNAL_COLLAB",
+    "item":{
+      "type":"file",
+      "id":123456789,
+      "name":"testFile.docx",
+      "file_version_id":987654321,
+      "size":0,
+      "sha1":"da39a3ee5e6b4b0d325ojofef95601890afd80709"
+    },
+    "user":{
+      "type":"user",
+      "id":0975312468,
+      "name":"Some Name",
+      "login":"somename@box.com"
+    },
+    "title":"Some Title",
+    "description":null,
+    "details":null,
+    "additional_info":null,
+    "approved_by":{
+      "type":"user",
+      "id":0975312468,
+      "name":"Some Name",
+      "login":"somename@box.com"
+    },
+    "action":"APPROVED",
+    "action_at":1600476617
+  },
+  "service_id":"123456",
+  "service_name":"Service Name"
+}
+```
+
+<Message>
+
+Admins, please note that you may see two enterprise events instead of one when
+a justification is chosen from the share modal. For example, one
+`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` event and one
+`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event.
+
+</Message>
+
 [box-shield]: https://www.box.com/shield
+[threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
+[smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
+[events]: g://events/for-enterprise/
