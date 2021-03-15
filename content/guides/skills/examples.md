@@ -112,7 +112,7 @@ Box Skills samples for processing audio files on Box.
 [image_hive]: https://github.com/box-community/sample-image-skills/blob/master/hive-predict-face-recognition
 [image_hive_ml]: https://thehive.ai/predict
 [image_ms_image]: https://github.com/box-community/sample-image-skills/blob/master/microsoft-vision-text-topics-detection
-[image_ms_image_ml]: https://cloud.google.com/vision/
+[image_ms_image_ml]: https://docs.microsoft.com/en-us/azure/cognitive-services/
 [video_azure_video]: https://github.com/box-community/sample-video-skills/blob/master/microsoft-azure-faces-transcript-topics-detection
 [video_azure_video_ml]: https://docs.microsoft.com/en-us/azure/media-services/latest/analyzing-video-audio-files-concept
 [contributing_guidelines]: https://github.com/box-community/community-guidelines/blob/master/.github/CONTRIBUTING.md
