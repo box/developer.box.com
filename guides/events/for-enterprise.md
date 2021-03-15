@@ -135,9 +135,9 @@ The following events can be triggered for an enterprise.
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
 | `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance.                                                                  |
 | `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance.                                                                    |
-| `METADATA_TEMPLATE_CREATE`                     | Creation of metadata template instance.                                                         |
-| `METADATA_TEMPLATE_UPDATE`                     | Update of metadata template instance.                                                           |
-| `METADATA_TEMPLATE_DELETE`                     | Deletion of metadata template instance.                                                         |
+| `METADATA_TEMPLATE_CREATE`                     | Creation of metadata template.                                                                  |
+| `METADATA_TEMPLATE_UPDATE`                     | Update of metadata template.                                                                    |
+| `METADATA_TEMPLATE_DELETE`                     | Deletion of metadata template.                                                                  |
 | `MOVE`                                         | Moved                                                                                           |
 | `NEW_USER`                                     | Created user                                                                                    |
 | `OAUTH2_ACCESS_TOKEN_REVOKE`                   | An OAuth 2.0 access token has been revoked                                                      |
