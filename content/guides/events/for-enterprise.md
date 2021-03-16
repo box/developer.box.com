@@ -71,6 +71,12 @@ The following events can be triggered for an enterprise.
 | `COLLABORATION_INVITE`                         | Invited                                                                                         |
 | `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
 | `COLLABORATION_ROLE_CHANGE`                    | Changed user roles                                                                              |
+| `COLLECTION_CREATE`                            | A collection was created                                                                        |
+| `COLLECTION_DELETE`                            | A collection was deleted                                                                        |
+| `COLLECTION_UPDATE`                            | A collection was updated                                                                        |
+| `COLLECTION_ITEM_CREATE`                       | An item was added to a collection                                                               |
+| `COLLECTION_ITEM_DELETE`                       | An item was removed from a collection                                                           |
+| `COLLECTION_ITEM_UPDATE`                       | An item in a collection was updated                                                             |
 | `COMMENT_CREATE`                               | A comment is created on a file.                                                                 |
 | `COMMENT_DELETE`                               | A comment is deleted on a file.                                                                 |
 | `CONTENT_ACCESS`                               | A file was accessed by an authorized end user or programmatically by a Box application.         |
@@ -118,9 +124,9 @@ The following events can be triggered for an enterprise.
 | `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance.                                                                  |
 | `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance.                                                                  |
 | `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance.                                                                    |
-| `METADATA_TEMPLATE_CREATE`                     | Creation of metadata template instance.                                                         |
-| `METADATA_TEMPLATE_UPDATE`                     | Update of metadata template instance.                                                           |
-| `METADATA_TEMPLATE_DELETE`                     | Deletion of metadata template instance.                                                         |
+| `METADATA_TEMPLATE_CREATE`                     | Creation of metadata template.                                                                  |
+| `METADATA_TEMPLATE_UPDATE`                     | Update of metadata template.                                                                    |
+| `METADATA_TEMPLATE_DELETE`                     | Deletion of metadata template.                                                                  |
 | `MOVE`                                         | Moved                                                                                           |
 | `NEW_USER`                                     | Created user                                                                                    |
 | `OAUTH2_ACCESS_TOKEN_REVOKE`                   | An OAuth 2.0 access token has been revoked                                                      |

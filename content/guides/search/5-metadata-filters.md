@@ -320,7 +320,7 @@ to match any template where any of the provided values match this field.
 
 This example will find all files and folders that have an instance of the
 `enterprise.contract` template applied to it, and for which the field with the
-key `category` is set to the value `online` or `offline`.
+key `category` is set to the value `online` or `enterprise`.
 
 </Message>
 

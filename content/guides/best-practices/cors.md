@@ -31,19 +31,6 @@ images, files, or even API resources from another domain (`box.com`)
 the web browser will prevent access to any of those assets unless the right
 CORS headers are present.
 
-```mermaid;width=1000px
-sequenceDiagram
-    participant b as Browser (company.com)
-    participant s1 as Server (company.com)
-    participant s2 as Server (box.com)
-    Note over b,s1: Same-origin request, always allowed
-    b ->> s1: GET /data.json (Origin: https://company.com)
-    s1 ->> b: JSON (No extra headers)
-    Note over b,s2: Cross-origin request, controlled by CORS
-    b ->> s2: GET /2.0/folders/0 (Origin: https://company.com)
-    s2 ->> b: JSON (Access-Control-Allow-Origin: *)
-```
-
 When the browser makes a cross-origin request, an `Origin` request header is
 passed along with it that contains the domain of the site making that
 request. This header can not be changed and is part of your web browser's
