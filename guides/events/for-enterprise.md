@@ -88,6 +88,12 @@ The following events can be triggered for an enterprise.
 | `COLLABORATION_INVITE`                         | Invited                                                                                         |
 | `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
 | `COLLABORATION_ROLE_CHANGE`                    | Changed user roles                                                                              |
+| `COLLECTION_CREATE`                            | A collection was created                                                                        |
+| `COLLECTION_DELETE`                            | A collection was deleted                                                                        |
+| `COLLECTION_UPDATE`                            | A collection was updated                                                                        |
+| `COLLECTION_ITEM_CREATE`                       | An item was added to a collection                                                               |
+| `COLLECTION_ITEM_DELETE`                       | An item was removed from a collection                                                           |
+| `COLLECTION_ITEM_UPDATE`                       | An item in a collection was updated                                                             |
 | `COMMENT_CREATE`                               | A comment is created on a file.                                                                 |
 | `COMMENT_DELETE`                               | A comment is deleted on a file.                                                                 |
 | `CONTENT_ACCESS`                               | A file was accessed by an authorized end user or programmatically by a Box application.         |

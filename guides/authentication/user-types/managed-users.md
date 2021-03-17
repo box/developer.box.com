@@ -13,10 +13,10 @@ subcategory_id: authentication/user-types
 is_index: false
 id: authentication/user-types/managed-users
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication/user-types
 parent_id: authentication/user-types
-next_page_id: authentication/user-types
+next_page_id: authentication/user-types/app-users
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/managed-users.md

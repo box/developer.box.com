@@ -17,7 +17,7 @@ subcategory_id: authentication/user-types
 is_index: true
 id: authentication/user-types
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication
 parent_id: authentication
 next_page_id: ''
