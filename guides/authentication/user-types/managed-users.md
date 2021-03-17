@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 3
 related_endpoints:
   - get_users_id
   - get_users
@@ -16,8 +16,8 @@ type: guide
 total_steps: 3
 sibling_id: authentication/user-types
 parent_id: authentication/user-types
-next_page_id: authentication/user-types/app-users
-previous_page_id: ''
+next_page_id: authentication/user-types
+previous_page_id: authentication/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/managed-users.md
 ---
