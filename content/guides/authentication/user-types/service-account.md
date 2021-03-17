@@ -54,16 +54,15 @@ error message: ERROR HERE.
 
 - Distribution Publishing: upload and share files with any number of users 
   whether or not they are authenticated
-- On Prem Systems and Devices: programmatically ingest content from on-prem
-  systems and connected devices 
-- Content Migration and Monitoring: move content from on-prem to the cloud or
-  between cloud providers  
+- On-Premises Systems and Devices: programmatically ingest content from
+  on-premises systems and connected devices 
+- Content Migration and Monitoring: move content from on-premises to the cloud
+  or between cloud providers  
 - Event Monitoring: monitors events in an enterprise to ensure compliance and or
   trigger workflows based on actions
 - Content Archive: house minimally accessed content
 
-
-## Benfits and Concerns
+## Benefits and Concerns
 
 The benefits of storing content in the folder tree of a Service Account:
 
@@ -73,20 +72,25 @@ The benefits of storing content in the folder tree of a Service Account:
 - prevents inadvertent access to managed user’s content through requiring the
   Service Account to be added as a collaborator
 - Admin-like privileges that can be customized based on scopes
-- facilitates easy data retention and migration through collaboration
+- facilitates data retention and migration through collaboration
 
 <Message type='warning'>
   # Admin Approval
 
-With the right scopes enabled a Service Account can perform many of the tasks that
-Admin Users are able to perform. For this reason JWT applications need explicit
-admin approval before they can be used in an enterprise.
+With the right scopes enabled a Service Account can perform many of the tasks
+that Admin Users are able to perform. For this reason JWT applications need
+explicit Admin approval before they can be used in an enterprise.
 </Message>
 
 The concerns of storing content in the folder tree of a Service Account: 
+
+<!--alex ignore-->
+
 - increases architectural complexity
 - single point of failure
 - difficult to scale centrally located content
+
+<!--alex enable-->
 
 ## Access
 
@@ -115,15 +119,14 @@ default this folder tree is empty because the Service Account does not initially
 own or collaborate on content. This is similar to when you first land on your
 All Files page in a newly provisioned Box account. 
 
-Service Account users can collaborate on content just like any other Box user.
-Simply use the assigned email address to invite them, just as you would any
+Service Account users can collaborate on content. This is done by using the
+assigned email address to invite them, as you would any
 other managed user. Remember, if you are doing this via the API you will need to
 use an access token for a user that already has access to the desired content
-and has the appropriate collaboration permissions (LINK TO DOCS) to invite
-collaborators. Instead of the email address, use the Service Account’s user ID.
-This value is returned by making a call to the get current user endpoint using 
-an access token for the Service Account.
-
+and has the appropriate collaboration permissions to invite collaborators.
+Instead of the email address, use the Service Account’s user ID. This value is
+returned by making a call to the get current user endpoint using an access token
+for the Service Account.
 
 <Message type='notice'>
   It is possible to assign a Service Account an email alias if that is easier to
@@ -143,5 +146,3 @@ Custom App does not.
 - The Service Account can not create or otherwise manage any type of new user
 - The Service Account can only access a subset of APIs related to previewing
   content
-
-
