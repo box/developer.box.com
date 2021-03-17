@@ -54,7 +54,8 @@ above.
 If someone attempts to make API calls using a Service Account access token
 before the application is authorized in the Admin Console they will receive an
 error message: 
-`"error":"unauthorized_client", "error_description": "This app is not authorized by the enterprise"` 
+`"error":"unauthorized_client"`
+`"error_description": "This app is not authorized by the enterprise"` 
 
 ## Use Cases
 
