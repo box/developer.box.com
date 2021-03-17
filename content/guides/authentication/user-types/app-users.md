@@ -13,25 +13,25 @@ related_resources:
 # App Users
 
 App users can only be accessed via the API, meaning they do not have login
-credentials, and are created by a Service Account. Therefore, the application
-must leverage server to server authentication in order to use App Users. App
-users are tied to the application used to create them, and while they can
-collaborate on content outside of the application, the user itself cannot be
-moved under another application.
+credentials, and are created by a [Service Account][sa]. Therefore, the
+application must leverage server to server [authentication][auth] in order to
+use App Users. App Users are tied to the application used to create them, and
+while they can collaborate on content outside of the application, the user
+itself cannot be moved under another application.
 
 ## Creation
 
-App users are created by using a Service Account access token to call the create
-user endpoint The `is_platform_access_only` body parameter needs to be set to true
-or a managed user is created instead.
+App users are created by using a [Service Account][sa] access token to call the
+[create user endpoint][createuser]. The `is_platform_access_only` body parameter
+needs to be set to true or a [managed user][managed] is created instead.
 
 Since every Box account must have an email address, Box assigns one. The format
 will always be `AppUser_AppServiceID_RandomString@boxdevedition.com`. For
 example: `AppUser_1025847_LOCqkWI79A@boxdevedition.com`.
 
 The numbers surrounded by underscores are also unique to the application and
-are called a Service ID. To locate a Service ID in the Developer Console, click
-on on the tile for an application and look at the URL. For example,
+are called a Service ID. To locate a Service ID in the [Developer Console][dc],
+click on on the tile for an application and look at the URL. For example,
 `https://exampl.app.box.com/developers/console/app/1025847` . As you can see,
 this application corresponds to the App User provided in the example above.
 
@@ -63,8 +63,9 @@ data for these users in unique Box user accounts.
 
 ## Access
 
-App users are accessible via the Users & Groups tab of the Admin Console. To
-filter for these users, use the view options button > Role > App Users.
+App users are accessible via the [Users & Groups tab][uag-tab] of the
+[Admin Console][adminconsole]. To filter for these users, use the view options
+button > Role > App Users.
 
 <ImageFrame center shadow border>
 
@@ -78,3 +79,11 @@ App Users cannot see or interact any content in the folder tree of the Service
 Account unless explicitly added as a collaborator. Again, because App Users does
 not have login credentials, they cannot access content outside of the
 Custom Application. 
+
+[sa]: g://authentication/user-types/service-account/
+[auth]: g://authentication/select
+[createuser]: e://post-users
+[managed]: g://authentication/user-types/managed-users/
+[dc]: https://app.box.com/developers/console
+[uag-tab]: https://app.box.com/master/users
+[adminconsole]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide

@@ -16,7 +16,7 @@ A Service Account provides developers with a programmatic authentication
 mechanism for server-side integrations with Box. In other words, an application
 can authenticate to Box as the service, which is represented by a Service
 Account user. A Service Account can then be used to create other application
-specific users, called App Users LINK ADDED HERE.
+specific users, called [App Users][appusers].
 
 <ImageFrame center shadow border>
 
@@ -27,28 +27,35 @@ specific users, called App Users LINK ADDED HERE.
 ## Creation
 
 A unique Box Service Account is automatically generated as soon as an
-application, leveraging server to server authentication, is authorized in the
-Admin Console. From that point forward, the Service Account represents the
-application in the Box enterprise. Since every Box account must have an email
-address, Box assigns one. The format will always be
+application, leveraging server to server authentication, is [authorized][auth]
+in the Admin Console. From that point forward, the Service Account represents
+the application in the Box enterprise. Since every Box account must have an
+email address, Box assigns one. The format will always be
 `AutomationUser_AppServiceID_RandomString@boxdevedition.com`. For example:
 `AutomationUser_567302_6jCo6Pqwo@boxdevedition.com`. This is why you may
 sometimes hear the Service Account referred to as an Automation User. 
 
 Once the service account is generated, a section is automatically added to the
 general tab of the developer console revealing the email address.
-SCREENSHOT ADDED HERE
+
+<ImageFrame center shadow border>
+
+![Service Account Email Address](./serviceaccountindevconsole.png)
+
+</ImageFrame>
 
 The numbers surrounded by underscores are also unique to the application and are
-called a Service ID. To locate a Service ID  in the Developer Console, click on
-the tile for an application and look at the URL. For example,
+called a Service ID. To locate a Service ID  in the [Developer Console][dc],
+click on the tile for an application and look at the URL. For example,
 `https://example.app.box.com/developers/console/app/567302`. As you can see,
 this application corresponds to the Service Account provided in the example
 above. 
 
 If someone attempts to make API calls using a Service Account access token
 before the application is authorized in the Admin Console they will receive an
-error message: ERROR HERE. 
+error message: 
+`"error":"unauthorized_client"`
+`"error_description": "This app is not authorized by the enterprise"` 
 
 ## Use Cases
 
@@ -71,16 +78,8 @@ The benefits of storing content in the folder tree of a Service Account:
 - prevents sharing of credentials between app users and managed users 
 - prevents inadvertent access to managed user’s content through requiring the
   Service Account to be added as a collaborator
-- Admin-like privileges that can be customized based on scopes
+- Admin-like privileges that can be customized based on [scopes][scopes]
 - facilitates data retention and migration through collaboration
-
-<Message type='warning'>
-  # Admin Approval
-
-With the right scopes enabled a Service Account can perform many of the tasks
-that Admin Users are able to perform. For this reason JWT applications need
-explicit Admin approval before they can be used in an enterprise.
-</Message>
 
 The concerns of storing content in the folder tree of a Service Account: 
 
@@ -95,8 +94,8 @@ The concerns of storing content in the folder tree of a Service Account:
 ## Access
 
 Only Primary Admins have the ability to log in as a Service Account through the
-Content Manager in the Admin Console. To do this, use the search bar within the
-Admin Console to locate the name of the application, right click on it, and
+[Content Manager][cm] in the Admin Console. To do this, use the Content Manger's
+search bar to locate the name of the application, right click on it, and
 select “Log in to user’s account”. 
 
 A Service Account can be thought of as having the permissions of a Box Co-Admin.
@@ -107,9 +106,17 @@ users and group tab of the Admin Console.
 ## Permissions
 
 The endpoints that a Service Account access token can successfully interact with
-are determined by the application scopes configured in the Developer Console.
-Depending on the granted scopes, a Service Account may have the ability to
-perform Admin actions. 
+are determined by the application [scopes][scopes] configured in the 
+[Developer Console][dc]. Depending on the granted scopes, a Service Account may
+have the ability to perform Admin actions. 
+
+<Message type='warning'>
+  # Admin Approval
+
+With the right [scopes][scopes] enabled, a Service Account can perform many
+Admin actions. For this reason JWT applications need
+explicit [Admin approval][auth] before they can be used in an enterprise.
+</Message>
 
 ## Folder Tree and Collaboration
 
@@ -125,12 +132,12 @@ other managed user. Remember, if you are doing this via the API you will need to
 use an access token for a user that already has access to the desired content
 and has the appropriate collaboration permissions to invite collaborators.
 Instead of the email address, use the Service Account’s user ID. This value is
-returned by making a call to the get current user endpoint using an access token
-for the Service Account.
+returned by making a call to the [get current user endpoint][getuser] using an
+access token for the Service Account.
 
 <Message type='notice'>
-  It is possible to assign a Service Account an email alias if that is easier to
-  remember when adding collaborations.
+  It is possible to assign a Service Account an email if that is
+  easier to remember when adding collaborations.
 </Message>
 
 ## Box View
@@ -146,3 +153,10 @@ Custom App does not.
 - The Service Account can not create or otherwise manage any type of new user
 - The Service Account can only access a subset of APIs related to previewing
   content
+
+[appusers]: https://developer.box.com/guides/authentication/user-types/app-users/
+[auth]: g://applications/custom-apps/app-approval/
+[dc]: https:/app.box.com/developers/console
+[scopes]: g://api-calls/permissions-and-errors/scopes/
+[cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+[getuser]: e://get-users-me/
