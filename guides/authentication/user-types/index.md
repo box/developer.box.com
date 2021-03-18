@@ -42,7 +42,7 @@ The following is a quick overview of the types of users available in the Box API
 
 |                  | Admin privileges                   | No admin privileges         |
 | ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user | [Admin User][admin-user]           | [Managed User][managed-user] |
+| Traditional user |  Admin User                        | [Managed User][managed-user]|
 | Platform only    | [Service Account][service-account] | [App User][app-user]        |
 
 <!-- markdownlint-enable line-length -->
@@ -51,13 +51,12 @@ The following is a quick overview of the types of users available in the Box API
 
 # What type of user does my application use?
 
-The type of user that an application is authenticated as is highly dependent
-on the type of application created, as well as the type of authentication used
-to create an Access Token.
+The type of user that an application is authenticated as is dependent on the
+type of application created, as well as the type of authentication used to
+create an Access Token.
 
 </Message>
 
-[admin-user]: guide://authentication/user-types/managed-users/#admin--co-admin-roles
-[service-account]: guide://authentication/user-types/app-users/#service-accounts
+[service-account]: guide://authentication/user-types/service-account/
 [managed-user]: guide://authentication/user-types/managed-users
 [app-user]: guide://authentication/user-types/app-users

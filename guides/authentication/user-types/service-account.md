@@ -43,11 +43,18 @@ in the Admin Console. From that point forward, the Service Account represents
 the application in the Box enterprise. Since every Box account must have an
 email address, Box assigns one. The format will always be
 `AutomationUser_AppServiceID_RandomString@boxdevedition.com`. For example:
-`AutomationUser_567302_6jCo6Pqwo@boxdevedition.com`. This is why you may
+`AutomationUser_123456_6jCo6Pqwo@boxdevedition.com`. This is why you may
 sometimes hear the Service Account referred to as an Automation User.
 
-Once the service account is generated, a section is automatically added to the
-general tab of the developer console revealing the email address.
+The numbers surrounded by underscores are also unique to the application and are
+called a Service ID. To locate a Service ID  in the [Developer Console][dc],
+click on the tile for an application and look at the URL. For example,
+`https://example.app.box.com/developers/console/app/123456`. As you can see,
+this application corresponds to the Service Account provided in the example
+above.
+
+Once the Service Account is generated, a section is automatically added to the
+General tab of the [Developer Console][dc] revealing the email address.
 
 <ImageFrame center shadow border>
 
@@ -55,14 +62,7 @@ general tab of the developer console revealing the email address.
 
 </ImageFrame>
 
-The numbers surrounded by underscores are also unique to the application and are
-called a Service ID. To locate a Service ID  in the [Developer Console][dc],
-click on the tile for an application and look at the URL. For example,
-`https://example.app.box.com/developers/console/app/567302`. As you can see,
-this application corresponds to the Service Account provided in the example
-above.
-
-If someone attempts to make API calls using a Service Account access token
+If someone attempts to make API calls using a Service Account Access Token
 before the application is authorized in the Admin Console they will receive an
 error message:
 `"error":"unauthorized_client"`
@@ -102,21 +102,9 @@ The concerns of storing content in the folder tree of a Service Account:
 
 <!--alex enable-->
 
-## Access
-
-Only Primary Admins have the ability to log in as a Service Account through the
-[Content Manager][cm] in the Admin Console. To do this, use the Content Manger's
-search bar to locate the name of the application, right click on it, and
-select “Log in to user’s account”. 
-
-A Service Account can be thought of as having the permissions of a Box Co-Admin.
-Similar to co-admins being unable to manage each other, co-admins cannot log in
-as a Service Account user. Service Accounts are not currently visible in the
-users and group tab of the Admin Console. 
-
 ## Permissions
 
-The endpoints that a Service Account access token can successfully interact with
+The endpoints that a Service Account Access Token can successfully interact with
 are determined by the application [scopes][scopes] configured in the 
 [Developer Console][dc]. Depending on the granted scopes, a Service Account may
 have the ability to perform Admin actions. 
@@ -131,6 +119,20 @@ explicit [Admin approval][auth] before they can be used in an enterprise.
 
 </Message>
 
+## UI Access
+
+Only Primary Admins have the ability to log in as a Service Account through the
+[Content Manager][cm] in the Admin Console. To do this, use the Content Manger's
+search bar to locate the name of the application, right click on it, and
+select “Log in to user’s account”.
+
+A Service Account can be thought of as having the permissions of a Box Co-Admin.
+Similar to co-admins being unable to manage each other, co-admins cannot log in
+as a Service Account user.
+
+Service Accounts are not currently visible in the users and group tab of the
+Admin Console.
+
 ## Folder Tree and Collaboration
 
 Because a Service Account represents an application as a user within the
@@ -139,31 +141,30 @@ default this folder tree is empty because the Service Account does not initially
 own or collaborate on content. This is similar to when you first land on your
 All Files page in a newly provisioned Box account.
 
-Service Account users can collaborate on content. This is done by using the
-assigned email address to invite them, as you would any
-other managed user. Remember, if you are doing this via the API you will need to
-use an access token for a user that already has access to the desired content
-and has the appropriate collaboration permissions to invite collaborators.
-Instead of the email address, use the Service Account’s user ID. This value is
-returned by making a call to the [get current user endpoint][getuser] using an
-access token for the Service Account.
+To collaborate a Service Account on existing content use the assigned email
+address to invite them as you would any other user. If you are instead adding
+the collaboration [via the API][collabapi] you will need to use an Access Token
+for a user that already has access to the content and has the appropriate
+collaboration permissions to invite collaborators. You will also use the Service
+Account’s user ID, which is returned when making a call to the
+[get current user endpoint][getuser] using an Access Token for the Service
+Account.
 
 <Message type='notice'>
 
-It is possible to assign a Service Account an email if that is
+It is possible to assign a Service Account an email alias if that is
 easier to remember when adding collaborations.
 
 </Message>
 
 ## Box View
 
-A Service Account is also automatically generated when an application when a
-Limited Access App is created in the Developer Console. This Service Account
-has some additional restrictions that a Service Account associated with a
-Custom App does not.
+A Service Account is also automatically generated when a Limited Access App is
+created in the [Developer Console][dc]. This Service Account has some additional
+restrictions that a Service Account associated with a Custom App does not.
 
 - All content used within the Limited Access App must be uploaded and owned by
-  this Service Account
+  the Service Account
 - The Service Account can not access any other user's information or content
 - The Service Account can not create or otherwise manage any type of new user
 - The Service Account can only access a subset of APIs related to previewing
@@ -174,4 +175,5 @@ Custom App does not.
 [dc]: https:/app.box.com/developers/console
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+[collabapi]: e://post-collaborations/
 [getuser]: e://get-users-me/

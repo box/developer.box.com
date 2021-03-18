@@ -21,56 +21,54 @@ previous_page_id: authentication/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/managed-users.md
 ---
-# Managed Users
+# Managed & External Users
 
-A Managed User is the most regular Box user. It's an employee of an enterprise
-that can log in to the Box web and mobile apps. There are a few variations of
-Managed Users.
+## Managed Users
 
-## Admin & co-admin roles
-
-A Managed User with an admin or co-admin role is often referred to as an Admin
-User.
-
-The admin and co-admins for a Box Enterprise are the maintainers of the Box
-instance and therefore are granted more access than a regular user. This means
-that Admin Users can manage some resources like groups, users, and metadata
-templates via the API, while regular Managed Users can not.
+Managed Users are accounts in a Box enterprise that Admins and Co-Admins can
+directly edit, delete, enforce security settings, and run reports against
+through the Admin Console. These users consume a standard Box
+license and often, but not always, share the same email domain.
 
 <Message>
 
 # Log in as Admin User
 
-Some applications require an Admin User to log in as the application requires
-permissions that only Admin Users have to properly operate.
+Some applications need permissions that only Admins have in order to
+properly operate and therefore require an Admin to log in.
 
-An example of this would be a security application that monitors an enterprise's
-event feed and takes action on suspicious events. To monitor the enterprise feed
-and take actions on other user's files the application would need admin level
-access.
+An example of this would be a security application that monitors enterprise
+events and takes action on suspicious events. The events endpoint can only
+be used by Admins or a Co-Admin with permission to access reporting.
 
 </Message>
 
-## External Users
-
-An externally managed user, or External User, is a Managed
-User that belongs to a different enterprise than the application.
-
-External users are often encountered when they are collaborated in on content
-owned by a user of the application's enterprise, or when they authorize your
-application via OAuth 2.0.
-
-As External Users do not belong to the application's enterprise they don't
-appear when retrieving a list of all users for an enterprise. Similarly,
-applications can not create, edit, or otherwise manage External Users.
-
-## Limitations & Considerations
+### Limitations & Considerations
 
 There are a few limitations when using Managed Users via the Box API.
 
 - It is not possible to access or a Managed User's data when using
-JWT authentication unless the application has been configured to have
-"Enterprise"-level "Application Access" in the developer dashboard.
+  JWT authentication unless the application has been configured to have
+  "Enterprise"-level Application Access in the [Developer Console][dc].
 - It is not possible to act on behalf of a Managed User's when using
-JWT authentication unless the application has been configured to "Perform
-Actions as Users" or "Generate User Access Tokens".
+  JWT authentication unless the application has been configured to "Perform
+  Actions as Users" or "Generate User Access Tokens".
+
+## External Users
+
+An externally managed user, or External User, is a Managed
+User that belongs to a different enterprise. An external user is often
+encountered with collaborations. External users are often encountered when they
+are collaborated in on content owned by a user of the application's enterprise,
+or when they authorize an OAuth 2.0 application. These users still have
+their own Box accounts, but cannot be managed via the Admin Console.
+
+### Limitations & Considerations
+
+There are a few limitations when using External Users via the Box API.
+
+- Because External Users do not belong to the application's enterprise, they will
+not return when retrieving a list of all users for an enterprise.
+- Applications cannot create, edit, or otherwise manage External Users.
+
+[dc]: https://app.box.com/developers/console

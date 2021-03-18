@@ -23,35 +23,35 @@ source_url: >-
 ---
 # App Users
 
-App users can only be accessed via the API, meaning they do not have login
-credentials, and are created by a [Service Account][sa]. Therefore, the
-application must leverage server to server [authentication][auth] in order to
-use App Users. App Users are tied to the application used to create them, and
-while they can collaborate on content outside of the application, the user
-itself cannot be moved under another application.
+App users are only accessible via the API, meaning they do not have login
+credentials. They can be created by a [Service Account][sa] and therefore are
+only applicable to applications leveraging server to server authentication. App
+Users are tied to the application used to create them, and while they can
+collaborate on content outside of the application, the user itself cannot be
+moved under another application.
 
 ## Creation
 
-App users are created by using a [Service Account][sa] access token to call the
+App users are created using a [Service Account][sa] access token to call the
 [create user endpoint][createuser]. The `is_platform_access_only` body parameter
-needs to be set to true or a [managed user][managed] is created instead.
+must be set to true or a [managed user][managed] is created instead.
 
 Since every Box account must have an email address, Box assigns one. The format
 will always be `AppUser_AppServiceID_RandomString@boxdevedition.com`. For
-example: `AppUser_1025847_LOCqkWI79A@boxdevedition.com`.
+example: `AppUser_1234567_LOCqkWI79A@boxdevedition.com`.
 
 The numbers surrounded by underscores are also unique to the application and
 are called a Service ID. To locate a Service ID in the [Developer Console][dc],
 click on on the tile for an application and look at the URL. For example,
-`https://exampl.app.box.com/developers/console/app/1025847` . As you can see,
-this application corresponds to the App User provided in the example above.
+`https://exampl.app.box.com/developers/console/app/1234567` . As you can see,
+this application corresponds to the App User in the example above.
 
 ## Use Cases
 
 App Users extend the functionality of Box’s Platform to applications serving any
-user, whether or not they have an existing Box account. App users are often used
-by applications that manage their own user authentication, but want to store the
-data for these users in unique Box user accounts.
+user, regardless of if they have an existing Box account. App users are often
+used by applications that manage their own user authentication, but want to
+store the data in unique Box user accounts.
 
 - Customer Portals: Websites or applications where clients or patients can log
   in to access information provided by employees at a company and/or to store and
@@ -70,19 +70,13 @@ data for these users in unique Box user accounts.
 
 ## Benefits & Concerns
 
+The benefits of leveraging App Users:
+
 - Actions can be fully audited through user activity report and events endpoint
 
-## Access
+The concerns leveraging App Users:
 
-App users are accessible via the [Users & Groups tab][uag-tab] of the
-[Admin Console][adminconsole]. To filter for these users, use the view options
-button > Role > App Users.
-
-<ImageFrame center shadow border>
-
-![Filter for App Users](./app_users_filter.png)
-
-</ImageFrame>
+- TBD
 
 ## Permissions
 
@@ -91,10 +85,38 @@ Account unless explicitly added as a collaborator. Again, because App Users does
 not have login credentials, they cannot access content outside of the
 Custom Application.
 
+## UI Access
+
+App users are accessible via the [Users & Groups tab][uag-tab] of the Admin
+Console. To filter for these users, use the view options button > Role >
+App Users.
+
+<ImageFrame center shadow border>
+
+![Filter for App Users](./app_users_filter.png)
+
+</ImageFrame>
+
+App Users are also accessible through the [Content Manager][cm] in the Admin
+Console.
+
+## Folder Tree and Collaboration
+
+Each App User has its own folder tree and content ownership capabilities. By
+default this folder tree is empty because they do not initially own or
+collaborate on content. This is similar to when you first land on your All Files
+page in a newly provisioned Box account.
+
+To collaborate an App User on existing content use the assigned email
+address to invite them as you would any other user. If you are instead adding
+the collaboration [via the API][collabapi] you will need to use an Access Token
+for a user that already has access to the content and has the appropriate
+collaboration permissions to invite collaborators.
+
 [sa]: g://authentication/user-types/service-account/
-[auth]: g://authentication/select
 [createuser]: e://post-users
 [managed]: g://authentication/user-types/managed-users/
 [dc]: https://app.box.com/developers/console
-[uag-tab]: https://app.box.com/master/users
-[adminconsole]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
+[uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
+[cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+[collabapi]: e://post-collaborations/
