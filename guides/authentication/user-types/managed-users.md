@@ -43,9 +43,7 @@ be used by Admins or a Co-Admin with permission to access reporting.
 
 </Message>
 
-### Limitations & Considerations
-
-There are a few limitations when using Managed Users via the Box API.
+### Limitations
 
 - It is not possible to access or a Managed User's data when using
   JWT authentication unless the application has been configured to have
@@ -63,9 +61,7 @@ are collaborated in on content owned by a user of the application's enterprise,
 or when they authorize an OAuth 2.0 application. These users still have
 their own Box accounts, but cannot be managed via the Admin Console.
 
-### Limitations & Considerations
-
-There are a few limitations when using External Users via the Box API.
+### Limitations
 
 - Because External Users do not belong to the application's enterprise, they will
 not return when retrieving a list of all users for an enterprise.
