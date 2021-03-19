@@ -17,11 +17,11 @@ alias_paths:
 # User Types
 
 There are a few types of users that an application might encounter. The key
-differences the admin-level permissions of a user, and whether a user represents
+differences the Admin-level permissions of a user, and whether a user represents
 a real Box user or a virtual user that is only visible to platform applications.
 
 The type of user affects the type of data an application has access to, as a
-user with admin permissions will have different permissions than a regular user.
+user with Admin permissions will have different permissions than a regular user.
 
 ## Overview
 

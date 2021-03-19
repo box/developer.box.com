@@ -57,7 +57,7 @@ store the data in unique Box user accounts.
  Moreover, user-based data from our user-reporting capabilities allows
  developers to leverage analytic tools to better understand user behavior.
 
-## Benefits & Concerns
+## Considerations
 
 The benefits of leveraging App Users:
 

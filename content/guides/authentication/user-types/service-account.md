@@ -69,7 +69,7 @@ error message:
   trigger workflows based on actions
 - Content Archive: house minimally accessed content
 
-## Benefits and Concerns
+## Considerations
 
 The benefits of storing content in the folder tree of a Service Account:
 
