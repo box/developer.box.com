@@ -109,9 +109,9 @@ explicit [Admin approval][auth] before they can be used in an enterprise.
 ## UI Access
 
 Only Primary Admins have the ability to log in as a Service Account through the
-[Content Manager][cm] in the Admin Console. To do this, use the Content Manger's
-search bar to locate the name of the application, right click on it, and
-select “Log in to user’s account”. 
+[Content Manager][cm] in the Admin Console. To do this, use the Content
+Manager's search bar to locate the name of the application, right click on it,
+and select “Log in to user’s account”. 
 
 A Service Account can be thought of as having the permissions of a Box Co-Admin.
 Similar to co-admins being unable to manage each other, co-admins cannot log in
