@@ -53,30 +53,20 @@ user, regardless of if they have an existing Box account. App users are often
 used by applications that manage their own user authentication, but want to
 store the data in unique Box user accounts.
 
-- Customer Portals: Websites or applications where clients or patients can log
+- *Customer Portals*: Websites or applications where clients or patients can log
   in to access information provided by employees at a company and/or to store and
   retrieve their own sensitive documents.
-- Vendor Portals: Content distribution sites for companies to provide materials
+- *Vendor Portals*: Content distribution sites for companies to provide materials
   including marketing collateral, price lists, product information, sales
   agreements or contracts, and other documents to vendors. Box's groups and
   permission model allow for companies to organize content for partners based on
   partner criteria and/or tier.
-- Branded Customer Facing Applications: The ability to create App Users on
+- *Branded Customer Facing Applications*: The ability to create App Users on
  behalf of an end-user allows companies to build seamless customer-facing
  features such as permissions, auditing, and reporting. This is particularly
  valuable for regulated industries such as Financial Services and Healthcare.
- Moreover, user-based data from our user-reporting capabilities allows
+ Moreover, user-based data from our [reporting capabilities][events] allows
  developers to leverage analytic tools to better understand user behavior.
-
-## Considerations
-
-The benefits of leveraging App Users:
-
-- Actions can be fully audited through user activity report and events endpoint
-
-The concerns leveraging App Users:
-
-- TBD
 
 ## Permissions
 
@@ -117,6 +107,7 @@ collaboration permissions to invite collaborators.
 [createuser]: e://post-users
 [managed]: g://authentication/user-types/managed-users/
 [dc]: https://app.box.com/developers/console
+[events]: e://get-events/
 [uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
 [collabapi]: e://post-collaborations/

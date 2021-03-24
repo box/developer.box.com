@@ -45,12 +45,12 @@ be used by Admins or a Co-Admin with permission to access reporting.
 
 ### Limitations
 
-- It is not possible to access or a Managed User's data when using
-  JWT authentication unless the application has been configured to have
-  "Enterprise"-level Application Access in the [Developer Console][dc].
-- It is not possible to act on behalf of a Managed User's when using
-  JWT authentication unless the application has been configured to "Perform
-  Actions as Users" or "Generate User Access Tokens".
+- Server to Server applications must have "App + Enterprise" application access
+  configured in the [Developer Console][dc] to access Managed User's content. 
+
+- Server to Server application cannot act on behalf of a Managed Users when
+  unless the application is configured to "Perform Actions as Users" or
+  "Generate User Access Tokens".
 
 ## External Users
 

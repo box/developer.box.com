@@ -42,7 +42,7 @@ The following is a quick overview of the types of users available in the Box API
 
 |                  | Admin privileges                   | No admin privileges         |
 | ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user |  Admin User                        | [Managed User][managed-user]|
+| Traditional user | [Admin User][admin]                | [Managed User][managed-user]|
 | Platform only    | [Service Account][service-account] | [App User][app-user]        |
 
 <!-- markdownlint-enable line-length -->
@@ -57,6 +57,7 @@ create an Access Token.
 
 </Message>
 
+[admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 [service-account]: guide://authentication/user-types/service-account/
 [managed-user]: guide://authentication/user-types/managed-users
 [app-user]: guide://authentication/user-types/app-users
