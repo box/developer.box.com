@@ -38,14 +38,14 @@ into issues regarding large results sets. More on this next.
 
 There are no immediate plans to start supporting these queries in the future.
 
-## Indexes for large result sets
+## Indices for large result sets
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
 when the metadata template has been applied to more than 10,000 files or folders.
 
 <CTA to='g://metadata/queries/indexes'>
 
-Learn about creating and using search indexes
+Learn about creating and using search indices
 
 </CTA>
 

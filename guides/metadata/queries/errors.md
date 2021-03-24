@@ -88,7 +88,7 @@ search query.
 
 <CTA to='g://metadata/queries/indexes'>
 
-Learn more about creating and using indexes
+Learn more about creating and using indices
 
 </CTA>
 
