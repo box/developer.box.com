@@ -61,7 +61,7 @@ the information for the `​from`, `query`, and `order_by​` parameters.
 
 ## Get list of created indices
 
-A obtain a list of indices created for a given metadata template
+To obtain a list of indices created for a given metadata template
 and scope, use the [list metadata query indices][mdq-get-indices] endpoint. 
 
 When making a request to the endpoint, supply the scope of the template (either
