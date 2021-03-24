@@ -16,7 +16,7 @@ alias_paths: []
 
 Server-side authentication using App Tokens is an alternative way to
 authenticate to the Box API with fixed, long-lived Access Tokens that are
-restricted to the application's [S]ervice Account][sa].
+restricted to the application's [Service Account][sa].
 
 ## App Token Restrictions
 
