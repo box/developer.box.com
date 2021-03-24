@@ -27,10 +27,10 @@ specific users, called [App Users][appusers].
 ## Creation
 
 A unique Box Service Account is automatically generated as soon as an
-application, leveraging server to server authentication, is [authorized][auth]
-in the Admin Console. From that point forward, the Service Account represents
-the application in the Box enterprise. Since every Box account must have an
-email address, Box assigns one. The format will always be
+application, leveraging server authentication, is [authorized][auth] in the
+Admin Console. From that point forward, the Service Account represents the 
+application in the Box enterprise. Since every Box account must have an email
+address, Box assigns one. The format will always be
 `AutomationUser_AppServiceID_RandomString@boxdevedition.com`. For example:
 `AutomationUser_123456_6jCo6Pqwo@boxdevedition.com`. This is why you may
 sometimes hear the Service Account referred to as an Automation User. 
@@ -68,28 +68,6 @@ error message:
 - Event Monitoring: monitors events in an enterprise to ensure compliance and or
   trigger workflows based on actions
 - Content Archive: house minimally accessed content
-
-## Considerations
-
-The benefits of storing content in the folder tree of a Service Account:
-
-- content storage for your application
-- tight control over data location and sharing
-- prevents sharing of credentials between app users and managed users 
-- prevents inadvertent access to managed user’s content through requiring the
-  Service Account to be added as a collaborator
-- Admin-like privileges that can be customized based on [scopes][scopes]
-- facilitates data retention and migration through collaboration
-
-The concerns of storing content in the folder tree of a Service Account: 
-
-<!--alex ignore-->
-
-- increases architectural complexity
-- single point of failure
-- difficult to scale centrally located content
-
-<!--alex enable-->
 
 ## Permissions
 
