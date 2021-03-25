@@ -142,7 +142,8 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](g://authentication/user-types) Access Token.
+- A valid [Service Account](g://authentication/user-types/service-account/)
+  Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
 
@@ -409,4 +410,4 @@ using `openWith.addListener('execute', callback)` and
 [tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
 [custom-domains]: g://embed/ui-elements/custom-domains
 [safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
-[service-account]: g://authentication/user-types/
+[service-account]: g://authentication/user-types/service-account/
