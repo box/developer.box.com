@@ -15,7 +15,7 @@ previous_page_id: metadata/queries
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/6-indexes.md
 ---
-# Indexes
+# Indices
 
 Due to scale considerations a metadata query might return a `HTTP 403` error
 when the metadata template has been applied to more than 10,000 files or
@@ -73,4 +73,17 @@ the information for the `​from`, `query`, and `order_by​` parameters.
 
 <!-- markdownlint-enable line-length -->
 
+## Get list of created indices
+
+To obtain a list of indices created for a given metadata template
+and scope, use the [list metadata query indices][mdq-get-indices] endpoint.
+
+When making a request to the endpoint, supply the scope of the template (either
+global or enterprise), as well as the template key.
+
+<Samples id='get_metadata_query_indices'>
+
+</Samples>
+
 [support]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
+[mdq-get-indices]: endpoint://get_metadata_query_indices
