@@ -915,7 +915,7 @@ The code in this guide is available on [GitHub][samples].
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
-[sa]: g://authentication/user-types/app-users/#service-accounts
+[sa]: g://authentication/user-types/service-account/
 [configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
 [keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant

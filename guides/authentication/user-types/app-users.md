@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints:
   - get_users_id
   - get_users
@@ -13,58 +13,101 @@ subcategory_id: authentication/user-types
 is_index: false
 id: authentication/user-types/app-users
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication/user-types
 parent_id: authentication/user-types
-next_page_id: authentication/user-types
-previous_page_id: ''
+next_page_id: authentication/user-types/managed-users
+previous_page_id: authentication/user-types/service-account
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/app-users.md
 ---
-# App Users & Service Accounts
+# App Users
 
-An App User is a virtual type of user that has no login credentials and
-can only access Box via the API. This user can be used by applications that
-manage their own user authentication yet want to store the data for these users
-into separate Box user accounts.
+App users are only accessible via the API, meaning they do not have login
+credentials. They can be created by a [Service Account][sa] and therefore are
+only applicable to applications leveraging server to server authentication. App
+Users are tied to the application used to create them, and while they can
+collaborate on content outside of the application, the user itself cannot be
+moved under another application.
 
-Basic App Users can only be created when developing a Custom App using JWT
-authentication and the user is very much tied to the application that created it.
+## Creation
 
-## Service Accounts
+App users are created using a [Service Account][sa] access token to call the
+[create user endpoint][createuser]. The `is_platform_access_only` body parameter
+must be set to true or a [managed user][managed] is created instead.
 
-A Service Account is a unique kind of App User that is similar to an Admin User
-yet has no login credentials and can only access Box via the API.
+Since every Box account must have an email address, Box assigns one. The format
+will always be `AppUser_AppServiceID_RandomString@boxdevedition.com`. For
+example: `AppUser_1234567_LOCqkWI79A@boxdevedition.com`.
 
-Service Accounts are automatically created when a Custom App is created in the
-developer console with the JWT authentication method. When these applications
-authenticate the default user it authenticates as is the Service Account for
-that application.
+The numbers surrounded by underscores are also unique to the application and
+are called a Service ID. To locate a Service ID in the [Developer Console][dc],
+click on on the tile for an application and look at the URL. For example,
+`https://exampl.app.box.com/developers/console/app/1234567` . As you can see,
+this application corresponds to the App User in the example above.
 
-With the right scopes configured Service Accounts can edit enterprise
-permissions and manage both Managed Users and App Users.
+## Use Cases
 
-<Message type='warning'>
+App Users extend the functionality of Box’s Platform to applications serving any
+user, regardless of if they have an existing Box account. App users are often
+used by applications that manage their own user authentication, but want to
+store the data in unique Box user accounts.
 
-# Admin Approval
+- *Customer Portals*: Websites or applications where clients or patients can log
+  in to access information provided by employees at a company and/or to store and
+  retrieve their own sensitive documents.
+- *Vendor Portals*: Content distribution sites for companies to provide materials
+  including marketing collateral, price lists, product information, sales
+  agreements or contracts, and other documents to vendors. Box's groups and
+  permission model allow for companies to organize content for partners based on
+  partner criteria and/or tier.
+- *Branded Customer Facing Applications*: The ability to create App Users on
+ behalf of an end-user allows companies to build seamless customer-facing
+ features such as permissions, auditing, and reporting. This is particularly
+ valuable for regulated industries such as Financial Services and Healthcare.
+ Moreover, user-based data from our [reporting capabilities][events] allows
+ developers to leverage analytic tools to better understand user behavior.
 
-With the right scopes enabled a Service Account can perform many of the tasks that
-Admin Users are able to perform. For this reason JWT applications need explicit
-admin approval before they can be used in an enterprise.
+## Permissions
 
-</Message>
+App Users cannot see or interact any content in the folder tree of the Service
+Account unless explicitly added as a collaborator. Again, because App Users does
+not have login credentials, they cannot access content outside of the
+Custom Application.
 
-## Box View / Partner Integrations
+## UI Access
 
-A Service Account is also automatically tied to an application when a Partner
-Integration (for Box View) is created in the developer console.
+App users are accessible via the [Users & Groups tab][uag-tab] of the Admin
+Console. To filter for these users, use the view options button > Role >
+App Users.
 
-This Service Account has some additional restrictions that a Service Account
-within a Custom App does not.
+<ImageFrame center shadow border>
 
-- All content used within the Partner Integration must be uploaded and owned by
-this Service Account
-- The Service Account can not access any other user's information or content
-- The Service Account can not create or otherwise manage any type of new user
-- The Service Account can only access a subset of APIs related to previewing
-content
+![Filter for App Users](./app_users_filter.png)
+
+</ImageFrame>
+
+App Users are also accessible through the [Content Manager][cm] in the Admin
+Console.
+
+## Folder Tree and Collaboration
+
+Each App User has its own folder tree and content ownership capabilities. By
+default this folder tree is empty because they do not initially own or
+collaborate on content. This is similar to when you first land on your All Files
+page in a newly provisioned Box account.
+
+To collaborate an App User on existing content use the assigned email
+address to invite them as you would any other user. If you are instead adding
+the collaboration [via the API][collabapi] you will need to use an Access Token
+for a user that already has access to the content and has the appropriate
+collaboration permissions to invite collaborators.
+
+[sa]: g://authentication/user-types/service-account/
+[createuser]: e://post-users
+[managed]: g://authentication/user-types/managed-users/
+[dc]: https://app.box.com/developers/console
+[events]: e://get-events/
+[uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
+[cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+[collabapi]: e://post-collaborations/
