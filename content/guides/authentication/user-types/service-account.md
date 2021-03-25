@@ -65,7 +65,7 @@ error message:
   on-premises systems and connected devices 
 - *Content Migration and Monitoring*: move content from on-premises to the cloud
   or between cloud providers  
-- *Event Monitorin*: monitors events in an enterprise to ensure compliance and or
+- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or
   trigger workflows based on actions
 - *Content Archive*: house minimally accessed content
 
