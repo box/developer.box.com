@@ -422,4 +422,4 @@ Lastly, we make a call to collaborate content with the group via the group ID.
 </Observe>
 
 [step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
-[service-account]: g://authentication/user-types/app-users/
+[service-account]: g://authentication/user-types/service-account/

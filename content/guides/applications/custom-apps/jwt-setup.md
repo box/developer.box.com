@@ -199,7 +199,7 @@ section at the bottom of the **Configuration** tab in the
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [user-types]: g://authentication/user-types
-[sa]: g//authentication/user-types/app-users/#service-accounts
+[sa]: g//authentication/user-types/service-accounts
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt
