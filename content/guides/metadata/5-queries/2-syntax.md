@@ -111,7 +111,7 @@ the `ILIKE` operator.
 The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
 be used on templates with metadata instance counts greater than 10,000 items.
 Queries of this size require an [index](g://metadata/queries/indexes) and these
-operators are not compatible with indexes.
+operators are not compatible with indices.
 
 </Message>
 
