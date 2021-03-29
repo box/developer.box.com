@@ -21,14 +21,10 @@ of [commands][commands].
 
 This guide will take you through the following steps.
 
-1. Create and configure a JWT application
-2. App authorization
-3. CLI installation
-4. CLI configuration to point to application created in step 1 
-5. Confirm configuration and user associated with Access Token
-6. Building commands and using help feature
-7. Option flags and bulk commands
-8. Examples by use case
+1. Create, configure, and authorize a Box application
+2. Install and configure the CLI
+3. Run commands with the CLI
+4. Next steps
 
 <Next>
   I am ready to get started
