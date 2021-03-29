@@ -6,7 +6,7 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/cli-configuration
 rank: 4
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: ''
