@@ -59,15 +59,15 @@ error message:
 
 ## Use Cases
 
-- Distribution Publishing: upload and share files with any number of users 
+- *Distribution Publishing*: upload and share files with any number of users 
   whether or not they are authenticated
-- On-Premises Systems and Devices: programmatically ingest content from
+- *On-Premises Systems and Devices*: programmatically ingest content from
   on-premises systems and connected devices 
-- Content Migration and Monitoring: move content from on-premises to the cloud
+- *Content Migration and Monitoring*: move content from on-premises to the cloud
   or between cloud providers  
-- Event Monitoring: monitors events in an enterprise to ensure compliance and or
+- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or
   trigger workflows based on actions
-- Content Archive: house minimally accessed content
+- *Content Archive*: house minimally accessed content
 
 ## Permissions
 

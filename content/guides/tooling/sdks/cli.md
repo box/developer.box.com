@@ -68,8 +68,12 @@ box folders:get 0
 <Message>
   The root folder for any account always has ID `0`. A JWT application does not
   automatically authenticate as an actual managed user, instead it uses a
+<<<<<<< HEAD
   Service Account. See 
   [User Types](g://authentication/user-types/service-account/]for more details.
+=======
+  Service Account.
+>>>>>>> ef8af5b23478aeee3b5fde3037ed19e649b4b8b1
 </Message>
 
 ## Setup & Commands
