@@ -6,10 +6,10 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/install-and-configure
 rank: 2
-total_steps: 5
+total_steps: 2
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/cli-installation
+next_page_id: ''
 previous_page_id: tooling/cli/quick-start/create-jwt-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md

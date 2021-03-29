@@ -8,7 +8,7 @@ subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli/quick-start
 rank: 0
-total_steps: 5
+total_steps: 2
 sibling_id: tooling/cli
 parent_id: ''
 next_page_id: tooling/cli/quick-start/create-jwt-app

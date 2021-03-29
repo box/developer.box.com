@@ -6,10 +6,10 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/create-jwt-app
 rank: 1
-total_steps: 5
+total_steps: 2
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/app-authorization
+next_page_id: tooling/cli/quick-start/install-and-configure
 previous_page_id: tooling/cli/quick-start
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/1-create-jwt-app.md
