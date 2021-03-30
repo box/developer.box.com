@@ -27,7 +27,7 @@ Box APIs from your terminal window or command prompt.
 
 ## Quick Start
 
-To get started, see our quickstart guide. 
+To get started, see our guide. 
 
 ## Setup & Commands
 
@@ -40,7 +40,6 @@ advanced CLI user.
 * [Setup autocomplete][cli-autocomplete]
 * [Configure another app][cli-add-config]
 * [Switch accounts][cli-switch]
-* [A full list of commands][cli-commands]
 
 [cli]: https://github.com/box/boxcli
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
