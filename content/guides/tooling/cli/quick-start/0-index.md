@@ -24,7 +24,8 @@ This guide will take you through the following steps.
 1. Create, configure, and authorize a Box application
 2. Install and configure the CLI
 3. Run commands with the CLI
-4. Next steps
+4. Use flags and bulk commands
+5. Next steps
 
 <Next>
   I am ready to get started
