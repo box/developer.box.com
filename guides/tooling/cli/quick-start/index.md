@@ -10,7 +10,7 @@ id: tooling/cli/quick-start
 rank: 0
 total_steps: 2
 sibling_id: tooling/cli
-parent_id: ''
+parent_id: tooling/cli
 next_page_id: tooling/cli/quick-start/create-jwt-app
 previous_page_id: ''
 source_url: >-
@@ -18,18 +18,18 @@ source_url: >-
 ---
 # Learn to use the Box CLI
 
-<ImageFrame center>
-
-![CLI](./cli-code.png)
-
-</ImageFrame>
-
 <!--alex ignore executed-->
 
 The Box CLI is a user-friendly command line tool which allows both technical and
 non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
+
+<ImageFrame center>
+
+![CLI](./cli-code.png)
+
+</ImageFrame>
 
 ## Overview
 
