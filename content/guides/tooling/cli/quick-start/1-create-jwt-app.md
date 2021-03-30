@@ -8,12 +8,10 @@ hide_in_page_nav: true
 The first step to using the CLI is creating an application in the
 [Developer Console][dc], which the CLI can use behind the scenes to make API 
 calls. If you would like to associate your CLI with an existing JWT application
-you can skip this step. 
+you can skip this step. However, you will want to ensure that the following
+options are set in the Configuration section of your application.
 
-<Message warning>
-  Server Authentication (with JWT) is the only authentication method currently
-  supported by the Box CLI and requires Admin authorization before use. 
-</Message>
+FINISH THIS SECTION LATER. 
 
 ## Setup a JWT application
 
@@ -24,11 +22,42 @@ you can skip this step.
 2. Click **Create New App** > **Custom App** > **Server Authentication
    (with JWT)** > **Create App**
 
+<Message warning>
+  Server Authentication (with JWT) is the only authentication method currently
+  supported by the Box CLI and requires Admin authorization before use. 
+</Message>
+
 ## Configure the application
 
 This will bring you to the application’s configuration page where you need to
 choose its access and permissions. Again, keep in mind that because of the
 application’s authentication type, it will require Admin approval. 
+
+At a minimum, you will need to FILL THIS IN LATER.
+
+## Download Required Data
+
+The CLI needs a configuration file stored locally in order to make API calls.
+
+To download the configuration file, visit the **Configuration** tab in the 
+[Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
+send you through 2FA verification before automatically downloading the
+configuration file for your application.
+
+<Message warning>
+   For security reasons 2FA must be enabled on your Box account to successfully
+   generate a public/private keypair.
+</Message>
+
+Locate the downloaded file on your machine which has a default name in the
+format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
+choose to rename it. This guide assumes the file is renamed to `config.json`. 
+
+<Message warning>
+   It is critical you place the file to a location where it will not be
+   inadvertently deleted or moved. If this occurs you will need to repeat the
+   steps below to reconfigure the CLI to point to the file. 
+</Message>
 
 ## Authorize the application
 
@@ -49,11 +78,11 @@ authorized.
 
 ## Summary
 
-* You created a new JWT application to associate with the CLI
-* You configured the applications access and scopes
-* You had a Box Admin authorize the application
+* You created a new or have an existing JWT application to assocaited with the
+  CLI, which is authorized by an Admin.
+* You downloaded your application's configuration file
 
-<Next>I completed this step</Next>
+<Next>My app is authorized and I download my configuration file</Next>
 
 [dc]: https://app.box.com/developers/console
 [sa]: g://authentication/user-types/service-account/
