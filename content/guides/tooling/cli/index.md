@@ -1,5 +1,4 @@
 ---
-rank: 1
 related_endpoints: []
 related_guides: 
   - authentication/jwt
