@@ -13,7 +13,7 @@ type: guide
 total_steps: 4
 sibling_id: tooling/postman
 parent_id: tooling/postman
-next_page_id: tooling/postman/make-api-call
+next_page_id: tooling/postman
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/install.md

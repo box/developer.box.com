@@ -2,7 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
-icon: FiSmartphone
+icon: FiCode
 category_id: tooling
 subcategory_id: tooling/cli
 is_index: true
