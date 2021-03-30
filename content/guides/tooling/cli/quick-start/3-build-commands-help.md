@@ -35,34 +35,46 @@ object.
   ![Help](./folders_help.png)
 </ImageFrame>
 
-Discover the required arguments for creating a folder with 
-`box folders:create --help`
+Discover the required arguments for creating a folder:
+
+```bash
+box folders:create --help
+```
 
 <ImageFrame center>
   ![Help](./folders_create_help.png)
 </ImageFrame>
 
 <!--alex ignore execute-->
-Execute `box folders:create 0 "My CLI Folder” ` and note the folder ID in the
-response. 
+Execute the command below and note the folder ID returned in the response. 
+
+```bash
+box folders:create 0 "My CLI Folder"
+``` 
 
 <Message type=tip>
-   The root level, All Files page, is always represented by folder ID 0.
+   The root level of the folder tree, the All Files page, is always represented
+   by folder ID 0.
 </Message> 
 
-Log into your Box account. Can you see this folder? Why not? 
+Now, log into your Box account. Can you see this folder in your folder tree? 
+Why not? 
 
 <!--alex ignore execute-->
-Now execute the command: `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID` 
+Execute the command below. 
 
-Return to your All Files page. You should now be able to see this folder. 
+```bash
+box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID
+```
+
+Return to your All Files page. Can you see the folder now? 
 
 ## Summary
 
 * You used the help feature to create a folder
 * You added a collaboration to the folder and viewed it in Box
 
-<Next>I made my first folder</Next>
+<Next>I created my first folder and added a collaboration</Next>
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md

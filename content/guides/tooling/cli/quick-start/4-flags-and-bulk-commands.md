@@ -7,12 +7,15 @@ hide_in_page_nav: true
 
 ## As User Header
 
-To use the as-user header, add `--as-user=USERID` to the end of the command. 
+To use the [as-user header][asuser], add `--as-user=USERID` to the end of the
+command. 
 
-For example, the following command will create a folder at the root level in
-user ID 123456’s account.
+For example, the following command will create a folder called `Example_Folder`
+at the root level in user ID 123456’s account.
 
-`box folders:create 0 examplefolder --as-user=123456` 
+```bash
+box folders:create 0 Example_Folder --as-user=123456
+```
 
 <Message type=warning>
    Only Service Account’s and Admin’s are able to use the as-user header.
@@ -23,8 +26,9 @@ user ID 123456’s account.
 
 ## Bulk Commands
 
-Executing bulk commands requires adding `--bulk-file-path=bulk-file-path` to
-your command. 
+Executing bulk commands requires adding `--bulk-file-path=pathtocsv` to
+a command, where `pathtocsv` is replaced with a local path to a csv file
+containing the necessary information. 
 
 ## Summary
 
@@ -33,3 +37,5 @@ your command.
 * You downloaded your application's configuration file
 
 <Next>I successfully used a bulk command</Next>
+
+[asuser]: g://authentication/jwt/as-user/

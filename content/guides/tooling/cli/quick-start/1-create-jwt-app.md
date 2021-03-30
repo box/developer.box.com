@@ -5,7 +5,7 @@ hide_in_page_nav: true
 
 # Create, Configure and Authorize a Box Application
 
-The first step to using the CLI is creating an application in the
+The first step to using the CLI is creating a Box application in the
 [Developer Console][dc], which the CLI can use behind the scenes to make API 
 calls. If you would like to associate your CLI with an existing JWT application
 you can skip this step. However, you will want to ensure that the following
@@ -20,11 +20,11 @@ FINISH THIS SECTION LATER.
    your All Files page, you can add it to your account by clicking [here][dc].
 
 2. Click **Create New App** > **Custom App** > **Server Authentication
-   (with JWT)** > **Create App**
+   (with JWT)** > name the application > **Create App**
 
 <Message warning>
   Server Authentication (with JWT) is the only authentication method currently
-  supported by the Box CLI and requires Admin authorization before use. 
+  supported by the Box CLI and always requires Admin authorization before use. 
 </Message>
 
 ## Configure the application
@@ -54,9 +54,9 @@ format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
 choose to rename it. This guide assumes the file is renamed to `config.json`. 
 
 <Message warning>
-   It is critical you place the file to a location where it will not be
+   It is critical you place the file in a location where it will not be
    inadvertently deleted or moved. If this occurs you will need to repeat the
-   steps below to reconfigure the CLI to point to the file. 
+   step 2 to reconfigure the CLI. 
 </Message>
 
 ## Authorize the application
@@ -78,13 +78,14 @@ authorized.
 
 ## Summary
 
-* You created a new or have an existing JWT application to associated with the
-  CLI, which is authorized by an Admin.
-* You downloaded your application's configuration file
+* You created a new or have an existing JWT application to associate with the
+  CLI, which is authorized.
+* You downloaded your application's configuration file and moved it to a safe
+  location on your machine.
 
-<Next>My app is authorized and I download my configuration file</Next>
+<Next>My app is authorized and I downloaded my configuration file</Next>
 
-[dc]: https://app.box.com/developers/console
+[dc]: https://account.box.com/developers/console
 [sa]: g://authentication/user-types/service-account/
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [ag]: g://applications/custom-apps/app-approval/

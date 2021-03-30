@@ -5,8 +5,8 @@ hide_in_page_nav: true
 
 # CLI Installation and Configuration
 
-Installers are available for Windows and macOS. The raw source-code is
-available for building the CLI in other environments.
+Installers are available for Windows and macOS. However, the raw source-code is
+available if you would like to build the CLI in other environments.
 
 ## Windows & macOS Installers
 
