@@ -78,7 +78,7 @@ authorized.
 
 ## Summary
 
-* You created a new or have an existing JWT application to assocaited with the
+* You created a new or have an existing JWT application to associated with the
   CLI, which is authorized by an Admin.
 * You downloaded your application's configuration file
 
