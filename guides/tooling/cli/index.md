@@ -1,5 +1,4 @@
 ---
-rank: 1
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -18,6 +17,7 @@ category_id: tooling
 subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli
+rank: 0
 type: guide
 total_steps: 0
 sibling_id: tooling
