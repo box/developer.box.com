@@ -6,18 +6,18 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/install-and-configure
 rank: 2
-total_steps: 2
+total_steps: 4
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
-next_page_id: ''
+next_page_id: tooling/cli/quick-start/build-commands-help
 previous_page_id: tooling/cli/quick-start/create-jwt-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md
 ---
 # CLI Installation and Configuration
 
-Installers are available for Windows and macOS. The raw source-code is
-available for building the CLI in other environments.
+Installers are available for Windows and macOS. However, the raw source-code is
+available if you would like to build the CLI in other environments.
 
 ## Windows & macOS Installers
 

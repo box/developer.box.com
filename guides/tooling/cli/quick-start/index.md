@@ -8,7 +8,7 @@ subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli/quick-start
 rank: 0
-total_steps: 2
+total_steps: 4
 sibling_id: tooling/cli
 parent_id: tooling/cli
 next_page_id: tooling/cli/quick-start/create-jwt-app
@@ -38,7 +38,8 @@ This guide will take you through the following steps.
 1. Create, configure, and authorize a Box application
 2. Install and configure the CLI
 3. Run commands with the CLI
-4. Next steps
+4. Use flags and bulk commands
+5. Next steps
 
 <Next>
 
