@@ -7,15 +7,15 @@ icon: FiSmartphone
 
 # Learn to use the Box CLI
 
-<ImageFrame center>
-  ![CLI](./cli-code.png)
-</ImageFrame>
-
 <!--alex ignore executed-->
 The Box CLI is a user-friendly command line tool which allows both technical and
 non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands]. 
+
+<ImageFrame center>
+  ![CLI](./cli-code.png)
+</ImageFrame>
 
 ## Overview
 
