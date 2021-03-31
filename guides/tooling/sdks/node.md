@@ -14,10 +14,10 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/node
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks
+next_page_id: tooling/sdks/cli
 previous_page_id: tooling/sdks/python
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/node.md

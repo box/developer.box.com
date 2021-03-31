@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 1
 related_endpoints: []
 related_guides:
   - tooling/sdks
@@ -15,7 +15,7 @@ type: guide
 total_steps: 4
 sibling_id: tooling
 parent_id: tooling
-next_page_id: tooling/postman/install
+next_page_id: tooling/postman/make-api-call
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/index.md
