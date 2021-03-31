@@ -12,15 +12,16 @@ If you do not see a command for an endpoint you need, you can build a
 
 <Message type=tip>
    Use in conjunction with reference documentation to see information the 
-   help command won't provide. This includes restrictions, token permission
+   help command won't provide. This includes test restrictions, token permission
    requirements, fields, etc. 
 </Message> 
 
 ## Creating a folder with help
 
-Every command will always begin with `box`. Add `--help` to any command for help
-building it. For example, executing `box --help` will bring you to a list of all
-possible object commands.
+Every command will always begin with `box`. Add the flag `--help` to any
+command for help building it. For example, executing `box --help` will bring you
+to a list of all possible object commands. We will cover more on flags in the
+next step. 
 
 <ImageFrame center>
   ![Help](./help.png)
@@ -67,12 +68,12 @@ Execute the command below.
 box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID
 ```
 
-Return to your All Files page. Can you see the folder now? 
+Return to your All Files page. Can you see the folder now? Why?
 
 ## Summary
 
 * You used the help feature to create a folder
-* You added a collaboration to the folder and viewed it in Box
+* You added a collaboration to the created folder and viewed it in Box
 
 <Next>I created my first folder and added a collaboration</Next>
 
