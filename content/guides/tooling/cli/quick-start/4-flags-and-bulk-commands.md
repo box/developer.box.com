@@ -5,10 +5,21 @@ hide_in_page_nav: true
 
 # Using Flags and Bulk Commands
 
-## As User Header
+## Flags
 
-To use the [as-user header][asuser], add `--as-user=USERID` to the end of the
-command. 
+Flags provide additional, optional functionality to use with a CLI command. As
+mentioned in the previous step, `--help` is an example of a flag. 
+
+To see all valid flags for a command, visit the [GitHub repository][github].
+
+For example, look at the command documentation for [deleting folders][df]. You
+will see a list of flags to use with this command, such as `--recursive` or
+ `--force`. 
+
+## As-User Header
+
+To use the [as-user header][asuser], add `--as-user=USERID` flag to the end of
+the command. 
 
 For example, the following command will create a folder called `Example_Folder`
 at the root level in user ID 123456’s account.
@@ -26,16 +37,41 @@ box folders:create 0 Example_Folder --as-user=123456
 
 ## Bulk Commands
 
-Executing bulk commands requires adding `--bulk-file-path=pathtocsv` to
-a command, where `pathtocsv` is replaced with a local path to a csv file
+Executing bulk commands requires adding `--bulk-file-path=pathtoacsv` to
+a command, where `pathtoacsv` is replaced with a local path of a csv file
 containing the necessary information. 
+
+For example, lets bulk create some few folders using the command: 
+
+```bash
+box folders:create --bulk-file-path=pathtoacsv
+```
+
+<Message type=tip>
+   You can drag the csv file from your finder window/file explorer to the
+   terminal/command line window to auto-populate the path.
+</Message>
+
+To figure out the names of the columns, visit the [GitHub repository][github]
+documentation and look at the argument names or use the `--help` flag. In this
+case, these are `PARENTID` and `NAME`, which are the two column names for the
+csv file. Here is a csv [template][csv] for this command.
+
+<!--alex ignore executing-->
+Executing the command below created three folders at the root level, 0, of the
+Service Account's folder tree.
+
+```bash
+box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkfolders.csv 
+``` 
 
 ## Summary
 
-* You created a new or have an existing JWT application to associated with the
-  CLI, which is authorized by an Admin.
-* You downloaded your application's configuration file
+* You used a flag with a CLI command
 
-<Next>I successfully used a bulk command</Next>
+<Next>I know how to use flags and bulk commands</Next>
 
+[github]: https://github.com/box/boxcli#command-topics-1
+[df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
 [asuser]: g://authentication/jwt/as-user/
+[csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m

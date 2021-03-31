@@ -49,8 +49,8 @@ For example:
 `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
 
 <Message type=tip>
-   You can drag the file from your machine to the terminal/command line window
-   to auto-populate the path for you.
+   You can drag the csv file from your finder window/file explorer to the
+   terminal/command line window to auto-populate the path.
 </Message>
 
 ## Confirm configuration
