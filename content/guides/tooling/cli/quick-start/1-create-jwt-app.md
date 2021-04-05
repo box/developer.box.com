@@ -15,9 +15,10 @@ FINISH THIS SECTION LATER.
 
 ## Setup a JWT application
 
-1. Open the Developer Console. If this is your first time using the Box API and
-   this option is not already available via the left-hand navigation panel on
-   your All Files page, you can add it to your account by clicking [here][dc].
+1. From the left-hand navigation panel on your All Files page, open the
+   [Developer Console][dc]. If this is your first time using the Box
+   API and this option is not already available, you can add it to your account
+   by clicking [here][dc].
 
 2. Click **Create New App** > **Custom App** > **Server Authentication
    (with JWT)** > name the application > **Create App**
