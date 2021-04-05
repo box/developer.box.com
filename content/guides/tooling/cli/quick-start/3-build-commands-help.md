@@ -18,10 +18,10 @@ If you do not see a command for an endpoint you need, you can build a
 
 ## Creating a folder with help
 
-Every command will always begin with `box`. Add the flag `--help` to any
+<!--alex ignore executing-->
+Every command begins with `box`. Add the flag `--help` to any
 command for help building it. For example, executing `box --help` will bring you
-to a list of all possible object commands. We will cover more on flags in the
-next step. 
+to a list of all possible object commands. Flags are discussed more in step 4.
 
 <ImageFrame center>
   ![Help](./help.png)
@@ -36,39 +36,47 @@ object.
   ![Help](./folders_help.png)
 </ImageFrame>
 
-Discover the required arguments for creating a folder:
-
-```bash
-box folders:create --help
-```
+<!-- markdownlint-disable line-length -->
+Discover the required arguments for creating a folder: `box folders:create --help`
+<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
   ![Help](./folders_create_help.png)
 </ImageFrame>
 
 <!--alex ignore execute-->
-Execute the command below and note the folder ID returned in the response. 
-
-```bash
-box folders:create 0 "My CLI Folder"
-``` 
+Execute the command `box folders:create 0 "My CLI Folder"` and note the folder
+ID returned in the response. 
 
 <Message type=tip>
    The root level of the folder tree, the All Files page, is always represented
    by folder ID 0.
 </Message> 
 
-Now, log into your Box account. Can you see this folder in your folder tree? 
-Why not? 
+Log into **your** Box account. Can you see this folder in your folder tree?
 
+<!--alex ignore executing-->
+You cannot see this folder in your own Box account because you do not own or
+collaborate on the folder. You are executing commands as the
+[Service Account][sa] and therefore the created folder lives in the
+[Service Account's][sa] folder tree.
+
+<!-- markdownlint-disable line-length -->
 <!--alex ignore execute-->
-Execute the command below. 
+Execute the command: `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
+<!-- markdownlint-enable line-length -->
 
-```bash
-box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID
-```
+<Message type=tip>
+   To find your user ID, go to your All Files page and click the circle in the
+   top right-hand corner. Select **Account Settings** from the dropdown. Your
+   user ID is listed as the **Account ID** under the **Account** tab. 
+</Message> 
 
-Return to your All Files page. Can you see the folder now? Why?
+Return to your All Files page. Can you see the folder now?
+
+The second command used the [Service Account][sa], which owns the folder, to add
+you as an Editor collaborator on the folder. This surfaces the folder in your 
+account.
 
 ## Summary
 
@@ -79,3 +87,4 @@ Return to your All Files page. Can you see the folder now? Why?
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
+[sa]: g://authentication/user-types/service-account
