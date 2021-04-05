@@ -35,10 +35,10 @@ of [commands][commands].
 
 This guide will take you through the following steps.
 
-1. Create, configure, and authorize a Box application
-2. Install and configure the CLI
-3. Run commands with the CLI
-4. Use flags and bulk commands
+1. [Create, configure, and authorize][one] a Box application
+2. [Install and configure][two] the CLI
+3. [Run commands][three] with the CLI
+4. [Use flags and bulk commands][four]
 5. Next steps
 
 <Next>
@@ -48,3 +48,7 @@ I am ready to get started
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
+[one]: g://tooling/cli/quick-start/create-jwt-app/
+[two]: g://tooling/cli/quick-start/install-and-configure/
+[three]: g://tooling/cli/quick-start/build-commands-help/
+[four]: g://tooling/cli/quick-start/flags-and-bulk-commands/

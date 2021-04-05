@@ -18,8 +18,9 @@ source_url: >-
 
 ## Flags
 
-Flags provide additional, optional functionality to use with a CLI command. As
-mentioned in the previous step, `--help` is an example of a flag.
+Flags provide additional, optional functionality to use with a CLI command. You
+may also hear these referred to as options or arguments. As mentioned in the
+previous step, `--help` is an example of a flag.
 
 To see all valid flags for a command, visit the [GitHub repository][github].
 
@@ -41,24 +42,28 @@ box folders:create 0 Example_Folder --as-user=123456
 
 <Message type=warning>
 
-Only Service Account’s and Admin’s are able to use the as-user header.
+Only Service Accounts and Admins are able to use the as-user header.
 If your application was not authorized with the necessary scopes or you
 configured your CLI to obtain a default token for another user, this call may
-fail. Add `--v` or `--verbose` to your command for verbose error logging.
+fail. Add `-v` or `--verbose` to your command for verbose error logging.
 
 </Message>
 
 ## Bulk Commands
+<!--alex ignore execute-->
 
-Executing bulk commands requires adding `--bulk-file-path=pathtoacsv` to
-a command, where `pathtoacsv` is replaced with a local path of a csv file
+A csv file can be used to execute commands in bulk. Each row of the spreadsheet
+is treated as an individual API call.
+<!--alex ignore execute-->
+
+To execute a bulk command, use the flag `--bulk-file-path=pathtoacsv`, where
+`pathtoacsv` is replaced with a local path of a csv file
 containing the necessary information.
 
-For example, lets bulk create some few folders using the command:
+<!-- markdownlint-disable line-length -->
 
-```bash
-box folders:create --bulk-file-path=pathtoacsv
-```
+As an example, let's create folders using the command `box folders:create --bulk-file-path=pathtoacsv`
+<!-- markdownlint-enable line-length -->
 
 <Message type=tip>
 
@@ -67,19 +72,34 @@ terminal/command line window to auto-populate the path.
 
 </Message>
 
-To figure out the names of the columns, visit the [GitHub repository][github]
+To determine column names for your csv, visit the [GitHub repository][github]
 documentation and look at the argument names or use the `--help` flag. In this
-case, these are `PARENTID` and `NAME`, which are the two column names for the
-csv file. Here is a csv [template][csv] for this command.
+case, these are `PARENTID` and `NAME` and are case insensitive. Here is a csv
+[template][csv] for this bulk create folders example command.
 
 <!--alex ignore executing-->
 
-Executing the command below created three folders at the root level, 0, of the
+Executing the command below creates three folders at the root level, 0, of the
 Service Account's folder tree.
 
-```bash
-box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkfolders.csv 
-```
+<!-- markdownlint-disable line-length -->
+
+`box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv`
+<!-- markdownlint-enable line-length -->
+
+## Bulk Commands with Flags
+
+Passing a flag with the command will automatically apply to it to each row in
+the csv. You can also use flags in the csv or combine the two. For example, the
+command below creates collaborations for each folder ID passed in the csv,
+but does notify each user. However, if you include a column for
+`--notify` and only include it for some rows, it will override the flag
+passed in the command and notify those users.
+
+<!-- markdownlint-disable line-length -->
+
+`box collaborations:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcollab.csv --no-notify`
+<!-- markdownlint-enable line-length -->
 
 ## Summary
 

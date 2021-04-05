@@ -46,8 +46,8 @@ The source code for the CLI is available via [GitHub][cli].
 
 ## Run configuration command
 
-Now, you will need to configure the CLI to point to to the configuration file
-downloaded and stored locally in step 1.
+You will now need to configure the CLI to point to to the configuration file
+downloaded in step 1.
 
 <ImageFrame center>
 
@@ -57,16 +57,18 @@ downloaded and stored locally in step 1.
 
 <!--alex ignore execute-->
 
-Open your terminal or command line and execute the command:
+Open your terminal or command line, replace `PathToConfigHere` and execute the
+command: `box configure:environments:add PathToConfigFileHere`
 
-`box configure:environments:add PathToConfigFileHere`
+<!-- markdownlint-disable line-length -->
 
-For example:
-`box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+For example: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+
+<!-- markdownlint-enable line-length -->
 
 <Message type=tip>
 
-You can drag the csv file from your finder window/file explorer to the
+You can drag the csv file from the Finder/File Explorer to the
 terminal/command line window to auto-populate the path.
 
 </Message>
@@ -75,8 +77,8 @@ terminal/command line window to auto-populate the path.
 
 To confirm successful configuration, use the command `box users:get`.
 
-A successful response will provide details about the Service Account user
-associated with your Access Token:
+A successful response will provide details about the [Service Account][sa] user
+associated with your [Access Token][at]:
 
 ```json
 Type: user
@@ -100,9 +102,9 @@ Notification Email: []
 
 <Message type=tip>
 
-By default, you are automatically authenticated as the application’s
-Service Account]. It is possible to change the default user. This guide
-assumes you do not change the default user.
+By default, JWT applications automatically obtain an Access Token for the
+Service Account. It is possible to change the default user, but this guide
+assumes you do not do this.
 
 </Message>
 
@@ -110,6 +112,7 @@ assumes you do not change the default user.
 
 * You installed the CLI
 * You configured the CLI to point to your application's configuration file
+* You confirmed the user associated with your Access Token
 
 <Next>
 
@@ -120,4 +123,5 @@ I installed and configured the CLI
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/
 [sa]: g://authentication/user-types/service-account/
+[at]: g://authentication/access-tokens/
 [dc]: https://app.box.com/developers/console
