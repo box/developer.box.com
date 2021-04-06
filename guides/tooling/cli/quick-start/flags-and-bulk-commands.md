@@ -89,16 +89,19 @@ Service Account's folder tree.
 
 ## Bulk Commands with Flags
 
-Passing a flag with the command will automatically apply to it to each row in
-the csv. You can also use flags in the csv or combine the two. For example, the
-command below creates collaborations for each folder ID passed in the csv,
-but does notify each user. However, if you include a column for
-`--notify` and only include it for some rows, it will override the flag
-passed in the command and notify those users.
-
 <!-- markdownlint-disable line-length -->
 
-`box collaborations:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcollab.csv --no-notify`
+Passing a flag in a command will automatically apply to it to each row in
+the csv. For example, `box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`
+will create collaborations for each user in the csv as an editor.
+<!-- markdownlint-enable line-length -->
+
+However, you can also use flags in the csv. Building on the last example,
+instead of using the `--role=editor` flag in the command itself, this can become
+a column called `role`. The command would then become
+<!-- markdownlint-disable line-length -->
+
+`box folders:collaborations:create --bulk-file-path=pathtocsv`.
 <!-- markdownlint-enable line-length -->
 
 ## Summary
