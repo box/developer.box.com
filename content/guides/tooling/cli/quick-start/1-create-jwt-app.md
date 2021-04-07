@@ -56,7 +56,7 @@ The CLI needs a configuration file stored locally in order to make API calls.
 To download the configuration file, visit the **Configuration** tab in the 
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
-configuration file for your application. For more information on keypairs see
+configuration file for your application. For more information see
 our [guide][keypair]. 
 
 <Message warning>
