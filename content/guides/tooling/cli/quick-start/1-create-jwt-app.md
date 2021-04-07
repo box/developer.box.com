@@ -9,7 +9,7 @@ The first step to using the CLI is creating a Box application in the
 [Developer Console][dc], which the CLI can use behind the scenes to make API 
 calls. If you would like to associate your CLI with an existing JWT application
 you can skip this step. However, you will want to ensure that, at a minimum, the
-following scopes are set in the Configuration section of your application: 
+following scopes are set in the **Configuration** tab of your application: 
 
 * Read all files and folders stored in Box
 * Write all files and folders stored in Box
@@ -35,12 +35,13 @@ This will bring you to the application’s configuration page where you need to
 choose its access and permissions. Again, keep in mind that because of the
 application’s authentication type, it will require Admin approval. 
 
-At a minimum, you will need the following scopes: 
+At a minimum, you will need the following [scopes][scopes]: 
 
 * Read all files and folders stored in Box
 * Write all files and folders stored in Box
 
-You can choose either App Access Only or App + Enterprise Access. 
+You can choose either App Access Only or App + Enterprise Access as the
+[application access][aa].
 
 <Message warning>
   If at any time you make configuration changes to this application, you will
@@ -55,8 +56,8 @@ The CLI needs a configuration file stored locally in order to make API calls.
 To download the configuration file, visit the **Configuration** tab in the 
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
-configuration file for your application. For more information see our
-[guide][keypair]. 
+configuration file for your application. For more information on keypairs see
+our [guide][keypair]. 
 
 <Message warning>
    For security reasons 2FA must be enabled on your Box account to successfully
@@ -83,7 +84,7 @@ applications have a [Service Account][sa], which, based on the applications
 Steps for developers and Admins can be found in our [authorization guide][ag].
 
 If you would like more information on how scopes, application access, tokens,
-and permissions work together, please see this article on understanding 
+and permissions work together, please see our article on understanding 
 [Box's security mechanisms][blogpost].
 
 <Message warning>
@@ -114,3 +115,5 @@ authorized.
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [ag]: g://applications/custom-apps/app-approval/
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
+[scopes]: g://api-calls/permissions-and-errors/scopes/
+[aa]: g://applications/custom-apps/jwt-setup/#application-access
