@@ -9,7 +9,7 @@ rank: 3
 total_steps: 5
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/flags-and-bulk-commands
+next_page_id: tooling/cli/quick-start/options-and-bulk-commands
 previous_page_id: tooling/cli/quick-start/install-and-configure
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/3-build-commands-help.md
@@ -23,9 +23,9 @@ If you do not see a command for an endpoint you need, you can build a
 
 <Message type=tip>
 
-Use in conjunction with reference documentation to see information the
-help command won't provide. This includes test restrictions, token permission
-requirements, fields, etc.
+Use repository documentation in conjunction with reference documentation to
+see information the help command does not provide. This includes
+restrictions, token permission requirements, fields, etc.
 
 </Message>
 
@@ -33,9 +33,10 @@ requirements, fields, etc.
 
 <!--alex ignore executing-->
 
-Every command begins with `box`. Add the option `--help` to any
+Every CLI command begins with `box`. Add the option `--help` to any
 command for help building it. For example, executing `box --help` will bring you
-to a list of all possible object commands. Options are discussed more in step 4.
+to a list of all possible object commands. Options are discussed more in
+[step 4][four].
 
 <ImageFrame center>
 
@@ -82,16 +83,17 @@ Log into **your** Box account. Can you see this folder in your folder tree?
 
 <!--alex ignore executing-->
 
-You cannot see this folder in your own Box account because you do not own or are
-collaborated in on the folder. You are executing commands as the
+You cannot see this folder in your own Box account because you do not own, nor
+are you collaborated in on the folder. You are executing commands as the
 [Service Account][sa] and therefore the created folder lives in the
-[Service Account's][sa] folder tree.
+[Service Account's][sa] folder tree rather than your own.
 
 <!-- markdownlint-disable line-length -->
 
 <!--alex ignore execute-->
 
-Execute the command: `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
+Now, execute the command:
+`box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
 <!-- markdownlint-enable line-length -->
 
 <Message type=tip>
@@ -105,8 +107,8 @@ user ID is listed as the **Account ID** under the **Account** tab.
 Return to your All Files page. Can you see the folder now?
 
 The second command used the [Service Account][sa], which owns the folder, to add
-you as an Editor collaborator on the folder. This surfaces the folder in your
-account.
+your user as an Editor-level collaborator on the folder. This surfaces the
+folder in your own folder tree.
 
 ## Summary
 
@@ -122,3 +124,4 @@ I created my first folder and added a collaboration
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
 [sa]: g://authentication/user-types/service-account
+[four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options

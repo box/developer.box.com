@@ -4,7 +4,7 @@ hide_in_page_nav: true
 category_id: tooling
 subcategory_id: tooling/cli
 is_index: false
-id: tooling/cli/quick-start/flags-and-bulk-commands
+id: tooling/cli/quick-start/options-and-bulk-commands
 rank: 4
 total_steps: 5
 sibling_id: tooling/cli/quick-start
@@ -12,7 +12,7 @@ parent_id: tooling/cli/quick-start
 next_page_id: tooling/cli/quick-start/next-steps
 previous_page_id: tooling/cli/quick-start/build-commands-help
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/4-flags-and-bulk-commands.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/4-options-and-bulk-commands.md
 ---
 # Using Options and Bulk Commands
 
@@ -30,8 +30,8 @@ will see a list of options to use with this command, such as `--recursive` or
 
 ## As-User Header
 
-To use the [as-user header][asuser], add `--as-user=USERID` option to the end of
-the command.
+To use the [as-user header][asuser], add the `--as-user=USERID` option to the
+end of the command.
 
 For example, the following command will create a folder called `Example_Folder`
 at the root level in user ID 123456’s account.
@@ -52,13 +52,13 @@ fail. Add `-v` or `--verbose` to your command for verbose error logging.
 ## Bulk Commands
 <!--alex ignore execute-->
 
-A csv file can be used to execute commands in bulk. Each row of the spreadsheet
-is treated as an individual API call.
+A csv file can be used to execute commands in bulk and each row of the
+spreadsheet is treated as an individual API call.
 <!--alex ignore execute-->
 
 To execute a bulk command, use the option `--bulk-file-path=pathtoacsv`, where
-`pathtoacsv` is replaced with a local path of a csv file
-containing the necessary information.
+`pathtoacsv` is replaced with the local path of a csv file containing the
+necessary information.
 
 <!-- markdownlint-disable line-length -->
 
@@ -75,7 +75,7 @@ terminal/command line window to auto-populate the path.
 To determine column names for your csv, visit the [GitHub repository][github]
 documentation and look at the argument names or use the `--help` option. In this
 case, these are `PARENTID` and `NAME` and are case insensitive. Here is a csv
-[template][csv] for this bulk create folders example command.
+[template][csv] for this example bulk create folders command.
 
 <!--alex ignore executing-->
 
@@ -92,13 +92,14 @@ Service Account's folder tree.
 <!-- markdownlint-disable line-length -->
 
 Passing an option in a command will automatically apply to it to each row in
-the csv. For example, `box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`
+the csv. For example,
+`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`
 will create collaborations for each user in the csv as an editor.
 <!-- markdownlint-enable line-length -->
 
 However, you can also use options in the csv. Building on the last example,
-instead of using the `--role=editor` option in the command itself, this can
-become a column called `role`. The command itself is
+instead of using the `--role=editor` option in the command itself, it can be a
+column called `role`. The command itself becomes:
 <!-- markdownlint-disable line-length -->
 
 `box folders:collaborations:create --bulk-file-path=pathtocsv`.

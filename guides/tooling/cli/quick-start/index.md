@@ -38,7 +38,7 @@ This guide will take you through the following steps.
 1. [Create, configure, and authorize][one] a Box application
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
-4. [Use flags and bulk commands][four]
+4. Use [options and bulk commands][four]
 5. [Next steps][five]
 
 <Next>
@@ -51,5 +51,5 @@ I am ready to get started
 [one]: g://tooling/cli/quick-start/create-jwt-app/
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
-[four]: g://tooling/cli/quick-start/flags-and-bulk-commands/
+[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
 [five]: g:/tooling/cli/quick-start/next-steps/
