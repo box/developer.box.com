@@ -14,7 +14,7 @@ the following steps.
    the CLI
    <!--alex ignore executed-->
 3. [Built and executed CLI commands][three]
-4. [Learned about flags and bulk commands][four]
+4. Learned about [options and bulk commands][four]
 
 To take the next step, the following resources are recommended:
 
@@ -25,7 +25,7 @@ To take the next step, the following resources are recommended:
 [one]: g://tooling/cli/quick-start/create-jwt-app/
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
-[four]: g://tooling/cli/quick-start/flags-and-bulk-commands/
+[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
