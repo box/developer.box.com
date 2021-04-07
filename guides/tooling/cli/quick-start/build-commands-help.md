@@ -33,9 +33,9 @@ requirements, fields, etc.
 
 <!--alex ignore executing-->
 
-Every command begins with `box`. Add the flag `--help` to any
+Every command begins with `box`. Add the option `--help` to any
 command for help building it. For example, executing `box --help` will bring you
-to a list of all possible object commands. Flags are discussed more in step 4.
+to a list of all possible object commands. Options are discussed more in step 4.
 
 <ImageFrame center>
 
@@ -82,8 +82,8 @@ Log into **your** Box account. Can you see this folder in your folder tree?
 
 <!--alex ignore executing-->
 
-You cannot see this folder in your own Box account because you do not own or
-collaborate on the folder. You are executing commands as the
+You cannot see this folder in your own Box account because you do not own or are
+collaborated in on the folder. You are executing commands as the
 [Service Account][sa] and therefore the created folder lives in the
 [Service Account's][sa] folder tree.
 

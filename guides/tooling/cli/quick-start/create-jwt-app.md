@@ -19,10 +19,11 @@ source_url: >-
 The first step to using the CLI is creating a Box application in the
 [Developer Console][dc], which the CLI can use behind the scenes to make API
 calls. If you would like to associate your CLI with an existing JWT application
-you can skip this step. However, you will want to ensure that the following
-options are set in the Configuration section of your application.
+you can skip this step. However, you will want to ensure that, at a minimum, the
+following scopes are set in the Configuration section of your application:
 
-FINISH THIS SECTION LATER.
+* Read all files and folders stored in Box
+* Write all files and folders stored in Box
 
 ## Setup a JWT application
 
@@ -47,7 +48,20 @@ This will bring you to the application’s configuration page where you need to
 choose its access and permissions. Again, keep in mind that because of the
 application’s authentication type, it will require Admin approval.
 
-At a minimum, you will need to FILL THIS IN LATER.
+At a minimum, you will need the following scopes:
+
+* Read all files and folders stored in Box
+* Write all files and folders stored in Box
+
+You can choose either App Access Only or App + Enterprise Access. 
+
+<Message warning>
+
+If at any time you make configuration changes to this application, you will
+need to clear the token cache in the CLI to reflect these changes. Failing to
+do so may result in unexpected errors, such as a 403.
+
+</Message>
 
 ## Download Required Data
 
@@ -56,7 +70,8 @@ The CLI needs a configuration file stored locally in order to make API calls.
 To download the configuration file, visit the **Configuration** tab in the
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
-configuration file for your application.
+configuration file for your application. For more information see our
+[guide][keypair].
 
 <Message warning>
 
@@ -86,6 +101,17 @@ applications have a [Service Account][sa], which, based on the applications
 
 Steps for developers and Admins can be found in our [authorization guide][ag].
 
+If you would like more information on how scopes, application access, tokens,
+and permissions work together, please see this article on understanding
+[Box's security mechanisms][blogpost].
+
+<Message warning>
+
+If configuration changes are made to this application, it will need to be
+reauthorized in order for the changes to take effect.
+
+</Message>
+
 You will know when an application is ready for use by visiting its Authorization
 tab in the [Developer Console][dc]. The state and status must be enabled and
 authorized.
@@ -110,6 +136,8 @@ My app is authorized and I downloaded my configuration file
 </Next>
 
 [dc]: https://account.box.com/developers/console
+[keypair]: g://applications/custom-apps/jwt-setup/#public-and-private-key-pair
 [sa]: g://authentication/user-types/service-account/
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [ag]: g://applications/custom-apps/app-approval/
+[blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
