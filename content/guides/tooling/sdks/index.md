@@ -10,7 +10,7 @@ alias_paths:
   - /docs/community-supported-projects
 ---
 
-# SDKs & CLI
+# SDKs
 
 To make working with the Box API easier we provide the following SDKs and CLI.
 
@@ -20,7 +20,6 @@ To make working with the Box API easier we provide the following SDKs and CLI.
 | [.NET SDK][dotnetsdk]             | Yes         | Full    |
 | [Python SDK][pythonsdk]           | Yes         | Full    |
 | [Node SDK][nodesdk]               | Yes         | Full    |
-| [CLI][cli]                        | Yes         | Full    |
 | [iOS Content SDK][iossdk]         | Yes         | Partial |
 | [Android Content SDK][androidsdk] | Yes         | Partial |
 
@@ -43,5 +42,4 @@ these projects to full parity.
 [nodesdk]: https://github.com/box/box-node-sdk
 [iossdk]: https://github.com/box/box-ios-sdk
 [androidsdk]: https://github.com/box/box-android-sdk
-[cli]: https://github.com/box/boxcli
 [forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
