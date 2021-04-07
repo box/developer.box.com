@@ -15,7 +15,7 @@ total_steps: 2
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
 next_page_id: ''
-previous_page_id: tooling/salesforce-toolkit/methods
+previous_page_id: tooling/salesforce-toolkit
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/samples.md
 ---
