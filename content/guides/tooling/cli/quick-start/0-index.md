@@ -25,7 +25,7 @@ This guide will take you through the following steps.
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
 4. [Use flags and bulk commands][four]
-5. Next steps
+5. [Next steps][five]
 
 <Next>
   I am ready to get started
@@ -36,3 +36,4 @@ This guide will take you through the following steps.
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/flags-and-bulk-commands/
+[five]: g:/tooling/cli/quick-start/next-steps/
