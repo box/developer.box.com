@@ -41,8 +41,10 @@ downloaded in step 1.
 </ImageFrame>
 
 <!--alex ignore execute-->
-Open your terminal or command line, replace `PathToConfigHere` and execute the
-command: `box configure:environments:add PathToConfigFileHere`
+
+Open your terminal or command line and execute the
+command: `box configure:environments:add PathToConfigFileHere`, replacing
+`PathToConfigHere` with the path to your `config.json` file.
 
 <!-- markdownlint-disable line-length -->
 
@@ -57,10 +59,10 @@ For example: `box configure:environments:add /Users/ExampleUser/Documents/CLI/co
 
 ## Confirm configuration
 
-To confirm successful configuration, use the command `box users:get`. 
+To confirm successful configuration, use the command `box users:get`.
 
 A successful response will provide details about the [Service Account][sa] user
-associated with your [Access Token][at]: 
+associated with your [Access Token][at]:
 
 ```json
 Type: user
@@ -90,9 +92,9 @@ Notification Email: []
 
 ## Summary
 
-* You installed the CLI 
-* You configured the CLI to point to your application's configuration file
-* You confirmed the user associated with your Access Token
+- You installed the CLI
+- You configured the CLI to point to your application's configuration file
+- You confirmed the user associated with your Access Token
 
 <Next>I installed and configured the CLI</Next>
 
