@@ -22,8 +22,8 @@ calls. If you would like to associate your CLI with an existing JWT application
 you can skip this step. However, you will want to ensure that, at a minimum, the
 following scopes are set in the **Configuration** tab of your application:
 
-* Read all files and folders stored in Box
-* Write all files and folders stored in Box
+- Read all files and folders stored in Box
+- Write all files and folders stored in Box
 
 ## Setup a JWT application
 
@@ -50,8 +50,8 @@ application’s authentication type, it will require Admin approval.
 
 At a minimum, you will need the following [scopes][scopes]:
 
-* Read all files and folders stored in Box
-* Write all files and folders stored in Box
+- Read all files and folders stored in Box
+- Write all files and folders stored in Box
 
 You can choose either App Access Only or App + Enterprise Access as the
 [application access][aa].
@@ -125,9 +125,9 @@ authorized.
 
 ## Summary
 
-* You created a new or have an existing JWT application to associate with the
+- You created a new or have an existing JWT application to associate with the
   CLI, which is authorized.
-* You downloaded your application's configuration file and moved it to a safe
+- You downloaded your application's configuration file and moved it to a safe
   location on your machine.
 
 <Next>

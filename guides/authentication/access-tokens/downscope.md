@@ -64,13 +64,14 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter            | Description                                                                                                                                                                                           |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                     |
-| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes for Box UI elements][scopes_down] is available |
-| `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                                              |
-| `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                         |
-| `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                       |
+| Parameter            | Description                                                                                                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                                                          |
+| `scope`              | A space-delimited list of [scopes][scopes] to limit the new token to. Any valid scope for the application can be used, though a special set of [scopes for Box UI elements][scopes_down] is available                                      |
+| `resource`           | An optional full URL path to the file the token should be restricted to.                                                                                                                                                                   |
+| `box_shared_link`    | An optional [shared link](g://shared-links) URL for a file or folder on Box. Password protected links are not supported. This option cannot be used in addition to the `resource` option nor can it be a shared link created on a weblink. |
+| `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                                                              |
+| `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                                                            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -81,22 +82,22 @@ extra information on the specific restrictions.
 
 ```json
 {
-    "access_token": "1!DgsZ6V9kMWZu2StrxwQDF5BudQNen-xUmU2cfcVKArE....",
-    "expires_in": 4175,
-    "token_type": "bearer",
-    "restricted_to": [
-        {
-            "scope": "item_preview",
-            "object": {
-                "type": "folder",
-                "id": "1234567890",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "Test"
-            }
-        }
-    ],
-    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
+  "access_token": "1!DgsZ6V9kMWZu2StrxwQDF5BudQNen-xUmU2cfcVKArE....",
+  "expires_in": 4175,
+  "token_type": "bearer",
+  "restricted_to": [
+    {
+      "scope": "item_preview",
+      "object": {
+        "type": "folder",
+        "id": "1234567890",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "Test"
+      }
+    }
+  ],
+  "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
 ```
 
