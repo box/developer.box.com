@@ -6,13 +6,13 @@ hide_in_page_nav: true
 # Create, Configure and Authorize a Box Application
 
 The first step to using the CLI is creating a Box application in the
-[Developer Console][dc], which the CLI can use behind the scenes to make API 
+[Developer Console][dc], which the CLI can use behind the scenes to make API
 calls. If you would like to associate your CLI with an existing JWT application
 you can skip this step. However, you will want to ensure that, at a minimum, the
-following scopes are set in the **Configuration** tab of your application: 
+following scopes are set in the **Configuration** tab of your application:
 
-* Read all files and folders stored in Box
-* Write all files and folders stored in Box
+- Read all files and folders stored in Box
+- Write all files and folders stored in Box
 
 ## Setup a JWT application
 
@@ -33,12 +33,12 @@ following scopes are set in the **Configuration** tab of your application:
 
 This will bring you to the application’s configuration page where you need to
 choose its access and permissions. Again, keep in mind that because of the
-application’s authentication type, it will require Admin approval. 
+application’s authentication type, it will require Admin approval.
 
-At a minimum, you will need the following [scopes][scopes]: 
+At a minimum, you will need the following [scopes][scopes]:
 
-* Read all files and folders stored in Box
-* Write all files and folders stored in Box
+- Read all files and folders stored in Box
+- Write all files and folders stored in Box
 
 You can choose either App Access Only or App + Enterprise Access as the
 [application access][aa].
@@ -53,11 +53,11 @@ You can choose either App Access Only or App + Enterprise Access as the
 
 The CLI needs a configuration file stored locally in order to make API calls.
 
-To download the configuration file, visit the **Configuration** tab in the 
+To download the configuration file, visit the **Configuration** tab in the
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
 configuration file for your application. For more information see
-our [guide][keypair]. 
+our [guide][keypair].
 
 <Message warning>
    For security reasons 2FA must be enabled on your Box account to successfully
@@ -66,7 +66,7 @@ our [guide][keypair].
 
 Locate the downloaded file on your machine which has a default name in the
 format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
-choose to rename it. This guide assumes the file is renamed to `config.json`. 
+choose to rename it. This guide assumes the file is renamed to `config.json`.
 
 <Message warning>
    It is critical you place the file in a location where it will not be
@@ -84,7 +84,7 @@ applications have a [Service Account][sa], which, based on the applications
 Steps for developers and Admins can be found in our [authorization guide][ag].
 
 If you would like more information on how scopes, application access, tokens,
-and permissions work together, please see our article on understanding 
+and permissions work together, please see our article on understanding
 [Box's security mechanisms][blogpost].
 
 <Message warning>
@@ -94,7 +94,7 @@ and permissions work together, please see our article on understanding
 
 You will know when an application is ready for use by visiting its Authorization
 tab in the [Developer Console][dc]. The state and status must be enabled and
-authorized. 
+authorized.
 
 <ImageFrame center>
     ![App Authorized](./app-authorized.png)
@@ -102,9 +102,9 @@ authorized.
 
 ## Summary
 
-* You created a new or have an existing JWT application to associate with the
+- You created a new or have an existing JWT application to associate with the
   CLI, which is authorized.
-* You downloaded your application's configuration file and moved it to a safe
+- You downloaded your application's configuration file and moved it to a safe
   location on your machine.
 
 <Next>My app is authorized and I downloaded my configuration file</Next>
