@@ -187,7 +187,7 @@ download the specific version as a zip.
 Install the dependencies and build the library with the following command.
 
 ```sh
-yarn install && yarn build:i18n && yarn:build:prod
+yarn install && yarn build:i18n && yarn build:prod
 ```
 
 ### 3. Serve files

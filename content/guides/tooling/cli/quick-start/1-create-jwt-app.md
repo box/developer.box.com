@@ -49,31 +49,6 @@ You can choose either App Access Only or App + Enterprise Access as the
   do so may result in unexpected errors, such as a 403. 
 </Message>
 
-## Download Required Data
-
-The CLI needs a configuration file stored locally in order to make API calls.
-
-To download the configuration file, visit the **Configuration** tab in the
-[Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
-send you through 2FA verification before automatically downloading the
-configuration file for your application. For more information see
-our [guide][keypair].
-
-<Message warning>
-   For security reasons 2FA must be enabled on your Box account to successfully
-   generate a public/private keypair.
-</Message>
-
-Locate the downloaded file on your machine which has a default name in the
-format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
-choose to rename it. This guide assumes the file is renamed to `config.json`.
-
-<Message warning>
-   It is critical you place the file in a location where it will not be
-   inadvertently deleted or moved. If this occurs you will need to repeat the
-   step 2 to reconfigure the CLI. 
-</Message>
-
 ## Authorize the application
 
 All applications leveraging Server Authentication must be authorized in the
@@ -99,6 +74,31 @@ authorized.
 <ImageFrame center>
     ![App Authorized](./app-authorized.png)
 </ImageFrame>
+
+## Download Required Data
+
+The CLI needs a configuration file stored locally in order to make API calls.
+
+To download the configuration file, visit the **Configuration** tab in the
+[Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
+send you through 2FA verification before automatically downloading the
+configuration file for your application. For more information see
+our [guide][keypair].
+
+<Message warning>
+   For security reasons 2FA must be enabled on your Box account to successfully
+   generate a public/private keypair.
+</Message>
+
+Locate the downloaded file on your machine which has a default name in the
+format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
+choose to rename it. This guide assumes the file is renamed to `config.json`.
+
+<Message warning>
+   It is critical you place the file in a location where it will not be
+   inadvertently deleted or moved. If this occurs you will need to repeat the
+   step 2 to reconfigure the CLI. 
+</Message>
 
 ## Summary
 
