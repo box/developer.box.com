@@ -42,20 +42,14 @@ downloaded in step 1.
 
 <!--alex ignore execute-->
 
-# <<<<<<< HEAD
-
-> > > > > > > 2357c71372d5f01d0a3ffda42b231043fc43e392
-> > > > > > > Open your terminal or command line and execute the
-> > > > > > > command: `box configure:environments:add PathToConfigFileHere`, replacing
-> > > > > > > `PathToConfigHere` with the path to your `config.json` file.
+Open your terminal or command line and execute the
+command: `box configure:environments:add PathToConfigFileHere`, replacing
+`PathToConfigHere` with the path to your `config.json` file.
 
 <!-- markdownlint-disable line-length -->
 
-For example: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
-<<<<<<< HEAD
-=======
-
-> > > > > > > 2357c71372d5f01d0a3ffda42b231043fc43e392
+For example: 
+`box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
 
 <!-- markdownlint-enable line-length -->
 
