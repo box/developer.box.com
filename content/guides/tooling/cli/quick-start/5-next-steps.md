@@ -9,7 +9,7 @@ You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
 1. [Created, configured, and authorized][one]
-    a JWT application.
+   a JWT application.
 2. [Installed and configured][two]
    the CLI
    <!--alex ignore executed-->
@@ -19,7 +19,7 @@ the following steps.
 To take the next step, the following resources are recommended:
 
 1. Review all [commands][commands].
-2. Review [token cache][cache] settings. 
+2. Review [token cache][cache] settings.
 3. Review [autocomplete][ac] settings.
 
 [one]: g://tooling/cli/quick-start/create-jwt-app/
