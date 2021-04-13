@@ -52,4 +52,4 @@ I am ready to get started
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
-[five]: g://tooling/cli/quick-start/next-steps/
+[five]: g:/tooling/cli/quick-start/next-steps/

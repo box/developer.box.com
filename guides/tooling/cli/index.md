@@ -41,11 +41,11 @@ Box APIs from your terminal window or command prompt.
 The GitHub page also has some additional guides that might be of interest to an
 advanced CLI user.
 
-* [Setup autocomplete][cli-autocomplete]
-* [Configure another app][cli-add-config]
-* [Switch accounts][cli-switch]
-* [Token cache][cache]
-* [Autocomplete][ac]
+- [Setup autocomplete][cli-autocomplete]
+- [Configure another app][cli-add-config]
+- [Switch accounts][cli-switch]
+- [Token cache][cache]
+- [Autocomplete][ac]
 
 [cli]: https://github.com/box/boxcli
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md

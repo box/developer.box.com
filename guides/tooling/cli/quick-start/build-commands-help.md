@@ -59,6 +59,7 @@ object.
 <!-- markdownlint-disable line-length -->
 
 Discover the required arguments for creating a folder: `box folders:create --help`
+
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
@@ -94,6 +95,7 @@ are you collaborated in on the folder. You are executing commands as the
 
 Now, execute the command:
 `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
+
 <!-- markdownlint-enable line-length -->
 
 <Message type=tip>
@@ -112,8 +114,8 @@ folder in your own folder tree.
 
 ## Summary
 
-* You used the help feature to create a folder
-* You added a collaboration to the created folder and viewed it in Box
+- You used the help feature to create a folder
+- You added a collaboration to the created folder and viewed it in Box
 
 <Next>
 

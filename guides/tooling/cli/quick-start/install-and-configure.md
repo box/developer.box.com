@@ -63,7 +63,9 @@ command: `box configure:environments:add PathToConfigFileHere`, replacing
 
 <!-- markdownlint-disable line-length -->
 
-For example: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+For example:
+`box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+
 <!-- markdownlint-enable line-length -->
 
 <Message type=tip>
@@ -110,9 +112,9 @@ assumes you do not do this.
 
 ## Summary
 
-* You installed the CLI
-* You configured the CLI to point to your application's configuration file
-* You confirmed the user associated with your Access Token
+- You installed the CLI
+- You configured the CLI to point to your application's configuration file
+- You confirmed the user associated with your Access Token
 
 <Next>
 
