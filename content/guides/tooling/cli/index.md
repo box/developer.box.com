@@ -1,19 +1,19 @@
 ---
 rank: 0
 related_endpoints: []
-related_guides: 
+related_guides:
   - authentication/jwt
   - applications/custom-apps/jwt-setup
 related_pages:
- - sdks-and-tools
-required_guides: 
+  - sdks-and-tools
+required_guides:
   - applications/custom-apps/jwt-setup
 related_resources: []
 alias_paths:
- - /docs/box-cli
- - /docs/installation-and-setup
- - /docs/commands-and-actions
- - /docs/command-line-interface-cli
+  - /docs/box-cli
+  - /docs/installation-and-setup
+  - /docs/commands-and-actions
+  - /docs/command-line-interface-cli
 ---
 
 # CLI
@@ -23,18 +23,18 @@ Box APIs from your terminal window or command prompt.
 
 ## Quick Start
 
-[Learn to use the Box CLI][qs]. 
+[Learn to use the Box CLI][qs].
 
 ## Advanced
 
 The GitHub page also has some additional guides that might be of interest to an
 advanced CLI user.
 
-* [Setup autocomplete][cli-autocomplete]
-* [Configure another app][cli-add-config]
-* [Switch accounts][cli-switch]
-* [Token cache][cache]
-* [Autocomplete][ac]
+- [Setup autocomplete][cli-autocomplete]
+- [Configure another app][cli-add-config]
+- [Switch accounts][cli-switch]
+- [Token cache][cache]
+- [Autocomplete][ac]
 
 [cli]: https://github.com/box/boxcli
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md

@@ -7,21 +7,22 @@ hide_in_page_nav: true
 
 A full list of CLI commands can be found in the [GitHub repository][github].
 
-If you do not see a command for an endpoint you need, you can build a 
+If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].
 
 <Message type=tip>
    Use repository documentation in conjunction with reference documentation to
    see information the help command does not provide. This includes 
    restrictions, token permission requirements, fields, etc. 
-</Message> 
+</Message>
 
 ## Creating a folder with help
 
 <!--alex ignore executing-->
+
 Every CLI command begins with `box`. Add the option `--help` to any
 command for help building it. For example, executing `box --help` will bring you
-to a list of all possible object commands. Options are discussed more in 
+to a list of all possible object commands. Options are discussed more in
 [step 4][four].
 
 <ImageFrame center>
@@ -29,6 +30,7 @@ to a list of all possible object commands. Options are discussed more in
 </ImageFrame>
 
 <!--alex ignore execute-->
+
 Then, for example, use the folder object and execute the command
 `box folders --help`. This provides a list of all eligible actions for this
 object.
@@ -38,7 +40,9 @@ object.
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
+
 Discover the required arguments for creating a folder: `box folders:create --help`
+
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
@@ -46,17 +50,19 @@ Discover the required arguments for creating a folder: `box folders:create --hel
 </ImageFrame>
 
 <!--alex ignore execute-->
+
 Execute the command `box folders:create 0 "My CLI Folder"` and note the folder
-ID returned in the response. 
+ID returned in the response.
 
 <Message type=tip>
    The root level of the folder tree, the All Files page, is always represented
    by folder ID 0.
-</Message> 
+</Message>
 
 Log into **your** Box account. Can you see this folder in your folder tree?
 
 <!--alex ignore executing-->
+
 You cannot see this folder in your own Box account because you do not own, nor
 are you collaborated in on the folder. You are executing commands as the
 [Service Account][sa] and therefore the created folder lives in the
@@ -64,15 +70,17 @@ are you collaborated in on the folder. You are executing commands as the
 
 <!-- markdownlint-disable line-length -->
 <!--alex ignore execute-->
-Now, execute the command: 
+
+Now, execute the command:
 `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
+
 <!-- markdownlint-enable line-length -->
 
 <Message type=tip>
    To find your user ID, go to your All Files page and click the circle in the
    top right-hand corner. Select **Account Settings** from the dropdown. Your
    user ID is listed as the **Account ID** under the **Account** tab. 
-</Message> 
+</Message>
 
 Return to your All Files page. Can you see the folder now?
 
@@ -82,8 +90,8 @@ folder in your own folder tree.
 
 ## Summary
 
-* You used the help feature to create a folder
-* You added a collaboration to the created folder and viewed it in Box
+- You used the help feature to create a folder
+- You added a collaboration to the created folder and viewed it in Box
 
 <Next>I created my first folder and added a collaboration</Next>
 
