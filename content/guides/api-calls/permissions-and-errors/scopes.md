@@ -9,33 +9,27 @@ alias_paths:
 
 # Scopes
 
-It is important to select the correct permissions for a Box application
-when setting it up in the [developer console][console] by selecting the correct
-scopes.
+When an application is created in the Developer Console, the user must configure
+application scopes. Similar to how users have permissions to access files and
+folders within Box, applications have their own set of permissions to
+perform certain actions on behalf of a Box user or a Box enterprise. The name
+for a set of permissions for an application is a "scope". In short, an 
+application's scopes determine which [endpoints][reference] an application can
+successfully call and are reflected in the access provided by
+[Access Tokens][at] of the application.
 
-## About scopes
-
-Similar to how users have certain permissions to access items like files and
-folders within Box, applications have their own set of permissions to perform
-certain actions on behalf of a Box user or a Box enterprise.
-
-The name for a set of permissions for an application is a "scope". By selecting
-the correct scopes for your application you can enable your application to
-perform certain tasks for a user, as well as restrict an application from
-performing tasks you did not intend it to do.
-
-<Message type='notice'>
-  # User permissions and scopes
+## User permissions and scopes
 
 It is important to understand that even if an application has the right scopes
-to perform an action, the user authenticated in the API call needs to have
-permission to perform that action as well, and vice versa.
+to perform an action, the user associated with the Access Token making the call
+needs to have permission to perform the action as well and vice versa.
 
 For example, if your application is set up to read files, the
 authenticated user does need to have permission to read the file you are
 trying to access.
 
-</Message>
+To learn more about how scopes, token permissions, and user permissions work
+together, see our blog post on [understanding security][blog-security].
 
 ## Scopes & OAuth 2 authorization
 
@@ -56,10 +50,9 @@ were set when the application was created.
 
 ## Self-service scopes
 
-These scopes are available through the developer console when configuring a
-custom application. Head over to the "Application Scopes" section of the
-"Configuration" page of your application settings and select one of the
-following scope.
+These scopes are available through the Developer Console when configuring an
+application. Navigate to the **Application Scopes** section of the
+**Configuration** tab and select one or more of the following scope.
 
 ### Read all files and folders
 
@@ -68,16 +61,16 @@ following scope.
 | **OAuth Scope**       | `root_readonly`                          |
 | **Application Scope** | Read all files and folders stored in Box |
 
-Gives an application the ability to read all the files/folders for an
+Gives an application the ability to read all the files/folders for the
 authenticated user.
 
-Although this gives an application the permission to read file and folder, the
+Although this gives an application the permission to read files and folders, the
 user making the API call does need to have access to the items being accessed.
 
-In the case of a JWT authenticated application accessing a managed user's
-items this means that the application needs to use the `as-user` header or
-create a **User Access Token** to authenticate as the user who has access to
-the item.
+In the case of a [JWT][jwt] application accessing a [Managed User's][mu]
+items, the Service Account's Token will need to either use the `as-user`
+[header][au] or create a [User Access Token][uat] to directly authenticate as
+the user who has access to the content.
 
 ### Read and write all files and folders
 
@@ -91,31 +84,28 @@ application to upload files or new file versions, download content, create new
 folders, update or delete collaborations, create comments or tasks, and more.
 
 Although this gives an application read/write access to items, the
-user making the API call does need to have access to the items being accessed.
+user making the API call needs to have access to the content.
 
 ### Manage users
 
-The manage users application scope option in the developer console actually maps
-to two OAuth scopes.
+The manage users scope in the Developer Console maps to two OAuth scopes.
 
 |                       |                        |
 | --------------------- | ---------------------- |
 | **OAuth Scope**       | `manage_managed_users` |
 | **Application Scope** | Manage users           |
 
-Gives an application permission to manage standard (managed) Box users. It
+Gives an application permission to manage [Managed Users][mu]. It
 allows the app to change the user's primary login, reset their password, and
 change roles for managed users.
 
 <Message type='notice'>
-Although this gives an application access to a user, it does mean that the
-authenticated user needs to have permissions to access these users. In the case
-of a client-side authenticated application this means that the user needs be an
-admin or co-admin.
+Although this allows an application manage users, for client-side applications,
+the Access Token used must be associated with an Admin or Co-Admin with the
+correct permissions.
 
-In the case of a JWT application, this means that the application needs to
-additionally be configured to have "Enterprise"-level application access.
-
+Additionally, for JWT applications, the application must be configured with
+**App Access + Enterprise Access** [application access][appaccess].
 </Message>
 
 |                       |                    |
@@ -123,12 +113,8 @@ additionally be configured to have "Enterprise"-level application access.
 | **OAuth Scope**       | `manage_app_users` |
 | **Application Scope** | Manage users       |
 
-Gives an application permission to manage standard App users. App users are
-different from regular (managed) users and can not log in to the Box web app.
-Instead, they are virtual users that can be used by an application to separate
-data in a server-side authenticated application.
-
-This scope only applies to server-side authenticated (JWT) applications.
+Gives an application permission to manage [App Users][appu], which means this 
+scope only applies to server-side authenticated (JWT) applications.
 
 ### Manage groups
 
@@ -137,19 +123,17 @@ This scope only applies to server-side authenticated (JWT) applications.
 | **OAuth Scope**       | `manage_groups` |
 | **Application Scope** | Manage groups   |
 
-Gives an application permission to manage an enterprise's group. It
-allows the app to change the create, update, and delete groups, as well as add
-and remove users to groups.
+Gives an application permission to manage an enterprise's groups. It
+allows the app to create, update, and delete groups, as well as manage group
+membership.
 
 <Message type='notice'>
-Although this gives an application access to user groups, it does mean that the
-authenticated user needs to have permissions to access these users. In the case
-of a client-side authenticated application this means that the user needs be an
-admin or co-admin.
+Although this allows an application manage groups, for client-side applications,
+the Access Token used must be associated with an Admin Co-Admin with the
+correct permissions.
 
-In the case of a JWT application, this means that the application needs to
-additionally be configured to have "Enterprise"-level application access.
-
+Additionally, for JWT applications, the application must be configured with
+**App Access + Enterprise Access** [application access][appaccess].
 </Message>
 
 ### Manage webhooks
@@ -160,8 +144,8 @@ additionally be configured to have "Enterprise"-level application access.
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
-Some [limitations exists](guide://webhooks/limitations) for webhooks, most
-notably there is a limit of 1000 webhooks per application, per user.
+Please review webhook [limitations](guide://webhooks/limitations). Most
+notably, there is a limit of 1000 webhooks per application, per user.
 
 ### Manage enterprise properties
 
@@ -172,11 +156,12 @@ notably there is a limit of 1000 webhooks per application, per user.
 
 Gives an application permission to view the enterprise event stream, as well as
 view and edit the enterprise's attributes and reports. It also allows the
-application to edit and delete device pinners.
+application to edit and delete device pins.
 
 <Message type="notice">
-  Although this gives an application access to user groups, it does mean that
-  the authenticated user needs to have permissions to access these users.
+Although this allows an application to enterprise properties, for client-side
+applications, the Access Token used must must be associated with an
+Admin Co-Admin with the correct permissions.
 </Message>
 
 ### Manage retention policies
@@ -188,28 +173,26 @@ application to edit and delete device pinners.
 | **Depends on**        | `gcm`-scope               |
 
 Gives an application permission to view and create retention policies
-with Box Governance. This requires the enterprise to have purchased Box
-Governance.
+with Box Governance. This requires the enterprise to have purchased
+[Box Governance][governance].
 
 <Message type="warning">
-  This scope depends on the `gcm` scope to function properly. This scope can be
-  requested by opening a ticket via our support channels.
+  This scope also requires the `enterprise_content` scope to function properly.
+  These scopes can be requested by opening a ticket via our support channels.
 </Message>
 
 ## Available on request
 
-There are some additional scopes that are available on request which will
-enable some specific capabilities for your application.
-
-These scopes can be requested by opening a ticket via our
-[support team](page://support), who will review requests on an individual
-basis and only provide approval if the use case requires the scope.
+There are some additional scopes that are only available upon request. To do so,
+please submit a ticket to our [support team](page://support). They will review
+these requests on an individual basis and only provide approval if the use case
+requires the scope.
 
 <Message type='notice'>
-  It is not possible to request extra scopes if your account is a free trial
-  account. Before filing a support request for activation of the following
-  scopes, log in to your paid enterprise account or
-  [upgrade your free developer account][pricing] to an enterprise account tier.
+It is not possible to request extra scopes if your account is a free trial
+account. Before filing a support request for activation of the following
+scopes, log in to your paid enterprise account or
+[upgrade your free developer account][pricing] to an enterprise account tier.
 </Message>
 
 ### Manage Legal Holds
@@ -235,38 +218,38 @@ Governance.
 | --------------------- | ----------------------------------------------- |
 | **Application Scope** | Can suppress email notifications from API calls |
 
-Allows email notifications to be suppressed when API calls are made.
+Allows some types of [email notifications][suppress] to be suppressed when API
+calls are made.
 
 ### Global Content Manager
 
 |                       |                        |
 | --------------------- | ---------------------- |
-| **OAuth Scope**       | `gcm`                  |
+| **OAuth Scope**       | `enterprise_content`                  |
 | **Application Scope** | Global Content Manager |
 
-Allows admins and service accounts to retrieve any content within their
-enterprise without having to explicitly authenticated as a user who has access
-to that content. This scope may be required for certain applications that work
-with retention policies and legal holds.
+Allows Admins and [Service Accounts][sa] to retrieve any content within their
+enterprise without having explicit ownership or collaboration permission. 
+This scope is also required to manage retention policies and legal holds.
 
 <Message type='danger'>
   # Side effects
 
 Enabling this scope on an application changes the behavior of some API calls,
-and most notable makes it impossible to write content without explicitly
+and most notably, makes it impossible to write content without explicitly
 authenticating as a user using the `as-user` header. Additionally, enabling this
 scope disables accessing content that is owned by users in another enterprise.
 
 For this reason, this scope will not be provisioned unless absolutely necessary.
-
 </Message>
 
 ## Scopes for downscoping
 
-In some cases an Access Token needs to be downscoped to a more strict permission
-level, especially when a token needs to be exposed to a client-side, public
-environment like a browser. The primary example for this is when using [Box UI
-Elements][ui-elements] which requires an Access Token in the user's browser.
+In some cases an Access Token needs to be [downscoped][ds] to a more strict
+permission level, especially when a token needs to be exposed to a client-side,
+public environment like a browser. The primary example for this is when using
+[Box UI Elements][ui-elements], which require an Access Token in the user's
+browser.
 
 The following is a list of **additional** scopes that can be used with the
 [`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an
@@ -313,3 +296,16 @@ The standard OAuth scopes are also supported when downscoping.
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
+[reference]: https://developer.box.com/reference/
+[at]: g://authentication/access-tokens/
+[blog-security]:https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
+[jwt]: g://authentication/jwt/
+[mu]: g://authentication/user-types/managed-users/
+[au]: g://authentication/jwt/as-user/
+[uat]: g://authentication/jwt/user-access-tokens/
+[appaccess]: g://applications/custom-apps/jwt-setup/#application-access
+[appu]: g://authentication/user-types/app-users/
+[governance]: https://www.box.com/security/governance-and-compliance
+[suppress]: g://api-calls/suppress-notifications/
+[ds]: g://authentication/access-tokens/downscope/
+[sa]: g://authentication/user-types/service-account/
