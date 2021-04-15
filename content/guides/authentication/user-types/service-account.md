@@ -48,7 +48,7 @@ found under the **User Settings** tab of the Admin Console. This amount may
 differ based on whether an enterprise updated this setting or not. To 
 update the amount of storage allocated to a Service Account after its creation,
 make an API call to the [update user][updateuser] endpoint and pass in the
-desired value, in bytes, using the `space_amount` body paramenter. 
+desired value, in bytes, using the `space_amount` body parameter. 
 
 Once the Service Account is generated, a section is automatically added to the
 General tab of the [Developer Console][dc] revealing the email address.
