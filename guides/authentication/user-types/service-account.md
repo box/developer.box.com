@@ -53,6 +53,14 @@ click on the tile for an application and look at the URL. For example,
 this application corresponds to the Service Account provided in the example
 above.
 
+By default, most Service Accounts are allocated 10GB of storage. This is because
+they abide by the storage allocation set in the **New User Default Settings**
+found under the **User Settings** tab of the Admin Console. This amount may
+differ based on whether an enterprise updated this setting or not. To
+update the amount of storage allocated to a Service Account after its creation,
+make an API call to the [update user][updateuser] endpoint and pass in the
+desired value, in bytes, using the `space_amount` body parameter.
+
 Once the Service Account is generated, a section is automatically added to the
 General tab of the [Developer Console][dc] revealing the email address.
 
@@ -155,3 +163,4 @@ restrictions that a Service Account associated with a Custom App does not.
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
 [collabapi]: e://post-collaborations/
 [getuser]: e://get-users-me/
+[updateuser]: e://put-users-id/

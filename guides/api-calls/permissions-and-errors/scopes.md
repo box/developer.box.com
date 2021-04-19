@@ -187,7 +187,7 @@ Admin Co-Admin with the correct permissions.
 | --------------------- | ------------------------- |
 | **OAuth Scope**       | `manage_data_retention`   |
 | **Application Scope** | Manage retention policies |
-| **Depends on**        | `gcm`-scope               |
+| **Depends on**        | `enterprise_content`-scope               |
 
 Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased
@@ -222,7 +222,7 @@ scopes, log in to your paid enterprise account or
 | --------------------- | ------------------------- |
 | **OAuth Scope**       | `manage_legal_holds`      |
 | **Application Scope** | Manage retention policies |
-| **Depends on**        | `gcm`-scope               |
+| **Depends on**        | `enterprise_content`-scope               |
 
 Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased Box
@@ -230,8 +230,8 @@ Governance.
 
 <Message type="notice">
 
-This scope depends on the `gcm` scope to function properly. This scope can be
-requested by opening a ticket via our support channels.
+This scope depends on the `enterprise_content` scope to function properly.
+This scope can be requested by opening a ticket via our support channels.
 
 </Message>
 
@@ -244,7 +244,7 @@ requested by opening a ticket via our support channels.
 Allows some types of [email notifications][suppress] to be suppressed when API
 calls are made.
 
-### Global Content Manager
+### Global Content Manager (GCM)
 
 |                       |                        |
 | --------------------- | ---------------------- |
