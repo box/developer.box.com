@@ -3,6 +3,8 @@ type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
 icon: FiCode
+alias_paths:
+  - /guides/tooling/sdks/cli/
 ---
 
 # Learn to use the Box CLI
