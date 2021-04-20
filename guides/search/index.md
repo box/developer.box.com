@@ -13,7 +13,7 @@ subcategory_id: null
 is_index: true
 id: search
 type: guide
-total_steps: 9
+total_steps: 8
 sibling_id: guides
 parent_id: guides
 next_page_id: ''

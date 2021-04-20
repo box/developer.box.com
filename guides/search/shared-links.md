@@ -8,7 +8,7 @@ is_index: false
 id: search/shared-links
 rank: 8
 type: guide
-total_steps: 9
+total_steps: 8
 sibling_id: search
 parent_id: search
 next_page_id: search/fields

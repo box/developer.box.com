@@ -3,18 +3,18 @@ related_endpoints:
   - get_search
 required_guides: []
 category_id: search
-subcategory_id: null
+subcategory_id: search/metadata-query
 is_index: false
-id: search/metadata-filters
+id: search/metadata-query/metadata-filters
 rank: 5
 type: guide
-total_steps: 9
-sibling_id: search
-parent_id: search
-next_page_id: search/enterprise
-previous_page_id: search/pagination
+total_steps: 0
+sibling_id: search/metadata-query
+parent_id: ''
+next_page_id: ''
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/metadata-query/5-metadata-filters.md
 ---
 # Metadata filters
 
