@@ -29,7 +29,7 @@ created in step 1 and select a value. Ensure you click **Save**.
 <ImageFrame center>
 
 ![Select a Metadata Template](./images/metadata-template-select.png)
-![Select a Value](./images/metadata-template-select.png)
+![Select a Value](./images/select-template-value.png)
 
 </ImageFrame>
 
