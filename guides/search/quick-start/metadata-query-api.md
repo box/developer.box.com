@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: search
-subcategory_id: search/metadata-query
+subcategory_id: search/quick-start
 is_index: false
-id: search/metadata-query/quick-start/metadata-query-api
+id: search/quick-start/metadata-query-api
 rank: 4
-total_steps: 4
-sibling_id: search/metadata-query/quick-start
-parent_id: search/metadata-query/quick-start
-next_page_id: ''
-previous_page_id: search/metadata-query/quick-start/locate-template-info
+total_steps: 5
+sibling_id: search/quick-start
+parent_id: search/quick-start
+next_page_id: search/quick-start/next-steps
+previous_page_id: search/quick-start/locate-template-info
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/metadata-query/quick-start/4-metadata-query-api.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/4-metadata-query-api.md
 ---
 # Use the Metadata Query API
 

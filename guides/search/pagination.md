@@ -8,10 +8,10 @@ is_index: false
 id: search/pagination
 rank: 4
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: search
 parent_id: search
-next_page_id: search/enterprise
+next_page_id: search/metadata-filters
 previous_page_id: search/filtering
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/4-pagination.md

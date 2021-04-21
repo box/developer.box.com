@@ -4,17 +4,17 @@ hide_step_number: true
 hide_in_page_nav: true
 icon: FiSearch
 category_id: search
-subcategory_id: search/metadata-query
+subcategory_id: search/quick-start
 is_index: true
-id: search/metadata-query/quick-start
+id: search/quick-start
 rank: 0
-total_steps: 4
-sibling_id: search/metadata-query
-parent_id: ''
-next_page_id: search/metadata-query/quick-start/create-metadata-template
+total_steps: 5
+sibling_id: search
+parent_id: search
+next_page_id: search/quick-start/create-metadata-template
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/metadata-query/quick-start/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/0-index.md
 ---
 # Search content using metadata
 

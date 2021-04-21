@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: search
-subcategory_id: search/metadata-query
+subcategory_id: search/quick-start
 is_index: false
-id: search/metadata-query/quick-start/locate-template-info
+id: search/quick-start/locate-template-info
 rank: 3
-total_steps: 4
-sibling_id: search/metadata-query/quick-start
-parent_id: search/metadata-query/quick-start
-next_page_id: search/metadata-query/quick-start/metadata-query-api
-previous_page_id: search/metadata-query/quick-start/apply-template-to-file
+total_steps: 5
+sibling_id: search/quick-start
+parent_id: search/quick-start
+next_page_id: search/quick-start/metadata-query-api
+previous_page_id: search/quick-start/apply-template-to-file
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/metadata-query/quick-start/3-locate-template-info.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/3-locate-template-info.md
 ---
 # Locate Information about a Metadata Template
 

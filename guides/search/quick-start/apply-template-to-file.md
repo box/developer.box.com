@@ -2,17 +2,17 @@
 type: quick-start
 hide_in_page_nav: true
 category_id: search
-subcategory_id: search/metadata-query
+subcategory_id: search/quick-start
 is_index: false
-id: search/metadata-query/quick-start/apply-template-to-file
+id: search/quick-start/apply-template-to-file
 rank: 2
-total_steps: 4
-sibling_id: search/metadata-query/quick-start
-parent_id: search/metadata-query/quick-start
-next_page_id: search/metadata-query/quick-start/locate-template-info
-previous_page_id: search/metadata-query/quick-start/create-metadata-template
+total_steps: 5
+sibling_id: search/quick-start
+parent_id: search/quick-start
+next_page_id: search/quick-start/locate-template-info
+previous_page_id: search/quick-start/create-metadata-template
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/metadata-query/quick-start/2-apply-template-to-file.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/2-apply-template-to-file.md
 ---
 # Add Metadata Template to a File
 

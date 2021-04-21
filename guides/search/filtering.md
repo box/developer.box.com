@@ -8,7 +8,7 @@ is_index: false
 id: search/filtering
 rank: 3
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: search
 parent_id: search
 next_page_id: search/pagination
@@ -436,7 +436,7 @@ It is possible to filter search results by their associated metadata, or even
 perform entire searches based on only the metadata, all using the `mdfilters`
 query parameter.
 
-<CTA to="g://search/metadata-query/quick-start">
+<CTA to="g://search/quick-start">
 
 Learn more about metadata filters
 
