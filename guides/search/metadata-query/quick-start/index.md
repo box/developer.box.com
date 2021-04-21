@@ -2,7 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
-icon: FiCode
+icon: FiSearch
 category_id: search
 subcategory_id: search/metadata-query
 is_index: true
@@ -29,8 +29,8 @@ This guide will take you through the following steps.
 
 1. Create a metadata template
 2. Add a metadata template to a file(s)
-3. Locate information about a metadata template via API
-4. Use the metadata search API to locate the file from step 2
+3. Locate information about a metadata template from step 1 via API
+4. Use the metadata query API to locate the file from step 2
 
 <Next>
 
