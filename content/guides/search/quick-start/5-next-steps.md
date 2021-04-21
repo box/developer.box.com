@@ -30,10 +30,10 @@ Our SDKs that support the metadata query API:
 * [Java SDK][java]
 * [Node][node]
 
-[stepone]: g://search/metadata-query/quick-start/create-metadata-template/
-[steptwo]: g://search/metadata-query/quick-start/apply-template-to-file/
-[stepthree]: g://search/metadata-query/quick-start/locate-template-info/
-[stepfour]: g://search/metadata-query/quick-start/metadata-query-api/
+[stepone]: g://search/quick-start/create-metadata-template/
+[steptwo]: g://search/quick-start/apply-template-to-file/
+[stepthree]: g://search/quick-start/locate-template-info/
+[stepfour]: g://search/quick-start/metadata-query-api/
 [mq]:e://post-metadata-queries-execute-read/
 [mqg]: g://metadata/queries/
 [ce]: g://metadata/queries/errors/
