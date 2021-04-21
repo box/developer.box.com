@@ -390,7 +390,7 @@ It is possible to filter search results by their associated metadata, or even
 perform entire searches based on only the metadata, all using the `mdfilters`
 query parameter.
 
-<CTA to="g://search/metadata-query/metadata-filters">
+<CTA to="g://search/metadata-query/quick-start">
   Learn more about metadata filters
 </CTA>
 
