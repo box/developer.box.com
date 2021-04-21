@@ -33,4 +33,6 @@ about the file we added the template to in step 2.
     ![Search Query Result](./images/query-result.png)
 </ImageFrame>
 
+<Next>I found my file(s) using a search query</Next>
+
 [mq]: e://post-metadata-queries-execute-read/

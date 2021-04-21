@@ -27,5 +27,7 @@ response.
     ![List All Templates](./images/list-all-templates.png)
 </ImageFrame>
 
+<Next>I obtained the details about my template</Next>
+
 [dc]: https://account.box.com/developers/console
 [metadata-list]: e://get-metadata-templates-enterprise/
