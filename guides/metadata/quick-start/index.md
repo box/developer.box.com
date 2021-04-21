@@ -2,7 +2,7 @@
 type: quick-start
 hide_step_number: true
 hide_in_page_nav: true
-icon: FiDatabase
+icon: FiSearch
 category_id: metadata
 subcategory_id: metadata/1-quick-start
 is_index: true

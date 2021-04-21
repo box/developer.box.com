@@ -40,4 +40,10 @@ To add a metadata template to a file you will need to use the
 
 NEED DETAILS HERE
 
+<Next>
+
+I applied my template to at least one file
+
+</Next>
+
 [add-metadata]: e://post-files-id-metadata-id-id/
