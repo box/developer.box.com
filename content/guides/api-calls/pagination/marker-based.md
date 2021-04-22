@@ -91,7 +91,7 @@ results as an array, as well as some information about the current page of resul
 | Field         | Type    |                                                                                                                                                                    |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                              |
-| `next_marker` | Integer | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
+| `next_marker` | String | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
 | `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint.  |
 
 <!-- markdownlint-enable line-length -->
