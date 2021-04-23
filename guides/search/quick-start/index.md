@@ -23,6 +23,12 @@ applied metadata. The structure of a metadata search query is similar to that of
 a SQL query and allows for Boolean operators, such as AND, OR, and NOT, as well
 as comparison or range operators, such as equal to, greater-than, and less-than.
 
+<ImageFrame center>
+
+![Metadata](./images/metadata.png)
+
+</ImageFrame>
+
 ## Overview
 
 This guide will take you through the following steps.
