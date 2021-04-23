@@ -21,9 +21,9 @@ as comparison or range operators, such as equal to, greater-than, and less-than.
 This guide will take you through the following steps.
 
 1. Create a metadata template
-2. Add a metadata template to a file(s)
-3. Locate information about a metadata template from step 1 via API
-4. Use the metadata query API to locate the file from step 2
+2. Locate information about the metadata template via API
+3. Apply the metadata template to at least one file
+4. Construct a metadata query API call to obtain the content from step 3
 
 <Next>
   I am ready to get started
