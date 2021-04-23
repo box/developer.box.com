@@ -5,8 +5,8 @@ hide_in_page_nav: true
 
 # Use the Metadata Query API
 
-Finally, you need to build a [metadata search API call][mq]. Here is an example
-of what the body of the API call looks like:
+Finally, build a [metadata search API call][mq]. Here is an example of what the
+body of the API call looks like:
 
 ```json
 {
