@@ -12,16 +12,16 @@ hide_in_page_nav: true
 
 If you created your metadata template via the Admin Console, you will need 
 obtain an [Access Token] for an Admin or Co-Admin with permission to
-**Create and edit metadata templates for your company**. As I mentioned in
+**Create and edit metadata templates for your company**. As mentioned in
 step 1, the easiest way to obtain a token meeting these requirements is to log
-in as the Admin or Co-Admin, pull up the application in the
+in as an Admin or Co-Admin, pull up the application in the
 [Developer Console][dc], and click **Generate Developer Token** under the
 **Configuration** tab. 
 
 Use this token to make an API call to the
 [list all metadata templates for enterprise endpoint][metadata-list], as shown
 below. You should be able to find information about your template in the
-response.
+response. Specifically, note the `scope` and `templateKey`. 
 
 <ImageFrame center>
     ![List All Templates](./images/list-all-templates.png)

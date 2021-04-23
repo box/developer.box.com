@@ -6,7 +6,8 @@ hide_in_page_nav: true
 # Create a Metadata Template
 
 There are two ways to create a new metadata template: via the Admin Console or
-via the API using an Admin access token. 
+via the API using an Admin access token. If you already have a metadata template
+created you can skip to the next step.
 
 ## Admin Console
 
@@ -24,7 +25,7 @@ To create a template via the Admin Console, navigate to:
 </Message>
 
 Once you select **Create New**, you are brought to a form used to create a new
-template, which is shown below. Select a Dropdown-Single Select format. 
+template, which is shown below. Select a **Dropdown-Single Select** format. 
 
 <Message warning>
 Selecting a Dropdown-Multi Select format will change the structure of you query
@@ -41,7 +42,7 @@ more than a few thousand items.
 Creating a metadata template via the API requires an [Access Token][at]
 associated with a Box Admin or Co-Admin with permission to 
 **create and edit metadata templates for your company**. If you are not sure
-who your token is associated with, make a quick API call to the 
+who your token is associated with, make an API call to the 
 [get current user endpoint][current-user]. The easiest way to obtain a token
 meeting these requirements, is to log in as an Admin or Co-Admin, pull up the
 application in the [Developer Console][dc], and click 
@@ -59,13 +60,13 @@ created above using the Admin Console.
 
 <Message tip>
 If you would like to use a different template format than a Dropdown-Single
-Select, you will need to consult our reference documentation, as the API call
-above differ from the example above.
+Select, you will need to consult our reference documentation, as the body of the
+API call will differ from the example above.
 </Message>
 
-The response to this API call provides crucial information needed in the next
-step. If you created your template via the UI, we will show how to obtain this
-same information.
+The response to this API call provides crucial information you will need later.
+If you created your template via the UI, we will show how to obtain this
+information in the next step.
 
 <Next>I created my metadata template</Next>
 
