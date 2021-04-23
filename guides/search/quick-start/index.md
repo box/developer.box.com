@@ -33,13 +33,19 @@ as comparison or range operators, such as equal to, greater-than, and less-than.
 
 This guide will take you through the following steps.
 
-1. Create a metadata template
-2. Locate information about the metadata template via API
-3. Apply the metadata template to at least one file
-4. Construct a metadata query API call to obtain the content from step 3
+1. [Create a metadata template][stepone]
+2. [Locate information about the metadata template][steptwo] via API
+3. [Apply the metadata template][stepthree] to at least one file
+4. [Construct a metadata query API call][stepfour] to obtain the content
+ from step 3
 
 <Next>
 
 I am ready to get started
 
 </Next>
+
+[stepone]: g://search/quick-start/create-metadata-template/
+[steptwo]: g://search/quick-start/locate-template-info/
+[stepthree]: g://search/quick-start/apply-template-to-file/
+[stepfour]: g://search/quick-start/metadata-query-api/
