@@ -10,15 +10,14 @@ total_steps: 5
 sibling_id: search/quick-start
 parent_id: search/quick-start
 next_page_id: search/quick-start/next-steps
-previous_page_id: search/quick-start/locate-template-info
+previous_page_id: search/quick-start/apply-template-to-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/4-metadata-query-api.md
 ---
 # Use the Metadata Query API
 
-Finally, you need to build a [metadata search API call][mq] using some of the
-information provided in the response of step 3. Here is an example of what the
-body of the API call looks like:
+Finally, you need to build a [metadata search API call][mq]. Here is an example
+of what the body of the API call looks like:
 
 ```json
 {
@@ -33,7 +32,7 @@ body of the API call looks like:
 This API call will return any file ID that meets the following criteria:
 
 - Has the Contact Role template applied
-- Has value of department is legal
+- Has a value of department is legal
 - Is located anywhere under the root folder, since "0" is the
   `ancestor_folder_id`
 
@@ -48,7 +47,7 @@ about the file we added the template to in step 2.
 
 <Next>
 
-I found my file(s) using a search query
+I found my content using a search query
 
 </Next>
 

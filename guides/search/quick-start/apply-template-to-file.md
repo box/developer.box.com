@@ -5,20 +5,20 @@ category_id: search
 subcategory_id: search/quick-start
 is_index: false
 id: search/quick-start/apply-template-to-file
-rank: 2
+rank: 3
 total_steps: 5
 sibling_id: search/quick-start
 parent_id: search/quick-start
-next_page_id: search/quick-start/locate-template-info
-previous_page_id: search/quick-start/create-metadata-template
+next_page_id: search/quick-start/metadata-query-api
+previous_page_id: search/quick-start/locate-template-info
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/2-apply-template-to-file.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/3-apply-template-to-file.md
 ---
 # Add Metadata Template to a File
 
-In order to get at least one result when we search using metadata in step 4,
+In order to obtain at least one result when we search using metadata in step 4,
 we need to ensure the metadata template is applied to at least one file. Again,
-there are two ways to do this: via the UI or via the AP.
+there are two ways to do this: via the UI or via the API.
 
 ## UI
 
@@ -36,9 +36,16 @@ created in step 1 and select a value. Ensure you click **Save**.
 ## API
 
 To add a metadata template to a file you will need to use the
-[create metadata instance on a file endpoint][add-metadata].
+[create metadata instance on a file endpoint][add-metadata]. You will also
+need the `scope` and `templateKey` template values from the previous step.
+Below is an example of what the API call looks like to apply the same metadata
+shown in the UI above.
 
-NEED DETAILS HERE
+<ImageFrame center>
+
+![Select a Metadata Template](./images/add-metadata-api.png)
+
+</ImageFrame>
 
 <Next>
 
