@@ -5,9 +5,9 @@ hide_in_page_nav: true
 
 # Add Metadata Template to a File
 
-In order to obtain at least one result when we search using metadata in step 4,
-we need to ensure the metadata template is applied to at least one file. Again,
-there are two ways to do this: via the UI or via the API. 
+Your metadata template needs to be applied to at least one file to ensure
+a result in step 4. There are two ways to do add a metadata template to a file: 
+via the UI or via the API. 
 
 ## UI 
 
