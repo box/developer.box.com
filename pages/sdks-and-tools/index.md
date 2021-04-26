@@ -94,7 +94,6 @@ members. These tools do not receive regular product updates or security updates.
 | [Salesforce SDK][salesforcesdk] | Limited, by Box and community members | Partial |
 | [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
-| [Chrome App SDK][chromesdk]     | Limited, by Box and community members | Partial |
 
 <!-- markdownlint-enable line-length -->
 
@@ -132,4 +131,3 @@ for these tools.
 [salesforcesdk]: https://github.com/box/box-salesforce-sdk
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
-[chromesdk]: https://github.com/box/Chrome-App-SDK
