@@ -139,7 +139,7 @@ The following events can be triggered for an enterprise.
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
 | `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
-| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_ \n MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
+| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`        | An invite to externally collaborate is blocked                                                  |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
