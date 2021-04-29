@@ -6,8 +6,8 @@ hide_in_page_nav: true
 # Create a Metadata Template
 
 There are two ways to create a new metadata template: via the Admin Console or
-via the API using an Admin access token. If you already have a metadata template
-created you can skip to the next step.
+via the API using an Admin Access Token. If you already have a metadata template
+created that you would like to use you can skip to the next step.
 
 ## Admin Console
 
@@ -65,10 +65,10 @@ API call will differ from the example above.
 </Message>
 
 The response to this API call provides crucial information you will need later.
-If you created your template via the UI, we will show how to obtain this
+If you created your template via the UI, you will learn how to obtain this
 information in the next step.
 
-<Next>I created my metadata template</Next>
+<Next>I created a metadata template</Next>
 
 [at]: g://authentication/access-tokens/
 [current-user]: e://get-users-me/
