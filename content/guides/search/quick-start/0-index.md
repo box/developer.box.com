@@ -15,6 +15,7 @@ for Boolean operators, such as AND, OR, and NOT, as well as comparison or range
 operators, such as equal to, greater-than, and less-than. 
 
 Some benefits of the Metadata Query API include: 
+
 * no indexing delay; query immediately after metadata creations, updates, and
   deletions
 * ability to specify a sort order by one or more fields
