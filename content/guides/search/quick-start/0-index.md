@@ -7,10 +7,18 @@ icon: FiSearch
 
 # Search content using metadata
 
-The Box Metadata Query API enables the programmatic search of Box content by
-applied metadata. The structure of a metadata search query is similar to that of
-a SQL query and allows for Boolean operators, such as AND, OR, and NOT, as well
-as comparison or range operators, such as equal to, greater-than, and less-than.
+The Box Metadata Query API provides the ability to programmatically locate Box
+content based strictly on applied custom metadata values. 
+
+The structure of a metadata query is similar to that of a SQL query and allows
+for Boolean operators, such as AND, OR, and NOT, as well as comparison or range
+operators, such as equal to, greater-than, and less-than. 
+
+Some benefits of the Metadata Query API include: 
+* results immediately reflect metadata creations, updates, and deletions
+* no indexing delay
+<!--alex ignore queryable-->
+* no limitation on the number of characters that are queryable
 
 <ImageFrame center>
     ![Metadata](./images/metadata.png)
