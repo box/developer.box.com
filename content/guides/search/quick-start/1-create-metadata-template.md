@@ -29,8 +29,7 @@ template, which is shown below. Select a **Dropdown-Single Select** format.
 
 <Message warning>
 Selecting a Dropdown-Multi Select format will change the structure of you query
-later on in this quick-start and is highly discouraged if you plan to search
-more than a few thousand items.
+later on in this quick-start.
 </Message>
 
 <ImageFrame center>
@@ -44,7 +43,7 @@ associated with a Box Admin or Co-Admin with permission to
 **create and edit metadata templates for your company**. If you are not sure
 who your token is associated with, make an API call to the 
 [get current user endpoint][current-user]. The easiest way to obtain a token
-meeting these requirements, is to log in as an Admin or Co-Admin, pull up the
+meeting these requirements is to log in as an Admin or Co-Admin, pull up the
 application in the [Developer Console][dc], and click 
 **Generate Developer Token** under the **Configuration** tab. 
 [Developer tokens][dt] are always be associated with the user logged into the
