@@ -16,22 +16,16 @@ alias_paths:
 
 # User Types
 
-There are a few types of users that an application might encounter. The key
-differences the Admin-level permissions of a user, and whether a user represents
-a real Box user or a virtual user that is only visible to platform applications.
-
-The type of user affects the type of data an application has access to, as a
-user with Admin permissions will have different permissions than a regular user.
-
 ## Overview
+
+A critical part of planning and developing an application is understanding the
+types of users involved. There are four main types of users: 
 
 <!-- markdownlint-disable line-length -->
 
-The following is a quick overview of the types of users available in the Box API.
-
-|                  | Admin privileges                   | No admin privileges         |
+|                  | Admin privileges                   | No Admin privileges         |
 | ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user | [Admin User][admin]                | [Managed User][managed-user]|
+| Traditional user | [Admin or Co-Admin User][admin]    | [Managed User][managed-user]|
 | Platform only    | [Service Account][service-account] | [App User][app-user]        |
 
 <!-- markdownlint-enable line-length -->
@@ -39,7 +33,7 @@ The following is a quick overview of the types of users available in the Box API
 <Message>
   # What type of user does my application use?
 
-The type of user that an application is authenticated as is dependent on the
+The type of user an application is authenticated as is dependent on the
 type of application created, as well as the type of authentication used to
 create an Access Token.
 
