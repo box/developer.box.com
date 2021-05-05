@@ -184,6 +184,10 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
   documentation](endpoint://get-authorize) for more information.
 </Message>
 
+<Message type='tip'>
+  If you have Box Verified Enterprises for your Box instance turned on, you may encounter an issue using the standard `account.box.com` base URL. Instead, try using `ent.box.com`.
+</Message>
+
 ## 3. User grants application access
 
 Once the user is redirected to the Box web app they will have to log in. After
