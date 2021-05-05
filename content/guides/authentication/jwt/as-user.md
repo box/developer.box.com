@@ -3,11 +3,11 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - authentication/user-types
+  - getting-started/user-types
 related_resources: []
 alias_paths: []
 ---

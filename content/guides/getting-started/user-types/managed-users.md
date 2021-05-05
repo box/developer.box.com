@@ -4,7 +4,7 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - authentication/user-types
+  - getting-started/user-types
 required_guides: []
 related_resources:
   - user

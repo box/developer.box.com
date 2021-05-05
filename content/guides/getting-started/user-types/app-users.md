@@ -4,7 +4,7 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - authentication/user-types
+  - getting-started/user-types
 required_guides: []
 related_resources:
   - user
@@ -94,9 +94,9 @@ the collaboration [via the API][collabapi] you will need to use an Access Token
 for a user that already has access to the content and has the appropriate
 collaboration permissions to invite collaborators.
 
-[sa]: g://authentication/user-types/service-account/
+[sa]: g://getting-started/user-types/service-account/
 [createuser]: e://post-users
-[managed]: g://authentication/user-types/managed-users/
+[managed]: g://getting-started/user-types/managed-users/
 [dc]: https://app.box.com/developers/console
 [events]: e://get-events/
 [uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide

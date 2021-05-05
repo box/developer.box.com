@@ -4,7 +4,7 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - authentication/user-types
+  - getting-started/user-types
 required_guides: []
 related_resources:
   - user
@@ -143,7 +143,7 @@ restrictions that a Service Account associated with a Custom App does not.
 - The Service Account can only access a subset of APIs related to previewing
   content
 
-[appusers]: https://developer.box.com/guides/authentication/user-types/app-users/
+[appusers]: g://getting-started/user-types/app-users/
 [auth]: g://applications/custom-apps/app-approval/
 [dc]: https:/app.box.com/developers/console
 [scopes]: g://api-calls/permissions-and-errors/scopes/
