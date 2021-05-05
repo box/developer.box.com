@@ -144,7 +144,7 @@ Learn more about the authorization URL
 
 <Message type='tip'>
 
-If you have Box Verified Enterprises for your Box instance turned on, you
+If you have Box Verified Enterprise for your Box instance turned on, you
 may encounter an issue using the standard
 `account.box.com` base URL.
 Instead, try using `ent.box.com`.
