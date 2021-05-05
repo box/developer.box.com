@@ -30,7 +30,7 @@ change this selection later on.
 |                            |                                                                            |
 | -------------------------- | -------------------------------------------------------------------------- |
 | **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or Client Credentials Authentication      |
-| **NotableFeatures**        | Webhooks, App Gallery, and Web App Integrations                            |
+| **Notable Features**        | Webhooks, App Gallery, and Web App Integrations                           |
 
 <!-- markdownlint-enable line-length -->
 
