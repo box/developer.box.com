@@ -90,7 +90,7 @@ The following query parameters are used to paginate a collection.
 
 | Query parameter | Type    | Default        |                                                                                                                                                                                    |
 | --------------- | ------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `marker`        | Integer | `0`            | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
+| `marker`        | String |             | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used.                                                                    |
 | `usemarker`     | Boolean |                | An optional query parameter that can be used with API endpoints that support both types of pagination to select pagination type. Set to `true` to enforce marker-based pagination. |
 
