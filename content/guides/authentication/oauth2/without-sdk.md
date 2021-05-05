@@ -124,7 +124,7 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 </CTA>
 
 <Message type='tip'>
-  If you have Box Verified Enterprises for your Box instance turned on, you 
+  If you have Box Verified Enterprise for your Box instance turned on, you 
   may encounter an issue using the standard 
   `account.box.com` base URL. 
   Instead, try using `ent.box.com`.
