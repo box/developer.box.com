@@ -3,11 +3,11 @@ rank: 0
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - applications/custom-apps/jwt-setup
+  - authentication/jwt/jwt-setup
 related_pages:
   - sdks-and-tools
 required_guides:
-  - applications/custom-apps/jwt-setup
+  - authentication/jwt/jwt-setup
 related_resources: []
 alias_paths:
   - /docs/box-cli

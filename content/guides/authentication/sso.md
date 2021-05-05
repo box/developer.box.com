@@ -89,4 +89,4 @@ therefore SSO is not involved.
 [app_token]: g://authentication/app-token
 [custom_app]: g://applications/custom-apps
 [custom_skills]: g://applications/custom-skills
-[jwt]: g://applications/custom-apps/jwt-setup
+[jwt]: g://authentication/jwt/jwt-setup

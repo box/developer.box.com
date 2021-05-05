@@ -303,7 +303,7 @@ The standard OAuth scopes are also supported when downscoping.
 [mu]: g://getting-started/user-types/managed-users/
 [au]: g://authentication/jwt/as-user/
 [uat]: g://authentication/jwt/user-access-tokens/
-[appaccess]: g://applications/custom-apps/jwt-setup/#application-access
+[appaccess]: g://authentication/jwt/jwt-setup/#application-access
 [appu]: g://getting-started/user-types/app-users/
 [governance]: https://www.box.com/security/governance-and-compliance
 [suppress]: g://api-calls/suppress-notifications/

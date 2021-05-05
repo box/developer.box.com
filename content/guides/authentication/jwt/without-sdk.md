@@ -5,10 +5,10 @@ related_endpoints:
 related_guides:
   - applications/select
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
@@ -871,6 +871,6 @@ The code in this guide is available on [GitHub][samples].
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://getting-started/user-types/service-account/
-[configfile]: g://applications/custom-apps/jwt-setup/#jwt-keypair
+[configfile]: g://authentication/jwt/jwt-setup/#jwt-keypair
 [keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
