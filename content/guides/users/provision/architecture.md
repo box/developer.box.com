@@ -20,7 +20,7 @@ home directory.
 
 When creating a
 [JWT-based Box application](guide://applications/custom-apps/jwt-setup), a
-[Service Account](guide://authentication/user-types/service-account/) is created
+[Service Account](guide://getting-started/user-types/service-account/) is created
 within the Box Enterprise. A Service Account is similar in functionality to a
 co-admin within a Box Enterprise, and most useful to this use case, can own,
 copy, and collaborate other users on files and folders. More importantly, you

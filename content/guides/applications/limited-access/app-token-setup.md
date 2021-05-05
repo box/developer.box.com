@@ -13,6 +13,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/applications/limited-access-apps
+  - /guides/applications/custom-apps/app-token-setup
 ---
 
 # Setup with App Tokens

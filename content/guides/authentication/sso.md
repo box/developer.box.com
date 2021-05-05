@@ -81,7 +81,7 @@ therefore SSO is not involved.
   would require them to use SSO where needed.
 </Message>
 
-[user-types]: g://authentication/user-types
+[user-types]: g://getting-started/user-types
 [admin-approval]: g://applications/custom-apps/app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2

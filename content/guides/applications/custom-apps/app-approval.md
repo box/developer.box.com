@@ -3,7 +3,7 @@ rank: 4
 related_endpoints: []
 related_guides: []
 required_guides: 
-  - applications/custom-apps/app-token-setup
+  - applications/custom-apps/limited-access/app-token-setup
   - applications/custom-apps/jwt-setup
 related_resources: []
 alias_paths: []

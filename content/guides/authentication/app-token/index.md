@@ -40,4 +40,4 @@ for apps that:
 - Want to store data in the application's Service Account and not a user's
   account
 
-[sa]: g://authentication/user-types/service-account/
+[sa]: g://getting-started/user-types/service-account
