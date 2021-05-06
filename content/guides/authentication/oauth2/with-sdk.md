@@ -36,7 +36,7 @@ At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
 <Message notice>
-  The action token acquired through OAuth 2.0 is inherently tied to the user who
+  The access token acquired through OAuth 2.0 is inherently tied to the user who
   authorized the application. Any API call made with this token will seem to
   come from this application, and the user needs to have access to any file or
   folder the application tries to access with this token.
@@ -185,10 +185,11 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
 </Message>
 
 <Message type='tip'>
-  If you have Box Verified Enterprise for your Box instance turned on, you 
+  If you have [Box Verified Enterprise][1] for your Box 
+  instance turned on, you 
   may encounter an issue using the standard 
   `account.box.com` base URL. 
-  Instead, try using `ent.box.com`.
+  Instead, use `ent.box.com` in place of `account.box.com`.
 </Message>
 
 ## 3. User grants application access
@@ -260,3 +261,4 @@ At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
 [tokens]: guide://authentication/access-tokens
+[1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
