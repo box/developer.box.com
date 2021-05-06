@@ -1,12 +1,12 @@
 ---
-rank: 2
+rank: 0
 related_endpoints: []
 related_guides: 
   - authentication/jwt 
 required_guides: 
   - authentication/select
   - applications/custom-apps
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app

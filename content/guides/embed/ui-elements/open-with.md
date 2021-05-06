@@ -82,7 +82,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://applications/custom-apps/app-approval).
+available [here](g://authorization/custom-app-approval).
 
 ## List available integrations
 

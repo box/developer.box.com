@@ -18,5 +18,5 @@ rank: 0
 [user-model]: g://getting-started/user-types
 [app-type]: g://applications
 [authentication]: g://authentication
-[authorize]: g://applications/custom-apps/app-approval/
+[authorize]: g://authorization/custom-app-approval/
 [ref]: e://reference/

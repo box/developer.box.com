@@ -9,7 +9,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# App Approval
+# Custom App Approval
 
 Application that are configured with [JWT][jwt], [Client Credentials Grant][ca],
 or [App Token][app-token] authentication must be authorized by a Box enterprise

@@ -6,7 +6,7 @@ related_endpoints: []
 related_guides: 
   - authentication/select
   - authentication/oauth2
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 required_guides: 
   - authentication/select
   - applications/custom-apps

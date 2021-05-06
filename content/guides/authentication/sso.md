@@ -82,7 +82,7 @@ therefore SSO is not involved.
 </Message>
 
 [user-types]: g://getting-started/user-types
-[admin-approval]: g://applications/custom-apps/app-approval
+[admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
 [la-app]: guide://applications/web-app-integrations
