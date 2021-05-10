@@ -14,7 +14,7 @@ alias_paths: []
 A Box Admin needs an application's client ID in order to properly authorize it
 in the Admin Console. 
 
-Application that are configured with [JWT][jwt], [Client Credentials Grant][ca],
+Application that are configured with [JWT][jwt], [Client Credentials Grant][ccg],
 or [App Token][app-token] authentication must be authorized by a Box enterprise
 Admin before it can be used.
 
@@ -82,7 +82,7 @@ of the application name and selecting "Reauthorize App".
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
-[ca]: g://authentication/jwt/without-sdk/#client-credentials-grant
+[ccg]: g://authentication/client-credentials
 [settings]: https://app.box.com/account
 [adminconsole]: https://app.box.com/master/settings/custom
 [jwt]: g://authentication/jwt
