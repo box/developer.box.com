@@ -40,15 +40,6 @@ that are provided with every Skill Event. For this reason though, Custom Skills
 allow for limited API access, mainly to read the file and write Metadata to the
 file.
 
-## Approval
-
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
-
-<CTA to='g://applications/custom-skills/approval'>
-  Learn more about approving Custom Skills
-</CTA>
-
 ## When to use Custom Skills
 
 A Custom Skill is best used when the application:
@@ -57,3 +48,22 @@ A Custom Skill is best used when the application:
 - Does not want to upload new files or perform any other API calls
 - Wants to have way to pass files to Machine Learning services without
   having to handle authentication
+
+## Use cases
+
+Example use cases for Custom Skills include:
+
+- A process that automatically extracts license plate details from images and
+  writes the details back to the file as keywords.
+
+- A process that automatically detects faces in videos, and writes the timestamps
+  at which these faces occur back to the file as a timeline.
+
+## Approval
+
+Before a Custom Skill can be used it needs to be assigned to a folder for which the
+skill should trigger.
+
+<CTA to='g://applications/custom-skills/approval'>
+  Learn more about approving Custom Skills
+</CTA>
