@@ -31,7 +31,7 @@ Navigate to the **Authorization** tab for your application in the
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
-enterprise's primary Admin to approve the application. More information on this
+enterprise's Primary Admin to approve the application. More information on this
 process is available in our [support article on app authorization][app-auth].
 
 ## Manual Approval
@@ -67,6 +67,9 @@ see a **+** button in the top right corner to add a new app authorization.
 In the popup that appears, enter the client ID for the application that the
 developer collected from the **Configuration** tab of the Developer Console.
 
+A [secondary step][ss] may be necessary depending on the enabled enterprise
+settings.
+
 ## Re-authorization on changes
 
 When the application's scopes or access level change the application needs to be
@@ -88,3 +91,4 @@ of the application name and selecting "Reauthorize App".
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+[ss]: g://authorization/#enterprise-settings
