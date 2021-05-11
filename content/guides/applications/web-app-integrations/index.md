@@ -46,7 +46,7 @@ their Box accounts by visiting the App Gallery and use its features via
 Recommended Apps.
 
 [app-gallery]: g://applications/app-gallery
-[custom-app]: g://applications/custom-apps/oauth2-setup
+[custom-app]: g://authentication/oauth2/oauth2-setup
 [oauth2]: g://authentication/oauth2
 [devconsole]: https://app.box.com/developers/console
 [recommended-apps]: https://community.box.com/t5/Organizing-and-Tracking-Content/Installing-Recommended-Apps-in-your-Enterprise/ta-p/80134

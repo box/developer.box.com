@@ -1,12 +1,12 @@
 ---
-rank: 2
+rank: 0
 related_endpoints: []
 related_guides: 
   - authentication/jwt 
 required_guides: 
   - authentication/select
   - applications/custom-apps
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
@@ -198,8 +198,8 @@ section at the bottom of the **Configuration** tab in the
 [devtoken]: g://authentication/access-tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[user-types]: g://authentication/user-types
-[sa]: g//authentication/user-types/service-accounts
+[user-types]: g://getting-started/user-types
+[sa]: g://getting-started/user-types/service-account
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt

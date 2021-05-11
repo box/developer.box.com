@@ -81,12 +81,12 @@ therefore SSO is not involved.
   would require them to use SSO where needed.
 </Message>
 
-[user-types]: g://authentication/user-types
-[admin-approval]: g://applications/custom-apps/app-approval
+[user-types]: g://getting-started/user-types
+[admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
 [custom_app]: g://applications/custom-apps
 [custom_skills]: g://applications/custom-skills
-[jwt]: g://applications/custom-apps/jwt-setup
+[jwt]: g://authentication/jwt/jwt-setup

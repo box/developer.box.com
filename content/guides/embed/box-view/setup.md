@@ -23,14 +23,14 @@ content with a user.
 The first step is to create the application and authorize it through your admin
 to begin making API requests to Box.
 
-<CTA to='guide://applications/custom-apps/app-token-setup/'>
+<CTA to='guide://applications/limited-access/app-token-setup/'>
   Setup and authorize App Token app
 </CTA>
 
 <Message type='warning'>
   App Token apps need to be authorized by the Box admin, otherwise you will
   receive permission errors when making API requests. To go through app
-  authorization, follow [this guide](guide://applications/custom-apps/app-approval/).
+  authorization, follow [this guide](guide://authorization/custom-app-approval/).
 </Message>
 
 ## Generate Access Token

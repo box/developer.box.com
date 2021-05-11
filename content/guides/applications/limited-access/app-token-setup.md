@@ -6,13 +6,14 @@ related_endpoints: []
 related_guides: 
   - authentication/select
   - authentication/oauth2
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 required_guides: 
   - authentication/select
   - applications/custom-apps
 related_resources: []
 alias_paths:
   - /guides/applications/limited-access-apps
+  - /guides/applications/custom-apps/app-token-setup
 ---
 
 # Setup with App Tokens
