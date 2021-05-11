@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 alias_paths:
   - /docs/box-skills
   - /page/box-skills-kit

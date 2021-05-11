@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 alias_paths:
   - /docs/custom-applications
   - /docs/custom-integrations
