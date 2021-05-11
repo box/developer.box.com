@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: false
 id: applications/app-gallery
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: applications
 parent_id: applications
 next_page_id: applications
-previous_page_id: applications/select
+previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-gallery.md
 ---
@@ -37,15 +37,15 @@ Gallery][app-gallery].
 
 To publish an application you will need to pass the following requirements.
 
-* The application needs to be in a finished state, ready for production usage
-* The application should use OAuth 2.0 authentication as the App Gallery does
+* The application needs to be in a finished state and ready for production usage
+* The application must use OAuth 2.0 authentication as the App Gallery does
   not support JWT or App Token authentication.
 * You need to be a developer with access to the application in the
   [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
-Head over to the [Developer Console][devconsole] and select your application to
+Navigate to the [Developer Console][devconsole] and select your application to
 submit to the gallery.
 
 ### 2. Fill in the form
@@ -88,8 +88,8 @@ Approval" button.
 
 # Approval completion
 
-Once an approval has been submitted, the partner team at Box will be notified
-about your request. They will follow up with the request to arrange for any
+Once a request for approval is submitted, the partner team at Box will be
+notified. They will follow up with the request to arrange for any
 testing instructions if needed. Similarly, the partner team will also reach
 out when the application has been published in the App Gallery.
 
@@ -101,7 +101,7 @@ For any questions, please feel free to email [`integrate@box.com`][email] or the
 ## Unpublishing an app
 
 Once approved and published, an application can be unpublished from the same
-control panel. Head over to the [Developer Console][devconsole] and select
+control panel. Navigate to the [Developer Console][devconsole] and select
 your application. Then, select the "App Gallery" panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
