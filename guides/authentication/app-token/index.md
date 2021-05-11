@@ -3,10 +3,10 @@ rank: 3
 related_endpoints: []
 related_guides:
   - applications/select
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
-  - applications/custom-apps/app-token-setup
+  - applications/limited-access/app-token-setup
   - authentication/select
 related_resources: []
 alias_paths: []
@@ -51,4 +51,4 @@ for apps that:
 - Want to store data in the application's Service Account and not a user's
   account
 
-[sa]: g://authentication/user-types/service-account/
+[sa]: g://getting-started/user-types/service-account

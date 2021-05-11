@@ -46,7 +46,7 @@ still add the user as a collaborator on folders, add the user to groups, etc.
 ## Sample Overview
 
 In this scenario we'll focus on provisioning a new
-[Box Managed User](guide://authentication/user-types/managed-users), as there
+[Box Managed User](guide://getting-started/user-types/managed-users), as there
 are very different considerations when provisioning Box App User accounts.
 
 We'll start with solving the most repeatable aspects of

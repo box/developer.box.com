@@ -1,9 +1,9 @@
 ---
-rank: 1
+rank: 0
 related_endpoints: []
 related_guides:
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
   - applications/custom-apps
@@ -11,18 +11,18 @@ related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app
   - /docs/oauth-20
-category_id: applications
-subcategory_id: applications/custom-apps
+category_id: authentication
+subcategory_id: authentication/oauth2
 is_index: false
-id: applications/custom-apps/oauth2-setup
+id: authentication/oauth2/oauth2-setup
 type: guide
 total_steps: 4
-sibling_id: applications/custom-apps
-parent_id: applications/custom-apps
-next_page_id: applications/custom-apps/jwt-setup
+sibling_id: authentication/oauth2
+parent_id: authentication/oauth2
+next_page_id: authentication/oauth2
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/oauth2-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/oauth2-setup.md
 ---
 # Setup with OAuth 2.0
 

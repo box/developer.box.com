@@ -3,7 +3,7 @@ rank: 1
 related_endpoints: []
 related_guides:
   - applications/select
-  - authentication/user-types
+  - getting-started/user-types
 required_guides:
   - authentication/select
 related_resources: []
@@ -14,11 +14,11 @@ subcategory_id: authentication/oauth2
 is_index: true
 id: authentication/oauth2
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/oauth2/without-sdk
-previous_page_id: ''
+previous_page_id: authentication/oauth2/oauth2-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/index.md
 ---

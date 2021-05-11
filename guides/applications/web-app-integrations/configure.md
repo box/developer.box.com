@@ -2,7 +2,7 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
   - authentication/access-tokens
 required_guides: []
 related_resources: []
@@ -163,7 +163,7 @@ note that the URL has to be publicly accessible on the internet.
 To make a Box integration publicly available it needs to be listed in the App
 Gallery. Follow the [App Gallery][app-gallery] guide for more details.
 
-[custom-oauth2]: g://applications/custom-apps/oauth2-setup
+[custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
 [app-gallery]: g://applications/app-gallery

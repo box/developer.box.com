@@ -49,4 +49,4 @@ Token.
 [jwt-with-sdk]: g://authentication/jwt/with-sdk
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
 [devcon]: https://app.box.com/developers/console
-[clientcred]: g://authentication/jwt/without-sdk/#client-credentials-grant
+[clientcred]: g://authentication/client-credentials

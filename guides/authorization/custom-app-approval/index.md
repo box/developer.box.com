@@ -3,32 +3,36 @@ rank: 4
 related_endpoints: []
 related_guides: []
 required_guides:
-  - applications/custom-apps/app-token-setup
-  - applications/custom-apps/jwt-setup
+  - applications/limited-access/app-token-setup
+  - authentication/jwt/jwt-setup
 related_resources: []
 alias_paths: []
-category_id: applications
-subcategory_id: applications/custom-apps
-is_index: false
-id: applications/custom-apps/app-approval
+category_id: authorization
+subcategory_id: authorization/custom-app-approval
+is_index: true
+id: authorization/custom-app-approval
 type: guide
-total_steps: 4
-sibling_id: applications/custom-apps
-parent_id: applications/custom-apps
+total_steps: 0
+sibling_id: authorization
+parent_id: authorization
 next_page_id: ''
-previous_page_id: applications/custom-apps/app-token-setup
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/app-approval.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval/index.md
 ---
-# App Approval
+# Custom App Approval
 
-Application that are configured with [JWT][jwt], [Client Credentials Grant][ca],
+A Box Admin needs an application's client ID in order to properly authorize it
+in the Admin Console.
+
+Application that are configured with [JWT][jwt], [Client Credentials Grant][ccg],
 or [App Token][app-token] authentication must be authorized by a Box enterprise
 Admin before it can be used.
 
 ## Approval Notifications
 
-A semi-automated process for app approval is available in the Developer Console.
+A semi-automated process to submit an app approval is available in the Developer
+Console.
 
 Navigate to the **Authorization** tab for your application in the
 [Developer console][devconsole].
@@ -40,19 +44,19 @@ Navigate to the **Authorization** tab for your application in the
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
-enterprise's Admin to approve the application. More information on this
+enterprise's primary Admin to approve the application. More information on this
 process is available in our [support article on app authorization][app-auth].
 
 ## Manual Approval
 
-If the above process is not an option, the following steps provide
-instructions on how to manually approve the application.
+The following steps provide instructions on how to manually approve the
+application.
 
 ### As developer
 
 As the developer, navigate to the **Configuration** tab for your application
 in the [Developer Console][devconsole]. Scroll down to the OAuth 2.0 Credentials
-section and copy the Client ID value to provide to your Box Admin.
+section and copy the Client ID value to provide to a Box Admin.
 
 <Message>
 
@@ -97,7 +101,7 @@ of the application name and selecting "Reauthorize App".
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
-[ca]: g://authentication/jwt/without-sdk/#client-credentials-grant
+[ccg]: g://authentication/client-credentials
 [settings]: https://app.box.com/account
 [adminconsole]: https://app.box.com/master/settings/custom
 [jwt]: g://authentication/jwt

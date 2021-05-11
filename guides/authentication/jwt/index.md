@@ -3,7 +3,7 @@ rank: 2
 related_endpoints: []
 related_guides:
   - applications/select
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/select
@@ -15,7 +15,7 @@ subcategory_id: authentication/jwt
 is_index: true
 id: authentication/jwt
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/jwt/as-user
@@ -71,5 +71,5 @@ that:
   user's Box account
 
 [app-type]: g://applications/select/
-[user-types]: g://authentication/user-types
+[user-types]: g://getting-started/user-types
 [jwtnosdk]: g://authentication/jwt/without-sdk/

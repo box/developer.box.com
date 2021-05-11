@@ -148,7 +148,8 @@ Available in version 3.46 and above.
 
 Salesforce has a String length limit of 6 million characters. Due to string
 bloat in the base64 encoding/decoding process, this results in an effective
-file size limit of 4.3 megabytes.
+file size limit of 4.3 megabytes for synchronous Apex and 8.6 megabytes for
+asynchronous Apex.
 
 </Message>
 

@@ -6,24 +6,25 @@ related_endpoints: []
 related_guides:
   - authentication/select
   - authentication/oauth2
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 required_guides:
   - authentication/select
   - applications/custom-apps
 related_resources: []
 alias_paths:
   - /guides/applications/limited-access-apps
+  - /guides/applications/custom-apps/app-token-setup
 category_id: applications
-subcategory_id: applications/custom-apps
+subcategory_id: applications/limited-access
 is_index: false
-id: applications/custom-apps/app-token-setup
-total_steps: 4
-sibling_id: applications/custom-apps
-parent_id: applications/custom-apps
-next_page_id: applications/custom-apps/app-approval
-previous_page_id: applications/custom-apps/jwt-setup
+id: applications/limited-access/app-token-setup
+total_steps: 0
+sibling_id: applications/limited-access
+parent_id: ''
+next_page_id: ''
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/app-token-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access/app-token-setup.md
 ---
 # Setup with App Tokens
 

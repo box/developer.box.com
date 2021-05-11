@@ -1,29 +1,29 @@
 ---
-rank: 2
+rank: 0
 related_endpoints: []
 related_guides:
   - authentication/jwt
 required_guides:
   - authentication/select
   - applications/custom-apps
-  - applications/custom-apps/app-approval
+  - authorization/custom-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
   - /docs/app-auth
-category_id: applications
-subcategory_id: applications/custom-apps
+category_id: authentication
+subcategory_id: authentication/jwt
 is_index: false
-id: applications/custom-apps/jwt-setup
+id: authentication/jwt/jwt-setup
 type: guide
-total_steps: 4
-sibling_id: applications/custom-apps
-parent_id: applications/custom-apps
-next_page_id: applications/custom-apps/app-token-setup
-previous_page_id: applications/custom-apps
+total_steps: 5
+sibling_id: authentication/jwt
+parent_id: authentication/jwt
+next_page_id: authentication/jwt/with-sdk
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/jwt-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/jwt-setup.md
 ---
 # Setup with JWT
 
@@ -235,8 +235,8 @@ section at the bottom of the **Configuration** tab in the
 [devtoken]: g://authentication/access-tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[user-types]: g://authentication/user-types
-[sa]: g//authentication/user-types/service-accounts
+[user-types]: g://getting-started/user-types
+[sa]: g://getting-started/user-types/service-account
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
 [jwt]: g://authentication/jwt

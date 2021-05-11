@@ -5,10 +5,10 @@ related_endpoints:
 related_guides:
   - applications/select
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -16,7 +16,7 @@ subcategory_id: authentication/oauth2
 is_index: false
 id: authentication/oauth2/without-sdk
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: authentication/oauth2
 parent_id: authentication/oauth2
 next_page_id: authentication/oauth2/as-user

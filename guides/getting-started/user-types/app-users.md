@@ -4,22 +4,22 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - authentication/user-types
+  - getting-started/user-types
 required_guides: []
 related_resources:
   - user
-category_id: authentication
-subcategory_id: authentication/user-types
+category_id: getting-started
+subcategory_id: getting-started/user-types
 is_index: false
-id: authentication/user-types/app-users
+id: getting-started/user-types/app-users
 type: guide
 total_steps: 3
-sibling_id: authentication/user-types
-parent_id: authentication/user-types
-next_page_id: authentication/user-types/managed-users
-previous_page_id: authentication/user-types/service-account
+sibling_id: getting-started/user-types
+parent_id: getting-started/user-types
+next_page_id: getting-started/user-types/managed-users
+previous_page_id: getting-started/user-types/service-account
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/app-users.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/app-users.md
 ---
 # App Users
 
@@ -103,9 +103,9 @@ the collaboration [via the API][collabapi] you will need to use an Access Token
 for a user that already has access to the content and has the appropriate
 collaboration permissions to invite collaborators.
 
-[sa]: g://authentication/user-types/service-account/
+[sa]: g://getting-started/user-types/service-account/
 [createuser]: e://post-users
-[managed]: g://authentication/user-types/managed-users/
+[managed]: g://getting-started/user-types/managed-users/
 [dc]: https://app.box.com/developers/console
 [events]: e://get-events/
 [uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide

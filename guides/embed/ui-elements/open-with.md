@@ -35,7 +35,7 @@ The integrations included in the Open With Element are Adobe Sign, Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](g://authentication/user-types)
+Currently, the element only supports [App Users](g://getting-started/user-types)
 for authentication.
 
 ## Installation
@@ -94,7 +94,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://applications/custom-apps/app-approval).
+available [here](g://authorization/custom-app-approval).
 
 ## List available integrations
 
@@ -154,7 +154,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](g://authentication/user-types/service-account/)
+- A valid [Service Account](g://getting-started/user-types/service-account/)
   Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
@@ -413,4 +413,4 @@ using `openWith.addListener('execute', callback)` and
 [tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
 [custom-domains]: g://embed/ui-elements/custom-domains
 [safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
-[service-account]: g://authentication/user-types/service-account/
+[service-account]: g://getting-started/user-types/service-account/

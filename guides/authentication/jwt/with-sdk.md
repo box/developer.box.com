@@ -5,10 +5,10 @@ related_endpoints:
 related_guides:
   - applications/select
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -16,11 +16,11 @@ subcategory_id: authentication/jwt
 is_index: false
 id: authentication/jwt/with-sdk
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication/jwt
 parent_id: authentication/jwt
 next_page_id: authentication/jwt
-previous_page_id: ''
+previous_page_id: authentication/jwt/jwt-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/with-sdk.md
 ---
@@ -196,7 +196,7 @@ var client = sdk.getAppAuthClient('enterprise');
 
 At this point the application is authenticated as an application user, not as
 a managed or app user. Head over to our guide on [User
-Types](g://authentication/user-types) to learn more about the different types
+Types](g://getting-started/user-types) to learn more about the different types
 of users.
 
 </Message>

@@ -30,24 +30,24 @@ Learn how to select the application type for your app
 
 </CTA>
 
-## Available methods
-
-The following authorization methods are available to each Box Application type.
+The following authorization methods are available to each Box application type.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
-| ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | No         | Yes              |
-| [Limited Access App][la-app] | No                  | Yes  | Yes        | No               |
-| [Custom Skill][custom-skill] | No                  | No   | No         | No               |
+| Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? | Developer Token? |
+| ---------------------------- | ------------------- | ---- | ------------------- | ---------- | ---------------- |
+| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         | Yes              |
+| [Limited Access App][la-app] | No                  | Yes  | No                  | Yes        | No               |
+| [Custom Skill][custom-skill] | No                  | No   | No                  | No         | No               |
 
 <!-- markdownlint-enable line-length -->
 
-### Client-side OAuth 2.0
+## Client-side
 
-Client-side OAuth 2.0 requires the application to redirect end-users to their
-browser to login to Box and authorize the application to take actions on their
+### OAuth 2.0
+
+OAuth 2.0 requires the application to redirect end-users to their browser to
+login to Box and authorize the application to take actions on their
 behalf.
 
 <ImageFrame center width="400" shadow border>
@@ -75,7 +75,9 @@ Learn about client-side authentication with OAuth 2.0
 
 </CTA>
 
-### Server-side JWT
+## Server-side
+
+### JWT
 
 This authentication method does not require end-user
 interaction and, if granted the proper privileges, can be used
@@ -113,7 +115,7 @@ Learn about server-side authentication with JWT
 
 </CTA>
 
-### Server-side App Tokens
+### App Token
 
 A server-side App Token is an authentication method where the application only
 has access to read and write data to its own account. This is mainly used by Box
