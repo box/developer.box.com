@@ -64,6 +64,6 @@ Example use cases for Custom Skills include:
 Before a Custom Skill can be used it needs to be assigned to a folder for which the
 skill should trigger.
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to='g://authorization/custom-skill-approval'>
   Learn more about approving Custom Skills
 </CTA>

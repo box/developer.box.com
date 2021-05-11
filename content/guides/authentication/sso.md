@@ -85,7 +85,7 @@ therefore SSO is not involved.
 [admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
-[la-app]: guide://applications/web-app-integrations
+[la-app]: guide://applications/custom-apps/web-app-integrations
 [app_token]: g://authentication/app-token
 [custom_app]: g://applications/custom-apps
 [custom_skills]: g://applications/custom-skills
