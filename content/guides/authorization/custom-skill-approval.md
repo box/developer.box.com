@@ -8,32 +8,33 @@ related_resources: []
 alias_paths: []
 ---
 
-# Approval
+# Custom Skill Approval
 
-Custom Skills will need to be enabled on a folder by the enterprise's Box Admin
-before it can be used.
+Custom Skills will must be enabled on a folder by the enterprise's Box Admin
+before use.
 
 ## As developer
 
-As the developer, head over to the application in the [developer
-console][devconsole] and copy the app's Client ID and provide this to your admin.
+As the developer, navigate to the application in the 
+[Developer Console][devconsole] and copy the application's Client ID to provide
+to your admin.
 
 <Message>
   # Finding a Box Admin
 
-  If you don't know your enterprise admin, go to the Box [account
-  settings][settings] page  and scroll to the bottom. If an admin contact is set
+  If you don't know your enterprise Admin, go to the Box [account
+  settings][settings] page and scroll to the bottom. If an Admin contact is set
   you should see contact  information under "Admin Contact".
 </Message>
 
 ## As an Admin
 
-To enable your Custom Skill application, head over to the [Skills section of the
-Box Admin Console][adminconsole] and click the "Add Skill" link to add a new
-skill.
+To enable a Custom Skill application, navigate to the
+[Skills section of the Box Admin Console][adminconsole] and click the
+"Add Skill" link to add a new skill.
 
 Enter the Client ID (API key) for the Custom Skill application. This is the
-Client ID that was provided by the developer.
+Client ID provided by the developer.
 
 Click "Next" and select the folder(s) where the Box Skill application should
 operate.
@@ -46,7 +47,7 @@ There are two options here:
 
 * **All content in your company** authorizes the Skill at the root folder of
   every user. This results in every file uploaded to any folder being processed
-  by the Box Skill application
+  by the Box Skill application.
 * **Select a list of folders** enables the application to a specific folder
   or set of folders on which the Skill application operates.
 
@@ -54,10 +55,10 @@ There are two options here:
   ![Select a skill to add](./images/skills-confirm.png)
 </ImageFrame>
 
-Click "Enable Skill" and accept the terms and agreements. The Custom Skill has
-now been enabled. Any new content added to the folder(s) you selected will now
-trigger an event to be sent to the Invocation URL provided in the Box Developer
-Console.
+Click "Enable Skill" and accept the terms and agreements. The Custom Skill is
+now enabled. Any new content added to the selected folder(s) will now trigger an
+event to be sent to the Invocation URL configured in the Box
+[Developer Console][devconsole].
 
 <Message>
   # 10 Skill applications per enterprise
