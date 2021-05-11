@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 alias_paths:
   - /docs/box-skills
   - /page/box-skills-kit
@@ -13,11 +13,11 @@ subcategory_id: applications/custom-skills
 is_index: true
 id: applications/custom-skills
 type: guide
-total_steps: 2
+total_steps: 1
 sibling_id: applications
 parent_id: applications
 next_page_id: ''
-previous_page_id: applications/custom-skills/approval
+previous_page_id: applications/custom-skills/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/index.md
 ---
@@ -77,7 +77,7 @@ Example use cases for Custom Skills include:
 Before a Custom Skill can be used it needs to be assigned to a folder for which the
 skill should trigger.
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to='g://authorization/custom-skill-approval'>
 
 Learn more about approving Custom Skills
 

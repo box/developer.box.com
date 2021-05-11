@@ -6,18 +6,18 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: []
-category_id: applications
-subcategory_id: applications/custom-skills
+category_id: authorization
+subcategory_id: null
 is_index: false
-id: applications/custom-skills/approval
+id: authorization/custom-skill-approval
 type: guide
 total_steps: 2
-sibling_id: applications/custom-skills
-parent_id: applications/custom-skills
-next_page_id: applications/custom-skills
-previous_page_id: applications/custom-skills/setup
+sibling_id: authorization
+parent_id: authorization
+next_page_id: authorization
+previous_page_id: authorization/custom-app-approval
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/approval.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-skill-approval.md
 ---
 # Approval
 

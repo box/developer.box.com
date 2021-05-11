@@ -196,4 +196,4 @@ authentication the token defaults to the application's Service Account.
 
 [custom-app]: guide://applications/custom-apps
 [custom-skill]: guide://applications/custom-skills
-[la-app]: guide://applications/web-app-integrations
+[la-app]: guide://applications/custom-apps/web-app-integrations

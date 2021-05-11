@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 1
 related_endpoints: []
 related_guides: []
 required_guides:
@@ -8,17 +8,17 @@ required_guides:
 related_resources: []
 alias_paths: []
 category_id: authorization
-subcategory_id: authorization/custom-app-approval
-is_index: true
+subcategory_id: null
+is_index: false
 id: authorization/custom-app-approval
 type: guide
-total_steps: 0
+total_steps: 2
 sibling_id: authorization
 parent_id: authorization
-next_page_id: ''
+next_page_id: authorization/custom-skill-approval
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval.md
 ---
 # Custom App Approval
 

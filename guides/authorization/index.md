@@ -5,11 +5,11 @@ subcategory_id: null
 is_index: true
 id: authorization
 type: guide
-total_steps: 0
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: ''
+previous_page_id: authorization/custom-skill-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/index.md
 ---

@@ -8,17 +8,17 @@ alias_paths:
   - /docs/web-application-integrations
   - /docs/box-web-application-integrations
 category_id: applications
-subcategory_id: applications/web-app-integrations
+subcategory_id: applications/custom-apps
 is_index: true
-id: applications/web-app-integrations
+id: applications/custom-apps/web-app-integrations
 type: guide
 total_steps: 3
-sibling_id: applications
-parent_id: applications
+sibling_id: applications/custom-apps
+parent_id: applications/custom-apps
 next_page_id: ''
-previous_page_id: applications/web-app-integrations/configure
+previous_page_id: applications/custom-apps/web-app-integrations/configure
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/web-app-integrations/index.md
 ---
 # Web App Integration
 

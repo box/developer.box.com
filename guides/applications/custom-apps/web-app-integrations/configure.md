@@ -9,17 +9,17 @@ related_resources: []
 alias_paths: []
 notes: Needs a massive cleanup
 category_id: applications
-subcategory_id: applications/web-app-integrations
+subcategory_id: applications/custom-apps
 is_index: false
-id: applications/web-app-integrations/configure
+id: applications/custom-apps/web-app-integrations/configure
 type: guide
 total_steps: 3
-sibling_id: applications/web-app-integrations
-parent_id: applications/web-app-integrations
-next_page_id: applications/web-app-integrations
-previous_page_id: applications/web-app-integrations/user-experience
+sibling_id: applications/custom-apps/web-app-integrations
+parent_id: applications/custom-apps/web-app-integrations
+next_page_id: applications/custom-apps/web-app-integrations
+previous_page_id: applications/custom-apps/web-app-integrations/user-experience
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/configure.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/web-app-integrations/configure.md
 ---
 # Create Web App Integration
 

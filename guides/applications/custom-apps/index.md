@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 alias_paths:
   - /docs/custom-applications
   - /docs/custom-integrations
@@ -7,17 +7,17 @@ alias_paths:
   - /docs/getting-started-box-platform
   - /docs/box-platform
 category_id: applications
-subcategory_id: null
-is_index: false
+subcategory_id: applications/custom-apps
+is_index: true
 id: applications/custom-apps
 type: guide
-total_steps: 3
+total_steps: 0
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/app-gallery
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/index.md
 ---
 # Custom Apps
 
