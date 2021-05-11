@@ -19,17 +19,7 @@ alias_paths:
 
 This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
-directly with the Box API. 
-
-There are two ways you can verify an application's permissions:
-
-- using a [public and private key pair][keypair]
-- using a [client id and client secret][ccg] (Client Credentials Grant)
-
-Using a Client Credentials Grant is the easiest and fastest verification
-method for prototyping or scripting against your Box enterprise. Regardless of
-the verification method you select from above, the end result is an Access Token
-which can be used to make API calls on behalf of the application. 
+directly with the Box API.  
 
 To learn how to use this token visit our guide on [Making API
 calls](g://api-calls).

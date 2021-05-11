@@ -17,8 +17,8 @@ alias_paths:
 
 # Client Credentials Grant
 
-Follow the steps below if you would like to verify your application's identity
-using a client ID and client secret.
+Follow the steps below if you would like to leverage server authentication and 
+verify your application's identity using a client ID and client secret.
 
 ## Prerequisites
 
