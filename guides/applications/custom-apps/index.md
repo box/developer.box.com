@@ -19,7 +19,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/index.md
 ---
-# Custom Apps
+# Custom App
 
 Custom Apps encompass most use cases and is the most flexible application type.
 

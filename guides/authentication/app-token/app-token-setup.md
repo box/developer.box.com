@@ -14,22 +14,22 @@ related_resources: []
 alias_paths:
   - /guides/applications/limited-access-apps
   - /guides/applications/custom-apps/app-token-setup
-category_id: applications
-subcategory_id: applications/limited-access
+category_id: authentication
+subcategory_id: authentication/app-token
 is_index: false
-id: applications/limited-access/app-token-setup
-total_steps: 0
-sibling_id: applications/limited-access
-parent_id: ''
-next_page_id: ''
-previous_page_id: ''
+id: authentication/app-token/app-token-setup
+total_steps: 5
+sibling_id: authentication/app-token
+parent_id: authentication/app-token
+next_page_id: authentication/app-token/rollover
+previous_page_id: authentication/app-token/without-sdk
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access/app-token-setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/app-token-setup.md
 ---
-# Setup with App Tokens
+# Setup with App Token Auth
 
-A Custom App can be set up to use server-side
-[App Tokens][app-token] for authentication.
+A Limited Access App can be set up to use server-side [App Tokens][app-token]
+for authentication.
 
 <CTA to='g://authentication/app-token'>
 

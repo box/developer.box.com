@@ -6,7 +6,7 @@ related_guides:
   - authentication/access-tokens/downscope
 required_guides:
   - authentication/select
-  - applications/limited-access/app-token-setup
+  - authentication/app-token/app-token-setup
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -14,7 +14,7 @@ subcategory_id: authentication/app-token
 is_index: false
 id: authentication/app-token/with-sdk
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: authentication/app-token/without-sdk

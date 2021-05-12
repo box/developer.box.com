@@ -6,7 +6,7 @@ related_guides:
   - getting-started/user-types
   - authentication/select
 required_guides:
-  - applications/limited-access/app-token-setup
+  - authentication/app-token/app-token-setup
   - authentication/select
 related_resources: []
 alias_paths: []
@@ -15,7 +15,7 @@ subcategory_id: authentication/app-token
 is_index: true
 id: authentication/app-token
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/app-token/rollover
