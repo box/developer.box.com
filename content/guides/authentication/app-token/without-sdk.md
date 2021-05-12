@@ -6,7 +6,7 @@ related_guides:
   - authentication/access-tokens/downscope
 required_guides:
   - authentication/select
-  - applications/limited-access/app-token-setup
+  - authentication/app-token/app-token-setup
 related_resources: []
 alias_paths: []
 ---
