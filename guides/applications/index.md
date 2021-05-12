@@ -12,11 +12,11 @@ subcategory_id: null
 is_index: true
 id: applications
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: applications/app-gallery
+previous_page_id: applications/limited-access-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/index.md
 ---

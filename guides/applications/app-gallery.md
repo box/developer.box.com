@@ -13,10 +13,10 @@ subcategory_id: null
 is_index: false
 id: applications/app-gallery
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: applications
 parent_id: applications
-next_page_id: applications
+next_page_id: applications/limited-access-apps
 previous_page_id: applications/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-gallery.md

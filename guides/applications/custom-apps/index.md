@@ -39,7 +39,7 @@ Learn more about the different types of authentication
 
 </CTA>
 
-## When to use a Custom App
+## When to use
 
 A Custom App is best used when the application:
 

@@ -53,7 +53,7 @@ that are provided with every Skill Event. For this reason though, Custom Skills
 allow for limited API access, mainly to read the file and write Metadata to the
 file.
 
-## When to use Custom Skills
+## When to use
 
 A Custom Skill is best used when the application:
 

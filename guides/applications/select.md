@@ -13,7 +13,7 @@ subcategory_id: null
 is_index: false
 id: applications/select
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: applications
 parent_id: applications
 next_page_id: applications/app-gallery
@@ -66,6 +66,12 @@ Learn more about Custom Apps
 A Limited Access App is best for leveraging [Box View][view-app] or previewing
 Box content within another application. This type of application can only
 interact with a limited number of endpoints.
+
+<CTA to="g://applications/limited-access-apps">
+
+Learn more about Limited Access Apps
+
+</CTA>
 
 ## Custom Skills
 
