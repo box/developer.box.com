@@ -50,6 +50,8 @@ A Limited Access App is best for leveraging [Box View][view-app] or previewing
 Box content within another application. This type of application can only
 interact with a limited number of endpoints. 
 
+<CTA to="g://applications/limited-access-apps">Learn more about Limited Access Apps</CTA>
+
 ## Custom Skills
 
 |                            |                                |
