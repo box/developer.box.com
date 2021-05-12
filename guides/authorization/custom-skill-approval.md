@@ -54,7 +54,7 @@ operate.
 
 <ImageFrame border>
 
-![Select a skill to add](./images/skills-select.png)
+![Select a skill to add](images/skills-select.png)
 
 </ImageFrame>
 
@@ -68,7 +68,7 @@ There are two options here:
 
 <ImageFrame border>
 
-![Select a skill to add](./images/skills-confirm.png)
+![Select a skill to add](images/skills-confirm.png)
 
 </ImageFrame>
 

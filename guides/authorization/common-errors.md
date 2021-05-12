@@ -57,7 +57,7 @@ a given application.
 
 <ImageFrame border>
 
-![Admin error](images/adminerror.png)
+![Admin error](images/admin_error.png)
 
 </ImageFrame>
 
