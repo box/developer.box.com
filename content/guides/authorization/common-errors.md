@@ -39,7 +39,7 @@ Please review our [authorization guide][ag] to confirm the necessary steps for
 a given application. 
 
 <ImageFrame border>
-  ![Admin error](images/adminerror.png)
+  ![Admin error](images/admin_error.png)
 </ImageFrame>
 
 [ag]: g://authorization
