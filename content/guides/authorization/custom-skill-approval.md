@@ -40,7 +40,7 @@ Click "Next" and select the folder(s) where the Box Skill application should
 operate.
 
 <ImageFrame border>
-  ![Select a skill to add](./images/skills-select.png)
+  ![Select a skill to add](images/skills-select.png)
 </ImageFrame>
 
 There are two options here:
@@ -52,7 +52,7 @@ There are two options here:
   or set of folders on which the Skill application operates.
 
 <ImageFrame border>
-  ![Select a skill to add](./images/skills-confirm.png)
+  ![Select a skill to add](images/skills-confirm.png)
 </ImageFrame>
 
 Click "Enable Skill" and accept the terms and agreements. The Custom Skill is
