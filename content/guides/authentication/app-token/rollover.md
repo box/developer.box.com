@@ -3,7 +3,7 @@ rank: 4
 related_endpoints: []
 related_guides: []
 required_guides:
-  - applications/limited-access/app-token-setup
+  - authentication/app-token/app-token-setup
 related_resources: []
 alias_paths: []
 ---

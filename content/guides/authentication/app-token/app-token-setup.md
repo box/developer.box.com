@@ -16,10 +16,10 @@ alias_paths:
   - /guides/applications/custom-apps/app-token-setup
 ---
 
-# Setup with App Tokens
+# Setup with App Token Auth
 
-A Custom App can be set up to use server-side
-[App Tokens][app-token] for authentication.
+A Limited Access App can be set up to use server-side [App Tokens][app-token]
+for authentication.
 
 <CTA to='g://authentication/app-token'>
   Learn how App Token authentication works

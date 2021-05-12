@@ -6,7 +6,7 @@ related_guides:
   - getting-started/user-types
   - authentication/select
 required_guides:
-  - applications/limited-access/app-token-setup
+  - authentication/app-token/app-token-setup
   - authentication/select
 related_resources: []
 alias_paths: []

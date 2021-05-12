@@ -8,7 +8,7 @@ alias_paths:
   - /docs/box-platform
 ---
 
-# Custom Apps
+# Custom App
 
 Custom Apps encompass most use cases and is the most flexible application type.
 
