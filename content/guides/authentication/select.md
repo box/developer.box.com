@@ -109,7 +109,6 @@ authentication method for apps that:
 
 </Message>
 
-
 <CTA to="guide://authentication/client-credentials">
   Learn about server-side authentication with Client Credentials Grant
 </CTA>
@@ -120,7 +119,7 @@ A server-side App Token is an authentication method where the application only
 has access to read and write data to its own account. This is mainly used by Box
 View applications. By using this authentication method there is no need to
 authorize a user as the application is automatically authenticated as the
-applicatoin's Service Account.
+application's Service Account.
 
 <Message>
   # When to use App Tokens?
