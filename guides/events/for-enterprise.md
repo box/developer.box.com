@@ -77,7 +77,7 @@ The following events can be triggered for an enterprise.
 | `ACCESS_REVOKED`                               | A user has revoked Box support access to their account                                          |
 | `ADD_DEVICE_ASSOCIATION`                       | Added device association                                                                        |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we have not seen before                                      |
-| `ADMIN_LOGIN`                                  | Admin console used to log in to a manager user's account                                        |
+| `ADMIN_LOGIN`                                  | Admin console used to log in to a managed user's account                                        |
 | `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
 | `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |

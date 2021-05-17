@@ -14,7 +14,7 @@ subcategory_id: authentication/access-tokens
 is_index: false
 id: authentication/access-tokens/refresh
 type: guide
-total_steps: 8
+total_steps: 7
 sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/revoke

@@ -13,11 +13,11 @@ subcategory_id: authentication/access-tokens
 is_index: false
 id: authentication/access-tokens/api-calls
 type: guide
-total_steps: 8
+total_steps: 7
 sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/sdks
-previous_page_id: authentication/access-tokens/resource
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/api-calls.md
 ---

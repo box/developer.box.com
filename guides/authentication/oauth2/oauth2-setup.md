@@ -54,7 +54,7 @@ prompt a selection for the next step.
 
 <ImageFrame border>
 
-![Application selection screen](../images/select-app-type.png)
+![Application selection screen](./images/select-app-type.png)
 
 </ImageFrame>
 
@@ -65,7 +65,7 @@ application. Click **Create App**.
 
 <ImageFrame border width="400" center>
 
-![Auth selection screen](../images/custom-app-selection.png)
+![Auth selection screen](./images/custom-app-selection.png)
 
 </ImageFrame>
 
@@ -114,7 +114,7 @@ section at the bottom of the **Configuration** tab in the
 
 <ImageFrame border>
 
-![App name form](../images/app-cors.png)
+![App name form](./images/app-cors.png)
 
 </ImageFrame>
 

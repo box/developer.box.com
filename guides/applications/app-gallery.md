@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
@@ -16,8 +16,8 @@ type: guide
 total_steps: 3
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/limited-access-apps
-previous_page_id: applications/select
+next_page_id: applications
+previous_page_id: applications/limited-access-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-gallery.md
 ---

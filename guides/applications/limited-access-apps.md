@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 3
 category_id: applications
 subcategory_id: null
 is_index: false
@@ -8,8 +8,8 @@ type: guide
 total_steps: 3
 sibling_id: applications
 parent_id: applications
-next_page_id: applications
-previous_page_id: applications/app-gallery
+next_page_id: applications/app-gallery
+previous_page_id: applications/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access-apps.md
 ---
@@ -32,5 +32,9 @@ Learn more about App Tokens
 ## When to use
 
 ## Use cases
+
+- Showcasing a creative professional’s portfolio on their website
+- Providing user manuals and product spec documents on a support site
+- A custom document viewer to view e-books or annotate architectural floor plans
 
 [bv]: g://embed/box-view/

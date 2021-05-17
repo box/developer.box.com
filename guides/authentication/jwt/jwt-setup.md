@@ -56,21 +56,19 @@ prompt a selection for the next step.
 
 <ImageFrame border center>
 
-![Auth selection screen](../images/select-app-type.png)
+![Auth selection screen](./images/select-app-type.png)
 
 </ImageFrame>
 
 ### 3. Select the type of authentication and application name
 
 Select **Server Authentication (with JWT)** if you would like to verify
-application identity [with a key pair][kp]. Select
-**Server Authentication (Client Credentials Grant)** if you would like to verify
-application identity [with your client id and client secret][ccg]. Then, provide
-a name for your application and click **Create App**.
+application identity [with a key pair][kp]. Then, provide a name for your
+application and click **Create App**.
 
 <Message warning>
 
-Once you make a selection, you will not be able to change to a different 
+Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 
 </Message>
@@ -168,7 +166,7 @@ Navigate to the **Authorization** tab for your application within the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![Add and Manage keys](./images/app-authorization.png)
 
 </ImageFrame>
 
@@ -176,12 +174,11 @@ Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
 [support article for app authorization][app-auth].
 
-### Re-authorization after making configuration changes
+<CTA to='g://authorization/custom-app-approval'>
 
-As a general rule of thumb, applications require re-authorization, in the Box
-Admin console, after making any configuration changes within the Developer
-Console. If this step is skipped, any generated Access Tokens will not reflect
-the configuration changes.
+Learn how to authorize a Custom Application
+
+</CTA>
 
 ## Basic configuration
 
@@ -196,7 +193,7 @@ access existing Managed Users of an enterprise, navigate to the
 
 <ImageFrame border>
 
-![App access level](../images/app-access-level.png)
+![App access level](./images/app-access-level.png)
 
 </ImageFrame>
 
@@ -208,7 +205,7 @@ on each option.
 
 <ImageFrame border width="600" center>
 
-![App scopes](../images/app-scopes.png)
+![App scopes](./images/app-scopes.png)
 
 </ImageFrame>
 
