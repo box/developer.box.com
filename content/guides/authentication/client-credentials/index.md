@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 1
 related_endpoints:
   - get_authorize
 related_guides:

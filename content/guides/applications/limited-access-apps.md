@@ -20,4 +20,8 @@ Limited Access Apps only support App Token authentication.
 
 ## Use cases
 
+- Showcasing a creative professional’s portfolio on their website
+- Providing user manuals and product spec documents on a support site
+- A custom document viewer to view e-books or annotate architectural floor plans
+
 [bv]: g://embed/box-view/
