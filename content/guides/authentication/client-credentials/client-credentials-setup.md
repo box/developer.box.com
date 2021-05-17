@@ -1,27 +1,21 @@
 ---
-rank: 0
-related_endpoints: []
-related_guides: 
-  - authentication/jwt 
-required_guides: 
+rank: 2
+related_endpoints:
+  - get_authorize
+related_guides:
+  - applications/select
   - authentication/select
-  - applications/custom-apps
-  - authorization/custom-app-approval
+  - authentication/oauth2/oauth2-setup
+required_guides:
+  - authentication/select
+  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths:
-  - /docs/setting-up-a-jwt-app
-  - /docs/authentication-with-jwt
-  - /docs/app-auth
+  - /docs/construct-jwt-claim-manually
+  - /guides/authentication/client-credentials
 ---
 
-# Setup with JWT
-
-A Custom App can be set up to use server-side authentication with
-[JWT][jwt].
-
-<CTA to='g://authentication/jwt'>
-  Learn how JWT authentication works
-</CTA>
+# Setup with Client Credentials Grant
 
 ## Prerequisites
 
@@ -47,85 +41,14 @@ prompt a selection for the next step.
 
 ### 3. Select the type of authentication and application name
 
-Select **Server Authentication (with JWT)** if you would like to verify 
-application identity [with a key pair][kp]. Then, provide a name for your
-application and click **Create App**.
+Select **Server Authentication (with Client Credentials gRANT)** if you would 
+like to verify  application identity with a client ID and client secret. Then, 
+provide a name for your application and click **Create App**.
 
 <Message warning>
 Once you make a selection, you will not be able to change to a different 
 authentication method without creating a new application.
 </Message>
-
-<ImageFrame border width="600" center>
-  ![App name form](../images/jwt-three-options.png)
-</ImageFrame>
-
-## Public and private key pair
-
-<Message>
-  This section can be skipped if you selected Server Authentication
-  (Client Credentials Grant) as your authentication method.
-</Message>
-
-Once a Custom App is created leveraging Server Authentication with JWT, a key 
-pair can be generated via the configuration tab within the
-[Developer Console][devconsole]. Alternatively, you can generate your
-own and supply Box with the public key. Regardless of the method you select,
-your Box account will need to have [2FA][2fa] enabled for security purposes.
-
-### Generate a keypair (Recommended)
-
-If you would like to use a Box generated keypair, navigate to the
-[Developer Console][devconsole] where you can generate a configuration file.
-This file includes a public/private keypair and a number of other application
-details that are necessary for authentication.
-
-To generate this file, navigate to the **Configuration** tab of the
-[Developer Console][devconsole] and scroll down to the
-**Add and Manage Public Keys** section.
-
-<ImageFrame border width="600" center>
-  ![Add and Manage keys](../images/app-add-keys.png)
-</ImageFrame>
-
-Click the **Generate a Public/Private Keypair** button to have Box generate a
-keypair you. This will trigger the download of a JSON configuration file that 
-you can move to your application code.
-
-<Message danger>
-  For security reasons, Box will not store your private key. If you lose your 
-  private key, you will need to reset the entire keypair.
-</Message>
-
-### Manually add keypair
-
-Alternatively, you may generate your own keypair and upload the public key to
-the [Developer Console][devconsole].
-
-To create a keypair using OpenSSL, open a terminal window and run the
-following commands.
-
-```shell
-openssl genrsa -des3 -out private.pem 2048
-openssl rsa -in private.pem -outform PEM -pubout -out public.pem
-```
-
-<Message>
- # For Windows Systems
-
- Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
-</Message>
-
-Then, navigate to the configuration tab for your application within the
-[Developer console][devconsole] and scroll down to the
-**Add and Manage Public Keys** section.
-
-<ImageFrame border width="600" center>
-  ![Add and Manage keys](../images/app-add-keys.png)
-</ImageFrame>
-
-Click the **Add a Public Key** button, enter the public key generated using the
-steps above and click **Verify and Save**.
 
 ## App Authorization
 
@@ -190,14 +113,8 @@ section at the bottom of the **Configuration** tab in the
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
-[devtoken]: g://authentication/access-tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [user-types]: g://getting-started/user-types
 [sa]: g://getting-started/user-types/service-account
-[cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
-[jwt]: g://authentication/jwt
-[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
-[kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
-[ccg]: g//authentication/jwt/without-sdk/#client-credentials-grant
