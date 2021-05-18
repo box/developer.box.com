@@ -60,6 +60,12 @@ to get the issue resolved.
 
 </Message>
 
+<Message warning>
+  If your enterprise has full text search turned off
+  (e.g. Keysafe customers), characters within a document
+  cannot be searched.
+</Message>
+
 ## Comparison to Metadata Queries
 
 At the surface the search API seems very similar
