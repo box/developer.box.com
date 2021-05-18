@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 7
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -13,8 +13,8 @@ type: guide
 total_steps: 3
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication
-previous_page_id: authentication/sso
+next_page_id: authentication/sso
+previous_page_id: authentication/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/best-practices.md
 ---

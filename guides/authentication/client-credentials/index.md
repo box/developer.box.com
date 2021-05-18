@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 4
 related_endpoints:
   - get_authorize
 related_guides:
@@ -21,8 +21,8 @@ type: guide
 total_steps: 1
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/client-credentials/client-credentials-setup
-previous_page_id: ''
+next_page_id: ''
+previous_page_id: authentication/client-credentials/client-credentials-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/client-credentials/index.md
 ---

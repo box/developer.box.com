@@ -19,7 +19,7 @@ type: guide
 total_steps: 5
 sibling_id: authentication/jwt
 parent_id: authentication/jwt
-next_page_id: authentication/jwt
+next_page_id: authentication/jwt/without-sdk
 previous_page_id: authentication/jwt/jwt-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/with-sdk.md

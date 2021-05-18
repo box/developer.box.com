@@ -21,8 +21,8 @@ type: guide
 total_steps: 1
 sibling_id: authentication/client-credentials
 parent_id: authentication/client-credentials
-next_page_id: ''
-previous_page_id: authentication/client-credentials
+next_page_id: authentication/client-credentials
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/client-credentials/client-credentials-setup.md
 ---

@@ -20,7 +20,7 @@ type: guide
 total_steps: 4
 sibling_id: authentication/oauth2
 parent_id: authentication/oauth2
-next_page_id: authentication/oauth2/without-sdk
+next_page_id: authentication/oauth2
 previous_page_id: authentication/oauth2/oauth2-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/with-sdk.md

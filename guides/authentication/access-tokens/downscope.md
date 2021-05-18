@@ -19,7 +19,7 @@ total_steps: 7
 sibling_id: authentication/access-tokens
 parent_id: authentication/access-tokens
 next_page_id: authentication/access-tokens/annotator-tokens
-previous_page_id: authentication/access-tokens/revoke
+previous_page_id: authentication/access-tokens
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/downscope.md
 ---

@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides:
   - applications/select
@@ -17,8 +17,8 @@ type: guide
 total_steps: 4
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/oauth2/without-sdk
-previous_page_id: authentication/oauth2/oauth2-setup
+next_page_id: authentication/oauth2/as-user
+previous_page_id: authentication/oauth2/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/index.md
 ---

@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 related_endpoints: []
 related_guides:
   - applications/select
@@ -18,8 +18,8 @@ type: guide
 total_steps: 5
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/app-token/rollover
-previous_page_id: authentication/app-token/without-sdk
+next_page_id: ''
+previous_page_id: authentication/app-token/rollover
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/index.md
 ---

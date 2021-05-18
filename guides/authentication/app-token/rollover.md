@@ -14,7 +14,7 @@ type: guide
 total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
-next_page_id: ''
+next_page_id: authentication/app-token
 previous_page_id: authentication/app-token/app-token-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/rollover.md

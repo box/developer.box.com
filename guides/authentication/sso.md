@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -18,8 +18,8 @@ type: guide
 total_steps: 3
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/best-practices
-previous_page_id: authentication/select
+next_page_id: authentication
+previous_page_id: authentication/best-practices
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/sso.md
 ---

@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 6
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -13,8 +13,8 @@ type: guide
 total_steps: 7
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/access-tokens/refresh
-previous_page_id: authentication/access-tokens/sdks
+next_page_id: authentication/access-tokens/downscope
+previous_page_id: authentication/access-tokens/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/index.md
 ---
