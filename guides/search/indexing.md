@@ -108,6 +108,14 @@ The Box search index stores up to 10,000 bytes
 and above. This amount can vary from document to document because of
 language, Box’s indexing method, and document type.
 
+<Message warning>
+
+If your enterprise has full text search turned off
+(e.g. Keysafe customers), characters within a document
+cannot be searched.
+
+</Message>
+
 ## OCR Support
 
 Box does not currently perform OCR on its documents.
