@@ -15,10 +15,10 @@ subcategory_id: null
 is_index: false
 id: authentication/sso
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication
+next_page_id: authentication/best-practices
 previous_page_id: authentication/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/sso.md

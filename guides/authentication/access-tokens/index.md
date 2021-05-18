@@ -20,11 +20,11 @@ source_url: >-
 ---
 # Access Tokens
 
-At the core of every Box API call is an access token. Access Tokens represent
-the authenticated user and determines what content a user can successfully call.
+At the core of every Box API call is an Access Token. Access Tokens represent
+the authenticated user and determine what content a user can successfully call.
 Similar to using the Box Web App, you will only be able to successfully interact
-with content the user associated with the access token either owns or is a
-collaborator on. That can be further restricted by downscoping a token.
+with content the user associated with the Access Token either a collaborator on
+or owns. This can be further restricted by [downscoping][ds] a token.
 
 <Message warning>
 
@@ -54,7 +54,7 @@ Token.
 
 ## Token Object
 
-### OAuth 2.0
+### OAuth 2.0 authentication
 
 When an Access Token is requested using OAuth 2.0, an Access Token and Refresh
 Token pair are returned.
@@ -79,7 +79,7 @@ Within this object we can see the token string (`access_token`), as well
 as the Refresh Token (`refresh_token`) that can be used to request a new Access
 Token when the current one expires (`expires_in`).
 
-### Server Authentication
+### Server authentication
 
 When an Access Token is requested through using JWT or Client Credentials Grant,
 only any Access Token is returned:
@@ -107,3 +107,4 @@ Access Token expires (`expires_in`).
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
 [devcon]: https://app.box.com/developers/console
 [clientcred]: g://authentication/client-credentials
+[ds]: g://authentication/access-tokens/downscope

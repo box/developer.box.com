@@ -11,7 +11,7 @@ subcategory_id: null
 is_index: false
 id: authentication/select
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication
 parent_id: authentication
 next_page_id: authentication/sso
