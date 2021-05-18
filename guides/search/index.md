@@ -82,8 +82,9 @@ to get the issue resolved.
 <Message warning>
 
 If your enterprise has full text search turned off
-(e.g. Keysafe customers), characters within a document
-cannot be searched.
+(e.g. [Keysafe][keysafe] customers), characters within a document
+cannot be searched. If you need to find out if full
+text search is turned off, reach out to your account team.
 
 </Message>
 
@@ -120,3 +121,4 @@ Learn more about the metadata query API
 [mdq_api]: e://post_metadata_queries_execute_read
 [search]: e://get_search
 [support]: p://support
+[keysafe]: https://www.box.com/security/keysafe

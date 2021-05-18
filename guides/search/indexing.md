@@ -111,8 +111,9 @@ language, Box’s indexing method, and document type.
 <Message warning>
 
 If your enterprise has full text search turned off
-(e.g. Keysafe customers), characters within a document
-cannot be searched.
+(e.g. [Keysafe][keysafe] customers), characters within a document
+cannot be searched. If you need to find out if full
+text search is turned off, reach out to your account team.
 
 </Message>
 
@@ -147,3 +148,4 @@ Check our community article with the latest details on Search in Box
 </CTA>
 
 [support]: p://support
+[keysafe]: https://www.box.com/security/keysafe
