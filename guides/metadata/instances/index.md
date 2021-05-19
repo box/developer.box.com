@@ -22,5 +22,7 @@ that are assigned for every field of the template.
 For example, a user might have assigned an `invoiceData` metadata template to a
 file and provided 2 values, one for the invoice ID and one for the customer ID.
 
+You can assign up to 100 templates to specific file or folder.
+
 [template]: g://metadata/templates
 [instance]: g://metadata/instances

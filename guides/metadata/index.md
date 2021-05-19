@@ -46,7 +46,7 @@ distinct types of resources.
   a template and a file or folder, including the values that are assigned for
   every field. For example, a user might have assigned an `invoiceData` metadata
   template to a file and provided 2 values, one for the invoice ID and one for
-  the customer ID.
+  the customer ID. You can assign up to 100 templates to specific file or folder.
 * **Cascade Policies**: A [metadata cascade policy][cascade] describes
   how metadata instances applied to a folder should be applied to any item
   within that folder. For example, a user might assign the same `invoiceData`

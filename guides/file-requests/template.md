@@ -22,9 +22,9 @@ source_url: >-
 ---
 # Create a template File Request
 
-Currently, the File Request API only allows the creation of new file requests
-To create a new file request via the API, a template file request will need be
-created on any folder in your Box account via the Box web app.
+Currently, the API only allows the creation of new file requests by copying an
+existing file request associated to another folder. Please check our below
+guide on creating a template folder with a template file request.
 
 ## 1. Template folder
 

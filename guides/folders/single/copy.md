@@ -5,8 +5,7 @@ related_endpoints:
 related_guides:
   - folders/single/create
   - folders/single/delete
-required_guides:
-  - folders/single/create
+required_guides: []
 related_resources:
   - folder
 alias_paths: []
@@ -24,6 +23,10 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/copy.md
 ---
 # Copy Folder
+
+Creates a copy of a folder within a destination folder.
+
+The original folder will not be changed.
 
 To copy a folder in Box you will need to provide our API with the `id` of the
 `parent` folder that you would like to copy the folder into.
