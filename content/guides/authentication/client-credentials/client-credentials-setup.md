@@ -36,7 +36,7 @@ Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border center>
-  ![Auth selection screen](./images/select-app-type.png)
+  ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
 ### 3. Select the type of authentication and application name
@@ -59,7 +59,7 @@ Navigate to the **Authorization** tab for your application within the
 [Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
-  ![Add and Manage keys](./images/app-authorization.png)
+  ![Add and Manage keys](../images/app-authorization.png)
 </ImageFrame>
 
 Click **Review and Submit** to send an email to your Box enterprise Admin for
@@ -82,7 +82,7 @@ access existing Managed Users of an enterprise, navigate to the
 [Developer console][devconsole] and set to **App + Enterprise Access**. 
 
 <ImageFrame border>
-  ![App access level](./images/app-access-level.png)
+  ![App access level](../images/app-access-level.png)
 </ImageFrame>
 
 ### Application Scopes
@@ -92,7 +92,7 @@ can successfully call. See the [scopes guide][scopes] for detailed information
 on each option.
 
 <ImageFrame border width="600" center>
-  ![App scopes](./images/app-scopes.png)
+  ![App scopes](../images/app-scopes.png)
 </ImageFrame>
 
 ### CORS Domains

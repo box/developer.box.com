@@ -58,6 +58,14 @@ Example use cases for a Custom App include:
   recruiting portal then can then be routed to an appropriate employee for
   review.
 
+## Approval
+
+Custom Apps may require approval before use. 
+
+<CTA to='g://authorization/limited-access-approval'>
+  Learn more about approving Custom Apps
+</CTA>
+
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials/
