@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - get_users_id
   - get_users
@@ -8,6 +8,8 @@ related_guides:
 required_guides: []
 related_resources:
   - user
+alias_paths:
+  - /authentication/user-types/app-users/
 ---
 
 # App Users
