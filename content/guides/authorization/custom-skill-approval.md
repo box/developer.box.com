@@ -13,7 +13,7 @@ alias_paths: []
 Custom Skills will must be enabled on a folder by the enterprise's Box Admin
 before use.
 
-## As developer
+## As a developer
 
 As the developer, navigate to the application in the 
 [Developer Console][devconsole] and copy the application's Client ID to provide

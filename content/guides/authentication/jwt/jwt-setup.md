@@ -42,7 +42,7 @@ Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border center>
-  ![Auth selection screen](./images/select-app-type.png)
+  ![Auth selection screen](../images/select-app-type.png)
 </ImageFrame>
 
 ### 3. Select the type of authentication and application name
@@ -169,7 +169,7 @@ can successfully call. See the [scopes guide][scopes] for detailed information
 on each option.
 
 <ImageFrame border width="600" center>
-  ![App scopes](./images/app-scopes.png)
+  ![App scopes](../images/app-scopes.png)
 </ImageFrame>
 
 ### CORS Domains

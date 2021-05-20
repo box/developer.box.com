@@ -33,12 +33,12 @@ to a machine learning service, and write powerful metadata to the file.
   Start building a Custom Skill
 </CTA>
 
-## Authentication method
+## Authentication methods
 
 Working with Custom Skills is simplified by the pre-authorized API credentials
 that are provided with every Skill Event. For this reason though, Custom Skills
-allow for limited API access, mainly to read the file and write Metadata to the
-file.
+have limited API access. You do not need to select an authentication type to
+work with this type of application.
 
 ## When to use
 

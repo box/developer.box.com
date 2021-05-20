@@ -40,7 +40,7 @@ Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border>
-  ![Application selection screen](./images/select-app-type.png)
+  ![Application selection screen](../images/select-app-type.png)
 </ImageFrame>
 
 ### 3. Select the type of authentication and app name
@@ -49,7 +49,7 @@ Select **User Authentication (OAuth 2.0)** and provide a unique name for your
 application. Click **Create App**.
 
 <ImageFrame border width="400" center>
-  ![Auth selection screen](./images/custom-app-selection.png)
+  ![Auth selection screen](../images/custom-app-selection.png)
 </ImageFrame>
 
 ## Basic configuration
@@ -92,7 +92,7 @@ section at the bottom of the **Configuration** tab in the
 [Developer console][devconsole].
 
 <ImageFrame border>
-  ![App name form](./images/app-cors.png)
+  ![App name form](../images/app-cors.png)
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
