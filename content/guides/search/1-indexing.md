@@ -96,6 +96,13 @@ The Box search index stores up to 10,000 bytes
 and above. This amount can vary from document to document because of
 language, Box’s indexing method, and document type.
 
+<Message warning>
+  If your enterprise has full text search turned off
+  (e.g. [Keysafe][keysafe] customers), characters within a document
+  cannot be searched. If you need to find out if full
+  text search is turned off, reach out to your account team.
+</Message>
+
 ## OCR Support
 
 Box does not currently perform OCR on its documents.
@@ -124,3 +131,4 @@ Searching the trash is available via the API by using the
 </CTA>
 
 [support]: p://support
+[keysafe]: https://www.box.com/security/keysafe
