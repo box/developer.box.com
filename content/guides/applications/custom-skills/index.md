@@ -10,7 +10,7 @@ related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 ---
 
-# Customs Skills
+# Custom Skills
 
 A Custom Skill, or Box Skill is a type of application that performs custom
 processing for files uploaded to Box. Skills are designed to make it

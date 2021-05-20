@@ -6,6 +6,10 @@ alias_paths:
   - /docs/partner-integrations
   - /docs/getting-started-box-platform
   - /docs/box-platform
+related_guides:
+  - authentication/oauth2
+  - authentication/jwt
+  - authentication/client-credentials
 ---
 
 # Custom App

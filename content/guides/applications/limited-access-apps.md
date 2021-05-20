@@ -1,5 +1,7 @@
 ---
 rank: 3
+related_guides:
+- authentication/app-token
 ---
 
 # Limited Access App
