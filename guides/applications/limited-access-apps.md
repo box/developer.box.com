@@ -1,5 +1,7 @@
 ---
 rank: 3
+related_guides:
+  - authentication/app-token
 category_id: applications
 subcategory_id: null
 is_index: false

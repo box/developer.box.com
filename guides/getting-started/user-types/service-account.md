@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints:
   - get_users_id
   - get_users
@@ -8,6 +8,8 @@ related_guides:
 required_guides: []
 related_resources:
   - user
+alias_paths:
+  - /authentication/user-types/service-account/
 category_id: getting-started
 subcategory_id: getting-started/user-types
 is_index: false
@@ -17,7 +19,7 @@ total_steps: 3
 sibling_id: getting-started/user-types
 parent_id: getting-started/user-types
 next_page_id: getting-started/user-types/app-users
-previous_page_id: ''
+previous_page_id: getting-started/user-types/managed-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/service-account.md
 ---

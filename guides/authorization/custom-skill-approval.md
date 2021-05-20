@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 related_guides: []
@@ -14,8 +14,8 @@ type: guide
 total_steps: 4
 sibling_id: authorization
 parent_id: authorization
-next_page_id: authorization/common-errors
-previous_page_id: authorization/custom-app-approval
+next_page_id: authorization
+previous_page_id: authorization/limited-access-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-skill-approval.md
 ---

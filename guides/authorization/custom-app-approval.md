@@ -15,7 +15,7 @@ type: guide
 total_steps: 4
 sibling_id: authorization
 parent_id: authorization
-next_page_id: authorization/custom-skill-approval
+next_page_id: authorization/limited-access-approval
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval.md

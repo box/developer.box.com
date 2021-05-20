@@ -1,5 +1,9 @@
 ---
 rank: 0
+related_guides:
+  - authentication
+  - authorization
+  - api-calls
 category_id: getting-started
 subcategory_id: null
 is_index: true

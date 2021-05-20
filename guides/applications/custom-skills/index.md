@@ -21,7 +21,7 @@ previous_page_id: applications/custom-skills/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/index.md
 ---
-# Customs Skills
+# Custom Skills
 
 A Custom Skill, or Box Skill is a type of application that performs custom
 processing for files uploaded to Box. Skills are designed to make it
