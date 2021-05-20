@@ -37,4 +37,14 @@ Learn more about App Tokens
 - Providing user manuals and product spec documents on a support site
 - A custom document viewer to view e-books or annotate architectural floor plans
 
+## Approval
+
+Limited Access Apps may require approval before use. 
+
+<CTA to='g://authorization/limited-access-approval'>
+
+Learn more about approving Limited Access Apps
+
+</CTA>
+
 [bv]: g://embed/box-view/

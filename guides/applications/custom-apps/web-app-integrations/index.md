@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 1
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -15,8 +15,8 @@ type: guide
 total_steps: 3
 sibling_id: applications/custom-apps
 parent_id: applications/custom-apps
-next_page_id: ''
-previous_page_id: applications/custom-apps/web-app-integrations/configure
+next_page_id: applications/custom-apps/web-app-integrations/user-experience
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/web-app-integrations/index.md
 ---

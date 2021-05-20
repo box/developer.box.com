@@ -11,7 +11,7 @@ subcategory_id: null
 is_index: false
 id: authorization/custom-skill-approval
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization/common-errors
@@ -24,7 +24,7 @@ source_url: >-
 Custom Skills will must be enabled on a folder by the enterprise's Box Admin
 before use.
 
-## As developer
+## As a developer
 
 As the developer, navigate to the application in the
 [Developer Console][devconsole] and copy the application's Client ID to provide

@@ -39,10 +39,10 @@ You cannot change this selection later on.
 
 <!-- markdownlint-disable line-length -->
 
-|                            |                                                                            |
-| -------------------------- | -------------------------------------------------------------------------- |
-| **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or Client Credentials Authentication      |
-| **Notable Features**        | Webhooks, App Gallery, and Web App Integrations                           |
+|                            |                                                                              |
+| -------------------------- | ---------------------------------------------------------------------------- |
+| **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Authentication][ccg] |
+| **Notable Features**        | Webhooks, App Gallery, and Web App Integrations                             |
 
 <!-- markdownlint-enable line-length -->
 
@@ -97,3 +97,4 @@ Learn more about Custom Skills
 [custom-apps]: g://applications/custom-apps
 [dev-console]: https://app.box.com/developers/console
 [view-app]: https://developer.box.com/guides/embed/box-view/
+[ccg]: g://authentication/client-credentials

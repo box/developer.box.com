@@ -48,7 +48,7 @@ prompt a selection for the next step.
 
 <ImageFrame border center>
 
-![Auth selection screen](./images/select-app-type.png)
+![Auth selection screen](../images/select-app-type.png)
 
 </ImageFrame>
 
@@ -75,7 +75,7 @@ Navigate to the **Authorization** tab for your application within the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](./images/app-authorization.png)
+![Add and Manage keys](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -102,7 +102,7 @@ access existing Managed Users of an enterprise, navigate to the
 
 <ImageFrame border>
 
-![App access level](./images/app-access-level.png)
+![App access level](../images/app-access-level.png)
 
 </ImageFrame>
 
@@ -114,7 +114,7 @@ on each option.
 
 <ImageFrame border width="600" center>
 
-![App scopes](./images/app-scopes.png)
+![App scopes](../images/app-scopes.png)
 
 </ImageFrame>
 

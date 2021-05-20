@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: authorization/custom-app-approval
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization/custom-skill-approval
@@ -39,7 +39,7 @@ Navigate to the **Authorization** tab for your application in the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![Add and Manage keys](images/app-authorization.png)
 
 </ImageFrame>
 
@@ -52,7 +52,7 @@ process is available in our [support article on app authorization][app-auth].
 The following steps provide instructions on how to manually approve the
 application.
 
-### As developer
+### As a developer
 
 As the developer, navigate to the **Configuration** tab for your application
 in the [Developer Console][devconsole]. Scroll down to the OAuth 2.0 Credentials
@@ -68,7 +68,7 @@ you should see their contact  information under "Admin Contact".
 
 </Message>
 
-### As Admin
+### As an Admin
 
 As a Box Admin, navigate to the [Admin Console][adminconsole] and
 select the **Apps** tab (1) from the left navigation panel. Then, click the
@@ -99,7 +99,7 @@ of the application name and selecting "Reauthorize App".
 
 <ImageFrame border center>
 
-![Re-authorize app](../images/app-reauthorize.png)
+![Re-authorize app](images/app-reauthorize.png)
 
 </ImageFrame>
 

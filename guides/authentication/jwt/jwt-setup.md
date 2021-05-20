@@ -56,7 +56,7 @@ prompt a selection for the next step.
 
 <ImageFrame border center>
 
-![Auth selection screen](./images/select-app-type.png)
+![Auth selection screen](../images/select-app-type.png)
 
 </ImageFrame>
 
@@ -205,7 +205,7 @@ on each option.
 
 <ImageFrame border width="600" center>
 
-![App scopes](./images/app-scopes.png)
+![App scopes](../images/app-scopes.png)
 
 </ImageFrame>
 

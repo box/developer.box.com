@@ -16,7 +16,7 @@ type: guide
 total_steps: 3
 sibling_id: applications/custom-apps/web-app-integrations
 parent_id: applications/custom-apps/web-app-integrations
-next_page_id: applications/custom-apps/web-app-integrations
+next_page_id: ''
 previous_page_id: applications/custom-apps/web-app-integrations/user-experience
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/web-app-integrations/configure.md
