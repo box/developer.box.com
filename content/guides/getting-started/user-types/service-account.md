@@ -9,7 +9,7 @@ required_guides: []
 related_resources:
   - user
 alias_paths:
-- /authentication/user-types/service-account/
+- /authentication/user-types/service-account
 ---
 
 # Service Accounts
