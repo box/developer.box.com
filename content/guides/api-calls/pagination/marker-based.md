@@ -75,7 +75,7 @@ The following query parameters are used to paginate a collection.
 
 | Query parameter | Type    | Default        |                                                                                                                                                                                    |
 | --------------- | ------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `marker`        | Integer | `0`            | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
+| `marker`        | String |             | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used.                                                                    |
 | `usemarker`     | Boolean |                | An optional query parameter that can be used with API endpoints that support both types of pagination to select pagination type. Set to `true` to enforce marker-based pagination. |
 
@@ -91,7 +91,7 @@ results as an array, as well as some information about the current page of resul
 | Field         | Type    |                                                                                                                                                                    |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                              |
-| `next_marker` | Integer | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
+| `next_marker` | String | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
 | `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint.  |
 
 <!-- markdownlint-enable line-length -->

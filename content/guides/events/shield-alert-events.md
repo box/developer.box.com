@@ -114,7 +114,7 @@ The `additional_details` payload will provide the following details:
 
 ### Suspicious sessions alert
 
-A suspicious locations alert is produced when Shield detects a user accessing
+A suspicious sessions alert is produced when Shield detects a user accessing
 content in a session characterized by unusual user-agent strings, unusual IDs,
 uncommon types of applications, new IP addresses, and an improbably rapid change
 in the person's log-in location. It can be identified by the `Suspicious
@@ -196,7 +196,7 @@ The `additional_details` payload will provide the following details:
 
 ### Anomalous download alert
 
-A suspicious locations alert is produced when Shield detects an account holder
+An anomalous download alert is produced when Shield detects an account holder
 who may be stealing sensitive content. It can be identified by the
 `Anomalous Download` value within
 `additional_details.shield_alert.rule_category`.
@@ -253,7 +253,7 @@ The `additional_details` payload will provide the following details:
 
 ### Malicious content alert
 
-A suspicious locations alert is produced when Shield detects potential malware
+A malicious content alert is produced when Shield detects potential malware
 in content uploading to an account. It can be identified by the 
 `Malicious Content` value within
 `additional_details.shield_alert.rule_category`.
