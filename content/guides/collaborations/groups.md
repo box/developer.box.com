@@ -11,7 +11,7 @@ related_resources:
   - folder
 ---
 
-# Sharing With Groups
+# Sharing with Groups
 
 To share a file or folder with a group of users, create a collaboration using
 the group ID, the ID of the file or folder, and the role or permissions level

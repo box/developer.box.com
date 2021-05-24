@@ -10,7 +10,7 @@ related_resources:
   - file
 ---
 
-# Share Content With User
+# Share Content with User
 
 To share content with a user, create a collaboration using
 the user ID or email
