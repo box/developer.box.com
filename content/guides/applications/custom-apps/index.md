@@ -17,9 +17,9 @@ related_guides:
 Custom Apps encompass most use cases and is the most flexible application type.
 
 A custom application typically presents Box functionality to a user within a
-custom interface. Box offers pre-built user interface components, known as 
-[UI Elements][uie], for functionality like browsing, search, viewing and more
-that can be customized instead of building your own.
+custom interface. Box offers pre-built, customizable user interface components,
+known as [UI Elements][uie], for functionality like browsing, searching, and 
+previewing content.
 
 ## Authentication methods
 
@@ -27,7 +27,7 @@ Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
 [Client Credentials Grant][cc]. 
 
 <CTA to='g://authentication/select'>
-  Learn more about the different types of authentication
+  Learn more about authentication methods
 </CTA>
 
 ## When to use
@@ -38,7 +38,7 @@ A Custom App is best used when the application:
  [Client Credentials Grant][cc] for authentication.
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
-  other users, even external users.
+  [managed or external users][users].
 - Wants the option to list the application in the Box App Gallery
 - Wants to provide integration into the Box Web App
 
@@ -55,8 +55,8 @@ Example use cases for a Custom App include:
   custom application.
 
 - A file upload feature in an application that allows an end user to submit and
-  upload files from within a custom-built application to Box that initiates
-  a business process with the Box Web app.
+  upload files from within a custom-built application to Box. These uploads then
+  initiate a business process with the Box Web app.
 
   An example of this is a candidate submitting a PDF of a resume to a
   recruiting portal then can then be routed to an appropriate employee for
@@ -67,10 +67,11 @@ Example use cases for a Custom App include:
 Custom Apps may require approval before use. 
 
 <CTA to='g://authorization/limited-access-approval'>
-  Learn more about approving Custom Apps
+  Learn how to approve Custom Apps
 </CTA>
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials/
 [uie]: g://embed/ui-elements/
+[users]: g;//getting-started/user-types/managed-users/

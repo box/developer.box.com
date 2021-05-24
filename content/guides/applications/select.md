@@ -13,10 +13,10 @@ alias_paths:
 # Select App Type
 
 Upon creating a new Box application in the [Developer Console][dev-console], 
-you must select one of the following types of applications. The type of 
+you must first select one of the following types of applications. The type of 
 application you select is dependent on the use case for your project and only
 impacts the available authentication methods when configuring your application.
-You cannot change this selection later on. 
+You cannot change this selection later on.
 
 <ImageFrame shadow center>
   ![App Type Selection](images/select-app-type.png)
@@ -64,7 +64,7 @@ processing for files uploaded to Box. Skills are designed to make it possible to
 use third-party Machine Learning services to automatically extract information
 from files uploaded to Box.
 
-<CTA to="g://applications/custom-skills">Learn more about Custom Skills</CTA>
+<CTA to="g://applications/custom-skills">Learn more about Custom Skill Apps</CTA>
   
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt

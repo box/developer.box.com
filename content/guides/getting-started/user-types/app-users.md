@@ -9,7 +9,7 @@ required_guides: []
 related_resources:
   - user
 alias_paths:
-  - /authentication/user-types/app-users/
+  - /authentication/user-types/app-users
 ---
 
 # App Users
