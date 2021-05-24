@@ -11,12 +11,11 @@ alias_paths: []
 
 # Custom App Approval
 
+Server authentication applications using [JWT][jwt] or
+[Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
+
 A Box Admin needs an application's client ID in order to properly authorize it
 in the Admin Console. 
-
-Application that are configured with [JWT][jwt], [Client Credentials Grant][ccg],
-or [App Token][app-token] authentication must be authorized by a Box enterprise
-Admin before it can be used.
 
 ## Approval Notifications
 
@@ -50,7 +49,7 @@ section and copy the Client ID value to provide to a Box Admin.
 
   If you don't know your enterprise Admin, go to your Box [Account
   Settings][settings] page and scroll to the bottom. If an admin contact is set
-  you should see their contact  information under "Admin Contact".
+  you should see their contact information under "Admin Contact".
 </Message>
 
 ### As an Admin
@@ -67,7 +66,7 @@ see a **+** button in the top right corner to add a new app authorization.
 In the popup that appears, enter the client ID for the application that the
 developer collected from the **Configuration** tab of the Developer Console.
 
-A [secondary step][ss] may be necessary depending on the enabled enterprise
+A [secondary step][ss] may be necessary depending on enabled enterprise
 settings.
 
 ## Re-authorization on changes
@@ -78,7 +77,7 @@ new changes to take effect.
 
 In the same section where the application was initially authorized, an Admin
 can re-authorize the application by clicking on the ellipses to the right
-of the application name and selecting "Reauthorize App".
+of the application name to **Reauthorize App**.
 
 <ImageFrame border center>
   ![Re-authorize app](images/app-reauthorize.png)
