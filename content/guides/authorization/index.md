@@ -8,93 +8,86 @@ Some applications require explicit Admin authorization before use with an
 enterprise. The steps an Admin needs to take are dependent on the 
 developer-selected authentication method and enabled enterprise settings. 
 
-## Authentication Methods
+## Authentication methods
 
 The following authentication methods always require explicit Admin 
 authorization: 
 
 - Server Authentication (with JWT)
 - Server Authentication (with Client Credentials Grant)
-- App Token Authentication
 - Custom Skill 
 
 These authentication methods automatically generate a [Service Account][sa].
 With the right [scopes][scopes] enabled, a Service Account can perform many
 Admin actions, thus requiring Admin authorization before use. 
 
+OAuth 2.0 and App Token apps may also require explicit Admin authorization based
+on your enterprise settings. 
+
 <CTA to='g://authorization/custom-app-approval'>
   Learn how to authorize a Custom Application
+</CTA>
+
+<CTA to='g://authorization/custom-skill-approval'>
+  Learn how to authorize a Limited Access Application
 </CTA>
 
 <CTA to='g://authorization/custom-skill-approval'>
   Learn how to authorize a Custom Skill
 </CTA>
 
-## Enterprise Settings
+## Enterprise settings
 
-Subsequent steps are required if either of the following enterprise settings are
+Subsequent steps are required if any of the following enterprise settings are
 enabled: 
 
-- Disable published applications by default
-- Disable unpublished application by default
+- Disable published apps by default
+- Disable unpublished apps by default
+- Require manual admin authorization for transactional access apps
 
 These [settings][setting] can be found by navigating to: 
 
 **Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
 
-## Scenarios
+<Message tip>
+ Published apps are any applications that can be found in our App Gallery.
+</Message>
+
+## Required actions
 
 To see what steps an Admin must complete for a given app, review the following
 scenarios. 
 
-<!--alex ignore-->
-If both disable published and unpublished apps are disabled:
-<!--alex enable-->
-
 <!-- markdownlint-disable line-length -->
-
-| Authentication Method                            | Published      | Unpublished                              |
-| ------------------------------------------------ | --------------------------------------------------------- |
-|[OAuth 2.0][standauth]                            | Ready for use  | Ready for use                            |
-|[Server Authentication (with JWT)][jwt]           | N/A            | Authorize in **Apps** > **Custom Apps**  |
-|[Server Authentication (client credentials)][cc]  | N/A            | Authorize in **Apps** > **Custom Apps**  |
-|[App Token Authentication][apptoken]              | N/A            | Authorize in **Apps** > **Custom Apps**  |
-
 <!--alex ignore-->
-If both disable published and unpublished apps are enabled:
+**Disable published apps by default**:
+
+| Authentication Method                            | Enabled                                     | Disabled
+| ------------------------------------------------ | ------------------------------------------- | -------------- |
+|[OAuth 2.0][standauth]                            | Set to available in individual app controls | Ready for use  |
+|[Server Authentication (with JWT)][jwt]           | N/A                                         | N/A            |
+|[Server Authentication (client credentials)][cc]  | N/A                                         | N/A            |
+|[App Token Authentication][apptoken]              | N/A                                         | N/A            |
+
+**Disable unpublished apps by default**: 
+
+| Authentication Method                            | Enabled                                                       | Disabled
+| ------------------------------------------------ | ------------------------------------------------------------- | --------------------------------------- |
+|[OAuth 2.0][standauth]                            | Add to allow list                                             | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize in **Apps** > **Custom Apps** and add to allow list | Authorize in **Apps** > **Custom Apps** |
+|[Server Authentication (client credentials)][cc]  | Authorize in **Apps** > **Custom Apps** and add to allow list | Authorize in **Apps** > **Custom Apps** |
+|[App Token Authentication][apptoken]              | Add to allow list                                             | Ready for use                           |
+
+**Require manual admin authorization for transactional access apps**: 
+
+| Authentication Method                            | Enabled                                 | Disabled                                 |
+| ------------------------------------------------ | ----------------------------------------| ---------------------------------------- |
+|[OAuth 2.0][standauth]                            | N/A                                     | N/A                                      |
+|[Server Authentication (with JWT)][jwt]           | N/A                                     | N/A                                      |
+|[Server Authentication (client credentials)][cc]  | N/A                                     | N/A                                      |
+|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps** | Automatically authorized upon creation   |
+
 <!--alex enable-->
-
-| Authentication Method                            | Published                                           | Unpublished                                                   |
-| ------------------------------------------------ | ----------------------------------------------------| ------------------------------------------------------------- |
-|[OAuth 2.0][standauth]                            | Set to available in individual application controls | Add to allow list                                             |
-|[Server Authentication (with JWT)][jwt]           | N/A                                                 | Authorize in **Apps** > **Custom Apps** and add to allow list |
-|[Server Authentication (client credentials)][cc]  | N/A                                                 | Authorize in **Apps** > **Custom Apps** and add to allow list |
-|[App Token Authentication][apptoken]              | N/A                                                 | Authorize in **Apps** > **Custom Apps** and add to allow list |
-
-<!--alex ignore-->
-If **disable published applications by default** is enabled and
-**disable unpublished applications by default** is disabled:
-<!--alex enable-->
-
-| Authentication Method                            | Published                                           | Unpublished                              |
-| ------------------------------------------------ | ----------------------------------------------------| ---------------------------------------- |
-|[OAuth 2.0][standauth]                            | Set to available in individual application controls | Ready for use                            |
-|[Server Authentication (with JWT)][jwt]           | N/A                                                 | Authorize in **Apps** > **Custom Apps**  |
-|[Server Authentication (client credentials)][cc]  | N/A                                                 | Authorize in **Apps** > **Custom Apps**  |
-|[App Token Authentication][apptoken]              | N/A                                                 | Authorize in **Apps** > **Custom Apps**  |
-
-<!--alex ignore-->
-If **disable published applications by default** is disabled and
-**disable unpublished applications by default** is enabled:
-<!--alex enable-->
-
-| Authentication Method                            | Published      | Unpublished                                                   |
-| ------------------------------------------------ | -------------- |-------------------------------------------------------------- |
-|[OAuth 2.0][standauth]                            | Ready for use  | Add to allow list                                             |
-|[Server Authentication (with JWT)][jwt]           | N/A            | Authorize in **Apps** > **Custom Apps** and add to allow list |
-|[Server Authentication (client credentials)][cc]  | N/A            | Authorize in **Apps** > **Custom Apps** and add to allow list |
-|[App Token Authentication][apptoken]              | N/A            | Authorize in **Apps** > **Custom Apps** and add to allow list |
-
 <!-- markdownlint-enable line-length -->
 
 [setting]: https://support.box.com/hc/en-us/articles/360044196653-Managing-custom-apps
