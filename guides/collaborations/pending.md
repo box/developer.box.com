@@ -3,8 +3,7 @@ rank: 4
 related_endpoints:
   - get_collaborations
 related_guides:
-  - collaborations/share-folder
-  - collaborations/share-file
+  - collaborations/share-content
 required_guides: []
 related_resources:
   - collaboration
@@ -14,7 +13,7 @@ subcategory_id: null
 is_index: false
 id: collaborations/pending
 type: guide
-total_steps: 4
+total_steps: 3
 sibling_id: collaborations
 parent_id: collaborations
 next_page_id: collaborations

@@ -3,8 +3,7 @@ rank: 3
 related_endpoints:
   - post_collaborations
 related_guides:
-  - collaborations/share-file
-  - collaborations/share-folder
+  - collaborations/share-content
 required_guides: []
 related_resources:
   - collaboration
@@ -15,11 +14,11 @@ subcategory_id: null
 is_index: false
 id: collaborations/groups
 type: guide
-total_steps: 4
+total_steps: 3
 sibling_id: collaborations
 parent_id: collaborations
 next_page_id: collaborations/pending
-previous_page_id: collaborations/share-folder
+previous_page_id: collaborations/share-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/groups.md
 ---
