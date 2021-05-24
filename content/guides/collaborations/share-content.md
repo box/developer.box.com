@@ -3,7 +3,6 @@ rank: 1
 related_endpoints:
 - post_collaborations
 related_guides:
-- collaborations/share-folder
 - collaborations/groups
 required_guides: []
 related_resources:
@@ -11,14 +10,19 @@ related_resources:
   - file
 ---
 
-# Share File With User
+# Share Content With User
 
-To share a file with a user, create a collaboration using the user ID or email
-address, the ID of the file, and the role or permissions level the user should
-have when accessing the file. The collaboration roles are `editor`, `viewer`,
-`previewer`, `uploader`, `previewer uploader`, `viewer uploader`, `co-owner`,
-or `owner`. For a full description of each role, please refer to our
-[support documentation].
+To share content with a user, create a collaboration using
+the user ID or email
+address, the ID of the content, and the role or
+permissions level the user
+should have when accessing the content.
+The collaboration roles
+are `editor`,`viewer`, `previewer`, `uploader`,
+`previewer uploader`,
+`viewer uploader`,`co-owner`,
+or `owner`. For a full description of each role,
+please refer to our [support documentation].
 
 <Samples id='post_collaborations' />
 
