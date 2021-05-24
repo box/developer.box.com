@@ -21,7 +21,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/share-content.md
 ---
-# Share Content With User
+# Share Content with User
 
 To share content with a user, create a collaboration using
 the user ID or email

@@ -22,7 +22,7 @@ previous_page_id: collaborations/share-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/groups.md
 ---
-# Sharing With Groups
+# Sharing with Groups
 
 To share a file or folder with a group of users, create a collaboration using
 the group ID, the ID of the file or folder, and the role or permissions level
