@@ -3,8 +3,7 @@ rank: 3
 related_endpoints:
   - post_collaborations
 related_guides:
-  - collaborations/share-file
-  - collaborations/share-folder
+  - collaborations/share-content
 required_guides: []
 related_resources:
   - collaboration
@@ -15,21 +14,21 @@ subcategory_id: null
 is_index: false
 id: collaborations/groups
 type: guide
-total_steps: 4
+total_steps: 3
 sibling_id: collaborations
 parent_id: collaborations
 next_page_id: collaborations/pending
-previous_page_id: collaborations/share-folder
+previous_page_id: collaborations/share-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/groups.md
 ---
-# Sharing With Groups
+# Sharing with Groups
 
 To share a file or folder with a group of users, create a collaboration using
 the group ID, the ID of the file or folder, and the role or permissions level
 the group should have when accessing the file or folder.
 
-<Samples id='post_collaborations' >
+<Samples id='post_collaborations' variant='group' >
 
 </Samples>
 
