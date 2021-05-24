@@ -3,8 +3,7 @@ rank: 3
 related_endpoints:
 - post_collaborations
 related_guides:
-- collaborations/share-file
-- collaborations/share-folder
+- collaborations/share-content
 required_guides: []
 related_resources:
   - collaboration
