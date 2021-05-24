@@ -40,6 +40,12 @@ whose ID is the `:id` value in the scope name.
 
 </Message>
 
+<Message warning>
+
+You can assign up to 100 templates to specific file or folder.
+
+</Message>
+
 ## Apply metadata to a file
 
 To apply an instance of a metadata template to a file, call the
