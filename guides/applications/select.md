@@ -24,7 +24,7 @@ source_url: >-
 # Select App Type
 
 Upon creating a new Box application in the [Developer Console][dev-console],
-you must select one of the following types of applications. The type of
+you must first select one of the following types of applications. The type of
 application you select is dependent on the use case for your project and only
 impacts the available authentication methods when configuring your application.
 You cannot change this selection later on.
@@ -87,7 +87,7 @@ from files uploaded to Box.
 
 <CTA to="g://applications/custom-skills">
 
-Learn more about Custom Skills
+Learn more about Custom Skill Apps
 
 </CTA>
 

@@ -40,7 +40,7 @@ is sent to the Skill's application server every time a file is uploaded to the
 folder. This application can then download the file, inspect it or hand it off
 to a machine learning service, and write powerful metadata to the file.
 
-<CTA to='g://skills/'>
+<CTA to='g://skills'>
 
 Start building a Custom Skill
 
@@ -79,6 +79,6 @@ skill should trigger.
 
 <CTA to='g://authorization/custom-skill-approval'>
 
-Learn more about approving Custom Skills
+Learn how to approve Custom Skills
 
 </CTA>
