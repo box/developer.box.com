@@ -4,15 +4,13 @@ related_endpoints:
   - get_authorize
 related_guides:
   - applications/select
-  - authentication/select
-  - authentication/oauth2/oauth2-setup
+  - authentication/best-practices/
 required_guides:
   - authentication/select
-  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-  - /guides/authentication/client-credentials
+  - /guides/authentication/jwt/without-sdk/#client-credentials-grant
 category_id: authentication
 subcategory_id: authentication/client-credentials
 is_index: true
@@ -33,11 +31,12 @@ verify your application's identity using a client ID and client secret.
 
 ## Prerequisites
 
-- A Custom Application using Client Credentials Grant authentication
- within the Box [Developer Console][devconsole]
-- [2FA][2fa] enabled on your Box account in order to view/copy your client
- secret from the configuration tab
-- Ensure your application is authorized within the Box Admin Console
+- A Custom Application using Server Authentication 
+ (with Client Credentials Grant) authentication in the Box
+ [Developer Console][devconsole]
+- [2FA][2fa] enabled on your Box account for viewing and copying the
+  application's client secret from the configuration tab
+- The application is authorized in the Box Admin Console
 
 <Message notice>
 

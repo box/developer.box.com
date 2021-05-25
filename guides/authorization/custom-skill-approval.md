@@ -2,9 +2,12 @@
 rank: 3
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
-related_guides: []
-required_guides: []
-related_resources: []
+related_guides:
+  - authorization/custom-app-approval
+  - authorization/limited-access-approval
+required_guides:
+  - authorization
+  - applications/custom-skills/setup/
 alias_paths: []
 category_id: authorization
 subcategory_id: null

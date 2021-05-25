@@ -18,7 +18,7 @@ type: guide
 total_steps: 3
 sibling_id: getting-started/user-types
 parent_id: getting-started/user-types
-next_page_id: getting-started/user-types/service-account
+next_page_id: getting-started/user-types
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/managed-users.md
