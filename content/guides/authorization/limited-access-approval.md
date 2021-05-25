@@ -1,8 +1,12 @@
 ---
 rank: 2
 related_endpoints: []
-related_guides: []
-required_guides: []
+related_guides:
+- authorization/custom-app-approval
+- authorization/custom-skill-approval
+required_guides:
+- authorization
+- authentication/app-token/app-token-setup/
 related_resources: []
 alias_paths: []
 ---

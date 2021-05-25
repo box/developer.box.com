@@ -1,5 +1,9 @@
 ---
 rank: 25
+required_guides: 
+- authorization/custom-app-approval
+- authorization/limited-access-approval
+- authorization/custom-skill-approval
 ---
 
 # Authorization 
@@ -23,18 +27,6 @@ Admin actions, thus requiring Admin authorization before use.
 
 OAuth 2.0 and App Token apps may also require explicit Admin authorization based
 on your enterprise settings. 
-
-<CTA to='g://authorization/custom-app-approval'>
-  Learn how to authorize a Custom Application
-</CTA>
-
-<CTA to='g://authorization/custom-skill-approval'>
-  Learn how to authorize a Limited Access Application
-</CTA>
-
-<CTA to='g://authorization/custom-skill-approval'>
-  Learn how to authorize a Custom Skill
-</CTA>
 
 ## Enterprise settings
 
