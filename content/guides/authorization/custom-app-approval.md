@@ -1,11 +1,13 @@
 ---
 rank: 1
 related_endpoints: []
-related_guides: []
+related_guides:
+- authorization/limited-access-approval
+- authorization/custom-skill-approval
 required_guides: 
-  - authentication/app-token/app-token-setup
-  - authentication/jwt/jwt-setup
-related_resources: []
+- authorization
+- authentication/oauth2/oauth2-setup/
+- authentication/jwt/jwt-setup
 alias_paths: []
 ---
 

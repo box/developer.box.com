@@ -9,6 +9,14 @@ alias_paths: []
 
 # Best Practices
 
+## Client secret security 
+
+Your client secret is confidential and needs to be protected. Because this is
+how we securely identify an application's identity when obtaining an
+Access Token, you do not want to freely distribute a client secret. This
+includes via email, public forums and code repositories, distributed native
+applications, or client-side code. 
+
 ## Cache tokens
 
 Because fetching new tokens is expensive, we recommend using a token cache
