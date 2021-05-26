@@ -20,16 +20,10 @@ folder.
 
 ## Deleting non-empty folders
 
-When deleting a folder, you can pass in the `recursive` parameter to
-force a folder to be deleted even if it is not empty. This will delete all
+This API returns an error if the folder is not empty. When deleting a
+folder, you can pass in the `recursive` parameter to force a
+folder to be deleted even if it is not empty. This will delete all
 items within this folder, including any of their descendants.
-
-## Recursive deletion
-
-This API returns an error if the folder is not empty. You
-can use the `recursive` query parameter to force this
-operation to recursively delete the folder and all of its
-contents.
 
 ## Folder locking
 

@@ -3,8 +3,7 @@ rank: 3
 related_endpoints:
 - post_collaborations
 related_guides:
-- collaborations/share-file
-- collaborations/share-folder
+- collaborations/share-content
 required_guides: []
 related_resources:
   - collaboration
@@ -12,13 +11,13 @@ related_resources:
   - folder
 ---
 
-# Sharing With Groups
+# Sharing with Groups
 
 To share a file or folder with a group of users, create a collaboration using
 the group ID, the ID of the file or folder, and the role or permissions level
 the group should have when accessing the file or folder.
 
-<Samples id='post_collaborations' />
+<Samples id='post_collaborations' variant='group' />
 
 <Message>
   The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
