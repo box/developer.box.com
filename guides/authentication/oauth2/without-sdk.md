@@ -27,33 +27,27 @@ source_url: >-
 # OAuth 2.0 without SDKs
 
 If you are not ready to use any of the official Box SDKs, or an SDK is not
-available in your language of choice, it is totally possible to use the Box APIs
-without them.
-
-To authenticate a user using OAuth 2.0. the user is redirected to the Box web
-app in a browser where they log in and grant the application access to their
-data before they are redirected back to the applications `redirect_url`. This
-last step requires the application to be running on a web server somewhere
-accessible to the user.
+available in your language of choice, it is possible to use the Box APIs without
+one.
 
 ## Overview
 
-To complete an OAuth 2.0 flow the following steps need to be completed.
+Below are the steps required to manually complete the OAuth 2.0 flow.
 
-1. Configure the authorization URL
-2. Redirect the user to the Box website
-3. The user grants the application access
-4. Exchange the authorization code for an access token
+1. Build the authorization URL
+2. Redirect the user to the authorization URL
+3. The user grants the application access to take actions on their behalf,
+  which, if successful, provides an authorization code
+4. Redirect the user back to the application
+5. Exchange the authorization code for an Access Token
 
-At the end of this flow, the application has an Access Token that can be used to
-make API calls on behalf of this user.
+At the end of this flow, the application has an [Access Token][tokens], which
+can be used to make API calls on behalf of the user.
 
 <Message notice>
 
-The access token acquired through OAuth 2.0 is inherently tied to the user who
-authorized the application. Any API call made with this token will seem to
-come from this application, and the user needs to have access to any file or
-folder the application tries to access with this token.
+The Access Token acquired through the OAuth 2.0 flow is inherently tied to the
+user who authorized the application.
 
 It is possible to [act as another user](g://authentication/oauth2/as-user)
 using the `as-user` header.
@@ -62,27 +56,36 @@ using the `as-user` header.
 
 ## Prerequisites
 
-Before continuing you will need to have completed the following steps.
+Before continuing you will need to complete the following steps:
 
-* Create a Box Application within the developer console with the OAuth 2.0
-  authentication method.
-* Copy the `client_id` and `client_secret` values and keep them handy.
+* Create a Custom App within the Box Developer Console, which leverages the
+ OAuth 2.0 authentication method.
+* Navigate to the configuration tab for the application to copy the `client_id`
+ and `client_secret` values.
+* Ensure a redirect URI is configured in the configuration tab for the
+ application. 
 
-## Parameters
+## 1. Build authorization URL
+
+An [authorization URL][auth] is comprised of the following parameters:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter       | Description                                                                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLIENT_ID`     | The client ID or API key for the application                                                                                                                  |
-| `CLIENT_SECRET` | The client secret or API secret for the application                                                                                                           |
-| `REDIRECT_URI`  | The redirect URL for your application that a user will be sent to after they have authorized the application. This can be configured in the developer console |
+| Parameter          | Status       | Description
+| ------------------ | ------------ | ----------------------------------------
+| [`CLIENT_ID`][ci]    | Required     | Obtained from the configuration tab of the Developer Console                                           |
+| [`REDIRECT_URI`][re] | Optional     | Configured in the Developer Console and where the user is sent once granting access to the application |
+| [`RESPONSE_TYPE`][co]| Required     | Always set to `code`                                                                                   |
+| [`STATE`][st]        | Recommended  | Protects against cross-site request forgery                                                            |
 
 <!-- markdownlint-enable line-length -->
 
-## 1. Configure authorization URL
+At the minimum this URL will always use the format:
 
-The first step is to configure the authorization URL of your application.
+<!-- markdownlint-disable line-length -->
+
+`https://account.box.com/api/oauth2/authorize`?`client_id=CLIENTIDHERE`&`response_type=code`
+<!-- markdownlint-enable line-length -->
 
 <Tabs>
 
@@ -152,11 +155,11 @@ Instead, use `ent.box.com` in place of `account.box.com`.
 
 </Message>
 
-## 2. Redirect user
+## 2. Redirect the user
 
-Next, redirect the user to the authorization URL. The way in which a user is
-redirected to a URL depends on the application framework used. Most framework
-documentation provides extensive guidance on this topic.
+Next, redirect the user to the authorization URL. The way this is done depends
+on the application framework. Most framework documentation provides extensive
+guidance on this topic.
 
 <Tabs>
 
@@ -208,15 +211,16 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 <Message>
 
 Additional query parameters can be passed along when redirecting the user to
-limit down the scope, or pass along some extra state. See the [reference
-documentation](endpoint://get-authorize) for more information.
+limit down the scope, or pass along some extra state. See the authorization
+reference documentation for more information.
 
 </Message>
 
 ## 3. User grants application access
 
-Once the user is redirected to the Box web app they will have to log in. After
-they logged in they are presented with a screen to approve your application.
+The user is redirected to their browser to log in to their account using the Box
+UI. They are then presented with the list of requested scopes and the option to
+approve the application to take actions on their behalf.
 
 <ImageFrame border center shadow width="400">
 
@@ -224,20 +228,18 @@ they logged in they are presented with a screen to approve your application.
 
 </ImageFrame>
 
-When the user accepts this requests and clicks the button, the browser will
-redirect to your application's redirect URL as configured in the developer console.
-
-## 4. Exchange code
-
-The user is redirected to your application's redirect URL with a query parameter
+When the user accepts this request by clicking **Grant access to Box**, the
+browser will redirect to the configured redirect URL with a query parameter
 containing a short-lived authorization code.
 
 ```curl
 https://your.domain.com/path?code=1234567
 ```
 
-This code is not an [Access Token][tokens] and is only valid for a few seconds.
-The SDKs can be used to exchange the code for an actual Access Token.
+## 4. Exchange code
+
+The provided authorization code is [valid for 30 seconds][thirty] and must be
+exchanged for an [Access Token][at] before expiration.
 
 <Tabs>
 
@@ -346,18 +348,15 @@ let accessToken = await axios.post(
 
 </Tabs>
 
-## Summary
-
-By now the application should be able to authorize a user using OAuth 2.0 without
-using any of the SDKs, by using the following steps.
-
-1. Configure the authorization URL
-2. Redirect the user to the Box website
-3. The user grants the application access
-4. Exchange the authorization code for an access token
-
-To learn how to use this token head over to the guide on [Making API
+To learn how to use this token visit our guide on [Making API
 calls](g://api-calls).
 
-[tokens]: guide://authentication/access-tokens
+[tokens]: g://authentication/access-tokens
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
+[auth]: e://get-authorize/
+[ci]: e://get-authorize/#param-client_id
+[re]: e://get-authorize/#param-redirect_uri
+[co]: e://get-authorize/#param-response_type
+[st]: e://get-authorize/#param-state
+[thirty]: g:///api-calls/permissions-and-errors/expiration/
+[at]: e://post-oauth2-token/
