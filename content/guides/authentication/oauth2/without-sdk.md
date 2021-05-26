@@ -52,8 +52,7 @@ Before continuing you will need to complete the following steps:
 * Ensure a redirect URI is configured in the configuration tab for the
  application. 
 
-
-## 1. Build the authorization URL
+## 1. Build authorization URL
 
 An [authorization URL][auth] is comprised of the following parameters:
 
@@ -61,10 +60,10 @@ An [authorization URL][auth] is comprised of the following parameters:
 
 | Parameter          | Status       | Description 
 | ------------------ | ------------ | ----------------------------------------
-| [CLIENT_ID][ci]    | Required     | Obtained from the configuration tab of the Developer Console                                           |
-| [REDIRECT_URI][re] | Optional     | Configured in the Developer Console and where the user is sent once granting access to the application |
-| [RESPONSE_TYPE][co]| Required     | Always set to `code`                                                                                   |
-| [STATE][st]        | Recommended  | Protects against cross-site request forgery                                                            |
+| [`CLIENT_ID`][ci]    | Required     | Obtained from the configuration tab of the Developer Console                                           |
+| [`REDIRECT_URI`][re] | Optional     | Configured in the Developer Console and where the user is sent once granting access to the application |
+| [`RESPONSE_TYPE`][co]| Required     | Always set to `code`                                                                                   |
+| [`STATE`][st]        | Recommended  | Protects against cross-site request forgery                                                            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -186,7 +185,7 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 <Message>
   Additional query parameters can be passed along when redirecting the user to
   limit down the scope, or pass along some extra state. See the authorization 
-  reference documentationfor more information.
+  reference documentation for more information.
 </Message>
 
 ## 3. User grants application access
