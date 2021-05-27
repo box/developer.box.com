@@ -205,4 +205,4 @@ section at the bottom of the **Configuration** tab in the
 [jwt]: g://authentication/jwt
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
 [kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
-[ccg]: g//authentication/jwt/without-sdk/#client-credentials-grant
+[ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
