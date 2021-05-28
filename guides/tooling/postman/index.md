@@ -12,7 +12,7 @@ subcategory_id: tooling/postman
 is_index: true
 id: tooling/postman
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/postman/install

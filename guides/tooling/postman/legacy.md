@@ -1,5 +1,5 @@
 ---
-rank: 10
+rank: 5
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -10,7 +10,7 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/legacy
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: ''

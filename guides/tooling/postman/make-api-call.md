@@ -10,10 +10,10 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/make-api-call
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/postman
 parent_id: tooling/postman
-next_page_id: tooling/postman/refresh
+next_page_id: tooling/postman/access-token
 previous_page_id: tooling/postman/install
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/make-api-call.md

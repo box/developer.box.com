@@ -10,7 +10,7 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/install
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: tooling/postman/make-api-call
