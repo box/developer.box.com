@@ -1,7 +1,11 @@
 ---
-rank: 3
-related_endpoints: []
-related_guides: []
+rank: 4
+related_endpoints:
+- post-oauth2-token/
+- post-oauth2-token--refresh/
+related_guides:
+- authentication/access-tokens
+- authentication/access-tokens/refresh
 required_guides: []
 related_resources: []
 alias_paths: []

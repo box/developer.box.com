@@ -15,13 +15,11 @@ alias_paths: []
 
 # OAuth 2.0 without SDKs
 
-If you are not ready to use any of the official Box SDKs, or an SDK is not
-available in your language of choice, it is possible to use the Box APIs without
-one.
-
 ## Overview
 
-Below are the steps required to manually complete the OAuth 2.0 flow. 
+While leveraging an official Box SDK removes common hurdles of authentication,
+it is possible to use the Box APIs without one. This guide reviews the steps to
+manually complete the OAuth 2.0 flow. 
 
 1. Build the authorization URL
 2. Redirect the user to the authorization URL
@@ -313,8 +311,7 @@ let accessToken = await axios.post(
   </Tab>
 </Tabs>
 
-To learn how to use this token visit our guide on [Making API
-calls](g://api-calls).
+To learn how to use an Access Token visit our guide on [Making API calls][apic].
 
 [tokens]: g://authentication/access-tokens
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
@@ -325,3 +322,4 @@ calls](g://api-calls).
 [st]: e://get-authorize/#param-state
 [thirty]: g:///api-calls/permissions-and-errors/expiration/
 [at]: e://post-oauth2-token/
+[apic]: g://api-calls/
