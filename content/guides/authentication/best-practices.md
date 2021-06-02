@@ -74,12 +74,17 @@ ScopedToken downscopedToken =
 //Downscoped token available in downscopedToken.getAccessToken()
 ```
 
-## Revoke Tokens
+## Revoke tokens
 
 Both fully scoped Access Tokens and Downscoped Tokens can be [revoked][revoke].
 This allows you to manage the lifespan of a token to reduce exposure when a user
 logs out , there is suspicious activity, or when you need to push new security
 enhancements.
+
+## Developer Tokens
+
+Developer Tokens should only be used for development or testing purposes and
+never in production.
 
 [downscope]: g://authentication/access-tokens/downscope/
 [revoke]: g://authentication/access-tokens/revoke/
