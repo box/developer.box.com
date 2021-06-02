@@ -81,8 +81,8 @@ Token when the current one expires (`expires_in`).
 
 ### Server authentication
 
-When an Access Token is requested through using JWT or Client Credentials Grant,
-only any Access Token is returned:
+When an Access Token is requested using JWT or Client Credentials Grant, only an
+Access Token is returned:
 
 ```curl
 curl --location --request POST ‘https://api.box.com/oauth2/token’ \
@@ -101,10 +101,11 @@ curl --location --request POST ‘https://api.box.com/oauth2/token’ \
 
 Within this object we can see the token string (`access_token`).
 Because a Refresh Token is not returned, you must request a new token when the
-Access Token expires (`expires_in`).
+Access Token expires (`expires_in`) using the [token endpoint][token].
 
 [jwt-with-sdk]: g://authentication/jwt/with-sdk
 [oauth2-with-sdk]: g://authentication/oauth2/with-sdk
 [devcon]: https://app.box.com/developers/console
 [clientcred]: g://authentication/client-credentials
 [ds]: g://authentication/access-tokens/downscope
+[token]: e://post-oauth2-token
