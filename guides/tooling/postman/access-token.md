@@ -43,15 +43,15 @@ the steps below to obtain an Access Token using [Postman][postman].
   **Configuration** tab for your application in the [Developer Console][dc].
 
 To obtain the value for `code`, build and visit your
-[authorization URL][authurl] in your browser. Complete the OAuth 2.0 flow and
-the code will be at the end of the URL upon redirecting to your configured
-redirect URL. As a reminder, this authorization code is only valid for 30
-seconds, so you must put this into your Postman call and click **Send** before
-expiration.
+[authorization URL][authurl] in your browser. Complete the OAuth 2.0 flow and,
+upon redirecting to your configured redirect URL, the authorization code will be
+at the end of the URL. As a reminder, this authorization code is only valid for
+30 seconds, so you must add this into Postman and click **Send** before it
+expires.
 
 <ImageFrame border center shadow>
 
-![OAuth2.0 token request](images/ooauth2-token.gif)
+![OAuth2.0 token request](images/oauth2-access-token.gif)
 
 </ImageFrame>
 
