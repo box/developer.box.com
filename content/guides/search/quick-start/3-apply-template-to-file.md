@@ -32,6 +32,11 @@ shown in the UI above.
     ![Select a Metadata Template](./images/add-metadata-api.png)
 </ImageFrame>
 
+<Message warning>
+Due to scale considerations a 403 error will returns when the metadata template
+is applied to more than 10,000 files or folders. 
+</Message>
+
 <Next>I applied my template to at least one file</Next>
 
 [add-metadata]: e://post-files-id-metadata-id-id/
