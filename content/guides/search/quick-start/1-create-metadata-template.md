@@ -72,6 +72,6 @@ information in the next step.
 [at]: g://authentication/tokens/
 [current-user]: e://get-users-me/
 [dc]: https://account.box.com/developers/console
-[dt]: g://authentication/access-tokens/developer-tokens/
+[dt]: g://authentication/tokens/developer-tokens/
 [postman]: https://postman.com/
 [post-collab]: g://tooling/postman/
