@@ -7,8 +7,9 @@ related_resources:
 related_guides:
   - authentication
 required_guides:
-  - authentication/access-tokens
-alias_paths: []
+  - authentication/tokens
+alias_paths:
+- /authentication/access-tokens/refresh
 ---
 
 # Refresh a Token

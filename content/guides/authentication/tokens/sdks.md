@@ -2,13 +2,14 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - authentication/access-tokens/developer-tokens
+  - authentication/tokens/developer-tokens
   - authentication/select
 required_guides: 
   - tooling/sdks
 related_resources: 
   - access_token
-alias_paths: []
+alias_paths: 
+- /authentication/access-tokens/sdks
 ---
 
 # Using in SDKs

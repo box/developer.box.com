@@ -38,14 +38,14 @@ curl https://api.box.com/2.0/users/me \
   -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
-<CTA to="guide://authentication/access-tokens">
+<CTA to="guide://authentication/tokens">
   Learn more about Access Tokens
 </CTA>
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
-[devtoken]: g://authentication/access-tokens/developer-tokens
+[devtoken]: g://authentication/tokens/developer-tokens
 [custom-app]: g://applications/custom-apps
 [custom-skill]: g://applications/custom-skills
 [la]: g://applications/select/#limited-access-app

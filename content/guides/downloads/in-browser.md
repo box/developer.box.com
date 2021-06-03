@@ -49,4 +49,4 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
 [durl]: g://downloads/get-url
 [cors]: g://best-practices/cors
-[downscoping]: g://authentication/access-tokens/downscope
+[downscoping]: g://authentication/tokens/downscope

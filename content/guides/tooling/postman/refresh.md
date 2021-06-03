@@ -4,8 +4,8 @@ related_endpoints:
 - post-oauth2-token/
 - post-oauth2-token--refresh/
 related_guides:
-- authentication/access-tokens
-- authentication/access-tokens/refresh
+- authentication/tokens
+- authentication/tokens/refresh
 required_guides: []
 related_resources: []
 alias_paths: []

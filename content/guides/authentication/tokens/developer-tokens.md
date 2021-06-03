@@ -8,6 +8,7 @@ required_guides:
   - applications/select
 alias_paths:
   - /docs/authenticate-with-developer-token
+  - /authentication/access-tokens/developer-tokens
 ---
 
 # Developer Tokens

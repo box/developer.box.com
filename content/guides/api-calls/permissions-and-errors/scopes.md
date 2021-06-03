@@ -297,7 +297,7 @@ The standard OAuth scopes are also supported when downscoping.
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
 [reference]: https://developer.box.com/reference/
-[at]: g://authentication/access-tokens/
+[at]: g://authentication/tokens/
 [blog-security]:https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
 [jwt]: g://authentication/jwt/
 [mu]: g://getting-started/user-types/managed-users/
@@ -307,5 +307,5 @@ The standard OAuth scopes are also supported when downscoping.
 [appu]: g://getting-started/user-types/app-users/
 [governance]: https://www.box.com/security/governance-and-compliance
 [suppress]: g://api-calls/suppress-notifications/
-[ds]: g://authentication/access-tokens/downscope/
+[ds]: g://authentication/tokens/downscope/
 [sa]: g://getting-started/user-types/service-account/

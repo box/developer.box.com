@@ -7,9 +7,10 @@ related_resources:
 related_guides:
   - api-calls/permissions-and-errors/scopes
 required_guides:
-  - authentication/access-tokens
+  - authentication/tokens
 alias_paths:
   - /docs/downscope-tokens
+  - /authentication/access-tokens/downscope
 ---
 
 # Downscope a Token

@@ -97,7 +97,7 @@ section at the bottom of the **Configuration** tab in the
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
-[devtoken]: g://authentication/access-tokens/developer-tokens
+[devtoken]: g://authentication/tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [oauth2]: g://authentication/oauth2

@@ -3,7 +3,7 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
-  - authentication/access-tokens
+  - authentication/tokens
 required_guides: []
 related_resources: []
 alias_paths: []
