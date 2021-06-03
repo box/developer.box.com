@@ -29,6 +29,6 @@ response. Specifically, note the `scope` and `templateKey`.
 
 <Next>I obtained the details about my template</Next>
 
-[at]: g://authentication/access-tokens/
+[at]: g://authentication/tokens/
 [dc]: https://account.box.com/developers/console
 [metadata-list]: e://get-metadata-templates-enterprise/

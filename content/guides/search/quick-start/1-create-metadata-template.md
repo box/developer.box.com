@@ -69,7 +69,7 @@ information in the next step.
 
 <Next>I created a metadata template</Next>
 
-[at]: g://authentication/access-tokens/
+[at]: g://authentication/tokens/
 [current-user]: e://get-users-me/
 [dc]: https://account.box.com/developers/console
 [dt]: g://authentication/access-tokens/developer-tokens/
