@@ -86,4 +86,4 @@ documentation for each of the UI Elements to learn more about their dedicated
 scopes.
 
 [acl]: https://community.box.com/t5/How-To-Guides-for-Sharing/What-Are-The-Different-Access-Levels-For-Collaborators/ta-p/144
-[downscoping]: g://authentication/access-tokens/downscope
+[downscoping]: g://authentication/tokens/downscope

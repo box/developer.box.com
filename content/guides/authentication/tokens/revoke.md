@@ -5,8 +5,9 @@ related_endpoints:
 related_resources: []
 related_guides: []
 required_guides:
-  - authentication/access-tokens
-alias_paths: []
+  - authentication/tokens
+alias_paths:
+- /authentication/access-tokens/revoke
 ---
 
 # Revoke a Token

@@ -8,6 +8,7 @@ required_guides:
   - applications/select
 alias_paths: 
   - /docs/how-to-get-an-api-key 
+  - /authentication/access-tokens/api-calls
 ---
 
 # Use a Token

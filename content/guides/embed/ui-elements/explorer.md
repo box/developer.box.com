@@ -280,5 +280,5 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-enable line-length -->
 
-[downscope]: guide://authentication/access-tokens/downscope
+[downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

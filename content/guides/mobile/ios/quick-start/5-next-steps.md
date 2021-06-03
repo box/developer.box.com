@@ -21,7 +21,7 @@ the following steps.
 To take the next step with your application, the following resources are
 recommended.
 
-* [Token Downscoping](g://authentication/access-tokens/downscope/): In this 
+* [Token Downscoping](g://authentication/tokens/downscope/): In this 
 quick start guide you used a developer token to make your first call. To
 implement a scalable solution you should have a server-side solution to
 generate downscoped tokens to replace that implementation.

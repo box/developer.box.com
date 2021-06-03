@@ -8,7 +8,8 @@ related_guides:
 required_guides:
   - authentication/app-token
 related_resources: []
-alias_paths: []
+alias_paths:
+- /authentication/access-tokens/annotator-tokens
 ---
 
 # Annotator Tokens
