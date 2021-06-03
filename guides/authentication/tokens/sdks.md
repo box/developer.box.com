@@ -2,25 +2,26 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - authentication/access-tokens/developer-tokens
+  - authentication/tokens/developer-tokens
   - authentication/select
 required_guides:
   - tooling/sdks
 related_resources:
   - access_token
-alias_paths: []
+alias_paths:
+  - /authentication/access-tokens/sdks
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/sdks
+id: authentication/tokens/sdks
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens/developer-tokens
-previous_page_id: authentication/access-tokens/api-calls
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/developer-tokens
+previous_page_id: authentication/tokens/api-calls
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/sdks.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/sdks.md
 ---
 # Using in SDKs
 

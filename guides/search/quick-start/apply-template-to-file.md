@@ -47,6 +47,13 @@ shown in the UI above.
 
 </ImageFrame>
 
+<Message warning>
+
+Due to scale considerations a 403 error will returns when the metadata template
+is applied to more than 10,000 files or folders.
+
+</Message>
+
 <Next>
 
 I applied my template to at least one file

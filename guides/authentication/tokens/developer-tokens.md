@@ -8,18 +8,19 @@ required_guides:
   - applications/select
 alias_paths:
   - /docs/authenticate-with-developer-token
+  - /authentication/access-tokens/developer-tokens
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/developer-tokens
+id: authentication/tokens/developer-tokens
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens/refresh
-previous_page_id: authentication/access-tokens/sdks
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/refresh
+previous_page_id: authentication/tokens/sdks
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/developer-tokens.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/developer-tokens.md
 ---
 # Developer Tokens
 

@@ -18,8 +18,8 @@ source_url: >-
 ---
 # Search content using metadata
 
-The Box Metadata Query API enables the ability to programmatically locate Box
-content based strictly on applied custom metadata values.
+The Box Metadata Query API enables programmatic search of Box content based
+strictly on applied custom metadata values.
 
 The structure of a metadata query is similar to that of a SQL query and allows
 for Boolean operators, such as AND, OR, and NOT, as well as comparison or range

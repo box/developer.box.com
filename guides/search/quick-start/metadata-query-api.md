@@ -16,7 +16,7 @@ source_url: >-
 ---
 # Use the Metadata Query API
 
-Finally, build a [metadata search API call][mq]. Here is an example of what the
+Finally, build a [metadata query API call][mq]. Here is an example of what the
 body of the API call looks like:
 
 ```json
@@ -32,7 +32,7 @@ body of the API call looks like:
 This API call will return any file ID that meets the following criteria:
 
 - Has the Contact Role template applied
-- Has a value of department is legal
+- Has a value of departments is legal
 - Is located anywhere under the root folder, since "0" is the
   `ancestor_folder_id`
 

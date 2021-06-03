@@ -87,7 +87,7 @@ Learn about selecting an authentication method
 
 If your application requires the end user to only be able to access a subset of
 the Annotations functionality, you can use
-[Downscoping](g://authentication/access-tokens/downscope) to appropriately
+[Downscoping](g://authentication/tokens/downscope) to appropriately
 downscope your Access Token to a resulting token that has the desired set of
 permissions, and can thus, be securely passed to the end user client
 initializing Annotations.

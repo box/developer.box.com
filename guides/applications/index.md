@@ -54,7 +54,7 @@ Learn how to select an application type
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
-[devtoken]: g://authentication/access-tokens/developer-tokens
+[devtoken]: g://authentication/tokens/developer-tokens
 [custom-apps]: g://applications/custom-apps
 [custom-skills]: g://applications/custom-skills
 [ccg]: g://authentication/client-credentials/

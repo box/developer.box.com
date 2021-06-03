@@ -3,8 +3,8 @@ rank: 3
 related_endpoints:
   - post-oauth2-token
 related_guides:
-  - authentication/access-tokens
-  - authentication/access-tokens/refresh
+  - authentication/tokens
+  - authentication/tokens/refresh
   - authentication/oauth2
 required_guides: []
 related_resources: []
@@ -67,4 +67,4 @@ values so the API call is ready to send as soon as you get the code.
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials
 [token]: e://post-oauth2-token
-[rt]: g://authentication/access-tokens/refresh/
+[rt]: g://authentication/tokens/refresh/

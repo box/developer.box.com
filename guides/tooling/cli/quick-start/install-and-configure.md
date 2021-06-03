@@ -125,5 +125,5 @@ I installed and configured the CLI
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/
 [sa]: g://getting-started/user-types/service-account/
-[at]: g://authentication/access-tokens/
+[at]: g://authentication/tokens/
 [dc]: https://app.box.com/developers/console

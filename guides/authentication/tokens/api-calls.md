@@ -8,18 +8,19 @@ required_guides:
   - applications/select
 alias_paths:
   - /docs/how-to-get-an-api-key
+  - /authentication/access-tokens/api-calls
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/api-calls
+id: authentication/tokens/api-calls
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens/sdks
-previous_page_id: ''
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/sdks
+previous_page_id: authentication/tokens
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/api-calls.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/api-calls.md
 ---
 # Use a Token
 

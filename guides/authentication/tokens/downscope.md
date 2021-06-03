@@ -7,21 +7,22 @@ related_resources:
 related_guides:
   - api-calls/permissions-and-errors/scopes
 required_guides:
-  - authentication/access-tokens
+  - authentication/tokens
 alias_paths:
   - /docs/downscope-tokens
+  - /authentication/access-tokens/downscope
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/downscope
+id: authentication/tokens/downscope
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens/annotator-tokens
-previous_page_id: authentication/access-tokens
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/annotator-tokens
+previous_page_id: authentication/tokens/access-tokens
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/downscope.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/downscope.md
 ---
 # Downscope a Token
 

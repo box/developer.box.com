@@ -5,20 +5,21 @@ related_endpoints:
 related_resources: []
 related_guides: []
 required_guides:
-  - authentication/access-tokens
-alias_paths: []
+  - authentication/tokens
+alias_paths:
+  - /authentication/access-tokens/revoke
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/revoke
+id: authentication/tokens/revoke
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens/downscope
-previous_page_id: authentication/access-tokens/refresh
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/downscope
+previous_page_id: authentication/tokens/refresh
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/revoke.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/revoke.md
 ---
 # Revoke a Token
 

@@ -8,19 +8,20 @@ related_guides:
 required_guides:
   - authentication/app-token
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /authentication/access-tokens/annotator-tokens
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/annotator-tokens
+id: authentication/tokens/annotator-tokens
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
 next_page_id: ''
-previous_page_id: authentication/access-tokens/downscope
+previous_page_id: authentication/tokens/downscope
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/annotator-tokens.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/annotator-tokens.md
 ---
 # Annotator Tokens
 

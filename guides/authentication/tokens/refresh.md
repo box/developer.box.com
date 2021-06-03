@@ -7,20 +7,21 @@ related_resources:
 related_guides:
   - authentication
 required_guides:
-  - authentication/access-tokens
-alias_paths: []
+  - authentication/tokens
+alias_paths:
+  - /authentication/access-tokens/refresh
 category_id: authentication
-subcategory_id: authentication/access-tokens
+subcategory_id: authentication/tokens
 is_index: false
-id: authentication/access-tokens/refresh
+id: authentication/tokens/refresh
 type: guide
-total_steps: 7
-sibling_id: authentication/access-tokens
-parent_id: authentication/access-tokens
-next_page_id: authentication/access-tokens
-previous_page_id: authentication/access-tokens/developer-tokens
+total_steps: 8
+sibling_id: authentication/tokens
+parent_id: authentication/tokens
+next_page_id: authentication/tokens/access-tokens
+previous_page_id: authentication/tokens/developer-tokens
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/refresh.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/refresh.md
 ---
 # Refresh a Token
 

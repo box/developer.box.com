@@ -32,6 +32,6 @@ expire. The following is a quick overview of their respective expiration times.
 See each respective guide for more details.
 
 [Authorization Codes]: g://authentication/oauth2
-[Access Tokens]: g://authentication/access-tokens
-[Refresh Tokens]: g://authentication/access-tokens/refresh
+[Access Tokens]: g://authentication/tokens
+[Refresh Tokens]: g://authentication/tokens/refresh
 [Download URLs]: g://downloads
