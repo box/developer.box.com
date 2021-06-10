@@ -10,10 +10,10 @@ subcategory_id: null
 is_index: false
 id: getting-started/user-models
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: getting-started
 parent_id: getting-started
-next_page_id: getting-started/architecture-patterns
+next_page_id: getting-started/api-security
 previous_page_id: getting-started/use-cases
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-models.md
