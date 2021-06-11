@@ -20,16 +20,16 @@ source_url: >-
 ---
 # Understanding API Security
 
-Whether it is your first time using the Box API or you are a Box Admin tasked
-with authorizing custom applications, it is critical you understand the
+Whether your are a developer getting started with the Box API or a Box Admin
+tasked with authorizing custom applications, it is critical you understand the
 security mechanisms in place to protect content stored in Box.
 
 The Box API follows the same security principals and restrictions as the Box web
 application. This means that you will not be able to bypass content
 [permissions][perm], the [waterfall folder structure][waterfall], or Admin-only
 requirements by leveraging the Box API. A good rule of thumb is that if you
-cannot preform an action directly in the Box web application, you cannot do it
-via the API.
+are unable preform an action directly in the Box web application, you will also
+be unable to do it via the API.
 
 ## Access Tokens
 
@@ -52,33 +52,43 @@ Token, either owns or is a collaborator on. This can be further restricted by
 
 [Access Tokens][at] are only valid for 60 minutes, but can be [revoked][revoked]
 earlier if needed. Once an Access Token expires, when using an OAuth 2.0
-application, a [Refresh Token][rt], valid for 60 days or one use,
-can be [exchanged][exchange] for another Access Token. Alternatively, when using
-a Server Authentication application, the
-[request access token endpoint][gettoken] can be called for a new token. For
-security reasons we do not allow long-lived access tokens.
+application, a [Refresh Token][rt] can be [exchanged][exchange] for another
+Access Token. Refresh tokens are valid for 60 days or one use. Alternatively,
+when using a server authentication application, the
+[request access token endpoint][gettoken] must be called for a new Access Token.
+For security reasons we do not allow long-lived access tokens.
 
 <Message type=tip>
 
-Receiving an error, especially a 404, and don’t know why? A great place to
-start is checking to see what user is associated with your access token
-using the get current user endpoint.
+Unsure why you are receiving a 404 error? A great place to start is checking
+to see what user is associated with your Access Token by using the get
+current user endpoint.
 
 </Message>
 
 ## Scopes
 
+<ImageFrame center shadow border>
+
+![Scopes](images/scopespng)
+
+</ImageFrame>
+
 [Scopes][scopes] are configured in the [Developer Console][dc] upon application
-creation and determine which of the 150+ endpoints an application can
-successfully call. Because scopes work in conjunction with user permissions,
-granting the write scope does not automatically provide a user with access to
-all content in a Box enterprise.
+creation and determine which of the 150+ endpoints Access Tokens of an
+application can successfully call.
+
+Because scopes work in conjunction with user permissions, granting the write
+scope does not automatically provide a user with access to all content in a
+Box enterprise. Instead, it means that the authenticated user can receive
+successful API responses when making write calls to content they have access to.
 
 For example, take an application with only the manage users and manage groups
 scopes enabled. If an Access Token of this application tried to make an API call
 to get information about a folder, even if the associated user owned it, it
 would receive a 403 error. This is because the read scope is required to
-preform this action.
+preform this action. Access Tokens of this application could only receive
+successful responses on API calls related to users and groups.
 
 ## Restricted endpoints
 
@@ -105,6 +115,12 @@ of these endpoints include:
 
 ## Application Access
 
+<ImageFrame center shadow border>
+
+![Application Access Settings](images/app_access.png)
+
+</ImageFrame>
+
 Application access is only configured in the [Developer Console][dc] for
 applications leveraging [Server Authentication (with JWT)][jwt]. This determines
 the [types of users][usertypes] that can be used with the application. The two
@@ -127,13 +143,43 @@ to all the content in the Box enterprise.
 </Message>
 
 As an example, take a JWT application that has the read/write scopes,
-app only access, and is properly authorized in the Admin console. If, a
-managed user obtains an access token for the application and makes an API call
-to a folder they own that call would receive a 400 error with the message
-“Cannot obtain token based on the enterprise configuration for your app”. Even
-though the user has access to the content, the correct scopes and the app is
-authorized, authorization, the selected application access only
-allows for the service account and app users to interact with the application.
+app only access, and is properly [authorized][auth] in the Admin console. If, a
+managed user obtains an Access Token and makes an API call to a folder they own,
+that call would receive a 400 error with the message “Cannot obtain token based
+on the enterprise configuration for your app”. Even though the user has access
+to the content, the correct scopes and the app is authorized, authorization,
+the selected application access only allows the application to interact with the
+Service Account and App Users.
+
+## Enterprise settings and authorization
+
+There are a few enterprise settings to be aware of when it comes to the Box API.
+
+<ImageFrame center shadow border>
+
+![Admin Console Apps Tab](images/apps_tab.png)
+
+</ImageFrame>
+
+In order for an application leveraging [JWT][jwt] or
+[Client Credentials Grant][ccg] to be used by an enterprise, an Admin must
+explicitly [authorize][auth] it via the Box Admin console. The authorization is
+a snapshot in time.  This means that if a developer revisits the Developer
+Console and changes the configuration, the Admin must re-authorize the
+application in order for generated Access Tokens to reflect the changes.
+
+<ImageFrame center shadow border>
+
+![Global App Settings](images/global_app_settings.png)
+
+</ImageFrame>
+
+Custom applications fall into two categories: published and unpublished.
+Published applications are found in the Box App Gallery. Box Admins decide
+whether published and unpublished application are enabled by default and
+therefore can be used without approval. The status of these settings determines
+what actions are necessary to successfully [authorize][auth] an application
+for use.
 
 [perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
@@ -160,3 +206,7 @@ allows for the service account and app users to interact with the application.
 [serviceaccount]: g://getting-started/user-types/service-account
 [appusers]: g://getting-started/user-types/app-users
 [mu]: g://getting-started/user-types/managed-users
+[auth]: g://authorization/custom-app-approval
+[jwt]: g://authentication/jwt
+[ccg]: g://authentication/client-credentials
+[auth]: g://authorization
