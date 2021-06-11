@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - get_users_id
   - get_users
@@ -21,8 +21,8 @@ type: guide
 total_steps: 3
 sibling_id: getting-started
 parent_id: getting-started
-next_page_id: getting-started/user-types/app-users
-previous_page_id: getting-started/user-types/managed-users
+next_page_id: ''
+previous_page_id: getting-started/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/index.md
 ---

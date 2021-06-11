@@ -18,8 +18,8 @@ type: guide
 total_steps: 3
 sibling_id: getting-started/user-types
 parent_id: getting-started/user-types
-next_page_id: ''
-previous_page_id: getting-started/user-types
+next_page_id: getting-started/user-types
+previous_page_id: getting-started/user-types/service-account
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/app-users.md
 ---
