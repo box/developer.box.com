@@ -81,7 +81,7 @@ Benefits of this user model:
 1. Useful when the App User model would complicate existing applications
 2. Useful when there is not a good 1:1 end user/app user mapping, such as if
   users are mapped as groups
-3. Since the Service Account owns all content, permissions are easier to manage. 
+3. Since the Service Account owns all content, permissions are easier to manage.
 4. Ability to implement a token exchange to ensure that broad scoped access to
   the Service Account does not occur
 
