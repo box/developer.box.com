@@ -27,16 +27,14 @@ security mechanisms in place to protect content stored in Box.
 The Box API follows the same security principals and restrictions as the Box web
 application. This means that you will not be able to bypass content
 [permissions][perm], the [waterfall folder structure][waterfall], or Admin-only
-requirements by leveraging the Box API. A good rule of thumb is that if you
-are unable preform an action directly in the Box web application, you will also
-be unable to do it via the API.
+requirements by leveraging the Box API.
 
 ## Access Tokens
 
 At the core of every Box API call is an [Access Token][at]. Because a username
 and password cannot be used, the Box servers need a way of validating user
 identity. The full capability of an Access Token encompasses user permissions,
-application scopes, and token permissions.
+token permissions, and application settings.
 
 <ImageFrame center shadow border>
 
@@ -55,7 +53,7 @@ earlier if needed. Once an Access Token expires, when using an OAuth 2.0
 application, a [Refresh Token][rt] can be [exchanged][exchange] for another
 Access Token. Refresh tokens are valid for 60 days or one use. Alternatively,
 when using a server authentication application, the
-[request access token endpoint][gettoken] must be called for a new Access Token.
+[request Access Token endpoint][gettoken] must be called for a new Access Token.
 For security reasons we do not allow long-lived access tokens.
 
 <Message type=tip>
@@ -70,16 +68,16 @@ current user endpoint.
 
 <ImageFrame center shadow border>
 
-![Scopes](images/scopespng)
+![Scopes](images/scopes.png)
 
 </ImageFrame>
 
 [Scopes][scopes] are configured in the [Developer Console][dc] upon application
-creation and determine which of the 150+ endpoints Access Tokens of an
+creation. They determine which of the 150+ endpoints Access Tokens of an
 application can successfully call.
 
 Because scopes work in conjunction with user permissions, granting the write
-scope does not automatically provide a user with access to all content in a
+scope does not automatically provide a user with API access to all content in a
 Box enterprise. Instead, it means that the authenticated user can receive
 successful API responses when making write calls to content they have access to.
 
@@ -92,9 +90,9 @@ successful responses on API calls related to users and groups.
 
 ## Restricted endpoints
 
-There are some API endpoints that only Admins or Co-Admins, with the [proper
-granted [permissions][coadminperm], can successfully use. As a general rule of
-thumb, if only an Admin or Co-Admin can perform an action via the Box Admin
+There are some API endpoints that only Admins or Co-Admins, granted the
+appropriate [permissions][coadminperm], can successfully use. As a general rule
+of thumb, if only an Admin or Co-Admin can perform an action via the Box Admin
 Console, an Access Token associated with one of these users is required to
 complete an API call for the same action. This is called out in our API
 [reference][reference] documentation for a given endpoint if it is required.
@@ -105,9 +103,9 @@ Some Admin-restricted endpoints include:
 - Creating, deleting, or modifying [groups][groups]
 - Viewing user or enterprise [events][events]
 
-Other endpoints can only be used by an Admin user's Access token if the
-enterprise purchased add-on products such as Box Governance or Box Shield. Some
-of these endpoints include:
+Other endpoints can only be used by an Admin user's Access Token if the
+enterprise has purchased add-on products such as Box Governance or Box Shield.
+Some of these endpoints include:
 
 - Interacting with [security classifications][sc]
 - Interacting with [legal hold policies][lh] and [assignments][lha]
@@ -122,32 +120,27 @@ of these endpoints include:
 </ImageFrame>
 
 Application access is only configured in the [Developer Console][dc] for
-applications leveraging [Server Authentication (with JWT)][jwt]. This determines
-the [types of users][usertypes] that can be used with the application. The two
+applications leveraging Server Authentication with [JWT)][jwt] or
+[Client Credentials Grant][ccg]. This setting determines the
+[types of users][usertypes] that can be used with the application. The two
 options are **app access only** or **app + enterprise access**.
 
-Upon authorizing a JWT application in the Box Admin Console, a 
-[Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com) for
-the application is automatically generated. This account is an Admin-like user
-that can only be accessed via the API. This user can then be used to create
-user’s of the application called [App Users][appusers]. If an application only
-needs to interact with the Service Account and App Users, **app only access**
-must be selected. If an application needs to interact with [managed users][mu]
-and their existing Box content, app + enterprise access must be selected. 
-
-<Message type=tip>
-
-Remember, granting app + enterprise access does not mean the app gets access
-to all the content in the Box enterprise.
-
-</Message>
+Upon [authorizing][auth] one of these applications  in the Box Admin Console, a
+[Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com)
+representing the application is automatically generated. This account is an
+Admin-like user that can only be accessed via the API and can then be used to
+create user’s of the application called [App Users][appusers]. If an application
+only needs to interact with the Service Account and App Users,
+**app only access** must be selected. If an application needs to interact with
+[managed users][mu] and their existing Box content, app + enterprise access must
+be selected.
 
 As an example, take a JWT application that has the read/write scopes,
-app only access, and is properly [authorized][auth] in the Admin console. If, a
+app only access, and is properly [authorized][auth] in the Admin console. If a
 managed user obtains an Access Token and makes an API call to a folder they own,
 that call would receive a 400 error with the message “Cannot obtain token based
 on the enterprise configuration for your app”. Even though the user has access
-to the content, the correct scopes and the app is authorized, authorization,
+to the content, the correct scopes are enabled and the app is authorized,
 the selected application access only allows the application to interact with the
 Service Account and App Users.
 
@@ -157,29 +150,29 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 
 <ImageFrame center shadow border>
 
-![Admin Console Apps Tab](images/apps_tab.png)
-
-</ImageFrame>
-
-In order for an application leveraging [JWT][jwt] or
-[Client Credentials Grant][ccg] to be used by an enterprise, an Admin must
-explicitly [authorize][auth] it via the Box Admin console. The authorization is
-a snapshot in time.  This means that if a developer revisits the Developer
-Console and changes the configuration, the Admin must re-authorize the
-application in order for generated Access Tokens to reflect the changes.
-
-<ImageFrame center shadow border>
-
 ![Global App Settings](images/global_app_settings.png)
 
 </ImageFrame>
 
 Custom applications fall into two categories: published and unpublished.
-Published applications are found in the Box App Gallery. Box Admins decide
-whether published and unpublished application are enabled by default and
-therefore can be used without approval. The status of these settings determines
-what actions are necessary to successfully [authorize][auth] an application
-for use.
+Published applications are found in the [Box App Gallery][appgallery]. Box
+Admins decide whether published and unpublished application are enabled by
+default and therefore can be used without approval. The status of these settings
+determines what actions are necessary to successfully [authorize][auth] an
+application for use.
+
+<ImageFrame center shadow border>
+
+![Admin Console Apps Tab](images/apps_tab.png)
+
+</ImageFrame>
+
+Regardless of the settings above, in order for an application leveraging
+[JWT][jwt] or [Client Credentials Grant][ccg] to be used by an enterprise, an
+Admin must explicitly [authorize][auth] it via the Box Admin console. The
+authorization is a snapshot in time.  This means that if a developer revisits
+the Developer Console and changes the configuration, the Admin must re-authorize
+the application in order for generated Access Tokens to reflect the changes.
 
 [perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
@@ -209,4 +202,5 @@ for use.
 [auth]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials
+[appgallery]: https://app.box.com/services
 [auth]: g://authorization
