@@ -1,5 +1,5 @@
 ---
-rank: 120
+rank: 100
 alias_paths: []
 category_id: comments
 subcategory_id: null

@@ -1,5 +1,5 @@
 ---
-rank: 250
+rank: 50
 alias_paths: []
 category_id: best-practices
 subcategory_id: null

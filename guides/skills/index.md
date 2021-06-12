@@ -1,5 +1,5 @@
 ---
-rank: 170
+rank: 230
 alias_paths:
   - /docs/configure-a-box-skill
 related_endpoints:

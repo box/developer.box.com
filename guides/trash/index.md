@@ -1,5 +1,5 @@
 ---
-rank: 150
+rank: 250
 category_id: trash
 subcategory_id: null
 is_index: true

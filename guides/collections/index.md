@@ -1,5 +1,5 @@
 ---
-rank: 130
+rank: 90
 alias_paths: []
 category_id: collections
 subcategory_id: null

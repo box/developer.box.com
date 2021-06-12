@@ -1,5 +1,5 @@
 ---
-rank: 200
+rank: 80
 category_id: collaborations
 subcategory_id: null
 is_index: true
