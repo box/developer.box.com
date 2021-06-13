@@ -26,7 +26,7 @@ A semi-automated process to submit an app approval is available in the Developer
 Console.
 
 Navigate to the **Authorization** tab for your application in the
-[Developer console][devconsole].
+[Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
   ![Add and Manage keys](images/app-authorization.png)

@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 30
 related_guides:
 - authentication/app-token
 ---

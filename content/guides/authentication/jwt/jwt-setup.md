@@ -136,7 +136,7 @@ Navigate to the **Authorization** tab for your application within the
 [Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
-  ![Add and Manage keys](./images/app-authorization.png)
+  ![App authorization](../images/app-authorization.png)
 </ImageFrame>
 
 Click **Review and Submit** to send an email to your Box enterprise Admin for
@@ -159,7 +159,7 @@ access existing Managed Users of an enterprise, navigate to the
 [Developer console][devconsole] and set to **App + Enterprise Access**. 
 
 <ImageFrame border>
-  ![App access level](./images/app-access-level.png)
+  ![App access level](../images/app-access-level.png)
 </ImageFrame>
 
 ### Application Scopes

@@ -25,7 +25,7 @@ A semi-automated process to submit an app approval is available in the Developer
 Console.
 
 Navigate to the **Authorization** tab for your application in the
-[Developer console][devconsole].
+[Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
   ![Add and Manage keys](images/app-authorization.png)
@@ -66,7 +66,8 @@ see a **+** button in the top right corner to add a new app authorization.
 </ImageFrame>
 
 In the popup that appears, enter the client ID for the application that the
-developer collected from the **Configuration** tab of the Developer Console.
+developer collected from the **Configuration** tab of the
+[Developer Console][devconsole].
 
 A [secondary step][ss] may be necessary depending on enabled enterprise
 settings.

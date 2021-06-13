@@ -1,5 +1,5 @@
 ---
-rank: 10
+rank: 0
 alias_paths:
   - /docs/usage-patterns
   - /docs/quickstart-guides

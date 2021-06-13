@@ -32,8 +32,8 @@ admins, or by calling the `GET /users/me` endpoint with an authenticated user se
 ## Preconditions
 
 Using the `as-user` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [developer
-console][devconsole].
+needs to be configured to perform actions as users in the [Developer
+Console][devconsole].
 
 <ImageFrame border center>
   ![Advanced Features](./enable-perform-actions-as-users.png)

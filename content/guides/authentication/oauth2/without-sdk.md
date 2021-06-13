@@ -313,13 +313,13 @@ let accessToken = await axios.post(
 
 To learn how to use an Access Token visit our guide on [Making API calls][apic].
 
-[tokens]: g://authentication/tokens
+[tokens]: g://authentication/tokens/access-tokens
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
 [auth]: e://get-authorize/
 [ci]: e://get-authorize/#param-client_id
 [re]: e://get-authorize/#param-redirect_uri
 [co]: e://get-authorize/#param-response_type
 [st]: e://get-authorize/#param-state
-[thirty]: g:///api-calls/permissions-and-errors/expiration/
+[thirty]: g://api-calls/permissions-and-errors/expiration
 [at]: e://post-oauth2-token/
 [apic]: g://api-calls/

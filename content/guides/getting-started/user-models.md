@@ -1,7 +1,8 @@
 ---
 rank: 2
 related_endpoints: []
-related_guides: []
+related_guides:
+- getting-started/user-types
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -92,7 +93,7 @@ In this model, no user content normally needs to be handled.
 
 - **External User Type**: N/A
 - **Internal User Type**: N/A
-- **Content Owned By**: Application's Service Account
+- **Content Owned By**: Application [Service Account][sa]
 - **Examples**: Back Office Applications, Integrations, User Provisioning,
  Folder Auto-Creation
 
