@@ -77,7 +77,7 @@ Once a keypair is successfully added to your application your Box enterprise
 Admin needs to authorize the application within the Box Admin Console.
 
 Navigate to the **General Settings** tab for your application within the
-[Developer console][devconsole] and scroll down to the **App Authorization**
+[Developer Console][devconsole] and scroll down to the **App Authorization**
 section.
 
 <ImageFrame border width="400" center>
@@ -88,7 +88,7 @@ section.
 
 Click **Submit and Review** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
-[support article for app authorization][app-auth].
+[authorization guide][auth].
 
 ## Basic configuration
 
@@ -99,7 +99,7 @@ required.
 
 Authentication with Limited Access Apps is done through preconfigured [App
 Tokens][app-token]. To configure an app token, navigate to the **Configuration**
-tab for your application within the [Developer console][devconsole].
+tab for your application within the [Developer Console][devconsole].
 
 Scroll down to the **Primary Access Token** section and click the
 **Generate Key** button.
@@ -132,7 +132,7 @@ you may skip this section.
 
 To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
-[Developer console][devconsole].
+[Developer Console][devconsole].
 
 <ImageFrame border>
 
@@ -147,4 +147,4 @@ section at the bottom of the **Configuration** tab in the
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [app-token]: g://authentication/app-token
 [api-calls]: g://api-calls
-[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+[auth]: g://authorization

@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 10
 related_endpoints: []
 related_guides:
   - authentication/select
@@ -17,7 +17,7 @@ total_steps: 3
 sibling_id: applications
 parent_id: applications
 next_page_id: applications/limited-access-apps
-previous_page_id: ''
+previous_page_id: applications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/select.md
 ---
@@ -96,5 +96,5 @@ Learn more about Custom Skill Apps
 [app-token]: g://authentication/app-token
 [custom-apps]: g://applications/custom-apps
 [dev-console]: https://app.box.com/developers/console
-[view-app]: https://developer.box.com/guides/embed/box-view/
+[view-app]: g://embed/box-view
 [ccg]: g://authentication/client-credentials

@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 20
 alias_paths:
   - /docs/custom-applications
   - /docs/custom-integrations
@@ -79,7 +79,7 @@ Example use cases for a Custom App include:
 
 Custom Apps may require approval before use.
 
-<CTA to='g://authorization/limited-access-approval'>
+<CTA to='g://authorization/custom-app-approval'>
 
 Learn how to approve Custom Apps
 

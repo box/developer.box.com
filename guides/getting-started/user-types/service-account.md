@@ -160,7 +160,7 @@ restrictions that a Service Account associated with a Custom App does not.
 
 [appusers]: g://getting-started/user-types/app-users/
 [auth]: g://authorization/custom-app-approval/
-[dc]: https:/app.box.com/developers/console
+[dc]: https://app.box.com/developers/console
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
 [collabapi]: e://post-collaborations/

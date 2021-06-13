@@ -166,7 +166,7 @@ Navigate to the **Authorization** tab for your application within the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](./images/app-authorization.png)
+![App authorization](../images/app-authorization.png)
 
 </ImageFrame>
 
@@ -193,7 +193,7 @@ access existing Managed Users of an enterprise, navigate to the
 
 <ImageFrame border>
 
-![App access level](./images/app-access-level.png)
+![App access level](../images/app-access-level.png)
 
 </ImageFrame>
 

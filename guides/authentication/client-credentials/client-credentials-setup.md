@@ -81,7 +81,7 @@ Navigate to the **Authorization** tab for your application within the
 
 Click **Review and Submit** to send an email to your Box enterprise Admin for
 approval. More information on this process is available in our
-[support article for app authorization][app-auth].
+[authorization guide][app-auth].
 
 <CTA to='g://authorization/custom-app-approval'>
 
@@ -142,4 +142,4 @@ section at the bottom of the **Configuration** tab in the
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [user-types]: g://getting-started/user-types
 [sa]: g://getting-started/user-types/service-account
-[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+[app-auth]: g://authorization

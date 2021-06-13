@@ -298,5 +298,5 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
-[tokens]: g://authentication/tokens
+[tokens]: g://authentication/tokens/access-tokens
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps

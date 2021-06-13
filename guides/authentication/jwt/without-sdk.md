@@ -32,7 +32,7 @@ This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
 directly with the Box API.
 
-To learn how to use this token visit our guide on [Making API
+To learn how to use this token visit our guide on [making API
 calls](g://api-calls).
 
 <Message notice>
@@ -55,10 +55,11 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the Box
- [Developer Console][devconsole]
-- A private key [configuration file][configfile] named `config.json`
-- Ensure your application is authorized within the Box Admin Console
+- A Custom Application using JWT authentication within the 
+  [Developer Console][devconsole]
+- A private key configuration file named `config.json`, which can be downloaded
+  from the configuration tab of the [Developer Console][devconsole]
+- Ensure your application is [authorized][auth] within the Box Admin Console
 
 ### 1. Read JSON configuration
 
@@ -845,5 +846,5 @@ The code in this guide is available on [GitHub][samples].
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api
 [devconsole]: https://app.box.com/developers/console
 [configfile]: g://authentication/jwt/jwt-setup/#jwt-keypair
-[keypair]: g//authentication/jwt/without-sdk/#public-and-private-keypair
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+[auth]: g://authorization

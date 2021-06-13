@@ -110,7 +110,7 @@ you may skip this section.
 
 To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
-[Developer console][devconsole].
+[Developer Console][devconsole].
 
 <ImageFrame border>
 

@@ -36,7 +36,7 @@ verify your application's identity using a client ID and client secret.
  [Developer Console][devconsole]
 - [2FA][2fa] enabled on your Box account for viewing and copying the
   application's client secret from the configuration tab
-- The application is authorized in the Box Admin Console
+- The application is [authorized][auth] in the Box Admin Console
 
 <Message notice>
 
@@ -96,3 +96,4 @@ Box SDKs do not currently support this authentication method.
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://getting-started/user-types/service-account/
+[auth]: g://authorization
