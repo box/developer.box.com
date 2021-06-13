@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 10
 related_endpoints: []
 related_guides:
   - authentication/select
@@ -71,5 +71,5 @@ from files uploaded to Box.
 [app-token]: g://authentication/app-token
 [custom-apps]: g://applications/custom-apps
 [dev-console]: https://app.box.com/developers/console
-[view-app]: https://developer.box.com/guides/embed/box-view/
+[view-app]: g://embed/box-view
 [ccg]: g://authentication/client-credentials

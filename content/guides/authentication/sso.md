@@ -15,7 +15,7 @@ alias_paths: []
 # Box API & SSO
 
 Many Box Enterprises use **Single Sign On** (SSO) to authenticate
-[Managed Users][user-types] logging in to Box. The way applications built on
+[Managed Users][mu] logging in to Box. The way applications built on
 Box Platform interact with the SSO provider depends on the type of application
 being built.
 
@@ -81,7 +81,7 @@ therefore SSO is not involved.
   would require them to use SSO where needed.
 </Message>
 
-[user-types]: g://getting-started/user-types
+[mu]: g://getting-started/user-types/managed-users/
 [admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2

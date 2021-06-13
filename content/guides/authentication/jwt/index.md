@@ -40,7 +40,7 @@ To learn more about these options visit our guide on using
 </Message>
 
 Upon authorizing a JWT application in the Box Admin Console, a 
-[Service Account][user-types] is automatically generated and is the default
+[Service Account][sa] is automatically generated and is the default
 Access Token used when authenticating. This is an admin-like user and why
 applications leveraging JWT require explicit Box Admin approval before use.
 
@@ -55,6 +55,6 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-[app-type]: g://applications/select/
-[user-types]: g://getting-started/user-types
-[jwtnosdk]: g://authentication/jwt/without-sdk/
+[app-type]: g://applications/select
+[sa]: g://getting-started/user-types/service-account
+[jwtnosdk]: g://authentication/jwt/without-sdk
