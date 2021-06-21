@@ -3,7 +3,7 @@ rank: 1
 related_endpoints: []
 related_guides:
   - authentication/select
-  - best-practices/cors
+  - security/cors
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -232,15 +232,14 @@ contains detailed documentation for usage and development. Please file any bugs
 you encounter under the "Issues" tab with clear steps to reproduce. This
 repository also holds a list of [releases][releases].
 
-[cors]: guide://best-practices/cors
-[downscope]: guide://authentication/tokens/downscope
-[devtoken]: guide://authentication/tokens/developer-tokens
+[cors]: g://security/cors
+[downscope]: g://authentication/tokens/downscope
+[devtoken]: g://authentication/tokens/developer-tokens
 [npm]: https://www.npmjs.com/package/box-ui-elements
 [polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
 [gh]: https://github.com/box/box-ui-elements
 [releases]: https://github.com/box/box-ui-elements/releases
-[cors]: guide://best-practices/cors
 [npm]: https://www.npmjs.com/package/box-ui-elements
-[downscope]: guide://authentication/tokens/downscope
-[scopes]: guide://api-calls/permissions-and-errors/scopes
+[downscope]: g://authentication/tokens/downscope
+[scopes]: g://api-calls/permissions-and-errors/scopes
 [preview-releases]: https://github.com/box/box-content-preview/releases

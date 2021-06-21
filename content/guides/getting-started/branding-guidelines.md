@@ -1,11 +1,12 @@
 ---
-rank: 2
+rank: 7
 related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
+  - /best-practices/branding-guidelines
 ---
 
 # Branding Guidelines
@@ -37,7 +38,7 @@ us with any questions][contact].
 
 ## Things not to do
 
-### Don' impersonate Box
+### Do not impersonate Box
 
 Please don't call your application anything that might be mistaken for an
 official Box application.
