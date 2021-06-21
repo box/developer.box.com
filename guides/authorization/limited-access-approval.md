@@ -79,7 +79,7 @@ see a **+** button in the top right corner to add a new app authorization.
 
 <ImageFrame border center>
 
-![Apps tab](../images/apps.png)
+![Apps tab](images/apps.png)
 
 </ImageFrame>
 

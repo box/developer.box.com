@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 3
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -7,20 +7,21 @@ related_resources: []
 alias_paths:
   - /docs/deep-linking
   - /docs/deep-linking-to-box-mobile-apps
-category_id: best-practices
+  - /best-practices/mobile-deep-linking
+category_id: mobile
 subcategory_id: null
 is_index: false
-id: best-practices/mobile-deep-linking
+id: mobile/mobile-deep-linking
 type: guide
-total_steps: 3
-sibling_id: best-practices
-parent_id: best-practices
-next_page_id: best-practices/branding-guidelines
+total_steps: 1
+sibling_id: mobile
+parent_id: mobile
+next_page_id: mobile
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/best-practices/mobile-deep-linking.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/mobile/mobile-deep-linking.md
 ---
-# Mobile Deep Linking
+# Deep Linking
 
 Box’s mobile applications support deep linking into folder and file objects.
 From a web page or native app it is possible to deep link to open an object

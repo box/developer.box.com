@@ -10,10 +10,10 @@ subcategory_id: null
 is_index: false
 id: security/device-pinners
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: security
 parent_id: security
-next_page_id: security
+next_page_id: security/cors
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/device-pinners.md

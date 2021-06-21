@@ -1,23 +1,24 @@
 ---
-rank: 2
+rank: 7
 related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
-category_id: best-practices
+  - /best-practices/branding-guidelines
+category_id: getting-started
 subcategory_id: null
 is_index: false
-id: best-practices/branding-guidelines
+id: getting-started/branding-guidelines
 type: guide
-total_steps: 3
-sibling_id: best-practices
-parent_id: best-practices
-next_page_id: best-practices/cors
-previous_page_id: best-practices/mobile-deep-linking
+total_steps: 5
+sibling_id: getting-started
+parent_id: getting-started
+next_page_id: ''
+previous_page_id: getting-started/locating-values
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/best-practices/branding-guidelines.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/branding-guidelines.md
 ---
 # Branding Guidelines
 
@@ -48,7 +49,7 @@ us with any questions][contact].
 
 ## Things not to do
 
-### Don' impersonate Box
+### Do not impersonate Box
 
 Please don't call your application anything that might be mistaken for an
 official Box application.

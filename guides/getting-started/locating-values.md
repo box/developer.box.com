@@ -13,10 +13,10 @@ subcategory_id: null
 is_index: false
 id: getting-started/locating-values
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: getting-started
 parent_id: getting-started
-next_page_id: ''
+next_page_id: getting-started/branding-guidelines
 previous_page_id: getting-started/architecture-patterns
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/locating-values.md

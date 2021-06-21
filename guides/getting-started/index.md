@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: true
 id: getting-started
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: getting-started/use-cases
@@ -18,6 +18,8 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
 ---
 # Getting Started
+
+Follow the steps below to get started!
 
 1. Is your [use case][use-case] good for Box?
 2. Understand the [user model][user-model]

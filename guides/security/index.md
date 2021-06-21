@@ -16,11 +16,11 @@ subcategory_id: null
 is_index: true
 id: security
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: security/device-pinners
+previous_page_id: security/cors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/index.md
 ---

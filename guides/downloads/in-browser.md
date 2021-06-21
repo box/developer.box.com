@@ -63,5 +63,5 @@ recommend [downscoping][downscoping] this token accordingly.
 </Message>
 
 [durl]: g://downloads/get-url
-[cors]: g://best-practices/cors
+[cors]: g://security/cors
 [downscoping]: g://authentication/tokens/downscope

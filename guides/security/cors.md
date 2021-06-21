@@ -6,18 +6,19 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
-category_id: best-practices
+  - /best-practices/cors
+category_id: security
 subcategory_id: null
 is_index: false
-id: best-practices/cors
+id: security/cors
 type: guide
-total_steps: 3
-sibling_id: best-practices
-parent_id: best-practices
-next_page_id: best-practices
-previous_page_id: best-practices/branding-guidelines
+total_steps: 2
+sibling_id: security
+parent_id: security
+next_page_id: security
+previous_page_id: security/device-pinners
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/best-practices/cors.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/security/cors.md
 ---
 # Cross-Origin Resource Sharing (CORS)
 
