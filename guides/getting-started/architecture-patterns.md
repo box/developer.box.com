@@ -13,7 +13,7 @@ type: guide
 total_steps: 4
 sibling_id: getting-started
 parent_id: getting-started
-next_page_id: ''
+next_page_id: getting-started/locating-values
 previous_page_id: getting-started/user-models
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/architecture-patterns.md
