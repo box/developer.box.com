@@ -8,6 +8,8 @@ related_guides:
 
 # Getting Started
 
+Follow the steps below to get started!
+
 1. Is your [use case][use-case] good for Box? 
 2. Understand the [user model][user-model]
 3. Explore [architecture patterns][patterns]

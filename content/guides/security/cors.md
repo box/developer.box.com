@@ -6,6 +6,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
+  - /best-practices/cors
 ---
 
 # Cross-Origin Resource Sharing (CORS)

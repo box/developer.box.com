@@ -63,7 +63,7 @@ select the **Apps** tab (1) from the left navigation panel. Then, click the
 see a **+** button in the top right corner to add a new app authorization.
 
 <ImageFrame border center>
-  ![Apps tab](../images/apps.png)
+  ![Apps tab](images/apps.png)
 </ImageFrame>
 
 In the popup that appears, enter the client ID for the application that the

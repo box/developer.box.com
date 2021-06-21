@@ -78,12 +78,12 @@ make CORS requests. You can allow the domain on your application's
 configuration page within the Box developer console. If you have many
 subdomains that you want to use the UI element on, you can use a wildcard for
 the subdomain (`https://*.domain.com`). See the
-[CORS guide](guide://best-practices/cors) for more information.
+[CORS guide](g://security/cors) for more information.
 
 ### How can I replace the Box logo that shows up on preview
 
 See this guide for information on customizing the logo within a
-[Preview UI Element](guide://embed/ui-elements/logo/).
+[Preview UI Element](g://embed/ui-elements/logo/).
 
 ## Pricing
 
