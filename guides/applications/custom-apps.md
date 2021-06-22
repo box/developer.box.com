@@ -11,17 +11,17 @@ related_guides:
   - authentication/jwt
   - authentication/client-credentials
 category_id: applications
-subcategory_id: applications/custom-apps
-is_index: true
+subcategory_id: null
+is_index: false
 id: applications/custom-apps
 type: guide
-total_steps: 0
+total_steps: 4
 sibling_id: applications
 parent_id: applications
-next_page_id: ''
-previous_page_id: ''
+next_page_id: applications/limited-access-apps
+previous_page_id: applications/select
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps.md
 ---
 # Custom App
 

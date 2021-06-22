@@ -6,17 +6,17 @@ required_guides: []
 related_resources: []
 alias_paths: []
 category_id: applications
-subcategory_id: applications/custom-apps
+subcategory_id: applications/web-app-integrations
 is_index: false
-id: applications/custom-apps/web-app-integrations/user-experience
+id: applications/web-app-integrations/user-experience
 type: guide
 total_steps: 3
-sibling_id: applications/custom-apps/web-app-integrations
-parent_id: applications/custom-apps/web-app-integrations
-next_page_id: applications/custom-apps/web-app-integrations/configure
-previous_page_id: applications/custom-apps/web-app-integrations
+sibling_id: applications/web-app-integrations
+parent_id: applications/web-app-integrations
+next_page_id: applications/web-app-integrations/configure
+previous_page_id: applications/web-app-integrations
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps/web-app-integrations/user-experience.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/user-experience.md
 ---
 # User Experience
 

@@ -13,10 +13,10 @@ subcategory_id: null
 is_index: false
 id: applications/select
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/limited-access-apps
+next_page_id: applications/custom-apps
 previous_page_id: applications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/select.md

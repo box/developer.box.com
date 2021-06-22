@@ -13,7 +13,7 @@ subcategory_id: null
 is_index: false
 id: applications/app-gallery
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: applications
 parent_id: applications
 next_page_id: ''

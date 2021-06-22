@@ -7,11 +7,11 @@ subcategory_id: null
 is_index: false
 id: applications/limited-access-apps
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: applications
 parent_id: applications
 next_page_id: applications/app-gallery
-previous_page_id: applications/select
+previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access-apps.md
 ---
