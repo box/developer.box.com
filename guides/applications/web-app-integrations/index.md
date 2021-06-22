@@ -23,9 +23,9 @@ source_url: >-
 # Web App Integration
 
 Box Platform enables an application to provide features to Box users directly
-within the Box web application. Web App Integrations allow applications become
-part of the Box user experience, allowing users to share and edit files with
-third-party applications.
+within the Box web application. Web App Integrations allow applications to
+become part of the Box user experience by allowing users to share and edit files
+with third-party applications.
 
 ## Features
 
@@ -43,16 +43,11 @@ By enabling a Web App Integration, an application can be added to Recommended
 Apps, allowing users to use their files in the application. Integrations can be
 restricted to certain content types and file extensions.
 
-## Adding Web App Integration to an App
+<CTA to="g://applications/web-app-integrations/configure">
 
-To make an application's features available to Box users, create a
-[Custom App][custom-app] in the [Developer Console][devconsole] using
-[OAuth 2.0][oauth2] authentication. It must then be released through the
-[Box App Gallery][app-gallery].
+Learn how to create a Web App Integration
 
-Once an application is released through the App Gallery, users can add it to
-their Box account by visiting the App Gallery, adding it, and using its features
-via Recommended Apps.
+</CTA>
 
 [app-gallery]: g://applications/app-gallery
 [custom-app]: g://authentication/oauth2/oauth2-setup
