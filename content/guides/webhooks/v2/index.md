@@ -15,10 +15,10 @@ alias_paths:
 
 # V2 Webhooks
 
-## Architecture
+## Flow
 
 <ImageFrame center width="400" shadow border>
-  ![Box OAuth 2.0 approval](../images/webhookflow.png)
+  ![Webhook flow](../images/webhook.png)
 </ImageFrame>
 
 When an event triggers a webhook for a file or a folder, it make a HTTP call to the
