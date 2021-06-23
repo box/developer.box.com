@@ -23,25 +23,6 @@ source_url: >-
 ---
 # Webhook Event Triggers
 
-## V1
-
-The follow is a list of events that can be configured to trigger a v1 webhook.
-
-- Sent
-- Created
-- Uploaded
-- Commented
-- Downloaded
-- Previewed
-- Moved
-- Copied
-- Task assigned
-- Responded to task
-- Locked
-- Unlocked
-- Deleted
-- Collaborator added
-
 ## V2
 
 The following is a list of events that can be configured to trigger a v2
@@ -89,3 +70,22 @@ available for folders.
 | `TASK_ASSIGNMENT.UPDATED`   | A task assignment is changed                                                                                        | Yes   | Yes     |
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
 <!-- markdownlint-enable line-length -->
+
+## V1
+
+The follow is a list of events that can be configured to trigger a v1 webhook.
+
+- Sent
+- Created
+- Uploaded
+- Commented
+- Downloaded
+- Previewed
+- Moved
+- Copied
+- Task assigned
+- Responded to task
+- Locked
+- Unlocked
+- Deleted
+- Collaborator added

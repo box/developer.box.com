@@ -26,11 +26,11 @@ source_url: >-
 ---
 # V2 Webhooks
 
-## Architecture
+## Flow
 
 <ImageFrame center width="400" shadow border>
 
-![Box OAuth 2.0 approval](../images/webhookflow.png)
+![Webhook flow](../images/webhook.png)
 
 </ImageFrame>
 
