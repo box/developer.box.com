@@ -2,6 +2,9 @@
   "allow": [
     "postman-postwoman",
     "reject",
-    "rejects"
+    "rejects",
+    "period",
+    "fire",
+    "attacks"
   ]
 }
