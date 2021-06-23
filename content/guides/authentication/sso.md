@@ -33,12 +33,13 @@ or **SSO Enabled**.
 
 When SSO is enabled but not required, managed users will have the option to
 either:
+
 - log in with a Box username and password
 - log in with their SSO provider 
 
 When SSO is enabled and required, Box will force all managed users to log in
 with their enterprise's configured SSO provider. In this case, any
-user that tries to log in must be configued on the SSO side, in addition to
+user that tries to log in must be configured on the SSO side, in addition to
 having a Box account matching the email address passed via SAML.
 
 <Message warning>
