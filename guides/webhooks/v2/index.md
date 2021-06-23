@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 2
 related_endpoints:
   - post_webhooks
 related_guides:
@@ -19,8 +19,8 @@ type: guide
 total_steps: 6
 sibling_id: webhooks
 parent_id: webhooks
-next_page_id: webhooks/v2/list_v2
-previous_page_id: ''
+next_page_id: webhooks/v2/update_v2
+previous_page_id: webhooks/v2/list_v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/index.md
 ---

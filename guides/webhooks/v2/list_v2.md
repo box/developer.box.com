@@ -18,7 +18,7 @@ total_steps: 6
 sibling_id: webhooks/v2
 parent_id: webhooks/v2
 next_page_id: webhooks/v2/create_v2
-previous_page_id: webhooks/v2
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/list_v2.md
 ---

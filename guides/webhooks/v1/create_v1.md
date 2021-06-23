@@ -17,7 +17,7 @@ type: guide
 total_steps: 1
 sibling_id: webhooks/v1
 parent_id: webhooks/v1
-next_page_id: webhooks/v1
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/create_v1.md
