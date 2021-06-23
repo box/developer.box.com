@@ -1,28 +1,38 @@
 ---
-rank: 2
+rank: 0
 related_endpoints:
   - post_webhooks
 related_guides:
-  - webhooks/manage/for-file
-  - webhooks/handle/setup-signatures
-  - webhooks/handle/verify-signatures
+  - webhooks/v2/create_v2
+  - webhooks/v2/signatures_v2
 required_guides:
-  - webhooks/manage/for-file
-alias_paths: []
+  - webhooks/v2/create_v2
+  - webhooks/v2/signatures_v2
+alias_paths:
+  - /webhooks/handle/retries
+  - /webhooks/handle/payload
 category_id: webhooks
-subcategory_id: webhooks/handle
-is_index: false
-id: webhooks/handle/payload
+subcategory_id: webhooks/v2
+is_index: true
+id: webhooks/v2
 type: guide
-total_steps: 5
-sibling_id: webhooks/handle
-parent_id: webhooks/handle
-next_page_id: webhooks/handle/retries
+total_steps: 6
+sibling_id: webhooks
+parent_id: webhooks
+next_page_id: webhooks/v2/list_v2
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/handle/payload.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/index.md
 ---
-# Webhook Payload
+# V2 Webhooks
+
+## Architecture
+
+<ImageFrame center width="400" shadow border>
+
+![Box OAuth 2.0 approval](../images/webhookflow.png)
+
+</ImageFrame>
 
 When an event triggers a webhook for a file or a folder, it make a HTTP call to the
 `address` specified when the webhook was created. The payload of this call
@@ -86,7 +96,7 @@ triggered.
 | `id`         | A unique ID assigned by Box that identifies the event. When Box retries a webhook this ID will not change, while the ID in the header changes between calls. |
 | `created_at` | The time/date that the event was triggered at.                                                                                                               |
 | `trigger`    | The name of the event that triggered the event, for example `FILE.UPLOADED`.                                                                                 |
-| `webhook`    | The webhook for which this event triggered.                                                                                                                  |
+| `webhook`    | The webhook ID for which this event triggered.                                                                                                                  |
 | `created_by` | The user that triggered this event.                                                                                                                          |
 | `source`     | The item that triggered this event, for example the file that was uploaded to the target folder                                                              |
 
@@ -195,5 +205,28 @@ For example:
 }
 ```
 
-[setup_sigs]: guide://webhooks/handle/setup-signatures
-[verify_sigs]: guide://webhooks/handle/verify-signatures
+## Retries
+
+<!--alex ignore failed-->
+
+Delivery of a webhook payload fails when Box does not receive a response with a
+HTTP status code in the `200` to `299` range within 30 seconds of sending the
+payload.
+
+<!--alex ignore failure-->
+
+When delivery of a webhook fails Box will resend it up to 10 times. The
+initial retry will take place 5 minutes after the failure. From there, an
+exponential back-off strategy is used to avoid overloading the destination
+server. By using exponential back- off, Box will wait an increasingly longer
+time for every retry.
+
+<Message type='notice'>
+
+Box will retry webhook deliveries up to 10 times. This number could be subject
+to change.
+
+</Message>
+
+[setup_sigs]: g://webhooks/v2/signatures_v2
+[verify_sigs]: g://webhooks/v2/signatures_v2

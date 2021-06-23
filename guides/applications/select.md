@@ -17,7 +17,7 @@ total_steps: 4
 sibling_id: applications
 parent_id: applications
 next_page_id: applications/custom-apps
-previous_page_id: applications
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/select.md
 ---

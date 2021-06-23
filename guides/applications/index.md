@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 10
 alias_paths:
   - /docs/usage-patterns
   - /docs/quickstart-guides
@@ -15,7 +15,7 @@ type: guide
 total_steps: 4
 sibling_id: guides
 parent_id: guides
-next_page_id: applications/select
+next_page_id: applications/custom-apps
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/index.md
