@@ -34,6 +34,11 @@ and a list of [triggers][2].
 
 <Samples id='post_webhooks' variant='for_folder' />
 
+<Message type='notice'>
+  Webhooks do cascade, so if set on a parent folder it will also watch
+  subfolders for the selected triggers.
+</Message>
+
 ## Webhook address
 
 The notification URL specified in the `address` parameter must be a valid URL
