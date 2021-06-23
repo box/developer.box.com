@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 2
 related_endpoints:
   - post_webhooks
 related_guides:
