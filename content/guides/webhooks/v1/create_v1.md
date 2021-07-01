@@ -42,7 +42,8 @@ enable a webhooks for all users, please [contact support][support].
 After creating a webhook, the application must be added to the user's account
 to begin use.
 
-To obtain the URL to add the app, follow the directions below: 
+To obtain the URL to add the app, follow the directions below for OAuth 2.0
+authentication apps: 
 
 1. Navigate to the **App Gallery** tab for the application in the
   [Developer Console][devconsole].
@@ -50,6 +51,11 @@ To obtain the URL to add the app, follow the directions below:
   submission process!
 3. At the bottom of the page, click **Preview**. 
 4. Click **Add**
+
+<Message type='warning'>
+For all other authentication types, you will need to contact support to
+obtain this URL.
+</Message>
 
 Webhooks will now trigger for any configured events that are occur in the user's
 account.
