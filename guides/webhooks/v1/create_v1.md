@@ -14,7 +14,7 @@ subcategory_id: webhooks/v1
 is_index: false
 id: webhooks/v1/create_v1
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: webhooks/v1
 parent_id: webhooks/v1
 next_page_id: ''
