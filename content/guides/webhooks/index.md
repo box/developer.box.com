@@ -1,19 +1,6 @@
 ---
 rank: 0
-related_endpoints: 
-  - get_webhooks
-  - get_webhooks_id
-  - post_webhooks
-  - put_webhooks_id
-  - delete_webhooks_id
-related_resources: 
-  - webhook
-required_guides: []
-alias_paths: 
-  - /docs/work-with-webhooks	
-  - /docs/file-workflow-with-webhooks
-  - /docs/webhooks 
-  - /docs/getting-started-with-webhooks-v2
+rank: 135
 ---
 
 # Webhooks
@@ -39,7 +26,5 @@ There are two types of webhooks: v1 and v2, which are compared below.
 | No retry mechanism after notification delivery failure                | Retries up to 10 times after notification delivery failure           |
 | Does not support payload verification                                 | Supports payload verification                                        |
 | Notification URL can be HTTP or HTTPS                                 | Notification URL must be HTTPS                                       |
-| Only supported by apps using OAuth 2.0                                | Supported by apps using OAuth 2.0, JWT, and Client Credentials Grant |
-| Does not scale well                                                   | Scales well and increased reliability                                |
-
+| Does not scale well                                                   | Scales well and has increased reliability                            |
 <!-- markdownlint-enable line-length -->

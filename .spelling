@@ -198,10 +198,12 @@ weblink
 queryable
 Keysafe
 e.g.
+<<<<<<< HEAD
 customizable
 transactional
 centric
 PowerShell
 balancer
-v1
 v2
+v1
+enablement
