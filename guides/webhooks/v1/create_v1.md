@@ -14,7 +14,7 @@ subcategory_id: webhooks/v1
 is_index: false
 id: webhooks/v1/create_v1
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: webhooks/v1
 parent_id: webhooks/v1
 next_page_id: ''
@@ -39,8 +39,8 @@ callback parameters.
 # Callback parameters
 
 Unlike the V2 Webhooks, these manual webhooks need to be configured with the
-data you'd like to sent along. This data will be sent as a query string either
-in the body or as a query parameter, for example `name=Contract.pdf&type=file`
+data you'd like. This data will be sent as a query string either in the body
+or as a query parameter, for example `name=Contract.pdf&type=file`.
 
 </Message>
 
@@ -55,7 +55,8 @@ enable a webhooks for all users, please [contact support][support].
 After creating a webhook, the application must be added to the user's account
 to begin use.
 
-To obtain the URL to add the app, follow the directions below:
+To obtain the URL to add the app, follow the directions below for OAuth 2.0
+authentication apps:
 
 1. Navigate to the **App Gallery** tab for the application in the
 [Developer Console][devconsole].
@@ -64,8 +65,15 @@ submission process!
 3. At the bottom of the page, click **Preview**.
 4. Click **Add**
 
-Webhooks will now be triggered for any configured events that are occur in the
-user's account.
+<Message type='warning'>
+
+For all other authentication types, you will need to contact support to
+obtain this URL.
+
+</Message>
+
+Webhooks will now trigger for any configured events that are occur in the user's
+account.
 
 [devconsole]: https://app.box.com/developers/console
 [support]: https://support.box.com

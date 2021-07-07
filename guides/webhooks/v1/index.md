@@ -10,7 +10,7 @@ subcategory_id: webhooks/v1
 is_index: true
 id: webhooks/v1
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: webhooks
 parent_id: webhooks
 next_page_id: ''

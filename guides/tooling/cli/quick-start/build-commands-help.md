@@ -16,7 +16,8 @@ source_url: >-
 ---
 # Building Commands and Help Feature
 
-A full list of CLI commands can be found in the [GitHub repository][github].
+A full list of CLI commands and usage information can be found in the
+[GitHub repository][github].
 
 If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].

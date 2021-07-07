@@ -16,8 +16,8 @@ type: guide
 total_steps: 1
 sibling_id: webhooks
 parent_id: webhooks
-next_page_id: ''
-previous_page_id: webhooks
+next_page_id: webhooks
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/triggers.md
 ---
