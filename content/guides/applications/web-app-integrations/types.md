@@ -11,7 +11,7 @@ alias_paths: []
 
 # Integrations Types
 
-There are two kinds of integration a Web App Integration can offer.
+There are two types of Web App Integrations.
 
 ## Popup Integrations
 

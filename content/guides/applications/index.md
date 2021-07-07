@@ -22,11 +22,11 @@ create.
 
 <!-- markdownlint-disable line-length -->
 
-| Application Type              | Authentication Methods            |
-| ----------------------------- | ----------------------------------|
-| [Custom App][custom-apps]     | [OAuth 2.0][oauth2] or [JWT][jwt] |
-| Limited Access App            | [App token][apptoken]             |
-| [Custom Skill][custom-skills] | No authorization needed           |
+| Application Type              | Authentication Methods                                              |
+| ----------------------------- | ------------------------------------------------------------------- |
+| [Custom App][custom-apps]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
+| [Limited Access App][laa]     | [App token][apptoken]                                               |
+| [Custom Skill][custom-skills] | No selection needed                                                 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -36,9 +36,11 @@ create.
 
 <!-- markdownlint-enable line-length -->
 
-[oauth2]: guide://authentication/oauth2
-[jwt]: guide://authentication/jwt
-[apptoken]: guide://authentication/app-token
-[devtoken]: guide://authentication/access-tokens/developer-tokens
+[oauth2]: g://authentication/oauth2
+[jwt]: g://authentication/jwt
+[apptoken]: g://authentication/app-token
+[devtoken]: g://authentication/tokens/developer-tokens
 [custom-apps]: g://applications/custom-apps
 [custom-skills]: g://applications/custom-skills
+[ccg]: g://authentication/client-credentials/
+[laa]: g://applications/limited-access-apps/

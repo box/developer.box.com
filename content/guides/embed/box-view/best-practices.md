@@ -43,5 +43,5 @@ to make the token available on the client side for any reason (for example if
 you are using the Box Preview UI Element), we strongly recommend that you use a
 downscoped version of the original app token.
 
-See the [downscoping guide](guide://authentication/access-tokens/downscope) for
+See the [downscoping guide](guide://authentication/tokens/downscope) for
 information on that process.

@@ -1,19 +1,6 @@
 ---
+rank: 0
 rank: 135
-related_endpoints: 
-  - get_webhooks
-  - get_webhooks_id
-  - post_webhooks
-  - put_webhooks_id
-  - delete_webhooks_id
-related_resources: 
-  - webhook
-required_guides: []
-alias_paths: 
-  - /docs/work-with-webhooks	
-  - /docs/file-workflow-with-webhooks
-  - /docs/webhooks 
-  - /docs/getting-started-with-webhooks-v2
 ---
 
 # Webhooks
@@ -40,5 +27,4 @@ There are two types of webhooks: v1 and v2, which are compared below.
 | Does not support payload verification                                 | Supports payload verification                                        |
 | Notification URL can be HTTP or HTTPS                                 | Notification URL must be HTTPS                                       |
 | Does not scale well                                                   | Scales well and has increased reliability                            |
-
 <!-- markdownlint-enable line-length -->
