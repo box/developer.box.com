@@ -7,23 +7,32 @@ alias_paths: []
 
 The most straightforward way to upload a file to Box is using a direct upload.
 Direct uploads allow an application to upload a file in one request. For file
-sizes over 50MB we recommend using the Chunk Upload APIs.
+sizes over 50MB we recommend using the [chunked upload endpoint][cu].
 
-The maximum file size that can be uploaded via this API depends on your
-enterprise's Box plan, which at the time of writing is as follows.
+The maximum file size limit for uploads to Box varies depending on your account
+type. For more details, please refer to our [pricing comparison page][pcp].
 
 * Free personal: 250 MB
 * Starter: 2 GB
 * Business: 5 GB
 * Business Plus: 15 GB
-* Enterprise: 15 GB
-* Digital Workplace Suite: 15 GB
-* Digital Workplace Global Suite: 15 GB
-* Digital Business Suite: 32 GB
-* Digital Business Global Suite: 32 GB
+* Enterprise: 50 GB
+* Digital Workplace Suite: 50 GB
+* Digital Workplace Global Suite: 50 GB
+* Digital Business Suite: 50 GB
+* Digital Business Global Suite: 50 GB
+* Enterprise Plus: 150 GB
+
+To confirm the file size limit for your account, log into Box. Click on the
+circle in the top right corner and select **Account Settings** from the dropdown
+menu. On the page that displays, scroll down to the Account details section. 
+Your Max file size is listed in this section.
 
 ## Upload domain
 
 Uploads to Box happen via a different domain (`upload.box.com`) than regular API
 calls. This is something to keep in mind when writing your own upload code. All
-the Box SDKs will take care of choosing the right domain for the right API call.
+official Box SDKs will take care of choosing the right domain for each API call.
+
+[cu]: g://uploads/chunked
+[pcp]: https://www.box.com/pricing
