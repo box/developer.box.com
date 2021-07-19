@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 rank: 135
 =======
 rank: 280
@@ -17,7 +16,6 @@ alias_paths:
   - /docs/file-workflow-with-webhooks
   - /docs/webhooks 
   - /docs/getting-started-with-webhooks-v2
->>>>>>> 342d93304531a394c34dd15f38fa5ca754622f0d
 ---
 
 # Webhooks
