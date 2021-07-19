@@ -36,8 +36,8 @@ type. For more details, please refer to our [pricing comparison page][pcp].
 
 To confirm the file size limit for your account, log into Box. Click on the
 circle in the top right corner and select **Account Settings** from the dropdown
-menu. On the page that displays, scroll down to the Account details section.
-Your Max file size is listed in this section.
+menu. On the page that displays, scroll down to the **Account Details**
+section. Your **Max File Size** is listed here.
 
 ## Upload domain
 
