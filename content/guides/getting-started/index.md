@@ -8,9 +8,18 @@ related_guides:
 
 # Getting Started
 
-Follow the steps below to help you get started with the Box API.
+Our documentation is divided into four main sections: 
 
-1. Evaluate if you have a good [use case][use-case] for Box
+- **API Reference**: Endpoint documentation
+- **Guides**: Information about endpoint usage not covered by reference
+	documentation
+- **Quick Starts**: Step by step tutorials for specific API features
+- **SDK and Tools**: Information about official Box SDKs and tooling
+
+If you're new to development with the Box API, we reccomend following the steps
+below to guide you through the main concepts and content.
+
+1. Evaluate if your[use case][use-case] is a good fit for Box
 2. Understand the different types of Box [users][users]
 3. Explore [user models][user-model]
 4. Explore common [architecture patterns][patterns]
@@ -19,7 +28,7 @@ Follow the steps below to help you get started with the Box API.
 7. Configure your application
 8. [Authorize][authorize] your application (if applicable)
 9. Explore developement [tools][tools] 
-10. Use [endpoints][endpoints] to make API calls
+10. Explore [endpoints][endpoints] and make API calls using [common values][cv]
 
 [use-case]: g://getting-started/use-cases
 [users]: g://guides/getting-started/user-types
@@ -30,3 +39,4 @@ Follow the steps below to help you get started with the Box API.
 [authorize]: g://authorization/custom-app-approval
 [tools]: g://tooling
 [endpoints]: https://developer.box.com/reference
+[cv]: g://getting-started/locating-values
