@@ -13,12 +13,12 @@ Before beginning application development, it is best to assess if your use
 case is a good fit for the Box Platform. Generally speaking, content centric
 processes perform best. 
 
-Some questions to ask when assessing if a use case is good for Box include:
+Some questions to ask when assessing if a use case include:
 
 - Is content always involved in the process?
 - Does the process involve moving content from one place to another? 
 - Can the workflow abide by [waterfall permissions][waterfall]?
-- Does your process involve administrative tasks that may be automated?
+- Does the process involve administrative tasks that may be automated?
 
 If you answered **yes** to the above questions, you most likely have a great use
 case for Box Platform. 
