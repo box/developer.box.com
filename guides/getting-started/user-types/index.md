@@ -12,7 +12,6 @@ alias_paths:
   - /docs/user-types
   - /docs/app-users
   - /docs/service-account
-  - /guides/authentication/user-types
 category_id: getting-started
 subcategory_id: getting-started/user-types
 is_index: true
@@ -53,6 +52,6 @@ create an Access Token.
 </Message>
 
 [admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
-[service-account]: guide://getting-started/user-types/service-account/
-[managed-user]: guide://getting-started/user-types/managed-users
-[app-user]: guide://getting-started/user-types/app-users
+[service-account]: g://getting-started/user-types/service-account
+[managed-user]: g://getting-started/user-types/managed-users
+[app-user]: g://getting-started/user-types/app-users

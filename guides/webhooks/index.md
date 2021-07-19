@@ -1,5 +1,19 @@
 ---
-rank: 135
+rank: 280
+related_endpoints:
+  - get_webhooks
+  - get_webhooks_id
+  - post_webhooks
+  - put_webhooks_id
+  - delete_webhooks_id
+related_resources:
+  - webhook
+required_guides: []
+alias_paths:
+  - /docs/work-with-webhooks
+  - /docs/file-workflow-with-webhooks
+  - /docs/webhooks
+  - /docs/getting-started-with-webhooks-v2
 category_id: webhooks
 subcategory_id: null
 is_index: true
