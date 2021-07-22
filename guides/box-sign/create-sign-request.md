@@ -91,17 +91,23 @@ on. Box Sign automatically adds a new version of the document to the
 If any signer declines, any remaining signers will not receive a sign request
 email. The overall sign request is cancelled.
 
+<ImageFrame noborder center shadow>
+
+![Okta Dashboard](images/)
+
+</ImageFrame>
+
 ## Document preparation
 
 Preparing a document prior to sending a sign request allows developers to add
 date, text, checkbox, and/or signature placeholders for signers. This can be
 done via a UI or tags directly in the document. If this is not done, signers
 receive an unprepared document and place signatures and fields at their own
-discretion. 
+discretion.
 
 Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
 the response. Visiting this link in your browser allows you to complete document
-preparation and send the request via UI. 
+preparation and send the request via UI.
 
 To learn more about document tags, please see our support article.
 
