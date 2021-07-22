@@ -22,9 +22,9 @@ restricting access, please see our support article.
 The following scopes must be enabled for an application before use of Box Sign's
 endpoints.
 
-- Read all files and folders stored in Box
-- Write all files and folders stored in Box
-- Manage signature requests
+- [Read all files and folders stored in Box][read]
+- [Write all files and folders stored in Box][write]
+- [Manage signature requests][sign]
 
 <Message type='warning'>
   Depending on the selected authentication method and enterprise's settings,
@@ -42,3 +42,7 @@ Due to the feature parity, it may be useful to familiarize yourself with Box
 Sign functionality using the Box web app before leveraging the API. As with all
 API endpoints, we recommend testing via sandbox environment to eliminate the
 risk of impacting production content.
+
+[read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
+[write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
+[sign]: g://api-calls/permissions-and-errors/scopes/#manage-signature-requests
