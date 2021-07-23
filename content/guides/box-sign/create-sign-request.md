@@ -8,6 +8,8 @@ At a minimum, using the create sign request endpoint requires selecting a file
 for signature, a destination folder for the signed document/signing log, and
 designating signers. 
 
+<Samples id='post_sign_requests'/>
+
 ## Files
 
 Each sign request begins with a file that needs to be signed. If the file does
