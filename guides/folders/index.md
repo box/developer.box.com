@@ -20,11 +20,10 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/index.md
+fullyTranslated: true
 ---
-# Folders
+# フォルダ
 
-Folders, together with [Files][files], are at the core of the Box API. Folders
-can be uploaded and downloaded, as well as hold important metadata information
-about the content.
+フォルダは、[ファイル][files]とともに、Box APIの中核を成します。フォルダはアップロードおよびダウンロードが可能で、コンテンツに関する重要なメタデータ情報を保持できます。
 
 [files]: g://files

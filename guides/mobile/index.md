@@ -14,8 +14,8 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/0-index.md
+fullyTranslated: true
 ---
-# Mobile
+# モバイル
 
-The Box mobile SDKs provide native access to the Box API from within your iOS
-and Android projects.
+BoxのモバイルSDKは、iOSプロジェクトやAndroidプロジェクト内からBox APIへのネイティブアクセスを提供します。

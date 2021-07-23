@@ -21,25 +21,23 @@ next_page_id: tooling/sdks/python
 previous_page_id: tooling/sdks/dotnet
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/java.md
+fullyTranslated: true
 ---
-# Install Java SDK
+# Java SDKのインストール
 
-The Box Java SDK can be used to make API calls to the Box APIs in a Java
-project.
+Javaプロジェクトでは、Box Java SDKを使用してBox APIへのAPI呼び出しを行うことができます。
 
-The SDK can be installed by adding a Gradle dependency or Maven dependency, or
-by cloning the source into a project. Additionally it can be installed by
-downloading one of the precompiled JARs from the releases page on GitHub.
+SDKは、Gradle依存関係またはMaven依存関係を追加するか、ソースをプロジェクトに複製することでインストールできます。また、GitHubのリリースページからプリコンパイル済みJARのいずれかをダウンロードすることでもインストールできます。
 
 <CTA to="https://github.com/box/box-java-sdk">
 
-Learn more about the Java SDK on GitHub
+GitHubでJava SDKの詳細を確認する
 
 </CTA>
 
 ## Gradle
 
-Add the following dependency to the `build.gradle` file.
+`build.gradle`ファイルに以下の依存関係を追加します。
 
 ```shell
 compile 'com.box:box-java-sdk:2.32.0'
@@ -47,14 +45,13 @@ compile 'com.box:box-java-sdk:2.32.0'
 
 <Message>
 
-For the most up-to-date version number of the Java SDK, please refer to the
-[Java SDK Open Source page][java-os].
+Java SDKの最新のバージョン番号については、[Java SDKのオープンソースに関するページ][java-os]を参照してください。
 
 </Message>
 
 ## Maven
 
-Add the following to Maven dependency.
+以下のMaven依存関係を追加します。
 
 ```xml
 <dependency>
@@ -66,27 +63,23 @@ Add the following to Maven dependency.
 
 <Message>
 
-For the most up-to-date version number of the Java SDK, please refer to the
-[Java SDK Open Source page][java-os].
+Java SDKの最新のバージョン番号については、[Java SDKのオープンソースに関するページ][java-os]を参照してください。
 
 </Message>
 
-## Installation from source
+## ソースからのインストール
 
-Download the SDK source from the [Java SDK GitHub repository][java-sdk-src] and
-add it to a project.
+[Java SDK GitHubリポジトリ][java-sdk-src]からSDKソースをダウンロードしてプロジェクトに追加します。
 
-## Precompiled JAR
+## プリコンパイル済みJAR
 
-Download one of the precompiled JARs for the Java SDK from the GitHub [releases
-page][java-sdk-releases].
+GitHubの[リリースに関するページ][java-sdk-releases]からJava SDK用のプリコンパイル済みJARをダウンロードします。
 
-When using one of the precompiled JARs, it is important to also add the
-following additional dependencies to the project.
+プリコンパイル済みJARを使用する際は、以下の依存関係をプロジェクトに追加することが重要です。
 
 <!-- markdownlint-disable line-length -->
 
-| Dependency                                               |
+| 依存関係                                                     |
 | -------------------------------------------------------- |
 | [`minimal-json v0.9.1`][dependency-min-json]             |
 | [`jose4j v0.4.4`][dependency-jose]                       |
@@ -98,16 +91,24 @@ following additional dependencies to the project.
 
 <CTA to="https://github.com/box/box-java-sdk">
 
-Learn more about the Java SDK on GitHub
+GitHubでJava SDKの詳細を確認する
 
 </CTA>
 
 [npm]: https://www.npmjs.com/
+
 [java-os]: http://opensource.box.com/box-java-sdk/
+
 [java-sdk-src]: https://github.com/box/box-java-sdk/tree/master/src/main/java/com/box/sdk
+
 [java-sdk-releases]: https://github.com/box/box-java-sdk/releases
+
 [dependency-min-json]: https://github.com/ralfstx/minimal-json
+
 [dependency-jose]: https://bitbucket.org/b_c/jose4j/wiki/Home
+
 [dependency-bcprov]: http://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+
 [dependency-bcpkix]: http://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on
+
 [dependency-crypto]: http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html

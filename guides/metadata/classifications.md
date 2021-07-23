@@ -24,41 +24,25 @@ next_page_id: metadata
 previous_page_id: metadata/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/classifications.md
+fullyTranslated: true
 ---
-# Classifications
+# 分類
 
-Box enables users and applications to apply a security classification label
-to files, and cascade a classification label to folders and their contents.
-Classifications help protect shared sensitive content from negligent access
-through Box's Governance and Shield products.
+Boxを使用すると、ユーザーおよびアプリケーションは、セキュリティ分類ラベルをファイルを適用したり、分類ラベルをフォルダとそのコンテンツにカスケードしたりできます。分類は、BoxのGovernanceおよびShield製品から不注意でアクセスされないよう、共有した機密性の高いコンテンツを保護するのに役立ちます。
 
-The Classification API can be used to create new classification labels
-and to assign classifications to files and folders.
+分類APIを使用すると、新しい分類ラベルを作成したり、分類をファイルやフォルダに割り当てたりすることができます。
 
 <ImageFrame border center>
 
-![String field](./classification-example.png)
+![文字列フィールド](./classification-example.png)
 
 </ImageFrame>
 
-Classifications use the [Metadata APIs](g://metadata) to create classification
-labels, and to assign classifications to files and folders. For more details on
-metadata templates and instances, please explore our guides
-on [Metadata](g://metadata).
+分類では、[メタデータAPI](g://metadata)を使用して、分類ラベルを作成したり、分類をファイルやフォルダに割り当てたりします。メタデータテンプレートとメタデータインスタンスの詳細については、[メタデータ](g://metadata)に関するガイドを参照してください。
 
-## Classifications & Metadata
+## 分類とメタデータ
 
-Working with classifications requires a developer to work with metadata
-templates and instances.
+分類を使用する場合、開発者はメタデータテンプレートとメタデータインスタンスを操作する必要があります。
 
-* **The Classification Template:**  to work with classifications, an enterprise
-needs to have a classification metadata template with at least one
-classification. This template needs to have a `scope`/`templateKey` of
-`enterprise.securityClassification-6VMVochwUWo`. This template will hold the
-possible classification levels, their label names, descriptions, and `colorID`
-values.
-* **Template Instances**: to apply a classification to a file or folder, a
-developer applies an instance of the
-`enterprise.securityClassification-6VMVochwUWo` template to the item. When the
-template is applied, one of the classifications is selected from the list of
-classifications on the template.
+* **分類テンプレート:** 分類を使用するために、会社では、1つ以上の分類を含む分類メタデータテンプレートを用意する必要があります。このテンプレートでは、`scope`/`templateKey`を`enterprise.securityClassification-6VMVochwUWo`にしておく必要があります。このテンプレートは、使用可能な分類レベル、そのラベル名、説明、`colorID`値を保持します。
+* **テンプレートインスタンス**: ファイルやフォルダに分類を適用するために、開発者は、`enterprise.securityClassification-6VMVochwUWo`テンプレートのインスタンスを項目に適用します。テンプレートが適用されると、テンプレート上の分類のリストから分類のいずれかが選択されます。

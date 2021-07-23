@@ -13,56 +13,40 @@ next_page_id: ''
 previous_page_id: retention-policies/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/retention-policies/index.md
+fullyTranslated: true
 ---
-# Retention Policies
+# リテンションポリシー
 
-A retention policy blocks permanent deletion of content for a specified amount
-of time. Admins can create retention policies and then assign them to
-specific folders or their entire enterprise. Retention policies can be used to
-keep data for as long as is needed, and then automatically delete the content
-permanently when the data can no longer be legally held.
+リテンションポリシーは、指定した期間にわたってコンテンツが完全に削除されるのを防止します。管理者はリテンションポリシーを作成して特定のフォルダや会社全体に割り当てることができます。リテンションポリシーを使用すると、データを必要な期間保持し、法的にデータの保持が必要なくなったときに自動的にコンテンツを完全に削除することができます。
 
 <Message>
 
-Retention Policies are a feature of the [Box Governance][governance] package,
-which   can be added on to any Business Plus or Enterprise account.
+リテンションポリシーは、任意のBusiness PlusアカウントまたはEnterpriseアカウントに追加できる、[Box Governance][governance]パッケージの機能です。
 
 </Message>
 
-## Policies, Assignments, and Retentions
+## ポリシー、割り当て、およびリテンション
 
-Working with Retention Policies requires a developer to work with three
-distinct resources.
+リテンションポリシーを操作するには、開発者は3つの異なるリソースを使用する必要があります。
 
-* **Policies:**  A [Retention Policy][policy] describes the general behavior
-  of the retention policy. It determines how long a retention should stay in
-  place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A [Retention Policy Assignment][assignment] is a relation
-  between a policy and folder or enterprise. Creating an assignment puts a
-  retention on all the file versions that belong to that folder or enterprise.
-  For example, if an assignment is created on a folder the policy is applied to
-  all file versions within that folder.
-* **Retentions**: A [File Version Retention][retention] represents all the
-  policies that are assigned to a specific file version. Note that every file
-  version can have a maximum of one file version retention and that this
-  resource contains a list of every assigned policy.
+* **ポリシー:** [リテンションポリシー][policy]には、リテンションポリシーの一般的な動作が記載されています。これにより、リテンションを保持する期間、リテンションの延長が可能かどうか、およびリテンションポリシーの終了条件が決まります。
+* **割り当て:** [リテンションポリシー割り当て][assignment]は、ポリシーとフォルダや会社の関係です。割り当てを作成すると、そのフォルダや会社に属するすべてのファイルバージョンにリテンションが適用されます。たとえば、フォルダに割り当てが作成されると、ポリシーはそのフォルダ内にあるすべてのファイルバージョンに適用されます。
+* **リテンション**: [ファイルバージョンリテンション][retention]は、特定のファイルバージョンに割り当てられているすべてのポリシーを表します。各ファイルバージョンに設定できるファイルバージョンのリテンションは最大1つで、このリソースには、割り当てられた各ポリシーのリストが含まれていることに注意してください。
 
-## File Deletion with Retention Policies
+## リテンションポリシーによるファイルの削除
 
-Files under retention can be deleted from folders, but they will be retained in
-the trash until the retention expires. When the retention expires,
-you can choose to have the content automatically deleted or for the policy to be
-removed.
+リテンションの対象となっているファイルは、フォルダから削除することはできますが、リテンションが期限切れるまではごみ箱に残ります。リテンションが期限切れになると、コンテンツが自動的に削除されるようにするか、ポリシーを削除するかを選択できます。
 
-## Required Scopes
+## 必須のスコープ
 
-Before using any of the Retention Policy APIs, an application must have the [GCM
-and Manage Retention Policies scopes][scopes] enabled. These are not available
-in the Developer Console and need to instead be enabled by contacting customer
-support.
+リテンションポリシーAPIのいずれかを使用する前に、アプリケーションでは、[GCMおよびリテンションポリシーの管理のスコープ][scopes]を有効にしておく必要があります。これらは、開発者コンソールでは使用できないため、代わりにカスタマーサポートに連絡して有効する必要があります。
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [policy]: r://retention_policy
+
 [assignment]: r://retention_policy_assignment
+
 [retention]: r://file_version_retention
+
 [governance]: https://www.box.com/security/governance-and-compliance

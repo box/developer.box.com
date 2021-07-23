@@ -21,18 +21,18 @@ next_page_id: uploads/chunked/commit-session
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/with-sdks.md
+fullyTranslated: true
 ---
-# Chunked Upload with SDKs
+# SDKによる分割アップロード
 
-The Box SDKs make it possible to perform a chunked upload with the built-in
-SDK methods.
+Box SDKにより、組み込みメソッドを使用して分割アップロードを実行できるようになります。
 
-<Samples id='x_chunked_uploads' variant='automatic' >
+<Samples id="x_chunked_uploads" variant="automatic">
 
 </Samples>
 
-The SDKs also support uploading new versions of files through similar methods.
+また、同様の方法によるファイルの新しいバージョンのアップロードもサポートされます。
 
-<Samples id='x_chunked_uploads' variant='automatic_new_version' >
+<Samples id="x_chunked_uploads" variant="automatic_new_version">
 
 </Samples>

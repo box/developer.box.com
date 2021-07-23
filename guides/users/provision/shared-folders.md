@@ -20,17 +20,15 @@ next_page_id: ''
 previous_page_id: users/provision/populate-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/provision/shared-folders.md
+fullyTranslated: true
 ---
-# Setup Shared Folders
+# 共有フォルダの設定
 
-As a final step to manage access to shared folders, we'll create the folder
-structures needed within the service account. Then, groups will map to the
-needed permissions based on user types and level of access needed to those
-folders. We'll use a Market Department as an example.
+共有フォルダへのアクセスを管理する最後の手順として、必要なフォルダ構造をサービスアカウント内に作成します。次に、これらのフォルダに必要なユーザーの種類とアクセスレベルに基づいて、グループに必要な権限をマップします。ここでは、マーケティング部門を例に挙げて説明します。
 
 <Tabs>
 
-<Tab title='marketing_folders.json'>
+<Tab title="marketing_folders.json">
 
 ```json
 {
@@ -60,19 +58,13 @@ folders. We'll use a Market Department as an example.
 
 </Tabs>
 
-Working from this sample folder structure, we can use the folder tree creator
-code we used earlier to create the `etc/skel` structure. That code may be
-modified to make your own structure.
+このサンプルフォルダ構造を基にし、以前に使用したフォルダツリー作成コードを使用して`etc/skel`構造を作成できます。このコードは、実際の構造に応じて変更できます。
 
-Once created, we'll need the IDs of the folders that each group will need to
-access. For example, Marketing managers will likely have `editor` access to all
-folders within the Marketing Department. On the other hand, Marketing project
-managers will likely need `editor` access to only the `Projects` folder. We'll
-create two groups and give them these permissions.
+この構造が作成されると、各グループでアクセスする必要があるフォルダのIDが必要になります。たとえば、マーケティングマネージャであれば、マーケティング部門内のすべてのフォルダに対する`editor`アクセス権限が必要になるでしょう。一方、マーケティングプロジェクトマネージャが必要なのは、`Projects`フォルダへの`editor`アクセスだけと考えられます。このため、2つのグループを作成して、それぞれに適切な権限を付与します。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 "use strict";
@@ -237,7 +229,7 @@ async function handleFolderCollaborationConflictError(
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 package com.box;
@@ -392,7 +384,7 @@ public class BoxPlayground {
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 <!-- markdownlint-disable line-length -->
 
@@ -569,7 +561,7 @@ namespace BoxPlayground {
 
 </Tab>
 
-<Tab title='CLI'>
+<Tab title="CLI">
 
 ```shell
 box groups:create "Marketing Managers" --invite=admins_only --view-members=admins_only
@@ -580,13 +572,11 @@ box groups:create "Marketing Project Managers" --invite=admins_and_members --vie
 
 </Tabs>
 
-Once the groups are created, add the user to that group and they will
-have the prescribed access to the shared folders created within the service
-account.
+グループを作成したら、ユーザーをそのグループに追加すると、そのユーザーにサービスアカウント内に作成された共有フォルダへの所定のアクセス権が付与されます。
 
 <Tabs>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 <!-- markdownlint-disable line-length -->
 
@@ -664,7 +654,7 @@ async function handleGroupMembershipConflictError(e,
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 package com.box;
@@ -733,7 +723,7 @@ public class BoxPlayground {
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 using System;
@@ -808,7 +798,7 @@ namespace BoxPlayground {
 
 </Tab>
 
-<Tab title='CLI'>
+<Tab title="CLI">
 
 ```shell
 box groups:membership:add $user_id $group_id --role=admin

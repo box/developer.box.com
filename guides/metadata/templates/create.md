@@ -22,42 +22,35 @@ next_page_id: metadata/templates/update
 previous_page_id: metadata/templates/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/4-create.md
+fullyTranslated: true
 ---
-# Create a metadata template
+# メタデータテンプレートの作成
 
-To create a metadata template, pass a `scope`, `displayName` and an optional set
-of `fields` to the [`POST /metadata_templates/schema`][e_create_template] API.
+メタデータテンプレートを作成するには、`scope`、`displayName`、および必要に応じて一連の`fields`を[`POST /metadata_templates/schema`][e_create_template] APIに渡します。
 
-<Samples id='post_metadata_templates_schema' >
+<Samples id="post_metadata_templates_schema">
 
 </Samples>
 
 <Message notice>
 
-Metadata templates can only be created for the `enterprise` scope. Templates
-can not be created for the `global` scope.
+メタデータテンプレートは、`enterprise`スコープのみに作成できます。`global`スコープの場合はテンプレートを作成できません。
 
 </Message>
 
 <Message warning>
 
-# Admin permissions required
+# 管理者権限が必須
 
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web
-app or the API to manage templates.
+メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートの作成および編集**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
 
 </Message>
 
-## Template Fields
+## テンプレートフィールド
 
-The `fields` attribute represents the set of individual fields that a user can
-fill in on a template. For example, a `customer` template might have a `name`
-field of type `string`.
+`fields`属性は、ユーザーがテンプレートで入力できる個々のフィールドのセットを表します。たとえば、`customer`テンプレートに`string`タイプの`name`フィールドがあるとします。
 
-Template fields can be of `string`, `enum`, `float`, `date`, `enum` or
-`multiSelect` type. Each field requires at least a `type`, `displayName` and `key`.
+テンプレートフィールドは、`string`、`enum`、`float`、`date`、`enum`、または`multiSelect`タイプのいずれかになります。各フィールドには少なくとも`type`、`displayName`、および`key`が必要です。
 
 ```json
 {
@@ -73,8 +66,7 @@ Template fields can be of `string`, `enum`, `float`, `date`, `enum` or
 }
 ```
 
-The `enum` and `multiSelect` field types represent a dropdown list where a user
-can select respectively one or many options from a list of items.
+`enum`および`multiSelect`フィールドタイプは、ユーザーが項目のリストからそれぞれ1つまたは複数のオプションを選択できるドロップダウンリストを表します。
 
 ```json
 {
@@ -97,23 +89,18 @@ can select respectively one or many options from a list of items.
 
 <CTA to="g://metadata/fields">
 
-Learn more about Metadata Template Fields
+メタデータテンプレートフィールドの詳細を確認する
 
 </CTA>
 
-## Template Keys
+## テンプレートキー
 
-When a metadata template is created, a `templateKey` is automatically generated
-from the `displayName` of the template unless a `templateKey` is explicitly
-provided. When creating the template key any spaces and irregular
-characters in the name are removed, and the string is transformed to camel case.
+メタデータテンプレートが作成されると、`templateKey`を明示的に指定した場合を除き、テンプレートの`displayName`から自動的に`templateKey`が生成されます。テンプレートキーを作成する際に、名前に含まれるスペースと規格外の文字は削除され、文字列はキャメルケースに変換されます。
 
-For example, a metadata template that is named
-`Test Name (with-special_) Characters` will have a `templateKey` of
-`testNameWithspecialCharacters`.
+たとえば、`Test Name (with-special_) Characters`という名前のメタデータテンプレートの`templateKey`は`testNameWithspecialCharacters`になります。
 
-This template key is then used when making any API requests to get the
-template's information or assign it to an item.
+その後、このテンプレートキーは、テンプレートの情報を取得したり、項目にテンプレートを割り当てたりするためのAPIリクエストを実行するときに使用されます。
 
 [user-types]: g://authentication/user-types
+
 [e_create_template]: e://post_metadata_templates_schema

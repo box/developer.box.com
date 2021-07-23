@@ -18,13 +18,12 @@ next_page_id: tasks/for-file
 previous_page_id: tasks/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tasks/2-get.md
+fullyTranslated: true
 ---
-# Get information about a task
+# タスクに関する情報の取得
 
-To get information about an assigned task, call the
-[`GET /tasks/:task_id`](e://get_tasks_id) API with the
-`id` of the task.
+割り当てられたタスクに関する情報を取得するには、タスクの`id`を指定して[`GET /tasks/:task_id`](e://get_tasks_id) APIを呼び出します。
 
-<Samples id='get_tasks_id' >
+<Samples id="get_tasks_id">
 
 </Samples>

@@ -15,5 +15,6 @@ parent_id: ''
 next_page_id: get-started
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/index.md'
+fullyTranslated: true
 ---
-# Guides
+# ガイド

@@ -20,147 +20,97 @@ next_page_id: authentication/user-types/app-users
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/service-account.md
+fullyTranslated: true
 ---
-# Service Accounts
+# サービスアカウント
 
-A Service Account provides developers with a programmatic authentication
-mechanism for server-side integrations with Box. In other words, an application
-can authenticate to Box as the service, which is represented by a Service
-Account user. A Service Account can then be used to create other application
-specific users, called [App Users][appusers].
+サービスアカウントにより、開発者は、サーバー側のBoxとの統合にプログラムによる認証メカニズムを使用できます。つまり、アプリケーションはBoxに対してサービスとして認証を受けることでき、これがサービスアカウントユーザーで表されます。その後、サービスアカウントを使用して、[App User][appusers]と呼ばれるアプリケーション固有のユーザーを他に作成できます。
 
 <ImageFrame center shadow border>
 
-![Service Account Diagram](./service_account_diagram.png)
+![サービスアカウントの図](./service_account_diagram.png)
 
 </ImageFrame>
 
-## Creation
+## 作成
 
-A unique Box Service Account is automatically generated as soon as an
-application, leveraging server authentication, is [authorized][auth] in the
-Admin Console. From that point forward, the Service Account represents the
-application in the Box enterprise. Since every Box account must have an email
-address, Box assigns one. The format will always be
-`AutomationUser_AppServiceID_RandomString@boxdevedition.com`. For example:
-`AutomationUser_123456_6jCo6Pqwo@boxdevedition.com`. This is why you may
-sometimes hear the Service Account referred to as an Automation User.
+サーバー認証を利用するアプリケーションが管理コンソールで[承認][auth]されるとすぐに、一意のBoxサービスアカウントが自動的に生成されます。その時点から、そのサービスアカウントはBox Enterprise内のアプリケーションを表します。すべてのBoxアカウントにはメールアドレスが必要なため、Boxによって割り当てられます。これは常に`AutomationUser_AppServiceID_RandomString@boxdevedition.com`形式になります (例: `AutomationUser_123456_6jCo6Pqwo@boxdevedition.com`)。サービスアカウントが自動化ユーザーと呼ばれることがあるのはこのためです。
 
-The numbers surrounded by underscores are also unique to the application and are
-called a Service ID. To locate a Service ID  in the [Developer Console][dc],
-click on the tile for an application and look at the URL. For example,
-`https://example.app.box.com/developers/console/app/123456`. As you can see,
-this application corresponds to the Service Account provided in the example
-above.
+アンダースコアで囲まれた数字もアプリケーションに固有であり、サービスIDと呼ばれます。[開発者コンソール][dc]でサービスIDを見つけるには、アプリケーションのタイルをクリックし、URLを確認します。たとえば、`https://example.app.box.com/developers/console/app/123456`というURLの場合、このアプリケーションは、上記の例で示したサービスアカウントに対応していることがわかります。
 
-By default, most Service Accounts are allocated 10GB of storage. This is because
-they abide by the storage allocation set in the **New User Default Settings**
-found under the **User Settings** tab of the Admin Console. This amount may
-differ based on whether an enterprise updated this setting or not. To
-update the amount of storage allocated to a Service Account after its creation,
-make an API call to the [update user][updateuser] endpoint and pass in the
-desired value, in bytes, using the `space_amount` body parameter.
+デフォルトでは、ほとんどのサービスアカウントに10GBのストレージが割り当てられます。これは、サービスアカウントが管理コンソールの \[**ユーザー設定**] タブにある \[**新規ユーザーの初期設定**] で設定されたストレージ割り当てに従うためです。この容量は、企業がこの設定を更新したかどうかによって異なる場合があります。サービスアカウントに割り当てられているストレージの容量をアカウント作成後に更新するには、[ユーザーを更新][updateuser]エンドポイントに対するAPI呼び出しを実行し、`space_amount`本文パラメータを使用して目的の値 (バイト単位) を渡します。
 
-Once the Service Account is generated, a section is automatically added to the
-General tab of the [Developer Console][dc] revealing the email address.
+サービスアカウントが生成されると、[開発者コンソール][dc]の \[一般] タブにセクションが自動的に追加され、メールアドレスが表示されます。
 
 <ImageFrame center shadow border>
 
-![Service Account Email Address](./serviceaccountindevconsole.png)
+![サービスアカウントのメールアドレス](./serviceaccountindevconsole.png)
 
 </ImageFrame>
 
-If someone attempts to make API calls using a Service Account Access Token
-before the application is authorized in the Admin Console they will receive an
-error message:
-`"error":"unauthorized_client"`
-`"error_description": "This app is not authorized by the enterprise"`
+アプリケーションが管理コンソールで承認される前に、ユーザーがサービスアカウントアクセストークンを使用してAPI呼び出しを実行しようとすると、次のエラーメッセージが表示されます: `"error":"unauthorized_client"` `"error_description": "This app is not authorized by the enterprise"`
 
-## Use Cases
+## ユースケース
 
-- *Distribution Publishing*: upload and share files with any number of users 
-  whether or not they are authenticated
-- *On-Premises Systems and Devices*: programmatically ingest content from
-  on-premises systems and connected devices 
-- *Content Migration and Monitoring*: move content from on-premises to the cloud
-  or between cloud providers  
-- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or
-  trigger workflows based on actions
-- *Content Archive*: house minimally accessed content
+* _ディストリビューションの公開_: 認証されているかどうかに関係なく、ファイルをアップロードし、多数のユーザーと共有します。
+* _オンプレミスのシステムとデバイス_: オンプレミスシステムや接続されたデバイスからプログラムによってコンテンツを取り込みます。 
+* _コンテンツの移行と監視_: コンテンツをオンプレミスからクラウドへ移動したり、クラウドプロバイダ間で移動したりします。  
+* _イベント監視_: 社内のイベントを監視して、アクションに基づいてコンプライアンス順守を確保したり、ワークフローをトリガーしたりします。
+* _コンテンツのアーカイブ_: 最低限しかアクセスされないコンテンツを格納します。
 
-## Permissions
+## 権限
 
-The endpoints that a Service Account Access Token can successfully interact with
-are determined by the application [scopes][scopes] configured in the 
-[Developer Console][dc]. Depending on the granted scopes, a Service Account may
-have the ability to perform Admin actions. 
+サービスアカウントアクセストークンで問題なく操作できるエンドポイントは、[開発者コンソール][dc]で構成されたアプリケーション[スコープ][scopes]によって決まります。付与されているスコープによっては、サービスアカウントが管理者アクションを実行できる場合があります。 
 
-<Message type='warning'>
+<Message type="warning">
 
-# Admin Approval
+# 管理者の承認
 
-With the right [scopes][scopes] enabled, a Service Account can perform many
-Admin actions. For this reason JWT applications need
-explicit [Admin approval][auth] before they can be used in an enterprise.
+適切な[スコープ][scopes]が有効になっている場合、サービスアカウントは多くの管理者アクションを実行できます。そのため、JWTアプリケーションを社内で使用できるようにするには、事前に明示的な[管理者による承認][auth]が必要です。
 
 </Message>
 
-## UI Access
+## UIでのアクセス
 
-Only Primary Admins have the ability to log in as a Service Account through the
-[Content Manager][cm] in the Admin Console. To do this, use the Content
-Manager's search bar to locate the name of the application, right click on it,
-and select “Log in to user’s account”.
+管理コンソールの[コンテンツマネージャ][cm]からサービスアカウントとしてログインできるのは、プライマリ管理者のみです。これには、コンテンツマネージャの検索バーを使用してアプリケーションの名前を見つけ、その名前を右クリックして \[ユーザーのアカウントにログイン] を選択します。
 
-A Service Account can be thought of as having the permissions of a Box Co-Admin.
-Similar to co-admins being unable to manage each other, co-admins cannot log in
-as a Service Account user.
+サービスアカウントは、Boxの共同管理者の権限を持っていると考えることができます。共同管理者がお互いを管理できないのと同じように、共同管理者がサービスアカウントユーザーとしてログインすることはできません。
 
-Service Accounts are not currently visible in the users and group tab of the
-Admin Console.
+サービスアカウントは、現在、管理コンソールの \[ユーザーとグループ] タブに表示されていません。
 
-## Folder Tree and Collaboration
+## フォルダツリーとコラボレーション
 
-Because a Service Account represents an application as a user within the
-enterprise, it has its own folder tree and content ownership capabilities. By
-default this folder tree is empty because the Service Account does not initially
-own or collaborate on content. This is similar to when you first land on your
-All Files page in a newly provisioned Box account.
+サービスアカウントは、アプリケーションをEnterprise内のユーザーとして表すため、独自のフォルダツリーとコンテンツ所有権の機能が用意されています。最初は、所有するコンテンツやコラボレーションするコンテンツがないため、このフォルダツリーはデフォルトで空になっています。これは、新しくプロビジョニングしたBoxアカウントの \[すべてのファイル] ページに最初にアクセスしたときと似ています。
 
-To collaborate a Service Account on existing content use the assigned email
-address to invite them as you would any other user. If you are instead adding
-the collaboration [via the API][collabapi] you will need to use an Access Token
-for a user that already has access to the content and has the appropriate
-collaboration permissions to invite collaborators. You will also use the Service
-Account’s user ID, which is returned when making a call to the
-[get current user endpoint][getuser] using an Access Token for the Service
-Account.
+既存のコンテンツでのコラボレーションにサービスアカウントを追加するには、他のユーザーの場合と同様、割り当てられたメールアドレスを使用してサービスアカウントを招待します。[APIを使用して][collabapi]コラボレーションを追加する場合は、すでにコンテンツへのアクセス権があり、コラボレータを招待するための適切なコラボレーション権限を持っているユーザーのアクセストークンを使用する必要があります。また、サービスアカウントのユーザーIDも使用します。このユーザーIDは、サービスアカウントのアクセストークンを使用して[現在のユーザーを取得エンドポイント][getuser]を呼び出したときに返されます。
 
-<Message type='notice'>
+<Message type="notice">
 
-It is possible to assign a Service Account an email alias if that is
-easier to remember when adding collaborations.
+コラボレーションを追加する際に覚えやすくなるよう、サービスアカウントにメールエイリアスを割り当てることができます。
 
 </Message>
 
 ## Box View
 
-A Service Account is also automatically generated when a Limited Access App is
-created in the [Developer Console][dc]. This Service Account has some additional
-restrictions that a Service Account associated with a Custom App does not.
+サービスアカウントは、[開発者コンソール][dc]でアクセス制限付きアプリを作成したときにも自動的に生成されます。このサービスアカウントには、カスタムアプリに関連付けられたサービスアカウントにはない追加の制限がいくつかあります。
 
-- All content used within the Limited Access App must be uploaded and owned by
-  the Service Account
-- The Service Account can not access any other user's information or content
-- The Service Account can not create or otherwise manage any type of new user
-- The Service Account can only access a subset of APIs related to previewing
-  content
+* アクセス制限付きアプリ内で使用されるコンテンツはすべて、このサービスアカウントがアップロードおよび所有する必要がある
+* このサービスアカウントは、他のユーザーの情報やコンテンツにアクセスできない
+* このサービスアカウントは、タイプを問わず新しいユーザーを作成することも管理することもできない
+* このサービスアカウントは、コンテンツのプレビューに関連するAPIのサブセットにしかアクセスできない
 
 [appusers]: https://developer.box.com/guides/authentication/user-types/app-users/
+
 [auth]: g://applications/custom-apps/app-approval/
+
 [dc]: https:/app.box.com/developers/console
+
 [scopes]: g://api-calls/permissions-and-errors/scopes/
+
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+
 [collabapi]: e://post-collaborations/
+
 [getuser]: e://get-users-me/
+
 [updateuser]: e://put-users-id/

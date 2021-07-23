@@ -19,32 +19,28 @@ next_page_id: collections/list-items
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collections/list.md
+fullyTranslated: true
 ---
-# List User's Collections
+# ユーザーのコレクションのリストの取得
 
-To list all collections for a user, call the [`GET
-/collections`](e://get_collections) API.
+ユーザーのすべてのコレクションのリストを取得するには、[`GET
+/collections`](e://get_collections) APIを呼び出します。
 
-<Samples id='get_collections' >
+<Samples id="get_collections">
 
 </Samples>
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection. The ID of this collection is different for every
-user.
+APIを介して使用できるコレクションは「Favorites」コレクションのみです。このコレクションのIDはユーザーごとに異なります。
 
 </Message>
 
-## Favorites Collection
+## Favoritesコレクション
 
-The only collection that can items can currently be added and removed to via the
-API is the "Favorites" collection.
+現在APIを介して項目を追加および削除できるコレクションは「Favorites」コレクションのみです。
 
-The ID of the favorites collection is different for every user. To find the
-user's collection ID for their favorites, list all the user's collections and
-then find the collection with a `collection_type` of `favorites`.
+FavoritesコレクションのIDはユーザーごとに異なります。ユーザーのお気に入りのコレクションIDを確認するには、ユーザーの全コレクションのリストを取得し、`collection_type`が`favorites`のコレクションを探します。
 
 ```json
 {

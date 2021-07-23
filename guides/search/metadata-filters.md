@@ -15,18 +15,17 @@ next_page_id: search/enterprise
 previous_page_id: search/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
+fullyTranslated: true
 ---
-# Metadata filters
+# メタデータフィルタ
 
-The [`GET /search`][search_api] API allows for filtering search results by their
-associated metadata. A `mdfilters` query parameter allows a developer to specify
-a metadata template and the desired values to query.
+[`GET /search`][search_api] APIでは、関連付けられたメタデータを使用して、検索結果にフィルタをかけることができます。`mdfilters`クエリパラメータを使用すると、開発者はメタデータテンプレートとクエリの対象となる値を指定できます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22scope%22%3A%22enterprise%22%2C%22templateKey%22%3A%22contract%22%2C%22filters%22%3A%7B%22category%22%3A%22online%22%7D%7D%5D" \
@@ -35,7 +34,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22sc
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -56,7 +55,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var filter = new
@@ -79,7 +78,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 from boxsdk.object.search import MetadataSearchFilter, MetadataSearchFilters
@@ -94,7 +93,7 @@ client.search().query("sales", metadata_filters=metadata_search_filters)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -123,43 +122,35 @@ client.search.query(
 
 <Message info>
 
-This example filters a search for any content that matches the query `sales`
-by any item that has `enterprise.contract` metadata attached to it and where
-the `category` field is set to `online`.
+この例では、`enterprise.contract`メタデータが追加され、`category`フィールドが`online`に設定されている項目によって、クエリ`sales`に一致するコンテンツの検索にフィルタをかけます。
 
 </Message>
 
-## Introduction to Metadata
+## メタデータの概要
 
-Metadata allows users and applications to define and store custom data
-associated with files and folders.
+メタデータを使用すると、ユーザーやアプリケーションは、ファイルやフォルダに関連付けられたカスタムデータを定義、格納できます。
 
 <ImageFrame border center>
 
-![String field](../metadata/metadata-example.png)
+![文字列フィールド](../metadata/metadata-example.png)
 
 </ImageFrame>
 
-Metadata consists of key/value pairs that are assigned to a file or a folder.
-For example, an important contract may have the key/value pairs of
-`clientNumber: 820183` and `category: online`.
+メタデータは、ファイルまたはフォルダに割り当てられているキー/値ペアで構成されます。たとえば、重要な契約には、`clientNumber: 820183`と`category: online`のキー/値ペアが使用されている場合があります。
 
-The `mdfilters` query parameter allows developers to find files and folders that
-have a specific piece of metadata attached to them.
+`mdfilters`クエリパラメータを使用すると、開発者は、特定のメタデータが追加されているファイルとフォルダを検索できます。
 
-<CTA to='g://metadata'>
+<CTA to="g://metadata">
 
-Learn more about metadata templates and instances
+メタデータテンプレートおよびインスタンスの詳細を確認する
 
 </CTA>
 
-## Metadata Filter Syntax
+## メタデータフィルタ構文
 
-The `mdfilters` parameter can currently only contain one filter, although this
-may be expanded in the future.
+`mdfilters`パラメータに現在指定できるフィルタは1つだけですが、今後拡張される可能性があります。
 
-Each filter defines the `scope` and `templateKey` of the metadata template to
-filter on.
+各フィルタでは、フィルタをかけるメタデータテンプレートの`scope`および`templateKey`を定義します。
 
 ```json
 [
@@ -173,20 +164,15 @@ filter on.
 
 <Message>
 
-To get the `scope` and `templateKey` for a template, either
-[list all metadata templates][g_list_templates] for an enterprise, or
-[list all metadata instances on an item][g_list_instances_item].
+テンプレートの`scope`と`templateKey`を取得するには、会社の[すべてのメタデータテンプレートのリストを取得][g_list_templates]するか、[項目のすべてのメタデータインスタンスのリストを取得][g_list_instances_item]します。
 
 </Message>
 
-With the template defined, the `filters` field accepts a few different filter
-formats. The format of the filter very much depends on the type of field being
-filtered by.
+テンプレートが定義されると、`filters`フィールドではいくつかの異なるフィルタ形式が受け入れられます。フィルタの形式は、フィルタとして使用するフィールドのタイプによって大きく異なります。
 
-### Filter by `string` field
+### `string`フィールドによるフィルタ
 
-To filter by a field of type `string` a filter will need to define the `key` of
-the field and the desired value to find items for.
+`string`タイプのフィールドでフィルタをかけるには、フィルタでフィールドの`key`と、項目を検索する際に目的となる値を定義する必要があります。
 
 ```json
 [
@@ -202,16 +188,13 @@ the field and the desired value to find items for.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `category` is set to the value `online`.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`category`のフィールドが値`online`に設定されているすべてのファイルとフォルダが検索されます。
 
 </Message>
 
-### Filter by `float` field
+### `float`フィールドによるフィルタ
 
-To filter by a field of type `float` a filter will need to define the `key` of
-the field and the desired value to find items for.
+`float`タイプのフィールドでフィルタをかけるには、フィルタでフィールドの`key`と、項目を検索する際に目的となる値を定義する必要があります。
 
 ```json
 [
@@ -227,15 +210,11 @@ the field and the desired value to find items for.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `amount` is set to the value `10000`.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`amount`のフィールドが値`10000`に設定されているすべてのファイルとフォルダが検索されます。
 
 </Message>
 
-Additionally, a filter for a `float` field can instead define a range instead of
-a direct value by specifying a `gt` (greater-than) and/or `lt` (lower-than)
-value.
+さらに、`float`フィールドのフィルタでは、直接的な値ではなく、`gt` (より大きい) や`lt` (より小さい) の値を指定して範囲を定義できます。
 
 ```json
 [
@@ -254,20 +233,13 @@ value.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `amount` is set to a value equal or higher than `10000` and equal or lower
-than `2000`. Please note that `gt` and `lt` are inclusive and do not need to
-both be set.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`amount`のフィールドが`10000`以上`2000`以下の値に設定されているすべてのファイルおよびフォルダが検索されます。`gt`と`lt`はその値を含むことと、両方を設定する必要がないことに注意してください。
 
 </Message>
 
-### Filter by `date` field
+### `date`フィールドによるフィルタ
 
-To filter by a field of type `date` a filter will need to define the `key` of
-the field and the desired range to find items by specifying a `gt`
-(greater-than) and `lt` (lower-than) value. Please note that `gt` and `lt` are
-inclusive.
+`date`タイプのフィールドでフィルタをかけるには、フィルタでフィールドの`key`と、項目の検索対象範囲を定義する必要があります。この範囲を定義するには、`gt` (より大きい) と`lt` (より小さい) の値を指定します。`gt`と`lt`はその値を含むことに注意してください。
 
 ```json
 [
@@ -286,17 +258,13 @@ inclusive.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied and have an `expirationDate` set to
-a date after or exactly `2016-08-01T00:00:00Z`
-and before or exactly `2017-08-01T00:00:00Z`.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、`expirationDate`が`2016-08-01T00:00:00Z`から`2017-08-01T00:00:00Z`までの日付に設定されているファイルとフォルダがすべて検索されます。
 
 </Message>
 
-### Filter by `enum` field
+### `enum`フィールドによるフィルタ
 
-To filter by a field of type `enum` a filter will need to define the `key` of
-the field and the desired value to find items for.
+`enum`タイプのフィールドでフィルタをかけるには、フィルタでフィールドの`key`と、項目を検索する際に目的となる値を定義する必要があります。
 
 ```json
 [
@@ -312,18 +280,13 @@ the field and the desired value to find items for.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `category` is set to the value `online`.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`category`のフィールドが値`online`に設定されているすべてのファイルとフォルダが検索されます。
 
 </Message>
 
-### Filter by `multiSelect` field
+### `multiSelect`フィールドによるフィルタ
 
-To filter by a field of type `multiSelect` a filter will need to define the
-`key` of the field and any of the potential desired values to find items for.
-When performing a search, the query will essentially perform an `OR` operation
-to match any template where any of the provided values match this field.
+`multiSelect`タイプのフィールドでフィルタをかけるには、フィルタでフィールドの`key`と、項目の検索で対象とする可能性がある値を定義する必要があります。検索を実行すると、クエリでは基本的に`OR`演算が実行され、指定した値のいずれかがこのフィールドと一致するテンプレートが取得されます。
 
 ```json
 [
@@ -342,12 +305,12 @@ to match any template where any of the provided values match this field.
 
 <Message info>
 
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `category` is set to the value `online` or `enterprise`.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`category`のフィールドが値`online`または`enterprise`に設定されているすべてのファイルとフォルダが検索されます。
 
 </Message>
 
 [search_api]: e://get_search
+
 [g_list_templates]: g://metadata/templates/list
+
 [g_list_instances_item]: g://metadata/instances/list

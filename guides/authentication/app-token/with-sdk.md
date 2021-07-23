@@ -21,41 +21,35 @@ next_page_id: authentication/app-token/without-sdk
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/with-sdk.md
+fullyTranslated: true
 ---
-# App Tokens with SDKs
+# SDKを使用したアプリトークン
 
-The official Box SDKs have build-in support for App Token authentication.
+Box公式SDKには、アプリトークン認証のサポートが組み込まれています。
 
-App Token authentication is designed for working directly with the
-Box API without requiring a user to redirect through Box to authorize your
-application, yet is restricted to the application's own data.
+アプリトークン認証は、Box APIを直接操作するよう設計されており、ユーザーがアプリケーションを承認するためにBoxを介してリダイレクトする必要はありません。ただし、この認証はアプリケーションのデータのみに制限されています。
 
 <Message notice>
 
-The method of authentication through JWT is inherently tied to the Service
-Account for the application. Any API call made with this token will seem to
-come from this application and will not have access to files and folders from
-other users without explicitly getting access them.
+JWTを使用した認証方式は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPI呼び出しはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
 
 </Message>
 
-## Prerequisites
+## 前提条件
 
-Before we can get started, you will need to have completed the following steps.
+開始する前に、以下の手順を完了しておく必要があります。
 
-- Create a Box Application within the developer console
-- Ensure the application is configured to use App Token authentication
-- Generate a primary and secondary App Token for the application and store the
-  tokens somewhere in your code.
+* 開発者コンソール内でBoxアプリケーションを作成する
+* アプリケーションがアプリトークン認証を使用するよう構成されていることを確認する
+* アプリケーションのプライマリアプリトークンとセカンダリアプリトークンを生成し、コード内のどこかにこれらのトークンを保存する
 
-## Initializing an SDK client
+## SDKクライアントの初期化
 
-To initialize an SDK client for app token auth, ensure the SDK is installed and
-then configure the SDK as follows.
+アプリトークン認証のためにSDKクライアントを初期化するには、SDKがインストールされていることを確認してから、以下のようにSDKを構成します。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
@@ -65,7 +59,7 @@ var client = new BoxClient(config, session);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 BoxTransactionalAPIConnection api = new BoxTransactionalAPIConnection("[APP_TOKEN]");
@@ -73,7 +67,7 @@ BoxTransactionalAPIConnection api = new BoxTransactionalAPIConnection("[APP_TOKE
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 from boxsdk import Client, OAuth2
@@ -84,7 +78,7 @@ client = Client(auth)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var BoxSDK = require('box-node-sdk');
@@ -100,5 +94,4 @@ var client = sdk.getBasicClient('[APP_TOKEN]');
 
 </Tabs>
 
-With this the application should be able to make API calls to any of the
-[endpoints](g://authentication/app-token/endpoints) enabled for App Token auth.
+これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPI呼び出しを実行できます。

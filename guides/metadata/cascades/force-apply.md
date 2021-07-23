@@ -20,44 +20,34 @@ next_page_id: metadata/cascades/delete
 previous_page_id: metadata/cascades/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/6-cascades/4-force-apply.md
+fullyTranslated: true
 ---
-# Force-apply metadata to all items in a folder
+# フォルダ内のすべての項目に対するメタデータの強制適用
 
-When a metadata cascade policy already exists on a folder, the metadata instance
-can be force-applied to all items in a folder by calling the
-[`POST /metadata_cascade_policies/:id/apply`][e_post] API endpoint with the
-`id` of the metadata cascade policy.
+メタデータカスケードポリシーがすでにフォルダに存在する場合は、メタデータカスケードポリシーの`id`を指定して[`POST /metadata_cascade_policies/:id/apply`][e_post] APIエンドポイントを呼び出すことで、フォルダ内のすべての項目にメタデータインスタンスを強制的に適用できます。
 
-<Samples id='post_metadata_cascade_policies_id_apply' >
+<Samples id="post_metadata_cascade_policies_id_apply">
 
 </Samples>
 
 <Message>
 
-To get the `id` of the policy,
-[list all policies][g_list_policies] for the folder.
+ポリシーの`id`を取得するには、フォルダに対する[すべてのポリシーのリストを取得][g_list_policies]します。
 
 </Message>
 
 <Message warning>
 
-The metadata cascade operation will be started off asynchronously. The API
-call will return directly with the `202 Accepted` HTTP status code before
-the cascade operation is complete. There is currently no way to check for when
-this operation is finished.
+メタデータカスケード操作は非同期的に開始されます。このAPI呼び出しは、カスケード操作が完了する前に直ちに復帰し、`202 Accepted` HTTPステータスコードを返します。現時点では、この操作がいつ終了したのかを確認する方法はありません。
 
 </Message>
 
-## Conflict resolution
+## 競合解決
 
-An additional `conflict_resolution` parameter can be passed to this API to
-define how to deal with any existing instances of the template on any of the
-items in the folder.
+このAPIに追加の`conflict_resolution`パラメータを渡すことで、フォルダ内のいずれかの項目でテンプレートの既存のインスタンスを扱う方法を定義できます。
 
-By default, without setting any value for `conflict_resolution` this API will
-preserve the existing value on any items. When the value is set to `overwrite`,
-it will force-apply the value of the template attached to the cascade policy
-over any existing value.
+`conflict_resolution`に値を設定していない場合、デフォルトでは、このAPIによってすべての項目の既存の値が保持されます。値を`overwrite`に設定すると、カスケードポリシーに適用されているテンプレートの値が強制的に適用され、既存の値は上書きされます。
 
 [e_post]: e://post_metadata_cascade_policies_id_apply
+
 [g_list_policies]: g://metadata/cascades/list

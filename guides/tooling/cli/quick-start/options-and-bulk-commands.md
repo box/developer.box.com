@@ -13,109 +13,98 @@ next_page_id: tooling/cli/quick-start/next-steps
 previous_page_id: tooling/cli/quick-start/build-commands-help
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/4-options-and-bulk-commands.md
+fullyTranslated: true
 ---
-# Using Options and Bulk Commands
+# オプションや一括コマンドの使用
 
-## Options
+## オプション
 
-Options provide additional, optional functionality to use with a CLI command.
-You may also hear these referred to as flags or arguments. As mentioned in the
-previous step, `--help` is an example of an option.
+オプションは、CLIコマンドで使用する追加のオプション機能を提供します。また、オプションはフラグまたは引数とも呼ばれる場合があります。前の手順で説明したように、`--help`はオプションの一例です。
 
-To see all valid options for a command, visit the [GitHub repository][github].
+コマンドに有効なすべてのオプションを確認するには、[GitHubリポジトリ][github]を参照してください。
 
-For example, look at the command documentation for [deleting folders][df]. You
-will see a list of options to use with this command, such as `--recursive` or
-`--force`.
+たとえば、[フォルダの削除][df]に関するコマンドのドキュメントを参照すると、`--recursive`や`--force`など、このコマンドで使用するオプションのリストを確認できます。
 
-## As-User Header
+## as-userヘッダー
 
-To use the [as-user header][asuser], add the `--as-user=USERID` option to the
-end of the command.
+[as-userヘッダー][asuser]を使用するには、コマンドの末尾に`--as-user=USERID`オプションを追加します。
 
-For example, the following command will create a folder called `Example_Folder`
-at the root level in user ID 123456’s account.
+たとえば、次のコマンドでは、ユーザーID 123456のアカウントのルートレベルに`Example_Folder`というフォルダが作成されます。
 
 ```bash
 box folders:create 0 Example_Folder --as-user=123456
 ```
 
-<Message type=warning>
+<message type="warning"></message>
 
-Only Service Accounts and Admins are able to use the as-user header.
-If your application was not authorized with the necessary scopes or you
-configured your CLI to obtain a default token for another user, this call may
-fail. Add `-v` or `--verbose` to your command for verbose error logging.
+as-userヘッダーを使用できるのは、サービスアカウントと管理者のみです。必要なスコープでアプリケーションが承認されていない場合、または別のユーザーのデフォルトのトークンを取得するようCLIを構成した場合は、この呼び出しが失敗する可能性があります。詳細なエラーログを確認するには、コマンドに`-v`または`--verbose`を追加してください。
 
 </Message>
 
-## Bulk Commands
+## 一括コマンド
+
 <!--alex ignore execute-->
 
-A csv file can be used to execute commands in bulk and each row of the
-spreadsheet is treated as an individual API call.
+csvファイルを使用すると、コマンドを一括して実行できます。このスプレッドシートの各行が個別のAPI呼び出しとして処理されます。
+
 <!--alex ignore execute-->
 
-To execute a bulk command, use the option `--bulk-file-path=pathtoacsv`, where
-`pathtoacsv` is replaced with the local path of a csv file containing the
-necessary information.
+一括コマンドを実行するには、`--bulk-file-path=pathtoacsv`オプションを使用します。ここでは、`pathtoacsv`を、必要な情報が記載されているcsvファイルのローカルパスに置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
-As an example, let's create folders using the command `box folders:create --bulk-file-path=pathtoacsv`
+たとえば、コマンド`box folders:create --bulk-file-path=pathtoacsv`を使用して、フォルダを作成してみましょう。
+
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<message type="tip"></message>
 
-You can drag the csv file from your finder window/file explorer to the
-terminal/command line window to auto-populate the path.
+Finderウィンドウ/エクスプローラからターミナル/コマンドラインウィンドウにcsvファイルをドラッグすると、パスを自動で入力できます。
 
 </Message>
 
-To determine column names for your csv, visit the [GitHub repository][github]
-documentation and look at the argument names or use the `--help` option. In this
-case, these are `PARENTID` and `NAME` and are case insensitive. Here is a csv
-[template][csv] for this example bulk create folders command.
+csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメントを参照し、引数名を確認するか`--help`オプションを使用します。この場合、列名は`PARENTID`と`NAME`となり、大文字と小文字は区別されません。このフォルダの一括作成コマンドの例では、こちらのcsv[テンプレート][csv]を確認してください。
 
 <!--alex ignore executing-->
 
-Executing the command below creates three folders at the root level, 0, of the
-Service Account's folder tree.
+以下のコマンドを実行すると、サービスアカウントのフォルダツリーのルートレベル (0) に3つのフォルダが作成されます。
 
 <!-- markdownlint-disable line-length -->
 
 `box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv`
+
 <!-- markdownlint-enable line-length -->
 
-## Bulk Commands with Options
+## オプションを使用した一括コマンド
 
 <!-- markdownlint-disable line-length -->
 
-Passing an option in a command will automatically apply to it to each row in
-the csv. For example,
-`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`
-will create collaborations for each user in the csv as an editor.
+コマンドでオプションを渡すと、そのオプションがcsvの各行に自動的に適用されます。たとえば、`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`を実行すると、csv内の各ユーザーに編集者としてコラボレーションが作成されます。
+
 <!-- markdownlint-enable line-length -->
 
-However, you can also use options in the csv. Building on the last example,
-instead of using the `--role=editor` option in the command itself, it can be a
-column called `role`. The command itself becomes:
+ただし、csvでオプションを使用することもできます。前の例を基に、コマンド自体で`--role=editor`オプションを使用する代わりに、csvで`role`という名前の列を指定することができます。コマンド自体は次のようになります。
+
 <!-- markdownlint-disable line-length -->
 
 `box folders:collaborations:create --bulk-file-path=pathtocsv`.
+
 <!-- markdownlint-enable line-length -->
 
-## Summary
+## まとめ
 
-* You used an option with a command and/or a bulk command.
+* コマンドや一括コマンドとともにオプションを使用しました。
 
 <Next>
 
-I know how to use options and bulk commands
+オプションや一括コマンドの使い方を理解しました
 
 </Next>
 
 [github]: https://github.com/box/boxcli#command-topics-1
+
 [df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
+
 [asuser]: g://authentication/jwt/as-user/
+
 [csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m

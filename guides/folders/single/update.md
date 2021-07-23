@@ -21,25 +21,22 @@ next_page_id: folders/single/rename
 previous_page_id: folders/single/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/update.md
+fullyTranslated: true
 ---
-# Update Folder
+# フォルダの更新
 
-To update a folder in Box you will need to call the following API.
+Box上でフォルダを更新するには、次のAPIを呼び出す必要があります。
 
-<Samples id='put_folders_id' >
+<Samples id="put_folders_id">
 
 </Samples>
 
-## Name restrictions
+## 名前に関する制約事項
 
-There are some restrictions to the file name. Names containing non-printable
-ASCII characters, forward and backward slashes (`/`, `\`), as well as names
-with trailing spaces are prohibited.
+ファイル名にはいくつかの制約事項があります。印字不可能なASCII文字を含む名前、スラッシュおよびバックスラッシュ(`/`、`\`)を含む名前、末尾にスペースを含む名前は禁止されています。
 
-Additionally, the names `.` and `..` are reserved names and therefore
-also prohibited.
+また、`.`および`..`は予約済みの名前であるため、使用できません。
 
-## Timeout
+## タイムアウト
 
-Timeout for this operation is 60 seconds. The operation will complete
-after a `HTTP 503` has been returned.
+この操作のタイムアウトは60秒です。この操作は、`HTTP 503`が返されたら完了します。

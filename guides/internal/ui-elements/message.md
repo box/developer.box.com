@@ -13,19 +13,19 @@ next_page_id: internal/ui-elements
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/ui-elements/message.md
+fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Message
+# メッセージ
 
-A message is a way to show a user that something is worth noting.
+メッセージは、ユーザーに注目すべき情報を示すための方法です。
 
-## Message types
+## メッセージのタイプ
 
-### Default message
+### デフォルトのメッセージ
 
-The lowest level of message is default message. Either explicitly set the type, or
-omit the type. Use this message type for messages that are not essential to be read.
+最も低いレベルのメッセージはデフォルトのメッセージです。このタイプは明示的に設定することも省略することもできます。このメッセージタイプは、必ずしも読む必要がないメッセージに使用します。
 
 ```html
 <Message>
@@ -41,16 +41,15 @@ omit the type. Use this message type for messages that are not essential to be r
 
 <Message>
 
-A default note
+デフォルトのメモ
 
 </Message>
 
 </H>
 
-## Tip message
+## ヒントメッセージ
 
-The next level is a tip. Use this message type for messages that are general
-good tips and best practices.
+次のレベルはヒントです。役立つ一般的なヒントとベストプラクティスとなるメッセージには、このメッセージのタイプを使用します。
 
 ```html
 <Message type='tip'>
@@ -60,23 +59,21 @@ good tips and best practices.
 <Message tip>
   A tip message
 </Message>
-
 ```
 
 <H>
 
 <Message tip>
 
-A tip message
+ヒントメッセージ
 
 </Message>
 
 </H>
 
-## Notice message
+## 通知メッセージ
 
-The next level is a notice. Use this message type for messages that are notices
-but would not break anything for the user if ignored.
+次のレベルは通知です。このメッセージタイプは、ユーザーが無視しても支障がない通知であるメッセージに使用します。
 
 ```html
 <Message type='notice'>
@@ -86,25 +83,21 @@ but would not break anything for the user if ignored.
 <Message notice>
   A notice message
 </Message>
-
 ```
 
 <H>
 
 <Message Notice>
 
-A notice message
+通知メッセージ
 
 </Message>
 
 </H>
 
-## Warning message
+## 警告メッセージ
 
-The next level of message is a warning. Use this message type for messages that
-are notices that might cause an error or exception for the user if ignored, or
-to point out that an error or exception might occur when they complete the
-action previously described.
+次のメッセージレベルは警告です。このメッセージタイプは、ユーザーが無視した場合にエラーまたは例外が発生する可能性があることを示すメッセージ、またはユーザーが前述したアクションを完了したときに発生する可能性のあるエラーまたは例外を示すメッセージに使用します。
 
 ```html
 <Message type='warning'>
@@ -120,17 +113,15 @@ action previously described.
 
 <Message warning>
 
-A warning note
+警告メモ
 
 </Message>
 
 </H>
 
-## Danger message
+## 危険メッセージ
 
-The final level of message is a danger warning. Use this message type for
-messages that are notices that can be attached to actions that will likely cause
-an error or exception for the user.
+最終的なメッセージレベルは危険の警告です。このメッセージタイプは、ユーザーにとってエラーまたは例外の原因となる可能性が高いアクションに付随するメッセージに使用します。
 
 ```html
 <Message type='danger'>
@@ -146,15 +137,15 @@ an error or exception for the user.
 
 <Message danger>
 
-Danger zone!
+危険なゾーン
 
 </Message>
 
 </H>
 
-## Title
+## タイトル
 
-A message can have a title. Please only use `<h1>` titles.
+メッセージにはタイトルを設定できます。`<h1>`のタイトルのみを使用してください。
 
 ```html
 <Message>
@@ -168,17 +159,17 @@ A message can have a title. Please only use `<h1>` titles.
 
 <Message>
 
-# A title
+# タイトル
 
-A default note
+デフォルトのメモ
 
 </Message>
 
 </H>
 
-## Size
+## サイズ
 
-A message can be made smaller than the default.
+メッセージのサイズは、デフォルトより小さくすることができます。
 
 ```html
 <Message size='small'>
@@ -188,9 +179,9 @@ A message can be made smaller than the default.
 
 <H>
 
-<Message size='small'>
+<Message size="small">
 
-A small note
+小さいメモ
 
 </Message>
 

@@ -20,55 +20,44 @@ next_page_id: ''
 previous_page_id: applications/custom-skills/approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/index.md
+fullyTranslated: true
 ---
-# Customs Skills
+# カスタムスキル
 
-A Custom Skill, or Box Skill is a type of application that performs custom
-processing for files uploaded to Box. Skills are designed to make it
-straightforward to use third-party Machine Learning services to automatically
-extract information from files uploaded to Box and apply the resulting data as
-metadata on the file.
+カスタムスキル (Box Skill) とは、Boxにアップロードされたファイルに対してカスタマイズした処理を実行する一種のアプリケーションです。スキルは、サードパーティの機械学習サービスを使用して、Boxにアップロードされたファイルから情報を自動的に抽出し、結果のデータをメタデータとしてファイルに適用しやすくすることを目的としています。
 
 <ImageFrame shadow>
 
-![Skills example](./images/skills-example.png)
+![スキルの例](./images/skills-example.png)
 
 </ImageFrame>
 
-Custom Skills need to be enabled on a folder by a Box Admin. After this an event
-is sent to the Skill's application server every time a file is uploaded to the
-folder. This application can then download the file, inspect it or hand it off
-to a machine learning service, and write powerful metadata to the file.
+カスタムスキルは、Box管理者がフォルダに対して有効にする必要があります。そうすると、ファイルがフォルダにアップロードされるたびに、イベントがスキルのアプリケーションサーバーに送信されます。その後、このアプリケーションはファイルをダウンロードするか、調査するか、機械学習サービスに渡し、効果的なメタデータをファイルに書き込むことができます。
 
-<CTA to='g://skills/'>
+<CTA to="g://skills/">
 
-Start building a Custom Skill
+カスタムスキルの作成を開始する
 
 </CTA>
 
-## Authentication method
+## 認証方式
 
-Working with Custom Skills is simplified by the pre-authorized API credentials
-that are provided with every Skill Event. For this reason though, Custom Skills
-allow for limited API access, mainly to read the file and write Metadata to the
-file.
+カスタムスキルの操作は、各スキルイベントで提供される事前承認済みのAPI資格情報によって簡素化されます。ただし、このような理由により、カスタムスキルでのAPIアクセスは、主にファイルの読み取りとファイルへのメタデータの書き込みに制限されます。
 
-## Approval
+## 承認
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
+カスタムスキルを使用するには、スキルがトリガーされるフォルダに割り当てておく必要があります。
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to="g://applications/custom-skills/approval">
 
-Learn more about approving Custom Skills
+カスタムスキルの承認の詳細を確認する
 
 </CTA>
 
-## When to use Custom Skills
+## カスタムスキルを使用する場合
 
-A Custom Skill is best used when the application:
+アプリケーションが以下のような場合に、カスタムスキルを使用すると最も効果的です。
 
-- Wants to only add metadata to files uploaded to Box
-- Does not want to upload new files or perform any other API calls
-- Wants to have way to pass files to Machine Learning services without
-having to handle authentication
+* Boxにアップロードされたファイルにメタデータの追加のみを行う
+* 新しいファイルをアップロードしない、またはその他のAPI呼び出しを実行しない
+* 認証を処理する必要なく、機械学習サービスにファイルを渡せるようにする

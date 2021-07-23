@@ -18,180 +18,158 @@ next_page_id: authentication/sso
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/select.md
+fullyTranslated: true
 ---
-# Select Auth Method
+# 認証方式の選択
 
-The type of authorization your application can use depends on the type of
-Box Application that you've configured in the developer console.
+アプリケーションで使用できる承認の種類は、開発者コンソールで構成したBoxアプリケーションの種類によって異なります。
 
 <CTA to="guide://applications/select">
 
-Learn how to select the application type for your app
+アプリケーションの種類の選択方法を確認する
 
 </CTA>
 
-## Available methods
+## 使用できる方式
 
-The following authorization methods are available to each Box Application type.
+Boxアプリケーションの種類それぞれでは、以下の認証方式を使用できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
-| ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | No         | Yes              |
-| [Limited Access App][la-app] | No                  | Yes  | Yes        | No               |
-| [Custom Skill][custom-skill] | No                  | No   | No         | No               |
+| Boxアプリケーションの種類          | OAuth 2.0をサポートしますか? | JWTは? | アプリトークンは? | 開発者トークンは? |
+| ----------------------- | ------------------- | ----- | --------- | --------- |
+| [カスタムアプリ][custom-app]   | はい                  | はい    | いいえ       | はい        |
+| [アクセス制限付きアプリ][la-app]   | いいえ                 | はい    | はい        | いいえ       |
+| [カスタムスキル][custom-skill] | いいえ                 | いいえ   | いいえ       | いいえ       |
 
 <!-- markdownlint-enable line-length -->
 
-### Client-side OAuth 2.0
+### クライアント側OAuth 2.0
 
-Client-side OAuth 2.0 requires the application to redirect end-users to their
-browser to login to Box and authorize the application to take actions on their
-behalf.
+クライアント側OAuth 2.0では、アプリケーションに対して、エンドユーザーをブラウザにリダイレクトしてBoxにログインさせ、ユーザーに代わってアプリケーションがアクションを実行することを承認するよう要求します。
 
 <ImageFrame center width="400" shadow border>
 
-![Box OAuth 2.0 approval](./oauth2-grant.png)
+![BoxのOAuth 2.0承認](./oauth2-grant.png)
 
 </ImageFrame>
 
 <Message>
 
-# When to use OAuth 2.0?
+# OAuth 2.0はいつ使用すべきですか?
 
-Client-side authentication is the ideal authentication method for apps that:
+クライアント側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work with users that already have existing Box accounts
-- Want or require users to know that they are using Box
-- Want to store data within the user's Box account and not within the the
-  application's Box account
+* 既存のBoxアカウントを持っているユーザーを使用する
+* ユーザーにBoxを使用していることを知らせる必要がある
+* ユーザーのBoxアカウントにデータを保存し、アプリケーションのBoxアカウントには保存しない
 
 </Message>
 
 <CTA to="guide://authentication/oauth2">
 
-Learn about client-side authentication with OAuth 2.0
+OAuth 2.0を使用したクライアント側認証を確認する
 
 </CTA>
 
-### Server-side JWT
+### サーバー側JWT
 
-This authentication method does not require end-user
-interaction and, if granted the proper privileges, can be used
-to act on behalf of any user in an enterprise.
+この認証方式ではエンドユーザーによる操作が必要ありません。また、適切な権限が付与されていれば、この認証方式を使用して、社内の任意のユーザーの代理で操作することができます。
 
-Server-side authentication using JSON Web Tokens (JWT) does not require end-user
-interaction and, if granted the proper privileges, can be used to act on behalf
-of any user in an enterprise. You can use a public and private key pair or your
-client ID and client secret to verify the application's permissions.
+JSONウェブトークン (JWT) を使用するサーバー側認証では、エンドユーザーによる操作が必要ありません。また、適切な権限が付与されていれば、この認証方式を使用して、社内の任意のユーザーの代理で操作することができます。アプリケーションの権限を確認するために、公開キーと秘密キーのペア、またはクライアントIDとクライアントシークレットを使用することができます。
 
 <ImageFrame center shadow border>
 
-![Box JWT flow](./jwt-flow.png)
+![BoxのJWTフロー](./jwt-flow.png)
 
 </ImageFrame>
 
 <Message>
 
-# When to use JWT?
+# JWTはいつ使用すべきですか?
 
-Server-side authentication with JWT is the ideal authentication method for apps
-that:
+JWTを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work with users that don't have a Box account
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data within the application's Box account and not within the the
-  user's Box account
+* Boxアカウントを持たないユーザーを使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* アプリケーションのBoxアカウントにデータを保存し、ユーザーのBoxアカウントには保存しない
 
 </Message>
 
 <CTA to="guide://authentication/jwt">
 
-Learn about server-side authentication with JWT
+JWTを使用したサーバー側認証を確認する
 
 </CTA>
 
-### Server-side App Tokens
+### サーバー側アプリトークン
 
-A server-side App Token is an authentication method where the application only
-has access to read and write data to its own account. This is mainly used by Box
-View applications. By using this authentication method there is no need to
-authorize a user as the application is automatically authenticated as the
-Service Account that belongs to that application.
+サーバー側アプリトークンは、アプリケーションに、その所有アカウントのデータに対して読み取りと書き込みのアクセス権限だけがある認証方式です。これは、主にBox Viewアプリケーションで使用されます。この認証方式を使用すると、アプリケーションはそのアプリケーションに属しているサービスアカウントとして自動的に認証されるため、ユーザーを承認する必要がありません。
 
 <Message>
 
-# When to use App Tokens?
+# アプリトークンはいつ使用すべきですか?
 
-Server-side authentication with App Tokens is the ideal authentication method
-for apps that:
+アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work in an environment that either has no user model, or has users that don't
-  have Box accounts
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data in the application's Service Account and not a user's account
+* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
 
 </Message>
 
 <CTA to="guide://authentication/app-token">
 
-Learn about server-side authentication with App Tokens
+アプリトークンを使用したサーバー側認証を確認する
 
 </CTA>
 
-### Developer Token
+### 開発者トークン
 
-A server-side Developer Token is a short-lived authentication available to
-developers creating applications that use OAuth 2.0. It is an Access
-Token that is only valid for 1 hour, and authenticates as the developer who
-created the token.
+サーバー側の開発者トークンは、OAuth 2.0を使用するアプリケーションを作成した開発者が使用できる、有効期間の短い認証です。これは、1時間のみ有効なアクセストークンで、トークンを作成した開発者として認証します。
 
 <Message>
 
-# When to use a Developer Token?
+# 開発者トークンはいつ使用すべきですか?
 
-A Developer Token is the ideal authentication method during development and
-testing. It is ideal in situations where the developer:
+開発者トークンは、開発およびテスト段階に最適な認証方式です。開発者が以下の状況に当てはまる場合に理想的です。
 
-- Wants to quickly test an API calls
-- Does not want to authenticate as a different user
-- Does not need the token for more than an hour
-- Does not intend to ship the code to production
+* API呼び出しをすばやくテストする
+* 別のユーザーとして認証しない
+* トークンが必要なのは1時間以内である
+* コードを実稼働環境に提供する予定がない
 
 </Message>
 
-## Comparison
+## 比較
 
-The following is a quick overview of the key difference between client-side and
-server-side authentication.
+以下に、クライアント側とサーバー側の認証の主な違いの概要を示します。
 
 <!-- markdownlint-disable line-length -->
 
-|                                   | OAuth 2.0 | JWT | App Tokens | Developer Token |
-| --------------------------------- | --------- | --- | ---------- | --------------- |
-| Requires user involvement?        | Yes       | No  | No         | Yes             |
-| Requires admin approval?          | No        | Yes | Yes        | No              |
-| Can act on behalf of other users? | Yes       | Yes | No         | Yes             |
-| Do users see Box?                 | Yes       | No  | No         | Yes             |
-| Can create App Users?             | No        | Yes | No         | Yes             |
-| Can be used in production?        | Yes       | Yes | Yes        | No              |
+|                 | OAuth 2.0 | JWT | アプリトークン | 開発者トークン |
+| --------------- | --------- | --- | ------- | ------- |
+| ユーザーの関与が必要?     | はい        | いいえ | いいえ     | はい      |
+| 管理者の承認が必要?      | いいえ       | はい  | はい      | いいえ     |
+| 他のユーザーの代理で操作可能? | はい        | はい  | いいえ     | はい      |
+| ユーザーにBoxを表示?    | はい        | いいえ | いいえ     | はい      |
+| App Userを作成可能?  | いいえ       | はい  | いいえ     | はい      |
+| 実稼働環境で使用可能?     | はい        | はい  | はい      | いいえ     |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-An Access Token is tied to a specific Box user and the way the token has been
-obtained determines who that user is.
+アクセストークンは特定のBoxユーザーに関連付けられており、そのユーザーが誰であるかは、トークンがどのように取得されたかによって決まります。
 
-For example, when using client-side authentication the token represents the
-user who granted access to their account, while while when using server-side
-authentication the token defaults to the application's Service Account.
+たとえば、クライアント側認証を使用している場合、トークンは、自分のアカウントへのアクセス権限を付与したユーザーを表します。一方、サーバー側認証を使用している場合、トークンは、デフォルトでアプリケーションのサービスアカウントとなります。
 
 </Message>
 
 [custom-app]: guide://applications/custom-apps
+
 [custom-skill]: guide://applications/custom-skills
+
 [la-app]: guide://applications/web-app-integrations

@@ -19,21 +19,18 @@ next_page_id: file-requests/update
 previous_page_id: file-requests/copy
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/3-get.md
+fullyTranslated: true
 ---
-# Get information for a File Request
+# ファイルリクエストに関する情報の取得
 
-To get details about an existing [file request](g://file-requests/template),
-all you need is its unique ID.
+既存の[ファイルリクエスト](g://file-requests/template)の詳細を取得するのに必要なのは、その一意のIDだけです。
 
-<Samples id='get_file_requests_id' >
+<Samples id="get_file_requests_id">
 
 </Samples>
 
 <Message notice>
 
-The ID of a file request can be determined by visiting the Box web
-app and inspecting the URL. Please
-[check our guide](g://file-requests/template) on setting up a file
-request template to learn how to determine a file request ID.
+ファイルリクエストのIDを確認するには、BoxウェブアプリにアクセスしてそのURLを調べます。ファイルリクエストテンプレートの設定に関する[ガイド](g://file-requests/template)で、ファイルリクエストIDの確認方法を確認してください。
 
 </Message>

@@ -20,24 +20,21 @@ next_page_id: comments/create-reply
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/comments/create-comment.md
+fullyTranslated: true
 ---
-# Create Comment
+# コメントの作成
 
-To create a comment, call the [`POST /comments`][post_comments] API with the
-message of the comment, as well as the ID of the file to leave the comment on.
+コメントを作成するには、コメントのメッセージと、コメントを残すファイルのIDを指定して[`POST /comments`][post_comments] APIを呼び出します。
 
-<Samples id='post_comments' >
+<Samples id="post_comments">
 
 </Samples>
 
-A comment's message can also mentions users using the `@` sign. To do so, add
-the string `@[userid:name]` anywhere within the message. The `user_id` is the
-target user's ID, where the `name` can be any custom phrase. In the Box UI this
-name will link to the user's profile.
+コメントのメッセージでは、`@`記号を使用してユーザーをメンションすることもできます。そのためには、メッセージ内の任意の場所に`@[userid:name]`という文字列を追加します。`user_id`はターゲットユーザーのIDで、`name`には任意のカスタムフレーズを使用できます。Box UIでは、この名前がユーザーのプロフィールにリンクされます。
 
-Then, pass this string as the `tagged_message` instead of the `message`.
+次に、この文字列を`message`ではなく`tagged_message`として渡します。
 
-<Samples id='post_comments' variant='tag_user' >
+<Samples id="post_comments" variant="tag_user">
 
 </Samples>
 

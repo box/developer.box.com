@@ -22,37 +22,30 @@ next_page_id: shared-links/find-for-item
 previous_page_id: shared-links/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/update.md
+fullyTranslated: true
 ---
-# Update Shared Link
+# 共有リンクの更新
 
-A shared link may be updated from a resource by calling the
-[update file](endpoint://put_files_id) or
-[update folder](endpoint://put_folders_id) endpoint, specifying the ID of the
-resource to update with the new shared link values. See the
-[create shared link](guide://shared-links/create) guide for all available
-parameters.
+[ファイルを更新](endpoint://put_files_id)または[フォルダを更新](endpoint://put_folders_id)エンドポイントを呼び出し、リソースのIDを指定して新しい共有リンク値で更新することで、共有リンクを更新できます。使用できるすべてのパラメータについては、[共有リンクの作成](guide://shared-links/create)ガイドを参照してください。
 
-<Message type='notice'>
+<Message type="notice">
 
-If you update the shared link settings, the new settings will apply to any
-users who already have the URL.
+共有リンクの設定を更新すると、新しい設定はすでにそのURLを知っているすべてのユーザーに適用されます。
 
 </Message>
 
-## Update Shared Link on File
+## ファイルの共有リンクの更新
 
-To update a shared link on a file, specify the ID of the file with any optional
-shared link parameters.
+ファイルの共有リンクを更新するには、ファイルのIDとオプションの共有リンクパラメータを指定します。
 
-<Samples id='put_files_id_shared_link_create' >
+<Samples id="put_files_id_shared_link_create">
 
 </Samples>
 
-## Update Shared Link on Folder
+## フォルダの共有リンクの更新
 
-To update a shared link on a folder, specify the ID of the folder with any
-optional shared link parameters.
+フォルダの共有リンクを更新するには、フォルダのIDとオプションの共有リンクパラメータを指定します。
 
-<Samples id='put_folders_id_shared_link_create' >
+<Samples id="put_folders_id_shared_link_create">
 
 </Samples>

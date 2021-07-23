@@ -13,13 +13,13 @@ next_page_id: internal/ui-elements
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/ui-elements/grid.md
+fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Grid
+# グリッド
 
-A basic grid can be established by wrapping elements in a `Grid` element. Grids
-of 2, 3, and 4 columns are supported.
+基本的なグリッドは、要素を`Grid`要素にラップすることで作成できます。2列、3列、4列のグリッドがサポートされています。
 
 ```html
 <Grid columns='4'>
@@ -29,7 +29,6 @@ of 2, 3, and 4 columns are supported.
 
 <Message warning>
 
-Depending on the content of the grid you might get different results. It's
-recommended to use grids in combination with nested custom elements.
+グリッドのコンテンツに応じて、返される結果が異なる場合があります。ネストされたカスタム要素と組み合わせてグリッドを使用することをお勧めします。
 
 </Message>

@@ -15,8 +15,8 @@ next_page_id: ''
 previous_page_id: security/device-pinners
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/index.md
+fullyTranslated: true
 ---
-# Security
+# セキュリティ
 
-The Box API offers a few important ways to ensure everyone working with your
-data is secure and compliant.
+Box APIでは、データを扱うすべてのユーザーが確実にセキュリティで保護され、コンプライアンスに準拠するための重要な方法をいくつか用意しています。

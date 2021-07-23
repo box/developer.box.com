@@ -15,57 +15,47 @@ next_page_id: tooling/postman/quick-start/log-in-to-box
 previous_page_id: tooling/postman/quick-start/install-postman
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/2-configure-box-app.md
+fullyTranslated: true
 ---
-# Configure a Box App
+# Boxアプリの設定
 
-To use the **Postman Collection** the Postman application needs to authenticate
-to the Box API using an **Access Token**. The simplest way to get an Access
-Token is by logging into Box using a **Box App**.
+**Postmanコレクション**を使用するために、Postmanアプリケーションは**アクセストークン**を使用してBox APIから認証を受ける必要があります。アクセストークンを取得するには、**Boxアプリ**を使用してBoxにログインする方法が最も簡単です。
 
-A **Box App** is an application that can be used for making API calls. When
-using the **Postman Collection** you can choose to either set up your own Box
-App or use our preconfigured one. The key benefit of setting up your own Box App
-is that you won't need to go through login every hour, but it does require a few
-extra steps to set up.
+**Boxアプリ**は、API呼び出しの実行に使用できるアプリケーションです。**Postmanコレクション**を使用する際は、独自のBoxアプリを設定するか、あらかじめ設定されているBoxアプリを使用するかを選択できます。独自のBoxアプリを設定した場合の主な利点は、1時間ごとにログインする必要がなくなることです。ただし、設定にいくつか追加手順が必要になります。
 
-## Select a Box App to use
+## 使用するBoxアプリの選択
 
-<Grid columns='2'>
+<Grid columns="2">
 
-<Choose option='postman.app_type' value='create_new' color='blue'>
+<Choose option="postman.app_type" value="create_new" color="blue">
 
-# Create new Box App
+# 新しいBoxアプリを作成する
 
-We can set up a Box App for you right here from the documentation. With a
-few clicks you will be ready to go.
+ここからBoxアプリをセットアップできます。数回クリックするだけで準備できます。
 
 </Choose>
 
-<Choose option='postman.app_type' value='use_existing' color='red'>
+<Choose option="postman.app_type" value="use_existing" color="red">
 
-# Use existing Box app
+# 既存のアプリを使用する
 
-If you've already created a Box App before that you want to use, then we
-can use the credentials for that application.
+使用したいBoxアプリをすでに作成済みの場合は、そのアプリケーションの資格情報を使用できます。
 
 </Choose>
 
 </Grid>
 
-<Choice option='postman.app_type' value='create_new' color='blue'>
+<Choice option="postman.app_type" value="create_new" color="blue">
 
-# Create a Box app
+# Boxアプリの作成
 
-To use your own **Box App** you will need to create a
-new Box App in the **Box Developer Console**. Click the button below and we
-will set them up for you. At the end you will have a **Client ID** and
-**Client Secret**.
+独自の**Boxアプリ**を使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。下のボタンをクリックすると、アプリがセットアップされます。最後に、**クライアントID**と**クライアントシークレット**を取得できます。
 
 <Trigger option="postman.login_button" value="clicked">
 
-<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
+<AppButton id="postman" name="Postman" scopes="root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties" can_act_as_user authentication_type="auth_code_grant" redirect_url="/auth/callback" cors_origins>
 
-Create an app
+アプリの作成
 
 </AppButton>
 
@@ -73,88 +63,80 @@ Create an app
 
 <Observe option="postman.login_button" value="clicked">
 
-We will use these credentials to authenticate your application in the next
-step.
+これらの資格情報は、次の手順でアプリケーションの認証に使用します。
 
 </Observe>
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_existing' color='red'>
+<Choice option="postman.app_type" value="use_existing" color="red">
 
-# Use existing Box app
+# 既存のアプリを使用する
 
-If you have already created a Box App before you can use that as well. We
-require a few settings to be set for this to work.
+事前にBoxアプリをすでに作成済みの場合は、そのアプリも使用できます。そのアプリを使用するには、いくつかの設定が必要です。
 
-1. Go to the [Developer Console][devconsole]
-2. Select your application
-3. Go to the app's configuration section
-4. Make sure your application uses **Standard OAuth 2.0** as the
-   authentication method
-5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-   **Redirect URI** to the value `https://developer.box.com/auth/callback`.
-6. Scroll down to the **Application Scopes** section to select your desired
-   [permissions][scopes]. **Your application must have at least one or more**
-   **of the following scopes:** manage users, read all files and folders
-   stored in Box, read and write all files and folders in Box.
-7. At the top of the page click the button to **Save Changes**
+1. [開発者コンソール][devconsole]に移動します。
+2. アプリケーションを選択します。
+3. アプリの構成セクションに移動します。
+4. アプリケーションが認証方式として**標準OAuth 2.0**を使用することを確認します。
+5. \[**OAuth 2.0リダイレクトURI**] の設定まで下にスクロールし、\[**リダイレクトURL**] に値`https://developer.box.com/auth/callback`を設定します。
+6. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の[権限][scopes]を選択します。**アプリケーションには、****次のスコープの1つ以上が必要です。**このスコープとは、ユーザーの管理、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込みです。
+7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 
-Next, copy the values for the Client ID and Client Secret into these 2 fields.
+次に、クライアントIDとクライアントシークレットの値を以下の2つのフィールドにコピーします。
 
-<Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
+<Store id="postman_credentials.client_id" placeholder="zECq2EkYBjZ..." pattern="\w{32}">
 
-Client ID
+クライアントID
 
 </Store>
 
-<Store id='postman_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
+<Store id="postman_credentials.client_secret" placeholder="913td9hr6jo..." pattern="\w{32}">
 
-Client Secret
+クライアントシークレット
 
 </Store>
 
-We will use these credentials to authenticate your application in the next
-step.
+これらの資格情報は、次の手順でアプリケーションの認証に使用します。
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option="postman.app_type" value="create_new,use_existing" color="none">
 
 <Message danger>
 
-# Security notice
+# セキュリティに関する注意
 
-Your API credentials are now stored in the browser cache. We highly
-recommend clearing out this storage by clicking the **Reset** button later in
-this guide.
+API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
 
 </Message>
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option="postman.app_type" value="create_new,use_existing" color="none">
 
-## Summary
+## まとめ
 
-* You either selected to create a new **Box App**
-  * Signed up for a developer account (Optional)
-  * Had us create **Custom App** for you that uses **OAuth 2.0** authentication
-  * Had us set up the **redirect URL** for the application
-* Or you selected to use an **existing Box App**
+* 新しい**Boxアプリ**の作成を選択しました。
+  * Developerアカウントにサインアップ (必要な場合)
+  * **OAuth 2.0**認証を使用する**カスタムアプリ**を作成
+  * アプリケーションの**リダイレクトURL**を設定
+* または、**既存のBoxアプリ**の使用を選択しました。
 
 </Choice>
 
-<Observe option='postman.app_type' value='create_new,use_existing'>
+<Observe option="postman.app_type" value="create_new,use_existing">
 
 <Next>
 
-I have configured a Box app
+Boxアプリの設定が完了しました
 
 </Next>
 
 </Observe>
 
 [devconsole]: https://account.box.com/developers/services
+
 [signup]: https://account.box.com/signup/n/developer
+
 [scopes]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/

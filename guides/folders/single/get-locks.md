@@ -21,19 +21,16 @@ next_page_id: folders/single/delete-lock
 previous_page_id: folders/single/create-lock
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/get-locks.md
+fullyTranslated: true
 ---
-# Get Folder Lock
+# フォルダのロックの取得
 
-To get a list of the current locks on a folder in Box, call the
-`GET /folder_locks/` API with the id of the folder supplied as a `folder_id`
-query string parameter.
+Box内のフォルダに対する現在のロックのリストを取得するには、`folder_id`クエリ文字列パラメータとしてフォルダのIDを指定して`GET /folder_locks/` APIを呼び出します。
 
-<Samples id='get_folder_locks' >
+<Samples id="get_folder_locks">
 
 </Samples>
 
-## Folder ID
+## フォルダID
 
-The `id` of any folder can be determined by visiting a folder in the web
-application and copying the `id` from the URL. For example, for the URL
-`https://*.app.box.com/folder/123` the `folder_id` is `123`.
+フォルダの`id`を確認するには、ウェブアプリでフォルダにアクセスして、URLから`id`をコピーします。たとえば、URLが`https://*.app.box.com/folder/123`の場合、`folder_id`は`123`です。

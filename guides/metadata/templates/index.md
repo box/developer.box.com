@@ -13,37 +13,32 @@ next_page_id: metadata/templates/get
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/0-index.md
+fullyTranslated: true
 ---
-# Metadata templates
+# メタデータテンプレート
 
-A [metadata template][template] describes a set of key/value
-pairs that can be assigned to a file or folder.
+[メタデータテンプレート][template]には、ファイルまたはフォルダに割り当てることができる一連のキー/値ペアが記載されています。
 
-For example, an `invoiceData` template might hold data about an invoice, having
-a field for the invoice ID as well as the customer ID.
+たとえば、`invoiceData`テンプレートでは、請求書に関するデータを保持するため、請求書IDと顧客IDのフィールドが設定されています。
 
-A file or folder can have multiple distinct template [instances][instance]
-associated with it, such as a `marketingCollateral` instance and a
-`retentionPolicy` instance.
+ファイルまたはフォルダには、`marketingCollateral`インスタンスや`retentionPolicy`インスタンスなど、複数の異なるテンプレート[インスタンス][instance]を関連付けることができます。
 
-## Metadata scopes
+## メタデータのスコープ
 
-Metadata templates are grouped into two distinct groups, or **scopes**.
+メタデータテンプレートは、2つの異なるグループ、つまり**スコープ**にグループ化されます。
 
-<CTA to='g://metadata/scopes'>
+<CTA to="g://metadata/scopes">
 
-Learn more about Metadata Scopes
+メタデータのスコープの詳細を確認する
 
 </CTA>
 
-## Permissions and restrictions
+## 権限と制限
 
-There is a limit of 500 templates per enterprise.
+テンプレートは会社あたり500個までに制限されています。
 
-Creating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web
-app or the API to manage templates.
+メタデータテンプレートの作成は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートの作成および編集**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
 
 [instance]: g://metadata/instances
+
 [template]: g://metadata/templates

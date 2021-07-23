@@ -20,20 +20,18 @@ next_page_id: file-requests
 previous_page_id: file-requests/update
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/5-delete.md
+fullyTranslated: true
 ---
-# Delete a File Request
+# ファイルリクエストの削除
 
-To delete a file request, all you need is its unique ID.
+ファイルリクエストを削除するのに必要なのは、その一意のIDだけです。
 
-<Samples id='delete_file_requests_id' >
+<Samples id="delete_file_requests_id">
 
 </Samples>
 
 <Message notice>
 
-The ID of a file request can be determined by visiting the Box web
-app and inspecting the URL. Please
-[check our guide](g://file-requests/template) on setting up a file
-request template to learn how to determine a file request ID.
+ファイルリクエストのIDを確認するには、BoxウェブアプリにアクセスしてそのURLを調べます。ファイルリクエストテンプレートの設定に関する[ガイド](g://file-requests/template)で、ファイルリクエストIDの確認方法を確認してください。
 
 </Message>

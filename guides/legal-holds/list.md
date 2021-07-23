@@ -20,20 +20,20 @@ next_page_id: legal-holds/get
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/legal-holds/list.md
+fullyTranslated: true
 ---
-# List All Legal Hold Policies
+# すべてのリーガルホールドポリシーのリストの取得
 
-To list all Legal Hold Policies that have been created in an enterprise, call
-the [`GET /legal_hold_policies`][legal_holds] API endpoint.
+会社内に作成されたすべてのリーガルホールドポリシーのリストを取得するには、[`GET /legal_hold_policies`][legal_holds] APIエンドポイントを呼び出します。
 
-<Samples id='get_legal_hold_policies' >
+<Samples id="get_legal_hold_policies">
 
 </Samples>
 
-## Required Scopes
+## 必須のスコープ
 
-Before using any of the Legal Hold APIs, an application must have the right
-scopes enabled. See [Required Scopes][scopes] for more details.
+リーガルホールドAPIのいずれかを使用する前に、アプリケーションでは適切なスコープを有効にしておく必要があります。詳細については、[必須のスコープ][scopes]を参照してください。
 
 [legal_holds]: e://get_legal_hold_policies
+
 [scopes]: g://legal-holds#required-scopes

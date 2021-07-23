@@ -20,23 +20,20 @@ next_page_id: ''
 previous_page_id: folders/single/get-locks
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/delete-lock.md
+fullyTranslated: true
 ---
-# Delete Folder Lock
+# フォルダのロックの削除
 
-To remove a lock applied to a folder in Box, call the
-`DELETE /folder_locks/:id` API with the id of the folder lock.
+Box内のフォルダに適用されたロックを削除するには、フォルダのロックIDを指定して`DELETE /folder_locks/:id` APIを呼び出します。
 
-<Samples id='delete_folder_locks_id' >
+<Samples id="delete_folder_locks_id">
 
 </Samples>
 
-<Message type='notice'>
+<Message type="notice">
 
-# Locating the folder Lock ID
+# フォルダのロックIDを見つける方法
 
-To delete a folder lock you must supply the folder lock ID to the API. A
-folder lock ID is supplied in the response when
-[creating a folder lock](g://folders/single/create-lock/), or
-when [listing locks](g://folders/single/get-locks/) on a given folder.
+フォルダのロックを削除するには、フォルダのロックIDをAPIに指定する必要があります。フォルダのロックIDは、[フォルダのロックを作成](g://folders/single/create-lock/)したとき、または特定のフォルダに対する[ロックのリストを取得](g://folders/single/get-locks/)したときに、レスポンスに示されます。
 
 </Message>

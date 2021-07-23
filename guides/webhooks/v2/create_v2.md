@@ -24,57 +24,48 @@ next_page_id: webhooks/v2/update_v2
 previous_page_id: webhooks/v2/list_v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/create_v2.md
+fullyTranslated: true
 ---
-# Create Webhooks
+# Webhookの作成
 
-V2 webhooks can monitor specific files or folders.
+V2 Webhookは、特定のファイルまたはフォルダを監視できます。
 
-<Message type='warning'>
+<Message type="warning">
 
-This API requires the application to have the "Manage Webhooks" scope enabled.
-
-</Message>
-
-To attach a webhook to a file, call the [create webhook][1] endpoint with the
-type of `file`, the ID of the file, a URL to send webhook notifications to, and
-a list of [triggers][2].
-
-<Samples id='post_webhooks' >
-
-</Samples>
-
-To attach a webhook to an folder, call the [create webhook][1] endpoint with the
-type of `folder`, the ID of the folder, a URL to send webhook notifications to,
-and a list of [triggers][2].
-
-<Samples id='post_webhooks' variant='for_folder' >
-
-</Samples>
-
-<Message type='notice'>
-
-Webhooks do cascade, so if set on a parent folder it will also watch
-subfolders for the selected triggers.
+このAPIを使用するには、アプリケーションの「Webhookを管理」スコープが有効になっている必要があります。
 
 </Message>
 
-## Webhook address
+ファイルにWebhookを追加するには、`file`の種類、ファイルのID、Webhook通知の送信先URL、および[トリガー][2]のリストを指定して[Webhookを作成][1]エンドポイントを呼び出します。
 
-The notification URL specified in the `address` parameter must be a valid URL
-that you specify when you create a webhook. Every time one of the triggers is
-activated, this URL is called.
+<Samples id="post_webhooks">
 
-The notification URL must use standard port, `443` and should return
-an HTTP status in the range of `200` to `299` within 30 seconds of receiving
-the webhook payload.
+</Samples>
 
-## Webhook triggers
+フォルダにWebhookを追加するには、`folder`の種類、フォルダのID、Webhook通知の送信先URL、および[トリガー][2]のリストを指定して[Webhookを作成][1]エンドポイントを呼び出します。
 
-The triggers are a list of strings that specify the events that will cause the
-webhook to fire. For example, if you want the webhook to be triggered
-when a user uploads a file, use `FILE.UPLOADED`.
+<Samples id="post_webhooks" variant="for_folder">
 
-A list of available triggers is available [in this guide][2].
+</Samples>
+
+<Message type="notice">
+
+Webhookはカスケードで適用されるため、親フォルダに設定すると、サブフォルダでも選択されたトリガーが監視されます。
+
+</Message>
+
+## Webhookアドレス
+
+`address`パラメータで指定する通知URLは、Webhookの作成時に指定した有効なURLである必要があります。このURLは、いずれかのトリガーがアクティブになるたびに呼び出されます。
+
+通知URLは標準ポート`443`を使用する必要があり、Webhookペイロードの受信から30秒以内に`200`～`299`の範囲のHTTPステータスを返す必要があります。
+
+## Webhookトリガー
+
+トリガーのリストでは、Webhookによって発生するイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには`FILE.UPLOADED`を使用します。
+
+使用可能なトリガーのリストは、[このガイド][2]にあります。
 
 [1]: e://post_webhooks
+
 [2]: g://webhooks/triggers

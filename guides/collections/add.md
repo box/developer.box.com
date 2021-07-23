@@ -24,43 +24,38 @@ next_page_id: collections/remove
 previous_page_id: collections/list-items
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collections/add.md
+fullyTranslated: true
 ---
-# Add Item to Collection
+# コレクションへの項目の追加
 
-To add an item to a collection, call the `PUT` endpoint for that specific type of
-item and pass along a list of collection IDs.
+コレクションに項目を追加するには、その特定のタイプの項目に対して`PUT`エンドポイントを呼び出し、コレクションIDのリストを渡します。
 
 <Message warning>
 
-The only collection that is available via the API is the "Favorites"
-collection. The ID of this collection is [different for every
-user](g://collections/list).
+APIを介して使用できるコレクションは「Favorites」コレクションのみです。このコレクションのIDは[ユーザーごとに異なります](g://collections/list)。
 
 </Message>
 
-## Add file to collection
+## コレクションへのファイルの追加
 
-To add a file to a collection, call the `PUT /files/:id` API and pass along a
-list of collection IDs.
+コレクションにファイルを追加するには、`PUT /files/:id` APIを呼び出し、コレクションIDのリストを渡します。
 
-<Samples id='put_files_id' variant='add_to_collection' >
-
-</Samples>
-
-## Add folder to collection
-
-To add a folder to a collection, call the `PUT /folders/:id` API and pass along
-a list of collection IDs.
-
-<Samples id='put_folders_id' variant='add_to_collection' >
+<Samples id="put_files_id" variant="add_to_collection">
 
 </Samples>
 
-## Add web link to collection
+## コレクションへのフォルダの追加
 
-To add a web link to a collection, call the `PUT /web_links/:id` API and pass
-along a list of collection IDs.
+コレクションにフォルダを追加するには、`PUT /folders/:id` APIを呼び出し、コレクションIDのリストを渡します。
 
-<Samples id='put_web_links_id' variant='add_to_collection' >
+<Samples id="put_folders_id" variant="add_to_collection">
+
+</Samples>
+
+## コレクションへのウェブリンクの追加
+
+コレクションにウェブリンクを追加するには、`PUT /web_links/:id` APIを呼び出し、コレクションIDのリストを渡します。
+
+<Samples id="put_web_links_id" variant="add_to_collection">
 
 </Samples>

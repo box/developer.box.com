@@ -21,31 +21,26 @@ next_page_id: authentication/oauth2/without-sdk
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/index.md
+fullyTranslated: true
 ---
-# OAuth 2.0 Auth
+# OAuth 2.0認証
 
-Client-side OAuth 2.0 is one of the easiest ways to authenticate a user for the
-Box API. It is an [open standard](https://oauth.net/2/) designed to allow users
-to provide applications access to their data in other applications.
+クライアント側OAuth 2.0は、Box APIに対してユーザーを認証する最も簡単な方法の1つです。これは、ユーザーがアプリケーションから他のアプリケーションにある自分のデータにアクセスできるようにすることを目的とした[オープンスタンダード](https://oauth.net/2/)です。
 
-If you've ever logged in to a website with Twitter, Facebook, or Google you've
-most likely used OAuth 2.0.
+Twitter、Facebook、またはGoogleを使用してウェブサイトにログインしたことがあれば、OAuth 2.0を使用したことがあると考えられます。
 
 <ImageFrame border>
 
-![the OAuth 2.0 flow](./oauth2-flow.png)
+![OAuth 2.0フロー](./oauth2-flow.png)
 
 </ImageFrame>
 
-Client-side authentication on Box has a similar flow where a user is redirected
-from an application to the Box web app, required to log in, and grant the
-application access to the user's data.
+Boxでのクライアント側認証にも同様のフローがあります。このフローでは、ユーザーは、アプリケーションからBoxウェブアプリにリダイレクトされて、ログインするように求められ、アプリケーションに対してユーザーのデータへのアクセス権限を付与します。
 
-## When to use OAuth 2.0
+## OAuth 2.0を使用する場合
 
-Client-side authentication is the ideal authentication method for apps that:
+クライアント側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work with users that already have existing Box accounts
-- Want or require users to know that they are using Box
-- Want to store data within the user's Box account and not within the the
-application's Box account
+* 既存のBoxアカウントを持っているユーザーを使用する
+* ユーザーにBoxを使用していることを知らせる必要がある
+* ユーザーのBoxアカウントにデータを保存し、アプリケーションのBoxアカウントには保存しない

@@ -21,39 +21,31 @@ next_page_id: ''
 previous_page_id: uploads/direct/file
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/direct/file-version.md
+fullyTranslated: true
 ---
-# Upload File Version
+# ファイルバージョンのアップロード
 
-To upload a new version of a file to Box via direct upload, make an API call to
-the [`POST /files/:id/content`][upload] API with the content of the file, the
-desired file name, and the folder ID.
+直接アップロードによってBoxにファイルの新しいバージョンをアップロードするには、ファイルのコンテンツ、目的のファイル名、フォルダIDを使用して、[`POST /files/:id/content`][upload] APIにAPI呼び出しを実行します。
 
-<Samples id='post_files_id_content' >
+<Samples id="post_files_id_content">
 
 </Samples>
 
 <Message>
 
-# Preflight check
+# 事前チェック
 
-To prevent wasting time and bandwidth uploading a file that is going to be
-rejected it is recommended to perform a [pre-flight check][preflight] before
-uploading the file.
+アップロードしたファイルが拒否されることによる時間や帯域幅の無駄を防ぐため、ファイルをアップロードする前に[事前チェック][preflight]を実行することをお勧めします。
 
 </Message>
 
-## Request Format
+## リクエスト形式
 
-The request body of this API uses a content type of `multipart/form-data`. This
-is used to transmit two parts, namely the file attributes and the file's actual
-content.
+このAPIのリクエスト本文には、`multipart/form-data`のコンテンツタイプが使用されます。これを使用して、ファイル属性とファイルの実際のコンテンツの2つの部分を送信します。
 
-The first part is called `attributes` and contains a JSON object with
-information about the file, including the name of the file and the `id` of the
-parent folder.
+最初の部分は`attributes`と呼ばれ、ファイル名や親フォルダの`id`など、ファイルに関する情報を含むJSONオブジェクトが含まれています。
 
-The following is an example a `test.txt` being uploaded to the root folder of
-the user.
+以下の例では、ユーザーのルートフォルダに`test.txt`をアップロードしています。
 
 ```sh
 POST /api/2.0/files/123/content HTTP/1.1
@@ -61,7 +53,6 @@ Host: upload.box.com
 Authorization: Bearer [ACCESS_TOKEN]
 content-length: 343
 content-type: multipart/form-data; boundary=------------------------9fd09388d840fef1
-
 --------------------------9fd09388d840fef1
 content-disposition: form-data; name="attributes"
 
@@ -71,40 +62,33 @@ content-disposition: form-data; name="file"; filename="test.txt"
 content-type: text/plain
 
 Test file text.
-
 --------------------------9fd09388d840fef1--
 ```
 
 <Message warning>
 
-The `attributes` JSON part of the multi-part body must come before the `file`
-part of the multipart form data. When out of order, the API will return a HTTP
-`400` status code with an error code of `metadata_after_file_contents`.
+マルチパート本文の`attributes` JSON部分は、マルチパートフォームデータの`file` 部分の前に置く必要があります。この順番を間違えると、APIがHTTP `400`ステータスコードとエラーコード`metadata_after_file_contents`を返します。
 
 </Message>
 
-## Options
+## オプション
 
-To learn more about all the parameters available when uploading files, head over
-to the [reference documentation for this API call][upload]. These parameters
-include a `content-md5` that can be set to ensure a file is not corrupted in
-transit, and the ability to explicitly specify the file creation time at a
-different time than the upload time.
+ファイルのアップロード時に使用できるすべてのパラメータの詳細については、[このAPI呼び出しに関するリファレンスドキュメント][upload]を参照してください。パラメータには、設定することで転送中のファイルの破損を防ぐ`content-md5`や、アップロード時間とは異なる時間をファイル作成時間として明示的に指定できる機能が含まれます。
 
-For file versions an additional [`if-match` header][consistency] can be passed
-along to prevent overwriting a file that has already been updated since the
-application last inspected the content.
+ファイルバージョンの場合、追加の[`if-match`ヘッダー][consistency]を渡すことで、アプリケーションが最後にコンテンツを検査した後で更新されたファイルが上書きされるのを防ぐことができます。
 
-## Restrictions
+## 制約事項
 
-Direct uploads are limited to a maximum file size of 50MB. For larger files,
-please use the [chunked upload APIs][chunked].
+直接アップロードできるファイルサイズの上限は50MBです。ファイルがこれより大きい場合は、[分割アップロードAPI][chunked]を使用してください。
 
-Upload limits are dictated by the type of account of the authenticated user.
-More information can be found [in our community article on this topic][fsizes].
+アップロードの上限は、認証済みユーザーのアカウントの種類によって決まります。詳細については、[このトピックに関するBoxコミュニティの記事][fsizes]を参照してください。
 
 [preflight]: g://uploads/check
+
 [chunked]: g://uploads/chunked
+
 [upload]: e://post_files_id_content
+
 [consistency]: g://api-calls/ensure-consistency
+
 [fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590

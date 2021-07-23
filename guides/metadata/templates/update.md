@@ -21,46 +21,39 @@ next_page_id: metadata/templates/delete
 previous_page_id: metadata/templates/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/5-update.md
+fullyTranslated: true
 ---
-# Update a metadata template
+# メタデータテンプレートの更新
 
-Updating a metadata template can be achieved by passing an array of operations
-to the [`PUT /metadata_templates/:scope/:templateKey/schema`][endpoint] API.
+メタデータテンプレートを更新するには、操作の配列を[`PUT /metadata_templates/:scope/:templateKey/schema`][endpoint] APIに渡します。
 
-<Samples id="put_metadata_templates_id_id_schema" >
+<Samples id="put_metadata_templates_id_id_schema">
 
 </Samples>
 
 <Message warning>
 
-# Admin permissions required
+# 管理者権限が必須
 
-Updating metadata templates is restricted to users with admin permission. This
-means that only admins, or co-admins who have been granted rights to **Create
-and edit metadata templates for your company** by the admin can use the web
-app or the API to manage templates.
+メタデータテンプレートの更新は、管理者権限を持つユーザーに制限されています。つまり、管理者、または管理者から**会社のメタデータテンプレートの作成および編集**権限が付与されている共同管理者だけがウェブアプリまたはAPIを使用してテンプレートを管理できます。
 
 </Message>
 
-## Operations
+## 操作
 
-Updates to metadata templates are performed through **operations** rather than
-directly changing the template itself. This method allows us to update any
-existing metadata instances that are already applied to files and folders.
+メタデータテンプレートの更新は、テンプレート自体を直接変更するのではなく、**操作**を利用して実行されます。この方法では、ファイルおよびフォルダにすでに適用されている既存のメタデータインスタンスを更新できます。
 
-## Template operations
+## テンプレートの操作
 
-Template operations update a template's details or fields. These operations are
-generally safe as they are applied to any template instance without much impact.
+テンプレートの操作により、テンプレートの詳細またはフィールドが更新されます。一般的に、これらの操作は、あまり影響なくテンプレートインスタンスに適用されるため安全です。
 
-### Edit a template
+### テンプレートの編集
 
-The operation `editTemplate` allows for editing any of the base properties of
-the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
+`editTemplate`操作では、`displayName`や`copyInstanceOnItemCopy`など、テンプレートの基本プロパティを編集できます。
 
-| Parameter |                                                 |
-|-----------|-------------------------------------------------|
-| `data`    | An object representing the properties to change |
+| パラメータ  |                    |
+| ------ | ------------------ |
+| `data` | 変更するプロパティを表すオブジェクト |
 
 ```json
 [
@@ -74,21 +67,21 @@ the template, like the `displayName`, `copyInstanceOnItemCopy` and more.
 ]
 ```
 
-This will update the template to have a new display name of Client.
+これにより、新しい表示名がClientになるようにテンプレートが更新されます。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Add a field to a template
+### テンプレートへのフィールドの追加
 
-The operation `addField` adds an field to a template.
+`addField`操作では、テンプレートにフィールドを追加します。
 
-| Parameter |                                     |
-|-----------|-------------------------------------|
-| `data`    | An object representing field to add |
+| パラメータ  |                    |
+| ------ | ------------------ |
+| `data` | 追加するフィールドを表すオブジェクト |
 
 ```json
 [
@@ -104,23 +97,21 @@ The operation `addField` adds an field to a template.
 ]
 ```
 
-This will add a new non-hidden string field with a `displayName` and `key` of
-**category**.
+これにより、`displayName`および`key`が**category**に指定されている、非表示ではない新しい文字列フィールドが追加されます。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Reorder fields
+### フィールドの並べ替え
 
-The operation `reorderFields` reorders the list of fields in a template to match
-the requested field list.
+`reorderFields`操作では、テンプレート内のフィールドのリストを、リクエストされたフィールドリストに合わせて並べ替えます。
 
-| Parameter   |                                                   |
-|-------------|---------------------------------------------------|
-| `fieldKeys` | The new list of field keys in the requested order |
+| パラメータ       |                                |
+| ----------- | ------------------------------ |
+| `fieldKeys` | リクエストされた順番になっているフィールドキーの新しいリスト |
 
 ```json
 {
@@ -129,35 +120,30 @@ the requested field list.
 }
 ```
 
-This will reorder the fields for the template to have `field2` first, followed
-by `field1`, then `field3`.
+これにより、テンプレートのフィールドは、最初に`field2`、その後`field1`、`field3`が続くように並べ替えられます。
 
 <Message warning>
 
-This will affect existing instances of this template. It will reorder the
-fields, yet keep the values of the fields intact.
+これは、このテンプレートの既存のインスタンスに影響します。フィールドは並べ替えられますが、フィールドの値はそのまま変わりません。
 
 </Message>
 
-## Field operations
+## フィールドの操作
 
-Field operations transform the schema of a template. The following is a list of
-operations that can be used in this API and can potentially change the data of
-any previously assigned templates.
+フィールドの操作により、テンプレートのスキーマが変換されます。以下に、このAPIで使用できる、以前に割り当てたテンプレートのデータを変更する可能性のある操作のリストを示します。
 
-These changes will be logged as template changes but not as file changes.
+このような変更は、ファイルの変更ではなくテンプレートの変更としてログに記録されます。
 
-### Edit a field
+### フィールドの編集
 
-The operation `editField` option edits any number of the base properties of a
-field like the `displayName`, `description`, `key`, and `hidden` state.
+`editField`操作オプションでは、`displayName`、`description`、`key`、`hidden`状態など、フィールドの基本プロパティをいくつでも編集できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                                |
-|------------|----------------------------------------------------------------|
-| `data`     | An object representing the new properties to set for the field |
-| `fieldKey` | The key of the field to be edited                              |
+| パラメータ      |                             |
+| ---------- | --------------------------- |
+| `data`     | フィールドに設定する新しいプロパティを表すオブジェクト |
+| `fieldKey` | 編集するフィールドのキー                |
 
 <!-- markdownlint-enable line-length -->
 
@@ -171,26 +157,23 @@ field like the `displayName`, `description`, `key`, and `hidden` state.
 }
 ```
 
-This will update the field `category` to have a new display name of
-**Customer Group**. If the key is changed, existing values of the specified
-field are migrated to the new key. The search index will be updated yet it can
-take time depending on how many files are affected by the change.
+これにより、新しい表示名が**Customer Group**になるようにフィールド`category`が更新されます。このキーが変更された場合、指定されたフィールドの既存の値は新しいキーに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This may affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響する可能性があります。
 
 </Message>
 
-### Remove a field
+### フィールドの削除
 
-The operation `removeField` removes an field from a template.
+`removeField`操作では、テンプレートからフィールドを削除します。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter  |                                                  |
-|------------|--------------------------------------------------|
-| `fieldKey` | The key of the field to remove from the template |
+| パラメータ      |                      |
+| ---------- | -------------------- |
+| `fieldKey` | テンプレートから削除するフィールドのキー |
 
 <!-- markdownlint-enable line-length -->
 
@@ -201,34 +184,30 @@ The operation `removeField` removes an field from a template.
 }
 ```
 
-This will remove the field `brand` from the template as well as all instances of
-the template. The search index will be updated yet it can take time depending on
-how many files are affected by the change.
+これにより、フィールド`brand`は、テンプレートに加えて、テンプレートのすべてのインスタンスから削除されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-## Field Option Operations
+## フィールドオプションの操作
 
-Both the [`enum`](g://metadata/fields/enum) and
-[`multiSelect`](g://metadata/fields/multi-select) metadata field types support
-some additional operations to change the options of the fields.
+[`enum`](g://metadata/fields/enum)および[`multiSelect`](g://metadata/fields/multi-select)メタデータフィールドタイプはどちらも、フィールドのオプションを変更するための追加操作をサポートしています。
 
 <!-- markdownlint-disable line-length -->
 
-| Operation                                                                       |                                                 |
-|---------------------------------------------------------------------------------|-------------------------------------------------|
-| [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | Adds an option to an `enum` field               |
-| [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | Edits an `enum` field option                    |
-| [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | Re-orders the options on an `enum` field        |
-| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | Removes an `enum` field options                 |
-| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | Adds an option to a `multiSelect` field        |
-| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | Edits a `multiSelect` field option             |
-| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | Re-orders the options on a `multiSelect` field |
-| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field options          |
+| 操作                                                                              |                                 |
+| ------------------------------------------------------------------------------- | ------------------------------- |
+| [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | `enum`フィールドにオプションを追加します         |
+| [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | `enum`フィールドのオプションを編集します         |
+| [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | `enum`フィールドのオプションを並べ替えます        |
+| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | `enum`フィールドのオプションを削除します         |
+| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | `multiSelect`フィールドにオプションを追加します  |
+| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | `multiSelect`フィールドのオプションを編集します  |
+| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | `multiSelect`フィールドのオプションを並べ替えます |
+| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | `multiSelect`フィールドのオプションを削除します  |
 
 <!-- markdownlint-enable line-length -->
 

@@ -22,35 +22,27 @@ next_page_id: webhooks/v2/signatures_v2
 previous_page_id: webhooks/v2/update_v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/delete_v2.md
+fullyTranslated: true
 ---
-# Delete Webhooks
+# Webhookの削除
 
-To remove a webhook from a file or folder, you will need to use the
-[remove webhook endpoint][delete] with the ID of the webhook. This value can
-be obtained using the [list all webhooks endpoint][list].
+ファイルやフォルダからWebhookを削除するには、WebhookのIDを指定して[Webhookを削除][delete]エンドポイントを使用する必要があります。WebhookのIDは、[すべてのWebhookのリストを取得][list]エンドポイントを使用して取得できます。
 
-<Samples id='delete_webhooks_id'>
+<Samples id="delete_webhooks_id">
 
 </Samples>
 
-## Additional reasons for deletion
+## その他の削除の理由
 
-Using this endpoint is not the only way a webhook can be deleted.
+このエンドポイントを使用していなくても、Webhookが削除される場合があります。
 
-The following reasons can cause webhooks to be deleted.
+Webhookは以下の理由で削除される可能性があります。
 
-1. Deleting a Box application automatically deletes all webhooks associated with
-   the application.
-2. Deleting all active Access Tokens associated with a webhook will
-   automatically delete the webhook. This includes Developer Tokens and password
-   resets.
-3. If the last successful delivery was 30 days ago and the period between the
-   last successful delivery date and the last trigger date was more than 14
-   days, the webhook will be automatically deleted.
+1. Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
+2. Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードリセットが含まれます。
+3. 最後に成功した配信から30日が経過し、最後に配信が成功した日から最後のトリガーの日付までの期間が14日を超えた場合、Webhookは自動的に削除されます。
 
-In all of these cases Box would send a webhook payload with the
-`WEBHOOK.DELETED` event name to the notification URL. The body of the payload
-will include the following additional information.
+これらのすべてのケースで、Boxは`WEBHOOK.DELETED`イベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本体には以下の追加情報が含まれます。
 
 ```json
 "additional_info": {
@@ -59,4 +51,5 @@ will include the following additional information.
 ```
 
 [delete]: e://delete-webhooks-id
+
 [list]: e://get-webhooks

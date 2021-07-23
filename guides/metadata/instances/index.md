@@ -12,17 +12,16 @@ next_page_id: metadata/instances/delete
 previous_page_id: metadata/instances/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/4-instances/0-index.md
+fullyTranslated: true
 ---
-# Metadata instances
+# メタデータインスタンス
 
-A [metadata instance][instance] describes the relation between
-a [metadata template][template] and a file or folder. It includes the values
-that are assigned for every field of the template.
+[メタデータインスタンス][instance]には、[メタデータテンプレート][template]とファイルやフォルダ間の関係が記載されています。これには、テンプレートの各フィールドに割り当てられている値が含まれます。
 
-For example, a user might have assigned an `invoiceData` metadata template to a
-file and provided 2 values, one for the invoice ID and one for the customer ID.
+たとえば、ユーザーは、`invoiceData`メタデータテンプレートをファイルに割り当て、2つの値を指定しています。この場合、1つは請求書ID用、もう1つは顧客ID用です。
 
-You can assign up to 100 templates to specific file or folder.
+特定のファイルまたはフォルダには最大100個のテンプレートを割り当てることができます。
 
 [template]: g://metadata/templates
+
 [instance]: g://metadata/instances

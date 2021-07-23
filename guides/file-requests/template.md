@@ -19,58 +19,45 @@ next_page_id: file-requests/copy
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/1-template.md
+fullyTranslated: true
 ---
-# Create a template File Request
+# テンプレートのファイルリクエストの作成
 
-Currently, the API only allows the creation of new file requests by copying an
-existing file request associated to another folder. Please check our below
-guide on creating a template folder with a template file request.
+現在、このAPIで可能なのは、別のフォルダに関連付けられた既存のファイルリクエストをコピーして新しいファイルリクエストを作成することだけです。テンプレートのファイルリクエストを使用したテンプレートフォルダの作成に関する以下のガイドを確認してください。
 
-## 1. Template folder
+## 1. テンプレートフォルダ
 
-First off, create a template folder that you can associate the template file
-request to. This can be any folder really, but we recommend using a
-folder that is only used for this purpose.
+最初に、テンプレートのファイルリクエストを関連付けることができるテンプレートフォルダを作成します。これは実際にはどのフォルダでもかまいませんが、この目的でのみ使用されるフォルダを使用することをお勧めします。
 
-A folder can be created through the Box web or mobile interface, or through the
-[`POST /folders`](e://post_folders) API.
+フォルダはBoxウェブインターフェイスまたはモバイルインターフェイス、あるいは[`POST /folders`](e://post_folders) APIを使用して作成できます。
 
 <Message notice>
 
-When using server-side JWT authentication, we recommend creating folder that
-is owned by the application's
-[Service Account](g://authentication/user-types/service-account/). This way, the
-folder can't be accidentally deleted by a regular Box user.
+サーバー側JWT認証を使用する場合は、アプリケーションの[サービスアカウント](g://authentication/user-types/service-account/)が所有するフォルダを作成することをお勧めします。こうすることで、通常のBoxユーザーが誤ってこのフォルダを削除することはなくなります。
 
 </Message>
 
-## 2. Template file request
+## 2. テンプレートのファイルリクエスト
 
-To create a file request, navigate to the template folder in the web app an
-d click the 3 dots at the top of the page. Then, select **File Request** from
-the menu.
+ファイルリクエストを作成するには、ウェブアプリのテンプレートフォルダに移動し、ページの上部にある3つの点をクリックします。その後、メニューから \[**ファイルリクエスト**] を選択します。
 
 <ImageFrame center shadow>
 
-![Create a file request](./images/create.png)
+![ファイルリクエストの作成](./images/create.png)
 
 </ImageFrame>
 
-In the next configuration panel, click the **Edit** button to visit the file
-request configuration page.
+次の設定パネルで、\[**編集**] ボタンをクリックして、ファイルリクエストの設定ページにアクセスします。
 
 <ImageFrame center shadow>
 
-![Edit a file request](./images/edit.png)
+![ファイルリクエストの編集](./images/edit.png)
 
 </ImageFrame>
 
-On the configuration page, you can set configure the title and description,
-before saving the page.
+設定ページで、ページを保存する前に、タイトルと説明を設定できます。
 
-This page will also have the ID of the file request in the URL. Make a note of
-the URL as the number at the end is the file request's ID, which you will need
-when working with the API.
+このページには、URLに含まれるファイルリクエストのIDも表示されます。URLの末尾の数字がファイルリクエストのIDなので、このURLを書き留めてください。これは、APIを使用する際に必要になります。
 
 ```sh
 https://*.app.box.com/filerequest/2338423584
@@ -78,17 +65,10 @@ https://*.app.box.com/filerequest/2338423584
 
 <Message warning>
 
-If your template folder belongs to a JWT user, you will need to
-[invite](e://post-collaborations) a managed Box user to the folder before
-it can be seen in the web app. Invite yourself to the folder to allow yourself
-to add a file request to the folder via the app.
+テンプレートフォルダがJWTユーザーに属している場合は、管理対象Boxユーザーをフォルダに[招待](e://post-collaborations)し、そのフォルダがウェブアプリに表示されるようにする必要があります。自分自身をフォルダに招待すると、自分でこのアプリを使用してファイルリクエストをフォルダに追加できます。
 
 </Message>
 
-## 3. Using a template
+## 3. テンプレートの使用
 
-A template file request can be used to create new copies using the
-[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy)
-API. With the ID of a new folder in hand, you can copy the existing
-request, including its title, description and form-configuration
-to a new folder [with one API call](g://file-requests/copy).
+テンプレートのファイルリクエストを使用すると、[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy) APIによって新しいコピーを作成できます。新しいフォルダのIDを取得したら、[1回のAPI呼び出し](g://file-requests/copy)で既存のリクエスト (タイトル、説明、フォームの設定を含む) を新しいフォルダにコピーできます。

@@ -18,48 +18,42 @@ next_page_id: embed/box-embed
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-dicom.md
+fullyTranslated: true
 ---
 # Box DICOM
 
-The Box DICOM Viewer allows developers to store, view and share DICOM files like
-X-rays, CT scans, Ultrasounds and MRIs securely with Box while still embedding
-the viewer into their own application.
+開発者はBox DICOM Viewerを使用すると、X線、CTスキャン、超音波、MRIなどのDICOMファイルをBoxで安全に保存、表示、共有できるうえに、独自のアプリケーションにこのビューアーを埋め込むこともできます。
 
 <ImageFrame>
 
-![Box DICOM viewer](./box-dicom.png)
+![Box DICOM Viewer](./box-dicom.png)
 
 </ImageFrame>
 
-The Box DICOM Viewer is an FDA cleared Class II Medical Device for diagnostic
-viewing. It is a zero-footprint HTML5 viewer and can be embedded into an
-application in an `<iframe>` or with a Javascript SDK.
+Box DICOM Viewerは、FDAの認可を得た、診断表示用のクラスII医療機器です。これはゼロフットプリントのHTML5ビューアーで、`<iframe>`またはJavaScript SDKによってアプリケーションに埋め込むことができます。
 
-If you are a developer and want to embed the Box DICOM Viewer into your
-application, please [email us at for more information][email].
+Box DICOM Viewerをアプリケーションに埋め込みたい開発者の方は、[メールでお問い合わせ][email]ください。
 
-## Current Version
+## 最新のバージョン
 
-The current version for Box DICOM is
+Box DICOMの最新のバージョンは以下のとおりです。
 
-- Version: `1.3.5`
-- Locale: `en-US`
-- Javascript: [`boxdicom.com/dist/1.3.5/dicom-en-US.min.js`][js]
-- CSS: [`boxdicom.com/dist/1.3.5/dicom.min.css`][css]
+* バージョン: `1.3.5`
+* ロケール: `en-US`
+* JavaScript: [`boxdicom.com/dist/1.3.5/dicom-en-US.min.js`][js]
+* CSS: [`boxdicom.com/dist/1.3.5/dicom.min.css`][css]
 
 <Message warning>
 
-# Update to `v1.3.0` or higher
+# `v1.3.0`以降への更新
 
-If you are using a version of the DICOM Viewer prior to `v1.3.0`, please
-upgrade to `v1.3.0` or higher.
+`v1.3.0`より前のバージョンのDICOM Viewerを使用している場合は、`v1.3.0`以降にアップグレードしてください。
 
 </Message>
 
-## Supported Locales
+## サポートされているロケール
 
-To use a different locale, replace `en-US` in the Javascript download URL above
-with any of the following supported locales:
+別のロケールを使用するには、上記のダウンロードURL (JavaScript) 内の`en-US`を、サポートされている以下のロケールのいずれかに置き換えてください。
 
 |         |         |         |         |
 | ------- | ------- | ------- | ------- |
@@ -70,38 +64,35 @@ with any of the following supported locales:
 | `pl-PL` | `pt-BR` | `ru-RU` | `sv-SE` |
 | `tr-TR` | `zh-CN` | `zh-TW` |         |
 
-## `<iframe>` Embed
+## `<iframe>`埋め込み
 
-The Box DICOM viewer can be embedded in a HTML `iframe` or linked to directly.
-The URL pattern for the Box DICOM Viewer is as follows.
+Box DICOM Viewerは、HTML `iframe`に埋め込むか、直接リンクすることができます。Box DICOM ViewerのURLパターンは以下のとおりです。
 
 ```sh
 https://cloud.app.box.com/dicom_viewer/{FILE_ID}
 ```
 
-The File ID can be obtained from the API or from the Box web application user
-interface.
+ファイルIDは、APIまたはBoxウェブアプリのユーザーインターフェイスから取得できます。
 
-### `<iframe>` Parameters
+### `<iframe>`のパラメータ
 
-The following options can be provided as query string parameters:
+以下のオプションは、クエリの文字列パラメータとして指定できます。
 
 <!-- markdownlint-disable line-length -->
 
-|               |                                                                            |
-| ------------- | -------------------------------------------------------------------------- |
-| `accessToken` | A Box API access token                                                     |
-| `sharedName`  | A global link to a folder                                                  |
-| `toolbar`     | A boolean parameter to show or hide the top toolbar. Default is `true`.    |
-| `overlays`    | A boolean parameter to show or hide the text overlays. Default is `true`.  |
-| `worklist`    | A boolean parameter to show or hide the side worklist. Default is `true`.  |
+|               |                                                     |
+| ------------- | --------------------------------------------------- |
+| `accessToken` | Box APIアクセストークン                                     |
+| `sharedName`  | フォルダへのグローバルリンク                                      |
+| `toolbar`     | 最上部のツールバーの表示と非表示を切り替えるbooleanパラメータ。デフォルトは`true`です。  |
+| `overlays`    | テキストオーバーレイの表示と非表示を切り替えるbooleanパラメータ。デフォルトは`true`です。 |
+| `worklist`    | 横にあるワークリストの表示と非表示を切り替えるbooleanパラメータ。デフォルトは`true`です。 |
 
 <!-- markdownlint-enable line-length -->
 
-After the URL has been constructed, it can be embedded in an `iframe` or be
-linked to directly.
+URLが作成されたら、`iframe`に埋め込むか、または直接リンクすることができます。
 
-The following is an example of an `iframe` embed.
+`iframe`埋め込みの例を以下に示します。
 
 ```html
 <iframe width="800"
@@ -115,24 +106,25 @@ The following is an example of an `iframe` embed.
 
 <Message warning>
 
-# `allowfullscreen` is required The `allowfullscreen` attribute is required
-for the Box DICOM viewer's full-screen function to work properly.
+# `allowfullscreen`は必須です。`allowfullscreen`属性は必須です。
+
+Box DICOM Viewerのフルスクリーン機能が正常に動作するために必要です。
 
 </Message>
 
-## Javascript SDK
+## JavaScript SDK
 
-### Demo
+### デモ
 
 <!-- markdownlint-disable line-length -->
 
-<iframe width="100%" height="550" scrolling="no" title="Box DICOM JS SDK Viewer Demo" src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
+<iframe width="100%" height="550" scrolling="no" title="Box DICOM Viewer JS SDKのデモ" src="//codepen.io/box-platform/embed/VbPvNb/?height=550&theme-id=27216&default-tab=result&embed-version=2" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
 </iframe>
 
 <!-- markdownlint-enable line-length -->
 
-### Quick Start Example
+### クイックスタートの例
 
 <!-- markdownlint-disable line-length -->
 
@@ -163,10 +155,9 @@ for the Box DICOM viewer's full-screen function to work properly.
 
 <!-- markdownlint-enable line-length -->
 
-### JS SDK Parameters
+### JS SDKのパラメータ
 
-The primary function to create a viewer is `box.dicom.createViewer()`. The proper
-definition is:
+ビューアーを作成するための主な関数は`box.dicom.createViewer()`です。適切な定義は次のとおりです。
 
 ```js
 box.dicom.createViewer(element, config);
@@ -174,25 +165,25 @@ box.dicom.createViewer(element, config);
 
 <!-- markdownlint-disable line-length -->
 
-|           |                                                                                                                         |
-| --------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `element` | The DOM element to initialize the viewer into. Can be either a string (a DOM element ID) or an Element (a DOM element). |
-| `config`  | The configuration object.                                                                                               |
+|           |                                                            |
+| --------- | ---------------------------------------------------------- |
+| `element` | ビューアーの初期化先のDOM要素。文字列 (DOM要素ID) またはElement (DOM要素) を指定できます。 |
+| `config`  | 構成オブジェクト。                                                  |
 
-The `config` is a Javascript object with many possible options in the form of properties.
+`config`は、プロパティの形式で多くのオプションを指定できるJavaScriptオブジェクトです。
 
-|                    |                                                                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `accessToken`      | The access token for the user. Must have access to the `.boxdicom` file AND all of the individual `.dcm` files.                        |
-| `studies`          | An array of studies to load. Each study is an object. Each study object can specify a study by the Box File ID `("fileID": "123456")`. |
-| `overlays`         | Optional overlay configuration details.                                                                                                |
-| `toolbar`          | Optional toolbar configuration details.                                                                                                |
-| `worklist`         | Optional worklist configuration details.                                                                                               |
-| `hangingProtocols` | Optional hanging protocols to control the layout and display settings of the study.                                                    |
+|                    |                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| `accessToken`      | ユーザーのアクセストークン。`.boxdicom`ファイルおよび個々の`.dcm`ファイルすべてへのアクセス権限が必要です。                       |
+| `studies`          | 読み込むスタディの配列。各スタディはオブジェクトです。各スタディオブジェクトは、BoxファイルID`("fileID": "123456")`でスタディを指定できます。 |
+| `overlays`         | オーバーレイの構成の詳細 (省略可)。                                                                  |
+| `toolbar`          | ツールバーの構成の詳細 (省略可)。                                                                   |
+| `worklist`         | ワークリストの構成の詳細 (省略可)。                                                                  |
+| `hangingProtocols` | スタディのレイアウトと表示の設定を制御するハンギングプロトコル (省略可)。                                               |
 
 <!-- markdownlint-enable line-length -->
 
-You can enable / disable overlays using the visible property:
+visibleプロパティを使用して、オーバーレイを有効/無効にすることができます。
 
 ```json
 {
@@ -206,7 +197,7 @@ You can enable / disable overlays using the visible property:
 }
 ```
 
-You can control which fields are displayed using the fields property:
+fieldsプロパティを使用して、表示されるフィールドを制御できます。
 
 ```json
 {
@@ -230,7 +221,7 @@ You can control which fields are displayed using the fields property:
 }
 ```
 
-You can show / hide the toolbar using the visible property.
+visibleプロパティを使用して、ツールバーの表示/非表示を切り替えることができます。
 
 ```json
 {
@@ -244,7 +235,7 @@ You can show / hide the toolbar using the visible property.
 }
 ```
 
-You can control which buttons are displayed using the buttons property:
+buttonsプロパティを使用して、表示されるボタンを制御できます。
 
 ```json
 {
@@ -265,7 +256,7 @@ You can control which buttons are displayed using the buttons property:
 }
 ```
 
-You can show / hide the worklist using the visible property.
+visibleプロパティを使用して、ワークリストの表示/非表示を切り替えることができます。
 
 ```json
 {
@@ -279,15 +270,11 @@ You can show / hide the worklist using the visible property.
 }
 ```
 
-## DICOM Import Javascript SDK
+## DICOMインポートのJavaScript SDK
 
-The Box DICOM Import tool intelligently crawls through folders and subfolders to
-find your DICOM data. It can recognize non-DICOM to avoid uploading unwanted
-content such as executables. The resulting files are organized by patient and
-study details.
+Box DICOMインポートツールは、フォルダとサブフォルダをインテリジェントにクロールし、DICOMデータを見つけます。実行可能ファイルなどの不要なコンテンツがアップロードされないようにDICOM以外のものを認識できます。結果のファイルは、患者とスタディの詳細別に整理されます。
 
-The Box DICOM Import widget can be embedded in your applications using the
-JavaScript SDK.
+Box DICOMインポートウィジェットは、JavaScript SDKを使用してアプリケーションに埋め込むことができます。
 
 ```js
 box.dicom.createImportWidget("my-container", {
@@ -296,7 +283,7 @@ box.dicom.createImportWidget("my-container", {
 });
 ```
 
-Here is an example of how to use the "success" callback:
+「success」コールバックの使用方法の例を以下に示します。
 
 ```js
 box.dicom.createImportWidget("my-dicom-import-container", {
@@ -317,7 +304,7 @@ box.dicom.createImportWidget("my-dicom-import-container", {
 });
 ```
 
-### Available Overlay Fields
+### 使用可能なオーバーレイフィールド
 
 `box.dicom.core.Tag.AdditionalPatientHistory`,
 `box.dicom.core.Tag.BitsAllocated`, `box.dicom.core.Tag.BitsStored`,
@@ -357,7 +344,7 @@ box.dicom.createImportWidget("my-dicom-import-container", {
 `box.dicom.core.Tag.WindowCenterWidthExplanation`,
 `box.dicom.core.Tag.WindowWidth`
 
-### Available Toolbar Options
+### 使用可能なツールバーオプション
 
 `box.dicom.viewer.Toolbar.Buttons.Log`,
 `box.dicom.viewer.Toolbar.Buttons.Separato`,
@@ -372,5 +359,7 @@ box.dicom.createImportWidget("my-dicom-import-container", {
 `box.dicom.viewer.Toolbar.Buttons.More`
 
 [email]: mailto:dicom-sales@box.com
+
 [js]: https://boxdicom.com/dist/1.3.5/dicom-en-US.min.js
+
 [css]: https://boxdicom.com/dist/1.3.5/dicom.min.css

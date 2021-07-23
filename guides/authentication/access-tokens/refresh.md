@@ -21,14 +21,14 @@ next_page_id: authentication/access-tokens/revoke
 previous_page_id: authentication/access-tokens/developer-tokens
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/refresh.md
+fullyTranslated: true
 ---
-# Refresh a Token
+# トークンの更新
 
-An Access Token can be refreshed by using the Refresh Token that came with the
-Access Token. This can be done before or after the Access Token expires.
+アクセストークンを更新するには、アクセストークンに付属された更新トークンを使用します。更新は、アクセストークンの有効期限の前でも後でも行うことができます。
 
-To do this, the application passes the `refresh_token` to the [`POST
-/oauth2/token`](endpoint://post-oauth2-token) endpoint as follows.
+これを行うには、アプリケーションで以下のように`refresh_token`を[`POST
+/oauth2/token`](endpoint://post-oauth2-token)エンドポイントに渡します。
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
@@ -43,25 +43,20 @@ curl -X POST https://api.box.com/oauth2/token \
 
 <Message>
 
-# Usage in SDKs
+# SDKでの使用方法
 
-All of the Box SDKs support automatic Access Token renewal for JWT and OAuth 2.0
-applications.
+すべてのBox SDKは、JWTおよびOAuth 2.0アプリケーションのためにアクセストークンの自動更新をサポートしています。
 
 </Message>
 
 <Message danger>
 
-# Refresh token expiration
+# 更新トークンの有効期限
 
-A refresh token is valid for 60 days and can be used to obtain a new access
-token and refresh token only once. If the access token and refresh token are
-not refreshed within 60 days, the user will need to be re-authorized.
+更新トークンの有効期限は60日間で、このトークンを使用すると、新しいアクセストークンと更新トークンを1回だけ取得できます。アクセストークンと更新トークンが60日以内に更新されなかった場合は、ユーザーの再承認が必要になります。
 
-Every time an application uses the refresh token to get a new access token the
-refresh token is invalidated and a new refresh token is returned with the
-new access token.
+アプリケーションが更新トークンを使用して新しいアクセストークンを取得するたびに、更新トークンは無効になり、新しい更新トークンが新しいアクセストークンとともに返されます。
 
-This new refresh token is then again only valid for 1 use within 60 days.
+その後、この新しい更新トークンは再度60日以内に1回だけ使用できます。
 
 </Message>

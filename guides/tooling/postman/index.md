@@ -19,42 +19,36 @@ next_page_id: tooling/postman/install
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/index.md
+fullyTranslated: true
 ---
-# Postman Collection
+# Postmanコレクション
 
-[Postman][postman] is a tool that lets you build and test HTTP requests in an
-easy-to-use interface without configuring a full development environment. The
-**Box Postman Collection** is a set of preconfigured requests that make it
-possible to get started with the Box API without having to manually configure
-the requests.
+[Postman][postman]は、完全な開発環境を構成しなくても、使いやすいインターフェイスでHTTPリクエストを作成およびテストできるツールです。**Box Postmanコレクション**は事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、Box APIを利用できるようになります。
 
-The simplest way to get started with Postman is with our Postman Quick Start guide.
+Postmanの使用を開始するには、Postmanクイックスタートガイドを使用するのが最も簡単な方法です。
 
-<CTA to='g://tooling/postman/quick-start'>
+<CTA to="g://tooling/postman/quick-start">
 
-Get Started with the Box Postman Collection
+Box Postmanコレクションの使い方
 
 </CTA>
 
-## Latest Collection
+## 最新のコレクション
 
-Clicking the following button will install our latest Postman
-collection. It is a complete Postman collection that covers every API endpoint
-and is auto-generated from our [OpenAPI specification][openapi]. It is expected
-to get many more updates including some to make authentication a lot easier.
+下のボタンをクリックすると、最新のPostmanコレクションがインストールされます。これは、すべてのAPIエンドポイントをカバーする完全なPostmanコレクションであり、Boxの[OpenAPIの仕様][openapi]から自動生成されます。認証を簡単にするアップデートを含む、より多くのアップデートを取得することが期待されています。
 
-<Postman anonymous >
+<Postman anonymous>
 
 </Postman>
 
 <Message warning>
 
-The Postman collection requires the [Postman desktop app][postman] to be
-installed. The Box Postman collection does not support the now deprecated
-Postman Chrome application.
+Postmanコレクションを使用するには、[Postmanデスクトップアプリ][postman]をインストールする必要があります。Box Postmanコレクションでは、非推奨となったPostman Chromeアプリケーションがサポートされていません。
 
 </Mesage>
 
 [postman]: https://postman.com
+
 [legacy]: https://www.postman.com/collections/768279fde466dffc5511
+
 [openapi]: https://github.com/box/box-openapi

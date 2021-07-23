@@ -20,25 +20,23 @@ next_page_id: metadata/fields/float
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/3-fields/1-string.md
+fullyTranslated: true
 ---
-# String metadata field
+# 文字列メタデータフィールド
 
-A metadata field of type `string` is displayed to a user as a standard text-field.
+`string`タイプのメタデータフィールドは、標準のテキストフィールドとしてユーザーに表示されます。
 
-<ImageFrame border center shadow width='400'>
+<ImageFrame border center shadow width="400">
 
-![String field](./metadata-field-string.png)
+![文字列フィールド](./metadata-field-string.png)
 
 </ImageFrame>
 
-## Create a string field
+## 文字列フィールドの作成
 
-A `string` field can be added to a metadata template either when [creating a
-metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+`string`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-The required attributes for a `string` field are a `type`, a `displayName` and a
-`key`.
+`string`フィールドの必須属性は、`type`、`displayName`、および`key`です。
 
 ```json
 {
@@ -56,20 +54,13 @@ The required attributes for a `string` field are a `type`, a `displayName` and a
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
-and the field can be set to `hidden` to hide it from users in the web and mobile
-apps.
+必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
-## Update a string field
+## 文字列フィールドの更新
 
-A `string` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
-**operations** to ensure that any template that is already assigned to a file or
-folder is updated as well.
+`string`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
-When updating a `string` metadata field the only relevant operation is the
-`editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+`string`メタデータフィールドを更新する際、関連する操作は、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作のみです。
 
 ```json
 [
@@ -88,9 +79,10 @@ When updating a `string` metadata field the only relevant operation is the
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
 [g_create_template]: g://metadata/templates/create
+
 [g_update_template]: g://metadata/templates/update

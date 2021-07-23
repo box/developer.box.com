@@ -21,35 +21,28 @@ next_page_id: folders/single/change-owner
 previous_page_id: folders/single/copy
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/delete.md
+fullyTranslated: true
 ---
-# Delete Folder
+# フォルダの削除
 
-To remove a folder in Box you will need to provide our API with the ID of the
-folder.
+Box上でフォルダを削除するには、削除するフォルダのIDをAPIに渡す必要があります。
 
-<Samples id='delete_folders_id' >
+<Samples id="delete_folders_id">
 
 </Samples>
 
-## Deleting non-empty folders
+## 空でないフォルダの削除
 
-This API returns an error if the folder is not empty. When deleting a
-folder, you can pass in the `recursive` parameter to force a
-folder to be deleted even if it is not empty. This will delete all
-items within this folder, including any of their descendants.
+フォルダが空でない場合、このAPIはエラーを返します。フォルダを削除するときに`recursive`パラメータを渡すと、空でないフォルダも強制的に削除できます。その場合は、サブフォルダを含め、フォルダ内のすべての項目が削除されます。
 
-## Folder locking
+## フォルダのロック
 
-The enterprise settings determine whether the folder will
-be permanently deleted from Box or moved to the trash.
+フォルダがBoxから完全に削除されるか、ごみ箱に移動されるかは、会社の設定に応じて決定されます。
 
-During this operation, part of the file tree will be locked, mainly
-the source folder and all of its descendants.
+この操作の進行中は、ファイルツリーの一部がロックされます。ロックされるのは、主に元のフォルダとその子孫フォルダすべてです。
 
-For the duration of the operation, no other move, copy, delete, or restore
-operation can performed on any of the locked folders.
+操作の進行中は、ロックされているどのフォルダに対しても、それ以外の移動、コピー、削除、または復元操作を実行できません。
 
-## Timeout
+## タイムアウト
 
-Timeout for this operation is 60 seconds. The operation will include
-after a `HTTP 503` has been returned.
+この操作のタイムアウトは60秒です。操作の時間には、`HTTP 503`が返されてからの時間も含まれます。

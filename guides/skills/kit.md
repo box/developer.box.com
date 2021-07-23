@@ -21,14 +21,14 @@ next_page_id: skills
 previous_page_id: skills/examples
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/kit.md
+fullyTranslated: true
 ---
 # Box Skills Kit
 
-The Box Skills Kit is a Node wrapper that is designed to abstract many of the
-common complex operations required during the Box Skills development process.
+Box Skills Kitは、Box Skills開発プロセスでよく必要とされる複雑な操作の多くを抽象化するために設計されたノードラッパーです。
 
 <CTA to="https://github.com/box/box-skills-kit-nodejs/tree/master/skills-kit-library">
 
-Visit the Skills Kit on GitHub
+GitHub上のSkills Kitにアクセスする
 
 </CTA>

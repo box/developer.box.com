@@ -20,28 +20,23 @@ next_page_id: skills/handle/metadata
 previous_page_id: skills/handle
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/handle/payload.md
+fullyTranslated: true
 ---
-# Box Skills Payload
+# Box Skillsペイロード
 
-When a new file is uploaded, copied, or moved to a folder monitored by a Skills
-app, the invocation URL that was specified during application setup and
-authentication will receive an event payload from Box.
+Skillsアプリが監視するフォルダに新しいファイルがアップロード、コピー、または移動されると、アプリケーションの設定および認証中に指定された呼び出しURLに、Boxからイベントペイロードが送られます。
 
-The event payload will contain all information needed to read in the content of
-the uploaded file to send to a processing system, such as a machine learning
-system, and to write metadata back to the file once the processing system has
-completed.
+このイベントペイロードには、アップロードされたファイルのコンテンツを読み込んで機械学習システムなどの処理システムに送信し、処理システムの完了後にファイルにメタデータを書き戻すために必要な情報がすべて含まれています。
 
-<CTA to='r://skill_invocation'>
+<CTA to="r://skill_invocation">
 
-Example payload and reference
+ペイロードの例とリファレンス
 
 </CTA>
 
-## Access Tokens
+## アクセストークン
 
-Every Skills payload includes a set of Access Tokens that can be used to access
-the file that triggered the event.
+各Skillsペイロードには、イベントをトリガーしたファイルへのアクセスに使用できる一連のアクセストークンが含まれています。
 
 ```json
 {
@@ -64,17 +59,11 @@ the file that triggered the event.
 }
 ```
 
-The `token.write.access_token` can be used to write metadata to the file, while
-the `token.read.access_token` can be only used to read the file content. The
-read-only token is useful when creating a download URL for the file which can
-then be shared with other services.
+`token.write.access_token`を使用すると、ファイルにメタデータを書き込むことができるのに対し、`token.read.access_token`はファイルコンテンツの読み取りのみに使用できます。読み取り専用トークンは、後で他のサービスと共有できるファイルのダウンロードURLを作成する際に役立ちます。
 
-## Downloadable file URL
+## ダウンロード可能ファイルのURL
 
-Many machine learning services support directly passing a file URL to that
-service for processing. To create a download URL for a Box file, you will need
-to parse the `token.read.access_token` as well as the `source.id` from the event
-payload.
+多くの機械学習サービスでは、ファイルのURLを処理するためのそのサービスに直接渡すことがサポートされています。BoxファイルのダウンロードURLを作成するには、イベントペイロードの`token.read.access_token`および`source.id`を解析する必要があります。
 
 ```json
 {
@@ -96,13 +85,13 @@ payload.
 }
 ```
 
-The download URL for a file can be constructed as follows.
+ファイルのダウンロードURLは、次のように作成できます。
 
 ```curl
 https://api.box.com/2.0/files/{source.id}/content?access_token={token.read.access_token}
 ```
 
-In our example, this URL would be as follows.
+この例では、このURLは次のようになります。
 
 ```curl
 https://api.box.com/2.0/files/12345/content?access_token=Z3ExaVNyQWw6WjRsanRKZG5lQk9qUE1BVQc3FIOG9vSGV4VHo4QzAyg5T1JvNnJo

@@ -19,36 +19,29 @@ next_page_id: file-requests/get
 previous_page_id: file-requests/template
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/2-copy.md
+fullyTranslated: true
 ---
-# Copy a File Request
+# ファイルリクエストのコピー
 
-To create a copy of an existing [template](g://file-requests/template) file
-request, all you need is its unique ID, and the ID of the folder to apply the
-new file request to.
+既存の[テンプレート](g://file-requests/template)ファイルリクエストのコピーを作成するために必要なのは、その一意のIDと、新しいファイルリクエストの適用先となるフォルダのIDだけです。
 
-<Samples id='post_file_requests_id_copy' >
+<Samples id="post_file_requests_id_copy">
 
 </Samples>
 
 <Message notice>
 
-The ID of a folder and file request can be determined by visiting the Box web
-app and inspecting the URL.
+フォルダやファイルリクエストのIDを確認するには、BoxウェブアプリにアクセスしてそのURLを調べます。
 
-The folder ID is the number at the end of the URL when visiting a folder, for
-example `app.box.com/folder/123` is the URL for the folder with ID `123`.
+フォルダIDは、フォルダにアクセスしたときにURLの末尾にある番号です。たとえば、`app.box.com/folder/123`というURLの場合、フォルダのIDは`123`です。
 
-For a file request, please [check our guide](g://file-requests/template)
-on setting up a file request template to learn how to determine a file request
-ID.
+ファイルリクエストについては、ファイルリクエストテンプレートの設定に関する[ガイド](g://file-requests/template)で、ファイルリクエストIDの確認方法を確認してください。
 
 </Message>
 
-## Updating a file request on copy
+## コピー時にファイルリクエストを更新する
 
-It is possible to make some basic changes to a file request when copying from
-a template. The file request's title, description, status and a few more other
-settings can be updated when the file request is copied from the template.
+テンプレートからコピーする際、ファイルリクエストに基本的な変更を行うことができます。ファイルリクエストをテンプレートからコピーするときに更新できるのは、ファイルリクエストのタイトル、説明、ステータス、およびその他いくつかの設定です。
 
 ```curl
 curl -i -X POST "https://api.box.com/2.0/file_requests/2342235/copy" \
@@ -67,8 +60,6 @@ curl -i -X POST "https://api.box.com/2.0/file_requests/2342235/copy" \
 
 <Message notice>
 
-For more details on the different fields that can be updated when creating
-a template, please see the reference documentation for the
-[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy) API.
+テンプレート作成時に更新できるさまざまなフィールドの詳細については、[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy) APIのリファレンスドキュメントを参照してください。
 
 </Message>

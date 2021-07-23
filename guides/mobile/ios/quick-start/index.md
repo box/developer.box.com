@@ -15,40 +15,36 @@ next_page_id: mobile/ios/quick-start/create-ios-app
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/ios/quick-start/0-index.md
+fullyTranslated: true
 ---
-# Learn to use the iOS SDK
+# iOS SDKの使い方を確認する
 
 <ImageFrame center>
 
-![iOS emulator](./xcode-code-snippet.png)
+![iOSエミュレータ](./xcode-code-snippet.png)
 
 </ImageFrame>
 
-The Box iOS SDK is a [Swift language](https://developer.apple.com/swift/)
-wrapper for adding the Box API into your iOS project.
+Box iOS SDKは、iOSプロジェクトにBox APIを追加するための[Swift言語](https://developer.apple.com/swift/)ラッパーです。
 
-## Requirements
+## 要件
 
-To begin working with the Box iOS SDK and this quick start, the following are
-required:
+Box iOS SDKとこのクイックスタートの使用を開始するには、以下のものが必要です。
 
-* iOS 11.0+ / Mac OS X 10.13+
-* Xcode 10.0+
+* iOS 11.0以降/Mac OS X 10.13以降
+* Xcode 10.0以降
 
-## Overview
+## 概要
 
-This guide will take you through the following steps.
+このガイドでは、以下の手順を説明します。
 
-1. [Create a new iOS app](g://mobile/ios/quick-start/create-ios-app/) in Xcode.
-2. [Install the iOS SDK](g://mobile/ios/quick-start/install-ios-sdk/)
-   into your project.
-3. [Configure a Box App](g://mobile/ios/quick-start/configure-box-app/)
-   so that the iOS SDK can access the Box API.
-4. [Make an API call](g://mobile/ios/quick-start/make-api-call/)
-   to the Box API with the iOS SDK.
+1. Xcodeで[新しいiOSアプリを作成](g://mobile/ios/quick-start/create-ios-app/)します。
+2. プロジェクトに[iOS SDKをインストール](g://mobile/ios/quick-start/install-ios-sdk/)します。
+3. iOS SDKからBox APIにアクセスできるように[Boxアプリを設定](g://mobile/ios/quick-start/configure-box-app/)します。
+4. iOS SDKを使用してBox APIに対する[API呼び出しを実行](g://mobile/ios/quick-start/make-api-call/)します。
 
 <Next>
 
-I am ready to get started
+開始する準備ができました
 
 </Next>

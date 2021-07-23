@@ -20,34 +20,29 @@ next_page_id: ''
 previous_page_id: metadata/fields/enum
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/3-fields/5-multi-select.md
+fullyTranslated: true
 ---
-# Multi Select metadata field
+# 複数選択メタデータフィールド
 
-A metadata field of type `multiSelect` is displayed to a user as a dropdown
-list. The user can select multiple items from the list.
+`multiSelect`タイプのメタデータフィールドは、ドロップダウンリストとしてユーザーに表示されます。ユーザーはリストから複数の項目を選択できます。
 
-<ImageFrame border center shadow width='400'>
+<ImageFrame border center shadow width="400">
 
-![String field](./metadata-field-multi-select.png)
+![文字列フィールド](./metadata-field-multi-select.png)
 
 </ImageFrame>
 
 <Message notice>
 
-A `multiSelect` field allows a user to select zero, 1, or more values. To force
-a user to select only 1 value at most, use the [`enum`][g_enum_field] template
-field.
+`multiSelect`フィールドを使用すると、ユーザーは0個、1個、または複数個の値を選択できます。ユーザーが選択できる値を1つだけに制限するには、[`enum`][g_enum_field]テンプレートフィールドを使用します。
 
 </Message>
 
-## Create a `multiSelect` field
+## `multiSelect`フィールドの作成
 
-A `multiSelect` field can be added to a metadata template either when [creating
-a metadata template][g_create_template], or when [updating a
-template][g_update_template] with the `addField` operation.
+`multiSelect`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-The required attributes for a `multiSelect` field are a `type`, a `displayName`,
-a `key`, and a list of options.
+`multiSelect`フィールドの必須属性は、`type`、`displayName`、`key`、およびオプションのリストです。
 
 ```json
 {
@@ -70,22 +65,15 @@ a `key`, and a list of options.
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
-and the field can be set to `hidden` to hide it from users in the web and mobile
-apps.
+必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
 
-## Update a `multiSelect` field
+## `multiSelect`フィールドの更新
 
-A `multiSelect` template field can be updated by [updating the
-template][g_update_template] it belongs to. Updates to templates happen through
-**operations** to ensure that any template that is already assigned to a file or
-folder is updated as well.
+`multiSelect`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
-### Change basic field values
+### 基本的なフィールド値の変更
 
-When updating a `multiSelect` metadata field one of the possible operations is
-the `editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+`multiSelect`メタデータフィールドを更新する際に可能な操作の1つとして、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作があります。
 
 ```json
 [
@@ -102,23 +90,19 @@ the `editField` operation which can be used to change the field's `key`,
 
 <Message>
 
-The `fieldKey` here represents the original key of the field to change. The
-`data.key` field is the new key of the field.
+ここにある`fieldKey`は、変更するフィールドの元のキーを表します。`data.key`フィールドはフィールドの新しいキーです。
 
 </Message>
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Add an option
+### オプションの追加
 
-Adding an option to a `multiSelect` field can be achieved through the
-`addMultiSelectOption` operation. The operation expects the `fieldKey` to be set
-to the key of the `multiSelect` field to change, and a `data` object with the
-`key` of the new option to add.
+`multiSelect`フィールドにオプションを追加するには、`addMultiSelectOption`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定するほか、`data`オブジェクトには、追加する新しいオプションの`key`を指定する必要があります。
 
 ```json
 [
@@ -132,7 +116,7 @@ to the key of the `multiSelect` field to change, and a `data` object with the
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -147,16 +131,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Reorder options
+### オプションの並べ替え
 
-Reordering the options in a `multiSelect` field can be achieved through the
-`reorderMultiSelectOptions` operation. The operation expects the `fieldKey` to
-be set to the key of the `multiSelect` field to change, and an
-`multiSelectOptionKeys` array with the keys of the options in order.
+`multiSelect`フィールドでオプションを並べ替えるには、`reorderMultiSelectOptions`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定するほか、`multiSelectOptionKeys`配列にはオプションのキーを順番に指定する必要があります。
 
 ```json
 [
@@ -173,7 +154,7 @@ be set to the key of the `multiSelect` field to change, and an
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -188,18 +169,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-New options can not be added with this operation. This will affect existing
-instances of this template.
+この操作では、新しいオプションを追加することはできません。これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Edit an option
+### オプションの編集
 
-Editing an option of a `multiSelect` field can be achieved through the
-`editMultiSelectOption` operation. The operation expects the `fieldKey` to be
-set  to the key of the `multiSelect` field to change, and an
-`multiSelectOptionKey` to be set to the key of the field option. Finally, it
-expects a `data` object with the new `key` of the field option.
+`multiSelect`フィールドのオプションを編集するには、`editMultiSelectOption`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定し、`multiSelectOptionKey`に、フィールドオプションのキーを設定する必要があります。最後に、`data`オブジェクトには、フィールドオプションの新しい`key`を指定する必要があります。
 
 ```json
 [
@@ -214,7 +190,7 @@ expects a `data` object with the new `key` of the field option.
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -229,16 +205,13 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template.
+これは、このテンプレートの既存のインスタンスに影響します。
 
 </Message>
 
-### Remove an option
+### オプションの削除
 
-Removing an option from a `multiSelect` field can be achieved through the
-`removeMultiSelectOption` operation. The operation expects `fieldKey` to be set
-to the key of the `multiSelect` field to change, and a `multiSelectOptionKey`
-to be set to the key of the field option to remove.
+`multiSelect`フィールドからオプションを削除するには、`removeMultiSelectOption`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定し、`multiSelectOptionKey`に、削除するフィールドオプションのキーを設定します。
 
 ```json
 [
@@ -250,7 +223,7 @@ to be set to the key of the field option to remove.
 ]
 ```
 
-The list of options should now be as follows.
+オプションのリストは次のようになります。
 
 ```json
 ...
@@ -264,11 +237,12 @@ The list of options should now be as follows.
 
 <Message warning>
 
-This will affect existing instances of this template. Any fields that were set
-to this value will have the value removed from its list of selected values.
+これは、このテンプレートの既存のインスタンスに影響します。この値に設定されたすべてのフィールドでは、値が、選択した値のリストから削除されます。
 
 </Message>
 
 [g_create_template]: g://metadata/templates/create
+
 [g_update_template]: g://metadata/templates/update
+
 [g_enum_field]: g://metadata/fields/enum

@@ -15,66 +15,46 @@ next_page_id: search/filtering
 previous_page_id: search/indexing
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/2-query-operators.md
+fullyTranslated: true
 ---
-# Query operators
+# クエリ演算子
 
-The [`GET /search`](e://get_search) API supports a variety of
-different query operators to help refining the results returned
-by the API.
+[`GET /search`](e://get_search) APIでは、APIによって返された結果を絞り込むのに役立つさまざまなクエリ演算子がサポートされています。
 
-All of these operations are passed into the `query` parameter when
-creating the search.
+これらの演算はすべて、検索の作成時に`query`パラメータに渡されます。
 
-## Exact matches with `""`
+## 完全一致に使用する`""`
 
-By wrapping a query in double quotes (`""`) only exact matches are
-returned by the API. Exact searches do not return search matches
-based on specific character sequences. Instead, they return
-matches based on phrases, that is, word sequences.
+クエリを二重引用符 (`""`) で囲むと、APIによって完全一致のみが返されます。完全一致検索では、特定の文字の並びに基づいた検索結果は返されません。代わりに、フレーズ (つまり、単語の並び) に基づいた一致が返されます。
 
-For example, a search for `"Blue-Box"` may return search results
-including the sequence `"blue.box"`, `"Blue Box"`, and `"Blue-Box"`;
-any item containing the words `Blue` and `Box` consecutively, in
-the order specified.
+たとえば、`"Blue-Box"`を検索すると、`"blue.box"`、`"Blue Box"`、`"Blue-Box"`などの並びを含む、検索結果が返されます。つまり、`Blue`および`Box`という単語が指定した順序で連続して含まれている項目です。
 
-## Matching multiple terms with `AND`
+## 複数用語の一致に使用する`AND`
 
-When the `AND` operator is used, the search returns items that
-contain both the search terms on the left and right of the operator.
+`AND`演算子を使用すると、検索では、演算子の左側と右側にある検索用語を両方とも含む項目が返されます。
 
-For example, a search for `marketing AND BoxWorks` returns items
-that have both `marketing` and `BoxWorks` within its text in any order.
-It does not return a result that only has `BoxWorks` in its text.
+たとえば、`marketing AND BoxWorks`を検索すると、`marketing`と`BoxWorks`の両方が任意の順番でテキストに含まれている項目が返されます。テキストに`BoxWorks`のみが含まれる結果は返されません。
 
-## Matching either search term with `OR`
+## いずれかの検索用語の一致に使用する`OR`
 
-When the `OR` operator is used, the search returns items that
-contain either the search terms on the left or right of the operator.
+`OR`演算子を使用すると、検索では、演算子の左側と右側にある検索用語のいずれかを含む項目が返されます。
 
-For example, a search for `marketing OR BoxWorks` returns a result that
-has either `marketing` or `BoxWorks` within its text. Using this
-operator is not necessary as we implicitly interpret multi-word
-queries as `OR` unless another supported boolean term is used.
+たとえば、`marketing OR BoxWorks`を検索すると、`marketing`と`BoxWorks`のいずれかがテキストに含まれている結果が返されます。サポートされている別のブール条件が使用されている場合を除き、複数語のクエリは暗黙的に`OR`として解釈されるため、この演算子の使用は必須ではありません。
 
-## Excluding search terms with `NOT`
+## 検索用語の除外に使用する`NOT`
 
-When the `NOT` operator is used, the search returns items that
-do not contain the term that follows the operator.
+`NOT`演算子を使用すると、検索では、演算子に続く用語を含まない項目が返されます。
 
-For example, a search for `marketing AND NOT BoxWorks` returns a result
-that has only `marketing` within its text. Results containing
-`BoxWorks` are omitted.
+たとえば、`marketing AND NOT BoxWorks`を検索すると、テキストに`marketing`のみが含まれている結果が返されます。`BoxWorks`が含まれる結果は省略されます。
 
 <Message warning>
 
-Please note that we do not support lower case (that is,
-`and`, `or`, and `not`) or mixed case (that is, `And`, `Or`, and `Not`)
-operators.
+小文字の演算子 (`and`、`or`および`not`) および大文字と小文字を組み合わせた演算子 (`And`、`Or`および`Not`) はサポートされていないことに注意してください。
 
 </Message>
 
-<CTA to='https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content'>
+<CTA to="https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content">
 
-Check our community article with the latest details on Search in Box
+Boxコミュニティの記事で、Boxでの検索に関する最新情報を確認する
 
 </CTA>

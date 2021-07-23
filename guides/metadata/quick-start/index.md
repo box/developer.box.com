@@ -15,38 +15,31 @@ next_page_id: metadata/quick-start/create-template
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/0-index.md
+fullyTranslated: true
 ---
-# Working with Metadata
+# メタデータの操作
 
-The Metadata APIs are a great tool to allow applications to automatically add
-additional information to files and folders.
+Metadata APIは、アプリケーションがファイルやフォルダに自動的に情報を追加できるようにする優れたツールです。
 
 <ImageFrame center>
 
-![An example of Metadata](../metadata-example.png)
+![メタデータの例](../metadata-example.png)
 
 </ImageFrame>
 
-## Overview
+## 概要
 
-This guide will take you through the following steps.
+このガイドでは、以下の手順を説明します。
 
-1. [List all templates](g://metadata/quick-start/list-all/)
-   available to you.
-2. [Create a custom metadata
-   template](g://metadata/quick-start/create-template/) to hold data specific
-   to your enterprise.
-3. [Apply a custom metadata template](g://metadata/quick-start/create-instance/)
-   to a file, allowing you to assign custom data to a file.
-4. [Update metadata instance](g://metadata/quick-start/update-instance/)
-   on a file, allowing you to change the data assigned to a file.
-5. [Update a metadata template](g://metadata/quick-start/update-template/)
-   and change the data applied to all instances of this template.
-6. [Create a query to find files by metadata](g://metadata/quick-start/create-query/)
-   and change the data applied to all instances of this template.
+1. 使用できる[すべてのテンプレートのリストを取得](g://metadata/quick-start/list-all/)します。
+2. 会社固有のデータを保持する[カスタムメタデータテンプレートを作成](g://metadata/quick-start/create-template/)します。
+3. ファイルに[カスタムメタデータテンプレートを適用](g://metadata/quick-start/create-instance/)し、カスタムデータをファイルに割り当てられるようにします。
+4. ファイルの[メタデータインスタンスを更新](g://metadata/quick-start/update-instance/)し、ファイルに割り当てられたデータを変更できるようにします。
+5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
+6. [メタデータを使用してファイルを検索するクエリを作成](g://metadata/quick-start/create-query/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更します。
 
 <Next>
 
-I am ready to get started
+開始する準備ができました
 
 </Next>

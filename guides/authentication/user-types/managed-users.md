@@ -20,51 +20,37 @@ next_page_id: authentication/user-types
 previous_page_id: authentication/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/user-types/managed-users.md
+fullyTranslated: true
 ---
-# Managed & External Users
+# 管理対象ユーザーと外部ユーザー
 
-## Managed Users
+## 管理対象ユーザー
 
-Managed Users are accounts in a Box enterprise that Admins and Co-Admins can
-directly edit, delete, enforce security settings, and run reports against
-through the Admin Console. These users consume a standard Box
-license and often, but not always, share the same email domain.
+管理対象ユーザーとは、管理者と共同管理者が管理コンソールから直接編集、削除、セキュリティ設定の適用、レポートの実行を行うことができる、Box Enterpriseのアカウントです。これらのユーザーは、標準のBoxライセンスを購入しており、ほとんどの場合に同じメールドメインを共有します (常にではありません)。
 
 <Message>
 
-# Log in as Admin User
+# 管理者ユーザーとしてログイン
 
-Some applications need permissions that only Admins have in order to
-properly operate and therefore require an Admin to log in.
+アプリケーションの中には、正しく動作するために管理者だけが持つ権限を必要とし、管理者にログインを要求するものがあります。
 
-An example of this would be a security application that monitors enterprise
-events and takes action on suspicious events. The events endpoint can only
-be used by Admins or a Co-Admin with permission to access reporting.
+この一例として、エンタープライズイベントを監視し、不審なイベントに対して措置を講じるセキュリティアプリケーションがあります。イベントエンドポイントを使用できるのは、レポートへのアクセス権限を持つ管理者または共同管理者のみです。
 
 </Message>
 
-### Limitations
+### 制限
 
-- Server to Server applications must have "App + Enterprise" application access
-  configured in the [Developer Console][dc] to access Managed User's content. 
+* サーバー間アプリケーションでは、管理対象ユーザーのコンテンツにアクセスするために、[開発者コンソール][dc]で「アプリ + Enterprise」アプリケーションアクセスを構成しておく必要があります。 
 
-- Server to Server application cannot act on behalf of a Managed Users when
-  unless the application is configured to "Perform Actions as Users" or
-  "Generate User Access Tokens".
+* サーバー間アプリケーションは、「ユーザーとして操作を実行」または「ユーザーアクセストークンを生成」するよう構成されている場合を除き、管理対象ユーザーの代わりに操作を実行することはできません。
 
-## External Users
+## 外部ユーザー
 
-An externally managed user, or External User, is a Managed
-User that belongs to a different enterprise. An external user is often
-encountered with collaborations. External users are often encountered when they
-are collaborated in on content owned by a user of the application's enterprise,
-or when they authorize an OAuth 2.0 application. These users still have
-their own Box accounts, but cannot be managed via the Admin Console.
+外部で管理されているユーザー (外部ユーザー) とは、別の会社に属している管理対象ユーザーです。外部ユーザーはコラボレーションでよく遭遇します。外部ユーザーによく遭遇するのは、外部ユーザーが、アプリケーションの会社のユーザーが所有するコンテンツでコラボレーションしている場合やOAuth 2.0アプリケーションを承認する場合です。外部ユーザーは自分のBoxアカウントを所有していますが、管理コンソールで管理することができません。
 
-### Limitations
+### 制限
 
-- Because External Users do not belong to the application's enterprise, they will
-not return when retrieving a list of all users for an enterprise.
-- Applications cannot create, edit, or otherwise manage External Users.
+* 外部ユーザーはアプリケーションの会社に属していないため、会社のすべてのユーザーのリストを取得しても返されません。
+* アプリケーションは外部ユーザーを作成、編集、管理できません。
 
 [dc]: https://app.box.com/developers/console

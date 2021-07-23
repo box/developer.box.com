@@ -15,19 +15,17 @@ next_page_id: search
 previous_page_id: search/shared-links
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/9-fields.md
+fullyTranslated: true
 ---
-# Requesting extra fields
+# 追加フィールドのリクエスト
 
-By default, the search API returns the **standard** format of a
-[File](r://file), [Folder](r://folder), or [Web Link](r://web_link). Each of
-these resources supports additional fields that can be requested through the
-`fields` query parameter.
+デフォルトでは、検索APIによって**標準**形式の[ファイル](r://file)、[フォルダ](r://folder)、または[ウェブリンク](r://web_link)が返されます。これらの各リソースでは、`fields`クエリパラメータを使用してリクエストできる追加のフィールドがサポートされています。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&fields=name,tags" \
@@ -36,7 +34,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&fields=name,tags" \
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -56,7 +54,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 IEnumerable<string> fields = new List<string>() { "name", "tags"};
@@ -66,7 +64,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, fields=["name", "tags"])
@@ -74,7 +72,7 @@ client.search().query("sales", metadata_filters=metadata_search_filters, fields=
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -95,17 +93,12 @@ client.search.query(
 
 <Message info>
 
-For more details on these fields, please check out the
-[full File](r://file--full), [full Folder](r://folder--full),
-and [full Web Link](r://web_link--full) resources.
+これらのフィールドの詳細については、[ファイル (詳細)](r://file--full)、[フォルダ (詳細)](r://folder--full)、および[ウェブリンク (詳細)](r://web_link--full) のリソースを確認してください。
 
 </Message>
 
 <Message warning>
 
-When the `fields` parameter is used to query additional information about the
-items, only those fields and a few **base** fields (`id`, `type`, `name`, etc)
-are returned. Any fields that were originally in the response would now have to
-be requested explicitly.
+`fields`パラメータを使用して、項目の追加情報をクエリで照会すると、これらのフィールドといくつかの**基本**フィールド (`id`、`type`、`name`など) のみが返されます。レスポンスに最初から含まれていたフィールドは、明示的にリクエストする必要があります。
 
 </Message>

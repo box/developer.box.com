@@ -18,41 +18,35 @@ next_page_id: embed/ui-elements/browser
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/ui-elements/index.md
+fullyTranslated: true
 ---
-# UI Elements
+# UI Element
 
-Box UI Elements are pre-built UI components that allow developers to add
-elements of the main Box web application into their own applications. They can
-be used to navigate through, upload, preview, and select content stored on Box
-and are available both as React components and framework-agnostic JavaScript
-libraries.
+Box UI Elementsは、開発者がメインのBoxウェブアプリの要素を独自のアプリケーションに追加できるようにする、あらかじめ組み込まれたUIコンポーネントです。これを使用すると、Boxに保存されているコンテンツを参照、アップロード、プレビュー、選択することができます。また、これは、Reactコンポーネントとしても、およびフレームワークに依存しないJavaScriptライブラリとしても使用できます。
 
-## Available Elements
+## 利用可能なElement
 
-Box offers several UI Elements to create common user experiences with files and
-folders in an application.
+Boxには、アプリケーションでファイルやフォルダに共通するユーザーエクスペリエンスを実現するためにUI Elementがいくつか用意されています。
 
-The available UI Elements are:
+使用可能なUI Elementは以下のとおりです。
 
-* [Content Explorer][explorer]- Allow users to search and browse through files
-  and folders
-* [Content Open With][openwith] - Allow users to open content stored in box with
-  a partner application using an embedded dropdown
-* [Content Picker][picker] - Allow users to select files or folders from their
-  Box account
-* [Content Preview][preview] - Display interactive viewers for documents,
-  images, audio, video, and more
-* [Content Sidebar][sidebar] - Display a sidebar for file metadata and activity
-  feed information
-* [Content Uploader][uploader] - Allow users to upload files by selecting or
-  using drag-and-drop
+* [Content Explorer][explorer] - ユーザーがファイルやフォルダを検索および参照できるようにします。
+* [Content Open With][openwith] - ユーザーが埋め込みのドロップダウンを使用して、Boxに保存されているコンテンツをパートナーアプリケーションで開けるようにします。
+* [Content Picker][picker] - ユーザーがBoxアカウントからファイルやフォルダを選択できるようにします。
+* [Content Preview][preview] - ドキュメント、画像、音声、動画などに使用するインタラクティブなビューアーを表示します。
+* [Content Sidebar][sidebar] - ファイルメタデータとアクティビティフィード情報用のサイドバーを表示します。
+* [Content Uploader][uploader] - ユーザーがファイルを選択するかドラッグアンドドロップしてアップロードできるようにします。
 
-UI Elements can be used in isolation or joined together to construct common user
-flows with content, such as uploading and then viewing a file.
+UI Elementは、単独で使用することも、ファイルをアップロードしてから表示するように、組み合わせてコンテンツに関する共通のユーザーフローを構築することもできます。
 
 [explorer]: g://embed/ui-elements/explorer
+
 [openwith]: g://embed/ui-elements/open-with
+
 [picker]: g://embed/ui-elements/picker
+
 [preview]: g://embed/ui-elements/preview
+
 [sidebar]: g://embed/ui-elements/sidebar
+
 [uploader]: g://embed/ui-elements/uploader

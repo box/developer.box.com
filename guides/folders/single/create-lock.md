@@ -21,36 +21,28 @@ next_page_id: folders/single/get-locks
 previous_page_id: folders/single/change-owner
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/create-lock.md
+fullyTranslated: true
 ---
-# Create Folder Lock
+# フォルダのロックの作成
 
-To create a lock on a folder in Box you will need to provide our API with the
-`id` of the folder for which the lock should be applied. Optionally you may
-supply the specific `locked_operations` to be applied with the folder lock.
+Box内のフォルダにロックを作成するには、ロックを適用するフォルダの`id`をBoxのAPIに指定します。必要に応じて、フォルダのロックとともに適用する特定の`locked_operations`を指定できます。
 
-<Samples id='post_folder_locks' >
+<Samples id="post_folder_locks">
 
 </Samples>
 
-<Message type='warning'>
+<Message type="warning">
 
-# Setting Locked Operations
+# ロックされる操作の設定
 
-If the `locked_operations` object is included with a folder lock request,
-both `move` and `delete` need to be set to `true`. Supplying only one lock
-operation in the object, or setting the values of both to something other
-than `true` will produce an error. These options are in place to allow
-for additional operations in the future.
+フォルダロックリクエストに`locked_operations`オブジェクトが含まれる場合は、`move`と`delete`の両方を`true`に設定する必要があります。このオブジェクトでロック操作を1つだけ指定した場合または両方の値を`true`以外に設定した場合は、エラーが発生します。これらのオプションは、今後追加の操作を可能にするために実装されています。
 
 </Message>
 
-## Lock Operations
+## ロック操作
 
-There are two possible lock operations that may be applied to a folder, `move`
-and `delete`.
+フォルダに適用できるロック操作には、`move`と`delete`の2つがあります。
 
-The `move` lock will prevent the folder from being moved to a new location or
-owner while the lock is still applied.
+`move`ロックを使用すると、ロックが適用されている間、フォルダが新しい場所または新しい所有者に移動されなくなります。
 
-The `delete` lock will prevent the folder from being deleted while the lock is
-still applied.
+`delete`ロックを使用すると、ロックが適用されている間、フォルダが削除されなくなります。

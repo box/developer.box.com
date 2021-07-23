@@ -16,16 +16,11 @@ next_page_id: skills/handle/payload
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/handle/index.md
+fullyTranslated: true
 ---
-# Handle Skills Payloads
+# Skillsペイロードの処理
 
-Within the application or site that is set up as your
-[invocation URL](guide://skills/invocation-url) you will generally need to
-perform two tasks.
+[呼び出しURL](guide://skills/invocation-url)として設定されているアプリケーションまたはサイト内では、一般に以下の2つのタスクを行う必要があります。
 
-* [Handle the Skill payload](guide://skills/handle/payload) - Every time a Box
-Skills detects a new file is uploaded, copied, or moved to a folder it sends a
-JSON notification to the invocation URL. This URL needs to be parsed.
-* [Apply a Skill Card to a file](guide://skills/handle/metadata) - The metadata
-returned from the processing service will need to be stored back as metadata
-on the file that triggered the event.
+* [スキルペイロードを処理する](guide://skills/handle/payload) - Box Skillsは、新しいファイルがフォルダにアップロード、コピー、または移動されたことを検出するたびに、呼び出しURLにJSON通知を送信します。このURLは解析する必要があります。
+* [ファイルにスキルカードを適用する](guide://skills/handle/metadata) - 処理サービスから返されたメタデータを、イベントをトリガーしたファイルにメタデータとして保存する必要があります。

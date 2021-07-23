@@ -15,73 +15,41 @@ next_page_id: search/query-operators
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/1-indexing.md
+fullyTranslated: true
 ---
-# Search indexing
+# 検索インデックス作成
 
-Box keeps a search index for any files or folders stored in Box.
-Every time a file or folder is changed, those words are added to the index.
-When a search is performed, the API looks in the search index for files and
-folders that match the query. When content is added, updated, or deleted in
-Box, the search index is updated accordingly.
+Boxは、Boxに格納されているファイルまたはフォルダの検索インデックスを保持します。ファイルまたはフォルダが変更されるたびに、これらの単語がインデックスに追加されます。検索が実行されると、APIは、検索インデックスで、クエリに一致するファイルやフォルダを探します。Box内でコンテンツが追加、更新、または削除されると、それに応じて検索インデックスが更新されます。
 
-## Search Availability
+## 検索可能になるまでの時間
 
-It can take time between uploading or modifying a
-file for it to be fully indexed and ready to be searched. In most cases,
-newly added or changed files can be expected to be available via Box search
-in 10 minutes. The current service load determines the index time and it may
-take more than 10 minutes in some cases.
+ファイルのアップロードまたは変更後、そのファイルにインデックスが完全に作成され、検索できるようになるまで時間がかかる場合があります。ほとんどの場合、新しく追加または変更されたファイルは、10分以内にBox検索で検索可能になります。ただし、場合によっては、インデックス作成時間はその時点のサービスの負荷によって決まるため、10分を超えることもあります。
 
 <Message info>
 
-In some cases an index might not be updated even after 10 minutes.
-In those cases we recommend reaching out to [Box Support][support]
-to get the issue resolved.
+10分経過してもインデックスが更新されない場合もあります。このような場合は、[Boxサポート][support]に問い合わせて問題を解決することをお勧めします。
 
 </Message>
 
-## Search Access
+## 検索アクセス
 
-Only content that the authenticated user has access to
-(items they can preview and/or view) will be returned in the search results.
+検索結果では、認証済みユーザーがアクセスできるコンテンツ (プレビュー/表示できる項目) のみが返されます。
 
-In other words, a user needs to either own an item or be a collaborated in on an
-item for it to show up in the search results. If a user doesn't have access to
-an item, or if they have been shared the item via a shared link, then the item
-will also not appear in the search results.
+つまり、検索結果に表示されるためには、ユーザーが所有する項目かコラボレーションしている項目である必要があります。ユーザーが項目にアクセスできない場合や共有リンクを介して項目が共有されている場合は、その項目も検索結果に表示されません。
 
-One exception is that items that have been recently accessed via a shared link
-can be requested in the search results by setting the
-`include_recent_shared_links` query parameter to `true`.
+ただし、例外として、共有リンクを介して最近アクセスされた項目は、`include_recent_shared_links`クエリパラメータを`true`に設定することで、検索結果に含めるようリクエストすることができます。
 
-## Prefix Matching and Wildcard Search
+## プレフィックス検索とワイルドカード検索
 
-Trailing wildcards (also known as
-prefix matching) are implicitly included in search results because of the way
-text is indexed. Searching for `Bo` results in items with titles containing
-`Box` or `Boat` or `Boxer`. It is the equivalent of searching for `Bo*` or
-`Bo%` in traditional search engines. Traditional wildcard notation is not
-supported by Box, such as `%ox%`. While we support prefix matching on titles,
-we do not support prefix matching on body content, suffix matching in the
-title or body content, or infix (middle of the word) matching in the title or
-body content. For example, a search on `cal` would match results for a **file
-named** `California` but not `decal` or `recall`. It would not match results
-with **file body contents** of prefixes, infixes, or suffixes including
-`California`, `recall`, or `decal`.
+末尾のワイルドカード (プレフィックス検索とも呼ばれます) が検索結果に暗黙的に適用されているのは、テキストのインデックス作成方法が原因です。`Bo`を検索すると、タイトルに`Box`、`Boat`、または`Boxer`が含まれる項目が返されます。これは従来の検索エンジンで`Bo*`または`Bo%`を検索した結果と同じになります。Boxでは、`%ox%`のような従来のワイルドカードの表記法がサポートされていません。Boxは、タイトルのプレフィックス検索に対応していますが、本文コンテンツのプレフィックス検索、タイトルまたは本文コンテンツのサフィックス検索、タイトルまたは本文コンテンツのインフィックス (部分) 検索には対応していません。たとえば、`cal`を検索すると、`California`という**ファイル名**が一致しますが、`decal`または`recall`は一致しません。この場合、`California`、`recall`、`decal`を含め、**ファイル本文のコンテンツ**でのプレフィックス、インフィックス、またはサフィックスとは一致しません。
 
-## Stemming
+## ステミング
 
-Box Search uses stemming to match terms from the query to terms
-in the index. Because of this, words that include the same stem may be
-included in the result set, even if the words do not contain the exact form
-in the query. For example, `run` and `running` map to the same stem, so a
-search on `running` may return a document containing `run` in the title.
+Boxの検索では、ステミングを使用して、クエリの単語をインデックスの単語と照合します。このため、同じ語幹を含む単語は、クエリ内と完全に同じ形式でなくても、結果セットに含まれる場合があります。たとえば、`run`と`running`は同じ語幹に対応するため、`running`で検索すると、タイトルに`run`を含むドキュメントが返されます。
 
-## File Content Searching
+## ファイルコンテンツの検索
 
-The content within files is also stored
-within the Box search index. The following file types allow searching for
-their content:
+ファイル内のコンテンツも、Box検索インデックス内に格納されます。以下のファイルタイプでは、コンテンツの検索が可能です。
 
 |           |          |              |          |        |
 | --------- | -------- | ------------ | -------- | ------ |
@@ -101,51 +69,40 @@ their content:
 | `sml`     | `sql`    | `sh`         | `txt`    | `vi`   |
 | `vim`     | `webdoc` | `yaml`       |          |        |
 
-## Indexed Text per Document
+## ドキュメントあたりのインデックスが作成されるテキスト
 
-The Box search index stores up to 10,000 bytes
-(~10,000 characters in English) per document for accounts from Business level
-and above. This amount can vary from document to document because of
-language, Box’s indexing method, and document type.
+Boxの検索インデックスには、Businessレベル以上のアカウントの場合、ドキュメントあたり最大10,000バイト (英語で約10,000文字) が格納されます。この量は、言語、Boxのインデックスの作成方法、およびドキュメントの種類によって、ドキュメントごとに異なる場合があります。
 
 <Message warning>
 
-If your enterprise has full text search turned off
-(e.g. [Keysafe][keysafe] customers), characters within a document
-cannot be searched. If you need to find out if full
-text search is turned off, reach out to your account team.
+全文検索が無効になっている企業 (たとえば、[KeySafe][keysafe]をご利用のお客様) の場合、ドキュメント内の文字を検索できません。全文検索が無効になっている場合にドキュメントを調べる必要がある場合は、アカウントチームまでお問い合わせください。
 
 </Message>
 
-## OCR Support
+## OCRのサポート
 
-Box does not currently perform OCR on its documents.
+現在、Boxではドキュメントに対してOCR処理を実行しません。
 
-## Document Versions
+## ドキュメントのバージョン
 
-Search only indexes content from the current version
-of a document, so that you do not have to sift through hundreds of irrelevant
-search results of outdated documents. You cannot use search to query
-non-current versions of a document.
+検索では、最新バージョンのドキュメントのコンテンツに対してのみインデックスを作成するため、古いドキュメントからの関連性のない多数の検索結果を選別する必要はありません。最新バージョン以外のドキュメントを照会する場合は、検索を使用できません。
 
-## Language Support
+## 言語のサポート
 
 <!--alex ignore chinese-->
 
-Box search supports the following languages: Chinese,
-English, French, German, Italian, Japanese, and Spanish. Box does not support
-indexing of multiple languages within a single document.
+Boxの検索では、中国語、英語、フランス語、ドイツ語、イタリア語、日本語、およびスペイン語がサポートされています。Boxでは、1つのドキュメント内での複数言語のインデックス作成はサポートされていません。
 
-## Trash
+## ごみ箱
 
-Searching the trash is available via the API by using the
-`trash_content` query parameter.
+ごみ箱の検索は、このAPIで`trash_content`クエリパラメータを使用して実行できます。
 
-<CTA to='https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content'>
+<CTA to="https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content">
 
-Check our community article with the latest details on Search in Box
+Boxコミュニティの記事で、Boxでの検索に関する最新情報を確認する
 
 </CTA>
 
 [support]: p://support
+
 [keysafe]: https://www.box.com/security/keysafe

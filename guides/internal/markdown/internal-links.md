@@ -13,13 +13,13 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/markdown/internal-links.md
+fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Internal links
+# 内部リンク
 
-To link to the right internal guides, references, and endpoints, you can use the
-following syntax.
+適切な内部のガイド、参照、およびエンドポイントにリンクするには、次の構文を使用できます。
 
 ```json
 [Get a file by ID](endpoint://get_files_id)
@@ -30,11 +30,11 @@ following syntax.
 
 <H>
 
-[Get a file by ID](endpoint://get_files_id)
+[IDを指定してファイルを取得](endpoint://get_files_id)
 
-[A file](resource://file)
+[ファイル](resource://file)
 
-[Get a file](guide://files/get)
+[ファイルを取得](guide://files/get)
 
 [Box](https://box.com)
 
@@ -42,14 +42,13 @@ following syntax.
 
 <Message>
 
-This technique automatically adds the locale to the path. This ensures links
-work correctly when translated to other languages.
+この手法を使用すると、自動的にパスにロケールが追加されます。そのため、他の言語に翻訳された場合もリンクは正常に機能します。
 
 </Message>
 
-## Short-hand
+## 短縮形
 
-Additionally, the syntax can be shortened as follows:
+さらに、この構文は以下のように短縮することもできます。
 
 ```json
 [Get a file by ID](e://get_files_id)
@@ -60,11 +59,11 @@ Additionally, the syntax can be shortened as follows:
 
 <H>
 
-[Get a file by ID](e://get_files_id)
+[IDを指定してファイルを取得](e://get_files_id)
 
-[A file](r://file)
+[ファイル](r://file)
 
-[Get a file](g://files/get)
+[ファイルを取得](g://files/get)
 
 [Box](https://box.com)
 

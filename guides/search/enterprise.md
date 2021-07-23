@@ -15,19 +15,17 @@ next_page_id: search/trash
 previous_page_id: search/metadata-filters
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/6-enterprise.md
+fullyTranslated: true
 ---
-# Enterprise-wide search
+# 会社全体での検索
 
-By default, a search is only performed against the content that the
-authenticated user has access to. In some cases, administrators might want to
-search against all content owned by all users. For this use-case the `scope`
-query parameter can be set to a value of `enterprise_content`.
+デフォルトでは、認証済みユーザーがアクセスできるコンテンツに対してのみ、検索が実行されます。場合によっては、管理者は、全ユーザーが所有する全コンテンツを検索することもできます。そのようなユースケースでは、`scope`クエリパラメータの値を`enterprise_content`に設定できます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&scope=enterprise_content" \
@@ -36,7 +34,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&scope=enterprise_cont
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -52,7 +50,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
@@ -61,7 +59,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, scope="enterprise_content")
@@ -69,7 +67,7 @@ client.search().query("sales", metadata_filters=metadata_search_filters, scope="
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -90,9 +88,6 @@ client.search.query(
 
 <Message warning>
 
-The `enterprise_content` scope can be requested by an admin through our
-[support channels](p://support). Once this scope has been enabled for a user, it
-will allow that user to query for content across the entire enterprise and not
-only the content that they have access to.
+`enterprise_content`スコープは、管理者が[サポートチャネル](p://support)を通じてリクエストできます。このスコープがユーザーに対して有効になっていると、そのユーザーは、アクセスできるコンテンツだけでなく、会社全体のコンテンツに対してクエリを実行できます。
 
 </Message >

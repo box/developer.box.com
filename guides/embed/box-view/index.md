@@ -23,52 +23,38 @@ next_page_id: embed/box-view/upload-file
 previous_page_id: embed/box-view/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-view/index.md
+fullyTranslated: true
 ---
 # Box View
 
-Box View is an embeddable service for displaying a high-fidelity interactive
-file viewer with web and mobile applications.
+Box Viewは、ウェブアプリとモバイルアプリで忠実度の高いインタラクティブなファイルビューアーを表示するための埋め込み可能なサービスです。
 
-## Features
+## 機能
 
-### View Any File
+### 任意のファイルの表示
 
-Embed documents, images, videos, 360-degree videos and images, 3D models, and
-dozens of other files in any web or mobile app using a standard `<iframe>` or
-JavaScript SDK.
+標準の`<iframe>`またはJavaScript SDKを使用して、ドキュメント、画像、動画、360度動画および画像、3Dモデル、その他の多くのファイルをあらゆるウェブアプリまたはモバイルアプリに埋め込みます。
 
-### Optimized Viewing Experience
+### 最適化された表示機能
 
-Our Javascript SDK dynamically selects the appropriate viewer for your file to
-render instantly and crisply on any web or mobile device.
+JavaScript SDKにより、さまざまなウェブまたはモバイルデバイスですばやく軽快にレンダリングできるように、ファイルに適したビューアーが動的に選択されます。
 
-### Ease of Use
+### 使いやすさ
 
-Upload files to Box via a secure API and receive an embeddable HTML5
-snippet to place into your application's user interface. Plus, your files are
-securely stored and manageable in Box.
+セキュアなAPIを介してBoxにファイルをアップロードすると、アプリケーションのユーザーインターフェイスに埋め込み可能なHTML5スニペットが配置されます。さらに、ファイルはBoxに安全に保存され、管理できるようになります。
 
-### Collaboration in Context
+### 状況に応じたコラボレーション
 
-Allow end users to collaborate and mark up documents, presentations, and images
-with annotations. Users can highlight text or comment on specific areas of a
-file rendering.
+エンドユーザーが注釈を使用して、ドキュメント、プレゼンテーション、および画像のコラボレーションやマークアップを実行できるようにします。ユーザーは、テキストをハイライトしたり、ファイルレンダリングの特定の領域にコメントを付けたりできます。
 
-## How does Box View work
+## Box Viewのしくみ
 
-1. Upload files into Box using our secure upload API. All content is stored in
-Box's secure cloud storage infrastructure with virus scanning and 256 bit
-encryption.
-2. Files are converted into HTML5 compatible assets upon upload, which are
-designed to render crisply and responsively.
-3. An embeddable URL is requested to access the file rendering. Previews can be
-embedded directly in your application using an `<iframe>` URL or with the
-Javascript SDK.
+1. セキュアなアップロードAPIを使用してBoxにファイルをアップロードします。コンテンツはすべて、ウイルススキャンと256ビット暗号化を備えたBoxのセキュアなクラウドストレージインフラストラクチャに保存されます。
+2. ファイルはアップロード時にHTML5互換のアセットに変換されます。これらのアセットは、明瞭にすばやくレンダリングするよう作られています。
+3. ファイルレンダリングにアクセスするために埋め込み可能なURLがリクエストされます。プレビューは、`<iframe>` URLまたはJavaScript SDKを使用してアプリケーションに直接埋め込むことができます。
 
-## Customize Your Experience with Box Content Preview
+## Box Content Previewによる操作性のカスタマイズ
 
-[Box Content Preview](guide://embed/ui-elements/preview) may be used to create
-customized client-side experiences with the converted files.
+[Box Content Preview](guide://embed/ui-elements/preview)を使用すると、変換されたファイルに対するクライアント側の操作をカスタマイズできます。
 
-Box View is currently available exclusively to existing Box View API and
-Crocodoc customers. To learn more, [visit our FAQs](guide://embed/box-view/faq).
+現在Box Viewを使用できるのは、既存のBox View APIおよびCrocodocを利用するお客様のみです。詳細については、[FAQ](guide://embed/box-view/faq)を参照してください。

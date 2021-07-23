@@ -21,11 +21,11 @@ next_page_id: downloads
 previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/in-browser.md
+fullyTranslated: true
 ---
-# Download in Browser
+# ブラウザでのダウンロード
 
-Sometimes an application wants to embed a file into a page as a HTML element. An
-example would be when working with an audio player.
+アプリケーションでは、ファイルをHTML要素としてページに埋め込む場合があります。たとえば、オーディオプレーヤーを使用する場合です。
 
 ```html
 <audio controls>
@@ -33,10 +33,9 @@ example would be when working with an audio player.
 </audio>
 ```
 
-In this case, using the regular [download URL][durl] does not work because the
-`dl.boxcloud.com` domain does not support [Cross Origin Resource Sharing][cors].
+この場合、通常の[ダウンロードURL][durl]を使用しても機能しません。`dl.boxcloud.com`ドメインでは[クロスオリジンリソース共有][cors]がサポートされていないためです。
 
-Instead an application can use the following format.
+その代わり、アプリケーションでは次の形式を使用できます。
 
 ```sh
 https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
@@ -46,22 +45,20 @@ https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
 
 # CORS
 
-For this to work the application needs to have the domain of the web site
-hosting this file added to the list of allowed domains in the [CORS
-settings][cors].
+これを機能させるために、アプリケーションでは、このファイルをホストするウェブサイトのドメインを[CORSの設定][cors]で許可されたドメインのリストに追加しておく必要があります。
 
 </Message>
 
 <Message warning>
 
-# Downscope Token
+# トークンのダウンスコープ
 
-Using this method would expose the Access Token to the end user, allowing them
-to potentially use this token to do more than intended. For this reason we
-recommend [downscoping][downscoping] this token accordingly.
+この方法を使用すると、アクセストークンがエンドユーザーに公開され、エンドユーザーはこのトークンを使用すると、意図したより多くの操作を行うことができる可能性があります。そのため、状況に応じてこのトークンを[ダウンスコープ][downscoping]することをお勧めします。
 
 </Message>
 
 [durl]: g://downloads/get-url
+
 [cors]: g://best-practices/cors
+
 [downscoping]: g://authentication/access-tokens/downscope

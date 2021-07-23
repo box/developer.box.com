@@ -15,22 +15,19 @@ next_page_id: search/fields
 previous_page_id: search/trash
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/8-shared-links.md
+fullyTranslated: true
 ---
-# Finding recent shared links
+# 最近の共有リンクの検索
 
-By default, the search API only returns items that are either owned by the user
-or items that the user has been explicitly collaborated on. These search results
-do not include any items that a user might have accessed recently through a
-shared link.
+デフォルトで検索APIによって返されるのは、ユーザーが所有する項目か、ユーザーが明示的にコラボレータに設定されている項目のみです。これらの検索結果には、ユーザーが共有リンクを介して最近アクセスした可能性がある項目は含まれません。
 
-To enable shared links in the API, the `include_recent_shared_links` query
-parameter can be set to `true`.
+このAPIで共有リンクを有効にするには、`include_recent_shared_links`クエリパラメータを`true`に設定します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared_links=true" \
@@ -39,7 +36,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, include_recent_shared_links=True)
@@ -47,7 +44,7 @@ client.search().query("sales", metadata_filters=metadata_search_filters, include
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -68,15 +65,12 @@ client.search.query(
 
 <Message warning>
 
-Please be aware that this parameter is relatively new and therefore support for
-it in our Java and Windows SDKs is still a work in progress.
+このパラメータは比較的新しいため、BoxのJava SDKとWindows SDKでのこのパラメータのサポートはまだ対応中であることに注意してください。
 
 </Message >
 
 <Message danger>
 
-Please be very aware that when this parameter has been set to true, the format
-of the response of this API changes to return a list of
-[Search Results with Shared Links](r://search-results-with-shared-links)
+このパラメータがtrueに設定されている場合は、このAPIのレスポンス形式が[検索結果 (複数の共有リンクを含む)](r://search-results-with-shared-links) のリストを返すよう変更されることに十分注意してください。
 
 </Message >

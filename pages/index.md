@@ -24,6 +24,7 @@ parent_id: ''
 next_page_id: ''
 previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/index.md'
+fullyTranslated: true
 ---
 # Box Platform
 
@@ -31,53 +32,53 @@ source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/in
 
 <BannerTitle>
 
-Start building with **Box Platform**
+**Box Platform**で構築を開始
 
 </BannerTitle>
 
 <BannerTitle>
 
-Manage users with **Box Platform**
+**Box Platform**でユーザーを管理
 
 </BannerTitle>
 
 <BannerTitle>
 
-Build experiences with **Box Platform**
+**Box Platform**でエクスペリエンスを構築
 
 </BannerTitle>
 
 <BannerTitle>
 
-Power content portals with **Box Platform**
+**Box Platform**でコンテンツポータルを強化
 
 </BannerTitle>
 
 <BannerTitle>
 
-Integrate apps with **Box Platform**
+**Box Platform**でアプリを統合
 
 </BannerTitle>
 
-Extend the power of Box with APIs
+APIを利用してBoxの機能を拡張
 
 </Banner>
 
 <Centered wide>
 
-<Header to='/guides' centered>
+<Header to="/guides" centered>
 
-Developer News
+開発者向けのニュース
 
 </Header>
 
-<BlogCards >
+<BlogCards>
 
 </BlogCards>
 
-<More to='https://medium.com/box-developer-blog' right>
+<More to="https://medium.com/box-developer-blog" right>
 
-Developer Blog
+開発者向けブログ
 
 </More>
 
@@ -87,59 +88,57 @@ Developer Blog
 
 <Centered wide>
 
-<Header to='/guides' centered>
+<Header to="/guides" centered>
 
-SDKS & Tools
+SDKとツール
 
 </Header>
 
 <SDKS>
 
-Development with Box Platform is made easier with SDKs for your
-programming language, a command line interface, front-end UI elements,
-and much more.
+Box Platformを使用した開発は、ご利用のプログラミング言語のSDK、コマンドラインインターフェイス、フロントエンドUI Elementなどを使用するとより簡単になります。
 
-<SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
+<SDK language="dotnet" href="https://github.com/box/box-windows-sdk">
 
 Windows .NET SDK
 
 </SDK>
 
-<SDK language='java' href='https://github.com/box/box-java-sdk'>
+<SDK language="java" href="https://github.com/box/box-java-sdk">
 
 Java SDK
 
 </SDK>
 
-<SDK language='python' href='https://github.com/box/box-python-sdk'>
+<SDK language="python" href="https://github.com/box/box-python-sdk">
 
 Python SDK
 
 </SDK>
 
-<SDK language='node' href='https://github.com/box/box-node-sdk'>
+<SDK language="node" href="https://github.com/box/box-node-sdk">
 
 Node SDK
 
 </SDK>
 
-<SDK language='cli' href='https://github.com/box/boxcli'>
+<SDK language="cli" href="https://github.com/box/boxcli">
 
 Box CLI
 
 </SDK>
 
-<SDK language='uielements' href='https://github.com/box/box-ui-elements'>
+<SDK language="uielements" href="https://github.com/box/box-ui-elements">
 
-UI Elements
+UI Element
 
 </SDK>
 
 </SDKS>
 
-<More to='/sdks-and-tools' right>
+<More to="/sdks-and-tools" right>
 
-More SDKs & Tools
+SDKとツールをもっと見る
 
 </More>
 
@@ -149,19 +148,19 @@ More SDKs & Tools
 
 <Centered wide>
 
-<Header to='/guides' centered>
+<Header to="/guides" centered>
 
-Guides
+ガイド
 
 </Header>
 
-<GuideCategories >
+<GuideCategories>
 
 </GuideCategories>
 
-<More to='/guides' right>
+<More to="/guides" right>
 
-All guides
+すべてのガイド
 
 </More>
 
@@ -171,19 +170,19 @@ All guides
 
 <Centered wide>
 
-<Header to='/reference' centered>
+<Header to="/reference" centered>
 
-API Reference
+APIリファレンス
 
 </Header>
 
-<ReferenceCategories >
+<ReferenceCategories>
 
 </ReferenceCategories>
 
-<More to='/reference/' right>
+<More to="/reference/" right>
 
-Full API Reference
+APIリファレンスの詳細
 
 </More>
 

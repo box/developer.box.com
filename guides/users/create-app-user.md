@@ -23,42 +23,30 @@ next_page_id: users/delete-user
 previous_page_id: users/create-managed-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/create-app-user.md
+fullyTranslated: true
 ---
-# Create App User
+# App Userの作成
 
-App Users are programmatic user accounts that may only be created by apps that
-are using [JWT authentication](guide://applications/custom-apps/jwt-setup/).
-They are designed to allow for users, groups, or processes to be represented
-behind the scenes in an application without the need for the user to have a Box
-account to log in.
+App Userは、[JWT認証](guide://applications/custom-apps/jwt-setup/)を使用しているアプリによってのみ作成されるプログラム上のユーザーアカウントです。ユーザーがログインするためのBoxアカウントを持っていなくても、ユーザー、グループ、またはプロセスをアプリケーションの背後で表せるようにすることを目的としています。
 
-App users can only be accessed by the Box application through the APIs and do
-not have credentials to log in to `box.com` directly.
+App Userは、BoxアプリケーションがAPIを介してのみアクセスでき、`box.com`に直接ログインするための資格情報を持っていません。
 
-## Common App User Patterns
+## 一般的なApp Userのパターン
 
-Typically app users are created for a number of different patterns:
+一般的なApp Userは以下のようなパターンを目的に作成されます。
 
-* To represent a single application user or group of users without a
-`box.com` account.
-* To represent an application process, such as having the app user monitor all
-events within an enterprise.
-* To provide the application with the ability to completely control the file
-and folder structure of a user account without the possibility of that content
-being modified through the `box.com` web app.
+* `box.com`アカウントを持たない単一のアプリケーションユーザーまたはユーザーグループを表すため。
+* App Userに会社内のすべてのイベントを監視させるなどの、アプリケーションプロセスを表すため。
+* コンテンツが`box.com`ウェブアプリによって変更される可能性を排除し、ユーザーアカウントのファイルおよびフォルダ構造を完全に制御する機能をアプリケーションに提供するため。
 
-## Creating a New App User
+## 新しいApp Userの作成
 
-To generate a new app user, the minimal information that will be required will
-be a name for the app user.
+新しいApp Userを生成するには、最低でもApp Userの名前が必要になります。
 
-<Samples id='post_users_app' >
+<Samples id="post_users_app">
 
 </Samples>
 
-To see all available optional parameters that may be set when creating an app
-user, see the [create user endpoint](endpoint://post-users).
+App Userの作成時に設定できるすべての使用可能なオプションパラメータを確認するには、[ユーザーエンドポイントの作成](endpoint://post-users)を参照してください。
 
-Once the app user is created a user object will be returned. Within the user
-object is an ID for the app user, which may be used to make API requests to
-modify the user in the future.
+App Userが作成されると、ユーザーオブジェクトが返されます。ユーザーオブジェクト内には、App UserのIDがあります。これは、ユーザーを変更するAPIリクエストを実行するために今後使用される可能性があります。

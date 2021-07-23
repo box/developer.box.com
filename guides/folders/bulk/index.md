@@ -18,5 +18,6 @@ next_page_id: folders/bulk/build-folder-tree
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/bulk/index.md
+fullyTranslated: true
 ---
-# Bulk Manipulation
+# 一括操作

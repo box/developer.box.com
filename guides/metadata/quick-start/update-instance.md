@@ -19,32 +19,27 @@ next_page_id: metadata/quick-start/update-template
 previous_page_id: metadata/quick-start/create-instance
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/4-update-instance.md
+fullyTranslated: true
 ---
-# Update metadata on a file
+# ファイルのメタデータを更新
 
-Once metadata has been applied to a file or folder there is often a need to
-update the metadata at a later date.
+メタデータをファイルまたはフォルダに適用したら、多くの場合は、後日メタデータの更新が必要になります。
 
-Updating a metadata instance is done by applying a set of operations to the
-original data. These operations are performed atomically, ensuring that the
-changes are either all applied or not applied at all.
+メタデータインスタンスを更新するには、元のデータに一連の操作を適用します。これらの操作はアトミックに実行されるため、変更はすべて適用されるか、まったく適用されないかのいずれかになります。
 
-<CTA to='g://metadata/instances/update'>
+<CTA to="g://metadata/instances/update">
 
-Learn more about updating instances
+インスタンスの更新の詳細を確認する
 
 </CTA>
 
-In this case, let's assume we want to change the `name` of the customer from
-`Box, Inc` to `Box`. We can apply two operations, firstly, we ensure the
-value of the name is still `Box, Inc` before we change it, and secondly we make
-the change.
+この場合、顧客の`name`を`Box, Inc`から`Box`に変更するとします。適用できる操作は2つあり、まず、変更前に名前の値がまだ`Box, Inc`であることを確認し、次に変更を行います。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```sh
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
@@ -66,7 +61,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```c#
 var updates = new List<BoxMetadataUpdate>()
@@ -90,7 +85,7 @@ Dictionary<string, object> updatedMetadata = await client.MetadataManager
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 BoxFile file = new BoxFile(api, "12345");
@@ -104,7 +99,7 @@ file.updateMetadata(
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 file = client.file(file_id='12345')
@@ -119,7 +114,7 @@ file.update(updates)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var updates = [
@@ -141,13 +136,13 @@ client.files.updateMetadata(
 
 </Tabs>
 
-<CTA to='g://metadata/instances/update'>
+<CTA to="g://metadata/instances/update">
 
-Learn more about all operations
+すべての操作の詳細を確認する
 
 </CTA>
 
-The API will return the updated metadata instance.
+このAPIにより、更新されたメタデータインスタンスが返されます。
 
 ```json
 {
@@ -169,6 +164,6 @@ The API will return the updated metadata instance.
 
 <Next>
 
-I've updated metadata to a file
+ファイルのメタデータを更新しました
 
 </Next>

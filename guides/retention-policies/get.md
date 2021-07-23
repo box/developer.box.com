@@ -20,21 +20,20 @@ next_page_id: retention-policies
 previous_page_id: retention-policies/list
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/retention-policies/get.md
+fullyTranslated: true
 ---
-# Get Retention Policy
+# リテンションポリシーの取得
 
-To get the information for a specific Retention Policy that has been created in
-an enterprise, call the [`GET /retention_policies/:id`][retention] API endpoint
-with the `id` of the policy.
+会社内に作成された特定のリテンションポリシーの情報を取得するには、ポリシーの`id`を指定して[`GET /retention_policies/:id`][retention] APIエンドポイントを呼び出します。
 
-<Samples id='get_retention_policies_id' >
+<Samples id="get_retention_policies_id">
 
 </Samples>
 
-## Required Scopes
+## 必須のスコープ
 
-Before using any of the Retention Policy APIs, an application must have the
-right scopes enabled. See [Required Scopes][scopes] for more details.
+リテンションポリシーAPIのいずれかを使用する前に、アプリケーションでは適切なスコープを有効にしておく必要があります。詳細については、[必須のスコープ][scopes]を参照してください。
 
 [retention]: e://get_retention_policies_id
+
 [scopes]: g://retention-policies#required-scopes

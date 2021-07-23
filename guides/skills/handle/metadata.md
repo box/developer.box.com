@@ -19,47 +19,44 @@ next_page_id: ''
 previous_page_id: skills/handle/payload
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/handle/metadata.md
+fullyTranslated: true
 ---
-# Skills Cards Metadata
+# Skillsカードのメタデータ
 
-Once a processing service has determined the metadata for the file, your
-application can write that data back to the file stored on Box as metadata.
+処理サービスによってファイルのメタデータが特定されたら、アプリケーションはそのデータをBoxに保存されているファイルにメタデータとして書き戻すことができます。
 
-This process involves the following steps.
+このプロセスには、以下の手順が含まれます。
 
-1. Prepare the Skill Cards metadata
-2. Write the metadata to the file
+1. スキルカードのメタデータの準備
+2. ファイルへのメタデータの書き込み
 
-## Prepare Skill Cards metadata
+## スキルカードのメタデータの準備
 
-The Skills metadata uses a globally available metadata template called
-`boxSkillsCards`. This template follows a specific format for the JSON
-structure that will be stored on the associated files.
+Skillsメタデータは、グローバルに利用可能な`boxSkillsCards`という名前のメタデータテンプレートを使用します。このテンプレートは、関連ファイルに保存されるJSON構造の特定の形式に従います。
 
-Box currently supports 4 kinds of cards.
+Boxでは現在、4種類のカードがサポートされています。
 
 <!-- markdownlint-disable line-length -->
 
-|                                         |                                                                                                                                 |                                        |
-|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| [Keyword](r://keyword-skill-card)       | Displays a list of keywords next to the file.                                                                                   | ![Image](./skills-card-keyword.png)    |
-| [Timeline](r://timeline-skill-card)     | Displays a set of text/images, and when clicked shows when those images appear in a timeline.                                   | ![Image](./skills-card-timeline.png)   |
-| [Transcript](r://transcript-skill-card) | Displays a transcript with the corresponding timestamps.                                                                        | ![Image](./skills-card-transcript.png) |
-| [Status](r://status-skill-card)         | Displays a status to the user, which can be used to inform the user of the status of the Skill while it is processing the file. |                                        |
+|                                       |                                                             |                                     |
+| ------------------------------------- | ----------------------------------------------------------- | ----------------------------------- |
+| [キーワード](r://keyword-skill-card)       | ファイルの横にキーワードのリストを表示します。                                     | ![画像](./skills-card-keyword.png)    |
+| [タイムライン](r://timeline-skill-card)     | 一連のテキスト/画像を表示します。それらの画像がタイムラインに表示される時刻は、クリックすると表示されます。      | ![画像](./skills-card-timeline.png)   |
+| [トランスクリプト](r://transcript-skill-card) | トランスクリプトと、それに対応するタイムスタンプを表示します。                             | ![画像](./skills-card-transcript.png) |
+| [ステータス](r://status-skill-card)        | ユーザーにステータスを表示します。これは、ファイルの処理中にスキルのステータスをユーザーに通知するために使用できます。 |                                     |
 
 <!-- markdownlint-enable line-length -->
 
-## Write metadata cards to file
+## ファイルへのメタデータカードの書き込み
 
-To write one or more cards to a file, you can use the [`POST
-/files/:id/metadata/global/boxSkillsCards`](e://post_files_id_metadata_global_boxSkillsCards)
-API and pass along a list of Box Skill `cards`.
+ファイルに1つ以上のカードを書き込むには、[`POST
+/files/:id/metadata/global/boxSkillsCards`](e://post_files_id_metadata_global_boxSkillsCards) APIを使用して、Box Skill `cards`のリストを渡します。
 
 <!-- markdownlint-enable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
@@ -91,7 +88,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards 
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const metadata = { 
@@ -125,7 +122,7 @@ client.files.addMetadata('12345', 'global', 'boxSkillsCards', metadata)
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 metadata = { 
@@ -156,7 +153,7 @@ client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards')
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 BoxFile file = new BoxFile(api, "12345");
@@ -166,7 +163,7 @@ file.createMetadata("global", "boxSkillsCards", metadata);
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```cs
 var metadataValues = new Dictionary<string, object>()
@@ -204,24 +201,20 @@ Dictionary<string, object> metadata = await client.MetadataManager
 
 <Message warning>
 
-If Box Skill cards have already been applied to this file, this API call will
-return an error with a HTTP status code of `409`.
+Box Skillカードがすでにこのファイルに適用されている場合は、このAPI呼び出しによって、HTTPステータスコード`409`と共にエラーが返されます。
 
 </Message>
 
-## Update metadata card on file
+## ファイルのメタデータカードの更新
 
-If Box Skill cards have already been applied to to a file then it can be updated
-using the [`PUT
-/files/:id/metadata/global/boxSkillsCards`][update_skills]
-API. This API accepts a number of operations (`op`) to perform, and each
-operation can be used to replace a card at a position (`path`).
+Box Skillカードがすでにファイルに適用されている場合、[`PUT
+/files/:id/metadata/global/boxSkillsCards`][update_skills] APIを使用して更新することができます。このAPIは、実行する多数の操作 (`op`) を受け取り、各操作を使用すると、特定の位置 (`path`) のカードを置き換えることができます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
@@ -255,7 +248,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const updates = [
@@ -293,7 +286,7 @@ client.files.updateMetadata('12345', 'global', 'boxSkillsCards', updates)
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 file_metadata = client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards')
@@ -327,7 +320,7 @@ file_metadata.update(updates)
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 BoxFile file = new BoxFile(api, "12345");
@@ -337,7 +330,7 @@ file.updateMetadata("global", "boxSkillsCards", metadata);
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```cs
 var card = new Dictionary<string, object>()

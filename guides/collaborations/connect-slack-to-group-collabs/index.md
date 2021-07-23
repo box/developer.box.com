@@ -15,80 +15,65 @@ next_page_id: collaborations/connect-slack-to-group-collabs/configure-slack
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/connect-slack-to-group-collabs/0-index.md
+fullyTranslated: true
 ---
-# Connect Slack to Box Group Collaborations
+# BoxグループコラボレーションへのSlackの接続
 
-Slack is a popular communication and productivity tool, allowing for real-time
-coordination when working with individuals or groups in and outside of the
-company.
+Slackは、よく使われているコミュニケーションおよび生産性向上ツールで、会社の内外の個人またはグループと作業する際にリアルタイムでの調整が可能になります。
 
-When connected to a custom Box application, the Slack channel structure, along
-with the [slash command][slack-slash-commands] and [event API][slack-event-api]
-systems, can be used to provide a logical grouping and collaboration system for
-Box files and folders.
+カスタムBoxアプリケーションに接続すると、Slackチャンネルの構造を[スラッシュコマンド][slack-slash-commands]や[イベントAPI][slack-event-api]システムとともに使用して、Boxのファイルやフォルダを論理的にグループ化およびコラボレーションできるようになります。
 
-## Overview
+## 概要
 
-This quick start guide will walk you through all the steps needed to group Box
-users based on the channels they are in within a Slack workspace, and then
-permit individuals within those Slack channels to share Box files and folders
-with that group using a Slack slash command.
+このクイックスタートガイドでは、BoxユーザーをSlackワークスペースで属しているチャンネルに基づいてグループ化し、Slackのスラッシュコマンドを使用して、そのSlackチャンネル内のユーザーがBoxのファイルやフォルダをそのグループと共有できるようにするのに必要な手順すべてを説明します。
 
-At the end of this tutorial you will have a Slack bot that will be deployed to a
-channel in your workspace. This bot will create a Box group containing all the
-people present in the channel, and then listen for a `/boxadd` command in the
-channel. It will then parse that command and automatically collaborate the Box
-fie or folder with the entire group of users in the channel.
+このチュートリアルが終了すると、ワークスペースのチャンネルにSlackボットが展開されます。このボットは、そのチャンネルに存在するすべてのユーザーが含まれるBoxグループを作成し、チャンネルで`/boxadd`コマンドをリッスンします。その後、そのコマンドを解析し、自動的にチャンネルのユーザーグループ全体とBoxのファイルやフォルダでコラボレーションします。
 
 <ImageFrame noborder center shadow>
 
-![/boxadd command in Slack](./img/slack_0_boxadd_command.png)
+![Slackの/boxaddコマンド](./img/slack_0_boxadd_command.png)
 
 </ImageFrame>
 
-This guide will take you through the following steps.
+このガイドでは、以下の手順を説明します。
 
-1. [Setup and configure your Slack app][step1] to handle the event notification
- and Slash command structures.
-1. [Setup and configure your Box application][step2] to connect the web
- application to Box.
-1. [Listen for Slack events and commands][step3] when users join and leave
- channels, or share a Box file or folder with the group.
-1. [Structure Box groups and file / folder collaborations][step4] based on the
- Slack events or slash commands.
-1. [And finally, deploy the application to your workspace][step5] and invite
- the Slack app bot to your channels to begin listening for events.
+1. イベント通知とスラッシュコマンドの構造を処理するよう[Slackアプリのセットアップと構成][step1]を行います。
+2. ウェブアプリケーションをBoxに接続するよう[Boxアプリケーションのセットアップと構成][step2]を行います。
+3. ユーザーがチャンネルに参加したりチャンネルから退出したりするとき、またはBoxのファイルやフォルダをグループと共有するときに[Slackイベントおよびコマンドをリッスン][step3]します。
+4. Slackイベントまたはスラッシュコマンドに基づいて、[Boxグループおよびファイル/フォルダのコラボレーションを構造化][step4]します。
+5. [最後に、アプリケーションをワークスペースに展開][step5]し、Slackアプリのボットをチャンネルに招待してイベントのリッスンを開始します。
 
-## Requirements
+## 要件
 
-This quick start guide has two requirements that are worth noting before we proceed.
+先に進む前に、このクイックスタートガイドには注目すべき2つの要件があります。
 
-1. **User emails need to match between Box and Slack**: We are connecting
- a Slack user account to a Box user account by comparing the Slack user email
- address. Therefore, a matching Box user account using the same email address
- must be present in your Box enterprise.
-1. **You must have a publicly accessible server**: Slack will need to send
- event and command notification data to a public URL for your application. This
- guide assumes that you have a public location where your application code will
- be hosted, such as `https://mysite.com/`. If you don't have access to any
- public hosting then application platforms like [Heroku][heroku], serverless
- options like [AWS lambda][aws-lambda], or exposing localhost with services like
- [ngrok][ngrok] are all options that you might want to consider.
+1. **ユーザーのメールアドレスがBoxとSlackで一致している必要がある**: SlackユーザーアカウントをBoxユーザーアカウントに関連付ける際に、Slackユーザーのメールアドレスを比較します。そのため、一致するBoxユーザーアカウントが同一のメールアドレスを使用し、Box Enterpriseに存在する必要があります。
+2. **一般公開されているサーバーが必要**: Slackはイベントおよびコマンド通知データをアプリケーションの公開URLに送信する必要があります。このガイドでは、`https://mysite.com/`など、アプリケーションコードをホストする公開された場所があることを想定しています。公開されているホスト用の場所にアクセスできない場合は、[Heroku][heroku]などのアプリケーションプラットフォームや[AWS Lambda][aws-lambda]などのサーバーレスオプションの使用または[ngrok][ngrok]のようなサービスによるlocalhostの公開を検討してください。
 
 <Next>
 
-I am ready to get started
+開始する準備ができました
 
 </Next>
 
 [slack-slash-commands]: https://api.slack.com/apps/A0155185TT3/slash-commands
+
 [slack-event-api]: https://api.slack.com/events-api
+
 [step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
+
 [step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
+
 [step3]: g://collaborations/connect-slack-to-group-collabs/scaffold-application-code
+
 [step4]: g://collaborations/connect-slack-to-group-collabs/handle-slack-events
+
 [step5]: g://collaborations/connect-slack-to-group-collabs/connect-box-functions
+
 [step6]: g://collaborations/connect-slack-to-group-collabs/test-bot
+
 [heroku]: https://heroku.com/
+
 [aws-lambda]: https://aws.amazon.com/lambda/
+
 [ngrok]: https://ngrok.com/

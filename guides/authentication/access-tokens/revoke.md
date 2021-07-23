@@ -19,23 +19,21 @@ next_page_id: authentication/access-tokens/downscope
 previous_page_id: authentication/access-tokens/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/access-tokens/revoke.md
+fullyTranslated: true
 ---
-# Revoke a Token
+# トークンの取り消し
 
-An Access Token can be revoked at any time by either sending the Access Token or
-Refresh Token the [`POST
-/oauth2/revoke`](endpoint://post-oauth2-revoke) endpoint.
+アクセストークンまたは更新トークンを[`POST
+/oauth2/revoke`](endpoint://post-oauth2-revoke)エンドポイントに送信することにより、アクセストークンをいつでも取り消すことができます。
 
-<Samples id='post_oauth2_revoke' >
+<Samples id="post_oauth2_revoke">
 
 </Samples>
 
 <Message>
 
-# Usage in SDKs
+# SDKでの使用方法
 
-All of the Box SDKs support manually revoking the current Access Token
-associated with the client. To revoke a specific token, first initialize a new
-SDK with that token and then call the relevant revoke method.
+すべてのBox SDKでは、クライアントに関連付けられた現在のアクセストークンを手動で取り消すことがサポートされています。特定のトークンを取り消すには、最初にそのトークンで新しいSDKを初期化してから、関連する取り消しメソッドを呼び出します。
 
 </Message>

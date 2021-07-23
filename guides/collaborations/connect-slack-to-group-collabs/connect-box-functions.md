@@ -13,30 +13,27 @@ next_page_id: collaborations/connect-slack-to-group-collabs/test-bot
 previous_page_id: collaborations/connect-slack-to-group-collabs/handle-slack-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/connect-slack-to-group-collabs/5-connect-box-functions.md
+fullyTranslated: true
 ---
-# Connect Bot to Box
+# Boxへのボットの接続
 
-We're now handling and processing events coming from Slack, then obtaining all
-information needed to connect with Box users and groups. We now need to
-connect that functionality to Box functions.
+ここでは、Slackから送信されるイベントを処理し、Boxのユーザーやグループとの接続に必要なすべての情報を取得します。その機能をBoxの関数に関連付ける必要があります。
 
-In this step we'll expand several functions from the last step to incorporate
-new Box features.
+この手順では、直前の手順で説明した関数をいくつか拡張し、新しいBox機能を組み込みます。
 
-* Instantiate a Box client.
-* Add a Box user to a Box group.
-* Remove a Box user from a Box group.
-* Fetch a Box group ID from a group name.
-* Add content that is shared to a group.
+* Boxクライアントをインスタンス化する
+* BoxグループにBoxユーザーを追加する
+* BoxグループからBoxユーザーを削除する
+* グループ名からBoxグループIDを取得する
+* グループと共有するコンテンツを追加する
 
-## Instantiate a Box Client
+## Boxクライアントのインスタンス化
 
-To make calls to the Box APIs, you'll first need to set up a Box client.
+Box APIを呼び出すには、最初にBoxクライアントを設定する必要があります。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Within `process.js`, replace the `// INSTANTIATE BOX CLIENT` comment at the top
-with the following.
+`process.js`で、先頭にある`// INSTANTIATE BOX CLIENT`コメントを次の内容に置き換えます。
 
 ```javascript
 const boxConfig = require("./boxConfig.json");
@@ -44,22 +41,15 @@ const sdk = box.getPreconfiguredInstance(boxConfig);
 const client = sdk.getAppAuthClient("enterprise");
 ```
 
-The `boxConfig` assignment line will use the `boxConfig.json` file you
-downloaded from your Box app at the end of [step 2][step2]. The sample above is
-assuming that you have it stored in the same folder as `process.js`. If that's
-not the case, change the path to point to where your `boxConfig.json` file is,
-and what it may be named.
+`boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルを`process.js`と同じフォルダに保存していることを前提としています。そうではない場合は、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-The last `client` assignment line is creating a Box client object which may be
-used to make API calls. At this point it is scoped to the
-[service account][service-account] of the application, and not a specific user.
+最後の`client`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Within `Application.java`, replace the `// INSTANTIATE BOX CLIENT` comment
-within the `processEvent` method with the following.
+`Application.java`で、`processEvent`メソッド内の`// INSTANTIATE BOX CLIENT`コメントを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -68,41 +58,34 @@ this.fileReader = new FileReader("boxConfig.json");
 this.boxConfig = BoxConfig.readFrom(fileReader);
 this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
 ```
+
 <!-- markdownlint-enable line-length -->
 
-The `boxConfig` assignment line will use the `boxConfig.json` file you
-downloaded from your Box app at the end of [step 2][step2]. The sample above is
-assuming that you have it stored at the root of the Java project. If that's
-not the case, change the path in the `fileReader` assignment to point to where
-your `boxConfig.json` file is, and what it may be named.
+`boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルをJavaプロジェクトのルートに保存していることを前提としています。そうではない場合は、`fileReader`の代入行のパスを、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-The last `boxAPI` assignment line is creating a Box client object which may be
-used to make API calls. At this point it is scoped to the
-[service account][service-account] of the application, and not a specific user.
+最後の`boxAPI`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Add a Box user to a group
+## グループへのBoxユーザーの追加
 
-Let's add a function that adds a Box user to a group. When a bot is added to a
-channel and needs to create a Box group with all users of the channel, or when
-a single user joins the channel after that action, this function will perform
-that task.
+グループにBoxユーザーを追加する関数を追加します。ボットがチャンネルに追加され、チャンネルのすべてのユーザーを含むBoxグループの作成が必要になった場合、またはその操作の後に1人のユーザーがチャンネルに参加した場合に、この関数によってそのタスクが実行されます。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `addGroupUser` function with the following.
+`addGroupUser`関数を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -131,13 +114,14 @@ function addGroupUser(groupId, email) {
   });
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `addGroupUser` method with the following.
+`addGroupUser`メソッドを次の内容に置き換えます。
 
 ```java
 public void addGroupUser(String groupId, String userEmail) {
@@ -159,40 +143,33 @@ public void addGroupUser(String groupId, String userEmail) {
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-Since we're matching a Slack user to a Box user via their email address, we
-first find a matching Box user using the Slack profile email. If found, a call
-is made to add that user to the channel group. The group was created when the
-bot was first added.
+メールアドレスを使用してSlackユーザーをBoxユーザーと照合しているため、最初に、Slackのプロフィールのメールアドレスを使用して一致するBoxユーザーを検索します。見つかると、そのユーザーをチャンネルのグループに追加するための呼び出しが行われます。このグループは、ボットが最初に追加されたときに作成されています。
 
-<Message type='tip'>
+<Message type="tip">
 
-The Box [Get User](endpoint://get-users-id) endpoint only permits user lookup
-by user ID. To lookup a user by email address, use the
-[List Enterprise Users](endpoint://get-users) endpoint and set the
-`filter_term` option to the email address you're searching for.
+Boxの[ユーザーを取得](endpoint://get-users-id)エンドポイントでは、ユーザーIDによるユーザー検索のみ許可されています。メールアドレスでユーザーを検索するには、[会社ユーザーのリストを取得](endpoint://get-users)エンドポイントを使用し、`filter_term`オプションを検索対象のメールアドレスに設定します。
 
 </Message>
 
-## Remove a Box user to a group
+## グループからのBoxユーザーの削除
 
-When a user leaves or is removed from a Slack channel, we also want to remove
-them from the Box group so that they can no longer access the shared group
-content.
+Slackチャンネルから退出したユーザーや削除されたユーザーは、共有グループコンテンツにアクセスできなくなるようにBoxグループから削除することもできます。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `removeGroupUser` function with the following.
+`removeGroupUser`関数を次の内容に置き換えます。
 
 ```javascript
 function removeGroupUser(groupId, email) {
@@ -213,9 +190,9 @@ function removeGroupUser(groupId, email) {
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `removeGroupUser` method with the following.
+`removeGroupUser`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -231,52 +208,45 @@ public void removeGroupUser(String groupId, String userEmail) {
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-This code will take the group ID, which will be the Slack channel ID, and get
-all members of the group. If a matching member is found for the person that
-left the Slack channel, based on email address, that person is removed from the
-group using their membership ID.
+このコードでは、SlackのチャンネルIDとなるグループIDを取得し、グループの全メンバーを取得します。メールアドレスに基づいて、Slackチャンネルを退出したユーザーに一致するメンバーが見つかると、そのユーザーはそのメンバーシップIDを使用してグループから削除されます。
 
-<Message type='tip'>
+<Message type="tip">
 
-# Improving performance with a data store
+# データストアによるパフォーマンスの向上
 
-While looking up group memberships to obtain a membership ID negates the need
-to store membership IDs in a local data store (like a database), this code
-can be made more efficient by having a data store that saves the Box
-membership ID with the user record.
+グループメンバーシップを検索してメンバーシップIDを取得すると、ローカルのデータストア (データベースなど) にメンバーシップIDを保存する必要はなくなりますが、ユーザーレコードとともにBoxメンバーシップIDを保存するデータストアがあれば、このコードがより効率的なものになります。
 
-By using a local data store, the membership ID can be retrieved from the data
-store rather than having to call the Box API repeatedly to search for the
-membership ID.
+ローカルのデータストアを使用すると、メンバーシップIDは、そのデータストアから取得できます。Box APIを繰り返し呼び出してメンバーシップIDを検索する必要はありません。
 
 </Message>
 
-## Fetch a Box group ID for a group name
+## グループ名に対応したBoxグループIDの取得
 
-The next Box function we need has two main purposes.
+次に必要なBox関数には、主に2つの目的があります。
 
-* Return the Box group ID of an existing group.
-* If a group doesn't exist, create the Box group and return the ID.
+* 既存グループのBoxグループIDを返します。
+* グループが存在しない場合、Boxグループを作成してそのIDを返します。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-  
-Replace the `getGroupId` function with the following.
+`getGroupId`関数を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -300,13 +270,14 @@ function getGroupId(groupName, callback) {
   });
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `getGroupId` method with the following.
+`getGroupId`メソッドを次の内容に置き換えます。
 
 ```java
 public String getGroupId(String groupName) {
@@ -330,37 +301,31 @@ public String getGroupId(String groupName) {
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-The code fetches all the groups in the enterprise, and then tries to match the
-Slack channel ID to the group name. If any of the groups matches, the group ID
-is returned.
+このコードでは、社内のすべてのグループを取得し、SlackチャンネルIDとグループ名の照合を試みます。いずれかのグループが一致すると、そのグループIDが返されます。
 
-If there are no matches, a new Box group is created and the ID of the group is
-returned for use. The group will be named after the Slack channel ID since that
-is a constant that is returned with both slash commands and user events, making
-it easier to lookup without additional functions.
+一致するものがない場合は、新しいBoxグループが作成され、そのグループのIDが返されます。グループの名前はSlackチャンネルIDに基づいて付けられます。これはスラッシュコマンドとユーザーイベントの両方で返される定数であり、追加の関数がなくても簡単に検索できるようにするためです。
 
-## Add shared content to a group
+## グループへの共有コンテンツの追加
 
-Finally, the main purpose of our whole application is to allow users to share
-files and folders from their own Box accounts with everyone else in the group.
+最終的に、このアプリケーション全体の主な目的は、ユーザーが自分のBoxアカウントにあるファイルやフォルダをグループ内の他のユーザー全員と共有できるようにすることです。
 
-Building upon all previous functionality, the following function performs that
-task.
+ここまでのすべての機能を基に、次の関数でそのタスクを実行します。
 
-<Choice option='programming.platform' value='node' color='none'>
+<Choice option="programming.platform" value="node" color="none">
 
-Replace the `processContent` function with the following.
+`processContent`関数を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -395,13 +360,14 @@ function processContent(user, channel, itemType, itemId) {
   });
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' value='java' color='none'>
+<Choice option="programming.platform" value="java" color="none">
 
-Replace the `processContent` method with the following.
+`processContent`メソッドを次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -439,45 +405,45 @@ public void processContent(JSONObject userResponse, String channel, String fType
   }
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
 </Choice>
 
-<Choice option='programming.platform' unset color='none'>
+<Choice option="programming.platform" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
-Please select a preferred language / framework in step 1 to get started.
+# 前の手順が完了していません
+
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-The code starts by capturing the Box group ID for the Slack channel, which
-is where content will be shared to.
+このコードでは、最初に、コンテンツの共有先となるSlackチャンネル用にBoxグループIDを取得します。
 
-Since we want to share files and folders from the Box account of the person who
-sent the slash command, we next capture their Box user profile based on their
-email address.
+スラッシュコマンドを送信したユーザーのBoxアカウントからファイルやフォルダを共有するため、次に、そのユーザーのBoxユーザープロフィールをメールアドレスに基づいて取得します。
 
-Lastly, we make a call to collaborate content with the group via the group ID.
+最後に、グループIDを使用して、コンテンツでグループとコラボレーションするための呼び出しを行います。
 
-## Summary
+## まとめ
 
-* You've instantiated a Box client
-* You've created Box group user add and remove functions.
-* You've created a function to share content with the group.
+* Boxクライアントをインスタンス化しました。
+* Boxグループユーザーを追加および削除するための関数を作成しました。
+* コンテンツをグループと共有するための関数を作成しました。
 
-<Observe option='programming.platform' value='node,java'>
+<Observe option="programming.platform" value="node,java">
 
 <Next>
 
-I've set up my Box functions
+Box関数を設定しました
 
 </Next>
 
 </Observe>
 
 [step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
+
 [service-account]: g://authentication/user-types/service-account/

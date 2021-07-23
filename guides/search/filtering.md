@@ -15,24 +15,21 @@ next_page_id: search/pagination
 previous_page_id: search/query-operators
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/3-filtering.md
+fullyTranslated: true
 ---
-# Filter search results
+# 検索結果に対するフィルタ
 
-The [`GET /search`](e://get_search) API supports a variety of
-different ways to filter the results returned by the API.
+[`GET /search`](e://get_search) APIでは、APIによって返された結果にフィルタをかけるためのさまざまな方法がサポートされています。
 
-## Filter by content type
+## コンテンツタイプによるフィルタ
 
-By default, a search returns items for which either the name, description, file
-content, tags, or comments match the query provided. By setting the
-`content_types` parameter the search can be narrowed down to only the items that
-match the query for the content type defined.
+デフォルトでは、名前、説明、ファイルコンテンツ、タグ、またはコメントが指定されたクエリと一致する項目が返されます。`content_types`パラメータを設定すると、定義したコンテンツタイプのクエリに一致する項目のみに検索を絞り込むことができます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&content_types=name,tags" \
@@ -41,7 +38,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&content_types=name,ta
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -61,7 +58,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var contentTypes = new List<string>();
@@ -74,7 +71,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", content_types=["name", "tags"])
@@ -82,7 +79,7 @@ client.search().query("sales", content_types=["name", "tags"])
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -102,27 +99,25 @@ client.search.query(
 
 </Tabs>
 
-| Content type   |                                                                      |
-| -------------- | -------------------------------------------------------------------- |
-| `name`         | The name of the item, as defined by its `name` field.                |
-| `description`  | The description of the item, as defined by its `description` field.  |
-| `file_content` | The actual content of the file.                                      |
-| `comments`     | The content of any of the comments on a file or folder.              |
-| `tag`          | Any tags that are applied to an item, as defined by its `tag` field. |
+| コンテンツタイプ       |                                   |
+| -------------- | --------------------------------- |
+| `name`         | `name`フィールドで定義されている、項目の名前。        |
+| `description`  | `description`フィールドで定義されている、項目の説明。 |
+| `file_content` | ファイルの実際のコンテンツ。                    |
+| `comments`     | ファイルまたはフォルダに対するコメントのコンテンツ。        |
+| `tag`          | `tag`フィールドで定義されている、項目に適用されるタグ。    |
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by date
+## 日付によるフィルタ
 
-By default, search returns files created at any time, and updated at any time.
-It is possible to filter results by both the date the file or folder was
-last updated or when it was created.
+デフォルトでは、指定した日付に作成されたファイルと指定した日付に更新されたファイルが返されます。ファイルまたはフォルダが最後に更新された日付でも、ファイルまたはフォルダが作成された日付でも結果にフィルタをかけることができます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&created_at_range=2014-05-15T13:35:01Z,2015-05-15T13:35:01&updated_at_range=2014-05-15T13:35:01," \
@@ -131,7 +126,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&created_at_range=2014
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -158,7 +153,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var createdAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
@@ -171,7 +166,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-05-15T13:35:01Z"], updated_at_range=["2014-05-15T13:35:01Z", null])
@@ -179,7 +174,7 @@ client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-0
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -197,24 +192,22 @@ client.search.query(
 
 </Tabs>
 
-| Query parameter    |                                                                                                                                              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `created_at_range` | Defines a range of `created_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
-| `created_at_range` | Defines a range of `updated_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
+| クエリパラメータ           |                                                                |
+| ------------------ | -------------------------------------------------------------- |
+| `created_at_range` | 結果を返す`created_at`の日付の範囲を定義します。上限または下限を空にすると、範囲を期限なしにすることができます。 |
+| `created_at_range` | 結果を返す`updated_at`の日付の範囲を定義します。上限または下限を空にすると、範囲を期限なしにすることができます。 |
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by file extension
+## ファイル拡張子によるフィルタ
 
-By default, a search returns items with any kind of file extension. It is
-possible to filter search results to only files with one or more specific file
-extensions using the `file_extensions` query parameter.
+デフォルトでは、さまざまな種類のファイル拡張子の項目が返されます。`file_extensions`クエリパラメータを使用すると、指定した1つ以上のファイル拡張子のファイルのみが返されるよう、検索結果にフィルタをかけることができます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&file_extensions=pdf,txt" \
@@ -223,7 +216,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&file_extensions=pdf,t
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -243,7 +236,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var fileExtensions = new List<string>();
@@ -256,7 +249,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", file_extensions=["pdf", "txt"])
@@ -264,7 +257,7 @@ client.search().query("sales", file_extensions=["pdf", "txt"])
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -286,17 +279,15 @@ client.search.query(
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by file size
+## ファイルサイズによるフィルタ
 
-By default, a search returns items of any file size. It is
-possible to filter search results to only files within a specific file
-size using the `size_range` query parameter.
+デフォルトでは、あらゆるファイルサイズの項目が返されます。`size_range`クエリパラメータを使用すると、指定したファイルサイズを超えないファイルのみが返されるよう、検索結果にフィルタをかけることができます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&size_range=10000,20000" \
@@ -305,7 +296,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&size_range=10000,2000
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -323,7 +314,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
@@ -332,7 +323,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", size_range=[10000,20000])
@@ -340,7 +331,7 @@ client.search().query("sales", size_range=[10000,20000])
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -359,17 +350,15 @@ client.search.query(
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by file type
+## ファイルタイプによるフィルタ
 
-By default, a search returns both files, folders, and web links. To narrow down
-the results to only one of these, a `type` query parameter can be set to either
-`file`, `folder` or `web_link`.
+デフォルトでは、ファイル、フォルダ、およびウェブリンクがすべて返されます。結果をそのうちの1つだけに絞り込むには、`type`クエリパラメータを`file`、`folder`、`web_link`のいずれかに設定します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&type=file" \
@@ -378,7 +367,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&type=file" \
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -394,7 +383,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
@@ -403,7 +392,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", type="file")
@@ -411,7 +400,7 @@ client.search().query("sales", type="file")
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -430,29 +419,25 @@ client.search.query(
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by metadata
+## メタデータによるフィルタ
 
-It is possible to filter search results by their associated metadata, or even
-perform entire searches based on only the metadata, all using the `mdfilters`
-query parameter.
+関連付けられたメタデータを使用して検索結果にフィルタをかけることも、メタデータのみに基づいてすべての検索を実行することもできます。どちらの場合も`mdfilters`クエリパラメータを使用します。
 
 <CTA to="g://search/metadata-filters">
 
-Learn more about metadata filters
+メタデータフィルタの詳細を確認する
 
 </CTA>
 
-## Filter by owner
+## 所有者によるフィルタ
 
-By default, a search returns all the items the authenticated user has access to,
-regardless of who owns the items. To narrow down to only items owned by specific
-users, use the `owner_user_ids` query parameter.
+デフォルトでは、項目の所有者に関係なく、認証済みユーザーがアクセスできるすべての項目が返されます。特定のユーザーが所有する項目のみに絞り込むには、`owner_user_ids`クエリパラメータを使用します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&owner_user_ids=34446362,462281242" \
@@ -461,7 +446,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&owner_user_ids=344463
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -481,7 +466,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var userIds = new List<string>();
@@ -494,7 +479,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", owner_user_ids=["34446362", "462281242"])
@@ -502,7 +487,7 @@ client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -521,17 +506,15 @@ client.search.query(
 
 <!-- markdownlint-enable line-length -->
 
-## Filter by parent folder
+## 親フォルダによるフィルタ
 
-By default, a search returns all the items in any folder the user has access
-to. To narrow down the results to only items in specific folders, use the
-`ancestor_folder_ids` query parameter.
+デフォルトでは、ユーザーがアクセスできる任意のフォルダ内のすべての項目が返されます。特定のフォルダ内の項目のみに結果を絞り込むには、`ancestor_folder_ids`クエリパラメータを使用します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&ancestor_folder_ids=45235463,73445321" \
@@ -540,7 +523,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&ancestor_folder_ids=4
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -560,7 +543,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var folderIds = new List<string>();
@@ -573,7 +556,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
@@ -581,7 +564,7 @@ client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(

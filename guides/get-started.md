@@ -12,5 +12,6 @@ next_page_id: ''
 previous_page_id: guides
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/get-started.md
+fullyTranslated: true
 ---
-# Get started
+# はじめに

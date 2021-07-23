@@ -13,134 +13,109 @@ next_page_id: tooling/cli/quick-start/install-and-configure
 previous_page_id: tooling/cli/quick-start
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/1-create-jwt-app.md
+fullyTranslated: true
 ---
-# Create, Configure and Authorize a Box Application
+# Boxアプリケーションの作成、構成、承認
 
-The first step to using the CLI is creating a Box application in the
-[Developer Console][dc], which the CLI can use behind the scenes to make API
-calls. If you would like to associate your CLI with an existing JWT application
-you can skip this step. However, you will want to ensure that, at a minimum, the
-following scopes are set in the **Configuration** tab of your application:
+CLIを使用するには、まず、[開発者コンソール][dc]でBoxアプリケーションを作成します。CLIはAPI呼び出しを実行する際にバックグラウンドでこのアプリケーションを使用できます。CLIを既存のJWTアプリケーションに関連付ける場合は、この手順を省略できます。ただし、少なくとも、以下のスコープがアプリケーションの \[**構成**] タブで設定されていることを確認してください。
 
-- Read all files and folders stored in Box
-- Write all files and folders stored in Box
+* Boxに格納されているすべてのファイルとフォルダの読み取り
+* Boxに格納されているすべてのファイルとフォルダの書き込み
 
-## Setup a JWT application
+## JWTアプリケーションの設定
 
-1. From the left-hand navigation panel on your All Files page, open the
-   [Developer Console][dc]. If this is your first time using the Box
-   API and this option is not already available, you can add it to your account
-   by clicking [here][dc].
+1. \[すべてのファイル] ページの左側にあるナビゲーションパネルから、[開発者コンソール][dc]を開きます。今回Box APIを使用するのが初めてで、このオプションがまだ使用できない場合は、[こちら][dc]をクリックするとこのオプションをアカウントに追加できます。
 
-2. Click **Create New App** > **Custom App** > **Server Authentication
-   (with JWT)** > name the application > **Create App**
+2. \[**アプリの新規作成**] > \[**カスタムアプリ**] > \[**サーバー認証 (JWT使用)**] の順にクリックし、アプリケーションに名前を付けて、\[**アプリの作成**] をクリックします。
 
 <Message warning>
 
-Server Authentication (with JWT) is the only authentication method currently
-supported by the Box CLI and always requires Admin authorization before use.
+サーバー認証 (JWT使用) は、現在Box CLIでサポートされている唯一の認証方式で、使用前には必ず管理者の承認が必要です。
 
 </Message>
 
-## Configure the application
+## アプリケーションの構成
 
-This will bring you to the application’s configuration page where you need to
-choose its access and permissions. Again, keep in mind that because of the
-application’s authentication type, it will require Admin approval.
+これにより、アプリケーションの設定ページが表示され、そこで、そのアクセスや権限を選択する必要があります。アプリケーションの認証タイプが原因で、管理者の承認が必要になることにもう一度注意してください。
 
-At a minimum, you will need the following [scopes][scopes]:
+少なくとも、以下の[スコープ][scopes]が必要です。
 
-- Read all files and folders stored in Box
-- Write all files and folders stored in Box
+* Boxに格納されているすべてのファイルとフォルダの読み取り
+* Boxに格納されているすべてのファイルとフォルダの書き込み
 
-You can choose either App Access Only or App + Enterprise Access as the
-[application access][aa].
+[アプリケーションアクセス][aa]として、\[アプリアクセスのみ] または \[アプリ + Enterpriseアクセス] のいずれかを選択できます。
 
 <Message warning>
 
-If at any time you make configuration changes to this application, you will
-need to clear the token cache in the CLI to reflect these changes. Failing to
-do so may result in unexpected errors, such as a 403.
+このアプリケーションの設定に変更を加える際は必ず、これらの変更が反映されるようにCLIのトークンのキャッシュをクリアする必要があります。そうしないと、403などの予期しないエラーが発生する可能性があります。
 
 </Message>
 
-## Authorize the application
+## アプリケーションの承認
 
-All applications leveraging Server Authentication must be authorized in the
-Admin Console before making successful API calls. This is because all JWT
-applications have a [Service Account][sa], which, based on the applications
-[scopes][scopes], may be able to perform Admin actions.
+API呼び出しを正常に実行する前に、サーバー認証を利用するすべてのアプリケーションを管理コンソールで承認する必要があります。これは、すべてのJWTアプリケーションには[サービスアカウント][sa]があるためです。サービスアカウントは、アプリケーションの[スコープ][scopes]に基づいて管理者アクションを実行できます。
 
-Steps for developers and Admins can be found in our [authorization guide][ag].
+開発者と管理者向けの手順については、Boxの[承認ガイド][ag]を参照してください。
 
-If you would like more information on how scopes, application access, tokens,
-and permissions work together, please see our article on understanding
-[Box's security mechanisms][blogpost].
+スコープ、アプリケーションアクセス、トークン、権限がどのように連携しているかの詳細については、[Boxのセキュリティメカニズム][blogpost]に関する記事を参照してください。
 
 <Message warning>
 
-If configuration changes are made to this application, it will need to be
-reauthorized in order for the changes to take effect.
+設定の変更がこのアプリケーションに対して行われた場合は、その変更を有効にするためにこのアプリケーションを再承認する必要があります。
 
 </Message>
 
-You will know when an application is ready for use by visiting its Authorization
-tab in the [Developer Console][dc]. The state and status must be enabled and
-authorized.
+アプリケーションが使用できる状態になっているかどうかを確認するには、[開発者コンソール][dc]の \[承認] タブを表示します。状態とステータスはそれぞれ、\[有効] と \[承認済み] になっているはずです。
 
 <ImageFrame center>
 
-![App Authorized](./app-authorized.png)
+![承認済みのアプリ](./app-authorized.png)
 
 </ImageFrame>
 
-## Download Required Data
+## 必要なデータのダウンロード
 
-The CLI needs a configuration file stored locally in order to make API calls.
+CLIでは、API呼び出しを実行するために、ローカルに保存されている構成ファイルが必要です。
 
-To download the configuration file, visit the **Configuration** tab in the
-[Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
-send you through 2FA verification before automatically downloading the
-configuration file for your application. For more information see
-our [guide][keypair].
+構成ファイルをダウンロードするには、[開発者コンソール][dc]の \[**構成**] タブにアクセスし、\[**公開/秘密キーペアを生成**] をクリックします。これにより、アプリケーションの構成ファイルを自動的にダウンロードする前に2FA認証が行われます。詳細については、Boxの[ガイド][keypair]を参照してください。
 
 <Message warning>
 
-For security reasons 2FA must be enabled on your Box account to successfully
-generate a public/private keypair.
+セキュリティ上の理由により、公開/秘密キーペアを生成するには、Boxアカウントで2FAを有効にする必要があります。
 
 </Message>
 
-Locate the downloaded file on your machine which has a default name in the
-format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
-choose to rename it. This guide assumes the file is renamed to `config.json`.
+`EnterpriseID_publicKeyID_config.json`という形式のデフォルトの名前が付いているダウンロード済みファイルをコンピュータ上で探します。この名前をそのまま使用しても、変更してもかまいません。このガイドでは、ファイルの名前を`config.json`に変更することを想定しています。
 
 <Message warning>
 
-It is critical you place the file in a location where it will not be
-inadvertently deleted or moved. If this occurs you will need to repeat the
-step 2 to reconfigure the CLI.
+誤って削除または移動されることがない場所にファイルを配置することが重要です。ファイルが削除または移動された場合は、手順2を繰り返してCLIを再構成する必要があります。
 
 </Message>
 
-## Summary
+## まとめ
 
-- You created a new or have an existing JWT application to associate with the
-  CLI, which is authorized.
-- You downloaded your application's configuration file and moved it to a safe
-  location on your machine.
+* 新しいJWTアプリケーションを作成してCLIに関連付けました。または既存のJWTアプリケーションをCLIに関連付けました。このJWTアプリケーションは承認されました。
+* アプリケーションの構成ファイルをダウンロードして、コンピュータ上の安全な場所に移動しました。
 
 <Next>
 
-My app is authorized and I downloaded my configuration file
+アプリが承認されたため、構成ファイルをダウンロードしました
 
 </Next>
 
 [dc]: https://account.box.com/developers/console
+
 [keypair]: g://applications/custom-apps/jwt-setup/#public-and-private-key-pair
+
 [sa]: g://authentication/user-types/service-account/
+
 [scopes]: g://api-calls/permissions-and-errors/scopes/
+
 [ag]: g://applications/custom-apps/app-approval/
+
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
+
 [scopes]: g://api-calls/permissions-and-errors/scopes/
+
 [aa]: g://applications/custom-apps/jwt-setup/#application-access

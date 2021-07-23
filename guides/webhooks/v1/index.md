@@ -17,22 +17,20 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/index.md
+fullyTranslated: true
 ---
-# V1 Webhooks
+# V1 Webhook
 
-Webhooks created using the Developer Console monitor changes to all files and
-folders within a user's account. When creating one of these webhooks
-it is not possible specify a specific object to bind the webhook to. To create
-a webhook for a specific file or folder, you will need to leverage
-[v2 webhooks][v2].
+開発者コンソールを使用して作成されたWebhookは、ユーザーのアカウント内のすべてのファイルとフォルダに対する変更を監視します。このようなWebhookを作成する際は、Webhookをバインドする特定のオブジェクトを指定することはできません。特定のファイルまたはフォルダ用にWebhookを作成するには、[V2 Webhook][v2]を使用する必要があります。
 
-<Message type='warning'>
+<Message type="warning">
 
-Webhooks created through this process will not show when listing
-listing all webhooks for a user via API call.
+このプロセスで作成されたWebhookは、API呼び出しでユーザーのすべてのWebhookのリストを取得しても表示されません。
 
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
+
 [list_webhooks]: g://webhooks/v2/list_v2
+
 [v2]: g://webhooks/v2

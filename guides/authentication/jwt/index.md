@@ -22,54 +22,46 @@ next_page_id: authentication/jwt/as-user
 previous_page_id: authentication/jwt/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/index.md
+fullyTranslated: true
 ---
-# JWT Auth
+# JWT認証
 
-Server-side authentication using JSON Web Tokens (JWT) is the most common way to
-authenticate to the Box API. JWT is an [open standard](https://jwt.io/)
-designed to allow powerful server-to-server authentication.
+JSONウェブトークン (JWT) を使用するサーバー側の認証は、Box APIで認証するための最も一般的な方法です。JWTは、効果的にサーバー間認証を実現するよう設計された[オープンスタンダード](https://jwt.io/)です。
 
 <ImageFrame border>
 
-![The JWT flow](./jwt-flow.png)
+![JWTフロー](./jwt-flow.png)
 
 </ImageFrame>
 
-Server-side authentication using JWT is only available to the Custom Application
-[app type][app-type]. This authentication method does not require end-user
-interaction and, if granted the proper privileges, can be used
-to act on behalf of any user in an enterprise.
+JWTを使用するサーバー側の認証は、[アプリの種類][app-type]がカスタムアプリケーションの場合のみ使用できます。この認証方式ではエンドユーザーによる操作が必要ありません。また、適切な権限が付与されていれば、この認証方式を使用して、社内の任意のユーザーの代理で操作することができます。
 
-There are two ways you can verify an application's permissions:
+アプリケーションの権限を確認する方法は2つあります。
 
-- using a public and private key pair
-- using a client id and client secret (Client Credentials Grant)
+* 公開キーと秘密キーのペアを使用する
+* クライアントIDとクライアントシークレット (クライアント資格情報許可) を使用する
 
-To learn more about these options visit our guide on using
-[JWT without SDKs][jwtnosdk]. 
+これらのオプションの詳細については、[SDKを使用しないJWT][jwtnosdk]の使用に関するガイドを参照してください。 
 
 <Message warning>
 
-At this time, our SDKs do not support the Client Credential Grant.
+現時点では、Box SDKでクライアント資格情報許可はサポートされていません。
 
 </Message>
 
-Upon authorizing a JWT application in the Box Admin Console, a
-[Service Account][user-types] is automatically generated and is the default
-Access Token used when authenticating. This is an admin-like user and why
-applications leveraging JWT require explicit Box Admin approval before use.
+Box管理コンソールでJWTアプリケーションを承認すると、[サービスアカウント][user-types]が自動的に生成され、認証時に使用されるデフォルトのアクセストークンになります。これは、管理者に似たユーザーであり、JWTを利用するアプリケーションを使用する前にBox管理者による明示的な承認が必要となる理由です。
 
-## When to use JWT
+## JWTを使用する場合
 
-Server-side authentication with JWT is the ideal authentication method for apps
-that:
+JWTを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方式です。
 
-- Work with users that don't have a Box account
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data within the application's Box account and not within the the
-  user's Box account
+* Boxアカウントを持たないユーザーを使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* アプリケーションのBoxアカウントにデータを保存し、ユーザーのBoxアカウントには保存しない
 
 [app-type]: g://applications/select/
+
 [user-types]: g://authentication/user-types
+
 [jwtnosdk]: g://authentication/jwt/without-sdk/
