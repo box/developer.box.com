@@ -26,7 +26,7 @@ requests via the Box Sign API. Supported tariffs include: Business, Business
 Plus, Enterprise, Enterprise Suites, Enterprise Plus, or Starter. To locate your
 account type, navigate to **Account Settings** and scroll down to the
 **Account Details** section of the **Account** tab. For Admin details on
-restricting access, please see our support article.  
+restricting access, please see our [support article][restrict].  
 
 ## Required Scopes
 
@@ -59,3 +59,4 @@ risk of impacting production content.
 [read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
 [write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
 [sign]: g://api-calls/permissions-and-errors/scopes/#manage-signature-requests
+[restrict]: https://support.box.com/hc/en-us/articles/4404076971155-Enabling-Box-Sign
