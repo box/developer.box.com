@@ -15,3 +15,5 @@ passed you will receive a 400 error.
 Reminder emails can be enabled when creating a sign request to avoid the need to
 resend a sign request.
 </Message>
+
+<Samples id='post_sign_requests_id_resend' />
