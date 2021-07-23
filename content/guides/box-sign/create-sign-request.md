@@ -4,9 +4,9 @@ rank: 1
 
 # Create Box Sign Request
 
-At a minimum, using the create sign request endpoint requires selecting a file
-for signature, a destination folder for the signed document/signing log, and
-designating signers. 
+At a minimum, using the [create Box Sign request endpoint][create] requires
+selecting a file for signature, a destination folder for the signed
+document/signing log, and designating signers. 
 
 <Samples id='post_sign_requests' />
 
@@ -41,16 +41,17 @@ File size limits are determined by your account type. Please see our
 ### Parent folder
 
 The folder ID specified in the `parent_folder` body parameter determines the
-destination of the final signed document and signing log. This folder cannot be
-the All Files or root level, which is represented by folder ID `0`. 
+destination of the final signed document and [signing log][log]. This folder
+cannot be the All Files or root level, which is represented by folder ID `0`. 
 
 ## Signers
 
-Each signer must be assigned a role:  signer, approver, or final copy reader.
+Each signer must be assigned a [role][role]:  signer, approver, or final copy
+reader.
 
 If the user creating the sign request is not given a role, a signer with the
 role `final_copy_reader` is automatically created. This means they only receive
-a copy of the final, signed document and signing log.
+a copy of the final, signed document and [signing log][log].
 
 Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
@@ -85,23 +86,15 @@ email. The overall sign request is cancelled.
 
 Preparing a document prior to sending a sign request allows developers to add
 date, text, checkbox, and/or signature placeholders for signers. This can be
-done via a UI or tags directly in the document. If this is not done, signers
-receive an unprepared document and place signatures and fields at their own
-discretion. 
+done via a UI or [tags][tags] directly in the document. If this is not done,
+signers receive an unprepared document and place signatures and fields at their
+own discretion. 
 
 Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
 the response. Visiting this link in your browser allows you to complete document
 preparation and send the request via UI. 
 
-To learn more about document tags, please see our support article.
-
-## Request options
-
-<Message type='warning'>
-When creating sign requests, we discourage disabling dates, text, emails,
-attachments, or uploaded signatures. These features were carefully selected to
-optimize the usability and experience of Box Sign.
-</Message>
+To learn more about document tags, please see our [support article][tags].
 
 ## Request status
 
@@ -129,3 +122,7 @@ Encountering an error status requires creating a new sign request to retry.
 [documents]: g://representations/supported-file-types/#documents
 [presentations]: g://representations/supported-file-types/#presentations
 [uploads]: g://uploads/direct
+[create]: e://post-sign-requests
+[tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags
+[log]: https://support.box.com/hc/en-us/articles/4404095202579-Viewing-the-signing-log
+[role]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers

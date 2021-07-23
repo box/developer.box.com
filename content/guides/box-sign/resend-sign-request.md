@@ -4,16 +4,21 @@ rank: 3
 
 # Resend Box Sign Request
 
-The resend a sign request endpoint can be used to resend sign request emails to
-any remaining signers. A sign request can only be resent if the status is: new,
-sent, or viewed. A sign request cannot be resent if the status is: signed,
-cancelled, declined, or expired. If a sign request was recently sent, you will
-need to wait 10 minutes before resending. If you try before this time has
-passed you will receive a 400 error. 
+The [resend a Box sign request endpoint][resend] can be used to resend request
+emails to any remaining signers.
+
+A Box Sign request cannot be resent if the [status][status] is: `signed`,
+`cancelled`, `declined`, `expired`, `error_sending`, or `error_converting`.
+
+If a Box Sign request was recently sent, you will need to wait 10 minutes before
+resending. If you try before this time has passed you will receive a 400 error.
 
 <Message type='tip'>
-Reminder emails can be enabled when creating a sign request to avoid the need to
-resend a sign request.
+Reminder emails can be enabled when creating a Box Sign request to avoid the
+need to resend the request.
 </Message>
 
 <Samples id='post_sign_requests_id_resend' />
+
+[resend]: e://post-sign-requests-id-resend
+[status]: g://box-sign/create-sign-request/#request-status
