@@ -11,7 +11,6 @@ created by the user associated with the passed Access Token.
 
 <Samples id='get_sign_requests' />
 
-
 ## By ID
 
 The get sign requests by ID endpoint can be used to view information about a
@@ -20,4 +19,3 @@ obtained by using the get all sign requests endpoint or in the response when
 creating a sign request.
 
 <Samples id='get_sign_requests_id' />
-
