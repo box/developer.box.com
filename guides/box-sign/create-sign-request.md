@@ -88,17 +88,17 @@ Signing order is determined by ordering the provided `order` numbers from
 smallest to largest. If two numbers are the same, signers will receive the
 request at the same time.
 
-Initially, only the first signer will receive a sign request email. Once the
-first signer signs, the following user will receive a sign request email and so
-on. Box Sign automatically adds a new version of the document to the
-`parent_folder` as each user signs.  
+Initially, only signers with the lowest assigned `order` number will receive a
+sign request email. Once they sign, the following user(s) will receive a sign
+request email and so on. Box Sign automatically adds a new version of the
+document to the `parent_folder` as each user signs.  
 
 If any signer declines, any remaining signers will not receive a sign request
 email. The overall sign request is cancelled.
 
-<ImageFrame noborder center shadow>
+<ImageFrame order center shadow>
 
-![Okta Dashboard](images/)
+![Multiple signer flow](images/multiple_signer_flow.png)
 
 </ImageFrame>
 
@@ -108,13 +108,20 @@ Preparing a document prior to sending a sign request allows developers to add
 date, text, checkbox, and/or signature placeholders for signers. This can be
 done via a UI or [tags][tags] directly in the document. If this is not done,
 signers receive an unprepared document and place signatures and fields at their
-own discretion.
+own discretion. However, the API includes controls that allow senders to turn on
+and off features in the unprepared document.
 
 Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
 the response. Visiting this link in your browser allows you to complete document
 preparation and send the request via UI.
 
 To learn more about document tags, please see our [support article][tags].
+
+<ImageFrame border center shadow>
+
+![Preperation options](images/preperation_options.png)
+
+</ImageFrame>
 
 ## Request status
 
@@ -138,6 +145,12 @@ To learn more about document tags, please see our [support article][tags].
   signatures 
 
 Encountering an error status requires creating a new sign request to retry.
+
+<ImageFrame border center shadow>
+
+![Status diagram](images/status.png)
+
+</ImageFrame>
 
 [documents]: g://representations/supported-file-types/#documents
 [presentations]: g://representations/supported-file-types/#presentations
