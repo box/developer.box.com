@@ -78,7 +78,7 @@ document to the `parent_folder` as each user signs.
 If any signer declines, any remaining signers will not receive a sign request
 email. The overall sign request is cancelled.
 
-<ImageFrame border center>
+<ImageFrame border center shadow>
   ![Multiple signer flow](images/multiple_signer_flow.png)
 </ImageFrame>
 
@@ -97,7 +97,7 @@ preparation and send the request via UI.
 
 To learn more about document tags, please see our [support article][tags].
 
-<ImageFrame border center>
+<ImageFrame border center shadow>
   ![Preperation options](images/preperation_options.png)
 </ImageFrame>
 
@@ -124,7 +124,7 @@ To learn more about document tags, please see our [support article][tags].
 
 Encountering an error status requires creating a new sign request to retry.
 
-<ImageFrame border center>
+<ImageFrame border center shadow>
   ![Status diagram](images/status.png)
 </ImageFrame>
 
