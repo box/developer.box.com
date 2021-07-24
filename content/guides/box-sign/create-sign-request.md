@@ -78,7 +78,7 @@ document to the `parent_folder` as each user signs.
 If any signer declines, any remaining signers will not receive a sign request
 email. The overall sign request is cancelled.
 
-<ImageFrame order center shadow>
+<ImageFrame border center shadow>
   ![Multiple signer flow](images/multiple_signer_flow.png)
 </ImageFrame>
 
