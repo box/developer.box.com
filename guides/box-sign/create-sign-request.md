@@ -119,7 +119,7 @@ To learn more about document tags, please see our [support article][tags].
 
 <ImageFrame border center shadow>
 
-![Preperation options](images/preperation_options.png)
+![Preperation options](images/prepration_options.png)
 
 </ImageFrame>
 
