@@ -140,7 +140,7 @@ Additionally, for JWT applications, the application must be configured with
 
 |                       |                   |
 | --------------------- | ----------------- |
-| **OAuth Scope**       | `manage_webhook` |
+| **OAuth Scope**       | `manage_webhook`  |
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
@@ -166,11 +166,11 @@ Admin Co-Admin with the correct permissions.
 
 ### Manage retention policies
 
-|                       |                           |
-| --------------------- | ------------------------- |
-| **OAuth Scope**       | `manage_data_retention`   |
-| **Application Scope** | Manage retention policies |
-| **Depends on**        | `enterprise_content`-scope               |
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `manage_data_retention`    |
+| **Application Scope** | Manage retention policies  |
+| **Depends on**        | `enterprise_content`-scope |
 
 Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased
@@ -180,6 +180,20 @@ with Box Governance. This requires the enterprise to have purchased
   This scope also requires the `enterprise_content` scope to function properly.
   These scopes can be requested by opening a ticket via our support channels.
 </Message>
+
+### Manage signature requests
+
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `sign_requests.readwrite`  |
+| **Application Scope** | Manage signature requests  |
+
+Gives an application permission to get, create, cancel, and resend sign
+requests.
+
+This scope requires the application to also have read/write scopes, which are
+automatically selected when enabled. In addition, an enterprise must have Sign
+enabled 
 
 ## Available on request
 
@@ -225,7 +239,7 @@ calls are made.
 
 |                       |                        |
 | --------------------- | ---------------------- |
-| **OAuth Scope**       | `enterprise_content`                  |
+| **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
 Allows Admins and [Service Accounts][sa] to retrieve any content within their
@@ -287,9 +301,10 @@ The standard OAuth scopes are also supported when downscoping.
 | `manage_managed_users`         | Manage managed users                               |
 | `manage_app_users`             | Manage app users                                   |
 | `manage_groups`                | Manage groups                                      |
-| `manage_webhook`              | Manage webhooks                                    |
+| `manage_webhook`               | Manage webhooks                                    |
 | `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_data_retention`        | Manage retention policies                          |
+| `sign_requests.readwrite`      | Manage sign requests                               |
 
 <!-- markdownlint-enable line-length -->
 
