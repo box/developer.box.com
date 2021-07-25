@@ -17,7 +17,7 @@ source_url: >-
 
 At a minimum, using the [create Box Sign request endpoint][create] requires
 selecting a file for signature, a destination folder for the signed
-document/signing log, and designating signers.
+document/[signing log][log], and designating signers.
 
 <Samples id='post_sign_requests' >
 
