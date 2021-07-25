@@ -98,6 +98,11 @@ preparation and send the request via UI.
 
 To learn more about document tags, please see our [support article][tags].
 
+<Message type='warning'>
+Prefill tags created in a template via the Box web app cannot be accessed from
+the API.
+</Message>
+
 <ImageFrame border center shadow>
   ![Prepare options](images/prepare.png)
 </ImageFrame>
