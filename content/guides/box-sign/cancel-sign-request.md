@@ -4,7 +4,7 @@ rank: 4
 
 # Cancel Box Sign Request
 
-A Box Sign request that has not yet been signed or declined can be cancelled
+A Box Sign request, that has not yet been signed or declined, can be cancelled
 using the [cancel Box Sign request endpoint][cancel]. Any outstanding signers
 will no longer be able to sign the document.
 
