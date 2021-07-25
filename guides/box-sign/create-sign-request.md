@@ -34,7 +34,7 @@ parameter.
 <Message type='warning'>
 
 The sender must have download privileges to the file in Box. Please review our
-collaboration levels to ensure this requirement is met.
+[collaboration levels][collab] to ensure this requirement is met.
 
 </Message>
 
@@ -118,6 +118,13 @@ preparation and send the request via UI.
 
 To learn more about document tags, please see our [support article][tags].
 
+<Message type='warning'>
+
+Prefill tags created in a template via the Box web app cannot be accessed from
+the API.
+
+</Message>
+
 <ImageFrame border center shadow>
 
 ![Prepare options](images/prepare.png)
@@ -159,3 +166,4 @@ Encountering an error status requires creating a new sign request to retry.
 [tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags
 [log]: https://support.box.com/hc/en-us/articles/4404095202579-Viewing-the-signing-log
 [role]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers
+[collab]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
