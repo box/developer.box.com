@@ -16,7 +16,7 @@ alias_paths: []
 
 ### As a developer
 
-To locate your own user ID via the Box Web App, navigate to your **All Files**
+To locate your own user ID via the Box web app, navigate to your **All Files**
 page. Click the circle in the top right corner and select **Account Settings**
 from the dropdown menu. Your user ID is the **Account ID** value listed in the
 **Account Details** section of the **Account** tab.
@@ -57,11 +57,11 @@ Enterprise ID is located under the **Account Information** section.
 
 ### As a developer
 
-To locate a file ID via the Box Web Application, navigate to the file's
+To locate a file ID via the Box web app, navigate to the file's
 preview in your browser and look at the URL. For example, the file ID of
 `https://app.box.com/file/1234567890` is `1234567890`.
 
-To locate a folder ID via the Box Web Application, navigate into the folder and
+To locate a folder ID via the Box web app, navigate into the folder and
 look at the URL. For example, the folder ID of 
 `https://app.box.com/folder/9876543210` is `9876543210`.
 

@@ -25,7 +25,7 @@ create.
 | Application Type              | Authentication Methods                                              |
 | ----------------------------- | ------------------------------------------------------------------- |
 | [Custom App][custom-apps]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
-| [Limited Access App][laa]     | [App token][apptoken]                                               |
+| [Limited Access App][laa]     | [App Token][apptoken]                                               |
 | [Custom Skill][custom-skills] | No selection needed                                                 |
 
 <!-- markdownlint-enable line-length -->

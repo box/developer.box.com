@@ -14,19 +14,19 @@ developer-selected authentication method and enabled enterprise settings.
 
 ## Authentication methods
 
-The following authentication methods always require explicit Admin 
+The following [authentication methods][auth] always require explicit Admin 
 authorization: 
 
-- Server Authentication (with JWT)
-- Server Authentication (with Client Credentials Grant)
-- Custom Skill 
+- [Server Authentication (with JWT)][jwt]
+- [Server Authentication (with Client Credentials Grant)][cc]
+- [Custom Skill][skill]
 
 These authentication methods automatically generate a [Service Account][sa].
 With the right [scopes][scopes] enabled, a Service Account can perform many
 Admin actions, thus requiring Admin authorization before use. 
 
-OAuth 2.0 and App Token apps may also require explicit Admin authorization based
-on your enterprise settings. 
+[OAuth 2.0][oauth] and [App Token][apptoken] apps may also require explicit
+Admin authorization based on enabled enterprise settings. 
 
 ## Enterprise settings
 
@@ -82,6 +82,7 @@ scenarios.
 <!--alex enable-->
 <!-- markdownlint-enable line-length -->
 
+[auth]: g://authentication/select
 [setting]: https://support.box.com/hc/en-us/articles/360044196653-Managing-custom-apps
 [sa]: g://getting-started/user-types/service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
@@ -90,3 +91,5 @@ scenarios.
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [apptoken]: g://authentication/app-token
+[skill]: g://applications/custom-skills
+[oauth]: g://authentication/oauth2

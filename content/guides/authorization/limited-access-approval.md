@@ -72,6 +72,20 @@ developer collected from the **Configuration** tab of the Developer Console.
 A [secondary step][ss] may be necessary depending on enabled enterprise
 settings.
 
+## Re-authorization on changes
+
+When the application's scopes or access level change the application needs to be
+re-authorized. Repeat the process above and request a new Access Token for the
+new changes to take effect.
+
+In the same section where the application was initially authorized, an Admin
+can re-authorize the application by clicking on the ellipses to the right
+of the application name to **Reauthorize App**.
+
+<ImageFrame border center>
+  ![Re-authorize app](images/app-reauthorize.png)
+</ImageFrame>
+
 [devconsole]: https://app.box.com/developers/console
 [ccg]: g://authentication/client-credentials
 [settings]: https://app.box.com/account

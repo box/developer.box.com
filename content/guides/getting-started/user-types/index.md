@@ -12,6 +12,7 @@ alias_paths:
   - /docs/user-types
   - /docs/app-users
   - /docs/service-account
+  - /authentication/user-types
 ---
 
 # User Types
