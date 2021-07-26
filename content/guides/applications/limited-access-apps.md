@@ -20,6 +20,11 @@ Limited Access Apps only support App Token authentication.
 
 ## When to use
 
+A Limited Access App is best used when the application: 
+
+- wants to use Box View or only Box's preview services
+- only needs to access a [limited number of endpoints][limited]
+
 ## Use cases
 
 - Showcasing a creative professional’s portfolio on their website

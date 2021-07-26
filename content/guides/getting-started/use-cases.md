@@ -33,4 +33,6 @@ Some common customer solutions include:
 - Claim reviews with built-in approval/rejection flows
 - Event monitoring for security and auditing
 
+Still not sure if you have a good use case? Reach out to your Box account team.
+
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions

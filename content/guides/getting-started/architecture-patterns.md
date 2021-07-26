@@ -14,7 +14,7 @@ writing any code. The architecture patterns shown below are generic and do not
 represent an exhaustive list of possibilities. 
 
 <Message type=tip>
-   Would you like assistance with application architecture for your enterprise?
+   Would you like assistance with application architecture?
    Contact your account team to purchase Box Consulting services.
 </Message>
 

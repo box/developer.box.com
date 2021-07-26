@@ -64,7 +64,7 @@ processing for files uploaded to Box. Skills are designed to make it possible to
 use third-party Machine Learning services to automatically extract information
 from files uploaded to Box.
 
-<CTA to="g://applications/custom-skills">Learn more about Custom Skill Apps</CTA>
+<CTA to="g://applications/custom-skills">Learn more about Custom Skills</CTA>
   
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
