@@ -8,6 +8,7 @@ related_guides:
   - authentication/tokens
   - authorization
   - api-calls/permissions-and-errors/scopes
+  - getting-started/user-types
 alias_paths:
   - /security-and-governance-apis
   - /docs/android-security-guidelines
@@ -27,13 +28,13 @@ source_url: >-
 # Security
 
 Whether your are a developer getting started with the Box API or a Box Admin
-tasked with authorizing custom applications, it is critical you understand the
+tasked with [authorizing][auth] applications, it is critical you understand the
 security mechanisms in place to protect content stored in Box.
 
 The Box API follows the same security principals and restrictions as the Box web
-application. This means that you will not be able to bypass content
-[permissions][perm], the [waterfall folder structure][waterfall], or Admin-only
-requirements by leveraging the Box API.
+app. This means that you will not be able to bypass content [permissions][perm],
+the [waterfall folder structure][waterfall], or Admin-only requirements by
+leveraging the Box API.
 
 ## Access Tokens
 
@@ -131,7 +132,7 @@ applications leveraging Server Authentication with [JWT)][jwt] or
 [types of users][usertypes] that can be used with the application. The two
 options are **app access only** or **app + enterprise access**.
 
-Upon [authorizing][auth] one of these applications  in the Box Admin Console, a
+Upon [authorizing][auth] one of these applications in the Box Admin Console, a
 [Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com)
 representing the application is automatically generated. This account is an
 Admin-like user that can only be accessed via the API and can then be used to

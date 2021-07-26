@@ -87,7 +87,7 @@ from files uploaded to Box.
 
 <CTA to="g://applications/custom-skills">
 
-Learn more about Custom Skill Apps
+Learn more about Custom Skills
 
 </CTA>
 

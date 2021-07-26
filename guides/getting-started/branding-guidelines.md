@@ -22,11 +22,10 @@ source_url: >-
 ---
 # Branding Guidelines
 
-We’re glad you’re using the Box platform, and we want you to be able to
-broadcast to the world that you’re using Box, but it’s very important that your
-application not be mistaken for an official Box application. For that reason,
-we’ve created a guide to what you can and can’t do with our name and
-logo.
+We are glad you are using Box Platform, and we want you to be able to
+broadcast to the world that you are using Box. However, it is very important
+that your application not be mistaken for an official Box application. For this
+reason, we created a guide to using our name and logo.
 
 ## Approved logos
 

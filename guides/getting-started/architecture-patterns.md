@@ -26,7 +26,7 @@ represent an exhaustive list of possibilities.
 
 <Message type=tip>
 
-Would you like assistance with application architecture for your enterprise?
+Would you like assistance with application architecture?
 Contact your account team to purchase Box Consulting services.
 
 </Message>

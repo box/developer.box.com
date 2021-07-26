@@ -55,14 +55,14 @@ applications.
 
 # Refresh token expiration
 
-A refresh token is valid for 60 days and can be used to obtain a new access
-token and refresh token only once. If the access token and refresh token are
+A Refresh Token is valid for 60 days and can be used to obtain a new Access
+Token and Refresh Token only once. If the Access Token and Refresh Token are
 not refreshed within 60 days, the user will need to be re-authorized.
 
-Every time an application uses the refresh token to get a new access token the
-refresh token is invalidated and a new refresh token is returned with the
-new access token.
+Every time an application uses the Refresh Token to get a new Access Token the
+Refresh Token is invalidated and a new Refresh Token is returned with the
+new Access Token.
 
-This new refresh token is then again only valid for 1 use within 60 days.
+This new Refresh Token is then again only valid for 1 use within 60 days.
 
 </Message>
