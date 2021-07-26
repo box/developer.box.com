@@ -1,9 +1,9 @@
 ---
-rank: 2
+rank: 3
 related_endpoints: []
 related_guides:
   - applications/select
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/select
@@ -15,11 +15,11 @@ subcategory_id: authentication/jwt
 is_index: true
 id: authentication/jwt
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/jwt/as-user
-previous_page_id: authentication/jwt/with-sdk
+next_page_id: authentication/jwt/user-access-tokens
+previous_page_id: authentication/jwt/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/index.md
 ---
@@ -55,7 +55,7 @@ At this time, our SDKs do not support the Client Credential Grant.
 </Message>
 
 Upon authorizing a JWT application in the Box Admin Console, a
-[Service Account][user-types] is automatically generated and is the default
+[Service Account][sa] is automatically generated and is the default
 Access Token used when authenticating. This is an admin-like user and why
 applications leveraging JWT require explicit Box Admin approval before use.
 
@@ -70,6 +70,6 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-[app-type]: g://applications/select/
-[user-types]: g://authentication/user-types
-[jwtnosdk]: g://authentication/jwt/without-sdk/
+[app-type]: g://applications/select
+[sa]: g://getting-started/user-types/service-account
+[jwtnosdk]: g://authentication/jwt/without-sdk

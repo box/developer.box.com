@@ -12,10 +12,10 @@ subcategory_id: applications/custom-skills
 is_index: false
 id: applications/custom-skills/setup
 type: guide
-total_steps: 2
+total_steps: 1
 sibling_id: applications/custom-skills
 parent_id: applications/custom-skills
-next_page_id: applications/custom-skills/approval
+next_page_id: applications/custom-skills
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/setup.md
@@ -44,7 +44,7 @@ will appear to prompt the next step.
 
 <ImageFrame border>
 
-![Application selection screen](../images/select-app-type.png)
+![Application selection screen](images/select-app-type.png)
 
 </ImageFrame>
 
@@ -63,7 +63,7 @@ Finally, select a unique name for your application and click **Create App**.
 You must select a folder that will trigger your skill before you can start using
 it.
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to='g://authorization/custom-skill-approval'>
 
 Learn more about approving Custom Skills
 

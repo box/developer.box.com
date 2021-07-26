@@ -126,5 +126,5 @@ I created my first folder and added a collaboration
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
-[sa]: g://authentication/user-types/service-account
+[sa]: g://getting-started/user-types/service-account
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options

@@ -1,7 +1,11 @@
 ---
-rank: 3
-related_endpoints: []
-related_guides: []
+rank: 4
+related_endpoints:
+  - post-oauth2-token/
+  - post-oauth2-token--refresh/
+related_guides:
+  - authentication/tokens
+  - authentication/tokens/refresh
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -10,11 +14,11 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/refresh
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: tooling/postman/legacy
-previous_page_id: tooling/postman/make-api-call
+previous_page_id: tooling/postman/access-token
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/refresh.md
 ---

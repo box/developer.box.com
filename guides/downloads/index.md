@@ -1,5 +1,5 @@
 ---
-rank: 70
+rank: 110
 alias_paths: []
 category_id: downloads
 subcategory_id: null
@@ -42,7 +42,7 @@ account does not have access to files besides their own.
 If this user does not have access to the file the application will receive a
 `404 Not Found` error.
 
-<CTA to="g://authentication/user-types">
+<CTA to="g://getting-started/user-types">
 
 Learn more about different User Types
 

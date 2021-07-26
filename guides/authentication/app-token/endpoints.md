@@ -3,7 +3,7 @@ rank: 3
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/custom-apps/app-token-setup
+  - authentication/app-token/app-token-setup
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -12,7 +12,7 @@ subcategory_id: authentication/app-token
 is_index: false
 id: authentication/app-token/endpoints
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: authentication/app-token/rollover

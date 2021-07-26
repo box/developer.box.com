@@ -12,8 +12,8 @@ type: guide
 total_steps: 2
 sibling_id: files
 parent_id: files
-next_page_id: ''
-previous_page_id: files
+next_page_id: files
+previous_page_id: files/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/files/limitations.md
 ---

@@ -266,7 +266,7 @@ permissions to access and download the files and folders in question. When the
 authenticated user does not have access to any of the files or folders, a
 `HTTP 404 Not Found` error will occur.
 
-Lear more about [User Types](g://authentication/user-types) in our guides on
+Lear more about [User Types](g://getting-started/user-types) in our guides on
 authentication.
 
 </Message>

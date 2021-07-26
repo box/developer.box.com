@@ -21,38 +21,21 @@ source_url: >-
 ---
 # Best Practices
 
-## Regenerate and Rollover App Tokens
+## Rotate App Tokens
 
-The app token is a highly privileged token. To keep your application
-functional, you may want to regenerate your app token (for example by revoking
-an existing token and creating a new one) if it is about to expire. If you are
-using non-expiring tokens, you may still want to rollover your App Token if it
-gets compromised.
-
-A secondary app token is provided on the application configuration page that
-works exactly the same as the primary app token and can be used to rollover
-your app token without incurring any application downtime through regenerating
-the existing token.
-
-We suggest the following workflow for rolling over your Primary App Token:
-
-* Generate the Secondary App Token through the Developer Console UI.
-* Replace the Secondary App Token in your application and roll out the change.
-* Once your application starts using the secondary App Token, regenerate the
-Primary App Token.
+See our guide on [rotating App Tokens][rotate].
 
 ## Use Downscope Tokens
 
-App Tokens are a set of two tokens (primary and secondary) that hold elevated
-privileges over the content managed by your application. They are essentially
-your application's gateway to using Box View services. App Tokens can be used
-by your application to upload, download, preview and modify any content into
-Box.
+App Tokens are a set of two tokens (Primary and Secondary) that hold elevated
+privileges over the content managed by your application. App Tokens can be used
+by your application to upload, download, preview and modify any Box content.
 
-Due to the elevated privileges granted to the application tokens, if you need
-to make the token available on the client side for any reason (for example if
-you are using the Box Preview UI Element), we strongly recommend that you use a
-downscoped version of the original app token.
+We strongly recommend that you use a [downscoped][downscoped] version of the
+original App Token if you need to make the token available on the client side
+for any reason. This is because of the elevated privileges granted to these
+tokens, if you need. An example of when this would be needed is if you are using
+the Box Preview UI Element.
 
-See the [downscoping guide](guide://authentication/access-tokens/downscope) for
-information on that process.
+[rotate]: g://authentication/app-token/rollover
+[downscoped]: g://authentication/tokens/downscope

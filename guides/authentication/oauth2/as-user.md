@@ -3,11 +3,11 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/oauth2
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - authentication/user-types
+  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -15,11 +15,11 @@ subcategory_id: authentication/oauth2
 is_index: false
 id: authentication/oauth2/as-user
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: authentication/oauth2
 parent_id: authentication/oauth2
 next_page_id: ''
-previous_page_id: authentication/oauth2/without-sdk
+previous_page_id: authentication/oauth2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/as-user.md
 ---
@@ -45,8 +45,8 @@ admins, or by calling the `GET /users/me` endpoint with an authenticated user se
 ## Preconditions
 
 Using the `as-user` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [developer
-console][devconsole].
+needs to be configured to perform actions as users in the [Developer
+Console][devconsole].
 
 <ImageFrame border center>
 
@@ -57,7 +57,7 @@ console][devconsole].
 Additionally, the authenticated user needs to be a user with admin permissions,
 meaning either an admin, co-admin, or service account. Co-admin users will also
 need the 'Manage Users' permission scope. See our guide on [User
-Types](g://authentication/user-types) for more details.
+Types](g://getting-started/user-types) for more details.
 
 ## as-user using SDKs
 

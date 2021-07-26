@@ -1,5 +1,5 @@
 ---
-rank: 190
+rank: 120
 alias_paths: []
 category_id: events
 subcategory_id: null

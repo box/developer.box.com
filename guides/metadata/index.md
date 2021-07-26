@@ -1,5 +1,5 @@
 ---
-rank: 160
+rank: 170
 alias_paths:
   - /docs/work-with-metadata
 category_id: metadata

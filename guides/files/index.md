@@ -1,5 +1,5 @@
 ---
-rank: 60
+rank: 130
 alias_paths:
   - /docs/work-with-files
   - /docs/upload-files
@@ -11,8 +11,8 @@ type: guide
 total_steps: 2
 sibling_id: guides
 parent_id: guides
-next_page_id: files/limitations
-previous_page_id: files/get
+next_page_id: ''
+previous_page_id: files/limitations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/files/index.md
 ---

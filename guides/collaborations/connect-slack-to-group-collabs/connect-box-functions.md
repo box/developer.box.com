@@ -480,4 +480,4 @@ I've set up my Box functions
 </Observe>
 
 [step2]: g://collaborations/connect-slack-to-group-collabs/configure-box
-[service-account]: g://authentication/user-types/service-account/
+[service-account]: g://getting-started/user-types/service-account/

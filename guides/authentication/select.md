@@ -11,10 +11,10 @@ subcategory_id: null
 is_index: false
 id: authentication/select
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: authentication
 parent_id: authentication
-next_page_id: authentication/sso
+next_page_id: authentication/best-practices
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/select.md
@@ -30,24 +30,24 @@ Learn how to select the application type for your app
 
 </CTA>
 
-## Available methods
-
-The following authorization methods are available to each Box Application type.
+The following authorization methods are available to each Box application type.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Supports OAuth 2.0? | JWT? | App Token? | Developer Token? |
-| ---------------------------- | ------------------- | ---- | ---------- | ---------------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | No         | Yes              |
-| [Limited Access App][la-app] | No                  | Yes  | Yes        | No               |
-| [Custom Skill][custom-skill] | No                  | No   | No         | No               |
+| Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
+| ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
+| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         |
+| [Limited Access App][la-app] | No                  | Yes  | No                  | Yes        |
+| [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
 
 <!-- markdownlint-enable line-length -->
 
-### Client-side OAuth 2.0
+## Client-side
 
-Client-side OAuth 2.0 requires the application to redirect end-users to their
-browser to login to Box and authorize the application to take actions on their
+### OAuth 2.0
+
+OAuth 2.0 requires the application to redirect end-users to their browser to
+login to Box and authorize the application to take actions on their
 behalf.
 
 <ImageFrame center width="400" shadow border>
@@ -62,10 +62,10 @@ behalf.
 
 Client-side authentication is the ideal authentication method for apps that:
 
-- Work with users that already have existing Box accounts
-- Want or require users to know that they are using Box
-- Want to store data within the user's Box account and not within the the
-  application's Box account
+- work with users who have existing Box accounts
+- use Box for identity management, so users know they are using Box
+- store data within each user account vs. within an application's Service
+  Account
 
 </Message>
 
@@ -75,16 +75,14 @@ Learn about client-side authentication with OAuth 2.0
 
 </CTA>
 
-### Server-side JWT
+## Server-side
 
-This authentication method does not require end-user
-interaction and, if granted the proper privileges, can be used
-to act on behalf of any user in an enterprise.
+### JWT
 
 Server-side authentication using JSON Web Tokens (JWT) does not require end-user
 interaction and, if granted the proper privileges, can be used to act on behalf
-of any user in an enterprise. You can use a public and private key pair or your
-client ID and client secret to verify the application's permissions.
+of any user in an enterprise. Identity is validated using a JWT assertion and
+public/private keypair.
 
 <ImageFrame center shadow border>
 
@@ -99,11 +97,10 @@ client ID and client secret to verify the application's permissions.
 Server-side authentication with JWT is the ideal authentication method for apps
 that:
 
-- Work with users that don't have a Box account
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data within the application's Box account and not within the the
-  user's Box account
+- work with users without Box accounts
+- use their own identity system
+- do not want users to know they are using Box
+- store data within the application's Service Account and not a user's account
 
 </Message>
 
@@ -113,13 +110,40 @@ Learn about server-side authentication with JWT
 
 </CTA>
 
-### Server-side App Tokens
+### Client Credentials Grant
+
+Server-side authentication using Client Credentials Grant does not require
+end-user interaction and, if granted the proper privileges, can be used to act
+on behalf of any user in an enterprise. Identity is validated using the
+application's client ID and client secret.
+
+<Message>
+
+# When to use a Client Credentials Grant?
+
+Server-side authentication with Client Credentials Grant is the ideal
+authentication method for apps that:
+
+- work with users without Box accounts
+- use their own identity management system
+- do not want users to know they are using Box
+- store data within the application's Service Account and not a user's account
+
+</Message>
+
+<CTA to="guide://authentication/client-credentials">
+
+Learn about server-side authentication with Client Credentials Grant
+
+</CTA>
+
+### App Token
 
 A server-side App Token is an authentication method where the application only
 has access to read and write data to its own account. This is mainly used by Box
 View applications. By using this authentication method there is no need to
 authorize a user as the application is automatically authenticated as the
-Service Account that belongs to that application.
+application's Service Account.
 
 <Message>
 
@@ -128,11 +152,11 @@ Service Account that belongs to that application.
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- Work in an environment that either has no user model, or has users that don't
-  have Box accounts
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data in the application's Service Account and not a user's account
+- work in an environment that either has no user model, or has users without Box
+  accounts
+- use their own identity management system
+- do not want users to know they are using Box
+- store data within the application's Service Account and not a user's account
 
 </Message>
 
@@ -142,27 +166,6 @@ Learn about server-side authentication with App Tokens
 
 </CTA>
 
-### Developer Token
-
-A server-side Developer Token is a short-lived authentication available to
-developers creating applications that use OAuth 2.0. It is an Access
-Token that is only valid for 1 hour, and authenticates as the developer who
-created the token.
-
-<Message>
-
-# When to use a Developer Token?
-
-A Developer Token is the ideal authentication method during development and
-testing. It is ideal in situations where the developer:
-
-- Wants to quickly test an API calls
-- Does not want to authenticate as a different user
-- Does not need the token for more than an hour
-- Does not intend to ship the code to production
-
-</Message>
-
 ## Comparison
 
 The following is a quick overview of the key difference between client-side and
@@ -170,14 +173,13 @@ server-side authentication.
 
 <!-- markdownlint-disable line-length -->
 
-|                                   | OAuth 2.0 | JWT | App Tokens | Developer Token |
-| --------------------------------- | --------- | --- | ---------- | --------------- |
-| Requires user involvement?        | Yes       | No  | No         | Yes             |
-| Requires admin approval?          | No        | Yes | Yes        | No              |
-| Can act on behalf of other users? | Yes       | Yes | No         | Yes             |
-| Do users see Box?                 | Yes       | No  | No         | Yes             |
-| Can create App Users?             | No        | Yes | No         | Yes             |
-| Can be used in production?        | Yes       | Yes | Yes        | No              |
+|                                   | OAuth 2.0 | JWT | Client Credentials | App Tokens |
+| --------------------------------- | --------- | --- | ------------------ | ---------- |
+| Requires user involvement?        | Yes       | No  | No                 | No         |
+| Requires admin approval?          | No        | Yes | Yes                | Yes        |
+| Can act on behalf of other users? | Yes       | Yes | Yes                | No         |
+| Do users see Box?                 | Yes       | No  | No                 | No         |
+| Can create App Users?             | No        | Yes | Yes                | No         |
 
 <!-- markdownlint-enable line-length -->
 
@@ -192,6 +194,6 @@ authentication the token defaults to the application's Service Account.
 
 </Message>
 
-[custom-app]: guide://applications/custom-apps
-[custom-skill]: guide://applications/custom-skills
-[la-app]: guide://applications/web-app-integrations
+[custom-app]: g://applications/custom-apps
+[custom-skill]: g://applications/custom-skills
+[la-app]: g://applications/limited-access-apps

@@ -74,7 +74,7 @@ the following steps.
 Once the application is created it will still need to be approved by an
 enterprise admin before you will be able to make calls to the Box APIs.
 
-Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+Follow [this guide](g://authorization/custom-app-approval/) to have the
 application approved in your enterprise.
 
 </Message>
@@ -107,7 +107,7 @@ Once the application is updated it will need to be re-approved by an
 enterprise admin before you will be able to make calls to any of the Box
 APIs that need any of the new permissions.
 
-Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+Follow [this guide](g://authorization/custom-app-approval/) to have the
 application approved in your enterprise.
 
 </Message>

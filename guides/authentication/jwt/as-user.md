@@ -3,11 +3,11 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - authentication/user-types
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - authentication/user-types
+  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -15,18 +15,18 @@ subcategory_id: authentication/jwt
 is_index: false
 id: authentication/jwt/as-user
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authentication/jwt
 parent_id: authentication/jwt
 next_page_id: authentication/jwt/user-access-tokens
-previous_page_id: authentication/jwt
+previous_page_id: authentication/jwt/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/as-user.md
 ---
 # as-user Header
 
 It is possible to for a JWT application to act on behalf of another user
-through the `as-user` header.
+by leveraging the `as-user` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -38,15 +38,15 @@ curl https://api.box.com/2.0/folders/0 \
 
 In this situation the user ID is the Box identifier for a user. User IDs can
 found for any user via the `GET /users` endpoint, which is only available to
-admins, or by calling the `GET /users/me` endpoint with an authenticated user session.
+admins, or by calling the `GET /users/me` endpoint with an authenticated user
+session.
 
 </Message>
 
 ## Preconditions
 
-Using the `as-user` header has a few requirements. Firstly, the application
-needs to be configured to perform actions as users in the [developer
-console][devconsole].
+The application must be configured to perform actions as users in the
+[Developer Console][devconsole].
 
 <ImageFrame border center>
 
@@ -54,13 +54,14 @@ console][devconsole].
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with admin permissions,
-meaning either an admin, co-admin, or service account. See our guide on [User
-Types](g://authentication/user-types) for more details.
+Additionally, the authenticated user needs to be a user with Admin permissions,
+meaning either an Admin, Co-Admin, or Service Account. See our guide on
+[User Types](g://getting-started/user-types) for more details.
 
 ## as-user using SDKs
 
-All of the official SDKs support acting on behalf of a user using the `as-user` header.
+All of the [official Box SDKs][sdk] support acting on behalf of a user using the
+`as-user` header.
 
 <Tabs>
 
@@ -110,3 +111,4 @@ the client authenticates for the original user itself.
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
+[sdk]: g://tooling/sdks

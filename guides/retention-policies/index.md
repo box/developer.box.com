@@ -1,5 +1,5 @@
 ---
-rank: 240
+rank: 200
 alias_paths: []
 category_id: retention-policies
 subcategory_id: null
