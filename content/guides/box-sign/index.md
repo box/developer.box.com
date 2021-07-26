@@ -1,5 +1,5 @@
 ---
-rank: 300
+rank: 225
 ---
 
 # Box Sign

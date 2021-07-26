@@ -12,29 +12,30 @@ alias_paths: []
 
 # Create File Preview
 
-Once a file has been uploaded to the app token application, it may be previewed
+Once a file is uploaded to an App Token application, it can be previewed
 using two different methods:
 
 * Direct embed: A standard HTML `<iframe>` component with a custom embed link.
-* Customized previewer: A fully customized preview widget using Box UI Elements.
+* Customized previewer: A fully customized preview widget using Box
+[UI Elements][uie].
 
 ## Direct Embed (`iframe`)
 
-The direct embed link is a light-weight API method that provides limited
-options to customize the preview experience in your application. Due to the
-light-weight nature of the method, the API doesn't give you options to respond
-to client-side actions such as scrolling in the case of documents, play/pause
-interactivity for videos, rotating an image, etc.
+The direct embed link provides limited options to customize the preview
+experience in your application. Due to the light-weight nature of the method,
+the API doesn't give you options to respond to client-side actions such as
+scrolling in the case of documents, play/pause interactivity for videos,
+rotating an image, etc.
 
-There are two steps towards creating a direct `<iframe>` embed for Box View:
+There are two steps to create a direct `<iframe>` embed for Box View:
 
 1. Generate an embed URL for the file
 2. Add the embed URL to an `<iframe>`
 
 ### Generate an embed URL for the file
 
-To create a public file preview URL for a file that was uploaded to the app
-token application, you may either use a direct SDK method or make the request
+To create a public file preview URL for a file that was uploaded to the App
+Token application, you may either use a direct SDK method or make the request
 directly to the APIs.
 
 <Message type='notice'>
@@ -106,7 +107,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
 ### Add the embed URL to an `<iframe>`
 
 Within the HTML of your application, create an `iframe` elements with the `src`
-attribute set to the embed URL generated previously.
+attribute set to generated embed URL. 
 
 ```html
 <iframe src="https://app.box.com/preview/expiring_embed/gvoct6FE!ixgtCKQAziW
@@ -117,18 +118,17 @@ attribute set to the embed URL generated previously.
 
 ## Customized Previewer (UI Elements)
 
-To leverage advanced preview customization and event handling capabilities, the
-[Box UI Preview Element](guide://embed/ui-elements/preview/) is available.
+To leverage advanced preview customization and event handling capabilities, use
+the Box [UI Preview Element](guide://embed/ui-elements/preview/).
 
-To set up the Preview Element, start by installing the required components for
-the Content Preview Element.
+To set up the Preview Element, start by installing the required components.
 
 <CTA to='guide://embed/ui-elements/installation'>
   Install Box Elements and Preview
 </CTA>
 
-When adding the JavaScript code to display a new previewer, the basic code will
-look something like the following:
+The basic code will resemble the below when adding the JavaScript code to
+display a new previewer.
 
 ```js
 var preview = new Box.Preview();
@@ -138,12 +138,11 @@ preview.show("FILE_ID", "ACCESS_TOKEN", {
 });
 ```
 
-To set up the Preview Element with a file stored within your App Token
-application, replace the placeholders in the code sample with the following:
+Replace the placeholders in the code sample with the following:
 
-* `FILE_ID`: The ID of the file uploaded to the app token application, which may
+* `FILE_ID`: The ID of the file uploaded to the App Token application, which can
 be obtained from the object returned when uploading the file.
-* `ACCESS_TOKEN`: The primary access token set up when configuring the
+* `ACCESS_TOKEN`: The primary Access Token set up when configuring the
 application or a downscoped version of the token.
 
 <Message type='warning'>
@@ -152,3 +151,5 @@ application or a downscoped version of the token.
   code. See
   [best practices for downscoping](guide://embed/box-view/best-practices#use-downscoped-tokens).
 </Message>
+
+[uie]: g://embed/ui-elements
