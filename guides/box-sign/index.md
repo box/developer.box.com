@@ -1,5 +1,5 @@
 ---
-rank: 300
+rank: 225
 category_id: box-sign
 subcategory_id: null
 is_index: true
