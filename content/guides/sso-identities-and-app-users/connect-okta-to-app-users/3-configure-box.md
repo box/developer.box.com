@@ -53,7 +53,7 @@ create users that are associated with the Okta user account.
     enterprise admin before you will be able to make calls to the Box APIs.
   </Message>
 
-  Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+  Follow [this guide](g://authorization/custom-app-approval/) to have the
   application approved in your enterprise.
 </Choice>
 

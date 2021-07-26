@@ -18,7 +18,7 @@ Box UI Elements are initialized on the client and make API calls directly to
 Box. Thus, a valid access token must live on the client because all Box API
 requests need to be authenticated.
 
-[Token Exchange](g://authentication/access-tokens/downscope) is a mechanism to
+[Token Exchange](g://authentication/tokens/downscope) is a mechanism to
 exchange a "parent token" (a token for your managed or app user, service
 account, or application) to a "child token" which is scoped down to the minimum
 set of required permissions so it can be securely sent down to the client

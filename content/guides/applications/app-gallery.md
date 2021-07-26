@@ -1,8 +1,8 @@
 ---
-rank: 2
+rank: 50
 related_endpoints: []
 related_guides: 
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
   - authentication/oauth2
 required_guides: []
 related_resources: []
@@ -24,17 +24,17 @@ Gallery][app-gallery].
 
 ### Prerequisites
 
-To publish an application you will need to pass the following requirements.
+Your application must meet the following requirements:
 
-* The application needs to be in a finished state, ready for production usage
-* The application should use OAuth 2.0 authentication as the App Gallery does
-  not support JWT or App Token authentication.
-* You need to be a developer with access to the application in the
+* The application is in a finished state and ready for production usage.
+* The application leverages OAuth 2.0 authentication, as the App Gallery does
+  not support any other authentication methods.
+* You are a developer with access to the application in the
   [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
-Head over to the [Developer Console][devconsole] and select your application to
+Navigate to the [Developer Console][devconsole] and select your application to
 submit to the gallery.
 
 ### 2. Fill in the form
@@ -52,7 +52,7 @@ Click the button to "Submit My App".
 </ImageFrame>
 
 Then, fill in the form with your application's categories, a short and a long
-description, some screenshots and an app icon.
+description, screenshots and an app icon.
 
 ### 3. Preview the listing
 
@@ -70,23 +70,20 @@ Approval" button.
 <Message>
   # Approval completion
 
-  Once an approval has been submitted, the partner team at Box will be notified
-  about your request. They will follow up with the request to arrange for any
-  testing instructions if needed. Similarly, the partner team will also reach
-  out when the application has been published in the App Gallery.
+  Once a request for approval is received, the Box Partner team will be
+  notified and review your request as soon as possible. 
 
-  For any questions, please feel free to email [`integrate@box.com`][email] or the
-  [forum][forum].
+  For any questions, please email [`integrate@box.com`][email] or submit a 
+  support ticket.
 </Message>
 
-## Unpublishing an app
+## Unpublishing an application
 
 Once approved and published, an application can be unpublished from the same
-control panel. Head over to the [Developer Console][devconsole] and select
+control panel. Navigate to the [Developer Console][devconsole] and select
 your application. Then, select the "App Gallery" panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
 [app-gallery]: https://app.box.com/services
 [devconsole]: https://account.box.com/developers/services
-[forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
 [email]: mailto:integrate@box.com
