@@ -14,6 +14,15 @@ search query.
   We expect this limit to be raised but not to be eliminated in the future.
 </Message>
 
+## Limitations
+
+To maintain consistency & availability of the Metadata service for all
+customers, we have a few Query scale limitations.
+
+* Indexes per Template: Up to 5 indexes/template can be created
+* Field in each index: Each template can have up to 5 fields indexed for
+  filtering
+
 ## Request an index
 
 <Message info>
