@@ -8,7 +8,7 @@ related_guides:
 
 A Limited Access App is used when leveraging [Box View][bv] or previewing Box
 content within another application. This type of application can only interact
-with a limited number of endpoints.
+with a [limited number of endpoints][limited].
 
 ## Authentication methods
 
@@ -35,3 +35,4 @@ Limited Access Apps may require approval before use.
 </CTA>
 
 [bv]: g://embed/box-view/
+[limited]: g://authentication/app-token/endpoints
