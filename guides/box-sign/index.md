@@ -23,10 +23,11 @@ cancel sign requests.
 
 <Message type='warning'>
 
-July 26th, 2021, beings the roll out of Box Sign. While Box Sign does not need
-to be enabled by an Admin to use its API endpoints, it does need to be rolled
-out to your enterprise. We will notify Admins as it becomes available for
-their Box instance.
+July 26th, 2021, begins the roll out of Box Sign. We plan to add Box Sign to
+Business, Business Plus, Enterprise, Enterprise Suites, and Starter plans.
+While Box Sign does not need to be enabled by an Admin to use its API
+endpoints, it does need to be rolled out to your enterprise. We will notify
+Admins before Box Sign becomes available in their Box instance.
 
 </Message>
 

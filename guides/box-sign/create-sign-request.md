@@ -65,9 +65,9 @@ cannot be the All Files or root level, which is represented by folder ID `0`.
 Each signer must be assigned a [role][role]:  signer, approver, or final copy
 reader.
 
-If the user creating the sign request is not given a role, a signer with the
-role `final_copy_reader` is automatically created. This means they only receive
-a copy of the final, signed document and [signing log][log].
+If sender is not given a role, a signer with the role `final_copy_reader` is
+automatically created. This means they only receive a copy of the final, signed
+document and [signing log][log].
 
 Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
