@@ -10,7 +10,7 @@ required_guides:
   - authentication/tokens
 alias_paths:
   - /docs/downscope-tokens
-  - /authentication/access-tokens/downscope
+  - /guides/authentication/access-tokens/downscope
 ---
 
 # Downscope a Token
