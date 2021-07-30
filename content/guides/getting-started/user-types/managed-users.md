@@ -9,7 +9,7 @@ required_guides: []
 related_resources:
   - user
 alias_paths: 
- - /authentication/user-types/managed-users
+ - /guides/authentication/user-types/managed-users
 ---
 
 # Managed & External Users
