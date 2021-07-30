@@ -9,7 +9,7 @@ required_guides:
 related_resources:
   - access_token
 alias_paths:
-  - /authentication/access-tokens/sdks
+  - /guides/authentication/access-tokens/sdks
 category_id: authentication
 subcategory_id: authentication/tokens
 is_index: false

@@ -5,7 +5,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
-  - /authentication/access-tokens/resource
+  - /guides/authentication/access-tokens/resource
 category_id: authentication
 subcategory_id: authentication/tokens
 is_index: false
