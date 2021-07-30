@@ -4,7 +4,11 @@ rank: 223
 
 # Box Relay
 
-[Box Relay][boxrelay] is a workflow automation application that enables Box power users to easily automate and accelerate business processes centered around content. Currently, there are two API [endpoints][workflow] developers can use with more planned to be released in the future. Both were created to work directly with [manual start flows][manualstart]. 
+[Box Relay][boxrelay] is a workflow automation application that enables Box
+power users to automate and accelerate business processes centered 
+around content. Currently, there are two API [endpoints][workflow] developers 
+can use with more planned to be released in the future. Both were created to 
+work directly with [manual start flows][manualstart]. 
 
 ## Required Scopes
 
