@@ -10,7 +10,7 @@ required_guides:
   - authentication/tokens
 alias_paths:
   - /docs/downscope-tokens
-  - /authentication/access-tokens/downscope
+  - /guides/authentication/access-tokens/downscope
 category_id: authentication
 subcategory_id: authentication/tokens
 is_index: false
