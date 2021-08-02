@@ -8,7 +8,8 @@ required_guides:
 - authorization
 - authentication/oauth2/oauth2-setup/
 - authentication/jwt/jwt-setup
-alias_paths: []
+alias_paths:
+- /guides/applications/custom-apps/app-approval
 ---
 
 # Custom App Approval
