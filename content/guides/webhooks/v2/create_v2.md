@@ -39,6 +39,17 @@ and a list of [triggers][2].
   subfolders for the selected triggers.
 </Message>
 
+## Ownership 
+
+It is best practice and strongly recommend to create webhooks with a 
+[Service Account][sa], or user that will not be deleted, to avoid potential
+issues with webhook delivery due to loss of access to content. 
+
+Similar to files and folders, webhooks are owned by a user. If a user who owns a
+webhook is deleted, they will lose access to all files and folders that they
+previously had access to. Their webhooks will begin to fail validation, but our
+webhook service will continue to send events and require retries.
+
 ## Webhook address
 
 The notification URL specified in the `address` parameter must be a valid URL
@@ -59,3 +70,4 @@ A list of available triggers is available [in this guide][2].
 
 [1]: e://post_webhooks
 [2]: g://webhooks/triggers
+[sa]: g://getting-started/user-types/service-account
