@@ -193,7 +193,18 @@ requests.
 
 This scope requires the application to also have read/write scopes, which are
 automatically selected when enabled. In addition, an enterprise must have Sign
-enabled 
+enabled.
+
+### Manage Box Relay
+
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `manage_triggers`  |
+| **Application Scope** | Manage Box Relay  |
+
+Gives an application permission to get workflows and start flows of type `WORKFLOW_MANUAL_START`
+
+This scope requires the application to also have read/write scopes.
 
 ## Available on request
 
