@@ -20,3 +20,5 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/bulk/index.md
 ---
 # Bulk Manipulation
+
+The following pages discuss how to do various bulk methods to folders.
