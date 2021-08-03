@@ -186,32 +186,9 @@ key `category` is set to the value `online`.
 
 ### Filter by `float` field
 
-To filter by a field of type `float` a filter will need to define the `key` of
-the field and the desired value to find items for.
-
-```json
-[
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "amount": 10000
-    }
-  }
-]
-```
-
-<Message info>
-
-This example will find all files and folders that have an instance of the
-`enterprise.contract` template applied to it, and for which the field with the
-key `amount` is set to the value `10000`.
-
-</Message>
-
-Additionally, a filter for a `float` field can instead define a range instead of
-a direct value by specifying a `gt` (greater-than) and/or `lt` (lower-than)
-value.
+To filter by a field of type `float`, you will need to define define a range by 
+specifying a `gt` (greater-than) and/or `lt` (lower-than) value. To find an 
+exact value, you can input the same value for both `gt` and `lt`. 
 
 ```json
 [

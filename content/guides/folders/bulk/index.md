@@ -9,3 +9,5 @@ alias_paths: []
 ---
 
 # Bulk Manipulation
+
+The following pages discuss how to do various bulk methods to folders.
