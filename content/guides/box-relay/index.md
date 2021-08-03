@@ -10,6 +10,11 @@ around content. Currently, there are two API [endpoints][workflow] developers
 can use with more planned to be released in the future. Both were created to 
 work directly with [manual start flows][manualstart]. 
 
+<Message type='notice'>
+  For more information on how to use these endpoints, refer to our [blog][blog] 
+  post.
+</Message>
+
 ## Required Scopes
 
 The following [scopes][scopes] must be enabled for an application before use of
@@ -47,3 +52,4 @@ production content.
 [boxrelay]: https://support.box.com/hc/en-us/articles/360044196213-Introducing-Box-Relay
 [workflow]: https://developer.box.com/reference/resources/workflow/
 [manualstart]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
+[blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
