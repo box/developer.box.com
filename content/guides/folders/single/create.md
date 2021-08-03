@@ -22,7 +22,7 @@ create the new folder within.
 <Message type='notice'>
   # Name restrictions
   
-  There are some restrictions to the file name. Names containing non-printable
+  There are some restrictions to the folder name. Names containing non-printable
   ASCII characters, forward and backward slashes (`/`, `\`), as well as names
   with trailing spaces are prohibited.
 
