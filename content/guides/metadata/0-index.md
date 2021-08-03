@@ -28,7 +28,7 @@ distinct types of resources.
   key/value pairs that can be assigned to a file. For example, an `invoiceData`
   template might hold data about an invoice, having a field for the invoice ID
   as well as the customer ID.
-  * **Fields:**  A [metadata template field][field] describes a specific
+* **Fields:**  A [metadata template field][field] describes a specific
     piece of data within a metadata template. For example, the ID of an invoice
     might be represented as an `id` field on an `invoiceData` template.
 * **Instances:** A [metadata instance][instance] describes the relation between
