@@ -10,8 +10,10 @@ around content. Currently, there are two API [endpoints][workflow] developers
 can use with more planned to be released in the future. Both were created to 
 work directly with [manual start flows][manualstart]. 
 
-For more information on how to use these endpoints, refer to our [blog][blog] 
-post.
+<Message type='notice'>
+  For more information on how to use these endpoints, refer to our [blog][blog] 
+  post.
+</Message>
 
 ## Required Scopes
 
