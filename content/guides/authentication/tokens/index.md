@@ -5,7 +5,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: 
-- /authentication/access-tokens
+- /guides/authentication/access-tokens
 ---
 
 # Tokens
