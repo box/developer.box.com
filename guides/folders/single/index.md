@@ -20,3 +20,5 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/index.md
 ---
 # Single Folders
+
+The following pages discuss how to do various single folder methods.

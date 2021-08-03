@@ -7,7 +7,7 @@ related_guides: []
 required_guides:
   - authentication/tokens
 alias_paths:
-  - /authentication/access-tokens/revoke
+  - /guides/authentication/access-tokens/revoke
 category_id: authentication
 subcategory_id: authentication/tokens
 is_index: false

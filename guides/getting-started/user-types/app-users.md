@@ -9,7 +9,7 @@ required_guides: []
 related_resources:
   - user
 alias_paths:
-  - /authentication/user-types/app-users
+  - /guides/authentication/user-types/app-users
 category_id: getting-started
 subcategory_id: getting-started/user-types
 is_index: false

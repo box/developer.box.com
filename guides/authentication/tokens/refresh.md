@@ -9,7 +9,7 @@ related_guides:
 required_guides:
   - authentication/tokens
 alias_paths:
-  - /authentication/access-tokens/refresh
+  - /guides/authentication/access-tokens/refresh
 category_id: authentication
 subcategory_id: authentication/tokens
 is_index: false
