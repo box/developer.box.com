@@ -215,7 +215,7 @@ contentExplorer.removeAllListeners();
 | `delete`   | `Array<File>`                 | Will be fired when items are deleted.       |
 | `upload`   | `Array<File>`                 | Will be fired when items are uploaded.      |
 | `navigate` | `Folder`                      | Will be fired when navigating into folders. |
-| `create`   | Folder                        | Will be fired when a new folder is created  |
+| `create`   | `Folder`                      | Will be fired when a new folder is created  |
 
 <!-- markdownlint-enable line-length -->
 
