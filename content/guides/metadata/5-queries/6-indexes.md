@@ -78,5 +78,4 @@ global or enterprise), as well as the template key.
 
 <Samples id='get_metadata_query_indices'></Samples>
 
-[support]: https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB
 [mdq-get-indices]: endpoint://get_metadata_query_indices

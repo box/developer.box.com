@@ -6,7 +6,7 @@ related_pages: []
 required_guides: []
 related_resources: []
 alias_paths:
-  - /guides/collaboration-whitelists/
+  - /guides/collaboration-whitelists
 ---
 
 # Allowed collaboration domains
@@ -20,4 +20,6 @@ The allowed domain APIs are available to allow applications with
 appropriate permissions to add, fetch, and delete these allowed domains
 programmatically for the enterprise.
 
-[collab-restrictions]: https://community.box.com/t5/How-to-Guides-for-Admins/Content-and-sharing-settings-for-your-enterprise/ta-p/174#toc-hId--670854033
+<!-- i18n-enable localize-links -->
+[collab-restrictions]: https://support.box.com/hc/en-us/articles/360044194913-Content-and-sharing-settings-for-your-enterprise#toc-hId--670854033
+<!-- i18n-disable localize-links -->

@@ -137,7 +137,9 @@ Encountering an error status requires creating a new sign request to retry.
 [presentations]: g://representations/supported-file-types/#presentations
 [uploads]: g://uploads/direct
 [create]: e://post-sign-requests
+<!-- i18n-enable localize-links -->
 [tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags
 [log]: https://support.box.com/hc/en-us/articles/4404095202579-Viewing-the-signing-log
 [role]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers
 [collab]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+<!-- i18n-disable localize-links -->

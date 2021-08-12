@@ -61,7 +61,9 @@ template in the Box web application while navigating to a file preview.
 
 To learn more, please visit [Box community articles][community].
 
-[community]: https://community.box.com/t5/Organizing-and-Tracking-Content/Using-Metadata/ta-p/30765
+<!-- i18n-enable localize-links -->
+[community]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
+<!-- i18n-disable localize-links -->
 [template]: g://metadata/templates
 [instance]: g://metadata/instances
 [cascade]: g://metadata/cascades
