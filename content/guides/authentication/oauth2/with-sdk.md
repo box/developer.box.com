@@ -261,4 +261,6 @@ At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
 [tokens]: g://authentication/tokens/access-tokens
+<!-- i18n-enable localize-links -->
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
+<!-- i18n-disable localize-links -->

@@ -13,4 +13,6 @@ The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
 `previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
 description of each role, please refer to our [support documentation].
 
-[support documentation]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
+<!-- i18n-enable localize-links -->
+[support documentation]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+<!-- i18n-disable localize-links -->

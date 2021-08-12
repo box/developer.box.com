@@ -126,9 +126,13 @@ indexing of multiple languages within a single document.
 Searching the trash is available via the API by using the
 `trash_content` query parameter.
 
+<!-- i18n-enable localize-links -->
 <CTA to='https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content'>
   Check our community article with the latest details on Search in Box
 </CTA>
+<!-- i18n-disable localize-links -->
 
 [support]: p://support
+<!-- i18n-enable localize-links -->
 [keysafe]: https://www.box.com/security/keysafe
+<!-- i18n-disable localize-links -->
