@@ -52,7 +52,11 @@ create an Access Token.
 
 </Message>
 
+<!-- i18n-enable localize-links -->
+
 [admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+<!-- i18n-disable localize-links -->
+
 [service-account]: g://getting-started/user-types/service-account
 [managed-user]: g://getting-started/user-types/managed-users
 [app-user]: g://getting-started/user-types/app-users

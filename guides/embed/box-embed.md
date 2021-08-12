@@ -222,4 +222,7 @@ Box Embed is not optimized for mobile browsers and should not be used in web
 experiences designed for mobile devices. Many UI elements, like the **download**
 and **print** options might not show in mobile browsers.
 
-[logo]: https://community.box.com/t5/Get-Started-Guide-for-New-Admins/Customize-Your-Account-s-Branding/ta-p/301
+<!-- i18n-enable localize-links -->
+
+[logo]: https://support.box.com/hc/en-us/articles/360044193633-Customize-Your-Account-s-Branding
+<!-- i18n-enable localize-links -->

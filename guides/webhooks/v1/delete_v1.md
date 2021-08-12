@@ -25,5 +25,9 @@ application from their account by revisiting the [enablement URL][eurl] and
 clicking **Remove**.
 
 [dm]: g://webhooks/v1/create_v1/#developer-mode
+<!-- i18n-enable localize-links -->
+
 [support]: https://support.box.com/hc/en-us/requests/new
+<!-- i18n-disable localize-links -->
+
 [eurl]: g://webhooks/v1/create_v1/#enabling-a-webhook

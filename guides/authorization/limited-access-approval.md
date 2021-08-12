@@ -105,11 +105,23 @@ of the application name to **Reauthorize App**.
 
 </ImageFrame>
 
+<!-- i18n-enable localize-links -->
+
 [devconsole]: https://app.box.com/developers/console
+<!-- i18n-disable localize-links -->
+
 [ccg]: g://authentication/client-credentials
+<!-- i18n-enable localize-links -->
+
 [settings]: https://app.box.com/account
 [adminconsole]: https://app.box.com/master/settings/custom
+<!-- i18n-disable localize-links -->
+
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
-[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+<!-- i18n-enable localize-links -->
+
+[app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
+<!-- i18n-disable localize-links -->
+
 [ss]: g://authorization/#enterprise-settings

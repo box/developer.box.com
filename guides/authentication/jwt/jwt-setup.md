@@ -227,16 +227,32 @@ section at the bottom of the **Configuration** tab in the
 
 </ImageFrame>
 
+<!-- i18n-enable localize-links -->
+
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
+<!-- i18n-disable localize-links -->
+
 [devtoken]: g://authentication/tokens/developer-tokens
 [scopes]: g://api-calls/permissions-and-errors/scopes
+<!-- i18n-enable localize-links -->
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+<!-- i18n-disable localize-links -->
+
 [user-types]: g://getting-started/user-types
 [sa]: g://getting-started/user-types/service-account
+<!-- i18n-enable localize-links -->
+
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+<!-- i18n-disable localize-links -->
+
 [jwt]: g://authentication/jwt
+<!-- i18n-enable localize-links -->
+
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+<!-- i18n-disable localize-links -->
+
 [kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant

@@ -110,6 +110,10 @@ collaboration permissions to invite collaborators.
 [managed]: g://getting-started/user-types/managed-users/
 [dc]: https://app.box.com/developers/console
 [events]: e://get-events/
+<!-- i18n-enable localize-links -->
+
 [uag-tab]: https://support.box.com/hc/en-us/articles/360043695714-Admin-Console-Guide
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+<!-- i18n-disable localize-links -->
+
 [collabapi]: e://post-collaborations/

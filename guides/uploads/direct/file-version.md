@@ -107,4 +107,7 @@ More information can be found [in our community article on this topic][fsizes].
 [chunked]: g://uploads/chunked
 [upload]: e://post_files_id_content
 [consistency]: g://api-calls/ensure-consistency
-[fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590
+<!-- i18n-enable localize-links -->
+
+[fsizes]: https://support.box.com/hc/en-us/articles/360043697314-Understand-the-Maximum-File-Size-You-Can-Upload-to-Box
+<!-- i18n-disable localize-links -->

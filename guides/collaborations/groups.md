@@ -52,4 +52,7 @@ includes a group `id` and the `type`. The `type` field should always be set to
 The `item` object specifies what is being shared. It includes a `type` field
 which should be set as `file` or `folder`, and an `id` for that file or folder.
 
-[support documentation]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
+<!-- i18n-enable localize-links -->
+
+[support documentation]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+<!-- i18n-disable localize-links -->

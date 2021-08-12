@@ -40,7 +40,7 @@ authenticated user does need to have permission to read the file you are
 trying to access.
 
 To learn more about how scopes, token permissions, and user permissions work
-together, see our blog post on [understanding security][blog-security].
+together, see our [security guide][security].
 
 ## Scopes & OAuth 2 authorization
 
@@ -344,19 +344,27 @@ The standard OAuth scopes are also supported when downscoping.
 
 <!-- markdownlint-enable line-length -->
 
+<!-- i18n-enable localize-links -->
+
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
-[reference]: https://developer.box.com/reference/
-[at]: g://authentication/tokens/
-[blog-security]:https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
-[jwt]: g://authentication/jwt/
-[mu]: g://getting-started/user-types/managed-users/
-[au]: g://authentication/jwt/as-user/
-[uat]: g://authentication/jwt/user-access-tokens/
+[reference]: https://developer.box.com/reference
+<!-- i18n-disable localize-links -->
+
+[at]: g://authentication/tokens
+[security]: g://security
+[jwt]: g://authentication/jwt
+[mu]: g://getting-started/user-types/managed-users
+[au]: g://authentication/jwt/as-user
+[uat]: g://authentication/jwt/user-access-tokens
 [appaccess]: g://authentication/jwt/jwt-setup/#application-access
-[appu]: g://getting-started/user-types/app-users/
+[appu]: g://getting-started/user-types/app-users
+<!-- i18n-enable localize-links -->
+
 [governance]: https://www.box.com/security/governance-and-compliance
-[suppress]: g://api-calls/suppress-notifications/
-[ds]: g://authentication/tokens/downscope/
-[sa]: g://getting-started/user-types/service-account/
+<!-- i18n-disable localize-links -->
+
+[suppress]: g://api-calls/suppress-notifications
+[ds]: g://authentication/tokens/downscope
+[sa]: g://getting-started/user-types/service-account

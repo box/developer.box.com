@@ -96,5 +96,9 @@ Now that you understand what Base Scopes and Feature Scopes are, refer to the
 documentation for each of the UI Elements to learn more about their dedicated
 scopes.
 
-[acl]: https://community.box.com/t5/How-To-Guides-for-Sharing/What-Are-The-Different-Access-Levels-For-Collaborators/ta-p/144
+<!-- i18n-enable localize-links -->
+
+[acl]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+<!-- i18n-disable localize-links -->
+
 [downscoping]: g://authentication/tokens/downscope

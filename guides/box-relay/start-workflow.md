@@ -32,4 +32,7 @@ post.
 </Samples>
 
 [start]: e://post-workflows-id-start
+<!-- i18n-enable localize-links -->
+
 [blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
+<!-- i18n-disable localize-links -->
