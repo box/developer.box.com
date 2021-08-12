@@ -67,5 +67,7 @@ Don't alter the 'Box' logo in any way when using it in your application.
 Don't refer to us as `Box.net` or `Boxnet`. Our company is now known as
 "Box" only.
 
+<!-- i18n-enable localize-links -->
 [logos]: https://cloud.box.com/s/v1yn0eyqpxx657brrgcn
-[contact]: https://community.box.com/t5/custom/page/page-id/submit_api_questionaire
+[contact]: https://support.box.com/hc/en-us/requests/new
+<!-- i18n-enable localize-links -->

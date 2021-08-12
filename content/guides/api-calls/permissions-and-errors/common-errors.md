@@ -44,6 +44,7 @@ for solution to common errors encountered when working with the Box APIs.
 ### 400 Bad Request
 
 <!-- markdownlint-disable line-length -->
+<!-- i18n-enable localize-links -->
 
 |              |                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +143,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | User is already a collaborator                                                                                                                                                                                                                                                                                                                                    |
 | **Solution** | The user that you are attempting to collaborate in on an item is already collaborated on that item. This request is not needed.                                                                                                                                                                                                                                   |
 |              |                                                                                                                                                                                                                                                                                                                                                                   |
-
+<!-- i18n-disable localize-links -->
 <!-- markdownlint-enable line-length -->
 
 ### 401 Unauthorized
@@ -160,6 +161,7 @@ for solution to common errors encountered when working with the Box APIs.
 ### 403 Forbidden
 
 <!-- markdownlint-disable line-length -->
+<!-- i18n-enable localize-links -->
 
 |              |                                                                                                                                                                                                                                                                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -211,6 +213,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Access denied - Did you forget to safelist your origin in the CORS configuration of your app?                                                                                                                                                                                                                                        |
 | **Solution** | Your application tried to access the Box API from a website. The application needs to [explicitly allow Cross Origin Resource Sharing](g://security/cors/#enabling-cors-for-your-domain) for the domain your site is hosted on.                                                                                                      |
 
+<!-- i18n-disable localize-links -->
 <!-- markdownlint-enable line-length -->
 
 ### 404 Not Found
@@ -365,6 +368,7 @@ for solution to common errors encountered when working with the Box APIs.
 ### 500 Internal Service Error
 
 <!-- markdownlint-disable line-length -->
+<!-- i18n-enable localize-links -->
 
 |              |                                                                                                              |
 | ------------ | ------------------------------------------------------------------------------------------------------------ |
@@ -372,11 +376,13 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Internal Server Error                                                                                        |
 | **Solution** | Client should retry using [exponential back-off strategy](https://en.wikipedia.org/wiki/Exponential_backoff) |
 
+<!-- i18n-disable localize-links -->
 <!-- markdownlint-enable line-length -->
 
 ### 502 Bad Gateway
 
 <!-- markdownlint-disable line-length -->
+<!-- i18n-enable localize-links -->
 
 |              |                                                                                                              |
 | ------------ | ------------------------------------------------------------------------------------------------------------ |
@@ -384,11 +390,13 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  |                                                                                                              |
 | **Solution** | Client should retry using [exponential back-off strategy](https://en.wikipedia.org/wiki/Exponential_backoff) |
 
+<!-- i18n-disable localize-links -->
 <!-- markdownlint-enable line-length -->
 
 ### 503 Unavailable
 
 <!-- markdownlint-disable line-length -->
+<!-- i18n-enable localize-links -->
 
 |              |                                                                              |
 | ------------ | ---------------------------------------------------------------------------- |
@@ -396,7 +404,10 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Unavailable                                                                  |
 | **Solution** | If a Retry-After header is provided in the response, the client should retry the request according to the header value. In rare situations, a write operation may eventually persist its changes after the 503 response is received by the client, so the client should handle this case upon retry. If the issue persists, please check our [Status Site](https://status.box.com/) for any known outage information. |
 
+<!-- i18n-disable localize-links -->
 <!-- markdownlint-enable line-length -->
 
+<!-- i18n-enable localize-links -->
 [status-codes]: http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
 [articles]: https://support.box.com/hc/en-us/sections/360007552913-Troubleshooting-Box-Platform
+<!-- i18n-disable localize-links -->

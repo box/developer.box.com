@@ -606,7 +606,9 @@ The `additional_details` payload will provide the following details:
   `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event.
 </Message>
 
+<!-- i18n-enable localize-links -->
 [box-shield]: https://www.box.com/shield
 [threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
+<!-- i18n-disable localize-links -->
 [events]: g://events/for-enterprise/

@@ -61,6 +61,8 @@ operators.
 
 </Message>
 
+<!-- i18n-enable localize-links -->
 <CTA to='https://support.box.com/hc/en-us/articles/360043696314-Search-for-Files-Folders-and-Content'>
   Check our community article with the latest details on Search in Box
 </CTA>
+<!-- i18n-disable localize-links -->

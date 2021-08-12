@@ -85,4 +85,6 @@ More information can be found [in our community article on this topic][fsizes].
 [preflight]: g://uploads/check
 [chunked]: g://uploads/chunked
 [upload]: e://post_files_content
+<!-- i18n-enable localize-links -->
 [fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590
+<!-- i18n-disable localize-links -->
