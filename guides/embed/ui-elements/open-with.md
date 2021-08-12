@@ -381,6 +381,8 @@ contentOpenWith.removeAllListeners();
 
 ### Options
 
+<!-- i18n-enable localize-links -->
+
 | Parameter             | Type           | Description                                                                                                                                                                                                                                                |
 | --------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dropdownAlignment`   | `left | right` | Determines the dropdown's alignment to the open with button. The default is `right`.                                                                                                                                                                       |
@@ -390,6 +392,7 @@ contentOpenWith.removeAllListeners();
 | `onError`             | `Function`     | A callback that executes when an error occurs.                                                                                                                                                                                                             |
 | `requestInterceptor`  | `Function`     | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).  |
 | `responseInterceptor` | `Function`     | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors). |
+<!-- i18n-disable localize-links -->
 
 <Message warning>
 
@@ -409,8 +412,16 @@ using `openWith.addListener('execute', callback)` and
 <!-- markdownlint-enable line-length -->
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
-[community]: https://community.box.com/t5/Box-for-G-Suite-User-Guide/Introducing-Box-for-G-Suite/ta-p/60494
-[tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
+<!-- i18n-enable localize-links -->
+
+[community]: https://support.box.com/hc/en-us/articles/360043696994-Introducing-Box-for-G-Suite
+[tools]: https://support.box.com/hc/en-us/categories/360003188014-Box-Tools
+<!-- i18n-disable localize-links -->
+
 [custom-domains]: g://embed/ui-elements/custom-domains
-[safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
+<!-- i18n-enable localize-links -->
+
+[safari]: https://support.box.com/hc/en-us/articles/360043697334-Installing-Box-Tools
+<!-- i18n-disable localize-links -->
+
 [service-account]: g://getting-started/user-types/service-account/

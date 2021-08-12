@@ -89,7 +89,11 @@ reveal the folder and/or file id. For example,
 The User ID is `1987212562`, the folder ID is `88560510648` and the file ID
 within that folder is `532181212706`.
 
+<!-- i18n-enable localize-links -->
+
 [contentmanager]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+<!-- i18n-disable localize-links -->
+
 [currentuser]: e://get-users-me
 [devtoken]: g://authentication/tokens/developer-tokens
 [uo]: e://resources/user

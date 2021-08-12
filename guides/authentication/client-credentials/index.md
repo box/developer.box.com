@@ -92,7 +92,11 @@ Box SDKs do not currently support this authentication method.
 
 </Message>
 
+<!-- i18n-enable localize-links -->
+
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+<!-- i18n-disable localize-links -->
+
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://getting-started/user-types/service-account/

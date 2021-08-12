@@ -63,5 +63,8 @@ the access token sent. It is up to the developer to ensure the token being
 passed is valid and the user associated with the token has permissions to
 perform the requested operation.
 
-[sf-package]: https://community.box.com/t5/For-Admins/Box-For-Salesforce-Installation/ta-p/180
+<!-- i18n-enable localize-links -->
+
+[sf-package]: https://support.box.com/hc/en-us/articles/360044195713-Installing-and-Configuring-Box-For-Salesforce
 [sf-sdk]: https://github.com/box/box-salesforce-sdk
+<!-- i18n-disable localize-links -->

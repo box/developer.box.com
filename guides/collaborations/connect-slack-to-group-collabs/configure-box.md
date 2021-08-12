@@ -61,8 +61,8 @@ the following steps.
    selected.
 1. Scroll to the **Application Scopes** section of the same screen
    and ensure that at least the following scopes are enabled:
-   `Read and write all files and folders stored in Box`, `Manage users`, and
-   `Manage groups`.
+   **Read and write all files and folders stored in Box**, **Manage users**,
+   and **Manage groups**.
 1. Under **Advanced Features** ensure that **Perform Actions as Users** is
    enabled to perform actions on behalf of Box users.
 1. At the top of the page click the button to **Save Changes**

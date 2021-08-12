@@ -52,5 +52,8 @@ Learn how to create a Web App Integration
 [app-gallery]: g://applications/app-gallery
 [custom-app]: g://authentication/oauth2/oauth2-setup
 [oauth2]: g://authentication/oauth2
+<!-- i18n-enable localize-links -->
+
 [devconsole]: https://app.box.com/developers/console
-[recommended-apps]: https://community.box.com/t5/Organizing-and-Tracking-Content/Installing-Recommended-Apps-in-your-Enterprise/ta-p/80134
+[recommended-apps]: https://support.box.com/hc/en-us/articles/360044195533-Installing-Recommended-Apps-in-your-Enterprise
+<!-- i18n-disable localize-links -->

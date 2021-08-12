@@ -75,5 +75,8 @@ obtain this URL.
 Webhooks will now trigger for any configured events that are occur in the user's
 account.
 
+<!-- i18n-enable localize-links -->
+
 [devconsole]: https://app.box.com/developers/console
 [support]: https://support.box.com
+<!-- i18n-disable localize-links -->

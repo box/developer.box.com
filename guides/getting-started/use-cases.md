@@ -46,4 +46,7 @@ Some common customer solutions include:
 
 Still not sure if you have a good use case? Reach out to your Box account team.
 
+<!-- i18n-enable localize-links -->
+
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
+<!-- i18n-disable localize-links -->

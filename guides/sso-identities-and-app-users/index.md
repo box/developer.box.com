@@ -71,4 +71,7 @@ via SAML 2.0.
 
 </Message>
 
+<!-- i18n-enable localize-links -->
+
 [sso-support]: https://support.box.com/hc/en-us/articles/360043696514-Setting-Up-Single-Sign-On-SSO-for-your-Enterprise
+<!-- i18n-disable localize-links -->

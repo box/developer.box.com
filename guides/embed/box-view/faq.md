@@ -82,6 +82,10 @@ the subdomain (`https://*.domain.com`). See the
 See this guide for information on customizing the logo within a
 [Preview UI Element](g://embed/ui-elements/logo/).
 
-[file_types]: https://community.box.com/t5/Migrating-and-Previewing-Content/Viewing-Different-File-Types-Supported-in-Box-Content-Preview/ta-p/327
+<!-- i18n-enable localize-links -->
+
+[file_types]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
+<!-- i18n-enable localize-links -->
+
 [annotations]: g://embed/ui-elements/annotations
 [cors]: g://security/cors
