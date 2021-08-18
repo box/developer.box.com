@@ -147,7 +147,9 @@ restrictions that a Service Account associated with a Custom App does not.
 [auth]: g://authorization/custom-app-approval/
 [dc]: https://app.box.com/developers/console
 [scopes]: g://api-calls/permissions-and-errors/scopes/
+<!-- i18n-enable localize-links -->
 [cm]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+<!-- i18n-disable localize-links -->
 [collabapi]: e://post-collaborations/
 [getuser]: e://get-users-me/
 [updateuser]: e://put-users-id/

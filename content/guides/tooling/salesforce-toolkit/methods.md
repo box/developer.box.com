@@ -402,6 +402,8 @@ Returns:
 * `string` returned is the id of the Box collaboration that was created.
 * `null` returned if there was an error. In this case, check `mostRecentError`.
 
-[collab-type]: https://community.box.com/t5/Collaborate-By-Inviting-Others/Understanding-Collaborator-Permission-Levels/ta-p/144
+<!-- i18n-enable localize-links -->
+[collab-type]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [sf-httprequest]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httprequest.htm
 [sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
+<!-- i18n-disable localize-links -->

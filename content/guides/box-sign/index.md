@@ -56,7 +56,11 @@ production content.
 [read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
 [write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
 [sign]: g://api-calls/permissions-and-errors/scopes/#manage-signature-requests
+<!-- i18n-enable localize-links -->
 [restrict]: https://support.box.com/hc/en-us/articles/4404076971155-Enabling-Box-Sign
+<!-- i18n-disable localize-links -->
 [ratelimit]: g://api-calls/permissions-and-errors/rate-limits/#per-api-rate-limits
+<!-- i18n-enable localize-links -->
 [webapp]: https://support.box.com/hc/en-us/articles/4404105810195-Sending-a-document-for-signature
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins 
+<!-- i18n-disable localize-links -->

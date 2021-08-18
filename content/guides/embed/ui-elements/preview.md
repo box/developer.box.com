@@ -366,6 +366,8 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-enable line-length -->
 
-[filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported
+<!-- i18n-enable localize-links -->
+[filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
+<!-- i18n-disable localize-links -->
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes

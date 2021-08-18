@@ -158,17 +158,21 @@ authorization is a snapshot in time.  This means that if a developer revisits
 the Developer Console and changes the configuration, the Admin must re-authorize
 the application in order for generated Access Tokens to reflect the changes. 
 
+<!-- i18n-enable localize-links -->
 [perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
+<!-- i18n-disable localize-links -->
 [downscope]: g://authentication/tokens/downscope
 [at]: g://authentication/tokens
 [revoked]: e://post-oauth2-revoke
 [rt]: g://authentication/tokens/refresh
 [gettoken]: e://post-oauth2-token
 [exchange]: e://reference/post-oauth2-token--refresh/
+<!-- i18n-enable localize-links -->
 [coadminperm]: https://support.box.com/hc/en-us/articles/360044194393-Granting-And-Modifying-Co-Admin-Permissions
 [reference]: https://developer.box.com/reference/
 [dc]: https://app.box.com/developers/console
+<!-- i18n-disable localize-links -->
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [users]: e://resources/user
 [groups]: e://resources/group
@@ -186,5 +190,7 @@ the application in order for generated Access Tokens to reflect the changes.
 [auth]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials
+<!-- i18n-enable localize-links -->
 [appgallery]: https://app.box.com/services
+<!-- i18n-disable localize-links -->
 [auth]: g://authorization

@@ -29,4 +29,6 @@ The Box API allows for device pins to be inspected and removed.
 * [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): Deletes an
   individual device pin.
 
-[community]: https://community.box.com/t5/How-to-Guides-for-Admins/Device-Pinning-Settings/ta-p/172
+<!-- i18n-enable localize-links -->
+[community]: https://support.box.com/hc/en-us/articles/360043693814-Device-Pinning-Settings
+<!-- i18n-disable localize-links -->

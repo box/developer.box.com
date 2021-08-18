@@ -36,4 +36,6 @@ the Box SDKs will take care of choosing the right domain for the right API call.
 
 [direct]: g://uploads/direct
 [chunked]: g://uploads/chunked
-[fsizes]: https://community.box.com/t5/Upload-and-Download-Files-and/Understand-the-Maximum-File-Size-You-Can-Upload-to-Box/ta-p/50590
+<!-- i18n-enable localize-links -->
+[fsizes]: https://support.box.com/hc/en-us/articles/360043697314-Understand-the-Maximum-File-Size-You-Can-Upload-to-Box
+<!-- i18n-disable localize-links -->

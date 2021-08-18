@@ -46,10 +46,14 @@ production content.
 [read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
 [write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
 [ratelimit]: g://api-calls/permissions-and-errors/rate-limits/#per-api-rate-limits
+<!-- i18n-enable localize-links -->
 [webapp]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
+<!-- i18n-disable localize-links -->
 [relay]: g://api-calls/permissions-and-errors/scopes/#manage-box-relay
+<!-- i18n-enable localize-links -->
 [boxrelay]: https://support.box.com/hc/en-us/articles/360044196213-Introducing-Box-Relay
 [workflow]: https://developer.box.com/reference/resources/workflow/
 [manualstart]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
 [blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
+<!-- i18n-disable localize-links -->
