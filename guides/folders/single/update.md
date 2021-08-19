@@ -32,7 +32,7 @@ To update a folder in Box you will need to call the following API.
 
 ## Name restrictions
 
-There are some restrictions to the file name. Names containing non-printable
+There are some restrictions to the folder name. Names containing non-printable
 ASCII characters, forward and backward slashes (`/`, `\`), as well as names
 with trailing spaces are prohibited.
 

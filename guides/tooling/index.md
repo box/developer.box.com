@@ -22,8 +22,7 @@ source_url: >-
 # Tooling
 
 Box offers several options for using our APIs, including the [Box CLI][cli],
-[Postman][postman], [Salesforce Developer Toolkit][sdt], and [various SDKs]
-[sdks].
+[Postman][postman], [Salesforce Developer Toolkit][sdt], and [various SDKs][sdks].
 
 [cli]: g://tooling/cli
 [postman]: g://tooling/postman

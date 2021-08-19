@@ -51,7 +51,7 @@ using a `/invite @bot_app_name` command.
 
 Once added, verify that the group is created in Box and members have been
 added. From a Box enterprise admin account, go to the
-**[Users and Groups][box-users-groups**] section of the admin console. If
+**[Users and Groups][box-users-groups]** section of the admin console. If
 successful, you will see a group with an random alpha-numeric string as the
 group name. This is the Slack channel ID, which is mirrored in the group name.
 
