@@ -28,7 +28,7 @@ At the end of this tutorial you will have a Slack bot that will be deployed to a
 channel in your workspace. This bot will create a Box group containing all the
 people present in the channel, and then listen for a `/boxadd` command in the
 channel. It will then parse that command and automatically collaborate the Box
-fie or folder with the entire group of users in the channel.
+file or folder with the entire group of users in the channel.
 
 <ImageFrame noborder center shadow>
   ![/boxadd command in Slack](./img/slack_0_boxadd_command.png)
