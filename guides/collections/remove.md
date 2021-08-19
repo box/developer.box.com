@@ -41,7 +41,7 @@ achieved by passing the API an empty array of collections.
 
 ## Remove file from collection
 
-To add a file to a collection, call the `PUT /files/:id` API and pass an empty
+To remove a file from a collection, call the `PUT /files/:id` API and pass an empty
 array of collection IDs.
 
 <Samples id='put_files_id' variant='remove_from_collection' >
@@ -50,7 +50,7 @@ array of collection IDs.
 
 ## Remove folder from collection
 
-To add a folder to a collection, call the `PUT /folders/:id` API and pass an
+To remove a folder from a collection, call the `PUT /folders/:id` API and pass an
 empty array of collection IDs.
 
 <Samples id='put_folders_id' variant='remove_from_collection' >
@@ -59,8 +59,8 @@ empty array of collection IDs.
 
 ## Remove web link from collection
 
-To add a web link to a collection, call the `PUT /web_links/:id` API and pass an
-empty array of collection IDs.
+To remove a web link from a collection, call the `PUT /web_links/:id` API and
+pass an empty array of collection IDs.
 
 <Samples id='put_web_links_id' variant='remove_from_collection' >
 
