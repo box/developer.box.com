@@ -42,7 +42,7 @@ empty array of collection IDs.
 
 ## Remove web link from collection
 
-To remove a web link from a collection, call the `PUT /web_links/:id` API and pass an
-empty array of collection IDs.
+To remove a web link from a collection, call the `PUT /web_links/:id` API and
+pass an empty array of collection IDs.
 
 <Samples id='put_web_links_id' variant='remove_from_collection' />
