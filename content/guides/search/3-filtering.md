@@ -175,7 +175,7 @@ client.search.query(
 | Query parameter    |                                                                                                                                              |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `created_at_range` | Defines a range of `created_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
-| `created_at_range` | Defines a range of `updated_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
+| `updated_at_range` | Defines a range of `updated_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
 
 <!-- markdownlint-enable line-length -->
 
