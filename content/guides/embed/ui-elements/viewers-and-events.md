@@ -681,7 +681,7 @@ The image viewer triggers the following events.
 | `zoom`         | The preview zooms in or out            | 1. `{number}` **`zoom`**: new zoom value                              |
 |                |                                        | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
 |                |                                        | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-| `pagefocus`    | `{number}` page number of focused page |                                                                       |
+| `pagefocus`    | A page is visible                      | `{number}` page number of focused page                                                                     |
 | `pan`          | The preview is panning                 |                                                                       |
 | `panstart`     | Panning starts                         |                                                                       |
 | `panend`       | Panning ends                           |                                                                       |
