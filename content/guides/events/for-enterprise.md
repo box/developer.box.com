@@ -50,7 +50,8 @@ but does not support long polling.
 
 ## Event Types
 
-The following events can be triggered for an enterprise. This list is not exhaustive, so it is possible events appear that are not listed.
+The following events can be triggered for an enterprise. This list is not 
+exhaustive, so it is possible events appear that are not listed.
 
 <!-- markdownlint-disable line-length -->
 
