@@ -29,6 +29,9 @@ triggered the event.
 
 ## User Source Object
 
+If a user triggers an event, the source object will be the standard
+representation of the [user resource](e://resources/user).
+
 ```json
 {
   "source": {
@@ -58,12 +61,23 @@ triggered the event.
 
 ## Item Source Object
 
+If an item triggers an event, the source object will be the
+[event source resource](e://resources/event-source).
+
+<Message type='notice'>
+
+The below example contains a `classification` object. This does not appear if
+the item does not have a classification set. Also, it does not appear for
+every event type.
+
+</Message>
+
 ```json
 {
   "source": {
     "item_type": "file",
-    "item_id": "11429270340",
-    "item_name": "testfile.docx",
+    "item_id": "8903212345",
+    "item_name": "example.docx",
     "parent": {
       "type": "folder",
       "name": "All Files",
@@ -71,16 +85,13 @@ triggered the event.
     },
     "owned_by": {
       "type": "user",
-      "id": "6148078226",
-      "name": "Dina Staging",
-      "login": "dbirioukova+staging@boxdemo.com"
+      "id": "11446498",
+      "name": "Aaron Levie",
+      "login": "notifications@example.com"
     },
     "classification": {
-      "name": "JustTest"
+      "name": "Top Secret"
     }
   }
 }
 ```
-
-[user]: e://resources/user
-[event_source]: e://resources/event-source
