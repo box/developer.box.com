@@ -50,7 +50,7 @@ but does not support long polling.
 
 ## Event Types
 
-The following events can be triggered for an enterprise.
+The following events can be triggered for an enterprise. This list is not exhaustive, so it is possible events appear that are not listed.
 
 <!-- markdownlint-disable line-length -->
 
@@ -61,6 +61,9 @@ The following events can be triggered for an enterprise.
 | `ADD_DEVICE_ASSOCIATION`                       | Added device association                                                                        |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we have not seen before                                      |
 | `ADMIN_LOGIN`                                  | Admin console used to log in to a managed user's account                                        |
+| `ANNOTATIONV2_CREATE`                          | An annotation is created                                                             |
+| `ANNOTATIONV2_DELETE`                          | An annotation is deleted                                                             |
+| `ANNOTATIONV2_EDIT`                            | An annotation is edited                                                             |
 | `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
 | `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |
@@ -137,6 +140,7 @@ The following events can be triggered for an enterprise.
 | `RETENTION_POLICY_ASSIGNMENT_ADD`              | A retention policy assignment is added                                                          |
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
+| `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                              |
 | `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
