@@ -48,7 +48,7 @@ that Box's servers can use this as the `invocation_url`.
   [Microsoft Azure Functions][azure_functions] are a natural fit for these kind
   of sporadic events. The serverless functions will only run and be billed when
   the event is being processed.
- * **Traditional application hosting** - Traditional application hosting
+* **Traditional application hosting** - Traditional application hosting
   solutions, such as [Heroku][heroku], [Firebase][firebase], [AWS][aws] or
   [GCP][gcp] are other viable options if serverless technology is not preferred.
   These applications will be hosted on their respective services and have an
