@@ -35,11 +35,11 @@ distinct resources.
   resource contains a list of every assigned policy.
 
 <Message type='warning'>
-  The above [File Version Retention][retention] section of the Box API
+  The above [file version retention][retention] section of the Box API
   will soon be deprecated. The date of the deprecation will be announced at a
   later date. If you wish to use the new endpoints, you may do so by referring
-  to [files under retention][files-under] or [file versions under retention]
-  [file-versions-under] in the reference section.
+  to [files under retention][files-under] or
+  [file versions under retention][file-versions-under] in the reference section.
 </Message>
 
 ## File Deletion with Retention Policies
@@ -61,5 +61,5 @@ support.
 [assignment]: r://retention_policy_assignment
 [retention]: r://file_version_retention
 [governance]: https://www.box.com/security/governance-and-compliance
-[files-under]: r://get-retention-policy-assignments-id-files-under-retention
-[file-versions-under]: r://get-retention-policy-assignments-id-file-versions-under-retention
+[files-under]: e://get-retention-policy-assignments-id-files-under-retention
+[file-versions-under]: e://get-retention-policy-assignments-id-file-versions-under-retention
