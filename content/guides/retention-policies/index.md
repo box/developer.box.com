@@ -37,8 +37,9 @@ distinct resources.
 <Message type='warning'>
   The above [File Version Retention][retention] section of the Box API
   will soon be deprecated. The date of the deprecation will be announced at a
-  later date. If you wish to use the new endpoint, you may do so by referring
-  to [][files-under] and [][file-versions-under] in the reference section.
+  later date. If you wish to use the new endpoints, you may do so by referring
+  to [files under retention][files-under] or [file versions under retention]
+  [file-versions-under] in the reference section.
 </Message>
 
 ## File Deletion with Retention Policies
