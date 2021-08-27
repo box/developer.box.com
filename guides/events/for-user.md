@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: events/for-user
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: events
 parent_id: events
 next_page_id: events/for-enterprise
@@ -72,7 +72,8 @@ be identified by their event IDs.
 
 ## Event Types
 
-The following events can be triggered for a user.
+The following events can be triggered for a user. This list is not exhaustive,
+so it is possible events appear that are not listed.
 
 <!-- markdownlint-disable line-length -->
 

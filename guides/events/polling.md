@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - get_events
   - options_events
@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: false
 id: events/polling
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: events
 parent_id: events
 next_page_id: events/shield-alert-events
-previous_page_id: events/for-enterprise
+previous_page_id: events/event-triggers
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/polling.md
 ---
