@@ -80,7 +80,7 @@ However, you can also use options in the csv. Building on the last example,
 instead of using the `--role=editor` option in the command itself, it can be a 
 column called `role`. The command itself becomes:
 <!-- markdownlint-disable line-length -->
-`box folders:collaborations:create --bulk-file-path=pathtocsv`.
+`box folders:collaborations:create --bulk-file-path=pathtocsv`
 <!-- markdownlint-enable line-length -->
 
 ## Summary

@@ -57,7 +57,8 @@ be identified by their event IDs.
 
 ## Event Types
 
-The following events can be triggered for a user.
+The following events can be triggered for a user. This list is not exhaustive, 
+so it is possible events appear that are not listed.
 
 <!-- markdownlint-disable line-length -->
 
