@@ -186,13 +186,13 @@ uploader.removeAllListeners();
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
+the Content Uploader functionality, you can use [Downscoping][downscope] to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+client initializing the Content Uploader.
 
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
+allow developers to enable/disable UI controls on the Content Uploader by
 configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
