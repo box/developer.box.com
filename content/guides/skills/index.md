@@ -26,7 +26,7 @@ The end-to-end process of a Skills application is as follows.
    event payload is sent to the `invocation_url`. This payload contains two
    **Access Tokens** that can be used to access the uploaded file in Box and
    store metadata back onto the file.
-4. [Verify Key Signatures](guide://webhooks/v2/signatures_v2) - Before the
+4. [Verify Key Signatures][1] - Before the
    service that handles the Skill payload does other actions, it should verify
    the `invocation_url` was called by Box. See the link for
    examples of doing this manually or using the SDKs.
@@ -46,3 +46,5 @@ complexities of the above steps. The Skills Kit is currently only available in
 Node.
 
 </Message>
+
+[1]: guide://webhooks/v2/signatures_v2
