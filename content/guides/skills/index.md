@@ -25,12 +25,16 @@ The end-to-end process of a Skills application is as follows.
    uploaded, copied, or moved into a folder that the Box Skill listens to, an
    event payload is sent to the `invocation_url`. This payload contains two
    **Access Tokens** that can be used to access the uploaded file in Box and
-   store metadata back onto the file.        
-4. [Send the file for processing](guide://skills/examples) - The service that
+   store metadata back onto the file.
+4. [Verify Key Signatures](guide://webhooks/v2/signatures_v2) - Before the
+   service that handles the Skill payload does other actions, it should verify
+   the `invocation_url` was called by Box. See the link for
+   examples of doing this manually or using the SDKs.
+5. [Send the file for processing](guide://skills/examples) - The service that
    handles the Skill payload sends the file URL or file content to an external
    service for processing. This service can be a third party machine learning
    system, or an in-house service.
-5. [Store the metadata on the file](guide://skills/handle/metadata) - Once the
+6. [Store the metadata on the file](guide://skills/handle/metadata) - Once the
    processing service has extracted the metadata for the file, those insights
    can be stored back on the uploaded file as custom metadata.
    
