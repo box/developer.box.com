@@ -50,7 +50,7 @@ Components:
 ## Box Skill
 
 <ImageFrame center shadow border>
-![Box Skill Diagram](images/box_skill.png)
+![Box Skill Diagram](images/box_skill2.png)
 </ImageFrame>
 
 In this example, external users upload their resumes via a [file request][fr]. 
