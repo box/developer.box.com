@@ -68,7 +68,7 @@ are then mapped to [App User][au] information from Box within a data server.
 
 <ImageFrame center shadow border>
 
-![Box Skill Diagram](images/box_skill.png)
+![Box Skill Diagram](images/box_skill2.png)
 
 </ImageFrame>
 
