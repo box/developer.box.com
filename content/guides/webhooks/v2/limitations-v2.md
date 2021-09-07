@@ -2,8 +2,8 @@
 rank: 6
 related_endpoints: []
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/update_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/update-v2
 required_guides: []
 alias_paths:
   - /webhooks/limitations
@@ -57,4 +57,4 @@ V2 webhooks cannot be created on the root folder, which is the folder with ID
 </Mesage>
 
 [v1]: g://webhooks/v1
-[update]: g://webhooks/v2/update_v2
+[update]: g://webhooks/v2/update-v2

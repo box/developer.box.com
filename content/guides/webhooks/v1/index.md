@@ -21,5 +21,5 @@ a webhook for a specific file or folder, you will need to leverage
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
-[list_webhooks]: g://webhooks/v2/list_v2
+[list_webhooks]: g://webhooks/v2/list-v2
 [v2]: g://webhooks/v2

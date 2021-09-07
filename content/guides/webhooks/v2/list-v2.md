@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_webhooks
 related_guides:
-  - webhooks/v2/create_v2
+  - webhooks/v2/create-v2
 related_resources: 
   - webhook
 required_guides: []

@@ -3,11 +3,11 @@ rank: 2
 related_endpoints:
   - post_webhooks
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/signatures_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/signatures-v2
 required_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/signatures_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/signatures-v2
 alias_paths: 
   - /webhooks/handle/retries
   - /webhooks/handle/payload
@@ -207,5 +207,5 @@ time for every retry.
   to change.
 </Message>
 
-[setup_sigs]: g://webhooks/v2/signatures_v2
-[verify_sigs]: g://webhooks/v2/signatures_v2
+[setup_sigs]: g://webhooks/v2/signatures-v2
+[verify_sigs]: g://webhooks/v2/signatures-v2

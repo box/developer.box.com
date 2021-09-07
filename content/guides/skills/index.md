@@ -47,4 +47,4 @@ Node.
 
 </Message>
 
-[1]: guide://webhooks/v2/signatures_v2
+[1]: guide://webhooks/v2/signatures-v2
