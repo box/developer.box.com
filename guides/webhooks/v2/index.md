@@ -3,11 +3,11 @@ rank: 2
 related_endpoints:
   - post_webhooks
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/signatures_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/signatures-v2
 required_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/signatures_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/signatures-v2
 alias_paths:
   - /webhooks/handle/retries
   - /webhooks/handle/payload
@@ -19,8 +19,8 @@ type: guide
 total_steps: 6
 sibling_id: webhooks
 parent_id: webhooks
-next_page_id: webhooks/v2/update_v2
-previous_page_id: webhooks/v2/list_v2
+next_page_id: webhooks/v2/update-v2
+previous_page_id: webhooks/v2/list-v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/index.md
 ---
@@ -228,5 +228,5 @@ to change.
 
 </Message>
 
-[setup_sigs]: g://webhooks/v2/signatures_v2
-[verify_sigs]: g://webhooks/v2/signatures_v2
+[setup_sigs]: g://webhooks/v2/signatures-v2
+[verify_sigs]: g://webhooks/v2/signatures-v2

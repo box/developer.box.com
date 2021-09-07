@@ -9,15 +9,15 @@ alias_paths:
 category_id: webhooks
 subcategory_id: webhooks/v2
 is_index: false
-id: webhooks/v2/signatures_v2
+id: webhooks/v2/signatures-v2
 type: guide
 total_steps: 6
 sibling_id: webhooks/v2
 parent_id: webhooks/v2
-next_page_id: webhooks/v2/limitations_v2
-previous_page_id: webhooks/v2/delete_v2
+next_page_id: webhooks/v2/limitations-v2
+previous_page_id: webhooks/v2/delete-v2
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/signatures_v2.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/signatures-v2.md
 ---
 # Signature Verification
 

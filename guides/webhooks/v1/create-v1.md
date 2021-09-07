@@ -12,7 +12,7 @@ alias_paths:
 category_id: webhooks
 subcategory_id: webhooks/v1
 is_index: false
-id: webhooks/v1/create_v1
+id: webhooks/v1/create-v1
 type: guide
 total_steps: 2
 sibling_id: webhooks/v1
@@ -20,7 +20,7 @@ parent_id: webhooks/v1
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/create_v1.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/create-v1.md
 ---
 # Create Webhooks
 

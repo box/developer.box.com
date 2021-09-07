@@ -3,25 +3,25 @@ rank: 4
 related_endpoints:
   - delete_webhooks_id
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/list_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/list-v2
 required_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/list_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/list-v2
 alias_paths:
   - /webhooks/manage/delete
 category_id: webhooks
 subcategory_id: webhooks/v2
 is_index: false
-id: webhooks/v2/delete_v2
+id: webhooks/v2/delete-v2
 type: guide
 total_steps: 6
 sibling_id: webhooks/v2
 parent_id: webhooks/v2
-next_page_id: webhooks/v2/signatures_v2
-previous_page_id: webhooks/v2/update_v2
+next_page_id: webhooks/v2/signatures-v2
+previous_page_id: webhooks/v2/update-v2
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/delete_v2.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/delete-v2.md
 ---
 # Delete Webhooks
 
