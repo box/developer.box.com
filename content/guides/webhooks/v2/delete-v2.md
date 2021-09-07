@@ -3,11 +3,11 @@ rank: 4
 related_endpoints:
   - delete_webhooks_id
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/list_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/list-v2
 required_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/list_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/list-v2
 alias_paths:
   - /webhooks/manage/delete
 ---

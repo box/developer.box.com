@@ -144,7 +144,7 @@ Additionally, for JWT applications, the application must be configured with
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
-Please review webhook [limitations](g://webhooks/v2/limitations_v2). Most
+Please review webhook [limitations](g://webhooks/v2/limitations-v2). Most
 notably, there is a limit of 1000 webhooks per application, per user.
 
 ### Manage enterprise properties
