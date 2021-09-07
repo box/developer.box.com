@@ -3,9 +3,9 @@ rank: 1
 related_endpoints:
   - post_webhooks
 related_guides:
-  - webhooks/v2/create_v2
+  - webhooks/v2/create-v2
 required_guides:
-  - webhooks/v2/create_v2
+  - webhooks/v2/create-v2
 alias_paths:
   - /webhooks/creation/triggers
 category_id: webhooks

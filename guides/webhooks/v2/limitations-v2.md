@@ -2,23 +2,23 @@
 rank: 6
 related_endpoints: []
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/update_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/update-v2
 required_guides: []
 alias_paths:
   - /webhooks/limitations
 category_id: webhooks
 subcategory_id: webhooks/v2
 is_index: false
-id: webhooks/v2/limitations_v2
+id: webhooks/v2/limitations-v2
 type: guide
 total_steps: 6
 sibling_id: webhooks/v2
 parent_id: webhooks/v2
 next_page_id: ''
-previous_page_id: webhooks/v2/signatures_v2
+previous_page_id: webhooks/v2/signatures-v2
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/limitations_v2.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/limitations-v2.md
 ---
 # Limitations
 
@@ -70,4 +70,4 @@ no notification is sent for the attempted action.
 </Mesage>
 
 [v1]: g://webhooks/v1
-[update]: g://webhooks/v2/update_v2
+[update]: g://webhooks/v2/update-v2
