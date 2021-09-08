@@ -64,6 +64,13 @@ the trash until the retention expires. When the retention expires,
 you can choose to have the content automatically deleted or for the policy to be
 removed.
 
+## Extend Retention for a File
+
+Files under retention can have their retention date extended by
+[updating][extend-retention] the `disposition_at` field's value with a future
+date. Once the date has been extended, it cannot be reverted or changed to be
+prior to the new date.
+
 ## Required Scopes
 
 Before using any of the Retention Policy APIs, an application must have the [GCM
@@ -78,3 +85,4 @@ support.
 [governance]: https://www.box.com/security/governance-and-compliance
 [files-under]: e://get-retention-policy-assignments-id-files-under-retention
 [file-versions-under]: e://get-retention-policy-assignments-id-file-versions-under-retention
+[extend-retention]: e://put-files-id/#param-disposition_at
