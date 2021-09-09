@@ -28,6 +28,15 @@ To create a lock on a folder in Box you will need to provide our API with the
 `id` of the folder for which the lock should be applied. Optionally you may
 supply the specific `locked_operations` to be applied with the folder lock.
 
+<Message type='notice'>
+
+# Folder Locks
+
+When using any folder lock API endpoints, you must be the owner/co-owner of
+the folder you are trying to access.
+
+</Message>
+
 <Samples id='post_folder_locks' >
 
 </Samples>
