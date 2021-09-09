@@ -5,7 +5,7 @@ related_endpoints:
 related_guides:
   - webhooks/triggers
   - webhooks/v2
-  - webhooks/v2/delete_v2
+  - webhooks/v2/delete-v2
 related_resources: 
   - webhook
 required_guides: []

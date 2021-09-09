@@ -4,10 +4,10 @@ related_endpoints:
   - put_webhooks_id
   - get_webhooks
 related_guides:
-  - webhooks/v2/create_v2
-  - webhooks/v2/list_v2
+  - webhooks/v2/create-v2
+  - webhooks/v2/list-v2
 required_guides:
-  - webhooks/v2/list_v2
+  - webhooks/v2/list-v2
 related_resources: 
   - webhook
 alias_paths:
@@ -22,5 +22,5 @@ which requires the webhook ID. To find the ID of the webhook, use the
 
 <Samples id='put_webhooks_id'></Samples>
 
-[1]: guide://webhooks/v2/list_v2
+[1]: guide://webhooks/v2/list-v2
 [2]: e://put-webhooks-id
