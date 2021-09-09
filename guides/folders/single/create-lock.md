@@ -32,8 +32,8 @@ supply the specific `locked_operations` to be applied with the folder lock.
 
 # Folder Locks
 
-When using any folder lock API endpoints, you must be the owner/co-owner of
-the folder you are trying to access.
+When using any folder lock API endpoints, you must be authenticated as the
+owner/co-owner of the folder you are trying to access.
 
 </Message>
 

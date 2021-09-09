@@ -30,8 +30,8 @@ To remove a lock applied to a folder in Box, call the
 
 # Folder Locks
 
-When using any folder lock API endpoints, you must be the owner/co-owner of
-the folder you are trying to access.
+When using any folder lock API endpoints, you must be authenticated as the
+owner/co-owner of the folder you are trying to access.
 
 </Message>
 

@@ -44,6 +44,7 @@ Want to submit your project? Please review the
 
 | Name                                         | Language     | Description                                                                                                                    |
 | -------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| [Box Java Wrapper][box-camel]         | `Java` | Java wrapper for the Box API written by [Claus Ibsen][claus]. The Github repo can be found [here][camel-repo]                                                |
 | [Box JavaScript SDK][sdk-javascript]         | `Javascript` | A promise-based client-side SDK for making requests to the Box API.                                                            |
 | [Box Ruby SDK][sdk-ruby]                     | `Ruby`       | A Ruby client library for the Box Content API.                                                                                 |
 | [Box R SDK][sdk-r]                           | `R`          | R interface for the Box API.                                                                                                   |
@@ -101,3 +102,6 @@ Want to submit your project? Please review the
 [connector-stamplay]: https://github.com/box/mojito
 [connector-workato]: https://www.workato.com/integrations/box
 [tools-sharex]: https://github.com/ShareX/ShareX
+[box-camel]: https://camel.apache.org/components/latest/box-component.html
+[claus]: https://github.com/davsclaus
+[camel-repo]: https://github.com/apache/camel/tree/master/components/camel-box
