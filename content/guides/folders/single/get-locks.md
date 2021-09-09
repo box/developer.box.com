@@ -19,9 +19,9 @@ query string parameter.
 
 <Message type='notice'>
   # Folder Locks
-  
-  When using any folder lock API endpoints, you must be the owner/co-owner of
-  the folder you are trying to access.
+
+  When using any folder lock API endpoints, you must be authenticated as the
+  owner/co-owner of the folder you are trying to access.
 </Message>
 
 <Samples id='get_folder_locks' />
