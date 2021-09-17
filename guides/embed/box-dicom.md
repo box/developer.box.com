@@ -115,8 +115,10 @@ The following is an example of an `iframe` embed.
 
 <Message warning>
 
-# `allowfullscreen` is required The `allowfullscreen` attribute is required
-for the Box DICOM viewer's full-screen function to work properly.
+# `allowfullscreen` is required
+
+The `allowfullscreen` attribute is required for the Box DICOM viewer's full-screen
+function to work properly.
 
 </Message>
 

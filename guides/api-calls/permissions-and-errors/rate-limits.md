@@ -14,7 +14,7 @@ subcategory_id: api-calls/permissions-and-errors
 is_index: false
 id: api-calls/permissions-and-errors/rate-limits
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors
 next_page_id: api-calls/permissions-and-errors/scopes
