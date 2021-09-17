@@ -586,7 +586,8 @@ the document will zoom in until the original zoom level is reached.
 
 ### Supported File Extensions
 
-`ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`, `psd`, `svs`, `tga`
+`ai`, `bmp`, `dcm`, `eps`, `idml`, `indt`, `indd`, `inx`, `gif`, `png`, `ps`,
+`psd`, `svs`, `tga`
 
 ### Options
 
