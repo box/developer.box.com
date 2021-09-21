@@ -92,6 +92,18 @@ Box SDKs do not currently support this authentication method.
 
 </Message>
 
+## Common Errors
+
+### Grant credentials are invalid
+
+This error indicates either:
+
+- the client ID and client secret passed are incorrect or are not for the same
+application
+
+- the `box_subject_id` cannot be used based on the selected
+[application access][aa]
+
 <!-- i18n-enable localize-links -->
 
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
@@ -101,3 +113,4 @@ Box SDKs do not currently support this authentication method.
 [accesstoken]: e://post-oauth2-token/
 [sa]: g://getting-started/user-types/service-account/
 [auth]: g://authorization
+[aa]: g://authentication/client-credentials/client-credentials-setup/#application-access
