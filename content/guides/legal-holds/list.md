@@ -19,8 +19,10 @@ the [`GET /legal_hold_policies`][legal_holds] API endpoint.
 
 ## Required Scopes
 
+<!-- i18n-enable localize-links -->
 Before using any of the Legal Hold APIs, an application must have the right
 scopes enabled. See [Required Scopes][scopes] for more details.
+<!-- i18n-disable localize-links -->
 
 [legal_holds]: e://get_legal_hold_policies
 [scopes]: g://legal-holds#required-scopes
