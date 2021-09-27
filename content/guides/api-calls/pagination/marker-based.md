@@ -100,8 +100,8 @@ results as an array, as well as some information about the current page of resul
 
 Some endpoints that support marker-based pagination are:
 
-- [List items for a folder](endpoint://get_folders_id_items)
-- [List a file's collaborations](endpoint://get-files-id-collaborations)
-- [List all webhooks for a user](endpoint://get-webhooks)
-- [List all users in an enterprise](endpoint://get-users)
-- [List all items in the trash](endpoit://get-folders-trash-items)
+- [List items for a folder](e://get_folders_id_items)
+- [List a file's collaborations](e://get-files-id-collaborations)
+- [List all webhooks for a user](e://get-webhooks)
+- [List all users in an enterprise](e://get-users)
+- [List all items in the trash](e://get-folders-trash-items)
