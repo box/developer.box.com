@@ -35,5 +35,5 @@ which requires the webhook ID. To find the ID of the webhook, use the
 
 </Samples>
 
-[1]: guide://webhooks/v2/list-v2
+[1]: g://webhooks/v2/list-v2
 [2]: e://put-webhooks-id
