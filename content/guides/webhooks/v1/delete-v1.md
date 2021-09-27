@@ -9,11 +9,10 @@ required_guides:
 # Delete Webhooks
 
 V1 webhooks cannot be fully deleted. Instead, the webhook can be set back to
-[Developer Mode][dm] by [support][support]. Developers can also remove the
+Developer Mode by [support][support]. Developers can also remove the
 application from their account by revisiting the [enablement URL][eurl] and
 clicking **Remove**.
 
-[dm]: g://webhooks/v1/create-v1/#developer-mode
 <!-- i18n-enable localize-links -->
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->
