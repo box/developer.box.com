@@ -44,9 +44,9 @@ exist.
 
 <Message notice>
 
-The [`GET /metadata_templates/enterprise`[get-templates]] API can be used to
-list all enterprises available in your enterprise, including their `scope` and
-`templateKey`.
+The [List all metadata templates for enterprise endpoint][get-templates]
+can be used to list all enterprises available in your enterprise,
+including their `scope` and `templateKey`.
 
 </Message>
 
