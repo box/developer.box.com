@@ -16,4 +16,3 @@ clicking **Remove**.
 <!-- i18n-enable localize-links -->
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->
-[eurl]: g://webhooks/v1/create-v1/#enabling-a-webhook
