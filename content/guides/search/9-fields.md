@@ -77,7 +77,7 @@ client.search.query(
 
 For more details on these fields, please check out the
 [full File](r://file--full), [full Folder](r://folder--full),
-and [full Web Link](r://web_link--full) resources.
+and [full Web Link](r://web_link) resources.
 
 </Message>
 
