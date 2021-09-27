@@ -10,7 +10,7 @@ required_guides:
 
 V1 webhooks cannot be fully deleted. Instead, the webhook can be set back to
 Developer Mode by [support][support]. Developers can also remove the
-application from their account by revisiting the [enablement URL][eurl] and
+application from their account by revisiting the enablement URL and
 clicking **Remove**.
 
 <!-- i18n-enable localize-links -->
