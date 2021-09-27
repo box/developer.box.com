@@ -32,7 +32,7 @@ exist.
 
 <Message notice>
  The [List all metadata templates for enterprise endpoint][get-templates]
- can be used to list all enterprises available in your enterprise,
+ can be used to list all templates available in your enterprise,
  including their `scope` and `templateKey`.
 </Message>
 
@@ -84,4 +84,4 @@ search for results in. When in doubt a value of `0` can be used for the user's
 root folder.
 
 [errors]: g://api-calls/permissions-and-errors/common-errors
-[get-templates]: r://get-metadata-templates-enterprise
+[get-templates]: e://get-metadata-templates-enterprise
