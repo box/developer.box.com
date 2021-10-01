@@ -19,7 +19,7 @@ APIs as that user.
 If a Box user is not found you should create a new user with an association to
 the SSO user record. 
 
-To search for existing users the [List Enterprise Users](ref://get-users/)
+To search for existing users the [List Enterprise Users](e://get-users)
 endpoint may be used. Depending on whether you're using the
 `external_app_user_id` or `login` method your query will look slightly
 different.
