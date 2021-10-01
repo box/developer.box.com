@@ -27,7 +27,7 @@ user by the association. If a Box user record is found we can begin making
 calls as that user to Box APIs. If there is no Box user found will then create
 a new Box user with the association to the unique SSO user account.
 
-Exploring the top level of a Box [user object](ref://resources/user/) we can see
+Exploring the top level of a Box [user object](r://user) we can see
 the available options for adding the unique identifier from the SSO service
 user object into the Box user object to bind the two together.
 

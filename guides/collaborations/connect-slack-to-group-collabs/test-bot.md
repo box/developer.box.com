@@ -147,9 +147,9 @@ journey may include any number of different expansion areas.
 [step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
 [box-users-groups]: https://app.box.com/master/groups
 [next-steps-shared-link]: g://shared-links/create
-[next-steps-retention-policy]: r://post-retention-policies
-[next-steps-policy-assign]: r://post-retention-policy-assignments
-[next-steps-comment]: r://post-comments
+[next-steps-retention-policy]: e://post-retention-policies
+[next-steps-policy-assign]: e://post-retention-policy-assignments
+[next-steps-comment]: e://post-comments
 <!-- i18n-enable localize-links -->
 
 [box]: https://box.com

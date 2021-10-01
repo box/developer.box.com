@@ -21,9 +21,9 @@ source_url: >-
 ---
 # Create a custom metadata template
 
-To create a custom metadata template for your enterprise you can use [our API
-directly](e://post_metadata_templates) or one of our SDKs to create a new
-template.
+To create a custom metadata template for your enterprise you can use
+[our API directly](e://post-metadata-templates-schema) or
+one of our SDKs to create a new template.
 
 For this `customerInfo` template, we're going to create a template with 3
 fields. The first field is a text field to hold the customer's `name`, the
