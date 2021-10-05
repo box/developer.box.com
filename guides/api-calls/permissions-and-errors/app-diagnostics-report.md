@@ -24,6 +24,21 @@ during the time frame specified. The report gives you access to the
 `API Request ID`, which can be given to Box Support for troubleshooting
 purposes.
 
+<Message type="warning">
+
+This report will not show API calls made within the last 48 hours, so it
+cannot be used for in the moment troubleshooting. We are working to improve
+this in the future.
+
+</Message>
+
+<Message type="notice">
+
+This report is being rolled out gradually to customers. We plan to have the
+report fully released by October 25th.
+
+</Message>
+
 ## 1. Click on the New Menu Option
 
 To run the App Diagnostics Report, click the App Diagnostics option located
@@ -89,7 +104,7 @@ top of the folder.
 
 </ImageFrame>
 
-## 6. Report Completed
+## 7. Report Completed
 
 Upon completion, the status will change, and the csv file will appear in the
 folder.
@@ -100,9 +115,9 @@ folder.
 
 </ImageFrame>
 
-## 6. Open the Report
+## 8. Open the Report
 
-You can open the file in your web browser or download it and view locally. If
+You can open the file in your web browser or download it to view locally. If
 you need help from [Box Support][support], you can send in the report with your
 ticket by attaching a downloaded copy or via shared link.
 
