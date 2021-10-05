@@ -8,9 +8,9 @@ alias_paths: []
 
 # App Diagnostics Report
 
-The App Diagnostics Report writes out every API call made by the application
+The App Diagnostics Report writes out most API calls made by the application
 during the time frame specified. The report gives you access to the
-`API request id`, which can be given to Box Support for troubleshooting
+`API Request ID`, which can be given to Box Support for troubleshooting
 purposes.
 
 ## 1. Click on the New Menu Option
@@ -24,11 +24,20 @@ along the top of your application's configuration section.
 
 </ImageFrame>
 
+ ## 2. Click Run App Diagnostics Report
+
+Click the blue button to make a popup appear.
+
 <ImageFrame center shadow>
 
 ![App Diagnostic Menu](./images/Menu-Option-Screen.png)
 
 </ImageFrame>
+
+## 3. Select Report Parameters and Click Run
+
+You can select a date in the last two weeks, starting 48 hours prior to today.
+A report can be ran for up to a total of 24 hours. Click Run.
 
 <ImageFrame center shadow>
 
@@ -36,11 +45,21 @@ along the top of your application's configuration section.
 
 </ImageFrame>
 
+## 4. Find and Open the Box Reports Folder
+
+After clicking run, go to the Box Reports folder - which is located in the root
+folder of your Box Account. Open the folder.
+
 <ImageFrame center shadow>
 
 ![Box Report Folder](./images/Box-Report-Folder.png)
 
 </ImageFrame>
+
+## 5. Find and Open the latest Platform App Diagnostics Report Folder
+
+In this Box Reports folder, you will see all the reports your user has ever ran.
+Locate the most recent Platform App Diagnostics run folder, and open it.
 
 <ImageFrame center shadow>
 
@@ -48,11 +67,21 @@ along the top of your application's configuration section.
 
 </ImageFrame>
 
+## 6. Check the Status
+
+The report will take time to complete. You can see the status in the box at the
+top of the folder.
+
 <ImageFrame center shadow>
 
 ![Status Screen](./images/App-Diagnostics-Status.png)
 
 </ImageFrame>
+
+## 6. Report Completed
+
+Upon completion, the status will change, and the csv file will appear in the
+folder.
 
 <ImageFrame center shadow>
 
@@ -60,8 +89,30 @@ along the top of your application's configuration section.
 
 </ImageFrame>
 
+## 6. Open the Report
+
+You can open the file in your web browser or download it and view locally. If
+you need help from [Box Support][support], you can send in the report with your
+ticket by attaching a downloaded copy or via shared link. 
+
 <ImageFrame center shadow>
 
 ![Report Details](./images/Report-Details.png)
 
 </ImageFrame>
+
+The report has nine columns.
+
+| Column                    | Description                                    |
+|---------------------------|------------------------------------------------|
+| App Name                  | The name of the application |
+| Client ID                 | The Client ID of the application |
+| HTTP Status Code          | The response code Box sent back |
+| API Request Duration (ms) | The amount of time from API call to response |
+| API Request ID            | An identifier that can be used by support |
+| Resource                  | The primary resource accessed in the API call |
+| Sub Resource              | The secondary resource accessed in the API call |
+| HTTP Method               | The type of HTTP method used in the API call |
+| API Request Timestamp     | The timestamp of the API call |
+
+[support]: https://support.box.com/hc/en-us/requests/new
