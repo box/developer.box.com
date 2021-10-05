@@ -15,7 +15,7 @@ purposes.
 
 <Message type="warning">
   This report will not show API calls made within the last 48 hours, so it
-  cannot be used for in the moment toubleshooting. We are working to improve
+  cannot be used for in the moment troubleshooting. We are working to improve
   this in the future.
 </Message>
 
