@@ -12,6 +12,8 @@ alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
   - /docs/app-auth
+  - /guides/applications/custom-apps/jwt-setup/
+  - /guides/applications/custom-apps/jwt-setup/#generate-a-keypair-recommended
 ---
 
 # Setup with JWT
