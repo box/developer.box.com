@@ -6,7 +6,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/branding-guidelines
-  - /best-practices/cors
+  - /guides/best-practices/cors
 category_id: security
 subcategory_id: null
 is_index: false
