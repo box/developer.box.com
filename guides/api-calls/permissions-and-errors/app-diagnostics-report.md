@@ -130,9 +130,9 @@ ticket by attaching a downloaded copy or via shared link.
 
 The report has nine columns.
 
-| Column                    | Description                                    |
-|---------------------------|----------------------------------------------------------
----|
+| Column                    | Description                                     |
+| -----------------------------------------------------------------------------
+------- |
 | App Name                  | The name of the application |
 | Client ID                 | The Client ID of the application |
 | HTTP Status Code          | The response code returned from Box |
