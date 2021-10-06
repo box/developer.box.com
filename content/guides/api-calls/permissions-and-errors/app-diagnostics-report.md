@@ -14,12 +14,12 @@ access to the `API Request ID`, which can be given to Box Support for
 troubleshooting purposes.
 
 <Message type="warning">
-  This report will not include API calls made within the last 48 hours, so it
-  cannot be used for real-time troubleshooting. We are working to improve this
-  in the future.
-
-  Also, authentication API calls are not included in the report for security
-  purposes.
+  This report will not include:
+    * API calls made within the last 48 hours
+    * Authorization and Token API calls
+  
+  We are working on including the above and thereby making the report suitable
+  for real-time troubleshooting in the future.
 </Message>
 
 <Message type="notice">
@@ -40,8 +40,8 @@ along the top of your application's configuration section in the Dev Console.
 
  ## 2. Click **Run App Diagnostics Report** to configure your report
 
-Click the blue button which will display a popup to select report filters
-and parameters.
+Clicking **Run App Diagnostics Report** will display a popup to select report
+filters and parameters.
 
 <ImageFrame center shadow>
 
@@ -52,7 +52,8 @@ and parameters.
 ## 3. Select Report Parameters and Click **Run**
 
 You can select a date in the last two weeks, starting 48 hours prior to today.
-A report can be run for up to a total of 24 hours. Click **Run**.
+A report can be run for up to a total of 24 hours. Click **Run** to
+generate a report.
 
 <ImageFrame center shadow>
 
@@ -62,8 +63,8 @@ A report can be run for up to a total of 24 hours. Click **Run**.
 
 ## 4. Access the Box Reports Folder
 
-After clicking run, navigate to the Box Reports folder, which is located in the
-root folder of your Box Account. Open the folder.
+To view the generated report, navigate to the Box Reports folder, which is
+located in the root folder of your Box Account. Open the folder.
 
 <ImageFrame center shadow>
 
