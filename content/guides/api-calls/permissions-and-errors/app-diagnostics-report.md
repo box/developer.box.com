@@ -8,15 +8,15 @@ alias_paths: []
 
 # App Diagnostics Report
 
-The App Diagnostics Report writes out most API calls made by the application
-during the time frame specified. The report gives you access to the
-`API Request ID`, which can be given to Box Support for troubleshooting
-purposes.
+The App Diagnostics Report provides a spreadsheet detailing each API call made
+by a given application during a specified timeframe. The report gives you
+access to the `API Request ID`, which can be given to Box Support for
+troubleshooting purposes.
 
 <Message type="warning">
-  This report will not show API calls made within the last 48 hours, so it
-  cannot be used for in the moment troubleshooting. We are working to improve
-  this in the future.
+  This report will not include API calls made within the last 48 hours, so it
+  cannot be used for real-time troubleshooting. We are working to improve this
+  in the future.
 </Message>
 
 <Message type="notice">
@@ -24,10 +24,10 @@ This report is being rolled out gradually to customers. We plan to have the
 report fully released by October 25th.
 </Message>
 
-## 1. Click on the New Menu Option
+## 1. Click on the **App Diagnostics** Tab
 
-To run the App Diagnostics Report, click the App Diagnostics option located
-along the top of your application's configuration section.
+To run the App Diagnostics Report, click the **App Diagnostics** option located
+along the top of your application's configuration section in the Dev Console.
 
 <ImageFrame center shadow>
 
@@ -35,9 +35,10 @@ along the top of your application's configuration section.
 
 </ImageFrame>
 
- ## 2. Click Run App Diagnostics Report
+ ## 2. Click **Run App Diagnostics Report** to configure your report
 
-Click the blue button to make a popup appear.
+Click the blue button which will display a popup to select report filters
+and parameters.
 
 <ImageFrame center shadow>
 
@@ -45,10 +46,10 @@ Click the blue button to make a popup appear.
 
 </ImageFrame>
 
-## 3. Select Report Parameters and Click Run
+## 3. Select Report Parameters and Click **Run**
 
 You can select a date in the last two weeks, starting 48 hours prior to today.
-A report can be ran for up to a total of 24 hours. Click Run.
+A report can be run for up to a total of 24 hours. Click **Run**.
 
 <ImageFrame center shadow>
 
@@ -56,10 +57,10 @@ A report can be ran for up to a total of 24 hours. Click Run.
 
 </ImageFrame>
 
-## 4. Find and Open the Box Reports Folder
+## 4. Access the Box Reports Folder
 
-After clicking run, go to the Box Reports folder - which is located in the root
-folder of your Box Account. Open the folder.
+After clicking run, navigate to the Box Reports folder, which is located in the
+root folder of your Box Account. Open the folder.
 
 <ImageFrame center shadow>
 
@@ -69,8 +70,8 @@ folder of your Box Account. Open the folder.
 
 ## 5. Find and Open the latest Platform App Diagnostics Report Folder
 
-In this Box Reports folder, you will see all the reports your user has ever ran.
-Locate the most recent Platform App Diagnostics run folder, and open it.
+You will see any reports you’ve run in the Box Reports folder. Locate the most
+recent Platform App Diagnostics run folder, and open it.
 
 <ImageFrame center shadow>
 
@@ -91,7 +92,7 @@ top of the folder.
 
 ## 7. Report Completed
 
-Upon completion, the status will change, and the csv file will appear in the
+Upon completion, the status will change, and the `.csv` file will appear in the
 folder.
 
 <ImageFrame center shadow>
@@ -115,12 +116,14 @@ ticket by attaching a downloaded copy or via shared link.
 The report has nine columns.
 
 | Column                    | Description                                    |
-|---------------------------|------------------------------------------------|
+|---------------------------|----------------------------------------------------------
+---|
 | App Name                  | The name of the application |
 | Client ID                 | The Client ID of the application |
-| HTTP Status Code          | The response code Box sent back |
+| HTTP Status Code          | The response code returned from Box |
 | API Request Duration (ms) | The amount of time from API call to response |
-| API Request ID            | An identifier that can be used by support |
+| API Request ID            | An unique identifier that can be used by Box
+support |
 | Resource                  | The primary resource accessed in the API call |
 | Sub Resource              | The secondary resource accessed in the API call |
 | HTTP Method               | The type of HTTP method used in the API call |
