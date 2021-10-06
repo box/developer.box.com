@@ -81,6 +81,7 @@ is specified like this needs a subsequent value with that key in the
 
 A query supports the following logical operators.
 
+<!-- i18n-enable localize-links -->
 <!-- markdownlint-disable line-length -->
 
 | Operator                |                                                                                                                                                                                                                                                       |
@@ -98,6 +99,7 @@ A query supports the following logical operators.
 | `IS NOT`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
 
 <!-- markdownlint-enable line-length -->
+<!-- i18n-disable localize-links -->
 
 <Message notice>
 
