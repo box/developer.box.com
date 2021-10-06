@@ -141,8 +141,7 @@ The report has nine columns.
 | Client ID                 | The Client ID of the application |
 | HTTP Status Code          | The response code returned from Box |
 | API Request Duration (ms) | The amount of time from API call to response |
-| API Request ID            | An unique identifier that can be used by Box
-support                                                                   |
+| API Request ID            | An unique identifier that can be used by Box Support                            |
 | Resource                  | The primary resource accessed in the API call |
 | Sub Resource              | The secondary resource accessed in the API call |
 | HTTP Method               | The type of HTTP method used in the API call |
