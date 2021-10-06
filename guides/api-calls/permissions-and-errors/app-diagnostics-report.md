@@ -22,7 +22,8 @@ source_url: >-
 The App Diagnostics Report provides a spreadsheet detailing each API call made
 by a given application during a specified timeframe. The report gives you
 access to the `API Request ID`, which can be given to Box Support for
-troubleshooting purposes.
+troubleshooting purposes. Please note, Authentication API calls are not
+included in the report for security purposes.
 
 <Message type="warning">
 
@@ -130,9 +131,10 @@ ticket by attaching a downloaded copy or via shared link.
 
 The report has nine columns.
 
-| Column                    | Description                                     |
-| -----------------------------------------------------------------------------
-------- |
+<!-- markdownlint-disable line-length -->
+
+| Column | Description        |                                                                                                                                                                                    |
+| --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | App Name                  | The name of the application |
 | Client ID                 | The Client ID of the application |
 | HTTP Status Code          | The response code returned from Box |
