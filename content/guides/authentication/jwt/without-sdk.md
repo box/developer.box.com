@@ -11,7 +11,6 @@ required_guides:
   - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths:
-  - /docs/construct-jwt-claim-manually
   - /guides/authentication/client-credentials
 ---
 
