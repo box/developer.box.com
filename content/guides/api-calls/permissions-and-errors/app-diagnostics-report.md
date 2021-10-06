@@ -115,14 +115,14 @@ ticket by attaching a downloaded copy or via shared link.
 
 The report has nine columns.
 
-| Column                    | Description                                    |
-|---------------------------|----------------------------------------------------------
----|
+| Column                    | Description                                     |
+| ----------------------------------------------------------------------------- 
+------- |
 | App Name                  | The name of the application |
 | Client ID                 | The Client ID of the application |
 | HTTP Status Code          | The response code returned from Box |
 | API Request Duration (ms) | The amount of time from API call to response |
-| API Request ID            | An unique identifier that can be used by Box
+| API Request ID            | An unique identifier that can be used by Box 
 support |
 | Resource                  | The primary resource accessed in the API call |
 | Sub Resource              | The secondary resource accessed in the API call |
