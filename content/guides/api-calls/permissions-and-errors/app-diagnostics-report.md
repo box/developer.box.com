@@ -11,13 +11,15 @@ alias_paths: []
 The App Diagnostics Report provides a spreadsheet detailing each API call made
 by a given application during a specified timeframe. The report gives you
 access to the `API Request ID`, which can be given to Box Support for
-troubleshooting purposes. Please note, Authentication API calls are not
-included in the report for security purposes.
+troubleshooting purposes.
 
 <Message type="warning">
   This report will not include API calls made within the last 48 hours, so it
   cannot be used for real-time troubleshooting. We are working to improve this
   in the future.
+
+  Also, authentication API calls are not included in the report for security
+  purposes.
 </Message>
 
 <Message type="notice">
@@ -125,7 +127,7 @@ The report has nine columns.
 | HTTP Status Code          | The response code returned from Box |
 | API Request Duration (ms) | The amount of time from API call to response |
 | API Request ID            | An unique identifier that can be used by Box 
-support |
+support                                                                   |
 | Resource                  | The primary resource accessed in the API call |
 | Sub Resource              | The secondary resource accessed in the API call |
 | HTTP Method               | The type of HTTP method used in the API call |
