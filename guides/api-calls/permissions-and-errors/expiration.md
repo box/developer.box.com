@@ -9,10 +9,10 @@ subcategory_id: api-calls/permissions-and-errors
 is_index: false
 id: api-calls/permissions-and-errors/expiration
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors
-next_page_id: ''
+next_page_id: api-calls/permissions-and-errors/app-diagnostics-report
 previous_page_id: api-calls/permissions-and-errors/scopes
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/expiration.md
