@@ -13,7 +13,7 @@ cancel sign requests.
 <Message type='warning'>
  On July 26th, 2021, Box began rolling out Box Sign to select customers.
  On Oct. 7, Box Sign was made available to all US and Canadian customers
- on Business plans and above. Overall, Box plans to make Box Sign
+ on Business plans and above. Overall, we plan to make Box Sign
  available to customers on business (Business, Business Plus), enterprise
  (Enterprise, Enterprise Plus, Enterprise Suites), and Starter plans.
  While Box Sign does not need to be enabled by an Admin to use its API
