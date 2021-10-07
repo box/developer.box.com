@@ -30,7 +30,8 @@ report fully released by October 25th.
 ## 1. Click on the **App Diagnostics** Tab
 
 To run the App Diagnostics Report, click the **App Diagnostics** option located
-along the top of your application's configuration section in the Dev Console.
+along the top of your application's configuration section in
+the [Developer Console][console].
 
 <ImageFrame center shadow>
 
@@ -63,8 +64,10 @@ generate a report.
 
 ## 4. Access the Box Reports Folder
 
-To view the generated report, navigate to the Box Reports folder, which is
-located in the root folder of your Box Account. Open the folder.
+Navigate to [All Files][allfiles] and locate the Box Reports folder. If this is
+your first time running a report, this folder is automatically generated. If
+you are an Admin, this is the same folder you access
+[Admin Console Reports][reports]. Open the folder.
 
 <ImageFrame center shadow>
 
@@ -74,8 +77,8 @@ located in the root folder of your Box Account. Open the folder.
 
 ## 5. Find and Open the latest Platform App Diagnostics Report Folder
 
-You will see any reports you’ve run in the Box Reports folder. Locate the most
-recent Platform App Diagnostics run folder, and open it.
+You will see any reports you have run in the Box Reports folder.
+Locate and open the most recent Platform App Diagnostics run folder.
 
 <ImageFrame center shadow>
 
@@ -134,3 +137,8 @@ The report has nine columns.
 | API Request Timestamp     | The timestamp of the API call |
 
 [support]: https://support.box.com/hc/en-us/requests/new
+[console]: https://app.box.com/developers/console
+[allfiles]: https://app.box.com/folder/0
+<!-- i18n-enable localize-links -->
+[reports]: https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
+<!-- i18n-disable localize-links -->
