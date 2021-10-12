@@ -14,7 +14,7 @@ alias_paths:
 # Use a Token
 
 Every authenticated API call requires an Access Token to be passed in the
-`Authorization` header as a `Bearer Token` or it will return a `401 Unautorized`
+`Authorization` header as a `Bearer Token` or it will return a `401 Unauthorized`
 HTTP status.
 
 ```curl
