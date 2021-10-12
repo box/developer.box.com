@@ -33,7 +33,7 @@ will appear to prompt the next step.
 
 <ImageFrame border>
 
-![Application selection screen](images/select-app-type.png)
+![Application selection screen](../images/select-app-type.png)
 
 </ImageFrame>
 
@@ -43,7 +43,7 @@ Finally, select a unique name for your application and click **Create App**.
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/skill-name.png)
+![App name form](./images/skill-name.png)
 
 </ImageFrame>
 

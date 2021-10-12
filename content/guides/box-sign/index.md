@@ -11,11 +11,15 @@ cancel sign requests.
 ## Enablement
 
 <Message type='warning'>
- July 26th, 2021, begins the roll out of Box Sign. We plan to add Box Sign to
- Business, Business Plus, Enterprise, Enterprise Suites, and Starter plans.
+ On July 26th, 2021, Box began rolling out Box Sign to select customers.
+ On Oct. 7, Box Sign was made available to all US and Canadian customers
+ on Business plans and above. Overall, we plan to make Box Sign
+ available to customers on business (Business, Business Plus), enterprise
+ (Enterprise, Enterprise Plus, Enterprise Suites), and Starter plans.
  While Box Sign does not need to be enabled by an Admin to use its API
- endpoints, it does need to be rolled out to your enterprise. We will notify
- Admins before Box Sign becomes available in their Box instance.
+ endpoints, it does need to be rolled out to your enterprise. Box will
+ continue to notify admins before Box Sign becomes available in their Box
+ instance.
 </Message>
 
 If your account type supports access to Box Sign, you will be able to make
