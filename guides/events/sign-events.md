@@ -26,8 +26,8 @@ source_url: >-
 
 ### Created
 
-A `SIGN_DOCUMENT_CREATED` `event_type` is produced when a Sign Request is
-created via API or UI. At this stage the Sign Request is not sent to signers
+A `SIGN_DOCUMENT_CREATED` `event_type` is produced when a sign request is
+created via API or UI. At this stage the sign request is not sent to signers
 yet.
 
 The`additional_details` payload will provide the following details:
@@ -38,7 +38,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "5c24789e-95a2-4dde-a470-bca164e11eee",
         "sender_ip": "",
         "signer_ip": null,
-        "status": "vi",
+        "status": "created",
         "timestamp": 1632332167894,
         "service": "ui",
         "file": {
@@ -73,7 +73,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "eaffe00f-f7dd-4dcc-9c9c-ffe7179359c6",
         "sender_ip": "",
         "signer_ip": null,
-        "status": "ne",
+        "status": "converted",
         "timestamp": 1632332166386,
         "service": "ui",
         "file": {
@@ -108,7 +108,7 @@ The`additional_details` payload will provide the following details:
     "request_id": "db91dd07-c10d-4c55-9eb2-c15b2733716c",
     "sender_ip": "",
     "signer_ip": "",
-    "status": "vi",
+    "status": "sent",
     "timestamp": 1632501841522,
     "service": "ui",
     "file": {
@@ -130,7 +130,7 @@ The`additional_details` payload will provide the following details:
 
 ### Viewed by Signer
 
-A `SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type` is produced when a Sign Request
+A `SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type` is produced when a sign request
 signer clicks on **Review Document** in the signing email or visits the signing
 URL.
 
@@ -142,7 +142,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "1c1e6321-c198-47be-bc70-8e37b1a61631",
         "sender_ip": "",
         "signer_ip": "",
-        "status": "vi",
+        "status": "viewed",
         "timestamp": 1632332168917,
         "service": "ui",
         "file": {
@@ -167,7 +167,7 @@ The`additional_details` payload will provide the following details:
 ### Signed
 
 A `SIGN_DOCUMENT_SIGNED` `event_type` is produced when a signer completes the
-Sign Request.
+sign request.
 
 The`additional_details` payload will provide the following details:
 
@@ -177,7 +177,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "a44bfe5e-42dc-4fd7-9001-c55bcca94b45",
         "sender_ip": "",
         "signer_ip": "",
-        "status": "si",
+        "status": "signed",
         "timestamp": 1632332619270,
         "service": "ui",
         "file": {
@@ -201,7 +201,7 @@ The`additional_details` payload will provide the following details:
 
 ### Declined
 
-A `SIGN_DOCUMENT_DECLINED` `event_type` is produced when a Sign Request signer
+A `SIGN_DOCUMENT_DECLINED` `event_type` is produced when a sign request signer
 declines the request.
 
 The`additional_details` payload will provide the following details:
@@ -212,7 +212,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "54c046de-f5da-49a8-b1ef-640b95af8835",
         "sender_ip": "",
         "signer_ip": "",
-        "status": "de",
+        "status": "declined",
         "timestamp": 1632782457096,
         "service": "ui",
         "file": {
@@ -247,7 +247,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "e6b4c8c5-2c06-48c0-8d8c-4261d3b40dea",
         "sender_ip": "",
         "signer_ip": null,
-        "status": "si",
+        "status": "signed",
         "timestamp": 1632332619347,
         "service": "ui",
         "file": {
@@ -271,7 +271,7 @@ The`additional_details` payload will provide the following details:
 
 ### Cancelled
 
-A `SIGN_DOCUMENT_CANCELLED` `event_type` is produced when a Sign Request is
+A `SIGN_DOCUMENT_CANCELLED` `event_type` is produced when a sign request is
 cancelled via API or UI.
 
 The`additional_details` payload will provide the following details:
@@ -282,7 +282,7 @@ The`additional_details` payload will provide the following details:
         "request_id": "e6b4c8c5-2c06-48c0-8d8c-4261d3b40dea",
         "sender_ip": "",
         "signer_ip": null,
-        "status": "ca",
+        "status": "cancelled",
         "timestamp": 1632332619347,
         "service": "ui",
         "file": {
@@ -317,7 +317,7 @@ signing document.
         "request_id": "b16adde5-70b5-42ff-ba58-c190693df01f",
         "sender_ip": "",
         "signer_ip": null,
-        "status": "vi",
+        "status": "downloaded",
         "timestamp": 1632332619347,
         "service": "ui",
         "file": {
