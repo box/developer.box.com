@@ -1,5 +1,5 @@
 ---
-rank: 10
+rank: 5
 related_endpoints:
   - get_events
   - options_events
@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: false
 id: events/pagination
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: events
 parent_id: events
-next_page_id: events
-previous_page_id: events/shield-alert-events
+next_page_id: events/shield-alert-events
+previous_page_id: events/polling
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/pagination.md
 ---
