@@ -149,17 +149,15 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
 | `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
-| `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to signers.                                                             |
-| `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled.                                                                   |
-| `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers.                                                       |
-| `SIGN_DOCUMENT_CONVERTED`                      | A sign request was converted to a `.pdf` for signing.                                           |
-| `SIGN_DOCUMENT_CREATED`                        | A sign request was created.                                                                     |
-| `SIGN_DOCUMENT_DECLINED`                       | A sign request was declined by a signer.                                                        |
-| `SIGN_DOCUMENT_EXPIRED`                        | A sign request was not signed by a signer and expired.                                          |
-| `SIGN_DOCUMENT_SIGNED`                         | The document of a sign request was signed by a signer.                                          |
-| `SIGN_DOCUMENT_VIEWED_BY_SIGNER`               | The document of a sign request was viewed by a signer.                                          |
-| `SIGNER_DOWNLOADED`                            | The document of a sign request was downloaded by a signer.                                      |
-| `SIGNER_FORWARDED`                             | The document of a sign request was forwarded by a signer.                                       |
+| `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to a signer.                                                            |
+| `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled via API or UI                                                      |
+| `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers                                                        |
+| `SIGN_DOCUMENT_CONVERTED`                      | A sign request was converted to a `.pdf` for signing                                            |
+| `SIGN_DOCUMENT_CREATED`                        | A sign request was created via API or UI. The document is not yet sent for signing at this stage |
+| `SIGN_DOCUMENT_DECLINED`                       | A sign request was declined by a signer                                                         |
+| `SIGN_DOCUMENT_SIGNED`                         | A sign request was signed by a signer                                                           |
+| `SIGN_DOCUMENT_VIEWED_BY_SIGNER`               | A signer clicked on **Review Document** in the signer email or visited the signing URL          |
+| `SIGNER_DOWNLOADED`                            | A signer downloaded the signing document                                                        |
 | `STORAGE_EXPIRATION`                           | Set file auto-delete                                                                            |
 | `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment                                                                     |
 | `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created                                                                    |
