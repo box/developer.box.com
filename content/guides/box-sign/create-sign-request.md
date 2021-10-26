@@ -19,7 +19,7 @@ signed per request. This file ID is specified in the `source_files` body
 parameter.
 
 <Message type='warning'>
-The requestor must have download privileges to the file in Box. Please review
+The requester must have download privileges to the file in Box. Please review
 our [collaboration levels][collab] to ensure this requirement is met.
 </Message>
 
@@ -50,7 +50,7 @@ cannot be the All Files or root level, which is represented by folder ID `0`.
 Each signer must be assigned a [role][role]:  signer, approver, or final copy
 reader.
 
-If requestor is not given a role, a signer with the role `final_copy_reader` is
+If requester is not given a role, a signer with the role `final_copy_reader` is
 automatically created. This means they only receive a copy of the final, signed
 document and [signing log][log].
 
