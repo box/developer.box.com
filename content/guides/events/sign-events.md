@@ -11,6 +11,9 @@ alias_paths: []
 
 # Sign Events
 
+Audit Box Sign events using the enterprise events stream. To learn more about
+Box Sign, visit our [guide][sign-guide].
+
 ## Document Events
 
 ### Created
@@ -24,7 +27,7 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
-        "status": "viewed",
+        "status": "created",
         "signer_ip_address": null,
         "requestor_ip_address": "",
         "files": [
@@ -203,7 +206,7 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
-        "status": "viewed",
+        "status": "sent",
         "signer_ip_address": "",
         "requestor_ip_address": "",
         "files": [
@@ -429,3 +432,5 @@ The`additional_details` payload will provide the following details:
     }
 }
 ```
+
+[sign-guide]: g://box-sign
