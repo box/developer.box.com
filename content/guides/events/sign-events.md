@@ -23,28 +23,29 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "5c24789e-95a2-4dde-a470-bca164e11eee",
-        "sender_ip": "",
-        "signer_ip": null,
-        "status": "created",
-        "timestamp": 1632332167894,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 24681357,
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
             "name": "John Doe",
-            "email": "johndoe@box.com"
+            "login": "johndoe@box.com"
         },
-        "signer": {
-            "id": null,
-            "name": null,
-            "email": null
-        }
+        "signer":null
+        }
     }
 }
 ```
@@ -60,7 +61,7 @@ The`additional_details` payload will provide the following details:
 "additional_details": {
     "sign_request": {
         "status": "created",
-        "signer_ip_address": "",
+        "signer_ip_address": null,
         "requestor_ip_address": "",
         "files": [
             {
@@ -96,7 +97,7 @@ The`additional_details` payload will provide the following details:
 "additional_details": {
     "sign_request": {
         "status": "signed",
-        "signer_ip_address": "",
+        "signer_ip_address": null,
         "requestor_ip_address": "",
         "files": [
             {
@@ -131,7 +132,42 @@ The`additional_details` payload will provide the following details:
 "additional_details": {
     "sign_request": {
         "status": "cancelled",
-        "signer_ip_address": "",
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": null
+    }
+}
+```
+
+### Expired
+
+A `SIGN_DOCUMENT_EXPIRED` `event_type` is produced when a sign request expired
+with incomplete signatures.
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "expired",
+        "signer_ip_address": null,
         "requestor_ip_address": "",
         "files": [
             {
@@ -241,6 +277,44 @@ The`additional_details` payload will provide the following details:
 ### Downloaded
 
 A `SIGNER_DOWNLOADED` `event_type` is produced when a signer downloads the
+signing document.
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### Forwarded
+
+A `SIGNER_FORWARDED` `event_type` is produced when a signer downloads the
 signing document.
 
 ```json
