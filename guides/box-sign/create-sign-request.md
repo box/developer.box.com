@@ -33,8 +33,8 @@ parameter.
 
 <Message type='warning'>
 
-The sender must have download privileges to the file in Box. Please review our
-[collaboration levels][collab] to ensure this requirement is met.
+The requester must have download privileges to the file in Box. Please review
+our [collaboration levels][collab] to ensure this requirement is met.
 
 </Message>
 
@@ -65,7 +65,7 @@ cannot be the All Files or root level, which is represented by folder ID `0`.
 Each signer must be assigned a [role][role]:  signer, approver, or final copy
 reader.
 
-If sender is not given a role, a signer with the role `final_copy_reader` is
+If requester is not given a role, a signer with the role `final_copy_reader` is
 automatically created. This means they only receive a copy of the final, signed
 document and [signing log][log].
 
@@ -133,14 +133,14 @@ the API.
 
 ## Request status
 
-- `converting`: The file is converting to a `.pdf` for the signing process once
-  the request is sent
+- `converting`: The file is converted to a `.pdf` for the signing process once
+  the sign request is sent
 - `created`: If `document_preparation_is_needed` is set to `true`, but the
   `prepare_url` has not yet been visited
-- `sent`: The request was successfully sent, but no signer has
-  interacted with it
+- `sent`: The request was successfully sent, but no signer has interacted with
+ it
 - `viewed`: Once the first, or only, signer clicks on **Review document** in
-  the signing email or visited the signing URL
+  the signing email or visits the signing URL
 - `signed`: All signers completed the request
 - `cancelled`: If the request is cancelled via UI or API
 - `declined`: If any signer declines the request

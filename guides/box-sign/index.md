@@ -59,6 +59,10 @@ successful use of any newly selected scopes.
 
 </Message>
 
+## Events
+
+Please see our [events guide][eg] for more information.
+
 ## Rate Limits
 
 Please see our [rate limit guide][ratelimit] for more information.
@@ -86,3 +90,5 @@ production content.
 [webapp]: https://support.box.com/hc/en-us/articles/4404105810195-Sending-a-document-for-signature
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
 <!-- i18n-disable localize-links -->
+
+[eg]: g://events/sign-events
