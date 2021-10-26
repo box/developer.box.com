@@ -149,6 +149,9 @@ the API.
 - `error_sending`: An issue was encountered while sending the request
 - `expired`: The date of expiration has passed with outstanding, incomplete
   signatures 
+- `downloaded`: The signing document was downloaded by signer
+- `signed and downloaded`: The signing document was signed and downloaded by
+ signer
 
 Encountering an error status requires creating a new sign request to retry.
 
