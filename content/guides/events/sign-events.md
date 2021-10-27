@@ -14,6 +14,13 @@ alias_paths: []
 Audit Box Sign events using the enterprise events stream. For more information
 about Box Sign please visit our [guide][sign-guide].
 
+<Message warning>
+  The status provided below in each `additional_details` payload may differ
+  from the example based on the specific sign request details. For example,
+  if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
+  event wilL immediately be `viewed`.
+</Message>
+
 ## Document Events
 
 ### Created
@@ -27,7 +34,7 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
-        "status": "created",
+        "status": "sent",
         "signer_ip_address": null,
         "requestor_ip_address": "",
         "files": [
@@ -127,7 +134,7 @@ The`additional_details` payload will provide the following details:
 ### Cancelled
 
 A `SIGN_DOCUMENT_CANCELLED` `event_type` is produced when a sign request is
-cancelled via API or UI.
+cancelled by the requester via API or UI.
 
 The`additional_details` payload will provide the following details:
 
