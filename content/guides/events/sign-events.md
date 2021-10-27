@@ -15,10 +15,10 @@ Audit Box Sign events using the enterprise events stream. For more information
 about Box Sign please visit our [guide][sign-guide].
 
 <Message warning>
-  The status provided below in each `additional_details` payload may differ
-  from the example based on the specific sign request details. For example,
-  if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
-  event wilL immediately be `viewed`.
+  The status received may differ from the example `additional_details` payloads 
+  below based on the specific sign request details. For example, if the
+  requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
+  event will immediately be `viewed` instead of `sent`.
 </Message>
 
 ## Document Events
