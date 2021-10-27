@@ -6,11 +6,11 @@ subcategory_id: null
 is_index: true
 id: events
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: events/pagination
+previous_page_id: events/sign-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/index.md
 ---

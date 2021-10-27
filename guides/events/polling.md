@@ -13,10 +13,10 @@ subcategory_id: null
 is_index: false
 id: events/polling
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: events
 parent_id: events
-next_page_id: events/shield-alert-events
+next_page_id: events/pagination
 previous_page_id: events/event-triggers
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/polling.md
