@@ -10,6 +10,8 @@ alias_paths:
   - /docs/box-content-open-with
 ---
 
+# Content Open With
+
 <Message warning>
   # End of Support
 
@@ -17,8 +19,6 @@ alias_paths:
   beginning on December 21, 2021. Please see the changelog for more
   information.
 </Message>
-
-# Content Open With
 
 The Box Content Open With UI Element allows developers to embed a dropdown to
 open content stored in box with a partner application, or locally on the
