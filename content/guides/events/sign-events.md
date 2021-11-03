@@ -439,3 +439,4 @@ The`additional_details` payload will provide the following details:
     }
 }
 ```
+[sign-guide]: g://box-sign
