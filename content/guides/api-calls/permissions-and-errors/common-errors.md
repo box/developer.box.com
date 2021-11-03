@@ -9,12 +9,11 @@ alias_paths:
   - /docs/error-codes
   - /docs/detailed-error-messages
   - /docs
-  - /docs/#errors
 notes: |-
   Lazy copy of old docs. Needs rethinking.
 ---
 
-# Common Errors
+# Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
 has been successfully processed or not.
