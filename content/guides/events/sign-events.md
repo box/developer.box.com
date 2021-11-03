@@ -11,7 +11,17 @@ alias_paths: []
 
 # Sign Events
 
-## Sign Document Events
+Audit Box Sign events using the enterprise events stream. To learn more about
+Box Sign, visit our [guide][sign-guide].
+
+<Message warning>
+  The status provided below in each `additional_details` payload may differ
+  from the example based on the specific sign request details. For example,
+  if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
+  event wilL immediately be `viewed`.
+</Message>
+
+## Document Events
 
 ### Created
 
@@ -23,28 +33,29 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "5c24789e-95a2-4dde-a470-bca164e11eee",
-        "sender_ip": "",
-        "signer_ip": null,
-        "status": "created",
-        "timestamp": 1632332167894,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 24681357,
+    "sign_request": {
+        "status": "sent",
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
             "name": "John Doe",
-            "email": "johndoe@box.com"
+            "login": "johndoe@box.com"
         },
-        "signer": {
-            "id": null,
-            "name": null,
-            "email": null
-        }
+        "signer":null
+        }
     }
 }
 ```
@@ -58,166 +69,28 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "eaffe00f-f7dd-4dcc-9c9c-ffe7179359c6",
-        "sender_ip": "",
-        "signer_ip": null,
-        "status": "converted",
-        "timestamp": 1632332166386,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "3691724427253828816.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 246891357,
-             "name": "John Doe",
-            "email": "johndoe@box.com"
-        },
-        "signer": {
-            "id": null,
-            "name": null,
-            "email": null
-        }
-    }
-}
-```
-
-### Assigned
-
-A `SIGN_DOCUMENT_ASSIGNED` `event_type` is produced when a sign request is
-successfully sent to a signer. 
-
-The`additional_details` payload will provide the following details:
-
-```json
-"additional_details": {
-    "sign": {
-    "request_id": "db91dd07-c10d-4c55-9eb2-c15b2733716c",
-    "sender_ip": "",
-    "signer_ip": "",
-    "status": "sent",
-    "timestamp": 1632501841522,
-    "service": "ui",
-    "file": {
-        "id": 1234567890,
-        "name": "example.pdf",
-        "parent_folder_id": 9876543210
-    },
-    "sender": {
-         "id": 246891357,
-         "name": "John Doe",
-         "email": "johndoe@box.com"
-    },
-    "signer": {
-        "id": null,
-        "name": "janedoe@example.com",
-        "email": "janedoe@example.com"
-}
-```
-
-### Viewed by Signer
-
-A `SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type` is produced when a sign request
-signer clicks on **Review Document** in the signing email or visits the signing
-URL. 
-
-The`additional_details` payload will provide the following details:
-
-```json
-"additional_details": {
-    "sign": {
-        "request_id": "1c1e6321-c198-47be-bc70-8e37b1a61631",
-        "sender_ip": "",
-        "signer_ip": "",
-        "status": "viewed",
-        "timestamp": 1632332168917,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 24681357,
+    "sign_request": {
+        "status": "created",
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
             "name": "John Doe",
-            "email": "johndoe@box.com"
+            "login": "johndoe@box.com"
         },
-        "signer": {
-            "id": null,
-            "name": "Jane Doe",
-            "email": "janedoe@example.com"
-        }
-    }
-}
-```
-
-### Signed
-
-A `SIGN_DOCUMENT_SIGNED` `event_type` is produced when a signer completes the
-sign request.
-
-The`additional_details` payload will provide the following details:
-
-```json
-"additional_details": {
-    "sign": {
-        "request_id": "a44bfe5e-42dc-4fd7-9001-c55bcca94b45",
-        "sender_ip": "",
-        "signer_ip": "",
-        "status": "signed",
-        "timestamp": 1632332619270,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 13579246,
-            "name": "John Doe",
-            "email": "johndoe@box.com"
-        },
-        "signer": {
-            "id": null,
-            "name": "Jane Doe",
-            "email": "jandoe@example.com"
-        }
-    }
- }
-```
-
-### Declined
-
-A `SIGN_DOCUMENT_DECLINED` `event_type` is produced when a sign request signer
-declines the request. 
-
-The`additional_details` payload will provide the following details:
-
-```json
-"additional_details": {
-    "sign": {
-        "request_id": "54c046de-f5da-49a8-b1ef-640b95af8835",
-        "sender_ip": "",
-        "signer_ip": "",
-        "status": "declined",
-        "timestamp": 1632782457096,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-            "id": 13579246,
-            "name": "John Doe",
-            "email": "johndoe@box.com"
-        },
-        "signer": {
-            "id": null,
-            "name": "Jane Doe",
-            "email": "jandoe@example.com"
+        "signer":null
         }
     }
 }
@@ -232,28 +105,28 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "e6b4c8c5-2c06-48c0-8d8c-4261d3b40dea",
-        "sender_ip": "",
-        "signer_ip": null,
+    "sign_request": {
         "status": "signed",
-        "timestamp": 1632332619347,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
         },
-        "sender": {
-        "id": 13579246,
-        "name": "John Doe",
-        "email": "johndoe@box.com"
-        },
-        "signer": {
-            "id": null,
-            "name": null,
-            "email": null
-        }
+        "signer": null
     }
 }
 ```
@@ -261,39 +134,155 @@ The`additional_details` payload will provide the following details:
 ### Cancelled
 
 A `SIGN_DOCUMENT_CANCELLED` `event_type` is produced when a sign request is
-cancelled via API or UI.
+cancelled by the requester via API or UI.
 
 The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "e6b4c8c5-2c06-48c0-8d8c-4261d3b40dea",
-        "sender_ip": "",
-        "signer_ip": null,
+    "sign_request": {
         "status": "cancelled",
-        "timestamp": 1632332619347,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
         },
-        "sender": {
-        "id": 13579246,
-        "name": "John Doe",
-        "email": "johndoe@box.com"
+        "signer": null
+    }
+}
+```
+
+### Expired
+
+A `SIGN_DOCUMENT_EXPIRED` `event_type` is produced when a sign request expired
+with incomplete signatures.
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "expired",
+        "signer_ip_address": null,
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
         },
-        "signer": {
-            "id": null,
-            "name": null,
-            "email": null
-        }
+        "signer": null
     }
 }
 ```
 
 ## Signer Events
+
+### Assigned
+
+A `SIGN_DOCUMENT_ASSIGNED` `event_type` is produced when a sign request is
+successfully sent to a signer. 
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "sent",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### Viewed by Signer
+
+A `SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type` is produced when a sign request
+signer clicks on **Review Document** in the signing email or visits the signing
+URL. 
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
 
 ### Downloaded
 
@@ -302,27 +291,150 @@ signing document.
 
 ```json
 "additional_details": {
-    "sign": {
-        "request_id": "b16adde5-70b5-42ff-ba58-c190693df01f",
-        "sender_ip": "",
-        "signer_ip": null,
-        "status": "downloaded",
-        "timestamp": 1632332619347,
-        "service": "ui",
-        "file": {
-            "id": 1234567890,
-            "name": "example.pdf",
-            "parent_folder_id": 9876543210
-        },
-        "sender": {
-        "id": 13579246,
-        "name": "John Doe",
-        "email": "johndoe@box.com"
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
         },
         "signer": {
-            "id": null,
-            "name": null,
-            "email": null
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### Forwarded
+
+A `SIGNER_FORWARDED` `event_type` is produced when a signer downloads the
+signing document.
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### Signed
+
+A `SIGN_DOCUMENT_SIGNED` `event_type` is produced when a signer completes the
+sign request.
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "signed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### Declined
+
+A `SIGN_DOCUMENT_DECLINED` `event_type` is produced when a sign request signer
+declines the request. 
+
+The`additional_details` payload will provide the following details:
+
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "declined",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
         }
     }
 }
