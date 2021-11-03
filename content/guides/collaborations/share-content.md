@@ -26,12 +26,6 @@ please refer to our [support documentation].
 
 <Samples id='post_collaborations' />
 
-<Message>
-  The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
-  `previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
-  description of each role, please refer to our [support documentation].
-</Message>
-
 ## Nested objects
 
 When creating a collaboration there are two nested objects within the request

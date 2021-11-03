@@ -15,6 +15,13 @@ related_resources:
 To remove a lock applied to a folder in Box, call the
 `DELETE /folder_locks/:id` API with the id of the folder lock.
 
+<Message type='notice'>
+  # Folder Locks
+
+  When using any folder lock API endpoints, you must be authenticated as the
+  owner/co-owner of the folder you are trying to access.
+</Message>
+
 <Samples id='delete_folder_locks_id' />
 
 <Message type='notice'>

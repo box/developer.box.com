@@ -62,9 +62,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `ADD_DEVICE_ASSOCIATION`                       | Added device association                                                                        |
 | `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we have not seen before                                      |
 | `ADMIN_LOGIN`                                  | Admin console used to log in to a managed user's account                                        |
-| `ANNOTATIONV2_CREATE`                          | An annotation is created                                                             |
-| `ANNOTATIONV2_DELETE`                          | An annotation is deleted                                                             |
-| `ANNOTATIONV2_EDIT`                            | An annotation is edited                                                             |
+| `ANNOTATIONV2_CREATE`                          | An annotation is created                                                                        |
+| `ANNOTATIONV2_DELETE`                          | An annotation is deleted                                                                        |
+| `ANNOTATIONV2_EDIT`                            | An annotation is edited                                                                         |
 | `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
 | `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
 | `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |
@@ -141,7 +141,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `RETENTION_POLICY_ASSIGNMENT_ADD`              | A retention policy assignment is added                                                          |
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
-| `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                              |
+| `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
 | `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
@@ -149,6 +149,17 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
 | `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
+| `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to a signer                                                             |
+| `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled via API or UI                                                      |
+| `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers                                                        |
+| `SIGN_DOCUMENT_CONVERTED`                      | A sign request was converted to a `.pdf` for signing                                            |
+| `SIGN_DOCUMENT_CREATED`                        | A sign request was created via API or UI. The document is not yet sent to signers               |
+| `SIGN_DOCUMENT_DECLINED`                       | A sign request was declined by a signer                                                         |
+| `SIGN_DOCUMENT_EXPIRED`                        | A sign request expired with incomplete signatures                                               |
+| `SIGN_DOCUMENT_SIGNED`                         | A sign request was signed by a signer                                                           |
+| `SIGN_DOCUMENT_VIEWED_BY_SIGNER`               | A signer clicked on **Review Document** in the signer email or visited the signing URL          |
+| `SIGNER_DOWNLOADED`                            | A signer downloaded the signing document                                                        |
+| `SIGNER_FORWARDED`                             | A signer forwarded the signing document                                                         |
 | `STORAGE_EXPIRATION`                           | Set file auto-delete                                                                            |
 | `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment                                                                     |
 | `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created                                                                    |

@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 6
 related_endpoints:
   - get_events
   - options_events

@@ -591,8 +591,8 @@ formats.
 Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`,
 `xls`, `xlsm`.
 
-Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`,
-`psd`, `svs`, `tga`, `tif`, `tiff`.
+Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `idml`,
+`indd`, `indt`, `inx``png`, `ps`, `psd`, `svs`, `tga`, `tif`, `tiff`. 
 
 <!-- i18n-enable localize-links -->
 [filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
