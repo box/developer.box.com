@@ -65,9 +65,9 @@ cannot be the All Files or root level, which is represented by folder ID `0`.
 Each signer must be assigned a [role][role]:  signer, approver, or final copy
 reader.
 
-If requester is not given a role, a signer with the role `final_copy_reader` is
-automatically created. This means they only receive a copy of the final, signed
-document and [signing log][log].
+If the requester is not given a role, a signer with the role `final_copy_reader`
+is automatically created. This means they only receive a copy of the final,
+signed document and [signing log][log].
 
 Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
@@ -135,18 +135,21 @@ the API.
 
 - `converting`: The file is converted to a `.pdf` for the signing process once
   the sign request is sent
+- `error_converting`: An issue was encountered while converting the file to a
+  `.pdf`
 - `created`: If `document_preparation_is_needed` is set to `true`, but the
   `prepare_url` has not yet been visited
 - `sent`: The request was successfully sent, but no signer has interacted with
  it
+- `error_sending`: An issue was encountered while sending the request
 - `viewed`: Once the first, or only, signer clicks on **Review document** in
   the signing email or visits the signing URL
+- `downloaded`: The signing document was downloaded by signer
 - `signed`: All signers completed the request
-- `cancelled`: If the request is cancelled via UI or API
+- `signed and downloaded`: The signing document was signed and downloaded by
+ signer
 - `declined`: If any signer declines the request
-- `error_converting`: An issue was encountered while converting the file to a
-  `.pdf`
-- `error_sending`: An issue was encountered while sending the request
+- `cancelled`: If the request is cancelled via UI or API
 - `expired`: The date of expiration has passed with outstanding, incomplete
   signatures 
 - `downloaded`: The signing document was downloaded by signer
