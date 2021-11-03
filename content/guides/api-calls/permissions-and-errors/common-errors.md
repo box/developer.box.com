@@ -9,6 +9,7 @@ alias_paths:
   - /docs/error-codes
   - /docs/detailed-error-messages
   - /docs
+  - docs/#errors
 notes: |-
   Lazy copy of old docs. Needs rethinking.
 ---
