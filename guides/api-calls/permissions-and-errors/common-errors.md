@@ -23,7 +23,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/common-errors.md
 ---
-# Common Errors
+# Errors
 
 The Box APIs uses [HTTP status codes][status-codes] to communicate if a request
 has been successfully processed or not.
