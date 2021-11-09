@@ -324,7 +324,7 @@ signing document.
 
 ### Forwarded
 
-A `SIGNER_FORWARDED` `event_type` is produced when a signer downloads the
+A `SIGNER_FORWARDED` `event_type` is produced when a signer forwards the
 signing document.
 
 ```json
