@@ -4,11 +4,12 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/polling
+  - events/enterprise-events/for-enterprise
+  - events/user-events/polling
   - events/parameters/pagination
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/for-user
 ---
 
 # Get User Events
@@ -116,4 +117,4 @@ An anonymous user is a user that is not logged in. This can happen any time a
 user interacts with content and they aren't asked to log in first. An example
 would be when a user downloads a file through an open shared link.
 
-[longpoll]: g://events/polling
+[longpoll]: g://events/user-events/polling

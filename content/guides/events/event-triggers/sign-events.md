@@ -4,9 +4,10 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
+  - events/enterprise-events/for-enterprise
 required_guides: []
-alias_paths: []
+alias_paths:
+    - /guides/events/sign-events
 ---
 
 # Sign Events

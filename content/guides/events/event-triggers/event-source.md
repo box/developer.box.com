@@ -3,13 +3,14 @@ rank: 3
 related_endpoints:
   - get_events
 related_guides:
-  - events/for-enterprise
-  - events/for-user
+  - events/enterprise-events/for-enterprise
+  - events/user-events/for-user
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/event-triggers
 ---
 
-# Event Triggers
+# Event Source
 
 Events appear in the event stream based on upon actions committed by users,
 items, or other resources. The response of the [`GET /events`](e://get_events) 
