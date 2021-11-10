@@ -6,7 +6,7 @@ related_endpoints:
 related_guides:
   - events/for-enterprise
   - events/polling
-  - events/pagination
+  - events/parameters/pagination
 required_guides: []
 alias_paths: []
 ---

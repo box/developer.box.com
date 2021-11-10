@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 2
 related_endpoints:
   - get_events
   - options_events
@@ -7,7 +7,8 @@ related_guides:
   - events/for-enterprise
   - events/for-user
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /events/pagination
 ---
 
 # Stream Position Pagination
