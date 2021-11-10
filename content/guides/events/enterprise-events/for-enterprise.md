@@ -4,11 +4,12 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-user
-  - events/polling
+  - events/user-events/for-user
+  - events/user-events/polling
   - events/parameters/pagination
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/for-enterprise
 ---
 
 # Get Enterprise Events
@@ -142,7 +143,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/event-triggers/shield-alert-events) for more information. |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`        | An invite to externally collaborate is blocked                                                  |
