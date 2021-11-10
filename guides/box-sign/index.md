@@ -85,4 +85,4 @@ production content.
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
 <!-- i18n-disable localize-links -->
 
-[eg]: g://events/sign-events
+[eg]: g://events/event-triggers/sign-events

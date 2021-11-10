@@ -4,21 +4,22 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
+  - events/enterprise-events/for-enterprise
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/shield-alert-events
 category_id: events
-subcategory_id: null
+subcategory_id: events/event-triggers
 is_index: false
-id: events/shield-alert-events
+id: events/event-triggers/shield-alert-events
 type: guide
-total_steps: 6
-sibling_id: events
-parent_id: events
-next_page_id: events/sign-events
-previous_page_id: events/polling
+total_steps: 3
+sibling_id: events/event-triggers
+parent_id: events/event-triggers
+next_page_id: events/event-triggers/sign-events
+previous_page_id: events/event-triggers/event-source
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/shield-alert-events.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-alert-events.md
 ---
 # Shield Events
 
@@ -628,4 +629,4 @@ a justification is chosen from the share modal. For example, one
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
 <!-- i18n-disable localize-links -->
 
-[events]: g://events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise/

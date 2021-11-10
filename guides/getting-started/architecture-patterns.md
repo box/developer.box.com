@@ -84,7 +84,7 @@ used in another process or for future reference.
 [auth]: g://authentication
 [apptype]: g://applications/select
 [events]: e://resources/event
-[userevents]: g://events/for-user
+[userevents]: g://events/user-events/for-user
 [sa]: g://getting-started/user-types/service-account
 <!-- i18n-enable localize-links -->
 

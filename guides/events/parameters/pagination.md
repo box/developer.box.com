@@ -4,11 +4,11 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/for-user
+  - events/enterprise-events/for-enterprise
+  - events/user-events/for-user
 required_guides: []
 alias_paths:
-  - /events/pagination
+  - /guides/events/pagination
 category_id: events
 subcategory_id: events/parameters
 is_index: false

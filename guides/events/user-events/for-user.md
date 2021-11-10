@@ -4,23 +4,24 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/polling
+  - events/enterprise-events/for-enterprise
+  - events/user-events/polling
   - events/parameters/pagination
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/for-user
 category_id: events
-subcategory_id: null
+subcategory_id: events/user-events
 is_index: false
-id: events/for-user
+id: events/user-events/for-user
 type: guide
-total_steps: 6
-sibling_id: events
-parent_id: events
-next_page_id: events/for-enterprise
+total_steps: 2
+sibling_id: events/user-events
+parent_id: events/user-events
+next_page_id: events/user-events
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/for-user.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/for-user.md
 ---
 # Get User Events
 
@@ -131,4 +132,4 @@ An anonymous user is a user that is not logged in. This can happen any time a
 user interacts with content and they aren't asked to log in first. An example
 would be when a user downloads a file through an open shared link.
 
-[longpoll]: g://events/polling
+[longpoll]: g://events/user-events/polling
