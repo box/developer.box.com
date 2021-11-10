@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: events/sign-events
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: events
 parent_id: events
 next_page_id: events

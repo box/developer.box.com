@@ -6,7 +6,7 @@ related_endpoints:
 related_guides:
   - events/for-enterprise
   - events/polling
-  - events/pagination
+  - events/parameters/pagination
 required_guides: []
 alias_paths: []
 category_id: events
@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: events/for-user
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: events
 parent_id: events
 next_page_id: events/for-enterprise
