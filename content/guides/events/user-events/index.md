@@ -1,11 +1,11 @@
 ---
-rank: 2
+rank: 1
 related_endpoints: []
 related_guides: []
 required_guides: []
 alias_paths: []
 ---
 
-# Enterprise Events
+# User Events
 
-INSERT MORE INFORMATION HERE
+User events are events tied to the currently authenticated user.

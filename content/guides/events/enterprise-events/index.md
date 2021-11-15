@@ -6,6 +6,6 @@ required_guides: []
 alias_paths: []
 ---
 
-# Event Stream Parameters
+# Enterprise Events
 
-INSERT MORE INFORMATION HERE
+Enterprise events represent all events in an enterprise Box instance.

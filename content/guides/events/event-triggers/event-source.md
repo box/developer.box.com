@@ -12,10 +12,8 @@ alias_paths:
 
 # Event Source
 
-Events appear in the event stream based on upon actions committed by users,
-items, or other resources. The response of the [`GET /events`](e://get_events) 
-endpoint contains a source object that differs based upon the resource that 
-triggered the event.
+If a user or item triggers an event, The response of the
+[`GET /events`](e://get_events) endpoint contains an event source object.
 
 ## User Source Object
 
