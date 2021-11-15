@@ -11,7 +11,7 @@ required_guides: []
 alias_paths:
   - /guides/events/for-enterprise
 category_id: events
-subcategory_id: events/enterprise-events
+subcategory_id: events/2-enterprise-events
 is_index: false
 id: events/enterprise-events/for-enterprise
 type: guide
@@ -21,7 +21,7 @@ parent_id: events/enterprise-events
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/for-enterprise.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/2-enterprise-events/for-enterprise.md
 ---
 # Get Enterprise Events
 

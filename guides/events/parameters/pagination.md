@@ -10,7 +10,7 @@ required_guides: []
 alias_paths:
   - /guides/events/pagination
 category_id: events
-subcategory_id: events/parameters
+subcategory_id: events/3-parameters
 is_index: false
 id: events/parameters/pagination
 type: guide
@@ -20,7 +20,7 @@ parent_id: events/parameters
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/pagination.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/3-parameters/pagination.md
 ---
 # Stream Position Pagination
 

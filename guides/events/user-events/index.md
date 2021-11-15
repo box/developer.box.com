@@ -5,7 +5,7 @@ related_guides: []
 required_guides: []
 alias_paths: []
 category_id: events
-subcategory_id: events/user-events
+subcategory_id: events/1-user-events
 is_index: true
 id: events/user-events
 type: guide
@@ -15,7 +15,7 @@ parent_id: events
 next_page_id: events/user-events/polling
 previous_page_id: events/user-events/for-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/1-user-events/index.md
 ---
 # User Events
 

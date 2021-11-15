@@ -11,7 +11,7 @@ required_guides: []
 alias_paths:
   - /guides/events/for-user
 category_id: events
-subcategory_id: events/user-events
+subcategory_id: events/1-user-events
 is_index: false
 id: events/user-events/for-user
 type: guide
@@ -21,7 +21,7 @@ parent_id: events/user-events
 next_page_id: events/user-events
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/for-user.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/1-user-events/for-user.md
 ---
 # Get User Events
 
