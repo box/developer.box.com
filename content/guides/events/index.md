@@ -43,21 +43,20 @@ slightly different subsets of the user events dataset for different purposes.
 Enterprise events provide an event feed for all users and content in an
 enterprise. Depending upon the `stream_type` your application can either
 subscribe to live events or query historical events. Access to these
-`stream_types` is limited to users with admin permissions to
-`Run new reports and access existing reports`.
+stream types is limited to users with admin permissions to
+**Run new reports and access existing reports**.
 
 Unlike the user events stream, the enterprise events stream supports filtering
 based on event type but does not support long polling. Across the two
-stream_types the dataset is exactly the same. Events can be deduplicated across
-the two stream_types using their event IDs.
+stream types the dataset is exactly the same. Events can be deduplicated across
+the two stream types using their event IDs.
 
 <!-- markdownlint-disable line-length -->
 
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
-| `admin_logs_streaming`   | Enables subscribing to live 
-events                      |
+| `admin_logs_streaming`   | Enables subscribing to live events                      |
 
 <!-- markdownlint-enable line-length -->
 

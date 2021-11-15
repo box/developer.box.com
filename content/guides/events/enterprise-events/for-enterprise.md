@@ -32,18 +32,9 @@ a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
-| `admin_logs_streaming`   | Enables subscribing to live 
-events                      |
+| `admin_logs_streaming`   | Enables subscribing to live events                      |
 
 <!-- markdownlint-enable line-length -->
-
-## Filter by Event Type
-
-The enterprise event feed support filtering by event type.
-
-<Samples id="get_events" variant='enterprise_filter' />
-
-A full list of event types can be found below.
 
 ## Anonymous Users
 
@@ -68,34 +59,13 @@ The emphasis of the `admin_logs_streaming` feed is to return the complete
 results quickly, which means that Box may return events more than once or out
 of order. Duplicate events can be identified by their event IDs.
 
-## Migrating From Admin Logs to Admin Logs Streaming
+## Filter by Event Type
 
-Box recommends that applications subscribing to live events through
-`admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
-lower latency and ensures that late arriving events will not be missed. Events
-can be deduplicated between `admin_logs` and `admin_logs_streaming` by their
-event IDs. To migrate from `admin_logs` to `admin_logs_streaming` please
-perform the following steps:
+The enterprise event feed support filtering by event type.
 
-* Existing requests will look something like the below:
+<Samples id="get_events" variant='enterprise_filter' />
 
-  ```sh
-  GET /events?steam_type=admin_logs&stream_position=1632893855
-  ```
-
-* Begin overlapping new requests with `admin_logs_streaming`, either:
-
-  * Start two weeks ago and backfill:
-
-    ```sh
-    GET /events?steam_type=admin_logs_streaming&stream_position=0
-    ```
-
-  * Start now and run in parallel:
-
-    ```sh
-    GET /events?steam_type=admin_logs_streaming&stream_position=now
-    ```
+A full list of event types can be found below.
 
 ## Event Types
 
