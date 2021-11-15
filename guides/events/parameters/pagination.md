@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - get_events
   - options_events
@@ -10,17 +10,17 @@ required_guides: []
 alias_paths:
   - /guides/events/pagination
 category_id: events
-subcategory_id: events/3-parameters
+subcategory_id: events/parameters
 is_index: false
 id: events/parameters/pagination
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: events/parameters
 parent_id: events/parameters
 next_page_id: ''
-previous_page_id: ''
+previous_page_id: events/parameters/stream-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/3-parameters/pagination.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/pagination.md
 ---
 # Stream Position Pagination
 

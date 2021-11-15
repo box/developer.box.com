@@ -9,7 +9,7 @@ required_guides: []
 alias_paths:
   - /guides/events/sign-events
 category_id: events
-subcategory_id: events/4-event-triggers
+subcategory_id: events/event-triggers
 is_index: false
 id: events/event-triggers/sign-events
 type: guide
@@ -19,7 +19,7 @@ parent_id: events/event-triggers
 next_page_id: ''
 previous_page_id: events/event-triggers/shield-alert-events
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/4-event-triggers/sign-events.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/sign-events.md
 ---
 # Sign Events
 

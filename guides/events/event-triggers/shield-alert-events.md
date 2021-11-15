@@ -9,7 +9,7 @@ required_guides: []
 alias_paths:
   - /guides/events/shield-alert-events
 category_id: events
-subcategory_id: events/4-event-triggers
+subcategory_id: events/event-triggers
 is_index: false
 id: events/event-triggers/shield-alert-events
 type: guide
@@ -17,9 +17,9 @@ total_steps: 3
 sibling_id: events/event-triggers
 parent_id: events/event-triggers
 next_page_id: events/event-triggers/sign-events
-previous_page_id: events/event-triggers/event-source
+previous_page_id: events/event-triggers
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/4-event-triggers/shield-alert-events.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-alert-events.md
 ---
 # Shield Events
 
