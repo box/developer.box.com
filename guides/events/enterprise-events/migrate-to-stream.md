@@ -20,7 +20,7 @@ previous_page_id: events/enterprise-events/for-enterprise
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/migrate-to-stream.md
 ---
-# Migrate to Admin Logs Streaming
+# Migrating From History To Stream
 
 Box recommends that applications subscribing to live events through
 `admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
@@ -30,21 +30,46 @@ event IDs. To migrate from `admin_logs` to `admin_logs_streaming` please
 perform the following steps:
 
 * Existing requests will look something like the below:
-
-```sh
-GET /events?steam_type=admin_logs&stream_position=1632893855
-```
+  
+  ```sh
+  GET /events?steam_type=admin_logs&stream_position=1632893855
+  ```
 
 * Begin overlapping new requests with `admin_logs_streaming`, either:
+  * Start two weeks ago and backfill:
 
-* Start two weeks ago and backfill:
+    ```sh
+    GET /events?steam_type=admin_logs_streaming&stream_position=0
+    ```
+
+  * Start now and run in parallel:
+
+    ```sh
+    GET /events?steam_type=admin_logs_streaming&stream_position=now
+    ```
+
+* Paginate through all results until now and deduplicate with `admin_logs`
+  events
 
 ```sh
-GET /events?steam_type=admin_logs_streaming&stream_position=0
+GET /events?stream_type=stream_type=admin_logs_streaming&stream_position=1632893855
 ```
 
-* Start now and run in parallel:
+* Continue to overlap until confident
+* Turn off old `admin_logs` requests
 
-```sh
-GET /events?steam_type=admin_logs_streaming&stream_position=now
-```
+<ImageFrame center shadow border>
+
+![Stream Migration Flow](images/migrate_to_stream.png)
+
+</ImageFrame>
+
+When compared to `admin_logs`, `admin_logs_streaming` differs in the
+following ways:
+
+* Returns events in near real time, about 12 seconds after they are
+processed by Box, rather than in chronological order
+* Contains duplicates
+* Does not support `created_after` and `created_before` filter parameters,
+since they are only relevant to historical querying
+* Provides 2 weeks of history

@@ -36,7 +36,7 @@ permission to **Run new reports and access existing reports**.
 
 </Message>
 
-<Samples id="get_events" variant='enterprise' >
+<Samples id="get_events" variant='enterprise_stream' >
 
 </Samples>
 
@@ -76,9 +76,9 @@ of order. Duplicate events can be identified by their event IDs.
 
 ## Filter by Event Type
 
-The enterprise event feed support filtering by event type.
+The enterprise event feed supports filtering by event type.
 
-<Samples id="get_events" variant='enterprise_filter' >
+<Samples id="get_events" variant='enterprise_stream_filter' >
 
 </Samples>
 

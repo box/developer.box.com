@@ -40,11 +40,6 @@ header or an actual access token for that user.
 
 </Message>
 
-## Long Polling
-
-The user event stream supports long-polling
-[through the `OPTIONS /events` API][longpoll].
-
 ## Stream Types
 
 The user event stream support 3 types of stream.
@@ -79,6 +74,11 @@ API and seven years via exported reports in the Box Admin Console.
 The emphasis of this feed is to return the complete results quickly, which means
 that Box may return events more than once or out of order. Duplicate events can
 be identified by their event IDs.
+
+## Long Polling
+
+The user event stream supports long-polling
+[through the `OPTIONS /events` API][longpoll].
 
 ## Event Types
 
