@@ -14,16 +14,28 @@ alias_paths:
 
 # Get Enterprise Events
 
-To get a enterprise's events, authenticate a user with admin permission and make
+To get a enterprise's events, make
 a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
-`admin_logs`.
-
-<Samples id="get_events" variant='enterprise' />
+`admin_logs` or `admin_logs_streaming`.
 
 <Message>
   This API requires the user to be an enterprise admin or co-admin with the
   permission to **Run new reports and access existing reports**.
 </Message>
+
+<Samples id="get_events" variant='enterprise' />
+
+## Stream Types
+
+<!-- markdownlint-disable line-length -->
+
+| Stream Type |                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------- |
+| `admin_logs`       | Enables querying historical events up to one year                                                 |
+| `admin_logs_streaming`   | Enables subscribing to live 
+events                      |
+
+<!-- markdownlint-enable line-length -->
 
 ## Filter by Event Type
 
@@ -33,21 +45,57 @@ The enterprise event feed support filtering by event type.
 
 A full list of event types can be found below.
 
+## Anonymous Users
+
+In some cases, the event feed might list a user with an ID of `2`. This is Box's
+internal identifier for anonymous users.
+
+An anonymous user is a user that is not logged in. This can happen any time a
+user interacts with content and they aren't asked to log in first. An example
+would be when a user downloads a file through an open shared link.
+
 ## Limitations
 
-The admin event feed does not support long polling. To long poll for events, use
-the user event feed.
+The enterprise event feed does not support long polling.
 
-Box does not store events indefinitely.
+Box does not store events indefinitely. Two weeks of enterprise events are
+available when `stream_type` is set to `admin_logs_streaming`. One year of
+enterprise events are available when `stream_type` is set to `admin_logs`.
+Seven years of enterprise events are available via the Box Admin Console’s
+exported reports.
 
-User events are stored for between two weeks and two months, after which the
-user events are removed. Enterprise events are accessible for one year via the
-API and seven years via exported reports in the Box Admin Console.
+The emphasis of the `admin_logs_streaming` feed is to return the complete
+results quickly, which means that Box may return events more than once or out
+of order. Duplicate events can be identified by their event IDs.
 
-The emphasis for this feed is on completeness over latency, which means that Box
-may deliver admin events with higher latency than the user feed. Unlike the user
-events stream, the admin events stream supports filtering for specific events
-but does not support long polling.
+## Migrating From Admin Logs to Admin Logs Streaming
+
+Box recommends that applications subscribing to live events through
+`admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
+lower latency and ensures that late arriving events will not be missed. Events
+can be deduplicated between `admin_logs` and `admin_logs_streaming` by their
+event IDs. To migrate from `admin_logs` to `admin_logs_streaming` please
+perform the following steps:
+
+* Existing requests will look something like the below:
+
+  ```sh
+  GET /events?steam_type=admin_logs&stream_position=1632893855
+  ```
+
+* Begin overlapping new requests with `admin_logs_streaming`, either:
+
+  * Start two weeks ago and backfill:
+
+    ```sh
+    GET /events?steam_type=admin_logs_streaming&stream_position=0
+    ```
+
+  * Start now and run in parallel:
+
+    ```sh
+    GET /events?steam_type=admin_logs_streaming&stream_position=now
+    ```
 
 ## Event Types
 
@@ -179,12 +227,3 @@ exhaustive, so it is possible events appear that are not listed.
 | `WATERMARK_LABEL_CREATE`                       | A watermark is added to a file                                                                  |
 | `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
 <!-- markdownlint-enable line-length -->
-
-## Anonymous Users
-
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
-
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.

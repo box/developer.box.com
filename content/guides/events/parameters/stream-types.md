@@ -6,6 +6,6 @@ required_guides: []
 alias_paths: []
 ---
 
-# Event Triggers
+# Stream Types
 
 INSERT MORE INFORMATION HERE
