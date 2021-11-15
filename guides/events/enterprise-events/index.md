@@ -9,10 +9,10 @@ subcategory_id: events/enterprise-events
 is_index: true
 id: events/enterprise-events
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: events
 parent_id: events
-next_page_id: ''
+next_page_id: events/enterprise-events/migrate-to-stream
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/index.md
