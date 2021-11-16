@@ -41,7 +41,7 @@ prompt a selection for the next step.
 
 ### 3. Select the type of authentication and application name
 
-Select **Server Authentication (with Client Credentials gRANT)** if you would 
+Select **Server Authentication (with Client Credentials Grant)** if you would 
 like to verify  application identity with a client ID and client secret. Then, 
 provide a name for your application and click **Create App**.
 
