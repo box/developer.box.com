@@ -26,10 +26,12 @@ Box recommends that applications subscribing to live events through
 `admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
 lower latency and ensures that late arriving events will not be missed. Events
 can be deduplicated between `admin_logs` and `admin_logs_streaming` by their
-event IDs. To migrate from `admin_logs` to `admin_logs_streaming` please
+event IDs.
+
+To migrate from `admin_logs` to `admin_logs_streaming` please
 perform the following steps:
 
-* Existing requests will look something like the below:
+- Existing requests will look something like the below:
 
 <!-- markdownlint-disable line-length -->
 
@@ -39,8 +41,8 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 ```
 <!-- markdownlint-enable line-length -->
 
-* Begin overlapping new requests with `admin_logs_streaming`, either:
-* Start two weeks ago and backfill:
+- Begin overlapping new requests with `admin_logs_streaming`, either:
+- Start two weeks ago and backfill:
 
 <!-- markdownlint-disable line-length -->
 
@@ -50,7 +52,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ```
 <!-- markdownlint-enable line-length -->
 
-* Start now and run in parallel:
+- Start now and run in parallel:
 
 <!-- markdownlint-disable line-length -->
 
@@ -60,7 +62,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ```
 <!-- markdownlint-enable line-length -->
 
-* Paginate through all results until now and deduplicate with `admin_logs`
+- Paginate through all results until now and deduplicate with `admin_logs`
 events
 
 <!-- markdownlint-disable line-length -->
@@ -71,8 +73,8 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ```
 <!-- markdownlint-enable line-length -->
 
-* Continue to overlap until confident
-* Turn off old `admin_logs` requests
+- Continue to overlap until confident
+- Turn off old `admin_logs` requests
 
 <ImageFrame center shadow border>
 
@@ -83,9 +85,9 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 When compared to `admin_logs`, `admin_logs_streaming` differs in the
 following ways:
 
-* Returns events in near real time, about 12 seconds after they are
+- Returns events in near real time, about 12 seconds after they are
 processed by Box, rather than in chronological order
-* Contains duplicates
-* Does not support `created_after` and `created_before` filter parameters,
+- Contains duplicates
+- Does not support `created_after` and `created_before` filter parameters,
 since they are only relevant to historical querying
-* Provides 2 weeks of history
+- Provides 2 weeks of history
