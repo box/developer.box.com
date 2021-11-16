@@ -30,30 +30,46 @@ event IDs. To migrate from `admin_logs` to `admin_logs_streaming` please
 perform the following steps:
 
 * Existing requests will look something like the below:
-  
-  ```sh
-  GET /events?steam_type=admin_logs&stream_position=1632893855
-  ```
+
+<!-- markdownlint-disable line-length -->
+
+```bash
+curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
+  -H "authorization: Bearer <ACCESS_TOKEN>"
+```
+<!-- markdownlint-enable line-length -->
 
 * Begin overlapping new requests with `admin_logs_streaming`, either:
-  * Start two weeks ago and backfill:
+* Start two weeks ago and backfill:
 
-    ```sh
-    GET /events?steam_type=admin_logs_streaming&stream_position=0
-    ```
+<!-- markdownlint-disable line-length -->
 
-  * Start now and run in parallel:
+```bash
+curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
+  -H "authorization: Bearer <ACCESS_TOKEN>"
+```
+<!-- markdownlint-enable line-length -->
 
-    ```sh
-    GET /events?steam_type=admin_logs_streaming&stream_position=now
-    ```
+* Start now and run in parallel:
+
+<!-- markdownlint-disable line-length -->
+
+```bash
+curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
+  -H "authorization: Bearer <ACCESS_TOKEN>"
+```
+<!-- markdownlint-enable line-length -->
 
 * Paginate through all results until now and deduplicate with `admin_logs`
-  events
+events
 
-```sh
-GET /events?stream_type=stream_type=admin_logs_streaming&stream_position=1632893855
+<!-- markdownlint-disable line-length -->
+
+```bash
+curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
+  -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
+<!-- markdownlint-enable line-length -->
 
 * Continue to overlap until confident
 * Turn off old `admin_logs` requests
