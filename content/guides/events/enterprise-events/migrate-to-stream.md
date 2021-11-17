@@ -13,14 +13,27 @@ alias_paths: []
 
 Box recommends that applications subscribing to live events through
 `admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
-lower latency and ensures that late arriving events will not be missed. Events
-can be deduplicated between `admin_logs` and `admin_logs_streaming` by their
-event IDs.
+lower and more consistent latency, as well as ensures that late arriving
+events will not be missed. Events can be deduplicated between `admin_logs` and
+`admin_logs_streaming` by their event IDs.
 
-To migrate from `admin_logs` to `admin_logs_streaming` please
-perform the following steps:
+## Enterprise `stream_type` comparison
 
-## 1. Existing requests will look something like the below
+### Benefits of `admins_logs_streaming`
+
+- Ensures late arriving events are not missed by your subscribing application
+
+### Differences between `admin_logs` and `admin_logs_streaming`
+
+- Provides two weeks of event history (i.e. retention)
+
+### Similarities between `admin_logs` and `admin_logs_streaming`
+
+- Shares the same [`GET /events`][events-api] API endpoint
+
+## How to migrate from `admin_logs` to `admin_logs_streaming`
+
+### 1. Existing requests will look something like the below
 
 <!-- markdownlint-disable line-length -->
 ```bash
@@ -29,7 +42,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 ```
 <!-- markdownlint-enable line-length -->
 
-## 2. Begin overlapping new requests with `admin_logs_streaming`
+### 2. Begin overlapping existing requests with `admin_logs_streaming`
 
 - Start two weeks ago and backfill:
 <!-- markdownlint-disable line-length -->
@@ -47,31 +60,21 @@ or
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
-<!-- markdownlint-enable line-length -->
 
-## 3. Paginate through results until now and deduplicate the `admin_logs`events
+### 3. Paginate through results until now and deduplicate with `admin_logs` events
 
-<!-- markdownlint-disable line-length -->
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 <!-- markdownlint-enable line-length -->
 
-## 4. Continue to overlap until confident
+### 4. Continue to overlap until confident
 
-## 5. Turn off old `admin_logs` requests
+### 5. Turn off old `admin_logs` requests
 
 <ImageFrame center shadow border>
 ![Stream Migration Flow](images/migrate_to_stream.png)
 </ImageFrame>
 
-When compared to `admin_logs`, `admin_logs_streaming` differs in the
-following ways:
-
-- Returns events in near real time, about 12 seconds after they are
-  processed by Box, rather than in chronological order
-- Contains duplicates
-- Does not support `created_after` and `created_before` filter parameters,
-  since they are only relevant to historical querying
-- Provides 2 weeks of history
+[events-api]: e://events
