@@ -37,7 +37,7 @@ perform the following steps:
 
 ```bash
 curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
-    -H "authorization: Bearer <ACCESS_TOKEN>"
+  -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 <!-- markdownlint-enable line-length -->
 
@@ -46,7 +46,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 - Start two weeks ago and backfill:
 <!-- markdownlint-disable line-length -->
 
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
@@ -57,7 +57,7 @@ or
 - Start now and run in parallel:
 <!-- markdownlint-disable line-length -->
 
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
@@ -67,7 +67,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 
 <!-- markdownlint-disable line-length -->
 
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
