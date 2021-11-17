@@ -23,17 +23,17 @@ perform the following steps:
 ## 1. Existing requests will look something like the below
 
 <!-- markdownlint-disable line-length -->
-  ```bash
-  curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
-    -H "authorization: Bearer <ACCESS_TOKEN>"
-  ```
+```bash
+curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
+  -H "authorization: Bearer <ACCESS_TOKEN>"
+```
 <!-- markdownlint-enable line-length -->
 
 ## 2. Begin overlapping new requests with `admin_logs_streaming`
 
 - Start two weeks ago and backfill:
 <!-- markdownlint-disable line-length -->
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
@@ -43,7 +43,7 @@ or
 
 - Start now and run in parallel:
 <!-- markdownlint-disable line-length -->
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
@@ -52,7 +52,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ## 3. Paginate through results until now and deduplicate the `admin_logs`events
 
 <!-- markdownlint-disable line-length -->
-```bash
+```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
