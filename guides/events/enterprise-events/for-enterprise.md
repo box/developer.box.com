@@ -47,9 +47,34 @@ permission to **Run new reports and access existing reports**.
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
-| `admin_logs_streaming`   | Enables subscribing to live events                      |
+| `admin_logs_streaming`   | Enables subscribing to live events in near real time                      |
 
 <!-- markdownlint-enable line-length -->
+
+## Live Monitoring
+
+To monitor recent events that have been generated within Box across the
+enterprise, set the `stream_type` to `admin_logs_streaming`. This is also known
+as the Enterprise Event Stream API.
+
+The emphasis for this feed is on low latency rather than chronological
+accuracy, which means that Box may return events more than once and out of
+chronological order. Events are returned via the API around 12 seconds after
+they are processed by Box. The 12 second buffer ensures that new events are not
+written after your cursor position. Only two weeks of events are available via
+this `stream_type`.
+
+## Historical Querying
+
+To query historical events across the enterprise up to one year old, set the
+`stream_type` to `admin_logs`. This is also known as the Enterprise Event
+History API.
+
+The emphasis for this feed is on completeness over latency, which means that
+Box will deliver admin events in chronological order and without duplicates,
+but with higher latency than the user or `admin_logs_streaming` feed. Consuming
+events in near real time may lead to missed events as events can arrive later
+than your filtering window.
 
 ## Anonymous Users
 
@@ -68,10 +93,10 @@ Box does not store events indefinitely. Two weeks of enterprise events are
 available when `stream_type` is set to `admin_logs_streaming`. One year of
 enterprise events are available when `stream_type` is set to `admin_logs`.
 Seven years of enterprise events are available via the Box Admin Console’s
-exported reports.
+[exported reports][reports].
 
 The emphasis of the `admin_logs_streaming` feed is to return the complete
-results quickly, which means that Box may return events more than once or out
+results quickly, which means that Box may return events more than once and out
 of order. Duplicate events can be identified by their event IDs.
 
 ## Filter by Event Type
@@ -178,7 +203,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/event-triggers/shield-alert-events) for more information. |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events][shield-events] for more information. |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`        | An invite to externally collaborate is blocked                                                  |
@@ -214,3 +239,6 @@ exhaustive, so it is possible events appear that are not listed.
 | `WATERMARK_LABEL_CREATE`                       | A watermark is added to a file                                                                  |
 | `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
 <!-- markdownlint-enable line-length -->
+
+[shield-events]: g://events/event-triggers/shield-alert-events
+[reports]:https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
