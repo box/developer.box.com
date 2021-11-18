@@ -71,13 +71,13 @@ If you would like to authenticate as a Managed User:
 <!-- markdownlint-disable line-length -->
 
 ```cURL
-curl --location --request POST ‘https://api.box.com/oauth2/token’ \
---header ‘Content-Type: application/x-www-form-urlencoded’ \
---data-urlencode ‘client_id=<client_id>’ \
---data-urlencode ‘client_secret=<client_secret>’ \
---data-urlencode ‘grant_type=client_credentials’ \
---data-urlencode ‘box_subject_type=enterprise’ \
---data-urlencode ‘box_subject_id=<enterprise_id>’
+curl -i -X POST "https://api.box.com/oauth2/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "client_id=<client_id>" \
+    -d "client_secret=<client_secret>" \
+    -d "grant_type=client_credentials" \
+    -d "box_subject_type=enterprise"  \
+    -d "box_subject_id=<enterprise_id>"
 ```
 
 <!-- markdownlint-enable line-length -->
