@@ -44,8 +44,8 @@ as the Enterprise Event Stream API.
 
 The emphasis for this feed is on low latency rather than chronological
 accuracy, which means that Box may return events more than once and out of
-chronological order. Events are returned via the API around 12 seconds after
-they are processed by Box. The 12 second buffer ensures that new events are not
+chronological order. Events are returned via the API in near real time after
+they are processed by Box. A small delay/buffer ensures that new events are not
 written after your cursor position. Only two weeks of events are available via
 this `stream_type`.
 
