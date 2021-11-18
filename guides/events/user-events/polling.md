@@ -4,22 +4,23 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/for-user
+  - events/enterprise-events/for-enterprise
+  - events/user-events/for-user
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/polling
 category_id: events
-subcategory_id: null
+subcategory_id: events/user-events
 is_index: false
-id: events/polling
+id: events/user-events/polling
 type: guide
-total_steps: 7
-sibling_id: events
-parent_id: events
-next_page_id: events/pagination
-previous_page_id: events/event-triggers
+total_steps: 2
+sibling_id: events/user-events
+parent_id: events/user-events
+next_page_id: ''
+previous_page_id: events/user-events/for-user
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/polling.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/polling.md
 ---
 # Long-Poll Events
 

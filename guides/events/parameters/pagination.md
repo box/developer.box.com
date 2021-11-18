@@ -1,25 +1,26 @@
 ---
-rank: 5
+rank: 3
 related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/for-user
+  - events/enterprise-events/for-enterprise
+  - events/user-events/for-user
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/pagination
 category_id: events
-subcategory_id: null
+subcategory_id: events/parameters
 is_index: false
-id: events/pagination
+id: events/parameters/pagination
 type: guide
-total_steps: 7
-sibling_id: events
-parent_id: events
-next_page_id: events/shield-alert-events
-previous_page_id: events/polling
+total_steps: 2
+sibling_id: events/parameters
+parent_id: events/parameters
+next_page_id: ''
+previous_page_id: events/parameters/stream-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/pagination.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/pagination.md
 ---
 # Stream Position Pagination
 

@@ -4,23 +4,24 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
-  - events/polling
-  - events/pagination
+  - events/enterprise-events/for-enterprise
+  - events/user-events/polling
+  - events/parameters/pagination
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/for-user
 category_id: events
-subcategory_id: null
+subcategory_id: events/user-events
 is_index: false
-id: events/for-user
+id: events/user-events/for-user
 type: guide
-total_steps: 7
-sibling_id: events
-parent_id: events
-next_page_id: events/for-enterprise
+total_steps: 2
+sibling_id: events/user-events
+parent_id: events/user-events
+next_page_id: events/user-events/polling
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/for-user.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/for-user.md
 ---
 # Get User Events
 
@@ -39,11 +40,6 @@ header or an actual access token for that user.
 
 </Message>
 
-## Long Polling
-
-The user event stream supports long-polling
-[through the `OPTIONS /events` API][longpoll].
-
 ## Stream Types
 
 The user event stream support 3 types of stream.
@@ -58,6 +54,15 @@ The user event stream support 3 types of stream.
 
 <!-- markdownlint-enable line-length -->
 
+## Anonymous Users
+
+In some cases, the event feed might list a user with an ID of `2`. This is Box's
+internal identifier for anonymous users.
+
+An anonymous user is a user that is not logged in. This can happen any time a
+user interacts with content and they aren't asked to log in first. An example
+would be when a user downloads a file through an open shared link.
+
 ## Limitations
 
 Box does not store events indefinitely.
@@ -69,6 +74,11 @@ API and seven years via exported reports in the Box Admin Console.
 The emphasis of this feed is to return the complete results quickly, which means
 that Box may return events more than once or out of order. Duplicate events can
 be identified by their event IDs.
+
+## Long Polling
+
+The user event stream supports long-polling
+[through the `OPTIONS /events` API][longpoll].
 
 ## Event Types
 
@@ -122,13 +132,4 @@ The following events are only available in the `all` feed.
 
 <!-- markdownlint-enable line-length -->
 
-## Anonymous Users
-
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
-
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.
-
-[longpoll]: g://events/polling
+[longpoll]: g://events/user-events/polling

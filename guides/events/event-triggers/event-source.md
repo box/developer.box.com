@@ -3,29 +3,28 @@ rank: 3
 related_endpoints:
   - get_events
 related_guides:
-  - events/for-enterprise
-  - events/for-user
+  - events/enterprise-events/for-enterprise
+  - events/user-events/for-user
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/event-triggers
 category_id: events
-subcategory_id: null
+subcategory_id: events/event-triggers
 is_index: false
-id: events/event-triggers
+id: events/event-triggers/event-source
 type: guide
-total_steps: 7
-sibling_id: events
-parent_id: events
-next_page_id: events/polling
-previous_page_id: events/for-enterprise
+total_steps: 3
+sibling_id: events/event-triggers
+parent_id: events/event-triggers
+next_page_id: events/event-triggers
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/event-source.md
 ---
-# Event Triggers
+# Event Source
 
-Events appear in the event stream based on upon actions committed by users,
-items, or other resources. The response of the [`GET /events`](e://get_events)
-endpoint contains a source object that differs based upon the resource that
-triggered the event.
+If a user or item triggers an event, The response of the
+[`GET /events`](e://get_events) endpoint contains an event source object.
 
 ## User Source Object
 
