@@ -4,9 +4,10 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-enterprise
+  - events/enterprise-events/for-enterprise
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/shield-alert-events
 ---
 
 # Shield Events
@@ -611,4 +612,4 @@ The `additional_details` payload will provide the following details:
 [threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
 <!-- i18n-disable localize-links -->
-[events]: g://events/for-enterprise/
+[events]: g://events/enterprise-events/for-enterprise/
