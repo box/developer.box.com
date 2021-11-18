@@ -343,6 +343,52 @@ The `additional_details` payload will provide the following details:
 classification-based access policies to control actions and prevent the
 unintentional leakage of sensitive content.
 
+### Download Restriction
+
+If an admin creates a shield access policy that restricts downloads and an
+end user is blocked from downloading a file, an event is produced
+within the [enterprise event][events] stream. Events will also be generated
+when a user is viewing a folder with a file restricted from download, viewing a
+file in preview that is restricted from download, and when a user requests to
+download a file through the API that is restricted from download. These events
+follow the standard event object schema and the `event_type` value set
+to `SHIELD_DOWNLOAD_BLOCKED`.
+
+If downloading is blocked, the `additional-details` payload of the
+`SHIELD_DOWNLOAD_BLOCKED` event will provide the following details:
+
+```js
+{
+  "additional_details": {
+    "shield_download_enforcement": {
+      "item": {
+        "type": "file",
+        "id": 123456789,
+        "name": "downloadfolder.docx",
+        "file_version_id": 123456789,
+        "size": 11640,
+        "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+      },
+      "access_user": {
+        "type": "user",
+        "id": 123456789,
+        "name": "Some User",
+        "login": "somename@box.com"
+      },
+      "service": {
+        "service": 64089752,
+        "name": "zip-download"
+      },
+      "additional_info": "",
+      "created_at": "2021-10-21T14:23:45-07:00",
+      "classification": "email"
+    },
+    "service_id": "64089752",
+    "service_name": "zip-download"
+  }
+}
+```
+
 ### External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
