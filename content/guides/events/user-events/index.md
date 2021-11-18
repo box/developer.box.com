@@ -8,4 +8,6 @@ alias_paths: []
 
 # User Events
 
-User events are events tied to the currently authenticated user.
+User Events provides a low latency stream of events relevant to the currently
+authenticated user. This event stream is how Box keeps Box Drive up to date,
+but is also made available for developer use.
