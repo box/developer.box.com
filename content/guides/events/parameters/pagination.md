@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/pagination
+  - /guides/events/pagination/
 ---
 
 # Stream Position Pagination
