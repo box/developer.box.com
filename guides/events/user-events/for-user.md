@@ -10,6 +10,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/for-user
+  - /guides/events/for-user/
 category_id: events
 subcategory_id: events/user-events
 is_index: false

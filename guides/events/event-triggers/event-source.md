@@ -8,6 +8,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/event-triggers
+  - /guides/events/event-triggers/
 category_id: events
 subcategory_id: events/event-triggers
 is_index: false
