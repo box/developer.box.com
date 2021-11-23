@@ -8,6 +8,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/shield-alert-events
+  - /guides/events/shield-alert-events/
 ---
 
 # Shield Events

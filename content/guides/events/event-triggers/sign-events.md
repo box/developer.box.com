@@ -8,6 +8,7 @@ related_guides:
 required_guides: []
 alias_paths:
     - /guides/events/sign-events
+    - /guides/events/sign-events/
 ---
 
 # Sign Events
