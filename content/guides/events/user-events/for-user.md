@@ -10,6 +10,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/for-user
+  - /guides/events/for-user/
 ---
 
 # Get User Events

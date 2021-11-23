@@ -10,6 +10,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/for-enterprise
+  - /guides/events/for-enterprise/
 ---
 
 # Get Enterprise Events
