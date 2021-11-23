@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/pagination
+  - /guides/events/pagination/
 category_id: events
 subcategory_id: events/parameters
 is_index: false

@@ -10,6 +10,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/for-enterprise
+  - /guides/events/for-enterprise/
 category_id: events
 subcategory_id: events/enterprise-events
 is_index: false

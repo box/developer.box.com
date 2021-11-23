@@ -9,6 +9,7 @@ related_guides:
 required_guides: []
 alias_paths:
   - /guides/events/polling
+  - /guides/events/polling/
 category_id: events
 subcategory_id: events/user-events
 is_index: false
