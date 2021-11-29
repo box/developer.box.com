@@ -47,8 +47,8 @@ Before continuing you will need to complete the following steps:
  OAuth 2.0 authentication method.
 * Navigate to the configuration tab for the application to copy the `client_id`
  and `client_secret` values.
-* Ensure a redirect URI is configured in the configuration tab for the
- application. 
+* Ensure at least one redirect URI is configured in the configuration tab for
+the application. 
 
 ## 1. Build authorization URL
 
@@ -137,6 +137,11 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 Next, redirect the user to the authorization URL. The way this is done depends
 on the application framework. Most framework documentation provides extensive
 guidance on this topic.
+
+If the authorization URL is not valid for the app specified, the user will see
+an error page rather than a grant access screen. For example, if the
+`redirect_uri` parameter in the authorization URL does not match one of the URIs
+configured for your app, the user will see a `redirect_uri_mismatch` error.
 
 <Tabs>
   <Tab title='.NET'>

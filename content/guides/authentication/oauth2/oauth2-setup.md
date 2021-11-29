@@ -62,12 +62,20 @@ required.
 During the OAuth 2.0 flow, users are redirected to their browser to
 authenticate and then authorize the application to take actions on their behalf.
 
-Once successful, the user is redirected back to the configured redirect URI of 
-the application. This URI can be any secure HTTPS URL, or a less secure HTTP URL
-for a server running on `localhost`.
+Prior to redirecting the user, Box verifies that the `redirect_uri` parameter
+passed into the [authorization URL][url-redirect] matches one of the redirect
+URIs configured for the application. This will be an exact match check, meaning
+the URIs must be exactly the same. Localhost and loopback address redirect URIs
+will be permitted redirect to any port, but the scheme, domain, path and query
+parameters must match one of the configured URIs.
+
+You can configure these under the OAuth 2.0 Redirect URI section on the
+Configuration page in the developer console. These must be valid URIs that are
+HTTPS, or a less secure HTTP for localhost or loopback address. We do not
+permit duplicate URIs to be saved.
 
 <ImageFrame border width="600" center>
-  ![App name form](../images/app-redirect-uri.png)
+  ![App name form](../images/app-redirect-uri-2.png)
 </ImageFrame>
 
 ### Application Scopes
@@ -101,3 +109,4 @@ section at the bottom of the **Configuration** tab in the
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 [oauth2]: g://authentication/oauth2
+[url-redirect]: e://get-authorize/#param-redirect_uri
