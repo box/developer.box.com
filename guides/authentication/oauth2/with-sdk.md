@@ -194,8 +194,8 @@ this topic.
 
 </Message>
 
-The [redirect URL](endpoint://get-authorize) can also be created manually as
-follows.
+The [authorization URL](endpoint://get-authorize) can also be created manually
+as follows.
 
 <!-- markdownlint-disable line-length -->
 

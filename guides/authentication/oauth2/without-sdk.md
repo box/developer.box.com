@@ -60,8 +60,8 @@ Before continuing you will need to complete the following steps:
  OAuth 2.0 authentication method.
 * Navigate to the configuration tab for the application to copy the `client_id`
  and `client_secret` values.
-* Ensure a redirect URI is configured in the configuration tab for the
- application. 
+* Ensure at least one redirect URI is configured in the configuration tab for
+the application. 
 
 ## 1. Build authorization URL
 
@@ -69,7 +69,7 @@ An [authorization URL][auth] is comprised of the following parameters:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter          | Status       | Description
+| Parameter          | Status       | Description 
 | ------------------ | ------------ | ----------------------------------------
 | [`CLIENT_ID`][ci]    | Required     | Obtained from the configuration tab of the Developer Console                                           |
 | [`REDIRECT_URI`][re] | Optional     | Configured in the Developer Console and where the user is sent once granting access to the application |
@@ -158,6 +158,11 @@ Instead, use `ent.box.com` in place of `account.box.com`.
 Next, redirect the user to the authorization URL. The way this is done depends
 on the application framework. Most framework documentation provides extensive
 guidance on this topic.
+
+If the authorization URL is not valid for the app specified, the user will see
+an error page rather than a grant access screen. For example, if the
+`redirect_uri` parameter in the authorization URL does not match one of the URIs
+configured for your app, the user will see a `redirect_uri_mismatch` error.
 
 <Tabs>
 
