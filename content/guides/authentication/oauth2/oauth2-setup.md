@@ -74,6 +74,16 @@ Configuration page in the developer console. These must be valid URIs that are
 HTTPS, or a less secure HTTP for localhost or loopback address. We do not
 permit duplicate URIs to be saved.
 
+<Message warning>
+  Starting November 29, 2021, new applications using OAuth 2.0 will
+  require the URIs set in the configuration tab of the Developer Console to
+  strictly match the one used during redirect. In addition, both new and
+  exiting applications, will gain the ability to add multiple redirect URIs.
+
+  For existing applications, the deadline to make changes to this URL to avoid
+  service disruption is May 13, 2022.
+</Message>
+
 <ImageFrame border width="600" center>
   ![App name form](../images/app-redirect-uri-2.png)
 </ImageFrame>
