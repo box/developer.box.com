@@ -41,7 +41,7 @@ The Element fetches information about enabled integrations using the
 Box API, and calls out to partner services. Users can then take action in these
 services, and the edited content will be automatically saved back to Box.
 
-The integrations included in the Open With Element are Adobe Sign, Google Suite,
+The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
@@ -145,17 +145,27 @@ curl -X GET \
 
 ```json
 {
-  "type": "app_integration",
-  "id": "3282",
-  "app": {
-    "type": "app",
-    "id": "81713"
-  },
-  "name": "Sign with Adobe Sign",
-  "description": "Send your document for signature to Adobe Sign",
-  "executable_item_types": ["FILE"],
-  "restricted_extensions": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx"],
-  "scoped_to": "root"
+   "type":"app_integration",
+   "id":"10897",
+   "app":{
+      "type":"app",
+      "id":"336417"
+   },
+   "name":"Edit with G Suite",
+   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
+   "executable_item_types":[
+      "file"
+   ],
+   "restricted_extensions":[
+      "docx",
+      "gdoc",
+      "xlsx",
+      "gsheet",
+      "pptx",
+      "gslides",
+      "gslide"
+   ],
+   "scoped_to":"parent"
 }
 ```
 
