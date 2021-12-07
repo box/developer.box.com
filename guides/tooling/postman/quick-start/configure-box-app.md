@@ -93,7 +93,7 @@ require a few settings to be set for this to work.
 4. Make sure your application uses **Standard OAuth 2.0** as the
    authentication method
 5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-   **Redirect URI** to the value `https://developer.box.com/auth/callback`.
+   **Redirect URI** to the value `https://box.dev/auth/callback`.
 6. Scroll down to the **Application Scopes** section to select your desired
    [permissions][scopes]. **Your application must have at least one or more**
    **of the following scopes:** manage users, read all files and folders
