@@ -15,7 +15,7 @@ user by the association. If a Box user record is found we can begin making
 calls as that user to Box APIs. If there is no Box user found will then create
 a new Box user with the association to the unique SSO user account.
 
-Exploring the top level of a Box [user object](ref://resources/user/) we can see
+Exploring the top level of a Box [user object](r://user) we can see
 the available options for adding the unique identifier from the SSO service
 user object into the Box user object to bind the two together. 
 
@@ -69,8 +69,8 @@ account with a Box user account is the preferred method of connecting the two
 accounts over email, for a number of reasons:
 
 * Email association is only viable for
- [managed users](guide://authentication/user-types/managed-users/).
- [App users](guide://authentication/user-types/app-users/) are
+ [managed users](guide://getting-started/user-types/managed-users/).
+ [App users](guide://getting-started/user-types/app-users/) are
  automatically assigned an email address by Box, meaning that you cannot assign
  the `login` to be the email from the SSO service. 
 * Emails have to be unique in Box. This means that if your SSO service user
@@ -84,9 +84,10 @@ accounts over email, for a number of reasons:
 Using the `login` field of a user object to create an account association is
 viable under a few conditions:
 
-* Only the [managed users](guide://authentication/user-types/managed-users/)
+* Only the 
+ [managed users](getting-started://authentication/user-types/managed-users/)
  type is being used, not
- [app users](guide://authentication/user-types/app-users/).
+ [app users](guide://getting-started/user-types/app-users/).
 * All email addresses and Box account creation requests are managed by your
  enterprise, meaning that users cannot independently create Box accounts with
  those email addresses.

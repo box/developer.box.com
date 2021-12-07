@@ -29,7 +29,7 @@ authenticated user does need to have permission to read the file you are
 trying to access.
 
 To learn more about how scopes, token permissions, and user permissions work
-together, see our blog post on [understanding security][blog-security].
+together, see our [security guide][security].
 
 ## Scopes & OAuth 2 authorization
 
@@ -140,11 +140,11 @@ Additionally, for JWT applications, the application must be configured with
 
 |                       |                   |
 | --------------------- | ----------------- |
-| **OAuth Scope**       | `manage_webhook` |
+| **OAuth Scope**       | `manage_webhook`  |
 | **Application Scope** | Manage webhooks   |
 
 Gives an application permission to create webhooks for a user.
-Please review webhook [limitations](guide://webhooks/limitations). Most
+Please review webhook [limitations](g://webhooks/v2/limitations-v2). Most
 notably, there is a limit of 1000 webhooks per application, per user.
 
 ### Manage enterprise properties
@@ -166,11 +166,11 @@ Admin Co-Admin with the correct permissions.
 
 ### Manage retention policies
 
-|                       |                           |
-| --------------------- | ------------------------- |
-| **OAuth Scope**       | `manage_data_retention`   |
-| **Application Scope** | Manage retention policies |
-| **Depends on**        | `enterprise_content`-scope               |
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `manage_data_retention`    |
+| **Application Scope** | Manage retention policies  |
+| **Depends on**        | `enterprise_content`-scope |
 
 Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased
@@ -180,6 +180,31 @@ with Box Governance. This requires the enterprise to have purchased
   This scope also requires the `enterprise_content` scope to function properly.
   These scopes can be requested by opening a ticket via our support channels.
 </Message>
+
+### Manage signature requests
+
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `sign_requests.readwrite`  |
+| **Application Scope** | Manage signature requests  |
+
+Gives an application permission to get, create, cancel, and resend sign
+requests.
+
+This scope requires the application to also have read/write scopes, which are
+automatically selected when enabled. In addition, an enterprise must have Sign
+enabled.
+
+### Manage Box Relay
+
+|                       |                            |
+| --------------------- | -------------------------- |
+| **OAuth Scope**       | `manage_triggers`  |
+| **Application Scope** | Manage Box Relay  |
+
+Gives an application permission to get workflows and start flows of type `WORKFLOW_MANUAL_START`
+
+This scope requires the application to also have read/write scopes.
 
 ## Available on request
 
@@ -225,7 +250,7 @@ calls are made.
 
 |                       |                        |
 | --------------------- | ---------------------- |
-| **OAuth Scope**       | `enterprise_content`                  |
+| **OAuth Scope**       | `enterprise_content`   |
 | **Application Scope** | Global Content Manager |
 
 Allows Admins and [Service Accounts][sa] to retrieve any content within their
@@ -287,25 +312,30 @@ The standard OAuth scopes are also supported when downscoping.
 | `manage_managed_users`         | Manage managed users                               |
 | `manage_app_users`             | Manage app users                                   |
 | `manage_groups`                | Manage groups                                      |
-| `manage_webhook`              | Manage webhooks                                    |
+| `manage_webhook`               | Manage webhooks                                    |
 | `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_data_retention`        | Manage retention policies                          |
+| `sign_requests.readwrite`      | Manage sign requests                               |
 
 <!-- markdownlint-enable line-length -->
 
+<!-- i18n-enable localize-links -->
 [console]: https://app.box.com/developers/console
 [ui-elements]: https://github.com/box/box-ui-elements
 [pricing]: https://www.box.com/pricing/platform
-[reference]: https://developer.box.com/reference/
-[at]: g://authentication/access-tokens/
-[blog-security]:https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
-[jwt]: g://authentication/jwt/
-[mu]: g://authentication/user-types/managed-users/
-[au]: g://authentication/jwt/as-user/
-[uat]: g://authentication/jwt/user-access-tokens/
-[appaccess]: g://applications/custom-apps/jwt-setup/#application-access
-[appu]: g://authentication/user-types/app-users/
+[reference]: https://developer.box.com/reference
+<!-- i18n-disable localize-links -->
+[at]: g://authentication/tokens
+[security]: g://security
+[jwt]: g://authentication/jwt
+[mu]: g://getting-started/user-types/managed-users
+[au]: g://authentication/jwt/as-user
+[uat]: g://authentication/jwt/user-access-tokens
+[appaccess]: g://authentication/jwt/jwt-setup/#application-access
+[appu]: g://getting-started/user-types/app-users
+<!-- i18n-enable localize-links -->
 [governance]: https://www.box.com/security/governance-and-compliance
-[suppress]: g://api-calls/suppress-notifications/
-[ds]: g://authentication/access-tokens/downscope/
-[sa]: g://authentication/user-types/service-account/
+<!-- i18n-disable localize-links -->
+[suppress]: g://api-calls/suppress-notifications
+[ds]: g://authentication/tokens/downscope
+[sa]: g://getting-started/user-types/service-account

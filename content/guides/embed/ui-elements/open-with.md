@@ -12,6 +12,14 @@ alias_paths:
 
 # Content Open With
 
+<Message warning>
+  # End of Support
+
+  We will no longer support the `OpenWith` UI element for any new customers
+  beginning on December 21, 2021. Please see the changelog for more
+  information.
+</Message>
+
 The Box Content Open With UI Element allows developers to embed a dropdown to
 open content stored in box with a partner application, or locally on the
 desktop.
@@ -20,11 +28,11 @@ The Element fetches information about enabled integrations using the
 Box API, and calls out to partner services. Users can then take action in these
 services, and the edited content will be automatically saved back to Box.
 
-The integrations included in the Open With Element are Adobe Sign, Google Suite,
+The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](g://authentication/user-types)
+Currently, the element only supports [App Users](g://getting-started/user-types)
 for authentication.
 
 ## Installation
@@ -82,7 +90,7 @@ to your application in the developer console.
 
 Once your application has been activated for API calls it will need to be
 reauthorized in your enterprise. The steps for performing these actions are
-available [here](g://applications/custom-apps/app-approval).
+available [here](g://authorization/custom-app-approval).
 
 ## List available integrations
 
@@ -123,17 +131,27 @@ curl -X GET \
 
 ```json
 {
-  "type": "app_integration",
-  "id": "3282",
-  "app": {
-    "type": "app",
-    "id": "81713"
-  },
-  "name": "Sign with Adobe Sign",
-  "description": "Send your document for signature to Adobe Sign",
-  "executable_item_types": ["FILE"],
-  "restricted_extensions": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx"],
-  "scoped_to": "root"
+   "type":"app_integration",
+   "id":"10897",
+   "app":{
+      "type":"app",
+      "id":"336417"
+   },
+   "name":"Edit with G Suite",
+   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
+   "executable_item_types":[
+      "file"
+   ],
+   "restricted_extensions":[
+      "docx",
+      "gdoc",
+      "xlsx",
+      "gsheet",
+      "pptx",
+      "gslides",
+      "gslide"
+   ],
+   "scoped_to":"parent"
 }
 ```
 
@@ -142,7 +160,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](g://authentication/user-types/service-account/)
+- A valid [Service Account](g://getting-started/user-types/service-account/)
   Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
@@ -378,6 +396,8 @@ contentOpenWith.removeAllListeners();
 
 ### Options
 
+<!-- i18n-enable localize-links -->
+
 | Parameter             | Type           | Description                                                                                                                                                                                                                                                |
 | --------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dropdownAlignment`   | `left | right` | Determines the dropdown's alignment to the open with button. The default is `right`.                                                                                                                                                                       |
@@ -387,6 +407,7 @@ contentOpenWith.removeAllListeners();
 | `onError`             | `Function`     | A callback that executes when an error occurs.                                                                                                                                                                                                             |
 | `requestInterceptor`  | `Function`     | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).  |
 | `responseInterceptor` | `Function`     | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors). |
+<!-- i18n-disable localize-links -->
 
 <Message warning>
   
@@ -406,8 +427,12 @@ using `openWith.addListener('execute', callback)` and
 <!-- markdownlint-enable line-length -->
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
-[community]: https://community.box.com/t5/Box-for-G-Suite-User-Guide/Introducing-Box-for-G-Suite/ta-p/60494
-[tools]: https://community.box.com/t5/Box-Tools/ct-p/BoxEdit
+<!-- i18n-enable localize-links -->
+[community]: https://support.box.com/hc/en-us/articles/360043696994-Introducing-Box-for-G-Suite
+[tools]: https://support.box.com/hc/en-us/categories/360003188014-Box-Tools
+<!-- i18n-disable localize-links -->
 [custom-domains]: g://embed/ui-elements/custom-domains
-[safari]: https://community.box.com/t5/Using-Box-Tools/Installing-Box-Tools/ta-p/50143
-[service-account]: g://authentication/user-types/service-account/
+<!-- i18n-enable localize-links -->
+[safari]: https://support.box.com/hc/en-us/articles/360043697334-Installing-Box-Tools
+<!-- i18n-disable localize-links -->
+[service-account]: g://getting-started/user-types/service-account/

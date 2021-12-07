@@ -43,8 +43,8 @@ collaborators to files and folders in Box.
      selected.
   1. Scroll to the **Application Scopes** section of the same screen
      and ensure that at least the following scopes are enabled:
-     `Read and write all files and folders stored in Box`, `Manage users`, and
-     `Manage groups`.
+     **Read and write all files and folders stored in Box**, **Manage users**,
+     and **Manage groups**.
   1. Under **Advanced Features** ensure that **Perform Actions as Users** is
      enabled to perform actions on behalf of Box users.
   1. At the top of the page click the button to **Save Changes**
@@ -55,7 +55,7 @@ collaborators to files and folders in Box.
     Once the application is created it will still need to be approved by an
     enterprise admin before you will be able to make calls to the Box APIs.
 
-    Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+    Follow [this guide](g://authorization/custom-app-approval/) to have the
     application approved in your enterprise.
   </Message>
 
@@ -85,7 +85,7 @@ Authentication).
     enterprise admin before you will be able to make calls to any of the Box 
     APIs that need any of the new permissions.
 
-    Follow [this guide](g://applications/custom-apps/app-approval/) to have the
+    Follow [this guide](g://authorization/custom-app-approval/) to have the
     application approved in your enterprise.
   </Message>
 

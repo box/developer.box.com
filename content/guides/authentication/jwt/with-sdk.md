@@ -5,10 +5,10 @@ related_endpoints:
 related_guides:
   - applications/select
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/custom-apps/oauth2-setup
+  - authentication/oauth2/oauth2-setup
 related_resources: []
 alias_paths: []
 ---
@@ -175,7 +175,7 @@ var client = sdk.getAppAuthClient('enterprise');
 
   At this point the application is authenticated as an application user, not as
   a managed or app user. Head over to our guide on [User
-  Types](g://authentication/user-types) to learn more about the different types
+  Types](g://getting-started/user-types) to learn more about the different types
   of users.
 </Message>
 

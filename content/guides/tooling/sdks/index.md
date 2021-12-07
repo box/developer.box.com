@@ -36,10 +36,12 @@ these projects to full parity.
 
 </Message>
 
+<!-- i18n-enable localize-links -->
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
 [pythonsdk]: https://github.com/box/box-python-sdk
 [nodesdk]: https://github.com/box/box-node-sdk
 [iossdk]: https://github.com/box/box-ios-sdk
 [androidsdk]: https://github.com/box/box-android-sdk
-[forum]: https://community.box.com/t5/Developer-Forum/bd-p/DeveloperForum
+[forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+<!-- i18n-disable localize-links -->

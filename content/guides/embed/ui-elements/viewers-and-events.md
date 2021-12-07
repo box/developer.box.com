@@ -586,7 +586,8 @@ the document will zoom in until the original zoom level is reached.
 
 ### Supported File Extensions
 
-`ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`, `psd`, `svs`, `tga`
+`ai`, `bmp`, `dcm`, `eps`, `idml`, `indt`, `indd`, `inx`, `gif`, `png`, `ps`,
+`psd`, `svs`, `tga`
 
 ### Options
 
@@ -681,7 +682,7 @@ The image viewer triggers the following events.
 | `zoom`         | The preview zooms in or out            | 1. `{number}` **`zoom`**: new zoom value                              |
 |                |                                        | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
 |                |                                        | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-| `pagefocus`    | `{number}` page number of focused page |                                                                       |
+| `pagefocus`    | A page is visible                      | `{number}` page number of focused page                                                                     |
 | `pan`          | The preview is panning                 |                                                                       |
 | `panstart`     | Panning starts                         |                                                                       |
 | `panend`       | Panning ends                           |                                                                       |

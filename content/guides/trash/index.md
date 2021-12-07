@@ -1,5 +1,5 @@
 ---
-rank: 150
+rank: 250
 
 ---
 
@@ -20,7 +20,9 @@ an enterprise administrator.
 
 More details can be found in the Box community article on [Managing Trash]
 
-[files]: e://delete_files_id/
-[folders]: e://delete_folders_id/
-[web links]: e://delete_web_links_id/
-[Managing Trash]: https://community.box.com/t5/Managing-Files-and-Folders/Manage-Trash/ta-p/19212
+[files]: e://delete_files_id
+[folders]: e://delete_folders_id
+[web links]: e://delete_web_links_id
+<!-- i18n-enable localize-links -->
+[Managing Trash]: https://support.box.com/hc/en-us/articles/360044196093-Manage-Trash
+<!-- i18n-disable localize-links -->

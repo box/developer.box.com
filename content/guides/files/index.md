@@ -1,5 +1,5 @@
 ---
-rank: 60
+rank: 130
 alias_paths: 
   - /docs/work-with-files
   - /docs/upload-files
@@ -7,7 +7,7 @@ alias_paths:
 
 # Files
 
-Files, together with [Folders][folders], are at the core of the Box API. File
+Files, together with [Folders][folders], are at the core of the Box API. Files
 can be [uploaded][uploads] and [downloaded][downloads], as well as hold
 important metadata information about the content.
 

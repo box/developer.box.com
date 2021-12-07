@@ -15,11 +15,11 @@ console.
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type         | Authorization methods                                     |
-| ---------------------------- | --------------------------------------------------------- |
-| [Custom App][custom-app]     | [OAuth 2.0][oauth2] or [JWT][jwt]                         |
-| [Limited Access App][la]     | [App token][apptoken]                                     |
-| [Custom Skill][custom-skill] | No authorization needed                                   |
+| Box Application Type         | Authentication methods                                              |
+| ---------------------------- | ------------------------------------------------------------------- |
+| [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
+| [Limited Access App][la]     | [App token][apptoken]                                               |
+| [Custom Skill][custom-skill] | No authentication method selection needed                           |
 
 <!-- markdownlint-enable line-length -->
 
@@ -38,17 +38,15 @@ curl https://api.box.com/2.0/users/me \
   -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
-## User Authorization
+<CTA to="guide://authentication/tokens">
+  Learn more about Access Tokens
+</CTA>
 
-There are a few ways to get an an Access Token for a user. There is
-client-side authorization through [OAuth 2.0][oauth2], server-side authorization
-using [JWT][jwt], as well as a long lived [App Token][apptoken] and a
-short-lived [Developer Token][devtoken].
-
-[oauth2]: guide://authentication/oauth2
-[jwt]: guide://authentication/jwt
-[apptoken]: guide://authentication/app-token
-[devtoken]: guide://authentication/access-tokens/developer-tokens
-[custom-app]: guide://applications/custom-apps
-[custom-skill]: guide://applications/custom-skills
+[oauth2]: g://authentication/oauth2
+[jwt]: g://authentication/jwt
+[apptoken]: g://authentication/app-token
+[devtoken]: g://authentication/tokens/developer-tokens
+[custom-app]: g://applications/custom-apps
+[custom-skill]: g://applications/custom-skills
 [la]: g://applications/select/#limited-access-app
+[ccg]: g://authentication/client-credentials

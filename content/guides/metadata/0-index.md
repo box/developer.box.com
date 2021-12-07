@@ -1,5 +1,5 @@
 ---
-rank: 160
+rank: 170
 alias_paths:
   - /docs/work-with-metadata
 ---
@@ -28,14 +28,14 @@ distinct types of resources.
   key/value pairs that can be assigned to a file. For example, an `invoiceData`
   template might hold data about an invoice, having a field for the invoice ID
   as well as the customer ID.
-  * **Fields:**  A [metadata template field][field] describes a specific
+* **Fields:**  A [metadata template field][field] describes a specific
     piece of data within a metadata template. For example, the ID of an invoice
     might be represented as an `id` field on an `invoiceData` template.
 * **Instances:** A [metadata instance][instance] describes the relation between
   a template and a file or folder, including the values that are assigned for
   every field. For example, a user might have assigned an `invoiceData` metadata
   template to a file and provided 2 values, one for the invoice ID and one for
-  the customer ID.
+  the customer ID. You can assign up to 100 templates to specific file or folder.
 * **Cascade Policies**: A [metadata cascade policy][cascade] describes
   how metadata instances applied to a folder should be applied to any item
   within that folder. For example, a user might assign the same `invoiceData`
@@ -61,7 +61,9 @@ template in the Box web application while navigating to a file preview.
 
 To learn more, please visit [Box community articles][community].
 
-[community]: https://community.box.com/t5/Organizing-and-Tracking-Content/Using-Metadata/ta-p/30765
+<!-- i18n-enable localize-links -->
+[community]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
+<!-- i18n-disable localize-links -->
 [template]: g://metadata/templates
 [instance]: g://metadata/instances
 [cascade]: g://metadata/cascades

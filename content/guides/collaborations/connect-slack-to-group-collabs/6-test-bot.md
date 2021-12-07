@@ -38,7 +38,7 @@ using a `/invite @bot_app_name` command.
 
 Once added, verify that the group is created in Box and members have been
 added. From a Box enterprise admin account, go to the
-**[Users and Groups][box-users-groups**] section of the admin console. If
+**[Users and Groups][box-users-groups]** section of the admin console. If
 successful, you will see a group with an random alpha-numeric string as the
 group name. This is the Slack channel ID, which is mirrored in the group name.
 
@@ -92,7 +92,7 @@ files or folders with the group, in the format of
 </Message>
 
 To find the ID of a file or folder in a Box account, load up the file or folder
-within [the Box site](https://box.com), then look at the URL. The ID will be the
+within [the Box site][box], then look at the URL. The ID will be the
 last string in the URL, often right after a section which includes either
 `/file/` or `/folder/`.
 
@@ -100,7 +100,7 @@ last string in the URL, often right after a section which includes either
   ![Get File or Folder ID](./img/slack_6_file_id.png)
 </ImageFrame>
 
-Once the command is typed in, go to the [the Box site](https://box.com) account
+Once the command is typed in, go to the [the Box site][box] account
 of another person within the Slack channel and Box group. The content that was
 shared should now be available to that account.
 
@@ -125,7 +125,10 @@ journey may include any number of different expansion areas.
 
 [step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
 [box-users-groups]: https://app.box.com/master/groups
-[next-steps-shared-link]: g://shared-links/create/
-[next-steps-retention-policy]: r://post-retention-policies
-[next-steps-policy-assign]: r://post-retention-policy-assignments
-[next-steps-comment]: r://post-comments
+[next-steps-shared-link]: g://shared-links/create
+[next-steps-retention-policy]: e://post-retention-policies
+[next-steps-policy-assign]: e://post-retention-policy-assignments
+[next-steps-comment]: e://post-comments
+<!-- i18n-enable localize-links -->
+[box]: https://box.com
+<!-- i18n-disable localize-links -->

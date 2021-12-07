@@ -1,5 +1,5 @@
 ---
-rank: 240
+rank: 200
 alias_paths: []
 ---
 
@@ -34,12 +34,27 @@ distinct resources.
   version can have a maximum of one file version retention and that this
   resource contains a list of every assigned policy.
 
+<Message type='warning'>
+  The above [file version retention][retention] section of the Box API
+  will soon be deprecated. The date of the deprecation will be announced at a
+  later date. If you wish to use the new endpoints, you may do so by referring
+  to [files under retention][files-under] or
+  [file versions under retention][file-versions-under] in the reference section.
+</Message>
+
 ## File Deletion with Retention Policies
 
 Files under retention can be deleted from folders, but they will be retained in
 the trash until the retention expires. When the retention expires,
 you can choose to have the content automatically deleted or for the policy to be
 removed.
+
+## Extend Retention for a File
+
+Files under retention can have their retention date extended by
+[updating][extend-retention] the `disposition_at` field's value with a future
+date. Once the date has been extended, it cannot be reverted or changed to be
+prior to the new date.
 
 ## Required Scopes
 
@@ -53,3 +68,6 @@ support.
 [assignment]: r://retention_policy_assignment
 [retention]: r://file_version_retention
 [governance]: https://www.box.com/security/governance-and-compliance
+[files-under]: e://get-retention-policy-assignments-id-files-under-retention
+[file-versions-under]: e://get-retention-policy-assignments-id-file-versions-under-retention
+[extend-retention]: e://put-files-id/#param-disposition_at

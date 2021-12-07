@@ -109,11 +109,15 @@ choose to rename it. This guide assumes the file is renamed to `config.json`.
 
 <Next>My app is authorized and I downloaded my configuration file</Next>
 
+<!-- i18n-enable localize-links -->
 [dc]: https://account.box.com/developers/console
-[keypair]: g://applications/custom-apps/jwt-setup/#public-and-private-key-pair
-[sa]: g://authentication/user-types/service-account/
+<!-- i18n-disable localize-links -->
+[keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
+[sa]: g://getting-started/user-types/service-account/
 [scopes]: g://api-calls/permissions-and-errors/scopes/
-[ag]: g://applications/custom-apps/app-approval/
+[ag]: g://authorization/custom-app-approval/
+<!-- i18n-enable localize-links -->
 [blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-9fcad7b1d72e
+<!-- i18n-disable localize-links -->
 [scopes]: g://api-calls/permissions-and-errors/scopes/
-[aa]: g://applications/custom-apps/jwt-setup/#application-access
+[aa]: g://authentication/jwt/jwt-setup/#application-access

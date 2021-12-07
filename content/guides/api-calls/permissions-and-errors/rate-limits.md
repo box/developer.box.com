@@ -61,6 +61,9 @@ There are currently a few distinct rate limits in place within the Box API.
   * Two additional limits are applied on top of the basic rate limit
     * 60 searches per minute, per user
     * 12 searches per second, per enterprise
+* Box Sign
+  * Create and resend sign request: 100 requests per minute, per user
+  * Get sign request: 1000 requests per minute, per user
 
 ## Rate limit error
 

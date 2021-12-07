@@ -320,13 +320,13 @@ preview.addListener("rotate", data => {
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
-the Content Explorer functionality, you can use [Downscoping][downscope] to
+the Content Preview functionality, you can use [Downscoping][downscope] to
 appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
-client initializing the Content Explorer.
+client initializing the Content Preview.
 
 Below are a set of UI Element-specific scopes to go alongside Downscoping. These
-allow developers to enable/disable UI controls on the Content Explorer by
+allow developers to enable/disable UI controls on the Content Preview by
 configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
@@ -366,6 +366,8 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 <!-- markdownlint-enable line-length -->
 
-[filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported
-[downscope]: guide://authentication/access-tokens/downscope
+<!-- i18n-enable localize-links -->
+[filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
+<!-- i18n-disable localize-links -->
+[downscope]: guide://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes

@@ -3,10 +3,10 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - authentication/access-tokens/downscope
+  - authentication/tokens/downscope
 required_guides:
   - authentication/select
-  - applications/custom-apps/app-token-setup
+  - authentication/app-token/app-token-setup
 related_resources: []
 alias_paths: []
 ---

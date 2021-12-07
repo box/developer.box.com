@@ -5,7 +5,8 @@ hide_in_page_nav: true
 
 # Building Commands and Help Feature
 
-A full list of CLI commands can be found in the [GitHub repository][github].
+A full list of CLI commands and usage information can be found in the
+[GitHub repository][github].
 
 If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].
@@ -97,5 +98,5 @@ folder in your own folder tree.
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
-[sa]: g://authentication/user-types/service-account
+[sa]: g://getting-started/user-types/service-account
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options

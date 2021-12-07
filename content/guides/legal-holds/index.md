@@ -1,5 +1,5 @@
 ---
-rank: 230
+rank: 160
 alias_paths: []
 ---
 
@@ -54,6 +54,6 @@ support.
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [policy]: r://legal_hold_policy
-[assignment]: r://legal_hold_assignment
+[assignment]: r://legal-hold-policy-assignment
 [hold]: r://file_version_legal_hold
 [governance]: https://www.box.com/security/governance-and-compliance

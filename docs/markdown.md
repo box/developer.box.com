@@ -27,6 +27,17 @@ Do something long here ...........................................
 <!-- markdownlint-enable line-length -->
 ```
 
+## Localize links
+
+Any links that do not use the `g://`, `e://` structure or otherwise need to use
+the tags below to ensure they are localized for our Japan customers.
+
+```md
+<!-- i18n-enable localize-links -->
+[view-app]: https://developer.box.com/guides/embed/box-view/
+<!-- i18n-disable localize-links -->
+```
+
 ## Escape any code and brand names
 
 The spell-checker will often fail on brand names

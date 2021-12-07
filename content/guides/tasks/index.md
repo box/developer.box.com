@@ -1,5 +1,5 @@
 ---
-rank: 195
+rank: 240
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -48,4 +48,6 @@ a task has a `completion_rule` that can be used to define if all users who've
 been assigned the task (`all_assignees`) or only one assignee (`any_assignee`)
 need to complete the task.
 
-[community]: https://community.box.com/t5/Sharing-Content-with-Box/Adding-Comments-and-Tasks/ta-p/19815
+<!-- i18n-enable localize-links -->
+[community]: https://support.box.com/hc/en-us/articles/360043695954-Adding-Comments-and-Tasks
+<!-- i18n-disable localize-links -->

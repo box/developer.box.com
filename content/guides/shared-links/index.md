@@ -1,5 +1,5 @@
 ---
-rank: 110
+rank: 220
 related_endpoints: []
 related_guides: []
 related_pages: []
@@ -23,4 +23,6 @@ Users can access shared items by entering the shared link URL in a browser.
 Applications can also access shared items using the
 [Shared Item API](endpoint://get_shared_items).
 
+<!-- i18n-enable localize-links -->
 [community_create_shared_link]: https://community.box.com/t5/Using-Shared-Links/Creating-Shared-Links/ta-p/19523
+<!-- i18n-disable localize-links -->

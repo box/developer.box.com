@@ -34,8 +34,10 @@ element.
 
 ## Usage
 
+<!-- i18n-enable localize-links -->
 Box Annotations can be used by pulling from our [NPM
 package](https://www.npmjs.com/package/box-annotations).
+<!-- i18n-disable localize-links -->
 
 ## Initialization
 
@@ -72,7 +74,7 @@ and JWT.
 
 If your application requires the end user to only be able to access a subset of
 the Annotations functionality, you can use
-[Downscoping](g://authentication/access-tokens/downscope) to appropriately
+[Downscoping](g://authentication/tokens/downscope) to appropriately
 downscope your Access Token to a resulting token that has the desired set of
 permissions, and can thus, be securely passed to the end user client
 initializing Annotations.
@@ -589,7 +591,9 @@ formats.
 Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`,
 `xls`, `xlsm`.
 
-Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `png`, `ps`,
-`psd`, `svs`, `tga`, `tif`, `tiff`.
+Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `idml`,
+`indd`, `indt`, `inx``png`, `ps`, `psd`, `svs`, `tga`, `tif`, `tiff`. 
 
-[filetypes]: https://community.box.com/t5/Managing-Your-Content/What-file-types-and-fonts-are-supported-by-Box-s-Content-Preview/ta-p/327#FileTypesSupported
+<!-- i18n-enable localize-links -->
+[filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
+<!-- i18n-disable localize-links -->

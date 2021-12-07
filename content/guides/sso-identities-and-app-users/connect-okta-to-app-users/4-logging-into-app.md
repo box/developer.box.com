@@ -161,8 +161,7 @@ Spring Boot server to listen for traffic.
 
 </Choice>
 <Choice option='programming.platform' value='python' color='none'>
-In your local application directory, load the `server.py` file created in step
-1.
+In your local application directory, load the `server.py` file created in step 1.
 
 Copy the following basic application structure into the file.
 

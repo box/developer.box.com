@@ -43,7 +43,7 @@ Finally, select a unique name for your application and click **Create App**.
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/skill-name.png)
+![App name form](./images/skill-name.png)
 
 </ImageFrame>
 
@@ -52,7 +52,7 @@ Finally, select a unique name for your application and click **Create App**.
 You must select a folder that will trigger your skill before you can start using
 it. 
 
-<CTA to='g://applications/custom-skills/approval'>
+<CTA to='g://authorization/custom-skill-approval'>
   Learn more about approving Custom Skills
 </CTA>
 
