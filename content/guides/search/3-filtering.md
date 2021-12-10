@@ -89,7 +89,7 @@ client.search.query(
 | `description`  | The description of the item, as defined by its `description` field.  |
 | `file_content` | The actual content of the file.                                      |
 | `comments`     | The content of any of the comments on a file or folder.              |
-| `tag`          | Any tags that are applied to an item, as defined by its `tag` field. |
+| `tags`          | Any tags that are applied to an item, as defined by its `tags` field. |
 
 <!-- markdownlint-enable line-length -->
 
