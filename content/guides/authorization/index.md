@@ -63,21 +63,21 @@ scenarios.
 
 **Disable unpublished apps by default**: 
 
-| Authentication Method                            | Enabled                                                       | Disabled
-| ------------------------------------------------ | ------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Add to allow list                                             | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize in **Apps** > **Custom Apps** and add to allow list | Authorize in **Apps** > **Custom Apps** |
-|[Server Authentication (client credentials)][cc]  | Authorize in **Apps** > **Custom Apps** and add to allow list | Authorize in **Apps** > **Custom Apps** |
-|[App Token Authentication][apptoken]              | Add to allow list                                             | Ready for use                           |
+| Authentication Method                            | Enabled                                                                             | Disabled
+| ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
+|[OAuth 2.0][standauth]                            | Authorize and enable in **Apps** > **Custom Apps** > **User Authentication Apps**   | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps** |
+|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps** |
+|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Ready for use                           |
 
 **Require manual admin authorization for transactional access apps**: 
 
-| Authentication Method                            | Enabled                                 | Disabled                                 |
-| ------------------------------------------------ | ----------------------------------------| ---------------------------------------- |
-|[OAuth 2.0][standauth]                            | N/A                                     | N/A                                      |
-|[Server Authentication (with JWT)][jwt]           | N/A                                     | N/A                                      |
-|[Server Authentication (client credentials)][cc]  | N/A                                     | N/A                                      |
-|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps** | Automatically authorized upon creation   |
+| Authentication Method                            | Enabled                                                                  | Disabled                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
+|[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
+|[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
+|[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
+|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
 <!-- markdownlint-enable line-length -->
