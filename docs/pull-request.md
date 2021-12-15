@@ -1,6 +1,6 @@
 # Contributing a pull request
 
-[**Previous:** Add microcopy](./add-endpoint.md) |
+[**Previous:** Add microcopy](./add-microcopy.md) |
 [**Next:** Markdown style guide](./markdown.md)
 
 ---
