@@ -85,9 +85,9 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
   <Tab title='Python'>
 
 ```python
-from boxsdk import OAuth2
+from boxsdk import OAuth2, Client
 
-sdk = OAuth2(
+auth = OAuth2(
     client_id='[CLIENT_ID]',
     client_secret='[CLIENT_SECRET]'
 )
@@ -142,7 +142,7 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
   <Tab title='Python'>
 
 ```python
-auth_url, csrf_token = sdk.get_authorization_url('[REDIRECT_URL]')
+auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 // redirect(auth_url, code=302)
 ```
@@ -167,8 +167,8 @@ var authorize_url = sdk.getAuthorizeURL({
   this topic.
 </Message>
 
-The [redirect URL](endpoint://get-authorize) can also be created manually as
-follows.
+The [authorization URL](endpoint://get-authorize) can also be created manually
+as follows.
 
 <!-- markdownlint-disable line-length -->
 
@@ -239,8 +239,8 @@ BoxAPIConnection client = new BoxAPIConnection(
   <Tab title='Python'>
 
 ```python
-oauth.authenticate('[CODE]')
-client = Client(oauth)
+auth.authenticate('[CODE]')
+client = Client(auth)
 ```
 
   </Tab>

@@ -4,49 +4,94 @@ related_endpoints:
   - get_events
   - options_events
 related_guides:
-  - events/for-user
-  - events/polling
-  - events/pagination
+  - events/user-events/for-user
+  - events/user-events/polling
+  - events/parameters/pagination
 required_guides: []
-alias_paths: []
+alias_paths:
+  - /guides/events/for-enterprise
+  - /guides/events/for-enterprise/
 ---
 
 # Get Enterprise Events
 
-To get a enterprise's events, authenticate a user with admin permission and make
+To get a enterprise's events, make
 a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
-`admin_logs`.
-
-<Samples id="get_events" variant='enterprise' />
+`admin_logs` or `admin_logs_streaming`.
 
 <Message>
   This API requires the user to be an enterprise admin or co-admin with the
   permission to **Run new reports and access existing reports**.
 </Message>
 
-## Filter by Event Type
+<Samples id="get_events" variant='enterprise_stream' />
 
-The enterprise event feed support filtering by event type.
+## Stream Types
 
-<Samples id="get_events" variant='enterprise_filter' />
+<!-- markdownlint-disable line-length -->
 
-A full list of event types can be found below.
+| Stream Type |                                                                                         |
+| ----------- | --------------------------------------------------------------------------------------- |
+| `admin_logs`       | Enables querying historical events up to one year                                                 |
+| `admin_logs_streaming`   | Enables subscribing to live events in near real time                      |
+
+<!-- markdownlint-enable line-length -->
+
+## Live Monitoring
+
+To monitor recent events that have been generated within Box across the
+enterprise, set the `stream_type` to `admin_logs_streaming`. This is also known
+as the Enterprise Event Stream API.
+
+The emphasis for this feed is on low latency rather than chronological
+accuracy, which means that Box may return events more than once and out of
+chronological order. Events are returned via the API in near real time after
+they are processed by Box. A small delay/buffer ensures that new events are not
+written after your cursor position. Only two weeks of events are available via
+this `stream_type`.
+
+## Historical Querying
+
+To query historical events across the enterprise up to one year old, set the
+`stream_type` to `admin_logs`. This is also known as the Enterprise Event
+History API.
+
+The emphasis for this feed is on completeness over latency, which means that
+Box will deliver admin events in chronological order and without duplicates,
+but with higher latency than the user or `admin_logs_streaming` feed. Consuming
+events in near real time may lead to missed events as events can arrive later
+than your filtering window.
+
+## Anonymous Users
+
+In some cases, the event feed might list a user with an ID of `2`. This is Box's
+internal identifier for anonymous users.
+
+An anonymous user is a user that is not logged in. This can happen any time a
+user interacts with content and they aren't asked to log in first. An example
+would be when a user downloads a file through an open shared link.
 
 ## Limitations
 
-The admin event feed does not support long polling. To long poll for events, use
-the user event feed.
+The enterprise event feed does not support long polling.
 
-Box does not store events indefinitely.
+Box does not store events indefinitely. Two weeks of enterprise events are
+available when `stream_type` is set to `admin_logs_streaming`. One year of
+enterprise events are available when `stream_type` is set to `admin_logs`.
+Seven years of enterprise events are available via the Box Admin Console’s
+[exported reports][reports].
 
-User events are stored for between two weeks and two months, after which the
-user events are removed. Enterprise events are accessible for one year via the
-API and seven years via exported reports in the Box Admin Console.
+The emphasis of the `admin_logs_streaming` feed is to return the complete
+results quickly, which means that Box may return events more than once and out
+of order. Duplicate events can be identified by their event IDs.
 
-The emphasis for this feed is on completeness over latency, which means that Box
-may deliver admin events with higher latency than the user feed. Unlike the user
-events stream, the admin events stream supports filtering for specific events
-but does not support long polling.
+## Filter by Event Type
+
+The enterprise event feed supports filtering by event type.
+
+<Samples id="get_events" variant='enterprise_stream_filter' />
+
+A full list of event types can be found below.
 
 ## Event Types
 
@@ -142,7 +187,8 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events](g://events/shield-alert-events) for more information. |
+| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events][shield-events] for more information. |
+| `SHIELD_DOWNLOAD_BLOCKED`                                 | End user blocked from downloading a file based on a shield access policy |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
 | `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`        | An invite to externally collaborate is blocked                                                  |
@@ -179,11 +225,5 @@ exhaustive, so it is possible events appear that are not listed.
 | `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
 <!-- markdownlint-enable line-length -->
 
-## Anonymous Users
-
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
-
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.
+[shield-events]: g://events/event-triggers/shield-alert-events
+[reports]:https://support.box.com/hc/en-us/articles/360043696534-Running-Reports

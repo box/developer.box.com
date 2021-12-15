@@ -12,6 +12,14 @@ alias_paths:
 
 # Content Open With
 
+<Message warning>
+  # End of Support
+
+  We will no longer support the `OpenWith` UI element for any new customers
+  beginning on December 21, 2021. Please see the changelog for more
+  information.
+</Message>
+
 The Box Content Open With UI Element allows developers to embed a dropdown to
 open content stored in box with a partner application, or locally on the
 desktop.
@@ -20,7 +28,7 @@ The Element fetches information about enabled integrations using the
 Box API, and calls out to partner services. Users can then take action in these
 services, and the edited content will be automatically saved back to Box.
 
-The integrations included in the Open With Element are Adobe Sign, Google Suite,
+The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
@@ -123,17 +131,27 @@ curl -X GET \
 
 ```json
 {
-  "type": "app_integration",
-  "id": "3282",
-  "app": {
-    "type": "app",
-    "id": "81713"
-  },
-  "name": "Sign with Adobe Sign",
-  "description": "Send your document for signature to Adobe Sign",
-  "executable_item_types": ["FILE"],
-  "restricted_extensions": ["pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx"],
-  "scoped_to": "root"
+   "type":"app_integration",
+   "id":"10897",
+   "app":{
+      "type":"app",
+      "id":"336417"
+   },
+   "name":"Edit with G Suite",
+   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
+   "executable_item_types":[
+      "file"
+   ],
+   "restricted_extensions":[
+      "docx",
+      "gdoc",
+      "xlsx",
+      "gsheet",
+      "pptx",
+      "gslides",
+      "gslide"
+   ],
+   "scoped_to":"parent"
 }
 ```
 
