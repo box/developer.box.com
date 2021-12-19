@@ -30,7 +30,6 @@ The following reasons can cause webhooks to be deleted.
    the application.
 2. Deleting all active Access Tokens associated with a webhook will
    automatically delete the webhook. This includes Developer Tokens and password
-   resets.
 3. If the last successful delivery was 30 days ago and the period between the
    last successful delivery date and the last trigger date was more than 14
    days, the webhook will be automatically deleted.

@@ -23,10 +23,10 @@ the following steps.
 6. [Queried for files and folders](g://metadata/quick-start/create-query/)
    by matching the values in the metadata instances attached to them.
 
-## Next things to do
+## Next Steps
 
-We recommend the following resource for anyone who wants to learn more about
-using metadata with the Box API.
+We recommend the following resources to learn more about using metadata with the
+Box API.
 
 * [Learn more about metadata scopes](g://metadata/scopes)
 * [Learn more about the different field types](g://metadata/fields) that can be

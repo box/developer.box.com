@@ -4,7 +4,7 @@ related_endpoints:
 required_guides: []
 ---
 
-# Metadata filters
+# Metadata Query Filters
 
 The [`GET /search`][search_api] API allows for filtering search results by their
 associated metadata. A `mdfilters` query parameter allows a developer to specify
