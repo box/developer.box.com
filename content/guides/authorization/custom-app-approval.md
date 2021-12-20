@@ -17,13 +17,16 @@ alias_paths:
 Server authentication applications using [JWT][jwt] or
 [Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
 
-A Box Admin needs an application's client ID in order to properly authorize it
+User authentication applications using [OAuth 2.0][oauth] may need to be
+authorized by a Box Admin depending on the [unpublished apps setting][upa].
+
+A Box Admin needs an application's Client ID in order to properly authorize it
 in the Admin Console. 
 
 ## Approval Notifications
 
 A semi-automated process to submit an app approval is available in the Developer
-Console.
+Console for JWT, Client Credentials Grant, and Limited Access applications.
 
 Navigate to the **Authorization** tab for your application in the
 [Developer Console][devconsole].
@@ -59,11 +62,22 @@ section and copy the Client ID value to provide to a Box Admin.
 
 As a Box Admin, navigate to the [Admin Console][adminconsole] and
 select the **Apps** tab (1) from the left navigation panel. Then, click the
-**Custom Apps** tab (2) at the top of your screen. On this screen, you will
-see a **+** button in the top right corner to add a new app authorization.
+**Custom Apps Manager** tab (2) at the top of your screen. 
+
+On both Server and User Authentication Apps screens, you
+will see an **Add App** button in the top right corner to add a new app
+authorization.
+
+#### Server Authentication Apps
 
 <ImageFrame border center>
-  ![Apps tab](images/apps.png)
+  ![Server Apps tab](images/jwt_app_approval_flow.png)
+</ImageFrame>
+
+#### User Authentication Apps
+
+<ImageFrame border center>
+  ![User Apps tab](images/oauth_app_approval_flow.png)
 </ImageFrame>
 
 In the popup that appears, enter the client ID for the application that the
@@ -84,7 +98,7 @@ can re-authorize the application by clicking on the ellipses to the right
 of the application name to **Reauthorize App**.
 
 <ImageFrame border center>
-  ![Re-authorize app](images/app-reauthorize.png)
+  ![Re-authorize app](images/reauthorize_app.png)
 </ImageFrame>
 
 <!-- i18n-enable localize-links -->
@@ -97,6 +111,8 @@ of the application name to **Reauthorize App**.
 <!-- i18n-disable localize-links -->
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
+[oauth]: g://authentication/oauth2
+[upa]: g://security/#enterprise-settings-and-authorization
 <!-- i18n-enable localize-links -->
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 <!-- i18n-enable localize-links -->
