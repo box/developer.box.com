@@ -137,7 +137,7 @@ Service Account and App Users.
 There are a few enterprise settings to be aware of when it comes to the Box API.
 
 <ImageFrame center shadow border>
-![Global App Settings](images/global_app_settings.png)
+![Global App Settings](images/global_apps_settings.png)
 </ImageFrame>
 
 Custom applications fall into two categories: published and unpublished.
@@ -148,7 +148,7 @@ determines what actions are necessary to successfully [authorize][auth] an
 application for use. 
 
 <ImageFrame center shadow border>
-![Admin Console Apps Tab](images/apps_tab.png)
+![Admin Console Apps Tab](images/jwt_apps_cam.png)
 </ImageFrame>
 
 Regardless of the settings above, in order for an application leveraging
@@ -157,6 +157,10 @@ Admin must explicitly [authorize][auth] it via the Box Admin console. The
 authorization is a snapshot in time.  This means that if a developer revisits
 the Developer Console and changes the configuration, the Admin must re-authorize
 the application in order for generated Access Tokens to reflect the changes. 
+
+If the setting **Disable unpublished apps by default** is turned on, an Admin
+must also explicitly [authorize][auth] any application leveraging
+[OAuth 2.0][oauth] as the authentication method.
 
 <!-- i18n-enable localize-links -->
 [perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
@@ -188,6 +192,7 @@ the application in order for generated Access Tokens to reflect the changes.
 [appusers]: g://getting-started/user-types/app-users
 [mu]: g://getting-started/user-types/managed-users
 [auth]: g://authorization/custom-app-approval
+[oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials
 <!-- i18n-enable localize-links -->
