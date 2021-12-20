@@ -80,10 +80,10 @@ scenarios.
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Authorize and enable in **Apps** > **Custom Apps** > **User Authentication Apps**   | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps** |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps** |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps** > **Server Authentication Apps** | Ready for use                           |
+|[OAuth 2.0][standauth]                            | Authorize and enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps**   | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** |
+|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** |
+|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Ready for use                           |
 
 **Require manual admin authorization for transactional access apps**:
 
@@ -92,7 +92,7 @@ scenarios.
 |[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
 |[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
 |[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
-|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
+|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
 

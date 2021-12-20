@@ -41,7 +41,7 @@ Navigate to the **Authorization** tab for your application in the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](images/app-authorization.png)
+![Add and Manage keys](images/reauthorize_app.png)
 
 </ImageFrame>
 
@@ -79,11 +79,11 @@ see a **+** button in the top right corner to add a new app authorization.
 
 <ImageFrame border center>
 
-![Apps tab](images/apps.png)
+![Apps tab](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 
-In the popup that appears, enter the client ID for the application that the
+In the popup that appears, enter the Client ID for the application that the
 developer collected from the **Configuration** tab of the Developer Console.
 
 A [secondary step][ss] may be necessary depending on enabled enterprise
