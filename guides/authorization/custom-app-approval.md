@@ -29,10 +29,10 @@ Server authentication applications using [JWT][jwt] or
 [Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
 
 User authentication applications using [OAuth 2.0][oauth] may need to be
-authorized by a Box Admin depending on the [unpublished apps setting][upa].
+enabled by a Box Admin depending on the [unpublished apps setting][upa].
 
-A Box Admin needs an application's Client ID in order to properly authorize it
-in the Admin Console.
+A Box Admin needs an application's Client ID in order to properly authorize or
+enable it in the Admin Console.
 
 ## Approval Notifications
 
@@ -80,8 +80,10 @@ select the **Apps** tab (1) from the left navigation panel. Then, click the
 **Custom Apps Manager** tab (2) at the top of your screen. 
 
 On both Server and User Authentication Apps screens, you
-will see an **Add App** button in the top right corner to add a new app
-authorization.
+will see an **Add App** button in the top right corner to add a new app.
+
+For Server Authentication Apps, you can also use the Custom Apps Manager table
+to authorize and enable apps.
 
 #### Server Authentication Apps
 
@@ -102,9 +104,6 @@ authorization.
 In the popup that appears, enter the client ID for the application that the
 developer collected from the **Configuration** tab of the
 [Developer Console][devconsole].
-
-A [secondary step][ss] may be necessary depending on enabled enterprise
-settings.
 
 ## Re-authorization on changes
 
@@ -142,5 +141,3 @@ of the application name to **Reauthorize App**.
 
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 <!-- i18n-enable localize-links -->
-
-[ss]: g://authorization/#enterprise-settings

@@ -80,10 +80,10 @@ scenarios.
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Authorize and enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps**   | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Ready for use                           |
+|[OAuth 2.0][standauth]                            | Enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps** > **Add App** | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
+|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
+|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | Ready for use                           |
 
 **Require manual admin authorization for transactional access apps**:
 

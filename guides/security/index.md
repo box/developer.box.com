@@ -182,8 +182,11 @@ the Developer Console and changes the configuration, the Admin must re-authorize
 the application in order for generated Access Tokens to reflect the changes.
 
 If the setting **Disable unpublished apps by default** is turned on, an Admin
-must also explicitly [authorize][auth] any application leveraging
+must also explicitly [enable][auth] any application leveraging
 [OAuth 2.0][oauth] as the authentication method.
+
+Additionally, if this setting is turned on, Server Authenticated apps will also
+require enablement.
 
 <!-- i18n-enable localize-links -->
 
