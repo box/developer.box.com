@@ -29,7 +29,7 @@ Navigate to the **Authorization** tab for your application in the
 [Developer Console][devconsole].
 
 <ImageFrame border width="400" center>
-  ![Add and Manage keys](images/reauthorize_app.png)
+  ![Add and Manage keys](images/app-authorization.png)
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
@@ -83,7 +83,7 @@ can re-authorize the application by clicking on the ellipses to the right
 of the application name to **Reauthorize App**.
 
 <ImageFrame border center>
-  ![Re-authorize app](images/app-reauthorize.png)
+  ![Re-authorize app](images/reauthorize_app.png)
 </ImageFrame>
 
 <!-- i18n-enable localize-links -->
