@@ -44,7 +44,7 @@ Navigate to the **Authorization** tab for your application in the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](images/app-authorization.png)
+![Add and Manage keys](images/app_authorization.png)
 
 </ImageFrame>
 
