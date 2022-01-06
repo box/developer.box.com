@@ -157,7 +157,7 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 
 <ImageFrame center shadow border>
 
-![Global App Settings](images/global_app_settings.png)
+![Global App Settings](images/global_apps_settings.png)
 
 </ImageFrame>
 
@@ -170,7 +170,7 @@ application for use.
 
 <ImageFrame center shadow border>
 
-![Admin Console Apps Tab](images/apps_tab.png)
+![Admin Console Apps Tab](images/jwt_apps_cam.png)
 
 </ImageFrame>
 
@@ -180,6 +180,13 @@ Admin must explicitly [authorize][auth] it via the Box Admin console. The
 authorization is a snapshot in time.  This means that if a developer revisits
 the Developer Console and changes the configuration, the Admin must re-authorize
 the application in order for generated Access Tokens to reflect the changes.
+
+If the setting **Disable unpublished apps by default** is turned on, an Admin
+must also explicitly [enable][auth] any application leveraging
+[OAuth 2.0][oauth] as the authentication method.
+
+Additionally, if this setting is turned on, Server Authenticated apps will also
+require enablement.
 
 <!-- i18n-enable localize-links -->
 
@@ -215,6 +222,7 @@ the application in order for generated Access Tokens to reflect the changes.
 [appusers]: g://getting-started/user-types/app-users
 [mu]: g://getting-started/user-types/managed-users
 [auth]: g://authorization/custom-app-approval
+[oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [ccg]: g://authentication/client-credentials
 <!-- i18n-enable localize-links -->

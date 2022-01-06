@@ -41,7 +41,7 @@ Navigate to the **Authorization** tab for your application in the
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](images/app-authorization.png)
+![Add and Manage keys](images/app_authorization.png)
 
 </ImageFrame>
 
@@ -79,15 +79,12 @@ see a **+** button in the top right corner to add a new app authorization.
 
 <ImageFrame border center>
 
-![Apps tab](images/apps.png)
+![Apps tab](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 
-In the popup that appears, enter the client ID for the application that the
+In the popup that appears, enter the Client ID for the application that the
 developer collected from the **Configuration** tab of the Developer Console.
-
-A [secondary step][ss] may be necessary depending on enabled enterprise
-settings.
 
 ## Re-authorization on changes
 
@@ -101,7 +98,7 @@ of the application name to **Reauthorize App**.
 
 <ImageFrame border center>
 
-![Re-authorize app](images/app-reauthorize.png)
+![Re-authorize app](images/reauthorize_app.png)
 
 </ImageFrame>
 
@@ -123,5 +120,3 @@ of the application name to **Reauthorize App**.
 
 [app-auth]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process
 <!-- i18n-disable localize-links -->
-
-[ss]: g://authorization/#enterprise-settings
