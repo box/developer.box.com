@@ -141,11 +141,13 @@ exhaustive, so it is possible events appear that are not listed.
 | `DELETE`                                       | Deleted                                                                                         |
 | `DELETE_USER`                                  | Deleted user                                                                                    |
 | `DEVICE_TRUST_CHECK_FAILED`                    | Device Trust check failed                                                                       |
+| `DISABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been disabled                      |
 | `DOWNLOAD`                                     | Downloaded                                                                                      |
 | `EDIT`                                         | Edited                                                                                          |
 | `EDIT_USER`                                    | Edited user                                                                                     |
 | `EMAIL_ALIAS_CONFIRM`                          | A user email alias is confirmed                                                                 |
 | `EMAIL_ALIAS_REMOVE`                           | A user email alias is removed                                                                   |
+| `ENABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been enabled                      |
 | `ENTERPRISE_APP_AUTHORIZATION_UPDATE`          | When a JWT application has been authorized or reauthorized                                      |
 | `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                             |
 | `FAILED_LOGIN`                                 | Failed login                                                                                    |
