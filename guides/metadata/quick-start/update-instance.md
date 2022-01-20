@@ -21,7 +21,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/4-update-instance.md
 fullyTranslated: true
 ---
-# ファイルのメタデータの更新 
+# ファイルのメタデータの更新
 
 メタデータをファイルまたはフォルダに適用したら、多くの場合は、後日メタデータの更新が必要になります。
 

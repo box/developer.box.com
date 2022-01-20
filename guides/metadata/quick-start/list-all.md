@@ -20,7 +20,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/1-list-all.md
 fullyTranslated: true
 ---
-# すべてのメタデータテンプレートのリストの取得 
+# すべてのメタデータテンプレートのリストの取得
 
 会社には、ユーザーが独自に作成しなくてもすぐに使用できるメタデータテンプレートのリストがすでに存在することがよくあります。
 
