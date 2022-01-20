@@ -21,50 +21,29 @@ next_page_id: ''
 previous_page_id: file-requests/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/index.md
+fullyTranslated: true
 ---
-# File Requests
+# ファイルリクエスト
 
-Box File Request gives you a fast and secure way to request files and
-associated metadata from anyone.  Using a drag-and-drop graphic
-interface, you can create a web form that enables you to:
+Boxファイルリクエストを使用すると、どのユーザーに対しても、迅速かつ安全にファイルおよび関連付けられたメタデータをリクエストできます。ドラッグアンドドロップ方式のグラフィカルインターフェイスを使用して作成できるウェブフォームでは、以下のことが可能です。
 
-* Securely request files from anyone, no matter whether they have
-a Box account, without adding collaborators on a folder.
-* Solicit additional information with metadata form fields, which
-you can set as required/optional.
-* Enable extra security and tracking with link settings.
-* Kick off automated workflows using Box Relay.
+* Boxアカウントの有無に関係なくどのユーザーに対しても、フォルダにコラボレータを追加することなく、安全にファイルをリクエストする。
+* メタデータフォームフィールド (必須/省略可として設定可能) を使用して追加情報を要求する。
+* リンク設定を使用して、追加のセキュリティと追跡を有効にする。
+* Box Relayを使用して自動化ワークフローを開始する。
 
-The **File Request API** gives you the power to create new file requests
-based on an existing file request, update file request settings, activate
-and deactivate, and delete file requests programmatically.
+**ファイルリクエストAPI**を使用すると、既存のファイルリクエストに基づく新しいファイルリクエストの作成、ファイルリクエストの設定の更新、ファイルリクエストの有効化/無効化と削除をプログラムによって実行できます。
 
-## Use Cases
+## ユースケース
 
-The File Request API is especially useful in situations where folders are
-automatically created when a new case, project, or customer is created in an
-external system. For each of these folders a file request can be automatically
-generated, allowing customers and other users to upload documents to the
-project.
+ファイルリクエストAPIは、特に、外部システムで新しいケース、プロジェクト、または顧客が作成されたときに自動的にフォルダが作成される場合に役立ちます。このように作成された各フォルダに対してファイルリクエストが自動的に生成されるため、顧客とその他のユーザーはドキュメントをプロジェクトにアップロードできます。
 
-For example.
+例
 
-* **Case management** - In this situation each customer support case has its
-own associated folder and a new file request can be sent out to a customer,
-requesting them to submit case related documents to the folder.
-* **Project management** - In this situation each project has its own
-associated folder for each project defined in an external system. The API can
-be used to automatically create a **"Client Documents"** folder within this
-folder, and a link can be sent to the client to allow them to upload documents
-on demand.
-* **Employee "drop" folder** - In this situation every new loan advisor in a
-bank has a personal folder in Box. To help them work with their clients a
-"drop" subfolder is automatically generated for them with an associated file
-request, allowing their clients to automatically upload documents to their
-advisor's personal folder.
+* **ケース管理** - この例では、各顧客のサポートケースには、関連付けられた独自のフォルダがあるため、新しいファイルリクエストを顧客に送信し、顧客に対してケースに関連したドキュメントをそのフォルダに送信するようリクエストできます。
+* **プロジェクト管理** - この例では、各プロジェクトには、外部システムで定義されたプロジェクトごとに関連付けられた独自のフォルダがあります。このAPIを使用すると、このフォルダ内に自動的に**「クライアントドキュメント」**フォルダを作成することができます。また、必要に応じてドキュメントをアップロードできるようにリンクをクライアントに送信できます。
+* **従業員の「受け渡し用」フォルダ** - この例では、銀行の新しいローンアドバイザーは各自Boxに個人用フォルダを持っています。クライアントとの作業を支援するために、「受け渡し用」サブフォルダが関連付けられたファイルリクエストとともに自動的に生成されると、クライアントは担当ローンアドバイザーの個人用フォルダにドキュメントを自動的にアップロードできるようになります。
 
-## Limitations
+## 制限
 
-Currently, the API only allows the creation of new file requests by copying
-an existing file request associated to another folder. Please check our guide
-to create a template folder with a template file request.
+現在、このAPIで可能なのは、別のフォルダに関連付けられた既存のファイルリクエストをコピーして新しいファイルリクエストを作成することだけです。テンプレートのファイルリクエストを使用してテンプレートフォルダを作成するには、ガイドを確認してください。

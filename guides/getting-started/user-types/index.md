@@ -25,38 +25,39 @@ next_page_id: ''
 previous_page_id: getting-started/user-types/app-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/index.md
+fullyTranslated: true
 ---
-# User Types
+# ユーザータイプ
 
-## Overview
+## 概要
 
-A critical part of planning and developing an application is understanding the
-types of users involved. There are four main types of users:
+アプリケーションの計画と開発で重要なのは、関与するユーザーのタイプを把握することです。ユーザーのタイプは主に以下の4つです。
 
 <!-- markdownlint-disable line-length -->
 
-|                  | Admin privileges                   | No Admin privileges         |
-| ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user | [Admin or Co-Admin User][admin]    | [Managed User][managed-user]|
-| Platform only    | [Service Account][service-account] | [App User][app-user]        |
+|            | 管理者権限                        | 管理者以外の権限                 |
+| ---------- | ---------------------------- | ------------------------ |
+| 従来のユーザー    | [管理者または共同管理者ユーザー][admin]     | [管理対象ユーザー][managed-user] |
+| Platformのみ | [サービスアカウント][service-account] | [App User][app-user]     |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-# What type of user does my application use?
+# 自分のアプリケーションで使用するユーザーのタイプ
 
-The type of user an application is authenticated as is dependent on the
-type of application created, as well as the type of authentication used to
-create an Access Token.
+アプリケーションがどのタイプのユーザーとして認証されるかは、作成したアプリケーションの種類と、アクセストークンの作成で使用した認証の種類によって決まります。
 
 </Message>
 
 <!-- i18n-enable localize-links -->
 
-[admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+[admin]: https://support.box.com/hc/ja/articles/360043694174-管理者と共同管理者の権限について
+
 <!-- i18n-disable localize-links -->
 
 [service-account]: g://getting-started/user-types/service-account
+
 [managed-user]: g://getting-started/user-types/managed-users
+
 [app-user]: g://getting-started/user-types/app-users

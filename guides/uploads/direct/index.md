@@ -13,17 +13,15 @@ next_page_id: uploads/direct/file-version
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/direct/index.md
+fullyTranslated: true
 ---
-# Direct Uploads
+# 直接アップロード
 
-The most straightforward way to upload a file to Box is using a direct upload.
-Direct uploads allow an application to upload a file in one request. For file
-sizes over 50MB we recommend using the [chunked upload endpoint][cu].
+Boxにファイルをアップロードする最も簡単な方法は、直接アップロードを使用することです。直接アップロードにより、アプリケーションは1つのリクエストでファイルをアップロードできます。ファイルサイズが50 MBを超える場合は、[分割アップロードエンドポイント][cu]を使用することをお勧めします。
 
-The maximum file size limit for uploads to Box varies depending on your account
-type. For more details, please refer to our [pricing comparison page][pcp].
+Boxにアップロードできるファイルサイズの上限は、アカウントの種類によって異なります。詳細については、[価格比較ページ][pcp]を参照してください。
 
-* Free personal: 250 MB
+* 個人用アカウント: 250 MB
 * Starter: 2 GB
 * Business: 5 GB
 * Business Plus: 15 GB
@@ -34,16 +32,12 @@ type. For more details, please refer to our [pricing comparison page][pcp].
 * Digital Business Global Suite: 50 GB
 * Enterprise Plus: 150 GB
 
-To confirm the file size limit for your account, log into Box. Click on the
-circle in the top right corner and select **Account Settings** from the dropdown
-menu. On the page that displays, scroll down to the **Account Details**
-section. Your **Max File Size** is listed here.
+自分のアカウントのファイルサイズの上限を確認するには、Boxにログインします。右上隅の円をクリックし、ドロップダウンメニューから \[**アカウント設定**] を選択します。表示されたページで、\[**アカウントの詳細**] セクションまで下にスクロールすると、\[**最大ファイルサイズ**] が表示されています。
 
-## Upload domain
+## アップロードドメイン
 
-Uploads to Box happen via a different domain (`upload.box.com`) than regular API
-calls. This is something to keep in mind when writing your own upload code. All
-official Box SDKs will take care of choosing the right domain for each API call.
+Boxへのアップロードは、通常のAPI呼び出しとは異なるドメイン (`upload.box.com`) を介して行われます。独自のアップロードコードを記述する際は、この点に注意する必要があります。すべてのBox公式SDKでは、各API呼び出しに適切なドメインが選択されます。
 
 [cu]: g://uploads/chunked
+
 [pcp]: https://www.box.com/pricing

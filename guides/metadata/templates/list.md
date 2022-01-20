@@ -23,52 +23,49 @@ next_page_id: metadata/templates/get
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/2-list.md
+fullyTranslated: true
 ---
-# List all metadata templates
+# すべてのメタデータテンプレートのリストの取得 
 
-Metadata templates can be listed for either the [enterprise or the global
-scope][scopes].
+[enterpriseスコープまたはglobalスコープ][scopes]のメタデータテンプレートのリストを取得できます。
 
-## List global templates
+## グローバルテンプレートのリストを取得
 
-To list all global metadata templates, call the [`GET
-/metadata_templates/global`][get_global] API endpoint.
+すべてのグローバルメタデータテンプレートのリストを取得するには、[`GET
+/metadata_templates/global`][get_global] APIエンドポイントを呼び出します。
 
-<Samples id="get_metadata_templates_global" >
-
-</Samples>
-
-<Message>
-
-This API returns a list of all the metadata templates created by Box and made
-available to all enterprises.
-
-</Message>
-
-## List current enterprise's templates
-
-To list all metadata templates created for usage within the current
-enterprise, call the [`GET  /metadata_templates/enterprise`][get_enterprise] API
-endpoint.
-
-<Samples id="get_metadata_templates_enterprise" >
+<Samples id="get_metadata_templates_global">
 
 </Samples>
 
 <Message>
 
-This API returns a list of all the metadata templates created by this
-enterprise, and these templates are only available to apply to files in this enterprise.
+このAPIは、Boxによって作成され、すべての会社が使用できるすべてのメタデータテンプレートのリストを返します。
 
 </Message>
 
-## Pagination
+## 現在の会社のテンプレートのリストを取得
 
-This API uses [marker-based pagination][pagination] and can return a
-`next_marker` value in the response body to indicate that more templates might
-be available.
+現在の会社内で使用するために作成されたすべてのメタデータテンプレートのリストを取得するには、[`GET  /metadata_templates/enterprise`][get_enterprise] APIエンドポイントを呼び出します。
+
+<Samples id="get_metadata_templates_enterprise">
+
+</Samples>
+
+<Message>
+
+このAPIは、この会社によって作成されたすべてのメタデータテンプレートのリストを返します。これらのテンプレートは、この会社内のファイルにのみ適用できます。
+
+</Message>
+
+## ページ割り
+
+このAPIでは、[マーカーベースのページ割り][pagination]が使用されており、レスポンスの本文で、より多くのテンプレートを使用できることを示す`next_marker`値を返すことができます。
 
 [scopes]: g://metadata/scopes
+
 [get_global]: e://get_metadata_templates_global
+
 [get_enterprise]: e://get_metadata_templates_enterprise
+
 [pagination]: g://api-calls/pagination/marker-based

@@ -17,32 +17,28 @@ next_page_id: tasks/assignments/unassign
 previous_page_id: tasks/assignments
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tasks/assignments/1-assign.md
+fullyTranslated: true
 ---
-# Assign a task to a user
+# ユーザーへのタスクの割り当て
 
-To assign a task to a user you will need to provide the
-[`POST /task_assignments`](e://post_task_assignments) API with the `id` of the
-task and the user's details. For the user an application can either use the user
-`id` or the user's login email, which Box refers to as their `login`.
+ユーザーにタスクを割り当てるには、[`POST /task_assignments`](e://post_task_assignments) APIにタスクの`id`とユーザーの詳細を指定する必要があります。ユーザーについては、アプリケーションはユーザー`id`またはユーザーのログインメールを使用できます。これはBoxではユーザーの`login`と呼ばれます。
 
-<Samples id='post_task_assignments' >
+<Samples id="post_task_assignments">
 
 </Samples>
 
 <Message notice>
 
-# Notifications
+# 通知
 
-When creating a task an email notification is sent to the user who the task is
-assigned to.
+タスクを作成すると、そのタスクが割り当てられるユーザーにメール通知が送信されます。
 
 </Message>
 
 <Message warning>
 
-# Permissions
+# 権限
 
-Both the user assigning the task and the user the task is being assigned to
-needs to be a collaborator on the file.
+タスクを割り当てるユーザーとタスクが割り当てられるユーザーの両方が、ファイルのコラボレータである必要があります。
 
 </Message>

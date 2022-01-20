@@ -23,59 +23,47 @@ next_page_id: embed/box-view/upload-file
 previous_page_id: embed/box-view/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-view/index.md
+fullyTranslated: true
 ---
 # Box View
 
-Box View is an embeddable service that allows developers to upload, convert,
-and display files in their web and mobile apps via a high-fidelity,
-interactive file viewer.
+Box Viewは、開発者が自分のウェブアプリやモバイルアプリで、忠実度の高いインタラクティブなファイルビューアーを使用してファイルをアップロード、変換、および表示できるようにする、埋め込み可能なサービスです。
 
-## Features
+## 機能
 
-### View any file
+### 任意のファイルの表示
 
-Embed documents, images, videos, 360-degree videos and images, 3D models, and
-dozens of other files in any web or mobile app using a standard `<iframe>`.
+標準の`<iframe>`を使用して、ドキュメント、画像、動画、360度動画および画像、3Dモデル、その他の多くのファイルを任意のウェブアプリまたはモバイルアプリに埋め込みます。
 
-### Ease of use
+### 使いやすさ
 
-Upload files to Box via a secure API and receive an embeddable HTML5
-snippet to place into your application's UI.
+セキュアなAPIを介してBoxにファイルをアップロードすると、アプリケーションのUIに埋め込み可能なHTML5スニペットが配置されます。
 
-### Collaboration in context
+### 状況に応じたコラボレーション
 
-Allow end users to collaborate and mark up documents, presentations, and images
-with annotations. Users can highlight text or comment on specific areas of a
-file rendering.
+エンドユーザーが注釈を使用して、ドキュメント、プレゼンテーション、および画像のコラボレーションやマークアップを実行できるようにします。ユーザーは、テキストをハイライトしたり、ファイルレンダリングの特定の領域にコメントを付けたりできます。
 
-## How does Box View work
+## Box Viewのしくみ
 
-1. Upload files into Box using our [secure upload API][upload]. All content is
-stored in Box's secure cloud storage infrastructure with virus scanning and
-256 bit encryption.
-2. Upon upload, files are converted into HTML5 compatible assets, which are
-designed to render crisply and responsively.
-3. An embeddable URL is requested to access the file rendering. Previews can be
-embedded directly in your application using an `<iframe>` URL.
+1. [セキュアなアップロードAPI][upload]を使用してBoxにファイルをアップロードします。コンテンツはすべて、ウイルススキャンと256ビット暗号化を備えたBoxのセキュアなクラウドストレージインフラストラクチャに保存されます。
+2. アップロード時に、ファイルはHTML5互換のアセットに変換されます。これらのアセットは、明瞭にすばやくレンダリングするよう作られています。
+3. ファイルレンダリングにアクセスするために埋め込み可能なURLがリクエストされます。プレビューは、`<iframe>` URLを使用してアプリケーションに直接埋め込むことができます。
 
 <ImageFrame border center shadow>
 
-![Box View flow](images/box-view-flow.png)
+![Box Viewのフロー](images/box-view-flow.png)
 
 </ImageFrame>
 
-## Customize your experience with Box Content Preview
+## Box Content Previewによる操作のカスタマイズ
 
-[Box Content Preview](g://embed/ui-elements/preview) may be used to create
-customized client-side experiences with the converted files.
+[Box Content Preview](g://embed/ui-elements/preview)を使用すると、変換されたファイルに対するクライアント側の操作をカスタマイズできます。
 
-## Use cases
+## ユースケース
 
-- Convert and display PDF resumes in a recruiter application
-- Convert and display course materials, including documents, videos, and PDFs in
-  a student portal
-- Convert and display HD video in a media room
-- Convert and display sales collateral, including documents, videos, PDFs, and
-  3D models in a field sales enablement application
+* 求人アプリケーションで履歴書PDFを変換して表示する
+* 学生用ポータルで、ドキュメント、動画、PDFなどの教材を変換して表示する
+* メディアルームでHD動画を変換して表示する
+* 現場の営業支援アプリケーションで、ドキュメント、動画、PDF、3Dモデルなどの営業資料を変換して表示する
 
 [upload]: e://post-files-content

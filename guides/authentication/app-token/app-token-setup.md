@@ -25,126 +25,112 @@ next_page_id: authentication/app-token/rollover
 previous_page_id: authentication/app-token/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/app-token-setup.md
+fullyTranslated: true
 ---
-# Setup with App Token Auth
+# アプリトークン認証を使用した設定
 
-A Limited Access App can be set up to use server-side [App Tokens][app-token]
-for authentication.
+アクセス制限付きアプリは、認証にサーバー側の[アプリトークン][app-token]を使用するよう設定できます。
 
-<CTA to='g://authentication/app-token'>
+<CTA to="g://authentication/app-token">
 
-Learn how App Token authentication works
+アプリトークン認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
-account. Alternatively, you may sign up for a [developer account][devaccount].
+サーバー側認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
-## App creation steps
+## アプリの作成手順
 
-### 1. Log in to the Developer Console
+### 1. 開発者コンソールにログインする
 
-Log into Box and navigate to the [Developer Console][devconsole].
-Select **Create New App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
 
-### 2. Create a Custom App
+### 2. カスタムアプリを作成する
 
-Select **Limited Access App** from the list of application types.
-A modal will appear to prompt the next step.
+アプリケーションの種類のリストから \[**アクセス制限付きアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
 <ImageFrame border>
 
-![Application selection screen](../images/select-app-type.png)
+![アプリケーションの選択画面](../images/select-app-type.png)
 
 </ImageFrame>
 
-### 3. Select an app name
+### 3. アプリ名を選択する
 
-Finally, select a unique name for your application and click **Create App**.
+最後に、アプリケーションの一意の名前を選択し、\[**アプリの作成**] をクリックします。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/limited-access-naming.png)
+![アプリ名のフォーム](../images/limited-access-naming.png)
 
 </ImageFrame>
 
-## App Authorization
+## アプリの承認
 
-Once a keypair is successfully added to your application your Box enterprise
-Admin needs to authorize the application within the Box Admin Console.
+キーペアがアプリケーションに正常に追加されたら、Box Enterprise管理者はBox管理コンソール内でこのアプリケーションを承認する必要があります。
 
-Navigate to the **General Settings** tab for your application within the
-[Developer Console][devconsole] and scroll down to the **App Authorization**
-section.
+[開発者コンソール][devconsole]内でアプリケーションの \[**一般設定**] タブに移動し、\[**アプリの承認**] セクションまで下にスクロールします。
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![キーの追加と管理](../images/app-authorization.png)
 
 </ImageFrame>
 
-Click **Submit and Review** to send an email to your Box enterprise Admin for
-approval. More information on this process is available in our
-[authorization guide][auth].
+\[**確認して送信**] をクリックして、承認を得るためにBox Enterprise管理者にメールを送信します。このプロセスの詳細については、[承認ガイド][auth]を参照してください。
 
-## Basic configuration
+## 基本的な構成
 
-Before the application can be used, some basic additional configuration might be
-required.
+アプリケーションを使用するには、事前にいくつかの基本的な追加構成が必要になる場合があります。
 
-### Primary and Secondary App Tokens
+### プライマリおよびセカンダリアプリトークン
 
-Authentication with Limited Access Apps is done through preconfigured [App
-Tokens][app-token]. To configure an app token, navigate to the **Configuration**
-tab for your application within the [Developer Console][devconsole].
+アクセス制限付きアプリでの認証は、あらかじめ構成された[アプリトークン][app-token]を使用して行われます。アプリトークンを構成するには、[開発者コンソール][devconsole]内でアプリケーションの \[**構成**] タブに移動します。
 
-Scroll down to the **Primary Access Token** section and click the
-**Generate Key** button.
+\[**プライマリアクセストークン**] セクションまで下にスクロールし、\[**キーを生成**] ボタンをクリックします。
 
 <ImageFrame border width="600" center>
 
-![Create an app token](../images/app-generate-key.png)
+![アプリトークンの作成](../images/app-generate-key.png)
 
 </ImageFrame>
 
-App tokens can be configured to automatically expire or be valid indefinitely.
-After creation, the key can be used to make [API calls][api-calls].
+アプリトークンは、自動的に期限切れになるよう構成することも、有効期限なしで構成することもできます。作成後は、このキーを使用して[API呼び出し][api-calls]を実行できます。
 
 <Message warning>
 
-# App authorization
+# アプリの承認
 
-App Tokens can not be generated until the application is successfully
-authorized within the Box Admin Console.
+アプリトークンは、Box管理コンソール内でアプリケーションの承認が成功するまで生成できません。
 
 </Message>
 
-### CORS Domains
+### CORSドメイン
 
-If your application makes API calls from front-end browser code in
-Javascript, the domain that these calls are made from will need to be
-added to an allow-list due to [Cross Origin Resource Sharing][cors],
-also known as CORS. If all requests will be made from server-side code,
-you may skip this section.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合は、[クロスオリジンリソース共有][cors] (CORS) のために、これらの呼び出しの実行元となるドメインを許可リストに追加する必要があります。すべてのリクエストがサーバー側のコードから発行される場合は、このセクションをスキップできます。
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
-section at the bottom of the **Configuration** tab in the
-[Developer Console][devconsole].
+許可リストにすべてのURIを追加するには、[開発者コンソール][devconsole]の \[**構成**] タブの下部にある \[**CORSドメイン**] セクションに移動します。
 
 <ImageFrame border>
 
-![App name form](../images/app-cors.png)
+![アプリ名のフォーム](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [devtoken]: g://authentication/tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [app-token]: g://authentication/app-token
+
 [api-calls]: g://api-calls
+
 [auth]: g://authorization

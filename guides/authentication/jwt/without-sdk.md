@@ -25,50 +25,39 @@ next_page_id: authentication/jwt/as-user
 previous_page_id: authentication/jwt/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/without-sdk.md
+fullyTranslated: true
 ---
-# JWT without SDKs
+# SDKを使用しないJWT
 
-This guide takes you through JWT authentication without using a Box SDK.
-JWT does not require end-user interaction and is designed to authenticate
-directly with the Box API.
+このガイドでは、Box SDKを使用しないJWT認証について説明します。JWTはエンドユーザーによる操作を必要とせず、Box APIで直接認証するよう設計されています。
 
-To learn how to use this token visit our guide on [making API
-calls](g://api-calls).
+このトークンの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドを参照してください。
 
 <Message notice>
 
-By default, the Access Token acquired with JWT is tied to the Service
-Account for the application. Any API call made with this token will come
-from the application. This account does not have access to any existing files
-or folders until the application's Service Account is added as a collaborator.
+デフォルトでは、JWTを使用して取得したアクセストークンは、アプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPI呼び出しはすべて、このアプリケーションから実行されます。アプリケーションのサービスアカウントがコラボレータとして追加されるまで、このアカウントでは、既存のファイルやフォルダにアクセスできません。
 
-It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `as-user` header or by requesting a
-[User Access Token](g://authentication/jwt/user-access-tokens).
+`as-user`ヘッダーを使用するか[ユーザーアクセストークン](g://authentication/jwt/user-access-tokens)をリクエストして、[別のユーザーとして処理を実行](g://authentication/oauth2/as-user)できます。
 
 </Message>
 
-## Using a key pair
+## キーペアの使用
 
-Follow the steps below if you would like to verify your application's identity
-using a public and private key pair.
+公開キーと秘密キーのペアを使用してアプリケーションのIDを確認する場合は、以下の手順に従います。
 
-### Prerequisites
+### 前提条件
 
-- A Custom Application using JWT authentication within the 
-  [Developer Console][devconsole]
-- A private key configuration file named `config.json`, which can be downloaded
-  from the configuration tab of the [Developer Console][devconsole]
-- Ensure your application is [authorized][auth] within the Box Admin Console
+* [開発者コンソール][devconsole]でJWT認証を使用するカスタムアプリケーション
+* `config.json`という名前の秘密キー構成ファイル ([開発者コンソール][devconsole]の \[構成] タブからダウンロード可能)
+* Box管理コンソールでアプリケーションが[承認][auth]されていること
 
-### 1. Read JSON configuration
+### 1. JSON構成を読み取る
 
-Your `config.json` file contains the application's private key and other
-details necessary to authenticate. The following is an example of this file.
+`config.json`ファイルには、アプリケーションの秘密キーと、認証に必要なその他の詳細が含まれています。このファイルの例を以下に示します。
 
 <Tabs>
 
-<Tab title='config.json'>
+<Tab title="config.json">
 
 <!-- markdownlint-disable line-length -->
 
@@ -93,11 +82,11 @@ details necessary to authenticate. The following is an example of this file.
 
 </Tabs>
 
-To use this object in the application it needs to be read from file.
+このオブジェクトをアプリケーションで使用するには、ファイルから読み取る必要があります。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 using System;
@@ -129,7 +118,7 @@ var config = JsonConvert.DeserializeObject<Config>(json);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 import java.io.FileReader;
@@ -162,7 +151,7 @@ Config config = (Config) gson.fromJson(reader, Config.class);
 
 </Tab>
 
-<Tab title='Python 3'>
+<Tab title="Python 3">
 
 ```python
 import json
@@ -173,7 +162,7 @@ config = json.load(open('config.json'))
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const fs = require("fs");
@@ -183,7 +172,7 @@ const config = JSON.parse(fs.readFileSync("config.json"));
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 require 'json'
@@ -195,7 +184,7 @@ config = JSON.parse(
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 $json = file_get_contents('config.json');
@@ -208,24 +197,19 @@ $config = json_decode($json);
 
 <Message>
 
-# Parsing JSON
+# JSONの解析
 
-In some programming languages there is more than one way to read and parse
-JSON from a file. Refer to guides on your preferred programming language for
-more complete guides, including error handling.
+プログラミング言語によっては、ファイルからJSONを読み取って解析する方法が複数ある場合があります。エラー処理など、さらに詳細な説明については、使用するプログラミング言語のガイドを参照してください。
 
 </Message>
 
-### 2. Decrypt private key
+### 2. 秘密キーを復号化する
 
-To create the JWT assertion the application needs the private key from the
-configuration object. This private key is encrypted and requires a passcode to
-unlock. Both the encrypted key and passcode are provided in the configuration
-object.
+JWTアサーションを作成するために、アプリケーションでは構成オブジェクトにある秘密キーが必要になります。この秘密キーは暗号化されており、ロックを解除するにはパスコードが必要です。暗号化されたキーとパスコードは両方とも、構成オブジェクトで指定されています。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 using System.Security.Cryptography;
@@ -285,7 +269,7 @@ var key = CreateRSAProvider(ToRSAParameters(keyParams));
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 import java.io.StringReader;
@@ -322,7 +306,7 @@ PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
 
 </Tab>
 
-<Tab title='Python 3'>
+<Tab title="Python 3">
 
 ```python
 from cryptography.hazmat.backends import default_backend
@@ -342,7 +326,7 @@ key = load_pem_private_key(
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 let key = {
@@ -353,7 +337,7 @@ let key = {
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 require "openssl"
@@ -367,7 +351,7 @@ key = OpenSSL::PKey::RSA.new(
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 $private_key = $config->boxAppSettings->appAuth->privateKey;
@@ -381,27 +365,21 @@ $key = openssl_pkey_get_private($private_key, $passphrase);
 
 <Message>
 
-# An alternative to loading private key from file
+# ファイルから秘密キーを読み込むための代替方法
 
-the application might not want to keep both the private key and password
-stored on disk. An alternative option would be to pass in the password as an
-environment variable, separating the private key from the token used to unlock
-the key.
+アプリケーションでは、秘密キーとパスワードの両方をディスクに保存しておきたくない場合があります。代替方法として、パスワードを環境変数として渡し、秘密キーを、秘密キーのロックを解除するためのトークンと分けておくこともできます。
 
 </Message>
 
-### 3. Create JWT assertion
+### 3. JWTアサーションを作成する
 
-To authenticate to the Box API the application needs to create a signed JWT
-assertion that can be exchanged for an Access Token.
+Box APIで認証するために、アプリケーションは、アクセストークンと交換できる署名済みのJWTアサーションを作成する必要があります。
 
-A JWT assertion is an encrypted JSON object, consisting of a
-`header`, `claims`, and `signature`. Let's start by creating the `claims`,
-sometimes also referred to as the `payload`.
+JWTアサーションは、暗号化されたJSONオブジェクトで、`header`、`claims`、および`signature`で構成されます。最初に`claims`を作成します。これは、`payload`とも呼ばれる場合もあります。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 using System.IdentityModel.Tokens.Jwt;
@@ -423,7 +401,7 @@ var claims = new List<Claim>{
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 import org.jose4j.jwt.JwtClaims;
@@ -441,7 +419,7 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
 </Tab>
 
-<Tab title='Python 3'>
+<Tab title="Python 3">
 
 ```python
 import time
@@ -461,7 +439,7 @@ claims = {
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const crypto = require("crypto");
@@ -480,7 +458,7 @@ let claims = {
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 require 'securerandom'
@@ -499,7 +477,7 @@ claims = {
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 $authenticationUrl = 'https://api.box.com/oauth2/token';
@@ -521,26 +499,24 @@ $claims = [
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter                | Type    | Description                                                                                                                                                                  |
-| ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `iss`, required          | String  | The Box Application's OAuth client ID                                                                                                                                        |
-| `sub`, required          | String  | The Box Enterprise ID if this app is to act on behalf of the Service Account of that application, or the User ID if this app wants to act on behalf of another user.         |
-| `box_sub_type`, required | String  | `enterprise` or `user` depending on the type of token being requested in the `sub` claim                                                                                     |
-| `aud`, required          | String  | Always `https://api.box.com/oauth2/token`                                                                                                                                    |
-| `jti`, required          | String  | A universally unique identifier specified by the application for this JWT. A unique string of at least 16 characters and at most 128 characters.                             |
-| `exp`, required          | Integer | The Unix time when this JWT is to expire. Can be set to a maximum value of 60 seconds beyond the issue time. It is recommended to set this to less than the maximum allowed. |
-| `iat`, optional          | Integer | Issued at time. The token cannot be used before this time.                                                                                                                   |
-| `nbf`, optional          | Integer | Not before. Not Specifies when the token will start being valid.                                                                                                             |
+| パラメータ               | 型       | 説明                                                                                         |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------ |
+| `iss` (必須)          | String  | BoxアプリケーションのOAuthクライアントID                                                                  |
+| `sub` (必須)          | String  | Box Enterprise ID (このアプリがそのアプリケーションのサービスアカウントの代わりになる場合) またはユーザーID (このアプリが別のユーザーの代わりになる場合)。 |
+| `box_sub_type` (必須) | String  | `enterprise`または`user` (`sub`クレームでリクエストされているトークンの種類に応じて決定)                                  |
+| `aud` (必須)          | String  | 常に`https://api.box.com/oauth2/token`                                                       |
+| `jti` (必須)          | String  | このJWTに対してアプリケーションで指定されたUUID (Universally Unique Identifier)。16文字以上128文字以下の一意の文字列です。        |
+| `exp` (必須)          | Integer | このJWTが期限切れとなるUnix時間。設定できる最大値は、発行時刻から60秒後です。許容される最大値よりも小さい値を設定することをお勧めします。                  |
+| `iat` (省略可)         | Integer | 発行時刻。トークンは、この時刻より前に使用することはできません。                                                           |
+| `nbf` (省略可)         | Integer | 開始時刻。トークンの有効期間の開始時刻を指定します。                                                                 |
 
 <!-- markdownlint-enable line-length -->
 
-Next, these claims need to be signed using the private key. Depending on the
-language and library used, the `header` of the JWT is configured by defining the
-encryption algorithm and the ID of the public key used to sign the claims.
+次に、秘密キーを使用してこれらのクレームに署名する必要があります。使用する言語とライブラリに応じて、クレームの署名に使用する暗号化アルゴリズムと公開キーのIDを定義することで、JWTの`header`が構成されます。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 using Microsoft.IdentityModel.Tokens;
@@ -568,7 +544,7 @@ string assertion = tokenHandler.WriteToken(jst);
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 import org.jose4j.jws.AlgorithmIdentifiers;
@@ -586,7 +562,7 @@ String assertion = jws.getCompactSerialization();
 
 </Tab>
 
-<Tab title='Python 3'>
+<Tab title="Python 3">
 
 ```python
 import jwt
@@ -605,7 +581,7 @@ assertion = jwt.encode(
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const jwt = require('jsonwebtoken')
@@ -622,7 +598,7 @@ let assertion = jwt.sign(claims, key, headers)
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 require 'jwt'
@@ -632,7 +608,7 @@ assertion = JWT.encode(claims, key, 'RS512', { kid: keyId })
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 use \Firebase\JWT\JWT;
@@ -643,36 +619,32 @@ $assertion = JWT::encode($claims, $key, 'RS512');
 
 </Tabs>
 
-For the header the following parameters are supported.
+ヘッダーでは、以下のパラメータがサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter                | Type    | Description                                                                                                                                                                  |
-| ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `algorithm`, required          | String  | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                                                                                                                     |
-| `keyid`, required          | String  |The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application.       |
+| パラメータ            | 型      | 説明                                                               |
+| ---------------- | ------ | ---------------------------------------------------------------- |
+| `algorithm` (必須) | String | JWTクレームへの署名に使用する暗号化アルゴリズム。RS256、RS384、RS512のいずれかを指定できます。         |
+| `keyid` (必須)     | String | JWTへの署名に使用する公開キーのID。必須ではありませんが、アプリケーションに対して複数のキーペアが定義される場合は必須です。 |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-Using JWT libraries
+JWTライブラリの使用
 
-Signing your own JWT can be a complicated and painful process. Luckily, the
-hard work has already been done for you and libraries exist in pretty much
-every language. Head over to [JWT.io](https://jwt.io/) for an overview.
+独自のJWTへの署名は、複雑で手間のかかる処理になる可能性があります。そのようなことがないよう、事前にこの処理を済ませたライブラリがほぼすべての言語で用意されています。概要については、[JWT.io](https://jwt.io/)をご覧ください。
 
 </Message>
 
-### 4. Request Access Token
+### 4. アクセストークンをリクエストする
 
-The final step is to exchange the short lived JWT assertion for a more long
-lived Access Token by calling the token endpoint with the
-assertion as a parameter.
+最後の手順として、有効期間の短いJWTアサーションを、より有効期間の長いアクセストークンと交換します。これには、アサーションをパラメータに指定してトークンエンドポイントを呼び出します。
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 ```dotnet
 using System.Net;
@@ -705,7 +677,7 @@ var accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 import java.util.ArrayList;
@@ -751,7 +723,7 @@ String accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Python 3'>
+<Tab title="Python 3">
 
 ```python
 import json
@@ -769,7 +741,7 @@ access_token = response.json()['access_token']
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const axios = require('axios')
@@ -789,7 +761,7 @@ let accessToken = await axios.post(
 
 </Tab>
 
-<Tab title='Ruby'>
+<Tab title="Ruby">
 
 ```ruby
 require 'json'
@@ -814,7 +786,7 @@ access_token = JSON.parse(response.body)['access_token']
 
 </Tab>
 
-<Tab title='PHP'>
+<Tab title="PHP">
 
 ```php
 use GuzzleHttp\Client;
@@ -839,12 +811,16 @@ $access_token = json_decode($data)->access_token;
 
 </Tabs>
 
-## Code Samples
+## コードサンプル
 
-The code in this guide is available on [GitHub][samples].
+このガイドに記載されているコードは、[GitHub][samples]で入手できます。
 
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api
+
 [devconsole]: https://app.box.com/developers/console
+
 [configfile]: g://authentication/jwt/jwt-setup/#jwt-keypair
+
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+
 [auth]: g://authorization

@@ -21,73 +21,59 @@ next_page_id: authorization
 previous_page_id: authorization/limited-access-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-skill-approval.md
+fullyTranslated: true
 ---
-# Custom Skill Approval
+# カスタムスキルの承認
 
-Custom Skills will must be enabled on a folder by the enterprise's Box Admin
-before use.
+カスタムスキルは、使用前に、企業のBox管理者がフォルダに対して有効にしておく必要があります。
 
-## As a developer
+## 開発者の場合
 
-As the developer, navigate to the application in the
-[Developer Console][devconsole] and copy the application's Client ID to provide
-to your admin.
+開発者の場合は、[開発者コンソール][devconsole]でアプリケーションに移動し、管理者に提出するそのアプリケーションのクライアントIDをコピーします。
 
 <Message>
 
-# Finding a Box Admin
+# Box管理者の確認方法
 
-If you don't know your enterprise Admin, go to the Box [account
-settings][settings] page and scroll to the bottom. If an Admin contact is set
-you should see contact  information under "Admin Contact".
+自分の企業の管理者がわからない場合は、Boxの[アカウント設定][settings]ページに移動し、一番下までスクロールしてください。管理者の連絡先が設定されている場合は、\[管理者の連絡先] の下に連絡先情報が表示されています。
 
 </Message>
 
-## As an Admin
+## 管理者の場合
 
-To enable a Custom Skill application, navigate to the
-[Skills section of the Box Admin Console][adminconsole] and click the
-"Add Skill" link to add a new skill.
+カスタムスキルアプリケーションを有効にするには、[Box管理コンソールの \[Skills\] セクション][adminconsole]に移動し、\[スキルの追加] リンクをクリックして新しいスキルを追加します。
 
-Enter the Client ID (API key) for the Custom Skill application. This is the
-Client ID provided by the developer.
+カスタムスキルアプリケーションのクライアントID (APIキー) を入力します。これは開発者から提出されたクライアントIDです。
 
-Click "Next" and select the folder(s) where the Box Skill application should
-operate.
+\[次へ] をクリックし、Box Skillアプリケーションで操作するフォルダを選択します。
 
 <ImageFrame border>
 
-![Select a skill to add](images/skills-select.png)
+![追加するスキルの選択](images/skills-select.png)
 
 </ImageFrame>
 
-There are two options here:
+ここには2つのオプションがあります。
 
-* **All content in your company** authorizes the Skill at the root folder of
-  every user. This results in every file uploaded to any folder being processed
-  by the Box Skill application.
-* **Select a list of folders** enables the application to a specific folder
-  or set of folders on which the Skill application operates.
+* \[**会社のすべてのコンテンツ**] を選択すると、各ユーザーのルートフォルダでスキルが承認されます。その結果、Box Skillアプリケーションによって処理されているフォルダにすべてのファイルがアップロードされます。
+* \[**フォルダのリストを選択**] を選択すると、スキルアプリケーションの処理対象となる特定のフォルダまたは一連のフォルダに対してアプリケーションが有効になります。
 
 <ImageFrame border>
 
-![Select a skill to add](images/skills-confirm.png)
+![追加するスキルの選択](images/skills-confirm.png)
 
 </ImageFrame>
 
-Click "Enable Skill" and accept the terms and agreements. The Custom Skill is
-now enabled. Any new content added to the selected folder(s) will now trigger an
-event to be sent to the Invocation URL configured in the Box
-[Developer Console][devconsole].
+\[Skillを有効化] をクリックし、利用規約と契約に同意します。これで、カスタムスキルが有効になります。選択したフォルダに新しいコンテンツが追加されると、Box[開発者コンソール][devconsole]で構成された呼び出しURLにイベントの送信が開始されます。
 
 <Message>
 
-# 10 Skill applications per enterprise
+# 会社あたりSkillアプリケーションは10個まで
 
-There is a limit of 10 enabled Skills per enterprise at any given time. Please
-contact your Box Sales Representative to enable more skills in an enterprise.
+どのような場合でも、1つの会社につき有効にできるスキルの数は10個という制限があります。会社でさらに多くのスキルを有効にする場合は、Boxの営業担当者にお問い合わせください。
 
 </Message>
 
 [adminconsole]: https://app.box.com/master/skills
+
 [devconsole]: https://app.box.com/developers/console

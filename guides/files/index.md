@@ -15,13 +15,14 @@ next_page_id: ''
 previous_page_id: files/limitations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/files/index.md
+fullyTranslated: true
 ---
-# Files
+# ファイル
 
-Files, together with [Folders][folders], are at the core of the Box API. Files
-can be [uploaded][uploads] and [downloaded][downloads], as well as hold
-important metadata information about the content.
+ファイルは、[フォルダ][folders]とともに、Box APIの中核を成します。ファイルは[アップロード][uploads]および[ダウンロード][downloads]が可能で、コンテンツに関する重要なメタデータ情報を保持できます。
 
 [folders]: g://folders
+
 [uploads]: g://uploads
+
 [downloads]: g://downloads

@@ -13,11 +13,10 @@ next_page_id: internal/flow/observer
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/index.md
+fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Controlling Flow
+# フローの制御
 
-In some guides, especially quick start guides, it can be useful to control the
-flow of a user through the guide, as they make decisions and move forward and
-backward through a guide.
+一部のガイド (特にクイックスタートガイド) では、ユーザーがさまざまな判断をしてガイドを進んだり戻ったりするため、ガイドでのユーザーのフローを制御すると役立つ場合があります。

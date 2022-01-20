@@ -17,47 +17,43 @@ next_page_id: authorization
 previous_page_id: authorization/limited-access-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/common-errors.md
+fullyTranslated: true
 ---
-# Common Errors
+# 一般的なエラー
 
-## Unable to retrieve service of enterprise app authorization
+## サービスまたはEnterpriseのアプリ承認を取得できません
 
 <ImageFrame border>
 
-![Unable to retreive error](images/unable_to_retreive.png)
+![取得不可能エラー](images/unable_to_retreive.png)
 
 </ImageFrame>
 
 <!--alex ignore invalid-->
 
-This error indicates that the entered client ID entered is invalid.
-To resolve this issue, please re-copy the Client ID from the Developer Console
-and ensure you are not including any trailing characters.
+このエラーは、入力したクライアントIDが無効であることを示しています。この問題を解決するには、開発者コンソールからクライアントIDを再度コピーし、末尾に余分な文字を含めていないことを確認してください。
 
-## Something went wrong with adding the app authorization
+## アプリ承認の追加に問題が発生しました
 
-This error indicates you are a Box co-admin granted privileges to view, but not
-edit enterprise settings. You will need to have your Box Admin grant edit
-privileges in order to successfully authorize an application.
+このエラーは、Enterprise設定を表示する権限は付与されているが、編集する権限が付与されていないBox共同管理者であることを示しています。アプリケーションを正常に承認するには、Box管理者に編集権限を付与してもらう必要があります。
 
 <ImageFrame border>
 
-![Something went wrong error](images/something_went_wrong.png)
+![問題発生エラー](images/something_went_wrong.png)
 
 </ImageFrame>
 
 <!--alex ignore -->
 
-## Disabled by Administrator
+## 管理者により無効化されました
+
 <!--alex enable-->
 
-This error indicates that not all authorization requirements are satisfied.
-Please review our [authorization guide][ag] to confirm the necessary steps for
-a given application.
+このエラーは、承認の要件の一部が満たされていないことを示しています。特定のアプリケーションに必要な手順を確認するには、Boxの[承認ガイド][ag]を参照してください。
 
 <ImageFrame border>
 
-![Admin error](images/admin_error.png)
+![管理者のエラー](images/admin_error.png)
 
 </ImageFrame>
 

@@ -16,15 +16,18 @@ next_page_id: api-calls/permissions-and-errors/scopes
 previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/index.md
+fullyTranslated: true
 ---
-# Permissions & Errors
+# 権限とエラー
 
-The following guides provide information on the permissions or errors related to
-the Box API. It includes pages on [Common Errors][1], [Rate Limits][2],
-[Scopes][3], [Token/URL Expiration][4], and the [App Diagnostic Report][5].
+以下のガイドでは、Box APIに関連した権限やエラーについて説明します。[一般的なエラー][1]、[レート制限][2]、[スコープ][3]、[トークンおよびURLの有効期限][4]、[アプリ診断レポート][5]に関するページが用意されています。
 
 [1]: g://api-calls/permissions-and-errors/common-errors
+
 [2]: g://api-calls/permissions-and-errors/rate-limits
+
 [3]: g://api-calls/permissions-and-errors/scopes
+
 [4]: g://api-calls/permissions-and-errors/expiration
+
 [5]: g://api-calls/permissions-and-errors/app-diagnostics-report

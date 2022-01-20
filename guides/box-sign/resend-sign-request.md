@@ -12,28 +12,26 @@ next_page_id: box-sign/cancel-sign-request
 previous_page_id: box-sign/list-sign-requests
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/resend-sign-request.md
+fullyTranslated: true
 ---
-# Resend Box Sign Request
+# Box Signのリクエストの再送信
 
-The [resend a Box sign request endpoint][resend] can be used to resend request
-emails to any remaining signers.
+[Box Signのリクエストを再送信エンドポイント][resend]を使用すると、残りの署名者全員にリクエストのメールを再送信できます。
 
-A Box Sign request cannot be resent if the [status][status] is: `signed`,
-`cancelled`, `declined`, `expired`, `error_sending`, or `error_converting`.
+[ステータス][status]が`signed`、`cancelled`、`declined`、`expired`、`error_sending`、または`error_converting`の場合は、Box Signのリクエストを再送信できません。
 
-If a Box Sign request was recently sent, you will need to wait 10 minutes before
-resending. If you try before this time has passed you will receive a 400 error.
+Box Signのリクエストが最近送信された場合は、再送信する前に10分間待つ必要があります。この時間が経過する前に再送信しようとすると、400エラーが返されます。
 
-<Message type='tip'>
+<Message type="tip">
 
-Reminder emails can be enabled when creating a Box Sign request to avoid the
-need to resend the request.
+リクエストを再送信せずに済むように、Box Signのリクエスト作成時にリマインダメールを有効にすることができます。
 
 </Message>
 
-<Samples id='post_sign_requests_id_resend' >
+<Samples id="post_sign_requests_id_resend">
 
 </Samples>
 
 [resend]: e://post-sign-requests-id-resend
+
 [status]: g://box-sign/create-sign-request/#request-status

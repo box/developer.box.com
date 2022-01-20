@@ -20,16 +20,12 @@ next_page_id: trash
 previous_page_id: trash/restore-web-link
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/trash/permanently-delete-web-link.md
+fullyTranslated: true
 ---
-# Permanently Delete Web Link
+# ウェブリンクを完全に削除
 
-Once a web link has been moved to the trash, it will stay in the trash for 30
-days by default before being purged. Administrators of Business or
-Enterprise accounts can alter the purge window. If you wish to permanently
-delete the web link from the trash before the purge window expires, make a
-`DELETE` request to `/web_links/:web_link_id/trash` using the trashed web
-link's `ID`.
+ごみ箱に移動されたウェブリンクは、デフォルトで30日間ごみ箱に保持された後で削除されます。BusinessアカウントまたはEnterpriseアカウントの管理者は、削除までの期間を変更できます。削除までの期間が経過する前にごみ箱からウェブリンクを完全に削除する場合は、ごみ箱に移動されたウェブリンクの`ID`を使用して`DELETE`リクエストを`/web_links/:web_link_id/trash`に送信します。
 
-<Samples id='delete_web_links_id_trash' >
+<Samples id="delete_web_links_id_trash">
 
 </Samples>

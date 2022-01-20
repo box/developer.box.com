@@ -19,55 +19,42 @@ next_page_id: ''
 previous_page_id: webhooks/v2/signatures-v2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/limitations-v2.md
+fullyTranslated: true
 ---
-# Limitations
+# 制限
 
-## One webhook per item
+## Webhookは1項目につき1つ
 
-There's a limit of one webhook per item (file or folder) per application per
-authenticated user.
+Webhookは、1人の認証済みユーザーの1つのアプリケーションで、1つの項目 (ファイルまたはフォルダ) につき1つだけという制限があります。
 
-Once a webhook is attached to an item, no second webhook can be attached even if
-the second webhook would respond to a different trigger event.
+ある項目にWebhookを1つ追加した後は、たとえ別のトリガーイベントに応答するWebhookであっても、2つ目を追加することはできません。
 
-For example, let's assume a webhook is set up by `John Doe` to watch
-`FILE.UPLOADED` events in a folder with the name `Junk` for an application
-named `CleanupApp`. At that point, no second webhook can
-be added to the `Junk` folder by the `CleanupApp` by `John Doe`, even if it
-is to trigger for a `FILE.DOWNLOADED` event.
+たとえば、`CleanupApp`というアプリケーションに関する`Junk`というフォルダ内の`FILE.UPLOADED`イベントを監視するように、`John Doe`によってWebhookが1つ設定されているとします。その時点で、`FILE.DOWNLOADED`イベントに対してトリガーされるものであっても、`John Doe`によって`CleanupApp`が`Junk`フォルダに2つ目のWebhookを追加することはできません。
 
-To listen to another event, [update][update] the existing webhook or create a
-new application.
+別のイベントをリッスンするには、既存のWebhookを[更新][update]するか、新しいアプリケーションを作成します。
 
-## 1000 webhooks per application, per user
+## 1つのアプリケーション、1人のユーザーあたり1000個のWebhook
 
-There is a limit of 1000 webhooks per application, per user.
+1つのアプリケーション、1人のユーザーあたりのWebhookの数は1,000個までという制限があります。
 
-To create more webhooks for a user, create another application or
-[update existing webhooks][update] to apply to higher levels in the folder tree.
+1人のユーザーにさらにWebhookを作成するには、別のアプリケーションを作成するか、フォルダツリーでより上位に適用するよう[既存のWebhookを更新][update]します。
 
-## Notification URL restrictions
+## 通知URLに関する制約事項
 
-The notification URL, or `address` for a webhook must be a valid HTTPS URL that
-resolves to a valid IP address. In addition, it should have a certificate signed
-by a reputable certificate authority, as Box does not support self-signed SSL
-certificates.
+Webhookの通知URL (`address`) は、有効なIPアドレスに解決される有効なHTTPS URLでなくてはなりません。さらに、Boxでは自己署名SSL証明書がサポートされていないため、信頼できる認証局によって署名された証明書が必要になります。
 
-The IP address of the server must be publicly accessible from the internet and
-cannot be a `(*.)box.com` address. The port used in the URL must be the
-standard HTTPS port (`443`). Notifications will not be delivered to other ports.
+サーバーのIPアドレスは、インターネットからパブリックにアクセスできる必要があり、`(*.)box.com`アドレスにすることはできません。URLで使用されるポートは、標準HTTPSポート (`443`) でなければなりません。通知は他のポートには配信されません。
 
-## No webhooks on root folder
+## Webhookはルートフォルダに追加不可
 
-V2 webhooks cannot be created on the root folder, which is the folder with ID
-`0`. Instead, you will need to leverage a [v1 webhook][v1].
+V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成することはできません。代わりに[V1 Webhook][v1]を使用する必要があります。
 
-<Message type='notice'>
+<Message type="notice">
 
-When the permissions on an item prevent an action from occurring,
-no notification is sent for the attempted action.
+項目の権限が原因でアクションを実行できない場合、試行されたアクションについての通知は送信されません。
 
 </Mesage>
 
 [v1]: g://webhooks/v1
+
 [update]: g://webhooks/v2/update-v2

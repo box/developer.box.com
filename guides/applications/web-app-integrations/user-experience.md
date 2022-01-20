@@ -17,24 +17,15 @@ next_page_id: applications/web-app-integrations/configure
 previous_page_id: applications/web-app-integrations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/user-experience.md
+fullyTranslated: true
 ---
-# User Experience
+# ユーザーエクスペリエンス
 
-The following explains what a Web App Integration looks like from a user's point
-of view.
+以下に、ユーザーの視点からウェブアプリ統合がどのように見えるかについて説明します。
 
-1. Box users can discover applications in the Box App Gallery. They can visit
-the gallery directly, or select the **Apps** menu from the Box Web App UI.
-2. In the App Gallery they select the application they would like to add. Every
-published Box application has a public profile page, which provides details
-including the integrations it provides.
-3. They user adds the application to their account by clicking the **Add**
-button in the App Gallery listing. Once an application is added to an
-account, all its integrations become available to the user.
-4. Select an integration from the **More Actions** menu on a file or folder.
-5. Box will ask the user for permission to share the file or folder with the
-application. The confirmation prompt must accepted before the integration can
-be successfully used.
-6. Upon granting access, Box passes the data to the application. Depending on
-the type of integration, the application will then display a popup panel or
-run a server-based process.
+1. Boxユーザーは、Boxアプリギャラリーでアプリケーションを見つけることができます。直接ギャラリーにアクセスするか、BoxウェブアプリのUIで \[**アプリ**] メニューを選択できます。
+2. ユーザーはアプリギャラリーで、追加したいアプリケーションを選択します。公開されているどのBoxアプリケーションにも公開プロフィールページが用意されており、提供する統合などの詳細が示されています。
+3. ユーザーはアプリギャラリーのリストで \[**追加**] ボタンをクリックすることで、自分のアカウントにアプリケーションを追加します。アプリケーションがアカウントに追加されると、ユーザーはそのすべての統合を使用できるようになります。
+4. ファイルまたはフォルダの \[**その他の操作**] メニューで、統合を選択します。
+5. ユーザーは、Boxから、ファイルまたはフォルダをアプリケーションと共有してよいか許可を求められます。統合を問題なく使用できるようにするには、確認プロンプトを受け入れる必要があります。
+6. アクセスを許可すると、Boxからアプリケーションにデータが渡されます。その後、統合の種類に応じて、アプリケーションはポップアップパネルを表示したり、サーバーベースのプロセスを実行したりします。

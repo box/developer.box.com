@@ -16,15 +16,14 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/delete-v1.md
+fullyTranslated: true
 ---
-# Delete Webhooks
+# Webhookの削除
 
-V1 webhooks cannot be fully deleted. Instead, the webhook can be set back to
-Developer Mode by [support][support]. Developers can also remove the
-application from their account by revisiting the enablement URL and
-clicking **Remove**.
+V1 Webhookを完全に削除することはできません。その代わり、[サポート][support]にWebhookを開発者モードに戻してもらうことができます。また、開発者は、有効化URLに再度アクセスして \[**削除**] をクリックすることで、自分のアカウントからアプリケーションを削除することもできます。
 
 <!-- i18n-enable localize-links -->
 
-[support]: https://support.box.com/hc/en-us/requests/new
+[support]: https://support.box.com/hc/requests/new
+
 <!-- i18n-disable localize-links -->

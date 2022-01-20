@@ -13,118 +13,103 @@ next_page_id: tooling/cli/quick-start/options-and-bulk-commands
 previous_page_id: tooling/cli/quick-start/install-and-configure
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/3-build-commands-help.md
+fullyTranslated: true
 ---
-# Building Commands and Help Feature
+# コマンドの作成とヘルプ機能
 
-A full list of CLI commands and usage information can be found in the
-[GitHub repository][github].
+CLIコマンドの全一覧と使用方法に関する情報については、[GitHubリポジトリ][github]を参照してください。
 
-If you do not see a command for an endpoint you need, you can build a
-[custom request][custom].
+必要なエンドポイント用のコマンドが表示されない場合は、[カスタムリクエスト][custom]を作成できます。
 
-<Message type=tip>
+<message type="tip"></message>
 
-Use repository documentation in conjunction with reference documentation to
-see information the help command does not provide. This includes
-restrictions, token permission requirements, fields, etc.
+helpコマンドで提供されない情報を確認するには、リファレンスドキュメントと併せてリポジトリのドキュメントを使用してください。このような情報には、制限事項、トークンの権限の要件、フィールドなどがあります。
 
 </Message>
 
-## Creating a folder with help
+## helpを使用したフォルダの作成
 
 <!--alex ignore executing-->
 
-Every CLI command begins with `box`. Add the option `--help` to any
-command for help building it. For example, executing `box --help` will bring you
-to a list of all possible object commands. Options are discussed more in
-[step 4][four].
+どのCLIコマンドも`box`で始まります。任意のコマンドにオプション`--help`を追加すると、そのコマンドを作成するためのヘルプが表示されます。たとえば、`box --help`を実行すると、使用可能なすべてのオブジェクトコマンドのリストが表示されます。オプションの詳細については、[手順4][four]で説明します。
 
 <ImageFrame center>
 
-![Help](./help.png)
+![ヘルプ](./help.png)
 
 </ImageFrame>
 
 <!--alex ignore execute-->
 
-Then, for example, use the folder object and execute the command
-`box folders --help`. This provides a list of all eligible actions for this
-object.
+次に、例として、フォルダオブジェクトを使用してコマンド`box folders --help`を実行します。その結果、このオブジェクトに実行できるすべてのアクションのリストが表示されます。
 
 <ImageFrame center>
 
-![Help](./folders_help.png)
+![ヘルプ](./folders_help.png)
 
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
 
-Discover the required arguments for creating a folder: `box folders:create --help`
+フォルダの作成に必要な引数を調べるためのコマンド: `box folders:create --help`
 
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
 
-![Help](./folders_create_help.png)
+![ヘルプ](./folders_create_help.png)
 
 </ImageFrame>
 
 <!--alex ignore execute-->
 
-Execute the command `box folders:create 0 "My CLI Folder"` and note the folder
-ID returned in the response.
+コマンド`box folders:create 0 "My CLI Folder"`を実行し、レスポンスで返されたフォルダIDを書き留めておきます。
 
-<Message type=tip>
+<message type="tip"></message>
 
-The root level of the folder tree, the All Files page, is always represented
-by folder ID 0.
+フォルダツリーのルートレベルである \[すべてのファイル] ページは、常にフォルダID 0で表されます。
 
 </Message>
 
-Log into **your** Box account. Can you see this folder in your folder tree?
+**自分の**Boxアカウントにログインします。このフォルダが自分のフォルダツリーに表示されているでしょうか?
 
 <!--alex ignore executing-->
 
-You cannot see this folder in your own Box account because you do not own, nor
-are you collaborated in on the folder. You are executing commands as the
-[Service Account][sa] and therefore the created folder lives in the
-[Service Account's][sa] folder tree rather than your own.
+このフォルダは、自分のBoxアカウントに表示されません。なぜなら、このフォルダを所有していないか、このフォルダにコラボレータとして追加されていないからです。[サービスアカウント][sa]としてコマンドを実行しているため、作成されたフォルダは、自分のアカウントではなく[サービスアカウント][sa]のフォルダツリーに存在します。
 
 <!-- markdownlint-disable line-length -->
 
 <!--alex ignore execute-->
 
-Now, execute the command:
-`box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
+ここで、次のコマンドを実行します: `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
 
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<message type="tip"></message>
 
-To find your user ID, go to your All Files page and click the circle in the
-top right-hand corner. Select **Account Settings** from the dropdown. Your
-user ID is listed as the **Account ID** under the **Account** tab.
+自分のユーザーIDを確認するには、\[すべてのファイル] ページに移動し、右上隅の円をクリックして、ドロップダウンの \[**アカウント設定**] を選択します。自分のユーザーIDが、\[**アカウント**] タブに \[**アカウントID**] として表示されます。
 
 </Message>
 
-Return to your All Files page. Can you see the folder now?
+\[すべてのファイル] ページに戻ります。これでフォルダが表示されるようになったでしょうか?
 
-The second command used the [Service Account][sa], which owns the folder, to add
-your user as an Editor-level collaborator on the folder. This surfaces the
-folder in your own folder tree.
+2番目のコマンドでは、このフォルダを所有する[サービスアカウント][sa]を使用し、自分のユーザーIDを編集者レベルのコラボレータとしてフォルダに追加しました。これで、このフォルダが自分のフォルダツリーに表示されます。
 
-## Summary
+## まとめ
 
-- You used the help feature to create a folder
-- You added a collaboration to the created folder and viewed it in Box
+* ヘルプ機能を使用してフォルダを作成しました。
+* 作成したフォルダにコラボレーションを追加し、Boxで表示しました。
 
 <Next>
 
-I created my first folder and added a collaboration
+最初のフォルダを作成し、コラボレーションを追加しました
 
 </Next>
 
 [github]: https://github.com/box/boxcli#command-topics-1
+
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
+
 [sa]: g://getting-started/user-types/service-account
+
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options

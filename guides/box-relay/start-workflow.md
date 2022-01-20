@@ -12,27 +12,26 @@ next_page_id: box-relay
 previous_page_id: box-relay/get-workflows
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-relay/start-workflow.md
+fullyTranslated: true
 ---
-# Start Workflow
+# ワークフローの開始
 
-The [start workflow endpoint][start] can be used to start a flow within a
-workflow of type `WORKFLOW_MANUAL_START`. Other flow types cannot be started.
-If you have the flow set up to accept configurations at runtime, you must send
-in the optional `outcomes` array object.
+[ワークフローを開始エンドポイント][start]を使用すると、`WORKFLOW_MANUAL_START`タイプのワークフロー内のフローを開始できます。他のタイプのフローは開始できません。実行時に設定を承認するようにフローを設定している場合は、オプションの`outcomes`配列オブジェクトを送信する必要があります。
 
-<Message type='notice'>
+<Message type="notice">
 
-For more information on how to use this endpoint, refer to our [blog][blog]
-post.
+このエンドポイントの使用方法の詳細については、Boxの[ブログ][blog]記事を参照してください。
 
 </Message>
 
-<Samples id='post_workflows_id_start' >
+<Samples id="post_workflows_id_start">
 
 </Samples>
 
 [start]: e://post-workflows-id-start
+
 <!-- i18n-enable localize-links -->
 
-[blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
+[blog]: https://medium.com/@Box_Developers/手動開始ワークフローapiとbox-relay-64f9136f1682
+
 <!-- i18n-disable localize-links -->

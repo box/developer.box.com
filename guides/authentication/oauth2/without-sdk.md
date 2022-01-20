@@ -23,71 +23,64 @@ next_page_id: authentication/oauth2/as-user
 previous_page_id: authentication/oauth2/with-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/without-sdk.md
+fullyTranslated: true
 ---
-# OAuth 2.0 without SDKs
+# SDKを使用しないOAuth 2.0
 
-## Overview
+## 概要
 
-While leveraging an official Box SDK removes common hurdles of authentication,
-it is possible to use the Box APIs without one. This guide reviews the steps to
-manually complete the OAuth 2.0 flow.
+Box公式SDKを利用すると、一般的な認証のハードルはなくなりますが、Box APIは、Box公式SDKがなくても使用できます。このガイドでは、OAuth 2.0のフローを手動で完成させるための手順を説明します。
 
-1. Build the authorization URL
-2. Redirect the user to the authorization URL
-3. The user grants the application access to take actions on their behalf,
-  which, if successful, provides an authorization code
-4. Redirect the user back to the application
-5. Exchange the authorization code for an Access Token
+1. 承認URLを作成する
+2. ユーザーを承認URLにリダイレクトする
+3. ユーザーが自分の代わりにアクションを実行するためのアクセス権限をアプリケーションに付与する (成功した場合は承認コードが提供される)
+4. ユーザーを再度アプリケーションにリダイレクトする
+5. 承認コードをアクセストークンと交換する
 
-At the end of this flow, the application has an [Access Token][tokens], which
-can be used to make API calls on behalf of the user.
+このフローが終了すると、アプリケーションには[アクセストークン][tokens]が付与されます。これを使用すると、ユーザーの代わりにAPI呼び出しを実行できます。
 
 <Message notice>
 
-The Access Token acquired through the OAuth 2.0 flow is inherently tied to the
-user who authorized the application.
+OAuth 2.0フローを介して取得したアクセストークンは、もともとアプリケーションを承認したユーザーに関連付けられています。
 
-It is possible to [act as another user](g://authentication/oauth2/as-user)
-using the `as-user` header.
+`as-user`ヘッダーを使用して、[別のユーザーとして処理を実行](g://authentication/oauth2/as-user)できます。
 
 </Message>
 
-## Prerequisites
+## 前提条件
 
-Before continuing you will need to complete the following steps:
+続行する前に、以下の手順を完了しておく必要があります。
 
-* Create a Custom App within the Box Developer Console, which leverages the
- OAuth 2.0 authentication method.
-* Navigate to the configuration tab for the application to copy the `client_id`
- and `client_secret` values.
-* Ensure at least one redirect URI is configured in the configuration tab for
-the application. 
+* Box開発者コンソールで、OAuth 2.0認証方法を利用するカスタムアプリを作成する。
+* アプリケーションの \[構成] タブに移動して、`client_id`と`client_secret`の値をコピーする。
+* アプリケーションの \[構成] タブで、少なくとも1つのリダイレクトURIが構成されていることを確認する。 
 
-## 1. Build authorization URL
+## 1. 承認URLを作成する
 
-An [authorization URL][auth] is comprised of the following parameters:
+[承認URL][auth]は、以下のパラメータで構成されています。
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter          | Status       | Description 
-| ------------------ | ------------ | ----------------------------------------
-| [`CLIENT_ID`][ci]    | Required     | Obtained from the configuration tab of the Developer Console                                           |
-| [`REDIRECT_URI`][re] | Optional     | Configured in the Developer Console and where the user is sent once granting access to the application |
-| [`RESPONSE_TYPE`][co]| Required     | Always set to `code`                                                                                   |
-| [`STATE`][st]        | Recommended  | Protects against cross-site request forgery                                                            |
+| パラメータ                 | ステータス | 説明                                                  |
+| --------------------- | ----- | --------------------------------------------------- |
+| [`CLIENT_ID`][ci]     | 必須    | 開発者コンソールの \[構成] タブから取得します。                          |
+| [`REDIRECT_URI`][re]  | 省略可   | 開発者コンソールで構成します。アプリケーションにアクセスを許可すると、ユーザーがリダイレクトされます。 |
+| [`RESPONSE_TYPE`][co] | 必須    | 常に`code`に設定します。                                     |
+| [`STATE`][st]         | 推奨    | クロスサイトリクエスト偽造から保護します。                               |
 
 <!-- markdownlint-enable line-length -->
 
-At the minimum this URL will always use the format:
+少なくとも、このURLは常に次の形式を使用します。
 
 <!-- markdownlint-disable line-length -->
 
 `https://account.box.com/api/oauth2/authorize`?`client_id=CLIENTIDHERE`&`response_type=code`
+
 <!-- markdownlint-enable line-length -->
 
 <Tabs>
 
-<Tab title='.Net'>
+<Tab title=".Net">
 
 <!-- markdownlint-disable line-length -->
 
@@ -101,7 +94,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 <!-- markdownlint-disable line-length -->
 
@@ -115,7 +108,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 base_url = 'https://account.box.com/api/oauth2/authorize'
@@ -125,7 +118,7 @@ authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
@@ -139,34 +132,25 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <CTA to="e://get-authorize">
 
-Learn more about the authorization URL
+承認URLの詳細を確認する
 
 </CTA>
 
-<Message type='tip'>
+<Message type="tip">
 
-If you have [Box Verified Enterprise][1] for your Box
-instance turned on, you
-may encounter an issue using the standard
-`account.box.com` base URL.
-Instead, use `ent.box.com` in place of `account.box.com`.
+Boxインスタンスの[Box Verified Enterprise][1]が有効になっている場合、標準的な`account.box.com`というベースURLを使用する際に問題が発生することがあります。`account.box.com`の代わりに`ent.box.com`を使用してください。
 
 </Message>
 
-## 2. Redirect the user
+## 2. ユーザーをリダイレクトする
 
-Next, redirect the user to the authorization URL. The way this is done depends
-on the application framework. Most framework documentation provides extensive
-guidance on this topic.
+次に、ユーザーを承認URLにリダイレクトします。その方法は、アプリケーションフレームワークによって異なります。このトピックの詳細については、ほとんどのフレームワークのドキュメントで説明されています。
 
-If the authorization URL is not valid for the app specified, the user will see
-an error page rather than a grant access screen. For example, if the
-`redirect_uri` parameter in the authorization URL does not match one of the URIs
-configured for your app, the user will see a `redirect_uri_mismatch` error.
+指定されたアプリに対して承認URLが無効な場合、ユーザーには、アクセスの許可画面ではなくエラーページが表示されます。たとえば、承認URLに含まれる`redirect_uri`パラメータが、アプリ用に設定されたURIのいずれとも一致しない場合、ユーザーには`redirect_uri_mismatch`エラーが表示されます。
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
@@ -175,7 +159,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 <!-- markdownlint-disable line-length -->
 
@@ -189,7 +173,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
@@ -198,7 +182,7 @@ auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
@@ -213,40 +197,33 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
 
-Additional query parameters can be passed along when redirecting the user to
-limit down the scope, or pass along some extra state. See the authorization
-reference documentation for more information.
+スコープを制限したり追加の状態を渡したりするために、ユーザーをリダイレクトする際に追加のクエリパラメータを渡すことができます。詳細については、承認のリファレンスドキュメントを参照してください。
 
 </Message>
 
-## 3. User grants application access
+## 3. ユーザーがアプリケーションにアクセス権限を付与する
 
-The user is redirected to their browser to log in to their account using the Box
-UI. They are then presented with the list of requested scopes and the option to
-approve the application to take actions on their behalf.
+ユーザーは、Box UIを使用して自分のアカウントにログインするために、ブラウザにリダイレクトされます。その後、リクエストされているスコープのリストと、ユーザーに代わって処理を行うアプリケーションを承認するためのオプションが表示されます。
 
 <ImageFrame border center shadow width="400">
 
-![Example OAuth 2.0 approval screen](./oauth2-grant.png)
+![OAuth 2.0承認画面の例](./oauth2-grant.png)
 
 </ImageFrame>
 
-When the user accepts this request by clicking **Grant access to Box**, the
-browser will redirect to the configured redirect URL with a query parameter
-containing a short-lived authorization code.
+ユーザーが \[**Boxへのアクセスを許可**] をクリックしてこのリクエストを承認すると、ブラウザは、クエリパラメータに有効期間の短い承認コードが指定されている構成済みのリダイレクトURLにリダイレクトされます。
 
 ```curl
 https://your.domain.com/path?code=1234567
 ```
 
-## 4. Exchange code
+## 4. コードを交換する
 
-The provided authorization code is [valid for 30 seconds][thirty] and must be
-exchanged for an [Access Token][at] before expiration.
+提供される承認コードは、[有効期間が30秒][thirty]のため、有効期限が切れる前に[アクセストークン][at]に交換する必要があります。
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 using System.Net;
@@ -278,7 +255,7 @@ var accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 String authenticationUrl = "https://api.box.com/oauth2/token";
@@ -311,7 +288,7 @@ String accessToken = token.access_token;
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 authentication_url = "https://api.box.com/oauth2/token";
@@ -330,7 +307,7 @@ access_token = json.loads(response)['access_token']
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const authenticationUrl = 'https://api.box.com/oauth2/token';
@@ -351,19 +328,28 @@ let accessToken = await axios.post(
 
 </Tabs>
 
-To learn how to use an Access Token visit our guide on [Making API calls][apic].
+アクセストークンの使用方法を確認するには、[API呼び出しの実行][apic]に関するガイドを参照してください。
 
 [tokens]: g://authentication/tokens/access-tokens
+
 <!-- i18n-enable localize-links -->
 
-[1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
+[1]: https://support.box.com/hc/ja/articles/360043693554-Box-Verified-Enterpriseとサポート対象のアプリ
+
 <!-- i18n-disable localize-links -->
 
 [auth]: e://get-authorize/
+
 [ci]: e://get-authorize/#param-client_id
+
 [re]: e://get-authorize/#param-redirect_uri
+
 [co]: e://get-authorize/#param-response_type
+
 [st]: e://get-authorize/#param-state
+
 [thirty]: g://api-calls/permissions-and-errors/expiration
+
 [at]: e://post-oauth2-token/
+
 [apic]: g://api-calls/

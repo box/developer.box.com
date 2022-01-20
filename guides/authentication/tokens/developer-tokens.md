@@ -21,32 +21,29 @@ next_page_id: authentication/tokens/refresh
 previous_page_id: authentication/tokens/sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/developer-tokens.md
+fullyTranslated: true
 ---
-# Developer Tokens
+# 開発者トークン
 
-A Developer Token is an Access Token available to developers during development
-and testing. These tokens are short lived, as they expire after 60 minutes, and
-cannot be refreshed programmatically.
+開発者トークンは、開発およびテスト中に開発者が利用できるアクセストークンです。これらのトークンは60分後に期限切れになる有効期間の短いトークンであり、プログラムによって更新することはできません。
 
-## Create Developer Token
+## 開発者トークンの作成
 
-To create a Developer Token for an application:
+アプリケーション用に開発者トークンを作成するには:
 
-- Navigate to the Box [Developer Console][devconsole] and select the application
-  to create a Developer Token for.
-- Select the **Configuration** tab.
-- Under Developer Token, select **Generate Developer Token**.
+* Box[開発者コンソール][devconsole]に移動し、開発者トークンの作成対象となるアプリケーションを選択します。
+* \[**構成**] タブを選択します。
+* \[開発者トークン] で、\[**開発者トークンを生成**] を選択します。
 
 <ImageFrame border center shadow>
 
-![Generating a Developer Token](../images/developer-token.png)
+![開発者トークンの生成](../images/developer-token.png)
 
 </ImageFrame>
 
-## Using Developer Token
+## 開発者トークンの使用
 
-A Developer Token can be used like any Access Token in the `Authorization`
-header of an API call.
+開発者トークンは、さまざまなアクセストークンと同様、API呼び出しの`Authorization`ヘッダーで使用できます。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
@@ -55,22 +52,21 @@ curl https://api.box.com/2.0/users/me \
 
 <Message warning>
 
-A Developer Token is associated with the the user that is logged in to the
-Developer Console when the token is generated.
+開発者トークンは、トークンの生成時に開発者コンソールにログインしているユーザーに関連付けられます。
 
 </Message>
 
-Our SDKs can be initialized with a Developer Token to create a basic API client.
+Box SDKは、基本のAPIクライアントを作成する際に、開発者トークンを使用して初期化することができます。
 
-<Samples id='x_auth' variant='init_with_dev_token' >
+<Samples id="x_auth" variant="init_with_dev_token">
 
 </Samples>
 
-<Message type='danger'>
+<Message type="danger">
 
-# Developer tokens should not be used in production environments
+# 開発者トークンは実稼働環境で使用しないでください
 
-Developer Tokens should only be used for development or testing purposes.
+開発者トークンは、開発またはテストのためだけに使用してください。
 
 </Message>
 

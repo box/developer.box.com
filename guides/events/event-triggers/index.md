@@ -16,9 +16,8 @@ next_page_id: events/event-triggers/shield-alert-events
 previous_page_id: events/event-triggers/event-source
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/index.md
+fullyTranslated: true
 ---
-# Event Triggers
+# イベントトリガー
 
-Events appear in the event stream based on upon actions committed by users,
-items, or other resources. The response of the [`GET /events`](e://get_events)
-endpoint changes based upon the event that triggered the event.
+イベントは、ユーザー、項目、またはその他のリソースによってコミットされたアクションに基づいてイベントストリームに表示されます。[`GET /events`](e://get_events)エンドポイントのレスポンスは、イベントをトリガーしたイベントによって変わります。

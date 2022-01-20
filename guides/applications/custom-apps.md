@@ -22,71 +22,62 @@ next_page_id: applications/limited-access-apps
 previous_page_id: applications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps.md
+fullyTranslated: true
 ---
-# Custom App
+# カスタムアプリ
 
-Custom Apps encompass most use cases and is the most flexible application type.
+カスタムアプリはほとんどのユースケースに対応しており、最も柔軟なアプリケーションの種類です。
 
-A custom application typically presents Box functionality to a user within a
-custom interface. Box offers pre-built, customizable user interface components,
-known as [UI Elements][uie], for functionality like browsing, searching, and
-previewing content.
+カスタムアプリケーションは、通常、カスタムインターフェイス内でBox機能をユーザーに表示します。Boxには、コンテンツの閲覧、検索、プレビューなどの機能のために、[UI Elements][uie]と呼ばれる、組み込みのカスタマイズ可能なユーザーインターフェイスコンポーネントが用意されています。
 
-## Authentication methods
+## 認証方法
 
-Custom Apps support [OAuth 2.0][oauth2], [JWT][jwt], and
-[Client Credentials Grant][cc].
+カスタムアプリでは、[OAuth 2.0][oauth2]、[JWT][jwt]、および[クライアント資格情報許可][cc]がサポートされています。
 
-<CTA to='g://authentication/select'>
+<CTA to="g://authentication/select">
 
-Learn more about authentication methods
+認証方法の詳細を確認する
 
 </CTA>
 
-## When to use
+## 使用するタイミング
 
-A Custom App is best used when the application:
+アプリケーションが以下のような場合に、カスタムアプリを使用すると最も効果的です。
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt] or 
- [Client Credentials Grant][cc] for authentication.
-- Wants to upload and download files
-- Wants the freedom to access both their own files, as well as files owned by
-  [managed or external users][users].
-- Wants the option to list the application in the Box App Gallery
-- Wants to provide integration into the Box Web App
+* 認証に[OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報許可][cc]を使用する
+* ファイルをアップロードおよびダウンロードする
+* 自分が所有するファイルにも、[管理対象ユーザーまたは外部ユーザー][users]が所有するファイルにも自由にアクセスしたい
+* Boxアプリギャラリーにアプリケーションを掲載する
+* Boxウェブアプリとの統合を可能にする
 
-## Use cases
+## ユースケース
 
-Example use cases for a Custom App include:
+以下は、カスタムアプリのユースケースの例です。
 
-- A file vault in an application that allows an end user to access files that
-  have been shared with them, while also providing access for employees to the
-  same files through the Box Web app.
+* アプリケーション内のファイル保存場所。これにより、エンドユーザーが自分と共有されているファイルにアクセスできると同時に、従業員にもBoxウェブアプリを介して同じファイルへのアクセス権限が提供されます。
 
-  An example of this is financial advisor sharing statements and investment
-  prospectuses with investors that can be viewed and commented on within a 
-  custom application.
+  この一例として、ファイナンシャルアドバイザーは、カスタムアプリケーション内で閲覧またはコメントが可能な取引明細書や投資目論見書を投資家と共有します。
 
-- A file upload feature in an application that allows an end user to submit and
-  upload files from within a custom-built application to Box. These uploads then
-  initiate a business process with the Box Web app.
+* アプリケーションのファイルアップロード機能。これにより、エンドユーザーは、独自に構築したアプリケーション内からBoxにファイルを送信したりアップロードしたりできます。その後、これらのアップロードにより、Boxウェブアプリを使用したビジネスプロセスが開始されます。
 
-  An example of this is a candidate submitting a PDF of a resume to a
-  recruiting portal then can then be routed to an appropriate employee for
-  review.
+  この一例として、志願者が採用ポータルに送信した経歴書のPDFは、審査のため適切な従業員に転送されます。
 
-## Approval
+## 承認
 
-Custom Apps may require approval before use.
+カスタムアプリは、使用前に承認が必要になる場合があります。
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to="g://authorization/custom-app-approval">
 
-Learn how to approve Custom Apps
+カスタムアプリの承認方法を確認する
 
 </CTA>
 
 [oauth2]: g://authentication/oauth2
+
 [jwt]: g://authentication/jwt
+
 [cc]: g://authentication/client-credentials/
+
 [uie]: g://embed/ui-elements/
+
 [users]: g;//getting-started/user-types/managed-users/

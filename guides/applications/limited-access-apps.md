@@ -14,45 +14,45 @@ next_page_id: applications/app-gallery
 previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access-apps.md
+fullyTranslated: true
 ---
-# Limited Access App
+# アクセス制限付きアプリ
 
-A Limited Access App is used when leveraging [Box View][bv] or previewing Box
-content within another application. This type of application can only interact
-with a [limited number of endpoints][limited].
+アクセス制限付きアプリは、[Box View][bv]を利用したり、別のアプリケーション内でBoxコンテンツをプレビューしたりする場合に使用されます。この種類のアプリケーションで操作できる[エンドポイントの数は限られています][limited]。
 
-## Authentication methods
+## 認証方法
 
-Limited Access Apps only support App Token authentication.
+アクセス制限付きアプリでサポートされているのは、アプリトークン認証のみです。
 
-<CTA to='g://authentication/app-token'>
+<CTA to="g://authentication/app-token">
 
-Learn more about App Tokens
+アプリトークンの詳細を確認する
 
 </CTA>
 
-## When to use
+## 使用するタイミング
 
-A Limited Access App is best used when the application:
+アプリケーションが以下のような場合に、アクセス制限付きアプリを使用すると最も効果的です。
 
-- wants to use Box View or only Box's preview services
-- only needs to access a [limited number of endpoints][limited]
+* Box ViewまたはBoxのプレビューサービスだけを使用する
+* [限られた数のエンドポイント][limited]だけにアクセスする必要がある
 
-## Use cases
+## ユースケース
 
-- Showcasing a creative professional’s portfolio on their website
-- Providing user manuals and product spec documents on a support site
-- A custom document viewer to view e-books or annotate architectural floor plans
+* プロのクリエイターの作品集をウェブサイトで紹介する
+* サポートサイトでユーザーマニュアルや製品仕様ドキュメントを提供する
+* カスタムドキュメントビューアーで電子書籍を表示したり間取り図に注釈を付けたりする
 
-## Approval
+## 承認
 
-Limited Access Apps may require approval before use. 
+アクセス制限付きアプリは、使用前に承認が必要になる場合があります。 
 
-<CTA to='g://authorization/limited-access-approval'>
+<CTA to="g://authorization/limited-access-approval">
 
-Learn how to approve Limited Access Apps
+アクセス制限付きアプリの承認方法を確認する
 
 </CTA>
 
 [bv]: g://embed/box-view/
+
 [limited]: g://authentication/app-token/endpoints

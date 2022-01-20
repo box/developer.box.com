@@ -18,7 +18,8 @@ next_page_id: folders/bulk/build-folder-tree
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/bulk/index.md
+fullyTranslated: true
 ---
-# Bulk Manipulation
+# 一括操作
 
-The following pages discuss how to do various bulk methods to folders.
+以下のページでは、複数のフォルダに対するさまざまな一括操作の方法について説明します。

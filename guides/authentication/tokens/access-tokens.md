@@ -18,18 +18,17 @@ next_page_id: authentication/tokens/downscope
 previous_page_id: authentication/tokens/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/access-tokens.md
+fullyTranslated: true
 ---
-# Access Tokens
+# アクセストークン
 
-Instead of a user name and password, Access Tokens are the credentials used to
-represent the authenticated user to the Box servers.
+アクセストークンは、Boxサーバーに対して認証済みユーザーを表すために、ユーザー名とパスワードの代わりに使用される資格情報です。
 
-## Token Object
+## トークンオブジェクト
 
-### OAuth 2.0 authentication
+### OAuth 2.0認証
 
-When an Access Token is requested using OAuth 2.0, an Access Token and Refresh
-Token pair are returned.
+OAuth 2.0を使用してアクセストークンをリクエストすると、アクセストークンと更新トークンのペアが返されます。
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
@@ -47,14 +46,11 @@ curl -X POST https://api.box.com/oauth2/token \
 }
 ```
 
-Within this object we can see the token string (`access_token`), as well
-as the Refresh Token (`refresh_token`) that can be used to request a new Access
-Token when the current one expires (`expires_in`).
+このオブジェクト内には、トークン文字列 (`access_token`) のほか、現在のトークンの有効期限が切れたとき (`expires_in`) に新しいアクセストークンのリクエストに使用できる更新トークン (`refresh_token`) があります。
 
-### Server authentication
+### サーバー認証
 
-When an Access Token is requested using JWT or Client Credentials Grant, only an
-Access Token is returned:
+JWTまたはクライアント資格情報許可を使用してアクセストークンをリクエストすると、アクセストークンのみが返されます。
 
 ```curl
 curl --location --request POST ‘https://api.box.com/oauth2/token’ \
@@ -71,8 +67,6 @@ curl --location --request POST ‘https://api.box.com/oauth2/token’ \
 }
 ```
 
-Within this object we can see the token string (`access_token`).
-Because a Refresh Token is not returned, you must request a new token when the
-Access Token expires (`expires_in`) using the [token endpoint][token].
+このオブジェクト内には、トークン文字列 (`access_token`) があります。更新トークンは返されないため、アクセストークンの有効期限が切れたとき (`expires_in`) には、[トークンエンドポイント][token]を使用して、新しいトークンをリクエストする必要があります。
 
 [token]: e://post-oauth2-token

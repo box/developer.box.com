@@ -16,38 +16,46 @@ next_page_id: getting-started/use-cases
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
+fullyTranslated: true
 ---
-# Getting Started
+# Box入門
 
-Our documentation is divided into four main sections:
+Boxのドキュメントは、主に以下の4つのセクションに分かれています。
 
-- **API Reference**: Endpoint documentation
-- **Guides**: Information about endpoint usage not covered by reference
-documentation
-- **Quick Starts**: Step by step tutorials for specific API features
-- **SDK and Tools**: Information about official Box SDKs and tooling
+* **APIリファレンス**: エンドポイントに関するドキュメント
+* **ガイド**: リファレンスドキュメントでは説明されていない、エンドポイントの使用に関する情報
+* **クイックスタート**: 具体的なAPI機能について手順を説明したチュートリアル
+* **SDKとツール**: Box公式SDKとツールに関する情報
 
-If you are new to development with the Box API, we recommend following the steps
-below to guide you through the main concepts and content.
+Box APIを使用する開発が初めての方は、主なコンセプトやコンテンツを紹介する以下の手順に従ってみることをお勧めします。
 
-1. Evaluate if your [use case][use-case] is a good fit for Box
-2. Understand the different [types of Box users][users]
-3. Explore [user models][user-model]
-4. Explore common [architecture patterns][patterns]
-5. Select the proper [application type][app-type] for your use case
-6. Select the proper [authentication method][authentication] for your use case
-7. Configure your application
-8. Obtain Admin [authorization][authorize] of your application (if applicable)
-9. Explore development [tools][tools]
-10. Explore [endpoints][endpoints] and make API calls using [common values][cv]
+1. 自分の[ユースケース][use-case]がBoxに適しているかどうかを評価する
+2. さまざまな[Boxユーザーの種類][users]を理解する
+3. [ユーザーモデル][user-model]を確認する
+4. 一般的な[アーキテクチャパターン][patterns]を確認する
+5. 自分のユースケースに適切な[アプリケーションの種類][app-type]を選択する
+6. 自分のユースケースに適切な[認証方法][authentication]を選択する
+7. アプリケーションを構成する
+8. アプリケーションの管理者の[承認][authorize]を得る (該当する場合)
+9. 開発[ツール][tools]を調べる
+10. [エンドポイント][endpoints]を調べて、[一般的な値][cv]を使用してAPI呼び出しを実行する
 
 [use-case]: g://getting-started/use-cases
+
 [users]: g://getting-started/user-types
+
 [patterns]: g://getting-started/architecture-patterns
+
 [user-model]: g://getting-started/user-models
+
 [app-type]: g://applications
+
 [authentication]: g://authentication
+
 [authorize]: g://authorization/custom-app-approval
+
 [tools]: g://tooling
+
 [endpoints]: https://developer.box.com/reference
+
 [cv]: g://getting-started/locating-values

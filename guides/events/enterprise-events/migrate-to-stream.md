@@ -19,44 +19,38 @@ next_page_id: ''
 previous_page_id: events/enterprise-events/for-enterprise
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/migrate-to-stream.md
+fullyTranslated: true
 ---
-# Migrating From History To Stream
+# 履歴からストリームへの移行
 
-Box recommends that applications subscribing to live events through
-`admin_logs` migrate to `admin_logs_streaming`. `admin_logs_streaming` provides
-lower and more consistent latency, as well as ensures that late arriving
-events will not be missed. Events can be deduplicated between `admin_logs` and
-`admin_logs_streaming` by their event IDs.
+Boxでは、`admin_logs`を使用してライブイベントを登録しているアプリケーションを`admin_logs_streaming`に移行することをお勧めします。`admin_logs_streaming`を使用すると、レイテンシが低下し、一貫性が高まるだけでなく、遅れて届くイベントが見逃されなくなります。`admin_logs`と`admin_logs_streaming`の間のイベントの重複は、イベントIDを使用して排除することが可能です。
 
-## Enterprise `stream_type` comparison
+## Enterpriseの`stream_type`の比較
 
-### Benefits of `admins_logs_streaming`
+### `admins_logs_streaming`のメリット
 
-- Ensures late arriving events are not missed by your subscribing application
-- Provides 80% lower latency (during normal operations)
-- Has much more consistent latency (during normal operations)
-- Recovers much more gracefully from a fault, because your service no longer
-  has to manage backfilling late events
+* 遅れて届くイベントが、登録しているアプリケーションで見逃されなくなる
+* レイテンシが80%低下する (通常の操作時)
+* より一貫性のあるレイテンシが実現する (通常の操作時)
+* 遅れたイベントの埋め戻しをサービスで管理する必要がなくなったため、障害からの復旧がよりスムーズになる
 
-### Differences between `admin_logs` and `admin_logs_streaming`
+### `admin_logs`と`admin_logs_streaming`の相違点
 
-- Provides two weeks of event history (i.e. retention)
-- Does not support the `created_after` and `created_before` filter parameters
-- May contain duplicates (provides an 'at least once' guarantee)
-- No longer returns events in chronological order (events are returned in
-  roughly the order they are processed)
+* 2週間分のイベント履歴 (リテンション) が提供される
+* `created_after`および`created_before`フィルタパラメータがサポートされない
+* 重複を含む可能性がある (「少なくとも1回」は保証されている)
+* イベントが時系列で返されなくなる (イベントはほぼ処理された順で返される)
 
-### Similarities between `admin_logs` and `admin_logs_streaming`
+### `admin_logs`と`admin_logs_streaming`の類似点
 
-- Shares the same [`GET /events`][events-api] API endpoint
-- Returns the same events payload (events can be deduplicated across the two
-stream types by event ID)
-- Enables filtering by `event_type`
-- Allows paginating through events via a `stream_position`
+* 同じ[`GET /events`][events-api] APIエンドポイントを共有する
+* 同じイベントペイロードを返す (イベントIDを使用して2つのストリームタイプでのイベントの重複排除が可能)
+* `event_type`によるフィルタが可能
+* `stream_position`を使用したイベントのページ割りが可能
 
-## How to migrate from `admin_logs` to `admin_logs_streaming`
+## `admin_logs`から`admin_logs_streaming`への移行方法
 
-### 1. Existing requests will look something like the below
+### 1. 既存のリクエストは以下のようになります
 
 <!-- markdownlint-disable line-length -->
 
@@ -64,44 +58,47 @@ stream types by event ID)
 curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
+
 <!-- markdownlint-enable line-length -->
 
-### 2. Begin overlapping existing requests with `admin_logs_streaming`
+### 2. `admin_logs_streaming`を使用して重複する既存のリクエストを開始します
 
-- Start two weeks ago and backfill:
-<!-- markdownlint-disable line-length -->
+* 2週間前に開始し、埋め戻しする:
+  <!-- markdownlint-disable line-length -->
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
+
 <!-- markdownlint-enable line-length -->
 
-or
+または
 
-- Start now and run in parallel:
-<!-- markdownlint-disable line-length -->
+* 今すぐ開始し、並行して実行する:
+  <!-- markdownlint-disable line-length -->
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 
-### 3. Paginate through results until now and deduplicate with `admin_logs` events
+### 3. これまでの結果のページ割りを行い、`admin_logs`イベントとの重複を排除します
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
+
 <!-- markdownlint-enable line-length -->
 
-### 4. Continue to overlap until confident
+### 4. 確信できるまで重複に進みます
 
-### 5. Turn off old `admin_logs` requests
+### 5. 古い`admin_logs`リクエストを無効にします
 
 <ImageFrame center shadow border>
 
-![Stream Migration Flow](images/migrate_to_stream.png)
+![ストリームの移行フロー](images/migrate_to_stream.png)
 
 </ImageFrame>
 

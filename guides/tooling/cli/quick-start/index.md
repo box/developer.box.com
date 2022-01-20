@@ -17,15 +17,13 @@ next_page_id: tooling/cli/quick-start/create-jwt-app
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/0-index.md
+fullyTranslated: true
 ---
-# Learn to use the Box CLI
+# Box CLIの使い方
 
 <!--alex ignore executed-->
 
-The Box CLI is a user-friendly command line tool which allows both technical and
-non-technical users to leverage the Box API to perform routine or bulk actions.
-There is no need to write any code, as these actions are executed through a set
-of [commands][commands].
+Box CLIは、使い勝手の良いコマンドラインツールで、これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。コードを書く必要はありません。これらの操作は、一連の[コマンド][commands]によって実行されます。
 
 <ImageFrame center>
 
@@ -33,25 +31,30 @@ of [commands][commands].
 
 </ImageFrame>
 
-## Overview
+## 概要
 
-This guide will take you through the following steps.
+このガイドでは、以下の手順を説明します。
 
-1. [Create, configure, and authorize][one] a Box application
-2. [Install and configure][two] the CLI
-3. [Run commands][three] with the CLI
-4. Use [options and bulk commands][four]
-5. [Next steps][five]
+1. Boxアプリケーションを[作成、構成、承認する][one]
+2. CLIを[インストールして構成する][two]
+3. CLIを使用して[コマンドを実行する][three]
+4. [オプションや一括コマンド][four]を使用する
+5. [次の手順][five]
 
 <Next>
 
-I am ready to get started
+開始する準備ができました
 
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
+
 [one]: g://tooling/cli/quick-start/create-jwt-app/
+
 [two]: g://tooling/cli/quick-start/install-and-configure/
+
 [three]: g://tooling/cli/quick-start/build-commands-help/
+
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+
 [five]: g:/tooling/cli/quick-start/next-steps/

@@ -18,24 +18,20 @@ next_page_id: embed/box-view/faq
 previous_page_id: embed/box-view/upload-file
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-view/best-practices.md
+fullyTranslated: true
 ---
-# Best Practices
+# ベストプラクティス
 
-## Rotate App Tokens
+## アプリトークンの循環
 
-See our guide on [rotating App Tokens][rotate].
+[アプリトークンの循環][rotate]に関するガイドを参照してください。
 
-## Use Downscope Tokens
+## ダウンスコープトークンの使用
 
-App Tokens are a set of two tokens (Primary and Secondary) that hold elevated
-privileges over the content managed by your application. App Tokens can be used
-by your application to upload, download, preview and modify any Box content.
+アプリトークンは、2つのトークン (プライマリとセカンダリ) からなるセットで、アプリケーションによって管理されているコンテンツに対する高度な権限を保持しています。アプリトークンは、任意のBoxコンテンツをアップロード、ダウンロード、プレビュー、および変更するために、アプリケーションで使用できます。
 
-We strongly recommend that you use a [downscoped][downscoped] version of the
-original App Token if you need to make the token available on the client side
-for any reason. This is because of the elevated privileges granted to these
-tokens, if you need. An example of when this would be needed is if you are using
-the Box Preview UI Element.
+何らかの理由でトークンをクライアント側で利用できるようにする必要がある場合は、元のアプリトークンの[ダウンスコープ][downscoped]したバージョンを使用することを強くお勧めします。これは、必要に応じて、これらのトークンに高度な権限が付与されるためです。これが必要になる例として、Box Preview UI Elementを使用している場合が挙げられます。
 
 [rotate]: g://authentication/app-token/rollover
+
 [downscoped]: g://authentication/tokens/downscope

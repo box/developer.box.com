@@ -13,87 +13,59 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/index.md
+fullyTranslated: true
 ---
-# Events
+# イベント
 
-The event feed provides a way for an application to subscribe to any actions
-performed by any user, users, or service in an enterprise.
+アプリケーションはイベントフィードを使用して、Enterprise内の任意のユーザー (複数可) またはサービスが実行する操作をすべて登録できます。
 
-## User vs Enterprise events
+## User EventとEnterprise Event
 
-Depending upon the `stream_type`, the [`GET /events`](e://get_events) API
-enables subscribing to live events across the enterprise or for a particular
-user, or querying historical events across the enterprise.
+[`GET /events`](e://get_events) APIを使用すると、`stream_type`に応じて、Enterprise全体または特定のユーザーのライブイベントを登録するか、Enterprise全体のイベントの履歴を照会することができます。
 
-### User events
+### User Event
 
-User events provides a low latency stream of events relevant to the currently
-authenticated user. This event stream is how Box keeps [Box Drive][drive] up to
-date, but is also made available for developer use.
+User Eventは、現在認証されているユーザーに関連する、低レイテンシのイベントストリームを提供します。このイベントストリームにより、[Box Drive][drive]は常に最新の状態で維持されますが、このイベントストリームは開発者向けにも提供されています。
 
-The emphasis of this feed is to return the complete results quickly, which means
-that Box may return events more than once or out of chronological order.
-Duplicate events can be identified by their event IDs.
+このフィードでは、すべての結果を迅速に返すことを重視しています。つまり、Boxでは、イベントが複数回または時系列に関係なく返される可能性があります。重複するイベントは、イベントIDによって識別できます。
 
-Unlike the enterprise events streams, the user events stream does not support
-filtering for specific events. The three user events stream_types return
-slightly different subsets of the user events dataset for different purposes.
+Enterprise Event Streamとは異なり、User Event Streamは、特定のイベントのフィルタをサポートしません。User Eventの3つのstream_typeで返されるUser Eventデータセットのサブセットは、目的に応じて若干異なります。
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Type |                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------- |
-| `all`       | Returns everything for a user (default)                                                 |
-| `changes`   | Returns events that may cause file tree changes such as file updates or collaborations |
-| `sync`      | Is similar to changes but only applies to synced folders                                |
+| ストリームタイプ  |                                                |
+| --------- | ---------------------------------------------- |
+| `all`     | ユーザーに関するすべてのイベントを返します (デフォルト)。                 |
+| `changes` | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します |
+| `sync`    | 変更に似ていますが、同期対象フォルダにのみ適用されます。                   |
 
 <!-- markdownlint-enable line-length -->
 
-### Enterprise events
+### Enterprise Event
 
-Enterprise events provide an event feed for all users and content in an
-enterprise Box instance. Depending upon the `stream_type` your application can
-either subscribe to live events or query historical events. Access to these
-stream types is limited to users with admin permissions to
-**Run new reports and access existing reports**.
+Enterprise Eventは、企業のBoxインスタンスにあるすべてのユーザーとコンテンツのイベントフィードを提供します。`stream_type`に応じて、アプリケーションは、ライブイベントを登録するかイベントの履歴を照会することができます。これらのストリームタイプへのアクセスは、**新規レポートの実行および既存レポートへのアクセスを行う**ための管理者権限を持つユーザーに制限されます。
 
-Unlike the user events stream, the enterprise events stream supports filtering
-based on event type but does not support long polling. Across the two
-stream types the dataset is exactly the same. Events can be deduplicated across
-the two stream types using their event IDs.
+User Event Streamとは異なり、Enterprise Event Streamは、イベントタイプに基づくフィルタをサポートしますが、Long pollingをサポートしません。2つのストリームタイプでのデータセットはまったく同じです。イベントIDを使用すると、2つのストリームタイプでのイベントの重複を排除できます。
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Type |                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------- |
-| `admin_logs`       | Enables querying historical events up to one year                                                 |
-| `admin_logs_streaming`   | Enables subscribing to live events in near real time                     |
+| ストリームタイプ               |                              |
+| ---------------------- | ---------------------------- |
+| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします     |
+| `admin_logs_streaming` | ライブイベントをほぼリアルタイムで登録できるようにします |
 
 <!-- markdownlint-enable line-length -->
 
-#### Live Monitoring
+#### ライブで監視
 
-To monitor recent events that have been generated within Box across the
-enterprise, set the `stream_type` to `admin_logs_streaming`. This is also known
-as the Enterprise Event Stream API.
+Box内で生成された最近のイベントをEnterprise全体で監視するには、`stream_type`を`admin_logs_streaming`に設定します。これは、Enterprise Event Stream APIとも呼ばれます。
 
-The emphasis for this feed is on low latency rather than chronological
-accuracy, which means that Box may return events more than once and out of
-chronological order. Events are returned via the API in near real time after
-they are processed by Box. A small delay/buffer ensures that new events are not
-written after your cursor position. Only two weeks of events are available via
-this `stream_type`.
+このフィードでは、時系列の正確さよりもレイテンシの低さを重視しています。つまり、Boxでは、イベントが複数回、時系列に関係なく返される場合があります。イベントは、Boxで処理されるとほぼリアルタイムでAPIを介して返されます。少しの遅延やバッファーが発生すると、新しいイベントがカーソル位置の後に書き込まれなくなります。この`stream_type`で取得できるイベントは、2週間分だけです。
 
-#### Historical Querying
+#### 履歴の照会
 
-To query historical events across the enterprise up to one year old, set the
-`stream_type` to `admin_logs`. This is also known as the Enterprise Event
-History API.
+Enterprise全体のイベント履歴を最大1年分照会するには、`stream_type`を`admin_logs`に設定します。これは、 Enterprise Event History APIとも呼ばれます。
 
-The emphasis for this feed is on completeness over latency, which means that
-Box will deliver admin events in chronological order and without duplicates,
-but with higher latency than the user or `admin_logs_streaming` feed. Consuming
-events in near real time may lead to missed events as events can arrive later
-than your filtering window.
+このフィードでは、レイテンシよりも完全性を重視しています。つまり、Boxでは、管理イベントが重複することなく時系列で配信されますが、レイテンシはユーザーまたは`admin_logs_streaming`のフィードよりも高くなります。イベントは、フィルタをかけている期間より後に到着する可能性があるため、ほぼリアルタイムで使用すると見逃される場合があります。
 
-[drive]:https://www.box.com/drive
+[drive]: https://www.box.com/drive

@@ -13,13 +13,13 @@ next_page_id: internal/ui-elements
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/internal/ui-elements/cta.md
+fullyTranslated: true
 ---
 <!-- does not need translation -->
 
 # Call to Action (CTA)
 
-Links can be wrapped in a Call to Action element to create visible buttons that
-stand out from the rest of the text.
+リンクをCall to Action要素にラップすると、他のテキストよりも目立つ見やすいボタンを作成できます。
 
 ```html
 <CTA to='guide://files/get'>
@@ -29,9 +29,9 @@ stand out from the rest of the text.
 
 <H>
 
-<CTA to='guide://files/get'>
+<CTA to="guide://files/get">
 
-Learn more about files
+ファイルの詳細を確認する
 
 </CTA>
 

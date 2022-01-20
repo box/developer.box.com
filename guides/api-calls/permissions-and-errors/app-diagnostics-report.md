@@ -16,145 +16,133 @@ next_page_id: ''
 previous_page_id: api-calls/permissions-and-errors/expiration
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/app-diagnostics-report.md
+fullyTranslated: true
 ---
-# App Diagnostics Report
+# アプリ診断レポート
 
-The App Diagnostics Report provides a spreadsheet detailing each API call made
-by a given application during a specified timeframe. The report gives you
-access to the `API Request ID`, which can be given to Box Support for
-troubleshooting purposes.
+アプリ診断レポートでは、指定した期間に特定のアプリケーションで実行された各API呼び出しの詳細を示したスプレッドシートが表示されます。このレポートでは、`API Request ID`を確認できます。これは、トラブルシューティングのためにBoxサポートに提出することができます。
 
 <Message type="warning">
 
-This report will not include:
-  * API calls made within the last 48 hours
-  * Authorization and Token API calls
+このレポートには、以下の項目は含まれません。
 
-We are working on including the above and thereby making the report suitable
-for real-time troubleshooting in the future.
+* 過去48時間以内に実行されたAPI呼び出し
+* 承認およびトークンに関するAPI呼び出し
+
+Boxでは、上記の項目を追加し、それによって、レポートが将来的にリアルタイムのトラブルシューティングに適したものになるよう取り組んでいます。
 
 </Message>
 
 <Message type="notice">
 
-This report is being rolled out gradually to customers. We plan to have the
-report fully released by October 25th.
+このレポートは順次リリースされており、日本時間10月26日までにリリースが完了する予定です。
 
 </Message>
 
-## 1. Click on the **App Diagnostics** Tab
+## 1. \[**アプリ診断**] タブをクリックする
 
-To run the App Diagnostics Report, click the **App Diagnostics** option located
-along the top of your application's configuration section in
-the [Developer Console][console].
+アプリ診断レポートを実行するには、[開発者コンソール][console]でアプリケーションの構成セクションの上部にある \[**アプリ診断**] オプションをクリックします。
 
 <ImageFrame center shadow>
 
-![New Menu Option](./images/New-Menu-Option.png)
+![新しいメニューオプション](./images/New-Menu-Option.png)
 
 </ImageFrame>
 
-## 2. Click **Run App Diagnostics Report** to configure your report
+## 2. \[**アプリ診断レポートを実行**] をクリックしてレポートを構成する
 
-Clicking **Run App Diagnostics Report** will display a popup to select report
-filters and parameters.
+\[**アプリ診断レポートを実行**] をクリックすると、レポートのフィルタおよびパラメータを選択するためのポップアップが表示されます。
 
 <ImageFrame center shadow>
 
-![App Diagnostic Menu](./images/Menu-Option-Screen.png)
+![\[アプリ診断\] メニュー](./images/Menu-Option-Screen.png)
 
 </ImageFrame>
 
-## 3. Select Report Parameters and Click **Run**
+## 3. レポートのパラメータを選択して \[**実行**] をクリックする
 
-You can select a date in the last two weeks, starting 48 hours prior to today.
-A report can be run for up to a total of 24 hours. Click **Run** to
-generate a report.
+現在から48時間前を基準に過去2週間以内の日付を選択できます。レポートは、合計24時間までを対象に実行できます。\[**実行**] をクリックすると、レポートが生成されます。
 
 <ImageFrame center shadow>
 
-![Report Options](./images/Report-Option-Screen.png)
+![レポートのオプション](./images/Report-Option-Screen.png)
 
 </ImageFrame>
 
-## 4. Access the Box Reports Folder
+## 4. Box Reportsフォルダにアクセスする
 
-Navigate to [All Files][allfiles] and locate the Box Reports folder. If this is
-your first time running a report, this folder is automatically generated. If
-you are an Admin, this is the same folder you access
-[Admin Console Reports][reports]. Open the folder.
+\[[すべてのファイル][allfiles]] に移動し、Box Reportsフォルダを見つけます。今回初めてレポートを実行する場合は、このフォルダが自動的に生成されます。管理者の場合、これは、[管理コンソールのレポート][reports]にアクセスした場合と同じフォルダです。このフォルダを開きます。
 
 <ImageFrame center shadow>
 
-![Box Report Folder](./images/Box-Report-Folder.png)
+![Box Reportsフォルダ](./images/Box-Report-Folder.png)
 
 </ImageFrame>
 
-## 5. Find and Open the latest Platform App Diagnostics Report Folder
+## 5. 最新のPlatformアプリ診断レポートフォルダを探して開く
 
-You will see any reports you have run in the Box Reports folder.
-Locate and open the most recent Platform App Diagnostics run folder.
+実行したレポートはすべて、Box Reportsフォルダに表示されます。最新のPlatformアプリ診断実行のフォルダを探して開きます。
 
 <ImageFrame center shadow>
 
-![Box Report Folder Contents](./images/Box-Report-Folder-Contents.png)
+![Box Reportsフォルダの内容](./images/Box-Report-Folder-Contents.png)
 
 </ImageFrame>
 
-## 6. Check the Status
+## 6. ステータスを確認する
 
-The report will take time to complete. You can see the status in the box at the
-top of the folder.
+レポートが完了するまで時間がかかります。ステータスは、フォルダの上部にあるボックスで確認できます。
 
 <ImageFrame center shadow>
 
-![Status Screen](./images/App-Diagnostics-Status.png)
+![ステータスの画面](./images/App-Diagnostics-Status.png)
 
 </ImageFrame>
 
-## 7. Report Completed
+## 7. レポートが完了する
 
-Upon completion, the status will change, and the `.csv` file will appear in the
-folder.
+完了すると、ステータスが変更され、フォルダ内に`.csv`ファイルが表示されます。
 
 <ImageFrame center shadow>
 
-![Diagnostics Report](./images/Diagnostics-Report.png)
+![診断レポート](./images/Diagnostics-Report.png)
 
 </ImageFrame>
 
-## 8. Open the Report
+## 8. レポートを開く
 
-You can open the file in your web browser or download it to view locally. If
-you need help from [Box Support][support], you can send in the report with your
-ticket by attaching a downloaded copy or via shared link.
+ファイルは、ウェブブラウザで開くことも、ローカルで表示するためにダウンロードすることもできます。[Boxサポート][support]によるサポートが必要な場合は、ダウンロードしたコピーを添付するか共有リンクを使用して、チケットと共にレポートを送信することができます。
 
 <ImageFrame center shadow>
 
-![Report Details](./images/Report-Details.png)
+![レポートの詳細](./images/Report-Details.png)
 
 </ImageFrame>
 
-The report has nine columns.
+このレポートには列が9個あります。
 
 <!-- markdownlint-disable line-length -->
 
-| Column | Description        |                                                                                                                                                                                    |
-| --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| App Name                  | The name of the application |
-| Client ID                 | The Client ID of the application |
-| HTTP Status Code          | The response code returned from Box |
-| API Request Duration (ms) | The amount of time from API call to response |
-| API Request ID            | An unique identifier that can be used by Box Support                            |
-| Resource                  | The primary resource accessed in the API call |
-| Sub Resource              | The secondary resource accessed in the API call |
-| HTTP Method               | The type of HTTP method used in the API call |
-| API Request Timestamp     | The timestamp of the API call |
+| 列                | 説明                       |   |
+| ---------------- | ------------------------ | - |
+| アプリ名             | アプリケーションの名前              |   |
+| クライアントID         | アプリケーションのクライアントID        |   |
+| HTTPステータスコード     | Boxから返されたレスポンスコード        |   |
+| APIリクエスト期間 (ミリ秒) | API呼び出しからレスポンスまでの時間      |   |
+| APIリクエストID       | Boxサポートが使用できる一意の識別子      |   |
+| リソース             | API呼び出しでアクセスされたプライマリリソース |   |
+| サブリソース           | API呼び出しでアクセスされたセカンダリリソース |   |
+| HTTPメソッド         | API呼び出しで使用されたHTTPメソッドの種類 |   |
+| APIリクエストタイムスタンプ  | API呼び出しのタイムスタンプ          |   |
 
 [support]: https://support.box.com/hc/en-us/requests/new
+
 [console]: https://app.box.com/developers/console
+
 [allfiles]: https://app.box.com/folder/0
+
 <!-- i18n-enable localize-links -->
 
-[reports]: https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
+[reports]: https://support.box.com/hc/ja/articles/360043696534-レポートの実行
+
 <!-- i18n-disable localize-links -->

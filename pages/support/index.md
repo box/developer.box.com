@@ -15,30 +15,29 @@ next_page_id: support/community-projects
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/support/index.md
+fullyTranslated: true
 ---
-# Support & Community
+# サポートとコミュニティ
 
-Our community and support services are aimed to help ensure that your questions
-and integrations with Box Platform are answered.
+Boxのコミュニティおよびサポートでは、お客様の質問に答え、Box Platformとの統合をサポートすることを目的としています。
 
-For developer support, please reach out to us via one of our channels:
+ご意見やご提案、問題や改善すべき点などは、以下のいずれかのチャネルから英語でお送りください。
 
-- [Developer forum][forum]: For support with code, technical integrations, and
-  general requests.
-- [Twitter][twitter]: For general questions and support.
-- [File a support ticket][support]: For account specific questions and support.
+* [開発者向けフォーラム][forum]: コード、技術統合、一般的なリクエスト
+* [Twitter][twitter]: 一般的な質問とサポート
+* [サポートチケットの送信][support]: アカウント固有の質問とサポート
 
-For to keep up to date with community projects and Platform changes, please use
-one of these available channels:
+コミュニティプロジェクトとプラットフォームの変更について最新情報を得るには、以下のチャネルのいずれかをご利用ください。
 
-- [Changelog](page://changelog): For API changes, deprecated services, and
-  releases.
-- [Newsletter](page://newsletter): For quarterly notifications of major events,
-  projects, and releases.
+* [変更ログ](page://changelog): APIの変更、非推奨のサービス、リリース
+* [ニュースレター](page://newsletter): 主なイベント、プロジェクト、リリースに関する四半期ごとのお知らせ
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+[forum]: https://support.box.com/hc/ja/community/topics/360001932973-Platform-and-Developer-Forum
+
 [twitter]: https://twitter.com/BoxPlatform
-[support]: https://support.box.com/hc/en-us/requests/new
+
+[support]: https://support.box.com/hc/requests/new
+
 <!-- i18n-disable localize-links -->

@@ -20,25 +20,20 @@ next_page_id: file-requests/delete
 previous_page_id: file-requests/get
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/file-requests/4-update.md
+fullyTranslated: true
 ---
-# Update a File Request
+# ファイルリクエストの更新
 
-To update some of the basic details for an existing
-file request, all you need is its unique ID.
+既存のファイルリクエストの基本的な詳細の一部を更新するのに必要なのは、その一意のIDだけです。
 
-<Samples id='put_file_requests_id' >
+<Samples id="put_file_requests_id">
 
 </Samples>
 
-For more details on the different fields that can be updated when creating
-a template, please see the reference documentation for the
-[`POST /file-requests/:id/update`](e://put_file_requests_id) API.
+テンプレート作成時に更新できるさまざまなフィールドの詳細については、[`POST /file-requests/:id/update`](e://put_file_requests_id) APIのリファレンスドキュメントを参照してください。
 
 <Message notice>
 
-The ID of a file request can be determined by visiting the Box web
-app and inspecting the URL. Please
-[check our guide](g://file-requests/template) on setting up a file
-request template to learn how to determine a file request ID.
+ファイルリクエストのIDを確認するには、BoxウェブアプリにアクセスしてそのURLを調べます。ファイルリクエストテンプレートの設定に関する[ガイド](g://file-requests/template)で、ファイルリクエストIDの確認方法を確認してください。
 
 </Message>

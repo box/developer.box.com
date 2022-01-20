@@ -23,50 +23,41 @@ next_page_id: ''
 previous_page_id: authentication/client-credentials/client-credentials-setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/client-credentials/index.md
+fullyTranslated: true
 ---
-# Client Credentials Grant
+# クライアント資格情報許可
 
-Follow the steps below if you would like to leverage server authentication and
-verify your application's identity using a client ID and client secret.
+サーバー認証を利用し、クライアントIDとクライアントシークレットを使用してアプリケーションのIDを確認する場合は、以下の手順に従います。
 
-## Prerequisites
+## 前提条件
 
-- A Custom Application using Server Authentication 
- (with Client Credentials Grant) authentication in the Box
- [Developer Console][devconsole]
-- [2FA][2fa] enabled on your Box account for viewing and copying the
-  application's client secret from the configuration tab
-- The application is [authorized][auth] in the Box Admin Console
+* Box[開発者コンソール][devconsole]でサーバー認証 (クライアント資格情報許可使用) を使用するカスタムアプリケーション
+* \[構成] タブからアプリケーションのクライアントシークレットを表示およびコピーするために、Boxアカウントで[2FA][2fa]が有効になっていること
+* Box管理コンソールでアプリケーションが[承認][auth]されていること
 
 <Message notice>
 
-Your client secret is confidential and needs to be protected. Because this is
-how we securely identify an application's identity when obtaining an
-Access Token, you do not want to freely distribute a client secret. This
-includes via email, public forums and code repositories, distributed native
-applications, or client-side code. 
+クライアントシークレットは機密情報であり、保護する必要があります。アクセストークンの取得時にBoxがアプリケーションのIDを安全に確認するために使用されるため、クライアントシークレットを自由に配布するべきではありません。配布方法には、メール、公開フォーラム、コードリポジトリ、分散されたネイティブアプリケーション、クライアント側のコードなどがあります。 
 
 </Message>
 
-## How to use
+## 利用方法
 
-When making your API call to obtain an [Access Token][accesstoken], your 
-request body needs to contain your client ID and client Secret. Set the
-`grant_type` to `client_credentials`.
+API呼び出しを実行して[アクセストークン][accesstoken]を取得する際は、リクエスト本文にクライアントIDとクライアントシークレットを含める必要があります。`grant_type`を`client_credentials`に設定します。
 
-If you would like to authenticate as the application's [Service Account][sa]:
+アプリケーションの[サービスアカウント][sa]として認証する場合は、以下のようにします。
 
-- set `box_subject_type` to `enterprise`
-- set `box_subject_id` to the enterprise ID
+* `box_subject_type`を`enterprise`に設定する
+* `box_subject_id`をEnterprise IDに設定する
 
-If you would like to authenticate as a Managed User:
+管理対象ユーザーとして認証する場合は、以下のようにします。
 
-- set `box_subject_type` to `user` 
-- set `box_subject_id` to the user ID
+* `box_subject_type`を`user`に設定する 
+* `box_subject_id`をユーザーIDに設定する
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 <!-- markdownlint-disable line-length -->
 
@@ -88,29 +79,32 @@ curl -i -X POST "https://api.box.com/oauth2/token" \
 
 <Message notice>
 
-Box SDKs do not currently support this authentication method.
+Box SDKでは、現在、この認証方法をサポートしていません。
 
 </Message>
 
-## Common Errors
+## 一般的なエラー
 
-### Grant credentials are invalid
+### Grant credentials are invalid (許可の資格情報が無効です)
 
-This error indicates either:
+このエラーは次のいずれかを示します。
 
-- the client ID and client secret passed are incorrect or are not for the same
-application
+* 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない
 
-- the `box_subject_id` cannot be used based on the selected
-[application access][aa]
+* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない
 
 <!-- i18n-enable localize-links -->
 
-[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+[2fa]: https://support.box.com/hc/ja/articles/360043697154-アカウントの多要素認証の設定
+
 <!-- i18n-disable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
+
 [accesstoken]: e://post-oauth2-token/
+
 [sa]: g://getting-started/user-types/service-account/
+
 [auth]: g://authorization
+
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access

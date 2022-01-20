@@ -20,22 +20,21 @@ next_page_id: folders/single/create-lock
 previous_page_id: folders/single/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/change-owner.md
+fullyTranslated: true
 ---
-# Change Folder Owner
+# フォルダ所有者の変更
 
-To change the owner of a folder, first invite the user you wish to
-transfer the folder to as a collaborator on the folder.
+フォルダの所有者を変更するには、まず、フォルダの移行先となるユーザーをフォルダのコラボレータとして招待します。
 
-<Samples id='post_collaborations' >
+<Samples id="post_collaborations">
 
 </Samples>
 
-Then, update the created collaboration by changing the role of
-that invited user to `owner`.
+次に、招待したユーザーのロールを`owner`に変更して、作成したコラボレーションを更新します。
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X PUT https://api.box.com/2.0/collaborations/1234 \
@@ -48,7 +47,7 @@ curl -X PUT https://api.box.com/2.0/collaborations/1234 \
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 BoxCollaborationRequest requestParams = new BoxCollaborationRequest()
@@ -61,7 +60,7 @@ BoxCollaboration collab = await client.CollaborationsManager.EditCollaborationAs
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 Collection<BoxCollaboration.Info> pendingCollaborations = BoxCollaboration.getPendingCollaborations(api);
@@ -73,7 +72,7 @@ for (BoxCollaboration.Info collabInfo : pendingCollaborations) {
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 from boxsdk.object.collaboration import CollaborationRole, CollaborationStatus
@@ -84,7 +83,7 @@ updated_collaboration = collaboration.update_info(CollaborationRole.OWNER)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.collaborations.update('12345', {role: client.collaborationRoles.OWNER})
@@ -99,8 +98,6 @@ client.collaborations.update('12345', {role: client.collaborationRoles.OWNER})
 
 <Message warning>
 
-Depending on the settings, a user with access to a folder might be able to
-invite other users, yet in all cases only the current owner of a folder can
-transfer the ownership.
+設定によっては、フォルダへのアクセス権限を持つユーザーが他のユーザーを招待できることもありますが、いかなる場合でも、所有権を移管できるのは、フォルダの現在の所有者のみです。
 
 </Message>

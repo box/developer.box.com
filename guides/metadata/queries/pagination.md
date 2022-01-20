@@ -14,17 +14,15 @@ next_page_id: metadata/queries/errors
 previous_page_id: metadata/queries/syntax
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/3-pagination.md
+fullyTranslated: true
 ---
-# Paginate and sort
+# ページ割りと並べ替え
 
-By default only 20 query results are returned per page and the order of these
-results is not guaranteed and may change. Pagination and sorting allow for
-getting more results and defining the order of the results.
+デフォルトでは、1ページあたり返されるクエリ結果は20件のみで、この結果の順序は保証されておらず変更される可能性があります。ページ割りと並べ替えにより、さらに多くの結果を取得し、結果の順序を定義することが可能になります。
 
-## Pagination
+## ページ割り
 
-By default the API only returns the first page of 20 results. To request more
-results per page the `limit` query parameter can be send with the request.
+APIはデフォルトで、20件の結果を含む最初のページのみを返します。ページあたりの結果の数を増やすようリクエストするには、リクエストに`limit`クエリパラメータを指定して送信します。
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
@@ -38,8 +36,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
      }'
 ```
 
-The maximum value for `limit` is 100. To return more pages of results each page
-returns a `next_marker` value.
+`limit`の最大値は100です。返される結果ページ数を増やすには、各ページで`next_marker`値を返します。
 
 ```json
 {
@@ -48,8 +45,7 @@ returns a `next_marker` value.
 }
 ```
 
-This `next_marker` can be used to form a new request for the next page of
-results.
+この`next_marker`を使用すると、結果の次のページについて新しいリクエストを作成できます。
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
@@ -66,28 +62,21 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 <Message notice>
 
-When a response does not include a next marker it indicates that no more
-matching results exist.
+レスポンスに次のマーカーが含まれていない場合は、これ以上一致する結果がないことを意味します。
 
 </Message>
 
 <Message warning>
 
-To use the `next_marker` it is important to use the exact same query for the
-next page of results. The API will return an error if any of the parameters
-like the `query`, `query_params`, or others are changed.
+`next_marker`を使用するには、結果の次のページにまったく同じクエリを使用することが重要です。`query`、`query_params`などのパラメーターが変更されると、APIはエラーを返します。
 
 </Message>
 
-## Sort
+## 並べ替え
 
-Results can be ordered by any of the supported metadata field types. These only
-supported types currently are `float`, `date`, and `string`
-[fields][metadata-fields]. Ordering by `enum` or `multiSelect` value is
-currently not supported.
+結果は、サポートされているどのメタデータフィールドタイプを使用しても並べ替えることができます。現在サポートされているタイプは、`float`、`date`および`string`[フィールド][metadata-fields]のみです。`enum`または`multiSelect`値による並べ替えは現在サポートされていません。
 
-To order result, provide one or more field keys to sort by, as well as a
-direction.
+結果を並べ替えるには、並べ替えの基準として使用する1つ以上のフィールドキーに加えて、方向を指定します。
 
 ```json
 "order_by": [
@@ -104,8 +93,7 @@ direction.
 
 <Message warning>
 
-The ordering direction must be the same for all ​​specified keys. In other
-words, for each `field_key` the `direction` must be the same.
+並べ替えの方向は、指定したすべてのキーで同じにする必要があります。つまり、各`field_key`の`direction`は同じにする必要があります。
 
 </Message>
 

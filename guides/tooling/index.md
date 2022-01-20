@@ -18,13 +18,16 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/index.md
+fullyTranslated: true
 ---
-# Tooling
+# ツール
 
-Box offers several options for using our APIs, including the [Box CLI][cli],
-[Postman][postman], [Salesforce Developer Toolkit][sdt], and [various SDKs][sdks].
+Boxには、[Box CLI][cli]、[Postman][postman]、[Salesforce Developer Toolkit][sdt]、[各種SDK][sdks]など、Box APIを使用するためのオプションがいくつか用意されています。
 
 [cli]: g://tooling/cli
+
 [postman]: g://tooling/postman
+
 [sdt]: g://tooling/salesforce-toolkit
+
 [sdks]: g://tooling/sdks

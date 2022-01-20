@@ -21,50 +21,45 @@ next_page_id: tooling/postman/refresh
 previous_page_id: tooling/postman/make-api-call
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/access-token.md
+fullyTranslated: true
 ---
-# Retrieve an Access Token
+# アクセストークンの取得
 
-Every API call requires an **Access Token** to identify the authenticated user.
-For security purposes, Access Tokens expire after 60 minutes. If you are using
-[OAuth 2.0][oauth], use the provided [Refresh Token][rt] to obtain a new Access
-Token. If you are using server authentication, [JWT][jwt] or
-[Client Credentials Grant][ccg], make an API call to the [token endpoint][token]
-to request a new Access Token.
+すべてのAPI呼び出しでは、認証済みユーザーの本人確認のために**アクセストークン**が要求されます。セキュリティ上の理由により、アクセストークンは60分後に期限切れになります。[OAuth 2.0][oauth]を使用している場合は、提供された[更新トークン][rt]を使用して、新しいアクセストークンを取得してください。サーバー認証、[JWT][jwt]、または[クライアント資格情報許可][ccg]を使用している場合は、[トークンエンドポイント][token]に対してAPI呼び出しを実行して、新しいアクセストークンをリクエストしてください。
 
 ## OAuth 2.0
 
-If your application leverages [OAuth 2.0][oauth] for authentication, you can
-follow the steps below to obtain a token pair via [Postman][postman].
+アプリケーションが認証に[OAuth 2.0][oauth]を利用している場合は、以下の手順に従って[Postman][postman]を使用してトークンのペアを取得できます。
 
 <ImageFrame border center shadow>
 
-![OAuth2.0 token request](images/oauth-postman.png)
+![OAuth2.0のトークンリクエスト](images/oauth-postman.png)
 
 </ImageFrame>
 
-- The `grant_type` will always be `authorization_code`.
-- The `client_id` and `client_secret` values can be obtained from the
-  **Configuration** tab for your application in the [Developer Console][dc].
+* `grant_type`は常に`authorization_code`です。
+* `client_id`と`client_secret`の値は、[開発者コンソール][dc]でアプリケーションの \[**構成**] タブから取得できます。
 
-To obtain the value for `code`, build and visit your
-[authorization URL][authurl] in your browser. Complete the OAuth 2.0 flow and,
-upon redirecting to your configured redirect URL, the authorization code will be
-at the end of the URL. As a reminder, this authorization code is only valid for
-30 seconds. This means you must enter it to the designated field in Postman and
-click **Send** before it expires. Therefore, we recommend entering the other 
-values so the API call is ready to send as soon as you get the code.
+`code`の値を取得するには、ブラウザで[承認URL][authurl]を作成してアクセスします。OAuth 2.0のフローを完了し、構成済みのリダイレクトURLにリダイレクトすると、そのURLの末尾に承認コードがあります。この承認コードの有効期間は30秒間のみであることに注意してください。つまり、有効期限が切れる前に、Postmanの指定フィールドに承認コードを入力し、\[**Send (送信)**] をクリックする必要があります。そのため、コードを取得したらすぐにAPI呼び出しを送信できるように、他の値を入力しておくことをお勧めします。
 
 <ImageFrame border center shadow>
 
-![OAuth2.0 token request](images/oauth2-access-token.gif)
+![OAuth2.0のトークンリクエスト](images/oauth2-access-token.gif)
 
 </ImageFrame>
 
 [oauth]: g://authentication/oauth2
+
 [dc]: https://app.box.com/developers/console
+
 [authurl]: g://authentication/oauth2/without-sdk
+
 [postman]: g://tooling/postman/install
+
 [jwt]: g://authentication/jwt
+
 [ccg]: g://authentication/client-credentials
+
 [token]: e://post-oauth2-token
+
 [rt]: g://authentication/tokens/refresh/

@@ -15,61 +15,51 @@ next_page_id: search/metadata-filters
 previous_page_id: search/filtering
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/4-pagination.md
+fullyTranslated: true
 ---
-# Pagination
+# ページ割り
 
-The search API supports offset-based pagination using the `offset` and `limit`
-query parameters. Marker-based pagination is not supported.
+検索APIでは、`offset`クエリパラメータと`limit`クエリパラメータを使用したオフセットベースのページ割りがサポートされます。マーカーベースのページ割りはサポートされません。
 
-## API Pagination
+## APIによるページ割り
 
-To fetch the first page of search results, the API needs to be called
-either without the `offset` parameter, or with the `offset` set to `0`. The
-`limit` field is optional.
+検索結果の最初のページを取得するには、APIを`offset`パラメータを指定せずに呼び出すか、`offset`を`0`に設定して呼び出す必要があります。`limit`フィールドは省略可能です。
 
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=0&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-To fetch the next page of entries the API needs to be called with
-an `offset` parameter that's equals the sum of the previous `offset` value and
-limit returned in the previous result, `previous_offset + previous_limit`.
+エントリの次のページを取得するには、以前の`offset`値と以前の結果で返された制限の合計 (`previous_offset + previous_limit`) と等しい`offset`パラメータを指定して、APIを呼び出す必要があります。
 
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=100&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-<Message type='notice'>
+<Message type="notice">
 
-Note that the `offset` should be increased by the previous `limit` and not by
-the size of the entries in the response array, as this may be less than the
-limit. Generally we advise using the value of the `limit` in the response
-object to increase the `offset` value.
+`offset`は、レスポンス配列内のエントリのサイズではなく、以前の`limit`分だけ加算されますので注意してください。これは制限を下回る可能性があるためです。一般的には、レスポンスオブジェクトの`limit`の値を使用して`offset`値を加算することをお勧めします。
 
 </Message>
 
-The final page of items has been requested when the next `offset` value exceeds
-the `total_count` value in the response object. At this point there are no more
-items to fetch.
+次の`offset`値がレスポンスオブジェクト内の`total_count`値を超えている場合、項目の最終ページはリクエスト済みです。この時点では、これ以上取得する項目がありません。
 
 <CTA to="g://api-calls/pagination/offset-based">
 
-Learn more about offset-based pagination
+オフセットベースのページ割りの詳細を確認する
 
 </CTA>
 
-## SDK Pagination
+## SDKによるページ割り
 
-Each of our SDKs has built-in support for API pagination. The following code
-samples show how to use pagination in the search API.
+Boxの各SDKには、APIによるページ割りのサポートが組み込まれています。以下のコードサンプルでは、検索APIでのページ割りの使用方法を示します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -87,7 +77,7 @@ PartialCollection<BoxItem.Info> page2 = boxSearch.searchRange(offsetValue, limit
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 BoxCollection<BoxItem> page1 = await client.SearchManager
@@ -98,7 +88,7 @@ BoxCollection<BoxItem> page2 = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 page1 = client.search().query(query='sales', limit=50)
@@ -107,7 +97,7 @@ page2 = client.search().query(query='sales', limit=50, offset=50)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 const page1 = await client.search.query('sales', {

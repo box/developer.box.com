@@ -22,16 +22,18 @@ next_page_id: events/parameters
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/stream-types.md
+fullyTranslated: true
 ---
-# Stream Types
+# ストリームタイプ
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Types       | Scope       | Purpose           | Description                           | Retention           | Access Pattern
-| ------------------ | ------------ | -----------------|--------------------------------------|---------------------|------------------
-| `admin_logs` | A single enterprise (for authorized admins) | Historical Queries | Enables querying historical events up to one year | 365 Days | Filter by time frame, then paginate through the response by `stream_position` |
-| `admin_logs_streaming` | A single enterprise (for authorized admins) | Near real time subscriptions | Enables subscribing to live events in near real time | 14 Days | Poll using the `stream_position` |
-| `all` (default) | A single user (for any user) | Near real time subscriptions | Returns everything for a user | 21 Days | Poll or long-poll using the `stream_position` |
-| `changes` | A single user (for any user) | Near real time subscriptions | Returns events that may cause file tree changes such as file updates or collaborations | 31 Days | Poll or long-poll using the `stream_position` |
-| `sync` | A single user (for any user) | Near real time subscriptions | Is similar to `changes` but only applies to synced folders | 31 Days | Poll or long-poll using the `stream_position` |
+| ストリームタイプ               | スコープ                       | 目的           | 説明                                             | 保持期間 | アクセスパターン                                      |
+| ---------------------- | -------------------------- | ------------ | ---------------------------------------------- | ---- | --------------------------------------------- |
+| `admin_logs`           | 1つのEnterprise (承認された管理者向け) | 履歴の照会        | イベントの履歴を最大1年分照会できるようにします                       | 365日 | 期間でフィルタをかけた後、`stream_position`でレスポンスのページ割りを行う |
+| `admin_logs_streaming` | 1つのEnterprise (承認された管理者向け) | ほぼリアルタイムでの登録 | ライブイベントをほぼリアルタイムで登録できるようにします                   | 14日  | `stream_position`を使用してポーリングする                 |
+| `all` (デフォルト)          | 1人のユーザー (任意のユーザー向け)        | ほぼリアルタイムでの登録 | ユーザーに関するすべてのイベントを返します                          | 21日  | `stream_position`を使用してポーリングまたはLong pollingを行う |
+| `changes`              | 1人のユーザー (任意のユーザー向け)        | ほぼリアルタイムでの登録 | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します | 31日  | `stream_position`を使用してポーリングまたはLong pollingを行う |
+| `sync`                 | 1人のユーザー (任意のユーザー向け)        | ほぼリアルタイムでの登録 | `changes`に似ていますが、同期対象フォルダのみに適用されます             | 31日  | `stream_position`を使用してポーリングまたはLong pollingを行う |
+
 <!-- markdownlint-enable line-length -->

@@ -19,41 +19,40 @@ next_page_id: applications/web-app-integrations/user-experience
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/index.md
+fullyTranslated: true
 ---
-# Web App Integration
+# ウェブアプリ統合
 
-Box Platform enables an application to provide features to Box users directly
-within the Box web application. Web App Integrations allow applications to
-become part of the Box user experience by allowing users to share and edit files
-with third-party applications.
+Box Platformにより、アプリケーションはBoxウェブアプリ内で直接Boxユーザーに機能を提供できるようになります。ウェブアプリ統合により、アプリケーションはBox内で使用できるようになり、ユーザーはサードパーティ製アプリケーションを使用してファイルを共有および編集できます。
 
-## Features
+## 機能
 
-Using a Web App Integration, a user can modify, share, or edit content stored in
-Box using a third-party application. It can also offer new features to Box users
-through [Recommended Apps][recommended-apps], which show up in Box Preview.
+ウェブアプリ統合を使用した場合、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを変更、共有、または編集できます。また、ウェブアプリ統合では、Boxプレビューに表示される[推奨アプリ][recommended-apps]を通じて、Boxユーザーに新しい機能を提供することもできます。
 
-<ImageFrame border shadow width='600' center>
+<ImageFrame border shadow width="600" center>
 
-![Integration example](../images/recommended-apps-preview.png)
+![統合の例](../images/recommended-apps-preview.png)
 
 </ImageFrame>
 
-By enabling a Web App Integration, an application can be added to Recommended
-Apps, allowing users to use their files in the application. Integrations can be
-restricted to certain content types and file extensions.
+ウェブアプリ統合を有効にすると、アプリケーションを \[推奨アプリ] に追加できるため、ユーザーはそのアプリケーションでファイルを使用できるようになります。統合は、特定のコンテンツタイプとファイル拡張子に制限することができます。
 
 <CTA to="g://applications/web-app-integrations/configure">
 
-Learn how to create a Web App Integration
+ウェブアプリ統合の作成方法を確認する
 
 </CTA>
 
 [app-gallery]: g://applications/app-gallery
+
 [custom-app]: g://authentication/oauth2/oauth2-setup
+
 [oauth2]: g://authentication/oauth2
+
 <!-- i18n-enable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
-[recommended-apps]: https://support.box.com/hc/en-us/articles/360044195533-Installing-Recommended-Apps-in-your-Enterprise
+
+[recommended-apps]: https://support.box.com/hc/ja/articles/360044195533-推奨アプリをEnterpriseに導入する
+
 <!-- i18n-disable localize-links -->

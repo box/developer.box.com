@@ -23,226 +23,203 @@ next_page_id: events/enterprise-events/migrate-to-stream
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/for-enterprise.md
+fullyTranslated: true
 ---
-# Get Enterprise Events
+# Enterprise Eventの取得
 
-To get a enterprise's events, make
-a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
-`admin_logs` or `admin_logs_streaming`.
+Enterprise Eventを取得するには、`stream_type`を`admin_logs`または`admin_logs_streaming`に設定して[`GET /events`](e://get_events) APIを呼び出します。
 
 <Message>
 
-This API requires the user to be an enterprise admin or co-admin with the
-permission to **Run new reports and access existing reports**.
+このAPIを使用するには、ユーザーは**新規レポートの実行および既存レポートへのアクセスを行う**のための権限を持つ、会社の管理者または共同管理者である必要があります。
 
 </Message>
 
-<Samples id="get_events" variant='enterprise_stream' >
+<Samples id="get_events" variant="enterprise_stream">
 
 </Samples>
 
-## Stream Types
+## ストリームタイプ
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Type |                                                                                         |
-| ----------- | --------------------------------------------------------------------------------------- |
-| `admin_logs`       | Enables querying historical events up to one year                                                 |
-| `admin_logs_streaming`   | Enables subscribing to live events in near real time                      |
+| ストリームタイプ               |                              |
+| ---------------------- | ---------------------------- |
+| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします     |
+| `admin_logs_streaming` | ライブイベントをほぼリアルタイムで登録できるようにします |
 
 <!-- markdownlint-enable line-length -->
 
-## Live Monitoring
+## ライブで監視
 
-To monitor recent events that have been generated within Box across the
-enterprise, set the `stream_type` to `admin_logs_streaming`. This is also known
-as the Enterprise Event Stream API.
+Box内で生成された最近のイベントをEnterprise全体で監視するには、`stream_type`を`admin_logs_streaming`に設定します。これは、Enterprise Event Stream APIとも呼ばれます。
 
-The emphasis for this feed is on low latency rather than chronological
-accuracy, which means that Box may return events more than once and out of
-chronological order. Events are returned via the API in near real time after
-they are processed by Box. A small delay/buffer ensures that new events are not
-written after your cursor position. Only two weeks of events are available via
-this `stream_type`.
+このフィードでは、時系列の正確さよりもレイテンシの低さを重視しています。つまり、Boxでは、イベントが複数回、時系列に関係なく返される場合があります。イベントは、Boxで処理されるとほぼリアルタイムでAPIを介して返されます。少しの遅延やバッファーが発生すると、新しいイベントがカーソル位置の後に書き込まれなくなります。この`stream_type`で取得できるイベントは、2週間分だけです。
 
-## Historical Querying
+## 履歴の照会
 
-To query historical events across the enterprise up to one year old, set the
-`stream_type` to `admin_logs`. This is also known as the Enterprise Event
-History API.
+Enterprise全体のイベント履歴を最大1年分照会するには、`stream_type`を`admin_logs`に設定します。これは、 Enterprise Event History APIとも呼ばれます。
 
-The emphasis for this feed is on completeness over latency, which means that
-Box will deliver admin events in chronological order and without duplicates,
-but with higher latency than the user or `admin_logs_streaming` feed. Consuming
-events in near real time may lead to missed events as events can arrive later
-than your filtering window.
+このフィードでは、レイテンシよりも完全性を重視しています。つまり、Boxでは、管理イベントが重複することなく時系列で配信されますが、レイテンシはユーザーまたは`admin_logs_streaming`のフィードよりも高くなります。イベントは、フィルタをかけている期間より後に到着する可能性があるため、ほぼリアルタイムで使用すると見逃される場合があります。
 
-## Anonymous Users
+## 匿名ユーザー
 
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
+場合によっては、イベントフィードには、IDが`2`のユーザーが表示される可能性があります。これは、匿名ユーザーを表すBoxの内部識別子です。
 
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.
+匿名ユーザーは、ログインしていないユーザーです。この状況は、ユーザーがコンテンツを操作し、最初にログインを求められない場合にいつでも発生する可能性があります。たとえば、ユーザーが、公開共有リンクを使用してファイルをダウンロードするときなどです。
 
-## Limitations
+## 制限
 
-The enterprise event feed does not support long polling.
+Enterprise Eventフィードでは、Long pollingがサポートされません。
 
-Box does not store events indefinitely. Two weeks of enterprise events are
-available when `stream_type` is set to `admin_logs_streaming`. One year of
-enterprise events are available when `stream_type` is set to `admin_logs`.
-Seven years of enterprise events are available via the Box Admin Console’s
-[exported reports][reports].
+Boxでのイベントの保存は無期限ではありません。`stream_type`を`admin_logs_streaming`に設定した場合は2週間分のEnterprise Event、`stream_type`を`admin_logs`に設定した場合は1年分のEnterprise Eventを取得できます。また、Box管理コンソールで[エクスポートされるレポート][reports]では、7年分のEnterprise Eventを取得できます。
 
-The emphasis of the `admin_logs_streaming` feed is to return the complete
-results quickly, which means that Box may return events more than once and out
-of order. Duplicate events can be identified by their event IDs.
+`admin_logs_streaming`フィードでは、すべての結果を迅速に返すことを重視しています。つまり、Boxでは、イベントが順不同で複数回返される可能性があります。重複するイベントは、イベントIDによって識別できます。
 
-## Filter by Event Type
+## イベントタイプによるフィルタ
 
-The enterprise event feed supports filtering by event type.
+Enterprise Eventフィードでは、イベントタイプによるフィルタがサポートされています。
 
-<Samples id="get_events" variant='enterprise_stream_filter' >
+<Samples id="get_events" variant="enterprise_stream_filter">
 
 </Samples>
 
-A full list of event types can be found below.
+イベントタイプの完全なリストについては、以下を参照してください。
 
-## Event Types
+## イベントタイプ
 
-The following events can be triggered for an enterprise. This list is not
-exhaustive, so it is possible events appear that are not listed.
+Enterpriseに対して、以下のイベントがトリガーされます。このリストですべてを網羅しているわけではないため、記載されていないイベントが表示される可能性もあります。
 
 <!-- markdownlint-disable line-length -->
 
-| Event name                                     | Description                                                                                     |
-|------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| `ACCESS_GRANTED`                               | A user has granted Box support access to their account                                          |
-| `ACCESS_REVOKED`                               | A user has revoked Box support access to their account                                          |
-| `ADD_DEVICE_ASSOCIATION`                       | Added device association                                                                        |
-| `ADD_LOGIN_ACTIVITY_DEVICE`                    | A user is logging in from a device we have not seen before                                      |
-| `ADMIN_LOGIN`                                  | Admin console used to log in to a managed user's account                                        |
-| `ANNOTATIONV2_CREATE`                          | An annotation is created                                                                        |
-| `ANNOTATIONV2_DELETE`                          | An annotation is deleted                                                                        |
-| `ANNOTATIONV2_EDIT`                            | An annotation is edited                                                                         |
-| `APPLICATION_CREATED`                          | A new application is created in the Box Developer Console                                       |
-| `APPLICATION_PUBLIC_KEY_ADDED`                 | An application public key is added.                                                             |
-| `APPLICATION_PUBLIC_KEY_DELETED`               | An application public key is deleted.                                                           |
-| `CHANGE_ADMIN_ROLE`                            | When an admin role changes for a user                                                           |
-| `CHANGE_FOLDER_PERMISSION`                     | Edit the permissions on a folder                                                                |
-| `COLLABORATION_ACCEPT`                         | Accepted invites                                                                                |
-| `COLLABORATION_EXPIRATION`                     | Set collaborator expiration                                                                     |
-| `COLLABORATION_INVITE`                         | Invited                                                                                         |
-| `COLLABORATION_REMOVE`                         | Removed collaborators                                                                           |
-| `COLLABORATION_ROLE_CHANGE`                    | Changed user roles                                                                              |
-| `COLLECTION_CREATE`                            | A collection is created                                                                         |
-| `COLLECTION_DELETE`                            | A collection is deleted                                                                         |
-| `COLLECTION_UPDATE`                            | A collection is updated                                                                         |
-| `COLLECTION_ITEM_CREATE`                       | An item is added to a collection                                                                |
-| `COLLECTION_ITEM_DELETE`                       | An item is removed from a collection                                                            |
-| `COLLECTION_ITEM_UPDATE`                       | An item in a collection is updated                                                              |
-| `COMMENT_CREATE`                               | A comment is created on a file                                                                  |
-| `COMMENT_DELETE`                               | A comment is deleted on a file                                                                  |
-| `CONTENT_ACCESS`                               | A file is accessed by an authorized end user or programmatically by a Box application           |
-| `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`  | A policy set in the Admin console is triggered                                                  |
-| `CONTENT_WORKFLOW_AUTOMATION_ADD`              | An automation is added                                                                          |
-| `CONTENT_WORKFLOW_AUTOMATION_DELETE`           | An automation is deleted                                                                        |
-| `CONTENT_WORKFLOW_POLICY_ADD`                  | A content policy is added                                                                       |
-| `CONTENT_WORKFLOW_SHARING_POLICY_VIOLATION`    | There is a sharing policy violation.                                                            |
-| `CONTENT_WORKFLOW_UPLOAD_POLICY_VIOLATION`     | A collaborator violated an admin-set upload policy                                              |
-| `COPY`                                         | Copied                                                                                          |
-| `DATA_RETENTION_CREATE_RETENTION`              | Retention is created                                                                            |
-| `DATA_RETENTION_REMOVE_RETENTION`              | Retention is removed                                                                            |
-| `DELETE`                                       | Deleted                                                                                         |
-| `DELETE_USER`                                  | Deleted user                                                                                    |
-| `DEVICE_TRUST_CHECK_FAILED`                    | Device Trust check failed                                                                       |
-| `DISABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been disabled                      |
-| `DOWNLOAD`                                     | Downloaded                                                                                      |
-| `EDIT`                                         | Edited                                                                                          |
-| `EDIT_USER`                                    | Edited user                                                                                     |
-| `EMAIL_ALIAS_CONFIRM`                          | A user email alias is confirmed                                                                 |
-| `EMAIL_ALIAS_REMOVE`                           | A user email alias is removed                                                                   |
-| `ENABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been enabled                      |
-| `ENTERPRISE_APP_AUTHORIZATION_UPDATE`          | When a JWT application has been authorized or reauthorized                                      |
-| `EXTERNAL_COLLAB_SECURITY_SETTINGS`            | Changes in external collaboration security settings                                             |
-| `FAILED_LOGIN`                                 | Failed login                                                                                    |
-| `FILE_MARKED_MALICIOUS`                        | Virus found on a file. Event is only received by enterprises that have opted in to be notified. |
-| `FILE_WATERMARKED_DOWNLOAD`                    | A watermarked file is downloaded                                                                |
-| `GROUP_ADD_ITEM`                               | An item is added to a group                                                                     |
-| `GROUP_ADD_USER`                               | Added user to group                                                                             |
-| `GROUP_CREATION`                               | Created new group                                                                               |
-| `GROUP_DELETION`                               | Deleted group                                                                                   |
-| `GROUP_EDITED`                                 | Edited group                                                                                    |
-| `GROUP_REMOVE_ITEM`                            | Folders were removed from a group in the Admin console                                          |
-| `GROUP_REMOVE_USER`                            | Removed user from group                                                                         |
-| `ITEM_MODIFY`                                  | Item is modified                                                                                |
-| `ITEM_OPEN`                                    | Item is opened                                                                                  |
-| `ITEM_SHARED_UPDATE`                           | Share links settings updated                                                                    |
-| `ITEM_SYNC`                                    | Synced folder                                                                                   |
-| `ITEM_UNSYNC`                                  | Unmarked folder for synced                                                                      |
-| `LEGAL_HOLD_ASSIGNMENT_CREATE`                 | A legal hold assignment is created                                                              |
-| `LEGAL_HOLD_ASSIGNMENT_DELETE`                 | A legal hold assignment is deleted                                                              |
-| `LEGAL_HOLD_POLICY_CREATE`                     | A legal hold policy is created                                                                  |
-| `LEGAL_HOLD_POLICY_DELETE`                     | A legal hold policy is deleted                                                                  |
-| `LEGAL_HOLD_POLICY_UPDATE`                     | A legal hold policy is updated                                                                  |
-| `LOCK`                                         | Locked                                                                                          |
-| `LOGIN`                                        | Login                                                                                           |
-| `METADATA_INSTANCE_CREATE`                     | Creation of metadata instance                                                                   |
-| `METADATA_INSTANCE_DELETE`                     | Deletion of metadata instance                                                                   |
-| `METADATA_INSTANCE_UPDATE`                     | Update of metadata instance                                                                     |
-| `METADATA_TEMPLATE_CREATE`                     | Creation of metadata template                                                                   |
-| `METADATA_TEMPLATE_UPDATE`                     | Update of metadata template                                                                     |
-| `METADATA_TEMPLATE_DELETE`                     | Deletion of metadata template                                                                   |
-| `MOVE`                                         | Moved                                                                                           |
-| `NEW_USER`                                     | Created user                                                                                    |
-| `OAUTH2_ACCESS_TOKEN_REVOKE`                   | An OAuth 2.0 access token has been revoked                                                      |
-| `PREVIEW`                                      | Previewed                                                                                       |
-| `REMOVE_DEVICE_ASSOCIATION`                    | Removed device association                                                                      |
-| `REMOVE_LOGIN_ACTIVITY_DEVICE`                 | We invalidated a user session associated with an app                                            |
-| `RENAME`                                       | A file or folder name or description is changed                                                 |
-| `RETENTION_POLICY_ASSIGNMENT_ADD`              | A retention policy assignment is added                                                          |
-| `SHARE`                                        | Enabled shared links                                                                            |
-| `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
-| `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
-| `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events][shield-events] for more information. |
-| `SHIELD_DOWNLOAD_BLOCKED`                                 | End user blocked from downloading a file based on a shield access policy |
-| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`        | Access to an external collaboration is  blocked                                                 |
-| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | Access to an external collaboration is  blocked due to missing a justification   |
-| `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`        | An invite to externally collaborate is blocked                                                  |
-| `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
-| `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
-| `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
-| `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to a signer                                                             |
-| `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled via API or UI                                                      |
-| `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers                                                        |
-| `SIGN_DOCUMENT_CONVERTED`                      | A sign request was converted to a `.pdf` for signing                                            |
-| `SIGN_DOCUMENT_CREATED`                        | A sign request was created via API or UI. The document is not yet sent to signers               |
-| `SIGN_DOCUMENT_DECLINED`                       | A sign request was declined by a signer                                                         |
-| `SIGN_DOCUMENT_EXPIRED`                        | A sign request expired with incomplete signatures                                               |
-| `SIGN_DOCUMENT_SIGNED`                         | A sign request was signed by a signer                                                           |
-| `SIGN_DOCUMENT_VIEWED_BY_SIGNER`               | A signer clicked on **Review Document** in the signer email or visited the signing URL          |
-| `SIGNER_DOWNLOADED`                            | A signer downloaded the signing document                                                        |
-| `SIGNER_FORWARDED`                             | A signer forwarded the signing document                                                         |
-| `STORAGE_EXPIRATION`                           | Set file auto-delete                                                                            |
-| `TASK_ASSIGNMENT_UPDATE`                       | Update of a task assignment                                                                     |
-| `TASK_ASSIGNMENT_CREATE`                       | A task assignment is created                                                                    |
-| `TASK_ASSIGNMENT_DELETE`                       | A task assignment is deleted                                                                    |
-| `TASK_CREATE`                                  | A task is created.                                                                              |
-| `TASK_UPDATE`                                  | A task's comment is  edited                                                                     |
-| `TERMS_OF_SERVICE_ACCEPT`                      | Accepted terms                                                                                  |
-| `TERMS_OF_SERVICE_REJECT`                      | Rejected terms                                                                                  |
-| `UNDELETE`                                     | Restored                                                                                        |
-| `UNLOCK`                                       | Unlocked                                                                                        |
-| `UNSHARE`                                      | Shared link removed                                                                             |
-| `UPDATE_COLLABORATION_EXPIRATION`              | Extend collaborator expiration                                                                  |
-| `UPDATE_SHARE_EXPIRATION`                      | Extend shared link expiration                                                                   |
-| `UPLOAD`                                       | Uploaded                                                                                        |
-| `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE` | An OAuth 2.0 access token has been created                                                      |
-| `WATERMARK_LABEL_CREATE`                       | A watermark is added to a file                                                                  |
-| `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
+| イベント名                                                         | 説明                                                                                                             |
+| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ACCESS_GRANTED`                                              | Boxサポートに対する自分のアカウントへのアクセス権限の付与                                                                                 |
+| `ACCESS_REVOKED`                                              | Boxサポートに付与した自分のアカウントへのアクセス権限の取り消し                                                                              |
+| `ADD_DEVICE_ASSOCIATION`                                      | デバイスの関連付けの追加                                                                                                   |
+| `ADD_LOGIN_ACTIVITY_DEVICE`                                   | 未確認のデバイスからのログイン                                                                                                |
+| `ADMIN_LOGIN`                                                 | 管理コンソールを使用した管理対象ユーザーアカウントへのログイン                                                                                |
+| `ANNOTATIONV2_CREATE`                                         | 注釈の作成                                                                                                          |
+| `ANNOTATIONV2_DELETE`                                         | 注釈の削除                                                                                                          |
+| `ANNOTATIONV2_EDIT`                                           | 注釈の編集                                                                                                          |
+| `APPLICATION_CREATED`                                         | 開発者コンソールでの新しいアプリケーションの作成                                                                                       |
+| `APPLICATION_PUBLIC_KEY_ADDED`                                | アプリケーションへの公開キーの追加                                                                                              |
+| `APPLICATION_PUBLIC_KEY_DELETED`                              | アプリケーションからの公開キーの削除                                                                                             |
+| `CHANGE_ADMIN_ROLE`                                           | 管理者の役割の変更                                                                                                      |
+| `CHANGE_FOLDER_PERMISSION`                                    | フォルダの権限の変更                                                                                                     |
+| `COLLABORATION_ACCEPT`                                        | 招待の承諾                                                                                                          |
+| `COLLABORATION_EXPIRATION`                                    | コラボレータへの有効期限の設定                                                                                                |
+| `COLLABORATION_INVITE`                                        | 招待                                                                                                             |
+| `COLLABORATION_REMOVE`                                        | コラボレータの削除                                                                                                      |
+| `COLLABORATION_ROLE_CHANGE`                                   | ユーザーロールの変更                                                                                                     |
+| `COLLECTION_CREATE`                                           | コレクションの作成                                                                                                      |
+| `COLLECTION_DELETE`                                           | コレクションの削除                                                                                                      |
+| `COLLECTION_UPDATE`                                           | コレクションの更新                                                                                                      |
+| `COLLECTION_ITEM_CREATE`                                      | コレクションへの項目の追加                                                                                                  |
+| `COLLECTION_ITEM_DELETE`                                      | コレクションからの項目の削除                                                                                                 |
+| `COLLECTION_ITEM_UPDATE`                                      | コレクションの項目の更新                                                                                                   |
+| `COMMENT_CREATE`                                              | ファイル上でのコメントの作成                                                                                                 |
+| `COMMENT_DELETE`                                              | ファイル上のコメントの削除                                                                                                  |
+| `CONTENT_ACCESS`                                              | 承認されたエンドユーザーまたはBoxアプリケーションでのプログラムによるファイルへのアクセス                                                                 |
+| `CONTENT_WORKFLOW_ABNORMAL_DOWNLOAD_ACTIVITY`                 | 管理コンソールで設定されたポリシーのトリガー                                                                                         |
+| `CONTENT_WORKFLOW_AUTOMATION_ADD`                             | 自動化の追加                                                                                                         |
+| `CONTENT_WORKFLOW_AUTOMATION_DELETE`                          | 自動化の削除                                                                                                         |
+| `CONTENT_WORKFLOW_POLICY_ADD`                                 | コンテンツポリシーの追加                                                                                                   |
+| `CONTENT_WORKFLOW_SHARING_POLICY_VIOLATION`                   | 共有ポリシーの違反                                                                                                      |
+| `CONTENT_WORKFLOW_UPLOAD_POLICY_VIOLATION`                    | 管理者が設定したアップロードポリシーの違反                                                                                          |
+| `COPY`                                                        | コピー                                                                                                            |
+| `DATA_RETENTION_CREATE_RETENTION`                             | リテンションの作成                                                                                                      |
+| `DATA_RETENTION_REMOVE_RETENTION`                             | リテンションの削除                                                                                                      |
+| `DELETE`                                                      | 削除                                                                                                             |
+| `DELETE_USER`                                                 | ユーザーの削除                                                                                                        |
+| `DEVICE_TRUST_CHECK_FAILED`                                   | デバイストラストチェックの失敗                                                                                                |
+| `DISABLE_MULTI_FACTOR_AUTH`                                   | When multifactor authentication has been disabled                                                              |
+| `DOWNLOAD`                                                    | ダウンロード                                                                                                         |
+| `EDIT`                                                        | 編集                                                                                                             |
+| `EDIT_USER`                                                   | ユーザーの編集                                                                                                        |
+| `EMAIL_ALIAS_CONFIRM`                                         | ユーザーのメールエイリアスの確認                                                                                               |
+| `EMAIL_ALIAS_REMOVE`                                          | ユーザーのメールエイリアスの削除                                                                                               |
+| `ENABLE_MULTI_FACTOR_AUTH`                                    | When multifactor authentication has been enabled                                                               |
+| `ENTERPRISE_APP_AUTHORIZATION_UPDATE`                         | JWTアプリケーションの承認または再承認                                                                                           |
+| `EXTERNAL_COLLAB_SECURITY_SETTINGS`                           | 外部コラボレーション用セキュリティ設定の変更                                                                                         |
+| `FAILED_LOGIN`                                                | ログインの失敗                                                                                                        |
+| `FILE_MARKED_MALICIOUS`                                       | ファイルでのウイルスの検出。イベントは、通知を希望した企業にのみ送信されます。                                                                        |
+| `FILE_WATERMARKED_DOWNLOAD`                                   | 電子すかし付きファイルのダウンロード                                                                                             |
+| `GROUP_ADD_ITEM`                                              | グループへの項目の追加                                                                                                    |
+| `GROUP_ADD_USER`                                              | グループへのユーザーの追加                                                                                                  |
+| `GROUP_CREATION`                                              | 新規グループの作成                                                                                                      |
+| `GROUP_DELETION`                                              | グループの削除                                                                                                        |
+| `GROUP_EDITED`                                                | グループの編集                                                                                                        |
+| `GROUP_REMOVE_ITEM`                                           | 管理コンソールを使用したグループからのフォルダの削除                                                                                     |
+| `GROUP_REMOVE_USER`                                           | グループからのユーザーの削除                                                                                                 |
+| `ITEM_MODIFY`                                                 | 変更した項目                                                                                                         |
+| `ITEM_OPEN`                                                   | 開いた項目                                                                                                          |
+| `ITEM_SHARED_UPDATE`                                          | 共有リンク設定の更新                                                                                                     |
+| `ITEM_SYNC`                                                   | フォルダの同期                                                                                                        |
+| `ITEM_UNSYNC`                                                 | フォルダの同期の解除                                                                                                     |
+| `LEGAL_HOLD_ASSIGNMENT_CREATE`                                | リーガルホールド割り当ての作成                                                                                                |
+| `LEGAL_HOLD_ASSIGNMENT_DELETE`                                | リーガルホールド割り当ての削除                                                                                                |
+| `LEGAL_HOLD_POLICY_CREATE`                                    | リーガルホールドポリシーの作成                                                                                                |
+| `LEGAL_HOLD_POLICY_DELETE`                                    | リーガルホールドポリシーの削除                                                                                                |
+| `LEGAL_HOLD_POLICY_UPDATE`                                    | リーガルホールドポリシーの更新                                                                                                |
+| `LOCK`                                                        | ロック                                                                                                            |
+| `LOGIN`                                                       | ログイン                                                                                                           |
+| `METADATA_INSTANCE_CREATE`                                    | メタデータインスタンスの作成                                                                                                 |
+| `METADATA_INSTANCE_DELETE`                                    | メタデータインスタンスの削除                                                                                                 |
+| `METADATA_INSTANCE_UPDATE`                                    | メタデータインスタンスの更新                                                                                                 |
+| `METADATA_TEMPLATE_CREATE`                                    | メタデータテンプレートの作成                                                                                                 |
+| `METADATA_TEMPLATE_UPDATE`                                    | メタデータテンプレートの更新                                                                                                 |
+| `METADATA_TEMPLATE_DELETE`                                    | メタデータテンプレートの削除                                                                                                 |
+| `MOVE`                                                        | 移動                                                                                                             |
+| `NEW_USER`                                                    | ユーザーの作成                                                                                                        |
+| `OAUTH2_ACCESS_TOKEN_REVOKE`                                  | OAuth 2.0アクセストークンの取り消し                                                                                         |
+| `PREVIEW`                                                     | プレビュー                                                                                                          |
+| `REMOVE_DEVICE_ASSOCIATION`                                   | デバイスの関連付けの削除                                                                                                   |
+| `REMOVE_LOGIN_ACTIVITY_DEVICE`                                | アプリに関連付けられたユーザーセッションの無効化                                                                                       |
+| `RENAME`                                                      | ファイルまたはフォルダの名前や説明の変更                                                                                           |
+| `RETENTION_POLICY_ASSIGNMENT_ADD`                             | リテンションポリシー割り当ての追加                                                                                              |
+| `SHARE`                                                       | 共有リンクの有効化                                                                                                      |
+| `SHARE_EXPIRATION`                                            | 共有リンクへの有効期限の設定                                                                                                 |
+| `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`                  | 共有リンクによって発生するリダイレクト                                                                                            |
+| `SHIELD_ALERT`                                                | 企業のShieldルールに基づいた、Shieldによる異常なダウンロード、セッション、場所、悪意のあるコンテンツの検出。詳細については、[Shieldのアラートイベント][shield-events]を参照してください。 |
+| `SHIELD_DOWNLOAD_BLOCKED`                                     | Shieldアクセスポリシーに基づいた、エンドユーザーによるファイルのダウンロードのブロック                                                                 |
+| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`                       | 外部コラボレーションへのアクセスのブロック                                                                                          |
+| `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` | 正当な理由がない場合の外部コラボレーションへのアクセスのブロック                                                                               |
+| `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`                       | 外部コラボレーションへの招待のブロック                                                                                            |
+| `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | 正当な理由がない場合の外部コラボレーションへの招待のブロック                                                                                 |
+| `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`                     | 外部コラボレーションへの招待の承認                                                                                              |
+| `SHIELD_JUSTIFICATION_APPROVAL`                               | Shieldの正当な理由の承認                                                                                                |
+| `SIGN_DOCUMENT_ASSIGNED`                                      | 署名者への署名リクエストの送信                                                                                                |
+| `SIGN_DOCUMENT_CANCELLED`                                     | APIまたはUIでの署名リクエストのキャンセル                                                                                        |
+| `SIGN_DOCUMENT_COMPLETED`                                     | 全署名者による署名リクエストへの署名                                                                                             |
+| `SIGN_DOCUMENT_CONVERTED`                                     | 署名用`.pdf`への署名リクエストの変換                                                                                          |
+| `SIGN_DOCUMENT_CREATED`                                       | APIまたはUIでの署名リクエストの作成。ドキュメントはまだ署名者に送信されていません。                                                                   |
+| `SIGN_DOCUMENT_DECLINED`                                      | 署名者による署名リクエストの拒否                                                                                               |
+| `SIGN_DOCUMENT_EXPIRED`                                       | 署名リクエストの期限切れ (署名は未完了)                                                                                          |
+| `SIGN_DOCUMENT_SIGNED`                                        | 署名者による署名リクエストへの署名                                                                                              |
+| `SIGN_DOCUMENT_VIEWED_BY_SIGNER`                              | 署名者による署名用メールの \[**ドキュメントをレビュー**] のクリックまたは署名用URLへのアクセス                                                          |
+| `SIGNER_DOWNLOADED`                                           | 署名者による署名用ドキュメントのダウンロード                                                                                         |
+| `SIGNER_FORWARDED`                                            | 署名者による署名用ドキュメントの転送                                                                                             |
+| `STORAGE_EXPIRATION`                                          | ファイルへの自動削除の設定                                                                                                  |
+| `TASK_ASSIGNMENT_UPDATE`                                      | タスク割り当ての更新                                                                                                     |
+| `TASK_ASSIGNMENT_CREATE`                                      | タスク割り当ての作成                                                                                                     |
+| `TASK_ASSIGNMENT_DELETE`                                      | タスク割り当ての削除                                                                                                     |
+| `TASK_CREATE`                                                 | タスクの作成                                                                                                         |
+| `TASK_UPDATE`                                                 | タスクのコメントの編集                                                                                                    |
+| `TERMS_OF_SERVICE_ACCEPT`                                     | 利用規約の承諾                                                                                                        |
+| `TERMS_OF_SERVICE_REJECT`                                     | 利用規約の拒否                                                                                                        |
+| `UNDELETE`                                                    | 削除の取り消し                                                                                                        |
+| `UNLOCK`                                                      | ロックの解除                                                                                                         |
+| `UNSHARE`                                                     | 共有リンクの削除                                                                                                       |
+| `UPDATE_COLLABORATION_EXPIRATION`                             | コラボレータの有効期限の延長                                                                                                 |
+| `UPDATE_SHARE_EXPIRATION`                                     | 共有リンクの有効期限の延長                                                                                                  |
+| `UPLOAD`                                                      | アップロード                                                                                                         |
+| `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE`                | OAuth 2.0アクセストークンの作成                                                                                           |
+| `WATERMARK_LABEL_CREATE`                                      | ファイルへの電子すかしの追加                                                                                                 |
+| `WATERMARK_LABEL_DELETE`                                      | ファイルからの電子すかしの削除                                                                                                |
+
 <!-- markdownlint-enable line-length -->
 
 [shield-events]: g://events/event-triggers/shield-alert-events
-[reports]:https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
+
+[reports]: https://support.box.com/hc/en-us/articles/360043696534-Running-Reports

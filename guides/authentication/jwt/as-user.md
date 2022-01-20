@@ -22,11 +22,11 @@ next_page_id: authentication/jwt/user-access-tokens
 previous_page_id: authentication/jwt/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/as-user.md
+fullyTranslated: true
 ---
-# as-user Header
+# as-userヘッダー
 
-It is possible to for a JWT application to act on behalf of another user
-by leveraging the `as-user` header.
+`as-user`ヘッダーを利用すると、JWTアプリケーションは別のユーザーの代理になることができます。
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -36,36 +36,29 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-In this situation the user ID is the Box identifier for a user. User IDs can
-found for any user via the `GET /users` endpoint, which is only available to
-admins, or by calling the `GET /users/me` endpoint with an authenticated user
-session.
+この場合、ユーザーIDはユーザーのBox識別子です。どのユーザーでも、ユーザーIDは、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
 
 </Message>
 
-## Preconditions
+## 前提条件
 
-The application must be configured to perform actions as users in the
-[Developer Console][devconsole].
+アプリケーションは、[開発者コンソール][devconsole]で、ユーザーとして操作を実行するように構成する必要があります。
 
 <ImageFrame border center>
 
-![Advanced Features](./enable-perform-actions-as-users.png)
+![高度な機能](./enable-perform-actions-as-users.png)
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with Admin permissions,
-meaning either an Admin, Co-Admin, or Service Account. See our guide on
-[User Types](g://getting-started/user-types) for more details.
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、サービスアカウントのいずれかである必要があります。詳細については、[ユーザータイプ](g://getting-started/user-types)のガイドを参照してください。
 
-## as-user using SDKs
+## SDKを使用したas-user
 
-All of the [official Box SDKs][sdk] support acting on behalf of a user using the
-`as-user` header.
+すべての[Box公式SDK][sdk]では、`as-user`ヘッダーを使用してユーザーの代わりに処理を実行することがサポートされています。
 
 <Tabs>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```dotnet
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
@@ -73,7 +66,7 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 client.asUser([USER_ID]");
@@ -82,7 +75,7 @@ client.asUser([USER_ID]");
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```python
 user_to_impersonate = client.user(user_id='[USER_ID]')
@@ -91,7 +84,7 @@ user_client = client.as_user(user_to_impersonate)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.asUser('[USER_ID]');
@@ -104,11 +97,10 @@ client.asUser('[USER_ID]');
 
 <Message warning>
 
-Please note that some of our SDKs create new clients for the other user, while
-others modify the existing client and provide a way to return to a state where
-the client authenticates for the original user itself.
+SDKには、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
 
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
+
 [sdk]: g://tooling/sdks

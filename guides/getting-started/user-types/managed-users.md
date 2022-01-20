@@ -22,37 +22,26 @@ next_page_id: getting-started/user-types/service-account
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-types/managed-users.md
+fullyTranslated: true
 ---
-# Managed & External Users
+# 管理対象ユーザーと外部ユーザー
 
-## Managed Users
+## 管理対象ユーザー
 
-Each Box enterprise is assigned a unique enterprise ID. Managed Users are any
-users that belong to one enterprise ID. Admins and Co-Admins can directly edit,
-delete, enforce security settings, and run reports against these users via the
-Admin Console. Managed Users consume a standard Box license and often, but not
-always, share the same email domain.
+各Box Enterpriseには、一意のEnterprise IDが割り当てられます。管理対象ユーザーとは、1つのEnterprise IDに属しているすべてのユーザーのことです。管理者と共同管理者は、これらのユーザーに対して、管理コンソールから直接編集、削除、セキュリティ設定の適用、レポートの実行を行うことができます。管理対象ユーザーは、標準のBoxライセンスを購入しており、ほとんどの場合に同じメールドメインを共有します (常にではありません)。
 
 <Message>
 
-# Log in as Admin User
+# 管理者ユーザーとしてログイン
 
-Some applications need permissions that only Admins have in order to
-properly operate and therefore require an Admin to log in.
+アプリケーションの中には、正しく動作するために管理者だけが持つ権限を必要とし、管理者にログインを要求するものがあります。
 
-An example of this would be a security application that monitors enterprise
-events and takes action on suspicious events. The events endpoint can only
-be used by Admins or a Co-Admin with permission to access reporting.
+この一例として、Enterprise Eventを監視し、不審なイベントに対して措置を講じるセキュリティアプリケーションがあります。イベントエンドポイントを使用できるのは、レポートへのアクセス権限を持つ管理者または共同管理者のみです。
 
 </Message>
 
-## External Users
+## 外部ユーザー
 
-An externally managed user, or External User, is a Managed
-User that belongs to a different enterprise ID. External users are often
-encountered when they are collaborated in on content owned by a Managed User of
-the application's enterprise, or when they authorize an OAuth 2.0 application.
-These users still have their own Box accounts, but cannot be managed via the
-Admin Console.
+外部で管理されているユーザー (外部ユーザー) とは、別のEnterprise IDに属している管理対象ユーザーです。外部ユーザーによく遭遇するのは、外部ユーザーが、アプリケーションの企業の管理対象ユーザーが所有するコンテンツでコラボレーションしている場合や、OAuth 2.0アプリケーションを承認する場合です。外部ユーザーは各自Boxアカウントを所有していますが、管理コンソールで管理することができません。
 
 [dc]: https://app.box.com/developers/console

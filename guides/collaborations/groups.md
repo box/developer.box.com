@@ -21,38 +21,32 @@ next_page_id: collaborations/pending
 previous_page_id: collaborations/share-content
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/groups.md
+fullyTranslated: true
 ---
-# Sharing with Groups
+# グループとの共有
 
-To share a file or folder with a group of users, create a collaboration using
-the group ID, the ID of the file or folder, and the role or permissions level
-the group should have when accessing the file or folder.
+ファイルやフォルダをユーザーのグループと共有するには、グループID、ファイルまたはフォルダのIDに加え、グループがファイルまたはフォルダにアクセスする際に必要なロールまたは権限を使用してコラボレーションを作成します。
 
-<Samples id='post_collaborations' variant='group' >
+<Samples id="post_collaborations" variant="group">
 
 </Samples>
 
 <Message>
 
-The collaboration roles are `editor`, `viewer`, `previewer`, `uploader`,
-`previewer uploader`, `viewer uploader`, `co-owner`, or `owner`. For a full
-description of each role, please refer to our [support documentation].
+コラボレーションロールは`editor`、`viewer`、`previewer`、`uploader`、`previewer uploader`、`viewer uploader`、`co-owner`、または`owner`です。各ロールについての詳しい説明は、Boxの[サポートドキュメント][support documentation]を参照してください。
 
 </Message>
 
-## Nested objects
+## ネストされたオブジェクト
 
-When creating a collaboration there are two nested objects within the request
-body: `accessible_by` and `item`.
+コラボレーションの作成時には、リクエスト本文に`accessible_by`と`item`という2つのネストされたオブジェクトを使用します。
 
-The `accessible_by` object specifies who the item should be shared with and
-includes a group `id` and the `type`. The `type` field should always be set to
-`group`.
+`accessible_by`オブジェクトは、この項目の共有相手を指定し、グループ`id`と`type`を含みます。`type`フィールドは常に`group`に設定する必要があります。
 
-The `item` object specifies what is being shared. It includes a `type` field
-which should be set as `file` or `folder`, and an `id` for that file or folder.
+`item`オブジェクトは、共有する項目を指定します。このオブジェクトには、`file`または`folder`として設定する必要がある`type`フィールドと、そのファイルまたはフォルダの`id`フィールドがあります。
 
 <!-- i18n-enable localize-links -->
 
-[support documentation]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+[support documentation]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
+
 <!-- i18n-disable localize-links -->

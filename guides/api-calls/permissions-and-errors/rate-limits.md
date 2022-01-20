@@ -21,67 +21,46 @@ next_page_id: api-calls/permissions-and-errors/scopes
 previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/rate-limits.md
+fullyTranslated: true
 ---
-# Rate Limits
+# レート制限
 
-There are three common types of API call rate limitations that Box may use at
-its discretion to best protect network resources and preserve the quality of our
-customer experience.
+API呼び出しのレート制限には一般的に3種類あります。Boxは独自の判断でこの制限を使用して、ネットワークリソースの保護やカスタマーエクスペリエンスの品質維持をうまく実現することができます。
 
-## User based
+## ユーザーベース
 
-These rate limits protect our service from issues that may arise when a single
-user generates too much traffic. The number of API calls that a user can make in
-a minute is limited as described below. These limits apply to all Box user
-accounts and are the most common. Generally, they are initiated when a
-user exceeds approximately 1000 API calls/minute, but certain API endpoints may
-have different rate limits.
+このレート制限を使用すると、1人のユーザーによって生成されるトラフィックが多すぎる場合に発生する可能性のある問題からBoxサービスが保護されます。ユーザーが1分間に実行できるAPI呼び出しの数は、以下で説明するように制限されています。このレート制限は最も一般的で、すべてのBoxユーザーアカウントに適用されます。通常、ユーザーの1分あたりのAPI呼び出しが1,000を超えると、この制限が開始されますが、特定のAPIエンドポイントには別のレート制限が適用されている可能性があります。
 
-## Quality of service
+## サービスの品質
 
-These rate limits are designed to protect the quality of service of our
-infrastructure. If there is resource contention in the infrastructure, we
-introduce automatic rate limits to prevent system degradation and outages.
-For instance, if an application happens to be accessing the same physical
-database server, such as the use of a file migration tool accessing related
-resources that access the same underlying physical resources, Box may impose
-temporary rate-limits when load spikes and adjust them as the system recovers.
+このレート制限は、Boxのインフラストラクチャのサービスの品質を保護することを目的としています。インフラストラクチャ内でリソースの競合が生じると、システムの性能低下や機能停止を防ぐために自動のレート制限が導入されます。たとえば、アプリケーションが偶然同じ物理データベースサーバーにアクセスした場合 (アクセス先が同じ物理リソースである関連リソースにアクセスするファイル移行ツールの使用など)、Boxでは、負荷が急増したときに一時的なレート制限が課せられ、システムの復旧に合わせて調整されることがあります。
 
-## Licensing based
+## ライセンスベース
 
-All Box Business Plans come with a licensed number of permitted API calls per
-enterprise per month. These license based rate limits are designed to prevent
-excessive overages and misuse of network resources. If Box's infrastructure
-detects that a tool used by or on behalf of a customer has exceeded that
-customer's API license allocation or is intending to circumvent network
-controls, additional selective rate-limiting may be imposed. You can see the
-default API allocations licensed with a particular account level at our
-[pricing page][pricing], but note that some customers purchase Platform API
-Pricing plans that increase their allocation.
+すべてのBox Businessプランでは、1か月あたり1社ごとに許可されるAPI呼び出しの数がライセンスされています。このライセンスベースのレート制限は、ネットワークリソースの過剰供給や乱用を防ぐことを目的としています。顧客が使用するツールや顧客のために使用されるツールがその顧客のAPIライセンス割り当てを超過しているか、ネットワーク管理を回避しようとしていることがBoxのインフラストラクチャで検出されると、さらに対象を絞ったレート制限が課せられる場合があります。Boxの[価格ページ][pricing]では、特定のアカウントレベルでライセンスされているデフォルトのAPI割り当てを確認できますが、割り当てを増やすためにPlatform APIの価格プランを購入する顧客もいることに注意してください。
 
-## Per API rate limits
+## APIごとのレート制限
 
-There are currently a few distinct rate limits in place within the Box API.
+現在、Box APIにはいくつかの異なるレート制限があります。
 
-* General API calls
-  * 1000 API requests per minute, per user
-* Uploads
-  * 240 file upload requests per minute, per user
-* Search
-  * 6 searches per second, per user, to the [search endpoint][search]
-  * Two additional limits are applied on top of the basic rate limit
-    * 60 searches per minute, per user
-    * 12 searches per second, per enterprise
+* 一般的なAPI呼び出し
+  * 1ユーザーあたりのAPIリクエストは1000件/分
+* アップロード
+  * 1ユーザーあたりのファイルアップロードリクエストは240件/分
+* 検索
+  * [検索エンドポイント][search]に対して、1ユーザーあたりの検索数は6件/秒
+  * 基本のレート制限に加えてさらに2つの制限が適用
+    * 1ユーザーあたりの検索数は60件/分
+    * 会社あたりの検索数は12件/秒
 * Box Sign
-  * Create and resend sign request: 100 requests per minute, per user
-  * Get sign request: 1000 requests per minute, per user
+  * 署名リクエストの作成と再送信: 1ユーザーあたりのリクエスト数は100件/分
+  * 署名リクエストの取得: 1ユーザーあたりのリクエスト数は1,000件/分
 
-## Rate limit error
+## レート制限エラー
 
-When an application hits a rate limit, the API will return an API response with
-a HTTP status code of `429 Too Many Requests`.
+アプリケーションがレート制限に達すると、APIは、HTTPステータスコードが`429 Too Many Requests`のAPIレスポンスを返します。
 
-The response will include the following headers and JSON body.
+レスポンスには以下のヘッダーとJSON本文が含まれます。
 
 ```yaml
 retry-after: 100
@@ -98,15 +77,14 @@ retry-after: 100
 }
 ```
 
-Please see the [Client Error resource](resource://client_error) for more details.
+詳細については、[クライアントエラーのリソース](resource://client_error)を参照してください。
 
-<Message type='notice'>
+<Message type="notice">
 
-The `retry-after` header provides guidance on the number of seconds to wait
-before the next API call can be retried. In general, we advise using an
-exponential back-off strategy for retrying API calls.
+`retry-after`ヘッダーでは、次のAPI呼び出しが再試行可能になるまで待機する秒数を指示します。一般的には、API呼び出しの再試行に指数バックオフ戦略を使用することをお勧めします。
 
 </Message>
 
 [search]: e://get_search
+
 [pricing]: https://www.box.com/pricing

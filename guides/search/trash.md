@@ -15,18 +15,17 @@ next_page_id: search/shared-links
 previous_page_id: search/enterprise
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/7-trash.md
+fullyTranslated: true
 ---
-# Searching trash
+# ごみ箱の検索
 
-By default, any content in the user's trash is ignored in the search results.
-To search the user's trash, the `trash_content` query parameter can be set to
-`trashed_only`.
+検索結果では、デフォルトで、ユーザーのごみ箱内のコンテンツは無視されます。ユーザーのごみ箱を検索するには、`trash_content`クエリパラメータを`trashed_only`に設定します。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&trash_content=trashed_only" \
@@ -35,7 +34,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&trash_content=trashed
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 long offsetValue = 0;
@@ -51,7 +50,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
@@ -60,7 +59,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, trash_content="trashed_only")
@@ -68,7 +67,7 @@ client.search().query("sales", metadata_filters=metadata_search_filters, trash_c
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 client.search.query(
@@ -89,8 +88,6 @@ client.search.query(
 
 <Message info>
 
-Currently the API only supports searching for content not in the trash
-(`non_trashed_only`, default) or in the user's trash (`trashed_only`). It is
-currently not possible to search for items in both locations at once.
+現在、APIでサポートされているのは、ごみ箱にないコンテンツの検索 (`non_trashed_only`、デフォルト) かユーザーのごみ箱にあるコンテンツの検索 (`trashed_only`) のみです。現時点では、その両方の場所にある項目を同時に検索することはできません。
 
 </Message >

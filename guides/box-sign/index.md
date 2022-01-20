@@ -12,77 +12,70 @@ next_page_id: ''
 previous_page_id: box-sign/cancel-sign-request
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/index.md
+fullyTranslated: true
 ---
 # Box Sign
 
-Programmatically harness the full functionality of the Box Sign web app
-experience by leveraging Box Sign’s API endpoints to create, list, resend, and
-cancel sign requests.
+署名リクエストの作成、リスト取得、再送信、キャンセルを実行するBox SignのAPIエンドポイントを使用することで、Box Signウェブアプリの全機能をプログラムによって利用できます。
 
-## Enablement
+## 有効化
 
-<Message type='warning'>
+<Message type="warning">
 
-Box Sign is now available on all business (Business , Business Plus) and
-enterprise (Enterprise, Enterprise Plus, Enterprise Suites) plans. Box will
-notify customers before Box Sign becomes available on Starter plans.
+Box Signは、すべてのBusinessプラン (Business、Business Plus) およびEnterpriseプラン (Enterprise、Enterprise Plus、Enterprise Suites) でご利用いただけるようになりました。StarterプランでBox Signが利用可能になる際は、事前にお客様にご案内いたします。
 
 </Message>
 
-If your account type supports access to Box Sign, you will be able to make
-requests via the Box Sign API. Supported tariffs include: Business, Business
-Plus, Enterprise, Enterprise Suites, Enterprise Plus, or Starter. To locate your
-account type, navigate to **Account Settings** and scroll down to the
-**Account Details** section of the **Account** tab. For Admin details on
-restricting access, please see our [support article][restrict].  
+アカウントの種類でBox Signへのアクセスがサポートされている場合は、Box Sign APIを使用してリクエストを行うことができます。サポートされているタリフには、Business、Business Plus、Enterprise、Enterprise Suites、Enterprise Plus、Starterが含まれます。アカウントの種類を確認するには、\[**アカウント設定**] に移動し、\[**アカウント**] タブの \[**アカウントの詳細**] セクションまで下にスクロールします。管理者向けのアクセス制限の詳細については、[サポート記事][restrict]を参照してください。  
 
-## Required Scopes
+## 必須のスコープ
 
-The following [scopes][scopes] must be enabled for an application before use of
-Box Sign's endpoints.
+Box Signのエンドポイントを使用する前に、アプリケーションで以下の[スコープ][scopes]を有効にする必要があります。
 
-- [Read all files and folders stored in Box][read]
-- [Write all files and folders stored in Box][write]
-- [Manage signature requests][sign]
+* [Boxに格納されているすべてのファイルとフォルダの読み取り][read]
+* [Boxに格納されているすべてのファイルとフォルダの書き込み][write]
+* [署名リクエストの管理][sign]
 
-<Message type='warning'>
+<Message type="warning">
 
-Depending on the selected authentication method and enterprise's settings,
-your application may require Admin authorization or re-authorization before
-successful use of any newly selected scopes.
+選択した認証方法や企業の設定によっては、新たに選択したスコープを使用する前に、アプリケーションで管理者の承認または再承認が必要になる場合があります。
 
 </Message>
 
-## Events
+## イベント
 
-Please see our [events guide][eg] for more information.
+詳細については、[イベントガイド][eg]を参照してください。
 
-## Rate Limits
+## レート制限
 
-Please see our [rate limit guide][ratelimit] for more information.
+詳細については、[レート制限ガイド][ratelimit]を参照してください。
 
-## Testing
+## テスト
 
-Due to the feature parity, it may be useful to familiarize yourself with
-[Box Sign functionality using the Box web app][webapp] before leveraging the
-API. As with all API endpoints, we recommend testing via
-[developer sandbox environment][sandbox] to eliminate the risk of impacting
-production content.
+機能が同等であるため、APIを利用する前に、[Boxウェブアプリを使用してBox Signの機能][webapp]をよく理解しておくと役に立つかもしれません。すべてのAPIエンドポイントと同様に、実稼働環境のコンテンツに影響を及ぼすリスクを取り除くため、[開発者サンドボックス環境][sandbox]でテストすることをお勧めします。
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
+
 [write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
+
 [sign]: g://api-calls/permissions-and-errors/scopes/#manage-signature-requests
+
 <!-- i18n-enable localize-links -->
 
-[restrict]: https://support.box.com/hc/en-us/articles/4404076971155-Enabling-Box-Sign
+[restrict]: https://support.box.com/hc/ja/articles/4404076971155-Box-Signの有効化
+
 <!-- i18n-disable localize-links -->
 
 [ratelimit]: g://api-calls/permissions-and-errors/rate-limits/#per-api-rate-limits
+
 <!-- i18n-enable localize-links -->
 
-[webapp]: https://support.box.com/hc/en-us/articles/4404105810195-Sending-a-document-for-signature
-[sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
+[webapp]: https://support.box.com/hc/ja/articles/4404105810195-署名用ドキュメントの送信
+
+[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者サンドボックスの管理
+
 <!-- i18n-disable localize-links -->
 
 [eg]: g://events/event-triggers/sign-events

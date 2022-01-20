@@ -22,15 +22,14 @@ next_page_id: collaborations/allowed-domains/delete
 previous_page_id: collaborations/allowed-domains/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/allowed-domains/list.md
+fullyTranslated: true
 ---
-# List allowed domains for collaboration
+# コラボレーションが許可されているドメインのリストの取得
 
-Listing the domains that are allowed for collaboration will return all domains
-that permit collaborations to be created with the current enterprise.
+コラボレーションが許可されているドメインのリストを取得すると、現在の会社でのコラボレーションの作成を許可するドメインがすべて返されます。
 
-There are no required parameters for the request, but `limit` and `market`
-parameters may optionally be set to limit and page through the full result set.
+リクエストに必須のパラメータはありませんが、オプションで`limit`および`market`パラメータを設定すると、結果セット全体を制限してページ単位で表示できます。
 
-<Samples id='get_collaboration_whitelist_entries' >
+<Samples id="get_collaboration_whitelist_entries">
 
 </Samples>

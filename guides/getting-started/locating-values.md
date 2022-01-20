@@ -20,84 +20,64 @@ next_page_id: getting-started/branding-guidelines
 previous_page_id: getting-started/architecture-patterns
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/locating-values.md
+fullyTranslated: true
 ---
-# Locating Common Values
+# 一般的な値の確認
 
-## User IDs
+## ユーザーID
 
-### As a developer
+### 開発者の場合
 
-To locate your own user ID via the Box web app, navigate to your **All Files**
-page. Click the circle in the top right corner and select **Account Settings**
-from the dropdown menu. Your user ID is the **Account ID** value listed in the
-**Account Details** section of the **Account** tab.
+Boxウェブアプリで自分のユーザーIDを確認するには、\[**すべてのファイル**] ページに移動し、右上隅の円をクリックして、ドロップダウンメニューから \[**アカウント設定**] を選択します。ユーザーIDは、\[**アカウント**] タブの \[**アカウントの詳細**] セクションに表示されている \[**アカウントID**] の値です。
 
-To locate your user ID via API, navigate to the Developer Console and generate
-a [Developer Token][devtoken] or obtain an [Access Token][at] for yourself. Use
-this token with the [get current user endpoint][currentuser], which will
-return your user ID in the `id` field.
+APIを使用してユーザーIDを確認するには、開発者コンソールに移動し、[開発者トークン][devtoken]を生成するか、自分で[アクセストークン][at]を取得します。このトークンを[現在のユーザーを取得エンドポイント][currentuser]で使用すると、`id`フィールドにユーザーIDが返されます。
 
-### As an Admin
+### 管理者の場合
 
-If your account type provides access to the [Content Manager][contentmanager],
-click on the user in question from user list. The URL will
-reveal their user ID. For example,
-`https://.app.box.com/master/content/2267862105/0/0`, the user ID is
-`2267862105`.
+自分のアカウントの種類で[コンテンツマネージャ][contentmanager]にアクセスできる場合は、ユーザーリストで当該ユーザーをクリックします。URLでユーザーIDが示されます。たとえば、`https://.app.box.com/master/content/2267862105/0/0`の場合、ユーザーIDは`2267862105`です。
 
-To locate user IDs via API, navigate to the Developer Console and generate
-a [Developer Token][devtoken] or obtain an [Access Token][at] for yourself.
-Then, make an API call to the [list enterprise users][leu] endpoint. This will
-provide a list of all users in your enterprise.
+APIを使用してユーザーIDを確認するには、開発者コンソールに移動し、[開発者トークン][devtoken]を生成するか、自分で[アクセストークン][at]を取得します。その後、[企業ユーザーのリストを取得][leu]エンドポイントに対してAPI呼び出しを実行します。これにより、企業内のすべてのユーザーのリストが返されます。
 
 ## Enterprise ID
 
-### As a developer
+### 開発者の場合
 
-To find your enterprise ID via API, navigate to the Developer Console and
-generate a [Developer Token][devtoken] or obtain an [Access Token][at] for
-yourself. Use this token with the [get current user endpoint][currentuser] and
-request the `enterprise` field.
+APIを使用してEnterprise IDを取得するには、開発者コンソールに移動し、[開発者トークン][devtoken]を生成するか、自分で[アクセストークン][at]を取得します。このトークンを[現在のユーザーを取得エンドポイント][currentuser]で使用し、`enterprise`フィールドをリクエストします。
 
-### As an Admin
+### 管理者の場合
 
-From the **Admin Console**, navigate to the **Account & Billing Tab**. The
-Enterprise ID is located under the **Account Information** section.
+**管理コンソール**で、\[**アカウントと請求**] タブに移動します。Enterprise IDは、\[**アカウント情報**] セクションにあります。
 
-## Content IDs
+## コンテンツID
 
-### As a developer
+### 開発者の場合
 
-To locate a file ID via the Box web app, navigate to the file's
-preview in your browser and look at the URL. For example, the file ID of
-`https://app.box.com/file/1234567890` is `1234567890`.
+BoxウェブアプリでファイルIDを確認するには、ブラウザでファイルのプレビューに移動し、URLを確認します。たとえば、`https://app.box.com/file/1234567890`のファイルIDは`1234567890`です。
 
-To locate a folder ID via the Box web app, navigate into the folder and
-look at the URL. For example, the folder ID of
-`https://app.box.com/folder/9876543210` is `9876543210`.
+BoxウェブアプリでフォルダIDを確認するには、フォルダに移動し、URLを確認します。たとえば、`https://app.box.com/folder/9876543210`のフォルダIDは`9876543210`です。
 
-To locate content IDs via the API, you may want to start by listing all items at
-the All Files level by passing `0` as the `folder_id` of the
-[list items in folder][lif] endpoint.
+APIを使用してコンテンツIDを確認するには、まず、[フォルダ内の項目のリストを取得][lif]エンドポイントの`folder_id`として`0`を渡すことで、\[すべてのファイル] レベルの全項目のリストを取得します。
 
-### As an Admin
+### 管理者の場合
 
-If you have access to the [Content Manager][contentmanager], click on the user
-in question from the user list and then navigate to the content. The URL will
-reveal the folder and/or file id. For example,
-`https://app.box.com/master/content/1987212562/88560510648/0/532181212706`.
-The User ID is `1987212562`, the folder ID is `88560510648` and the file ID
-within that folder is `532181212706`.
+[コンテンツマネージャ][contentmanager]にアクセスできる場合は、ユーザーリストで当該ユーザーをクリックしてから、コンテンツに移動します。URLにフォルダ/ファイルIDが示されます。たとえば、`https://app.box.com/master/content/1987212562/88560510648/0/532181212706`の場合、ユーザーIDは`1987212562`、フォルダIDは`88560510648`、そのフォルダ内のファイルIDは`532181212706`です。
 
 <!-- i18n-enable localize-links -->
 
-[contentmanager]: https://support.box.com/hc/en-us/articles/360044197333-Using-the-Content-Manager
+[contentmanager]: https://support.box.com/hc/ja/articles/360044197333-コンテンツマネージャの使用
+
 <!-- i18n-disable localize-links -->
 
 [currentuser]: e://get-users-me
+
 [devtoken]: g://authentication/tokens/developer-tokens
+
 [uo]: e://resources/user
+
 [uo-full]: e://resources/user--full
+
 [at]: g://authentication/tokens/access-tokens
+
 [leu]: e://get-users
+
 [lif]: e://get-folders-id-items

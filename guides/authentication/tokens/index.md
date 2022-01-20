@@ -18,53 +18,54 @@ next_page_id: authentication/tokens/api-calls
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/index.md
+fullyTranslated: true
 ---
-# Tokens
+# トークン
 
-At the core of every Box API call is an Access Token.
-Similar to using the Box Web App, you will only be able to successfully interact
-with content the user associated with the Access Token either a collaborator on
-or owns. This can be further restricted by [downscoping][ds] a token.
+さまざまなBox API呼び出しの中核となるのはアクセストークンです。Boxウェブアプリを使用する場合と同様に、問題なく操作できるのは、アクセストークンに関連付けられたユーザーが所有するコンテンツまたはコラボレータとなっているコンテンツのみです。これは、トークンの[ダウンスコープ][ds]によってさらに制限できます。
 
 <Message warning>
 
-Application scopes, application access, enabled advanced settings, user
-permissions, and endpoint-specific restrictions all work together to determine
-which API calls will be successful. For example, even if a user has
-collaborator access to a folder, a call to get information about the folder
-will not be successful if the read scope is not granted to the application.
+アプリケーションスコープ、アプリケーションアクセス、有効化された詳細設定、ユーザー権限、およびエンドポイント固有の制限は、すべてが合わさることで、どのAPI呼び出しが成功するかが決まります。たとえば、フォルダに対するコラボレータアクセス権限がユーザーにある場合でも、読み取りスコープがアプリケーションに許可されていなければ、そのフォルダに関する情報を取得する呼び出しは失敗します。
 
 </Message>
 
-## Types of tokens
+## トークンの種類
 
-| Type                     | Duration           |
-| ------------------------ | ------------------ |
-| [Access Token][at]       | 60 minutes         |
-| [Refresh Token][rt]      | 60 days or one use |
-| [Developer Token][dt]    | 60 minutes         |
+| 型              | 有効期間        |
+| -------------- | ----------- |
+| [アクセストークン][at] | 60分         |
+| [更新トークン][rt]   | 60日または1回の使用 |
+| [開発者トークン][dt]  | 60分         |
 
-## Application Types & Access Tokens
+## アプリケーションの種類とアクセストークン
 
-The following shows how each application type is expected to create an Access
-Token.
+それぞれのアプリケーションの種類でどのようにアクセストークンが作成されるのかを以下に示します。
 
 <!-- markdownlint-disable line-length -->
 
-| Box Application Type                  | How to get Access Token                          |
-| ------------------------------------- | ------------------------------------------------ |
-| Custom App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
-| Custom App + JWT                      | [Exchange a JWT assertion][jwt-with-sdk]         |
-| Custom App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
-| Limited Access App + App Token        | Configure token in [Developer Console][devcon]   |
-| Custom Skill                          | Access Token in event payload                    |
+| Boxアプリケーションの種類       | アクセストークンの取得方法                          |
+| -------------------- | -------------------------------------- |
+| カスタムアプリとOAuth 2.0    | [明示的なユーザーによる付与][oauth2-with-sdk]       |
+| カスタムアプリとJWT          | [JWTアサーションの交換][jwt-with-sdk]           |
+| カスタムアプリとクライアント資格情報許可 | [クライアントIDとクライアントシークレットの使用][clientcred] |
+| アクセス制限付きアプリとアプリトークン  | [開発者コンソール][devcon]でのトークンの構成            |
+| カスタムスキル              | イベントペイロードのアクセストークン                     |
+
 <!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/oauth2/without-sdk
+
 [oauth2-with-sdk]: g://authentication/oauth2/without-sdk
+
 [devcon]: https://app.box.com/developers/console
+
 [clientcred]: g://authentication/client-credentials
+
 [ds]: g://authentication/tokens/downscope
+
 [at]: g://authentication/tokens/access-tokens
+
 [rt]: g://authentication/tokens/refresh
+
 [dt]: g://authentication/tokens/developer-tokens

@@ -12,28 +12,28 @@ next_page_id: ''
 previous_page_id: trash/permanently-delete-web-link
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/trash/index.md
+fullyTranslated: true
 ---
-# Trash
+# ごみ箱
 
-Before items are deleted they might end up in a user's trash. The trash can be
-managed by a user through any of the Box apps, and by an application via the
-API.
+項目が削除される前に、ユーザーのごみ箱に入れられる可能性があります。ごみ箱は、ユーザーがBoxアプリを使用して、またはアプリケーションによってAPI経由で管理できます。
 
-## Two-stage Deletion Process
+## 2段階の削除プロセス
 
-Box uses a two-stage process to remove or **trash** [files], [folders], and
-[web links] before permanently deleting them.
+Boxでは、[ファイル][files]、[フォルダ][folders]、および[ウェブリンク][web links]を**ごみ箱に移動**し、その後で完全削除するという2段階のプロセスを使用します。
 
-By default, items can be restored after they are **trashed** within a 30 day
-time frame before they are **purged**. The purge window can be modified by
-an enterprise administrator.
+デフォルトでは、項目は**ごみ箱に移動**された後、30日間は復元可能です。この期間が経過すると**ごみ箱から削除**されます。会社の管理者は削除までの期間を変更することができます。
 
-More details can be found in the Box community article on [Managing Trash]
+詳細については、Boxコミュニティの[ごみ箱の管理][Managing Trash]を参照してください。
 
 [files]: e://delete_files_id
+
 [folders]: e://delete_folders_id
+
 [web links]: e://delete_web_links_id
+
 <!-- i18n-enable localize-links -->
 
-[Managing Trash]: https://support.box.com/hc/en-us/articles/360044196093-Manage-Trash
+[Managing Trash]: https://support.box.com/hc/ja/articles/360044196093-ごみ箱の管理
+
 <!-- i18n-disable localize-links -->

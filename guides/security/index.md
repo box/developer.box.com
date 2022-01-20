@@ -24,210 +24,172 @@ next_page_id: ''
 previous_page_id: security/cors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/index.md
+fullyTranslated: true
 ---
-# Security
+# セキュリティ
 
-Whether your are a developer getting started with the Box API or a Box Admin
-tasked with [authorizing][auth] applications, it is critical you understand the
-security mechanisms in place to protect content stored in Box.
+Box APIを使い始めたばかりの開発者でも、アプリケーションの[承認][auth]を担当するBox管理者でも、Boxに保存されたコンテンツを保護するためにセキュリティメカニズムを理解することは非常に重要です。
 
-The Box API follows the same security principals and restrictions as the Box web
-app. This means that you will not be able to bypass content [permissions][perm],
-the [waterfall folder structure][waterfall], or Admin-only requirements by
-leveraging the Box API.
+Box APIは、Boxウェブアプリと同じセキュリティの原則と制限に従います。つまり、Box APIを利用しても、コンテンツの[権限][perm]、[ウォーターフォール型のフォルダ構造][waterfall]、または管理者向けの要件を回避することはできません。
 
-## Access Tokens
+## アクセストークン
 
-At the core of every Box API call is an [Access Token][at]. Because a username
-and password cannot be used, the Box servers need a way of validating user
-identity. The full capability of an Access Token encompasses user permissions,
-token permissions, and application settings.
+さまざまなBox API呼び出しの中核となるのは[アクセストークン][at]です。ユーザー名とパスワードは使用できないため、Boxサーバーにはユーザーの本人確認を行う手段が必要になります。アクセストークンの全機能には、ユーザーの権限、トークンの権限、アプリケーション設定が含まれます。
 
 <ImageFrame center shadow border>
 
-![Access Token Components](images/token_vendiagram.png)
+![アクセストークンコンポーネント](images/token_vendiagram.png)
 
 </ImageFrame>
 
-Access Tokens represent the authenticated user and determine what content a
-user can successfully call. Similar to using the Box Web App, you will only be
-able to successfully interact with content the user, associated with the Access
-Token, either owns or is a collaborator on. This can be further restricted by
-[downscoping][downscope] a token.
+アクセストークンは認証済みのユーザーを表し、ユーザーが問題なく呼び出すことができるコンテンツを決定します。Boxウェブアプリを使用する場合と同様に、問題なく操作できるのは、アクセストークンに関連付けられたユーザーが所有するコンテンツまたはコラボレータとなっているコンテンツのみです。これは、トークンの[ダウンスコープ][downscope]によってさらに制限できます。
 
-[Access Tokens][at] are only valid for 60 minutes, but can be [revoked][revoked]
-earlier if needed. Once an Access Token expires, when using an OAuth 2.0
-application, a [Refresh Token][rt] can be [exchanged][exchange] for another
-Access Token. Refresh tokens are valid for 60 days or one use. Alternatively,
-when using a server authentication application, the
-[request Access Token endpoint][gettoken] must be called for a new Access Token.
-For security reasons we do not allow long-lived access tokens.
+[アクセストークン][at]の有効期限は60分のみですが、必要に応じてそれより前に[取り消す][revoked]ことができます。アクセストークンの有効期限が切れると、OAuth 2.0アプリケーションを使用している場合、[更新トークン][rt]を別のアクセストークンと[交換][exchange]できます。更新トークンは、60日後または1回の使用後に有効期限が切れます。また、サーバー認証アプリケーションを使用している場合は、新しいアクセストークンを得るために[アクセストークンをリクエストエンドポイント][gettoken]を呼び出す必要があります。セキュリティ上の理由により、Boxでは有効期間の長いアクセストークンを許可していません。
 
-<Message type=tip>
+<message type="tip"></message>
 
-Unsure why you are receiving a 404 error? A great place to start is checking
-to see what user is associated with your Access Token by using the get
-current user endpoint.
+404エラーが発生する理由がわからない場合は、まず、現在のユーザーを取得エンドポイントを使用して、アクセストークンに関連付けられているユーザーを確認することをお勧めします。
 
 </Message>
 
-## Scopes
+## スコープ
 
 <ImageFrame center shadow border>
 
-![Scopes](images/scopes.png)
+![スコープ](images/scopes.png)
 
 </ImageFrame>
 
-[Scopes][scopes] are configured in the [Developer Console][dc] upon application
-creation. They determine which of the 150+ endpoints Access Tokens of an
-application can successfully call.
+[スコープ][scopes]は、アプリケーションの作成時に[開発者コンソール][dc]で設定されます。スコープにより、150を超えるエンドポイントのうち、アプリケーションが問題なく呼び出せるものが決まります。
 
-Because scopes work in conjunction with user permissions, granting the write
-scope does not automatically provide a user with API access to all content in a
-Box enterprise. Instead, it means that the authenticated user can receive
-successful API responses when making write calls to content they have access to.
+スコープはユーザーの権限と連動しているため、書き込みスコープを付与しても、ユーザーは、Box Enterpriseのすべてのコンテンツに自動的にアクセスできるわけではありません。つまり、認証済みユーザーは、アクセス権限を持つコンテンツに対する書き込み呼び出しを実行したときに、成功を示すAPIレスポンスを受け取ることができます。
 
-For example, take an application with only the manage users and manage groups
-scopes enabled. If an Access Token of this application tried to make an API call
-to get information about a folder, even if the associated user owned it, it
-would receive a 403 error. This is because the read scope is required to
-preform this action. Access Tokens of this application could only receive
-successful responses on API calls related to users and groups.
+たとえば、ユーザーの管理およびグループの管理のスコープだけが有効になっているアプリケーションを考えてみましょう。このアプリケーションのアクセストークンがフォルダの情報を取得するAPI呼び出しを実行しようとすると、関連付けられているユーザーがそのフォルダを所有している場合でも、403エラーが返されます。これは、この操作を実行するには読み取りスコープが必要なためです。このアプリケーションのアクセストークンには、ユーザーおよびグループに関連したAPI呼び出しに対してのみ、成功を示すレスポンスが返されます。
 
-## Restricted endpoints
+## 制限されたエンドポイント
 
-There are some API endpoints that only Admins or Co-Admins, granted the
-appropriate [permissions][coadminperm], can successfully use. As a general rule
-of thumb, if only an Admin or Co-Admin can perform an action via the Box Admin
-Console, an Access Token associated with one of these users is required to
-complete an API call for the same action. This is called out in our API
-[reference][reference] documentation for a given endpoint if it is required.
+適切な[権限][coadminperm]を付与された管理者または共同管理者のみが問題なく使用できるAPIエンドポイントがいくつかあります。原則として、管理者または共同管理者だけがBox管理コンソールで実行できる操作の場合、その操作のAPI呼び出しを完了するには、これらのユーザーのいずれかに関連付けられたアクセストークンが必要になります。これについては、必要に応じて、特定のエンドポイントに関するAPI[リファレンス][reference]のドキュメントを参照してください。
 
-Some Admin-restricted endpoints include:
+管理者に制限されたエンドポイントの一部を以下に示します。
 
-- Creating, deleting, or getting information about [users][users]
-- Creating, deleting, or modifying [groups][groups]
-- Viewing user or enterprise [events][events]
+* [ユーザー][users]の作成、削除、またはその情報の取得
+* [グループ][groups]の作成、削除、または変更
+* ユーザーまたは企業の[イベント][events]の表示
 
-Other endpoints can only be used by an Admin user's Access Token if the
-enterprise has purchased add-on products such as Box Governance or Box Shield.
-Some of these endpoints include:
+企業でBox GovernanceやBox Shieldなどのアドオン製品を購入している場合は、以下のように、管理者ユーザーのアクセストークンでのみ使用できるエンドポイントが他にもあります。
 
-- Interacting with [security classifications][sc]
-- Interacting with [legal hold policies][lh] and [assignments][lha]
-- Interacting with [retention policies][retention] and [assignments][rassign]
+* [セキュリティ分類][sc]の操作
+* [リーガルホールドポリシー][lh]と[割り当て][lha]の操作
+* [リテンションポリシー][retention]と[割り当て][rassign]の操作
 
-## Application Access
+## アプリケーションアクセス
 
 <ImageFrame center shadow border>
 
-![Application Access Settings](images/app_access.png)
+![アプリケーションアクセスの設定](images/app_access.png)
 
 </ImageFrame>
 
-Application access is only configured in the [Developer Console][dc] for
-applications leveraging Server Authentication with [JWT)][jwt] or
-[Client Credentials Grant][ccg]. This setting determines the
-[types of users][usertypes] that can be used with the application. The two
-options are **app access only** or **app + enterprise access**.
+サーバー認証 ([JWT][jwt]使用) または[クライアント資格情報許可][ccg]を利用するアプリケーションのアプリケーションアクセスは、[開発者コンソール][dc]でのみ設定できます。この設定により、アプリケーションで使用できる[ユーザーのタイプ][usertypes]が決まります。\[**アプリアクセスのみ**] と \[**アプリ + Enterpriseアクセス**] という2つのオプションがあります。
 
-Upon [authorizing][auth] one of these applications in the Box Admin Console, a
-[Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com)
-representing the application is automatically generated. This account is an
-Admin-like user that can only be accessed via the API and can then be used to
-create user’s of the application called [App Users][appusers]. If an application
-only needs to interact with the Service Account and App Users,
-**app only access** must be selected. If an application needs to interact with
-[managed users][mu] and their existing Box content, app + enterprise access must
-be selected.
+Box管理コンソールでこれらのアプリケーションのいずれかを[承認][auth]すると、そのアプリケーションを表す[サービスアカウント][serviceaccount] ([AutomationUser_xxxx\_@boxdevedition.com](mailto:AutomationUser_xxxx_@boxdevedition.com)) が自動的に生成されます。このアカウントは管理者に似たユーザーで、APIを介してしかアクセスできません。その後、このユーザーを使用して、[App User][appusers]と呼ばれる、アプリケーションのユーザーを作成することができます。サービスアカウントとApp Userのみを操作しなければならないアプリケーションの場合は、\[**アプリアクセスのみ**] を選択します。[管理対象ユーザー][mu]とその既存のBoxコンテンツを操作しなければならないアプリケーションの場合は、\[アプリ + Enterpriseアクセス] を選択します。
 
-As an example, take a JWT application that has the read/write scopes,
-app only access, and is properly [authorized][auth] in the Admin console. If a
-managed user obtains an Access Token and makes an API call to a folder they own,
-that call would receive a 400 error with the message “Cannot obtain token based
-on the enterprise configuration for your app”. Even though the user has access
-to the content, the correct scopes are enabled and the app is authorized,
-the selected application access only allows the application to interact with the
-Service Account and App Users.
+たとえば、読み取り/書き込みスコープと \[アプリアクセスのみ] が指定されたJWTアプリケーションが管理コンソールで適切に[承認][auth]されているとします。管理対象ユーザーがアクセストークンを取得し、自分が所有するフォルダに対してAPI呼び出しを実行すると、「Cannot obtain token based on the enterprise configuration for your app (アプリに対するEnterprise設定に基づきトークンを取得できません)」というメッセージと共に400エラーが返されます。ユーザーにコンテンツへのアクセス権限があり、適切なスコープが有効になっていて、アプリが承認されていても、選択したアプリケーションアクセスで許可されるのは、アプリケーションによるサービスアカウントとApp Userの操作のみです。
 
-## Enterprise settings and authorization
+## Enterprise設定と承認
 
-There are a few enterprise settings to be aware of when it comes to the Box API.
+Box APIに関して言えば、注意すべきEnterprise設定がいくつかあります。
 
 <ImageFrame center shadow border>
 
-![Global App Settings](images/global_apps_settings.png)
+![アプリ全体の設定](images/global_apps_settings.png)
 
 </ImageFrame>
 
-Custom applications fall into two categories: published and unpublished.
-Published applications are found in the [Box App Gallery][appgallery]. Box
-Admins decide whether published and unpublished application are enabled by
-default and therefore can be used without approval. The status of these settings
-determines what actions are necessary to successfully [authorize][auth] an
-application for use.
+カスタムアプリケーションは、公開アプリケーションと未公開アプリケーションという2つのカテゴリに分類されます。公開アプリケーションは、[Boxアプリギャラリー][appgallery]にあります。Box管理者は、公開アプリケーションと未公開アプリケーションをデフォルトで有効にすることによって、承認なしで使用できるようにするかどうかを決定できます。これらの設定のステータスにより、使用するアプリケーションを問題なく[承認][auth]するために必要な操作が決まります。
 
 <ImageFrame center shadow border>
 
-![Admin Console Apps Tab](images/jwt_apps_cam.png)
+![管理コンソールの \[アプリ\] タブ](images/jwt_apps_cam.png)
 
 </ImageFrame>
 
-Regardless of the settings above, in order for an application leveraging
-[JWT][jwt] or [Client Credentials Grant][ccg] to be used by an enterprise, an
-Admin must explicitly [authorize][auth] it via the Box Admin console. The
-authorization is a snapshot in time.  This means that if a developer revisits
-the Developer Console and changes the configuration, the Admin must re-authorize
-the application in order for generated Access Tokens to reflect the changes.
+上記の設定に関係なく、[JWT][jwt]または[クライアント資格情報許可][ccg]を利用するアプリケーションを企業で使用するために、管理者はBox管理コンソールでそのアプリケーションを明示的に[承認][auth]する必要があります。承認は特定時点でのスナップショットです。つまり、開発者が開発者コンソールに再度アクセスして設定を変更した場合、管理者は、生成されたアクセストークンにその変更を反映するためにアプリケーションを再承認する必要があります。
 
-If the setting **Disable unpublished apps by default** is turned on, an Admin
-must also explicitly [enable][auth] any application leveraging
-[OAuth 2.0][oauth] as the authentication method.
+If the setting **Disable unpublished apps by default** is turned on, an Admin must also explicitly [enable][auth] any application leveraging [OAuth 2.0][oauth] as the authentication method.
 
-Additionally, if this setting is turned on, Server Authenticated apps will also
-require enablement.
+Additionally, if this setting is turned on, Server Authenticated apps will also require enablement.
 
 <!-- i18n-enable localize-links -->
 
-[perm]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
-[waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
+[perm]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
+
+[waterfall]: https://support.box.com/hc/ja/articles/360043697254-フォルダの権限について
+
 <!-- i18n-disable localize-links -->
 
 [downscope]: g://authentication/tokens/downscope
+
 [at]: g://authentication/tokens
+
 [revoked]: e://post-oauth2-revoke
+
 [rt]: g://authentication/tokens/refresh
+
 [gettoken]: e://post-oauth2-token
+
 [exchange]: e://reference/post-oauth2-token--refresh/
+
 <!-- i18n-enable localize-links -->
 
-[coadminperm]: https://support.box.com/hc/en-us/articles/360044194393-Granting-And-Modifying-Co-Admin-Permissions
-[reference]: https://developer.box.com/reference/
+[coadminperm]: https://support.box.com/hc/ja/articles/360044194393-共同管理者権限の付与と変更
+
+[reference]: https://ja.developer.box.com/reference/
+
 [dc]: https://app.box.com/developers/console
+
 <!-- i18n-disable localize-links -->
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [users]: e://resources/user
+
 [groups]: e://resources/group
+
 [events]: e://resources/event
+
 [sc]: e://resources/classification
+
 [lh]: e://resources/legal-hold-policy
+
 [lha]: e://resources/legal-hold-policy-assignment
+
 [retention]: e://resources/retention-policies
+
 [rassign]: e://resources/retention-policy-assignment
+
 [jwt]: g://authentication/jwt
+
 [usertypes]: g://getting-started/user-types
+
 [serviceaccount]: g://getting-started/user-types/service-account
+
 [appusers]: g://getting-started/user-types/app-users
+
 [mu]: g://getting-started/user-types/managed-users
+
 [auth]: g://authorization/custom-app-approval
+
 [oauth]: g://authentication/oauth2
+
 [jwt]: g://authentication/jwt
+
 [ccg]: g://authentication/client-credentials
+
 <!-- i18n-enable localize-links -->
 
 [appgallery]: https://app.box.com/services
+
 <!-- i18n-disable localize-links -->
 
 [auth]: g://authorization

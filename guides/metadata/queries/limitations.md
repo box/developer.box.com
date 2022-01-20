@@ -14,65 +14,48 @@ next_page_id: metadata/queries/indexes
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/5-limitations.md
+fullyTranslated: true
 ---
-# Limitations
+# 制限
 
-A few limits apply to the the metadata query APIs.
+メタデータクエリAPIには、いくつかの制限が適用されます。
 
-## Files and folders
+## ファイルとフォルダ
 
-​A metadata query will only return items (files or folders) to which the
-requesting user has at least `previewer` access.
+​メタデータクエリで返されるのは、リクエストしているユーザーが`previewer`以上のアクセス権限を持つ項目 (ファイルまたはフォルダ) のみです。
 
-## Enterprise vs Global templates
+## 会社のテンプレートとグローバルテンプレート
 
-A metadata query only works with metadata templates that have been created by
-that enterprise. A query will not return results based on the content of free
-form key-value pairs stored in the `​global.properties` template.
+メタデータクエリは、その会社によって作成されたメタデータテンプレートでのみ動作します。クエリでは、`​global.properties`テンプレートに保存された自由形式のキー/値ペアのコンテンツに基づく結果が返されません。
 
-## Classification metadata templates
+## 分類メタデータテンプレート
 
-Box uses metadata templates to power its content classification. These metadata
-templates can not be used in metadata queries, as they will most likely run
-into issues regarding large results sets. More on this next.
+Boxでは、メタデータテンプレートを使用してコンテンツの分類を行うことができます。これらのメタデータテンプレートはメタデータクエリでは使用できません。なぜなら、大きな結果セットに関する問題が発生する可能性が高いためです。詳細は次に説明しています。
 
-There are no immediate plans to start supporting these queries in the future.
+当面、将来これらのクエリのサポートを開始する計画はありません。
 
-## Indices for large result sets
+## 大規模な結果セットに対するインデックス
 
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
+規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されている場合、メタデータクエリによって`HTTP 403`エラーが返される可能性があります。
 
-<CTA to='g://metadata/queries/indexes'>
+<CTA to="g://metadata/queries/indexes">
 
-Learn about creating and using search indices
+検索インデックスの作成と使用について確認する
 
 </CTA>
 
-## Recommended result set size
+## 推奨される結果セットのサイズ
 
-Where possible it is recommended to only send requests for which the result
-set is less than 2,000 items.​ The ​result set​ is the entire collection of
-files and folder that match the metadata query exclusively based on evaluating
-the `​from​`, `​query​`, and `​query_params​` parameters - before the requesting
-user’s permissions and the `​ancestor_folder​` scope are considered.
+可能であれば、結果セットの項目数が2,000未満になるリクエストのみを送信することをお勧めします。結果セットは、リクエストするユーザーの権限と`​ancestor_folder​`スコープが考慮される前に、`​from​`、`​query​`および`​query_params​`パラメータの評価だけに基づいてメタデータクエリに一致するファイルとフォルダのコレクション全体です。
 
-When sending a metadata query request for which the result set exceeds 2,000
-items, the API can only guarantee that it returns all all matching results if
-both the following conditions are met.
+結果セットの項目数が2,000を超えるメタデータクエリリクエストを送信した場合、APIは、以下の条件が両方とも満たされる場合に一致する結果をすべて返すことのみを保証できます。
 
-1. The requesting user has at least **​Previewer** ​permission to all items in
-   the result set
-2. The ancestor folder contains all of the files in the result set
+1. リクエストするユーザーが、結果セットに含まれるすべての項目に対して**プレビューアー**以上の権限を持っていること。
+2. 先祖フォルダに、結果セット内のすべてのファイルが含まれていること。
 
-When sending a metadata query request for which the result set exceeds 2,000
-items and for which these conditions are not true, the API might return error
-with a 4XX response code indicating that the query will need to be restricted to
-return fewer results.
+結果セットの項目数が2,000を超えており、上記の条件が当てはまらないメタデータクエリリクエストを送信すると、APIは、返される結果が少なくなるようクエリを制限する必要があることを示すレスポンスコード4XXとともにエラーを返す可能性があります。
 
-For example, consider the following simplified representation of a metadata
-template called `catalogImages​` which has one string field called
-`​photographer`.
+たとえば、次に示す、`catalogImages​`というメタデータテンプレートの簡略化したレプリゼンテーションを考えてみます。これには、`​photographer`という文字列フィールドが1つあります。
 
 ```json
 {
@@ -86,14 +69,9 @@ template called `catalogImages​` which has one string field called
 }
 ```
 
-In this example, assume that there are 10 photographers, each of which have
-captured the same number of images that have the ​`catalogImages​` template
-applied.
+この例では、10人のphotographer (写真家) がいて、それぞれが`catalogImages​`テンプレートが適用されている同じ数の画像を取り込むとします。
 
-Now consider assume that there are 4,000 files in your Box enterprise
-which have the `catalogImages` template ​applied and which are split evenly
-between the two folders,​ `Parts​` and `Products`, ​which are children of the
-parent folder `​Catalog​` as shown below.
+ここで、Box Enterpriseに、`catalogImages`テンプレートが適用され、2つのフォルダ`Parts​`と`Products`に均等に分けられている、4,000個のファイルがあると考えてみます。この2つのフォルダは、以下に示すように親フォルダ`​Catalog​`の子です。
 
 ```sh
 Catalog/
@@ -110,20 +88,17 @@ Catalog/
    |- file_3999.jpeg
 ```
 
-The following table indicates the outcome of several possible queries. The query
-is described in plain language for readability.
+以下の表に、考えられるいくつかのクエリの結果を示します。クエリについては、読みやすくするために平易な言葉で説明しています。
 
-Remember that the ​result set ​is defined as a collection of items (files and
-folders) which match the metadata query exclusively based on evaluating the
-`​from​`, `​query​`, and `​query_params` parameters before the requesting user’s
-permissions and the `​ancestor_folder​` scope are considered.
+結果セットは、リクエストするユーザーの権限と`​ancestor_folder​`スコープが考慮される前に、`​from​`、`​query​`および`​query_params`パラメータの評価だけに基づいてメタデータクエリに一致する項目 (ファイルとフォルダ) のコレクションとして定義されることに注意してください。
 
 <!-- markdownlint-disable line-length -->
 
-| Query                                                                                                      | Result Set  | Outcome  | Notes                                                                                                                         |
-|------------------------------------------------------------------------------------------------------------|-------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
-| Select items with the `catalogImages` ​template where the ​photographer​ is `Mike`                            | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
-| Select items with the `catalogImages` ​template                                                             | 4,000 items | May fail | The result set exceeds 2,000 items. If the user does not have access to all of the files in the result set the query may fail |
-| Select items with the `catalogImages` ​template in the `Products​` folder                                    | 4,000 items | May fail | The result set exceeds 2,000 items and not all results are contained within the ancestor folder.                              |
-| Select items with the `catalogImages` ​template in the `Products` folder where the photographer​ is `Mike`   | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
+| クエリ                                                                  | 結果セット   | 結果        | 注                                                                     |
+| -------------------------------------------------------------------- | ------- | --------- | --------------------------------------------------------------------- |
+| `catalogImages`テンプレートが適用されている、写真家が`Mike`の項目を選択します。                   | 200項目   | 成功        | `Mike`に対応する項目のみを選択することで、結果セットはたった400ファイルに抑えられます。                      |
+| `catalogImages`テンプレートが適用されている項目を選択します。                               | 4,000項目 | 失敗する可能性あり | 結果セットは2,000項目を超えます。ユーザーが結果セット内のすべてのファイルにアクセスできない場合は、クエリが失敗する可能性があります。 |
+| `Products​`フォルダにある、`catalogImages`テンプレートが適用されている項目を選択します。            | 4,000項目 | 失敗する可能性あり | 結果セットは2,000項目を超えます。すべての結果が先祖フォルダに含まれるわけではありません。                       |
+| `Products`フォルダにある、`catalogImages`テンプレートが適用されている、写真家が`Mike`の項目を選択します。 | 200項目   | 成功        | `Mike`に対応する項目のみを選択することで、結果セットはたった400ファイルに抑えられます。                      |
+
 <!-- markdownlint-enable line-length -->

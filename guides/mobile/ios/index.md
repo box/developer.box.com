@@ -14,10 +14,10 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/ios/index.md
+fullyTranslated: true
 ---
 # iOS
 
-The [Box iOS SDK][ios-sdk] provides native access to the Box API from
-within your iOS project.
+[Box iOS SDK][ios-sdk]は、iOSプロジェクト内からBox APIへのネイティブアクセスを提供します。
 
 [ios-sdk]: https://github.com/box/box-ios-sdk

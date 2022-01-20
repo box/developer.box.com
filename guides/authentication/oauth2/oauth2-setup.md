@@ -23,125 +23,106 @@ next_page_id: authentication/oauth2/with-sdk
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/oauth2-setup.md
+fullyTranslated: true
 ---
-# Setup with OAuth 2.0
+# OAuth 2.0を使用した設定
 
-A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication.
+カスタムアプリは、クライアント側の[OAuth 2.0][oauth2]認証を使用するよう設定できます。
 
-<CTA to='g://authentication/oauth2'>
+<CTA to="g://authentication/oauth2">
 
-Learn how OAuth 2.0 authentication works
+OAuth 2.0認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using OAuth 2.0 authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
-account. Alternatively, you may sign up for a [developer account][devaccount].
+OAuth 2.0認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
-## App creation steps
+## アプリの作成手順
 
-### 1. Navigate to the Developer Console
+### 1. 開発者コンソールに移動する
 
-Log into Box and navigate to the
-[Developer Console][devconsole]. Select **Create New App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
 
-### 2. Select the type of application
+### 2. アプリケーションの種類を選択する
 
-Select **Custom App** from the list of application types. A modal will appear to
-prompt a selection for the next step.
+アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
 <ImageFrame border>
 
-![Application selection screen](../images/select-app-type.png)
+![アプリケーションの選択画面](../images/select-app-type.png)
 
 </ImageFrame>
 
-### 3. Select the type of authentication and app name
+### 3. 認証の種類とアプリ名を選択する
 
-Select **User Authentication (OAuth 2.0)** and provide a unique name for your
-application. Click **Create App**.
+\[**ユーザー認証 (OAuth 2.0)**] を選択し、アプリケーションに一意の名前を指定します。\[**アプリの作成**] をクリックします。
 
 <ImageFrame border width="400" center>
 
-![Auth selection screen](../images/custom-app-selection.png)
+![認証の選択画面](../images/custom-app-selection.png)
 
 </ImageFrame>
 
-## Basic configuration
+## 基本的な構成
 
-Before the application can be used, some additional configuration is
-required.
+アプリケーションを使用するには、事前にいくつかの追加構成が必要になります。
 
-### Redirect URI
+### リダイレクトURI
 
-During the OAuth 2.0 flow, users are redirected to their browser to
-authenticate and then authorize the application to take actions on their behalf.
+OAuth 2.0フローの間、ユーザーは、認証のためにブラウザにリダイレクトされた後、アプリケーションが自分の代わりにアクションを実行することを承認します。
 
-Prior to redirecting the user, Box verifies that the `redirect_uri` parameter
-passed into the [authorization URL][url-redirect] matches one of the redirect
-URIs configured for the application. This will be an exact match check, meaning
-the URIs must be exactly the same. Localhost and loopback address redirect URIs
-will be permitted redirect to any port, but the scheme, domain, path and query
-parameters must match one of the configured URIs.
+Boxでは、ユーザーをリダイレクトする前に、[承認URL][url-redirect]に渡された`redirect_uri`パラメータが、アプリケーションに設定されたリダイレクトURIのいずれかと一致することを確認します。完全に一致しているかどうかがチェックされるため、URIはまったく同じである必要があります。localhostおよびループバックアドレスのリダイレクトURIは、どのポートへのリダイレクトも許可されますが、スキーム、ドメイン、パス、およびクエリパラメータは、設定されているURIのいずれかと一致する必要があります。
 
-You can configure these under the OAuth 2.0 Redirect URI section on the
-Configuration page in the developer console. These must be valid URIs that are
-HTTPS, or a less secure HTTP for localhost or loopback address. We do not
-permit duplicate URIs to be saved.
+これらのURIは、開発者コンソールの \[構成] ページにある \[OAuth 2.0リダイレクトURI] セクションで設定できます。有効なHTTPS URIまたは安全性の低いHTTP URI (localhostまたはループバックアドレスの場合) である必要があります。重複するURIの保存は許可されていません。
 
 <Message warning>
 
-Starting November 29, 2021, new applications using OAuth 2.0 will
-require the URIs set in the configuration tab of the Developer Console to
-strictly match the one used during redirect. In addition, both new and
-existing applications, will gain the ability to add multiple redirect URIs.
+日本時間2021年11月30日以降、OAuth 2.0を使用する新規のアプリケーションでは、開発者コンソールの \[構成] タブで設定されたURIとリダイレクト時に使用されるURIが厳密に一致する必要があります。また、そのため新規のアプリケーションと既存のアプリケーションの両方で、複数のリダイレクトURIを追加できるようになります。
 
-For existing applications, the deadline to make changes to this URL to avoid
-service disruption is May 13, 2022.
+既存のアプリケーションでは、サービスの中断を回避するために、日本時間2022年5月14日までにこのURLを変更する必要があります。
 
 </Message>
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-redirect-uri-3.png)
+![アプリ名のフォーム](../images/app-redirect-uri-3.png)
 
 </ImageFrame>
 
-### Application Scopes
+### アプリケーションスコープ
 
-Scopes define what permissions your application has in order to access data. See
-the [scopes guide][scopes] for detailed information on each option.
+スコープを使用して、アプリケーションがデータにアクセスするために必要な権限を定義します。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-scopes.png)
+![アプリ名のフォーム](../images/app-scopes.png)
 
 </ImageFrame>
 
-### CORS Domains
+### CORSドメイン
 
-If your application makes API calls from front-end browser code in
-Javascript, the domain that these calls are made from will need to be
-added to an allow-list due to [Cross Origin Resource Sharing][cors],
-also known as CORS. If all requests will be made from server-side code,
-you may skip this section.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合は、[クロスオリジンリソース共有][cors] (CORS) のために、これらの呼び出しの実行元となるドメインを許可リストに追加する必要があります。すべてのリクエストがサーバー側のコードから発行される場合は、このセクションをスキップできます。
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
-section at the bottom of the **Configuration** tab in the
-[Developer Console][devconsole].
+許可リストにすべてのURIを追加するには、[開発者コンソール][devconsole]の \[**構成**] タブの下部にある \[**CORSドメイン**] セクションに移動します。
 
 <ImageFrame border>
 
-![App name form](../images/app-cors.png)
+![アプリ名のフォーム](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [devtoken]: g://authentication/tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [oauth2]: g://authentication/oauth2
+
 [url-redirect]: e://get-authorize/#param-redirect_uri

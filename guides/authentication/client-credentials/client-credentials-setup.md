@@ -25,121 +25,104 @@ next_page_id: authentication/client-credentials
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/client-credentials/client-credentials-setup.md
+fullyTranslated: true
 ---
-# Setup with Client Credentials Grant
+# クライアント資格情報許可を使用した設定
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
-account. Alternatively, you may sign up for a [developer account][devaccount].
+サーバー側認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
-## App creation steps
+## アプリの作成手順
 
-### 1. Navigate to the Developer Console
+### 1. 開発者コンソールに移動する
 
-Log into Box and navigate to the [Developer Console][devconsole].
-Select **Create New App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
 
-### 2. Select the type of application
+### 2. アプリケーションの種類を選択する
 
-Select **Custom App** from the list of application types. A modal will appear to
-prompt a selection for the next step.
+アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
 <ImageFrame border center>
 
-![Auth selection screen](../images/select-app-type.png)
+![認証の選択画面](../images/select-app-type.png)
 
 </ImageFrame>
 
-### 3. Select the type of authentication and application name
+### 3. 認証の種類とアプリケーション名を選択する
 
-Select **Server Authentication (with Client Credentials Grant)** if you would
-like to verify  application identity with a client ID and client secret. Then,
-provide a name for your application and click **Create App**.
+クライアントIDとクライアントシークレットを使用してアプリケーションIDを確認する場合は、\[**サーバー認証 (クライアント資格情報許可)**] を選択します。その後、アプリケーションの名前を入力し、\[**アプリの作成**] をクリックします。
 
 <Message warning>
 
-Once you make a selection, you will not be able to change to a different
-authentication method without creating a new application.
+選択すると、新しいアプリケーションを作成しない限り、別の認証方法に変更できません。
 
 </Message>
 
-## App Authorization
+## アプリの承認
 
-Before the application can be used, a Box Admin needs to authorize the
-application within the Box Admin Console.
+アプリケーションを使用するには、Box管理者がBox管理コンソールでそのアプリケーションを承認しておく必要があります。
 
-Navigate to the **Authorization** tab for your application within the
-[Developer Console][devconsole].
+[開発者コンソール][devconsole]で、目的のアプリケーションの \[**承認**] タブに移動します。
 
 <ImageFrame border width="400" center>
 
-![Add and Manage keys](../images/app-authorization.png)
+![キーの追加と管理](../images/app-authorization.png)
 
 </ImageFrame>
 
-Click **Review and Submit** to send an email to your Box enterprise Admin for
-approval. More information on this process is available in our
-[authorization guide][app-auth].
+\[**確認して送信**] をクリックして、承認を得るためにBox Enterprise管理者にメールを送信します。このプロセスの詳細については、[承認ガイド][app-auth]を参照してください。
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to="g://authorization/custom-app-approval">
 
-Learn how to authorize a Custom Application
+カスタムアプリケーションの承認方法を確認する
 
 </CTA>
 
-## Basic configuration
+## 基本的な構成
 
-### Application Access
+### アプリケーションアクセス
 
-An application's access level determines which users and content your app may
-access. By default, an application can only successfully interact with the
-content of its [Service Account][sa] and any [App Users][user-types]. To also
-access existing Managed Users of an enterprise, navigate to the
-**Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole] and set to **App + Enterprise Access**. 
+アプリケーションのアクセスレベルにより、アプリからアクセスできるユーザーおよびコンテンツが決まります。デフォルトでは、アプリケーションで問題なく操作できるのは、その[サービスアカウント][sa]とすべての[App User][user-types]のコンテンツのみです。企業の既存の管理対象ユーザーにもアクセスするには、[開発者コンソール][devconsole]の \[**構成**] タブから \[**アプリアクセスレベル**] に移動し、\[**アプリ + Enterpriseアクセス**] に設定します。 
 
 <ImageFrame border>
 
-![App access level](../images/app-access-level.png)
+![アプリのアクセスレベル](../images/app-access-level.png)
 
 </ImageFrame>
 
-### Application Scopes
+### アプリケーションスコープ
 
-An application's scopes determine which endpoints and resources an application
-can successfully call. See the [scopes guide][scopes] for detailed information
-on each option.
+アプリケーションのスコープにより、アプリケーションが呼び出すことができるエンドポイントとリソースが決まります。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
 <ImageFrame border width="600" center>
 
-![App scopes](../images/app-scopes.png)
+![アプリスコープ](../images/app-scopes.png)
 
 </ImageFrame>
 
-### CORS Domains
+### CORSドメイン
 
-If your application makes API calls from front-end browser code in
-Javascript, the domain that these calls are made from will need to be
-added to an allow-list due to [Cross Origin Resource Sharing][cors],
-also known as CORS. If all requests will be made from server-side code,
-you may skip this section.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合は、[クロスオリジンリソース共有][cors] (CORS) のために、これらの呼び出しの実行元となるドメインを許可リストに追加する必要があります。すべてのリクエストがサーバー側のコードから発行される場合は、このセクションをスキップできます。
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
-section at the bottom of the **Configuration** tab in the
-[Developer console][devconsole].
+許可リストに完全なURIを追加するには、[開発者コンソール][devconsole]の \[**構成**] タブの下部にある \[**CORSドメイン**] セクションに移動します。
 
 <ImageFrame border>
 
-![App CORS config](../images/app-cors.png)
+![アプリのCORS設定](../images/app-cors.png)
 
 </ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 [user-types]: g://getting-started/user-types
+
 [sa]: g://getting-started/user-types/service-account
+
 [app-auth]: g://authorization

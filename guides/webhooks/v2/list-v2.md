@@ -21,24 +21,22 @@ next_page_id: webhooks/v2/create-v2
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v2/list-v2.md
+fullyTranslated: true
 ---
-# List Webhooks for a User
+# ユーザーのWebhookのリストを取得
 
-To fetch all webhooks for the authenticated user, use the [list all webhooks][1]
-endpoint.
+認証済みユーザーのすべてのWebhookを取得するには、[すべてのWebhookのリストを取得][1]エンドポイントを使用します。
 
-<Samples id='get_webhooks' >
+<Samples id="get_webhooks">
 
 </Samples>
 
-<Message type='warning'>
+<Message type="warning">
 
-This endpoint requires the application to have the "Manage Webhooks" scope
-enabled.
+このエンドポイントを使用するには、アプリケーションの \[Webhookを管理する] スコープが有効になっている必要があります。
 
 </Message>
 
-This API call will only list the webhooks for the authenticated user, not
-for any other users in the enterprise.
+このAPI呼び出しは、認証済みユーザーのWebhookのみをリストし、会社内の他のユーザーのWebhookはリストしません。
 
 [1]: endpoint://get_webhooks

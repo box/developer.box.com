@@ -24,111 +24,89 @@ next_page_id: authentication/jwt/with-sdk
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/jwt-setup.md
+fullyTranslated: true
 ---
-# Setup with JWT
+# JWTを使用した設定
 
-A Custom App can be set up to use server-side authentication with
-[JWT][jwt].
+カスタムアプリは、[JWT][jwt]によるサーバー側認証を使用するよう設定できます。
 
-<CTA to='g://authentication/jwt'>
+<CTA to="g://authentication/jwt">
 
-Learn how JWT authentication works
+JWT認証のしくみを確認する
 
 </CTA>
 
-## Prerequisites
+## 前提条件
 
-To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
-account. Alternatively, you may sign up for a [developer account][devaccount].
+サーバー側認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
-## App creation steps
+## アプリの作成手順
 
-### 1. Navigate to the Developer Console
+### 1. 開発者コンソールに移動する
 
-Log into Box and navigate to the [Developer Console][devconsole].
-Select **Create New App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
 
-### 2. Select the type of application
+### 2. アプリケーションの種類を選択する
 
-Select **Custom App** from the list of application types. A modal will appear to
-prompt a selection for the next step.
+アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
 <ImageFrame border center>
 
-![Auth selection screen](../images/select-app-type.png)
+![認証の選択画面](../images/select-app-type.png)
 
 </ImageFrame>
 
-### 3. Select the type of authentication and application name
+### 3. 認証の種類とアプリケーション名を選択する
 
-Select **Server Authentication (with JWT)** if you would like to verify
-application identity [with a key pair][kp]. Then, provide a name for your
-application and click **Create App**.
+[キーペアを使用して][kp]アプリケーションIDを確認する場合は、\[**サーバー認証 (JWT使用)**] を選択します。その後、アプリケーションの名前を入力し、\[**アプリの作成**] をクリックします。
 
 <Message warning>
 
-Once you make a selection, you will not be able to change to a different
-authentication method without creating a new application.
+選択すると、新しいアプリケーションを作成しない限り、別の認証方法に変更できません。
 
 </Message>
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/jwt-three-options.png)
+![アプリ名のフォーム](../images/jwt-three-options.png)
 
 </ImageFrame>
 
-## Public and private key pair
+## 公開キーと秘密キーのペア
 
 <Message>
 
-This section can be skipped if you selected Server Authentication
-(Client Credentials Grant) as your authentication method.
+このセクションは、認証方法として \[サーバー認証 (クライアント資格情報許可)] を選択した場合はスキップできます。
 
 </Message>
 
-Once a Custom App is created leveraging Server Authentication with JWT, a key
-pair can be generated via the configuration tab within the
-[Developer Console][devconsole]. Alternatively, you can generate your
-own and supply Box with the public key. Regardless of the method you select,
-your Box account will need to have [2FA][2fa] enabled for security purposes.
+\[サーバー認証 (JWT使用)] を利用してカスタムアプリを作成すると、[開発者コンソール][devconsole]の \[構成] タブでキーペアを生成できます。また、独自のキーペアを生成して、その公開キーをBoxに提供することもできます。選択する方法に関係なく、セキュリティの目的で、Boxアカウントでは[2FA][2fa]を有効にしておく必要があります。
 
-### Generate a keypair (Recommended)
+### キーペアの生成 (推奨)
 
-If you would like to use a Box generated keypair, navigate to the
-[Developer Console][devconsole] where you can generate a configuration file.
-This file includes a public/private keypair and a number of other application
-details that are necessary for authentication.
+Boxで生成されたキーペアを使用する場合は、[開発者コンソール][devconsole]に移動し、そこで構成ファイルを生成できます。このファイルには、公開/秘密キーペアのほか、認証に必要なその他さまざまなアプリケーションの詳細が含まれています。
 
-To generate this file, navigate to the **Configuration** tab of the
-[Developer Console][devconsole] and scroll down to the
-**Add and Manage Public Keys** section.
+このファイルを生成するには、[開発者コンソール][devconsole]の \[**構成**] タブに移動し、\[**公開キーの追加と管理**] セクションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![Add and Manage keys](../images/app-add-keys.png)
+![キーの追加と管理](../images/app-add-keys.png)
 
 </ImageFrame>
 
-Click the **Generate a Public/Private Keypair** button to have Box generate a
-keypair you. This will trigger the download of a JSON configuration file that
-you can move to your application code.
+\[ **公開/秘密キーペアを生成**] ボタンをクリックすると、Boxによってキーペアが生成されます。これにより、アプリケーションコードに移すことができるJSON構成ファイルのダウンロードが開始されます。
 
 <Message danger>
 
-For security reasons, Box will not store your private key. If you lose your
-private key, you will need to reset the entire keypair.
+セキュリティ上の理由により、Boxには秘密キーが保存されません。秘密キーを紛失した場合は、キーペア全体のリセットが必要になります。
 
 </Message>
 
-### Manually add keypair
+### 手動によるキーペアの追加
 
-Alternatively, you may generate your own keypair and upload the public key to
-the [Developer Console][devconsole].
+代わりに、独自のキーペアを生成し、その公開キーを[開発者コンソール][devconsole]にアップロードすることもできます。
 
-To create a keypair using OpenSSL, open a terminal window and run the
-following commands.
+OpenSSLを使用してキーペアを作成するには、ターミナルウィンドウを開き、以下のコマンドを実行します。
 
 ```shell
 openssl genrsa -des3 -out private.pem 2048
@@ -137,122 +115,114 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 
 <Message>
 
-# For Windows Systems
+# Windowsシステムの場合
 
-Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
+Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールして使用することで、OpenSSLを実行できます。
 
 </Message>
 
-Then, navigate to the configuration tab for your application within the
-[Developer console][devconsole] and scroll down to the
-**Add and Manage Public Keys** section.
+その後、[開発者コンソール][devconsole]でアプリケーションの \[構成] タブに移動し、\[**公開キーの追加と管理**] セクションまで下にスクロールします。
 
 <ImageFrame border width="600" center>
 
-![Add and Manage keys](../images/app-add-keys.png)
+![キーの追加と管理](../images/app-add-keys.png)
 
 </ImageFrame>
 
-Click the **Add a Public Key** button, enter the public key generated using the
-steps above and click **Verify and Save**.
+\[**公開キーを追加**] ボタンをクリックし、上記の手順で生成された公開キーを入力して、\[**確認して保存**] をクリックします。
 
-## App Authorization
+## アプリの承認
 
-Before the application can be used, a Box Admin needs to authorize the
-application within the Box Admin Console.
+アプリケーションを使用するには、Box管理者がBox管理コンソールでそのアプリケーションを承認しておく必要があります。
 
-Navigate to the **Authorization** tab for your application within the
-[Developer Console][devconsole].
+[開発者コンソール][devconsole]で、目的のアプリケーションの \[**承認**] タブに移動します。
 
 <ImageFrame border width="400" center>
 
-![App authorization](../images/app-authorization.png)
+![アプリの承認](../images/app-authorization.png)
 
 </ImageFrame>
 
-Click **Review and Submit** to send an email to your Box enterprise Admin for
-approval. More information on this process is available in our
-[support article for app authorization][app-auth].
+\[**確認して送信**] をクリックして、承認を得るためにBox Enterprise管理者にメールを送信します。このプロセスの詳細については、[アプリの承認に関するサポート記事][app-auth]を参照してください。
 
-<CTA to='g://authorization/custom-app-approval'>
+<CTA to="g://authorization/custom-app-approval">
 
-Learn how to authorize a Custom Application
+カスタムアプリケーションの承認方法を確認する
 
 </CTA>
 
-## Basic configuration
+## 基本的な構成
 
-### Application Access
+### アプリケーションアクセス
 
-An application's access level determines which users and content your app may
-access. By default, an application can only successfully interact with the
-content of its [Service Account][sa] and any [App Users][user-types]. To also
-access existing Managed Users of an enterprise, navigate to the
-**Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole] and set to **App + Enterprise Access**. 
+アプリケーションのアクセスレベルにより、アプリからアクセスできるユーザーおよびコンテンツが決まります。デフォルトでは、アプリケーションで問題なく操作できるのは、その[サービスアカウント][sa]とすべての[App User][user-types]のコンテンツのみです。企業の既存の管理対象ユーザーにもアクセスするには、[開発者コンソール][devconsole]の \[**構成**] タブから \[**アプリアクセスレベル**] に移動し、\[**アプリ + Enterpriseアクセス**] に設定します。 
 
 <ImageFrame border>
 
-![App access level](../images/app-access-level.png)
+![アプリのアクセスレベル](../images/app-access-level.png)
 
 </ImageFrame>
 
-### Application Scopes
+### アプリケーションスコープ
 
-An application's scopes determine which endpoints and resources an application
-can successfully call. See the [scopes guide][scopes] for detailed information
-on each option.
+アプリケーションのスコープにより、アプリケーションが呼び出すことができるエンドポイントとリソースが決まります。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
 <ImageFrame border width="600" center>
 
-![App scopes](../images/app-scopes.png)
+![アプリスコープ](../images/app-scopes.png)
 
 </ImageFrame>
 
-### CORS Domains
+### CORSドメイン
 
-If your application makes API calls from front-end browser code in
-Javascript, the domain that these calls are made from will need to be
-added to an allow-list due to [Cross Origin Resource Sharing][cors],
-also known as CORS. If all requests will be made from server-side code,
-you may skip this section.
+アプリケーションがJavaScriptでフロントエンドのブラウザコードからAPI呼び出しを実行する場合は、[クロスオリジンリソース共有][cors] (CORS) のために、これらの呼び出しの実行元となるドメインを許可リストに追加する必要があります。すべてのリクエストがサーバー側のコードから発行される場合は、このセクションをスキップできます。
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
-section at the bottom of the **Configuration** tab in the
-[Developer console][devconsole].
+許可リストに完全なURIを追加するには、[開発者コンソール][devconsole]の \[**構成**] タブの下部にある \[**CORSドメイン**] セクションに移動します。
 
 <ImageFrame border>
 
-![App CORS config](../images/app-cors.png)
+![アプリのCORS設定](../images/app-cors.png)
 
 </ImageFrame>
 
 <!-- i18n-enable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
+
 [devaccount]: https://account.box.com/signup/n/developer
+
 <!-- i18n-disable localize-links -->
 
 [devtoken]: g://authentication/tokens/developer-tokens
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 <!-- i18n-enable localize-links -->
 
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
 <!-- i18n-disable localize-links -->
 
 [user-types]: g://getting-started/user-types
+
 [sa]: g://getting-started/user-types/service-account
+
 <!-- i18n-enable localize-links -->
 
 [cygwin]: http://www.cygwin.com/
-[app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293
+
+[app-auth]: https://support.box.com/hc/ja/articles/360043697014-Boxのアプリ承認プロセスでのアプリの承認
+
 <!-- i18n-disable localize-links -->
 
 [jwt]: g://authentication/jwt
+
 <!-- i18n-enable localize-links -->
 
-[2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
+[2fa]: https://support.box.com/hc/ja/articles/360043697154-アカウントの多要素認証の設定
+
 <!-- i18n-disable localize-links -->
 
 [kp]: g://authentication/jwt/without-sdk/#public-and-private-key-pair
+
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant

@@ -18,32 +18,27 @@ next_page_id: metadata/quick-start/create-query
 previous_page_id: metadata/quick-start/update-instance
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/5-update-template.md
+fullyTranslated: true
 ---
-# Update a metadata template
+# メタデータテンプレートの更新
 
-Let's look at how we can update an existing metadata template.
+既存のメタデータテンプレートの更新方法を見てみましょう。
 
-Updates to metadata templates are performed through **operations** rather than
-directly changing the template itself. This method allows you to update any
-existing metadata instances that are already applied to files and folders.
+メタデータテンプレートの更新は、テンプレート自体を直接変更するのではなく、**操作**を利用して実行されます。この方法では、ファイルおよびフォルダにすでに適用されている既存のメタデータインスタンスを更新できます。
 
-<CTA to='g://metadata/templates/update'>
+<CTA to="g://metadata/templates/update">
 
-Learn more about updating templates
+テンプレートの更新の詳細を確認する
 
 </CTA>
 
-In this case, let's assume that we realized that having a `Name` field is a bit
-ambiguous, and so we to change the `Name` field of the `customerInfo` template
-to `Company Name` instead. By using the `editField` operation we can change the
-`displayName` and the `key` of the field on the template and on every instance
-of the template that might be applied to a file or folder.
+この場合は、`Name`フィールドが少しあいまいであることを認識しているため、`customerInfo`テンプレートの`Name`フィールドを`Company Name`に変更したいとしましょう。`editField`操作を使用することで、テンプレートと、ファイルまたはフォルダに適用されている可能性のあるテンプレートのすべてのインスタンスのフィールドの`displayName`および`key`を変更できます。
 
 <!-- markdownlint-disable line-length -->
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```sh
 curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTemplate/schema \
@@ -63,7 +58,7 @@ curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTempl
 
 </Tab>
 
-<Tab title='.NET'>
+<Tab title=".NET">
 
 ```c#
 var updates = new List<BoxMetadataTemplateUpdate>()
@@ -84,7 +79,7 @@ BoxMetadataTemplate updatedTemplate = await client.MetadataManager
 
 </Tab>
 
-<Tab title='Java'>
+<Tab title="Java">
 
 ```java
 List<MetadataTemplate.FieldOperation> updates = new ArrayList<MetadataTemplate.FieldOperation>();
@@ -97,7 +92,7 @@ MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updat
 
 </Tab>
 
-<Tab title='Python'>
+<Tab title="Python">
 
 ```py
 template = client.metadata_template('enterprise', 'customerData')
@@ -108,7 +103,7 @@ template.update_info(updates)
 
 </Tab>
 
-<Tab title='Node'>
+<Tab title="Node">
 
 ```js
 var operations = [
@@ -135,7 +130,7 @@ client.metadata.updateTemplate(
 
 </Tabs>
 
-The API will return the updated metadata template.
+このAPIにより、更新されたメタデータテンプレートが返されます。
 
 ```json
 {
@@ -177,9 +172,7 @@ The API will return the updated metadata template.
 }
 ```
 
-Updating the template through operations has the benefit that any instance of
-the template is automatically updated as well. In this case, the instance we
-created in previous steps would now look something like this.
+操作によってテンプレートを更新した場合は、テンプレートのインスタンスもすべて自動的に更新されるという利点があります。この場合、前の手順で作成したインスタンスは次のようになります。
 
 ```json
 {
@@ -201,6 +194,6 @@ created in previous steps would now look something like this.
 
 <Next>
 
-I've updated metadata to a file
+ファイルのメタデータを更新しました
 
 </Next>

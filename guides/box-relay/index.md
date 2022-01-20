@@ -12,66 +12,66 @@ next_page_id: ''
 previous_page_id: box-relay/start-workflow
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-relay/index.md
+fullyTranslated: true
 ---
 # Box Relay
 
-[Box Relay][boxrelay] is a workflow automation application that enables Box
-power users to automate and accelerate business processes centered
-around content. Currently, there are two API [endpoints][workflow] developers
-can use with more planned to be released in the future. Both were created to
-work directly with [manual start flows][manualstart].
+[Box Relay][boxrelay]はワークフロー自動化アプリケーションです。これを使用すると、Boxのパワーユーザーは、コンテンツが中心のビジネスプロセスを自動化してスピードアップすることができます。現在、開発者が使用できるAPI [エンドポイント][workflow]は2つありますが、ほかにも今後リリースが予定されているものがあります。2つとも[手動開始フロー][manualstart]に直接動作するよう作成されました。
 
-<Message type='notice'>
+<Message type="notice">
 
-For more information on how to use these endpoints, refer to our [blog][blog]
-post.
+これらのエンドポイントの使用方法の詳細については、Boxの[ブログ][blog]記事を参照してください。
 
 </Message>
 
-## Required Scopes
+## 必須のスコープ
 
-The following [scopes][scopes] must be enabled for an application before use of
-Box Relay's endpoints.
+Box Relayのエンドポイントを使用する前に、アプリケーションで以下の[スコープ][scopes]を有効にする必要があります。
 
-- [Read all files and folders stored in Box][read]
-- [Write all files and folders stored in Box][write]
-- [Manage Box Relay][relay]
+* [Boxに格納されているすべてのファイルとフォルダの読み取り][read]
+* [Boxに格納されているすべてのファイルとフォルダの書き込み][write]
+* [Box Relayを管理する][relay]
 
-<Message type='warning'>
+<Message type="warning">
 
-Depending on the selected authentication method and enterprise's settings,
-your application may require Admin authorization or re-authorization before
-successful use of any newly selected scopes.
+選択した認証方法や企業の設定によっては、新たに選択したスコープを使用する前に、アプリケーションで管理者の承認または再承認が必要になる場合があります。
 
 </Message>
 
-## Rate Limits
+## レート制限
 
-Please see our [rate limit guide][ratelimit] for more information.
+詳細については、[レート制限ガイド][ratelimit]を参照してください。
 
-## Testing
+## テスト
 
-Due to the feature parity, it may be useful to familiarize yourself with
-[Box Relay functionality using the Box web app][webapp] before leveraging the
-API. As with all API endpoints, we recommend testing via
-[developer sandbox environment][sandbox] to eliminate the risk of impacting
-production content.
+機能は同等であるため、APIを利用する前に、[BoxウェブアプリでBox Relay機能][webapp]に慣れておくと役に立つ可能性があります。さまざまなAPIエンドポイントと同様、実稼働環境のコンテンツに影響を及ぼすリスクを排除するために[開発者用サンドボックス環境][sandbox]でテストすることをお勧めします。
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [read]: g://api-calls/permissions-and-errors/scopes/#read-all-files-and-folders
+
 [write]: g://api-calls/permissions-and-errors/scopes/#read-and-write-all-files-and-folders
+
 [ratelimit]: g://api-calls/permissions-and-errors/rate-limits/#per-api-rate-limits
+
 <!-- i18n-enable localize-links -->
 
-[webapp]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
-[sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins
+[webapp]: https://support.box.com/hc/ja/articles/360044628853-手動で開始するワークフローの作成と実行
+
+[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者サンドボックスの管理
+
 <!-- i18n-disable localize-links -->
 
 [relay]: g://api-calls/permissions-and-errors/scopes/#manage-box-relay
+
 <!-- i18n-enable localize-links -->
 
-[boxrelay]: https://support.box.com/hc/en-us/articles/360044196213-Introducing-Box-Relay
-[workflow]: https://developer.box.com/reference/resources/workflow/
-[manualstart]: https://support.box.com/hc/en-us/articles/360044628853-Creating-and-Running-a-Manual-Start-Workflow
-[blog]: https://medium.com/box-developer-blog/manual-start-workflow-api-box-relay-4f8d0f51b7a4
+[boxrelay]: https://support.box.com/hc/ja/articles/360044196213-Box-Relayの概要
+
+[workflow]: https://ja.developer.box.com/reference/resources/workflow/
+
+[manualstart]: https://support.box.com/hc/ja/articles/360044628853-手動で開始するワークフローの作成と実行
+
+[blog]: https://medium.com/@Box_Developers/手動開始ワークフローapiとbox-relay-64f9136f1682
+
 <!-- i18n-disable localize-links -->

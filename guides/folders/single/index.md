@@ -18,7 +18,8 @@ next_page_id: folders/single/update
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/index.md
+fullyTranslated: true
 ---
-# Single Folders
+# 単一フォルダ
 
-The following pages discuss how to do various single folder methods.
+以下のページでは、単一フォルダに対するさまざまな操作方法について説明します。

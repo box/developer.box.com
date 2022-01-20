@@ -23,113 +23,102 @@ next_page_id: events/user-events/polling
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/user-events/for-user.md
+fullyTranslated: true
 ---
-# Get User Events
+# User Eventの取得
 
-To get a user's events, authenticate as any user and make a call to the
-[`GET /events`](e://get_events) API.
+User Eventを取得するには、任意のユーザーとして認証し、[`GET /events`](e://get_events) APIを呼び出します。
 
-<Samples id="get_events" >
+<Samples id="get_events">
 
 </Samples>
 
 <Message>
 
-The events returned will only be for the user who's access token the API was
-made with. To get the event feed for a different user either use the `as-user`
-header or an actual access token for that user.
+返されるイベントは、APIの作成に使用したアクセストークンを所有するユーザーのみを対象とします。別のユーザーのイベントフィードを取得するには、`as-user`ヘッダーか、そのユーザーの実際のアクセストークンを使用します。
 
 </Message>
 
-## Stream Types
+## ストリームタイプ
 
-The user event stream support 3 types of stream.
+User Event Streamでは、3つのタイプのストリームがサポートされます。
 
 <!-- markdownlint-disable line-length -->
 
-| Stream Type |                                                                                         |
-|-------------|-----------------------------------------------------------------------------------------|
-| `all`       | Returns everything for a user (default)                                                 |
-| `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
-| `sync`      | Is similar to changes but only applies to synced folders                                |
+| ストリームタイプ  |                                                 |
+| --------- | ----------------------------------------------- |
+| `all`     | ユーザーに関するすべてのイベントを返します (デフォルト)。                  |
+| `changes` | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します。 |
+| `sync`    | 変更に似ていますが、同期対象フォルダにのみ適用されます。                    |
 
 <!-- markdownlint-enable line-length -->
 
-## Anonymous Users
+## 匿名ユーザー
 
-In some cases, the event feed might list a user with an ID of `2`. This is Box's
-internal identifier for anonymous users.
+場合によっては、イベントフィードには、IDが`2`のユーザーが表示される可能性があります。これは、匿名ユーザーを表すBoxの内部識別子です。
 
-An anonymous user is a user that is not logged in. This can happen any time a
-user interacts with content and they aren't asked to log in first. An example
-would be when a user downloads a file through an open shared link.
+匿名ユーザーは、ログインしていないユーザーです。この状況は、ユーザーがコンテンツを操作し、最初にログインを求められない場合にいつでも発生する可能性があります。たとえば、ユーザーが、公開共有リンクを使用してファイルをダウンロードするときなどです。
 
-## Limitations
+## 制限
 
-Box does not store events indefinitely.
+Boxでのイベントの保存は無期限ではありません。
 
-User events are stored for between two weeks and two months, after which the
-user events are removed. Enterprise events are accessible for one year via the
-API and seven years via exported reports in the Box Admin Console.
+User Eventは2週間から2か月間保存され、その後、保存されたUser Eventは削除されます。Enterprise Eventには、APIを介した場合は1年間、Box管理コンソールのエクスポートされたレポート経由の場合は7年間アクセスできます。
 
-The emphasis of this feed is to return the complete results quickly, which means
-that Box may return events more than once or out of order. Duplicate events can
-be identified by their event IDs.
+このフィードでは、完全な結果を迅速に返すことを重視しています。つまり、Boxではイベントを複数回または異なる順序で返す可能性があります。重複するイベントは、イベントIDによって識別できます。
 
-## Long Polling
+## Long polling
 
-The user event stream supports long-polling
-[through the `OPTIONS /events` API][longpoll].
+User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long pollingがサポートされます。
 
-## Event Types
+## イベントタイプ
 
-The following events can be triggered for a user. This list is not exhaustive,
-so it is possible events appear that are not listed.
+ユーザーに対して、以下のイベントがトリガーされます。このリストですべてを網羅しているわけではないため、記載されていないイベントが表示される可能性もあります。
 
 <!-- markdownlint-disable line-length -->
 
-The following events are available in all feeds.
+以下のイベントは、すべてのフィードで使用できます。
 
-| Event name                   | Description                                                                     |
-|------------------------------|---------------------------------------------------------------------------------|
-| `ITEM_CREATE`                | A folder or File was created                                                    |
-| `ITEM_UPLOAD`                | A folder or File was uploaded                                                   |
-| `ITEM_MOVE`                  | A file or folder was moved                                                      |
-| `ITEM_COPY`                  | A file or folder was copied                                                     |
-| `LOCK_CREATE`                | A file was locked                                                               |
-| `LOCK_DESTROY`               | A file was unlocked. If a locked file is deleted, the source file will be null. |
-| `ITEM_TRASH`                 | A file or folder was marked as deleted                                          |
-| `ITEM_UNDELETE_VIA_TRASH`    | A file or folder was recovered out of the trash                                 |
-| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder                                            |
-| `COLLAB_ROLE_CHANGE`         | A collaborator had their role changed                                           |
-| `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          |
-| `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                        |
-| `ITEM_SYNC`                  | A folder was marked for sync                                                    |
-| `ITEM_UNSYNC`                | A folder was unmarked for sync                                                  |
-| `ITEM_RENAME`                | A file or folder was renamed                                                    |
-| `ITEM_MAKE_CURRENT_VERSION`  | A previous version of a file was promoted to the current version                |
-| `GROUP_ADD_USER`             | Added user to group                                                             |
-| `GROUP_REMOVE_USER`          | Removed user from group                                                         |
+| イベント名                        | 説明                                                   |
+| ---------------------------- | ---------------------------------------------------- |
+| `ITEM_CREATE`                | フォルダまたはファイルが作成されました。                                 |
+| `ITEM_UPLOAD`                | フォルダまたはファイルがアップロードされました。                             |
+| `ITEM_MOVE`                  | ファイルまたはフォルダが移動されました。                                 |
+| `ITEM_COPY`                  | ファイルまたはフォルダがコピーされました。                                |
+| `LOCK_CREATE`                | ファイルがロックされました。                                       |
+| `LOCK_DESTROY`               | ファイルがロック解除されました。ロックされたファイルが削除されると、ソースファイルはnullになります。 |
+| `ITEM_TRASH`                 | ファイルまたはフォルダが削除済みとしてマークされました。                         |
+| `ITEM_UNDELETE_VIA_TRASH`    | ファイルまたはフォルダがごみ箱から戻されました。                             |
+| `COLLAB_ADD_COLLABORATOR`    | コラボレータがフォルダに追加されました。                                 |
+| `COLLAB_ROLE_CHANGE`         | コラボレータのロールが変更されました。                                  |
+| `COLLAB_INVITE_COLLABORATOR` | コラボレータがフォルダに招待されました。                                 |
+| `COLLAB_REMOVE_COLLABORATOR` | コラボレータがフォルダから削除されました。                                |
+| `ITEM_SYNC`                  | フォルダが同期対象としてマークされました。                                |
+| `ITEM_UNSYNC`                | フォルダが同期対象のマークを解除されました。                               |
+| `ITEM_RENAME`                | ファイルまたはフォルダの名前が変更されました。                              |
+| `ITEM_MAKE_CURRENT_VERSION`  | 前のバージョンのファイルが現在のバージョンに昇格されました。                       |
+| `GROUP_ADD_USER`             | グループへのユーザーの追加                                        |
+| `GROUP_REMOVE_USER`          | グループからのユーザーの削除                                       |
 
-The following events are only available in the `all` feed.
+以下のイベントは、`all`フィードでのみ使用できます。
 
-| Event name               | Description                                               |
-|--------------------------|-----------------------------------------------------------|
-| `COMMENT_CREATE`         | A comment was created on a folder, file, or other comment |
-| `COMMENT_DELETE`         | A comment was deleted on folder, file, or other comment   |
-| `ITEM_DOWNLOAD`          | A file or folder was downloaded                           |
-| `ITEM_PREVIEW`           | A file was previewed                                      |
-| `TASK_ASSIGNMENT_CREATE` | A task was assigned                                       |
-| `TASK_CREATE`            | A task was created                                        |
-| `ITEM_SHARED_CREATE`     | A file or folder was enabled for sharing                  |
-| `ITEM_SHARED_UNSHARE`    | A file or folder was disabled for sharing                 |
-| `ITEM_SHARED`            | A folder was shared                                       |
-| `TAG_ITEM_CREATE`        | A Tag was added to a file or folder                       |
-| `ENABLE_TWO_FACTOR_AUTH` | 2 factor authentication enabled by user.                  |
-| `MASTER_INVITE_ACCEPT`   | Free user accepts invitation to become a managed user.    |
-| `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user.    |
-| `ACCESS_GRANTED`         | Granted Box access to account.                            |
-| `ACCESS_REVOKED`         | Revoke Box access to account.                             |
+| イベント名                    | 説明                                   |
+| ------------------------ | ------------------------------------ |
+| `COMMENT_CREATE`         | フォルダ、ファイル、または他のコメントに対するコメントが作成されました。 |
+| `COMMENT_DELETE`         | フォルダ、ファイル、または他のコメントに対するコメントが削除されました。 |
+| `ITEM_DOWNLOAD`          | ファイルまたはフォルダがダウンロードされました。             |
+| `ITEM_PREVIEW`           | ファイルがプレビューされました。                     |
+| `TASK_ASSIGNMENT_CREATE` | タスクが割り当てられました。                       |
+| `TASK_CREATE`            | タスクが作成されました。                         |
+| `ITEM_SHARED_CREATE`     | ファイルまたはフォルダの共有が有効化されました。             |
+| `ITEM_SHARED_UNSHARE`    | ファイルまたはフォルダの共有が無効化されました。             |
+| `ITEM_SHARED`            | フォルダが共有されました。                        |
+| `TAG_ITEM_CREATE`        | タグがファイルまたはフォルダに追加されました。              |
+| `ENABLE_TWO_FACTOR_AUTH` | ユーザーによって2要素認証が有効化されました。              |
+| `MASTER_INVITE_ACCEPT`   | 管理対象ユーザーになるための招待が無料版ユーザーによって承認されました。 |
+| `MASTER_INVITE_REJECT`   | 管理対象ユーザーになるための招待が無料版ユーザーによって拒否されました。 |
+| `ACCESS_GRANTED`         | アカウントに対するBoxのアクセス権限が付与されました。         |
+| `ACCESS_REVOKED`         | アカウントに対するBoxのアクセス権限が取り消されました。        |
 
 <!-- markdownlint-enable line-length -->
 

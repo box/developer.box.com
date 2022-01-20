@@ -21,30 +21,25 @@ next_page_id: ''
 previous_page_id: events/event-triggers/shield-alert-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/sign-events.md
+fullyTranslated: true
 ---
-# Sign Events
+# Signイベント
 
-Audit Box Sign events using the enterprise events stream. For more information
-about Box Sign please visit our [guide][sign-guide].
+Box Signイベントの監査には、Enterprise Event Streamを使用します。Box Signの詳細については、[ガイド][sign-guide]を参照してください。
 
 <Message warning>
 
-The status received may differ from the example `additional_details` payloads
-below based on the specific sign request details. For example, if the
-requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
-event will immediately be `viewed` instead of `sent`.
+返されるステータスは、具体的な署名リクエストの詳細に応じて、以下の`additional_details`ペイロードの例とは異なる場合があります。たとえば、リクエスト送信者が唯一の署名者の場合は、`SIGN_DOCUMENT_CREATED`イベントのステータスがすぐに`sent`ではなく`viewed`になります。
 
 </Message>
 
-## Document Events
+## ドキュメントイベント
 
-### Created
+### 作成
 
-A `SIGN_DOCUMENT_CREATED` `event_type` is produced when a sign request is
-created via API or UI. At this stage the sign request is not sent to signers
-yet.
+APIまたはUIを使用して署名リクエストが作成されると、`SIGN_DOCUMENT_CREATED` `event_type`が生成されます。この段階ではまだ署名リクエストは署名者に送信されません。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -75,12 +70,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Converted
+### 変換
 
-A `SIGN_DOCUMENT_CONVERTED` `event_type` is produced when a sign request is
-converted to a `.pdf` for signing.
+署名リクエストが署名用の`.pdf`に変換されると、`SIGN_DOCUMENT_CONVERTED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -111,12 +105,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Completed
+### 完了
 
-A `SIGN_DOCUMENT_COMPLETED` `event_type` is produced when all signers have
-successfully signed the document.
+署名者全員がドキュメントへの署名を正常に完了すると、`SIGN_DOCUMENT_COMPLETED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -146,12 +139,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Cancelled
+### キャンセル
 
-A `SIGN_DOCUMENT_CANCELLED` `event_type` is produced when a sign request is
-cancelled by the requester via API or UI.
+リクエスト送信者がAPIまたはUIで署名リクエストをキャンセルすると、`SIGN_DOCUMENT_CANCELLED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -181,12 +173,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Expired
+### 期限切れ
 
-A `SIGN_DOCUMENT_EXPIRED` `event_type` is produced when a sign request expired
-with incomplete signatures.
+署名が完了しないまま署名リクエストが期限切れになると、`SIGN_DOCUMENT_EXPIRED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -216,14 +207,13 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-## Signer Events
+## 署名者イベント
 
-### Assigned
+### 割り当て
 
-A `SIGN_DOCUMENT_ASSIGNED` `event_type` is produced when a sign request is
-successfully sent to a signer.
+署名リクエストが問題なく署名者に送信されると、`SIGN_DOCUMENT_ASSIGNED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -258,13 +248,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Viewed by Signer
+### 署名者による表示
 
-A `SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type` is produced when a sign request
-signer clicks on **Review Document** in the signing email or visits the signing
-URL.
+署名リクエストの署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスすると、`SIGN_DOCUMENT_VIEWED_BY_SIGNER` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -299,48 +287,9 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Downloaded
+### ダウンロード
 
-A `SIGNER_DOWNLOADED` `event_type` is produced when a signer downloads the
-signing document.
-
-```json
-"additional_details": {
-    "sign_request": {
-        "status": "viewed",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        }
-    }
-}
-```
-
-### Forwarded
-
-A `SIGNER_FORWARDED` `event_type` is produced when a signer downloads the
-signing document.
+署名者が署名用ドキュメントをダウンロードすると、`SIGNER_DOWNLOADED` `event_type`が生成されます。
 
 ```json
 "additional_details": {
@@ -375,12 +324,48 @@ signing document.
 }
 ```
 
-### Signed
+### 転送
 
-A `SIGN_DOCUMENT_SIGNED` `event_type` is produced when a signer completes the
-sign request.
+署名者が署名用ドキュメントをダウンロードすると、`SIGNER_FORWARDED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+```json
+"additional_details": {
+    "sign_request": {
+        "status": "viewed",
+        "signer_ip_address": "",
+        "requestor_ip_address": "",
+        "files": [
+            {
+                "id": "1234567890",
+                "type": "file",
+                "name": "example_doc.pdf",
+                "parent": {
+                    "id": "987654321",
+                    "type": "folder"
+                }
+            }
+        ],
+        "requestor": {
+            "id": "13579246",
+            "type": "user",
+            "name": "John Doe",
+            "login": "johndoe@box.com"
+        },
+        "signer": {
+            "id": "246813579",
+            "type": "user",
+            "name": "Jane Doe",
+            "login": "janedoe@example.com"
+        }
+    }
+}
+```
+
+### 署名
+
+署名者が署名リクエストを完了すると、`SIGN_DOCUMENT_SIGNED` `event_type`が生成されます。
+
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {
@@ -415,12 +400,11 @@ The`additional_details` payload will provide the following details:
 }
 ```
 
-### Declined
+### 拒否
 
-A `SIGN_DOCUMENT_DECLINED` `event_type` is produced when a sign request signer
-declines the request.
+署名リクエストの署名者がリクエストを拒否すると、`SIGN_DOCUMENT_DECLINED` `event_type`が生成されます。
 
-The`additional_details` payload will provide the following details:
+`additional_details`ペイロードは以下の詳細を示します。
 
 ```json
 "additional_details": {

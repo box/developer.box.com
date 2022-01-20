@@ -12,164 +12,130 @@ next_page_id: box-sign/list-sign-requests
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/create-sign-request.md
+fullyTranslated: true
 ---
-# Create Box Sign Request
+# Box Signのリクエストの作成
 
-At a minimum, using the [create Box Sign request endpoint][create] requires
-selecting a file for signature, a destination folder for the signed
-document/[signing log][log], and designating signers.
+[Box Signのリクエストを作成エンドポイント][create]を使用するには、少なくとも、署名用ファイルのほか、署名済みドキュメント/[署名ログ][log]の保存先フォルダを選択し、署名者を指定する必要があります。
 
-<Samples id='post_sign_requests' >
+<Samples id="post_sign_requests">
 
 </Samples>
 
-## Files
+## ファイル
 
-Each Box Sign request begins with a file that needs to be signed. If the file
-does not already exist in Box, it must be [uploaded][upload], in a separate
-API call, prior to creating the request. At this time, only one file can be
-signed per request. This file ID is specified in the `source_files` body
-parameter.
+Box Signの各リクエストは、署名が必要なファイルから始まります。そのファイルがまだBoxに存在しない場合は、リクエストを作成する前に、別のAPI呼び出しでファイルを[アップロード][upload]する必要があります。現時点では、1つのリクエストにつき署名できるファイルは1つだけです。このファイルIDは、`source_files`本文パラメータで指定されます。
 
-<Message type='warning'>
+<Message type="warning">
 
-The requester must have download privileges to the file in Box. Please review
-our [collaboration levels][collab] to ensure this requirement is met.
+リクエスト送信者は、Box内のファイルに対してダウンロード権限を持っている必要があります。この要件を満たしているかどうかを確認するには、[コラボレーションレベル][collab]を確認してください。
 
 </Message>
 
-Supported file types include:
+サポートされているファイルタイプは以下のとおりです。
 
-- All [documents][documents]
-- All [presentations][presentations]
-- Images: `png`, `jpg`, `jpeg`, `tiff` only
-- Text-based files: `.csv`, `.txt` only
+* すべての[ドキュメント][documents]
+* すべての[プレゼンテーション][presentations]
+* 画像: `png`、`jpg`、`jpeg`、`tiff`のみ
+* テキストベースのファイル: `.csv`、`.txt`のみ
 
-All file types are converted to `.pdf` for the signature process. This converted
-document can be found in the `parent_folder` upon successfully sending a
-request. This means that the final, signed document is a `.pdf` regardless of
-the original file type. As each signer completes the request, Box Sign will
-automatically add a new file version.
+すべてのファイルタイプは、署名の処理のために`.pdf`に変換されます。この変換後のドキュメントは、リクエストの送信が成功した場合は、`parent_folder`に見つかります。つまり、元のファイルタイプに関係なく、最終的な署名済みドキュメントは`.pdf`になります。各署名者がリクエストを完了すると、Box Signにより新しいファイルバージョンが自動的に追加されます。
 
-File size limits are determined by your account type. Please see our
-[uploads guide][uploads] for more information. 
+ファイルサイズの上限は、アカウントの種類によって決まります。詳細については、[アップロードガイド][uploads]を参照してください。 
 
-## Parent folder
+## 親フォルダ
 
-The folder ID specified in the `parent_folder` body parameter determines the
-destination of the final signed document and [signing log][log]. This folder
-cannot be the All Files or root level, which is represented by folder ID `0`. 
+`parent_folder`本文パラメータで指定されたフォルダIDによって、最終的な署名済みドキュメントと[署名ログ][log]の保存先が決まります。このフォルダには、フォルダID `0`で表される \[すべてのファイル] やルートレベルを指定することができません。 
 
-## Signers
+## 署名者
 
-Each signer must be assigned a [role][role]:  signer, approver, or final copy
-reader.
+各署名者には、[役割][role]として、署名者、承認者、または最終的なコピー受信者を割り当てる必要があります。
 
-If the requester is not given a role, a signer with the role `final_copy_reader`
-is automatically created. This means they only receive a copy of the final,
-signed document and [signing log][log].
+リクエスト送信者に役割が指定されていない場合は、`final_copy_reader`という役割の署名者が自動的に作成されます。つまり、最終的な署名済みドキュメントと[署名ログ][log]のコピーを受信するだけです。
 
-Signers do not need to have an existing Box account, nor create one, in order to
-sign documents. Unlike other API endpoints, signers are invited by email address
-and not Box `user_id`. 
+署名者は、ドキュメントに署名するために、既存のBoxアカウントを持っている必要も、アカウントを作成する必要もありません。他のAPIエンドポイントとは異なり、署名者はBox `user_id`ではなくメールアドレスを使用して招待されます。 
 
-<Message type='warning'>
+<Message type="warning">
 
- 
-Box Sign will only attempt to send signing emails to the email addresses
-provided for signers in the request. For Box users, this does not include email
-aliases unless specified. Please double check to ensure all provided signer
-email addresses are valid.
+Box Signは、リクエストで指定された署名者のメールアドレスに署名用メールを送信しようとするだけです。Boxユーザーの場合、指定しない限り、メールエイリアスは含まれません。指定された署名者のメールアドレスすべてが有効であることを再確認してください。
 
 </Message>
 
-## Multiple signers and signing order
+## 複数の署名者と署名の順序
 
-Signing order is determined by ordering the provided `order` numbers from
-smallest to largest. If two numbers are the same, signers will receive the
-request at the same time.
+署名の順序は、指定された`order`の数値を小さいものから大きいものへ順序付けすることで決まります。2つの数値が同じ場合、署名者には同時にリクエストが届きます。
 
-Initially, only the signer(s) with the lowest assigned `order` number will
-receive a Box Sign request email. Once they sign, the following user(s) will
-an email and so on. Box Sign automatically adds a new version of the
-document to the `parent_folder` as each user signs.  
+最初は、割り当てられた`order`の数値が最も小さい署名者だけに、Box Signのリクエストメールが送信されます。その署名者が署名すると、次のユーザーにメールが送信される、というように進んでいきます。Box Signでは、ユーザーが署名するたびに、ドキュメントの新しいバージョンが`parent_folder`に自動的に追加されます。  
 
-If any signer declines, any remaining signers will not receive a Box Sign
-request email. The overall request is declined.
+いずれかの署名者が拒否した場合、残りの署名者にBox Signのリクエストメールが送信されません。リクエスト全体が拒否されます。
 
 <ImageFrame border center shadow>
 
-![Multiple signer flow](images/multiple_signer_flow.png)
+![複数の署名者のフロー](images/multiple_signer_flow.png)
 
 </ImageFrame>
 
-## Document preparation
+## ドキュメントの準備
 
-Preparing a document prior to sending a Box Sign request allows developers to
-add date, text, checkbox, and/or signature placeholders for signers. This can be
-done via a UI or [tags][tags] directly in the document. If this is not done,
-signers receive an unprepared document and can place signatures and fields at
-their own discretion. However, developers can leverage controls in the request
-that allow them to turn on and off features for the unprepared document.
+Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを実行するには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。これを実行しなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
 
-Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
-the response. Visiting this link in your browser allows you to complete document
-preparation and send the request via UI.
+`is_document_preparation_needed`を`true`に設定すると、レスポンスで`prepare_url`が返されます。ブラウザでこのリンクにアクセスすると、ドキュメントの準備を完了し、UIを使用してリクエストを送信できます。
 
-To learn more about document tags, please see our [support article][tags].
+ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
 
-<Message type='warning'>
+<Message type="warning">
 
-Prefill tags created in a template via the Box web app cannot be accessed from
-the API.
+Boxウェブアプリを使用してテンプレートに作成された事前入力タグには、APIからアクセスできません。
 
 </Message>
 
 <ImageFrame border center shadow>
 
-![Prepare options](images/prepare.png)
+![準備のオプション](images/prepare.png)
 
 </ImageFrame>
 
-## Request status
+## リクエストのステータス
 
-- `converting`: The file is converted to a `.pdf` for the signing process once
-  the sign request is sent
-- `error_converting`: An issue was encountered while converting the file to a
-  `.pdf`
-- `created`: If `document_preparation_is_needed` is set to `true`, but the
-  `prepare_url` has not yet been visited
-- `sent`: The request was successfully sent, but no signer has interacted with
- it
-- `error_sending`: An issue was encountered while sending the request
-- `viewed`: Once the first, or only, signer clicks on **Review document** in
-  the signing email or visits the signing URL
-- `downloaded`: The signing document was downloaded by signer
-- `signed`: All signers completed the request
-- `signed and downloaded`: The signing document was signed and downloaded by
- signer
-- `declined`: If any signer declines the request
-- `cancelled`: If the request is cancelled via UI or API
-- `expired`: The date of expiration has passed with outstanding, incomplete
-  signatures 
+* `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている
+* `error_converting`: ファイルを`.pdf`に変換している間に問題が発生した
+* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない場合
+* `sent`: リクエストが正常に送信されたが、どの署名者も対応していない
+* `error_sending`: リクエストを送信中に問題が発生した
+* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした場合
+* `downloaded`: 署名者が署名用ドキュメントをダウンロードした
+* `signed`: すべての署名者がリクエストの処理を完了した
+* `signed and downloaded`: 署名者が署名用ドキュメントに署名してダウンロードした
+* `declined`: いずれかの署名者がリクエストを拒否した場合
+* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた場合
+* `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた 
 
-Encountering an error status requires creating a new sign request to retry.
+エラーステータスになった場合、再試行するには、新しい署名リクエストを作成する必要があります。
 
 <ImageFrame border center shadow>
 
-![Status diagram](images/status.png)
+![ステータスの図](images/status.png)
 
 </ImageFrame>
 
 [upload]: e://post-files-content/
+
 [documents]: g://representations/supported-file-types/#documents
+
 [presentations]: g://representations/supported-file-types/#presentations
+
 [uploads]: g://uploads/direct
+
 [create]: e://post-sign-requests
+
 <!-- i18n-enable localize-links -->
 
-[tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags
-[log]: https://support.box.com/hc/en-us/articles/4404095202579-Viewing-the-signing-log
-[role]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers
-[collab]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
+[tags]: https://support.box.com/hc/ja/articles/4404085855251-タグを使用したテンプレートの作成
+
+[log]: https://support.box.com/hc/ja/articles/4404095202579-署名ログの確認
+
+[role]: https://support.box.com/hc/ja/articles/4404105660947-署名者の役割
+
+[collab]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
+
 <!-- i18n-disable localize-links -->

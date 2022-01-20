@@ -16,9 +16,8 @@ next_page_id: ''
 previous_page_id: events/parameters/stream-types
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/parameters/index.md
+fullyTranslated: true
 ---
-# Event Stream Parameters
+# イベントストリームのパラメータ
 
-The [`GET /events`](e://get_events) endpoint can take in several
-parameters. `stream_type` and `stream_position` are described in more detail
-in this section's guides.
+[`GET /events`](e://get_events)エンドポイントには、いくつかのパラメータを使用できます。`stream_type`および`stream_position`については、このセクションのガイドで詳しく説明します。

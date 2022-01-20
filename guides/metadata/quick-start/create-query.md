@@ -12,31 +12,25 @@ next_page_id: metadata/quick-start/next-steps
 previous_page_id: metadata/quick-start/update-template
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/1-quick-start/6-create-query.md
+fullyTranslated: true
 ---
-# Create a metadata query
+# メタデータクエリの作成
 
-As a final step, let's look at how you can create a query to find specific files
-and folders based on the metadata attached to those files/folders.
+最後の手順として、ファイル/フォルダに追加されているメタデータに基づいてそのファイルおよびフォルダを見つけるためのクエリを作成する方法を見てみましょう。
 
-A [metadata query][query] provides a way to find files and
-folders by searching for the metadata attached to them. The search syntax
-is similar to SQL and it supports boolean operations and comparative operators
-to perform powerful searches.
+[メタデータクエリ][query]を使用すると、ファイルやフォルダに追加されているメタデータを検索して、そのファイルやフォルダを見つけることができます。この検索構文はSQLに似ており、強力な検索を実行するためにブール演算と比較演算子をサポートしています。
 
-<CTA to='g://metadata/queries'>
+<CTA to="g://metadata/queries">
 
-Learn more about creating queries
+クエリの作成の詳細を確認する
 
 </CTA>
 
-In our case, let's create a query to find any files or folders that have an
-instance of the `customerInfo` metadata template attached to them. We will
-filter this list down to any files that belong to a customer who's total account
-value is more than $200,000.
+この例では、`customerInfo`メタデータテンプレートのインスタンスが適用されているファイルまたはファイルを検索するクエリを作成します。このリストを、預金総額が200,000ドルを超える顧客に属しているファイルに絞り込みます。
 
 <Tabs>
 
-<Tab title='cURL'>
+<Tab title="cURL">
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
@@ -61,8 +55,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
 
 </Tabs>
 
-This API will return a list of matched files and folders, as well as the
-metadata that matched the query for that file.
+このAPIにより、一致したファイルとフォルダのリストのほか、そのファイルのクエリに一致したメタデータが返されます。
 
 ```json
 {
@@ -90,18 +83,17 @@ metadata that matched the query for that file.
 }
 ```
 
-By default this API returns `20` items per page, but more items can be requested
-using marker-based pagination.
+このAPIはデフォルトで、ページあたり`20`個の項目を返しますが、マーカーベースのページ割りを使用すると、さらに多くの項目をリクエストできます。
 
-<CTA to='g://metadata/queries'>
+<CTA to="g://metadata/queries">
 
-Learn more about metadata queries
+メタデータクエリの詳細を確認する
 
 </CTA>
 
 <Next>
 
-I've queried a file using metadata
+メタデータを使用してファイルにクエリを実行しました
 
 </Next>
 

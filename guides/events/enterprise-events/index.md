@@ -16,11 +16,8 @@ next_page_id: events/enterprise-events/migrate-to-stream
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/enterprise-events/index.md
+fullyTranslated: true
 ---
-# Enterprise Events
+# Enterprise Event
 
-Enterprise events provide an event feed for all users and content in an
-enterprise Box instance. Depending upon the `stream_type` your application can
-either subscribe to live events or query historical events. Access to these
-stream types is limited to users with admin permissions
-to **Run new reports and access existing reports**.
+Enterprise Eventは、企業のBoxインスタンスにあるすべてのユーザーとコンテンツのイベントフィードを提供します。`stream_type`に応じて、アプリケーションは、ライブイベントを登録するかイベントの履歴を照会することができます。これらのストリームタイプへのアクセスは、**新規レポートの実行および既存レポートへのアクセスを行う**ための管理者権限を持つユーザーに制限されます。

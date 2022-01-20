@@ -18,87 +18,77 @@ next_page_id: tooling/postman/quick-start/load-postman-collection
 previous_page_id: tooling/postman/quick-start/configure-box-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/3-log-in-to-box.md
+fullyTranslated: true
 ---
-# Log in to Box
+# Boxへのログイン
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option="postman.app_type" value="create_new,use_existing" color="none">
 
-In this step, we will use the **Client ID** and **Client Secret** from the
-previous step to log you in and create an **Access Token** for your user.
+この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
-## The reason to log in
+## ログインする理由
 
-Currently you have provided us with the following information.
+現時点では、以下の情報が提示されています。
 
-<Store disabled inline id='postman_credentials.client_id'>
+<Store disabled inline id="postman_credentials.client_id">
 
-Client ID
-
-</Store>
-
-<Store disabled inline obscured id='postman_credentials.client_secret'>
-
-Client Secret
+クライアントID
 
 </Store>
 
-These **credentials** allow any program or piece of code to authenticate
-itself to the **Box API**. It represents the **Box App** you created but it
-doesn't tell the API who you, the **User**, are.
+<Store disabled inline obscured id="postman_credentials.client_secret">
 
-To authenticate yourself you will need to send your browser to the Box login
-screen to authorize your **Box App** to access to your **User** account.
+クライアントシークレット
 
-Setting this flow up can be hard, which is why we have made this
-straightforward for you with the button below.
+</Store>
 
-## Log into your Box app
+任意のプログラムやコードは、これらの**資格情報**を使用することで、**Box API**から認証を受けることができます。これは、作成した**Boxアプリ**を表しますが、**ユーザー**に関する情報をAPIに伝えることはありません。
 
-<Trigger option='postman.login' value='clicked'>
+ユーザー自身が認証を受けるには、ブラウザでBoxのログイン画面を開き、自分の**ユーザー**アカウントへのアクセスを**Boxアプリ**に承認する必要があります。
 
-<LoginButton id='postman_credentials' >
+このフローの設定は難しい場合があるため、簡単に行えるように下のボタンを用意しました。
+
+## Boxアプリへのログイン
+
+<Trigger option="postman.login" value="clicked">
+
+<LoginButton id="postman_credentials">
 
 </LoginButton>
 
 </Trigger>
 
-<LoggedIn id='postman_credentials'>
+<LoggedIn id="postman_credentials">
 
-## You are now logged in
+## ログインしています
 
-We just sent your browser to the [Box Authorization](e://get-authorize)
-screen where you granted your application access to your user account. Ater
-you granted it access the browser redirected back to this site with a `code`.
+ブラウザで[Boxの承認](e://get-authorize)画面が開かれ、そこで、アプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`によりこのサイトにリダイレクトされました。
 
-We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
-longer lived **Access Token** and **Refresh Token**. These tokens represent
-you, the **User**.
+その後、この有効期間が短い`code`が有効期間が長い**アクセストークン**と**更新トークン**に[交換されました](e://post-oauth2-token)。これらのトークンは**ユーザー**を表します。
 
-<Store disabled inline id='postman_credentials' field='name'>
+<Store disabled inline id="postman_credentials" field="name">
 
-Your name
+名前
 
 </Store>
 
-<Store disabled inline obscured id='postman_credentials' field='access_token'>
+<Store disabled inline obscured id="postman_credentials" field="access_token">
 
-Access Token
+アクセストークン
 
 </Store>
 
-<Store disabled inline obscured id='postman_credentials' field='refresh_token'>
+<Store disabled inline obscured id="postman_credentials" field="refresh_token">
 
-Refresh Token
+更新トークン
 
 </Store>
 
 <Message danger>
 
-# Security notice
+# セキュリティに関する注意
 
-Your API credentials are now stored in the browser cache. We highly
-recommend clearing out this storage by clicking the **Reset** button
-later in this guide.
+API資格情報は、ブラウザキャッシュに保存されています。このガイドで後から出てくる**リセット**ボタンをクリックして、この情報を消去することを強くお勧めします。
 
 </Message>
 
@@ -106,36 +96,33 @@ later in this guide.
 
 </Choice>
 
-<Choice option='postman.app_type' unset color='none'>
+<Choice option="postman.app_type" unset color="none">
 
 <Message danger>
 
-# Incomplete previous step
+# 前の手順が完了していません
 
-Please complete the previous step to set up the **Box App** you want
-to use.
+前の手順を完了し、使用する**Boxアプリ**をセットアップしてください。
 
 </Message>
 
 </Choice>
 
-<Choice option='postman.login' value='clicked' color='none'>
+<Choice option="postman.login" value="clicked" color="none">
 
-## Summary
+## まとめ
 
-* You logged into your **Box account** using your own **Box App** or our
-  preconfigured app
-* You granted the **Box App** access to your account
-* You are able to see your account's **Access Token** and **Refresh Token**
-  on this page
+* 独自の**Boxアプリ**またはあらかじめ設定されているアプリを使用して**Boxアカウント**にログインしました
+* **Boxアプリ**にユーザーアカウントへのアクセスを許可しました
+* このページでユーザーアカウントの**アクセストークン**と**更新トークン**を参照できるようになりました
 
 </Choice>
 
-<Observe option='postman.login' value='clicked'>
+<Observe option="postman.login" value="clicked">
 
 <Next>
 
-I have logged in to Box
+Boxへのログインが完了しました
 
 </Next>
 

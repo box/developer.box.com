@@ -16,100 +16,103 @@ next_page_id: ''
 previous_page_id: authorization/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/index.md
+fullyTranslated: true
 ---
-# Authorization
+# 承認
 
-Some applications require explicit Admin authorization before use with an
-enterprise. The steps an Admin needs to take are dependent on the
-developer-selected authentication method and enabled enterprise settings.
+アプリケーションによっては、企業で使用する前に管理者の明示的な承認が必要になる場合があります。管理者が行う必要のある手順は、開発者が選択した認証方法と有効になっているEnterprise設定によって異なります。
 
-## Authentication methods
+## 認証方法
 
-The following [authentication methods][auth] always require explicit Admin
-authorization:
+以下の[認証方法][auth]では、常に管理者の明示的な承認が必要です。
 
-- [Server Authentication (with JWT)][jwt]
-- [Server Authentication (with Client Credentials Grant)][cc]
-- [Custom Skill][skill]
+* [サーバー認証 (JWT使用)][jwt]
+* [サーバー認証 (クライアント資格情報許可使用)][cc]
+* [カスタムスキル][skill]
 
-These authentication methods automatically generate a [Service Account][sa].
-With the right [scopes][scopes] enabled, a Service Account can perform many
-Admin actions, thus requiring Admin authorization before use. 
+これらの認証方法では、[サービスアカウント][sa]が自動的に生成されます。適切な[スコープ][scopes]が有効になっていると、サービスアカウントは管理者の多くの操作を実行できるため、使用する前に管理者の承認が必要になります。 
 
-[OAuth 2.0][oauth] and [App Token][apptoken] apps may also require explicit
-Admin authorization based on enabled enterprise settings. 
+[OAuth 2.0][oauth]アプリと[アプリトークン][apptoken]も、有効になっているEnterprise設定に基づき、管理者の明示的な承認が必要になる場合があります。 
 
-## Enterprise settings
+## Enterprise設定
 
-Subsequent steps are required if any of the following enterprise settings are
-enabled: 
+以下のEnterprise設定のいずれかが有効になっている場合は、後続の手順が必要です。 
 
-- Disable published apps by default
-- Disable unpublished apps by default
-- Require manual admin authorization for transactional access apps
+* デフォルトで公開アプリを無効にする
+* デフォルトで未公開アプリを無効にする
+* アプリトークンを使用する場合に管理者の承認を要求する
 
-These [settings][setting] can be found by navigating to: 
+これらの[設定][setting]は、次のように移動すると見つかります。 
 
-**Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
+**管理コンソール** > \[**アプリ**] > \[**カスタムアプリ**] > ⚙ アイコンをクリック
 
 <Message tip>
 
-Published apps are any applications that can be found in our App Gallery.
+公開アプリとは、アプリギャラリーで見つかるアプリケーションのことです。
 
 </Message>
 
-## Required actions
+## 必要なアクション
 
-To see what steps an Admin must complete for a given app, review the following
-scenarios.
+特定のアプリに対して管理者がどのような手順を完了する必要があるかについては、以下のシナリオを確認してください。
 
 <!-- markdownlint-disable line-length -->
 
 <!--alex ignore-->
 
-**Disable published apps by default**:
+\[**デフォルトで公開アプリを無効にする**]:
 
-| Authentication Method                            | Enabled                                     | Disabled
-| ------------------------------------------------ | ------------------------------------------- | -------------- |
-|[OAuth 2.0][standauth]                            | Set to available in individual app controls | Ready for use  |
-|[Server Authentication (with JWT)][jwt]           | N/A                                         | N/A            |
-|[Server Authentication (client credentials)][cc]  | N/A                                         | N/A            |
-|[App Token Authentication][apptoken]              | N/A                                         | N/A            |
+| 認証方法                      | 有効                   | 無効     |
+| ------------------------- | -------------------- | ------ |
+| [OAuth 2.0][standauth]    | 個々のアプリコントロールで使用可能に設定 | 使用準備完了 |
+| [サーバー認証 (JWT使用)][jwt]     | なし                   | なし     |
+| [サーバー認証 (クライアント資格情報)][cc] | なし                   | なし     |
+| [アプリトークン認証][apptoken]     | なし                   | なし     |
 
-**Disable unpublished apps by default**:
+\[**デフォルトで未公開アプリを無効にする**]:
 
-| Authentication Method                            | Enabled                                                                             | Disabled
-| ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps** > **Add App** | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | Ready for use                           |
+| 認証方法                      | 有効                                                                                                                                         | 無効                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| [OAuth 2.0][standauth]    | Enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps** > **Add App**                                                  | 使用準備完了                                                                                         |
+| [サーバー認証 (JWT使用)][jwt]     | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App**                                  | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
+| [サーバー認証 (クライアント資格情報)][cc] | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps**                                                | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
+| [アプリトークン認証][apptoken]     | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | 使用準備完了                                                                                         |
 
-**Require manual admin authorization for transactional access apps**:
+\[**アプリトークンを使用する場合に管理者の承認を要求する**]:
 
-| Authentication Method                            | Enabled                                                                  | Disabled                                             |
-| ------------------------------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
-|[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
-|[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
-|[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
-|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
+| 認証方法                      | 有効                                                                               | 無効                                                 |
+| ------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [OAuth 2.0][standauth]    | なし                                                                               | なし                                                 |
+| [サーバー認証 (JWT使用)][jwt]     | なし                                                                               | なし                                                 |
+| [サーバー認証 (クライアント資格情報)][cc] | なし                                                                               | なし                                                 |
+| [アプリトークン認証][apptoken]     | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation |
 
 <!--alex enable-->
 
 <!-- markdownlint-enable line-length -->
 
 [auth]: g://authentication/select
+
 <!-- i18n-enable localize-links -->
 
-[setting]: https://support.box.com/hc/en-us/articles/360044196653-Managing-custom-apps
+[setting]: https://support.box.com/hc/ja/articles/360044196653-カスタムアプリの管理
+
 <!-- i18n-disable localize-links -->
 
 [sa]: g://getting-started/user-types/service-account
+
 [scopes]: g://api-calls/permissions-and-errors/scopes
+
 [ag]: g://applications/app-gallery
+
 [standauth]: g://authentication/oauth2
+
 [jwt]: g://authentication/jwt
+
 [cc]: g://authentication/client-credentials
+
 [apptoken]: g://authentication/app-token
+
 [skill]: g://applications/custom-skills
+
 [oauth]: g://authentication/oauth2

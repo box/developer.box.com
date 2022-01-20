@@ -19,55 +19,39 @@ next_page_id: security
 previous_page_id: security/device-pinners
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/cors.md
+fullyTranslated: true
 ---
-# Cross-Origin Resource Sharing (CORS)
+# クロスオリジンリソース共有 (CORS)
 
-[Cross-Origin Resource Sharing (CORS)][mdn_cors] is a security mechanism used
-by web browsers to prevent malicious websites from accessing data on other
-sites (like the Box API) without explicit permission.
+[クロスオリジンリソース共有 (CORS)][mdn_cors] は、悪意のあるウェブサイトが明示的な権限を持たずに他のサイトのデータ (Box APIなど) にアクセスするのを防ぐために、ウェブブラウザで利用されているセキュリティメカニズムです。
 
 <Message warning>
 
-CORS only applies to Box API requests made by a web page using a
-web browser, and it relies on the `HTTP Origin` header being passed along
-by the browser. It does not come in to play in a server-side environment.
+CORSは、ウェブブラウザを使用してウェブページから送信されるBox APIリクエストのみに適用され、そのブラウザによって渡される`HTTP Origin`ヘッダーを利用します。サーバー側環境では機能しません。
 
 </Message>
 
-<CTA to='https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS'>
+<CTA to="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">
 
-Visit the MDN Web Docs for more generic information about CORS.
+CORSの全般的な情報の詳細については、MDN Web Docsを参照してください。
 
 </CTA>
 
-## How CORS works
+## CORSのしくみ
 
-When a browser on one domain (for example `company.com`) tries to fetch
-images, files, or even API resources from another domain (`box.com`)
-the web browser will prevent access to any of those assets unless the right
-CORS headers are present.
+あるドメイン (`company.com`など) のブラウザで、別のドメイン (`box.com`) から画像、ファイル、またはAPIリソースを取得しようとする場合、適切なCORSヘッダーが存在しない限り、そのウェブブラウザにより、これらのアセットへのアクセスが阻止されます。
 
-When the browser makes a cross-origin request, an `Origin` request header is
-passed along with it that contains the domain of the site making that
-request. This header can not be changed and is part of your web browser's
-essential security.
+ブラウザからクロスオリジンリクエストを送信すると、そのリクエストを送信するサイトのドメインを含む`Origin`リクエストヘッダーがリクエストとともに渡されます。このヘッダーは変更できないため、ウェブブラウザのセキュリティにとって重要な部分となります。
 
-By default, a browser will not accept any asset loaded from another domain
-if there is no `Access-Control-Allow-Origin` response header present.
-Servers like Box can explicitly list the domains allowed to access resources
-on this server, or they can return a `*` value to allow any domain to access
-the API.
+デフォルトでは、`Access-Control-Allow-Origin`レスポンスヘッダーが存在しない場合、ブラウザは、別のドメインから読み込まれたアセットを受け入れることはありません。Boxなどのサーバーは、そのサーバー上のリソースへのアクセスが許可されたドメインのリストを明示的に取得することも、APIへのアクセスを任意のドメインに許可するために`*`値を返すこともできます。
 
-## How Box uses CORS
+## BoxでのCORSの使用方法
 
-Box uses the `Origin` request header and `Access-Control-Allow-Origin`
-response header to enforce CORS rules defined by the developer.
+Boxは、`Origin`リクエストヘッダーと`Access-Control-Allow-Origin`レスポンスヘッダーを使用して、開発者が定義したCORSルールを適用します。
 
-### `Origin`-header validation
+### `Origin`ヘッダーの検証
 
-The Box API validates the `Origin` request header against the list of allowed
-domains set by the application developer. Multiple allowed origins can be set
-and any origin not on the list will return in a `HTTP 403` error.
+Box APIは、アプリケーション開発者が設定した、許可されたドメインのリストに対して`Origin`リクエストヘッダーを検証します。許可されたオリジンは複数設定でき、リストにないオリジンは`HTTP 403`エラーで返されます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -84,16 +68,14 @@ and any origin not on the list will return in a `HTTP 403` error.
   "request_id":"4dsdfsa832213"
 }
 ```
+
 <!-- markdownlint-enable line-length -->
 
-If no origin is set, all requests to the Box API for this application return
-an error.
+オリジンが設定されていない場合は、このアプリケーションのBox APIに対するすべてのリクエストでエラーが返されます。
 
-### `Access-Control-Allow-Origin` response header
+### `Access-Control-Allow-Origin`レスポンスヘッダー
 
-After the Box API has validated the `Origin` header, it will return the data
-requested as well as a `Access-Control-Allow-Origin` response header with
-the value `*`.
+Box APIは、`Origin`ヘッダーを検証した後、リクエストされたデータのほか、値`*`が設定された`Origin`レスポンスヘッダーを返します。
 
 ```yaml
 HTTP/1.1 200 OK
@@ -108,53 +90,36 @@ Vary: Origin
 BOX-REQUEST-ID: 032cfb446dae4fd0b4c2bff80a1a97ba7
 ```
 
-By returning this header, the Box API informs the web browser that the
-response can be used in the site that requested the data.
+このヘッダーを返すことにより、Box APIはウェブブラウザに対して、データをリクエストしたサイトでレスポンスを使用できることを通知します。
 
-## Enabling CORS for your domain
+## ドメインのCORSの有効化
 
-To enable CORS for the domain your application runs on, head over to the
-developer console, select your application, and scroll down to the bottom of the
-**Configuration** panel to find the **CORS Domains** setting.
+アプリケーションが動作するドメインでCORSを有効にするには、開発者コンソールに移動して、アプリケーションを選択し、\[**構成**] パネルの一番の下までスクロールして \[**CORSドメイン**] の設定を見つけます。
 
-Add a comma separated list of all the origins that you expect your application
-to be making Box API requests from. Domains require the schema (`http` or
-`https`) and can include wildcards for subdomains, for example `*.example.com`.
+アプリケーションでのAPIリクエストの発信元になると予想されるすべてのオリジンをカンマ区切りリストとして追加します。ドメインにはスキーマ (`http`または`https`) が必要で、`*.example.com`のようにサブドメインのワイルドカードを含めることができます。
 
-If your site runs on a non-standard port, it will also need to include that.
-This is especially relevant for a site running on `localhost` or `127.0.0.1`.
+サイトが非標準のポート上で動作する場合は、サイトにそのポートも含める必要があります。これは、特に、`localhost`または`127.0.0.1`で動作しているサイトに当てはまります。
 
-An example list of origins would be as follows.
+オリジンのリストの例は、次のようになります。
 
 ```sh
 https://company.com,https://*.internal.company.com,http://localhost:3000
 ```
 
-## Debugging CORS
+## CORSのデバッグ
 
-There are a few different kind of CORS errors that might occur when making
-API calls to the Box API.
+Box APIに対してAPI呼び出しを実行した場合に発生する可能性のあるCORSエラーはいくつかあります。
 
-### `HTTP 403` - No allowed origins defined
+### `HTTP 403` - 許可済みオリジンが定義されていない
 
-You might get this error even after you provided a list of origins. Often,
-this is because of a typo in the provided origins.
+オリジンのリストを指定した後でも、このエラーが発生する場合があります。多くの場合、指定したオリジンに誤字があることが原因です。
 
-1. **Check your origins** - Head back to the developer console and make sure
-   your origins map the site your are making the API call from. Keep in mind
-   that an origin includes the scheme (`http(s)`) but no path or trailing `/`.
-   We recommend inspecting the page using your browser's debug console
-   and checking the `Origin` request header value. This value should match one
-   of the provided values in the developer console.
-2. **Check your credentials** - Another reason for this error might be that you
-   are authenticating as a different application than the one you have set the
-   origin up for. Check that the credentials match the ones of the application
-   you are intending to use. We recommend trying to make a call from a
-   server-side script to validate that the API call works.
+1. **オリジンを確認する** - 開発者コンソールに戻り、オリジンがAPI呼び出しの実行元のサイトをマップしていることを確認します。オリジンにはスキーム (`http(s)`) が含まれても、パスまたは末尾の`/`は含まれないことに注意してください。ブラウザのデバッグコンソールを使用してページを調査し、`Origin`リクエストヘッダーの値を確認することをお勧めします。この値は、開発者コンソールで指定された値のいずれかと一致する必要があります。
+2. **資格情報を確認する** - このエラーのもう1つの理由として、オリジンを設定したアプリケーションとは別のアプリケーションとして認証している可能性が考えられます。資格情報が、使用するアプリケーションのものと一致することを確認してください。サーバー側スクリプトから呼び出しを実行して、API呼び出しが動作するかどうかを検証することをお勧めします。
 
 ### `Cross-Origin Request Blocked`
 
-In some cases, you might get a Javascript error that mentions CORS.
+場合によっては、CORSに言及するJavaScriptエラーが発生します。
 
 ```sh
 Cross-Origin Request Blocked: The Same Origin Policy disallows reading
@@ -162,20 +127,9 @@ the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
 ```
 
-In many cases this has little to do with COR. Instead we recommend checking the
-following.
+多くの場合、このエラーはCORSとはほとんど関係がありません。代わりに、以下を確認することをお勧めします。
 
-1. **Check your authentication headers** - If the authorization header is not
-   provided or malformed, then the API will return a generic error without
-   the necessary `Access-Control-Allow-Origin` header. This in turn will cause
-   the previously mentioned error to be raised by your browser. Make sure
-   to pass in an access token using the `Authorization: Bearer ...` header.
-2. **Check for requests blocked by VPN, Proxies, etc** - In some cases, the Box
-   API might be blocked by your VPN, corporate proxy, a browser extension, your
-   DNS provider, or any other service that can intercept network traffic. Any
-   of these can intercept the request and return a whole new request that does
-   not include the necessary `Access-Control-Allow-Origin` header. To test for
-   this case, try to make the same API call from a non-browser environment,
-   from an incognito window, or from a whole other (not company owned) device.
+1. **認証ヘッダーを確認する** - 認証ヘッダーが指定されていないか、またはその形式が正しくない場合、このAPIでは、必要な`Access-Control-Allow-Origin`ヘッダーなしで一般的なエラーが返されます。その結果、ブラウザで前述のエラーが発生します。必ず`Authorization: Bearer ...`ヘッダーを使用してアクセストークンを渡してください。
+2. **VPNやプロキシなどでブロックされたリクエストがないか確認する** - 場合によっては、VPN、会社のプロキシ、ブラウザの機能拡張、DNSプロバイダ、またはネットワークトラフィックを妨害する可能性があるその他のサービスによってBox APIがブロックされている可能性があります。このようなサービスはどれも、リクエストをインターセプトし、必要な`Access-Control-Allow-Origin`ヘッダーが含まれていないまったく新しいリクエストを返す場合があります。このケースをテストするには、ブラウザ以外の環境、シークレットウィンドウ、またはまったく別の (会社が所有していない) デバイスから同じAPI呼び出しを実行してみてください。
 
 [mdn_cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS

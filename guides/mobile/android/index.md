@@ -14,10 +14,10 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/android/index.md
+fullyTranslated: true
 ---
 # Android
 
-The [Box Android SDK][android-sdk] provides native access to the Box API from
-within your Android project.
+[Box Android SDK][android-sdk]は、Androidプロジェクト内からBox APIへのネイティブアクセスを提供します。
 
 [android-sdk]: https://github.com/box/box-android-sdk

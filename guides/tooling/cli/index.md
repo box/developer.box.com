@@ -26,31 +26,36 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/index.md
+fullyTranslated: true
 ---
 # CLI
 
-The Box Command Line Interface (CLI) is a tool for making requests to
-Box APIs from your terminal window or command prompt.
+Box Command Line Interface (CLI) は、ターミナルウィンドウまたはコマンドプロンプトからBox APIにリクエストを行うためのツールです。
 
-## Quick Start
+## はじめに
 
-[Learn to use the Box CLI][qs].
+[Box CLIの使い方を確認する][qs]。
 
-## Advanced
+## 高度な機能
 
-The GitHub page also has some additional guides that might be of interest to an
-advanced CLI user.
+このGitHubページには、上級CLIユーザーの参考となりそうなその他のガイドも用意されています。
 
-- [Setup autocomplete][cli-autocomplete]
-- [Configure another app][cli-add-config]
-- [Switch accounts][cli-switch]
-- [Token cache][cache]
-- [Autocomplete][ac]
+* [オートコンプリートの設定][cli-autocomplete]
+* [別のアプリの構成][cli-add-config]
+* [アカウントの切り替え][cli-switch]
+* [トークンのキャッシュ][cache]
+* [オートコンプリート][ac]
 
 [cli]: https://github.com/box/boxcli
+
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+
 [cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
+
 [cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path
+
 [qs]: g://tooling/cli/quick-start/
+
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
+
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md

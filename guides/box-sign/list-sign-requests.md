@@ -12,30 +12,28 @@ next_page_id: box-sign/resend-sign-request
 previous_page_id: box-sign/create-sign-request
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/list-sign-requests.md
+fullyTranslated: true
 ---
-# List Box Sign Requests
+# Box Signのリクエストのリスト取得
 
-## All
+## すべて
 
-The [get sign requests endpoint][get_all] can be used to view a list of all Box
-Sign requests created by the user associated with the passed Access Token.
+[署名リクエストを取得エンドポイント][get_all]を使用すると、渡されたアクセストークンに関連付けられたユーザーが作成したBox Signのすべてのリクエストのリストを表示できます。
 
-<Samples id='get_sign_requests' >
+<Samples id="get_sign_requests">
 
 </Samples>
 
-## By ID
+## IDの指定
 
-The [get sign requests by ID endpoint][get_by_id] can be used to view
-information about a specific Box Sign request. This endpoint requires the sign
-request's ID, which can be obtained by using the
-[get all Box Sign requests endpoint][get_all] or in the response when
-[creating a Box Sign request][create].
+[IDを指定して署名リクエストを取得エンドポイント][get_by_id]を使用すると、Box Signの特定のリクエストに関する情報を表示できます。このエンドポイントには、署名リクエストのIDが必要です。このIDは、[Box Signのすべてのリクエストを取得エンドポイント][get_all]を使用して取得するか、[Box Signのリクエストを作成][create]する際にレスポンスで取得することができます。
 
-<Samples id='get_sign_requests_id' >
+<Samples id="get_sign_requests_id">
 
 </Samples>
 
 [get_all]: e://get-sign-requests
+
 [get_by_id]: e://get-sign-requests-id
+
 [create]: e://post-sign-requests

@@ -22,34 +22,26 @@ next_page_id: ''
 previous_page_id: authentication/app-token/rollover
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/index.md
+fullyTranslated: true
 ---
-# App Token Auth
+# アプリトークン認証
 
-Server-side authentication using App Tokens is an alternative way to
-authenticate to the Box API with fixed, long-lived Access Tokens that are
-restricted to the application's [Service Account][sa]. App Token Auth is
-intended to be used by applications leveraging [Box View][box-view].
+アプリトークンを使用するサーバー側認証は、Box APIに対する代替の認証方法で、アプリケーションの[サービスアカウント][sa]に制限されている、有効期間の長い固定のアクセストークンを使用します。アプリトークン認証は、[Box View][box-view]を利用するアプリケーションによる使用を目的としています。
 
-## App Token Restrictions
+## アプリトークンの制限
 
-A server-side App Token is an authentication method where the application only
-has access to read and write data to its own account. By using this
-authentication method there is no need to authorize a user as the application is
-automatically authenticated as the Service Account that belongs to that
-application.
+サーバー側アプリトークンは、アプリケーションに、それ自体のアカウントのデータに対する読み取りと書き込みのアクセス権限だけがある認証方法です。この認証方法を使用すると、アプリケーションはそのアプリケーションに属しているサービスアカウントとして自動的に認証されるため、ユーザーを承認する必要がありません。
 
-## When to use App Tokens
+## アプリトークンを使用する場合
 
-Server-side authentication with App Tokens is the ideal authentication method
-for apps that:
+アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-- Want to leverage Box's preview services via [Box View][box-view]
-- Work in an environment that either has no user model, or has users that don't
-  have Box accounts
-- Want to use their own identity system
-- Don't want users to have to know that they are using Box
-- Want to store data in the application's Service Account and not a user's
-  account
+* [Box View][box-view]を介してBoxのプレビューサービスを利用する
+* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
+* 独自のIDシステムを使用する
+* ユーザーにBoxを使用していることを認識させたくない
+* ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
 
 [sa]: g://getting-started/user-types/service-account
+
 [box-view]: g://embed/box-view

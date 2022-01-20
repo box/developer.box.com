@@ -21,30 +21,23 @@ next_page_id: users
 previous_page_id: users/create-app-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/users/delete-user.md
+fullyTranslated: true
 ---
-# Delete User
+# ユーザーの削除
 
-The process for deleting both app and managed users is the same. To delete a
-user account, supply the user ID for the account that should be
-removed.
+App Userと管理対象ユーザーの削除プロセスは同じです。ユーザーアカウントを削除するには、削除するアカウントのユーザーIDを指定します。
 
-<Samples id='delete_users_id' >
+<Samples id="delete_users_id">
 
 </Samples>
 
-There are also two optional parameters that may be set when deleting a user
-account:
+ユーザーアカウントを削除するときに設定できるオプションパラメータも2つあります。
 
-* force: Whether the user should be deleted even if the account still has
-content in it.
-* notify: Whether the user will receive a notification that the account was
-deleted.
+* force: アカウントにまだコンテンツがある場合でも、ユーザーを削除するかどうか。
+* notify: アカウントが削除されたという通知をユーザーに送信するかどうか。
 
-<Message type='notice'>
+<Message type="notice">
 
-The delete user request will fail if the user account still has content in
-it. To resolve this, either
-[transfer all files or folders](g://users/deprovision/transfer-folders)
-to another account or use the optional `force` parameter.
+ユーザーアカウントにまだコンテンツがある場合、ユーザー削除リクエストは失敗します。これを解決するには、別のアカウントに[すべてのファイルまたはフォルダを転送する](g://users/deprovision/transfer-folders)か、オプションの`force`パラメータを使用します。
 
 </Message>

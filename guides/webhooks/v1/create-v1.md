@@ -21,62 +21,53 @@ next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/create-v1.md
+fullyTranslated: true
 ---
-# Create Webhooks
+# Webhookの作成
 
-V1 webhooks are created in the [Developer Console][devconsole] by following
-the steps below.
+V1 Webhookを作成するには、[開発者コンソール][devconsole]で以下の手順に従います。
 
-1. Navigate to your application in the [Developer Console][devconsole]
-2. Select the **Webhooks** tab.
-3. Click the **Create a new Webhook** button.
-4. Fill in the form, including event triggers, an endpoint URL and one or more
-callback parameters. 
-5. Click **Save Webhook**.
+1. [開発者コンソール][devconsole]で、目的のアプリケーションに移動します。
+2. \[**Webhook**] タブを選択します。
+3. \[**新規Webhookの作成**] ボタンをクリックします。
+4. イベントトリガー、エンドポイントURL、1つ以上のコールバックパラメータなどをフォームに入力します。 
+5. \[**Webhookの保存**] をクリックします。
 
-<Message type='warning'>
+<Message type="warning">
 
-# Callback parameters
+# コールバックパラメータ
 
-Unlike the V2 Webhooks, these manual webhooks need to be configured with the
-data you'd like. This data will be sent as a query string either in the body
-or as a query parameter, for example `name=Contract.pdf&type=file`
+V2 Webhookとは異なり、これらの手動によるWebhookにはデータを設定する必要があります。このデータは、本文のクエリ文字列として、または`name=Contract.pdf&type=file`のようなクエリパラメータとして送信されます。
 
 </Message>
 
-## Developer Mode
+## 開発者モード
 
-By default V1 webhooks only work for users that are listed as application
-collaborators in the **General Settings** tab in the Developer Console. To
-enable a webhooks for all users, please [contact support][support].
+デフォルトでは、V1 Webhookは、開発者コンソールの \[**一般設定**] タブにアプリケーションコラボレータとして表示されているユーザーに対してのみ機能します。Webhookをすべてのユーザーに対して有効にするには、[サポートにお問い合わせください][support]。
 
-## Enabling a webhook
+## Webhookの有効化
 
-After creating a webhook, the application must be added to the user's account
-to begin use.
+Webhookを作成した後、使用を開始するには、アプリケーションをユーザーのアカウントに追加する必要があります。
 
-To obtain the URL to add the app, follow the directions below for OAuth 2.0
-authentication apps:
+アプリを追加するためのURLを取得するには、OAuth 2.0認証アプリで以下の手順に従います。
 
-1. Navigate to the **App Gallery** tab for the application in the
-[Developer Console][devconsole].
-2. Click **Submit My App**. Do not worry, you will not be completing the
-submission process!
-3. At the bottom of the page, click **Preview**.
-4. Click **Add**
+1. [開発者コンソール][devconsole]で、アプリケーションの \[**アプリギャラリー**] タブに移動します。
+2. \[**アプリを送信**] をクリックします。心配しないでください。送信プロセスは完了しません。
+3. ページ下部で \[**プレビュー**] をクリックします。
+4. \[**追加**] をクリックします。
 
-<Message type='warning'>
+<Message type="warning">
 
-For all other authentication types, you will need to contact support to
-obtain this URL.
+その他すべての認証タイプの場合、このURLを取得するには、サポートに問い合わせる必要があります。
 
 </Message>
 
-Webhooks will now trigger for any configured events that are occur in the user's
-account.
+これでWebhookは、ユーザーのアカウントで発生する設定済みのイベントに対してトリガーされるようになりました。
 
 <!-- i18n-enable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
+
 [support]: https://support.box.com
+
 <!-- i18n-disable localize-links -->

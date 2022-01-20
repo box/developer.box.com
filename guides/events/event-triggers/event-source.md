@@ -21,16 +21,15 @@ next_page_id: events/event-triggers
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/event-source.md
+fullyTranslated: true
 ---
-# Event Source
+# イベントソース
 
-If a user or item triggers an event, The response of the
-[`GET /events`](e://get_events) endpoint contains an event source object.
+ユーザーまたは項目によってイベントがトリガーされると、[`GET /events`](e://get_events)エンドポイントのレスポンスにはイベントソースオブジェクトが含まれます。
 
-## User Source Object
+## ユーザーソースオブジェクト
 
-If a user triggers an event, the source object will be the standard
-representation of the [user resource](e://resources/user).
+ユーザーがイベントをトリガーした場合、ソースオブジェクトは[ユーザーリソース](e://resources/user)の標準レプリゼンテーションになります。
 
 ```json
 {
@@ -59,16 +58,13 @@ representation of the [user resource](e://resources/user).
 }
 ```
 
-## Item Source Object
+## 項目ソースオブジェクト
 
-If an item triggers an event, the source object will be the
-[event source resource](e://resources/event-source).
+項目がイベントをトリガーした場合、ソースオブジェクトは[イベントソースリソース](e://resources/event-source)になります。
 
-<Message type='notice'>
+<Message type="notice">
 
-The below example contains a `classification` object. This does not appear if
-the item does not have a classification set. Also, it does not appear for
-every event type.
+以下の例には`classification`オブジェクトが含まれています。これは、項目に分類が設定されていない場合は表示されません。また、一部のイベントタイプでは表示されません。
 
 </Message>
 

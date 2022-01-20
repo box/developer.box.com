@@ -21,12 +21,12 @@ next_page_id: web-links
 previous_page_id: web-links/create
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/web-links/delete.md
+fullyTranslated: true
 ---
-# Delete Web Link
+# ウェブリンクの削除
 
-To remove a web link in Box you will need to provide our API with the ID of
-the web link.
+Boxでウェブリンクを削除するには、そのウェブリンクのIDをAPIに渡す必要があります。
 
-<Samples id='delete_web_links_id' >
+<Samples id="delete_web_links_id">
 
 </Samples>

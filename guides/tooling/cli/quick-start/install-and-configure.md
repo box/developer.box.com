@@ -13,74 +13,65 @@ next_page_id: tooling/cli/quick-start/build-commands-help
 previous_page_id: tooling/cli/quick-start/create-jwt-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md
+fullyTranslated: true
 ---
-# CLI Installation and Configuration
+# CLIのインストールと構成
 
-Installers are available for Windows and macOS. However, the raw source-code is
-available if you would like to build the CLI in other environments.
+Windows用およびmacOS用のインストーラが提供されていますが、その他の環境でCLIを構築する場合はRawソースコードを利用できます。
 
-## Windows & macOS Installers
+## Windows用およびmacOS用インストーラ
 
-To install the latest CLI on your machine, download the latest
-`.exe` for Windows or `.pkg` for macOS for the latest release.
+お使いのマシンに最新のCLIをインストールするには、最新リリースに対応する最新の`.exe` (Windowsの場合) または`.pkg` (macOSの場合) をダウンロードします。
 
 <CTA to="https://github.com/box/boxcli/releases">
 
-Download the latest CLI installer
+最新のCLIインストーラをダウンロード
 
 </CTA>
 
-## Linux & Node install
+## LinuxとNodeのインストール
 
-Additionally, the CLI can be installed as a Node package on any platform,
-including Linux. For this to work you will need to have
-[Node JS](https://nodejs.org/) installed on your machine.
+さらに、CLIは、任意のプラットフォーム (Linuxなど) にNodeパッケージとしてインストールすることができます。このためには、[Node JS](https://nodejs.org/)をマシンにインストールしておく必要があります。
 
 ```bash
 npm install --global @box/cli
 ```
 
-## Source Code
+## ソースコード
 
-The source code for the CLI is available via [GitHub][cli].
+CLIのソースコードは、[GitHub][cli]で提供されています。
 
-## Run configuration command
+## 構成コマンドの実行
 
-You will now need to configure the CLI to point to to the configuration file
-downloaded in step 1.
+ここで、手順1でダウンロードした構成ファイルを指すよう、CLIを構成する必要があります。
 
 <ImageFrame center>
 
-![CLI Configuration Diagram](./cli-config-diagram.png)
+![CLIの構成図](./cli-config-diagram.png)
 
 </ImageFrame>
 
 <!--alex ignore execute-->
 
-Open your terminal or command line and execute the
-command: `box configure:environments:add PathToConfigFileHere`, replacing
-`PathToConfigHere` with the path to your `config.json` file.
+ターミナルまたはコマンドラインを開き、`box configure:environments:add PathToConfigFileHere`コマンドを実行します。ここでは、`PathToConfigHere`を`config.json`ファイルのパスに置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
-For example:
-`box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+例: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
 
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<message type="tip"></message>
 
-You can drag the csv file from the Finder/File Explorer to the
-terminal/command line window to auto-populate the path.
+Finder/エクスプローラからターミナル/コマンドラインウィンドウにcsvファイルをドラッグすると、パスを自動で入力できます。
 
 </Message>
 
-## Confirm configuration
+## 構成の確認
 
-To confirm successful configuration, use the command `box users:get`.
+うまく構成されているか確認するには、コマンド`box users:get`を使用します。
 
-A successful response will provide details about the [Service Account][sa] user
-associated with your [Access Token][at]:
+次のように、成功を示すレスポンスには、[アクセストークン][at]に関連付けられた[サービスアカウント][sa]ユーザーの詳細が示されます。
 
 ```json
 Type: user
@@ -102,28 +93,30 @@ Avatar URL: ''
 Notification Email: []
 ```
 
-<Message type=tip>
+<message type="tip"></message>
 
-By default, JWT applications automatically obtain an Access Token for the
-Service Account. It is possible to change the default user, but this guide
-assumes you do not do this.
+デフォルトでは、JWTアプリケーションはサービスアカウントのアクセストークンを自動的に取得します。デフォルトユーザーの変更は可能ですが、このガイドでは変更しないことを想定しています。
 
 </Message>
 
-## Summary
+## まとめ
 
-- You installed the CLI
-- You configured the CLI to point to your application's configuration file
-- You confirmed the user associated with your Access Token
+* CLIをインストールしました。
+* アプリケーションの構成ファイルを指すようCLIを構成しました。
+* アクセストークンに関連付けられたユーザーを確認しました。
 
 <Next>
 
-I installed and configured the CLI
+CLIをインストールして構成しました
 
 </Next>
 
 [cli]: https://github.com/box/boxcli
+
 [auth]: g://authentication/jwt/without-sdk/
+
 [sa]: g://getting-started/user-types/service-account/
+
 [at]: g://authentication/tokens/
+
 [dc]: https://app.box.com/developers/console

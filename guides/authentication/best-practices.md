@@ -17,29 +17,21 @@ next_page_id: authentication/sso
 previous_page_id: authentication/select
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/best-practices.md
+fullyTranslated: true
 ---
-# Best Practices
+# ベストプラクティス
 
-## Client secret security
+## クライアントシークレットのセキュリティ
 
-Your client secret is confidential and needs to be protected. Because this is
-how we securely identify an application's identity when obtaining an
-Access Token, you do not want to freely distribute a client secret. This
-includes via email, public forums and code repositories, distributed native
-applications, or client-side code.
+クライアントシークレットは機密情報であり、保護する必要があります。アクセストークンの取得時にBoxがアプリケーションのIDを安全に確認するために使用されるため、クライアントシークレットを自由に配布するべきではありません。配布方法には、メール、公開フォーラム、コードリポジトリ、分散されたネイティブアプリケーション、クライアント側のコードなどがあります。
 
-## Cache tokens
+## トークンのキャッシュ
 
-Because fetching new tokens is expensive, we recommend using a token cache
-to prevent unnecessary requests.
+新しいトークンの取得はコストが高いため、トークンのキャッシュを使用して、不要なリクエストが行われないようにすることをお勧めします。
 
-After retrieving a token, store it in an in-memory cache, like Memcached, or a
-built-in ASP.NET cache service. By default, Access Tokens are valid for 60
-minutes, but we recommend setting the expiration time to around 50 minutes to
-allow for a buffer.
+トークンは、取得後、Memcachedなどのインメモリキャッシュ、または組み込みのASP.NETキャッシュサービスに保存してください。デフォルトでは、アクセストークンの有効期限は60分ですが、バッファーを確保するために50分程度に設定することをお勧めします。
 
-When you need a token, first check the cache for a valid token. If the token
-expired, get a new one and store it in the cache for 50 minutes.
+トークンが必要になったら、まずキャッシュに有効なトークンがあるかどうかを確認します。トークンの有効期限が切れている場合は、新しいトークンを取得し、キャッシュに50分間保存します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -54,25 +46,22 @@ def self.user_client(user_id)
     Boxr::Client.new(access_token)
 end
 ```
+
 <!-- markdownlint-enable line-length -->
 
 <Message tip>
 
-Official Box SDKs use token caching.
+Box公式SDKでは、トークンのキャッシュが使用されています。
 
 </Message>
 
-## Expired tokens
+## 有効期限が切れたトークン
 
-Expired tokens return a 401: Unauthorized error. This error should be handled
-to refresh the token.
+有効期限が切れたトークンは、401: Unauthorizedエラーを返します。このエラーを処理して、トークンを更新する必要があります。
 
-## Downscope tokens
+## トークンのダウンスコープ
 
-It is important to follow the principle of least privilege when thinking about
-Access Tokens. This can be accomplished through [downscoping][downscope], where
-a fully scoped Access Token is exchanged for a more restricted Access Token that
-can then be deployed to client-side code, mobile environments, or UI tools.
+アクセストークンについて考えるとき際は、最小権限の原則に従うことが重要です。そのためには、[ダウンスコープ][downscope]を行います。ダウンスコープでは、すべてのスコープが設定されたアクセストークンがより厳しく制限されたアクセストークンと交換され、そのトークンがクライアント側のコード、モバイル環境、またはUIツールに展開されます。
 
 ```java
 //Define resource/scopes that downscoped token has access to 
@@ -88,17 +77,14 @@ ScopedToken downscopedToken =
 //Downscoped token available in downscopedToken.getAccessToken()
 ```
 
-## Revoke tokens
+## トークンの取り消し
 
-Both fully scoped Access Tokens and Downscoped Tokens can be [revoked][revoke].
-This allows you to manage the lifespan of a token to reduce exposure when a user
-logs out , there is suspicious activity, or when you need to push new security
-enhancements.
+すべてのスコープが設定されたアクセストークンもダウンスコープされたトークンも、[取り消す][revoke]ことができます。そのため、トークンの寿命を管理して、ユーザーがログアウトしたとき、不審なアクティビティがあったとき、新しいセキュリティ強化を推進する必要があるときなどに、リスクを減らすことができます。
 
-## Developer Tokens
+## 開発者トークン
 
-Developer Tokens should only be used for development or testing purposes and
-never in production.
+開発者トークンは、開発またはテストのためだけに使用し、実稼働環境では使用しないでください。
 
 [downscope]: g://authentication/tokens/downscope/
+
 [revoke]: g://authentication/tokens/revoke/

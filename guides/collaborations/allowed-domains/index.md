@@ -19,19 +19,16 @@ next_page_id: ''
 previous_page_id: collaborations/allowed-domains/delete
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/collaborations/allowed-domains/index.md
+fullyTranslated: true
 ---
-# Allowed collaboration domains
+# コラボレーションの許可されたドメイン
 
-Within the content and sharing settings for an enterprise, an admin can specify
-[collaboration restrictions][collab-restrictions] for the enterprise. These
-settings include the ability to limit collaborations to only a series of
-allowed domains.
+会社のコンテンツと共有設定では、管理者は会社に対して[コラボレーションの制限][collab-restrictions]を設定できます。この設定では、許可された一連のドメインのみにコラボレーションを制限することも可能です。
 
-The allowed domain APIs are available to allow applications with
-appropriate permissions to add, fetch, and delete these allowed domains
-programmatically for the enterprise.
+許可されたドメインAPIを使用すると、適切な権限を持つアプリケーションは、会社の許可されたドメインをプログラムを使用して追加、取得、および削除できます。
 
 <!-- i18n-enable localize-links -->
 
-[collab-restrictions]: https://support.box.com/hc/en-us/articles/360044194913-Content-and-sharing-settings-for-your-enterprise#toc-hId--670854033
+[collab-restrictions]: https://support.box.com/hc/ja/articles/360044194913-Enterpriseでのコンテンツと共有の設定
+
 <!-- i18n-disable localize-links -->
