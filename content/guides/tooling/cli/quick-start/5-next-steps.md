@@ -9,7 +9,7 @@ You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
 1. [Created, configured, and authorized][one]
-   a JWT application.
+   an OAuth 2.0 application.
 2. [Installed and configured][two]
    the CLI
    <!--alex ignore executed-->
@@ -22,7 +22,7 @@ To take the next step, the following resources are recommended:
 2. Review [token cache][cache] settings.
 3. Review [autocomplete][ac] settings.
 
-[one]: g://tooling/cli/quick-start/create-jwt-app/
+[one]: g://tooling/cli/quick-start/create-oauth-app/
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
