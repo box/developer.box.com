@@ -100,7 +100,7 @@ authorized.
 
 <ImageFrame center>
 
-![App Authorized](./app-authorized.png)
+![App Authorized](./images/app-authorized.png)
 
 </ImageFrame>
 
@@ -170,7 +170,7 @@ downloaded in step 1.
 
 <ImageFrame center>
 
-![CLI Configuration Diagram](./cli-config-diagram.png)
+![CLI Configuration Diagram](./images/cli-config-diagram.png)
 
 </ImageFrame>
 

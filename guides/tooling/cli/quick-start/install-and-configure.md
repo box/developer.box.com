@@ -21,6 +21,15 @@ available if you would like to build the CLI in other environments.
 
 Currently you have provided us with the following information.
 
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
+
+In this step, we will use the **Client ID** and **Client Secret** from the
+previous step to log you in and create an **Access Token** for your user.
+
+## The reason to log in
+
+Currently you have provided us with the following information.
+
 <Store disabled inline id='cli_credentials.client_id'>
 
 Client ID
@@ -32,6 +41,8 @@ Client ID
 Client Secret
 
 </Store>
+
+</Choice>
 
 ## Windows & macOS Installers
 
