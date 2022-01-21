@@ -8,6 +8,16 @@ hide_in_page_nav: true
 Installers are available for Windows and macOS. However, the raw source-code is
 available if you would like to build the CLI in other environments.
 
+Currently you have provided us with the following information.
+
+<Store disabled inline id='cli_credentials.client_id'>
+  Client ID
+</Store>
+
+<Store disabled inline obscured id='cli_credentials.client_secret'>
+  Client Secret
+</Store>
+
 ## Windows & macOS Installers
 
 To install the latest CLI on your machine, download the latest
