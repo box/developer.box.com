@@ -82,7 +82,7 @@ tab in the [Developer Console][dc]. The state and status must be enabled and
 authorized.
 
 <ImageFrame center>
-    ![App Authorized](./app-authorized.png)
+    ![App Authorized](./images/app-authorized.png)
 </ImageFrame>
 
 ## Download Required Data
@@ -144,7 +144,7 @@ You will now need to configure the CLI to point to to the configuration file
 downloaded in step 1.
 
 <ImageFrame center>
-  ![CLI Configuration Diagram](./cli-config-diagram.png)
+  ![CLI Configuration Diagram](./images/cli-config-diagram.png)
 </ImageFrame>
 
 <!--alex ignore execute-->
