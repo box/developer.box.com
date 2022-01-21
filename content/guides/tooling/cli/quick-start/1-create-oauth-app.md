@@ -1,18 +1,16 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-related_guides:
-  - applications/custom-apps
 ---
 
 # Configure a Box App
 
-To use the **Postman Collection** the Postman application needs to authenticate
+To use the **Box CLI** you will need to authenticate
 to the Box API using an **Access Token**. The simplest way to get an Access
 Token is by logging into Box using a **Box App**.
 
 A **Box App** is an application that can be used for making API calls. When
-using the **Postman Collection** you can choose to either set up your own Box
+using the **CLI** you can choose to either set up your own Box
 App or use our preconfigured one. The key benefit of setting up your own Box App
 is that you won't need to go through login every hour, but it does require a few
 extra steps to set up.
@@ -20,14 +18,14 @@ extra steps to set up.
 ## Select a Box App to use
 
 <Grid columns='2'>
-  <Choose option='postman.app_type' value='create_new' color='blue'>
+  <Choose option='cli.app_type' value='create_new' color='blue'>
     # Create new Box App
 
     We can set up a Box App for you right here from the documentation. With a
     few clicks you will be ready to go.
   </Choose>
 
-  <Choose option='postman.app_type' value='use_existing' color='red'>
+  <Choose option='cli.app_type' value='use_existing' color='red'>
     # Use existing Box app
 
     If you've already created a Box App before that you want to use, then we
@@ -35,7 +33,7 @@ extra steps to set up.
   </Choose>
 </Grid>
 
-<Choice option='postman.app_type' value='create_new' color='blue'>
+<Choice option='cli.app_type' value='create_new' color='blue'>
   # Create a Box app
 
   To use your own **Box App** you will need to create a
@@ -43,10 +41,10 @@ extra steps to set up.
   will set them up for you. At the end you will have a **Client ID** and
   **Client Secret**.
 
-  <Trigger option="postman.login_button" value="clicked">
+  <Trigger option="cli.login_button" value="clicked">
     <AppButton
-      id='postman'
-      name='Postman'
+      id='box-cli'
+      name='Box CLI'
       scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties'
       can_act_as_user
       authentication_type='auth_code_grant'
@@ -56,13 +54,13 @@ extra steps to set up.
     </AppButton>
   </Trigger>
 
-  <Observe option="postman.login_button" value="clicked">
+  <Observe option="cli.login_button" value="clicked">
     We will use these credentials to authenticate your application in the next
     step.
   </Observe>
 </Choice>
 
-<Choice option='postman.app_type' value='use_existing' color='red'>
+<Choice option='cli.app_type' value='use_existing' color='red'>
   # Use existing Box app
 
   If you have already created a Box App before you can use that as well. We
@@ -85,11 +83,11 @@ extra steps to set up.
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
-  <Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
+  <Store id='cli_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
     Client ID
   </Store>
 
-  <Store id='postman_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
+  <Store id='cli_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
     Client Secret
   </Store>
 
@@ -97,7 +95,7 @@ extra steps to set up.
   step.
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
 
 <Message danger>
   # Security notice
@@ -109,7 +107,7 @@ extra steps to set up.
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
 
 ## Summary
 
@@ -121,7 +119,7 @@ extra steps to set up.
 
 </Choice>
 
-<Observe option='postman.app_type' value='create_new,use_existing'>
+<Observe option='cli.app_type' value='create_new,use_existing'>
   <Next>I have configured a Box app</Next>
 </Observe>
 
