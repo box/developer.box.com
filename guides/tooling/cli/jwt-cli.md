@@ -9,7 +9,8 @@ related_pages:
 required_guides:
   - authentication/jwt/jwt-setup
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/tooling/quick-start/create-jwt-app/
 category_id: tooling
 subcategory_id: tooling/cli
 is_index: false
@@ -23,7 +24,15 @@ previous_page_id: tooling/cli
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/jwt-cli.md
 ---
-# Box CLI Using JWT Authentication
+# (Appendix) Box CLI Using JWT Authentication
+
+Previously, our [Box CLI Quick Start Guide][qs], followed the JWT or server
+authentication application setup flow. Since we released a new OAuth 2.0
+version of the Box CLI, we updated it to use the new feature. We migrated
+the original JWT setup instructions here, in case you would still like
+to use the server authentication application type.
+
+## Setup a JWT application
 
 The first step to using the CLI with server authentication is creating a Box
 application in the
@@ -34,8 +43,6 @@ following scopes are set in the **Configuration** tab of your application:
 
 - Read all files and folders stored in Box
 - Write all files and folders stored in Box
-
-## Setup a JWT application
 
 1. From the left-hand navigation panel on your All Files page, open the
    [Developer Console][dc]. If this is your first time using the Box
@@ -259,3 +266,4 @@ assumes you do not do this.
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
+[qs]: g://tooling/cli/quick-start/
