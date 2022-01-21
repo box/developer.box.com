@@ -19,31 +19,6 @@ source_url: >-
 Installers are available for Windows and macOS. However, the raw source-code is
 available if you would like to build the CLI in other environments.
 
-Currently you have provided us with the following information.
-
-<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
-
-In this step, we will use the **Client ID** and **Client Secret** from the
-previous step to log you in and create an **Access Token** for your user.
-
-## The reason to log in
-
-Currently you have provided us with the following information.
-
-<Store disabled inline id='cli_credentials.client_id'>
-
-Client ID
-
-</Store>
-
-<Store disabled inline obscured id='cli_credentials.client_secret'>
-
-Client Secret
-
-</Store>
-
-</Choice>
-
 ## Windows & macOS Installers
 
 To install the latest CLI on your machine, download the latest
@@ -71,47 +46,48 @@ The source code for the CLI is available via [GitHub][cli].
 
 ## Run configuration command
 
-You will now need to configure the CLI to point to to the configuration file
-downloaded in step 1.
+You will now need to configure the CLI by logging in to your Box App.
 
-<ImageFrame center>
+Currently you have provided us with the following information.
 
-![CLI Configuration Diagram](./cli-config-diagram.png)
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
 
-</ImageFrame>
+In this step, we will use the **Client ID** and **Client Secret** from the
+previous step to log you in and create an **Access Token** for your user.
+
+## The reason to log in
+
+Currently you have provided us with the following information.
+
+<Store disabled inline id='cli_credentials.client_id'>
+
+Client ID
+
+</Store>
+
+<Store disabled inline obscured id='cli_credentials.client_secret'>
+
+Client Secret
+
+</Store>
+
+</Choice>
 
 <!--alex ignore execute-->
 
-Open your terminal or command line and execute the
-command: `box configure:environments:add PathToConfigFileHere`, replacing
-`PathToConfigHere` with the path to your `config.json` file.
-
-<!-- markdownlint-disable line-length -->
-
-For example:
-`box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
-
-<!-- markdownlint-enable line-length -->
-
-<Message type=tip>
-
-You can drag the csv file from the Finder/File Explorer to the
-terminal/command line window to auto-populate the path.
-
-</Message>
+Open your terminal or command line and execute the command: `box login`.
 
 ## Confirm configuration
 
-To confirm successful configuration, use the command `box users:get`.
+To confirm successful configuration, use the command `box users:get:me`.
 
-A successful response will provide details about the [Service Account][sa] user
-associated with your [Access Token][at]:
+A successful response will provide details about your user account.
 
 ```json
 Type: user
 ID: ''0123456789''
-Name: Box CLI - Quickstart Example
-Login: AutomationUser_123456_8jSo6Lqvko@boxdevedition.com
+Name: Aaron Levie
+Login: example@box.com
 Created At: '2020-01-01T09:45:01-07:00'
 Modified At: '2021-03-01T09:30:05-07:00'
 Language: en
@@ -127,18 +103,10 @@ Avatar URL: ''
 Notification Email: []
 ```
 
-<Message type=tip>
-
-By default, JWT applications automatically obtain an Access Token for the
-Service Account. It is possible to change the default user, but this guide
-assumes you do not do this.
-
-</Message>
-
 ## Summary
 
 - You installed the CLI
-- You configured the CLI to point to your application's configuration file
+- You configured the CLI to use the OAuth 2.0 Application created earlier
 - You confirmed the user associated with your Access Token
 
 <Next>
