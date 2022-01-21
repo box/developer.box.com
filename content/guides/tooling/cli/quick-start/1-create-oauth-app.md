@@ -5,13 +5,10 @@ hide_in_page_nav: true
 
 # Configure a Box App
 
-To use the **Box CLI** you will need to authenticate
-to the Box API using an **Access Token**. The simplest way to get an Access
-Token is by logging into Box using a **Box App**.
-
-A **Box App** is an application that can be used for making API calls. When
-using the **CLI** you can choose to either set up your own Box
-App or use our preconfigured one. The key benefit of setting up your own Box App
+To use the **Box CLI** you will need to create a **Box App**. A Box App is
+an application that can be used for making API calls. When
+using the Box CLI you can choose to either set up your own Box App or use
+our preconfigured one. The key benefit of setting up your own Box App
 is that you won't need to go through login every hour, but it does require a few
 extra steps to set up.
 
@@ -55,7 +52,7 @@ extra steps to set up.
   </Trigger>
 
   <Observe option="cli.login_button" value="clicked">
-    We will use these credentials to authenticate your application in the next
+    We will use these credentials to authenticate the Box CLI in the next
     step.
   </Observe>
 </Choice>
@@ -77,7 +74,7 @@ extra steps to set up.
      **Redirect URI** should be `https://box.dev/auth/callback`.
   6. Scroll down to the **Application Scopes** section to select your desired
      [permissions][scopes]. **Your application must have at least one or more**
-     **of the following scopes:** manage users, read all files and folders
+     **of the following scopes:** read all files and folders
      stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
 
@@ -91,7 +88,7 @@ extra steps to set up.
     Client Secret
   </Store>
 
-  We will use these credentials to authenticate your application in the next
+  We will use these credentials to authenticate the Box CLI in the next
   step.
 </Choice>
 

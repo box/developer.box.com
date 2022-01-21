@@ -8,6 +8,13 @@ hide_in_page_nav: true
 A full list of CLI commands and usage information can be found in the
 [GitHub repository][github].
 
+<Message type=warning>
+   Only Service Accounts and Admins are able to use some commands.
+   If your user is not authorized with the necessary scopes or you
+   configured your CLI to obtain a default token for another user, calls may
+   fail. Add `-v` or `--verbose` to your command for verbose error logging.
+</Message> 
+
 If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].
 
@@ -76,39 +83,11 @@ ID returned in the response.
 
 Log into **your** Box account. Can you see this folder in your folder tree?
 
-<!--alex ignore executing-->
-
-You cannot see this folder in your own Box account because you do not own, nor
-are you collaborated in on the folder. You are executing commands as the
-[Service Account][sa] and therefore the created folder lives in the
-[Service Account's][sa] folder tree rather than your own.
-
-<!-- markdownlint-disable line-length -->
-<!--alex ignore execute-->
-
-Now, execute the command:
-`box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
-
-<!-- markdownlint-enable line-length -->
-
-<Message type=tip>
-   To find your user ID, go to your All Files page and click the circle in the
-   top right-hand corner. Select **Account Settings** from the dropdown. Your
-   user ID is listed as the **Account ID** under the **Account** tab. 
-</Message>
-
-Return to your All Files page. Can you see the folder now?
-
-The second command used the [Service Account][sa], which owns the folder, to add
-your user as an Editor-level collaborator on the folder. This surfaces the
-folder in your own folder tree.
-
 ## Summary
 
 - You used the help feature to create a folder
-- You added a collaboration to the created folder and viewed it in Box
 
-<Next>I created my first folder and added a collaboration</Next>
+<Next>I created my first folder</Next>
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
