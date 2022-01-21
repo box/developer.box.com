@@ -7,7 +7,7 @@ alias_paths:
   - /guides/tooling/sdks/cli/
 ---
 
-# Learn to use the Box CLI
+# Learn to use the Box CLI with OAuth 2.0
 
 <!--alex ignore executed-->
 
