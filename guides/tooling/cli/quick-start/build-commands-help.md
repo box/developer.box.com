@@ -30,6 +30,24 @@ restrictions, token permission requirements, fields, etc.
 
 </Message>
 
+## First: Reset browser storage
+
+Now that you've imported the Box API credentials into the CLI you should take a
+moment to remove these credentials from your browser's storage.
+
+<ResetButton id='cli,credentials,observable_events'>
+
+Clear credentials
+
+</ResetButton>
+
+<Message warning>
+
+Removing your API credentials from the browser storage ensures that no other
+script can read your **Client ID** or **Client Secret**
+
+</Message>
+
 ## Creating a folder with help
 
 <!--alex ignore executing-->
