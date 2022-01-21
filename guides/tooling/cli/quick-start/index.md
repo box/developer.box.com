@@ -13,7 +13,7 @@ rank: 0
 total_steps: 5
 sibling_id: tooling/cli
 parent_id: tooling/cli
-next_page_id: tooling/cli/quick-start/create-jwt-app
+next_page_id: tooling/cli/quick-start/create-oauth-app
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/0-index.md
@@ -50,7 +50,7 @@ I am ready to get started
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
-[one]: g://tooling/cli/quick-start/create-jwt-app/
+[one]: g://tooling/cli/quick-start/create-oauth-app/
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/

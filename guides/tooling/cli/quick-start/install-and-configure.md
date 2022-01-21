@@ -10,7 +10,7 @@ total_steps: 5
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: tooling/cli/quick-start/build-commands-help
-previous_page_id: tooling/cli/quick-start/create-jwt-app
+previous_page_id: tooling/cli/quick-start/create-oauth-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md
 ---

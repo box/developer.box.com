@@ -1,29 +1,27 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-related_guides:
-  - applications/custom-apps
 category_id: tooling
-subcategory_id: tooling/postman
+subcategory_id: tooling/cli
 is_index: false
-id: tooling/postman/quick-start/configure-box-app
-rank: 2
-total_steps: 6
-sibling_id: tooling/postman/quick-start
-parent_id: tooling/postman/quick-start
-next_page_id: tooling/postman/quick-start/log-in-to-box
-previous_page_id: tooling/postman/quick-start/install-postman
+id: tooling/cli/quick-start/create-oauth-app
+rank: 1
+total_steps: 5
+sibling_id: tooling/cli/quick-start
+parent_id: tooling/cli/quick-start
+next_page_id: tooling/cli/quick-start/install-and-configure
+previous_page_id: tooling/cli/quick-start
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/2-configure-box-app.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/1-create-oauth-app.md
 ---
 # Configure a Box App
 
-To use the **Postman Collection** the Postman application needs to authenticate
+To use the **Box CLI** you will need to authenticate
 to the Box API using an **Access Token**. The simplest way to get an Access
 Token is by logging into Box using a **Box App**.
 
 A **Box App** is an application that can be used for making API calls. When
-using the **Postman Collection** you can choose to either set up your own Box
+using the **CLI** you can choose to either set up your own Box
 App or use our preconfigured one. The key benefit of setting up your own Box App
 is that you won't need to go through login every hour, but it does require a few
 extra steps to set up.
@@ -32,7 +30,7 @@ extra steps to set up.
 
 <Grid columns='2'>
 
-<Choose option='postman.app_type' value='create_new' color='blue'>
+<Choose option='cli.app_type' value='create_new' color='blue'>
 
 # Create new Box App
 
@@ -41,7 +39,7 @@ few clicks you will be ready to go.
 
 </Choose>
 
-<Choose option='postman.app_type' value='use_existing' color='red'>
+<Choose option='cli.app_type' value='use_existing' color='red'>
 
 # Use existing Box app
 
@@ -52,7 +50,7 @@ can use the credentials for that application.
 
 </Grid>
 
-<Choice option='postman.app_type' value='create_new' color='blue'>
+<Choice option='cli.app_type' value='create_new' color='blue'>
 
 # Create a Box app
 
@@ -61,9 +59,9 @@ new Box App in the **Box Developer Console**. Click the button below and we
 will set them up for you. At the end you will have a **Client ID** and
 **Client Secret**.
 
-<Trigger option="postman.login_button" value="clicked">
+<Trigger option="cli.login_button" value="clicked">
 
-<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
+<AppButton id='box-cli' name='Box CLI' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
 
 Create an app
 
@@ -71,7 +69,7 @@ Create an app
 
 </Trigger>
 
-<Observe option="postman.login_button" value="clicked">
+<Observe option="cli.login_button" value="clicked">
 
 We will use these credentials to authenticate your application in the next
 step.
@@ -80,7 +78,7 @@ step.
 
 </Choice>
 
-<Choice option='postman.app_type' value='use_existing' color='red'>
+<Choice option='cli.app_type' value='use_existing' color='red'>
 
 # Use existing Box app
 
@@ -104,13 +102,13 @@ require a few settings to be set for this to work.
 
 Next, copy the values for the Client ID and Client Secret into these 2 fields.
 
-<Store id='postman_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
+<Store id='cli_credentials.client_id' placeholder='zECq2EkYBjZ...' pattern='\w{32}'>
 
 Client ID
 
 </Store>
 
-<Store id='postman_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
+<Store id='cli_credentials.client_secret' placeholder='913td9hr6jo...' pattern='\w{32}'>
 
 Client Secret
 
@@ -121,7 +119,7 @@ step.
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
 
 <Message danger>
 
@@ -135,7 +133,7 @@ this guide.
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
 
 ## Summary
 
@@ -147,7 +145,7 @@ this guide.
 
 </Choice>
 
-<Observe option='postman.app_type' value='create_new,use_existing'>
+<Observe option='cli.app_type' value='create_new,use_existing'>
 
 <Next>
 
