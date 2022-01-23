@@ -40,7 +40,7 @@ extra steps to set up.
 
   <Trigger option="cli.login_button" value="clicked">
     <AppButton
-      id='box-cli'
+      id='cli'
       name='Box CLI'
       scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties'
       can_act_as_user
