@@ -5,6 +5,7 @@ hide_in_page_nav: true
 
 # CLI Installation and Configuration
 
+<Choice option='cli.app_type' value='create_new,use_existing,clicked' color='none'>
 Installers are available for Windows and macOS. However, the raw source-code is
 available if you would like to build the CLI in other environments.
 
@@ -37,22 +38,20 @@ You will now need to configure the CLI by logging in to your Box App.
 
 Currently you have provided us with the following information.
 
-<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
-  In this step, we will use the **Client ID** and **Client Secret** from the
-  previous step to log you in and create an **Access Token** for your user.
+In this step, we will use the **Client ID** and **Client Secret** from the
+previous step to log you in and create an **Access Token** for your user.
 
-  ## The reason to log in
+## The reason to log in
 
-  Currently you have provided us with the following information.
+Currently you have provided us with the following information.
 
-  <Store disabled inline id='cli_credentials.client_id'>
-    Client ID
-  </Store>
+<Store disabled inline id='cli_credentials.client_id'>
+  Client ID
+</Store>
 
-  <Store disabled inline obscured id='cli_credentials.client_secret'>
-    Client Secret
-  </Store>
-</Choice>
+<Store disabled inline obscured id='cli_credentials.client_secret'>
+  Client Secret
+</Store>
 
 <!--alex ignore execute-->
 Open your terminal or command line and execute the command: `box login`.
@@ -87,11 +86,21 @@ Notification Email: []
 
 ## Summary
 
-- You installed the CLI
-- You configured the CLI to use the OAuth 2.0 Application created earlier
-- You confirmed the user associated with your Access Token
+* You installed the CLI
+* You configured the CLI to use the OAuth 2.0 Application created earlier
+* You confirmed the user associated with your Access Token
 
 <Next>I installed and configured the CLI</Next>
+</Choice>
+
+<Choice option='cli.app_type' unset color='none'>
+<Message danger>
+  # Incomplete previous step
+
+  Please complete the previous step to set up the **Box App** you want
+  to use.
+</Message>
+</Choice>
 
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/
