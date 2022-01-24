@@ -42,8 +42,8 @@ following scopes are set in the **Configuration** tab of your application:
    (with JWT)** > name the application > **Create App**
 
 <Message warning>
-  Server Authentication (with JWT) is the only authentication method currently
-  supported by the Box CLI and always requires Admin authorization before use. 
+  Server Authentication (with JWT) always requires Admin authorization before
+  use.
 </Message>
 
 ## Configure the application
@@ -59,12 +59,6 @@ At a minimum, you will need the following [scopes][scopes]:
 
 You can choose either App Access Only or App + Enterprise Access as the
 [application access][aa].
-
-<Message warning>
-  If at any time you make configuration changes to this application, you will
-  need to clear the token cache in the CLI to reflect these changes. Failing to
-  do so may result in unexpected errors, such as a 403. 
-</Message>
 
 ## Authorize the application
 
