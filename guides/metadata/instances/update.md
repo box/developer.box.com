@@ -29,7 +29,7 @@ fullyTranslated: true
 
 ファイルまたはフォルダに適用されたメタデータを更新するには、項目の`id`、テンプレートの`templateKey`と`scope`に加え、テンプレートインスタンスのデータを操作するための一連のJSON操作を使用します。
 
-## ファイルのメタデータの更新
+## ファイルのメタデータの更新 
 
 ファイルのメタデータを更新するには、ファイルの`file_id`、テンプレートの`scope`と`templateKey`、およびテンプレートインスタンスのデータを操作するための一連のJSON操作を指定して[`PUT /files/:file_id/metadata/:scope/:templateKey`][e_on_file] APIエンドポイントを呼び出します。
 

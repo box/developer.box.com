@@ -133,13 +133,13 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `DELETE`                                                      | 削除                                                                                                             |
 | `DELETE_USER`                                                 | ユーザーの削除                                                                                                        |
 | `DEVICE_TRUST_CHECK_FAILED`                                   | デバイストラストチェックの失敗                                                                                                |
-| `DISABLE_MULTI_FACTOR_AUTH`                                   | When multifactor authentication has been disabled                                                              |
+| `DISABLE_MULTI_FACTOR_AUTH`                                   | 多要素認証の無効化                                                                                                      |
 | `DOWNLOAD`                                                    | ダウンロード                                                                                                         |
 | `EDIT`                                                        | 編集                                                                                                             |
 | `EDIT_USER`                                                   | ユーザーの編集                                                                                                        |
 | `EMAIL_ALIAS_CONFIRM`                                         | ユーザーのメールエイリアスの確認                                                                                               |
 | `EMAIL_ALIAS_REMOVE`                                          | ユーザーのメールエイリアスの削除                                                                                               |
-| `ENABLE_MULTI_FACTOR_AUTH`                                    | When multifactor authentication has been enabled                                                               |
+| `ENABLE_MULTI_FACTOR_AUTH`                                    | 多要素認証の有効化                                                                                                      |
 | `ENTERPRISE_APP_AUTHORIZATION_UPDATE`                         | JWTアプリケーションの承認または再承認                                                                                           |
 | `EXTERNAL_COLLAB_SECURITY_SETTINGS`                           | 外部コラボレーション用セキュリティ設定の変更                                                                                         |
 | `FAILED_LOGIN`                                                | ログインの失敗                                                                                                        |

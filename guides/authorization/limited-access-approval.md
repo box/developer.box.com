@@ -69,7 +69,7 @@ Box管理者の場合、\[[管理コンソール][adminconsole]] に移動し、
 
 </ImageFrame>
 
-In the popup that appears, enter the Client ID for the application that the developer collected from the **Configuration** tab of the Developer Console.
+表示されたポップアップで、開発者が開発者コンソールの \[**構成**] タブから収集した、アプリケーションのクライアントIDを入力します。
 
 ## 変更の再承認
 

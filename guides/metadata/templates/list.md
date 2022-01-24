@@ -25,7 +25,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/2-templates/2-list.md
 fullyTranslated: true
 ---
-# すべてのメタデータテンプレートのリストの取得
+# すべてのメタデータテンプレートのリストの取得 
 
 [enterpriseスコープまたはglobalスコープ][scopes]のメタデータテンプレートのリストを取得できます。
 

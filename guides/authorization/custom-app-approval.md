@@ -28,13 +28,13 @@ fullyTranslated: true
 
 [JWT][jwt]または[クライアント資格情報許可][ccg]を使用するサーバー認証アプリケーションは、使用前にBox管理者が承認する必要があります。
 
-User authentication applications using [OAuth 2.0][oauth] may need to be enabled by a Box Admin depending on the [unpublished apps setting][upa].
+[OAuth 2.0][oauth]を使用したユーザー認証アプリケーションは、[未公開アプリの設定][upa]に応じて、Box管理者が有効にする必要がある場合があります。
 
-A Box Admin needs an application's Client ID in order to properly authorize or enable it in the Admin Console.
+Box管理者は、管理コンソールでアプリケーションを適切に承認または有効化するために、そのクライアントIDが必要になります。
 
 ## 承認の通知
 
-A semi-automated process to submit an app approval is available in the Developer Console for JWT, Client Credentials Grant, and Limited Access applications.
+アプリの承認を送信するための半自動プロセスは、開発者コンソールでJWTアプリケーション、クライアント資格情報許可アプリケーション、およびアクセス制限付きアプリケーションに使用できます。
 
 [開発者コンソール][devconsole]で、目的のアプリケーションの \[**承認**] タブに移動します。
 
@@ -64,25 +64,25 @@ A semi-automated process to submit an app approval is available in the Developer
 
 ### 管理者の場合
 
-As a Box Admin, navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel. Then, click the **Custom Apps Manager** tab (2) at the top of your screen. 
+Box管理者の場合、[管理コンソール][adminconsole]に移動し、左側のナビゲーションパネルで \[**アプリ**] タブ (1) を選択して、画面上部にある \[**カスタムアプリマネージャ**] タブ (2) をクリックします。 
 
-On both Server and User Authentication Apps screens, you will see an **Add App** button in the top right corner to add a new app.
+\[サーバー認証アプリ] 画面でも \[ユーザー認証アプリ] 画面でも、新しいアプリを追加するための \[**アプリの追加**] ボタンが右上に表示されます。
 
-For Server Authentication Apps, you can also use the Custom Apps Manager table to authorize and enable apps.
+サーバー認証アプリの場合、\[カスタムアプリマネージャ] のテーブルを使用してアプリを承認および有効化することもできます。
 
-#### Server Authentication Apps
+#### サーバー認証アプリ
 
 <ImageFrame border center>
 
-![Server Apps tab](images/jwt_app_approval_flow.png)
+![サーバーアプリのタブ](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 
-#### User Authentication Apps
+#### ユーザー認証アプリ
 
 <ImageFrame border center>
 
-![User Apps tab](images/oauth_app_approval_flow.png)
+![ユーザーアプリのタブ](images/oauth_app_approval_flow.png)
 
 </ImageFrame>
 

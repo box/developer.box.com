@@ -116,9 +116,9 @@ Box APIに関して言えば、注意すべきEnterprise設定がいくつかあ
 
 上記の設定に関係なく、[JWT][jwt]または[クライアント資格情報許可][ccg]を利用するアプリケーションを企業で使用するために、管理者はBox管理コンソールでそのアプリケーションを明示的に[承認][auth]する必要があります。承認は特定時点でのスナップショットです。つまり、開発者が開発者コンソールに再度アクセスして設定を変更した場合、管理者は、生成されたアクセストークンにその変更を反映するためにアプリケーションを再承認する必要があります。
 
-If the setting **Disable unpublished apps by default** is turned on, an Admin must also explicitly [enable][auth] any application leveraging [OAuth 2.0][oauth] as the authentication method.
+\[**デフォルトで未公開アプリを無効にする**] の設定をオンにした場合、管理者は、認証方法として[OAuth 2.0][oauth]を利用しているアプリケーションを明示的に[有効にする][auth]必要もあります。
 
-Additionally, if this setting is turned on, Server Authenticated apps will also require enablement.
+また、この設定をオンにした場合は、サーバー認証アプリの有効化も必要になります。
 
 <!-- i18n-enable localize-links -->
 
