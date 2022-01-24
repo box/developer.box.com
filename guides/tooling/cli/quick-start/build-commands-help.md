@@ -110,6 +110,14 @@ by folder ID 0.
 
 Log into **your** Box account. Can you see this folder in your folder tree?
 
+<Message type=warning>
+
+If you set up the Box CLI using JWT authentication, you will not see the
+folder in your Box account. The folder will live in the service account
+of the application that was created after application approval.
+
+</Message>
+
 ## Summary
 
 - You used the help feature to create a folder

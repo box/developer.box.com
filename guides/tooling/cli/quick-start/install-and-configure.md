@@ -77,6 +77,8 @@ Client Secret
 
 Open your terminal or command line and execute the command: `box login`.
 
+INSERT SCREENSHOTS ONCE DEMO IS RELASED.
+
 ## Confirm configuration
 
 To confirm successful configuration, use the command `box users:get:me`.
