@@ -10,7 +10,7 @@ related_endpoints:
 
 # Log in to Box
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
   In this step, we will use the **Client ID** and **Client Secret** from the
   previous step to log you in and create an **Access Token** for your user.
 

@@ -30,7 +30,7 @@ extra steps to set up.
   </Choose>
 </Grid>
 
-<Choice option='cli.app_type' value='create_new' color='blue'>
+<Choice option='cli.app_type' value='create_new,clicked' color='blue'>
   # Create a Box app
 
   To use your own **Box App** you will need to create a
@@ -38,7 +38,7 @@ extra steps to set up.
   will set them up for you. At the end you will have a **Client ID** and
   **Client Secret**.
 
-  <Trigger option="cli.login_button" value="clicked">
+  <Trigger option="cli.app_type" value="clicked">
     <AppButton
       id='cli'
       name='Box CLI'
@@ -51,7 +51,7 @@ extra steps to set up.
     </AppButton>
   </Trigger>
 
-  <Observe option="cli.login_button" value="clicked">
+  <Observe option="cli.app_type" value="clicked">
     We will use these credentials to authenticate the Box CLI in the next
     step.
   </Observe>
@@ -92,7 +92,7 @@ extra steps to set up.
   step.
 </Choice>
 
-<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing,clicked' color='none'>
 
 <Message danger>
   # Security notice
@@ -104,7 +104,7 @@ extra steps to set up.
 
 </Choice>
 
-<Choice option='cli.app_type' value='create_new,use_existing' color='none'>
+<Choice option='cli.app_type' value='create_new,use_existing,clicked' color='none'>
 
 ## Summary
 
@@ -116,7 +116,7 @@ extra steps to set up.
 
 </Choice>
 
-<Observe option='cli.app_type' value='create_new,use_existing'>
+<Observe option='cli.app_type' value='create_new,use_existing,clicked'>
   <Next>I have configured a Box app</Next>
 </Observe>
 
