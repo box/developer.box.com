@@ -36,7 +36,7 @@ Learn more about embedding Box
 
 It is important to realize that the application needs to have access to the
 file that is to be downloaded. When the application is a authenticated through
-JWT or App Tokens, the user authenticated as is a Service Account. This service
+JWT or App Tokens, the user is authenticated as a Service Account. This service
 account does not have access to files besides their own.
 
 If this user does not have access to the file the application will receive a
