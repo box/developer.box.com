@@ -35,7 +35,7 @@ extra steps to set up.
   </Choose>
 </Grid>
 
-<Choice option='postman.app_type' value='create_new' color='blue'>
+<Choice option='postman.app_type' value='create_new,clicked' color='blue'>
   # Create a Box app
 
   To use your own **Box App** you will need to create a
@@ -43,7 +43,7 @@ extra steps to set up.
   will set them up for you. At the end you will have a **Client ID** and
   **Client Secret**.
 
-  <Trigger option="postman.login_button" value="clicked">
+  <Trigger option="postman.app_type" value="clicked">
     <AppButton
       id='postman'
       name='Postman'
@@ -56,7 +56,7 @@ extra steps to set up.
     </AppButton>
   </Trigger>
 
-  <Observe option="postman.login_button" value="clicked">
+  <Observe option="postman.app_type" value="clicked">
     We will use these credentials to authenticate your application in the next
     step.
   </Observe>
@@ -97,7 +97,7 @@ extra steps to set up.
   step.
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
 
 <Message danger>
   # Security notice
@@ -109,7 +109,7 @@ extra steps to set up.
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='postman.app_type' value='create_new,use_existing,clicked' color='none'>
 
 ## Summary
 
@@ -121,7 +121,7 @@ extra steps to set up.
 
 </Choice>
 
-<Observe option='postman.app_type' value='create_new,use_existing'>
+<Observe option='postman.app_type' value='create_new,use_existing,clicked'>
   <Next>I have configured a Box app</Next>
 </Observe>
 
