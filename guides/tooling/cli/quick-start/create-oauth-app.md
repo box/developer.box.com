@@ -58,7 +58,7 @@ will set them up for you. At the end you will have a **Client ID** and
 
 <Trigger option="cli.app_type" value="clicked">
 
-<AppButton id='cli' name='Box CLI' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
+<AppButton id='cli' name='Box CLI' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='http://localhost:3000/callback' cors_origins=''>
 
 Create an app
 
@@ -88,9 +88,7 @@ require a few settings to be set for this to work.
 4. Make sure your application uses **Standard OAuth 2.0** as the
    authentication method
 5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-   **Redirect URI** to the value `https://developer.box.com/auth/callback`. It
-   is important to note, if you visited this tutorial at `box.dev` your
-   **Redirect URI** should be `https://box.dev/auth/callback`.
+   **Redirect URI** to the value `http://localhost:3000/callback`.
 6. Scroll down to the **Application Scopes** section to select your desired
    [permissions][scopes]. **Your application must have at least one or more**
    **of the following scopes:** read all files and folders

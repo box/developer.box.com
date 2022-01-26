@@ -198,11 +198,11 @@
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "Go to Dev Console",
   // The URL to the developer console
-  "headers.primary.buttons.dashboard.url": "https://account.box.com/developers/services",
+  "headers.primary.buttons.dashboard.url": "https://cloud.app.box.com/developers/console",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "My Apps",
   // The URL to the developer console
-  "headers.primary.buttons.console.url": "https://account.box.com/developers/services",
+  "headers.primary.buttons.console.url": "https://cloud.app.box.com/developers/console",
   // The text for the link to the developer signup
   "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
