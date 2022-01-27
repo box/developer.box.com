@@ -16,6 +16,14 @@ source_url: >-
 ---
 # Install Postman
 
+<Message type='warning'>
+
+We are aware of the issue related to importing the collection into Postman,
+and are working on a fix. In the meantime, please make sure to download
+and use [version 8][v8] of the desktop application.
+
+</Message>
+
 To use the **Box Postman Collection** you will need to have the
 [Postman][postman] app installed on your device.
 Postman is available for Windows, Mac, and Linux environments.
@@ -28,7 +36,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Trigger option='postman.downloaded' value='win32'>
 
-[Download](https://dl.pstmn.io/download/latest/win32)
+[Download][v8]
 
 </Trigger>
 
@@ -40,7 +48,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Trigger option='postman.downloaded' value='win64'>
 
-[Download](https://dl.pstmn.io/download/latest/win64)
+[Download][v8]
 
 </Trigger>
 
@@ -52,7 +60,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Trigger option='postman.downloaded' value='osx'>
 
-[Download](https://dl.pstmn.io/download/latest/osx)
+[Download][v8]
 
 </Trigger>
 
@@ -64,7 +72,7 @@ Postman is available for Windows, Mac, and Linux environments.
 
 <Trigger option='postman.downloaded' value='linux64'>
 
-[Download](https://dl.pstmn.io/download/latest/linux64)
+[Download][v8]
 
 </Trigger>
 
@@ -99,3 +107,4 @@ I have installed Postman
 
 [register]: https://identity.getpostman.com/signup
 [postman]: https://getpostman.com
+[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
