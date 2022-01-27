@@ -16,7 +16,7 @@ source_url: >-
 ---
 # Install Postman
 
-<Message type='warning'>
+<Message type='danger'>
 
 We are aware of the issue related to importing the collection into Postman,
 and are working on a fix. In the meantime, please make sure to download
