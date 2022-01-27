@@ -6,7 +6,7 @@ icon: FiCpu
 ---
 # Use Postman to make API calls
 
-<Message type='warning'>
+<Message type='danger'>
   We are aware of the issue related to importing the collection into Postman,
   and are working on a fix. In the meantime, please make sure to download
   and use [version 8][v8] of the desktop application.
@@ -19,7 +19,9 @@ Collection is a set of preconfigured requests that make it possible to get
 started with the Box API from Postman without having to manually configure the
 requests.
 
-<YouTube id='enUvXHt9qGU' />
+<ImageFrame center>
+  ![Postman](./postman.png)
+</ImageFrame>
 
 ## Overview
 
