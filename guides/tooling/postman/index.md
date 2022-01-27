@@ -22,6 +22,14 @@ source_url: >-
 ---
 # Postman Collection
 
+<Message type='warning'>
+
+We are aware of the issue related to importing the collection into Postman,
+and are working on a fix. In the meantime, please make sure to download
+and use [version 8][v8] of the desktop application.
+
+</Message>
+
 [Postman][postman] is a tool that lets you build and test HTTP requests in an
 easy-to-use interface without configuring a full development environment. The
 **Box Postman Collection** is a set of preconfigured requests that make it
@@ -58,3 +66,4 @@ Postman Chrome application.
 [postman]: https://postman.com
 [legacy]: https://www.postman.com/collections/768279fde466dffc5511
 [openapi]: https://github.com/box/box-openapi
+[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
