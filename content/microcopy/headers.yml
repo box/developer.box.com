@@ -41,14 +41,14 @@ primary:
       text: Go to Dev Console
 
       // url: The URL to the developer console
-      url: https://account.box.com/developers/services
+      url: https://cloud.app.box.com/developers/console
 
     console:
       // text: The text for the link to the developer console
       text: My Apps
 
       // url: The URL to the developer console
-      url: https://account.box.com/developers/services
+      url: https://cloud.app.box.com/developers/console
 
     signup:
       // text: The text for the link to the developer signup
