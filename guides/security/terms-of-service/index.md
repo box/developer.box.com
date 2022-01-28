@@ -15,7 +15,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/terms-of-service/index.md
 fullyTranslated: true
 ---
-# 利用規約
+# サービス利用規約
 
 Box APIを使用すると、管理者はBoxの使用に関する利用規約を設定できます。また、ユーザーは、カスタムアプリケーションの利用規約に同意および再同意できます。
 
