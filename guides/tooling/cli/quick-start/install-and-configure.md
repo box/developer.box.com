@@ -50,8 +50,6 @@ The source code for the CLI is available via [GitHub][cli].
 
 You will now need to configure the CLI by logging in to your Box App.
 
-Currently you have provided us with the following information.
-
 In this step, we will use the **Client ID** and **Client Secret** from the
 previous step to log you in and create an **Access Token** for your user.
 
@@ -71,15 +69,46 @@ Client Secret
 
 </Store>
 
+<!-- markdownlint-disable line-length -->
+
 <!--alex ignore execute-->
 
-Open your terminal or command line and execute the command: `box login`.
+Open your terminal or command line and execute the command: `box login -n example_name`.
 
-INSERT SCREENSHOTS ONCE DEMO IS RELASED.
+<!-- markdownlint-enable line-length -->
+
+<ImageFrame center>
+
+![CLI Login](./cli-login.png)
+
+</ImageFrame>
+
+Click the **Grant Access to Box** button that appears in the browser window.
+
+<ImageFrame center>
+
+![Grant CLI Access](./cli-grant-access.png)
+
+</ImageFrame>
+
+If successful, you will see the following success message.
+
+<ImageFrame center>
+
+![CLI Env Setup](./cli-env-setup.png)
+
+</ImageFrame>
 
 ## Confirm configuration
 
-To confirm successful configuration, use the command `box users:get:me`.
+To confirm successful configuration, make your first Box API call with the Box
+CLI by entering the command `box users:get me`.
+
+<ImageFrame center>
+
+![CLI Users Call](./cli-first-call.png)
+
+</ImageFrame>
 
 A successful response will provide details about your user account.
 
@@ -107,7 +136,8 @@ Notification Email: []
 
 * You installed the CLI
 * You configured the CLI to use the OAuth 2.0 Application created earlier
-* You confirmed the user associated with your Access Token
+* You **made your first Box CLI Box API call** confirmed the user associated
+  with your Access Token
 
 <Next>
 
