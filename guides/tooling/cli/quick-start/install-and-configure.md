@@ -75,6 +75,9 @@ Client Secret
 
 Open your terminal or command line and execute the command: `box login -n example_name`.
 
+Copy the Client ID and Client Secret into the terminal window, once asked for
+those pieces of information.
+
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
