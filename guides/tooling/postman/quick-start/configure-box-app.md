@@ -45,13 +45,13 @@ fullyTranslated: true
 
 </Grid>
 
-<Choice option="postman.app_type" value="create_new" color="blue">
+<Choice option="postman.app_type" value="create_new,clicked" color="blue">
 
 # Boxアプリの作成
 
 独自の**Boxアプリ**を使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。下のボタンをクリックすると、アプリがセットアップされます。最後に、**クライアントID**と**クライアントシークレット**を取得できます。
 
-<Trigger option="postman.login_button" value="clicked">
+<Trigger option="postman.app_type" value="clicked">
 
 <AppButton id="postman" name="Postman" scopes="root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties" can_act_as_user authentication_type="auth_code_grant" redirect_url="/auth/callback" cors_origins>
 
@@ -61,7 +61,7 @@ fullyTranslated: true
 
 </Trigger>
 
-<Observe option="postman.login_button" value="clicked">
+<Observe option="postman.app_type" value="clicked">
 
 これらの資格情報は、次の手順でアプリケーションの認証に使用します。
 
@@ -79,7 +79,7 @@ fullyTranslated: true
 2. アプリケーションを選択します。
 3. アプリの構成セクションに移動します。
 4. アプリケーションが認証方法として**標準OAuth 2.0**を使用することを確認します。
-5. \[**OAuth 2.0リダイレクトURI**] の設定まで下にスクロールし、\[**リダイレクトURI**] に値`https://box.dev/auth/callback`を設定します。
+5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
 6. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の[権限][scopes]を選択します。**アプリケーションには、** **次のスコープの1つ以上が必要です:** ユーザーを管理する、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
 7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 
@@ -101,7 +101,7 @@ fullyTranslated: true
 
 </Choice>
 
-<Choice option="postman.app_type" value="create_new,use_existing" color="none">
+<Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
 
 <Message danger>
 
@@ -113,7 +113,7 @@ API資格情報は、ブラウザキャッシュに保存されています。�
 
 </Choice>
 
-<Choice option="postman.app_type" value="create_new,use_existing" color="none">
+<Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
 
 ## まとめ
 
@@ -125,7 +125,7 @@ API資格情報は、ブラウザキャッシュに保存されています。�
 
 </Choice>
 
-<Observe option="postman.app_type" value="create_new,use_existing">
+<Observe option="postman.app_type" value="create_new,use_existing,clicked">
 
 <Next>
 

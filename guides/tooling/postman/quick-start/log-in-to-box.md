@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # Boxへのログイン
 
-<Choice option="postman.app_type" value="create_new,use_existing" color="none">
+<Choice option="postman.app_type" value="create_new,use_existing,clicked" color="none">
 
 この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 

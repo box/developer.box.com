@@ -21,6 +21,12 @@ fullyTranslated: true
 ---
 # Postmanとコレクションのインストール
 
+<Message type="danger">
+
+We are aware of the issue related to importing the collection into Postman, and are working on a fix. In the meantime, please make sure to download and use [version 8][v8] of the desktop application.
+
+</Message>
+
 **Box Postmanコレクション**を使用するには、デバイスに[Postman][postman]がインストールされている必要があります。PostmanはWindows、Mac、およびLinux環境で利用できます。
 
 <Grid columns="4">
@@ -29,7 +35,7 @@ fullyTranslated: true
 
 ![Windowsロゴ](./quick-start/windows.png) Windows (x32)
 
-[ダウンロード](https://dl.pstmn.io/download/latest/win32)
+[Download][v8]
 
 </Download>
 
@@ -37,7 +43,7 @@ fullyTranslated: true
 
 ![Windowsロゴ](./quick-start/windows.png) Windows (x64)
 
-[ダウンロード](https://dl.pstmn.io/download/latest/win64)
+[Download][v8]
 
 </Download>
 
@@ -45,7 +51,7 @@ fullyTranslated: true
 
 ![MacOSロゴ](./quick-start/macos.png) MacOS
 
-[ダウンロード](https://dl.pstmn.io/download/latest/macos)
+[Download][v8]
 
 </Download>
 
@@ -53,7 +59,7 @@ fullyTranslated: true
 
 ![Linuxロゴ](./quick-start/linux.png) Linux (x64)
 
-[ダウンロード](https://dl.pstmn.io/download/latest/linux64)
+[Download][v8]
 
 </Download>
 
@@ -78,3 +84,5 @@ Postmanアプリがインストールされていれば、そのアプリに**Bo
 [register]: https://identity.getpostman.com/signup
 
 [postman]: https://getpostman.com
+
+[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8

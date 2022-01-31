@@ -23,6 +23,12 @@ fullyTranslated: true
 ---
 # Postmanコレクション
 
+<Message type="danger">
+
+We are aware of the issue related to importing the collection into Postman, and are working on a fix. In the meantime, please make sure to download and use [version 8][v8] of the desktop application.
+
+</Message>
+
 [Postman][postman]は、完全な開発環境を構成しなくても、使いやすいインターフェイスでHTTPリクエストを作成およびテストできるツールです。**Box Postmanコレクション**は事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、Box APIを利用できるようになります。
 
 Postmanの使用を開始するには、Postmanクイックスタートガイドを使用するのが最も簡単な方法です。
@@ -52,3 +58,5 @@ Postmanコレクションを使用するには、[Postmanデスクトップア�
 [legacy]: https://www.postman.com/collections/768279fde466dffc5511
 
 [openapi]: https://github.com/box/box-openapi
+
+[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8

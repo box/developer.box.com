@@ -19,11 +19,19 @@ fullyTranslated: true
 ---
 # Postmanを使用したAPI呼び出し
 
+<Message type="danger">
+
+We are aware of the issue related to importing the collection into Postman, and are working on a fix. In the meantime, please make sure to download and use [version 8][v8] of the desktop application.
+
+</Message>
+
 [Postman](https://getpostman.com)は、完全な開発環境を構成しなくても、使いやすいインターフェイスでHTTPリクエストを作成およびテストできるツールです。Box Postmanコレクションは事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、PostmanでBox APIを利用できるようになります。
 
-<YouTube id="enUvXHt9qGU">
+<ImageFrame center>
 
-</YouTube>
+![Postman](./postman.png)
+
+</ImageFrame>
 
 ## 概要
 
@@ -40,3 +48,5 @@ fullyTranslated: true
 開始する準備ができました
 
 </Next>
+
+[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
