@@ -91,7 +91,7 @@ Log into **your** Box account. Can you see this folder in your folder tree?
 
 ## Summary
 
-- You used the help feature to create a folder
+- You used the **help** feature to create a folder
 
 <Next>I created my first folder</Next>
 

@@ -40,7 +40,7 @@ extra steps to set up.
 
   To use your own **Box App** you will need to create a
   new Box App in the **Box Developer Console**. Click the button below and we
-  will set them up for you. At the end you will have a **Client ID** and
+  will set it up for you. At the end you will have a **Client ID** and
   **Client Secret**.
 
   <Trigger option="postman.app_type" value="clicked">
