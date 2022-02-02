@@ -23,7 +23,7 @@ extra steps to set up.
   </Choose>
 
   <Choose option='cli.app_type' value='use_existing' color='red'>
-    # Use existing Box app
+    # Use existing Box App
 
     If you've already created a Box App before that you want to use, then we
     can use the credentials for that application.
