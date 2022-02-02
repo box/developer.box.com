@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # コラボレーションの利用規約の検索
 
-[コラボレーション](r://collaboration)に効力のある利用規約に関する情報を調べるには、[`GET /collaborations/:id`](e://get-collaborations-id) APIを呼び出してクエリパラメータ`fields=acceptance_requirements_status`を渡します。
+[コラボレーション](r://collaboration)に効力のあるサービス利用規約に関する情報を調べるには、[`GET /collaborations/:id`](e://get-collaborations-id) APIを呼び出してクエリパラメータ`fields=acceptance_requirements_status`を渡します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -59,11 +59,11 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
 <Message>
 
-この情報が返されるのは、外部ユーザーの利用規約が会社で有効になっており、リクエストを実行するユーザーに利用規約を表示するための[権限][permissions]がある場合のみです。これは、管理者とエンドユーザーの両方に当てはまりますが、特定の利用規約タイプが無効になっている場合でも、一般的に、管理者はAPIを介してユーザーの利用規約情報を表示できます。
+この情報が返されるのは、外部ユーザーのサービス利用規約が企業で有効になっており、リクエストを実行するユーザーにサービス利用規約を表示するための[権限][permissions]がある場合のみです。これは、管理者とエンドユーザーの両方に当てはまりますが、特定のサービス利用規約タイプが無効になっている場合でも、一般的に、管理者はAPIを介してユーザーのサービス利用規約情報を表示できます。
 
 </Message>
 
-利用規約タイプが有効になっていない場合は、APIによって空の結果が返されます。
+サービス利用規約タイプが有効になっていない場合は、APIによって空の結果が返されます。
 
 ```json
 {

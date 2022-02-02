@@ -23,9 +23,9 @@ fullyTranslated: true
 ---
 # アプリケーションフロー
 
-一般的に、アプリケーションでは以下のように利用規約を使用します。
+一般的に、アプリケーションでは以下のようにサービス利用規約を使用します。
 
-ユーザーとして認証されたアプリケーションが、関連する利用規約にユーザーが同意している必要があるBox内の項目にアクセスしようとすると、`TERMS_OF_SERVICE_REQUIRED`エラーが返されます。
+ユーザーとして認証されたアプリケーションが、関連するサービス利用規約にユーザーが同意している必要があるBox内の項目にアクセスしようとすると、`TERMS_OF_SERVICE_REQUIRED`エラーが返されます。
 
 ```json
 {
@@ -42,7 +42,7 @@ fullyTranslated: true
 }
 ```
 
-アプリケーションは、[`GET /terms_of_services/:id`][get_tos_id]を呼び出して利用規約の情報をリクエストします。
+アプリケーションは、[`GET /terms_of_services/:id`][get_tos_id]を呼び出してサービス利用規約の情報をリクエストします。
 
 ```json
 {
@@ -61,7 +61,7 @@ fullyTranslated: true
 }
 ```
 
-その後、アプリケーションは利用規約のテキストをユーザーに表示できます。
+その後、アプリケーションはサービス利用規約のテキストをユーザーに表示できます。
 
 ユーザーが利用規約を同意または拒否すると、最初のエラーによってレスポンスで`tos_user_status_id`が返されたかどうかに応じて、[`PUT /terms_of_service_user_statuses/:id`][put_tosus]または[`POST /terms_of_service_user_statuses`][post_tosus]が呼び出されます。
 
