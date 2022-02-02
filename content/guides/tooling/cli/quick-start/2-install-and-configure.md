@@ -56,8 +56,7 @@ Currently you have provided us with the following information.
 <!--alex ignore execute-->
 Open your terminal or command line and execute the command: `box login -n example_name`.
 
-Copy the Client ID and Client Secret into the terminal window, once asked for
-those pieces of information.
+Copy the Client ID and Client Secret into the terminal window when prompted.
 
 <!-- markdownlint-enable line-length -->
 
@@ -65,7 +64,7 @@ those pieces of information.
   ![CLI Login](./cli-login.png)
 </ImageFrame>
 
-Click the **Grant Access to Box** button that appears in the browser window.
+Click the **Grant access to Box** button that appears in the browser window.
 
 <ImageFrame center>
   ![Grant CLI Access](./cli-grant-access.png)
