@@ -37,7 +37,7 @@ of [commands][commands].
 
 This guide will take you through the following steps.
 
-1. [Create, configure, and authorize][one] a Box application
+1. [Create and configure][one] a Box application
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
 4. Use [options and bulk commands][four]

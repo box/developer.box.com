@@ -32,7 +32,7 @@ extra steps to set up.
 # Create new Box App
 
 We can set up a Box App for you right here from the documentation. With a
-few clicks you will be ready to go.
+few clicks you will be ready to go!
 
 </Choose>
 
@@ -49,11 +49,11 @@ can use the credentials for that application.
 
 <Choice option='cli.app_type' value='create_new,clicked' color='blue'>
 
-# Create a Box app
+# Create a Box App
 
 To use your own **Box App** you will need to create a
 new Box App in the **Box Developer Console**. Click the button below and we
-will set them up for you. At the end you will have a **Client ID** and
+will set it up for you. At the end you will have a **Client ID** and
 **Client Secret**.
 
 <Trigger option="cli.app_type" value="clicked">
@@ -77,14 +77,14 @@ step.
 
 <Choice option='cli.app_type' value='use_existing' color='red'>
 
-# Use existing Box app
+# Use existing Box App
 
 If you have already created a Box App before you can use that as well. We
 require a few settings to be set for this to work.
 
 1. Go to the [Developer Console][devconsole]
 2. Select your application
-3. Go to the app's configuration section
+3. Go to the application’s **Configuration** section 
 4. Make sure your application uses **Standard OAuth 2.0** as the
    authentication method
 5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
@@ -134,7 +134,8 @@ this guide.
 
 * You either selected to create a new **Box App**
   * Signed up for a developer account (Optional)
-  * Had us create **Custom App** for you that uses **OAuth 2.0** authentication
+  * Had us create a **Custom App** for you that uses **OAuth 2.0**
+    authentication
   * Had us set up the **redirect URL** for the application
 * Or you selected to use an **existing Box App**
 

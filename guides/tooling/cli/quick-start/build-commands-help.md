@@ -120,7 +120,7 @@ of the application that was created after application approval.
 
 ## Summary
 
-- You used the help feature to create a folder
+- You used the **help** feature to create a folder
 
 <Next>
 

@@ -75,8 +75,7 @@ Client Secret
 
 Open your terminal or command line and execute the command: `box login -n example_name`.
 
-Copy the Client ID and Client Secret into the terminal window, once asked for
-those pieces of information.
+Copy the Client ID and Client Secret into the terminal window when prompted.
 
 <!-- markdownlint-enable line-length -->
 
@@ -86,7 +85,7 @@ those pieces of information.
 
 </ImageFrame>
 
-Click the **Grant Access to Box** button that appears in the browser window.
+Click the **Grant access to Box** button that appears in the browser window.
 
 <ImageFrame center>
 
