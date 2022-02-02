@@ -58,12 +58,12 @@ can use the credentials for that application.
 
 To use your own **Box App** you will need to create a
 new Box App in the **Box Developer Console**. Click the button below and we
-will set them up for you. At the end you will have a **Client ID** and
+will set it up for you. At the end you will have a **Client ID** and
 **Client Secret**.
 
 <Trigger option="postman.app_type" value="clicked">
 
-<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_groups,manage_webhook,manage_enterprise_properties' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
+<AppButton id='postman' name='Postman' scopes='root_readonly,root_readwrite,manage_managed_users,manage_app_users,manage_groups,manage_webhook,manage_enterprise_properties,manage_data_retention,item_execute_integration' can_act_as_user authentication_type='auth_code_grant' redirect_url='/auth/callback' cors_origins=''>
 
 Create an app
 

@@ -2,11 +2,14 @@
 rank: 0
 related_endpoints: []
 related_guides:
+  - authentication/oauth2
+  - authentication/oauth2/oauth2-setup
   - authentication/jwt
   - authentication/jwt/jwt-setup
 related_pages:
   - sdks-and-tools
 required_guides:
+  - authentication/oauth2/oauth2-setup
   - authentication/jwt/jwt-setup
 related_resources: []
 alias_paths:
@@ -19,10 +22,10 @@ subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli
 type: guide
-total_steps: 0
+total_steps: 1
 sibling_id: tooling
 parent_id: tooling
-next_page_id: ''
+next_page_id: tooling/cli/jwt-cli
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/index.md
@@ -34,7 +37,12 @@ Box APIs from your terminal window or command prompt.
 
 ## Quick Start
 
-[Learn to use the Box CLI][qs].
+[Get started using the Box CLI with OAuth 2.0][qs].
+
+## Box CLI Using JWT Authentication
+
+If you would rather use our [server authentication][jwt] method, check
+out [this][jwt-page] guide.
 
 ## Advanced
 
@@ -54,3 +62,5 @@ advanced CLI user.
 [qs]: g://tooling/cli/quick-start/
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+[jwt]: g://authentication/jwt
+[jwt-page]: g://tooling/cli/jwt-cli
