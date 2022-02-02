@@ -27,11 +27,9 @@ non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
 
-<ImageFrame center>
+<YouTube id='whxT3Bdx3E0' >
 
-![CLI](./cli-code.png)
-
-</ImageFrame>
+</YouTube>
 
 ## Overview
 
