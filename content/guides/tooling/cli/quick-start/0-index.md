@@ -7,7 +7,7 @@ alias_paths:
   - /guides/tooling/sdks/cli/
 ---
 
-# Learn to use the Box CLI
+# Learn to use the Box CLI with OAuth 2.0
 
 <!--alex ignore executed-->
 
@@ -16,15 +16,13 @@ non-technical users to leverage the Box API to perform routine or bulk actions.
 There is no need to write any code, as these actions are executed through a set
 of [commands][commands].
 
-<ImageFrame center>
-  ![CLI](./cli-code.png)
-</ImageFrame>
+<YouTube id='whxT3Bdx3E0' />
 
 ## Overview
 
 This guide will take you through the following steps.
 
-1. [Create, configure, and authorize][one] a Box application
+1. [Create and configure][one] a Box application
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
 4. Use [options and bulk commands][four]
@@ -35,7 +33,7 @@ This guide will take you through the following steps.
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
-[one]: g://tooling/cli/quick-start/create-jwt-app/
+[one]: g://tooling/cli/quick-start/create-oauth-app/
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
