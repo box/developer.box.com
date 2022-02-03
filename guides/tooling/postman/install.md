@@ -23,7 +23,7 @@ fullyTranslated: true
 
 <Message type="danger">
 
-We are aware of the issue related to importing the collection into Postman, and are working on a fix. In the meantime, please make sure to download and use [version 8][v8] of the desktop application.
+Boxでは、Postmanへのコレクションのインポートに関連した問題を認識しており、修正に対応しています。修正されるまでの間は、デスクトップアプリケーションの[バージョン8][v8]をダウンロードして使用するようにしてください。
 
 </Message>
 
@@ -35,7 +35,7 @@ We are aware of the issue related to importing the collection into Postman, and 
 
 ![Windowsロゴ](./quick-start/windows.png) Windows (x32)
 
-[Download][v8]
+[ダウンロード][v8]
 
 </Download>
 
@@ -43,7 +43,7 @@ We are aware of the issue related to importing the collection into Postman, and 
 
 ![Windowsロゴ](./quick-start/windows.png) Windows (x64)
 
-[Download][v8]
+[ダウンロード][v8]
 
 </Download>
 
@@ -51,7 +51,7 @@ We are aware of the issue related to importing the collection into Postman, and 
 
 ![MacOSロゴ](./quick-start/macos.png) MacOS
 
-[Download][v8]
+[ダウンロード][v8]
 
 </Download>
 
@@ -59,7 +59,7 @@ We are aware of the issue related to importing the collection into Postman, and 
 
 ![Linuxロゴ](./quick-start/linux.png) Linux (x64)
 
-[Download][v8]
+[ダウンロード][v8]
 
 </Download>
 

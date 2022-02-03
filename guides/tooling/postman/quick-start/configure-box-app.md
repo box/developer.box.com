@@ -79,7 +79,7 @@ fullyTranslated: true
 2. アプリケーションを選択します。
 3. アプリの構成セクションに移動します。
 4. アプリケーションが認証方法として**標準OAuth 2.0**を使用することを確認します。
-5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
+5. \[**OAuth 2.0リダイレクトURI**] の設定まで下にスクロールし、\[**リダイレクトURI**] に値`https://developer.box.com/auth/callback`を設定します。`box.dev`でこのチュートリアルにアクセスした場合は \[**リダイレクトURI**] が`https://box.dev/auth/callback`になることに注意してください。
 6. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の[権限][scopes]を選択します。**アプリケーションには、** **次のスコープの1つ以上が必要です:** ユーザーを管理する、Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
 7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 

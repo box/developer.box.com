@@ -31,7 +31,7 @@ Boxの埋め込みの詳細を確認する
 
 ## アクセスエラー
 
-It is important to realize that the application needs to have access to the file that is to be downloaded. When the application is a authenticated through JWT or App Tokens, the user is authenticated as a Service Account. This service account does not have access to files besides their own.
+アプリケーションには、ダウンロードするファイルへのアクセス権限が必要であると理解しておくことが重要です。アプリケーションがJWTまたはアプリトークンを使用して認証される場合、ユーザーはサービスアカウントとして認証されます。このサービスアカウントには、そのアカウントが所有していないファイルへのアクセス権限がありません。
 
 このユーザーがファイルにアクセスできない場合、アプリケーションでは`404 Not Found`エラーが表示されます。
 
