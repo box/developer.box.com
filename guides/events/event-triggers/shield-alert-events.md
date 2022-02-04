@@ -357,6 +357,11 @@ The `additional_details` payload will provide the following details:
 classification-based access policies to control actions and prevent the
 unintentional leakage of sensitive content.
 
+Smart Access policies can be setup in enforced or
+[monitoring mode][monitoringmode]. In all event types,
+a field named `controlMode` appears to say whether the policy is in `enforced`
+or `montioring` mode.
+
 ### Download Restriction
 
 If an admin creates a shield access policy that restricts downloads and an
@@ -395,7 +400,8 @@ If downloading is blocked, the `additional-details` payload of the
       },
       "additional_info": "",
       "created_at": "2021-10-21T14:23:45-07:00",
-      "classification": "email"
+      "classification": "email",
+      "controlMode": "enforced"
     },
     "service_id": "64089752",
     "service_name": "zip-download"
@@ -485,7 +491,8 @@ the following details:
     "action_at": 1611619097,
     "details": null
   },
-  "classification": "Example"
+  "classification": "Example",
+  "controlMode": "enforced"
   }
 }
 ```
@@ -560,7 +567,8 @@ following details:
     "action_at": 1611619097,
     "details": null
   },
-  "classification": "Example"
+  "classification": "Example",
+  "controlMode": "enforced"
   }
 }
 ```
@@ -602,7 +610,8 @@ the following details:
             "additionalInfo": "",
             "createdAt": null,
             "justification": null,
-            "classification": "Company and Collaborators Only"
+            "classification": "Company and Collaborators Only",
+            "controlMode": "enforced"
         },
         "service_id": "12345",
         "service_name": "Box Web App"
@@ -656,7 +665,8 @@ The `additional_details` payload will provide the following details:
     "action_at":1600476617
   },
   "service_id":"123456",
-  "service_name":"Service Name"
+  "service_name":"Service Name",
+  "controlMode": "enforced"
 }
 ```
 
@@ -674,6 +684,7 @@ a justification is chosen from the share modal. For example, one
 [box-shield]: https://www.box.com/shield
 [threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
+[monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
 <!-- i18n-disable localize-links -->
 
 [events]: g://events/enterprise-events/for-enterprise/
