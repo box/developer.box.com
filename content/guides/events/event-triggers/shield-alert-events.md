@@ -341,24 +341,27 @@ The `additional_details` payload will provide the following details:
 ## Smart access
 
 [Smart Access][smartaccess] enables Box Admins to define and enforce
-classification-based access policies to control actions and prevent the
+classification-based access policies to control access and prevent the
 unintentional leakage of sensitive content.
 
-Smart Access policies can be setup in enforced or
+Smart Access policies can be configured in enforced or
 [monitoring mode][monitoringmode]. In all event types,
 a field named `controlMode` appears to say whether the policy is in `enforced`
-or `montioring` mode.
+or `monitoring` mode.
 
-### Download Restriction
+### Download and Print Restriction
 
-If an admin creates a shield access policy that restricts downloads and an
-end user is blocked from downloading a file, an event is produced
-within the [enterprise event][events] stream. Events will also be generated
-when a user is viewing a folder with a file restricted from download, viewing a
-file in preview that is restricted from download, and when a user requests to
-download a file through the API that is restricted from download. These events
-follow the standard event object schema and the `event_type` value set
-to `SHIELD_DOWNLOAD_BLOCKED`.
+If an admin creates a Shield access policy that enforces download or print
+restriction and an end user is blocked from downloading or printing a file, an
+event is
+produced within the [enterprise event][events] stream. If the access policy is
+set to monitor potential download and print violations,
+events will also be generated
+when a user is viewing a folder with a file restricted from download or print,
+viewing a file in preview that is restricted from download or print, and when a
+user requests to download a file through the API that is restricted from
+download or print. These events follow the standard event object schema and the
+`event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
 If downloading is blocked, the `additional-details` payload of the
 `SHIELD_DOWNLOAD_BLOCKED` event will provide the following details:
