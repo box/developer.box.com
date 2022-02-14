@@ -11,11 +11,11 @@ subcategory_id: null
 is_index: false
 id: embed/box-embed
 type: guide
-total_steps: 2
+total_steps: 1
 sibling_id: embed
 parent_id: embed
 next_page_id: embed
-previous_page_id: embed/box-dicom
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/embed/box-embed.md
 fullyTranslated: true

@@ -10,12 +10,14 @@ total_steps: 5
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: tooling/cli/quick-start/build-commands-help
-previous_page_id: tooling/cli/quick-start/create-jwt-app
+previous_page_id: tooling/cli/quick-start/create-oauth-app
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md
 fullyTranslated: true
 ---
 # CLIのインストールと構成
+
+<Choice option="cli.app_type" value="create_new,use_existing,clicked" color="none">
 
 Windows用およびmacOS用のインストーラが提供されていますが、その他の環境でCLIを構築する場合はRawソースコードを利用できます。
 
@@ -43,41 +45,75 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ## 構成コマンドの実行
 
-ここで、手順1でダウンロードした構成ファイルを指すよう、CLIを構成する必要があります。
+You will now need to configure the CLI by logging in to your Box App.
 
-<ImageFrame center>
+この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
-![CLIの構成図](./cli-config-diagram.png)
+## ログインする理由
 
-</ImageFrame>
+現時点では、以下の情報が提示されています。
 
-<!--alex ignore execute-->
+<Store disabled inline id="cli_credentials.client_id">
 
-ターミナルまたはコマンドラインを開き、`box configure:environments:add PathToConfigFileHere`コマンドを実行します。ここでは、`PathToConfigHere`を`config.json`ファイルのパスに置き換えます。
+クライアントID
+
+</Store>
+
+<Store disabled inline obscured id="cli_credentials.client_secret">
+
+クライアントシークレット
+
+</Store>
 
 <!-- markdownlint-disable line-length -->
 
-例: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+<!--alex ignore execute-->
+
+Open your terminal or command line and execute the command: `box login -n example_name`.
+
+Copy the Client ID and Client Secret into the terminal window when prompted.
 
 <!-- markdownlint-enable line-length -->
 
-<message type="tip"></message>
+<ImageFrame center>
 
-Finder/エクスプローラからターミナル/コマンドラインウィンドウにcsvファイルをドラッグすると、パスを自動で入力できます。
+![CLI Login](./cli-login.png)
 
-</Message>
+</ImageFrame>
+
+Click the **Grant access to Box** button that appears in the browser window.
+
+<ImageFrame center>
+
+![Grant CLI Access](./cli-grant-access.png)
+
+</ImageFrame>
+
+If successful, you will see the following success message.
+
+<ImageFrame center>
+
+![CLI Env Setup](./cli-env-setup.png)
+
+</ImageFrame>
 
 ## 構成の確認
 
-うまく構成されているか確認するには、コマンド`box users:get`を使用します。
+To confirm successful configuration, make your first Box API call with the Box CLI by entering the command `box users:get me`.
 
-次のように、成功を示すレスポンスには、[アクセストークン][at]に関連付けられた[サービスアカウント][sa]ユーザーの詳細が示されます。
+<ImageFrame center>
+
+![CLI Users Call](./cli-first-call.png)
+
+</ImageFrame>
+
+A successful response will provide details about your user account.
 
 ```json
 Type: user
 ID: ''0123456789''
-Name: Box CLI - Quickstart Example
-Login: AutomationUser_123456_8jSo6Lqvko@boxdevedition.com
+Name: Aaron Levie
+Login: example@box.com
 Created At: '2020-01-01T09:45:01-07:00'
 Modified At: '2021-03-01T09:30:05-07:00'
 Language: en
@@ -93,23 +129,31 @@ Avatar URL: ''
 Notification Email: []
 ```
 
-<message type="tip"></message>
-
-デフォルトでは、JWTアプリケーションはサービスアカウントのアクセストークンを自動的に取得します。デフォルトユーザーの変更は可能ですが、このガイドでは変更しないことを想定しています。
-
-</Message>
-
 ## まとめ
 
 * CLIをインストールしました。
-* アプリケーションの構成ファイルを指すようCLIを構成しました。
-* アクセストークンに関連付けられたユーザーを確認しました。
+* You configured the CLI to use the OAuth 2.0 Application created earlier
+* You **made your first Box CLI Box API call** confirmed the user associated with your Access Token
 
 <Next>
 
 CLIをインストールして構成しました
 
 </Next>
+
+</Choice>
+
+<Choice option="cli.app_type" unset color="none">
+
+<Message danger>
+
+# 前の手順が完了していません
+
+前の手順を完了し、使用する**Boxアプリ**をセットアップしてください。
+
+</Message>
+
+</Choice>
 
 [cli]: https://github.com/box/boxcli
 

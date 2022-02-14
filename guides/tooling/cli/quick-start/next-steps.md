@@ -19,7 +19,7 @@ fullyTranslated: true
 
 このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. JWTアプリケーションを[作成、設定、承認][one]しました。
+1. [Created and configured][one] an OAuth 2.0 application.
 
 2. CLIを[インストールおよび構成][two]しました。
    <!--alex ignore executed-->
@@ -34,7 +34,7 @@ fullyTranslated: true
 2. [トークンのキャッシュ][cache]の設定を確認する。
 3. [オートコンプリート][ac]の設定を確認する。
 
-[one]: g://tooling/cli/quick-start/create-jwt-app/
+[one]: g://tooling/cli/quick-start/create-oauth-app/
 
 [two]: g://tooling/cli/quick-start/install-and-configure/
 

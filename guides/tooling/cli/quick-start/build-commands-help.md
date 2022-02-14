@@ -19,11 +19,33 @@ fullyTranslated: true
 
 CLIコマンドの全一覧と使用方法に関する情報については、[GitHubリポジトリ][github]を参照してください。
 
+<message type="warning"></message>
+
+Only Service Accounts and Admins are able to use some commands. If your user is not authorized with the necessary scopes or you configured your CLI to obtain a default token for another user, calls may fail. Add `-v` or `--verbose` to your command for verbose error logging.
+
+</Message>
+
 必要なエンドポイント用のコマンドが表示されない場合は、[カスタムリクエスト][custom]を作成できます。
 
 <message type="tip"></message>
 
 helpコマンドで提供されない情報を確認するには、リファレンスドキュメントと併せてリポジトリのドキュメントを使用してください。このような情報には、制限事項、トークンの権限の要件、フィールドなどがあります。
+
+</Message>
+
+## はじめに: ブラウザのストレージをリセットする
+
+Now that you've imported the Box API credentials into the CLI you should take a moment to remove these credentials from your browser's storage.
+
+<ResetButton id="cli,credentials,observable_events">
+
+資格情報をクリア
+
+</ResetButton>
+
+<Message warning>
+
+Removing your API credentials from the browser storage ensures that no other script can read your **Client ID** or **Client Secret**
 
 </Message>
 
@@ -73,36 +95,19 @@ helpコマンドで提供されない情報を確認するには、リファレ�
 
 **自分の**Boxアカウントにログインします。このフォルダが自分のフォルダツリーに表示されているでしょうか?
 
-<!--alex ignore executing-->
+<message type="warning"></message>
 
-このフォルダは、自分のBoxアカウントに表示されません。なぜなら、このフォルダを所有していないか、このフォルダにコラボレータとして追加されていないからです。[サービスアカウント][sa]としてコマンドを実行しているため、作成されたフォルダは、自分のアカウントではなく[サービスアカウント][sa]のフォルダツリーに存在します。
-
-<!-- markdownlint-disable line-length -->
-
-<!--alex ignore execute-->
-
-ここで、次のコマンドを実行します: `box folders:collaborations:add folder_id_created_above --role=editor --user-id=YOUR_USER_ID`
-
-<!-- markdownlint-enable line-length -->
-
-<message type="tip"></message>
-
-自分のユーザーIDを確認するには、\[すべてのファイル] ページに移動し、右上隅の円をクリックして、ドロップダウンの \[**アカウント設定**] を選択します。自分のユーザーIDが、\[**アカウント**] タブに \[**アカウントID**] として表示されます。
+If you set up the Box CLI using JWT authentication, you will not see the folder in your Box account. The folder will live in the service account of the application that was created after application approval.
 
 </Message>
 
-\[すべてのファイル] ページに戻ります。これでフォルダが表示されるようになったでしょうか?
-
-2番目のコマンドでは、このフォルダを所有する[サービスアカウント][sa]を使用し、自分のユーザーIDを編集者レベルのコラボレータとしてフォルダに追加しました。これで、このフォルダが自分のフォルダツリーに表示されます。
-
 ## まとめ
 
-* ヘルプ機能を使用してフォルダを作成しました。
-* 作成したフォルダにコラボレーションを追加し、Boxで表示しました。
+* You used the **help** feature to create a folder
 
 <Next>
 
-最初のフォルダを作成し、コラボレーションを追加しました
+I created my first folder
 
 </Next>
 

@@ -1,0 +1,231 @@
+---
+rank: 2
+related_endpoints: []
+related_guides:
+  - authentication/jwt
+  - authentication/jwt/jwt-setup
+related_pages:
+  - sdks-and-tools
+required_guides:
+  - authentication/jwt/jwt-setup
+related_resources: []
+alias_paths:
+  - /guides/tooling/quick-start/create-jwt-app/
+category_id: tooling
+subcategory_id: tooling/cli
+is_index: false
+id: tooling/cli/jwt-cli
+type: guide
+total_steps: 1
+sibling_id: tooling/cli
+parent_id: tooling/cli
+next_page_id: ''
+previous_page_id: tooling/cli
+source_url: >-
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/jwt-cli.md
+fullyTranslated: true
+---
+# (Appendix) Box CLI Using JWT Authentication
+
+Previously, our [Box CLI Quick Start Guide][qs], followed the JWT or server authentication application setup flow. Since we released a new OAuth 2.0 version of the Box CLI, we updated it to use the new feature. We migrated the original JWT setup instructions here, in case you would still like to use the server authentication application type.
+
+## JWTアプリケーションの設定
+
+The first step to using the CLI with server authentication is creating a Box application in the [Developer Console][dc], which the CLI can use behind the scenes to make API calls. If you would like to associate your CLI with an existing JWT application you can skip this step. However, you will want to ensure that, at a minimum, the following scopes are set in the **Configuration** tab of your application:
+
+* Boxに格納されているすべてのファイルとフォルダの読み取り
+* Boxに格納されているすべてのファイルとフォルダの書き込み
+
+1. \[すべてのファイル] ページの左側にあるナビゲーションパネルから、[開発者コンソール][dc]を開きます。今回Box APIを使用するのが初めてで、このオプションがまだ使用できない場合は、[こちら][dc]をクリックするとこのオプションをアカウントに追加できます。
+
+2. \[**アプリの新規作成**] > \[**カスタムアプリ**] > \[**サーバー認証 (JWT使用)**] の順にクリックし、アプリケーションに名前を付けて、\[**アプリの作成**] をクリックします。
+
+<Message warning>
+
+Server Authentication (with JWT) always requires Admin authorization before use.
+
+</Message>
+
+## アプリケーションの構成
+
+これにより、アプリケーションの設定ページが表示され、そこで、そのアクセスや権限を選択する必要があります。アプリケーションの認証タイプが原因で、管理者の承認が必要になることにもう一度注意してください。
+
+少なくとも、以下の[スコープ][scopes]が必要です。
+
+* Boxに格納されているすべてのファイルとフォルダの読み取り
+* Boxに格納されているすべてのファイルとフォルダの書き込み
+
+[アプリケーションアクセス][aa]として、\[アプリアクセスのみ] または \[アプリ + Enterpriseアクセス] のいずれかを選択できます。
+
+## アプリケーションの承認
+
+API呼び出しを正常に実行する前に、サーバー認証を利用するすべてのアプリケーションを管理コンソールで承認する必要があります。これは、すべてのJWTアプリケーションには[サービスアカウント][sa]があるためです。サービスアカウントは、アプリケーションの[スコープ][scopes]に基づいて管理者アクションを実行できます。
+
+開発者と管理者向けの手順については、Boxの[承認ガイド][ag]を参照してください。
+
+スコープ、アプリケーションアクセス、トークン、権限がどのように連携しているかの詳細については、[Boxのセキュリティメカニズム][blogpost]に関する記事を参照してください。
+
+<Message warning>
+
+設定の変更がこのアプリケーションに対して行われた場合は、その変更を有効にするためにこのアプリケーションを再承認する必要があります。
+
+</Message>
+
+アプリケーションが使用できる状態になっているかどうかを確認するには、[開発者コンソール][dc]の \[承認] タブを表示します。状態とステータスはそれぞれ、\[有効] と \[承認済み] になっているはずです。
+
+<ImageFrame center>
+
+![承認済みのアプリ](./images/app-authorized.png)
+
+</ImageFrame>
+
+## 必要なデータのダウンロード
+
+CLIでは、API呼び出しを実行するために、ローカルに保存されている構成ファイルが必要です。
+
+構成ファイルをダウンロードするには、[開発者コンソール][dc]の \[**構成**] タブにアクセスし、\[**公開/秘密キーペアを生成**] をクリックします。これにより、アプリケーションの構成ファイルを自動的にダウンロードする前に2FA認証が行われます。詳細については、Boxの[ガイド][keypair]を参照してください。
+
+<Message warning>
+
+セキュリティ上の理由により、公開/秘密キーペアを生成するには、Boxアカウントで2FAを有効にする必要があります。
+
+</Message>
+
+`EnterpriseID_publicKeyID_config.json`という形式のデフォルトの名前が付いているダウンロード済みファイルをコンピュータ上で探します。この名前をそのまま使用しても、変更してもかまいません。このガイドでは、ファイルの名前を`config.json`に変更することを想定しています。
+
+<Message warning>
+
+誤って削除または移動されることがない場所にファイルを配置することが重要です。ファイルが削除または移動された場合は、手順2を繰り返してCLIを再構成する必要があります。
+
+</Message>
+
+## CLIのインストールと構成
+
+Windows用およびmacOS用のインストーラが提供されていますが、その他の環境でCLIを構築する場合はRawソースコードを利用できます。
+
+## Windows用およびmacOS用インストーラ
+
+お使いのマシンに最新のCLIをインストールするには、最新リリースに対応する最新の`.exe` (Windowsの場合) または`.pkg` (macOSの場合) をダウンロードします。
+
+<CTA to="https://github.com/box/boxcli/releases">
+
+最新のCLIインストーラをダウンロード
+
+</CTA>
+
+## LinuxとNodeのインストール
+
+さらに、CLIは、任意のプラットフォーム (Linuxなど) にNodeパッケージとしてインストールすることができます。このためには、[Node JS](https://nodejs.org/)をマシンにインストールしておく必要があります。
+
+```bash
+npm install --global @box/cli
+```
+
+## ソースコード
+
+CLIのソースコードは、[GitHub][cli]で提供されています。
+
+## 構成コマンドの実行
+
+ここで、手順1でダウンロードした構成ファイルを指すよう、CLIを構成する必要があります。
+
+<ImageFrame center>
+
+![CLIの構成図](./images/cli-config-diagram.png)
+
+</ImageFrame>
+
+<!--alex ignore execute-->
+
+ターミナルまたはコマンドラインを開き、`box configure:environments:add PathToConfigFileHere`コマンドを実行します。ここでは、`PathToConfigHere`を`config.json`ファイルのパスに置き換えます。
+
+<!-- markdownlint-disable line-length -->
+
+例: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
+
+<!-- markdownlint-enable line-length -->
+
+<message type="tip"></message>
+
+Finder/エクスプローラからターミナル/コマンドラインウィンドウにcsvファイルをドラッグすると、パスを自動で入力できます。
+
+</Message>
+
+## 構成の確認
+
+うまく構成されているか確認するには、コマンド`box users:get`を使用します。
+
+次のように、成功を示すレスポンスには、[アクセストークン][at]に関連付けられた[サービスアカウント][sa]ユーザーの詳細が示されます。
+
+```json
+Type: user
+ID: ''0123456789''
+Name: Box CLI - Quickstart Example
+Login: AutomationUser_123456_8jSo6Lqvko@boxdevedition.com
+Created At: '2020-01-01T09:45:01-07:00'
+Modified At: '2021-03-01T09:30:05-07:00'
+Language: en
+Timezone: America/Los_Angeles
+Space Amount: 999999999999999
+Space Used: 6291500
+Max Upload Size: 16106127360
+Status: active
+Job Title: ''
+Phone: ''
+Address: example+user@box.com
+Avatar URL: ''
+Notification Email: []
+```
+
+<message type="tip"></message>
+
+デフォルトでは、JWTアプリケーションはサービスアカウントのアクセストークンを自動的に取得します。デフォルトユーザーの変更は可能ですが、このガイドでは変更しないことを想定しています。
+
+</Message>
+
+## 次の手順
+
+* You can checkout the [commands][commands] page on GitHub for example code.
+* You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
+
+[cli]: https://github.com/box/boxcli
+
+[auth]: g://authentication/jwt/without-sdk/
+
+[at]: g://authentication/tokens/
+
+<!-- i18n-enable localize-links -->
+
+[dc]: https://account.box.com/developers/console
+
+<!-- i18n-disable localize-links -->
+
+[keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
+
+[sa]: g://getting-started/user-types/service-account/
+
+[scopes]: g://api-calls/permissions-and-errors/scopes/
+
+[ag]: g://authorization/custom-app-approval/
+
+<!-- i18n-enable localize-links -->
+
+[blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-ja-b95725d8aaf0
+
+<!-- i18n-disable localize-links -->
+
+[scopes]: g://api-calls/permissions-and-errors/scopes/
+
+[aa]: g://authentication/jwt/jwt-setup/#application-access
+
+[three]: g://tooling/cli/quick-start/build-commands-help/
+
+[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+
+[cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
+
+[ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+
+[commands]: https://github.com/box/boxcli#command-topics
+
+[qs]: g://tooling/cli/quick-start/

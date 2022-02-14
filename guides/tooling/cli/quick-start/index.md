@@ -13,29 +13,27 @@ rank: 0
 total_steps: 5
 sibling_id: tooling/cli
 parent_id: tooling/cli
-next_page_id: tooling/cli/quick-start/create-jwt-app
+next_page_id: tooling/cli/quick-start/create-oauth-app
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/0-index.md
 fullyTranslated: true
 ---
-# Box CLIの使い方
+# Learn to use the Box CLI with OAuth 2.0
 
 <!--alex ignore executed-->
 
 Box CLIは、使い勝手の良いコマンドラインツールで、これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。コードを書く必要はありません。これらの操作は、一連の[コマンド][commands]によって実行されます。
 
-<ImageFrame center>
+<YouTube id="whxT3Bdx3E0">
 
-![CLI](./cli-code.png)
-
-</ImageFrame>
+</YouTube>
 
 ## 概要
 
 このガイドでは、以下の手順を説明します。
 
-1. Boxアプリケーションを[作成、構成、承認する][one]
+1. [Create and configure][one] a Box application
 2. CLIを[インストールして構成する][two]
 3. CLIを使用して[コマンドを実行する][three]
 4. [オプションや一括コマンド][four]を使用する
@@ -49,7 +47,7 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 
 [commands]: https://github.com/box/boxcli#command-topics
 
-[one]: g://tooling/cli/quick-start/create-jwt-app/
+[one]: g://tooling/cli/quick-start/create-oauth-app/
 
 [two]: g://tooling/cli/quick-start/install-and-configure/
 

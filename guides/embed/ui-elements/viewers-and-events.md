@@ -722,13 +722,13 @@ Markdownビューアーでは、以下のイベントがトリガーされます
 
 ### 動作
 
-`<iframe>`ビューアーは、Box NotesおよびBox DICOMファイルのプレビューに使用されるため、これらのプレビューは現在Boxウェブアプリ内からのみ動作します。プラットフォームのお客様は、[Box DICOM Viewer](https://boxdicom.com/#viewer)を使用してAPI経由でDICOMスタディをプレビューしてください。
+The `<iframe>` viewer is used for previews of Box Notes.
 
-Box NotesとBox DICOMの両方で、メインのBoxウェブアプリ内にフル機能搭載のビューアーを備えています。ただし、このようなフル機能搭載のビューアーは、NotesやDICOMのファイルと同じディレクトリ内にある他のファイルのプレビューから移動しても初期化されません。この場合、`<iframe>`ビューアーは、Box NoteまたはBox DICOMファイルの表示専用のレンダリング機能を埋め込みます。
+Box Notes has full-featured viewers within the main Box Web Application, but these full viewers are not initialized when users navigate from previews of other files that may be in the same directory as the Notes files. In this situation, the `<iframe>` viewer embeds an view-only render of the Box Note file.
 
 ### サポートされているファイル拡張子
 
-`boxnote`, `boxdicom`
+`boxnote`
 
 ### イベント
 
