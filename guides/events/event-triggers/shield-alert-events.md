@@ -682,6 +682,150 @@ a justification is chosen from the share modal. For example, one
 
 </Message>
 
+### Application Restriction
+
+If a 3rd-party application, including published custom applications with which
+your organization is integrated, is restricted from downloading a file or a
+folder, an event is produced within the [enterprise event][events] stream.
+These events follow the standard event object schema, with the `event_type`
+value set to `SHIELD_DOWNLOAD_BLOCKED`.
+
+For web app applications, the `additional_details` payload will provide the
+following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {    
+    "item": {
+      "type": "file",
+      "id": 875644956551,
+      "name": "blaha.docx",
+      "file_version_id": 941051265322,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 11754686560,
+      "name": "Ming Feng",
+      "login": "mfeng+demo@boxdemo.com"
+    },
+  "service": null,
+  "additional_info": "",
+  "created_at": "2022-01-18T14:53:53-08:00",
+  "classification": "download log enforcement",
+  "controlMode": "enforced"
+}
+```
+
+For mobile applications that use the API, the `additional_details` payload will
+provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 875644956551,
+      "name": "blaha.docx",
+      "file_version_id": 941051265322,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 17111202914,
+      "name": "ming managed user 1",
+      "login": "mfeng+demo4+managed@boxdemo.com"
+    },
+    "service": {
+      "service": 4715,
+      "name": "Box for Android"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T14:51:37-08:00",
+    "classification": "download log enforcement",
+    "controlMode": "enforced"
+  },
+  "service_id": "4715",
+  "service_name": "Box for Android"
+}
+```
+
+For custom applications, the `additional_details` payload will provide the
+following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "testFile.docx",
+      "file_version_id": 987654321,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": {
+      "service": 123456,
+      "name": "App"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T13:31:25-08:00",
+    "classification": "Confidential",
+    "controlMode": "enforced"
+  },
+  "service_id": "123456",
+  "service_name": "Some App Name"
+}
+```
+
+### FTP Restriction
+
+If download of a file or folder is restricted via the FTP protocol, an event is
+produced within the [enterprise event][events] stream. These events follow the
+standard event object schema, with the `event_type` value
+set to `SHIELD_DOWNLOAD_BLOCKED`.
+
+The `additional_details` payload will provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "textFile.txt",
+      "file_version_id": 987654321,
+      "size": 3606,
+      "sha1": "ab7a79ff8e2a6b576e1c62d850290a09312fb387"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": {
+      "service": 4082,
+      "name": "Box FTP Server"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T14:19:51-08:00",
+    "classification": null,
+    "controlMode": "enforced"
+  },
+  "service_id": "4082",
+  "service_name": "Box FTP Server"
+}
+```
+
 <!-- i18n-enable localize-links -->
 
 [box-shield]: https://www.box.com/shield
