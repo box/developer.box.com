@@ -64,6 +64,10 @@ If you would like to authenticate as a Managed User:
 - set `box_subject_type` to `user` 
 - set `box_subject_id` to the user ID
 
+<Samples id='x_auth' variant='with_client_credentials' >
+
+</Samples>
+
 <Tabs>
 
 <Tab title='cURL'>
