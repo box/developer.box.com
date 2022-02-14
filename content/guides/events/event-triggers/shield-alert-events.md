@@ -341,19 +341,27 @@ The `additional_details` payload will provide the following details:
 ## Smart access
 
 [Smart Access][smartaccess] enables Box Admins to define and enforce
-classification-based access policies to control actions and prevent the
+classification-based access policies to control access and prevent the
 unintentional leakage of sensitive content.
 
-### Download Restriction
+Smart Access policies can be configured in
+[enforced or monitoring mode][monitoringmode]. In all event types,
+a field named `controlMode` appears to say whether the policy is in `enforced`
+or `monitoring` mode.
 
-If an admin creates a shield access policy that restricts downloads and an
-end user is blocked from downloading a file, an event is produced
-within the [enterprise event][events] stream. Events will also be generated
-when a user is viewing a folder with a file restricted from download, viewing a
-file in preview that is restricted from download, and when a user requests to
-download a file through the API that is restricted from download. These events
-follow the standard event object schema and the `event_type` value set
-to `SHIELD_DOWNLOAD_BLOCKED`.
+### Download and Print Restriction
+
+If an admin creates a Shield access policy that enforces download or print
+restriction and an end user is blocked from downloading or printing a file, an
+event is
+produced within the [enterprise event][events] stream. If the access policy is
+set to monitor potential download and print violations,
+events will also be generated
+when a user is viewing a folder with a file restricted from download or print,
+viewing a file in preview that is restricted from download or print, and when a
+user requests to download a file through the API that is restricted from
+download or print. These events follow the standard event object schema and the
+`event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
 If downloading is blocked, the `additional-details` payload of the
 `SHIELD_DOWNLOAD_BLOCKED` event will provide the following details:
@@ -382,11 +390,46 @@ If downloading is blocked, the `additional-details` payload of the
       },
       "additional_info": "",
       "created_at": "2021-10-21T14:23:45-07:00",
-      "classification": "email"
+      "classification": "email",
+      "controlMode": "enforced"
     },
     "service_id": "64089752",
     "service_name": "zip-download"
   }
+}
+```
+
+For Box Mobile apps, the `additional_details` payload will
+provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 875644956551,
+      "name": "blaha.docx",
+      "file_version_id": 941051265322,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 17111202914,
+      "name": "ming managed user 1",
+      "login": "mfeng+demo4+managed@boxdemo.com"
+    },
+    "service": {
+      "service": 4715,
+      "name": "Box for Android"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T14:51:37-08:00",
+    "classification": "Confidential",
+    "controlMode": "monitoring"
+  },
+  "service_id": "4715",
+  "service_name": "Box for Android"
 }
 ```
 
@@ -472,7 +515,8 @@ the following details:
     "action_at": 1611619097,
     "details": null
   },
-  "classification": "Example"
+  "classification": "Example",
+  "controlMode": "enforced"
   }
 }
 ```
@@ -547,7 +591,8 @@ following details:
     "action_at": 1611619097,
     "details": null
   },
-  "classification": "Example"
+  "classification": "Example",
+  "controlMode": "enforced"
   }
 }
 ```
@@ -589,7 +634,8 @@ the following details:
             "additionalInfo": "",
             "createdAt": null,
             "justification": null,
-            "classification": "Company and Collaborators Only"
+            "classification": "Company and Collaborators Only",
+            "controlMode": "enforced"
         },
         "service_id": "12345",
         "service_name": "Box Web App"
@@ -643,7 +689,8 @@ The `additional_details` payload will provide the following details:
     "action_at":1600476617
   },
   "service_id":"123456",
-  "service_name":"Service Name"
+  "service_name":"Service Name",
+  "controlMode": "enforced"
 }
 ```
 
@@ -654,9 +701,120 @@ The `additional_details` payload will provide the following details:
   `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event.
 </Message>
 
+### Application Restriction
+
+If a 3rd-party application, including published custom applications with which
+your organization is integrated, is restricted from downloading a file or a
+folder, an event is produced within the [enterprise event][events] stream. 
+These events follow the standard event object schema, with the `event_type`
+value set to `SHIELD_DOWNLOAD_BLOCKED`.
+
+For 3rd-party applications, the `additional_details` payload will provide the
+following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {    
+    "item": {
+      "type": "file",
+      "id": 875644956551,
+      "name": "blaha.docx",
+      "file_version_id": 941051265322,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 11754686560,
+      "name": "Ming Feng",
+      "login": "mfeng+demo@boxdemo.com"
+    },
+  "service": "docusign",
+  "additional_info": "",
+  "created_at": "2022-01-18T14:53:53-08:00",
+  "classification": "Confidential",
+  "controlMode": "enforced"
+}
+```
+
+For custom applications, the `additional_details` payload will provide the
+following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "testFile.docx",
+      "file_version_id": 987654321,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": {
+      "service": 123456,
+      "name": "CustomApp"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T13:31:25-08:00",
+    "classification": "Confidential",
+    "controlMode": "enforced"
+  },
+  "service_id": "123456",
+  "service_name": "CustomApp"
+}
+```
+
+### FTP Restriction
+
+If download of a file or folder is restricted via the FTP protocol, an event is
+produced within the [enterprise event][events] stream. These events follow the
+standard event object schema, with the `event_type` value
+set to `SHIELD_DOWNLOAD_BLOCKED`.
+
+The `additional_details` payload will provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "textFile.txt",
+      "file_version_id": 987654321,
+      "size": 3606,
+      "sha1": "ab7a79ff8e2a6b576e1c62d850290a09312fb387"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": {
+      "service": 4082,
+      "name": "Box FTP Server"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T14:19:51-08:00",
+    "classification": null,
+    "controlMode": "enforced"
+  },
+  "service_id": "4082",
+  "service_name": "Box FTP Server"
+}
+```
+
 <!-- i18n-enable localize-links -->
 [box-shield]: https://www.box.com/shield
 [threatdetect]:https://support.box.com/hc/en-us/articles/360044196113-Using-Threat-Detection
 [smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
+[monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
 <!-- i18n-disable localize-links -->
 [events]: g://events/enterprise-events/for-enterprise/
