@@ -412,6 +412,40 @@ If downloading is blocked, the `additional-details` payload of the
 }
 ```
 
+For Box Mobile apps, the `additional_details` payload will
+provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 875644956551,
+      "name": "blaha.docx",
+      "file_version_id": 941051265322,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 17111202914,
+      "name": "ming managed user 1",
+      "login": "mfeng+demo4+managed@boxdemo.com"
+    },
+    "service": {
+      "service": 4715,
+      "name": "Box for Android"
+    },
+    "additional_info": "",
+    "created_at": "2022-01-18T14:51:37-08:00",
+    "classification": "Confidential",
+    "controlMode": "monitoring"
+  },
+  "service_id": "4715",
+  "service_name": "Box for Android"
+}
+```
+
 ### External collaboration restriction
 
 If an external collaboration invitation is restricted, an event is produced
@@ -690,7 +724,7 @@ folder, an event is produced within the [enterprise event][events] stream.
 These events follow the standard event object schema, with the `event_type`
 value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
-For web app applications, the `additional_details` payload will provide the
+For 3rd-party applications, the `additional_details` payload will provide the
 following details:
 
 ```js
@@ -710,45 +744,11 @@ following details:
       "name": "Ming Feng",
       "login": "mfeng+demo@boxdemo.com"
     },
-  "service": null,
+  "service": "docusign",
   "additional_info": "",
   "created_at": "2022-01-18T14:53:53-08:00",
-  "classification": "download log enforcement",
+  "classification": "Confidential",
   "controlMode": "enforced"
-}
-```
-
-For mobile applications that use the API, the `additional_details` payload will
-provide the following details:
-
-```js
-"additional_details": {
-  "shield_download_enforcement": {
-    "item": {
-      "type": "file",
-      "id": 875644956551,
-      "name": "blaha.docx",
-      "file_version_id": 941051265322,
-      "size": 11640,
-      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
-    },
-    "access_user": {
-      "type": "user",
-      "id": 17111202914,
-      "name": "ming managed user 1",
-      "login": "mfeng+demo4+managed@boxdemo.com"
-    },
-    "service": {
-      "service": 4715,
-      "name": "Box for Android"
-    },
-    "additional_info": "",
-    "created_at": "2022-01-18T14:51:37-08:00",
-    "classification": "download log enforcement",
-    "controlMode": "enforced"
-  },
-  "service_id": "4715",
-  "service_name": "Box for Android"
 }
 ```
 
@@ -774,7 +774,7 @@ following details:
     },
     "service": {
       "service": 123456,
-      "name": "App"
+      "name": "CustomApp"
     },
     "additional_info": "",
     "created_at": "2022-01-18T13:31:25-08:00",
@@ -782,7 +782,7 @@ following details:
     "controlMode": "enforced"
   },
   "service_id": "123456",
-  "service_name": "Some App Name"
+  "service_name": "CustomApp"
 }
 ```
 
