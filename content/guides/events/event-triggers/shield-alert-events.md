@@ -344,8 +344,8 @@ The `additional_details` payload will provide the following details:
 classification-based access policies to control access and prevent the
 unintentional leakage of sensitive content.
 
-Smart Access policies can be configured in enforced or
-[monitoring mode][monitoringmode]. In all event types,
+Smart Access policies can be configured in
+[enforced or monitoring mode][monitoringmode]. In all event types,
 a field named `controlMode` appears to say whether the policy is in `enforced`
 or `monitoring` mode.
 
