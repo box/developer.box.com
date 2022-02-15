@@ -58,8 +58,8 @@ If you would like to authenticate as a Managed User:
 
 <Message notice>
 
-Our `.NET` Box SDK is currently the only supported. More SDKS will gain support
-soon.
+Our `.NET` and `Java` SDKs currently support Client Credentials. More SDKS will
+gain support soon.
 
 </Message>
     
