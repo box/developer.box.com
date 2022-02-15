@@ -33,7 +33,7 @@ Your client secret is confidential and needs to be protected. Because this is
 how we securely identify an application's identity when obtaining an
 Access Token, you do not want to freely distribute a client secret. This
 includes via email, public forums and code repositories, distributed native
-applications, or client-side code. If you would like to add more secuirty
+applications, or client-side code. If you would like to add more security
 mechanisms, we recommend using our standard JWT application type.
 
 </Message>
@@ -74,8 +74,8 @@ application
 
 - the `box_subject_id` cannot be used based on the selected 
 [application access][aa]. For example, if you send in a `box_subject_type` of
-`enterprise` and your application is configured for App Access Only, the grant
-credentials are invalid error will be returned
+`enterprise` and your application is configured for App Access Only, the
+`grant credentials are invalid` error will be returned
 
 <!-- i18n-enable localize-links -->
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account
