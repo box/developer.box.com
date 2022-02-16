@@ -52,7 +52,7 @@ Box Signのエンドポイントを使用する前に、アプリケーション
 
 ## テスト
 
-機能が同等であるため、APIを利用する前に、[Boxウェブアプリを使用してBox Signの機能][webapp]をよく理解しておくと役に立つかもしれません。すべてのAPIエンドポイントと同様に、実稼働環境のコンテンツに影響を及ぼすリスクを取り除くため、[開発者サンドボックス環境][sandbox]でテストすることをお勧めします。
+機能が同等であるため、APIを利用する前に、[Boxウェブアプリを使用してBox Signの機能][webapp]をよく理解しておくと役に立つかもしれません。すべてのAPIエンドポイントと同様に、実稼働環境のコンテンツに影響を及ぼすリスクを取り除くため、[開発者用サンドボックス環境][sandbox]でテストすることをお勧めします。
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
@@ -74,7 +74,7 @@ Box Signのエンドポイントを使用する前に、アプリケーション
 
 [webapp]: https://support.box.com/hc/ja/articles/4404105810195-署名用ドキュメントの送信
 
-[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者サンドボックスの管理
+[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者用サンドボックスの管理
 
 <!-- i18n-disable localize-links -->
 

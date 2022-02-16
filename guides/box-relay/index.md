@@ -58,7 +58,7 @@ Box Relayのエンドポイントを使用する前に、アプリケーショ�
 
 [webapp]: https://support.box.com/hc/ja/articles/360044628853-手動で開始するワークフローの作成と実行
 
-[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者サンドボックスの管理
+[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者用サンドボックスの管理
 
 <!-- i18n-disable localize-links -->
 
