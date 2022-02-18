@@ -19,7 +19,7 @@ fullyTranslated: true
 
 このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. [Created and configured][one] an OAuth 2.0 application.
+1. OAuth 2.0アプリケーションを[作成および構成][one]しました。
 
 2. CLIを[インストールおよび構成][two]しました。
    <!--alex ignore executed-->

@@ -25,13 +25,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/jwt-cli.md
 fullyTranslated: true
 ---
-# (Appendix) Box CLI Using JWT Authentication
+# (付録) JWT認証を使用したBox CLI
 
-Previously, our [Box CLI Quick Start Guide][qs], followed the JWT or server authentication application setup flow. Since we released a new OAuth 2.0 version of the Box CLI, we updated it to use the new feature. We migrated the original JWT setup instructions here, in case you would still like to use the server authentication application type.
+これまで、[Box CLIのクイックスタートガイド][qs]では、JWTアプリケーションまたはサーバー認証アプリケーションの設定フローについて説明してきましたが、新しくOAuth 2.0バージョンのBox CLIをリリースしたため、新機能の使用についてガイドを更新しました。当初のJWTの設定手順については、引き続きサーバー認証アプリケーションを使用したい方のために、こちらに移動しました。
 
 ## JWTアプリケーションの設定
 
-The first step to using the CLI with server authentication is creating a Box application in the [Developer Console][dc], which the CLI can use behind the scenes to make API calls. If you would like to associate your CLI with an existing JWT application you can skip this step. However, you will want to ensure that, at a minimum, the following scopes are set in the **Configuration** tab of your application:
+サーバー認証を使用したCLIを使用するには、まず、[開発者コンソール][dc]でBoxアプリケーションを作成します。CLIはAPI呼び出しを実行する際にバックグラウンドでこのアプリケーションを使用できます。CLIを既存のJWTアプリケーションに関連付ける場合は、この手順を省略できます。ただし、少なくとも、以下のスコープがアプリケーションの \[**構成**] タブで設定されていることを確認してください。
 
 * Boxに格納されているすべてのファイルとフォルダの読み取り
 * Boxに格納されているすべてのファイルとフォルダの書き込み
@@ -42,7 +42,7 @@ The first step to using the CLI with server authentication is creating a Box app
 
 <Message warning>
 
-Server Authentication (with JWT) always requires Admin authorization before use.
+サーバー認証 (JWT使用) は、使用する前に必ず管理者の承認が必要になります。
 
 </Message>
 
@@ -185,8 +185,8 @@ Notification Email: []
 
 ## 次の手順
 
-* You can checkout the [commands][commands] page on GitHub for example code.
-* You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
+* コード例をGitHubの[コマンド][commands]ページで確認できます。
+* [OAuth 2.0のクイックスタート][three]の2番目の手順に進み、コマンドの使用方法のチュートリアルを確認することもできます。
 
 [cli]: https://github.com/box/boxcli
 

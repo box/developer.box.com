@@ -21,7 +21,7 @@ CLIコマンドの全一覧と使用方法に関する情報については、[G
 
 <message type="warning"></message>
 
-Only Service Accounts and Admins are able to use some commands. If your user is not authorized with the necessary scopes or you configured your CLI to obtain a default token for another user, calls may fail. Add `-v` or `--verbose` to your command for verbose error logging.
+一部のコマンドは、サービスアカウントと管理者しか使用できません。必要なスコープでユーザーが承認されていない場合、または別のユーザーのデフォルトのトークンを取得するようCLIを構成した場合は、呼び出しが失敗する可能性があります。詳細なエラーログを確認するには、コマンドに`-v`または`--verbose`を追加してください。
 
 </Message>
 
@@ -35,7 +35,7 @@ helpコマンドで提供されない情報を確認するには、リファレ�
 
 ## はじめに: ブラウザのストレージをリセットする
 
-Now that you've imported the Box API credentials into the CLI you should take a moment to remove these credentials from your browser's storage.
+Box API資格情報をCLIにインポートしたので、これらの資格情報をブラウザのストレージから削除することをお勧めします。
 
 <ResetButton id="cli,credentials,observable_events">
 
@@ -45,7 +45,7 @@ Now that you've imported the Box API credentials into the CLI you should take a 
 
 <Message warning>
 
-Removing your API credentials from the browser storage ensures that no other script can read your **Client ID** or **Client Secret**
+API資格情報をブラウザのストレージから削除すると、**クライアントID**または**クライアントシークレット**を他のスクリプトで読み取ることができなくなります。
 
 </Message>
 
@@ -97,17 +97,17 @@ Removing your API credentials from the browser storage ensures that no other scr
 
 <message type="warning"></message>
 
-If you set up the Box CLI using JWT authentication, you will not see the folder in your Box account. The folder will live in the service account of the application that was created after application approval.
+JWT認証を使用したBox CLIを設定すると、Boxアカウントにこのフォルダが表示されなくなります。このフォルダは、アプリケーションの承認後に作成されたアプリケーションのサービスアカウントに存在します。
 
 </Message>
 
 ## まとめ
 
-* You used the **help** feature to create a folder
+* **ヘルプ**機能を使用してフォルダを作成しました
 
 <Next>
 
-I created my first folder
+最初のフォルダを作成しました
 
 </Next>
 

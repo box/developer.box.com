@@ -19,7 +19,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/0-index.md
 fullyTranslated: true
 ---
-# Learn to use the Box CLI with OAuth 2.0
+# OAuth 2.0を使用したBox CLIの使い方
 
 <!--alex ignore executed-->
 
@@ -33,7 +33,7 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 
 このガイドでは、以下の手順を説明します。
 
-1. [Create and configure][one] a Box application
+1. Boxアプリケーションを[作成して設定する][one]
 2. CLIを[インストールして構成する][two]
 3. CLIを使用して[コマンドを実行する][three]
 4. [オプションや一括コマンド][four]を使用する

@@ -722,9 +722,9 @@ Markdownビューアーでは、以下のイベントがトリガーされます
 
 ### 動作
 
-The `<iframe>` viewer is used for previews of Box Notes.
+`<iframe>`ビューアーは、Box Notesのプレビューに使用されます。
 
-Box Notes has full-featured viewers within the main Box Web Application, but these full viewers are not initialized when users navigate from previews of other files that may be in the same directory as the Notes files. In this situation, the `<iframe>` viewer embeds an view-only render of the Box Note file.
+Box Notesは、メインのBoxウェブアプリ内にフル機能搭載のビューアーを備えています。ただし、このようなフル機能搭載のビューアーは、Notesのファイルと同じディレクトリ内にある他のファイルのプレビューから移動しても初期化されません。この場合、`<iframe>`ビューアーは、Box Noteファイルの表示専用のレンダリング機能を埋め込みます。
 
 ### サポートされているファイル拡張子
 

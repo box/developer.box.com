@@ -17,7 +17,7 @@ fullyTranslated: true
 ---
 # Boxアプリの設定
 
-To use the **Box CLI** you will need to create a **Box App**. A Box App is an application that can be used for making API calls. When using the Box CLI you can choose to either set up your own Box App or use our preconfigured one. The key benefit of setting up your own Box App is that you won't need to go through login every hour, but it does require a few extra steps to set up.
+**Box CLI**を使用するには、**Boxアプリ**を作成する必要があります。Boxアプリは、API呼び出しの実行に使用できるアプリケーションです。Box CLIを使用する際は、独自のBoxアプリを設定するか、あらかじめ設定されているBoxアプリを使用するかを選択できます。独自のBoxアプリを設定した場合の主な利点として、1時間ごとにログインする必要はなくなりますが、設定にいくつか追加手順が必要になります。
 
 ## 使用するBoxアプリの選択
 
@@ -27,13 +27,13 @@ To use the **Box CLI** you will need to create a **Box App**. A Box App is an ap
 
 # 新しいBoxアプリを作成する
 
-We can set up a Box App for you right here from the documentation. With a few clicks you will be ready to go!
+ここからBoxアプリを設定できます。数回クリックするだけで準備できます。
 
 </Choose>
 
 <Choose option="cli.app_type" value="use_existing" color="red">
 
-# Use existing Box App
+# 既存のBoxアプリを使用する
 
 使用したいBoxアプリをすでに作成済みの場合は、そのアプリケーションの資格情報を使用できます。
 
@@ -43,9 +43,9 @@ We can set up a Box App for you right here from the documentation. With a few cl
 
 <Choice option="cli.app_type" value="create_new,clicked" color="blue">
 
-# Create a Box App
+# Boxアプリの作成
 
-To use your own **Box App** you will need to create a new Box App in the **Box Developer Console**. Click the button below and we will set it up for you. At the end you will have a **Client ID** and **Client Secret**.
+独自の**Boxアプリ**を使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。下のボタンをクリックすると、アプリが設定されます。最後に、**クライアントID**と**クライアントシークレット**を取得できます。
 
 <Trigger option="cli.app_type" value="clicked">
 
@@ -59,7 +59,7 @@ To use your own **Box App** you will need to create a new Box App in the **Box D
 
 <Observe option="cli.app_type" value="clicked">
 
-We will use these credentials to authenticate the Box CLI in the next step.
+これらの資格情報は、次の手順でBox CLIの認証に使用します。
 
 </Observe>
 
@@ -67,16 +67,16 @@ We will use these credentials to authenticate the Box CLI in the next step.
 
 <Choice option="cli.app_type" value="use_existing" color="red">
 
-# Use existing Box App
+# 既存のBoxアプリを使用する
 
 事前にBoxアプリをすでに作成済みの場合は、そのアプリも使用できます。そのアプリを使用するには、いくつかの設定が必要です。
 
 1. [開発者コンソール][devconsole]に移動します。
 2. アプリケーションを選択します。
-3. Go to the application’s **Configuration** section 
+3. アプリケーションの \[**構成**] セクションに移動します。 
 4. アプリケーションが認証方法として**標準OAuth 2.0**を使用することを確認します。
 5. \[**OAuth 2.0リダイレクトURI**] の設定まで下にスクロールし、\[**リダイレクトURI**] に値`http://localhost:3000/callback`を設定します。
-6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** read all files and folders stored in Box, read and write all files and folders in Box.
+6. \[**アプリケーションスコープ**] セクションまでスクロールし、目的の[権限][scopes]を選択します。**アプリケーションには、****次のスコープの1つ以上が必要です:** Boxに格納されているすべてのファイルとフォルダの読み取り、Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
 7. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 
 次に、クライアントIDとクライアントシークレットの値を以下の2つのフィールドにコピーします。
@@ -93,7 +93,7 @@ We will use these credentials to authenticate the Box CLI in the next step.
 
 </Store>
 
-We will use these credentials to authenticate the Box CLI in the next step.
+これらの資格情報は、次の手順でBox CLIの認証に使用します。
 
 </Choice>
 
@@ -115,7 +115,7 @@ API資格情報は、ブラウザキャッシュに保存されています。�
 
 * 新しい**Boxアプリ**の作成を選択しました。
   * Developerアカウントにサインアップ (必要な場合)
-  * Had us create a **Custom App** for you that uses **OAuth 2.0** authentication
+  * **OAuth 2.0**認証を使用する**カスタムアプリ**を作成
   * アプリケーションの**リダイレクトURL**を設定
 * または、**既存のBoxアプリ**の使用を選択しました。
 

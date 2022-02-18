@@ -45,7 +45,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ## 構成コマンドの実行
 
-You will now need to configure the CLI by logging in to your Box App.
+ここで、BoxアプリにログインしてCLIを構成する必要があります。
 
 この手順では、前の手順の**クライアントID**と**クライアントシークレット**を使用してログインし、ユーザー用に**アクセストークン**を作成します。
 
@@ -69,45 +69,45 @@ You will now need to configure the CLI by logging in to your Box App.
 
 <!--alex ignore execute-->
 
-Open your terminal or command line and execute the command: `box login -n example_name`.
+ターミナルまたはコマンドラインを開き、`box login -n example_name`コマンドを実行します。
 
-Copy the Client ID and Client Secret into the terminal window when prompted.
+求められたら、ターミナルウィンドウにクライアントIDとクライアントシークレットをコピーします。
 
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
 
-![CLI Login](./cli-login.png)
+![CLIログイン](./cli-login.png)
 
 </ImageFrame>
 
-Click the **Grant access to Box** button that appears in the browser window.
+ブラウザウィンドウに表示された \[**Boxへのアクセスを許可**] ボタンをクリックします。
 
 <ImageFrame center>
 
-![Grant CLI Access](./cli-grant-access.png)
+![CLIにアクセスを許可](./cli-grant-access.png)
 
 </ImageFrame>
 
-If successful, you will see the following success message.
+成功すると、成功を示す次のメッセージが表示されます。
 
 <ImageFrame center>
 
-![CLI Env Setup](./cli-env-setup.png)
+![CLI環境の設定](./cli-env-setup.png)
 
 </ImageFrame>
 
 ## 構成の確認
 
-To confirm successful configuration, make your first Box API call with the Box CLI by entering the command `box users:get me`.
+うまく構成されているか確認するには、`box users:get me`コマンドを入力して、Box CLIで最初のBox API呼び出しを実行します。
 
 <ImageFrame center>
 
-![CLI Users Call](./cli-first-call.png)
+![CLIのユーザー呼び出し](./cli-first-call.png)
 
 </ImageFrame>
 
-A successful response will provide details about your user account.
+成功を示すレスポンスには、ユーザーアカウントの詳細が示されます。
 
 ```json
 Type: user
@@ -132,8 +132,8 @@ Notification Email: []
 ## まとめ
 
 * CLIをインストールしました。
-* You configured the CLI to use the OAuth 2.0 Application created earlier
-* You **made your first Box CLI Box API call** confirmed the user associated with your Access Token
+* 前に作成したOAuth 2.0アプリケーションを使用するようCLIを構成しました。
+* **Box CLIの最初のBox API呼び出しを実行**し、アクセストークンに関連付けられたユーザーを確認しました。
 
 <Next>
 

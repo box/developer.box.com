@@ -37,11 +37,11 @@ Box Command Line Interface (CLI) は、ターミナルウィンドウまたは�
 
 ## はじめに
 
-[Get started using the Box CLI with OAuth 2.0][qs].
+[OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
-## Box CLI Using JWT Authentication
+## JWT認証を使用したBox CLI
 
-If you would rather use our [server authentication][jwt] method, check out [this][jwt-page] guide.
+Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][jwt-page]ガイドを参照してください。
 
 ## 高度な機能
 

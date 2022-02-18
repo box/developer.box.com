@@ -49,7 +49,7 @@ fullyTranslated: true
 
 # Boxアプリの作成
 
-To use your own **Box App** you will need to create a new Box App in the **Box Developer Console**. Click the button below and we will set it up for you. At the end you will have a **Client ID** and **Client Secret**.
+独自の**Boxアプリ**を使用するには、**Box開発者コンソール**で新しいBoxアプリを作成する必要があります。下のボタンをクリックすると、アプリが設定されます。最後に、**クライアントID**と**クライアントシークレット**を取得できます。
 
 <Trigger option="postman.app_type" value="clicked">
 
