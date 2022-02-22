@@ -9,7 +9,6 @@ related_resources:
   - collaboration
   - file
 ---
-
 # Share Content with User
 
 To share content with a user, create a collaboration using
