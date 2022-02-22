@@ -40,7 +40,7 @@ callback parameters.
 
 Unlike the V2 Webhooks, these manual webhooks need to be configured with the
 data you'd like. This data will be sent as a query string either in the body
-or as a query parameter, for example `name=Contract.pdf&type=file`
+or as a query parameter, for example `name=Contract.pdf&type=file`.
 
 </Message>
 

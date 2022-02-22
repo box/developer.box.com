@@ -152,6 +152,9 @@ the API.
 - `cancelled`: If the request is cancelled via UI or API
 - `expired`: The date of expiration has passed with outstanding, incomplete
   signatures 
+- `downloaded`: The signing document was downloaded by signer
+- `signed and downloaded`: The signing document was signed and downloaded by
+ signer
 
 Encountering an error status requires creating a new sign request to retry.
 

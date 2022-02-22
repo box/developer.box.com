@@ -30,6 +30,8 @@ documentation
 If you are new to development with the Box API, we recommend following the steps
 below to guide you through the main concepts and content.
 
+If you have questions, checkout our [forum][forum-link].
+
 1. Evaluate if your [use case][use-case] is a good fit for Box
 2. Understand the different [types of Box users][users]
 3. Explore [user models][user-model]
@@ -51,3 +53,4 @@ below to guide you through the main concepts and content.
 [tools]: g://tooling
 [endpoints]: https://developer.box.com/reference
 [cv]: g://getting-started/locating-values
+[forum-link]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum

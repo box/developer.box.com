@@ -16,7 +16,7 @@ previous_page_id: search/pagination
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
 ---
-# Metadata filters
+# Metadata Query Filters
 
 The [`GET /search`][search_api] API allows for filtering search results by their
 associated metadata. A `mdfilters` query parameter allows a developer to specify

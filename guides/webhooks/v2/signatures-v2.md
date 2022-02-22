@@ -3,9 +3,9 @@ rank: 5
 related_endpoints:
   - post_webhooks
 alias_paths:
-  - /webhooks/handle/setup-signatures
-  - /webhooks/handle/verify-signatures
-  - /webhooks/handle/rotate-signatures
+  - /guides/webhooks/handle/setup-signatures
+  - /guides/webhooks/handle/verify-signatures
+  - /guides/webhooks/handle/rotate-signatures
 category_id: webhooks
 subcategory_id: webhooks/v2
 is_index: false

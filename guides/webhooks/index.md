@@ -51,5 +51,4 @@ There are two types of webhooks: v1 and v2, which are compared below.
 | Does not support payload verification                                 | Supports payload verification                                        |
 | Notification URL can be HTTP or HTTPS                                 | Notification URL must be HTTPS                                       |
 | Does not scale well                                                   | Scales well and has increased reliability                            |
-
 <!-- markdownlint-enable line-length -->
