@@ -130,7 +130,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
 
 高度なプレビューのカスタマイズ機能やイベント処理機能を活用するには、Box [UI Preview Element](guide://embed/ui-elements/preview/)を使用します。
 
-このPreview Elementを設定するには、まず、必須コンポーネントをインストールします。
+このプレビューElementを設定するには、まず、必須コンポーネントをインストールします。
 
 <CTA to="guide://embed/ui-elements/installation">
 
