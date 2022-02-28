@@ -198,11 +198,11 @@
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "開発者コンソールに移動",
   // The URL to the developer console
-  "headers.primary.buttons.dashboard.url": "https://cloud.app.box.com/developers/console",
+  "headers.primary.buttons.dashboard.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer console
   "headers.primary.buttons.console.text": "マイアプリ",
   // The URL to the developer console
-  "headers.primary.buttons.console.url": "https://cloud.app.box.com/developers/console",
+  "headers.primary.buttons.console.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer signup
   "headers.primary.buttons.signup.text": "サインアップ",
   // The URL to the developer signup - DO NOT TRANSLATE
