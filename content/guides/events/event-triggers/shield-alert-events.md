@@ -364,38 +364,68 @@ download or print. These events follow the standard event object schema and the
 `event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
 If downloading is blocked, the `additional-details` payload of the
-`SHIELD_DOWNLOAD_BLOCKED` event will provide the following details:
+`SHIELD_DOWNLOAD_BLOCKED` event will provide the below details.
+
+For the Box Web App, the `additional_details` payload will
+provide the following details:
 
 ```js
-{
-  "additional_details": {
-    "shield_download_enforcement": {
-      "item": {
-        "type": "file",
-        "id": 123456789,
-        "name": "downloadfolder.docx",
-        "file_version_id": 123456789,
-        "size": 11640,
-        "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
-      },
-      "access_user": {
-        "type": "user",
-        "id": 123456789,
-        "name": "Some User",
-        "login": "somename@box.com"
-      },
-      "service": {
-        "service": 64089752,
-        "name": "zip-download"
-      },
-      "additional_info": "",
-      "created_at": "2021-10-21T14:23:45-07:00",
-      "classification": "email",
-      "controlMode": "enforced"
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 987654321,
+      "name": "testFile.docx",
+      "file_version_id": 38495726173,
+      "size": 370,
+      "sha1": "db0a61e73b5e6985d190134e0a4b9982c716afeb"
     },
-    "service_id": "64089752",
-    "service_name": "zip-download"
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": null,
+    "additional_info": "",
+    "created_at": "2022-02-22T10:35:08-08:00",
+    "classification": "Confidential",
+    "controlMode": "enforced"
   }
+}
+```
+
+For the Box Desktop App, the `additional_details` payload will
+provide the following details:
+
+```js
+"additional_details": {
+  "shield_download_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 123456789,
+      "name": "testFile.docx",
+      "file_version_id": 987654321,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "access_user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "service": {
+      "service": 254429,
+      "name": "Box Drive"
+    },
+    "additional_info": "",
+    "created_at": "2022-02-22T10:38:58-08:00",
+    "classification": "Confidential",
+    "controlMode": "enforced"
+  },
+  "service_id": "254429",
+  "service_name": "Box Drive"
 }
 ```
 
@@ -407,17 +437,17 @@ provide the following details:
   "shield_download_enforcement": {
     "item": {
       "type": "file",
-      "id": 875644956551,
-      "name": "blaha.docx",
-      "file_version_id": 941051265322,
+      "id": 987654321,
+      "name": "testFile.docx",
+      "file_version_id": 38495726173,
       "size": 11640,
       "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
     },
     "access_user": {
       "type": "user",
-      "id": 17111202914,
-      "name": "ming managed user 1",
-      "login": "mfeng+demo4+managed@boxdemo.com"
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
     },
     "service": {
       "service": 4715,
@@ -451,72 +481,34 @@ the following details:
 
 ```js
 "additional_details": {
-   "shield_external_collab_enforcement": {
-   "item": {
-      "type": "file",
-      "id": 123456789,
-      "name": "Welcome to Box.pdf",
-      "file_version_id": 987654321,
-      "size": 5206506,
-      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
-    },
-    "inviter": {
-       "type": "user",
-       "id": 02912083489,
-       "name": "Some Name",
-       "login": "somename@box.com"
-    },
-    "invitee": {
-       "type": "user",
-       "id": 10340918347,
-       "name": "John Doe",
-       "login": "johndoe@box.com"
-    },
-   "accessUser": null,
-   "service": [],
-   "additionalInfo": "",
-   "createdAt": null,
-   "justification": null,
-   "classification": "Test",
-   "justification": {
-      "justification_id": "4050170",
-      "request_at": 1611619097,
-      "requested_by": {
-         "type": "user",
-         "id": 10340918347,
-         "name": "John Doe",
-         "login": "johndoe@box.com"
-    },
-    "request_type": "EXTERNAL_COLLAB",
+  "shield_external_collab_enforcement": {
     "item": {
       "type": "file",
-      "id": 123456789,
-      "name": "Welcome to Box.pdf",
+      "id": 987654321,
+      "name": "testFile.docx",
       "file_version_id": 987654321,
-      "size": 5206506,
-      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
     },
-    "user": {
+    "inviter": {
       "type": "user",
-          "id": 10340918347,
-          "name": "John Doe",
-          "login": "johndoe@box.com"
-    },
-    "title": "TEST",
-    "description": "",
-    "additional_info": null,
-    "approved_by": {
-      "type": "user",
-      "id": 02912083489,
+      "id": 123456789,
       "name": "Some Name",
       "login": "somename@box.com"
     },
-    "action": "APPROVED",
-    "action_at": 1611619097,
-    "details": null
-  },
-  "classification": "Example",
-  "controlMode": "enforced"
+    "invitee": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "accessUser": null,
+    "service": null,
+    "additionalInfo": "",
+    "createdAt": null,
+    "justification": null,
+    "classification": "Confidential",
+    "controlMode": "enforced"
   }
 }
 ```
@@ -527,72 +519,70 @@ following details:
 
 ```js
 "additional_details": {
-   "shield_external_collab_enforcement": {
-   "item": {
-      "type": "file",
-      "id": 123456789,
-      "name": "Welcome to Box.pdf",
-      "file_version_id": 987654321,
-      "size": 5206506,
-      "sha1": "92c96143519c993biaob52a2a1da4e2d078dca89"
-    },
-    "inviter": {
-       "type": "user",
-       "id": 02912083489,
-       "name": "Some Name",
-       "login": "somename@box.com"
-    },
-    "invitee": {
-       "type": "user",
-       "id": 10340918347,
-       "name": "John Doe",
-       "login": "johndoe@box.com"
-    },
-   "accessUser": null,
-   "service": [],
-   "additionalInfo": "",
-   "createdAt": null,
-   "justification": null,
-   "classification": "Test",
-   "justification": {
-      "justification_id": "4050170",
-      "request_at": 1611619097,
-      "requested_by": {
-         "type": "user",
-         "id": 10340918347,
-         "name": "John Doe",
-         "login": "johndoe@box.com"
-    },
-    "request_type": "EXTERNAL_COLLAB",
+  "shield_external_collab_enforcement": {
     "item": {
       "type": "file",
       "id": 123456789,
-      "name": "Welcome to Box.pdf",
-      "file_version_id": 987654321,
-      "size": 5206506,
-      "sha1": "92c9614354519c993b8sk2a2a1da4e2d078dca89"
+      "name": "testFile.docx",
+      "file_version_id": 123456789,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
     },
-    "user": {
+    "inviter": {
       "type": "user",
-          "id": 10340918347,
-          "name": "John Doe",
-          "login": "johndoe@box.com"
-    },
-    "title": "TEST",
-    "description": "",
-    "additional_info": null,
-    "approved_by": {
-      "type": "user",
-      "id": 02912083489,
+      "id": 123456789,
       "name": "Some Name",
       "login": "somename@box.com"
     },
-    "action": "APPROVED",
-    "action_at": 1611619097,
-    "details": null
-  },
-  "classification": "Example",
-  "controlMode": "enforced"
+    "invitee": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "accessUser": null,
+    "service": null,
+    "additionalInfo": "",
+    "createdAt": null,
+    "justification": {
+      "justification_id": "17786127",
+      "request_at": 1644874023,
+      "requested_by": {
+        "type": "user",
+        "id": 123456789,
+        "name": "Some Name",
+        "login": "somename@box.com"
+      },
+      "request_type": "EXTERNAL_COLLAB",
+      "item": {
+        "type": "file",
+        "id": 987654321,
+        "name": "testFile.docx",
+        "file_version_id": 941051265322,
+        "size": 11640,
+        "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+      },
+      "user": {
+        "type": "user",
+        "id": 123456789,
+        "name": "Some Name",
+        "login": "somename@box.com"
+      },
+      "title": "Approved",
+      "description": "",
+      "additional_info": null,
+      "approved_by": {
+        "type": "user",
+        "id": 123456789,
+        "name": "Some Name",
+        "login": "somename@box.com"
+      },
+      "action": "APPROVED",
+      "action_at": 1644874023,
+      "details": null
+    },
+    "classification": "Confidential",
+    "controlMode": "enforced"
   }
 }
 ```
@@ -604,42 +594,36 @@ the following details:
 
 ```js
 "additional_details": {
-        "shield_external_collab_enforcement": {
-            "item": {
-                "type": "folder",
-                "id": 60909312704,
-                "name": "Exmaple Folder",
-                "file_version_id": null,
-                "size": 410874,
-                "sha1": null
-            },
-            "inviter": {
-                "type": "user",
-                "id": 987654321,
-                "name": "John Doe",
-                "login": "johndoe@box.com"
-            },
-            "invitee": {
-                "type": "user",
-                "id": 123456,
-                "name": "Example User",
-                "login": "example@box.com"
-            },
-            "accessUser": null,
-            "service": {
-                "service": 12345,
-                "name": "Box Web App",
-                "apiKey": "fomp6n5qhqpnt6rw2h3yu12g01qswae"
-            },
-            "additionalInfo": "",
-            "createdAt": null,
-            "justification": null,
-            "classification": "Company and Collaborators Only",
-            "controlMode": "enforced"
-        },
-        "service_id": "12345",
-        "service_name": "Box Web App"
- }
+  "shield_external_collab_enforcement": {
+    "item": {
+      "type": "file",
+      "id": 987654321,
+      "name": "testFile.docx",
+      "file_version_id": 987654321,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
+    },
+    "inviter": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "invitee": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
+    },
+    "accessUser": null,
+    "service": null,
+    "additionalInfo": "",
+    "createdAt": null,
+    "justification": null,
+    "classification": "Confidential",
+    "controlMode": "enforced"
+  }
+}
 ```
 
 If a Shield justification is approved, an event is produced within the
@@ -650,47 +634,44 @@ to `SHIELD_JUSTIFICATION_APPROVAL`.
 The `additional_details` payload will provide the following details:
 
 ```js
-"additional_details":{
-  "shield_justification":{
-    "justification_id":1234,
-    "request_at":1600708864,
-    "requested_by":{
-      "type":"user",
-      "id":1357924680,
-      "name":"John Doe",
-      "login":"johndoe@box.com"
+"additional_details": {
+  "shield_justification": {
+    "justification_id": "18428718",
+    "request_at": 1645556286,
+    "requested_by": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
     },
-    "request_type":"EXTERNAL_COLLAB",
-    "item":{
-      "type":"file",
-      "id":123456789,
-      "name":"testFile.docx",
-      "file_version_id":987654321,
-      "size":0,
-      "sha1":"da39a3ee5e6b4b0d325ojofef95601890afd80709"
+    "request_type": "EXTERNAL_COLLAB",
+    "item": {
+      "type": "file",
+      "id": 987654321,
+      "name": "testFile.docx",
+      "file_version_id": 987654321,
+      "size": 11640,
+      "sha1": "368acd076a89ce82e62cac004fa27ea9ce3019d7"
     },
-    "user":{
-      "type":"user",
-      "id":0975312468,
-      "name":"Some Name",
-      "login":"somename@box.com"
+    "user": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
     },
-    "title":"Some Title",
-    "description":null,
-    "details":null,
-    "additional_info":null,
-    "approved_by":{
-      "type":"user",
-      "id":0975312468,
-      "name":"Some Name",
-      "login":"somename@box.com"
+    "title": "Partner Project",
+    "description": "",
+    "additional_info": null,
+    "approved_by": {
+      "type": "user",
+      "id": 123456789,
+      "name": "Some Name",
+      "login": "somename@box.com"
     },
-    "action":"APPROVED",
-    "action_at":1600476617
-  },
-  "service_id":"123456",
-  "service_name":"Service Name",
-  "controlMode": "enforced"
+    "action": "APPROVED",
+    "action_at": 1645556286,
+    "details": null
+  }
 }
 ```
 
