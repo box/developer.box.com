@@ -56,5 +56,27 @@ V2 webhooks cannot be created on the root folder, which is the folder with ID
   no notification is sent for the attempted action.
 </Mesage>
 
+## Reasons for webhook deletion
+
+The following reasons can cause webhooks to be deleted.
+
+1. Deleting a Box application automatically deletes all webhooks associated with
+   the application.
+2. Deleting all active Access Tokens associated with a webhook will
+   automatically delete the webhook. This includes Developer Tokens and password
+3. If the last successful delivery was 30 days ago and the period between the
+   last successful delivery date and the last trigger date was more than 14
+   days, the webhook will be automatically deleted.
+
+In all of these cases Box would send a webhook payload with the
+`WEBHOOK.DELETED` event name to the notification URL. The body of the payload
+will include the following additional information.
+
+```json
+"additional_info": {
+  "reason": "auto_cleanup"
+}
+```
+
 [v1]: g://webhooks/v1
 [update]: g://webhooks/v2/update-v2
