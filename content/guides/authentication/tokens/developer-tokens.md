@@ -55,4 +55,9 @@ Our SDKs can be initialized with a Developer Token to create a basic API client.
   Developer Tokens should only be used for development or testing purposes.
 </Message>
 
+<Message warning>
+  When you explicitly revoke a developer token for a given app via the
+  Developer console, all webhooks created by that application get deleted.
+</Message>
+
 [devconsole]: https://app.box.com/developers/console
