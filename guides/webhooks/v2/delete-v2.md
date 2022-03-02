@@ -39,7 +39,7 @@ fullyTranslated: true
 Webhookは以下の理由で削除される可能性があります。
 
 1. Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
-2. Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードリセットが含まれます。
+2. Deleting all active Access Tokens associated with a webhook will automatically delete the webhook. This includes Developer Tokens and password
 3. 最後に成功した配信から30日が経過し、最後に配信が成功した日から最後のトリガーの日付までの期間が14日を超えた場合、Webhookは自動的に削除されます。
 
 これらのすべてのケースで、Boxは`WEBHOOK.DELETED`イベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本体には以下の追加情報が含まれます。

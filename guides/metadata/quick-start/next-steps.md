@@ -26,9 +26,9 @@ fullyTranslated: true
 5. [メタデータテンプレートを更新](g://metadata/quick-start/update-template/)し、このテンプレートのすべてのインスタンスに適用されたデータを変更しました。
 6. [ファイルやフォルダに対してクエリを実行](g://metadata/quick-start/create-query/)し、ファイルとフォルダに適用されているメタデータインスタンスの値と照合しました。
 
-## 次に行うべきこと
+## 次の手順
 
-Box APIでのメタデータの使用について詳しく知りたい方には、次のリソースをお勧めします。
+We recommend the following resources to learn more about using metadata with the Box API.
 
 * [メタデータのスコープの詳細を確認する](g://metadata/scopes)
 * テンプレートで使用できる[各種フィールドタイプの詳細](g://metadata/fields)

@@ -17,7 +17,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
 fullyTranslated: true
 ---
-# メタデータフィルタ
+# Metadata Query Filters
 
 [`GET /search`][search_api] APIでは、関連付けられたメタデータを使用して、検索結果にフィルタをかけることができます。`mdfilters`クエリパラメータを使用すると、開発者はメタデータテンプレートとクエリの対象となる値を指定できます。
 

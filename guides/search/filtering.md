@@ -423,7 +423,7 @@ client.search.query(
 
 関連付けられたメタデータを使用して検索結果にフィルタをかけることも、メタデータのみに基づいてすべての検索を実行することもできます。どちらの場合も`mdfilters`クエリパラメータを使用します。
 
-<CTA to="g://search/metadata-filters">
+<CTA to="g://search/quick-start">
 
 メタデータフィルタの詳細を確認する
 

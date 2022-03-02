@@ -35,9 +35,9 @@ fullyTranslated: true
 * \[構成] タブからアプリケーションのクライアントシークレットを表示およびコピーするために、Boxアカウントで[2FA][2fa]が有効になっていること
 * Box管理コンソールでアプリケーションが[承認][auth]されていること
 
-<Message notice>
+<Message danger>
 
-クライアントシークレットは機密情報であり、保護する必要があります。アクセストークンの取得時にBoxがアプリケーションのIDを安全に確認するために使用されるため、クライアントシークレットを自由に配布するべきではありません。配布方法には、メール、公開フォーラム、コードリポジトリ、分散されたネイティブアプリケーション、クライアント側のコードなどがあります。 
+Your client secret is confidential and needs to be protected. Because this is how we securely identify an application's identity when obtaining an Access Token, you do not want to freely distribute a client secret. This includes via email, public forums and code repositories, distributed native applications, or client-side code. If you would like to add more security mechanisms, we recommend using our standard JWT application type.
 
 </Message>
 
@@ -52,34 +52,16 @@ API呼び出しを実行して[アクセストークン][accesstoken]を取得�
 
 管理対象ユーザーとして認証する場合は、以下のようにします。
 
-* `box_subject_type`を`user`に設定する 
+* `box_subject_type`を`user`に設定する
 * `box_subject_id`をユーザーIDに設定する
 
-<Tabs>
+<Samples id="x_auth" variant="with_client_credentials">
 
-<Tab title="cURL">
-
-<!-- markdownlint-disable line-length -->
-
-```cURL
-curl -i -X POST "https://api.box.com/oauth2/token" \
-    -H "Content-Type: application/x-www-form-urlencoded" \
-    -d "client_id=<client_id>" \
-    -d "client_secret=<client_secret>" \
-    -d "grant_type=client_credentials" \
-    -d "box_subject_type=enterprise"  \
-    -d "box_subject_id=<enterprise_id>"
-```
-
-<!-- markdownlint-enable line-length -->
-
-</Tab>
-
-</Tabs>
+</Samples>
 
 <Message notice>
 
-Box SDKでは、現在、この認証方法をサポートしていません。
+Our `.NET` and `Java` SDKs currently support Client Credentials. More SDKS will gain support soon.
 
 </Message>
 
@@ -91,7 +73,7 @@ Box SDKでは、現在、この認証方法をサポートしていません。
 
 * 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない
 
-* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない
+* the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned
 
 <!-- i18n-enable localize-links -->
 

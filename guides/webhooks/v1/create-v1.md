@@ -37,7 +37,7 @@ V1 Webhookを作成するには、[開発者コンソール][devconsole]で以�
 
 # コールバックパラメータ
 
-V2 Webhookとは異なり、これらの手動によるWebhookにはデータを構成する必要があります。このデータは、本文のクエリ文字列として、または`name=Contract.pdf&type=file`のようなクエリパラメータとして送信されます。
+Unlike the V2 Webhooks, these manual webhooks need to be configured with the data you'd like. This data will be sent as a query string either in the body or as a query parameter, for example `name=Contract.pdf&type=file`.
 
 </Message>
 
