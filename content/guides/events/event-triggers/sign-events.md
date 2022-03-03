@@ -83,6 +83,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "created",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -97,13 +99,20 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer":null
+        "signer":null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -118,6 +127,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "signed",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -132,13 +143,20 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -153,6 +171,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "cancelled",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -167,13 +187,20 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -188,6 +215,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "expired",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -202,13 +231,20 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -225,6 +261,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "sent",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -239,6 +277,7 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -250,7 +289,13 @@ The`additional_details` payload will provide the following details:
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -266,6 +311,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "viewed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -280,6 +327,7 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -291,7 +339,13 @@ The`additional_details` payload will provide the following details:
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -304,6 +358,8 @@ signing document.
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "viewed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -318,6 +374,7 @@ signing document.
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -329,6 +386,16 @@ signing document.
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": {
+            "forwarded_to_email": "janedoe@box.com",
+            "forwarded_reason": "Please sign",
+            "forwarded_at": "2022-03-03T12:04:20-10:00"
         }
     }
 }
@@ -358,6 +425,7 @@ signing document.
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -410,6 +478,7 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -442,6 +511,8 @@ The`additional_details` payload will provide the following details:
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "declined",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -456,6 +527,7 @@ The`additional_details` payload will provide the following details:
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -467,7 +539,13 @@ The`additional_details` payload will provide the following details:
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
