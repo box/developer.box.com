@@ -34,7 +34,7 @@ To get a thumbnail representation follow the following steps
 
 - [List all representations][list-all-representations]
 - [Request a thumbnail][request-a-representation]
-  by passing the `X-Ref-Hints`-header for the desired thumbnail format
+  by passing the `x-rep-hints`-header for the desired thumbnail format
   and size, for example `[jpg?dimensions=32x32]`.
 - [Download the thumbnail][download-a-representation]
   by calling the `url_template`, replacing the `{+asset_path}` with an empty
