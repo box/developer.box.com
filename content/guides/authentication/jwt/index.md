@@ -30,14 +30,11 @@ to act on behalf of any user in an enterprise.
 There are two ways you can verify an application's permissions:
 
 - using a public and private key pair
-- using a client id and client secret (Client Credentials Grant)
+- using a client id and client secret 
+  ([Client Credentials Grant][cca])
 
 To learn more about these options visit our guide on using
 [JWT without SDKs][jwtnosdk]. 
-
-<Message warning>
- At this time, our SDKs do not support the Client Credential Grant.
-</Message>
 
 Upon authorizing a JWT application in the Box Admin Console, a 
 [Service Account][sa] is automatically generated and is the default
@@ -58,3 +55,4 @@ that:
 [app-type]: g://applications/select
 [sa]: g://getting-started/user-types/service-account
 [jwtnosdk]: g://authentication/jwt/without-sdk
+[cca]: g://authentication/client-credentials
