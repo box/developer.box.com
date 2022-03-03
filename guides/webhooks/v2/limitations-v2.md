@@ -67,7 +67,7 @@ V2 webhooks cannot be created on the root folder, which is the folder with ID
 When the permissions on an item prevent an action from occurring,
 no notification is sent for the attempted action.
 
-</Mesage>
+</Message>
 
 ## Reasons for webhook deletion
 
