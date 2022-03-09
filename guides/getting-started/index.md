@@ -29,7 +29,7 @@ Boxのドキュメントは、主に以下の4つのセクションに分かれ�
 
 Box APIを使用する開発が初めての方は、主なコンセプトやコンテンツを紹介する以下の手順に従ってみることをお勧めします。
 
-If you have questions, checkout our [forum][forum-link].
+不明な点がある場合は、Boxの[フォーラム][forum-link]を確認してください。
 
 1. 自分の[ユースケース][use-case]がBoxに適しているかどうかを評価する
 2. さまざまな[Boxユーザーの種類][users]を理解する

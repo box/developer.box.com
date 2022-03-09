@@ -15,40 +15,40 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/3-apply-template-to-file.md
 fullyTranslated: true
 ---
-# Add Metadata Template to a File
+# ファイルへのメタデータテンプレートの追加
 
-Your metadata template needs to be applied to at least one file to ensure a result in step 4. There are two ways to do add a metadata template to a file: via the UI or via the API.
+メタデータテンプレートは、手順4で結果が得られるように1つ以上のファイルに適用する必要があります。ファイルにメタデータを追加するには、UIを使用する方法とAPIを使用する方法の2とおりあります。
 
 ## UI
 
-To apply metadata to a file using the UI, navigate to a file and open the preview. Use the **Metadata** tab and click **Add**. Find the metadata template created in step 1 and select a value. Ensure you click **Save**.
+UIを使用してファイルにメタデータを適用するには、ファイルに移動し、プレビューを開きます。\[**メタデータ**] タブを使用して、\[**追加**] をクリックします。手順1で作成したメタデータテンプレートを見つけて、値を選択し、必ず \[**保存**] をクリックします。
 
 <ImageFrame center>
 
-![Select a Metadata Template](./images/metadata-template-select.png)
-![Select a Value](./images/select-template-value.png)
+![メタデータテンプレートの選択](./images/metadata-template-select.png)
+![値の選択](./images/select-template-value.png)
 
 </ImageFrame>
 
 ## API
 
-To add a metadata template to a file you will need to use the [create metadata instance on a file endpoint][add-metadata]. You will also need the `scope` and `templateKey` template values from the previous step. Below is an example of what the API call looks like to apply the same metadata shown in the UI above.
+ファイルにメタデータテンプレートを追加するには、[ファイルにメタデータインスタンスを作成エンドポイント][add-metadata]を使用する必要があります。また、前の手順で確認した`scope`および`templateKey`テンプレート値も必要になります。上記のUIを使用した方法で示したのと同じメタデータを適用するAPI呼び出しの例を以下に示します。
 
 <ImageFrame center>
 
-![Select a Metadata Template](./images/add-metadata-api.png)
+![メタデータテンプレートの選択](./images/add-metadata-api.png)
 
 </ImageFrame>
 
 <Message warning>
 
-Due to scale considerations a 403 error will returns when the metadata template is applied to more than 10,000 files or folders.
+規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されると、403エラーが返されます。
 
 </Message>
 
 <Next>
 
-I applied my template to at least one file
+1つ以上のファイルにテンプレートを適用しました
 
 </Next>
 

@@ -17,18 +17,18 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/0-index.md
 fullyTranslated: true
 ---
-# Search content using metadata
+# メタデータによるコンテンツの検索
 
-The Box Metadata Query API enables programmatic search of Box content based strictly on applied custom metadata values.
+BoxメタデータクエリAPIを使用すると、適用したカスタムメタデータ値に厳密に基づき、プログラムによってBoxコンテンツを検索できます。
 
-The structure of a metadata query is similar to that of a SQL query and allows for Boolean operators, such as AND, OR, and NOT, as well as comparison or range operators, such as equal to, greater-than, and less-than.
+メタデータクエリの構造は、SQLクエリの構造に似ていて、ブール演算子 (AND、OR、NOTなど) のほか、比較演算子または範囲演算子 (等しい、より大きい、より小さいなど) も使用できます。
 
-Some benefits of the Metadata Query API include:
+メタデータクエリAPIのメリットを以下に示します。
 
-* no indexing delay; query immediately after metadata creations, updates, and deletions
-* ability to specify a sort order by one or more fields
-* no limitation on the number of characters that are queryable
-* queries return item properties and metadata instances
+* インデックス作成による遅延がない (つまり、メタデータの作成、更新、削除の直後にクエリを実行)
+* 1つ以上のフィールドを基準に並べ替え順を指定できる
+* クエリ可能な文字数に制限がない
+* クエリで項目プロパティやメタデータインスタンスが返される
 
 <ImageFrame center>
 
@@ -40,10 +40,10 @@ Some benefits of the Metadata Query API include:
 
 このガイドでは、以下の手順を説明します。
 
-1. [Create a metadata template][stepone]
-2. [Locate information about the metadata template][steptwo] via API
-3. [Apply the metadata template][stepthree] to at least one file
-4. [Construct a metadata query API call][stepfour] to obtain the content from step 3
+1. [メタデータテンプレートを作成する][stepone]
+2. APIを使用して[メタデータテンプレートに関する情報を確認する][steptwo]
+3. 1つ以上のファイルに[メタデータテンプレートを適用する][stepthree]
+4. 手順3のコンテンツを取得する[メタデータクエリAPI呼び出しを作成する][stepfour]
 
 <Next>
 

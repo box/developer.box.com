@@ -15,9 +15,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/4-metadata-query-api.md
 fullyTranslated: true
 ---
-# Use the Metadata Query API
+# メタデータクエリAPIの使用
 
-Finally, build a [metadata query API call][mq]. Here is an example of what the body of the API call looks like:
+最後に、[メタデータクエリAPI呼び出し][mq]を作成します。このAPI呼び出しの本文の例を以下に示します。
 
 ```json
 {
@@ -29,23 +29,23 @@ Finally, build a [metadata query API call][mq]. Here is an example of what the b
 }
 ```
 
-This API call will return any file ID that meets the following criteria:
+このAPI呼び出しでは、以下の条件を満たすファイルIDが返されます。
 
-* Has the Contact Role template applied
-* Has a value of departments is legal
-* Is located anywhere under the root folder, since "0" is the `ancestor_folder_id`
+* Contact Roleテンプレートが適用されている
+* departmentsの値がlegalである
+* ルートフォルダの下のいずれかの場所にある (「0」は`ancestor_folder_id`であるため)
 
-As you can see below, this results in a successful call showing information about the file we added the template to in step 2.
+以下に示すように、この結果、呼び出しは成功し、手順2でテンプレートを追加したファイルに関する情報が表示されます。
 
 <ImageFrame center>
 
-![Search Query Result](./images/query-result.png)
+![検索クエリの結果](./images/query-result.png)
 
 </ImageFrame>
 
 <Next>
 
-I found my content using a search query
+検索クエリを使用してコンテンツが見つかりました
 
 </Next>
 

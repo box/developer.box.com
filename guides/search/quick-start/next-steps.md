@@ -19,20 +19,20 @@ fullyTranslated: true
 
 このクイックスタートガイドが完了しました。ここまで、以下の手順を実行しました。
 
-1. [Created a metadata template][stepone]
-2. [Located information about the metadata template][stepthree] from step 1 via API
-3. [Added a metadata template][steptwo] to at least one file
-4. [Used the metadata query API][stepfour] to locate the file(s) from step 3
+1. [メタデータテンプレートを作成][stepone]しました
+2. APIを使用して手順1の[メタデータテンプレートに関する情報を確認][stepthree]しました
+3. 1つ以上のファイルに[メタデータテンプレートを追加][steptwo]しました
+4. [メタデータクエリAPIを使用][stepfour]して手順3のファイルを特定しました
 
 ## 次の手順
 
-We recommend the following resources to learn more:
+詳細を確認するには、以下のリソースをお勧めします。
 
-* [Metadata query guide][mqg]
-* Review [common errors][ce] and [limitations][lims]
-* Reference documentation for the [metadata query][mq] API
+* [メタデータクエリのガイド][mqg]
+* [一般的なエラー][ce]と[制限][lims]の確認
+* [メタデータクエリ][mq]APIのリファレンスドキュメント
 
-Our SDKs that support the metadata query API:
+メタデータクエリAPIをサポートするBox SDKは以下のとおりです。
 
 * [Python SDK][python]
 * [.NET SDK][node]

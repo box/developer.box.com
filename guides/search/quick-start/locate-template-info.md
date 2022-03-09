@@ -15,27 +15,27 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/2-locate-template-info.md
 fullyTranslated: true
 ---
-# Locate Information about a Metadata Template
+# メタデータテンプレートに関する情報を確認する
 
 <Message warning>
 
-If you created your metadata template using the API and have the successful response on hand, you can skip this step.
+APIを使用してメタデータテンプレートを作成し、成功を示すレスポンスが返ってきた場合は、この手順をスキップできます。
 
 </Message>
 
-If you created your metadata template via the Admin Console, you will need obtain an [Access Token][at] for an Admin or Co-Admin with permission to **Create and edit metadata templates for your company**. As mentioned in step 1, the easiest way to obtain a token meeting these requirements is to log in as an Admin or Co-Admin, pull up the application in the [Developer Console][dc], and click **Generate Developer Token** under the **Configuration** tab. 
+管理コンソールでメタデータテンプレートを作成した場合は、**会社のメタデータテンプレートを作成、編集する**権限を持つ管理者または共同管理者の[アクセストークン][at]を取得する必要があります。手順1で説明したとおり、これらの要件を満たすトークンを取得するには、管理者または共同管理者としてログインし、[開発者コンソール][dc]でアプリケーションを見つけて、\[**構成**] タブの \[**開発者トークンを生成**] をクリックする方法が最も簡単です。 
 
-Use this token to make an API call to the [list all metadata templates for enterprise endpoint][metadata-list], as shown below. You should be able to find information about your template in the response. Specifically, note the `scope` and `templateKey`. 
+以下に示すように、このトークンを使用して、[企業のすべてのメタデータテンプレートのリストを取得エンドポイント][metadata-list]に対してAPI呼び出しを実行すると、テンプレートに関する情報をレスポンス内で確認できます。特に、`scope`と`templateKey`に注意してください。 
 
 <ImageFrame center>
 
-![List All Templates](./images/list-all-templates.png)
+![すべてのテンプレートのリストを取得](./images/list-all-templates.png)
 
 </ImageFrame>
 
 <Next>
 
-I obtained the details about my template
+テンプレートに関する詳細を取得しました
 
 </Next>
 

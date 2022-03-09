@@ -337,13 +337,13 @@ Sessions`値によって識別できます。
 
 ## スマートアクセス
 
-[Smart Access][smartaccess] enables Box Admins to define and enforce classification-based access policies to control access and prevent the unintentional leakage of sensitive content.
+Box管理者は、[スマートアクセス][smartaccess]を使用すると、分類に基づいたアクセスポリシーを定義、適用してアクセスを制御し、機密コンテンツの意図しない漏えいを防止できます。
 
-Smart Access policies can be configured in [enforced or monitoring mode][monitoringmode]. In all event types, a field named `controlMode` appears to say whether the policy is in `enforced` or `monitoring` mode.
+スマートアクセスポリシーは、[強制モードまたは監視モード][monitoringmode]で構成できます。すべてのイベントタイプで、ポリシーが`enforced`モードと`monitoring`モードのどちらであるかを示す、`controlMode`という名前のフィールドが表示されます。
 
-### Download and Print Restriction
+### ダウンロードと印刷の制限
 
-If an admin creates a Shield access policy that enforces download or print restriction and an end user is blocked from downloading or printing a file, an event is produced within the [enterprise event][events] stream. If the access policy is set to monitor potential download and print violations, events will also be generated when a user is viewing a folder with a file restricted from download or print, viewing a file in preview that is restricted from download or print, and when a user requests to download a file through the API that is restricted from download or print. These events follow the standard event object schema and the `event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
+ダウンロードまたは印刷の制限を適用するShieldアクセスポリシーを管理者が作成し、エンドユーザーがファイルをダウンロードまたは印刷できないようブロックされると、[Enterprise Event][events] Stream内でイベントが生成されます。ダウンロードと印刷の違反の可能性を監視するようアクセスポリシーを設定した場合は、ユーザーがダウンロードまたは印刷が制限されたファイルを含むフォルダを表示したとき、ダウンロードまたは印刷が制限されたファイルをプレビューで表示したとき、ダウンロードまたは印刷が制限されたファイルをAPI経由でダウンロードすることをリクエストしたときにもイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 ダウンロードがブロックされている場合、`SHIELD_DOWNLOAD_BLOCKED`イベントの`additional-details`ペイロードには以下の詳細が示されます。
 
@@ -380,7 +380,7 @@ If an admin creates a Shield access policy that enforces download or print restr
 }
 ```
 
-For Box Mobile apps, the `additional_details` payload will provide the following details:
+Boxモバイルアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {
@@ -662,11 +662,11 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 </Message>
 
-### Application Restriction
+### アプリケーションの制限
 
-If a 3rd-party application, including published custom applications with which your organization is integrated, is restricted from downloading a file or a folder, an event is produced within the [enterprise event][events] stream. These events follow the standard event object schema, with the `event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
+サードパーティ製アプリケーション (組織と統合されている公開カスタムアプリケーションなど) がファイルまたはフォルダのダウンロードを制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
-For 3rd-party applications, the `additional_details` payload will provide the following details:
+サードパーティ製アプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {
@@ -693,7 +693,7 @@ For 3rd-party applications, the `additional_details` payload will provide the fo
 }
 ```
 
-For custom applications, the `additional_details` payload will provide the following details:
+カスタムアプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {
@@ -726,9 +726,9 @@ For custom applications, the `additional_details` payload will provide the follo
 }
 ```
 
-### FTP Restriction
+### FTPの制限
 
-If download of a file or folder is restricted via the FTP protocol, an event is produced within the [enterprise event][events] stream. These events follow the standard event object schema, with the `event_type` value set to `SHIELD_DOWNLOAD_BLOCKED`.
+FTPプロトコルを介したファイルまたはフォルダのダウンロードが制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
 `additional_details`ペイロードは以下の詳細を示します。
 
@@ -771,7 +771,7 @@ If download of a file or folder is restricted via the FTP protocol, an event is 
 
 [smartaccess]: https://support.box.com/hc/ja/articles/360044196353-スマートアクセスの使用
 
-[monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
+[monitoringmode]: https://support.box.com/hc/ja/articles/360044196353
 
 <!-- i18n-disable localize-links -->
 

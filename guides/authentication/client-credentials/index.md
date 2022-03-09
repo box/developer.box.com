@@ -37,7 +37,7 @@ fullyTranslated: true
 
 <Message danger>
 
-Your client secret is confidential and needs to be protected. Because this is how we securely identify an application's identity when obtaining an Access Token, you do not want to freely distribute a client secret. This includes via email, public forums and code repositories, distributed native applications, or client-side code. If you would like to add more security mechanisms, we recommend using our standard JWT application type.
+クライアントシークレットは機密情報であり、保護する必要があります。アクセストークンの取得時にBoxがアプリケーションのIDを安全に確認するために使用されるため、クライアントシークレットを自由に配布するべきではありません。配布方法には、メール、公開フォーラム、コードリポジトリ、分散されたネイティブアプリケーション、クライアント側のコードなどがあります。さらにセキュリティメカニズムを追加する場合は、Boxの標準的なJWTアプリケーションを使用することをお勧めします。
 
 </Message>
 
@@ -61,7 +61,7 @@ API呼び出しを実行して[アクセストークン][accesstoken]を取得�
 
 <Message notice>
 
-Our `.NET` and `Java` SDKs currently support Client Credentials. More SDKS will gain support soon.
+Boxの`.NET`および`Java` SDKでは、現在、クライアント資格情報がサポートされています。近日中に他のSDKでもサポートされる予定です。
 
 </Message>
 
@@ -73,7 +73,7 @@ Our `.NET` and `Java` SDKs currently support Client Credentials. More SDKS will 
 
 * 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない
 
-* the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned
+* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない。たとえば、送信時に`enterprise`を`box_subject_type`に設定し、アプリケーションが \[アプリアクセスのみ] に設定されている場合、`grant credentials are invalid`エラーが返されます。
 
 <!-- i18n-enable localize-links -->
 

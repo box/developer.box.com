@@ -15,65 +15,65 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/quick-start/1-create-metadata-template.md
 fullyTranslated: true
 ---
-# Create a Metadata Template
+# メタデータテンプレートの作成
 
-There are two ways to create a new metadata template: via the Admin Console or via the API using an Admin Access Token. If you already have a metadata template created that you would like to use you can skip to the next step.
+新しいメタデータテンプレートを作成するには、管理コンソールを使用する方法とAPIで管理者のアクセストークンを使用する方法の2とおりあります。使用するメタデータテンプレートをすでに作成している場合は、次の手順に進むことができます。
 
-## Admin Console
+## 管理コンソール
 
-To create a template via the Admin Console, navigate to:
+管理コンソールでテンプレートを作成するには、次の場所に移動します。
 
-**Admin Console** > **Content** Tab > **Metadata** > **Create New**
+\[**管理コンソール**] > \[**コンテンツ**] タブ > \[**メタデータ**] > \[**新規作成**]
 
 <ImageFrame center>
 
-![Create Metadata Template](./images/create-template.png)
+![メタデータテンプレートの作成](./images/create-template.png)
 
 </ImageFrame>
 
 <Message warning>
 
-The metadata feature is reserved for Business Plus accounts and above. To upgrade your account, please contact your Box account team.
+メタデータは、Business Plus以上のアカウント向けの機能です。アカウントをアップグレードするには、Boxアカウントチームまでお問い合わせください。
 
 </Message>
 
-Once you select **Create New**, you are brought to a form used to create a new template, which is shown below. Select a **Dropdown-Single Select** format.
+\[**新規作成**] を選択すると、以下に示す、新しいテンプレートを作成するためのフォームが表示されます。\[**ドロップダウン - 単一選択**] 形式を選択します。
 
 <Message warning>
 
-Selecting a Dropdown-Multi Select format will change the structure of you query later on in this quick-start.
+\[ドロップダウン - 複数選択] 形式を選択すると、このクイックスタートの後の手順でクエリの構造が変わります。
 
 </Message>
 
 <ImageFrame center>
 
-![Metadata Template Form](./images/template-form.png)
+![メタデータテンプレートフォーム](./images/template-form.png)
 
 </ImageFrame>
 
 ## API
 
-Creating a metadata template via the API requires an [Access Token][at] associated with a Box Admin or Co-Admin with permission to **create and edit metadata templates for your company**. If you are not sure who your token is associated with, make an API call to the [get current user endpoint][current-user]. The easiest way to obtain a token meeting these requirements is to log in as an Admin or Co-Admin, pull up the application in the [Developer Console][dc], and click **Generate Developer Token** under the **Configuration** tab. [Developer tokens][dt] are always be associated with the user logged into the Developer Console when the button is clicked.
+APIを使用してメタデータテンプレートを作成するには、**会社のメタデータテンプレートを作成、編集する**権限を持つBox管理者または共同管理者に関連付けられた[アクセストークン][at]が必要です。トークンが誰に関連付けられているかがわからない場合は、[現在のユーザーを取得エンドポイント][current-user]に対してAPI呼び出しを実行してください。これらの要件を満たすトークンを取得するには、管理者または共同管理者としてログインし、[開発者コンソール][dc]でアプリケーションを見つけて、\[**構成**] タブの \[**開発者トークンを生成**] をクリックする方法が最も簡単です。[開発者トークン][dt]は、必ず、このボタンがクリックされたときに開発者コンソールにログインしているユーザーに関連付けられます。
 
-Using [Postman][postman] and the [Box Postman Collection][post-collab], below is an example of what an API call looks like to create the same metadata template created above using the Admin Console. 
+[Postman][postman]および[Box Postmanコレクション][post-collab]を使用している場合に、上記の管理コンソールを使用して作成したのと同じメタデータテンプレートを作成するAPI呼び出しの例を以下に示します。 
 
 <ImageFrame center>
 
-![Create Template API Call](./images/create-call.png)
+![テンプレート作成のAPI呼び出し](./images/create-call.png)
 
 </ImageFrame>
 
 <Message tip>
 
-If you would like to use a different template format than a Dropdown-Single Select, you will need to consult our reference documentation, as the body of the API call will differ from the example above.
+\[ドロップダウン - 単一選択] 以外のテンプレート形式を使用する場合は、API呼び出しの本文が上記の例とは異なるため、Boxのリファレンスドキュメントを確認してください。
 
 </Message>
 
-The response to this API call provides crucial information you will need later. If you created your template via the UI, you will learn how to obtain this information in the next step.
+このAPI呼び出しに対するレスポンスでは、後で必要になる重要な情報が示されます。UIを使用してテンプレートを作成した場合は、この情報の取得方法を次の手順で確認してください。
 
 <Next>
 
-I created a metadata template
+メタデータテンプレートを作成しました
 
 </Next>
 

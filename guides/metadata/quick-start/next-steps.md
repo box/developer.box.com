@@ -28,7 +28,7 @@ fullyTranslated: true
 
 ## 次の手順
 
-We recommend the following resources to learn more about using metadata with the Box API.
+Box APIでのメタデータの使用の詳細を確認するには、以下のリソースをお勧めします。
 
 * [メタデータのスコープの詳細を確認する](g://metadata/scopes)
 * テンプレートで使用できる[各種フィールドタイプの詳細](g://metadata/fields)

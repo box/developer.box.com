@@ -25,11 +25,11 @@ fullyTranslated: true
 ---
 # Signイベント
 
-Audit Box Sign events using the enterprise events stream. To learn more about Box Sign, visit our [guide][sign-guide].
+Box Signイベントの監査には、Enterprise Event Streamを使用します。Box Signの詳細については、[ガイド][sign-guide]を参照してください。
 
 <Message warning>
 
-The status provided below in each `additional_details` payload may differ from the example based on the specific sign request details. For example, if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED` event wilL immediately be `viewed`.
+以下に示す各`additional_details`ペイロードのステータスは、具体的な署名リクエストの詳細に基づいた例とは異なる場合があります。たとえば、リクエスト送信者が唯一の署名者の場合は、`SIGN_DOCUMENT_CREATED`イベントのステータスがすぐに`viewed`になります。
 
 </Message>
 
