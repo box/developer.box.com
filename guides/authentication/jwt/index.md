@@ -39,15 +39,9 @@ JWTを使用するサーバー側の認証は、[アプリの種類][app-type]�
 アプリケーションの権限を確認する方法は2つあります。
 
 * 公開キーと秘密キーのペアを使用する
-* クライアントIDとクライアントシークレット (クライアント資格情報許可) を使用する
+* using a client id and client secret ([Client Credentials Grant][cca])
 
-これらのオプションの詳細については、[SDKを使用しないJWT][jwtnosdk]の使用に関するガイドを参照してください。 
-
-<Message warning>
-
-現時点では、Box SDKでクライアント資格情報許可はサポートされていません。
-
-</Message>
+これらのオプションの詳細については、[SDKを使用しないJWT][jwtnosdk]の使用に関するガイドを参照してください。
 
 Box管理コンソールでJWTアプリケーションを承認すると、[サービスアカウント][sa]が自動的に生成され、認証時に使用されるデフォルトのアクセストークンになります。これは、管理者に似たユーザーであり、JWTを利用するアプリケーションを使用する前にBox管理者による明示的な承認が必要となる理由です。
 
@@ -65,3 +59,5 @@ JWTを使用するサーバー側認証は、以下に当てはまるアプリ�
 [sa]: g://getting-started/user-types/service-account
 
 [jwtnosdk]: g://authentication/jwt/without-sdk
+
+[cca]: g://authentication/client-credentials

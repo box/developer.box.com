@@ -36,5 +36,5 @@ fullyTranslated: true
 テキストレプリゼンテーションを取得するには、以下の手順に従います。
 
 * [すべてのレプリゼンテーションのリストを取得する](guide://representations/list-all-representations)
-* 値`[extracted_text]`を指定した`X-Ref-Hints`ヘッダーを渡して、[テキストレプリゼンテーションをリクエスト](guide://representations/request-a-representation)する
+* 値`[extracted_text]`を指定した`x-rep-hints`ヘッダーを渡して、[テキストレプリゼンテーションをリクエスト](guide://representations/request-a-representation)する
 * `url_template`を呼び出して[テキストをダウンロード](guide://representations/download-a-representation)する。その際、`{+asset_path}`を空の文字列に置き換えます。

@@ -32,7 +32,7 @@ Box APIの操作を簡易化するために、以下のSDKとCLIが用意され�
 | [.NET SDK][dotnetsdk]             | はい        | Full    |
 | [Python SDK][pythonsdk]           | はい        | Full    |
 | [Node SDK][nodesdk]               | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | 部分的     |
+| [iOS Content SDK][iossdk]         | はい        | Full    |
 | [Android Content SDK][androidsdk] | はい        | 部分的     |
 
 <Message type="notice">

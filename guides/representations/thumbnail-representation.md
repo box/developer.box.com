@@ -41,7 +41,7 @@ fullyTranslated: true
 サムネイルレプリゼンテーションを取得するには、以下の手順に従います。
 
 * [すべてのレプリゼンテーションのリストを取得する][list-all-representations]
-* `[jpg?dimensions=32x32]`のように目的のサムネイル形式とサイズを表す`X-Ref-Hints`ヘッダーを渡して、[サムネイルをリクエストする][request-a-representation]。
+* `[jpg?dimensions=32x32]`のように目的のサムネイル形式とサイズを表す`x-rep-hints`ヘッダーを渡して、[サムネイルをリクエストする][request-a-representation]。
 * `url_template`を呼び出して[サムネイルをダウンロード][download-a-representation]する。その際、`{+asset_path}`を空の文字列に置き換えます。
 
 <Message warning>

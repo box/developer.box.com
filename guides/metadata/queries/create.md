@@ -22,8 +22,8 @@ fullyTranslated: true
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>" '
-     -H 'Content-Type: application/json'
+     -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+     -H 'Content-Type: application/json' \
      -d '{
        "from": "enterprise_123456.contractTemplate",
        "query": "amount >= :value",

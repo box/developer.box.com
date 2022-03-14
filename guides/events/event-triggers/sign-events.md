@@ -44,6 +44,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "sent",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -64,8 +66,17 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer":null
-        }
+        "signer": null,
+        "template": {
+            "id": "987abC5423",
+            "template_type": "Signing",
+            "name": "Work Contact"
+        },
+        "sender_message": {
+            "subject": "Can you please sign this document?",
+            "message": "This document shows the terms agreed to on the phone."
+        },
+        "forward": null
     }
 }
 ```
@@ -79,6 +90,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "created",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -93,14 +106,20 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer":null
-        }
+        "signer":null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -114,6 +133,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "signed",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -128,13 +149,20 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -148,6 +176,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "cancelled",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -162,13 +192,20 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -182,6 +219,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "expired",
         "signer_ip_address": null,
         "requestor_ip_address": "",
@@ -196,13 +235,20 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
             "name": "John Doe",
             "login": "johndoe@box.com"
         },
-        "signer": null
+        "signer": null,
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -218,6 +264,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "sent",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -232,6 +280,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -243,7 +292,13 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -257,6 +312,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "viewed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -271,6 +328,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -282,7 +340,13 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
@@ -294,6 +358,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "viewed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -308,6 +374,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -319,6 +386,16 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": {
+            "forwarded_to_email": "janedoe@box.com",
+            "forwarded_reason": "Please sign",
+            "forwarded_at": "2022-03-03T12:04:20-10:00"
         }
     }
 }
@@ -331,6 +408,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "viewed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -345,6 +424,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -356,7 +436,17 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "Can you please sign this document?",
+            "message": "This document shows the terms agreed to on the phone."
+        },
+        "forward": {
+            "forwarded_to_email": "somename@box.com",
+            "forwarded_reason": "I need to forward to my business partner.",
+            "forwarded_at": "2022-02-03T10:04:52-08:00",
+        },
     }
 }
 ```
@@ -370,6 +460,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "signed",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -384,6 +476,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -395,7 +488,13 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "Can you please sign this document?",
+            "message": "This document shows the terms agreed to on the phone."
+        },
+        "forward": null
     }
 }
 ```
@@ -409,6 +508,8 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
 ```json
 "additional_details": {
     "sign_request": {
+        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+        "sign_request_short_id": "426614174000",
         "status": "declined",
         "signer_ip_address": "",
         "requestor_ip_address": "",
@@ -423,6 +524,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
                 }
             }
         ],
+        "expires": null,
         "requestor": {
             "id": "13579246",
             "type": "user",
@@ -434,7 +536,13 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "type": "user",
             "name": "Jane Doe",
             "login": "janedoe@example.com"
-        }
+        },
+        "template": null,
+        "sender_message": {
+            "subject": "",
+            "message": ""
+        },
+        "forward": null
     }
 }
 ```
