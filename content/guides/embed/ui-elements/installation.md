@@ -208,7 +208,9 @@ be accessible:
 In order to initialize any of the UI Elements, an application will need to
 provide a valid Access Token.
 
-<CTA to="authentication/select">Learn how to authenticate an application</CTA>
+<CTA to="g://authentication/select">
+  Learn how to authenticate an application
+</CTA>
 
 It is also recommended to [downscope][downscope] an Access Token before passing
 it into an insecure environment (the user's web browser).
