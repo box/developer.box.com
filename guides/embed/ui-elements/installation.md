@@ -225,7 +225,7 @@ be accessible:
 In order to initialize any of the UI Elements, an application will need to
 provide a valid Access Token.
 
-<CTA to="authentication/select">
+<CTA to="g://authentication/select">
 
 Learn how to authenticate an application
 
