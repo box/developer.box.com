@@ -46,11 +46,11 @@ Optionally when creating a shared link the following may be specified:
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
-<Samples id='put_files_id shared_link_create' />
+<Samples id='put_files_id' variant='shared_link_create' />
 
 ## Create Shared Link for Folder
 
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.
 
-<Samples id='put_folders_id shared_link_create' />
+<Samples id='put_folders_id' variant='shared_link_create' />
