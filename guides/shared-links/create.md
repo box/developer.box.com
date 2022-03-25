@@ -61,7 +61,7 @@ the default access level specified by the enterprise admin.
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
-<Samples id='put_files_id_shared_link_create' >
+<Samples id='put_files_id shared_link_create' >
 
 </Samples>
 
@@ -70,6 +70,6 @@ shared link parameters.
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.
 
-<Samples id='put_folders_id_shared_link_create' >
+<Samples id='put_folders_id shared_link_create' >
 
 </Samples>
