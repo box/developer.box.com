@@ -55,7 +55,7 @@ V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成するこ�
 
 </Message>
 
-## Reasons for webhook deletion
+## Webhookの削除理由
 
 Webhookは以下の理由で削除される可能性があります。
 

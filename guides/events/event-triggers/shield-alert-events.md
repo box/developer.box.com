@@ -345,9 +345,9 @@ Box管理者は、[スマートアクセス][smartaccess]を使用すると、�
 
 ダウンロードまたは印刷の制限を適用するShieldアクセスポリシーを管理者が作成し、エンドユーザーがファイルをダウンロードまたは印刷できないようブロックされると、[Enterprise Event][events] Stream内でイベントが生成されます。ダウンロードと印刷の違反の可能性を監視するようアクセスポリシーを設定した場合は、ユーザーがダウンロードまたは印刷が制限されたファイルを含むフォルダを表示したとき、ダウンロードまたは印刷が制限されたファイルをプレビューで表示したとき、ダウンロードまたは印刷が制限されたファイルをAPI経由でダウンロードすることをリクエストしたときにもイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 
-If downloading is blocked, the `additional-details` payload of the `SHIELD_DOWNLOAD_BLOCKED` event will provide the below details.
+ダウンロードがブロックされている場合、`SHIELD_DOWNLOAD_BLOCKED`イベントの`additional-details`ペイロードには以下の詳細が示されます。
 
-For the Box Web App, the `additional_details` payload will provide the following details:
+Boxウェブアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {
@@ -375,7 +375,7 @@ For the Box Web App, the `additional_details` payload will provide the following
 }
 ```
 
-For the Box Desktop App, the `additional_details` payload will provide the following details:
+Boxデスクトップアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {

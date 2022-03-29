@@ -72,7 +72,7 @@ Box SDKは、基本のAPIクライアントを作成する際に、開発者ト�
 
 <Message warning>
 
-When you explicitly revoke a developer token for a given app via the Developer console, all webhooks created by that application get deleted.
+開発者コンソールで特定のアプリの開発者トークンを明示的に取り消すと、そのアプリケーションによって作成されたすべてのWebhookが削除されます。
 
 </Message>
 
