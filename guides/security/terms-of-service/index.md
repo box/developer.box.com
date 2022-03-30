@@ -50,7 +50,7 @@ Box APIを使用すると、管理者はBoxの使用に関するサービス利�
 * [`POST /terms_of_service_user_statuses`][euserstatuses_post]: 特定のサービス利用規約を初めて承認または拒否します。
 * [`PUT /terms_of_service_user_statuses/:id`][euserstatuses_put]: 以前に承認または拒否された特定のサービス利用規約を承認または拒否します。
 
-## スコープ
+##  スコープ 
 
 説明されているアクションを実行するには、アプリケーションに以下のスコープを許可する必要があります。
 

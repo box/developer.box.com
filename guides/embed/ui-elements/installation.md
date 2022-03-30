@@ -203,7 +203,7 @@ yarn install && yarn build:i18n && yarn build:prod
 
 UI Elementのいずれかを初期化するには、アプリケーションから有効なアクセストークンを提供する必要があります。
 
-<CTA to="authentication/select">
+<CTA to="g://authentication/select">
 
 アプリケーションの認証方法を確認する
 

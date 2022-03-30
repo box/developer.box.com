@@ -221,7 +221,7 @@ sidebar.removeAllListeners();
 
 <!-- markdownlint-enable line-length -->
 
-## スコープ
+##  スコープ 
 
 アプリケーションで、エンドユーザーがContent Sidebar機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Sidebarを初期化するエンドユーザークライアントに安全に渡すことができます。
 

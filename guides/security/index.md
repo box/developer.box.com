@@ -52,11 +52,11 @@ Box APIは、Boxウェブアプリと同じセキュリティの原則と制限�
 
 </Message>
 
-## スコープ
+##  スコープ 
 
 <ImageFrame center shadow border>
 
-![スコープ](images/scopes.png)
+![ スコープ ](images/scopes.png)
 
 </ImageFrame>
 
