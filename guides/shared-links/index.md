@@ -15,7 +15,7 @@ total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: shared-links/create-or-update
+previous_page_id: shared-links/permissions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/index.md
 ---

@@ -19,7 +19,7 @@ type: guide
 total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
-next_page_id: shared-links/create-or-update
+next_page_id: shared-links/permissions
 previous_page_id: shared-links/find-for-item
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/remove.md

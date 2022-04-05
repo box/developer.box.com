@@ -18,7 +18,7 @@ total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
 next_page_id: shared-links/remove
-previous_page_id: ''
+previous_page_id: shared-links/create-or-update
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/find-for-item.md
 ---

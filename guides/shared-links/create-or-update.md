@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 1
 related_endpoints:
   - put_files_id
 related_guides:
@@ -20,8 +20,8 @@ type: guide
 total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
-next_page_id: shared-links
-previous_page_id: shared-links/remove
+next_page_id: shared-links/find-for-item
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/create-or-update.md
 ---
@@ -59,7 +59,7 @@ the default access level specified by the enterprise admin.
 
 </Message>
 
-## Create Shared Link for File
+## Create or Update Shared Link for File
 
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
@@ -68,7 +68,7 @@ shared link parameters.
 
 </Samples>
 
-## Create Shared Link for Folder
+## Create or Update Shared Link for Folder
 
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.
@@ -77,7 +77,7 @@ optional shared link parameters.
 
 </Samples>
 
-## Create Shared Link for Web Link
+## Create or Update Shared Link for Web Link
 
 To create a shared link on a web link, specify the ID of the web link with any
 optional shared link parameters.
