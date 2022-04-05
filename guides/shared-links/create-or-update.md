@@ -1,43 +1,46 @@
 ---
-rank: 1
+rank: 5
 related_endpoints:
   - put_files_id
 related_guides:
-  - shared-links/update
+  - shared-links/permissions
   - shared-links/remove
   - shared-links/find-for-item
 related_pages: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /shared-links/create
+  - /shared-links/update
 category_id: shared-links
 subcategory_id: null
 is_index: false
-id: shared-links/create
+id: shared-links/create-or-update
 type: guide
 total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
-next_page_id: shared-links/update
-previous_page_id: ''
+next_page_id: shared-links
+previous_page_id: shared-links/remove
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/create.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/create-or-update.md
 ---
-# Create Shared Link
+# Create or Update Shared Link
 
-Shared links may be created directly for file or folder resources to generate a
-read-only URL to permit users with the appropriate access level to view the
-content.
+Shared links may be created or directly directly for file, folder, or web link
+resources to generate a read-only URL to permit users with the appropriate
+access level to view the content.
 
 <Message type='notice'>
 
-You may only have one active shared link for a file or folder at any time.
+You may only have one active shared link for a file, folder, or web link at
+any time.
 
 </Message>
 
 At minimum the information needed to create a shared link will be:
 
-* The type of resource, either a file or folder.
+* The type of resource, either a file, folder, or web link.
 * The ID of that resource.
 
 Optionally when creating a shared link the following may be specified:
@@ -61,7 +64,7 @@ the default access level specified by the enterprise admin.
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
-<Samples id='put_files_id' variant='shared_link_create' >
+<Samples id='put_files_id' variant='add_shared_link' >
 
 </Samples>
 
@@ -70,6 +73,15 @@ shared link parameters.
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.
 
-<Samples id='put_folders_id' variant='shared_link_create' >
+<Samples id='put_folders_id' variant='add_shared_link' >
+
+</Samples>
+
+## Create Shared Link for Web Link
+
+To create a shared link on a web link, specify the ID of the web link with any
+optional shared link parameters.
+
+<Samples id='put_web_links_id' variant='add_shared_link' >
 
 </Samples>

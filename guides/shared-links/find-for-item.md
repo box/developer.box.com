@@ -3,9 +3,8 @@ rank: 3
 related_endpoints:
   - get_shared_items
 related_guides:
-  - shared-links/update
   - shared-links/remove
-  - shared-links/create
+  - shared-links/create-or-update
 related_pages: []
 required_guides: []
 related_resources: []
@@ -19,7 +18,7 @@ total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
 next_page_id: shared-links/remove
-previous_page_id: shared-links/update
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/find-for-item.md
 ---

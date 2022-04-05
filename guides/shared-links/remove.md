@@ -2,9 +2,10 @@
 rank: 4
 related_endpoints:
   - put_files_id
+  - put_folders_id
+  - put_web_links_id
 related_guides:
-  - shared-links/update
-  - shared-links/create
+  - shared-links/create-or-update
   - shared-links/find-for-item
 related_pages: []
 required_guides: []
@@ -18,7 +19,7 @@ type: guide
 total_steps: 4
 sibling_id: shared-links
 parent_id: shared-links
-next_page_id: shared-links
+next_page_id: shared-links/create-or-update
 previous_page_id: shared-links/find-for-item
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/remove.md
@@ -27,7 +28,8 @@ source_url: >-
 
 A shared link may be removed from a resource by calling the
 [update file](endpoint://put_files_id) or
-[update folder](endpoint://put_folders_id) endpoint and setting the
+[update folder](endpoint://put_folders_id) or
+[update weblink](endpoint://put_web_links_id) endpoint and setting the
 `shared_link` value to `null`.
 
 <Message type='warning'>
@@ -43,7 +45,7 @@ the resource.
 To remove a shared link on a file, specify the ID of file to set the
 `shared_link` field to `null`.
 
-<Samples id='put_files_id_shared_link_remove' >
+<Samples id='put_files_id' variant='remove_shared_link' >
 
 </Samples>
 
@@ -52,6 +54,15 @@ To remove a shared link on a file, specify the ID of file to set the
 To remove a shared link on a folder, specify the ID of folder to set the
 `shared_link` field to `null`.
 
-<Samples id='put_folders_id_shared_link_remove' >
+<Samples id='put_folders_id' variant='remove_shared_link' >
+
+</Samples>
+
+## Remove Shared Link on Web Link
+
+To remove a shared link on a web link, specify the ID of web link to set the
+`shared_link` field to `null`.
+
+<Samples id='put_web_links_id' variant='remove_shared_link' >
 
 </Samples>
