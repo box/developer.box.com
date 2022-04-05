@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 1
 related_endpoints:
   - put_files_id
 related_guides:
@@ -44,21 +44,21 @@ Optionally when creating a shared link the following may be specified:
   the default access level specified by the enterprise admin.
 </Message>
 
-## Create Shared Link for File
+## Create or Update Shared Link for File
 
 To create a shared link on a file, specify the ID of the file with any optional
 shared link parameters.
 
 <Samples id='put_files_id' variant='add_shared_link' />
 
-## Create Shared Link for Folder
+## Create or Update Shared Link for Folder
 
 To create a shared link on a folder, specify the ID of the folder with any
 optional shared link parameters.
 
 <Samples id='put_folders_id' variant='add_shared_link' />
 
-## Create Shared Link for Web Link
+## Create or Update Shared Link for Web Link
 
 To create a shared link on a web link, specify the ID of the web link with any
 optional shared link parameters.
