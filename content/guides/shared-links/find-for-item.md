@@ -3,9 +3,8 @@ rank: 3
 related_endpoints:
   - get_shared_items
 related_guides:
-  - shared-links/update
   - shared-links/remove
-  - shared-links/create
+  - shared-links/create-or-update
 related_pages: []
 required_guides: []
 related_resources: []
