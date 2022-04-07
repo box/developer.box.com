@@ -30,7 +30,9 @@ The shared link resource has three permissions that can be updated using the
 
 <Message type='warning'>
 
-The `can_edit` option can only be `true` for files.
+The `can_edit` option can only be `true` for files. Also, if the admin has
+restricted shared links from having edit access in the admin console, you
+will not be able to set `can_edit` to `true`.
 
 </Message>
 
