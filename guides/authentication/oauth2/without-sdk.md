@@ -76,6 +76,16 @@ An [authorization URL][auth] is comprised of the following parameters:
 | [`RESPONSE_TYPE`][co]| Required     | Always set to `code`                                                                                   |
 | [`STATE`][st]        | Recommended  | Protects against cross-site request forgery                                                            |
 
+<Message warning>
+
+If you configured multiple redirect URIs for the application, the authorization
+URL must include the `redirect_uri` parameter matching one of the URIs
+configured in the developer console. If the parameter is not specified, the
+user will see a `redirect_uri_missing` error and will not be redirected back to
+the app.
+
+</Message>
+
 <!-- markdownlint-enable line-length -->
 
 At the minimum this URL will always use the format:
