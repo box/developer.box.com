@@ -27,7 +27,7 @@ source_url: >-
 ---
 # Create or Update Shared Link
 
-Shared links may be created or directly directly for file, folder, or web link
+Shared links may be created or directly for file, folder, or web link
 resources to generate a read-only URL to permit users with the appropriate
 access level to view the content.
 
