@@ -42,7 +42,7 @@ These [settings][setting] can be found by navigating to:
 **Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
 
 <Message tip>
- Published apps are any applications that can be found in our App Center.
+ Published apps are any applications that can be found in our App Gallery.
 </Message>
 
 ## Required actions
@@ -88,7 +88,7 @@ scenarios.
 <!-- i18n-disable localize-links -->
 [sa]: g://getting-started/user-types/service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
-[ag]: g://applications/app-center
+[ag]: g://applications/app-gallery
 [standauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials

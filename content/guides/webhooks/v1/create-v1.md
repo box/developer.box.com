@@ -45,7 +45,7 @@ to begin use.
 To obtain the URL to add the app, follow the directions below for OAuth 2.0
 authentication apps: 
 
-1. Navigate to the **App Center** tab for the application in the
+1. Navigate to the **App Gallery** tab for the application in the
   [Developer Console][devconsole].
 2. Click **Submit My App**. Do not worry, you will not be completing the
   submission process!

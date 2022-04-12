@@ -39,7 +39,7 @@ A Custom App is best used when the application:
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by
   [managed or external users][users].
-- Wants the option to list the application in the Box App Center
+- Wants the option to list the application in the Box App Gallery
 - Wants to provide integration into the Box Web App
 
 ## Use cases
