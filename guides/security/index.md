@@ -162,7 +162,7 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 </ImageFrame>
 
 Custom applications fall into two categories: published and unpublished.
-Published applications are found in the [Box App Gallery][appgallery]. Box
+Published applications are found in the [Box App Center][appcenter]. Box
 Admins decide whether published and unpublished application are enabled by
 default and therefore can be used without approval. The status of these settings
 determines what actions are necessary to successfully [authorize][auth] an
@@ -227,7 +227,7 @@ require enablement.
 [ccg]: g://authentication/client-credentials
 <!-- i18n-enable localize-links -->
 
-[appgallery]: https://app.box.com/services
+[appcenter]: https://app.box.com/services
 <!-- i18n-disable localize-links -->
 
 [auth]: g://authorization

@@ -10,7 +10,7 @@ type: guide
 total_steps: 4
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/app-gallery
+next_page_id: applications/app-center
 previous_page_id: applications/custom-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access-apps.md

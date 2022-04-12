@@ -54,7 +54,7 @@ These [settings][setting] can be found by navigating to:
 
 <Message tip>
 
-Published apps are any applications that can be found in our App Gallery.
+Published apps are any applications that can be found in our App Center.
 
 </Message>
 
@@ -106,7 +106,7 @@ scenarios.
 
 [sa]: g://getting-started/user-types/service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
-[ag]: g://applications/app-gallery
+[ag]: g://applications/app-center
 [standauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
