@@ -26,13 +26,23 @@ enable it in the Admin Console.
 ## Approval Notifications
 
 A semi-automated process to submit an app approval is available in the Developer
-Console for JWT, Client Credentials Grant, and Limited Access applications.
+Console for all custom application types.
+
+### Server authentication apps
 
 Navigate to the **Authorization** tab for your application in the
 [Developer Console][devconsole].
 
-<ImageFrame border width="400" center>
-  ![Add and Manage keys](images/app_authorization.png)
+<ImageFrame border center>
+  ![Authorization tab](images/app_authorization.png)
+</ImageFrame>
+
+### User authentication apps
+
+Navigate to the **Enablement** tab for your application in the [Developer Console][devconsole].
+
+<ImageFrame border center>
+  ![Enablement tab](images/app_enablement.png)
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
@@ -46,9 +56,10 @@ application.
 
 ### As a developer
 
-As the developer, navigate to the **Configuration** tab for your application
-in the [Developer Console][devconsole]. Scroll down to the OAuth 2.0 Credentials
-section and copy the Client ID value to provide to a Box Admin.
+1. Navigate to the **Configuration** tab for your application
+in the [Developer Console][devconsole]. 
+2. Scroll down to the OAuth 2.0 Credentials
+section and copy the **Client ID** value to provide to a Box Admin.
 
 <Message>
   # Finding a Box Admin
@@ -60,14 +71,13 @@ section and copy the Client ID value to provide to a Box Admin.
 
 ### As an Admin
 
-As a Box Admin, navigate to the [Admin Console][adminconsole] and
-select the **Apps** tab (1) from the left navigation panel. Then, click the
+1. Navigate to the [Admin Console][adminconsole] and
+select the **Apps** tab (1) from the left navigation panel. 
+2. Click the
 **Custom Apps Manager** tab (2) at the top of your screen. 
-
-On both Server and User Authentication Apps screens, you
-will see an **Add App** button in the top right corner to add a new app.
-
-For Server Authentication Apps, you can also use the Custom Apps Manager table
+3. For both Server and User Authentication Apps screens, click
+the **Add App** (3) button in the top right corner to add a new app.
+4. Alternatively, you can use the Custom Apps Manager table menu (4)
 to authorize and enable apps.
 
 #### Server Authentication Apps

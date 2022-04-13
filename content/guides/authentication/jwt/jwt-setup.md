@@ -137,7 +137,7 @@ application within the Box Admin Console.
 Navigate to the **Authorization** tab for your application within the
 [Developer Console][devconsole].
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
   ![App authorization](../images/app-authorization.png)
 </ImageFrame>
 
