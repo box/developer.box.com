@@ -63,7 +63,7 @@ prompt a selection for the next step.
 Select **User Authentication (OAuth 2.0)** and provide a unique name for your
 application. Click **Create App**.
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
 
 ![Auth selection screen](../images/custom-app-selection.png)
 
