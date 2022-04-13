@@ -49,7 +49,6 @@ Submitting the application for approval will send an email to your
 enterprise's Primary Admin to approve the application. More information on this
 process is available in our [support article on app authorization][app-auth].
 
-
 ## Manual Approval
 
 The following steps provide instructions on how to manually approve the
