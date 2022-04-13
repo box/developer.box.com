@@ -61,8 +61,10 @@ Navigate to the **Enablement** tab for your application in the [Developer Consol
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
-enterprise's Primary Admin to approve the application. More information on this
-process is available in our [support article on app authorization][app-auth].
+enterprise's Primary Admin to approve the application.
+When a Box Admin approves or declines your request,
+you will get an email with the decision.
+More information on this process is available in our [support article on app authorization][app-auth].
 
 ## Manual Approval
 
