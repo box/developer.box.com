@@ -129,6 +129,12 @@ var sdk = new BoxSDK({
 
 次に、承認URLにユーザーをリダイレクトします。ほとんどのSDKでは、SDKクライアントの承認URLを取得する方法をサポートしています。
 
+<Message warning>
+
+If you configured multiple redirect URIs for the application, the authorization URL must include the `redirect_uri` parameter matching one of the URIs configured in the developer console. If the parameter is not specified, the user will see a `redirect_uri_missing` error and will not be redirected back to the app after granting application access.
+
+</Message>
+
 <Tabs>
 
 <Tab title=".NET">

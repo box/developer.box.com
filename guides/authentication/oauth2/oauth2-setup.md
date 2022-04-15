@@ -81,6 +81,8 @@ Boxでは、ユーザーをリダイレクトする前に、[承認URL][url-redi
 
 日本時間2021年11月30日以降、OAuth 2.0を使用する新規のアプリケーションでは、開発者コンソールの \[構成] タブで設定されたURIとリダイレクト時に使用されるURIが厳密に一致する必要があります。また、そのため新規のアプリケーションと既存のアプリケーションの両方で、複数のリダイレクトURIを追加できるようになります。
 
+If you configured multiple redirect URIs for the application, the authorization URL must include the `redirect_uri` parameter matching one of the URIs configured in the developer console. If the parameter is not specified, the user will see a `redirect_uri_missing` error and will not be redirected back to the app after granting application access.
+
 既存のアプリケーションでは、サービスの中断を回避するために、日本時間2022年5月14日までにこのURLを変更する必要があります。
 
 </Message>
