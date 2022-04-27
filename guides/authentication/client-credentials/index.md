@@ -69,14 +69,9 @@ If you would like to authenticate as a Managed User:
 
 </Samples>
 
-<Message notice>
-
-Our `.NET` and `Java` SDKs currently support Client Credentials. More SDKS will
-gain support soon.
-
-</Message>
-
 ## Common Errors
+
+<!--alex ignore invalid-->
 
 ### Grant credentials are invalid
 
