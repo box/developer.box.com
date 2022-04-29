@@ -59,13 +59,9 @@ API呼び出しを実行して[アクセストークン][accesstoken]を取得�
 
 </Samples>
 
-<Message notice>
-
-Boxの`.NET`および`Java` SDKでは、現在、クライアント資格情報がサポートされています。近日中に他のSDKでもサポートされる予定です。
-
-</Message>
-
 ## 一般的なエラー
+
+<!--alex ignore invalid-->
 
 ### Grant credentials are invalid (許可の資格情報が無効です)
 

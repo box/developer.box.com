@@ -139,7 +139,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 [開発者コンソール][devconsole]で、目的のアプリケーションの \[**承認**] タブに移動します。
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
 
 ![アプリの承認](../images/app-authorization.png)
 

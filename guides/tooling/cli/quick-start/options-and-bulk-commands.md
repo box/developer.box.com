@@ -101,7 +101,7 @@ csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメ�
 
 </Next>
 
-[github]: https://github.com/box/boxcli#command-topics-1
+[github]: https://github.com/box/boxcli#command-topics
 
 [df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
 

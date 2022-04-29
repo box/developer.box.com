@@ -59,7 +59,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 \[**ユーザー認証 (OAuth 2.0)**] を選択し、アプリケーションに一意の名前を指定します。\[**アプリの作成**] をクリックします。
 
-<ImageFrame border width="400" center>
+<ImageFrame border center>
 
 ![認証の選択画面](../images/custom-app-selection.png)
 
