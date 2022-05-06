@@ -16,4 +16,4 @@ To create a web link in Box, you will need to provide our API with a folder
 `id` and the `url` you want the web link to be linked to. The `url` must start
 with `http://` or `https://`.
 
-<Samples id='post_web_link'/>
+<Samples id='post_web_links'/>
