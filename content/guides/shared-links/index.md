@@ -10,8 +10,8 @@ alias_paths: []
 
 # Shared Links
 
-Shared links are URLs that are generated for files or folders stored in Box,
-which provide direct, read-only access to the resource.
+Shared links are URLs that are generated for files, folders, web links stored
+in Box, which provide direct, read-only access to the resource.
 
 Shared links which are set to an open access level allow anyone with the URL to
 access the item, while shared links with company or collaborators access levels
