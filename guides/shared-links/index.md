@@ -15,14 +15,14 @@ total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: shared-links/remove
+previous_page_id: shared-links/permissions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/index.md
 ---
 # Shared Links
 
-Shared links are URLs that are generated for files or folders stored in Box,
-which provide direct, read-only access to the resource.
+Shared links are URLs that are generated for files, folders, web links stored
+in Box, which provide direct, read-only access to the resource.
 
 Shared links which are set to an open access level allow anyone with the URL to
 access the item, while shared links with company or collaborators access levels
