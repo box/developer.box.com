@@ -20,7 +20,7 @@ Box Sign, visit our [guide][sign-guide].
   The status provided below in each `additional_details` payload may differ
   from the example based on the specific sign request details. For example,
   if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED`
-  event wilL immediately be `viewed`.
+  event will immediately be `viewed`.
 </Message>
 
 ## Document Events
@@ -63,6 +63,9 @@ The`additional_details` payload will provide the following details:
             "id": "987abC5423",
             "template_type": "Signing",
             "name": "Work Contact"
+        },
+        "batch_send": {
+            "id": "W23YVL46"
         },
         "sender_message": {
             "subject": "Can you please sign this document?",
@@ -108,6 +111,7 @@ The`additional_details` payload will provide the following details:
         },
         "signer":null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -152,6 +156,7 @@ The`additional_details` payload will provide the following details:
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -196,6 +201,7 @@ The`additional_details` payload will provide the following details:
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -240,6 +246,7 @@ The`additional_details` payload will provide the following details:
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -291,6 +298,7 @@ The`additional_details` payload will provide the following details:
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -341,6 +349,7 @@ The`additional_details` payload will provide the following details:
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -388,6 +397,7 @@ signing document.
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -439,6 +449,7 @@ signing document.
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -492,6 +503,7 @@ The`additional_details` payload will provide the following details:
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -541,6 +553,7 @@ The`additional_details` payload will provide the following details:
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
