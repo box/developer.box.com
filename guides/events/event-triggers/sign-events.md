@@ -29,7 +29,7 @@ Box Signイベントの監査には、Enterprise Event Streamを使用します�
 
 <Message warning>
 
-以下に示す各`additional_details`ペイロードのステータスは、具体的な署名リクエストの詳細に基づいた例とは異なる場合があります。たとえば、リクエスト送信者が唯一の署名者の場合は、`SIGN_DOCUMENT_CREATED`イベントのステータスがすぐに`viewed`になります。
+The status provided below in each `additional_details` payload may differ from the example based on the specific sign request details. For example, if the requester is the only signer, the status of the `SIGN_DOCUMENT_CREATED` event will immediately be `viewed`.
 
 </Message>
 
@@ -71,6 +71,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "id": "987abC5423",
             "template_type": "Signing",
             "name": "Work Contact"
+        },
+        "batch_send": {
+            "id": "W23YVL46"
         },
         "sender_message": {
             "subject": "Can you please sign this document?",
@@ -115,6 +118,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "signer":null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -158,6 +162,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -201,6 +206,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -244,6 +250,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "signer": null,
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -294,6 +301,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -342,6 +350,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -388,6 +397,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""
@@ -438,6 +448,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -490,6 +501,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -538,6 +550,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
             "login": "janedoe@example.com"
         },
         "template": null,
+        "batch_send": null,
         "sender_message": {
             "subject": "",
             "message": ""

@@ -26,6 +26,6 @@ fullyTranslated: true
 
 Boxでウェブリンクを作成するには、APIにフォルダ`id`と、ウェブリンクのリンク先である`url`を渡す必要があります。`url`は`http://`または`https://`で始まる必要があります。
 
-<Samples id="post_web_link">
+<Samples id="post_web_links">
 
 </Samples>

@@ -70,7 +70,7 @@ OAuth 2.0フローを介して取得したアクセストークンは、もと�
 
 <Message warning>
 
-If you configured multiple redirect URIs for the application, the authorization URL must include the `redirect_uri` parameter matching one of the URIs configured in the developer console. If the parameter is not specified, the user will see a `redirect_uri_missing` error and will not be redirected back to the app.
+アプリケーション用にリダイレクトURIを複数設定した場合、承認URLには、開発者コンソールで設定したURIのいずれかと一致する`redirect_uri`パラメータを含める必要があります。このパラメータが指定されていない場合、ユーザーには`redirect_uri_missing`エラーが表示され、アプリにリダイレクトされません。
 
 </Message>
 

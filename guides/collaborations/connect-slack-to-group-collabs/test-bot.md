@@ -104,7 +104,7 @@ Boxアカウント内のファイルまたはフォルダのIDを調べるには
 
 [box-users-groups]: https://app.box.com/master/groups
 
-[next-steps-shared-link]: g://shared-links/create
+[next-steps-shared-link]: g://shared-links/create-or-update
 
 [next-steps-retention-policy]: e://post-retention-policies
 

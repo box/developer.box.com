@@ -34,29 +34,29 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 ## 承認の通知
 
-A semi-automated process to submit an app approval is available in the Developer Console for all custom application types.
+アプリの承認を送信するための半自動プロセスは、開発者コンソールですべての種類のカスタムアプリケーションに使用できます。
 
-### Server authentication apps
+### サーバー認証アプリ
 
 [開発者コンソール][devconsole]で、目的のアプリケーションの \[**承認**] タブに移動します。
 
 <ImageFrame border center>
 
-![Authorization tab](images/app_authorization.png)
+![\[承認\] タブ](images/app_authorization.png)
 
 </ImageFrame>
 
-### User authentication apps
+### ユーザー認証アプリ
 
-Navigate to the **Enablement** tab for your application in the [Developer Console][devconsole].
+[開発者コンソール][devconsole]で、目的のアプリケーションの \[**有効化**] タブに移動します。
 
 <ImageFrame border center>
 
-![Enablement tab](images/app_enablement.png)
+![\[有効化\] タブ](images/app_enablement.png)
 
 </ImageFrame>
 
-Submitting the application for approval will send an email to your enterprise's Primary Admin to approve the application. When a Box Admin approves or declines your request, you will get an email with the decision. More information on this process is available in our [support article on app authorization][app-auth].
+承認を得るためにアプリケーションを送信すると、企業のプライマリ管理者宛てにアプリケーションを承認するようメールが送信されます。Box管理者がリクエストを承認または拒否すると、その決定が記載されたメールが届きます。このプロセスの詳細については、[アプリの承認に関するサポート記事][app-auth]を参照してください。
 
 ## 手動による承認
 
@@ -64,8 +64,8 @@ Submitting the application for approval will send an email to your enterprise's 
 
 ### 開発者の場合
 
-1. Navigate to the **Configuration** tab for your application in the [Developer Console][devconsole]. 
-2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
+1. [開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。 
+2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。
 
 <Message>
 
@@ -77,10 +77,10 @@ Submitting the application for approval will send an email to your enterprise's 
 
 ### 管理者の場合
 
-1. Navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel. 
-2. Click the **Custom Apps Manager** tab (2) at the top of your screen. 
-3. For both Server and User Authentication Apps screens, click the **Add App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Custom Apps Manager table menu (4) to authorize and enable apps.
+1. [管理コンソール][adminconsole]に移動し、左側のナビゲーションパネルで \[**アプリ**] タブ (1) を選択します。 
+2. 画面上部にある \[**カスタムアプリマネージャ**] タブ (2) をクリックします。 
+3. \[サーバー認証アプリ] 画面と \[ユーザー認証アプリ] 画面のどちらでも、右上にある \[**アプリの追加**] ボタン (3) をクリックして新しいアプリを追加します。
+4. または、\[カスタムアプリマネージャ] の表メニュー (4) を使用してアプリを承認および有効化することもできます。
 
 #### サーバー認証アプリ
 

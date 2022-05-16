@@ -15,14 +15,14 @@ total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: shared-links/remove
+previous_page_id: shared-links/permissions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/index.md
 fullyTranslated: true
 ---
 # 共有リンク
 
-共有リンクは、Boxに保存されているファイルまたはフォルダを対象として生成されるURLです。これにより、リソースへの直接的な読み取り専用アクセスが可能になります。
+Shared links are URLs that are generated for files, folders, web links stored in Box, which provide direct, read-only access to the resource.
 
 共有リンクのアクセスレベルをオープンに設定すると、そのURLを知っているすべてのユーザーが項目にアクセスできますが、アクセスレベルを会社またはコラボレータに設定すると、適切な認証済みBoxユーザーのみがアクセスできます。共有リンクに関連するすべてのオプションと管理設定については、[こちら][community_create_shared_link]を参照してください。
 
