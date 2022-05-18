@@ -189,3 +189,20 @@ with any of our official SDKs, by using the following steps.
 
 To learn how to use this client head over to the guide on [Making API
 calls](g://api-calls).
+
+## Using SDK's and JSON Web Tokens
+
+To learn more about JWT for each SDK's head over to:
+
+- [.Net][.Net]
+
+- [Java][Java]
+
+- [Python][Python]
+
+- [Node][Node]
+
+[.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#server-auth-with-jwt
+[Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#server-authentication-with-jwt
+[Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#server-auth-with-jwt
+[Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#server-auth-with-jwt

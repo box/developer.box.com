@@ -87,3 +87,20 @@ var client = sdk.getBasicClient('[APP_TOKEN]');
 
 With this the application should be able to make API calls to any of the
 [endpoints](g://authentication/app-token/endpoints) enabled for App Token auth.
+
+## Using SDK's and Application Tokens
+
+To learn more about Application Tokens for each SDK's head over to:
+
+- [.Net][.Net]
+
+- [Java][Java]
+
+- [Python][Python]
+
+- [Node][Node]
+
+[.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens
+[Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#box-view-authentication-with-app-token
+[Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#box-view-authentication-with-app-tokens
+[Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens
