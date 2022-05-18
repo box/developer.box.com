@@ -82,3 +82,20 @@ Developer console, all webhooks created by that application get deleted.
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
+
+## Using SDK's and Developer Tokens
+
+To learn more about Developer Tokens for each SDK's head over to:
+
+- [.Net][.Net]
+
+- [Java][Java]
+
+- [Python][Python]
+
+- [Node][Node]
+
+[.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#developer-token
+[Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#developer-token
+[Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#developer-token
+[Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#developer-token
