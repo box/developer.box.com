@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
   - authentication/tokens
-  - applications/app-gallery
+  - applications/app-center
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -41,7 +41,7 @@ To configure the integration, follow the guidance below for each value.
 | Field                     | Description                                                                                                                                                                                                                      |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration name          | The name of your integration, which users see in the Box Web App when the ** More Options** > **Integrations** menu is selected on a file or folder.                                                                             |
-| Description               | The description of the integration displayed in the Box App Gallery.                                                                                                                                                             |
+| Description               | The description of the integration displayed in the Box App Center.                                                                                                                                                             |
 | Supported file extensions | The integration will only appear as an option in the ** More Options** > **Integrations** menu for the selected file extensions.                                                                                                 |
 | Display on shared pages   | Determines if an integration can be shown to external users on a shared page. If enabled, users who are not collaborating on the content will see the integration in the context-menu when browsing items through a shared link. |
 
@@ -66,10 +66,10 @@ To configure the integration, follow the guidance below for each value.
  used when the application is still in development and undergoing testing.
 - **Online**: The integration is visible and available to all Box users. This
   option is best used when development is complete and the application is
-  ready to publish in the App Gallery.
+  ready to publish in the App Center.
 - **Maintenance**: The integration is visible and available only to application
  collaborators listed under the **General Settings** tab. This option is best
- used after the integration is published in the App Gallery, but needs to
+ used after the integration is published in the App Center, but needs to
  perform maintenance updates or troubleshoot issues. Use this option to
  temporarily take the integration offline for everyone except the application's
  collaborators.
@@ -149,7 +149,7 @@ note that the URL must be publicly accessible on the internet.
 ## Making Integration Publicly Available
 
 To make a Box integration publicly available it needs to be listed in the App
-Gallery. Follow the [App Gallery][app-gallery] guide for more details.
+Gallery. Follow the [App Center][app-center] guide for more details.
 
 [ca]: g://applications/custom-apps
 [pu]: g://applications/web-app-integrations/types/#popup-integrations
@@ -160,4 +160,4 @@ Gallery. Follow the [App Gallery][app-gallery] guide for more details.
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
-[app-gallery]: g://applications/app-gallery
+[app-center]: g://applications/app-center
