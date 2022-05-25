@@ -53,7 +53,7 @@ submit to the App Center.
 
 Select the "App Center" tab from the top menu.
 
-<ImageFrame center shadow border width='200'>
+<ImageFrame center border shadow>
   ![App Center panel](./images/app-menu.png)
 </ImageFrame>
 
