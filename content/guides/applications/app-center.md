@@ -9,6 +9,7 @@ related_resources: []
 alias_paths: 
   - /docs/publishing-your-application
   - /guides/applications/app-gallery
+  - /guides/applications/app-gallery/
 ---
 
 # App Center
@@ -31,7 +32,7 @@ on our community site.
 ## Publishing an app
 
 Use the following steps to publish an application in the [App
-Gallery][app-center].
+Center][app-center].
 
 ### Prerequisites
 
@@ -46,14 +47,14 @@ Your application must meet the following requirements:
 ### 1. Log in to the Developer Console
 
 Navigate to the [Developer Console][devconsole] and select your application to
-submit to the gallery.
+submit to the App Center.
 
 ### 2. Fill in the form
 
-Select the "App Center" panel from the left-hand sidebar.
+Select the "App Center" tab from the top menu.
 
-<ImageFrame center shadow border width='200'>
-  ![App Center panel](./images/app-sidebar.png)
+<ImageFrame center border shadow>
+  ![App Center panel](./images/app-menu.png)
 </ImageFrame>
 
 Click the button to "Submit My App".
