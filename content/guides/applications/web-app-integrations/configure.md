@@ -149,7 +149,7 @@ note that the URL must be publicly accessible on the internet.
 ## Making Integration Publicly Available
 
 To make a Box integration publicly available it needs to be listed in the App
-Gallery. Follow the [App Center][app-center] guide for more details.
+Center. Follow the [App Center][app-center] guide for more details.
 
 [ca]: g://applications/custom-apps
 [pu]: g://applications/web-app-integrations/types/#popup-integrations
