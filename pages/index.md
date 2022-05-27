@@ -96,7 +96,7 @@ SDKとツール
 
 <SDKS>
 
-Box Platformを使用した開発は、ご利用のプログラミング言語のSDK、コマンドラインインターフェイス、フロントエンドUI Elementなどを使用するとより簡単になります。
+Box Platformを使用した開発は、ご利用のプログラミング言語のSDK、コマンドラインインターフェース、フロントエンドUI Elementなどを使用するとより簡単になります。
 
 <SDK language="dotnet" href="https://github.com/box/box-windows-sdk">
 

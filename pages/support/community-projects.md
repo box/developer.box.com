@@ -43,7 +43,7 @@ fullyTranslated: true
 | [Box Javaラッパー][box-camel]              | `Java`       | [Claus Ibsen][claus]によって作成された、Box API用のJavaラッパー。GitHubリポジトリについては、[こちら][camel-repo]を参照してください。 |
 | [Box JavaScript SDK][sdk-javascript]   | `Javascript` | Box APIにリクエストを行うためのプロミスベースのクライアントサイドSDK                                                      |
 | [Box Ruby SDK][sdk-ruby]               | `Ruby`       | Box Content API用のRubyクライアントライブラリ                                                             |
-| [Box R SDK][sdk-r]                     | `R`          | Box API用のRインターフェイス                                                                           |
+| [Box R SDK][sdk-r]                     | `R`          | Box API用のRインターフェース                                                                           |
 | [Box Powershell SDK][sdk-powershell]   | `Powershell` | Box APIを呼び出すためのPowerShell SDK                                                                |
 | [Powershellモジュール][sdk-poshbox]         | `Powershell` | Box Windows SDKを利用してBox環境を管理するPowershellモジュール。Boxを完全に自動化できます。                                |
 | [Box PHP/Laravelラッパー][sdk-php-laravel] | `PHP`        | Box API用のPHPラッパー                                                                             |

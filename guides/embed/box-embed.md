@@ -162,7 +162,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
 }
 ```
 
-`url`属性を`<iframe>`内で使用すると、自動で期限切れになるBox Embedインターフェイスを埋め込むことができます。
+`url`属性を`<iframe>`内で使用すると、自動で期限切れになるBox Embedインターフェースを埋め込むことができます。
 
 ```html
 <iframe

@@ -25,7 +25,7 @@ Boxでは、Postmanへのコレクションのインポートに関連した問�
 
 </Message>
 
-[Postman](https://getpostman.com)は、完全な開発環境を構成しなくても、使いやすいインターフェイスでHTTPリクエストを作成およびテストできるツールです。Box Postmanコレクションは事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、PostmanでBox APIを利用できるようになります。
+[Postman](https://getpostman.com)は、完全な開発環境を構成しなくても、使いやすいインターフェースでHTTPリクエストを作成およびテストできるツールです。Box Postmanコレクションは事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、PostmanでBox APIを利用できるようになります。
 
 <ImageFrame center>
 
