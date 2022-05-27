@@ -15,6 +15,7 @@ the following steps.
    <!--alex ignore executed-->
 3. [Built and executed CLI commands][three]
 4. Learned about [options and bulk commands][four]
+5. Explored using the CLI to [run a Powershell script][five]
 
 To take the next step, the following resources are recommended:
 
@@ -26,6 +27,7 @@ To take the next step, the following resources are recommended:
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+[five]: g://tooling/cli/quick-start/powershell-script-templates/
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
