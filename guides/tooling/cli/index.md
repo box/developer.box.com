@@ -35,7 +35,7 @@ source_url: >-
 The Box Command Line Interface (CLI) is a tool for making requests to
 Box APIs from your terminal window or command prompt.
 
-## Quick Start
+## Prerequisites
 
 [Get started using the Box CLI with OAuth 2.0][qs].
 
@@ -43,6 +43,14 @@ Box APIs from your terminal window or command prompt.
 
 If you would rather use our [server authentication][jwt] method, check
 out [this][jwt-page] guide.
+
+## Sample Scripts
+
+Using the Box CLI is great by itself, but it becomes even more powerful when
+combined with a Powershell script. We've created a [library][scripts]
+of script templates for you to get started automating repetitive tasks.
+
+- [User provisioning and initial folder tree creation][script-1]
 
 ## Advanced
 
@@ -64,3 +72,5 @@ advanced CLI user.
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [jwt]: g://authentication/jwt
 [jwt-page]: g://tooling/cli/jwt-cli
+[scripts]: https://github.com/box/boxcli/tree/main/examples
+[script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning

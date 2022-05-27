@@ -10,7 +10,7 @@ subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli/quick-start
 rank: 0
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/cli
 parent_id: tooling/cli
 next_page_id: tooling/cli/quick-start/create-oauth-app
@@ -39,7 +39,8 @@ This guide will take you through the following steps.
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
 4. Use [options and bulk commands][four]
-5. [Next steps][five]
+5. Explore using [Powershell scripts with the CLI][five]
+6. [Next steps][six]
 
 <Next>
 
@@ -52,4 +53,5 @@ I am ready to get started
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
-[five]: g:/tooling/cli/quick-start/next-steps/
+[five]: g://tooling/cli/quick-start/powershell-script-templates/
+[six]: g:/tooling/cli/quick-start/next-steps/
