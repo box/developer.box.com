@@ -8,10 +8,12 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/publishing-your-application
+  - /guides/applications/app-gallery
+  - /guides/applications/app-gallery/
 category_id: applications
 subcategory_id: null
 is_index: false
-id: applications/app-gallery
+id: applications/app-center
 type: guide
 total_steps: 4
 sibling_id: applications
@@ -19,36 +21,46 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: applications/limited-access-apps
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-gallery.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-center.md
 fullyTranslated: true
 ---
-# アプリギャラリー
+# App Center
 
-[Boxアプリギャラリー][app-gallery]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に調べる場所です。アプリケーションが他の会社での使用にも適している場合は、アプリギャラリーにサービスを登録すると、新しいユーザーを見つけるのに役立ちます。
+The [Box App Center][app-center] is the first place for Box users to find out about applications that they can use in combination with Box. If your application is suited to be used by other enterprises, listing your service in the App Center can be a great way to find new users.
+
+<ImageFrame shadow center>
+
+![App Center](./images/app-center.png)
+
+</ImageFrame>
+
+## Developing and app or becoming a Box Partner
+
+If you would more information on developing an application for the Box App Center or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
 
 ## アプリを公開する
 
-[アプリギャラリー][app-gallery]でアプリケーションを公開するには、以下の手順に従います。
+Use the following steps to publish an application in the [App Center][app-center].
 
 ### 前提条件
 
 アプリケーションは、以下の要件を満たす必要があります。
 
 * アプリケーションは完成した状態で、実稼働環境での使用準備ができていること。
-* アプリギャラリーではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
+* The application leverages OAuth 2.0 authentication, as the App Center does not support any other authentication methods.
 * 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
 
 ### 1. 開発者コンソールにログインする
 
-[開発者コンソール][devconsole]に移動して、ギャラリーに送信するアプリケーションを選択します。
+Navigate to the [Developer Console][devconsole] and select your application to submit to the App Center.
 
 ### 2. フォームに入力する
 
-左側のサイドバーから \[アプリギャラリー] パネルを選択します。
+Select the "App Center" tab from the top menu.
 
-<ImageFrame center shadow border width="200">
+<ImageFrame center border shadow>
 
-![\[アプリギャラリー\] パネル](./images/app-sidebar.png)
+![App Center panel](./images/app-menu.png)
 
 </ImageFrame>
 
@@ -88,10 +100,12 @@ fullyTranslated: true
 
 ## アプリケーションを未公開にする
 
-承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[アプリギャラリー] パネルを選択します。このページからアプリを未公開にすることができます。
+Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the "App Center" panel from the left-hand sidebar. The app can be unpublished from this page.
 
-[app-gallery]: https://app.box.com/services
+[app-center]: https://app.box.com/services
 
 [devconsole]: https://account.box.com/developers/services
 
 [email]: mailto:integrate@box.com
+
+[bp]: https://support.box.com/hc/en-us/sections/360009473734-Box-Partner-Resources

@@ -43,7 +43,7 @@ Box Platformにより、アプリケーションはBoxウェブアプリ内で�
 
 </CTA>
 
-[app-gallery]: g://applications/app-gallery
+[app-center]: g://applications/app-center
 
 [custom-app]: g://authentication/oauth2/oauth2-setup
 

@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
   - authentication/tokens
-  - applications/app-gallery
+  - applications/app-center
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -52,7 +52,7 @@ fullyTranslated: true
 | フィールド            | 説明                                                                                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------- |
 | 統合名              | 統合の名前。ファイルまたはフォルダの \[**その他のオプション**] > \[**統合**] メニューを選択したときに、Boxウェブアプリでユーザーに表示されます。                       |
-| 説明               | Boxアプリギャラリーに表示される統合の説明。                                                                                   |
+| 説明               | The description of the integration displayed in the Box App Center.                                       |
 | サポートされているファイル拡張子 | 統合は、選択されているファイル拡張子の \[**その他のオプション**] > \[**統合**] メニューのオプションとしてのみ表示されます。                                   |
 | 共有ページで表示         | 共有ページで外部ユーザーに統合を表示可能にするかどうかを決定します。有効にした場合、コンテンツでコラボレーションしていないユーザーが共有リンクを介して項目を閲覧すると、コンテキストメニューに統合が表示されます。 |
 
@@ -73,8 +73,8 @@ fullyTranslated: true
 ### 統合ステータス
 
 * **開発**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示および使用できます。このオプションは、アプリケーションがまだ開発中でテストの実施中である場合に最もよく使用されます。
-* **オンライン**: 統合は、すべてのBoxユーザーが表示し、使用できます。このオプションは、開発が完了し、アプリケーションをアプリギャラリーで公開する準備ができている場合に最もよく使用されます。
-* **メンテナンス**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示し、使用できます。このオプションは、統合がアプリギャラリーで公開された後、メンテナンスでの更新を実行したり問題をトラブルシューティングしたりする必要がある場合に最もよく使用されます。このオプションを使用すると、アプリケーションのコラボレータ以外のすべてのユーザーに対して統合が一時的にオフラインになります。
+* **Online**: The integration is visible and available to all Box users. This option is best used when development is complete and the application is ready to publish in the App Center.
+* **Maintenance**: The integration is visible and available only to application collaborators listed under the **General Settings** tab. This option is best used after the integration is published in the App Center, but needs to perform maintenance updates or troubleshoot issues. Use this option to temporarily take the integration offline for everyone except the application's collaborators.
 
 ### コールバックパラメータ
 
@@ -132,7 +132,7 @@ BoxからクライアントコールバックのURLに送信されるPOSTリク�
 
 ## 統合の一般公開
 
-Box統合を一般公開するには、統合をアプリギャラリーに掲載する必要があります。詳細については、[アプリギャラリー][app-gallery]ガイドに従ってください。
+To make a Box integration publicly available it needs to be listed in the App Center. Follow the [App Center][app-center] guide for more details.
 
 [ca]: g://applications/custom-apps
 
@@ -152,4 +152,4 @@ Box統合を一般公開するには、統合をアプリギャラリーに掲�
 
 [devaccount]: https://account.box.com/signup/n/developer
 
-[app-gallery]: g://applications/app-gallery
+[app-center]: g://applications/app-center

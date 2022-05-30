@@ -48,7 +48,7 @@ fullyTranslated: true
 
 <Message tip>
 
-公開アプリとは、アプリギャラリーで見つかるアプリケーションのことです。
+Published apps are any applications that can be found in our App Center.
 
 </Message>
 
@@ -103,7 +103,7 @@ fullyTranslated: true
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
-[ag]: g://applications/app-gallery
+[ag]: g://applications/app-center
 
 [standauth]: g://authentication/oauth2
 
