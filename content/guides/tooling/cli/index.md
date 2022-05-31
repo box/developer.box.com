@@ -34,7 +34,7 @@ If you would rather use our [server authentication][jwt] method, check
 out [this][jwt-page] guide.
 
 ## Box CLI Using Client Credentials Grant Authentication
-If you would rather use our [CCG authentication][] method, check out [this][] guide.
+If you would rather use our [CCG authentication][ccg] method, check out [this][ccg-page] guide.
 
 ## Advanced
 
