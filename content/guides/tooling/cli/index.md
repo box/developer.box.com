@@ -33,6 +33,9 @@ Box APIs from your terminal window or command prompt.
 If you would rather use our [server authentication][jwt] method, check
 out [this][jwt-page] guide.
 
+## Box CLI Using Client Credentials Grant Authentication
+If you would rather use our [CCG authentication][] method, check out [this][] guide.
+
 ## Advanced
 
 The GitHub page also has some additional guides that might be of interest to an
@@ -53,3 +56,5 @@ advanced CLI user.
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [jwt]: g://authentication/jwt
 [jwt-page]: g://tooling/cli/jwt-cli
+[ccg]: g://authentication/client-credentials
+[ccg-page]: https://github.com/box/boxcli#ccg-authentication)
