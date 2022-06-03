@@ -14,6 +14,8 @@ alias_paths:
 
 ## V2
 
+### Files and Folders
+
 The following is a list of events that can be configured to trigger a v2
 webhook. Some events are only available for files, while others are only
 available for folders.
@@ -59,6 +61,16 @@ available for folders.
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
 <!-- markdownlint-enable line-length -->
 
+### Sign request
+
+<!-- markdownlint-disable line-length -->
+| Event                               | Triggered                                                     |
+|-------------------------------------|---------------------------------------------------------------|
+| `SIGN_REQUEST.SIGNED`               | A sign request is completed                                   |
+| `SIGN_REQUEST.DECLINED`             | A sign request is declined                                    |
+| `SIGN_REQUEST.EXPIRED`              | A sign request is expired                                     |
+| `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered |
+<!-- markdownlint-enable line-length -->
 ## V1
 
 The follow is a list of events that can be configured to trigger a v1 webhook. 
