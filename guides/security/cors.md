@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: security/cors
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security
