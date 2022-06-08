@@ -1,75 +1,86 @@
 ---
-# This is a Frontmatter header for Markdown files.
-# Frontmatter starters with a tripple-dash and ends
-# with another tripple dash.
-
-# The content in here won't be rendered, and no data
-# in here will be translated.
-
-# TODO/CHANGE: Pages sort by rank, then alphabet
 rank: 1
-# TODO/CHANGE: Set to any number of endpoint IDs or []
-# to be shown at the end of a Guide as being related.
-#
-# Endpoint IDs can be found in the OpenAPI spec
-# as "operationId".
-related_endpoints:
-  - get_files_id
-# TODO/CHANGE: Set to any number of resource IDs or []
-# to be shown at the end of a Guide as being related.
-#
-# Resource IDs can be found in the OpenAPI spec
-# as the key of the resource in the components list
-related_resources:
-  - file
-  - folder
-  - web_link
-# TODO/CHANGE: Set to any number of guides or []
-# to be shown at the end of a Guide as being related.
-#
-# Guide IDs are the path of this file in this project,
-# from the "guides" folder onward. The extension is
-# omitted.
-#
-# For example, for the /content/guides/foo/bar/baz.md file,
-# the ID would be foo/bar/baz.
-#related_guides:
-#  - automation-and-events/webhooks/list-of-triggers
-#  - automation-and-events/webhooks/parse-a-webhook
-#  - automation-and-events/webhooks/delete-a-webhook
-# TODO/CHANGE: Set to any number of guides or []
-# to be shown at the end of a Guide as being related.
-#
-# Guide IDs are the path of this file in this project,
-# from the "guides" folder onward. The extension is
-# omitted.
-#
-# For example, for the /content/guides/foo/bar/baz.md file,
-# the ID would be foo/bar/baz.
+related_endpoints: []
+related_guides: []
 required_guides: []
-# TODO/CHANGE: Set to any number of URLs or []
-# to redirect from to this page.
-#
-# This is used to maintain backwards compatibility with
-# older URLs, allowing us to change URLs and still maintain
-# paths.
-#
-# This generally only works for the primary locale,
-# in this case English. Translared guides wont redirect.
-alias_paths:
-  - /old/path
-  - /another/old/path
+related_resources: []
+alias_paths: []
 ---
 
-# FedRAMP High
+# FedRAMP
 
-From here everything is Markdown.
+## Overview
 
-The first title in the page will be used as the name of the guide everywhere in
-the site.
+It is a certification program that allows federal agencies to use cloud 
+providers for increasingly secure/sensitive government or government-adjacent 
+data. 
 
-Additionally, wee have extended the markdown with React components.
+FedRAMP defines three categories regarding levels of security, Low, Moderate, 
+and High.
 
+The higher the security level the more restrictions are in place.
+
+Box is already certified as [FedRAMP Moderate and High][FedRAMPCert].
+
+## Considerations
+
+In order to be FedRAMP High compliant, your administrator must setup Box in 
+very a very specific way. It is possible that the administrator has further 
+restricted access to Box functionalities.
+
+Consult with your administrator to identify security restrictions in place that 
+might affect the usage of the API.
+
+## API usage in FedRAMP High
+
+For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects 
+all API's entry points.
+
+<!-- markdownlint-disable line-length -->
+|FedRAMP Moderate |FedRAMP High       |
+|-----------------|-------------------|
+|account.box.com  |account.box-gov.com|
+|api.box.com      |api.box-gov.com    |
+|upload.box.com   |upload.box-gov.com |
+|dl.boxcloud.com  |dl.boxcloud-gov.com|
+
+<!-- markdownlint-enable line-length -->
+
+## API Restrictions
+
+The following API entry points are not available for usage under FedRAMP High configuration.
+
+<!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable spelling -->
+|API Entry points |
+|----------------|
+|/collaborations|
+|/device_pinners|
+|/enterprises/{enterprise_id}/device_pinners|
+|/events|
+|/files/{file_id}/collaborations|
+|/files/{file_id}/metadata/global/boxSkillsCards|
+|/folders/{folder_id}/collaborations|
+|/folders/{folder_id}#add_shared_link|
+|/folders/{folder_id}#get_shared_link|
+|/folders/{folder_id}#remove_shared_link|
+|/folders/{folder_id}#update_shared_link|
+|/skill_invocations/{skill_id}|
+|/web_links|
+
+<!-- markdownlint-enable line-length -->
+
+The following API entry points are not yet available for usage under FedRAMP 
+High configuration.
+
+<!-- markdownlint-disable line-length -->
+|API Entry point |
+|----------------|
+|/sign_requests|
+
+<!-- markdownlint-enable line-length -->
+
+<!--
 ## Code Samples
 
 Code samples allow you to bring in SDK, CLI, and cURL code samples. The ID
@@ -142,4 +153,8 @@ We provide ways to link to guides, endpoints,
 and resources without hard-coding the locale.
 
 [Get a file by ID][endpoint://get-files-id]
+
 [File resource][resource://file]
+-->
+
+[FedRAMPCert]:https://marketplace.fedramp.gov/#!/product/box-enterprise-cloud-content-collaboration-platform/versus/box-enterprise-cloud-content-collaboration-platform---high?sort=productName&productNameSearch=box
