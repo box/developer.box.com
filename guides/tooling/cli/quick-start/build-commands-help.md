@@ -6,7 +6,7 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/build-commands-help
 rank: 3
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: tooling/cli/quick-start/options-and-bulk-commands
@@ -38,6 +38,10 @@ see information the help command does not provide. This includes
 restrictions, token permission requirements, fields, etc.
 
 </Message>
+
+<YouTube id='66wlIyS07Aw' >
+
+</YouTube>
 
 ## First: Reset browser storage
 

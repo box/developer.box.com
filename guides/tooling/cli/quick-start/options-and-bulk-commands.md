@@ -6,10 +6,10 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/options-and-bulk-commands
 rank: 4
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/next-steps
+next_page_id: tooling/cli/quick-start/powershell-script-templates
 previous_page_id: tooling/cli/quick-start/build-commands-help
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/4-options-and-bulk-commands.md
