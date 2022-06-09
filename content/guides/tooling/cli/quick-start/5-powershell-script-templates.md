@@ -26,21 +26,35 @@ structure.
 
 <!-- INSERT VIDEO ONCE COMPLETE HERE-->
 
-## Use Case
+## Use case
 
 The use case presented in this example is to illustrate the automatic 
 creation of users:
 
 - using a `.csv` file to load users in bulk
 - have a predetermined folder structure associated to each user
+- define the folder structure using a JSON file
+- or create the folder structure by uploading from a local drive
 
 ## Pre-Requisites
 
-- Install the latest version of [dotnet core](https://dotnet.microsoft.com/download).
-- If not in Windows, test PowerShell by running the `pwsh` command in your terminal.
-  - To install PowerShell see these [installation][pwsh] instructions.
+### MacOS
 
-## Download Script
+- Install [PowerShell][pwsh]
+
+### Linux
+
+- Install the latest version of [dotnet core](https://dotnet.microsoft.com/download).
+- Install [PowerShell][pwsh]
+
+### Configure a Box application
+
+You should also have a Box application created .
+If you haven't done so yet, see [step 1][Step 1] of this quick start guide.
+Alternatively, go to your [developer console][console], and follow the guide 
+[Setup with OAuth 2.0][auth]
+
+## Download script
 
 ```bash
 git clone https://github.com/box/boxcli.git box-cli
@@ -50,16 +64,6 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 ## Modify script configuration
 
 You must adapt this script for your own environment.
-
-### Folders
-
-The `Folder_Structure.json` file represents the folder structure you want to create.
-As an example we're going to create a `Market Research` and a `Sales Plays` 
-folder, each with a subfolder `Statistics` and `Big Pharma` respectively.
-
-<Message type=note>
-The script has an extra folder `Onboarding` hard coded. See Script for details.
-</Message>
 
 ### CSV Files
 
@@ -74,26 +78,37 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-### Script
+On the script file `Users_Create_Provision.ps1`, set which csv file you would 
+like to load, for this example it will be `Employee_1.csv`:
+
+```bash
+#Set Employee List CSV Path
+$EmployeeList = "./Employees_1.csv"
+```
+
+### Folders
+
+There are two options to create folder structures. You create them from a JSON 
+file, or upload them from your local drive.
+
+### Using a JSON file
+
+The `Folder_Structure.json` file represents the folder structure you want to create.
+As an example we're going to create a `Market Research` and a `Sales Plays` 
+folder, each with a subfolder `Statistics` and `Big Pharma` respectively.
 
 On the script file `Users_Create_Provision.ps1` you also have some options to 
 choose from.
 
 The folder creation section in the script has the folder `Onboarding` hard 
-coded. This means that whatever folders present on the `Folder_Structure.json`, 
+coded. This means that whatever folders are present 
+on the `Folder_Structure.json`, 
 they will be created under this `Onboarding` folder.
 
 ```bash
 #First create Onboarding folder owned by current user
 $script:OnboardingFolderId = box folders:create 0 "Onboarding" --id-only 
 Write-Output "Created a user owned Onboarding folder with id: $($OnboardingFolderId)"
-```
-
-Set which csv file you would like to load, for this example it will be `Employee_1.csv`:
-
-```bash
-#Set Employee List CSV Path
-$EmployeeList = "./Employees_1.csv"
 ```
 
 Set the location of the `Folder_Structure.json`.
@@ -105,11 +120,11 @@ $FolderStructureJSONPath = "./Folder_Structure.json"
 #$LocalUploadPath = "./OnboardingLocalUpload"
 ```
 
+### Uploading from a local drive
+
 The script is also shows the example of uploading a folder structure directly 
 from the local file system.
-If you want to try that, you should update the following.
-
-Set the location of the local folder to upload:
+If you want to try that, set the location of the local folder to upload:
 
 ```bash
 #Onboarding Folder Structure: Set either path build off JSON or directly
@@ -118,7 +133,7 @@ Set the location of the local folder to upload:
 $LocalUploadPath = "./OnboardingLocalUpload"
 ```
 
-Replace the new folder structure with the local folder upload:
+Comment the `New-Folder-Structure` call, and uncomment the next section:
 
 ```bash
 #Create Folder Structure from JSON
@@ -132,7 +147,7 @@ Write-Output "Uploaded local folder structre to current user's root folder
 with $($script:OnboardingFolderId)"
 ```
 
-## Run Script
+## Run the script
 
 Now all you need to do is run the script.
 Make sure when in `powershell` you are at the base directory relative to the 
@@ -216,3 +231,6 @@ and create their initial folder tree.
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
 [jwt-cli]: g://tooling/cli/jwt-cli
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
+[Step 1]: g://tooling/cli/quick-start/create-oauth-app/
+[console]: https://app.box.com/developers/console
+[auth]: g://authentication/oauth2/oauth2-setup
