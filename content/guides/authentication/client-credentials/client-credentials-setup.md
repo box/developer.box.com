@@ -123,10 +123,13 @@ To learn more about Client Credentials Grant for each SDK's head over to:
 
 - [Node][Node]
 
+- [IOS][IOS]
+
 [.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#server-auth-with-ccg
 [Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#client-credentials-grant
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#client-credentials-grant
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#client-credentials-grant-authentication
+[IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#client-credentials-grant
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer

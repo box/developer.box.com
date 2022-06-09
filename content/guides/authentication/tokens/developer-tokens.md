@@ -74,7 +74,10 @@ To learn more about Developer Tokens for each SDK's head over to:
 
 - [Node][Node]
 
+- [IOS][IOS]
+
 [.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#developer-token
 [Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#developer-token
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#developer-token
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#developer-token
+[IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#developer-token

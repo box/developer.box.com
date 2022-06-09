@@ -202,7 +202,10 @@ To learn more about JWT for each SDK's head over to:
 
 - [Node][Node]
 
+- [IOS][IOS]
+
 [.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#server-auth-with-jwt
 [Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#server-authentication-with-jwt
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#server-auth-with-jwt
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#server-auth-with-jwt
+[IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#server-auth-with-jwt
