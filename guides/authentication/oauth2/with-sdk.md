@@ -320,10 +320,13 @@ To learn more about OAuth 2.0 authentication for each SDK's head over to:
 
 - [Node][Node]
 
+- [IOS][IOS]
+
 [.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#traditional-3-legged-oauth2
 [Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#standard-3-legged-oauth-20
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#traditional-3-legged-oauth2
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#traditional-3-legged-oauth2
+[IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#traditional-3-legged-oauth2
 
 [tokens]: g://authentication/tokens/access-tokens
 <!-- i18n-enable localize-links -->
