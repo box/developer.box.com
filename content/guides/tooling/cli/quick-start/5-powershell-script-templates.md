@@ -38,14 +38,17 @@ creation of users:
 
 ## Pre-Requisites
 
-### MacOS
-
-- Install [PowerShell][pwsh]
-
-### Linux
+### Windows
 
 - Install the latest version of [dotnet core](https://dotnet.microsoft.com/download).
+
+### MacOS & Linux
+
 - Install [PowerShell][pwsh]
+
+If you encounter issues make sure you install both 
+[dotnet core](https://dotnet.microsoft.com/download) and 
+[PowerShell][pwsh]
 
 ### Configure a Box application
 
