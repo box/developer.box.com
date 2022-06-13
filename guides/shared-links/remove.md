@@ -27,7 +27,7 @@ fullyTranslated: true
 ---
 # 共有リンクの削除
 
-A shared link may be removed from a resource by calling the [update file](endpoint://put_files_id) or [update folder](endpoint://put_folders_id) or [update weblink](endpoint://put_web_links_id) endpoint and setting the `shared_link` value to `null`.
+[ファイルを更新](endpoint://put_files_id)、[フォルダを更新](endpoint://put_folders_id)、または[ウェブリンクを更新](endpoint://put_web_links_id)エンドポイントを呼び出し、`shared_link`値を`null`に設定することで、リソースから共有リンクを削除できます。
 
 <Message type="warning">
 
@@ -51,9 +51,9 @@ A shared link may be removed from a resource by calling the [update file](endpoi
 
 </Samples>
 
-## Remove Shared Link on Web Link
+## ウェブリンクの共有リンクの削除
 
-To remove a shared link on a web link, specify the ID of web link to set the `shared_link` field to `null`.
+ウェブリンクの共有リンクを削除するには、ウェブリンクのIDを指定し、`shared_link`フィールドを`null`に設定します。
 
 <Samples id="put_web_links_id" variant="remove_shared_link">
 

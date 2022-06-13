@@ -26,19 +26,19 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/create-or-update.md
 fullyTranslated: true
 ---
-# Create or Update Shared Link
+# 共有リンクの作成または更新
 
-Shared links may be created or directly for file, folder, or web link resources to generate a read-only URL to permit users with the appropriate access level to view the content.
+ファイルリソース、フォルダリソース、またはウェブリンクリソースの共有リンクを直接作成して、適切なアクセスレベルを持つユーザーにコンテンツの表示を許可するための読み取り専用URLを生成できます。
 
 <Message type="notice">
 
-You may only have one active shared link for a file, folder, or web link at any time.
+ファイル、フォルダ、またはウェブリンクのアクティブな共有リンクは、常に1つのみ保持できます。
 
 </Message>
 
 共有リンクの作成には少なくとも以下の情報が必要です。
 
-* The type of resource, either a file, folder, or web link.
+* リソースのタイプ (ファイル、フォルダ、またはウェブリンク)。
 * リソースのID。
 
 共有リンクの作成時には、以下の情報もオプションとして指定できます。
@@ -56,7 +56,7 @@ You may only have one active shared link for a file, folder, or web link at any 
 
 </Message>
 
-## Create or Update Shared Link for File
+## ファイルの共有リンクの作成または更新
 
 ファイルの共有リンクを作成するには、ファイルのIDとオプションの共有リンクパラメータを指定します。
 
@@ -64,7 +64,7 @@ You may only have one active shared link for a file, folder, or web link at any 
 
 </Samples>
 
-## Create or Update Shared Link for Folder
+## フォルダの共有リンクの作成または更新
 
 フォルダの共有リンクを作成するには、フォルダのIDとオプションの共有リンクパラメータを指定します。
 
@@ -72,9 +72,9 @@ You may only have one active shared link for a file, folder, or web link at any 
 
 </Samples>
 
-## Create or Update Shared Link for Web Link
+## ウェブリンクの共有リンクの作成または更新
 
-To create a shared link on a web link, specify the ID of the web link with any optional shared link parameters.
+ウェブリンクの共有リンクを作成するには、ウェブリンクのIDとオプションの共有リンクパラメータを指定します。
 
 <Samples id="put_web_links_id" variant="add_shared_link">
 

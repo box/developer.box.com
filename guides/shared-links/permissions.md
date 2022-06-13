@@ -24,13 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/shared-links/permissions.md
 fullyTranslated: true
 ---
-# Shared Link Permissions
+# 共有リンクの権限
 
-The shared link resource has three permissions that can be updated using the `permissions` field: `can_preview`, `can_download`, `can_edit`.
+共有リンクリソースには、`permissions`フィールドを使用して更新できる3つの権限`can_preview`、`can_download`、`can_edit`があります。
 
 <Message type="warning">
 
-The `can_edit` option can only be `true` for files. Also, if the admin has restricted shared links from having edit access in the admin console, you will not be able to set `can_edit` to `true`.
+ファイルの場合、`can_edit`オプションには`true`しか指定できません。また、管理者が管理コンソールで共有リンクの編集アクセス権限を制限している場合は、`can_edit`を`true`に設定することはできません。
 
 </Message>
 

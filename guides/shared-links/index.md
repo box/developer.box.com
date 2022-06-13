@@ -22,7 +22,7 @@ fullyTranslated: true
 ---
 # 共有リンク
 
-Shared links are URLs that are generated for files, folders, web links stored in Box, which provide direct, read-only access to the resource.
+共有リンクは、Boxに保存されているファイル、フォルダ、またはウェブリンクを対象として生成されるURLです。これにより、リソースへの直接的な読み取り専用アクセスが可能になります。
 
 共有リンクのアクセスレベルをオープンに設定すると、そのURLを知っているすべてのユーザーが項目にアクセスできますが、アクセスレベルを会社またはコラボレータに設定すると、適切な認証済みBoxユーザーのみがアクセスできます。共有リンクに関連するすべてのオプションと管理設定については、[こちら][community_create_shared_link]を参照してください。
 
