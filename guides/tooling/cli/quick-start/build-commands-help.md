@@ -6,7 +6,7 @@ subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/build-commands-help
 rank: 3
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: tooling/cli/quick-start/options-and-bulk-commands
@@ -32,6 +32,10 @@ CLIコマンドの全一覧と使用方法に関する情報については、[G
 helpコマンドで提供されない情報を確認するには、リファレンスドキュメントと併せてリポジトリのドキュメントを使用してください。このような情報には、制限事項、トークンの権限の要件、フィールドなどがあります。
 
 </Message>
+
+<YouTube id="66wlIyS07Aw">
+
+</YouTube>
 
 ## はじめに: ブラウザのストレージをリセットする
 

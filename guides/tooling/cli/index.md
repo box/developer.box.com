@@ -35,13 +35,15 @@ fullyTranslated: true
 
 Box Command Line Interface (CLI) は、ターミナルウィンドウまたはコマンドプロンプトからBox APIにリクエストを行うためのツールです。
 
-## はじめに
+## 前提条件
 
 [OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
-## JWT認証を使用したBox CLI
+## Sample Scripts
 
-Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][jwt-page]ガイドを参照してください。
+Using the Box CLI is great by itself, but it becomes even more powerful when combined with a Powershell script. We've created a [library][scripts] of script templates for you to get started automating repetitive tasks.
+
+* [User provisioning and initial folder tree creation][script-1]
 
 ## 高度な機能
 
@@ -52,6 +54,14 @@ Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][j
 * [アカウントの切り替え][cli-switch]
 * [トークンのキャッシュ][cache]
 * [オートコンプリート][ac]
+
+## JWT認証を使用したBox CLI
+
+Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][jwt-page]ガイドを参照してください。
+
+## Box CLI Using Client Credentials Grant Authentication
+
+If you would rather use our [CCG authentication][ccg] method, check out [this][ccg-page] guide.
 
 [cli]: https://github.com/box/boxcli
 
@@ -70,3 +80,11 @@ Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][j
 [jwt]: g://authentication/jwt
 
 [jwt-page]: g://tooling/cli/jwt-cli
+
+[scripts]: https://github.com/box/boxcli/tree/main/examples
+
+[script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
+
+[ccg]: g://authentication/client-credentials
+
+[ccg-page]: https://github.com/box/boxcli#ccg-authentication

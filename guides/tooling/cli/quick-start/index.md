@@ -10,7 +10,7 @@ subcategory_id: tooling/cli
 is_index: true
 id: tooling/cli/quick-start
 rank: 0
-total_steps: 5
+total_steps: 6
 sibling_id: tooling/cli
 parent_id: tooling/cli
 next_page_id: tooling/cli/quick-start/create-oauth-app
@@ -37,7 +37,8 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 2. CLIを[インストールして構成する][two]
 3. CLIを使用して[コマンドを実行する][three]
 4. [オプションや一括コマンド][four]を使用する
-5. [次の手順][five]
+5. Explore using [Powershell scripts with the CLI][five]
+6. [次の手順][six]
 
 <Next>
 
@@ -55,4 +56,6 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
 
-[five]: g:/tooling/cli/quick-start/next-steps/
+[five]: g://tooling/cli/quick-start/powershell-script-templates/
+
+[six]: g:/tooling/cli/quick-start/next-steps/

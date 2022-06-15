@@ -5,14 +5,14 @@ category_id: tooling
 subcategory_id: tooling/cli
 is_index: false
 id: tooling/cli/quick-start/next-steps
-rank: 5
-total_steps: 5
+rank: 6
+total_steps: 6
 sibling_id: tooling/cli/quick-start
 parent_id: tooling/cli/quick-start
 next_page_id: ''
-previous_page_id: tooling/cli/quick-start/options-and-bulk-commands
+previous_page_id: tooling/cli/quick-start/powershell-script-templates
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/5-next-steps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/6-next-steps.md
 fullyTranslated: true
 ---
 # 次の手順
@@ -28,6 +28,8 @@ fullyTranslated: true
 
 4. [オプションや一括コマンド][four]について学習しました。
 
+5. Explored using the CLI to [run a Powershell script][five]
+
 次の手順を行うには、以下のリソースをお勧めします。
 
 1. すべての[コマンド][commands]を確認する。
@@ -41,6 +43,8 @@ fullyTranslated: true
 [three]: g://tooling/cli/quick-start/build-commands-help/
 
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+
+[five]: g://tooling/cli/quick-start/powershell-script-templates/
 
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 
