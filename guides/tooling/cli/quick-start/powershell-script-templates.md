@@ -14,24 +14,25 @@ previous_page_id: tooling/cli/quick-start/options-and-bulk-commands
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/5-powershell-script-templates.md
 ---
-# Using Powershell Scripts with the Box CLI
+# Using PowerShell Scripts with the Box CLI
 
-By itself, the CLI is already powerful, but using it alongside a Powershell
+By itself, the CLI is already powerful, but using it alongside a PowerShell
 script lets you complete repetitive tasks even quicker. We created an example
 [scripts][scripts] folder within our CLI GitHub repository to help
 jump start your development.
 
 For this step in the quick start, we are going to use the
-user provisioning and folder creation [script][script-1]
-template. This script will use the Box CLI to
-build and create a user (admin or service account) owned onboarding folder
-structure, create managed users in bulk, and provision the new users by
-collaborating them as viewer and uploaders into the newly created folder
-structure.
+create users and provisioning automation [script][script-1]
+template.
+
+This script uses the Box CLI to build and create a user-owned
+( onboarding folder structure, create managed users in bulk,
+and provision such new users by adding them to the newly created
+folder structure as collaborators with viewer or uploader roles.
 
 <Message type=warning>
 
-Only service accounts and users with administrative privileges will be able
+Only service accounts and users with administrative privileges are able
 to go through this part of the quick start. You can skip this step if you
 are not a Box administrator or using a service account.
 
@@ -46,10 +47,10 @@ creation of users:
 
 - using a `.csv` file to load users in bulk
 - have a predetermined folder structure associated to each user
-- define the folder structure using a JSON file
-- or create the folder structure by uploading from a local drive
+- define that folder structure using a JSON file
+- or, optionally,  create the folder structure by uploading from a local drive
 
-## Pre-Requisites
+## Prerequisites
 
 ### Windows
 
@@ -59,16 +60,16 @@ creation of users:
 
 - Install [PowerShell][pwsh]
 
-If you encounter issues make sure you install both
+If you encounter issues make sure you installed both
 [dotnet core](https://dotnet.microsoft.com/download) and
 [PowerShell][pwsh]
 
-### Configure a Box application
+### Configured Box application
 
-You should also have a Box application created .
+You should have a Box application created.
 If you haven't done so yet, see [step 1][Step 1] of this quick start guide.
 Alternatively, go to your [developer console][console], and follow the guide
-[Setup with OAuth 2.0][auth]
+[Setup with OAuth 2.0][auth].
 
 ## Download script
 
@@ -79,14 +80,15 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 
 ## Modify script configuration
 
-You must adapt this script for your own environment.
+You must adapt this script to run in your own environment.
 
-### CSV Files
+### Preparing the user list
 
-There are 3 example files to load users, `Employees_1.csv`, `Employees_5.csv`,
-and `Employees_10.csv`. Each will load 1, 5 or 10 new users.
+You can use the following sample files to load users:
+`Employees_1.csv`, `Employees_5.csv`, and `Employees_10.csv`.
+Each will load 1, 5 or 10 new users.
 
-Customize these files for this test run. For this example let's update the
+Customize these files for a test run. For example, update the
 `Employeess_1.csv` with the following data:
 
 ```bash
@@ -94,18 +96,18 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-On the script file `Users_Create_Provision.ps1`, set which csv file you would
-like to load, for this example it will be `Employee_1.csv`:
+In the `Users_Create_Provision.ps1` script file, specify which `.csv`
+file you would like to load. For example, `Employee_1.csv`:
 
 ```bash
 #Set Employee List CSV Path
 $EmployeeList = "./Employees_1.csv"
 ```
 
-### Folders
+### Create Folder Structure
 
-There are two options to create folder structures. You create them from a JSON
-file, or upload them from your local drive.
+You can either create a folder structure from a JSON
+file, or upload it from your local drive.
 
 ### Using a JSON file
 
@@ -118,7 +120,7 @@ choose from.
 
 The folder creation section in the script has the folder `Onboarding` hard
 coded. This means that whatever folders are present
-on the `Folder_Structure.json`,
+on the `Folder_Structure.json` file,
 they will be created under this `Onboarding` folder.
 
 ```bash
@@ -127,7 +129,7 @@ $script:OnboardingFolderId = box folders:create 0 "Onboarding" --id-only
 Write-Output "Created a user owned Onboarding folder with id: $($OnboardingFolderId)"
 ```
 
-Set the location of the `Folder_Structure.json`.
+Set the location of the `Folder_Structure.json` file.
 
 ```bash
 #Onboarding Folder Structure: Set either path build off JSON or directly
@@ -138,9 +140,9 @@ $FolderStructureJSONPath = "./Folder_Structure.json"
 
 ### Uploading from a local drive
 
-The script is also shows the example of uploading a folder structure directly
+The script also shows the example of uploading a folder structure directly
 from the local file system.
-If you want to try that, set the location of the local folder to upload:
+If you want to try that, set the path to your local folder:
 
 ```bash
 #Onboarding Folder Structure: Set either path build off JSON or directly
@@ -166,8 +168,7 @@ with $($script:OnboardingFolderId)"
 ## Run the script
 
 Now all you need to do is run the script.
-Make sure when in `powershell` you are at the base directory relative to the
-scripts path per the configurations you specified in `Users_Create_Provision.ps1`:
+Change directory into the `User Creation & Provisioning` folder:
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
@@ -180,7 +181,7 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/User Creation & Provisioning>
 ```
 
-And run the script:
+Run the script:
 
 ```bash
 PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
