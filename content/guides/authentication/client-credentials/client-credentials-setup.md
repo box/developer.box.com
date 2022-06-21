@@ -111,7 +111,7 @@ section at the bottom of the **Configuration** tab in the
   ![App CORS config](../images/app-cors.png)
 </ImageFrame>
 
-## Using SDK's and Client Credentials Grant
+## Using SDKs and Client Credentials Grant
 
 To learn more about Client Credentials Grant for each SDK's head over to:
 
