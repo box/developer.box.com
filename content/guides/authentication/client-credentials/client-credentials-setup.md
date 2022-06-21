@@ -113,7 +113,7 @@ section at the bottom of the **Configuration** tab in the
 
 ## Using SDKs and Client Credentials Grant
 
-To learn more about Client Credentials Grant for each SDK's head over to:
+To learn more about Client Credentials Grant for each SDK head over to:
 
 - [.Net][.Net]
 
