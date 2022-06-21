@@ -190,7 +190,7 @@ with any of our official SDKs, by using the following steps.
 To learn how to use this client head over to the guide on [Making API
 calls](g://api-calls).
 
-## Using SDK's and JSON Web Tokens
+## Using SDKs and JSON Web Tokens
 
 To learn more about JWT for each SDK's head over to:
 
