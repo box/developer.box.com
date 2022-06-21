@@ -90,7 +90,7 @@ With this the application should be able to make API calls to any of the
 
 ## Using SDKs and Application Tokens
 
-To learn more about Application Tokens for each SDK's head over to:
+To learn more about Application Tokens for each SDK head over to:
 
 - [.Net][.Net]
 
