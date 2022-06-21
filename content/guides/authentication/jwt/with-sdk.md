@@ -192,7 +192,7 @@ calls](g://api-calls).
 
 ## Using SDKs and JSON Web Tokens
 
-To learn more about JWT for each SDK's head over to:
+To learn more about JWT for each SDK head over to:
 
 - [.Net][.Net]
 
