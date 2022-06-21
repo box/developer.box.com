@@ -270,7 +270,7 @@ make API calls on behalf of this user.
 
 ## Using SDKs and OAuth 2.0
 
-To learn more about OAuth 2.0 authentication for each SDK's head over to:
+To learn more about OAuth 2.0 authentication for each SDK head over to:
 
 - [.Net][.Net]
 
