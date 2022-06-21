@@ -64,7 +64,7 @@ Our SDKs can be initialized with a Developer Token to create a basic API client.
 
 ## Using SDKs and Developer Tokens
 
-To learn more about Developer Tokens for each SDK's head over to:
+To learn more about Developer Tokens for each SDK head over to:
 
 - [.Net][.Net]
 
