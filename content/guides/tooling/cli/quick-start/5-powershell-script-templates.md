@@ -84,7 +84,7 @@ Isaac,Newton,abc@abc.local
 ```
 
 In the `Users_Create_Provision.ps1` script file, specify which `.csv` 
-file you would like to load. For example, `Employee_1.csv`:
+file you would like to load. For example, `Employees_1.csv`:
 
 ```bash
 #Set Employee List CSV Path
