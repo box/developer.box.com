@@ -228,3 +228,6 @@ i.e.
 loopback
 multifactor
 uploaders
+pre-requisites
+dotnet
+uncomment
