@@ -108,7 +108,7 @@ choose from.
 The folder creation section in the script has the folder `Onboarding` hard 
 coded. This means that whatever folders are present 
 in the `Folder_Structure.json` file, 
-they will be created under this `Onboarding` folder.
+they will be created under the `Onboarding` folder.
 
 ```bash
 #First create Onboarding folder owned by current user
