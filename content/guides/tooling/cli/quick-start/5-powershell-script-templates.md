@@ -76,7 +76,7 @@ You can use the following sample files to load users:
 Each will load 1, 5 or 10 new users.
 
 Customize these files for a test run. For example, update the 
-`Employeess_1.csv` with the following data:
+`Employees_1.csv` with the following data:
 
 ```bash
 firstName,lastName,email
