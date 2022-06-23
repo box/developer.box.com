@@ -15,7 +15,8 @@ create users and provisioning automation [script][script-1]
 template.
 
 This script uses the Box CLI to build and create a user-owned 
-(admin or service account) onboarding folder structure, create managed users in bulk, 
+(admin or service account) onboarding folder structure, 
+create managed users in bulk, 
 and provision such new users by adding them to the newly created 
 folder structure as collaborators with viewer or uploader roles.
 
@@ -155,7 +156,9 @@ with $($script:OnboardingFolderId)"
 ## Run the script
 
 Now all you need to do is run the script.
-Change the directory to the folder containing the script. In this example, it is the `User Creation & Provisioning` folder.
+Change the directory to the folder containing the script. 
+In this example, it is the `User Creation & Provisioning` 
+folder.
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
@@ -220,13 +223,14 @@ Item:
     Sequence ID: '0'
     ETag: '0'
     Name: Onboarding
-Collaborated Managed User Isaac Newton to current user's Onboarding 
-folder for provisioning
+Collaborated Managed User Isaac Newton to current user's 
+Onboarding folder for provisioning
 ```
 
 ## Summary
 
-- You explored automation using a PowerShell script with the Box CLI to provision users
+- You explored automation using a PowerShell script with the 
+Box CLI to provision users
 and create their initial folder tree. 
 
 <Next>I know how to use the sample scripts to automate repetitive tasks</Next>
