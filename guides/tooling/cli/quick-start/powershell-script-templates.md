@@ -105,7 +105,7 @@ file you would like to load. For example, `Employees_1.csv`:
 $EmployeeList = "./Employees_1.csv"
 ```
 
-### Create Folder Structure
+### Create folder structure
 
 You can either create a folder structure from a JSON
 file, or upload it from your local drive.
