@@ -69,7 +69,7 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 
 You must adapt this script to run in your own environment.
 
-### Preparing the user list
+### Prepare the user list
 
 You can use the following sample files to load users:
 `Employees_1.csv`, `Employees_5.csv`, and `Employees_10.csv`. 
