@@ -226,7 +226,7 @@ folder for provisioning
 
 ## Summary
 
-- You explored using a Powershell script with the Box CLI to provision users
+- You explored automation using a PowerShell script with the Box CLI to provision users
 and create their initial folder tree. 
 
 <Next>I know how to use the sample scripts to automate repetitive tasks</Next>
