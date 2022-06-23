@@ -35,7 +35,7 @@ creation of users:
 - using a `.csv` file to load users in bulk
 - have a predetermined folder structure associated to each user
 - define that folder structure using a JSON file
-- or, optionally,  create the folder structure by uploading from a local drive
+- or, optionally, create the folder structure by uploading from a local drive
 
 ## Prerequisites
 
