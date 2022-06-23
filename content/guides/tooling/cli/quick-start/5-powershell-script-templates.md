@@ -15,7 +15,7 @@ create users and provisioning automation [script][script-1]
 template.
 
 This script uses the Box CLI to build and create a user-owned 
-( onboarding folder structure, create managed users in bulk, 
+(admin or service account) onboarding folder structure, create managed users in bulk, 
 and provision such new users by adding them to the newly created 
 folder structure as collaborators with viewer or uploader roles.
 
