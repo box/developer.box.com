@@ -15,7 +15,8 @@ create users and provisioning automation [script][script-1]
 template.
 
 This script uses the Box CLI to build and create a user-owned 
-( onboarding folder structure, create managed users in bulk, 
+(admin or service account) onboarding folder structure, 
+create managed users in bulk, 
 and provision such new users by adding them to the newly created 
 folder structure as collaborators with viewer or uploader roles.
 
@@ -35,7 +36,7 @@ creation of users:
 - using a `.csv` file to load users in bulk
 - have a predetermined folder structure associated to each user
 - define that folder structure using a JSON file
-- or, optionally,  create the folder structure by uploading from a local drive
+- or, optionally, create the folder structure by uploading from a local drive
 
 ## Prerequisites
 
@@ -69,14 +70,14 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 
 You must adapt this script to run in your own environment.
 
-### Preparing the user list
+### Prepare the user list
 
 You can use the following sample files to load users:
 `Employees_1.csv`, `Employees_5.csv`, and `Employees_10.csv`. 
 Each will load 1, 5 or 10 new users.
 
 Customize these files for a test run. For example, update the 
-`Employeess_1.csv` with the following data:
+`Employees_1.csv` with the following data:
 
 ```bash
 firstName,lastName,email
@@ -84,7 +85,7 @@ Isaac,Newton,abc@abc.local
 ```
 
 In the `Users_Create_Provision.ps1` script file, specify which `.csv` 
-file you would like to load. For example, `Employee_1.csv`:
+file you would like to load. For example, `Employees_1.csv`:
 
 ```bash
 #Set Employee List CSV Path
@@ -107,8 +108,8 @@ choose from.
 
 The folder creation section in the script has the folder `Onboarding` hard 
 coded. This means that whatever folders are present 
-on the `Folder_Structure.json` file, 
-they will be created under this `Onboarding` folder.
+in the `Folder_Structure.json` file, 
+they will be created under the `Onboarding` folder.
 
 ```bash
 #First create Onboarding folder owned by current user
@@ -155,7 +156,9 @@ with $($script:OnboardingFolderId)"
 ## Run the script
 
 Now all you need to do is run the script.
-Change directory into the `User Creation & Provisioning` folder:
+Change the directory to the folder containing the script. 
+In this example, it is the `User Creation & Provisioning` 
+folder.
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
@@ -220,13 +223,14 @@ Item:
     Sequence ID: '0'
     ETag: '0'
     Name: Onboarding
-Collaborated Managed User Isaac Newton to current user's Onboarding 
-folder for provisioning
+Collaborated Managed User Isaac Newton to current user's 
+Onboarding folder for provisioning
 ```
 
 ## Summary
 
-- You explored using a Powershell script with the Box CLI to provision users
+- You explored automation using a PowerShell script with the 
+Box CLI to provision users
 and create their initial folder tree. 
 
 <Next>I know how to use the sample scripts to automate repetitive tasks</Next>
