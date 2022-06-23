@@ -155,7 +155,7 @@ with $($script:OnboardingFolderId)"
 ## Run the script
 
 Now all you need to do is run the script.
-Change directory into the `User Creation & Provisioning` folder:
+Change the directory to the folder containing the script. In this example, it is the `User Creation & Provisioning` folder.
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
