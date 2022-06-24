@@ -39,7 +39,7 @@ fullyTranslated: true
 |             |                                                       |
 | ----------- | ----------------------------------------------------- |
 | **認証方法**    | [OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報認証][ccg] |
-| **注目すべき機能** | Webhooks, App Center, and Web App Integrations        |
+| **注目すべき機能** | Webhook、App Center、ウェブアプリ統合                           |
 
 <!-- markdownlint-enable line-length -->
 

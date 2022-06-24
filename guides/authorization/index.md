@@ -48,7 +48,7 @@ fullyTranslated: true
 
 <Message tip>
 
-Published apps are any applications that can be found in our App Center.
+公開アプリとは、App Centerで見つかるアプリケーションのことです。
 
 </Message>
 

@@ -26,7 +26,7 @@ fullyTranslated: true
 ---
 # App Center
 
-The [Box App Center][app-center] is the first place for Box users to find out about applications that they can use in combination with Box. If your application is suited to be used by other enterprises, listing your service in the App Center can be a great way to find new users.
+[Box App Center][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に調べる場所です。アプリケーションが他の会社での使用にも適している場合は、App Centerにサービスを登録すると、新しいユーザーを見つけるのに役立ちます。
 
 <ImageFrame shadow center>
 
@@ -34,33 +34,33 @@ The [Box App Center][app-center] is the first place for Box users to find out ab
 
 </ImageFrame>
 
-## Developing and app or becoming a Box Partner
+## アプリの開発またはBoxパートナーへの参加
 
-If you would more information on developing an application for the Box App Center or becoming a Box Partner, visit our [Box Partner Resources][bp] guides on our community site.
+Box App Center用のアプリケーションの開発またはBoxパートナーへの参加の詳細については、Box Supportサイトの[Box Partner Resources][bp]のガイド (英語) を参照してください。
 
 ## アプリを公開する
 
-Use the following steps to publish an application in the [App Center][app-center].
+[App Center][app-center]でアプリケーションを公開するには、以下の手順に従います。
 
 ### 前提条件
 
 アプリケーションは、以下の要件を満たす必要があります。
 
 * アプリケーションは完成した状態で、実稼働環境での使用準備ができていること。
-* The application leverages OAuth 2.0 authentication, as the App Center does not support any other authentication methods.
+* App CenterではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
 * 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
 
 ### 1. 開発者コンソールにログインする
 
-Navigate to the [Developer Console][devconsole] and select your application to submit to the App Center.
+[開発者コンソール][devconsole]に移動して、App Centerに送信するアプリケーションを選択します。
 
 ### 2. フォームに入力する
 
-Select the "App Center" tab from the top menu.
+上部のメニューで \[App Center] タブを選択します。
 
 <ImageFrame center border shadow>
 
-![App Center panel](./images/app-menu.png)
+![\[App Center\] パネル](./images/app-menu.png)
 
 </ImageFrame>
 
@@ -100,7 +100,7 @@ Select the "App Center" tab from the top menu.
 
 ## アプリケーションを未公開にする
 
-Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the "App Center" panel from the left-hand sidebar. The app can be unpublished from this page.
+承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[App Center] パネルを選択します。このページからアプリを未公開にすることができます。
 
 [app-center]: https://app.box.com/services
 
