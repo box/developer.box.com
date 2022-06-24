@@ -57,6 +57,10 @@ successful use of any newly selected scopes.
 
 Please see our [events guide][eg] for more information.
 
+## Webhooks
+
+Please see our [webhooks guide][wh] for more information.
+
 ## Rate Limits
 
 Please see our [rate limit guide][ratelimit] for more information.
@@ -86,3 +90,4 @@ production content.
 <!-- i18n-disable localize-links -->
 
 [eg]: g://events/event-triggers/sign-events
+[wh]: g://webhooks/triggers#sign-request
