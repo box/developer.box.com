@@ -65,6 +65,31 @@ aliases unless specified. Please double check to ensure all provided signer
 email addresses are valid.
 </Message>
 
+## Redirects
+
+The URLs specified in the `redirect_url` and `declined_redirect_url`
+allow you to redirect signers to a custom landing page
+after signing or declining the sign request.
+For example, if you integrate your application with Box Sign,
+you can redirect signers back to your application
+or to a custom landing page.
+You can set redirect URLs globally for all signers
+as well as for specific signers only.
+This means that Box Sign will use specific URLs
+for signers of your choice, and global
+settings for the rest.
+If you don't configure any redirect URLs
+Box Sign will redirect signers to a default page.
+
+<Message type='warning'> 
+The default page includes the following note:
+"Once the document has been completed by all parties,
+a limited-time link to a finalized copy will be be emailed to you,
+and, if you have a Box account, a copy will be placed in your account."
+If you decide to redirect the signers to a different page, this information
+will not be available to signers.
+</Message>
+
 ## Multiple signers and signing order
 
 Signing order is determined by ordering the provided `order` numbers from
