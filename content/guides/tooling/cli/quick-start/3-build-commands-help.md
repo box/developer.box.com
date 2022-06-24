@@ -24,6 +24,8 @@ If you do not see a command for an endpoint you need, you can build a
    restrictions, token permission requirements, fields, etc. 
 </Message>
 
+<YouTube id='66wlIyS07Aw' />
+
 ## First: Reset browser storage
 
 Now that you've imported the Box API credentials into the CLI you should take a
