@@ -83,9 +83,9 @@ Developer console, all webhooks created by that application get deleted.
 
 [devconsole]: https://app.box.com/developers/console
 
-## Using SDK's and Developer Tokens
+## Using SDKs and Developer Tokens
 
-To learn more about Developer Tokens for each SDK's head over to:
+To learn more about Developer Tokens for each SDK head over to:
 
 - [.Net][.Net]
 

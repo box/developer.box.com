@@ -308,9 +308,9 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 At the end of this flow, the application has an Access Token that can be used to
 make API calls on behalf of this user.
 
-## Using SDK's OAuth 2.0
+## Using SDKs and OAuth 2.0
 
-To learn more about OAuth 2.0 authentication for each SDK's head over to:
+To learn more about OAuth 2.0 authentication for each SDK head over to:
 
 - [.Net][.Net]
 
