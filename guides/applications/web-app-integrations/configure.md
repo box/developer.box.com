@@ -36,7 +36,7 @@ that leverages [OAuth 2.0 authentication][custom-oauth2].
 Then, navigate to the **Integrations** tab and click
 **Create a Web App Integration**.
 
-<ImageFrame center shadow border width='200'>
+<ImageFrame center shadow border>
 
 ![Integration Tab](../images/create_integration.png)
 
@@ -50,12 +50,16 @@ To configure the integration, follow the guidance below for each value.
 
 <!-- markdownlint-disable line-length -->
 
-| Field                     | Description                                                                                                                                                                                                                      |
+| Field  Description |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integration name          | The name of your integration, which users see in the Box Web App when the ** More Options** > **Integrations** menu is selected on a file or folder.                                                                             |
-| Description               | The description of the integration displayed in the Box App Center.                                                                                                                                                             |
-| Supported file extensions | The integration will only appear as an option in the ** More Options** > **Integrations** menu for the selected file extensions.                                                                                                 |
-| Display on shared pages   | Determines if an integration can be shown to external users on a shared page. If enabled, users who are not collaborating on the content will see the integration in the context-menu when browsing items through a shared link. |
+| Integration name | The name of your integration, which users see in the Box Web App when they select the **More Options** > **Integrations** menu on a file or folder. |
+| Description | The description of the integration displayed in the Box App Center. |
+| Supported file extensions | The integration will only appear as an option in the **More Options** > **Integrations** menu for the selected file extensions. |
+| Permissions requirement | Determines what permissions level users need to see the integration. Option **Download permissions are required** allows users to download the file - they will not be able to update it. Option **Full permissions are required** allows users to download and update the file. |
+| Integration Scopes | Specifies the scope of your integration. |
+| Display on shared pages toggle| Determines if an integration can be shown to external users on a shared page. If enabled, users who are not collaborating on the content will see the integration in the context-menu when browsing items through a shared link. |
+| Lock to only allow the current user to overwrite the file using your integration toggle | Determines if different web app integrations can edit the file at the same time. |
+| Integration type | Select the correct integration type. Available options are: **Files**, **Folders**, **Both**. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -63,13 +67,41 @@ To configure the integration, follow the guidance below for each value.
 
 <!-- markdownlint-disable line-length -->
 
-| Field                    | Description                                                                                                                                                                                                                                                                                                                                                             |
+| Field | Description |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User Experience          | Determines whether the integration is a [Popup][pu] or [Server-Side][ssi] Integration.                                                                                                                                                                                                                                                                                  |
-| Preliminary Callback URL | The URL where callback parameters are sent when the user accepts the prompt. In most cases it should be a URL that performs an API call on the application server, but it can be any endpoint configured to accept HTTP requests.                                                                                                                                       |
-| Client Callback URL      | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
+| Client Callback URL | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
+| Preliminary Callback URL | The URL where callback parameters are sent when the user accepts the prompt. In most cases it should be a URL that performs an API call on the application server, but it can be any endpoint configured to accept HTTP requests. |
+| User Experience | Determines whether the integration is a [Popup][pu] or [Server-Side][ssi] Integration. |
+| New window settings | Determines if the application opens in a new tab. |
 
 <!-- markdownlint-enable line-length -->
+
+### Callback Parameters
+
+The "Callback Parameters" section configures the parameters that Box sends to
+the callback URL when a user accepts a confirmation prompt. If this setting is
+not configured, Box does not send any parameters to the callback URL.
+
+The following parameters are available.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter |Description |
+|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `user_id` | The Box [user ID][uid]. This information is used in Popup Integrations in which user authentication is required to complete an action. You can store the Box ID in your application to enable subsequent authentication requests from the integration.|
+| `user_name` | The full name or email address of the Box user. Not all Box users specify their names at all times. |
+| `file_id` | The Box [file ID][fid]. You can use this ID to make Box API calls that affect the file. |
+| `file_name` | The name of the file.  |
+| `file_extension` | The extension of the file. |
+| `auth_code` | The OAuth 2.0 [authorization code][code], which is generated by Box upon successful authentication. Your application must then supply this authorization code to Box in exchange for an OAuth 2.0 Access Token. An authorization header containing a valid Access Token must be included in every Box API request.
+| `redirect_to_box_url` | In Popup Integrations, the URL to which requests are sent by the confirmation prompt. Use this URL to redirect users to the All Files page. This parameter closes the popup panel and refreshes the All Files page to reflect any changes performed by the integration. If you do not want to add this parameter to your application, you can specify the entire URL. **Success**: `#redirect_to_box_url#&status=success&message=Your%20action%20was%20successful%2E`. **Failure**: `#redirect_to_box_url#&status=failure&message=Your%20action%20was%20unsuccessful%2E` |
+
+<!-- markdownlint-enable line-length -->
+
+### Authentication
+
+Switch on the toggle **Enable HTTP Basic Authentication**
+to create a username and password.
 
 ### Integration Status
 
@@ -85,28 +117,6 @@ To configure the integration, follow the guidance below for each value.
  perform maintenance updates or troubleshoot issues. Use this option to
  temporarily take the integration offline for everyone except the application's
  collaborators.
-
-### Callback Parameters
-
-The "Callback Parameters" section configures the parameters that Box sends to
-the callback URL when a user accepts a confirmation prompt. If this setting is
-not configured, Box does not send any parameters to the callback URL.
-
-The following parameters are available.
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `user_id`             | The Box [user ID][uid]. This information is used in Popup Integrations in which user authentication is required to complete an action. You can store the Box ID in your application to enable subsequent authentication requests from the integration.                                                                                                                                                                                                                                                                                                                   |
-| `user_name`           | The full name or email address of the Box user. Not all Box users specify their names at all times.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `file_id`             | The Box [file ID][fid]. You can use this ID to make Box API calls that affect the file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `file_name`           | The name of the file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `file_extension`      | The extension of the file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `auth_code`           | The OAuth 2.0 [authorization code][code], which is generated by Box upon successful authentication. Your application must then supply this authorization code to Box in exchange for an OAuth 2.0 Access Token. An authorization header containing a valid Access Token must be included in every Box API request.                                                                                                                                                                                                                                                       |
-| `redirect_to_box_url` | In Popup Integrations, the URL to which requests are sent by the confirmation prompt. Use this URL to redirect users to the All Files page. This parameter closes the popup panel and refreshes the All Files page to reflect any changes performed by the integration. If you do not want to add this parameter to your application, you can specify the entire URL. **Success**: `#redirect_to_box_url#&status=success&message=Your%20action%20was%20successful%2E`. **Failure**: `#redirect_to_box_url#&status=failure&message=Your%20action%20was%20unsuccessful%2E` |
-
-<!-- markdownlint-enable line-length -->
 
 ## Examples Uses of Box Integrations
 
@@ -145,8 +155,8 @@ same data as the original callback.
 
 <!-- markdownlint-disable line-length -->
 
-| Client Callback URL                                                                                                   | Example                                                  |
-|-----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| Client Callback URL | Example |
+|------------------------------------------------------------------|----------------------------------------------------------|
 | Two GET parameters and one POST parameter: `http://your-client-callback-url.com/?get_param1=value1&get_param2=value2` | `POST data: post_param1=value1initial_callback_response` |
 
 <!-- markdownlint-enable line-length -->
