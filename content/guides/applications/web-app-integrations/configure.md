@@ -49,7 +49,6 @@ To configure the integration, follow the guidance below for each value.
 | Lock to only allow the current user to overwrite the file using your integration toggle | Determines if different web app integrations can edit the file at the same time. |
 | Integration type | Select the correct integration type. Available options are: **Files**, **Folders**, **Both**. |
 
-
 <!-- markdownlint-enable line-length -->
 
 ### Callback Configuration
@@ -64,8 +63,6 @@ To configure the integration, follow the guidance below for each value.
 | New window settings | Determines if the application opens in a new tab. |
 
 <!-- markdownlint-enable line-length -->
-
-
 
 ### Callback Parameters
 
@@ -91,7 +88,8 @@ The following parameters are available.
 
 ### Authentication
 
-Switch on the toggle **Enable HTTP Basic Authentication** to create a username and password.
+Switch on the toggle **Enable HTTP Basic Authentication**
+to create a username and password.
 
 ### Integration Status
 
