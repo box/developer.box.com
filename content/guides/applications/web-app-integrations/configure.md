@@ -69,8 +69,10 @@ To configure the integration, follow the guidance below for each value.
 The **Callback Parameters** section configures the parameters that Box sends to
 the callback URL when a user accepts a confirmation prompt. If this setting is 
 not configured, Box does not send any parameters to the callback URL.
-To add a parameter, you need to select the **Method**, specify the **Parameter name** and add a **Parameter value**. 
-Available methods are **Get**, **Post** and **File**. For example: **Get - userid - #user_id#**.
+To add a parameter, you need to select the **Method**, 
+specify the **Parameter name** and add a **Parameter value**. 
+Available methods are **Get**, **Post** and **File**. 
+For example: **Get - userid - #user_id#**.
 
 The following parameter values are available.
 
