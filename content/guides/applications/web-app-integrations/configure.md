@@ -72,7 +72,7 @@ not configured, Box does not send any parameters to the callback URL.
 To add a parameter, you need to select the **Method**, 
 specify the **Parameter name** and add a **Parameter value**. 
 Available methods are **Get**, **Post** and **File**. 
-For example: **Get - userid - #user_id#**.
+For example: **Get - `userid` - `#user_id#`**.
 
 The following parameter values are available.
 
