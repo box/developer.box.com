@@ -64,8 +64,6 @@ available for folders.
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
 <!-- markdownlint-enable line-length -->
 
-### Sign request
-
 <!-- markdownlint-disable line-length -->
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 <!-- markdownlint-enable line-length -->
