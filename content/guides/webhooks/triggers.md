@@ -58,18 +58,15 @@ available for folders.
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
 | `TASK_ASSIGNMENT.CREATED`   | A task is created                                                                                                   | Yes   | Yes     |
 | `TASK_ASSIGNMENT.UPDATED`   | A task assignment is changed                                                                                        | Yes   | Yes     |
+| `SIGN_REQUEST.SIGNED`       | A sign request is completed                                                                                         | Yes   | Yes     |
+| `SIGN_REQUEST.DECLINED`     | A sign request is declined                                                                                          | Yes   | Yes     |
+| `SIGN_REQUEST.EXPIRED`      | A sign request is expired                                                                                           | Yes   | Yes     |
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
 <!-- markdownlint-enable line-length -->
 
 ### Sign request
 
 <!-- markdownlint-disable line-length -->
-| Event                               | Triggered                                                     |
-|-------------------------------------|---------------------------------------------------------------|
-| `SIGN_REQUEST.SIGNED`               | A sign request is completed                                   |
-| `SIGN_REQUEST.DECLINED`             | A sign request is declined                                    |
-| `SIGN_REQUEST.EXPIRED`              | A sign request is expired                                     |
-
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 <!-- markdownlint-enable line-length -->
 
