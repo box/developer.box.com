@@ -26,7 +26,8 @@ This guide will take you through the following steps.
 2. [Install and configure][two] the CLI
 3. [Run commands][three] with the CLI
 4. Use [options and bulk commands][four]
-5. [Next steps][five]
+5. Explore automation using [Powershell scripts with the CLI][five]
+6. [Next steps][six]
 
 <Next>
   I am ready to get started
@@ -37,4 +38,5 @@ This guide will take you through the following steps.
 [two]: g://tooling/cli/quick-start/install-and-configure/
 [three]: g://tooling/cli/quick-start/build-commands-help/
 [four]: g://tooling/cli/quick-start/options-and-bulk-commands/
-[five]: g:/tooling/cli/quick-start/next-steps/
+[five]: g://tooling/cli/quick-start/powershell-script-templates/
+[six]: g:/tooling/cli/quick-start/next-steps/
