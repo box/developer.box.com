@@ -46,6 +46,10 @@ Box Signのエンドポイントを使用する前に、アプリケーション
 
 詳細については、[イベントガイド][eg]を参照してください。
 
+## Webhook
+
+Please see our [webhooks guide][wh] for more information.
+
 ## レート制限
 
 詳細については、[レート制限ガイド][ratelimit]を参照してください。
@@ -79,3 +83,5 @@ Box Signのエンドポイントを使用する前に、アプリケーション
 <!-- i18n-disable localize-links -->
 
 [eg]: g://events/event-triggers/sign-events
+
+[wh]: g://webhooks/triggers#sign-request

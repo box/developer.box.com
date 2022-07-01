@@ -95,3 +95,23 @@ var client = sdk.getBasicClient('[APP_TOKEN]');
 </Tabs>
 
 これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPI呼び出しを実行できます。
+
+## Using SDKs and Application Tokens
+
+To learn more about Application Tokens for each SDK head over to:
+
+* [.Net][.Net]
+
+* [Java][Java]
+
+* [Python][Python]
+
+* [Node][Node]
+
+[.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens
+
+[Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#box-view-authentication-with-app-token
+
+[Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#box-view-authentication-with-app-tokens
+
+[Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens

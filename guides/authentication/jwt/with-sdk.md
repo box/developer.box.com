@@ -195,3 +195,27 @@ var client = sdk.getAppAuthClient('enterprise');
 2. SDKクライアントを初期化する
 
 このクライアントの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドをご覧ください。
+
+## Using SDKs and JSON Web Tokens
+
+To learn more about JWT for each SDK head over to:
+
+* [.Net][.Net]
+
+* [Java][Java]
+
+* [Python][Python]
+
+* [Node][Node]
+
+* [IOS][IOS]
+
+[.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#server-auth-with-jwt
+
+[Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#server-authentication-with-jwt
+
+[Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#server-auth-with-jwt
+
+[Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#server-auth-with-jwt
+
+[IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#server-auth-with-jwt
