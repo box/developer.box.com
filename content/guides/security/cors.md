@@ -28,7 +28,7 @@ sites (like the Box API) without explicit permission.
 ## How CORS works
 
 When a browser on one domain (for example `company.com`) tries to fetch
-images, files, or even API resources from another domain (`box.com`)
+images, files, or even API resources from another domain (`box.com`),
 the web browser will prevent access to any of those assets unless the right
 CORS headers are present.
 
@@ -146,7 +146,7 @@ the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
 ```
 
-In many cases this has little to do with COR. Instead we recommend checking the
+In many cases this has little to do with CORS. Instead we recommend checking the
 following.
 
 1. **Check your authentication headers** - If the authorization header is not
@@ -163,3 +163,22 @@ following.
    from an incognito window, or from a whole other (not company owned) device.
 
 [mdn_cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+### `Access-Control-Allow-Origin` header issues
+
+If you encounter issues with the `Access-Control-Allow-Origin` header, do the following:
+
+1. **Check if your domain is on the list of allowed origins** - Go to 
+the developer console and open your application. 
+Click on the **Configuration** tab and scroll down. 
+You can add your domain to the list in section **CORS domains**.
+
+<ImageFrame border shadow width='800' center>
+  ![CORS allowlist](./images/cors_allowed_origins.png)
+</ImageFrame>
+
+2. Check if your server is set up correctly when you receive a warning 
+**No 'access-control-allow-origin' header is present on 
+the requested resource**. You can configure your server 
+to handle cross-domain requests or use non-cross-domain 
+requests instead.
