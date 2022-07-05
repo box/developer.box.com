@@ -172,6 +172,7 @@ If you encounter issues with the `Access-Control-Allow-Origin` header, do the fo
 the developer console and open your application. 
 Click on the **Configuration** tab and scroll down. 
 You can add your domain to the list in section **CORS domains**.
+
 <ImageFrame border shadow width='800' center>
   ![CORS allowlist](./images/cors_allowed_origins.png)
 </ImageFrame>
