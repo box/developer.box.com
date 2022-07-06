@@ -37,7 +37,7 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 2. CLIを[インストールして構成する][two]
 3. CLIを使用して[コマンドを実行する][three]
 4. [オプションや一括コマンド][four]を使用する
-5. Explore automation using [Powershell scripts with the CLI][five]
+5. [CLIでのPowerShellスクリプト][five]の使用方法を確認する
 6. [次の手順][six]
 
 <Next>

@@ -28,7 +28,7 @@ fullyTranslated: true
 
 4. [オプションや一括コマンド][four]について学習しました。
 
-5. Explored using the CLI to [run a Powershell script][five]
+5. CLIを使用して[PowerShellスクリプトを実行する][five]方法を確認しました。
 
 次の手順を行うには、以下のリソースをお勧めします。
 

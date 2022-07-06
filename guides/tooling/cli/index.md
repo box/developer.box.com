@@ -39,11 +39,11 @@ Box Command Line Interface (CLI) は、ターミナルウィンドウまたは�
 
 [OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
-## Sample Scripts
+## サンプルスクリプト
 
-Using the Box CLI is great by itself, but it becomes even more powerful when combined with a Powershell script. We've created a [library][scripts] of script templates for you to get started automating repetitive tasks.
+Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組み合わせるとさらに強力になります。繰り返し発生するタスクの自動化を開始できるように、スクリプトテンプレートの[ライブラリ][scripts]を作成しました。
 
-* [User provisioning and initial folder tree creation][script-1]
+* [ユーザーのプロビジョニングと最初のフォルダツリーの作成][script-1]
 
 ## 高度な機能
 
@@ -59,9 +59,9 @@ Using the Box CLI is great by itself, but it becomes even more powerful when com
 
 Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][jwt-page]ガイドを参照してください。
 
-## Box CLI Using Client Credentials Grant Authentication
+## クライアント資格情報許可による認証を使用したBox CLI
 
-If you would rather use our [CCG authentication][ccg] method, check out [this][ccg-page] guide.
+Boxの[CCG認証][ccg]方法を使用する場合は、[こちら][ccg-page]のガイドを参照してください。
 
 [cli]: https://github.com/box/boxcli
 

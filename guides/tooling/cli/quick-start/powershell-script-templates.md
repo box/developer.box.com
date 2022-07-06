@@ -15,17 +15,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/5-powershell-script-templates.md
 fullyTranslated: true
 ---
-# Using PowerShell Scripts with the Box CLI
+# Box CLIでのPowerShellスクリプトの使用
 
-By itself, the CLI is already powerful, but using it alongside a PowerShell script lets you complete repetitive tasks even quicker. We created an example [scripts][scripts] folder within our CLI GitHub repository to help jump start your development.
+CLIはそれ自体がすでに強力ですが、PowerShellスクリプトと併用すると、繰り返し発生するタスクをさらに短時間で完了することができます。Boxでは、開発をすぐに開始できるように、BoxのCLI GitHubリポジトリ内にサンプル[スクリプト][scripts]フォルダを作成しました。
 
-For this step in the quick start, we are going to use the create users and provisioning automation [script][script-1] template.
+クイックスタートのこの手順では、ユーザーの作成とプロビジョニングの自動化[スクリプト][script-1]テンプレートを使用します。
 
 This script uses the Box CLI to build and create a user-owned (admin or service account) onboarding folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader roles.
 
 <message type="warning"></message>
 
-Only service accounts and users with administrative privileges are able to go through this part of the quick start. You can skip this step if you are not a Box administrator or using a service account.
+クイックスタートのこの手順を実行できるのは、管理者権限を持つサービスアカウントまたはユーザーのみです。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップできます。
 
 </Message>
 
@@ -214,7 +214,7 @@ Onboarding folder for provisioning
 
 <Next>
 
-I know how to use the sample scripts to automate repetitive tasks
+サンプルスクリプトを使用して繰り返し発生するタスクを自動化する方法を理解しました
 
 </Next>
 
