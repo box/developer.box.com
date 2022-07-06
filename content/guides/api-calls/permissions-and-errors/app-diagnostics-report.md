@@ -24,7 +24,7 @@ troubleshooting purposes.
 
 <Message type="notice">
 This report is being rolled out gradually to customers. We plan to have the
-report fully released by October 25th.
+report fully released by October 25th, 2021.
 </Message>
 
 ## 1. Click on the **App Diagnostics** Tab
