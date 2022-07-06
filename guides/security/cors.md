@@ -195,8 +195,7 @@ You can add your domain to the list in section **CORS domains**.
 
 </ImageFrame>
 
-2. Check if your server is set up correctly when you receive a warning
-**No 'access-control-allow-origin' header is present on
-the requested resource**. You can configure your server
+2. **Check if your server is set up correctly** - Configure your server
 to handle cross-domain requests or use non-cross-domain
-requests instead.
+requests if you receive a warning **No 'access-control-allow-origin'
+header is present on the requested resource**.
