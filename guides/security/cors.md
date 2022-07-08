@@ -179,3 +179,23 @@ following.
    from an incognito window, or from a whole other (not company owned) device.
 
 [mdn_cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+### `Access-Control-Allow-Origin` header issues
+
+If you encounter issues with the `Access-Control-Allow-Origin` header, do the following:
+
+1. **Check if your domain is on the list of allowed origins** - Go to 
+the developer console and open your application. 
+Click on the **Configuration** tab and scroll down. 
+You can add your domain to the list in section **CORS domains**.
+
+<ImageFrame border shadow center>
+
+![CORS allowlist](./images/cors_allowed_origins.png)
+
+</ImageFrame>
+
+2. **Check if your server is set up correctly** - Configure your server
+to handle cross-domain requests or use non-cross-domain
+requests if you receive a warning **No 'access-control-allow-origin'
+header is present on the requested resource**.
