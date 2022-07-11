@@ -69,4 +69,4 @@ If you would rather use our [CCG authentication][ccg] method, check out
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
 [ccg]: g://authentication/client-credentials
-[ccg-page]: https://github.com/box/boxcli#ccg-authentication
+[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
