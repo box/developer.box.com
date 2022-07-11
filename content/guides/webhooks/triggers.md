@@ -63,7 +63,6 @@ available for folders.
 | `SIGN_REQUEST.EXPIRED`      | A sign request is expired                                                                                           | Yes   | Yes     |
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
 <!-- markdownlint-enable line-length -->
-
 <!-- markdownlint-disable line-length -->
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 <!-- markdownlint-enable line-length -->
