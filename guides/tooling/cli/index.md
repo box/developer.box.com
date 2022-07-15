@@ -87,4 +87,4 @@ Boxの[CCG認証][ccg]方法を使用する場合は、[こちら][ccg-page]の�
 
 [ccg]: g://authentication/client-credentials
 
-[ccg-page]: https://github.com/box/boxcli#ccg-authentication
+[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path

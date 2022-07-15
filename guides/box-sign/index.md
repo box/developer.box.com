@@ -84,4 +84,4 @@ Please see our [webhooks guide][wh] for more information.
 
 [eg]: g://events/event-triggers/sign-events
 
-[wh]: g://webhooks/triggers#sign-request
+[wh]: g://webhooks/triggers

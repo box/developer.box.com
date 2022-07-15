@@ -69,19 +69,14 @@ fullyTranslated: true
 | `SHARED_LINK.UPDATED`       | 共有リンクが更新された                                                | はい         | はい         |
 | `TASK_ASSIGNMENT.CREATED`   | タスクが作成される                                                  | はい         | はい         |
 | `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される                                              | はい         | はい         |
+| `SIGN_REQUEST.COMPLETED`    | A sign request is completed                                | はい         | はい         |
+| `SIGN_REQUEST.DECLINED`     | A sign request is declined                                 | はい         | はい         |
+| `SIGN_REQUEST.EXPIRED`      | A sign request is expired                                  | はい         | はい         |
 | `WEBHOOK.DELETED`           | Webhookが削除される                                              | いいえ        | いいえ        |
 
 <!-- markdownlint-enable line-length -->
 
-### Sign request
-
 <!-- markdownlint-disable line-length -->
-
-| イベント                    | トリガー                        |
-| ----------------------- | --------------------------- |
-| `SIGN_REQUEST.SIGNED`   | A sign request is completed |
-| `SIGN_REQUEST.DECLINED` | A sign request is declined  |
-| `SIGN_REQUEST.EXPIRED`  | A sign request is expired   |
 
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 

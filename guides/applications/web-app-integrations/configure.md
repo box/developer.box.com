@@ -35,7 +35,7 @@ fullyTranslated: true
 
 次に、\[**統合**] タブに移動し、\[**ウェブアプリ統合を作成**] をクリックします。
 
-<ImageFrame center shadow border width="200">
+<ImageFrame center shadow border>
 
 ![\[統合\] タブ](../images/create_integration.png)
 
@@ -49,12 +49,16 @@ fullyTranslated: true
 
 <!-- markdownlint-disable line-length -->
 
-| フィールド            | 説明                                                                                                        |
-| ---------------- | --------------------------------------------------------------------------------------------------------- |
-| 統合名              | 統合の名前。ファイルまたはフォルダの \[**その他のオプション**] > \[**統合**] メニューを選択したときに、Boxウェブアプリでユーザーに表示されます。                       |
-| 説明               | Box App Centerに表示される統合の説明。                                                                                |
-| サポートされているファイル拡張子 | 統合は、選択されているファイル拡張子の \[**その他のオプション**] > \[**統合**] メニューのオプションとしてのみ表示されます。                                   |
-| 共有ページで表示         | 共有ページで外部ユーザーに統合を表示可能にするかどうかを決定します。有効にした場合、コンテンツでコラボレーションしていないユーザーが共有リンクを介して項目を閲覧すると、コンテキストメニューに統合が表示されます。 |
+| フィールド                                                                                   | 説明                                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 統合名                                                                                     | The name of your integration, which users see in the Box Web App when they select the **More Options** > **Integrations** menu on a file or folder.                                                                                                                |
+| 説明                                                                                      | Box App Centerに表示される統合の説明。                                                                                                                                                                                                                                         |
+| サポートされているファイル拡張子                                                                        | The integration will only appear as an option in the **More Options** > **Integrations** menu for the selected file extensions.                                                                                                                                    |
+| Permissions requirement                                                                 | Determines what permissions level users need to see the integration. **Download permissions are required** allows users to download the file - they will not be able to update it. **Full permissions are required** allows users to download and update the file. |
+| Integration scopes                                                                      | Specifies the scope of your integration - either the file/folder from which integration is invoked, or its parent folder.                                                                                                                                          |
+| Display on shared pages toggle                                                          | Determines if an integration can be shown to external users on a shared page. If enabled, users who are not collaborating on the content will see the integration in the context-menu when accessing the items through a shared link.                              |
+| Lock to only allow the current user to overwrite the file using your integration toggle | Determines if different web app integrations can edit the file at the same time.                                                                                                                                                                                   |
+| Integration type                                                                        | Select desired integration type. Available options are: **Files**, **Folders**, **Both**.                                                                                                                                                                          |
 
 <!-- markdownlint-enable line-length -->
 
@@ -62,25 +66,20 @@ fullyTranslated: true
 
 <!-- markdownlint-disable line-length -->
 
-| フィールド            | 説明                                                                                                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ユーザーエクスペリエンス     | 統合が[ポップアップ][pu]統合か[サーバー側][ssi]統合かを判断します。                                                                                                                                                  |
-| 事前コールバックのURL     | ユーザーがプロンプトを受け入れたときにコールバックパラメータの送信先となるURL。これは、アプリケーションサーバーでAPI呼び出しを実行するURLであることがほとんどですが、HTTPリクエストを受け入れるように構成されたエンドポイントにすることもできます。                                                          |
-| クライアントコールバックのURL | ポップアップ統合での最初のリクエストの後に、Boxからの追加のコールバックリクエストを処理します。アプリケーションがRESTメソッドでファイルパラメータを指定した場合、事前コールバックのURLはクライアントから発信できません。そのため、必要なインターフェースをサーバーがユーザーに送信できるように、2番目のリクエストがクライアントからサーバーに送信される必要があります。 |
+| フィールド               | 説明                                                                                                                                                                                        |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| クライアントコールバックのURL    | ポップアップ統合での最初のリクエストの後に、Boxからの追加のコールバックリクエストを処理します。アプリケーションがRESTメソッドでファイルパラメータを指定した場合、事前コールバックのURLはクライアントから発信できません。そのため、必要なインターフェースをサーバーがユーザーに送信できるように、2番目のリクエストがクライアントからサーバーに送信される必要があります。 |
+| 事前コールバックのURL        | ユーザーがプロンプトを受け入れたときにコールバックパラメータの送信先となるURL。これは、アプリケーションサーバーでAPI呼び出しを実行するURLであることがほとんどですが、HTTPリクエストを受け入れるように構成されたエンドポイントにすることもできます。                                                          |
+| ユーザーエクスペリエンス        | 統合が[ポップアップ][pu]統合か[サーバー側][ssi]統合かを判断します。                                                                                                                                                  |
+| New window settings | Determines if the application opens in a new tab.                                                                                                                                         |
 
 <!-- markdownlint-enable line-length -->
 
-### 統合ステータス
-
-* **開発**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示および使用できます。このオプションは、アプリケーションがまだ開発中でテストの実施中である場合に最もよく使用されます。
-* **オンライン**: 統合は、すべてのBoxユーザーが表示し、使用できます。このオプションは、開発が完了し、アプリケーションをApp Centerで公開する準備ができている場合に最もよく使用されます。
-* **メンテナンス**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示し、使用できます。このオプションは、統合がApp Centerで公開された後、メンテナンスでの更新を実行したり問題をトラブルシューティングしたりする必要がある場合に最もよく使用されます。このオプションを使用すると、アプリケーションのコラボレータ以外のすべてのユーザーに対して統合が一時的にオフラインになります。
-
 ### コールバックパラメータ
 
-\[コールバックパラメータ] セクションでは、ユーザーが確認プロンプトを受け入れるとBoxからコールバックURLに送信されるパラメータを構成します。この設定が構成されていない場合、BoxからコールバックURLにパラメータが送信されません。
+The **Callback Parameters** section configures the parameters that Box sends to the callback URL when a user accepts a confirmation prompt. If this setting is not configured, Box does not send any parameters to the callback URL. To add a parameter, you need to select the **Method**, specify the **Parameter name** and add a **Parameter value**. Available methods are **Get**, **Post** and **File**. For example: **Get - `userid` - `#user_id#`**.
 
-以下のパラメータが使用可能です。
+The following parameter values are available.
 
 <!-- markdownlint-disable line-length -->
 
@@ -96,7 +95,17 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-## Box統合の使用例
+### 認証
+
+Switch on the toggle **Enable HTTP Basic Authentication** to create a username and password.
+
+### 統合ステータス
+
+* **開発**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示および使用できます。このオプションは、アプリケーションがまだ開発中でテストの実施中である場合に最もよく使用されます。
+* **オンライン**: 統合は、すべてのBoxユーザーが表示し、使用できます。このオプションは、開発が完了し、アプリケーションをApp Centerで公開する準備ができている場合に最もよく使用されます。
+* **メンテナンス**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示し、使用できます。このオプションは、統合がApp Centerで公開された後、メンテナンスでの更新を実行したり問題をトラブルシューティングしたりする必要がある場合に最もよく使用されます。このオプションを使用すると、アプリケーションのコラボレータ以外のすべてのユーザーに対して統合が一時的にオフラインになります。
+
+## Example Use Cases of Box Integrations
 
 ユーザーがポップアップ統合を選択すると、Boxから事前コールバックのURLにコールバックリクエストが送信されます。これにより、構成済みのコールバックパラメータがサーバーに送信されます。クライアントが必要なデータを最初のリクエストからすべて取得できない場合は、Boxが2番目のリクエストを送信することもあります。
 

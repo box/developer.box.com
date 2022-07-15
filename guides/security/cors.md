@@ -133,3 +133,17 @@ request did not succeed).
 2. **VPNやプロキシなどでブロックされたリクエストがないか確認する** - 場合によっては、VPN、会社のプロキシ、ブラウザの機能拡張、DNSプロバイダ、またはネットワークトラフィックを妨害する可能性があるその他のサービスによってBox APIがブロックされている可能性があります。このようなサービスはどれも、リクエストをインターセプトし、必要な`Access-Control-Allow-Origin`ヘッダーが含まれていないまったく新しいリクエストを返す場合があります。このケースをテストするには、ブラウザ以外の環境、シークレットウィンドウ、またはまったく別の (会社が所有していない) デバイスから同じAPI呼び出しを実行してみてください。
 
 [mdn_cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+### `Access-Control-Allow-Origin` header issues
+
+If you encounter issues with the `Access-Control-Allow-Origin` header, do the following:
+
+1. **Check if your domain is on the list of allowed origins** - Go to the developer console and open your application. Click on the **Configuration** tab and scroll down. You can add your domain to the list in section **CORS domains**.
+
+<ImageFrame border shadow center>
+
+![CORS allowlist](./images/cors_allowed_origins.png)
+
+</ImageFrame>
+
+2. **Check if your server is set up correctly** - Configure your server to handle cross-domain requests or use non-cross-domain requests if you receive a warning **No 'access-control-allow-origin' header is present on the requested resource**.
