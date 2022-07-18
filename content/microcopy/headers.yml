@@ -108,7 +108,7 @@ secondary:
   notifications:
     // display: |-
       A boolean that determines whether to show the orange notification bar in the header
-    display: true
+    display: "false"
 
     // message: |-
       The content of the notification
