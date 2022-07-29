@@ -22,7 +22,6 @@ troubleshooting purposes.
   for real-time troubleshooting in the future.
 </Message>
 
-
 ## 1. Click on the **App Diagnostics** Tab
 
 To run the App Diagnostics Report, click the **App Diagnostics** option located
