@@ -26,7 +26,7 @@ fullyTranslated: true
 
 ## V2
 
-### Files and Folders
+### ファイルとフォルダ
 
 以下は、V2 Webhookをトリガーするよう構成できるイベントのリストです。ファイルに対してのみ使用できるイベントや、フォルダに対してのみ使用できるイベントもあります。
 
@@ -70,8 +70,8 @@ fullyTranslated: true
 | `TASK_ASSIGNMENT.CREATED`   | タスクが作成される                                                  | はい         | はい         |
 | `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される                                              | はい         | はい         |
 | `SIGN_REQUEST.COMPLETED`    | A sign request is completed                                | はい         | はい         |
-| `SIGN_REQUEST.DECLINED`     | A sign request is declined                                 | はい         | はい         |
-| `SIGN_REQUEST.EXPIRED`      | A sign request is expired                                  | はい         | はい         |
+| `SIGN_REQUEST.DECLINED`     | 署名リクエストが拒否される                                              | はい         | はい         |
+| `SIGN_REQUEST.EXPIRED`      | 署名リクエストの有効期限が切れる                                           | はい         | はい         |
 | `WEBHOOK.DELETED`           | Webhookが削除される                                              | いいえ        | いいえ        |
 
 <!-- markdownlint-enable line-length -->

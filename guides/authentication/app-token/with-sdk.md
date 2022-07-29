@@ -96,9 +96,9 @@ var client = sdk.getBasicClient('[APP_TOKEN]');
 
 これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPI呼び出しを実行できます。
 
-## Using SDKs and Application Tokens
+## SDKとアプリケーショントークンの使用
 
-To learn more about Application Tokens for each SDK head over to:
+各SDKのアプリケーショントークンの詳細については、以下を参照してください。
 
 * [.Net][.Net]
 

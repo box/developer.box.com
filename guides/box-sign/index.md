@@ -48,7 +48,7 @@ Box Signのエンドポイントを使用する前に、アプリケーション
 
 ## Webhook
 
-Please see our [webhooks guide][wh] for more information.
+詳細については、[Webhookガイド][wh]を参照してください。
 
 ## レート制限
 

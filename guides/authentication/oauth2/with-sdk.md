@@ -282,9 +282,9 @@ sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
 
 このフローが終了すると、アプリケーションには、このユーザーの代わりにAPI呼び出しを実行するために使用できるアクセストークンが用意されます。
 
-## Using SDKs and OAuth 2.0
+## SDKとOAuth 2.0の使用
 
-To learn more about OAuth 2.0 authentication for each SDK head over to:
+各SDKのOAuth 2.0認証の詳細については、以下を参照してください。
 
 * [.Net][.Net]
 

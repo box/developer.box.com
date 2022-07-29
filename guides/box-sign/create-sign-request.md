@@ -63,11 +63,11 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 
 ## リダイレクト
 
-The URLs specified in the `redirect_url` and `declined_redirect_url` allow you to redirect signers to a custom landing page after signing or declining the sign request. For example, if you integrate your application with Box Sign, you can redirect signers back to your application or to a custom landing page. You can set redirect URLs globally for all signers as well as for specific signers only. This means that Box Sign will use specific URLs for signers of your choice, and global settings for the rest. If you don't configure any redirect URLs Box Sign will redirect signers to a default page.
+`redirect_url`および`declined_redirect_url`で指定したURLにより、署名するか署名リクエストを拒否した署名者をカスタムランディングページにリダイレクトすることができます。たとえば、アプリケーションをBox Signと統合した場合は、署名者をアプリケーションにリダイレクトすることもカスタムランディングページにリダイレクトすることもできます。リダイレクトURLは、すべての署名者を対象にグローバルに設定することも、特定の署名者のみを対象に設定することもできます。つまり、Box Signでは、選択した署名者に特定のURLを使用し、残りの署名者にグローバルな設定を使用します。リダイレクトURLを設定しなかった場合、Box Signでは署名者がデフォルトのページにリダイレクトされます。
 
 <Message type="warning">
 
-The default page includes the following note: "Once the document has been completed by all parties, a limited-time link to a finalized copy will be be emailed to you, and, if you have a Box account, a copy will be placed in your account." If you decide to redirect the signers to a different page, this information will not be available to signers.
+デフォルトのページには「すべての関係者がドキュメントでの作業を完了すると、期限が設定された最終版へのリンクがメールで届きます。また、Boxアカウントをお持ちの場合は、アカウントにコピーが保存されます。」と表示されます。署名者を別のページにリダイレクトする場合、この情報は署名者に表示されなくなります。
 
 </Message>
 

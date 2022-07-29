@@ -196,9 +196,9 @@ var client = sdk.getAppAuthClient('enterprise');
 
 このクライアントの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドをご覧ください。
 
-## Using SDKs and JSON Web Tokens
+## SDKとJSONウェブトークンの使用
 
-To learn more about JWT for each SDK head over to:
+各SDKのJWTの詳細については、以下を参照してください。
 
 * [.Net][.Net]
 

@@ -113,9 +113,9 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 </ImageFrame>
 
-## Using SDKs and Client Credentials Grant
+## SDKとクライアント資格情報許可の使用
 
-To learn more about Client Credentials Grant for each SDK head over to:
+各SDKのクライアント資格情報許可の詳細については、以下を参照してください。
 
 * [.Net][.Net]
 

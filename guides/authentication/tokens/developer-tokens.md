@@ -78,9 +78,9 @@ Box SDKは、基本のAPIクライアントを作成する際に、開発者ト�
 
 [devconsole]: https://app.box.com/developers/console
 
-## Using SDKs and Developer Tokens
+## SDKと開発者トークンの使用
 
-To learn more about Developer Tokens for each SDK head over to:
+各SDKの開発者トークンの詳細については、以下を参照してください。
 
 * [.Net][.Net]
 
