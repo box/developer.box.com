@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -11,20 +11,20 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/cli-docs
 is_index: false
-id: tooling/cli/jwt-cli
+id: cli/cli-docs/jwt-cli
 type: guide
 total_steps: 1
-sibling_id: tooling/cli
-parent_id: tooling/cli
-next_page_id: ''
-previous_page_id: tooling/cli
+sibling_id: cli/cli-docs
+parent_id: cli/cli-docs
+next_page_id: cli/cli-docs
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/jwt-cli.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/jwt-cli.md
 ---
-# (Appendix) Box CLI Using JWT Authentication
+# Box CLI with JWT Authentication
 
 Previously, our [Box CLI Quick Start Guide][qs], followed the JWT or server
 authentication application setup flow. Since we released a new OAuth 2.0
@@ -253,9 +253,9 @@ assumes you do not do this.
 
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [aa]: g://authentication/jwt/jwt-setup/#application-access
-[three]: g://tooling/cli/quick-start/build-commands-help/
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+[three]: g://cli/quick-start/build-commands-help/
+[four]: g://cli/quick-start/options-and-bulk-commands/
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [commands]: https://github.com/box/boxcli#command-topics
-[qs]: g://tooling/cli/quick-start/
+[qs]: g://cli/quick-start/
