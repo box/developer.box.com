@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 35
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -24,17 +24,17 @@ alias_paths:
 The Box Command Line Interface (CLI) is a tool for making requests to
 Box APIs from your terminal window or command prompt.
 
-## Prerequisites
+## Quick start
 
 [Get started using the Box CLI with OAuth 2.0][qs].
 
-## Sample Scripts
+## Sample scripts
 
 Using the Box CLI is great by itself, but it becomes even more powerful when
 combined with a Powershell script. We've created a [library][scripts]
 of script templates for you to get started automating repetitive tasks.
 
-- [User provisioning and initial folder tree creation][script-1]
+- [Explore sample scripts][scripts-docs]
 
 ## Advanced
 
@@ -61,12 +61,12 @@ If you would rather use our [CCG authentication][ccg] method, check out
 [cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
 [cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path
-[qs]: g://tooling/cli/quick-start/
+[qs]: g://cli/quick-start/
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 [jwt]: g://authentication/jwt
-[jwt-page]: g://tooling/cli/jwt-cli
+[jwt-page]: g://cli/cli-docs/jwt-cli
 [scripts]: https://github.com/box/boxcli/tree/main/examples
-[script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
+[scripts-docs]: g://cli/scripts/index
 [ccg]: g://authentication/client-credentials
-[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
+[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configuremd#box-configureenvironmentsadd-path

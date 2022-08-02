@@ -1,5 +1,6 @@
 ---
 type: quick-start
+rank: 0
 hide_step_number: true
 hide_in_page_nav: true
 icon: FiCode
@@ -34,9 +35,9 @@ This guide will take you through the following steps.
 </Next>
 
 [commands]: https://github.com/box/boxcli#command-topics
-[one]: g://tooling/cli/quick-start/create-oauth-app/
-[two]: g://tooling/cli/quick-start/install-and-configure/
-[three]: g://tooling/cli/quick-start/build-commands-help/
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
-[five]: g://tooling/cli/quick-start/powershell-script-templates/
-[six]: g:/tooling/cli/quick-start/next-steps/
+[one]: g://cli/quick-start/create-oauth-app/
+[two]: g://cli/quick-start/install-and-configure/
+[three]: g://cli/quick-start/build-commands-help/
+[four]: g://cli/quick-start/options-and-bulk-commands/
+[five]: g://cli/quick-start/powershell-script-templates/
+[six]: g://cli/quick-start/next-steps/
