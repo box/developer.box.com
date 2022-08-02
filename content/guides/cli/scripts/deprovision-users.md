@@ -38,15 +38,15 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
   The output should be similar to the following:
 
-    ```bash
-     PowerShell 7.2.5
-     Copyright (c) Microsoft Corporation.
+   ```bash
+    PowerShell 7.2.5
+    Copyright (c) Microsoft Corporation.
 
-     https://aka.ms/powershell
-     Type 'help' to get help.
-
-     PS /Users/user/repos/boxcli/examples> 
-    ```
+    https://aka.ms/powershell
+    Type 'help' to get help.
+     
+    PS /Users/user/repos/boxcli/examples> 
+  ```
 
    <message>
      If you encounter issues make sure you installed both 
