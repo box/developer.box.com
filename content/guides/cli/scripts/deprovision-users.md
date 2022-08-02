@@ -30,31 +30,31 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 1. Install [PowerShell][pwsh].
 
-    <message>
-    If you encounter issues make sure you installed both 
-    [dotnet core](https://dotnet.microsoft.com/download) and 
-    [PowerShell][pwsh].
-    </message>
-
 2. Test PowerShell:
 
    ```bash
     pwsh 
    ```
 
-    The output should be similar to the following:
+  The output should be similar to the following:
 
-   ```bash
-    PowerShell 7.2.5
-    Copyright (c) Microsoft Corporation.
+    ```bash
+     PowerShell 7.2.5
+     Copyright (c) Microsoft Corporation.
 
-    https://aka.ms/powershell
-    Type 'help' to get help.
+     https://aka.ms/powershell
+     Type 'help' to get help.
 
-    PS /Users/user/repos/boxcli/examples> 
-   ```
+     PS /Users/user/repos/boxcli/examples> 
+    ```
 
-### Configured Box application
+   <message>
+     If you encounter issues make sure you installed both 
+     [dotnet core](https://dotnet.microsoft.com/download) and 
+     [PowerShell][pwsh].
+   </message>
+
+### Box application
 
 To use the script, you will need a Box application. If you don't have one
 go to your [developer console][console], and follow the guide 
@@ -81,10 +81,10 @@ go to your [developer console][console], and follow the guide
    by providing their email addresses. 
    For example:
 
-    ```bash
+   ```bash
     name,email
     Managed User 1,ManagedUser1@test.com
-    ```
+   ```
 
 4. (Optional) To skip transfer of user content before
    deleting the user, set the `TransferContent` parameter to `N`.
@@ -103,17 +103,17 @@ go to your [developer console][console], and follow the guide
 ## Run the script
 
 1. Change the directory to the folder containing the script. 
-    In this example, it is the `User Deprovisioning` folder.
+   In this example, it is the `User Deprovisioning` folder.
 
-   ```bash
-    rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-    PowerShell 7.2.4
-    Copyright (c) Microsoft Corporation.
-
-    https://aka.ms/powershell
-    Type 'help' to get help.
-    PS /home/rvb/box-cli/examples/User Deprovisioning>
-   ```
+    ```bash
+     rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
+     PowerShell 7.2.4
+     Copyright (c) Microsoft Corporation.
+     
+     https://aka.ms/powershell
+     Type 'help' to get help.
+     PS /home/rvb/box-cli/examples/User Deprovisioning>
+    ```
 
 2. Run the script:
 
@@ -121,8 +121,8 @@ go to your [developer console][console], and follow the guide
     ./Users_Deprovision.ps1
    ```
 
-    When the script run is completed, you will see the following, 
-    or similar, message:
+   When the script run is completed, you will see the following 
+   message, or a similar one:
 
    ```bash
     Transfered employee content Managed User 1
