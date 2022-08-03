@@ -28,30 +28,30 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 ### MacOS & Linux
 
-1. Install [PowerShell][pwsh].
-
-2. Test PowerShell:
+Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
    ```bash
     pwsh 
    ```
 
-  The output should be similar to the following:
+Depending on the directory you are
+running the command in, the output may differ.
+For example:
 
    ```bash
-    PowerShell 7.2.5
-    Copyright (c) Microsoft Corporation.
+   PowerShell 7.2.5
+   Copyright (c) Microsoft Corporation.
 
-    https://aka.ms/powershell
-    Type 'help' to get help.
+   https://aka.ms/powershell
+   Type 'help' to get help.
      
-    PS /Users/user/repos/boxcli/examples> 
-  ```
+   PS /Users/user/repos/boxcli/examples> 
+   ```
 
    <message>
-     If you encounter issues make sure you installed both 
-     [dotnet core](https://dotnet.microsoft.com/download) and 
-     [PowerShell][pwsh].
+      If you encounter issues make sure you installed both 
+      [dotnet core](https://dotnet.microsoft.com/download) and 
+      [PowerShell][pwsh].
    </message>
 
 ### Box application
@@ -62,67 +62,67 @@ go to your [developer console][console], and follow the guide
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository:
+Clone the `boxcli` GitHub repository 
+or download the files from [`examples`][examples] directory.
 
-    ```bash
+   ```bash
     git clone https://github.com/box/boxcli.git
-    ```
-
-    You can also download the files from [`examples`][examples] directory.
-
-2. Set your own path to the CSV file with the list of employees.
-
-   ```bash
-   $EmployeeList = "./Employees_to_delete.csv"
    ```
 
-3. Customize the `Employees_to_delete.csv` input file of 
-   employee accounts you want to delete 
-   by providing their email addresses. 
-   For example:
+Set your own path to the CSV file with the list of employees.
 
    ```bash
-    name,email
-    Managed User 1,ManagedUser1@test.com
+    $EmployeeList = "./Employees_to_delete.csv"
    ```
 
-4. (Optional) To skip transfer of user content before
+Customize the `Employees_to_delete.csv` input file of 
+employee accounts you want to delete 
+by providing their email addresses. 
+For example:
+
+   ```bash
+     name,email
+     Managed User 1,ManagedUser1@test.com
+   ```
+
+(Optional) To skip transfer of user content before
    deleting the user, set the `TransferContent` parameter to `N`.
 
    ```bash
-   $TransferContent = "N"
+    $TransferContent = "N"
    ```
 
-5. (Optional) Change the `EmployeeArchiveFolderName` 
+(Optional) Change the `EmployeeArchiveFolderName` 
    to any name of your choice.
 
    ```bash
-   $EmployeeArchiveFolderName = "Employee Archive"
+    $EmployeeArchiveFolderName = "Employee Archive"
    ```
 
 ## Run the script
 
-1. Change the directory to the folder containing the script. 
+Change the directory to the folder containing the script. 
    In this example, it is the `User Deprovisioning` folder.
+   
+   ```bash
+   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
+   PowerShell 7.2.4
+   Copyright (c) Microsoft Corporation.
 
-    ```bash
-     rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-     PowerShell 7.2.4
-     Copyright (c) Microsoft Corporation.
+   https://aka.ms/powershell
+   Type 'help' to get help.
      
-     https://aka.ms/powershell
-     Type 'help' to get help.
-     PS /home/rvb/box-cli/examples/User Deprovisioning>
-    ```
+   PS /home/rvb/box-cli/examples/User Deprovisioning>
+   ```
 
-2. Run the script:
-
+Run the script.
+   
    ```bash
     ./Users_Deprovision.ps1
    ```
-
-   When the script run is completed, you will see the following 
-   message, or a similar one:
+   
+When the script run is completed, you will see the following 
+output or a similar one.
 
    ```bash
     Transfered employee content Managed User 1
