@@ -1,18 +1,18 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: false
-id: tooling/cli/quick-start/options-and-bulk-commands
+id: cli/quick-start/options-and-bulk-commands
 rank: 4
 total_steps: 6
-sibling_id: tooling/cli/quick-start
-parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/powershell-script-templates
-previous_page_id: tooling/cli/quick-start/build-commands-help
+sibling_id: cli/quick-start
+parent_id: cli/quick-start
+next_page_id: cli/quick-start/powershell-script-templates
+previous_page_id: cli/quick-start/build-commands-help
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/4-options-and-bulk-commands.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/4-options-and-bulk-commands.md
 ---
 # Using Options and Bulk Commands
 
