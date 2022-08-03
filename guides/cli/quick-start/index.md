@@ -18,7 +18,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/0-index.md
 ---
-# Learn to use the Box CLI with OAuth 2.0
+# Use Box CLI with OAuth 2.0
 
 <!--alex ignore executed-->
 
