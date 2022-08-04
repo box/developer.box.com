@@ -105,11 +105,11 @@ Make sure your `.csv` file has two columns with the following headers: **Email**
  
 An [example input `.csv` file][examplecsv] containing emails and zone names is provided along with this script, and its content looks as follows:
 
-  | Email|Region|
-  |------|-------|
-  |betty@company.com|US|
-  |roger@company.com|France|
-  |sally@company.com|JapanSingapore|
+| Email|Region|
+|------|-------|
+|betty@company.com|US|
+|roger@company.com|France|
+|sally@company.com|JapanSingapore|
 
 ## Configure the script
 
@@ -129,18 +129,18 @@ $adminEmail = "john@box.com"
 ## Run the script
 
 Change the directory to the folder containing the script. 
-   In this example, it is the `Mass Update User Zones` folder.
+In this example, it is the `Mass Update User Zones` folder.
    
-   ```bash
-   rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
+```bash
+rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
+PowerShell 7.2.4
+Copyright (c) Microsoft Corporation.
 
-   https://aka.ms/powershell
-   Type 'help' to get help.
+https://aka.ms/powershell
+Type 'help' to get help.
 
-   PS /home/rvb/box-cli/examples/Mass Update User Zones>
-   ```
+PS /home/rvb/box-cli/examples/Mass Update User Zones>
+```
 
 Run the script.
    
@@ -173,8 +173,4 @@ You have access to these log files:
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [examplecsv]: https://github.com/box/boxcli/blob/main/examples/Mass%20Update%20User%20Zones/User_Zones_Update.csv
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-[quickstart]: g://cli/quick-start/create-oauth-app/
 [console]: https://app.box.com/developers/console
-[auth]: g://authentication/oauth2/oauth2-setup
-[examples]:https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning
-[employeelist]:[https://github.com/box/boxcli/blob/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L12
