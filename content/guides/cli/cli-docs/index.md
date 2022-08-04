@@ -5,7 +5,7 @@ related_guides:
   - authentication/jwt
   - authentication/jwt/jwt-setup
 ---
-# CLI guides
+# CLI additional guides
 
 This directory lists additional guides you can use 
 to work with CLI. 
