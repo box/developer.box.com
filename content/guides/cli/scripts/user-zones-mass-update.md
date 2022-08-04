@@ -83,6 +83,21 @@ Make sure your `.csv` file has two columns with the following headers: **Email**
 
 * **Email** contains the primary email address of a Box user. 
 * **Region**  contains the user-friendly name for the zone to which the user will be assigned. This name is defined in the [ZonesTable][zonestable] that is a hash table defining zones. The keys are the zones' user-friendly names, and the corresponding value is the global ID of the zone. 
+
+```bash
+ $ZonesTable = @{
+ US = "100001"             #US
+ GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
+ Australia = "100003"      #Australia
+ Japan = "100004"          #Japan with in region uploads/downloads/previews
+ Canada = "100005"         #Canada
+ JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
+ UKGermany = "100008"      #UK/Germany
+ UK = "100009"             #UK with in region uploads/downloads/previews
+ France = "100012"         #France
+ }
+
+```
   
 <message>
   Consult the BC or CSM contact to get the IDs corresponding to the zones enabled in a specific enterprise.
