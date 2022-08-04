@@ -17,7 +17,7 @@ previous_page_id: cli/cli-docs/jwt-cli
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/index.md
 ---
-# CLI guides
+# CLI additional guides
 
 This directory lists additional guides you can use
 to work with CLI.
