@@ -11,7 +11,7 @@ required_guides:
 related_resources: []
 
 ---
-# Deprovision users
+# Deprovision users and archive folders
 
 This script allows you to deprovision and delete a list of users. 
 It performs the following steps:
