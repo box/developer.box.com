@@ -134,16 +134,16 @@ request did not succeed).
 
 [mdn_cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
-### `Access-Control-Allow-Origin` header issues
+### `Access-Control-Allow-Origin`ヘッダーの問題
 
-If you encounter issues with the `Access-Control-Allow-Origin` header, do the following:
+`Access-Control-Allow-Origin`ヘッダーで問題が発生した場合は、以下の手順を実行します。
 
-1. **Check if your domain is on the list of allowed origins** - Go to the developer console and open your application. Click on the **Configuration** tab and scroll down. You can add your domain to the list in section **CORS domains**.
+1. **使用するドメインが許可済みオリジンのリストに存在するかどうかを確認する** - 開発者コンソールに移動して、アプリケーションを開きます。\[**構成**] タブをクリックし、下にスクロールして、\[**CORSドメイン**] セクションでリストにドメインを追加できます。
 
 <ImageFrame border shadow center>
 
-![CORS allowlist](./images/cors_allowed_origins.png)
+![CORS許可リスト](./images/cors_allowed_origins.png)
 
 </ImageFrame>
 
-2. **Check if your server is set up correctly** - Configure your server to handle cross-domain requests or use non-cross-domain requests if you receive a warning **No 'access-control-allow-origin' header is present on the requested resource**.
+2. **サーバーが正しく設定されているかどうかを確認する** - クロスドメインリクエストを処理するか、**No 'access-control-allow-origin' header is present on the requested resource (リクエストしたリソースには「access-control-allow-origin」ヘッダーが存在しません)** という警告が表示された場合は非クロスドメインリクエストを使用するようサーバーを構成します。

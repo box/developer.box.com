@@ -69,7 +69,7 @@ fullyTranslated: true
 | `SHARED_LINK.UPDATED`       | 共有リンクが更新された                                                | はい         | はい         |
 | `TASK_ASSIGNMENT.CREATED`   | タスクが作成される                                                  | はい         | はい         |
 | `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される                                              | はい         | はい         |
-| `SIGN_REQUEST.COMPLETED`    | A sign request is completed                                | はい         | はい         |
+| `SIGN_REQUEST.COMPLETED`    | 署名リクエストが完了する                                               | はい         | はい         |
 | `SIGN_REQUEST.DECLINED`     | 署名リクエストが拒否される                                              | はい         | はい         |
 | `SIGN_REQUEST.EXPIRED`      | 署名リクエストの有効期限が切れる                                           | はい         | はい         |
 | `WEBHOOK.DELETED`           | Webhookが削除される                                              | いいえ        | いいえ        |
