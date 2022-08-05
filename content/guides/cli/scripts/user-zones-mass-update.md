@@ -12,7 +12,7 @@ required_guides:
 related_resources: []
 
 ---
-# Assign users to zones
+# Update user zones
 
 This [script][script] provisions users to a specific 
 data residency zone within a Multizone Box tenant.
