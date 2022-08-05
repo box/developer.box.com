@@ -14,10 +14,10 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/deprovision-users
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: ''
+next_page_id: cli/scripts/user-zones-mass-update
 previous_page_id: cli/scripts/provision-users-folders
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
@@ -69,7 +69,8 @@ If you encounter issues make sure you installed both
 
 ### Box application
 
-To use the script, you will need a Box application. If you don't have one
+To use the script, you will need a Box application
+with OAuth 2.0 authentication. If you don't have one,
 go to your [developer console][console], and follow the guide
 [Setup with OAuth 2.0][auth].
 
