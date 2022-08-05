@@ -230,7 +230,6 @@ i.e.
 loopback
 multifactor
 uploaders
-pre-requisites
 dotnet
 FedRAMP
 gov.com
@@ -257,3 +256,6 @@ sign_requests
 boxSkillsCards
 skill_id
 uncomment
+uncomment
+ZonesTable
+JapanSingapore

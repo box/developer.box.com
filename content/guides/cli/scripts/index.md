@@ -22,6 +22,8 @@ provides several PowerShell scripts that allow
 
 * [Provision users and folders][1]
 * [Deprovision and delete users][2]
+* [Assign users to zones][3]
 
 [1]: g://cli/quick-start/powershell-script-templates
 [2]: g://cli/scripts/deprovision-users
+[3]: g://cli/scripts/user-zones-mass-update
