@@ -232,7 +232,7 @@
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
+  "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
   // The link to navigate to when the CTA is clicked
   "headers.secondary.notifications.href": "https://box.com/hack4good",
   // The text of the CTA
