@@ -23,7 +23,7 @@ previous_page_id: cli/scripts/deprovision-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/user-zones-mass-update.md
 ---
-# Assign users to zones
+# Update user zones
 
 This [script][script] provisions users to a specific
 data residency zone within a Multizone Box tenant.

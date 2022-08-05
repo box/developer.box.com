@@ -22,7 +22,7 @@ previous_page_id: cli/scripts/provision-users-folders
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
 ---
-# Deprovision users
+# Deprovision users and archive folders
 
 This script allows you to deprovision and delete a list of users.
 It performs the following steps:
