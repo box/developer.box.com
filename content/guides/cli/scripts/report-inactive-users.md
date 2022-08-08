@@ -88,8 +88,8 @@ parameter.
 
    ```bash
     $ReportOutputFile = $ReportName + ".csv"
-
    ```
+
 (Optional) To change the list of event types, define the list for `eventType` parameter.
 
    ```bash
