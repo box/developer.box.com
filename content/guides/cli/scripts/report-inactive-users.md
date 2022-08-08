@@ -1,9 +1,11 @@
 ---
-rank: 8
+rank: 6
 related_endpoints: []
 related_guides:
   - authentication/oauth2
-  - cli/quick-start/powershell-script-templates
+  - cli/scripts/provision-users-folders
+  - cli/scripts/deprovision-users
+  - cli/scripts/user-zones-mass-update
 related_pages:
   - sdks-and-tools
 required_guides:
@@ -11,14 +13,15 @@ required_guides:
 related_resources: []
 
 ---
-# Deprovision users and archive folders
+# Report inactive users
 
-This script allows you to deprovision and delete a list of users. 
-It performs the following steps:
+<!-- markdownlint-disable line-length -->
 
-1. Transfers the user content to the current admin
-user's root folder under `Employee Archive`.
-2. Deletes the user.
+This script generates a `.csv` file with a list of users who has been inactive for a number of days. It performs the following steps:
+
+1. Looks for the users who have the role `user` but not `AppUser` and uses [Box Events][boxevents] to check if the user performed any actions for the specified number of days.
+The default list of event types used to mark the user as active includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
+2. Considers users who didn't perform any actions as inactive and adds them to a `.csv` file. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
 
 ## Prerequisites
 
@@ -70,56 +73,50 @@ or download the files from [`examples`][examples] directory.
     git clone https://github.com/box/boxcli.git
    ```
 
-Set your own path to the CSV file with the list of employees.
+Set the number of days you want the script to scan for events.
 
    ```bash
-    $EmployeeList = "./Employees_to_delete.csv"
+    $daysInactive = "10"
    ```
 
-Customize the `Employees_to_delete.csv` input file of 
-employee accounts you want to delete 
-by providing their email addresses. 
-For example:
+<message>
+    If you don't specify this value or leave the default, the script will prompt you to enter it.
+</message>
+
+(Optional) To change the report output file name, define the `ReportOutputFile`
+parameter.
 
    ```bash
-     name,email
-     Managed User 1,ManagedUser1@test.com
+    $ReportOutputFile = $ReportName + ".csv"
+
    ```
-
-(Optional) To skip transfer of user content before
-   deleting the user, set the `TransferContent` parameter to `N`.
+(Optional) To change the list of event types, define the list for `eventType` parameter.
 
    ```bash
-    $TransferContent = "N"
-   ```
-
-(Optional) Change the `EmployeeArchiveFolderName` 
-   to any name of your choice.
-
-   ```bash
-    $EmployeeArchiveFolderName = "Employee Archive"
+    $eventType = "LOGIN,UPLOAD,COPY,MOVE"
    ```
 
 ## Run the script
 
 Change the directory to the folder containing the script. 
-   In this example, it is the `User Deprovisioning` folder.
+   In this example, it is the `Inactive Users Report` folder.
    
    ```bash
-   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
+    rvb@lab:~/box-cli/examples/Inactive Users Report$ pwsh
+    PowerShell 7.2.4
+    Copyright (c) Microsoft Corporation.
 
-   https://aka.ms/powershell
-   Type 'help' to get help.
-     
-   PS /home/rvb/box-cli/examples/User Deprovisioning>
+    https://aka.ms/powershell
+    Type 'help' to get help.
+
+    PS /home/rvb/box-cli/examples/Inactive Users Report>
+
    ```
 
 Run the script.
    
    ```bash
-    ./Users_Deprovision.ps1
+    ./Inactive_Users_Report.ps1
    ```
    
 When the script run is completed, you will see the following 
@@ -137,13 +134,16 @@ output or a similar one.
 Logs are stored in a `logs` folder located in the main folder. 
 You have access to these log files:
 
-* `Users_Deprovision_all.txt` that contains all log entries
-* `Users_Deprovision_errors.txt` that contains only errors.
+* `Inactive_Users_Report_all.txt` that contains all log entries
+* `Inactive_Users_Report_errors.txt` that contains only errors.
+
+<!-- markdownlint-enable line-length -->
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 [quickstart]: g://cli/quick-start/create-oauth-app/
+[boxevents]: https://developer.box.com/reference/resources/event/
+[deprovisionscript]: g://cli/scripts/deprovision-users
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup
 [examples]:https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning
-[employeelist]:[https://github.com/box/boxcli/blob/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L12
