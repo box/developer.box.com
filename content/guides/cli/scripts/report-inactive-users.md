@@ -74,31 +74,27 @@ go to your [developer console][console], and follow the guide
 
 ## Configure the script
 
-Clone the `boxcli` GitHub repository 
-or download the files from [`examples`][examples] directory.
+1. Clone the `boxcli` GitHub repository 
+   or download the files from [`examples`][examples] directory.
 
    ```bash
     git clone https://github.com/box/boxcli.git
    ```
 
-Set the number of days you want the script to scan for user events.
+2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
 
    ```bash
     $daysInactive = "10"
    ```
 
-<message>
-    If you don't specify this value or leave the default, the script will prompt you to enter it.
-</message>
-
-(Optional) To change the report output file name, define the `ReportOutputFile`
-parameter.
+3. (Optional) To change the report output file name, define the
+   `ReportOutputFile` parameter.
 
    ```bash
     $ReportOutputFile = $ReportName + ".csv"
    ```
 
-(Optional) To change event types, define the list for `eventType` parameter.
+4. (Optional) To change event types, define the list for `eventType` parameter.
 
    ```bash
     $eventType = "LOGIN,UPLOAD,COPY,MOVE"
@@ -154,4 +150,4 @@ You have access to these log files:
 [deprovisionscript]: g://cli/scripts/deprovision-users
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup
-[examples]:https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning
+[examples]: https://github.com/box/boxcli/tree/main/examples/Inactive%20Users%20Report
