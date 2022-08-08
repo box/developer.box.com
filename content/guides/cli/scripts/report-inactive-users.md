@@ -19,9 +19,17 @@ related_resources: []
 
 This script generates a `.csv` file with a list of users who has been inactive for a number of days. It performs the following steps:
 
-1. Looks for the users who have the role `user` but not `AppUser` and uses [Box Events][boxevents] to check if the user performed any actions for the specified number of days.
-The default list of event types used to mark the user as active includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
-2. Considers users who didn't perform any actions as inactive and adds them to a `.csv` file. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
+1. Looks for the users who have the role `user`. 
+
+   <message>
+   The script does not consider other roles, such as `AppUser`.
+   </message>
+   
+2. Uses [Box Events][boxevents] to check if the user performed any actions   
+   for a specified number of days.
+   The default list of event types includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
+3. Adds users who didn't perform any actions to a `.csv` file with
+   inactive users. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
 
 ## Prerequisites
 
@@ -73,7 +81,7 @@ or download the files from [`examples`][examples] directory.
     git clone https://github.com/box/boxcli.git
    ```
 
-Set the number of days you want the script to scan for events.
+Set the number of days you want the script to scan for user events.
 
    ```bash
     $daysInactive = "10"
@@ -90,7 +98,7 @@ parameter.
     $ReportOutputFile = $ReportName + ".csv"
    ```
 
-(Optional) To change the list of event types, define the list for `eventType` parameter.
+(Optional) To change event types, define the list for `eventType` parameter.
 
    ```bash
     $eventType = "LOGIN,UPLOAD,COPY,MOVE"
