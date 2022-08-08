@@ -143,6 +143,8 @@
   "guides.titles.related_guides": "Related Guides",
   // A title for generic related content
   "guides.titles.related": "Related",
+  // A title for required guides
+  "guides.titles.required_guides": "Required Guides",
   // A title for a quick start guide
   "guides.titles.quick_start_guide": "Quick Start",
   // A title for quick guides
