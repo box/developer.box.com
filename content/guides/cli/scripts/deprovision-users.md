@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
