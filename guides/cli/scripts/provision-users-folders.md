@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 2
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -14,10 +14,10 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/provision-users-folders
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: cli/scripts/deprovision-users
+next_page_id: cli/scripts/user-zones-mass-update
 previous_page_id: cli/scripts
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/provision-users-folders.md

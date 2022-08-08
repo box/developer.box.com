@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 4
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -15,11 +15,11 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/user-zones-mass-update
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: ''
-previous_page_id: cli/scripts/deprovision-users
+next_page_id: cli/scripts/report-inactive-users
+previous_page_id: cli/scripts/provision-users-folders
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/user-zones-mass-update.md
 ---
