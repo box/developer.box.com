@@ -54,35 +54,12 @@ all API's entry points.
 |account.box.com  |account.box-gov.com|
 |api.box.com      |api.box-gov.com    |
 |upload.box.com   |upload.box-gov.com |
-|dl.boxcloud.com  |dl.boxcloud-gov.com|
+|dl.boxcloud.com  |dl-frh.boxcloud.com|
+|realtime.services.box.net|realtime.services.box-gov.com|
 
 <!-- markdownlint-enable line-length -->
 
 ## API Restrictions
-
-The following API entry points are not available for usage under FedRAMP High configuration.
-
-<!-- markdownlint-disable line-length -->
-
-<!-- markdownlint-disable spelling -->
-
-|API Entry points |
-|----------------|
-|/collaborations|
-|/device_pinners|
-|/enterprises/{enterprise_id}/device_pinners|
-|/events|
-|/files/{file_id}/collaborations|
-|/files/{file_id}/metadata/global/boxSkillsCards|
-|/folders/{folder_id}/collaborations|
-|/folders/{folder_id}#add_shared_link|
-|/folders/{folder_id}#get_shared_link|
-|/folders/{folder_id}#remove_shared_link|
-|/folders/{folder_id}#update_shared_link|
-|/skill_invocations/{skill_id}|
-|/web_links|
-
-<!-- markdownlint-enable line-length -->
 
 The following API entry points are not yet available for usage under FedRAMP
 High configuration.
@@ -92,6 +69,9 @@ High configuration.
 |API Entry point |
 |----------------|
 |/sign_requests|
+|/sign_requests/{sign_request_id}|
+|/sign_requests/{sign_request_id}/cancel|
+|/sign_requests/{sign_request_id}/resend|
 
 <!-- markdownlint-enable line-length -->
 
