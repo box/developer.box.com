@@ -69,4 +69,4 @@ If you would rather use our [CCG authentication][ccg] method, check out
 [scripts-docs]: g://cli/scripts/index
 [ccg]: g://authentication/client-credentials
 [ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
-[bulk]: https://github.com/box/boxcli/blob/mains/docs/Bulk%20actions/README.md
+[bulk]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/README.md
