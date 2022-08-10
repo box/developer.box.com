@@ -66,23 +66,23 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-   ```bash
-    pwsh 
-   ```
+```bash
+ pwsh 
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-   ```bash
-   PowerShell 7.2.5
-   Copyright (c) Microsoft Corporation.
+```bash
+ PowerShell 7.2.5
+ Copyright (c) Microsoft Corporation.
 
-   https://aka.ms/powershell
-   Type 'help' to get help.
+ https://aka.ms/powershell
+ Type 'help' to get help.
      
-   PS /Users/user/repos/boxcli/examples> 
-   ```
+ PS /Users/user/repos/boxcli/examples> 
+```
 
    <message>
       If you encounter issues make sure you installed both 
@@ -108,18 +108,18 @@ go to your [developer console][console], and follow the guide
 
 2. Set the path to the `.csv` file with the list of groups and user emails.
 
-   ```bash
+    ```bash
     $UserGroupAdditionPath = "./User_Group_Addition.csv"
-   ```
+    ```
 
     * `UserEmail` is the primary email address for the user in Box. 
     * `GroupName` is the name of the group.
 
 3. Set your own path to the `.csv` file with the list groups and user emails.
 
-   ```bash
+    ```bash
     $CollaborationsCreationPath = "./Collaborations_Creation.csv"
-   ```
+    ```
 
     * `GroupName` is name of the group the script will add as a collaborator to the folder. 
     * `FolderId` is the folder ID the collaborator will be added to.
@@ -134,17 +134,14 @@ go to your [developer console][console], and follow the guide
 ## Run the script
 
 1. Change the directory to the folder containing the script. 
-   In this example, it is the `User Deprovisioning` folder.
-   
+   In this example, it is the `Mass Groups & Collaborations Update` folder.
+
    ```bash
-    rvb@lab:~/box-cli/examples/Mass Groups & Collaborations Update$ pwsh
-    PowerShell 7.2.4
-    Copyright (c) Microsoft Corporation.
-
-    https://aka.ms/powershell
-    Type 'help' to get help.
-
-    PS /home/rvb/box-cli/examples/Mass Groups & Collaborations Update>
+     rvb@lab:~/box-cli/examples/Mass Groups & Collaborations Update$ pwsh PowerShell 7.2.4
+     Copyright (c) Microsoft Corporation.
+     https://aka.ms/powershell
+     Type 'help' to get help.
+     PS /home/rvb/box-cli/examples/Mass Groups & Collaborations Update>
    ```
 
 2. Run the script.
@@ -153,26 +150,30 @@ go to your [developer console][console], and follow the guide
     ./Mass_Groups_Collabs_Update.ps1
    ```
 
-3. (Optional) If a group already is set as a collaborator for a
+### Optional flags
+
+You can use flags to run run or skip specific parts of the script. 
+
+* If a group already is set as a collaborator for a
    specific folder but with a role other than defined in the .`csv` file, the script will inform you about it. It will not make any changes to an existing collaboration. 
    If you want to update an existing collaboration with role defined in `.csv` file, set an additional `-UpdateExistingCollabs` flag when running the script.
-
+         
    ```bash
-    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
+   Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
    ```
-   
-4. (Optional) To update groups without creating
-    collaborations, add the `-SkipCollabsCreation` boolean flag when running the script:
-  
-    ```bash
-    Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
-    ```
 
-5. (Optional) To create collaborations without any group updates, add the
-   `-SkipGroupsUpdate` boolean flag when running the script:
-  
+* To update groups without creating
+   collaborations, add the `-SkipCollabsCreation` boolean flag when running the script:
+      
    ```bash
-    Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
+   Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
+   ```
+
+* To create collaborations without any group updates, add the
+   `-SkipGroupsUpdate` boolean flag when running the script:
+      
+   ```bash
+   Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
    ```
 
 ## Logging
