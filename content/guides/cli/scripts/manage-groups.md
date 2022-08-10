@@ -17,19 +17,43 @@ related_resources: []
 ---
 # Manage groups and collaborations
 
-This script uses Box CLI to create or update groups, add users to the groups, and finally to define collaborations based on group and folder data.
-The script consists of two parts. You can run them both or opt each out.
+<!-- markdownlint-disable line-length -->
 
-## Create or update groups 
+## Script structure
 
-1. The script uses the `.csv` file specified for the `UserGroupAdditionPath` parameter. The file lists rows with group names and user emails. The same group name for several users, and one user can belong to several groups. The [sample file][samplefile] provides an example of such configuration.
-2. If the group doesn't exist, the script will create it. If it does exist, it might be updated based on the provided. data.
+This script uses Box CLI to create or update groups, add users to them, and finally to create collaborations between groups and folders.
+The script consists of the following two parts. You can run them both or select one of them.
 
+### Create or update groups 
+ 
+1. The script uses the `.csv` file you specify for the `UserGroupAdditionPath`
+   parameter. The file lists group names and user emails. When creating the file, you can use the same group name for several users, and assign one user to several groups.
+   For example:
 
-## Create collaborations
+   |`GroupName`| `UserEmail`|
+   |-----------|------------|
+   |Group1| ManagedUser1@test.com|
+   |Group1| ManagedUser2@test.com|
+   |Group2| ManagedUser3@test.com|
+   |Group3| ManagedUser1@test.com|
 
-1. The script takes the `.csv` file specified for the `CollaborationsCreationPath` parameter. The file contains a number of rows with group names, folder IDs, and collaboration roles. 
-2. For each row, the script checks if a group exists and if it's not already added as a collaborator to the corresponding folder. 
+2. If the group doesn't exist, the script creates it. If it does exist, the script can update the entries based on the provided data.
+
+### Create or update collaborations
+
+1. The script uses the `.csv` file you specify for the
+   `CollaborationsCreationPath` parameter. The file lists group names, folder IDs, and collaboration roles. 
+2. For each row, the script checks if a group exists and if it's not already
+   added as a collaborator to the corresponding folder. 
+   For example:
+
+   |`GroupName`| `FolderId`| `CollaborationRole`|
+   |-----------|-----------|--------------------|
+   |Group1| 1111111| editor|
+   |Group2| 1111111| viewer_uploader|
+   |Group2| 2222222| viewer |
+   |Group3| 1111111| viewer_uploader|
+
 3. If both of these conditions are met, the script assigns the group to a folder using the role defined in the `CollaborationRole` column. 
 
 ## Prerequisites
@@ -76,21 +100,20 @@ go to your [developer console][console], and follow the guide
 ## Configure the script
 
 1. Clone the `boxcli` GitHub repository 
-or download the files from [`examples`][examples] directory.
+   or download the files from [`examples`][examples] directory.
 
    ```bash
     git clone https://github.com/box/boxcli.git
    ```
 
-2. Set the path to the `.csv` file with the list groups and user emails.
+2. Set the path to the `.csv` file with the list of groups and user emails.
 
    ```bash
     $UserGroupAdditionPath = "./User_Group_Addition.csv"
    ```
+
     * `UserEmail` is the primary email address for the user in Box. 
     * `GroupName` is the name of the group.
-
-   If the group with a specific name does not exist, the script will create it.
 
 3. Set your own path to the `.csv` file with the list groups and user emails.
 
@@ -102,66 +125,68 @@ or download the files from [`examples`][examples] directory.
     * `FolderId` is the folder ID the collaborator will be added to.
     * `CollaborationRole` is the name of the role used when creating a collaboration.
 
-    To define the available roles, set the `AvailableCollaborationRoles` parameter:
+     You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
 
-    ```bash
-    $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
-    ```
+     ```bash
+     $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
+     ```
 
-4. (Optional) It might happen that a group already is a collaborator for a
-   specific folder, but with a role other than what the .`csv` defines. The script will inform you about it without making any changes to an existing collaboration. 
-   If you want to update an existing collaboration with role defined in `.csv` file, you need to pass an additional switch `-UpdateExistingCollabs` when running the script.
+## Run the script
 
-    ```bash
-    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
-    ```
+1. Change the directory to the folder containing the script. 
+   In this example, it is the `User Deprovisioning` folder.
    
-5. (Optional) To update groups without creating
+   ```bash
+    rvb@lab:~/box-cli/examples/Mass Groups & Collaborations Update$ pwsh
+    PowerShell 7.2.4
+    Copyright (c) Microsoft Corporation.
+
+    https://aka.ms/powershell
+    Type 'help' to get help.
+
+    PS /home/rvb/box-cli/examples/Mass Groups & Collaborations Update>
+   ```
+
+2. Run the script.
+   
+   ```bash
+    ./Mass_Groups_Collabs_Update.ps1
+   ```
+
+3. (Optional) If a group already is set as a collaborator for a
+   specific folder but with a role other than defined in the .`csv` file, the script will inform you about it. It will not make any changes to an existing collaboration. 
+   If you want to update an existing collaboration with role defined in `.csv` file, set an additional `-UpdateExistingCollabs` flag when running the script.
+
+   ```bash
+    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
+   ```
+   
+4. (Optional) To update groups without creating
     collaborations, add the `-SkipCollabsCreation` boolean flag when running the script:
   
     ```bash
     Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
     ```
 
-6. (Optional) To create collaborations without any group updates, add the `-SkipGroupsUpdate` boolean flag when running the script:
+5. (Optional) To create collaborations without any group updates, add the
+   `-SkipGroupsUpdate` boolean flag when running the script:
   
-    ```bash
+   ```bash
     Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
-    ```
-
-## Run the script
-
-Change the directory to the folder containing the script. 
-   In this example, it is the `User Deprovisioning` folder.
-   
-   ```bash
-   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-
-   https://aka.ms/powershell
-   Type 'help' to get help.
-     
-   PS /home/rvb/box-cli/examples/User Deprovisioning>
-   ```
-
-Run the script.
-   
-   ```bash
-    ./Mass_Groups_Collabs_Update.ps1
    ```
 
 ## Logging
 
-Logs are stored in a `logs` folder located in the main folder. 
+Logs are stored in the `logs` folder located in the main folder. 
 You have access to these log files:
 
 * `Mass_Groups_Collabs_Update_all.txt` that contains all log entries
 * `Mass_Groups_Collabs_Update_errors.txt` that contains only errors.
 
-[scripts]: https://github.com/box/boxcli/tree/main/examples
+<!-- markdownlint-enable line-length -->
+
+[examples]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 [quickstart]: g://cli/quick-start/create-oauth-app/
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup
-[samplefile]: https://github.com/box/boxcli/blob/main/examples/Mass%20Groups%20%26%20Collaborations%20Update/User_Group_Addition.csv
