@@ -19,6 +19,9 @@ titles:
   // related: A title for generic related content
   related: Related
 
+  // required_guides: A title for required guides
+  required_guides: Required Guides
+
   // quick_start_guide: A title for a quick start guide
   quick_start_guide: Quick Start
 
