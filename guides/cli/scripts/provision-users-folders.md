@@ -14,7 +14,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/provision-users-folders
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/user-zones-mass-update

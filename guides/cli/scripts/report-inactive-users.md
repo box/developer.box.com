@@ -16,10 +16,10 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/report-inactive-users
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: cli/scripts/deprovision-users
+next_page_id: cli/scripts/manage-groups-collaborations
 previous_page_id: cli/scripts/user-zones-mass-update
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/report-inactive-users.md
@@ -151,7 +151,7 @@ Deleted employee Managed User 1
 
 ## Logging
 
-Logs are stored in a `logs` folder located in the main folder.
+Logs are stored in the `logs` folder located in the main folder.
 You have access to these log files:
 
 * `Inactive_Users_Report_all.txt` that contains all log entries
