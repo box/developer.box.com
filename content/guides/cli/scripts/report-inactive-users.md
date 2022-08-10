@@ -135,7 +135,7 @@ output or a similar one.
 
 ## Logging
 
-Logs are stored in a `logs` folder located in the main folder. 
+Logs are stored in the `logs` folder located in the main folder. 
 You have access to these log files:
 
 * `Inactive_Users_Report_all.txt` that contains all log entries
