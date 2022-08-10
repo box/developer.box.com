@@ -22,7 +22,7 @@ related_resources: []
 ## Script structure
 
 This script uses Box CLI to create or update groups, add users to them, and finally to create collaborations between groups and folders.
-The script consists of the following two parts. You can run them both or select one of them.
+The script consists of two parts described in detail in the sections below. You can run them both or use the optional flags to decide which part to run.
 
 ### Create or update groups 
  
@@ -54,7 +54,7 @@ The script consists of the following two parts. You can run them both or select 
    |Group2| 2222222| viewer |
    |Group3| 1111111| viewer_uploader|
 
-3. If both of these conditions are met, the script assigns the group to a folder using the role defined in the `CollaborationRole` column. 
+3. If both of these conditions are met, the script assigns the group to a folder using the role defined in the `CollaborationRole` column. Also, if a group already exists, but the `CollaborationRole` changed, the script will update it if you pass the `-UpdateExistingCollabs` flag when running the script.
 
 ## Prerequisites
 
