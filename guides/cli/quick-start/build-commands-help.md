@@ -1,18 +1,18 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: false
-id: tooling/cli/quick-start/build-commands-help
+id: cli/quick-start/build-commands-help
 rank: 3
 total_steps: 6
-sibling_id: tooling/cli/quick-start
-parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/options-and-bulk-commands
-previous_page_id: tooling/cli/quick-start/install-and-configure
+sibling_id: cli/quick-start
+parent_id: cli/quick-start
+next_page_id: cli/quick-start/options-and-bulk-commands
+previous_page_id: cli/quick-start/install-and-configure
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/3-build-commands-help.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/3-build-commands-help.md
 fullyTranslated: true
 ---
 # コマンドの作成とヘルプ機能
@@ -121,4 +121,4 @@ JWT認証を使用したBox CLIを設定すると、Boxアカウントにこの�
 
 [sa]: g://getting-started/user-types/service-account
 
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options
+[four]: g://cli/quick-start/options-and-bulk-commands/#options

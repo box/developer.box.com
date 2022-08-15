@@ -1,18 +1,18 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: false
-id: tooling/cli/quick-start/install-and-configure
+id: cli/quick-start/install-and-configure
 rank: 2
 total_steps: 6
-sibling_id: tooling/cli/quick-start
-parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/build-commands-help
-previous_page_id: tooling/cli/quick-start/create-oauth-app
+sibling_id: cli/quick-start
+parent_id: cli/quick-start
+next_page_id: cli/quick-start/build-commands-help
+previous_page_id: cli/quick-start/create-oauth-app
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/2-install-and-configure.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/2-install-and-configure.md
 fullyTranslated: true
 ---
 # CLIのインストールと構成

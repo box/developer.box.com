@@ -1,31 +1,31 @@
 ---
 type: quick-start
 hide_in_page_nav: true
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: false
-id: tooling/cli/quick-start/powershell-script-templates
+id: cli/quick-start/powershell-script-templates
 rank: 5
 total_steps: 6
-sibling_id: tooling/cli/quick-start
-parent_id: tooling/cli/quick-start
-next_page_id: tooling/cli/quick-start/next-steps
-previous_page_id: tooling/cli/quick-start/options-and-bulk-commands
+sibling_id: cli/quick-start
+parent_id: cli/quick-start
+next_page_id: cli/quick-start/next-steps
+previous_page_id: cli/quick-start/options-and-bulk-commands
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/5-powershell-script-templates.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/5-powershell-script-templates.md
 fullyTranslated: true
 ---
 # Box CLIでのPowerShellスクリプトの使用
 
 CLIはそれ自体がすでに強力ですが、PowerShellスクリプトと併用すると、繰り返し発生するタスクをさらに短時間で完了することができます。Boxでは、開発をすぐに開始できるように、BoxのCLI GitHubリポジトリ内にサンプル[スクリプト][scripts]フォルダを作成しました。
 
-クイックスタートのこの手順では、ユーザーの作成とプロビジョニングの自動化[スクリプト][script-1]テンプレートを使用します。
+To show you how CLI scripts work, we are going to use the provision and create users [script][script-1] template.
 
-このスクリプトでは、Box CLIを使用して、ユーザー (管理者またはサービスアカウント) が所有するオンボーディングフォルダ構造の作成と管理対象ユーザーの一括作成を実行し、新しく作成したフォルダ構造に新しいユーザーをビューアー/アップローダーのロールを持つコラボレータとして追加することでそのユーザーのプロビジョニングを行います。
+This script uses the Box CLI to build and create an onboarding folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader roles.
 
 <message type="warning"></message>
 
-クイックスタートのこの手順を実行できるのは、管理者権限を持つサービスアカウントまたはユーザーのみです。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップできます。
+This part of the quick start for service accounts and users with administrative privileges only. Skip this step if you are not a Box administrator or you do not use a service account.
 
 </Message>
 
@@ -33,39 +33,44 @@ CLIはそれ自体がすでに強力ですが、PowerShellスクリプトと併�
 
 ## ユースケース
 
-この例で紹介するユースケースでは、ユーザーの自動作成を説明します。
+To automatically create users and folder structure, the script performs the following steps:
 
-* `.csv`ファイルを使用してユーザーを一括で読み込む
-* あらかじめ決められたフォルダ構造に各ユーザーを関連付ける
-* JSONファイルを使用してそのフォルダ構造を定義する
-* 必要に応じて、ローカルドライブからのアップロードによりフォルダ構造を作成する
+1. Uses a `.csv` file to load employee data in bulk.
+2. Defines folder structure using a JSON file or uploads the structure from the user's local directory.
+3. Creates a managed user a predetermined folder structure to each user.
 
 ## 前提条件
 
 ### Windows
 
-* [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
+[.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
 ### MacOSおよびLinux
 
-* [PowerShell][pwsh]のインストール
+[PowerShell][pwsh]のインストール
+
+<message>
 
 問題が発生する場合は、[.NET Core](https://dotnet.microsoft.com/download)と[PowerShell][pwsh]の両方をインストールしたかどうか確認してください
+
+</message>
 
 ### 構成済みのBoxアプリケーション
 
 Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][Step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## スクリプトのダウンロード
+## Download the script
+
+Clone the script to a directory of your choice and navigate to that directory.
 
 ```bash
 git clone https://github.com/box/boxcli.git box-cli
 cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 ```
 
-## スクリプトの構成の変更
+## Configure the script settings
 
-このスクリプトは、自分の環境で実行するために調整する必要があります。
+Adapt the script to run in your own environment. In this example, you will use the sample data provided with the script.
 
 ### ユーザーリストの準備
 
@@ -78,7 +83,7 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-`Users_Create_Provision.ps1`スクリプトファイルでは、読み込む`.csv`ファイルを指定します。たとえば、`Employees_1.csv`の場合は、次のようになります。
+In the `Users_Create_Provision.ps1` script file, specify which `.csv` file you would like to load.
 
 ```bash
 # Set Employee List CSV Path
@@ -87,15 +92,11 @@ $EmployeeList = "./Employees_1.csv"
 
 ### フォルダ構造の作成
 
-フォルダ構造は、JSONファイルから作成するか、ローカルドライブからアップロードすることができます。
+You can either create a folder structure from a JSON file or upload it from your local drive.
 
-### JSONファイルを使用する場合
+#### Use a JSON file
 
-`Folder_Structure.json`ファイルは、作成するフォルダ構造を表します。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。
-
-スクリプトファイル`Users_Create_Provision.ps1`には、選択肢となるオプションもいくつかあります。
-
-スクリプトのフォルダ作成セクションでは、`Onboarding`フォルダがハードコードされています。つまり、`Folder_Structure.json`ファイルに記述されるフォルダが何であっても、それらは`Onboarding`フォルダの下に作成されます。
+The `Folder_Structure.json` file contains the folder structure you want to create. As an example you will create a `Market Research` and a `Sales Plays` folder, each with a subfolder `Statistics` and `Big Pharma` respectively. The script will place this folder structure under the `Onboarding` folder.
 
 ```bash
 # First create Onboarding folder owned by current user
@@ -103,7 +104,7 @@ $script:OnboardingFolderId = box folders:create 0 "Onboarding" --id-only
 Write-Output "Created a user owned Onboarding folder with id: $($OnboardingFolderId)"
 ```
 
-`Folder_Structure.json`ファイルの場所を設定します。
+Provide the location of the `Folder_Structure.json` file.
 
 ```bash
 # Onboarding Folder Structure: Set either path build off JSON or directly
@@ -112,9 +113,11 @@ $FolderStructureJSONPath = "./Folder_Structure.json"
 # $LocalUploadPath = "./OnboardingLocalUpload"
 ```
 
-### ローカルドライブからアップロードする場合
+#### Upload file from local drive
 
-次のスクリプトでは、ローカルファイルシステムから直接フォルダ構造をアップロードする例を示しています。これを試す場合は、パスを自分のローカルフォルダに設定してください。
+You can also upload a folder structure directly from the local file system:
+
+1. Set the path to your local folder:
 
 ```bash
 # Onboarding Folder Structure: Set either path build off JSON or directly
@@ -123,7 +126,7 @@ $FolderStructureJSONPath = "./Folder_Structure.json"
 $LocalUploadPath = "./OnboardingLocalUpload"
 ```
 
-`New-Folder-Structure`の呼び出しをコメントにし、次のセクションをコメント解除します。
+2. `New-Folder-Structure`の呼び出しをコメントにし、次のセクションをコメント解除します。
 
 ```bash
 # Create Folder Structure from JSON
@@ -139,7 +142,7 @@ with $($script:OnboardingFolderId)"
 
 ## スクリプトの実行
 
-この時点で必要なのは、スクリプトの実行だけです。ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
+1. Change the directory to the folder containing the script. In this example, it is the `User Creation & Provisioning` folder.
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
@@ -149,13 +152,18 @@ Copyright (c) Microsoft Corporation.
 https://aka.ms/powershell
 Type 'help' to get help.
 
-PS /home/rvb/box-cli/examples/User Creation & Provisioning>
+/home/rvb/box-cli/examples/User Creation & Provisioning>
 ```
 
-スクリプトの実行:
+2. スクリプトの実行:
 
 ```bash
 PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
+```
+
+The response will be similar to the following:
+
+```bash
 Starting User Creation & Provisioning script...
 
 
@@ -174,18 +182,18 @@ Created subfolder under Statistics folder with id: 164734956242
 Created subfolder Sales Plays under Onboarding folder with id: 164735683001
 
 Created subfolder under Big Pharma folder with id: 164736160637
-Creating employee Managed User account with first name: Isaac, last name: 
-Newton, email: abc@abc.local, and
+Creating employee Managed User account with first name: 
+Isaac, last name: Newton, email: abc@abc.local, and
 
 Created Managed user with id: 19605663027
 
 Type: collaboration
-ID: '37250833128'
+    ID: '37250833128'
 Created By:
     Type: user
     ID: '18622116055'
-    Name: Rui Barbosa
-    Login: barduinor@gmail.com
+Name: Rui Barbosa
+Login: barduinor@gmail.com
 Created At: '2022-06-07T13:58:05-07:00'
 Modified At: '2022-06-07T13:58:05-07:00'
 Expires At: null
@@ -203,14 +211,14 @@ Item:
     ID: '164734146745'
     Sequence ID: '0'
     ETag: '0'
-    Name: Onboarding
-Collaborated Managed User Isaac Newton to current user's 
+Name: Onboarding
+Collaborated Managed User Isaac Newton to current users 
 Onboarding folder for provisioning
 ```
 
 ## まとめ
 
-* Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロビジョニングと最初のフォルダツリーの作成の自動化を確認しました。
+You explored automation using a PowerShell script with the Box CLI to provision users and create an initial folder structure.
 
 <Next>
 
@@ -222,11 +230,11 @@ Onboarding folder for provisioning
 
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
 
-[jwt-cli]: g://tooling/cli/jwt-cli
+[jwt-cli]: g://cli/cli-docs/jwt-cli
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 
-[Step 1]: g://tooling/cli/quick-start/create-oauth-app/
+[Step 1]: g://cli/quick-start/create-oauth-app/
 
 [console]: https://app.box.com/developers/console
 

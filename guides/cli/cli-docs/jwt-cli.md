@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -11,21 +11,21 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/cli-docs
 is_index: false
-id: tooling/cli/jwt-cli
+id: cli/cli-docs/jwt-cli
 type: guide
 total_steps: 1
-sibling_id: tooling/cli
-parent_id: tooling/cli
-next_page_id: ''
-previous_page_id: tooling/cli
+sibling_id: cli/cli-docs
+parent_id: cli/cli-docs
+next_page_id: cli/cli-docs
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/jwt-cli.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/jwt-cli.md
 fullyTranslated: true
 ---
-# (付録) JWT認証を使用したBox CLI
+# Box CLI with JWT Authentication
 
 これまで、[Box CLIのクイックスタートガイド][qs]では、JWTアプリケーションまたはサーバー認証アプリケーションの設定フローについて説明してきましたが、新しくOAuth 2.0バージョンのBox CLIをリリースしたため、新機能の使用についてガイドを更新しました。当初のJWTの設定手順については、引き続きサーバー認証アプリケーションを使用したい方のために、こちらに移動しました。
 
@@ -218,9 +218,9 @@ Notification Email: []
 
 [aa]: g://authentication/jwt/jwt-setup/#application-access
 
-[three]: g://tooling/cli/quick-start/build-commands-help/
+[three]: g://cli/quick-start/build-commands-help/
 
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+[four]: g://cli/quick-start/options-and-bulk-commands/
 
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 
@@ -228,4 +228,4 @@ Notification Email: []
 
 [commands]: https://github.com/box/boxcli#command-topics
 
-[qs]: g://tooling/cli/quick-start/
+[qs]: g://cli/quick-start/

@@ -24,7 +24,7 @@ fullyTranslated: true
 
 Boxには、[Box CLI][cli]、[Postman][postman]、[Salesforce Developer Toolkit][sdt]、[各種SDK][sdks]など、Box APIを使用するためのオプションがいくつか用意されています。
 
-[cli]: g://tooling/cli
+[cli]: g://cli
 
 [postman]: g://tooling/postman
 

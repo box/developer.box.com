@@ -1,5 +1,5 @@
 ---
-rank: 0
+rank: 35
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -17,33 +17,32 @@ alias_paths:
   - /docs/installation-and-setup
   - /docs/commands-and-actions
   - /docs/command-line-interface-cli
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: null
 is_index: true
-id: tooling/cli
+id: cli
 type: guide
-total_steps: 1
-sibling_id: tooling
-parent_id: tooling
-next_page_id: tooling/cli/jwt-cli
+total_steps: 0
+sibling_id: guides
+parent_id: guides
+next_page_id: ''
 previous_page_id: ''
-source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/index.md
+source_url: 'https://github.com/box/developer.box.com/blob/main/content/guides/cli/index.md'
 fullyTranslated: true
 ---
 # CLI
 
 Box Command Line Interface (CLI) は、ターミナルウィンドウまたはコマンドプロンプトからBox APIにリクエストを行うためのツールです。
 
-## 前提条件
+## Quick start
 
 [OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
-## サンプルスクリプト
+## Sample scripts
 
 Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組み合わせるとさらに強力になります。繰り返し発生するタスクの自動化を開始できるように、スクリプトテンプレートの[ライブラリ][scripts]を作成しました。
 
-* [ユーザーのプロビジョニングと最初のフォルダツリーの作成][script-1]
+* [Explore sample scripts][scripts-docs]
 
 ## 高度な機能
 
@@ -53,7 +52,7 @@ Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組
 * [別のアプリの構成][cli-add-config]
 * [アカウントの切り替え][cli-switch]
 * [トークンのキャッシュ][cache]
-* [オートコンプリート][ac]
+* [Bulk actions][bulk]
 
 ## JWT認証を使用したBox CLI
 
@@ -65,26 +64,26 @@ Boxの[CCG認証][ccg]方法を使用する場合は、[こちら][ccg-page]の�
 
 [cli]: https://github.com/box/boxcli
 
-[cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+[cli-autocomplete]: https://github.com/box/boxcli/blob/main/docs/autocomplete.md
 
-[cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
+[cli-switch]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsswitch-user-userid
 
-[cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path
+[cli-add-config]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsadd-path
 
-[qs]: g://tooling/cli/quick-start/
+[qs]: g://cli/quick-start/
 
-[cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
-
-[ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+[cache]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsupdate-name
 
 [jwt]: g://authentication/jwt
 
-[jwt-page]: g://tooling/cli/jwt-cli
+[jwt-page]: g://cli/cli-docs/jwt-cli
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 
-[script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
+[scripts-docs]: g://cli/scripts/index
 
 [ccg]: g://authentication/client-credentials
 
 [ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
+
+[bulk]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/README.md

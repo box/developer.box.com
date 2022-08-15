@@ -1,18 +1,18 @@
 ---
 type: quick-start
 hide_step_number: true
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: false
-id: tooling/cli/quick-start/next-steps
+id: cli/quick-start/next-steps
 rank: 6
 total_steps: 6
-sibling_id: tooling/cli/quick-start
-parent_id: tooling/cli/quick-start
+sibling_id: cli/quick-start
+parent_id: cli/quick-start
 next_page_id: ''
-previous_page_id: tooling/cli/quick-start/powershell-script-templates
+previous_page_id: cli/quick-start/powershell-script-templates
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/6-next-steps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/6-next-steps.md
 fullyTranslated: true
 ---
 # 次の手順
@@ -35,19 +35,22 @@ fullyTranslated: true
 1. すべての[コマンド][commands]を確認する。
 2. [トークンのキャッシュ][cache]の設定を確認する。
 3. [オートコンプリート][ac]の設定を確認する。
+4. Review [CLI sample scripts][sample-scripts].
 
-[one]: g://tooling/cli/quick-start/create-oauth-app/
+[one]: g://cli/quick-start/create-oauth-app/
 
-[two]: g://tooling/cli/quick-start/install-and-configure/
+[two]: g://cli/quick-start/install-and-configure/
 
-[three]: g://tooling/cli/quick-start/build-commands-help/
+[three]: g://cli/quick-start/build-commands-help/
 
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+[four]: g://cli/quick-start/options-and-bulk-commands/
 
-[five]: g://tooling/cli/quick-start/powershell-script-templates/
+[five]: g://cli/quick-start/powershell-script-templates/
 
 [cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
 
 [ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
 
 [commands]: https://github.com/box/boxcli#command-topics
+
+[sample-scripts]: https://developer.box.com/guides/cli/scripts/

@@ -1,25 +1,25 @@
 ---
 type: quick-start
+rank: 0
 hide_step_number: true
 hide_in_page_nav: true
 icon: FiCode
 alias_paths:
   - /guides/tooling/sdks/cli/
-category_id: tooling
-subcategory_id: tooling/cli
+category_id: cli
+subcategory_id: cli/quick-start
 is_index: true
-id: tooling/cli/quick-start
-rank: 0
+id: cli/quick-start
 total_steps: 6
-sibling_id: tooling/cli
-parent_id: tooling/cli
-next_page_id: tooling/cli/quick-start/create-oauth-app
+sibling_id: cli
+parent_id: cli
+next_page_id: cli/quick-start/create-oauth-app
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/cli/quick-start/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/0-index.md
 fullyTranslated: true
 ---
-# OAuth 2.0を使用したBox CLIの使い方
+# Use Box CLI with OAuth 2.0
 
 <!--alex ignore executed-->
 
@@ -48,14 +48,14 @@ Box CLIは、使い勝手の良いコマンドラインツールで、これに�
 
 [commands]: https://github.com/box/boxcli#command-topics
 
-[one]: g://tooling/cli/quick-start/create-oauth-app/
+[one]: g://cli/quick-start/create-oauth-app/
 
-[two]: g://tooling/cli/quick-start/install-and-configure/
+[two]: g://cli/quick-start/install-and-configure/
 
-[three]: g://tooling/cli/quick-start/build-commands-help/
+[three]: g://cli/quick-start/build-commands-help/
 
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/
+[four]: g://cli/quick-start/options-and-bulk-commands/
 
-[five]: g://tooling/cli/quick-start/powershell-script-templates/
+[five]: g://cli/quick-start/powershell-script-templates/
 
-[six]: g:/tooling/cli/quick-start/next-steps/
+[six]: g://cli/quick-start/next-steps/
