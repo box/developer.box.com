@@ -312,6 +312,9 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        }
         "sender_message": {
             "subject": "",
             "message": ""
@@ -363,6 +366,9 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -411,6 +417,9 @@ signing document.
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -463,6 +472,9 @@ signing document.
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -517,6 +529,9 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -567,6 +582,9 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
