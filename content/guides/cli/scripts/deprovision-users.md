@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -11,7 +11,7 @@ required_guides:
 related_resources: []
 
 ---
-# Deprovision users
+# Deprovision users and archive folders
 
 This script allows you to deprovision and delete a list of users. 
 It performs the following steps:
@@ -56,7 +56,8 @@ For example:
 
 ### Box application
 
-To use the script, you will need a Box application. If you don't have one
+To use the script, you will need a Box application
+with OAuth 2.0 authentication. If you don't have one,
 go to your [developer console][console], and follow the guide 
 [Setup with OAuth 2.0][auth].
 
