@@ -45,7 +45,7 @@ advanced CLI user.
 - [Configure another app][cli-add-config]
 - [Switch accounts][cli-switch]
 - [Token cache][cache]
-- [Autocomplete][ac]
+- [Bulk actions][bulk]
 
 ## Box CLI Using JWT Authentication
 
@@ -58,15 +58,15 @@ If you would rather use our [CCG authentication][ccg] method, check out
 [this][ccg-page] guide.
 
 [cli]: https://github.com/box/boxcli
-[cli-autocomplete]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
-[cli-switch]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsswitch-user-userid
-[cli-add-config]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsadd-path
+[cli-autocomplete]: https://github.com/box/boxcli/blob/main/docs/autocomplete.md
+[cli-switch]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsswitch-user-userid
+[cli-add-config]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsadd-path
 [qs]: g://cli/quick-start/
-[cache]: https://github.com/box/boxcli/blob/master/docs/configure.md#box-configureenvironmentsupdate-name
-[ac]: https://github.com/box/boxcli/blob/master/docs/autocomplete.md
+[cache]: https://github.com/box/boxcli/blob/main/docs/configure.md#box-configureenvironmentsupdate-name
 [jwt]: g://authentication/jwt
 [jwt-page]: g://cli/cli-docs/jwt-cli
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [scripts-docs]: g://cli/scripts/index
 [ccg]: g://authentication/client-credentials
-[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configuremd#box-configureenvironmentsadd-path
+[ccg-page]: https://github.com/box/boxcli/tree/main/docs/configure.md#box-configureenvironmentsadd-path
+[bulk]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/README.md
