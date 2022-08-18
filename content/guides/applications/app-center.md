@@ -18,7 +18,8 @@ The [Box App Center][app-center] is the first place for Box users to find out
 about applications that they can use in combination with Box. If your
 application is suited to be used by other enterprises, listing your service in
 the App Center can be a great way to find new users.
-App center groups apps into sections so that you can quickly find featured, most popular, or recently added apps. 
+App center groups apps into sections so that you can 
+quickly find featured, most popular, or recently added apps. 
 
 <ImageFrame shadow center>
   ![App Center](./images/app-center.png)
