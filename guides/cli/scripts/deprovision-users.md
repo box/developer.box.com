@@ -71,7 +71,7 @@ If you encounter issues make sure you installed both
 
 To use the script, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
-go to your [developer console][console], and follow the guide
+go to your [Developer Console][console], and follow the guide
 [Setup with OAuth 2.0][auth].
 
 ## Configure the script
