@@ -28,6 +28,14 @@ Box APIs from your terminal window or command prompt.
 
 [Get started using the Box CLI with OAuth 2.0][qs].
 
+## CLI setup and use
+
+- To use [server authentication][jwt] method, check
+out [this][jwt-page] guide.
+- To use [CCG authentication][ccg] method, check out
+[this][ccg-page] guide.
+- To perform bulk actions using CLI commands, check out [this][bulk] guide.
+
 ## Sample scripts
 
 Using the Box CLI is great by itself, but it becomes even more powerful when
@@ -45,17 +53,6 @@ advanced CLI user.
 - [Configure another app][cli-add-config]
 - [Switch accounts][cli-switch]
 - [Token cache][cache]
-- [Bulk actions][bulk]
-
-## Box CLI Using JWT Authentication
-
-If you would rather use our [server authentication][jwt] method, check
-out [this][jwt-page] guide.
-
-## Box CLI Using Client Credentials Grant Authentication
-
-If you would rather use our [CCG authentication][ccg] method, check out
-[this][ccg-page] guide.
 
 [cli]: https://github.com/box/boxcli
 [cli-autocomplete]: https://github.com/box/boxcli/blob/main/docs/autocomplete.md
