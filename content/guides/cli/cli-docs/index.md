@@ -1,15 +1,16 @@
 ---
 rank: 10
 related_endpoints: []
-related_guides:
-  - authentication/jwt
-  - authentication/jwt/jwt-setup
+related_guides: []
 ---
-# CLI additional guides
+# CLI guides
 
-This directory lists additional guides you can use 
-to work with CLI. 
-Currently, you can set up and test [Box CLI with
+Here you can find guides on how 
+to use Box CLI features and capabilities.
+
+* Set up and test [Box CLI with
 JWT authentication][1]. 
+* Set up and use [Box CLI bulk commands][2].
 
 [1]: g://cli/cli-docs/jwt-cli
+[2]: g://cli/cli-docs/bulk-commands
