@@ -42,6 +42,10 @@ Box Sign's endpoints.
 
 Please see our [events guide][eg] for more information.
 
+## Webhooks
+
+Please see our [webhooks guide][wh] for more information.
+
 ## Rate Limits
 
 Please see our [rate limit guide][ratelimit] for more information.
@@ -67,3 +71,4 @@ production content.
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins 
 <!-- i18n-disable localize-links -->
 [eg]: g://events/event-triggers/sign-events
+[wh]: g://webhooks/triggers

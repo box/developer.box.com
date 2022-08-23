@@ -14,6 +14,8 @@ alias_paths:
 
 ## V2
 
+### Files and Folders
+
 The following is a list of events that can be configured to trigger a v2
 webhook. Some events are only available for files, while others are only
 available for folders.
@@ -56,7 +58,13 @@ available for folders.
 | `SHARED_LINK.UPDATED`       | A shared link was updated                                                                                           | Yes   | Yes     |
 | `TASK_ASSIGNMENT.CREATED`   | A task is created                                                                                                   | Yes   | Yes     |
 | `TASK_ASSIGNMENT.UPDATED`   | A task assignment is changed                                                                                        | Yes   | Yes     |
+| `SIGN_REQUEST.COMPLETED`    | A sign request is completed                                                                                         | Yes   | Yes     |
+| `SIGN_REQUEST.DECLINED`     | A sign request is declined                                                                                          | Yes   | Yes     |
+| `SIGN_REQUEST.EXPIRED`      | A sign request is expired                                                                                           | Yes   | Yes     |
 | `WEBHOOK.DELETED`           | When a webhook is deleted                                                                                           | No    | No      |
+<!-- markdownlint-enable line-length -->
+<!-- markdownlint-disable line-length -->
+<!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 <!-- markdownlint-enable line-length -->
 
 ## V1

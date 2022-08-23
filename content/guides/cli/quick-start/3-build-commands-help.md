@@ -24,6 +24,8 @@ If you do not see a command for an endpoint you need, you can build a
    restrictions, token permission requirements, fields, etc. 
 </Message>
 
+<YouTube id='66wlIyS07Aw' />
+
 ## First: Reset browser storage
 
 Now that you've imported the Box API credentials into the CLI you should take a
@@ -98,4 +100,4 @@ Log into **your** Box account. Can you see this folder in your folder tree?
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
 [sa]: g://getting-started/user-types/service-account
-[four]: g://tooling/cli/quick-start/options-and-bulk-commands/#options
+[four]: g://cli/quick-start/options-and-bulk-commands/#options
