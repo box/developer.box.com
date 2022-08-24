@@ -172,7 +172,9 @@ Run the script.
 ./Mass_Update_User_Zones.ps1
 ```
 
-(Optional) To run the script in a simulation mode,
+### Optional flags
+
+To run the script in a simulation mode,
 add the `simulate` boolean flag.
 
 ```bash
