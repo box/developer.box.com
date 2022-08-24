@@ -5,11 +5,7 @@ related_guides: []
 related_pages:
   - sdks-and-tools
 related_resources: []
-alias_paths:
-  - /docs/box-cli
-  - /docs/installation-and-setup
-  - /docs/commands-and-actions
-  - /docs/command-line-interface-cli
+alias_paths: []
 category_id: cli
 subcategory_id: cli/scripts
 is_index: true
