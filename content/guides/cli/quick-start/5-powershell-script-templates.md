@@ -1,6 +1,8 @@
 ---
 type: quick-start
 hide_in_page_nav: true
+alias_paths:
+  - /guides/tooling/cli/quick-start/powershell-script-templates
 ---
 
 # Using PowerShell Scripts with the Box CLI
