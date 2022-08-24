@@ -17,6 +17,7 @@ alias_paths:
   - /docs/installation-and-setup
   - /docs/commands-and-actions
   - /docs/command-line-interface-cli
+  - /guides/tooling/cli
 ---
 
 # CLI
