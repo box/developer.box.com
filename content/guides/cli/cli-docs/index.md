@@ -2,6 +2,11 @@
 rank: 10
 related_endpoints: []
 related_guides: []
+alias_paths:
+  - /docs/box-cli
+  - /docs/installation-and-setup
+  - /docs/commands-and-actions
+  - /docs/command-line-interface-cli
 ---
 # CLI guides
 
