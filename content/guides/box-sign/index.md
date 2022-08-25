@@ -11,11 +11,11 @@ cancel sign requests.
 ## Enablement
 
 If your account type supports access to Box Sign, you will be able to make
-requests via the Box Sign API. Supported tariffs include: Business, Business
+requests through the Box Sign API. Supported tariffs include: Business, Business
 Plus, Enterprise, Enterprise Suites, Enterprise Plus. To locate your
 account type, navigate to **Account Settings** and scroll down to the
 **Account Details** section of the **Account** tab. For Admin details on
-restricting access, please see our [support article][restrict].  
+restricting access, please see our [support article][restrict].
 
 ## Required Scopes
 
