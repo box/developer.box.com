@@ -10,15 +10,9 @@ cancel sign requests.
 
 ## Enablement
 
-<Message type='warning'>
-Box Sign is now available on all business (Business , Business Plus) and
-enterprise (Enterprise, Enterprise Plus, Enterprise Suites) plans. Box will
-notify customers before Box Sign becomes available on Starter plans.
-</Message>
-
 If your account type supports access to Box Sign, you will be able to make
 requests via the Box Sign API. Supported tariffs include: Business, Business
-Plus, Enterprise, Enterprise Suites, Enterprise Plus, or Starter. To locate your
+Plus, Enterprise, Enterprise Suites, Enterprise Plus. To locate your
 account type, navigate to **Account Settings** and scroll down to the
 **Account Details** section of the **Account** tab. For Admin details on
 restricting access, please see our [support article][restrict].  
