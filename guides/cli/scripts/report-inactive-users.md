@@ -28,7 +28,7 @@ source_url: >-
 
 <!-- markdownlint-disable line-length -->
 
-This script generates a `.csv` file with a list of users who has been inactive for a number of days. It performs the following steps:
+This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
 
 1. Looks for the users who have the role `user`. 
 
