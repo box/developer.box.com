@@ -45,11 +45,11 @@ as-userヘッダーを使用できるのは、サービスアカウントと管�
 
 <!--alex ignore execute-->
 
-csvファイルを使用すると、コマンドを一括して実行できます。このスプレッドシートの各行が個別のAPI呼び出しとして処理されます。
+You can use a CSV file to execute commands in bulk. Each row of the spreadsheet is treated as an individual API call.
 
 <!--alex ignore execute-->
 
-一括コマンドを実行するには、`--bulk-file-path=pathtoacsv`オプションを使用します。ここでは、`pathtoacsv`を、必要な情報が記載されているcsvファイルのローカルパスに置き換えます。
+To execute a bulk command, use the option `--bulk-file-path=<PATH_TO_CSV>`, where `<PATH_TO_CSV>` is the local path of a CSV file containing the necessary information.
 
 <!-- markdownlint-disable line-length -->
 
@@ -59,11 +59,11 @@ csvファイルを使用すると、コマンドを一括して実行できま�
 
 <message type="tip"></message>
 
-Finderウィンドウ/エクスプローラからターミナル/コマンドラインウィンドウにcsvファイルをドラッグすると、パスを自動で入力できます。
+Drag the CSV file from your finder window/file explorer to the terminal/command line window to auto-populate the path.
 
 </Message>
 
-csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメントを参照し、引数名を確認するか`--help`オプションを使用します。この場合、列名は`PARENTID`と`NAME`となり、大文字と小文字は区別されません。このフォルダの一括作成コマンドの例では、こちらのcsv[テンプレート][csv]を確認してください。
+To specify the column names for your CSV file, go to the [GitHub repository][github] documentation and look at the argument names or use the `--help` option. In this case, these are `PARENTID` and `NAME` and are case insensitive. You can also use a CSV [template][csv] for this example bulk create folders command.
 
 <!--alex ignore executing-->
 
@@ -71,7 +71,9 @@ csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメ�
 
 <!-- markdownlint-disable line-length -->
 
-`box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv`
+```bash
+box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv
+```
 
 <!-- markdownlint-enable line-length -->
 
@@ -79,17 +81,19 @@ csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメ�
 
 <!-- markdownlint-disable line-length -->
 
-コマンドでオプションを渡すと、そのオプションがcsvの各行に自動的に適用されます。たとえば、`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`を実行すると、csv内の各ユーザーに編集者としてコラボレーションが作成されます。
+Passing an option in a command will automatically apply to it to each row in the CSV file. For example, `box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor` will create collaborations for each user in the csv as an editor.
 
 <!-- markdownlint-enable line-length -->
 
-ただし、csvでオプションを使用することもできます。前の例を基に、コマンド自体で`--role=editor`オプションを使用する代わりに、csvで`role`という名前の列を指定することができます。コマンド自体は次のようになります。
+However, you can also use options in the CSV file. Building on the last example, instead of using the `--role=editor` option in the command itself, it can be a column called `role`. The command itself becomes:
 
 <!-- markdownlint-disable line-length -->
 
 `box folders:collaborations:create --bulk-file-path=pathtocsv`
 
 <!-- markdownlint-enable line-length -->
+
+For more details on bulk commands read [this document][bulk].
 
 ## まとめ
 
@@ -108,3 +112,5 @@ csvの列名を決める際は、[GitHubリポジトリ][github]のドキュメ�
 [asuser]: g://authentication/jwt/as-user/
 
 [csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m
+
+[bulk]: g://cli/cli-docs/bulk-commands

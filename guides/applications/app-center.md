@@ -26,7 +26,7 @@ fullyTranslated: true
 ---
 # App Center
 
-[Box App Center][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に調べる場所です。アプリケーションが他の会社での使用にも適している場合は、App Centerにサービスを登録すると、新しいユーザーを見つけるのに役立ちます。
+The [Box App Center][app-center] is the first place for Box users to find out about applications that they can use in combination with Box. If your application is suited to be used by other enterprises, listing your service in the App Center can be a great way to find new users. App center groups apps into sections so that you can quickly find featured, most popular, or recently added apps.
 
 <ImageFrame shadow center>
 
@@ -56,7 +56,7 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 ### 2. フォームに入力する
 
-上部のメニューで \[App Center] タブを選択します。
+Select the **App Center** tab from the top menu.
 
 <ImageFrame center border shadow>
 

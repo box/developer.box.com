@@ -17,6 +17,7 @@ alias_paths:
   - /docs/installation-and-setup
   - /docs/commands-and-actions
   - /docs/command-line-interface-cli
+  - /guides/tooling/cli
 category_id: cli
 subcategory_id: null
 is_index: true
@@ -38,6 +39,12 @@ Box Command Line Interface (CLI) は、ターミナルウィンドウまたは�
 
 [OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
+## CLI setup and use
+
+* To use [server authentication][jwt] method, check out [this][jwt-page] guide.
+* To use [CCG authentication][ccg] method, check out [this][ccg-page] guide.
+* To perform bulk actions using CLI commands, check out [this][bulk] guide.
+
 ## Sample scripts
 
 Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組み合わせるとさらに強力になります。繰り返し発生するタスクの自動化を開始できるように、スクリプトテンプレートの[ライブラリ][scripts]を作成しました。
@@ -52,15 +59,6 @@ Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組
 * [別のアプリの構成][cli-add-config]
 * [アカウントの切り替え][cli-switch]
 * [トークンのキャッシュ][cache]
-* [Bulk actions][bulk]
-
-## JWT認証を使用したBox CLI
-
-Boxの[サーバー認証][jwt]方法を使用する場合は、[こちらの][jwt-page]ガイドを参照してください。
-
-## クライアント資格情報許可による認証を使用したBox CLI
-
-Boxの[CCG認証][ccg]方法を使用する場合は、[こちら][ccg-page]のガイドを参照してください。
 
 [cli]: https://github.com/box/boxcli
 

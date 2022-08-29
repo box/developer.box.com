@@ -302,6 +302,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        }
         "sender_message": {
             "subject": "",
             "message": ""
@@ -351,6 +354,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -398,6 +404,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -449,6 +458,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -502,6 +514,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -551,6 +566,9 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "ready_sign_link": {
+            "id": "aaae45bb-e89b-12d3-a456-426614174000"
+        },
         "sender_message": {
             "subject": "",
             "message": ""

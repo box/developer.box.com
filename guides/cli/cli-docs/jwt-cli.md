@@ -11,12 +11,13 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
+  - /guides/tooling/cli/jwt-cli
 category_id: cli
 subcategory_id: cli/cli-docs
 is_index: false
 id: cli/cli-docs/jwt-cli
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: cli/cli-docs
 parent_id: cli/cli-docs
 next_page_id: cli/cli-docs

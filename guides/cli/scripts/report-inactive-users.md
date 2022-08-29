@@ -29,7 +29,7 @@ fullyTranslated: true
 
 <!-- markdownlint-disable line-length -->
 
-This script generates a `.csv` file with a list of users who has been inactive for a number of days. It performs the following steps:
+This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
 
 1. Looks for the users who have the role `user`. 
 
@@ -76,7 +76,7 @@ If you encounter issues make sure you installed both [dotnet core](https://dotne
 
 ### Box application
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [developer console][console], and follow the guide [Setup with OAuth 2.0][auth].
+To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the guide [Setup with OAuth 2.0][auth].
 
 ## Configure the script
 
