@@ -118,7 +118,7 @@ categories:
         // text: Text for link to our Box skills code samples
         text: Skills Samples
         // url: Link to our Box skills code samples
-        url: "https://github.com/box-community?utf8=%E2%9C%93&q=\ 
+        url: "https://github.com/box-community?utf8=%E2%9C%93&q=\
           sample-*-skills&type=&language="
 
   support:
