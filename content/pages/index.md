@@ -43,7 +43,9 @@ alias_paths:
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box Platform API with our comprehensive guides. Here are six of the most used guides to get you started.
+    Get started, learn tips and tricks, and discover how to use the Box \
+    Platform API with our comprehensive guides. Here are six of the most used \
+    guides to get you started.
 
     <GuideList href='/guides/authentication/'>
       Authentication
