@@ -348,7 +348,7 @@
   // link to the iOS Content SDK
   "footer.categories.tooling.links.ios_sdk.url": "https://github.com/box/box-ios-sdk",
   // Text for link to the Android Content SDK
-  "footer.categories.tooling.links.android_sdk.text": ".NET SDK",
+  "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
   // link to the Android Content SDK
   "footer.categories.tooling.links.android_sdk.url": "https://github.com/box/box-android-sdk",
   // Text for link to the Box CLI
