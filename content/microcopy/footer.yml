@@ -86,7 +86,7 @@ categories:
 
       android_sdk:
         // text: Text for link to the Android Content SDK
-        text: .NET SDK
+        text: Android Content SDK
         // url: link to the Android Content SDK
         url: https://github.com/box/box-android-sdk
 
