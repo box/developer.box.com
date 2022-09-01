@@ -59,8 +59,8 @@ object defines the size of each part and the number of parts to upload.
 
 ## Split File
 
-Split the file to parts you will upload.
-If you want to use the API from the command line,
+Split the file into parts to be uploaded.
+If you want to use the command line,
 use the `split` command:
 
 ```bash
@@ -74,6 +74,24 @@ split -b 8388608 video.mp3 videopart
 ```
 
 This will result in your file divided into several files.
+
+### Get SHA Digest
+
+To get the value for the `SHA` digest,
+use the following openSSL command
+to encode the file part:
+
+```bash
+openssl sha1 -binary <FILE_PART_NAME> | base64
+```
+
+For example:
+
+```bash
+openssl sha1 -binary videoparta | base64
+```
+
+The result is a base-64 encoded message used to verify the upload.
 
 ## Upload Part
 
@@ -109,24 +127,6 @@ the content range for the first two parts will be:
 - H "Content-Range : bytes 0-8388607/32127641" \ ## first part
 - H "Content-Range : bytes 8388608-16777215/32127641" \ ## second part
 ```
-
-### Get SHA Digest
-
-To get the value for the `SHA` digest,
-use the following openSSL command
-to encode the file part:
-
-```bash
-openssl sha1 -binary <FILE_PART_NAME> | base64
-```
-
-For example:
-
-```bash
-openssl sha1 -binary videoparta | base64
-```
-
-The result is a base-64 encoded message used to verify the upload.
 
 ## Response
 
