@@ -145,6 +145,17 @@ Deleted user 19927131476
 Deleted employee Managed User 1
 ```
 
+### Optional flags
+
+To run the script in a simulation mode,
+add the `DryRun` boolean flag.
+Dry run doesn't mean that API calls won't be made,
+but that create/update/delete calls will be skipped.
+
+```bash
+./Users_Deprovision.ps1 -DryRun
+```
+
 ## Logging
 
 Logs are stored in a `logs` folder located in the main folder.
