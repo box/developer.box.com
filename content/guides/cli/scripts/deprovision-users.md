@@ -136,8 +136,8 @@ output or a similar one.
 
 To run the script in a simulation mode, 
 add the `DryRun` boolean flag.
-Dry run doesn't mean that API calls won't be made,
-instead, any create/update/delete calls will be skipped.
+Dry run doesn't mean that API calls won't be made
+but that create/update/delete calls will be skipped.
 
 ```bash
 ./Users_Deprovision.ps1 -DryRun
