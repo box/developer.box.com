@@ -58,7 +58,7 @@ go to your [Developer Console][console], and follow the guide
 ## Set up and use bulk commands
 
 1. Clone the `boxcli` GitHub repository 
-   or download the files from [`Bulk actions`][bulkactions] directory.
+   or download the files from [Bulk actions][bulkactions] directory.
 
    ```bash
 git clone https://github.com/box/boxcli.git
