@@ -141,7 +141,7 @@ path to your local folder you want to upload.
 
 You have 3 ways to pass parameters before run script:
 
-- Use static value in script:
+* Use static value in script:
 
   Please update all needed parameters in the script before running.
 
@@ -179,7 +179,7 @@ You have 3 ways to pass parameters before run script:
 - Input the parameters while prompt
 
   If some parameters are still missing at runtime,
-  the script will prompt you to them:
+  the script will prompt you to input them:
 
   ```bash
   PS > ./Users_Create_Provision.ps1
