@@ -107,7 +107,7 @@ The `.csv` file must have two columns with the following headers: **Email** and 
   ```
   
 <message>
-  Consult the BC or CSM contact to get the IDs corresponding to the zones enabled in a specific enterprise.
+  Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.
 </message>
  
 A sample input `.csv` file containing emails and zone names is provided with this script. Its content looks as follows:
@@ -126,7 +126,7 @@ Set the `UserZonesUpdatePath` to point to your `.csv` file.
 $UserZonesUpdatePath = "./your_file_name.csv"
 ```
 
-Update the `adminEmail` to the admin or `co-admin` login email address of    the account the script will use to make zone assignments. 
+Update the `adminEmail` to the admin or `co-admin` login email address of the account the script will use to make zone assignments. 
 If you don't specify this value, the script will prompt you for it.
 
 ```bash
@@ -151,9 +151,9 @@ PS /home/rvb/box-cli/examples/Mass Update User Zones>
 
 Run the script.
    
-   ```bash
-    ./Mass_Update_User_Zones.ps1
-   ```
+```bash
+./Mass_Update_User_Zones.ps1
+```
 
 ### Optional flags
 
@@ -161,7 +161,7 @@ To run the script in a simulation mode,
 add the `simulate` boolean flag.
 
 ```bash
-./Mass_Update_User_Zones.ps1 -simulate
+./Mass_Update_User_Zones.ps1 -DryRun
 ```
 
 ## Logging
