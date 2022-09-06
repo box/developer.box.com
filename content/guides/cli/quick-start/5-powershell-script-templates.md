@@ -141,7 +141,7 @@ path to your local folder you want to upload.
 
 You have 3 ways to pass parameters before run script:
 
-* Use static value in script:
+- Use static value in script:
 
   Please update all needed parameters in the script before running.
 
