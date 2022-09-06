@@ -58,7 +58,7 @@ For example:
 
 To use the script, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
-go to your [developer console][console], and follow the guide 
+go to your [Developer Console][console], and follow the guide 
 [Setup with OAuth 2.0][auth].
 
 ## Configure the script
@@ -131,6 +131,17 @@ output or a similar one.
     Deleted user 19927131476
     Deleted employee Managed User 1
    ```
+   
+### Optional flags
+
+To run the script in a simulation mode, 
+add the `DryRun` boolean flag.
+Dry run doesn't mean that API calls won't be made, 
+but that create/update/delete calls will be skipped.
+
+```bash
+./Users_Deprovision.ps1 -DryRun
+```
 
 ## Logging
 
