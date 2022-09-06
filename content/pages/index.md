@@ -40,19 +40,41 @@ alias_paths:
 
 <Centered wide>
   <Header to='/guides' centered>
-    Developer News
+    Guides
   </Header>
+  <GuidesList>
+    Get started, learn tips and tricks, and discover how to use the Box \
+    Platform API with our comprehensive guides. Here are six of the most used \
+    guides to get you started.
 
-  <BlogCards />
+    <GuideList href='/guides/authentication/'>
+      Authentication
+    </GuideList>
+    <GuideList href='/guides/cli/quick-start/'>
+      CLI Quick Start
+    </GuideList>
+    <GuideList href='/guides/tooling/postman/quick-start/'>
+      Postman Quick Start
+    </GuideList>
+    <GuideList href='/guides/api-calls/permissions-and-errors/common-errors/'>
+      Common Errors
+    </GuideList>
+    <GuideList href='/guides/api-calls/pagination/offset-based/'>
+      API Pagination
+    </GuideList>
+    <GuideList href='/guides/embed/ui-elements/'>
+      UI Elements
+    </GuideList>
+  </GuidesList>
 
-  <More to='https://medium.com/box-developer-blog' right>
-    Developer Blog
+  <More to='/guides' right>
+    More Guides
   </More>
 </Centered>
 
 <Dark>
   <Centered wide>
-    <Header to='/guides' centered>
+    <Header to='/sdks-and-tools' centered>
       SDKS & Tools
     </Header>
     <SDKS>
@@ -60,17 +82,17 @@ alias_paths:
       programming language, a command line interface, front-end UI elements,
       and much more.
 
-      <SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
-        Windows .NET SDK
+      <SDK language='python' href='https://github.com/box/box-python-sdk'>
+        Python SDK
       </SDK>
       <SDK language='java' href='https://github.com/box/box-java-sdk'>
         Java SDK
       </SDK>
-      <SDK language='python' href='https://github.com/box/box-python-sdk'>
-        Python SDK
-      </SDK>
       <SDK language='node' href='https://github.com/box/box-node-sdk'>
         Node SDK
+      </SDK>
+      <SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
+        Windows .NET SDK
       </SDK>
       <SDK language='cli' href='https://github.com/box/boxcli'>
         Box CLI
@@ -87,27 +109,13 @@ alias_paths:
 </Dark>
 
 <Centered wide>
-  <Header to='/guides' centered>
-    Guides
+  <Header to='https://medium.com/box-developer-blog' centered>
+    Developer News
   </Header>
 
-  <GuideCategories />
+  <BlogCards />
 
-  <More to='/guides' right>
-    All guides
+  <More to='https://medium.com/box-developer-blog' right>
+    Developer Blog
   </More>
 </Centered>
-
-<Dark>
-<Centered wide>
-  <Header to='/reference' centered>
-    API Reference
-  </Header>
-
-  <ReferenceCategories />
-
-  <More to='/reference/' right>
-    Full API Reference
-  </More>
-</Centered>
-</Dark>
