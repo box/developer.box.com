@@ -83,20 +83,21 @@ with the script.
 
 There are a few parameters you need to supply before running the script:
 
-- `EmployeeList`: Path to Employee List CSV.
+- `EmployeeList`: Path to `Employee List` CSV.
 - `RootFolderParentID`: Destination folder ID for your changes,
 either when using a JSON file as input to create folder structure,
 or uploading a local structure. It is set to `0` by default,
-but feel free to set it to your needs.
-- `FolderStructureJSONPath`: Your own Folder Structure JSON Path.
+but feel free to change it.
+- `FolderStructureJSONPath`: Your own folder structure JSON path.
 You can also change the `RootFolderName`.
 It's the name of the folder that will be created as the parent for folders
-from the JSON structure.
-It's set to `Onboarding` by default, but feel free to set it to your needs.
+defined in the JSON structure.
+It's set to `Onboarding` by default, but feel free to change it.
 - `LocalUploadPath`: Local directory to upload folder structure directly.
 
-**Note**: Please specify either a local upload path or a folder structure JSON
-path, not both.
+<Message>
+Specify either a local upload path or a JSON file with the folder structure, not both.
+</Message>
 
 ### Update the user list
 
@@ -139,11 +140,13 @@ path to your local folder you want to upload.
 
 ### Update the parameters
 
-You have 3 ways to pass parameters before run script:
+You have 3 ways to pass parameters before running the script:
 
-- Use static value in script:
+- Use static values in the script
 
-  Please update all needed parameters in the script before running.
+<Message>
+  Remember to update all required parameters in the script before running.
+</Message>
 
   ```bash
   # Set Employee List CSV Path
@@ -163,9 +166,9 @@ You have 3 ways to pass parameters before run script:
   $RootFolderParentID = ""
   ```
 
-- Run script with parameters:
+- Run the script with parameters
 
-  You can also specify parameters while run the script, for example:
+  You can specify parameters while running the script, for example:
 
   ```bash
   PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
@@ -176,10 +179,10 @@ You have 3 ways to pass parameters before run script:
   Starting User Creation & Provisioning script...
   ```
 
-- Input the parameters while prompt
+- Provide the parameters when prompted
 
   If some parameters are still missing at runtime,
-  the script will prompt you to input them:
+  the script will prompt you to provide them:
 
   ```bash
   PS > ./Users_Create_Provision.ps1
