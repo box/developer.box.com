@@ -96,7 +96,8 @@ It's set to `Onboarding` by default, but feel free to change it.
 - `LocalUploadPath`: Local directory to upload folder structure directly.
 
 <Message>
-Specify either a local upload path or a JSON file with the folder structure, not both.
+Specify either a local upload path or a JSON file with the folder
+structure, not both.
 </Message>
 
 ### Update the user list
