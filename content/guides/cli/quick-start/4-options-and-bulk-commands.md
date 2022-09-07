@@ -5,6 +5,8 @@ hide_in_page_nav: true
 
 # Using Options and Bulk Commands
 
+<YouTube id='WXkBctPosLE' />
+
 ## Options
 
 Options provide additional, optional functionality to use with a CLI command.
