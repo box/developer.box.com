@@ -79,7 +79,7 @@ Adapt the script to run in your own environment.
 In this example, you will use the sample data provided
 with the script.
 
-### Prepare the parameters
+### Provide the parameters
 
 There are a few parameters you need to supply before running the script:
 
