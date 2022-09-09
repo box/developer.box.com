@@ -19,7 +19,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/quick-start/0-index.md
 fullyTranslated: true
 ---
-# Use Box CLI with OAuth 2.0
+# OAuth 2.0を使用したBox CLIの使用
 
 <!--alex ignore executed-->
 

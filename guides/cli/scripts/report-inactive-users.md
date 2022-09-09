@@ -25,22 +25,22 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/report-inactive-users.md
 fullyTranslated: true
 ---
-# Report inactive users
+# 非アクティブなユーザーのレポート
 
 <!-- markdownlint-disable line-length -->
 
-This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
+このスクリプトは、一定の日数の間非アクティブであったユーザーのリストをCSVファイルで生成します。スクリプトによって以下の手順が実行されます。
 
-1. Looks for the users who have the role `user`. 
+1. `user`ロールを持つユーザーを探します。 
 
    <message>
 
-   The script does not consider other roles, such as `AppUser`.
+   このスクリプトでは、他のロール (`AppUser`など) は考慮していません。
 
    </message>
-2. Uses [Box Events][boxevents] to check if the user performed any actions\
-   for a specified number of days. The default list of event types includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
-3. Adds users who didn't perform any actions to a `.csv` file with inactive users. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
+2. [Box Events][boxevents]を使用して、そのユーザーが一定の日数の間に操作を行ったかどうかを確認します。\
+   デフォルトのイベントタイプのリストは、`LOGIN`、`UPLOAD`、`COPY`、`MOVE`、`PREVIEW`、`DOWNLOAD`、`EDIT`、`DELETE`、`UNDELETE`、`LOCK`、`UNLOCK`、`NEW_USER`です。このリストはスクリプトの設定で変更できます。
+3. 操作を行わなかったユーザーを、非アクティブなユーザーが含まれている`.csv`ファイルに追加します。このファイルは他のスクリプト ([ユーザーのプロビジョニング解除][deprovisionscript]など) の入力として使用できます。
 
 ## 前提条件
 
@@ -50,13 +50,13 @@ This script generates a CSV file with a list of users who have been inactive for
 
 ### MacOSおよびLinux
 
-Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
+[PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
 pwsh 
 ```
 
-Depending on the directory you are running the command in, the output may differ. For example:
+どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
 
 ```bash
 PowerShell 7.2.5
@@ -70,17 +70,17 @@ PS /Users/user/repos/boxcli/examples>
 
 <message>
 
-If you encounter issues make sure you installed both [dotnet core](https://dotnet.microsoft.com/download) and [PowerShell][pwsh].
+問題が発生する場合は、[.NET Core](https://dotnet.microsoft.com/download)と[PowerShell][pwsh]の両方をインストールしたかどうか確認してください。
 
 </message>
 
-### Box application
+### Boxアプリケーション
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the guide [Setup with OAuth 2.0][auth].
+スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## Configure the script
+## スクリプトの構成
 
-1. Clone the `boxcli` GitHub repository or download the files from [`examples`][examples] directory.
+1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
    ```bash
    git clone https://github.com/box/boxcli.git
@@ -96,7 +96,7 @@ To use the script, you will need a Box application with OAuth 2.0 authentication
 $daysInactive = "10"
 ````
 
-3. (Optional) To change the report output file name, define the `ReportOutputFile` parameter.
+3. (省略可) レポート出力ファイル名を変更するには、`ReportOutputFile`パラメータを定義します。
 
    ```bash
    $ReportOutputFile = $ReportName + ".csv"
@@ -114,7 +114,7 @@ $eventType = "LOGIN,UPLOAD,COPY,MOVE"
 
 ## スクリプトの実行
 
-Change the directory to the folder containing the script. In this example, it is the `Inactive Users Report` folder.
+ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`Inactive Users Report`フォルダになります。
 
 ```bash
 rvb@lab:~/box-cli/examples/Inactive Users Report$ pwsh
@@ -128,13 +128,13 @@ PS /home/rvb/box-cli/examples/Inactive Users Report>
 
 ```
 
-Run the script.
+スクリプトを実行します。
 
 ```bash
 ./Inactive_Users_Report.ps1
 ```
 
-When the script run is completed, you will see the following output or a similar one.
+スクリプトの実行が完了すると、以下のような出力が表示されます。
 
 ```bash
 Looking for users inactive for more than 3 days.
@@ -146,12 +146,12 @@ Found 5 users inactive for more than 3 days.
 Report is available at InactiveUsers.csv
 ```
 
-## Logging
+## ログ
 
-Logs are stored in the `logs` folder located in the main folder. You have access to these log files:
+ログは、メインフォルダ内の`logs`フォルダに格納されます。以下のログファイルにアクセスできます。
 
-* `Inactive_Users_Report_all.txt` that contains all log entries
-* `Inactive_Users_Report_errors.txt` that contains only errors.
+* `Inactive_Users_Report_all.txt`: すべてのログエントリが含まれています。
+* `Inactive_Users_Report_errors.txt`: エラーのみが含まれています。
 
 <!-- markdownlint-enable line-length -->
 

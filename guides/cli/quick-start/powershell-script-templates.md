@@ -21,13 +21,13 @@ fullyTranslated: true
 
 CLIはそれ自体がすでに強力ですが、PowerShellスクリプトと併用すると、繰り返し発生するタスクをさらに短時間で完了することができます。Boxでは、開発をすぐに開始できるように、BoxのCLI GitHubリポジトリ内にサンプル[スクリプト][scripts]フォルダを作成しました。
 
-To show you how CLI scripts work, we are going to use the provision and create users [script][script-1] template.
+CLIスクリプトのしくみを説明するため、ユーザーのプロビジョニングと作成を行う[スクリプト][script-1]テンプレートを使用します。
 
-This script uses the Box CLI to build and create an onboarding folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader roles.
+このスクリプトでは、Box CLIを使用して、オンボーディングフォルダ構造の作成と管理対象ユーザーの一括作成を実行し、新しく作成したフォルダ構造に新しいユーザーをビューアー/アップローダーのロールを持つコラボレータとして追加することでそのユーザーのプロビジョニングを行います。
 
 <message type="warning"></message>
 
-This part of the quick start for service accounts and users with administrative privileges only. Skip this step if you are not a Box administrator or you do not use a service account.
+クイックスタートのこの手順は、管理者権限を持つサービスアカウントとユーザーのみを対象としています。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップしてください。
 
 </Message>
 
@@ -35,11 +35,11 @@ This part of the quick start for service accounts and users with administrative 
 
 ## ユースケース
 
-To automatically create users and folder structure, the script performs the following steps:
+ユーザーとフォルダ構造を自動的に作成するために、スクリプトによって以下の手順が実行されます。
 
-1. Uses a `.csv` file to load employee data in bulk.
-2. Defines folder structure using a JSON file or uploads the structure from the user's local directory.
-3. Creates a managed user a predetermined folder structure to each user.
+1. `.csv`ファイルを使用して従業員データを一括で読み込みます。
+2. JSONファイルを使用してフォルダ構造を定義するか、ユーザーのローカルディレクトリから構造をアップロードします。
+3. 管理対象ユーザーを作成し、そのユーザーを各ユーザーにあらかじめ決められたフォルダ構造に追加します。
 
 ## 前提条件
 
@@ -61,18 +61,18 @@ To automatically create users and folder structure, the script performs the foll
 
 Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][Step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## Download the script
+## スクリプトのダウンロード
 
-Clone the script to a directory of your choice and navigate to that directory.
+任意のディレクトリにスクリプトを複製し、そのディレクトリに移動します。
 
 ```bash
 git clone https://github.com/box/boxcli.git box-cli
 cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 ```
 
-## Configure the script settings
+## スクリプト設定の構成
 
-Adapt the script to run in your own environment. In this example, you will use the sample data provided with the script.
+自分の環境で実行できるようにスクリプトを調整します。この例では、スクリプトに用意されているサンプルデータを使用します。
 
 ### ユーザーリストの準備
 
@@ -85,7 +85,7 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-In the `Users_Create_Provision.ps1` script file, specify which `.csv` file you would like to load.
+`Users_Create_Provision.ps1`スクリプトファイルでは、読み込む`.csv`ファイルを指定します。
 
 ```bash
 # Set Employee List CSV Path
@@ -94,11 +94,11 @@ $EmployeeList = "./Employees_1.csv"
 
 ### フォルダ構造の作成
 
-You can either create a folder structure from a JSON file or upload it from your local drive.
+フォルダ構造は、JSONファイルから作成するか、ローカルドライブからアップロードすることができます。
 
-#### Use a JSON file
+#### JSONファイルを使用する
 
-The `Folder_Structure.json` file contains the folder structure you want to create. As an example you will create a `Market Research` and a `Sales Plays` folder, each with a subfolder `Statistics` and `Big Pharma` respectively. The script will place this folder structure under the `Onboarding` folder.
+`Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、そのフォルダ構造を`Onboarding`フォルダの下に配置します。
 
 ```bash
 # First create Onboarding folder owned by current user
@@ -106,7 +106,7 @@ $script:OnboardingFolderId = box folders:create 0 "Onboarding" --id-only
 Write-Output "Created a user owned Onboarding folder with id: $($OnboardingFolderId)"
 ```
 
-Provide the location of the `Folder_Structure.json` file.
+`Folder_Structure.json`ファイルの場所を指定します。
 
 ```bash
 # Onboarding Folder Structure: Set either path build off JSON or directly
@@ -115,11 +115,11 @@ $FolderStructureJSONPath = "./Folder_Structure.json"
 # $LocalUploadPath = "./OnboardingLocalUpload"
 ```
 
-#### Upload file from local drive
+#### ローカルドライブからアップロードする
 
-You can also upload a folder structure directly from the local file system:
+フォルダ構造をローカルファイルシステムから直接アップロードすることもできます。
 
-1. Set the path to your local folder:
+1. ローカルフォルダのパスを設定します。
 
 ```bash
 # Onboarding Folder Structure: Set either path build off JSON or directly
@@ -144,7 +144,7 @@ with $($script:OnboardingFolderId)"
 
 ## スクリプトの実行
 
-1. Change the directory to the folder containing the script. In this example, it is the `User Creation & Provisioning` folder.
+1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
 
 ```bash
 rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
@@ -163,7 +163,7 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
 ```
 
-The response will be similar to the following:
+レスポンスは以下のようになります。
 
 ```bash
 Starting User Creation & Provisioning script...
@@ -220,7 +220,7 @@ Onboarding folder for provisioning
 
 ## まとめ
 
-You explored automation using a PowerShell script with the Box CLI to provision users and create an initial folder structure.
+Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロビジョニングと最初のフォルダ構造の作成の自動化を確認しました。
 
 <Next>
 

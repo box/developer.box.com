@@ -24,38 +24,38 @@ fullyTranslated: true
 ---
 <!-- markdownlint-disable line-length -->
 
-# CLI bulk commands
+# CLIの一括コマンド
 
-The Box CLI bulk commands help you to automate repetitive tasks. By adding a `--bulk-file-path` flag to your command, you are able to perform actions for many items at once.
+Box CLIの一括コマンドを使用すると、繰り返し発生するタスクを自動化できます。コマンドに`--bulk-file-path`フラグを追加すると、多数の項目に対して操作を一度に実行できます。
 
-For example, this command creates several folders using a CSV file specifying folder `Name`, `Description`, and the `ParentId` of the parent folder:
+たとえば、次のコマンドは、CSVファイルを使用してフォルダの名前 (`Name`)、説明 (`Description`)、親フォルダの`ParentId`を指定し、複数のフォルダを作成します。
 
 ```bash
 box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 ```
 
-## CSV templates
+## CSVテンプレート
 
-Predefined CSV templates help you to structure the data you want to manage in bulk. Templates reside in the [`Bulk actions`][bulkactions] directory, grouped into folders. The table below lists the currently available templates.
+あらかじめ定義されたCSVテンプレートを使用すると、一括で管理したいデータを構造化できます。テンプレートは[`Bulk actions`][bulkactions]ディレクトリにあり、複数のフォルダに分類されています。現在利用できるテンプレートは、以下の表に示すとおりです。
 
-| Templates              | 説明                                                                  |
-| ---------------------- | ------------------------------------------------------------------- |
-| box collaborations     | Create, delete, and update collaborations.                          |
-| box files              | Download, update, and upload files.                                 |
-| box folders            | Create and update folders, add metadata to folders.                 |
-| box groups             | Create groups and add memberships.                                  |
-| box metadata-templates | Create metadata templates and metadata cascade policies on folders. |
-| box shared-links       | Delete shared links.                                                |
-| box users              | Create and update users, move one user's content to another user.   |
-| box webhooks           | Delete webhooks.                                                    |
+| テンプレート                 | 説明                                        |
+| ---------------------- | ----------------------------------------- |
+| box collaborations     | コラボレーションを作成、削除、更新します。                     |
+| box files              | ファイルをダウンロード、更新、アップロードします。                 |
+| box folders            | フォルダの作成と更新、フォルダへのメタデータの追加を行います。           |
+| box groups             | グループの作成とメンバーシップの追加を行います。                  |
+| box metadata-templates | メタデータテンプレートと、フォルダのメタデータカスケードポリシーを作成します。   |
+| box shared-links       | 共有リンクを削除します。                              |
+| box users              | ユーザーの作成と更新、あるユーザーから別のユーザーへのコンテンツの移動を行います。 |
+| box webhooks           | Webhookを削除します。                            |
 
 ## 前提条件
 
-To use bulk commands, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the guide [Setup with OAuth 2.0][auth].
+一括コマンドを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## Set up and use bulk commands
+## 一括コマンドの設定と使用
 
-1. Clone the `boxcli` GitHub repository or download the files from [`Bulk actions`][bulkactions] directory.
+1. `boxcli` GitHubリポジトリを複製するか、[`Bulk actions`][bulkactions]ディレクトリからファイルをダウンロードします。
 
    ```bash
    git clone https://github.com/box/boxcli.git

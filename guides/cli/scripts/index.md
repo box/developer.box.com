@@ -20,17 +20,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/index.md
 fullyTranslated: true
 ---
-# CLI sample scripts
+# CLIサンプルスクリプト
 
-Box CLI scripts are designed to help you automate your tasks. Currently, the sample scripts library provides several PowerShell scripts you can use and customize.
+Box CLIのスクリプトは、タスクの自動化に役立つよう設計されています。現在、ユーザーが使用、カスタマイズできるいくつかのPowerShellスクリプトがサンプルスクリプトライブラリで提供されています。
 
-## PowerShell scripts
+## PowerShellスクリプト
 
-* [Provision users and folders][1]
-* [Deprovision users and archive folders][2]
-* [Manage groups and collaborations][3]
-* [Report inactive users][4]
-* [Update user zones][5]
+* [ユーザーとフォルダのプロビジョニング][1]
+* [ユーザーのプロビジョニング解除とフォルダのアーカイブ][2]
+* [グループとコラボレーションの管理][3]
+* [非アクティブなユーザーのレポート][4]
+* [ユーザーのゾーンの更新][5]
 
 [1]: g://cli/quick-start/powershell-script-templates
 

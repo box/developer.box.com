@@ -35,21 +35,21 @@ fullyTranslated: true
 
 Box Command Line Interface (CLI) は、ターミナルウィンドウまたはコマンドプロンプトからBox APIにリクエストを行うためのツールです。
 
-## Quick start
+## クイックスタート
 
 [OAuth 2.0を使用したBox CLIの使用を開始する][qs]。
 
-## CLI setup and use
+## CLIの設定と使用
 
-* To use [server authentication][jwt] method, check out [this][jwt-page] guide.
-* To use [CCG authentication][ccg] method, check out [this][ccg-page] guide.
-* To perform bulk actions using CLI commands, check out [this][bulk] guide.
+* [サーバー認証][jwt]方法を使用するには、[こちら][jwt-page]のガイドを参照してください。
+* [CCG認証][ccg]方法を使用するには、[こちら][ccg-page]のガイドを参照してください。
+* CLIコマンドを使用して一括操作を行うには、[こちら][bulk]のガイドを参照してください。
 
-## Sample scripts
+## サンプルスクリプト
 
 Box CLIの使用自体が役に立ちますが、PowerShellスクリプトと組み合わせるとさらに強力になります。繰り返し発生するタスクの自動化を開始できるように、スクリプトテンプレートの[ライブラリ][scripts]を作成しました。
 
-* [Explore sample scripts][scripts-docs]
+* [サンプルスクリプトを探す][scripts-docs]
 
 ## 高度な機能
 

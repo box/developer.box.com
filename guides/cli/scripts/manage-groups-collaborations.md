@@ -26,17 +26,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/manage-groups-collaborations.md
 fullyTranslated: true
 ---
-# Manage groups and collaborations
+# グループとコラボレーションの管理
 
 <!-- markdownlint-disable line-length -->
 
-## Script structure
+## スクリプト構造
 
-This script uses Box CLI to create or update groups, add users to them, and finally to create collaborations between groups and folders. The script consists of two parts described in detail in the sections below. You can run them both or use the optional flags to decide which part to run.
+このスクリプトでは、Box CLIを使用して、グループの作成や更新、グループへのユーザーへの追加、グループとフォルダの間のコラボレーションの作成を行います。このスクリプトは、2つのパートから構成されています (以下のセクションで詳しく説明します)。両方のパートを実行することも、オプションのフラグを使用して実行するパートを決めることもできます。
 
-### Create or update groups
+### グループの作成または更新
 
-1. The script uses the `.csv` file you specify for the `UserGroupAdditionPath` parameter. The file lists group names and user emails. When creating the file, you can use the same group name for several users, and assign one user to several groups. For example:
+1. このスクリプトでは、`UserGroupAdditionPath`パラメータに指定した`.csv`ファイルを使用します。このファイルには、グループ名とユーザーのメールアドレスが記載されています。このファイルを作成する際には、複数のユーザーに同じグループ名を使用することも、1人のユーザーを複数のグループに割り当てることもできます。以下に例を示します。
 
    | `GroupName` | `UserEmail`                                           |
    | ----------- | ----------------------------------------------------- |
@@ -45,13 +45,13 @@ This script uses Box CLI to create or update groups, add users to them, and fina
    | Group2      | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
    | Group3      | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
 
-2. If the group doesn't exist, the script creates it. If it does exist, the script can update the entries based on the provided data.
+2. グループが存在しない場合は、スクリプトによってそのグループが作成されます。グループが存在する場合は、指定したデータに基づいてエントリが更新されます。
 
-### Create or update collaborations
+### コラボレーションの作成または更新
 
-1. The script uses the `.csv` file you specify for the `CollaborationsCreationPath` parameter. The file lists group names, folder IDs, and collaboration roles. 
+1. このスクリプトでは、`CollaborationsCreationPath`パラメータに指定した`.csv`ファイルを使用します。このファイルには、グループ名、フォルダID、コラボレーションロールが記載されています。 
 
-2. For each row, the script checks if a group exists and if it's not already added as a collaborator to the corresponding folder. For example:
+2. スクリプトでは、行ごとに、グループが存在するかどうか、そのグループがすでに対応するフォルダにコラボレータとして追加されていないかどうかを確認します。以下に例を示します。
 
    | `GroupName` | `FolderId` | `CollaborationRole` |
    | ----------- | ---------- | ------------------- |
@@ -60,7 +60,7 @@ This script uses Box CLI to create or update groups, add users to them, and fina
    | Group2      | 2222222    | viewer              |
    | Group3      | 1111111    | viewer_uploader     |
 
-3. If both of these conditions are met, the script assigns the group to a folder using the role defined in the `CollaborationRole` column. Also, if a group already exists, but the `CollaborationRole` changed, the script will update it if you pass the `-UpdateExistingCollabs` flag when running the script.
+3. 両方の条件を満たしている場合、`CollaborationRole`列で定義されたロールを使用してグループがフォルダに割り当てられます。また、グループはすでに存在していても、`CollaborationRole`を変更した場合、スクリプトの実行時に`-UpdateExistingCollabs`フラグを渡すと、コラボレーションロールが更新されます。
 
 ## 前提条件
 
@@ -70,13 +70,13 @@ This script uses Box CLI to create or update groups, add users to them, and fina
 
 ### MacOSおよびLinux
 
-Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
+[PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
 pwsh 
 ```
 
-Depending on the directory you are running the command in, the output may differ. For example:
+どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
 
 ```bash
 PowerShell 7.2.5
@@ -90,17 +90,17 @@ PS /Users/user/repos/boxcli/examples>
 
 <message>
 
-If you encounter issues make sure you installed both [dotnet core](https://dotnet.microsoft.com/download) and [PowerShell][pwsh].
+問題が発生する場合は、[.NET Core](https://dotnet.microsoft.com/download)と[PowerShell][pwsh]の両方をインストールしたかどうか確認してください。
 
 </message>
 
-### Box application
+### Boxアプリケーション
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the guide [Setup with OAuth 2.0][auth].
+スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## Configure the script
+## スクリプトの構成
 
-1. Clone the `boxcli` GitHub repository or download the files from [`examples`][examples] directory.
+1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
    ```bash
    git clone https://github.com/box/boxcli.git
@@ -148,7 +148,7 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/Mass Groups & Collaborations Update>
 ````
 
-2. Run the script.
+2. スクリプトを実行します。
    ```bash
    ./Mass_Groups_Collabs_Update.ps1
    ```
@@ -169,22 +169,22 @@ You can use flags to run run or skip specific parts of the script.
    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
 ````
 
-* To update groups without creating collaborations, add the `-SkipCollabsCreation` boolean flag when running the script:
+* コラボレーションを作成せずにグループを更新するには、スクリプトの実行時に`-SkipCollabsCreation`ブール値フラグを追加します。
   ```bash
   Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
   ```
 
-* To create collaborations without any group updates, add the `-SkipGroupsUpdate` boolean flag when running the script:
+* グループを更新せずにコラボレーションを作成するには、スクリプトの実行時に`-SkipGroupsUpdate`ブール値フラグを追加します。
   ```bash
   Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
   ```
 
-## Logging
+## ログ
 
-Logs are stored in the `logs` folder located in the main folder. You have access to these log files:
+ログは、メインフォルダ内の`logs`フォルダに格納されます。以下のログファイルにアクセスできます。
 
-* `Mass_Groups_Collabs_Update_all.txt` that contains all log entries
-* `Mass_Groups_Collabs_Update_errors.txt` that contains only errors.
+* `Mass_Groups_Collabs_Update_all.txt`: すべてのログエントリが含まれています。
+* `Mass_Groups_Collabs_Update_errors.txt`: エラーのみが含まれています。
 
 <!-- markdownlint-enable line-length -->
 

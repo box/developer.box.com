@@ -23,12 +23,12 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
 fullyTranslated: true
 ---
-# Deprovision users and archive folders
+# ユーザーのプロビジョニング解除とフォルダのアーカイブ
 
-This script allows you to deprovision and delete a list of users. It performs the following steps:
+このスクリプトを使用すると、リストアップしたユーザーのプロビジョニング解除と削除が可能です。スクリプトによって以下の手順が実行されます。
 
-1. Transfers the user content to the current admin user's root folder under `Employee Archive`.
-2. Deletes the user.
+1. 現在の管理者ユーザーのルートフォルダにある`Employee Archive`の下にユーザーコンテンツを転送します。
+2. ユーザーを削除します。
 
 ## 前提条件
 
@@ -38,13 +38,13 @@ This script allows you to deprovision and delete a list of users. It performs th
 
 ### MacOSおよびLinux
 
-Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
+[PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
 pwsh 
 ```
 
-Depending on the directory you are running the command in, the output may differ. For example:
+どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
 
 ```bash
 PowerShell 7.2.5
@@ -58,42 +58,42 @@ PS /Users/user/repos/boxcli/examples>
 
 <message>
 
-If you encounter issues make sure you installed both [dotnet core](https://dotnet.microsoft.com/download) and [PowerShell][pwsh].
+問題が発生する場合は、[.NET Core](https://dotnet.microsoft.com/download)と[PowerShell][pwsh]の両方をインストールしたかどうか確認してください。
 
 </message>
 
-### Box application
+### Boxアプリケーション
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the guide [Setup with OAuth 2.0][auth].
+スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-## Configure the script
+## スクリプトの構成
 
-Clone the `boxcli` GitHub repository or download the files from [`examples`][examples] directory.
+`boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
 ```bash
 git clone https://github.com/box/boxcli.git
 ```
 
-Set your own path to the CSV file with the list of employees.
+従業員のリストが含まれるCSVファイルのパスを指定します。
 
 ```bash
 $EmployeeList = "./Employees_to_delete.csv"
 ```
 
-Customize the `Employees_to_delete.csv` input file of employee accounts you want to delete by providing their email addresses. For example:
+削除対象の従業員アカウントが記載された`Employees_to_delete.csv`入力ファイルを、削除対象アカウントのメールアドレスを指定してカスタマイズします。以下に例を示します。
 
 ```bash
 name,email
 Managed User 1,ManagedUser1@test.com
 ```
 
-(Optional) To skip transfer of user content before deleting the user, set the `TransferContent` parameter to `N`.
+(省略可) ユーザーの削除前にユーザーコンテンツの転送をスキップするには、`TransferContent`パラメータを`N`に設定します。
 
 ```bash
 $TransferContent = "N"
 ```
 
-(Optional) Change the `EmployeeArchiveFolderName` to any name of your choice.
+(省略可) `EmployeeArchiveFolderName`を任意の名前に変更します。
 
 ```bash
 $EmployeeArchiveFolderName = "Employee Archive"
@@ -101,7 +101,7 @@ $EmployeeArchiveFolderName = "Employee Archive"
 
 ## スクリプトの実行
 
-Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
+ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Deprovisioning`フォルダになります。
 
 ```bash
 rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
@@ -114,13 +114,13 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/User Deprovisioning>
 ```
 
-Run the script.
+スクリプトを実行します。
 
 ```bash
 ./Users_Deprovision.ps1
 ```
 
-When the script run is completed, you will see the following output or a similar one.
+スクリプトの実行が完了すると、以下のような出力が表示されます。
 
 ```bash
 Transfered employee content Managed User 1
@@ -129,12 +129,12 @@ Deleted user 19927131476
 Deleted employee Managed User 1
 ```
 
-## Logging
+## ログ
 
-Logs are stored in a `logs` folder located in the main folder. You have access to these log files:
+ログは、メインフォルダ内の`logs`フォルダに格納されます。以下のログファイルにアクセスできます。
 
-* `Users_Deprovision_all.txt` that contains all log entries
-* `Users_Deprovision_errors.txt` that contains only errors.
+* `Users_Deprovision_all.txt`: すべてのログエントリが含まれています。
+* `Users_Deprovision_errors.txt`: エラーのみが含まれています。
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 

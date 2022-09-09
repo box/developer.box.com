@@ -26,7 +26,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/jwt-cli.md
 fullyTranslated: true
 ---
-# Box CLI with JWT Authentication
+# JWT認証を使用したBox CLI
 
 これまで、[Box CLIのクイックスタートガイド][qs]では、JWTアプリケーションまたはサーバー認証アプリケーションの設定フローについて説明してきましたが、新しくOAuth 2.0バージョンのBox CLIをリリースしたため、新機能の使用についてガイドを更新しました。当初のJWTの設定手順については、引き続きサーバー認証アプリケーションを使用したい方のために、こちらに移動しました。
 

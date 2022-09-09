@@ -45,11 +45,11 @@ as-userヘッダーを使用できるのは、サービスアカウントと管�
 
 <!--alex ignore execute-->
 
-You can use a CSV file to execute commands in bulk. Each row of the spreadsheet is treated as an individual API call.
+CSVファイルを使用すると、コマンドを一括して実行できます。このスプレッドシートの各行が個別のAPI呼び出しとして処理されます。
 
 <!--alex ignore execute-->
 
-To execute a bulk command, use the option `--bulk-file-path=<PATH_TO_CSV>`, where `<PATH_TO_CSV>` is the local path of a CSV file containing the necessary information.
+一括コマンドを実行するには、`--bulk-file-path=<PATH_TO_CSV>`オプションを使用します。ここで、`<PATH_TO_CSV>`は、必要な情報が記載されているCSVファイルのローカルパスになります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -59,11 +59,11 @@ To execute a bulk command, use the option `--bulk-file-path=<PATH_TO_CSV>`, wher
 
 <message type="tip"></message>
 
-Drag the CSV file from your finder window/file explorer to the terminal/command line window to auto-populate the path.
+Finderウィンドウ/エクスプローラからターミナル/コマンドラインウィンドウにCSVファイルをドラッグすると、パスが自動で入力されます。
 
 </Message>
 
-To specify the column names for your CSV file, go to the [GitHub repository][github] documentation and look at the argument names or use the `--help` option. In this case, these are `PARENTID` and `NAME` and are case insensitive. You can also use a CSV [template][csv] for this example bulk create folders command.
+CSVファイルの列名を指定する際は、[GitHubリポジトリ][github]のドキュメントを参照し、引数名を確認するか`--help`オプションを使用します。この場合、列名は`PARENTID`と`NAME`となり、大文字と小文字は区別されません。このフォルダの一括作成コマンドの例では、こちらのCSV[テンプレート][csv]を使用することもできます。
 
 <!--alex ignore executing-->
 
@@ -81,11 +81,11 @@ box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders
 
 <!-- markdownlint-disable line-length -->
 
-Passing an option in a command will automatically apply to it to each row in the CSV file. For example, `box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor` will create collaborations for each user in the csv as an editor.
+コマンドでオプションを渡すと、そのオプションがCSVファイルの各行に自動的に適用されます。たとえば、`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`を実行すると、CSV内の各ユーザーに編集者としてコラボレーションが作成されます。
 
 <!-- markdownlint-enable line-length -->
 
-However, you can also use options in the CSV file. Building on the last example, instead of using the `--role=editor` option in the command itself, it can be a column called `role`. The command itself becomes:
+ただし、CSVファイルでオプションを使用することもできます。前の例を基に、コマンド自体で`--role=editor`オプションを使用する代わりに、CSVで`role`という名前の列を指定することができます。コマンド自体は次のようになります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -93,7 +93,7 @@ However, you can also use options in the CSV file. Building on the last example,
 
 <!-- markdownlint-enable line-length -->
 
-For more details on bulk commands read [this document][bulk].
+一括コマンドの詳細については、[このドキュメント][bulk]を参照してください。
 
 ## まとめ
 

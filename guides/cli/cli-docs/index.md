@@ -21,12 +21,12 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/index.md
 fullyTranslated: true
 ---
-# CLI guides
+# CLIガイド
 
-Here you can find guides on how to use Box CLI features and capabilities.
+Box CLIの機能の使用方法のガイドを以下に示します。
 
-* Set up and test [Box CLI with JWT authentication][1].
-* Set up and use [Box CLI bulk commands][2].
+* [JWT認証を使用したBox CLI][1]を設定してテストする。
+* [Box CLI一括コマンド][2]を設定してテストする。
 
 [1]: g://cli/cli-docs/jwt-cli
 

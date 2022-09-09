@@ -23,10 +23,10 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/provision-users-folders.md
 fullyTranslated: true
 ---
-# Provision users and folders
+# ユーザーとフォルダのプロビジョニング
 
-This script uses the Box CLI to build and create an onboarding folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader role.
+このスクリプトでは、Box CLIを使用して、オンボーディングフォルダ構造の作成と管理対象ユーザーの一括作成を実行し、新しく作成したフォルダ構造に新しいユーザーをビューアー/アップローダーのロールを持つコラボレータとして追加することでそのユーザーのプロビジョニングを行います。
 
-For details, see the quick start guide on [using Box CLI and sample scripts][1].
+詳細については、クイックスタートガイドで[Box CLIの使い方とサンプルスクリプト][1]を参照してください。
 
 [1]: g://cli/quick-start/powershell-script-templates

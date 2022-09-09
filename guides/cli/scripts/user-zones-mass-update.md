@@ -24,22 +24,22 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/user-zones-mass-update.md
 fullyTranslated: true
 ---
-# Update user zones
+# ユーザーのゾーンの更新
 
-This [script][script] provisions users to a specific data residency zone within a Multizone Box tenant. It performs the following steps:
+この[スクリプト][script]は、マルチゾーンのBoxテナント内の特定のデータ保管場所のゾーンにユーザーをプロビジョニングします。スクリプトによって以下の手順が実行されます。
 
 <!-- markdownlint-disable line-length -->
 
-1. It uses admin or co-admin login email address to find the associated enterprise and the zone policy assigned to this enterprise. An assigned zone policy is inherited by all users unless specified otherwise. It is sometimes called the **default zone**.
-2. It performs zone assignment based on an input `.csv` file containing user email addresses and zone mappings.
+1. 管理者または共同管理者のログインメールアドレスを使用して、関連付けられた企業とその企業に割り当てられているゾーンポリシーを検索します。割り当てられているゾーンポリシーは、特に指定がない限り、すべてのユーザーが継承します。これは、**デフォルトゾーン**とも呼ばれることもあります。
+2. ユーザーのメールアドレスとゾーンマッピングが含まれる入力`.csv`ファイルに基づいて、ゾーン割り当てを行います。
 
 <message>
 
-Usually, you use the script once to do the initial provisioning of user zones, but you can also use it for subsequent runs to make zone assignment updates.
+通常、このスクリプトはユーザーのゾーンを初めてプロビジョニングするときに1回使用します。ただし、ゾーンの割り当てを更新するために、以降の実行でも使用できます。
 
 </message>
 
-If you would like to use Admin Console for zone assignment, see [this guide][zonesguide]. For more information about Box Zones, see the [official website][zonespage].
+ゾーンの割り当てに管理コンソールを使用する場合は、[こちらのガイド][zonesguide]を参照してください。Box Zonesの詳細については、[公式ウェブサイト][zonespage]を参照してください。
 
 ## 前提条件
 
@@ -49,13 +49,13 @@ If you would like to use Admin Console for zone assignment, see [this guide][zon
 
 ### MacOSおよびLinux
 
-Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
+[PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
 pwsh 
 ```
 
-Depending on the directory you are running the command in, the output may differ. For example:
+どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
 
 ```bash
 PowerShell 7.2.5
@@ -69,34 +69,34 @@ PS /Users/user/repos/boxcli/examples>
 
 <message>
 
-If you encounter issues make sure you installed both [dotnet core](https://dotnet.microsoft.com/download) and [PowerShell][pwsh].
+問題が発生する場合は、[.NET Core](https://dotnet.microsoft.com/download)と[PowerShell][pwsh]の両方をインストールしたかどうか確認してください。
 
 </message>
 
-### Set up application with JWT authentication
+### JWT認証を使用するアプリケーションの設定
 
-To use the script, you will need a [Box application with JWT authentication][jwtapp].
+このスクリプトを使用するには、[JWT認証を使用するBoxアプリケーション][jwtapp]が必要です。
 
-When creating the app, use the **Configuration** tab to configure the following settings:
+アプリを作成する際は、\[**構成**] タブで以下の設定を構成します。
 
-* In **App Access Level**, select `App + Enterprise Access`.
-* In **Application Scopes** > **Administrative Actions**, select `Manage Enterprise Properties`, `Manage Users`.
-* In **Advanced Features**, select `Generate user access tokens`.
+* \[**アプリアクセスレベル**] で \[`App + Enterprise Access`] を選択します。
+* \[**アプリケーションスコープ**] > \[**管理操作**] の順に移動して、\[`Manage Enterprise Properties`]、\[`Manage Users`] を選択します。
+* \[**高度な機能**] で \[`Generate user access tokens`] を選択します。
 
-### Adjust admin settings
+### 管理者設定の調整
 
-Make sure Box Admin or Co-Admin has at least `Manage Users` privileges. To check this setting:
+Boxの管理者または共同管理者に`Manage Users`以上の権限があることを確認します。この設定を確認するには、以下の手順に従います。
 
-1. Go **Users & Groups** section in the Admin Console.
-2. Click the user account you want to verify.
-3. Go to **Edit User Access permissions** section to grant the administrative privileges for users and groups. 
+1. 管理コンソールの \[**ユーザーとグループ**] セクションに移動します。
+2. 確認するユーザーアカウントをクリックします。
+3. \[**ユーザーアクセス権限を編集**] セクションに移動して、ユーザーとグループに管理者権限を付与します。 
 
-## Prepare the `.csv` file
+## `.csv`ファイルの準備
 
-The `.csv` file must have two columns with the following headers: **Email** and **Region**. 
+`.csv`ファイルには、**Email**と**Region**というヘッダーを設定した2つの列が必要です。 
 
-* **Email** contains the primary email address of a Box user. 
-* **Region** contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone. 
+* **Email**列には、Boxユーザーのプライマリメールアドレスを含めます。 
+* **Region**列には、スクリプトでユーザーを割り当てるゾーンのユーザーフレンドリ名 (ユーザーが理解しやすい名前) を含めます。この名前は、ゾーンの定義に使用する[ZonesTable][zonestable]というハッシュテーブルで指定します。キーはゾーンのユーザーフレンドリ名であり、対応する値はゾーンのグローバルIDです。 
 
   ```bash
   $ZonesTable = @{
@@ -115,11 +115,11 @@ The `.csv` file must have two columns with the following headers: **Email** and 
 
 <message>
 
-Consult the BC or CSM contact to get the IDs corresponding to the zones enabled in a specific enterprise.
+特定の企業で有効なゾーンに対応するIDを入手するには、BCまたはCSMにお問い合わせください。
 
 </message>
 
-A sample input `.csv` file containing emails and zone names is provided with this script. Its content looks as follows:
+このスクリプトには、以下のようなメールアドレスとゾーン名が含まれているサンプル入力`.csv`ファイルが用意されています。
 
 | Email                                         | Region         |
 | --------------------------------------------- | -------------- |
@@ -127,15 +127,15 @@ A sample input `.csv` file containing emails and zone names is provided with thi
 | [roger@company.com](mailto:roger@company.com) | France         |
 | [sally@company.com](mailto:sally@company.com) | JapanSingapore |
 
-## Configure the script
+## スクリプトの構成
 
-Set the `UserZonesUpdatePath` to point to your `.csv` file.
+この`.csv`ファイルを指すように`UserZonesUpdatePath`を設定します。
 
 ```bash
 $UserZonesUpdatePath = "./your_file_name.csv"
 ```
 
-Update the `adminEmail` to the admin or `co-admin` login email address of the account the script will use to make zone assignments. If you don't specify this value, the script will prompt you for it.
+`adminEmail`を、このスクリプトでゾーンの割り当てに使用するアカウントの管理者または`co-admin`のログインメールアドレスに更新します。この値を指定しない場合、スクリプト実行時に指定するよう求められます。
 
 ```bash
 $adminEmail = "john@box.com"
@@ -143,7 +143,7 @@ $adminEmail = "john@box.com"
 
 ## スクリプトの実行
 
-Change the directory to the folder containing the script. In this example, it is the `Mass Update User Zones` folder.
+ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`Mass Update User Zones`フォルダになります。
 
 ```bash
 rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
@@ -156,26 +156,26 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/Mass Update User Zones>
 ```
 
-Run the script.
+スクリプトを実行します。
 
 ```bash
 ./Mass_Update_User_Zones.ps1
 ```
 
-### Optional flags
+### オプションのフラグ
 
-To run the script in a simulation mode, add the `simulate` boolean flag.
+シミュレーションモードでスクリプトを実行するには、`simulate`ブール値フラグを追加します。
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -simulate
 ```
 
-## Logging
+## ログ
 
-Logs are stored in a `logs` folder located in the main folder. You have access to these log files:
+ログは、メインフォルダ内の`logs`フォルダに格納されます。以下のログファイルにアクセスできます。
 
-* `Mass_Update_User_Zones_all.txt` that contains all log entries.
-* `Mass_Update_User_Zones_errors.txt` that contains only errors.
+* `Mass_Update_User_Zones_all.txt`: すべてのログエントリが含まれています。
+* `Mass_Update_User_Zones_errors.txt`: エラーのみが含まれています。
 
 <!-- markdownlint-enable line-length -->
 
