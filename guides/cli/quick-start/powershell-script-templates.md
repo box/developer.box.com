@@ -157,7 +157,7 @@ Type 'help' to get help.
 /home/rvb/box-cli/examples/User Creation & Provisioning>
 ```
 
-2. スクリプトの実行:
+2. スクリプトを実行します:
 
 ```bash
 PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
