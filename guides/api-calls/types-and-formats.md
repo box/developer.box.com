@@ -185,7 +185,7 @@ object with a `request_id` field.
   "type": "error",
   "status": 400,
   "code": "item_name_invalid",
-  "help_url": "http://developers.box.com/docs/#errors",
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
   "message": "Method Not Allowed",
   "request_id": "abcdef123456"
 }
