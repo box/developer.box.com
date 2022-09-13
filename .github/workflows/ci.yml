@@ -8,6 +8,7 @@ on:
     branches-ignore:
       - en
       - en-staging
+      - en-abtest
       - en-snapshot
       - jp
       - jp-partial
