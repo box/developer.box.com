@@ -16,10 +16,6 @@ source_url: >-
 ---
 # Using Options and Bulk Commands
 
-<YouTube id='WXkBctPosLE' >
-
-</YouTube>
-
 ## Options
 
 Options provide additional, optional functionality to use with a CLI command.

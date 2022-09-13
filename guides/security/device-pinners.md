@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: security/device-pinners
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: security
 parent_id: security
 next_page_id: security/cors

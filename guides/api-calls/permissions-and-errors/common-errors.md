@@ -38,7 +38,7 @@ returns a standard client error JSON object.
   "type": "error",
   "status": 400,
   "code": "bad_digest",
-  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
+  "help_url": "http://developers.box.com/docs/#errors",
   "message": "The specified content-md5 did not match what we received",
   "request_id": "abcdef123456"
 }

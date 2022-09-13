@@ -17,7 +17,7 @@ subcategory_id: null
 is_index: true
 id: security
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
