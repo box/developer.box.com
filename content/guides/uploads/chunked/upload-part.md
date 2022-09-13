@@ -64,7 +64,7 @@ split -b 8388608 video.mp3 videopart
 
 This will result in your file divided into several files.
 
-### Get SHA Digest
+## Get SHA Digest
 
 To get the value for the `SHA` digest,
 use the following openSSL command
