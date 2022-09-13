@@ -1,0 +1,46 @@
+---
+buttons:
+  // login: Label for the log in button
+  login: Log in
+
+  // logout: Label for the log in button
+  logout: Log out
+
+  // run: Label for the button to run a live API call
+  run: Make API call
+
+  // try: Label for the button to start the API explorer
+  try: Try this API
+
+  // close: Label for the button to close the API explorer
+  close: Close the API explorer
+
+  // expand: A label to expand the code, making it full screen
+  expand: Expand
+
+  // collapse: A label to collapse a viewing, making it smaller.
+  collapse: Collapse
+
+messages:
+  // intro: Provides a short intro to the API explorer
+  intro: |-
+    You can now try out some of our APIs live, right
+    here in the documentation.
+
+  // missing_params: |-
+    Short 1-sentence message to tell a user to fill in all params
+  missing_params: Please fill in all required parameters
+
+  // response_received: |-
+    Short 1-sentence message to tell a user to that a response was received
+  response_received: Response received
+
+titles:
+  // response: Describes the API explorer response
+  response: API Response
+
+  // headers: Describes the HTTP headers returned by the API explorer
+  headers: Response Headers
+
+  // body: Describes the response body returned by the API explorer
+  body: Response Body

@@ -1,0 +1,6 @@
+---
+// message: A message to show that the site has updated in the background
+message: This site has updated in the background
+
+// link_text: The text on the link to refresh the page
+link_text: Refresh

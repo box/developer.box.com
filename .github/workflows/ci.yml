@@ -246,7 +246,7 @@ jobs:
         uses: s0/git-publish-subdir-action@v2.4.0
         env:
           REPO: self
-          BRANCH: abtest
+          BRANCH: en-abtest
           FOLDER: compiled
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

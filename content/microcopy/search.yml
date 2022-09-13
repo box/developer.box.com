@@ -1,0 +1,41 @@
+---
+// prompt: The text used to prompt a user to start searching
+prompt: Search...
+
+// only_show: Text to indicate that search results are filtered by these types
+only_show: Only show
+
+filter_types:
+  // resources: A short name for the filter type to be shown in filters
+  resources: Resources
+
+  // endpoints: A short name for the filter type to be shown in filters
+  endpoints: Endpoints
+
+  // guides: A short name for the filter type to be shown in filters
+  guides: Guides
+
+  // params: A short name for the filter type to be shown in filters
+  params: Params
+
+  // fields: A short name for the filter type to be shown in filters
+  fields: Fields
+
+result_types:
+  // resource: A short name for the resource type to be shown in search results
+  resource: resource
+
+  // endpoint: A short name for the endpoint type to be shown in search results
+  endpoint: endpoint
+
+  // guide: A short name for the guide type to be shown in search results
+  guide: guide
+
+  // param: A short name for the param type to be shown in search results
+  param: param
+
+  // field: A short name for the field type to be shown in search results
+  field: field
+
+  // quick-start: A short name for the quick start type to be shown in results
+  quick-start: quick start

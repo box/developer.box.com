@@ -1,0 +1,9 @@
+{
+  "[markdown]":{
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+  },
+  "files.associations": {
+    "*.md": "markdown"
+  }
+}

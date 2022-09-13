@@ -1,0 +1,132 @@
+---
+primary:
+  links:
+    get_started:
+      // text: The text for the link to the old Get Started guides
+      text: Quick Start
+
+      // url: The URL to the old Get Started guides
+      url: /guides/applications/
+
+    guides:
+      // text: The text for the link to the old generic guides
+      text: Guides
+
+      // url: The URL to the old generic guides
+      url: /guides/
+
+    api_reference:
+      // text: The text for the link the new API Reference docs
+      text: API Reference
+      // url: The url to the root of the reference - DO NOT TRANSLATE
+      url: "/reference/"
+
+    sdks_and_tools:
+      // text: The text for the link to the old page on SDKs
+      text: SDKs & Tools
+
+      // url: The URL to the new page on SDKs - DO NOT TRANSLATE
+      url: "/sdks-and-tools/"
+
+    support:
+      // text: The text for the link to the old page on SDKs
+      text: Support
+
+      // url: The URL to the old page on SDKs - DO NOT TRANSLATE
+      url: "/support/"
+
+  buttons:
+    dashboard:
+      // text: A longer description of getting to the developer console
+      text: Go to Dev Console
+
+      // url: The URL to the developer console
+      url: https://cloud.app.box.com/developers/console
+
+    console:
+      // text: The text for the link to the developer console
+      text: My Apps
+
+      // url: The URL to the developer console
+      url: https://cloud.app.box.com/developers/console
+
+    signup:
+      // text: The text for the link to the developer signup
+      text: Sign up
+
+      // url: The URL to the developer signup - DO NOT TRANSLATE
+      url: https://account.box.com/signup/n/developer#ty9l3
+
+secondary:
+  images:
+    logo:
+      // alt_text: The HTML alt-text for the site logo
+      alt_text: Box Developer Documentation
+
+  labels:
+    // new: A short label to signify that this page is new
+    new: new
+
+  links:
+    blog:
+      // text: The text for the link to the developer blog
+      text: Blog
+
+      // url: The URL to the developer blog
+      url: https://medium.com/box-developer-blog
+
+    forum:
+      // text: The text for the link to the developer forum
+      text: Forum
+
+      // url: The URL to the developer forum
+      url: "https://community.box.com/t5/Platform-and-Development\
+        -Forum/bd-p/DeveloperForum"
+
+    feedback:
+      // text: The text for the link to the developer feedback site
+      text: Feedback
+
+      // url: The URL to the developer feedback site
+      url: "https://box.uservoice.com/forums/909778-product\
+        -feedback?category_id=330838"
+
+  dropdowns:
+    // docs: |-
+      A short title for the dropdown to select a documentation type on mobile
+    docs: Docs
+
+    // api_reference: |-
+      A title for the dropdown to select a sub-page of the API reference
+      on mobile
+    api_reference: API Reference
+
+    // elsewhere: |-
+      A short title for the dropdown to select an external link on mobile
+    elsewhere: Elsewhere
+
+  notifications:
+    // display: |-
+      A boolean that determines whether to show the orange notification bar
+      in the header. Must be "true" or "false"
+    display: "true"
+
+    // message: |-
+      The content of the notification
+    message: >
+      Join the first BoxWorks Hackathon for Good - customers,
+      partners, and the developer community are welcome to participate
+      in the 48 hour Hack to benefit The Nature Conservancy.
+
+    // href: |-
+      The link to navigate to when the CTA is clicked
+    href: "https://box.com/hack4good"
+
+    // cta: |-
+      The text of the CTA
+    cta: Learn more and register!
+
+    // ttl: |-
+      The number of seconds to display the message. Should always
+      be 0 unless you want to autohide.
+    ttl: "0"
