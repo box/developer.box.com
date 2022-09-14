@@ -55,7 +55,7 @@ box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 
 ## 一括コマンドの設定と使用
 
-1. `boxcli` GitHubリポジトリを複製するか、[`Bulk actions`][bulkactions]ディレクトリからファイルをダウンロードします。
+1. Clone the `boxcli` GitHub repository or download the files from [Bulk actions][bulkactions] directory.
 
    ```bash
    git clone https://github.com/box/boxcli.git

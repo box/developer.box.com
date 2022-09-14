@@ -61,9 +61,9 @@ Box APIは、アプリケーション開発者が設定した、許可された�
   "status":403,
   "code":"cors_origin_not_whitelisted",
   "context_info":{
-    "origin":"https:\/\/company.com"
+    "origin":"https://company.com"
   },
-  "help_url":"http:\/\/developers.box.com\/docs\/#errors",
+  "help_url":"https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
   "message":"Access denied - Did you forget to safelist your origin in the CORS config of your app?",
   "request_id":"4dsdfsa832213"
 }

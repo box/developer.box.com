@@ -37,7 +37,7 @@ HTTP 4XX形式の大半のクライアントエラーとHTTP 5XX形式の一部�
   "type": "error",
   "status": 400,
   "code": "bad_digest",
-  "help_url": "http://developers.box.com/docs/#errors",
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
   "message": "The specified content-md5 did not match what we received",
   "request_id": "abcdef123456"
 }

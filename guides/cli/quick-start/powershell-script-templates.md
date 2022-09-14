@@ -59,7 +59,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 ### 構成済みのBoxアプリケーション
 
-Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][Step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
 ## スクリプトのダウンロード
 
@@ -74,7 +74,22 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 
 自分の環境で実行できるようにスクリプトを調整します。この例では、スクリプトに用意されているサンプルデータを使用します。
 
-### ユーザーリストの準備
+### Provide the parameters
+
+There are a few parameters you need to supply before running the script:
+
+* `EmployeeList`: Path to `Employee List` CSV.
+* `RootFolderParentID`: Destination folder ID for your changes, either when using a JSON file as input to create folder structure, or uploading a local structure. It is set to `0` by default, but feel free to change it.
+* `FolderStructureJSONPath`: Your own folder structure JSON path. You can also change the `RootFolderName`. It's the name of the folder that will be created as the parent for folders defined in the JSON structure. It's set to `Onboarding` by default, but feel free to change it.
+* `LocalUploadPath`: Local directory to upload folder structure directly.
+
+<Message>
+
+Specify either a local upload path or a JSON file with the folder structure, not both.
+
+</Message>
+
+### Update the user list
 
 ユーザーを読み込むには、サンプルファイル`Employees_1.csv`、`Employees_5.csv`、`Employees_10.csv`を使用できます。それぞれのファイルでは、新しいユーザーが1人、5人、10人読み込まれます。
 
@@ -85,12 +100,7 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-`Users_Create_Provision.ps1`スクリプトファイルでは、読み込む`.csv`ファイルを指定します。
-
-```bash
-# Set Employee List CSV Path
-$EmployeeList = "./Employees_1.csv"
-```
+With the `EmployeeList` parameter, specify which `.csv` file you would like to load data from.
 
 ### フォルダ構造の作成
 
@@ -100,144 +110,164 @@ $EmployeeList = "./Employees_1.csv"
 
 `Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、そのフォルダ構造を`Onboarding`フォルダの下に配置します。
 
-```bash
-# First create Onboarding folder owned by current user
-$script:OnboardingFolderId = box folders:create 0 "Onboarding" --id-only 
-Write-Output "Created a user owned Onboarding folder with id: $($OnboardingFolderId)"
-```
-
-`Folder_Structure.json`ファイルの場所を指定します。
-
-```bash
-# Onboarding Folder Structure: Set either path build off JSON or directly
-# upload a local folder
-$FolderStructureJSONPath = "./Folder_Structure.json"
-# $LocalUploadPath = "./OnboardingLocalUpload"
-```
+With the `FolderStructureJSONPath` parameter, provide the location of the `Folder_Structure.json` file.
 
 #### ローカルドライブからアップロードする
 
-フォルダ構造をローカルファイルシステムから直接アップロードすることもできます。
+You can also upload a folder structure directly from the local file system. With the `LocalUploadPath` parameter, provide the path to your local folder you want to upload.
 
-1. ローカルフォルダのパスを設定します。
+### Update the parameters
+
+You have 3 ways to pass parameters before running the script:
+
+* Use static values in the script
+
+<Message>
+
+Remember to update all required parameters in the script before running.
+
+</Message>
 
 ```bash
+# Set Employee List CSV Path
+$EmployeeList = ""
+
 # Onboarding Folder Structure: Set either path build off JSON or directly
 # upload a local folder
-# $FolderStructureJSONPath = "./Folder_Structure.json"
-$LocalUploadPath = "./OnboardingLocalUpload"
+$FolderStructureJSONPath = ""
+$LocalUploadPath = ""
+
+# Name of folder that will be created as parent root folder for folders
+# defined in json file
+$RootFolderName = "Onboarding"
+
+# ID of folder, wherein root folder will be created if using JSON structure,
+# otherwise it's a destination folder for local uploaded folder structure.
+$RootFolderParentID = ""
 ```
 
-2. `New-Folder-Structure`の呼び出しをコメントにし、次のセクションをコメント解除します。
+* Run the script with parameters
+
+You can specify parameters while running the script, for example:
 
 ```bash
-# Create Folder Structure from JSON
-# New-Folder-Structure
+PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
+    -LocalUploadPath ./OnboardingLocalUpload `
+    -RootFolderName Onboarding `
+    -RootFolderParentID 0
 
-# OR directly upload Folder structure to current user's root folder
-# from local directory
-
-$script:OnboardingFolderId = box folders:upload $LocalUploadPath --id-only
-Write-Output "Uploaded local folder structre to current user's root folder 
-with $($script:OnboardingFolderId)"
+Starting User Creation & Provisioning script...
 ```
+
+* Provide the parameters when prompted
+
+  If some parameters are still missing at runtime, the script will prompt you to provide them:
+
+  ```bash
+  PS > ./Users_Create_Provision.ps1
+  Please enter the path to the employee list CSV file:
+  ./Employees_1.csv
+  Please enter the path to the folder structure JSON file or the local upload path:
+  Folder_Structure.json
+  Folder structure JSON path set to: Folder_Structure.json
+  Please enter the ID of the parent folder for the root folder:
+  0
+  Starting User Creation & Provisioning script...
+  ```
 
 ## スクリプトの実行
 
 1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
 
-```bash
-rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
+   ```bash
+   rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
+   PowerShell 7.2.4
+   Copyright (c) Microsoft Corporation.
 
-https://aka.ms/powershell
-Type 'help' to get help.
+   https://aka.ms/powershell
+   Type 'help' to get help.
 
-/home/rvb/box-cli/examples/User Creation & Provisioning>
-```
+   /home/rvb/box-cli/examples/User Creation & Provisioning>
+   ```
 
 2. スクリプトを実行します:
 
-```bash
-PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
-```
+   ```bash
+   PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
+   ```
 
-レスポンスは以下のようになります。
+      レスポンスは以下のようになります。
 
-```bash
-Starting User Creation & Provisioning script...
+   ```bash
+   Starting User Creation & Provisioning script...
 
 
-firstName lastName email
---------- -------- -----
-Isaac     Newton   abc@abc.local
-Extracting folder structure
-Found current User ID: 18622116055
+   firstName lastName email
+   --------- -------- -----
+   Isaac     Newton   abc@abc.local
+   Extracting folder structure
+   Found current User ID: 18622116055
 
-Created a user owned Onboarding folder with id: 164734146745
+   Created a user owned Onboarding folder with id: 164734146745
 
-Created subfolder Market Research under Onboarding folder with id: 164735375585
+   Created subfolder Market Research under Onboarding folder with id: 164735375585
 
-Created subfolder under Statistics folder with id: 164734956242
+   Created subfolder under Statistics folder with id: 164734956242
 
-Created subfolder Sales Plays under Onboarding folder with id: 164735683001
+   Created subfolder Sales Plays under Onboarding folder with id: 164735683001
 
-Created subfolder under Big Pharma folder with id: 164736160637
-Creating employee Managed User account with first name: 
-Isaac, last name: Newton, email: abc@abc.local, and
+   Created subfolder under Big Pharma folder with id: 164736160637
+   Creating employee Managed User account with first name:
+   Isaac, last name: Newton, email: abc@abc.local, and
 
-Created Managed user with id: 19605663027
+   Created Managed user with id: 19605663027
 
-Type: collaboration
+   Type: collaboration
     ID: '37250833128'
-Created By:
+   Created By:
     Type: user
     ID: '18622116055'
-Name: Rui Barbosa
-Login: barduinor@gmail.com
-Created At: '2022-06-07T13:58:05-07:00'
-Modified At: '2022-06-07T13:58:05-07:00'
-Expires At: null
-Status: accepted
-Accessible By:
+   Name: Rui Barbosa
+   Login: barduinor@gmail.com
+   Created At: '2022-06-07T13:58:05-07:00'
+   Modified At: '2022-06-07T13:58:05-07:00'
+   Expires At: null
+   Status: accepted
+   Accessible By:
     Type: user
     ID: '19605663027'
     Name: Isaac Newton
     Login: abc@abc.local
-Invite Email: null
-Role: viewer uploader
-Acknowledged At: '2022-06-07T13:58:05-07:00'
-Item:
+   Invite Email: null
+   Role: viewer uploader
+   Acknowledged At: '2022-06-07T13:58:05-07:00'
+   Item:
     Type: folder
     ID: '164734146745'
     Sequence ID: '0'
     ETag: '0'
-Name: Onboarding
-Collaborated Managed User Isaac Newton to current users 
-Onboarding folder for provisioning
+   Name: Onboarding
+   Collaborated Managed User Isaac Newton to current users
+   Onboarding folder for provisioning
+   ```
+
+<!---->
+
 ```
 
-## まとめ
+## Summary
 
-Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロビジョニングと最初のフォルダ構造の作成の自動化を確認しました。
+You explored automation using a PowerShell script with the
+Box CLI to provision users
+and create an initial folder structure.
 
-<Next>
-
-サンプルスクリプトを使用して繰り返し発生するタスクを自動化する方法を理解しました
-
-</Next>
+<Next>I know how to use the sample scripts to automate repetitive tasks</Next>
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
-
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
-
 [jwt-cli]: g://cli/cli-docs/jwt-cli
-
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
-
-[Step 1]: g://cli/quick-start/create-oauth-app/
-
+[step 1]: g://cli/quick-start/create-oauth-app/
 [console]: https://app.box.com/developers/console
-
 [auth]: g://authentication/oauth2/oauth2-setup
+```
