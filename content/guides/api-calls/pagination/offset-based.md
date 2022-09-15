@@ -67,13 +67,13 @@ The following query parameters are used to paginate a collection.
 
 | Query parameter | Type    | Default        |                                                                                                                 |
 | --------------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `offset`        | Integer | `0`            | The (zero-based) offset of the first item in the collection to return                                           |
+| `offset`        | Integer | `0`            | The (zero-based) offset of the first item in the collection to return. |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used. |
 
 <!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
-  The maximum `offset` for offset-based pagination is `300000`. Marker-based
+  The maximum `offset` for offset-based pagination is `9999`. Marker-based
   pagination is recommended when a higher offset is needed.
 </Message>
 
