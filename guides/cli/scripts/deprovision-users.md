@@ -150,7 +150,7 @@ Deleted employee Managed User 1
 To run the script in a simulation mode,
 add the `DryRun` boolean flag.
 Dry run doesn't mean that API calls won't be made,
-but that create/update/delete calls will be skipped.
+but that create, update, or delete calls will be skipped.
 
 ```bash
 ./Users_Deprovision.ps1 -DryRun
