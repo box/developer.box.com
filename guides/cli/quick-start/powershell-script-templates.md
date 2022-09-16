@@ -227,7 +227,7 @@ You can specify parameters while running the script, for example:
 
 ```bash
 PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
-    -LocalUploadPath ./OnboardingLocalUpload `
+    -LocalUploadPath ./PersonalLocalUpload `
     -PersonalFolderSlug "Personal Folder" `
     -PersonalFolderParentID 123456789
 
