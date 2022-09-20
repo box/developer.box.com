@@ -86,7 +86,7 @@ For example:
      Managed User 1,ManagedUser1@test.com
    ```
 
-Set the user ID which will be the new owner of user content
+To set the user ID which will be the new owner of user content
    before deleting the user, set the `NewFilesOwnerID` parameter to the
    user ID you want.
    If no value is provided before running the script, it will prompt you to
