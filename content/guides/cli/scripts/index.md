@@ -5,18 +5,16 @@ related_guides: []
 related_pages:
   - sdks-and-tools
 related_resources: []
-alias_paths:
-  - /docs/box-cli
-  - /docs/installation-and-setup
-  - /docs/commands-and-actions
-  - /docs/command-line-interface-cli
+alias_paths: []
 ---
 
 # CLI sample scripts
 
 Box CLI scripts are designed to help you
-automate your tasks. The sample scripts library 
-provides several PowerShell scripts that allow 
+automate your tasks. Currently,
+the sample scripts library 
+provides several PowerShell scripts you can use
+and customize.
 
 ## PowerShell scripts
 

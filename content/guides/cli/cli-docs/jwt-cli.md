@@ -11,6 +11,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
+  - /guides/tooling/cli/jwt-cli
 ---
 
 # Box CLI with JWT Authentication
