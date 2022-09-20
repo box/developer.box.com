@@ -90,7 +90,7 @@ Set the user ID which will be the new owner of user content
    before deleting the user, set the `NewFilesOwnerID` parameter to the
    user ID you want.
    If no value is provided before running the script, it will prompt you to
-   input one or press Enter to use the user ID of the current authenticated
+   provide one or press **Enter** to use the user ID of the currently authenticated
    user.
 
 (Optional) To skip transfer of user content before
@@ -150,7 +150,7 @@ but that create, update, or delete calls will be skipped.
 ./Users_Deprovision.ps1 -DryRun
 ```
 
-To set the new files owner ID in runtime, add the
+To set the new files owner ID at runtime, add the
 `NewFilesOwnerID` string flag. It will overwrite the
 value specified in the script before.
 
