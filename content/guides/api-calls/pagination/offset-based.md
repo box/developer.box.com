@@ -67,7 +67,7 @@ The following query parameters are used to paginate a collection.
 
 | Query parameter | Type    | Default        |                                                                                                                 |
 | --------------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
-| `offset`        | Integer | `0`            | The (zero-based) offset of the first item in the collection to return. |
+| `offset`        | Integer | `0`            | The (zero-based) offset of the first item returned in the collection. In a zero-based offset `0` is a correct value. |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used. |
 
 <!-- markdownlint-enable line-length -->
