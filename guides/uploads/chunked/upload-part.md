@@ -26,11 +26,11 @@ fullyTranslated: true
 ---
 # パーツのアップロード
 
-When you want to upload a large file, you can split it into smaller parts and upload them using the Upload Part API.
+大きいファイルをアップロードする際は、そのファイルを小さいパーツに分割し、パーツのアップロードAPIを使用してそれらのパーツをアップロードすることができます。
 
 ## アップロードセッションの作成
 
-First, [create an upload session][createsession]. The resulting object defines the size of each part and the number of parts to upload.
+最初に[アップロードセッションを作成][createsession]します。結果のオブジェクトにより、各パーツのサイズとアップロードするパーツの数が定義されます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -55,9 +55,9 @@ First, [create an upload session][createsession]. The resulting object defines t
 
 <!-- markdownlint-enable line-length -->
 
-## Split File
+## ファイルの分割
 
-Split the file into parts to be uploaded. If you want to use the command line, use the `split` command:
+ファイルをアップロードするパーツに分割します。コマンドラインを使用する場合は、`split`コマンドを使用します。
 
 ```bash
 split -b <PART_SIZE> <FILE_NAME> <YOUR_PART_NAME>
@@ -69,11 +69,11 @@ split -b <PART_SIZE> <FILE_NAME> <YOUR_PART_NAME>
 split -b 8388608 video.mp3 videopart
 ```
 
-This will result in your file divided into several files.
+これにより、ファイルが複数のファイルに分割されます。
 
-## Get SHA Digest
+## SHAダイジェストの取得
 
-To get the value for the `SHA` digest, use the following openSSL command to encode the file part:
+`SHA`ダイジェストの値を取得するには、次のopenSSLコマンドを使用して、ファイルのパーツをエンコードします。
 
 ```bash
 openssl sha1 -binary <FILE_PART_NAME> | base64
@@ -85,30 +85,30 @@ openssl sha1 -binary <FILE_PART_NAME> | base64
 openssl sha1 -binary videoparta | base64
 ```
 
-The result is a base-64 encoded message used to verify the upload.
+その結果、Base64でエンコードされたメッセージがアップロードの検証に使用されます。
 
 ## パーツのアップロード
 
-Upload the bytes for the part you want to upload, specifying the byte range for the part and the `SHA` digest to ensure the content is uploaded correctly.
+アップロードするパーツのデータをアップロードします。その際、パーツのバイト範囲と、コンテンツを適切にアップロードするための`SHA`ダイジェストを指定します。
 
 <Samples id="put_files_upload_sessions_id">
 
 </Samples>
 
-### Content Range
+### コンテンツの範囲
 
-Each part’s size must be exactly equal in size to the part size specified in the upload session that you created. One exception is the last part of the file, as this can be smaller. The `Content-Range` parameter definition follows this pattern:
+各パーツのサイズは、作成したアップロードセッションで指定されているパーツサイズとまったく同じサイズである必要があります。ただし、ファイルの最後のパーツは小さくなる可能性があるため、例外となります。`Content-Range`パラメータの定義は、次のパターンに従います。
 
 ```yaml
   -H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
 ```
 
-When providing the value for `Content-Range`, remember that:
+`Content-Range`の値を指定する際は、以下の点に注意してください。
 
-* The lower bound of each part's byte range must be a multiple of the part size.
-* The higher bound must be a multiple of the part size - 1.  
+* 各パーツのバイト範囲の下限は、パーツサイズの倍数にする必要があります。
+* 上限は、パーツサイズの倍数から1を引いた値にする必要があります。  
 
-For example, if the part size is `8388608`, the content range for the first two parts will be:
+たとえば、パーツサイズが`8388608`の場合、最初の2つのパーツのコンテンツの範囲は次のようになります。
 
 ```yaml
 - H "Content-Range : bytes 0-8388607/32127641" \ ## first part
@@ -117,7 +117,7 @@ For example, if the part size is `8388608`, the content range for the first two 
 
 ## レスポンス
 
-After each upload, the resulting response includes the `ID` and `SHA` of the part uploaded.
+各アップロードの後、結果のレスポンスには、アップロードされたパーツの`ID`と`SHA`が含まれます。
 
 ```json
 {
@@ -130,7 +130,7 @@ After each upload, the resulting response includes the `ID` and `SHA` of the par
 
 <Message warning>
 
-Keep all the JSON responses from all part uploads as they are needed to [commit the session][commit].
+すべてのパーツアップロードのすべてのJSONレスポンスは、[セッションのコミット][commit]に必要なため、保持してください。
 
 </Message>
 
@@ -140,9 +140,9 @@ Keep all the JSON responses from all part uploads as they are needed to [commit 
 
 ## 並行アップロード
 
-Although you can upload the parts in parallel, try to upload them in order as much as is possible. Parts with a lower byte offset should be uploaded before parts with a higher byte offset.
+パーツは並行してアップロードできますが、可能な限り順番にアップロードするようにしてください。バイトオフセットが小さいパーツは、バイトオフセットが大きいパーツより先にアップロードする必要があります。
 
-The recommended approach is to upload 3 to 5 parts in parallel from a queue of parts, ordered by byte offset. If a part upload fails, retry it before you upload further parts.
+推奨されるのは、バイトオフセット順に並べたパーツのキューから、3～5個のパーツを並行してアップロードする方法です。パーツのアップロードが失敗した場合は、さらにパーツをアップロードする前に、失敗したアップロードを再試行してください。
 
 [commit]: g://uploads/chunked/commit-session
 

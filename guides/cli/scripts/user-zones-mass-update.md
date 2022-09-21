@@ -115,7 +115,7 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
 
 <message>
 
-Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.
+特定の企業で有効なゾーンに対応するIDを入手するには、Box Consultingまたはカスタマーサクセスマネージャまでお問い合わせください。
 
 </message>
 
@@ -164,7 +164,7 @@ PS /home/rvb/box-cli/examples/Mass Update User Zones>
 
 ### オプションのフラグ
 
-To run the script in a simulation mode, add the `DryRun` boolean flag. Dry run doesn't mean that API calls won't be made, but that any create/update/delete calls will be skipped.
+シミュレーションモードでスクリプトを実行するには、`DryRun`ブール値フラグを追加します。仮実行では、API呼び出しが行われないというわけではありませんが、作成/更新/削除の呼び出しはすべてスキップされます。
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -DryRun

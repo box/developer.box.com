@@ -74,22 +74,22 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 
 自分の環境で実行できるようにスクリプトを調整します。この例では、スクリプトに用意されているサンプルデータを使用します。
 
-### Provide the parameters
+### パラメータの指定
 
-There are a few parameters you need to supply before running the script:
+スクリプトを実行する前に指定する必要があるパラメータがいくつかあります。
 
-* `EmployeeList`: Path to `Employee List` CSV.
-* `RootFolderParentID`: Destination folder ID for your changes, either when using a JSON file as input to create folder structure, or uploading a local structure. It is set to `0` by default, but feel free to change it.
-* `FolderStructureJSONPath`: Your own folder structure JSON path. You can also change the `RootFolderName`. It's the name of the folder that will be created as the parent for folders defined in the JSON structure. It's set to `Onboarding` by default, but feel free to change it.
-* `LocalUploadPath`: Local directory to upload folder structure directly.
+* `EmployeeList`: `Employee List` CSVのパス。
+* `RootFolderParentID`: JSONファイルを入力として使用してフォルダ構造を作成する場合またはローカルの構造をアップロードする場合の変更の保存先フォルダID。デフォルトでは`0`に設定されていますが、自由に変更してかまいません。
+* `FolderStructureJSONPath`: 独自のフォルダ構造のJSONパス。`RootFolderName`を変更することも可能です。これは、JSON構造で定義されたフォルダの親として作成されるフォルダの名前です。デフォルトでは`Onboarding`に設定されていますが、自由に変更してかまいません。
+* `LocalUploadPath`: フォルダ構造を直接アップロードするためのローカルディレクトリ。
 
 <Message>
 
-Specify either a local upload path or a JSON file with the folder structure, not both.
+ローカルのアップロードパスまたはフォルダ構造のJSONファイルを指定してください。両方は指定できません。
 
 </Message>
 
-### Update the user list
+### ユーザーリストの更新
 
 ユーザーを読み込むには、サンプルファイル`Employees_1.csv`、`Employees_5.csv`、`Employees_10.csv`を使用できます。それぞれのファイルでは、新しいユーザーが1人、5人、10人読み込まれます。
 
@@ -100,7 +100,7 @@ firstName,lastName,email
 Isaac,Newton,abc@abc.local
 ```
 
-With the `EmployeeList` parameter, specify which `.csv` file you would like to load data from.
+`EmployeeList`パラメータを使用して、データを読み込む`.csv`ファイルを指定します。
 
 ### フォルダ構造の作成
 
@@ -110,21 +110,21 @@ With the `EmployeeList` parameter, specify which `.csv` file you would like to l
 
 `Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、そのフォルダ構造を`Onboarding`フォルダの下に配置します。
 
-With the `FolderStructureJSONPath` parameter, provide the location of the `Folder_Structure.json` file.
+`FolderStructureJSONPath`パラメータを使用して、`Folder_Structure.json`ファイルの場所を指定します。
 
 #### ローカルドライブからアップロードする
 
-You can also upload a folder structure directly from the local file system. With the `LocalUploadPath` parameter, provide the path to your local folder you want to upload.
+ローカルファイルシステムから直接フォルダ構造をアップロードすることもできます。`LocalUploadPath`パラメータを使用して、アップロードするローカルフォルダのパスを指定します。
 
-### Update the parameters
+### パラメータの更新
 
-You have 3 ways to pass parameters before running the script:
+スクリプトを実行する前にパラメータを渡す方法は3つあります。
 
-* Use static values in the script
+* スクリプトで静的な値を使用する
 
 <Message>
 
-Remember to update all required parameters in the script before running.
+実行する前に、スクリプト内のすべての必須パラメータを忘れずに更新してください。
 
 </Message>
 
@@ -146,9 +146,9 @@ $RootFolderName = "Onboarding"
 $RootFolderParentID = ""
 ```
 
-* Run the script with parameters
+* パラメータを指定してスクリプトを実行する
 
-You can specify parameters while running the script, for example:
+スクリプトの実行中にパラメータを指定できます。以下に例を示します。
 
 ```bash
 PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
@@ -159,9 +159,9 @@ PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
 Starting User Creation & Provisioning script...
 ```
 
-* Provide the parameters when prompted
+* 求められたときにパラメータを指定する
 
-  If some parameters are still missing at runtime, the script will prompt you to provide them:
+  実行時に指定されていないパラメータがある場合は、スクリプトにより、指定するよう求められます。
 
   ```bash
   PS > ./Users_Create_Provision.ps1

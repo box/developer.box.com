@@ -131,7 +131,7 @@ Deleted employee Managed User 1
 
 ### オプションのフラグ
 
-To run the script in a simulation mode, add the `DryRun` boolean flag. Dry run doesn't mean that API calls won't be made, but that create/update/delete calls will be skipped.
+シミュレーションモードでスクリプトを実行するには、`DryRun`ブール値フラグを追加します。仮実行では、API呼び出しが行われないというわけではありませんが、作成/更新/削除の呼び出しはスキップされます。
 
 ```bash
 ./Users_Deprovision.ps1 -DryRun
