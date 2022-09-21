@@ -46,6 +46,15 @@ will need one piece of information from the SSO provider:
 Once available, make a request to the list enterprise users endpoint, supplying
 the `external_app_user_id` definition in the parameters.
 
+<message type='warning'>
+
+You can retrieve app users for a specific application only if 
+such app users were created by this application.
+If you use one application to search for users
+created by a different one, no data will be returned.
+
+</message>
+
 <Tabs>
 
 <Tab title='Node'>

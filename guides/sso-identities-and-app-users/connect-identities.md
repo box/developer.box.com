@@ -73,8 +73,17 @@ as the login email for the new user.
 ## Using `external_app_user_id` (recommended method)
 
 The `external_app_user_id` field was designed to hold a string identifier to
-associate a Box user record with some external service, such as an SSO provider
+associate a Box user record with an external service, such as an SSO provider
 user record.
+
+<message type='warning'>
+
+You can retrieve app users for a specific application only if such app
+users were created by this application.
+If you use one application to search for users
+created by a different one, no data will be returned.
+
+</message>
 
 Using the `external_app_user_id` field for associating the unique SSO user
 account with a Box user account is the preferred method of connecting the two
