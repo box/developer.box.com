@@ -96,6 +96,8 @@ when a user uploads a file, use `FILE.UPLOADED`.
 
 A list of available triggers is available [in this guide][2].
 
-[1]: e://post_webhooks
-[2]: g://webhooks/triggers
+[1]: g://applications
+[2]: g://authorization
+[3]: e://post_webhooks
+[4]: g://webhooks/triggers
 [sa]: g://getting-started/user-types/service-account
