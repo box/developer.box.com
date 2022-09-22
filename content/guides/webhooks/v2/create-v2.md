@@ -16,7 +16,35 @@ alias_paths:
 
 # Create Webhooks
 
-V2 webhooks can monitor specific files or folders.
+V2 webhooks can monitor specific files or folders. They can be
+created in the developer console and with API. 
+
+## Developer console
+
+<Message type='warning'>
+  V2 webhooks can be created only when the scope “Manage Webhooks”
+  is selected and the application is authorized. See more about
+  [application scopes][1] and [authorization][2].
+</Message>
+
+To create a webhook in the developer console, follow the steps below.
+
+1. Navigate to your application in the developer console.
+2. Select the **Webhooks** tab.
+3. Click the **Create webhook** button.
+4. Select **V2** from the drop-down list.
+5. Fill in the form.
+6. Click **Create webhook** button to save your changes.
+
+### Required fields
+
+| Field name | Description | Required |
+| --- | --- | --- |
+| URL Address | URL address to be notified by the webhook. | Yes |
+| Content type | Type of content the webhook is configured for. | Yes |
+| Triggers | Different triggers that activate the webhook. | Yes |
+
+## API
 
 <Message type='warning'>
   This API requires the application to have the "Manage Webhooks" scope enabled.

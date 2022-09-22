@@ -14,6 +14,19 @@ alias_paths:
 
 # Delete Webhooks
 
+You can delete a webhook using the developer console or API.
+
+## Developer Console
+
+To delete a webhook follow the steps below.
+
+1. Navigate to the **Webhooks** tab in the developer console.
+2. Select the webhook you want to delete.
+3. Click the **Delete** button.
+4. Confirm the action by clicking **Delete** under the warning message.
+
+## API
+
 To remove a webhook from a file or folder, you will need to use the 
 [remove webhook endpoint][delete] with the ID of the webhook. This value can 
 be obtained using the [list all webhooks endpoint][list].

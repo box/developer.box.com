@@ -28,6 +28,10 @@ to make an API call to delete the shared link. 
 
 There are two types of webhooks: v1 and v2, which are compared below.
 
+<Message type='notice'>
+  The recommended type of webhooks is v2.
+</Message>
+
 <!-- markdownlint-disable line-length -->
     
 | V1                                                                    | V2                                                                   |

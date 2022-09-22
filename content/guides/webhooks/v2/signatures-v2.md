@@ -29,9 +29,12 @@ support two simultaneous signature keys.
 In order to attach signatures to an application's notifications, you must first
 generate signature keys for the application.
 
-To configure your application's keys, navigate to the application in the 
-Developer Console. Click on the **Webhooks** tab and locate the 
-**Generate Key** buttons. 
+To configure your application's keys follow the steps below:
+
+1. Navigate to the application in the developer console.
+2. Click on the **Webhooks** tab.
+3. Click the **Manage signature keys** button.
+4. Click the **Generate Key** button to configure your keys. 
 
 Once generating the primary or secondary key, copy the value, as you will need
 it to verify the webhook payloads. Every webhook will now include a
