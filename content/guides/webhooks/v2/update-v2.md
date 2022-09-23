@@ -16,13 +16,13 @@ alias_paths:
 
 # Update Webhooks
 
-You can update a webhook using the developer console or API.
+You can update a webhook using the [Developer Console][console] or API.
 
 ## Developer Console
 
-To update a webhook in the developer console, follow the steps below.
+To update a webhook in the [Developer Console][console], follow the steps below.
 
-1. Navigate to the **Webhooks** tab in the developer console to display
+1. Go to the **Webhooks** tab in the [Developer Console][console] to display
 all webhooks.
 2. Select the webhook you want to update.
 3. Click the **Edit webhook** button.
@@ -37,7 +37,7 @@ all webhooks.
 
 ## API
 
-To update a webhook, you will need to use the [update webhook][2] endpoint,
+To update a webhook, use the [update webhook][2] endpoint,
 which requires the webhook ID. To find the ID of the webhook, use the
 [list all webhooks][1] endpoint.
 
@@ -45,3 +45,4 @@ which requires the webhook ID. To find the ID of the webhook, use the
 
 [1]: g://webhooks/v2/list-v2
 [2]: e://put-webhooks-id
+[console]: https://app.box.com/developers/console
