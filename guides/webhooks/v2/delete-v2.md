@@ -25,9 +25,22 @@ source_url: >-
 ---
 # Delete Webhooks
 
-To remove a webhook from a file or folder, you will need to use the
-[remove webhook endpoint][delete] with the ID of the webhook. This value can
-be obtained using the [list all webhooks endpoint][list].
+You can delete a webhook using the [Developer Console][console] or API.
+
+## Developer Console
+
+To delete a webhook follow the steps below.
+
+1. Navigate to the **Webhooks** tab in the [Developer Console][console].
+2. Select the webhook you want to delete.
+3. Click the **Delete** button.
+4. Confirm the action by clicking **Delete** under the warning message.
+
+## API
+
+To remove a webhook from a file or folder, you need to use the 
+[remove webhook endpoint][delete] with the ID of the webhook. You can
+get this value using the [list all webhooks endpoint][list].
 
 <Samples id='delete_webhooks_id'>
 
@@ -35,21 +48,21 @@ be obtained using the [list all webhooks endpoint][list].
 
 ## Additional reasons for deletion
 
-Using this endpoint is not the only way a webhook can be deleted.
+Using [this][delete] endpoint is not the only way a webhook can be deleted.
 
 The following reasons can cause webhooks to be deleted.
 
 1. Deleting a Box application automatically deletes all webhooks associated with
-   the application.
-2. Deleting all active Access Tokens associated with a webhook will
-   automatically delete the webhook. This includes Developer Tokens and password
-3. If the last successful delivery was 30 days ago and the period between the
-   last successful delivery date and the last trigger date was more than 14
-   days, the webhook will be automatically deleted.
+   it.
+2. Deleting all active Access Tokens associated with a webhook
+   automatically deletes the webhook. This includes Developer Tokens and password.
+3. A webhook is automatically deleted if the last successful delivery was
+30 days ago and the period between the last successful delivery and
+the last trigger date is more than 14 days.
 
-In all of these cases Box would send a webhook payload with the
+In all of these cases Box sends a webhook payload with the
 `WEBHOOK.DELETED` event name to the notification URL. The body of the payload
-will include the following additional information.
+includes the following additional information.
 
 ```json
 "additional_info": {
@@ -59,3 +72,4 @@ will include the following additional information.
 
 [delete]: e://delete-webhooks-id
 [list]: e://get-webhooks
+[console]: https://app.box.com/developers/console

@@ -33,7 +33,7 @@ endpoint.
 
 <Message type='warning'>
 
-This endpoint requires the application to have the "Manage Webhooks" scope
+This endpoint requires the application to have the **Manage Webhooks** scope
 enabled.
 
 </Message>
