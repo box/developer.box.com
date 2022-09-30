@@ -330,7 +330,7 @@ if (req.userContext && req.userContext.userinfo) {
 
 <Choice option="programming.platform" value="java" color="none">
 
-メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
+メインのルート内の`// TODO: HANDLE MAIN ROUTE`を以下のコードに置き換えます。
 
 ```java
 // Validate OIDC user against Box

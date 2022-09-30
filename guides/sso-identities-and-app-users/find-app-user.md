@@ -36,6 +36,12 @@ Boxユーザーが検出されない場合は、そのSSOユーザーレコー�
 
 取得したら、パラメータで`external_app_user_id`定義を指定して、会社ユーザーのリストを取得エンドポイントにリクエストを実行します。
 
+<message type="warning">
+
+You can retrieve app users for a specific application only if such app users were created by this application. If you use one application to search for users created by a different one, no data will be returned.
+
+</message>
+
 <Tabs>
 
 <Tab title="Node">

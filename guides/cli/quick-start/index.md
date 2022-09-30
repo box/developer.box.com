@@ -6,6 +6,7 @@ hide_in_page_nav: true
 icon: FiCode
 alias_paths:
   - /guides/tooling/sdks/cli/
+  - /guides/tooling/cli/quick-start/
 category_id: cli
 subcategory_id: cli/quick-start
 is_index: true
