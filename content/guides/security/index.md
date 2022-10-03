@@ -50,7 +50,7 @@ when using a server authentication application, the
 [request Access Token endpoint][gettoken] must be called for a new Access Token.
 For security reasons we do not allow long-lived access tokens.
 
-<Message type=tip>
+<Message type='tip'>
    Unsure why you are receiving a 404 error? A great place to start is checking
    to see what user is associated with your Access Token by using the get
    current user endpoint.

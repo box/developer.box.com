@@ -31,7 +31,7 @@ at the root level in user ID 123456’s account.
 box folders:create 0 Example_Folder --as-user=123456
 ```
 
-<Message type=warning>
+<Message type='warning'>
    Only Service Accounts and Admins are able to use the as-user header.
    If your application was not authorized with the necessary scopes or you
    configured your CLI to obtain a default token for another user, this call may
@@ -51,7 +51,7 @@ necessary information.
 As an example, let's create folders using the command `box folders:create --bulk-file-path=pathtoacsv`
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<Message type='tip'>
    Drag the CSV file from your finder window/file explorer to the
    terminal/command line window to auto-populate the path.
 </Message>
