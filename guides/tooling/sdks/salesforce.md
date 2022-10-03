@@ -29,7 +29,7 @@ The Salesforce SDK can be deployed directly to Sandbox or Developer
 organizations by using the [Deploy to Salesforce][deploy_salesforce]
 functionality.
 
-<Message type="notice">
+<Message type='notice'>
 
 "Deploy to Salesforce" functionality is not owned or maintained by Box.
 
@@ -40,7 +40,7 @@ The SDK is also distributed as an unmanaged package:
 - [Production/Developer Package][salesforce_pkg_prod]
 - [Sandbox Package][salesforce_pkg_sandbox]
 
-<Message type="warning">
+<Message type='warning'>
 
 Unmanaged packages can't be upgraded once installed in a Salesforce org so
 future upgrades will have to be applied by cloning the repositories locally

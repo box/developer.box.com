@@ -173,7 +173,7 @@ Gives an application permission to view the enterprise event stream, as well as
 view and edit the enterprise's attributes and reports. It also allows the
 application to edit and delete device pins.
 
-<Message type="notice">
+<Message type='notice'>
 
 Although this allows an application to enterprise properties, for client-side
 applications, the Access Token used must must be associated with an
@@ -193,7 +193,7 @@ Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased
 [Box Governance][governance].
 
-<Message type="warning">
+<Message type='warning'>
 
 This scope also requires the `enterprise_content` scope to function properly.
 These scopes can be requested by opening a ticket via our support channels.
@@ -253,7 +253,7 @@ Gives an application permission to view and create retention policies
 with Box Governance. This requires the enterprise to have purchased Box
 Governance.
 
-<Message type="notice">
+<Message type='notice'>
 
 This scope depends on the `enterprise_content` scope to function properly.
 This scope can be requested by opening a ticket via our support channels.
