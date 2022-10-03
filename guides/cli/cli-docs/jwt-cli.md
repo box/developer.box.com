@@ -187,7 +187,7 @@ For example:
 
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<Message type='tip'>
 
 You can drag the csv file from the Finder/File Explorer to the
 terminal/command line window to auto-populate the path.
@@ -221,7 +221,7 @@ Avatar URL: ''
 Notification Email: []
 ```
 
-<Message type=tip>
+<Message type='tip'>
 
 By default, JWT applications automatically obtain an Access Token for the
 Service Account. It is possible to change the default user, but this guide

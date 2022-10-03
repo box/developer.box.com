@@ -19,7 +19,7 @@ source_url: >-
 A full list of CLI commands and usage information can be found in the
 [GitHub repository][github].
 
-<Message type=warning>
+<Message type='warning'>
 
 Only Service Accounts and Admins are able to use some commands.
 If your user is not authorized with the necessary scopes or you
@@ -31,7 +31,7 @@ fail. Add `-v` or `--verbose` to your command for verbose error logging.
 If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].
 
-<Message type=tip>
+<Message type='tip'>
 
 Use repository documentation in conjunction with reference documentation to
 see information the help command does not provide. This includes
@@ -72,7 +72,7 @@ to a list of all possible object commands. Options are discussed more in
 
 <ImageFrame center>
 
-![Help](./help.png)
+![Help](../images/help.png)
 
 </ImageFrame>
 
@@ -84,7 +84,7 @@ object.
 
 <ImageFrame center>
 
-![Help](./folders_help.png)
+![Help](../images/folders-help.png)
 
 </ImageFrame>
 
@@ -96,7 +96,7 @@ Discover the required arguments for creating a folder: `box folders:create --hel
 
 <ImageFrame center>
 
-![Help](./folders_create_help.png)
+![Help](../images/folders-create-help.png)
 
 </ImageFrame>
 
@@ -105,7 +105,7 @@ Discover the required arguments for creating a folder: `box folders:create --hel
 Execute the command `box folders:create 0 "My CLI Folder"` and note the folder
 ID returned in the response.
 
-<Message type=tip>
+<Message type='tip'>
 
 The root level of the folder tree, the All Files page, is always represented
 by folder ID 0.
@@ -114,7 +114,7 @@ by folder ID 0.
 
 Log into **your** Box account. Can you see this folder in your folder tree?
 
-<Message type=warning>
+<Message type='warning'>
 
 If you set up the Box CLI using JWT authentication, you will not see the
 folder in your Box account. The folder will live in the service account
