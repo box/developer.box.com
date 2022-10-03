@@ -21,7 +21,7 @@ personal folder structure, create managed users in bulk,
 and provision such new users by adding them to the newly created
 folder structure as collaborators with viewer or uploader roles.
 
-<Message type=warning>
+<Message type='warning'>
    This part of the quick start for service accounts 
    and users with administrative privileges only. 
    Skip this step if you are not a Box administrator
@@ -76,7 +76,7 @@ Here is an example of what the structure will look like after
 running the script.
 
 <ImageFrame border center>
-  ![Finished Folder Structure](./final_folder_structure.png)
+  ![Finished Folder Structure](../images/final-folder-structure.png)
 </ImageFrame>
 
 ## Download the script
