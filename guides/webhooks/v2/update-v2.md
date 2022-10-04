@@ -35,7 +35,7 @@ To update a webhook in the [Developer Console][console], follow the steps below.
 
 1. Go to the **Webhooks** tab in the [Developer Console][console] to display
 all webhooks.
-2. Select the webhook you want to update.
+2. Select the webhook you want to update by clicking on its ID.
 3. Click the **Edit webhook** button.
 4. Fill in the data you want to update.
 5. Click the **Update** button to save your changes.

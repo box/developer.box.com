@@ -32,7 +32,7 @@ You can delete a webhook using the [Developer Console][console] or API.
 To delete a webhook follow the steps below.
 
 1. Navigate to the **Webhooks** tab in the [Developer Console][console].
-2. Select the webhook you want to delete.
+2. Select the webhook you want to delete by clicking on its ID.
 3. Click the **Delete** button.
 4. Confirm the action by clicking **Delete** under the warning message.
 
