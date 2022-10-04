@@ -81,7 +81,7 @@ categories:
       ios_sdk:
         // text: Text for link to the iOS SDK
         text: iOS Content SDK
-        // url: link to the iOS SDK
+        // url: Link to the iOS SDK
         url: https://github.com/box/box-ios-sdk
 
       android_sdk:
