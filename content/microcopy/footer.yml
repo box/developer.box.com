@@ -77,7 +77,7 @@ categories:
         text: .NET SDK
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
-      
+ 
       ios_sdk:
         // text: Text for link to the iOS SDK
         text: iOS Content SDK
