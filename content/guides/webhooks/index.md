@@ -24,8 +24,8 @@ waiting for a file to be downloaded to delete a shared link. A webhook can be
 set on the file and upon notification of the download event, a script can launch
 to make an API call to delete the shared link. 
 
-<ImageFrame center width="400" shadow border>
-  ![Webhooks V2 view(../images/webhooks V2 view.png)
+<ImageFrame center width="500" shadow border>
+ ![Webhook developer console](../images/webhook_developer_console.png)
 </ImageFrame>
 
 ## Versions
@@ -33,7 +33,7 @@ to make an API call to delete the shared link. 
 There are two types of webhooks: v1 and v2, which are compared below.
 
 <Message type='notice'>
-  For better scalability and security, more event triggers to choose from,
+  For the ease of use, better security, more event triggers to choose from,
   and automatic retries we recommend to use v2 webhooks.
 </Message>
 
