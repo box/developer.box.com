@@ -232,7 +232,7 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
   // The link to navigate to when the CTA is clicked
@@ -307,10 +307,6 @@
   "footer.categories.company.links.devblog.text": "Developer Blog",
   // A link to our developer blog
   "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
-  // Text for a link to the engineering blog
-  "footer.categories.company.links.engblog.text": "Engineering Blog",
-  // A link to our engineering blog
-  "footer.categories.company.links.engblog.url": "https://blog.box.com/category/engineering",
   // Text for a link to the newsletter page
   "footer.categories.company.links.newsletter.text": "Newsletter",
   // A link to the newsletter page
@@ -345,6 +341,14 @@
   "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
   // link to the .Net SDK
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
+  // Text for link to the iOS SDK
+  "footer.categories.tooling.links.ios_sdk.text": "iOS Content SDK",
+  // Link to the iOS SDK
+  "footer.categories.tooling.links.ios_sdk.url": "https://github.com/box/box-ios-sdk",
+  // Text for link to the Android SDK
+  "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
+  // link to the Android SDK
+  "footer.categories.tooling.links.android_sdk.url": "https://github.com/box/box-android-sdk",
   // Text for link to the Box CLI
   "footer.categories.tooling.links.cli.text": "Box CLI",
   // link to the Box CLI
@@ -362,7 +366,7 @@
   // Text for link to our Box skills code samples
   "footer.categories.code.links.skills_samples.text": "Skills Samples",
   // Link to our Box skills code samples
-  "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=\\ sample-*-skills&type=&language=",
+  "footer.categories.code.links.skills_samples.url": "https://github.com/box-community?utf8=%E2%9C%93&q=sample-*-skills&type=&language=",
   // A title for a footer section on our support channels
   "footer.categories.support.title": "Support",
   // Text for link to go to our support page
@@ -372,7 +376,7 @@
   // Text for link to create a support ticket
   "footer.categories.support.links.ticket.text": "Create a ticket",
   // Link to create a support ticket
-  "footer.categories.support.links.ticket.url": "https://community.box.com/t5/custom/page/page-id\\ /BoxSearchLithiumTKB",
+  "footer.categories.support.links.ticket.url": "https://community.box.com/t5/custom/page/page-id/BoxSearchLithiumTKB",
   // Text for link to go to our support forum
   "footer.categories.support.links.forum.text": "Platform Forum",
   // Link to go to our support forum
@@ -380,7 +384,7 @@
   // Text for link to go to our feedback site
   "footer.categories.support.links.feedback.text": "Product Feedback",
   // Link to go to our feedback site
-  "footer.categories.support.links.feedback.url": "https://pulse.box.com/forums/\\ 909778-product-feedback?category_id=330838",
+  "footer.categories.support.links.feedback.url": "https://pulse.box.com/forums/909778-product-feedback?category_id=330838",
   // Text for link to go to our status page
   "footer.categories.support.links.status.text": "API Status",
   // Link to go to our status page
