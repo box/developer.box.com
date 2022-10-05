@@ -81,26 +81,21 @@ go to your [Developer Console][console], and follow the
 git clone https://github.com/box/boxcli.git
 ```
 
-2. Specify the `folderID` of the folder you want the script to scan
-   for metadata.
+2. Specify the `folderID` and `userID` parameters to tell the script which
+   folder to scan, and who is the user running the script.
 
    ```bash
    [string]$FolderID = "",
-   ```
-
-3. Specify the `userID` if you want to run the script on behalf of a different  
-   user.
-
-   ```bash
    [string]$UserID = "",
    ```
+   
+   If you don't want to specify the parameters directly in the script, 
+   you can either pass them as flags or allow the script
+   to prompt you to enter them. A sample command with flags looks as follows:
 
-   <Message>
-
-   If you don't specify parameters explicitly, the script
-   will prompt you to enter them.
-
-   </Message>
+   ```bash
+   ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+   ```
 
 ## Run the script
 
@@ -108,29 +103,29 @@ git clone https://github.com/box/boxcli.git
    In this example, it is the `Metadata Extraction` folder.
    
    ```bash
-rvb@lab:~/box-cli/examples/Metadata Extraction$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-https://aka.ms/powershell
-Type 'help' to get help.
-PS /home/rvb/box-cli/examples/Metadata Extraction>
-```
+   rvb@lab:~/box-cli/examples/Metadata Extraction$ pwsh
+   PowerShell 7.2.4
+   Copyright (c) Microsoft Corporation.
+   https://aka.ms/powershell
+   Type 'help' to get help.
+   PS /home/rvb/box-cli/examples/Metadata Extraction>
+   ```
 
 2. Run the script.
    
    ```bash
-./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
-```
+   ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+   ```
 
-When the script finishes, you will see the following
-output or a similar one.
+   When the script finishes, you will see the following 
+   output or a similar one.
 
-```bash
-Pulling data from Folder ID: 173961139760
-metadata as user ID: 20718545815
-Reading Item ID: 1016853559790
-Metadata saved to: MetadataTemplate_properties.csv
-```
+   ```bash
+   Pulling data from Folder ID: 173961139760
+   metadata as user ID: 20718545815
+   Reading Item ID: 1016853559790
+   Metadata saved to: MetadataTemplate_properties.csv
+   ```
 
 ## Logging
 
