@@ -44,7 +44,7 @@ Chrome Developer Tools to decide if the notification is too long or not.
 ## HREF
 
 The href is the URL you want the user to visit when they click the CTA. This
-can be any Fully-Qualified URL, i.e. `https://box.com`, `https://developer.box.
+can be any fully qualified URL, i.e. `https://box.com`, `https://developer.box.
 com/guides`, or `https://github.com/box/sdks`.
 
 **Example**:
