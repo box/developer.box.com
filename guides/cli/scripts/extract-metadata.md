@@ -22,7 +22,7 @@ previous_page_id: cli/scripts/report-inactive-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/extract-metadata.md
 ---
-# Deprovision users and archive folders
+# Extract metadata
 
 This script extracts metadata details for all the
 files and folders in any Box folder and
