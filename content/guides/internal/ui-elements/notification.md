@@ -79,8 +79,8 @@ integers in microcopy, so you must wrap the integer in double quotes.
 
 ## How to make changes
 
-All settings are located in the /content/microcopy/headers.yml file in the
-developer.box.com repository. Update the settings and follow best
+All settings are located in the `/content/microcopy/headers.yml` file in the
+`developer.box.com` repository. Update the settings and follow best
 practices to push your updates. 
 
 ```yaml
