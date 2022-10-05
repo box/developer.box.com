@@ -234,7 +234,7 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
   // The link to navigate to when the CTA is clicked
@@ -345,11 +345,11 @@
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
   // Text for link to the iOS SDK
   "footer.categories.tooling.links.ios_sdk.text": "iOS Content SDK",
-  // link to the iOS Content SDK
+  // Link to the iOS SDK
   "footer.categories.tooling.links.ios_sdk.url": "https://github.com/box/box-ios-sdk",
-  // Text for link to the Android Content SDK
+  // Text for link to the Android SDK
   "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
-  // link to the Android Content SDK
+  // link to the Android SDK
   "footer.categories.tooling.links.android_sdk.url": "https://github.com/box/box-android-sdk",
   // Text for link to the Box CLI
   "footer.categories.tooling.links.cli.text": "Box CLI",

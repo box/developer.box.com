@@ -14,11 +14,11 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/deprovision-users
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: ''
-previous_page_id: cli/scripts/manage-groups-collaborations
+previous_page_id: cli/scripts/extract-metadata
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
 ---
@@ -105,6 +105,8 @@ user ID you want.
 If no value is provided before running the script, it will prompt you to
 provide one or press **Enter** to use the user ID of the currently authenticated
 user.
+
+### Optional flags
 
 (Optional) To skip transfer of user content before
 deleting the user, set the `TransferContent` parameter to `N`.
