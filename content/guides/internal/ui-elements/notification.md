@@ -8,7 +8,7 @@ hide: true
 
 The Notification element is the orange bar located at the top of the site used
 to provide visitors an important message or alert. Patterned after the orange
-bar on box.com, it can be configured with a few pieces of information:
+bar on `box.com`, it can be configured with a few pieces of information.
 
 ## Display
 
