@@ -17,7 +17,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/manage-groups-collaborations
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/deprovision-users
@@ -106,8 +106,8 @@ If you encounter issues make sure you installed both
 
 To use the script, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
-go to your [Developer Console][console], and follow the guide
-[Setup with OAuth 2.0][auth].
+go to your [Developer Console][console], and follow the
+[Setup with OAuth 2.0][auth] guide.
 
 ## Configure the script
 
