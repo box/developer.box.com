@@ -93,6 +93,8 @@ To set the user ID which will be the new owner of user content
    provide one or press **Enter** to use the user ID of the currently authenticated
    user.
 
+### Optional flags
+
 (Optional) To skip transfer of user content before
    deleting the user, set the `TransferContent` parameter to `N`.
 
