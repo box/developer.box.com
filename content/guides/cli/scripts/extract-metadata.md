@@ -11,7 +11,7 @@ required_guides:
 related_resources: []
 
 ---
-# Deprovision users and archive folders
+# Extract metadata
 
 This script extracts metadata details for all the
 files and folders in any Box folder and
