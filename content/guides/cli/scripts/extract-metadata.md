@@ -107,15 +107,15 @@ go to your [Developer Console][console], and follow the
     ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
    ```
 
-   When the script finishes, you will see the following 
-   output or a similar one.
+When the script finishes, you will see the following 
+output or a similar one.
 
-   ```bash
-    Pulling data from Folder ID: 173961139760
-    Extracting metadata as user ID: 20718545815
-    Reading Item ID: 1016853559790
-    Metadata saved to: MetadataTemplate_properties.csv
-   ```
+```bash
+   Pulling data from Folder ID: 173961139760
+   metadata as user ID: 20718545815
+   Reading Item ID: 1016853559790
+   Metadata saved to: MetadataTemplate_properties.csv
+```
 
 ## Logging
 
