@@ -40,5 +40,5 @@ and customize.
 [2]: g://cli/scripts/deprovision-users
 [3]: g://cli/scripts/manage-groups-collaborations
 [4]: g://cli/scripts/report-inactive-users
-[5]: g://cli/scripts/extract-metadata
+[5]: g://cli/scripts/metadata-extraction
 [6]: g://cli/scripts/user-zones-mass-update

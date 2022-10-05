@@ -19,7 +19,7 @@ type: guide
 total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: cli/scripts/extract-metadata
+next_page_id: cli/scripts/manage-groups-collaborations
 previous_page_id: cli/scripts/user-zones-mass-update
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/report-inactive-users.md

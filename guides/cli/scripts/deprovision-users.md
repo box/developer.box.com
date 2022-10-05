@@ -18,7 +18,7 @@ total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: ''
-previous_page_id: cli/scripts/extract-metadata
+previous_page_id: cli/scripts/manage-groups-collaborations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
 ---
