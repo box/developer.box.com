@@ -14,7 +14,7 @@ bar on `box.com`, it can be configured with a few pieces of information.
 
 Display is a boolean that determines whether we show the bar. Our framework
 does not recognize booleans in Microcopy, so you must provide the boolean in
-all lowercase and wrapped in double quotes; "true" or "false".
+all lowercase and wrapped in double quotes; `"true"` or `"false"`.
 
 **Example**:
 
