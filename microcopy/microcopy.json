@@ -345,7 +345,7 @@
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
   // Text for link to the iOS SDK
   "footer.categories.tooling.links.ios_sdk.text": "iOS Content SDK",
-  // Link to the iOS SDK
+  // link to the iOS Content SDK
   "footer.categories.tooling.links.ios_sdk.url": "https://github.com/box/box-ios-sdk",
   // Text for link to the Android SDK
   "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
