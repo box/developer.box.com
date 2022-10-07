@@ -41,7 +41,9 @@ or you do not use a service account.
 
 </Message>
 
-<!-- INSERT VIDEO ONCE COMPLETE HERE-->
+<YouTube id='i43YfP-dT_s' >
+
+</YouTube>
 
 ## Use case
 
