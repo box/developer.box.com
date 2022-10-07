@@ -120,6 +120,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | Parameter              | Default | Description                                                                                            |
 | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
 | `annotator`            |         | Viewer-specific annotator configurations object                                                        |
+| `annotation_id` |    |  Annotation ID, to retrieve a single annotation |
 | `apiHost`              |         | Host for Box API calls for example `https://app.box.com/api`                                           |
 | `fileId`               |         | Box file ID                                                                                            |
 | `token`                |         | A string auth token, see below for details on how to generate annotator tokens with appropriate scopes |
