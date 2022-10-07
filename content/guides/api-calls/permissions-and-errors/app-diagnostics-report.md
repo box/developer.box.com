@@ -13,7 +13,7 @@ by a given application during a specified timeframe. The report gives you
 access to the `API Request ID`, which can be given to Box Support for
 troubleshooting purposes.
 
-<Message type="warning">
+<Message type='warning'>
   This report will not include:
     * API calls made within the last 48 hours
     * Authorization and Token API calls
