@@ -18,9 +18,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/app-diagnostics-report.md
 fullyTranslated: true
 ---
-# アプリ診断レポート
+# App Diagnosticsレポート
 
-アプリ診断レポートでは、指定した期間に特定のアプリケーションで実行された各API呼び出しの詳細を示したスプレッドシートが表示されます。このレポートでは、`API Request ID`を確認できます。これは、トラブルシューティングのためにBoxサポートに提出することができます。
+App Diagnosticsレポートでは、指定した期間に特定のアプリケーションで実行された各API呼び出しの詳細を示したスプレッドシートが表示されます。このレポートでは、`API Request ID`を確認できます。これは、トラブルシューティングのためにBoxサポートに提出することができます。
 
 <Message type="warning">
 
@@ -33,9 +33,9 @@ Boxでは、上記の項目を追加し、それによって、レポートが�
 
 </Message>
 
-## 1. \[**アプリ診断**] タブをクリックする
+## 1. \[**App Diagnostics**] タブをクリックする
 
-アプリ診断レポートを実行するには、[開発者コンソール][console]でアプリケーションの構成セクションの上部にある \[**アプリ診断**] オプションをクリックします。
+App Diagnosticsレポートを実行するには、[開発者コンソール][console]でアプリケーションの構成セクションの上部にある \[**App Diagnostics**] オプションをクリックします。
 
 <ImageFrame center shadow>
 
@@ -43,13 +43,13 @@ Boxでは、上記の項目を追加し、それによって、レポートが�
 
 </ImageFrame>
 
-## 2. \[**アプリ診断レポートを実行**] をクリックしてレポートを構成する
+## 2. \[**App Diagnosticsレポートを実行**] をクリックしてレポートを構成する
 
-\[**アプリ診断レポートを実行**] をクリックすると、レポートのフィルタおよびパラメータを選択するためのポップアップが表示されます。
+\[**App Diagnosticsレポートを実行**] をクリックすると、レポートのフィルタおよびパラメータを選択するためのポップアップが表示されます。
 
 <ImageFrame center shadow>
 
-![\[アプリ診断\] メニュー](./images/Menu-Option-Screen.png)
+![\[App Diagnostics\] メニュー](./images/Menu-Option-Screen.png)
 
 </ImageFrame>
 
@@ -73,9 +73,9 @@ Boxでは、上記の項目を追加し、それによって、レポートが�
 
 </ImageFrame>
 
-## 5. 最新のPlatformアプリ診断レポートフォルダを探して開く
+## 5. 最新のPlatform App Diagnosticsレポートフォルダを探して開く
 
-実行したレポートはすべて、Box Reportsフォルダに表示されます。最新のPlatformアプリ診断実行のフォルダを探して開きます。
+実行したレポートはすべて、Box Reportsフォルダに表示されます。最新のPlatform App Diagnostics実行のフォルダを探して開きます。
 
 <ImageFrame center shadow>
 
