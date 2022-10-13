@@ -19,7 +19,7 @@ fullyTranslated: true
 
 CLIコマンドの全一覧と使用方法に関する情報については、[GitHubリポジトリ][github]を参照してください。
 
-<message type="warning"></message>
+<message type='warning'>
 
 一部のコマンドは、サービスアカウントと管理者しか使用できません。必要なスコープでユーザーが承認されていない場合、または別のユーザーのデフォルトのトークンを取得するようCLIを構成した場合は、呼び出しが失敗する可能性があります。詳細なエラーログを確認するには、コマンドに`-v`または`--verbose`を追加してください。
 
@@ -27,7 +27,7 @@ CLIコマンドの全一覧と使用方法に関する情報については、[G
 
 必要なエンドポイント用のコマンドが表示されない場合は、[カスタムリクエスト][custom]を作成できます。
 
-<message type="tip"></message>
+<message type='tip'>
 
 helpコマンドで提供されない情報を確認するには、リファレンスドキュメントと併せてリポジトリのドキュメントを使用してください。このような情報には、制限事項、トークンの権限の要件、フィールドなどがあります。
 
@@ -47,7 +47,7 @@ Box API資格情報をCLIにインポートしたので、これらの資格情�
 
 </ResetButton>
 
-<Message warning>
+<Message type='warning'>
 
 API資格情報をブラウザのストレージから削除すると、**クライアントID**または**クライアントシークレット**を他のスクリプトで読み取ることができなくなります。
 
@@ -61,7 +61,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 <ImageFrame center>
 
-![ヘルプ](./help.png)
+![ヘルプ](../images/help.png)
 
 </ImageFrame>
 
@@ -71,7 +71,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 <ImageFrame center>
 
-![ヘルプ](./folders_help.png)
+![ヘルプ](../images/folders-help.png)
 
 </ImageFrame>
 
@@ -83,7 +83,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 <ImageFrame center>
 
-![ヘルプ](./folders_create_help.png)
+![ヘルプ](../images/folders-create-help.png)
 
 </ImageFrame>
 
@@ -91,7 +91,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 コマンド`box folders:create 0 "My CLI Folder"`を実行し、レスポンスで返されたフォルダIDを書き留めておきます。
 
-<message type="tip"></message>
+<Message type='tip'>
 
 フォルダツリーのルートレベルである \[すべてのファイル] ページは、常にフォルダID 0で表されます。
 
@@ -99,7 +99,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 **自分の**Boxアカウントにログインします。このフォルダが自分のフォルダツリーに表示されているでしょうか?
 
-<message type="warning"></message>
+<Message type='warning'>
 
 JWT認証を使用したBox CLIを設定すると、Boxアカウントにこのフォルダが表示されなくなります。このフォルダは、アプリケーションの承認後に作成されたアプリケーションのサービスアカウントに存在します。
 
