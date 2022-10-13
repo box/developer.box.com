@@ -39,7 +39,7 @@ fullyTranslated: true
 box folders:create 0 Example_Folder --as-user=123456
 ```
 
-<message type="warning"></message>
+<Message type="warning">
 
 as-userヘッダーを使用できるのは、サービスアカウントと管理者のみです。必要なスコープでアプリケーションが承認されていない場合、または別のユーザーのデフォルトのトークンを取得するようCLIを構成した場合は、この呼び出しが失敗する可能性があります。詳細なエラーログを確認するには、コマンドに`-v`または`--verbose`を追加してください。
 
@@ -61,7 +61,7 @@ CSVファイルを使用すると、コマンドを一括して実行できま�
 
 <!-- markdownlint-enable line-length -->
 
-<message type="tip"></message>
+<Message type="tip">
 
 Finderウィンドウ/エクスプローラからターミナル/コマンドラインウィンドウにCSVファイルをドラッグすると、パスが自動で入力されます。
 

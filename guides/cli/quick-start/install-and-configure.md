@@ -77,7 +77,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <ImageFrame center>
 
-![CLIログイン](./cli-login.png)
+![CLIログイン](../images/cli-login.png)
 
 </ImageFrame>
 
@@ -85,7 +85,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <ImageFrame center>
 
-![CLIにアクセスを許可](./cli-grant-access.png)
+![CLIにアクセスを許可](../images/cli-grant-access.png)
 
 </ImageFrame>
 
@@ -93,7 +93,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <ImageFrame center>
 
-![CLI環境の設定](./cli-env-setup.png)
+![CLI環境の設定](../images/cli-env-setup.png)
 
 </ImageFrame>
 
@@ -103,7 +103,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <ImageFrame center>
 
-![CLIのユーザー呼び出し](./cli-first-call.png)
+![CLIのユーザー呼び出し](../images/cli-first-call.png)
 
 </ImageFrame>
 

@@ -25,7 +25,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 This script uses the Box CLI to build and create a personal folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader roles.
 
-<message type="warning"></message>
+<Message type='warning'>
 
 クイックスタートのこの手順は、管理者権限を持つサービスアカウントとユーザーのみを対象としています。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップしてください。
 
@@ -67,9 +67,9 @@ This script works by creating a folder structure for each user that is created. 
 
 Here is an example of what the structure will look like after running the script.
 
-<ImageFrame border center>
+<ImageFrame center>
 
-![Finished Folder Structure](./final_folder_structure.png)
+![Finished Folder Structure](../images/final-folder-structure.png)
 
 </ImageFrame>
 
@@ -115,7 +115,7 @@ Isaac,Newton,abc@abc.local,INewton23
 
 `EmployeeList`パラメータを使用して、データを読み込む`.csv`ファイルを指定します。
 
-<Message warning>
+<Message type='warning'>
 
 Emails must be unique across all of Box, and usernames must be unique across your specific Box instance. Otherwise, an error will be thrown when running the script.
 
