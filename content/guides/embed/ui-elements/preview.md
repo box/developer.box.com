@@ -317,6 +317,84 @@ preview.addListener("rotate", data => {
 });
 ```
 
+## Annotations
+
+You can enable V4 annotations in content preview. New annotations will sync in
+real time.
+
+To add V4 annotations to preview:
+
+1. Run `npm i box-annotations@latest`to install [box annotations][annotations].
+
+<Message warning>
+Box annotations version should be at least major version 4 and up.
+</Message>
+
+2. Run `npm i box-ui-elements@15.0.0` to install [BUIE][buie] version with annotation related change.
+
+<Message warning>
+Box UI elements should be the lowest working version that contains
+fully working v4 annotations.
+</Message>
+
+3. Import content preview and box annotations into your application:
+
+```js
+import ContentPreview from 'box-ui-elements/es/elements/content-preview';
+// In this example we dynamically import box-annotations which will provide a BoxAnnotations object in global 
+// You may see one already from legacy annotations if you do not dynamically the latest version of box-annotations
+const importAnnotations = () => import(/* webpackChunkName: "box-annotations" */ 'box-annotations');
+```
+
+Below is an example of how you could use content preview to enable all features
+of V4 annotations: 
+
+```js
+function App() {
+    const token = "YOUR_TOKEN"
+    const fileId = 'YOUR_FILE_ID'
+    const boxAnnotations = useRef(null);
+    const [annotationsLoaded, setAnnotationsLoaded] = useState(false);
+
+    useEffect(() => {
+        importAnnotations().then(() => {
+            boxAnnotations.current = new global.BoxAnnotations();
+            setAnnotationsLoaded(true);
+        });
+    }, []);
+
+    return (
+        <div className="App">
+            {annotationsLoaded && (<ContentPreview
+                boxAnnotations={boxAnnotations.current}
+                contentSidebarProps={{
+                    hasActivityFeed: true, // Enabled Activity Feed which will show you the comments in the sidebar
+                    features: {
+                        activityFeed: {
+                            annotations: {
+                                enabled: true // Enables the ability to see your annotation comment in the Activity Feed 
+                            }
+                        }
+                    }
+                }}
+                enableAnnotationsDiscoverability // Region button still appears with showAnnotationsControls but this is required to use it
+                showAnnotations={annotationsLoaded} // Show annotations on the file
+                showAnnotationsControls // Shows annotation controls in toolbar
+                showAnnotationsDrawing // This and showAnnotationsDrawingCreate need to be true to enable the drawing annotation in the toolbar
+                showAnnotationsDrawingCreate
+                fileId={annotationsLoaded ? fileId : undefined}
+                token={token}
+            />)
+            }
+        </div>
+    );
+}
+```
+
+<Message warning>
+`xxx` and `enableAnnotationsDiscoverability` are still in the testing phase
+and not yet available.
+
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -371,3 +449,5 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 <!-- i18n-disable localize-links -->
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes
+[annotations]: https://github.com/box/box-annotations
+[buie]: https://github.com/box/box-ui-elements/releases/tag/v15.0.0
