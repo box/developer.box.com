@@ -27,7 +27,7 @@ source_url: >-
 
 ### Files and Folders
 
-The following is a list of events that can be configured to trigger a v2
+The following is a list of events that can be configured to trigger a V2
 webhook. Some events are only available for files, while others are only
 available for folders.
 
