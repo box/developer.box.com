@@ -16,7 +16,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/report-inactive-users
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/manage-groups-collaborations

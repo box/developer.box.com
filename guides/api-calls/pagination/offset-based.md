@@ -68,16 +68,16 @@ curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
 
 <!-- markdownlint-disable line-length -->
 
-| クエリパラメータ | 型       | デフォルト      |                                      |
-| -------- | ------- | ---------- | ------------------------------------ |
-| `offset` | Integer | `0`        | コレクション内の最初に返される項目の (ゼロベースの) オフセット    |
-| `limit`  | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。 |
+| クエリパラメータ | 型       | デフォルト      |                                                                                                                      |
+| -------- | ------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| `offset` | Integer | `0`        | The (zero-based) offset of the first item returned in the collection. In a zero-based offset `0` is a correct value. |
+| `limit`  | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。                                                                                 |
 
 <!-- markdownlint-enable line-length -->
 
 <Message type="notice">
 
-オフセットベースのページ割りの最大`offset`は`300000`です。さらに大きいオフセットが必要な場合はマーカーベースのページ割りをお勧めします。
+オフセットベースのページ割りの最大`offset`は`9999`です。さらに大きいオフセットが必要な場合はマーカーベースのページ割りをお勧めします。
 
 </Message>
 

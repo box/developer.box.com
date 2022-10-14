@@ -32,31 +32,31 @@ fullyTranslated: true
 
 <BannerTitle>
 
-**Box Platform**で構築を開始
+構築を開始**Box Platform**
 
 </BannerTitle>
 
 <BannerTitle>
 
-**Box Platform**でユーザーを管理
+ユーザーを管理**Box Platform**
 
 </BannerTitle>
 
 <BannerTitle>
 
-**Box Platform**でエクスペリエンスを構築
+エクスペリエンスを構築**Box Platform**
 
 </BannerTitle>
 
 <BannerTitle>
 
-**Box Platform**でコンテンツポータルを強化
+コンテンツポータルを強化**Box Platform**
 
 </BannerTitle>
 
 <BannerTitle>
 
-**Box Platform**でアプリを統合
+アプリを統合**Box Platform**
 
 </BannerTitle>
 

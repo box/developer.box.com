@@ -11,7 +11,7 @@ subcategory_id: cli/scripts
 is_index: true
 id: cli/scripts
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli
 parent_id: cli
 next_page_id: cli/scripts/provision-users-folders
@@ -30,7 +30,8 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 * [ユーザーのプロビジョニング解除とフォルダのアーカイブ][2]
 * [グループとコラボレーションの管理][3]
 * [非アクティブなユーザーのレポート][4]
-* [ユーザーのゾーンの更新][5]
+* [Extract metadata][5]
+* [ユーザーのゾーンの更新][6]
 
 [1]: g://cli/quick-start/powershell-script-templates
 
@@ -40,4 +41,6 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 
 [4]: g://cli/scripts/report-inactive-users
 
-[5]: g://cli/scripts/user-zones-mass-update
+[5]: g://cli/scripts/metadata-extraction
+
+[6]: g://cli/scripts/user-zones-mass-update

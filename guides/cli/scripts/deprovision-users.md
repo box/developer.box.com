@@ -14,7 +14,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/deprovision-users
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: ''
@@ -88,6 +88,8 @@ Managed User 1,ManagedUser1@test.com
 ```
 
 To set the user ID which will be the new owner of user content before deleting the user, set the `NewFilesOwnerID` parameter to the user ID you want. If no value is provided before running the script, it will prompt you to provide one or press **Enter** to use the user ID of the currently authenticated user.
+
+### オプションのフラグ
 
 (省略可) ユーザーの削除前にユーザーコンテンツの転送をスキップするには、`TransferContent`パラメータを`N`に設定します。
 
