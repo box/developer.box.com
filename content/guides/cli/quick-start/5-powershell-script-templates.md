@@ -28,7 +28,7 @@ folder structure as collaborators with viewer or uploader roles.
    or you do not use a service account.
 </Message>
 
-<!-- INSERT VIDEO ONCE COMPLETE HERE-->
+<YouTube id='i43YfP-dT_s' />
 
 ## Use case
 
