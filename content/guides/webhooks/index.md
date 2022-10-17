@@ -24,8 +24,8 @@ waiting for a file to be downloaded to delete a shared link. A webhook can be
 set on the file and upon notification of the download event, a script can launch
 to make an API call to delete the shared link. 
 
-<ImageFrame shadow border>
- ![Webhook developer console](../images/webhook_developer_console.png)
+<ImageFrame center shadow border>
+  ![Webhook developer console](./images/webhook_developer_console.png)
 </ImageFrame>
 
 ## Versions
