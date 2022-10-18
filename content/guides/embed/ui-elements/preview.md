@@ -328,7 +328,7 @@ To add V4 annotations to preview:
 <Message warning>
 Box annotations version should be at least major version 4 and up.
 </Message>
-2. Run `npm i box-ui-elements@15.0.0` to install [BUIE][buie] version with
+2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with
 annotation related change.
 <Message warning>
 Box UI elements should be the lowest working version that contains
