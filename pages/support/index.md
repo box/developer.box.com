@@ -33,8 +33,8 @@ one of these available channels:
 
 - [Changelog](page://changelog): For API changes, deprecated services, and
   releases.
-- [Newsletter](page://newsletter): For quarterly notifications of major events,
-  projects, and releases.
+- [Developer Newsletter](page://newsletter): For regular notifications of
+  major events, projects, and releases.
 
 <!-- i18n-enable localize-links -->
 

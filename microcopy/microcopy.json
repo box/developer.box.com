@@ -310,7 +310,7 @@
   // A link to our developer blog
   "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
   // Text for a link to the newsletter page
-  "footer.categories.company.links.newsletter.text": "Newsletter",
+  "footer.categories.company.links.newsletter.text": "Developer Newsletter",
   // A link to the newsletter page
   "footer.categories.company.links.newsletter.url": "/newsletter/",
   // Text for a link to the changelog page
