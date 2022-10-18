@@ -22,8 +22,8 @@ one of these available channels:
 
 - [Changelog](page://changelog): For API changes, deprecated services, and
   releases.
-- [Newsletter](page://newsletter): For quarterly notifications of major events,
-  projects, and releases.
+- [Developer Newsletter](page://newsletter): For regular notifications of
+  major events, projects, and releases.
 
 <!-- i18n-enable localize-links -->
 [forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
