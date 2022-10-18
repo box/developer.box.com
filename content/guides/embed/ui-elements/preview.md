@@ -326,17 +326,17 @@ To add V4 annotations to preview:
 
 1. Run `npm i box-annotations@latest`to install [box annotations][annotations].
 
-<Message warning>
-Box annotations version should be at least major version 4 and up.
-</Message>
+    <Message warning>
+    Box annotations version should be at least major version 4 and up.
+    </Message>
 
 2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with
-annotation related change.
+  annotation related change.
 
-<Message warning>
-Box UI elements should be the lowest working version that contains
-fully working V4 annotations.
-</Message>
+    <Message warning>
+    Box UI elements should be the lowest working version that contains
+    fully working V4 annotations.
+    </Message>
 
 3. Import content preview and box annotations into your application:
 
