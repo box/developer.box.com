@@ -341,7 +341,7 @@ import ContentPreview from 'box-ui-elements/es/elements/content-preview';
 // In this example we dynamically import box-annotations which will provide a
 BoxAnnotations object in global 
 // You may see one already from legacy annotations if you do not dynamically
-the latest version of box-annotations
+load the latest version of box-annotations
 const importAnnotations = () => import(/* webpackChunkName: "box-annotations"
 */ 'box-annotations');
 ```
