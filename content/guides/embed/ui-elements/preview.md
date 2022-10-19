@@ -401,7 +401,8 @@ function App() {
 ```
 
 <Message warning>
-The property `features: { activityFeed: { annotations: { enabled: true  } } } }}` is subject to change in the future.
+The property `features: { activityFeed: { annotations: { enabled: true  } } } }
+` is subject to change in the future.
 </Message>
 
 ## Scopes
