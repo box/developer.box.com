@@ -401,9 +401,7 @@ function App() {
 ```
 
 <Message warning>
-`features: { activityFeed: { annotations: { enabled: true // Enables the ability
-to see your annotation comment in the Activity Feed } } } }}` This part of
-the code is used internally and may change in the future.
+The property `features: { activityFeed: { annotations: { enabled: true  } } } }}` is subject to change in the future.
 </Message>
 
 ## Scopes
