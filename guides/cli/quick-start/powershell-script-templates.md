@@ -23,7 +23,7 @@ CLIはそれ自体がすでに強力ですが、PowerShellスクリプトと併�
 
 CLIスクリプトのしくみを説明するため、ユーザーのプロビジョニングと作成を行う[スクリプト][script-1]テンプレートを使用します。
 
-This script uses the Box CLI to build and create a personal folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader roles.
+このスクリプトでは、Box CLIを使用して、個人用フォルダ構造の作成と管理対象ユーザーの一括作成を実行し、新しく作成したフォルダ構造に新しいユーザーをビューアー/アップローダーのロールを持つコラボレータとして追加することでそのユーザーのプロビジョニングを行います。
 
 <Message type="warning">
 
@@ -41,7 +41,7 @@ This script uses the Box CLI to build and create a personal folder structure, cr
 
 1. `.csv`ファイルを使用して従業員データを一括で読み込みます。
 2. JSONファイルを使用してフォルダ構造を定義するか、ユーザーのローカルディレクトリから構造をアップロードします。
-3. Creates each new managed user a predetermined personal folder structure
+3. 新しい管理対象ユーザーごとに、あらかじめ決められた個人用フォルダ構造を作成します。
 
 ## 前提条件
 
@@ -63,15 +63,15 @@ This script uses the Box CLI to build and create a personal folder structure, cr
 
 Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
-### Create a personal folder parent folder
+### 個人用フォルダの親フォルダの作成
 
-This script works by creating a folder structure for each user that is created. In order to do this, you should go ahead and create a parent folder for all of the personal folders to live in. Otherwise, every folder will live in the root of the user that the CLI is setup with. You may name and place the folder wherever you wish, but the user you setup the CLI with must have access to the folder.
+このスクリプトは、作成される各ユーザーにフォルダ構造を作成することで動作します。そのためには、すべての個人用フォルダが格納される親フォルダを作成する必要があります。そうしないと、すべてのフォルダは、CLIの設定に使用したユーザーのルートに格納されます。このフォルダは、好きな場所に名前を付けて配置できますが、CLIの設定に使用したユーザーにそのフォルダへのアクセス権限を付与する必要があります。
 
-Here is an example of what the structure will look like after running the script.
+スクリプト実行後の構造の例を次に示します。
 
 <ImageFrame border center>
 
-![Finished Folder Structure](../images/final-folder-structure.png)
+![完成したフォルダ構造](../images/final-folder-structure.png)
 
 </ImageFrame>
 
@@ -93,9 +93,9 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 スクリプトを実行する前に指定する必要があるパラメータがいくつかあります。
 
 * `EmployeeList`: `Employee List` CSVのパス。
-* `PersonalFolderParentID`: Destination folder ID for all personal folders to be created in, either when using JSON file as input to create folder structure, or uploading local structure. This folder should be made prior to running the script the first time. It is not advised to make this value `0`, as this will create individual Personal folders in root of the account you set up the CLI with.
-* `FolderStructureJSONPath`: Your own folder structure JSON path.
-* `PersonalFolderSlug`: Ending name of the folder that will be created as parent for personal folders. It's set to `Personal Folder` by default, but feel free to set it to your needs. The username is concatenated with this value to create each user's personal folder name. ex - `rsmith2's Personal Folder`.
+* `PersonalFolderParentID`: 入力にJSONファイルを使用してフォルダ構造を作成するかローカルの構造をアップロードするときに、すべての個人用フォルダが作成される宛先フォルダID。このフォルダは、初めてスクリプトを実行する前に作成する必要があります。この値を`0`にすることはお勧めしません。この値に設定した場合、CLIの設定に使用したアカウントのルートに個々の個人用フォルダが作成されるためです。
+* `FolderStructureJSONPath`: 所有するフォルダ構造のJSONパス。
+* `PersonalFolderSlug`: 個人用フォルダの親として作成されるフォルダ名の末尾に使用される文字列。デフォルトでは`Personal Folder`に設定されていますが、必要に応じて自由に設定できます。ユーザー名にこの値を連結して、各ユーザーの個人用フォルダの名前が作成されます (例: `rsmith2's Personal Folder`)。
 * `LocalUploadPath`: フォルダ構造を直接アップロードするためのローカルディレクトリ。
 
 <Message>
@@ -119,7 +119,7 @@ Isaac,Newton,abc@abc.local,INewton23
 
 <Message warning>
 
-Emails must be unique across all of Box, and usernames must be unique across your specific Box instance. Otherwise, an error will be thrown when running the script.
+メールアドレスは、Box全体で一意である必要があります。また、ユーザー名は特定のBoxインスタンスで一意である必要があります。そうでない場合は、スクリプトを実行したときにエラーがスローされます。
 
 </Message>
 
@@ -129,13 +129,13 @@ Emails must be unique across all of Box, and usernames must be unique across you
 
 #### JSONファイルを使用する
 
-The `Folder_Structure.json` file contains the folder structure you want to create. As an example, you will create a `Market Research` and a `Sales Plays` folder, each with a subfolder `Statistics` and `Big Pharma` respectively. The script will place this folder structure under the `Personal Folder` folder for that user inside the parent folder you designate.
+`Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、このフォルダ構造を、指定した親フォルダ内の当該ユーザーの`Personal Folder`フォルダの下に配置します。
 
 `FolderStructureJSONPath`パラメータを使用して、`Folder_Structure.json`ファイルの場所を指定します。
 
 #### ローカルドライブからアップロードする
 
-You can also upload a folder structure directly from the local file system. With the `LocalUploadPath` parameter, provide the path to your local folder you want to upload. The folder is still named and uploaded identically to the JSON file method.
+フォルダ構造をローカルファイルシステムから直接アップロードすることもできます。`LocalUploadPath`パラメータを使用して、アップロードするローカルフォルダのパスを指定します。このフォルダは、名前はそのままで、JSONファイルを使用した方法と同様にアップロードされます。
 
 ### パラメータの更新
 

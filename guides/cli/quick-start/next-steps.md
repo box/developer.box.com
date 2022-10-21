@@ -35,7 +35,7 @@ fullyTranslated: true
 1. すべての[コマンド][commands]を確認する。
 2. [トークンのキャッシュ][cache]の設定を確認する。
 3. [オートコンプリート][ac]の設定を確認する。
-4. Review all of the [CLI sample scripts][sample-scripts].
+4. すべての[CLIサンプルスクリプト][sample-scripts]を確認する。
 
 [one]: g://cli/quick-start/create-oauth-app/
 

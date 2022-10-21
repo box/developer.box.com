@@ -62,11 +62,11 @@ SSOサービス内の一意のユーザーとBoxユーザーの関連付けを�
 
 ## `external_app_user_id`の使用 (推奨方法)
 
-The `external_app_user_id` field was designed to hold a string identifier to associate a Box user record with an external service, such as an SSO provider user record.
+`external_app_user_id`フィールドは、SSOプロバイダのユーザーレコードなどの外部サービスとBoxユーザーレコードを関連付ける、文字列識別子を保持するよう設計されています。
 
 <message type="warning">
 
-You can retrieve app users for a specific application only if such app users were created by this application. If you use one application to search for users created by a different one, no data will be returned.
+特定のアプリケーションのApp Userを取得できるのは、そのApp Userを作成したのがこのアプリケーションである場合のみです。あるアプリケーションを使用して、別のアプリケーションで作成されたユーザーを検索した場合、データは返されません。
 
 </message>
 

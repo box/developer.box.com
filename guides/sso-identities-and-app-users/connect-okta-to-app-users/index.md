@@ -32,7 +32,7 @@ fullyTranslated: true
 
 ## 概要
 
-This quick start guide will walk you through how to programmatically use Okta to log in to a Box application, provision an app user in Box that is linked to the Okta user, then make Box API calls on behalf of that user.
+このクイックスタートガイドでは、プログラムでOktaを使用してBoxアプリケーションにログインし、OktaユーザーにリンクされているBoxのApp Userをプロビジョニングしてから、そのユーザーに代わってBox API呼び出しを実行する方法を説明します。
 
 ここでは、以下の手順を説明します。
 

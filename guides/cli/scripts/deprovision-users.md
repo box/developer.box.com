@@ -27,7 +27,7 @@ fullyTranslated: true
 
 このスクリプトを使用すると、ユーザーのリストによるプロビジョニング解除と削除が可能です。スクリプトでは以下の手順が実行されます。
 
-1. Transfers the user content to the another user's root folder under `Employee Archive`.
+1. ユーザーコンテンツを別のユーザーのルートフォルダ`Employee Archive`に転送します。
 2. ユーザーを削除します。
 
 ## 前提条件
@@ -87,7 +87,7 @@ name,email
 Managed User 1,ManagedUser1@test.com
 ```
 
-To set the user ID which will be the new owner of user content before deleting the user, set the `NewFilesOwnerID` parameter to the user ID you want. If no value is provided before running the script, it will prompt you to provide one or press **Enter** to use the user ID of the currently authenticated user.
+ユーザーを削除する前に、ユーザーコンテンツの新しい所有者になるユーザーIDを設定するには、`NewFilesOwnerID`パラメータを目的のユーザーIDに設定します。スクリプトを実行する前に値が指定されていない場合は、値を指定するか、**Enter**キーを押して現在認証されているユーザーのユーザーIDを使用するよう求められます。
 
 ### オプションのフラグ
 
@@ -135,13 +135,13 @@ Deleted employee Managed User 1
 
 ### オプションのフラグ
 
-To run the script in a simulation mode, add the `DryRun` boolean flag. Dry run doesn't mean that API calls won't be made, but that create, update, or delete calls will be skipped.
+シミュレーションモードでスクリプトを実行するには、`DryRun`ブール値フラグを追加します。仮実行では、API呼び出しが行われないというわけではありませんが、作成、更新、または削除の呼び出しはスキップされます。
 
 ```bash
 ./Users_Deprovision.ps1 -DryRun
 ```
 
-To set the new files owner ID at runtime, add the `NewFilesOwnerID` string flag. It will overwrite the value specified in the script before.
+実行時に新しいファイルの所有者IDを設定するには、`NewFilesOwnerID`文字列フラグを追加します。これにより、以前スクリプトに指定された値が上書きされます。
 
 ```bash
 ./Users_Deprovision.ps1 -NewFilesOwnerID 12345

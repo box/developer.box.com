@@ -23,9 +23,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/metadata-extraction.md
 fullyTranslated: true
 ---
-# Extract metadata
+# メタデータの抽出
 
-This script extracts metadata details for all the files and folders in any Box folder and saves the result in a CSV spreadsheet for each metadata template.
+このスクリプトでは、任意のBoxフォルダ内のすべてのファイルとフォルダのメタデータの詳細を抽出し、その結果を各メタデータテンプレートのCSVスプレッドシートに保存します。
 
 ## 前提条件
 
@@ -61,7 +61,7 @@ PS /Users/user/repos/boxcli/examples>
 
 ### Boxアプリケーション
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the [Setup with OAuth 2.0][auth] guide.
+スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
 ## スクリプトの構成
 
@@ -83,7 +83,7 @@ To use the script, you will need a Box application with OAuth 2.0 authentication
    [string]$UserID = "",
 ````
 
-   If you don't want to specify the parameters directly in the script, you can either pass them as flags or allow the script to prompt you to enter them. A sample command with flags looks as follows:
+   パラメータをスクリプトで直接指定しない場合は、フラグとして渡すか、スクリプトで入力を求めるプロンプトを表示することができます。フラグを使用したコマンドのサンプルは次のようになります。
 
 ```bash
 ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
@@ -108,7 +108,7 @@ To use the script, you will need a Box application with OAuth 2.0 authentication
    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
    ```
 
-   When the script finishes, you will see the following output or a similar one.
+   スクリプトが終了すると、以下のような出力が表示されます。
 
    ```bash
    Pulling data from Folder ID: 173961139760

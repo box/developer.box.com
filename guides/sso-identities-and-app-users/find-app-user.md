@@ -38,7 +38,7 @@ Boxユーザーが検出されない場合は、そのSSOユーザーレコー�
 
 <message type="warning">
 
-You can retrieve app users for a specific application only if such app users were created by this application. If you use one application to search for users created by a different one, no data will be returned.
+特定のアプリケーションのApp Userを取得できるのは、そのApp Userを作成したのがこのアプリケーションである場合のみです。あるアプリケーションを使用して、別のアプリケーションで作成されたユーザーを検索した場合、データは返されません。
 
 </message>
 

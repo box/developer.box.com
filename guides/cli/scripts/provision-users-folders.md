@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # ユーザーとフォルダのプロビジョニング
 
-This script uses the Box CLI to build and create a personal folder structure, create managed users in bulk, and provision such new users by adding them to the newly created folder structure as collaborators with viewer or uploader role.
+このスクリプトでは、Box CLIを使用して、個人用フォルダ構造の作成と管理対象ユーザーの一括作成を実行し、新しく作成したフォルダ構造に新しいユーザーをビューアー/アップローダーのロールを持つコラボレータとして追加することでそのユーザーのプロビジョニングを行います。
 
 詳細については、クイックスタートガイドで[Box CLIの使い方とサンプルスクリプト][1]を参照してください。
 

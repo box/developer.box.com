@@ -96,7 +96,7 @@ PS /Users/user/repos/boxcli/examples>
 
 ### Boxアプリケーション
 
-To use the script, you will need a Box application with OAuth 2.0 authentication. If you don't have one, go to your [Developer Console][console], and follow the [Setup with OAuth 2.0][auth] guide.
+スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
 ## スクリプトの構成
 
