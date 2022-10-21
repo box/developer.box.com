@@ -792,7 +792,7 @@ The `additional_details` payload will provide the following details:
 }
 ```
 
-## Information Barrier
+## Information barrier
 
 Information barrier is a Shield feature that prevents exchanges or
 communication that could lead to conflicts of interest.
