@@ -26,7 +26,7 @@ categories:
 
       newsletter:
         // text: Text for a link to the newsletter page
-        text: Newsletter
+        text: Developer Newsletter
         // url: A link to the newsletter page
         url: /newsletter/
 
