@@ -801,7 +801,7 @@ For example, admins can use information barrier
 to separate teams based on projects to prevent collaboration on
 content restricted to specific groups.
 
-Any set up actions for the information barrier produce
+Configuring information barrier produces
 events in the [enterprise event][events] stream. For example,
 activating or deactivating the barrier triggers an event.
 When the information barrier is set up,
