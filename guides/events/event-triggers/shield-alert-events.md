@@ -809,15 +809,20 @@ The `additional_details` payload will provide the following details:
 
 ## Information barrier
 
-Information barrier is a Shield feature that prevents exchanges or
-communication that could lead to conflicts of interest.
-For example, admins can use information barrier settings
-to separate internal and external teams based on projects.
-This results in preventing collaboration on
-specific items restricted to specific groups.
+Information barrier prevents exchanges or
+communication that could lead to conflicts of interest
+or potential legal issues.
+For example, admins can use information barrier
+to separate teams based on projects to prevent collaboration on
+content restricted to specific groups.
 
-Using information barrier functionality produces events within the
-[enterprise event][events] stream. These events follow
+Any set up actions for the information barrier produce
+events in the [enterprise event][events] stream. For example,
+activating or deactivating the barrier triggers an event.
+When the information barrier is set up,
+each user attempt to perform restricted actions
+or access restricted data
+also results in events. These events follow
 the standard event object schema with the `event_type` value
 set to one of the following:
 
@@ -834,8 +839,9 @@ set to one of the following:
 ### Shield information barrier enabled
 
 A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when
-the information barrier is enabled for a particular file or folder.
-The `additional_details` payload provides the following details:
+the information barrier is enabled for a file or folder.
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
 
 ```js
 "additional_details": {
@@ -861,7 +867,8 @@ The `additional_details` payload provides the following details:
 A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered
 when the information barrier is not yet enabled
 for a particular file or folder.
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
 
 ```js
 "additional_details": {
@@ -885,8 +892,8 @@ The `additional_details` payload provides the following details:
 ### Shield information barrier deactivated
 
 A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered
-when the information barrier is deactivated for a particular file or folder.
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
 
 ```js
 "additional_details": {
@@ -907,7 +914,8 @@ A `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED` event is
 triggered when the information barrier prohibits
 adding a user to a specific group.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the
+restricted groups:
 
 ```js
 "additional_details": {
@@ -923,7 +931,8 @@ when the information barrier prohibits adding
 collaborations for users that have restricted access
 to a file or folder.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the restricted
+collaboration.
 
 ```js
 "additional_details": {
@@ -941,7 +950,8 @@ is triggered when the information
 barrier prohibits accessing a file or
 folder using the shared link.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the shared link
+and additional security information.
 
 ```js
 "additional_details": {
@@ -963,7 +973,7 @@ The `additional_details` payload provides the following details:
 A `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED` event is triggered when the
 information barrier prohibits moving an item to a restricted location.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the restricted folder.
 
 ```js
 "additional_details": {
@@ -980,7 +990,8 @@ The `additional_details` payload provides the following details:
 A `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED` event is triggered when the
 information barrier prohibits copying an item to a restricted location.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the restricted destination
+folder.
 
 ```js
 "additional_details": {
@@ -998,7 +1009,8 @@ A `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED` event is triggered
 when the information barrier prohibits transferring the item ownership to a
 user that is subject to restrictions.
 
-The `additional_details` payload provides the following details:
+The `additional_details` payload provides details of the user that cannot
+be set as the new owner.
 
 ```js
 "additional_details": {
