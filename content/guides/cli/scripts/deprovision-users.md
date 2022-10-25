@@ -13,6 +13,8 @@ related_resources: []
 ---
 # Deprovision users and archive folders
 
+<!-- markdownlint-disable line-length -->
+
 This script allows you to deprovision and delete a list of users. 
 It performs the following steps:
 
@@ -94,9 +96,11 @@ or download the files from [`examples`][examples] directory.
 `EmployeeList`: Path to Employee List CSV with employees to be deleted.
 
 `SkipTransferContent`: (Optional, default value: `$false`) Set this flag to skip transfer of user content before deletion when running the script:
+ 
  ```bash
-/Users_Deprovision.ps1 -SkipTransferContent`.
+/Users_Deprovision.ps1 -SkipTransferContent
 ```
+
 Otherwise user's content will be transferred.
 
 `NewFilesOwnerID`: (Optional in interactive mode) The ID of the user to transfer files to before deleting the user.
@@ -106,13 +110,15 @@ If not specified, the script will prompt to input in the interactive mode, or us
 If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created.
 
 `DryRun`: (Optional, default value: `$false`) A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones. The default is `$false`, which means that all calls will be made. To enable `dry run` mode, set this flat when running the script:
+
 ```bash
-/Users_Deprovision.ps1 -DryRun`.
+/Users_Deprovision.ps1 -DryRun
 ```
 
 ### Define script parameters
 
 There are 3 ways to pass parameters:
+
 * Use hardcoded value in script:
 
 Please update all needed parameters in the script parameters section [here][parameters] before running.
@@ -120,16 +126,18 @@ Please update all needed parameters in the script parameters section [here][para
 * Run script with parameters:
 
 You can also specify parameters while run the command, for example:
-```
+
+```bash
 PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
    -NewFilesOwnerID  123456789`
    -EmployeeArchiveFolderName "Employee Archive"
 
 Starting User Deprovisioning script...
-```	
+```
+
 * If you don't specify parameters, the script will prompt you to enter it.
 
-```
+```bash
 PS > ./Users_Deprovision.ps1
 Please enter the path to the employee list CSV file:
 ./Employees_to_delete.csv
@@ -140,9 +148,10 @@ Starting User Deprovisioning script...
 ```
 
 ## Run the script
+
 Now all you need to do is run the script. Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
 
-```
+```bash
 rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
 PowerShell 7.2.4
 Copyright (c) Microsoft Corporation.
@@ -154,12 +163,14 @@ PS /home/rvb/box-cli/examples/User Deprovisioning>
 ```
 
 Run the script:
+
 ```bash
 ./Users_Deprovision.ps1
 ```
 
 When all parameters are defined, you will see following output to confirm the script started:
-```
+
+```bash
 PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
 Starting User Deprovisioning script...
 ```
