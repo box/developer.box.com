@@ -74,9 +74,11 @@ or download the files from [`examples`][examples] directory.
 
 2. Create the list of employees for deletion in `.csv`.
 
-   The header row should look like the below:
+   The header row should look like as follows:
 
-   `name,email`
+   ```bash
+   name, email
+   ```
 
    where:
 
@@ -93,49 +95,40 @@ or download the files from [`examples`][examples] directory.
 
 ### List of parameters
 
-`EmployeeList`: Path to Employee List CSV with employees to be deleted.
-
-`SkipTransferContent`: (Optional, default value: `$false`) Set this flag to skip transfer of user content before deletion when running the script:
- 
- ```bash
-/Users_Deprovision.ps1 -SkipTransferContent
-```
-
-Otherwise user's content will be transferred.
-
-`NewFilesOwnerID`: (Optional in interactive mode) The ID of the user to transfer files to before deleting the user.
-If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.
-
-`EmployeeArchiveFolderName`: (Optional, default value: 'Employee Archive') The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `$false`.
-If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created.
-
-`DryRun`: (Optional, default value: `$false`) A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones. The default is `$false`, which means that all calls will be made. To enable `dry run` mode, set this flat when running the script:
-
-```bash
-/Users_Deprovision.ps1 -DryRun
-```
+   |`Parameter`| `Description`| `Required` | `Default Value` |
+   |-----------|--------------|------------|-----------------|
+   |`EmployeeList`|  Path to Employee List CSV with employees to be deleted. | Yes | - |
+   |`SkipTransferContent`| Set this flag to skip transfer of user content before deletion when running the script. Otherwise user's content will be transferred. | No | `False` |
+   |`NewFilesOwnerID`|  The ID of the user to transfer files to before deleting the user. If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.| No | If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID. |
+   |`EmployeeArchiveFolderName`|The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `False`. If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created.|Yes|`Employee Archive`|
+   |`DryRun`|A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones. |No|`False`|
 
 ### Define script parameters
 
-There are 3 ways to pass parameters:
+You can use either of three ways to pass parameters.
 
-* Use hardcoded value in script:
+* Use hardcoded value in script.
 
-Please update all needed parameters in the script parameters section [here][parameters] before running.
+To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
 
-* Run script with parameters:
+* Run script with parameters.
 
-You can also specify parameters while run the command, for example:
+You can also specify parameters while providing the command. For example:
 
 ```bash
 PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
    -NewFilesOwnerID  123456789`
    -EmployeeArchiveFolderName "Employee Archive"
-
-Starting User Deprovisioning script...
 ```
 
-* If you don't specify parameters, the script will prompt you to enter it.
+or
+
+```bash
+PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+   -SkipTransferContent
+```
+
+If you don't specify parameters, the script will prompt you to enter it.
 
 ```bash
 PS > ./Users_Deprovision.ps1
