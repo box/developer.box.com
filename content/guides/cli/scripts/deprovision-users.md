@@ -66,7 +66,7 @@ go to your [Developer Console][console], and follow the guide
 ## Configure the script
 
 1. Clone the `boxcli` GitHub repository 
-or download the files from [`examples`][examples] directory.
+   or download the files from [`examples`][examples] directory.
 
    ```bash
     git clone https://github.com/box/boxcli.git
@@ -105,68 +105,68 @@ or download the files from [`examples`][examples] directory.
 
 ### Define script parameters
 
-You can use either of three ways to pass parameters.
+You can the following options to pass parameters.
 
 * Use hardcoded value in script.
 
-To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
+    To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
 
 * Run script with parameters.
 
-You can also specify parameters while providing the command. For example:
+  You can specify parameters while providing the command. For example:
 
-```bash
-PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
-   -NewFilesOwnerID  123456789`
-   -EmployeeArchiveFolderName "Employee Archive"
-```
+     ```bash
+      PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+      -NewFilesOwnerID  123456789
+      -EmployeeArchiveFolderName "Employee Archive"
+     ```
 
-or
+  or
 
-```bash
-PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
-   -SkipTransferContent
-```
+     ```bash
+      PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+      -SkipTransferContent
+     ```
 
-If you don't specify parameters, the script will prompt you to enter it.
+  If you don't specify parameters, the script will prompt you to enter it.
 
-```bash
-PS > ./Users_Deprovision.ps1
-Please enter the path to the employee list CSV file:
-./Employees_to_delete.csv
-Please specify the user ID of the user who will own the files of the users being deprovisioned.
-Press Enter if you want to use the current user as the new owner.
-User ID: 1234567689
-Starting User Deprovisioning script...
-```
+     ```bash
+      PS > ./Users_Deprovision.ps1
+      Please enter the path to the employee list CSV file:
+      ./Employees_to_delete.csv
+      Please specify the user ID of the user who will own the files of the users being deprovisioned.
+      Press Enter if you want to use the current user as the new owner.
+      User ID: 1234567689
+      Starting User Deprovisioning script...
+     ```
 
 ## Run the script
 
-Now all you need to do is run the script. Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
+Now all you need to do is run the script. 
 
-```bash
-rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
+1. Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
 
-https://aka.ms/powershell
-Type 'help' to get help.
+   ```bash
+   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
+   PowerShell 7.2.4
+   Copyright (c) Microsoft Corporation.
+   https://aka.ms/powershell
+   Type 'help' to get help.
+   PS /home/rvb/box-cli/examples/User Deprovisioning>
+   ```
 
-PS /home/rvb/box-cli/examples/User Deprovisioning>
-```
+2. Run the script:
 
-Run the script:
+   ```bash
+   ./Users_Deprovision.ps1
+   ```
 
-```bash
-./Users_Deprovision.ps1
-```
+   When all parameters are defined, you will see following output to confirm the script started:
 
-When all parameters are defined, you will see following output to confirm the script started:
-
-```bash
-PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
-Starting User Deprovisioning script...
-```
+   ```bash
+   PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
+   Starting User Deprovisioning script...
+   ```
    
 ## Logging
 
