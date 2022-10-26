@@ -127,5 +127,5 @@ I know how to use options and bulk commands
 [github]: https://github.com/box/boxcli#command-topics
 [df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
 [asuser]: g://authentication/jwt/as-user/
-[csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m
+[csv]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/folders/folders-create.csv
 [bulk]: g://cli/cli-docs/bulk-commands
