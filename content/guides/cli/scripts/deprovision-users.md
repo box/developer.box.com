@@ -16,8 +16,8 @@ related_resources: []
 This script allows you to deprovision and delete a list of users. 
 It performs the following steps:
 
-1. Transfers the user content to the current admin
-user's root folder under `Employee Archive`.
+1. Transfers the user content to the another user's root folder
+under `Employee Archive`.
 2. Deletes the user.
 
 ## Prerequisites
@@ -86,6 +86,15 @@ For example:
      Managed User 1,ManagedUser1@test.com
    ```
 
+To set the user ID which will be the new owner of user content
+   before deleting the user, set the `NewFilesOwnerID` parameter to the
+   user ID you want.
+   If no value is provided before running the script, it will prompt you to
+   provide one or press **Enter** to use the user ID of the currently authenticated
+   user.
+
+### Optional flags
+
 (Optional) To skip transfer of user content before
    deleting the user, set the `TransferContent` parameter to `N`.
 
@@ -131,6 +140,25 @@ output or a similar one.
     Deleted user 19927131476
     Deleted employee Managed User 1
    ```
+   
+### Optional flags
+
+To run the script in a simulation mode, 
+add the `DryRun` boolean flag.
+Dry run doesn't mean that API calls won't be made, 
+but that create, update, or delete calls will be skipped.
+
+```bash
+./Users_Deprovision.ps1 -DryRun
+```
+
+To set the new files owner ID at runtime, add the
+`NewFilesOwnerID` string flag. It will overwrite the
+value specified in the script before.
+
+```bash
+./Users_Deprovision.ps1 -NewFilesOwnerID 12345
+```
 
 ## Logging
 

@@ -290,15 +290,15 @@ The `additional_details` payload will provide the following details:
         "service_name":"Service name"
       }
     },
-    "malware_info":{
-      "file_id":127,
-      "file_name":"malware.exe",
-      "file_version":4239023,
-      "file_created":"2019-12-20T11:37:05-08:00",
-      "file_created_by":{
-        "id":1010,
-        "name":"Bob",
-        "email":"bob@enterprise.com"
+      "malware_info":{
+        "file_id":127,
+        "file_name":"malware.exe",
+        "file_version":4239023,
+        "file_created":"2019-12-20T11:37:05-08:00",
+        "file_created_by":{
+          "id":1010,
+          "name":"Bob",
+          "email":"bob@enterprise.com"
       },
       "file_hash":"d869db7fe62fb07c25a0403ecaea55031744b5fb",
       "file_hash_type":"SHA-1",
@@ -789,6 +789,224 @@ The `additional_details` payload will provide the following details:
   },
   "service_id": "4082",
   "service_name": "Box FTP Server"
+}
+```
+
+## Information barrier
+
+Information barrier prevents exchanges or
+communication that could lead to conflicts of interest
+or potential legal issues.
+For example, admins can use information barrier
+to separate teams based on projects to prevent collaboration on
+content restricted to specific groups.
+
+Configuring information barrier produces
+events in the [enterprise event][events] stream. For example,
+activating or deactivating the barrier triggers an event.
+When the information barrier is set up,
+each user attempt to perform restricted actions
+or access restricted data
+also results in events. These events follow
+the standard event object schema with the `event_type` value
+set to one of the following:
+
+* `SHIELD_INFORMATION_BARRIER_ENABLED`
+* `SHIELD_INFORMATION_BARRIER_PENDING`
+* `SHIELD_INFORMATION_BARRIER_DISABLED`
+* `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`
+
+### Shield information barrier enabled
+
+A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when
+the information barrier is enabled for a file or folder.
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
+
+```js
+"additional_details": {
+  "shield_information_barrier": {
+     "id": 123,
+     "status": "ENABLED",
+     "segments": [
+        {
+          "name": "segment 1",
+          "member_count": 6
+        },
+        {
+          "name": "segment 2",
+          "member_count": 10
+        }
+      ]
+    }
+}
+```
+
+### Shield information barrier pending
+
+A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered
+when the information barrier is not yet enabled
+for a particular file or folder.
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
+
+```js
+"additional_details": {
+   "shield_information_barrier": {
+    "id": 123,
+    "status": "PENDING",
+    "segments": [
+        {
+          "name": "segment 1",
+          "member_count": 6
+        },
+        {
+          "name": "segment 2",
+          "member_count": 10
+        }
+      ]
+    }
+  }
+```
+
+### Shield information barrier deactivated
+
+A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered
+The `additional_details` payload provides details about the number of
+user segments and the number of users affected by the barrier.
+
+```js
+"additional_details": {
+    "shield_information_barrier": {
+      "id": 123,
+      "status": "DISABLED",
+      "segments": [
+        { "name": "segment 1", "member_count": 6 },
+        { "name": "segment 2", "member_count": 10 }
+      ]
+    }
+  }
+```
+
+### Adding user blocked
+
+A `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED` event is
+triggered when the information barrier prohibits
+adding a user to a specific group.
+
+The `additional_details` payload provides details of the
+restricted groups:
+
+```js
+"additional_details": {
+    "group_id": "10153686094",
+    "group_name": "sample_group"
+}
+```
+
+### Collaboration blocked
+
+A `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED` event is triggered
+when the information barrier prohibits adding
+collaborations for users that have restricted access
+to a file or folder.
+
+The `additional_details` payload provides details of the restricted
+collaboration.
+
+```js
+"additional_details": {
+    "type": "box://event/additional_details/collaboration",
+    "collab_id": "0",
+    "is_performed_by_admin": false
+}
+
+```
+
+### Shared item access blocked
+
+A `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED` event
+ is triggered when the information
+ barrier prohibits accessing a file or
+ folder using the shared link.
+
+The `additional_details` payload provides details of the shared link
+and additional security information.
+
+```js
+"additional_details": {
+  "shared_link_id": "y4njxvyttvaeyx3kb371f2sqndt6ne3h",
+  "security_information": {
+    "accessFromSharedObject": {
+        "sharedId": 17486655057,
+        "sharedName": "y4njxvyttvaeyx3kb371f2sqndt6ne3h",
+        "passwordSet": false,
+        "accessLevel": "open",
+        "createdAt": "2022-10-06T13:27:21-07:00"
+    }
+  }
+}
+```
+
+### Moving item blocked
+
+A `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED` event is triggered when the
+information barrier prohibits moving an item to a restricted location.
+
+The `additional_details` payload provides details of the restricted folder.
+
+```js
+"additional_details": {
+   "destination_folder": {
+      "item_type": "folder",
+      "item_id": "175974974639",
+      "item_name": "ib destination"
+  }
+}
+```
+
+### Copying item blocked
+
+A `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED` event is triggered when the
+information barrier prohibits copying an item to a restricted location.
+
+The `additional_details` payload provides details of the restricted destination
+folder.
+
+```js
+"additional_details": {
+   "destination_folder": {
+      "item_type": "folder",
+      "item_id": "175974974639",
+      "item_name": "ib destination"
+  }
+}
+```
+
+### Item transfer ownership blocked
+
+A `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED` event is triggered
+when the information barrier prohibits transferring the item ownership to a
+user that is subject to restrictions.
+
+The `additional_details` payload provides details of the user that cannot
+be set as the new owner.
+
+```js
+"additional_details": {
+  "restricted_user": {
+     "type": "user",
+     "id": "20723635231",
+     "name": "managed user 9",
+     "login": "user@boxdemo.com"
+    },
+  "service_id": "1548332",
+  "service_name": "App"
 }
 ```
 
