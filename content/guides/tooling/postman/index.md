@@ -7,6 +7,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-postman-collection
+  - /guides/tooling/postman/legacy/
 ---
 
 # Postman Collection
@@ -45,6 +46,5 @@ to get many more updates including some to make authentication a lot easier.
 </Mesage>
 
 [postman]: https://postman.com
-[legacy]: https://www.postman.com/collections/768279fde466dffc5511
 [openapi]: https://github.com/box/box-openapi
 [v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
