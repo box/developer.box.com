@@ -886,7 +886,9 @@ user segments and the number of users affected by the barrier.
 
 A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered
 when the information barrier is not yet enabled
-for a particular file or folder.
+for a particular file or folder. The activation process
+was triggered, but the information barrier is not yet
+in place.
 The `additional_details` payload provides details about the number of
 user segments and the number of users affected by the barrier.
 
@@ -911,7 +913,9 @@ user segments and the number of users affected by the barrier.
 
 #### Shield information barrier deactivated
 
-A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered
+A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered when
+the information barrier is deactivated
+for a particular file or folder.
 The `additional_details` payload provides details about the number of
 user segments and the number of users affected by the barrier.
 
