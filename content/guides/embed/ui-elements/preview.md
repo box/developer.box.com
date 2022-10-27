@@ -401,9 +401,8 @@ function App() {
 ```
 
 <Message warning>
-`features: { activityFeed: { annotations: { enabled: true // Enables the ability
-to see your annotation comment in the Activity Feed } } } }}` This part of
-the code is used internally and may change in the future.
+The property `features: { activityFeed: { annotations: { enabled: true  } } } }
+` is subject to change in the future.
 </Message>
 
 ## Scopes
@@ -461,5 +460,5 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [annotations]: https://github.com/box/box-annotations
-[buie]: https://github.com/box/box-ui-elements/releases/tag/v15.0.0
+[buie]: https://github.com/box/box-ui-elements/releases/tag/v16.0.0
 [annotationsguide]: g://embed/ui-elements/annotations.md
