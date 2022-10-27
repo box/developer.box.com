@@ -801,27 +801,62 @@ For example, admins can use information barrier
 to separate teams based on projects to prevent collaboration on
 content restricted to specific groups.
 
+### Events triggered when setting up information barrier
+
 Configuring information barrier produces
 events in the [enterprise event][events] stream. For example,
 activating or deactivating the barrier triggers an event.
-When the information barrier is set up,
-each user attempt to perform restricted actions
-or access restricted data
-also results in events. These events follow
+
+These events follow
 the standard event object schema with the `event_type` value
 set to one of the following:
 
 * `SHIELD_INFORMATION_BARRIER_ENABLED`
 * `SHIELD_INFORMATION_BARRIER_PENDING`
 * `SHIELD_INFORMATION_BARRIER_DISABLED`
-* `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`
-* `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`
-* `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`
-* `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`
-* `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`
-* `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`
 
-### Shield information barrier enabled
+For example:
+
+```js
+{
+   "chunk_size": 1,
+   "next_stream_position": "1152923169537420243",
+   "entries": [
+       {
+           "source": {
+               "barrier_id": 343256,
+               "barrier_status": "ENABLED",
+               "barrier_segments": [
+                   {
+                       "name": "8",
+                       "member_count": 1
+                   },
+                   {
+                       "name": "9",
+                       "member_count": 1
+                   }
+               ]
+           },
+           "created_by": {
+               "type": "user",
+               "id": "16335351460",
+               "name": "Ming Demo 3",
+               "login": "mfeng+demo4@boxdemo.com"
+           },
+           "action_by": null,
+           "created_at": "2022-10-04T17:42:53-07:00",
+           "event_id": "77f9118e-17b6-4d61-842b-24db46ce83b2",
+           "event_type": "SHIELD_INFORMATION_BARRIER_ENABLED",
+           "ip_address": "Unknown IP",
+           "type": "event",
+           "session_id": null,
+           "additional_details": null
+       }
+   ]
+}
+```
+
+#### Shield information barrier enabled
 
 A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when
 the information barrier is enabled for a file or folder.
@@ -847,7 +882,7 @@ user segments and the number of users affected by the barrier.
 }
 ```
 
-### Shield information barrier pending
+#### Shield information barrier pending
 
 A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered
 when the information barrier is not yet enabled
@@ -874,7 +909,7 @@ user segments and the number of users affected by the barrier.
   }
 ```
 
-### Shield information barrier deactivated
+#### Shield information barrier deactivated
 
 A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered
 The `additional_details` payload provides details about the number of
@@ -893,7 +928,66 @@ user segments and the number of users affected by the barrier.
   }
 ```
 
-### Adding user blocked
+### Events triggered by performing restricted actions
+
+When the information barrier is set up,
+each user attempt to perform restricted actions
+or access restricted data
+also results in events. These events follow
+the standard event object schema with the `event_type` value
+set to one of the following:
+
+* `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`
+* `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`
+
+For example:
+
+```js
+       {
+           "source": {
+               "folder_id": "175972618751",
+               "folder_name": "ib test",
+               "user_id": "20723635231",
+               "user_name": "managed user 9",
+               "parent": {
+                   "type": "folder",
+                   "name": "All Files",
+                   "id": "0"
+               },
+               "owned_by": {
+                   "type": "user",
+                   "id": "20723193902",
+                   "name": "managed user 8",
+                   "login": "mfeng+staging+managed8@boxdemo.com"
+               }
+           },
+           "created_by": {
+               "type": "user",
+               "id": "16335351460",
+               "name": "Ming Demo 3",
+               "login": "mfeng+demo4@boxdemo.com"
+           },
+           "action_by": null,
+           "created_at": "2022-10-05T14:15:14-07:00",
+           "event_id": "5822127e-2b2a-45e7-a87e-08b5878ee69d",
+           "event_type": "SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED",
+           "ip_address": "Unknown IP",
+           "type": "event",
+           "session_id": null,
+           "additional_details": {
+               "type": "box://event/additional_details/collaboration",
+               "collab_id": "0",
+               "is_performed_by_admin": false
+           }
+       }
+
+```
+
+#### Adding user blocked
 
 A `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED` event is
 triggered when the information barrier prohibits
@@ -909,7 +1003,7 @@ restricted groups:
 }
 ```
 
-### Collaboration blocked
+#### Collaboration blocked
 
 A `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED` event is triggered
 when the information barrier prohibits adding
@@ -928,7 +1022,7 @@ collaboration.
 
 ```
 
-### Shared item access blocked
+#### Shared item access blocked
 
 A `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED` event
  is triggered when the information
@@ -953,7 +1047,7 @@ and additional security information.
 }
 ```
 
-### Moving item blocked
+#### Moving item blocked
 
 A `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED` event is triggered when the
 information barrier prohibits moving an item to a restricted location.
@@ -970,7 +1064,7 @@ The `additional_details` payload provides details of the restricted folder.
 }
 ```
 
-### Copying item blocked
+#### Copying item blocked
 
 A `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED` event is triggered when the
 information barrier prohibits copying an item to a restricted location.
@@ -988,7 +1082,7 @@ folder.
 }
 ```
 
-### Item transfer ownership blocked
+#### Item transfer ownership blocked
 
 A `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED` event is triggered
 when the information barrier prohibits transferring the item ownership to a
