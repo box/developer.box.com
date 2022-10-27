@@ -58,6 +58,11 @@ Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
 and not Box `user_id`. 
 
+If necessary, signers can log in to Box before signing the request. In such
+case set the parameter `login_required` to `true` for signers. If the signer
+does not have an existing account, they will have an option to create a free
+Box account.
+
 <Message type='warning'> 
 Box Sign will only attempt to send signing emails to the email addresses
 provided for signers in the request. For Box users, this does not include email
