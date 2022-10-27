@@ -37,7 +37,7 @@ to make an API call to delete the shared link.
 
 <ImageFrame center shadow border>
 
-![Webhook developer console](./images/webhook_developer_console.png)
+![Webhook developer console](./images/webhooksV2preview.png)
 
 </ImageFrame>
 
