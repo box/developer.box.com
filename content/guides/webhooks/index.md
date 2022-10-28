@@ -18,7 +18,7 @@ alias_paths:
 
 # Webhooks
 
-Webhooks allow you to monitor Box content for events and receive notifications
+Webhooks allow you to monitor Box content for events, and receive notifications
 to a URL of your choice when they occur. For example, a workflow may include
 waiting for a file to be downloaded to delete a shared link. A webhook can be
 set on the file and upon notification of the download event, a script can launch
@@ -26,6 +26,10 @@ to make an API call to delete the shared link. 
 
 <ImageFrame center shadow border>
   ![Webhook developer console](./images/webhook_developer_console.png)
+</ImageFrame>
+
+<ImageFrame center shadow border>
+  ![Webhook developer console](./images/webhooksV2preview.png)
 </ImageFrame>
 
 ## Versions
