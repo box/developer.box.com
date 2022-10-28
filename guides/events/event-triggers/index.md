@@ -9,7 +9,7 @@ subcategory_id: events/event-triggers
 is_index: true
 id: events/event-triggers
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: events
 parent_id: events
 next_page_id: events/event-triggers/shield-alert-events
