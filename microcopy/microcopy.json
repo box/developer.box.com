@@ -177,6 +177,8 @@
   "guides.titles.learn_more": "Learn more",
   // The text for list that represent the sections on this page
   "guides.titles.on_this_page": "On this page",
+  // The text for a link that tells a user to get started
+  "guides.titles.get_started": "Get started",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
@@ -343,11 +345,11 @@
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
   // Text for link to the iOS SDK
   "footer.categories.tooling.links.ios_sdk.text": "iOS Content SDK",
-  // Link to the iOS SDK
+  // link to the iOS Content SDK
   "footer.categories.tooling.links.ios_sdk.url": "https://github.com/box/box-ios-sdk",
-  // Text for link to the Android SDK
+  // Text for link to the Android Content SDK
   "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
-  // link to the Android SDK
+  // link to the Android Content SDK
   "footer.categories.tooling.links.android_sdk.url": "https://github.com/box/box-android-sdk",
   // Text for link to the Box CLI
   "footer.categories.tooling.links.cli.text": "Box CLI",
@@ -396,7 +398,7 @@
   // Link to the page sitemap
   "footer.bottom.links.sitemap.url": "/sitemap.xml",
   // Text for link to update user notification preferences
-  "footer.bottom.links.subscriptions.text": "Subscriptions",
+  "footer.bottom.links.subscriptions.text": "Newsletter Unsubscribe",
   // Link to update user notification preferences
   "footer.bottom.links.subscriptions.url": "https://go.box.com/preferences.html",
   // Text for link to our terms of use

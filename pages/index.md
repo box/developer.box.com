@@ -67,17 +67,57 @@ Extend the power of Box with APIs
 
 <Header to='/guides' centered>
 
-Developer News
+Guides
 
 </Header>
 
-<BlogCards >
+<GuidesList>
 
-</BlogCards>
+Get started, learn tips and tricks, and discover how to use the Box \
+Platform API with our comprehensive guides. Here are six of the most used \
+guides to get you started.
 
-<More to='https://medium.com/box-developer-blog' right>
+<GuideList href='/guides/authentication/'>
 
-Developer Blog
+Authentication
+
+</GuideList>
+
+<GuideList href='/guides/cli/quick-start/'>
+
+CLI Quick Start
+
+</GuideList>
+
+<GuideList href='/guides/tooling/postman/quick-start/'>
+
+Postman Quick Start
+
+</GuideList>
+
+<GuideList href='/guides/api-calls/permissions-and-errors/common-errors/'>
+
+Common Errors
+
+</GuideList>
+
+<GuideList href='/guides/api-calls/pagination/offset-based/'>
+
+API Pagination
+
+</GuideList>
+
+<GuideList href='/guides/embed/ui-elements/'>
+
+UI Elements
+
+</GuideList>
+
+</GuidesList>
+
+<More to='/guides' right>
+
+More Guides
 
 </More>
 
@@ -87,7 +127,7 @@ Developer Blog
 
 <Centered wide>
 
-<Header to='/guides' centered>
+<Header to='/sdks-and-tools' centered>
 
 SDKS & Tools
 
@@ -99,9 +139,9 @@ Development with Box Platform is made easier with SDKs for your
 programming language, a command line interface, front-end UI elements,
 and much more.
 
-<SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
+<SDK language='python' href='https://github.com/box/box-python-sdk'>
 
-Windows .NET SDK
+Python SDK
 
 </SDK>
 
@@ -111,15 +151,15 @@ Java SDK
 
 </SDK>
 
-<SDK language='python' href='https://github.com/box/box-python-sdk'>
-
-Python SDK
-
-</SDK>
-
 <SDK language='node' href='https://github.com/box/box-node-sdk'>
 
 Node SDK
+
+</SDK>
+
+<SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
+
+Windows .NET SDK
 
 </SDK>
 
@@ -149,44 +189,20 @@ More SDKs & Tools
 
 <Centered wide>
 
-<Header to='/guides' centered>
+<Header to='https://medium.com/box-developer-blog' centered>
 
-Guides
+Developer News
 
 </Header>
 
-<GuideCategories >
+<BlogCards >
 
-</GuideCategories>
+</BlogCards>
 
-<More to='/guides' right>
+<More to='https://medium.com/box-developer-blog' right>
 
-All guides
+Developer Blog
 
 </More>
 
 </Centered>
-
-<Dark>
-
-<Centered wide>
-
-<Header to='/reference' centered>
-
-API Reference
-
-</Header>
-
-<ReferenceCategories >
-
-</ReferenceCategories>
-
-<More to='/reference/' right>
-
-Full API Reference
-
-</More>
-
-</Centered>
-
-</Dark>
