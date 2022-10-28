@@ -14,7 +14,7 @@ subcategory_id: events/event-triggers
 is_index: false
 id: events/event-triggers/event-source
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: events/event-triggers
 parent_id: events/event-triggers
 next_page_id: events/event-triggers
