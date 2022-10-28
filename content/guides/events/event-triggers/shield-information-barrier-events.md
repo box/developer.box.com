@@ -453,7 +453,7 @@ be set as the new owner.
                    "id": ""
                },
                "owned_by": {
-                   "type": "user",
+                   "type": "user",ts
                    "id": "123456789",
                    "name": "Unknown User",
                    "login": "user@email.com"
@@ -479,7 +479,7 @@ be set as the new owner.
                    "name": "Unknown User",
                    "login": "user@email.com"
                },
-               "service_id": "123456789",
+               "service_id": "123456789", 
                "service_name": "App"
            }
        }
