@@ -81,7 +81,7 @@ Copy the Client ID and Client Secret into the terminal window when prompted.
 
 <ImageFrame center>
 
-![CLI Login](./cli-login.png)
+![CLI Login](../images/cli-login.png)
 
 </ImageFrame>
 
@@ -89,7 +89,7 @@ Click the **Grant access to Box** button that appears in the browser window.
 
 <ImageFrame center>
 
-![Grant CLI Access](./cli-grant-access.png)
+![Grant CLI Access](../images/cli-grant-access.png)
 
 </ImageFrame>
 
@@ -97,7 +97,7 @@ If successful, you will see the following success message.
 
 <ImageFrame center>
 
-![CLI Env Setup](./cli-env-setup.png)
+![CLI Env Setup](../images/cli-env-setup.png)
 
 </ImageFrame>
 
@@ -108,7 +108,7 @@ CLI by entering the command `box users:get me`.
 
 <ImageFrame center>
 
-![CLI Users Call](./cli-first-call.png)
+![CLI Users Call](../images/cli-first-call.png)
 
 </ImageFrame>
 

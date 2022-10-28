@@ -37,7 +37,7 @@ requires the user to have accepted the relevant Terms of Service it receives a
         "tos_id": 261346614,
         "tos_user_status_id": 4562456
     },
-    "help_url": "http://developers.box.com/docs/#errors",
+    "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
     "message": "User must accept custom terms of service before action can be taken",
     "request_id": "ADF7722DD"
 }

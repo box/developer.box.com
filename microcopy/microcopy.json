@@ -234,7 +234,7 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
   // The link to navigate to when the CTA is clicked
@@ -310,7 +310,7 @@
   // A link to our developer blog
   "footer.categories.company.links.devblog.url": "https://medium.com/box-developer-blog",
   // Text for a link to the newsletter page
-  "footer.categories.company.links.newsletter.text": "Newsletter",
+  "footer.categories.company.links.newsletter.text": "Developer Newsletter",
   // A link to the newsletter page
   "footer.categories.company.links.newsletter.url": "/newsletter/",
   // Text for a link to the changelog page

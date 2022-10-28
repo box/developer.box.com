@@ -16,6 +16,10 @@ source_url: >-
 ---
 # Using Options and Bulk Commands
 
+<YouTube id='WXkBctPosLE' >
+
+</YouTube>
+
 ## Options
 
 Options provide additional, optional functionality to use with a CLI command.
@@ -40,7 +44,7 @@ at the root level in user ID 123456’s account.
 box folders:create 0 Example_Folder --as-user=123456
 ```
 
-<Message type=warning>
+<Message type='warning'>
 
 Only Service Accounts and Admins are able to use the as-user header.
 If your application was not authorized with the necessary scopes or you
@@ -65,7 +69,7 @@ necessary information.
 As an example, let's create folders using the command `box folders:create --bulk-file-path=pathtoacsv`
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<Message type='tip'>
 
 Drag the CSV file from your finder window/file explorer to the
 terminal/command line window to auto-populate the path.
@@ -123,5 +127,5 @@ I know how to use options and bulk commands
 [github]: https://github.com/box/boxcli#command-topics
 [df]: https://github.com/box/boxcli/blob/master/docs/folders.md#box-foldersdelete-id
 [asuser]: g://authentication/jwt/as-user/
-[csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m
+[csv]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/folders/folders-create.csv
 [bulk]: g://cli/cli-docs/bulk-commands

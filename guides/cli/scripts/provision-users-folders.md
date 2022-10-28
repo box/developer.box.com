@@ -14,7 +14,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/provision-users-folders
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/user-zones-mass-update
@@ -24,8 +24,8 @@ source_url: >-
 ---
 # Provision users and folders
 
-This script uses the Box CLI to build and create an
-onboarding folder structure, create managed users in bulk,
+This script uses the Box CLI to build and create a
+personal folder structure, create managed users in bulk,
 and provision such new users by adding them to the newly created
 folder structure as collaborators with viewer or uploader role.
 

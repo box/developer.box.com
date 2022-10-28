@@ -34,7 +34,7 @@ To make working with the Box API easier we provide the following SDKs and CLI.
 | [iOS Content SDK][iossdk]         | Yes         | Full    |
 | [Android Content SDK][androidsdk] | Yes         | Partial |
 
-<Message type="notice">
+<Message type='notice'>
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features. For support with these

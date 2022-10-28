@@ -17,7 +17,7 @@ subcategory_id: null
 is_index: true
 id: security
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
@@ -63,7 +63,7 @@ when using a server authentication application, the
 [request Access Token endpoint][gettoken] must be called for a new Access Token.
 For security reasons we do not allow long-lived access tokens.
 
-<Message type=tip>
+<Message type='tip'>
 
 Unsure why you are receiving a 404 error? A great place to start is checking
 to see what user is associated with your Access Token by using the get

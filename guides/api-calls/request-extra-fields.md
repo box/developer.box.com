@@ -61,7 +61,7 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 }
 ```
 
-<Message type="notice">
+<Message type='notice'>
 
 It is important to note that when a specific field is requested no other
 fields are returned except for those requested and the "base" set of fields.

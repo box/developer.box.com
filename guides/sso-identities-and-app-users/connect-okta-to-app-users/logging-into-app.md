@@ -374,7 +374,7 @@ the Okta login.
 
 <Choice option='programming.platform' value='java' color='none'>
 
-Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
+Replace `// TODO: HANDLE MAIN ROUTE` in the main route with the following code.
 
 ```java
 // Validate OIDC user against Box

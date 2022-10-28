@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: security/cors
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security
@@ -43,7 +43,7 @@ Visit the MDN Web Docs for more generic information about CORS.
 ## How CORS works
 
 When a browser on one domain (for example `company.com`) tries to fetch
-images, files, or even API resources from another domain (`box.com`)
+images, files, or even API resources from another domain (`box.com`),
 the web browser will prevent access to any of those assets unless the right
 CORS headers are present.
 
@@ -77,9 +77,9 @@ and any origin not on the list will return in a `HTTP 403` error.
   "status":403,
   "code":"cors_origin_not_whitelisted",
   "context_info":{
-    "origin":"https:\/\/company.com"
+    "origin":"https://company.com"
   },
-  "help_url":"http:\/\/developers.box.com\/docs\/#errors",
+  "help_url":"https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
   "message":"Access denied - Did you forget to safelist your origin in the CORS config of your app?",
   "request_id":"4dsdfsa832213"
 }
@@ -162,7 +162,7 @@ the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
 ```
 
-In many cases this has little to do with COR. Instead we recommend checking the
+In many cases this has little to do with CORS. Instead we recommend checking the
 following.
 
 1. **Check your authentication headers** - If the authorization header is not
