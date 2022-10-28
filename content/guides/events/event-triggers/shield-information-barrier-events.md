@@ -45,7 +45,7 @@ For example:
    "entries": [
        {
            "source": {
-               "barrier_id": 343256,
+               "barrier_id": 123456,
                "barrier_status": "ENABLED",
                "barrier_segments": [
                    {
@@ -60,9 +60,9 @@ For example:
            },
            "created_by": {
                "type": "user",
-               "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "id": "12345667",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-04T17:42:53-07:00",
@@ -94,7 +94,7 @@ For example:
    "entries": [
        {
            "source": {
-               "barrier_id": 343256,
+               "barrier_id": 123456,
                "barrier_status": "PENDING",
                "barrier_segments": [
                    {
@@ -109,9 +109,9 @@ For example:
            },
            "created_by": {
                "type": "user",
-               "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "id": "12345667",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-04T16:06:57-07:00",
@@ -140,7 +140,7 @@ For example:
    "entries": [
        {
            "source": {
-               "barrier_id": 343256,
+               "barrier_id": 1234567,
                "barrier_status": "DISABLED",
                "barrier_segments": [
                    {
@@ -155,9 +155,9 @@ For example:
            },
            "created_by": {
                "type": "user",
-               "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "id": "123435567",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-07T09:44:41-07:00",
@@ -201,21 +201,21 @@ restricted groups.
 {
            "source": {
                "type": "user",
-               "id": "20723635231",
-               "name": "managed user 9",
-               "login": "mfeng+test-signup9@boxdemo.com"
+               "id": "123456677",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "created_by": {
                "type": "user",
-               "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "id": "12345666",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-07T09:26:50-07:00",
            "event_id": "47fb08c9-3467-4572-87d3-74abeeb50b45",
            "event_type": "SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED",
-           "ip_address": "12.220.141.160",
+           "ip_address": "10.1.2.3",
            "type": "event",
            "session_id": null,
            "additional_details": {
@@ -239,10 +239,10 @@ collaboration.
 ```js
 {
            "source": {
-               "folder_id": "175972618751",
+               "folder_id": "12334556",
                "folder_name": "ib test",
-               "user_id": "20723635231",
-               "user_name": "managed user 9",
+               "user_id": "1234567",
+               "user_name": "Unknown User",
                "parent": {
                    "type": "folder",
                    "name": "All Files",
@@ -250,16 +250,16 @@ collaboration.
                },
                "owned_by": {
                    "type": "user",
-                   "id": "20723193902",
-                   "name": "managed user 8",
-                   "login": "mfeng+staging+managed8@boxdemo.com"
+                   "id": "12345678",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                }
            },
            "created_by": {
                "type": "user",
                "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-05T14:15:14-07:00",
@@ -291,7 +291,7 @@ and additional security information.
     {
            "source": {
                "item_type": "folder",
-               "item_id": "175972618751",
+               "item_id": "123456789",
                "item_name": "ib test",
                "parent": {
                    "type": "folder",
@@ -300,16 +300,16 @@ and additional security information.
                },
                "owned_by": {
                    "type": "user",
-                   "id": "20723193902",
-                   "name": "managed user 8",
-                   "login": "mfeng+staging+managed8@boxdemo.com"
+                   "id": "123456789",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                }
            },
            "created_by": {
                "type": "user",
-               "id": "20723635231",
-               "name": "managed user 9",
-               "login": "mfeng+test-signup9@boxdemo.com"
+               "id": "123456789",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-06T13:27:58-07:00",
@@ -319,11 +319,11 @@ and additional security information.
            "type": "event",
            "session_id": null,
            "additional_details": {
-               "shared_link_id": "y4njxvyttvaeyx3kb371f2sqndt6ne3h",
+               "shared_link_id": "sthjakslsalas",
                "security_information": {
                    "accessFromSharedObject": {
-                       "sharedId": 17486655057,
-                       "sharedName": "y4njxvyttvaeyx3kb371f2sqndt6ne3h",
+                       "sharedId": 123456789,
+                       "sharedName": "aaaaaabbbbbbbcccccddd",
                        "passwordSet": false,
                        "accessLevel": "open",
                        "createdAt": "2022-10-06T13:27:21-07:00"
@@ -345,7 +345,7 @@ The `additional_details` payload provides details of the restricted folder.
  {
            "source": {
                "item_type": "folder",
-               "item_id": "175972618751",
+               "item_id": "123456789",
                "item_name": "ib test",
                "parent": {
                    "type": "folder",
@@ -354,16 +354,16 @@ The `additional_details` payload provides details of the restricted folder.
                },
                "owned_by": {
                    "type": "user",
-                   "id": "20723193902",
-                   "name": "managed user 8",
-                   "login": "mfeng+staging+managed8@boxdemo.com"
+                   "id": "123456789",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                }
            },
            "created_by": {
                "type": "user",
-               "id": "20723193902",
-               "name": "managed user 8",
-               "login": "mfeng+staging+managed8@boxdemo.com"
+               "id": "123456789",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-06T13:26:58-07:00",
@@ -375,7 +375,7 @@ The `additional_details` payload provides details of the restricted folder.
            "additional_details": {
                "destination_folder": {
                    "item_type": "folder",
-                   "item_id": "175974974639",
+                   "item_id": "123456789",
                    "item_name": "ib destination"
                }
            }
@@ -395,7 +395,7 @@ folder.
       {
            "source": {
                "item_type": "folder",
-               "item_id": "175972618751",
+               "item_id": "123456789",
                "item_name": "ib test",
                "parent": {
                    "type": "folder",
@@ -404,16 +404,16 @@ folder.
                },
                "owned_by": {
                    "type": "user",
-                   "id": "20723193902",
-                   "name": "managed user 8",
-                   "login": "mfeng+staging+managed8@boxdemo.com"
+                   "id": "123456789",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                }
            },
            "created_by": {
                "type": "user",
-               "id": "20723193902",
-               "name": "managed user 8",
-               "login": "mfeng+staging+managed8@boxdemo.com"
+               "id": "123456789",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-05T14:25:15-07:00",
@@ -425,7 +425,7 @@ folder.
            "additional_details": {
                "destination_folder": {
                    "item_type": "folder",
-                   "item_id": "175974974639",
+                   "item_id": "123456789",
                    "item_name": "ib destination"
                }
            }
@@ -453,33 +453,33 @@ be set as the new owner.
                    "id": ""
                },
                "owned_by": {
-                   "type": "user",
-                   "id": "20723193902",
-                   "name": "managed user 8",
-                   "login": "mfeng+staging+managed8@boxdemo.com"
+                   "type": "user",ts
+                   "id": "123456789",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                }
            },
            "created_by": {
                "type": "user",
-               "id": "16335351460",
-               "name": "Ming Demo 3",
-               "login": "mfeng+demo4@boxdemo.com"
+               "id": "123456789",
+               "name": "Unknown User",
+               "login": "user@email.com"
            },
            "action_by": null,
            "created_at": "2022-10-07T09:29:20-07:00",
            "event_id": "aa0e5820-809a-418c-8724-5a010d02c4d5",
            "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED",
-           "ip_address": "12.220.141.160",
+           "ip_address": "10.1.2.3",
            "type": "event",
            "session_id": null,
            "additional_details": {
                "restricted_user": {
                    "type": "user",
-                   "id": "20723635231",
-                   "name": "managed user 9",
-                   "login": "mfeng+test-signup9@boxdemo.com"
+                   "id": "123456789",
+                   "name": "Unknown User",
+                   "login": "user@email.com"
                },
-               "service_id": "1548332",
+               "service_id": "123456789", 
                "service_name": "App"
            }
        }
