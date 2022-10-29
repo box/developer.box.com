@@ -348,7 +348,8 @@ and additional security information.
 ### Moving item blocked
 
 A `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED` event is triggered when the
-information barrier prohibits moving an item to a restricted location.
+information barrier prohibits moving an item (a file or a folder) to a
+a folder the user has no access to.
 
 The `additional_details` payload provides details of the folder.
 
@@ -397,7 +398,8 @@ The `additional_details` payload provides details of the folder.
 ### Copying item blocked
 
 A `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED` event is triggered when the
-information barrier prohibits copying an item to a restricted location.
+information barrier prohibits copying an item (a file or a folder) to a
+a folder the user has no access to.
 
 The `additional_details` payload provides details of the destination
 folder.
