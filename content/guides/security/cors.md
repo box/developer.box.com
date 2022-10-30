@@ -28,7 +28,7 @@ sites (like the Box API) without explicit permission.
 ## How CORS works
 
 When a browser on one domain (for example `company.com`) tries to fetch
-images, files, or even API resources from another domain (`box.com`)
+images, files, or even API resources from another domain (`box.com`),
 the web browser will prevent access to any of those assets unless the right
 CORS headers are present.
 
@@ -146,7 +146,7 @@ the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
 ```
 
-In many cases this has little to do with COR. Instead we recommend checking the
+In many cases this has little to do with CORS. Instead we recommend checking the
 following.
 
 1. **Check your authentication headers** - If the authorization header is not
