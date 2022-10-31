@@ -115,6 +115,6 @@ box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders
 
 [asuser]: g://authentication/jwt/as-user/
 
-[csv]: https://cloud.box.com/s/0jowjhf85dnnjt9i5pd9va1fu54i1m0m
+[csv]: https://github.com/box/boxcli/blob/main/docs/Bulk%20actions/folders/folders-create.csv
 
 [bulk]: g://cli/cli-docs/bulk-commands

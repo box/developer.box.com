@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: security/cors
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security
@@ -39,7 +39,7 @@ CORSの全般的な情報の詳細については、MDN Web Docsを参照して�
 
 ## CORSのしくみ
 
-あるドメイン (`company.com`など) のブラウザで、別のドメイン (`box.com`) から画像、ファイル、またはAPIリソースを取得しようとする場合、適切なCORSヘッダーが存在しない限り、そのウェブブラウザにより、これらのアセットへのアクセスが阻止されます。
+When a browser on one domain (for example `company.com`) tries to fetch images, files, or even API resources from another domain (`box.com`), the web browser will prevent access to any of those assets unless the right CORS headers are present.
 
 ブラウザからクロスオリジンリクエストを送信すると、そのリクエストを送信するサイトのドメインを含む`Origin`リクエストヘッダーがリクエストとともに渡されます。このヘッダーは変更できないため、ウェブブラウザのセキュリティにとって重要な部分となります。
 
@@ -127,7 +127,7 @@ the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
 ```
 
-多くの場合、このエラーはCORSとはほとんど関係がありません。代わりに、以下を確認することをお勧めします。
+In many cases this has little to do with CORS. Instead we recommend checking the following.
 
 1. **認証ヘッダーを確認する** - 認証ヘッダーが指定されていないか、またはその形式が正しくない場合、このAPIでは、必要な`Access-Control-Allow-Origin`ヘッダーなしで一般的なエラーが返されます。その結果、ブラウザで前述のエラーが発生します。必ず`Authorization: Bearer ...`ヘッダーを使用してアクセストークンを渡してください。
 2. **VPNやプロキシなどでブロックされたリクエストがないか確認する** - 場合によっては、VPN、会社のプロキシ、ブラウザの機能拡張、DNSプロバイダ、またはネットワークトラフィックを妨害する可能性があるその他のサービスによってBox APIがブロックされている可能性があります。このようなサービスはどれも、リクエストをインターセプトし、必要な`Access-Control-Allow-Origin`ヘッダーが含まれていないまったく新しいリクエストを返す場合があります。このケースをテストするには、ブラウザ以外の環境、シークレットウィンドウ、またはまったく別の (会社が所有していない) デバイスから同じAPI呼び出しを実行してみてください。

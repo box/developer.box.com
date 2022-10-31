@@ -30,23 +30,43 @@ fullyTranslated: true
 ---
 # Webhook
 
-Webhookを使用すると、Boxコンテンツのイベントを監視し、イベントの発生時に任意のURLへの通知を受け取ることができます。たとえば、ワークフローには、共有リンクを削除するためのファイルダウンロードの待機が含まれる場合があります。このファイルにWebhookを設定すれば、ダウンロードイベントが通知されたときに、スクリプトが起動し、共有リンクを削除するためのAPI呼び出しを実行できます。
+Webhooks allow you to monitor Box content for events, and receive notifications to a URL of your choice when they occur. For example, a workflow may include waiting for a file to be downloaded to delete a shared link. A webhook can be set on the file and upon notification of the download event, a script can launch to make an API call to delete the shared link.
+
+<ImageFrame center shadow border>
+
+![Webhook developer console](./images/webhook_developer_console.png)
+
+</ImageFrame>
+
+<ImageFrame center shadow border>
+
+![Webhook developer console](./images/webhooksV2preview.png)
+
+</ImageFrame>
 
 ## バージョン
 
-WebhookにはV1とV2の2種類があります。この2つの比較を以下に示します。
+There are two types of webhooks: V1 and V2, which are compared below.
+
+<Message type="notice">
+
+For the ease of use, better security, more event triggers to choose from, and automatic retries we recommend to use V2 webhooks.
+
+</Message>
 
 <!-- markdownlint-disable line-length -->
 
-| V1                     | V2                                     |
-| ---------------------- | -------------------------------------- |
-| 開発者コンソールで作成            | API呼び出しで作成                             |
-| ルートレベルに設定              | 特定のファイル/フォルダに設定 (ただしルートには設定不可)         |
-| 14のイベントトリガーから選択        | 30以上のイベントトリガーから選択                      |
-| 選択したコールバックパラメータを提供     | ペイロードに、オブジェクトレスポンスと追加のコンテキスト情報がすべて含まれる |
-| 通知配信の失敗後の再試行メカニズムなし    | 通知配信の失敗後、10回まで再試行可能                    |
-| ペイロード検証をサポートしない        | ペイロード検証をサポート                           |
-| 通知URLはHTTPまたはHTTPSを指定可 | 通知URLはHTTPSのみ指定可                       |
-| 拡張性は小さい                | 拡張性に優れ、信頼性が高い                          |
+| V1                                                      | V2                                                               |
+| ------------------------------------------------------- | ---------------------------------------------------------------- |
+| Created in the [Developer Console][console].            | Created in the [Developer Console][console] or with an API call. |
+| Set at the root level.                                  | Set on specific files/folders, but cannot set at the root.       |
+| Select from 14 event triggers.                          | Select from 30+ event triggers.                                  |
+| Provides selected callback parameters.                  | Payload includes full object response & additional context info. |
+| No retry mechanism after notification delivery failure. | Retries up to 10 times after notification delivery failure.      |
+| Does not support payload verification.                  | Supports payload verification.                                   |
+| Notification URL can be HTTP or HTTPS.                  | Notification URL must be HTTPS.                                  |
+| Does not scale well.                                    | Scales well and has increased reliability.                       |
 
 <!-- markdownlint-enable line-length -->
+
+[console]: https://app.box.com/developers/console

@@ -30,7 +30,7 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 コミュニティプロジェクトとプラットフォームの変更について最新情報を得るには、以下のチャネルのいずれかをご利用ください。
 
 * [変更ログ](page://changelog): APIの変更、非推奨のサービス、リリース
-* [ニュースレター](page://newsletter): 主なイベント、プロジェクト、リリースに関する四半期ごとのお知らせ
+* [Developer Newsletter](page://newsletter): For regular notifications of major events, projects, and releases.
 
 <!-- i18n-enable localize-links -->
 

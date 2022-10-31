@@ -26,7 +26,20 @@ fullyTranslated: true
 ---
 # Webhookの削除
 
-ファイルやフォルダからWebhookを削除するには、WebhookのIDを指定して[Webhookを削除][delete]エンドポイントを使用する必要があります。WebhookのIDは、[すべてのWebhookのリストを取得][list]エンドポイントを使用して取得できます。
+You can delete a webhook using the [Developer Console][console] or API.
+
+## Developer Console
+
+To delete a webhook follow the steps below.
+
+1. Navigate to the **Webhooks** tab in the [Developer Console][console].
+2. Select the webhook you want to delete by clicking on its ID.
+3. Click the **Delete** button.
+4. Confirm the action by clicking **Delete** under the warning message.
+
+## API
+
+To remove a webhook from a file or folder, you need to use the [remove webhook endpoint][delete] with the ID of the webhook. You can get this value using the [list all webhooks endpoint][list].
 
 <Samples id="delete_webhooks_id">
 
@@ -34,15 +47,15 @@ fullyTranslated: true
 
 ## その他の削除の理由
 
-このエンドポイントを使用していなくても、Webhookが削除される場合があります。
+Using [this][delete] endpoint is not the only way a webhook can be deleted.
 
 Webhookは以下の理由で削除される可能性があります。
 
-1. Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
-2. Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードが含まれます。
-3. 最後に成功した配信から30日が経過し、最後に配信が成功した日から最後のトリガーの日付までの期間が14日を超えた場合、Webhookは自動的に削除されます。
+1. Deleting a Box application automatically deletes all webhooks associated with it.
+2. Deleting all active Access Tokens associated with a webhook automatically deletes the webhook. This includes Developer Tokens and password.
+3. A webhook is automatically deleted if the last successful delivery was 30 days ago and the period between the last successful delivery and the last trigger date is more than 14 days.
 
-これらのすべてのケースで、Boxは`WEBHOOK.DELETED`イベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本体には以下の追加情報が含まれます。
+In all of these cases Box sends a webhook payload with the `WEBHOOK.DELETED` event name to the notification URL. The body of the payload includes the following additional information.
 
 ```json
 "additional_info": {
@@ -53,3 +66,5 @@ Webhookは以下の理由で削除される可能性があります。
 [delete]: e://delete-webhooks-id
 
 [list]: e://get-webhooks
+
+[console]: https://app.box.com/developers/console

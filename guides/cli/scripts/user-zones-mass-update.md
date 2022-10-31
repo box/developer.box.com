@@ -164,7 +164,7 @@ PS /home/rvb/box-cli/examples/Mass Update User Zones>
 
 ### オプションのフラグ
 
-シミュレーションモードでスクリプトを実行するには、`DryRun`ブール値フラグを追加します。仮実行では、API呼び出しが行われないというわけではありませんが、作成/更新/削除の呼び出しはすべてスキップされます。
+シミュレーションモードでスクリプトを実行するには、`simulate`ブール値フラグを追加します。
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -DryRun

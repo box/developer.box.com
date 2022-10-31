@@ -25,9 +25,11 @@ fullyTranslated: true
 ---
 # ユーザーのプロビジョニング解除とフォルダのアーカイブ
 
+<!-- markdownlint-disable line-length -->
+
 このスクリプトを使用すると、ユーザーのリストによるプロビジョニング解除と削除が可能です。スクリプトでは以下の手順が実行されます。
 
-1. ユーザーコンテンツを別のユーザーのルートフォルダ`Employee Archive`に転送します。
+1. Transfers the user content to the another user's root folder under specified in `EmployeeArchiveFolderName` parameter.
 2. ユーザーを削除します。
 
 ## 前提条件
@@ -68,84 +70,111 @@ PS /Users/user/repos/boxcli/examples>
 
 ## スクリプトの構成
 
-`boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
+1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
+
+   ```bash
+   git clone https://github.com/box/boxcli.git
+   ```
+
+<!---->
+
+````
+
+2. Create the list of employees for deletion in `.csv`.
+
+   The header row should look like as follows:
+
+   ```bash
+   name, email
+````
+
+   where:
+
+* `name` is the name of the user in Box. 
+* `email` is the primary email address of the user in Box.
+
+   例:
+
+| `name`         | `email`                                               |
+| -------------- | ----------------------------------------------------- |
+| Managed User 1 | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
+| Managed User 2 | [ManagedUser2@test.com](mailto:ManagedUser2@test.com) |
+| Managed User 3 | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
+
+### List of parameters
+
+| `Parameter`                 | `Description`                                                                                                                                                                                                                                         | `Required` | `Default Value`                                                                                                      |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| `EmployeeList`              | Path to Employee List CSV with employees to be deleted.                                                                                                                                                                                               | はい         | -                                                                                                                    |
+| `SkipTransferContent`       | Set this flag to skip transfer of user content before deletion when running the script. Otherwise user's content will be transferred.                                                                                                                 | いいえ        | `False`                                                                                                              |
+| `NewFilesOwnerID`           | The ID of the user to transfer files to before deleting the user. If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.                                         | いいえ        | If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID. |
+| `EmployeeArchiveFolderName` | The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `False`. If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created. | はい         | `Employee Archive`                                                                                                   |
+| `DryRun`                    | A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones.                                                                                                                          | いいえ        | `False`                                                                                                              |
+
+### Define script parameters
+
+You can the following options to pass parameters.
+
+* Use hardcoded value in script.
+
+    To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
+
+* Run script with parameters.
+
+  You can specify parameters while providing the command. For example:
 
 ```bash
-git clone https://github.com/box/boxcli.git
+PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+ -NewFilesOwnerID  123456789
+ -EmployeeArchiveFolderName "Employee Archive"
 ```
 
-従業員のリストが含まれるCSVファイルのパスを指定します。
+または
 
 ```bash
-$EmployeeList = "./Employees_to_delete.csv"
+PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+ -SkipTransferContent
 ```
 
-削除対象の従業員アカウントが記載された`Employees_to_delete.csv`入力ファイルを、削除対象アカウントのメールアドレスを指定してカスタマイズします。以下に例を示します。
+If you don't specify parameters, the script will prompt you to enter it.
 
 ```bash
-name,email
-Managed User 1,ManagedUser1@test.com
-```
-
-ユーザーを削除する前に、ユーザーコンテンツの新しい所有者になるユーザーIDを設定するには、`NewFilesOwnerID`パラメータを目的のユーザーIDに設定します。スクリプトを実行する前に値が指定されていない場合は、値を指定するか、**Enter**キーを押して現在認証されているユーザーのユーザーIDを使用するよう求められます。
-
-### オプションのフラグ
-
-(省略可) ユーザーの削除前にユーザーコンテンツの転送をスキップするには、`TransferContent`パラメータを`N`に設定します。
-
-```bash
-$TransferContent = "N"
-```
-
-(省略可) `EmployeeArchiveFolderName`を任意の名前に変更します。
-
-```bash
-$EmployeeArchiveFolderName = "Employee Archive"
+PS > ./Users_Deprovision.ps1
+Please enter the path to the employee list CSV file:
+./Employees_to_delete.csv
+Please specify the user ID of the user who will own the files of the users being deprovisioned.
+Press Enter if you want to use the current user as the new owner.
+User ID: 1234567689
+Starting User Deprovisioning script...
 ```
 
 ## スクリプトの実行
 
-ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Deprovisioning`フォルダになります。
+Now all you need to do is run the script.
 
-```bash
-rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
+1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Deprovisioning`フォルダになります。
 
-https://aka.ms/powershell
-Type 'help' to get help.
-  
-PS /home/rvb/box-cli/examples/User Deprovisioning>
-```
+   ```bash
+   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
+   PowerShell 7.2.4
+   Copyright (c) Microsoft Corporation.
+   https://aka.ms/powershell
+   Type 'help' to get help.
+   PS /home/rvb/box-cli/examples/User Deprovisioning>
+   ```
 
-スクリプトを実行します。
+2. スクリプトを実行します:
 
-```bash
-./Users_Deprovision.ps1
-```
+   ```bash
+   ./Users_Deprovision.ps1
+   ```
 
-スクリプトの実行が完了すると、以下のような出力が表示されます。
+   When all parameters are defined, you will see following output to confirm the script started:
 
-```bash
-Transfered employee content Managed User 1
-with User ID: 19927131476 to Employee Archive Folder
-Deleted user 19927131476
-Deleted employee Managed User 1
-```
-
-### オプションのフラグ
-
-シミュレーションモードでスクリプトを実行するには、`DryRun`ブール値フラグを追加します。仮実行では、API呼び出しが行われないというわけではありませんが、作成、更新、または削除の呼び出しはスキップされます。
-
-```bash
-./Users_Deprovision.ps1 -DryRun
-```
-
-実行時に新しいファイルの所有者IDを設定するには、`NewFilesOwnerID`文字列フラグを追加します。これにより、以前スクリプトに指定された値が上書きされます。
-
-```bash
-./Users_Deprovision.ps1 -NewFilesOwnerID 12345
-```
+   ```bash
+   PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
+   Starting User Deprovisioning script...
+   ```
 
 ## ログ
 
@@ -165,5 +194,7 @@ Deleted employee Managed User 1
 [auth]: g://authentication/oauth2/oauth2-setup
 
 [examples]: https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning
+
+[parameters]: https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L17-L36
 
 [employeelist][employeelist]:\[<https://github.com/box/boxcli/blob/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L12>

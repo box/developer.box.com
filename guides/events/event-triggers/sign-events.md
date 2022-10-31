@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 9
 related_endpoints:
   - get_events
   - options_events
@@ -14,11 +14,11 @@ subcategory_id: events/event-triggers
 is_index: false
 id: events/event-triggers/sign-events
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: events/event-triggers
 parent_id: events/event-triggers
 next_page_id: ''
-previous_page_id: events/event-triggers/shield-alert-events
+previous_page_id: events/event-triggers/shield-smart-access-events
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/sign-events.md
 fullyTranslated: true

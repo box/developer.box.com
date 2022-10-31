@@ -219,6 +219,12 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 ユーザーが \[**Boxへのアクセスを許可**] をクリックしてこのリクエストを承認すると、ブラウザは、クエリパラメータに有効期間の短い承認コードが指定されている構成済みのリダイレクトURLにリダイレクトされます。
 
+<Message warning>
+
+アプリケーション用にリダイレクトURIを複数設定した場合、承認URLには、開発者コンソールで設定したURIのいずれかと一致する`redirect_uri`パラメータを含める必要があります。このパラメータが指定されていない場合、ユーザーには`redirect_uri_missing`エラーが表示され、アプリにリダイレクトされません。
+
+</Message>
+
 ```curl
 https://your.domain.com/path?code=1234567
 ```

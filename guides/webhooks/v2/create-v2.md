@@ -28,21 +28,52 @@ fullyTranslated: true
 ---
 # Webhookの作成
 
-V2 Webhookは、特定のファイルまたはフォルダを監視できます。
+V2 webhooks can monitor specific files or folders. They can be created in the [Developer Console][console] and with API.
+
+## Developer console
 
 <Message type="warning">
 
-このAPIを使用するには、アプリケーションの \[Webhookを管理する] スコープが有効になっている必要があります。
+V2 webhooks can be created only when the scope **Manage Webhooks** is selected and the application is authorized. See more about [application scopes][1] and [authorization][2].
 
 </Message>
 
-ファイルにWebhookを追加するには、`file`の種類、ファイルのID、Webhook通知の送信先URL、および[トリガー][2]のリストを指定して[Webhookを作成][1]エンドポイントを呼び出します。
+To create a webhook follow the steps below.
+
+1. Navigate to your application in the [Developer Console][console].
+2. \[**Webhook**] タブを選択します。
+3. Click the **Create webhook** button.
+4. Select **V2** from the drop-down list.
+5. Fill in the form.
+6. Click **Create webhook** button to save your changes.
+
+### Required fields
+
+<!-- markdownlint-disable line-length -->
+
+| Field name  | 説明                                                           | 必須 |
+| ----------- | ------------------------------------------------------------ | -- |
+| URL Address | URL address to be notified by the webhook.                   | はい |
+| コンテンツタイプ    | Type of content (file/folder) the webhook is configured for. | はい |
+| Triggers    | Different triggers that activate the webhook.                | はい |
+
+<!-- markdownlint-enable line-length -->
+
+## API
+
+<Message type="warning">
+
+This API requires the application to have the **Manage Webhooks** scope enabled.
+
+</Message>
+
+ファイルにWebhookを追加するには、`file`の種類、ファイルのID、Webhook通知の送信先URL、および[トリガー][4]のリストを指定して[Webhookを作成][3]エンドポイントを呼び出します。
 
 <Samples id="post_webhooks">
 
 </Samples>
 
-フォルダにWebhookを追加するには、`folder`の種類、フォルダのID、Webhook通知の送信先URL、および[トリガー][2]のリストを指定して[Webhookを作成][1]エンドポイントを呼び出します。
+To attach a webhook to a folder, call the [create webhook][3] endpoint with the type of `folder`, the ID of the folder, a URL to send webhook notifications to, and a list of [triggers][4].
 
 <Samples id="post_webhooks" variant="for_folder">
 
@@ -50,30 +81,36 @@ V2 Webhookは、特定のファイルまたはフォルダを監視できます�
 
 <Message type="notice">
 
-Webhookはカスケードで適用されるため、親フォルダに設定すると、サブフォルダでも選択されたトリガーが監視されます。
+Webhooks do cascade, so if a webhook is set on a parent folder, it will also monitor sub-folders for the selected triggers.
 
 </Message>
 
 ## 所有権
 
-コンテンツにアクセスできなくなることでWebhookの配信に生じる可能性のある問題を回避するために、[サービスアカウント][sa] (つまり削除されることのないユーザー) を使用してWebhookを作成することを強くお勧めします。
+It is best practice and strongly recommended to create webhooks with a [Service Account][sa], or user that will not be deleted, to avoid potential issues with webhook delivery due to loss of access to content.
 
-ファイルやフォルダと同様、Webhookを所有するのはユーザーです。Webhookを所有するユーザーが削除されると、以前アクセスできていたすべてのファイルとフォルダにアクセスできなくなります。ユーザーのWebhookでは検証が失敗するようになりますが、BoxのWebhookサービスは引き続きイベントを送信し、再試行を要求します。
+Similar to files and folders, webhooks are owned by a user. If a user who owns a webhook is deleted, they will lose access to all files and folders that they previously had access to. Their webhooks will begin to fail validation, but the webhook service will continue to send events and require retries.
 
 ## Webhookアドレス
 
 `address`パラメータで指定する通知URLは、Webhookの作成時に指定した有効なURLである必要があります。このURLは、いずれかのトリガーがアクティブになるたびに呼び出されます。
 
-通知URLは標準ポート`443`を使用する必要があり、Webhookペイロードの受信から30秒以内に`200`～`299`の範囲のHTTPステータスを返す必要があります。
+The notification URL must use standard port `443` and should return an HTTP status in the range of `200` to `299` within 30 seconds of receiving the webhook payload.
 
 ## Webhookトリガー
 
-トリガーのリストでは、Webhookによって発生するイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには`FILE.UPLOADED`を使用します。
+The triggers are a list of strings that specify the events which cause the webhook to fire. For example, if you want the webhook to be triggered when a user uploads a file, use `FILE.UPLOADED`.
 
-使用可能なトリガーのリストは、[このガイド][2]にあります。
+You can find a list of available triggers [in this guide][4].
 
-[1]: e://post_webhooks
+[1]: g://applications
 
-[2]: g://webhooks/triggers
+[2]: g://authorization
+
+[3]: e://post_webhooks
+
+[4]: g://webhooks/triggers
 
 [sa]: g://getting-started/user-types/service-account
+
+[console]: https://app.box.com/developers/console

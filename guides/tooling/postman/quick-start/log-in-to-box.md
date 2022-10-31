@@ -62,7 +62,7 @@ fullyTranslated: true
 
 ## ログインしています
 
-ブラウザで[Boxの承認](e://get-authorize)画面が開かれ、そこで、アプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`によりこのサイトにリダイレクトされました。
+We just sent your browser to the [Box Authorization](e://get-authorize) screen where you granted your application access to your user account. After you granted it access the browser redirected back to this site with a `code`.
 
 その後、この有効期間が短い`code`が有効期間が長い**アクセストークン**と**更新トークン**に[交換されました](e://post-oauth2-token)。これらのトークンは**ユーザー**を表します。
 
