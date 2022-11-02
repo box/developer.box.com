@@ -7,12 +7,13 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-postman-collection
+  - /guides/tooling/postman/legacy/
 category_id: tooling
 subcategory_id: tooling/postman
 is_index: true
 id: tooling/postman
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/postman/install
@@ -64,6 +65,5 @@ Postman Chrome application.
 </Mesage>
 
 [postman]: https://postman.com
-[legacy]: https://www.postman.com/collections/768279fde466dffc5511
 [openapi]: https://github.com/box/box-openapi
 [v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
