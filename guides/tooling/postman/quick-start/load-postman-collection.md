@@ -23,7 +23,7 @@ Now that you are logged in we can fork the **Box Postman Collection** into the
 Collection we will also automatically load your API credentials as a Postman
 environment.
 
-## Loading a collection and environment
+## Forking a collection and environment
 
 By clicking the button below you will fork the **Box Postman
 Collection** into your Postman application. In the same click it will also
