@@ -21,7 +21,9 @@ hide_in_page_nav: true
     <Postman env='postman_credentials' />
   </Trigger>
 
-  We recommend to fork the Box Postman Collection - you will be asked if you want to update the collection any time Box makes changes to it. You can also copy the collection, but you might miss important updates.
+  We recommend to fork the Box Postman Collection - you will be asked if you 
+  want to update the collection any time Box makes changes to it. You can also
+  copy the collection, but you might miss important updates.
 </LoggedIn>
 
 <Choice option='postman_collection_downloaded' value='true' color='none'>
