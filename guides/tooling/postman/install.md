@@ -20,14 +20,6 @@ source_url: >-
 ---
 # Install Postman & Collection
 
-<Message type='danger'>
-
-We are aware of the issue related to importing the collection into Postman,
-and are working on a fix. In the meantime, please make sure to download
-and use [version 8][v8] of the desktop application.
-
-</Message>
-
 To use the **Box Postman Collection** you will need to have
 [Postman][postman] installed on your device.
 Postman is available for Windows, Mac, and Linux environments.
