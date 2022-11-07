@@ -21,7 +21,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/index.md
 fullyTranslated: true
 ---
-# Salesforce開発者ツールキット
+# Salesforce Developer Toolkit
 
 Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動作をプログラムによりカスタマイズできます。このツールキットに含まれる複数のグローバルAPEXメソッドを使用して、デフォルトの動作をトリガーしたり、拡張したりできます。このグローバルメソッドにより、内部のSalesforceレコードとBoxフォルダのマッピングを更新し、権限の管理を処理できます。
 
