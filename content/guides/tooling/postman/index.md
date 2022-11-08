@@ -7,7 +7,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-postman-collection
-  - /guides/tooling/postman/legacy/
+  - /guides/tooling/postman/legacy
 ---
 
 # Postman Collection
