@@ -14,7 +14,7 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/access-token
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: tooling/postman/refresh

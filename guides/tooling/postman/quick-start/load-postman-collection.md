@@ -15,15 +15,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/4-load-postman-collection.md
 fullyTranslated: true
 ---
-# Postmanコレクションの読み込み
+# Fork a collection
 
 <LoggedIn id="postman_credentials">
 
-ログインしたら、前の手順でインストールした**Postmanアプリ**に**Box Postmanコレクション**を読み込むことができます。Postmanコレクションを読み込むと、Postman環境としてAPI資格情報も自動的に読み込まれます。
+Now that you are logged in we can fork the **Box Postman Collection** into the **Postman App** that we installed previously. When we fork the Postman Collection we will also automatically load your API credentials as a Postman environment.
 
-## コレクションと環境の読み込み
+## Forking a collection and environment
 
-下のボタンをクリックすると、**Box Postmanコレクション**がPostmanアプリケーションに読み込まれます。同時に、**アクセストークン**、**更新トークン**、**クライアントID**、および**クライアントシークレット**もPostman環境に読み込まれます。
+By clicking the button below you will fork the **Box Postman Collection** into your Postman application. In the same click it will also load your **Access Token**, **Refresh Token**, **Client ID** and **Client Secret** into a Postman environment.
 
 <Trigger option="postman_collection_downloaded" value>
 
@@ -33,13 +33,15 @@ fullyTranslated: true
 
 </Trigger>
 
+We recommend to fork the Box Postman Collection - you will be asked if you want to update the collection any time Box makes changes to it. You can also copy the collection, but you might miss important updates.
+
 </LoggedIn>
 
 <Choice option="postman_collection_downloaded" value color="none">
 
 ## コレクションの探索
 
-上のボタンをクリックしたときに、Postmanアプリケーションにコレクションをインポートするよう求められました。インポートが完了すると、このコレクションはアプリ内で左側のサイドバーに表示されます。
+When you clicked the button above it would have asked you to fork the collection into the Postman application. Once imported, the collection should appear within the app in the left-hand sidebar.
 
 <ImageFrame border center shadow width="600">
 
@@ -51,7 +53,7 @@ fullyTranslated: true
 
 ## まとめ
 
-* PostmanコレクションをPostmanに読み込みました
+* You forked the Postman collection into Postman
 * さらにBox Postman環境をPostmanに読み込みました
 
 </Choice>
@@ -76,7 +78,7 @@ fullyTranslated: true
 
 <Next>
 
-コレクションのインポートが完了しました
+I have forked the collection
 
 </Next>
 

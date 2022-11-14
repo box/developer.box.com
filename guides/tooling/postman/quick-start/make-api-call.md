@@ -19,7 +19,7 @@ fullyTranslated: true
 ---
 # API呼び出しの実行
 
-**Box Postmanコレクション**が**Postmanアプリ**に読み込まれたため、Postmanアプリがログインユーザーに代わって**Box API**へのAPI呼び出しを実行できるようになりました。
+With the **Box Postman Collection** forked into the **Postman App** it is now possible to make API calls to the **Box API** on behalf of the user you logged in as.
 
 ## はじめに: ブラウザのストレージをリセットする
 

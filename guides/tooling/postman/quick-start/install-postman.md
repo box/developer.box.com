@@ -17,12 +17,6 @@ fullyTranslated: true
 ---
 # Postmanのインストール
 
-<Message type="danger">
-
-Boxでは、Postmanへのコレクションのインポートに関連した問題を認識しており、修正に対応しています。修正されるまでの間は、デスクトップアプリケーションの[バージョン8][v8]をダウンロードして使用するようにしてください。
-
-</Message>
-
 **Box Postmanコレクション**を使用するには、デバイスに[Postman][postman]アプリがインストールされている必要があります。PostmanはWindows、Mac、およびLinux環境で利用できます。
 
 <Grid columns="4">

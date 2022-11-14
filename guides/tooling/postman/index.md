@@ -7,12 +7,13 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/box-postman-collection
+  - /guides/tooling/postman/legacy
 category_id: tooling
 subcategory_id: tooling/postman
 is_index: true
 id: tooling/postman
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/postman/install
@@ -22,12 +23,6 @@ source_url: >-
 fullyTranslated: true
 ---
 # Postmanコレクション
-
-<Message type="danger">
-
-Boxでは、Postmanへのコレクションのインポートに関連した問題を認識しており、修正に対応しています。修正されるまでの間は、デスクトップアプリケーションの[バージョン8][v8]をダウンロードして使用するようにしてください。
-
-</Message>
 
 [Postman][postman]は、完全な開発環境を構成しなくても、使いやすいインターフェースでHTTPリクエストを作成およびテストできるツールです。**Box Postmanコレクション**は事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、Box APIを利用できるようになります。
 
@@ -41,21 +36,13 @@ Box Postmanコレクションの使い方
 
 ## 最新のコレクション
 
-下のボタンをクリックすると、最新のPostmanコレクションがインストールされます。これは、すべてのAPIエンドポイントをカバーする完全なPostmanコレクションであり、Boxの[OpenAPIの仕様][openapi]から自動生成されます。認証を簡単にするアップデートを含む、より多くのアップデートを取得することが期待されています。
+Clicking the following button will fork our latest Postman collection. It is a complete Postman collection that covers every API endpoint and is auto-generated from our [OpenAPI specification][openapi]. It is expected to get many more updates including some to make authentication a lot easier.
 
 <Postman anonymous>
 
 </Postman>
 
-<Message warning>
-
-Postmanコレクションを使用するには、[Postmanデスクトップアプリ][postman]をインストールする必要があります。Box Postmanコレクションでは、非推奨となったPostman Chromeアプリケーションがサポートされていません。
-
-</Mesage>
-
 [postman]: https://postman.com
-
-[legacy]: https://www.postman.com/collections/768279fde466dffc5511
 
 [openapi]: https://github.com/box/box-openapi
 

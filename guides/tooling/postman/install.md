@@ -10,7 +10,7 @@ subcategory_id: tooling/postman
 is_index: false
 id: tooling/postman/install
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: tooling/postman
 parent_id: tooling/postman
 next_page_id: tooling/postman/make-api-call
@@ -20,12 +20,6 @@ source_url: >-
 fullyTranslated: true
 ---
 # Postmanとコレクションのインストール
-
-<Message type="danger">
-
-Boxでは、Postmanへのコレクションのインポートに関連した問題を認識しており、修正に対応しています。修正されるまでの間は、デスクトップアプリケーションの[バージョン8][v8]をダウンロードして使用するようにしてください。
-
-</Message>
 
 **Box Postmanコレクション**を使用するには、デバイスに[Postman][postman]がインストールされている必要があります。PostmanはWindows、Mac、およびLinux環境で利用できます。
 

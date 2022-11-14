@@ -19,12 +19,6 @@ fullyTranslated: true
 ---
 # Postmanを使用したAPI呼び出し
 
-<Message type="danger">
-
-Boxでは、Postmanへのコレクションのインポートに関連した問題を認識しており、修正に対応しています。修正されるまでの間は、デスクトップアプリケーションの[バージョン8][v8]をダウンロードして使用するようにしてください。
-
-</Message>
-
 [Postman](https://getpostman.com)は、完全な開発環境を構成しなくても、使いやすいインターフェースでHTTPリクエストを作成およびテストできるツールです。Box Postmanコレクションは事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、PostmanでBox APIを利用できるようになります。
 
 <ImageFrame center>
@@ -40,7 +34,7 @@ Boxでは、Postmanへのコレクションのインポートに関連した問�
 1. デバイスに[Postmanをインストール](g://tooling/postman/quick-start/install-postman/)する。
 2. PostmanからBox APIにアクセスできるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app/)する。
 3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box/)して適切なAPI資格情報を取得する。
-4. Postmanに[BoxのPostmanコレクションを読み込む](g://tooling/postman/quick-start/load-postman-collection/)。
+4. [Fork Box's Postman collection](g://tooling/postman/quick-start/load-postman-collection/) into Postman.
 5. Postmanを使用してBox APIへの[最初のAPI呼び出しを実行](g://tooling/postman/quick-start/make-api-call/)する。
 
 <Next>

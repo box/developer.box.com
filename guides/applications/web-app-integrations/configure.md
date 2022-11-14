@@ -62,7 +62,7 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-### コールバック設定
+### コールバック構成
 
 <!-- markdownlint-disable line-length -->
 
