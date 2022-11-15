@@ -68,7 +68,7 @@ endpoints.
 
 </Choice>
 
-<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+<Choice option='postman.app_type' unset color='none'>
 
 <LoggedIn reverse>
 
@@ -76,7 +76,23 @@ endpoints.
 
 # Incomplete previous step
 
-Please complete the previous steps to select and log in to a **Box App**.
+Complete the previous steps to select and log in to a **Box App**.
+
+</Message>
+
+</LoggedIn>
+
+</Choice>
+
+<Choice option='postman.app_type' value='create_new,use_existing' color='none'>
+
+<LoggedIn id='postman_credentials' reverse>
+
+<Message danger>
+
+# Incomplete previous step
+
+Complete the previous steps to select and log in to a **Box App**.
 
 </Message>
 

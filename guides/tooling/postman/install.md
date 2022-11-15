@@ -24,41 +24,11 @@ To use the **Box Postman Collection** you will need to have
 [Postman][postman] installed on your device.
 Postman is available for Windows, Mac, and Linux environments.
 
-<Grid columns='4'>
+<Trigger option='postman.downloaded' value='win32,win64,osx,linux64'>
 
-<Download>
+[Download the appropriate version for you operating system][downloads]
 
-![Windows Logo](./quick-start/windows.png) Windows (x32)
-
-[Download][v8]
-
-</Download>
-
-<Download>
-
-![Windows Logo](./quick-start/windows.png) Windows (x64)
-
-[Download][v8]
-
-</Download>
-
-<Download>
-
-![MacOS Logo](./quick-start/macos.png) MacOS
-
-[Download][v8]
-
-</Download>
-
-<Download>
-
-![Linux Logo](./quick-start/linux.png) Linux (x64)
-
-[Download][v8]
-
-</Download>
-
-</Grid>
+</Trigger>
 
 Next, install Postman on your machine and (optionally)
 [register for a Postman account and log in][register].
@@ -81,4 +51,4 @@ Collection** into Postman.
 
 [register]: https://identity.getpostman.com/signup
 [postman]: https://getpostman.com
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
+[downloads]: https://www.postman.com/downloads/
