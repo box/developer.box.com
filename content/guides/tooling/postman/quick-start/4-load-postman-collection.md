@@ -53,7 +53,7 @@ endpoints.
     <Message danger>
       # Incomplete previous step
 
-      Please complete the previous steps to select and log in to a **Box App**.
+      Complete the previous steps to select and log in to a **Box App**.
     </Message>
   </LoggedIn>
 </Choice>
@@ -63,7 +63,7 @@ endpoints.
     <Message danger>
       # Incomplete previous step
 
-      Please complete the previous steps to select and log in to a **Box App**.
+      Complete the previous steps to select and log in to a **Box App**.
     </Message>
   </LoggedIn>
 </Choice>
