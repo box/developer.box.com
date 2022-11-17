@@ -52,5 +52,3 @@ This guide will take you through the following steps.
 I am ready to get started
 
 </Next>
-
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
