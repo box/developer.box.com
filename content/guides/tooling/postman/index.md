@@ -35,4 +35,3 @@ to get many more updates including some to make authentication a lot easier.
 
 [postman]: https://postman.com
 [openapi]: https://github.com/box/box-openapi
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
