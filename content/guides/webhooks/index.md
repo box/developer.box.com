@@ -28,10 +28,6 @@ to make an API call to delete the shared link. 
   ![Webhook developer console](./images/webhooksV2preview.png)
 </ImageFrame>
 
-<ImageFrame center shadow border>
-  ![Webhook developer console](./images/webhooksV2preview.png)
-</ImageFrame>
-
 ## Versions
 
 There are two types of webhooks: V1 and V2, which are compared below.
