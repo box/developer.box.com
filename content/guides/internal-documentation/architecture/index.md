@@ -22,6 +22,22 @@ parts:
   ![Architecture](./images/Architecture1.png)
 </ImageFrame>
 
+## Stages Overview
+
+Below table contains an overview of all currently deployed stages, and where
+they pull their sources from.
+
+| Sources | Production | Staging | Japan |
+| --- | --- | --- | --- |
+| | developer.box.com | staging.developer.box.com | 	ja.developer.box.com |
+| OpenAPI | @box/openapi#master | @box/openapi#staging | |
+| OpenAPI Compiled (EN) | @box/openapi#en | @box/openapi#en-staging | @box/openapi#jp |
+| Microcopy & Guides (EN) | @box/developer.box.com#master | @box/developer.box.com#staging | |
+| Microcopy & Guides Compiled (EN) | @box/developer.box.com#en | @box/developer.box.com#en-staging | 	@box/developer.box.com#jp |
+| Gatsby Site | @box/developer.box.com-framework#master | @box/developer.box.com-framework#staging | @box/developer.box.com-framework#master |
+
+
+
 ## Video Overviews
 
 These videos contain an overview of the developer documentation site, build

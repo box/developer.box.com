@@ -42,7 +42,27 @@ SDK.
 
 ## Source validation
 
+The OpenAPI 3.0 Specification is kept in separate files to make it easier for
+contributors to edit them. When there are any changes, the source is validated
+and tested before source resolving occurs.
 
+For the OpenAPI 3.0 specification we ensure that:
+- files conform to the OpenAPI 3.0 specification,
+- all descriptions and titles pass spell checks for the `en-US` locale,
+- there is no insensitive language in the documentation,
+- the specification contains all the information necessary to
+build the site.
+
+All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions. The status of the build can be monitored on GitHub and in the #devrel-build Slack channel.
+
+## Source resolving
+
+As the sources from **OpenAPI 3.0 Specification** and **Microcopy, locales and**
+**guides** start off as multiple files, they are compiled into single files with
+the [Stoplight's JSON Resolver]. The resolved content is published back to the
+`en` branch of the source for the content in English.
+Then the translation team pick up the files, translates them, and writes them
+back to additional branches for each translation (for example `jp`).
 
 [Box open API]: https://github.com/box/box-openapi
 [developer.box.com]: https://github.com/box/developer.box.com
@@ -53,3 +73,4 @@ SDK.
 [Node SDK]: https://github.com/box/box-node-sdk
 [Java SDK]: https://github.com/box/box-java-sdk
 [.NET SDK]: https://github.com/box/box-windows-sdk
+[Stoplight's JSON Resolver]: https://github.com/stoplightio/json-ref-resolver
