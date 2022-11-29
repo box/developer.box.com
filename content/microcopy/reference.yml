@@ -141,10 +141,10 @@ parameter_details:
 
   // range: The label for the range of a parameter value
   range: range
- 
+
   // max_value: The label for the maximum value parameter.
   max_value: max value
- 
+
   // min_value: The label for the minimum value parameter.
   min_value: min value
 
