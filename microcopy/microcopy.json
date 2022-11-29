@@ -27,7 +27,7 @@
   "messages.resource_variant_descriptions.full": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
   // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
   "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
-  // The title for the API referene page
+  // The title for the API reference page
   "reference.titles.api_reference": "API Reference",
   // The title for the resources page
   "reference.titles.other_resources": "Resources",
@@ -94,11 +94,13 @@
   // The label for a conditionally required param
   "reference.parameter_details.conditionally_required": "conditionally required",
   // The label for a default parameter value
-  "reference.parameter_details.default": "Default",
+  "reference.parameter_details.default": "default",
   // The label for the max length of a parameter value
-  "reference.parameter_details.max_length": "Max Length",
-  // The label for the range of a parameter value
-  "reference.parameter_details.range": "Range",
+  "reference.parameter_details.max_length": "max length",
+  // The label for the maximum value parameter.
+  "reference.parameter_details.max_value": "max value",
+  // The label for the minimum value parameter.
+  "reference.parameter_details.min_value": "min value",
   // Describes it when there is no content type as thereis no body request or response body
   "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
