@@ -25,10 +25,6 @@ set on the file and upon notification of the download event, a script can launch
 to make an API call to delete the shared link. 
 
 <ImageFrame center shadow border>
-  ![Webhook developer console](./images/webhook_developer_console.png)
-</ImageFrame>
-
-<ImageFrame center shadow border>
   ![Webhook developer console](./images/webhooksV2preview.png)
 </ImageFrame>
 
