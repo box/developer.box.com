@@ -7,7 +7,7 @@ hide: true
 # Developer Documentation Architecture
 
 The following is an overview of the build system for the new
-[developer documentation] site. 
+[developer documentation] site.
 
 ## High Level Architecture
 
