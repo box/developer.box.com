@@ -47,13 +47,16 @@ contributors to edit them. When there are any changes, the source is validated
 and tested before source resolving occurs.
 
 For the OpenAPI 3.0 specification we ensure that:
+
 - files conform to the OpenAPI 3.0 specification,
 - all descriptions and titles pass spell checks for the `en-US` locale,
 - there is no insensitive language in the documentation,
 - the specification contains all the information necessary to
 build the site.
 
-All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions. The status of the build can be monitored on GitHub and in the #devrel-build Slack channel.
+All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions.
+The status of the build can be monitored on GitHub and in the #devrel-build
+Slack channel.
 
 ## Source resolving
 
