@@ -9,5 +9,6 @@ alias_paths:
 
 # Internal Documentation
 
-The following pages contain information about developer documentation architecture, guidelines and best practices, Markdown usage and UI elements.
+The following pages contain information about developer documentation
+architecture, guidelines and best practices, Markdown usage and UI elements.
 It's created for internal use only.
