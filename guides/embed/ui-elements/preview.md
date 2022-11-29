@@ -288,27 +288,27 @@ preview.addListener("rotate", data => {
 
 ## 注釈
 
-You can enable V4 [annotations][annotationsguide] in content preview. New annotations will sync in real time.
+コンテンツプレビューで、V4の[注釈][annotationsguide]を有効にすることができます。新しい注釈はリアルタイムで同期されます。
 
-To add V4 annotations to preview:
+V4の注釈をプレビューに追加するには、以下の手順に従います。
 
-1. Run `npm i box-annotations@latest`to install [box annotations][annotations].
+1. `npm i box-annotations@latest`を実行し、[Boxの注釈][annotations]をインストールします。
 
    <Message warning>
 
-   Box annotations version should be at least major version 4 and up.
+   Boxの注釈のバージョンは、メジャーバージョン4以上である必要があります。
 
    </Message>
 
-2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with annotation related change.
+2. `npm i box-ui-elements@16.0.0`を実行し、注釈に関連した変更を含む[BUIE][buie]バージョンをインストールします。
 
 <Message warning>
 
-Box UI elements should be the lowest working version that contains fully working V4 annotations.
+Box UI Elementsは、V4の注釈が十分に機能している、使用可能な最小バージョンである必要があります。
 
 </Message>
 
-3. Import content preview and box annotations into your application:
+3. 次のように、コンテンツプレビューとBoxの注釈をアプリケーションにインポートします。
 
 ```js
 import ContentPreview from 'box-ui-elements/es/elements/content-preview';
@@ -320,7 +320,7 @@ const importAnnotations = () => import(/* webpackChunkName: "box-annotations"
 */ 'box-annotations');
 ```
 
-Below is an example of how you could use content preview to enable all features of V4 annotations:
+コンテンツプレビューを使用してV4の注釈の全機能を有効にする方法の例を以下に示します。
 
 ```js
 function App() {
@@ -371,8 +371,8 @@ function App() {
 
 <Message warning>
 
-The property `features: { activityFeed: { annotations: { enabled: true  } } } }
-` is subject to change in the future.
+プロパティ`features: { activityFeed: { annotations: { enabled: true  } } } }
+`は、今後変更される可能性があります。
 
 </Message>
 

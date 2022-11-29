@@ -29,7 +29,7 @@ fullyTranslated: true
 
 このスクリプトを使用すると、ユーザーのリストによるプロビジョニング解除と削除が可能です。スクリプトでは以下の手順が実行されます。
 
-1. Transfers the user content to the another user's root folder under specified in `EmployeeArchiveFolderName` parameter.
+1. `EmployeeArchiveFolderName`パラメータで指定された、別のユーザーのルートフォルダにユーザーコンテンツを転送します。
 2. ユーザーを削除します。
 
 ## 前提条件
@@ -88,40 +88,40 @@ PS /Users/user/repos/boxcli/examples>
    name, email
 ````
 
-   where:
+   この場合
 
-* `name` is the name of the user in Box. 
-* `email` is the primary email address of the user in Box.
+* `name`は、Boxにおけるユーザーの名前です。 
+* `email`は、Boxにおけるこのユーザーのプライマリメールアドレスです。
 
    例:
 
-| `name`         | `email`                                               |
-| -------------- | ----------------------------------------------------- |
-| Managed User 1 | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
-| Managed User 2 | [ManagedUser2@test.com](mailto:ManagedUser2@test.com) |
-| Managed User 3 | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
+| `name`    | `email`                                               |
+| --------- | ----------------------------------------------------- |
+| 管理対象ユーザー1 | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
+| 管理対象ユーザー2 | [ManagedUser2@test.com](mailto:ManagedUser2@test.com) |
+| 管理対象ユーザー3 | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
 
-### List of parameters
+### パラメータのリスト
 
-| `Parameter`                 | `Description`                                                                                                                                                                                                                                         | `Required` | `Default Value`                                                                                                      |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| `EmployeeList`              | Path to Employee List CSV with employees to be deleted.                                                                                                                                                                                               | はい         | -                                                                                                                    |
-| `SkipTransferContent`       | Set this flag to skip transfer of user content before deletion when running the script. Otherwise user's content will be transferred.                                                                                                                 | いいえ        | `False`                                                                                                              |
-| `NewFilesOwnerID`           | The ID of the user to transfer files to before deleting the user. If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.                                         | いいえ        | If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID. |
-| `EmployeeArchiveFolderName` | The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `False`. If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created. | はい         | `Employee Archive`                                                                                                   |
-| `DryRun`                    | A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones.                                                                                                                          | いいえ        | `False`                                                                                                              |
+| `Parameter`                 | `Description`                                                                                                                                                | `Required` | `Default Value`                                       |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ----------------------------------------------------- |
+| `EmployeeList`              | 削除する従業員が記載された従業員リストCSVのパス。                                                                                                                                   | はい         | -                                                     |
+| `SkipTransferContent`       | このフラグを設定すると、スクリプトの実行時に、削除前にユーザーコンテンツの転送をスキップします。設定しない場合は、ユーザーのコンテンツが転送されます。                                                                                  | いいえ        | `False`                                               |
+| `NewFilesOwnerID`           | ユーザーの削除前にファイルの転送先となるユーザーのID。指定しなかった場合、スクリプトは、対話形式で入力を求めるか、現在認証されているユーザーのIDを使用してコンテンツを受け取ります。                                                                 | いいえ        | 指定しなかった場合、スクリプトは、対話形式で入力を求めるか、現在認証されているユーザーのIDを使用します。 |
+| `EmployeeArchiveFolderName` | `SkipTransferContent`が`False`に設定されている場合にユーザーのコンテンツの移動先となるフォルダの名前。この名前のフォルダがそのユーザーの`NewFilesOwnerID`ルートフォルダにすでに存在する場合は、そのフォルダが使用されます。存在しない場合は、新しいフォルダが作成されます。 | はい         | `Employee Archive`                                    |
+| `DryRun`                    | 削除/作成/更新の呼び出しは行われず、読み取りの呼び出しのみが行われるモードでスクリプトを実行するかどうかを決定するフラグ。                                                                                               | いいえ        | `False`                                               |
 
-### Define script parameters
+### スクリプトのパラメータの定義
 
-You can the following options to pass parameters.
+パラメータを渡すには、以下のオプションを使用できます。
 
-* Use hardcoded value in script.
+* スクリプトでハードコードされた値を使用します。
 
-    To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
+    このオプションを使用するには、実行する前に、[スクリプトのパラメータセクション][parameters]に記載されている必須パラメータをすべて更新します。
 
-* Run script with parameters.
+* パラメータを指定してスクリプトを実行します。
 
-  You can specify parameters while providing the command. For example:
+  コマンドを指定するときにパラメータを指定できます。以下に例を示します。
 
 ```bash
 PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
@@ -136,7 +136,7 @@ PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
  -SkipTransferContent
 ```
 
-If you don't specify parameters, the script will prompt you to enter it.
+パラメータを指定しなかった場合は、スクリプトによって、パラメータを入力するよう求められます。
 
 ```bash
 PS > ./Users_Deprovision.ps1
@@ -150,7 +150,7 @@ Starting User Deprovisioning script...
 
 ## スクリプトの実行
 
-Now all you need to do is run the script.
+これで、あとはスクリプトを実行するだけです。
 
 1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Deprovisioning`フォルダになります。
 
@@ -169,7 +169,7 @@ Now all you need to do is run the script.
    ./Users_Deprovision.ps1
    ```
 
-   When all parameters are defined, you will see following output to confirm the script started:
+   すべてのパラメータが定義されると、以下の出力が表示され、スクリプトが開始されたことを確認できます。
 
    ```bash
    PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1

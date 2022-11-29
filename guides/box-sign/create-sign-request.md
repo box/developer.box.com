@@ -24,11 +24,11 @@ fullyTranslated: true
 
 ## ファイル
 
-Each Box Sign request begins with a file that needs to be signed. If the file does not already exist in Box, it must be [uploaded][upload], in a separate API call, prior to creating the request. Multiple files can be signed in one request. File ID of the first file in a request is specified in the `source_files` body parameter.
+Box Signの各リクエストは、署名が必要なファイルから始まります。そのファイルがまだBoxに存在しない場合は、リクエストを作成する前に、別のAPI呼び出しでファイルを[アップロード][upload]する必要があります。1つのリクエストで複数のファイルに署名できます。リクエストに含まれる最初のファイルのファイルIDを`source_files`本文パラメータで指定します。
 
 <Message type="warning">
 
-The requester must have download privileges to the file in Box. Review our [collaboration levels][collab] to ensure this requirement is met.
+リクエスト送信者は、Box内のファイルに対してダウンロード権限を持っている必要があります。この要件を満たしているかどうかを確認するには、[コラボレーションレベル][collab]を確認します。
 
 </Message>
 
@@ -39,7 +39,7 @@ The requester must have download privileges to the file in Box. Review our [coll
 * 画像: `png`、`jpg`、`jpeg`、`tiff`のみ
 * テキストベースのファイル: `.csv`、`.txt`のみ
 
-All file types are converted to `.pdf` for the signature process. This converted document can be found in the `parent_folder` upon successfully sending a request. This means that the final, signed document is a `.pdf`, regardless of the original file type. As each signer completes the request, Box Sign will automatically add a new file version.
+すべてのファイルタイプは、署名の処理のために`.pdf`に変換されます。この変換後のドキュメントは、リクエストの送信が成功した場合は、`parent_folder`に見つかります。つまり、元のファイルタイプに関係なく、最終的な署名済みドキュメントは`.pdf`になります。各署名者がリクエストを完了すると、Box Signにより新しいファイルバージョンが自動的に追加されます。
 
 ファイルサイズの上限は、アカウントの種類によって決まります。詳細については、[アップロードガイド][uploads]を参照してください。 
 
@@ -55,7 +55,7 @@ All file types are converted to `.pdf` for the signature process. This converted
 
 署名者は、ドキュメントに署名するために、既存のBoxアカウントを持っている必要も、アカウントを作成する必要もありません。他のAPIエンドポイントとは異なり、署名者はBox `user_id`ではなくメールアドレスを使用して招待されます。 
 
-If necessary, signers can log in to Box before signing the request. In such case set the parameter `login_required` to `true` for signers. If the signer does not have an existing account, they will have an option to create a free Box account.
+必要に応じて、署名者は、リクエストに署名する前にBoxにログインできます。その場合は、署名者の`login_required`パラメータを`true`に設定します。署名者が既存のアカウントを所有していない場合は、無料Boxアカウントを作成するオプションもあります。
 
 <Message type="warning">
 
@@ -109,18 +109,18 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 
 ## リクエストのステータス
 
-* `converting`: The file is converted to a `.pdf` for the signing process once the sign request is sent.
-* `error_converting`: An issue was encountered while converting the file to a `.pdf`.
-* `created`: If `document_preparation_is_needed` is set to `true`, but the `prepare_url` has not yet been visited.
-* `sent`: The request was successfully sent, but no signer has interacted with it.
-* `error_sending`: An issue was encountered while sending the request.
-* `viewed`: Once the first, or only, signer clicks on **Review document** in the signing email or visits the signing URL.
-* `downloaded`: The signing document was downloaded by signer.
-* `signed`: All signers completed the request.
-* `signed and downloaded`: The signing document was signed and downloaded by signer.
-* `declined`: If any signer declines the request.
-* `cancelled`: If the request is cancelled via UI or API.
-* `expired`: The date of expiration has passed with outstanding, incomplete signatures.
+* `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている。
+* `error_converting`: ファイルを`.pdf`に変換している間に問題が発生した。
+* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない場合。
+* `sent`: リクエストが正常に送信されたが、どの署名者も対応していない。
+* `error_sending`: リクエストを送信中に問題が発生した。
+* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした場合。
+* `downloaded`: 署名者が署名用ドキュメントをダウンロードした。
+* `signed`: すべての署名者がリクエストの処理を完了した。
+* `signed and downloaded`: 署名者が署名用ドキュメントに署名してダウンロードした。
+* `declined`: いずれかの署名者がリクエストを拒否した場合。
+* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた場合。
+* `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた。
 
 エラーステータスになった場合、再試行するには、新しい署名リクエストを作成する必要があります。
 

@@ -35,7 +35,7 @@ fullyTranslated: true
 
 </ImageFrame>
 
-When an event triggers a webhook for a file or a folder, it makes a HTTP call to the `address` specified when the webhook was created. The payload of this call contains some request headers, and a JSON body.
+イベントによってファイルまたはフォルダのWebhookがトリガーされると、Webhookの作成時に指定した`address`に対してHTTP呼び出しが実行されます。この呼び出しのペイロードには、いくつかのリクエストヘッダーとJSON本文が含まれます。
 
 ## ペイロードヘッダー
 
@@ -43,14 +43,14 @@ Webhookによって送信されたペイロードには、以下のBox固有の�
 
 <!-- markdownlint-disable line-length -->
 
-| ヘッダー                      | 説明                                                                                                                                                                            |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BOX-DELIVERY-ID`         | A unique ID assigned by Box that identifies the delivered webhook payload. When Box retries a webhook this ID will change, while the ID in the payload body remains the same. |
-| `BOX-DELIVERY-TIMESTAMP`  | An RFC-3339 timestamp that identifies when the payload was sent.                                                                                                              |
-| `BOX-SIGNATURE-PRIMARY`   | このWebhook用に設定されたプライマリ署名キーを使用して作成された[署名][verify_sigs]。                                                                                                                         |
-| `BOX-SIGNATURE-SECONDARY` | このWebhook用に設定されたセカンダリ署名キーを使用して作成された[署名][verify_sigs]。                                                                                                                         |
-| `BOX-SIGNATURE-VERSION`   | 値は常に`1`。                                                                                                                                                                      |
-| `BOX-SIGNATURE-ALGORITHM` | 値は常に`HmacSHA256`。                                                                                                                                                             |
+| ヘッダー                      | 説明                                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------------- |
+| `BOX-DELIVERY-ID`         | 配信されたWebhookペイロードを識別する、Boxによって割り当てられた一意のID。BoxがWebhookを再試行すると、このIDは変わりますが、ペイロード本文のIDは変わりません。 |
+| `BOX-DELIVERY-TIMESTAMP`  | ペイロードの送信日時を識別するRFC-3339タイムスタンプ。                                                              |
+| `BOX-SIGNATURE-PRIMARY`   | このWebhook用に設定されたプライマリ署名キーを使用して作成された[署名][verify_sigs]。                                        |
+| `BOX-SIGNATURE-SECONDARY` | このWebhook用に設定されたセカンダリ署名キーを使用して作成された[署名][verify_sigs]。                                        |
+| `BOX-SIGNATURE-VERSION`   | 値は常に`1`。                                                                                     |
+| `BOX-SIGNATURE-ALGORITHM` | 値は常に`HmacSHA256`。                                                                            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -74,7 +74,7 @@ Webhookペイロードの[設定][setup_sigs]と[署名の検証][verify_sigs]�
 
 <Message type="warning">
 
-HTTP header names are case insensitive. Your client should convert all header names to a standardized lowercase or uppercase format before trying to determine the value of a header.
+HTTPヘッダー名では大文字と小文字が区別されません。クライアントでは、すべてのヘッダーの名前を標準化された小文字または大文字の形式に変換してから、ヘッダーの値を確認する必要があります。
 
 </Message>
 
@@ -84,19 +84,19 @@ Webhookペイロードの本文は、Webhookをトリガーしたファイルま
 
 <!-- markdownlint-disable line-length -->
 
-| フィールド        | 説明                                                                                                                                                          |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`       | 値は常に`webhook_event`。                                                                                                                                        |
-| `id`         | A unique ID assigned by Box that identifies an event. When Box retries a webhook this ID will not change, while the ID in the header changes between calls. |
-| `created_at` | The time/date when an event was triggered at.                                                                                                               |
-| `trigger`    | The name of the action that triggered an event, for example `FILE.UPLOADED`.                                                                                |
-| `webhook`    | The webhook ID for which an event triggered.                                                                                                                |
-| `created_by` | The user that triggered an event.                                                                                                                           |
-| `source`     | The item that triggered an event, for example the file that was uploaded to the target folder.                                                              |
+| フィールド        | 説明                                                                                   |
+| ------------ | ------------------------------------------------------------------------------------ |
+| `type`       | 値は常に`webhook_event`。                                                                 |
+| `id`         | イベントを識別する、Boxによって割り当てられた一意のID。BoxがWebhookを再試行しても、このIDは変わりませんが、ヘッダーのIDは呼び出しのたびに変わります。 |
+| `created_at` | イベントがトリガーされた日時。                                                                      |
+| `trigger`    | イベントをトリガーしたアクションの名前 (例: `FILE.UPLOADED`)。                                            |
+| `webhook`    | イベントがトリガーされたWebhook ID。                                                              |
+| `created_by` | イベントをトリガーしたユーザー。                                                                     |
+| `source`     | イベントをトリガーした項目 (例: ターゲットフォルダにアップロードされたファイル)。                                          |
 
 <!-- markdownlint-enable line-length -->
 
-Example:
+例:
 
 ```json
 {
@@ -207,7 +207,7 @@ Boxがペイロードを送信してから30秒以内に、`200`から`299`の�
 
 <!--alex ignore failure-->
 
-When delivery of a webhook fails, Box will resend it up to 10 times. The initial retry takes place 5 minutes after the failure. From there, an exponential back-off strategy is used to avoid overloading the destination server. By using exponential back- off, Box will wait an increasingly longer time for every retry.
+Webhookの配信が失敗した場合、Boxはこれを最大10回まで再送信します。1回目の再試行は失敗の5分後に実行し、それ以降は、送信先サーバーに負荷がかからないよう、指数バックオフ戦略を使用します。指数バックオフ戦略に基づき、Boxは再試行ごとに待機時間を増やします。
 
 <Message type="notice">
 

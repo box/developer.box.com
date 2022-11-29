@@ -28,34 +28,34 @@ fullyTranslated: true
 ---
 # Webhookの作成
 
-V2 webhooks can monitor specific files or folders. They can be created in the [Developer Console][console] and with API.
+V2 Webhookは、特定のファイルまたはフォルダを監視できます。V2 Webhookは、[開発者コンソール][console]でもAPIでも作成できます。
 
-## Developer console
+## 開発者コンソール
 
 <Message type="warning">
 
-V2 webhooks can be created only when the scope **Manage Webhooks** is selected and the application is authorized. See more about [application scopes][1] and [authorization][2].
+V2 Webhookを作成できるのは、\[**Webhookを管理する**] というスコープが選択され、アプリケーションが承認されている場合のみです。[アプリケーションスコープ][1]と[承認][2]の詳細を参照してください。
 
 </Message>
 
-To create a webhook follow the steps below.
+Webhookを作成するには、以下の手順に従います。
 
-1. Navigate to your application in the [Developer Console][console].
+1. [開発者コンソール][console]で、目的のアプリケーションに移動します。
 2. \[**Webhook**] タブを選択します。
-3. Click the **Create webhook** button.
-4. Select **V2** from the drop-down list.
-5. Fill in the form.
-6. Click **Create webhook** button to save your changes.
+3. \[**Webhookを作成**] ボタンをクリックします。
+4. ドロップダウンリストで \[**V2**] を選択します。
+5. フォームに入力します。
+6. \[**Webhookを作成**] ボタンをクリックして変更を保存します。
 
-### Required fields
+### 必須フィールド
 
 <!-- markdownlint-disable line-length -->
 
-| Field name  | 説明                                                           | 必須 |
-| ----------- | ------------------------------------------------------------ | -- |
-| URL Address | URL address to be notified by the webhook.                   | はい |
-| コンテンツタイプ    | Type of content (file/folder) the webhook is configured for. | はい |
-| Triggers    | Different triggers that activate the webhook.                | はい |
+| フィールド名   | 説明                                    | 必須 |
+| -------- | ------------------------------------- | -- |
+| URLアドレス  | Webhookによって通知されるURLアドレス。              | はい |
+| コンテンツタイプ | Webhookが構成されているコンテンツのタイプ (ファイル/フォルダ)。 | はい |
+| トリガー     | Webhookをアクティブ化するさまざまなトリガー。            | はい |
 
 <!-- markdownlint-enable line-length -->
 
@@ -63,7 +63,7 @@ To create a webhook follow the steps below.
 
 <Message type="warning">
 
-This API requires the application to have the **Manage Webhooks** scope enabled.
+このAPIを使用するには、アプリケーションの \[**Webhookを管理する**] スコープが有効になっている必要があります。
 
 </Message>
 
@@ -73,7 +73,7 @@ This API requires the application to have the **Manage Webhooks** scope enabled.
 
 </Samples>
 
-To attach a webhook to a folder, call the [create webhook][3] endpoint with the type of `folder`, the ID of the folder, a URL to send webhook notifications to, and a list of [triggers][4].
+フォルダにWebhookを追加するには、`folder`の種類、フォルダのID、Webhook通知の送信先URL、および[トリガー][4]のリストを指定して[Webhookを作成][3]エンドポイントを呼び出します。
 
 <Samples id="post_webhooks" variant="for_folder">
 
@@ -81,27 +81,27 @@ To attach a webhook to a folder, call the [create webhook][3] endpoint with the 
 
 <Message type="notice">
 
-Webhooks do cascade, so if a webhook is set on a parent folder, it will also monitor sub-folders for the selected triggers.
+Webhookはカスケードで適用されるため、Webhookを親フォルダに設定すると、サブフォルダでも選択されたトリガーが監視されます。
 
 </Message>
 
 ## 所有権
 
-It is best practice and strongly recommended to create webhooks with a [Service Account][sa], or user that will not be deleted, to avoid potential issues with webhook delivery due to loss of access to content.
+コンテンツにアクセスできなくなることでWebhookの配信に生じる可能性のある問題を回避するために、[サービスアカウント][sa] (つまり削除されることのないユーザー) を使用してWebhookを作成することを強くお勧めします。
 
-Similar to files and folders, webhooks are owned by a user. If a user who owns a webhook is deleted, they will lose access to all files and folders that they previously had access to. Their webhooks will begin to fail validation, but the webhook service will continue to send events and require retries.
+ファイルやフォルダと同様、Webhookを所有するのはユーザーです。Webhookを所有するユーザーが削除されると、以前アクセスできていたすべてのファイルとフォルダにアクセスできなくなります。ユーザーのWebhookでは検証が失敗するようになりますが、Webhookサービスは引き続きイベントを送信し、再試行を要求します。
 
 ## Webhookアドレス
 
 `address`パラメータで指定する通知URLは、Webhookの作成時に指定した有効なURLである必要があります。このURLは、いずれかのトリガーがアクティブになるたびに呼び出されます。
 
-The notification URL must use standard port `443` and should return an HTTP status in the range of `200` to `299` within 30 seconds of receiving the webhook payload.
+通知URLは標準ポート`443`を使用する必要があり、Webhookペイロードの受信から30秒以内に`200`～`299`の範囲のHTTPステータスを返す必要があります。
 
 ## Webhookトリガー
 
-The triggers are a list of strings that specify the events which cause the webhook to fire. For example, if you want the webhook to be triggered when a user uploads a file, use `FILE.UPLOADED`.
+トリガーのリストでは、Webhookによって発生するイベントを表す文字列を指定します。たとえば、ユーザーがファイルをアップロードしたときにWebhookをトリガーするには`FILE.UPLOADED`を使用します。
 
-You can find a list of available triggers [in this guide][4].
+使用可能なトリガーのリストは、[こちらのガイド][4]を参照してください。
 
 [1]: g://applications
 

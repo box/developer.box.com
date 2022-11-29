@@ -21,23 +21,23 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-information-barrier-events.md
 fullyTranslated: true
 ---
-# Shield Information Barrier Events
+# Shield情報バリアイベント
 
-Information barrier prevents exchanges or communication that could lead to conflicts of interest or potential legal issues. For example, admins can use information barrier to separate teams based on projects to prevent collaboration on content restricted to specific groups.
+情報バリアは、利益相反または潜在的な法的問題につながる可能性のあるやり取りやコミュニケーションを防止します。例えば、管理者は情報バリアを使用して、プロジェクトに基づいてチームを分け、特定のグループに制限されたコンテンツでのコラボレーションを防ぐことができます。
 
-## Events triggered when information barrier is configured
+## 情報バリアの設定時にトリガーされるイベント
 
-Configuring information barrier produces events in the [enterprise event][events] stream. For example, activating or deactivating the barrier triggers an event.
+情報バリアを設定すると、[Enterprise Event][events] Streamにイベントが作成されます。たとえば、バリアをアクティブ化または非アクティブ化すると、イベントがトリガーされます。
 
-These events follow the standard event object schema with the `event_type` value set to one of the following:
+これらのイベントは、`event_type`値が次のいずれかに設定されている、標準的なイベントオブジェクトスキーマに従います。
 
 * `SHIELD_INFORMATION_BARRIER_ENABLED`
 * `SHIELD_INFORMATION_BARRIER_PENDING`
 * `SHIELD_INFORMATION_BARRIER_DISABLED`
 
-### Shield information barrier enabled
+### Shield情報バリアの有効化
 
-A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when the information barrier is enabled for a file or folder. For example:
+`SHIELD_INFORMATION_BARRIER_ENABLED`イベントは、ファイルまたはフォルダに対して情報バリアを有効化するとトリガーされます。以下に例を示します。
 
 ```js
 {
@@ -79,9 +79,9 @@ A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when the information b
 
 ```
 
-### Shield information barrier pending
+### Shield情報バリアが保留中
 
-A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered when the information barrier is not yet enabled for a particular file or folder. The activation process was triggered, but the information barrier is not yet in place. For example:
+`SHIELD_INFORMATION_BARRIER_PENDING`イベントは、特定のファイルまたはフォルダに対して情報バリアがまだ有効になっていないときにトリガーされます。アクティブ化のプロセスはトリガーされたものの、情報バリアがまだ設定されていません。以下に例を示します。
 
 ```js
 {
@@ -122,9 +122,9 @@ A `SHIELD_INFORMATION_BARRIER_PENDING` event is triggered when the information b
 }
 ```
 
-### Shield information barrier deactivated
+### Shield情報バリアの非アクティブ化
 
-A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered when the information barrier is deactivated for a particular file or folder. For example:
+`SHIELD_INFORMATION_BARRIER_DISABLED`イベントは、特定のファイルまたはフォルダに対して情報バリアを非アクティブにするとトリガーされます。以下に例を示します。
 
 ```js
 {
@@ -165,9 +165,9 @@ A `SHIELD_INFORMATION_BARRIER_DISABLED` event is triggered when the information 
 }
 ```
 
-## Events triggered by restricted actions
+## 制限されたアクションによってトリガーされるイベント
 
-When the information barrier is set up, each user attempt to perform restricted actions or access restricted data also results in events. These events follow the standard event object schema with the `event_type` value set to one of the following:
+情報バリアが設定されているときに、各ユーザーが制限されたアクションの実行や制限されたデータへのアクセスを試みた場合もイベントが発生します。これらのイベントは、`event_type`値が次のいずれかに設定されている、標準的なイベントオブジェクトスキーマに従います。
 
 * `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`
 * `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`
@@ -176,11 +176,11 @@ When the information barrier is set up, each user attempt to perform restricted 
 * `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`
 * `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`
 
-### Adding user blocked
+### ユーザーの追加のブロック
 
-A `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED` event is triggered when the information barrier prohibits adding a user to a specific group.
+`SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`イベントは、情報バリアによって、特定のグループへのユーザーの追加が禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the restricted groups.
+`additional_details`ペイロードでは、制限されたグループの詳細が提供されます。
 
 ```js
 {
@@ -211,11 +211,11 @@ The `additional_details` payload provides details of the restricted groups.
 
 ```
 
-### Collaboration blocked
+### コラボレーションのブロック
 
-A `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED` event is triggered when the information barrier prohibits adding collaborations for users that have restricted access to a file or folder.
+`SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`イベントは、情報バリアによって、ファイルまたはフォルダへのアクセスが制限されているユーザーのコラボレーションの追加が禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the restricted collaboration.
+`additional_details`ペイロードでは、制限されたコラボレーションの詳細が提供されます。
 
 ```js
 {
@@ -258,11 +258,11 @@ The `additional_details` payload provides details of the restricted collaboratio
 
 ```
 
-### Shared item access blocked
+### 共有項目へのアクセスのブロック
 
-A `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED` event is triggered when the information barrier prohibits accessing a file or folder using the shared link.
+`SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`イベントは、情報バリアによって、共有リンクを使用したファイルまたはフォルダへのアクセスが禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the shared link and additional security information.
+`additional_details`ペイロードでは、共有リンクとその他のセキュリティに関する情報の詳細が提供されます。
 
 ```js
 {
@@ -311,11 +311,11 @@ The `additional_details` payload provides details of the shared link and additio
 
 ```
 
-### Moving item blocked
+### 項目の移動のブロック
 
-A `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED` event is triggered when the information barrier prohibits moving an item (a file or a folder) to a a folder the user has no access to.
+`SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`イベントは、情報バリアによって、ユーザーがアクセスできないフォルダへの項目 (ファイルまたはフォルダ) の移動が禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the folder.
+`additional_details`ペイロードでは、フォルダの詳細が提供されます。
 
 ```js
 {
@@ -359,11 +359,11 @@ The `additional_details` payload provides details of the folder.
 
 ```
 
-### Copying item blocked
+### 項目のコピーのブロック
 
-A `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED` event is triggered when the information barrier prohibits copying an item (a file or a folder) to a a folder the user has no access to.
+`SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`イベントは、情報バリアによって、ユーザーがアクセスできないフォルダへの項目 (ファイルまたはフォルダ) のコピーが禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the destination folder.
+`additional_details`ペイロードでは、宛先フォルダの詳細が提供されます。
 
 ```js
 {
@@ -406,11 +406,11 @@ The `additional_details` payload provides details of the destination folder.
  }
 ```
 
-### Item transfer ownership blocked
+### 項目の所有権の移管のブロック
 
-A `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED` event is triggered when the information barrier prohibits transferring the item ownership to a user that is subject to restrictions.
+`SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`イベントは、情報バリアによって、制限の対象となっているユーザーへの項目の所有権の移管が禁止された場合にトリガーされます。
 
-The `additional_details` payload provides details of the user that cannot be set as the new owner.
+`additional_details`ペイロードでは、新しい所有者として設定できないユーザーの詳細が提供されます。
 
 ```js
 {

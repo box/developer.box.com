@@ -21,7 +21,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-alert-events.md
 fullyTranslated: true
 ---
-# Shield Alert Events
+# Shieldアラートイベント
 
 以下に説明するこの高度なセキュリティ機能を活用するには、[Box Shield][box-shield]を購入し、Box Enterpriseで有効にする必要があります。
 

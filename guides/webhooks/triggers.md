@@ -28,51 +28,51 @@ fullyTranslated: true
 
 ### ファイルとフォルダ
 
-The following is a list of events that can be configured to trigger a V2 webhook. Some events are only available for files, while others are only available for folders.
+以下は、V2 Webhookをトリガーするよう構成できるイベントのリストです。ファイルに対してのみ使用できるイベントや、フォルダに対してのみ使用できるイベントもあります。
 
 <!-- markdownlint-disable line-length -->
 
-| イベント                        | トリガー                                                                                                                 | ファイルに使用可能か | フォルダに使用可能か |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
-| `COLLABORATION.CREATED`     | A collaboration is created.                                                                                          | いいえ        | はい         |
-| `COLLABORATION.ACCEPTED`    | A collaboration is accepted.                                                                                         | いいえ        | はい         |
-| `COLLABORATION.REJECTED`    | A collaboration is rejected.                                                                                         | いいえ        | はい         |
-| `COLLABORATION.REMOVED`     | A collaboration is removed.                                                                                          | いいえ        | はい         |
-| `COLLABORATION.UPDATED`     | A collaboration is updated.                                                                                          | いいえ        | はい         |
-| `COMMENT.CREATED`           | A comment object is created.                                                                                         | はい         | はい         |
-| `COMMENT.UPDATED`           | A comment object is edited.                                                                                          | はい         | はい         |
-| `COMMENT.DELETED`           | A comment object is removed.                                                                                         | はい         | はい         |
-| `FILE.UPLOADED`             | A file is uploaded or moved to this folder.                                                                          | いいえ        | はい         |
-| `FILE.PREVIEWED`            | A file is previewed.                                                                                                 | はい         | はい         |
-| `FILE.DOWNLOADED`           | A file is downloaded.                                                                                                | はい         | はい         |
-| `FILE.TRASHED`              | A file is moved to trash.                                                                                            | はい         | はい         |
-| `FILE.DELETED`              | A file is permanently deleted.                                                                                       | はい         | はい         |
-| `FILE.RESTORED`             | A file is restored from trash.                                                                                       | はい         | はい         |
-| `FILE.COPIED`               | A file is copied.                                                                                                    | はい         | はい         |
-| `FILE.MOVED`                | A file is moved from one folder to another.                                                                          | はい         | はい         |
-| `FILE.LOCKED`               | A file is locked.                                                                                                    | はい         | はい         |
-| `FILE.UNLOCKED`             | A file is unlocked.                                                                                                  | はい         | はい         |
-| `FILE.RENAMED`              | A file is renamed.                                                                                                   | はい         | はい         |
-| `FOLDER.CREATED`            | フォルダが作成される                                                                                                           | いいえ        | はい         |
-| `FOLDER.RENAMED`            | A folder is renamed.                                                                                                 | いいえ        | はい         |
-| `FOLDER.DOWNLOADED`         | A folder is downloaded.                                                                                              | いいえ        | はい         |
-| `FOLDER.RESTORED`           | A folder is restored from trash.                                                                                     | いいえ        | はい         |
-| `FOLDER.DELETED`            | A folder is permanently removed.                                                                                     | いいえ        | はい         |
-| `FOLDER.COPIED`             | A folder is copied.                                                                                                  | いいえ        | はい         |
-| `FOLDER.MOVED`              | A folder is moved to a different folder.                                                                             | いいえ        | はい         |
-| `FOLDER.TRASHED`            | A folder is moved to trash.                                                                                          | いいえ        | はい         |
-| `METADATA_INSTANCE.CREATED` | A new metadata template instance is associated with a file or folder.                                                | はい         | はい         |
-| `METADATA_INSTANCE.UPDATED` | An attribute (value) is updated/deleted for an existing metadata template instance associated with a file or folder. | はい         | はい         |
-| `METADATA_INSTANCE.DELETED` | An existing metadata template instance associated with a file or folder is deleted.                                  | はい         | はい         |
-| `SHARED_LINK.DELETED`       | A shared link is deleted.                                                                                            | はい         | はい         |
-| `SHARED_LINK.CREATED`       | A shared link is created.                                                                                            | はい         | はい         |
-| `SHARED_LINK.UPDATED`       | A shared link is updated.                                                                                            | はい         | はい         |
-| `TASK_ASSIGNMENT.CREATED`   | タスクの作成                                                                                                               | はい         | はい         |
-| `TASK_ASSIGNMENT.UPDATED`   | A task assignment is changed.                                                                                        | はい         | はい         |
-| `SIGN_REQUEST.COMPLETED`    | A sign request is completed.                                                                                         | はい         | はい         |
-| `SIGN_REQUEST.DECLINED`     | A sign request is declined.                                                                                          | はい         | はい         |
-| `SIGN_REQUEST.EXPIRED`      | A sign request is expired.                                                                                           | はい         | はい         |
-| `WEBHOOK.DELETED`           | A webhook is deleted.                                                                                                | いいえ        | いいえ        |
+| イベント                        | トリガー                                                        | ファイルに使用可能か | フォルダに使用可能か |
+| --------------------------- | ----------------------------------------------------------- | ---------- | ---------- |
+| `COLLABORATION.CREATED`     | コラボレーションが作成される。                                             | いいえ        | はい         |
+| `COLLABORATION.ACCEPTED`    | コラボレーションが承認される。                                             | いいえ        | はい         |
+| `COLLABORATION.REJECTED`    | コラボレーションが拒否される。                                             | いいえ        | はい         |
+| `COLLABORATION.REMOVED`     | コラボレーションが削除される。                                             | いいえ        | はい         |
+| `COLLABORATION.UPDATED`     | コラボレーションが更新される。                                             | いいえ        | はい         |
+| `COMMENT.CREATED`           | コメントオブジェクトが作成される。                                           | はい         | はい         |
+| `COMMENT.UPDATED`           | コメントオブジェクトが編集される。                                           | はい         | はい         |
+| `COMMENT.DELETED`           | コメントオブジェクトが削除される。                                           | はい         | はい         |
+| `FILE.UPLOADED`             | ファイルがこのフォルダにアップロードまたは移動される。                                 | いいえ        | はい         |
+| `FILE.PREVIEWED`            | ファイルがプレビューされる。                                              | はい         | はい         |
+| `FILE.DOWNLOADED`           | ファイルがダウンロードされる。                                             | はい         | はい         |
+| `FILE.TRASHED`              | ファイルがごみ箱に移動される。                                             | はい         | はい         |
+| `FILE.DELETED`              | ファイルが完全に削除される。                                              | はい         | はい         |
+| `FILE.RESTORED`             | ファイルがごみ箱から復元される。                                            | はい         | はい         |
+| `FILE.COPIED`               | ファイルがコピーされる。                                                | はい         | はい         |
+| `FILE.MOVED`                | ファイルが別のフォルダに移動される。                                          | はい         | はい         |
+| `FILE.LOCKED`               | ファイルがロックされる。                                                | はい         | はい         |
+| `FILE.UNLOCKED`             | ファイルのロックが解除される。                                             | はい         | はい         |
+| `FILE.RENAMED`              | ファイル名が変更される。                                                | はい         | はい         |
+| `FOLDER.CREATED`            | フォルダが作成される                                                  | いいえ        | はい         |
+| `FOLDER.RENAMED`            | フォルダ名が変更される。                                                | いいえ        | はい         |
+| `FOLDER.DOWNLOADED`         | フォルダがダウンロードされる。                                             | いいえ        | はい         |
+| `FOLDER.RESTORED`           | フォルダがごみ箱から復元される。                                            | いいえ        | はい         |
+| `FOLDER.DELETED`            | フォルダが完全に削除される。                                              | いいえ        | はい         |
+| `FOLDER.COPIED`             | フォルダがコピーされる。                                                | いいえ        | はい         |
+| `FOLDER.MOVED`              | フォルダが別のフォルダに移動される。                                          | いいえ        | はい         |
+| `FOLDER.TRASHED`            | フォルダがごみ箱に移動される。                                             | いいえ        | はい         |
+| `METADATA_INSTANCE.CREATED` | ファイルまたはフォルダに新しいメタデータテンプレートインスタンスが関連付けられる。                   | はい         | はい         |
+| `METADATA_INSTANCE.UPDATED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスの属性 (値) が更新/削除される。 | はい         | はい         |
+| `METADATA_INSTANCE.DELETED` | ファイルまたはフォルダに関連付けられている既存のメタデータテンプレートインスタンスが削除される。            | はい         | はい         |
+| `SHARED_LINK.DELETED`       | 共有リンクが削除される。                                                | はい         | はい         |
+| `SHARED_LINK.CREATED`       | 共有リンクが作成される。                                                | はい         | はい         |
+| `SHARED_LINK.UPDATED`       | 共有リンクが更新される。                                                | はい         | はい         |
+| `TASK_ASSIGNMENT.CREATED`   | タスクの作成                                                      | はい         | はい         |
+| `TASK_ASSIGNMENT.UPDATED`   | タスク割り当てが変更される。                                              | はい         | はい         |
+| `SIGN_REQUEST.COMPLETED`    | 署名リクエストが完了する。                                               | はい         | はい         |
+| `SIGN_REQUEST.DECLINED`     | 署名リクエストが拒否される。                                              | はい         | はい         |
+| `SIGN_REQUEST.EXPIRED`      | 署名リクエストの有効期限が切れる。                                           | はい         | はい         |
+| `WEBHOOK.DELETED`           | Webhookが削除される。                                              | いいえ        | いいえ        |
 
 <!-- markdownlint-enable line-length -->
 
@@ -84,19 +84,19 @@ The following is a list of events that can be configured to trigger a V2 webhook
 
 ## V1
 
-Events that can be configured to trigger a v1 webhook:
+V1 Webhookをトリガーするよう構成できるイベントを以下に示します。
 
-* Sent,
-* Created,
-* Uploaded,
-* Commented,
-* Downloaded,
-* Previewed,
-* Moved,
-* Copied,
-* Task assigned,
-* Responded to task,
-* Locked,
-* Unlocked,
-* Deleted,
-* Collaborator added.
+* 送信
+* 作成
+* アップロード
+* コメント
+* ダウンロード
+* プレビュー
+* 移動
+* コピー
+* タスク割り当て
+* タスクへの応答
+* ロック
+* ロック解除
+* 削除
+* コラボレータの追加

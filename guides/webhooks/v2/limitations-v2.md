@@ -25,29 +25,29 @@ fullyTranslated: true
 
 ## Webhookは1項目につき1つ
 
-There's a limit of one webhook for each item (file or folder), each application and each authenticated user.
+Webhookは、1つの項目 (ファイルまたはフォルダ)、1つのアプリケーション、1人の認証済みユーザーごとに1つだけという制限があります。
 
-Once a webhook is attached to an item, no second webhook can be attached, even if the second webhook would respond to a different trigger event.
+ある項目にWebhookを1つ追加した後は、たとえ別のトリガーイベントに応答するWebhookであっても、2つ目を追加することはできません。
 
-Example: a webhook is set up by `John Doe` to watch `FILE.UPLOADED` events in a folder with the name `Junk`, for an application named `CleanupApp`. At that point, no second webhook can be added to the `Junk` folder by the `CleanupApp` by `John Doe`, even if it is to trigger for an `FILE.DOWNLOADED` event.
+例: `CleanupApp`というアプリケーションに関する`Junk`というフォルダ内の`FILE.UPLOADED`イベントを監視するように、`John Doe`によってWebhookが1つ設定されると、その時点で、`FILE.DOWNLOADED`イベントに対してトリガーされるものであっても、`John Doe`によって`CleanupApp`が`Junk`フォルダに2つ目のWebhookを追加することはできません。
 
 別のイベントをリッスンするには、既存のWebhookを[更新][update]するか、新しいアプリケーションを作成します。
 
-## 1000 webhooks limit
+## Webhookの上限は1000個
 
-There is a limit of 1000 webhooks for each application and each user.
+各アプリケーションおよび各ユーザーのWebhookの数は1,000個までという制限があります。
 
 1人のユーザーにさらにWebhookを作成するには、別のアプリケーションを作成するか、フォルダツリーでより上位に適用するよう[既存のWebhookを更新][update]します。
 
 ## 通知URLに関する制約事項
 
-The notification URL or `address` for a webhook must be a valid HTTPS URL that resolves to a valid IP address. It needs to have a certificate signed by a reputable certificate authority. Box does not support self-signed SSL certificates.
+Webhookの通知URL (`address`) は、有効なIPアドレスに解決される有効なHTTPS URLでなくてはなりません。これには、信頼できる認証局によって署名された証明書が必要になります。Boxでは自己署名SSL証明書がサポートされていません。
 
 サーバーのIPアドレスは、インターネットからパブリックにアクセスできる必要があり、`(*.)box.com`アドレスにすることはできません。URLで使用されるポートは、標準HTTPSポート (`443`) でなければなりません。通知は他のポートには配信されません。
 
 ## Webhookはルートフォルダに追加不可
 
-V2 webhooks cannot be created on the root folder, which is the folder with ID `0`. Instead, you will need to use a [v1 webhook][v1].
+V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成することはできません。代わりに[V1 Webhook][v1]を使用する必要があります。
 
 <Message type="notice">
 
@@ -59,11 +59,11 @@ V2 webhooks cannot be created on the root folder, which is the folder with ID `0
 
 Webhookは以下の理由で削除される可能性があります。
 
-1. Deleting a Box application automatically deletes all webhooks associated with it.
-2. Deleting all active Access Tokens associated with a webhook automatically deletes the webhook. This includes Developer Tokens and password.
-3. A webhook is automatically deleted if the last successful delivery was 30 days ago and the period between the last successful delivery and the last trigger date is more than 14 days.
+1. Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
+2. Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードが含まれます。
+3. 最後に成功した配信から30日が経過し、最後に配信が成功した日から最後のトリガーの日付までの期間が14日を超えた場合、Webhookは自動的に削除されます。
 
-In all of these cases Box sends a webhook payload with the `WEBHOOK.DELETED` event name to the notification URL. The body of the payload includes the following additional information.
+これらのすべてのケースで、Boxは`WEBHOOK.DELETED`というイベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本文には以下の追加情報が含まれます。
 
 ```json
 "additional_info": {

@@ -28,27 +28,27 @@ fullyTranslated: true
 ---
 # Webhookの更新
 
-You can update a webhook using the [Developer Console][console] or API.
+Webhookは、[開発者コンソール][console]またはAPIを使用して更新できます。
 
-## Developer Console
+## 開発者コンソール
 
-To update a webhook in the [Developer Console][console], follow the steps below.
+[開発者コンソール][console]でWebhookを更新するには、以下の手順に従います。
 
-1. Go to the **Webhooks** tab in the [Developer Console][console] to display all webhooks.
-2. Select the webhook you want to update by clicking on its ID.
-3. Click the **Edit webhook** button.
-4. Fill in the data you want to update.
-5. Click the **Update** button to save your changes.
+1. [開発者コンソール][console]の \[**Webhook**] タブに移動し、すべてのWebhookを表示します。
+2. WebhookのIDをクリックして、更新するWebhookを選択します。
+3. \[**Webhookを編集**] ボタンをクリックします。
+4. 更新するデータを入力します。
+5. \[**更新**] ボタンをクリックして変更を保存します。
 
 <Message type="notice">
 
-The list of webhooks contains the following fields: **ID**, **Address**, **Content**, **Created by**, and **Created date**.
+Webhookのリストには、\[**ID**]、\[**アドレス**]、\[**コンテンツ**]、\[**作成者**]、\[**作成日**] フィールドがあります。
 
 </Message>
 
 ## API
 
-To update a webhook, use the [update webhook][2] endpoint, which requires the webhook ID. To find the ID of the webhook, use the [list all webhooks][1] endpoint.
+Webhookを更新するには、[Webhookを更新][2]エンドポイントを使用します。それにはWebhook IDが必要です。WebhookのIDを調べるには、[すべてのWebhookのリストを取得][1]エンドポイントを使用します。
 
 <Samples id="put_webhooks_id">
 

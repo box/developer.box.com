@@ -22,28 +22,28 @@ fullyTranslated: true
 ---
 # 署名の検証
 
-Webhook signatures help ensure that a webhook payload was sent by Box and was not tampered with. Signatures greatly reduce the likelihood of a successful man-in-the-middle or replay attacks.
+Webhook署名は、Boxから送信されたWebhookペイロードが改ざんされていないことを確認するために役立ちます。署名により、中間者攻撃または再生攻撃が成功する可能性を大幅に低減できます。
 
-When signatures are configured, Box generates a cryptographic digest of the notification's body and attaches it to the header of the webhook payload. When your application receives the payload, verify the signatures by calculating the same digest and comparing it to the one received. If the digests do not match, the payload should not be trusted.
+署名を構成すると、Boxは通知の本文の暗号化ダイジェストを生成し、これをWebhookペイロードのヘッダーに添付します。アプリケーションがペイロードを受信したら、同じダイジェストを計算し、それを受信したダイジェストと比較して署名を検証してください。ダイジェストが一致しない場合、ペイロードは信頼できません。
 
-You can achieve an extra level of protection by frequently changing the signature keys. To enable a smooth transition between the old and new keys, Box supports two simultaneous signature keys.
+署名キーを頻繁に変更することで、保護レベルをさらに高めることができます。古いキーと新しいキーをスムーズに切り替えられるよう、Boxでは同時に2つの署名キーをサポートしています。
 
 ## 署名設定
 
 アプリケーションの通知に署名を添付するには、まず、アプリケーション用の署名キーを生成する必要があります。
 
-To configure your application's keys follow the steps below.
+アプリケーションのキーを構成するには、以下の手順に従います。
 
-1. Navigate to the application in the developer console.
-2. Click on the **Webhooks** tab.
-3. Click the **Manage signature keys** button.
-4. Click the **Generate Key** button to configure your keys. 
+1. 開発者コンソールでアプリケーションに移動します。
+2. \[**Webhook**] タブをクリックします。
+3. \[**署名キーを管理**] ボタンをクリックします。
+4. \[**キーを生成**] ボタンをクリックして、キーを構成します。 
 
-Once generating the primary or secondary key, copy the value. You will need it to verify the webhook payloads. Every webhook will now include a `BOX-SIGNATURE-PRIMARY` and `BOX-SIGNATURE-SECONDARY` header payload.
+プライマリキーまたはセカンダリキーを生成したら、その値をコピーします。この値は、Webhookペイロードの検証で必要になります。これで、すべてのWebhookに`BOX-SIGNATURE-PRIMARY`および`BOX-SIGNATURE-SECONDARY`ヘッダーペイロードが含まれるようになります。
 
 ## SDKによる署名の検証
 
-Although it is possible to verify signatures manually, methods are provided for your convenience in the [official Box SDKs][sdks].
+手動で署名を検証することもできますが、[Box公式SDK][sdks]には便利なメソッドが用意されています。
 
 <Samples id="x_webhooks" variant="validate_signatures">
 
@@ -55,7 +55,7 @@ Although it is possible to verify signatures manually, methods are provided for 
 
 ### タイムスタンプの検証
 
-Check if the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the payload is not older than ten minutes.
+ペイロードの`BOX-DELIVERY-TIMESTAMP`ヘッダーのタイムスタンプが10分以内のものであることを確認します。
 
 <Tabs>
 
@@ -92,9 +92,9 @@ expired = date >= expiry_date
 
 ### HMAC署名の計算
 
-Calculate the HMAC of the payload using either one of the two configured signatures for the application in the [Developer Console][console].
+[開発者コンソール][console]でアプリケーションに構成されている2つの署名のいずれかを使用して、ペイロードのHMACを計算します。
 
-Ensure you append the bytes of the payload body first, and then the bytes of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
+最初にペイロード本文のバイトを追加してから、`BOX-DELIVERY-TIMESTAMP`ヘッダーにあるタイムスタンプのバイトを追加してください。
 
 <Tabs>
 
@@ -172,7 +172,7 @@ digest2 = base64.b64encode(hmac2)
 
 エンコードされたダイジェストを`BOX-SIGNATURE-PRIMARY`または`BOX-SIGNATURE-SECONDARY`ヘッダーの値と比較します。
 
-Compare the value of the `BOX-SIGNATURE-PRIMARY` header to the digest created with the primary key, and the value of the `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
+`BOX-SIGNATURE-PRIMARY`ヘッダーの値はプライマリキーで作成されたダイジェストと比較し、`BOX-SIGNATURE-SECONDARY`ヘッダーの値はセカンダリキーで作成されたダイジェストと比較してください。
 
 <Tabs>
 
@@ -208,25 +208,25 @@ valid = !expired && (primary_sig_valid || secondary_sig_valid)
 
 <Message warning>
 
-HTTP header names are case insensitive. Your client should convert all header names to a standardized lowercase or uppercase format before trying to determine the value of a header.
+HTTPヘッダー名では大文字と小文字が区別されません。クライアントでは、すべてのヘッダーの名前を標準化された小文字または大文字の形式に変換してから、ヘッダーの値を確認する必要があります。
 
 </Message>
 
 ## 署名のローテーション
 
-When enabled, Box sends two signatures with every webhook payload. Your application can trust a payload as long as at least one of its signatures is valid. When updating one signature key at a time your application will always receive a payload with at least one valid signature.
+有効にした場合、BoxはすべてのWebhookペイロードで2つの署名を送信します。少なくとも1つの署名が有効であれば、アプリケーションはペイロードを信頼できます。一度に1つの署名キーを更新すると、アプリケーションは常に少なくとも1つの有効な署名を含むペイロードを受信することになります。
 
 ### 循環の手順
 
-These instructions assume that you have already created a primary and secondary key in the [Developer Console][console] and you are ready to replace either of them.
+以下の手順は、[開発者コンソール][console]でプライマリキーとセカンダリキーを作成済みで、どちらかのキーを置き換える準備ができていることを前提としています。
 
 これらの手順に従うことにより、競合することなく、2つの新しいキーを使ってアプリケーションを構成できます。
 
-1. Go to the **Webhooks** tab in the [Developer Console][console].
-2. Click the **Manage signatures keys**.
-3. Click the **Reset** button to change the primary key.
-4. Update your application with the new primary key. Your application can still receive notifications with the old primary key, but your webhooks should be processed correctly since the secondary key is still valid.
-5. Once you are confident that no webhooks with the old primary key are in-flight, you can update the secondary key using the same process.
+1. [開発者コンソール][console]で、\[**Webhook**] タブに移動します。
+2. \[**署名キーを管理**] をクリックします。
+3. \[**リセット**] ボタンをクリックしてプライマリキーを変更します。
+4. 新しいプライマリキーでアプリケーションを更新します。アプリケーションは、引き続き古いプライマリキーを含む通知を受信する可能性がありますが、セカンダリキーがまだ有効であるため、Webhookは正しく処理されます。
+5. 古いプライマリキーを持つWebhookが動作していないことを確認できたら、同じプロセスを使用してセカンダリキーを更新できます。
 
 [sdks]: g://tooling/sdks
 

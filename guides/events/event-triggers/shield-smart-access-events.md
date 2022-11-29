@@ -23,7 +23,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/events/event-triggers/shield-smart-access-events.md
 fullyTranslated: true
 ---
-# Shield Smart Access Events
+# Shieldスマートアクセスイベント
 
 Box管理者は、[スマートアクセス][smartaccess]を使用すると、分類ベースのアクセスポリシーを定義、適用してアクセスを制御し、機密コンテンツの意図しない漏えいを防止できます。
 

@@ -17,29 +17,29 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/newsletter/index.md
 fullyTranslated: true
 ---
-# Developer Newsletter
+# 開発者向けニュースレター
 
-Throughout the year, we send out a newsletter to our community with the top developer events, product releases, and community highlights.
+当社ではトップ開発者のイベント、製品リリース、コミュニティのハイライトを掲載したニュースレターを、年間を通してコミュニティに送信しています。
 
-If you want to receive the newsletter, you are signed up automatically after you have access the [developer console][dc] for the first time.
+ニュースレターの送信をご希望の方は、[開発者コンソール][dc]への初回アクセス後、自動的にサインアップされます。
 
 ## 過去のニュースレター
 
-Below is an archive of previous newsletters sent out.
+これまでに送信されたニュースレターのアーカイブを以下に示します。
 
 | 年    | Month     | Archive                     |
 | ---- | --------- | --------------------------- |
 | 2019 | September | [Preview][download-2019-q3] |
-| 2019 | December  | [Preview][download-2019-q4] |
-| 2020 | April     | [Preview][download-2020-q1] |
-| 2020 | July      | [Preview][download-2020-q2] |
-| 2020 | December  | [Preview][download-2020-q4] |
-| 2021 | April     | [Preview][download-2021-q1] |
-| 2021 | August    | [Preview][download-2021-q3] |
-| 2021 | November  | [Preview][download-2021-q4] |
-| 2022 | February  | [Preview][download-2022-q1] |
-| 2022 | June      | [Preview][download-2022-q2] |
-| 2022 | August    | [Preview][download-2022-q3] |
+| 2019 | 12月       | [Preview][download-2019-q4] |
+| 2020 | 4月        | [Preview][download-2020-q1] |
+| 2020 | 7月        | [Preview][download-2020-q2] |
+| 2020 | 12月       | [Preview][download-2020-q4] |
+| 2021 | 4月        | [Preview][download-2021-q1] |
+| 2021 | 8月        | [Preview][download-2021-q3] |
+| 2021 | 11月       | [Preview][download-2021-q4] |
+| 2022 | 2月        | [Preview][download-2022-q1] |
+| 2022 | 6月        | [Preview][download-2022-q2] |
+| 2022 | 8月        | [Preview][download-2022-q3] |
 | 2022 | September | [Preview][download-2022-se] |
 
 [dc]: https://cloud.app.box.com/developers/console

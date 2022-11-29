@@ -36,7 +36,7 @@ Box Postmanコレクションの使い方
 
 ## 最新のコレクション
 
-Clicking the following button will fork our latest Postman collection. It is a complete Postman collection that covers every API endpoint and is auto-generated from our [OpenAPI specification][openapi]. It is expected to get many more updates including some to make authentication a lot easier.
+下のボタンをクリックすると、最新のPostmanコレクションがフォークされます。これは、すべてのAPIエンドポイントをカバーするPostmanコレクションであり、Boxの[OpenAPIの仕様][openapi]から自動生成されます。認証を簡単にするアップデートを含む、より多くのアップデートを取得することが期待されています。
 
 <Postman anonymous>
 

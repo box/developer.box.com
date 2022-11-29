@@ -21,11 +21,11 @@ fullyTranslated: true
 ---
 # V1 Webhook
 
-Webhooks created using the [Developer Console][console] monitor changes to all files and folders within a user's account. When creating one of these webhooks it is not possible specify a specific object to bind the webhook to. To create a webhook for a specific file or folder, you will need to leverage [v2 webhooks][v2].
+[開発者コンソール][console]を使用して作成されたWebhookは、ユーザーのアカウント内のすべてのファイルとフォルダに対する変更を監視します。このようなWebhookを作成する際は、Webhookのバインド先として特定のオブジェクトを指定することはできません。特定のファイルまたはフォルダ用にWebhookを作成するには、[V2 Webhook][v2]を使用する必要があります。
 
 <Message type="warning">
 
-Webhooks created through this process will not show when listing all webhooks for a user via API call. All V1 webhooks are visible in the **Webhooks** tab in the [Developer Console][console].
+このプロセスで作成されたWebhookは、API呼び出しでユーザーのすべてのWebhookのリストを取得しても表示されません。すべてのV1 Webhookは、[開発者コンソール][console]の \[**Webhook**] タブに表示されます。
 
 </Message>
 

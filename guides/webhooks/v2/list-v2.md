@@ -33,7 +33,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-This endpoint requires the application to have the **Manage Webhooks** scope enabled.
+このエンドポイントを使用するには、アプリケーションの \[**Webhookを管理する**] スコープが有効になっている必要があります。
 
 </Message>
 

@@ -23,23 +23,23 @@ fullyTranslated: true
 
 ## 概要
 
-It is a certification program that allows federal agencies to use cloud providers for increasingly secure/sensitive government or government-adjacent data.
+FedRAMPとは、安全性/機密性が高まりつつある政府または政府に隣接するデータに連邦政府機関がクラウドプロバイダを使用するための認定プログラムです。
 
-FedRAMP defines three categories regarding levels of security, Low, Moderate, and High.
+FedRAMPでは、セキュリティのレベルについて、Low (低)、Moderate (中)、High (高) という3つのカテゴリを定義しています。
 
-The higher the security level the more restrictions are in place.
+セキュリティレベルが高いほど、適用される制限が多くなります。
 
-Box is already certified as [FedRAMP Moderate and High][FedRAMPCert].
+Boxは、すでに[FedRAMP ModerateとHigh][FedRAMPCert]として認定されています。
 
-## Considerations
+## 留意事項
 
-In order to be FedRAMP High compliant, your administrator must setup Box in very a very specific way. It is possible that the administrator has further restricted access to Box functionalities.
+FedRAMP Highに準拠するために、管理者は非常に特殊な方法でBoxを設定しているはずです。管理者はBoxの機能へのアクセスをさらに制限している可能性があります。
 
-Consult with your administrator to identify security restrictions in place that might affect the usage of the API.
+APIの使用に影響する可能性があるセキュリティの制限を特定するには、管理者に相談してください。
 
-## API usage in FedRAMP High
+## FedRAMP HighでのAPIの使用
 
-For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects all API's entry points.
+FedRAMP Highの場合、Boxでは`box-gov.com`という特定のドメインを使用します。これはAPIのすべてのエントリポイントに影響します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -53,13 +53,13 @@ For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects all
 
 <!-- markdownlint-enable line-length -->
 
-## API Restrictions
+## APIの制限
 
-The following API entry points are not yet available for usage under FedRAMP High configuration.
+以下のAPIエントリポイントは、FedRAMP High構成ではまだ使用することができません。
 
 <!-- markdownlint-disable line-length -->
 
-| API Entry point                         |
+| APIエントリポイント                             |
 | --------------------------------------- |
 | /sign_requests                          |
 | /sign_requests/{sign_request_id}        |

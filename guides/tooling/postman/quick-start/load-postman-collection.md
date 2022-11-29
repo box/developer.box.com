@@ -15,15 +15,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/4-load-postman-collection.md
 fullyTranslated: true
 ---
-# Fork a collection
+# コレクションのフォーク
 
 <LoggedIn id="postman_credentials">
 
-Now that you are logged in we can fork the **Box Postman Collection** into the **Postman App** that we installed previously. When we fork the Postman Collection we will also automatically load your API credentials as a Postman environment.
+ログインしたら、前の手順でインストールした**Postmanアプリ**に**Box Postmanコレクション**をフォークできます。Postmanコレクションをフォークすると、Postman環境としてAPI資格情報も自動的に読み込まれます。
 
-## Forking a collection and environment
+## コレクションと環境のフォーク
 
-By clicking the button below you will fork the **Box Postman Collection** into your Postman application. In the same click it will also load your **Access Token**, **Refresh Token**, **Client ID** and **Client Secret** into a Postman environment.
+下のボタンをクリックすると、**Box Postmanコレクション**がPostmanアプリケーションにフォークされます。同時に、**アクセストークン**、**更新トークン**、**クライアントID**、および**クライアントシークレット**もPostman環境に読み込まれます。
 
 <Trigger option="postman_collection_downloaded" value>
 
@@ -33,7 +33,7 @@ By clicking the button below you will fork the **Box Postman Collection** into y
 
 </Trigger>
 
-We recommend to fork the Box Postman Collection - you will be asked if you want to update the collection any time Box makes changes to it. You can also copy the collection, but you might miss important updates.
+Boxでは、Box Postmanコレクションをフォークすることをお勧めします。そうすると、BoxがBox Postmanコレクションに変更を加えるたびに、そのコレクションを更新するかどうかが確認されます。このコレクションをコピーすることもできますが、重要な更新を見逃す可能性があります。
 
 </LoggedIn>
 
@@ -41,7 +41,7 @@ We recommend to fork the Box Postman Collection - you will be asked if you want 
 
 ## コレクションの探索
 
-When you clicked the button above it would have asked you to fork the collection into the Postman application. Once imported, the collection should appear within the app in the left-hand sidebar.
+上のボタンをクリックしたときに、Postmanアプリケーションにコレクションをフォークするよう求められました。インポートが完了すると、このコレクションはアプリ内で左側のサイドバーに表示されます。
 
 <ImageFrame border center shadow width="600">
 
@@ -53,7 +53,7 @@ When you clicked the button above it would have asked you to fork the collection
 
 ## まとめ
 
-* You forked the Postman collection into Postman
+* PostmanコレクションをPostmanにフォークしました
 * さらにBox Postman環境をPostmanに読み込みました
 
 </Choice>
@@ -78,7 +78,7 @@ When you clicked the button above it would have asked you to fork the collection
 
 <Next>
 
-I have forked the collection
+コレクションのフォークが完了しました
 
 </Next>
 

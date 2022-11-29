@@ -74,7 +74,7 @@ APIを利用してBoxの機能を拡張
 
 <GuidesList>
 
-Get started, learn tips and tricks, and discover how to use the Box Platform API with our comprehensive guides. Here are six of the most used guides to get you started.
+Boxの総合的なガイドを参照しながら、利用を開始し、ヒントやテクニックを習得して、Box Platform APIの使い方を確認しましょう。こちらでは、利用を開始するにあたりよく使用されるガイドの中から6つを紹介しています。
 
 <GuideList href="/guides/authentication/">
 
@@ -84,13 +84,13 @@ Get started, learn tips and tricks, and discover how to use the Box Platform API
 
 <GuideList href="/guides/cli/quick-start/">
 
-CLI Quick Start
+CLIクイックスタート
 
 </GuideList>
 
 <GuideList href="/guides/tooling/postman/quick-start/">
 
-Postman Quick Start
+Postmanクイックスタート
 
 </GuideList>
 
@@ -116,7 +116,7 @@ UI Element
 
 <More to="/guides" right>
 
-More Guides
+その他のガイド
 
 </More>
 

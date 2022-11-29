@@ -189,15 +189,15 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | 正当な理由がない場合の外部コラボレーションへの招待のブロック                                                                                 |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`                     | 外部コラボレーションへの招待の承認                                                                                              |
 | `SHIELD_JUSTIFICATION_APPROVAL`                               | Shieldの正当な理由の承認                                                                                                |
-| `SHIELD_INFORMATION_BARRIER_ENABLED`                          | A Shield information barrier is enabled                                                                        |
-| `SHIELD_INFORMATION_BARRIER_DISABLED`                         | A Shield information barrier is deactivated                                                                    |
-| `SHIELD_INFORMATION_BARRIER_PENDING`                          | A Shield information barrier is not yet active                                                                 |
-| `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`           | Adding user blocked due to information barrier restrictions                                                    |
-| `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`                   | Creating collaborations for users blocked due to information barrier restrictions                              |
-| `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`       | Access to shared items blocked for users due to information barrier restrictions                               |
-| `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`                | Moving items blocked due to information barrier restrictions                                                   |
-| `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`                | Copying items blocked due to information barrier restrictions                                                  |
-| `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`      | Transferring items blocked due to information barrier restrictions                                             |
+| `SHIELD_INFORMATION_BARRIER_ENABLED`                          | Shield情報バリアの有効化                                                                                                |
+| `SHIELD_INFORMATION_BARRIER_DISABLED`                         | Shield情報バリアの非アクティブ化                                                                                            |
+| `SHIELD_INFORMATION_BARRIER_PENDING`                          | アクティブ化前のShield情報バリア                                                                                            |
+| `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`           | 情報バリアの制限による、ユーザーの追加のブロック                                                                                       |
+| `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`                   | 情報バリアの制限による、ユーザーに対するコラボレーション作成のブロック                                                                            |
+| `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`       | 情報バリアの制限による、ユーザーの共有項目へのアクセスのブロック                                                                               |
+| `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`                | 情報バリアの制限による、項目の移動のブロック                                                                                         |
+| `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`                | 情報バリアの制限による、項目のコピーのブロック                                                                                        |
+| `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`      | 情報バリアの制限による、項目の転送のブロック                                                                                         |
 | `SIGN_DOCUMENT_ASSIGNED`                                      | 署名者への署名リクエストの送信                                                                                                |
 | `SIGN_DOCUMENT_CANCELLED`                                     | APIまたはUIでの署名リクエストのキャンセル                                                                                        |
 | `SIGN_DOCUMENT_COMPLETED`                                     | 全署名者による署名リクエストへの署名                                                                                             |
