@@ -58,7 +58,6 @@ To configure the integration, follow the guidance below for each value.
 | Field | Description |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Client Callback URL | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
-| Preliminary Callback URL | The URL where callback parameters are sent when the user accepts the prompt. In most cases it should be a URL that performs an API call on the application server, but it can be any endpoint configured to accept HTTP requests. |
 | User Experience | Determines whether the integration is a [Popup][pu] or [Server-Side][ssi] Integration. |
 | New window settings | Determines if the application opens in a new tab. |
 
