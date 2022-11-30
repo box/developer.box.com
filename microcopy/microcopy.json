@@ -97,8 +97,6 @@
   "reference.parameter_details.default": "default",
   // The label for the max length of a parameter value
   "reference.parameter_details.max_length": "max length",
-  // The label for the range of a parameter value
-  "reference.parameter_details.range": "range",
   // The label for the maximum value parameter.
   "reference.parameter_details.max_value": "max value",
   // The label for the minimum value parameter.
