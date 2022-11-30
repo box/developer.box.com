@@ -18,10 +18,10 @@ This guide explains how to set up a Web App Integration with a Custom App.
 
 <message type='warning'>
 Server-side integration is no longer supported. 
-This means your applications
-will still be working, 
-but you won't be able to edit their
-configuration.
+This means the applications using server-side actions will still be working, 
+but you won't be able to modify the server-side configuration options such as
+Preliminary Callback URL or Basic Authentication.
+You will be able to deactivate them and change the implementation to a new one.
 </message>
 
 ## Create an OAuth 2.0 Application
@@ -67,7 +67,7 @@ To configure the integration, follow the guidance below for each value.
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Client Callback URL | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
 | User Experience | Informs that the integration will open in a new window.|
-| New window settings | Determines if the application opens in a new tab. |
+| New Window Settings | Determines if the application opens in a new tab. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -81,9 +81,9 @@ specify the **Parameter name** and add a **Parameter value**.
 Available methods are **Get** and **Post**. 
 
 <message type='warning'>
-**File** method is no longer supported. I you already used this method,
-you cannot edit its values. You can change **File** method to **Get**
-or **Post**, but you cannot undo this action.
+The **File** method is no longer supported. If you already used this method,
+you cannot edit its values. You can change the **File** method to **Get**
+or **Post**, but you can't undo this action.
 </message>
 
 For example: **Get - `userid` - `#user_id#`**.
@@ -103,11 +103,6 @@ The following parameter values are available.
 | `redirect_to_box_url` | In Popup Integrations, the URL to which requests are sent by the confirmation prompt. Use this URL to redirect users to the All Files page. This parameter closes the popup panel and refreshes the All Files page to reflect any changes performed by the integration. If you do not want to add this parameter to your application, you can specify the entire URL. **Success**: `#redirect_to_box_url#&status=success&message=Your%20action%20was%20successful%2E`.  **Failure**: `#redirect_to_box_url#&status=failure&message=Your%20action%20was%20unsuccessful%2E`|
 
 <!-- markdownlint-enable line-length -->
-
-### Authentication
-
-Switch on the toggle **Enable HTTP Basic Authentication**
-to create a username and password.
 
 ### Integration Status
 
