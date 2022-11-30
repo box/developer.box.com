@@ -16,12 +16,20 @@ notes: |-
 
 This guide explains how to set up a Web App Integration with a Custom App.
 
-## 1. Create an OAuth 2.0 Application
+<message type='warning'>
+Server-side integration is no longer supported. 
+This means your applications
+will still be working, 
+but you won't be able to edit their
+configuration.
+</message>
+
+## Create an OAuth 2.0 Application
 
 Navigate to the [Developer Console][devconsole] and create a [Custom App][ca]
 that leverages [OAuth 2.0 authentication][custom-oauth2].
 
-## 2. Create a New Integration
+## Create a New Integration
 
 Then, navigate to the **Integrations** tab and click 
 **Create a Web App Integration**.
@@ -30,7 +38,7 @@ Then, navigate to the **Integrations** tab and click
   ![Integration Tab](../images/create_integration.png)
 </ImageFrame>
 
-## 3. Configure Integration
+## Configure Integration
 
 To configure the integration, follow the guidance below for each value.
 
@@ -58,7 +66,7 @@ To configure the integration, follow the guidance below for each value.
 | Field | Description |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | Client Callback URL | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
-| User Experience | Determines whether the integration is a [Popup][pu] or [Server-Side][ssi] Integration. |
+| User Experience | Informs that the integration will open in a new window.|
 | New window settings | Determines if the application opens in a new tab. |
 
 <!-- markdownlint-enable line-length -->
@@ -68,9 +76,16 @@ To configure the integration, follow the guidance below for each value.
 The **Callback Parameters** section configures the parameters that Box sends to
 the callback URL when a user accepts a confirmation prompt. If this setting is 
 not configured, Box does not send any parameters to the callback URL.
-To add a parameter, you need to select the **Method**, 
+To add a parameter, select the **Method**, 
 specify the **Parameter name** and add a **Parameter value**. 
-Available methods are **Get**, **Post** and **File**. 
+Available methods are **Get** and **Post**. 
+
+<message type='warning'>
+**File** method is no longer supported. I you already used this method,
+you cannot edit its values. You can change **File** method to **Get**
+or **Post**, but you cannot undo this action.
+</message>
+
 For example: **Get - `userid` - `#user_id#`**.
 
 The following parameter values are available.

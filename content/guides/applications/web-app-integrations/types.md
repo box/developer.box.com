@@ -11,7 +11,7 @@ alias_paths: []
 
 # Integrations Types
 
-There are two types of Web App Integrations.
+Currently, Box provides the Popup integration type.
 
 ## Popup Integrations
 
