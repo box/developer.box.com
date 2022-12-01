@@ -42,5 +42,3 @@ fullyTranslated: true
 開始する準備ができました
 
 </Next>
-
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8

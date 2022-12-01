@@ -33,7 +33,7 @@ fullyTranslated: true
 
 </Trigger>
 
-Boxでは、Box Postmanコレクションをフォークすることをお勧めします。そうすると、BoxがBox Postmanコレクションに変更を加えるたびに、そのコレクションを更新するかどうかが確認されます。このコレクションをコピーすることもできますが、重要な更新を見逃す可能性があります。
+Boxでは、Box Postmanコレクションをフォークすることをお勧めします。これにより、BoxがBox Postmanコレクションに変更を加えるたびに、そのコレクションを更新するかどうかが確認されます。このコレクションをコピーすることもできますが、重要な更新を見逃す可能性があります。
 
 </LoggedIn>
 
@@ -41,7 +41,7 @@ Boxでは、Box Postmanコレクションをフォークすることをお勧め
 
 ## コレクションの探索
 
-上のボタンをクリックしたときに、Postmanアプリケーションにコレクションをフォークするよう求められました。インポートが完了すると、このコレクションはアプリ内で左側のサイドバーに表示されます。
+上のボタンをクリックすると、Postmanアプリケーションにコレクションをフォークするよう求められます。インポートが完了すると、このコレクションはアプリ内で左側のサイドバーに表示されます。
 
 <ImageFrame border center shadow width="600">
 
@@ -58,7 +58,7 @@ Boxでは、Box Postmanコレクションをフォークすることをお勧め
 
 </Choice>
 
-<Choice option="postman.app_type" value="create_new,use_existing" color="none">
+<Choice option="postman.app_type" unset color="none">
 
 <LoggedIn reverse>
 
@@ -66,7 +66,23 @@ Boxでは、Box Postmanコレクションをフォークすることをお勧め
 
 # 前の手順が完了していません
 
-前の手順を完了し、**Boxアプリ**を選択してログインしてください。
+Complete the previous steps to select and log in to a **Box App**.
+
+</Message>
+
+</LoggedIn>
+
+</Choice>
+
+<Choice option="postman.app_type" value="create_new,use_existing" color="none">
+
+<LoggedIn id="postman_credentials" reverse>
+
+<Message danger>
+
+# 前の手順が完了していません
+
+Complete the previous steps to select and log in to a **Box App**.
 
 </Message>
 

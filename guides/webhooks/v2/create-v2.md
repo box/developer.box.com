@@ -28,7 +28,7 @@ fullyTranslated: true
 ---
 # Webhookの作成
 
-V2 Webhookは、特定のファイルまたはフォルダを監視できます。V2 Webhookは、[開発者コンソール][console]でもAPIでも作成できます。
+V2 Webhookは、特定のファイルまたはフォルダを監視でき、[開発者コンソール][console]でもAPIでも作成できます。
 
 ## 開発者コンソール
 

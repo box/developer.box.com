@@ -74,7 +74,7 @@ APIを利用してBoxの機能を拡張
 
 <GuidesList>
 
-Boxの総合的なガイドを参照しながら、利用を開始し、ヒントやテクニックを習得して、Box Platform APIの使い方を確認しましょう。こちらでは、利用を開始するにあたりよく使用されるガイドの中から6つを紹介しています。
+Boxの総合的なガイドを参照しながら、利用を開始し、ヒントやテクニックを習得して、Box Platform APIの使い方を確認しましょう。利用を開始するにあたり、以下の6つのガイドがよく使用されています。
 
 <GuideList href="/guides/authentication/">
 
@@ -176,7 +176,7 @@ UI Element
 
 <More to="/sdks-and-tools" right>
 
-SDKとツールをもっと見る
+その他のSDKとツール
 
 </More>
 
@@ -188,7 +188,7 @@ SDKとツールをもっと見る
 
 <Header to="https://medium.com/box-developer-blog" centered>
 
-開発者向けのニュース
+開発者向けの新着情報
 
 </Header>
 

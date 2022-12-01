@@ -34,12 +34,6 @@ Webhookを使用すると、Boxコンテンツのイベントを監視し、イ�
 
 <ImageFrame center shadow border>
 
-![Webhookの開発者コンソール](./images/webhook_developer_console.png)
-
-</ImageFrame>
-
-<ImageFrame center shadow border>
-
 ![Webhookの開発者コンソール](./images/webhooksV2preview.png)
 
 </ImageFrame>
@@ -65,7 +59,7 @@ WebhookにはV1とV2の2種類があります。この2つの比較を以下に�
 | 通知配信の失敗後の再試行メカニズムなし。    | 通知配信の失敗後、10回まで再試行可能。                    |
 | ペイロード検証をサポートしない。        | ペイロード検証をサポート。                           |
 | 通知URLはHTTPまたはHTTPSを指定可。 | 通知URLはHTTPSのみ指定可。                       |
-| 拡張性は小さい。                | 拡張性に優れ、信頼性が高い。                          |
+| 拡張性が低い。                 | 拡張性に優れ、信頼性が高い。                          |
 
 <!-- markdownlint-enable line-length -->
 

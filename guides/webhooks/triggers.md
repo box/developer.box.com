@@ -86,17 +86,17 @@ fullyTranslated: true
 
 V1 Webhookをトリガーするよう構成できるイベントを以下に示します。
 
-* 送信
-* 作成
-* アップロード
-* コメント
-* ダウンロード
-* プレビュー
-* 移動
-* コピー
-* タスク割り当て
-* タスクへの応答
-* ロック
-* ロック解除
-* 削除
-* コラボレータの追加
+* Sent
+* Created
+* Uploaded
+* Commented
+* Downloaded
+* Previewed
+* Moved
+* Copied
+* Task assigned
+* Responded to task
+* Locked
+* Unlocked
+* Deleted
+* Collaborator added

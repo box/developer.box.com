@@ -27,20 +27,20 @@ fullyTranslated: true
 
 これまでに送信されたニュースレターのアーカイブを以下に示します。
 
-| 年    | Month     | Archive                     |
-| ---- | --------- | --------------------------- |
-| 2019 | September | [Preview][download-2019-q3] |
-| 2019 | 12月       | [Preview][download-2019-q4] |
-| 2020 | 4月        | [Preview][download-2020-q1] |
-| 2020 | 7月        | [Preview][download-2020-q2] |
-| 2020 | 12月       | [Preview][download-2020-q4] |
-| 2021 | 4月        | [Preview][download-2021-q1] |
-| 2021 | 8月        | [Preview][download-2021-q3] |
-| 2021 | 11月       | [Preview][download-2021-q4] |
-| 2022 | 2月        | [Preview][download-2022-q1] |
-| 2022 | 6月        | [Preview][download-2022-q2] |
-| 2022 | 8月        | [Preview][download-2022-q3] |
-| 2022 | September | [Preview][download-2022-se] |
+| 年    | Month | Archive                     |
+| ---- | ----- | --------------------------- |
+| 2019 | 9月    | [Preview][download-2019-q3] |
+| 2019 | 12月   | [Preview][download-2019-q4] |
+| 2020 | 4月    | [Preview][download-2020-q1] |
+| 2020 | 7月    | [Preview][download-2020-q2] |
+| 2020 | 12月   | [Preview][download-2020-q4] |
+| 2021 | 4月    | [Preview][download-2021-q1] |
+| 2021 | 8月    | [Preview][download-2021-q3] |
+| 2021 | 11月   | [Preview][download-2021-q4] |
+| 2022 | 2月    | [Preview][download-2022-q1] |
+| 2022 | 6月    | [Preview][download-2022-q2] |
+| 2022 | 8月    | [Preview][download-2022-q3] |
+| 2022 | 9月    | [Preview][download-2022-se] |
 
 [dc]: https://cloud.app.box.com/developers/console
 

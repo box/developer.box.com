@@ -36,7 +36,7 @@ Box Postmanコレクションの使い方
 
 ## 最新のコレクション
 
-下のボタンをクリックすると、最新のPostmanコレクションがフォークされます。これは、すべてのAPIエンドポイントをカバーするPostmanコレクションであり、Boxの[OpenAPIの仕様][openapi]から自動生成されます。認証を簡単にするアップデートを含む、より多くのアップデートを取得することが期待されています。
+下のボタンをクリックすると、最新のPostmanコレクションがフォークされます。これは、すべてのAPIエンドポイントをカバーするPostmanコレクションであり、Boxの[OpenAPIの仕様][openapi]から自動生成されます。認証を簡単にする更新を含む、より多くの更新が追加される予定です。
 
 <Postman anonymous>
 
@@ -45,5 +45,3 @@ Box Postmanコレクションの使い方
 [postman]: https://postman.com
 
 [openapi]: https://github.com/box/box-openapi
-
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8

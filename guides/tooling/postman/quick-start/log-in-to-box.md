@@ -60,7 +60,7 @@ fullyTranslated: true
 
 <LoggedIn id="postman_credentials">
 
-## ログインしています
+## ログインしました
 
 ブラウザで[Boxの承認](e://get-authorize)画面が開かれ、そこで、アプリケーションに自分のユーザーアカウントへのアクセスを許可しました。アクセスを許可した後、ブラウザは`code`によりこのサイトにリダイレクトされました。
 

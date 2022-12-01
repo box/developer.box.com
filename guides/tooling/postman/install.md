@@ -23,41 +23,11 @@ fullyTranslated: true
 
 **Box Postmanコレクション**を使用するには、デバイスに[Postman][postman]がインストールされている必要があります。PostmanはWindows、Mac、およびLinux環境で利用できます。
 
-<Grid columns="4">
+<Trigger option="postman.downloaded" value="win32,win64,osx,linux64">
 
-<Download>
+[Download the appropriate version for you operating system][downloads]
 
-![Windowsロゴ](./quick-start/windows.png) Windows (x32)
-
-[ダウンロード][v8]
-
-</Download>
-
-<Download>
-
-![Windowsロゴ](./quick-start/windows.png) Windows (x64)
-
-[ダウンロード][v8]
-
-</Download>
-
-<Download>
-
-![MacOSロゴ](./quick-start/macos.png) MacOS
-
-[ダウンロード][v8]
-
-</Download>
-
-<Download>
-
-![Linuxロゴ](./quick-start/linux.png) Linux (x64)
-
-[ダウンロード][v8]
-
-</Download>
-
-</Grid>
+</Trigger>
 
 次に、お使いのマシンにPostmanをインストールし、(必要に応じて) [Postmanアカウントを登録してログインします][register]。
 
@@ -79,4 +49,4 @@ Postmanアプリがインストールされていれば、そのアプリに**Bo
 
 [postman]: https://getpostman.com
 
-[v8]: https://learning.postman.com/docs/administration/upgrading/#downloading-postman-v8
+[downloads]: https://www.postman.com/downloads/
