@@ -34,7 +34,7 @@ Webhookを使用すると、Boxコンテンツのイベントを監視し、イ�
 
 <ImageFrame center shadow border>
 
-![Webhookの開発者コンソール](./images/webhooksV2preview.png)
+![開発者コンソールのWebhook](./images/webhooksV2preview.png)
 
 </ImageFrame>
 
