@@ -341,63 +341,46 @@ To add V4 annotations to preview:
 3. Import content preview and box annotations into your application:
 
 ```js
-import ContentPreview from 'box-ui-elements/es/elements/content-preview';
-// In this example we dynamically import box-annotations which will provide a
-BoxAnnotations object in global 
-// You may see one already from legacy annotations if you do not dynamically
-load the latest version of box-annotations
-const importAnnotations = () => import(/* webpackChunkName: "box-annotations"
-*/ 'box-annotations');
-```
+import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
-Below is an example of how you could use content preview to enable all features
-of V4 annotations: 
+var file_id = 'YOUR FILE ID';
+var accessToken = 'YOUR ACCESS TOKEN';
 
-```js
-function App() {
-    const token = "YOUR_TOKEN"
-    const fileId = 'YOUR_FILE_ID'
-    const boxAnnotations = useRef(null);
-    const [annotationsLoaded, setAnnotationsLoaded] = useState(false);
-
-    useEffect(() => {
-        importAnnotations().then(() => {
-            boxAnnotations.current = new global.BoxAnnotations();
-            setAnnotationsLoaded(true);
-        });
-    }, []);
-
-    return (
-        <div className="App">
-            {annotationsLoaded && (<ContentPreview
-                boxAnnotations={boxAnnotations.current}
-                contentSidebarProps={{
-                    hasActivityFeed: true, // Enabled Activity Feed which will
-                    show you the comments in the sidebar
-                    features: {
-                        activityFeed: {
-                            annotations: {
-                                enabled: true // Enables the ability to see
-                                your annotation comment in the Activity Feed 
-                            }
-                        }
-                    }
-                }}
-                enableAnnotationsDiscoverability // Region button still appears
-                with showAnnotationsControls but this is required to use it
-                showAnnotations={annotationsLoaded} // Show annotations on the
-                file
-                showAnnotationsControls // Shows annotation controls in toolbar
-                showAnnotationsDrawing // This and showAnnotationsDrawingCreate
-                need to be true to enable the drawing annotation in the toolbar
-                showAnnotationsDrawingCreate
-                fileId={annotationsLoaded ? fileId : undefined}
-                token={token}
-            />)
-            }
-        </div>
-    );
+/* Enable annotations in sidebar */
+var contentSidebarProps = {
+   hasActivityFeed: true,
+   features: {
+      activityFeed: {
+         annotations: {
+            enabled: true
+         }
+      }
+   },
 }
+
+var options = {
+   container: '.previewer',
+   contentSidebarProps: contentSidebarProps,
+
+   /* Enable annotations in preview */
+   enableAnnotationsDiscoverability: true,
+   enableAnnotationsImageDiscoverability: true,
+   showAnnotations: true,
+   showAnnotationsControls: true,
+   showAnnotationsDrawingCreate: true,
+};
+
+/* BoxAnnotations */
+var annotations = new BoxAnnotations();
+
+/* Box Preview */
+var contentPreviewer = new Box.ContentPreview();
+
+/* Set annotation into previewer */
+options['boxAnnotations'] = annotations;
+
+/* Show previewer */
+contentPreviewer.show(file_id, accessToken, options);
 ```
 
 <Message warning>
