@@ -340,6 +340,8 @@ To add V4 annotations to preview:
 
 3. Import content preview and box annotations into your application:
 
+<!-- markdownlint-disable line-length -->
+
 ```js
 import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
@@ -383,10 +385,33 @@ options['boxAnnotations'] = annotations;
 contentPreviewer.show(file_id, accessToken, options);
 ```
 
+<!-- markdownlint-enable line-length -->
+
 <Message warning>
 The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 ` is subject to change in the future.
 </Message>
+
+<!-- markdownlint-disable line-length -->
+
+```html
+<link href="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.css" rel="stylesheet" type="text/css"></link>
+<script src="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.js"></script>
+
+<style>
+  .previewer {
+    border: 1px solid #eee;
+    height: 500px;
+    width: 100%;
+  }
+</style>
+
+<div class="previewer"></div>
+
+<script type="module" src="./script.js"></script>
+```
+
+<!-- markdownlint-enable line-length -->
 
 ## Scopes
 
