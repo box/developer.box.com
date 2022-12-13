@@ -290,7 +290,7 @@ The `additional_details` payload will provide the following details:
         "service_name":"Service name"
       }
     },
-      "malware_info":{
+    "malware_info":{
         "file_id":127,
         "file_name":"malware.exe",
         "file_version":4239023,
