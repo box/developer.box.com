@@ -288,15 +288,15 @@ The `additional_details` payload will provide the following details:
         "service_name":"Service name"
       }
     },
-      "malware_info":{
-        "file_id":127,
-        "file_name":"malware.exe",
-        "file_version":4239023,
-        "file_created":"2019-12-20T11:37:05-08:00",
-        "file_created_by":{
-          "id":1010,
-          "name":"Bob",
-          "email":"bob@enterprise.com"
+    "malware_info":{
+       "file_id":127,
+       "file_name":"malware.exe",
+       "file_version":4239023,
+       "file_created":"2019-12-20T11:37:05-08:00",
+       "file_created_by":{
+         "id":1010,
+         "name":"Bob",
+         "email":"bob@enterprise.com"
       },
       "file_hash":"d869db7fe62fb07c25a0403ecaea55031744b5fb",
       "file_hash_type":"SHA-1",
