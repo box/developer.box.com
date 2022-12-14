@@ -11,10 +11,10 @@ alias_paths:
 
 # Web App Integration
 
-Box Platform enables an application to provide features to Box users directly
-within the Box web application. Web App Integrations allow applications to
-become part of the Box user experience by allowing users to share and edit files
-with third-party applications.
+Web App Integrations allow third-party applications to
+become part of the Box user experience by 
+allowing users to use such third-party applications
+when editing or sharing files.
 
 ## Features
 

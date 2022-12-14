@@ -17,7 +17,7 @@ related_resources: []
 
 <!-- markdownlint-disable line-length -->
 
-This script generates a `.csv` file with a list of users who has been inactive for a number of days. It performs the following steps:
+This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
 
 1. Looks for the users who have the role `user`. 
 
@@ -69,7 +69,7 @@ For example:
 
 To use the script, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
-go to your [developer console][console], and follow the guide 
+go to your [Developer Console][console], and follow the guide 
 [Setup with OAuth 2.0][auth].
 
 ## Configure the script
@@ -127,13 +127,10 @@ When the script run is completed, you will see the following
 output or a similar one.
 
    ```bash
-    Looking for users inactive for more than 3 days.
-    Found 6 users.
-    Found 7 events in last 3 days
-    Enterprise has: 0 App user, 6 regular users. With 1 admin role, 5 user roles.
-    Need to check 5 users (regular user, with user role) for inactive.
-    Found 5 users inactive for more than 3 days.
-    Report is available at InactiveUsers.csv
+    Transfered employee content Managed User 1
+    with User ID: 19927131476 to Employee Archive Folder
+    Deleted user 19927131476
+    Deleted employee Managed User 1
    ```
 
 ## Logging

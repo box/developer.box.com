@@ -94,8 +94,8 @@ For example:
 
 To use the script, you will need a Box application
 with OAuth 2.0 authentication. If you don't have one,
-go to your [developer console][console], and follow the guide 
-[Setup with OAuth 2.0][auth].
+go to your [Developer Console][console], and follow the 
+[Setup with OAuth 2.0][auth] guide.
 
 ## Configure the script
 

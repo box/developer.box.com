@@ -8,7 +8,7 @@ hide_in_page_nav: true
 A full list of CLI commands and usage information can be found in the
 [GitHub repository][github].
 
-<Message type=warning>
+<Message type='warning'>
    Only Service Accounts and Admins are able to use some commands.
    If your user is not authorized with the necessary scopes or you
    configured your CLI to obtain a default token for another user, calls may
@@ -18,7 +18,7 @@ A full list of CLI commands and usage information can be found in the
 If you do not see a command for an endpoint you need, you can build a
 [custom request][custom].
 
-<Message type=tip>
+<Message type='tip'>
    Use repository documentation in conjunction with reference documentation to
    see information the help command does not provide. This includes 
    restrictions, token permission requirements, fields, etc. 
@@ -50,7 +50,7 @@ to a list of all possible object commands. Options are discussed more in
 [step 4][four].
 
 <ImageFrame center>
-  ![Help](./help.png)
+  ![Help](../images/help.png)
 </ImageFrame>
 
 <!--alex ignore execute-->
@@ -60,7 +60,7 @@ Then, for example, use the folder object and execute the command
 object.
 
 <ImageFrame center>
-  ![Help](./folders_help.png)
+  ![Help](../images/folders-help.png)
 </ImageFrame>
 
 <!-- markdownlint-disable line-length -->
@@ -70,7 +70,7 @@ Discover the required arguments for creating a folder: `box folders:create --hel
 <!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
-  ![Help](./folders_create_help.png)
+  ![Help](../images/folders-create-help.png)
 </ImageFrame>
 
 <!--alex ignore execute-->
@@ -78,14 +78,14 @@ Discover the required arguments for creating a folder: `box folders:create --hel
 Execute the command `box folders:create 0 "My CLI Folder"` and note the folder
 ID returned in the response.
 
-<Message type=tip>
+<Message type='tip'>
    The root level of the folder tree, the All Files page, is always represented
    by folder ID 0.
 </Message>
 
 Log into **your** Box account. Can you see this folder in your folder tree?
 
-<Message type=warning>
+<Message type='warning'>
    If you set up the Box CLI using JWT authentication, you will not see the
    folder in your Box account. The folder will live in the service account
    of the application that was created after application approval.

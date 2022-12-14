@@ -24,8 +24,8 @@ identity system (Okta) and the Box APIs.
 
 ## Overview 
 
-This quick start guide will walk through how to programmatically use Okta to
-log in to a Box application, provisioning an app user in Box that is linked to
+This quick start guide will walk you through how to programmatically use Okta to
+log in to a Box application, provision an app user in Box that is linked to
 the Okta user, then make Box API calls on behalf of that user. 
 
 This will take you through the following steps.

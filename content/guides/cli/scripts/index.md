@@ -5,18 +5,16 @@ related_guides: []
 related_pages:
   - sdks-and-tools
 related_resources: []
-alias_paths:
-  - /docs/box-cli
-  - /docs/installation-and-setup
-  - /docs/commands-and-actions
-  - /docs/command-line-interface-cli
+alias_paths: []
 ---
 
 # CLI sample scripts
 
 Box CLI scripts are designed to help you
-automate your tasks. The sample scripts library 
-provides several PowerShell scripts that allow 
+automate your tasks. Currently,
+the sample scripts library 
+provides several PowerShell scripts you can use
+and customize.
 
 ## PowerShell scripts
 
@@ -24,10 +22,12 @@ provides several PowerShell scripts that allow
 * [Deprovision users and archive folders][2]
 * [Manage groups and collaborations][3]
 * [Report inactive users][4]
-* [Update user zones][5]
+* [Extract metadata][5]
+* [Update user zones][6]
 
 [1]: g://cli/quick-start/powershell-script-templates
 [2]: g://cli/scripts/deprovision-users
 [3]: g://cli/scripts/manage-groups-collaborations
 [4]: g://cli/scripts/report-inactive-users
-[5]: g://cli/scripts/user-zones-mass-update
+[5]: g://cli/scripts/metadata-extraction
+[6]: g://cli/scripts/user-zones-mass-update

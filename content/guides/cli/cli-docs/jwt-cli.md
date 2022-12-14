@@ -11,6 +11,7 @@ required_guides:
 related_resources: []
 alias_paths:
   - /guides/tooling/quick-start/create-jwt-app/
+  - /guides/tooling/cli/jwt-cli
 ---
 
 # Box CLI with JWT Authentication
@@ -161,7 +162,7 @@ For example:
 
 <!-- markdownlint-enable line-length -->
 
-<Message type=tip>
+<Message type='tip'>
    You can drag the csv file from the Finder/File Explorer to the
    terminal/command line window to auto-populate the path.
 </Message>
@@ -193,7 +194,7 @@ Avatar URL: ''
 Notification Email: []
 ```
 
-<Message type=tip>
+<Message type='tip'>
    By default, JWT applications automatically obtain an Access Token for the
    Service Account. It is possible to change the default user, but this guide
    assumes you do not do this. 
