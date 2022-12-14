@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # ウェブアプリ統合
 
-Box Platformにより、アプリケーションはBoxウェブアプリ内で直接Boxユーザーに機能を提供できるようになります。ウェブアプリ統合により、アプリケーションはBox内で使用できるようになり、ユーザーはサードパーティ製アプリケーションを使用してファイルを共有および編集できます。
+Web App Integrations allow third-party applications to become part of the Box user experience by allowing users to use such third-party applications when editing or sharing files.
 
 ## 機能
 

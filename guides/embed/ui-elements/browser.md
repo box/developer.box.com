@@ -26,7 +26,6 @@ fullyTranslated: true
 Box UI Elementsは、以下のブラウザでサポートされています。
 
 * Chrome、Firefox、Safari、およびEdge (直近の2バージョン)
-* Internet Explorer 11では限定的サポート (`ES2015/Intl polyfill`が必要)
 * Mobile ChromeおよびSafari
 
 ## ES2015 `Intl` Polyfill

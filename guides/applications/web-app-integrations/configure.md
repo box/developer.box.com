@@ -27,11 +27,17 @@ fullyTranslated: true
 
 このガイドでは、カスタムアプリとのウェブアプリ統合を設定する方法について説明します。
 
-## 1. OAuth 2.0アプリケーションを作成する
+<message type="warning">
+
+Server-side integration is no longer supported. This means the applications using server-side actions will still be working, but you won't be able to modify the server-side configuration options such as Preliminary Callback URL or Basic Authentication. You will be able to deactivate them and change the implementation to a new one.
+
+</message>
+
+## Create an OAuth 2.0 Application
 
 [開発者コンソール][devconsole]に移動し、[OAuth 2.0認証][custom-oauth2]を利用する[カスタムアプリ][ca]を作成します。
 
-## 2. 新しい統合を作成する
+## Create a New Integration
 
 次に、\[**統合**] タブに移動し、\[**ウェブアプリ統合を作成**] をクリックします。
 
@@ -41,7 +47,7 @@ fullyTranslated: true
 
 </ImageFrame>
 
-## 3. 統合を構成する
+## Configure Integration
 
 統合を構成するには、各値について、以下のガイダンスに従います。
 
@@ -66,18 +72,25 @@ fullyTranslated: true
 
 <!-- markdownlint-disable line-length -->
 
-| フィールド            | 説明                                                                                                                                                                                        |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| クライアントコールバックのURL | ポップアップ統合での最初のリクエストの後に、Boxからの追加のコールバックリクエストを処理します。アプリケーションがRESTメソッドでファイルパラメータを指定した場合、事前コールバックのURLはクライアントから発信できません。そのため、必要なインターフェースをサーバーがユーザーに送信できるように、2番目のリクエストがクライアントからサーバーに送信される必要があります。 |
-| 事前コールバックのURL     | ユーザーがプロンプトを受け入れたときにコールバックパラメータの送信先となるURL。これは、アプリケーションサーバーでAPI呼び出しを実行するURLであることがほとんどですが、HTTPリクエストを受け入れるように構成されたエンドポイントにすることもできます。                                                          |
-| ユーザーエクスペリエンス     | 統合が[ポップアップ][pu]統合か[サーバー側][ssi]統合かを判断します。                                                                                                                                                  |
-| 新しいウィンドウの設定      | アプリケーションを新しいタブで開くかどうかを決定します。                                                                                                                                                              |
+| フィールド               | 説明                                                                                                                                                                                        |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| クライアントコールバックのURL    | ポップアップ統合での最初のリクエストの後に、Boxからの追加のコールバックリクエストを処理します。アプリケーションがRESTメソッドでファイルパラメータを指定した場合、事前コールバックのURLはクライアントから発信できません。そのため、必要なインターフェースをサーバーがユーザーに送信できるように、2番目のリクエストがクライアントからサーバーに送信される必要があります。 |
+| ユーザーエクスペリエンス        | Informs that the integration will open in a new window.                                                                                                                                   |
+| New Window Settings | アプリケーションを新しいタブで開くかどうかを決定します。                                                                                                                                                              |
 
 <!-- markdownlint-enable line-length -->
 
 ### コールバックパラメータ
 
-\[**コールバックパラメータ**] セクションでは、ユーザーが確認プロンプトを受け入れるとBoxからコールバックURLに送信されるパラメータを構成します。この設定が構成されていない場合、BoxからコールバックURLにパラメータが送信されません。パラメータを追加するには、\[**メソッド**] を選択し、\[**パラメータ名**] を指定して、\[**パラメータ値**] を追加します。使用可能なメソッドは**Get**、**Post**、**File**です。たとえば、**Get - `userid` - `#user_id#`**のようになります。
+The **Callback Parameters** section configures the parameters that Box sends to the callback URL when a user accepts a confirmation prompt. If this setting is not configured, Box does not send any parameters to the callback URL. To add a parameter, select the **Method**, specify the **Parameter name** and add a **Parameter value**. Available methods are **Get** and **Post**.
+
+<message type="warning">
+
+The **File** method is no longer supported. If you already used this method, you cannot edit its values. You can change the **File** method to **Get** or **Post**, but you can't undo this action.
+
+</message>
+
+For example: **Get - `userid` - `#user_id#`**.
 
 以下のパラメータ値が使用可能です。
 
@@ -94,10 +107,6 @@ fullyTranslated: true
 | `redirect_to_box_url` | ポップアップ統合で、確認プロンプトによるリクエストの送信先となるURL。このURLを使用すると、ユーザーは \[すべてのファイル] ページにリダイレクトされます。このパラメータにより、ポップアップパネルが閉じ、\[すべてのファイル] ページは、統合による変更をすべて反映するよう更新されます。このパラメータをアプリケーションに追加しない場合は、URL全体を指定できます。**成功**: `#redirect_to_box_url#&status=success&message=Your%20action%20was%20successful%2E`。**失敗**: `#redirect_to_box_url#&status=failure&message=Your%20action%20was%20unsuccessful%2E` |
 
 <!-- markdownlint-enable line-length -->
-
-### 認証
-
-\[**HTTP Basic認証を有効にする**] の切り替えをオンにして、ユーザー名とパスワードを作成します。
 
 ### 統合ステータス
 

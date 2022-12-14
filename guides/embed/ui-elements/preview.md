@@ -310,64 +310,52 @@ Box UI Elementsは、V4の注釈が十分に機能している、使用可能な
 
 3. 次のように、コンテンツプレビューとBoxの注釈をアプリケーションにインポートします。
 
-```js
-import ContentPreview from 'box-ui-elements/es/elements/content-preview';
-// In this example we dynamically import box-annotations which will provide a
-BoxAnnotations object in global 
-// You may see one already from legacy annotations if you do not dynamically
-load the latest version of box-annotations
-const importAnnotations = () => import(/* webpackChunkName: "box-annotations"
-*/ 'box-annotations');
-```
-
-コンテンツプレビューを使用してV4の注釈の全機能を有効にする方法の例を以下に示します。
+<!-- markdownlint-disable line-length -->
 
 ```js
-function App() {
-    const token = "YOUR_TOKEN"
-    const fileId = 'YOUR_FILE_ID'
-    const boxAnnotations = useRef(null);
-    const [annotationsLoaded, setAnnotationsLoaded] = useState(false);
+import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
-    useEffect(() => {
-        importAnnotations().then(() => {
-            boxAnnotations.current = new global.BoxAnnotations();
-            setAnnotationsLoaded(true);
-        });
-    }, []);
+var file_id = 'YOUR FILE ID';
+var accessToken = 'YOUR ACCESS TOKEN';
 
-    return (
-        <div className="App">
-            {annotationsLoaded && (<ContentPreview
-                boxAnnotations={boxAnnotations.current}
-                contentSidebarProps={{
-                    hasActivityFeed: true, // Enabled Activity Feed which will
-                    show you the comments in the sidebar
-                    features: {
-                        activityFeed: {
-                            annotations: {
-                                enabled: true // Enables the ability to see
-                                your annotation comment in the Activity Feed 
-                            }
-                        }
-                    }
-                }}
-                enableAnnotationsDiscoverability // Region button still appears
-                with showAnnotationsControls but this is required to use it
-                showAnnotations={annotationsLoaded} // Show annotations on the
-                file
-                showAnnotationsControls // Shows annotation controls in toolbar
-                showAnnotationsDrawing // This and showAnnotationsDrawingCreate
-                need to be true to enable the drawing annotation in the toolbar
-                showAnnotationsDrawingCreate
-                fileId={annotationsLoaded ? fileId : undefined}
-                token={token}
-            />)
-            }
-        </div>
-    );
+/* Enable annotations in sidebar */
+var contentSidebarProps = {
+   hasActivityFeed: true,
+   features: {
+      activityFeed: {
+         annotations: {
+            enabled: true
+         }
+      }
+   },
 }
+
+var options = {
+   container: '.previewer',
+   contentSidebarProps: contentSidebarProps,
+
+   /* Enable annotations in preview */
+   enableAnnotationsDiscoverability: true,
+   enableAnnotationsImageDiscoverability: true,
+   showAnnotations: true,
+   showAnnotationsControls: true,
+   showAnnotationsDrawingCreate: true,
+};
+
+/* BoxAnnotations */
+var annotations = new BoxAnnotations();
+
+/* Box Preview */
+var contentPreviewer = new Box.ContentPreview();
+
+/* Set annotation into previewer */
+options['boxAnnotations'] = annotations;
+
+/* Show previewer */
+contentPreviewer.show(file_id, accessToken, options);
 ```
+
+<!-- markdownlint-enable line-length -->
 
 <Message warning>
 
@@ -375,6 +363,27 @@ function App() {
 `は、今後変更される可能性があります。
 
 </Message>
+
+<!-- markdownlint-disable line-length -->
+
+```html
+<link href="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.css" rel="stylesheet" type="text/css"></link>
+<script src="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.js"></script>
+
+<style>
+  .previewer {
+    border: 1px solid #eee;
+    height: 500px;
+    width: 100%;
+  }
+</style>
+
+<div class="previewer"></div>
+
+<script type="module" src="./script.js"></script>
+```
+
+<!-- markdownlint-enable line-length -->
 
 ##  スコープ 
 
