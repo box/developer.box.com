@@ -96,7 +96,7 @@ Boxデスクトップアプリの場合、`additional_details`ペイロードは
 }
 ```
 
-Boxモバイルアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
+Box Mobileアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
 ```js
 "additional_details": {
