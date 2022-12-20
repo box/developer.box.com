@@ -1,7 +1,5 @@
 ---
 hide: true
-hide_step_number: true
-hide_in_page_nav: true
 ---
 
 <!-- does not need translation -->
@@ -33,7 +31,7 @@ they pull their sources from.
 
 | Sources | Production | Staging | Japan |
 | --- | --- | --- | --- |
-| | developer.box.com | staging.developer.box.com | ja.developer.box.com |
+| | `developer.box.com` | `staging.developer.box.com` | `ja.developer.box.com` |
 | OpenAPI | @box/openapi#master | @box/openapi#staging | |
 | OpenAPI Compiled (EN) | @box/openapi#en | @box/openapi#en-staging @boxopenapi#jp |
 | Microcopy & Guides (EN) | @box/developer.box.com#master | @box/developer.box.com#staging | |
@@ -52,7 +50,7 @@ system, and services:
     - [Screen recording],
     - [Audio only].
 
-[developer documentation]: https://box.dev
+[developer documentation]: https://developer.box.com
 [High level fireside chat]: 
 https://cloud.box.com/s/bf7yfygd56ffes5awyw7xr5n7hrg3tiz
 [Screen recording]: https://cloud.box.com/s/lmcj5kamjsxxwfad08d0iy78jmzsk7be

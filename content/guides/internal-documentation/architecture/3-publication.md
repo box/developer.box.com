@@ -1,7 +1,5 @@
 ---
 hide: true
-hide_step_number: true
-hide_in_page_nav: true
 ---
 
 <!-- does not need translation -->
@@ -53,6 +51,6 @@ The [staging] page is automatically built from the sources on the `staging`
 branch of the OpenAPI and content repositories to `en-staging` branches.
 They trigger a build of the `staging` branch of the Gatsby site.
 
-[production]: [https://developer.box.com]
-[staging]: [https://staging.developer.box.com]
-[Japanese]: [https://ja.developer.box.com]
+[production]: https://developer.box.com
+[staging]: https://staging.developer.box.com
+[Japanese]: https://ja.developer.box.com

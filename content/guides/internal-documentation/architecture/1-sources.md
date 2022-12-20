@@ -1,7 +1,5 @@
 ---
 hide: true
-hide_step_number: true
-hide_in_page_nav: true
 ---
 
 <!-- does not need translation -->
@@ -19,7 +17,7 @@ The sources are stored in GitHub repositories.
 
 ## Site sources managed by Tech Pubs and Dev Rel teams
 
-- [Box open API] - a set of files that represent the Open API 3.0 
+- [Box Platform API] - a set of files that represent the Open API 3.0 
 specification for the Box Platform API. These files describe up-to-date
 contents of the API endpoints. 
 - [developer.box.com] - a set of files that represent the microcopy,
@@ -57,7 +55,7 @@ For the OpenAPI 3.0 specification we ensure that:
 build the site.
 
 All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions.
-The status of the build can be monitored on GitHub and in the #devrel-build
+The status of the build can be monitored on GitHub and in the `#devrel-build`
 Slack channel.
 
 ## Source resolving
@@ -69,7 +67,7 @@ the [Stoplight's JSON Resolver]. The resolved content is published back to the
 Then the translation team pick up the files, translates them, and writes them
 back to additional branches for each translation (for example `jp`).
 
-[Box open API]: https://github.com/box/box-openapi
+[Box Platform API]: https://github.com/box/box-openapi
 [developer.box.com]: https://github.com/box/developer.box.com
 [Framework]: https://github.com/box/developer.box.com-framework
 [Changelog]: https://github.com/box/box-developer-changelog

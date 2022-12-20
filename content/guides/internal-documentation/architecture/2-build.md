@@ -1,7 +1,5 @@
 ---
 hide: true
-hide_step_number: true
-hide_in_page_nav: true
 ---
 
 <!-- does not need translation -->
@@ -48,5 +46,5 @@ various pages, that can query the data and render it as a React site.
 Pages in Gatsby are simple React components. Currently rendered pages
 are available [here].
 
-[Gatsby]: [https://www.gatsbyjs.com/]
-[here]: [https://github.com/box/developer.box.com-framework/tree/main/src/localized]
+[Gatsby]: https://www.gatsbyjs.com/
+[here]: https://github.com/box/developer.box.com-framework/tree/main/src/localized
