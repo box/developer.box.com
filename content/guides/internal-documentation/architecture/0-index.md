@@ -47,8 +47,8 @@ system, and services:
 
 - [High level fireside chat],
 - Deep technical dive:
-    - [Screen recording],
-    - [Audio only].
+  - [Screen recording],
+  - [Audio only].
 
 [developer documentation]: https://developer.box.com
 [High level fireside chat]: 
