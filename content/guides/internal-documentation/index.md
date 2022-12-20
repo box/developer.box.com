@@ -3,6 +3,7 @@ rank: 0
 hide: true
 alias_paths: 
   - /en/internal
+  - /guides/internal
 ---
 
 <!-- does not need translation -->
