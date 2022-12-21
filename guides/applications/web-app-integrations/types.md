@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # 統合の種類
 
-Currently, Box provides the Popup integration type.
+現在、Boxではポップアップ統合を提供しています。
 
 ## ポップアップ統合
 

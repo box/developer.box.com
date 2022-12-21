@@ -66,7 +66,7 @@ Boxでは、Box Postmanコレクションをフォークすることをお勧め
 
 # 前の手順が完了していません
 
-Complete the previous steps to select and log in to a **Box App**.
+前の手順を完了し、**Boxアプリ**を選択してログインしてください。
 
 </Message>
 
@@ -82,7 +82,7 @@ Complete the previous steps to select and log in to a **Box App**.
 
 # 前の手順が完了していません
 
-Complete the previous steps to select and log in to a **Box App**.
+前の手順を完了し、**Boxアプリ**を選択してログインしてください。
 
 </Message>
 

@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # ウェブアプリ統合
 
-Web App Integrations allow third-party applications to become part of the Box user experience by allowing users to use such third-party applications when editing or sharing files.
+ウェブアプリ統合により、サードパーティ製アプリケーションをBox内で使用できるようになり、ユーザーはファイルを編集または共有する際にそのサードパーティ製アプリケーションを使用できます。
 
 ## 機能
 
