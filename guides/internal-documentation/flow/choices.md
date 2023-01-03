@@ -1,18 +1,18 @@
 ---
 hide: true
 rank: 3
-category_id: internal
-subcategory_id: internal/flow
+category_id: internal-documentation
+subcategory_id: internal-documentation/flow
 is_index: false
-id: internal/flow/choices
+id: internal-documentation/flow/choices
 type: guide
 total_steps: 6
-sibling_id: internal/flow
-parent_id: internal/flow
-next_page_id: internal/flow/store
-previous_page_id: internal/flow/observer
+sibling_id: internal-documentation/flow
+parent_id: internal-documentation/flow
+next_page_id: internal-documentation/flow/store
+previous_page_id: internal-documentation/flow/observer
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/choices.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/flow/choices.md
 ---
 <!-- does not need translation -->
 
