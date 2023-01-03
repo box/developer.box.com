@@ -46,7 +46,7 @@ These videos contain an overview of the developer documentation site, build
 system, and services:
 
 - [High level fireside chat],
-- Deep technical dive:
+- In-depth technical analysis:
   - [Screen recording],
   - [Audio only].
 

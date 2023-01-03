@@ -13,7 +13,7 @@ There are currently 3 live sites:
 
 - [production]
 - [staging]
-- [Japanese]
+- [Japan]
 
 They are resolved to the Netlify Edge CDN, which is tied to the
 Netlify build process and handles most of the DevOps complexity
@@ -53,4 +53,4 @@ They trigger a build of the `staging` branch of the Gatsby site.
 
 [production]: https://developer.box.com
 [staging]: https://staging.developer.box.com
-[Japanese]: https://ja.developer.box.com
+[Japan]: https://ja.developer.box.com

@@ -43,7 +43,7 @@ and JS.
 
 When all the data is loaded, it's available as a GraphQL data source to
 various pages, that can query the data and render it as a React site.
-Pages in Gatsby are simple React components. Currently rendered pages
+Pages in Gatsby are plain React components. Currently rendered pages
 are available [here].
 
 [Gatsby]: https://www.gatsbyjs.com/
