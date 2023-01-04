@@ -20,7 +20,7 @@ source_url: >-
 
 A set of sources, managed by technical publications team (in collaboration
 with the developer relations team) and other teams, is used to
-build the content for Box developer documentation documentation.
+build the content for Box developer documentation.
 The sources are stored in GitHub repositories.
 
 <ImageFrame center shadow border>
@@ -34,7 +34,7 @@ The sources are stored in GitHub repositories.
 - [Box Platform API] - a set of files that represent the Open API 3.0
 specification for the Box Platform API. These files describe up-to-date
 contents of the API endpoints.
-- [developer.box.com] - a set of files that represent the microcopy,
+- [developer.box.com, box.dev] - a set of files that represent the microcopy,
 locale configuration, guides, and pages for the developer documentation
 site.
 - [Framework] - source for the Gatsby templates and importers for the

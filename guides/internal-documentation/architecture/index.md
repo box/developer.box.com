@@ -45,12 +45,12 @@ they pull their sources from.
 
 | Sources | Production | Staging | Japan |
 | --- | --- | --- | --- |
-| | `developer.box.com` | `staging.developer.box.com` | `ja.developer.box.com` |
-| OpenAPI | `@box/openapi#main` | `@box/openapi#staging` | |
-| OpenAPI Compiled (EN) | `@box/openapi#en` | `@box/openapi#en-staging` `@boxopenapi#jp` |
-| Microcopy & Guides (EN) | `@box/developer.box.com#main` | `@box/developer.box.com#staging` | |
-| Microcopy & Guides Compiled (EN) | `@box/developer.box.com#en` | `@box/developer.box.com#en-staging` | `@box/developer.box.com#jp` |
-| Gatsby Site | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` |
+| | `developer.box.com`, `box.dev` | `staging.developer.box.com` | `ja.developer.box.com` | `box.dev` |
+| OpenAPI | `@box/openapi#main` | `@box/openapi#staging` | | |
+| OpenAPI Compiled (EN) | `@box/openapi#en` | `@box/openapi#en-staging` `@boxopenapi#jp` | |
+| Microcopy & Guides (EN) | `@box/developer.box.com#main` | `@box/developer.box.com#staging` | | |
+| Microcopy & Guides Compiled (EN) | `@box/developer.box.com#en` | `@box/developer.box.com#en-staging` | `@box/developer.box.com#jp` | |
+| Gatsby Site | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` | |
 
 <!-- markdownlint-enable line-length -->
 
