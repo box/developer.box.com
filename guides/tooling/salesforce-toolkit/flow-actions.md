@@ -50,5 +50,5 @@ The list below contains all methods that can be invoked in
 - `getFolderUrl`
 - `getUrlForFolder`
 
-[methods]: g://tooling/salesforce-toolkit/methods.md
+[methods]: g://tooling/salesforce-toolkit/methods
 [Salesforce Flows]: https://help.salesforce.com/s/articleView?id=sf.flow.htm&type=5
