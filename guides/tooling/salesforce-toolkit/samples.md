@@ -11,10 +11,10 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: false
 id: tooling/salesforce-toolkit/samples
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
-next_page_id: ''
+next_page_id: tooling/salesforce-toolkit/flow-actions
 previous_page_id: tooling/salesforce-toolkit
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/samples.md
