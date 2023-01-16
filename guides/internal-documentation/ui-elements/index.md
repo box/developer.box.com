@@ -1,18 +1,18 @@
 ---
 rank: 1
 hide: true
-category_id: internal
-subcategory_id: internal/ui-elements
+category_id: internal-documentation
+subcategory_id: internal-documentation/ui-elements
 is_index: true
-id: internal/ui-elements
+id: internal-documentation/ui-elements
 type: guide
 total_steps: 8
-sibling_id: internal
-parent_id: internal
+sibling_id: internal-documentation
+parent_id: internal-documentation
 next_page_id: ''
-previous_page_id: internal/ui-elements/cta
+previous_page_id: internal-documentation/ui-elements/cta
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/internal/ui-elements/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/ui-elements/index.md
 fullyTranslated: true
 ---
 <!-- does not need translation -->

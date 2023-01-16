@@ -1,18 +1,18 @@
 ---
 hide: true
-category_id: internal
-subcategory_id: internal/flow
+category_id: internal-documentation
+subcategory_id: internal-documentation/flow
 is_index: true
-id: internal/flow
+id: internal-documentation/flow
 rank: 0
 type: guide
 total_steps: 6
-sibling_id: internal
-parent_id: internal
-next_page_id: internal/flow/observer
+sibling_id: internal-documentation
+parent_id: internal-documentation
+next_page_id: internal-documentation/flow/observer
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/flow/index.md
 fullyTranslated: true
 ---
 <!-- does not need translation -->

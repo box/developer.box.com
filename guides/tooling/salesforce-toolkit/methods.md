@@ -11,7 +11,7 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: false
 id: tooling/salesforce-toolkit/methods
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: tooling/salesforce-toolkit
 parent_id: tooling/salesforce-toolkit
 next_page_id: tooling/salesforce-toolkit/samples

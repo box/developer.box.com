@@ -1,18 +1,18 @@
 ---
 hide: true
 rank: 7
-category_id: internal
-subcategory_id: internal/flow
+category_id: internal-documentation
+subcategory_id: internal-documentation/flow
 is_index: false
-id: internal/flow/app-button
+id: internal-documentation/flow/app-button
 type: guide
 total_steps: 6
-sibling_id: internal/flow
-parent_id: internal/flow
+sibling_id: internal-documentation/flow
+parent_id: internal-documentation/flow
 next_page_id: ''
-previous_page_id: internal/flow/login
+previous_page_id: internal-documentation/flow/login
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/internal/flow/app-button.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/flow/app-button.md
 fullyTranslated: true
 ---
 <!-- does not need translation -->
