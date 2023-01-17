@@ -18,7 +18,7 @@ labels:
     angularjs: AngularJS
     curl: cURL
     vue: Vue.js
-  
+
   tags:
     all_tags: All tags
     ui_elements: UI Elements
