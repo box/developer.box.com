@@ -527,5 +527,29 @@
   // Label for the manage_enterprise_properties scope
   "app_button.logged_in.scopes.manage_enterprise_properties": "Manage enterprise properties",
   // Label for the manage_retention_policies scope
-  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies"
+  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies",
+  // title of the page
+  "sample_code_catalog.title": "Sample Code Catalog",
+  "sample_code_catalog.labels.languages.all_languages": "All languages",
+  "sample_code_catalog.labels.languages.android": "Android",
+  "sample_code_catalog.labels.languages.react": "React",
+  "sample_code_catalog.labels.languages.java": "Java",
+  "sample_code_catalog.labels.languages.powershell": "Powershell",
+  "sample_code_catalog.labels.languages.dotNet": ".NET",
+  "sample_code_catalog.labels.languages.python": "Python",
+  "sample_code_catalog.labels.languages.node": "Node",
+  "sample_code_catalog.labels.languages.aspnet": "ASPNET",
+  "sample_code_catalog.labels.languages.angular": "Angular",
+  "sample_code_catalog.labels.languages.angularjs": "AngularJS",
+  "sample_code_catalog.labels.languages.curl": "cURL",
+  "sample_code_catalog.labels.languages.vue": "Vue.js",
+  "sample_code_catalog.labels.tags.all_tags": "All tags",
+  "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
+  "sample_code_catalog.labels.tags.salesforce": "Salesforce",
+  "sample_code_catalog.labels.tags.skills": "Skills",
+  "sample_code_catalog.labels.tags.api": "API",
+  "sample_code_catalog.labels.tags.sdk": "SDK",
+  "sample_code_catalog.labels.tags.cli": "CLI",
+  "sample_code_catalog.labels.tags.webhooks": "Webhooks",
+  "sample_code_catalog.labels.tags.user_provisioning": "User Provisioning"
 }
