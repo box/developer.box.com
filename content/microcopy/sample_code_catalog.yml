@@ -18,6 +18,13 @@ labels:
     angularjs: AngularJS
     curl: cURL
     vue: Vue.js
+    r: R
+    ruby: Ruby
+    javascript: Javascript
+    apex: APEX
+    swift: Swift
+    perl: Perl
+    php: PHP
 
   tags:
     all_tags: All tags
@@ -28,4 +35,5 @@ labels:
     sdk: SDK
     cli: CLI
     webhooks: Webhooks
-    user_provisioning: User Provisioning
+    onboarding_employees: Onboarding Employees
+    mobile: Mobile
