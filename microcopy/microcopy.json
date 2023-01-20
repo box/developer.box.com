@@ -543,6 +543,13 @@
   "sample_code_catalog.labels.languages.angularjs": "AngularJS",
   "sample_code_catalog.labels.languages.curl": "cURL",
   "sample_code_catalog.labels.languages.vue": "Vue.js",
+  "sample_code_catalog.labels.languages.r": "R",
+  "sample_code_catalog.labels.languages.ruby": "Ruby",
+  "sample_code_catalog.labels.languages.javascript": "Javascript",
+  "sample_code_catalog.labels.languages.apex": "APEX",
+  "sample_code_catalog.labels.languages.swift": "Swift",
+  "sample_code_catalog.labels.languages.perl": "Perl",
+  "sample_code_catalog.labels.languages.php": "PHP",
   "sample_code_catalog.labels.tags.all_tags": "All tags",
   "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
   "sample_code_catalog.labels.tags.salesforce": "Salesforce",
@@ -551,5 +558,6 @@
   "sample_code_catalog.labels.tags.sdk": "SDK",
   "sample_code_catalog.labels.tags.cli": "CLI",
   "sample_code_catalog.labels.tags.webhooks": "Webhooks",
-  "sample_code_catalog.labels.tags.user_provisioning": "User Provisioning"
+  "sample_code_catalog.labels.tags.onboarding_employees": "Onboarding Employees",
+  "sample_code_catalog.labels.tags.mobile": "Mobile"
 }
