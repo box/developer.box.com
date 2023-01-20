@@ -46,7 +46,7 @@ related_endpoints:
     ## You are now logged in
 
     We just sent your browser to the [Box Authorization](e://get-authorize)
-    screen where you granted your application access to your user account. Ater
+    screen where you granted your application access to your user account. After
     you granted it access the browser redirected back to this site with a `code`.
 
     We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
