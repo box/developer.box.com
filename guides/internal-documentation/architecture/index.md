@@ -17,49 +17,49 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Developer Documentation Architecture
+# 開発者向けドキュメントのアーキテクチャ
 
-The following is an overview of the build system for the new [developer documentation][developer documentation] site.
+新しい[開発者向けドキュメント][developer documentation]サイトのビルドシステムの概要を以下に示します。
 
-## High Level Architecture
+## アーキテクチャの概要
 
-The build architecture for developer documentation is split into three parts:
+開発者向けドキュメントのビルドアーキテクチャは、3つの部分に分かれています。
 
-* Validating and resolving sources used to build the developer documentation,
-* Fetching sources and compiling the site when any of the sources change,
-* Publishing the site to our hosting provider.
+* 開発者向けドキュメントのビルドに使用されたソースの検証と解決
+* ソースが変更されたときのソースの取得とサイトのコンパイル
+* Boxのホスティングプロバイダへのサイトの公開
 
 <ImageFrame center shadow border>
 
-![Architecture](./images/Architecture1.png)
+![アーキテクチャ](./images/Architecture1.png)
 
 </ImageFrame>
 
-## Stages Overview
+## ステージの概要
 
-Below table contains an overview of all currently deployed stages, and where they pull their sources from.
+以下の表に、現在展開されているすべてのステージの概要と、各ステージでのソースの取得元を示します。
 
 <!-- markdownlint-disable line-length -->
 
-| Sources                          | Production                              | Staging                                    | Japan                                   |           |
-| -------------------------------- | --------------------------------------- | ------------------------------------------ | --------------------------------------- | --------- |
-|                                  | `developer.box.com`, `box.dev`          | `staging.developer.box.com`                | `ja.developer.box.com`                  | `box.dev` |
-| OpenAPI                          | `@box/openapi#main`                     | `@box/openapi#staging`                     |                                         |           |
-| OpenAPI Compiled (EN)            | `@box/openapi#en`                       | `@box/openapi#en-staging` `@boxopenapi#jp` |                                         |           |
-| Microcopy & Guides (EN)          | `@box/developer.box.com#main`           | `@box/developer.box.com#staging`           |                                         |           |
-| Microcopy & Guides Compiled (EN) | `@box/developer.box.com#en`             | `@box/developer.box.com#en-staging`        | `@box/developer.box.com#jp`             |           |
-| Gatsby Site                      | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` |           |
+| ソース                             | 実稼動環境                                   | ステージング                                     | 日本                                      |           |
+| ------------------------------- | --------------------------------------- | ------------------------------------------ | --------------------------------------- | --------- |
+|                                 | `developer.box.com`, `box.dev`          | `staging.developer.box.com`                | `ja.developer.box.com`                  | `box.dev` |
+| OpenAPI                         | `@box/openapi#main`                     | `@box/openapi#staging`                     |                                         |           |
+| OpenAPI (コンパイル済み) (英語)          | `@box/openapi#en`                       | `@box/openapi#en-staging` `@boxopenapi#jp` |                                         |           |
+| MicrocopyとGuides (英語)           | `@box/developer.box.com#main`           | `@box/developer.box.com#staging`           |                                         |           |
+| MicrocopyとGuides (コンパイル済み) (英語) | `@box/developer.box.com#en`             | `@box/developer.box.com#en-staging`        | `@box/developer.box.com#jp`             |           |
+| Gatsbyサイト                       | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` |           |
 
 <!-- markdownlint-enable line-length -->
 
-## Video Overviews
+## 概要ビデオ
 
-These videos contain an overview of the developer documentation site, build system, and services:
+以下のビデオでは、開発者向けドキュメントサイト、ビルドシステム、およびサービスの概要を紹介しています。
 
-* [High level fireside chat][High level fireside chat],
-* In-depth technical analysis:
-* [Screen recording][Screen recording],
-* [Audio only][Audio only].
+* [概要に関する座談会][High level fireside chat]
+* 詳細な技術分析:
+* [録画][Screen recording]
+* [音声のみ][Audio only]
 
 [developer documentation]: https://developer.box.com
 

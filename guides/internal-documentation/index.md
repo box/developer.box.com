@@ -20,6 +20,6 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Internal Documentation
+# 内部ドキュメント
 
-The following pages contain information about developer documentation architecture, guidelines and best practices, Markdown usage and UI elements. It's created for internal use only.
+以下のページには、開発者向けドキュメントのアーキテクチャ、ガイドラインとベストプラクティス、マークダウンの使用方法とUI Elementsに関する情報が含まれています。これは、内部使用のみを目的として作成されています。

@@ -17,31 +17,31 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Build Process
+# ビルドプロセス
 
-The build process pulls in all sources, processes and then compiles them into static HTML, CSS, and JavaScript, using the Gatsby site generator.
+ビルドプロセスでは、Gatsbyサイトジェネレータを使用して、すべてのソースを取り込んで処理し、それらをコンパイルして静的HTML、CSS、JavaScriptを作成します。
 
-When any of the sources changes, it triggers a new build of the site. As the site should only be built when the OpenAPI and Microcopy are compiled, a serverless Netlify function was created to accept GitHub webhooks and filter out any webhooks coming from the `en` branch. Only pushes from the OpenAPI and Microcopy repositories to the `en` branch are passed on to the Netlify server.
+ソースのいずれかが変更されると、サイトの新しいビルドがトリガーされます。サイトをビルドする必要があるのは、OpenAPIとMicrocopyがコンパイルされる場合のみであるため、GitHubのWebhookを受け入れて、`en`ブランチから送信されたWebhookをすべて除外するようにNetlifyのサーバーレス関数が作成されました。Netlifyサーバーに渡されるのは、OpenAPIリポジトリおよびMicrocopyリポジトリから`en`ブランチへのプッシュのみです。
 
-## Staging
+## ステージング
 
-The Netlify functions proxy out as multiple calls for the OpenAPI 3.0 specification and Microcopy to trigger a rebuild of the staging and main branch respectively when needed. It can be expanded to support the needed number of stage and source configurations.
+Netlifyの関数は、OpenAPI 3.0仕様およびMicrocopyに対する複数の呼び出しの代理となり、必要に応じてステージングブランチとメインブランチの再ビルドをそれぞれトリガーします。これは、必要な数のステージ構成とソース構成をサポートするよう拡張できます。
 
-## Building with Gatsby
+## Gatsbyによるビルド
 
-[Gatsby][Gatsby] is a free, fast, open source, React-based framework that enables developers to create websites and apps. It takes various sources, pulls them into a GraphQL data source, and then gives access to this data in React templates that are build out to static HTML, CSS, and JavaScript.
+[Gatsby][Gatsby]は、開発者がウェブサイトやアプリを作成できる、処理の速いReactベースの無料のオープンソースフレームワークです。これは、さまざまなソースを取得してGraphQLデータソースに取り込んだ後、Reactテンプレートでそのデータへのアクセス権限を付与します。このテンプレートをビルドすると、静的HTML、CSS、JavaScriptが作成されます。
 
-### Build phases
+### ビルドのフェーズ
 
-There are 3 phases of a Gatsby build:
+Gatsbyのビルドには、以下の3つのフェーズがあります。
 
-1. The local and remote sources tare imported to GraphQL nodes.
-2. Nodes are transformed to add further information, parse content (such as Markdown), and link nodes together.
-3. Data is passed to the page template to compile the site to HTML, CSS and JS.
+1. ローカルおよびリモートのソースをGraphQLノードにインポートする。
+2. ノードを変換して、さらなる情報の追加、コンテンツ (Markdownなど) の解析、ノードの関連付けを行う。
+3. データをページテンプレートに渡し、サイトをコンパイルしてHTML、CSS、JSを作成する。
 
-## Site compilation
+## サイトのコンパイル
 
-When all the data is loaded, it's available as a GraphQL data source to various pages, that can query the data and render it as a React site. Pages in Gatsby are plain React components. Currently rendered pages are available [here][here].
+データがすべて読み込まれると、GraphQLデータソースとしてさまざまなページで利用でき、データを照会してReactサイトとしてレンダリングすることができます。GatsbyのページはプレーンなReactコンポーネントです。現在レンダリングされているページは、[こちら][here]で参照できます。
 
 [Gatsby]: https://www.gatsbyjs.com/
 

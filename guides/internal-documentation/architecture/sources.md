@@ -17,47 +17,47 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Sources
+# ソース
 
-A set of sources, managed by technical publications team (in collaboration with the developer relations team) and other teams, is used to build the content for Box developer documentation. The sources are stored in GitHub repositories.
+(開発者関連チームと協力して) 技術発行物担当チームや他のチームが管理する一連のソースは、Box開発者向けドキュメントのコンテンツをビルドするために使用されます。このソースはGitHubリポジトリに保存されています。
 
 <ImageFrame center shadow border>
 
-![Sources](./images/Sources2.png)
+![ソース](./images/Sources2.png)
 
 </ImageFrame>
 
-## Site sources managed by Tech Pubs and Dev Rel teams
+## 技術発行物担当チームと開発者関連チームが管理するサイトのソース
 
-* [Box Platform API][Box Platform API] - a set of files that represent the Open API 3.0 specification for the Box Platform API. These files describe up-to-date contents of the API endpoints.
-* [developer.box.com, box.dev][developer.box.com, box.dev] - a set of files that represent the microcopy, locale configuration, guides, and pages for the developer documentation site.
-* [Framework][Framework] - source for the Gatsby templates and importers for the developer documentation site.
-* [Changelog][Changelog] - markdown source for all release notes for Box Platform: APIs, SDKs, UI elements, and CLI.
+* [Box Platform API][Box Platform API] - Box Platform APIのOpen API 3.0仕様を表す一連のファイル。これらのファイルには、APIエンドポイントの最新コンテンツが記述されています。
+* [developer.box.com、box.dev][developer.box.com, box.dev] - 開発者向けドキュメントサイトのマイクロコピー、ロケール構成、ガイド、ページを表す一連のファイル。
+* [フレームワーク][Framework] - 開発者向けドキュメントサイトのGatsbyテンプレートとインポータのソース。
+* [変更ログ][Changelog] - Box Platform (API、SDK、UI Elements、CLI) に関するすべてのリリースノートに対応したマークダウンソース。
 
-## Site sources managed by other teams
+## 他のチームが管理するサイトのソース
 
-* [CLI][CLI] - source code and documentation with code samples for the Box CLI.
-* [Python SDK][Python SDK] - source code and documentation with code samples for the Box Python SDK.
-* [Node SDK][Node SDK] - source code and documentation with code samples for the Box Node SDK.
-* [Java SDK][Java SDK] - source code and documentation with code samples for the Box Java SDK.
-* [.NET SDK][.NET SDK] - source code and documentation with code samples for the Box .NET SDK.
+* [CLI][CLI] - Box CLIのコードサンプルを含むソースコードとドキュメント。
+* [Python SDK][Python SDK] - Box Python SDKのコードサンプルを含むソースコードとドキュメント。
+* [Node SDK][Node SDK] - Box Node SDKのコードサンプルを含むソースコードとドキュメント。
+* [Java SDK][Java SDK] - Box Java SDKのコードサンプルを含むソースコードとドキュメント。
+* [.NET SDK][.NET SDK] - Box .NET SDKのコードサンプルを含むソースコードとドキュメント。
 
-## Source validation
+## ソースの検証
 
-The OpenAPI 3.0 Specification is kept in separate files to make it easier for contributors to edit them. When there are any changes, the source is validated and tested before source resolving occurs.
+OpenAPI 3.0仕様は、コントリビュータが編集しやすくなるように個別のファイルに保持されています。何らかの変更があると、ソースは検証およびテストされてから解決されます。
 
-For the OpenAPI 3.0 specification we ensure that:
+Boxでは、OpenAPI 3.0仕様について、以下のことを確認しています。
 
-* files conform to the OpenAPI 3.0 specification,
-* all descriptions and titles pass spell checks for the `en-US` locale,
-* there is no insensitive language in the documentation,
-* the specification contains all the information necessary to build the site.
+* ファイルがOpenAPI 3.0仕様に準拠している
+* すべての説明とタイトルが`en-US`ロケールのスペルチェックに合格している
+* ドキュメントに不適切な用語が含まれていない
+* サイトのビルドに必要なすべての情報が仕様に含まれている
 
-All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions. The status of the build can be monitored on GitHub and in the `#devrel-build` Slack channel.
+すべての検証は、Jest、Spectral、AlexJS、GitHub Actionsを使用して処理されます。ビルドのステータスはGitHubと`#devrel-build` Slackチャンネルで監視できます。
 
-## Source resolving
+## ソースの解決
 
-As the sources from **OpenAPI 3.0 Specification** and **Microcopy, locales and** **guides** start off as multiple files, they are compiled into single files with the [Stoplight's JSON Resolver][Stoplight's JSON Resolver]. The resolved content is published back to the `en` branch of the source for the content in English. Then the translation team pick up the files, translates them, and writes them back to additional branches for each translation (for example `jp`).
+**OpenAPI 3.0仕様**、**Microcopy、ロケール**、**ガイド**のソースは複数のファイルとして公開されているため、[StoplightのJSONリゾルバ][Stoplight's JSON Resolver]を使用して1つのファイルにコンパイルされます。この解決されたコンテンツは、英語コンテンツのソースの`en`ブランチに戻されます。その後、翻訳チームがそのファイルを取得して翻訳し、各翻訳用に追加されたブランチ (`jp`など) に書き込みます。
 
 [Box Platform API]: https://github.com/box/box-openapi
 

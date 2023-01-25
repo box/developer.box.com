@@ -20,13 +20,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/flow-actions.md
 fullyTranslated: true
 ---
-# Flow Actions
+# フローアクション
 
-Salesforce toolkit includes wrappers that allow admins to invoke the following [methods][methods]. It allows Box for Salesforce users to build automated solutions, such as folder structure, using [Salesforce Flows][Salesforce Flows].
+Salesforceツールキットには、管理者が以下の[メソッド][methods]を呼び出す際に使用できるラッパーが用意されています。このツールキットを使用すると、Box for Salesforceユーザーは[Salesforceフロー][Salesforce Flows]を使用して、自動化ソリューション (フォルダ構造など) を構築できます。
 
-## Methods in Salesforce Flows
+## Salesforceフローのメソッド
 
-The list below contains all methods that can be invoked in [Salesforce Flows][Salesforce Flows].
+以下のリストには、[Salesforceフロー][Salesforce Flows]で呼び出し可能なすべてのメソッドを示しています。
 
 * `createFileFromAttachment`
 * `getObjectFolderByRecordId`

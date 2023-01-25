@@ -133,7 +133,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 \[**公開キーを追加**] ボタンをクリックし、上記の手順で生成された公開キーを入力して、\[**確認して保存**] をクリックします。
 
-## アプリの承認
+## アプリ承認
 
 アプリケーションを使用するには、Box管理者がBox管理コンソールでそのアプリケーションを承認しておく必要があります。
 
@@ -141,7 +141,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 <ImageFrame border center>
 
-![アプリの承認](../images/app-authorization.png)
+![アプリ承認](../images/app-authorization.png)
 
 </ImageFrame>
 

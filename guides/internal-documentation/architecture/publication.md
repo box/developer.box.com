@@ -17,41 +17,41 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Publication
+# 公開
 
-Once the Gatsby site is compiled, it's automatically pushed to the Netlify CDN by the Netlify CI/CD server.
+Gatsbyサイトはコンパイルされると、Netlify CI/CDサーバーによって自動的にNetlify CDNにプッシュされます。
 
-There are currently 3 live sites:
+現在、3つのライブサイトがあります。
 
-* [production][production]
-* [staging][staging]
-* [Japan][Japan]
+* [実稼動環境][production]
+* [ステージング][staging]
+* [日本][Japan]
 
-They are resolved to the Netlify Edge CDN, which is tied to the Netlify build process and handles most of the DevOps complexity in developer documentation build.
+これらのサイトはNetlify Edge CDNに解決されます。Netlify Edge CDNは、Netlifyのビルドプロセスに関連付けられており、開発者向けドキュメントのビルドにおけるDevOpsの複雑さの多くに対処します。
 
-## Service worker caching
+## サービスワーカーキャッシュ
 
-Developer documentation site is offline-first, meaning that it loads even if the user doesn't have an internet connection - as long as they've loaded the site once before.
+開発者向けドキュメントサイトはオフライン優先です。つまり、ユーザーが以前に一度そのサイトを読み込んでいれば、インターネットに接続していなくても読み込まれます。
 
-Therefore, cache invalidation is a two-pronged process, where the site first loads the cached version, and the new site content is loaded in the background.
+そのため、キャッシュの無効化は2段階のプロセスとなり、このプロセスでは、最初にキャッシュされたバージョンがサイトに読み込まれてから、新しいサイトのコンテンツがバックグラウンドで読み込まれます。
 
-## Translation process
+## 翻訳プロセス
 
-All the translations are picked up by the translation team from GitHub. They currently translate OpenAPI spec and Guides/Microcopy.
+翻訳はすべて、翻訳チームがGitHubから取得します。現在は、OpenAPI仕様とGuides/Microcopyを翻訳しています。
 
-This is the current process:
+現在のプロセスは次のとおりです。
 
 <!-- markdownlint-disable line-length -->
 
-* The Moji team once a month creates a snapshot of the `en` branch to the `en-snapshot` branch of the OpenAPI spec and markdown files.
-* The team parses the files and sends all tokens to our translation server, Mojito.
-* When all strings are translated, they are inserted to the snapshot and written to the `jp` branch, which triggers a rebuild of the Japan site.
+* Mojiチームは月に1回、OpenAPI仕様とマークダウンファイルの`en-snapshot`ブランチに対して`en`ブランチのスナップショットを作成します。
+* このチームはファイルを解析し、すべてのトークンをBoxの翻訳サーバーであるMojitoに送信します。
+* すべての文字列が翻訳されると、スナップショットに挿入され、`jp`ブランチに書き込まれます。これにより、日本サイトの再ビルドがトリガーされます。
 
 <!-- markdownlint-enable line-length -->
 
-## Staging
+## ステージング
 
-The [staging][staging] page is automatically built from the sources on the `staging` branch of the OpenAPI and content repositories to `en-staging` branches. They trigger a build of the `staging` branch of the Gatsby site.
+[ステージング][staging]ページは、OpenAPIおよびコンテンツリポジトリの`staging`ブランチにあるソースから`en-staging`ブランチに自動的にビルドされます。これにより、Gatsbyサイトの`staging`ブランチのビルドがトリガーされます。
 
 [production]: https://developer.box.com
 
