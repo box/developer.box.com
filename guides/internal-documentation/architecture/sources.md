@@ -19,7 +19,7 @@ fullyTranslated: true
 
 # ソース
 
-(開発者関連チームと協力して) 技術発行物担当チームや他のチームが管理する一連のソースは、Box開発者向けドキュメントのコンテンツをビルドするために使用されます。このソースはGitHubリポジトリに保存されています。
+(Developer Relationsチームと協力して) Technical Publicationsチームや他のチームが管理する一連のソースは、Box開発者向けドキュメントのコンテンツをビルドするために使用されます。このソースはGitHubリポジトリに保存されています。
 
 <ImageFrame center shadow border>
 
@@ -27,7 +27,7 @@ fullyTranslated: true
 
 </ImageFrame>
 
-## 技術発行物担当チームと開発者関連チームが管理するサイトのソース
+## Tech PubsチームとDev Relチームが管理するサイトのソース
 
 * [Box Platform API][Box Platform API] - Box Platform APIのOpen API 3.0仕様を表す一連のファイル。これらのファイルには、APIエンドポイントの最新コンテンツが記述されています。
 * [developer.box.com、box.dev][developer.box.com, box.dev] - 開発者向けドキュメントサイトのマイクロコピー、ロケール構成、ガイド、ページを表す一連のファイル。
