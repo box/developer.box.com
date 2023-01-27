@@ -12,12 +12,20 @@ labels:
     powershell: Powershell
     dotNet: .NET
     python: Python
-    node: Node
+    node: Node.js
     aspnet: ASPNET
     angular: Angular
     angularjs: AngularJS
     curl: cURL
     vue: Vue.js
+    r: R
+    ruby: Ruby
+    javascript: JavaScript
+    apex: APEX
+    swift: Swift
+    perl: Perl
+    php: PHP
+    cSharp: C#
 
   tags:
     all_tags: All tags
@@ -28,4 +36,7 @@ labels:
     sdk: SDK
     cli: CLI
     webhooks: Webhooks
-    user_provisioning: User Provisioning
+    onboarding_employees: Onboarding Employees
+    mobile: Mobile
+
+resetBtn: Reset filters
