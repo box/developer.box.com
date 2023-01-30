@@ -537,7 +537,7 @@
   "sample_code_catalog.labels.languages.powershell": "Powershell",
   "sample_code_catalog.labels.languages.dotNet": ".NET",
   "sample_code_catalog.labels.languages.python": "Python",
-  "sample_code_catalog.labels.languages.node": "Node",
+  "sample_code_catalog.labels.languages.node": "Node.js",
   "sample_code_catalog.labels.languages.aspnet": "ASPNET",
   "sample_code_catalog.labels.languages.angular": "Angular",
   "sample_code_catalog.labels.languages.angularjs": "AngularJS",
@@ -545,11 +545,12 @@
   "sample_code_catalog.labels.languages.vue": "Vue.js",
   "sample_code_catalog.labels.languages.r": "R",
   "sample_code_catalog.labels.languages.ruby": "Ruby",
-  "sample_code_catalog.labels.languages.javascript": "Javascript",
+  "sample_code_catalog.labels.languages.javascript": "JavaScript",
   "sample_code_catalog.labels.languages.apex": "APEX",
   "sample_code_catalog.labels.languages.swift": "Swift",
   "sample_code_catalog.labels.languages.perl": "Perl",
   "sample_code_catalog.labels.languages.php": "PHP",
+  "sample_code_catalog.labels.languages.cSharp": "C#",
   "sample_code_catalog.labels.tags.all_tags": "All tags",
   "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
   "sample_code_catalog.labels.tags.salesforce": "Salesforce",
@@ -559,5 +560,6 @@
   "sample_code_catalog.labels.tags.cli": "CLI",
   "sample_code_catalog.labels.tags.webhooks": "Webhooks",
   "sample_code_catalog.labels.tags.onboarding_employees": "Onboarding Employees",
-  "sample_code_catalog.labels.tags.mobile": "Mobile"
+  "sample_code_catalog.labels.tags.mobile": "Mobile",
+  "sample_code_catalog.resetBtn": "Reset filters"
 }
