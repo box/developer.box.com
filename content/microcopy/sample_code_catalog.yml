@@ -6,6 +6,7 @@ title: Sample Code Catalog
 labels:
   languages:
     all_languages: All languages
+    universal: Universal samples
     android: Android
     react: React
     java: Java
@@ -38,5 +39,10 @@ labels:
     webhooks: Webhooks
     onboarding_employees: Onboarding Employees
     mobile: Mobile
+    frontend: Frontend
 
 resetBtn: Reset filters
+
+noResults:
+  title: Sorry, there are no results for the current filter
+  message: Try using another filter or a different filter combination. Still can't find it? Contact Box User Services here.
