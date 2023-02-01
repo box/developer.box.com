@@ -45,4 +45,4 @@ resetBtn: Reset filters
 
 noResults:
   title: Sorry, there are no results for the current filter
-  message: Try using another filter or a different filter combination. Still can't find it? Contact Box User Services here.
+  message: Try using another filter or a different filter combination.
