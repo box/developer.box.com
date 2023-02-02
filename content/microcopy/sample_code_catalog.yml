@@ -6,6 +6,7 @@ title: Sample Code Catalog
 labels:
   languages:
     all_languages: All languages
+    universal: Universal samples
     android: Android
     react: React
     java: Java
@@ -13,7 +14,6 @@ labels:
     dotNet: .NET
     python: Python
     node: Node.js
-    aspnet: ASPNET
     angular: Angular
     angularjs: AngularJS
     curl: cURL
@@ -36,7 +36,15 @@ labels:
     sdk: SDK
     cli: CLI
     webhooks: Webhooks
-    onboarding_employees: Onboarding Employees
+    provisioning: Provisioning
     mobile: Mobile
+    frontend: Frontend
 
 resetBtn: Reset filters
+
+noResults:
+  title: Sorry, there are no results for the current filter
+  message: |-
+    Try using another filter or a different filter combination.
+    Still can't find it? Contact Box and
+  link: suggest a new sample
