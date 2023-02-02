@@ -531,6 +531,7 @@
   // title of the page
   "sample_code_catalog.title": "Sample Code Catalog",
   "sample_code_catalog.labels.languages.all_languages": "All languages",
+  "sample_code_catalog.labels.languages.universal": "Universal samples",
   "sample_code_catalog.labels.languages.android": "Android",
   "sample_code_catalog.labels.languages.react": "React",
   "sample_code_catalog.labels.languages.java": "Java",
@@ -538,7 +539,6 @@
   "sample_code_catalog.labels.languages.dotNet": ".NET",
   "sample_code_catalog.labels.languages.python": "Python",
   "sample_code_catalog.labels.languages.node": "Node.js",
-  "sample_code_catalog.labels.languages.aspnet": "ASPNET",
   "sample_code_catalog.labels.languages.angular": "Angular",
   "sample_code_catalog.labels.languages.angularjs": "AngularJS",
   "sample_code_catalog.labels.languages.curl": "cURL",
@@ -559,7 +559,11 @@
   "sample_code_catalog.labels.tags.sdk": "SDK",
   "sample_code_catalog.labels.tags.cli": "CLI",
   "sample_code_catalog.labels.tags.webhooks": "Webhooks",
-  "sample_code_catalog.labels.tags.onboarding_employees": "Onboarding Employees",
+  "sample_code_catalog.labels.tags.provisioning": "Provisioning",
   "sample_code_catalog.labels.tags.mobile": "Mobile",
-  "sample_code_catalog.resetBtn": "Reset filters"
+  "sample_code_catalog.labels.tags.frontend": "Frontend",
+  "sample_code_catalog.resetBtn": "Reset filters",
+  "sample_code_catalog.noResults.title": "Sorry, there are no results for the current filter",
+  "sample_code_catalog.noResults.message": "Try using another filter or a different filter combination.\nStill can't find it? Contact Box and",
+  "sample_code_catalog.noResults.link": "suggest a new sample"
 }
