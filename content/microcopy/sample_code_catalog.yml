@@ -43,8 +43,9 @@ labels:
 resetBtn: Reset filters
 
 noResults:
-  title: Sorry, there are no results for the current filter
+  title: Sorry, we couldn't find what you are looking for.
   message: |-
-    Try using another filter or a different filter combination.
-    Still can't find it? Contact Box and
-  link: suggest a new sample
+    Try using a different filter or filter combination.
+    Still can't find it?
+  link: Contact us
+  suggestSample: to suggest a new code sample.
