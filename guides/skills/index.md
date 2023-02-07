@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: true
 id: skills
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
@@ -41,7 +41,7 @@ The end-to-end process of a Skills application is as follows.
    service that handles the Skill payload does other actions, it should verify
    the `invocation_url` was called by Box. See the link for
    examples of doing this manually or using the SDKs.
-5. [Send the file for processing](guide://skills/examples) - The service that
+5. [Send the file for processing][2] - The service that
    handles the Skill payload sends the file URL or file content to an external
    service for processing. This service can be a third party machine learning
    system, or an in-house service.
@@ -59,3 +59,4 @@ Node.
 </Message>
 
 [1]: guide://webhooks/v2/signatures-v2
+[2]: https://github.com/box-community/Box-Custom-Skills-Starter
