@@ -563,7 +563,8 @@
   "sample_code_catalog.labels.tags.mobile": "Mobile",
   "sample_code_catalog.labels.tags.frontend": "Frontend",
   "sample_code_catalog.resetBtn": "Reset filters",
-  "sample_code_catalog.noResults.title": "Sorry, there are no results for the current filter",
-  "sample_code_catalog.noResults.message": "Try using another filter or a different filter combination.\nStill can't find it? Contact Box and",
-  "sample_code_catalog.noResults.link": "suggest a new sample"
+  "sample_code_catalog.noResults.title": "Sorry, we couldn't find what you are looking for.",
+  "sample_code_catalog.noResults.message": "Try using a different filter or filter combination.\nStill can't find it?",
+  "sample_code_catalog.noResults.link": "Contact us",
+  "sample_code_catalog.noResults.suggestSample": "to suggest a new code sample."
 }
