@@ -193,6 +193,10 @@
   "headers.primary.links.api_reference.text": "API Reference",
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/reference/",
+  // The text for the link the Sample Code App
+  "headers.primary.links.sample_code.text": "Sample Code",
+  // The url to the root of the reference - DO NOT TRANSLATE
+  "headers.primary.links.sample_code.url": "/sample-code/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
   // The URL to the new page on SDKs - DO NOT TRANSLATE
@@ -523,5 +527,44 @@
   // Label for the manage_enterprise_properties scope
   "app_button.logged_in.scopes.manage_enterprise_properties": "Manage enterprise properties",
   // Label for the manage_retention_policies scope
-  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies"
+  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies",
+  // title of the page
+  "sample_code_catalog.title": "Sample Code Catalog",
+  "sample_code_catalog.labels.languages.all_languages": "All languages",
+  "sample_code_catalog.labels.languages.universal": "Universal samples",
+  "sample_code_catalog.labels.languages.android": "Android",
+  "sample_code_catalog.labels.languages.react": "React",
+  "sample_code_catalog.labels.languages.java": "Java",
+  "sample_code_catalog.labels.languages.powershell": "PowerShell",
+  "sample_code_catalog.labels.languages.dotNet": ".NET",
+  "sample_code_catalog.labels.languages.python": "Python",
+  "sample_code_catalog.labels.languages.node": "Node.js",
+  "sample_code_catalog.labels.languages.angular": "Angular",
+  "sample_code_catalog.labels.languages.angularjs": "AngularJS",
+  "sample_code_catalog.labels.languages.curl": "cURL",
+  "sample_code_catalog.labels.languages.vue": "Vue.js",
+  "sample_code_catalog.labels.languages.r": "R",
+  "sample_code_catalog.labels.languages.ruby": "Ruby",
+  "sample_code_catalog.labels.languages.javascript": "JavaScript",
+  "sample_code_catalog.labels.languages.apex": "APEX",
+  "sample_code_catalog.labels.languages.swift": "Swift",
+  "sample_code_catalog.labels.languages.perl": "Perl",
+  "sample_code_catalog.labels.languages.php": "PHP",
+  "sample_code_catalog.labels.languages.cSharp": "C#",
+  "sample_code_catalog.labels.tags.all_tags": "All tags",
+  "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
+  "sample_code_catalog.labels.tags.salesforce": "Salesforce",
+  "sample_code_catalog.labels.tags.skills": "Skills",
+  "sample_code_catalog.labels.tags.api": "API",
+  "sample_code_catalog.labels.tags.sdk": "SDK",
+  "sample_code_catalog.labels.tags.cli": "CLI",
+  "sample_code_catalog.labels.tags.webhooks": "Webhooks",
+  "sample_code_catalog.labels.tags.provisioning": "Provisioning",
+  "sample_code_catalog.labels.tags.mobile": "Mobile",
+  "sample_code_catalog.labels.tags.frontend": "Frontend",
+  "sample_code_catalog.resetBtn": "Reset filters",
+  "sample_code_catalog.noResults.title": "Sorry, we couldn't find what you are looking for.",
+  "sample_code_catalog.noResults.message": "Try using a different filter or filter combination.\nStill can't find it?",
+  "sample_code_catalog.noResults.link": "Contact us",
+  "sample_code_catalog.noResults.suggestSample": "to suggest a new code sample."
 }
