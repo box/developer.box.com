@@ -21,6 +21,12 @@ primary:
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/reference/"
 
+    sample_code:
+      // text: The text for the link the Sample Code App
+      text: Sample Code
+      // url: The url to the root of the reference - DO NOT TRANSLATE
+      url: "/sample-code/"
+
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
       text: SDKs & Tools

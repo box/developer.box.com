@@ -37,3 +37,6 @@ changelog:
 
 app_button:
   $ref: "content/microcopy/app_button.yml"
+
+sample_code_catalog:
+  $ref: "content/microcopy/sample_code_catalog.yml"
