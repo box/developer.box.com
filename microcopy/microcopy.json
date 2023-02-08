@@ -98,9 +98,9 @@
   // The label for the max length of a parameter value
   "reference.parameter_details.max_length": "max length",
   // The label for the maximum value parameter.
-  "reference.parameter_details.max_value": "max value",
+  "reference.parameter_details.max_value": "max",
   // The label for the minimum value parameter.
-  "reference.parameter_details.min_value": "min value",
+  "reference.parameter_details.min_value": "min",
   // Describes it when there is no content type as thereis no body request or response body
   "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
