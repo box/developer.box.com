@@ -140,10 +140,10 @@ parameter_details:
   max_length: max length
 
   // max_value: The label for the maximum value parameter.
-  max_value: max value
+  max_value: max
 
   // min_value: The label for the minimum value parameter.
-  min_value: min value
+  min_value: min
 
 content_type:
   // none: |-
