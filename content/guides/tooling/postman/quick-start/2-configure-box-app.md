@@ -125,6 +125,6 @@ extra steps to set up.
   <Next>I have configured a Box app</Next>
 </Observe>
 
-[devconsole]: https://account.box.com/developers/services
+[devconsole]: https://cloud.app.box.com/developers/console
 [signup]: https://account.box.com/signup/n/developer
 [scopes]: https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/
