@@ -135,7 +135,7 @@ Boxアプリの設定が完了しました
 
 </Observe>
 
-[devconsole]: https://account.box.com/developers/services
+[devconsole]: https://cloud.app.box.com/developers/console
 
 [signup]: https://account.box.com/signup/n/developer
 

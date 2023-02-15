@@ -104,7 +104,7 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 [app-center]: https://app.box.com/services
 
-[devconsole]: https://account.box.com/developers/services
+[devconsole]: https://cloud.app.box.com/developers/console
 
 [email]: mailto:integrate@box.com
 

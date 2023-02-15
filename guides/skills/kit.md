@@ -14,11 +14,11 @@ subcategory_id: null
 is_index: false
 id: skills/kit
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: skills
 parent_id: skills
 next_page_id: skills
-previous_page_id: skills/examples
+previous_page_id: skills/invocation-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/kit.md
 fullyTranslated: true

@@ -30,12 +30,20 @@ fullyTranslated: true
 
 </Samples>
 
-<Message warning>
+## Operation details
+
+<!-- markdownlint-disable line-length -->
 
 この呼び出しは同期的に復帰します。これは、すべての子孫に大量の項目が含まれているフォルダを移動する場合にも当てはまります。つまり、非常に大きいフォルダの場合は、呼び出しが完了するまでに数分または数時間かかる可能性があるほか、移動中にツリーの一部がロックされることもあります。
 
 フォルダの移動中は、ファイルツリーの一部がロックされます。ロックされるのは、主に元のフォルダとその子孫フォルダ、および宛先フォルダです。
 
-移動操作の間は、ロックされているどのフォルダに対しても、それ以外の移動、コピー、削除、または復元操作を実行できません。
+For the duration of the move you cannot perform other move, copy, delete, or restore operation on any of the locked folders.
 
-</Message>
+## Moving a subfolder to a private folder
+
+When you attempt to move a collaborated subfolder to a private one, you will get the [`cannot_make_collaborated_subfolder_private`](../../api-calls/permissions-and-errors/common-errors.md#400-bad-request) error. In such a case, specify the ID of the user that folder belongs to setting the `owned_by.id` parameter in the request:
+
+<Samples id="put_folders_id" variant="move_private">
+
+</Samples>

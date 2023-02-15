@@ -13,10 +13,10 @@ subcategory_id: null
 is_index: false
 id: skills/invocation-url
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: skills
 parent_id: skills
-next_page_id: skills/examples
+next_page_id: skills/kit
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/skills/invocation-url.md
