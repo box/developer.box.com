@@ -64,13 +64,12 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | While uploading a file, a `content-md5` header with the SHA-1 hash of the file can be supplied to ensure that the file is not corrupted in transit. The SHA-1 hash that was supplied in the request did not match what was received in the upload. Supply a valid SHA-1 hash of the uploaded file. |
 | | |
 | **Error**    | `bad_request`|
-|**Message**  |  |  |
+|**Message**  |  |
 | **Solution** | Required parameters supplied in the API request are either missing or invalid. Check the extended error message in the response body for more details. |
 | |  |
 | **Error**    | `cannot_make_collaborated_subfolder_private` |
 | **Message**  | Cannot move a collaborated subfolder to a private folder unless the new owner is explicitly specified. |
-| **Solution** | Specify the ID of the user that the content should be transferred to by setting the `owned_by.id` field in the request.
-|
+| **Solution** | Specify the ID of the user that the content should be transferred to by setting the `owned_by.id` field in the request. |
 |||
 | **Error**    | `collaborations_not_available_on_root_folder` |
 | **Message**  | Root folder cannot be collaborated|
@@ -373,7 +372,7 @@ for solution to common errors encountered when working with the Box APIs.
 <!-- markdownlint-disable line-length -->
 
 |  |   |
-| ---- |  |
+| ---- | ---- |
 | **Error**    | `rate_limit_exceeded`    |
 | **Message**  | Request rate limit exceeded, please try again later           |
 | **Solution** | The client is performing operations too quickly and has been rate limited. Client is advised to retry their request after the amount of time specified by the `retry-after` header. There are [four rate limits](g://api-calls/permissions-and-errors/rate-limits) to be aware of. |
