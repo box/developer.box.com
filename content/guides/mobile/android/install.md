@@ -6,9 +6,16 @@ related_pages:
 # Android SDK Installation
 
 <Message type='warning'>
-As of May 31, 2023 Android SDK will no longer be supported. You can still use your existing Android SDK applications with no impact, but you won't receive new features, updates, or bug fixes.
+As of May 31, 2023 Android SDK will
+no longer be supported. You can still
+use your existing Android SDK applications
+with no impact, but you won't receive new features,
+updates, or bug fixes.
 
-If you would like to continue getting the latest and greatest Android features, we recommend using Java SDK to build apps on Android. Refer to [this][android-docs] documentation for more details.
+If you would like to continue
+getting the latest and greatest Android
+features, we recommend using Java SDK to build apps
+on Android. Refer to [this][android-docs] documentation for more details.
 </Message>
 
 The Android SDK may be obtained through several methods:
