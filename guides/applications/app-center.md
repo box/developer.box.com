@@ -120,6 +120,6 @@ your application. Then, select the "App Center" panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
-[devconsole]: https://account.box.com/developers/services
+[devconsole]: https://cloud.app.box.com/developers/console
 [email]: mailto:integrate@box.com
 [bp]: https://support.box.com/hc/en-us/sections/360009473734-Box-Partner-Resources
