@@ -29,15 +29,23 @@ fullyTranslated: true
 
 ## 公式SDKおよびCLI
 
-| プラットフォーム                          | メンテナンスの有無 | パリティの状況 |
-| --------------------------------- | --------- | ------- |
-| [Java SDK][javasdk]               | はい        | Full    |
-| [.NET SDK][dotnetsdk]             | はい        | Full    |
-| [Python SDK][pythonsdk]           | はい        | Full    |
-| [Node SDK][nodesdk]               | はい        | Full    |
-| [CLI][cli]                        | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | Full    |
-| [Android Content SDK][androidsdk] | はい        | 部分的     |
+| プラットフォーム                          | メンテナンスの有無          | パリティの状況 |
+| --------------------------------- | ------------------ | ------- |
+| [Java SDK][javasdk]               | はい                 | Full    |
+| [.NET SDK][dotnetsdk]             | はい                 | Full    |
+| [Python SDK][pythonsdk]           | はい                 | Full    |
+| [Node SDK][nodesdk]               | はい                 | Full    |
+| [CLI][cli]                        | はい                 | Full    |
+| [iOS Content SDK][iossdk]         | はい                 | Full    |
+| [Android Content SDK][androidsdk] | Until May 31, 2023 | 部分的     |
+
+<Message type="warning">
+
+As of May 31, 2023 Android SDK will no longer be supported. You can still use your existing Android SDK applications with no impact, but you won't receive new features, updates, or bug fixes.
+
+If you would like to continue getting the latest and greatest Android features, we recommend using Java SDK to build apps on Android. Refer to [this][android-docs] documentation for more details.
+
+</Message>
 
 <Message type="notice">
 
@@ -106,6 +114,8 @@ fullyTranslated: true
 [iossdk]: https://github.com/box/box-ios-sdk
 
 [androidsdk]: https://github.com/box/box-android-sdk
+
+[android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 
 [cli]: https://github.com/box/boxcli
 
