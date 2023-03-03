@@ -65,7 +65,7 @@ To configure the integration, follow the guidance below for each value.
 
 | Field | Description |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
-| Client Callback URL | Handles additional callback requests from Box after the primary request with Popup Integrations. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
+| Client Callback URL | Handles additional callback requests from Box after the primary request with [Popup Integrations][pu]. If the application specifies a file parameter in the REST method, the preliminary callback URL cannot originate from the client. As a result, a second request must be made from the client to your server so the server can send the necessary interface to the user. |
 | User Experience | Informs that the integration will open in a new window.|
 | New Window Settings | Determines if the application opens in a new tab. |
 
@@ -175,8 +175,7 @@ To make a Box integration publicly available it needs to be listed in the App
 Center. Follow the [App Center][app-center] guide for more details.
 
 [ca]: g://applications/custom-apps
-[pu]: g://applications/web-app-integrations/types/#popup-integrations
-[ssi]: g://applications/web-app-integrations/types/#server-side-integration
+[pu]: g://applications/web-app-integrations/types
 [uid]: g://getting-started/locating-values/#user-ids
 [fid]: g://getting-started/locating-values/#content-ids
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
