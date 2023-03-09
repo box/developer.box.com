@@ -5,6 +5,7 @@ related_endpoints:
 related_guides:
   - downloads/file
   - uploads/direct/file
+  - downloads/zip-archive
 required_guides:
   - shared-links/find-for-item
 related_resources: []
@@ -14,7 +15,7 @@ subcategory_id: null
 is_index: false
 id: downloads/shared-link
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads/folder
@@ -26,6 +27,13 @@ source_url: >-
 
 To download the file for a [Shared Link][shared-link], first [determine the
 file][get-file] for the link.
+
+<Message notice>
+
+You cannot use the shared link to download folders. [Create and download
+the ZIP archive][zip-archive-download] instead.
+
+</Message>
 
 Once the file ID has been determined, the file can be downloaded by passing the
 `BoxAPI` header to the API.
@@ -43,3 +51,4 @@ access to the item.
 
 [shared-link]: g://shared-links
 [get-file]: g://shared-links/find-for-item
+[zip-archive-download]: g://downloads/zip-archive

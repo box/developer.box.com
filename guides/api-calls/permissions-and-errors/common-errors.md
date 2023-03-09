@@ -152,8 +152,9 @@ for solution to common errors encountered when working with the Box APIs.
 |  |   |
 | **Error**| `user_already_collaborator`  |
 | **Message**  | User is already a collaborator  |
-| **Solution** | The user that you are attempting to collaborate in on an item is already collaborated on that item. This request is not  |
-| |   |
+| **Solution** | The user that you are attempting to collaborate in on an item is already collaborated on that item. This request is not needed.|
+| |  |
+
 <!-- i18n-disable localize-links -->
 
 <!-- markdownlint-enable line-length -->

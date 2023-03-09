@@ -14,10 +14,10 @@ subcategory_id: null
 is_index: false
 id: downloads/in-browser
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
-next_page_id: downloads
+next_page_id: downloads/zip-archive
 previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/in-browser.md
