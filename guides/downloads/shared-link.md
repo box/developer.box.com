@@ -5,6 +5,7 @@ related_endpoints:
 related_guides:
   - downloads/file
   - uploads/direct/file
+  - downloads/zip-archive
 required_guides:
   - shared-links/find-for-item
 related_resources: []
@@ -14,7 +15,7 @@ subcategory_id: null
 is_index: false
 id: downloads/shared-link
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads/folder
@@ -26,6 +27,12 @@ fullyTranslated: true
 # 共有リンクのダウンロード
 
 [共有リンク][shared-link]のファイルをダウンロードするには、最初にリンクの[ファイルを確認][get-file]します。
+
+<Message notice>
+
+You cannot use the shared link to download folders. [Create and download the ZIP archive][zip-archive-download] instead.
+
+</Message>
 
 ファイルIDが確認されたら、`BoxAPI`ヘッダーをAPIに渡して、ファイルをダウンロードできます。
 
@@ -42,3 +49,5 @@ fullyTranslated: true
 [shared-link]: g://shared-links
 
 [get-file]: g://shared-links/find-for-item
+
+[zip-archive-download]: g://downloads/zip-archive

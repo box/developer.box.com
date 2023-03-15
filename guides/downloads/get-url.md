@@ -13,7 +13,7 @@ subcategory_id: null
 is_index: false
 id: downloads/get-url
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads/folder

@@ -15,18 +15,24 @@ subcategory_id: null
 is_index: false
 id: downloads/folder
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
-next_page_id: downloads
+next_page_id: downloads/zip-archive
 previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/folder.md
 fullyTranslated: true
 ---
-# フォルダ内のすべてのファイルのダウンロード
+# Download All Files in Folder using SDKs
 
 アプリケーションによっては、1つのフォルダのすべてのファイルをダウンロードできる場合もあります。SDKとCLIを使用してこの処理を実行するには、フォルダツリー内を移動してすべてのファイルを探し、そのファイルをダウンロードする必要があります。
+
+<Message type="notice">
+
+To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
+
+</Message>
 
 <!-- markdownlint-disable line-length -->
 
