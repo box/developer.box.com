@@ -19,9 +19,10 @@ search, comment, share, tag, and most importantly edit files using Box Edit.
 ### From the web
 
 To grab your Box Embed code from the Box web app:
+
 - navigate to the folder of choice,
 - click on the ellipsis beside the folder,
-- go to **More Actions**, 
+- go to **More Actions**,
 - click **Embed Widget**.
 
 <ImageFrame border>
@@ -61,15 +62,16 @@ build it programmatically. The format for an embed snippet is as follows.
 
 ### Finding your shared link value
 
-The first step to building an embed `iframe` programmatically is to generate or
-find the value for the shared link. One way to find this value is by using the Box web app.
+The first step to building an embed `iframe` programmatically is to generate
+or find the value for the shared link. One way to find this value is by
+using the Box web app.
 
 <ImageFrame border>
   ![Box Share](./embed-share.png)
 </ImageFrame>
 
-You can also create a shared link with API using the [`PUT /files/:file_id`][3]
-or [`PUT /files/:file_id`][4].
+You can also create a shared link with API using the 
+[`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
 
 Then you can find this shared link value using the [`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the query parameter
 `fields=shared_link`.
