@@ -73,8 +73,9 @@ using the Box web app.
 You can also create a shared link with API using the 
 [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
 
-Then you can find this shared link value using the [`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the query parameter
-`fields=shared_link`.
+Then you can find this shared link value using the
+[`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the
+query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
