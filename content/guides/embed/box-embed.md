@@ -201,10 +201,10 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## Cloud Game
 
-The cloud game is a widget created to prevent clickjacking
-attacks. It's shown for embedded sites that aren’t partner integrations.
+The cloud game is a widget created to prevent clickjacking. 
+It's shown for embedded sites that aren’t partner integrations.
 In cloud game, user must drag a cloud to the correct location before an
-interaction is allowed. It makes a clickjacking attack difficult, as the
+interaction is allowed. It makes clickjacking difficult, as the
 position of the cloud and its destination are randomly generated. 
 
 <ImageFrame border>
