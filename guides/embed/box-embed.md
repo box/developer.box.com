@@ -29,25 +29,29 @@ search, comment, share, tag, and most importantly edit files using Box Edit.
 
 ### From the web
 
-To grab your Box Embed code from the Box web app, navigate to the folder of
-choice, click on the ellipsis beside the folder, go to More Actions, and click
-Embed Widget.
+To grab your Box Embed code from the Box web app:
+
+- navigate to the folder of choice,
+- click on the ellipsis beside the folder,
+- go to **More Actions**,
+- click **Embed Widget**.
 
 <ImageFrame border>
 
-![Box Embed](./box-embed.png)
+![Box Embed](./box-embed-new.png)
 
 </ImageFrame>
 
-You are presented with options to adjust the size, view, and sorting.
+The next screen allows you to configure the size, sorting, and view of
+the widget. You can also choose to hide folder path.
 
 <ImageFrame border>
 
-![Box Embed Configuration](./box-embed-2.png)
+![Box Embed Configuration](./embed-configuration.png)
 
 </ImageFrame>
 
-Once you are done customizing the embed widget, all you will need to do is copy
+Once you are done customizing the embed widget, you need to copy
 and paste the embed code into your site or web application.
 
 ## Programmatically
@@ -73,19 +77,22 @@ build it programmatically. The format for an embed snippet is as follows.
 
 ### Finding your shared link value
 
-The first step to building an embed `iframe` programmatically is to generate or
-find the value for the shared link. One way to find this value is by using the Box
-web app.
+The first step to building an embed `iframe` programmatically is to generate
+or find the value for the shared link. One way to find this value is by
+using the Box web app.
 
 <ImageFrame border>
 
-![Box Share](./box-share.png)
+![Box Share](./embed-share.png)
 
 </ImageFrame>
 
-Additionally, you can also find this shared link value through the API using the
-[`GET /files/:id`](e://get-files-id) or [`GET /folders/:id`](e://get-folders-id)
-endpoint and passing in the query parameter `fields=shared_link`.
+You can also create a shared link with API using the
+[`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
+
+Then you can find this shared link value using the
+[`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the
+query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
@@ -132,7 +139,7 @@ within an `<iframe>`:
 
 ## Expiring Embed Links
 
-For files, another option is to call the [`GET /files/:id`](e://get-files-id)
+For files, another option is to call the [`GET /files/:id`][1]
 and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
@@ -180,7 +187,7 @@ Embed interface.
 
 ```html
 <iframe
-  src="<YOUR-GENERATED-BOX-EMBED-LINK"
+  src="YOUR-GENERATED-BOX-EMBED-LINK"
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
@@ -209,6 +216,27 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 <!-- markdownlint-enable line-length -->
 
+## Cloud Game
+
+The cloud game is a widget created to prevent clickjacking.
+It's shown for embedded sites that aren’t partner integrations.
+In cloud game, user must drag a cloud to the correct location before an
+interaction is allowed. It makes clickjacking difficult, as the
+position of the cloud and its destination are randomly generated.
+
+<ImageFrame border>
+
+![Box Embed](./cloud-game.png)
+
+</ImageFrame>
+
+`postMessage()` is used on the iframe to retrieve both the embed and the
+`showCloudGame` status. If embedded, `document.hasStorageAccess()` shows
+if Box has access to cookies. If yes and the user is logged in, the cloud
+game is displayed.
+If the `showCloudGame` status is `false`, user is navigated to the login
+page.
+
 ## Custom Logo
 
 Paid Box customers have the option to remove the Box logo in the file Preview.
@@ -226,3 +254,8 @@ and **print** options might not show in mobile browsers.
 
 [logo]: https://support.box.com/hc/en-us/articles/360044193633-Customize-Your-Account-s-Branding
 <!-- i18n-enable localize-links -->
+
+[1]: e://get-files-id
+[2]: e://get-folders-id
+[3]: e://put-files-id--add-shared-link
+[4]: e://put-folders-id--add-shared-link
