@@ -24,13 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/folder.md
 fullyTranslated: true
 ---
-# Download All Files in Folder using SDKs
+# SDKを使用したフォルダ内のすべてのファイルのダウンロード
 
 アプリケーションによっては、1つのフォルダのすべてのファイルをダウンロードできる場合もあります。SDKとCLIを使用してこの処理を実行するには、フォルダツリー内を移動してすべてのファイルを探し、そのファイルをダウンロードする必要があります。
 
 <Message type="notice">
 
-To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
+ZIPアーカイブをダウンロードするには、[こちら](g://downloads/zip-archive)のガイドに従ってください。
 
 </Message>
 

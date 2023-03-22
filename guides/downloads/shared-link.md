@@ -30,7 +30,7 @@ fullyTranslated: true
 
 <Message notice>
 
-You cannot use the shared link to download folders. [Create and download the ZIP archive][zip-archive-download] instead.
+共有リンクを使用してフォルダをダウンロードすることはできません。代わりに、[ZIPアーカイブを作成してダウンロードしてください][zip-archive-download]。
 
 </Message>
 

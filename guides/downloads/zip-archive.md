@@ -23,19 +23,19 @@ fullyTranslated: true
 ---
 <!-- markdownlint-disable line-length -->
 
-# Download ZIP Archive
+# ZIPアーカイブのダウンロード
 
-To download all files in a folder or an entire folder structure, you have to create and download a ZIP archive.
+フォルダ内のすべてのファイル、またはフォルダ構造全体をダウンロードするには、ZIPアーカイブを作成してダウンロードする必要があります。
 
-## Create a ZIP Archive
+## ZIPアーカイブの作成
 
-First, you need to create a ZIP archive containing the files or the folder structure. You can include up to 10,000 file and folder IDs unless you reach the account’s upload limit.
+最初に、ファイルまたはフォルダ構造を含むZIPアーカイブを作成する必要があります。アカウントのアップロード上限に達しない限り、最大10,000のファイルまたはフォルダIDを含めることができます。
 
 <Samples id="post_zip_downloads">
 
 </Samples>
 
-The response will look similar to the following:
+レスポンスは以下のようになります。
 
 ```json
 {
@@ -46,11 +46,11 @@ The response will look similar to the following:
 }
 ```
 
-## Extract the ZIP download ID
+## ZIPダウンロードIDの抽出
 
-To download the ZIP archive, you need the ZIP download ID. You can find it in the response you got when you created the archive.
+ZIPアーカイブをダウンロードするには、ZIPダウンロードIDが必要です。これは、アーカイブの作成時に返されたレスポンスで確認できます。
 
-Go to `status_url` and copy the ID located between`zip_downloads` and `content`:
+`status_url`に移動し、`zip_downloads`と`content`の間にあるIDをコピーします。
 
 ```json
 25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew
@@ -58,19 +58,19 @@ Go to `status_url` and copy the ID located between`zip_downloads` and `content`:
 
 <Message type="notice">
 
-Download URL is valid only for a the time specified in `expires_at` parameter.
+ダウンロードURLは、`expires_at`パラメータで指定された日時まで有効です。
 
 </Message>
 
-## Download files
+## ファイルのダウンロード
 
-Place the download ID in the file location URL as in the sample below to point to the right files.
+以下のサンプルのように、ファイルの場所のURLにダウンロードIDを配置して、適切なファイルを指します。
 
 <Samples id="get_zip_downloads_id_content">
 
 </Samples>
 
-For downloads that take longer, you can monitor the download status using the [status endpoint](e://get-zip-downloads-id-status). This allows you to inspect the progress of the download as well as the number of items that might have been skipped.
+ダウンロードに時間がかかる場合は、[ステータスのエンドポイント](e://get-zip-downloads-id-status)を使用してダウンロードのステータスを監視できます。これにより、ダウンロードの進行状況のほか、スキップされた可能性のある項目の数を確認できます。
 
 <Samples id="get_zip_downloads_id_status">
 
@@ -78,6 +78,6 @@ For downloads that take longer, you can monitor the download status using the [s
 
 <Message notice>
 
-If you want to use SDKs to download the contents of the folder, follow [this](g://downloads/folder) guide.
+SDKを使用してフォルダのコンテンツをダウンロードする場合は、[こちら](g://downloads/folder)のガイドに従ってください。
 
 </Message>
