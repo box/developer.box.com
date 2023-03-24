@@ -22,10 +22,13 @@ source_url: >-
 # Box Embed
 
 Box Embed is a HTML-based framework that makes it possible to embed the entire
-Box experience anywhere people work. Box Embed provides the ability to upload,
-search, comment, share, tag, and most importantly edit files using Box Edit.
+Box Web App experience anywhere people work. Box Embed provides the ability to
+upload, search, comment, share, tag, and edit files using Box Edit.
 
 ## Configure
+
+To create the widget, the folder must be set for sharing and you
+need to have at least **Viewer** [permissions][5].
 
 ### From the web
 
@@ -43,7 +46,8 @@ To grab your Box Embed code from the Box web app:
 </ImageFrame>
 
 The next screen allows you to configure the size, sorting, and view of
-the widget. You can also choose to hide folder path.
+the widget. You can also choose to hide the folder path, and to expand
+the navigation & sidebar by default.
 
 <ImageFrame border>
 
@@ -107,6 +111,10 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
   ...
 }
 ```
+
+You can also set the page to Root Folder/All Files page. Set the URL to
+`/folder/0` instead of the share link:
+`<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`
 
 ### Parameters
 
@@ -259,3 +267,4 @@ and **print** options might not show in mobile browsers.
 [2]: e://get-folders-id
 [3]: e://put-files-id--add-shared-link
 [4]: e://put-folders-id--add-shared-link
+[5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
