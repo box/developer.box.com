@@ -27,7 +27,7 @@ source_url: >-
 The following tools are actively developed and supported by Box. These tools
 receive regular product updates, as well as security updates.
 
-## Official SDKs & CLIs
+## Download SDKs & CLIs
 
 | Platform                          | Maintained? | Parity? |
 | --------------------------------- | ----------- | ------- |
