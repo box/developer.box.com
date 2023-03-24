@@ -16,7 +16,7 @@ upload, search, comment, share, tag, and edit files using Box Edit.
 
 ## Configure
 
-To create the widget, the folder must be set for sharing and you
+To create the widget, you need to set the folder for sharing and you
 need to have at least **Viewer** [permissions][5].
 
 ### From the web
@@ -74,7 +74,7 @@ using the Box web app.
   ![Box Share](./embed-share.png)
 </ImageFrame>
 
-You can also create a shared link with API using the 
+Another way is to create a shared link with API using the 
 [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
 
 Then you can find this shared link value using the
