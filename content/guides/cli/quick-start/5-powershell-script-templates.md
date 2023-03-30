@@ -22,7 +22,7 @@ and provision such new users by adding them to the newly created
 folder structure as collaborators with viewer or uploader roles.
 
 <Message type='warning'>
-   This part of the quick start for service accounts 
+   This part of the quick start is for service accounts 
    and users with administrative privileges only. 
    Skip this step if you are not a Box administrator
    or you do not use a service account.
@@ -56,10 +56,11 @@ If you encounter issues make sure you installed both
 [PowerShell][pwsh]
 </message>
 
-### Configured Box application
+### Box CLI 
 
-You should have a Box application created.
-If you haven't done so yet, see [step 1][step 1] of this quick start guide.
+To use the script, you will need the Box CLI
+installed and configured. If you haven't done so yet, see [step 1][step 1] of
+this quick start guide.
 Alternatively, go to your [developer console][console], and follow the guide
 [Setup with OAuth 2.0][auth].
 
