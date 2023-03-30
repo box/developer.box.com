@@ -77,7 +77,10 @@ our [quick start guide][quickstart].
    or download the files from [`examples`][examples] directory.
 
    ```bash
-git clone https://github.com/box/boxcli.git \
+git clone https://github.com/box/boxcli.git
+```
+
+```bash
 cd boxcli/examples/Metadata\ Extraction/
 ```
 

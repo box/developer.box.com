@@ -90,11 +90,15 @@ be the main Box admin or co-admin.
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository 
+1. Clone the `boxcli` GitHub repository and cd into this example's folder
    or download the files from [`examples`][examples] directory.
 
    ```bash
 git clone https://github.com/box/boxcli.git
+```
+
+```bash
+cd boxcli/examples/Inactive\ Users\ Report/
 ```
 
 2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
@@ -118,19 +122,10 @@ $eventType = "LOGIN,UPLOAD,COPY,MOVE"
 
 ## Run the script
 
-Change the directory to the folder containing the script.
-In this example, it is the `Inactive Users Report` folder.
+Run the Powershell command.
 
 ```bash
-rvb@lab:~/box-cli/examples/Inactive Users Report$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Inactive Users Report>
-
+pwsh
 ```
 
 Run the script.

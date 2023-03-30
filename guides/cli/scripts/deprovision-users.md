@@ -78,11 +78,15 @@ be the main Box admin or co-admin.
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository 
+1. Clone the `boxcli` GitHub repository and cd into this example's folder
    or download the files from [`examples`][examples] directory.
 
    ```bash
 git clone https://github.com/box/boxcli.git
+```
+
+```bash
+cd boxcli/examples/User\ Deprovisioning/
 ```
 
 2. Create the list of employees for deletion in `.csv`.
@@ -157,15 +161,10 @@ Starting User Deprovisioning script...
 
 Now all you need to do is run the script.
 
-1. Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
-
+1. Run the Powershell command.
+   
    ```bash
-   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-   https://aka.ms/powershell
-   Type 'help' to get help.
-   PS /home/rvb/box-cli/examples/User Deprovisioning>
+   pwsh
    ```
 
 2. Run the script:
