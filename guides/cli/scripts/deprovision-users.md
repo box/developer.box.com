@@ -82,10 +82,7 @@ be the main Box admin or co-admin.
    or download the files from [`examples`][examples] directory.
 
    ```bash
-git clone https://github.com/box/boxcli.git
-```
-
-```bash
+git clone https://github.com/box/boxcli.git boxcli
 cd boxcli/examples/User\ Deprovisioning/
 ```
 

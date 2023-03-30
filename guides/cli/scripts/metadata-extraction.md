@@ -78,9 +78,6 @@ our [quick start guide][quickstart].
 
    ```bash
 git clone https://github.com/box/boxcli.git
-```
-
-```bash
 cd boxcli/examples/Metadata\ Extraction/
 ```
 

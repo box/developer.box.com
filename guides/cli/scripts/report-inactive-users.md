@@ -95,9 +95,6 @@ be the main Box admin or co-admin.
 
    ```bash
 git clone https://github.com/box/boxcli.git
-```
-
-```bash
 cd boxcli/examples/Inactive\ Users\ Report/
 ```
 
