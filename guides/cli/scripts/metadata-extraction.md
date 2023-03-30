@@ -73,11 +73,12 @@ our [quick start guide][quickstart].
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository 
+1. Clone the `boxcli` GitHub repository and cd into this example's folder
    or download the files from [`examples`][examples] directory.
 
    ```bash
-git clone https://github.com/box/boxcli.git
+git clone https://github.com/box/boxcli.git \
+cd boxcli/examples/Metadata\ Extraction/
 ```
 
 2. Specify the `folderID` and `userID` parameters to tell the script which
@@ -98,16 +99,10 @@ git clone https://github.com/box/boxcli.git
 
 ## Run the script
 
-1. Change the directory to the folder containing the script. 
-   In this example, it is the `Metadata Extraction` folder.
+1. Run the Powershell command.
    
    ```bash
-   rvb@lab:~/box-cli/examples/Metadata Extraction$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-   https://aka.ms/powershell
-   Type 'help' to get help.
-   PS /home/rvb/box-cli/examples/Metadata Extraction>
+   pwsh
    ```
 
 2. Run the script.
