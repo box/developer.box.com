@@ -65,12 +65,11 @@ If you encounter issues make sure you installed both
 
 </Message>
 
-### Box application
+### Box CLI
 
-To use the script, you will need a Box application
-with OAuth 2.0 authentication. If you don't have one,
-go to your [Developer Console][console], and follow the
-[Setup with OAuth 2.0][auth] guide.
+To use the script, you will need the Box CLI
+installed and configured. You can get this done by going through
+our [quick start guide][quickstart].
 
 ## Configure the script
 

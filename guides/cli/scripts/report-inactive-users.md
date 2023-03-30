@@ -81,12 +81,12 @@ If you encounter issues make sure you installed both
 
 </message>
 
-### Box application
+### Box CLI
 
-To use the script, you will need a Box application
-with OAuth 2.0 authentication. If you don't have one,
-go to your [Developer Console][console], and follow the guide
-[Setup with OAuth 2.0][auth].
+To use the script, you will need the Box CLI
+installed and configured. You can get this done by going through
+our [quick start guide][quickstart]. The user you use to login with should
+be the main Box admin or co-admin.
 
 ## Configure the script
 

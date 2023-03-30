@@ -81,7 +81,8 @@ If you encounter issues make sure you installed both
 
 ### Set up application with JWT authentication
 
-To use the script, you will need a [Box application with JWT authentication][jwtapp].
+To use the script, you will need the [Box CLI with JWT authentication][jwtapp]
+installed and configured.
 
 When creating the app, use the **Configuration** tab
 to configure the following settings:
