@@ -69,11 +69,8 @@ be the main Box admin or co-admin.
    or download the files from [`examples`][examples] directory.
 
    ```bash
-     git clone https://github.com/box/boxcli.git
-   ```
-
-   ```bash
-   cd boxcli/examples/User\ Deprovisioning/
+     git clone https://github.com/box/boxcli.git boxcli
+     cd boxcli/examples/User\ Deprovisioning/
    ```
 
 2. Create the list of employees for deletion in `.csv`.

@@ -79,10 +79,7 @@ be the main Box admin or co-admin.
 
    ```bash
      git clone https://github.com/box/boxcli.git
-   ```
-
-   ```bash
-   cd boxcli/examples/Inactive\ Users\ Report/
+     cd boxcli/examples/Inactive\ Users\ Report/
    ```
 
 2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.

@@ -65,10 +65,7 @@ our [quick start guide][quickstart].
 
    ```bash
      git clone https://github.com/box/boxcli.git
-   ```
-
-   ```bash
-   cd boxcli/examples/Metadata\ Extraction/
+     cd boxcli/examples/Metadata\ Extraction/
    ```
 
 2. Specify the `folderID` and `userID` parameters to tell the script which
