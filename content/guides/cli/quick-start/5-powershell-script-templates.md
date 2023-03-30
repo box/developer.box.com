@@ -236,14 +236,7 @@ $PersonalFolderParentID = ""
    folder.
 
    ```bash
-   rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-
-   https://aka.ms/powershell
-   Type 'help' to get help.
-
-   /home/rvb/box-cli/examples/User Creation & Provisioning>
+   pwsh
    ```
 
 2. Run the script:

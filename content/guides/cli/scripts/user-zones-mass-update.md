@@ -136,18 +136,10 @@ $adminEmail = "john@box.com"
 
 ## Run the script
 
-Change the directory to the folder containing the script. 
-In this example, it is the `Mass Update User Zones` folder.
+Run the Powershell command.
    
 ```bash
-rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Mass Update User Zones>
+pwsh
 ```
 
 Run the script.
