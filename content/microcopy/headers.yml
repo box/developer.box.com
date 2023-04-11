@@ -120,8 +120,8 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Don't miss developer sessions on building custom apps, happening 5/10 
-      at the Content Cloud Summit.
+      Don't miss developer sessions on building custom apps, happening 5/10
+       at the Content Cloud Summit.
 
     // href: |-
       The link to navigate to when the CTA is clicked
