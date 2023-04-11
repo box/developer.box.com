@@ -15,7 +15,7 @@ centered: true
 The following tools are actively developed and supported by Box. These tools
 receive regular product updates, as well as security updates.
 
-## Official SDKs & CLIs
+## Download SDKs & CLIs
 
 | Platform                          | Maintained? | Parity? |
 | --------------------------------- | ----------- | ------- |
@@ -25,10 +25,22 @@ receive regular product updates, as well as security updates.
 | [Node SDK][nodesdk]               | Yes         | Full    |
 | [CLI][cli]                        | Yes         | Full    |
 | [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | Yes         | Partial |
+| [Android Content SDK][androidsdk] | Until May 31, 2023    | Partial |
+
+<Message type='warning'>
+As of May 31, 2023 Android SDK will no
+longer be supported. You can still
+use your existing Android SDK applications
+with no impact, but you won't receive new features,
+updates, or bug fixes.
+
+If you would like to continue getting the
+latest and greatest Android features, we
+recommend using Java SDK to build apps on Android.
+Refer to [this][android-docs] documentation for more details.
+</Message>
 
 <Message type='notice'>
-
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features. For support with these
 projects please visit GitHub or [our Platform support forum][forum].
@@ -37,7 +49,6 @@ projects please visit GitHub or [our Platform support forum][forum].
 platform functionality as this becomes available on the Box Platform. Projects
 with partial API parity lack some functionality while we work on bringing
 these projects to full parity.
-
 </Message>
 
 ## Official UI Libraries
@@ -61,14 +72,12 @@ preview files on Box.
 
   <!-- markdownlint-enable line-length -->
 
-  <Message type='notice'>
-
+<Message type='notice' >
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features.  For support with these
 projects please visit GitHub or [our Platform support
 forum][forum]."
-
-  </Message>
+</Message>
 
 ## Unofficial & Community Tools
 
@@ -86,7 +95,6 @@ members. These tools do not receive regular product updates or security updates.
   <!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
-
 **Maintained:** Projects with limited maintenance are updated by Box in
 collaboration with the community. They receive irregular security updates. If
 you are a Box customer on a premium support plan, please contact customer
@@ -99,7 +107,6 @@ as new features are not automatically rolled out to these projects as they
 become available for the Box Platform. If you are a Box customer on a premium
 support plan, please contact customer services for any urgent feature requests
 for these tools.
-
 </Message>
 
 [javasdk]: https://github.com/box/box-java-sdk
@@ -108,6 +115,7 @@ for these tools.
 [nodesdk]: https://github.com/box/box-node-sdk
 [iossdk]: https://github.com/box/box-ios-sdk
 [androidsdk]: https://github.com/box/box-android-sdk
+[android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [cli]: https://github.com/box/boxcli
 [forum]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
 [browseimg]: ./browse.jpg

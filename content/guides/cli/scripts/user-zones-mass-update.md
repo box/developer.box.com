@@ -66,7 +66,8 @@ For example:
 
 ### Set up application with JWT authentication
 
-To use the script, you will need a [Box application with JWT authentication][jwtapp]. 
+To use the script, you will need the [Box CLI with JWT authentication][jwtapp]
+installed and configured. 
 
 When creating the app, use the **Configuration** tab
 to configure the following settings:
@@ -135,18 +136,10 @@ $adminEmail = "john@box.com"
 
 ## Run the script
 
-Change the directory to the folder containing the script. 
-In this example, it is the `Mass Update User Zones` folder.
+Run the Powershell command.
    
 ```bash
-rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Mass Update User Zones>
+pwsh
 ```
 
 Run the script.
@@ -158,8 +151,7 @@ Run the script.
 ### Optional flags
 
 To run the script in a simulation mode, 
-add the `DryRun` boolean flag.
-Dry run doesn't mean that API calls won't be made, but that any create/update/delete calls will be skipped.
+add the `simulate` boolean flag.
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -DryRun

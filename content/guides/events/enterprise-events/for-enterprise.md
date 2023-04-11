@@ -197,6 +197,18 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
 | `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
+| `SHIELD_SHARED_LINK_ACCESS_BLOCKED` | Access to a shared link is blocked |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_CREATE` | A shared link is created and access to the content is restricted |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_UPDATE` | A shared link is updated and access to the content is restricted |
+| `SHIELD_INFORMATION_BARRIER_ENABLED`           | A Shield information barrier is enabled                                                              |
+| `SHIELD_INFORMATION_BARRIER_DISABLED`           | A Shield information barrier is deactivated                                                       |
+| `SHIELD_INFORMATION_BARRIER_PENDING`           | A Shield information barrier is not yet active                                                              |
+| `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`           | Adding user blocked due to information barrier restrictions                        |
+| `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`           | Creating collaborations for users blocked due to information barrier restrictions   |
+| `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`   | Access to shared items blocked for users due to information barrier restrictions           |
+| `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`   | Moving items blocked due to information barrier restrictions           |
+| `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`   | Copying items blocked due to information barrier restrictions                   |
+| `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`   | Transferring items blocked due to information barrier restrictions                   |
 | `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to a signer                                                             |
 | `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled via API or UI                                                      |
 | `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers                                                        |

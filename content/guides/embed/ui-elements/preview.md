@@ -317,6 +317,102 @@ preview.addListener("rotate", data => {
 });
 ```
 
+## Annotations
+
+You can enable V4 [annotations][annotationsguide] in content preview. New
+annotations will sync in real time.
+
+To add V4 annotations to preview:
+
+1. Run `npm i box-annotations@latest`to install [box annotations][annotations].
+
+    <Message warning>
+    Box annotations version should be at least major version 4 and up.
+    </Message>
+
+2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with
+  annotation related change.
+
+    <Message warning>
+    Box UI elements should be the lowest working version that contains
+    fully working V4 annotations.
+    </Message>
+
+3. Import content preview and box annotations into your application:
+
+<!-- markdownlint-disable line-length -->
+
+```js
+import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
+
+var file_id = 'YOUR FILE ID';
+var accessToken = 'YOUR ACCESS TOKEN';
+
+/* Enable annotations in sidebar */
+var contentSidebarProps = {
+   hasActivityFeed: true,
+   features: {
+      activityFeed: {
+         annotations: {
+            enabled: true
+         }
+      }
+   },
+}
+
+var options = {
+   container: '.previewer',
+   contentSidebarProps: contentSidebarProps,
+
+   /* Enable annotations in preview */
+   enableAnnotationsDiscoverability: true,
+   enableAnnotationsImageDiscoverability: true,
+   showAnnotations: true,
+   showAnnotationsControls: true,
+   showAnnotationsDrawingCreate: true,
+};
+
+/* BoxAnnotations */
+var annotations = new BoxAnnotations();
+
+/* Box Preview */
+var contentPreviewer = new Box.ContentPreview();
+
+/* Set annotation into previewer */
+options['boxAnnotations'] = annotations;
+
+/* Show previewer */
+contentPreviewer.show(file_id, accessToken, options);
+```
+
+<!-- markdownlint-enable line-length -->
+
+<Message warning>
+The property `features: { activityFeed: { annotations: { enabled: true  } } } }
+` is subject to change in the future.
+</Message>
+
+<!-- markdownlint-disable line-length -->
+
+```html
+<link href="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.css" rel="stylesheet" type="text/css"></link>
+<script src="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.js"></script>
+
+<style>
+  .previewer {
+    border: 1px solid #eee;
+    height: 500px;
+    width: 100%;
+  }
+</style>
+
+<div class="previewer"></div>
+
+<script type="module" src="./script.js"></script>
+```
+
+<!-- markdownlint-enable line-length -->
+
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -371,3 +467,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 <!-- i18n-disable localize-links -->
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes
+[annotations]: https://github.com/box/box-annotations
+[buie]: https://github.com/box/box-ui-elements/releases/tag/v16.0.0
+[annotationsguide]: g://embed/ui-elements/annotations.md

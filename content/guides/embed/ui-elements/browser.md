@@ -14,7 +14,6 @@ alias_paths: []
 Box UI elements are supported in the following browsers.
 
 - Chrome, Firefox, Safari, and Edge (latest 2 versions)
-- Limited support for Internet Explorer 11 (requires a `ES2015/Intl polyfill`)
 - Mobile Chrome and Safari
 
 ## ES2015 `Intl` Polyfill
