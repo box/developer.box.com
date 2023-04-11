@@ -242,7 +242,7 @@
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "Don't miss developer sessions on building custom apps, happening 5/10\n at the Content Cloud Summit.\n",
+  "headers.secondary.notifications.message": "Don't miss developer sessions on building custom apps, happening May\n 9 at the Content Cloud Summit.\n",
   // The link to navigate to when the CTA is clicked
   "headers.secondary.notifications.href": "https://events.box.com/content_cloud_summit_2023?utm_source=website&utm_medium=website&utm_theme=CloudContentManagement&id=7017V000001CkwLQAS&utm_content=dev-website",
   // The text of the CTA
