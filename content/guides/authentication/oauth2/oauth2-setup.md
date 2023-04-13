@@ -52,10 +52,8 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 
 | Purpose | Details|
 |------| --------| 
-|Automation, Custom Portal| Specify if the app 
-is built by a customer or partner. |
-|Integration|  Specify the integration category,
-external system name if the app is built by a customer or partner. |
+|Automation, Custom Portal| Specify if the app is built by a customer or partner. |
+|Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
 
 <!-- markdownlint-enable line-length -->
