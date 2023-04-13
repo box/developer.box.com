@@ -50,10 +50,8 @@ need to specify further details.
 
 | Purpose | Details|
 |------| --------| 
-|Automation, Custom Portal| Specify if the app 
-is built by a customer or partner. |
-|Integration|  Specify the integration category,
-external system name if the app is built by a customer or partner. |
+|Automation, Custom Portal| Specify if the app is built by a customer or partner. |
+|Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
 
 <ImageFrame border center width="300">>
