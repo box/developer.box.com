@@ -47,7 +47,7 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 
 `accessToken`をパラメータとして取得するツールキットメソッドでは、`accessToken`の値として`null`を送信することによって、サービスアカウント資格情報を使用できます。
 
-`accessToken`に値が渡された場合、BoxへのAPI呼び出しは送信されたアクセストークンを使用して行われます。渡されるトークンが有効であるかどうか、およびトークンに関連付けられているユーザーにリクエストされた操作を実行する権限があるかどうかは、開発者が確認する必要があります。
+If a value is passed in `accessToken`, the API call to Box is done with the access token sent. It is up to the developer to ensure the token being passed is valid and the user associated with the token has permissions to perform the requested operation.
 
 <!-- i18n-enable localize-links -->
 

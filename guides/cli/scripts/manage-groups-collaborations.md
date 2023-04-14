@@ -94,16 +94,17 @@ PS /Users/user/repos/boxcli/examples>
 
 </message>
 
-### Boxアプリケーション
+### Box CLI
 
-スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+To use the script, you will need the Box CLI installed and configured. You can get this done by going through our [quick start guide][quickstart]. The user you use to login with should be the main Box admin or co-admin.
 
 ## スクリプトの構成
 
-1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
+1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
    ```bash
-   git clone https://github.com/box/boxcli.git
+   git clone https://github.com/box/boxcli.git boxcli
+   cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
    ```
 
 <!---->
@@ -137,15 +138,10 @@ PS /Users/user/repos/boxcli/examples>
 
 ## Run the script
 
-1. Change the directory to the folder containing the script. 
-   In this example, it is the `Mass Groups & Collaborations Update` folder.
-
+1. Run the Powershell command.
+   
    ```bash
-rvb@lab:~/box-cli/examples/Mass Groups & Collaborations Update$ pwsh PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-https://aka.ms/powershell
-Type 'help' to get help.
-PS /home/rvb/box-cli/examples/Mass Groups & Collaborations Update>
+   pwsh
 ````
 
 2. スクリプトを実行します。

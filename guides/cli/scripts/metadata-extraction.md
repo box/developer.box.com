@@ -59,16 +59,17 @@ PS /Users/user/repos/boxcli/examples>
 
 </Message>
 
-### Boxアプリケーション
+### Box CLI
 
-スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+To use the script, you will need the Box CLI installed and configured. You can get this done by going through our [quick start guide][quickstart].
 
 ## スクリプトの構成
 
-1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
+1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
    ```bash
    git clone https://github.com/box/boxcli.git
+   cd boxcli/examples/Metadata\ Extraction/
    ```
 
 <!---->
@@ -91,15 +92,10 @@ PS /Users/user/repos/boxcli/examples>
 
 ## スクリプトの実行
 
-1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`Metadata Extraction`フォルダになります。
+1. Run the Powershell command.
 
    ```bash
-   rvb@lab:~/box-cli/examples/Metadata Extraction$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-   https://aka.ms/powershell
-   Type 'help' to get help.
-   PS /home/rvb/box-cli/examples/Metadata Extraction>
+   pwsh
    ```
 
 2. スクリプトを実行します。

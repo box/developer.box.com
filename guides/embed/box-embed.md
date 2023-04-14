@@ -22,29 +22,36 @@ fullyTranslated: true
 ---
 # Box Embed
 
-Box EmbedはHTMLベースのフレームワークで、Boxの機能全体を埋め込み、場所を問わずに使えるようにします。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、最も重要な操作としてBox Editを使用したファイルの編集も可能になります。
+Box Embed is a HTML-based framework that makes it possible to embed the entire Box Web App experience anywhere people work. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
 
 ## 構成
 
+To create the widget, you need to set the folder for sharing and you need to have at least **Viewer** [permissions][5].
+
 ### ウェブから構成
 
-BoxウェブアプリからBox Embedのコードを取得するには、目的のフォルダに移動し、フォルダの横にある省略記号をクリックして、\[その他の操作] に移動し、\[埋め込みウィジェット] をクリックします。
+To grab your Box Embed code from the Box web app:
+
+* navigate to the folder of choice,
+* click on the ellipsis beside the folder,
+* go to **More Actions**,
+* click **Embed Widget**.
 
 <ImageFrame border>
 
-![Box Embed](./box-embed.png)
+![Box Embed](./box-embed-new.png)
 
 </ImageFrame>
 
-サイズ、表示方法、および並べ替えを調整するためのオプションが表示されます。
+The next screen allows you to configure the size, sorting, and view of the widget. You can also choose to hide the folder path, and to expand the navigation & sidebar by default.
 
 <ImageFrame border>
 
-![Box Embedの構成](./box-embed-2.png)
+![Box Embedの構成](./embed-configuration.png)
 
 </ImageFrame>
 
-埋め込みウィジェットのカスタマイズが完了したら、あとは埋め込みコードをコピーしてサイトまたはウェブアプリケーションに貼り付けるだけです。
+Once you are done customizing the embed widget, you need to copy and paste the embed code into your site or web application.
 
 ## プログラムを使用して構成
 
@@ -72,11 +79,13 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
 
 <ImageFrame border>
 
-![Boxの共有](./box-share.png)
+![Boxの共有](./embed-share.png)
 
 </ImageFrame>
 
-また、[`GET /files/:id`](e://get-files-id)または[`GET /folders/:id`](e://get-folders-id)エンドポイントを使用してクエリパラメータ`fields=shared_link`を渡すことにより、APIを介してこの共有リンクの値を検索することもできます。
+Another way is to create a shared link with API using the [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
+
+Then you can find this shared link value using the [`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
@@ -91,6 +100,8 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
   ...
 }
 ```
+
+You can also set the page to Root Folder/All Files page. Set the URL to `/folder/0` instead of the share link: `<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`
 
 ### パラメータ
 
@@ -120,7 +131,7 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 
 ## 有効期限付き埋め込みリンク
 
-ファイルの場合、[`GET /files/:id`](e://get-files-id)を呼び出し、`fields`クエリパラメータを使用して`expiring_embed_link`をリクエストすることもできます。
+ファイルの場合、[`GET /files/:id`][1]を呼び出し、`fields`クエリパラメータを使用して`expiring_embed_link`をリクエストすることもできます。
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
@@ -166,7 +177,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
 
 ```html
 <iframe
-  src="<YOUR-GENERATED-BOX-EMBED-LINK"
+  src="YOUR-GENERATED-BOX-EMBED-LINK"
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
@@ -193,6 +204,18 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 <!-- markdownlint-enable line-length -->
 
+## Cloud Game
+
+The cloud game is a widget created to prevent clickjacking. It's shown for embedded sites that aren’t partner integrations. In cloud game, user must drag a cloud to the correct location before an interaction is allowed. It makes clickjacking difficult, as the position of the cloud and its destination are randomly generated.
+
+<ImageFrame border>
+
+![Box Embed](./cloud-game.png)
+
+</ImageFrame>
+
+`postMessage()` is used on the iframe to retrieve both the embed and the `showCloudGame` status. If embedded, `document.hasStorageAccess()` shows if Box has access to cookies. If yes and the user is logged in, the cloud game is displayed. If the `showCloudGame` status is `false`, user is navigated to the login page.
+
 ## カスタムロゴ
 
 有料のBoxをお使いの場合は、ファイルのプレビューに表示されるBoxのロゴを削除できます。削除するには、**管理コンソール**の \[**Enterprise設定**]、\[**カスタム設定**] に移動し、\[**埋め込みウィジェットのカスタマイズ**] をオフに切り替えてBoxのロゴを非表示にします。
@@ -206,3 +229,13 @@ Box Embedは、モバイルブラウザ向けには最適化されていない�
 [logo]: https://support.box.com/hc/ja/articles/360044193633-会社ブランドに合わせたアカウントのカスタマイズ
 
 <!-- i18n-enable localize-links -->
+
+[1]: e://get-files-id
+
+[2]: e://get-folders-id
+
+[3]: e://put-files-id--add-shared-link
+
+[4]: e://put-folders-id--add-shared-link
+
+[5]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて

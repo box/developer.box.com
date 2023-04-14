@@ -75,7 +75,7 @@ PS /Users/user/repos/boxcli/examples>
 
 ### JWT認証を使用するアプリケーションの設定
 
-このスクリプトを使用するには、[JWT認証を使用するBoxアプリケーション][jwtapp]が必要です。
+To use the script, you will need the [Box CLI with JWT authentication][jwtapp] installed and configured.
 
 アプリを作成する際は、\[**構成**] タブで以下の設定を構成します。
 
@@ -143,17 +143,10 @@ $adminEmail = "john@box.com"
 
 ## スクリプトの実行
 
-ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`Mass Update User Zones`フォルダになります。
+Run the Powershell command.
 
 ```bash
-rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Mass Update User Zones>
+pwsh
 ```
 
 スクリプトを実行します。

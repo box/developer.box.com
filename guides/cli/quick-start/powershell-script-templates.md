@@ -27,7 +27,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 <Message type="warning">
 
-クイックスタートのこの手順は、管理者権限を持つサービスアカウントとユーザーのみを対象としています。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップしてください。
+This part of the quick start is for service accounts and users with administrative privileges only. Skip this step if you are not a Box administrator or you do not use a service account.
 
 </Message>
 
@@ -59,9 +59,9 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 </message>
 
-### 構成済みのBoxアプリケーション
+### Box CLI
 
-Boxアプリケーションを作成しておく必要があります。まだの場合は、このクイックスタートガイドの[手順1][step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+To use the script, you will need the Box CLI installed and configured. If you haven't done so yet, see [step 1][step 1] of this quick start guide. Alternatively, go to your [developer console][console], and follow the guide [Setup with OAuth 2.0][auth].
 
 ### 個人用フォルダの親フォルダの作成
 
@@ -206,14 +206,7 @@ Starting User Creation & Provisioning script...
 1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
 
    ```bash
-   rvb@lab:~/box-cli/examples/User Creation & Provisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-
-   https://aka.ms/powershell
-   Type 'help' to get help.
-
-   /home/rvb/box-cli/examples/User Creation & Provisioning>
+   pwsh
    ```
 
 2. スクリプトを実行します:

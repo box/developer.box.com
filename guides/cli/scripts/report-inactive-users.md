@@ -74,16 +74,17 @@ PS /Users/user/repos/boxcli/examples>
 
 </message>
 
-### Boxアプリケーション
+### Box CLI
 
-スクリプトを使用するには、OAuth 2.0認証を使用するBoxアプリケーションが必要です。該当するアプリケーションがない場合は、[開発者コンソール][console]に移動して、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
+To use the script, you will need the Box CLI installed and configured. You can get this done by going through our [quick start guide][quickstart]. The user you use to login with should be the main Box admin or co-admin.
 
 ## スクリプトの構成
 
-1. `boxcli` GitHubリポジトリを複製するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
+1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
    ```bash
    git clone https://github.com/box/boxcli.git
+   cd boxcli/examples/Inactive\ Users\ Report/
    ```
 
 <!---->
@@ -114,18 +115,10 @@ $eventType = "LOGIN,UPLOAD,COPY,MOVE"
 
 ## スクリプトの実行
 
-ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`Inactive Users Report`フォルダになります。
+Run the Powershell command.
 
 ```bash
-rvb@lab:~/box-cli/examples/Inactive Users Report$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Inactive Users Report>
-
+pwsh
 ```
 
 スクリプトを実行します。

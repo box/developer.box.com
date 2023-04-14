@@ -189,6 +189,9 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | 正当な理由がない場合の外部コラボレーションへの招待のブロック                                                                                |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`                     | 外部コラボレーションへの招待の承認                                                                                             |
 | `SHIELD_JUSTIFICATION_APPROVAL`                               | Shieldの正当な理由の承認                                                                                               |
+| `SHIELD_SHARED_LINK_ACCESS_BLOCKED`                           | Access to a shared link is blocked                                                                            |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_CREATE`              | A shared link is created and access to the content is restricted                                              |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_UPDATE`              | A shared link is updated and access to the content is restricted                                              |
 | `SHIELD_INFORMATION_BARRIER_ENABLED`                          | Shield情報バリアの有効化                                                                                               |
 | `SHIELD_INFORMATION_BARRIER_DISABLED`                         | Shield情報バリアの非アクティブ化                                                                                           |
 | `SHIELD_INFORMATION_BARRIER_PENDING`                          | アクティブ化前のShield情報バリア                                                                                           |
