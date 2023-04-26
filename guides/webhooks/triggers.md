@@ -72,7 +72,7 @@ fullyTranslated: true
 | `SIGN_REQUEST.COMPLETED`            | 署名リクエストが完了する。                                               | はい         | はい         |
 | `SIGN_REQUEST.DECLINED`             | 署名リクエストが拒否される。                                              | はい         | はい         |
 | `SIGN_REQUEST.EXPIRED`              | 署名リクエストの有効期限が切れる。                                           | はい         | はい         |
-| `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A signer's email is bounced.                                | はい         | はい         |
+| `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | 署名者のメールが差し戻される。                                             | はい         | はい         |
 | `WEBHOOK.DELETED`                   | Webhookが削除される。                                              | いいえ        | いいえ        |
 
 <!-- markdownlint-enable line-length -->

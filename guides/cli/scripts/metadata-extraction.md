@@ -61,11 +61,11 @@ PS /Users/user/repos/boxcli/examples>
 
 ### Box CLI
 
-To use the script, you will need the Box CLI installed and configured. You can get this done by going through our [quick start guide][quickstart].
+スクリプトを使用するには、Box CLIをインストールし、構成する必要があります。これは、[クイックスタートガイド][quickstart]の手順を実行することで行うことができます。
 
 ## スクリプトの構成
 
-1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
+1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
    ```bash
    git clone https://github.com/box/boxcli.git
@@ -92,7 +92,7 @@ To use the script, you will need the Box CLI installed and configured. You can g
 
 ## スクリプトの実行
 
-1. Run the Powershell command.
+1. PowerShellコマンドを実行します。
 
    ```bash
    pwsh

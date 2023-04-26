@@ -22,11 +22,11 @@ fullyTranslated: true
 ---
 # CLIサンプルスクリプト
 
-Box CLI scripts are designed to help you automate your tasks. Currently, the sample scripts library provides several PowerShell scripts you can use and customize. In order to run them, you will need to have the Box CLI installed and configured. You can follow the [quick start guide][quickstart] to get that done.
+Box CLIのスクリプトは、タスクの自動化に役立つよう設計されています。現在、ユーザーが使用、カスタマイズできるいくつかのPowerShellスクリプトがサンプルスクリプトライブラリで提供されています。これらのスクリプトを実行するには、Box CLIをインストールし、構成しておく必要があります。これは、[クイックスタートガイド][quickstart]に従って実行することができます。
 
 <Message type="warning">
 
-Most of the below scripts require the user you run commands with to have Box [administrative privileges][7].
+以下のスクリプトのほとんどでは、コマンドの実行に使用するユーザーにBoxの[管理者権限][7]が必要です。
 
 </Message>
 

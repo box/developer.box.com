@@ -22,20 +22,20 @@ fullyTranslated: true
 ---
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it possible to embed the entire Box Web App experience anywhere people work. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
+Box EmbedはHTMLベースのフレームワークで、Boxウェブアプリの機能全体を埋め込み、場所を問わずに使えるようにします。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、Box Editを使用したファイルの編集も可能になります。
 
 ## 構成
 
-To create the widget, you need to set the folder for sharing and you need to have at least **Viewer** [permissions][5].
+ウィジェットを作成するには、共有用のフォルダを設定する必要があるほか、**ビューアー**以上の[権限][5]が必要です。
 
 ### ウェブから構成
 
-To grab your Box Embed code from the Box web app:
+BoxウェブアプリからBox Embedのコードを取得するには:
 
-* navigate to the folder of choice,
-* click on the ellipsis beside the folder,
-* go to **More Actions**,
-* click **Embed Widget**.
+* 任意のフォルダに移動します。
+* そのフォルダの横にある省略記号をクリックします。
+* \[**その他の操作**] に移動します。
+* \[**埋め込みウィジェット**] をクリックします。
 
 <ImageFrame border>
 
@@ -43,7 +43,7 @@ To grab your Box Embed code from the Box web app:
 
 </ImageFrame>
 
-The next screen allows you to configure the size, sorting, and view of the widget. You can also choose to hide the folder path, and to expand the navigation & sidebar by default.
+次の画面で、ウィジェットのサイズ、並べ替え、表示を設定できます。また、\[フォルダパスを非表示] や \[ナビゲーションとサイドバーを展開する] をデフォルトでオンにするよう選択することもできます。
 
 <ImageFrame border>
 
@@ -51,7 +51,7 @@ The next screen allows you to configure the size, sorting, and view of the widge
 
 </ImageFrame>
 
-Once you are done customizing the embed widget, you need to copy and paste the embed code into your site or web application.
+埋め込みウィジェットのカスタマイズが完了したら、埋め込みコードをコピーしてサイトまたはウェブアプリケーションに貼り付ける必要があります。
 
 ## プログラムを使用して構成
 
@@ -83,9 +83,9 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
 
 </ImageFrame>
 
-Another way is to create a shared link with API using the [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
+また、[`PUT /files/:file_id`][3]または[`PUT /files/:file_id`][4]を使用して、APIで共有リンクを作成する方法もあります。
 
-Then you can find this shared link value using the [`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the query parameter `fields=shared_link`.
+その後、[`GET /files/:id`][1]または[`GET /folders/:id`][2]エンドポイントを使用してクエリパラメータ`fields=shared_link`を渡すことにより、この共有リンクの値を検索できます。
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
@@ -101,7 +101,7 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 }
 ```
 
-You can also set the page to Root Folder/All Files page. Set the URL to `/folder/0` instead of the share link: `<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`
+ページをルートフォルダ/\[すべてのファイル] ページに設定することもできます。URLを共有リンク`<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`ではなく`/folder/0`に設定してください。
 
 ### パラメータ
 
@@ -204,9 +204,9 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 <!-- markdownlint-enable line-length -->
 
-## Cloud Game
+## クラウド (雲) ゲーム
 
-The cloud game is a widget created to prevent clickjacking. It's shown for embedded sites that aren’t partner integrations. In cloud game, user must drag a cloud to the correct location before an interaction is allowed. It makes clickjacking difficult, as the position of the cloud and its destination are randomly generated.
+クラウド (雲) ゲームとは、クリックジャッキングを防ぐために作成されたウィジェットです。これは、パートナー統合ではない埋め込みサイトに表示されます。クラウド (雲) ゲームでは、ユーザーは、操作の許可を得るためにクラウド (雲) を適切な場所にドラッグする必要があります。このゲームでは、クラウド (雲) の位置とそのドラッグ先がランダムに生成されるため、クリックジャッキングが難しくなります。
 
 <ImageFrame border>
 
@@ -214,7 +214,7 @@ The cloud game is a widget created to prevent clickjacking. It's shown for embed
 
 </ImageFrame>
 
-`postMessage()` is used on the iframe to retrieve both the embed and the `showCloudGame` status. If embedded, `document.hasStorageAccess()` shows if Box has access to cookies. If yes and the user is logged in, the cloud game is displayed. If the `showCloudGame` status is `false`, user is navigated to the login page.
+`postMessage()`は、埋め込みと`showCloudGame`両方のステータスを取得するためにiframeで使用されます。埋め込まれている場合、`document.hasStorageAccess()`は、BoxからCookieにアクセスできるかどうかを示します。アクセスでき、ユーザーがログイン済みの場合、クラウド (雲) ゲームが表示されます。`showCloudGame`のステータスが`false`の場合、ユーザーはログインページに誘導されます。
 
 ## カスタムロゴ
 

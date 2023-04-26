@@ -75,7 +75,7 @@ PS /Users/user/repos/boxcli/examples>
 
 ### JWT認証を使用するアプリケーションの設定
 
-To use the script, you will need the [Box CLI with JWT authentication][jwtapp] installed and configured.
+このスクリプトを使用するには、[JWT認証を使用するBox CLI][jwtapp]をインストールし、構成する必要があります。
 
 アプリを作成する際は、\[**構成**] タブで以下の設定を構成します。
 
@@ -143,7 +143,7 @@ $adminEmail = "john@box.com"
 
 ## スクリプトの実行
 
-Run the Powershell command.
+PowerShellコマンドを実行します。
 
 ```bash
 pwsh

@@ -27,7 +27,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 <Message type="warning">
 
-This part of the quick start is for service accounts and users with administrative privileges only. Skip this step if you are not a Box administrator or you do not use a service account.
+クイックスタートのこの手順は、管理者権限を持つサービスアカウントとユーザーのみを対象としています。Box管理者以外のユーザーの場合、またはサービスアカウントを使用していない場合は、この手順をスキップしてください。
 
 </Message>
 
@@ -61,7 +61,7 @@ This part of the quick start is for service accounts and users with administrati
 
 ### Box CLI
 
-To use the script, you will need the Box CLI installed and configured. If you haven't done so yet, see [step 1][step 1] of this quick start guide. Alternatively, go to your [developer console][console], and follow the guide [Setup with OAuth 2.0][auth].
+スクリプトを使用するには、Box CLIをインストールし、構成する必要があります。まだの場合は、このクイックスタートガイドの[手順1][step 1]を参照してください。または、[開発者コンソール][console]に移動し、[OAuth 2.0を使用した設定][auth]ガイドに従ってください。
 
 ### 個人用フォルダの親フォルダの作成
 
