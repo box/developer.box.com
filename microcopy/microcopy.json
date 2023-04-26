@@ -242,11 +242,11 @@
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "初のBoxWorks Hackathon for Goodにご参加ください - 48時間のハッカソンへのお客様、パートナー様、開発者コミュニティの皆様のご参加をお待ちしております。The Nature Conservancyのメリットにつながります。",
+  "headers.secondary.notifications.message": "5月9日に開催されるContent Cloud Summitでカスタムアプリの構築に関する\n開発者向けセッションをお見逃しなく。\n",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https:\/\/box.com\/hack4good",
+  "headers.secondary.notifications.href": "https:\/\/events.box.com\/content_cloud_summit_2023?utm_source=website&utm_medium=website&utm_theme=CloudContentManagement&id=7017V000001CkwLQAS&utm_content=dev-website",
   // The text of the CTA
-  "headers.secondary.notifications.cta": "詳細を表示",
+  "headers.secondary.notifications.cta": "登録は無料です。",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button
