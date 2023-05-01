@@ -41,11 +41,11 @@ OAuth 2.0認証を使用してカスタムアプリを設定するには、Box E
 
 ## アプリの作成手順
 
-### 1. 開発者コンソールに移動する
+### Navigate to the Developer Console
 
-Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
+Log into Box and go to the [Developer Console][devconsole]. Select **Create New App**.
 
-### 2. アプリケーションの種類を選択する
+### Select application type
 
 アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
@@ -55,13 +55,39 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 </ImageFrame>
 
-### 3. 認証の種類とアプリ名を選択する
+### Provide basic application information
 
-\[**ユーザー認証 (OAuth 2.0)**] を選択し、アプリケーションに一意の名前を指定します。\[**アプリの作成**] をクリックします。
+<!-- markdownlint-disable line-length -->
 
-<ImageFrame border center>
+To describe your app, provide an app name and description. Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
+
+| 目的                        | Details                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Automation, Custom Portal | Specify if the app is built by a customer or partner.                                                |
+| Integration               | Specify the integration category, external system name if the app is built by a customer or partner. |
+| Other                     | Specify the app purpose and if it is built by a customer or partner.                                 |
+
+<!-- markdownlint-enable line-length -->
+
+<ImageFrame border center width="300">
 
 ![認証の選択画面](../images/custom-app-selection.png)
+
+</ImageFrame>
+
+### Select application authentication
+
+Select **User Authentication (OAuth 2.0)** and confirm with **Create App**.
+
+<Message warning>
+
+選択すると、新しいアプリケーションを作成しない限り、別の認証方法に変更できません。
+
+</Message>
+
+<ImageFrame border center width="300">
+
+![認証の選択画面](../images/custom-app-authentication-oauth.png)
 
 </ImageFrame>
 

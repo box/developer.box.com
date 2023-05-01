@@ -35,29 +35,55 @@ fullyTranslated: true
 
 ## アプリの作成手順
 
-### 1. 開発者コンソールに移動する
+### Navigate to the Developer Console
 
-Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
+Log into Box and go to the [Developer Console][devconsole]. Select **Create New App**.
 
-### 2. アプリケーションの種類を選択する
+### Select application type
 
 アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
-<ImageFrame border center>
+<ImageFrame border>
 
-![認証の選択画面](../images/select-app-type.png)
+![アプリケーションの選択画面](../images/select-app-type.png)
 
 </ImageFrame>
 
-### 3. 認証の種類とアプリケーション名を選択する
+### Provide basic application information
 
-クライアントIDとクライアントシークレットを使用してアプリケーションIDを確認する場合は、\[**サーバー認証 (クライアント資格情報許可)**] を選択します。その後、アプリケーションの名前を入力し、\[**アプリの作成**] をクリックします。
+<!-- markdownlint-disable line-length -->
+
+To describe your app, provide an app name and description. Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
+
+| 目的                        | Details                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Automation, Custom Portal | Specify if the app is built by a customer or partner.                                                |
+| Integration               | Specify the integration category, external system name if the app is built by a customer or partner. |
+| Other                     | Specify the app purpose and if it is built by a customer or partner.                                 |
+
+<ImageFrame border center width="300">
+
+> ![認証の選択画面](../images/custom-app-selection.png)
+
+</ImageFrame>
+
+<!-- markdownlint-enable line-length -->
+
+### Select application authentication
+
+Select **Server Authentication (with Client Credentials Grant)** if you would like to verify application identity with a client ID and client secret, and confirm with **Create App**.
 
 <Message warning>
 
 選択すると、新しいアプリケーションを作成しない限り、別の認証方法に変更できません。
 
 </Message>
+
+<ImageFrame border center width="300">
+
+> ![認証の選択画面](../images/custom-app-authentication-client.png)
+
+</ImageFrame>
 
 ## アプリ承認
 
