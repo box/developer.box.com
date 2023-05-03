@@ -44,11 +44,11 @@ JWT認証のしくみを確認する
 
 ## アプリの作成手順
 
-### Navigate to the Developer Console
+### 開発者コンソールへの移動
 
-Log into Box and go to the [Developer Console][devconsole]. Select **Create New App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
 
-### Select application type
+### アプリケーションの種類の選択
 
 アプリケーションの種類のリストから \[**カスタムアプリ**] を選択します。次の手順を促すモーダルが表示されます。
 
@@ -58,17 +58,17 @@ Log into Box and go to the [Developer Console][devconsole]. Select **Create New 
 
 </ImageFrame>
 
-### Provide basic application information
+### アプリケーションの基本情報の指定
 
 <!-- markdownlint-disable line-length -->
 
-To describe your app, provide an app name and description. Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
+アプリを説明するために、アプリの名前と説明を指定します。アプリの目的を選択するには、ドロップダウンリストを使用します。選択したオプションに応じて、さらに詳細を指定することが必要になる場合があります。
 
-| 目的                        | Details                                                                                              |
-| ------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Automation, Custom Portal | Specify if the app is built by a customer or partner.                                                |
-| Integration               | Specify the integration category, external system name if the app is built by a customer or partner. |
-| Other                     | Specify the app purpose and if it is built by a customer or partner.                                 |
+| 目的                 | 詳細                                               |
+| ------------------ | ------------------------------------------------ |
+| \[自動化]、\[カスタムポータル] | アプリの作成者 (お客様またはパートナー) を指定します。                    |
+| \[統合]              | 統合のカテゴリ、外部システム名のほか、アプリの作成者 (お客様またはパートナー) を指定します。 |
+| \[その他]             | アプリの目的と、アプリの作成者 (お客様またはパートナー) を指定します。            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -78,9 +78,9 @@ To describe your app, provide an app name and description. Use the drop-down lis
 
 </ImageFrame>
 
-### Select application authentication
+### アプリケーションの認証の選択
 
-Select **Server Authentication (with JWT)** if you would like to verify application identity [with a key pair][kp] and confirm with **Create App**.
+[キーペアを使用して][kp]アプリケーションIDを確認する場合は \[**サーバー認証 (JWT使用)**] を選択し、\[**アプリの作成**] で確定します。
 
 <Message warning>
 
