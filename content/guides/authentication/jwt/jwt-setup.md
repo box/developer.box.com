@@ -33,33 +33,51 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
-### 1. Navigate to the Developer Console
+### Navigate to the Developer Console
 
-Log into Box and navigate to the [Developer Console][devconsole]. 
+Log into Box and go to the [Developer Console][devconsole]. 
 Select **Create New App**.
 
-### 2. Select the type of application
+### Select application type
 
 Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
-<ImageFrame border center>
-  ![Auth selection screen](../images/select-app-type.png)
+<ImageFrame border>
+  ![Application selection screen](../images/select-app-type.png)
 </ImageFrame>
 
-### 3. Select the type of authentication and application name
+### Provide basic application information
+
+<!-- markdownlint-disable line-length -->
+
+To describe your app, provide an app name and description.
+Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
+
+| Purpose | Details|
+|------| --------| 
+|Automation, Custom Portal| Specify if the app is built by a customer or partner. |
+|Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
+|Other| Specify the app purpose and if it is built by a customer or partner. |
+
+<!-- markdownlint-enable line-length -->
+
+<ImageFrame border center width="300">>
+  ![Auth selection screen](../images/custom-app-selection.png)
+</ImageFrame>
+
+### Select application authentication
 
 Select **Server Authentication (with JWT)** if you would like to verify 
-application identity [with a key pair][kp]. Then, provide a name for your
-application and click **Create App**.
+application identity [with a key pair][kp] and confirm with **Create App**.
 
 <Message warning>
 Once you make a selection, you will not be able to change to a different 
 authentication method without creating a new application.
 </Message>
 
-<ImageFrame border width="600" center>
-  ![App name form](../images/jwt-three-options.png)
+<ImageFrame border width="300" center>
+  ![App name form](../images/custom-app-authentication-jwt.png)
 </ImageFrame>
 
 ## Public and private key pair
