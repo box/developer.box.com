@@ -240,7 +240,7 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "Elsewhere",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "Don't miss developer sessions on building custom apps, happening May\n 9 at the Content Cloud Summit.\n",
   // The link to navigate to when the CTA is clicked
