@@ -240,7 +240,7 @@
   // A short title for the dropdown to select an external link on mobile
   "headers.secondary.dropdowns.elsewhere": "外部サイトへのリンク",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "5月9日に開催されるContent Cloud Summitでカスタムアプリの構築に関する\n開発者向けセッションをお見逃しなく。\n",
   // The link to navigate to when the CTA is clicked
