@@ -29,12 +29,12 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
-### 1. Navigate to the Developer Console
+### Navigate to the Developer Console
 
-Log into Box and navigate to the 
+Log into Box and go to the 
 [Developer Console][devconsole]. Select **Create New App**.
 
-### 2. Select the type of application
+### Select application type
 
 Select **Custom App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
@@ -43,13 +43,36 @@ prompt a selection for the next step.
   ![Application selection screen](../images/select-app-type.png)
 </ImageFrame>
 
-### 3. Select the type of authentication and app name
+### Provide basic application information
 
-Select **User Authentication (OAuth 2.0)** and provide a unique name for your 
-application. Click **Create App**.
+<!-- markdownlint-disable line-length -->
 
-<ImageFrame border center>
+To describe your app, provide an app name and description.
+Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
+
+| Purpose | Details|
+|------| --------| 
+|Automation, Custom Portal| Specify if the app is built by a customer or partner. |
+|Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
+|Other| Specify the app purpose and if it is built by a customer or partner. |
+
+<!-- markdownlint-enable line-length -->
+
+<ImageFrame border center width="300">
   ![Auth selection screen](../images/custom-app-selection.png)
+</ImageFrame>
+
+### Select application authentication
+
+Select **User Authentication (OAuth 2.0)** and confirm with **Create App**.
+
+<Message warning>
+Once you make a selection, you will not be able to change to a different 
+authentication method without creating a new application.
+</Message>
+
+<ImageFrame border center width="300">
+  ![Auth selection screen](../images/custom-app-authentication-oauth.png)
 </ImageFrame>
 
 ## Basic configuration
