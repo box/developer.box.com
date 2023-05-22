@@ -44,9 +44,8 @@ meaning either an Admin or Co-Admin. See our guide on
 [User Types](g://getting-started/user-types) for more details.
 
 <Message>
-You cannot use the `user_id` of
-[Service Accounts](g://getting-started/user-types/service-account)
-in the as-user header.
+You cannot use the `user_id` of [Service Accounts]
+(g://getting-started/user-types/service-account) in the as-user header.
 </Message>
 
 ## as-user using SDKs
