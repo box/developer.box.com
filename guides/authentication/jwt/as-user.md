@@ -60,9 +60,8 @@ meaning either an Admin or Co-Admin. See our guide on
 
 <Message>
 
-You cannot use the `user_id` of
-[Service Accounts](g://getting-started/user-types/service-account)
-in the as-user header.
+You cannot use the `user_id` of [Service Accounts]
+(g://getting-started/user-types/service-account) in the as-user header.
 
 </Message>
 
