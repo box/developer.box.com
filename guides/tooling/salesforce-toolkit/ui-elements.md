@@ -21,11 +21,12 @@ source_url: >-
 ---
 # UI Elements in Salesforce
 
-The Box for Salesforce [UI Elements include][1] [content picker][2],
+The Box for Salesforce Managed package offers the following
+[UI Elements][1] as Lightning Components: [content picker][2],
 [explorer][3], [preview][4], and [uploader][5]. You can use them on
-Record Pages, Flows and Lightning Pages.
+Lightning Pages, or in Flows.
 
-## Content picker
+## Content preview
 
 [Options][6] available in picker with Box for Salesforce are:
 
