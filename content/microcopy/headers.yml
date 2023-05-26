@@ -1,8 +1,8 @@
 ---
 primary:
   links:
-    documentation: 
-      // text: 
+    documentation:
+      // text:
       text: Documentation
 
     community:
@@ -106,12 +106,12 @@ secondary:
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
-    # eventsAndWorkshops:
-    #   // text: The text for the link to events and workshops
-    #   text: Events & Workshops
+      # eventsAndWorkshops:
+      #   // text: The text for the link to events and workshops
+      #   text: Events & Workshops
 
-    #   // url: The URL to the developer blog
-    #   url: TBD
+      #   // url: The URL to the developer blog
+      #   url: TBD
 
   dropdowns:
     // docs: |-
