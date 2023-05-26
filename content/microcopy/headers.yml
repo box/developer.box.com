@@ -1,6 +1,17 @@
 ---
 primary:
   links:
+    documentation:
+      // text:
+      text: Documentation
+
+    community:
+      // text:
+      text: Community
+
+      //url:
+      url: https://forum.box.com
+
     get_started:
       // text: The text for the link to the old Get Started guides
       text: Quick Start
@@ -10,7 +21,7 @@ primary:
 
     guides:
       // text: The text for the link to the old generic guides
-      text: Guides
+      text: Developer Guides
 
       // url: The URL to the old generic guides
       url: /guides/
@@ -23,7 +34,7 @@ primary:
 
     sample_code:
       // text: The text for the link the Sample Code App
-      text: Sample Code
+      text: Sample Code Library
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/sample-code/"
 
@@ -73,43 +84,52 @@ secondary:
     // new: A short label to signify that this page is new
     new: new
 
-  links:
+  supportLinks:
+    communityForum:
+      // text: The text for the link to the developer community forum
+      text: Community Forum
+
+      // url: The URL to the developer forum
+      url: "https://forum.box.com"
+
+    changelog:
+      // text: The text for the link to the changelog
+      text: Changelog
+
+      // url: The URL to the changelog
+      url: "/changelog/"
+
+  additionalResources:
     blog:
       // text: The text for the link to the developer blog
       text: Blog
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
+      # eventsAndWorkshops:
+      #   // text: The text for the link to events and workshops
+      #   text: Events & Workshops
 
-    forum:
-      // text: The text for the link to the developer forum
-      text: Forum
-
-      // url: The URL to the developer forum
-      url: "https://community.box.com/t5/Platform-and-Development\
-        -Forum/bd-p/DeveloperForum"
-
-    feedback:
-      // text: The text for the link to the developer feedback site
-      text: Feedback
-
-      // url: The URL to the developer feedback site
-      url: "https://box.uservoice.com/forums/909778-product\
-        -feedback?category_id=330838"
+      #   // url: The URL to the developer blog
+      #   url: TBD
 
   dropdowns:
     // docs: |-
       A short title for the dropdown to select a documentation type on mobile
-    docs: Docs
+    docs: Documentation
 
     // api_reference: |-
       A title for the dropdown to select a sub-page of the API reference
       on mobile
     api_reference: API Reference
 
-    // elsewhere: |-
-      A short title for the dropdown to select an external link on mobile
-    elsewhere: Elsewhere
+    // support: |-
+      A short title for the dropdown to select an support menu item
+    support: Support
+
+    // additionalResources: |-
+      A short title for the dropdown to select an support menu item
+    additionalResources: Additional Resources
 
   notifications:
     // display: |-
@@ -120,18 +140,17 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Don't miss developer sessions on building custom apps, happening May
-       9 at the Content Cloud Summit.
+      Join the first BoxWorks Hackathon for Good - customers,
+      partners, and the developer community are welcome to participate
+      in the 48 hour Hack to benefit The Nature Conservancy.
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://events.box.com/content_cloud_summit_2023?utm_source=\
-    website&utm_medium=website&utm_theme=CloudContentManagement&id=\
-    7017V000001CkwLQAS&utm_content=dev-website"
+    href: "https://box.com/hack4good"
 
     // cta: |-
       The text of the CTA
-    cta: Register for free!
+    cta: Learn more and register!
 
     // ttl: |-
       The number of seconds to display the message. Should always
