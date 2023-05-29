@@ -41,6 +41,9 @@ fullyTranslated: true
 | 2022 | 6月    | [Preview][download-2022-q2] |
 | 2022 | 8月    | [Preview][download-2022-q3] |
 | 2022 | 9月    | [Preview][download-2022-se] |
+| 2022 | 11月   | [Preview][download-2022-q4] |
+| 2023 | 2月    | [Preview][download-2023-q1] |
+| 2023 | May   | [Preview][download-2023-q2] |
 
 [dc]: https://cloud.app.box.com/developers/console
 
@@ -67,3 +70,9 @@ fullyTranslated: true
 [download-2022-q3]: https://cloud.box.com/s/vbxxquykpqnba9hxs25cixqj1jnn2yk0
 
 [download-2022-se]: https://cloud.box.com/s/hu1kzz0b2vq8oj92bppp6q81jww1vgf8
+
+[download-2022-q4]: https://cloud.box.com/s/t78gw1xchnttuaj3hggq1lkas5nnn5hc
+
+[download-2023-q1]: https://cloud.box.com/s/lv72h8po58pci946e3fxoknvr17wihuh
+
+[download-2023-q2]: https://cloud.box.com/s/mjbim2keaxf5yalve6yxeihvttw749cq

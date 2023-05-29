@@ -76,7 +76,7 @@ API呼び出しを正常に実行する前に、サーバー認証を利用す�
 
 <ImageFrame center>
 
-![承認済みのアプリ](./images/app-authorized.png)
+![承認済みのアプリ](../images/app-authorized.png)
 
 </ImageFrame>
 
@@ -132,7 +132,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 <ImageFrame center>
 
-![CLIの構成図](./images/cli-config-diagram.png)
+![CLIの構成図](../images/cli-config-diagram.png)
 
 </ImageFrame>
 

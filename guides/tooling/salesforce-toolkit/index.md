@@ -12,7 +12,7 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: true
 id: tooling/salesforce-toolkit
 type: guide
-total_steps: 3
+total_steps: 4
 sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/salesforce-toolkit/samples
