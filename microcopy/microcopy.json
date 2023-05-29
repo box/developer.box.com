@@ -208,6 +208,11 @@
   "headers.primary.links.support.text": "Support",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.support.url": "/support/",
+  "headers.primary.links.additional_resouces.text": "Additional resources",
+  // The text for the Medium Dev Blog
+  "headers.primary.links.blog.text": "Box Developer Blog",
+  // The URL to Medium bev blog
+  "headers.primary.links.blog.url": "https://medium.com/box-developer-blog",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "Go to Dev Console",
   // The URL to the developer console
@@ -220,22 +225,26 @@
   "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
+  "headers.primary.featured.tag.text": "Featured",
+  "headers.primary.featured.title.text": "Sample Code Library",
+  "headers.primary.featured.details.text": "Test out new functionality in your Box projects\nfaster and easier with official code samples.",
+  "headers.primary.featured.cta.text": "Learn more",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
   "headers.secondary.labels.new": "new",
   // The text for the link to the developer community forum
-  "headers.secondary.supportLinks.communityForum.text": "Community Forum",
+  "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.supportLinks.communityForum.url": "https://forum.box.com",
+  "headers.secondary.support_links.community_forum.url": "https://forum.box.com",
   // The text for the link to the changelog
-  "headers.secondary.supportLinks.changelog.text": "Changelog",
+  "headers.secondary.support_links.changelog.text": "Changelog",
   // The URL to the changelog
-  "headers.secondary.supportLinks.changelog.url": "/changelog/",
+  "headers.secondary.support_links.changelog.url": "/changelog/",
   // The text for the link to the developer blog
-  "headers.secondary.additionalResources.blog.text": "Blog",
+  "headers.secondary.additional_resources.blog.text": "Blog",
   // The URL to the developer blog
-  "headers.secondary.additionalResources.blog.url": "https://medium.com/box-developer-blog",
+  "headers.secondary.additional_resources.blog.url": "https://medium.com/box-developer-blog",
   // A short title for the dropdown to select a documentation type on mobile
   "headers.secondary.dropdowns.docs": "Documentation",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
@@ -243,7 +252,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.support": "Support",
   // A short title for the dropdown to select an support menu item
-  "headers.secondary.dropdowns.additionalResources": "Additional Resources",
+  "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "false",
   // The content of the notification
