@@ -52,6 +52,21 @@ primary:
       // url: The URL to the old page on SDKs - DO NOT TRANSLATE
       url: "/support/"
 
+    additional_resouces:
+      text: Additional resources
+
+    blog:
+      // text: The text for the Medium Dev Blog
+      text: Box Developer Blog
+
+      // url: The URL to Medium bev blog
+      url: https://medium.com/box-developer-blog
+      # events_and_workshops:
+      #   // text: The text for the link to events and workshops
+      #   text: Events & Workshops
+      #   // url: The URL to the developer blog
+      #   url: TBD
+
   buttons:
     dashboard:
       // text: A longer description of getting to the developer console
@@ -74,6 +89,22 @@ primary:
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
 
+  featured:
+    tag:
+      text: Featured
+
+    title:
+      text: Sample Code Library
+
+    details:
+      text: |-
+        Test out new functionality in your Box projects
+        faster and easier with official code samples.
+
+    cta:
+      text:
+        Learn more
+
 secondary:
   images:
     logo:
@@ -84,8 +115,8 @@ secondary:
     // new: A short label to signify that this page is new
     new: new
 
-  supportLinks:
-    communityForum:
+  support_links:
+    community_forum:
       // text: The text for the link to the developer community forum
       text: Community Forum
 
@@ -99,14 +130,14 @@ secondary:
       // url: The URL to the changelog
       url: "/changelog/"
 
-  additionalResources:
+  additional_resources:
     blog:
       // text: The text for the link to the developer blog
       text: Blog
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
-      # eventsAndWorkshops:
+      # events_and_workshops:
       #   // text: The text for the link to events and workshops
       #   text: Events & Workshops
 
@@ -127,9 +158,9 @@ secondary:
       A short title for the dropdown to select an support menu item
     support: Support
 
-    // additionalResources: |-
+    // additional_resources: |-
       A short title for the dropdown to select an support menu item
-    additionalResources: Additional Resources
+    additional_resources: Additional Resources
 
   notifications:
     // display: |-
