@@ -439,6 +439,18 @@
   "footer.bottom.links.sample_license.url": "https://unlicense.org/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
   "pages.blog.minute_read": "%s min read",
+  "pages.featured_board.sampleCode.type": "sampleCode",
+  "pages.featured_board.sampleCode.cta": "Browse sample code",
+  "pages.featured_board.sampleCode.link": "/sample-code/",
+  "pages.featured_board.sampleCode.tag": "New",
+  "pages.featured_board.sampleCode.headline": "Kickstart your project",
+  "pages.featured_board.sampleCode.text": "Find useful scripts, app examples, and inspiring use\ncases in the Box Sample Code Catalog! Browse 80+\nopen-source repositories in various programming languages",
+  "pages.featured_board.community.type": "community",
+  "pages.featured_board.community.cta": "Join the Community",
+  "pages.featured_board.community.link": "https://forum.box.com/",
+  "pages.featured_board.community.tag": "Featured",
+  "pages.featured_board.community.headline": "Box Developer Community forum",
+  "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
