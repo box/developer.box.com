@@ -34,7 +34,7 @@ primary:
 
     sample_code:
       // text: The text for the link the Sample Code App
-      text: Sample Code Library
+      text: Sample Code Catalog
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/sample-code/"
 
@@ -94,16 +94,17 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Library
+      text: Sample Code Catalog
 
     details:
       text: |-
-        Test out new functionality in your Box projects
-        faster and easier with official code samples.
+        Find useful scripts, app examples, and inspiring
+        use cases! Browse 80+ open-source repositories
+        in various programming languages.
 
     cta:
       text:
-        Learn more
+        Browse sample code
 
 secondary:
   images:
