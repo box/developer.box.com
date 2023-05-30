@@ -73,15 +73,7 @@ alias_paths:
 </Centered>
 
 <Centered wide>
-  <FeaturedBoard
-    type='community'
-    cta='Join the Community'
-    link='https://forum.box.com/'
-    tag='Featured'
-    headline='Box Developer Community forum'
-    text='Connect with other learners and experts on our Box community forum. Ask and answer questions, share resources, and learn together.'
-  >
-  </FeaturedBoard>
+  <FeaturedBoard type="community" />
 </Centered>
 
 <Dark>
@@ -121,15 +113,7 @@ alias_paths:
 </Dark>
 
 <Centered wide>
-  <FeaturedBoard
-    type='sampleCode'
-    cta='Browse sample code'
-    link='/sample-code/'
-    tag='New'
-    headline='Kickstart your project'
-    text='Find useful scripts, app examples, and inspiring use cases in the Box Sample Code Catalog! Browse 80+ open-source repositories in various programming languages'
-  >
-  </FeaturedBoard>
+  <FeaturedBoard type="sampleCode" />
 </Centered>
 
 <Centered wide>
