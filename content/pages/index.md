@@ -72,6 +72,10 @@ alias_paths:
   </More>
 </Centered>
 
+<Centered wide>
+  <FeaturedBoard type="community" />
+</Centered>
+
 <Dark>
   <Centered wide>
     <Header to='/sdks-and-tools' centered>
@@ -107,6 +111,10 @@ alias_paths:
     </More>
   </Centered>
 </Dark>
+
+<Centered wide>
+  <FeaturedBoard type="sampleCode" />
+</Centered>
 
 <Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
