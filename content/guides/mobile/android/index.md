@@ -9,7 +9,7 @@ The [Box Android SDK][android-sdk] provides native access to the Box API from
 within your Android project.
 
 <Message type='warning'>
-As of May 31, 2023 Android SDK will no
+As of May 31, 2023 Android SDK is no
 longer be supported.
 You can still use your
 existing Android SDK applications with no impact,
