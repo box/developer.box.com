@@ -26,7 +26,8 @@ Before starting work with integration mappings API make sure that:
 - you installed [Box for Slack][2] in the relevant Slack workspace or
 organizations
 - you enabled the [Box as Content Layer for Slack][3] 
-- you created a [custom app][4] with application scope **Manage enterprise properties** in the [Box developer console][5]
+- you created a [custom app][4] with application scope **Manage enterprise
+properties** in the [Box developer console][5]
 
 <Message info>
  For Slack-side channel validation, the [integration mappings API][4]
@@ -52,11 +53,12 @@ management: `get`, `post`, `put`, and `delete`.
 both the ones created manually by the admin and the ones created
 automatically by the integration.
 
-
+<!-- markdownlint-disable line-length -->
 ```bash
 curl --location --request GET 'https://api.box.com/2.0/integration_mappings/slack?partner_item_id=C987654321&box_item_id=123456789' \
 --header 'Authorization: Bearer {{token}}' \
 ```
+<!-- markdownlint-enable line-length -->
 
 [`POST /integration_mappings/slack`][7] creates a new mapping. Required
 parameters are `box_item` and `partner_item`. They are references to a Box
@@ -66,6 +68,7 @@ mapping, for example `is_access_management_disabled` disables creating
 collaborations on the Box folder, assuming that the admin handles accesses
 themselves.
 
+<!-- markdownlint-disable line-length -->
 ```bash
 curl --location --request POST 'https://api.box.com/2.0/integration_mappings/slack' \
 --header 'Authorization: Bearer {{token}}' \
@@ -82,11 +85,12 @@ curl --location --request POST 'https://api.box.com/2.0/integration_mappings/sla
     }
 }'
 ```
+<!-- markdownlint-enable line-length -->
 
 [`PUT /integration_mappings/slack/:integration_mapping_id`][8] updates options
 of the mapping or the target Box folder.
 
-
+<!-- markdownlint-disable line-length -->
 ```bash
 curl --location --request PUT 'https://api.box.com/2.0/integration_mappings/slack/512521' \
 --header 'Authorization: Bearer {{token}}' \
@@ -97,6 +101,7 @@ curl --location --request PUT 'https://api.box.com/2.0/integration_mappings/slac
     }
 }'
 ```
+<!-- markdownlint-enable line-length -->
 
 [`DELETE /integration_mappings/slack/:integration_mapping_id`][9] deletes the
 integration mapping, which results in creation
@@ -104,12 +109,13 @@ of a new default channel folder when the next file is uploaded.
 When the mapping is deleted, neither the Box folder, nor the Slack channel
 are deleted.
 
-
+<!-- markdownlint-disable line-length -->
 ```bash
 curl --location --request DELETE 'https://api.box.com/2.0/integration_mappings/slack/512521' \
 --header 'Authorization: Bearer {{token}}' \
 --data-raw ''
 ```
+<!-- markdownlint-ebable line-length -->
 
 [1]: r://integration-mapping
 [2]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration

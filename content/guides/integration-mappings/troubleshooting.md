@@ -38,6 +38,7 @@ Use Box SDK to automatically create a co-owner collaboration of the
 service account on the Slack channel - Box folder mapping.
 To do so, use the below script:
 
+<!-- markdownlint-disable line-length -->
 ```bash
 const BoxSDK = require('box-node-sdk');
 const axios = require('axios');
@@ -104,6 +105,7 @@ async function runCreateSlackChannelBoxFolderMapping() {
 
 module.exports = { runCreateSlackChannelBoxFolderMapping }
 ```
+<!-- markdownlint-enable line-length -->
 
 <Message notice>
  Make sure to replace `PLACEHOLDER` with the logged value of
@@ -126,8 +128,9 @@ target Box folder.
 API returns this error if the Slack bot associated with the integration
 can not retrieve information about the channel.
 
-`Channel: example123 was not found. If it is a private channel,
-ensure that Box has been added to the channel.`
+<!-- markdownlint-disable line-length -->
+`Channel: example123 was not found. If it is a private channel, ensure that Box has been added to the channel.`
+<!-- markdownlint-enable line-length -->
 
 Ensure that the `partner_item` is correct - make sure you provide `slack_org_id`
 for org installations and `slack_workspace_id` for workspace ones. If the
@@ -135,8 +138,10 @@ channel is private, ensure that the Slack bot has been added to the channel.
 
 ## Channel not suitable for Custom File Storage (CFS)
 
+<!-- markdownlint-disable line-length -->
 `Channel: example123 is not suitable for CFS. Slack Connect channels with
 a pending Connect status can not be mapped to Box folders.`
+<!-- markdownlint-enable line-length -->
 
 Slack Connect channels (cross enterprise channels) are currently not supported
 as a part of Box as a Content Layer for Slack.
@@ -146,12 +151,15 @@ as a part of Box as a Content Layer for Slack.
 Box folder selected for mapping must be owned by the enterprise that the Admin
 is part of.
 
+<!-- markdownlint-disable line-length -->
 `Box folder: 123example cannot be mapped, because it is externally owned. Mapped folder must belong to the enterprise: example_enterprise.`
+<!-- markdownlint-enable line-length -->
 
 ## Custom File Storage (CFS) turned off
 
 API returns this error when you're trying to create the mapping for an
-enterprise that has Box for Slack installed, but did not enable [Box as a Content Layer for Slack][1].
+enterprise that has Box for Slack installed, but did not enable
+[Box as a Content Layer for Slack][1].
 
 ## Box enterprise mismatch
 
