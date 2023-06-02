@@ -37,12 +37,12 @@ receive regular product updates, as well as security updates.
 | [Node SDK][nodesdk]               | Yes         | Full    |
 | [CLI][cli]                        | Yes         | Full    |
 | [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | Until May 31, 2023    | Partial |
+| [Android Content SDK][androidsdk] | No    | Partial |
 
 <Message type='warning'>
 
-As of May 31, 2023 Android SDK will no
-longer be supported. You can still
+As of May 31, 2023 Android SDK is no
+longer supported. You can still
 use your existing Android SDK applications
 with no impact, but you won't receive new features,
 updates, or bug fixes.
