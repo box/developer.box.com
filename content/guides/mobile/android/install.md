@@ -7,7 +7,7 @@ related_pages:
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is
-no longer be supported. You can still
+no longer supported. You can still
 use your existing Android SDK applications
 with no impact, but you won't receive new features,
 updates, or bug fixes.
