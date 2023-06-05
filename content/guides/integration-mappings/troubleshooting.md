@@ -13,7 +13,7 @@ alias_paths: []
 
 # Troubleshooting - validation errors
 
-As the integration mappings API performs different types of
+As the Integration Mappings API performs different types of
 validation, some errors might occur. You can find descriptions
 and solutions to these common errors below.
 

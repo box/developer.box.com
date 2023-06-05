@@ -11,32 +11,36 @@ related_resources: []
 alias_paths: []
 ---
 
-# Integration Mapping Between Slack and Box Folders
+# Integration Mapping Between Slack Channels and Box Folders
 
-[Integration mappings API][1] allows the Box Enterprise Admin (EA) to
-manage the Slack channel and Box folder mappings within the Box enterprise.
-You can select a specific folder instead of using the default one that is
-created for the channel automatically.
+When [Box as the Content Layer][1] is enabled, Box folder is created for
+each channel, and all files sent in this channel are uploaded to
+these folders.
+The [Integration Mappings API][2] allows the Box Enterprise Admin (EA) to
+customize the upload folder of the Slack channel to any folder within
+the enterprise instead of relying on the default one.
 
 ## Prerequisites
 
-Before starting work with integration mappings API make sure that:
+Before starting work with Integration Mappings API make sure that:
 
 - you have an Admin or a Co-admin role
-- you installed [Box for Slack][2] in the relevant Slack workspace or
+- you installed [Box for Slack][3] in the relevant Slack workspace or
 organizations
-- you enabled the [Box as Content Layer for Slack][3] 
-- you created a [custom app][4] with application scope **Manage enterprise
-properties** in the [Box developer console][5]
+- you enabled the [Box as Content Layer for Slack][4] 
+- you created a [custom app][5] with application scope **Manage enterprise
+properties** in the [Box developer console][6]
+- you added the service account of _Box as Content Layer for Slack_
+as an owner or a co-owner (either with Box UI or Box SDK)
 
 <Message info>
- For Slack-side channel validation, the [integration mappings API][4]
+ For Slack-side channel validation, the [Integration Mappings API][4]
  is calling the Slack API.
 </Message>
 
 ## Authorization
 
-To authorize your integration mappings requests, add a developer token
+To authorize your Integration Mappings requests, add a developer token
 to the HTTP header of each request: `Authorization: Bearer {developer_token}`.
 
 <Message info>
@@ -44,12 +48,12 @@ to the HTTP header of each request: `Authorization: Bearer {developer_token}`.
  to generate it again.
 </Message>
 
-## Managing the integration mappings
+## Managing the Integration Mappings
 
-The integration mappings API for Slack offers standard endpoints for mapping
-management: `get`, `post`, `put`, and `delete`.
+The integration mappings API for Slack offers standard CRUD methods
+for mapping management: `get`, `post`, `put`, and `delete`.
 
-[`GET /integration_mappings/slack`][6] fetches and filters the mappings,
+[`GET /integration_mappings/slack`][7] fetches and filters the mappings,
 both the ones created manually by the admin and the ones created
 automatically by the integration.
 
@@ -60,7 +64,7 @@ curl --location --request GET 'https://api.box.com/2.0/integration_mappings/slac
 ```
 <!-- markdownlint-enable line-length -->
 
-[`POST /integration_mappings/slack`][7] creates a new mapping. Required
+[`POST /integration_mappings/slack`][8] creates a new mapping. Required
 parameters are `box_item` and `partner_item`. They are references to a Box
 folder and a Slack channel, respectively. 
 You can provide option that override the default settings for the created
@@ -87,7 +91,7 @@ curl --location --request POST 'https://api.box.com/2.0/integration_mappings/sla
 ```
 <!-- markdownlint-enable line-length -->
 
-[`PUT /integration_mappings/slack/:integration_mapping_id`][8] updates options
+[`PUT /integration_mappings/slack/:integration_mapping_id`][9] updates options
 of the mapping or the target Box folder.
 
 <!-- markdownlint-disable line-length -->
@@ -103,8 +107,8 @@ curl --location --request PUT 'https://api.box.com/2.0/integration_mappings/slac
 ```
 <!-- markdownlint-enable line-length -->
 
-[`DELETE /integration_mappings/slack/:integration_mapping_id`][9] deletes the
-integration mapping, which results in creation
+[`DELETE /integration_mappings/slack/:integration_mapping_id`][10] deletes the
+Integration Mapping, which results in creation
 of a new default channel folder when the next file is uploaded.
 When the mapping is deleted, neither the Box folder, nor the Slack channel
 are deleted.
@@ -117,12 +121,13 @@ curl --location --request DELETE 'https://api.box.com/2.0/integration_mappings/s
 ```
 <!-- markdownlint-ebable line-length -->
 
-[1]: r://integration-mapping
-[2]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
-[3]: r://get-integration-mappings-slack
-[4]: g://applications/custom-apps
-[5]: https://app.box.com/developers/console
-[6]: r://get-integration-mappings-slack
-[7]: r://post-integration-mappings-slack
-[8]: r://put-integration-mappings-slack
-[9]: r://delete-integration-mappings-slack
+[1]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
+[2]: r://integration-mapping
+[3]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
+[4]: r://get-integration-mappings-slack
+[5]: g://applications/custom-apps
+[6]: https://app.box.com/developers/console
+[7]: r://get-integration-mappings-slack
+[8]: r://post-integration-mappings-slack
+[9]: r://put-integration-mappings-slack
+[10]: r://delete-integration-mappings-slack
