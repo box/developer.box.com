@@ -17,15 +17,15 @@ fullyTranslated: true
 ---
 <!-- does not need translation -->
 
-# Notification
+# 通知
 
-The Notification element is the orange bar located at the top of the site used to provide visitors an important message or alert. Patterned after the orange bar on `box.com`, it can be configured with a few pieces of information.
+通知要素は、閲覧者に重要なメッセージまたはアラートを表示するために使用される、サイト上部にあるオレンジ色のバーです。`box.com`のオレンジ色のバーに、いくつかの情報で構成できます。
 
-## Display
+## 表示
 
-Display is a boolean that determines whether we show the bar. Our framework does not recognize booleans in Microcopy, so you must provide the boolean in all lowercase and wrapped in double quotes; `"true"` or `"false"`.
+表示 (display) は、Boxでこのバーを表示するかどうかを決定するブール値です。BoxのフレームワークではMicrocopyのブール値が認識されないため、このブール値をすべて小文字、かつ二重引用符で囲んで (`"true"`または`"false"`) 指定する必要があります。
 
-**Example**:
+**例**:
 
 ```yaml
 display: "false"
@@ -33,11 +33,11 @@ display: "false"
 
 ## メッセージ
 
-The message is meant to be a short sentence that provides the information we want a user to know. There is no maximum length, but bear in mind that the longer the message, the more real estate it will take up on smaller modalities, especially mobile phones.
+メッセージ (message) は、ユーザーに知らせたい情報を示す短い文です。長さに制限はありませんが、メッセージが長くなるほど、小さな画面 (特に携帯電話) では占有する領域が大きくなることに注意する必要があります。
 
-Your best bet is to test locally and use the browser's responsive tester in the Chrome Developer Tools to decide if the notification is too long or not.
+最善の方法として、ローカルでテストし、Chromeデベロッパーツールでブラウザのレスポンシブテスターを使用して、通知が長すぎないかどうかを判断することをお勧めします。
 
-**Example**:
+**例**:
 
 ```yaml
 message: >
@@ -48,10 +48,10 @@ message: >
 
 ## HREF
 
-The href is the URL you want the user to visit when they click the CTA. This can be any fully qualified URL, i.e. `https://box.com`, `https://developer.box.
-com/guides`, or `https://github.com/box/sdks`.
+hrefは、ユーザーがCTAをクリックしたときにアクセス先となるURLです。完全修飾URL (`https://box.com`、`https://developer.box.
+com/guides`、`https://github.com/box/sdks`など) を指定できます。
 
-**Example**:
+**例**:
 
 ```yaml
 href: "https://box.com/hack4good"
@@ -59,9 +59,9 @@ href: "https://box.com/hack4good"
 
 ## CTA
 
-The CTA is a short slug that will link the the href above. It should be short and designed to convince the user they really want to click it.
+CTAは、上記のhrefにリンクする短いフレーズです。短く、ユーザーがクリックしたくなるように指定します。
 
-**Example**:
+**例**:
 
 ```yaml
 cta: Learn more and register!
@@ -69,17 +69,17 @@ cta: Learn more and register!
 
 ## TTL
 
-The component gives you the ability to auto-hide the bar after a prescribed number of seconds. Typically, we'll leave this set to 0 in order to leave it there until someone clicks the close button. Our framework does not like integers in microcopy, so you must wrap the integer in double quotes.
+このコンポーネントを使用すると、所定の秒数が経過した後にバーを自動で非表示にできます。通常は、ユーザーが閉じるボタンをクリックするまで表示されたままにしておくために、0に設定されたままになります。Boxのフレームワークでは、Microcopyで整数をなるべく受け付けないようにしているため、この整数は二重引用符で囲む必要があります。
 
-**Example**:
+**例**:
 
 ```yaml
 ttl: "0"
 ```
 
-## How to make changes
+## 変更方法
 
-All settings are located in the `/content/microcopy/headers.yml` file in the `developer.box.com` repository. Update the settings and follow best practices to push your updates.
+すべての設定は、`developer.box.com`リポジトリの`/content/microcopy/headers.yml`ファイルにあります。設定を更新し、ベストプラクティスに従って更新をプッシュします。
 
 ```yaml
 notifications:

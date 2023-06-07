@@ -126,7 +126,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
   4EWshcyYYBhDbJmYMrq61RtU_kvBe5P..."></iframe>
 ```
 
-## カスタマイズされたプレビューアー  (UI Element)
+## カスタマイズされたプレビューアー (UI Element)
 
 高度なプレビューのカスタマイズ機能やイベント処理機能を活用するには、Box [UI Preview Element](guide://embed/ui-elements/preview/)を使用します。
 

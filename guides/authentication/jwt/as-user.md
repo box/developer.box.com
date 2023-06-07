@@ -50,11 +50,11 @@ curl https://api.box.com/2.0/folders/0 \
 
 </ImageFrame>
 
-Additionally, the authenticated user needs to be a user with Admin permissions, meaning either an Admin or Co-Admin. See our guide on [User Types](g://getting-started/user-types) for more details.
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者または共同管理者である必要があります。詳細については、[ユーザータイプ](g://getting-started/user-types)のガイドを参照してください。
 
 <Message>
 
-You cannot use the `user_id` of [Service Accounts](g://getting-started/user-types/service-account) in the as-user header.
+as-userヘッダーでは[サービスアカウント](g://getting-started/user-types/service-account)の`user_id`を使用できません。
 
 </Message>
 

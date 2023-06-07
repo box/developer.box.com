@@ -20,15 +20,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/salesforce-toolkit/ui-elements.md
 fullyTranslated: true
 ---
-# UI Elements in Salesforce
+# SalesforceのUI Elements
 
-The Box for Salesforce managed package offers the following [UI Elements][1] as Lightning Components: [content picker][2], [explorer][3], [preview][4], and [uploader][5]. You can use them on Lightning Pages, or in Flows.
+Box for Salesforce管理パッケージでは、[Content Picker][2]、[エクスプローラ][3]、[プレビュー][4]、[アップローダー][5]の[UI Elements][1]がLightningコンポーネントとして提供されます。これらのUI ElementsはLightningページまたはLightningフローで使用できます。
 
-## Content picker
+## Content Picker
 
-[Options][6] available in picker with Box for Salesforce are:
+Box for SalesforceのPickerで使用できる[オプション][6]は以下のとおりです。
 
-* `folderId` - if the lightning component is on a record page, it defaults to the record folder
+* `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `chooseButtonLabel`
 * `cancelButtonLabel`
 * `canSetShareAccess`
@@ -36,11 +36,11 @@ The Box for Salesforce managed package offers the following [UI Elements][1] as 
 * `canUpload`
 * `maxSelectable`
 
-## Content explorer
+## コンテンツエクスプローラ
 
-[Options][7] available in explorer with Box for Salesforce are:
+Box for Salesforceのエクスプローラで使用できる[オプション][7]は以下のとおりです。
 
-* `folderId` - if the lightning component is on a record page, it defaults to the record folder
+* `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `canSetShareAccess`
 * `canCreateNewFolder`
 * `canUpload`
@@ -50,18 +50,18 @@ The Box for Salesforce managed package offers the following [UI Elements][1] as 
 * `canRename`
 * `canShare`
 
-## Content preview
+## コンテンツプレビュー
 
-[Options][8] available in preview with Box for Salesforce are:
+Box for Salesforceのプレビューで使用できる[オプション][8]は以下のとおりです。
 
-* `fileId` ([find your file ID][9])
-* **File Id API Field Name** - Salesforce specific; on a record page, you can use an API field name that holds the file ID to be displayed
+* `fileId` ([ファイルIDの確認][9])
+* **ファイルIDのAPIフィールド名** - Salesforce固有。レコードページでは、表示するファイルIDを保持するAPIフィールド名を使用できます
 
-## Content uploader
+## コンテンツアップローダー
 
-[Options][10] available in uploader with Box for Salesforce are:
+Box for Salesforceのアップローダーで使用できる[オプション][10]は以下のとおりです。
 
-* `folderId` - if the lightning component is on a record page, it defaults to the record folder
+* `folderId` - Lightningコンポーネントがレコードページにある場合は、デフォルトでレコードフォルダになります
 * `fileLimit`
 
 [1]: g://embed/ui-elements
