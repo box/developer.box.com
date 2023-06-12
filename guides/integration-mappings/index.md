@@ -1,5 +1,5 @@
 ---
-rank: 300
+rank: 155
 related_endpoints:
   - delete_integration_mappings_slack_id
   - get_integration_mappings_slack
@@ -14,17 +14,17 @@ subcategory_id: null
 is_index: true
 id: integration-mappings
 type: guide
-total_steps: 2
+total_steps: 0
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: integration-mappings/troubleshooting
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/0-index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/index.md
 ---
 # Integration Mappings
 
-With [integration mappings][1], you can manage where content from partner apps
+With [Integration Mappings][1], you can manage where content from partner apps
 is stored in Box.
 
 This feature currently only supports [Box as Content layer for Slack][2].
