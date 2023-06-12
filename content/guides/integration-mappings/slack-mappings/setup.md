@@ -30,7 +30,7 @@ organizations.
 2. Enable the [Box as Content Layer for Slack][2].
 3. Make sure the service account you are using is
 a collaborator on the folder that will be mapped.
-For details, see [Set service account as co-owner][3]
+For details, see [Set service account as co-owner][3].
 
 ## Create Box application
 
@@ -41,7 +41,7 @@ enable the **Manage enterprise properties** application
 scope under **Configuration** > **Application Scopes**. 
 
 <Message info>
- For Slack-side channel validation, the [Integration Mappings API][4]
+ For Slack-side channel validation, the [Integration Mappings API][6]
  is calling the Slack API.
 </Message>
 
@@ -49,9 +49,9 @@ scope under **Configuration** > **Application Scopes**.
 
 To authorize your Integration Mappings requests:
 
-1. Navigate to the [custom app][6] that you
+1. Navigate to the [custom app][7] that you
 have created as one of the prerequisites.
-2. Generate a [developer token][7] and add it to
+2. Generate a [developer token][8] and add it to
 the HTTP header of each request: 
 
 ```bash
@@ -64,9 +64,10 @@ Authorization: Bearer {developer_token}
 </Message>
 
 [1]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
-[2]: r://get-integration-mappings-slack
+[2]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
 [3]: g://integration-mappings/slack-mappings/create-mapping#set-service-account-as-co-owner
 [4]: g://authentication/oauth2/oauth2-setup
 [5]: https://app.box.com/developers/console
-[6]: g://applications/custom-apps
-[7]: g://authentication/tokens/developer-tokens
+[6]: e://get-integration-mappings-slack
+[7]: g://applications/custom-apps
+[8]: g://authentication/tokens/developer-tokens
