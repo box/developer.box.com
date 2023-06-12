@@ -1,5 +1,5 @@
 ---
-rank: 30
+rank: 155
 related_endpoints:
  - delete_integration_mappings_slack_id
  - get_integration_mappings_slack
