@@ -12,7 +12,8 @@ and integrations with Box Platform are answered.
 
 For developer support, please reach out to us via one of our channels:
 
-- [Box Developer Community][forum]: For support with code, technical integrations, and general requests.
+- [Box Developer Community][forum]: For support with code, technical
+  integrations, and general requests.
 - [Twitter][twitter]: For general questions and support.
 - [File a support ticket][support]: For account specific questions and support.
 
