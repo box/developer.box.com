@@ -65,7 +65,7 @@ Authorization: Bearer {developer_token}
 
 [1]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
 [2]: r://get-integration-mappings-slack
-[3]: g://integration-mappings/slack-mappings/create-mappings#set-service-account-as-co-owner
+[3]: g://integration-mappings/slack-mappings/create-mapping#set-service-account-as-co-owner
 [4]: g://authentication/oauth2/oauth2-setup
 [5]: https://app.box.com/developers/console
 [6]: g://applications/custom-apps
