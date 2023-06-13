@@ -181,12 +181,15 @@
   "guides.titles.on_this_page": "On this page",
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "Get started",
+  "headers.primary.links.documentation.text": "Documentation",
+  "headers.primary.links.community.text": "Community",
+  "headers.primary.links.community.url": "https://forum.box.com",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
   "headers.primary.links.get_started.url": "/guides/applications/",
   // The text for the link to the old generic guides
-  "headers.primary.links.guides.text": "Guides",
+  "headers.primary.links.guides.text": "Developer Guides",
   // The URL to the old generic guides
   "headers.primary.links.guides.url": "/guides/",
   // The text for the link the new API Reference docs
@@ -194,7 +197,7 @@
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/reference/",
   // The text for the link the Sample Code App
-  "headers.primary.links.sample_code.text": "Sample Code",
+  "headers.primary.links.sample_code.text": "Sample Code Catalog",
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.sample_code.url": "/sample-code/",
   // The text for the link to the old page on SDKs
@@ -205,6 +208,11 @@
   "headers.primary.links.support.text": "Support",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.support.url": "/support/",
+  "headers.primary.links.additional_resouces.text": "Additional resources",
+  // The text for the Medium Dev Blog
+  "headers.primary.links.blog.text": "Box Developer Blog",
+  // The URL to Medium bev blog
+  "headers.primary.links.blog.url": "https://medium.com/box-developer-blog",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "Go to Dev Console",
   // The URL to the developer console
@@ -217,36 +225,42 @@
   "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
+  "headers.primary.featured.tag.text": "Featured",
+  "headers.primary.featured.title.text": "Sample Code Catalog",
+  "headers.primary.featured.details.text": "Find useful scripts, app examples, and inspiring\nuse cases! Browse 80+ open-source repositories\nin various programming languages.",
+  "headers.primary.featured.cta.text": "Browse sample code",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
   "headers.secondary.labels.new": "new",
-  // The text for the link to the developer blog
-  "headers.secondary.links.blog.text": "Blog",
-  // The URL to the developer blog
-  "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
-  // The text for the link to the developer forum
-  "headers.secondary.links.forum.text": "Forum",
+  // The text for the link to the developer community forum
+  "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
-  // The text for the link to the developer feedback site
-  "headers.secondary.links.feedback.text": "Feedback",
-  // The URL to the developer feedback site
-  "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
+  "headers.secondary.support_links.community_forum.url": "https://forum.box.com",
+  // The text for the link to the changelog
+  "headers.secondary.support_links.changelog.text": "Changelog",
+  // The URL to the changelog
+  "headers.secondary.support_links.changelog.url": "/changelog/",
+  // The text for the link to the developer blog
+  "headers.secondary.additional_resources.blog.text": "Blog",
+  // The URL to the developer blog
+  "headers.secondary.additional_resources.blog.url": "https://medium.com/box-developer-blog",
   // A short title for the dropdown to select a documentation type on mobile
-  "headers.secondary.dropdowns.docs": "Docs",
+  "headers.secondary.dropdowns.docs": "Documentation",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
   "headers.secondary.dropdowns.api_reference": "API Reference",
-  // A short title for the dropdown to select an external link on mobile
-  "headers.secondary.dropdowns.elsewhere": "Elsewhere",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.support": "Support",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "false",
   // The content of the notification
-  "headers.secondary.notifications.message": "Don't miss developer sessions on building custom apps, happening May\n 9 at the Content Cloud Summit.\n",
+  "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https://events.box.com/content_cloud_summit_2023?utm_source=website&utm_medium=website&utm_theme=CloudContentManagement&id=7017V000001CkwLQAS&utm_content=dev-website",
+  "headers.secondary.notifications.href": "https://box.com/hack4good",
   // The text of the CTA
-  "headers.secondary.notifications.cta": "Register for free!",
+  "headers.secondary.notifications.cta": "Learn more and register!",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button
@@ -425,6 +439,18 @@
   "footer.bottom.links.sample_license.url": "https://unlicense.org/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
   "pages.blog.minute_read": "%s min read",
+  "pages.featured_board.sampleCode.type": "sampleCode",
+  "pages.featured_board.sampleCode.cta": "Browse sample code",
+  "pages.featured_board.sampleCode.link": "/sample-code/",
+  "pages.featured_board.sampleCode.tag": "Featured",
+  "pages.featured_board.sampleCode.headline": "Kickstart your project",
+  "pages.featured_board.sampleCode.text": "Use Box Sample Code Catalog to find useful scripts,\napp examples, and inspiring use cases! Browse\n80+ open-source repositories in various programming languages.",
+  "pages.featured_board.community.type": "community",
+  "pages.featured_board.community.cta": "Join the Community",
+  "pages.featured_board.community.link": "https://forum.box.com/",
+  "pages.featured_board.community.tag": "New",
+  "pages.featured_board.community.headline": "Box Developer Community forum",
+  "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS

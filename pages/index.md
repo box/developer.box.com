@@ -123,6 +123,14 @@ More Guides
 
 </Centered>
 
+<Centered wide>
+
+<FeaturedBoard type="community" >
+
+</FeaturedBoard>
+
+</Centered>
+
 <Dark>
 
 <Centered wide>
@@ -186,6 +194,14 @@ More SDKs & Tools
 </Centered>
 
 </Dark>
+
+<Centered wide>
+
+<FeaturedBoard type="sampleCode" >
+
+</FeaturedBoard>
+
+</Centered>
 
 <Centered wide>
 
