@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Create Integration Mapping with Box SDK
+# Create Slack Integration Mapping with Box SDK
 
 Use Box SDK to automatically create the Integration Mapping, 
 including a co-owner collaboration of the

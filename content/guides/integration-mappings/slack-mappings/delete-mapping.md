@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Delete Integration Mapping
+# Delete Slack Integration Mapping
 
 The `DELETE integration_mappings/slack/:integration_mapping_id`
 call creates a new default channel folder
