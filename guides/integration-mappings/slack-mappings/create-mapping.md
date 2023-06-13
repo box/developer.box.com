@@ -23,7 +23,7 @@ previous_page_id: integration-mappings/slack-mappings/list-mappings
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/create-mapping.md
 ---
-# Create Integration Mapping
+# Create Slack Integration Mapping
 
 To create a mapping, you need `box_item` and `partner_item` which are
 references to a Box folder and a Slack channel, respectively.
@@ -54,7 +54,7 @@ service account has the necessary role to perform the mapping.
 ```json
 "context_info": {
     "service_account_id": "12345678",
-    "service_account_email": "AutomationUser000@email.com",
+    "service_account_email": "AutomationUser_12345678_gdueygwe>@boxdevedition.com",
 }
 ```
 

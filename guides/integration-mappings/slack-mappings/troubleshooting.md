@@ -22,7 +22,7 @@ previous_page_id: integration-mappings/slack-mappings/integration-mappings-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/troubleshooting.md
 ---
-# Integration Mappings Troubleshooting
+# Slack Integration Mappings Troubleshooting
 
 As the Integration Mappings API performs different types of
 validation, some errors might occur. You can find descriptions

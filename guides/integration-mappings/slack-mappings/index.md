@@ -26,7 +26,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/index.md
 ---
-# Integration Mappings (Slack)
+# Slack Integration Mappings
 
 When [Box as the Content Layer][1] is enabled, Box folder is created for
 each channel, and all files sent in this channel are uploaded to

@@ -20,7 +20,7 @@ previous_page_id: integration-mappings/slack-mappings/setup
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/list-mappings.md
 ---
-# List Integration Mappings
+# List Slack Integration Mappings
 
 Use the `GET /integration_mappings/slack` call to
 fetch and filter the mappings,

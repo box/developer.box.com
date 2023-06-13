@@ -23,7 +23,7 @@ previous_page_id: integration-mappings/slack-mappings/update-mapping
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/delete-mapping.md
 ---
-# Delete Integration Mapping
+# Delete Slack Integration Mapping
 
 The `DELETE integration_mappings/slack/:integration_mapping_id`
 call creates a new default channel folder

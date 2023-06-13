@@ -26,7 +26,7 @@ previous_page_id: integration-mappings/slack-mappings
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/setup.md
 ---
-# Setup
+# Slack Integration Mappings Setup
 
 Before starting work with Integration Mappings API, perform
 the following steps.

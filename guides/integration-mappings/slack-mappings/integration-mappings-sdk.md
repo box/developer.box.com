@@ -23,7 +23,7 @@ previous_page_id: integration-mappings/slack-mappings/delete-mapping
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/integration-mappings-sdk.md
 ---
-# Create Integration Mapping with Box SDK
+# Create Slack Integration Mapping with Box SDK
 
 Use Box SDK to automatically create the Integration Mapping,
 including a co-owner collaboration of the

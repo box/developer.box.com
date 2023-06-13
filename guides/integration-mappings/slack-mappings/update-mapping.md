@@ -23,7 +23,7 @@ previous_page_id: integration-mappings/slack-mappings/create-mapping
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/update-mapping.md
 ---
-# Update Integration Mapping
+# Update Slack Integration Mapping
 
 Use the `PUT integration_mappings/slack/:integration_mapping_id`
 call to update the existing mapping or the target Box folder.
