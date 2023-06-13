@@ -15,7 +15,7 @@ subcategory_id: integration-mappings/slack-mappings
 is_index: false
 id: integration-mappings/slack-mappings/create-mapping
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: integration-mappings/slack-mappings
 parent_id: integration-mappings/slack-mappings
 next_page_id: integration-mappings/slack-mappings/update-mapping
@@ -25,8 +25,19 @@ source_url: >-
 ---
 # Create Slack Integration Mapping
 
-To create a mapping, you need `box_item` and `partner_item` which are
-references to a Box folder and a Slack channel, respectively.
+Use the `POST integration_mappings/slack/:integration_mapping_id`
+call to create a mapping. To make it work,
+you need `box_item` and `partner_item` parameters,
+which refer to a Box folder and a Slack channel, respectively.
+
+<Message info>
+
+Remember that before the mapping can be created,
+this service account must be set as a co-owner
+role on the folder that is being mapped.
+If you encounter any errors, see the [troubleshooting guide][1].
+
+</Message>
 
 <Samples id='post_integration_mappings_slack' >
 
@@ -38,29 +49,93 @@ For example `is_access_management_disabled` disables creating
 collaborations on the Box folder, assuming that
 the admin handles the accesses.
 
-## Set service accounts as co-owner
+## Create Slack Integration Mapping with Box SDK
 
-Box as the Content Layer for Slack uses a service account
-to manage content and collaborators inside channel folders.
-Before the mapping can be created,
-this service account requires a co-owner
-role on the folder that is being mapped.
+Use Box SDK to automatically create the Integration Mapping,
+including a co-owner collaboration of the
+service account on the Slack channel - Box folder mapping.
+To do so, use this script:
 
-That is why, of the service account is not a collaborator on the folder,
-you will most likely, get the `SERVICE_ACCOUNT_IS_NOT_A_COOWNER_OR_OWNER`
-error response. You can use the data in the response to make sure the
-service account has the necessary role to perform the mapping.
+<!-- markdownlint-disable line-length -->
 
-```json
-"context_info": {
-    "service_account_id": "12345678",
-    "service_account_email": "AutomationUser_12345678_gdueygwe>@boxdevedition.com",
+```js
+const BoxSDK = require('box-node-sdk');
+const axios = require('axios');
+
+const integrationMappingsApiUrl = 'https://api.box.com/2.0/integration_mappings/slack'
+const boxFolderId = 'PASTE YOUR FOLDER ID HERE';
+const slackChannelId = 'PASTE YOUR CHANNEL ID HERE';
+const slackOrgId = 'PASTE YOUR SLACK ORG ID HERE (CHANGE TO WORKSPACE ID IF NECESSARY)';
+const developerToken = 'PASTE YOUR DEVELOPER TOKEN HERE';
+
+let serviceAccountId = '<PLACEHOLDER>';
+
+const client = BoxSDK.getBasicClient(developerToken);
+
+async function postIntegrationMappingSlack(){
+
+ return axios.post(integrationMappingsApiUrl, {
+  partner_item: {
+   id: slackChannelId,
+   slack_org_id: slackOrgId, // change slack_org_id to slack_workspace_id if Box for Slack is installed on the workspace level
+   type: "channel"
+  },
+  box_item: {
+   id: boxFolderId,
+   type: "folder"
+  }
+ }, {
+  headers: {
+   'Authorization': `Bearer ${developerToken}`
+  }
+ });
+
 }
+
+function isPlaceholder(str){
+ return str === '<PLACEHOLDER>';
+}
+
+async function addCoowner(serviceAccountId, folderId){
+ try {
+  await client.collaborations.createWithUserID(serviceAccountId, folderId, 'co-owner')
+ } catch (error){
+  if(error.response.body.code === 'user_already_collaborator'){
+   console.log('Service account already collaborated in the co-owner role.')
+  } else {
+   throw error;
+  }
+ }
+}
+
+async function logServiceAccountId() {
+ try {
+  await postIntegrationMappingSlack();
+ } catch (error) {
+  console.log(`Replace the value of serviceAccountId with: ${error.response.data.context_info.service_account_id} and re-run the script.`)
+ }
+}
+
+async function createSlackIntegrationMapping() {
+
+ if(isPlaceholder(serviceAccountId)){
+  await logServiceAccountId();
+ } else {
+  await addCoowner(serviceAccountId, boxFolderId);
+  await postIntegrationMappingSlack();
+ }
+
+}
+
+module.exports = { createSlackIntegrationMapping }
 ```
+<!-- markdownlint-enable line-length -->
 
-The easiest way to create the collaboration
-is to:
+<Message notice>
 
-1. Copy the  `service_account_email` from `context_info`.
-2. In the folder settings, use the `Invite People`
-option to invite the service account as a collaborator.
+Make sure to replace `PLACEHOLDER` with the logged value of
+`serviceAccountId`.
+
+</Message>
+
+[1]: g://integration-mappings/slack-mappings/troubleshooting

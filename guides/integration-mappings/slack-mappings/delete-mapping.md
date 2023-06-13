@@ -15,10 +15,10 @@ subcategory_id: integration-mappings/slack-mappings
 is_index: false
 id: integration-mappings/slack-mappings/delete-mapping
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: integration-mappings/slack-mappings
 parent_id: integration-mappings/slack-mappings
-next_page_id: integration-mappings/slack-mappings/integration-mappings-sdk
+next_page_id: integration-mappings/slack-mappings/troubleshooting
 previous_page_id: integration-mappings/slack-mappings/update-mapping
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/delete-mapping.md

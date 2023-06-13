@@ -15,7 +15,7 @@ subcategory_id: integration-mappings/slack-mappings
 is_index: false
 id: integration-mappings/slack-mappings/update-mapping
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: integration-mappings/slack-mappings
 parent_id: integration-mappings/slack-mappings
 next_page_id: integration-mappings/slack-mappings/delete-mapping

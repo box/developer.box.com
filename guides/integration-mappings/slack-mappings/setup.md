@@ -18,7 +18,7 @@ subcategory_id: integration-mappings/slack-mappings
 is_index: false
 id: integration-mappings/slack-mappings/setup
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: integration-mappings/slack-mappings
 parent_id: integration-mappings/slack-mappings
 next_page_id: integration-mappings/slack-mappings/list-mappings
@@ -42,7 +42,10 @@ organizations.
 2. Enable the [Box as Content Layer for Slack][2].
 3. Make sure the service account you are using is
 a collaborator on the folder that will be mapped.
-For details, see [Set service account as co-owner][3].
+To do so, use the `Invite People` folder
+option to invite the service account as a collaborator.
+
+If you encounter any errors, see the [troubleshooting guide][3].
 
 ## Create Box application
 
@@ -81,7 +84,7 @@ to generate it again.
 
 [1]: https://support.box.com/hc/en-us/articles/360044195313-Installing-and-Using-the-Box-for-Slack-Integration
 [2]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
-[3]: g://integration-mappings/slack-mappings/create-mapping#set-service-account-as-co-owner
+[3]: g://integration-mappings/slack-mappings/troubleshooting
 [4]: g://authentication/oauth2/oauth2-setup
 [5]: https://app.box.com/developers/console
 [6]: e://get-integration-mappings-slack
