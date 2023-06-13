@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 7
 related_endpoints:
  - delete_integration_mappings_slack_id
  - get_integration_mappings_slack
@@ -30,9 +30,21 @@ example123. Please create a collaboration or ensure the ownership for
 Box as File Storage for Slack and retry.`
 ```
 
-To resolve this error, add the service account (you can use the ID or email
-provided in the error message) as an owner or co-owner of the folder.
-You can do it through Box UI or using Box SDK.
+To resolve this error use the data in the response to make sure the
+service account has the necessary role to perform the mapping.
+
+```json
+"context_info": {
+    "service_account_id": "12345678",
+    "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
+}
+```
+
+Perform the following steps:
+
+1. Copy the  `service_account_email` from `context_info`.
+2. In the folder settings, use the `Invite People`
+option to invite the service account as a collaborator.
 
 ## Channel is already mapped to a folder in Box
 
