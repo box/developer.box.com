@@ -12,7 +12,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Update Integration Mapping
+# Update Slack Integration Mapping
 
 Use the `PUT integration_mappings/slack/:integration_mapping_id`
 call to update the existing mapping or the target Box folder.

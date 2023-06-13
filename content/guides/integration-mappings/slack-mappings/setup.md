@@ -14,7 +14,7 @@ required_guides: []
 related_resources: []
 alias_paths: []
 ---
-# Setup
+# Slack Integration Mappings Setup
 
 Before starting work with Integration Mappings API, perform
 the following steps.

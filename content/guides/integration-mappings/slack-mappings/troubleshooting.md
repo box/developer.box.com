@@ -11,7 +11,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Integration Mappings Troubleshooting
+# Slack Integration Mappings Troubleshooting
 
 As the Integration Mappings API performs different types of
 validation, some errors might occur. You can find descriptions

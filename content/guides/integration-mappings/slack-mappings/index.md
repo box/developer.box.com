@@ -15,7 +15,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Integration Mappings (Slack)
+# Slack Integration Mappings
 
 When [Box as the Content Layer][1] is enabled, Box folder is created for
 each channel, and all files sent in this channel are uploaded to

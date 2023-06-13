@@ -9,7 +9,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# List Integration Mappings
+# List Slack Integration Mappings
 
 Use the `GET /integration_mappings/slack` call to
 fetch and filter the mappings,
