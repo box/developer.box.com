@@ -181,6 +181,9 @@
   "guides.titles.on_this_page": "このページの他のセクション",
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "入門ガイド",
+  "headers.primary.links.documentation.text": "Documentation",
+  "headers.primary.links.community.text": "Community",
+  "headers.primary.links.community.url": "https:\/\/forum.box.com",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "クイックスタート",
   // The URL to the old Get Started guides
@@ -205,6 +208,11 @@
   "headers.primary.links.support.text": "サポート",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.support.url": "\/support\/",
+  "headers.primary.links.additional_resouces.text": "Additional resources",
+  // The text for the Medium Dev Blog
+  "headers.primary.links.blog.text": "Box Developer Blog",
+  // The URL to Medium bev blog
+  "headers.primary.links.blog.url": "https:\/\/medium.com\/box-developer-blog",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "開発者コンソールに移動",
   // The URL to the developer console
@@ -217,36 +225,42 @@
   "headers.primary.buttons.signup.text": "サインアップ",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https:\/\/account.box.com\/signup\/n\/developer#ty9l3",
+  "headers.primary.featured.tag.text": "Featured",
+  "headers.primary.featured.title.text": "サンプルコードカタログ",
+  "headers.primary.featured.details.text": "Find useful scripts, app examples, and inspiring\nuse cases! Browse 80+ open-source repositories\nin various programming languages.",
+  "headers.primary.featured.cta.text": "Browse sample code",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box開発者向けドキュメント",
   // A short label to signify that this page is new
   "headers.secondary.labels.new": "新規",
-  // The text for the link to the developer blog
-  "headers.secondary.links.blog.text": "ブログ",
-  // The URL to the developer blog
-  "headers.secondary.links.blog.url": "https:\/\/medium.com\/box-developer-blog",
-  // The text for the link to the developer forum
-  "headers.secondary.links.forum.text": "フォーラム",
+  // The text for the link to the developer community forum
+  "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.links.forum.url": "https:\/\/community.box.com\/t5\/Platform-and-Development-Forum\/bd-p\/DeveloperForum",
-  // The text for the link to the developer feedback site
-  "headers.secondary.links.feedback.text": "フィードバック",
-  // The URL to the developer feedback site
-  "headers.secondary.links.feedback.url": "https:\/\/box.uservoice.com\/forums\/909778-product-feedback?category_id=330838",
+  "headers.secondary.support_links.community_forum.url": "https:\/\/forum.box.com",
+  // The text for the link to the changelog
+  "headers.secondary.support_links.changelog.text": "変更ログ",
+  // The URL to the changelog
+  "headers.secondary.support_links.changelog.url": "\/changelog\/",
+  // The text for the link to the developer blog
+  "headers.secondary.additional_resources.blog.text": "ブログ",
+  // The URL to the developer blog
+  "headers.secondary.additional_resources.blog.url": "https:\/\/medium.com\/box-developer-blog",
   // A short title for the dropdown to select a documentation type on mobile
   "headers.secondary.dropdowns.docs": "ドキュメント",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
   "headers.secondary.dropdowns.api_reference": "APIリファレンス",
-  // A short title for the dropdown to select an external link on mobile
-  "headers.secondary.dropdowns.elsewhere": "外部サイトへのリンク",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.support": "サポート",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "false",
   // The content of the notification
-  "headers.secondary.notifications.message": "5月9日に開催されるContent Cloud Summitでカスタムアプリの構築に関する\n開発者向けセッションをお見逃しなく。\n",
+  "headers.secondary.notifications.message": "初のBoxWorks Hackathon for Goodにご参加ください - 48時間のハッカソンへのお客様、パートナー様、開発者コミュニティの皆様のご参加をお待ちしております。The Nature Conservancyのメリットにつながります。",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https:\/\/events.box.com\/content_cloud_summit_2023?utm_source=website&utm_medium=website&utm_theme=CloudContentManagement&id=7017V000001CkwLQAS&utm_content=dev-website",
+  "headers.secondary.notifications.href": "https:\/\/box.com\/hack4good",
   // The text of the CTA
-  "headers.secondary.notifications.cta": "登録は無料です。",
+  "headers.secondary.notifications.cta": "詳細を表示",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button
@@ -425,6 +439,18 @@
   "footer.bottom.links.sample_license.url": "https:\/\/unlicense.org\/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
   "pages.blog.minute_read": "読了までの所要時間: %s分",
+  "pages.featured_board.sampleCode.type": "sampleCode",
+  "pages.featured_board.sampleCode.cta": "Browse sample code",
+  "pages.featured_board.sampleCode.link": "\/sample-code\/",
+  "pages.featured_board.sampleCode.tag": "Featured",
+  "pages.featured_board.sampleCode.headline": "Kickstart your project",
+  "pages.featured_board.sampleCode.text": "Use Box Sample Code Catalog to find useful scripts,\napp examples, and inspiring use cases! Browse\n80+ open-source repositories in various programming languages.",
+  "pages.featured_board.community.type": "community",
+  "pages.featured_board.community.cta": "Join the Community",
+  "pages.featured_board.community.link": "https:\/\/forum.box.com\/",
+  "pages.featured_board.community.tag": "New",
+  "pages.featured_board.community.headline": "Box Developer Community forum",
+  "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
