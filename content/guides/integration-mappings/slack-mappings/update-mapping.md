@@ -17,4 +17,4 @@ alias_paths: []
 Use the `PUT integration_mappings/slack/:integration_mapping_id`
 call to update the existing mapping or the target Box folder.
 
-<Samples id='put_integration_mappings_slack' />
+<Samples id='put_integration_mappings_slack_id' />

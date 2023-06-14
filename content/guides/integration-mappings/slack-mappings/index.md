@@ -6,6 +6,7 @@ related_endpoints:
  - post_integration_mappings_slack
  - put_integration_mappings_slack_id
 related_guides:
+ - integration-mappings/slack-mappings/list-mappings
  - integration-mappings/slack-mappings/create-mapping
  - integration-mappings/slack-mappings/update-mapping
  - integration-mappings/slack-mappings/delete-mapping
