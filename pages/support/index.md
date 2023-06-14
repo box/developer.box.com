@@ -23,7 +23,7 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 
 ご意見やご提案、問題や改善すべき点などは、以下のいずれかのチャネルから英語でお送りください。
 
-* [開発者向けフォーラム][forum]: コード、技術統合、一般的なリクエスト
+* [Box Developer Community][forum]: For support with code, technical integrations, and general requests.
 * [Twitter][twitter]: 一般的な質問とサポート
 * [サポートチケットの送信][support]: アカウント固有の質問とサポート
 
@@ -34,7 +34,7 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://support.box.com/hc/ja/community/topics/360001932973-Platform-and-Developer-Forum
+[forum]: https://forum.box.com/
 
 [twitter]: https://twitter.com/BoxPlatform
 

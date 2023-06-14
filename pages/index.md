@@ -122,6 +122,14 @@ UI Element
 
 </Centered>
 
+<Centered wide>
+
+<FeaturedBoard type="community">
+
+</FeaturedBoard>
+
+</Centered>
+
 <Dark>
 
 <Centered wide>
@@ -183,6 +191,14 @@ UI Element
 </Centered>
 
 </Dark>
+
+<Centered wide>
+
+<FeaturedBoard type="sampleCode">
+
+</FeaturedBoard>
+
+</Centered>
 
 <Centered wide>
 

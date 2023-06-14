@@ -29,7 +29,7 @@ Box Viewでは、**アプリトークン認証**と呼ばれる認証メカニ�
 
 最初の手順として、アプリケーションを作成し、管理者からアプリケーションの承認を受けて、BoxにAPIリクエストの発行を開始します。
 
-<CTA to="guide://authentication/app-token/app-token-setup/">
+<CTA to="guide://authentication/app-token/app-token-setup">
 
 アプリトークンアプリのセットアップと承認
 

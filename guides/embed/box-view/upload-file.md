@@ -27,7 +27,7 @@ fullyTranslated: true
 
 [Box SDK](pages://sdks-and-tools/)を使用してファイルをアップロードするか、またはAPIを使用して直接ファイルをアップロードするには、[アプリケーションの設定](guide://embed/box-view/setup)中に生成されたクライアントIDとアプリトークンを使用してアプリケーションを認証する必要があります。
 
-<CTA to="guide://authentication/app-token/">
+<CTA to="guide://authentication/app-token">
 
 アプリケーションの認証
 
@@ -35,7 +35,7 @@ fullyTranslated: true
 
 認証済みクライアントが作成されたら、そのクライアントを使用して、変換するファイルをアプリトークンアプリケーションに直接アップロードできます。
 
-<CTA to="guide://uploads/direct/file/">
+<CTA to="guide://uploads/direct/file">
 
 Boxへのファイルのアップロード
 

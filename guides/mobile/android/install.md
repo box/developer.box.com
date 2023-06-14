@@ -20,7 +20,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-日本時間2023年6月1日をもって、Android SDKのサポートを終了いたします。既存のAndroid SDKアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
+As of May 31, 2023 Android SDK is no longer supported. You can still use your existing Android SDK applications with no impact, but you won't receive new features, updates, or bug fixes.
 
 最新のAndroid機能を引き続きご利用いただくために、Java SDKを使用してAndroid版アプリを作成することをお勧めします。詳細については、[こちら][android-docs]のドキュメントを参照してください。
 
