@@ -31,6 +31,6 @@ when the next file is uploaded.
 Deleting the mapping does not delete the Box folder,
 or the Slack channel.
 
-<Samples id='delete_integration_mappings_slack' >
+<Samples id='delete_integration_mappings_slack_id' >
 
 </Samples>
