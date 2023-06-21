@@ -29,8 +29,7 @@ source_url: >-
 # Slack Integration Mappings
 
 When [Box as the Content Layer][1] is enabled, Box folder is created for
-each channel, and all files sent in this channel are uploaded to
-these folders.
+each channel, and all files uploaded to this channel are stored in this folder.
 The [Integration Mappings API][2] allows the Box Enterprise Admin (EA) to
 customize the upload folder of the Slack channel to any folder within
 the enterprise instead of relying on the default one.
