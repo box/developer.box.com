@@ -28,11 +28,11 @@ If you encounter any errors, see the [troubleshooting guide][1].
 
 <Samples id='post_integration_mappings_slack' />
 
-You can provide option that override the default settings for the created
-mapping.
-For example `is_access_management_disabled` disables creating
-collaborations on the Box folder, assuming that
-the admin handles the accesses.
+You can provide options that change the default settings for the
+created mapping. For example setting `is_access_management_disabled` to
+`true` will disable collaboration management. Slack channel members will
+not become collaborators on the channel folder and no shared links will
+be created for channels with 1000+ members. 
 
 ## Create Slack Integration Mapping with Box SDK
 
