@@ -172,6 +172,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `FILE_WATERMARKED_DOWNLOAD`                    | A watermarked file is downloaded                                                                |
 | `GROUP_ADD_ITEM`                               | An item is added to a group                                                                     |
 | `GROUP_ADD_USER`                               | Added user to group                                                                             |
+| `GROUP_ADMIN_CREATED` | Group admin is created |
+| `GROUP_ADMIN_DELETED` | Group admin is deleted |
+| `GROUP_ADMIN_PERMISSIONS_UPDATED` | Group admin permissions are updated |
 | `GROUP_CREATION`                               | Created new group                                                                               |
 | `GROUP_DELETION`                               | Deleted group                                                                                   |
 | `GROUP_EDITED`                                 | Edited group                                                                                    |

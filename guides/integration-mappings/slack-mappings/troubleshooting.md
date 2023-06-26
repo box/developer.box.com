@@ -55,7 +55,7 @@ Perform the following steps:
 
 1. Copy the  `service_account_email` from `context_info`.
 2. In the folder settings, use the `Invite People`
-option to invite the service account as a collaborator.
+option to invite the service account as a co-owner.
 
 ## Channel is already mapped to a folder in Box
 
