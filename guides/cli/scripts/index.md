@@ -11,7 +11,7 @@ subcategory_id: cli/scripts
 is_index: true
 id: cli/scripts
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli
 parent_id: cli
 next_page_id: cli/scripts/provision-users-folders
@@ -44,6 +44,7 @@ have Box [administrative privileges][7].
 * [Report inactive users][4]
 * [Extract metadata][5]
 * [Update user zones][6]
+* [Manage Slack integration folder mappings][8]
 
 [1]: g://cli/quick-start/powershell-script-templates
 [2]: g://cli/scripts/deprovision-users
@@ -53,3 +54,4 @@ have Box [administrative privileges][7].
 [6]: g://cli/scripts/user-zones-mass-update
 [quickstart]: g://cli/quick-start/create-oauth-app/
 [7]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+[8]: g://cli/scripts/slack-integration-mappings

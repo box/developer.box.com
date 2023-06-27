@@ -70,11 +70,9 @@ can be omitted. In this case, `2013-04-17T13:35:01+00:00` would become
 `2013-04-17`. In those cases where timestamps support millisecond precision the expected
 request format should be as followed `2013-04-17T09:12:36.123-00:00`.
 
-When making requests, when a timezone is omitted and a time has been provided
-the Pacific timezone is assumed. In responses, the timezone is based on your
-enterprise settings. It will be the default user settings set by your admin.
-Please note that even if a managed user changes their timezone in their account
-settings, this this will have no affect on the timezone returned by the API.
+<!-- Commenting this for now due to issues -->
+
+<!-- When making requests, when a timezone is omitted and a time has been provided the Pacific timezone is assumed. In responses, the timezone is based on your enterprise settings. It will be the default user settings set by your admin. Please note that even if a managed user changes their timezone in their account settings, this this will have no affect on the timezone returned by the API. -->
 
 The timezone can differ between different files and folders because an
 enterprise's timezone can change over time. A common example is daylight saving

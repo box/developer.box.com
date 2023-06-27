@@ -14,10 +14,10 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/deprovision-users
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: ''
+next_page_id: cli/scripts/slack-integration-mappings
 previous_page_id: cli/scripts/manage-groups-collaborations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
