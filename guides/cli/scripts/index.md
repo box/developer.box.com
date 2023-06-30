@@ -11,7 +11,7 @@ subcategory_id: cli/scripts
 is_index: true
 id: cli/scripts
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli
 parent_id: cli
 next_page_id: cli/scripts/provision-users-folders
@@ -38,6 +38,7 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 * [非アクティブなユーザーのレポート][4]
 * [メタデータの抽出][5]
 * [ユーザーのゾーンの更新][6]
+* [Manage Slack integration folder mappings][8]
 
 [1]: g://cli/quick-start/powershell-script-templates
 
@@ -54,3 +55,5 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 [quickstart]: g://cli/quick-start/create-oauth-app/
 
 [7]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+
+[8]: g://cli/scripts/slack-integration-mappings

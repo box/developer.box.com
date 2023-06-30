@@ -147,6 +147,9 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `FILE_WATERMARKED_DOWNLOAD`                                   | 電子すかし付きファイルのダウンロード                                                                                            |
 | `GROUP_ADD_ITEM`                                              | グループへの項目の追加                                                                                                   |
 | `GROUP_ADD_USER`                                              | グループへのユーザーの追加                                                                                                 |
+| `GROUP_ADMIN_CREATED`                                         | Group admin is created                                                                                        |
+| `GROUP_ADMIN_DELETED`                                         | Group admin is deleted                                                                                        |
+| `GROUP_ADMIN_PERMISSIONS_UPDATED`                             | Group admin permissions are updated                                                                           |
 | `GROUP_CREATION`                                              | 新規グループの作成                                                                                                     |
 | `GROUP_DELETION`                                              | グループの削除                                                                                                       |
 | `GROUP_EDITED`                                                | グループの編集                                                                                                       |

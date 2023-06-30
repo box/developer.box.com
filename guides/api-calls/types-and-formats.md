@@ -52,7 +52,9 @@ Box APIは[RFC 3339][rfc3339]タイムスタンプをサポートします。リ
 
 タイムスタンプが特定の日に丸められる場合は、時刻部分を省略できます。この場合、`2013-04-17T13:35:01+00:00`は`2013-04-17`になります。タイムスタンプがミリ秒までサポートする場合、予期されるリクエストの形式は`2013-04-17T09:12:36.123-00:00`のようになります。
 
-リクエストを発行する際、タイムゾーンが省略され、時刻が指定されていると、太平洋標準時のタイムゾーンが想定されます。レスポンスでは、タイムゾーンが会社の設定に基づいています。これは、管理者が設定したデフォルトのユーザー設定になります。管理対象ユーザーが自分のアカウント設定でタイムゾーンを変更した場合でも、APIによって返されるタイムゾーンには影響しないことに注意してください。
+<!-- Commenting this for now due to issues -->
+
+<!-- When making requests, when a timezone is omitted and a time has been provided the Pacific timezone is assumed. In responses, the timezone is based on your enterprise settings. It will be the default user settings set by your admin. Please note that even if a managed user changes their timezone in their account settings, this this will have no affect on the timezone returned by the API. -->
 
 企業のタイムゾーンは経時的に変化するため、タイムゾーンはファイルやフォルダによって異なる場合があります。一般的な例は、夏時間です。標準時に作成された項目のタイムゾーンは、夏時間中に作成された項目とは異なります。このため、APIから返された日付を処理するには、`RFC3339`準拠の日時パーサーを使用することが重要です。
 
