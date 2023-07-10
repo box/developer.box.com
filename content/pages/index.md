@@ -125,6 +125,74 @@ All the developer resources to help you get the most from Box products
 </Centered>
 
 <Centered wide>
+  <Header to='/' centered>
+    Get started quickly
+  </Header>
+    Follow along  with our featured guides to help get you up and running
+
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with 
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+     a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    Method for managing and authenticating into multiple applications with
+    a single set of credentials and a single secure dashboard.
+    
+    **SSO**
+    **App users**
+  </Tile>
+
+  <More to='/' center>
+    More
+  </More>
+</Centered>
+
+<Centered wide>
   <FeaturedBoard type="community" />
 </Centered>
 
@@ -276,6 +344,43 @@ All the developer resources to help you get the most from Box products
     Browse all guides
   </More>
 </section>
+
+<Centered wide>
+  <Header to='/' centered>
+    Browse by SDK and tools
+  </Header>
+    Development with Box Platform is made easier with SDKs
+    for your programming language, a command line interface,
+    front-end UI elements, and much more.
+
+  <Tile type="tool" title="Java" href="/">
+    *box-java-sdk*
+  </Tile>
+  <Tile type="tool" title="Python" href="/">
+    *box-python-sdk*
+  </Tile>
+  <Tile type="tool" title="Node" href="/">
+    *box-node-js-sdk*
+  </Tile>
+  <Tile type="tool" title=".NET" href="/">
+    *box-windows-sdk-v2*
+  </Tile>
+  <Tile type="tool" title="iOS" href="/">
+    *box-ios-sdk*
+  </Tile>
+  <Tile type="tool" title="Box CLI" href="/guides/cli/">
+    *box-cli*
+  </Tile>
+  <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
+    *box-ui-elements*
+  </Tile>
+  <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+  </Tile>
+
+  <More to='/' center>
+    More
+  </More>
+</Centered>
 
 <Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
