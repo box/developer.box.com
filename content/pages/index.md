@@ -186,10 +186,6 @@ All the developer resources to help you get the most from Box products
     **SSO**
     **App users**
   </Tile>
-
-  <More to='/' center>
-    More
-  </More>
 </Centered>
 
 <Centered wide>
@@ -375,6 +371,10 @@ All the developer resources to help you get the most from Box products
     *box-ui-elements*
   </Tile>
   <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+  </Tile>
+  <Tile type="tool" title="Postman collection"
+    href="https://developer.box.com/guides/tooling/postman/">
+    *Box Postman Collection*
   </Tile>
 
   <More to='/' center>
