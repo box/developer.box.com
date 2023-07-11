@@ -134,10 +134,6 @@ alias_paths:
     **SSO**
     **App users**
   </Tile>
-
-  <More to='/' center>
-    More
-  </More>
 </Centered>
 
 <Centered wide>
@@ -156,12 +152,12 @@ alias_paths:
     if a request has been successfully processed or not.
   </Tile>
   <Tile type="guide" title="Authentication" href="/guides/authentication/">
-    The Box APIs uses HTTP status codes to communicate
-    if a request has been successfully processed or not.
+    Authentication with the Box API uses an Access Token to identify a user.
   </Tile>
   <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
-    The Box APIs uses HTTP status codes to communicate
-    if a request has been successfully processed or not.
+    The Box CLI is a user-friendly command line tool which allows
+    both technical and non-technical users to leverage the Box
+    API to perform routine or bulk actions.
   </Tile>
   <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
     The Box APIs uses HTTP status codes to communicate
@@ -247,6 +243,10 @@ alias_paths:
     *box-ui-elements*
   </Tile>
   <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+  </Tile>
+  <Tile type="tool" title="Postman collection"
+    href="https://developer.box.com/guides/tooling/postman/">
+    *Box Postman Collection*
   </Tile>
 
   <More to='/' center>
