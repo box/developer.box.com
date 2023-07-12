@@ -149,29 +149,31 @@ alias_paths:
     Get started, learn tips and tricks, and discover how to use
     the Box Platform API with our comprehensive guides.
 
-  <Tile type="guide" title="App Types" href="/guides/applications/">
-    The Box APIs uses HTTP status codes to communicate
-    if a request has been successfully processed or not.
-  </Tile>
-  <Tile type="guide" title="Authentication" href="/guides/authentication/">
-    Authentication with the Box API uses an Access Token to identify a user.
-  </Tile>
-  <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
-    The Box CLI is a user-friendly command line tool which allows
-    both technical and non-technical users to leverage the Box
-    API to perform routine or bulk actions.
-  </Tile>
-  <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
-    The Box APIs uses HTTP status codes to communicate
-    if a request has been successfully processed or not.
-  </Tile>
-  <Tile type="guide" title="Event stream" href="/guides/events/">
-    The Box APIs uses HTTP status codes to communicate
-    if a request has been successfully processed or not.
-  </Tile>
+  <TileSlider>
+    <Tile type="guide" title="App Types" href="/guides/applications/">
+      The Box APIs uses HTTP status codes to communicate
+      if a request has been successfully processed or not.
+    </Tile>
+    <Tile type="guide" title="Authentication" href="/guides/authentication/">
+      Authentication with the Box API uses an Access Token to identify a user.
+    </Tile>
+    <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
+      The Box CLI is a user-friendly command line tool which allows
+      both technical and non-technical users to leverage the Box
+      API to perform routine or bulk actions.
+    </Tile>
+    <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
+      The Box APIs uses HTTP status codes to communicate
+      if a request has been successfully processed or not.
+    </Tile>
+    <Tile type="guide" title="Event stream" href="/guides/events/">
+      The Box APIs uses HTTP status codes to communicate
+      if a request has been successfully processed or not.
+    </Tile>
+  </TileSlider>
 
   <More to='/' center>
-    More
+    Browse all guides
   </More>
 </Centered>
 
@@ -223,36 +225,38 @@ alias_paths:
     for your programming language, a command line interface,
     front-end UI elements, and much more.
 
-  <Tile type="tool" title="Java" href="/">
-    *box-java-sdk*
-  </Tile>
-  <Tile type="tool" title="Python" href="/">
-    *box-python-sdk*
-  </Tile>
-  <Tile type="tool" title="Node" href="/">
-    *box-node-js-sdk*
-  </Tile>
-  <Tile type="tool" title=".NET" href="/">
-    *box-windows-sdk-v2*
-  </Tile>
-  <Tile type="tool" title="iOS" href="/">
-    *box-ios-sdk*
-  </Tile>
-  <Tile type="tool" title="Box CLI" href="/guides/cli/">
-    *box-cli*
-  </Tile>
-  <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
-    *box-ui-elements*
-  </Tile>
-  <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
-  </Tile>
-  <Tile type="tool" title="Postman collection"
-    href="https://developer.box.com/guides/tooling/postman/">
-    *Box Postman Collection*
-  </Tile>
+  <TileSlider>
+    <Tile type="tool" title="Java" href="/">
+      *box-java-sdk*
+    </Tile>
+    <Tile type="tool" title="Python" href="/">
+      *box-python-sdk*
+    </Tile>
+    <Tile type="tool" title="Node" href="/">
+      *box-node-js-sdk*
+    </Tile>
+    <Tile type="tool" title=".NET" href="/">
+      *box-windows-sdk-v2*
+    </Tile>
+    <Tile type="tool" title="iOS" href="/">
+      *box-ios-sdk*
+    </Tile>
+    <Tile type="tool" title="Box CLI" href="/guides/cli/">
+      *box-cli*
+    </Tile>
+    <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
+      *box-ui-elements*
+    </Tile>
+    <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+    </Tile>
+    <Tile type="tool" title="Postman collection"
+      href="https://developer.box.com/guides/tooling/postman/">
+      *Box Postman Collection*
+    </Tile>
+  </TileSlider>
 
   <More to='/' center>
-    More
+    Browse all SDKs and tools
   </More>
 </Centered>
 
