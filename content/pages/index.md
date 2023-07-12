@@ -347,9 +347,7 @@ alias_paths:
   <Header to='/' centered>
     Browse by SDK and tools
   </Header>
-    Development with Box Platform is made easier with SDKs
-    for your programming language, a command line interface,
-    front-end UI elements, and much more.
+    Development with Box Platform is made easier with SDKs, a command line interface, Postman collection, front-end UI elements, and much more.
 
   <TileSlider>
     <Tile type="tool" title="Java" href="/">
@@ -374,6 +372,7 @@ alias_paths:
       *box-ui-elements*
     </Tile>
     <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+      *Box Embed*
     </Tile>
     <Tile type="tool" title="Postman collection"
       href="https://developer.box.com/guides/tooling/postman/">
