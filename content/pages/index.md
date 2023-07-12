@@ -38,7 +38,7 @@ alias_paths:
 
 </Banner>
 
-<Centered wide>
+<!-- <Centered wide>
   <Header to='/guides' centered>
     Guides
   </Header>
@@ -70,7 +70,7 @@ alias_paths:
   <More to='/guides' right>
     More Guides
   </More>
-</Centered>
+</Centered> -->
 
 <Centered wide>
   <Header to='/' centered>
@@ -78,62 +78,64 @@ alias_paths:
   </Header>
     Follow along  with our featured guides to help get you up and running
 
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with 
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-     a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
-  <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
-    Method for managing and authenticating into multiple applications with
-    a single set of credentials and a single secure dashboard.
-    
-    **SSO**
-    **App users**
-  </Tile>
+  <TileGrid>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with 
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+      Method for managing and authenticating into multiple applications with
+      a single set of credentials and a single secure dashboard.
+      
+      **SSO**
+      **App users**
+    </Tile>
+  </TileGrid>
 </Centered>
 
 <Centered wide>
@@ -173,7 +175,7 @@ alias_paths:
   </More>
 </Centered>
 
-<Dark>
+<!-- <Dark>
   <Centered wide>
     <Header to='/sdks-and-tools' centered>
       SDKS & Tools
@@ -207,7 +209,7 @@ alias_paths:
       More SDKs & Tools
     </More>
   </Centered>
-</Dark>
+</Dark> -->
 
 <Centered wide>
   <FeaturedBoard type="sampleCode" />
