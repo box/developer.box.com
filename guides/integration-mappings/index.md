@@ -23,11 +23,11 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/index.md
 fullyTranslated: true
 ---
-# Integration Mappings
+# 統合マッピング
 
-With [Integration Mappings][1], you can manage where content from partner apps is stored in Box.
+[統合マッピング][1]を使用すると、パートナーアプリからのコンテンツがBoxのどこに保存されるかを管理できます。
 
-This feature currently only supports [Box as Content layer for Slack][2].
+現在、この機能では[SlackのコンテンツレイヤーとしてBoxを使用する][2]場合のみサポートします。
 
 [1]: r://integration-mappings/
 

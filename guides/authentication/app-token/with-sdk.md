@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # SDKを使用したアプリトークン
 
-The official Box SDKs have built-in support for App Token authentication.
+Box公式SDKには、アプリトークン認証のサポートが組み込まれています。
 
 アプリトークン認証は、Box APIを直接操作するよう設計されており、ユーザーがアプリケーションを承認するためにBoxを介してリダイレクトする必要はありません。ただし、この認証はアプリケーションのデータのみに制限されています。
 

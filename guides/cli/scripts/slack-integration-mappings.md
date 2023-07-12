@@ -23,10 +23,10 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/slack-integration-mappings.md
 fullyTranslated: true
 ---
-# Manage Slack integration folder mappings
+# Slack統合フォルダマッピングの管理
 
-This script helps manage the folder mappings between Slack and Box if using Box as the content store for Slack. It creates a list of current Slack channel and Box folder mappings and can create or update mappings based on input csv. This script will maintain all permissions.
+このスクリプトは、BoxをSlackのコンテンツストアとして使用している場合に、SlackとBox間のフォルダマッピングの管理に役立ちます。現在のSlackチャンネルとBoxフォルダのマッピングのリストが作成されるため、入力用のcsvに基づいてマッピングを作成または更新できます。このスクリプトではすべての権限が維持されます。
 
-For details, checkout the [Medium blog][1].
+詳細については、[Mediumのブログ][1]を参照してください。
 
 [1]: https://medium.com/box-developer-blog/new-box-cli-automation-template-to-manage-slack-integration-folder-mappings-a174f9985768

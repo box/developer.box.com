@@ -27,7 +27,7 @@ fullyTranslated: true
 ---
 # SDKを使用したJWT
 
-The official Box SDKs have built-in support for JWT authentication.
+Box公式SDKには、JWT認証のサポートが組み込まれています。
 
 このガイドでは、Box SDKを使用したJWTによるユーザー認証について説明します。JWT認証はBox APIを直接操作するよう設計されており、ユーザーがアプリケーションを承認するためにBoxを介してリダイレクトする必要はありません。
 

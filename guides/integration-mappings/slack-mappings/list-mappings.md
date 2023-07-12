@@ -21,9 +21,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/list-mappings.md
 fullyTranslated: true
 ---
-# List Slack Integration Mappings
+# Slack統合マッピングのリスト取得
 
-Use the `GET /integration_mappings/slack` call to fetch and filter the mappings, both the ones created manually by the admin those created automatically by the integration.
+`GET /integration_mappings/slack`呼び出しを使用すると、マッピングを取得してフィルタをかけることができます。管理者が手動で作成したマッピングも、統合によって自動的に作成されたマッピングも対象になります。
 
 <Samples id="get_integration_mappings_slack">
 

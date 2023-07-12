@@ -24,13 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/create-mapping.md
 fullyTranslated: true
 ---
-# Create Slack Integration Mapping
+# Slack統合マッピングの作成
 
-Use the `POST integration_mappings/slack/:integration_mapping_id` call to create a mapping. To make it work, you need `box_item` and `partner_item` parameters, which refer to a Box folder and a Slack channel, respectively.
+`POST integration_mappings/slack/:integration_mapping_id`呼び出しを使用してマッピングを作成します。この呼び出しを動作させるには、`box_item`パラメータと`partner_item`パラメータが必要です。これらのパラメータはそれぞれ、BoxフォルダとSlackチャンネルを示します。
 
 <Message info>
 
-Remember that before the mapping can be created, this service account must be set as a co-owner role on the folder that is being mapped. If you encounter any errors, see the [troubleshooting guide][1].
+マッピングを作成するには、このサービスアカウントを、マッピングされるフォルダの共同所有者のロールとして設定しておく必要があることに注意してください。エラーが発生した場合は、[トラブルシューティングガイド][1]を参照してください。
 
 </Message>
 
@@ -38,11 +38,11 @@ Remember that before the mapping can be created, this service account must be se
 
 </Samples>
 
-You can provide options that change the default settings for the created mapping. For example setting `is_access_management_disabled` to `true` will disable collaboration management. Slack channel members will not become collaborators on the channel folder and no shared links will be created for channels with 1000+ members.
+作成されたマッピングのデフォルト設定を変更するオプションを指定できます。たとえば、`is_access_management_disabled`を`true`に設定すると、コラボレーションの管理が無効になります。Slackのチャンネルメンバーはチャンネルフォルダのコラボレータにならず、1000人以上のメンバーがいるチャンネルに共有リンクは作成されません。
 
-## Create Slack Integration Mapping with Box SDK
+## Box SDKによるSlack統合マッピングの作成
 
-Use Box SDK to automatically create the Integration Mapping, including a co-owner collaboration of the service account on the Slack channel - Box folder mapping. To do so, use this script:
+Box SDKを使用すると、SlackチャンネルとBoxフォルダのマッピングでのサービスアカウントによる共同所有者のコラボレーションなど、統合マッピングを自動的に作成できます。それには、次のスクリプトを使用します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -122,7 +122,7 @@ module.exports = { createSlackIntegrationMapping }
 
 <Message notice>
 
-Make sure to replace `PLACEHOLDER` with the logged value of `serviceAccountId`.
+`PLACEHOLDER`をログに記録された`serviceAccountId`の値に必ず置き換えてください。
 
 </Message>
 

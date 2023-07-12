@@ -27,39 +27,39 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/setup.md
 fullyTranslated: true
 ---
-# Slack Integration Mappings Setup
+# Slack統合マッピングの設定
 
-Before starting work with Integration Mappings API, perform the following steps.
+統合マッピングAPIの使用を開始する前に、以下の手順を実行します。
 
-## Roles
+## ロール
 
-Make sure you have an Admin or a Co-admin role.
+管理者または共同管理者のロールが割り当てられていることを確認します。
 
-## Install and configure Box for Slack
+## Box for Slackのインストールと構成
 
-1. Install [Box for Slack][1] in the relevant Slack workspace or organizations.
-2. Enable the [Box as Content Layer for Slack][2].
-3. Make sure the service account you are using is a collaborator on the folder that will be mapped. To do so, use the `Invite People` folder option to invite the service account as a collaborator.
+1. 適切なSlackワークスペースまたはオーガナイゼーションに[Box for Slack][1]をインストールします。
+2. [SlackのコンテンツレイヤーとしてのBoxの使用][2]を有効にします。
+3. 使用しているサービスアカウントが、マッピングされるフォルダのコラボレータであることを確認します。そのためには、`Invite People`フォルダオプションを使用して、サービスアカウントをコラボレータとして招待します。
 
-If you encounter any errors, see the [troubleshooting guide][3].
+エラーが発生した場合は、[トラブルシューティングガイド][3]を参照してください。
 
-## Create Box application
+## Boxアプリケーションの作成
 
-1. Create a [custom app with OAuth authentication][4] in the [Box developer console][5]
-2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Application Scopes**. 
+1. [Box開発者コンソール][5]で、[OAuth認証を使用するカスタムアプリ][4]を作成します。
+2. アプリケーションを開き、\[**構成**] > \[**アプリケーションスコープ**] で \[**Enterpriseのプロパティを管理する**] アプリケーションスコープを有効にします。 
 
 <Message info>
 
-For Slack-side channel validation, the [Integration Mappings API][6] is calling the Slack API.
+Slack側のチャンネル確認のために、[統合マッピングAPI][6]でSlack APIを呼び出します。
 
 </Message>
 
 ## 承認
 
-To authorize your Integration Mappings requests:
+統合マッピングリクエストを承認するには、以下の手順を実行します。
 
-1. Navigate to the [custom app][7] that you have created as one of the prerequisites.
-2. Generate a [developer token][8] and add it to the HTTP header of each request: 
+1. 前提条件の1つとして作成した[カスタムアプリ][7]に移動します。
+2. [開発者トークン][8]を生成し、次のように各リクエストのHTTPヘッダーに追加します。 
 
 ```bash
 Authorization: Bearer {developer_token}
@@ -67,7 +67,7 @@ Authorization: Bearer {developer_token}
 
 <Message info>
 
-The developer token is valid for 60 minutes. After that time you need to generate it again.
+開発者トークンの有効期限は60分です。その時間が経過した後は、再度生成する必要があります。
 
 </Message>
 

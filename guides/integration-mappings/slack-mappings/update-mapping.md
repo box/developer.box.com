@@ -24,9 +24,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/update-mapping.md
 fullyTranslated: true
 ---
-# Update Slack Integration Mapping
+# Slack統合マッピングの更新
 
-Use the `PUT integration_mappings/slack/:integration_mapping_id` call to update the existing mapping or the target Box folder.
+`PUT integration_mappings/slack/:integration_mapping_id`呼び出しを使用して、既存のマッピングまたはターゲットのBoxフォルダを更新します。
 
 <Samples id="put_integration_mappings_slack_id">
 

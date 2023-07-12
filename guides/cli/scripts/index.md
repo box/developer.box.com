@@ -38,7 +38,7 @@ Box CLIのスクリプトは、タスクの自動化に役立つよう設計さ�
 * [非アクティブなユーザーのレポート][4]
 * [メタデータの抽出][5]
 * [ユーザーのゾーンの更新][6]
-* [Manage Slack integration folder mappings][8]
+* [Slack統合フォルダマッピングの管理][8]
 
 [1]: g://cli/quick-start/powershell-script-templates
 

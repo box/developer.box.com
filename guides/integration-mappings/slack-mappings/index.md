@@ -27,9 +27,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/index.md
 fullyTranslated: true
 ---
-# Slack Integration Mappings
+# Slack統合マッピング
 
-When [Box as the Content Layer][1] is enabled, Box folder is created for each channel, and all files uploaded to this channel are stored in this folder. The [Integration Mappings API][2] allows the Box Enterprise Admin (EA) to customize the upload folder of the Slack channel to any folder within the enterprise instead of relying on the default one.
+[コンテンツレイヤーとしてBox][1]を有効にすると、各チャンネル用にBoxフォルダが作成され、そのチャンネルにアップロードされたすべてのファイルがこのフォルダに保存されます。[統合マッピングAPI][2]を使用すると、Box Enterprise管理者 (EA) は、Slackチャンネルのアップロードフォルダをカスタマイズして、デフォルトのフォルダを使用する代わりに企業内の任意のフォルダに変更できます。
 
 [1]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
 

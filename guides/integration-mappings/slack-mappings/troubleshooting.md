@@ -23,13 +23,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/integration-mappings/slack-mappings/troubleshooting.md
 fullyTranslated: true
 ---
-# Slack Integration Mappings Troubleshooting
+# Slack統合マッピングのトラブルシューティング
 
-As the Integration Mappings API performs different types of validation, some errors might occur. You can find descriptions and solutions to these common errors below.
+統合マッピングAPIはさまざまな種類の検証を実行するため、いくつかのエラーが発生する場合があります。このような一般的なエラーの説明と解決策については、以下を参照してください。
 
-## Service account is not a co-owner of the folder
+## サービスアカウントがフォルダの共同所有者ではない
 
-The [Box as Content Layer for Slack][1] service account must be added as an owner or co-owner of the folder to manage collaborations and uploads.
+[SlackのコンテンツレイヤーとしてBoxを使用する][1]サービスアカウントは、コラボレーションとアップロードを管理するためにフォルダの所有者または共同所有者として追加する必要があります。
 
 ```sh
 Box as File Storage for Slack (user id: 123, user email:
@@ -39,7 +39,7 @@ example123. Please create a collaboration or ensure the ownership for
 Box as File Storage for Slack and retry.`
 ```
 
-To resolve this error use the data in the response to make sure the service account has the necessary role to perform the mapping.
+このエラーを解決するには、レスポンスのデータを使用して、マッピングを実行するための必要なロールがサービスアカウントにあることを確認してください。
 
 ```json
 "context_info": {
@@ -48,24 +48,24 @@ To resolve this error use the data in the response to make sure the service acco
 }
 ```
 
-Perform the following steps:
+以下の手順を実行します。
 
-1. Copy the `service_account_email` from `context_info`.
-2. In the folder settings, use the `Invite People` option to invite the service account as a co-owner.
+1. `context_info`から`service_account_email`をコピーします。
+2. フォルダ設定で、`Invite People`オプションを使用して共同所有者としてサービスアカウントを招待します。
 
-## Channel is already mapped to a folder in Box
+## チャンネルがすでにBoxのフォルダにマッピングされている
 
-API returns the following error when you attempt to create a mapping for a channel that already has a Box folder mapped:
+Boxフォルダがすでにマッピングされているチャンネルに対してマッピングを作成しようとすると、APIから次のエラーが返されます。
 
 ```sh
 Channel: example123 is already mapped to a folder in Box.
 ```
 
-If you wanted to start using a new folder, use `GET` to retrieve the `id` of the mapping and then the `UPDATE` method to update the target Box folder.
+新しいフォルダの使用を開始したい場合は、`GET`を使用してマッピングの`id`を取得した後、`UPDATE`メソッドを使用してターゲットのBoxフォルダを更新してください。
 
-## Channel was not found
+## チャンネルが見つからない
 
-API returns this error if the Slack bot associated with the integration can not retrieve information about the channel.
+統合に関連付けられているSlackボットでチャンネルに関する情報を取得できない場合は、APIから次のエラーが返されます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -75,9 +75,9 @@ Channel: example123 was not found. If it is a private channel, ensure that Box h
 
 <!-- markdownlint-enable line-length -->
 
-Ensure that the `partner_item` is correct - make sure you provide `slack_org_id` for org installations and `slack_workspace_id` for workspace ones. If the channel is private, ensure that the Slack bot has been added to the channel.
+`partner_item`が正しいことを確認します。オーガナイゼーションでのインストールの場合は`slack_org_id`、ワークスペースでのインストールの場合は`slack_workspace_id`を指定していることを確認してください。チャンネルがプライベートの場合は、Slackボットがそのチャンネルに追加されていることを確認します。
 
-## Channel not suitable for Custom File Storage (CFS)
+## チャンネルがカスタムファイルストレージ (CFS) に適していない
 
 <!-- markdownlint-disable line-length -->
 
@@ -88,11 +88,11 @@ a pending Connect status can not be mapped to Box folders.
 
 <!-- markdownlint-enable line-length -->
 
-Slack Connect channels (cross enterprise channels) are currently not supported as a part of Box as a Content Layer for Slack.
+Slackコネクトチャンネル (企業間チャンネル) は、現在、SlackのコンテンツレイヤーとしてBoxを使用する場合にサポートされていません。
 
-## Box folder externally owned
+## Boxフォルダが外部で所有されている
 
-Box folder selected for mapping must be owned by the enterprise that the Admin is part of.
+マッピングに選択したBoxフォルダは、管理者が所属する企業で所有している必要があります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -102,13 +102,13 @@ Box folder: example123 cannot be mapped, because it is externally owned. Mapped 
 
 <!-- markdownlint-enable line-length -->
 
-## Custom File Storage (CFS) turned off
+## カスタムファイルストレージ (CFS) が無効になっている
 
-API returns this error when you're trying to create the mapping for an enterprise that has Box for Slack installed, but did not enable [Box as a Content Layer for Slack][1].
+Box for Slackがインストールされているものの、[SlackのコンテンツレイヤーとしてBox][1]が有効になっていない企業に対してマッピングを作成しようとすると、APIからこのエラーが返されます。
 
-## Box enterprise mismatch
+## Box Enterpriseの不一致
 
-API returns this error when there is a mismatch between the Admin’s enterprise and Box for Slack configuration. See [Installing and using Box for Slack][2] for information on how to enable Box for Slack.
+管理者のEnterpriseとBox for Slackの構成が一致しない場合、APIからこのエラーが返されます。Box for Slackを有効にする方法については、[Box for Slackのインストールと構成][2]を参照してください。
 
 [1]: https://support.box.com/hc/en-us/articles/4415585987859-Box-as-the-Content-Layer-for-Slack
 
