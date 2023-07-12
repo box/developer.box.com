@@ -159,21 +159,18 @@ alias_paths:
 
   <TileSlider>
     <Tile type="guide" title="App Types" href="/guides/applications/">
-      Upon creating a new Box application you must first select
-      one of applications types. The type of application
-      you select is dependent on the use case for your project
-      and only impacts the available authentication methods.
+      Upon creating a new Box application first select
+      one of applications types. The type is dependent on 
+      the use case for your project.
     </Tile>
     <Tile type="guide" title="Authentication" href="/guides/authentication/">
       Authentication with the Box API uses an Access Token to identify a user.
-      The type of authorization your application can use depends on the type of
-      Box Application that you've configured in the Developer Console.
+      The type of authorization depends on the type of
+      Box Application that you've configured.
     </Tile>
     <Tile type="guide" title="Authorization" href="/guides/authorization/">
       Some applications require explicit Admin authorization before
-      use with an enterprise. The steps an Admin needs to take
-      are dependent on the developer-selected authentication
-      method and enabled enterprise settings.
+      use with an enterprise. Check step-by-step guide.
     </Tile>
     <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
       Applications have their own set of permissions to perform
