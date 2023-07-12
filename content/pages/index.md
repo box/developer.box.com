@@ -151,24 +151,28 @@ alias_paths:
 
   <TileSlider>
     <Tile type="guide" title="App Types" href="/guides/applications/">
-      The Box APIs uses HTTP status codes to communicate
-      if a request has been successfully processed or not.
+      Custom App, Limited Access App or a Custom Skill?
+      Learn how to select an application type!
     </Tile>
     <Tile type="guide" title="Authentication" href="/guides/authentication/">
       Authentication with the Box API uses an Access Token to identify a user.
+      The type of authorization your application can use depends on the type of
+      Box Application that you've configured in the developer console.
     </Tile>
     <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
-      The Box CLI is a user-friendly command line tool which allows
-      both technical and non-technical users to leverage the Box
-      API to perform routine or bulk actions.
+      Applications have their own set of permissions to perform
+      certain actions on behalf of a Box user or a Box enterprise.
+      Read more about scopes.
     </Tile>
     <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
       The Box APIs uses HTTP status codes to communicate
       if a request has been successfully processed or not.
+      Check common errors.
     </Tile>
     <Tile type="guide" title="Event stream" href="/guides/events/">
-      The Box APIs uses HTTP status codes to communicate
-      if a request has been successfully processed or not.
+      The event feed provides a way for an application
+      to subscribe to any actions performed by any user,
+      users, or service in an enterprise.
     </Tile>
   </TileSlider>
 
