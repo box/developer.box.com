@@ -144,20 +144,28 @@ alias_paths:
 
 <Centered wide>
   <Header to='/' centered>
-    Step-by-step guides
+    Core Box Platform concepts
   </Header>
-    Get started, learn tips and tricks, and discover how to use
-    the Box Platform API with our comprehensive guides.
+    Get started and discover how to use
+    the Box Platform with our comprehensive guides.
 
   <TileSlider>
     <Tile type="guide" title="App Types" href="/guides/applications/">
-      Custom App, Limited Access App or a Custom Skill?
-      Learn how to select an application type!
+      Upon creating a new Box application you must first select
+      one of applications types. The type of application
+      you select is dependent on the use case for your project
+      and only impacts the available authentication methods.
     </Tile>
     <Tile type="guide" title="Authentication" href="/guides/authentication/">
       Authentication with the Box API uses an Access Token to identify a user.
       The type of authorization your application can use depends on the type of
-      Box Application that you've configured in the developer console.
+      Box Application that you've configured in the Developer Console.
+    </Tile>
+    <Tile type="guide" title="Authorization" href="/guides/authorization/">
+      Some applications require explicit Admin authorization before
+      use with an enterprise. The steps an Admin needs to take
+      are dependent on the developer-selected authentication
+      method and enabled enterprise settings.
     </Tile>
     <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
       Applications have their own set of permissions to perform
