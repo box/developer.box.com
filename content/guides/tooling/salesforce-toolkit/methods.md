@@ -333,7 +333,7 @@ Returns:
 | `recordId` | `id` | Salesforce record ID. |
 | `templateFolderId` | `string` | Source folder which should be the template. |
 | `folderNameOverride` | `string` | Name override of the new folder. |
-| `optCreateRootFolder` | `boolean` | Flag thet determines if a root folder is created if it doesn't exist. |
+| `optCreateRootFolder` | `boolean` | Flag that determines if a root folder is created if it doesn't exist. |
 
 <!-- markdownlint-enable line-length -->
 
