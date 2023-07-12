@@ -351,36 +351,38 @@ All the developer resources to help you get the most from Box products
     for your programming language, a command line interface,
     front-end UI elements, and much more.
 
-  <Tile type="tool" title="Java" href="/">
-    *box-java-sdk*
-  </Tile>
-  <Tile type="tool" title="Python" href="/">
-    *box-python-sdk*
-  </Tile>
-  <Tile type="tool" title="Node" href="/">
-    *box-node-js-sdk*
-  </Tile>
-  <Tile type="tool" title=".NET" href="/">
-    *box-windows-sdk-v2*
-  </Tile>
-  <Tile type="tool" title="iOS" href="/">
-    *box-ios-sdk*
-  </Tile>
-  <Tile type="tool" title="Box CLI" href="/guides/cli/">
-    *box-cli*
-  </Tile>
-  <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
-    *box-ui-elements*
-  </Tile>
-  <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
-  </Tile>
-  <Tile type="tool" title="Postman collection"
-    href="https://developer.box.com/guides/tooling/postman/">
-    *Box Postman Collection*
-  </Tile>
+  <TileSlider>
+    <Tile type="tool" title="Java" href="/">
+      *box-java-sdk*
+    </Tile>
+    <Tile type="tool" title="Python" href="/">
+      *box-python-sdk*
+    </Tile>
+    <Tile type="tool" title="Node" href="/">
+      *box-node-js-sdk*
+    </Tile>
+    <Tile type="tool" title=".NET" href="/">
+      *box-windows-sdk-v2*
+    </Tile>
+    <Tile type="tool" title="iOS" href="/">
+      *box-ios-sdk*
+    </Tile>
+    <Tile type="tool" title="Box CLI" href="/guides/cli/">
+      *box-cli*
+    </Tile>
+    <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
+      *box-ui-elements*
+    </Tile>
+    <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+    </Tile>
+    <Tile type="tool" title="Postman collection"
+      href="https://developer.box.com/guides/tooling/postman/">
+      *Box Postman Collection*
+    </Tile>
+  </TileSlider>
 
   <More to='/' center>
-    More
+    Browse all SDKs and tools
   </More>
 </Centered>
 
