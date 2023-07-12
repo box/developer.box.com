@@ -131,56 +131,64 @@ All the developer resources to help you get the most from Box products
     Follow along  with our featured guides to help get you up and running
 
   <TileGrid>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with 
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
       **SSO**
       **App users**
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+    <Tile title="Connect Okta identities to Box App Users in a web app"
+      href="/">
       Method for managing and authenticating into multiple applications with
       a single set of credentials and a single secure dashboard.
       
@@ -347,19 +355,23 @@ All the developer resources to help you get the most from Box products
   <Header to='/' centered>
     Browse by SDK and tools
   </Header>
-    Development with Box Platform is made easier with SDKs, a command line interface, Postman collection, front-end UI elements, and much more.
+    Development with Box Platform is made easier with SDKs,
+    a command line interface, Postman collection,
+    front-end UI elements, and much more.
 
   <TileSlider>
-    <Tile type="tool" title="Java" href="/">
+    <Tile type="tool" title="Java" href="https://github.com/box/box-java-sdk">
       *box-java-sdk*
     </Tile>
-    <Tile type="tool" title="Python" href="/">
+    <Tile type="tool" title="Python"
+      href="https://github.com/box/box-python-sdk">
       *box-python-sdk*
     </Tile>
-    <Tile type="tool" title="Node" href="/">
+    <Tile type="tool" title="Node" href="https://github.com/box/box-node-sdk">
       *box-node-js-sdk*
     </Tile>
-    <Tile type="tool" title=".NET" href="/">
+    <Tile type="tool" title=".NET"
+      href="https://github.com/box/box-windows-sdk-v2">
       *box-windows-sdk-v2*
     </Tile>
     <Tile type="tool" title="iOS" href="/">
@@ -375,12 +387,12 @@ All the developer resources to help you get the most from Box products
       *Box Embed*
     </Tile>
     <Tile type="tool" title="Postman collection"
-      href="https://developer.box.com/guides/tooling/postman/">
+      href="/guides/tooling/postman">
       *Box Postman Collection*
     </Tile>
   </TileSlider>
 
-  <More to='/' center>
+  <More to='/sdks-and-tools/' center>
     Browse all SDKs and tools
   </More>
 </Centered>
