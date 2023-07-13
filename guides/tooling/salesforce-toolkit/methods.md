@@ -77,7 +77,7 @@ Returns:
 * `false` if the user's account was not deleted for any reason (including
 because it didn't exist).
 
-## Instance Methods (Constructors / Destructors)
+## Instance Methods - Constructors, Destructors
 
 ### `box.Toolkit()`
 
