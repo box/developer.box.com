@@ -154,23 +154,24 @@ alias_paths:
   <Header to='/' centered>
     Core Box Platform concepts
   </Header>
-    Get started and discover how to use
-    the Box Platform with our comprehensive guides.
+    Get started with Box Platform!
+    Use our guides to discover Box Platform capabilities
+    and learn how to build and manage your own applications.
 
   <TileSlider>
     <Tile type="guide" title="App Types" href="/guides/applications/">
-      Upon creating a new Box application first select
-      one of applications types. The type is dependent on 
-      the use case for your project.
+      Each Box application has its own type that reflects
+      the project use case.
+      Learn more about application types.
     </Tile>
     <Tile type="guide" title="Authentication" href="/guides/authentication/">
       Authentication with the Box API uses an Access Token to identify a user.
-      The type of authorization depends on the type of
-      Box Application that you've configured.
+      Authorization type depends on the type confugured
+      Box Application. Learn more about authentication.
     </Tile>
     <Tile type="guide" title="Authorization" href="/guides/authorization/">
       Some applications require explicit Admin authorization before
-      use with an enterprise. Check step-by-step guide.
+      you can use them in an enterprise. Check the step-by-step guide on authorizing your apps.
     </Tile>
     <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
       Applications have their own set of permissions to perform
@@ -178,14 +179,14 @@ alias_paths:
       Read more about scopes.
     </Tile>
     <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
-      The Box APIs uses HTTP status codes to communicate
-      if a request has been successfully processed or not.
-      Check common errors.
+      Box APIs use HTTP status codes to communicate
+      if a request has been successfully processed.
+      See the common errors reference for more information.
     </Tile>
     <Tile type="guide" title="Event stream" href="/guides/events/">
-      The event feed provides a way for an application
-      to subscribe to any actions performed by any user,
-      users, or service in an enterprise.
+      The event stream provides a way for an application
+      to subscribe to any actions performed by the user,
+      users, or service in an enterprise. Check our guide to learn more about Events.
     </Tile>
   </TileSlider>
 
