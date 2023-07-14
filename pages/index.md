@@ -63,7 +63,7 @@ Extend the power of Box with APIs
 
 </Banner>
 
-<Centered wide>
+<!-- <Centered wide>
 
 <Header to='/guides' centered>
 
@@ -123,6 +123,104 @@ More Guides
 
 </Centered>
 
+ -->
+
+<Centered wide>
+
+<Header to='/' centered>
+
+Get started quickly
+
+</Header>
+
+Follow along  with our featured guides to help get you up and running
+
+<TileGrid>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+<Tile title="Connect Okta identities to Box App Users in a web app" href="/">
+
+Method for managing and authenticating into multiple applications with
+a single set of credentials and a single secure dashboard.
+
+  **SSO**
+  **App users**
+
+</Tile>
+
+</TileGrid>
+
+</Centered>
+
 <Centered wide>
 
 <FeaturedBoard type="community" >
@@ -131,7 +229,80 @@ More Guides
 
 </Centered>
 
-<Dark>
+<Centered wide>
+
+<Header to='/' centered>
+
+Core Box Platform concepts
+
+</Header>
+
+Get started with Box Platform!
+Use our guides to discover Box Platform capabilities
+and learn how to build and manage your own applications.
+
+<TileSlider>
+
+<Tile type="guide" title="App Types" href="/guides/applications/">
+
+Each Box application has its own type that reflects
+the project use case.
+Learn more about application types.
+
+</Tile>
+
+<Tile type="guide" title="Authentication" href="/guides/authentication/">
+
+Authentication with the Box API uses an Access Token to identify a user.
+Authorization type depends on the type confugured
+Box Application. Learn more about authentication.
+
+</Tile>
+
+<Tile type="guide" title="Authorization" href="/guides/authorization/">
+
+Some applications require explicit Admin authorization before
+you can use them in an enterprise.
+Check the step-by-step guide on authorizing your apps.
+
+</Tile>
+
+<Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
+
+Applications have their own set of permissions to perform
+certain actions on behalf of a Box user or a Box enterprise.
+Read more about scopes.
+
+</Tile>
+
+<Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
+
+Box APIs use HTTP status codes to communicate
+if a request has been successfully processed.
+See the common errors reference for more information.
+
+</Tile>
+
+<Tile type="guide" title="Event stream" href="/guides/events/">
+
+The event stream provides a way for an application
+to subscribe to any actions performed by the user,
+users, or service in an enterprise.
+Check our guide to learn more about Events.
+
+</Tile>
+
+</TileSlider>
+
+<More to='/guides/' center>
+
+Browse all guides
+
+</More>
+
+</Centered>
+
+<!-- <Dark>
 
 <Centered wide>
 
@@ -195,11 +366,91 @@ More SDKs & Tools
 
 </Dark>
 
+ -->
+
 <Centered wide>
 
 <FeaturedBoard type="sampleCode" >
 
 </FeaturedBoard>
+
+</Centered>
+
+<Centered wide>
+
+<Header to='/' centered>
+
+Browse by SDK and tools
+
+</Header>
+
+Development with Box Platform is made easier with SDKs,
+a command line interface, Postman collection,
+front-end UI elements, and much more.
+
+<TileSlider>
+
+<Tile type="tool" title="Java" href="https://github.com/box/box-java-sdk">
+
+  *box-java-sdk*
+
+</Tile>
+
+<Tile type="tool" title="Python" href="https://github.com/box/box-python-sdk">
+
+  *box-python-sdk*
+
+</Tile>
+
+<Tile type="tool" title="Node" href="https://github.com/box/box-node-sdk">
+
+  *box-node-js-sdk*
+
+</Tile>
+
+<Tile type="tool" title=".NET" href="https://github.com/box/box-windows-sdk-v2">
+
+  *box-windows-sdk-v2*
+
+</Tile>
+
+<Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
+
+  *box-ios-sdk*
+
+</Tile>
+
+<Tile type="tool" title="Box CLI" href="/guides/cli/">
+
+  *box-cli*
+
+</Tile>
+
+<Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
+
+  *box-ui-elements*
+
+</Tile>
+
+<Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
+
+  *Box Embed*
+
+</Tile>
+
+<Tile type="tool" title="Postman collection" href="/guides/tooling/postman">
+
+  *Box Postman Collection*
+
+</Tile>
+
+</TileSlider>
+
+<More to='/sdks-and-tools/' center>
+
+Browse all SDKs and tools
+
+</More>
 
 </Centered>
 
