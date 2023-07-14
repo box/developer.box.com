@@ -53,12 +53,12 @@ is being used.
 
 Parameters:
 
-* None
+- None
 
 Returns:
 
-* `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
+- `true` if the user's account existed and was deleted.
+- `false` if the user's account was not deleted for any reason (including
 because it didn't exist).
 
 ### `deleteUserAssociation`
@@ -73,8 +73,8 @@ because it didn't exist).
 
 Returns:
 
-* `true` if the user's account existed and was deleted.
-* `false` if the user's account was not deleted for any reason (including
+- `true` if the user's account existed and was deleted.
+- `false` if the user's account was not deleted for any reason (including
 because it didn't exist).
 
 ## Instance Methods - Constructors, Destructors
@@ -83,7 +83,7 @@ because it didn't exist).
 
 Parameters:
 
-* None
+- None
 
 ### `commitChanges`
 
@@ -105,11 +105,11 @@ advanced debugging to fix.
 
 Parameters:
 
-* None
+- None
 
 Returns:
 
-* `Void`
+- `Void`
 
 ### `commitChanges` with platform event
 
@@ -129,7 +129,7 @@ in a different transaction and avoid governor limits in some scenarios.
 
 Returns:
 
-* `Void`
+- `Void`
 
 ## Generic Methods
 
@@ -151,11 +151,11 @@ allowing you to focus on the business logic of your integration.
 
 Returns:
 
-* An [HttpResponse][sf-httpresponse] object with the response details from
+- An [HttpResponse][sf-httpresponse] object with the response details from
 calling Box's APIs.
-* `Toolkit.BoxApiException` if there is any missing information from the
+- `Toolkit.BoxApiException` if there is any missing information from the
 HttpRequest input.
-* `null` if there was an issue getting the authentication details for the
+- `null` if there was an issue getting the authentication details for the
 Service Account. In this case, check `mostRecentError`.
 
 ## File Operations
@@ -186,8 +186,8 @@ asynchronous Apex.
 
 Returns:
 
-* `string` returned is the id of the Box file that was created.
-* `null` if there was an error. In this case, check `mostRecentError`.
+- `string` returned is the id of the Box file that was created.
+- `null` if there was an error. In this case, check `mostRecentError`.
 
 ### `getObjectFolderByRecordId`
 
@@ -201,7 +201,7 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id of the object root folder for the
+- `string` returned is the Box folder id of the object root folder for the
 record id passed in.
 
 ## Folder Operations
@@ -210,11 +210,11 @@ record id passed in.
 
 Parameters:
 
-* None
+- None
 
 Returns:
 
-* `string` returned is the Box folder id of the Salesforce root folder.
+- `string` returned is the Box folder id of the Salesforce root folder.
 
 ### `getObjectFolderByRecordId`
 
@@ -228,14 +228,14 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id of the object root folder for the
+- `string` returned is the Box folder id of the object root folder for the
 record id passed in.
 
 ### `getFolderUrl`
 
-* This method gets the embed widget URL for a particular record so customers
+- This method gets the embed widget URL for a particular record so customers
 can use their own embed logic if desired.
-* This method respects seamless login settings so the URL will automatically
+- This method respects seamless login settings so the URL will automatically
 log the user in if seamless login is enabled.
 
 <!-- markdownlint-disable line-length -->
@@ -249,7 +249,7 @@ log the user in if seamless login is enabled.
 
 Returns:
 
-* `string` returned is a URL that points to the folder associated with the
+- `string` returned is a URL that points to the folder associated with the
 Salesforce record Id passed. This URL is for the Box Embed Widget and can be
 embedded in any Visualforce page.
 
@@ -265,8 +265,8 @@ embedded in any Visualforce page.
 
 Returns:
 
-* `string` returned is the Box folder Id of the root folder that was created.
-* If the root folder already existed, the value returned is the Box folder id
+- `string` returned is the Box folder Id of the root folder that was created.
+- If the root folder already existed, the value returned is the Box folder id
 of the root folder that already existed.
 
 ### `createFolder`
@@ -283,8 +283,8 @@ of the root folder that already existed.
 
 Returns:
 
-* `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
+- `string` returned is the Box folder id of the folder that was created.
+- `null` is returned if a folder is not created. In this case, check
 `mostRecentError` for details.
 
 ### `createFolderForRecordId`
@@ -301,10 +301,10 @@ Returns:
 
 Returns:
 
-* `string` returned is the Box folder id of the folder that was created.
-* `null` is returned if a folder is not created. In this case, check
+- `string` returned is the Box folder id of the folder that was created.
+- `null` is returned if a folder is not created. In this case, check
 `mostRecentError` for details.
-* If the Salesforce record was already associated with a Box folder, the
+- If the Salesforce record was already associated with a Box folder, the
 existing Box folder id is returned.
 
 ### `moveFolder`
@@ -321,8 +321,8 @@ existing Box folder id is returned.
 
 Returns:
 
-* `true` if the folder was moved successfully.
-* `false` if the folder was not moved successfully. Check `mostRecentError` for details.
+- `true` if the folder was moved successfully.
+- `false` if the folder was not moved successfully. Check `mostRecentError` for details.
 
 ### `getUrlForFolder`
 
@@ -336,8 +336,8 @@ Returns:
 
 Returns:
 
-* `pageReference` object with provided URL.
-* `null` if the parameters are incorrect.
+- `pageReference` object with provided URL.
+- `null` if the parameters are incorrect.
 
 ### `createFolderForRecordIdFromTemplate`
 
@@ -354,8 +354,8 @@ Returns:
 
 Returns:
 
-* Newly created `folder Id`.
-* `null` if the parameters are incorrect.
+- Newly created `folder Id`.
+- `null` if the parameters are incorrect.
 
 ## Folder Association Methods
 
@@ -371,9 +371,9 @@ Returns:
 
 Returns:
 
-* List returned is a collection of all folder mapping entries associated with
+- List returned is a collection of all folder mapping entries associated with
 this record.
-* Generally, it will be an empty list if no folder mapping entries exist, but
+- Generally, it will be an empty list if no folder mapping entries exist, but
 under some circumstances, it could be `null`.
 
 ### `getFolderIdByRecordId`
@@ -388,7 +388,7 @@ under some circumstances, it could be `null`.
 
 Returns:
 
-* `string` returned is the Box folder id associated with the Salesforce record
+- `string` returned is the Box folder id associated with the Salesforce record
 id passed in.
 
 ### `getRecordIdByFolderId`
@@ -403,7 +403,7 @@ id passed in.
 
 Returns:
 
-* `id` returned is the Salesforce record id associated with the Box folder id
+- `id` returned is the Salesforce record id associated with the Box folder id
 passed in.
 
 ### `createFolderAssociation`
@@ -419,7 +419,7 @@ passed in.
 
 Returns:
 
-* `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
+- `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
 error (check `mostRecentError`). Upon calling the `commitChanges` method, this
 FRUP entry will be inserted into the database. This method ensures consistency
 with other folder associations by not allowing the same folder to be associated
@@ -451,8 +451,8 @@ the Box for Salesforce integration will receive a collaboration email.
 
 Returns:
 
-* `string` returned is the id of the box collaboration that was created.
-* `null` returned if there was an error. In this case, check `mostRecentError`.
+- `string` returned is the id of the box collaboration that was created.
+- `null` returned if there was an error. In this case, check `mostRecentError`.
 
 ### `createCollaborationOnRecord`
 
@@ -469,8 +469,8 @@ Returns:
 
 Returns:
 
-* `string` returned is the id of the Box collaboration that was created.
-* `null` returned if there was an error. In this case, check `mostRecentError`.
+- `string` returned is the id of the Box collaboration that was created.
+- `null` returned if there was an error. In this case, check `mostRecentError`.
 
 <!-- i18n-enable localize-links -->
 
@@ -489,8 +489,8 @@ Returns:
 
 Returns:
 
-* Boolean based on the transaction success.
-* `false` if the parameters are incorrect.
+- Boolean based on the transaction success.
+- `false` if the parameters are incorrect.
 
 ### `deleteCollaboration`
 
@@ -501,8 +501,8 @@ Returns:
 
 Returns:
 
-* Boolean based on the transaction success.
-* `false` if the parameters are incorrect.
+- Boolean based on the transaction success.
+- `false` if the parameters are incorrect.
 
 ## Metadata
 
@@ -529,13 +529,13 @@ This method calls the [get metadata instance on folder endpoint][1].
 
 Returns:
 
-* `FolderMetadata` record associated with this folder, scope,
+- `FolderMetadata` record associated with this folder, scope,
 and template key. You can find the custom values in `keyValuePairs`
 variable of this object.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy is not found.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy is not found.
 
 ### `createBoxMetadataByFolderId`
 
@@ -548,17 +548,17 @@ This method calls the [create metadata instance on folder][2] endpoint.
 | `folderId` | `string` | ID of the Box Folder for which you want to create metadata. |
 | `scope` | `string` | Scope of the metadata template. Value is one of [`global`, `enterprise`]. |
 | `template_key` | `string` | Name of the metadata template. |
-| `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types (`3000`)and multi select values such as `Customer;Order`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
+| `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
 
 <!-- markdownlint-enable line-length -->
 
 Returns:
 
-* Newly created `FolderMetadata` object.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy is not found.
+- Newly created `FolderMetadata` object.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy is not found.
 
 ### `updateBoxMetadataByFolderId`
 
@@ -577,11 +577,11 @@ Calls the [update metadata instance on folder][3] endpoint.
 
 Returns:
 
-* Updated `FolderMetadata` object.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy is not found.
+- Updated `FolderMetadata` object.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy is not found.
 
 ### `deleteBoxMetadataFolderId`
 
@@ -599,8 +599,8 @@ This method call the [delete metadata instance from folder][4] endpoint.
 
 Returns:
 
-* Boolean based on the transaction success.
-* `false` can be returned if parameters are incorrect parameters or
+- Boolean based on the transaction success.
+- `false` can be returned if parameters are incorrect parameters or
 metadata is not found.
 
 ### `getMetadataCascadePolicyById`
@@ -619,11 +619,11 @@ endpoint. As it requires an ID, you need to call the
 
 Returns:
 
-* `MetadataCascadePolicy` object retrieved from Box.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy is not found.
+- `MetadataCascadePolicy` object retrieved from Box.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy is not found.
 
 ### `getMetadataCascadePoliciesByFolderId`
 
@@ -643,11 +643,11 @@ calling the [get metadata cascade policies][6] endpoint.
 
 Returns:
 
-* List of `MetadataCascadePolicy` objects retrieved from Box.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy is not found.
+- List of `MetadataCascadePolicy` objects retrieved from Box.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy is not found.
 
 ### `createMetadataCascadePolicy`
 
@@ -666,11 +666,11 @@ template key, and by calling the [post metadata cascade policies][7] endpoint.
 
 Returns:
 
-* Newly generated `MetadataCascadePolicy`.
-* `null` is returned if:
-* the parameters are incorrect,
-* access to the folder is missing,
-* metadata cascade policy details are not found.
+- Newly generated `MetadataCascadePolicy`.
+- `null` is returned if:
+- the parameters are incorrect,
+- access to the folder is missing,
+- metadata cascade policy details are not found.
 
 ### `deleteMetadataCascadePolicy`
 
@@ -687,8 +687,8 @@ ID and calling the [delete metadata cascade policies ID][8] endpoint.
 
 Returns:
 
-* Boolean based on the transaction success.
-* `false` is returned if parameters are incorrect, access to the folder
+- Boolean based on the transaction success.
+- `false` is returned if parameters are incorrect, access to the folder
 is missing, or the metadata cascade policy is not found.
 
 ### `enableAppActivity`
@@ -704,8 +704,8 @@ metadata on the folder and cascading it down.
 
 Returns:
 
-* Boolean based on the transaction success.
-* `false` in case of incorrect parameters.
+- Boolean based on the transaction success.
+- `false` in case of incorrect parameters.
 
 <!-- markdownlint-enable line-length -->
 
