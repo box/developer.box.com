@@ -513,9 +513,9 @@ Returns:
 and template key. You can find the custom values in `keyValuePairs`
 variable of this object.
 - `null` is returned if:
-    - the parameters are incorrect,
-    - access to the folder is missing,
-    - metadata cascade policy is not found.
+  - the parameters are incorrect,
+  - access to the folder is missing,
+  - metadata cascade policy is not found.
 
 ### `createBoxMetadataByFolderId`
 
@@ -536,9 +536,9 @@ Returns:
 
 - Newly created `FolderMetadata` object.
 - `null` is returned if:
-    - the parameters are incorrect, 
-    - access to the folder is missing,
-    - metadata cascade policy is not found.
+  - the parameters are incorrect, 
+  - access to the folder is missing,
+  - metadata cascade policy is not found.
 
 ### `updateBoxMetadataByFolderId`
 
@@ -559,9 +559,9 @@ Returns:
 
 - Updated `FolderMetadata` object.
 - `null` is returned if:
-    - the parameters are incorrect, 
-    - access to the folder is missing,
-    - metadata cascade policy is not found.
+  - the parameters are incorrect, 
+  - access to the folder is missing,
+  - metadata cascade policy is not found.
 
 ### `deleteBoxMetadataFolderId`
 
@@ -601,9 +601,9 @@ Returns:
 
 - `MetadataCascadePolicy` object retrieved from Box.
 - `null` is returned if:
-    - the parameters are incorrect, 
-    - access to the folder is missing,
-    - metadata cascade policy is not found.
+  - the parameters are incorrect, 
+  - access to the folder is missing,
+  - metadata cascade policy is not found.
 
 ### `getMetadataCascadePoliciesByFolderId`
 
@@ -625,9 +625,9 @@ Returns:
 
 - List of `MetadataCascadePolicy` objects retrieved from Box.
 - `null` is returned if:
-    - the parameters are incorrect, 
-    - access to the folder is missing,
-    - metadata cascade policy is not found.
+  - the parameters are incorrect, 
+  - access to the folder is missing,
+  - metadata cascade policy is not found.
 
 ### `createMetadataCascadePolicy`
 
@@ -647,10 +647,10 @@ template key, and by calling the [post metadata cascade policies][7] endpoint.
 Returns:
 
 - Newly generated `MetadataCascadePolicy`.
-    - `null` is returned if:
-    - the parameters are incorrect, 
-    - access to the folder is missing,
-    - metadata cascade policy details are not found.
+- `null` is returned if:
+  - the parameters are incorrect, 
+  - access to the folder is missing,
+  - metadata cascade policy details are not found.
 
 ### `deleteMetadataCascadePolicy`
 
