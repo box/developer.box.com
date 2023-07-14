@@ -171,7 +171,8 @@ alias_paths:
     </Tile>
     <Tile type="guide" title="Authorization" href="/guides/authorization/">
       Some applications require explicit Admin authorization before
-      you can use them in an enterprise. Check the step-by-step guide on authorizing your apps.
+      you can use them in an enterprise.
+      Check the step-by-step guide on authorizing your apps.
     </Tile>
     <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
       Applications have their own set of permissions to perform
@@ -186,7 +187,8 @@ alias_paths:
     <Tile type="guide" title="Event stream" href="/guides/events/">
       The event stream provides a way for an application
       to subscribe to any actions performed by the user,
-      users, or service in an enterprise. Check our guide to learn more about Events.
+      users, or service in an enterprise.
+      Check our guide to learn more about Events.
     </Tile>
   </TileSlider>
 
@@ -258,7 +260,7 @@ alias_paths:
       href="https://github.com/box/box-windows-sdk-v2">
       *box-windows-sdk-v2*
     </Tile>
-    <Tile type="tool" title="iOS" href="/">
+    <Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
       *box-ios-sdk*
     </Tile>
     <Tile type="tool" title="Box CLI" href="/guides/cli/">
