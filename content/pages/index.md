@@ -374,7 +374,7 @@ All the developer resources to help you get the most from Box products
       href="https://github.com/box/box-windows-sdk-v2">
       *box-windows-sdk-v2*
     </Tile>
-    <Tile type="tool" title="iOS" href="/">
+    <Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
       *box-ios-sdk*
     </Tile>
     <Tile type="tool" title="Box CLI" href="/guides/cli/">
