@@ -139,14 +139,14 @@ cascade policies.
 // Get metadata & attributes types
 Box.toolkit tk = new Box.Toolkit();
 Box.MetadataTemplate mdt = tk.getMetadataTemplateByName('enterprise',
-testtemplate);
+'testtemplate');
 System.debug(mdt);
 System.debug(mdt.getAttributeTypes()); //get Map<String, String> of values and types.
 
 // Get Metadata
 Box.Toolkit tk = new Box.Toolkit();
-Box.FolderMetadata fmd = tk.getBoxMetadataByFolderId('193488737189', ‘enterprise’,
-‘testTemplate);
+Box.FolderMetadata fmd = tk.getBoxMetadataByFolderId('193488737189', 'enterprise',
+'testTemplate');
 System.debug(tk.mostRecentError);
 System.debug(fmd);
 
@@ -162,8 +162,8 @@ List<Box.KeyValuePair> kvps = new List<Box.KeyValuePair>();
 kvps.add(kvp);
 kvps.add(kvp2);
 Box.Toolkit tk = new Box.Toolkit();
-Box.FolderMetadata newfmd = tk.createBoxMetadataByFolderId('193488737189', enterprise’,
-testTemplate, kvps);
+Box.FolderMetadata newfmd = tk.createBoxMetadataByFolderId('193488737189', 'enterprise',
+'testTemplate', kvps);
 System.debug(tk.mostRecentError);
 System.debug(newfmd);
 
@@ -202,8 +202,7 @@ System.debug(tk.mostRecentError);
 // Get Cascade Policy
 Box.Toolkit tk = new Box.Toolkit();
 Box.MetadataCascadePolicy mcp =
-tk.getMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY29y
-ZC0wMTIwMTI0ZC03YWUxLTQzNjItYjdlMC05Y2RiYzhkMzIzZjM');
+tk.getMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY29yZC0wMTIwMTI0ZC03YWUxLTQzNjItYjdlMC05Y2RiYzhkMzIzZjM');
 System.debug(mcp);
 System.debug(tk.mostRecentError);
 
@@ -217,8 +216,7 @@ System.debug(tk.mostRecentError);
 // Delete Cascade Policy
 Box.Toolkit tk = new Box.Toolkit();
 Boolean mcp =
-tk.deleteMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY2
-9yZC0wMTIwMTI0ZC03YWUxLTQzNjItYjdlMC05Y2RiYzhkMzIzZjM');
+tk.deleteMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY29yZC0wMTIwMTI0ZC03YWUxLTQzNjItYjdlMC05Y2RiYzhkMzIzZjM');
 System.debug(mcp);
 System.debug(tk.mostRecentError);
 ```
@@ -239,7 +237,7 @@ More examples:
 // Get metadata example 1
 Box.toolkit tk = new Box.Toolkit();
 Box.FolderMetadata fmt = tk.getBoxMetadataByFolderId('205776356105', 'enterprise',
-‘testTemplate’);
+'testTemplate');
 for(KeyValuePair kvp : fmt.keyValuePairs){
 System.debug(kvp);
 }
@@ -276,7 +274,7 @@ kvp3.key = 'typeMulti';
 kvp3.value = 'Customer;Other';
 kvps.add(kvp3);
 System.debug(tk.createBoxMetadataByFolderId('205776356105', 'enterprise',
-testtemplate, kvps));
+'testtemplate', kvps));
 System.debug(tk.mostRecentError);
 ```
 
@@ -312,7 +310,7 @@ fmu3.path = '/typeMulti';
 fmu3.value = ‘Customer’;
 fmus.add(fmu3);
 System.debug(tk.updateBoxMetadataByFolderId('205776356105', 'enterprise',
-‘testTemplate’, fmus));
+'testTemplate', fmus));
 System.debug(tk.mostRecentError);
 ```
 
