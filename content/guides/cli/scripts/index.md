@@ -31,6 +31,7 @@ get that done.
 * [Report inactive users][4]
 * [Extract metadata][5]
 * [Update user zones][6]
+* [Manage Slack integration folder mappings][8]
 
 [1]: g://cli/quick-start/powershell-script-templates
 [2]: g://cli/scripts/deprovision-users
@@ -40,3 +41,4 @@ get that done.
 [6]: g://cli/scripts/user-zones-mass-update
 [quickstart]: g://cli/quick-start/create-oauth-app/
 [7]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+[8]: g://cli/scripts/slack-integration-mappings

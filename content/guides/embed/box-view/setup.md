@@ -23,7 +23,7 @@ content with a user.
 The first step is to create the application and authorize it through your admin
 to begin making API requests to Box.
 
-<CTA to='guide://authentication/app-token/app-token-setup/'>
+<CTA to='guide://authentication/app-token/app-token-setup'>
   Setup and authorize App Token app
 </CTA>
 
