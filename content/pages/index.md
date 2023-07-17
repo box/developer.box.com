@@ -157,7 +157,8 @@ alias_paths:
       be a tad trickier than downloads due to whether or not you need to chunk
       upload the content. Review this guide to find step by step information.
     </Tile>
-    <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
+    <Tile type="guide" title="Common Errors" 
+    href="/guides/api-calls/permissions-and-errors/common-errors/">
       Box APIs use HTTP status codes to communicate
       if a request has been successfully processed.
       See the common errors reference for more information.
@@ -174,7 +175,8 @@ alias_paths:
       be confusing to setup, but this guide will help walk you through
       the options. We also have several sample code options in our code repos.
     </Tile>
-    <Tile type="guide" title="Saleforce" href="/guides/tooling/salesforce-toolkit/">
+    <Tile type="guide" title="Saleforce" 
+    href="/guides/tooling/salesforce-toolkit/">
       Now more than ever, it is easier to integrate Box and Salesforce. Most
       recently we launched support for Salesoforce Flows, their low code/no code
       solution. Find out more in this section dedicated to Box for Salesforce.
