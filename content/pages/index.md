@@ -74,74 +74,62 @@ alias_paths:
 
 <Centered wide>
   <Header to='/' centered>
-    Get started quickly
+    I'm new to Box Platform. How do I start?
   </Header>
-    Follow along  with our featured guides to help get you up and running
+    So - you wanna use the Box API? We love to see it!
+    Follow along with the steps below to help get you up and running today.
+    Go from 0 to boxDEV hero!
 
   <TileGrid>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with 
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Explore user types"
+      href="/guides/getting-started/user-types/">
+      Box Platform has different user options depending on the use case.
+      Before developing, review this guide to understand the differences.
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Understand application types"
+      href="/guides/applications/select/">
+      When creating a new application, you have three choices: custom, limited
+      access, and skill. This section describes the differences between them.
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Learn authentication methods"
+      href="/guides/authentication/select/">
+      Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
+      Credentials, and App Token authentication. The methods available are
+      based on the application type selected.  
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Setup the Box CLI"
+      href="/guides/cli/quick-start/">
+      Before setting up your own application, follow the Box CLI quick start
+      guide in order to have an API testing space. This tool can come to your
+      aide when you get stuck. It takes less than five minutes!  
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Create an architecture pattern"
+      href="/guides/getting-started/architecture-patterns/">
+      Now that you've leaned the basics of Box Platform,
+      We always recommended putting pen to paper and drawing out your solution.
+      Checkout the most common architecture patterns in this guide. Feel free
+      to post ideas and questions on our developer forum linked below.
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Create the application"
+      href="https://app.box.com/developers/console">
+      Now, you can start building! Visit the developer console. Create an
+      application based on the choices
+      you've selected from the learnings in the other steps.
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Authorize the application"
+      href="/guides/authorization/">
+      Depending on the authentication method selected, you may have to
+      have the primary administrator of your Box instance authorize
+      you new app. They will also need to do this for any scope changes
+      made in the developer console.
     </Tile>
-    <Tile title="Connect Okta identities to Box App Users in a web app"
-      href="/">
-      Method for managing and authenticating into multiple applications with
-      a single set of credentials and a single secure dashboard.
-      
-      **SSO**
-      **App users**
+    <Tile title="Start coding"
+      href="/reference/">
+      Finally, explore the endpoints available to you in our API reference
+      pages. The site allows you to try out any of the endpoints, and you will
+      find code snippets from all of our SDKs directly embedded
+      in each page. Also, you can checkout the sample code directory
+      by scrolling further down on this page.
     </Tile>
   </TileGrid>
 </Centered>
@@ -152,43 +140,44 @@ alias_paths:
 
 <Centered wide>
   <Header to='/' centered>
-    Core Box Platform concepts
+    Additional Box Platform concepts
   </Header>
-    Get started with Box Platform!
-    Use our guides to discover Box Platform capabilities
-    and learn how to build and manage your own applications.
-
+    Still want to learn more?
+    Use these guides to discover supplementary information on the inner
+    workings of Box Platform, broadening your understanding and improving
+    your custom applications.
   <TileSlider>
-    <Tile type="guide" title="App Types" href="/guides/applications/">
-      Each Box application has its own type that reflects
-      the project use case.
-      Learn more about application types.
+    <Tile type="guide" title="Downloads" href="/guides/downloads/">
+      This is one of the topics we get asked the most questions about. Checkout
+      this guide to get instructions on downloading a file using
+      the API. 
     </Tile>
-    <Tile type="guide" title="Authentication" href="/guides/authentication/">
-      Authentication with the Box API uses an Access Token to identify a user.
-      Authorization type depends on the type confugured
-      Box Application. Learn more about authentication.
-    </Tile>
-    <Tile type="guide" title="Authorization" href="/guides/authorization/">
-      Some applications require explicit Admin authorization before
-      you can use them in an enterprise.
-      Check the step-by-step guide on authorizing your apps.
-    </Tile>
-    <Tile type="guide" title="Scopes" href="/guides/api-calls/permissions-and-errors/scopes/">
-      Applications have their own set of permissions to perform
-      certain actions on behalf of a Box user or a Box enterprise.
-      Read more about scopes.
+    <Tile type="guide" title="Uploads" href="/guides/uploads/">
+      Similar to downloads, we also get asked alot about uploads. Uploads can
+      be a tad trickier than downloads due to whether or not you need to chunk
+      upload the content. Review this guide to find step by step information.
     </Tile>
     <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
       Box APIs use HTTP status codes to communicate
       if a request has been successfully processed.
       See the common errors reference for more information.
     </Tile>
-    <Tile type="guide" title="Event stream" href="/guides/events/">
-      The event stream provides a way for an application
-      to subscribe to any actions performed by the user,
-      users, or service in an enterprise.
-      Check our guide to learn more about Events.
+    <Tile type="guide" title="Metadata" href="/guides/metadata/">
+      Metadata allows users and applications to define and store custom data
+      associated with files and folders. See this guide on how to do so using
+      the API.
+    </Tile>
+    </Tile>
+    <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
+      If you want an event in Box, like downloading a file, to trigger another
+      action, be it in Box or other system, webhooks are your answer. They can
+      be confusing to setup, but this guide will help walk you through
+      the options. We also have several sample code options in our code repos.
+    </Tile>
+    <Tile type="guide" title="Saleforce" href="/guides/tooling/salesforce-toolkit/">
+      Now more than ever, it is easier to integrate Box and Salesforce. Most
+      recently we launched support for Salesoforce Flows, their low code/no code
+      solution. Find out more in this section dedicated to Box for Salesforce.
     </Tile>
   </TileSlider>
 
