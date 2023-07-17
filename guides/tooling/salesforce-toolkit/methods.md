@@ -533,7 +533,7 @@ Returns:
 - `FolderMetadata` record associated with this folder, scope,
   and template key. You can find the custom values in `keyValuePairs`
   variable of this object.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
@@ -556,7 +556,7 @@ This method calls the [create metadata instance on folder][2] endpoint.
 Returns:
 
 - Newly created `FolderMetadata` object.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
@@ -579,7 +579,7 @@ Calls the [update metadata instance on folder][3] endpoint.
 Returns:
 
 - Updated `FolderMetadata` object.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
@@ -621,7 +621,7 @@ endpoint. As it requires an ID, you need to call the
 Returns:
 
 - `MetadataCascadePolicy` object retrieved from Box.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
@@ -645,7 +645,7 @@ calling the [get metadata cascade policies][6] endpoint.
 Returns:
 
 - List of `MetadataCascadePolicy` objects retrieved from Box.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
@@ -668,7 +668,7 @@ template key, and by calling the [post metadata cascade policies][7] endpoint.
 Returns:
 
 - Newly generated `MetadataCascadePolicy`.
-- `null` is returned if:
+- `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy details are not found.
