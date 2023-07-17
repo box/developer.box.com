@@ -48,7 +48,7 @@ Returns:
 
 - `true` if the user's account existed and was deleted.
 - `false` if the user's account was not deleted for any reason (including
-because it didn't exist).
+  because it didn't exist).
 
 ### `deleteUserAssociation`
 
@@ -64,7 +64,7 @@ Returns:
 
 - `true` if the user's account existed and was deleted.
 - `false` if the user's account was not deleted for any reason (including
-because it didn't exist).
+  because it didn't exist).
 
 ## Instance Methods - Constructors, Destructors
 
@@ -108,8 +108,8 @@ in a different transaction and avoid governor limits in some scenarios.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
+| Parameter          | Type      | Description                                                                   |
+| ------------------ | --------- | ----------------------------------------------------------------------------- |
 | `usePlatformEvent` | `boolean` | `true` if you're using a platform event. `false` to call the original method. |
 
 <!-- markdownlint-enable line-length -->
@@ -139,11 +139,11 @@ allowing you to focus on the business logic of your integration.
 Returns:
 
 - An [HttpResponse][sf-httpresponse] object with the response details from
-calling Box's APIs.
+  calling Box's APIs.
 - `Toolkit.BoxApiException` if there is any missing information from the
-HttpRequest input.
+  HttpRequest input.
 - `null` if there was an issue getting the authentication details for the
-Service Account. In this case, check `mostRecentError`.
+  Service Account. In this case, check `mostRecentError`.
 
 ## File Operations
 
@@ -152,10 +152,10 @@ Service Account. In this case, check `mostRecentError`.
 <Message type='notice'>
   Available in version 3.46 and above.
 
-  Salesforce has a String length limit of 6 million characters. Due to string
-  bloat in the base64 encoding/decoding process, this results in an effective
-  file size limit of 4.3 megabytes for synchronous Apex and 8.6 megabytes for
-  asynchronous Apex.
+Salesforce has a String length limit of 6 million characters. Due to string
+bloat in the base64 encoding/decoding process, this results in an effective
+file size limit of 4.3 megabytes for synchronous Apex and 8.6 megabytes for
+asynchronous Apex.
 </Message>
 
 <!-- markdownlint-disable line-length -->
@@ -187,7 +187,7 @@ Returns:
 Returns:
 
 - `string` returned is the Box folder id of the object root folder for the
-record id passed in.
+  record id passed in.
 
 ## Folder Operations
 
@@ -214,14 +214,14 @@ Returns:
 Returns:
 
 - `string` returned is the Box folder id of the object root folder for the
-record id passed in.
+  record id passed in.
 
 ### `getFolderUrl`
 
 - This method gets the embed widget URL for a particular record so customers
-can use their own embed logic if desired.
+  can use their own embed logic if desired.
 - This method respects seamless login settings so the URL will automatically
-log the user in if seamless login is enabled.
+  log the user in if seamless login is enabled.
 
 <!-- markdownlint-disable line-length -->
 
@@ -235,8 +235,8 @@ log the user in if seamless login is enabled.
 Returns:
 
 - `string` returned is a URL that points to the folder associated with the
-Salesforce record Id passed. This URL is for the Box Embed Widget and can be
-embedded in any Visualforce page.
+  Salesforce record Id passed. This URL is for the Box Embed Widget and can be
+  embedded in any Visualforce page.
 
 ### `createObjectFolderForRecordId`
 
@@ -252,7 +252,7 @@ Returns:
 
 - `string` returned is the Box folder Id of the root folder that was created.
 - If the root folder already existed, the value returned is the Box folder id
-of the root folder that already existed.
+  of the root folder that already existed.
 
 ### `createFolder`
 
@@ -270,7 +270,7 @@ Returns:
 
 - `string` returned is the Box folder id of the folder that was created.
 - `null` is returned if a folder is not created. In this case, check
-`mostRecentError` for details.
+  `mostRecentError` for details.
 
 ### `createFolderForRecordId`
 
@@ -288,9 +288,9 @@ Returns:
 
 - `string` returned is the Box folder id of the folder that was created.
 - `null` is returned if a folder is not created. In this case, check
-`mostRecentError` for details.
+  `mostRecentError` for details.
 - If the Salesforce record was already associated with a Box folder, the
-existing Box folder id is returned.
+  existing Box folder id is returned.
 
 ### `moveFolder`
 
@@ -313,8 +313,8 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
+| Parameter  | Type | Description       |
+| ---------- | ---- | ----------------- |
 | `recordId` | `id` | ID of the record. |
 
 <!-- markdownlint-enable line-length -->
@@ -328,11 +328,11 @@ Returns:
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `recordId` | `id` | Salesforce record ID. |
-| `templateFolderId` | `string` | Source folder which should be the template. |
-| `folderNameOverride` | `string` | Name override of the new folder. |
+| Parameter             | Type      | Description                                                           |
+| --------------------- | --------- | --------------------------------------------------------------------- |
+| `recordId`            | `id`      | Salesforce record ID.                                                 |
+| `templateFolderId`    | `string`  | Source folder which should be the template.                           |
+| `folderNameOverride`  | `string`  | Name override of the new folder.                                      |
 | `optCreateRootFolder` | `boolean` | Flag that determines if a root folder is created if it doesn't exist. |
 
 <!-- markdownlint-enable line-length -->
@@ -357,9 +357,9 @@ Returns:
 Returns:
 
 - List returned is a collection of all folder mapping entries associated with
-this record.
+  this record.
 - Generally, it will be an empty list if no folder mapping entries exist, but
-under some circumstances, it could be `null`.
+  under some circumstances, it could be `null`.
 
 ### `getFolderIdByRecordId`
 
@@ -374,7 +374,7 @@ under some circumstances, it could be `null`.
 Returns:
 
 - `string` returned is the Box folder id associated with the Salesforce record
-id passed in.
+  id passed in.
 
 ### `getRecordIdByFolderId`
 
@@ -389,7 +389,7 @@ id passed in.
 Returns:
 
 - `id` returned is the Salesforce record id associated with the Box folder id
-passed in.
+  passed in.
 
 ### `createFolderAssociation`
 
@@ -405,10 +405,10 @@ passed in.
 Returns:
 
 - `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
-error (check `mostRecentError`). Upon calling the `commitChanges` method, this
-FRUP entry will be inserted into the database. This method ensures consistency
-with other folder associations by not allowing the same folder to be associated
-with multiple records or vice versa.
+  error (check `mostRecentError`). Upon calling the `commitChanges` method, this
+  FRUP entry will be inserted into the database. This method ensures consistency
+  with other folder associations by not allowing the same folder to be associated
+  with multiple records or vice versa.
 
 ## Collaboration Methods
 
@@ -456,18 +456,20 @@ Returns:
 - `null` returned if there was an error. In this case, check `mostRecentError`.
 
 <!-- i18n-enable localize-links -->
+
 [collab-type]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 [sf-httprequest]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httprequest.htm
 [sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
+
 <!-- i18n-disable localize-links -->
 
 ### `editCollaboration`
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `collabId` | `string` | Collaboration ID |
-| `collabType` | `enum` | `Box.Toolkit.CollaborationType` enum |
-| `accessToken` | `string` | |
+| Parameter     | Type     | Description                          |
+| ------------- | -------- | ------------------------------------ |
+| `collabId`    | `string` | Collaboration ID                     |
+| `collabType`  | `enum`   | `Box.Toolkit.CollaborationType` enum |
+| `accessToken` | `string` |                                      |
 
 Returns:
 
@@ -476,10 +478,10 @@ Returns:
 
 ### `deleteCollaboration`
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `collabId` | `string` | Collaboration ID |
-| `accessToken` | `string` | |
+| Parameter     | Type     | Description      |
+| ------------- | -------- | ---------------- |
+| `collabId`    | `string` | Collaboration ID |
+| `accessToken` | `string` |                  |
 
 Returns:
 
@@ -499,19 +501,19 @@ This method calls the [get metadata instance on folder endpoint][1].
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `folderId` | `string` | The ID of the Box Folder for which you want to create metadata. |
-| `scope` | `string` | The scope of the metadata template. Value is one of `[global, enterprise]`. |
-| `template_key` | `string` | The name of the metadata template. |
+| Parameter      | Type     | Description                                                                 |
+| -------------- | -------- | --------------------------------------------------------------------------- |
+| `folderId`     | `string` | The ID of the Box Folder for which you want to create metadata.             |
+| `scope`        | `string` | The scope of the metadata template. Value is one of `[global, enterprise]`. |
+| `template_key` | `string` | The name of the metadata template.                                          |
 
 <!-- markdownlint-enable line-length -->
 
 Returns:
 
 - `FolderMetadata` record associated with this folder, scope,
-and template key. You can find the custom values in `keyValuePairs`
-variable of this object.
+  and template key. You can find the custom values in `keyValuePairs`
+  variable of this object.
 - `null` is returned if:
   - the parameters are incorrect,
   - access to the folder is missing,
@@ -523,11 +525,11 @@ This method calls the [create metadata instance on folder][2] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `folderId` | `string` | ID of the Box Folder for which you want to create metadata. |
-| `scope` | `string` | Scope of the metadata template. Value is one of [`global`, `enterprise`]. |
-| `template_key` | `string` | Name of the metadata template. |
+| Parameter       | Type                 | Description                                                                                                                                                                                                                                                                                                                                                 |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderId`      | `string`             | ID of the Box Folder for which you want to create metadata.                                                                                                                                                                                                                                                                                                 |
+| `scope`         | `string`             | Scope of the metadata template. Value is one of [`global`, `enterprise`].                                                                                                                                                                                                                                                                                   |
+| `template_key`  | `string`             | Name of the metadata template.                                                                                                                                                                                                                                                                                                                              |
 | `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
 
 <!-- markdownlint-enable line-length -->
@@ -536,7 +538,7 @@ Returns:
 
 - Newly created `FolderMetadata` object.
 - `null` is returned if:
-  - the parameters are incorrect, 
+  - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
 
@@ -546,12 +548,12 @@ Calls the [update metadata instance on folder][3] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `folderId` | `string` | ID of the Box folder for which you want to update metadata. |
-| `scope` | `string` | The scope of the metadata template. Value is one of [`global`, `enterprise`] |
-| `template_key` | `string` | The name of the metadata template. |
-| `mdUpdates` | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the [API][3]. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
+| Parameter      | Type                         | Description                                                                                                                                                                                                                                                                                                           |
+| -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderId`     | `string`                     | ID of the Box folder for which you want to update metadata.                                                                                                                                                                                                                                                           |
+| `scope`        | `string`                     | The scope of the metadata template. Value is one of [`global`, `enterprise`]                                                                                                                                                                                                                                          |
+| `template_key` | `string`                     | The name of the metadata template.                                                                                                                                                                                                                                                                                    |
+| `mdUpdates`    | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the [API][3]. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
 
 <!-- markdownlint-enable line-length -->
 
@@ -559,7 +561,7 @@ Returns:
 
 - Updated `FolderMetadata` object.
 - `null` is returned if:
-  - the parameters are incorrect, 
+  - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
 
@@ -569,11 +571,11 @@ This method call the [delete metadata instance from folder][4] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `folderId` | `string` | ID of the Box folder for which you want to update metadata. |
-| `scope` | `string` | The scope of the metadata template. Value is one of [`global`, `enterprise`] |
-| `template_key` | `string` | The name of the metadata template. |
+| Parameter      | Type     | Description                                                                  |
+| -------------- | -------- | ---------------------------------------------------------------------------- |
+| `folderId`     | `string` | ID of the Box folder for which you want to update metadata.                  |
+| `scope`        | `string` | The scope of the metadata template. Value is one of [`global`, `enterprise`] |
+| `template_key` | `string` | The name of the metadata template.                                           |
 
 <!-- markdownlint-enable line-length -->
 
@@ -581,7 +583,7 @@ Returns:
 
 - Boolean based on the transaction success.
 - `false` can be returned if parameters are incorrect parameters or
-metadata is not found.
+  metadata is not found.
 
 ### `getMetadataCascadePolicyById`
 
@@ -591,8 +593,8 @@ endpoint. As it requires an ID, you need to call the
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
+| Parameter  | Type     | Description                                        |
+| ---------- | -------- | -------------------------------------------------- |
 | `policyId` | `string` | The ID of the cascade policy you want to retrieve. |
 
 <!-- markdownlint-enable line-length -->
@@ -601,7 +603,7 @@ Returns:
 
 - `MetadataCascadePolicy` object retrieved from Box.
 - `null` is returned if:
-  - the parameters are incorrect, 
+  - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
 
@@ -612,12 +614,12 @@ calling the [get metadata cascade policies][6] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description | Required |
-| --- | --- | --- | --- | 
-| `folderId` | `string` | Specifies for which folder to return the policies. This can't be used on the root folder with ID 0. | Yes |
-| `paginationMarker` | `string` | Defines the position marker at which to begin returning results. This is used for marker-based pagination. | No |
-| `Offset` | `integer` | The offset of the item at which to begin the response. | No |
-| `ownerEnterpriseId` | `string` | Enterprise ID for which to find the metadata cascade policies. If not specified, it defaults to the current enterprise. | No |
+| Parameter           | Type      | Description                                                                                                             | Required |
+| ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- | -------- |
+| `folderId`          | `string`  | Specifies for which folder to return the policies. This can't be used on the root folder with ID 0.                     | Yes      |
+| `paginationMarker`  | `string`  | Defines the position marker at which to begin returning results. This is used for marker-based pagination.              | No       |
+| `Offset`            | `integer` | The offset of the item at which to begin the response.                                                                  | No       |
+| `ownerEnterpriseId` | `string`  | Enterprise ID for which to find the metadata cascade policies. If not specified, it defaults to the current enterprise. | No       |
 
 <!-- markdownlint-enable line-length -->
 
@@ -625,7 +627,7 @@ Returns:
 
 - List of `MetadataCascadePolicy` objects retrieved from Box.
 - `null` is returned if:
-  - the parameters are incorrect, 
+  - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy is not found.
 
@@ -636,11 +638,11 @@ template key, and by calling the [post metadata cascade policies][7] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `folderId` | `string` | ID of the Box folder for which you want to create the metadata cascade policy. |
-| `scope` | `string` | The scope of the metadata cascade policy. Value is one of [`global`, `enterprise`] |
-| `template_key` | `string` | The name of the template key. |
+| Parameter      | Type     | Description                                                                        |
+| -------------- | -------- | ---------------------------------------------------------------------------------- |
+| `folderId`     | `string` | ID of the Box folder for which you want to create the metadata cascade policy.     |
+| `scope`        | `string` | The scope of the metadata cascade policy. Value is one of [`global`, `enterprise`] |
+| `template_key` | `string` | The name of the template key.                                                      |
 
 <!-- markdownlint-enable line-length -->
 
@@ -648,7 +650,7 @@ Returns:
 
 - Newly generated `MetadataCascadePolicy`.
 - `null` is returned if:
-  - the parameters are incorrect, 
+  - the parameters are incorrect,
   - access to the folder is missing,
   - metadata cascade policy details are not found.
 
@@ -659,8 +661,8 @@ ID and calling the [delete metadata cascade policies ID][8] endpoint.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
+| Parameter  | Type     | Description                                      |
+| ---------- | -------- | ------------------------------------------------ |
 | `policyId` | `string` | The ID of the cascade policy you want to delete. |
 
 <!-- markdownlint-enable line-length -->
@@ -669,7 +671,7 @@ Returns:
 
 - Boolean based on the transaction success.
 - `false` is returned if parameters are incorrect, access to the folder
-is missing, or the metadata cascade policy is not found.
+  is missing, or the metadata cascade policy is not found.
 
 ### `enableAppActivity`
 
@@ -678,8 +680,8 @@ metadata on the folder and cascading it down.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter | Type | Description |
-| --- | --- | --- |
+| Parameter  | Type     | Description                                                     |
+| ---------- | -------- | --------------------------------------------------------------- |
 | `folderId` | `string` | The ID of the Box folder for which you want to delete metadata. |
 
 Returns:
