@@ -171,9 +171,9 @@ alias_paths:
     </Tile>
     <Tile type="guide" title="Saleforce" 
     href="/guides/tooling/salesforce-toolkit/">
-      Now more than ever, it is easier to integrate Box and Salesforce. Most
+      Integrate Box and Salesforce! Most
       recently we launched support for Salesoforce Flows, their low code/no code
-      solution. Find out more in this section dedicated to Box for Salesforce.
+      solution. Find out more in this section.
     </Tile>
   </TileSlider>
 
