@@ -130,7 +130,7 @@ All the developer resources to help you get the most from Box products
   </Header>
     So - you wanna use the Box API? We love to see it!
     Follow along with the steps below to help get you up and running today.
-    Go from 0 to boxDEV hero!
+    Go from zero to BoxDev hero!
 
   <TileGrid>
     <Tile title="Explore user types"
@@ -151,20 +151,18 @@ All the developer resources to help you get the most from Box products
     </Tile>
     <Tile title="Setup the Box CLI"
       href="/guides/cli/quick-start/">
-      Before setting up your own application, follow the Box CLI quick start
+      Optionally, follow the Box CLI quick start
       guide in order to have an API testing space. This tool can come to your
-      aide when you get stuck. It takes less than five minutes!  
+      aide when you get stuck. It takes less than five minutes! 
     </Tile>
     <Tile title="Create an architecture pattern"
       href="/guides/getting-started/architecture-patterns/">
-      Now that you've leaned the basics of Box Platform,
       We always recommended putting pen to paper and drawing out your solution.
-      Checkout the most common architecture patterns in this guide. Feel free
-      to post ideas and questions on our developer forum linked below.
+      Checkout the most common architecture patterns in this guide.
     </Tile>
     <Tile title="Create the application"
       href="https://app.box.com/developers/console">
-      Now, you can start building! Visit the developer console. Create an
+      Now, you can start building! Visit the Developer Console. Create an
       application based on the choices
       you've selected from the learnings in the other steps.
     </Tile>
@@ -172,16 +170,14 @@ All the developer resources to help you get the most from Box products
       href="/guides/authorization/">
       Depending on the authentication method selected, you may have to
       have the primary administrator of your Box instance authorize
-      you new app. They will also need to do this for any scope changes
-      made in the developer console.
+      you new app. Check details here!
     </Tile>
     <Tile title="Start coding"
       href="/reference/">
       Finally, explore the endpoints available to you in our API reference
       pages. The site allows you to try out any of the endpoints, and you will
       find code snippets from all of our SDKs directly embedded
-      in each page. Also, you can checkout the sample code directory
-      by scrolling further down on this page.
+      in each page.
     </Tile>
   </TileGrid>
 </Centered>
