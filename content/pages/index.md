@@ -78,7 +78,7 @@ alias_paths:
   </Header>
     So - you wanna use the Box API? We love to see it!
     Follow along with the steps below to help get you up and running today.
-    Go from 0 to boxDEV hero!
+    Go from zero to BoxDev hero!
 
   <TileGrid>
     <Tile title="Explore user types"
@@ -99,20 +99,18 @@ alias_paths:
     </Tile>
     <Tile title="Setup the Box CLI"
       href="/guides/cli/quick-start/">
-      Before setting up your own application, follow the Box CLI quick start
+      Optionally, follow the Box CLI quick start
       guide in order to have an API testing space. This tool can come to your
-      aide when you get stuck. It takes less than five minutes!  
+      aide when you get stuck. It takes less than five minutes! 
     </Tile>
     <Tile title="Create an architecture pattern"
       href="/guides/getting-started/architecture-patterns/">
-      Now that you've leaned the basics of Box Platform,
       We always recommended putting pen to paper and drawing out your solution.
-      Checkout the most common architecture patterns in this guide. Feel free
-      to post ideas and questions on our developer forum linked below.
+      Checkout the most common architecture patterns in this guide.
     </Tile>
     <Tile title="Create the application"
       href="https://app.box.com/developers/console">
-      Now, you can start building! Visit the developer console. Create an
+      Now, you can start building! Visit the Developer Console. Create an
       application based on the choices
       you've selected from the learnings in the other steps.
     </Tile>
@@ -120,16 +118,14 @@ alias_paths:
       href="/guides/authorization/">
       Depending on the authentication method selected, you may have to
       have the primary administrator of your Box instance authorize
-      you new app. They will also need to do this for any scope changes
-      made in the developer console.
+      you new app. Check details here!
     </Tile>
     <Tile title="Start coding"
       href="/reference/">
       Finally, explore the endpoints available to you in our API reference
       pages. The site allows you to try out any of the endpoints, and you will
       find code snippets from all of our SDKs directly embedded
-      in each page. Also, you can checkout the sample code directory
-      by scrolling further down on this page.
+      in each page.
     </Tile>
   </TileGrid>
 </Centered>
@@ -142,22 +138,23 @@ alias_paths:
   <Header to='/' centered>
     Additional Box Platform concepts
   </Header>
-    Still want to learn more?
+    Want to learn more?
     Use these guides to discover supplementary information on the inner
     workings of Box Platform, broadening your understanding and improving
     your custom applications.
+
   <TileSlider>
     <Tile type="guide" title="Downloads" href="/guides/downloads/">
-      This is one of the topics we get asked the most questions about. Checkout
-      this guide to get instructions on downloading a file using
-      the API. 
+      Checkout out this popular guide to get instructions
+      on downloading a file using the API. 
     </Tile>
     <Tile type="guide" title="Uploads" href="/guides/uploads/">
-      Similar to downloads, we also get asked alot about uploads. Uploads can
-      be a tad trickier than downloads due to whether or not you need to chunk
-      upload the content. Review this guide to find step by step information.
+      Uploads can be a tad trickier than downloads due to
+      whether or not you need to chunk upload the content.
+      Review this guide to find step by step information.
     </Tile>
-    <Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
+    <Tile type="guide" title="Common Errors" 
+    href="/guides/api-calls/permissions-and-errors/common-errors/">
       Box APIs use HTTP status codes to communicate
       if a request has been successfully processed.
       See the common errors reference for more information.
@@ -167,17 +164,16 @@ alias_paths:
       associated with files and folders. See this guide on how to do so using
       the API.
     </Tile>
-    </Tile>
     <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
       If you want an event in Box, like downloading a file, to trigger another
-      action, be it in Box or other system, webhooks are your answer. They can
-      be confusing to setup, but this guide will help walk you through
-      the options. We also have several sample code options in our code repos.
+      action, be it in Box or other system, webhooks are your answer.
+      This guide will help walk you through the options.
     </Tile>
-    <Tile type="guide" title="Saleforce" href="/guides/tooling/salesforce-toolkit/">
-      Now more than ever, it is easier to integrate Box and Salesforce. Most
+    <Tile type="guide" title="Saleforce" 
+    href="/guides/tooling/salesforce-toolkit/">
+      Integrate Box and Salesforce! Most
       recently we launched support for Salesoforce Flows, their low code/no code
-      solution. Find out more in this section dedicated to Box for Salesforce.
+      solution. Find out more in this section.
     </Tile>
   </TileSlider>
 
