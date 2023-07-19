@@ -44,7 +44,7 @@ Box Relayのエンドポイントを使用する前に、アプリケーショ�
 
 ## テスト
 
-機能は同等であるため、APIを利用する前に、[BoxウェブアプリでBox Relay機能][webapp]に慣れておくと役に立つ可能性があります。さまざまなAPIエンドポイントと同様、実稼働環境のコンテンツに影響を及ぼすリスクを排除するために[開発者用サンドボックス環境][sandbox]でテストすることをお勧めします。
+機能は同等であるため、APIを利用する前に、[BoxウェブアプリでBox Relay機能][webapp]に慣れておくと役に立つ可能性があります。さまざまなAPIエンドポイントと同様、実稼働環境のコンテンツに影響を及ぼすリスクを排除するために[Developerサンドボックス環境][sandbox]でテストすることをお勧めします。
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
@@ -58,7 +58,7 @@ Box Relayのエンドポイントを使用する前に、アプリケーショ�
 
 [webapp]: https://support.box.com/hc/ja/articles/360044628853-手動で開始するワークフローの作成と実行
 
-[sandbox]: https://support.box.com/hc/ja/articles/360043697274-Box管理者による開発者用サンドボックスの管理
+[sandbox]: https://support.box.com/hc/ja/articles/360043697274
 
 <!-- i18n-disable localize-links -->
 
