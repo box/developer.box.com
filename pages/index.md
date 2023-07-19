@@ -143,9 +143,6 @@ Go from zero to BoxDev hero!
 
 Box Platform has different user options depending on the use case.
 Before developing, review this guide to understand the differences.
-  **Admin**
-  **Managed**
-  **App**
 
 </Tile>
 
@@ -153,9 +150,6 @@ Before developing, review this guide to understand the differences.
 
 When creating a new application, you have three choices: custom, limited
 access, and skill. This section describes the differences between them.
-  **Custom**
-  **Limited**
-  **Box Skill**
 
 </Tile>
 
@@ -164,10 +158,6 @@ access, and skill. This section describes the differences between them.
 Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
 Credentials, and App Token authentication. The methods available are
 based on the application type selected.
-  **OAuth 2.0**
-  **JWT**
-  **CCG**
-  **App Token**
 
 </Tile>
 
@@ -176,8 +166,6 @@ based on the application type selected.
 Optionally, follow the Box CLI quick start
 guide in order to have an API testing space. This tool can come to your
 aide when you get stuck. It takes less than five minutes!
-  **Troubleshooting**
-  **Automation**
 
 </Tile>
 
@@ -185,9 +173,6 @@ aide when you get stuck. It takes less than five minutes!
 
 We always recommended putting pen to paper and drawing out your solution.
 Checkout the most common architecture patterns in this guide.
-  **Automation**
-  **Custom Portal**
-  **Box Skill**
 
 </Tile>
 
@@ -196,8 +181,6 @@ Checkout the most common architecture patterns in this guide.
 Now, you can start building! Visit the Developer Console. Create an
 application based on the choices
 you've selected from the learnings in the other steps.
-  **Scopes**
-  **Permissions**
 
 </Tile>
 
@@ -206,7 +189,6 @@ you've selected from the learnings in the other steps.
 Depending on the authentication method selected, you may have to
 have the primary administrator of your Box instance authorize
 you new app. Check details here!
-  **Administration**
 
 </Tile>
 
@@ -216,8 +198,6 @@ Finally, explore the endpoints available to you in our API reference
 pages. The site allows you to try out any of the endpoints, and you will
 find code snippets from all of our SDKs directly embedded
 in each page.
-  **SDKs**
-  **Sample Code**
 
 </Tile>
 
