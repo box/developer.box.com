@@ -174,8 +174,13 @@ approval. More information on this process is available in our
 An application's access level determines which users and content your app may
 access. By default, an application can only successfully interact with the
 content of its [Service Account][sa] and any [App Users][user-types]. 
-To access existing Managed Users of an enterprise and groups that were not created by the app itself, navigate to the **Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole] and set to **App + Enterprise Access**, otherwise such Managed Users and groups will be blocked.
+To access existing Managed Users of an
+enterprise and groups that were not created by
+ the app itself, navigate to the **Application Access**
+settings accessible in the **Configuration** tab of the
+[Developer console][devconsole] and set
+to **App + Enterprise Access**, otherwise such
+Managed Users and groups will be blocked.
 
 <ImageFrame border>
   ![App access level](../images/app-access-level.png)
