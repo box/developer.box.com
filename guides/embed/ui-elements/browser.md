@@ -39,7 +39,7 @@ your users need. Box also provides the `core-js` standard library at:
 
 ## Promises Polyfill
 
-The Preview UI Element uses Promises. If your application needs to supports
+The Preview UI Element uses Promises. If your application needs to support
 Internet Explorer 11, please include your favorite polyfill library or a service
 like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills
 your users need. Box also provides a copy of the Bluebird promise library at:
