@@ -179,7 +179,7 @@ enterprise and groups that were not created by
 the app itself, navigate to the **Application Access**
 settings accessible in the **Configuration** tab of the
 [Developer console][devconsole] and set
-to **App + Enterprise Access**.  Otherwise such
+to **App + Enterprise Access**. Otherwise access to such
 Managed Users and groups will be blocked.
 
 <ImageFrame border>
