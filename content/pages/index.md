@@ -133,53 +133,51 @@ alias_paths:
   <FeaturedBoard type="community" />
 </Centered>
 
-<Centered wide>
-  <Header to='/' centered>
-    Additional Box Platform concepts
-  </Header>
-    Want to learn more?
-    Use these guides to discover supplementary information on the inner
-    workings of Box Platform, broadening your understanding and improving
-    your custom applications.
+<Header to='/' centered>
+  Additional Box Platform concepts
+</Header>
+  Want to learn more?
+  Use these guides to discover supplementary information on the inner
+  workings of Box Platform, broadening your understanding and improving
+  your custom applications.
 
-  <TileSlider>
-    <Tile type="guide" title="Download a file" href="/guides/downloads/">
-      The Box API allows for downloading files to the application's
-      server, or directly by the end user in a browser. Read more in our guide!
-    </Tile>
-    <Tile type="guide" title="Uploads" href="/guides/uploads/">
-      The Box API supports two distinct methods of file upload.
-      The direct file upload API or the chunked upload APIs. 
-      Review this guide to learn more.
-    </Tile>
-    <Tile type="guide" title="Common Errors" 
-    href="/guides/api-calls/permissions-and-errors/common-errors/">
-      Box APIs use HTTP status codes to communicate
-      if a request has been successfully processed.
-      See the common errors reference for more information.
-    </Tile>
-    <Tile type="guide" title="Metadata" href="/guides/metadata/">
-      Metadata allows users and applications to define and store custom data
-      associated with files and folders. See this guide on how to do so using
-      the API.
-    </Tile>
-    <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
-      Webhooks allow you to monitor Box content for events,
-      and receive notifications to a URL of your choice when they occur.
-      This guide will help walk you through the options.
-    </Tile>
-    <Tile type="guide" title="Saleforce" 
-      href="/guides/tooling/salesforce-toolkit/">
-      Integrate Box and Salesforce! Most
-      recently we launched support for Salesforce Flows, their low code/no code
-      solution. Find out more in this section.
-    </Tile>
-  </TileSlider>
+<TileSlider>
+  <Tile type="guide" title="Download a file" href="/guides/downloads/">
+    The Box API allows for downloading files to the application's
+    server, or directly by the end user in a browser. Read more in our guide!
+  </Tile>
+  <Tile type="guide" title="Uploads" href="/guides/uploads/">
+    The Box API supports two distinct methods of file upload.
+    The direct file upload API or the chunked upload APIs. 
+    Review this guide to learn more.
+  </Tile>
+  <Tile type="guide" title="Common Errors" 
+  href="/guides/api-calls/permissions-and-errors/common-errors/">
+    Box APIs use HTTP status codes to communicate
+    if a request has been successfully processed.
+    See the common errors reference for more information.
+  </Tile>
+  <Tile type="guide" title="Metadata" href="/guides/metadata/">
+    Metadata allows users and applications to define and store custom data
+    associated with files and folders. See this guide on how to do so using
+    the API.
+  </Tile>
+  <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
+    Webhooks allow you to monitor Box content for events,
+    and receive notifications to a URL of your choice when they occur.
+    This guide will help walk you through the options.
+  </Tile>
+  <Tile type="guide" title="Saleforce" 
+    href="/guides/tooling/salesforce-toolkit/">
+    Integrate Box and Salesforce! Most
+    recently we launched support for Salesforce Flows, their low code/no code
+    solution. Find out more in this section.
+  </Tile>
+</TileSlider>
 
-  <More to='/guides/' center>
-    Browse all guides
-  </More>
-</Centered>
+<More to='/guides/' center>
+  Browse all guides
+</More>
 
 <!-- <Dark>
   <Centered wide>
@@ -221,52 +219,47 @@ alias_paths:
   <FeaturedBoard type="sampleCode" />
 </Centered>
 
-<Centered wide>
-  <Header to='/' centered>
-    Browse by SDK and tools
-  </Header>
-    Development with Box Platform is made easier with SDKs,
-    a command line interface, Postman collection,
-    front-end UI elements, and much more.
+<Header to='/' centered>
+  Browse by SDK and tools
+</Header>
+  Development with Box Platform is made easier with SDKs,
+  a command line interface, Postman collection,
+  front-end UI elements, and much more.
 
-  <TileSlider>
-    <Tile type="java" title="Java" href="https://github.com/box/box-java-sdk">
-      *box-java-sdk*
-    </Tile>
-    <Tile type="python" title="Python"
-      href="https://github.com/box/box-python-sdk">
-      *box-python-sdk*
-    </Tile>
-    <Tile type="node" title="Node" href="https://github.com/box/box-node-sdk">
-      *box-node-js-sdk*
-    </Tile>
-    <Tile type="net" title=".NET"
-      href="https://github.com/box/box-windows-sdk-v2">
-      *box-windows-sdk-v2*
-    </Tile>
-    <Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
-      *box-ios-sdk*
-    </Tile>
-    <Tile type="box-orange" title="Box CLI" href="/guides/cli/">
-      *box-cli*
-    </Tile>
-    <Tile type="box-orange" title="Box UI Elements"
-      href="/guides/embed/ui-elements/">
-      *box-ui-elements*
-    </Tile>
-    <Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
-      *Box Embed*
-    </Tile>
-    <Tile type="tool" title="Postman collection"
-      href="/guides/tooling/postman">
-      *Box Postman Collection*
-    </Tile>
-  </TileSlider>
+<TileSlider>
+  <Tile type="java" title="Java" href="https://github.com/box/box-java-sdk">
+    *box-java-sdk*
+  </Tile>
+  <Tile type="python" title="Python" href="https://github.com/box/box-python-sdk">
+    *box-python-sdk*
+  </Tile>
+  <Tile type="node" title="Node.js" href="https://github.com/box/box-node-sdk">
+    *box-node-js-sdk*
+  </Tile>
+  <Tile type="net" title=".NET" href="https://github.com/box/box-windows-sdk-v2">
+    *box-windows-sdk-v2*
+  </Tile>
+  <Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
+    *box-ios-sdk*
+  </Tile>
+  <Tile type="box-orange" title="Box CLI" href="/guides/cli/">
+    *box-cli*
+  </Tile>
+  <Tile type="tool" title="Postman collection"
+    href="/guides/tooling/postman">
+    *Box Postman Collection*
+  </Tile>
+  <Tile type="box-orange" title="Box UI Elements" href="/guides/embed/ui-elements/">
+    *box-ui-elements*
+  </Tile>
+  <Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
+    *Box Embed*
+  </Tile>
+</TileSlider>
 
-  <More to='/sdks-and-tools/' center>
-    See more details
-  </More>
-</Centered>
+<More to='/sdks-and-tools/' center>
+  See more details
+</More>
 
 <Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
