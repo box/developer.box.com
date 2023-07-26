@@ -217,7 +217,6 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-windows-sdk-v2#readme">
       *box-windows-sdk-v2*
     </Tile>
-<<<<<<< HEAD
     <Tile type="tool" title="iOS SDK"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
@@ -235,13 +234,6 @@ All the developer resources to help you get the most from Box products
     </Tile>
     <Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
       *Box Embed*
-=======
-    <Tile type="guide" title="Saleforce" 
-    href="/guides/tooling/salesforce-toolkit/">
-      Integrate Box and Salesforce! Most
-      recently we launched support for Salesoforce Flows, their low code/no code
-      solution. Find out more in this section.
->>>>>>> 25df3dbe ([DEVREL-235] Adjust Salesforce guide copy)
     </Tile>
   </TileSlider>
 
