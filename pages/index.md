@@ -59,7 +59,7 @@ Integrate apps with **Box Platform**
 
 </BannerTitle>
 
-Extend the power of Box with APIs
+All the developer resources to help you get the most from Box products.
 
 </Banner>
 
@@ -133,27 +133,26 @@ I'm new to Box Platform. How do I start?
 
 </Header>
 
-So - you wanna use the Box API? We love to see it!
-Follow along with the steps below to help get you up and running today.
-Go from zero to BoxDev hero!
+We got you covered! Follow these steps to build
+new applications and discover Box Platform capabilities.
 
 <TileGrid>
 
-<Tile title="1. Explore user types" href="/guides/getting-started/user-types/">
+<Tile type="users" title="1. Explore user types" href="/guides/getting-started/user-types/">
 
 Box Platform has different user options depending on the use case.
 Before developing, review this guide to understand the differences.
 
 </Tile>
 
-<Tile title="2. Understand application types" href="/guides/applications/select/">
+<Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
 
 When creating a new application, you have three choices: custom, limited
 access, and skill. This section describes the differences between them.
 
 </Tile>
 
-<Tile title="3. Learn authentication methods" href="/guides/authentication/select/">
+<Tile type="authentication" title="3. Learn authentication methods" href="/guides/authentication/select/">
 
 Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
 Credentials, and App Token authentication. The methods available are
@@ -161,7 +160,7 @@ based on the application type selected.
 
 </Tile>
 
-<Tile title="4. Setup the Box CLI" href="/guides/cli/quick-start/">
+<Tile type="cli" title="4. Setup the Box CLI" href="/guides/cli/quick-start/">
 
 Optionally, follow the Box CLI quick start
 guide in order to have an API testing space. This tool can come to your
@@ -169,14 +168,14 @@ aide when you get stuck. It takes less than five minutes!
 
 </Tile>
 
-<Tile title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
+<Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
 
 We always recommended putting pen to paper and drawing out your solution.
 Checkout the most common architecture patterns in this guide.
 
 </Tile>
 
-<Tile title="6. Create the application" href="https://app.box.com/developers/console">
+<Tile type="create" title="6. Create the application" href="https://app.box.com/developers/console">
 
 Now, you can start building! Visit the Developer Console. Create an
 application based on the choices
@@ -184,7 +183,7 @@ you've selected from the learnings in the other steps.
 
 </Tile>
 
-<Tile title="7. Authorize the application" href="/guides/authorization/">
+<Tile type="authorize" title="7. Authorize the application" href="/guides/authorization/">
 
 Depending on the authentication method selected, you may have to
 have the primary administrator of your Box instance authorize
@@ -192,9 +191,9 @@ you new app. Check details here!
 
 </Tile>
 
-<Tile title="8. Start coding" href="/reference/">
+<Tile type="code" title="8. Start coding" href="/reference/">
 
-Finally, explore the endpoints available to you in our API reference
+Finally, explore the endpoints in our API reference
 pages. The site allows you to try out any of the endpoints, and you will
 find code snippets from all of our SDKs directly embedded
 in each page.
@@ -213,7 +212,9 @@ in each page.
 
 </Centered>
 
-<Centered wide>
+<section style="background-color: #FBFBFB;">
+
+<div style="padding: 0 16px">
 
 <Header to='/' centered>
 
@@ -226,20 +227,22 @@ Use these guides to discover supplementary information on the inner
 workings of Box Platform, broadening your understanding and improving
 your custom applications.
 
+</div>
+
 <TileSlider>
 
 <Tile type="guide" title="Downloads" href="/guides/downloads/">
 
-Checkout out this popular guide to get instructions
-on downloading a file using the API.
+The Box API allows for downloading files to the application's
+server, or directly by the end user in a browser. Read more in our guide!
 
 </Tile>
 
 <Tile type="guide" title="Uploads" href="/guides/uploads/">
 
-Uploads can be a tad trickier than downloads due to
-whether or not you need to chunk upload the content.
-Review this guide to find step by step information.
+The Box API supports two distinct methods of file upload.
+The direct file upload API or the chunked upload APIs.
+Review this guide to learn more.
 
 </Tile>
 
@@ -261,16 +264,24 @@ the API.
 
 <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
 
-If you want an event in Box, like downloading a file, to trigger another
-action, be it in Box or other system, webhooks are your answer.
+Webhooks allow you to monitor Box content for events,
+and receive notifications to a URL of your choice when they occur.
 This guide will help walk you through the options.
+
+</Tile>
+
+<Tile type="guide" title="Search" href="/guides/search/">
+
+The Box API provides a way to find content in Box using full-text
+search queries. Support for the Box search API is available
+in all our supported SDKs and the CLI.
 
 </Tile>
 
 <Tile type="guide" title="Saleforce" href="/guides/tooling/salesforce-toolkit/">
 
 Integrate Box and Salesforce! Most
-recently we launched support for Salesoforce Flows, their low code/no code
+recently we launched support for Salesforce Flows, their low code/no code
 solution. Find out more in this section.
 
 </Tile>
@@ -283,7 +294,7 @@ Browse all guides
 
 </More>
 
-</Centered>
+</section>
 
 <!-- <Dark>
 
@@ -359,7 +370,9 @@ More SDKs & Tools
 
 </Centered>
 
-<Centered wide>
+<section style="background-color: #FBFBFB;">
+
+<div style="padding: 0 16px">
 
 <Header to='/' centered>
 
@@ -371,27 +384,29 @@ Development with Box Platform is made easier with SDKs,
 a command line interface, Postman collection,
 front-end UI elements, and much more.
 
+</div>
+
 <TileSlider>
 
-<Tile type="tool" title="Java" href="https://github.com/box/box-java-sdk">
+<Tile type="java" title="Java" href="https://github.com/box/box-java-sdk">
 
   *box-java-sdk*
 
 </Tile>
 
-<Tile type="tool" title="Python" href="https://github.com/box/box-python-sdk">
+<Tile type="python" title="Python" href="https://github.com/box/box-python-sdk">
 
   *box-python-sdk*
 
 </Tile>
 
-<Tile type="tool" title="Node" href="https://github.com/box/box-node-sdk">
+<Tile type="node" title="Node.js" href="https://github.com/box/box-node-sdk">
 
   *box-node-js-sdk*
 
 </Tile>
 
-<Tile type="tool" title=".NET" href="https://github.com/box/box-windows-sdk-v2">
+<Tile type="net" title=".NET" href="https://github.com/box/box-windows-sdk-v2">
 
   *box-windows-sdk-v2*
 
@@ -403,21 +418,9 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="tool" title="Box CLI" href="/guides/cli/">
+<Tile type="box-orange" title="Box CLI" href="/guides/cli/">
 
   *box-cli*
-
-</Tile>
-
-<Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
-
-  *box-ui-elements*
-
-</Tile>
-
-<Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
-
-  *Box Embed*
 
 </Tile>
 
@@ -427,15 +430,27 @@ front-end UI elements, and much more.
 
 </Tile>
 
+<Tile type="box-orange" title="Box UI Elements" href="/guides/embed/ui-elements/">
+
+  *box-ui-elements*
+
+</Tile>
+
+<Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
+
+  *Box Embed*
+
+</Tile>
+
 </TileSlider>
 
 <More to='/sdks-and-tools/' center>
 
-Browse all SDKs and tools
+See more details
 
 </More>
 
-</Centered>
+</section>
 
 <Centered wide>
 
