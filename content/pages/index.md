@@ -77,7 +77,7 @@ alias_paths:
     I'm new to Box Platform. How do I start?
   </Header>
     We got you covered! Follow these steps to build
-    new applications and discover Box Platform capabilities
+    new applications and discover Box Platform capabilities.
 
   <TileGrid>
     <Tile type="users" title="1. Explore user types"
@@ -145,7 +145,7 @@ alias_paths:
   </div>
 
   <TileSlider>
-    <Tile type="guide" title="Download a file" href="/guides/downloads/">
+    <Tile type="guide" title="Downloads" href="/guides/downloads/">
       The Box API allows for downloading files to the application's
       server, or directly by the end user in a browser. Read more in our guide!
     </Tile>
