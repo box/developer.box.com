@@ -77,7 +77,7 @@ alias_paths:
     new applications and discover Box Platform capabilities.
 
   <TileGrid>
-    <Tile type="users" title="1. Explore user types"
+    <Tile type="users" title="Explore user types"
       href="/guides/getting-started/user-types/">
       Box Platform covers many use cases
       that may require different user types.
@@ -358,8 +358,10 @@ alias_paths:
       href="https://github.com/box/box-windows-sdk-v2">
       *box-windows-sdk-v2*
     </Tile>
-    <Tile type="tool" title="iOS" href="https://github.com/box/box-ios-sdk">
-      *box-ios-sdk*
+    <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
+      Webhooks allow you to monitor Box content for events,
+      and receive notifications to a URL of your choice when they occur.
+      This guide will help walk you through the options.
     </Tile>
     <Tile type="tool" title="Box CLI" href="/guides/cli/">
       *box-cli*
