@@ -78,10 +78,14 @@ All the developer resources to help you get the most from Box products
 
   <TileGrid>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Tile type="users" title="1. Explore user types"
       href="platform/user-types/">
 =======
     <Tile type="users" title="Explore user types"
+=======
+    <Tile type="users" title="1. Explore user types"
+>>>>>>> 85778ff40 ([DEVREL-235] Restore numbers in grid tiles)
       href="/guides/getting-started/user-types/">
 >>>>>>> 5e33edb57 ([DEVREL-235] Change section order and adjust copy)
       Box Platform covers many use cases
