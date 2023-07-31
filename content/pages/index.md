@@ -77,7 +77,7 @@ alias_paths:
     new applications and discover Box Platform capabilities.
 
   <TileGrid>
-    <Tile type="users" title="Explore user types"
+    <Tile type="users" title="1. Explore user types"
       href="/guides/getting-started/user-types/">
       Box Platform covers many use cases
       that may require different user types.
