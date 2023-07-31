@@ -36,7 +36,7 @@ Box UI Elementsは、以下のブラウザでサポートされています。
 
 ## Promisesのpolyfill
 
-プレビューUI ElementではPromisesを使用します。使用するアプリケーションでInternet Explorer 11をサポートする必要がある場合、好みのpolyfillライブラリまたは[`polyfill.io`](https://polyfill.io)などのサービスをインクルードして、ユーザーが必要とするpolyfillだけが効率良く読み込まれるようにしてください。Boxは、以下にあるBluebird Promiseライブラリのコピーも提供しています。
+The Preview UI Element uses Promises. If your application needs to support Internet Explorer 11, please include your favorite polyfill library or a service like [`polyfill.io`](https://polyfill.io) to smartly load only the polyfills your users need. Box also provides a copy of the Bluebird promise library at:
 
 [`https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js`][bluebird]
 

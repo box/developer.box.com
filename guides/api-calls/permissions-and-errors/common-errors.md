@@ -9,6 +9,8 @@ alias_paths:
   - /docs/error-codes
   - /docs/detailed-error-messages
   - /docs
+  - /docs/errors
+  - /docs/#errors
 notes: Lazy copy of old docs. Needs rethinking.
 category_id: api-calls
 subcategory_id: api-calls/permissions-and-errors

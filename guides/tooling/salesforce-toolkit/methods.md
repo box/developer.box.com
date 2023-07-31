@@ -70,7 +70,7 @@ fullyTranslated: true
 * ユーザーのアカウントが存在していたが削除された場合は`true`。
 * ユーザーのアカウントが何らかの理由 (存在しなかった場合を含む) で削除されなかった場合は`false`。
 
-## インスタンスメソッド (コンストラクタ/デストラクタ)
+## Instance Methods - Constructors, Destructors
 
 ### `box.Toolkit()`
 
@@ -93,6 +93,24 @@ Salesforceではデータベースの更新/挿入/削除の後の呼び出し�
 パラメータ:
 
 * なし
+
+戻り値:
+
+* `Void`
+
+### `commitChanges` with platform event
+
+このメソッドは`box.Toolkit()`メソッドのデストラクタとして扱います。
+
+This method is very similar to the `commitChanges` above. However, it uses a platform event to commit changes to the database to perform DML statements in a different transaction and avoid governor limits in some scenarios.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ              | 型         | 説明                                                                            |
+| ------------------ | --------- | ----------------------------------------------------------------------------- |
+| `usePlatformEvent` | `boolean` | `true` if you're using a platform event. `false` to call the original method. |
+
+<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -271,6 +289,39 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 * フォルダが正常に移動された場合は`true`。
 * フォルダが正常に移動されなかった場合は`false`。`mostRecentError`で詳細を確認してください。
 
+### `getUrlForFolder`
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型    | 説明                |
+| ---------- | ---- | ----------------- |
+| `recordId` | `id` | ID of the record. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* `pageReference` object with provided URL.
+* `null` if the parameters are incorrect.
+
+### `createFolderForRecordIdFromTemplate`
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ                 | 型         | 説明                                                                    |
+| --------------------- | --------- | --------------------------------------------------------------------- |
+| `recordId`            | `id`      | Salesforce record ID.                                                 |
+| `templateFolderId`    | `string`  | Source folder which should be the template.                           |
+| `folderNameOverride`  | `string`  | Name override of the new folder.                                      |
+| `optCreateRootFolder` | `boolean` | Flag that determines if a root folder is created if it doesn't exist. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Newly created `folder Id`.
+* `null` if the parameters are incorrect.
+
 ## フォルダ関連付けメソッド
 
 ### `getFolderAssociationsByRecordId`
@@ -385,3 +436,238 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 [sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
 
 <!-- i18n-disable localize-links -->
+
+### `editCollaboration`
+
+| パラメータ         | 型        | 説明                                   |
+| ------------- | -------- | ------------------------------------ |
+| `collabId`    | `string` | Collaboration ID                     |
+| `collabType`  | `enum`   | `Box.Toolkit.CollaborationType` enum |
+| `accessToken` | `string` |                                      |
+
+戻り値:
+
+* Boolean based on the transaction success.
+* `false` if the parameters are incorrect.
+
+### `deleteCollaboration`
+
+| パラメータ         | 型        | 説明               |
+| ------------- | -------- | ---------------- |
+| `collabId`    | `string` | Collaboration ID |
+| `accessToken` | `string` |                  |
+
+戻り値:
+
+* Boolean based on the transaction success.
+* `false` if the parameters are incorrect.
+
+## メタデータ
+
+<Message type="info">
+
+Check the `toolkit.mostRecentError` value for detailed error responses for all the methods.
+
+</Message>
+
+### `getBoxMetadataByFolderId`
+
+This method calls the [get metadata instance on folder endpoint][1].
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                                          |
+| -------------- | -------- | --------------------------------------------------------------------------- |
+| `folderId`     | `string` | The ID of the Box Folder for which you want to create metadata.             |
+| `scope`        | `string` | The scope of the metadata template. Value is one of `[global, enterprise]`. |
+| `template_key` | `string` | The name of the metadata template.                                          |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* `FolderMetadata` record associated with this folder, scope, and template key. You can find the custom values in `keyValuePairs` variable of this object.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy is not found.
+
+### `createBoxMetadataByFolderId`
+
+This method calls the [create metadata instance on folder][2] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ           | 型                    | 説明                                                                                                                                                                                                                                                                                                                                                          |
+| --------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderId`      | `string`             | ID of the Box Folder for which you want to create metadata.                                                                                                                                                                                                                                                                                                 |
+| `scope`         | `string`             | Scope of the metadata template. Value is one of [`global`, `enterprise`][`global`, `enterprise`].                                                                                                                                                                                                                                                           |
+| `template_key`  | `string`             | Name of the metadata template.                                                                                                                                                                                                                                                                                                                              |
+| `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Newly created `FolderMetadata` object.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy is not found.
+
+### `updateBoxMetadataByFolderId`
+
+Calls the [update metadata instance on folder][3] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型                            | 説明                                                                                                                                                                                                                                                                                                                    |
+| -------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderId`     | `string`                     | ID of the Box folder for which you want to update metadata.                                                                                                                                                                                                                                                           |
+| `scope`        | `string`                     | The scope of the metadata template. Value is one of [`global`, `enterprise`][`global`, `enterprise`]                                                                                                                                                                                                                  |
+| `template_key` | `string`                     | The name of the metadata template.                                                                                                                                                                                                                                                                                    |
+| `mdUpdates`    | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the [API][3]. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Updated `FolderMetadata` object.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy is not found.
+
+### `deleteBoxMetadataFolderId`
+
+This method call the [delete metadata instance from folder][4] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                                                                   |
+| -------------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| `folderId`     | `string` | ID of the Box folder for which you want to update metadata.                                          |
+| `scope`        | `string` | The scope of the metadata template. Value is one of [`global`, `enterprise`][`global`, `enterprise`] |
+| `template_key` | `string` | The name of the metadata template.                                                                   |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Boolean based on the transaction success.
+* `false` can be returned if parameters are incorrect parameters or metadata is not found.
+
+### `getMetadataCascadePolicyById`
+
+This method calls the [get metadata cascade policy from folder][5] endpoint. As it requires an ID, you need to call the `getMetadataCascadePoliciesByFolderId` method first.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                                                 |
+| ---------- | -------- | -------------------------------------------------- |
+| `policyId` | `string` | The ID of the cascade policy you want to retrieve. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* `MetadataCascadePolicy` object retrieved from Box.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy is not found.
+
+### `getMetadataCascadePoliciesByFolderId`
+
+This method retrieves the cascade policies by providing a folder ID and calling the [get metadata cascade policies][6] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ               | 型         | 説明                                                                                                                      | 必須  |
+| ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- | --- |
+| `folderId`          | `string`  | Specifies for which folder to return the policies. This can't be used on the root folder with ID 0.                     | はい  |
+| `paginationMarker`  | `string`  | Defines the position marker at which to begin returning results. This is used for marker-based pagination.              | いいえ |
+| `Offset`            | `integer` | The offset of the item at which to begin the response.                                                                  | いいえ |
+| `ownerEnterpriseId` | `string`  | Enterprise ID for which to find the metadata cascade policies. If not specified, it defaults to the current enterprise. | いいえ |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* List of `MetadataCascadePolicy` objects retrieved from Box.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy is not found.
+
+### `createMetadataCascadePolicy`
+
+This method creates cascade policies by providing a Box folder ID, scope, template key, and by calling the [post metadata cascade policies][7] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                                                                         |
+| -------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| `folderId`     | `string` | ID of the Box folder for which you want to create the metadata cascade policy.                             |
+| `scope`        | `string` | The scope of the metadata cascade policy. Value is one of [`global`, `enterprise`][`global`, `enterprise`] |
+| `template_key` | `string` | The name of the template key.                                                                              |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Newly generated `MetadataCascadePolicy`.
+* `null`, if:
+  * the parameters are incorrect,
+  * access to the folder is missing,
+  * metadata cascade policy details are not found.
+
+### `deleteMetadataCascadePolicy`
+
+This method deletes the cascade policies by providing a cascade policy ID and calling the [delete metadata cascade policies ID][8] endpoint.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                                               |
+| ---------- | -------- | ------------------------------------------------ |
+| `policyId` | `string` | The ID of the cascade policy you want to delete. |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Boolean based on the transaction success.
+* `false` is returned if parameters are incorrect, access to the folder is missing, or the metadata cascade policy is not found.
+
+### `enableAppActivity`
+
+This method enables the given folder for App Activities by applying metadata on the folder and cascading it down.
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                                                              |
+| ---------- | -------- | --------------------------------------------------------------- |
+| `folderId` | `string` | The ID of the Box folder for which you want to delete metadata. |
+
+戻り値:
+
+* Boolean based on the transaction success.
+* `false` in case of incorrect parameters.
+
+<!-- markdownlint-enable line-length -->
+
+[1]: r://get-folders-id-metadata-id-id
+
+[2]: r://post-folders-id-metadata-id-id
+
+[3]: r://put-folders-id-metadata-id-id
+
+[4]: r://delete-folders-id-metadata-id-id
+
+[5]: r://get-metadata-cascade-policies-id
+
+[6]: r://get-metadata-cascade-policies
+
+[7]: r://post-metadata-cascade-policies
+
+[8]: r://delete-metadata-cascade-policies-id

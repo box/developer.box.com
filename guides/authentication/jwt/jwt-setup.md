@@ -177,7 +177,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 ### アプリケーションアクセス
 
-アプリケーションのアクセスレベルにより、アプリからアクセスできるユーザーおよびコンテンツが決まります。デフォルトでは、アプリケーションで問題なく操作できるのは、その[サービスアカウント][sa]とすべての[App User][user-types]のコンテンツのみです。企業の既存の管理対象ユーザーにもアクセスするには、[開発者コンソール][devconsole]の \[**構成**] タブから \[**アプリアクセスレベル**] に移動し、\[**アプリ + Enterpriseアクセス**] に設定します。 
+An application's access level determines which users and content your app may access. By default, an application can only successfully interact with the content of its [Service Account][sa] and any [App Users][user-types]. To access existing Managed Users of an enterprise and groups that were not created by the app itself, navigate to the **Application Access** settings accessible in the **Configuration** tab of the [Developer console][devconsole] and set to **App + Enterprise Access**. Otherwise access to such Managed Users and groups will be blocked.
 
 <ImageFrame border>
 
