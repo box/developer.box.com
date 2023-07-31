@@ -138,21 +138,21 @@ new applications and discover Box Platform capabilities.
 
 <TileGrid>
 
-<Tile type="users" title="Explore user types" href="/guides/getting-started/user-types/">
+<Tile type="users" title="1. Explore user types" href="/guides/getting-started/user-types/">
 
 Box Platform has different user options depending on the use case.
 Before developing, review this guide to understand the differences.
 
 </Tile>
 
-<Tile type="apps" title="Understand application types" href="/guides/applications/select/">
+<Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
 
 When creating a new application, you have three choices: custom, limited
 access, and skill. This section describes the differences between them.
 
 </Tile>
 
-<Tile type="authentication" title="Learn authentication methods" href="/guides/authentication/select/">
+<Tile type="authentication" title="3. Learn authentication methods" href="/guides/authentication/select/">
 
 Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
 Credentials, and App Token authentication. The methods available are
@@ -160,7 +160,7 @@ based on the application type selected.
 
 </Tile>
 
-<Tile type="cli" title="Set up Box CLI" href="/guides/cli/quick-start/">
+<Tile type="cli" title="4. Set up Box CLI" href="/guides/cli/quick-start/">
 
 Optionally, follow the Box CLI quick start
 guide in order to have an API testing space. This tool can come to your
@@ -168,14 +168,14 @@ aide when you get stuck. It takes less than five minutes!
 
 </Tile>
 
-<Tile type="architecture" title="Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
+<Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
 
 We always recommended putting pen to paper and drawing out your solution.
 Checkout the most common architecture patterns in this guide.
 
 </Tile>
 
-<Tile type="create" title="Create the application" href="https://app.box.com/developers/console">
+<Tile type="create" title="6. Create the application" href="https://app.box.com/developers/console">
 
 Now, you can start building! Visit the Developer Console. Create an
 application based on the choices
@@ -183,7 +183,7 @@ you've selected from the learnings in the other steps.
 
 </Tile>
 
-<Tile type="authorize" title="Authorize the application" href="/guides/authorization/">
+<Tile type="authorize" title="7. Authorize the application" href="/guides/authorization/">
 
 Depending on the authentication method selected, you may have to
 have the primary administrator of your Box instance authorize
@@ -191,7 +191,7 @@ you new app. Check details here!
 
 </Tile>
 
-<Tile type="code" title="Start coding" href="#sdks-and-tools">
+<Tile type="code" title="8. Start coding" href="#sdks-and-tools">
 
 Finally, utilise our developer tool kit: API Reference,
 SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
