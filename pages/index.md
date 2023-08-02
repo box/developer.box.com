@@ -49,6 +49,12 @@ Build experiences with **Box Platform**
 
 <BannerTitle>
 
+Power content portals with **Box Platform**
+
+</BannerTitle>
+
+<BannerTitle>
+
 Integrate apps with **Box Platform**
 
 </BannerTitle>
@@ -151,8 +157,8 @@ Read this guide to see which one fits your needs best.
 <Tile type="authentication" title="3. Learn authentication methods" href="/guides/authentication/select/">
 
 Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
-Credentials, and App Token authentication. Check with method
-applies to your application.
+Credentials, and App Token authentication. Learn more and
+select the method that applies to your app.
 
 </Tile>
 
@@ -166,7 +172,7 @@ five minutes to start developing!
 
 <Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
 
-We always recommended putting pen to paper and drawing out your solution.
+We always recommend putting pen to paper and drawing out your solution.
 Have a look at the most common architecture patterns to get inspired!
 
 </Tile>
@@ -187,7 +193,7 @@ fulfill to start using you app.
 
 <Tile type="code" title="8. Start coding" href="#sdks-and-tools">
 
-Finally, explore our developer tool kit: API Reference,
+Finally, explore our developer toolkit: API Reference,
 SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
 
 </Tile>
@@ -252,13 +258,13 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="ios" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
+<Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
   *box-ios-sdk*
 
 </Tile>
 
-<Tile type="postman" title="Postman collection" href="/guides/tooling/postman">
+<Tile type="tool" title="Postman collection" href="/guides/tooling/postman">
 
   *Box Postman Collection*
 
@@ -378,7 +384,7 @@ Additional Box Platform concepts
 
 Want to learn more?
 Use these guides to discover supplementary information on the inner
-workings of Box Platform, broadening your understanding, and improving
+workings of Box Platform, broaden your understanding, and improve
 your custom applications.
 
 </div>
@@ -387,7 +393,7 @@ your custom applications.
 
 <Tile type="guide" title="Downloads" href="/guides/downloads/">
 
-Use the Box API to download files to the application's
+Use Box API to download files to the application's
 server, or directly by the end user in a browser.
 
 </Tile>
@@ -422,8 +428,8 @@ and receive notifications to a URL of your choice when they occur.
 
 <Tile type="guide" title="Search" href="/guides/search/">
 
-Find content in Box using full-text
-search queries. Support for the Box search API is available
+Find relevant content in Box using full-text
+search queries. Box search API is supported
 in all our SDKs and the CLI.
 
 </Tile>
