@@ -49,12 +49,6 @@ Build experiences with **Box Platform**
 
 <BannerTitle>
 
-Power content portals with **Box Platform**
-
-</BannerTitle>
-
-<BannerTitle>
-
 Integrate apps with **Box Platform**
 
 </BannerTitle>
@@ -140,60 +134,60 @@ new applications and discover Box Platform capabilities.
 
 <Tile type="users" title="1. Explore user types" href="/guides/getting-started/user-types/">
 
-Box Platform has different user options depending on the use case.
-Before developing, review this guide to understand the differences.
+Box Platform covers many use cases
+that may require different user types.
+Learn more about the
+difference between the types.
 
 </Tile>
 
 <Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
 
-When creating a new application, you have three choices: custom, limited
-access, and skill. This section describes the differences between them.
+When creating applications, you can choose from several types.
+Read this guide to see which one fits your needs best.
 
 </Tile>
 
 <Tile type="authentication" title="3. Learn authentication methods" href="/guides/authentication/select/">
 
 Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
-Credentials, and App Token authentication. The methods available are
-based on the application type selected.
+Credentials, and App Token authentication. Check with method
+applies to your application.
 
 </Tile>
 
 <Tile type="cli" title="4. Set up Box CLI" href="/guides/cli/quick-start/">
 
-Optionally, follow the Box CLI quick start
-guide in order to have an API testing space. This tool can come to your
-aide when you get stuck. It takes less than five minutes!
+Optionally, follow the Box CLI quickstart
+guide to have an API testing space. It takes less than
+five minutes to start developing!
 
 </Tile>
 
 <Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
 
 We always recommended putting pen to paper and drawing out your solution.
-Checkout the most common architecture patterns in this guide.
+Have a look at the most common architecture patterns to get inspired!
 
 </Tile>
 
 <Tile type="create" title="6. Create the application" href="https://app.box.com/developers/console">
 
-Now, you can start building! Visit the Developer Console. Create an
-application based on the choices
-you've selected from the learnings in the other steps.
+Now, you can start building! Launch the Developer Console and create an
+application of your choice.
 
 </Tile>
 
 <Tile type="authorize" title="7. Authorize the application" href="/guides/authorization/">
 
-Depending on the authentication method selected, you may have to
-have the primary administrator of your Box instance authorize
-you new app. Check details here!
+Read about the authorization requirements you have to
+fulfill to start using you app.
 
 </Tile>
 
 <Tile type="code" title="8. Start coding" href="#sdks-and-tools">
 
-Finally, utilise our developer tool kit: API Reference,
+Finally, explore our developer tool kit: API Reference,
 SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
 
 </Tile>
@@ -221,7 +215,7 @@ Browse by SDK and tools
 </Header>
 
 Development with Box Platform is easy with SDKs,
-a command line interface, Postman collection,
+Box CLI, Postman collection,
 front-end UI elements, and much more.
 
 </div>
@@ -258,13 +252,13 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
+<Tile type="ios" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
   *box-ios-sdk*
 
 </Tile>
 
-<Tile type="tool" title="Postman collection" href="/guides/tooling/postman">
+<Tile type="postman" title="Postman collection" href="/guides/tooling/postman">
 
   *Box Postman Collection*
 
@@ -384,7 +378,7 @@ Additional Box Platform concepts
 
 Want to learn more?
 Use these guides to discover supplementary information on the inner
-workings of Box Platform, broadening your understanding and improving
+workings of Box Platform, broadening your understanding, and improving
 your custom applications.
 
 </div>
@@ -393,56 +387,52 @@ your custom applications.
 
 <Tile type="guide" title="Downloads" href="/guides/downloads/">
 
-The Box API allows for downloading files to the application's
-server, or directly by the end user in a browser. Read more in our guide!
+Use the Box API to download files to the application's
+server, or directly by the end user in a browser.
 
 </Tile>
 
 <Tile type="guide" title="Uploads" href="/guides/uploads/">
 
-The Box API supports two distinct methods of file upload.
-The direct file upload API or the chunked upload APIs.
-Review this guide to learn more.
+Upload your files directly with the file upload API or
+use the chunked upload APIs for larger files.
 
 </Tile>
 
-<Tile type="guide" title="Common Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
+<Tile type="guide" title="Errors" href="/guides/api-calls/permissions-and-errors/common-errors/">
 
-Box APIs use HTTP status codes to communicate
-if a request has been successfully processed.
-See the common errors reference for more information.
+Browse the common errors reference to learn more about
+HTTP status codes used to communicate issues with request processing.
 
 </Tile>
 
 <Tile type="guide" title="Metadata" href="/guides/metadata/">
 
-Metadata allows users and applications to define and store custom data
-associated with files and folders. See this guide on how to do so using
-the API.
+Explore how metadata allows users and applications to
+define and store custom data associated with files and folders.
 
 </Tile>
 
 <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
 
-Webhooks allow you to monitor Box content for events,
+Use Webhooks to monitor Box content for events,
 and receive notifications to a URL of your choice when they occur.
-This guide will help walk you through the options.
 
 </Tile>
 
 <Tile type="guide" title="Search" href="/guides/search/">
 
-The Box API provides a way to find content in Box using full-text
+Find content in Box using full-text
 search queries. Support for the Box search API is available
-in all our supported SDKs and the CLI.
+in all our SDKs and the CLI.
 
 </Tile>
 
 <Tile type="guide" title="Salesforce" href="/guides/tooling/salesforce-toolkit/">
 
 Integrate Box and Salesforce! Most
-recently we launched support for Salesforce Flows, their low code/no code
-solution. Find out more in this section.
+recently we launched support for Salesforce Flows, a low code/no code
+solution.
 
 </Tile>
 
