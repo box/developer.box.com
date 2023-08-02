@@ -224,11 +224,11 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-windows-sdk-v2#readme">
       *box-windows-sdk-v2*
     </Tile>
-    <Tile type="tool" title="iOS SDK"
+    <Tile type="ios" title="iOS SDK"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
     </Tile>
-    <Tile type="tool" title="Postman collection"
+    <Tile type="postman" title="Postman collection"
       href="/guides/tooling/postman">
       *Box Postman Collection*
     </Tile>
