@@ -49,12 +49,6 @@ Build experiences with **Box Platform**
 
 <BannerTitle>
 
-Power content portals with **Box Platform**
-
-</BannerTitle>
-
-<BannerTitle>
-
 Integrate apps with **Box Platform**
 
 </BannerTitle>
