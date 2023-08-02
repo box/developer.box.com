@@ -28,9 +28,6 @@ alias_paths:
     Build experiences with **Box Platform**
   </BannerTitle>
   <BannerTitle>
-    Power content portals with **Box Platform**
-  </BannerTitle>
-  <BannerTitle>
     Integrate apps with **Box Platform**
   </BannerTitle>
 
