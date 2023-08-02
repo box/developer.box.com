@@ -255,7 +255,7 @@ alias_paths:
       define and store custom data associated with files and folders.
     </Tile>
     <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
-      Ue Webhooks to monitor Box content for events,
+      Use Webhooks to monitor Box content for events,
       and receive notifications to a URL of your choice when they occur.
     </Tile>
     <Tile type="guide" title="Search" 
