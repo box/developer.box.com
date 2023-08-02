@@ -31,7 +31,7 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-  All the developer resources to help you get the most from Box products.
+  All the developer resources to help you get the most from Box products
 
 </Banner>
 
