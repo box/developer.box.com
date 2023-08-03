@@ -12,7 +12,8 @@ alias_paths: []
 # Installation
 
 UI Elements can be used either by downloading the Javascript libraries
-directly from the Box CDN or by installing our [NPM package][npm]. All UI Elements require their corresponding CSS stylesheet to render properly.
+directly from the Box CDN or by installing our [NPM package][npm]. All UI
+Elements require their corresponding CSS stylesheet to render properly.
 
 ## NPM installation
 
