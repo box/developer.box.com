@@ -75,8 +75,7 @@ preview files on Box.
 <Message type='notice' >
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features.  For support with these
-projects please visit GitHub or [our Platform support
-forum][forum]."
+projects please visit GitHub or [our Platform support forum][forum].
 </Message>
 
 ## Unofficial & Community Tools
@@ -99,8 +98,7 @@ members. These tools do not receive regular product updates or security updates.
 collaboration with the community. They receive irregular security updates. If
 you are a Box customer on a premium support plan, please contact customer
 services for any urgent feature requests for these tools. For other support
-queries with these projects please visit GitHub or [our Platform support
-forum][forum].
+queries with these projects please visit GitHub or [our Platform support forum][forum].
 
 **API Parity:**  Projects with limited API parity can lack some functionality
 as new features are not automatically rolled out to these projects as they
@@ -117,7 +115,7 @@ for these tools.
 [androidsdk]: https://github.com/box/box-android-sdk
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [cli]: https://github.com/box/boxcli
-[forum]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+[forum]: https://forum.box.com/
 [browseimg]: ./browse.jpg
 [shareimg]: ./share.jpg
 [previewimg]: ./preview.jpg
