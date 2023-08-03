@@ -18,5 +18,5 @@ assignees: cbetta
 <!-- Please include as much detail as possible -->
 
 [api-docs]: https://developer.box.com/
-[dev-forums]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+[dev-forums]: https://forum.box.com/
 [github-repo]: https://github.com/box/developer.box.com/search?type=Issues
