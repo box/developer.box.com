@@ -337,7 +337,7 @@ for many customers.
 
 Consider a straightforward use case of the application - the end user needs to
 upload a file and then preview it in the application itself. To do this the
-application is using the Content Upload and Content Preview UI Elements,
+application is using the Content Uploader and Content Preview UI Elements,
 respectively. Since both preview + upload are bandwidth heavy operations, the
 application should not proxy the traffic and instead allow the client to perform
 these operations directly against Box. To make calls against Box, all UI
