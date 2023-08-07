@@ -164,17 +164,21 @@ the API.
 
 </ImageFrame>
 
-## Embedded Sign Client
+## Embedded Sign client
 
-[Box Embed][embed] allows you to embed the Box Sign
-client into your own website so that the users
-don't have to leave the website to got to Box Sign and back.
-Instead, they can complete the signing process within the external website.
+[Box Embed][embed] allows you to embed Box Sign
+features into your own website. This way, users
+don't have to leave the website, go to Box Sign
+to sign the document, and then come back to finish
+the process.
+Instead, Box Embed allows them
+to complete the signing process
+within the external website.
 
 To integrate Box Sign experience within your
 own website, you need the `iframable_embed_url`
 parameter that is specifically designed to allow
-signing documents within an HTML `iframe` tag.
+signing documents within the HTML `iframe` tag.
 
 <!-- markdownlint-disable line-length -->
 
@@ -186,7 +190,7 @@ https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14
 
 The first ID in the URL represents the sign request ID and the second is the signer's ID.
 
-To get the `iframeable_embed_url`, pass the [`external_id`][externalid] parameter in the POST [sign request][signrequest].
+To get the `iframeable_embed_url`, pass the [`external_id`][externalid] parameter when calling the [create sign request][signrequest] endpoint.
 The returned response will contain the URL.
 
 To embed Sign features and make them
