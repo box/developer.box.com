@@ -164,6 +164,62 @@ the API.
 
 </ImageFrame>
 
+## Embedded Sign Client
+
+[Box Embed][embed] allows you to embed the Box Sign
+client into your own website so that the users
+don't have to leave the website to got to Box Sign and back.
+Instead, they can complete the signing process within the external website.
+
+To integrate Box Sign experience within your
+own website, you need the `iframable_embed_url`
+parameter that is specifically designed to allow
+signing documents within an HTML `iframe` tag.
+
+<!-- markdownlint-disable line-length -->
+
+A sample `iframable_embed_url` looks as follows:
+
+```sh
+https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
+```
+
+The first ID in the URL represents the sign request ID and the second is the signer's ID.
+
+To get the `iframeable_embed_url`, pass the [`external_id`][externalid] parameter in the POST [sign request][signrequest].
+The returned response will contain the URL.
+
+To embed Sign features and make them
+available to the users,
+use the URL within the `iframe` tag:
+
+```sh
+<iframe
+  src="https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4"
+  width="{pixels}"
+  height="{pixels}"
+  frameborder="0"
+  allowfullscreen
+  webkitallowfullscreen
+  msallowfullscreen
+></iframe>
+```
+
+<!-- markdownlint-enable line-length -->
+
+<Message>
+
+For details on working with Box Embed, see [this guide][embedguide]
+
+</Message>
+
+Box Embed uses the [Cloud Game][cloudgame] widget to
+prevent clickjacking.
+In this case, when the user wants to sign
+a document, they will have to interact
+with the widget and drag a cloud to the correct
+location before proceeding to document signing.
+
 ## Request status
 
 - `converting`: The file is converted to a `.pdf` for the signing process once
@@ -185,6 +241,10 @@ the API.
 - `cancelled`: If the request is cancelled via UI or API.
 - `expired`: The date of expiration has passed with outstanding, incomplete
   signatures.
+- `finalizing`: If all signers have signed the request,
+   but the final document with signatures and the signing
+   log has not been generated yet.
+- `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
 Encountering an error status requires creating a new sign request to retry.
 
@@ -206,3 +266,9 @@ Encountering an error status requires creating a new sign request to retry.
 [role]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers
 [collab]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels
 <!-- i18n-disable localize-links -->
+
+[embed]: g://embed/box-embed
+[embedguide]: g://embed/box-embed#programmatically
+[signrequest]: e://post-sign-requests
+[externalid]: e://post-sign-request#param-external-id
+[cloudgame]: g://embed/box-embed#cloud-game
