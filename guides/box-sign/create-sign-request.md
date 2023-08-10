@@ -188,7 +188,7 @@ A sample `iframable_embed_url` looks as follows:
 https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
 ```
 
-To get the `iframeable_embed_url` pass the [`external_idembed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint.
+To get the `iframeable_embed_url` pass the [`embed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint.
 The returned response will contain a unique `iframeable_embed_url` for that signer.
 
 To embed Sign features and make them
@@ -272,5 +272,5 @@ Encountering an error status requires creating a new sign request to retry.
 [embed]: g://embed/box-embed
 [embedguide]: g://embed/box-embed#programmatically
 [signrequest]: e://post-sign-requests
-[externalid]: e://post-sign-request#param-signers-embed_url_external_user_id
+[externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
 [cloudgame]: g://embed/box-embed#cloud-game
