@@ -15,9 +15,8 @@ alias_paths:
 <Message warning>
   # End of Support
 
-  We will no longer support the `OpenWith` UI element for any new customers
-  beginning on December 21, 2021. Please see the changelog for more
-  information.
+  We no longer support the `OpenWith` UI element for any new customers
+  as of December 21, 2021. Please see the changelog for more information.
 </Message>
 
 The Box Content Open With UI Element allows developers to embed a dropdown to
@@ -39,14 +38,6 @@ for authentication.
 
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
-
-<Message>
-  # Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
 
 ## Box Edit
 
@@ -238,12 +229,6 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     <meta charset="utf-8" />
     <title>Box Content Open With Demo</title>
 
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the open with css for your locale -->
     <link
       rel="stylesheet"
@@ -252,8 +237,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
   </head>
   <body>
     <div class="container" style="height:600px"></div>
-    <!-- Latest version of the core and open with js for your locale -->
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
+    <!-- Latest version of the open with js for your locale -->
     <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.js"></script>
     <script>
       var fileId = "123";
