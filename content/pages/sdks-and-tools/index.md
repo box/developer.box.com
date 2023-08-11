@@ -12,20 +12,73 @@ centered: true
 
 # SDKs & Tools
 
-The following tools are actively developed and supported by Box. These tools
-receive regular product updates, as well as security updates.
+The following tools are developed and supported by Box,
+receiving regular product and security updates.
 
-## Download SDKs & CLIs
+## SDKs
 
-| Platform                          | Maintained? | Parity? |
+<Message type='notice'>
+The tables below list SDKs along with additional information
+telling you if the project is maintained and has API
+parity.
+
+**Maintained:** Fully maintained projects are actively developed by Box. They
+receive the latest security updates and new features. For support with these
+projects please visit GitHub or [our Platform support forum][forum].
+
+**API Parity**: Projects with full API parity are actively updated with all
+platform functionality as this becomes available on the Box Platform. Projects
+with partial API parity lack some functionality while we work on bringing
+these projects to full parity.
+</Message>
+
+### Next generation SDKs
+
+The latest generation Box Python SDK and Box Typescript
+SDK are designed to to elevate the developer
+experience and streamline your integration
+with the Box Content Cloud.
+
+<Message type='notice'>
+New Typescript and Python SDKs are a Beta feature.
+</Message>
+
+Here's what you can expect from the new SDKs:
+
+* **Full API Support** New Box SDKs empower developers
+ with complete coverage of the Box API ecosystem.
+ You can access all the latest features and
+functionalities offered by Box and build feature-rich applications.
+* **Rapid API Updates**: The new auto-generation development
+approach allows for adding Box APIs to
+SDKs at a much faster pace (in a matter of days). 
+This means you can leverage the most up-to-date
+features in your applications without delay.
+* **Embedded Documentation**  All objects and parameters
+are documented directly in the source code of the SDK
+so all the necessary information is stored in one place.
+* **Enhanced Convenience Methods** The newly introduced
+convenience methods cover various aspects such as
+authentication, chunk uploads, exponential back-offs, 
+automatic retries, type checkers which
+help to ensure that you’re using variables correctly, 
+and much more.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
+| [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
+
+### SDKs
+
+| Platform                          | Maintained? | API Parity |
 | --------------------------------- | ----------- | ------- |
 | [Java SDK][javasdk]               | Yes         | Full    |
 | [.NET SDK][dotnetsdk]             | Yes         | Full    |
 | [Python SDK][pythonsdk]           | Yes         | Full    |
 | [Node SDK][nodesdk]               | Yes         | Full    |
-| [CLI][cli]                        | Yes         | Full    |
 | [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | No    | Partial |
+| [Android Content SDK][androidsdk] | No          | Partial |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -40,16 +93,15 @@ recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 </Message>
 
-<Message type='notice'>
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features. For support with these
-projects please visit GitHub or [our Platform support forum][forum].
+## Box CLI
 
-**API Parity**: Projects with full API parity are actively updated with all
-platform functionality as this becomes available on the Box Platform. Projects
-with partial API parity lack some functionality while we work on bringing
-these projects to full parity.
-</Message>
+Box CLI is a user-friendly command line tool which
+allows both technical and non-technical users to
+leverage Box API to perform routine or bulk actions.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [CLI][cli]                        | Yes         | Full    |
 
 ## Official UI Libraries
 
@@ -58,25 +110,19 @@ preview files on Box.
 
 <!-- markdownlint-disable line-length -->
 
-|                                                                   |                                                                             |                                                                                      |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Browse                                                            | Share                                                                       | Preview                                                                              |
-| ![Browse][browseimg]                                              | ![Share][shareimg]                                                          | ![Preview][previewimg]                                                               |
+|         |        |           |
+| ------- | ------ | --------- |
+| Browse  | Share  |Preview    |
+| ![Browse][browseimg]   | ![Share][shareimg]   | ![Preview][previewimg]     |
 | Navigate and manipulate your files on Box using our pre-built UI. | Share files with our pre-built UI elements for file & folder collaboration. | Review over 120 files types, from PDFs to HD videos, with a rich preview experience. |
 
-| Platform   |                                                                                                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| iOS        | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
+| Platform   |      |
+| ---------- | ---------------- |
+| iOS  | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                                |
+| Javascript | [Box UI Elements](guide://embed/ui-elements/)    |  
 
   <!-- markdownlint-enable line-length -->
-
-<Message type='notice' >
-**Maintained:** Fully maintained projects are actively developed by Box. They
-receive the latest security updates and new features.  For support with these
-projects please visit GitHub or [our Platform support forum][forum].
-</Message>
 
 ## Unofficial & Community Tools
 
@@ -85,15 +131,14 @@ members. These tools do not receive regular product updates or security updates.
 
   <!-- markdownlint-disable line-length -->
 
-| Platform                        | Maintained?                           | Parity  |
-| ------------------------------- | ------------------------------------- | ------- |
-| [Salesforce SDK][salesforcesdk] | Limited, by Box and community members | Partial |
+| Platform   | Maintained?    | API Parity  |
+| ---------- | ---------------| ------- |
+| [Salesforce SDK][salesforcesdk] | Limited, by Box and community members |Partial |
 | [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
 
   <!-- markdownlint-enable line-length -->
 
-<Message type='notice'>
 **Maintained:** Projects with limited maintenance are updated by Box in
 collaboration with the community. They receive irregular security updates. If
 you are a Box customer on a premium support plan, please contact customer
@@ -105,7 +150,6 @@ as new features are not automatically rolled out to these projects as they
 become available for the Box Platform. If you are a Box customer on a premium
 support plan, please contact customer services for any urgent feature requests
 for these tools.
-</Message>
 
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
@@ -125,3 +169,5 @@ for these tools.
 [salesforcesdk]: https://github.com/box/box-salesforce-sdk
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
+[pythongensdk]: https://github.com/box/box-python-sdk-gen
+[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
