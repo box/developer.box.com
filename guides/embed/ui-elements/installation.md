@@ -83,12 +83,6 @@ code, or embed them straight into your page from the CDN.
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the explorer css for your locale -->
     <link
       rel="stylesheet"
@@ -111,12 +105,6 @@ For Box Preview, the sample would look slightly different.
   <head>
     <meta charset="utf-8" />
     <title>Box Content Preview Demo</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
-    <!-- Alternatively, use polyfills hosted on the Box CDN
-  <script src="https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js"></script>
-  -->
 
     <!-- Latest version of Box Content Preview for en-US locale -->
     <script src="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.js"></script>
@@ -154,7 +142,7 @@ Most of the UI elements have 2 distinct versions.
   not get bundled with React and ReactDOM.
   - Use this when both React and ReactDOM libraries are already loaded on the
     application.
-  - These libraries expect a React and ReactDOM `>= 16.2` and `< 17`.
+  - These libraries expect a React and ReactDOM `>= 16.6` and `< 18`.
 
 <message>
 Only one of the two `js` files and the additional `css` file need to be added
@@ -243,7 +231,6 @@ repository also holds a list of [releases][releases].
 [downscope]: g://authentication/tokens/downscope
 [devtoken]: g://authentication/tokens/developer-tokens
 [npm]: https://www.npmjs.com/package/box-ui-elements
-[polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
 [gh]: https://github.com/box/box-ui-elements
 [releases]: https://github.com/box/box-ui-elements/releases
 [downscope]: g://authentication/tokens/downscope

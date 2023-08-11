@@ -41,15 +41,6 @@ This UI Element powers Preview in the main Box web application as well as the
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
 
-<Message>
-
-# Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
-
 ## Authentication
 
 The UI Elements are designed in an authentication agnostic way so whether
