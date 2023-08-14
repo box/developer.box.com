@@ -24,10 +24,18 @@ source_url: >-
 ---
 # SDKs & Tools
 
-The following tools are developed and supported by Box,
-receiving regular product and security updates.
+The following SDKs and tools are developed and supported by Box.
 
 ## SDKs
+
+Here you will find a list of SDKs
+you can use to build your application.
+Separately, we have listed the next generation
+Python and Typescript SDKs which are they
+newest addition.
+They are still a beta feature, but we encourage
+you to give them a try and explore all the
+features they bring along.
 
 <Message type='notice'>
 
@@ -86,6 +94,9 @@ and much more.
 | [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
 
 ### SDKs
+
+The table lists Box SDKs that you can use
+when building your applications.
 
 | Platform                          | Maintained? | API Parity |
 | --------------------------------- | ----------- | ------- |
@@ -157,6 +168,8 @@ members. These tools do not receive regular product updates or security updates.
 
 <!-- markdownlint-enable line-length -->
 
+<Message type='notice'>
+
 **Maintained:** Projects with limited maintenance are updated by Box in
 collaboration with the community. They receive irregular security updates. If
 you are a Box customer on a premium support plan, please contact customer
@@ -168,6 +181,8 @@ as new features are not automatically rolled out to these projects as they
 become available for the Box Platform. If you are a Box customer on a premium
 support plan, please contact customer services for any urgent feature requests
 for these tools.
+
+</Message>
 
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
