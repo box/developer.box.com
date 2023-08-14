@@ -77,7 +77,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
+**Maintained:** Fully maintained projects are actively developed by Box. They receive the latest security updates and new features.  For support with these projects please visit GitHub or [our Platform support forum][forum].
 
 </Message>
 
@@ -119,7 +119,7 @@ fullyTranslated: true
 
 [cli]: https://github.com/box/boxcli
 
-[forum]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+[forum]: https://forum.box.com/
 
 [browseimg]: ./browse.jpg
 

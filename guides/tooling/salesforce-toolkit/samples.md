@@ -143,7 +143,7 @@ boxToolkit.commitChanges();
 
 ## メタデータ
 
-The following code will get, add, delete, and update Box folder metadata and cascade policies.
+以下のコードでは、Boxフォルダのメタデータとカスケードポリシーを取得、追加、削除、更新します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -243,7 +243,7 @@ System.debug(tk.mostRecentError);
 
 <!-- markdownlint-enable line-length -->
 
-More examples:
+その他の例:
 
 <!-- markdownlint-disable line-length -->
 

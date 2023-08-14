@@ -28,7 +28,7 @@ fullyTranslated: true
 
 # サポートの終了
 
-日本時間2021年12月22日以降、新規のお客様に対する`OpenWith` UI Elementのサポートを終了する予定です。詳細については、変更ログを参照してください。
+We no longer support the `OpenWith` UI element for any new customers as of December 21, 2021. Please see the changelog for more information.
 
 </Message>
 
@@ -43,14 +43,6 @@ Open With Elementに含まれる統合には、Google SuiteおよびBox Editが�
 ## インストール
 
 NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
-
-<Message>
-
-# ブラウザのサポート
-
-古いブラウザでは、UI Elementの[サポートは限定的](g://embed/ui-elements/browser)です。目的のブラウザに合ったpolyfillを必ず追加してください。
-
-</Message>
 
 ## Box Edit
 
@@ -218,12 +210,6 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     <meta charset="utf-8" />
     <title>Box Content Open With Demo</title>
 
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the open with css for your locale -->
     <link
       rel="stylesheet"
@@ -232,8 +218,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
   </head>
   <body>
     <div class="container" style="height:600px"></div>
-    <!-- Latest version of the core and open with js for your locale -->
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
+    <!-- Latest version of the open with js for your locale -->
     <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.js"></script>
     <script>
       var fileId = "123";
