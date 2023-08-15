@@ -27,19 +27,19 @@ concepts and components work together to help you create an application quickly.
 
 ## Box Platform 101
 
-<Video>
+VIDEO Insert
 
 Insert more here
 
 ## Use Cases
 
-<Video>
+VIDEO
 
 Insert more here
 
 ## User Types
 
-<Video>
+VIDEO
 
 Insert more here
 
@@ -61,7 +61,7 @@ Insert more here
 
 ## Application Types
 
-<Video>
+VIDEO
 
 Insert more here
 
@@ -87,7 +87,7 @@ Insert more here
 
 ## Authentication Methods
 
-<Video>
+VIDEO
 
 Insert more here
 
@@ -109,7 +109,7 @@ Insert more here
 
 ## Support & Tools
 
-<Video>
+VIDEO
 
 Insert more here
 
