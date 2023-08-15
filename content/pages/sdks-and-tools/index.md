@@ -43,29 +43,17 @@ these projects to full parity.
 ### Next generation SDKs
 
 The latest generation Box Python SDK and Box Typescript
-<<<<<<< HEAD
-SDK are designed to to elevate the developer
-=======
 SDK are designed to elevate the developer
->>>>>>> 915012954fc3c28e346563fe997dffbe176f949a
 experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-<<<<<<< HEAD
-New Typescript and Python SDKs are a Beta feature.
-=======
 New Typescript and Python SDKs are in a Public Beta phase.
->>>>>>> 915012954fc3c28e346563fe997dffbe176f949a
 </Message>
 
 Here's what you can expect from the new SDKs:
 
-<<<<<<< HEAD
-* **Full API Support** New Box SDKs empower developers
-=======
 * **Full API Support**: New Box SDKs empower developers
->>>>>>> 915012954fc3c28e346563fe997dffbe176f949a
  with complete coverage of the Box API ecosystem.
  You can access all the latest features and
 functionalities offered by Box and build feature-rich applications.
@@ -74,17 +62,10 @@ approach allows for adding Box APIs to
 SDKs at a much faster pace (in a matter of days). 
 This means you can leverage the most up-to-date
 features in your applications without delay.
-<<<<<<< HEAD
-* **Embedded Documentation**  All objects and parameters
-are documented directly in the source code of the SDK
-so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods** The newly introduced
-=======
 * **Embedded Documentation**:  All objects and parameters
 are documented directly in the source code of the SDK
 so all the necessary information is stored in one place.
 * **Enhanced Convenience Methods**: The newly introduced
->>>>>>> 915012954fc3c28e346563fe997dffbe176f949a
 convenience methods cover various aspects such as
 authentication, chunk uploads, exponential back-offs, 
 automatic retries, type checkers which
@@ -202,8 +183,4 @@ for these tools.
 [rubysdk]: https://github.com/cburnette/boxr
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
-<<<<<<< HEAD
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-=======
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
->>>>>>> 915012954fc3c28e346563fe997dffbe176f949a
