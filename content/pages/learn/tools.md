@@ -1,19 +1,11 @@
 ---
 centered: true
-rank: 5
+rank: 7
 ---
 
-# Support & Tools
+# Tools
 
 VIDEO
-
-Insert more here
-
-## Developer Site
-
-Insert more here
-
-## Developer Forum
 
 Insert more here
 
@@ -36,7 +28,7 @@ Insert more here
 
 ## Postman Collection
 
-<Youtube id='aEILZ_tukLg'>
+<Youtube id='aEILZ_tukLg' />
 
 Insert more here
 

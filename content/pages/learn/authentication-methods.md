@@ -1,6 +1,6 @@
 ---
 centered: true
-rank: 4
+rank: 5
 ---
 
 # Authentication Methods

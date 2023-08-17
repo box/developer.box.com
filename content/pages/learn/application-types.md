@@ -1,6 +1,6 @@
 ---
 centered: true
-rank: 3
+rank: 4
 ---
 
 # Application Types
