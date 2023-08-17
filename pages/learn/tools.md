@@ -6,10 +6,10 @@ subcategory_id: null
 is_index: false
 id: learn/tools
 type: page
-total_steps: 7
+total_steps: 8
 sibling_id: learn
 parent_id: learn
-next_page_id: ''
+next_page_id: learn/start-creating
 previous_page_id: learn/support
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/learn/tools.md
@@ -46,5 +46,11 @@ Insert more here
 </Youtube>
 
 Insert more here
+
+<Next>
+
+Next step
+
+</Next>
 
 [samples]: g://cli/scripts/

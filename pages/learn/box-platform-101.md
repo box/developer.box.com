@@ -6,7 +6,7 @@ subcategory_id: null
 is_index: false
 id: learn/box-platform-101
 type: page
-total_steps: 7
+total_steps: 8
 sibling_id: learn
 parent_id: learn
 next_page_id: learn/use-cases
@@ -52,6 +52,10 @@ But at a high level, there are some terms and concepts to be familiar with.
 ## Next Lesson
 
 Now that you have the basics down, let's continue on to
-discussing [use cases][usecase]!
+discussing use cases!
 
-[usecase]:page://learn/use-cases
+<Next>
+
+Next step
+
+</Next>

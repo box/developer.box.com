@@ -6,7 +6,7 @@ subcategory_id: null
 is_index: false
 id: learn/user-types
 type: page
-total_steps: 7
+total_steps: 8
 sibling_id: learn
 parent_id: learn
 next_page_id: learn/application-types
@@ -35,3 +35,9 @@ Insert more here
 ## App User
 
 Insert more here
+
+<Next>
+
+Next step
+
+</Next>
