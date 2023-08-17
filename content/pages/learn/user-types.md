@@ -1,6 +1,6 @@
 ---
 centered: true
-rank: 2
+rank: 3
 ---
 
 # User Types

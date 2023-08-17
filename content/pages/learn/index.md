@@ -5,39 +5,43 @@ rank: 0
 
 # Learn
 
-<ImageFrame center>
-![Learn](images/header.png)
-</ImageFrame>
-
-If you are new to Box, **start** here! 
+If you are new to Box, start here! 
 In the following pages, you'll learn how the all the Box Platform
 concepts and components work together to help you create an application quickly.
-
-## Box Platform 101
-
-VIDEO Insert
 
 To kick off your learning journey, checkout this video for an overview
 on everything Box Platform.
 
+<ImageFrame center>
+![Learn](images/header.png)
+</ImageFrame>
+
+REPLACE ABOVE IMAGE WITH VIDEO
+
 ## Learn Sections
 
-The below pages go into more depth on each topic. Checkout each one and become
+These pages go into more depth on each topic. Checkout each one and become
 a Box Platform expert.
 
+- [Box Platform 101][platform101]
 - [Use Cases][usecases]
 - [User Types][usertypes]
 - [Application Types][apptypes]
 - [Authentication Methods][authtypes]
-- [Support & Tools][supporttools]
+- [Support][support]
+- [Tools][tools]
 
-## Start Coding
+## Start Creating
 
 Once you have learned all about the various parts that makeup Box Platform,
-jump in and start coding!
+you are ready to jump in and start creating. Visit
+the [Box Developer Console][devconsole] to begin!
 
+[platform101]:page://learn/box-platform-101
 [usecases]:page://learn/use-cases
 [usertypes]:page://learn/user-types
 [apptypes]:page://learn/application-types
 [authtypes]:page://learn/authentication-methods
-[supporttools]:page://learn/support-and-tools
+[support]:page://learn/support
+[tools]:page://learn/tools
+[devconsole]:https://cloud.app.box.com/developers/console
