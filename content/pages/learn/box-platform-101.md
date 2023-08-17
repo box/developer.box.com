@@ -41,6 +41,8 @@ But at a high level, there are some terms and concepts to be familiar with.
 ## Next Lesson
 
 Now that you have the basics down, let's continue on to
-discussing [use cases][usecase]!
+discussing use cases!
 
-[usecase]:page://learn/use-cases
+<Next>
+  Next step
+</Next>

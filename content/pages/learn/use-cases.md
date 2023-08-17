@@ -8,3 +8,7 @@ rank: 2
 VIDEO
 
 Insert more here
+
+<Next>
+  Next step
+</Next>

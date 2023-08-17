@@ -28,3 +28,7 @@ Insert more here
 ## App Center Publication
 
 Insert more here
+
+<Next>
+  Next step
+</Next>
