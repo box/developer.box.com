@@ -1,15 +1,15 @@
 ---
 centered: true
-rank: 4
+rank: 5
 category_id: learn
 subcategory_id: null
 is_index: false
 id: learn/authentication-methods
 type: page
-total_steps: 5
+total_steps: 7
 sibling_id: learn
 parent_id: learn
-next_page_id: learn/support-and-tools
+next_page_id: learn/support
 previous_page_id: learn/application-types
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/learn/authentication-methods.md

@@ -1,12 +1,12 @@
 ---
 centered: true
-rank: 3
+rank: 4
 category_id: learn
 subcategory_id: null
 is_index: false
 id: learn/application-types
 type: page
-total_steps: 5
+total_steps: 7
 sibling_id: learn
 parent_id: learn
 next_page_id: learn/authentication-methods
