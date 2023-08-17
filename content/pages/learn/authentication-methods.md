@@ -24,3 +24,7 @@ Insert more here
 ## App Token Auth
 
 Insert more here
+
+<Next>
+  Next step
+</Next>

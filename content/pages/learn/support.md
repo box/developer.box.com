@@ -21,4 +21,8 @@ Insert more here
 
 Insert more here
 
+<Next>
+  Next step
+</Next>
+
 [samples]: g://cli/scripts/
