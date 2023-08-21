@@ -29,13 +29,13 @@ fullyTranslated: true
 
 このスクリプトは、BoxをSlackのコンテンツストアとして使用している場合に、SlackとBox間のフォルダマッピングの管理に役立ちます。現在のSlackチャンネルとBoxフォルダのマッピングのリストが作成されるため、入力用のcsvに基づいてマッピングを作成または更新できます。このスクリプトではすべての権限が維持されます。
 
-For more details, you can checkout the [Github repo][1].
+詳細については、[GitHubリポジトリ][1]で確認できます。
 
 ## 前提条件
 
-### Clone script
+### スクリプトの複製
 
-Clone this GitHub repo or download files from the `/examples` directory
+このGitHubリポジトリを複製するか、`/examples`ディレクトリからファイルをダウンロードします
 
 ```bash
 git clone https://github.com/box/boxcli.git
@@ -71,14 +71,14 @@ PS /Users/user/repos/boxcli/examples>
 
 </message>
 
-### Box CLI Install
+### Box CLIのインストール
 
-Configure and install the Box CLI using the OAuth [CLI Setup Quick Start][oauth-guide]. Make sure the user you use is an admin or co-admin.
+OAuth [CLIの設定クイックスタート][oauth-guide]を使用して、Box CLIを構成してインストールします。使用しているユーザーが管理者または共同管理者であることを確認してください。
 
-### Enterprise configuration
+### エンタープライズ設定
 
-* Configure and [install Box for Slack][install-slack] in the relevant Slack work spaces and organizations
-* Box as the [content layer for Slack][content-layer] in enabled
+* 適切なSlackワークスペースやオーガナイゼーションで[Box for Slackを構成してインストール][install-slack]します
+* [Slackのコンテンツレイヤー][content-layer]としてのBoxが有効になっています
 
 ## スクリプトの実行
 
@@ -95,7 +95,7 @@ Type 'help' to get help.
 PS /home/rvb/box-cli/examples/Integration Mappings>
 ```
 
-Run the script with EXTRACT to extract current mappings:
+EXTRACTを指定してスクリプトを実行すると、現在のマッピングが抽出されます:
 
 ```pwsh
 ./integration-mappings.ps1 -Action EXTRACT
@@ -103,7 +103,7 @@ Run the script with EXTRACT to extract current mappings:
 
 または
 
-Run the script with UPDATE to update current mappings:
+UPDATEを指定してスクリプトを実行すると、現在のマッピングが更新されます:
 
 ```pwsh
 ./integration-mappings.ps1 -Action UPDATE
@@ -111,23 +111,23 @@ Run the script with UPDATE to update current mappings:
 
 または
 
-Run the script with CREATE to create new mappings:
+CREATEを指定してスクリプトを実行すると、新しいマッピングが作成されます:
 
 ```pwsh
 ./integration-mappings.ps1 -Action CREATE -MappingPath ./mapping_create_example.csv
 ```
 
-By default, the csv file will save to and load from ./mappings.csv. If you wish to change this location, you can pass in a new path like so:
+デフォルトでは、csvファイルが./mappings.csvに保存され、./mappings.csvから読み込まれます。この場所を変更する場合は、次のように新しいパスを渡します:
 
 ```pwsh
 ./integration-mappings.ps1 -Action EXTRACT -MappingPath ./mappings_new_location.csv
 ```
 
-If you don't specify parameters, the script will prompt you to enter them.
+パラメータを指定しなかった場合は、スクリプトによって、パラメータを入力するよう求められます。
 
 スクリプトの実行が完了すると、以下のような出力が表示されます。
 
-When creating a mapping on a new channel, you must input a Box folder id, Slack channel id and Slack org id. You may use a Slack workspace ID in lieu of the org id. In that case, you would replace the csv column header `SlackOrgId` with `SlackWorkspaceId`.
+新しいチャンネルにマッピングを作成する際は、BoxフォルダID、SlackチャンネルID、およびSlackオーガナイゼーションIDを入力する必要があります。オーガナイゼーションIDの代わりにSlackワークスペースIDを使用できます。その場合は、csvの列見出し`SlackOrgId`を`SlackWorkspaceId`に置き換えます。
 
 ```pwsh
 Starting Process
@@ -143,9 +143,9 @@ All bulk input entries processed successfully.
 * `Integration-mappings_all.txt`: すべてのログエントリが含まれています。
 * `Integration-mappings_errors.txt`: エラーのみが含まれています。
 
-## Disclaimer
+## 免責
 
-This project is a collection of open source examples and should not be treated as an officially supported product. Use at your own risk and as a source of example how to use Box CLI.
+このプロジェクトは、オープンソースの例を集めたものであるため、公式にサポートされている製品として扱わないでください。Box CLIの使用方法は、自己責任の下、例の情報源として利用してください。
 
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
 

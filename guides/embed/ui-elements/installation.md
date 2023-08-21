@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # インストール
 
-UI Elements can be used either by downloading the Javascript libraries directly from the Box CDN or by installing our [NPM package][npm]. All UI Elements require their corresponding CSS stylesheet to render properly.
+UI Elementを使用するには、Box CDNから直接JavaScriptライブラリをダウンロードするか、または[NPMパッケージ][npm]をインストールします。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートが必要です。
 
 ## NPMのインストール
 
@@ -44,7 +44,7 @@ NPMウェブサイトの詳細を確認する
 
 # コンテンツプレビュー
 
-The Box Content Preview library is currently not available via NPM.
+現在、Box Content PreviewライブラリはNPMから入手できません。
 
 </Message>
 
@@ -129,16 +129,16 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
 
 ほとんどのUI Elementには、2つの異なるバージョンがあります。
 
-* A standard `*.js` file (e.g. `explore.js`) that includes React and ReactDOM in the bundle.
+* バンドルにReactとReactDOMなどが含まれている、標準的な`*.js`ファイル (`explore.js`など)。
   * これは、Reactベースのアプリを構築していない場合や、アプリの構築プロセスの一環としてコンポーネントを含める必要がない場合に使用します。
   * ReactライブラリとReactDOMライブラリが含まれています。
   * このアセットのファイルサイズは以下のアセットよりも大きくなります。
-* A smaller `*.no.react.js` file (e.g. `explore.no.react.js`) that does not get bundled with React and ReactDOM.
+* ReactとReactDOMがバンドルされない小規模な`*.no.react.js`ファイル (`explore.no.react.js`など)。
   * これは、ReactライブラリとReactDOMライブラリが両方ともすでにアプリケーションで読み込まれている場合に使用します。
   * これらのライブラリでは、ReactおよびReactDOMが`>= 16.6`かつ`< 18`であることを想定しています。
 
 <message>
-Only one of the two `js` files and the additional `css` file need to be added to a project.</message>
+2つの`js`ファイルのうち1つのみと追加の`css`ファイルをプロジェクトに追加する必要があります。</message>
 
 </message>
 
@@ -197,11 +197,11 @@ UI Elementは、アクセストークンが認証用に渡されることだけ�
 
 ## CORS
 
-To use UI Elements, an application needs to allow the domain the widget is used on for Cross Origin Resource sharing. See the [CORS guide][cors] for more details.
+UI Elementを使用するには、アプリケーションで、クロスオリジンリソース共有でウィジェットが使用されるドメインを許可する必要があります。詳細については、[CORSガイド][cors]を参照してください。
 
 ## ソースコードとリリース
 
-Source code for Box UI Elements is [hosted on GitHub][gh]. The repository contains detailed documentation for usage and development. Please file any bugs you encounter under the "Issues" tab with clear steps to reproduce. This repository also holds a list of [releases][releases].
+Box UI Elementsのソースコードは[GitHubでホストされています][gh]。このリポジトリには、使用方法と開発に関する詳細なドキュメントが含まれています。見つかったバグは、わかりやすい再現手順とともに \[Issues] タブに登録してください。また、このリポジトリでは、[リリース][releases]のリストも保持されています。
 
 [cors]: g://security/cors
 

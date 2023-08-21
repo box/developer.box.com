@@ -54,7 +54,7 @@ fullyTranslated: true
 
 </BannerTitle>
 
-All the developer resources to help you get the most from Box products
+Box製品を最大限利用するのに役立つすべての開発者向けリソース
 
 </Banner>
 
@@ -124,59 +124,59 @@ More Guides
 
 <Header centered>
 
-I'm new to Box Platform. How do I start?
+Box Platformを初めて使用する場合はどのように始めればよいですか?
 
 </Header>
 
-We got you covered! Follow these steps to build new applications and discover Box Platform capabilities.
+こちらにまとめました。以下の手順に従って、新しいアプリケーションを作成したり、Box Platformの機能を確認したりしましょう。
 
 <TileGrid>
 
-<Tile type="users" title="1. Explore user types" href="/guides/getting-started/user-types/">
+<Tile type="users" title="1. ユーザータイプを確認する" href="/guides/getting-started/user-types/">
 
-Box Platform covers many use cases that may require different user types. Learn more about the difference between the types.
-
-</Tile>
-
-<Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
-
-When creating applications, you can choose from several types. Read this guide to see which one fits your needs best.
+Box Platformは、さまざまなユーザータイプを必要とする可能性がある多くのユースケースに対応します。ユーザータイプの違いについて詳細を確認してください。
 
 </Tile>
 
-<Tile type="authentication" title="3. Learn authentication methods" href="/guides/authentication/select/">
+<Tile type="apps" title="2. アプリケーションの種類を理解する" href="/guides/applications/select/">
 
-Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client Credentials, and App Token authentication. Learn more and select the method that applies to your app.
-
-</Tile>
-
-<Tile type="cli" title="4. Set up Box CLI" href="/guides/cli/quick-start/">
-
-Optionally, follow the Box CLI quickstart guide to have an API testing space. It takes less than five minutes to start developing!
+アプリケーションを作成する際に、いくつかの種類から選択できます。こちらのガイドを読んで、自分のニーズに最適なものを確認してください。
 
 </Tile>
 
-<Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
+<Tile type="authentication" title="3. 認証方法を確認する" href="/guides/authentication/select/">
 
-We always recommend putting pen to paper and drawing out your solution. Have a look at the most common architecture patterns to get inspired!
-
-</Tile>
-
-<Tile type="create" title="6. Create the application" href="https://app.box.com/developers/console">
-
-Now, you can start building! Launch the Developer Console and create an application of your choice.
+Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライアント資格情報、およびアプリトークン認証がサポートされています。詳細を確認し、アプリに適用する方法を選択してください。
 
 </Tile>
 
-<Tile type="authorize" title="7. Authorize the application" href="/guides/authorization/">
+<Tile type="cli" title="4. Box CLIを設定する" href="/guides/cli/quick-start/">
 
-Read about the authorization requirements you have to fulfill to start using you app.
+必要に応じて、Box CLIクイックスタートガイドに従って、APIをテストする場所を用意します。開発を始めるまでに5分もかかりません。
 
 </Tile>
 
-<Tile type="code" title="8. Start coding" href="#sdks-and-tools">
+<Tile type="architecture" title="5. アーキテクチャパターンを作成する" href="/guides/getting-started/architecture-patterns/">
 
-Finally, explore our developer toolkit: API Reference, SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
+Boxでは、ペンを使って紙にソリューションを書き出すことを常にお勧めしています。インスピレーションを得るために最も一般的なアーキテクチャパターンを見てみましょう。
+
+</Tile>
+
+<Tile type="create" title="6. アプリケーションを作成する" href="https://app.box.com/developers/console">
+
+これで、アプリケーションの作成を開始できるようになりました。開発者コンソールを起動して、お好みのアプリケーションを作成してください。
+
+</Tile>
+
+<Tile type="authorize" title="7. アプリケーションを承認する" href="/guides/authorization/">
+
+アプリの使用を開始するために満たすべき承認の要件を確認してください。
+
+</Tile>
+
+<Tile type="code" title="8. コーディングを開始する" href="#sdks-and-tools">
+
+最後に、APIリファレンス、SDK、Box CLI、Postmanコレクション、Box UI Elementsなど、Boxの開発者向けツールキットを確認します。
 
 </Tile>
 
@@ -198,11 +198,11 @@ Finally, explore our developer toolkit: API Reference, SDKS, Box CLI, Postman Co
 
 <Header centered>
 
-Browse by SDK and tools
+SDKやツール別に見る
 
 </Header>
 
-Development with Box Platform is easy with SDKs, Box CLI, Postman collection, front-end UI elements, and much more.
+Box Platformを使用した開発は、SDK、Box CLI、Postmanコレクション、フロントエンドUI Elementなどを使用すると簡単です。
 
 </div>
 
@@ -210,7 +210,7 @@ Development with Box Platform is easy with SDKs, Box CLI, Postman collection, fr
 
 <Tile type="box-orange" title="APIリファレンス" href="/reference/">
 
-  _Box API Reference_
+  _Box APIリファレンス_
 
 </Tile>
 
@@ -244,9 +244,9 @@ Development with Box Platform is easy with SDKs, Box CLI, Postman collection, fr
 
 </Tile>
 
-<Tile type="tool" title="Postman collection" href="/guides/tooling/postman">
+<Tile type="tool" title="Postmanコレクション" href="/guides/tooling/postman">
 
-  _Box Postman Collection_
+  _Box Postmanコレクション_
 
 </Tile>
 
@@ -272,7 +272,7 @@ Development with Box Platform is easy with SDKs, Box CLI, Postman collection, fr
 
 <More to="/sdks-and-tools/" center>
 
-See more details
+詳細を表示
 
 </More>
 
@@ -358,11 +358,11 @@ More SDKs & Tools
 
 <Header centered>
 
-Additional Box Platform concepts
+Box Platformのその他のコンセプト
 
 </Header>
 
-Want to learn more? Use these guides to discover supplementary information on the inner workings of Box Platform, broaden your understanding, and improve your custom applications.
+さらに詳しく知りたい場合は、以下のガイドを使用すると、Box Platformの仕組みに関する補足情報を確認して、理解を広げ、カスタムアプリケーションを改善できます。
 
 </div>
 
@@ -370,43 +370,43 @@ Want to learn more? Use these guides to discover supplementary information on th
 
 <Tile type="guide" title="ダウンロード" href="/guides/downloads/">
 
-Use Box API to download files to the application's server, or directly by the end user in a browser.
+Box APIを使用すると、ファイルをアプリケーションのサーバーにダウンロードすることも、エンドユーザーがブラウザで直接ダウンロードすることもできます。
 
 </Tile>
 
 <Tile type="guide" title="アップロード" href="/guides/uploads/">
 
-Upload your files directly with the file upload API or use the chunked upload APIs for larger files.
+ファイルアップロードAPIを使用して直接ファイルをアップロードすることも、大きなファイルには分割アップロードAPIを使用することもできます。
 
 </Tile>
 
 <Tile type="guide" title="エラー" href="/guides/api-calls/permissions-and-errors/common-errors/">
 
-Browse the common errors reference to learn more about HTTP status codes used to communicate issues with request processing.
+一般的なエラーのリファレンスを参照して、リクエスト処理の問題を伝えるために使用されるHTTPステータスコードの詳細を確認できます。
 
 </Tile>
 
 <Tile type="guide" title="メタデータ" href="/guides/metadata/">
 
-Explore how metadata allows users and applications to define and store custom data associated with files and folders.
+メタデータによって、ユーザーやアプリケーションがどのようにファイルやフォルダに関連付けられたカスタムデータを定義、格納できるかを確認します。
 
 </Tile>
 
 <Tile type="guide" title="Webhook" href="/guides/webhooks/">
 
-Use Webhooks to monitor Box content for events, and receive notifications to a URL of your choice when they occur.
+Webhookを使用すると、Boxコンテンツのイベントを監視し、イベントの発生時に任意のURLへの通知を受け取ることができます。
 
 </Tile>
 
 <Tile type="guide" title="検索" href="/guides/search/">
 
-Find relevant content in Box using full-text search queries. Box search API is supported in all our SDKs and the CLI.
+全文検索クエリを使用して、Box内の関連コンテンツを探すことができます。Box検索APIは、すべてのBox SDKとCLIでサポートされています。
 
 </Tile>
 
 <Tile type="guide" title="Salesforce" href="/guides/tooling/salesforce-toolkit/">
 
-Integrate Box and Salesforce! Most recently we launched support for Salesforce Flows, a low code/no code solution.
+BoxとSalesforceを統合しましょう。最近、Boxでは、ローコード/ノーコードのソリューションであるSalesforceフローのサポートを開始しました。
 
 </Tile>
 
@@ -414,7 +414,7 @@ Integrate Box and Salesforce! Most recently we launched support for Salesforce F
 
 <More to="/guides/" center>
 
-Browse all guides
+すべてのガイドを参照
 
 </More>
 
@@ -434,7 +434,7 @@ Browse all guides
 
 <More to="https://medium.com/box-developer-blog" centered>
 
-Visit Box Developer Blog
+Box開発者向けブログを参照
 
 </More>
 

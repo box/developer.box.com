@@ -77,7 +77,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-**Maintained:** Fully maintained projects are actively developed by Box. They receive the latest security updates and new features.  For support with these projects please visit GitHub or [our Platform support forum][forum].
+**メンテナンス**: Boxでは、全面的にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[Developer Forum][forum]を参照してください。
 
 </Message>
 
