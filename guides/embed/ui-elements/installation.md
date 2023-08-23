@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # インストール
 
-UI Elementを使用するには、Box CDNから直接JavaScriptライブラリをダウンロードするか、または[NPMパッケージ][npm]をインストールします。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートが必要です。
+UI Elementを使用するには、Box CDNから直接JavaScriptライブラリをダウンロードするか、[NPMパッケージ][npm]をインストールします。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートが必要です。
 
 ## NPMのインストール
 
