@@ -12,20 +12,8 @@ alias_paths: []
 # Installation
 
 UI Elements can be used either by downloading the Javascript libraries
-directly or by pulling from our NPM packages. All UI Elements also
-require their corresponding CSS stylesheet to render properly.
-
-All of the UI elements are available both through [NPM][npm] as well as for
-direct download.
-
-<Message>
-  There are two ways to use the Box UI elements. If you’re looking to build
-  something quickly, use it as a library as shown below in this
-  documentation. Alternatively, if you are a building a React based app, you can
-  pull in the component from our NPM package. For details refer to the NPM link
-  above. As we continue to roll this out, we will provide some level of access
-  to the source.
-</Message>
+directly from the Box CDN or by installing our [NPM package][npm]. All UI
+Elements require their corresponding CSS stylesheet to render properly.
 
 ## NPM installation
 
@@ -44,7 +32,7 @@ npm install box-ui-elements
 <Message warning>
   # Content Preview
 
-The content Content Preview element is currently not available via NPM.
+The Box Content Preview library is currently not available via NPM.
 
 </Message>
 
@@ -81,12 +69,6 @@ code, or embed them straight into your page from the CDN.
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the explorer css for your locale -->
     <link
       rel="stylesheet"
@@ -108,12 +90,6 @@ For Box Preview, the sample would look slightly different.
   <head>
     <meta charset="utf-8" />
     <title>Box Content Preview Demo</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
-    <!-- Alternatively, use polyfills hosted on the Box CDN
-  <script src="https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js"></script>
-  -->
 
     <!-- Latest version of Box Content Preview for en-US locale -->
     <script src="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.js"></script>
@@ -140,20 +116,20 @@ For Box Preview, the sample would look slightly different.
 
 Most of the UI elements have 2 distinct versions.
 
-- A standard `*.js` file (for example `explore.js`) that includes React and
+- A standard `*.js` file (e.g. `explore.js`) that includes React and
   ReactDOM in the bundle.
   - Use this when you are not building a React based app or you don't want to
     include the components as part of your app's build process.
   - It includes React and ReactDOM libraries.
   - The file size of this asset will be larger than the one below.
-- A smaller `*.no.react.js` file (for example `explore.no.react.js`) that does
+- A smaller `*.no.react.js` file (e.g. `explore.no.react.js`) that does
   not get bundled with React and ReactDOM.
   - Use this when both React and ReactDOM libraries are already loaded on the
     application.
-  - These libraries expect a React and ReactDOM `>= 16.2` and `< 17`.
+  - These libraries expect a React and ReactDOM `>= 16.6` and `< 18`.
 
 <message>
-  Only one of the 2 `js` files, and the additional `css` file need to be added
+  Only one of the two `js` files and the additional `css` file need to be added
   to a project.
 </message>
 
@@ -221,13 +197,13 @@ For testing purposes, a [Developer Token][devtoken] can be used.
 
 ## CORS
 
-To use UI elements an application needs to allow the domain the widget is
+To use UI Elements, an application needs to allow the domain the widget is
 used on for Cross Origin Resource sharing. See the [CORS guide][cors] for more
 details.
 
 ## Source Code & Releases
 
-Source code for the Explorer Element is [hosted on GitHub][gh]. The repository
+Source code for Box UI Elements is [hosted on GitHub][gh]. The repository
 contains detailed documentation for usage and development. Please file any bugs
 you encounter under the "Issues" tab with clear steps to reproduce. This
 repository also holds a list of [releases][releases].
@@ -236,10 +212,8 @@ repository also holds a list of [releases][releases].
 [downscope]: g://authentication/tokens/downscope
 [devtoken]: g://authentication/tokens/developer-tokens
 [npm]: https://www.npmjs.com/package/box-ui-elements
-[polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
 [gh]: https://github.com/box/box-ui-elements
 [releases]: https://github.com/box/box-ui-elements/releases
-[npm]: https://www.npmjs.com/package/box-ui-elements
 [downscope]: g://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [preview-releases]: https://github.com/box/box-content-preview/releases
