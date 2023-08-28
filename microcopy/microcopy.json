@@ -577,6 +577,7 @@
   "sample_code_catalog.labels.languages.perl": "Perl",
   "sample_code_catalog.labels.languages.php": "PHP",
   "sample_code_catalog.labels.languages.cSharp": "C#",
+  "sample_code_catalog.labels.languages.ts": "TypeScript",
   "sample_code_catalog.labels.tags.all_tags": "All tags",
   "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
   "sample_code_catalog.labels.tags.salesforce": "Salesforce",
