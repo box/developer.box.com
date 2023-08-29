@@ -5,23 +5,51 @@ subcategory_id: null
 is_index: false
 id: box-sign/create-sign-request
 type: guide
-total_steps: 4
+total_steps: 6
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/list-sign-requests
+next_page_id: box-sign/sign-templates
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/create-sign-request.md
 ---
 # Create Box Sign Request
 
-At a minimum, using the [create Box Sign request endpoint][create] requires
-selecting a file for signature, a destination folder for the signed
-document/[signing log][log], and designating signers.
+At minimum, to [create Box Sign request][create] you need
+the a file you want to be signed, a destination folder for the signed
+document/[signing log][log], and signers.
 
 <Samples id='post_sign_requests' >
 
 </Samples>
+
+## Document preparation
+
+Preparing a document prior to sending a Box Sign request allows developers to
+add date, text, checkbox, and/or signature placeholders for signers. This can be
+done with UI or [tags][tags] directly in the document. If this is not done,
+signers receive an unprepared document and can place signatures and fields at
+their own discretion. However, developers can leverage controls in the request
+that allow them to turn features for the unprepared document on and off.
+
+Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
+the response. Visiting this link in your browser allows you to complete document
+preparation and send the request in the UI.
+
+To learn more about document tags, please see our [support article][tags].
+
+<Message type='warning'>
+
+Prefill tags created in a template with the Box web app cannot be accessed from
+the API.
+
+</Message>
+
+<ImageFrame border center shadow>
+
+![Prepare options](images/prepare.png)
+
+</ImageFrame>
 
 ## Files
 
@@ -62,8 +90,7 @@ cannot be the All Files or root level, which is represented by folder ID `0`.
 
 ## Signers
 
-Each signer must be assigned a [role][role]:  signer, approver, or final copy
-reader.
+Each signer must be assigned a [role][role]:  `signer`, `approver`, or `final copy_reader`.
 
 If the requester is not given a role, a signer with the role `final_copy_reader`
 is automatically created. This means they only receive a copy of the final,
@@ -87,6 +114,19 @@ aliases unless specified. Please double check to ensure all provided signer
 email addresses are valid.
 
 </Message>
+
+### Inputs
+
+The `inputs` parameter represents placeholders that the user can interact with. 
+The `document_tag_id` parameter can be populated with data you want to
+pass when creating a sign request.
+
+## Templates
+
+You can create a sign request using a template.
+To do so, you must provide the `template_id` parameter.
+See [this guide][templates] to learn more about using templates
+when creating sign requests. 
 
 ## Redirects
 
@@ -135,92 +175,6 @@ request email. The overall request is declined.
 ![Multiple signer flow](images/multiple_signer_flow.png)
 
 </ImageFrame>
-
-## Document preparation
-
-Preparing a document prior to sending a Box Sign request allows developers to
-add date, text, checkbox, and/or signature placeholders for signers. This can be
-done via a UI or [tags][tags] directly in the document. If this is not done,
-signers receive an unprepared document and can place signatures and fields at
-their own discretion. However, developers can leverage controls in the request
-that allow them to turn on and off features for the unprepared document.
-
-Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
-the response. Visiting this link in your browser allows you to complete document
-preparation and send the request via UI.
-
-To learn more about document tags, please see our [support article][tags].
-
-<Message type='warning'>
-
-Prefill tags created in a template via the Box web app cannot be accessed from
-the API.
-
-</Message>
-
-<ImageFrame border center shadow>
-
-![Prepare options](images/prepare.png)
-
-</ImageFrame>
-
-## Embedded Sign client
-
-[Box Embed][embed] allows you to embed Box Sign
-features into your own website. This way, users
-don't have to leave the website, go to Box Sign
-to sign the document, and then come back to finish
-the process.
-Instead, Box Embed allows them
-to complete the signing process
-within the external website.
-
-To integrate Box Sign experience within your
-own website, you need the `iframable_embed_url`
-parameter that is specifically designed to allow
-signing documents within the HTML `iframe` tag.
-
-<!-- markdownlint-disable line-length -->
-
-A sample `iframable_embed_url` looks as follows:
-
-```sh
-https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
-```
-
-To get the `iframeable_embed_url` pass the [`embed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint.
-The returned response will contain a unique `iframeable_embed_url` for that signer.
-
-To embed Sign features and make them
-available to the users,
-use the URL within the `iframe` tag:
-
-```sh
-<iframe
-  src="https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4"
-  width="{pixels}"
-  height="{pixels}"
-  frameborder="0"
-  allowfullscreen
-  webkitallowfullscreen
-  msallowfullscreen
-></iframe>
-```
-
-<!-- markdownlint-enable line-length -->
-
-<Message>
-
-For details on working with Box Embed, see [this guide][embedguide].
-
-</Message>
-
-Box Embed uses the [Cloud Game][cloudgame] widget to
-prevent clickjacking.
-In this case, when the user wants to sign
-a document, they will have to interact
-with the widget and drag a cloud to the correct
-location before proceeding to document signing.
 
 ## Request status
 
@@ -274,3 +228,4 @@ Encountering an error status requires creating a new sign request to retry.
 [signrequest]: e://post-sign-requests
 [externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
 [cloudgame]: g://embed/box-embed#cloud-game
+[templates]: g://box-sign/sign-templates
