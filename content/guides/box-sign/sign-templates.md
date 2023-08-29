@@ -40,7 +40,7 @@ parameters in the [Create Sign Request][signrequest] guide.
 "entries": [
     {
         "id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
-        "name": "Scholarship-Contract.pdf",
+        "name": "Contract.pdf",
         "parent_folder": {
                 "id": "157064745449",
                 "etag": "0",
@@ -65,9 +65,18 @@ parameters in the [Create Sign Request][signrequest] guide.
         "signers": [
             {
                 "email": "",
-                "label": "signer1",
+                "label": "reader",
                 "public_id": "4Z8QZZV4",
                 "role": "final_copy_reader",
+                "is_in_person": false,
+                "order": 1,
+                "inputs": [...]
+            },
+            {
+                "email": "",
+                "label": "signer1",
+                "public_id": "4Z8QZZV4",
+                "role": "signer",
                 "is_in_person": false,
                 "order": 1,
                 "inputs": [...]
@@ -222,11 +231,11 @@ Follow these steps to [create sign request][signrequest] using a template:
        "id": "d02fefd2-15fa-431f-a127-2b4525616ae6",
        "prefill_tags": [
            {
-               "document_tag_id": "student_full_name",
+               "document_tag_id": "signer1_full_name",
                "text_value": "Aaron Levie",
            },
            {
-               "document_tag_id": "teacher_full_name",
+               "document_tag_id": "signer2_full_name",
                "text_value": "Albert Einstein",
            }
        ],
