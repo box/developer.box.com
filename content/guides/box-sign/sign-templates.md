@@ -4,7 +4,7 @@ rank: 2
 
 # Create Sign Request with Sign Template
 
-The Sign Request API allows you use a predefined Box Sign
+The Sign Request API allows you to use a predefined Box Sign
 template when creating a sign request.
 The template includes placeholders
 that are automatically populated with data
