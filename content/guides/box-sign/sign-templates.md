@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 2
 ---
 
 # Create Sign Request with Sign Template
@@ -156,7 +156,14 @@ Follow these steps to [create sign request][signrequest] using a template:
    }
    ```
 
-1. Add the `prefill_tags` to populate the fields:
+1. Add the `prefill_tags` to populate the fields.
+   
+   <Message>
+   Make sure the signer order is the same as the one
+   displayed on the template. If the template had `signer1`
+   first and then `signer2`, the `POST` request must reflect
+   the same order to assign the proper signers.
+   </Message>
 
    ```json
    {
@@ -190,13 +197,6 @@ Follow these steps to [create sign request][signrequest] using a template:
      ]
    }
    ```
-
-   <Message type='notice'>
-     Make sure the signer order is the same as the one
-     displayed on the template. If the template had `signer1`
-     first and then `signer2`, the `POST` request must reflect
-     the same order to assign the proper signers.
-   </Message>
 
 1. Send the `POST` request. The response will be similar to the following:
 
