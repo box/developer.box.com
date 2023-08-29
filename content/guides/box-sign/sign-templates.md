@@ -12,9 +12,9 @@ when creating the request.
 
 ## Create Template
 
-Start with creating a Box Sign template that
-Make sure your template uses a `text`, `date`,
-and `signature` fields that you will need for
+Start with creating a Box Sign template
+that includes `text`, `date`,
+and `signature` fields you will need for
 you request.
 
 See the [template guides][docuprep] guide
