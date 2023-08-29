@@ -14,19 +14,19 @@ document/[signing log][log], and signers.
 
 Preparing a document prior to sending a Box Sign request allows developers to
 add date, text, checkbox, and/or signature placeholders for signers. This can be
-done via a UI or [tags][tags] directly in the document. If this is not done,
+done with UI or [tags][tags] directly in the document. If this is not done,
 signers receive an unprepared document and can place signatures and fields at
 their own discretion. However, developers can leverage controls in the request
-that allow them to turn on and off features for the unprepared document. 
+that allow them to turn features for the unprepared document on and off. 
 
 Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
 the response. Visiting this link in your browser allows you to complete document
-preparation and send the request via UI. 
+preparation and send the request in the UI. 
 
 To learn more about document tags, please see our [support article][tags].
 
 <Message type='warning'>
-Prefill tags created in a template via the Box web app cannot be accessed from
+Prefill tags created in a template with the Box web app cannot be accessed from
 the API.
 </Message>
 
