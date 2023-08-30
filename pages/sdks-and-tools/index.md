@@ -25,19 +25,56 @@ fullyTranslated: true
 ---
 # SDKとツール
 
-以下のツールは、Boxで積極的に開発およびサポートされています。これらのツールには、定期的な製品更新とセキュリティ更新が提供されます。
+The following SDKs and tools are developed and supported by Box.
 
-## SDKとCLIのダウンロード
+## SDK
 
-| プラットフォーム                          | メンテナンスの有無 | パリティの状況 |
-| --------------------------------- | --------- | ------- |
-| [Java SDK][javasdk]               | はい        | Full    |
-| [.NET SDK][dotnetsdk]             | はい        | Full    |
-| [Python SDK][pythonsdk]           | はい        | Full    |
-| [Node SDK][nodesdk]               | はい        | Full    |
-| [CLI][cli]                        | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | Full    |
-| [Android Content SDK][androidsdk] | いいえ       | 部分的     |
+Here you will find a list of SDKs you can use to build your application. Separately, we have listed the next generation Python and Typescript SDKs, which are the newest addition. They are still a beta feature, but we encourage you to give them a try and explore all the features they bring along.
+
+<Message type="notice">
+
+The tables below list SDKs along with additional information telling you if the project is maintained and has API parity.
+
+**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
+
+**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
+
+</Message>
+
+### Next generation SDKs
+
+The latest generation Box Python SDK and Box Typescript SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+
+<Message type="notice">
+
+New Typescript and Python SDKs are in a Public Beta phase.
+
+</Message>
+
+Here's what you can expect from the new SDKs:
+
+* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+
+| プラットフォーム                          | メンテナンスの有無 | API Parity |
+| --------------------------------- | --------- | ---------- |
+| [Python SDK][pythongensdk] (Beta) | はい        | Full       |
+| [Typescript SDK][tsgensdk] (Beta) | はい        | Full       |
+
+### SDK
+
+The table lists Box SDKs that you can use when building your applications.
+
+| プラットフォーム                          | メンテナンスの有無 | API Parity |
+| --------------------------------- | --------- | ---------- |
+| [Java SDK][javasdk]               | はい        | Full       |
+| [.NET SDK][dotnetsdk]             | はい        | Full       |
+| [Python SDK][pythonsdk]           | はい        | Full       |
+| [Node SDK][nodesdk]               | はい        | Full       |
+| [iOS Content SDK][iossdk]         | はい        | Full       |
+| [Android Content SDK][androidsdk] | いいえ       | 部分的        |
 
 <Message type="warning">
 
@@ -47,13 +84,13 @@ fullyTranslated: true
 
 </Message>
 
-<Message type="notice">
+## Box CLI
 
-**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
+Box CLI is a user-friendly command line tool which allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
 
-**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
-
-</Message>
+| プラットフォーム   | メンテナンスの有無 | API Parity |
+| ---------- | --------- | ---------- |
+| [CLI][cli] | はい        | Full       |
 
 ## 公式UIライブラリ
 
@@ -75,23 +112,17 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-<Message type="notice">
-
-**メンテナンス**: Boxでは、全面的にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[Developer Forum][forum]を参照してください。
-
-</Message>
-
 ## 非公式およびコミュニティツール
 
 以下のツールは、Boxで開発され、Boxとそのコミュニティメンバーによって管理されています。このツールについては、定期的な製品更新やセキュリティ更新は提供されません。
 
 <!-- markdownlint-disable line-length -->
 
-| プラットフォーム                        | メンテナンスの有無             | パリティ |
-| ------------------------------- | --------------------- | ---- |
-| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
-| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
-| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
+| プラットフォーム                        | メンテナンスの有無             | API Parity |
+| ------------------------------- | --------------------- | ---------- |
+| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
+| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
+| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
 
 <!-- markdownlint-enable line-length -->
 
@@ -138,3 +169,7 @@ fullyTranslated: true
 [rubysdk]: https://github.com/cburnette/boxr
 
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
+
+[pythongensdk]: https://github.com/box/box-python-sdk-gen
+
+[tsgensdk]: https://github.com/box/box-typescript-sdk-gen

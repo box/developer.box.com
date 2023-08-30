@@ -107,6 +107,46 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 
 </ImageFrame>
 
+## Embedded Sign client
+
+[Box Embed][embed] allows you to embed Box Sign features into your own website. This way, users don't have to leave the website, go to Box Sign to sign the document, and then come back to finish the process. Instead, Box Embed allows them to complete the signing process within the external website.
+
+To integrate Box Sign experience within your own website, you need the `iframable_embed_url` parameter that is specifically designed to allow signing documents within the HTML `iframe` tag.
+
+<!-- markdownlint-disable line-length -->
+
+A sample `iframable_embed_url` looks as follows:
+
+```sh
+https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
+```
+
+To get the `iframeable_embed_url` pass the [`embed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint. The returned response will contain a unique `iframeable_embed_url` for that signer.
+
+To embed Sign features and make them available to the users, use the URL within the `iframe` tag:
+
+```sh
+<iframe
+  src="https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4"
+  width="{pixels}"
+  height="{pixels}"
+  frameborder="0"
+  allowfullscreen
+  webkitallowfullscreen
+  msallowfullscreen
+></iframe>
+```
+
+<!-- markdownlint-enable line-length -->
+
+<Message>
+
+For details on working with Box Embed, see [this guide][embedguide].
+
+</Message>
+
+Box Embed uses the [Cloud Game][cloudgame] widget to prevent clickjacking. In this case, when the user wants to sign a document, they will have to interact with the widget and drag a cloud to the correct location before proceeding to document signing.
+
 ## リクエストのステータス
 
 * `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている。
@@ -121,6 +161,8 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 * `declined`: いずれかの署名者がリクエストを拒否した場合。
 * `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた場合。
 * `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた。
+* `finalizing`: If all signers have signed the request, but the final document with signatures and the signing log has not been generated yet.
+* `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
 エラーステータスになった場合、再試行するには、新しい署名リクエストを作成する必要があります。
 
@@ -151,3 +193,13 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 [collab]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
 
 <!-- i18n-disable localize-links -->
+
+[embed]: g://embed/box-embed
+
+[embedguide]: g://embed/box-embed#programmatically
+
+[signrequest]: e://post-sign-requests
+
+[externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
+
+[cloudgame]: g://embed/box-embed#cloud-game
