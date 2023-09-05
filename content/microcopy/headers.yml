@@ -103,11 +103,11 @@ primary:
         content with questions and answers, text
         generation and Metadata suggestions.
 
-    url: "/guides/box-ai-api/"
-    
     cta:
       text:
         Check out the Box AI API
+      url: 
+        /guides/box-ai-api/
 
 secondary:
   images:
