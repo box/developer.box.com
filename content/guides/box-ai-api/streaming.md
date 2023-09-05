@@ -52,7 +52,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Title
+# Streaming
 
 From here everything is Markdown.
 

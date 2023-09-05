@@ -52,7 +52,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Title
+# Metadata Suggestions
 
 From here everything is Markdown.
 
