@@ -43,4 +43,4 @@ title `cURL`, `Java`, `.NET`, `Python` and `Node` to refer to our currently
 supported languages and the user will automatically be presented with the
 sample in their language of choice.
 
-[code_block_guide]: guide://internal/markdown/code-blocks
+[code_block_guide]: guides://internal-documentation/markdown/code-blocks

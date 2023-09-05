@@ -5,6 +5,19 @@ related_pages:
 
 # Android SDK Installation
 
+<Message type='warning'>
+As of May 31, 2023 Android SDK is
+no longer supported. You can still
+use your existing Android SDK applications
+with no impact, but you won't receive new features,
+updates, or bug fixes.
+
+If you would like to continue
+getting the latest and greatest Android
+features, we recommend using Java SDK to build apps
+on Android. Refer to [this][android-docs] documentation for more details.
+</Message>
+
 The Android SDK may be obtained through several methods:
 
 * Adding as a Maven or Gradle dependency
@@ -50,3 +63,4 @@ Precompiled JARs for the Android SDK may be obtained from the Github project
 
 [android-sdk-github]: https://github.com/box/box-android-sdk/tree/master/box-content-sdk
 [android-sdk-github-releases]: https://github.com/box/box-android-sdk/releases
+[android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md

@@ -12,11 +12,15 @@ alias_paths:
   - /docs/get-all-files
 ---
 
-# Download All Files in Folder
+# Download All Files in Folder using SDKs
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every
 file and downloading it accordingly.
+
+<Message type="notice">
+To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
+</Message>
 
 <!-- markdownlint-disable line-length -->
 
