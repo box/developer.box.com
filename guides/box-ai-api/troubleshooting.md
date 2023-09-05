@@ -18,7 +18,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai-api/troubleshooting.md
 ---
-# Title
+# Tips and Tricks
 
 From here everything is Markdown.
 

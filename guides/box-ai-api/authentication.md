@@ -18,7 +18,7 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai-api/authentication.md
 ---
-# Title
+# Authentication
 
 From here everything is Markdown.
 

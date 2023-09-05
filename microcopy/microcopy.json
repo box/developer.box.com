@@ -229,6 +229,7 @@
   "headers.primary.featured.title.text": "Box AI API",
   "headers.primary.featured.details.text": "All the power of Box AI from within your\napplication. Make the most of your valuable\ncontent with questions and answers, text\ngeneration and Metadata suggestions.",
   "headers.primary.featured.cta.text": "Check out the Box AI API",
+  "headers.primary.featured.cta.url": "/guides/box-ai-api/",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
