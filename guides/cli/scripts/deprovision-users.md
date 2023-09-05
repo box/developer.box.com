@@ -14,10 +14,10 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/deprovision-users
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: ''
+next_page_id: cli/scripts/slack-integration-mappings
 previous_page_id: cli/scripts/manage-groups-collaborations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
@@ -69,20 +69,21 @@ If you encounter issues make sure you installed both
 
 </message>
 
-### Box application
+### Box CLI
 
-To use the script, you will need a Box application
-with OAuth 2.0 authentication. If you don't have one,
-go to your [Developer Console][console], and follow the guide
-[Setup with OAuth 2.0][auth].
+To use the script, you will need the Box CLI
+installed and configured. You can get this done by going through
+our [quick start guide][quickstart]. The user you use to login with should
+be the main Box admin or co-admin.
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository 
+1. Clone the `boxcli` GitHub repository and cd into this example's folder
    or download the files from [`examples`][examples] directory.
 
    ```bash
-git clone https://github.com/box/boxcli.git
+git clone https://github.com/box/boxcli.git boxcli
+cd boxcli/examples/User\ Deprovisioning/
 ```
 
 2. Create the list of employees for deletion in `.csv`.
@@ -157,15 +158,10 @@ Starting User Deprovisioning script...
 
 Now all you need to do is run the script.
 
-1. Change the directory to the folder containing the script. In this example, it is the `User Deprovisioning` folder.
-
+1. Run the Powershell command.
+   
    ```bash
-   rvb@lab:~/box-cli/examples/User Deprovisioning$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-   https://aka.ms/powershell
-   Type 'help' to get help.
-   PS /home/rvb/box-cli/examples/User Deprovisioning>
+   pwsh
    ```
 
 2. Run the script:
@@ -196,4 +192,4 @@ You have access to these log files:
 [auth]: g://authentication/oauth2/oauth2-setup
 [examples]:https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning
 [parameters]: https://github.com/box/boxcli/tree/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L17-L36
-[employeelist]:[https://github.com/box/boxcli/blob/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L12
+[employeelist]: https://github.com/box/boxcli/blob/main/examples/User%20Deprovisioning/Users_Deprovision.ps1#L12

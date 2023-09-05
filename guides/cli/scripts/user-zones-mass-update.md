@@ -15,7 +15,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/user-zones-mass-update
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/report-inactive-users
@@ -81,7 +81,8 @@ If you encounter issues make sure you installed both
 
 ### Set up application with JWT authentication
 
-To use the script, you will need a [Box application with JWT authentication][jwtapp].
+To use the script, you will need the [Box CLI with JWT authentication][jwtapp]
+installed and configured.
 
 When creating the app, use the **Configuration** tab
 to configure the following settings:
@@ -152,18 +153,10 @@ $adminEmail = "john@box.com"
 
 ## Run the script
 
-Change the directory to the folder containing the script.
-In this example, it is the `Mass Update User Zones` folder.
+Run the Powershell command.
 
 ```bash
-rvb@lab:~/box-cli/examples/Mass Update User Zones$ pwsh
-PowerShell 7.2.4
-Copyright (c) Microsoft Corporation.
-
-https://aka.ms/powershell
-Type 'help' to get help.
-
-PS /home/rvb/box-cli/examples/Mass Update User Zones>
+pwsh
 ```
 
 Run the script.

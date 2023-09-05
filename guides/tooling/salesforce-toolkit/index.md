@@ -12,7 +12,7 @@ subcategory_id: tooling/salesforce-toolkit
 is_index: true
 id: tooling/salesforce-toolkit
 type: guide
-total_steps: 2
+total_steps: 4
 sibling_id: tooling
 parent_id: tooling
 next_page_id: tooling/salesforce-toolkit/samples
@@ -58,7 +58,7 @@ by restricting access to the global Toolkit APEX class.
 Toolkit methods that take `accessToken` as a parameter can use the service
 account credentials by sending `null` for the `accessToken` value.
 
-If a value is passed in `accessToken`, the API call to Box will be done with
+If a value is passed in `accessToken`, the API call to Box is done with
 the access token sent. It is up to the developer to ensure the token being
 passed is valid and the user associated with the token has permissions to
 perform the requested operation.

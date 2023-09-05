@@ -18,7 +18,7 @@ source_url: >-
 ---
 # Make an API call
 
-With the **Box Postman Collection** loaded into the **Postman App** it is now
+With the **Box Postman Collection** forked into the **Postman App** it is now
 possible to make API calls to the **Box API** on behalf of the user you logged
 in as.
 

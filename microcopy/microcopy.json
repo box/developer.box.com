@@ -27,7 +27,7 @@
   "messages.resource_variant_descriptions.full": "This resource has a few variations that can be encountered when\nusing the API.\n\nThe fields that are part of the **full** variant can be returned\nby API endpoints that support the `fields` parameter. For example,\nby defining the `fields` request parameter as\n`id,type` when requesting a file by ID, only those fields will\nbe returned in the API response.",
   // A temporary welcome message at the top of the page that explains what the state of the new developer docs is
   "messages.welcome_message": "What's new?\n===========\n\nWelcome to our updated developer documentation, which\nis still very much a work in progress. For now it only\ncontains our reference documentation while we work on\nmoving more of our documentation over to this site.\n\nHave a look around and please send us any feedback\non [Twitter][1] or [GitHub][2]\n\n[1]: https://twitter.com/boxplatform\n[2]: https://github.com/box/developer.box.com",
-  // The title for the API referene page
+  // The title for the API reference page
   "reference.titles.api_reference": "API Reference",
   // The title for the resources page
   "reference.titles.other_resources": "Resources",
@@ -94,11 +94,13 @@
   // The label for a conditionally required param
   "reference.parameter_details.conditionally_required": "conditionally required",
   // The label for a default parameter value
-  "reference.parameter_details.default": "Default",
+  "reference.parameter_details.default": "default",
   // The label for the max length of a parameter value
-  "reference.parameter_details.max_length": "Max Length",
-  // The label for the range of a parameter value
-  "reference.parameter_details.range": "Range",
+  "reference.parameter_details.max_length": "max length",
+  // The label for the maximum value parameter.
+  "reference.parameter_details.max_value": "max",
+  // The label for the minimum value parameter.
+  "reference.parameter_details.min_value": "min",
   // Describes it when there is no content type as thereis no body request or response body
   "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
@@ -179,18 +181,25 @@
   "guides.titles.on_this_page": "On this page",
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "Get started",
+  "headers.primary.links.documentation.text": "Documentation",
+  "headers.primary.links.community.text": "Community",
+  "headers.primary.links.community.url": "https://forum.box.com",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
   "headers.primary.links.get_started.url": "/guides/applications/",
   // The text for the link to the old generic guides
-  "headers.primary.links.guides.text": "Guides",
+  "headers.primary.links.guides.text": "Developer Guides",
   // The URL to the old generic guides
   "headers.primary.links.guides.url": "/guides/",
   // The text for the link the new API Reference docs
   "headers.primary.links.api_reference.text": "API Reference",
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.api_reference.url": "/reference/",
+  // The text for the link the Sample Code App
+  "headers.primary.links.sample_code.text": "Sample Code Catalog",
+  // The url to the root of the reference - DO NOT TRANSLATE
+  "headers.primary.links.sample_code.url": "/sample-code/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
   // The URL to the new page on SDKs - DO NOT TRANSLATE
@@ -199,6 +208,11 @@
   "headers.primary.links.support.text": "Support",
   // The URL to the old page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.support.url": "/support/",
+  "headers.primary.links.additional_resouces.text": "Additional resources",
+  // The text for the Medium Dev Blog
+  "headers.primary.links.blog.text": "Box Developer Blog",
+  // The URL to Medium bev blog
+  "headers.primary.links.blog.url": "https://medium.com/box-developer-blog",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "Go to Dev Console",
   // The URL to the developer console
@@ -211,28 +225,34 @@
   "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
+  "headers.primary.featured.tag.text": "Featured",
+  "headers.primary.featured.title.text": "Box AI API",
+  "headers.primary.featured.details.text": "All the power of Box AI from within your\napplication. Make the most of your valuable\ncontent with questions and answers, text\ngeneration and Metadata suggestions.",
+  "headers.primary.featured.cta.text": "Check out the Box AI API",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
   "headers.secondary.labels.new": "new",
-  // The text for the link to the developer blog
-  "headers.secondary.links.blog.text": "Blog",
-  // The URL to the developer blog
-  "headers.secondary.links.blog.url": "https://medium.com/box-developer-blog",
-  // The text for the link to the developer forum
-  "headers.secondary.links.forum.text": "Forum",
+  // The text for the link to the developer community forum
+  "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.links.forum.url": "https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum",
-  // The text for the link to the developer feedback site
-  "headers.secondary.links.feedback.text": "Feedback",
-  // The URL to the developer feedback site
-  "headers.secondary.links.feedback.url": "https://box.uservoice.com/forums/909778-product-feedback?category_id=330838",
+  "headers.secondary.support_links.community_forum.url": "https://forum.box.com",
+  // The text for the link to the changelog
+  "headers.secondary.support_links.changelog.text": "Changelog",
+  // The URL to the changelog
+  "headers.secondary.support_links.changelog.url": "/changelog/",
+  // The text for the link to the developer blog
+  "headers.secondary.additional_resources.blog.text": "Blog",
+  // The URL to the developer blog
+  "headers.secondary.additional_resources.blog.url": "https://medium.com/box-developer-blog",
   // A short title for the dropdown to select a documentation type on mobile
-  "headers.secondary.dropdowns.docs": "Docs",
+  "headers.secondary.dropdowns.docs": "Documentation",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
   "headers.secondary.dropdowns.api_reference": "API Reference",
-  // A short title for the dropdown to select an external link on mobile
-  "headers.secondary.dropdowns.elsewhere": "Elsewhere",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.support": "Support",
+  // A short title for the dropdown to select an support menu item
+  "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "false",
   // The content of the notification
@@ -419,6 +439,18 @@
   "footer.bottom.links.sample_license.url": "https://unlicense.org/",
   // Text to show how long it will be to read something, e.g.a "1 min read". Contains a variable for the number.
   "pages.blog.minute_read": "%s min read",
+  "pages.featured_board.sampleCode.type": "sampleCode",
+  "pages.featured_board.sampleCode.cta": "Browse sample code",
+  "pages.featured_board.sampleCode.link": "/sample-code/",
+  "pages.featured_board.sampleCode.tag": "Featured",
+  "pages.featured_board.sampleCode.headline": "Kickstart your project",
+  "pages.featured_board.sampleCode.text": "Use Box Sample Code Catalog to find useful scripts,\napp examples, and inspiring use cases! Browse\n80+ open-source repositories in various programming languages.",
+  "pages.featured_board.community.type": "community",
+  "pages.featured_board.community.cta": "Join the Community",
+  "pages.featured_board.community.link": "https://forum.box.com/",
+  "pages.featured_board.community.tag": "New",
+  "pages.featured_board.community.headline": "Box Developer Community forum",
+  "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
@@ -521,5 +553,44 @@
   // Label for the manage_enterprise_properties scope
   "app_button.logged_in.scopes.manage_enterprise_properties": "Manage enterprise properties",
   // Label for the manage_retention_policies scope
-  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies"
+  "app_button.logged_in.scopes.manage_retention_policies": "Manage retention policies",
+  // title of the page
+  "sample_code_catalog.title": "Sample Code Catalog",
+  "sample_code_catalog.labels.languages.all_languages": "All languages",
+  "sample_code_catalog.labels.languages.universal": "Universal samples",
+  "sample_code_catalog.labels.languages.android": "Android",
+  "sample_code_catalog.labels.languages.react": "React",
+  "sample_code_catalog.labels.languages.java": "Java",
+  "sample_code_catalog.labels.languages.powershell": "PowerShell",
+  "sample_code_catalog.labels.languages.dotNet": ".NET",
+  "sample_code_catalog.labels.languages.python": "Python",
+  "sample_code_catalog.labels.languages.node": "Node.js",
+  "sample_code_catalog.labels.languages.angular": "Angular",
+  "sample_code_catalog.labels.languages.angularjs": "AngularJS",
+  "sample_code_catalog.labels.languages.curl": "cURL",
+  "sample_code_catalog.labels.languages.vue": "Vue.js",
+  "sample_code_catalog.labels.languages.r": "R",
+  "sample_code_catalog.labels.languages.ruby": "Ruby",
+  "sample_code_catalog.labels.languages.javascript": "JavaScript",
+  "sample_code_catalog.labels.languages.apex": "APEX",
+  "sample_code_catalog.labels.languages.swift": "Swift",
+  "sample_code_catalog.labels.languages.perl": "Perl",
+  "sample_code_catalog.labels.languages.php": "PHP",
+  "sample_code_catalog.labels.languages.cSharp": "C#",
+  "sample_code_catalog.labels.tags.all_tags": "All tags",
+  "sample_code_catalog.labels.tags.ui_elements": "UI Elements",
+  "sample_code_catalog.labels.tags.salesforce": "Salesforce",
+  "sample_code_catalog.labels.tags.skills": "Skills",
+  "sample_code_catalog.labels.tags.api": "API",
+  "sample_code_catalog.labels.tags.sdk": "SDK",
+  "sample_code_catalog.labels.tags.cli": "CLI",
+  "sample_code_catalog.labels.tags.webhooks": "Webhooks",
+  "sample_code_catalog.labels.tags.provisioning": "Provisioning",
+  "sample_code_catalog.labels.tags.mobile": "Mobile",
+  "sample_code_catalog.labels.tags.frontend": "Frontend",
+  "sample_code_catalog.resetBtn": "Reset filters",
+  "sample_code_catalog.noResults.title": "Sorry, we couldn't find what you are looking for.",
+  "sample_code_catalog.noResults.message": "Try using a different filter or filter combination.\nStill can't find it?",
+  "sample_code_catalog.noResults.link": "Contact us",
+  "sample_code_catalog.noResults.suggestSample": "to suggest a new code sample."
 }

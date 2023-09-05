@@ -24,7 +24,7 @@ source_url: >-
 ---
 # App Tokens with SDKs
 
-The official Box SDKs have build-in support for App Token authentication.
+The official Box SDKs have built-in support for App Token authentication.
 
 App Token authentication is designed for working directly with the
 Box API without requiring a user to redirect through Box to authorize your

@@ -14,7 +14,7 @@ subcategory_id: cli/scripts
 is_index: false
 id: cli/scripts/metadata-extraction
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/deprovision-users
@@ -65,20 +65,20 @@ If you encounter issues make sure you installed both
 
 </Message>
 
-### Box application
+### Box CLI
 
-To use the script, you will need a Box application
-with OAuth 2.0 authentication. If you don't have one,
-go to your [Developer Console][console], and follow the
-[Setup with OAuth 2.0][auth] guide.
+To use the script, you will need the Box CLI
+installed and configured. You can get this done by going through
+our [quick start guide][quickstart].
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository 
+1. Clone the `boxcli` GitHub repository and cd into this example's folder
    or download the files from [`examples`][examples] directory.
 
    ```bash
 git clone https://github.com/box/boxcli.git
+cd boxcli/examples/Metadata\ Extraction/
 ```
 
 2. Specify the `folderID` and `userID` parameters to tell the script which
@@ -99,16 +99,10 @@ git clone https://github.com/box/boxcli.git
 
 ## Run the script
 
-1. Change the directory to the folder containing the script. 
-   In this example, it is the `Metadata Extraction` folder.
+1. Run the Powershell command.
    
    ```bash
-   rvb@lab:~/box-cli/examples/Metadata Extraction$ pwsh
-   PowerShell 7.2.4
-   Copyright (c) Microsoft Corporation.
-   https://aka.ms/powershell
-   Type 'help' to get help.
-   PS /home/rvb/box-cli/examples/Metadata Extraction>
+   pwsh
    ```
 
 2. Run the script.

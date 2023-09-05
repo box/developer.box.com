@@ -15,19 +15,25 @@ subcategory_id: null
 is_index: false
 id: downloads/folder
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: downloads
 parent_id: downloads
-next_page_id: downloads
+next_page_id: downloads/zip-archive
 previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/folder.md
 ---
-# Download All Files in Folder
+# Download All Files in Folder using SDKs
 
 Sometimes an application might want to download all files for a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every
 file and downloading it accordingly.
+
+<Message type="notice">
+
+To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
+
+</Message>
 
 <!-- markdownlint-disable line-length -->
 

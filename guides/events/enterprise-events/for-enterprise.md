@@ -172,6 +172,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `FILE_WATERMARKED_DOWNLOAD`                    | A watermarked file is downloaded                                                                |
 | `GROUP_ADD_ITEM`                               | An item is added to a group                                                                     |
 | `GROUP_ADD_USER`                               | Added user to group                                                                             |
+| `GROUP_ADMIN_CREATED` | Group admin is created |
+| `GROUP_ADMIN_DELETED` | Group admin is deleted |
+| `GROUP_ADMIN_PERMISSIONS_UPDATED` | Group admin permissions are updated |
 | `GROUP_CREATION`                               | Created new group                                                                               |
 | `GROUP_DELETION`                               | Deleted group                                                                                   |
 | `GROUP_EDITED`                                 | Edited group                                                                                    |
@@ -214,6 +217,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
 | `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
+| `SHIELD_SHARED_LINK_ACCESS_BLOCKED` | Access to a shared link is blocked |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_CREATE` | A shared link is created and access to the content is restricted |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_UPDATE` | A shared link is updated and access to the content is restricted |
 | `SHIELD_INFORMATION_BARRIER_ENABLED`           | A Shield information barrier is enabled                                                              |
 | `SHIELD_INFORMATION_BARRIER_DISABLED`           | A Shield information barrier is deactivated                                                       |
 | `SHIELD_INFORMATION_BARRIER_PENDING`           | A Shield information barrier is not yet active                                                              |
