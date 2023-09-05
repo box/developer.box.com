@@ -226,9 +226,9 @@
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
   "headers.primary.featured.tag.text": "Featured",
-  "headers.primary.featured.title.text": "Sample Code Catalog",
-  "headers.primary.featured.details.text": "Find useful scripts, app examples, and inspiring\nuse cases! Browse 80+ open-source repositories\nin various programming languages.",
-  "headers.primary.featured.cta.text": "Browse sample code",
+  "headers.primary.featured.title.text": "Box AI API",
+  "headers.primary.featured.details.text": "All the power of Box AI from within your\napplication. Make the most of your valuable\ncontent with questions and answers, text\ngeneration and Metadata suggestions.",
+  "headers.primary.featured.cta.text": "Check out the Box AI API",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
