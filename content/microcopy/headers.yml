@@ -89,6 +89,7 @@ primary:
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
 
+  // featured: Featured section of the documentation menu
   featured:
     tag:
       text: Featured
@@ -106,7 +107,7 @@ primary:
     cta:
       text:
         Check out the Box AI API
-      url: 
+      url:
         /guides/box-ai-api/
 
 secondary:
