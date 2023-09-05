@@ -5,18 +5,18 @@ related_resources: []
 related_guides: []
 required_guides: []
 alias_paths: []
-category_id: box-platform-ai
+category_id: box-ai-api
 subcategory_id: null
 is_index: false
-id: box-platform-ai/streaming
+id: box-ai-api/text-gen
 type: guide
 total_steps: 6
-sibling_id: box-platform-ai
-parent_id: ''
-next_page_id: ''
+sibling_id: box-ai-api
+parent_id: box-ai-api
+next_page_id: box-ai-api
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-platform-ai/streaming.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai-api/text-gen.md
 ---
 # Title
 

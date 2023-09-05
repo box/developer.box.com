@@ -441,7 +441,7 @@
   "pages.blog.minute_read": "%s min read",
   "pages.featured_board.sampleCode.type": "sampleCode",
   "pages.featured_board.sampleCode.cta": "Browse sample code",
-  "pages.featured_board.sampleCode.link": "/sample-code/",
+  "pages.featured_board.sampleCode.link": "/guides/box-ai-api",
   "pages.featured_board.sampleCode.tag": "Featured",
   "pages.featured_board.sampleCode.headline": "Kickstart your project",
   "pages.featured_board.sampleCode.text": "Use Box Sample Code Catalog to find useful scripts,\napp examples, and inspiring use cases! Browse\n80+ open-source repositories in various programming languages.",
