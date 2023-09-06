@@ -107,23 +107,23 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 
 </ImageFrame>
 
-## Embedded Sign client
+## Signクライアントの埋め込み機能
 
-[Box Embed][embed] allows you to embed Box Sign features into your own website. This way, users don't have to leave the website, go to Box Sign to sign the document, and then come back to finish the process. Instead, Box Embed allows them to complete the signing process within the external website.
+[Box Embed][embed]を使用すると、ウェブサイトにBox Signの機能を埋め込むことができます。これにより、ユーザーはウェブサイトを離れ、Box Signにアクセスしてドキュメントに署名し、プロセスを完了するために戻る必要がなくなります。代わりに、Box Embedを使用すると、外部のウェブサイト内で署名プロセスを完了できます。
 
-To integrate Box Sign experience within your own website, you need the `iframable_embed_url` parameter that is specifically designed to allow signing documents within the HTML `iframe` tag.
+Box Signのエクスペリエンスをウェブサイトに統合するには、HTMLの`iframe`タグ内のドキュメントへの署名を許可するために設計された`iframable_embed_url`パラメータが必要です。
 
 <!-- markdownlint-disable line-length -->
 
-A sample `iframable_embed_url` looks as follows:
+`iframable_embed_url`のサンプルは次のようになります。
 
 ```sh
 https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
 ```
 
-To get the `iframeable_embed_url` pass the [`embed_url_external_user_id`][externalid] parameter for each signer when calling the [create sign request][signrequest] endpoint. The returned response will contain a unique `iframeable_embed_url` for that signer.
+`iframeable_embed_url`を取得するには、[署名リクエストを作成][signrequest]エンドポイントを呼び出す際に各署名者の[`embed_url_external_user_id`][externalid]パラメータを渡します。返されるレスポンスには、その署名者の一意の`iframeable_embed_url`が含まれます。
 
-To embed Sign features and make them available to the users, use the URL within the `iframe` tag:
+Signの機能を埋め込み、ユーザーが使用できるようにするには、`iframe`タグ内でURLを使用します。
 
 ```sh
 <iframe
@@ -141,28 +141,28 @@ To embed Sign features and make them available to the users, use the URL within 
 
 <Message>
 
-For details on working with Box Embed, see [this guide][embedguide].
+Box Embedの使用の詳細については、[こちらのガイド][embedguide]を参照してください。
 
 </Message>
 
-Box Embed uses the [Cloud Game][cloudgame] widget to prevent clickjacking. In this case, when the user wants to sign a document, they will have to interact with the widget and drag a cloud to the correct location before proceeding to document signing.
+Box Embedでは、クリックジャッキングを防ぐために[クラウド (雲) ゲーム][cloudgame]ウィジェットを使用します。この場合、ユーザーはドキュメントに署名する際に、このウィジェットを操作し、クラウド (雲) を適切な位置にドラッグしてから、ドキュメントへの署名に進む必要があります。
 
 ## リクエストのステータス
 
 * `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている。
 * `error_converting`: ファイルを`.pdf`に変換している間に問題が発生した。
-* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない場合。
+* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない。
 * `sent`: リクエストが正常に送信されたが、どの署名者も対応していない。
 * `error_sending`: リクエストを送信中に問題が発生した。
-* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした場合。
+* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした。
 * `downloaded`: 署名者が署名用ドキュメントをダウンロードした。
 * `signed`: すべての署名者がリクエストの処理を完了した。
 * `signed and downloaded`: 署名者が署名用ドキュメントに署名してダウンロードした。
-* `declined`: いずれかの署名者がリクエストを拒否した場合。
-* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた場合。
+* `declined`: いずれかの署名者がリクエストを拒否した。
+* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた。
 * `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた。
-* `finalizing`: If all signers have signed the request, but the final document with signatures and the signing log has not been generated yet.
-* `error_finalizing`: If the `finalizing` phase did not complete successfully.
+* `finalizing`: すべての署名者がリクエストに署名済みでも、署名された最終的なドキュメントと署名ログがまだ生成されていない。
+* `error_finalizing`: `finalizing`フェーズが正常に完了しなかった。
 
 エラーステータスになった場合、再試行するには、新しい署名リクエストを作成する必要があります。
 

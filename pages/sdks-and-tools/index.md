@@ -25,15 +25,15 @@ fullyTranslated: true
 ---
 # SDKとツール
 
-The following SDKs and tools are developed and supported by Box.
+Boxで開発およびサポートされているSDKおよびツールは以下のとおりです。
 
 ## SDK
 
-Here you will find a list of SDKs you can use to build your application. Separately, we have listed the next generation Python and Typescript SDKs, which are the newest addition. They are still a beta feature, but we encourage you to give them a try and explore all the features they bring along.
+アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDKおよびTypescript SDKも記載しています。これらはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
 
 <Message type="notice">
 
-The tables below list SDKs along with additional information telling you if the project is maintained and has API parity.
+下の表には、SDKが、プロジェクトがメンテナンスされるかどうかとAPIパリティが備わっているかどうかを示す追加情報とともに記載されています。
 
 **メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
 
@@ -41,40 +41,40 @@ The tables below list SDKs along with additional information telling you if the 
 
 </Message>
 
-### Next generation SDKs
+### 次世代のSDK
 
-The latest generation Box Python SDK and Box Typescript SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+最新世代のBox Python SDKとBox Typescript SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 <Message type="notice">
 
-New Typescript and Python SDKs are in a Public Beta phase.
+新しいTypescript SDKとPython SDKはパブリックベータ段階です。
 
 </Message>
 
-Here's what you can expect from the new SDKs:
+新しいSDKに実装予定の機能を以下に示します。
 
-* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-* **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
+* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
+* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
+* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動的な再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-| プラットフォーム                          | メンテナンスの有無 | API Parity |
-| --------------------------------- | --------- | ---------- |
-| [Python SDK][pythongensdk] (Beta) | はい        | Full       |
-| [Typescript SDK][tsgensdk] (Beta) | はい        | Full       |
+| プラットフォーム                         | メンテナンスの有無 | APIパリティ |
+| -------------------------------- | --------- | ------- |
+| [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
+| [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
 
 ### SDK
 
-The table lists Box SDKs that you can use when building your applications.
+次の表に、アプリケーションの作成時に使用できるBox SDKを示します。
 
-| プラットフォーム                          | メンテナンスの有無 | API Parity |
-| --------------------------------- | --------- | ---------- |
-| [Java SDK][javasdk]               | はい        | Full       |
-| [.NET SDK][dotnetsdk]             | はい        | Full       |
-| [Python SDK][pythonsdk]           | はい        | Full       |
-| [Node SDK][nodesdk]               | はい        | Full       |
-| [iOS Content SDK][iossdk]         | はい        | Full       |
-| [Android Content SDK][androidsdk] | いいえ       | 部分的        |
+| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
+| --------------------------------- | --------- | ------- |
+| [Java SDK][javasdk]               | はい        | Full    |
+| [.NET SDK][dotnetsdk]             | はい        | Full    |
+| [Python SDK][pythonsdk]           | はい        | Full    |
+| [Node SDK][nodesdk]               | はい        | Full    |
+| [iOS Content SDK][iossdk]         | はい        | Full    |
+| [Android Content SDK][androidsdk] | いいえ       | 部分的     |
 
 <Message type="warning">
 
@@ -86,11 +86,11 @@ The table lists Box SDKs that you can use when building your applications.
 
 ## Box CLI
 
-Box CLI is a user-friendly command line tool which allows both technical and non-technical users to leverage Box API to perform routine or bulk actions.
+Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
 
-| プラットフォーム   | メンテナンスの有無 | API Parity |
-| ---------- | --------- | ---------- |
-| [CLI][cli] | はい        | Full       |
+| プラットフォーム   | メンテナンスの有無 | APIパリティ |
+| ---------- | --------- | ------- |
+| [CLI][cli] | はい        | Full    |
 
 ## 公式UIライブラリ
 
@@ -118,11 +118,11 @@ Box CLI is a user-friendly command line tool which allows both technical and non
 
 <!-- markdownlint-disable line-length -->
 
-| プラットフォーム                        | メンテナンスの有無             | API Parity |
-| ------------------------------- | --------------------- | ---------- |
-| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
-| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
-| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的        |
+| プラットフォーム                        | メンテナンスの有無             | APIパリティ |
+| ------------------------------- | --------------------- | ------- |
+| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
+| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
+| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
 
 <!-- markdownlint-enable line-length -->
 
