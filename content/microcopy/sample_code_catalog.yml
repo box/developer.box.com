@@ -26,6 +26,7 @@ labels:
     perl: Perl
     php: PHP
     cSharp: C#
+    ts: TypeScript
 
   tags:
     all_tags: All tags
