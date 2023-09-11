@@ -400,7 +400,7 @@ Webhookを使用すると、Boxコンテンツのイベントを監視し、イ�
 
 <Tile type="guide" title="検索" href="/guides/search/">
 
-全文検索クエリを使用して、Box内の関連コンテンツを探すことができます。Box検索APIは、すべてのBox SDKとCLIでサポートされています。
+ファイルコンテンツ検索クエリを使用して、Box内の関連コンテンツを探すことができます。Box検索APIは、すべてのBox SDKとCLIでサポートされています。
 
 </Tile>
 
