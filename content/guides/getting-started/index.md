@@ -30,7 +30,7 @@ choose the best one for your use case,
 - find out where you can get [support][support],
 - check the [tools][tooling] needed for developing applications in Box.
 
-After learning he basisc, we recommend you to follow the steps
+After learning the basics, we recommend you to follow the steps
 below.
 
 1. Create your [Box developer account][developer-account].

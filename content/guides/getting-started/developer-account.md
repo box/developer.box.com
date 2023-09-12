@@ -6,9 +6,12 @@ related_guides:
 - api-calls 
 ---
 
+# Create a developer account
+
 Create your developer account to start developing applications with Box.
 Once you create an account, you will get a Developer Enterprise, where
 you can:
+
 - access to the admin-facing tools,
 - create new users for testing purposes,
 - create and upload content needed for testing. 
