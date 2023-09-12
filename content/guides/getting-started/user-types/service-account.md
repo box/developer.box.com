@@ -1,5 +1,6 @@
 ---
 rank: 2
+hide: true
 related_endpoints:
   - get_users_id
   - get_users

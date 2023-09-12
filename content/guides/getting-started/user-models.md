@@ -1,5 +1,6 @@
 ---
 rank: 2
+hide: true
 related_endpoints: []
 related_guides:
 - getting-started/user-types

@@ -1,5 +1,6 @@
 ---
 rank: 3
+hide: true
 related_endpoints: []
 related_guides: []
 required_guides: []
