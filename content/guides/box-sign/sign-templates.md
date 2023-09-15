@@ -4,7 +4,7 @@ rank: 2
 
 # Create Sign Request with Sign Template
 
-The Sign Request API allows you use a predefined Box Sign
+The Sign Request API allows you to use a predefined Box Sign
 template when creating a sign request.
 The template includes placeholders
 that are automatically populated with data
@@ -12,9 +12,9 @@ when creating the request.
 
 ## Create Template
 
-Start with creating a Box Sign template that
-Make sure your template uses a `text`, `date`,
-and `signature` fields that you will need for
+Start with creating a Box Sign template
+that includes `text`, `date`,
+and `signature` fields you will need for
 you request.
 
 See the [template guides][docuprep] guide
@@ -166,7 +166,7 @@ Follow these steps to [create sign request][signrequest] using a template:
    ```
 
 1. Add the `prefill_tags` to populate the fields.
-   
+
    <Message>
    Make sure the signer order is the same as the one
    displayed on the template. If the template had `signer1`
