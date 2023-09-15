@@ -367,10 +367,6 @@
   "footer.categories.tooling.links.ios_sdk.text": "iOS Content SDK",
   // link to the iOS Content SDK
   "footer.categories.tooling.links.ios_sdk.url": "https:\/\/github.com\/box\/box-ios-sdk",
-  // Text for link to the Android Content SDK
-  "footer.categories.tooling.links.android_sdk.text": "Android Content SDK",
-  // link to the Android Content SDK
-  "footer.categories.tooling.links.android_sdk.url": "https:\/\/github.com\/box\/box-android-sdk",
   // Text for link to the Box CLI
   "footer.categories.tooling.links.cli.text": "Box CLI",
   // link to the Box CLI
@@ -577,6 +573,7 @@
   "sample_code_catalog.labels.languages.perl": "Perl",
   "sample_code_catalog.labels.languages.php": "PHP",
   "sample_code_catalog.labels.languages.cSharp": "C#",
+  "sample_code_catalog.labels.languages.ts": "TypeScript",
   "sample_code_catalog.labels.tags.all_tags": "すべてのタグ",
   "sample_code_catalog.labels.tags.ui_elements": "UI Element",
   "sample_code_catalog.labels.tags.salesforce": "Salesforce",
