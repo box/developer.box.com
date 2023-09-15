@@ -169,6 +169,8 @@
   "guides.titles.guide": "Guide",
   // The text for a link to edit the source of the page
   "guides.titles.edit_source": "Edit this page",
+  // The text for a link to a form to create an issuein a repository with API specification
+  "guides.titles.report_error": "Report an error on this page",
   // The text for a link to the next step in a multi-step guide
   "guides.titles.next": "Next",
   // The text for a link to the previous step in a multi-step guide
