@@ -55,10 +55,9 @@ titles:
   // edit_source: The text for a link to edit the source of the page
   edit_source: Edit this page
 
-  // report_error: |-
-    The text for a link to a form to create an issue
-    in a repository with API specification
-  report_error: Report an error on this page
+  // send_feedback: |-
+    The text for a link to give feedback on an API Reference page
+  send_feedback: Send feedback
 
   // next: The text for a link to the next step in a multi-step guide
   next: Next
