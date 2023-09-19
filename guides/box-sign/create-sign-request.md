@@ -116,7 +116,7 @@ email addresses are valid.
 
 ### Inputs
 
-The `inputs` parameter represents placeholders that the user can interact with.
+The `inputs` parameter represents placeholders that the user can interact with. 
 The `document_tag_id` parameter can be populated with data you want to
 pass when creating a sign request.
 
@@ -125,7 +125,7 @@ pass when creating a sign request.
 You can create a sign request using a template.
 To do so, you must provide the `template_id` parameter.
 See [this guide][templates] to learn more about using templates
-when creating sign requests.
+when creating sign requests. 
 
 ## Redirects
 
