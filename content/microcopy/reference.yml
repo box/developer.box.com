@@ -201,7 +201,7 @@ environments:
   // ios: |-
     A label for iOS code sample - DO NOT TRANSLATE
   ios: iOS
-  
+
   // ts_gen: |-
     A label for TypeScript
     code sample - DO NOT TRANSLATE
