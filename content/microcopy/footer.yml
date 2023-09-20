@@ -84,12 +84,6 @@ categories:
         // url: link to the iOS Content SDK
         url: https://github.com/box/box-ios-sdk
 
-      android_sdk:
-        // text: Text for link to the Android Content SDK
-        text: Android Content SDK
-        // url: link to the Android Content SDK
-        url: https://github.com/box/box-android-sdk
-
       cli:
         // text: Text for link to the Box CLI
         text: Box CLI

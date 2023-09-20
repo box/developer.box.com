@@ -4,3 +4,26 @@ blog:
     Text to show how long it will be to read something, e.g.
     a "1 min read". Contains a variable for the number.
   minute_read: "%s min read"
+
+featured_board:
+  sampleCode:
+    type: sampleCode
+    cta: Browse sample code
+    link: /sample-code/
+    tag: Featured
+    headline: Kickstart your project
+    text: |-
+      Use Box Sample Code Catalog to find useful scripts,
+      app examples, and inspiring use cases! Browse
+      80+ open-source repositories in various programming languages.
+
+  community:
+    type: community
+    cta: Join the Community
+    link: https://forum.box.com/
+    tag: New
+    headline: Box Developer Community forum
+    text: |-
+      Connect with other learners and experts on
+      our Box community forum. Ask and answer
+      questions, share resources, and learn together.
