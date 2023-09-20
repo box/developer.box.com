@@ -27,7 +27,7 @@ This glossary includes terms and definitions used in Box Platform.
 | Box Verified Enterprise | BVE | Box Verified Enterprise is a certification program that ensures the security and compliance of an organization's content management system. |
 | [Cascade Policy][cascade-policy] | | Box enables you to add metadata instances to a folder, and automatically cascade them to the folder's contents so you don't need to add the instances individually. Using cascading metadata, you can quickly add metadata to multiple files and sub-folders at one time. |
 | Classification | | An instance of the classification metadata template, containing the classification applied to the file or folder. |
-| Collaboration | Permission, Role-based Access Control (RBAC), Access Control List (ACL), Permission Mapping | Working together on a file or folder. See also: collaboration roles. |
+| [Collaborations][collaborations] | Permissions, Role-based Access Control (RBAC), Access Control List (ACL), Permission Mapping | Collaborations define access permissions for users and groups to files and folders, similar to access control lists. A collaboration object grants a user or group access to a file or folder with permissions defined by a specific role. |
 | Collaborator | | Someone who shares access to a file or folder. |
 | Collaborated folder | Shared folder | A shared folder owned by someone within your enterprise. |
 | Collaboration Roles | Permission levels, access levels | The collaboration roles define the level of permissions a user has for a specific file or folder. The collaboration roles in Box are Owner, Co-owner, Editor, Viewer Uploader, Previewer Uploader, and Viewer. Collaboration levels in Box follow a "waterfall" design in which individuals have access only to the folder they are invited into and any sub-folders beneath it. You can also be invited to individual files. |
@@ -67,6 +67,7 @@ This glossary includes terms and definitions used in Box Platform.
 
 [app user]: g://getting-started/user-types/service-account
 [CLI]: https://www.box.com/platform
+[collaborations]: g://collaborations 
 [embed]: g://embed/box-embed
 [ui-elements]: g://embed/ui-elements/
 [cascade-policy]: https://support.box.com/hc/en-us/articles/360044195873-Cascading-metadata-in-folders
