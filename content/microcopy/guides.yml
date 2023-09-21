@@ -55,6 +55,10 @@ titles:
   // edit_source: The text for a link to edit the source of the page
   edit_source: Edit this page
 
+  // send_feedback: |-
+    The text for a link to give feedback on an API Reference page
+  send_feedback: Send feedback
+
   // next: The text for a link to the next step in a multi-step guide
   next: Next
 
