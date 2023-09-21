@@ -12,6 +12,13 @@ primary:
       //url:
       url: https://forum.box.com
 
+    learn:
+      // text: The text for the link to the learn section
+      text: Learn Box Platform
+
+      //url: The URL to the learn section
+      url: /platform/
+
     get_started:
       // text: The text for the link to the old Get Started guides
       text: Quick Start
