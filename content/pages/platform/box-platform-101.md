@@ -5,7 +5,7 @@ rank: 1
 
 # Box Platform 101
 
-VIDEO
+<!-- INSERT VIDEO HERE LATER -->
 
 ## What is Box
 
