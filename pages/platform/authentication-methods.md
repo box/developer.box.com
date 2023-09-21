@@ -1,18 +1,18 @@
 ---
 centered: true
 rank: 5
-category_id: learn
+category_id: platform
 subcategory_id: null
 is_index: false
-id: learn/authentication-methods
+id: platform/authentication-methods
 type: page
 total_steps: 8
-sibling_id: learn
-parent_id: learn
-next_page_id: learn/support
-previous_page_id: learn/application-types
+sibling_id: platform
+parent_id: platform
+next_page_id: platform/support
+previous_page_id: platform/application-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/learn/authentication-methods.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/authentication-methods.md
 ---
 # Authentication Methods
 

@@ -1,18 +1,18 @@
 ---
 centered: true
 rank: 3
-category_id: learn
+category_id: platform
 subcategory_id: null
 is_index: false
-id: learn/user-types
+id: platform/user-types
 type: page
 total_steps: 8
-sibling_id: learn
-parent_id: learn
-next_page_id: learn/application-types
-previous_page_id: learn/use-cases
+sibling_id: platform
+parent_id: platform
+next_page_id: platform/application-types
+previous_page_id: platform/use-cases
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/learn/user-types.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/user-types.md
 ---
 # User Types
 

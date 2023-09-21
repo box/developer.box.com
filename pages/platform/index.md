@@ -1,20 +1,20 @@
 ---
 centered: true
 rank: 0
-category_id: learn
+category_id: platform
 subcategory_id: null
 is_index: true
-id: learn
+id: platform
 type: page
 total_steps: 8
 sibling_id: pages
 parent_id: pages
-next_page_id: learn/box-platform-101
+next_page_id: platform/box-platform-101
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/learn/index.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/index.md
 ---
-# Learn
+# Learn Box Platform
 
 If you are new to Box, start here!
 In the following pages, you'll learn how the all the Box Platform
@@ -29,7 +29,7 @@ on everything Box Platform.
 
 </ImageFrame>
 
-REPLACE ABOVE IMAGE WITH VIDEO
+<!-- REPLACE ABOVE IMAGE WITH VIDEO -->
 
 ## Learn Sections
 
@@ -50,10 +50,10 @@ Get Started
 
 </Next>
 
-[platform101]:page://learn/box-platform-101
-[usecases]:page://learn/use-cases
-[usertypes]:page://learn/user-types
-[apptypes]:page://learn/application-types
-[authtypes]:page://learn/authentication-methods
-[support]:page://learn/support
-[tools]:page://learn/tools
+[platform101]:page://platform/box-platform-101
+[usecases]:page://platform/use-cases
+[usertypes]:page://platform/user-types
+[apptypes]:page://platform/application-types
+[authtypes]:page://platform/authentication-methods
+[support]:page://platform/support
+[tools]:page://platform/tools

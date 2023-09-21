@@ -1,18 +1,18 @@
 ---
 centered: true
 rank: 6
-category_id: learn
+category_id: platform
 subcategory_id: null
 is_index: false
-id: learn/support
+id: platform/support
 type: page
 total_steps: 8
-sibling_id: learn
-parent_id: learn
-next_page_id: learn/tools
-previous_page_id: learn/authentication-methods
+sibling_id: platform
+parent_id: platform
+next_page_id: platform/tools
+previous_page_id: platform/authentication-methods
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/learn/support.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/support.md
 ---
 # Support
 

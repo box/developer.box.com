@@ -1,18 +1,18 @@
 ---
 centered: true
 rank: 8
-category_id: learn
+category_id: platform
 subcategory_id: null
 is_index: false
-id: learn/start-creating
+id: platform/start-creating
 type: page
 total_steps: 8
-sibling_id: learn
-parent_id: learn
+sibling_id: platform
+parent_id: platform
 next_page_id: ''
-previous_page_id: learn/tools
+previous_page_id: platform/tools
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/learn/start-creating.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/start-creating.md
 ---
 # Start Creating
 
