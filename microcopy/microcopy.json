@@ -169,6 +169,8 @@
   "guides.titles.guide": "Guide",
   // The text for a link to edit the source of the page
   "guides.titles.edit_source": "Edit this page",
+  // The text for a link to give feedback on an API Reference page
+  "guides.titles.send_feedback": "Send feedback",
   // The text for a link to the next step in a multi-step guide
   "guides.titles.next": "Next",
   // The text for a link to the previous step in a multi-step guide
