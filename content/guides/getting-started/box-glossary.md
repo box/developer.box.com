@@ -20,13 +20,16 @@ This glossary includes terms and definitions used in Box Platform.
 | Box Custom Skill | Custom Skill, Box Skill | An application that performs custom processing for files uploaded to Box. Skills are designed to make it possible to use third-party Machine Learning services to automatically extract information from files uploaded to Box. |
 | [Box Embed][embed] | | An HTML-based framework that makes it possible to embed the Box Web App experience anywhere in the 3rd party applications. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit. |
 | Box Platform | | An API-driven cloud content management and collaboration platform that provides developers with the tools and infrastructure to build custom applications, integrate workflows, and leverage powerful features for secure document storage, access control, versioning, metadata management, and real-time collaboration. |
+| [Box Sample Code Catalog][code-catalog] | | Allows developers and admins to search through code repositories of tools, automation scripts, self paced workshops, and demo apps in multiple programming languages. The catalog contains more that eighty open source repositories and guides. |
 | Box Shield | | A security solution offered by Box that helps protect sensitive data, prevent unauthorized access, and detect potential threats through automated classification and proactive monitoring. |
 | Box Skills | | Box Skills are AI-powered capabilities that enhance the functionality of Box by automatically extracting insights and metadata from content. |
-| Box Relay Workflow | | |
+| [Box Relay][relay] | | Box Relay allows you to create and configure workflow automations to automate and accelerate business processes centered around content. |
+| [Box Verified Enterprise][bve] | BVE | Box Verified Enterprise is a certification program that ensures the security and compliance of an organization's content management system. |
 | [Box UI Elements][ui-elements] | | Pre-built UI components that allow developers to add elements of the main Box web application into their own applications. They can be used to navigate through, upload, preview, and select content stored on Box and are available both as React components and framework-agnostic JavaScript libraries. |
 | Box Verified Enterprise | BVE | Box Verified Enterprise is a certification program that ensures the security and compliance of an organization's content management system. |
 | [Cascade Policy][cascade-policy] | | Box enables you to add metadata instances to a folder, and automatically cascade them to the folder's contents so you don't need to add the instances individually. Using cascading metadata, you can quickly add metadata to multiple files and sub-folders at one time. |
 | Classification | | An instance of the classification metadata template, containing the classification applied to the file or folder. |
+| Collaboration | | Working together on a file or folder. |
 | [Collaborations][collaborations] | Permissions, Role-based Access Control (RBAC), Access Control List (ACL), Permission Mapping | Collaborations define access permissions for users and groups to files and folders, similar to access control lists. A collaboration object grants a user or group access to a file or folder with permissions defined by a specific role. |
 | Collaborator | | Someone who shares access to a file or folder. |
 | Collaborated folder | Shared folder | A shared folder owned by someone within your enterprise. |
@@ -48,10 +51,12 @@ This glossary includes terms and definitions used in Box Platform.
 | Group | Team |  | Collaborative workspace where users can share files, collaborate on documents, and communicate with each other. |
 | Item | Object, Box object, Content | Can represent a file, a folder or a web link. |
 | Limited Access App | | Secure and restricted application created in the Developer Console that allows specific users to access and interact with designated content within the Box Platform. |
+| Managed User | | A user account that is centrally controlled and administered by an organization's admin. |
 | Metadata Template | Document Class, Document Type, Content Type, Indexes | A predefined structure that captures and organizes important information about a document or file. | 
 | Metadata Attribute | Property, Field, Keyword, Index Value | A metadata attribute is a piece of information that provides descriptive details about data, such as its type, format, or source. |
 | [Managed User][managed-users] | | A user account that is centrally controlled and administered by an organization's admin. |
 | Personal folder | | A folder owned by an individual user. |
+| [Report][report] | | All Box business accounts are equipped with simple but powerful reporting functionality. From the Admin Console Reports tab you can run a variety of account-wide reports: usage logs, file/user statistics and security audits. |
 | Sandbox | Testing environment | Managed, trackable, non-production, testing environment for developers. |
 | [Service Account][service-account] | | A Service Account provides developers with a programmatic authentication mechanism for server-side integrations with Box. In other words, an application can authenticate to Box as the service, which is represented by a Service Account user. A Service Account can then be used to create other application specific users, called App Users. |
 | [Shared Link][shared-link] | | Hyperlink to content stored in Box you can share with your coworkers and friends – both inside and outside of the company. Sending someone a shared link to a file or folder is a way to work together with that person around shared content. Customizable permission levels, expiration dates, and optional password-protection make Box shared links a secure, simple way to share important content. |
@@ -81,3 +86,7 @@ This glossary includes terms and definitions used in Box Platform.
 [service-account]: g://getting-started/user-types/service-account
 [shared-link]: https://support.box.com/hc/en-us/articles/360043697094-Creating-Shared-Links
 [sdk]: https://developer.box.com/sdks-and-tools/
+[code-catalog]: https://developer.box.com/sample-code/
+[relay]: https://support.box.com/hc/en-us/articles/360044196213
+[bve]: https://support.box.com/hc/en-us/articles/4401823156883-Box-Verified-Enterprise
+[report]: https://support.box.com/hc/en-us/articles/360043696534-Running-Reports
