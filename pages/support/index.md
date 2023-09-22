@@ -28,7 +28,7 @@ integrations, and general requests.
 - [Twitter][twitter]: For general questions and support.
 - [File a support ticket][support]: For account specific questions and support.
 
-For to keep up to date with community projects and Platform changes, please use
+To keep up to date with community projects and Platform changes, please use
 one of these available channels:
 
 - [Changelog](page://changelog): For API changes, deprecated services, and
