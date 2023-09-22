@@ -67,6 +67,10 @@ The`additional_details` payload will provide the following details:
         "batch_send": {
             "id": "W23YVL46"
         },
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -112,6 +116,10 @@ The`additional_details` payload will provide the following details:
         "signer":null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -157,6 +165,10 @@ The`additional_details` payload will provide the following details:
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -202,6 +214,10 @@ The`additional_details` payload will provide the following details:
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -247,6 +263,10 @@ The`additional_details` payload will provide the following details:
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -299,9 +319,13 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        }
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -353,6 +377,10 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -404,6 +432,10 @@ signing document.
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -459,6 +491,10 @@ signing document.
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -516,6 +552,10 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -569,6 +609,10 @@ The`additional_details` payload will provide the following details:
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
