@@ -56,6 +56,7 @@ fullyTranslated: true
     "timezone": "Africa/Bujumbura"
   }
 }
+
 ```
 
 ## 項目ソースオブジェクト
@@ -90,4 +91,5 @@ fullyTranslated: true
     }
   }
 }
+
 ```

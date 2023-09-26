@@ -41,6 +41,7 @@ GitHubでJava SDKの詳細を確認する
 
 ```shell
 compile 'com.box:box-java-sdk:2.32.0'
+
 ```
 
 <Message>
@@ -59,6 +60,7 @@ Java SDKの最新のバージョン番号については、[Java SDKのオープ
     <artifactId>box-java-sdk</artifactId>
     <version>2.32.0</version>
 </dependency>
+
 ```
 
 <Message>

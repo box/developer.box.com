@@ -92,6 +92,7 @@ HTTP仕様に従い、Box APIのすべてのレスポンスヘッダー名では
   "type": "folder",
   ...
 }
+
 ```
 
 これらのリソースはすべて、常に1つのIDとリソースのタイプを返します。
@@ -121,6 +122,7 @@ APIレスポンスで複数の項目が返される場合は、コレクショ�
     }
   ]
 }
+
 ```
 
 <!-- markdownlint-disable line-length -->
@@ -150,6 +152,7 @@ API呼び出しがエラーで返されると、BoxのAPIから`request_id`フ�
   "message": "Method Not Allowed",
   "request_id": "abcdef123456"
 }
+
 ```
 
 特定のエラーについてサポートに連絡する場合は、サポートチームがリクエストをすぐに見つけられるよう、`request_id`を含むAPIレスポンス全体を提供してください。

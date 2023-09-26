@@ -50,4 +50,5 @@ JWTを使用した認証方法は、もともとアプリケーションのサ�
 ```curl
 curl https://api.box.com/2.0/users/me \
   -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+
 ```

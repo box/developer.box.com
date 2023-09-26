@@ -57,6 +57,7 @@ Boxでは、`admin_logs`を使用してライブイベントを登録してい�
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -69,6 +70,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -81,6 +83,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
   -H "authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 ### 3. これまでの結果のページ割りを行い、`admin_logs`イベントとの重複を排除します
@@ -88,6 +91,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
   -H "authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 <!-- markdownlint-enable line-length -->

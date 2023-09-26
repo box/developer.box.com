@@ -55,6 +55,7 @@ Long pollingを使用するには、まず、リクエストを[`OPTIONS /events
 ```curl
 curl -X OPTIONS https://api.box.com/2.0/events \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -70,6 +71,7 @@ curl -X OPTIONS https://api.box.com/2.0/events \
     }
   ]
 }
+
 ```
 
 ### リアルタイムサーバー

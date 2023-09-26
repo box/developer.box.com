@@ -81,6 +81,7 @@ Open With UI Elementを使用する前に、アプリケーションを許可し
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
       -H 'Authorization: Bearer [ACCESS_TOKEN]'
+
 ```
 
 ```json
@@ -94,6 +95,7 @@ curl -X GET https://api.box.com/2.0/app_integrations \
   ],
   "limit": 100
 }
+
 ```
 
 アプリ統合IDを使用して、指定したユーザーに統合を割り当てます。
@@ -106,6 +108,7 @@ IDに基づいて、特定の統合に関する追加情報を取得するには
 curl -X GET \
   https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
   -H 'Authorization: Bearer [ACCESS_TOKEN]'
+
 ```
 
 ```json
@@ -132,6 +135,7 @@ curl -X GET \
    ],
    "scoped_to":"parent"
 }
+
 ```
 
 ## ユーザーへの統合の追加
@@ -163,6 +167,7 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
       "id": "[APP_INTEGRATION_ID]"
     }
   }'
+
 ```
 
 ```json
@@ -178,6 +183,7 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
     "id": "3282"
   }
 }
+
 ```
 
 JSONレスポンスに含まれるIDは、割り当て後にアプリ統合を管理するために使用できるため、アプリケーションで保存する必要があります。
@@ -191,10 +197,12 @@ App Userからアプリ統合を削除するには、有効なサービスのア
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
   -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+
 ```
 
 ```sh
 204 No Content
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -230,6 +238,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     </script>
   </body>
 </html>
+
 ```
 
 ## デモ
@@ -327,6 +336,7 @@ contentOpenWith.removeListener(eventName, listener);
  * @return {void}
  */
 contentOpenWith.removeAllListeners();
+
 ```
 
 <!-- markdownlint-disable line-length -->

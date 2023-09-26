@@ -64,6 +64,7 @@ API呼び出しのレート制限には一般的に3種類あります。Boxは�
 
 ```yaml
 retry-after: 100
+
 ```
 
 ```json
@@ -75,6 +76,7 @@ retry-after: 100
   "message": "Request rate limit exceeded, please try again later",
   "request_id": "abcdef123456"
 }
+
 ```
 
 詳細については、[クライアントエラーのリソース](resource://client_error)を参照してください。

@@ -88,6 +88,7 @@ ASP.NET Coreフレームワークを使用します。
     "express-session": "^1.17.0"
   }
 }
+
 ```
 
 * ターミナル/コンソールから`npm init`を実行して依存関係をインストールします。
@@ -100,6 +101,7 @@ const oktaClientSecret = exports.oktaClientSecret = '';
 const oktaOrgUrl = exports.oktaOrgUrl = '';
 const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
 const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
+
 ```
 
 </Choice>
@@ -121,6 +123,7 @@ dependencies {
   testImplementation 'org.springframework.security:spring-security-test'
   compile 'com.box:box-java-sdk:2.44.1'
 }
+
 ```
 
 * `/src/main/resources/application.properties`ファイルを開いて以下のデフォルトを保存します。
@@ -132,6 +135,7 @@ okta.oauth2.clientId=
 okta.oauth2.clientSecret=
 
 security.oauth2.sso.loginPath=/authorization-code/callback
+
 ```
 
 </Choice>
@@ -148,6 +152,7 @@ okta_client_secret = 'YOUR OKTA CLIENT SECRET'
 okta_org_url = 'YOUR OKTA ORG URL'
 okta_auth_token = 'YOUR OKTA APP TOKEN'
 okta_callback_route = '/oidc/callback'
+
 ```
 
 * `client_secrets.json`を開いて以下の内容を保存します。これは、構成時にFlask OpenID Connect統合で使用される標準のオブジェクトです。残りの情報については、次の手順で設定します。
@@ -166,6 +171,7 @@ okta_callback_route = '/oidc/callback'
     ]
   }
 }
+
 ```
 
 </Choice>
@@ -182,6 +188,7 @@ okta_callback_route = '/oidc/callback'
 ```dotnet
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
+
 ```
 
 * `ConfigureServices`メソッドの内容を以下の内容に置き換えます。具体的なOktaアプリケーションの値は次の手順で設定します。
@@ -204,6 +211,7 @@ services.AddAuthentication(options =>
   ClientId = "",
   ClientSecret = ""
 });
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -212,6 +220,7 @@ services.AddAuthentication(options =>
 
 ```dotnet
 app.UseAuthentication();
+
 ```
 
 </Choice>

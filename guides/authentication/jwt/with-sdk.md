@@ -77,6 +77,7 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
   },
   "enterpriseID": "1234567"
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -95,6 +96,7 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
 var reader = new StreamReader("path/to/config.json");
 var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
+
 ```
 
 </Tab>
@@ -104,6 +106,7 @@ var config = BoxConfig.CreateFromJsonString(json);
 ```java
 Reader reader = new FileReader("path/to/config.json");
 BoxConfig config = BoxConfig.readFrom(reader);
+
 ```
 
 </Tab>
@@ -114,6 +117,7 @@ BoxConfig config = BoxConfig.readFrom(reader);
 from boxsdk import JWTAuth
 
 config = JWTAuth.from_settings_file('path/to/config.json')
+
 ```
 
 </Tab>
@@ -122,6 +126,7 @@ config = JWTAuth.from_settings_file('path/to/config.json')
 
 ```js
 var config = require('path/to/config.json');
+
 ```
 
 </Tab>
@@ -148,6 +153,7 @@ var config = require('path/to/config.json');
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
 BoxClient client = sdk.AdminClient(token);
+
 ```
 
 </Tab>
@@ -156,6 +162,7 @@ BoxClient client = sdk.AdminClient(token);
 
 ```java
 BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(config);
+
 ```
 
 </Tab>
@@ -164,6 +171,7 @@ BoxDeveloperEditionAPIConnection api = BoxDeveloperEditionAPIConnection.getAppEn
 
 ```python
 client = Client(config)
+
 ```
 
 </Tab>
@@ -173,6 +181,7 @@ client = Client(config)
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
 var client = sdk.getAppAuthClient('enterprise');
+
 ```
 
 </Tab>

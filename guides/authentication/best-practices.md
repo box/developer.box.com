@@ -45,6 +45,7 @@ def self.user_client(user_id)
 
     Boxr::Client.new(access_token)
 end
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -75,6 +76,7 @@ ScopedToken downscopedToken =
     client.getLowerScopedToken(scopes,resource);
 
 //Downscoped token available in downscopedToken.getAccessToken()
+
 ```
 
 ## トークンの取り消し

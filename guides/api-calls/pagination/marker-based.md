@@ -43,6 +43,7 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <Message type="notice">
@@ -58,6 +59,7 @@ curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
 ```curl
 curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker=true \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <!-- markdownlint-enable line-length -->

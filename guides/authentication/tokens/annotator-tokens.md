@@ -67,6 +67,7 @@ var claims = new List<Claim>{
   new Claim("box_sub_type", "external"),
   new Claim("jti", jti),
 };
+
 ```
 
 </Tab>
@@ -82,6 +83,7 @@ claims.setName("[EXTERNAL_USER_DISPLAY_NAME]");
 claims.setClaim("box_sub_type", "external");
 claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
+
 ```
 
 </Tab>
@@ -98,6 +100,7 @@ claims = {
   'jti': secrets.token_hex(64),
   'exp': round(time.time()) + 45
 }
+
 ```
 
 </Tab>
@@ -114,6 +117,7 @@ let claims = {
   jti: crypto.randomBytes(64).toString("hex"),
   exp: Math.floor(Date.now() / 1000) + 45
 };
+
 ```
 
 </Tab>
@@ -130,6 +134,7 @@ claims = {
   jti: SecureRandom.hex(64),
   exp: Time.now.to_i + 45
 }
+
 ```
 
 </Tab>
@@ -147,6 +152,7 @@ $claims = [
   'exp' => time() + 45,
   'kid' => $config->boxAppSettings->appAuth->publicKeyID
 ];
+
 ```
 
 </Tab>
@@ -187,6 +193,7 @@ var content = new FormUrlEncodedContent(new[]
   new KeyValuePair<string, string>(
     "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"),
 });
+
 ```
 
 </Tab>
@@ -210,6 +217,7 @@ params.add(new BasicNameValuePair(
   "actor_token", "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]"));
 params.add(new BasicNameValuePair(
   "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"));
+
 ```
 
 </Tab>
@@ -226,6 +234,7 @@ params = urlencode({
   'actor_token': '[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]',
   'actor_token_type': 'urn:ietf:params:oauth:token-type:id_token'
 }).encode()
+
 ```
 
 </Tab>
@@ -247,6 +256,7 @@ let accessToken = await axios
     })
   )
   .then(response => response.data.access_token);
+
 ```
 
 </Tab>
@@ -263,6 +273,7 @@ params = URI.encode_www_form({
   actor_token: '[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]',
   actor_token_type: 'urn:ietf:params:oauth:token-type:id_token'
 })
+
 ```
 
 </Tab>
@@ -279,6 +290,7 @@ $params = [
   'actor_token' => '[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]',
   'actor_token_type' => 'urn:ietf:params:oauth:token-type:id_token'
 ];
+
 ```
 
 </Tab>
@@ -320,6 +332,7 @@ client
   .then(tokenInfo => {
     //=> tokenInfo.accessToken
   });
+
 ```
 
 </Tab>

@@ -85,6 +85,7 @@ curl https://api.box.com/2.0/collaborations \
   -H "authorization: Bearer [ACCESS_TOKEN]" \
   -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
   -X POST
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -109,6 +110,7 @@ curl https://api.box.com/oauth2/token \
   -d 'resource=https://api.box.com/2.0/folders/123456' \
   -d 'grant_type=urn:ietf:params:oauth:grant-type:token-exchange' \
   -X POST
+
 ```
 
 ### レスポンス
@@ -152,6 +154,7 @@ curl https://api.box.com/oauth2/token \
     ],
     "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
+
 ```
 
 上で取得した`CHILD_TOKEN`はダウンスコープされ、フォルダID`123456`とその子に対するダウンロードおよびプレビューの権限のみが含まれています。

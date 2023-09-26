@@ -137,6 +137,7 @@ preview.removeListener(eventName, listener);
  * @return {void}
  */
 preview.removeAllListeners();
+
 ```
 
 ### パラメータ
@@ -187,6 +188,7 @@ var mapTokenGenerator = function() {
     file_2345: "some_token_bcde"
   });
 };
+
 ```
 
 ## イベント
@@ -207,6 +209,7 @@ preview.show(...);
 
 // Remove listener when needed
 preview.removeListener(EVENTNAME, listener);
+
 ```
 
 `EVENTNAME`には、以下のいずれかを指定できます。
@@ -219,6 +222,7 @@ error: 'message', // Error message if any error occurred while loading
 viewer: {...},    // Instance of the current viewer object if no error occurred
 metrics: {...},   // Performance metrics
 file: {...}       // Box file object with properties defined in file.js
+
 ```
 
 * `navigate`イベントは、移動が発生したときにトリガーされます。イベントには移動先のファイルのファイルIDが含まれており、このイベントは`load`の前にトリガーされます。
@@ -227,6 +231,7 @@ file: {...}       // Box file object with properties defined in file.js
 ```js
 message: 'message', // Message to show
 type: 'warning'    // 'warning', 'notice', or 'error'
+
 ```
 
 * `viewerevent`: ビューアーごとに、一連の独自のイベントがトリガーされます。たとえば、画像ビューアーでは`rotate`や`resize`などがトリガーされるのに対し、別のビューアーでは別の一連のイベントがトリガーされる場合があります。プレビューラッパーは、以下を含むイベントデータとともに、プレビューレベルでイベントを再発行します。
@@ -236,6 +241,7 @@ event: EVENTNAME,         // Event name
 data: DATA,               // Event data object
 viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
 fileId: fileId            // The file ID
+
 ```
 
 ### イベントの使用例
@@ -276,6 +282,7 @@ preview.addListener("rotate", data => {
   } else {
   }
 });
+
 ```
 
 ## 注釈
@@ -345,6 +352,7 @@ options['boxAnnotations'] = annotations;
 
 /* Show previewer */
 contentPreviewer.show(file_id, accessToken, options);
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -373,6 +381,7 @@ contentPreviewer.show(file_id, accessToken, options);
 <div class="previewer"></div>
 
 <script type="module" src="./script.js"></script>
+
 ```
 
 <!-- markdownlint-enable line-length -->

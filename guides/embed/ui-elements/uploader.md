@@ -117,6 +117,7 @@ uploader.removeListener(eventName, listener);
  * @return {void}
  */
 uploader.removeAllListeners();
+
 ```
 
 <!-- markdownlint-disable line-length -->

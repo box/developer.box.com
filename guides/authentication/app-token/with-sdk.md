@@ -55,6 +55,7 @@ JWTを使用した認証方法は、もともとアプリケーションのサ�
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
 var session = new OAuthSession("[APP_TOKEN]", "N/A", 3600, "bearer");
 var client = new BoxClient(config, session);
+
 ```
 
 </Tab>
@@ -63,6 +64,7 @@ var client = new BoxClient(config, session);
 
 ```java
 BoxTransactionalAPIConnection api = new BoxTransactionalAPIConnection("[APP_TOKEN]");
+
 ```
 
 </Tab>
@@ -74,6 +76,7 @@ from boxsdk import Client, OAuth2
 
 auth = OAuth2(access_token='[APP_TOKEN]')
 client = Client(auth)
+
 ```
 
 </Tab>
@@ -88,6 +91,7 @@ var sdk = new BoxSDK({
 });
 
 var client = sdk.getBasicClient('[APP_TOKEN]');
+
 ```
 
 </Tab>

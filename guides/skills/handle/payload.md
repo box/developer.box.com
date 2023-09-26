@@ -57,6 +57,7 @@ Skillsアプリが監視するフォルダに新しいファイルがアップ�
   },
   ...
 }
+
 ```
 
 `token.write.access_token`を使用すると、ファイルにメタデータを書き込むことができるのに対し、`token.read.access_token`はファイルコンテンツの読み取りのみに使用できます。読み取り専用トークンは、後で他のサービスと共有できるファイルのダウンロードURLを作成する際に役立ちます。
@@ -83,16 +84,19 @@ Skillsアプリが監視するフォルダに新しいファイルがアップ�
   },
   ...
 }
+
 ```
 
 ファイルのダウンロードURLは、次のように作成できます。
 
 ```curl
 https://api.box.com/2.0/files/{source.id}/content?access_token={token.read.access_token}
+
 ```
 
 この例では、このURLは次のようになります。
 
 ```curl
 https://api.box.com/2.0/files/12345/content?access_token=Z3ExaVNyQWw6WjRsanRKZG5lQk9qUE1BVQc3FIOG9vSGV4VHo4QzAyg5T1JvNnJo
+
 ```

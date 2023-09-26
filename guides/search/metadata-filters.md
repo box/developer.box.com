@@ -30,6 +30,7 @@ fullyTranslated: true
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22scope%22%3A%22enterprise%22%2C%22templateKey%22%3A%22contract%22%2C%22filters%22%3A%7B%22category%22%3A%22online%22%7D%7D%5D" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -51,6 +52,7 @@ bmf.setFilter("category", "online")
 searchParams.setMetadataFilter(bmf)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -74,6 +76,7 @@ var filters = new List<BoxMetadataFilterRequest>()
 };
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", mdFilters: filters);
+
 ```
 
 </Tab>
@@ -89,6 +92,7 @@ metadata_search_filters = MetadataSearchFilters()
 metadata_search_filters.add_filter(metadata_search_filter)
 
 client.search().query("sales", metadata_filters=metadata_search_filters)
+
 ```
 
 </Tab>
@@ -112,6 +116,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -160,6 +165,7 @@ client.search.query(
     "filters": {}
   }
 ]
+
 ```
 
 <Message>
@@ -184,6 +190,7 @@ client.search.query(
     }
   }
 ]
+
 ```
 
 <Message info>
@@ -209,6 +216,7 @@ client.search.query(
     }
   }
 ]
+
 ```
 
 <Message info>
@@ -234,6 +242,7 @@ client.search.query(
     }
   }
 ]
+
 ```
 
 <Message info>
@@ -256,6 +265,7 @@ client.search.query(
     }
   }
 ]
+
 ```
 
 <Message info>
@@ -281,6 +291,7 @@ client.search.query(
     }
   }
 ]
+
 ```
 
 <Message info>

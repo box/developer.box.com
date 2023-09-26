@@ -37,6 +37,7 @@ fullyTranslated: true
 
 ```bash
 box folders:create 0 Example_Folder --as-user=123456
+
 ```
 
 <Message type="warning">
@@ -77,6 +78,7 @@ CSVファイルの列名を指定する際は、[GitHubリポジトリ][github]�
 
 ```bash
 box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv
+
 ```
 
 <!-- markdownlint-enable line-length -->

@@ -61,6 +61,7 @@ Boxウェブアプリの場合、`additional_details`ペイロードは以下の
     "controlMode": "enforced"
   }
 }
+
 ```
 
 Boxデスクトップアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -94,6 +95,7 @@ Boxデスクトップアプリの場合、`additional_details`ペイロードは
   "service_id": "254429",
   "service_name": "Box Drive"
 }
+
 ```
 
 Box Mobileアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -127,6 +129,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
   "service_id": "4715",
   "service_name": "Box for Android"
 }
+
 ```
 
 ## 外部コラボレーションの制限
@@ -167,6 +170,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
+
 ```
 
 外部コラボレーションの招待が正当な理由で認められている場合、`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
@@ -239,6 +243,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
+
 ```
 
 外部コラボレーションのアクセスがブロックされている場合、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`または`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
@@ -275,6 +280,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
     "controlMode": "enforced"
   }
 }
+
 ```
 
 Shieldの正当な理由が承認されると、イベントが[Enterprise Event][events] Stream内で生成されます。これらのイベントは、標準のイベントオブジェクトスキーマと、`SHIELD_JUSTIFICATION_APPROVAL`に設定された`event_type`値に従います。
@@ -321,6 +327,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
     "details": null
   }
 }
+
 ```
 
 <Message>
@@ -358,6 +365,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
   "classification": "Confidential",
   "controlMode": "enforced"
 }
+
 ```
 
 カスタムアプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
@@ -391,6 +399,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
   "service_id": "123456",
   "service_name": "CustomApp"
 }
+
 ```
 
 ## FTPの制限
@@ -428,6 +437,7 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
   "service_id": "4082",
   "service_name": "Box FTP Server"
 }
+
 ```
 
 <!-- i18n-enable localize-links -->

@@ -53,6 +53,7 @@ fullyTranslated: true
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -65,6 +66,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
   
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <message>
@@ -98,7 +100,7 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
 * **Email**列には、Boxユーザーのプライマリメールアドレスを含めます。 
 * **Region**列には、スクリプトでユーザーを割り当てるゾーンのユーザーフレンドリ名 (ユーザーが理解しやすい名前) を含めます。この名前は、ゾーンの定義に使用する[ZonesTable][zonestable]というハッシュテーブルで指定します。キーはゾーンのユーザーフレンドリ名であり、対応する値はゾーンのグローバルIDです。 
 
-  ```bash
+```bash
   $ZonesTable = @{
   US = "100001"             #US
   GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
@@ -111,7 +113,7 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
   France = "100012"         #France
   }
 
-  ```
+```
 
 <message>
 
@@ -133,12 +135,14 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
 
 ```bash
 $UserZonesUpdatePath = "./your_file_name.csv"
+
 ```
 
 `adminEmail`を、このスクリプトでゾーンの割り当てに使用するアカウントの管理者または`co-admin`のログインメールアドレスに更新します。この値を指定しない場合、スクリプト実行時に指定するよう求められます。
 
 ```bash
 $adminEmail = "john@box.com"
+
 ```
 
 ## スクリプトの実行
@@ -147,12 +151,14 @@ PowerShellコマンドを実行します。
 
 ```bash
 pwsh
+
 ```
 
 スクリプトを実行します。
 
 ```bash
 ./Mass_Update_User_Zones.ps1
+
 ```
 
 ### オプションのフラグ
@@ -161,6 +167,7 @@ pwsh
 
 ```bash
 ./Mass_Update_User_Zones.ps1 -DryRun
+
 ```
 
 ## ログ

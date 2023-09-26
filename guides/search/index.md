@@ -43,6 +43,7 @@ Box APIを使用すると、ファイルコンテンツ検索クエリを使用�
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=box%20AND%20sales" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 <CTA to="g://search/query-operators">

@@ -23,6 +23,7 @@ Postman要素を使用すると、\[**Load in Postman**] ボタンを表示で�
 
 ```html
 <Postman id='abc123' ></Postman>
+
 ```
 
 <H>
@@ -43,6 +44,7 @@ Postman要素を使用すると、\[**Load in Postman**] ボタンを表示で�
 
 ```html
 <Postman id='abc123' env='example_name' />
+
 ```
 
 この場合、値はローカルストレージの以下のキーから読み取られます。
@@ -57,4 +59,5 @@ Postman要素を使用すると、\[**Load in Postman**] ボタンを表示で�
 
 ```html
 <Postman id='abc123' envtitle='Box.com' />
+
 ```

@@ -57,6 +57,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo
           "value": "Box"
         }
       ]'
+
 ```
 
 </Tab>
@@ -81,6 +82,7 @@ var updates = new List<BoxMetadataUpdate>()
 };
 Dictionary<string, object> updatedMetadata = await client.MetadataManager
     .UpdateFileMetadataAsync("12345", updates, "enterprise", "customerInfo");
+
 ```
 
 </Tab>
@@ -95,6 +97,7 @@ file.updateMetadata(
   "enterprise",
   new Metadata().test("/name", "Box, Inc").replace("/name", "Box")
 );
+
 ```
 
 </Tab>
@@ -110,6 +113,7 @@ updates.test('/name', 'Box, Inc')
 updates.replace('/name', 'Box') 
 
 file.update(updates)
+
 ```
 
 </Tab>
@@ -130,6 +134,7 @@ client.files.updateMetadata(
 ).then(metadata => {
   //...
 });
+
 ```
 
 </Tab>
@@ -158,6 +163,7 @@ client.files.updateMetadata(
   "$version": 1,
   "$canEdit": true
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

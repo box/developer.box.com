@@ -64,6 +64,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 `enum`および`multiSelect`フィールドタイプは、ユーザーが項目のリストからそれぞれ1つまたは複数のオプションを選択できるドロップダウンリストを表します。
@@ -85,6 +86,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 <CTA to="g://metadata/fields">

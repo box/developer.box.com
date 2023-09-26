@@ -39,6 +39,7 @@ fullyTranslated: true
 
 ```bash
 git clone https://github.com/box/boxcli.git
+
 ```
 
 ### Windows
@@ -51,6 +52,7 @@ git clone https://github.com/box/boxcli.git
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -63,6 +65,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
   
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <message>
@@ -93,12 +96,14 @@ https://aka.ms/powershell
 Type 'help' to get help.
 
 PS /home/rvb/box-cli/examples/Integration Mappings>
+
 ```
 
 EXTRACTを指定してスクリプトを実行すると、現在のマッピングが抽出されます:
 
 ```pwsh
 ./integration-mappings.ps1 -Action EXTRACT
+
 ```
 
 または
@@ -107,6 +112,7 @@ UPDATEを指定してスクリプトを実行すると、現在のマッピン�
 
 ```pwsh
 ./integration-mappings.ps1 -Action UPDATE
+
 ```
 
 または
@@ -115,12 +121,14 @@ CREATEを指定してスクリプトを実行すると、新しいマッピン�
 
 ```pwsh
 ./integration-mappings.ps1 -Action CREATE -MappingPath ./mapping_create_example.csv
+
 ```
 
 デフォルトでは、csvファイルが./mappings.csvに保存され、./mappings.csvから読み込まれます。この場所を変更する場合は、次のように新しいパスを渡します:
 
 ```pwsh
 ./integration-mappings.ps1 -Action EXTRACT -MappingPath ./mappings_new_location.csv
+
 ```
 
 パラメータを指定しなかった場合は、スクリプトによって、パラメータを入力するよう求められます。
@@ -134,6 +142,7 @@ Starting Process
 Applying new mappings
 Output [...]
 All bulk input entries processed successfully.
+
 ```
 
 ## ログ

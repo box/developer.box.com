@@ -132,6 +132,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 このテンプレートには、2つの[テンプレートフィールド][fields]として`name`と`category`があります。`name`フィールドは通常のテキストフィールドで、`category`は列挙型フィールドです。
@@ -145,6 +146,7 @@ fullyTranslated: true
   "name": "Model 3",
   "category": "SUVs"
 }
+
 ```
 
 <Message notice>

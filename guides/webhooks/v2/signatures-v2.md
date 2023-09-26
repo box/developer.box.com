@@ -65,6 +65,7 @@ Webhook署名は、Boxから送信されたWebhookペイロードが改ざんさ
 var timestamp = headers['BOX-DELIVERY-TIMESTAMP'];
 var date = Date.parse(timestamp);
 var expired = Date.now() - date > 10*60*1000;
+
 ```
 
 </Tab>
@@ -84,6 +85,7 @@ delta = datetime.timedelta(minutes=10)
 expiry_date = now - deltaMinutes
 
 expired = date >= expiry_date
+
 ```
 
 </Tab>
@@ -115,6 +117,7 @@ hmac1.update(timestamp);
 var hmac2 = crypto.createHmac('sha256', secondaryKey);
 hmac2.update(payload);
 hmac2.update(timestamp);
+
 ```
 
 </Tab>
@@ -134,6 +137,7 @@ bytes = bytes(payload, 'utf-8') + bytes(timestamp, 'utf-8')
 
 hmac1 = hmac.new(primary_key, bytes, hashlib.sha256).digest()
 hmac2 = hmac.new(secondary_key, bytes, hashlib.sha256).digest()
+
 ```
 
 </Tab>
@@ -151,6 +155,7 @@ HMACを`Base64`でエンコードされたダイジェストに変換します�
 ```js
 var digest1 = hmac1.digest('base64');
 var digest2 = hmac2.digest('base64');
+
 ```
 
 </Tab>
@@ -162,6 +167,7 @@ import base64
 
 digest1 = base64.b64encode(hmac1)
 digest2 = base64.b64encode(hmac2)
+
 ```
 
 </Tab>
@@ -186,6 +192,7 @@ var primarySignatureValid = digest1 === signature1
 var secondarySignatureValid = digest2 === signature2
 
 var valid = !expired && (primarySignatureValid || secondarySignatureValid)
+
 ```
 
 </Tab>
@@ -200,6 +207,7 @@ primary_sig_valid = digest1 === signature1
 secondary_sig_valid = digest2 === signature2
 
 valid = !expired && (primary_sig_valid || secondary_sig_valid)
+
 ```
 
 </Tab>

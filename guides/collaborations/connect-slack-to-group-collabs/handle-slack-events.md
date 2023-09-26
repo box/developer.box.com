@@ -54,6 +54,7 @@ Slackアプリケーションを構成したときに、3つのイベントの�
   "response_url": "https://hooks.slack.com/commands/T541DQSV12P/3977594927231/ankvsRb42WKnKPRp002FeyTx",
   "trigger_id": "1189442196855.1183332180295.cca20c3ca1ea193dab432ad8e9e95431"
 }
+
 ```
 
 </Tab>
@@ -79,6 +80,7 @@ Slackアプリケーションを構成したときに、3つのイベントの�
   "event_time": 1592858788,
   "authed_users": [ "U0431JM4RLZ" ]
 }
+
 ```
 
 </Tab>
@@ -103,6 +105,7 @@ Slackアプリケーションを構成したときに、3つのイベントの�
   "event_time": 1593033236,
   "authed_users": [ "U0431JM4RLZ" ]
 }
+
 ```
 
 </Tab>
@@ -121,6 +124,7 @@ app.post("/event", (req, res) => {
 
   handler.process(res, req.body);
 });
+
 ```
 
 イベントが成功すると、リスナーではSlackアプリケーションからの確認トークンを使用して、メッセージがSlackから届いたことを確認します。メッセージが有効なリクエストであれば、イベントペイロードがイベント処理関数に送信されます。
@@ -171,6 +175,7 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
 
   processEvent(data);
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -202,6 +207,7 @@ public void processEvent(String data) throws Exception {
     System.err.println("Invalid event source");
   }
 }
+
 ```
 
 このメソッドは、JSONイベント文字列をJSONオブジェクトに変換した後、確認トークンを比較して、イベントがSlackから送信されたかどうかを確認します。有効な場合は、イベントが`process`に転送されます。
@@ -258,6 +264,7 @@ function process(res, data) {
     res.send("Invalid action");
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -315,6 +322,7 @@ public void process(JSONObject inputJSON) throws Exception {
     System.err.println("Invalid event action");
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -386,6 +394,7 @@ function processUser(user, event, channel) {
     }
   });
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -416,6 +425,7 @@ public void processUser(JSONObject userResponse, String event, String channel) t
     removeGroupUser(groupId, userEmail);
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -463,6 +473,7 @@ function processSlackChannel(channel, groupId) {
     });
   });
 }
+
 ```
 
 </Choice>
@@ -501,6 +512,7 @@ public void processSlackChannel(String channel, String groupId) throws Exception
     }
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -552,6 +564,7 @@ function getSlackUser(userId, callback) {
     }
   });
 }
+
 ```
 
 この関数では、Slackユーザープロフィールエンドポイントを呼び出した後、指定したコールバックにユーザープロフィール情報 (有効な場合) を送信します。
@@ -569,6 +582,7 @@ public JSONObject getSlackUser(String userId) throws Exception {
   String usersPath = String.format("%s/users.info?token=%s&user=%s", slackConfig.slackApiUrl, slackConfig.botToken, userId);
   return sendGETRequest(usersPath);
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

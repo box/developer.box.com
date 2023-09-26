@@ -82,6 +82,7 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     </script>
   </body>
 </html>
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -168,6 +169,7 @@ sidebar.removeListener(eventName, listener);
  * @return {void}
  */
 sidebar.removeAllListeners();
+
 ```
 
 ### パラメータ

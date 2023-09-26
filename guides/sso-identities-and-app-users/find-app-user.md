@@ -59,6 +59,7 @@ client.enterprise.getUsers({ "external_app_user_id": ssoUID })
     // User not found - create new user record
   }
 });
+
 ```
 
 </Tab>
@@ -84,6 +85,7 @@ if (totalCount.asInt() > 0) {
 } else {
   // User not found - create new user record
 }
+
 ```
 
 </Tab>
@@ -105,6 +107,7 @@ else:
   # User found, fetch user ID
   user = user_info['entries'][0]
   user_id = user['id']
+
 ```
 
 </Tab>
@@ -135,6 +138,7 @@ client.enterprise.getUsers({filter_term: ssoEmail})
     // User not found - create new user record
   }
 });
+
 ```
 
 </Tab>
@@ -145,6 +149,7 @@ client.enterprise.getUsers({filter_term: ssoEmail})
 String ssoEmail = "ssouser@email.com";
 
 Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(client, ssoEmail);
+
 ```
 
 </Tab>
@@ -161,6 +166,7 @@ else:
   # User found, fetch user ID
   user = users['entries'][0]
   user_id = user['id']
+
 ```
 
 </Tab>

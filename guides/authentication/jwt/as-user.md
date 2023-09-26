@@ -32,6 +32,7 @@ fullyTranslated: true
 curl https://api.box.com/2.0/folders/0 \
   -H "as-user: [USER_ID]"
   -H "authorization: Bearer [ACCESS_TOKEN]"
+
 ```
 
 <Message>
@@ -68,6 +69,7 @@ as-userヘッダーでは[サービスアカウント](g://getting-started/user-
 
 ```dotnet
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
+
 ```
 
 </Tab>
@@ -77,6 +79,7 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```java
 client.asUser([USER_ID]");
 // client.asSelf();
+
 ```
 
 </Tab>
@@ -86,6 +89,7 @@ client.asUser([USER_ID]");
 ```python
 user_to_impersonate = client.user(user_id='[USER_ID]')
 user_client = client.as_user(user_to_impersonate)
+
 ```
 
 </Tab>
@@ -95,6 +99,7 @@ user_client = client.as_user(user_to_impersonate)
 ```js
 client.asUser('[USER_ID]');
 // client.asSelf();
+
 ```
 
 </Tab>

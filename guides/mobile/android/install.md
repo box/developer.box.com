@@ -41,6 +41,7 @@ Android SDKは、次のように、いくつかの方法で入手できます。
     <groupId>com.box</groupId>
     <artifactId>box-android-sdk</artifactId>
 </dependency>
+
 ```
 
 ## Gradle依存関係として追加
@@ -51,6 +52,7 @@ Android SDKは、次のように、いくつかの方法で入手できます。
 dependencies {
     implementation 'com.box:box-android-sdk:4.2.3'
 }
+
 ```
 
 ## ソースの複製

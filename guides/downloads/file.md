@@ -35,6 +35,7 @@ SDKを使用しない場合、このAPI呼び出しでは、`HTTP 302 Found`ス�
 
 ```sh
 https://dl.boxcloud.com/d/1/[long-random-string]/download
+
 ```
 
 cURLで`-L`フラグを使用することで、自動的にこのリダイレクトに従うことができます。

@@ -120,6 +120,7 @@ Windows用およびmacOS用のインストーラが提供されていますが�
 
 ```bash
 npm install --global @box/cli
+
 ```
 
 ## ソースコード
@@ -176,6 +177,7 @@ Phone: ''
 Address: example+user@box.com
 Avatar URL: ''
 Notification Email: []
+
 ```
 
 <Message type="tip">

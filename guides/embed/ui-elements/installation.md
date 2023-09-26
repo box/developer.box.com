@@ -32,6 +32,7 @@ Reactベースのアプリを構築し、構築時にアプリに直接コンポ
 ```sh
 npm install box-ui-elements
 # yarn add box-ui-elements
+
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
@@ -92,6 +93,7 @@ NPMウェブサイトの詳細を確認する
     ...
   </body>
 </html>
+
 ```
 
 Boxプレビューでは、このサンプルは若干異なって見えます。
@@ -121,6 +123,7 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
     </script>
   </body>
 </html>
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -167,6 +170,7 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
 
 ```sh
 yarn install && yarn build:i18n && yarn build:prod
+
 ```
 
 ### 3. ファイルを提供する

@@ -39,6 +39,7 @@ struct ContentView: View {
     Text("Hello, World!")
   }
 }
+
 ```
 
 最初に、現在のユーザーを取得するための呼び出しをトリガーできるように、`Text`の出力行をボタンに置き換えます。その行を以下のボタンに置き換えます。
@@ -53,6 +54,7 @@ Button(action: {
 .cornerRadius(20)
 .foregroundColor(.white)
 .background(Color.blue)
+
 ```
 
 次の手順では、Boxからユーザーの詳細を取得するアクションをボタンに追加します。
@@ -80,6 +82,7 @@ client.users.getCurrent(fields:["name", "login"]) { (result: Result<User,
 }
 
 sleep(5)
+
 ```
 
 iOSエミュレータでサンプルアプリケーションをビルドして実行します。
@@ -107,6 +110,7 @@ Xcodeの開発者コンソール内にAPIリクエストとレスポンスが表
           User","login":"testuser@test.com"}
 
 Authenticated as Optional("Test User")
+
 ```
 
 <Message notice>

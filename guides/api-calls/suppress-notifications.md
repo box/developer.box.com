@@ -36,6 +36,7 @@ curl -X POST https://api.box.com/2.0/folders \
         "id": "0"
       }
     }'
+
 ```
 
 </Tab>

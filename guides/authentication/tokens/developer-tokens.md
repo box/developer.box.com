@@ -48,6 +48,7 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/users/me \
     -H "authorization: Bearer [DEVELOPER_TOKEN]"
+
 ```
 
 <Message warning>

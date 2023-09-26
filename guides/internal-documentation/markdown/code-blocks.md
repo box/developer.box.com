@@ -24,8 +24,10 @@ fullyTranslated: true
 SDKまたはCLIのドキュメントにすべてのコードサンプルが含まれているわけではありません。新しいコードサンプルを追加するには、標準のマークダウンバッククォートで囲みます。
 
 ````sh
+
 ```js
 console.log('Hello, World!')
+
 ```
 ````
 
@@ -33,6 +35,7 @@ console.log('Hello, World!')
 
 ```js
 console.log('Hello, World!')
+
 ```
 
 </H>
@@ -48,10 +51,12 @@ console.log('Hello, World!')
 コードサンプルの行をハイライトするには、Prismの[line-highlight](https://prismjs.com/plugins/line-highlight/)プラグインをサポートします。
 
 ````sh
+
 ```js;highlight=2
 let value = 1
 value+=1
 console.dir(value)
+
 ```
 ````
 
@@ -61,6 +66,7 @@ console.dir(value)
 let value = 1
 value+=1
 console.dir(value)
+
 ```
 
 </H>

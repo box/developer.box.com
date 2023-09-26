@@ -27,6 +27,7 @@ fullyTranslated: true
 <Store placeholder='e.g. John' id='example.store_a'>
   Your name
 </Store>
+
 ```
 
 <H>
@@ -53,6 +54,7 @@ fullyTranslated: true
 <Store placeholder='e.g. John' id='example.store_b' field='name'>
   Your name
 </Store>
+
 ```
 
 ## Placeholder
@@ -71,6 +73,7 @@ fullyTranslated: true
 <Store id='example.store_a' disabled inline obscured>
   Your name
 </Store>
+
 ```
 
 <H>
@@ -91,6 +94,7 @@ fullyTranslated: true
 <ResetButton id='example'>
   Reset all IDs starting with example.
 </ResetButton>
+
 ```
 
 <H>
@@ -109,4 +113,5 @@ exampleで始まるすべてのIDをリセット。
 <ResetButton id='example1,example2'>
   Reset all IDs starting with example1 or example2.
 </ResetButton>
+
 ```

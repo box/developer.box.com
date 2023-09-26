@@ -45,6 +45,7 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 エントリの次のページを取得するには、以前の`offset`値と以前の結果で返された制限の合計 (`previous_offset + previous_limit`) と等しい`offset`パラメータを指定して、APIを呼び出す必要があります。
@@ -52,6 +53,7 @@ curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <Message type="notice">

@@ -34,6 +34,7 @@ fullyTranslated: true
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&content_types=name,tags" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -54,6 +55,7 @@ contentTypes.add("tags");
 searchParams.setContentTypes(contentTypes)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -67,6 +69,7 @@ contentTypes.Add("tags");
 
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", contentTypes: contentTypes);
+
 ```
 
 </Tab>
@@ -75,6 +78,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", content_types=["name", "tags"])
+
 ```
 
 </Tab>
@@ -93,6 +97,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -122,6 +127,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&created_at_range=2014-05-15T13:35:01Z,2015-05-15T13:35:01&updated_at_range=2014-05-15T13:35:01," \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -149,6 +155,7 @@ DateRange updatedRange = new DateRange(updatedFromDate, null);
 searchParams.setUpdatedRange(updatedRange)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -162,6 +169,7 @@ var updatedAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.U
 
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", contentTypes: contentTypes, createdAtRangeFromDate: createdAtRangeFromDate, createdAtRangeToDate: createdAtRangeToDate, updatedAtRangeFromDate: updatedAtRangeFromDate);
+
 ```
 
 </Tab>
@@ -170,6 +178,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-05-15T13:35:01Z"], updated_at_range=["2014-05-15T13:35:01Z", null])
+
 ```
 
 </Tab>
@@ -186,6 +195,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -212,6 +222,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&file_extensions=pdf,txt" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -232,6 +243,7 @@ fileExtensions.add("txt");
 searchParams.setFileExtensions(fileExtensions)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -245,6 +257,7 @@ fileExtensions.Add("txt");
 
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", fileExtensions: fileExtensions);
+
 ```
 
 </Tab>
@@ -253,6 +266,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", file_extensions=["pdf", "txt"])
+
 ```
 
 </Tab>
@@ -271,6 +285,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -292,6 +307,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&size_range=10000,20000" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -310,6 +326,7 @@ SizeRange sizeRange = new SizeRange(10000, 20000);
 searchParams.setSizeRange(sizeRange);
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -319,6 +336,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 ```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", sizeRangeLowerBoundBytes: 10000, sizeRangeUpperBoundBytes: 20000);
+
 ```
 
 </Tab>
@@ -327,6 +345,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", size_range=[10000,20000])
+
 ```
 
 </Tab>
@@ -342,6 +361,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -363,6 +383,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&type=file" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -379,6 +400,7 @@ searchParams.setQuery("sales");
 searchParams.setType("file");
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -388,6 +410,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 ```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", type: "file");
+
 ```
 
 </Tab>
@@ -396,6 +419,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", type="file")
+
 ```
 
 </Tab>
@@ -411,6 +435,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -442,6 +467,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&owner_user_ids=34446362,462281242" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -462,6 +488,7 @@ userIds.add("462281242");
 searchParams.setOwnerUserIds(userIds)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -475,6 +502,7 @@ userIds.Add("462281242");
 
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", ownerUserIds: userIds);
+
 ```
 
 </Tab>
@@ -483,6 +511,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", owner_user_ids=["34446362", "462281242"])
+
 ```
 
 </Tab>
@@ -498,6 +527,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>
@@ -519,6 +549,7 @@ client.search.query(
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&ancestor_folder_ids=45235463,73445321" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -539,6 +570,7 @@ folderIds.add("73445321");
 searchParams.setAncestorFolderIds(folderIds)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -552,6 +584,7 @@ folderIds.Add("73445321");
 
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", ancestorFolderIds: folderIds);
+
 ```
 
 </Tab>
@@ -560,6 +593,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
+
 ```
 
 </Tab>
@@ -575,6 +609,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>

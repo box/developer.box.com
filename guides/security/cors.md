@@ -67,6 +67,7 @@ Box APIは、アプリケーション開発者が設定した、許可された�
   "message":"Access denied - Did you forget to safelist your origin in the CORS config of your app?",
   "request_id":"4dsdfsa832213"
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -88,6 +89,7 @@ Cache-Control: no-cache, no-store
 Access-Control-Allow-Origin: *
 Vary: Origin
 BOX-REQUEST-ID: 032cfb446dae4fd0b4c2bff80a1a97ba7
+
 ```
 
 このヘッダーを返すことにより、Box APIはウェブブラウザに対して、データをリクエストしたサイトでレスポンスを使用できることを通知します。
@@ -104,6 +106,7 @@ BOX-REQUEST-ID: 032cfb446dae4fd0b4c2bff80a1a97ba7
 
 ```sh
 https://company.com,https://*.internal.company.com,http://localhost:3000
+
 ```
 
 ## CORSのデバッグ
@@ -125,6 +128,7 @@ Box APIに対してAPI呼び出しを実行した場合に発生する可能性�
 Cross-Origin Request Blocked: The Same Origin Policy disallows reading
 the remote resource at https://api.box.com/2.0/users/me. (Reason: CORS
 request did not succeed).
+
 ```
 
 多くの場合、このエラーはCORSとはほとんど関係がありません。代わりに、以下を確認することをお勧めします。

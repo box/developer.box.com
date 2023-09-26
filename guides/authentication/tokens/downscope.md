@@ -91,6 +91,7 @@ fullyTranslated: true
   ],
   "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
+
 ```
 
 ここで最も重要なのは、`restricted_to`エントリのリストです。このリストには、新しいトークンが権限を持つ`object`と`scope`の各組み合わせが含まれます。

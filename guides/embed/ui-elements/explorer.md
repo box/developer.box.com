@@ -72,6 +72,7 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     </script>
   </body>
 </html>
+
 ```
 
 ## デモ
@@ -141,6 +142,7 @@ contentExplorer.removeListener(eventName, listener);
  * @return {void}
  */
 contentExplorer.removeAllListeners();
+
 ```
 
 <!-- markdownlint-disable line-length -->

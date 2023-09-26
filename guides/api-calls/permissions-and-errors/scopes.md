@@ -39,6 +39,7 @@ fullyTranslated: true
 
 ```js
 GET https://account.box.com/api/oauth2/authorize?scope=root_readonly&client_id=....
+
 ```
 
 スコープパラメータが省略されている場合、アプリケーションでは、そのアプリケーションの作成時に設定されたスコープが使用されます。

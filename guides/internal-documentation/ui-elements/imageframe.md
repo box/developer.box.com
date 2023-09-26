@@ -25,6 +25,7 @@ fullyTranslated: true
 <ImageFrame border center shadow width='200'>
   ![Image](./box.jpg)
 </ImageFrame>
+
 ```
 
 <H>

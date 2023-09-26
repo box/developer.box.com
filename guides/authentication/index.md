@@ -44,6 +44,7 @@ Box APIを使用する認証では、ユーザーの本人確認にアクセス�
 ```curl
 curl https://api.box.com/2.0/users/me \
     -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+
 ```
 
 <CTA to="guide://authentication/tokens">

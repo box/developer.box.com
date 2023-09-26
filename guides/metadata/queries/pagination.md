@@ -34,6 +34,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
        "ancestor_folder_id": "5555",
        "limit": 100
      }'
+
 ```
 
 `limit`の最大値は100です。返される結果ページ数を増やすには、各ページで`next_marker`値を返します。
@@ -43,6 +44,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
   "entries":[...],
   "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
+
 ```
 
 この`next_marker`を使用すると、結果の次のページについて新しいリクエストを作成できます。
@@ -58,6 +60,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
        "limit": 100,
        "marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
      }'
+
 ```
 
 <Message notice>
@@ -89,6 +92,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
     "direction": "desc"
   }
 ]
+
 ```
 
 <Message warning>

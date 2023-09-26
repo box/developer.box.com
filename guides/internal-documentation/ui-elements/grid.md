@@ -25,6 +25,7 @@ fullyTranslated: true
 <Grid columns='4'>
   ...
 </Grid>
+
 ```
 
 <Message warning>

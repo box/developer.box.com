@@ -31,6 +31,7 @@ fullyTranslated: true
 <Observe option="example.trigger" value="win32">
   ...
 </Observe>
+
 ```
 
 <H>
@@ -79,6 +80,7 @@ fullyTranslated: true
 <Observe option="example.multiple" value="win32,macos">
   ...
 </Observe>
+
 ```
 
 <H>
@@ -111,6 +113,7 @@ fullyTranslated: true
 <Observe option="example.unset" unset>
   ...
 </Observe>
+
 ```
 
 <H>

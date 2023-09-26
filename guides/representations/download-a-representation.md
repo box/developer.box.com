@@ -35,6 +35,7 @@ PDFのようにページ割りされたレプリゼンテーションでは、`{
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/pdf/content/3.pdf \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -48,6 +49,7 @@ curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representat
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_32x32/content/ \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <!-- markdownlint-eable line-length -->

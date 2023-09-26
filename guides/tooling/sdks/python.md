@@ -39,6 +39,7 @@ Python SDKをインストールするには、[pip][pip]を使用してターミ
 
 ```shell
 pip install boxsdk
+
 ```
 
 ## JWTアプリケーション
@@ -47,6 +48,7 @@ pip install boxsdk
 
 ```shell
 pip install "boxsdk[jwt]"
+
 ```
 
 <CTA to="https://github.com/box/box-python-sdk">

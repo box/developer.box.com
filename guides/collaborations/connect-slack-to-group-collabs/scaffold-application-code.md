@@ -53,6 +53,7 @@ SlackおよびBoxアプリケーションを構成したら、Slackから送信�
     "express": "^4.17.1"
   }
 }
+
 ```
 
 * ターミナル/コンソールから`npm install`を実行し、依存関係をインストールします。
@@ -64,6 +65,7 @@ SlackおよびBoxアプリケーションを構成したら、Slackから送信�
   "verificationToken": "TOKEN",
   "botToken": "TOKEN"
 }
+
 ```
 
 * 上記の2つの値は、Slackアプリケーションから取得した詳細情報に置き換える必要があります。`TOKEN`文字列を適切な値に置き換えてください。
@@ -133,6 +135,7 @@ const port = process.env.PORT || 3000;
 app.listen(port, function(err) { 
   console.log("Server listening on PORT", port); 
 });
+
 ```
 
 このコードには、SlackとBox間の通信を処理するのに必要となる主要な関数がすべて含まれています。これらの関数について、上から順に説明します。
@@ -164,6 +167,7 @@ public class slackConfig {
   public static String botToken = "TOKEN";
   public static String slackApiUrl = "https://slack.com/api";
 }
+
 ```
 
 * 上記の2つの値は、Slackアプリケーションから取得した詳細情報に置き換える必要があります。`TOKEN`文字列を適切な値に置き換えてください。
@@ -291,6 +295,7 @@ public class Application extends slackConfig {
     SpringApplication.run(Application.class, args);
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

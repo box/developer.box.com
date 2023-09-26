@@ -27,6 +27,7 @@ fullyTranslated: true
 
 ```html
 <Samples id='get_files_id'></Samples>
+
 ```
 
 <H>
@@ -41,6 +42,7 @@ fullyTranslated: true
 
 ```html
 <Samples id='post_folders_id_copy' variant='with_name' ></Samples>
+
 ```
 
 <H>

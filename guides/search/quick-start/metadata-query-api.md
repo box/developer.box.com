@@ -27,6 +27,7 @@ fullyTranslated: true
    "ancestor_folder_id": "0",
    "fields":["id"]
 }
+
 ```
 
 このAPI呼び出しでは、以下の条件を満たすファイルIDが返されます。

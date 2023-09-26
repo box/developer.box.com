@@ -5,10 +5,10 @@ subcategory_id: null
 is_index: false
 id: box-sign/create-sign-request
 type: guide
-total_steps: 4
+total_steps: 6
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/list-sign-requests
+next_page_id: box-sign/sign-templates
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/create-sign-request.md
@@ -16,11 +16,31 @@ fullyTranslated: true
 ---
 # Box Signのリクエストの作成
 
-[Box Signのリクエストを作成エンドポイント][create]を使用するには、少なくとも、署名用ファイルのほか、署名済みドキュメント/[署名ログ][log]の保存先フォルダを選択し、署名者を指定する必要があります。
+At minimum, to [create Box Sign request][create] you need the a file you want to be signed, a destination folder for the signed document/[signing log][log], and signers.
 
 <Samples id="post_sign_requests">
 
 </Samples>
+
+## ドキュメントの準備
+
+Preparing a document prior to sending a Box Sign request allows developers to add date, text, checkbox, and/or signature placeholders for signers. This can be done with UI or [tags][tags] directly in the document. If this is not done, signers receive an unprepared document and can place signatures and fields at their own discretion. However, developers can leverage controls in the request that allow them to turn features for the unprepared document on and off.
+
+Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in the response. Visiting this link in your browser allows you to complete document preparation and send the request in the UI.
+
+ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
+
+<Message type="warning">
+
+Prefill tags created in a template with the Box web app cannot be accessed from the API.
+
+</Message>
+
+<ImageFrame border center shadow>
+
+![準備のオプション](images/prepare.png)
+
+</ImageFrame>
 
 ## ファイル
 
@@ -49,7 +69,7 @@ Box Signの各リクエストは、署名が必要なファイルから始まり
 
 ## 署名者
 
-各署名者には、[役割][role]として、署名者、承認者、または最終的なコピー受信者を割り当てる必要があります。
+Each signer must be assigned a [role][role]: `signer`, `approver`, or `final copy_reader`.
 
 リクエスト送信者に役割が指定されていない場合は、`final_copy_reader`という役割の署名者が自動的に作成されます。つまり、最終的な署名済みドキュメントと[署名ログ][log]のコピーを受信するだけです。
 
@@ -62,6 +82,14 @@ Box Signの各リクエストは、署名が必要なファイルから始まり
 Box Signは、リクエストで指定された署名者のメールアドレスに署名用メールを送信しようとするだけです。Boxユーザーの場合、指定しない限り、メールエイリアスは含まれません。指定された署名者のメールアドレスすべてが有効であることを再確認してください。
 
 </Message>
+
+### Inputs
+
+The `inputs` parameter represents placeholders that the user can interact with. The `document_tag_id` parameter can be populated with data you want to pass when creating a sign request.
+
+## テンプレート
+
+You can create a sign request using a template. To do so, you must provide the `template_id` parameter. See [this guide][templates] to learn more about using templates when creating sign requests. 
 
 ## リダイレクト
 
@@ -86,66 +114,6 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 ![複数の署名者のフロー](images/multiple_signer_flow.png)
 
 </ImageFrame>
-
-## ドキュメントの準備
-
-Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを実行するには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。これを実行しなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
-
-`is_document_preparation_needed`を`true`に設定すると、レスポンスで`prepare_url`が返されます。ブラウザでこのリンクにアクセスすると、ドキュメントの準備を完了し、UIを使用してリクエストを送信できます。
-
-ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
-
-<Message type="warning">
-
-Boxウェブアプリを使用してテンプレートに作成された事前入力タグには、APIからアクセスできません。
-
-</Message>
-
-<ImageFrame border center shadow>
-
-![準備のオプション](images/prepare.png)
-
-</ImageFrame>
-
-## Signクライアントの埋め込み機能
-
-[Box Embed][embed]を使用すると、ウェブサイトにBox Signの機能を埋め込むことができます。これにより、ユーザーはウェブサイトを離れ、Box Signにアクセスしてドキュメントに署名し、プロセスを完了するために戻る必要がなくなります。代わりに、Box Embedを使用すると、外部のウェブサイト内で署名プロセスを完了できます。
-
-Box Signのエクスペリエンスをウェブサイトに統合するには、HTMLの`iframe`タグ内のドキュメントへの署名を許可するために設計された`iframable_embed_url`パラメータが必要です。
-
-<!-- markdownlint-disable line-length -->
-
-`iframable_embed_url`のサンプルは次のようになります。
-
-```sh
-https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4
-```
-
-`iframeable_embed_url`を取得するには、[署名リクエストを作成][signrequest]エンドポイントを呼び出す際に各署名者の[`embed_url_external_user_id`][externalid]パラメータを渡します。返されるレスポンスには、その署名者の一意の`iframeable_embed_url`が含まれます。
-
-Signの機能を埋め込み、ユーザーが使用できるようにするには、`iframe`タグ内でURLを使用します。
-
-```sh
-<iframe
-  src="https://app.box.com/embed/sign/document/f14d7098-a331-494b-808b-79bc7f3992a3/f14d7098-a331-494b-808b-79bc7f3992a4"
-  width="{pixels}"
-  height="{pixels}"
-  frameborder="0"
-  allowfullscreen
-  webkitallowfullscreen
-  msallowfullscreen
-></iframe>
-```
-
-<!-- markdownlint-enable line-length -->
-
-<Message>
-
-Box Embedの使用の詳細については、[こちらのガイド][embedguide]を参照してください。
-
-</Message>
-
-Box Embedでは、クリックジャッキングを防ぐために[クラウド (雲) ゲーム][cloudgame]ウィジェットを使用します。この場合、ユーザーはドキュメントに署名する際に、このウィジェットを操作し、クラウド (雲) を適切な位置にドラッグしてから、ドキュメントへの署名に進む必要があります。
 
 ## リクエストのステータス
 
@@ -203,3 +171,5 @@ Box Embedでは、クリックジャッキングを防ぐために[クラウド 
 [externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
 
 [cloudgame]: g://embed/box-embed#cloud-game
+
+[templates]: g://box-sign/sign-templates

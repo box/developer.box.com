@@ -30,6 +30,7 @@ fullyTranslated: true
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&fields=name,tags" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -50,6 +51,7 @@ fields.add("tags");
 searchParams.setFields(fields)
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -60,6 +62,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 IEnumerable<string> fields = new List<string>() { "name", "tags"};
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", fields: fields);
+
 ```
 
 </Tab>
@@ -68,6 +71,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, fields=["name", "tags"])
+
 ```
 
 </Tab>
@@ -83,6 +87,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>

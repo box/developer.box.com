@@ -28,6 +28,7 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 このレスポンスには、次の形式でレプリゼンテーションのリストが含まれます。
@@ -48,6 +49,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
   "representation": "jpg"
 }
 ...
+
 ```
 
 <!-- markdownlint-enable line-length -->

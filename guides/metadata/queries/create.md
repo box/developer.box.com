@@ -44,6 +44,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
        ],
        "limit": 100
      }'
+
 ```
 
 使用可能なすべてのパラメータの詳細については、Boxの他の[メタデータクエリガイド](g://metadata/queries)または関連する[エンドポイントリファレンス](e://post_metadata_queries_execute_read)を参照してください。
@@ -82,6 +83,7 @@ curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
   "limit": 20,
   "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
+
 ```
 
 このAPIはデフォルトで、ページあたり`20`個の項目を返しますが、マーカーベースのページ割りを使用すると、さらに多くの項目をリクエストできます。

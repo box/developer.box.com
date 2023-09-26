@@ -40,6 +40,7 @@ curl -X POST https://api.box.com/oauth2/token \
     "refresh_token": "[REFRESH_TOKEN]",
     "grant_type": "refresh_token"
   }'
+
 ```
 
 <Message>

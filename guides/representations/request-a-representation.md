@@ -30,6 +30,7 @@ fullyTranslated: true
 curl https://api.box.com/2.0/files/123?fields=representations \
   -H "x-rep-hints: [pdf]" \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ## 複数のサイズ
@@ -40,6 +41,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 curl https://api.box.com/2.0/files/123?fields=representations \
   -H "x-rep-hints: [jpg?dimensions=94x94]" \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ## 複数のレプリゼンテーション
@@ -50,6 +52,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 curl https://api.box.com/2.0/files/123?fields=representations \
   -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ## APIレスポンス
@@ -79,6 +82,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
   },
   "type": "file"
 }
+
 ```
 
 <Message type="notice">

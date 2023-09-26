@@ -1,15 +1,15 @@
 ---
-rank: 2
+rank: 5
 category_id: box-sign
 subcategory_id: null
 is_index: false
 id: box-sign/list-sign-requests
 type: guide
-total_steps: 4
+total_steps: 6
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/resend-sign-request
-previous_page_id: box-sign/create-sign-request
+next_page_id: box-sign/embedded-sign-client
+previous_page_id: box-sign/cancel-sign-request
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/list-sign-requests.md
 fullyTranslated: true

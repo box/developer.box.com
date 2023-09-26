@@ -56,6 +56,7 @@ fullyTranslated: true
 
 ```sh
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
+
 ```
 
 <ImageFrame border>
@@ -89,6 +90,7 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 ```sh
 reg import "Add_OpenWith_WhiteListed_Domain.reg"
+
 ```
 
 <ImageFrame border>
@@ -155,30 +157,35 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 
 ```sh
 chmod u+rx OpenWith.sh
+
 ```
 
 ドメインを**追加**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -a domain1 domain2 ...
+
 ```
 
 ドメインを**削除**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -r domain1 domain2 ...
+
 ```
 
 ドメインを**すべてクリア**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -c
+
 ```
 
 すべてのドメインの**リストを取得**するには、ターミナルで次のコマンドを実行します。
 
 ```sh
 ./OpenWith.sh -l
+
 ```
 
 ### 注

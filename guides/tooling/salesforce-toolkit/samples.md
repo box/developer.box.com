@@ -59,6 +59,7 @@ request.setHeader('content-type', 'application/json');
 
 // Send the HttpRequest through the generic Toolkit method, which will handle the authentication details
 HttpResponse response = toolkit.sendRequest(request);
+
 ```
 
 </Tab>
@@ -92,6 +93,7 @@ system.debug('most recent error: ' + boxToolkit.mostRecentError);
 
 // ALWAYS call this method when finished.Since salesforce doesn't allow http callouts after dml operations, we need to commit the pending database inserts/updates or we will lose the associations created
 boxToolkit.commitChanges();
+
 ```
 
 </Tab>
@@ -133,6 +135,7 @@ system.debug('new collaboration id: ' + collabId);
 
 // ALWAYS call this method when finished. Since salesforce doesn't allow http callouts after dml operations, we need to commit the pending database inserts/updates or we will lose the associations created
 boxToolkit.commitChanges();
+
 ```
 
 </Tab>
@@ -235,6 +238,7 @@ Boolean mcp =
 tk.deleteMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY29yZC0wMTIwMTI0ZC03YWUxLTQzNjItYjdlMC05Y2RiYzhkMzIzZjM');
 System.debug(mcp);
 System.debug(tk.mostRecentError);
+
 ```
 
 </Tab>
@@ -263,6 +267,7 @@ System.debug(kvp);
 Box.toolkit tk = new Box.Toolkit();
 System.debug(tk.getBoxMetadataByFolderId('205776356105', 'global',
 'lobSalesforceRecord'));
+
 ```
 
 </Tab>
@@ -296,6 +301,7 @@ kvps.add(kvp3);
 System.debug(tk.createBoxMetadataByFolderId('205776356105', 'enterprise',
 'testtemplate', kvps));
 System.debug(tk.mostRecentError);
+
 ```
 
 </Tab>
@@ -334,6 +340,7 @@ fmus.add(fmu3);
 System.debug(tk.updateBoxMetadataByFolderId('205776356105', 'enterprise',
 'testTemplate', fmus));
 System.debug(tk.mostRecentError);
+
 ```
 
 </Tab>

@@ -91,6 +91,7 @@ namespace BoxDownloadAllFiles {
     }
   }
 }
+
 ```
 
 </Tab>
@@ -157,6 +158,7 @@ public class Playground {
   return localFolderPath;
  }
 }
+
 ```
 
 </Tab>
@@ -256,6 +258,7 @@ function autoPage(iterator) {
   };
   return moveToNextItem();
 }
+
 ```
 
 </Tab>

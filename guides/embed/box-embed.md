@@ -69,6 +69,7 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
   webkitallowfullscreen
   msallowfullscreen
 ></iframe>
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -90,6 +91,7 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -99,6 +101,7 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
   "vanity_url": null,
   ...
 }
+
 ```
 
 ページをルートフォルダ/\[すべてのファイル] ページに設定することもできます。URLを共有リンク`<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`ではなく`/folder/0`に設定してください。
@@ -136,6 +139,7 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -171,6 +175,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
   "id": "12345",
   "type": "file"
 }
+
 ```
 
 `url`属性を`<iframe>`内で使用すると、自動で期限切れになるBox Embedインターフェースを埋め込むことができます。
@@ -185,6 +190,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
   webkitallowfullscreen
   msallowfullscreen
 />
+
 ```
 
 ### パラメータ
@@ -193,6 +199,7 @@ UIをカスタマイズするために、このURLにさらにパラメータを
 
 ```sh
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
+
 ```
 
 <!-- markdownlint-disable line-length -->

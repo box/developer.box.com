@@ -29,6 +29,7 @@ fullyTranslated: true
 
 ```yaml
 display: "false"
+
 ```
 
 ## メッセージ
@@ -44,6 +45,7 @@ message: >
     Join the first BoxWorks Hackathon for Good - customers,
     partners, and the developer community are welcome to participate
     in the 48 hour Hack to benefit The Nature Conservancy.
+
 ```
 
 ## HREF
@@ -55,6 +57,7 @@ com/guides`、`https://github.com/box/sdks`など) を指定できます。
 
 ```yaml
 href: "https://box.com/hack4good"
+
 ```
 
 ## CTA
@@ -65,6 +68,7 @@ CTAは、上記のhrefにリンクする短いフレーズです。短く、ユ�
 
 ```yaml
 cta: Learn more and register!
+
 ```
 
 ## TTL
@@ -75,6 +79,7 @@ cta: Learn more and register!
 
 ```yaml
 ttl: "0"
+
 ```
 
 ## 変更方法
@@ -107,4 +112,5 @@ notifications:
     The number of seconds to display the message. Should always
     be 0 unless you want to autohide.
   ttl: "0"
+
 ```
