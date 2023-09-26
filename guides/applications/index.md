@@ -51,6 +51,30 @@ Learn how to select an application type
 
 <!-- markdownlint-enable line-length -->
 
+## App insights
+
+Admins and co-admins can access the Platform Insights
+dashboard that provides a comprehensive
+view of the organization’s platform usage.
+This includes app-related data, such as:
+
+* The total number of API calls per application.
+* A list of top applications within the enterprise.
+* A list of pending application approvals.
+* A list of applications awaiting enablement.
+
+See [Platform Insights][insights] for details.
+
+<Message type='notice'>
+
+You need the following permissions to access
+and view Platform Insights:
+* View settings and apps for your company
+* Edit settings and apps for your company
+* Run new reports and access existing reports
+
+</Message>
+
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
@@ -59,3 +83,4 @@ Learn how to select an application type
 [custom-skills]: g://applications/custom-skills
 [ccg]: g://authentication/client-credentials/
 [laa]: g://applications/limited-access-apps/
+[insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights
