@@ -164,7 +164,7 @@ existing mappings.
 Returns:
 
 - A list of `IntegrationMapping` objects,
-- `null` is returned if there are invalid parameters,
+- `null` is returned if there are incorrect parameters,
 the access is missing, or the integration mappings is not found.
 
 ### `createIntegrationMapping`
@@ -174,7 +174,7 @@ the mappings.
 
 <Message type='notice'>
 When you map to a Slack channel, `access_management_disabled` may be
-disabled by default. This causes an automatic removal of collaborators
+deactivated by default. This causes an automatic removal of collaborators
 who are not included in the Slack channel member list. Depending on
 how you set up sharing in Box, this can cause issues. To avoid it, 
 Box recommends to enable this setting by using the
@@ -238,7 +238,7 @@ for Salesforce package `Create Box Folder/Slack Channel Mapping`.
 
 <Message type='notice'> When you map to a Slack channel,
 `access_management_disabled` may be
-disabled by default. This causes an automatic removal of collaborators
+deactivated by default. This causes an automatic removal of collaborators
 who are not included in the Slack channel member list. Depending on
 how you set up sharing in Box, this can cause issues. To avoid it, 
 Box recommends to enable this setting by using the
@@ -265,7 +265,7 @@ Returns:
 ### `setSlackChannelAccessManagementDisabled`
 
 This toolkit method calls the [11][put integration mappings] endpoint to update
-the access management disabled setting. 
+the access management deactivated setting. 
 
 This method/invocable is used in a flow template provided in the Box
 for Salesforce package `Create Box Folder/Slack Channel Mapping`.
