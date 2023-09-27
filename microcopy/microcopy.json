@@ -268,7 +268,7 @@
   // Label for the log in button
   "explorer.buttons.logout": "ログアウト",
   // Label for the button to run a live API call
-  "explorer.buttons.run": "API呼び出しの実行",
+  "explorer.buttons.run": "APIコールの実行",
   // Label for the button to start the API explorer
   "explorer.buttons.try": "このAPIを試す",
   // Label for the button to close the API explorer
