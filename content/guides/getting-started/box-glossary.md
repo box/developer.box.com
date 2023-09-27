@@ -11,7 +11,7 @@ This glossary includes terms and definitions used in Box Platform.
 | Box Resource Type/Term | Also known as (AKA) | Description |
 | --- | --- | --- |
 | Admin | Superuser, administrator, supervisor | The main admin on an enterprise account. Admins can manage users and groups, view and edit all of their organization’s files and folders, log in to any user’s account within their organization, edit settings for their organization, and run or access reports. The Box Admin is the principal account administrator. |
-| Admin Console | | The dashboard area for administering a particular enterprise. Accessible by the admin, group admins and co-admins. |
+| Admin Console | | The dashboard area for administering a particular enterprise. Accessible by the admin, group admins, and co-admins. |
 | Anonymous User | | A user that is not logged in. |
 | App User | | [App Users][app user] are only accessible with the API - they do not have login credentials. They can be created by a Service Account and are only applicable to applications leveraging server to server authentication. App Users are tied to the application used to create them, and the user itself cannot be moved under another application. They can however collaborate on content outside of the application. |
 | Bookmark / Web Link | Symbolic Link, Symlink, Soft Link, Reference, Relationship | |
