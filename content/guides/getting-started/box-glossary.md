@@ -43,7 +43,7 @@ This glossary includes terms and definitions used in Box Platform.
 | [Ethical Walls][info-barriers] | Information Barriers | A mechanism that prevents exchanges or communication that could lead to conflicts of interest and therefore result in business activities ethically or legally questionable. |
 | [Event][event] | Result of an action taken by the user. See [Using the Enterprise Event Stream][event-stream]. |
 | External collaborator | External user | A collaborator who is not part of an enterprise. |
-| External collaborated folder | | Folder owned by someone outside your enterprise. |
+| External collaborated folder | | A folder owned by someone outside your enterprise. |
 | File | Document, unstructured data | |
 | Folder | Directory, Container | A directory containing files. |
 | [Group Admin][group-admin] | | Group Admins can add existing users to their groups, create new users that will be assigned to their groups, and assign folder access to their groups. They can also run reports for their groups. |
