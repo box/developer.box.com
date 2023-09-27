@@ -80,9 +80,9 @@ cd boxcli/examples/User\ Deprovisioning/
 
 ```
 
-2. Create the list of employees for deletion in `.csv`.
+2. 削除する従業員のリストを`.csv`で作成します。
 
-   The header row should look like as follows:
+   ヘッダー行は次のようになります。
 
 ```bash
    name, email

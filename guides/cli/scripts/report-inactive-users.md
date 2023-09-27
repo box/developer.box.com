@@ -90,7 +90,7 @@ cd boxcli/examples/Inactive\ Users\ Report/
 
 ```
 
-2. Set the number of days you want the script to scan for user events. If you don't specify this value or leave the default, the script will prompt you to enter it.
+2. スクリプトでUser Eventをスキャンする日数を設定します。この値を指定しなかった場合やデフォルト設定のままにした場合は、スクリプトによって入力するよう求められます。
 
 ```bash
 $daysInactive = "10"
@@ -104,7 +104,7 @@ $ReportOutputFile = $ReportName + ".csv"
 
 ```
 
-4. (Optional) To change event types, define the list for `eventType` parameter.
+4. (省略可) イベントタイプを変更するには、`eventType`パラメータのリストを定義します。
 
 ```bash
 $eventType = "LOGIN,UPLOAD,COPY,MOVE"

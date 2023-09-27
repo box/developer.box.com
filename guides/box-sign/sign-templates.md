@@ -14,27 +14,27 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/sign-templates.md
 fullyTranslated: true
 ---
-# Create Sign Request with Sign Template
+# Signテンプレートを使用した署名リクエストの作成
 
-The Sign Request API allows you to use a predefined Box Sign template when creating a sign request. The template includes placeholders that are automatically populated with data when creating the request.
+署名リクエストAPIを使用すると、署名リクエストの作成時に、あらかじめ定義されたBox Signテンプレートを使用できます。このテンプレートには、リクエストの作成時にデータが自動的に設定されるプレースホルダが含まれています。
 
-## Create Template
+## テンプレートの作成
 
-Start with creating a Box Sign template that includes `text`, `date`, and `signature` fields you will need for you request.
+まず、リクエストに必要となる`text`、`date`、`signature`フィールドを含むBox Signテンプレートを作成します。
 
-See the [template guides][docuprep] guide for detailed instructions.
+詳細な手順については、[テンプレートに関するガイド][docuprep]を参照してください。
 
-## Get the Template ID
+## テンプレートIDの取得
 
-To send a sign request, you need to pass the ID of the template you want to use. List the templates to find the `template_id`.
+署名リクエストを送信するには、使用するテンプレートのIDを渡す必要があります。`template_id`を確認するには、テンプレートのリストを取得します。
 
 <Samples id="get_templates">
 
 </Samples>
 
-The response is similar to the following one (abbreviated for guide purposes). For the full response example, see [Box Sign template API][template].
+レスポンスは以下のようになります (説明のため省略されています)。レスポンス全体の例については、[Box SignテンプレートAPI][template]を参照してください。
 
-You can also learn more about the specific parameters in the [Create Sign Request][signrequest] guide.
+また、具体的なパラメータの詳細については、[署名リクエストを作成][signrequest]ガイドで確認できます。
 
 ```json
 "entries": [
@@ -121,11 +121,11 @@ You can also learn more about the specific parameters in the [Create Sign Reques
 
 ```
 
-## Create the sign request
+## 署名リクエストの作成
 
-Follow these steps to [create sign request][signrequest] using a template:
+テンプレートを使用して[署名リクエストを作成][signrequest]するには、以下の手順に従います。
 
-1. In the request body, provide the `template_id`:
+1. リクエスト本文で、`template_id`を指定します。
 
 ```json
    {
@@ -142,7 +142,7 @@ Follow these steps to [create sign request][signrequest] using a template:
 
 ```
 
-1. Add the signer email addresses and roles:
+1. 署名者のメールアドレスと役割を追加します。
 
 ```json
    {
@@ -168,11 +168,11 @@ Follow these steps to [create sign request][signrequest] using a template:
 
 ```
 
-1. Add the `prefill_tags` to populate the fields.
+1. `prefill_tags`を追加してフィールドにデータを設定します。
 
    <Message>
 
-   Make sure the signer order is the same as the one displayed on the template. If the template had `signer1` first and then `signer2`, the `POST` request must reflect the same order to assign the proper signers.
+   署名者の順序がテンプレートに表示されている順序と同じであることを確認してください。テンプレートで最初に`signer1`、次に`signer2`がある場合、`POST`リクエストでは、適切な署名者を割り当てるために同じにする必要があります。
 
    </Message>
 
@@ -210,7 +210,7 @@ Follow these steps to [create sign request][signrequest] using a template:
 
 ```
 
-1. Send the `POST` request. The response will be similar to the following:
+1. `POST`リクエストを送信します。レスポンスは以下のようになります。
 
 ```json
 

@@ -16,7 +16,7 @@ fullyTranslated: true
 ---
 # Box Signのリクエストの作成
 
-At minimum, to [create Box Sign request][create] you need the a file you want to be signed, a destination folder for the signed document/[signing log][log], and signers.
+[Box Signのリクエストを作成する][create]には、少なくとも、署名が必要なファイル、署名済みドキュメント/[署名ログ][log]の保存先フォルダ、署名者が必要です。
 
 <Samples id="post_sign_requests">
 
@@ -24,15 +24,15 @@ At minimum, to [create Box Sign request][create] you need the a file you want to
 
 ## ドキュメントの準備
 
-Preparing a document prior to sending a Box Sign request allows developers to add date, text, checkbox, and/or signature placeholders for signers. This can be done with UI or [tags][tags] directly in the document. If this is not done, signers receive an unprepared document and can place signatures and fields at their own discretion. However, developers can leverage controls in the request that allow them to turn features for the unprepared document on and off.
+Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを行うには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。準備を行わなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
 
-Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in the response. Visiting this link in your browser allows you to complete document preparation and send the request in the UI.
+`is_document_preparation_needed`を`true`に設定すると、レスポンスで`prepare_url`が返されます。ブラウザでこのリンクにアクセスすると、ドキュメントの準備を完了し、UI上でリクエストを送信できます。
 
 ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
 
 <Message type="warning">
 
-Prefill tags created in a template with the Box web app cannot be accessed from the API.
+Boxウェブアプリを使用してテンプレートに作成された事前入力タグには、APIからアクセスできません。
 
 </Message>
 
@@ -69,7 +69,7 @@ Box Signの各リクエストは、署名が必要なファイルから始まり
 
 ## 署名者
 
-Each signer must be assigned a [role][role]: `signer`, `approver`, or `final copy_reader`.
+各署名者には、[役割][role]として、`signer`、`approver`、または`final copy_reader`を割り当てる必要があります。
 
 リクエスト送信者に役割が指定されていない場合は、`final_copy_reader`という役割の署名者が自動的に作成されます。つまり、最終的な署名済みドキュメントと[署名ログ][log]のコピーを受信するだけです。
 
@@ -83,13 +83,13 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 
 </Message>
 
-### Inputs
+### 入力
 
-The `inputs` parameter represents placeholders that the user can interact with. The `document_tag_id` parameter can be populated with data you want to pass when creating a sign request.
+`inputs`パラメータは、ユーザーが操作できるプレースホルダを表します。`document_tag_id`パラメータには、署名リクエストの作成時に渡すデータを設定できます。
 
 ## テンプレート
 
-You can create a sign request using a template. To do so, you must provide the `template_id` parameter. See [this guide][templates] to learn more about using templates when creating sign requests. 
+署名リクエストは、テンプレートを使用して作成できます。そのためには、`template_id`パラメータを指定する必要があります。署名リクエスト作成時のテンプレートの使用の詳細については、[こちらのガイド][templates]を参照してください。 
 
 ## リダイレクト
 

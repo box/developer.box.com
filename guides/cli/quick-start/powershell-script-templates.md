@@ -278,15 +278,15 @@ Onboarding folder for provisioning
 
 ```
 
-## Running the script again for new users
+## 新規ユーザーに対するスクリプトの再実行
 
-It is common to run this script regularly as your company hires new employees. You can simply edit the `.csv` file, removing the previous rows of users and adding the information for the new users. Then, the script may be ran again.
+会社で新しい従業員を雇用するたび、このスクリプトを定期的に実行することは一般的です。単に`.csv`ファイルを編集し、前の行のユーザーを削除して新規ユーザーの情報を追加するだけです。その後、スクリプトを再度実行できます。
 
 ## まとめ
 
 Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロビジョニングと最初のフォルダ構造の作成の自動化について確認しました。
 
-Make sure to explore our other [sample scripts][samples] for more use cases.
+その他のユースケースについては、他の[サンプルスクリプト][samples]を確認してください。
 
 <Next>サンプルスクリプトを使用して繰り返し発生するタスクを自動化する方法を理解しました</Next>
 

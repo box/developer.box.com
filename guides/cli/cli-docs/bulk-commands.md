@@ -63,8 +63,8 @@ git clone https://github.com/box/boxcli.git
 
 ```
 
-2. Adjust the `.csv` template to your needs. For example, if you want to create several folders, you can use the [`folders-create.csv`][folderstemplate] template as your starting point.
-3. Run the command.
+2. 必要に応じて`.csv`テンプレートを調整します。たとえば、複数のフォルダを作成する場合は、出発点として[`folders-create.csv`][folderstemplate]テンプレートを使用できます。
+3. コマンドを実行します。
 
 ```bash
    box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv

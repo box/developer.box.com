@@ -110,7 +110,7 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 ```
 
-2. Set the path to the `.csv` file with the list of groups and user emails.
+2. グループとユーザーのメールアドレスのリストが含まれる`.csv`ファイルのパスを設定します。
 
 ```bash
     $UserGroupAdditionPath = "./User_Group_Addition.csv"
@@ -120,7 +120,7 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
     * `UserEmail` is the primary email address for the user in Box. 
     * `GroupName` is the name of the group.
 
-3. Set your own path to the `.csv` file with the list groups and user emails.
+3. グループとユーザーのメールアドレスのリストが含まれる`.csv`ファイルに独自のパスを設定します。
 
 ```bash
     $CollaborationsCreationPath = "./Collaborations_Creation.csv"
@@ -156,9 +156,9 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 ### オプションのフラグ
 
-You can use flags to run run or skip specific parts of the script.
+フラグを使用すると、スクリプトの特定の部分を実行またはスキップできます。
 
-* If a group already is set as a collaborator for a specific folder but with a role other than defined in the .`csv` file, the script will inform you about it. It will not make any changes to an existing collaboration. If you want to update an existing collaboration with role defined in `.csv` file, set an additional `-UpdateExistingCollabs` flag when running the script.
+* グループがすでに特定のフォルダのコラボレータとして設定されているものの、その役割が.`csv`ファイルで定義されたものとは異なる場合は、スクリプトによってそのことが通知されます。スクリプトによって既存のコラボレーションが変更されることはありません。`.csv`ファイルで定義された役割で既存のコラボレーションを更新するには、スクリプトを実行する際に追加の`-UpdateExistingCollabs`フラグを設定します。
 
 ```bash
    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs

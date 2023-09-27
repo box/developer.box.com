@@ -75,7 +75,7 @@ cd boxcli/examples/Metadata\ Extraction/
 
 ```
 
-2. Specify the `folderID` and `userID` parameters to tell the script which folder to scan, and who is the user running the script.
+2. `folderID`および`userID`パラメータを指定して、スキャンするフォルダとスクリプトを実行するユーザーをスクリプトに指示します。
 
 ```bash
    [string]$FolderID = "",
