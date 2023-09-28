@@ -20,6 +20,8 @@ using [Salesforce Flows].
 The list below contains all methods that can be invoked in
 [Salesforce Flows].
 
+<!--alex ignore -->
+
 - Create Box Metadata by Folder Id (`createBoxMetadataByFolderId`)
 - Create Collaboration (`createCollaboration`)
 - Create Collaboration On Record (`createCollaborationOnRecord`)
@@ -50,6 +52,8 @@ The list below contains all methods that can be invoked in
 - Set Slack Channel Access Management Disabled
 (`setSlackChannelAccessManagementDisabled`)
 - Update Box Metadata by Folder Id (`updateBoxMetadataByFolderId`)
+
+<!--alex enable -->
 
 [methods]: g://tooling/salesforce-toolkit/methods
 [Salesforce Flows]: https://help.salesforce.com/s/articleView?id=sf.flow.htm&type=5
