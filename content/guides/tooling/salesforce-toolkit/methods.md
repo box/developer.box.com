@@ -170,7 +170,7 @@ deactivated by default. This causes an automatic removal of collaborators
 who are not included in the Slack channel member list. Depending on
 how you set up sharing in Box, this can cause issues. To avoid it, 
 Box recommends to enable this setting by using the
-`setSlackChannelAccessManagementDisabled`method. You can also use groups
+`setSlackChannelAccessManagementDisabled` method. You can also use groups
 to make sure no users are removed, regardless of Slack settings.
 Collaborations are added or removed from Slack when a file is
 uploaded to a Slack channel.
@@ -230,7 +230,7 @@ deactivated by default. This causes an automatic removal of collaborators
 who are not included in the Slack channel member list. Depending on
 how you set up sharing in Box, this can cause issues. To avoid it, 
 Box recommends to enable this setting by using the
-`setSlackChannelAccessManagementDisabled`method. You can also use groups
+`setSlackChannelAccessManagementDisabled` method. You can also use groups
 to make sure no users are removed, regardless of Slack settings.
 Collaborations are added or removed from Slack when a file is
 uploaded to a Slack channel.
