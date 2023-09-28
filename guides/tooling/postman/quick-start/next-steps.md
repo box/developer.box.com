@@ -22,8 +22,8 @@ fullyTranslated: true
 1. デバイスに[Postmanをインストール](g://tooling/postman/quick-start/install-postman/)しました。
 2. BoxへのアクセスについてPostmanアプリを認証できるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app/)しました。
 3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box/)して適切なAPI資格情報を取得しました。
-4. Postmanに、API呼び出しに必要なすべての資格情報とともに[BoxのPostmanコレクションを読み込み](g://tooling/postman/quick-start/load-postman-collection/)ました。
-5. Postmanを使用して、Box APIへの[最初のAPI呼び出しを実行](g://tooling/postman/quick-start/make-api-call/)しました。
+4. Postmanに、APIコールに必要なすべての資格情報とともに[BoxのPostmanコレクションを読み込み](g://tooling/postman/quick-start/load-postman-collection/)ました。
+5. Postmanを使用して、Box APIへの[最初のAPIコールを実行](g://tooling/postman/quick-start/make-api-call/)しました。
 
 ## 次に行うべきこと
 

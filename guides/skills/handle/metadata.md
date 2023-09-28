@@ -206,7 +206,7 @@ Dictionary<string, object> metadata = await client.MetadataManager
 
 <Message warning>
 
-Box Skillカードがすでにこのファイルに適用されている場合は、このAPI呼び出しによって、HTTPステータスコード`409`と共にエラーが返されます。
+Box Skillカードがすでにこのファイルに適用されている場合は、このAPIコールによって、HTTPステータスコード`409`と共にエラーが返されます。
 
 </Message>
 

@@ -17,7 +17,7 @@ fullyTranslated: true
 ---
 # メタデータクエリAPIの使用
 
-最後に、[メタデータクエリAPI呼び出し][mq]を作成します。このAPI呼び出しの本文の例を以下に示します。
+最後に、[メタデータクエリAPIコール][mq]を作成します。このAPIコールの本文の例を以下に示します。
 
 ```json
 {
@@ -30,7 +30,7 @@ fullyTranslated: true
 
 ```
 
-このAPI呼び出しでは、以下の条件を満たすファイルIDが返されます。
+このAPIコールでは、以下の条件を満たすファイルIDが返されます。
 
 * Contact Roleテンプレートが適用されている
 * departmentsの値がlegalである

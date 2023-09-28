@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # Java SDKのインストール
 
-Javaプロジェクトでは、Box Java SDKを使用してBox APIへのAPI呼び出しを行うことができます。
+Javaプロジェクトでは、Box Java SDKを使用してBox APIへのAPIコールを行うことができます。
 
 SDKは、Gradle依存関係またはMaven依存関係を追加するか、ソースをプロジェクトに複製することでインストールできます。また、GitHubのリリースページからプリコンパイル済みJARのいずれかをダウンロードすることでもインストールできます。
 

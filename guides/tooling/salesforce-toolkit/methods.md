@@ -132,7 +132,7 @@ Box for Salesforce Developer Toolkitは、パラメータとして[HttpRequest][
 
 戻り値:
 
-* BoxのAPI呼び出しからのレスポンスの詳細情報が含まれた[HttpResponse][sf-httpresponse]オブジェクト。
+* BoxのAPIコールからのレスポンスの詳細情報が含まれた[HttpResponse][sf-httpresponse]オブジェクト。
 * HttpRequestのインプットの情報が不足している場合は`Toolkit.BoxApiException`。
 * サービスアカウントの認証の詳細情報を取得する際に問題が発生した場合は`null`。この場合は、`mostRecentError`を確認してください。
 
@@ -155,7 +155,7 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 | `att`              | `Attachment` | Box内のファイルに変換される添付ファイル。                                                                                                       |
 | `fileNameOverride` | `string`     | 省略可 - 新しいファイルの名前。値が渡されなかった場合、添付ファイルの名前が使用されます。                                                                               |
 | `folderIdOverride` | `string`     | 省略可 - この添付ファイルの配置先であるBoxフォルダID。値が渡されなかった場合、ファイルは添付ファイルの`parentId`に当たるレコードに関連付けられているフォルダに配置されます。レコード固有のフォルダが存在していない場合は作成されます。 |
-| `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                         |
+| `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                          |
 
 <!-- markdownlint-enable line-length -->
 
@@ -241,11 +241,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ            | 型        | 説明                                                                                        |
-| ---------------- | -------- | ----------------------------------------------------------------------------------------- |
-| `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                    |
-| `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                     |
-| `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
+| パラメータ            | 型        | 説明                                                                                       |
+| ---------------- | -------- | ---------------------------------------------------------------------------------------- |
+| `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                   |
+| `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                    |
+| `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -276,11 +276,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ               | 型        | 説明                                                                                   |
-| ------------------- | -------- | ------------------------------------------------------------------------------------ |
-| `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                  |
-| `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                           |
-| `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox API呼び出しに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
+| パラメータ               | 型        | 説明                                                                                  |
+| ------------------- | -------- | ----------------------------------------------------------------------------------- |
+| `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                 |
+| `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                          |
+| `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox APIコールに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -394,13 +394,13 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ          | 型                               | 説明                                                                      |
-| -------------- | ------------------------------- | ----------------------------------------------------------------------- |
-| `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                                |
-| `boxUserId`    | `string`                        | コラボレーションするBoxユーザーのID (`boxUserId`または`emailAddress`のどちらか一方のみ必要)。         |
-| `emailAddress` | `box.Toolkit.CollaborationType` | Boxユーザーのメールアドレス。                                                        |
-| `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                            |
-| `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox API呼び出しの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
+| パラメータ          | 型                               | 説明                                                                     |
+| -------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                               |
+| `boxUserId`    | `string`                        | コラボレーションするBoxユーザーのID (`boxUserId`または`emailAddress`のどちらか一方のみ必要)。        |
+| `emailAddress` | `box.Toolkit.CollaborationType` | Boxユーザーのメールアドレス。                                                       |
+| `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                           |
+| `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox APIコールの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 

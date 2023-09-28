@@ -44,7 +44,7 @@ const client = sdk.getAppAuthClient("enterprise");
 
 `boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルを`process.js`と同じフォルダに保存していることを前提としています。そうではない場合は、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-最後の`client`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
+最後の`client`の代入行では、APIコールに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 
@@ -65,7 +65,7 @@ this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxCon
 
 `boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルをJavaプロジェクトのルートに保存していることを前提としています。そうではない場合は、`fileReader`の代入行のパスを、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-最後の`boxAPI`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
+最後の`boxAPI`の代入行では、APIコールに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 

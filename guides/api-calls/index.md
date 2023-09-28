@@ -18,6 +18,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/index.md
 fullyTranslated: true
 ---
-# API呼び出し
+# APIコール
 
 Box APIは、可能であれば共通のHTTP標準に準拠しようとするRESTful APIです。以下のガイドでは、開発者がこれらのAPIを使用する際に利用できる便利な機能と直面するよくある間違いに注目します。

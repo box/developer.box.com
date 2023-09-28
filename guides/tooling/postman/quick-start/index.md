@@ -17,7 +17,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/0-index.md
 fullyTranslated: true
 ---
-# Postmanを使用したAPI呼び出し
+# Postmanを使用したAPIコール
 
 [Postman](https://getpostman.com)は、完全な開発環境を構成しなくても、使いやすいインターフェースでHTTPリクエストを作成およびテストできるツールです。Box Postmanコレクションは事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、PostmanでBox APIを利用できるようになります。
 
@@ -35,7 +35,7 @@ fullyTranslated: true
 2. PostmanからBox APIにアクセスできるように[Boxアプリを設定](g://tooling/postman/quick-start/configure-box-app/)する。
 3. Boxアプリに[ログイン](g://tooling/postman/quick-start/log-in-to-box/)して適切なAPI資格情報を取得する。
 4. Postmanに[BoxのPostmanコレクションをフォーク](g://tooling/postman/quick-start/load-postman-collection/)する。
-5. Postmanを使用してBox APIへの[最初のAPI呼び出しを実行](g://tooling/postman/quick-start/make-api-call/)する。
+5. Postmanを使用してBox APIへの[最初のAPIコールを実行](g://tooling/postman/quick-start/make-api-call/)する。
 
 <Next>
 

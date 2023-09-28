@@ -37,11 +37,11 @@ Box APIから認証を受けるために、Postmanコレクションは**アク�
 
 </ImageFrame>
 
-アクセストークンを更新するには、Postmanコレクションの \[**Authorization (承認)**] フォルダ内で \[**Refresh access token (アクセストークンを更新)**] API呼び出しを選択します。
+アクセストークンを更新するには、Postmanコレクションの \[**Authorization (承認)**] フォルダ内で \[**Refresh access token (アクセストークンを更新)**] APIコールを選択します。
 
 <ImageFrame border center shadow>
 
-![PostmamのRefresh access token API呼び出し](./quick-start/select-refresh-access-token.png)
+![PostmanのRefresh access token APIコール](./quick-start/select-refresh-access-token.png)
 
 </ImageFrame>
 
@@ -53,7 +53,7 @@ Box APIから認証を受けるために、Postmanコレクションは**アク�
 
 </ImageFrame>
 
-このAPI呼び出しが終了すると、環境に`access_token`と`refresh_token`の新しい値が作成され、その他のAPI呼び出しを実行できるようになります。
+このAPIコールが終了すると、環境に`access_token`と`refresh_token`の新しい値が作成され、その他のAPIコールを実行できるようになります。
 
 <Message warning>
 
@@ -77,7 +77,7 @@ Postmanコレクションは自動的に期限切れの`access_token`値を検�
 
 テーブルで`enable_auto_refresh_access_token`変数の行を見つけて、\[**Current Value (現在の値)**] を`true`に設定します。次に、\[**Update (更新)**] をクリックして変更を保存します。
 
-その後、API呼び出しを実行するたびに、**Postmanコレクション**は`access_token`の有効期限が切れているかどうかを確認し、目的のAPI呼び出しを行う前に自動的に更新しようとします。
+その後、APIコールを実行するたびに、**Postmanコレクション**は`access_token`の有効期限が切れているかどうかを確認し、目的のAPIコールを行う前に自動的に更新しようとします。
 
 ## Postmanコレクションの再認証
 

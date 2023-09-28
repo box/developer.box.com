@@ -116,7 +116,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | パラメータ                  | デフォルト | 説明                                                     |
 | ---------------------- | ----- | ------------------------------------------------------ |
 | `annotator`            |       | ビューアー固有の注釈構成オブジェクト                                     |
-| `apiHost`              |       | Box API呼び出しのホスト (`https://app.box.com/api`など)          |
+| `apiHost`              |       | Box APIコールのホスト (`https://app.box.com/api`など)           |
 | `fileId`               |       | BoxファイルID                                              |
 | `token`                |       | 文字列認証トークン。適切なスコープを使用した注釈トークンの生成方法の詳細については、以下を参照してください。 |
 | `container`            |       | プレビューが配置されるDOMノードまたはセレクタ                               |

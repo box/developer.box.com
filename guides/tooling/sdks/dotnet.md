@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # .NET SDKのインストール
 
-.NETプロジェクトでは、Box .NET SDKを使用してBox APIへのAPI呼び出しを行うことができます。
+.NETプロジェクトでは、Box .NET SDKを使用してBox APIへのAPIコールを行うことができます。
 
 このSDKは、.NET Framework 4.5以上および.NET Core 1.0以上の両方で利用できます。SDKのインストール方法は、使用しているフレームワークによって異なります。
 

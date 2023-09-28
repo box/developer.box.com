@@ -57,7 +57,7 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ## APIレスポンス
 
-このAPI呼び出しの結果、`{+asset_path}`値を含む`url_template`値を使用して1つ以上のレプリゼンテーションが返されます。
+このAPIコールの結果、`{+asset_path}`値を含む`url_template`値を使用して1つ以上のレプリゼンテーションが返されます。
 
 ```json
 {

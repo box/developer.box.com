@@ -100,7 +100,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ## 構成の確認
 
-うまく構成されているか確認するには、`box users:get me`コマンドを入力して、Box CLIで最初のBox API呼び出しを実行します。
+うまく構成されているか確認するには、`box users:get me`コマンドを入力して、Box CLIで最初のBox APIコールを実行します。
 
 <ImageFrame center>
 
@@ -135,7 +135,7 @@ Notification Email: []
 
 * CLIをインストールしました。
 * 前に作成したOAuth 2.0アプリケーションを使用するようCLIを構成しました。
-* **Box CLIの最初のBox API呼び出しを実行**し、アクセストークンに関連付けられたユーザーを確認しました。
+* **Box CLIの最初のBox APIコールを実行**し、アクセストークンに関連付けられたユーザーを確認しました。
 
 <Next>
 

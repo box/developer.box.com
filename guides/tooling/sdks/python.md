@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # Python SDKのインストール
 
-Pythonプロジェクトでは、Box Python SDKを使用してBox APIへのAPI呼び出しを行うことができます。
+Pythonプロジェクトでは、Box Python SDKを使用してBox APIへのAPIコールを行うことができます。
 
 <CTA to="https://github.com/box/box-python-sdk">
 

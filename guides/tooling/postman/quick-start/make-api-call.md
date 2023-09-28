@@ -17,9 +17,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/quick-start/5-make-api-call.md
 fullyTranslated: true
 ---
-# API呼び出しの実行
+# APIコールの実行
 
-**Box Postmanコレクション**が**Postmanアプリ**にフォークされたため、Postmanアプリがログインユーザーに代わって**Box API**へのAPI呼び出しを実行できるようになりました。
+**Box Postmanコレクション**が**Postmanアプリ**にフォークされたため、Postmanアプリがログインユーザーに代わって**Box API**へのAPIコールを実行できるようになりました。
 
 ## はじめに: ブラウザのストレージをリセットする
 
@@ -39,9 +39,9 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 ## 環境の選択
 
-API呼び出しを実行する前に、API呼び出し時に使用する適切な**Postman環境**を選択することが重要です。
+APIコールを実行する前に、APIコール時に使用する適切な**Postman環境**を選択することが重要です。
 
-**Box Postmanコレクション**のインポート時には、使用すべき`Box` Postman環境も自動的にインポートされました。このコレクションは、この環境内の変数を自動的に認識してAPI呼び出しに使用します。
+**Box Postmanコレクション**のインポート時には、使用すべき`Box` Postman環境も自動的にインポートされました。このコレクションは、この環境内の変数を自動的に認識してAPIコールに使用します。
 
 Box Postman環境を選択するには、Postmanの右上にあるドロップダウンから \[**Box**] を選択します。
 
@@ -79,7 +79,7 @@ APIリクエストを実行するには、Box Postmanコレクションから**�
 
 </ImageFrame>
 
-このAPI呼び出しはすぐに制御が戻り、画面の下半分にあるレスポンスの \[**Body (本文)**] タブにフォルダ内の項目のリストが表示されます。
+このAPIコールはすぐに制御が戻り、画面の下半分にあるレスポンスの \[**Body (本文)**] タブにフォルダ内の項目のリストが表示されます。
 
 <ImageFrame border center shadow>
 
@@ -97,11 +97,11 @@ APIリクエストを実行するには、Box Postmanコレクションから**�
 
 ## まとめ
 
-* BoxへのAPI呼び出しに使用するPostman環境を選択しました
-* Boxへの最初のAPI呼び出しを実行し、ユーザーのルートフォルダのフォルダ項目をリクエストしました
+* BoxへのAPIコールに使用するPostman環境を選択しました
+* Boxへの最初のAPIコールを実行し、ユーザーのルートフォルダのフォルダ項目をリクエストしました
 
 <Next>
 
-API呼び出しが完了しました
+APIコールが完了しました
 
 </Next>

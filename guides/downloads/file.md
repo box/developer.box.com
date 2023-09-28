@@ -31,7 +31,7 @@ fullyTranslated: true
 
 ## ダウンロードURL
 
-SDKを使用しない場合、このAPI呼び出しでは、`HTTP 302 Found`ステータスコードとともに、次のようなダウンロードURLへのリンクを含む`location`ヘッダーが返されます。
+SDKを使用しない場合、このAPIコールでは、`HTTP 302 Found`ステータスコードとともに、次のようなダウンロードURLへのリンクを含む`location`ヘッダーが返されます。
 
 ```sh
 https://dl.boxcloud.com/d/1/[long-random-string]/download

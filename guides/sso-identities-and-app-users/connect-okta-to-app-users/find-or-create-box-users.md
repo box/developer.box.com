@@ -24,7 +24,7 @@ fullyTranslated: true
 
 * Oktaユーザーに、関連付けられたBoxアプリユーザーアカウントがあるかどうかを検証します。
 * (関連付けられているアカウントがない場合は) 関連付けられているOktaレコードに新しいアプリユーザーを作成します。
-* Boxユーザーのトークンを取得してユーザー固有のAPI呼び出しを実行します。
+* Boxユーザーのトークンを取得してユーザー固有のAPIコールを実行します。
 
 ## 新しいアプリユーザーの作成
 
@@ -380,7 +380,7 @@ BoxClient userClient = sdk.UserClient(userToken, userId);
 
 ## 認証済みのBoxユーザーの呼び出し
 
-Oktaユーザーの関連付けられたBoxユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens/)アクセストークンを生成してBox API呼び出しを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
+Oktaユーザーの関連付けられたBoxユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens/)アクセストークンを生成してBox APIコールを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
 
 <Choice option="programming.platform" value="node" color="none">
 
@@ -481,7 +481,7 @@ System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 
 * OktaユーザーがBoxユーザーとして存在するかどうかを検証しました。
 * 存在しない場合は新しいアプリユーザーを作成しました。
-* 既存のBoxユーザーに対してBox API呼び出しを実行しました。
+* 既存のBoxユーザーに対してBox APIコールを実行しました。
 
 <Observe option="box.app_type" value="use_own,create_new_">
 
