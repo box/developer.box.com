@@ -39,7 +39,7 @@ This glossary includes terms and definitions used in Box Platform.
 | Custom App | | A tailored application that extends the functionality of Box by integrating with other tools and systems. It's used to streamline workflows and enhance collaboration. It can be created in the Developer Console and has several authentication methods available. |
 | Developer | Programmer | A skilled professional who designs, builds, and maintains software applications or systems and has access to the Developer Console. In Box, the developer can have an Admin role. |
 | Developer Console | | A portal that allows developers to create, debug, test, and monitor their applications by providing real-time insights into code execution and system performance. |
-| Enterprise | Repository, content store, file cabinet, docbase, vault | |
+| Enterprise | Repository, content store, file cabinet, Docbase, vault | |
 | [Ethical walls][info-barriers] | Information barriers | A mechanism that prevents exchanges or communication that could lead to conflicts of interest and therefore result in business activities ethically or legally questionable. |
 | [Event][event] | Result of an action taken by the user. See [Using the Enterprise Event Stream][event-stream]. |
 | External collaborator | External user | A collaborator who is not part of an enterprise. |
