@@ -145,6 +145,144 @@ Returns:
 - `null` if there was an issue getting the authentication details for the
   Service Account. In this case, check `mostRecentError`.
 
+## Salesforce and Slack
+
+### `getIntegrationMappings`
+
+This toolkit method calls the [9][get integration mappings] endpoint to get the
+existing mappings.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `integration` | String | `Slack` is currently the only supported value. |
+| `partnerItemId` | String | ID of the mapped item on the provided integration side. Example: a Slack channel ID. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- A list of `IntegrationMapping` objects,
+- `null` is returned if there are incorrect parameters,
+the access is missing, or the integration mappings is not found.
+
+### `createIntegrationMapping`
+
+This toolkit method calls the [9][get integration mappings] endpoint to create
+the mappings.
+
+<Message type='notice'>
+When you map to a Slack channel, `access_management_disabled` may be
+deactivated by default. This causes an automatic removal of collaborators
+who are not included in the Slack channel member list. Depending on
+how you set up sharing in Box, this can cause issues. To avoid it, 
+Box recommends to enable this setting by using the
+`setSlackChannelAccessManagementDisabled`method. You can also use groups
+to make sure no users are removed, regardless of Slack settings.
+Collaborations are added or removed from Slack when a file is
+uploaded to a Slack channel.
+</Message>
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `integration` | String | `Slack` is currently the only supported value. |
+| `mapping` | `IntegrationMapping` | Apex defined type `IntegrationMapping`. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `deleteIntegrationMapping`
+
+This toolkit method calls the [10][delete integration mappings] endpoint to
+delete a mapping.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `integration` | String | `Slack` is currently the only supported value. |
+| `integrationMappingId` | String | Retrieved from `getIntegrationMappings`. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `mapSfdcRecordToSlackChannel`
+
+This toolkit method uses the above integration mapping methods and
+provides a wrapper with four different use cases:
+
+1. If a mapping does not exist in Salesforce or Slack, it creates
+a folder under the Box for Salesforce folder structure, and an integration
+mapping to link it with the Slack channel.
+2. If a mapping only exists from Salesforce, it continues to use
+the folder and does not change the location. Creates an integration mapping
+to link it with the Slack Channel.
+3. If a mapping only exists from Slack, it continues to use the
+folder and create an FRUP record for the Salesforce record to use the existing
+folder. This folder is likely to be outside of the Salesforce root folder.
+4. If Salesforce and Slack have existing mappings but are not related to
+each other, it throws an error through `Toolkit.mostRecentError` or within
+a flow action, stating that the mappings already exist. 
+
+This method/invocable is used in a flow template provided in the Box
+for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+
+<Message type='notice'> When you map to a Slack channel,
+`access_management_disabled` may be
+deactivated by default. This causes an automatic removal of collaborators
+who are not included in the Slack channel member list. Depending on
+how you set up sharing in Box, this can cause issues. To avoid it, 
+Box recommends to enable this setting by using the
+`setSlackChannelAccessManagementDisabled`method. You can also use groups
+to make sure no users are removed, regardless of Slack settings.
+Collaborations are added or removed from Slack when a file is
+uploaded to a Slack channel.
+</Message>
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `recordId` | ID | Salesforce record ID. |
+| `slackChanneld` | String | |
+| `slackWorkspaceOrOrgId` | String | If Box for Slack is installed org-wide, provide the Org ID (for example E1234567), or the Workspace ID (e.g. T5555555). |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `setSlackChannelAccessManagementDisabled`
+
+This toolkit method calls the [11][put integration mappings] endpoint to update
+the access management deactivated setting. 
+
+This method/invocable is used in a flow template provided in the Box
+for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `channelId` | String | |
+| `disabled` | Boolean | Indicates whether or not a channel member access to the underlying Box item should be automatically managed. Depending on the type of the channel, access is managed through creating collaborations or shared links. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
 ## File Operations
 
 ### `createFileFromAttachment`
@@ -699,3 +837,6 @@ Returns:
 [6]: r://get-metadata-cascade-policies
 [7]: r://post-metadata-cascade-policies
 [8]: r://delete-metadata-cascade-policies-id
+[9]: r://get-integration-mappings-slack
+[10]: r://delete-integration-mappings-slack-id
+[11]: r://put-integration-mappings-slack-id
