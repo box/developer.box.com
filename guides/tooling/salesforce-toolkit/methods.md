@@ -68,6 +68,7 @@ Returns:
 | Parameter | Type | Description                                             |
 | --------- | ---- | ------------------------------------------------------- |
 | `userId`  | id   | The Id of the user whose credentials are to be cleared. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -123,6 +124,7 @@ in a different transaction and avoid governor limits in some scenarios.
 | Parameter          | Type      | Description                                                                   |
 | ------------------ | --------- | ----------------------------------------------------------------------------- |
 | `usePlatformEvent` | `boolean` | `true` if you're using a platform event. `false` to call the original method. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -144,6 +146,7 @@ allowing you to focus on the business logic of your integration.
 | Parameter | Type                          | Description                                           |
 | --------- | ----------------------------- | ----------------------------------------------------- |
 | `request` | [HttpRequest][sf-httprequest] | An HttpRequest object with a set endpoint and method. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -154,144 +157,6 @@ Returns:
   HttpRequest input.
 - `null` if there was an issue getting the authentication details for the
   Service Account. In this case, check `mostRecentError`.
-
-## Salesforce and Slack
-
-### `getIntegrationMappings`
-
-This toolkit method calls the [get integration mappings][9] endpoint to get the
-existing mappings.
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `integration` | String | `Slack` is currently the only supported value. |
-| `partnerItemId` | String | ID of the mapped item on the provided integration side. Example: a Slack channel ID. |
-<!-- markdownlint-enable line-length -->
-
-Returns:
-
-- A list of `IntegrationMapping` objects,
-- `null` is returned if there are incorrect parameters,
-the access is missing, or the integration mappings is not found.
-
-### `createIntegrationMapping`
-
-This toolkit method calls the [get integration mappings][9] endpoint to create
-the mappings.
-
-<Message type='notice'>
-
-When you map to a Slack channel, `access_management_disabled` may be
-deactivated by default. This causes an automatic removal of collaborators
-who are not included in the Slack channel member list. Depending on
-how you set up sharing in Box, this can cause issues. To avoid it, 
-Box recommends to enable this setting by using the
-`setSlackChannelAccessManagementDisabled`method. You can also use groups
-to make sure no users are removed, regardless of Slack settings.
-Collaborations are added or removed from Slack when a file is
-uploaded to a Slack channel.
-
-</Message>
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `integration` | String | `Slack` is currently the only supported value. |
-| `mapping` | `IntegrationMapping` | Apex defined type `IntegrationMapping`. |
-<!-- markdownlint-enable line-length -->
-
-Returns:
-
-- Boolean based on the transaction success.
-
-### `deleteIntegrationMapping`
-
-This toolkit method calls the [delete integration mappings][10] endpoint to
-delete a mapping.
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `integration` | String | `Slack` is currently the only supported value. |
-| `integrationMappingId` | String | Retrieved from `getIntegrationMappings`. |
-<!-- markdownlint-enable line-length -->
-
-Returns:
-
-- Boolean based on the transaction success.
-
-### `mapSfdcRecordToSlackChannel`
-
-This toolkit method uses the above integration mapping methods and
-provides a wrapper with four different use cases:
-
-1. If a mapping does not exist in Salesforce or Slack, it creates
-a folder under the Box for Salesforce folder structure, and an integration
-mapping to link it with the Slack channel.
-2. If a mapping only exists from Salesforce, it continues to use
-the folder and does not change the location. Creates an integration mapping
-to link it with the Slack Channel.
-3. If a mapping only exists from Slack, it continues to use the
-folder and create an FRUP record for the Salesforce record to use the existing
-folder. This folder is likely to be outside of the Salesforce root folder.
-4. If Salesforce and Slack have existing mappings but are not related to
-each other, it throws an error through `Toolkit.mostRecentError` or within
-a flow action, stating that the mappings already exist. 
-
-This method/invocable is used in a flow template provided in the Box
-for Salesforce package `Create Box Folder/Slack Channel Mapping`.
-
-<Message type='notice'>
-
- When you map to a Slack channel,
-`access_management_disabled` may be
-deactivated by default. This causes an automatic removal of collaborators
-who are not included in the Slack channel member list. Depending on
-how you set up sharing in Box, this can cause issues. To avoid it, 
-Box recommends to enable this setting by using the
-`setSlackChannelAccessManagementDisabled`method. You can also use groups
-to make sure no users are removed, regardless of Slack settings.
-Collaborations are added or removed from Slack when a file is
-uploaded to a Slack channel.
-
-</Message>
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `recordId` | ID | Salesforce record ID. |
-| `slackChanneld` | String | |
-| `slackWorkspaceOrOrgId` | String | If Box for Slack is installed org-wide, provide the Org ID (for example E1234567), or the Workspace ID (e.g. T5555555). |
-<!-- markdownlint-enable line-length -->
-
-Returns:
-
-- Boolean based on the transaction success.
-
-### `setSlackChannelAccessManagementDisabled`
-
-This toolkit method calls the [put integration mappings][11] endpoint to update
-the access management deactivated setting. 
-
-This method/invocable is used in a flow template provided in the Box
-for Salesforce package `Create Box Folder/Slack Channel Mapping`.
-
-<!-- markdownlint-disable line-length -->
-
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `channelId` | String | |
-| `disabled` | Boolean | Indicates whether or not a channel member access to the underlying Box item should be automatically managed. Depending on the type of the channel, access is managed through creating collaborations or shared links. |
-<!-- markdownlint-enable line-length -->
-
-Returns:
-
-- Boolean based on the transaction success.
 
 ## File Operations
 
@@ -316,6 +181,7 @@ asynchronous Apex.
 | `fileNameOverride` | `string`     | Optional - Name of the new file. If no value is passed in, the name of the attachment is used.                                                                                                                                                              |
 | `folderIdOverride` | `string`     | Optional - Box folder id to place this attachment in. If no value is passed in, the file will be placed in the folder associated with the record that is the `parentId` of the attachment. If the record-specific folder doesn't exist, it will be created. |
 | `accessToken`      | `string`     | Optional - if `accessToken` is sent, that value is used for the Box API call. Otherwise, the default account credentials are used.                                                                                                                          |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -330,6 +196,7 @@ Returns:
 | Parameter  | Type | Description                                                |
 | ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -356,6 +223,7 @@ Returns:
 | Parameter  | Type | Description                                                |
 | ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -376,6 +244,7 @@ Returns:
 | ----------------- | --------- | --------------------------------------------------------------------------- |
 | `recordId`        | `id`      | Salesforce record id whose root folder id you want to get.                  |
 | `isMobileContext` | `boolean` | Boolean to indicate whether the URL should be mobile (true) or not (false). |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -391,6 +260,7 @@ Returns:
 | Parameter  | Type | Description                                                |
 | ---------- | ---- | ---------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose root folder id you want to get. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -408,6 +278,7 @@ Returns:
 | `folderName`     | `string` | Name of the folder to be created. Folder names are subject to some restrictions. [See here for more details.](endpoint://post_folders)      |
 | `parentFolderId` | `string` | Parent Box folder this folder will be created in.                                                                                           |
 | `accessToken`    | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call,; otherwise, the default service account credentials are used. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -425,6 +296,7 @@ Returns:
 | `recordId`            | `id`      | Salesforce record id that a Box folder will be created for.                                                                                                |
 | `folderNameOverride`  | `string`  | By default, the record's name will be the folder name. If you want to name it something else, send that value here.                                        |
 | `optCreateRootFolder` | `boolean` | Boolean to indicate whether to create the object root folder if it doesn't exist. If false is sent and the root folder does not exist, the call will fail. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -444,6 +316,7 @@ Returns:
 | `folderId`          | `string` | Box folder Id of the folder to be moved.                                                                                                   |
 | `newParentFolderId` | `string` | Box folder Id of the folder that will be the new parent folder.                                                                            |
 | `accessToken`       | `string` | Optional - If `accessToken` is sent, that value is used for the Box API call. Otherwise, the default service account credentials are used. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -458,6 +331,7 @@ Returns:
 | Parameter  | Type | Description       |
 | ---------- | ---- | ----------------- |
 | `recordId` | `id` | ID of the record. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -475,6 +349,7 @@ Returns:
 | `templateFolderId`    | `string`  | Source folder which should be the template.                           |
 | `folderNameOverride`  | `string`  | Name override of the new folder.                                      |
 | `optCreateRootFolder` | `boolean` | Flag that determines if a root folder is created if it doesn't exist. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -491,6 +366,7 @@ Returns:
 | Parameter  | Type | Description                                                                   |
 | ---------- | ---- | ----------------------------------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id that the folder mapping entries returned are related to. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -507,6 +383,7 @@ Returns:
 | Parameter  | Type | Description                                           |
 | ---------- | ---- | ----------------------------------------------------- |
 | `recordId` | `id` | Salesforce record id whose folder id you wish to get. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -521,6 +398,7 @@ Returns:
 | Parameter  | Type     | Description    |
 | ---------- | -------- | -------------- |
 | `folderId` | `string` | Box folder id. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -536,6 +414,7 @@ Returns:
 | ---------- | -------- | ---------------------------------------------------------------- |
 | `recordId` | `id`     | Salesforce record Id that is being associated with a box folder. |
 | `folderId` | `string` | Box folder Id being associated with a Salesforce record.         |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -567,6 +446,7 @@ the Box for Salesforce integration will receive a collaboration email.
 | `emailAddress` | `box.Toolkit.CollaborationType` | Email address of the box user to be.                                                                                                 |
 | `collabType`   | `string`                        | Type of collaboration (see the `CollaborationType` enum definition).                                                                 |
 | `accessToken`  | `string`                        | Optional - If sent, this value is used for authentication for the box API call; if `null`, the service account credentials are used. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -584,6 +464,7 @@ Returns:
 | `recordId`        | `id`                            | Salesforce record id of the record folder to be collaborated on.                                                                                                                                                                                                       |
 | `collabType`      | `box.Toolkit.CollaborationType` | Type of collaboration (see the `CollaborationType` enum definition).                                                                                                                                                                                                   |
 | `optCreateFolder` | `boolean`                       | Boolean to indicate whether to create the Box folder associated for the Salesforce record id if it does not already exist. This also creates the root folder if it did not already exist. If set to `false` and the folder does not already exist, the call will fail. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -644,6 +525,7 @@ This method calls the [get metadata instance on folder endpoint][1].
 | `folderId`     | `string` | The ID of the Box Folder for which you want to create metadata.             |
 | `scope`        | `string` | The scope of the metadata template. Value is one of `[global, enterprise]`. |
 | `template_key` | `string` | The name of the metadata template.                                          |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -668,6 +550,7 @@ This method calls the [create metadata instance on folder][2] endpoint.
 | `scope`         | `string`             | Scope of the metadata template. Value is one of [`global`, `enterprise`].                                                                                                                                                                                                                                                                                   |
 | `template_key`  | `string`             | Name of the metadata template.                                                                                                                                                                                                                                                                                                                              |
 | `keyValuePairs` | `List<KeyValuePair>` | This class work as a map. Provide key/value pairs as a list, for the attributes to send to Box Metadata. The key/value mappings follow the same pattern as the [API][2]. Number types `'3000'`and multi select values such as `'Customer;Order'`are represented as string inputs in the `value` field, as regular metadata values seen in the code samples. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -690,6 +573,7 @@ Calls the [update metadata instance on folder][3] endpoint.
 | `scope`        | `string`                     | The scope of the metadata template. Value is one of [`global`, `enterprise`]                                                                                                                                                                                                                                          |
 | `template_key` | `string`                     | The name of the metadata template.                                                                                                                                                                                                                                                                                    |
 | `mdUpdates`    | `List<FolderMetadataUpdate>` | Metadata updates. Provide the operation, path, and value. The metadata update records follow the same pattern as the [API][3]. Number types (`3000`) and multi select values such as `Customer;Order` are represented as string inputs in the `value` field, just as the regular metadata values in the code samples. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -711,6 +595,7 @@ This method call the [delete metadata instance from folder][4] endpoint.
 | `folderId`     | `string` | ID of the Box folder for which you want to update metadata.                  |
 | `scope`        | `string` | The scope of the metadata template. Value is one of [`global`, `enterprise`] |
 | `template_key` | `string` | The name of the metadata template.                                           |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -730,6 +615,7 @@ endpoint. As it requires an ID, you need to call the
 | Parameter  | Type     | Description                                        |
 | ---------- | -------- | -------------------------------------------------- |
 | `policyId` | `string` | The ID of the cascade policy you want to retrieve. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -753,6 +639,7 @@ calling the [get metadata cascade policies][6] endpoint.
 | `paginationMarker`  | `string`  | Defines the position marker at which to begin returning results. This is used for marker-based pagination.              | No       |
 | `Offset`            | `integer` | The offset of the item at which to begin the response.                                                                  | No       |
 | `ownerEnterpriseId` | `string`  | Enterprise ID for which to find the metadata cascade policies. If not specified, it defaults to the current enterprise. | No       |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -775,6 +662,7 @@ template key, and by calling the [post metadata cascade policies][7] endpoint.
 | `folderId`     | `string` | ID of the Box folder for which you want to create the metadata cascade policy.     |
 | `scope`        | `string` | The scope of the metadata cascade policy. Value is one of [`global`, `enterprise`] |
 | `template_key` | `string` | The name of the template key.                                                      |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -795,6 +683,7 @@ ID and calling the [delete metadata cascade policies ID][8] endpoint.
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
 | `policyId` | `string` | The ID of the cascade policy you want to delete. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -813,6 +702,7 @@ metadata on the folder and cascading it down.
 | Parameter  | Type     | Description                                                     |
 | ---------- | -------- | --------------------------------------------------------------- |
 | `folderId` | `string` | The ID of the Box folder for which you want to delete metadata. |
+
 <!-- markdownlint-enable line-length -->
 
 Returns:
@@ -820,14 +710,159 @@ Returns:
 - Boolean based on the transaction success.
 - `false` in case of incorrect parameters.
 
-[1]: r://get-folders-id-metadata-id-id
-[2]: r://post-folders-id-metadata-id-id
-[3]: r://put-folders-id-metadata-id-id
-[4]: r://delete-folders-id-metadata-id-id
-[5]: r://get-metadata-cascade-policies-id
-[6]: r://get-metadata-cascade-policies
-[7]: r://post-metadata-cascade-policies
-[8]: r://delete-metadata-cascade-policies-id
-[9]: r://get-integration-mappings-slack
-[10]: r://delete-integration-mappings-slack-id
-[11]: r://put-integration-mappings-slack-id
+## Salesforce and Slack
+
+### `getIntegrationMappings`
+
+This toolkit method calls the [get integration mappings][9] endpoint to get the
+existing mappings.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter       | Type   | Description                                                                          |
+| --------------- | ------ | ------------------------------------------------------------------------------------ |
+| `integration`   | String | `Slack` is currently the only supported value.                                       |
+| `partnerItemId` | String | ID of the mapped item on the provided integration side. Example: a Slack channel ID. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- A list of `IntegrationMapping` objects,
+- `null` is returned if there are incorrect parameters,
+  the access is missing, or the integration mappings is not found.
+
+### `createIntegrationMapping`
+
+This toolkit method calls the [get integration mappings][9] endpoint to create
+the mappings.
+
+<Message type='notice'>
+
+When you map to a Slack channel,
+`access_management_disabled` is set to `FALSE` by default.
+This causes an automatic removal of collaborators that are not part
+of the Slack channel member list. Depending on how your organization
+sets up sharing in Box, we recommend to either enable
+`access_ management_disabled` to `TRUE` by using the
+`setSlackChannelAccessManagementDisabled` method, or use [groups][12].
+This ensures no users are removed, regardless of Slack settings.
+Collaborations are added or removed from Slack when a file is uploaded
+to a Slack channel.
+
+</Message>
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter     | Type                 | Description                                    |
+| ------------- | -------------------- | ---------------------------------------------- |
+| `integration` | String               | `Slack` is currently the only supported value. |
+| `mapping`     | `IntegrationMapping` | Apex defined type `IntegrationMapping`.        |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `deleteIntegrationMapping`
+
+This toolkit method calls the [delete integration mappings][10] endpoint to
+delete a mapping.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter              | Type   | Description                                    |
+| ---------------------- | ------ | ---------------------------------------------- |
+| `integration`          | String | `Slack` is currently the only supported value. |
+| `integrationMappingId` | String | Retrieved from `getIntegrationMappings`.       |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `mapSfdcRecordToSlackChannel`
+
+This toolkit method uses the above integration mapping methods and
+provides a wrapper with four different use cases:
+
+1. If a mapping does not exist in Salesforce or Slack, it creates
+   a folder under the Box for Salesforce folder structure, and an integration
+   mapping to link it with the Slack channel.
+2. If a mapping only exists from Salesforce, it continues to use
+   the folder and does not change the location. Creates an integration mapping
+   to link it with the Slack Channel.
+3. If a mapping only exists from Slack, it continues to use the
+   folder and create an FRUP record for the Salesforce record to use the existing
+   folder. This folder is likely to be outside of the Salesforce root folder.
+4. If Salesforce and Slack have existing mappings but are not related to
+   each other, it throws an error through `Toolkit.mostRecentError` or within
+   a flow action, stating that the mappings already exist.
+
+This method/invocable is used in a flow template provided in the Box
+for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+
+<Message type='notice'>
+
+ When you map to a Slack channel,
+`access_management_disabled` is set to `FALSE` by default.
+This causes an automatic removal of collaborators that are not part
+of the Slack channel member list. Depending on how your organization
+sets up sharing in Box, we recommend to either enable
+`access_ management_disabled` to `TRUE` by using the
+`setSlackChannelAccessManagementDisabled` method, or use [groups][12].
+This ensures no users are removed, regardless of Slack settings.
+Collaborations are added or removed from Slack when a file is uploaded
+to a Slack channel.
+
+</Message>
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter               | Type   | Description                                                                                                             |
+| ----------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| `recordId`              | ID     | Salesforce record ID.                                                                                                   |
+| `slackChanneld`         | String |                                                                                                                         |
+| `slackWorkspaceOrOrgId` | String | If Box for Slack is installed org-wide, provide the Org ID (for example E1234567), or the Workspace ID (e.g. T5555555). |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+### `setSlackChannelAccessManagementDisabled`
+
+This toolkit method calls the [put integration mappings][11] endpoint to update
+the access management deactivated setting.
+
+This method/invocable is used in a flow template provided in the Box
+for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+
+<!-- markdownlint-disable line-length -->
+
+| Parameter   | Type    | Description                                                                                                                                                                                                           |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `channelId` | String  |                                                                                                                                                                                                                       |
+| `disabled`  | Boolean | Indicates whether or not a channel member access to the underlying Box item should be automatically managed. Depending on the type of the channel, access is managed through creating collaborations or shared links. |
+
+<!-- markdownlint-enable line-length -->
+
+Returns:
+
+- Boolean based on the transaction success.
+
+[1]: e://get-folders-id-metadata-id-id
+[2]: e://post-folders-id-metadata-id-id
+[3]: e://put-folders-id-metadata-id-id
+[4]: e://delete-folders-id-metadata-id-id
+[5]: e://get-metadata-cascade-policies-id
+[6]: e://get-metadata-cascade-policies
+[7]: e://post-metadata-cascade-policies
+[8]: e://delete-metadata-cascade-policies-id
+[9]: e://get-integration-mappings-slack
+[10]: e://delete-integration-mappings-slack-id
+[11]: e://put-integration-mappings-slack-id
+[12]: https://support.box.com/hc/articles/360043694554-Creating-and-Managing-Groups

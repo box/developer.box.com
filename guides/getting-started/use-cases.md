@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: getting-started/use-cases
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: getting-started
 parent_id: getting-started
 next_page_id: getting-started/user-models
