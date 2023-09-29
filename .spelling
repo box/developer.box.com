@@ -289,3 +289,7 @@ iframe
 cd
 mappings.csv.
 invocable
+symlink
+Docbase
+trackable
+automations
