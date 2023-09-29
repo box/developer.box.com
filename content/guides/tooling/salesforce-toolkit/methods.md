@@ -830,15 +830,15 @@ Returns:
 
 - Boolean based on the transaction success.
 
-[1]: r://get-folders-id-metadata-id-id
-[2]: r://post-folders-id-metadata-id-id
-[3]: r://put-folders-id-metadata-id-id
-[4]: r://delete-folders-id-metadata-id-id
-[5]: r://get-metadata-cascade-policies-id
-[6]: r://get-metadata-cascade-policies
-[7]: r://post-metadata-cascade-policies
-[8]: r://delete-metadata-cascade-policies-id
-[9]: r://get-integration-mappings-slack
-[10]: r://delete-integration-mappings-slack-id
-[11]: r://put-integration-mappings-slack-id
+[1]: e://get-folders-id-metadata-id-id
+[2]: e://post-folders-id-metadata-id-id
+[3]: e://put-folders-id-metadata-id-id
+[4]: e://delete-folders-id-metadata-id-id
+[5]: e://get-metadata-cascade-policies-id
+[6]: e://get-metadata-cascade-policies
+[7]: e://post-metadata-cascade-policies
+[8]: e://delete-metadata-cascade-policies-id
+[9]: e://get-integration-mappings-slack
+[10]: e://delete-integration-mappings-slack-id
+[11]: e://put-integration-mappings-slack-id
 [12]: https://support.box.com/hc/articles/360043694554-Creating-and-Managing-Groups
