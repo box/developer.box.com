@@ -13,7 +13,7 @@ previous_page_id: getting-started
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/box-glossary.md
 ---
-# Box developer glossary
+# Box platform glossary
 
 This glossary includes terms and definitions used in Box Platform.
 
