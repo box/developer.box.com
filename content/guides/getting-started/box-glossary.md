@@ -2,7 +2,7 @@
 rank: 1
 ---
 
-# Box developer glossary
+# Box platform glossary
 
 This glossary includes terms and definitions used in Box Platform.
 
