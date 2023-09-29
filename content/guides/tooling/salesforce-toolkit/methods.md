@@ -139,7 +139,6 @@ Returns:
 - `null` if there was an issue getting the authentication details for the
   Service Account. In this case, check `mostRecentError`.
 
-
 ## File Operations
 
 ### `createFileFromAttachment`
@@ -662,10 +661,11 @@ This toolkit method calls the [get integration mappings][9] endpoint to create
 the mappings.
 
 <Message type='notice'>
-When you map to a Slack channel, `access_management_disabled` is set
-to `FALSE` by default. This causes an automatic removal of collaborators
-that are not part of the Slack channel member list. Depending on how your
-organization sets up sharing in Box, we recommend to either enable
+When you map to a Slack channel,
+`access_management_disabled` is set to `FALSE` by default.
+This causes an automatic removal of collaborators that are not part
+of the Slack channel member list. Depending on how your organization
+sets up sharing in Box, we recommend to either enable
 `access_ management_disabled` to `TRUE` by using the
 `setSlackChannelAccessManagementDisabled` method, or use [groups][12].
 This ensures no users are removed, regardless of Slack settings.
@@ -722,9 +722,9 @@ This method/invocable is used in a flow template provided in the Box
 for Salesforce package `Create Box Folder/Slack Channel Mapping`.
 
 <Message type='notice'> When you map to a Slack channel,
-`access_management_disabled` is set to `FALSE` by default. This causes
-an automatic removal of collaborators that are not part of the
-Slack channel member list. Depending on how your organization
+`access_management_disabled` is set to `FALSE` by default.
+This causes an automatic removal of collaborators that are not part
+of the Slack channel member list. Depending on how your organization
 sets up sharing in Box, we recommend to either enable
 `access_ management_disabled` to `TRUE` by using the
 `setSlackChannelAccessManagementDisabled` method, or use [groups][12].
