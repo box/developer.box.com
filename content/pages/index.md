@@ -300,7 +300,8 @@ alias_paths:
     </Teaser>
     <Teaser title="Box Developer Blog"
       href="https://medium.com/box-developer-blog" type="blog">
-      Read news, updates and tutorials on Box APIs, SDKs and gain useful developers' and admins' insights.
+      Read news, updates and tutorials on Box APIs, SDKs
+      and gain useful developers' and admins' insights.
 
       Visit Box Developer Blog
     </Teaser>
