@@ -27,7 +27,7 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 * [Twitter][twitter]: 一般的な質問とサポート
 * [サポートチケットの送信][support]: アカウント固有の質問とサポート
 
-To keep up to date with community projects and Platform changes, please use one of these available channels:
+コミュニティプロジェクトやPlatformの変更に関する最新情報を入手するには、以下のチャネルをご利用ください。
 
 * [変更ログ](page://changelog): APIの変更、非推奨のサービス、リリース
 * [開発者向けニュースレター](page://newsletter): 主なイベント、プロジェクト、リリースに関する定期的なお知らせ
