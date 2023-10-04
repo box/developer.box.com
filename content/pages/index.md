@@ -284,25 +284,25 @@ alias_paths:
 
   <!-- <BlogCards /> -->
 
-  <Teaser href="https://www.youtube.com/@box/videos" type="youtube">
-    Box Youtube
+  <div style="display:flex; align-items: center; flex-wrap: wrap">
+    <Teaser title="Box Youtube"
+      href="https://www.youtube.com/@box/videos" type="youtube">
+      Check out our channel for tutorials, training,
+      product news and more.
 
-    Check out our channel for success stories, training, product news and interviews.
+      View Channel
+    </Teaser>
+    <Teaser title="Developer Newsletter" href="/newsletter/" type="newsletter">
+      Stay up to date with the top developer events,
+      product releases, and community highlights.
 
-    View Channel
-  </Teaser>
-  <Teaser href="/newsletter/" type="newsletter">
-    Developer Newsletter
+      Browse Newsletter
+    </Teaser>
+    <Teaser title="Box Developer Blog"
+      href="https://medium.com/box-developer-blog" type="blog">
+      Read news, updates and tutorials on Box APIs, SDKs and gain useful developers' and admins' insights.
 
-    Stay up to date with the top developer events, product releases, and community highlights.
-
-    Browse Newsletter
-  </Teaser>
-  <Teaser href="https://medium.com/box-developer-blog" type="blog">
-    Developer Blog
-
-    News and stories for working with the Box APIs directly from our Box developers.
-
-    View Blog
-  </Teaser>
+      Visit Box Developer Blog
+    </Teaser>
+  </div>
 </Centered>
