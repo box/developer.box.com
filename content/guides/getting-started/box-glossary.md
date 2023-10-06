@@ -69,7 +69,7 @@ This glossary includes terms and definitions used in Box Platform.
 <!-- markdownlint-enable line-length -->
 
 [app user]: g://getting-started/user-types/service-account
-[CLI]: https://www.box.com/platform
+[CLI]: https://github.com/box/boxcli
 [collaborations]: g://collaborations 
 [embed]: g://embed/box-embed
 [ui-elements]: g://embed/ui-elements/
