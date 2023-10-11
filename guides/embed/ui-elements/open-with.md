@@ -28,7 +28,7 @@ fullyTranslated: true
 
 # サポートの終了
 
-日本時間2021年12月22日以降、新規のお客様に対する`OpenWith` UI Elementのサポートを終了する予定です。詳細については、変更ログを参照してください。
+日本時間2021年12月22日をもって、新規のお客様に対する`OpenWith` UI Elementのサポートを終了しました。詳細については、変更ログを参照してください。
 
 </Message>
 
@@ -43,14 +43,6 @@ Open With Elementに含まれる統合には、Google SuiteおよびBox Editが�
 ## インストール
 
 NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
-
-<Message>
-
-# ブラウザのサポート
-
-古いブラウザでは、UI Elementの[サポートは限定的](g://embed/ui-elements/browser)です。目的のブラウザに合ったpolyfillを必ず追加してください。
-
-</Message>
 
 ## Box Edit
 
@@ -80,7 +72,7 @@ Open With UI Elementを使用する前に、アプリケーションを許可し
 
 </ImageFrame>
 
-アプリケーションは、API呼び出しに対してアクティブ化されたら、会社での再認証が必要になります。この操作を実行する手順については、[こちら](g://authorization/custom-app-approval)を参照してください。
+アプリケーションは、APIコールに対してアクティブ化されたら、会社での再認証が必要になります。この操作を実行する手順については、[こちら](g://authorization/custom-app-approval)を参照してください。
 
 ## 使用可能な統合のリストの取得
 
@@ -89,6 +81,7 @@ Open With UI Elementを使用する前に、アプリケーションを許可し
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
       -H 'Authorization: Bearer [ACCESS_TOKEN]'
+
 ```
 
 ```json
@@ -102,6 +95,7 @@ curl -X GET https://api.box.com/2.0/app_integrations \
   ],
   "limit": 100
 }
+
 ```
 
 アプリ統合IDを使用して、指定したユーザーに統合を割り当てます。
@@ -114,6 +108,7 @@ IDに基づいて、特定の統合に関する追加情報を取得するには
 curl -X GET \
   https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
   -H 'Authorization: Bearer [ACCESS_TOKEN]'
+
 ```
 
 ```json
@@ -140,6 +135,7 @@ curl -X GET \
    ],
    "scoped_to":"parent"
 }
+
 ```
 
 ## ユーザーへの統合の追加
@@ -171,6 +167,7 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
       "id": "[APP_INTEGRATION_ID]"
     }
   }'
+
 ```
 
 ```json
@@ -186,6 +183,7 @@ curl -X POST https://api.box.com/2.0/app_integration_assignments \
     "id": "3282"
   }
 }
+
 ```
 
 JSONレスポンスに含まれるIDは、割り当て後にアプリ統合を管理するために使用できるため、アプリケーションで保存する必要があります。
@@ -199,10 +197,12 @@ App Userからアプリ統合を削除するには、有効なサービスのア
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
   -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+
 ```
 
 ```sh
 204 No Content
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -218,12 +218,6 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     <meta charset="utf-8" />
     <title>Box Content Open With Demo</title>
 
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the open with css for your locale -->
     <link
       rel="stylesheet"
@@ -232,8 +226,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
   </head>
   <body>
     <div class="container" style="height:600px"></div>
-    <!-- Latest version of the core and open with js for your locale -->
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
+    <!-- Latest version of the open with js for your locale -->
     <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.js"></script>
     <script>
       var fileId = "123";
@@ -245,6 +238,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
     </script>
   </body>
 </html>
+
 ```
 
 ## デモ
@@ -342,6 +336,7 @@ contentOpenWith.removeListener(eventName, listener);
  * @return {void}
  */
 contentOpenWith.removeAllListeners();
+
 ```
 
 <!-- markdownlint-disable line-length -->

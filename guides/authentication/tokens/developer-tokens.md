@@ -43,11 +43,12 @@ fullyTranslated: true
 
 ## 開発者トークンの使用
 
-開発者トークンは、さまざまなアクセストークンと同様、API呼び出しの`Authorization`ヘッダーで使用できます。
+開発者トークンは、さまざまなアクセストークンと同様、APIコールの`Authorization`ヘッダーで使用できます。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
     -H "authorization: Bearer [DEVELOPER_TOKEN]"
+
 ```
 
 <Message warning>

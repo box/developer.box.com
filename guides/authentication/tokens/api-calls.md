@@ -25,11 +25,12 @@ fullyTranslated: true
 ---
 # トークンの使用
 
-すべての認証済みAPI呼び出しでは、`Bearer Token`としてアクセストークンを`Authorization`ヘッダーに含めて渡す必要があります。そうしないと、`401 Unauthorized` HTTPステータスが返されます。
+すべての認証済みAPIコールでは、`Bearer Token`としてアクセストークンを`Authorization`ヘッダーに含めて渡す必要があります。そうしないと、`401 Unauthorized` HTTPステータスが返されます。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
     -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+
 ```
 
 <Message>

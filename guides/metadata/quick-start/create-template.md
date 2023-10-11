@@ -68,6 +68,7 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
         }
       ]
     }'
+
 ```
 
 </Tab>
@@ -106,6 +107,7 @@ var templateParams = new BoxMetadataTemplate()
   }
 };
 BoxMetadataTemplate template = await  client.MetadataManager.CreateMetadataTemplate(templateParams);
+
 ```
 
 </Tab>
@@ -146,6 +148,7 @@ fields.add(industry);
 fields.add(tav);
 
 MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterprise", "customerInfo", "Customer Info", false, fields);
+
 ```
 
 </Tab>
@@ -160,6 +163,7 @@ fields = [
   MetadataField(MetadataFieldType.ENUM, 'Industry', options=['Technology', 'Healthcare', 'Legal'])
 ]
 template = client.create_metadata_template('Customer Info', fields)
+
 ```
 
 </Tab>
@@ -192,6 +196,7 @@ client.metadata.createTemplate(
 ).then(template => {
   // ...
 });
+
 ```
 
 </Tab>
@@ -248,6 +253,7 @@ client.metadata.createTemplate(
     }
   ]
 }
+
 ```
 
 <Message notice>

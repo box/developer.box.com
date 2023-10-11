@@ -59,6 +59,7 @@ client.enterprise.addAppUser(
 ).then(appUser => {
   console.log(`New user created: ${appUser.name}`);
 });
+
 ```
 
 </Tab>
@@ -75,6 +76,7 @@ params.setExternalAppUserId(ssoUID);
 BoxUser.Info createdUserInfo = BoxUser.createAppUser(client, ssoName, params);
 
 outputString = "New user created: " + createdUserInfo.getName();
+
 ```
 
 </Tab>
@@ -89,6 +91,7 @@ space = 1073741824
 # Create app user
 user = box_client.create_user(sso_name, None, space_amount=space, external_app_user_id=sso_uid)
 print('New user created: {name}')
+
 ```
 
 </Tab>
@@ -123,6 +126,7 @@ client.enterprise.addUser(
 ).then(managedUser => {
   console.log(`New user created: ${managedUser.name}`);
 });
+
 ```
 
 </Tab>
@@ -138,6 +142,7 @@ BoxUser.Info createdUserInfo =
   BoxUser.createEnterpriseUser(client, ssoEmail, ssoName);
 
 outputString = "New user created: " + createdUserInfo.getName();
+
 ```
 
 </Tab>
@@ -152,6 +157,7 @@ space = 1073741824
 # Create managed user
 user = box_client.create_user(sso_name, sso_email, space_amount=space)
 print('New user created: {name}')
+
 ```
 
 </Tab>

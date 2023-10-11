@@ -61,6 +61,7 @@ fullyTranslated: true
 
 ```sh
 https://*.app.box.com/filerequest/2338423584
+
 ```
 
 <Message warning>
@@ -71,4 +72,4 @@ https://*.app.box.com/filerequest/2338423584
 
 ## 3. テンプレートの使用
 
-テンプレートのファイルリクエストを使用すると、[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy) APIによって新しいコピーを作成できます。新しいフォルダのIDを取得したら、[1回のAPI呼び出し](g://file-requests/copy)で既存のリクエスト (タイトル、説明、フォームの設定を含む) を新しいフォルダにコピーできます。
+テンプレートのファイルリクエストを使用すると、[`POST /file-requests/:id/copy`](e://post_file_requests_id_copy) APIによって新しいコピーを作成できます。新しいフォルダのIDを取得したら、[1回のAPIコール](g://file-requests/copy)で既存のリクエスト (タイトル、説明、フォームの設定を含む) を新しいフォルダにコピーできます。

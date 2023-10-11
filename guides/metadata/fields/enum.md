@@ -63,6 +63,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
@@ -86,6 +87,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 <Message>
@@ -114,6 +116,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 オプションのリストは次のようになります。
@@ -127,6 +130,7 @@ fullyTranslated: true
   {"key": "AR"}
 ]
 ...
+
 ```
 
 <Message warning>
@@ -152,6 +156,7 @@ fullyTranslated: true
     ]
   }
 ]
+
 ```
 
 オプションのリストは次のようになります。
@@ -165,6 +170,7 @@ fullyTranslated: true
   {"key": "N/A"}
 ]
 ...
+
 ```
 
 <Message warning>
@@ -188,6 +194,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 オプションのリストは次のようになります。
@@ -201,6 +208,7 @@ fullyTranslated: true
   {"key": "Outside USA"}
 ]
 ...
+
 ```
 
 <Message warning>
@@ -221,6 +229,7 @@ fullyTranslated: true
     "enumOptionKey": "AL"
   }
 ]
+
 ```
 
 オプションのリストは次のようになります。
@@ -233,6 +242,7 @@ fullyTranslated: true
   {"key": "Outside USA"}
 ]
 ...
+
 ```
 
 <Message warning>

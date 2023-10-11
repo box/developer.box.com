@@ -28,6 +28,7 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=0&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 エントリの次のページを取得するには、以前の`offset`値と以前の結果で返された制限の合計 (`previous_offset + previous_limit`) と等しい`offset`パラメータを指定して、APIを呼び出す必要があります。
@@ -35,6 +36,7 @@ curl https://api.box.com/2.0/search?query=sales&offset=0&limit=100 \
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=100&limit=100 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <Message type="notice">
@@ -73,6 +75,7 @@ PartialCollection<BoxItem.Info> page1 = boxSearch.searchRange(offsetValue, limit
 
 offsetValue += 50;
 PartialCollection<BoxItem.Info> page2 = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -84,6 +87,7 @@ BoxCollection<BoxItem> page1 = await client.SearchManager
     .QueryAsync("sales", limit: 50);
 BoxCollection<BoxItem> page2 = await client.SearchManager
     .QueryAsync("sales", limit: 50, offset: 50);
+
 ```
 
 </Tab>
@@ -93,6 +97,7 @@ BoxCollection<BoxItem> page2 = await client.SearchManager
 ```py
 page1 = client.search().query(query='sales', limit=50)
 page2 = client.search().query(query='sales', limit=50, offset=50)
+
 ```
 
 </Tab>
@@ -107,6 +112,7 @@ const page2 = await client.search.query('sales'. {
   limit: 50,
   offset: 50
 })
+
 ```
 
 </Tab>

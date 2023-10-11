@@ -82,6 +82,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 ```bash
 git clone https://github.com/box/boxcli.git box-cli
 cd box-cli/examples/User\ Creation\ \&\ Provisioning/
+
 ```
 
 ## スクリプト設定の構成
@@ -113,6 +114,7 @@ cd box-cli/examples/User\ Creation\ \&\ Provisioning/
 ```bash
 firstName,lastName,email,username
 Isaac,Newton,abc@abc.local,INewton23
+
 ```
 
 `EmployeeList`パラメータを使用して、データを読み込む`.csv`ファイルを指定します。
@@ -170,6 +172,7 @@ $PersonalFolderSlug = ""
 # It is not advised to make this value 0, as this will create individual
 # Personal folders in root of the account you set up the cli with
 $PersonalFolderParentID = ""
+
 ```
 
 * パラメータを指定してスクリプトを実行する
@@ -183,13 +186,14 @@ PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
     -PersonalFolderParentID 123456789
 
 Starting User Creation & Provisioning script...
+
 ```
 
 * 求められたときにパラメータを指定する
 
   実行時に指定されていないパラメータがある場合は、スクリプトにより、指定するよう求められます。
 
-  ```bash
+```bash
   PS > ./Users_Create_Provision.ps1
   Please enter the path to the employee list CSV file:
   ./Employees_1.csv
@@ -199,25 +203,28 @@ Starting User Creation & Provisioning script...
   Please enter the ID of the folder where you would like to create the personal folders:
   0
   Starting User Creation & Provisioning script...
-  ```
+
+```
 
 ## スクリプトの実行
 
 1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
 
-   ```bash
+```bash
    pwsh
-   ```
+
+```
 
 2. スクリプトを実行します:
 
-   ```bash
+```bash
    PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
-   ```
 
-      レスポンスは以下のようになります。
+```
 
-   ```bash
+   レスポンスは以下のようになります。
+
+```bash
    Starting User Creation & Provisioning script...
 
 
@@ -243,59 +250,58 @@ Starting User Creation & Provisioning script...
 
    Type: collaboration
     ID: '37250833128'
-   Created By:
+Created By:
     Type: user
     ID: '18622116055'
-   Name: Rui Barbosa
-   Login: barduinor@gmail.com
-   Created At: '2022-06-07T13:58:05-07:00'
-   Modified At: '2022-06-07T13:58:05-07:00'
-   Expires At: null
-   Status: accepted
-   Accessible By:
+Name: Rui Barbosa
+Login: barduinor@gmail.com
+Created At: '2022-06-07T13:58:05-07:00'
+Modified At: '2022-06-07T13:58:05-07:00'
+Expires At: null
+Status: accepted
+Accessible By:
     Type: user
     ID: '19605663027'
     Name: Isaac Newton
     Login: abc@abc.local
-   Invite Email: null
-   Role: viewer uploader
-   Acknowledged At: '2022-06-07T13:58:05-07:00'
-   Item:
+Invite Email: null
+Role: viewer uploader
+Acknowledged At: '2022-06-07T13:58:05-07:00'
+Item:
     Type: folder
     ID: '164734146745'
     Sequence ID: '0'
     ETag: '0'
-   Name: Onboarding
-   Collaborated Managed User Isaac Newton to current users
-   Onboarding folder for provisioning
-   ```
-
-<!---->
+Name: Onboarding
+Collaborated Managed User Isaac Newton to current users
+Onboarding folder for provisioning
 
 ```
 
-## Running the script again for new users
+## 新規ユーザーに対するスクリプトの再実行
 
-It is common to run this script regularly as your company hires new employees.
-You can simply edit the `.csv` file, removing the previous rows of users and
-adding the information for the new users. Then, the script may be ran again.
+会社で新しい従業員を雇用するたび、このスクリプトを定期的に実行することは一般的です。単に`.csv`ファイルを編集し、前の行のユーザーを削除して新規ユーザーの情報を追加するだけです。その後、スクリプトを再度実行できます。
 
-## Summary
+## まとめ
 
-You explored automation using a PowerShell script with the
-Box CLI to provision users
-and create an initial folder structure.
+Box CLIと共にPowerShellスクリプトを使用した、ユーザーのプロビジョニングと最初のフォルダ構造の作成の自動化について確認しました。
 
-Make sure to explore our other [sample scripts][samples] for more use cases.
+その他のユースケースについては、他の[サンプルスクリプト][samples]を確認してください。
 
-<Next>I know how to use the sample scripts to automate repetitive tasks</Next>
+<Next>サンプルスクリプトを使用して繰り返し発生するタスクを自動化する方法を理解しました</Next>
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
+
 [script-1]: https://github.com/box/boxcli/tree/main/examples/User%20Creation%20&%20Provisioning
+
 [jwt-cli]: g://cli/cli-docs/jwt-cli
+
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2
+
 [step 1]: g://cli/quick-start/create-oauth-app/
+
 [console]: https://app.box.com/developers/console
+
 [auth]: g://authentication/oauth2/oauth2-setup
+
 [samples]: g://cli/scripts
-```

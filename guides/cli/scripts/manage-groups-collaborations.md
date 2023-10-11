@@ -74,6 +74,7 @@ fullyTranslated: true
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -86,6 +87,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
     
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <message>
@@ -102,29 +104,28 @@ PS /Users/user/repos/boxcli/examples>
 
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
-   ```bash
-   git clone https://github.com/box/boxcli.git boxcli
-   cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
-   ```
+```bash
+git clone https://github.com/box/boxcli.git boxcli
+cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
-<!---->
+```
 
-````
+2. グループとユーザーのメールアドレスのリストが含まれる`.csv`ファイルのパスを設定します。
 
-2. Set the path to the `.csv` file with the list of groups and user emails.
-
-    ```bash
+```bash
     $UserGroupAdditionPath = "./User_Group_Addition.csv"
-    ```
+
+```
 
     * `UserEmail` is the primary email address for the user in Box. 
     * `GroupName` is the name of the group.
 
-3. Set your own path to the `.csv` file with the list groups and user emails.
+3. グループとユーザーのメールアドレスのリストが含まれる`.csv`ファイルに独自のパスを設定します。
 
-    ```bash
+```bash
     $CollaborationsCreationPath = "./Collaborations_Creation.csv"
-    ```
+
+```
 
     * `GroupName` is name of the group the script will add as a collaborator to the folder. 
     * `FolderId` is the folder ID the collaborator will be added to.
@@ -132,48 +133,51 @@ PS /Users/user/repos/boxcli/examples>
 
      You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
 
-     ```bash
+```bash
      $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
-     ```
 
-## Run the script
+```
 
-1. Run the Powershell command.
-   
-   ```bash
+## スクリプトの実行
+
+1. PowerShellコマンドを実行します。
+
+```bash
    pwsh
-````
+
+```
 
 2. スクリプトを実行します。
-   ```bash
-   ./Mass_Groups_Collabs_Update.ps1
-   ```
 
-<!---->
+```bash
+./Mass_Groups_Collabs_Update.ps1
 
-````
+```
 
-### Optional flags
+### オプションのフラグ
 
-You can use flags to run run or skip specific parts of the script.
+フラグを使用すると、スクリプトの特定の部分を実行またはスキップできます。
 
-* If a group already is set as a collaborator for a
-   specific folder but with a role other than defined in the .`csv` file, the script will inform you about it. It will not make any changes to an existing collaboration. 
-   If you want to update an existing collaboration with role defined in `.csv` file, set an additional `-UpdateExistingCollabs` flag when running the script.
-         
-   ```bash
+* グループがすでに特定のフォルダのコラボレータとして設定されているものの、その役割が.`csv`ファイルで定義されたものとは異なる場合は、スクリプトによってそのことが通知されます。スクリプトによって既存のコラボレーションが変更されることはありません。`.csv`ファイルで定義された役割で既存のコラボレーションを更新するには、スクリプトを実行する際に追加の`-UpdateExistingCollabs`フラグを設定します。
+
+```bash
    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
-````
+
+```
 
 * コラボレーションを作成せずにグループを更新するには、スクリプトの実行時に`-SkipCollabsCreation`ブール値フラグを追加します。
-  ```bash
-  Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
-  ```
+
+```bash
+   Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
+
+```
 
 * グループを更新せずにコラボレーションを作成するには、スクリプトの実行時に`-SkipGroupsUpdate`ブール値フラグを追加します。
-  ```bash
-  Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
-  ```
+
+```bash
+   Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
+
+```
 
 ## ログ
 

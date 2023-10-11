@@ -28,6 +28,7 @@ APIから項目のコレクションが返される場合は、APIレスポン�
 ```curl
 curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 <Message type="warning">

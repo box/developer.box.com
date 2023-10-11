@@ -52,6 +52,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
@@ -75,6 +76,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 <Message warning>

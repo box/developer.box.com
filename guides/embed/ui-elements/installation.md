@@ -23,15 +23,7 @@ fullyTranslated: true
 ---
 # インストール
 
-UI Elementを使用するには、直接JavaScriptライブラリをダウンロードするか、またはNPMパッケージから取り込みます。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートも必要です。
-
-すべてのUI Elementは、[NPM][npm]を介して入手することも、直接ダウンロードすることもできます。
-
-<Message>
-
-Box UI Elementsの使用方法は2とおりあります。すばやく構築する場合は、このドキュメントで後で説明するようにライブラリとして使用します。また、Reactベースのアプリを構築する場合は、NPMパッケージからコンポーネントを取り込むことができます。詳細については、上記のNPMのリンク先を参照してください。この機能のリリースを続ける中で、ソースに対してある程度のアクセス権限を設定します。
-
-</Message>
+UI Elementを使用するには、Box CDNから直接JavaScriptライブラリをダウンロードするか、[NPMパッケージ][npm]をインストールします。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートが必要です。
 
 ## NPMのインストール
 
@@ -40,6 +32,7 @@ Reactベースのアプリを構築し、構築時にアプリに直接コンポ
 ```sh
 npm install box-ui-elements
 # yarn add box-ui-elements
+
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
@@ -52,7 +45,7 @@ NPMウェブサイトの詳細を確認する
 
 # コンテンツプレビュー
 
-現在、コンテンツプレビューUI ElementはNPMから入手できません。
+現在、Box Content PreviewライブラリはNPMから入手できません。
 
 </Message>
 
@@ -88,12 +81,6 @@ NPMウェブサイトの詳細を確認する
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the explorer css for your locale -->
     <link
       rel="stylesheet"
@@ -106,6 +93,7 @@ NPMウェブサイトの詳細を確認する
     ...
   </body>
 </html>
+
 ```
 
 Boxプレビューでは、このサンプルは若干異なって見えます。
@@ -116,12 +104,6 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
   <head>
     <meta charset="utf-8" />
     <title>Box Content Preview Demo</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise"></script>
-    <!-- Alternatively, use polyfills hosted on the Box CDN
-  <script src="https://cdn01.boxcdn.net/polyfills/bluebird/3.5.1/bluebird.min.js"></script>
-  -->
 
     <!-- Latest version of Box Content Preview for en-US locale -->
     <script src="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.js"></script>
@@ -141,6 +123,7 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
     </script>
   </body>
 </html>
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -155,7 +138,7 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
   * このアセットのファイルサイズは以下のアセットよりも大きくなります。
 * ReactとReactDOMがバンドルされない小規模な`*.no.react.js`ファイル (`explore.no.react.js`など)。
   * これは、ReactライブラリとReactDOMライブラリが両方ともすでにアプリケーションで読み込まれている場合に使用します。
-  * これらのライブラリでは、ReactおよびReactDOMが`>= 16.2`かつ`< 17`であることを想定しています。
+  * これらのライブラリでは、ReactおよびReactDOMが`>= 16.6`かつ`< 18`であることを想定しています。
 
 <message>
 2つの`js`ファイルのうち1つのみと追加の`css`ファイルをプロジェクトに追加する必要があります。</message>
@@ -187,6 +170,7 @@ Boxプレビューでは、このサンプルは若干異なって見えます�
 
 ```sh
 yarn install && yarn build:i18n && yarn build:prod
+
 ```
 
 ### 3. ファイルを提供する
@@ -221,7 +205,7 @@ UI Elementを使用するには、アプリケーションで、クロスオリ�
 
 ## ソースコードとリリース
 
-エクスプローラElementのソースコードは[GitHubでホストされています][gh]。このリポジトリには、使用方法と開発に関する詳細なドキュメントが含まれています。見つかったバグは、わかりやすい再現手順とともに \[Issues] タブに登録してください。また、このリポジトリでは、[リリース][releases]のリストも保持されています。
+Box UI Elementsのソースコードは[GitHubでホストされています][gh]。このリポジトリには、使用方法と開発に関する詳細なドキュメントが含まれています。見つかったバグは、わかりやすい再現手順とともに \[Issues] タブに登録してください。また、このリポジトリでは、[リリース][releases]のリストも保持されています。
 
 [cors]: g://security/cors
 
@@ -231,13 +215,9 @@ UI Elementを使用するには、アプリケーションで、クロスオリ�
 
 [npm]: https://www.npmjs.com/package/box-ui-elements
 
-[polyfill]: https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js
-
 [gh]: https://github.com/box/box-ui-elements
 
 [releases]: https://github.com/box/box-ui-elements/releases
-
-[npm]: https://www.npmjs.com/package/box-ui-elements
 
 [downscope]: g://authentication/tokens/downscope
 

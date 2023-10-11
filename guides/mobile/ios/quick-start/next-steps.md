@@ -22,7 +22,7 @@ fullyTranslated: true
 1. Xcodeで[新しいiOSアプリを作成](g://mobile/ios/quick-start/create-ios-app/)しました。
 2. プロジェクトに[iOS SDKをインストール](g://mobile/ios/quick-start/install-ios-sdk/)しました。
 3. iOS SDKからBox APIにアクセスできるように[Boxアプリを設定](g://mobile/ios/quick-start/configure-box-app/)しました。
-4. iOS SDKを使用してBox APIに対する[API呼び出しを実行](g://mobile/ios/quick-start/make-api-call/)しました。
+4. iOS SDKを使用してBox APIに対する[APIコールを実行](g://mobile/ios/quick-start/make-api-call/)しました。
 
 ## 次に行うべきこと
 

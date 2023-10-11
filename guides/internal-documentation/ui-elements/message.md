@@ -35,6 +35,7 @@ fullyTranslated: true
 <default type='default'>
   A default note
 </Message>
+
 ```
 
 <H>
@@ -109,6 +110,7 @@ fullyTranslated: true
 <Message warning>
   A warning note
 </Message>
+
 ```
 
 <H>
@@ -133,6 +135,7 @@ fullyTranslated: true
 <Message danger>
   Danger zone!
 </Message>
+
 ```
 
 <H>
@@ -155,6 +158,7 @@ fullyTranslated: true
 
   A default note
 </Message>
+
 ```
 
 <H>
@@ -177,6 +181,7 @@ fullyTranslated: true
 <Message size='small'>
   A small note
 </Message>
+
 ```
 
 <H>

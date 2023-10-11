@@ -63,6 +63,7 @@ Slack側のチャンネル確認のために、[統合マッピングAPI][6]でS
 
 ```bash
 Authorization: Bearer {developer_token}
+
 ```
 
 <Message info>

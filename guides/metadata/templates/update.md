@@ -65,6 +65,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 これにより、新しい表示名がClientになるようにテンプレートが更新されます。
@@ -95,6 +96,7 @@ fullyTranslated: true
     }
   }
 ]
+
 ```
 
 これにより、`displayName`および`key`が**category**に指定されている、非表示ではない新しい文字列フィールドが追加されます。
@@ -118,6 +120,7 @@ fullyTranslated: true
   "op": "reorderFields",
   "fieldKeys": ["field2", "field1", "field3"]
 }
+
 ```
 
 これにより、テンプレートのフィールドは、最初に`field2`、その後`field1`、`field3`が続くように並べ替えられます。
@@ -155,6 +158,7 @@ fullyTranslated: true
     "displayName": "Customer Group"
   }
 }
+
 ```
 
 これにより、新しい表示名が**Customer Group**になるようにフィールド`category`が更新されます。このキーが変更された場合、指定されたフィールドの既存の値は新しいキーに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
@@ -182,6 +186,7 @@ fullyTranslated: true
   "op": "removeField",
   "fieldKey": "brand"
 }
+
 ```
 
 これにより、フィールド`brand`は、テンプレートに加えて、テンプレートのすべてのインスタンスから削除されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。

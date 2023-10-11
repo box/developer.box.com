@@ -54,6 +54,7 @@ curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTempl
          }
        }
      ]'
+
 ```
 
 </Tab>
@@ -75,6 +76,7 @@ var updates = new List<BoxMetadataTemplateUpdate>()
 };
 BoxMetadataTemplate updatedTemplate = await client.MetadataManager
     .UpdateMetadataTemplate(updates, "enterprise", "customerData");
+
 ```
 
 </Tab>
@@ -88,6 +90,7 @@ String editField = "{\"op\":\"editField\",\"fieldKey\":\"name\",\"data\":{\"key\
 updates.add(new MetadataTemplate.FieldOperation(editField));
 
 MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updates);
+
 ```
 
 </Tab>
@@ -99,6 +102,7 @@ template = client.metadata_template('enterprise', 'customerData')
 updates = template.start_update()
 updates.edit_field('name', key='company_name', display_name="Company Name")
 template.update_info(updates)
+
 ```
 
 </Tab>
@@ -124,6 +128,7 @@ client.metadata.updateTemplate(
 ).then(template => {
   //.. 
 });
+
 ```
 
 </Tab>
@@ -170,6 +175,7 @@ client.metadata.updateTemplate(
     }
   ]
 }
+
 ```
 
 操作によってテンプレートを更新した場合は、テンプレートのインスタンスもすべて自動的に更新されるという利点があります。この場合、前の手順で作成したインスタンスは次のようになります。
@@ -188,6 +194,7 @@ client.metadata.updateTemplate(
   "$version": 1,
   "$canEdit": true
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

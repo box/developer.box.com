@@ -34,6 +34,7 @@ fullyTranslated: true
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
      -H "authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -55,6 +56,7 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
         }
     }
 }
+
 ```
 
 <Message>
@@ -73,6 +75,7 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
         "terms_of_service": null
     }
 }
+
 ```
 
 <Message>

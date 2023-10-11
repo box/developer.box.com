@@ -5,11 +5,11 @@ subcategory_id: null
 is_index: true
 id: box-sign
 type: guide
-total_steps: 4
+total_steps: 6
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: box-sign/cancel-sign-request
+previous_page_id: box-sign/embedded-sign-client
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/index.md
 fullyTranslated: true

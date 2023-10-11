@@ -30,6 +30,7 @@ fullyTranslated: true
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&trash_content=trashed_only" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -46,6 +47,7 @@ searchParams.setQuery("sales");
 searchParams.setTrashContent("trashed_only");
 
 PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValue, limitValue, searchParams);
+
 ```
 
 </Tab>
@@ -55,6 +57,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 ```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", mdFilters: filters, trashContent: "trashed_only");
+
 ```
 
 </Tab>
@@ -63,6 +66,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, trash_content="trashed_only")
+
 ```
 
 </Tab>
@@ -78,6 +82,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>

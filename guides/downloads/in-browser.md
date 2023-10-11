@@ -31,6 +31,7 @@ fullyTranslated: true
 <audio controls>
   <source src="..." type="audio/mp3">
 </audio>
+
 ```
 
 この場合、通常の[ダウンロードURL][durl]を使用しても機能しません。`dl.boxcloud.com`ドメインでは[クロスオリジンリソース共有][cors]がサポートされていないためです。
@@ -39,6 +40,7 @@ fullyTranslated: true
 
 ```sh
 https://api.box.com/2.0/files/[FILE_ID]/content?access_token=[ACCESS_TOKEN]
+
 ```
 
 <Message warning>

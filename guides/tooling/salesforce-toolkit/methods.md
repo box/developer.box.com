@@ -70,7 +70,7 @@ fullyTranslated: true
 * ユーザーのアカウントが存在していたが削除された場合は`true`。
 * ユーザーのアカウントが何らかの理由 (存在しなかった場合を含む) で削除されなかった場合は`false`。
 
-## インスタンスメソッド (コンストラクタ/デストラクタ)
+## インスタンスメソッド - コンストラクタ、デストラクタ
 
 ### `box.Toolkit()`
 
@@ -98,6 +98,24 @@ Salesforceではデータベースの更新/挿入/削除の後の呼び出し�
 
 * `Void`
 
+### プラットフォームイベントを使用する`commitChanges`
+
+このメソッドは`box.Toolkit()`メソッドのデストラクタとして扱います。
+
+このメソッドは、上記の`commitChanges`とよく似ています。ただし、別のトランザクションでDMLステートメントを実行し、一部のシナリオでガバナ制限を回避するために、プラットフォームイベントを使用してデータベースに変更をコミットします。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ              | 型         | 説明                                                |
+| ------------------ | --------- | ------------------------------------------------- |
+| `usePlatformEvent` | `boolean` | プラットフォームイベントを使用する場合は`true`。元のメソッドを呼び出す場合は`false`。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* `Void`
+
 ## ジェネリックメソッド
 
 Box for Salesforce Developer Toolkitは、パラメータとして[HttpRequest][sf-httprequest]オブジェクトを受け取り、[HttpResponse][sf-httpresponse]オブジェクトを返すグローバルメソッドを提供します。このメソッドではサービスアカウントの認証の詳細情報を利用してBoxのAPIを呼び出すため、開発者は統合のビジネスロジックに集中して取り組むことができます。
@@ -114,7 +132,7 @@ Box for Salesforce Developer Toolkitは、パラメータとして[HttpRequest][
 
 戻り値:
 
-* BoxのAPI呼び出しからのレスポンスの詳細情報が含まれた[HttpResponse][sf-httpresponse]オブジェクト。
+* BoxのAPIコールからのレスポンスの詳細情報が含まれた[HttpResponse][sf-httpresponse]オブジェクト。
 * HttpRequestのインプットの情報が不足している場合は`Toolkit.BoxApiException`。
 * サービスアカウントの認証の詳細情報を取得する際に問題が発生した場合は`null`。この場合は、`mostRecentError`を確認してください。
 
@@ -137,7 +155,7 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 | `att`              | `Attachment` | Box内のファイルに変換される添付ファイル。                                                                                                       |
 | `fileNameOverride` | `string`     | 省略可 - 新しいファイルの名前。値が渡されなかった場合、添付ファイルの名前が使用されます。                                                                               |
 | `folderIdOverride` | `string`     | 省略可 - この添付ファイルの配置先であるBoxフォルダID。値が渡されなかった場合、ファイルは添付ファイルの`parentId`に当たるレコードに関連付けられているフォルダに配置されます。レコード固有のフォルダが存在していない場合は作成されます。 |
-| `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                         |
+| `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                          |
 
 <!-- markdownlint-enable line-length -->
 
@@ -223,11 +241,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ            | 型        | 説明                                                                                        |
-| ---------------- | -------- | ----------------------------------------------------------------------------------------- |
-| `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                    |
-| `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                     |
-| `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box API呼び出しにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
+| パラメータ            | 型        | 説明                                                                                       |
+| ---------------- | -------- | ---------------------------------------------------------------------------------------- |
+| `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                   |
+| `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                    |
+| `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -258,11 +276,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ               | 型        | 説明                                                                                   |
-| ------------------- | -------- | ------------------------------------------------------------------------------------ |
-| `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                  |
-| `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                           |
-| `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox API呼び出しに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
+| パラメータ               | 型        | 説明                                                                                  |
+| ------------------- | -------- | ----------------------------------------------------------------------------------- |
+| `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                 |
+| `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                          |
+| `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox APIコールに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -270,6 +288,39 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 * フォルダが正常に移動された場合は`true`。
 * フォルダが正常に移動されなかった場合は`false`。`mostRecentError`で詳細を確認してください。
+
+### `getUrlForFolder`
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型    | 説明       |
+| ---------- | ---- | -------- |
+| `recordId` | `id` | レコードのID。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* 指定されたURLを含む`pageReference`オブジェクト。
+* パラメータが正しくない場合は`null`。
+
+### `createFolderForRecordIdFromTemplate`
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ                 | 型         | 説明                                |
+| --------------------- | --------- | --------------------------------- |
+| `recordId`            | `id`      | SalesforceレコードID。                 |
+| `templateFolderId`    | `string`  | テンプレートにするソースフォルダ。                 |
+| `folderNameOverride`  | `string`  | 新しいフォルダの名前の上書き。                   |
+| `optCreateRootFolder` | `boolean` | ルートフォルダが存在しない場合に作成するかどうかを決定するフラグ。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* 新しく作成された`folder Id`。
+* パラメータが正しくない場合は`null`。
 
 ## フォルダ関連付けメソッド
 
@@ -343,13 +394,13 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ          | 型                               | 説明                                                                      |
-| -------------- | ------------------------------- | ----------------------------------------------------------------------- |
-| `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                                |
-| `boxUserId`    | `string`                        | コラボレーションするBoxユーザーのID (`boxUserId`または`emailAddress`のどちらか一方のみ必要)。         |
-| `emailAddress` | `box.Toolkit.CollaborationType` | Boxユーザーのメールアドレス。                                                        |
-| `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                            |
-| `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox API呼び出しの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
+| パラメータ          | 型                               | 説明                                                                     |
+| -------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                               |
+| `boxUserId`    | `string`                        | コラボレーションするBoxユーザーのID (`boxUserId`または`emailAddress`のどちらか一方のみ必要)。        |
+| `emailAddress` | `box.Toolkit.CollaborationType` | Boxユーザーのメールアドレス。                                                       |
+| `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                           |
+| `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox APIコールの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -385,3 +436,238 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 [sf-httpresponse]: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_http_httpresponse.htm#apex_classes_restful_http_httpresponse
 
 <!-- i18n-disable localize-links -->
+
+### `editCollaboration`
+
+| パラメータ         | 型        | 説明                                 |
+| ------------- | -------- | ---------------------------------- |
+| `collabId`    | `string` | コラボレーションID                         |
+| `collabType`  | `enum`   | `Box.Toolkit.CollaborationType`列挙型 |
+| `accessToken` | `string` |                                    |
+
+戻り値:
+
+* トランザクションが成功したかどうかを示すブール値。
+* パラメータが正しくない場合は`false`。
+
+### `deleteCollaboration`
+
+| パラメータ         | 型        | 説明         |
+| ------------- | -------- | ---------- |
+| `collabId`    | `string` | コラボレーションID |
+| `accessToken` | `string` |            |
+
+戻り値:
+
+* トランザクションが成功したかどうかを示すブール値。
+* パラメータが正しくない場合は`false`。
+
+## メタデータ
+
+<Message type="info">
+
+すべてのメソッドに対する詳細なエラーレスポンスについては、`toolkit.mostRecentError`の値を確認してください。
+
+</Message>
+
+### `getBoxMetadataByFolderId`
+
+このメソッドでは、[フォルダのメタデータインスタンスを取得エンドポイント][1]を呼び出します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                |
+| -------------- | -------- | ------------------------------------------------- |
+| `folderId`     | `string` | メタデータを作成するBoxフォルダのID。                             |
+| `scope`        | `string` | メタデータテンプレートのスコープ。値は`[global, enterprise]`のいずれかです。 |
+| `template_key` | `string` | メタデータテンプレートの名前。                                   |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* このフォルダ、スコープ、およびテンプレートキーに関連付けられた`FolderMetadata`レコード。カスタム値は、このオブジェクトの`keyValuePairs`変数で確認できます。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーが見つからない
+
+### `createBoxMetadataByFolderId`
+
+このメソッドでは、[フォルダにメタデータインスタンスを作成][2]エンドポイントを呼び出します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ           | 型                    | 説明                                                                                                                                                                                   |
+| --------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `folderId`      | `string`             | メタデータを作成するBoxフォルダのID。                                                                                                                                                                |
+| `scope`         | `string`             | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。                                                                                                         |
+| `template_key`  | `string`             | メタデータテンプレートの名前。                                                                                                                                                                      |
+| `keyValuePairs` | `List<KeyValuePair>` | このクラスはマップとして機能します。Boxメタデータに送信する属性のキー/値ペアをリストとして指定します。キー/値のマッピングは[API][2]と同じパターンに従います。数値型`'3000'`および`'Customer;Order'`などの複数選択値は、コードサンプルに見られる通常のメタデータ値と同様に、`value`フィールドで文字列入力として表されます。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* 新しく作成された`FolderMetadata`オブジェクト。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーが見つからない
+
+### `updateBoxMetadataByFolderId`
+
+[フォルダのメタデータインスタンスを更新][3]エンドポイントを呼び出します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型                            | 説明                                                                                                                                                          |
+| -------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folderId`     | `string`                     | メタデータを更新するBoxフォルダのID。                                                                                                                                       |
+| `scope`        | `string`                     | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。                                                                                |
+| `template_key` | `string`                     | メタデータテンプレートの名前。                                                                                                                                             |
+| `mdUpdates`    | `List<FolderMetadataUpdate>` | メタデータの更新。操作、パス、および値を指定します。メタデータの更新レコードは、[API][3]と同じパターンに従います。数値型 (`3000`) および`Customer;Order`などの複数選択値は、コードサンプルにおける通常のメタデータ値と同様に、`value`フィールドで文字列入力として表されます。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* 更新された`FolderMetadata`オブジェクト。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーが見つからない
+
+### `deleteBoxMetadataFolderId`
+
+このメソッドでは、[フォルダからメタデータインスタンスを削除][4]エンドポイントを呼び出します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                                           |
+| -------------- | -------- | ---------------------------------------------------------------------------- |
+| `folderId`     | `string` | メタデータを更新するBoxフォルダのID。                                                        |
+| `scope`        | `string` | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。 |
+| `template_key` | `string` | メタデータテンプレートの名前。                                                              |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* トランザクションが成功したかどうかを示すブール値。
+* パラメータが誤ったパラメータである場合またはメタデータが見つからない場合は、`false`が返されることがあります。
+
+### `getMetadataCascadePolicyById`
+
+このメソッドでは、[フォルダからメタデータカスケードポリシーを取得][5]エンドポイントを呼び出します。このメソッドはIDを必要とするため、最初に`getMetadataCascadePoliciesByFolderId`メソッドを呼び出す必要があります。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                |
+| ---------- | -------- | ----------------- |
+| `policyId` | `string` | 取得するカスケードポリシーのID。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Boxから取得された`MetadataCascadePolicy`オブジェクト。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーが見つからない
+
+### `getMetadataCascadePoliciesByFolderId`
+
+このメソッドでは、フォルダIDを指定し、[メタデータカスケードポリシーを取得][6]エンドポイントを呼び出すことで、カスケードポリシーを取得します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ               | 型         | 説明                                                                       | 必須  |
+| ------------------- | --------- | ------------------------------------------------------------------------ | --- |
+| `folderId`          | `string`  | どのフォルダのポリシーを返すかを指定します。これは、IDが0のルートフォルダでは使用できません。                         | はい  |
+| `paginationMarker`  | `string`  | 結果が返される開始位置のマーカー。マーカーベースのページ割りに使用されます。                                   | いいえ |
+| `Offset`            | `integer` | レスポンスが開始される項目のオフセット。                                                     | いいえ |
+| `ownerEnterpriseId` | `string`  | メタデータカスケードポリシーを検索するEnterprise ID。指定されていない場合は、デフォルトで現在のEnterpriseに設定されます。 | いいえ |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* Boxから取得された`MetadataCascadePolicy`オブジェクトのリスト。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーが見つからない
+
+### `createMetadataCascadePolicy`
+
+このメソッドでは、BoxフォルダID、スコープ、テンプレートキーを指定し、[メタデータカスケードポリシーを投稿][7]エンドポイントを呼び出すことで、カスケードポリシーを作成します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ          | 型        | 説明                                                                              |
+| -------------- | -------- | ------------------------------------------------------------------------------- |
+| `folderId`     | `string` | メタデータカスケードポリシーを作成するBoxフォルダのID。                                                  |
+| `scope`        | `string` | メタデータカスケードポリシーのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。 |
+| `template_key` | `string` | テンプレートキーの名前。                                                                    |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* 新しく生成された`MetadataCascadePolicy`。
+* 以下の場合は`null`。
+  * パラメータが正しくない
+  * フォルダへのアクセス権限がない
+  * メタデータカスケードポリシーの詳細が見つからない
+
+### `deleteMetadataCascadePolicy`
+
+このメソッドでは、カスケードポリシーIDを指定し、[メタデータカスケードポリシーIDを削除][8]エンドポイントを呼び出すことで、カスケードポリシーを削除します。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                |
+| ---------- | -------- | ----------------- |
+| `policyId` | `string` | 削除するカスケードポリシーのID。 |
+
+<!-- markdownlint-enable line-length -->
+
+戻り値:
+
+* トランザクションが成功したかどうかを示すブール値。
+* パラメータが正しくない場合、フォルダへのアクセス権限がない場合、またはメタデータカスケードポリシーが見つからない場合は、`false`が返されます。
+
+### `enableAppActivity`
+
+このメソッドでは、アプリアクティビティに指定されたフォルダにメタデータを適用してカスケードすることで、そのフォルダを有効にします。
+
+<!-- markdownlint-disable line-length -->
+
+| パラメータ      | 型        | 説明                    |
+| ---------- | -------- | --------------------- |
+| `folderId` | `string` | メタデータを削除するBoxフォルダのID。 |
+
+戻り値:
+
+* トランザクションが成功したかどうかを示すブール値。
+* パラメータが正しくない場合は`false`。
+
+<!-- markdownlint-enable line-length -->
+
+[1]: r://get-folders-id-metadata-id-id
+
+[2]: r://post-folders-id-metadata-id-id
+
+[3]: r://put-folders-id-metadata-id-id
+
+[4]: r://delete-folders-id-metadata-id-id
+
+[5]: r://get-metadata-cascade-policies-id
+
+[6]: r://get-metadata-cascade-policies
+
+[7]: r://post-metadata-cascade-policies
+
+[8]: r://delete-metadata-cascade-policies-id

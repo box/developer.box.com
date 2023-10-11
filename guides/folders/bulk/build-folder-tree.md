@@ -220,6 +220,7 @@ namespace BoxPlayground
         }
     }
 }
+
 ```
 
 </Tab>
@@ -487,6 +488,7 @@ public class BoxFolderTreeBuilder {
         }
     }
 }
+
 ```
 
 </Tab>
@@ -619,6 +621,7 @@ folderTreeBuilder.buildFolderTreeWithFlatLists()
   .then((tree) => {
     console.log(JSON.stringify(tree));
   })
+
 ```
 
 </Tab>

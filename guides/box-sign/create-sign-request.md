@@ -5,10 +5,10 @@ subcategory_id: null
 is_index: false
 id: box-sign/create-sign-request
 type: guide
-total_steps: 4
+total_steps: 6
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/list-sign-requests
+next_page_id: box-sign/sign-templates
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/create-sign-request.md
@@ -16,15 +16,35 @@ fullyTranslated: true
 ---
 # Box Signのリクエストの作成
 
-[Box Signのリクエストを作成エンドポイント][create]を使用するには、少なくとも、署名用ファイルのほか、署名済みドキュメント/[署名ログ][log]の保存先フォルダを選択し、署名者を指定する必要があります。
+[Box Signのリクエストを作成する][create]には、少なくとも、署名が必要なファイル、署名済みドキュメント/[署名ログ][log]の保存先フォルダ、署名者が必要です。
 
 <Samples id="post_sign_requests">
 
 </Samples>
 
+## ドキュメントの準備
+
+Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを行うには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。準備を行わなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
+
+`is_document_preparation_needed`を`true`に設定すると、レスポンスで`prepare_url`が返されます。ブラウザでこのリンクにアクセスすると、ドキュメントの準備を完了し、UI上でリクエストを送信できます。
+
+ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
+
+<Message type="warning">
+
+Boxウェブアプリを使用してテンプレートに作成された事前入力タグには、APIからアクセスできません。
+
+</Message>
+
+<ImageFrame border center shadow>
+
+![準備のオプション](images/prepare.png)
+
+</ImageFrame>
+
 ## ファイル
 
-Box Signの各リクエストは、署名が必要なファイルから始まります。そのファイルがまだBoxに存在しない場合は、リクエストを作成する前に、別のAPI呼び出しでファイルを[アップロード][upload]する必要があります。1つのリクエストで複数のファイルに署名できます。リクエストに含まれる最初のファイルのファイルIDを`source_files`本文パラメータで指定します。
+Box Signの各リクエストは、署名が必要なファイルから始まります。そのファイルがまだBoxに存在しない場合は、リクエストを作成する前に、別のAPIコールでファイルを[アップロード][upload]する必要があります。1つのリクエストで複数のファイルに署名できます。リクエストに含まれる最初のファイルのファイルIDを`source_files`本文パラメータで指定します。
 
 <Message type="warning">
 
@@ -49,7 +69,7 @@ Box Signの各リクエストは、署名が必要なファイルから始まり
 
 ## 署名者
 
-各署名者には、[役割][role]として、署名者、承認者、または最終的なコピー受信者を割り当てる必要があります。
+各署名者には、[役割][role]として、`signer`、`approver`、または`final copy_reader`を割り当てる必要があります。
 
 リクエスト送信者に役割が指定されていない場合は、`final_copy_reader`という役割の署名者が自動的に作成されます。つまり、最終的な署名済みドキュメントと[署名ログ][log]のコピーを受信するだけです。
 
@@ -62,6 +82,14 @@ Box Signの各リクエストは、署名が必要なファイルから始まり
 Box Signは、リクエストで指定された署名者のメールアドレスに署名用メールを送信しようとするだけです。Boxユーザーの場合、指定しない限り、メールエイリアスは含まれません。指定された署名者のメールアドレスすべてが有効であることを再確認してください。
 
 </Message>
+
+### 入力
+
+`inputs`パラメータは、ユーザーが操作できるプレースホルダを表します。`document_tag_id`パラメータには、署名リクエストの作成時に渡すデータを設定できます。
+
+## テンプレート
+
+署名リクエストは、テンプレートを使用して作成できます。そのためには、`template_id`パラメータを指定する必要があります。署名リクエスト作成時のテンプレートの使用の詳細については、[こちらのガイド][templates]を参照してください。 
 
 ## リダイレクト
 
@@ -87,40 +115,22 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 
 </ImageFrame>
 
-## ドキュメントの準備
-
-Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを実行するには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。これを実行しなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
-
-`is_document_preparation_needed`を`true`に設定すると、レスポンスで`prepare_url`が返されます。ブラウザでこのリンクにアクセスすると、ドキュメントの準備を完了し、UIを使用してリクエストを送信できます。
-
-ドキュメントのタグの詳細については、[サポート記事][tags]を参照してください。
-
-<Message type="warning">
-
-Boxウェブアプリを使用してテンプレートに作成された事前入力タグには、APIからアクセスできません。
-
-</Message>
-
-<ImageFrame border center shadow>
-
-![準備のオプション](images/prepare.png)
-
-</ImageFrame>
-
 ## リクエストのステータス
 
 * `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている。
 * `error_converting`: ファイルを`.pdf`に変換している間に問題が発生した。
-* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない場合。
+* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない。
 * `sent`: リクエストが正常に送信されたが、どの署名者も対応していない。
 * `error_sending`: リクエストを送信中に問題が発生した。
-* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした場合。
+* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした。
 * `downloaded`: 署名者が署名用ドキュメントをダウンロードした。
 * `signed`: すべての署名者がリクエストの処理を完了した。
 * `signed and downloaded`: 署名者が署名用ドキュメントに署名してダウンロードした。
-* `declined`: いずれかの署名者がリクエストを拒否した場合。
-* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた場合。
+* `declined`: いずれかの署名者がリクエストを拒否した。
+* `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた。
 * `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた。
+* `finalizing`: すべての署名者がリクエストに署名済みでも、署名された最終的なドキュメントと署名ログがまだ生成されていない。
+* `error_finalizing`: `finalizing`フェーズが正常に完了しなかった。
 
 エラーステータスになった場合、再試行するには、新しい署名リクエストを作成する必要があります。
 
@@ -151,3 +161,15 @@ Boxウェブアプリを使用してテンプレートに作成された事前�
 [collab]: https://support.box.com/hc/ja/articles/360044196413-コラボレータの権限レベルについて
 
 <!-- i18n-disable localize-links -->
+
+[embed]: g://embed/box-embed
+
+[embedguide]: g://embed/box-embed#programmatically
+
+[signrequest]: e://post-sign-requests
+
+[externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
+
+[cloudgame]: g://embed/box-embed#cloud-game
+
+[templates]: g://box-sign/sign-templates

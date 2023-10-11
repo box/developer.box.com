@@ -48,6 +48,7 @@ preview.show(fileId, accessToken, {
     showAnnotations: true,
     showDownload: true
 });
+
 ```
 
 <Message>

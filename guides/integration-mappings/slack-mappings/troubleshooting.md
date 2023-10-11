@@ -37,6 +37,7 @@ user@example.com) must be a collaborator in role co-owner or owner
 of the folder example123, before it can be mapped to the channel
 example123. Please create a collaboration or ensure the ownership for
 Box as File Storage for Slack and retry.`
+
 ```
 
 このエラーを解決するには、レスポンスのデータを使用して、マッピングを実行するための必要なロールがサービスアカウントにあることを確認してください。
@@ -46,6 +47,7 @@ Box as File Storage for Slack and retry.`
     "service_account_id": "12345678",
     "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
 }
+
 ```
 
 以下の手順を実行します。
@@ -59,6 +61,7 @@ Boxフォルダがすでにマッピングされているチャンネルに対�
 
 ```sh
 Channel: example123 is already mapped to a folder in Box.
+
 ```
 
 新しいフォルダの使用を開始したい場合は、`GET`を使用してマッピングの`id`を取得した後、`UPDATE`メソッドを使用してターゲットのBoxフォルダを更新してください。
@@ -71,6 +74,7 @@ Channel: example123 is already mapped to a folder in Box.
 
 ```sh
 Channel: example123 was not found. If it is a private channel, ensure that Box has been added to the channel.
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -84,6 +88,7 @@ Channel: example123 was not found. If it is a private channel, ensure that Box h
 ```sh
 Channel: example123 is not suitable for CFS. Slack Connect channels with
 a pending Connect status can not be mapped to Box folders.
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -98,6 +103,7 @@ Slackコネクトチャンネル (企業間チャンネル) は、現在、Slack
 
 ```sh
 Box folder: example123 cannot be mapped, because it is externally owned. Mapped folder must belong to the enterprise: example_enterprise.
+
 ```
 
 <!-- markdownlint-enable line-length -->

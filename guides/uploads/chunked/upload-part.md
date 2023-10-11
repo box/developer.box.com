@@ -51,6 +51,7 @@ fullyTranslated: true
     "log_event": "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/log"
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -61,12 +62,14 @@ fullyTranslated: true
 
 ```bash
 split -b <PART_SIZE> <FILE_NAME> <YOUR_PART_NAME>
+
 ```
 
 例:
 
 ```bash
 split -b 8388608 video.mp3 videopart
+
 ```
 
 これにより、ファイルが複数のファイルに分割されます。
@@ -77,12 +80,14 @@ split -b 8388608 video.mp3 videopart
 
 ```bash
 openssl sha1 -binary <FILE_PART_NAME> | base64
+
 ```
 
 例:
 
 ```bash
 openssl sha1 -binary videoparta | base64
+
 ```
 
 その結果、Base64でエンコードされたメッセージがアップロードの検証に使用されます。
@@ -101,6 +106,7 @@ openssl sha1 -binary videoparta | base64
 
 ```yaml
   -H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
+
 ```
 
 `Content-Range`の値を指定する際は、以下の点に注意してください。
@@ -113,6 +119,7 @@ openssl sha1 -binary videoparta | base64
 ```yaml
 - H "Content-Range : bytes 0-8388607/32127641" \ ## first part
 - H "Content-Range : bytes 8388608-16777215/32127641" \ ## second part
+
 ```
 
 ## レスポンス
@@ -126,6 +133,7 @@ openssl sha1 -binary videoparta | base64
   "size": 3222784,
   "sha1": "134b65991ed521fcfe4724b7d814ab8ded5185dc"
 }
+
 ```
 
 <Message warning>

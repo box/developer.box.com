@@ -40,6 +40,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
        "industry": "Technology",
        "tav": 1000000
      }'
+
 ```
 
 </Tab>
@@ -56,6 +57,7 @@ var metadataValues = new Dictionary<string, object>()
 
 Dictionary<string, object> metadata = await client.MetadataManager
     .CreateFileMetadataAsync(fileId: "12345", metadataValues, "enterprise", "customerInfo");
+
 ```
 
 </Tab>
@@ -73,6 +75,7 @@ file.createMetadata(
     .add("industry", "Technology")
     .add("tav", 100000)
 );
+
 ```
 
 </Tab>
@@ -87,6 +90,7 @@ metadata = {
 }
 
 client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo').set(metadata)
+
 ```
 
 </Tab>
@@ -106,6 +110,7 @@ client.files.addMetadata(
 ).then(metadata => {
   // ...
 });
+
 ```
 
 </Tab>
@@ -134,6 +139,7 @@ client.files.addMetadata(
   "$version": 1,
   "$canEdit": true
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

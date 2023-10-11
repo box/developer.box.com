@@ -25,17 +25,54 @@ fullyTranslated: true
 ---
 # SDKとツール
 
-以下のツールは、Boxで積極的に開発およびサポートされています。これらのツールには、定期的な製品更新とセキュリティ更新が提供されます。
+Boxで開発およびサポートされているSDKおよびツールは以下のとおりです。
 
-## SDKとCLIのダウンロード
+## SDK
 
-| プラットフォーム                          | メンテナンスの有無 | パリティの状況 |
+アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDKおよびTypescript SDKも記載しています。これらはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
+
+<Message type="notice">
+
+下の表には、SDKが、プロジェクトがメンテナンスされるかどうかとAPIパリティが備わっているかどうかを示す追加情報とともに記載されています。
+
+**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
+
+**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
+
+</Message>
+
+### 次世代のSDK
+
+最新世代のBox Python SDKとBox Typescript SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
+
+<Message type="notice">
+
+新しいTypescript SDKとPython SDKはパブリックベータ段階です。
+
+</Message>
+
+新しいSDKに実装予定の機能を以下に示します。
+
+* **APIの全面的なサポート**: 新しいBox SDKにより、開発者はBox APIエコシステム全体をカバーできるようになります。Boxが提供する最新機能をすべて利用して、機能豊富なアプリケーションを作成できます。
+* **迅速なAPIの更新**: 自動生成による新しい開発アプローチにより、SDKへのBox APIの追加がさらに速いペースで (数日中に) 可能になります。これは、最新の機能をすぐにアプリケーションで利用できるようになることを意味します。
+* **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
+* **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
+
+| プラットフォーム                         | メンテナンスの有無 | APIパリティ |
+| -------------------------------- | --------- | ------- |
+| [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
+| [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
+
+### SDK
+
+次の表に、アプリケーションの作成時に使用できるBox SDKを示します。
+
+| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
 | --------------------------------- | --------- | ------- |
 | [Java SDK][javasdk]               | はい        | Full    |
 | [.NET SDK][dotnetsdk]             | はい        | Full    |
 | [Python SDK][pythonsdk]           | はい        | Full    |
 | [Node SDK][nodesdk]               | はい        | Full    |
-| [CLI][cli]                        | はい        | Full    |
 | [iOS Content SDK][iossdk]         | はい        | Full    |
 | [Android Content SDK][androidsdk] | いいえ       | 部分的     |
 
@@ -47,13 +84,13 @@ fullyTranslated: true
 
 </Message>
 
-<Message type="notice">
+## Box CLI
 
-**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
+Box CLIは、使い勝手の良いコマンドラインツールです。これにより、開発者でも開発者以外のユーザーでもBox APIを利用してルーチンや一括操作を実行できるようになります。
 
-**APIパリティ**: 完全なAPIパリティを持つプロジェクトは、Box Platformで利用可能になった時点で、すべてのプラットフォーム機能が積極的に更新されます。部分的なAPIパリティを持つプロジェクトには一部の機能が欠けていますが、Boxではそのようなプロジェクトを完全なパリティに移行する取り組みを進めています。
-
-</Message>
+| プラットフォーム   | メンテナンスの有無 | APIパリティ |
+| ---------- | --------- | ------- |
+| [CLI][cli] | はい        | Full    |
 
 ## 公式UIライブラリ
 
@@ -75,23 +112,17 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-<Message type="notice">
-
-**メンテナンス**: Boxでは、完全にメンテナンスされるプロジェクトを積極的に開発しています。このようなプロジェクトには最新のセキュリティ更新プログラムや新機能が提供されます。このようなプロジェクトのサポートについては、GitHubまたは[デベロッパーフォーラム][forum]を参照してください。
-
-</Message>
-
 ## 非公式およびコミュニティツール
 
 以下のツールは、Boxで開発され、Boxとそのコミュニティメンバーによって管理されています。このツールについては、定期的な製品更新やセキュリティ更新は提供されません。
 
 <!-- markdownlint-disable line-length -->
 
-| プラットフォーム                        | メンテナンスの有無             | パリティ |
-| ------------------------------- | --------------------- | ---- |
-| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
-| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
-| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的  |
+| プラットフォーム                        | メンテナンスの有無             | APIパリティ |
+| ------------------------------- | --------------------- | ------- |
+| [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
+| [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
+| [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
 
 <!-- markdownlint-enable line-length -->
 
@@ -119,7 +150,7 @@ fullyTranslated: true
 
 [cli]: https://github.com/box/boxcli
 
-[forum]: https://community.box.com/t5/Platform-and-Development-Forum/bd-p/DeveloperForum
+[forum]: https://forum.box.com/
 
 [browseimg]: ./browse.jpg
 
@@ -138,3 +169,7 @@ fullyTranslated: true
 [rubysdk]: https://github.com/cburnette/boxr
 
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
+
+[pythongensdk]: https://github.com/box/box-python-sdk-gen
+
+[tsgensdk]: https://github.com/box/box-typescript-sdk-gen

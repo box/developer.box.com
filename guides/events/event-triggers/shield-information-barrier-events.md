@@ -120,6 +120,7 @@ fullyTranslated: true
        }
    ]
 }
+
 ```
 
 ### Shield情報バリアの非アクティブ化
@@ -163,6 +164,7 @@ fullyTranslated: true
        }
    ]
 }
+
 ```
 
 ## 制限されたアクションによってトリガーされるイベント
@@ -404,6 +406,7 @@ fullyTranslated: true
          }
      }
  }
+
 ```
 
 ### 項目の所有権の移管のブロック
@@ -454,6 +457,7 @@ fullyTranslated: true
         "service_name": "App"
     }
 }
+
 ```
 
 [events]: g://events/enterprise-events/for-enterprise/

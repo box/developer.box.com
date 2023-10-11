@@ -32,6 +32,7 @@ fullyTranslated: true
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared_links=true" \
      -H "Authorization: Bearer <ACCESS_TOKEN>"
+
 ```
 
 </Tab>
@@ -40,6 +41,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared
 
 ```py
 client.search().query("sales", metadata_filters=metadata_search_filters, include_recent_shared_links=True)
+
 ```
 
 </Tab>
@@ -55,6 +57,7 @@ client.search.query(
   .then(results => {
     // ...
   });
+
 ```
 
 </Tab>

@@ -39,11 +39,12 @@ Box APIを呼び出すには、最初にBoxクライアントを設定する必�
 const boxConfig = require("./boxConfig.json");
 const sdk = box.getPreconfiguredInstance(boxConfig);
 const client = sdk.getAppAuthClient("enterprise");
+
 ```
 
 `boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルを`process.js`と同じフォルダに保存していることを前提としています。そうではない場合は、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-最後の`client`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
+最後の`client`の代入行では、APIコールに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 
@@ -57,13 +58,14 @@ const client = sdk.getAppAuthClient("enterprise");
 this.fileReader = new FileReader("boxConfig.json");
 this.boxConfig = BoxConfig.readFrom(fileReader);
 this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
+
 ```
 
 <!-- markdownlint-enable line-length -->
 
 `boxConfig`の代入行では、[手順2][step2]の最後でBoxアプリからダウンロードした`boxConfig.json`ファイルを使用します。上記のサンプルでは、ファイルをJavaプロジェクトのルートに保存していることを前提としています。そうではない場合は、`fileReader`の代入行のパスを、`boxConfig.json`ファイルの場所を指すパスとファイル名に変更してください。
 
-最後の`boxAPI`の代入行では、API呼び出しに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
+最後の`boxAPI`の代入行では、APIコールに使用できるBoxクライアントオブジェクトを作成します。この時点では、その対象範囲は特定のユーザーではなく、アプリケーションの[サービスアカウント][service-account]に設定されています。
 
 </Choice>
 
@@ -113,6 +115,7 @@ function addGroupUser(groupId, email) {
     }
   });
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -139,6 +142,7 @@ public void addGroupUser(String groupId, String userEmail) {
     }
   }
 }
+
 ```
 
 </Choice>
@@ -186,6 +190,7 @@ function removeGroupUser(groupId, email) {
     }
   });
 }
+
 ```
 
 </Choice>
@@ -207,6 +212,7 @@ public void removeGroupUser(String groupId, String userEmail) {
     }
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -269,6 +275,7 @@ function getGroupId(groupName, callback) {
     }
   });
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -297,6 +304,7 @@ public String getGroupId(String groupName) {
 
   return groupId;
 }
+
 ```
 
 </Choice>
@@ -359,6 +367,7 @@ function processContent(user, channel, itemType, itemId) {
     });
   });
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -404,6 +413,7 @@ public void processContent(JSONObject userResponse, String channel, String fType
     }
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

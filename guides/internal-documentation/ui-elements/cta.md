@@ -25,6 +25,7 @@ fullyTranslated: true
 <CTA to='guide://files/get'>
   Learn more about files
 </CTA>
+
 ```
 
 <H>

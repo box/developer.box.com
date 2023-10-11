@@ -33,13 +33,15 @@ fullyTranslated: true
 ```curl
 curl https://api.box.com/2.0/events \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
-このAPIにより、使用可能なすべてのイベントが古い方から順に返されます。レスポンスには`next_stream_position`値も含まれており、これを使用して、ストリーム内の次の位置に対する次のAPI呼び出しを実行できます。
+このAPIにより、使用可能なすべてのイベントが古い方から順に返されます。レスポンスには`next_stream_position`値も含まれており、これを使用して、ストリーム内の次の位置に対する次のAPIコールを実行できます。
 
 ```curl
 curl https://api.box.com/2.0/events?stream_position=388720462721 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 `stream_position`は、最も近いストリーム位置が返されるよう`now`に設定することもできます。
@@ -47,6 +49,7 @@ curl https://api.box.com/2.0/events?stream_position=388720462721 \
 ```curl
 curl https://api.box.com/2.0/events?stream_position=now \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 この場合、APIによって空のリストと、次の呼び出しに使用できる`next_stream_position`が返されます。

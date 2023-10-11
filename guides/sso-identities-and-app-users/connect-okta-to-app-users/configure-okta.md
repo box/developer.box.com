@@ -175,6 +175,7 @@ const oktaClientSecret = exports.oktaClientSecret = 'cugDJy2ERfIQHDXv-j2134DfTTe
 const oktaOrgUrl = exports.oktaOrgUrl = 'YOURDOMAIN.okta.com';
 const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
 const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -197,6 +198,7 @@ okta.oauth2.issuer=https://YOURDOMAIN.okta.com/oauth2/default
 okta.oauth2.clientId=0oa48567frkg5KW4x6
 okta.oauth2.clientSecret=cugDJy2ERfIQHDXv-j2134DfTTes-Sa3
 security.oauth2.sso.loginPath=/authorization-code/callback
+
 ```
 
 </Choice>
@@ -229,6 +231,7 @@ okta_client_secret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3'
 okta_org_url = 'http://YOURDOMAIN.okta.com'
 okta_auth_token = '01KkTQTRfs1yKLr4Ojy26iqoIjK_4fHyq132Dr5T'
 okta_callback_route = '/oidc/callback'
+
 ```
 
 最後に、Flask構成ファイルを更新します。
@@ -261,6 +264,7 @@ okta_callback_route = '/oidc/callback'
     ]
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -295,6 +299,7 @@ services.AddAuthentication(options =>
   ClientId = "0oa48567frkg5KW4x6",
   ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
 });
+
 ```
 
 <!-- markdownlint-enable line-length -->

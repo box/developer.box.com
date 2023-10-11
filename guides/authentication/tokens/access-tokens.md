@@ -34,6 +34,7 @@ OAuth 2.0を使用してアクセストークンをリクエストすると、�
 curl -X POST https://api.box.com/oauth2/token \
   -H "content-type: application/x-www-form-urlencoded" \
   -d '...'
+
 ```
 
 ```json
@@ -44,6 +45,7 @@ curl -X POST https://api.box.com/oauth2/token \
   "refresh_token": "c3FIOG9vSGV4VHo4QzAyg5T1JvNnJoZ3ExaVNyQWw6WjRsanRKZG5lQk9qUE1BVQ",
   "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
+
 ```
 
 このオブジェクト内には、トークン文字列 (`access_token`) のほか、現在のトークンの有効期限が切れたとき (`expires_in`) に新しいアクセストークンのリクエストに使用できる更新トークン (`refresh_token`) があります。
@@ -56,6 +58,7 @@ JWTまたはクライアント資格情報許可を使用してアクセスト�
 curl --location --request POST ‘https://api.box.com/oauth2/token’ \
 --header ‘Content-Type: application/x-www-form-urlencoded’ \
 --data-urlencode '...'
+
 ```
 
 ```json
@@ -65,6 +68,7 @@ curl --location --request POST ‘https://api.box.com/oauth2/token’ \
   "restricted_to": [],
   "issued_token_type": "bearer"
 }
+
 ```
 
 このオブジェクト内には、トークン文字列 (`access_token`) があります。更新トークンは返されないため、アクセストークンの有効期限が切れたとき (`expires_in`) には、[トークンエンドポイント][token]を使用して、新しいトークンをリクエストする必要があります。

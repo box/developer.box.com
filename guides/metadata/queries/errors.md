@@ -51,6 +51,7 @@ fullyTranslated: true
   "value": 100,
   "status": "active"
 }
+
 ```
 
 <Message notice>

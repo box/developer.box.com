@@ -43,7 +43,7 @@ fullyTranslated: true
 
 ## 利用方法
 
-API呼び出しを実行して[アクセストークン][accesstoken]を取得する際は、リクエスト本文にクライアントIDとクライアントシークレットを含める必要があります。`grant_type`を`client_credentials`に設定します。
+APIコールを実行して[アクセストークン][accesstoken]を取得する際は、リクエスト本文にクライアントIDとクライアントシークレットを含める必要があります。`grant_type`を`client_credentials`に設定します。
 
 アプリケーションの[サービスアカウント][sa]として認証する場合は、以下のようにします。
 

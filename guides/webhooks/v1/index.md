@@ -25,7 +25,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-このプロセスで作成されたWebhookは、API呼び出しでユーザーのすべてのWebhookのリストを取得しても表示されません。すべてのV1 Webhookは、[開発者コンソール][console]の \[**Webhook**] タブに表示されます。
+このプロセスで作成されたWebhookは、APIコールでユーザーのすべてのWebhookのリストを取得しても表示されません。すべてのV1 Webhookは、[開発者コンソール][console]の \[**Webhook**] タブに表示されます。
 
 </Message>
 

@@ -33,6 +33,7 @@ fullyTranslated: true
   ],
   "ancestor_folder_id": "5555"
 }
+
 ```
 
 この場合、`from`値はメタデータテンプレートの`scope`と`templateKey`を表し、`ancestor_folder_id`はサブフォルダを含む検索範囲となるフォルダIDを表します。
@@ -67,6 +68,7 @@ fullyTranslated: true
   },
   ...
 }
+
 ```
 
 ### 論理演算子
@@ -150,6 +152,7 @@ fullyTranslated: true
   },
   ...
 }
+
 ```
 
 <Message notice>

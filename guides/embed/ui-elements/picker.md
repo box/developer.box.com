@@ -31,14 +31,6 @@ Box Content Picker UI Elementを使用すると、開発者は、デスクトッ
 
 NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
 
-<Message>
-
-# ブラウザのサポート
-
-古いブラウザでは、UI Elementの[サポートは限定的](g://embed/ui-elements/browser)です。目的のブラウザに合ったpolyfillを必ず追加してください。
-
-</Message>
-
 ## 認証
 
 UI Elementは認証に依存しない方法で設計されているため、Boxアカウントを持つユーザー (管理対象ユーザー) とBox以外のアカウントを持つユーザー (App User) のどちらにUI Elementを使用するかどうかに関係なく、UI Elementを使用するのに特別な設定は必要ありません。その理由は、UI Elementは認証のために「トークン」を受け取ることのみを予期しており、Boxにはトークンの生成方法としてOAuthとJWTの2つがあるからです。
@@ -60,12 +52,6 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     <meta charset="utf-8" />
     <title>Box File Selection</title>
 
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
-
     <!-- Latest version of the picker css for your locale -->
     <link
       rel="stylesheet"
@@ -86,6 +72,7 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
     </script>
   </body>
 </html>
+
 ```
 
 ## デモ
@@ -186,6 +173,7 @@ filePicker.removeListener(eventName, listener);
  * @return {void}
  */
 filePicker.removeAllListeners();
+
 ```
 
 <!-- markdownlint-disable line-length -->

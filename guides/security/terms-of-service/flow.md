@@ -40,6 +40,7 @@ fullyTranslated: true
     "message": "User must accept custom terms of service before action can be taken",
     "request_id": "ADF7722DD"
 }
+
 ```
 
 アプリケーションは、[`GET /terms_of_services/:id`][get_tos_id]を呼び出してサービス利用規約の情報をリクエストします。
@@ -59,6 +60,7 @@ fullyTranslated: true
   "created_at": "2012-12-12T10:53:43-08:00",
   "modified_at": "2012-12-12T10:53:43-08:00"
 }
+
 ```
 
 その後、アプリケーションはサービス利用規約のテキストをユーザーに表示できます。

@@ -75,6 +75,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "batch_send": {
             "id": "W23YVL46"
         },
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "Can you please sign this document?",
             "message": "This document shows the terms agreed to on the phone."
@@ -82,6 +86,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### 変換
@@ -119,6 +124,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "signer":null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -126,6 +135,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### 完了
@@ -163,6 +173,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -170,6 +184,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### キャンセル
@@ -207,6 +222,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -214,6 +233,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### 期限切れ
@@ -251,6 +271,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "signer": null,
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -258,6 +282,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ## 署名者イベント
@@ -302,9 +327,13 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        }
+        },
         "sender_message": {
             "subject": "",
             "message": ""
@@ -312,6 +341,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### 署名者による表示
@@ -354,6 +384,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -364,6 +398,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### ダウンロード
@@ -404,6 +439,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -418,6 +457,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         }
     }
 }
+
 ```
 
 ### 転送
@@ -458,6 +498,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -472,6 +516,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
     }
 }
+
 ```
 
 ### 署名
@@ -514,6 +559,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -524,6 +573,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 ### 拒否
@@ -566,6 +616,10 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         },
         "template": null,
         "batch_send": null,
+        "redirection": {
+            "redirect_url": "https://www.google.com",
+            "declined_redirect_url": "https://www.googledecline.com"
+        },
         "ready_sign_link": {
             "id": "aaae45bb-e89b-12d3-a456-426614174000"
         },
@@ -576,6 +630,7 @@ APIまたはUIを使用して署名リクエストが作成されると、`SIGN_
         "forward": null
     }
 }
+
 ```
 
 [sign-guide]: g://box-sign

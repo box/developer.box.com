@@ -39,6 +39,7 @@ fullyTranslated: true
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -51,6 +52,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
   
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <Message>
@@ -67,51 +69,52 @@ PS /Users/user/repos/boxcli/examples>
 
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
-   ```bash
-   git clone https://github.com/box/boxcli.git
-   cd boxcli/examples/Metadata\ Extraction/
-   ```
+```bash
+git clone https://github.com/box/boxcli.git
+cd boxcli/examples/Metadata\ Extraction/
 
-<!---->
+```
 
-````
+2. `folderID`および`userID`パラメータを指定して、スキャンするフォルダとスクリプトを実行するユーザーをスクリプトに指示します。
 
-2. Specify the `folderID` and `userID` parameters to tell the script which
-   folder to scan, and who is the user running the script.
-
-   ```bash
+```bash
    [string]$FolderID = "",
    [string]$UserID = "",
-````
+
+```
 
    パラメータをスクリプトで直接指定しない場合は、フラグとして渡すか、スクリプトで入力を求めるプロンプトを表示することができます。フラグを使用したコマンドのサンプルは次のようになります。
 
 ```bash
-./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+   ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+
 ```
 
 ## スクリプトの実行
 
 1. PowerShellコマンドを実行します。
 
-   ```bash
+```bash
    pwsh
-   ```
+
+```
 
 2. スクリプトを実行します。
 
-   ```bash
+```bash
    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
-   ```
+
+```
 
    スクリプトが終了すると、以下のような出力が表示されます。
 
-   ```bash
+```bash
    Pulling data from Folder ID: 173961139760
    metadata as user ID: 20718545815
    Reading Item ID: 1016853559790
    Metadata saved to: MetadataTemplate_properties.csv
-   ```
+
+```
 
 ## ログ
 

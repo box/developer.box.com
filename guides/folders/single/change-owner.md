@@ -43,6 +43,7 @@ curl -X PUT https://api.box.com/2.0/collaborations/1234 \
      -d '{
        "role": "owner"
      }'
+
 ```
 
 </Tab>
@@ -56,6 +57,7 @@ BoxCollaborationRequest requestParams = new BoxCollaborationRequest()
     Role = "owner"
 };
 BoxCollaboration collab = await client.CollaborationsManager.EditCollaborationAsync(requestParams);
+
 ```
 
 </Tab>
@@ -68,6 +70,7 @@ for (BoxCollaboration.Info collabInfo : pendingCollaborations) {
     collabInfo.setRole(BoxCollaboration.Role.OWNER);
     collabInfo.getResource().updateInfo(collabInfo);
 }
+
 ```
 
 </Tab>
@@ -79,6 +82,7 @@ from boxsdk.object.collaboration import CollaborationRole, CollaborationStatus
 
 collaboration = client.collaboration(collab_id='12345')
 updated_collaboration = collaboration.update_info(CollaborationRole.OWNER)
+
 ```
 
 </Tab>
@@ -90,6 +94,7 @@ client.collaborations.update('12345', {role: client.collaborationRoles.OWNER})
   .then(collaboration => {
     // ...
   });
+
 ```
 
 </Tab>

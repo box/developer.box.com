@@ -45,6 +45,7 @@ APIリファレンスドキュメントでは、このようにラベルの付�
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
           -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -55,6 +56,7 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
   "lock": null,
   "type": "file"
 }
+
 ```
 
 <Message type="notice">
@@ -74,6 +76,7 @@ APIレスポンスで返されるデフォルトのフィールドセットは�
 ```curl
 curl https://api.box.com/2.0/files/12345 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -100,6 +103,7 @@ curl https://api.box.com/2.0/files/12345 \
     "trashed_at": null,
     "type": "file"
 }
+
 ```
 
 ### Mini
@@ -111,6 +115,7 @@ curl https://api.box.com/2.0/files/12345 \
 ```curl
 curl https://api.box.com/2.0/files/12345 \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -138,6 +143,7 @@ curl https://api.box.com/2.0/files/12345 \
   }
   ...
 }
+
 ```
 
 <Message type="notice">
@@ -157,6 +163,7 @@ APIレスポンスで返すことができるフィールドセット全体は�
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
   -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -167,4 +174,5 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
   "lock": null,
   "type": "file"
 }
+
 ```

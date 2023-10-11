@@ -50,75 +50,137 @@ fullyTranslated: true
 
 <BannerTitle>
 
-コンテンツポータルを強化**Box Platform**
-
-</BannerTitle>
-
-<BannerTitle>
-
 アプリを統合**Box Platform**
 
 </BannerTitle>
 
-APIを利用してBoxの機能を拡張
+Box製品を最大限利用するのに役立つすべての開発者向けリソース
 
 </Banner>
 
-<Centered wide>
+<!-- <Centered wide>
 
-<Header to="/guides" centered>
+<Header to='/guides' centered>
 
-ガイド
+Guides
 
 </Header>
 
 <GuidesList>
 
-Boxの総合的なガイドを参照しながら、利用を開始し、ヒントやテクニックを習得して、Box Platform APIの使い方を確認しましょう。利用を開始するにあたり、以下の6つのガイドがよく使用されています。
+Get started, learn tips and tricks, and discover how to use the Box
+Platform API with our comprehensive guides. Here are six of the most used
+guides to get you started.
 
-<GuideList href="/guides/authentication/">
+<GuideList href='/guides/authentication/'>
 
-認証
-
-</GuideList>
-
-<GuideList href="/guides/cli/quick-start/">
-
-CLIクイックスタート
+Authentication
 
 </GuideList>
 
-<GuideList href="/guides/tooling/postman/quick-start/">
+<GuideList href='/guides/cli/quick-start/'>
 
-Postmanクイックスタート
-
-</GuideList>
-
-<GuideList href="/guides/api-calls/permissions-and-errors/common-errors/">
-
-一般的なエラー
+CLI Quick Start
 
 </GuideList>
 
-<GuideList href="/guides/api-calls/pagination/offset-based/">
+<GuideList href='/guides/tooling/postman/quick-start/'>
 
-APIによるページ割り
+Postman Quick Start
 
 </GuideList>
 
-<GuideList href="/guides/embed/ui-elements/">
+<GuideList href='/guides/api-calls/permissions-and-errors/common-errors/'>
 
-UI Element
+Common Errors
+
+</GuideList>
+
+<GuideList href='/guides/api-calls/pagination/offset-based/'>
+
+API Pagination
+
+</GuideList>
+
+<GuideList href='/guides/embed/ui-elements/'>
+
+UI Elements
 
 </GuideList>
 
 </GuidesList>
 
-<More to="/guides" right>
+<More to='/guides' right>
 
-その他のガイド
+More Guides
 
 </More>
+
+</Centered>
+
+ -->
+
+<Centered wide id="start-with-box-platform">
+
+<Header centered>
+
+Box Platformを初めて使用する場合はどのように始めればよいですか?
+
+</Header>
+
+こちらにまとめました。以下の手順に従って、新しいアプリケーションを作成したり、Box Platformの機能を確認したりしましょう。
+
+<TileGrid>
+
+<Tile type="users" title="1. ユーザータイプを確認する" href="/guides/getting-started/user-types/">
+
+Box Platformは、さまざまなユーザータイプを必要とする可能性がある多くのユースケースに対応します。ユーザータイプの違いについて詳細を確認してください。
+
+</Tile>
+
+<Tile type="apps" title="2. アプリケーションの種類を理解する" href="/guides/applications/select/">
+
+アプリケーションを作成する際に、いくつかの種類から選択できます。こちらのガイドを読んで、自分のニーズに最適なものを確認してください。
+
+</Tile>
+
+<Tile type="authentication" title="3. 認証方法を確認する" href="/guides/authentication/select/">
+
+Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライアント資格情報、およびアプリトークン認証がサポートされています。詳細を確認し、アプリに適用する方法を選択してください。
+
+</Tile>
+
+<Tile type="cli" title="4. Box CLIを設定する" href="/guides/cli/quick-start/">
+
+必要に応じて、Box CLIクイックスタートガイドに従って、APIをテストする場所を用意します。開発を始めるまでに5分もかかりません。
+
+</Tile>
+
+<Tile type="architecture" title="5. アーキテクチャパターンを作成する" href="/guides/getting-started/architecture-patterns/">
+
+Boxでは、ペンを使って紙にソリューションを書き出すことを常にお勧めしています。インスピレーションを得るために最も一般的なアーキテクチャパターンを見てみましょう。
+
+</Tile>
+
+<Tile type="create" title="6. アプリケーションを作成する" href="https://app.box.com/developers/console">
+
+これで、アプリケーションの作成を開始できるようになりました。開発者コンソールを起動して、お好みのアプリケーションを作成してください。
+
+</Tile>
+
+<Tile type="authorize" title="7. アプリケーションを承認する" href="/guides/authorization/">
+
+アプリの使用を開始するために満たすべき承認の要件を確認してください。
+
+</Tile>
+
+<Tile type="code" title="8. コーディングを開始する" href="#sdks-and-tools">
+
+最後に、APIリファレンス、SDK、Box CLI、Postmanコレクション、Box UI Elementsなど、Boxの開発者向けツールキットを確認します。
+
+</Tile>
+
+</TileGrid>
 
 </Centered>
 
@@ -130,67 +192,157 @@ UI Element
 
 </Centered>
 
-<Dark>
+<section id="sdks-and-tools" style="background-color: #FBFBFB;">
+
+<div style="padding: 0 16px">
+
+<Header centered>
+
+SDKやツール別に見る
+
+</Header>
+
+Box Platformを使用した開発は、SDK、Box CLI、Postmanコレクション、フロントエンドUI Elementなどを使用すると簡単です。
+
+</div>
+
+<TileSlider>
+
+<Tile type="box-orange" title="APIリファレンス" href="/reference/">
+
+  _Box APIリファレンス_
+
+</Tile>
+
+<Tile type="java" title="Java SDK" href="https://github.com/box/box-java-sdk#readme">
+
+  _box-java-sdk_
+
+</Tile>
+
+<Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
+
+  _box-python-sdk_
+
+</Tile>
+
+<Tile type="node" title="Node.js SDK" href="https://github.com/box/box-node-sdk#readme">
+
+  _box-node-js-sdk_
+
+</Tile>
+
+<Tile type="net" title=".NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
+
+  _box-windows-sdk-v2_
+
+</Tile>
+
+<Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
+
+  _box-ios-sdk_
+
+</Tile>
+
+<Tile type="tool" title="Postmanコレクション" href="/guides/tooling/postman">
+
+  _Box Postmanコレクション_
+
+</Tile>
+
+<Tile type="box-orange" title="Box CLI" href="/guides/cli/">
+
+  _box-cli_
+
+</Tile>
+
+<Tile type="box-orange" title="Box UI Elements" href="/guides/embed/ui-elements/">
+
+  _box-ui-elements_
+
+</Tile>
+
+<Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
+
+  _Box Embed_
+
+</Tile>
+
+</TileSlider>
+
+<More to="/sdks-and-tools/" center>
+
+詳細を表示
+
+</More>
+
+</section>
+
+<!-- <Dark>
 
 <Centered wide>
 
-<Header to="/sdks-and-tools" centered>
+<Header to='/sdks-and-tools' centered>
 
-SDKとツール
+SDKS & Tools
 
 </Header>
 
 <SDKS>
 
-Box Platformを使用した開発は、ご利用のプログラミング言語のSDK、コマンドラインインターフェース、フロントエンドUI Elementなどを使用するとより簡単になります。
+Development with Box Platform is made easier with SDKs for your
+programming language, a command line interface, front-end UI elements,
+and much more.
 
-<SDK language="python" href="https://github.com/box/box-python-sdk">
+<SDK language='python' href='https://github.com/box/box-python-sdk'>
 
 Python SDK
 
 </SDK>
 
-<SDK language="java" href="https://github.com/box/box-java-sdk">
+<SDK language='java' href='https://github.com/box/box-java-sdk'>
 
 Java SDK
 
 </SDK>
 
-<SDK language="node" href="https://github.com/box/box-node-sdk">
+<SDK language='node' href='https://github.com/box/box-node-sdk'>
 
 Node SDK
 
 </SDK>
 
-<SDK language="dotnet" href="https://github.com/box/box-windows-sdk">
+<SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
 
 Windows .NET SDK
 
 </SDK>
 
-<SDK language="cli" href="https://github.com/box/boxcli">
+<SDK language='cli' href='https://github.com/box/boxcli'>
 
 Box CLI
 
 </SDK>
 
-<SDK language="uielements" href="https://github.com/box/box-ui-elements">
+<SDK language='uielements' href='https://github.com/box/box-ui-elements'>
 
-UI Element
+UI Elements
 
 </SDK>
 
 </SDKS>
 
-<More to="/sdks-and-tools" right>
+<More to='/sdks-and-tools' right>
 
-その他のSDKとツール
+More SDKs & Tools
 
 </More>
 
 </Centered>
 
 </Dark>
+
+ -->
 
 <Centered wide>
 
@@ -199,6 +351,74 @@ UI Element
 </FeaturedBoard>
 
 </Centered>
+
+<section id="additional-box-platform-concepts" style="background-color: #FBFBFB;">
+
+<div style="padding: 0 16px">
+
+<Header centered>
+
+Box Platformのその他のコンセプト
+
+</Header>
+
+さらに詳しく知りたい場合は、以下のガイドを使用すると、Box Platformの仕組みに関する補足情報を確認して、理解を広げ、カスタムアプリケーションを改善できます。
+
+</div>
+
+<TileSlider>
+
+<Tile type="guide" title="ダウンロード" href="/guides/downloads/">
+
+Box APIを使用すると、ファイルをアプリケーションのサーバーにダウンロードすることも、エンドユーザーがブラウザで直接ダウンロードすることもできます。
+
+</Tile>
+
+<Tile type="guide" title="アップロード" href="/guides/uploads/">
+
+ファイルアップロードAPIを使用して直接ファイルをアップロードすることも、大きなファイルには分割アップロードAPIを使用することもできます。
+
+</Tile>
+
+<Tile type="guide" title="エラー" href="/guides/api-calls/permissions-and-errors/common-errors/">
+
+一般的なエラーのリファレンスを参照して、リクエスト処理の問題を伝えるために使用されるHTTPステータスコードの詳細を確認できます。
+
+</Tile>
+
+<Tile type="guide" title="メタデータ" href="/guides/metadata/">
+
+メタデータによって、ユーザーやアプリケーションがどのようにファイルやフォルダに関連付けられたカスタムデータを定義、格納できるかを確認します。
+
+</Tile>
+
+<Tile type="guide" title="Webhook" href="/guides/webhooks/">
+
+Webhookを使用すると、Boxコンテンツのイベントを監視し、イベントの発生時に任意のURLへの通知を受け取ることができます。
+
+</Tile>
+
+<Tile type="guide" title="検索" href="/guides/search/">
+
+ファイルコンテンツ検索クエリを使用して、Box内の関連コンテンツを探すことができます。Box検索APIは、すべてのBox SDKとCLIでサポートされています。
+
+</Tile>
+
+<Tile type="guide" title="Salesforce" href="/guides/tooling/salesforce-toolkit/">
+
+BoxとSalesforceを統合しましょう。最近、Boxでは、ローコード/ノーコードのソリューションであるSalesforceフローのサポートを開始しました。
+
+</Tile>
+
+</TileSlider>
+
+<More to="/guides/" center>
+
+すべてのガイドを参照
+
+</More>
+
+</section>
 
 <Centered wide>
 
@@ -212,9 +432,9 @@ UI Element
 
 </BlogCards>
 
-<More to="https://medium.com/box-developer-blog" right>
+<More to="https://medium.com/box-developer-blog" centered>
 
-開発者向けブログ
+Box開発者向けブログを参照
 
 </More>
 

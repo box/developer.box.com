@@ -30,11 +30,11 @@ fullyTranslated: true
 
 このガイドでは、Box SDKを使用しないJWT認証について説明します。JWTはエンドユーザーによる操作を必要とせず、Box APIで直接認証するよう設計されています。
 
-このトークンの使用方法を確認するには、[API呼び出しの実行](g://api-calls)に関するガイドを参照してください。
+このトークンの使用方法を確認するには、[APIコールの実行](g://api-calls)に関するガイドを参照してください。
 
 <Message notice>
 
-デフォルトでは、JWTを使用して取得したアクセストークンは、アプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPI呼び出しはすべて、このアプリケーションから実行されます。アプリケーションのサービスアカウントがコラボレータとして追加されるまで、このアカウントでは、既存のファイルやフォルダにアクセスできません。
+デフォルトでは、JWTを使用して取得したアクセストークンは、アプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPIコールはすべて、このアプリケーションから実行されます。アプリケーションのサービスアカウントがコラボレータとして追加されるまで、このアカウントでは、既存のファイルやフォルダにアクセスできません。
 
 `as-user`ヘッダーを使用するか[ユーザーアクセストークン](g://authentication/jwt/user-access-tokens)をリクエストして、[別のユーザーとして処理を実行](g://authentication/oauth2/as-user)できます。
 
@@ -73,6 +73,7 @@ fullyTranslated: true
   },
   "enterpriseID": "1234567"
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -113,6 +114,7 @@ var reader = new StreamReader("config.json");
 var json = reader.ReadToEnd();
 
 var config = JsonConvert.DeserializeObject<Config>(json);
+
 ```
 
 </Tab>
@@ -146,6 +148,7 @@ FileReader reader = new FileReader("config.json");
 
 Gson gson = new GsonBuilder().create();
 Config config = (Config) gson.fromJson(reader, Config.class);
+
 ```
 
 </Tab>
@@ -157,6 +160,7 @@ import json
 import os
 
 config = json.load(open('config.json'))
+
 ```
 
 </Tab>
@@ -167,6 +171,7 @@ config = json.load(open('config.json'))
 const fs = require("fs");
 
 const config = JSON.parse(fs.readFileSync("config.json"));
+
 ```
 
 </Tab>
@@ -179,6 +184,7 @@ require 'json'
 config = JSON.parse(
   File.read('config.json')
 )
+
 ```
 
 </Tab>
@@ -188,6 +194,7 @@ config = JSON.parse(
 ```php
 $json = file_get_contents('config.json');
 $config = json_decode($json);
+
 ```
 
 </Tab>
@@ -264,6 +271,7 @@ public byte[] ConvertRSAParametersField(BigInteger n, int size)
 }
 
 var key = CreateRSAProvider(ToRSAParameters(keyParams));
+
 ```
 
 </Tab>
@@ -301,6 +309,7 @@ PrivateKeyInfo keyInfo
   = ((PKCS8EncryptedPrivateKeyInfo) keyPair).decryptPrivateKeyInfo(decryptProvider);
 
 PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
+
 ```
 
 </Tab>
@@ -321,6 +330,7 @@ key = load_pem_private_key(
   password=passphrase.encode('utf8'),
   backend=default_backend(),
 )
+
 ```
 
 </Tab>
@@ -332,6 +342,7 @@ let key = {
   key: config.boxAppSettings.appAuth.privateKey,
   passphrase: config.boxAppSettings.appAuth.passphrase
 };
+
 ```
 
 </Tab>
@@ -346,6 +357,7 @@ key = OpenSSL::PKey::RSA.new(
   appAuth['privateKey'],
   appAuth['passphrase']
 )
+
 ```
 
 </Tab>
@@ -356,6 +368,7 @@ key = OpenSSL::PKey::RSA.new(
 $private_key = $config->boxAppSettings->appAuth->privateKey;
 $passphrase = $config->boxAppSettings->appAuth->passphrase;
 $key = openssl_pkey_get_private($private_key, $passphrase);
+
 ```
 
 </Tab>
@@ -396,6 +409,7 @@ var claims = new List<Claim>{
   new Claim("box_sub_type", "enterprise"),
   new Claim("jti", jti),
 };
+
 ```
 
 </Tab>
@@ -414,6 +428,7 @@ claims.setSubject(config.enterpriseID);
 claims.setClaim("box_sub_type", "enterprise");
 claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
+
 ```
 
 </Tab>
@@ -434,6 +449,7 @@ claims = {
   'jti': secrets.token_hex(64),
   'exp': round(time.time()) + 45
 }
+
 ```
 
 </Tab>
@@ -453,6 +469,7 @@ let claims = {
   jti: crypto.randomBytes(64).toString("hex"),
   exp: Math.floor(Date.now() / 1000) + 45
 };
+
 ```
 
 </Tab>
@@ -472,6 +489,7 @@ claims = {
   jti: SecureRandom.hex(64),
   exp: Time.now.to_i + 45
 }
+
 ```
 
 </Tab>
@@ -490,6 +508,7 @@ $claims = [
   'exp' => time() + 45,
   'kid' => $config->boxAppSettings->appAuth->publicKeyID
 ];
+
 ```
 
 </Tab>
@@ -539,6 +558,7 @@ var header = new JwtHeader(signingCredentials: credentials);
 var jst = new JwtSecurityToken(header, payload);
 var tokenHandler = new JwtSecurityTokenHandler();
 string assertion = tokenHandler.WriteToken(jst);
+
 ```
 
 </Tab>
@@ -557,6 +577,7 @@ jws.setAlgorithmHeaderValue(AlgorithmIdentifiers.RSA_USING_SHA512);
 jws.setHeader("typ", "JWT");
 jws.setHeader("kid", config.boxAppSettings.appAuth.publicKeyID);
 String assertion = jws.getCompactSerialization();
+
 ```
 
 </Tab>
@@ -576,6 +597,7 @@ assertion = jwt.encode(
     'kid': keyId
   }
 )
+
 ```
 
 </Tab>
@@ -593,6 +615,7 @@ let headers = {
 }
 
 let assertion = jwt.sign(claims, key, headers)
+
 ```
 
 </Tab>
@@ -603,6 +626,7 @@ let assertion = jwt.sign(claims, key, headers)
 require 'jwt'
 keyId = appAuth['publicKeyID']
 assertion = JWT.encode(claims, key, 'RS512', { kid: keyId })
+
 ```
 
 </Tab>
@@ -612,6 +636,7 @@ assertion = JWT.encode(claims, key, 'RS512', { kid: keyId })
 ```php
 use \Firebase\JWT\JWT;
 $assertion = JWT::encode($claims, $key, 'RS512');
+
 ```
 
 </Tab>
@@ -672,6 +697,7 @@ class Token
 var data = response.Content.ReadAsStringAsync().Result;
 var token = JsonConvert.DeserializeObject<Token>(data);
 var accessToken = token.access_token;
+
 ```
 
 </Tab>
@@ -718,6 +744,7 @@ class Token {
 
 Token token = (Token) gson.fromJson(response, Token.class);
 String accessToken = token.access_token;
+
 ```
 
 </Tab>
@@ -736,6 +763,7 @@ params = {
 }
 response = requests.post(authentication_url, params)
 access_token = response.json()['access_token']
+
 ```
 
 </Tab>
@@ -756,6 +784,7 @@ let accessToken = await axios.post(
   })
 )
 .then(response => response.data.access_token)
+
 ```
 
 </Tab>
@@ -781,6 +810,7 @@ request.body = params
 response = http.request(request)
 
 access_token = JSON.parse(response.body)['access_token']
+
 ```
 
 </Tab>
@@ -804,6 +834,7 @@ $response = $client->request('POST', $authenticationUrl, [
 
 $data = $response->getBody()->getContents();
 $access_token = json_decode($data)->access_token;
+
 ```
 
 </Tab>

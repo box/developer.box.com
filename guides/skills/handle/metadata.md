@@ -84,6 +84,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards 
          }
        }],
      }'
+
 ```
 
 </Tab>
@@ -118,6 +119,7 @@ client.files.addMetadata('12345', 'global', 'boxSkillsCards', metadata)
   .then(metadata => { 
     // ...
   })
+
 ```
 
 </Tab>
@@ -149,6 +151,7 @@ metadata = {
 }
 
 client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards').create(metadata)
+
 ```
 
 </Tab>
@@ -159,6 +162,7 @@ client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards')
 BoxFile file = new BoxFile(api, "12345");
 Metadata metadata = new Metadata()
 file.createMetadata("global", "boxSkillsCards", metadata);
+
 ```
 
 </Tab>
@@ -191,6 +195,7 @@ var metadataValues = new Dictionary<string, object>()
 };
 Dictionary<string, object> metadata = await client.MetadataManager
     .CreateFileMetadataAsync(fileId: "12345", metadataValues, "global", "boxSkillsCards");
+
 ```
 
 </Tab>
@@ -201,7 +206,7 @@ Dictionary<string, object> metadata = await client.MetadataManager
 
 <Message warning>
 
-Box Skillカードがすでにこのファイルに適用されている場合は、このAPI呼び出しによって、HTTPステータスコード`409`と共にエラーが返されます。
+Box Skillカードがすでにこのファイルに適用されている場合は、このAPIコールによって、HTTPステータスコード`409`と共にエラーが返されます。
 
 </Message>
 
@@ -244,6 +249,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
          }
        }
      ]'
+
 ```
 
 </Tab>
@@ -282,6 +288,7 @@ client.files.updateMetadata('12345', 'global', 'boxSkillsCards', updates)
   .then(metadata => { 
     // ...
   })
+
 ```
 
 </Tab>
@@ -316,6 +323,7 @@ card = {
 updates = file_metadata.start_update()
 updates.replace('/cards/0', card)
 file_metadata.update(updates)
+
 ```
 
 </Tab>
@@ -326,6 +334,7 @@ file_metadata.update(updates)
 BoxFile file = new BoxFile(api, "12345");
 Metadata metadata = new Metadata()
 file.updateMetadata("global", "boxSkillsCards", metadata);
+
 ```
 
 </Tab>
@@ -365,6 +374,7 @@ var updates = new List<BoxMetadataUpdate>()
 };
 Dictionary<string, object> updatedMetadata = await client.MetadataManager
     .UpdateFileMetadataAsync("12345", updates, "global", "boxSkillsCards");
+
 ```
 
 </Tab>

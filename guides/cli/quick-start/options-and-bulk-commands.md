@@ -37,6 +37,7 @@ fullyTranslated: true
 
 ```bash
 box folders:create 0 Example_Folder --as-user=123456
+
 ```
 
 <Message type="warning">
@@ -49,7 +50,7 @@ as-userヘッダーを使用できるのは、サービスアカウントと管�
 
 <!--alex ignore execute-->
 
-CSVファイルを使用すると、コマンドを一括して実行できます。このスプレッドシートの各行が個別のAPI呼び出しとして処理されます。
+CSVファイルを使用すると、コマンドを一括して実行できます。このスプレッドシートの各行が個別のAPIコールとして処理されます。
 
 <!--alex ignore execute-->
 
@@ -77,6 +78,7 @@ CSVファイルの列名を指定する際は、[GitHubリポジトリ][github]�
 
 ```bash
 box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv
+
 ```
 
 <!-- markdownlint-enable line-length -->

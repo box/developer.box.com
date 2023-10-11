@@ -141,6 +141,7 @@ namespace BoxPlayground {
     }
   }
 }
+
 ```
 
 <tab title="Java"></tab>
@@ -256,6 +257,7 @@ public class UploadAllFilesInFolder {
   return id;
  }
 }
+
 ```
 
 </Tab>
@@ -465,6 +467,7 @@ function handleFolderConflictError(e) {
     }
   }
 }
+
 ```
 
 </Tab>
@@ -473,6 +476,7 @@ function handleFolderConflictError(e) {
 
 ```sh
 box folders:upload ./folder_name_to_upload --parent-folder=$folder_id
+
 ```
 
 </Tab>

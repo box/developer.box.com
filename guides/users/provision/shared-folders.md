@@ -52,6 +52,7 @@ fullyTranslated: true
     }
   ]
 }
+
 ```
 
 </Tab>
@@ -225,6 +226,7 @@ async function handleFolderCollaborationConflictError(
     throw e;
   }
 }
+
 ```
 
 </Tab>
@@ -380,6 +382,7 @@ public class BoxPlayground {
         }
     }
 }
+
 ```
 
 </Tab>
@@ -555,6 +558,7 @@ namespace BoxPlayground {
         }
     }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -566,6 +570,7 @@ namespace BoxPlayground {
 ```shell
 box groups:create "Marketing Managers" --invite=admins_only --view-members=admins_only
 box groups:create "Marketing Project Managers" --invite=admins_and_members --view-members=admins_and_members
+
 ```
 
 </Tab>
@@ -648,6 +653,7 @@ async function handleGroupMembershipConflictError(e,
         throw e;
     }
 }
+
 ```
 
 <!-- markdownlint-disable line-length -->
@@ -719,6 +725,7 @@ public class BoxPlayground {
         }
     }
 }
+
 ```
 
 </Tab>
@@ -794,6 +801,7 @@ namespace BoxPlayground {
         }
     }
 }
+
 ```
 
 </Tab>
@@ -802,6 +810,7 @@ namespace BoxPlayground {
 
 ```shell
 box groups:membership:add $user_id $group_id --role=admin
+
 ```
 
 </Tab>

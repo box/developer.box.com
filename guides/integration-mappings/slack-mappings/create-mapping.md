@@ -116,6 +116,7 @@ async function createSlackIntegrationMapping() {
 }
 
 module.exports = { createSlackIntegrationMapping }
+
 ```
 
 <!-- markdownlint-enable line-length -->

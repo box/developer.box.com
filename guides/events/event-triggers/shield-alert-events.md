@@ -58,6 +58,7 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
     "..."
   }
 }
+
 ```
 
 イベントをトリガーした特定の種類のShieldアラートに関する情報は、`additional_details`オブジェクト内で提供されます。
@@ -112,6 +113,7 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
     "created_at":"2019-12-20T11:37:15-08:00"
   }
 }
+
 ```
 
 ### 不審なセッションに関するアラート
@@ -191,6 +193,7 @@ Sessions`値によって識別できます。
     "created_at":"2019-12-20T11:38:16-08:00"
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -247,6 +250,7 @@ Sessions`値によって識別できます。
     "created_at":"2019-12-20T11:38:16-08:00"
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -331,6 +335,7 @@ Sessions`値によって識別できます。
     "created_at":"2019-12-20T11:37:15-08:00"
   }
 }
+
 ```
 
 <!-- i18n-enable localize-links -->

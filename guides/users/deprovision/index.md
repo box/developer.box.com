@@ -29,7 +29,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-ユーザーアカウントにまだコンテンツがある場合、ユーザー削除リクエストは失敗します。ユーザーアカウントとアカウント内のすべてのコンテンツを強制的に削除するオプションである`force`パラメータを、API呼び出しで使用できます。
+ユーザーアカウントにまだコンテンツがある場合、ユーザー削除リクエストは失敗します。ユーザーアカウントとアカウント内のすべてのコンテンツを強制的に削除するオプションである`force`パラメータを、APIコールで使用できます。
 
 </Message>
 
@@ -62,6 +62,7 @@ const transferUserID = '3278487052';
   await serviceAccountClient.users.delete(transferUserID, null);
   console.log('Completed');
 })();
+
 ```
 
 </Tab>
@@ -86,6 +87,7 @@ try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName(
   BoxUser removeUser = new BoxUser(serviceAccountClient, transferUserId);
   removeUser.delete(false, false);
 }
+
 ```
 
 </Tab>
@@ -106,6 +108,7 @@ using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
   System.Console.WriteLine(moveAction.Name);
   await serviceAccountClient.UsersManager.DeleteEnterpriseUserAsync(transferUserId,false,false);
 }
+
 ```
 
 </Tab>
@@ -115,6 +118,7 @@ using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
 ```shell
 box users:transfer-content $transfer_from_user_id $transfer_to_user_id
 box users:delete $transfer_from_user_id --yes
+
 ```
 
 </Tab>

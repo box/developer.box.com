@@ -21,7 +21,7 @@ fullyTranslated: true
 
 ## User EventとEnterprise Event
 
-[`GET /events`](e://get_events) APIを使用すると、`stream_type`に応じて、Enterprise全体または特定のユーザーのライブイベントを登録するか、Enterprise全体のイベントの履歴を照会することができます。
+[`GET /events`](e://get_events) APIを使用すると、`stream_type`に応じて、Enterprise全体または特定のユーザーのライブイベントにサブスクライブするか、Enterprise全体のイベントの履歴を照会することができます。
 
 ### User Event
 
@@ -49,10 +49,10 @@ User Event Streamとは異なり、Enterprise Event Streamは、イベントタ�
 
 <!-- markdownlint-disable line-length -->
 
-| ストリームタイプ               |                              |
-| ---------------------- | ---------------------------- |
-| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします     |
-| `admin_logs_streaming` | ライブイベントをほぼリアルタイムで登録できるようにします |
+| ストリームタイプ               |                                   |
+| ---------------------- | --------------------------------- |
+| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします          |
+| `admin_logs_streaming` | ほぼリアルタイムでライブイベントにサブスクライブできるようにします |
 
 <!-- markdownlint-enable line-length -->
 

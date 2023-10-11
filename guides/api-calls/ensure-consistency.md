@@ -42,6 +42,7 @@ APIを介してリクエスト可能なファイルシステムの項目 (ファ
 ```curl
 curl https://api.box.com/2.0/files/12345 \
     -H "authorization: Bearer ACCESS_TOKEN"
+
 ```
 
 ```json
@@ -53,6 +54,7 @@ curl https://api.box.com/2.0/files/12345 \
   "name": "Contract.pdf",
   ...
 }
+
 ```
 
 この`etag`を`if-match`または`if-none-match`ヘッダーの値として使用できるのは、`etag`値が受信されてからリソースが変更されていないことを確認するためか、または変更されていない項目を不必要にダウンロードしないようにするためです。
@@ -63,9 +65,10 @@ curl https://api.box.com/2.0/files/12345 \
 curl https://api.box.com/2.0/files/12345 \
   -H "authorization: Bearer ACCESS_TOKEN" \
   -H "if-none-match: 1"
+
 ```
 
-ファイルが変更されていない場合、このAPI呼び出しでは空のレスポンスが返されます。
+ファイルが変更されていない場合、このAPIコールでは空のレスポンスが返されます。
 
 ## 一貫性のある変更の確保
 
@@ -87,7 +90,7 @@ curl https://api.box.com/2.0/files/12345 \
 
 <!-- markdownlint-enable line-length -->
 
-これらのAPI呼び出しのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
+これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
 | 項目があるか? | Etagが一致するか? | HTTPステータス |
 | ------- | ----------- | --------- |
@@ -119,7 +122,7 @@ curl https://api.box.com/2.0/files/12345 \
 
 <!-- markdownlint-enable line-length -->
 
-これらのAPI呼び出しのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
+これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
 | 項目があるか? | Etagが一致するか? | HTTPステータス |
 | ------- | ----------- | --------- |

@@ -66,6 +66,7 @@ fullyTranslated: true
     "log_event": "https://upload.box.com/api/2.0/files/upload_sessions/F971964745A5CD0C001BBE4E58196BFD/log"
   }
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->

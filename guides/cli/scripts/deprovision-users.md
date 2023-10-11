@@ -44,6 +44,7 @@ fullyTranslated: true
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -56,6 +57,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
   
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <message>
@@ -72,22 +74,20 @@ PS /Users/user/repos/boxcli/examples>
 
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
-   ```bash
-   git clone https://github.com/box/boxcli.git boxcli
-   cd boxcli/examples/User\ Deprovisioning/
-   ```
+```bash
+git clone https://github.com/box/boxcli.git boxcli
+cd boxcli/examples/User\ Deprovisioning/
 
-<!---->
+```
 
-````
+2. 削除する従業員のリストを`.csv`で作成します。
 
-2. Create the list of employees for deletion in `.csv`.
+   ヘッダー行は次のようになります。
 
-   The header row should look like as follows:
-
-   ```bash
+```bash
    name, email
-````
+
+```
 
    この場合
 
@@ -128,6 +128,7 @@ PS /Users/user/repos/boxcli/examples>
 PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
  -NewFilesOwnerID  123456789
  -EmployeeArchiveFolderName "Employee Archive"
+
 ```
 
 または
@@ -135,6 +136,7 @@ PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
 ```bash
 PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
  -SkipTransferContent
+
 ```
 
 パラメータを指定しなかった場合は、スクリプトによって、パラメータを入力するよう求められます。
@@ -147,6 +149,7 @@ Please specify the user ID of the user who will own the files of the users being
 Press Enter if you want to use the current user as the new owner.
 User ID: 1234567689
 Starting User Deprovisioning script...
+
 ```
 
 ## スクリプトの実行
@@ -155,22 +158,25 @@ Starting User Deprovisioning script...
 
 1. PowerShellコマンドを実行します。
 
-   ```bash
+```bash
    pwsh
-   ```
+
+```
 
 2. スクリプトを実行します:
 
-   ```bash
+```bash
    ./Users_Deprovision.ps1
-   ```
+
+```
 
    すべてのパラメータが定義されると、以下の出力が表示され、スクリプトが開始されたことを確認できます。
 
-   ```bash
+```bash
    PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
    Starting User Deprovisioning script...
-   ```
+
+```
 
 ## ログ
 

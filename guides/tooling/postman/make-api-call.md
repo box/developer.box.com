@@ -19,13 +19,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/postman/make-api-call.md
 fullyTranslated: true
 ---
-# API呼び出しの実行
+# APIコールの実行
 
-**Box Postmanコレクション**が**Postmanアプリ**に読み込まれたら、Postmanアプリがログインユーザーに代わって**Box API**へのAPI呼び出しを実行できるようになります。
+**Box Postmanコレクション**が**Postmanアプリ**に読み込まれたら、Postmanアプリがログインユーザーに代わって**Box API**へのAPIコールを実行できるようになります。
 
 <Message warning>
 
-API呼び出しを実行するには、Box Postmanコレクションに有効な`access_token`環境変数が必要です。有効なアクセストークンを使用してPostmanアプリが設定されるように、[クイックスタート](g://tooling/postman/quick-start)ガイドに従うことをお勧めします。
+APIコールを実行するには、Box Postmanコレクションに有効な`access_token`環境変数が必要です。有効なアクセストークンを使用してPostmanアプリが設定されるように、[クイックスタート](g://tooling/postman/quick-start)ガイドに従うことをお勧めします。
 
 </Message>
 
@@ -49,7 +49,7 @@ APIリクエストを実行するには、Box Postmanコレクションから**�
 
 </ImageFrame>
 
-このAPI呼び出しはすぐに制御が戻り、画面の下半分にあるレスポンスの \[**Body (本文)**] タブにフォルダ内の項目のリストが表示されます。
+このAPIコールはすぐに制御が戻り、画面の下半分にあるレスポンスの \[**Body (本文)**] タブにフォルダ内の項目のリストが表示されます。
 
 <ImageFrame border center shadow>
 

@@ -74,6 +74,7 @@ fullyTranslated: true
   { "op": "move", "from": "/currentState", "path": "/previousState" },
   { "op": "add", "path": "/currentState", "value": "reviewed" }
 ]
+
 ```
 
 <Message warning>
@@ -96,6 +97,7 @@ fullyTranslated: true
     "value": "Model 3"
   }
 ]
+
 ```
 
 これにより、値が`Model 3`の`name`フィールドが追加されます。この操作の前は、テンプレートの`name`フィールドに値がありませんでした。
@@ -114,6 +116,7 @@ fullyTranslated: true
   "$scope": "enterprise_1234567",
   "$canEdit": true
 }
+
 ```
 
 <Message warning>
@@ -134,6 +137,7 @@ fullyTranslated: true
     "value": "Model 4"
   }
 ]
+
 ```
 
 これにより、`name`フィールドの値`Model 3`が新しい値`Model
@@ -153,6 +157,7 @@ fullyTranslated: true
   "$scope": "enterprise_1234567",
   "$canEdit": true
 }
+
 ```
 
 <Message warning>
@@ -173,6 +178,7 @@ fullyTranslated: true
     "path": "/displayName"
   }
 ]
+
 ```
 
 これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。
@@ -191,6 +197,7 @@ fullyTranslated: true
   "$scope": "enterprise_1234567",
   "$canEdit": true
 }
+
 ```
 
 <Message warning>
@@ -211,6 +218,7 @@ fullyTranslated: true
     "path": "/displayName"
   }
 ]
+
 ```
 
 これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。この操作の後、`name`フィールドはすでに存在しません。
@@ -229,6 +237,7 @@ fullyTranslated: true
   "$scope": "enterprise_1234567",
   "$canEdit": true
 }
+
 ```
 
 <Message warning>
@@ -248,6 +257,7 @@ fullyTranslated: true
     "path": "/name"
   }
 ]
+
 ```
 
 これにより、`name`フィールドがメタデータインスタンスから完全に削除されます。
@@ -265,6 +275,7 @@ fullyTranslated: true
   "$scope": "enterprise_1234567",
   "$canEdit": true
 }
+
 ```
 
 <Message warning>
@@ -285,6 +296,7 @@ fullyTranslated: true
     "value": "Model 4"
   }
 ]
+
 ```
 
 テストに失敗すると、APIはいずれの操作も実行せず、次のエラーとともにHTTPステータス`409 Conflict`を返します。
@@ -295,6 +307,7 @@ fullyTranslated: true
   "code": "failed_json_patch_application",
   "request_id": "bzxgr1gbcq5h67pj"
 }
+
 ```
 
 この操作の主な目的は、何らかの操作が実行される前に、メタデータインスタンスの値が予想どおりであることを確認することです。Box APIでは、変更がすべて実行されるかまったく実行されないかのいずれかであるため、テストの失敗は、変換が適用される前にすべての値が予想どおりかどうかを確認するのに非常に役立ちます。

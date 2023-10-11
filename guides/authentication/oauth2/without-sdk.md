@@ -37,7 +37,7 @@ Box公式SDKを利用すると、一般的な認証のハードルはなくな�
 4. ユーザーを再度アプリケーションにリダイレクトする
 5. 承認コードをアクセストークンと交換する
 
-このフローが終了すると、アプリケーションには[アクセストークン][tokens]が付与されます。これを使用すると、ユーザーの代わりにAPI呼び出しを実行できます。
+このフローが終了すると、アプリケーションには[アクセストークン][tokens]が付与されます。これを使用すると、ユーザーの代わりにAPIコールを実行できます。
 
 <Message notice>
 
@@ -94,6 +94,7 @@ OAuth 2.0フローを介して取得したアクセストークンは、もと�
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
 var clientId = "[CLIENT_ID]";
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -108,6 +109,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 String baseUrl = "https://account.box.com/api/oauth2/authorize";
 String clientId = "[CLIENT_ID]";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -120,6 +122,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 base_url = 'https://account.box.com/api/oauth2/authorize'
 client_id = '[CLIENT_ID]'
 authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
+
 ```
 
 </Tab>
@@ -130,6 +133,7 @@ authorizationUrl = f'{base_url}?client_id=${client_id}&response_type=code'
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
 var clientId = "[CLIENT_ID]";
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
+
 ```
 
 </Tab>
@@ -161,6 +165,7 @@ Boxインスタンスの[Box Verified Enterprise][1]が有効になっている�
 ```dotnet
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 // redirectTo(authorizationUrl);
+
 ```
 
 </Tab>
@@ -173,6 +178,7 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 
 // response.redirect(authorizationUrl);
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -184,6 +190,7 @@ String authorizationUrl = String.format("%s?client_id=%s&response_type=code", ba
 ```python
 auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 // redirect(auth_url, code=302)
+
 ```
 
 </Tab>
@@ -193,6 +200,7 @@ auth_url = f'{base_url}?client_id=${client_id}&response_type=code'
 ```js
 var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 // res.redirect(authorize_url)
+
 ```
 
 </Tab>
@@ -227,6 +235,7 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 ```curl
 https://your.domain.com/path?code=1234567
+
 ```
 
 ## 4. コードを交換する
@@ -263,6 +272,7 @@ class Token
 var data = response.Content.ReadAsStringAsync().Result;
 var token = JsonConvert.DeserializeObject<Token>(data);
 var accessToken = token.access_token;
+
 ```
 
 </Tab>
@@ -296,6 +306,7 @@ class Token {
 
 Token token = (Token) gson.fromJson(response, Token.class);
 String accessToken = token.access_token;
+
 ```
 
 </Tab>
@@ -315,6 +326,7 @@ params = urlencode({
 request = Request(authentication_url, params)
 response = urlopen(request).read()
 access_token = json.loads(response)['access_token']
+
 ```
 
 </Tab>
@@ -334,13 +346,14 @@ let accessToken = await axios.post(
   })
 )
 .then(response => response.data.access_token)
+
 ```
 
 </Tab>
 
 </Tabs>
 
-アクセストークンの使用方法を確認するには、[API呼び出しの実行][apic]に関するガイドを参照してください。
+アクセストークンの使用方法を確認するには、[APIコールの実行][apic]に関するガイドを参照してください。
 
 [tokens]: g://authentication/tokens/access-tokens
 

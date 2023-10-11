@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # Node SDKのインストール
 
-Nodeプロジェクトでは、Box Node SDKを使用してBox APIへのAPI呼び出しを行うことができます。
+Nodeプロジェクトでは、Box Node SDKを使用してBox APIへのAPIコールを行うことができます。
 
 <CTA to="https://github.com/box/box-node-sdk">
 
@@ -39,6 +39,7 @@ Node SDKをインストールするには、[Nodeパッケージマネージャ]
 
 ```shell
 npm install box-node-sdk --save
+
 ```
 
 ## Yarnインストール
@@ -47,6 +48,7 @@ npm install box-node-sdk --save
 
 ```shell
 yarn add box-node-sdk
+
 ```
 
 <CTA to="https://github.com/box/box-node-sdk">

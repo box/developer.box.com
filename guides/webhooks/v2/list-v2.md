@@ -37,6 +37,6 @@ fullyTranslated: true
 
 </Message>
 
-このAPI呼び出しは、認証済みユーザーのWebhookのみをリストし、会社内の他のユーザーのWebhookはリストしません。
+このAPIコールは、認証済みユーザーのWebhookのみをリストし、会社内の他のユーザーのWebhookはリストしません。
 
 [1]: endpoint://get_webhooks

@@ -45,6 +45,7 @@ fullyTranslated: true
 <Choice option='example.choose_a' value='2' color='red'>
   You chose option 2
 </Choice>
+
 ```
 
 <H>
@@ -99,6 +100,7 @@ fullyTranslated: true
 
   Explanation of option
 </Choose>
+
 ```
 
 ## 設定されていない選択肢の監視
@@ -115,6 +117,7 @@ fullyTranslated: true
 <Choice option='example.choose_b' unset>
   This should show by default and hide when the above choice is clicked.
 </Choice>
+
 ```
 
 <H>
@@ -147,4 +150,5 @@ fullyTranslated: true
 <Choice option='example.lazy' value='value' lazy>
   The content of this element is not rendered until the right event is triggered.
 </Choice>
+
 ```

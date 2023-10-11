@@ -39,11 +39,12 @@ Box APIを使用する認証では、ユーザーの本人確認にアクセス�
 
 ## 認証のアクセストークン
 
-各APIエンドポイントには、API呼び出しを実行するために有効でアクティブな**アクセストークン**が必要です。アクセストークンは、APIエンドポイントに対して認証済みBoxユーザーを識別する一意の文字列です。
+各APIエンドポイントには、APIコールを実行するために有効でアクティブな**アクセストークン**が必要です。アクセストークンは、APIエンドポイントに対して認証済みBoxユーザーを識別する一意の文字列です。
 
 ```curl
 curl https://api.box.com/2.0/users/me \
     -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+
 ```
 
 <CTA to="guide://authentication/tokens">

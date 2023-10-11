@@ -43,10 +43,10 @@ Enterprise Eventを取得するには、`stream_type`を`admin_logs`または`ad
 
 <!-- markdownlint-disable line-length -->
 
-| ストリームタイプ               |                              |
-| ---------------------- | ---------------------------- |
-| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします     |
-| `admin_logs_streaming` | ライブイベントをほぼリアルタイムで登録できるようにします |
+| ストリームタイプ               |                                   |
+| ---------------------- | --------------------------------- |
+| `admin_logs`           | イベントの履歴を最大1年分照会できるようにします          |
+| `admin_logs_streaming` | ほぼリアルタイムでライブイベントにサブスクライブできるようにします |
 
 <!-- markdownlint-enable line-length -->
 

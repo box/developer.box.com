@@ -54,6 +54,7 @@ var userId = "12345";
 var sdk = new BoxJWTAuth(config);
 var token = sdk.UserToken(appUserID);
 BoxClient client = sdk.UserClient(userToken, userId);
+
 ```
 
 </Tab>
@@ -65,6 +66,7 @@ BoxClient client = sdk.UserClient(userToken, userId);
 ```java
 String userId = "12345";
 BoxDeveloperEditionAPIConnection api = new BoxDeveloperEditionAPIConnection.getAppUserConnection(userId, config)
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -86,6 +88,7 @@ auth = JWTAuth(
 )
 auth.authenticate_user()
 user_client = Client(auth)
+
 ```
 
 </Tab>
@@ -95,6 +98,7 @@ user_client = Client(auth)
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
 var client = sdk.getAppAuthClient('user', '12345');
+
 ```
 
 </Tab>
@@ -123,6 +127,7 @@ var claims = new List<Claim>{
   new Claim("box_sub_type", "user"),
   new Claim("jti", jti),
 };
+
 ```
 
 </Tab>
@@ -139,6 +144,7 @@ claims.setSubject(userId);
 claims.setClaim("box_sub_type", "user");
 claims.setGeneratedJwtId(64);
 claims.setExpirationTimeMinutesInTheFuture(0.75f);
+
 ```
 
 </Tab>
@@ -156,6 +162,7 @@ claims = {
   'jti': secrets.token_hex(64),
   'exp': round(time.time()) + 45
 }
+
 ```
 
 </Tab>
@@ -173,6 +180,7 @@ let claims = {
   jti: crypto.randomBytes(64).toString("hex"),
   exp: Math.floor(Date.now() / 1000) + 45
 };
+
 ```
 
 </Tab>
@@ -190,6 +198,7 @@ claims = {
   jti: SecureRandom.hex(64),
   exp: Time.now.to_i + 45
 }
+
 ```
 
 </Tab>
@@ -208,6 +217,7 @@ $claims = [
   'exp' => time() + 45,
   'kid' => $config->boxAppSettings->appAuth->publicKeyID
 ];
+
 ```
 
 </Tab>

@@ -23,6 +23,7 @@ fullyTranslated: true
 
 ```html
 <LoginButton />
+
 ```
 
 <LoginButton>
@@ -35,6 +36,7 @@ fullyTranslated: true
 
 ```html
 <LoginButton id='a_custom_id' />
+
 ```
 
 この場合は、ローカルストレージにある以下のクライアントIDとクライアントシークレットが使用されます。
@@ -62,6 +64,7 @@ fullyTranslated: true
 <LoggedIn reverse>
   This is shown when the user is logged out.
 </LoggedIn>
+
 ```
 
 一連のカスタム資格情報でログインが実行された場合は、その資格情報のIDを渡す必要があります。
@@ -76,6 +79,7 @@ fullyTranslated: true
 <LoggedIn id='a_custom_id' reverse>
   This is shown when the user is logged out.
 </LoggedIn>
+
 ```
 
 ## 値のリセット
@@ -86,6 +90,7 @@ fullyTranslated: true
 <ResetButton id='credentials'>
   Reset all credentials
 </ResetButton>
+
 ```
 
 <H>
@@ -104,4 +109,5 @@ fullyTranslated: true
 <ResetButton id='a_custom_id'>
   Reset all credentials
 </ResetButton>
+
 ```

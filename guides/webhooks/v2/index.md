@@ -64,6 +64,7 @@ BOX-SIGNATURE-SECONDARY:  1UbiiKS7/2o5vNIlyMh7e5QGCHq8lflWFgEF+YWBugI=
 BOX-SIGNATURE-VERSION:    1
 BOX-SIGNATURE-ALGORITHM:  HmacSHA256
 USER-AGENT:               Box-WH-Client/0.1
+
 ```
 
 <Message type="notice">
@@ -197,6 +198,7 @@ Webhookペイロードの本文は、Webhookをトリガーしたファイルま
   },
   "additional_info": []
 }
+
 ```
 
 ## 再試行

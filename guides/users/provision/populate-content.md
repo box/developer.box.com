@@ -173,6 +173,7 @@ async function copySkelDirectoryForUser(userID, skelFolderId, boxClient) {
         return moveToNextItem();
     }
 }
+
 ```
 
 </Tab>
@@ -304,6 +305,7 @@ public class BoxPlayground {
         return id;
     }
 }
+
 ```
 
 </Tab>
@@ -454,6 +456,7 @@ namespace BoxPlayground {
         }
     }
 }
+
 ```
 
 </Tab>

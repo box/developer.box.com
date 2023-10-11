@@ -31,7 +31,7 @@ Box公式SDKには、アプリトークン認証のサポートが組み込ま�
 
 <Message notice>
 
-JWTを使用した認証方法は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPI呼び出しはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
+JWTを使用した認証方法は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPIコールはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
 
 </Message>
 
@@ -55,6 +55,7 @@ JWTを使用した認証方法は、もともとアプリケーションのサ�
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
 var session = new OAuthSession("[APP_TOKEN]", "N/A", 3600, "bearer");
 var client = new BoxClient(config, session);
+
 ```
 
 </Tab>
@@ -63,6 +64,7 @@ var client = new BoxClient(config, session);
 
 ```java
 BoxTransactionalAPIConnection api = new BoxTransactionalAPIConnection("[APP_TOKEN]");
+
 ```
 
 </Tab>
@@ -74,6 +76,7 @@ from boxsdk import Client, OAuth2
 
 auth = OAuth2(access_token='[APP_TOKEN]')
 client = Client(auth)
+
 ```
 
 </Tab>
@@ -88,13 +91,14 @@ var sdk = new BoxSDK({
 });
 
 var client = sdk.getBasicClient('[APP_TOKEN]');
+
 ```
 
 </Tab>
 
 </Tabs>
 
-これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPI呼び出しを実行できます。
+これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPIコールを実行できます。
 
 ## SDKとアプリケーショントークンの使用
 

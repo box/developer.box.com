@@ -41,11 +41,11 @@ OAuth 2.0フローを完了するには、以下の手順を完了する必要�
 3. ユーザーがアプリケーションにアクセス権限を付与する
 4. 承認コードをアクセストークンと交換する
 
-このフローが終了すると、アプリケーションには、このユーザーの代わりにAPI呼び出しを実行するために使用できるアクセストークンが用意されます。
+このフローが終了すると、アプリケーションには、このユーザーの代わりにAPIコールを実行するために使用できるアクセストークンが用意されます。
 
 <Message notice>
 
-OAuth 2.0を介して取得したアクセストークンは、もともとアプリケーションを承認したユーザーに関連付けられています。このトークンを使用して実行されるAPI呼び出しはどれも、このアプリケーションから実行されているように見えるため、ユーザーには、アプリケーションがこのトークンを使用してアクセスしようとするファイルやフォルダへのアクセス権限が必要です。
+OAuth 2.0を介して取得したアクセストークンは、もともとアプリケーションを承認したユーザーに関連付けられています。このトークンを使用して実行されるAPIコールはどれも、このアプリケーションから実行されているように見えるため、ユーザーには、アプリケーションがこのトークンを使用してアクセスしようとするファイルやフォルダへのアクセス権限が必要です。
 
 </Message>
 
@@ -73,6 +73,7 @@ OAuth 2.0を介して取得したアクセストークンは、もともとア�
 var redirectUrl = "[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
 var sdk = new BoxClient(config);
+
 ```
 
 </Tab>
@@ -85,6 +86,7 @@ var sdk = new BoxClient(config);
 import com.box.sdk.BoxAPIConnection;
 
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -100,6 +102,7 @@ auth = OAuth2(
     client_id='[CLIENT_ID]',
     client_secret='[CLIENT_SECRET]'
 )
+
 ```
 
 </Tab>
@@ -113,6 +116,7 @@ var sdk = new BoxSDK({
   clientID: "[CLIENT_ID]",
   clientSecret: "[CLIENT_SECRET]"
 });
+
 ```
 
 </Tab>
@@ -142,6 +146,7 @@ var sdk = new BoxSDK({
 ```dotnet
 var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 // redirectTo(authorizationUrl);
+
 ```
 
 </Tab>
@@ -154,6 +159,7 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 // response.redirect(authorizationUrl);
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -166,6 +172,7 @@ String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_i
 auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 // redirect(auth_url, code=302)
+
 ```
 
 </Tab>
@@ -178,6 +185,7 @@ var authorize_url = sdk.getAuthorizeURL({
 });
 
 // res.redirect(authorize_url)
+
 ```
 
 </Tab>
@@ -196,6 +204,7 @@ var authorize_url = sdk.getAuthorizeURL({
 
 ```curl
 https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=[REDIRECT_URI]&response_type=code
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -230,6 +239,7 @@ Boxインスタンスの[Box Verified Enterprise][1]が有効になっている�
 
 ```curl
 https://your.domain.com/path?code=1234567
+
 ```
 
 このコードは[アクセストークン][tokens]ではなく、有効期間はほんの数秒です。SDKを使用すると、このコードを実際のアクセストークンと交換できます。
@@ -241,6 +251,7 @@ https://your.domain.com/path?code=1234567
 ```dotnet
 var session = await sdk.Auth.AuthenticateAsync("[CODE]");
 var client = new BoxClient(config, session);
+
 ```
 
 </Tab>
@@ -253,6 +264,7 @@ BoxAPIConnection client = new BoxAPIConnection(
   "[CLIENT_SECRET]",
   "[CODE]"
 );
+
 ```
 
 </Tab>
@@ -262,6 +274,7 @@ BoxAPIConnection client = new BoxAPIConnection(
 ```python
 auth.authenticate('[CODE]')
 client = Client(auth)
+
 ```
 
 </Tab>
@@ -274,13 +287,14 @@ var code = "...";
 sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
   var client = sdk.getPersistentClient(tokenInfo);
 });
+
 ```
 
 </Tab>
 
 </Tabs>
 
-このフローが終了すると、アプリケーションには、このユーザーの代わりにAPI呼び出しを実行するために使用できるアクセストークンが用意されます。
+このフローが終了すると、アプリケーションには、このユーザーの代わりにAPIコールを実行するために使用できるアクセストークンが用意されます。
 
 ## SDKとOAuth 2.0の使用
 

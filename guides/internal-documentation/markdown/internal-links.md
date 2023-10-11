@@ -26,6 +26,7 @@ fullyTranslated: true
 [A file](resource://file)
 [Get a file](guide://files/get)
 [Box](https://box.com)
+
 ```
 
 <H>
@@ -55,6 +56,7 @@ fullyTranslated: true
 [A file](r://file)
 [Get a file](g://files/get)
 [Box](https://box.com)
+
 ```
 
 <H>

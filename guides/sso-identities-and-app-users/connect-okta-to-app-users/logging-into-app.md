@@ -67,6 +67,7 @@ express.use(bodyParser.json());
 express.use(bodyParser.urlencoded({
   extended: true
 }));
+
 ```
 
 これにより、Express構成とOkta OIDCコネクタの情報が設定されます。ExpressはOIDCコネクタを使用するよう設定され、このクイックスタートガイドの手順2で保存したOktaの情報はOkta統合のコネクタの構成に使用されます。
@@ -78,6 +79,7 @@ express.use(bodyParser.urlencoded({
 express.get('/', (req, res) => {
   // TODO: HANDLE ROUTE
 });
+
 ```
 
 これにより、アプリケーションのエントリルートが定義されます。ユーザーがアプリケーションのルート (`/`) にアクセスを試みると、このルート内のコードが実行されます。
@@ -90,6 +92,7 @@ const port = process.env.PORT || 3000;
 http.createServer(express).listen(port, () => {
   console.log(`Server started: Listening on port ${port}`);
 });
+
 ```
 
 </Choice>
@@ -134,6 +137,7 @@ public class Application {
 
   // TODO: INITIALIZE SERVER
 }
+
 ```
 
 これにより、必要なimport、`Application`クラス、標準的な共有Box APIの接続属性が設定されます。これらは次の手順で定義します。
@@ -145,6 +149,7 @@ public class Application {
 String home(@AuthenticationPrincipal OidcUser user) throws IOException {
   // TODO: HANDLE ROUTE
 }
+
 ```
 
 このルートマッピングではアプリケーションのエントリルートを定義します。ユーザーがログアウトした状態でアプリケーションのルート (`/`) にアクセスを試みると、OIDCコネクタによってユーザーは自動的にOktaログインにプッシュされるため、リダイレクトを設定する必要がありません。ユーザーがログイン状態の場合は、このルート内のコードが実行されます。
@@ -155,6 +160,7 @@ String home(@AuthenticationPrincipal OidcUser user) throws IOException {
 public static void main(String[] args) {
   SpringApplication.run(Application.class, args);
 }
+
 ```
 
 </Choice>
@@ -187,6 +193,7 @@ app.config.update({
 
 oidc = OpenIDConnect(app)
 okta_client = UsersClient(config.okta_org_url, config.okta_auth_token)
+
 ```
 
 これにより、Flask構成、Oktaクライアント、Okta OIDCコネクタの情報が設定されます。FlaskはOIDCコネクタを使用するよう設定され、このクイックスタートガイドの手順2で保存したOktaの情報はOkta統合のコネクタの構成に使用されます。
@@ -199,6 +206,7 @@ okta_client = UsersClient(config.okta_org_url, config.okta_auth_token)
 @app.before_request
 def before_request():
   # TODO: HANDLE BEFORE REQUEST
+
 ```
 
 最後に、アプリケーションのエントリルートと`box_auth`ルートを定義します。
@@ -216,6 +224,7 @@ def box_auth():
   # TODO: HANDLE BOX AUTH ROUTE
 
 return 'Complete'
+
 ```
 
 ユーザーがアプリケーションのルート (`/`) にアクセスを試みると、このルート内のコードが実行されます。Oktaユーザーを検証する際は、`box_auth`ルート内のコードが実行されます。
@@ -237,6 +246,7 @@ else
 {
     <a asp-controller="Account" asp-action="SignIn">Sign In</a>
 }
+
 ```
 
 Oktaにログインしているユーザーがアクセスすると、Helloというメッセージが表示されます。ログインしていない場合は、サインインリンクが表示されます。
@@ -278,6 +288,7 @@ public class AccountController : Controller
         // TODO: HANDLE ROUTE
     }
 }
+
 ```
 
 ユーザーがサインインリンクをクリックすると、このコントローラの`SignIn`メソッドが実行されます。ユーザーがまだ認証されていない場合は`Challenge`に送信され、ユーザーはログインするためにOktaにリダイレクトされます。この機能はルーティングフレームワークによって処理されるため、追加で実行するコードは必要ありません。ユーザーが認証済みの場合は`Profile`ルーティングメソッドにリダイレクトされます。
@@ -318,6 +329,7 @@ if (req.userContext && req.userContext.userinfo) {
 } else {
   res.redirect('/login');
 }
+
 ```
 
 上記のコードでは、まず、OIDCコネクタから入手できるOktaのユーザー情報があるかどうかを確認しています。ユーザーがログインすると、このコネクタにより、Oktaのユーザーと構成の情報が`req.userContext`内のルートで使用できるようになります。
@@ -335,6 +347,7 @@ if (req.userContext && req.userContext.userinfo) {
 ```java
 // Validate OIDC user against Box
 return validateUser(user);
+
 ```
 
 Java OIDCコネクタは、手間のかかる部分のほとんどを代わりに処理してくれます。ログアウトしたユーザーがこのルートにアクセスすると、自動的にOktaログインにプッシュされます。ログインすると、OIDCユーザーオブジェクトがこのルートに使用できるようになります。そのユーザーオブジェクトは、次の手順で定義する`validateUser`関数に渡します。
@@ -350,6 +363,7 @@ if oidc.user_loggedin:
   g.user = okta_client.get_user(oidc.user_getfield('sub'))
 else:
   g.user = None
+
 ```
 
 これにより、OIDCユーザーが存在するかどうか、つまりユーザーがすでにOktaにログインしているかどうかが確認されます。存在する場合は、Oktaクライアントオブジェクトを使用してユーザーオブジェクトを設定し、存在しない場合はユーザーオブジェクトを`None`に設定します。
@@ -358,6 +372,7 @@ else:
 
 ```python
 return redirect(url_for(".box_auth"))
+
 ```
 
 このコードに入ると、ユーザーはOktaにログインしていない場合に、ログインするためにOIDCコネクタによってOktaにリダイレクトされます。ログイン後 (またはユーザーがすでにログインしている場合) は、`box_auth`ルートコードに転送されます。
@@ -367,6 +382,7 @@ return redirect(url_for(".box_auth"))
 ```python
 box = Box();
 return box.validateUser(g)
+
 ```
 
 これにより、Oktaユーザーオブジェクトが渡されることで、Boxクラスの新しいインスタンスが作成され、`validateUser`メソッドが呼び出されます。このクラスとメソッドは次の手順で定義します。
@@ -389,6 +405,7 @@ Task userSearch = validateUser(name, sub);
 Task.WaitAll(userSearch);
 
 return Content(name);
+
 ```
 
 このブロックでは、Oktaユーザーアカウントのsub (一意のID) とnameをキャプチャし、次の手順で作成する`validateUser`メソッドにそのデータを送信して、一致するBoxユーザーを検出します。

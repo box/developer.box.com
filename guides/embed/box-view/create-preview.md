@@ -55,6 +55,7 @@ Box Viewの直接`<iframe>`埋め込みを作成するには、以下の2つの�
 ```curl
 curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
     -H "authorization: Bearer [APP_TOKEN]"
+
 ```
 
 </Tab>
@@ -64,6 +65,7 @@ curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
 ```dotnet
 String fileId = "12345678";
 Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
+
 ```
 
 </Tab>
@@ -74,6 +76,7 @@ Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 String fileID = "12345678";
 BoxFile file = new BoxFile(api, fileID);
 URL embedLink = file.getPreviewLink();
+
 ```
 
 </Tab>
@@ -83,6 +86,7 @@ URL embedLink = file.getPreviewLink();
 ```python
 file_id = '12345678'
 embed_url = client.file(file_id).get_embed_url()
+
 ```
 
 </Tab>
@@ -94,6 +98,7 @@ const fileId = '12345678';
 client.files.getEmbedLink(fileId).then(embedURL => {
   // ...
 });
+
 ```
 
 </Tab>
@@ -107,6 +112,7 @@ https://app.box.com/preview/expiring_embed/gvoct6FE!YT_X1LauQ8ulDTad96hTl9xLCRYJ
 5iU6O61KxiduxFIgX9HSWMcCWf7zju1XkEsf6-Ul2qtKXeaFeKPT4SysQJQdxrc144KgTIBuoI3bWMf4
 cfhp3jdLYrK5hnr6KMq5H6r-AW31AcFtDJi1lnT0M4b3bvvZUaE2RRJGGINMauvS6MAT2luae5PvbFSx
 Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
+
 ```
 
 <Message type="warning">
@@ -124,6 +130,7 @@ Ctqqx6XlN6QrqbhfJc0UeJF9qwMv3-O8q5fWn0qr8OTY4lkeYidtTs3Ux...
   9tHPm-jueq4cmS4GnL9RTJRcVEsK_3W8xcxtVo_v6gKpoXY45odgG1QrcjBVYZMrriUyGvcoSM
   SX8s-smpaFFYQik0R-PCKFtwvbv0lonid6ZfYNbuNFl2j9hOIqBccvHrdVor7i6WvOm6zELzTY
   4EWshcyYYBhDbJmYMrq61RtU_kvBe5P..."></iframe>
+
 ```
 
 ## カスタマイズされたプレビューアー (UI Element)
@@ -146,6 +153,7 @@ preview.show("FILE_ID", "ACCESS_TOKEN", {
   container: ".preview-container",
   showDownload: true
 });
+
 ```
 
 コードサンプル内のプレースホルダを以下の内容に置き換えてください。

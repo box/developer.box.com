@@ -54,6 +54,7 @@ fullyTranslated: true
 
 ```bash
 pwsh 
+
 ```
 
 どのディレクトリでこのコマンドを実行するかに応じて、出力が異なる場合があります。以下に例を示します。
@@ -66,6 +67,7 @@ https://aka.ms/powershell
 Type 'help' to get help.
   
 PS /Users/user/repos/boxcli/examples> 
+
 ```
 
 <message>
@@ -82,36 +84,32 @@ PS /Users/user/repos/boxcli/examples>
 
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
-   ```bash
-   git clone https://github.com/box/boxcli.git
-   cd boxcli/examples/Inactive\ Users\ Report/
-   ```
+```bash
+git clone https://github.com/box/boxcli.git
+cd boxcli/examples/Inactive\ Users\ Report/
 
-<!---->
+```
 
-````
+2. スクリプトでUser Eventをスキャンする日数を設定します。この値を指定しなかった場合やデフォルト設定のままにした場合は、スクリプトによって入力するよう求められます。
 
-2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
-
-   ```bash
+```bash
 $daysInactive = "10"
-````
+
+```
 
 3. (省略可) レポート出力ファイル名を変更するには、`ReportOutputFile`パラメータを定義します。
 
-   ```bash
-   $ReportOutputFile = $ReportName + ".csv"
-   ```
+```bash
+$ReportOutputFile = $ReportName + ".csv"
 
-<!---->
+```
 
-````
+4. (省略可) イベントタイプを変更するには、`eventType`パラメータのリストを定義します。
 
-4. (Optional) To change event types, define the list for `eventType` parameter.
-
-   ```bash
+```bash
 $eventType = "LOGIN,UPLOAD,COPY,MOVE"
-````
+
+```
 
 ## スクリプトの実行
 
@@ -119,12 +117,14 @@ PowerShellコマンドを実行します。
 
 ```bash
 pwsh
+
 ```
 
 スクリプトを実行します。
 
 ```bash
 ./Inactive_Users_Report.ps1
+
 ```
 
 スクリプトの実行が完了すると、以下のような出力が表示されます。
@@ -134,6 +134,7 @@ Transfered employee content Managed User 1
 with User ID: 19927131476 to Employee Archive Folder
 Deleted user 19927131476
 Deleted employee Managed User 1
+
 ```
 
 ## ログ

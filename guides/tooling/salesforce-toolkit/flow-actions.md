@@ -28,24 +28,33 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 
 以下のリストには、[Salesforceフロー][Salesforce Flows]で呼び出し可能なすべてのメソッドを示しています。
 
-* `createFileFromAttachment`
-* `getObjectFolderByRecordId`
-* `getRootFolderId`
-* `createObjectFolderForRecordId`
-* `createFolder`
-* `createFolderForRecordId`
-* `moveFolder`
-* `getFolderAssociationsByRecordId`
-* `getFolderIdByRecordId`
-* `getRecordIdByFolderId`
-* `createFolderAssociation`
-* `createCollaboration`
-* `createCollaborationOnRecord`
-* `editCollaboration`
-* `deleteCollaboration`
-* `enableAppActivity`
-* `getFolderUrl`
-* `getUrlForFolder`
+* フォルダIDでBoxメタデータを作成する (`createBoxMetadataByFolderId`)
+* コラボレーションを作成する (`createCollaboration`)
+* レコードにコラボレーションを作成する (`createCollaborationOnRecord`)
+* 添付ファイルからファイルを作成する (`createFileFromAttachment`)
+* フォルダを作成する (`createFolder`)
+* フォルダの関連付けを作成する (`createFolderAssociation`)
+* レコードID用のフォルダを作成する (`createFolderForRecordId`)
+* テンプレートからレコードID用のフォルダを作成する (`createFolderForRecordIdFromTemplate`)
+* メタデータカスケードポリシーを作成する (`createMetadataCascadePolicy`)
+* レコードID用のオブジェクトフォルダを作成する (`createObjectFolderForRecordId`)
+* フォルダIDでBoxメタデータを削除する (`deleteBoxMetadataByFolderId`)
+* コラボレーションを削除する (`deleteCollaboration`)
+* メタデータカスケードポリシーを削除する (`deleteMetadataCascadePolicyById`)
+* コラボレーションを編集する (`editCollaboration`)
+* アプリアクティビティを有効にする (`enableAppActivity`)
+* フォルダIDでBoxメタデータを取得する (`getBoxMetadataByFolderId`)
+* SalesforceレコードIDでフォルダの関連付けを取得する (`getFolderAssociationsByRecordId`)
+* レコードIDでフォルダIDを取得する (`getFolderIdByRecordId`)
+* フォルダURLを取得する (`getFolderUrl`)
+* フォルダIDでメタデータカスケードポリシーを取得する (`getMetadataCascadePoliciesByFolderId`)
+* IDでメタデータカスケードポリシーを取得する (`getMetadataCascadePolicyById`)
+* レコードIDでオブジェクトフォルダを取得する (`getObjectFolderByRecordId`)
+* フォルダIDでレコードIDを取得する (`getRecordIdByFolderId`)
+* ルートフォルダIDを取得する (`getRootFolderId`)
+* フォルダ用URLを取得する (`getUrlForFolder`)
+* フォルダを移動する (`moveFolder`)
+* フォルダIDでBoxメタデータを更新する (`updateBoxMetadataByFolderId`)
 
 [methods]: g://tooling/salesforce-toolkit/methods
 

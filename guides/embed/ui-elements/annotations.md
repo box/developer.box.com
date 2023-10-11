@@ -61,6 +61,7 @@ const annotatorConf = boxAnnotations.determineAnnotator(
 const annotator = new annotatorConf.CONSTRUCTOR(options);
 
 annotator.init(scale);
+
 ```
 
 ここで、`disabledAnnotationTypes`は、無効にする有効な注釈の種類の文字列です。ビューアー固有の注釈の構成の詳細については、以下を参照してください。
@@ -107,6 +108,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
     }
   }
 });
+
 ```
 
 <!-- markdownlint-disable line-length -->
@@ -114,7 +116,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | パラメータ                  | デフォルト | 説明                                                     |
 | ---------------------- | ----- | ------------------------------------------------------ |
 | `annotator`            |       | ビューアー固有の注釈構成オブジェクト                                     |
-| `apiHost`              |       | Box API呼び出しのホスト (`https://app.box.com/api`など)          |
+| `apiHost`              |       | Box APIコールのホスト (`https://app.box.com/api`など)           |
 | `fileId`               |       | BoxファイルID                                              |
 | `token`                |       | 文字列認証トークン。適切なスコープを使用した注釈トークンの生成方法の詳細については、以下を参照してください。 |
 | `container`            |       | プレビューが配置されるDOMノードまたはセレクタ                               |
@@ -164,6 +166,7 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 preview.show(..., {
   showAnnotations: Boolean
 });
+
 ```
 
 次と組み合わせます。
@@ -179,6 +182,7 @@ preview.show(..., {
         }
     }
 });
+
 ```
 
 これにより、`enabled`が`true`に設定されている場合は、注釈が有効になります。空の場合は`showAnnotations`の値に従います。`enabledTypes`の値は、このビューアーに対して有効にする注釈の種類のリストです。空の場合は、その注釈者のデフォルトの種類に従います。
@@ -204,6 +208,7 @@ preview.show(fileId, token, {
     }
   }
 });
+
 ```
 
 ## 注釈者
@@ -256,6 +261,7 @@ annotator.showAnnotations();
 
 // Remove listener when appropriate
 annotator.removeListener(EVENTNAME, listener);
+
 ```
 
 `EVENTNAME`には、以下のいずれかを指定できます。
@@ -271,6 +277,7 @@ annotator.removeListener(EVENTNAME, listener);
   // Optional CSS selector for the container's header
   headerSelector: '.bp-preview-header',
 }
+
 ```
 
 `annotationmodeexit`イベントは、注釈モードが終了するとトリガーされます。イベントデータには以下の内容が含まれます。
@@ -282,6 +289,7 @@ annotator.removeListener(EVENTNAME, listener);
   // Optional CSS selector for the container's header
   headerSelector: '.bp-preview-header',
 }
+
 ```
 
 `annotationerror`イベントは、注釈エラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -290,6 +298,7 @@ annotator.removeListener(EVENTNAME, listener);
 {
   message: 'message', // Error message to show
 }
+
 ```
 
 `annotationpending`イベントは、注釈スレッドが作成されたにもかかわらず、まだサーバーに保存されていない場合にトリガーされます。イベントデータには以下の内容が含まれます。
@@ -303,6 +312,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationthreadsaved`イベントは、注釈スレッドがサーバーに保存されたときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -316,6 +326,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationthreaddeleted`イベントは、注釈スレッドがサーバーで削除されたときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -329,6 +340,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationsaved`イベントは、注釈が追加され、サーバー上の既存の注釈スレッドに保存されたときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -342,6 +354,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationdeleted`イベントは、サーバー上の既存のスレッドから注釈が削除されたときにトリガーされます。注釈スレッド全体は削除されません。イベントデータには以下の内容が含まれます。
@@ -355,6 +368,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationcanceled`イベントは、新しいスレッドまたは既存のスレッドで注釈の投稿がキャンセルされたときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -368,6 +382,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationdeleteerror`イベントは、新しいスレッドまたは既存のスレッドで注釈の削除中にエラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -381,6 +396,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotationcreateerror`イベントは、新しいスレッドまたは既存のスレッドで注釈の投稿中にエラーが発生したときにトリガーされます。イベントデータには以下の内容が含まれます。
@@ -394,6 +410,7 @@ annotator.removeListener(EVENTNAME, listener);
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 `annotatorevent`: 注釈者ごとに、一連の独自のイベントがトリガーされます。たとえば、画像の注釈者では`rotate`や`resize`などがトリガーされるのに対し、別の注釈者では別の一連のイベントがトリガーされる場合があります。また、注釈者ラッパーは、以下を含むイベントデータとともに、Box Content Previewのプレビューレベルでイベントを再発行します。
@@ -406,6 +423,7 @@ annotator.removeListener(EVENTNAME, listener);
   fileVersionId: fileVersionId  // The file version id
   fileId: fileId                // The file id
 }
+
 ```
 
 ### イベントの使用例
@@ -463,6 +481,7 @@ preview.addListener("annotationsfetched", data => {
   } else {
   }
 });
+
 ```
 
 ## 注釈スレッド
@@ -499,6 +518,7 @@ preview.addListener("annotationsfetched", data => {
     threadNumber: '1' // Thread number from Annotations API
   }
 }
+
 ```
 
 <!-- markdownlint-disable line-length -->

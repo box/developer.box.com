@@ -53,12 +53,14 @@ Slackアプリ用のイベントリスナーを設定すると、チャンネル
   "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
   "type": "url_verification" 
 }
+
 ```
 
 イベントリスナーのURLを設定するには、この手順の間に、設定するURLが、チャレンジ値を含む確認用ペイロードを使用してSlackに応答する必要があります。ペイロードは次のようになります。
 
 ```javascript
 HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P"}
+
 ```
 
 このためには、チャレンジイベントに応答する少量のコードを展開します。最初に、以下の中からお好みの言語/フレームワークを選択してください。
@@ -110,6 +112,7 @@ app.post('/event', (req, res) => {
 app.listen(port, function(err) {
   console.log("Server listening on PORT", port);
 });
+
 ```
 
 </Choice>
@@ -127,10 +130,10 @@ app.listen(port, function(err) {
 * `build.gradle`ファイルを開いて以下を追加します。アプリケーションに使用したグループとこのグループが一致することを確認します。保存したら、Gradleプロジェクトを更新します。
 
 ```java
-plugins {
-   id 'org.springframework.boot' version '2.3.1.RELEASE'
-   id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-   id 'java'
+ plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
 }
 
 group = 'com.box'
@@ -138,20 +141,21 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-   mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-   implementation 'org.springframework.boot:spring-boot-starter-web'
-   testImplementation('org.springframework.boot:spring-boot-starter-test') {
-       exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-   }
-   compile 'com.box:box-java-sdk:2.44.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compile 'com.box:box-java-sdk:2.44.1'
 }
 
 test {
-   useJUnitPlatform()
+    useJUnitPlatform()
 }
+
 ```
 
 * `src/main/java`パスに、`Application.java`という名前の新しいJavaクラスファイルを作成します。
