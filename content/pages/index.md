@@ -288,7 +288,7 @@ alias_paths:
     <Teaser title="Box Youtube"
       href="https://www.youtube.com/@box/videos" type="youtube">
       Check out our channel for tutorials, training,
-      product news and more.
+      product news, and more.
 
       View Channel
     </Teaser>
