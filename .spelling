@@ -288,8 +288,11 @@ clickjacking
 iframe
 cd
 mappings.csv.
-invocable
-symlink
+<<<<<<< HEAD
+Symlink
 Docbase
 trackable
 automations
+=======
+invocable
+>>>>>>> 222b28a35a15de8a7fdfb869e7df1be1ef11be15

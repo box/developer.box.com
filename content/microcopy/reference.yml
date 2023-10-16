@@ -145,6 +145,9 @@ parameter_details:
   // min_value: The label for the minimum value parameter.
   min_value: min
 
+  // pattern: The label for the pattern parameter.
+  pattern: pattern
+
 content_type:
   // none: |-
     Describes it when there is no content type as there
