@@ -9,10 +9,10 @@ subcategory_id: null
 is_index: true
 id: getting-started
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: guides
 parent_id: guides
-next_page_id: getting-started/use-cases
+next_page_id: getting-started/box-glossary
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md

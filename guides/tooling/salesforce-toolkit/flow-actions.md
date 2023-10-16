@@ -28,6 +28,8 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 
 以下のリストには、[Salesforceフロー][Salesforce Flows]で呼び出し可能なすべてのメソッドを示しています。
 
+<!--alex ignore -->
+
 * フォルダIDでBoxメタデータを作成する (`createBoxMetadataByFolderId`)
 * コラボレーションを作成する (`createCollaboration`)
 * レコードにコラボレーションを作成する (`createCollaborationOnRecord`)
@@ -38,6 +40,7 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * テンプレートからレコードID用のフォルダを作成する (`createFolderForRecordIdFromTemplate`)
 * メタデータカスケードポリシーを作成する (`createMetadataCascadePolicy`)
 * レコードID用のオブジェクトフォルダを作成する (`createObjectFolderForRecordId`)
+* Create Slack Channel Mapping (`mapSfdcRecordToSlackChannel`)
 * フォルダIDでBoxメタデータを削除する (`deleteBoxMetadataByFolderId`)
 * コラボレーションを削除する (`deleteCollaboration`)
 * メタデータカスケードポリシーを削除する (`deleteMetadataCascadePolicyById`)
@@ -54,7 +57,10 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * ルートフォルダIDを取得する (`getRootFolderId`)
 * フォルダ用URLを取得する (`getUrlForFolder`)
 * フォルダを移動する (`moveFolder`)
+* Set Slack Channel Access Management Disabled (`setSlackChannelAccessManagementDisabled`)
 * フォルダIDでBoxメタデータを更新する (`updateBoxMetadataByFolderId`)
+
+<!--alex enable -->
 
 [methods]: g://tooling/salesforce-toolkit/methods
 
