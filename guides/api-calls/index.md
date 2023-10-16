@@ -27,7 +27,7 @@ these APIs.
 ## API calls insights
 
 Admins and co-admins can access the Platform Insights
-dashboard that provides information total number
+dashboard that provides information on the total number
 of API calls per application.
 
 See [Platform Insights][insights] and [applications][apps] for details.
