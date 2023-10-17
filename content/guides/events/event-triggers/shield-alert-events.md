@@ -11,7 +11,9 @@ alias_paths: []
 
 # Shield Alert Events
 
-[Box Shield][box-shield] must be purchased and enabled on a Box enterprise to take advantage of the advanced security offerings outlined below. 
+[Box Shield][box-shield] must be purchased and enabled on a
+Box enterprise to take advantage of the advanced security
+offerings outlined below. 
 
 ## Threat detection alerts
 
@@ -53,7 +55,8 @@ standard event object schema and the `event_type` value is set to
 }
 ```
 
-The `additional_details` object provides information about the specific type of shield alert that triggered the event.
+The `additional_details` object provides information
+about the specific type of shield alert that triggered the event.
 
 ### Suspicious locations alert
 
