@@ -102,7 +102,7 @@
   // The label for the minimum value parameter.
   "reference.parameter_details.min_value": "最小値",
   // The label for the pattern parameter.
-  "reference.parameter_details.pattern": "pattern",
+  "reference.parameter_details.pattern": "パターン",
   // Describes it when there is no content type as thereis no body request or response body
   "reference.content_type.none": "none",
   // Describes the situation where a parameter canonly be one specific value
