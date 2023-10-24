@@ -379,12 +379,31 @@ alias_paths:
 
 <Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
-    Developer News
+    Additional resources
   </Header>
 
-  <BlogCards />
+  <!-- <BlogCards /> -->
 
-  <More to='https://medium.com/box-developer-blog' centered>
-    Visit Box Developer Blog
-  </More>
+  <div style="display:flex; align-items: center; flex-wrap: wrap">
+    <Teaser title="Box Youtube"
+      href="https://www.youtube.com/@box/videos" type="youtube">
+      Check out our channel for tutorials, training,
+      product news, and more.
+
+      View Channel
+    </Teaser>
+    <Teaser title="Developer Newsletter" href="/newsletter/" type="newsletter">
+      Stay up to date with the top developer events,
+      product releases, and community highlights.
+
+      Browse Newsletter
+    </Teaser>
+    <Teaser title="Box Developer Blog"
+      href="https://medium.com/box-developer-blog" type="blog">
+      Read news, updates and tutorials on Box APIs, SDKs
+      and gain useful developers' and admins' insights.
+
+      Visit Box Developer Blog
+    </Teaser>
+  </div>
 </Centered>
