@@ -220,7 +220,7 @@
   // The text for the Medium Dev Blog
   "headers.primary.links.blog.text": "Box開発者向けブログ",
   // The URL to Medium bev blog
-  "headers.primary.links.blog.url": "https:\/\/medium.com\/box-developer-blog",
+  "headers.primary.links.blog.url": "https:\/\/medium.com\/box-developer-japan-blog",
   // A longer description of getting to the developer console
   "headers.primary.buttons.dashboard.text": "開発者コンソールに移動",
   // The URL to the developer console
