@@ -51,24 +51,24 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-## App insights
+## アプリインサイト
 
-Admins and co-admins can access the Platform Insights dashboard that provides a comprehensive view of the organization’s platform usage. This includes app-related data, such as:
+管理者と共同管理者は、組織におけるプラットフォームの利用状況を集約した、Platformインサイトのダッシュボードにアクセスできます。これには、以下のような、アプリ関連のデータが含まれます。
 
-* The total number of API calls per application.
-* A list of top applications within the enterprise.
-* A list of pending application approvals.
-* A list of applications awaiting enablement.
+* アプリケーションごとのAPIコールの合計数。
+* 企業内の上位アプリケーションのリスト。
+* 承認を保留中のアプリケーションのリスト。
+* 有効化待ちのアプリケーションのリスト。
 
-See [Platform Insights][insights] for details.
+詳細については、[Platformインサイト][insights]を参照してください。
 
 <Message type="notice">
 
-You need the following permissions to access and view Platform Insights:
+Platformインサイトにアクセスして表示するには、以下の権限が必要です。
 
-* View settings and apps for your company
-* Edit settings and apps for your company
-* Run new reports and access existing reports
+* 会社の設定とアプリを表示する
+* 会社の設定とアプリを編集する
+* 新規レポートの実行および既存レポートへのアクセスを行う
 
 </Message>
 

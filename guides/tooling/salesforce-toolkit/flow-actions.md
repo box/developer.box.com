@@ -40,7 +40,7 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * テンプレートからレコードID用のフォルダを作成する (`createFolderForRecordIdFromTemplate`)
 * メタデータカスケードポリシーを作成する (`createMetadataCascadePolicy`)
 * レコードID用のオブジェクトフォルダを作成する (`createObjectFolderForRecordId`)
-* Create Slack Channel Mapping (`mapSfdcRecordToSlackChannel`)
+* Slackチャンネルマッピングを作成する (`mapSfdcRecordToSlackChannel`)
 * フォルダIDでBoxメタデータを削除する (`deleteBoxMetadataByFolderId`)
 * コラボレーションを削除する (`deleteCollaboration`)
 * メタデータカスケードポリシーを削除する (`deleteMetadataCascadePolicyById`)
@@ -57,7 +57,7 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * ルートフォルダIDを取得する (`getRootFolderId`)
 * フォルダ用URLを取得する (`getUrlForFolder`)
 * フォルダを移動する (`moveFolder`)
-* Set Slack Channel Access Management Disabled (`setSlackChannelAccessManagementDisabled`)
+* Slackチャンネルアクセス管理を無効に設定する (`setSlackChannelAccessManagementDisabled`)
 * フォルダIDでBoxメタデータを更新する (`updateBoxMetadataByFolderId`)
 
 <!--alex enable -->

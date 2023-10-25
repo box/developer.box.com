@@ -22,11 +22,11 @@ fullyTranslated: true
 
 Box APIは、可能であれば共通のHTTP標準に準拠しようとするRESTful APIです。以下のガイドでは、開発者がこれらのAPIを使用する際に利用できる便利な機能と直面するよくある間違いに注目します。
 
-## API calls insights
+## APIコールのインサイト
 
-Admins and co-admins can access the Platform Insights dashboard that provides information on the total number of API calls per application.
+管理者と共同管理者は、アプリケーションごとにAPIコールの合計数に関する情報が表示される、Platformインサイトのダッシュボードにアクセスできます。
 
-See [Platform Insights][insights] and [applications][apps] for details.
+詳細については、[Platformインサイト][insights]と[アプリケーション][apps]を参照してください。
 
 [insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights
 

@@ -656,42 +656,42 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 * トランザクションが成功したかどうかを示すブール値。
 * パラメータが正しくない場合は`false`。
 
-## Salesforce and Slack
+## SalesforceとSlack
 
 ### `getIntegrationMappings`
 
-This toolkit method calls the [get integration mappings][9] endpoint to get the existing mappings.
+このツールキットのメソッドでは、[統合マッピングを取得][9]エンドポイントを呼び出して既存のマッピングを取得します。
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ           | 型      | 説明                                                                                   |
-| --------------- | ------ | ------------------------------------------------------------------------------------ |
-| `integration`   | String | `Slack` is currently the only supported value.                                       |
-| `partnerItemId` | String | ID of the mapped item on the provided integration side. Example: a Slack channel ID. |
+| パラメータ           | 型      | 説明                                        |
+| --------------- | ------ | ----------------------------------------- |
+| `integration`   | String | `Slack`は、現在唯一サポートされている値です。                |
+| `partnerItemId` | String | 指定された統合側でマッピングされている項目のID。例: SlackチャンネルID。 |
 
 <!-- markdownlint-enable line-length -->
 
 戻り値:
 
-* A list of `IntegrationMapping` objects,
-* `null` is returned if there are incorrect parameters, the access is missing, or the integration mappings is not found.
+* `IntegrationMapping`オブジェクトのリスト。
+* パラメータが正しくない場合、アクセス権限がない場合、または統合マッピングが見つからない場合は、`null`が返されます。
 
 ### `createIntegrationMapping`
 
-This toolkit method calls the [get integration mappings][9] endpoint to create the mappings.
+このツールキットのメソッドでは、[統合マッピングを取得][9]エンドポイントを呼び出してマッピングを作成します。
 
 <Message type="notice">
 
-When you map to a Slack channel, `access_management_disabled` is set to `FALSE` by default. This causes an automatic removal of collaborators that are not part of the Slack channel member list. Depending on how your organization sets up sharing in Box, we recommend to either enable `access_ management_disabled` to `TRUE` by using the `setSlackChannelAccessManagementDisabled` method, or use [groups][12]. This ensures no users are removed, regardless of Slack settings. Collaborations are added or removed from Slack when a file is uploaded to a Slack channel.
+Slackチャンネルにマッピングする場合、`access_management_disabled`はデフォルトで`FALSE`に設定されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`setSlackChannelAccessManagementDisabled`メソッドを使用して`access_ management_disabled`を`TRUE`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
 
 </Message>
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ         | 型                    | 説明                                             |
-| ------------- | -------------------- | ---------------------------------------------- |
-| `integration` | String               | `Slack` is currently the only supported value. |
-| `mapping`     | `IntegrationMapping` | Apex defined type `IntegrationMapping`.        |
+| パラメータ         | 型                    | 説明                             |
+| ------------- | -------------------- | ------------------------------ |
+| `integration` | String               | `Slack`は、現在唯一サポートされている値です。     |
+| `mapping`     | `IntegrationMapping` | Apex定義タイプ`IntegrationMapping`。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -701,14 +701,14 @@ When you map to a Slack channel, `access_management_disabled` is set to `FALSE` 
 
 ### `deleteIntegrationMapping`
 
-This toolkit method calls the [delete integration mappings][10] endpoint to delete a mapping.
+このツールキットのメソッドでは、[統合マッピングを削除][10]エンドポイントを呼び出してマッピングを削除します。
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ                  | 型      | 説明                                             |
-| ---------------------- | ------ | ---------------------------------------------- |
-| `integration`          | String | `Slack` is currently the only supported value. |
-| `integrationMappingId` | String | Retrieved from `getIntegrationMappings`.       |
+| パラメータ                  | 型      | 説明                                |
+| ---------------------- | ------ | --------------------------------- |
+| `integration`          | String | `Slack`は、現在唯一サポートされている値です。        |
+| `integrationMappingId` | String | `getIntegrationMappings`から取得されます。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -718,28 +718,28 @@ This toolkit method calls the [delete integration mappings][10] endpoint to dele
 
 ### `mapSfdcRecordToSlackChannel`
 
-This toolkit method uses the above integration mapping methods and provides a wrapper with four different use cases:
+このツールキットのメソッドでは、上記の統合マッピングメソッドを使用し、以下の4種類のユースケースで使用できるラッパーを提供します。
 
-1. If a mapping does not exist in Salesforce or Slack, it creates a folder under the Box for Salesforce folder structure, and an integration mapping to link it with the Slack channel.
-2. If a mapping only exists from Salesforce, it continues to use the folder and does not change the location. Creates an integration mapping to link it with the Slack Channel.
-3. If a mapping only exists from Slack, it continues to use the folder and create an FRUP record for the Salesforce record to use the existing folder. This folder is likely to be outside of the Salesforce root folder.
-4. If Salesforce and Slack have existing mappings but are not related to each other, it throws an error through `Toolkit.mostRecentError` or within a flow action, stating that the mappings already exist.
+1. SalesforceまたはSlackにマッピングが存在しない場合は、Box for Salesforceフォルダ構造にフォルダが作成され、そのフォルダをSlackチャンネルとリンクするための統合マッピングが作成されます。
+2. Salesforceからのマッピングのみ存在する場合は、引き続きそのフォルダが使用され、場所は変更されません。そのフォルダをSlackチャンネルとリンクするための統合マッピングを作成します。
+3. Slackからのマッピングのみ存在する場合は、引き続きそのフォルダが使用され、既存のフォルダを使用するためにSalesforceレコード用にFRUPレコードが作成されます。このフォルダは、Salesforceルートフォルダ外に存在する可能性があります。
+4. SalesforceとSlackに既存のマッピングがあるものの、相互に関連付けられていない場合は、`Toolkit.mostRecentError`またはフローアクション内でエラーがスローされ、マッピングがすでに存在することが示されます。
 
-This method/invocable is used in a flow template provided in the Box for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+このメソッド/呼び出し可能なアクションは、Box for Salesforceパッケージの`Create Box Folder/Slack Channel Mapping`で提供されるフローテンプレートで使用されています。
 
 <Message type="notice">
 
- When you map to a Slack channel, `access_management_disabled` is set to `FALSE` by default. This causes an automatic removal of collaborators that are not part of the Slack channel member list. Depending on how your organization sets up sharing in Box, we recommend to either enable `access_ management_disabled` to `TRUE` by using the `setSlackChannelAccessManagementDisabled` method, or use [groups][12]. This ensures no users are removed, regardless of Slack settings. Collaborations are added or removed from Slack when a file is uploaded to a Slack channel.
+ Slackチャンネルにマッピングする場合、`access_management_disabled`はデフォルトで`FALSE`に設定されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`setSlackChannelAccessManagementDisabled`メソッドを使用して`access_ management_disabled`を`TRUE`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
 
 </Message>
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ                   | 型      | 説明                                                                                                                      |
-| ----------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| `recordId`              | ID     | SalesforceレコードID。                                                                                                       |
-| `slackChanneld`         | String |                                                                                                                         |
-| `slackWorkspaceOrOrgId` | String | If Box for Slack is installed org-wide, provide the Org ID (for example E1234567), or the Workspace ID (e.g. T5555555). |
+| パラメータ                   | 型      | 説明                                                                                            |
+| ----------------------- | ------ | --------------------------------------------------------------------------------------------- |
+| `recordId`              | ID     | SalesforceレコードID。                                                                             |
+| `slackChanneld`         | String |                                                                                               |
+| `slackWorkspaceOrOrgId` | String | Box for Slackが組織全体でインストールされている場合は、オーガナイゼーションID (E1234567など) またはワークスペースID (T5555555など) を指定します。 |
 
 <!-- markdownlint-enable line-length -->
 
@@ -749,16 +749,16 @@ This method/invocable is used in a flow template provided in the Box for Salesfo
 
 ### `setSlackChannelAccessManagementDisabled`
 
-This toolkit method calls the [put integration mappings][11] endpoint to update the access management deactivated setting.
+このツールキットのメソッドでは、[統合マッピングを更新][11]エンドポイントを呼び出して、アクセス管理の非アクティブ化設定を更新します。
 
-This method/invocable is used in a flow template provided in the Box for Salesforce package `Create Box Folder/Slack Channel Mapping`.
+このメソッド/呼び出し可能なアクションは、Box for Salesforceパッケージの`Create Box Folder/Slack Channel Mapping`で提供されるフローテンプレートで使用されています。
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ       | 型       | 説明                                                                                                                                                                                                                    |
-| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `channelId` | String  |                                                                                                                                                                                                                       |
-| `disabled`  | Boolean | Indicates whether or not a channel member access to the underlying Box item should be automatically managed. Depending on the type of the channel, access is managed through creating collaborations or shared links. |
+| パラメータ       | 型       | 説明                                                                                                  |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------- |
+| `channelId` | String  |                                                                                                     |
+| `disabled`  | Boolean | 基になるBox項目に対するチャンネルメンバーのアクセスを自動で管理する必要があるかどうかを示します。チャンネルのタイプによっては、アクセスがコラボレーションまたは共有リンクの作成により管理されます。 |
 
 <!-- markdownlint-enable line-length -->
 
