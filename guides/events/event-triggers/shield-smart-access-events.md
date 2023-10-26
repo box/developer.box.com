@@ -479,8 +479,8 @@ The `additional_details` payload will provide the following details:
 ```
 <!-- i18n-enable localize-links -->
 
-[smartaccess]: https://support.box.com/hc/en-us/articles/360044196353-Using-Smart-Access
-[monitoringmode]: https://support.box.com/hc/en-us/articles/360044196353
+[smartaccess]: https://support.box.com/hc/en-us/articles/7711416297747-About-Smart-Access
+[monitoringmode]: https://support.box.com/hc/en-us/articles/14596333776403-Shield-Access-Policy-Settings
 <!-- i18n-disable localize-links -->
 
 [events]: g://events/enterprise-events/for-enterprise/
