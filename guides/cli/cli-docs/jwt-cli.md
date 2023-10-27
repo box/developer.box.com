@@ -213,7 +213,7 @@ Notification Email: []
 
 <!-- i18n-enable localize-links -->
 
-[blogpost]: https://medium.com/box-developer-blog/box-api-understanding-security-ja-b95725d8aaf0
+[blogpost]: https://medium.com/box-developer-japan-blog/box-api-understanding-security-ja-b95725d8aaf0
 
 <!-- i18n-disable localize-links -->
 

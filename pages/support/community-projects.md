@@ -65,7 +65,7 @@ fullyTranslated: true
 | [Microsoft Flow][connector-ms-flow]        | お好きなアプリとサービスを結んで自動化するワークフローを作成して、通知の取得、ファイル同期、データ収集などに利用できます。         |
 | [Mulesoft][connector-mulesoft]             | BoxとサードパーティCRM、CMS、モバイルアプリケーション、ソーシャルアプリケーションとのデータ同期とプロセス自動化を実現します。   |
 | [Stamplay][connector-stamplay]             | 実際のビジネスプロセスをBoxに接続する自動化ワークフローを構築できます。                                 |
-| [Workato][connector-workato]               | BoxをCRM、マーケティング、ERP、サポート、会計アプリと統合することで、文書ワークフローを自動化できます。              |
+| [Workato][connector-workato]               | BoxをCRM、マーケティング、ERP、サポート、会計アプリと統合することで、ドキュメントワークフローを自動化できます。          |
 
 <!-- markdownlint-enable line-length -->
 
