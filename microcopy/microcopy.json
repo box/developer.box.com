@@ -252,7 +252,7 @@
   // The text for the link to the developer blog
   "headers.secondary.additional_resources.blog.text": "ブログ",
   // The URL to the developer blog
-  "headers.secondary.additional_resources.blog.url": "https:\/\/medium.com\/box-developer-blog",
+  "headers.secondary.additional_resources.blog.url": "https:\/\/medium.com\/box-developer-japan-blog",
   // A short title for the dropdown to select a documentation type on mobile
   "headers.secondary.dropdowns.docs": "ドキュメント",
   // A title for the dropdown to select a sub-page of the API referenceon mobile
@@ -336,7 +336,7 @@
   // Text for a link to the Platform blog
   "footer.categories.company.links.devblog.text": "開発者向けブログ",
   // A link to our developer blog
-  "footer.categories.company.links.devblog.url": "https:\/\/medium.com\/box-developer-blog",
+  "footer.categories.company.links.devblog.url": "https:\/\/medium.com\/box-developer-japan-blog",
   // Text for a link to the newsletter page
   "footer.categories.company.links.newsletter.text": "開発者向けニュースレター",
   // A link to the newsletter page
