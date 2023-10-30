@@ -48,5 +48,5 @@ below.
 [authentication]: https://staging.developer.box.com/learn/authentication-methods/
 [support]: https://staging.developer.box.com/learn/support/
 [tooling]: https://staging.developer.box.com/learn/tools/
-[box-app]:
+[box-app]: 
 [publish-app]:
