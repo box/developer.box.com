@@ -29,6 +29,6 @@ fullyTranslated: true
 
 <!-- i18n-enable localize-links -->
 
-[collab-restrictions]: https://support.box.com/hc/en-us/articles/4404822772755-Enterprise-Settings-Content-Sharing-Tab
+[collab-restrictions]: https://support.box.com/hc/ja/articles/4404822772755-Enterprise設定-コンテンツと共有-タブ
 
 <!-- i18n-disable localize-links -->

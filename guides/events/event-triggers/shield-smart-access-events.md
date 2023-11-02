@@ -442,9 +442,9 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
 
 <!-- i18n-enable localize-links -->
 
-[smartaccess]: https://support.box.com/hc/en-us/articles/7711416297747-About-Smart-Access
+[smartaccess]: https://support.box.com/hc/ja/articles/7711416297747-スマートアクセスについて
 
-[monitoringmode]: https://support.box.com/hc/en-us/articles/14596333776403-Shield-Access-Policy-Settings
+[monitoringmode]: https://support.box.com/hc/ja/articles/14596333776403-Shieldアクセスポリシーの設定
 
 <!-- i18n-disable localize-links -->
 
