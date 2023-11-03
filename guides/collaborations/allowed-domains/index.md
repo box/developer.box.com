@@ -33,5 +33,5 @@ programmatically for the enterprise.
 
 <!-- i18n-enable localize-links -->
 
-[collab-restrictions]: https://support.box.com/hc/en-us/articles/360044194913-Content-and-sharing-settings-for-your-enterprise#toc-hId--670854033
+[collab-restrictions]: https://support.box.com/hc/en-us/articles/4404822772755-Enterprise-Settings-Content-Sharing-Tab
 <!-- i18n-disable localize-links -->

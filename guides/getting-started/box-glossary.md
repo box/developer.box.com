@@ -52,13 +52,13 @@ This glossary includes terms and definitions used in Box Platform.
 | [Developer Console][dev-console] | | A portal that allows developers to create, debug, test, and monitor their applications by providing real-time insights into code execution and system performance. |
 | Enterprise | Repository, content store, file cabinet, Docbase, vault | Enterprise in Box is a comprehensive suite of tools and services provided by Box for large organizations, offering secure file storage, collaboration features, access controls, workflow automation, compliance enforcement, and analytics. It enables efficient document management and teamwork while ensuring data security within an enterprise setting. |
 | [Ethical walls][info-barriers] | Information barriers | A mechanism that prevents exchanges or communication that could lead to conflicts of interest and therefore result in business activities ethically or legally questionable. |
-| [Event][event] | Result of an action taken by the user. See [Using the Enterprise Event Stream][event-stream]. |
+| [Event][event] | | Result of an action taken by the user. See [Using the Enterprise Event Stream][event-stream]. |
 | External collaborator | External user | A collaborator who is not part of an enterprise. |
 | External collaborated folder | | A folder owned by someone outside your enterprise. |
 | File | Document, unstructured data | A digital container that stores information or data in a structured format. |
 | Folder | Directory, container | A directory containing files. |
 | [Group admin][group-admin] | | Group admins can add existing users to their groups, create new users that will be assigned to their groups, and assign folder access to their groups. They can also run reports for their groups. |
-| Group | Team |  Collaborative workspace where users can share files, collaborate on documents, and communicate with each other. |
+| Group | Team | Collaborative workspace where users can share files, collaborate on documents, and communicate with each other. |
 | Item | Object, Box object, content | Can represent a file, a folder or a web link. |
 | [Limited access app][limited-app] | | Secure and restricted application created in the Developer Console that allows specific users to access and interact with designated content within the Box Platform. |
 | [Managed user][managed-users] | | A user account that is centrally controlled and administered by an organization's admin. |
