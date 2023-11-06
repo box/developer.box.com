@@ -94,17 +94,18 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Catalog
+      text: Box AI API
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 80+ open-source repositories
-        in various programming languages.
+        All the power of Box AI from within your
+        application. Make the most of your valuable
+        content with questions and answers, text
+        generation and Metadata suggestions.
 
     cta:
       text:
-        Browse sample code
+        Check out the Box AI API
 
 secondary:
   images:
