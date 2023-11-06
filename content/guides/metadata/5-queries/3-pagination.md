@@ -1,8 +1,7 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
-
 # Paginate and sort
 
 By default only 20 query results are returned per page and the order of these
