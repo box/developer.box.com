@@ -1,13 +1,13 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/syntax
 rank: 2
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries/pagination
@@ -119,15 +119,6 @@ A query supports the following logical operators.
 
 Any match on a `string` or `enum` field is case sensitive except when using
 the `ILIKE` operator.
-
-</Message>
-
-<Message warning>
-
-The `LIKE`, `ILIKE`, `NOT LIKE`, and `NOT ILIKE` operators can not
-be used on templates with metadata instance counts greater than 10,000 items.
-Queries of this size require an [index](g://metadata/queries/indexes) and these
-operators are not compatible with indices.
 
 </Message>
 
