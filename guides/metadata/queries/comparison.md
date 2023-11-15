@@ -1,17 +1,17 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/comparison
 rank: 7
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: ''
-previous_page_id: metadata/queries/indexes
+previous_page_id: metadata/queries
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/7-comparison.md
 fullyTranslated: true
@@ -24,16 +24,16 @@ fullyTranslated: true
 
 <!-- markdownlint-disable line-length -->
 
-|                     | [メタデータクエリAPI][mdq_api]                                                                                                                                                        | [検索API][search]                                                                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  インデックスの作成対象        | このAPIでは、検索対象のメタデータテンプレートの値に基づいてファイル/フォルダのみが返されます。                                                                                                                             | このAPIでは、項目名、説明、コンテンツ (最初の10,000バイトまで) の値のほか、関連付けられたメタデータテンプレートインスタンスに基づいてファイル、フォルダ、およびウェブリンクが返されます。                                                                  |
-|  インデックス作成時間         | このAPIでは、ファイルまたはフォルダのメタデータが追加、削除、更新されるとすぐに正確な結果が返されます。                                                                                                                         | このAPIは、検索インデックスの作成が遅延すると、その影響を受けます。この遅延は通常10分ですが、場合によっては長くなることがあります。つまり、メタデータが更新されてから10分を経過しても項目が返されない場合があります。                                                       |
-|  一致                 | このAPIでは、SQLの規則に基づいて完全一致が使用されます。結果は、指定した並べ替え順を基に返されます。                                                                                                                         | このAPIでは、あいまい一致が使用されるため、文字列のトークン化、特殊文字の削除、およびその他の検索コンセプトに基づいて異なる結果が返される場合があります。結果の順序は、項目の関連性または更新日に基づいています。                                                           |
-|  条件付きロジック           | このAPIは、比較演算子を使用するマルチパートブール式をサポートします。                                                                                                                                          | このAPIでは、メタデータによるクエリのサポートが限定的です。サポートされるのは、一度に1つのメタデータテンプレートに対するクエリのみで、単純なクエリ操作のみが可能です。                                                                                |
-|  レスポンスタイプ           | このAPIでは、一致したファイル/フォルダと、クエリによって一致した関連するメタデータの両方が返されます。                                                                                                                         | このAPIで返されるのは、一致した項目のみです。各項目のメタデータを返すには、後続のAPIコールが必要です。                                                                                                               |
-| スループット (Throughput) | このAPIには現在、ユーザーごとのレート制限のほか、企業あたりのリクエスト数が10件/秒という制限があります。                                                                                                                       | このAPIでは、1ユーザーあたりの検索数は6件/秒、企業あたりの検索数は最大60件/分および12件/秒がサポートされています。                                                                                                      |
-|  規模                 | このAPIには、指定したメタデータテンプレートを使用して返される項目数に制限はありません。ただし、10,000個を超えるテンプレートインスタンスを含むクエリには、適切な[インデックス](g://metadata/queries/indexes)を作成する必要があります。一致する結果が2,000件以下になるクエリのみを送信することをお勧めします。 | このAPIには、指定したメタデータテンプレートを使用して返される項目数に制限はありません。ただし、検索に一致する項目数が増えるにつれ、レスポンス時間が大幅に増大します。このAPIでは、1つのクエリに対する結果は1,000万件までという制限があります。一致する結果が50,000件以下になるクエリのみを送信することをお勧めします。 |
-|  スコープ               | このAPIは常に、ユーザーがアクセスできるコンテンツに制限されています。                                                                                                                                          | このAPIは、ユーザーがアクセスできるコンテンツ (`​user_content​`) または社内のすべてのコンテンツ (`​enterprise_content​`) のいずれかに制限される場合があります。                                                             |
+|                     | [メタデータクエリAPI][mdq_api]                                                                                                                                                                 | [検索API][search]                                                                                                                                                                                                                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  インデックスの作成対象        | This API only returns files/folders based on the values in the metadata templates that are searched.                                                                                   | This API returns files, folders and web links based on values in the item names, descriptions, contents (up to the first 10,000 bytes) as well as the associated metadata template instances.                                    |
+|  インデックス作成時間         | This API returns accurate results as soon as metadata has been added, removed, updated or deleted for a file or folder.                                                                | This API is subject to a search indexing delay, which is typically 10 minutes, yet may be longer in some cases. This means that items may not be returned for more than 10 minutes after metadata has been updated.              |
+|  一致                 | This API uses exact matching based on SQL conventions. Results are returned based on a specified sort order.                                                                           | This API uses fuzzy matching and may return results that vary based on string tokenization, removal of special characters, and other search concepts. Result order is based on either relevance or the updated date of the item. |
+|  条件付きロジック           | This API supports multi-part boolean expressions with comparison operators.                                                                                                            | このAPIでは、メタデータによるクエリのサポートが限定的です。サポートされるのは、一度に1つのメタデータテンプレートに対するクエリのみで、単純なクエリ操作のみが可能です。                                                                                                                                            |
+|  レスポンスタイプ           | This API returns both the matched file/folder and the associated metadata matched by the query.                                                                                        | This API only returns the matched item. A subsequent API call is needed to return each item's metadata.                                                                                                                          |
+| スループット (Throughput) | This API is currently subject to per-user rate limits and to a 10 requests per second per enterprise limit.                                                                            | This API supports 6 searches per second per user, up to 60 searches per minute and 12 searches per second per enterprise.                                                                                                        |
+|  規模                 | This API has no limit on the number of items with the specified metadata template that can be returned. It is recommended to only send queries which match no more than 2,000 results. | このAPIには、指定したメタデータテンプレートを使用して返される項目数に制限はありません。ただし、検索に一致する項目数が増えるにつれ、レスポンス時間が大幅に増大します。このAPIでは、1つのクエリに対する結果は1,000万件までという制限があります。一致する結果が50,000件以下になるクエリのみを送信することをお勧めします。                                                             |
+|  スコープ               | このAPIは常に、ユーザーがアクセスできるコンテンツに制限されています。                                                                                                                                                   | このAPIは、ユーザーがアクセスできるコンテンツ (`​user_content​`) または社内のすべてのコンテンツ (`​enterprise_content​`) のいずれかに制限される場合があります。                                                                                                                         |
 
 <!-- markdownlint-enable line-length -->
 

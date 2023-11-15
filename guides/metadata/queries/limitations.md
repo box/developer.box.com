@@ -1,16 +1,16 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/limitations
 rank: 5
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
-next_page_id: metadata/queries/indexes
+next_page_id: metadata/queries/comparison
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/5-limitations.md
@@ -33,16 +33,6 @@ fullyTranslated: true
 Boxでは、メタデータテンプレートを使用してコンテンツの分類を行うことができます。これらのメタデータテンプレートはメタデータクエリでは使用できません。なぜなら、大きな結果セットに関する問題が発生する可能性が高いためです。詳細は次に説明しています。
 
 当面、将来これらのクエリのサポートを開始する計画はありません。
-
-## 大規模な結果セットに対するインデックス
-
-規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されている場合、メタデータクエリによって`HTTP 403`エラーが返される可能性があります。
-
-<CTA to="g://metadata/queries/indexes">
-
-検索インデックスの作成と使用について確認する
-
-</CTA>
 
 ## 推奨される結果セットのサイズ
 

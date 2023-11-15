@@ -1,13 +1,13 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/errors
 rank: 4
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries
@@ -59,16 +59,6 @@ fullyTranslated: true
 各引数の名前は開発者の好みに合わせて構成できるため、フィールドキーと一致させる必要はありません。必要なのは、先頭に`:`を付けることだけです。
 
 </Message>
-
-## 検索インデックスがない
-
-規模を考慮したことにより、メタデータテンプレートが10,000を超えるファイルまたはフォルダに適用されている場合、メタデータクエリによって`HTTP 403`エラーが返される可能性があります。検索インデックスを作成すると、特定の検索クエリでこのエラーを解決することができます。
-
-<CTA to="g://metadata/queries/indexes">
-
-インデックスの作成と使用の詳細を確認する
-
-</CTA>
 
 ## `ancestor_folder_id`がない
 

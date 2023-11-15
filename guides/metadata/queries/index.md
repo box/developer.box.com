@@ -1,16 +1,16 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: true
 id: metadata/queries
 rank: 5
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata
 parent_id: metadata
-next_page_id: metadata/queries/indexes
+next_page_id: metadata/queries/comparison
 previous_page_id: metadata/queries/errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/metadata/5-queries/0-index.md

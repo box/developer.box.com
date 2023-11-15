@@ -1,13 +1,13 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/syntax
 rank: 2
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries/pagination
@@ -100,12 +100,6 @@ fullyTranslated: true
 <Message notice>
 
 `ILIKE`演算子を使用した場合を除き、`string`または`enum`フィールドでの一致は、どれも大文字小文字が区別されます。
-
-</Message>
-
-<Message warning>
-
-`LIKE`、`ILIKE`、`NOT LIKE`、および`NOT ILIKE`演算子は、メタデータインスタンスの数が10,000項目を超えるテンプレートでは使用できません。このサイズのクエリには[インデックス](g://metadata/queries/indexes)が必要です。また、これらの演算子はインデックスと互換性がありません。
 
 </Message>
 
