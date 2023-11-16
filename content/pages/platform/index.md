@@ -9,8 +9,8 @@ If you are new to Box, start here!
 In the following pages, you'll learn how the all the Box Platform
 concepts and components work together to help you create an application quickly.
 
-To kick off your learning journey, checkout this video for an overview
-on everything Box Platform.
+<!-- To kick off your learning journey, checkout this video for an overview
+on everything Box Platform. -->
 
 <ImageFrame center>
 ![Learn](images/header.png)
