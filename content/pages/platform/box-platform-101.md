@@ -35,11 +35,11 @@ management workflows.
 
 Insert more here
 
-### Box Developer Console
+### Box Developer Site
 
 Insert more here
 
-### Box Developer Site
+### Box Developer Console
 
 Insert more here
 
@@ -48,9 +48,17 @@ Insert more here
 In the following learn sections, we will go into more depth on various topics.
 But at a high level, there are some terms and concepts to be familiar with.
 
-- User Types
-- Application Types
-- Authentication Methods
+### User Types
+
+Box 'd user's 
+
+### Application Type
+
+There are 
+
+### Authentication Method
+
+Access to 
 
 <Next>
   Next step
