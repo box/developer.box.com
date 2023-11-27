@@ -31,7 +31,7 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-  All the developer resources to help you get the most from Box products
+All the developer resources to help you get the most from Box products
 
 </Banner>
 
@@ -40,8 +40,8 @@ alias_paths:
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box 
-    Platform API with our comprehensive guides. Here are six of the most used 
+    Get started, learn tips and tricks, and discover how to use the Box
+    Platform API with our comprehensive guides. Here are six of the most used
     guides to get you started.
 
     <GuideList href='/guides/authentication/'>
@@ -85,7 +85,7 @@ alias_paths:
       difference between the types.
     </Tile>
     <Tile type="apps" title="2. Understand application types"
-      href="/guides/applications/select/">
+      href="/guides/applications/app-types/select/">
       When creating applications, you can choose from several types.
       Read this guide to see which one fits your needs best.
     </Tile>
@@ -305,5 +305,6 @@ alias_paths:
 
       Visit Box Developer Blog
     </Teaser>
+
   </div>
 </Centered>

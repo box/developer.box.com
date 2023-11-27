@@ -11,7 +11,7 @@ alias_paths: []
 
 We recommend creating a visual representation for your application before
 writing any code. The architecture patterns shown below are generic and do not
-represent an exhaustive list of possibilities. 
+represent an exhaustive list of possibilities.
 
 <Message type='tip'>
    Would you like assistance with application architecture?
@@ -39,7 +39,7 @@ Components:
 ![Vault Portal Diagram](images/vault_portal.png)
 </ImageFrame>
 
-Components: 
+Components:
 
 - A custom portal allowing users to collaborate in a non-Box branded environment
 - A load balancer distributing users to a web server with the deployed portal
@@ -53,23 +53,27 @@ Components:
 ![Box Skill Diagram](images/box_skill2.png)
 </ImageFrame>
 
-In this example, external users upload their resumes via a [file request][fr]. 
+In this example, external users upload their resumes via a [file request][fr].
 
 A [Box Skill][skill] is set to monitor any upload/move/copy actions in a
 specific folder. When an event occurs, the file is sent to a cloud provider to
 be processed by any machine learning service. Once it is processed, information
 is [saved back to the file as metadata][metadata]. This metadata can then be
-used in another process or for future reference. 
+used in another process or for future reference.
 
 [usermodel]: g://getting-started/user-models
 [auth]: g://authentication
-[apptype]: g://applications/select
+[apptype]: g://applications/app-types/select
 [events]: e://resources/event
 [userevents]: g://events/user-events/for-user
 [sa]: g://getting-started/user-types/service-account
+
 <!-- i18n-enable localize-links -->
+
 [fr]: https://support.box.com/hc/en-us/articles/360045304813-Using-File-Request-to-get-Content-from-Anyone
+
 <!-- i18n-disable localize-links -->
-[skill]: g://applications/custom-skills
+
+[skill]: g://applications/app-types/custom-skills
 [au]: g://getting-started/user-types/app-users
 [metadata]: e://post-files-id-metadata-global-boxSkillsCards

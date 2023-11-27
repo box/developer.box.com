@@ -95,6 +95,6 @@ This glossary includes terms and definitions used in Box Platform.
 [shield]: https://www.box.com/en-gb/shield
 [skills]: g://skills
 [classification]: g://metadata/classifications
-[custom-app]: g://applications/custom-apps
+[custom-app]: g://applications/app-types/custom-apps
 [webhook]: g://webhooks
-[limited-app]: g://applications/limited-access-apps
+[limited-app]: g://applications/app-types/limited-access-apps
