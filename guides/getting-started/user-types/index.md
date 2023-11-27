@@ -4,7 +4,7 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - applications/select
+  - applications/app-types/select
 required_guides: []
 related_resources:
   - user
@@ -35,10 +35,10 @@ types of users involved. There are four main types of users:
 
 <!-- markdownlint-disable line-length -->
 
-|                  | Admin privileges                   | No Admin privileges         |
-| ---------------- | ---------------------------------- | --------------------------- |
-| Traditional user | [Admin or Co-Admin User][admin]    | [Managed User][managed-user]|
-| Platform only    | [Service Account][service-account] | [App User][app-user]        |
+|                  | Admin privileges                   | No Admin privileges          |
+| ---------------- | ---------------------------------- | ---------------------------- |
+| Traditional user | [Admin or Co-Admin User][admin]    | [Managed User][managed-user] |
+| Platform only    | [Service Account][service-account] | [App User][app-user]         |
 
 <!-- markdownlint-enable line-length -->
 
@@ -55,6 +55,7 @@ create an Access Token.
 <!-- i18n-enable localize-links -->
 
 [admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
+
 <!-- i18n-disable localize-links -->
 
 [service-account]: g://getting-started/user-types/service-account

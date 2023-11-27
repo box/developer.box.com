@@ -5,7 +5,7 @@ related_resources: []
 related_guides:
   - authentication/select
 required_guides:
-  - applications/select
+  - applications/app-types/select
 alias_paths:
   - /docs/authenticate-with-developer-token
   - /authentication/access-tokens/developer-tokens
@@ -36,6 +36,13 @@ To create a Developer Token for an application:
   to create a Developer Token for.
 - Select the **Configuration** tab.
 - Under Developer Token, select **Generate Developer Token**.
+
+<Message>
+
+You can also generate a Developer Token directly from [My Apps][apps] view,
+using the menu available for each app.
+
+</Message>
 
 <ImageFrame border center shadow>
 
@@ -102,3 +109,4 @@ To learn more about Developer Tokens for each SDK head over to:
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#developer-token
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#developer-token
 [IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#developer-token
+[apps]: g://applications

@@ -82,15 +82,17 @@ used in another process or for future reference.
 
 [usermodel]: g://getting-started/user-models
 [auth]: g://authentication
-[apptype]: g://applications/select
+[apptype]: g://applications/app-types/select
 [events]: e://resources/event
 [userevents]: g://events/user-events/for-user
 [sa]: g://getting-started/user-types/service-account
+
 <!-- i18n-enable localize-links -->
 
 [fr]: https://support.box.com/hc/en-us/articles/360045304813-Using-File-Request-to-get-Content-from-Anyone
+
 <!-- i18n-disable localize-links -->
 
-[skill]: g://applications/custom-skills
+[skill]: g://applications/app-types/custom-skills
 [au]: g://getting-started/user-types/app-users
 [metadata]: e://post-files-id-metadata-global-boxSkillsCards

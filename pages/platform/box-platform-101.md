@@ -80,5 +80,5 @@ Next step
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
 [usertypes]: g://getting-started/user-types/
-[apptypes]: g://applications/select/
+[apptypes]: g://applications/app-types/
 [authmethods]: g://authentication/select/

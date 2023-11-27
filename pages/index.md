@@ -141,7 +141,7 @@ difference between the types.
 
 </Tile>
 
-<Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
+<Tile type="apps" title="2. Understand application types" href="/guides/applications/app-types/select/">
 
 When creating applications, you can choose from several types.
 Read this guide to see which one fits your needs best.
