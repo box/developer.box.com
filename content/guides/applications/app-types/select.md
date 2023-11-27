@@ -31,13 +31,11 @@ You cannot change this selection later on.
 | **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Authentication][ccg] |
 | **Notable Features**        | Webhooks, App Center, and Web App Integrations                             |
 
-<!-- markdownlint-enable line-length -->
-
 Custom App encompasses most use cases and is the most flexible option.
 This application type allows for interaction with our 150+ endpoints.
 For example, downloading/uploading, searching, applying metadata and more.
 
-<CTA to="g://applications/custom-apps">Learn more about Custom Apps</CTA>
+<CTA to="g://applications/app-types/custom-apps">Learn more about Custom Apps</CTA>
 
 ## Limited Access App
 
@@ -50,7 +48,7 @@ A Limited Access App is best for leveraging [Box View][view-app] or previewing
 Box content within another application. This type of application can only
 interact with a limited number of endpoints. 
 
-<CTA to="g://applications/limited-access-apps">Learn more about Limited Access Apps</CTA>
+<CTA to="g://applications/app-types/limited-access-apps">Learn more about Limited Access Apps</CTA>
 
 ## Custom Skills
 
@@ -64,12 +62,14 @@ processing for files uploaded to Box. Skills are designed to make it possible to
 use third-party Machine Learning services to automatically extract information
 from files uploaded to Box.
 
-<CTA to="g://applications/custom-skills">Learn more about Custom Skills</CTA>
+<CTA to="g://applications/app-types/custom-skills">Learn more about Custom Skills</CTA>
   
+<!-- markdownlint-enable line-length -->
+
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [app-token]: g://authentication/app-token
-[custom-apps]: g://applications/custom-apps
+[custom-apps]: g://applications/app-types/custom-apps
 [dev-console]: https://app.box.com/developers/console
 [view-app]: g://embed/box-view
 [ccg]: g://authentication/client-credentials

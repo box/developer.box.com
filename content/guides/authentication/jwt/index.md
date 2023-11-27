@@ -2,7 +2,7 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - getting-started/user-types
   - authentication/select
 required_guides:
@@ -25,18 +25,18 @@ designed to allow powerful server-to-server authentication.
 Server-side authentication using JWT is only available to the Custom Application
 [app type][app-type]. This authentication method does not require end-user
 interaction and, if granted the proper privileges, can be used
-to act on behalf of any user in an enterprise. 
+to act on behalf of any user in an enterprise.
 
 There are two ways you can verify an application's permissions:
 
 - using a public and private key pair
-- using a client id and client secret 
+- using a client id and client secret
   ([Client Credentials Grant][cca])
 
 To learn more about these options visit our guide on using
-[JWT without SDKs][jwtnosdk]. 
+[JWT without SDKs][jwtnosdk].
 
-Upon authorizing a JWT application in the Box Admin Console, a 
+Upon authorizing a JWT application in the Box Admin Console, a
 [Service Account][sa] is automatically generated and is the default
 Access Token used when authenticating. This is an admin-like user and why
 applications leveraging JWT require explicit Box Admin approval before use.
@@ -52,7 +52,7 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-[app-type]: g://applications/select
+[app-type]: g://applications/app-types/select
 [sa]: g://getting-started/user-types/service-account
 [jwtnosdk]: g://authentication/jwt/without-sdk
 [cca]: g://authentication/client-credentials
