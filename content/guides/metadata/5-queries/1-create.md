@@ -1,6 +1,6 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
 
 # Create a query
