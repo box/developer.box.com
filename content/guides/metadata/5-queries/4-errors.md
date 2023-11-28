@@ -1,6 +1,6 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
 
 # Common errors
@@ -62,17 +62,6 @@ values will result in an error.
   The name of each argument can configured to your liking and does not need to
   match the field key. The only requirement is that it starts with a `:`.
 </Message>
-
-## Missing search index
-
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or
-folders. A search index can be created to resolve this error for a specific
-search query.
-
-<CTA to='g://metadata/queries/indexes'>
-  Learn more about creating and using indices
-</CTA>
 
 ## Missing `ancestor_folder_id`
 
