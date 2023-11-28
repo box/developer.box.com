@@ -31,7 +31,7 @@ The My Apps page allows you to:
 1. Check application [enablement][enablement]
 and [authorization][authorization] status.
 1. Use a menu available for every entry to access
-the configuration details of your application or to generate a [Developer Token](token).
+the configuration details of your application or to generate a [Developer Token][token].
 
 [token]: g://authentication/tokens/developer-tokens
 [authorization]: g://authorization
