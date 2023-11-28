@@ -24,7 +24,7 @@ A Box Admin needs an application's Client ID in order to properly authorize or
 enable it in the Admin Console. 
 
 <Message>
-You can use[My Apps][apps] view to quickly look up
+You can use [My Apps][apps] view to quickly look up
 the authorization and enablement status of your application.
 </Message>
 
@@ -66,7 +66,9 @@ application.
 1. Navigate to the **Configuration** tab for your application
 in the [Developer Console][devconsole]. 
 2. Scroll down to the OAuth 2.0 Credentials
-section and copy the **Client ID** value to provide to a Box Admin.
+section and copy the **Client ID** value to provide to a Box Admin. 
+
+Alternatively, hover over the application in the [My Apps][apps] view to look up the **ClientID** and then copy it using the `copy` button.
 
 <Message>
   # Finding a Box Admin
