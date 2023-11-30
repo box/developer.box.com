@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 40
 category_id: platform
 subcategory_id: platform/appendix
