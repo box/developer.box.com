@@ -9,7 +9,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
-    - /getting-started/locating-values/
+    - /guides/getting-started/locating-values/
 ---
 
 # Locating Common Values

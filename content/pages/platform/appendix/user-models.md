@@ -6,7 +6,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
-  - /getting-started/user-models/
+  - /guides/getting-started/user-models/
 ---
 
 # User Models
