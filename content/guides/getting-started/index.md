@@ -8,6 +8,8 @@ related_guides:
 
 # Start Here
 
+To begin your journey, visit our new [Learn Box Platform][learn] section.
+
 Our documentation is divided into five main sections: 
 
 - **Learn Box Platform**: A getting started walk through of all things Platform
@@ -16,9 +18,6 @@ Our documentation is divided into five main sections:
 - **API Reference**: Endpoint documentation
 - **SDK and Tools**: Information about official Box SDKs and tooling
 - **Sample Code Catalog**: Consolidated list of several code repositories
-
-To begin your journey, visit our [Learn Box Platform][learn]. It will provide
-you a flow of information for you to get started. 
 
 If you have questions, checkout our [forum][forum-link].
 
