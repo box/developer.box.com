@@ -355,11 +355,11 @@ The standard OAuth scopes are also supported when downscoping.
 [at]: g://authentication/tokens
 [security]: g://security
 [jwt]: g://authentication/jwt
-[mu]: g://getting-started/user-types/managed-users
+[mu]:page://platform/user-types/#managed-users
 [au]: g://authentication/jwt/as-user
 [uat]: g://authentication/jwt/user-access-tokens
 [appaccess]: g://authentication/jwt/jwt-setup/#application-access
-[appu]: g://getting-started/user-types/app-users
+[appu]:page://platform/user-types/#app-user
 <!-- i18n-enable localize-links -->
 
 [governance]: https://www.box.com/security/governance-and-compliance
@@ -367,4 +367,4 @@ The standard OAuth scopes are also supported when downscoping.
 
 [suppress]: g://api-calls/suppress-notifications
 [ds]: g://authentication/tokens/downscope
-[sa]: g://getting-started/user-types/service-account
+[sa]:page://platform/user-types/#service-account

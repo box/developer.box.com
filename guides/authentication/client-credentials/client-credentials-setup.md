@@ -191,6 +191,6 @@ To learn more about Client Credentials Grant for each SDK head over to:
 [devaccount]: https://account.box.com/signup/n/developer
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[user-types]: g://getting-started/user-types
-[sa]: g://getting-started/user-types/service-account
+[user-types]: page://platform/user-types
+[sa]: page://platform/user-types/#service-account
 [app-auth]: g://authorization

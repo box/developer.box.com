@@ -6,7 +6,7 @@ subcategory_id: null
 is_index: false
 id: platform/application-types
 type: page
-total_steps: 8
+total_steps: 9
 sibling_id: platform
 parent_id: platform
 next_page_id: platform/authentication-methods

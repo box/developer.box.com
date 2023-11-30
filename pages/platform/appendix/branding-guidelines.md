@@ -7,18 +7,19 @@ related_resources: []
 alias_paths:
   - /docs/branding-guidelines
   - /best-practices/branding-guidelines
-category_id: getting-started
-subcategory_id: null
+  - /getting-started/branding-guidelines/
+category_id: platform
+subcategory_id: platform/appendix
 is_index: false
-id: getting-started/branding-guidelines
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: ''
-previous_page_id: getting-started/locating-values
+id: platform/appendix/branding-guidelines
+type: page
+total_steps: 4
+sibling_id: platform/appendix
+parent_id: platform/appendix
+next_page_id: platform/appendix
+previous_page_id: platform/appendix/locating-values
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/branding-guidelines.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/branding-guidelines.md
 ---
 # Branding Guidelines
 

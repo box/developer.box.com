@@ -6,7 +6,7 @@ subcategory_id: null
 is_index: true
 id: platform
 type: page
-total_steps: 8
+total_steps: 9
 sibling_id: pages
 parent_id: pages
 next_page_id: platform/box-platform-101
@@ -16,7 +16,7 @@ source_url: >-
 ---
 # Learn Box Platform
 
-If you are new to Box, start here!
+If you are new to Box, **start here**!
 In the following pages, you'll learn how the all the Box Platform
 concepts and components work together to help you create an application quickly.
 

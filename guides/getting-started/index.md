@@ -9,15 +9,15 @@ subcategory_id: null
 is_index: true
 id: getting-started
 type: guide
-total_steps: 6
+total_steps: 0
 sibling_id: guides
 parent_id: guides
-next_page_id: getting-started/box-glossary
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
 ---
-# Getting Started
+# Start Here
 
 Our documentation is divided into five main sections:
 
@@ -28,13 +28,13 @@ reference documentation
 - **SDK and Tools**: Information about official Box SDKs and tooling
 - **Sample Code Catalog**: Consolidated list of several code repositories
 
-If you are new to development with the Box API, we recommend following the
-pages in the [Learn Box Platform][learn] section to get started.
+To begin your journey, visit our [Learn Box Platform][learn]. It will provide
+you a flow of information for you to get started.
 
 If you have questions, checkout our [forum][forum-link].
 
+[learn]:page://platform
 <!-- i18n-enable localize-links -->
 
-[learn]: https://developer.box.com/platform/
 [forum-link]: https://forum.box.com
 <!-- i18n-disable localize-links -->

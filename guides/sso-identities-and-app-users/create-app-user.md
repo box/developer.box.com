@@ -174,7 +174,7 @@ print('New user created: {name}')
 
 ## Create association by email
 
-Creating a new [managed user](g://getting-started/user-types/managed-users/)
+Creating a new [managed user](page://platform/user-types/#managed-users)
 that is associated by the SSO user email address is the same process as
 creating a standard managed user.
 
