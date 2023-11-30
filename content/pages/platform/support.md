@@ -28,7 +28,7 @@ Tuesday, but frequently, it is even more often than that. We welcome
 any requests for content on our developer forum.
 
 <ImageFrame center>
-![Box Developer Blog](images/medium.png)
+![Box Developer Blog](images/blog.png)
 </ImageFrame>
 
 ## Box Platform Twitter

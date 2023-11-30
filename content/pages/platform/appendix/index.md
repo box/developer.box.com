@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 40
 ---
 

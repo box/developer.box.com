@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 8
 alias_paths:
   - /getting-started/box-glossary/
