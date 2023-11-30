@@ -1,11 +1,12 @@
 ---
+centered: true
 rank: 2
 related_endpoints: []
-related_guides:
-- getting-started/user-types
+related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /getting-started/user-models/
 ---
 
 # User Models
@@ -104,9 +105,9 @@ Benefits of this user model:
 2. Allows for complete control of permission assignment to backend services
   since the Service Account can be granted elevated privileges
 
-[usecase]: g://getting-started/use-cases
-[usertypes]: g://getting-started/user-types
-[architect]: g://getting-started/architecture-patterns
-[mu]: g://getting-started/user-types/managed-users
-[appu]: g://getting-started/user-types/app-users
-[sa]: g://getting-started/user-types/service-account
+[usecase]: page://platform/use-cases
+[usertypes]: page://platform/user-types
+[architect]: page://platform/appendix/architecture-patterns
+[mu]: page://platform/user-types/#managed-users
+[appu]: page://platform/user-types/#app-user
+[sa]: page://platform/user-types/#service-account

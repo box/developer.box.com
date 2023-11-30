@@ -221,8 +221,8 @@ section at the bottom of the **Configuration** tab in the
 <!-- i18n-enable localize-links -->
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 <!-- i18n-disable localize-links -->
-[user-types]: g://getting-started/user-types
-[sa]: g://getting-started/user-types/service-account
+[user-types]: page://platform/user-types
+[sa]: page://platform/user-types/#service-account
 <!-- i18n-enable localize-links -->
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293

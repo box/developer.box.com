@@ -1,11 +1,15 @@
 ---
-rank: 1
+centered: true
+rank: 8
+alias_paths:
+  - /getting-started/box-glossary/
 ---
 
 
 # Box Platform glossary
 
-This glossary includes terms and definitions used in Box Platform.
+This glossary includes terms and definitions used in Box Platform. If you need
+to find out what a term means, this is your one stop page.
 
 <!-- markdownlint-disable line-length -->
 
@@ -69,7 +73,11 @@ This glossary includes terms and definitions used in Box Platform.
 
 <!-- markdownlint-enable line-length -->
 
-[app user]: g://getting-started/user-types/service-account
+<Next>
+  Next step
+</Next>
+
+[app user]:page://platform/user-types/#app-user
 [CLI]: https://github.com/box/boxcli
 [collaborations]: g://collaborations
 [embed]: g://embed/box-embed
@@ -82,7 +90,6 @@ This glossary includes terms and definitions used in Box Platform.
 [event-stream]: https://support.box.com/hc/en-us/articles/8391393127955-Using-the-Enterprise-Event-Stream
 [group-admin]: https://support.box.com/hc/en-us/articles/360043694174-Understanding-Administrator-and-Co-Administrator-Permissions
 [managed-users]: https://support.box.com/hc/en-us/articles/360044194353-Understanding-User-Management
-[service-account]: g://getting-started/user-types/service-account
 [shared-link]: https://support.box.com/hc/en-us/articles/360043697094-Creating-Shared-Links
 [sdk]: https://developer.box.com/sdks-and-tools/
 [code-catalog]: https://developer.box.com/sample-code/
@@ -98,3 +105,4 @@ This glossary includes terms and definitions used in Box Platform.
 [custom-app]: g://applications/custom-apps
 [webhook]: g://webhooks
 [limited-app]: g://applications/limited-access-apps
+[service-account]:page://platform/user-types/#service-account
