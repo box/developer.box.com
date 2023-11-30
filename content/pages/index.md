@@ -78,7 +78,7 @@ All the developer resources to help you get the most from Box products
 
   <TileGrid>
     <Tile type="users" title="1. Explore user types"
-      href="/guides/getting-started/user-types/">
+      href="platform/user-types/">
       Box Platform covers many use cases
       that may require different user types.
       Learn more about the 
@@ -102,7 +102,7 @@ All the developer resources to help you get the most from Box products
       five minutes to start developing!
     </Tile>
     <Tile type="architecture" title="5. Create an architecture pattern"
-      href="/guides/getting-started/architecture-patterns/">
+      href="/platform/appendix/architecture-patterns/">
       We always recommend putting pen to paper and drawing out your solution.
       Have a look at the most common architecture patterns to get inspired!
     </Tile>
