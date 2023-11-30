@@ -73,6 +73,6 @@ used in another process or for future reference.
 [fr]: https://support.box.com/hc/en-us/articles/360045304813-Using-File-Request-to-get-Content-from-Anyone
 
 <!-- i18n-disable localize-links -->
-[skill]: g://applications/custom-skills
+[skill]: g://applications/app-types/custom-skills
 [au]: page://platform/user-types/#app-user
 [metadata]: e://post-files-id-metadata-global-boxSkillsCards

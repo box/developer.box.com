@@ -2,7 +2,7 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
 required_guides:
   - authentication/select
@@ -51,7 +51,7 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-[app-type]: g://applications/select
+[app-type]: g://applications/app-types/select
 [sa]: page://platform/user-types/#service-account
 [jwtnosdk]: g://authentication/jwt/without-sdk
 [cca]: g://authentication/client-credentials

@@ -103,5 +103,5 @@ to find out what a term means, this is your one stop page.
 [classification]: g://metadata/classifications
 [custom-app]: g://applications/app-types/custom-apps
 [webhook]: g://webhooks
-[limited-app]: g://applications/limited-access-apps
+[limited-app]: g://applications/app-types/limited-access-apps
 [service-account]:page://platform/user-types/#service-account
