@@ -31,7 +31,8 @@ simplicity in authorizing users to Box API. It's an open standard that allows
 users to grant applications access to their data in other applications. Similar
 to how logging in to a website with Twitter, Facebook, or Google works, Box's
 client-side authentication involves redirecting a user from an app to the Box
-web app, where they log in and grant the app access to their data. We use this
+web app, where they log in and grant the app access to their data. For example,
+We use this
 auth type for users logging into our community forum.
 
 <Message>
@@ -103,13 +104,15 @@ You can find a great Python CCG tutorial on [Medium][python_ccg].
 
 ## App Token Auth
 
-App Token Auth is another server-side authentication option, utilizing fixed,
+[App Token Auth][ata]is another server-side authentication option, utilizing
+fixed,
 long-lived Access Tokens that are restricted to the application's Service
 Account. This method is ideal for applications leveraging Box View and is
 designed for scenarios where the app only needs access to read and write data
 to its own account. By using App Token Auth, there's no need for end-user
 authorization, as the application automatically authenticates as the Service
-Account associated with it.
+Account associated with it. It also is restricted to a subset of
+API [endpoints][app_ep].
 
 <Message>
   # When to use App Token Auth?
@@ -150,16 +153,45 @@ method for apps that:
 
 You can find a great Box Skills tutorial on [Medium][skill_watson].
 
+## Scopes
+
+When an application is created in the Developer Console, the user must configure
+application scopes. Similar to how users have permissions to access files and
+folders within Box, applications have their own set of permissions to
+perform certain actions on behalf of a Box user or a Box enterprise. The name
+for a set of permissions for an application is a "scope". In short, an 
+application's scopes determine which [endpoints][reference] an application can
+successfully call and are reflected in the access provided by
+[Access Tokens][at] of the application.
+
+### User permissions and scopes
+
+It is important to understand that even if an application has the right scopes
+to perform an action, the user associated with the Access Token making the call
+needs to have permission to perform the action as well and vice versa.
+
+For example, if your application is set up to read files, the
+authenticated user does need to have permission to read the file you are
+trying to access.
+
+To learn more about how scopes, token permissions, and user permissions work
+together, see our [security guide][security].
+
 <Next>
   Next step
 </Next>
 
 [oauth]: g://authentication/oauth2/
 [jwt]: g://authentication/jwt/
+[ata]: g://authentication/app-token/
 [ccg]: g://authentication/client-credentials/
-[at]: g://authentication/app-token/
 [skill]: g://skills/handle/payload/#access-tokens
+[app_ep]: g://authentication/app-token/endpoints/
+[scopes]: g://api-calls/permissions-and-errors/scopes/
+[at]: g://authentication/tokens
+[security]: g://security
 <!-- i18n-enable localize-links -->
+[reference]: https://developer.box.com/reference
 [python_oauth]: https://github.com/box-community/box-python-oauth-template
 [python_ccg]: https://medium.com/box-developer-blog/box-python-next-gen-sdk-getting-started-with-ccg-81be0abc82d9
 [node_jwt]: https://medium.com/box-developer-blog/authenticate-box-node-js-sdk-with-jwt-47fdd3aeec50

@@ -19,7 +19,7 @@ alias_paths:
   - /getting-started/user-types/service-account/
   - /getting-started/user-types/app-users/
   - /authentication/user-types/managed-users
-  - /authentication/user-types/app-users
+  - /authentication/user-types/app-user
 ---
 
 # User Types
@@ -286,6 +286,24 @@ address to invite them as you would any other user. If you are instead adding
 the collaboration [via the API][collabapi] you will need to use an Access Token
 for a user that already has access to the content and has the appropriate
 collaboration permissions to invite collaborators.
+
+## As-User
+
+If you are using OAuth 2.0, JWT, or CCG as the authentication method for your
+application, it is possible to make what are called `as-user` calls. This means
+that even though you created an original connection to the Box API as yourself
+or as a service account, you can make subsequent calls impersonating another
+user. This is useful in automating administrative tasks like folder
+reorganization or employee provisioning. In order to make `as-user` calls,
+the appropriate scope must be added to the application when creating it
+in the developer console. For example, in an OAuth 2.0 custom app, you
+would need to turn on this switch.
+
+<ImageFrame center>
+
+![As User](./images/enable-perform-actions-as-users.png)
+
+</ImageFrame>
 
 <Next>
   Next step

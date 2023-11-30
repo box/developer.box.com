@@ -40,38 +40,42 @@ Site and the Box Developer Console. Let's take a closer look at what those are.
 
 ### Box Developer Site
 
-<ImageFrame center>
-![Learn](images/developer_site.png)
-</ImageFrame>
-
 The Box Developer Site is this website you are reading right now. It is a
 comprehensive resource for developers building solutions on top of Box, and
 should be used alongside the developer console to create applications and make
 API calls. You can
 find a multitude of guides, the full OpenAPI spec, quick starts, sample code,
-etc all within its pages. The site is updated on a frequent basis with the
+etc all within its pages.
+
+<ImageFrame center>
+![Box Developer Site](images/developer_site.png)
+</ImageFrame>
+
+The site is updated on a frequent basis with the
 latest updates posted to the [changelog][change].
 
 <ImageFrame center>
-![Learn](images/changelog.png)
+![Box Developer Changelog](images/changelog.png)
 </ImageFrame>
 
 ### Box Developer Console
-
-<ImageFrame center>
-![Learn](images/developer_console.png)
-</ImageFrame>
 
 The [Box Developer Console][dc] is an interactive interface that provides
 developers with tools and resources for managing their applications integrated
 with Box. It allows for the creation, configuration, and monitoring of apps,
 offering insights and control over how these apps interact with the Box
-platform. After you create an application in the console for the first time,
+platform. 
+
+<ImageFrame center>
+![Box Developer Console](images/developer_console.png)
+</ImageFrame>
+
+After you create an application in the console for the first time,
 you will start seeing a button in the bottom left of the main Box web app. You
 can use this button to access the console in the future.
 
 <ImageFrame center>
-![Learn](images/developer_console_button.png)
+![Box Developer Console button](images/developer_console_button.png)
 </ImageFrame>
 
 ## Box Platform Concepts
@@ -97,7 +101,7 @@ console. They include custom app, limited access app, and custom skills. You can
 also create third party and web app integrations.
 
 <ImageFrame center>
-![Learn](images/app_type.png)
+![Application Types](images/app_type.png)
 </ImageFrame>
 
 ### Authentication Method
@@ -107,14 +111,17 @@ authentication methods that can be used to gain an [access token][at]. An
 access token is the key to get through the gateway that is your application
 to successfully make an API call to Box.
 
+<ImageFrame center>
+![Authentication Types](images/auth_type.png)
+</ImageFrame>
+
 <Next>
   Next step
 </Next>
 
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
-[usertypes]: g://getting-started/user-types/
-[apptypes]: g://applications/app-types/
+[apptypes]: g://applications/select/
 [authmethods]: g://authentication/select/
 [api]: https://developer.box.com/reference/
 [change]: page://changelog

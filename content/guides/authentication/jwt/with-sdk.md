@@ -173,10 +173,10 @@ var client = sdk.getAppAuthClient("enterprise");
 <Message warning>
   # Service Accounts
 
-At this point the application is authenticated as an application user, not as
-a managed or app user. Head over to our guide on [User
-Types](g://getting-started/user-types) to learn more about the different types
-of users.
+  At this point the application is authenticated as an application user, not as
+  a managed or app user. Head over to our guide on [User
+  Types](page://platform/user-types) to learn more about the different types
+  of users.
 </Message>
 
 ## Summary

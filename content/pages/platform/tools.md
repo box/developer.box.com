@@ -5,8 +5,8 @@ rank: 7
 
 # Tools
 
-Box offers several tools for you to use to jump start your development. Check
-them out below.
+Box offers several [tools][tooling] for you to use to jump start your
+development. Check them out below.
 
 ## Sample Code Catalog
 
@@ -15,6 +15,10 @@ is the most recent tool we have launched on the Box Developer site. It
 pulls code sample repositories from multiple places, consolidating them in one
 place for you to browse. It allows you to filter by language and task. We update
 the list regularly so the you have access to the most up to date code.
+
+<ImageFrame center>
+![Sample Code Catalog](./images/sample_code.png)
+</ImageFrame>
 
 ## Box CLI
 
@@ -34,6 +38,10 @@ addition, the API reference pages contain samples for all the languages
 directly in the site; however, each Github repo has a docs section
 with all that language's samples too.
 
+<ImageFrame center>
+![SDK GitHub Libraries](./images/sdk.png)
+</ImageFrame>
+
 ## Postman Collection
 
 As an industry standard in software development, Postman helps developers learn
@@ -50,6 +58,7 @@ the YouTube video below.
 [samples]: g://cli/scripts/
 [sdk]: page://sdks-and-tools/
 [file]: e://get-files-id/
+[tooling]: g://tooling/
 <!-- i18n-enable localize-links -->
 [sample_code]: https://developer.box.com/sample-code/
 [postman]: https://www.postman.com/boxdev

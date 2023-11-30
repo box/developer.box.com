@@ -8,7 +8,6 @@ related_guides:
 - authentication/tokens
 - authorization
 - api-calls/permissions-and-errors/scopes
-- getting-started/user-types
 alias_paths: 
   - /security-and-governance-apis
   - /docs/android-security-guidelines
@@ -190,10 +189,10 @@ require enablement.
 [retention]: e://resources/retention-policies
 [rassign]: e://resources/retention-policy-assignment
 [jwt]: g://authentication/jwt
-[usertypes]: g://getting-started/user-types
-[serviceaccount]: g://getting-started/user-types/service-account
-[appusers]: g://getting-started/user-types/app-users
-[mu]: g://getting-started/user-types/managed-users
+[usertypes]: page://platform/user-types
+[serviceaccount]: page://platform/user-types/#service-account
+[appusers]: page://platform/user-types/#app-user
+[mu]: page://platform/user-types/#managed-users
 [auth]: g://authorization/custom-app-approval
 [oauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
