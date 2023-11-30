@@ -6,7 +6,7 @@ related_guides:
 - api-calls 
 ---
 
-# Getting Started
+# Start Here
 
 Our documentation is divided into five main sections: 
 
@@ -17,12 +17,12 @@ Our documentation is divided into five main sections:
 - **SDK and Tools**: Information about official Box SDKs and tooling
 - **Sample Code Catalog**: Consolidated list of several code repositories
 
-If you are new to development with the Box API, we recommend following the
-pages in the [Learn Box Platform][learn] section to get started.
+To begin your journey, visit our [Learn Box Platform][learn]. It will provide
+you a flow of information for you to get started. 
 
 If you have questions, checkout our [forum][forum-link].
 
+[learn]:page://platform
 <!-- i18n-enable localize-links -->
-[learn]: https://developer.box.com/platform/
 [forum-link]: https://forum.box.com
 <!-- i18n-disable localize-links -->

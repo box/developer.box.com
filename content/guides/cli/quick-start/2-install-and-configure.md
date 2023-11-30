@@ -128,6 +128,6 @@ Notification Email: []
 
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/
-[sa]: g://getting-started/user-types/service-account/
+[sa]: page://platform/user-types/#service-account/
 [at]: g://authentication/tokens/
 [dc]: https://app.box.com/developers/console

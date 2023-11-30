@@ -7,6 +7,7 @@ related_resources: []
 alias_paths:
   - /docs/branding-guidelines
   - /best-practices/branding-guidelines
+  - /getting-started/branding-guidelines/
 ---
 
 # Branding Guidelines

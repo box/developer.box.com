@@ -176,8 +176,8 @@ Center. Follow the [App Center][app-center] guide for more details.
 
 [ca]: g://applications/custom-apps
 [pu]: g://applications/web-app-integrations/types
-[uid]: g://getting-started/locating-values/#user-ids
-[fid]: g://getting-started/locating-values/#content-ids
+[uid]:page://platform/appendix/locating-values/#user-ids
+[fid]:page://platform/appendix/locating-values/#content-ids
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console

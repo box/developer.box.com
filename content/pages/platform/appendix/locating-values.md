@@ -7,7 +7,8 @@ related_endpoints:
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+    - /getting-started/locating-values/
 ---
 
 # Locating Common Values

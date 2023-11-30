@@ -76,6 +76,6 @@ application
 <!-- i18n-disable localize-links -->
 [devconsole]: https://app.box.com/developers/console
 [accesstoken]: e://post-oauth2-token/
-[sa]: g://getting-started/user-types/service-account/
+[sa]: page://platform/user-types/#service-account/
 [auth]: g://authorization
 [aa]: g://authentication/client-credentials/client-credentials-setup/#application-access

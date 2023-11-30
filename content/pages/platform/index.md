@@ -5,7 +5,7 @@ rank: 0
 
 # Learn Box Platform
 
-If you are new to Box, start here! 
+If you are new to Box, **start here**! 
 In the following pages, you'll learn how the all the Box Platform
 concepts and components work together to help you create an application quickly.
 
