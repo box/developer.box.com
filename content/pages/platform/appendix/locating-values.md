@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 6
 related_endpoints:
 - get-users-me

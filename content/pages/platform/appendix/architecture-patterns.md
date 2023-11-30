@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 3
 related_endpoints: []
 related_guides: []
