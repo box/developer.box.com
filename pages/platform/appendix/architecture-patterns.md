@@ -1,22 +1,24 @@
 ---
+centered: true
 rank: 3
 related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
-category_id: getting-started
-subcategory_id: null
+alias_paths:
+  - /getting-started/architecture-patterns/
+category_id: platform
+subcategory_id: platform/appendix
 is_index: false
-id: getting-started/architecture-patterns
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: getting-started/locating-values
-previous_page_id: getting-started/user-models
+id: platform/appendix/architecture-patterns
+type: page
+total_steps: 4
+sibling_id: platform/appendix
+parent_id: platform/appendix
+next_page_id: platform/appendix/locating-values
+previous_page_id: platform/appendix/user-models
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/architecture-patterns.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/architecture-patterns.md
 ---
 # Architecture Patterns
 
@@ -80,17 +82,17 @@ be processed by any machine learning service. Once it is processed, information
 is [saved back to the file as metadata][metadata]. This metadata can then be
 used in another process or for future reference.
 
-[usermodel]: g://getting-started/user-models
+[usermodel]:page://platform/appendix/user-models
 [auth]: g://authentication
 [apptype]: g://applications/select
 [events]: e://resources/event
 [userevents]: g://events/user-events/for-user
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 <!-- i18n-enable localize-links -->
 
 [fr]: https://support.box.com/hc/en-us/articles/360045304813-Using-File-Request-to-get-Content-from-Anyone
 <!-- i18n-disable localize-links -->
 
 [skill]: g://applications/custom-skills
-[au]: g://getting-started/user-types/app-users
+[au]: page://platform/user-types/#app-user
 [metadata]: e://post-files-id-metadata-global-boxSkillsCards

@@ -97,7 +97,7 @@ would require them to use SSO where needed.
 
 </Message>
 
-[mu]: g://getting-started/user-types/managed-users
+[mu]: page://platform/user-types/#managed-users
 [admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2

@@ -192,6 +192,9 @@
   "headers.primary.links.documentation.text": "Documentation",
   "headers.primary.links.community.text": "Community",
   "headers.primary.links.community.url": "https://forum.box.com",
+  // The text for the link to the learn section
+  "headers.primary.links.learn.text": "Learn Box Platform",
+  "headers.primary.links.learn.url": "/platform/",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides

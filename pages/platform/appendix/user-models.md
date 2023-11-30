@@ -1,23 +1,24 @@
 ---
+centered: true
 rank: 2
 related_endpoints: []
-related_guides:
-  - getting-started/user-types
+related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
-category_id: getting-started
-subcategory_id: null
+alias_paths:
+  - /getting-started/user-models/
+category_id: platform
+subcategory_id: platform/appendix
 is_index: false
-id: getting-started/user-models
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: getting-started/architecture-patterns
-previous_page_id: getting-started/box-glossary
+id: platform/appendix/user-models
+type: page
+total_steps: 4
+sibling_id: platform/appendix
+parent_id: platform/appendix
+next_page_id: platform/appendix/architecture-patterns
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-models.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/user-models.md
 ---
 # User Models
 
@@ -123,9 +124,9 @@ Benefits of this user model:
 2. Allows for complete control of permission assignment to backend services
   since the Service Account can be granted elevated privileges
 
-[usecase]: g://getting-started/use-cases
-[usertypes]: g://getting-started/user-types
-[architect]: g://getting-started/architecture-patterns
-[mu]: g://getting-started/user-types/managed-users
-[appu]: g://getting-started/user-types/app-users
-[sa]: g://getting-started/user-types/service-account
+[usecase]: page://platform/use-cases
+[usertypes]: page://platform/user-types
+[architect]: page://platform/appendix/architecture-patterns
+[mu]: page://platform/user-types/#managed-users
+[appu]: page://platform/user-types/#app-user
+[sa]: page://platform/user-types/#service-account
