@@ -40,6 +40,15 @@ types of users involved. There are four main types of users: managed (internal
 and external), admin, service account, and app users. Let's take a closer look
 at the differences.
 
+<!-- markdownlint-disable line-length -->
+
+|                  | Admin privileges                   | No Admin privileges         |
+| ---------------- | ---------------------------------- | --------------------------- |
+| Traditional user | Admin or Co-Admin User    | Managed User|
+| Platform only    | Service Account | App User |
+
+<!-- markdownlint-enable line-length -->
+
 <Message>
 
 # What type of user does my application use?
