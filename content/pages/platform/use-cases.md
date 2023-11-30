@@ -2,7 +2,7 @@
 centered: true
 rank: 2
 alias_paths:
-- /getting-started/use-cases/
+- /guides/getting-started/use-cases/
 ---
 
 # Use Cases
