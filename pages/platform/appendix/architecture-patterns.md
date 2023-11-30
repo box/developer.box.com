@@ -6,7 +6,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
-  - /getting-started/architecture-patterns/
+  - /guides/getting-started/architecture-patterns/
 category_id: platform
 subcategory_id: platform/appendix
 is_index: false

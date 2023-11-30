@@ -2,7 +2,7 @@
 centered: true
 rank: 8
 alias_paths:
-  - /getting-started/box-glossary/
+  - /guides/getting-started/box-glossary/
 category_id: platform
 subcategory_id: null
 is_index: false
