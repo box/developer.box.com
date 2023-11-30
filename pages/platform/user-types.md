@@ -14,12 +14,12 @@ alias_paths:
   - /docs/app-users
   - /docs/service-account
   - /authentication/user-types
-  - /getting-started/user-types/
-  - /getting-started/user-types/managed-users/
-  - /getting-started/user-types/service-account/
-  - /getting-started/user-types/app-users/
-  - /authentication/user-types/managed-users
-  - /authentication/user-types/app-user
+  - /guides/getting-started/user-types/
+  - /guides/getting-started/user-types/managed-users/
+  - /guides/getting-started/user-types/service-account/
+  - /guides/getting-started/user-types/app-users/
+  - /guides/authentication/user-types/managed-users
+  - /guides/authentication/user-types/app-user
 category_id: platform
 subcategory_id: null
 is_index: false

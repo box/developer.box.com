@@ -6,7 +6,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths:
-  - /getting-started/user-models/
+  - /guides/getting-started/user-models/
 category_id: platform
 subcategory_id: platform/appendix
 is_index: false
