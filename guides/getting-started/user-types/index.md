@@ -13,6 +13,7 @@ alias_paths:
   - /docs/app-users
   - /docs/service-account
   - /authentication/user-types
+hide: true
 category_id: getting-started
 subcategory_id: getting-started/user-types
 is_index: true

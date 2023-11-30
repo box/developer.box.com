@@ -10,6 +10,7 @@ related_resources:
   - user
 alias_paths:
   - /guides/authentication/user-types/app-users
+hide: true
 category_id: getting-started
 subcategory_id: getting-started/user-types
 is_index: false

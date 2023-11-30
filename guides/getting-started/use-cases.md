@@ -5,6 +5,7 @@ related_guides: []
 required_guides: []
 related_resources: []
 alias_paths: []
+hide: true
 category_id: getting-started
 subcategory_id: null
 is_index: false
