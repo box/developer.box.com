@@ -33,32 +33,79 @@ management workflows.
 
 ## How do I make applications
 
-Insert more here
+In order to use the [Box API][api], you first have to create an application in
+Box. This application serves as the gateway for any API call made to the
+platform. You can use two websites to accomplish this task: the Box Developer
+Site and the Box Developer Console. Let's take a closer look at what those are.
 
 ### Box Developer Site
 
-Insert more here
+<ImageFrame center>
+![Learn](images/developer_site.png)
+</ImageFrame>
+
+The Box Developer Site is this website you are reading right now. It is a
+comprehensive resource for developers building solutions on top of Box, and
+should be used alongside the developer console to create applications and make
+API calls. You can
+find a multitude of guides, the full OpenAPI spec, quick starts, sample code,
+etc all within its pages. The site is updated on a frequent basis with the
+latest updates posted to the [changelog][change].
+
+<ImageFrame center>
+![Learn](images/changelog.png)
+</ImageFrame>
 
 ### Box Developer Console
 
-Insert more here
+<ImageFrame center>
+![Learn](images/developer_console.png)
+</ImageFrame>
+
+The [Box Developer Console][dc] is an interactive interface that provides
+developers with tools and resources for managing their applications integrated
+with Box. It allows for the creation, configuration, and monitoring of apps,
+offering insights and control over how these apps interact with the Box
+platform. After you create an application in the console for the first time,
+you will start seeing a button in the bottom left of the main Box web app. You
+can use this button to access the console in the future.
+
+<ImageFrame center>
+![Learn](images/developer_console_button.png)
+</ImageFrame>
 
 ## Box Platform Concepts
 
 In the following learn sections, we will go into more depth on various topics.
-But at a high level, there are some terms and concepts to be familiar with.
+But at a high level, these are some terms and concepts to be familiar with.
 
 ### User Types
 
-Box 'd user's 
+There are several [user types][ut] to keep in mind when developing on Box
+Platform. These include users with admin privileges (such as Admin or Co-Admin
+users) and those without admin privileges (Managed or External Users).
+Additionally, there are platform-only users, which are categorized as Service
+Accounts and App Users. Each user type has specific roles and access levels
+within the Box environment, impacting how they interact with applications and
+content. At the core, if a use can access a piece of content from the main Box
+web app, they should be able to access it using the API.
 
 ### Application Type
 
-There are 
+There are three main types of applications that can be created in the developer
+console. They include custom app, limited access app, and custom skills. You can
+also create third party and web app integrations.
+
+<ImageFrame center>
+![Learn](images/app_type.png)
+</ImageFrame>
 
 ### Authentication Method
 
-Access to 
+Depending on the application type selected, there are one of five different
+authentication methods that can be used to gain an [access token][at]. An
+access token is the key to get through the gateway that is your application
+to successfully make an API call to Box.
 
 <Next>
   Next step
@@ -69,3 +116,10 @@ Access to
 [usertypes]: g://getting-started/user-types/
 [apptypes]: g://applications/select/
 [authmethods]: g://authentication/select/
+[api]: https://developer.box.com/reference/
+[change]: page://changelog
+[dc]: https://app.box.com/developers/console
+[at]: g://authentication/tokens/
+<!-- i18n-enable localize-links -->
+[ut]: https://support.box.com/hc/en-us/articles/4636533822483-Box-User-Types
+<!-- i18n-disable localize-links -->

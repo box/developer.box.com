@@ -10,6 +10,7 @@ related_resources:
   - user
 alias_paths: 
  - /guides/authentication/user-types/managed-users
+hide: true
 ---
 
 # Managed & External Users

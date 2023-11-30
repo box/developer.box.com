@@ -10,6 +10,7 @@ related_resources:
   - user
 alias_paths:
 - /guides/authentication/user-types/service-account
+hide: true
 ---
 
 # Service Accounts
