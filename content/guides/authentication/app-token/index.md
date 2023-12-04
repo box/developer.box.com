@@ -3,7 +3,7 @@ rank: 5
 related_endpoints: []
 related_guides:
   - applications/app-types/select
-  - getting-started/user-types
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/app-token/app-token-setup
@@ -40,5 +40,5 @@ for apps that:
 - Want to store data in the application's Service Account and not a user's
   account
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 [box-view]: g://embed/box-view

@@ -106,4 +106,3 @@ to find out what a term means, this is your one stop page.
 [webhook]: g://webhooks
 [limited-app]: g://applications/app-types/limited-access-apps
 [service-account]:page://platform/user-types/#service-account
-
