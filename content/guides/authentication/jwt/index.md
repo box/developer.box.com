@@ -3,7 +3,6 @@ rank: 3
 related_endpoints: []
 related_guides:
   - applications/select
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/select
@@ -53,6 +52,6 @@ that:
   user's Box account
 
 [app-type]: g://applications/select
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 [jwtnosdk]: g://authentication/jwt/without-sdk
 [cca]: g://authentication/client-credentials

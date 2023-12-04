@@ -1,13 +1,11 @@
 ---
-rank: 1
-related_endpoints: []
-related_guides: []
-required_guides: []
-related_resources: []
-alias_paths: []
+centered: true
+rank: 2
+alias_paths:
+- /guides/getting-started/use-cases/
 ---
 
-# Use Case Evaluation
+# Use Cases
 
 Before beginning application development, it is best to assess if your use
 case is a good fit for the Box Platform. Generally speaking, content centric
@@ -38,3 +36,7 @@ Still not sure if you have a good use case? Reach out to your Box account team.
 <!-- i18n-enable localize-links -->
 [waterfall]: https://support.box.com/hc/en-us/articles/360043697254-Understanding-Folder-Permissions
 <!-- i18n-disable localize-links -->
+
+<Next>
+  Next step
+</Next>

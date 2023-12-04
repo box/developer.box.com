@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 6
 related_endpoints:
 - get-users-me
@@ -7,7 +8,8 @@ related_endpoints:
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+    - /guides/getting-started/locating-values/
 ---
 
 # Locating Common Values
