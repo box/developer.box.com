@@ -1,6 +1,6 @@
 ---
 centered: true
-rank: 1
+rank: 0
 ---
 
-# Sample page
+# Embedded sign

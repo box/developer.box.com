@@ -3,10 +3,22 @@ centered: true
 rank: 0
 ---
 
-# Learn Box Platform Sign
+# Working with Box Sign
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae diam euismod, aliquam mauris quis, tincidunt nisi. Sed euismod, nisl quis aliquam ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl vitae nisl. Sed euismod, nisl quis aliquam ultricies, nunc nisl ultricies nunc, quis ultricies nisl nisl vitae nisl.
+<ImageFrame center>
+![](images/working-with-box-sign.png)
+</ImageFrame>
 
+## Learn sections
 
+- [API Basics][api-basics]
+- [Signature request][signature-request]
+- [Embedded sign][embedded-sign]
+- [Technical use cases][technical-use-cases]
+- [Advanced use cases][advanced-use-cases]
 
-
+[api-basics]:page://sign/api-basics
+[signature-request]:page://sign/signature-request
+[embedded-sign]:page://sign/embedded-sign
+[technical-use-cases]:page://sign/technical-use-cases
+[advanced-use-cases]:page://sign/advanced-use-cases
