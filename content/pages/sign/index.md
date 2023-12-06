@@ -22,3 +22,22 @@ rank: 0
 [embedded-sign]:page://sign/embedded-sign
 [technical-use-cases]:page://sign/technical-use-cases
 [advanced-use-cases]:page://sign/advanced-use-cases
+
+<!-- 
+<Tabs>
+<Tab title='cUrl'>
+    
+```bash
+    
+```
+    
+</Tab>
+<Tab title='Python Gen SDK'>
+
+```python
+
+```
+
+</Tab>
+</Tabs>
+-->

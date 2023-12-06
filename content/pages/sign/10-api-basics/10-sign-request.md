@@ -28,10 +28,40 @@ customer for signature. At minimum your app will need to know what document to
 sign, where to store the signed document, and the signer email.
 
 You can use the Box Sign API or one of the available SDK's to create a 
-signature request. Consider this sample method:
+signature request. Consider this example:
 
 <Tabs>
-  <Tab title='Python Gen SDK'>
+<Tab title='cUrl'>
+
+```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <access token>'
+--data-raw '{
+    "is_document_preparation_needed": true,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1355143830404",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "signer@gmail.com",
+            "role": "signer"
+        }
+    ]
+}'
+
+```
+
+</Tab>
+<Tab title='Python Gen SDK'>
 
 ```python
 
@@ -42,8 +72,6 @@ def sign_doc_single(
     signer_email: str,
     prep_needed: bool = False,
 ) -> SignRequest:
-    """Single doc sign by single signer"""
-
     # Sign request params
     source_file = FileBase(id=document_id, type=FileBaseTypeField.FILE)
     destination_folder = FolderMini(
@@ -60,36 +88,15 @@ def sign_doc_single(
 
     return sign_request
 
-```
+def main():
+    conf = ConfigOAuth()
+    client = get_client_oauth(conf)
 
-  </Tab>
-</Tabs>
-
-Because we are requesting a signature for a generic document, Box Sign doesn't 
-know where to put the signature pad or any other of the inputs available to 
-Sign, such as text fields, date, check-boxes, and so on.
-
-In these cases, you should always call the create signature request endpoint 
-with the `is_document_preparation_needed` parameter set to `true`. 
-
-This will create a signature request with a document preparation step, and 
-returning a preparation URL, where the requester can prepare the document for 
-signing.
-
-For example:
-
-<Tabs>
-  <Tab title='Python Gen SDK'>
-
-```python
-
-    def main()
-    ...
     # Simple sign a pdf request with preparation
     sign_pdf_prep = sign_doc_single(
         client, SIMPLE_PDF, SIGN_DOCS_FOLDER, SIGNER_A, True
     )
-    check_sign_request(sign_pdf_prep)
+
     if sign_pdf_prep.prepare_url is not None:
         open_browser(sign_pdf_prep.prepare_url)
 
@@ -98,47 +105,131 @@ For example:
   </Tab>
 </Tabs>
 
-Resulting in:
+This will result in a signature request with a prepare document URL 
+(simplified):
+
+<Tabs>
+<Tab title='cUrl'>
+    
+```json
+
+{
+    "is_document_preparation_needed": true,
+    "signers": [
+        {
+            "email": "requester@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "signer@gmail.com",
+            "role": "signer",
+        }
+    ],
+    "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
+    "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
+    "source_files": [
+        {
+            "id": "1355143830404",
+            "type": "file",
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+    },
+    "name": "Simple-PDF.pdf",
+    "type": "sign-request",
+    "status": "converting",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1381301154812",
+                "type": "file",
+            }
+        ],
+        "is_ready_for_download": true
+    },
+    "template_id": null
+}
+
+```
+    
+</Tab>
+<Tab title='Python Gen SDK'>
 
 ```YAML
 
 Simple sign request with prep: xyz-abc-123
   Status: converting
-  Signers: ...@gmail.com
+  Signers: signer@gmail.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 
 ```
+
+</Tab>
+</Tabs>
+
+### Check the status of the signature request
+
+The signature request is an asynchronous process, and can generate errors. 
+Your application should check the status of the request before proceeding, and 
+handle any errors. 
+
+A signature request can have the following statuses:
+
+![Signature flow](images/basic-sign-flow.png)
+
+- `converting`: The file is converted to a `.pdf` for the signing process once
+  the sign request is sent.
+- `error_converting`: An issue was encountered while converting the file to a
+  `.pdf`.
+- `created`: If `document_preparation_is_needed` is set to `true`, but the
+  `prepare_url` has not yet been visited.
+- `sent`: The request was successfully sent, but no signer has interacted with
+ it.
+- `error_sending`: An issue was encountered while sending the request.
+- `viewed`: Once the first, or only, signer clicks on **Review document** in
+  the signing email or visits the signing URL.
+- `downloaded`: The signing document was downloaded by signer.
+- `signed`: All signers completed the request.
+- `signed and downloaded`: The signing document was signed and downloaded by
+ signer.
+- `declined`: If any signer declines the request.
+- `cancelled`: If the request is cancelled via UI or API.
+- `expired`: The date of expiration has passed with outstanding, incomplete
+  signatures.
+- `finalizing`: If all signers have signed the request,
+   but the final document with signatures and the signing
+   log has not been generated yet.
+- `error_finalizing`: If the `finalizing` phase did not complete successfully.
+
+### Preparing the document
+
+If a prepare URL is present, then a preparation step is created.
 
 Your application should open the preparation URL in a browser, where the 
 requester can add the signature pad and any other inputs needed for the signer 
 to complete the document.
 
-![Preparing a document for signature](images/sign-pdf-prep-doc.png)
-
 Once the document is prepared, the requester can send the signature request to 
 the signer.
 
-Back in the Box app you can see the status of the as `In Progress`.
-
-![Pending signature request](images/sign-request-pending.png)
+### Completing the signature request
 
 The signer then receives an email from Box with a link to the signature 
 request. The signer can click the link and sign the document.
 
-![Signing the document](images/sign-pdf-prep-finish-sign.png)
-
 When the process is completed, both a signature log containing metadata and 
 the signed document are stored in the destination folder.
-
-![Log and signed document](images/sign-pdf-signed-docs.png)
 
 Congratulations! You have successfully created your first signature request.
 
 <Message type='notice'>
 This represents the simplest use case for Box Sign. The create method has many 
 options that you can use to customize your signature request.
-Be sure to check the [Signature request](./10-sign-request.md), and the 
-[Technical use cases](./30-technical-use-cases.md) sections for more 
+
+Be sure to check the [Signature request][signature-request], and the 
+[Technical use cases][technical-use-cases] sections for more 
 information.
 </Message>
 
@@ -149,3 +240,6 @@ information.
 ## Resend sign requests
 
 ## Cancel sign requests
+
+[signature-request]:page://sign/signature-request
+[technical-use-cases]:page://sign/technical-use-cases

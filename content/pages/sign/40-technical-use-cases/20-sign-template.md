@@ -3,4 +3,4 @@ centered: true
 rank: 2
 ---
 
-# Sign Templates
+# Signing using templates

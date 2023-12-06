@@ -11,7 +11,10 @@ application, and how to use the API to manage your signature requests.
 
 The Box Sign API has two major endpoints:
 
-- [Sign request](./10-sign-request.md) - to create and manage signature 
+- [Sign request][sign-request] - to create and manage signature 
 requests, using the traditional CRUD and list operations.
-- [Sign template](./20-sign-templates.md) - to list and get details of a 
+- [Sign template][sign-templates] - to list and get details of a 
 template.
+
+[sign-request]:page://sign/api-basics/sign-request
+[sign-templates]:page://sign/api-basics/sign-templates
