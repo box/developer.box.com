@@ -4,7 +4,10 @@ rank: 31
 
 # Box Partner Programs
 
-Welcome and Overview of the program
+We work with partners of all types, including Technology,
+Reseller and Services partners. This guide provides an overview of all our
+partner programs so you can see
+which one is right for you.
 
 <!-- markdownlint-disable line-length -->
 
@@ -16,3 +19,8 @@ Welcome and Overview of the program
 ></iframe>
 
 <!-- markdownlint-enable line-length -->
+
+For any questions, please contact our Partners team
+at [`integrate@box.com`][email].
+
+[email]: mailto:integrate@box.com
