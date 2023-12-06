@@ -12,6 +12,13 @@ primary:
       //url:
       url: https://forum.box.com
 
+    partners:
+      // text: The text for the link to the partners section
+      text: Partners
+
+      //url: The URL to the partners section
+      url: /guides/partners
+
     learn:
       // text: The text for the link to the learn section
       text: Learn Box Platform
