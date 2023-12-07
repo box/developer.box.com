@@ -12,10 +12,11 @@ which one is right for you.
 <!-- markdownlint-disable line-length -->
 
 <iframe 
-    src="https://cloud.app.box.com/embed/s/cphyvxelijrey8a7p6bo2typ9yf1pt9m" width="900" 
-    height="700" 
+    src="https://cloud.app.box.com/embed/s/cphyvxelijrey8a7p6bo2typ9yf1pt9m" style="width: 100%;" 
+    height="560" 
     frameborder="0" 
     allowfullscreen="allowfullscreen"
+    title="Box Partner Programs Welcome & Overview"
 ></iframe>
 
 <!-- markdownlint-enable line-length -->
