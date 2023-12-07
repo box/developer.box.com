@@ -20,7 +20,7 @@ home directory.
 
 When creating a
 [JWT-based Box application](g://authentication/jwt/jwt-setup), a
-[Service Account](g://getting-started/user-types/service-account/) is created
+[Service Account][sa] is created
 within the Box Enterprise. A Service Account is similar in functionality to a
 co-admin within a Box Enterprise, and most useful to this use case, can own,
 copy, and collaborate other users on files and folders. More importantly, you
@@ -457,3 +457,5 @@ namespace BoxPlayground {
 
   </Tab>
 </Tabs>
+
+[sa]:page://platform/user-types/#service-account

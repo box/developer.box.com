@@ -16,7 +16,7 @@ The Box API supports a variety of users, ranging from real employees logging in
 with their Managed User account, to applications using App Users to drive
 powerful automation workflows.
 
-<CTA to='g://getting-started/user-types'>
+<CTA to='page://platform/user-types'>
   Learn more about user types
 </CTA>
 
