@@ -205,13 +205,20 @@ exact value, you can input the same value for both `gt` and `lt`.
 ]
 ```
 
-<Message info>
-
 This example will find all files and folders that have an instance of the
 `enterprise.contract` template applied to it, and for which the field with the
 key `amount` is set to a value equal or higher than `10000` and equal or lower
-than `2000`. Please note that `gt` and `lt` are inclusive and do not need to
+than `2000`. Note that `gt` and `lt` are inclusive and do not need to
 both be set.
+
+<Message info>
+
+If you create a query based on numbers, do not
+exceed the range of -16777215 and +16777215.
+For metadata search using number attributes
+the index value is stored as FLOAT32. As a result,
+integers between -16777215 and +16777215 can be precisely represented. 
+Any operation with numbers beyond the range can lose its precision.
 
 </Message>
 
