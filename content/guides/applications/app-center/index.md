@@ -1,5 +1,5 @@
 ---
-rank: 50
+rank: 1
 related_endpoints: []
 related_guides: 
   - authentication/oauth2/oauth2-setup
@@ -56,7 +56,7 @@ submit to the App Center.
 Select the **App Center** tab from the top menu.
 
 <ImageFrame center border shadow>
-  ![App Center panel](./images/app-menu.png)
+  ![App Center panel](./images/app-center.png)
 </ImageFrame>
 
 Click the button to "Submit My App".
