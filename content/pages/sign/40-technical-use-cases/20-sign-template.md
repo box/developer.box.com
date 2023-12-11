@@ -120,7 +120,7 @@ template it self.
 
 This is how the flow would look like:
 
-tk - flow diagram
+TK - flow diagram
 
 Consider this example:
 
@@ -204,6 +204,7 @@ populated with the current date.
 </Message>
 
 ## Pre-populate the signature attributes
+
 From a usability perspective, it is a good idea to pre-populate the inputs you 
 require from your users, to reduce some of the friction.
 
