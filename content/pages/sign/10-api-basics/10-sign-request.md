@@ -31,7 +31,7 @@ You can use the Box Sign API or one of the available SDK's to create a
 signature request. Consider this example:
 
 <Tabs>
-<Tab title='cUrl'>
+<Tab title='cURL'>
 
 ```bash
 
@@ -109,7 +109,7 @@ This will result in a signature request with a prepare document URL
 (simplified):
 
 <Tabs>
-<Tab title='cUrl'>
+<Tab title='cURL'>
     
 ```json
 
