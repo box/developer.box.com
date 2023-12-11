@@ -23,8 +23,10 @@ source_url: >-
 ---
 # Invocation URL
 
+<!-- markdownlint-disable line-length -->
+
 When creating a new
-[Box Skills application](guide://applications/custom-skills) you will be asked
+[Box Skills application](guide://applications/app-types/custom-skills) you will be asked
 to supply an `invocation_url`. This URL is the public web address where Box will
 send the [event notification payload](guide://skills/handle/payload) when a file
 is uploaded, copied, or moved within a folder monitored by the Skills app.
@@ -85,3 +87,4 @@ format.
 [firebase]: https://firebase.google.com/
 [aws]: https://aws.amazon.com/
 [gcp]: https://cloud.google.com/functions/
+<!-- markdownlint-enable line-length -->

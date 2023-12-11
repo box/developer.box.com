@@ -3,17 +3,17 @@ rank: 30
 related_guides:
   - authentication/app-token
 category_id: applications
-subcategory_id: null
+subcategory_id: applications/app-types
 is_index: false
-id: applications/limited-access-apps
+id: applications/app-types/limited-access-apps
 type: guide
-total_steps: 4
-sibling_id: applications
-parent_id: applications
-next_page_id: applications/app-center
-previous_page_id: applications/custom-apps
+total_steps: 5
+sibling_id: applications/app-types
+parent_id: applications/app-types
+next_page_id: applications/app-types/custom-skills
+previous_page_id: applications/app-types/custom-apps
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/limited-access-apps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/limited-access-apps.md
 ---
 # Limited Access App
 

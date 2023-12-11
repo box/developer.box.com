@@ -7,18 +7,18 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/configure-a-box-skill
-category_id: applications
-subcategory_id: applications/custom-skills
+category_id: skills
+subcategory_id: skills/handle
 is_index: false
-id: applications/custom-skills/setup
+id: skills/handle/setup
 type: guide
-total_steps: 1
-sibling_id: applications/custom-skills
-parent_id: applications/custom-skills
-next_page_id: applications/custom-skills
+total_steps: 3
+sibling_id: skills/handle
+parent_id: skills/handle
+next_page_id: skills/handle/payload
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/setup.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/skills/handle/setup.md
 ---
 # Setup
 

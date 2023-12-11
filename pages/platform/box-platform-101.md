@@ -146,7 +146,7 @@ Next step
 
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
-[apptypes]: g://applications/select/
+[apptypes]: g://applications/app-types/select/
 [authmethods]: g://authentication/select/
 [api]: https://developer.box.com/reference/
 [change]: page://changelog

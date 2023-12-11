@@ -5,8 +5,8 @@ related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/app-token
-  - applications/custom-apps
-  - applications/custom-skills
+  - applications/app-types/custom-apps
+  - applications/app-types/custom-skills
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -104,6 +104,6 @@ would require them to use SSO where needed.
 [ccg]: g:///authentication/client-credentials
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
-[custom_app]: g://applications/custom-apps
-[custom_skills]: g://applications/custom-skills
+[custom_app]: g://applications/app-types/custom-apps
+[custom_skills]: g://applications/app-types/custom-skills
 [jwt]: g://authentication/jwt/jwt-setup

@@ -111,5 +111,5 @@ scenarios.
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [apptoken]: g://authentication/app-token
-[skill]: g://applications/custom-skills
+[skill]: g://applications/app-types/custom-skills
 [oauth]: g://authentication/oauth2

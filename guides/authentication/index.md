@@ -61,7 +61,7 @@ Learn more about Access Tokens
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
 [devtoken]: g://authentication/tokens/developer-tokens
-[custom-app]: g://applications/custom-apps
-[custom-skill]: g://applications/custom-skills
-[la]: g://applications/select/#limited-access-app
+[custom-app]: g://applications/app-types/custom-apps
+[custom-skill]: g://applications/app-types/custom-skills
+[la]: g://applications/app-types/select/#limited-access-app
 [ccg]: g://authentication/client-credentials

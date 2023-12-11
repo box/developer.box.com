@@ -3,7 +3,7 @@ rank: 1
 related_endpoints: []
 related_guides:
   - applications
-  - applications/select
+  - applications/app-types/select
 required_guides: []
 related_resources: []
 alias_paths: []

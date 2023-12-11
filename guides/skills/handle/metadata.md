@@ -12,7 +12,7 @@ subcategory_id: skills/handle
 is_index: false
 id: skills/handle/metadata
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: skills/handle
 parent_id: skills/handle
 next_page_id: ''

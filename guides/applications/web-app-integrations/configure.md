@@ -17,7 +17,7 @@ type: guide
 total_steps: 3
 sibling_id: applications/web-app-integrations
 parent_id: applications/web-app-integrations
-next_page_id: ''
+next_page_id: applications/web-app-integrations
 previous_page_id: applications/web-app-integrations/user-experience
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/configure.md
@@ -190,7 +190,7 @@ note that the URL must be publicly accessible on the internet.
 To make a Box integration publicly available it needs to be listed in the App
 Center. Follow the [App Center][app-center] guide for more details.
 
-[ca]: g://applications/custom-apps
+[ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
 [uid]:page://platform/appendix/locating-values/#user-ids
 [fid]:page://platform/appendix/locating-values/#content-ids

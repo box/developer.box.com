@@ -5,7 +5,7 @@ related_endpoints:
   - get_users_id
   - get_users
 related_guides:
-  - applications/select
+  - applications/app-types/select
 required_guides: []
 related_resources:
   - user

@@ -9,19 +9,19 @@ alias_paths:
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 category_id: applications
-subcategory_id: applications/custom-skills
-is_index: true
-id: applications/custom-skills
+subcategory_id: applications/app-types
+is_index: false
+id: applications/app-types/custom-skills
 type: guide
-total_steps: 1
-sibling_id: applications
-parent_id: applications
-next_page_id: ''
-previous_page_id: applications/custom-skills/setup
+total_steps: 5
+sibling_id: applications/app-types
+parent_id: applications/app-types
+next_page_id: applications/app-types/app-insights
+previous_page_id: applications/app-types/limited-access-apps
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-skills/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/custom-skills.md
 ---
-# Custom Skills
+# Custom Skill
 
 A Custom Skill, or Box Skill is a type of application that performs custom
 processing for files uploaded to Box. Skills are designed to make it
@@ -74,8 +74,8 @@ Example use cases for Custom Skills include:
 
 ## Approval
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
+Before a Custom Skill can be used it needs to be assigned
+to a folder for which the skill should trigger.
 
 <CTA to='g://authorization/custom-skill-approval'>
 
