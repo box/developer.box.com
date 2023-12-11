@@ -25,7 +25,7 @@ rank: 0
 
 <!-- 
 <Tabs>
-<Tab title='cUrl'>
+<Tab title='cURL'>
     
 ```bash
     

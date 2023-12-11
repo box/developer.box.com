@@ -25,7 +25,7 @@ This is how the flow would look like:
 Consider this example:
 
 <Tabs>
-  <Tab title='cUrl'>
+  <Tab title='cURL'>
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -101,7 +101,7 @@ This will result in a signature request with a prepare document URL
 (simplified):
 
 <Tabs>
-<Tab title='cUrl'>
+<Tab title='cURL'>
     
 ```json
 
