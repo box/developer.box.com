@@ -37,8 +37,8 @@ id of `tag_full_name`.
 Check out this support note for a complete description of all the tags 
 available.
 
-Setting the tags to the same color as the background will make them invisible, 
-but they will still be there.
+Setting the tags to the same `color` as the background will make them 
+invisible, but they will still be there.
 
 The number in the tags refer to the signer number, so `[[c|1]]` is the checkbox 
 for signer 1, `[[c|2]]` is the checkbox for signer 2, and so on, NOT the 
