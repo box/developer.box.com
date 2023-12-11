@@ -3,6 +3,7 @@ rank: 3
 related_endpoints: []
 related_guides:
   - applications/app-types/select
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/select

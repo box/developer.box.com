@@ -43,7 +43,7 @@ signature request. Consider this example:
 
 <Tabs>
 
-<Tab title='cUrl'>
+<Tab title='cURL'>
 
 ```bash
 
@@ -124,7 +124,7 @@ This will result in a signature request with a prepare document URL
 
 <Tabs>
 
-<Tab title='cUrl'>
+<Tab title='cURL'>
 
 ```json
 

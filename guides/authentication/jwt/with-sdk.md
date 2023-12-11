@@ -199,8 +199,6 @@ a managed or app user. Head over to our guide on [User
 Types](page://platform/user-types) to learn more about the different types
 of users.
 
-</Message>
-
 ## Summary
 
 By now the application should be able to authorize an application using JWT

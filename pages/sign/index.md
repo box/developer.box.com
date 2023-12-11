@@ -37,7 +37,7 @@ source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/si
 
 <!-- <Tabs>
 
-<Tab title='cUrl'>
+<Tab title='cURL'>
 
 ```bash
     
