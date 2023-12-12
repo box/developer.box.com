@@ -2,7 +2,8 @@
 rank: 5
 related_endpoints: []
 related_guides:
-  - applications/select
+  - applications/app-types/select
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/app-token/app-token-setup
