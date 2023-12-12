@@ -41,9 +41,21 @@ results. For details on benefits and requirements, please refer to the
 
 INSERT LARGE TABLE
 
+<!-- markdownlint-disable line-length -->
+<!--alex ignore-->
+
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Battle card for Box Sales | * Equip the global Box GTM teams - including account executives, sales engineers, customer success managers and consultants  - with the knowledge they need to bring you into sales opportunities. Please upload the completed document to the folder provided in your welcome email. * Template [Here][template1]               |
+| One Pager for Customers & Prospects     |  * Create a one-pager that can be shared with prospects interested in learning more about your integration. Please upload the completed document to the folder provided in your welcome email. * Template [Here][template2]           |
+
+<!-- markdownlint-enable line-length -->
+<!--alex enable-->
+
 Email us at [techpartnerprogram@box.com][mail] with any materials or questions.
 
 <!-- i18n-enable localize-links -->
 [guide]: https://cloud.app.box.com/v/technologypartnerprogramguide
+[template1]: https://cloud.box.com/s/z864l26b8hl9kooval60p44mrnu49nd6
+[template2]: https://cloud.box.com/s/qna0es3wo1yu7zxxa2wsjd62li82auic
 <!-- i18n-disable localize-links -->
 [mail]: mailto:techpartnerprogram@box.com
