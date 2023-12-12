@@ -39,14 +39,16 @@ ensure you maximize your membership in our program and achieve the greatest
 results. For details on benefits and requirements, please refer to the
 [Technology Partner Program Guide][guide].
 
-INSERT LARGE TABLE
-
 <!-- markdownlint-disable line-length -->
 <!--alex ignore-->
-
+|       |      |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Battle card for Box Sales | * Equip the global Box GTM teams - including account executives, sales engineers, customer success managers and consultants  - with the knowledge they need to bring you into sales opportunities. Please upload the completed document to the folder provided in your welcome email. * Template [Here][template1]               |
-| One Pager for Customers & Prospects     |  * Create a one-pager that can be shared with prospects interested in learning more about your integration. Please upload the completed document to the folder provided in your welcome email. * Template [Here][template2]           |
+| Battle card for Box Sales | Equip the global Box GTM teams, including account executives, sales engineers, customer success managers and consultants, with the knowledge they need to bring you into sales opportunities. Please upload the completed [document][template1] to the folder provided in your welcome email. |
+| One Pager for Customers & Prospects     |  Create a one-pager that can be shared with prospects interested in learning more about your integration. Please upload the completed [document][template2] to the folder provided in your welcome email. |
+| Integration Demo |  Create a short 1-2 minute video outlining the high level functionality of the integration. Please upload the completed video to the folder provided in your welcome email. |
+| Configuration Guide |  Outline how to deploy the integration, leveraging these [questions][questions] as a starting point. Please upload the completed document to the folder provided in your welcome email.  |
+| Web Presence |  Provide a link to your website where you display the Box logo, a description of the integration, and a link back to Box. |
+| Partner Support | Provide phone and email information for both dedicated go-to-market and technical points of contact. |
 
 <!-- markdownlint-enable line-length -->
 <!--alex enable-->
@@ -57,5 +59,6 @@ Email us at [techpartnerprogram@box.com][mail] with any materials or questions.
 [guide]: https://cloud.app.box.com/v/technologypartnerprogramguide
 [template1]: https://cloud.box.com/s/z864l26b8hl9kooval60p44mrnu49nd6
 [template2]: https://cloud.box.com/s/qna0es3wo1yu7zxxa2wsjd62li82auic
+[questions]: https://cloud.box.com/s/0v9kev0uy4ff4sb7kswz81fpqlo8oed8
 <!-- i18n-disable localize-links -->
 [mail]: mailto:techpartnerprogram@box.com
