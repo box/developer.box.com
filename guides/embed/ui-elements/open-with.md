@@ -38,7 +38,7 @@ Box Content Open With UI Elementを使用すると、開発者は、Boxに保存
 
 Open With Elementに含まれる統合には、Google SuiteおよびBox Editがあります。Google Suiteの統合の詳細については、[Boxコミュニティサイト][community]を参照してください。
 
-現在、この要素では、認証用に[App User](g://getting-started/user-types)のみがサポートされています。
+現在、この要素では、認証用に[App User](page://platform/user-types)のみがサポートされています。
 
 ## インストール
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 有効なApp Userにアプリ統合を追加するには、以下の3つの情報が必要です。
 
-* 有効な[サービスアカウント](g://getting-started/user-types/service-account/)アクセストークン
+* 有効な[サービスアカウント](page://platform/user-types/#service-account/)アクセストークン
 * 統合を割り当てるApp UserのID
 * ユーザーに割り当てるアプリ統合のID
 
@@ -398,4 +398,4 @@ contentOpenWith.removeAllListeners();
 
 <!-- i18n-disable localize-links -->
 
-[service-account]: g://getting-started/user-types/service-account/
+[service-account]: page://platform/user-types/#service-account/

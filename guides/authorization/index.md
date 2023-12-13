@@ -99,7 +99,7 @@ fullyTranslated: true
 
 <!-- i18n-disable localize-links -->
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
@@ -113,6 +113,6 @@ fullyTranslated: true
 
 [apptoken]: g://authentication/app-token
 
-[skill]: g://applications/custom-skills
+[skill]: g://applications/app-types/custom-skills
 
 [oauth]: g://authentication/oauth2

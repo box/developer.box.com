@@ -6,7 +6,7 @@ related_guides:
   - authentication/oauth2/oauth2-setup
 required_guides:
   - authentication/select
-  - applications/custom-apps
+  - applications/app-types/custom-apps
 related_resources: []
 alias_paths:
   - /docs/setting-up-an-oauth-app

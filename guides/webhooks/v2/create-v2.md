@@ -111,6 +111,6 @@ Webhookはカスケードで適用されるため、Webhookを親フォルダに
 
 [4]: g://webhooks/triggers
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [console]: https://app.box.com/developers/console

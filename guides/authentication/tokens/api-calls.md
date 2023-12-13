@@ -5,7 +5,7 @@ related_resources: []
 related_guides:
   - authentication
 required_guides:
-  - applications/select
+  - applications/app-types/select
 alias_paths:
   - /docs/how-to-get-an-api-key
   - /authentication/access-tokens/api-calls

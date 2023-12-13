@@ -2,8 +2,8 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - applications/select
-  - getting-started/user-types
+  - applications/app-types/select
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/select
@@ -54,9 +54,9 @@ JWTを使用するサーバー側認証は、以下に当てはまるアプリ�
 * ユーザーにBoxを使用していることを認識させたくない
 * アプリケーションのBoxアカウントにデータを保存し、ユーザーのBoxアカウントには保存しない
 
-[app-type]: g://applications/select
+[app-type]: g://applications/app-types/select
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [jwtnosdk]: g://authentication/jwt/without-sdk
 

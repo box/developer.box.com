@@ -9,17 +9,17 @@ alias_paths:
   - /docs/use-case-recipes
   - /v2/docs/box-api-recipes
 category_id: applications
-subcategory_id: null
+subcategory_id: applications/app-types
 is_index: false
-id: applications/select
+id: applications/app-types/select
 type: guide
-total_steps: 4
-sibling_id: applications
-parent_id: applications
-next_page_id: applications/custom-apps
+total_steps: 5
+sibling_id: applications/app-types
+parent_id: applications/app-types
+next_page_id: applications/app-types
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/select.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/select.md
 fullyTranslated: true
 ---
 # アプリの種類の選択
@@ -41,11 +41,9 @@ fullyTranslated: true
 | **認証方法**    | [OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報認証][ccg] |
 | **注目すべき機能** | Webhook、App Center、ウェブアプリ統合                           |
 
-<!-- markdownlint-enable line-length -->
-
 カスタムアプリはほとんどのユースケースに対応しており、最も柔軟なオプションです。このアプリケーションの種類では、Boxの150を超えるエンドポイントの操作が可能になります。たとえば、メタデータのダウンロード/アップロード、検索、適用などが可能です。
 
-<CTA to="g://applications/custom-apps">
+<CTA to="g://applications/app-types/custom-apps">
 
 カスタムアプリの詳細を確認する
 
@@ -60,7 +58,7 @@ fullyTranslated: true
 
 アクセス制限付きアプリは、[Box View][view-app]を利用したり、別のアプリケーション内でBoxコンテンツをプレビューしたりする場合に最適です。この種類のアプリケーションで操作できるエンドポイントの数は限られています。
 
-<CTA to="g://applications/limited-access-apps">
+<CTA to="g://applications/app-types/limited-access-apps">
 
 アクセス制限付きアプリの詳細を確認する
 
@@ -75,11 +73,13 @@ fullyTranslated: true
 
 カスタムスキル (Box Skill) とは、Boxにアップロードされたファイルに対してカスタマイズした処理を実行する一種のアプリケーションです。スキルは、サードパーティの機械学習サービスを使用して、Boxにアップロードされたファイルから情報を自動的に抽出できるようにすることを目的としています。
 
-<CTA to="g://applications/custom-skills">
+<CTA to="g://applications/app-types/custom-skills">
 
 カスタムスキルの詳細を確認する
 
 </CTA>
+
+<!-- markdownlint-enable line-length -->
 
 [oauth2]: g://authentication/oauth2
 
@@ -87,7 +87,7 @@ fullyTranslated: true
 
 [app-token]: g://authentication/app-token
 
-[custom-apps]: g://applications/custom-apps
+[custom-apps]: g://applications/app-types/custom-apps
 
 [dev-console]: https://app.box.com/developers/console
 

@@ -1,5 +1,5 @@
 ---
-rank: 50
+rank: 1
 related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
@@ -11,17 +11,17 @@ alias_paths:
   - /guides/applications/app-gallery
   - /guides/applications/app-gallery/
 category_id: applications
-subcategory_id: null
-is_index: false
+subcategory_id: applications/app-center
+is_index: true
 id: applications/app-center
 type: guide
-total_steps: 4
+total_steps: 0
 sibling_id: applications
 parent_id: applications
 next_page_id: ''
-previous_page_id: applications/limited-access-apps
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-center.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-center/index.md
 fullyTranslated: true
 ---
 # App Center
@@ -60,7 +60,7 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 <ImageFrame center border shadow>
 
-![\[App Center\] パネル](./images/app-menu.png)
+![\[App Center\] パネル](./images/app-center.png)
 
 </ImageFrame>
 

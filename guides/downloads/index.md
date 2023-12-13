@@ -35,7 +35,7 @@ Boxの埋め込みの詳細を確認する
 
 このユーザーがファイルにアクセスできない場合、アプリケーションでは`404 Not Found`エラーが表示されます。
 
-<CTA to="g://getting-started/user-types">
+<CTA to="page://platform/user-types">
 
 各種ユーザータイプの詳細を確認する
 

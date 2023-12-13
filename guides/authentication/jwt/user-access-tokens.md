@@ -3,12 +3,10 @@ rank: 4
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
   - authentication/oauth2/without-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -39,7 +37,7 @@ JWTアプリケーションは、[サービスアカウント][sa]ではなく�
 
 </ImageFrame>
 
-さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、サービスアカウントのいずれかである必要があります。詳細については、[ユーザータイプ](g://getting-started/user-types)のガイドを参照してください。
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、サービスアカウントのいずれかである必要があります。詳細については、[ユーザータイプ](page://platform/user-types)のガイドを参照してください。
 
 ## SDKを使用したユーザーアクセストークン
 
@@ -232,4 +230,4 @@ $claims = [
 
 [devconsole]: https://app.box.com/developers/console
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account

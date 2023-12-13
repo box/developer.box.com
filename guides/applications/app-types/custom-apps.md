@@ -11,17 +11,17 @@ related_guides:
   - authentication/jwt
   - authentication/client-credentials
 category_id: applications
-subcategory_id: null
+subcategory_id: applications/app-types
 is_index: false
-id: applications/custom-apps
+id: applications/app-types/custom-apps
 type: guide
-total_steps: 4
-sibling_id: applications
-parent_id: applications
-next_page_id: applications/limited-access-apps
-previous_page_id: applications
+total_steps: 5
+sibling_id: applications/app-types
+parent_id: applications/app-types
+next_page_id: applications/app-types/limited-access-apps
+previous_page_id: applications/app-types
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/custom-apps.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/custom-apps.md
 fullyTranslated: true
 ---
 # カスタムアプリ
@@ -80,4 +80,4 @@ fullyTranslated: true
 
 [uie]: g://embed/ui-elements/
 
-[users]: g;//getting-started/user-types/managed-users/
+[users]: g;//getting-started/user-types/#managed-users/

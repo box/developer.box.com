@@ -8,7 +8,6 @@ related_guides:
   - authentication/tokens
   - authorization
   - api-calls/permissions-and-errors/scopes
-  - getting-started/user-types
 alias_paths:
   - /security-and-governance-apis
   - /docs/android-security-guidelines
@@ -170,13 +169,13 @@ Box APIに関して言えば、注意すべきEnterprise設定がいくつかあ
 
 [jwt]: g://authentication/jwt
 
-[usertypes]: g://getting-started/user-types
+[usertypes]: page://platform/user-types
 
-[serviceaccount]: g://getting-started/user-types/service-account
+[serviceaccount]: page://platform/user-types/#service-account
 
-[appusers]: g://getting-started/user-types/app-users
+[appusers]: page://platform/user-types/#app-user
 
-[mu]: g://getting-started/user-types/managed-users
+[mu]: page://platform/user-types/#managed-users
 
 [auth]: g://authorization/custom-app-approval
 

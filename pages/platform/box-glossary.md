@@ -1,22 +1,25 @@
 ---
-rank: 1
-category_id: getting-started
+centered: true
+rank: 8
+alias_paths:
+  - /guides/getting-started/box-glossary/
+category_id: platform
 subcategory_id: null
 is_index: false
-id: getting-started/box-glossary
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: getting-started/user-models
-previous_page_id: getting-started
+id: platform/box-glossary
+type: page
+total_steps: 9
+sibling_id: platform
+parent_id: platform
+next_page_id: platform/start-creating
+previous_page_id: platform/tools
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/box-glossary.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/box-glossary.md
 fullyTranslated: true
 ---
 # Box Platformの用語集
 
-この用語集では、Box Platformで使用される用語と定義をまとめています。
+This glossary includes terms and definitions used in Box Platform. If you need to find out what a term means, this is your one stop page.
 
 <!-- markdownlint-disable line-length -->
 
@@ -80,7 +83,13 @@ fullyTranslated: true
 
 <!-- markdownlint-enable line-length -->
 
-[app user]: g://getting-started/user-types/service-account
+<Next>
+
+次の手順
+
+</Next>
+
+[app user]: page://platform/user-types/#app-user
 
 [CLI]: https://github.com/box/boxcli
 
@@ -106,8 +115,6 @@ fullyTranslated: true
 
 [managed-users]: https://support.box.com/hc/en-us/articles/360044194353-Understanding-User-Management
 
-[service-account]: g://getting-started/user-types/service-account
-
 [shared-link]: https://support.box.com/hc/en-us/articles/360043697094-Creating-Shared-Links
 
 [sdk]: https://developer.box.com/sdks-and-tools/
@@ -132,8 +139,10 @@ fullyTranslated: true
 
 [classification]: g://metadata/classifications
 
-[custom-app]: g://applications/custom-apps
+[custom-app]: g://applications/app-types/custom-apps
 
 [webhook]: g://webhooks
 
-[limited-app]: g://applications/limited-access-apps
+[limited-app]: g://applications/app-types/limited-access-apps
+
+[service-account]: page://platform/user-types/#service-account

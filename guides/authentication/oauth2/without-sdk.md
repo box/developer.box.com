@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -53,7 +53,7 @@ OAuth 2.0フローを介して取得したアクセストークンは、もと�
 
 * Box開発者コンソールで、OAuth 2.0認証方法を利用するカスタムアプリを作成する。
 * アプリケーションの \[構成] タブに移動して、`client_id`と`client_secret`の値をコピーする。
-* アプリケーションの \[構成] タブで、少なくとも1つのリダイレクトURIが構成されていることを確認する。 
+* アプリケーションの \[構成] タブで、少なくとも1つのリダイレクトURIが構成されていることを確認する。
 
 ## 1. 承認URLを作成する
 
@@ -334,18 +334,19 @@ access_token = json.loads(response)['access_token']
 <Tab title="Node">
 
 ```js
-const authenticationUrl = 'https://api.box.com/oauth2/token';
+const authenticationUrl = "https://api.box.com/oauth2/token";
 
-let accessToken = await axios.post(
-  authenticationUrl,
-  querystring.stringify({
-    grant_type: 'authorization_code',
-    code: '[CODE]',
-    client_id: '[CLIENT_ID]',
-    client_secret: '[CLIENT_SECRET]'
-  })
-)
-.then(response => response.data.access_token)
+let accessToken = await axios
+  .post(
+    authenticationUrl,
+    querystring.stringify({
+      grant_type: "authorization_code",
+      code: "[CODE]",
+      client_id: "[CLIENT_ID]",
+      client_secret: "[CLIENT_SECRET]",
+    })
+  )
+  .then((response) => response.data.access_token);
 
 ```
 

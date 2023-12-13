@@ -293,7 +293,7 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 
 [jwt]: g://authentication/jwt
 
-[mu]: g://getting-started/user-types/managed-users
+[mu]: page://platform/user-types/#managed-users
 
 [au]: g://authentication/jwt/as-user
 
@@ -301,7 +301,7 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 
 [appaccess]: g://authentication/jwt/jwt-setup/#application-access
 
-[appu]: g://getting-started/user-types/app-users
+[appu]: page://platform/user-types/#app-user
 
 <!-- i18n-enable localize-links -->
 
@@ -313,4 +313,4 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 
 [ds]: g://authentication/tokens/downscope
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account

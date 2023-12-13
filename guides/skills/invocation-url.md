@@ -24,7 +24,9 @@ fullyTranslated: true
 ---
 # 呼び出しURL
 
-新しい[Box Skillsアプリケーション](guide://applications/custom-skills)の作成時に、`invocation_url`を指定するよう求められます。このURLは、Skillsアプリが監視するフォルダ内にファイルがアップロード、コピー、移動されたときに、Boxから[イベント通知ペイロード](guide://skills/handle/payload)が送信される公開ウェブアドレスです。
+<!-- markdownlint-disable line-length -->
+
+新しい[Box Skillsアプリケーション](guide://applications/app-types/custom-skills)の作成時に、`invocation_url`を指定するよう求められます。このURLは、Skillsアプリが監視するフォルダ内にファイルがアップロード、コピー、移動されたときに、Boxから[イベント通知ペイロード](guide://skills/handle/payload)が送信される公開ウェブアドレスです。
 
 この通知をリッスンしているウェブサイトまたはアプリケーションは、Box上のファイルと、ファイルからインサイトを取得するために使用されている機械学習システムなどのシステムの間のブリッジとして機能します。
 
@@ -64,3 +66,5 @@ Boxのサーバーが`invocation_url`として使用できるよう、アプリ�
 [aws]: https://aws.amazon.com/
 
 [gcp]: https://cloud.google.com/functions/
+
+<!-- markdownlint-enable line-length -->

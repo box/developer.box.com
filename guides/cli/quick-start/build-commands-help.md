@@ -119,6 +119,6 @@ JWT認証を使用したBox CLIを設定すると、Boxアカウントにこの�
 
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [four]: g://cli/quick-start/options-and-bulk-commands/#options

@@ -9,57 +9,33 @@ subcategory_id: null
 is_index: true
 id: getting-started
 type: guide
-total_steps: 6
+total_steps: 0
 sibling_id: guides
 parent_id: guides
-next_page_id: getting-started/box-glossary
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
 fullyTranslated: true
 ---
-# Box入門
+# Start Here
 
-Boxのドキュメントは、主に以下の4つのセクションに分かれています。
+To begin your journey, visit our new [Learn Box Platform][learn] section.
 
+Our documentation is divided into five main sections:
+
+* **Learn Box Platform**: A getting started walk through of all things Platform
+* **Developer Guides**: Information about endpoint usage not covered by reference documentation
 * **APIリファレンス**: エンドポイントに関するドキュメント
-* **ガイド**: リファレンスドキュメントでは説明されていない、エンドポイントの使用に関する情報
-* **クイックスタート**: 具体的なAPI機能について手順を説明したチュートリアル
 * **SDKとツール**: Box公式SDKとツールに関する情報
-
-Box APIを使用する開発が初めての方は、主なコンセプトやコンテンツを紹介する以下の手順に従ってみることをお勧めします。
+* **Sample Code Catalog**: Consolidated list of several code repositories
 
 不明な点がある場合は、Boxの[フォーラム][forum-link]を確認してください。
 
-1. 自分の[ユースケース][use-case]がBoxに適しているかどうかを評価する
-2. さまざまな[Boxユーザーの種類][users]を理解する
-3. [ユーザーモデル][user-model]を確認する
-4. 一般的な[アーキテクチャパターン][patterns]を確認する
-5. 自分のユースケースに適切な[アプリケーションの種類][app-type]を選択する
-6. 自分のユースケースに適切な[認証方法][authentication]を選択する
-7. アプリケーションを構成する
-8. アプリケーションの管理者の[承認][authorize]を得る (該当する場合)
-9. 開発[ツール][tools]を調べる
-10. [エンドポイント][endpoints]を調べて、[一般的な値][cv]を使用してAPIコールを実行する
+[learn]: page://platform
 
-[use-case]: g://getting-started/use-cases
+<!-- i18n-enable localize-links -->
 
-[users]: g://getting-started/user-types
+[forum-link]: https://forum.box.com
 
-[patterns]: g://getting-started/architecture-patterns
-
-[user-model]: g://getting-started/user-models
-
-[app-type]: g://applications
-
-[authentication]: g://authentication
-
-[authorize]: g://authorization/custom-app-approval
-
-[tools]: g://tooling
-
-[endpoints]: https://developer.box.com/reference
-
-[cv]: g://getting-started/locating-values
-
-[forum-link]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+<!-- i18n-disable localize-links -->

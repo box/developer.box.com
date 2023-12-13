@@ -24,7 +24,9 @@ Box Skillsは、ファイルの基盤となるメタデータを強化するこ�
 
 Skillsアプリケーションのエンドツーエンドプロセスは以下のとおりです。
 
-1. [アプリのセットアップ](guide://applications/custom-skills/setup) - 会社全体または1つ以上のフォルダ内でアップロードされるファイルをリッスンする**カスタムスキル**Boxアプリケーションを作成します。   
+<!-- markdownlint-disable line-length -->
+
+1. [アプリのセットアップ](guide://skills/handle/setup) - 会社全体または1つ以上のフォルダ内でアップロードされるファイルをリッスンする**カスタムスキル**Boxアプリケーションを作成します。   
 2. [`invocation_url`の構成](guide://skills/invocation-url) - **カスタムスキル**アプリを作成したら、`invocation_url`を構成する必要があります。このURLは、Boxに新しいファイルがアップロードされるたびに呼び出されます。
 3. [イベントペイロードの解析](guide://skills/handle/payload) - Box Skillがリッスンするフォルダにファイルがアップロード、コピー、または移動されると、`invocation_url`にイベントペイロードが送信されます。このペイロードには、2つの**アクセストークン**が含まれています。これらのアクセストークンを使用すると、Boxにアップロードされたファイルにアクセスし、ファイルにメタデータを保存することができます。
 4. [主な署名の検証][1] - Skillペイロードを処理するサービスは、他の処理を行う前に、`invocation_url`がBoxによって呼び出されたことを検証する必要があります。この検証を手動またはSDKを使用して行う例については、リンクを確認してください。
@@ -36,6 +38,8 @@ Skillsアプリケーションのエンドツーエンドプロセスは以下�
 Box Skillsとの統合を簡素化するため、上記の手順の複雑さを減らした[Skills Kit](guide://skills/kit)が提供されています。Skills Kitは現在、Nodeでのみ入手可能です。
 
 </Message>
+
+<!-- markdownlint-enable line-length -->
 
 [1]: guide://webhooks/v2/signatures-v2
 

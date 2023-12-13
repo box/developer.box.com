@@ -1,23 +1,24 @@
 ---
+centered: true
 rank: 2
 related_endpoints: []
-related_guides:
-  - getting-started/user-types
+related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
-category_id: getting-started
-subcategory_id: null
+alias_paths:
+  - /guides/getting-started/user-models/
+category_id: platform
+subcategory_id: platform/appendix
 is_index: false
-id: getting-started/user-models
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: getting-started/architecture-patterns
-previous_page_id: getting-started/box-glossary
+id: platform/appendix/user-models
+type: page
+total_steps: 4
+sibling_id: platform/appendix
+parent_id: platform/appendix
+next_page_id: platform/appendix/architecture-patterns
+previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/user-models.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/user-models.md
 fullyTranslated: true
 ---
 # ユーザーモデル
@@ -109,14 +110,14 @@ fullyTranslated: true
 1. ユーザーを作成する必要がない場合に便利 (たとえば、個々のユーザーではなく、部門や会社がコンテンツを所有する場合)
 2. サービスアカウントの権限を昇格させることができるため、バックエンドサービスに対する権限の割り当てを徹底的に制御できる
 
-[usecase]: g://getting-started/use-cases
+[usecase]: page://platform/use-cases
 
-[usertypes]: g://getting-started/user-types
+[usertypes]: page://platform/user-types
 
-[architect]: g://getting-started/architecture-patterns
+[architect]: page://platform/appendix/architecture-patterns
 
-[mu]: g://getting-started/user-types/managed-users
+[mu]: page://platform/user-types/#managed-users
 
-[appu]: g://getting-started/user-types/app-users
+[appu]: page://platform/user-types/#app-user
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account

@@ -1,0 +1,78 @@
+---
+centered: true
+rank: 7
+category_id: platform
+subcategory_id: null
+is_index: false
+id: platform/tools
+type: page
+total_steps: 9
+sibling_id: platform
+parent_id: platform
+next_page_id: platform/box-glossary
+previous_page_id: platform/support
+source_url: >-
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/tools.md
+fullyTranslated: true
+---
+# ツール
+
+Box offers several [tools][tooling] for you to use to jump start your development. Check them out below.
+
+## Sample Code Catalog
+
+The [sample code catalog][sample_code] is the most recent tool we have launched on the Box Developer site. It pulls code sample repositories from multiple places, consolidating them in one place for you to browse. It allows you to filter by language and task. We update the list regularly so the you have access to the most up to date code.
+
+<ImageFrame center>
+
+![Sample Code Catalog](./images/sample_code.png)
+
+</ImageFrame>
+
+## Box CLI
+
+The Box Command Line Interface (CLI) is a tool for making requests to Box APIs from your terminal window or command prompt. It takes less than five minutes to set up and provides you direct access to the API. We also offer a suite of [sample scripts][samples] to jump start any administration automation tasks.
+
+<YouTube id="whxT3Bdx3E0">
+
+</YouTube>
+
+## SDK
+
+Box supports several coding languages with our [SDK libraries][sdk]. It is highly recommended to use SDKs when creating a solution since the libraries automatically handle things like authentication and retry logic for you. In addition, the API reference pages contain samples for all the languages directly in the site; however, each Github repo has a docs section with all that language's samples too.
+
+<ImageFrame center>
+
+![SDK GitHub Libraries](./images/sdk.png)
+
+</ImageFrame>
+
+## Postmanコレクション
+
+As an industry standard in software development, Postman helps developers learn APIs quickly, providing real time testing and code samples. You can find our Postman Collection on the [Postman website][postman]. You can also check out the YouTube video below.
+
+<Youtube id="aEILZ_tukLg">
+
+</Youtube>
+
+<Next>
+
+次の手順
+
+</Next>
+
+[samples]: g://cli/scripts/
+
+[sdk]: page://sdks-and-tools/
+
+[file]: e://get-files-id/
+
+[tooling]: g://tooling/
+
+<!-- i18n-enable localize-links -->
+
+[sample_code]: https://developer.box.com/sample-code/
+
+[postman]: https://www.postman.com/boxdev
+
+<!-- i18n-disable localize-links -->

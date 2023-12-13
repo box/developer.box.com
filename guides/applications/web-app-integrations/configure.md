@@ -17,7 +17,7 @@ type: guide
 total_steps: 3
 sibling_id: applications/web-app-integrations
 parent_id: applications/web-app-integrations
-next_page_id: ''
+next_page_id: applications/web-app-integrations
 previous_page_id: applications/web-app-integrations/user-experience
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/configure.md
@@ -152,13 +152,13 @@ BoxからクライアントコールバックのURLに送信されるPOSTリク�
 
 Box統合を一般公開するには、統合をApp Centerに掲載する必要があります。詳細については、[App Center][app-center]ガイドに従ってください。
 
-[ca]: g://applications/custom-apps
+[ca]: g://applications/app-types/custom-apps
 
 [pu]: g://applications/web-app-integrations/types
 
-[uid]: g://getting-started/locating-values/#user-ids
+[uid]: page://platform/appendix/locating-values/#user-ids
 
-[fid]: g://getting-started/locating-values/#content-ids
+[fid]: page://platform/appendix/locating-values/#content-ids
 
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
 

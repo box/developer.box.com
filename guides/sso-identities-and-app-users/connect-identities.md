@@ -73,7 +73,7 @@ SSOサービス内の一意のユーザーとBoxユーザーの関連付けを�
 
 一意のSSOユーザーアカウントとBoxユーザーアカウントの関連付けに`external_app_user_id`フィールドを使用することは、この2つのアカウントを関連付ける方法としてメールよりも推奨されています。これには、以下のように複数の理由があります。
 
-* メールアドレスによる関連付けを実行できるのは[管理対象ユーザー](guide://getting-started/user-types/managed-users/)のみです。[App User](guide://getting-started/user-types/app-users/)にはBoxによって自動的にメールアドレスが割り当てられるため、`login`をSSOサービスのメールアドレスになるよう割り当てることはできません。 
+* メールアドレスによる関連付けを実行できるのは[管理対象ユーザー](page://platform/user-types/#managed-users)のみです。[App User](page://platform/user-types/#app-user)にはBoxによって自動的にメールアドレスが割り当てられるため、`login`をSSOサービスのメールアドレスになるよう割り当てることはできません。 
 * メールアドレスはBoxにおいて一意でなければなりません。つまり、SSOサービスユーザーが (Boxを使用する社内に存在しない) 同じメールアドレスを使用してBoxにサインアップした場合は、そのアドレスでユーザーを作成することも、既存のSSOサービスユーザーに接続することもできなくなります。
 * `external_app_user_id`フィールドはこのために設計されています。
 
@@ -81,7 +81,7 @@ SSOサービス内の一意のユーザーとBoxユーザーの関連付けを�
 
 ユーザーオブジェクトの`login`フィールドを使用してアカウントの関連付けを作成する方法は、以下の限られた状況において使用可能です。
 
-* [App User](guide://getting-started/user-types/app-users/)ではなく[管理対象ユーザー](getting-started://authentication/user-types/managed-users/)タイプのみが使用されている。
+* [App User](page://platform/user-types/#app-user)ではなく[管理対象ユーザー](getting-started://authentication/user-types/#managed-users/)タイプのみが使用されている。
 * メールアドレスとBoxアカウントの作成リクエストがすべて会社によって管理されている。つまり、ユーザーは自身のメールアドレスで独自にBoxアカウントを作成することができません。
 
 <Message warning>

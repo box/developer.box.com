@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -68,8 +68,8 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
 {
   "boxAppSettings": {
     "clientID": "abc...123",
-    "clientSecret": "def...234",
-    "appAuth": {
+   "clientSecret": "def...234",
+   "appAuth": {
       "publicKeyID": "abcd1234",
       "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
       "passphrase": "ghi...345"
@@ -125,7 +125,7 @@ config = JWTAuth.from_settings_file('path/to/config.json')
 <Tab title="Node">
 
 ```js
-var config = require('path/to/config.json');
+var config = require("path/to/config.json");
 
 ```
 
@@ -180,7 +180,7 @@ client = Client(config)
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
-var client = sdk.getAppAuthClient('enterprise');
+var client = sdk.getAppAuthClient("enterprise");
 
 ```
 
@@ -192,9 +192,7 @@ var client = sdk.getAppAuthClient('enterprise');
 
 # サービスアカウント
 
-この時点では、アプリケーションは、管理対象ユーザーまたはApp Userとしてではなく、アプリケーションユーザーとして認証されます。各種ユーザーの詳細については、[ユーザータイプ](g://getting-started/user-types)に関するガイドをご覧ください。
-
-</Message>
+この時点では、アプリケーションは、管理対象ユーザーまたはApp Userとしてではなく、アプリケーションユーザーとして認証されます。各種ユーザーの詳細については、[ユーザータイプ](page://platform/user-types)に関するガイドをご覧ください。
 
 ## まとめ
 

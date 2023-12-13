@@ -103,6 +103,6 @@ fullyTranslated: true
 
 その後、このテンプレートキーは、テンプレートの情報を取得したり、項目にテンプレートを割り当てたりするためのAPIリクエストを実行するときに使用されます。
 
-[user-types]: g://getting-started/user-types
+[user-types]: page://platform/user-types
 
 [e_create_template]: e://post_metadata_templates_schema

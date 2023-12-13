@@ -61,10 +61,10 @@ curl https://api.box.com/2.0/users/me \
 
 [devtoken]: g://authentication/tokens/developer-tokens
 
-[custom-app]: g://applications/custom-apps
+[custom-app]: g://applications/app-types/custom-apps
 
-[custom-skill]: g://applications/custom-skills
+[custom-skill]: g://applications/app-types/custom-skills
 
-[la]: g://applications/select/#limited-access-app
+[la]: g://applications/app-types/select/#limited-access-app
 
 [ccg]: g://authentication/client-credentials

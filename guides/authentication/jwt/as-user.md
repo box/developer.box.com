@@ -3,11 +3,9 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -51,11 +49,11 @@ curl https://api.box.com/2.0/folders/0 \
 
 </ImageFrame>
 
-さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者または共同管理者である必要があります。詳細については、[ユーザータイプ](g://getting-started/user-types)のガイドを参照してください。
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者または共同管理者である必要があります。詳細については、[ユーザータイプ](page://platform/user-types)のガイドを参照してください。
 
 <Message>
 
-as-userヘッダーでは[サービスアカウント](g://getting-started/user-types/service-account)の`user_id`を使用できません。
+as-userヘッダーでは[サービスアカウント](page://platform/user-types/#service-account)の`user_id`を使用できません。
 
 </Message>
 

@@ -32,6 +32,12 @@ fullyTranslated: true
 
 Box管理者は、管理コンソールでアプリケーションを適切に承認または有効化するために、そのクライアントIDが必要になります。
 
+<Message>
+
+You can use [My Apps][apps] view to quickly look up the authorization and enablement status of your application.
+
+</Message>
+
 ## 承認の通知
 
 アプリの承認を送信するための半自動プロセスは、開発者コンソールですべての種類のカスタムアプリケーションに使用できます。
@@ -65,7 +71,9 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 ### 開発者の場合
 
 1. [開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。 
-2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。
+2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。 
+
+Alternatively, hover over the application in the [My Apps][apps] view to look up the **ClientID** and then copy it using the `copy` button.
 
 <Message>
 
@@ -141,3 +149,5 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 [app-auth]: https://support.box.com/hc/ja/articles/360043697014-Boxのアプリ承認プロセスでのアプリの承認
 
 <!-- i18n-enable localize-links -->
+
+[apps]: g://applications

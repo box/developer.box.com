@@ -24,7 +24,7 @@ fullyTranslated: true
 
 アプリケーションで使用できる承認の種類は、開発者コンソールで構成したBoxアプリケーションの種類によって異なります。
 
-<CTA to="guide://applications/select">
+<CTA to="guide://applications/app-types/select">
 
 アプリケーションの種類の選択方法を確認する
 
@@ -173,8 +173,8 @@ JWTを使用したサーバー側認証を確認する
 
 </Message>
 
-[custom-app]: g://applications/custom-apps
+[custom-app]: g://applications/app-types/custom-apps
 
-[custom-skill]: g://applications/custom-skills
+[custom-skill]: g://applications/app-types/custom-skills
 
-[la-app]: g://applications/limited-access-apps
+[la-app]: g://applications/app-types/limited-access-apps

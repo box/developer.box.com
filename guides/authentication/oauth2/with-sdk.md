@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -114,7 +114,7 @@ var BoxSDK = require("box-node-sdk");
 
 var sdk = new BoxSDK({
   clientID: "[CLIENT_ID]",
-  clientSecret: "[CLIENT_SECRET]"
+  clientSecret: "[CLIENT_SECRET]",
 });
 
 ```
@@ -181,7 +181,7 @@ auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
-  response_type: "code"
+  response_type: "code",
 });
 
 // res.redirect(authorize_url)
@@ -284,7 +284,7 @@ client = Client(auth)
 ```js
 var code = "...";
 
-sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
+sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function (err, tokenInfo) {
   var client = sdk.getPersistentClient(tokenInfo);
 });
 

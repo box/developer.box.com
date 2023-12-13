@@ -2,12 +2,9 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - authentication/oauth2
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -51,7 +48,7 @@ curl https://api.box.com/2.0/folders/0 \
 
 </ImageFrame>
 
-さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、またはサービスアカウントのいずれかである必要があります。共同管理者にも、「ユーザーを管理する」権限のスコープが必要です。詳細については、[ユーザータイプ](g://getting-started/user-types)のガイドを参照してください。
+さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、またはサービスアカウントのいずれかである必要があります。共同管理者にも、「ユーザーを管理する」権限のスコープが必要です。詳細については、[ユーザータイプ](page://platform/user-types)のガイドを参照してください。
 
 ## SDKを使用したas-user
 

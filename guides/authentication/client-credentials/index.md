@@ -3,7 +3,7 @@ rank: 4
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/best-practices/
 required_guides:
   - authentication/select
@@ -81,7 +81,7 @@ APIコールを実行して[アクセストークン][accesstoken]を取得す�
 
 [accesstoken]: e://post-oauth2-token/
 
-[sa]: g://getting-started/user-types/service-account/
+[sa]: page://platform/user-types/#service-account/
 
 [auth]: g://authorization
 

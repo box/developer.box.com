@@ -92,6 +92,36 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 | ---------- | --------- | ------- |
 | [CLI][cli] | はい        | Full    |
 
+## Postmanコレクション
+
+[Postman][postman]は、完全な開発環境を構成しなくても、使いやすいインターフェースでHTTPリクエストを作成およびテストできるツールです。**Box Postmanコレクション**は事前設定済みのリクエストをまとめたもので、これにより、リクエストを手動で設定しなくても、Box APIを利用できるようになります。
+
+Postmanの使用を開始するには、Postmanクイックスタートガイドを使用するのが最も簡単な方法です。
+
+<CTA to="g://tooling/postman/quick-start">
+
+Box Postmanコレクションの使い方
+
+</CTA>
+
+## Salesforce Developer Toolkit
+
+Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動作をプログラムによりカスタマイズできます。このツールキットに含まれる複数のグローバルAPEXメソッドを使用して、デフォルトの動作をトリガーしたり、拡張したりできます。このグローバルメソッドにより、内部のSalesforceレコードとBoxフォルダのマッピングを更新し、権限の管理を処理できます。
+
+<Message type="notice">
+
+この機能は最新のBox for [Salesforceパッケージ][sf-package]に含まれています。
+
+</Message>
+
+<Message type="warning">
+
+# このツールキットに含まれない機能
+
+このツールキットは、BOX Content API用のフル機能を備えたAPEXラッパーではありません。このようなラッパーをお求めの場合は、[Box SDK for Salesforce][sf-sdk]を参照してください。
+
+</Message>
+
 ## 公式UIライブラリ
 
 組み込みのUIコンポーネントを使用してアプリケーションを拡張することで、Box上のファイルを参照、共有、プレビューできるようになります。
@@ -173,3 +203,13 @@ Box CLIは、使い勝手の良いコマンドラインツールです。これ�
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+
+[postman]: https://postman.com
+
+<!-- i18n-enable localize-links -->
+
+[sf-package]: https://support.box.com/hc/ja/articles/360044195713-Box-for-Salesforceのインストールと設定
+
+[sf-sdk]: https://github.com/box/box-salesforce-sdk
+
+<!-- i18n-disable localize-links -->

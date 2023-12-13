@@ -5,8 +5,8 @@ related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/app-token
-  - applications/custom-apps
-  - applications/custom-skills
+  - applications/app-types/custom-apps
+  - applications/app-types/custom-skills
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -71,7 +71,7 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 </Message>
 
-[mu]: g://getting-started/user-types/managed-users
+[mu]: page://platform/user-types/#managed-users
 
 [admin-approval]: g://authorization/custom-app-approval
 
@@ -85,8 +85,8 @@ Skillsを使用した場合でも、スキルイベントをトリガーする�
 
 [app_token]: g://authentication/app-token
 
-[custom_app]: g://applications/custom-apps
+[custom_app]: g://applications/app-types/custom-apps
 
-[custom_skills]: g://applications/custom-skills
+[custom_skills]: g://applications/app-types/custom-skills
 
 [jwt]: g://authentication/jwt/jwt-setup

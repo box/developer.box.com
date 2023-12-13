@@ -132,13 +132,13 @@ Box Platformを初めて使用する場合は、どのように始めればよ�
 
 <TileGrid>
 
-<Tile type="users" title="1. ユーザータイプを確認する" href="/guides/getting-started/user-types/">
+<Tile type="users" title="1. ユーザータイプを確認する" href="platform/user-types/">
 
 Box Platformは、さまざまなユーザータイプを必要とする可能性がある多くのユースケースに対応します。ユーザータイプの違いについて詳細を確認してください。
 
 </Tile>
 
-<Tile type="apps" title="2. アプリケーションの種類を理解する" href="/guides/applications/select/">
+<Tile type="apps" title="2. アプリケーションの種類を理解する" href="/guides/applications/app-types/select/">
 
 アプリケーションを作成する際に、いくつかの種類から選択できます。こちらのガイドを読んで、ニーズに最適なものを確認してください。
 
@@ -156,7 +156,7 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 </Tile>
 
-<Tile type="architecture" title="5. アーキテクチャパターンを作成する" href="/guides/getting-started/architecture-patterns/">
+<Tile type="architecture" title="5. アーキテクチャパターンを作成する" href="/platform/appendix/architecture-patterns/">
 
 Boxでは、ペンを使って紙にソリューションを書き出すことを常にお勧めしています。インスピレーションを得るために最も一般的なアーキテクチャパターンを見てみましょう。
 

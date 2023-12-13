@@ -1,4 +1,5 @@
 ---
+centered: true
 rank: 6
 related_endpoints:
   - get-users-me
@@ -7,19 +8,20 @@ related_endpoints:
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
-category_id: getting-started
-subcategory_id: null
+alias_paths:
+  - /guides/getting-started/locating-values/
+category_id: platform
+subcategory_id: platform/appendix
 is_index: false
-id: getting-started/locating-values
-type: guide
-total_steps: 6
-sibling_id: getting-started
-parent_id: getting-started
-next_page_id: getting-started/branding-guidelines
-previous_page_id: getting-started/architecture-patterns
+id: platform/appendix/locating-values
+type: page
+total_steps: 4
+sibling_id: platform/appendix
+parent_id: platform/appendix
+next_page_id: platform/appendix/branding-guidelines
+previous_page_id: platform/appendix/architecture-patterns
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/locating-values.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/locating-values.md
 fullyTranslated: true
 ---
 # 一般的な値の確認

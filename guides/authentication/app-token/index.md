@@ -2,8 +2,8 @@
 rank: 5
 related_endpoints: []
 related_guides:
-  - applications/select
-  - getting-started/user-types
+  - applications/app-types/select
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/app-token/app-token-setup
@@ -42,6 +42,6 @@ fullyTranslated: true
 * ユーザーにBoxを使用していることを認識させたくない
 * ユーザーのアカウントではなく、アプリケーションのサービスアカウントにデータを保存する
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [box-view]: g://embed/box-view

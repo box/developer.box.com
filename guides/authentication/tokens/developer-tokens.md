@@ -5,7 +5,7 @@ related_resources: []
 related_guides:
   - authentication/select
 required_guides:
-  - applications/select
+  - applications/app-types/select
 alias_paths:
   - /docs/authenticate-with-developer-token
   - /authentication/access-tokens/developer-tokens
@@ -34,6 +34,12 @@ fullyTranslated: true
 * Box[開発者コンソール][devconsole]に移動し、開発者トークンの作成対象となるアプリケーションを選択します。
 * \[**構成**] タブを選択します。
 * \[開発者トークン] で、\[**開発者トークンを生成**] を選択します。
+
+<Message>
+
+You can also generate a Developer Token directly from [My Apps][apps] view, using the menu available for each app.
+
+</Message>
 
 <ImageFrame border center shadow>
 
@@ -102,3 +108,5 @@ Box SDKは、基本のAPIクライアントを作成する際に、開発者ト�
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#developer-token
 
 [IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#developer-token
+
+[apps]: g://applications

@@ -26,7 +26,7 @@ fullyTranslated: true
 
 Box APIは、管理対象ユーザーアカウントでログインする実際の従業員や、App Userを使用して強力な自動化ワークフローを推進するアプリケーションなど、さまざまなユーザーをサポートしています。
 
-<CTA to="g://getting-started/user-types">
+<CTA to="page://platform/user-types">
 
 ユーザータイプの詳細を確認する
 

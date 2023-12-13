@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -109,7 +109,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 ### アプリケーションアクセス
 
-アプリケーションのアクセスレベルにより、アプリからアクセスできるユーザーおよびコンテンツが決まります。デフォルトでは、アプリケーションで問題なく操作できるのは、その[サービスアカウント][sa]とすべての[App User][user-types]のコンテンツのみです。企業の既存の管理対象ユーザーにもアクセスするには、[開発者コンソール][devconsole]の \[**構成**] タブから \[**アプリアクセスレベル**] に移動し、\[**アプリ + Enterpriseアクセス**] に設定します。 
+アプリケーションのアクセスレベルにより、アプリからアクセスできるユーザーおよびコンテンツが決まります。デフォルトでは、アプリケーションで問題なく操作できるのは、その[サービスアカウント][sa]とすべての[App User][user-types]のコンテンツのみです。企業の既存の管理対象ユーザーにもアクセスするには、[開発者コンソール][devconsole]の \[**構成**] タブから \[**アプリアクセスレベル**] に移動し、\[**アプリ + Enterpriseアクセス**] に設定します。
 
 <ImageFrame border>
 
@@ -171,8 +171,8 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 
-[user-types]: g://getting-started/user-types
+[user-types]: page://platform/user-types
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 
 [app-auth]: g://authorization
