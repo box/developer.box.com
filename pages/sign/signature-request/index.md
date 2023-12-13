@@ -6,11 +6,11 @@ subcategory_id: sign/20-signature-request
 is_index: true
 id: sign/signature-request
 type: page
-total_steps: 6
+total_steps: 7
 sibling_id: sign
 parent_id: sign
 next_page_id: ''
-previous_page_id: sign/signature-request/custom-email
+previous_page_id: sign/signature-request/in-person
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-signature-request/index.md
 ---
