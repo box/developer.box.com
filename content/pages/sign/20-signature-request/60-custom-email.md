@@ -3,12 +3,14 @@ centered: true
 rank: 6
 ---
 
-# Custom email
+# Custom email and notifications
+
+## Email subject and body
 
 By default, the email sent to the signers contains a link to the document, a 
 generic subject, and a generic message.
 
-If you are using templates managed within Box, these can be set on the template 
+If you are using templates managed within Box, these can be set in the template 
 itself.
 
 However, if not using templates, you can still customize the email messages 
@@ -21,13 +23,12 @@ also accepts HTML with some limitations.
 Only some HTML tags are allowed. Links included in the message are also 
 converted to hyperlinks in the email. 
 
-<Message type='notice'>
-The message parameter may contain the following HTML tags
-`a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`, `ol`, 
-and `strong`.
+The message parameter may contain the following HTML tags:
+
+- `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`,
+ `ol`, `strong`
 
 Custom styles on these tags are not allowed.
-</Message>
 
 Be aware that when the text to HTML ratio is too high, the email may end up in 
 spam filters or clipped.
@@ -82,3 +83,108 @@ def main():
 
 </Tab>
 </Tabs>
+
+## Manual notification
+
+You probably notice by now that the signature request by default sends an email 
+notification to the signers. This email is sent from a `box.com` domain and 
+email system.
+
+You can take over the notification process by setting the 
+`embed_url_external_user_id` parameter to an identifier of your choice for a 
+specific signer.
+
+By setting this parameter, the signer will not receive an email notification, 
+and within the signature request, you get back both an `embed_url` and an 
+`iframeable_embed_url`.
+
+The `embed_url` can be opened directly, so it is suitable for your app to send 
+it in an email, any other notifications system for the signer to open.
+
+The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign 
+Client][embed]. In essence you can embed the sign client on an iframe within 
+your own web app.
+
+For example consider this request:
+
+<Tabs>
+<Tab title='cURL'>
+    
+```bash
+
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer fN...dD' 
+--data-raw '{
+    "is_document_preparation_needed": false,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1355143830404",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "example@gmail.com",
+            "embed_url_external_user_id":"1234",
+            "role": "signer"
+        }
+    ]
+}'
+    
+```
+    
+</Tab>
+<Tab title='Python Gen SDK'>
+
+```python
+
+```
+
+</Tab>
+</Tabs>
+
+Returns (simplified):
+
+<Tabs>
+<Tab title='cURL'>
+    
+```json
+
+{
+    "is_document_preparation_needed": false,
+    "signers": [
+        {
+            "email": "...@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "example@gmail.com",
+            "role": "signer",
+            "embed_url_external_user_id": "1234",
+            "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
+            "iframeable_embed_url": "https://app.box.com/embed/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/"
+        }
+    ],
+    "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
+}
+    
+```
+    
+</Tab>
+<Tab title='Python Gen SDK'>
+
+```python
+
+```
+
+</Tab>
+</Tabs>
+
+You can now take the embedded URL's and use your own notification process or 
+embed the signature client within your own app.
+
+[embed]:guide://box-sign/embedded-sign-client
