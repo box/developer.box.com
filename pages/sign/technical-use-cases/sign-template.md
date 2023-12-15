@@ -36,7 +36,7 @@ recipients such as `approver`, and `final_copy_recipient`, email notification
 settings, and a few more options.
 
 For a complete set of options of the signature request please refer to the
-[Signature Request][signature-request] section.
+[request options][request-options] section.
 
 These templates are exclusively created and managed in the Box Sign web app,
 and can be used to create signature requests using the API or the web app.
@@ -445,5 +445,5 @@ However there is a workaround for that, if the document already includes
 signature tags that can be used by the Box Sign engine. Take a look at our
 [Structured Docs][structured-docs] section for more information.
 
-[signature-request]:page://sign/signature-request
+[request-options]:page://sign/request-options
 [structured-docs]:page://sign/technical-use-cases/sign-structured-docs

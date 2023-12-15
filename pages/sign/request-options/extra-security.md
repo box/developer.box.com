@@ -2,17 +2,17 @@
 centered: true
 rank: 2
 category_id: sign
-subcategory_id: sign/20-signature-request
+subcategory_id: sign/20-request-options
 is_index: false
-id: sign/signature-request/extra-security
+id: sign/request-options/extra-security
 type: page
 total_steps: 7
-sibling_id: sign/signature-request
-parent_id: sign/signature-request
-next_page_id: sign/signature-request/custom-urls
-previous_page_id: sign/signature-request/multiple-signers
+sibling_id: sign/request-options
+parent_id: sign/request-options
+next_page_id: sign/request-options/custom-urls
+previous_page_id: sign/request-options/multiple-signers
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-signature-request/20-extra-security.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/20-extra-security.md
 ---
 # Extra security (2FA)
 
@@ -165,4 +165,4 @@ def main():
 
 Once you open the signature request you should see something like this:
 
-![Password verification](sign-simple-password.png)
+![Password verification](images/sign-simple-password.png)

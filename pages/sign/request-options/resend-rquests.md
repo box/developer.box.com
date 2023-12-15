@@ -2,17 +2,17 @@
 centered: true
 rank: 4
 category_id: sign
-subcategory_id: sign/20-signature-request
+subcategory_id: sign/20-request-options
 is_index: false
-id: sign/signature-request/resend-rquests
+id: sign/request-options/resend-rquests
 type: page
 total_steps: 7
-sibling_id: sign/signature-request
-parent_id: sign/signature-request
-next_page_id: sign/signature-request/request-expiration
-previous_page_id: sign/signature-request/custom-urls
+sibling_id: sign/request-options
+parent_id: sign/request-options
+next_page_id: sign/request-options/request-expiration
+previous_page_id: sign/request-options/custom-urls
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-signature-request/40-resend-rquests.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/40-resend-rquests.md
 ---
 # Resend requests
 

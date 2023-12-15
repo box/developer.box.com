@@ -2,17 +2,17 @@
 centered: true
 rank: 6
 category_id: sign
-subcategory_id: sign/20-signature-request
+subcategory_id: sign/20-request-options
 is_index: false
-id: sign/signature-request/custom-email
+id: sign/request-options/custom-email
 type: page
 total_steps: 7
-sibling_id: sign/signature-request
-parent_id: sign/signature-request
-next_page_id: sign/signature-request/in-person
-previous_page_id: sign/signature-request/request-expiration
+sibling_id: sign/request-options
+parent_id: sign/request-options
+next_page_id: sign/request-options/in-person
+previous_page_id: sign/request-options/request-expiration
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-signature-request/60-custom-email.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/60-custom-email.md
 ---
 # Custom email and notifications
 
