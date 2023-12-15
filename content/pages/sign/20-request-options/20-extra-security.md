@@ -148,4 +148,4 @@ def main():
 
 Once you open the signature request you should see something like this:
 
-![Password verification](sign-simple-password.png)
+![Password verification](images/sign-simple-password.png)
