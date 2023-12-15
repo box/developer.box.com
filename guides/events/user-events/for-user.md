@@ -90,7 +90,7 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 | `ITEM_TRASH`                 | ファイルまたはフォルダが削除済みとしてマークされました。                         |
 | `ITEM_UNDELETE_VIA_TRASH`    | ファイルまたはフォルダがごみ箱から戻されました。                             |
 | `COLLAB_ADD_COLLABORATOR`    | コラボレータがフォルダに追加されました。                                 |
-| `COLLAB_ROLE_CHANGE`         | コラボレータのロールが変更されました。                                  |
+| `COLLAB_ROLE_CHANGE`         | コラボレータの役割が変更されました。                                   |
 | `COLLAB_INVITE_COLLABORATOR` | コラボレータがフォルダに招待されました。                                 |
 | `COLLAB_REMOVE_COLLABORATOR` | コラボレータがフォルダから削除されました。                                |
 | `ITEM_SYNC`                  | フォルダが同期対象としてマークされました。                                |
