@@ -1,27 +1,11 @@
 ---
 centered: true
-rank: 1
+rank: 2
 ---
 
-# Sign request
+# Your first request
 
-The sign request endpoint is used to create and manage signature requests. 
-You can create, resend, and cancel signature requests. 
-You can also list all signature requests and get details 
-of a specific signature request.
-
-The main endpoint is `https://{api.box.com}/2.0/sign_requests`.
-The following table lists the operations that you can perform on this endpoint.
-
-| Operation | Endpoint | Description |
-| --- | --- | --- |
-| GET | /sign_requests | List all signature requests. |
-| GET | /sign_requests/:id | Get details of a specific signature request. |
-| POST | /sign_requests | Create a signature request. |
-| POST | /sign_requests/:id/resend | Resend a signature request. |
-| POST | /sign_requests/:id/cancel | Cancel a signature request. |
-
-## Creating your first signature request
+## Creating a signature request
 
 Imagine that you have a document stored in Box and you want to send it to a 
 customer for signature. At minimum your app will need to know what document to 
@@ -169,7 +153,7 @@ Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 </Tab>
 </Tabs>
 
-### Check the status of the signature request
+## Check the status of the signature request
 
 The signature request is an asynchronous process, and can generate errors. 
 Your application should check the status of the request before proceeding, and 
@@ -203,18 +187,24 @@ A signature request can have the following statuses:
    log has not been generated yet.
 - `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
-### Preparing the document
+## Preparing the document
 
-If a prepare URL is present, then a preparation step is created.
+Depending on your technical use case you may need to prepare the document. In 
+this specific example, we are signing a PDF, and the Box sign engine has no 
+idea where to place the signature pad or any other inputs. This is why we used 
+the `is_document_preparation_needed` flag.
 
-Your application should open the preparation URL in a browser, where the 
-requester can add the signature pad and any other inputs needed for the signer 
-to complete the document.
+If a prepare URL is present, then your application should open the preparation 
+URL in a browser, where the requester can add the signature pad and any other 
+inputs needed for the signer to complete the document.
 
 Once the document is prepared, the requester can send the signature request to 
 the signer.
 
-### Completing the signature request
+This preparation step is not always necessary. Take a look at the [technical 
+use cases][technical-use-cases] for more information.
+
+## Completing the signature request
 
 The signer then receives an email from Box with a link to the signature 
 request. The signer can click the link and sign the document.
@@ -228,18 +218,10 @@ Congratulations! You have successfully created your first signature request.
 This represents the simplest use case for Box Sign. The create method has many 
 options that you can use to customize your signature request.
 
-Be sure to check the [Signature request][signature-request], and the 
-[Technical use cases][technical-use-cases] sections for more 
+Be sure to check the [request options][request-options], and the 
+[technical use cases][technical-use-cases] sections for more 
 information.
 </Message>
 
-## List sign requests
-
-## Get sign request details
-
-## Resend sign requests
-
-## Cancel sign requests
-
-[signature-request]:page://sign/signature-request
+[request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases

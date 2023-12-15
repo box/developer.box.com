@@ -11,15 +11,13 @@ rank: 0
 
 ## Learn sections
 
-- [API Basics][api-basics]
-- [Signature request][signature-request]
-- [Embedded sign][embedded-sign]
+- [Quick start][quick-start]
+- [Request options][request-options]
 - [Technical use cases][technical-use-cases]
 - [Advanced use cases][advanced-use-cases]
 
-[api-basics]:page://sign/api-basics
-[signature-request]:page://sign/signature-request
-[embedded-sign]:page://sign/embedded-sign
+[quick-start]:page://sign/quick-start
+[request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases
 [advanced-use-cases]:page://sign/advanced-use-cases
 
