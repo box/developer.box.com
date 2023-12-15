@@ -17,7 +17,6 @@ alias_paths:
 # Box Platform
 
 <Banner>
-
   <BannerTitle>
     Start building with **Box Platform**
   </BannerTitle>
@@ -32,7 +31,6 @@ alias_paths:
   </BannerTitle>
 
   All the developer resources to help you get the most from Box products
-
 </Banner>
 
 <!-- <Centered wide>
@@ -120,62 +118,6 @@ alias_paths:
       href="#sdks-and-tools">
       Finally, explore our developer toolkit: API Reference,
       SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
-    </Tile>
-  </TileGrid>
-</Centered>
-
-<Centered wide>
-  <Header to='/' centered>
-    I'm new to Box Platform. How do I start?
-  </Header>
-    So - you wanna use the Box API? We love to see it!
-    Follow along with the steps below to help get you up and running today.
-    Go from zero to BoxDev hero!
-
-  <TileGrid>
-    <Tile title="1. Explore user types"
-      href="/guides/getting-started/user-types/">
-      Box Platform has different user options depending on the use case.
-      Before developing, review this guide to understand the differences.
-    </Tile>
-    <Tile title="2. Understand application types"
-      href="/guides/applications/select/">
-      When creating applications, you can choose from several types.
-      Read this guide to see which one fits your needs best.
-    </Tile>
-    <Tile title="3. Learn authentication methods"
-      href="/guides/authentication/select/">
-      Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
-      Credentials, and App Token authentication. Check with method
-      applies to your application.
-    </Tile>
-    <Tile title="4. Setup the Box CLI"
-      href="/guides/cli/quick-start/">
-      Optionally, follow the Box CLI quickstart
-      guide to have an API testing space. It takes less than
-      five minutes to start developing!
-    </Tile>
-    <Tile title="5. Create an architecture pattern"
-      href="/guides/getting-started/architecture-patterns/">
-      We always recommended putting pen to paper and drawing out your solution.
-      Have a look at the most common architecture patterns to get inspired!
-    </Tile>
-    <Tile title="6. Create the application"
-      href="https://app.box.com/developers/console">
-      Now, you can start building! Launch the Developer Console and create an
-      application of your choice.
-    </Tile>
-    <Tile title="7. Authorize the application"
-      href="/guides/authorization/">
-      Read about the authorization requirements you have to
-      fulfill to start using you app.
-    </Tile>
-    <Tile title="8. Start coding"
-      href="/reference/">
-      Finally, explore the endpoints available to you in our API reference
-      pages. The site allows you to try out any of the endpoints, and you will
-      find code snippets from all of our SDKs directly embedded
-      in each page.
     </Tile>
   </TileGrid>
 </Centered>
