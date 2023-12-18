@@ -23,7 +23,11 @@ Here is an example:
 <Tab title='cURL'>
     
 ```bash
-    
+
+curl --location --request POST 'https://api.box.com/2.0/sign_requests/
+52f6f86c-c0b3-401e-a4ec-1709f277c469/resend' \
+--header 'Authorization: Bearer ej...3t'
+
 ```
     
 </Tab>

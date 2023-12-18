@@ -31,6 +31,35 @@ Let create a method specific for this:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ej...3t'
+--data-raw '{
+    "is_document_preparation_needed": true,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "institution@example.com",
+            "role": "signer",
+            "order":1
+        },
+        {
+            "email": "student@example.com",
+            "role": "signer",
+            "order":2
+        },
+    ]
+}'
     
 ```
     
@@ -156,6 +185,43 @@ Lets create a method for this:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ej...3t'
+--data-raw '{
+    "is_document_preparation_needed": true,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "institution@example.com",
+            "role": "signer",
+            "order":1
+        },
+        {
+            "email": "student@example.com",
+            "role": "signer",
+            "order":2
+        },
+        {
+            "email": "dean@example.com",
+            "role": "approver"
+        },
+        {
+            "email": "legal@example.com",
+            "role": "final_copy_reader"
+        }
+    ]
+}'
     
 ```
     
