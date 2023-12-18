@@ -31,7 +31,29 @@ passing the `is_phone_verification_required_to_view` parameter. For example:
 
 ```bash
 
-
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ej...3t'
+--data-raw '{
+    "is_document_preparation_needed": true,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "verify@example.com",
+            "role": "signer",
+            "verification_phone_number":"+15551232190"
+        }
+    ]
+}'
 
 ```
 
@@ -107,6 +129,30 @@ passing the `password` parameter in the `signer` object. For example:
 <Tab title='cURL'>
 
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ej...3t'
+--data-raw '{
+    "is_document_preparation_needed": true,
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "verify@example.com",
+            "role": "signer",
+            "password":"1234"
+        }
+    ]
+}'
     
 ```
 
