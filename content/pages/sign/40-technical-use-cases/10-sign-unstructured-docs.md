@@ -45,7 +45,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     ],
     "signers": [
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer"
         }
     ]
@@ -109,11 +109,11 @@ This will result in a signature request with a prepare document URL
     "is_document_preparation_needed": true,
     "signers": [
         {
-            "email": "requester@gmail.com",
+            "email": "requester@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
         }
     ],
@@ -153,7 +153,7 @@ This will result in a signature request with a prepare document URL
 
 Simple sign request with prep: xyz-abc-123
   Status: converting
-  Signers: signer@gmail.com
+  Signers: signer@example.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 
 ```
