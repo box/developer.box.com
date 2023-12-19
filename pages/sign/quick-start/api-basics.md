@@ -47,3 +47,9 @@ The following table lists the operations that you can perform on this endpoint.
 | --- | --- | --- |
 | GET | /sign_templates | List all templates. |
 | GET | /sign_templates/:id | Get details of a specific template. |
+
+<Next>
+
+First request
+
+</Next>

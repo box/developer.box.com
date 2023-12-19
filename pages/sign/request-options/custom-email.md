@@ -2,7 +2,7 @@
 centered: true
 rank: 6
 category_id: sign
-subcategory_id: sign/20-request-options
+subcategory_id: sign/30-request-options
 is_index: false
 id: sign/request-options/custom-email
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/in-person
 previous_page_id: sign/request-options/request-expiration
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/60-custom-email.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/60-custom-email.md
 ---
 # Custom email and notifications
 
@@ -280,5 +280,11 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 
 You can now take the embedded URL's and use your own notification process or
 embed the signature client within your own app.
+
+<Next>
+
+In person signatures
+
+</Next>
 
 [embed]:guide://box-sign/embedded-sign-client

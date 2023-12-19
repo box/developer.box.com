@@ -2,7 +2,7 @@
 centered: true
 rank: 5
 category_id: sign
-subcategory_id: sign/20-request-options
+subcategory_id: sign/30-request-options
 is_index: false
 id: sign/request-options/request-expiration
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/custom-email
 previous_page_id: sign/request-options/resend-rquests
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/50-request-expiration.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/50-request-expiration.md
 ---
 # Request expiration
 
@@ -85,3 +85,9 @@ def sign_doc_single_more_options(
 </Tab>
 
 </Tabs>
+
+<Next>
+
+Custom emails
+
+</Next>

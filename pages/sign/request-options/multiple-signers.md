@@ -2,7 +2,7 @@
 centered: true
 rank: 1
 category_id: sign
-subcategory_id: sign/20-request-options
+subcategory_id: sign/30-request-options
 is_index: false
 id: sign/request-options/multiple-signers
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/extra-security
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/10-multiple-signers.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/10-multiple-signers.md
 ---
 # Multiple signers and roles
 
@@ -335,3 +335,9 @@ Continuing the sign process:
 - Next the institution signs the scholarship
 - Next the student signs the scholarship
 - Finally the legal department receives a copy of the signed document.
+
+<Next>
+
+Extra security
+
+</Next>

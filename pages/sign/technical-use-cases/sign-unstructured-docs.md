@@ -2,7 +2,7 @@
 centered: true
 rank: 1
 category_id: sign
-subcategory_id: sign/40-technical-use-cases
+subcategory_id: sign/20-technical-use-cases
 is_index: false
 id: sign/technical-use-cases/sign-unstructured-docs
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/technical-use-cases
 next_page_id: sign/technical-use-cases/sign-template
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/40-technical-use-cases/10-sign-unstructured-docs.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-technical-use-cases/10-sign-unstructured-docs.md
 ---
 # Signing unstructured docs
 
@@ -200,6 +200,12 @@ When the process is completed, both a signature log containing metadata and
 the signed document are stored in the destination folder.
 
 ![Log and signed document](images/sign-pdf-signed-docs.png)
+
+<Next>
+
+Signing using templates
+
+</Next>
 
 [sign-templates]:page://sign/technical-use-cases/sign-template
 [sign-structured-docs]:page://sign/technical-use-cases/sign-structured-docs

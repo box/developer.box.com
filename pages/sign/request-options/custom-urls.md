@@ -2,7 +2,7 @@
 centered: true
 rank: 3
 category_id: sign
-subcategory_id: sign/20-request-options
+subcategory_id: sign/30-request-options
 is_index: false
 id: sign/request-options/custom-urls
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/resend-rquests
 previous_page_id: sign/request-options/extra-security
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/30-custom-urls.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/30-custom-urls.md
 ---
 # Redirect URL’s
 
@@ -108,3 +108,9 @@ def main():
 
 If you sign you’ll be redirected to our forum page. If you decline you’ll be
 redirected to our developer page.
+
+<Next>
+
+Resend requests
+
+</Next>

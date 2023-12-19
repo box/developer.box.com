@@ -14,4 +14,4 @@ previous_page_id: sign/advanced-use-cases/use-case-a
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/50-advanced-use-cases/index.md
 ---
-# Advanced use cases
+# Business use cases

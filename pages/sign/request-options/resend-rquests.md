@@ -2,7 +2,7 @@
 centered: true
 rank: 4
 category_id: sign
-subcategory_id: sign/20-request-options
+subcategory_id: sign/30-request-options
 is_index: false
 id: sign/request-options/resend-rquests
 type: page
@@ -12,7 +12,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/request-expiration
 previous_page_id: sign/request-options/custom-urls
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-request-options/40-resend-rquests.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/40-resend-rquests.md
 ---
 # Resend requests
 
@@ -130,3 +130,9 @@ def main():
 </Tab>
 
 </Tabs>
+
+<Next>
+
+Requests expiration
+
+</Next>
