@@ -67,6 +67,28 @@ Consider this method:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer nQ...xY'
+--data-raw '{
+    "source_files": [
+        {
+            "type": "file",
+            "id": "1363379762284"
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "signers": [
+        {
+            "email": "barbasr+signer@gmail.com",
+            "role": "signer"
+        }
+    ]
+}'
     
 ```
     
@@ -110,12 +132,50 @@ def main():
 </Tab>
 </Tabs>
 
-Resulting in:
+Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
     
-```bash
+```json
+{
+    "is_document_preparation_needed": false,
+    "signers": [
+        {
+            "email": "barduinor@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "signer@gmail.com",
+            "role": "signer",
+        }
+    ],
+    "id": "28199d6c-4662-471e-8426-4cbba9affcf1",
+    "source_files": [
+        {
+            "id": "1363379762284",
+            "type": "file",
+            "name": "Box-Dive-Waiver.docx",
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "name": "Box-Dive-Waiver.pdf",
+    "type": "sign-request",
+    "status": "converting",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1393138856442",
+                "type": "file",
+                "name": "Box-Dive-Waiver.pdf",
+            }
+        ],
+    },
+}
     
 ```
     
@@ -158,6 +218,33 @@ Consider this method:
 <Tab title='cURL'>
     
 ```bash
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer nQ...xY'
+--data-raw '{
+    "prefill_tags": [
+        {
+            "document_tag_id": "tag_full_name",
+            "text_value": "Signer A"
+        }
+    ],
+    "source_files": [
+        {
+            "type": "file",
+            "id": "1363379762284"
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "signers": [
+        {
+            "email": "barbasr+signer@gmail.com",
+            "role": "signer"
+        }
+    ]
+}'
     
 ```
     
@@ -199,7 +286,7 @@ def main():
 
     # Create a sign request with name pre populate
     sign_request_pre_pop = create_sign_request_structured_with_prefill(
-        client, STRUCTURED_DOC, "Rui Barbosa", SIGNER_A
+        client, STRUCTURED_DOC, "Signer A", SIGNER_A
     )
     check_sign_request(sign_request_pre_pop)    
 
@@ -208,12 +295,65 @@ def main():
 </Tab>
 </Tabs>
 
-Resulting in:
+Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
     
 ```json
+
+{
+    "is_document_preparation_needed": false,
+    "redirect_url": null,
+    "declined_redirect_url": null,
+    "are_text_signatures_enabled": true,
+    "signature_color": null,
+    "is_phone_verification_required_to_view": false,
+    "email_subject": null,
+    "email_message": null,
+    "are_reminders_enabled": false,
+    "signers": [
+        {
+            "email": "sender@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "signer@gmail.com",
+            "role": "signer",
+        }
+    ],
+    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+    "prefill_tags": [
+        {
+            "document_tag_id": "tag_full_name",
+            "text_value": "Signer A",
+        }
+    ],
+    "source_files": [
+        {
+            "id": "1363379762284",
+            "type": "file",
+            "name": "Box-Dive-Waiver.docx",
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "name": "Box-Dive-Waiver (1).pdf",
+    "type": "sign-request",
+    "status": "converting",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1393142670032",
+                "type": "file",
+                "name": "Box-Dive-Waiver (1).pdf",
+            }
+        ],
+    },
+}
     
 ```
     
@@ -250,6 +390,10 @@ Lets create a method to extract the information from the signed request:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests/
+11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
+--header 'Authorization: Bearer nQ...xY'
     
 ```
     
@@ -297,12 +441,91 @@ def main():
 </Tab>
 </Tabs>
 
-Resulting in:
+Resulting in (simplified)):
 
 <Tabs>
 <Tab title='cURL'>
     
 ```json
+
+{
+    "signers": [
+        {
+            "email": "barduinor@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "barbasr+signer@gmail.com",
+            "role": "signer",
+            "signer_decision": {
+                "type": "signed",
+                "finalized_at": "2023-12-19T14:53:10.547Z",
+            },
+            "inputs": [
+                {
+                    "document_tag_id": null,
+                    "checkbox_value": true,
+                    "type": "checkbox",
+                    "content_type": "checkbox",
+                },
+                {
+                    "document_tag_id": "tag_full_name",
+                    "text_value": "Signer A",
+                    "type": "text",
+                    "content_type": "text",
+                },
+                {
+                    "document_tag_id": null,
+                    "text_value": "Dec 19, 2023",
+                    "date_value": "2023-12-19",
+                    "type": "date",
+                    "content_type": "date",
+                },
+                {
+                    "document_tag_id": null,
+                    "type": "signature",
+                    "content_type": "signature",
+                }
+            ],
+        }
+    ],
+    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+    "prefill_tags": [
+        {
+            "document_tag_id": "tag_full_name",
+            "text_value": "Signer A",
+        }
+    ],
+    "source_files": [
+        {
+            "id": "1363379762284",
+            "type": "file",
+            "name": "Box-Dive-Waiver.docx",
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "name": "Box-Dive-Waiver (1).pdf",
+    "type": "sign-request",
+    "signing_log": {
+        "id": "1393140642252",
+        "type": "file",
+        "name": "Box-Dive-Waiver (1) Signing Log.pdf",
+    },
+    "status": "signed",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1393142670032",
+                "type": "file",
+                "name": "Box-Dive-Waiver (1).pdf",
+            }
+        ],
+    },
+}
     
 ```
     
