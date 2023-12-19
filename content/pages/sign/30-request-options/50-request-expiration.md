@@ -71,3 +71,5 @@ def sign_doc_single_more_options(
 
 </Tab>
 </Tabs>
+
+<Next>Custom emails</Next>

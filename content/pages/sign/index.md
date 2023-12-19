@@ -16,6 +16,8 @@ rank: 0
 - [Technical use cases][technical-use-cases]
 - [Advanced use cases][advanced-use-cases]
 
+<Next>Quick start</Next>
+
 [quick-start]:page://sign/quick-start
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases

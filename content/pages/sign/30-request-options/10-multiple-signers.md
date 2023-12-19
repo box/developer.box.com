@@ -318,3 +318,5 @@ Continuing the sign process:
 - Next the institution signs the scholarship
 - Next the student signs the scholarship
 - Finally the legal department receives a copy of the signed document.
+
+<Next>Extra security</Next>

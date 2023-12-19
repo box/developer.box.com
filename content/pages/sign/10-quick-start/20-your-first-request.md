@@ -223,5 +223,7 @@ Be sure to check the [request options][request-options], and the
 information.
 </Message>
 
+<Next>Technical use cases</Next>
+
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases
