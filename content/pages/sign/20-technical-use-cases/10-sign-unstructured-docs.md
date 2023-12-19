@@ -184,5 +184,7 @@ the signed document are stored in the destination folder.
 
 ![Log and signed document](images/sign-pdf-signed-docs.png)
 
+<Next>Signing using templates</Next>
+
 [sign-templates]:page://sign/technical-use-cases/sign-template
 [sign-structured-docs]:page://sign/technical-use-cases/sign-structured-docs

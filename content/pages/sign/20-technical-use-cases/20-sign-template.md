@@ -643,5 +643,7 @@ However there is a workaround for that, if the document already includes
 signature tags that can be used by the Box Sign engine. Take a look at our 
 [Structured Docs][structured-docs] section for more information.
 
+<Next>Signing structured docs</Next>
+
 [request-options]:page://sign/request-options
 [structured-docs]:page://sign/technical-use-cases/sign-structured-docs

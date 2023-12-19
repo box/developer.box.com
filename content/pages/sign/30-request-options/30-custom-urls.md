@@ -94,3 +94,5 @@ def main():
 
 If you sign you’ll be redirected to our forum page. If you decline you’ll be 
 redirected to our developer page.
+
+<Next>Resend requests</Next>
