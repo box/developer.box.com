@@ -58,6 +58,9 @@ In order to work with templates in the Box Sign API we are going to need the
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_templates' \
+--header 'Authorization: Bearer E9...Q0'
     
 ```
     
@@ -88,12 +91,74 @@ def main():
 </Tab>
 </Tabs>
 
-Returns something similar to:
+Returns something similar to (simplified):
 
 <Tabs>
 <Tab title='cURL'>
     
 ```json
+
+{
+    "limit": 10,
+    "next_marker": null,
+    "prev_marker": null,
+    "entries": [
+        {
+            "type": "sign-template",
+            "id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+            "name": "Simple-DOC.pdf",
+            "parent_folder": {
+                "id": "157064745449",
+                "type": "folder",
+                "name": "My Sign Requests"
+            },
+            "source_files": [
+                {
+                    "id": "1393013714313",
+                    "type": "file",
+                }
+            ],
+            "signers": [
+                {
+                    "email": "",
+                    "label": "",
+                    "role": "final_copy_reader",
+                    "inputs": []
+                },
+                {
+                    "email": "",
+                    "label": "Signer",
+                    "role": "signer",
+                    "inputs": [
+                        {
+                            "document_tag_id": null,
+                            "id": "d02c8e16-5050-475e-b74b-9a952193e4f8",
+                            "type": "date",
+                            "date_value": null,
+                            "content_type": "date",
+                        },
+                        {
+                            "document_tag_id": null,
+                            "id": "bdcc966e-2ebf-4b3b-aaee-99d4e1161a9e",
+                            "type": "text",
+                            "text_value": null,
+                            "is_required": true,
+                            "content_type": "full_name",
+                        },
+                        {
+                            "document_tag_id": null,
+                            "id": "1a8f4cb1-5c09-46bd-96f5-0ab449f19640",
+                            "type": "signature",
+                            "text_value": null,
+                            "is_required": true,
+                            "content_type": "signature",
+                        }
+                    ]
+                }
+            ],
+        }
+    ]
+}
     
 ```
     
@@ -128,6 +193,23 @@ Consider this example:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer E9...Q0'
+--data-raw '{
+    "template_id":"f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "signers": [
+        {
+            "email": "signer@gmail.com",
+            "role": "signer"
+        }
+    ]
+}'
     
 ```
     
@@ -166,12 +248,44 @@ def main():
 </Tab>
 </Tabs>
 
-Resulting in:
+Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
     
 ```json
+
+{
+    "signers": [
+        {
+            "email": "sender@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "signer@gmail.com",
+            "role": "signer",
+        }
+    ],
+    "id": "71e86670-5850-44cc-8b4d-9f5eab6c04de",
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "name": "Simple-DOC (1).pdf",
+    "type": "sign-request",
+    "status": "created",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1393030489686",
+                "type": "file",
+                "name": "Simple-DOC (1).pdf",
+            }
+        ],
+    },
+    "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c"
+}
     
 ```
     
@@ -183,8 +297,8 @@ Resulting in:
 Simple sign request: b25674a2-540b-4201-ae18-a78f05ef1a9a
   Status: created
   Signers: 2
-    final_copy_reader: ...@gmail.com
-    signer: YOUR_EMAIL+a@gmail.com
+    final_copy_reader: sender@gmail.com
+    signer: signer@gmail.com
   Prepare url: None
 
 ```
@@ -233,6 +347,29 @@ Let’s create a new method to pre-populate the name:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer E9..Q0'
+--data-raw '{
+    "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "signers": [
+        {
+            "email": "barbasr+signer@gmail.com",
+            "role": "signer"
+        }
+    ],
+    "prefill_tags": [
+        {
+            "document_tag_id": "signer_full_name",
+            "text_value": "Signer A"
+        }
+    ]
+}'
     
 ```
     
@@ -279,7 +416,7 @@ def main():
 
 ```
 
-Resulting in:
+Resulting in (simplified):
 
 </Tab>
 </Tabs>
@@ -287,7 +424,45 @@ Resulting in:
 <Tabs>
 <Tab title='cURL'>
     
-```bash
+```json
+{
+    "signers": [
+        {
+            "email": "sender@gmail.com",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "signer@gmail.com",
+            "role": "signer",
+            "is_in_person": false,
+        }
+    ],
+    "id": "6f42a041-7ed8-4e08-9958-78a97259f80d",
+    "prefill_tags": [
+        {
+            "document_tag_id": "signer_full_name",
+            "text_value": "Signer A",
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "name": "Simple-DOC (2).pdf",
+    "type": "sign-request",
+    "status": "created",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1393047116817",
+                "type": "file",
+                "name": "Simple-DOC (2).pdf",
+            }
+        ],
+    },
+    "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c"
+}
     
 ```
     
@@ -328,6 +503,10 @@ all the signature requirements:
 <Tab title='cURL'>
     
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_templates/
+f2ec720d-47a6-4052-8210-9bfa8d6c349c' \
+--header 'Authorization: Bearer OL..BQ'
     
 ```
     
@@ -357,7 +536,7 @@ def main():
 
 ```
 
-Resulting in:
+Resulting in (simplified):
 
 </Tab>
 </Tabs>
@@ -365,7 +544,61 @@ Resulting in:
 <Tabs>
 <Tab title='cURL'>
     
-```bash
+```json
+
+{
+    "type": "sign-template",
+    "id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+    "name": "Simple-DOC.pdf",
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder",
+        "name": "signed docs"
+    },
+    "source_files": [
+        {
+            "id": "1393013714313",
+            "type": "file",
+        }
+    ],
+    "signers": [
+        {
+            "email": "",
+            "label": "",
+            "role": "final_copy_reader",
+        },
+        {
+            "email": "",
+            "label": "Signer",
+            "role": "signer",
+            "inputs": [
+                {
+                    "document_tag_id": null,
+                    "id": "d02c8e16-5050-475e-b74b-9a952193e4f8",
+                    "type": "date",
+                    "is_required": true,
+                    "date_value": null,
+                    "content_type": "date",
+                },
+                {
+                    "document_tag_id": "signer_full_name",
+                    "id": "bdcc966e-2ebf-4b3b-aaee-99d4e1161a9e",
+                    "type": "text",
+                    "text_value": null,
+                    "is_required": true,
+                    "content_type": "full_name",
+                },
+                {
+                    "document_tag_id": null,
+                    "id": "1a8f4cb1-5c09-46bd-96f5-0ab449f19640",
+                    "type": "signature",
+                    "is_required": true,
+                    "content_type": "signature",
+                }
+            ]
+        }
+    ],
+}
     
 ```
     
