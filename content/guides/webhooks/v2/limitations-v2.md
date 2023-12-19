@@ -70,7 +70,7 @@ For more information, see [application authorization guide][app authorization].
 
 ### OAuth 2.0
 
-For webhooks created with OAuth 2.0 Auth app, the session is expired
+For webhooks created with OAuth 2.0 Auth app, the session expires
 when both the access token and the refresh token for the user and app
 used for creating that webhook expire.
 
