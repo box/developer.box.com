@@ -165,7 +165,7 @@ This will result in a signature request with a prepare document URL
 
 <Tab title='Python Gen SDK'>
 
-```YAML
+```yaml
 
 Simple sign request with prep: xyz-abc-123
   Status: converting

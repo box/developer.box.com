@@ -51,6 +51,29 @@ For example:
 <Tab title='cURL'>
 
 ```bash
+
+curl --location 'https://api.box.com/2.0/sign_requests' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer ej...3t'
+--data-raw '{
+    "email_subject":"All we need is your signature to get started",
+    "parent_folder": {
+        "id": "234102987614",
+        "type": "folder"
+    },
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "type": "file"
+        }
+    ],
+    "signers": [
+        {
+            "email": "barbasr+signer@gmail.com",
+            "role": "signer"
+        }
+    ]
+}'
     
 ```
 
@@ -158,6 +181,48 @@ For example consider this request:
 
 ```python
 
+def sign_doc_embed_url(
+    client: Client,
+    document_id: str,
+    destination_folder_id: str,
+    signer_email: str,
+    signer_embed_url_id: str,
+) -> SignRequest:
+    # Sign request params
+    source_file = FileBase(id=document_id, type=FileBaseTypeField.FILE)
+    destination_folder = FolderMini(
+        id=destination_folder_id, type=FolderBaseTypeField.FOLDER
+    )
+
+    signer = SignRequestCreateSigner(
+        email=signer_email,
+        embed_url_external_user_id=signer_embed_url_id,
+    )
+
+    # sign document
+    sign_request = client.sign_requests.create_sign_request(
+        signers=[signer],
+        parent_folder=destination_folder,
+        source_files=[source_file],
+    )
+
+    return sign_request
+
+
+def main():
+    """Simple script to demonstrate how to use the Box SDK"""
+    conf = ConfigOAuth()
+    client = get_client_oauth(conf)
+    # Sign with phone verification
+    sign_with_embed_url = sign_doc_embed_url(
+        client,
+        SIMPLE_PDF,
+        SIGN_DOCS_FOLDER,
+        SIGNER_A,
+        SIGNER_A_EXTERNAL_ID,
+    )
+    check_sign_request(sign_with_embed_url)    
+
 ```
 
 </Tab>
@@ -196,7 +261,16 @@ Returns (simplified):
 
 <Tab title='Python Gen SDK'>
 
-```python
+```yaml
+
+Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
+  Status: created
+  Signers: 2
+    final_copy_reader: ...@gmail.com
+    signer: example@gmail.com
+    embed_url: https://app.box.com/sign/document/...
+    iframeable_embed_url: https://app.box.com/embed/sign/document/...
+  Prepare url: None
 
 ```
 
