@@ -151,7 +151,7 @@ For example consider this request:
     ],
     "signers": [
         {
-            "email": "example@example.com",
+            "email": "signer@example.com",
             "embed_url_external_user_id":"1234",
             "role": "signer"
         }
@@ -223,11 +223,11 @@ Returns (simplified):
     "is_document_preparation_needed": false,
     "signers": [
         {
-            "email": "...@example.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "example@example.com",
+            "email": "signer@example.com",
             "role": "signer",
             "embed_url_external_user_id": "1234",
             "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
@@ -247,8 +247,8 @@ Returns (simplified):
 Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
   Status: created
   Signers: 2
-    final_copy_reader: ...@example.com
-    signer: example@example.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
     embed_url: https://app.box.com/sign/document/...
     iframeable_embed_url: https://app.box.com/embed/sign/document/...
   Prepare url: None

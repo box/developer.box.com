@@ -187,8 +187,8 @@ Resulting in (simplified):
 Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
   Status: converting
   Signers: 2
-    final_copy_reader: ...@example.com
-    signer: YOUR_EMAIL+a@example.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
@@ -365,8 +365,8 @@ Resulting in (simplified):
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: converting
   Signers: 2
-    final_copy_reader: ...@example.com
-    signer: YOUR_EMAIL+a@example.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
@@ -537,8 +537,8 @@ Resulting in (simplified)):
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: signed
   Signers: 2
-    final_copy_reader: ...@example.com
-    signer: YOUR_EMAIL+a@example.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
       checkbox: True
       text: Rui Barbosa
       date: 2023-11-15

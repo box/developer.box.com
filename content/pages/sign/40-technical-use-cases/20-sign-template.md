@@ -474,8 +474,8 @@ Resulting in (simplified):
 Simple sign request: adab1740-eeba-4392-a3f5-defddc79c946
   Status: created
   Signers: 2
-    final_copy_reader: ...@example.com
-    signer: ...+a@example.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
