@@ -3,4 +3,4 @@ centered: true
 rank: 0
 ---
 
-# Advanced use cases
+# Business use cases

@@ -5,11 +5,11 @@ rank: 2
 
 # Your first request
 
-## Creating a signature request
-
 Imagine that you have a document stored in Box and you want to send it to a 
 customer for signature. At minimum your app will need to know what document to 
 sign, where to store the signed document, and the signer email.
+
+## Creating a signature request
 
 You can use the Box Sign API or one of the available SDK's to create a 
 signature request. Consider this example:
