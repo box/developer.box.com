@@ -223,7 +223,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     },
     "signers": [
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer"
         }
     ]
@@ -279,11 +279,11 @@ Resulting in (simplified):
 {
     "signers": [
         {
-            "email": "sender@gmail.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
         }
     ],
@@ -319,8 +319,8 @@ Resulting in (simplified):
 Simple sign request: b25674a2-540b-4201-ae18-a78f05ef1a9a
   Status: created
   Signers: 2
-    final_copy_reader: sender@gmail.com
-    signer: signer@gmail.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
@@ -383,7 +383,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     },
     "signers": [
         {
-            "email": "barbasr+signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer"
         }
     ],
@@ -455,11 +455,11 @@ Resulting in (simplified):
 {
     "signers": [
         {
-            "email": "sender@gmail.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
             "is_in_person": false,
         }
@@ -502,8 +502,8 @@ Resulting in (simplified):
 Simple sign request: adab1740-eeba-4392-a3f5-defddc79c946
   Status: created
   Signers: 2
-    final_copy_reader: ...@gmail.com
-    signer: ...+a@gmail.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```

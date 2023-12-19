@@ -96,7 +96,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     },
     "signers": [
         {
-            "email": "barbasr+signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer"
         }
     ]
@@ -157,11 +157,11 @@ Resulting in (simplified):
     "is_document_preparation_needed": false,
     "signers": [
         {
-            "email": "barduinor@gmail.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
         }
     ],
@@ -203,8 +203,8 @@ Resulting in (simplified):
 Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
   Status: converting
   Signers: 2
-    final_copy_reader: ...@gmail.com
-    signer: YOUR_EMAIL+a@gmail.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
@@ -258,7 +258,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     },
     "signers": [
         {
-            "email": "barbasr+signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer"
         }
     ]
@@ -335,11 +335,11 @@ Resulting in (simplified):
     "are_reminders_enabled": false,
     "signers": [
         {
-            "email": "sender@gmail.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
         }
     ],
@@ -387,8 +387,8 @@ Resulting in (simplified):
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: converting
   Signers: 2
-    final_copy_reader: ...@gmail.com
-    signer: YOUR_EMAIL+a@gmail.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
   Prepare url: None
 
 ```
@@ -478,11 +478,11 @@ Resulting in (simplified)):
 {
     "signers": [
         {
-            "email": "barduinor@gmail.com",
+            "email": "sender@example.com",
             "role": "final_copy_reader",
         },
         {
-            "email": "barbasr+signer@gmail.com",
+            "email": "signer@example.com",
             "role": "signer",
             "signer_decision": {
                 "type": "signed",
@@ -565,8 +565,8 @@ Resulting in (simplified)):
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: signed
   Signers: 2
-    final_copy_reader: ...@gmail.com
-    signer: YOUR_EMAIL+a@gmail.com
+    final_copy_reader: sender@example.com
+    signer: signer@example.com
       checkbox: True
       text: Rui Barbosa
       date: 2023-11-15
