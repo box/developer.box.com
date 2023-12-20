@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 3
+related_guides:
+  - box-sign
 category_id: sign
 subcategory_id: sign/20-technical-use-cases
 is_index: false
@@ -45,8 +47,8 @@ The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag
 assigned to signer 1, with the label `enter your complete name`, and using an
 id of `tag_full_name`.
 
-Check out this support note for a complete description of all the tags
-available.
+Check out this [support note][support-tags] for a complete description of all
+the tags available.
 
 Setting the tags to the same `color` as the background will make them
 invisible, but they will still be there.
@@ -591,3 +593,5 @@ remember that the user who owns these properties can always change them.
 The same way that after the document is signed you can extract the information
 from the signature request, which is useful if you need to tie it back into
 your systems.
+
+[support-tags]:https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags

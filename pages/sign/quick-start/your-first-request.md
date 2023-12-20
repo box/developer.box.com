@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 2
+related_guides:
+  - box-sign
 category_id: sign
 subcategory_id: sign/10-quick-start
 is_index: false

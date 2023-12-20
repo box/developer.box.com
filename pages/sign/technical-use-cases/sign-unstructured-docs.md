@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 1
+related_guides:
+  - box-sign/create-sign-request
 category_id: sign
 subcategory_id: sign/20-technical-use-cases
 is_index: false

@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 2
+related_guides:
+  - box-sign/sign-templates
 category_id: sign
 subcategory_id: sign/20-technical-use-cases
 is_index: false
