@@ -76,7 +76,7 @@ To set up the Invocation URL, navigate to the **Configuration** tab of the
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-invocation-url.png)
+![App name form](./images/app-invocation-url.png)
 
 </ImageFrame>
 
@@ -92,7 +92,7 @@ the **File Extensions** section.
 
 <ImageFrame border width="600" center>
 
-![App name form](../images/app-file-extensions.png)
+![App name form](./images/app-file-extensions.png)
 
 </ImageFrame>
 
