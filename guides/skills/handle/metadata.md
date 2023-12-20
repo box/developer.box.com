@@ -42,9 +42,9 @@ Box currently supports 4 kinds of cards.
 
 |                                         |                                                                                                                                 |                                        |
 |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| [Keyword](r://keyword-skill-card)       | Displays a list of keywords next to the file.                                                                                   | ![Image](./skills-card-keyword.png)    |
-| [Timeline](r://timeline-skill-card)     | Displays a set of text/images, and when clicked shows when those images appear in a timeline.                                   | ![Image](./skills-card-timeline.png)   |
-| [Transcript](r://transcript-skill-card) | Displays a transcript with the corresponding timestamps.                                                                        | ![Image](./skills-card-transcript.png) |
+| [Keyword](r://keyword-skill-card)       | Displays a list of keywords next to the file.                                                                                   | ![Image](./images/skills-card-keyword.png)    |
+| [Timeline](r://timeline-skill-card)     | Displays a set of text/images, and when clicked shows when those images appear in a timeline.                                   | ![Image](./images/skills-card-timeline.png)   |
+| [Transcript](r://transcript-skill-card) | Displays a transcript with the corresponding timestamps.                                                                        | ![Image](./images/skills-card-transcript.png) |
 | [Status](r://status-skill-card)         | Displays a status to the user, which can be used to inform the user of the status of the Skill while it is processing the file. |                                        |
 
 <!-- markdownlint-enable line-length -->
