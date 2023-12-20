@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 1
+related_guides:
+    - box-sign/create-sign-request
 ---
 
 # Signing unstructured docs
