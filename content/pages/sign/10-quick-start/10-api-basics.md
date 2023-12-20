@@ -1,9 +1,6 @@
 ---
 centered: true
 rank: 1
-related_endpoints:
-  - sign-request
-  - sign-template
 ---
 
 # API Basics
