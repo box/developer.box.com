@@ -1,8 +1,6 @@
 ---
 rank: 2
 related_guides:
-- authentication
-- authorization
 - api-calls
 ---
 
@@ -62,8 +60,42 @@ have Box account, you can [create them][add-users] in your Developer Enterprise.
 
 </Message>
 
+## Advanced settings
+
+Go to the **Configuration** tab. Here you can specify the app details,
+generate a developer token, check your OAuth 2.0 credentials, add and
+edit OAuth 2.0 redirect URI, choose the application scopes, app advanced
+features, and add CORS domains.
+
+In the next tabs you can create webhooks, web app integrations,
+submit app for enablement for access to the Enterprise, submit your app
+to the [Box App Center][app-center], and generate a report to view this application’s
+activity.
+
+## Test your app
+
+You can now make some API calls to test your app and get to know the
+response format in Box.
+
+Use the developer token authenticated to your current developer account.
+
+<Message type='warning'>
+
+This token is valid for an hour from being generated.
+
+</Message>
+
+Start with the [Postman collection][postman-collection] to check
+specific calls and see what responses they return. 
+To see example API calls, browse our [API reference documentation][api-ref].
+You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
+
 [console]: https://cloud.app.box.com/developers/console
 [auth]: g://authentication/select
 [oauth2]: g://authentication/oauth2
 [app-center]: g://applications/app-center
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
+[app-center]: https://cloud.app.box.com/app-center
+[postman-collection]: g://tooling/postman
+[api-ref]: https://developer.box.com/reference/
+[box-cli]: https://github.com/box/boxcli
