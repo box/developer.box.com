@@ -33,7 +33,7 @@ will appear to prompt the next step.
 
 <ImageFrame border>
 
-![Application selection screen](../images/select-app-type.png)
+![Application selection screen](./images/select-app-type.png)
 
 </ImageFrame>
 
