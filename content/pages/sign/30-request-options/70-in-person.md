@@ -1,6 +1,10 @@
 ---
 centered: true
 rank: 7
+related_guides:
+    - box-sign
+related_endpoints:
+    - post_sign_requests
 ---
 
 # In person signatures
