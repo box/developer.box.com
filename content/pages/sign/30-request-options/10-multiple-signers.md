@@ -4,7 +4,7 @@ rank: 1
 related_guides:
     - box-sign
 related_endpoints:
-    - post-sign-requests
+    - post_sign_requests
 ---
 
 # Multiple signers and roles
