@@ -1,6 +1,8 @@
 ---
 centered: true
 rank: 2
+related_guides:
+    - box-sign/sign-templates
 ---
 
 # Signing using templates

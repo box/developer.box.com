@@ -1,6 +1,10 @@
 ---
 centered: true
 rank: 2
+related_guides:
+    - box-sign
+related_endpoints:
+    - post_sign_requests
 ---
 
 # Extra security (2FA)

@@ -1,6 +1,10 @@
 ---
 centered: true
 rank: 1
+related_guides:
+    - box-sign
+related_endpoints:
+    - post-sign-requests
 ---
 
 # Multiple signers and roles
