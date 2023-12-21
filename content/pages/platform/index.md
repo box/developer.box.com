@@ -5,9 +5,9 @@ rank: 0
 
 # Learn Box Platform
 
-If you are new to Box, **start here**! 
-In the following pages, you'll learn how the all the Box Platform
-concepts and components work together to help you create an application quickly.
+**Start here** if you are new to Box! 
+In the following pages, you'll learn the basics of [Box Platform][platform]
+to help you create an application quickly.
 
 <!-- To kick off your learning journey, checkout this video for an overview
 on everything Box Platform. -->
@@ -20,8 +20,9 @@ on everything Box Platform. -->
 
 ## Learn Sections
 
-These pages go into more depth on each topic. Checkout each one and become
-a Box Platform expert. 
+These sections explain how the concepts and components of Box Platform
+work together. Use the [glossary][box-glossary] to learn
+the terms and definitions we use in Box Platform.
 
 - [Box Platform 101][platform101]
 - [Use Cases][usecases]
@@ -35,6 +36,7 @@ a Box Platform expert.
   Get Started
 </Next>
 
+[box-glossary]:page://platform/box-glossary
 [platform101]:page://platform/box-platform-101
 [usecases]:page://platform/use-cases
 [usertypes]:page://platform/user-types
@@ -42,3 +44,4 @@ a Box Platform expert.
 [authtypes]:page://platform/authentication-methods
 [support]:page://platform/support
 [tools]:page://platform/tools
+[platform]: https://www.box.com/platform
