@@ -13,7 +13,7 @@ type: page
 total_steps: 7
 sibling_id: sign/request-options
 parent_id: sign/request-options
-next_page_id: sign/request-options/resend-rquests
+next_page_id: sign/request-options/resend-requests
 previous_page_id: sign/request-options/extra-security
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/30-custom-urls.md
@@ -29,6 +29,8 @@ The same can happen when the signer declines the signature request.
 
 We can customize these pages by passing the `redirect_url` and
 `decline_redirect_url` parameters.
+
+![Custom redirect pages](images/sign-flow-custom-url.png)
 
 For example:
 

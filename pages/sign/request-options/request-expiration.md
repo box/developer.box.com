@@ -14,7 +14,7 @@ total_steps: 7
 sibling_id: sign/request-options
 parent_id: sign/request-options
 next_page_id: sign/request-options/custom-email
-previous_page_id: sign/request-options/resend-rquests
+previous_page_id: sign/request-options/resend-requests
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/50-request-expiration.md
 ---

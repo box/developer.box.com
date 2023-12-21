@@ -24,6 +24,8 @@ Imagine you want an additional layer of security for your signature requests,
 by requesting the signer to use a phone verification or a password to sign the
 document.
 
+![2FA Signature request](images/sign-flow-2fa.png)
+
 ## Phone verification
 
 You can require the signer to use 2FA via phone, to sign the document by

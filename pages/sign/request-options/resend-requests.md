@@ -8,7 +8,7 @@ related_endpoints:
 category_id: sign
 subcategory_id: sign/30-request-options
 is_index: false
-id: sign/request-options/resend-rquests
+id: sign/request-options/resend-requests
 type: page
 total_steps: 7
 sibling_id: sign/request-options
@@ -16,7 +16,7 @@ parent_id: sign/request-options
 next_page_id: sign/request-options/request-expiration
 previous_page_id: sign/request-options/custom-urls
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/40-resend-rquests.md
+  https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/40-resend-requests.md
 ---
 # Resend requests
 

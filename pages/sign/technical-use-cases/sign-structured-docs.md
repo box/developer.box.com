@@ -72,7 +72,7 @@ and location, we can bypass the document preparation.
 
 This is how the flow would look like:
 
-TK - flow diagram
+![Signing a structured document](images/sign-flow-tags.png)
 
 Consider this method:
 
