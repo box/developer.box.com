@@ -4,7 +4,7 @@ rank: 1
 related_guides:
     - box-sign
 related_endpoints:
-    - post-sign-requests
+    - post_sign_requests
 ---
 
 # Multiple signers and roles
@@ -29,7 +29,7 @@ Let’s see this working with an example contract between an university and a
 student for a scholarship. In this case the institution/teacher must sign the 
 document first.
 
-Let create a method specific for this:
+Creating a method specific for this:
 
 <Tabs>
 <Tab title='cURL'>
@@ -182,6 +182,10 @@ By using roles, we can be a bit more creative in our scholarship example.
 
 Imagine that the scholarship needs to be approved by the dean and the legal 
 department receives a final copy of the contract.
+
+This is what the flow looks like:
+
+![Multiple signers and roles](images/sign-flow-multi-role.png)
 
 Lets create a method for this:
 

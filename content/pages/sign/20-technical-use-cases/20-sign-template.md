@@ -187,7 +187,7 @@ template it self.
 
 This is how the flow would look like:
 
-TK - flow diagram
+![Signing using a template](images/sign-flow-template.png)
 
 Consider this example:
 
