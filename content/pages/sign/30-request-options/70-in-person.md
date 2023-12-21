@@ -31,6 +31,8 @@ signer, you also need to use the `embed_url_external_user_id`so that you get
 back the embedded URL's, and then either open a browser window or use an iframe 
 to display the signature interface.
 
+![In person signing](images/sign-flow-in-person.png)
+
 Lets see an example.
 
 ## Create an in person signature request

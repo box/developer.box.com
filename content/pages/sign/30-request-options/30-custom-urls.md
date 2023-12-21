@@ -19,6 +19,8 @@ The same can happen when the signer declines the signature request.
 We can customize these pages by passing the `redirect_url` and 
 `decline_redirect_url` parameters.
 
+![Custom redirect pages](images/sign-flow-custom-url.png)
+
 For example:
 
 <Tabs>
