@@ -24,7 +24,7 @@ fullyTranslated: true
 ---
 # SDK
 
-Box offers a set of SDKs you can use to build your application. The next generation Python and Typescript SDKs are the newest addition to the set. They are still a beta feature, but you can give them a try to explore all the features they bring along.
+Boxには、アプリケーションの作成に使用できる一連のSDKが用意されています。次世代のPython SDKおよびTypescript SDKもここに新しく追加されました。これらはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することができます。
 
 <Message type="notice">
 
@@ -75,7 +75,7 @@ Box offers a set of SDKs you can use to build your application. The next generat
 
 日本時間2023年6月1日をもって、Android SDKのサポートは終了しました。既存のAndroid SDKアプリケーションは影響なく引き続きご利用いただけますが、新機能、更新、バグ修正は提供されなくなります。
 
-If you would like to continue getting the latest and greatest Android features, use Java SDK to build apps on Android. Refer to [this][android-docs] documentation for more details.
+最新のAndroid機能を引き続き利用するには、Java SDKを使用してAndroid版アプリを作成してください。詳細については、[こちら][android-docs]のドキュメントを参照してください。
 
 </Message>
 

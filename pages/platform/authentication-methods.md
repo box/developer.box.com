@@ -17,7 +17,7 @@ fullyTranslated: true
 ---
 # 認証方法
 
-Box offers a variety of authentication methods for application development, each tailored to different use cases and application types. Regardless of the authentication method used, underlying principles still apply. If a user does not have access to content on the front end of the main Box web app, they will not be able to access the content using the API, unless they are impersonating another user. Some API endpoints require admin level privileges - like events.
+Boxには、アプリケーション開発のためのさまざまな認証方法が用意されており、それぞれが異なるユースケースやアプリケーションの種類に対応しています。使用する認証方法に関係なく、基本的な原則が適用されます。ユーザーは、メインのBoxウェブアプリのフロントエンドでコンテンツにアクセスできない場合、別のユーザーになりすまさない限り、APIを使用してコンテンツにアクセスすることはできません。APIエンドポイントの中には、イベントなど、管理者レベルの権限が必要なものもあります。
 
 各種Boxアプリケーションでは、以下の承認方法を使用できます。
 
@@ -33,7 +33,7 @@ Box offers a variety of authentication methods for application development, each
 
 ## OAuth 2.0
 
-[OAuth 2.0][oauth] is a client-side authentication method, widely used for its simplicity in authorizing users to Box API. It's an open standard that allows users to grant applications access to their data in other applications. Similar to how logging in to a website with Twitter, Facebook, or Google works, Box's client-side authentication involves redirecting a user from an app to the Box web app, where they log in and grant the app access to their data. For example, We use this auth type for users logging into our community forum.
+[OAuth 2.0][oauth]はクライアント側の認証方法で、そのシンプルさからBox APIに対するユーザーの承認で広く使われています。これはオープンスタンダードであり、ユーザーはアプリケーションに対して他のアプリケーション内の自分のデータへのアクセスを許可できるようになります。Boxのクライアント側認証では、Twitter、Facebook、Googleを使用してウェブサイトにログインする仕組みと同様に、ユーザーはアプリからBoxウェブアプリにリダイレクトされるので、そこでログインしてアプリに自分のデータへのアクセスを許可します。たとえば、Boxではコミュニティフォーラムにログインするユーザーに対してこの認証タイプを使用します。
 
 <Message>
 
@@ -41,17 +41,17 @@ Box offers a variety of authentication methods for application development, each
 
 クライアント側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* Work with users who have existing Box accounts
-* Use Box for identity management, so users know they are using Box
-* Store data within each user account vs within an application's Service Account
+* 既存のBoxアカウントを持っているユーザーと連携する
+* ユーザーがBoxを使用していることを認識できるように、ID管理にBoxを使用する
+* アプリケーションのサービスアカウントではなく各ユーザーアカウント内にデータを保存する
 
 </Message>
 
-You can find a great Python OAuth 2.0 tutorial on [GitHub][python_oauth].
+Python OAuth 2.0に関する有用なチュートリアルについては、[GitHub][python_oauth]を参照してください。
 
-## JSON Web Token (JWT)
+## JSONウェブトークン (JWT)
 
-JSON Web Tokens (JWT) is the most common server-side authentication method for the Box API. [JWT][jwt], an open standard, enables robust server-to-server authentication. This method, exclusive to Custom Apps, does not involve end-user interaction. It allows an app, if granted appropriate privileges, to act on behalf of any user in an enterprise, thus facilitating powerful and seamless integrations. Upon approval by an administrator, a JWT application will get assigned a service account to make API calls as by default.
+JSONウェブトークン (JWT) は、Box APIの最も一般的なサーバー側認証方法です。[JWT][jwt]はオープンスタンダードであり、堅牢なサーバー間認証を実現します。この方法は、カスタムアプリのみに限定されており、エンドユーザーによる操作は必要ありません。適切な権限が付与されているアプリは、企業内の任意のユーザーの代理として操作できるため、強力でシームレスな統合が促進されます。管理者が承認すると、JWTアプリケーションには、デフォルトで、APIコールを行うサービスアカウントが割り当てられます。
 
 <Message>
 
@@ -59,71 +59,71 @@ JSON Web Tokens (JWT) is the most common server-side authentication method for t
 
 JWTを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* Work with users without Box accounts
-* Use their own identity system
-* Do not want users to know they are using Box
-* Store data within the application's Service Account and not a user's account
-* Want to manage public and private key pairs
+* Boxアカウントを持たないユーザーと連携する
+* 独自のIDシステムを使用する
+* Boxを使用していることをユーザーに認識させたくない
+* ユーザーのアカウントではなくアプリケーションのサービスアカウント内にデータを保存する
+* 公開キーと秘密キーのペアを管理したい
 
 </Message>
 
-You can find a great Node JWT tutorial on [Medium][node_jwt].
+Node JWTに関する有用なチュートリアルについては、[Medium][node_jwt]を参照してください。
 
-## Client Credentials Grant (CCG)
+## クライアント資格情報許可 (CCG)
 
-The [Client Credentials Grant][ccg] approach is used for server authentication, verifying an application's identity using a client ID and secret. It's a secure way of identifying an app when obtaining an Access Token. This method is particularly useful for scenarios requiring server-to-server interactions without user involvement. Depending on the application's configuration, it can authenticate as either the application's Service Account or as a Managed User. Upon approval by an administrator, a CCG application will get assigned a service account to make API calls as by default.
+[クライアント資格情報許可][ccg]のアプローチは、サーバー認証に使用され、クライアントIDとシークレットを使用してアプリケーションのIDを検証します。これは、アクセストークンを取得する際にアプリケーションを識別するための安全な方法です。この方法は、ユーザーの関与なしにサーバー間でやり取りする必要があるシナリオで特に便利です。アプリケーションの構成に応じて、アプリケーションのサービスアカウントまたは管理対象ユーザーとして認証できます。管理者が承認すると、CCGアプリケーションには、デフォルトで、APIコールを行うサービスアカウントが割り当てられます。
 
 <Message>
 
-# When to use CCG?
+# CCGを使用する場合
 
 JWTを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* Work with users without Box accounts
-* Use their own identity system
-* Do not want users to know they are using Box
-* Store data within the application's Service Account and not a user's account
-* Do not want to manage public and private key pairs
+* Boxアカウントを持たないユーザーと連携する
+* 独自のIDシステムを使用する
+* Boxを使用していることをユーザーに認識させたくない
+* ユーザーのアカウントではなくアプリケーションのサービスアカウント内にデータを保存する
+* 公開キーと秘密キーのペアを管理したくない
 
 </Message>
 
-You can find a great Python CCG tutorial on [Medium][python_ccg].
+Python CCGに関する有用なチュートリアルについては、[Medium][python_ccg]を参照してください。
 
 ## アプリトークン認証
 
-[App Token Auth][ata]is another server-side authentication option, utilizing fixed, long-lived Access Tokens that are restricted to the application's Service Account. This method is ideal for applications leveraging Box View and is designed for scenarios where the app only needs access to read and write data to its own account. By using App Token Auth, there's no need for end-user authorization, as the application automatically authenticates as the Service Account associated with it. It also is restricted to a subset of API [endpoints][app_ep].
+[アプリトークン認証][ata]はもう1つのサーバー側認証オプションで、アプリケーションのサービスアカウントに制限されている、有効期間の長い固定のアクセストークンを使用します。この方法は、Box Viewを利用しているアプリケーションに最適で、アプリにそれ自体のアカウントに対するデータの読み取りと書き込みのアクセス権限だけを必要とするシナリオ向けに設計されています。アプリトークン認証を使用すると、アプリケーションは関連付けられているサービスアカウントとして自動的に認証されるため、エンドユーザーによる承認は必要ありません。また、これはAPI[エンドポイント][app_ep]のサブセットに制限されます。
 
 <Message>
 
-# When to use App Token Auth?
+# アプリトークン認証を使用する場合
 
 アプリトークンを使用するサーバー側認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* Work in an environment that either has no user model, or has users without Box accounts
-* Use their own identity management system
-* Do not want users to know they are using Box
-* Store data within the application's Service Account and not a user's account
+* ユーザーモデルがない環境、またはBoxアカウントを持たないユーザーがいる環境で使用する
+* 独自のID管理システムを使用する
+* Boxを使用していることをユーザーに認識させたくない
+* ユーザーのアカウントではなくアプリケーションのサービスアカウント内にデータを保存する
 
 </Message>
 
 ## Box Skills
 
-[Box Skills][skill] are a unique application type used for custom processing of files uploaded to Box. It uses third-party Machine Learning services to extract information from files and apply it as metadata. Authentication for Custom Skills is streamlined with pre-authorized API credentials provided with each Skill Event, though this limits the API access. Custom Skills don't require a specific authentication type selection, focusing on simplicity and direct integration with Box's capabilities.
+[Box Skills][skill]は、Boxにアップロードされたファイルのカスタマイズした処理に使用される独自の種類のアプリケーションです。サードパーティの機械学習サービスを使用してファイルから情報を抽出し、それをメタデータとして適用します。カスタムスキルの認証は、各スキルイベントに備わっている事前承認済みのAPI資格情報によって簡素化されていますが、APIアクセスには制限があります。カスタムスキルでは特定の認証タイプを選択する必要がなく、シンプルさとBoxの機能との直接統合に重点が置かれています。
 
 <Message>
 
-# When to use Box Skills?
+# Box Skillsを使用する場合
 
-Webhook based authentication with Box Skills is the ideal authentication method for apps that:
+Box Skillsを使用するWebhookベースの認証は、以下に当てはまるアプリに最適な認証方法です。
 
-* Work in third party machine learning environments
-* Potentially want users to know they are using Box
-* Achieve an end goal in tandem with other processes
-* Only want to process files that trigger the Box Skill
+* サードパーティの機械学習環境で使用する
+* Boxを使用していることをできるだけユーザーに認識させたい
+* 他のプロセスと連携して最終目標を達成する
+* Box Skillをトリガーするファイルだけを処理する
 
 </Message>
 
-You can find a great Box Skills tutorial on [Medium][skill_watson].
+Box Skillsに関する有用なチュートリアルについては、[Medium][skill_watson]を参照してください。
 
 ##  スコープ 
 
@@ -167,9 +167,9 @@ You can find a great Box Skills tutorial on [Medium][skill_watson].
 
 [python_oauth]: https://github.com/box-community/box-python-oauth-template
 
-[python_ccg]: https://medium.com/box-developer-blog/box-python-next-gen-sdk-getting-started-with-ccg-81be0abc82d9
+[python_ccg]: https://medium.com/box-developer-japan-blog/box-pythonの次世代sdk-ccgの使用-1c7cff13c24d
 
-[node_jwt]: https://medium.com/box-developer-blog/authenticate-box-node-js-sdk-with-jwt-47fdd3aeec50
+[node_jwt]: https://medium.com/box-developer-japan-blog/jwtを使用したbox-node-js-sdkの認証-e3496d610f59
 
 [skill_watson]: https://medium.com/box-developer-blog/box-skills-ibm-watson-speech-to-text-tutorial-b7e3b3c0a8c7
 

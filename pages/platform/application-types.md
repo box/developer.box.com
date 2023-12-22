@@ -17,27 +17,27 @@ fullyTranslated: true
 ---
 # アプリケーションの種類
 
-Box offers various application types to cater to different needs and use cases in application development. Each provides different capabilities and authentication method options.
+Boxには、アプリケーション開発におけるさまざまなニーズやユースケースに対応するために各種アプリケーションが用意されています。アプリケーションの種類ごとに機能や認証方法のオプションは異なります。
 
 ## カスタムアプリ
 
-[Custom Apps][custom_app] are versatile and can accommodate most use cases. They allow developers to present Box functionalities within a custom interface. Box provides customizable UI Elements for tasks like browsing, searching, and previewing content. These apps support OAuth 2.0, JWT, and Client Credentials Grant for authentication. Custom Apps are ideal for applications that need to access both their own and others' files, upload and download files, and potentially be listed in the Box App Center.
+[カスタムアプリ][custom_app]は汎用性があるため、ほとんどのユースケースに対応可能です。開発者はカスタムアプリを使用することで、Boxの機能をカスタムインターフェース内に表示できます。Boxでは、コンテンツの閲覧、検索、プレビューなどのタスク向けにカスタマイズ可能なUI Elementsを提供しています。このようなアプリでは、認証用にOAuth 2.0、JWT、クライアント資格情報許可をサポートしています。カスタムアプリは、自分のファイルと他のユーザーのファイル両方へのアクセス、ファイルのアップロードとダウンロード、Box App Centerへの掲載が必要なアプリケーションに最適です。
 
 ## アクセス制限付きアプリ
 
-[Limited Access Apps][limited_app] are specifically designed for leveraging Box View or previewing Box content within another application. They have access to a limited number of endpoints and only support App Token authentication. These apps are suitable for use cases like showcasing a professional’s portfolio on a website, providing user manuals on a support site, or creating a custom document viewer for e-books or architectural plans.
+[アクセス制限付きアプリ][limited_app]は、Box Viewを利用したり、別のアプリケーション内でBoxコンテンツをプレビューしたりするために特別に設計されたアプリです。アクセスできるエンドポイントの数は限られており、アプリトークン認証のみがサポートされています。このようなアプリは、ウェブサイトでプロのクリエイターの作品集を紹介する、サポートサイトでユーザーマニュアルを提供する、電子書籍や間取り図用のカスタムドキュメントビューアーを作成するなどのユースケースに適しています。
 
 ## Box Skills
 
-[Box Skills][skills], or Custom Skills, are applications that perform custom processing on files uploaded to Box. They use third-party Machine Learning services to extract information from files and apply it as metadata. These skills are enabled on a folder by a Box Admin, and the application server receives an event every time a file is uploaded. Custom Skills are best used for adding metadata to files and integrating with Machine Learning services without handling authentication.
+[Box Skills][skills] (カスタムスキル) は、Boxにアップロードされたファイルに対してカスタマイズした処理を実行するアプリケーションです。サードパーティの機械学習サービスを使用してファイルから情報を抽出し、それをメタデータとして適用します。このようなスキルはBox管理者がフォルダに対して有効にするので、ファイルがアップロードされるたびにアプリケーションサーバーにイベントが送信されます。カスタムスキルは、ファイルにメタデータを追加したり、認証を処理することなく機械学習サービスと統合したりする場合に最適です。
 
-## Web App Integrations
+## ウェブアプリ統合
 
-[Web App Integrations][web_app] allow third-party applications to integrate seamlessly with the Box user experience. They enable users to edit, share, or modify content stored in Box using a third-party application. Such integrations can add new features to Box users and be added to Recommended Apps in Box Preview, enhancing the user experience by integrating with various content types and file extensions.
+[ウェブアプリ統合][web_app]を使用すると、サードパーティ製アプリケーションはBoxのユーザーエクスペリエンスとシームレスに統合できます。これにより、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを編集、共有、変更することができます。このような統合は、Boxユーザーに新機能を追加したり、Boxプレビューの \[推奨アプリ] に追加したりできるため、さまざまなコンテンツタイプやファイル拡張子と統合され、ユーザーエクスペリエンスが向上します。
 
-## App Center Publication
+## App Centerでの公開
 
-The [Box App Center][app_center] is a platform for Box users to discover applications that can be used in conjunction with Box. For developers, listing their application in the App Center is an effective way to reach new users, particularly for applications suited for use by other enterprises. The process for App Center publication involves ensuring the app is production-ready, leverages OAuth 2.0 authentication, and submitting it for approval through the Developer Console. Once approved, applications can be featured, most popular, or recently added sections in the App Center, and they can also be unpublished if necessary.
+[Box App Center][app_center]は、BoxユーザーがBoxと連携して使用できるアプリケーションを見つけるためのプラットフォームです。開発者にとって、App Centerへのアプリケーションの掲載は、特に他の企業での使用に適したアプリケーションの場合、新規ユーザーにリーチを広げるのに効果的な手段となります。App Centerでの公開プロセスでは、アプリケーションが本番環境に対応していることとOAuth 2.0認証を利用していることを確認し、開発者コンソールから承認を得るためにそのアプリケーションを送信する必要があります。承認されると、アプリケーションはApp Centerの \[おすすめ]、\[人気]、\[新着] セクションに分類されます。また、必要に応じて公開を取り消すこともできます。
 
 <Next>
 

@@ -219,11 +219,11 @@ client.search.query(
 
 ```
 
-This example will find all files and folders that have an instance of the `enterprise.contract` template applied to it, and for which the field with the key `amount` is set to a value equal or higher than `10000` and equal or lower than `2000`. Note that `gt` and `lt` are inclusive and do not need to both be set.
+この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`amount`のフィールドが`10000`以上`2000`以下の値に設定されているすべてのファイルおよびフォルダが検索されます。`gt`と`lt`はその値を含むことと、必ずしも両方を設定する必要がないことに注意してください。
 
 <Message info>
 
-If you create a query based on numbers, do not exceed the range of -16777215 and +16777215. For metadata search using number attributes the index value is stored as FLOAT32. As a result, integers between -16777215 and +16777215 can be precisely represented. Any operation with numbers beyond the range can lose its precision.
+数値に基づいてクエリを作成する場合は、-16777215～+16777215の範囲を超えないようにしてください。数値属性を使用したメタデータ検索では、インデックス値がFLOAT32として保存されます。結果として、-16777215～+16777215の整数は正確に表すことができます。この範囲外の数値を扱う処理では、精度が失われる場合があります。
 
 </Message>
 

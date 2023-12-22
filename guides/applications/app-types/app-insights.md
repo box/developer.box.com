@@ -16,7 +16,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/app-insights.md
 fullyTranslated: true
 ---
-# App Insights
+# アプリインサイト
 
 管理者と共同管理者は、組織におけるプラットフォームの利用状況を集約した、Platformインサイトのダッシュボードにアクセスできます。これには、以下のような、アプリ関連のデータが含まれます。
 

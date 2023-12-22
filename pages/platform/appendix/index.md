@@ -15,14 +15,14 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/platform/appendix/index.md
 fullyTranslated: true
 ---
-# Appendix
+# 付録
 
-In this section, you will find some other getting started related material. It isn't vital to know from the get go, but it can help pinpoint you to a solution if you are having an issue.
+このセクションでは、入門者向けのその他の資料を紹介します。最初から知っておかなければならないというわけではありませんが、問題が発生した場合に解決策を特定するのに役立ちます。
 
-* [User Models][user_models]: This page goes over how to use the users types discussed earlier in this series.
-* [Architecture patterns][arch_patterns]: This page goes over some typical infrastructure patterns we see.
-* [Locating Common Values][common_values]: This page goes over how to find pieces of information like user IDs.
-* [Branding Guidelines][branding]: This page lists out various things to keep in mind if you plan to use the Box brand for your project
+* [ユーザーモデル][user_models]: このページでは、このシリーズで前述したユーザータイプの使用方法について説明します。
+* [アーキテクチャパターン][arch_patterns]: このページでは、よく目にするインフラストラクチャのパターンについて説明します。
+* [一般的な値の確認][common_values]: このページでは、ユーザーIDなどの情報を確認する方法について説明します。
+* [ブランディングガイドライン][branding]: このページでは、プロジェクトにBoxブランドを使用する予定の場合のさまざまな注意事項を示しています。
 
 [arch_patterns]: page://platform/appendix/architecture-patterns/
 

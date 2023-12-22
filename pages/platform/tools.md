@@ -17,21 +17,21 @@ fullyTranslated: true
 ---
 # ツール
 
-Box offers several [tools][tooling] for you to use to jump start your development. Check them out below.
+Boxには、開発をスムーズに開始できるようにする[ツール][tooling]がいくつか用意されています。以下をご確認ください。
 
-## Sample Code Catalog
+## サンプルコードカタログ
 
-The [sample code catalog][sample_code] is the most recent tool we have launched on the Box Developer site. It pulls code sample repositories from multiple places, consolidating them in one place for you to browse. It allows you to filter by language and task. We update the list regularly so the you have access to the most up to date code.
+[サンプルコードカタログ][sample_code]は、当社がBox Developerドキュメントポータルでリリースした最新のツールです。これは、複数の場所からコードサンプルリポジトリを集めて、1か所で閲覧できるように統合したものです。ここでは、言語やタスクでフィルタをかけることができます。リストは定期的に更新しているため、最新のコードを入手できます。
 
 <ImageFrame center>
 
-![Sample Code Catalog](./images/sample_code.png)
+![サンプルコードカタログ](./images/sample_code.png)
 
 </ImageFrame>
 
 ## Box CLI
 
-The Box Command Line Interface (CLI) is a tool for making requests to Box APIs from your terminal window or command prompt. It takes less than five minutes to set up and provides you direct access to the API. We also offer a suite of [sample scripts][samples] to jump start any administration automation tasks.
+Boxコマンドラインインターフェース (CLI) は、ターミナルウィンドウまたはコマンドプロンプトからBox APIに対してリクエストを行うためのツールです。設定には5分もかからず、APIに直接アクセスできます。Boxでは、管理の自動化タスクを短時間で開始するための一連の[サンプルスクリプト][samples]も提供しています。
 
 <YouTube id="whxT3Bdx3E0">
 
@@ -39,17 +39,17 @@ The Box Command Line Interface (CLI) is a tool for making requests to Box APIs f
 
 ## SDK
 
-Box supports several coding languages with our [SDK libraries][sdk]. It is highly recommended to use SDKs when creating a solution since the libraries automatically handle things like authentication and retry logic for you. In addition, the API reference pages contain samples for all the languages directly in the site; however, each Github repo has a docs section with all that language's samples too.
+Boxは、[SDKライブラリ][sdk]で複数のプログラミング言語をサポートしています。認証や再試行ロジックなどがライブラリによって自動的に処理されるため、ソリューションを作成する際はSDKを使用することを強くお勧めします。さらに、APIリファレンスのページには、サイト内のすべての言語のサンプルが直接掲載されていますが、各GitHubリポジトリにも、その言語のサンプルがすべて掲載されたドキュメントセクションがあります。
 
 <ImageFrame center>
 
-![SDK GitHub Libraries](./images/sdk.png)
+![SDK GitHubライブラリ](./images/sdk.png)
 
 </ImageFrame>
 
 ## Postmanコレクション
 
-As an industry standard in software development, Postman helps developers learn APIs quickly, providing real time testing and code samples. You can find our Postman Collection on the [Postman website][postman]. You can also check out the YouTube video below.
+ソフトウェア開発の業界標準であるPostmanは、リアルタイムテストとコードサンプルを提供して、開発者が短期間でAPIを習得できるようサポートしています。BoxのPostmanコレクションについては、[Postmanのウェブサイト][postman]を参照してください。また、下のYouTube動画もご確認ください。
 
 <Youtube id="aEILZ_tukLg">
 
@@ -71,7 +71,7 @@ As an industry standard in software development, Postman helps developers learn 
 
 <!-- i18n-enable localize-links -->
 
-[sample_code]: https://developer.box.com/sample-code/
+[sample_code]: https://ja.developer.box.com/sample-code/
 
 [postman]: https://www.postman.com/boxdev
 

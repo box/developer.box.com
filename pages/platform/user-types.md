@@ -36,7 +36,7 @@ fullyTranslated: true
 ---
 # ユーザータイプ
 
-A critical part of planning and developing an application is understanding the types of users involved. There are four main types of users: managed (internal and external), admin, service account, and app users. Let's take a closer look at the differences.
+アプリケーションの計画と開発で重要なのは、関与するユーザーのタイプを把握することです。ユーザーのタイプには、主に、管理対象ユーザー (内部および外部)、管理者、サービスアカウント、App Userの4つがあります。それぞれの違いを詳しく見ていきましょう。
 
 <Message>
 
@@ -46,13 +46,13 @@ A critical part of planning and developing an application is understanding the t
 
 </Message>
 
-## Admin or Co-Admin User
+## 管理者または共同管理者ユーザー
 
-The Box Admin is the principal Box account administrator. They can make additional co-admins with similar or more restrictive administrative privileges. Admins and Co-Admins can directly edit, delete, enforce security settings, and run reports against these users via the Admin Console.
+Box管理者とは、主要なBoxアカウント管理者です。管理者は、管理者権限が同等かより厳しく制限されている共同管理者を追加することができます。管理者と共同管理者は、管理コンソールで直接、セキュリティ設定を編集、削除、適用したり、ユーザーに対してレポートを実行したりできます。
 
 ## 管理対象ユーザー
 
-Each Box enterprise is assigned a unique enterprise ID. Managed Users are any users that belong to one enterprise ID. Managed Users consume a standard Box license and often, but not always, share the same email domain.
+各Box Enterpriseには、一意のEnterprise IDが割り当てられます。管理対象ユーザーとは、1つのEnterprise IDに属しているすべてのユーザーのことです。管理対象ユーザーは、標準のBoxライセンスを購入しており、例外もありますがほとんどの場合に同じメールドメインを共有します。
 
 <Message>
 
@@ -70,7 +70,7 @@ Each Box enterprise is assigned a unique enterprise ID. Managed Users are any us
 
 ## サービスアカウント
 
-A Service Account provides developers with a programmatic authentication mechanism for server-side integrations with Box. In other words, an application can authenticate to Box as the service, which is represented by a Service Account user. A Service Account can then be used to create other application specific users, called App Users described further below.
+サービスアカウントにより、開発者は、サーバー側のBoxとの統合にプログラムによる認証メカニズムを使用できます。つまり、アプリケーションはBoxに対してサービスとして認証を受けることができ、これがサービスアカウントユーザーで表されます。その後、サービスアカウントを使用して、App Userと呼ばれるアプリケーション固有のユーザーを他に作成できます。App Userについては、以下で詳しく説明します。
 
 <ImageFrame center>
 
@@ -147,11 +147,11 @@ A Service Account provides developers with a programmatic authentication mechani
 
 ## App User
 
-App users are only accessible via the API, meaning they do not have login credentials. They can be created by a Service Account and therefore are only applicable to applications leveraging server to server authentication. App Users are tied to the application used to create them, and while they can collaborate on content outside of the application, the user itself cannot be moved under another application.
+App Userは、API経由でしかアクセスできません (つまり、ログイン資格情報を持っていません)。これは、サービスアカウントによって作成できるため、サーバー間認証を利用するアプリケーションのみに適用できます。App Userは、その作成に使用されたアプリケーションに関連付けられています。また、そのアプリケーション以外でのコンテンツのコラボレーションは可能ですが、このユーザー自体を別のアプリケーション下に移動することはできません。
 
 ### 作成
 
-App users are created using a Service Account access token to call the [create user endpoint][createuser]. The `is_platform_access_only` body parameter must be set to true or a managed user is created instead.
+App Userを作成するには、サービスアカウントアクセストークンを使用して、[ユーザーを作成エンドポイント][createuser]を呼び出します。`is_platform_access_only`本文パラメータはtrueに設定する必要があります。そうしないと、代わりに管理対象ユーザーが作成されます。
 
 すべてのBoxアカウントにはメールアドレスが必要なため、Boxによって割り当てられます。これは常に`AppUser_AppServiceID_RandomString@boxdevedition.com`形式になります (例: `AppUser_1234567_LOCqkWI79A@boxdevedition.com`)。
 
@@ -189,7 +189,7 @@ App Userには、管理コンソールの [\[ユーザーとグループ\] タ�
 
 ## As-User
 
-If you are using OAuth 2.0, JWT, or CCG as the authentication method for your application, it is possible to make what are called `as-user` calls. This means that even though you created an original connection to the Box API as yourself or as a service account, you can make subsequent calls impersonating another user. This is useful in automating administrative tasks like folder reorganization or employee provisioning. In order to make `as-user` calls, the appropriate scope must be added to the application when creating it in the developer console. For example, in an OAuth 2.0 custom app, you would need to turn on this switch.
+アプリケーションの認証方法としてOAuth 2.0、JWT、またはCCGを使用している場合、いわゆる`as-user`コールを行うことができます。つまり、Box APIへの最初の接続を自分自身またはサービスアカウントとして作成した場合でも、それ以降のコールを別のユーザーになりすまして行うことができます。これは、フォルダの再編成や従業員のプロビジョニングなどの管理タスクを自動化するのに便利です。`as-user`コールを行うには、開発者コンソールでアプリケーションを作成する際に適切なスコープを追加する必要があります。たとえば、OAuth 2.0カスタムアプリでは、次の切り替えをオンにする必要があります。
 
 <ImageFrame center>
 

@@ -18,17 +18,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
 fullyTranslated: true
 ---
-# Start Here
+# ここからスタート
 
-To begin your journey, visit our new [Learn Box Platform][learn] section.
+まずは、新しい[Box Platformについて][learn]セクションをご覧ください。
 
-Our documentation is divided into five main sections:
+Boxのドキュメントは、主に以下の5つのセクションに分かれています。
 
-* **Learn Box Platform**: A getting started walk through of all things Platform
-* **Developer Guides**: Information about endpoint usage not covered by reference documentation
+* **Box Platformについて**: Platform全般の概要
+* **開発者向けガイド**: リファレンスドキュメントでは説明されていない、エンドポイントの使用に関する情報
 * **APIリファレンス**: エンドポイントに関するドキュメント
 * **SDKとツール**: Box公式SDKとツールに関する情報
-* **Sample Code Catalog**: Consolidated list of several code repositories
+* **サンプルコードカタログ**: 複数のコードリポジトリが一元管理されているリスト
 
 不明な点がある場合は、Boxの[フォーラム][forum-link]を確認してください。
 

@@ -15,22 +15,22 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/platform/start-creating.md
 fullyTranslated: true
 ---
-# Start Creating
+# 開発の開始
 
-Now that you have learned all about the various parts that makeup Box Platform, you are ready to jump in and start creating. Visit the [Box Developer Console][devconsole] to begin!
+ここまでBox Platformのさまざまな構成要素について詳しく学んできました。これでいよいよ開発を開始できます。[Box開発者コンソール][devconsole]にアクセスして着手しましょう。
 
 <ImageFrame center>
 
-![Start Creating](images/congrats.png)
+![開発の開始](images/congrats.png)
 
 </ImageFrame>
 
-If you are looking for other topics to learn about, be sure to checkout the following:
+その他のトピックをお探しの場合は、ぜひ以下を確認してください。
 
-* [Architecture patterns][arch_patterns]: This page goes over some typical infrastructure patterns we see.
-* [User Models][user_models]: This page goes over how to use the users types discussed earlier in this series.
-* [Locating Common Values][common_values]: This page goes over how to find pieces of information like user IDs.
-* [Errors][errors]: This page lists out all the error codes you can receive
+* [アーキテクチャパターン][arch_patterns]: このページでは、よく目にするインフラストラクチャのパターンについて説明します。
+* [ユーザーモデル][user_models]: このページでは、このシリーズで前述したユーザータイプの使用方法について説明します。
+* [一般的な値の確認][common_values]: このページでは、ユーザーIDなどの情報を確認する方法について説明します。
+* [エラー][errors]: このページでは、表示される可能性のあるすべてのエラーコードを列挙しています。
 
 [devconsole]: https://cloud.app.box.com/developers/console
 

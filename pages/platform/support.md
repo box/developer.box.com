@@ -15,13 +15,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/platform/support.md
 fullyTranslated: true
 ---
-# Support
+# サポート
 
-The Box Developer Relations team loves to help developers in any way we can. Outside of interviewing developers regularly, we provide the following options for you to connect with us.
+Box Developer Relationsチームは、できる限り開発者の皆様をサポートしたいと考えています。開発者への定期的な聞き取り調査以外に、以下のようなBoxへの問い合わせ方法も用意しています。
 
 ## Developer Forum
 
-Recently, we relaunched our developer community. It is now even easier to connect with developers like yourself and ask questions about your development issues. You can also share any successes you have had. [Join Today][forum]!
+Boxは最近、Box Developer Communityをリニューアルしました。開発者同士がつながり、開発の問題について質問することがさらに容易になりました。また、ご自身の成功体験も共有していただけます。[今すぐご参加ください][forum]。
 
 <ImageFrame center>
 
@@ -29,9 +29,9 @@ Recently, we relaunched our developer community. It is now even easier to connec
 
 </ImageFrame>
 
-## Medium Blog
+## Mediumブログ
 
-We + some of our partners write tutorials and make announcements on our [Medium blog][medium] regularly. Typically, we release content every Tuesday, but frequently, it is even more often than that. We welcome any requests for content on our developer forum.
+Boxと一部のパートナー企業は、定期的にBoxの[Mediumブログ][medium]でチュートリアルやお知らせを公開しています。通常は毎週火曜日にコンテンツをリリースしますが、それより頻度が高くなることもあります。コンテンツのご要望がありましたら、ぜひDeveloper Forumまでお寄せください。
 
 <ImageFrame center>
 
@@ -39,13 +39,13 @@ We + some of our partners write tutorials and make announcements on our [Medium 
 
 </ImageFrame>
 
-## Box Platform Twitter
+## Box PlatformのTwitter
 
-Like the changelog on the developer site, we post Box Platform updates, as well as new blogs. You can follow at [Box Platform][twitter].
+Developerドキュメントの変更ログと同様に、Box Platformの更新情報や新規ブログを投稿しています。[Box Platform][twitter]でフォローできます。
 
 <ImageFrame center>
 
-![Box Platform Twitter](images/twitter.png)
+![Box PlatformのTwitter](images/twitter.png)
 
 </ImageFrame>
 
@@ -61,7 +61,7 @@ Like the changelog on the developer site, we post Box Platform updates, as well 
 
 [forum]: https://forum.box.com/
 
-[medium]: https://medium.com/box-developer-blog
+[medium]: https://medium.com/box-developer-japan-blog
 
 [twitter]: https://twitter.com/BoxPlatform
 

@@ -23,19 +23,19 @@ fullyTranslated: true
 ---
 # アプリケーション
 
-Box Developer Console allows you to create applications you can then use to integrate with Box. My Apps view displays a list of already created applications and gives you quick access to their configuration details and additional options. This way, you don't need to open the app each time you want to generate a Developer Token or copy the Client ID.
+Box開発者コンソールでは、後でBoxとの統合に使用できるアプリケーションを作成できます。\[マイアプリ] ビューには、すでに作成済みのアプリケーションのリストが表示されるので、ここから構成の詳細や追加オプションにすばやくアクセスできます。そのため、毎回アプリを開かなくても、開発者トークンを生成したり、クライアントIDをコピーしたりできます。
 
-![My apps](./images/my-apps-page.png)
+![マイアプリ](./images/my-apps-page.png)
 
 ## 機能
 
-The My Apps page allows you to:
+\[マイアプリ] ページでは、以下の操作を行うことができます。
 
-1. Create [a new app][select].
-2. View application description using the `i` icon.
-3. Copy the Client ID using the `copy` icon.
-4. Check application [enablement][enablement] and [authorization][authorization] status.
-5. Use a menu available for every entry to access the configuration details of your application or to generate a [Developer Token][token].
+1. [新しいアプリ][select]を作成する。
+2. `i`アイコンを使用してアプリケーションの説明を表示する。
+3. `copy`アイコンを使用してクライアントIDをコピーする。
+4. アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。
+5. 各エントリに用意されているメニューを使用して、アプリケーションの構成の詳細にアクセスしたり、[開発者トークン][token]を生成したりする。
 
 [token]: g://authentication/tokens/developer-tokens
 

@@ -15,35 +15,35 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/platform/index.md
 fullyTranslated: true
 ---
-# Learn Box Platform
+# Box Platformについて
 
-If you are new to Box, **start here**! In the following pages, you'll learn how the all the Box Platform concepts and components work together to help you create an application quickly.
+Boxを初めて使用する場合は、**ここから始めてください**。以降のページでは、アプリケーションをより短時間で作成できるようにBox Platformのすべての概念とコンポーネントがどのように連携しているかを学べます。
 
 <!-- To kick off your learning journey, checkout this video for an overview on everything Box Platform. -->
 
 <ImageFrame center>
 
-![Learn](images/header.png)
+![学習する](images/header.png)
 
 </ImageFrame>
 
 <!-- REPLACE ABOVE IMAGE WITH VIDEO -->
 
-## Learn Sections
+## 詳細セクション
 
-These pages go into more depth on each topic. Checkout each one and become a Box Platform expert.
+以下のページでは、各トピックについてさらに詳しく説明します。1つ1つ確認して、Box Platformのエキスパートを目指しましょう。
 
-* [Box Platform 101][platform101]
-* [Use Cases][usecases]
-* [User Types][usertypes]
-* [Application Types][apptypes]
-* [Authentication Methods][authtypes]
-* [Support][support]
-* [Tools][tools]
+* [Box Platformの基礎][platform101]
+* [ユースケース][usecases]
+* [ユーザータイプ][usertypes]
+* [アプリケーションの種類][apptypes]
+* [認証方法][authtypes]
+* [サポート][support]
+* [ツール][tools]
 
 <Next>
 
-Get Started
+開始する
 
 </Next>
 

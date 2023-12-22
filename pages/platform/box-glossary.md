@@ -19,7 +19,7 @@ fullyTranslated: true
 ---
 # Box Platformの用語集
 
-This glossary includes terms and definitions used in Box Platform. If you need to find out what a term means, this is your one stop page.
+この用語集には、Box Platformで使用される用語と定義がまとめられています。用語の意味を調べる必要がある場合は、このページをご利用ください。
 
 <!-- markdownlint-disable line-length -->
 

@@ -15,69 +15,69 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/platform/box-platform-101.md
 fullyTranslated: true
 ---
-# Box Platform 101
+# Box Platformの基礎
 
 <!-- INSERT VIDEO HERE LATER -->
 
-## What is Box
+## Boxとは
 
-[Box][box] is a cloud-based content management and file sharing platform that enables individuals and businesses to store, access, and collaborate on documents and files from anywhere. It offers features like secure file storage, real-time collaboration, and integrations with various productivity tools, enhancing team efficiency and data accessibility. Known for its focus on security and user-friendly interface, Box is widely used for managing digital assets and fostering collaboration within organizations.
+[Box][box]とは、クラウドベースのコンテンツ管理およびファイル共有のプラットフォームで、個人や企業がどこからでもドキュメントやファイルの保存、アクセス、コラボレーションを実行できるようにします。安全なファイルストレージ、リアルタイムのコラボレーション、各種生産性ツールとの統合といった機能を提供し、チームの効率性やデータのアクセス性を向上させます。セキュリティと使い勝手の良いインターフェースに重点を置いていることで知られるBoxは、デジタル資産の管理や組織内のコラボレーションの促進に広く利用されています。
 
-## What is Box Platform
+## Box Platformとは
 
-[Box Platform][platform] is a set of tools and APIs offered by Box that allows developers to integrate and customize the capabilities of the Box cloud content management system into their own applications and services. It enables businesses and developers to build secure and scalable content-centric applications, leveraging features like file storage, sharing, and collaboration while maintaining control over data and access. With Box Platform, developers can create tailored solutions that enhance productivity and streamline content management workflows.
+[Box Platform][platform]は、Boxが提供する一連のツールとAPIです。開発者はこれを使用して、Boxのクラウドコンテンツ管理システムの機能を独自のアプリケーションやサービスに統合し、カスタマイズすることができます。企業や開発者は、データとアクセス権限の制御を維持しながらファイルストレージ、共有、コラボレーションなどの機能を利用して、安全かつ拡張性の高いコンテンツ中心のアプリケーションを構築できます。Box Platformを使用することで、開発者は、生産性の向上とコンテンツ管理ワークフローの効率化を実現する独自のソリューションを作成できます。
 
-## How do I make applications
+## アプリケーションの作成方法
 
-In order to use the [Box API][api], you first have to create an application in Box. This application serves as the gateway for any API call made to the platform. You can use two websites to accomplish this task: the Box Developer Site and the Box Developer Console. Let's take a closer look at what those are.
+[Box API][api]を使用するには、まずBoxでアプリケーションを作成する必要があります。このアプリケーションは、プラットフォームに対して実行されるAPIコールのゲートウェイとして機能します。このタスクを実行するには、Box DeveloperドキュメントポータルとBox開発者コンソールという2つのウェブサイトを使用できます。これらについて、もう少し詳しく見てみましょう。
 
-### Box Developer Site
+### Box Developerドキュメントポータル
 
-The Box Developer Site is this website you are reading right now. It is a comprehensive resource for developers building solutions on top of Box, and should be used alongside the developer console to create applications and make API calls. You can find a multitude of guides, the full OpenAPI spec, quick starts, sample code, etc all within its pages.
-
-<ImageFrame center>
-
-![Box Developer Site](images/developer_site.png)
-
-</ImageFrame>
-
-The site is updated on a frequent basis with the latest updates posted to the [changelog][change].
+Box Developerドキュメントポータルとは、現在ご覧になっているこのウェブサイトです。これは、Box上にソリューションを作成する開発者向けの総合的なリソースで、アプリケーションを作成したりAPIコールを実行したりする際に開発者コンソールと一緒に使用する必要があります。多くのガイド、OpenAPIの詳細な仕様、クイックスタート、サンプルコードなどがこのページ内に掲載されています。
 
 <ImageFrame center>
 
-![Box Developer Changelog](images/changelog.png)
+![Box Developerドキュメントポータル](images/developer_site.png)
 
 </ImageFrame>
 
-### Box Developer Console
-
-The [Box Developer Console][dc] is an interactive interface that provides developers with tools and resources for managing their applications integrated with Box. It allows for the creation, configuration, and monitoring of apps, offering insights and control over how these apps interact with the Box platform.
+このサイトは頻繁に更新され、最新の更新情報は[変更ログ][change]に掲載されています。
 
 <ImageFrame center>
 
-![Box Developer Console](images/developer_console.png)
+![Box Developer変更ログ](images/changelog.png)
 
 </ImageFrame>
 
-After you create an application in the console for the first time, you will start seeing a button in the bottom left of the main Box web app. You can use this button to access the console in the future.
+### Box開発者コンソール
+
+[Box開発者コンソール][dc]は、開発者がBoxと統合された独自のアプリケーションを管理するためのツールやリソースが用意されているインタラクティブなインターフェースです。ここでは、アプリの作成、構成、監視が可能となり、これらのアプリとBox Platformの関係についてインサイトと制御が示されます。
 
 <ImageFrame center>
 
-![Box Developer Console button](images/developer_console_button.png)
+![Box開発者コンソール](images/developer_console.png)
 
 </ImageFrame>
 
-## Box Platform Concepts
+コンソールで初めてアプリケーションを作成すると、メインのBoxウェブアプリの左下にボタンが表示されるようになります。これ以降は、このボタンを使ってコンソールにアクセスできます。
 
-In the following learn sections, we will go into more depth on various topics. But at a high level, these are some terms and concepts to be familiar with.
+<ImageFrame center>
+
+![Box開発者コンソールのボタン](images/developer_console_button.png)
+
+</ImageFrame>
+
+## Box Platformの概念
+
+以降の詳細セクションでは、さまざまなトピックについてさらに詳しく説明します。ただし、いくつかの用語と概念を大まかに知っておく必要があります。
 
 ### ユーザータイプ
 
-There are several [user types][ut] to keep in mind when developing on Box Platform. These include users with admin privileges (such as Admin or Co-Admin users) and those without admin privileges (Managed or External Users). Additionally, there are platform-only users, which are categorized as Service Accounts and App Users. Each user type has specific roles and access levels within the Box environment, impacting how they interact with applications and content. At the core, if a use can access a piece of content from the main Box web app, they should be able to access it using the API.
+Box Platformで開発を行う際に注意すべき[ユーザータイプ][ut]がいくつかあります。ユーザータイプには、管理者権限を持つユーザー (管理者ユーザーや共同管理者ユーザーなど) と管理者権限を持たないユーザー (管理対象ユーザーまたは外部ユーザー) があります。さらに、サービスアカウントとApp Userに分類される、Platform専用のユーザーもあります。各ユーザータイプには、Box環境内での特定のロールとアクセスレベルが割り当てられており、アプリケーションやコンテンツの操作方法に影響します。基本的には、メインのBoxウェブアプリからコンテンツにアクセスできるユーザーは、APIを使用してコンテンツにアクセスすることもできます。
 
 ### アプリケーションの種類
 
-There are three main types of applications that can be created in the developer console. They include custom app, limited access app, and custom skills. You can also create third party and web app integrations.
+開発者コンソールで作成できるアプリケーションには、主に、カスタムアプリ、アクセス制限付きアプリ、カスタムスキルという3種類があります。また、サードパーティの統合やウェブアプリ統合も作成できます。
 
 <ImageFrame center>
 
@@ -87,11 +87,11 @@ There are three main types of applications that can be created in the developer 
 
 ### 認証方法
 
-Depending on the application type selected, there are one of five different authentication methods that can be used to gain an [access token][at]. An access token is the key to get through the gateway that is your application to successfully make an API call to Box.
+選択したアプリケーションの種類に応じて、[アクセストークン][at]を取得するために使用できる5種類の認証方法のいずれかを使用できます。アクセストークンは、アプリケーションであるゲートウェイを通過してBoxに対するAPIコールを成功させるための鍵となります。
 
 <ImageFrame center>
 
-![Authentication Types](images/auth_type.png)
+![認証タイプ](images/auth_type.png)
 
 </ImageFrame>
 
