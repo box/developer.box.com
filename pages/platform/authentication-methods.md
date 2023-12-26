@@ -123,7 +123,7 @@ Box Skillsを使用するWebhookベースの認証は、以下に当てはまる
 
 </Message>
 
-Box Skillsに関する有用なチュートリアルについては、[Medium][skill_watson]を参照してください。
+Box Skillsに関する有用なチュートリアル (英語) については、[Medium][skill_watson]を参照してください。
 
 ##  スコープ 
 
