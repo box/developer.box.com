@@ -41,7 +41,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 <ImageFrame border>
 
-![アプリケーションの選択画面](../images/select-app-type.png)
+![アプリケーションの選択画面](./images/select-app-type.png)
 
 </ImageFrame>
 
@@ -79,7 +79,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 <ImageFrame border width="600" center>
 
-![アプリ名のフォーム](../images/app-invocation-url.png)
+![アプリ名のフォーム](./images/app-invocation-url.png)
 
 </ImageFrame>
 
@@ -91,7 +91,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 <ImageFrame border width="600" center>
 
-![アプリ名のフォーム](../images/app-file-extensions.png)
+![アプリ名のフォーム](./images/app-file-extensions.png)
 
 </ImageFrame>
 
