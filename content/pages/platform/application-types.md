@@ -67,8 +67,8 @@ sections in the App Center, and they can also be unpublished if necessary.
   Next step
 </Next>
 
-[custom_app]: g://applications/custom-apps/
-[limited_app]: g://applications/limited-access-apps/
-[skills]: g://applications/custom-skills/
+[custom_app]: g://applications/app-types/custom-apps/
+[limited_app]: g://applications/app-types/limited-access-apps/
+[skills]: g://applications/app-types/custom-skills/
 [web_app]: g://applications/web-app-integrations/
 [app_center]: g://applications/app-center/

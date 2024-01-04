@@ -10,7 +10,7 @@ related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 ---
 
-# Custom Skills
+# Custom Skill
 
 A Custom Skill, or Box Skill is a type of application that performs custom
 processing for files uploaded to Box. Skills are designed to make it
@@ -61,8 +61,8 @@ Example use cases for Custom Skills include:
 
 ## Approval
 
-Before a Custom Skill can be used it needs to be assigned to a folder for which the
-skill should trigger.
+Before a Custom Skill can be used it needs to be assigned
+to a folder for which the skill should trigger.
 
 <CTA to='g://authorization/custom-skill-approval'>
   Learn how to approve Custom Skills
