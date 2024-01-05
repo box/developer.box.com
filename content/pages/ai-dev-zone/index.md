@@ -6,28 +6,33 @@ centered: false
 ---
 # Box AI Developer Zone
 
-<Banner>
-  <BannerTitle>
-    Box AI Developer Zone
-  </BannerTitle>
-    Box AI natively integrates advanced AI models into the products and features
-    across the Box Content Cloud. With the Box AI Dev Zone, developers can
-    explore interactive demos to view use cases, example prompts and responses
-    and sample code.
-</Banner>
-
 <Centered wide id="ai-developer-zone" >
+  <HeroImage type="AiDevZone" imageWidth="548" imageHeight="493">
+    <Header>
+      Box AI</br>
+      Developer Zone
+    </Header>
+
+    Box AI natively integrates advanced AI models into the products and features
+    across the Box Content Cloud. With the Box AI Developer Zone, you can
+    explore interactive demos to view use cases, example prompts and responses,
+    and sample code.
+  </HeroImage>
+</Centered>
+
+<Centered mid>
   <Header>
     Interactive Demos
   </Header>
     <p style="text-align: left; margin-left: 0;">
-        Explore what’s possible with our interactive demos.
+      Explore what’s possible with our interactive demos.
     </p>
-
   <TileGrid rows="3">
     <Tile type="summarisation" title="Get a summary"
         href="/ai-dev-zone-summary">
         Get instant summary of any document
+
+        <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
     <Tile disabled type="document-qa" title="Ask a question"
         href="/ai-dev-zone">
@@ -44,27 +49,26 @@ centered: false
   </TileGrid>
 </Centered>
 
-
-<Centered wide id="ai-developer-zone" >
+<Centered mid>
   <Header>
-    Explore the AI API
+    AI API reference
   </Header>
-    <p style="text-align: left; margin-left: 0;">
-        Follow along  with our featured guides to help get you up and running
-    </p>
+  <p style="text-align: left; margin-left: 0;">
+    Follow along with our featured guides to help get you up and running
+  </p>
 
-  <TileGrid>
-    <Tile type="users" title="Text generation"
+  <TileGrid rows="3">
+    <Tile type="pen" title="Text generation"
       href="/ai-dev-zone">
-        Learn how to generate text and call functions
+        AI API ask about document's content endpoint
     </Tile>
-    <Tile type="users" title="Text generation"
+    <Tile type="speach-bubble" title="Q&A"
       href="/ai-dev-zone">
-        Learn how to generate text and call functions
+        AI API document Q&A endpoint
     </Tile>
-    <Tile type="users" title="Text generation"
+    <Tile type="document" title="Metadata extraction"
       href="/ai-dev-zone">
-        Learn how to generate text and call functions
+        Metadata AI API for extrating metadata from a document
     </Tile>
   </TileGrid>
 </Centered>
