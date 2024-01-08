@@ -11,7 +11,7 @@ files:
     pdf: Invoice
     pdf_name: Sample_Invoice.pdf
     presentation: Presentation
-    presentation_name: Sampe_presentation.ppx
+    presentation_name: Sample_presentation.ppx
 
 sample_code:
   headline: Box AI API
@@ -30,66 +30,80 @@ document_summary:
   generate: Generate
   label: Tone of voice
   summary:
-    formal: The document provides an overview of Box Platform, a content
-      platform designed to help development teams create immersive
-      and collaborative user experiences through APIs. It highlights
-      the need for businesses to digitize workflows and deliver products
-      in new ways while emphasizing the importance of handling content
-      effectively. Box Platform offers advanced viewing capabilities,
-      simplified content discovery, streamlined collaboration processes,
-      and seamless integration with existing systems. The platform is
-      built by security experts and ensures secure access, governance
-      compliance, confidentiality, integrity, as well as industry
-      and global compliance standards. Additionally, it accelerates
-      development timelines by providing SDKs in common web and mobile
-      languages along with pre-built UI Kits for better user interfaces.
-      The document also mentions two plans available - Box Platform
-      Developer (free) for experimentation purposes and Box
-      Platform Enterprise (paid) for building production applications.
-    casual: This document is all about Box Platform, which helps
-      development teams create user-friendly and collaborative experiences
-      with content through APIs. It highlights how businesses can use
-      Box as a secure content store to build custom web portals and
-      mobile apps that enhance user engagement. The document also
-      emphasizes the importance of reducing security and compliance
-      risks by using Box's trusted services, including granular
-      permissions, comprehensive audit trails, encryption options,
-      and industry compliance certifications. Additionally, it mentions
-      how developers can accelerate their app development timelines by
-      leveraging SDKs in various languages, pre-built UI Kits for better
-      interfaces, integrations with other systems through the Box Trust program,
-      and extensive developer support resources provided by Box. Lastly,
-      it outlines two plans available for licensing - a free plan for
-      experimentation called "Box Platform Developer" and a paid
-      plan called "Box Platform Enterprise" designed for production
-      applications.
-    funny: Hey there! So, this document is all about Box Platform
-      and how it can help businesses create awesome apps with immersive
-      content experiences. It talks about how these custom apps can reduce
-      friction, accelerate processes, and even uncover new business models
-      in the digital world. But wait, there's more! Box Platform also
-      provides advanced viewing capabilities for various file types
-      (even 3D models!), simplifies content discovery with keyword-based search,
-      connects conversations with file-level comments, and accelerates collaborative
-      processes through tasks and notifications. And guess what? It reduces security
-      and compliance risks too! With granular permissions, comprehensive audit trails,
-      encryption options, industry compliance certifications - you name it!
-      Plus points for accelerating development timelines by providing SDKs
-      in common languages along with pre-built UI Kits. Oh yeah...and they have
-      a free plan for experimentation called Box Platform Developer or a
-      paid plan called Box Platform Enterprise starting at $500 per month.
-      Phew! That was quite the summary rollercoaster ride from our friends at Box Inc.!
-    pirate: Arr, me matey! This here document be tellin' us about Box Platform,
-      a content platform fer apps. It helps development teams create immersive
-      and collaborative user experiences by providin' APIs. Businesses can
-      use it to build custom web portals and mobile apps
-      that store content securely in the cloud. With features like advanced
-      file preview capabilities, simplified content discovery through keyword-based
-      search, file-level comments for communication, and tasks and notifications
-      for collaboration processes, Box Platform be makin' app development
-      faster while reducin' security risks. It also boasts secure access
-      controls with granular permissions and comprehensive audit
-      trails to mitigate data loss. So if ye be lookin' to accelerate
-      yer development timelines without compromisin' on security
-      or compliance risk, give Box Platform a try!
-    spanish: Some french summary
+    pdf:
+      formal: The document provides an overview of Box Platform, a content
+        platform designed to help development teams create immersive
+        and collaborative user experiences through APIs. It highlights
+        the need for businesses to digitize workflows and deliver products
+        in new ways while emphasizing the importance of handling content
+        effectively. Box Platform offers advanced viewing capabilities,
+        simplified content discovery, streamlined collaboration processes,
+        and seamless integration with existing systems. The platform is
+        built by security experts and ensures secure access, governance
+        compliance, confidentiality, integrity, as well as industry
+        and global compliance standards. Additionally, it accelerates
+        development timelines by providing SDKs in common web and mobile
+        languages along with pre-built UI Kits for better user interfaces.
+        The document also mentions two plans available - Box Platform
+        Developer (free) for experimentation purposes and Box
+        Platform Enterprise (paid) for building production applications.
+      casual: This document is all about Box Platform, which helps
+        development teams create user-friendly and collaborative experiences
+        with content through APIs. It highlights how businesses can use
+        Box as a secure content store to build custom web portals and
+        mobile apps that enhance user engagement. The document also
+        emphasizes the importance of reducing security and compliance
+        risks by using Box's trusted services, including granular
+        permissions, comprehensive audit trails, encryption options,
+        and industry compliance certifications. Additionally, it mentions
+        how developers can accelerate their app development timelines by
+        leveraging SDKs in various languages, pre-built UI Kits for better
+        interfaces, integrations with other systems through the Box Trust program,
+        and extensive developer support resources provided by Box. Lastly,
+        it outlines two plans available for licensing - a free plan for
+        experimentation called "Box Platform Developer" and a paid
+        plan called "Box Platform Enterprise" designed for production
+        applications.
+      funny: Hey there! So, this document is all about Box Platform
+        and how it can help businesses create awesome apps with immersive
+        content experiences. It talks about how these custom apps can reduce
+        friction, accelerate processes, and even uncover new business models
+        in the digital world. But wait, there's more! Box Platform also
+        provides advanced viewing capabilities for various file types
+        (even 3D models!), simplifies content discovery with keyword-based search,
+        connects conversations with file-level comments, and accelerates collaborative
+        processes through tasks and notifications. And guess what? It reduces security
+        and compliance risks too! With granular permissions, comprehensive audit trails,
+        encryption options, industry compliance certifications - you name it!
+        Plus points for accelerating development timelines by providing SDKs
+        in common languages along with pre-built UI Kits. Oh yeah...and they have
+        a free plan for experimentation called Box Platform Developer or a
+        paid plan called Box Platform Enterprise starting at $500 per month.
+        Phew! That was quite the summary rollercoaster ride from our friends at Box Inc.!
+      pirate: Arr, me matey! This here document be tellin' us about Box Platform,
+        a content platform fer apps. It helps development teams create immersive
+        and collaborative user experiences by providin' APIs. Businesses can
+        use it to build custom web portals and mobile apps
+        that store content securely in the cloud. With features like advanced
+        file preview capabilities, simplified content discovery through keyword-based
+        search, file-level comments for communication, and tasks and notifications
+        for collaboration processes, Box Platform be makin' app development
+        faster while reducin' security risks. It also boasts secure access
+        controls with granular permissions and comprehensive audit
+        trails to mitigate data loss. So if ye be lookin' to accelerate
+        yer development timelines without compromisin' on security
+        or compliance risk, give Box Platform a try!
+      spanish: Some spanish summary
+    doc:
+      formal: Formal doc summary
+      casual: Casual doc summary
+      funny: Funny doc summary
+      pirate: Pirate docs summary
+      spanish: Some spanish summary
+    ppx:
+      formal: Formal presentation summary
+      casual: Casual presentation summary
+      funny: Funny presentation summary
+      pirate: Pirate presentation summary
+      spanish: Some presentation spanish summary
+    error: Please try again
