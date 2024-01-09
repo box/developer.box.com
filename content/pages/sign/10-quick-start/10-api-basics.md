@@ -7,7 +7,7 @@ rank: 1
 
 ## Sign API
 
-The sign request endpoint is used to create and manage signature requests. 
+The Sign request endpoint is used to create and manage signature requests. 
 You can create, resend, and cancel signature requests. 
 You can also list all signature requests and get details 
 of a specific signature request.
@@ -28,7 +28,7 @@ request API reference][sign-api-reference].
 
 ## Sign templates API
 
-The sign templates endpoint is used to list and get details of a template.
+The Sign templates endpoint is used to list and get details of a template.
 You can not created, edit, or delete templates using the API. These templates 
 are exclusively managed in the Box web application.
 

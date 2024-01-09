@@ -14,12 +14,12 @@ related_endpoints:
 By default, the email sent to the signers contains a link to the document, a 
 generic subject, and a generic message.
 
-If you are using templates managed within Box, these can be set in the template 
-itself.
+If you are using templates managed within Box, the subject and message body can 
+be set in the template itself.
 
-However, if not using templates, you can still customize the email messages 
-sent to the signers by passing the `email_subject` and the `email_message` 
-parameters. 
+However, if you are not using templates, you can still customize the email 
+messages sent to the signers by passing the `email_subject` and the 
+`email_message` parameters. 
 
 Both parameters accept strings, however the `email_message` parameter 
 also accepts HTML with some limitations.
@@ -113,9 +113,9 @@ def main():
 
 ## Manual notification
 
-You probably notice by now that the signature request by default sends an email 
-notification to the signers. This email is sent from a `box.com` domain and 
-email system.
+You'll probably notice by now that the signature request by default sends an 
+email notification to the signers. This email is sent from a `box.com` domain 
+and email system.
 
 You can take over the notification process by setting the 
 `embed_url_external_user_id` parameter to an identifier of your choice for a 
@@ -126,7 +126,7 @@ and within the signature request, you get back both an `embed_url` and an
 `iframeable_embed_url`.
 
 The `embed_url` can be opened directly, so it is suitable for your app to send 
-it in an email, any other notifications system for the signer to open.
+it in an email, or by any other notifications system for the signer to open.
 
 The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign 
 Client][embed]. In essence you can embed the sign client on an iframe within 
@@ -262,7 +262,7 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 </Tab>
 </Tabs>
 
-You can now take the embedded URL's and use your own notification process or 
+You can now take the embedded URLs and use your own notification process or 
 embed the signature client within your own app.
 
 <Next>In person signatures</Next>
