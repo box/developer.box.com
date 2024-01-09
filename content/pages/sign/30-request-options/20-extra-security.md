@@ -17,7 +17,8 @@ the document for signature.
 
 ## Phone verification
 
-You can require the signer to use 2FA via phone, to access the document for signature by passing the `is_phone_verification_required_to_view` parameter. 
+You can require the signer to use 2FA via phone, to access the document for 
+signature by passing the `is_phone_verification_required_to_view` parameter. 
 For example:
 
 <Tabs>

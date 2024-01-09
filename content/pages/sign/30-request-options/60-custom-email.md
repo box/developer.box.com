@@ -17,7 +17,8 @@ generic subject, and a generic message.
 If you are using templates managed within Box, the subject and message body can 
 be set in the template itself.
 
-However, if you are not using templates, you can still customize the email messages sent to the signers by passing the `email_subject` and the 
+However, if you are not using templates, you can still customize the email 
+messages sent to the signers by passing the `email_subject` and the 
 `email_message` parameters. 
 
 Both parameters accept strings, however the `email_message` parameter 
