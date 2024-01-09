@@ -14,15 +14,15 @@ related_endpoints:
 What if you have a document that needs to be signed by multiple people? This is 
 typical of contracts between two or more entities.
 
-Having multiple signers introduces another dimension to the sign process, the 
-order in which the signers need to sign the document.
+Having multiple signers introduces another dimension to the Box Sign process, 
+the order in which the signers need to sign the document.
 
 If you do not specify the order, the request is sent to everyone at the same 
-time, and when all parties signed the document, they receive a copy with all 
-signatures.
+time, and when all parties have signed the document, they each receive a copy 
+with all signatures.
 
-If you specify the order, the send request is sent to the first signer, and 
-only when the first signer signs the document, the request is sent to the 
+If you specify the signing order, the send request is sent to the first signer, 
+and only when the first signer signs the document, the request is sent to the 
 second signer, and so on.
 
 Let’s see this working with an example contract between an university and a 
@@ -152,7 +152,7 @@ this:
 Indicating that the first request was sent, but the second is waiting for the 
 first to be completed.
 
-Go ahead and complete the sign process for both signers.
+Go ahead and complete the signature process for both signers.
 
 Notice that when you get the second request it is already signed by the first 
 signer.
@@ -160,7 +160,7 @@ signer.
 ## Roles
 
 So far we have been working with the `signer` role. However there are other 
-roles that you can use to customize the sign process.
+roles that you can use to customize the signature process.
 
 The available roles are, `signer`, `approver`, and `final copy reader`
 
@@ -187,7 +187,7 @@ This is what the flow looks like:
 
 ![Multiple signers and roles](images/sign-flow-multi-role.png)
 
-Lets create a method for this:
+Let's create a method for this:
 
 <Tabs>
 <Tab title='cURL'>
@@ -313,14 +313,14 @@ Like before we need to prepare the document, so open the prepare URL in your
 browser.
 
 Notice in the example the institution is represented by blue in the 
-left, and the student by green on the right, both are signers
+left, and the student by green on the right, and both are signers.
 
 Neither the `approver` nor the `final copy reader` can have inputs associated 
 with them. If you do this, their roles will be adjusted to `signer`:
 
 ![Multiple role preparation](images/sign_multi-steps-prep.png)
 
-Continuing the sign process:
+Continuing the signature process:
 
 - First the dean approves the scholarship
 - Next the institution signs the scholarship

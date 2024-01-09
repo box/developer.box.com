@@ -14,7 +14,7 @@ signature request.
 
 For example, imagine a quote for a service that is valid for 30 days. This 
 proposal has to be signed by a certain date, and if not, the signature request 
-is no longer valid.
+for the quote is no longer valid.
 
 All you need to do is pass the `days_valid` parameter.
 
