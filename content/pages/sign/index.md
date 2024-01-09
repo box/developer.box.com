@@ -34,19 +34,18 @@ sending signing requests through the Box Sign API. Learn how to tailor the
 signing experience to match your application's user interface, workflow, and 
 specific requirements.
 
-## Business Use Cases
+<!-- ## Business Use Cases
 
-The [Business use cases][advanced-use-cases] delves into a few of the business 
+The [Business use cases][[advanced-use-cases]] delves into a few of the business 
 use cases, requirements, and workflows you may encounter. See how the Box 
 Platform features come together to provide a seamless signing experience for 
-your users. 
+your users.  -->
 
 Lets get started!
 
 [quick-start]:page://sign/quick-start
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases
-[advanced-use-cases]:page://sign/advanced-use-cases
 
 <!-- 
 <Tabs>
