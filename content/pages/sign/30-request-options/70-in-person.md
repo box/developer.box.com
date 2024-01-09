@@ -33,7 +33,7 @@ to display the signature interface.
 
 ![In person signing](images/sign-flow-in-person.png)
 
-Lets see an example.
+Let's see an example.
 
 ## Create an in person signature request
 
