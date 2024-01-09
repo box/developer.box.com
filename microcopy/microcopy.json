@@ -194,6 +194,9 @@
   // The text for the link to the learn section
   "headers.primary.links.learn.text": "Learn Box Platform",
   "headers.primary.links.learn.url": "/platform/",
+  // The text for the link to the learn section
+  "headers.primary.links.learn-sign.text": "Learn Box Sign",
+  "headers.primary.links.learn-sign.url": "/sign/",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
