@@ -37,14 +37,14 @@ first signer, and then for the second signer, and so on.
 In order to use this within your application, you need to create a signature
 request with the `is_in_person` flag set to `true` for each signer.
 
-However because your application needs to show the sign interface to the
+However because your application needs to show the Sign interface to the
 signer, you also need to use the `embed_url_external_user_id`so that you get
-back the embedded URL's, and then either open a browser window or use an iframe
+back the embedded URLs, and then either open a browser window or use an iframe
 to display the signature interface.
 
 ![In person signing](images/sign-flow-in-person.png)
 
-Lets see an example.
+Let's see an example.
 
 ## Create an in person signature request
 

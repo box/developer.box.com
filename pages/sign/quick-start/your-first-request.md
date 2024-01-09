@@ -19,8 +19,8 @@ source_url: >-
 # Your first request
 
 Imagine that you have a document stored in Box and you want to send it to a
-customer for signature. At minimum your app will need to know what document to
-sign, where to store the signed document, and the signer email.
+customer for signature. At a minimum your app will need to know what document
+to sign, where to store the signed document, and the signer email.
 
 ## Creating a signature request
 
@@ -195,7 +195,7 @@ it.
 the signing email or visits the signing URL.
 - `downloaded`: The signing document was downloaded by signer.
 - `signed`: All signers completed the request.
-- `signed and downloaded`: The signing document was signed and downloaded by
+- `signed and downloaded`: The document was signed and downloaded by
 signer.
 - `declined`: If any signer declines the request.
 - `cancelled`: If the request is cancelled via UI or API.
@@ -203,17 +203,17 @@ signer.
 signatures.
 - `finalizing`: If all signers have signed the request,
 but the final document with signatures and the signing
-log has not been generated yet.
+log have not been generated yet.
 - `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
 ## Preparing the document
 
 Depending on your technical use case you may need to prepare the document. In
-this specific example, we are signing a PDF, and the Box sign engine has no
+this specific example, we are signing a PDF, and the Box Sign engine has no
 idea where to place the signature pad or any other inputs. This is why we used
 the `is_document_preparation_needed` flag.
 
-If a prepare URL is present, then your application should open the preparation
+If a prepare URL is present, then your application should open the prepare
 URL in a browser, where the requester can add the signature pad and any other
 inputs needed for the signer to complete the document.
 

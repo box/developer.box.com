@@ -16,8 +16,8 @@ source_url: >-
 ---
 # Quick start
 
-Get a sense of how the [Sign API][api-basics] is structured and how to create
-your first signature request.
+Get a sense of how the [Box Sign API][api-basics] is structured and how to
+create your first signature request.
 
 The Sign API does not follow the traditional CRUD model. You can create,
 resend, and cancel signature requests. You can also list all signature requests

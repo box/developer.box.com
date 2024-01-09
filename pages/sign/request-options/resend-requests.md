@@ -24,11 +24,11 @@ What if the signer did not receive the email? Or the email was lost? Or the
 signer deleted the email by mistake?
 
 You can resend the signature request email to the `signer` , either manually or
-turn on the automatic resend option.
+you can turn on the automatic resend option.
 
 ## Manual resend
 
-You can also manually resend the signature request email to the signer, by
+You can manually resend the signature request email to the signer, by
 calling the `resend_sign_request` method on the `sign_requests` object. This
 can only be done once every 10 minutes.
 
@@ -66,8 +66,8 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 ## Automatic resend
 
-The automatic resend option sends a reminder email to the signers that have not
-signed the document yet, after 3, 8, 13, and 18 days.
+The automatic resend option sends a reminder email to those signers that have
+not signed the document yet, after 3, 8, 13, and 18 days.
 
 To enable automatic resend all you need to do is set the
 `are_reminders_enabled` parameter to `true`. For example:

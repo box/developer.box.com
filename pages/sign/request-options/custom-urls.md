@@ -18,14 +18,14 @@ previous_page_id: sign/request-options/extra-security
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/30-custom-urls.md
 ---
-# Redirect URL’s
+# Redirect URLs
 
 Often after signing a document your company might want to redirect the user to
 a specific web page like a thank you or an onboarding page. There are two
 features to support these requirements.
 
-When the signer completes the process, they can be redirected to a web page.
-The same can happen when the signer declines the signature request.
+When the signer completes the signature process, they can be redirected to a
+web page. The same can happen when the signer declines the signature request.
 
 We can customize these pages by passing the `redirect_url` and
 `decline_redirect_url` parameters.
