@@ -29,7 +29,7 @@ use this type for their integrations.
 ## Name the app
 
 Choose an app name. It can be changed later on and it is not publicly
-visible until you publish your app. We recommend to choose a name that
+visible until you publish your app. We recommend choosing a name that
 is recognizable, as the admins and customers will see the name of
 the app when it's published.
 
@@ -64,7 +64,7 @@ have Box account, you can [create them][add-users] in your Developer Enterprise.
 
 Go to the **Configuration** tab. Here you can specify the app details,
 generate a developer token, check your OAuth 2.0 credentials, add and
-edit OAuth 2.0 redirect URI, choose the application scopes, app advanced
+edit OAuth 2.0 redirect URI, choose the application scopes, set app advanced
 features, and add CORS domains.
 
 In the next tabs you can create webhooks, web app integrations,
@@ -77,7 +77,7 @@ activity.
 You can now make some API calls to test your app and get to know the
 response format in Box.
 
-Use the developer token authenticated to your current developer account.
+Use the [developer token][dev-token] authenticated to your current developer account.
 
 <Message type='warning'>
 
@@ -96,6 +96,7 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [app-center]: g://applications/app-center
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
 [app-center]: https://cloud.app.box.com/app-center
+[dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token
 [postman-collection]: g://tooling/postman
 [api-ref]: https://developer.box.com/reference/
 [box-cli]: https://github.com/box/boxcli

@@ -15,7 +15,7 @@ Our documentation is divided into five main sections:
 usage of Box functionalities.
 - **API Reference**: A list of API endpoints and resources, with request
 and response examples.
-- **SDK and Tools**: Information about official Box SDKs and tooling.
+- **SDK and Tools**: A list of official Box SDKs and tools.
 - **Sample Code Catalog**: Consolidated list of several code repositories.
 
 If you are new to development with the Box API, first familiarize
