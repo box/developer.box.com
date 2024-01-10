@@ -11,7 +11,7 @@ alias_paths: []
 
 ## Overview
 
-It is a certification program that allows federal agencies to use cloud 
+FedRAMP is a certification program that allows federal agencies to use cloud 
 providers for increasingly secure/sensitive government or government-adjacent 
 data. 
 
@@ -20,45 +20,46 @@ and High.
 
 The higher the security level the more restrictions are in place.
 
-Box is already certified as [FedRAMP Moderate and High][FedRAMPCert].
+<!-- 
+Box is already certified as [FedRAMP Moderate and High][FedRAMPCert]. -->
 
-## Considerations
+<!-- ## Considerations
 
 In order to be FedRAMP High compliant, your administrator must setup Box in 
 very a very specific way. It is possible that the administrator has further 
 restricted access to Box functionalities.
 
 Consult with your administrator to identify security restrictions in place that 
-might affect the usage of the API.
+might affect the usage of the API. -->
 
-## API usage in FedRAMP High
+<!-- ## API usage in FedRAMP High
 
 For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects 
-all API's entry points.
+all API's entry points. -->
 
 <!-- markdownlint-disable line-length -->
-|FedRAMP Moderate |FedRAMP High       |
+<!-- |FedRAMP Moderate |FedRAMP High       |
 |-----------------|-------------------|
 |account.box.com  |account.box-gov.com|
 |api.box.com      |api.box-gov.com    |
 |upload.box.com   |upload.box-gov.com |
 |dl.boxcloud.com  |dl-frh.boxcloud.com|
-|realtime.services.box.net|realtime.services.box-gov.com|
+|realtime.services.box.net|realtime.services.box-gov.com| -->
 
 <!-- markdownlint-enable line-length -->
 
-## API Restrictions
+<!-- ## API Restrictions
 
 The following API entry points are not yet available for usage under FedRAMP 
-High configuration.
+High configuration. -->
 
 <!-- markdownlint-disable line-length -->
-|API Entry point |
+<!-- |API Entry point |
 |----------------|
 |/sign_requests|
 |/sign_requests/{sign_request_id}|
 |/sign_requests/{sign_request_id}/cancel|
-|/sign_requests/{sign_request_id}/resend|
+|/sign_requests/{sign_request_id}/resend| -->
 
 <!-- markdownlint-enable line-length -->
 
