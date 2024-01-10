@@ -34,8 +34,7 @@ might affect the usage of the API.
 
 ## API usage in FedRAMP
 
-For FedRAMP, Box uses a specific domain, `box-gov.com` and this affects 
-all API's entry points.
+For FedRAMP compliance, you may use the below URLs for API entry points.
 
 <!-- markdownlint-disable line-length -->
 |FedRAMP Moderate |
