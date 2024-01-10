@@ -16,8 +16,7 @@ Platform Sign engine into their applications.
 ## Quick start
 
 The [Quick start][quick-start] is tailored for developers who want to go 
-straight into the creation of a signature request. It offers an API overview, 
-and gets you strait to the creations of your first request.
+straight into the creation of a signature request.
 
 ## Technical use cases
 

@@ -46,7 +46,7 @@ The number in the tags refer to the signer number, so `[[c|1]]` is the checkbox
 for signer 1, `[[c|2]]` is the checkbox for signer 2, and so on, NOT the 
 signing order.
 
-Tag 0 is reserved for the sender, which always exist. So even if the sender 
+Tag 0 is reserved for the sender, which always exists. So even if the sender 
 does not need to input any data into the document, the other signers must start 
 with 1.
 
@@ -382,11 +382,11 @@ And the document now has the name pre-populated:
 
 ## Extract information from a signed document
 
-Lets say we want to extract the name of the signer, and the other properties 
+Let's say we want to extract the name of the signer, and the other properties 
 from the signed document. This is useful if you need to tie the information 
-from the sign request back into your systems.
+from the signature request back into your systems.
 
-Lets create a method to extract the information from the signed request:
+Let's create a method to extract the information from the signed request:
 
 <Tabs>
 <Tab title='cURL'>

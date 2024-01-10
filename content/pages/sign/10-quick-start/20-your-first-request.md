@@ -176,7 +176,7 @@ A signature request can have the following statuses:
 - `error_sending`: An issue was encountered while sending the request.
 - `viewed`: Once the first, or only, signer clicks on **Review document** in
   the signing email or visits the signing URL.
-- `downloaded`: The signing document was downloaded by signer.
+- `downloaded`: The document was downloaded by signer.
 - `signed`: All signers completed the request.
 - `signed and downloaded`: The document was signed and downloaded by
  signer.
@@ -193,12 +193,12 @@ A signature request can have the following statuses:
 
 Depending on your technical use case you may need to prepare the document. In 
 this specific example, we are signing a PDF, and the Box Sign engine has no 
-idea where to place the signature pad or any other inputs. This is why we used 
-the `is_document_preparation_needed` flag.
+idea where to place the signature pad field or any other inputs. This is why we 
+used the `is_document_preparation_needed` flag.
 
 If a prepare URL is present, then your application should open the prepare  
-URL in a browser, where the requester can add the signature pad and any other 
-inputs needed for the signer to complete the document.
+URL in a browser, where the requester can add the signature pad field and any 
+other inputs needed for the signer to complete the document.
 
 Once the document is prepared, the requester can send the signature request to 
 the signer.
