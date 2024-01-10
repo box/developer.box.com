@@ -287,7 +287,7 @@
   // A label to expand the code, making it full screen
   "explorer.buttons.expand": "拡大",
   // A label to collapse a viewing, making it smaller.
-  "explorer.buttons.collapse": "縮小",
+  "explorer.buttons.collapse": "折りたたむ",
   // Provides a short intro to the API explorer
   "explorer.messages.intro": "このドキュメント内で一部のAPIを試せるようになりました。",
   // Short 1-sentence message to tell a user to fill in all params
