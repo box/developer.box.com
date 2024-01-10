@@ -4,7 +4,8 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths: 
+  - /guides/security/fedramp-high/
 ---
 
 # FedRAMP
@@ -20,31 +21,30 @@ and High.
 
 The higher the security level the more restrictions are in place.
 
-<!-- 
-Box is already certified as [FedRAMP Moderate and High][FedRAMPCert]. -->
+Box is currently certified as [FedRAMP Moderate][FedRAMPCert].
 
-<!-- ## Considerations
+## Considerations
 
-In order to be FedRAMP High compliant, your administrator must setup Box in 
+In order to be FedRAMP compliant, your administrator must setup Box in 
 very a very specific way. It is possible that the administrator has further 
 restricted access to Box functionalities.
 
 Consult with your administrator to identify security restrictions in place that 
-might affect the usage of the API. -->
+might affect the usage of the API.
 
-<!-- ## API usage in FedRAMP High
+## API usage in FedRAMP
 
-For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects 
-all API's entry points. -->
+For FedRAMP, Box uses a specific domain, `box-gov.com` and this affects 
+all API's entry points.
 
 <!-- markdownlint-disable line-length -->
-<!-- |FedRAMP Moderate |FedRAMP High       |
-|-----------------|-------------------|
-|account.box.com  |account.box-gov.com|
-|api.box.com      |api.box-gov.com    |
-|upload.box.com   |upload.box-gov.com |
-|dl.boxcloud.com  |dl-frh.boxcloud.com|
-|realtime.services.box.net|realtime.services.box-gov.com| -->
+|FedRAMP Moderate |
+|-----------------|
+|account.box.com  |
+|api.box.com      |
+|upload.box.com   |
+|dl.boxcloud.com  |
+|realtime.services.box.net|
 
 <!-- markdownlint-enable line-length -->
 
@@ -138,6 +138,7 @@ and resources without hard-coding the locale.
 [Get a file by ID][endpoint://get-files-id]
 
 [File resource][resource://file]
+
 -->
 
-[FedRAMPCert]:https://marketplace.fedramp.gov/#!/product/box-enterprise-cloud-content-collaboration-platform/versus/box-enterprise-cloud-content-collaboration-platform---high?sort=productName&productNameSearch=box
+[FedRAMPCert]:https://marketplace.fedramp.gov/products/F1212191840
