@@ -21,15 +21,15 @@ source_url: >-
 # Extra security (2FA)
 
 Imagine you want an additional layer of security for your signature requests,
-by requesting the signer to use a phone verification or a password to access
-the document for signature.
+by requesting the signer to use a password or a  phone verification.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
 
 ## Phone verification
 
-You can require the signer to use 2FA via phone, to access the document for
-signature by passing the `is_phone_verification_required_to_view` parameter.
+You can require the signer to use 2FA via phone, to complete the signature
+request by passing the `is_phone_verification_required_to_view` parameter.
+
 For example:
 
 <Tabs>
@@ -118,8 +118,8 @@ def main():
 
 </Tabs>
 
-When the signer tries to open the signature request the signer should see
-something like this:
+When the signer tries to complete the signature request a phone verification
+pops up:
 
 ![Phone verification](images/sign-simple-phone-verification.png)
 
@@ -127,11 +127,13 @@ Then the signer is prompted to enter the code sent via SMS:
 
 ![Entering the SMS code](images/sign-simple-phone-verification-enter-code.png)
 
+Note that this check is done on the last step, so it does not prevent the
+signer from accessing the document.
+
 ## Password verification
 
-You can also require the signer to use a password to complete signing the
-document by passing the `password` parameter in the `signer` object. For
-example:
+You can also require the signer to use a password to open the signature request
+by passing the `password` parameter in the `signer` object. For example:
 
 <Tabs>
 
@@ -221,6 +223,9 @@ def main():
 Once you open the signature request you should see something like this:
 
 ![Password verification](images/sign-simple-password.png)
+
+Note the password verification is done on the first step, so it prevents the
+signer from accessing the document.
 
 <Next>
 

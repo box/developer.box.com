@@ -40,7 +40,7 @@ request API reference][sign-api-reference].
 ## Sign templates API
 
 The Sign templates endpoint is used to list and get details of a template.
-You can not created, edit, or delete templates using the API. These templates
+You can not create, edit, or delete templates using the API. These templates
 are exclusively managed in the Box web application.
 
 The endpoint is `https://{api.box.com}/2.0/sign_templates`.

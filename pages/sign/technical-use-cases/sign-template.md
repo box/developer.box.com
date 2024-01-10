@@ -22,10 +22,10 @@ A Box Sign template is a specific type of document that not only contains the
 text, but also the signature requirements and placement.
 
 Essentially a Box Sign template is a document that is prepared for signing in
-advanced, and as such can be sent directly to the signer or signers.
+advance, and as such can be sent directly to the signer or signers.
 
-Required fields include the signature pad, the full name, the date, and many
-more options.
+Required fields include the signature pad field, the full name, the date, and
+many more options.
 
 These fields have an owner, meaning they are populated by the signer and can
 not be shared between them. They can be `mandatory` or `optional` , and be
