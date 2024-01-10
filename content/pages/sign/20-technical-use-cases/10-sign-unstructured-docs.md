@@ -172,7 +172,7 @@ then apply the different signature properties, for example:
 Once the document is prepared, the requester can send the signature request to 
 the signer.
 
-Back in the Box app you can see the status of the as `In Progress`.
+Back in the Box app you can see the status as `In Progress`.
 
 ![Pending signature request](images/sign-request-pending.png)
 
