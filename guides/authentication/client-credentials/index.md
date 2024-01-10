@@ -65,7 +65,7 @@ APIコールを実行して[アクセストークン][accesstoken]を取得す�
 
 ### Grant credentials are invalid (許可の資格情報が無効です)
 
-During authentication, you can encounter the following error:
+認証中に、次のエラーが表示される場合があります。
 
 <!-- markdownlint-disable line-length -->
 
@@ -76,17 +76,17 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 このエラーは次のいずれかを示します。
 
-* the client ID and client secret passed are incorrect or are not for the same application,
+* 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない。
 
-* the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned,
+* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない。たとえば、送信時に`enterprise`を`box_subject_type`に設定し、アプリケーションが \[アプリアクセスのみ] に設定されている場合、`grant credentials are invalid`エラーが返されます。
 
-* to use a `box_subject_type` of `user`, your application should be configured\
-  to generate user access tokens in the **Advanced Features** section of the **Configuration tab**.
-  ![Generate access tokens check](../images/generate-access-tokens.png)
+* `box_subject_type`に`user`を設定するには、\
+  \[**構成**] タブの \[**高度な機能**] セクションでユーザーアクセストークンを生成するようアプリケーションを設定する必要があります。
+  ![アクセストークンの生成のチェックボックス](../images/generate-access-tokens.png)
 
 <Message warning>
 
-Once you make changes to the app settings, don't forget to [reauthorize][reauth] the application in the Admin Console.
+アプリの設定に変更を加えたら、忘れずに管理コンソールでアプリケーションを[再承認][reauth]してください。
 
 </Message>
 
