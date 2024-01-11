@@ -4,11 +4,12 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/security/fedramp-high/
 category_id: security
 subcategory_id: null
 is_index: false
-id: security/fedramp-high
+id: security/fedramp
 type: guide
 total_steps: 3
 sibling_id: security
@@ -16,13 +17,13 @@ parent_id: security
 next_page_id: security/cors
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp-high.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp.md
 ---
 # FedRAMP
 
 ## Overview
 
-It is a certification program that allows federal agencies to use cloud
+FedRAMP is a certification program that allows federal agencies to use cloud
 providers for increasingly secure/sensitive government or government-adjacent
 data.
 
@@ -31,47 +32,38 @@ and High.
 
 The higher the security level the more restrictions are in place.
 
-Box is already certified as [FedRAMP Moderate and High][FedRAMPCert].
+Box is currently certified as [FedRAMP Moderate][FedRAMPCert].
 
 ## Considerations
 
-In order to be FedRAMP High compliant, your administrator must setup Box in
+In order to be FedRAMP compliant, your administrator must setup Box in
 very a very specific way. It is possible that the administrator has further
 restricted access to Box functionalities.
 
 Consult with your administrator to identify security restrictions in place that
 might affect the usage of the API.
 
-## API usage in FedRAMP High
+## API usage in FedRAMP
 
-For FedRAMP high, Box uses a specific domain, `box-gov.com` and this affects
-all API's entry points.
+For FedRAMP compliance, you may use the below URLs for API entry points.
 
 <!-- markdownlint-disable line-length -->
 
-|FedRAMP Moderate |FedRAMP High       |
-|-----------------|-------------------|
-|account.box.com  |account.box-gov.com|
-|api.box.com      |api.box-gov.com    |
-|upload.box.com   |upload.box-gov.com |
-|dl.boxcloud.com  |dl-frh.boxcloud.com|
-|realtime.services.box.net|realtime.services.box-gov.com|
+|FedRAMP Moderate |
+|-----------------|
+|account.box.com  |
+|api.box.com      |
+|upload.box.com   |
+|dl.boxcloud.com  |
+|realtime.services.box.net|
 
 <!-- markdownlint-enable line-length -->
 
-## API Restrictions
-
-The following API entry points are not yet available for usage under FedRAMP
-High configuration.
+<!-- ## API Restrictions  The following API entry points are not yet available for usage under FedRAMP High configuration. -->
 
 <!-- markdownlint-disable line-length -->
 
-|API Entry point |
-|----------------|
-|/sign_requests|
-|/sign_requests/{sign_request_id}|
-|/sign_requests/{sign_request_id}/cancel|
-|/sign_requests/{sign_request_id}/resend|
+<!-- |API Entry point | |----------------| |/sign_requests| |/sign_requests/{sign_request_id}| |/sign_requests/{sign_request_id}/cancel| |/sign_requests/{sign_request_id}/resend| -->
 
 <!-- markdownlint-enable line-length -->
 
@@ -159,6 +151,7 @@ and resources without hard-coding the locale.
 [Get a file by ID][endpoint://get-files-id]
 
 [File resource][resource://file]
+
 -->
 
-[FedRAMPCert]:https://marketplace.fedramp.gov/#!/product/box-enterprise-cloud-content-collaboration-platform/versus/box-enterprise-cloud-content-collaboration-platform---high?sort=productName&productNameSearch=box
+[FedRAMPCert]:https://marketplace.fedramp.gov/products/F1212191840
