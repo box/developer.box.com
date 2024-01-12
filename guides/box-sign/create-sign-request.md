@@ -23,6 +23,14 @@ document/[signing log][log], and signers.
 
 </Samples>
 
+<Message type='warning'>
+
+Creation of the CFR Part 11 signature requests with public API
+is not supported. See [21 CFR Part 11 Compliance Support][CFR]
+for more information.
+
+</Message>
+
 ## Document preparation
 
 Preparing a document prior to sending a Box Sign request allows developers to
@@ -229,3 +237,4 @@ Encountering an error status requires creating a new sign request to retry.
 [externalid]: e://post-sign-requests#param-signers-embed_url_external_user_id
 [cloudgame]: g://embed/box-embed#cloud-game
 [templates]: g://box-sign/sign-templates
+[CFR]: https://support.box.com/hc/en-us/articles/24169443030163
