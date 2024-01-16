@@ -60,4 +60,3 @@ and view Platform Insights:
 [enablement]: g://authorization/custom-app-approval#user-authentication-apps
 [select]: g://applications/app-types/select
 [insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights
-
