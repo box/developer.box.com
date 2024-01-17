@@ -64,13 +64,13 @@ case, the event trigger is `NO_ACTIVE_SESSION`.
 
 ### JWT Auth
 
-For webhooks created with the JWT Auth app, the session is expired when
+For webhooks created with the JWT Auth app, the session expires when
 you delete the app authorization for this app in the Admin Console.
 For more information, see [application authorization guide][app authorization].
 
 ### OAuth 2.0
 
-For webhooks created with OAuth 2.0 Auth app, the session is expired
+For webhooks created with OAuth 2.0 Auth app, the session expires
 when both the access token and the refresh token for the user and app
 used for creating that webhook expire.
 
