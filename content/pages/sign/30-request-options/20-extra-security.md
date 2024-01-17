@@ -9,8 +9,8 @@ related_endpoints:
 
 # Extra security (2FA)
 
-Imagine you want an [additional layer of security][2FA] for your signature requests, 
-by requesting the signer to use a password or a  phone verification.
+Imagine you want an [additional layer of security][2FA] for your signature 
+requests, by requesting the signer to use a password or a  phone verification.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
 

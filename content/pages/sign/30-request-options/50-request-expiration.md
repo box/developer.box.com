@@ -9,8 +9,8 @@ related_endpoints:
 
 # Request expiration
 
-There are situations where you might need to [set an expiration date][exp-date] for the 
-signature request.
+There are situations where you might need to [set an expiration date][exp-date] 
+for the signature request.
 
 For example, imagine a quote for a service that is valid for 30 days. This 
 proposal has to be signed by a certain date, and if not, the signature request 

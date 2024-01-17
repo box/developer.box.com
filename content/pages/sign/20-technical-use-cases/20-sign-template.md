@@ -7,8 +7,8 @@ related_guides:
 
 # Signing using templates
 
-A [Box Sign template][template] is a specific type of document that not only contains the 
-text, but also the signature requirements and placement.
+A [Box Sign template][template] is a specific type of document that not only 
+contains the text, but also the signature requirements and placement.
 
 Essentially a Box Sign template is a document that is prepared for signing in 
 advance, and as such can be sent directly to the signer or signers.
