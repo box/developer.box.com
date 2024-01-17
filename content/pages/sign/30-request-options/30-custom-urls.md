@@ -1,10 +1,6 @@
 ---
 centered: true
 rank: 3
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Redirect URLs
@@ -100,5 +96,3 @@ def main():
 
 If you sign you’ll be redirected to our forum page. If you decline you’ll be 
 redirected to our developer page.
-
-<Next>Resend requests</Next>

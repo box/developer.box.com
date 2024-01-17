@@ -1,10 +1,6 @@
 ---
 centered: true
 rank: 5
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Request expiration
@@ -75,7 +71,5 @@ def sign_doc_single_more_options(
 
 </Tab>
 </Tabs>
-
-<Next>Custom emails</Next>
 
 [exp-date]: https://support.box.com/hc/en-us/articles/4404105810195-Sending-a-document-for-signature#:~:text=Step%205%3A%20Setting%20an%20expiration
