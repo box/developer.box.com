@@ -10,8 +10,8 @@ rank: 0
 </ImageFrame>
 
 This learning page is dedicated to providing developers with practical insights 
-into working with Box Sign, aiming to facilitate the integration of the Box 
-Platform Sign engine into their applications.
+into working with [Box Sign][sign], aiming to facilitate the integration of the
+Box Platform Sign engine into their applications.
 
 ## Quick start
 
@@ -42,6 +42,7 @@ your users.  -->
 
 Lets get started!
 
+[sign]: https://www.box.com/esignature
 [quick-start]:page://sign/quick-start
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases

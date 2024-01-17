@@ -36,7 +36,7 @@ The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag
 assigned to signer 1, with the label `enter your complete name`, and using an 
 id of `tag_full_name`.
 
-Check out this [support note][support-tags] for a complete description of all 
+Check out this [document][support-tags] for a complete description of all 
 the tags available.
 
 Setting the tags to the same `color` as the background will make them 

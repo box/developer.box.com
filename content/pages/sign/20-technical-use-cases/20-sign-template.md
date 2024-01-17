@@ -7,7 +7,7 @@ related_guides:
 
 # Signing using templates
 
-A Box Sign template is a specific type of document that not only contains the 
+A [Box Sign template][template] is a specific type of document that not only contains the 
 text, but also the signature requirements and placement.
 
 Essentially a Box Sign template is a document that is prepared for signing in 
@@ -647,5 +647,6 @@ signature tags that can be used by the Box Sign engine. Take a look at our
 
 <Next>Signing structured docs</Next>
 
+[template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
 [request-options]:page://sign/request-options
 [structured-docs]:page://sign/technical-use-cases/sign-structured-docs

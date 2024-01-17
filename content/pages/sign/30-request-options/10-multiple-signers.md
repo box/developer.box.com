@@ -159,8 +159,8 @@ signer.
 
 ## Roles
 
-So far we have been working with the `signer` role. However there are other 
-roles that you can use to customize the signature process.
+So far we have been working with the `signer` role. However there are [other 
+roles][roles] that you can use to customize the signature process.
 
 The available roles are, `signer`, `approver`, and `final copy reader`
 
@@ -328,3 +328,5 @@ Continuing the signature process:
 - Finally the legal department receives a copy of the signed document.
 
 <Next>Extra security</Next>
+
+[roles]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers
