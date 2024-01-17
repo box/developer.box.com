@@ -56,6 +56,30 @@ V2 webhooks cannot be created on the root folder, which is the folder with ID
   no notification is sent for the attempted action.
 </Message>
 
+## `NO_ACTIVE_SESSION` is set in the webhook payload
+
+If the auth session (access token) for the app you used to create a webhook
+expires, that webhook no longer sends events with a full payload. In that
+case, the event trigger is `NO_ACTIVE_SESSION`.
+
+### JWT Auth
+
+For webhooks created with the JWT Auth app, the session expires when
+you delete the app authorization for this app in the Admin Console.
+For more information, see [application authorization guide][app authorization].
+
+### OAuth 2.0
+
+For webhooks created with OAuth 2.0 Auth app, the session expires
+when both the access token and the refresh token for the user and app
+used for creating that webhook expire.
+
+### Developer token
+
+As the developer token cannot be refreshed and expires after 1 hour,
+the event trigger `NO_ACTIVE_SESSION` is set in the webhook payload
+after 1 hour.
+
 ## Reasons for webhook deletion
 
 The following reasons can cause webhooks to be deleted.
@@ -80,3 +104,4 @@ includes the following additional information.
 
 [v1]: g://webhooks/v1
 [update]: g://webhooks/v2/update-v2
+[app authorization]: https://support.box.com/hc/en-us/articles/360043697014-Authorizing-Apps-in-the-Box-App-Approval-Process

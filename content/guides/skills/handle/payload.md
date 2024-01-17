@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides: []
 related_pages: []
 required_guides:
-  - applications/custom-skills
+  - applications/app-types/custom-skills
 related_resources:
   - skill_invocation
 alias_paths: []
