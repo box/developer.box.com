@@ -48,7 +48,7 @@ Then, navigate to the **Integrations** tab and click
 
 <ImageFrame center shadow border>
 
-![Integration Tab](../images/create_integration.png)
+![Integration Tab](./images/create_integration.png)
 
 </ImageFrame>
 

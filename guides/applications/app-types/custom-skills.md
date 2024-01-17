@@ -13,10 +13,10 @@ subcategory_id: applications/app-types
 is_index: false
 id: applications/app-types/custom-skills
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: applications/app-types
 parent_id: applications/app-types
-next_page_id: applications/app-types/app-insights
+next_page_id: ''
 previous_page_id: applications/app-types/limited-access-apps
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-types/custom-skills.md
