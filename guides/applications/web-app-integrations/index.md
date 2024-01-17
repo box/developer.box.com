@@ -35,7 +35,7 @@ through [Recommended Apps][recommended-apps], which show up in Box Preview.
 
 <ImageFrame border shadow width='600' center>
 
-![Integration example](../images/recommended-apps-preview.png)
+![Integration example](./images/recommended-apps-preview.png)
 
 </ImageFrame>
 
