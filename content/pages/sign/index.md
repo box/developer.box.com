@@ -39,7 +39,7 @@ use cases, requirements, and workflows you may encounter. See how the Box
 Platform features come together to provide a seamless signing experience for 
 your users.  -->
 
-Lets get started!
+Let's get started!
 
 [sign]: https://www.box.com/esignature
 [quick-start]:page://sign/quick-start
