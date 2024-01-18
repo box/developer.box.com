@@ -17,38 +17,38 @@ source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/si
 
 <ImageFrame center>
 
-![](images/working-with-box-sign.png)
+![Working with box sign image](images/working-with-box-sign.png)
 
 </ImageFrame>
 
-This learning page is dedicated to providing developers with practical insights
-into working with Box Sign, aiming to facilitate the integration of the Box
-Platform Sign engine into their applications.
+This learning page provides developers with practical insights
+into working with [Box Sign][sign], aiming to facilitate the integration of the
+Box Platform Sign engine into their applications.
 
 ## Quick start
 
-The [Quick start][quick-start] is tailored for developers who want to go
-straight into the creation of a signature request.
+Use the [Quick start][quick-start] to go straight into the creation of a
+signature request.
 
 ## Technical use cases
 
 In the [Technical use cases][technical-use-cases], you will learn how to handle
-the different type of documents that can be used in a signature request. From
-unstructured documents that require a preparation step, to templates, and even
+the different type of documents that can be used in a signature request: from
+unstructured documents that require a preparation step, through templates, to
 generated ready to sign documents.
 
 ## Request Options
 
-In the [Request options][request-options], developers will find a detailed
-exploration of the available customization and configuration options when
-sending signing requests through the Box Sign API. Learn how to tailor the
-signing experience to match your application's user interface, workflow, and
-specific requirements.
+In the [Request options][request-options], you will find a detailed exploration
+of the available customization and configuration options when sending signing
+requests through the Box Sign API. Learn how to tailor the signing experience
+to match your application's user interface, workflow, and specific requirements.
 
 <!-- ## Business Use Cases  The [Business use cases][[advanced-use-cases]] delves into a few of the business use cases, requirements, and workflows you may encounter. See how the Box Platform features come together to provide a seamless signing experience for your users.  -->
 
-Lets get started!
+Let's get started!
 
+[sign]: https://www.box.com/esignature
 [quick-start]:page://sign/quick-start
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases

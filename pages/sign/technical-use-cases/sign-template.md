@@ -1,8 +1,6 @@
 ---
 centered: true
 rank: 2
-related_guides:
-  - box-sign/sign-templates
 category_id: sign
 subcategory_id: sign/20-technical-use-cases
 is_index: false
@@ -18,17 +16,16 @@ source_url: >-
 ---
 # Signing using templates
 
-A Box Sign template is a specific type of document that not only contains the
-text, but also the signature requirements and placement.
+A [Box Sign template][template] is a specific type of document that not only
+contains the text, but also the signature requirements and placement. It is
+prepared for signing in advance, and as such can be sent directly to the signer
+or signers.
 
-Essentially a Box Sign template is a document that is prepared for signing in
-advance, and as such can be sent directly to the signer or signers.
+Required fields include, for example, the signature pad field, the full name,
+the date.
 
-Required fields include the signature pad field, the full name, the date, and
-many more options.
-
-These fields have an owner, meaning they are populated by the signer and can
-not be shared between them. They can be `mandatory` or `optional` , and be
+These fields have an owner, meaning they are populated by a specific signer and
+can not be shared between them. They can be `mandatory` or `optional` , and be
 pre-populated by your application. However even if pre-populated, they can
 always be changed by the `signer`.
 
@@ -199,14 +196,16 @@ Sign templates: 1
 ## Creating a signature request from a template
 
 The big advantage of using templates is that we do not need to worry about
-document preparation. Most of the signature options can be already set in the
+document preparation. Most of the signature options can be set in the
 template it self.
 
 This is how the flow would look like:
 
 ![Signing using a template](images/sign-flow-template.png)
+Using a signature template, create the signature request, and finally sign the
+document.
 
-Consider this example:
+See this example:
 
 <Tabs>
 
@@ -331,36 +330,35 @@ Simple sign request: b25674a2-540b-4201-ae18-a78f05ef1a9a
 
 </Tabs>
 
-The signer will receive an email from Box.com with a link to the document, and
-will be able to sign it.
+The signer receives an email from Box.com with a link to the document, and
+can sign it.
 
 <Message size='small'>
 
-Notice that there was no document preparation required, since the template
-already had the signature requirements, but the date was automatically
-populated with the current date.
+Since the template already had the signature requirements, the document
+preparation was not needed. Notice the date was automatically populated with
+the current date.
 
 </Message>
 
 ## Pre-populate the signature attributes
 
 From a usability perspective, it is a good idea to pre-populate the inputs you
-require from your users, to reduce some of the friction.
+require from your users.
 
 <Message size='small'>
 
-Please note that some inputs maybe intentionally left unpopulated. For example,
-suppose your legal department specifies that the “Yes, I agree” must be
-explicitly set by the signer.
+Some inputs maybe intentionally left unpopulated. For example, when your legal
+department specifies that the “Yes, I agree”field must be explicitly set by the signer.
 
 </Message>
 
-Using the Box app sign template editor, we can assign an `external_id` to each
-of the inputs, and have our app populate them from any data source.
+Using the Box app sign template editor, you can assign an `external_id` to each
+of the inputs, and have the app populate them from any data source.
 
 Let’s implement this for the name.
 
-Go back to the template design and add an id to the name field, like so:
+Go back to the template design and add an id to the name field:
 
 ![Assigning a tag id to a signature property input](images/sign-template-add-id-to-name-prop.png)
 
@@ -518,14 +516,12 @@ Open the signer inbox and complete the sign request.
 
 ![Signing the document](images/sign-template-name-populated.png)
 
-Notice that the name is now pre-populated. However the `signer` can still
-change it.
+The name is now pre-populated, but the `signer` can still change it.
 
 ## Get more information about a template
 
-We’ve seen that we can list the templates available to a user.
-
-But we can also get more information about a specific template.
+You've seen that you can list the templates available to a user. But you can
+also get more information about a specific template.
 
 Let’s create a method that returns basic information of a template, but details
 all the signature requirements:
@@ -658,10 +654,14 @@ Sign template: 94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
 
 </Tabs>
 
+<Message size='small'>
+
 Notice that the `signer_full_name` is the `tag_id` we used to pre-populate the
 name.
 
-## Final thoughts
+</Message>
+
+## Summary
 
 Templates are a form of signing structured documents where the signature
 requirements are already defined, and placed on the document.
@@ -670,21 +670,14 @@ This not only keeps your contract management team happy, but it also creates a
 consistent and low level of effort process for your users.
 
 Finally if your document signature requirements have a lot of options, you can
-pre-populate these from another data source and save the user some time. But
-please remember that the user who owns these properties can always change them.
+pre-populate these from another data source and save the user some time.
+Remember that the user who owns these properties can always change them.
 
 There is no API entry point to create a template, so you will have to create
-and manage them manually from the Box app.
-
-However there is a workaround for that, if the document already includes
+and manage them manually from the Box app, unless the document already includes
 signature tags that can be used by the Box Sign engine. Take a look at our
 [Structured Docs][structured-docs] section for more information.
 
-<Next>
-
-Signing structured docs
-
-</Next>
-
+[template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
 [request-options]:page://sign/request-options
 [structured-docs]:page://sign/technical-use-cases/sign-structured-docs

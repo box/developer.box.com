@@ -1,10 +1,6 @@
 ---
 centered: true
 rank: 5
-related_guides:
-  - box-sign
-related_endpoints:
-  - post_sign_requests
 category_id: sign
 subcategory_id: sign/30-request-options
 is_index: false
@@ -20,8 +16,8 @@ source_url: >-
 ---
 # Request expiration
 
-There are situations where you might need to set an expiration date for the
-signature request.
+There are situations where you might need to [set an expiration date][exp-date]
+for the signature request.
 
 For example, imagine a quote for a service that is valid for 30 days. This
 proposal has to be signed by a certain date, and if not, the signature request
@@ -90,8 +86,4 @@ def sign_doc_single_more_options(
 
 </Tabs>
 
-<Next>
-
-Custom emails
-
-</Next>
+[exp-date]: https://support.box.com/hc/en-us/articles/4404105810195-Sending-a-document-for-signature#:~:text=Step%205%3A%20Setting%20an%20expiration

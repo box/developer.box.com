@@ -34,14 +34,19 @@ The following table lists the operations that you can perform on this endpoint.
 | POST | /sign_requests/:id/resend | Resend a signature request. |
 | POST | /sign_requests/:id/cancel | Cancel a signature request. |
 
-For a full details on the request and response parameters, see the [Sign
+For full details on the request and response parameters, see the [Sign
 request API reference][sign-api-reference].
 
 ## Sign templates API
 
 The Sign templates endpoint is used to list and get details of a template.
+
+<Message type='notice'>
+
 You can not create, edit, or delete templates using the API. These templates
 are exclusively managed in the Box web application.
+
+</Message>
 
 The endpoint is `https://{api.box.com}/2.0/sign_templates`.
 The following table lists the operations that you can perform on this endpoint.
@@ -53,12 +58,6 @@ The following table lists the operations that you can perform on this endpoint.
 
 For a full details on the request and response parameters, see the [Sign
 template request API reference][sign-api-template-ref]
-
-<Next>
-
-First request
-
-</Next>
 
 [sign-api-reference]:https://developer.box.com/reference/resources/sign-request/
 [sign-api-template-ref]:https://developer.box.com/reference/resources/sign-template/

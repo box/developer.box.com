@@ -1,8 +1,6 @@
 ---
 centered: true
 rank: 2
-related_guides:
-  - box-sign
 category_id: sign
 subcategory_id: sign/10-quick-start
 is_index: false
@@ -19,13 +17,13 @@ source_url: >-
 # Your first request
 
 Imagine that you have a document stored in Box and you want to send it to a
-customer for signature. At a minimum your app will need to know what document
+customer for signature. At a minimum your app needs to know what document
 to sign, where to store the signed document, and the signer email.
 
 ## Creating a signature request
 
 You can use the Box Sign API or one of the available SDK's to create a
-signature request. Consider this example:
+signature request. See the example:
 
 <Tabs>
 
@@ -174,9 +172,9 @@ Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 
 ## Check the status of the signature request
 
-The signature request is an asynchronous process, and can generate errors.
-Your application should check the status of the request before proceeding, and
-handle any errors.
+Creating the signature request is an asynchronous process, and can generate
+errors. Your application should check the status of the request before
+proceeding, and handle any errors.
 
 A signature request can have the following statuses:
 
@@ -184,16 +182,16 @@ A signature request can have the following statuses:
 
 - `converting`: The file is converted to a `.pdf` for the signing process once
 the sign request is sent.
-- `error_converting`: An issue was encountered while converting the file to a
+- `error_converting`: An issue occurred while converting the file to a
 `.pdf`.
-- `created`: If `document_preparation_is_needed` is set to `true`, but the
+- `created`: When the `document_preparation_is_needed` is set to `true`, but the
 `prepare_url` has not yet been visited.
 - `sent`: The request was successfully sent, but no signer has interacted with
 it.
-- `error_sending`: An issue was encountered while sending the request.
-- `viewed`: Once the first, or only, signer clicks on **Review document** in
-the signing email or visits the signing URL.
-- `downloaded`: The document was downloaded by signer.
+- `error_sending`: An issue occurred while sending the request.
+- `viewed`: The first, or only, signer clicked on **Review document** in
+the signing email or visited the signing URL.
+- `downloaded`: The document was downloaded by the signer.
 - `signed`: All signers completed the request.
 - `signed and downloaded`: The document was signed and downloaded by
 signer.
@@ -201,10 +199,10 @@ signer.
 - `cancelled`: If the request is cancelled via UI or API.
 - `expired`: The date of expiration has passed with outstanding, incomplete
 signatures.
-- `finalizing`: If all signers have signed the request,
+- `finalizing`: All signers have signed the request,
 but the final document with signatures and the signing
 log have not been generated yet.
-- `error_finalizing`: If the `finalizing` phase did not complete successfully.
+- `error_finalizing`: The `finalizing` phase did not complete successfully.
 
 ## Preparing the document
 
@@ -235,7 +233,7 @@ Congratulations! You have successfully created your first signature request.
 
 <Message type='notice'>
 
-This represents the simplest use case for Box Sign. The create method has many
+This represents the basic use case for Box Sign. The `create` method has many
 options that you can use to customize your signature request.
 
 Be sure to check the [request options][request-options], and the
@@ -243,12 +241,6 @@ Be sure to check the [request options][request-options], and the
 information.
 
 </Message>
-
-<Next>
-
-Technical use cases
-
-</Next>
 
 [request-options]:page://sign/request-options
 [technical-use-cases]:page://sign/technical-use-cases
