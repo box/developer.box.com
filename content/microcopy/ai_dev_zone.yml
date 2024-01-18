@@ -7,11 +7,12 @@ files:
   headline: Sample files
   labels:
     doc: Document
-    doc_name: Sample_Book.doc
-    pdf: Invoice
+    doc_name: Sample_Article.doc
+    pdf: Document
     pdf_name: Sample_Document.pdf
     presentation: Presentation
     presentation_name: Sample_presentation.ppx
+  go_back_button: AI Dev Zone
 
 sample_code:
   headline: Box AI API
@@ -30,5 +31,16 @@ document_summary:
   instruction: Select a length and tone of voice to generate a document summary
   clear: Clear
   generate: Generate summary
-  label: Tone of voice
+  tone_of_voice: Tone of voice
+  length: Length
   summaryError: Please try again
+
+summary_filters:
+  formal: Formal
+  casual: Casual
+  funny: Funny
+  pirate: Pirat
+  short: Short
+  sentence: One sentence
+  paragraph: One paragraph
+  characters: 500 characters
