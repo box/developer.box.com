@@ -1,16 +1,14 @@
 ---
 centered: true
 rank: 3
-related_guides:
-    - box-sign
 ---
 
 # Signing structured docs
 
 A structured document in the context of Box Sign is a document that includes 
 specific tags that can be recognized by the Box Sign API. These tags are used 
-to place the signature properties, like name, date, signature, etc., in the 
-document, associated with a specific signer.
+to place the signature properties associated with a specific signer in the 
+document, such as name, date, and signature.
 
 This allows your app to handle a dynamic generated document that is ready to be 
 signed, which has a couple of advantages:
@@ -24,7 +22,8 @@ higher flexibility and integration with external document management systems.
 
 ## Anatomy of a structured document
 
-Here is an example of a structured document:
+Here is an example of a structured document, showing the formatting used to 
+place tags in a word document:
 
 ![Using tags in a word document](images/sing-structured-tags-sample.png)
 
@@ -36,30 +35,31 @@ The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag
 assigned to signer 1, with the label `enter your complete name`, and using an 
 id of `tag_full_name`.
 
-Check out this [support note][support-tags] for a complete description of all 
+Check out this [document][support-tags] for a complete description of all 
 the tags available.
 
 Setting the tags to the same `color` as the background will make them 
 invisible, but they will still be there.
 
-The number in the tags refer to the signer number, so `[[c|1]]` is the checkbox 
-for signer 1, `[[c|2]]` is the checkbox for signer 2, and so on, NOT the 
-signing order.
+The number in the tags refer to the signer number, not the signing order, so 
+`[[c|1]]` is the checkbox for signer 1, `[[c|2]]` is the checkbox for signer 2, 
+and so on.
 
-Tag 0 is reserved for the sender, which always exists. So even if the sender 
+Tag 0 is reserved for the sender, and always exists. So even if the sender 
 does not need to input any data into the document, the other signers must start 
 with 1.
 
 ## Create a signature request from a structured document
 
-This is the same as creating a signature request for an unstructured document. 
-You will need to, at minimum, specify the document, the receiving folder and 
+This is the same as creating a signature request from an unstructured document. 
+At minimum, you will need to specify the document, the receiving folder and 
 the email of the `signer`.
 
 Since the structured document already contains the signature properties details 
-and location, we can bypass the document preparation.
+and location, you can bypass the document preparation.
 
-This is how the flow would look like:
+This is how the flow would look like, from the generated document, create the 
+signature request and finally sign the document:
 
 ![Signing a structured document](images/sign-flow-tags.png)
 
@@ -198,8 +198,8 @@ Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
 </Tab>
 </Tabs>
 
-If we go to the `signer` email inbox, open the email from Box Sign, click on 
-the `Review and Sign` button, we'll see the document with the signature 
+If you go to the `signer` email inbox, open the email from Box Sign, click on 
+the `Review and Sign` button, you'll see the document with the signature 
 properties in place:
 
 ![Document with the properties in place](images/sign-structured-signing-document.png)
@@ -210,11 +210,11 @@ After completing the process the signed document looks like this:
 
 ## Pre-populate the signature attributes
 
-If we have an external id in the document tags we can use it to pre-populate 
-their values. For example, we have a tag with the id `tag_full_name` we can use 
-it to pre-populate the name of the signer.
+If you have an external id in the document tags you can use it to pre-populate 
+their values. For example, you can use the `tag_full_name` to pre-populate the 
+name of the signer.
 
-Consider this method:
+See this method:
 
 <Tabs>
 <Tab title='cURL'>
@@ -376,13 +376,13 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
 </Tab>
 </Tabs>
 
-And the document now has the name pre-populated:
+The document now has the name pre-populated:
 
 ![Document ready for sign with the name pre-populated](images/sign-structure-name-pre-pop.png)
 
 ## Extract information from a signed document
 
-Let's say we want to extract the name of the signer, and the other properties 
+Let's say you want to extract the name of the signer and the other properties 
 from the signed document. This is useful if you need to tie the information 
 from the signature request back into your systems.
 
@@ -443,7 +443,7 @@ def main():
 </Tab>
 </Tabs>
 
-Resulting in (simplified)):
+Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
@@ -552,17 +552,16 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
 </Tab>
 </Tabs>
 
-## Final thoughts
+## Summary
 
 Structured documents are a great way to integrate with external document 
 management systems, creating dynamic documents that are ready for signature.
 
 If your document signature requirements have a lot of options, you can 
-pre-populate these from another data source and save the user time. But please 
+pre-populate these from another data source and save the user's time, but 
 remember that the user who owns these properties can always change them.
 
-The same way that after the document is signed you can extract the information 
-from the signature request, which is useful if you need to tie it back into 
-your systems.
+After the document is signed you can extract the information from the signature 
+request, which is useful if you need to tie it back into your systems.
 
 [support-tags]:https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags

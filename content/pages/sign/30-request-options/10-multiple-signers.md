@@ -1,10 +1,6 @@
 ---
 centered: true
 rank: 1
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Multiple signers and roles
@@ -12,7 +8,7 @@ related_endpoints:
 ## Multiple signers
 
 What if you have a document that needs to be signed by multiple people? This is 
-typical of contracts between two or more entities.
+typical for contracts between two or more entities.
 
 Having multiple signers introduces another dimension to the Box Sign process, 
 the order in which the signers need to sign the document.
@@ -21,12 +17,12 @@ If you do not specify the order, the request is sent to everyone at the same
 time, and when all parties have signed the document, they each receive a copy 
 with all signatures.
 
-If you specify the signing order, the send request is sent to the first signer, 
-and only when the first signer signs the document, the request is sent to the 
-second signer, and so on.
+If you specify the signing order, the signature request is sent to the first 
+signer. Only when the first signer signs the document, the request is sent to 
+the second signer, and so on.
 
-Let’s see this working with an example contract between an university and a 
-student for a scholarship. In this case the institution/teacher must sign the 
+Let’s see this working with an example scholarship contract between an 
+university and a student. In this case the institution/teacher must sign the 
 document first.
 
 Creating a method specific for this:
@@ -131,8 +127,8 @@ def main():
 </Tab>
 </Tabs>
 
-In this particular example the document needs to be prepared, so we open the 
-browser to the prepare URL.
+In this particular example the document needs to be prepared, so the browser to 
+the prepare URL opens.
 
 Drag the signature pad, the full name and the date to the appropriate places in 
 the document, and click Send Request:
@@ -147,7 +143,7 @@ name and date belongs to which signer.
 If you look at the signature request details, you should see something like 
 this:
 
-![Signature request details](images/sign-multi-prep-details.png)
+![Signature request details showing the document and signers](images/sign-multi-prep-details.png)
 
 Indicating that the first request was sent, but the second is waiting for the 
 first to be completed.
@@ -159,8 +155,8 @@ signer.
 
 ## Roles
 
-So far we have been working with the `signer` role. However there are other 
-roles that you can use to customize the signature process.
+So far we have been working with the `signer` role. However there are [other 
+roles][roles] that you can use to customize the signature process.
 
 The available roles are, `signer`, `approver`, and `final copy reader`
 
@@ -178,12 +174,14 @@ approval from someone before sending the document to the signers.
 - **Final copy reader**: This role does not interact with the signature 
 process, but will receive a copy of the signed document.
 
-By using roles, we can be a bit more creative in our scholarship example.
+Let's use roles to be a bit more creative in the scholarship example.
 
-Imagine that the scholarship needs to be approved by the dean and the legal 
+Imagine that the scholarship needs to be approved by the dean, and the legal 
 department receives a final copy of the contract.
 
-This is what the flow looks like:
+The flow starts with the signature request, flowed by the dean approval, the 
+institution signature, the student signature, and finally the legal 
+department receives a copy of the signed document:
 
 ![Multiple signers and roles](images/sign-flow-multi-role.png)
 
@@ -309,7 +307,7 @@ def main():
 </Tab>
 </Tabs>
 
-Like before we need to prepare the document, so open the prepare URL in your 
+Like before you need to prepare the document, so open the prepare URL in your 
 browser.
 
 Notice in the example the institution is represented by blue in the 
@@ -322,9 +320,9 @@ with them. If you do this, their roles will be adjusted to `signer`:
 
 Continuing the signature process:
 
-- First the dean approves the scholarship
-- Next the institution signs the scholarship
-- Next the student signs the scholarship
-- Finally the legal department receives a copy of the signed document.
+- The dean approves the scholarship
+- The institution signs the scholarship
+- The student signs the scholarship
+- The legal department receives a copy of the signed document.
 
-<Next>Extra security</Next>
+[roles]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers

@@ -1,15 +1,11 @@
 ---
 centered: true
 rank: 4
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Resend requests
 
-What if the signer did not receive the email? Or the email was lost? Or the 
+What if the signer did not receive the email, the email was lost, or the 
 signer deleted the email by mistake?
 
 You can resend the signature request email to the `signer` , either manually or 
@@ -17,9 +13,9 @@ you can turn on the automatic resend option.
 
 ## Manual resend
 
-You can manually resend the signature request email to the signer, by 
-calling the `resend_sign_request` method on the `sign_requests` object. This 
-can only be done once every 10 minutes.
+To manually resend the signature request email to the signer, call the 
+`resend_sign_request` method on the `sign_requests` object. You can only do it 
+ once every 10 minutes.
 
 Here is an example:
 
@@ -51,11 +47,11 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 ## Automatic resend
 
-The automatic resend option sends a reminder email to those signers that have 
+The automatic resend option sends a reminder email to signers that have 
 not signed the document yet, after 3, 8, 13, and 18 days.
 
-To enable automatic resend all you need to do is set the 
-`are_reminders_enabled` parameter to `true`. For example:
+To enable automatic resend set the `are_reminders_enabled` parameter to `true`. 
+For example:
 
 <Tabs>
 <Tab title='cURL'>
@@ -139,5 +135,3 @@ def main():
 
 </Tab>
 </Tabs>
-
-<Next>Requests expiration</Next>

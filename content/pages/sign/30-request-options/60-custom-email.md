@@ -1,10 +1,6 @@
 ---
 centered: true
 rank: 6
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Custom email and notifications
@@ -21,7 +17,7 @@ However, if you are not using templates, you can still customize the email
 messages sent to the signers by passing the `email_subject` and the 
 `email_message` parameters. 
 
-Both parameters accept strings, however the `email_message` parameter 
+Both parameters accept strings, but the `email_message` parameter 
 also accepts HTML with some limitations.
 
 Only some HTML tags are allowed. Links included in the message are also 
@@ -34,8 +30,12 @@ The message parameter may contain the following HTML tags:
 
 Custom styles on these tags are not allowed.
 
+<Message size=small>
+
 Be aware that when the text to HTML ratio is too high, the email may end up in 
 spam filters or clipped.
+
+</Message>
 
 For example:
 
@@ -113,9 +113,9 @@ def main():
 
 ## Manual notification
 
-You'll probably notice by now that the signature request by default sends an 
-email notification to the signers. This email is sent from a `box.com` domain 
-and email system.
+By now, you've noticed that the signature request sends an email 
+notification to the signers by default. This email is sent from a `box.com` 
+domain and email system.
 
 You can take over the notification process by setting the 
 `embed_url_external_user_id` parameter to an identifier of your choice for a 
@@ -129,10 +129,10 @@ The `embed_url` can be opened directly, so it is suitable for your app to send
 it in an email, or by any other notifications system for the signer to open.
 
 The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign 
-Client][embed]. In essence you can embed the sign client on an iframe within 
-your own web app.
+Client][embed], which allows you to embed the Box Sign client on an iframe 
+within your web app.
 
-For example consider this request:
+For example see this request:
 
 <Tabs>
 <Tab title='cURL'>
@@ -264,7 +264,5 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 
 You can now take the embedded URLs and use your own notification process or 
 embed the signature client within your own app.
-
-<Next>In person signatures</Next>
 
 [embed]:guide://box-sign/embedded-sign-client
