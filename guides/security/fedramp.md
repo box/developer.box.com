@@ -4,11 +4,12 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: []
+alias_paths:
+  - /guides/security/fedramp-high/
 category_id: security
 subcategory_id: null
 is_index: false
-id: security/fedramp-high
+id: security/fedramp
 type: guide
 total_steps: 3
 sibling_id: security
@@ -16,55 +17,48 @@ parent_id: security
 next_page_id: security/cors
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp-high.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp.md
 fullyTranslated: true
 ---
 # FedRAMP
 
 ## 概要
 
-FedRAMPとは、安全性/機密性が高まりつつある政府または政府に隣接するデータに連邦政府機関がクラウドプロバイダを使用するための認定プログラムです。
+FedRAMP is a certification program that allows federal agencies to use cloud providers for increasingly secure/sensitive government or government-adjacent data.
 
 FedRAMPでは、セキュリティのレベルについて、Low (低)、Moderate (中)、High (高) という3つのカテゴリを定義しています。
 
 セキュリティレベルが高いほど、適用される制限が多くなります。
 
-Boxは、すでに[FedRAMP ModerateとHigh][FedRAMPCert]として認定されています。
+Box is currently certified as [FedRAMP Moderate][FedRAMPCert].
 
 ## 留意事項
 
-FedRAMP Highに準拠するため、管理者は非常に特殊な方法でBoxを設定しているはずです。Boxの機能へのアクセスをさらに制限している可能性があります。
+In order to be FedRAMP compliant, your administrator must setup Box in very a very specific way. It is possible that the administrator has further restricted access to Box functionalities.
 
 APIの使用に影響する可能性があるセキュリティの制限を特定するには、管理者に相談してください。
 
-## FedRAMP HighでのAPIの使用
+## API usage in FedRAMP
 
-FedRAMP Highの場合、Boxでは`box-gov.com`という特定のドメインを使用します。これはAPIのすべてのエントリポイントに影響します。
+For FedRAMP compliance, you may use the below URLs for API entry points.
 
 <!-- markdownlint-disable line-length -->
 
-| FedRAMP Moderate          | FedRAMP High                  |
-| ------------------------- | ----------------------------- |
-| account.box.com           | account.box-gov.com           |
-| api.box.com               | api.box-gov.com               |
-| upload.box.com            | upload.box-gov.com            |
-| dl.boxcloud.com           | dl-frh.boxcloud.com           |
-| realtime.services.box.net | realtime.services.box-gov.com |
+| FedRAMP Moderate          |
+| ------------------------- |
+| account.box.com           |
+| api.box.com               |
+| upload.box.com            |
+| dl.boxcloud.com           |
+| realtime.services.box.net |
 
 <!-- markdownlint-enable line-length -->
 
-## APIの制限
-
-以下のAPIエントリポイントは、FedRAMP High構成ではまだ使用することができません。
+<!-- ## API Restrictions  The following API entry points are not yet available for usage under FedRAMP High configuration. -->
 
 <!-- markdownlint-disable line-length -->
 
-| APIエントリポイント                             |
-| --------------------------------------- |
-| /sign_requests                          |
-| /sign_requests/{sign_request_id}        |
-| /sign_requests/{sign_request_id}/cancel |
-| /sign_requests/{sign_request_id}/resend |
+<!-- |API Entry point | |----------------| |/sign_requests| |/sign_requests/{sign_request_id}| |/sign_requests/{sign_request_id}/cancel| |/sign_requests/{sign_request_id}/resend| -->
 
 <!-- markdownlint-enable line-length -->
 
@@ -154,6 +148,7 @@ and resources without hard-coding the locale.
 [Get a file by ID][endpoint://get-files-id]
 
 [File resource][resource://file]
+
 -->
 
-[FedRAMPCert]: https://marketplace.fedramp.gov/#!/product/box-enterprise-cloud-content-collaboration-platform/versus/box-enterprise-cloud-content-collaboration-platform---high?sort=productName&productNameSearch=box
+[FedRAMPCert]: https://marketplace.fedramp.gov/products/F1212191840

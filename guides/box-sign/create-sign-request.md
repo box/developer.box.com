@@ -22,6 +22,12 @@ fullyTranslated: true
 
 </Samples>
 
+<Message type="warning">
+
+Creation of the CFR Part 11 signature requests with public API is not supported. See [21 CFR Part 11 Compliance Support][CFR] for more information.
+
+</Message>
+
 ## ドキュメントの準備
 
 Box Signのリクエストを送信する前にドキュメントを準備することで、開発者は署名者のために日付、テキスト、チェックボックス、署名のプレースホルダを追加できます。これを行うには、UIを使用するか、ドキュメント内で直接[タグ][tags]を使用します。準備を行わなかった場合、署名者には準備が完了していないドキュメントが送信されるため、署名者の判断で署名やフィールドを配置できます。ただし、開発者は、準備が完了していないドキュメントの機能をオンまたはオフにするためのコントロールをリクエスト内で利用できます。
@@ -173,3 +179,5 @@ Box Signは、リクエストで指定された署名者のメールアドレス
 [cloudgame]: g://embed/box-embed#cloud-game
 
 [templates]: g://box-sign/sign-templates
+
+[CFR]: https://support.box.com/hc/en-us/articles/24169443030163
