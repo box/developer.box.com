@@ -32,4 +32,3 @@ Some examples of events that can be listened to are:
 - `SIGN_REQUEST.DECLINED`, when a signature request is declined.
 - `SIGN_REQUEST.EXPIRED`, when a signature request expires.
 - `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`, when a signer's email is bounced.
-
