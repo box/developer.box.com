@@ -13,8 +13,9 @@ in the document signing step.
 
 ## Phone verification
 
-You can require the signer to use 2FA through phone, to complete the signature 
-request by passing the `is_phone_verification_required_to_view` parameter. 
+You can require the signer to use 2FA through their mobile phone to complete 
+the signature request by passing the `is_phone_verification_required_to_view` 
+parameter. 
 
 For example:
 
@@ -112,7 +113,7 @@ Then the signer is prompted to enter the code sent in a SMS:
 
 <Message  size='small'>
 
-This check is done on the last step, so it does not prevent the signer from 
+This check is done as the last step, so it does not prevent the signer from 
 accessing the document.
 
 </Message>
@@ -204,14 +205,14 @@ def main():
 </Tab>
 </Tabs>
 
-Once you open the signature request you should see something like this:
+Once the signer opens the signature request they should see something like this:
 
 ![Password verification pop-up](images/sign-simple-password.png)
 
 <Message  size='small'>
 
 As the password verification is done on the first step, it prevents the 
-signer from accessing the document.
+signer from accessing the document until the correct password is provided.
 
 </Message>
 

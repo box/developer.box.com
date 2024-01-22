@@ -5,18 +5,18 @@ rank: 7
 
 # In person signatures
 
-Imagine your application is used by a sales person when they are face to face 
+Imagine your application is used by a salesperson when they are face to face 
 with a customer and an immediate signature is required, for example, to 
 subscribe to a service or to confirm a purchase. 
 
-In this case, the sales person can use your application to create a signature 
+In this case, the salesperson can use your application to create a signature 
 request and then hand over the device to the customer to sign the document, 
 immediately closing the deal.
 
 Doing this using the Box web application, for example from a template, is very 
 straightforward. You set the signer or signers email so they can receive a copy 
 of the signed document, flag them as in person, and as soon as you send the 
-request, the sign interface opens requesting the signature for the 
+request, the Sign interface opens requesting the signature for the 
 first signer, then for the second signer, and so on.
 
 In order to use this within your application, you need to create a signature 
@@ -340,7 +340,7 @@ Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
 </Tab>
 </Tabs>
 
-Browsing to the embed URL shows the signature interface for the first 
+Browsing to the embedded URL shows the signature interface for the first 
 signer:
 
 ![First in person signer](images/sign-inperson-first.png)
