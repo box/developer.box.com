@@ -17,15 +17,15 @@ signed, which has a couple of advantages:
 be added to the document before creating the signature request, effectively 
 bypassing the document preparation step.
 
-* The document format can be handled outside Box Sign templates, allowing 
+* The document format can be handled outside of Box Sign templates, allowing 
 higher flexibility and integration with external document management systems.
 
 ## Anatomy of a structured document
 
 Here is an example of a structured document, showing the formatting used to 
-place tags in a word document:
+place tags in a Microsoft Word document:
 
-![Using tags in a word document](images/sing-structured-tags-sample.png)
+![Using tags in a Microsoft Word document](images/sing-structured-tags-sample.png)
 
 In the sample above `[[c|1]]` means a checkbox assigned to signer 1, and `[[s|
 1]]` means a signature pad assigned to signer 1. Notice how the signature pad 

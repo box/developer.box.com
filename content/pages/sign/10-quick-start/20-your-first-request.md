@@ -11,7 +11,7 @@ to sign, where to store the signed document, and the signer email.
 
 ## Creating a signature request
 
-You can use the Box Sign API or one of the available SDK's to create a 
+You can use the Box Sign API or one of the available SDKs to create a 
 signature request. See the example:
 
 <Tabs>
@@ -176,7 +176,7 @@ A signature request can have the following statuses:
   the signing email or visited the signing URL.
 - `downloaded`: The document was downloaded by the signer.
 - `signed`: All signers completed the request.
-- `signed and downloaded`: The document was signed and downloaded by
+- `signed and downloaded`: The document was signed and downloaded by the
  signer.
 - `declined`: If any signer declines the request.
 - `cancelled`: If the request is cancelled via UI or API.

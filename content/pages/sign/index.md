@@ -21,7 +21,7 @@ signature request.
 ## Technical use cases
 
 In the [Technical use cases][technical-use-cases], you will learn how to handle 
-the different type of documents that can be used in a signature request: from 
+the different types of documents that can be used in a signature request: from 
 unstructured documents that require a preparation step, through templates, to 
 generated ready to sign documents.
 
