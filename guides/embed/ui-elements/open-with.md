@@ -28,7 +28,7 @@ source_url: >-
 # End of Support
 
 We no longer support the `OpenWith` UI element for any new customers
-as of December 21, 2021. Please see the changelog for more information.
+as of December 21, 2021.
 
 </Message>
 
