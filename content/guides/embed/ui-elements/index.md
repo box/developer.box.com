@@ -28,10 +28,10 @@ The available UI Elements are:
 * [Content Open With][openwith] - Allow users to open content stored in box with
   a partner application using an embedded dropdown
 
-    <Message warning>
+  <Message warning>
       We no longer support the `OpenWith` UI element for any new customers
-      as of December 21, 2021. Please see the changelog for more information.
-    </Message>
+      as of December 21, 2021.
+  </Message>
 
 * [Content Picker][picker] - Allow users to select files or folders from their
   Box account
