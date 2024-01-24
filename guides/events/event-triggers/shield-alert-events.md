@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # Shieldアラートイベント
 
-以下に説明するこの高度なセキュリティ機能を活用するには、[Box Shield][box-shield]を購入し、Box Enterpriseで有効にする必要があります。
+[Box Shield][box-shield] must be purchased and enabled on a Box enterprise to take advantage of the advanced security offerings outlined below.
 
 ## 脅威検出アラート
 
@@ -61,13 +61,13 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
 
 ```
 
-イベントをトリガーした特定の種類のShieldアラートに関する情報は、`additional_details`オブジェクト内で提供されます。
+The `additional_details` object provides information about the specific type of shield alert that triggered the event.
 
 ### 不審な場所に関するアラート
 
 <!--alex ignore-->
 
-不審な場所に関するアラートは、通常とは異なる、除外対象に指定されている場所や「ホスト」IPアドレスからコンテンツにアクセスしているユーザーがShieldによって検出されたときに生成されます。これは、`additional_details.shield_alert.rule_category`内の`Suspicious Locations`値によって識別できます。
+A suspicious locations alert is produced when Shield detects a user accessing content from an unusual, excluded geographic location, or 'host' IP address. It can be identified by the `Suspicious Locations` value within `additional_details.shield_alert.rule_category`.
 
 <!--alex enable-->
 
@@ -79,6 +79,9 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
     "rule_category":"Suspicious Locations",
     "rule_id":123,
     "rule_name":"Suspicious Location",
+    "rule_response_action":{
+      "restrict_user": true
+        },
     "risk_score":60,
     "alert_summary":{
       "alert_activities":[
@@ -131,6 +134,7 @@ Sessions`値によって識別できます。
     "rule_category":"Suspicious Sessions",
     "rule_id":123,
     "rule_name":"Suspicious Session",
+    "rule_response_action": null,
     "risk_score":77,
     "alert_summary":{
       "description":"First time in prior month user connected from ip 2.3.4.5 First time user agent Some User Agent (Some UA 4.5.6) appeared for user within prior month Apparent distance 9580.0 km between events 59 seconds apart is faster than possible",
@@ -212,6 +216,7 @@ Sessions`値によって識別できます。
     "rule_category":"Anomalous Download",
     "rule_id":123,
     "rule_name":"Anomalous Download Rule",
+    "rule_response_action": null,
     "risk_score":77,
     "alert_summary":{
       "description":"Significant increase in download content week over week, 9200% (25.04 MB) more than last week 12 additional files downloaded week over week)",
@@ -267,6 +272,7 @@ Sessions`値によって識別できます。
     "rule_category":"Malicious Content",
     "rule_id":123,
     "rule_name":"Viruses and stuff",
+    "rule_response_action": null,
     "risk_score":100,
     "alert_summary":{
       "upload_activity":{

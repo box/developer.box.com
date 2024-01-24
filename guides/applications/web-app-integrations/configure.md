@@ -43,7 +43,7 @@ fullyTranslated: true
 
 <ImageFrame center shadow border>
 
-![\[統合\] タブ](../images/create_integration.png)
+![\[統合\] タブ](./images/create_integration.png)
 
 </ImageFrame>
 

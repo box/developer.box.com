@@ -13,7 +13,7 @@ subcategory_id: applications/app-types
 is_index: false
 id: applications/app-types/select
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: applications/app-types
 parent_id: applications/app-types
 next_page_id: applications/app-types

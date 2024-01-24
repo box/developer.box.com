@@ -12,7 +12,7 @@ subcategory_id: applications/app-types
 is_index: true
 id: applications/app-types
 type: guide
-total_steps: 5
+total_steps: 4
 sibling_id: applications
 parent_id: applications
 next_page_id: applications/app-types/custom-apps
@@ -64,3 +64,5 @@ fullyTranslated: true
 [ccg]: g://authentication/client-credentials/
 
 [laa]: g://applications/app-types/limited-access-apps/
+
+[insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights

@@ -37,6 +37,27 @@ Box開発者コンソールでは、後でBoxとの統合に使用できるア�
 4. アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。
 5. 各エントリに用意されているメニューを使用して、アプリケーションの構成の詳細にアクセスしたり、[開発者トークン][token]を生成したりする。
 
+## アプリインサイト
+
+管理者と共同管理者は、組織におけるプラットフォームの利用状況を集約した、Platformインサイトのダッシュボードにアクセスできます。これには、以下のような、アプリ関連のデータが含まれます。
+
+* アプリケーションごとのAPIコールの合計数
+* 企業内の上位アプリケーションのリスト
+* 承認を保留中のアプリケーションのリスト
+* 有効化待ちのアプリケーションのリスト
+
+詳細については、[Platformインサイト][insights]を参照してください。
+
+<Message type="notice">
+
+Platformインサイトにアクセスして表示するには、以下の権限が必要です。
+
+* 会社の設定とアプリを表示する
+* 会社の設定とアプリを編集する
+* 新規レポートの実行および既存レポートへのアクセスを行う
+
+</Message>
+
 [token]: g://authentication/tokens/developer-tokens
 
 [authorization]: g://authorization
@@ -44,3 +65,5 @@ Box開発者コンソールでは、後でBoxとの統合に使用できるア�
 [enablement]: g://authorization/custom-app-approval#user-authentication-apps
 
 [select]: g://applications/app-types/select
+
+[insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights

@@ -55,21 +55,21 @@ V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成するこ�
 
 </Message>
 
-## `NO_ACTIVE_SESSION` is set in the webhook payload
+## `NO_ACTIVE_SESSION`はWebhookペイロードで設定
 
-If the auth session (access token) for the app you used to create a webhook expires, that webhook no longer sends events with a full payload. In that case, the event trigger is `NO_ACTIVE_SESSION`.
+Webhookの作成に使用したアプリの認証セッション (アクセストークン) が期限切れになると、そのWebhookでは、ペイロード全体を含むイベントが送信されなくなります。その場合、イベントトリガーは`NO_ACTIVE_SESSION`になります。
 
 ### JWT認証
 
-For webhooks created with the JWT Auth app, the session expires when you delete the app authorization for this app in the Admin Console. For more information, see [application authorization guide][app authorization].
+JWT認証アプリを使用して作成されたWebhookの場合、管理コンソールでこのアプリに対するアプリ承認を削除すると、セッションが期限切れになります。詳細については、[アプリケーションの承認ガイド][app authorization]を参照してください。
 
 ### OAuth 2.0
 
-For webhooks created with OAuth 2.0 Auth app, the session expires when both the access token and the refresh token for the user and app used for creating that webhook expire.
+OAuth 2.0認証アプリを使用して作成されたWebhookの場合、そのWebhookの作成に使用されたユーザーとアプリのアクセストークンと更新トークンの両方が期限切れになると、セッションが期限切れになります。
 
-### Developer token
+### 開発者トークン
 
-As the developer token cannot be refreshed and expires after 1 hour, the event trigger `NO_ACTIVE_SESSION` is set in the webhook payload after 1 hour.
+開発者トークンは更新できず、1時間後に期限切れになるため、イベントトリガー`NO_ACTIVE_SESSION`は、1時間後にWebhookペイロードで設定されます。
 
 ## Webhookの削除理由
 

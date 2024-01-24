@@ -31,7 +31,7 @@ fullyTranslated: true
 
 <ImageFrame border shadow width="600" center>
 
-![統合の例](../images/recommended-apps-preview.png)
+![統合の例](./images/recommended-apps-preview.png)
 
 </ImageFrame>
 
