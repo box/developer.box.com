@@ -115,8 +115,8 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 | `ITEM_SHARED`            | フォルダが共有されました。                        |
 | `TAG_ITEM_CREATE`        | タグがファイルまたはフォルダに追加されました。              |
 | `ENABLE_TWO_FACTOR_AUTH` | ユーザーによって2要素認証が有効化されました。              |
-| `MASTER_INVITE_ACCEPT`   | 管理対象ユーザーになるための招待が無料版ユーザーによって承認されました。 |
-| `MASTER_INVITE_REJECT`   | 管理対象ユーザーになるための招待が無料版ユーザーによって拒否されました。 |
+| `MASTER_INVITE_ACCEPT`   | 管理対象ユーザーになるための招待が無料ユーザーによって承認されました。  |
+| `MASTER_INVITE_REJECT`   | 管理対象ユーザーになるための招待が無料ユーザーによって拒否されました。  |
 | `ACCESS_GRANTED`         | アカウントに対するBoxのアクセス権限が付与されました。         |
 | `ACCESS_REVOKED`         | アカウントに対するBoxのアクセス権限が取り消されました。        |
 
