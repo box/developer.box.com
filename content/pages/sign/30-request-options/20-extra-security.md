@@ -1,23 +1,21 @@
 ---
 centered: true
 rank: 2
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # Extra security (2FA)
 
-Imagine you want an additional layer of security for your signature requests, 
-by requesting the signer to use a password or a  phone verification.
+Imagine you want an [additional layer of security][2FA] for your signature 
+requests, by requesting the signer to use a password or a  phone verification 
+in the document signing step.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
 
 ## Phone verification
 
-You can require the signer to use 2FA via phone, to complete the signature 
-request by passing the `is_phone_verification_required_to_view` parameter. 
+You can require the signer to use 2FA through their mobile phone to complete 
+the signature request by passing the `is_phone_verification_required_to_view` 
+parameter. 
 
 For example:
 
@@ -109,16 +107,20 @@ pops up:
 
 ![Phone verification](images/sign-simple-phone-verification.png)
 
-Then the signer is prompted to enter the code sent via SMS:
+Then the signer is prompted to enter the code sent in a SMS:
 
 ![Entering the SMS code](images/sign-simple-phone-verification-enter-code.png)
 
-Note that this check is done on the last step, so it does not prevent the 
-signer from accessing the document.
+<Message  size='small'>
+
+This check is done as the last step, so it does not prevent the signer from 
+accessing the document.
+
+</Message>
 
 ## Password verification
 
-You can also require the signer to use a password to open the signature request 
+You can require the signer to use a password to open the signature request 
 by passing the `password` parameter in the `signer` object. For example:
 
 <Tabs>
@@ -203,11 +205,15 @@ def main():
 </Tab>
 </Tabs>
 
-Once you open the signature request you should see something like this:
+Once the signer opens the signature request they should see something like this:
 
-![Password verification](images/sign-simple-password.png)
+![Password verification pop-up](images/sign-simple-password.png)
 
-Note the password verification is done on the first step, so it prevents the 
-signer from accessing the document.
+<Message  size='small'>
 
-<Next>Custom URLs</Next>
+As the password verification is done on the first step, it prevents the 
+signer from accessing the document until the correct password is provided.
+
+</Message>
+
+[2FA]: https://support.box.com/hc/en-us/articles/4406861109907-Additional-Signer-Authentication

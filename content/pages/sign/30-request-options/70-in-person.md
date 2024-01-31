@@ -1,27 +1,23 @@
 ---
 centered: true
 rank: 7
-related_guides:
-    - box-sign
-related_endpoints:
-    - post_sign_requests
 ---
 
 # In person signatures
 
-Imagine your application is used by a sales person when they are face to face 
+Imagine your application is used by a salesperson when they are face to face 
 with a customer and an immediate signature is required, for example, to 
 subscribe to a service or to confirm a purchase. 
 
-In this case, the sales person can use your application to create a signature 
+In this case, the salesperson can use your application to create a signature 
 request and then hand over the device to the customer to sign the document, 
 immediately closing the deal.
 
 Doing this using the Box web application, for example from a template, is very 
 straightforward. You set the signer or signers email so they can receive a copy 
 of the signed document, flag them as in person, and as soon as you send the 
-request, immediately the sign interface opens requesting the signature for the 
-first signer, and then for the second signer, and so on.
+request, the Sign interface opens requesting the signature for the 
+first signer, then for the second signer, and so on.
 
 In order to use this within your application, you need to create a signature 
 request with the `is_in_person` flag set to `true` for each signer.
@@ -31,13 +27,11 @@ signer, you also need to use the `embed_url_external_user_id`so that you get
 back the embedded URLs, and then either open a browser window or use an iframe 
 to display the signature interface.
 
-![In person signing](images/sign-flow-in-person.png)
-
-Let's see an example.
+![In person signing loops through signers](images/sign-flow-in-person.png)
 
 ## Create an in person signature request
 
-We will use a template with a single signer:
+Let's use a template with a single signer as an example:
 
 <Tabs>
 <Tab title='cURL'>
@@ -175,7 +169,7 @@ Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
 </Tabs>
 
 Notice the `embed_url` and `iframeable_embed_url` in the response. Now when we 
-browse to the embed URL, we see the signature interface:
+browse to the embed URL, you see the signature interface:
 
 ![In person signing](images/sign-in-person.png)
 
@@ -184,10 +178,10 @@ email.
 
 ## Multiple in person signers
 
-As long as the signer is flagged as `is_in_person`, the signing interface will 
-cycle through all the signers in the request.
+As long as the signer is flagged as `is_in_person`, the signing interface 
+cycles through all the signers in the request.
 
-For example, if we add a second signer to the request:
+For example, if you add a second signer to the request:
 
 <Tabs>
 <Tab title='cURL'>
@@ -280,7 +274,7 @@ def main():
 </Tab>
 </Tabs>
 
-Will result in (simplified):
+Results in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
@@ -346,12 +340,12 @@ Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
 </Tab>
 </Tabs>
 
-Browsing to the embed URL will show the signature interface for the first 
+Browsing to the embedded URL shows the signature interface for the first 
 signer:
 
 ![First in person signer](images/sign-inperson-first.png)
 
-Once the first signer has signed, the signature interface will automatically 
-switch to the second signer:
+Once the first signer has signed, the signature interface automatically 
+switches to the second signer:
 
 ![Alt text](images/sign-inperson-second.png)

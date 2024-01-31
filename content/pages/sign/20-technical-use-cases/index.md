@@ -6,11 +6,11 @@ rank: 0
 # Technical use cases
 
 In your application you will be signing different documents from many sources. 
-How can your application process such document in order for them to be 
+How can your application process such documents in order for them to be 
 recognized by the Box Sign service?
 
 A signature request can have multiple requirements, or inputs, beyond the 
-traditional signature, such as name, date, initials, and so on. These inputs 
+traditional signature, such as name, date, and initials. These inputs 
 are called signature properties. The Box Sign service needs to know where to 
 place these inputs in the document, and how to recognize them.
 
