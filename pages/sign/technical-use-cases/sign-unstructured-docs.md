@@ -32,7 +32,7 @@ properties in the document before the signer gets the request.
 
 There are three steps to this flow, creating the signature request, then
 preparing the document, and finally signing it.
-This is how the flow would look like:
+This is how the flow looks like:
 ![Sign unstructured docs flow](images/unstructured-docs-flow.png)
 
 Consider this example:

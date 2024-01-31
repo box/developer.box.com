@@ -32,7 +32,7 @@ If you specify the signing order, the signature request is sent to the first
 signer. Only when the first signer signs the document, the request is sent to
 the second signer, and so on.
 
-Let’s see this working with an example scholarship contract between an
+Let’s see this working with an example scholarship contract between a
 university and a student. In this case the institution/teacher must sign the
 document first.
 
@@ -327,7 +327,7 @@ def main():
 Like before you need to prepare the document, so open the prepare URL in your
 browser.
 
-Notice in the example the institution is represented by blue in the
+Notice in the example the institution is represented by blue on the
 left, and the student by green on the right, and both are signers.
 
 Neither the `approver` nor the `final copy reader` can have inputs associated

@@ -17,7 +17,7 @@ source_url: >-
 # Technical use cases
 
 In your application you will be signing different documents from many sources.
-How can your application process such document in order for them to be
+How can your application process such documents in order for them to be
 recognized by the Box Sign service?
 
 A signature request can have multiple requirements, or inputs, beyond the

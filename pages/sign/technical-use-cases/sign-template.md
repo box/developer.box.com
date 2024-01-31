@@ -22,10 +22,10 @@ prepared for signing in advance, and as such can be sent directly to the signer
 or signers.
 
 Required fields include, for example, the signature pad field, the full name,
-the date.
+and the date.
 
 These fields have an owner, meaning they are populated by a specific signer and
-can not be shared between them. They can be `mandatory` or `optional` , and be
+cannot be shared between them. They can be `mandatory` or `optional` , and be
 pre-populated by your application. However even if pre-populated, they can
 always be changed by the `signer`.
 
@@ -40,7 +40,7 @@ For a complete set of options of the signature request please refer to the
 These templates are exclusively created and managed in the Box Sign web app,
 and can be used to create signature requests using the API or the web app.
 
-Lets start by creating a template.
+Let's start by creating a template.
 
 ## Creating a template
 
@@ -48,7 +48,8 @@ From the Box app navigate to the sign menu on the left, then select templates.
 
 ![Navigating to templates under Box Sign](images/sign-template-navigate.png)
 
-Then, click on the New Template button, chose or upload document, from Box.
+Then, click on the New Template button, and choose or upload the document from
+Box.
 
 ![Selecting a document when creating a template](images/sign-template-selecting-template.png)
 
@@ -197,7 +198,7 @@ Sign templates: 1
 
 The big advantage of using templates is that we do not need to worry about
 document preparation. Most of the signature options can be set in the
-template it self.
+template itself.
 
 This is how the flow would look like:
 
@@ -335,7 +336,7 @@ can sign it.
 
 <Message size='small'>
 
-Since the template already had the signature requirements, the document
+Since the template already had the signature requirements, document
 preparation was not needed. Notice the date was automatically populated with
 the current date.
 
@@ -348,8 +349,9 @@ require from your users.
 
 <Message size='small'>
 
-Some inputs maybe intentionally left unpopulated. For example, when your legal
-department specifies that the “Yes, I agree”field must be explicitly set by the signer.
+Some inputs may be intentionally left unpopulated. For example, when your legal
+department specifies that the “Yes, I agree” field must be explicitly set by
+the signer.
 
 </Message>
 
@@ -516,7 +518,7 @@ Open the signer inbox and complete the sign request.
 
 ![Signing the document](images/sign-template-name-populated.png)
 
-The name is now pre-populated, but the `signer` can still change it.
+When the signer views the document, the `signer` can still change it.
 
 ## Get more information about a template
 
@@ -664,10 +666,10 @@ name.
 ## Summary
 
 Templates are a form of signing structured documents where the signature
-requirements are already defined, and placed on the document.
+requirements are already defined and placed on the document.
 
 This not only keeps your contract management team happy, but it also creates a
-consistent and low level of effort process for your users.
+process which is consistent and requires a low level of effort from your users.
 
 Finally if your document signature requirements have a lot of options, you can
 pre-populate these from another data source and save the user some time.
