@@ -191,9 +191,9 @@ contentExplorer.removeAllListeners();
 | `requestInterceptor`   | Function |                                                            | Function to intercept requests. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                           |
 | `responseInterceptor`  | Function |                                                            | Function to intercept responses. For an example see [this CodePen](https://codepen.io/box-platform/pen/jLdxEv). Our underlying XHR library is `axios.js` and we follow a [similar approach for interceptors](https://github.com/axios/axios#interceptors).                                                                                          |
 | `ContentOpenWithProps` | Object   | `{ show: false }`                                          | Allows you to show the Open With Element when previewing via the explorer.                                                                                                                                                                                                                                                                          |
-| `token`                | Object   |                                                            | Developer token generated in the Developer Console.                                                                                                                                                                                                                                                                                                 |
+| `token`                | String   |                                                            | Developer token generated in the Developer Console.                                                                                                                                                                                                                                                                                                 |
 | `metadataQuery`        | Object   |                                                            | Metadata query used to get the information for the metadata view.                                                                                                                                                                                                                                                                                   |
-| `rootFolderID`         | Object   |                                                            | Folder ID with a metadata template applied. `metadataQuery` will apply to this folder.                                                                                                                                                                                                                                                              |
+| `rootFolderID`         | String   |                                                            | Folder ID with a metadata template applied. `metadataQuery` will apply to this folder.                                                                                                                                                                                                                                                              |
 | `fieldsToShow`         | Object   |                                                            | The metadata fields/columns to view - must be valid field names from the metadata template.                                                                                                                                                                                                                                                         |
 
 ### Events
@@ -287,8 +287,8 @@ want to display.
 
 ### Prerequisites
 
-- Node version 8.18.2 or higher
-- React version 17.0.2 or higher
+- Node version 18.18.2 or higher
+- React version 17.0.2 or higher (React 18 is not supported)
 - BUIE version 19.0.0 or higher
 
 ### Create and configure an app
@@ -319,7 +319,41 @@ To make things easier, you can use a [sample project][metadata-project] to launc
 |`METADATA_TEMPLATE_NAME`  |Name of your already created metadata template.|
 |`ROOTFOLDER_ID`   |  ID of Box folder to which you applied the metadata template. |
 
-The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below:
+The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
+3. Add the metadata view to the Content Explorer component.
+
+```js
+[...]
+
+function App() {
+  [...]
+
+  return (
+      <IntlProvider locale="en">
+        <div className="App">
+          <header className="App-header">
+            <h2>Metadata view in Content Explorer</h2>
+          </header>
+          <section>
+            <div className="metadata-based-view">
+              <ContentExplorer
+                rootFolderId={rootFolderID}
+                token={token}
+                metadataQuery={metadataQuery}
+                fieldsToShow={fieldsToShow}
+                defaultView={defaultView}
+              />
+            </div>
+          </section>
+        </div>
+      </IntlProvider>
+  );
+}
+
+export default App;
+```
+
+See the example:
 
 ```js
 function App() {
@@ -378,7 +412,15 @@ function App() {
 
 	return (
 		<IntlProvider locale="en">
-			<div className="App">TODO</div>
+			  <div className="metadata-based-view">
+          <ContentExplorer
+            rootFolderId={rootFolderID}
+            token={token}
+            metadataQuery={metadataQuery}
+            fieldsToShow={fieldsToShow}
+            defaultView={defaultView}
+        />
+      </div>
 		</IntlProvider>
 	);
 }
@@ -386,37 +428,19 @@ function App() {
 export default App;
 ```
 
-3. Add the metadata view to the Content Explorer component.
+To test the metadata view, you can use
+the following metadata queries:
 
 ```js
-[...]
+// Filter all files withing given folder that are due by date: 17/01/24.
+query: "dueByDate = :arg1",
+query_params: { arg1: "2024-01-17T00:00:00.000Z" },
 
-function App() {
-  [...]
+// or
 
-  return (
-      <IntlProvider locale="en">
-        <div className="App">
-          <header className="App-header">
-            <h2>Metadata view in Content Explorer</h2>
-          </header>
-          <section>
-            <div className="metadata-based-view">
-              <ContentExplorer
-                rootFolderId={rootFolderID}
-                token={token}
-                metadataQuery={metadataQuery}
-                fieldsToShow={fieldsToShow}
-                defaultView={defaultView}
-              />
-            </div>
-          </section>
-        </div>
-      </IntlProvider>
-  );
-}
-
-export default App;
+// Filter all files withing given folder in the technology industry.
+query: "industry = :arg1",
+query_params: { arg1: "Technology" },
 ```
 
 <Message type='notice'>
