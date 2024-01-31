@@ -310,11 +310,14 @@ To make things easier, you can use a [sample project][metadata-project] to launc
       |--------------------|-----------------|
       |`DEVELOPER_TOKEN`   |[Developer token][token] generated in the the Developer Console. |
       |`ENTERPRISE_ID`     |Enterprise ID copied from the **General Settings** tab of your application.|
-      |`METADATA_TEMPLATE_NAME`  |Name of your already created metadata template.|
+      |`METADATA_TEMPLATE_NAME`  |Name of your already created metadata template. The name must be lowercase, for example `mymetadatatemplate`.|
       |`ROOTFOLDER_ID`   |  ID of Box folder to which you applied the metadata template. |
 
 The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
-3. Add the metadata view to the Content Explorer component.
+
+For additional information on metadata queries, see [this guide][metadata-query]
+
+3. Pass the required parameters to the Content Explorer component.
 
 ```js
 [...]
@@ -347,7 +350,7 @@ function App() {
 export default App;
 ```
 
-See the example:
+A sample React component including metadata will look similar to the following:
 
 ```js
 function App() {
@@ -422,21 +425,6 @@ function App() {
 export default App;
 ```
 
-To test the metadata view, you can use
-the following metadata queries:
-
-```js
-// Filter all files withing given folder that are due by date: 17/01/24.
-query: "dueByDate = :arg1",
-query_params: { arg1: "2024-01-17T00:00:00.000Z" },
-
-// or
-
-// Filter all files withing given folder in the technology industry.
-query: "industry = :arg1",
-query_params: { arg1: "Technology" },
-```
-
 <Message type='notice'>
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Message>
@@ -454,3 +442,4 @@ query_params: { arg1: "Technology" },
 [apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+[metadata-query]: g://metadata/queries
