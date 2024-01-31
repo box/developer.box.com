@@ -66,7 +66,7 @@ fullyTranslated: true
 
 ## 複数の値の監視
 
-`Observe`要素は、カンマ区切りリストを使用して複数の値をリッスンできます。
+`Observe`要素は、コンマ区切りリストを使用して複数の値をリッスンできます。
 
 ```html
 <Trigger option="example.multiple" value="win32">

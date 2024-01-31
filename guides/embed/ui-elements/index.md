@@ -32,6 +32,13 @@ Boxには、アプリケーションでファイルやフォルダに共通す�
 
 * [コンテンツエクスプローラ][explorer] - ユーザーがファイルやフォルダを検索および参照できるようにします。
 * [Content Open With][openwith] - ユーザーが埋め込みのドロップダウンを使用して、Boxに保存されているコンテンツをパートナーアプリケーションで開けるようにします。
+
+<Message type="warning">
+
+We no longer support the `OpenWith` UI element for any new customers as of December 21, 2021.
+
+</Message>
+
 * [Content Picker][picker] - ユーザーがBoxアカウントからファイルやフォルダを選択できるようにします。
 * [コンテンツプレビュー][preview] - ドキュメント、画像、音声、動画などに使用するインタラクティブなビューアーを表示します。
 * [Content Sidebar][sidebar] - ファイルメタデータとアクティビティフィード情報用のサイドバーを表示します。

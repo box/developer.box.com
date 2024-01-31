@@ -23,7 +23,7 @@ fullyTranslated: true
 ---
 # Shieldアラートイベント
 
-[Box Shield][box-shield] must be purchased and enabled on a Box enterprise to take advantage of the advanced security offerings outlined below.
+以下で説明する高度なセキュリティ機能を活用するには、[Box Shield][box-shield]を購入し、Box Enterpriseで有効にする必要があります。
 
 ## 脅威検出アラート
 
@@ -61,13 +61,13 @@ Shieldの脅威検出アラートイベントはすべて、[Enterprise Event][e
 
 ```
 
-The `additional_details` object provides information about the specific type of shield alert that triggered the event.
+`additional_details`オブジェクトは、イベントをトリガーした特定の種類のShieldアラートに関する情報を提供します。
 
 ### 不審な場所に関するアラート
 
 <!--alex ignore-->
 
-A suspicious locations alert is produced when Shield detects a user accessing content from an unusual, excluded geographic location, or 'host' IP address. It can be identified by the `Suspicious Locations` value within `additional_details.shield_alert.rule_category`.
+不審な場所に関するアラートは、通常とは異なる場所や「ホスト」IPアドレス、または除外対象に指定されている場所や「ホスト」IPアドレスからコンテンツにアクセスしているユーザーがShieldによって検出されたときに生成されます。これは、`additional_details.shield_alert.rule_category`内の`Suspicious Locations`値によって識別できます。
 
 <!--alex enable-->
 

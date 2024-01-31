@@ -107,7 +107,7 @@ exampleで始まるすべてのIDをリセット。
 
 </H>
 
-複数のIDは、カンマ区切りリストとして渡すことができます。
+複数のIDは、コンマ区切りリストとして渡すことができます。
 
 ```html
 <ResetButton id='example1,example2'>
