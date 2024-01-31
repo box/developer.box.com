@@ -289,9 +289,7 @@ want to display.
 
   1. [Create a Box app][box-app].
   2. Add the local development address in the CORS Domains:
-
     ![CORS Domains](./images/box-app-cors.png)
-
   3. Generate a [developer token][token].
 
 ### Create a metadata template
