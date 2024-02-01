@@ -78,7 +78,11 @@ All the developer resources to help you get the most from Box products
 
   <TileGrid>
     <Tile type="users" title="1. Explore user types"
+<<<<<<< HEAD
       href="platform/user-types/">
+=======
+      href="/guides/getting-started/user-types/">
+>>>>>>> 85778ff4 ([DEVREL-235] Restore numbers in grid tiles)
       Box Platform covers many use cases
       that may require different user types.
       Learn more about the 
