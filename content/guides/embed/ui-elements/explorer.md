@@ -281,16 +281,18 @@ want to display.
 
 ### Prerequisites
 
-- Node version 18.18.2 or higher
-- React version 17.0.2 or higher (React 18 is not supported)
-- BUIE version 19.0.0 or higher
+Make sure you have the following installed:
+
+- Node version: `>=18.18.2 <20.11.0`
+- React version `>=17.0.2 <18.0.0`
+- BUIE version `19.0.0`
 
 ### Create and configure an app
 
-  1. [Create a Box app][box-app].
-  2. Add the local development address in the CORS Domains:
-    ![CORS Domains](./images/box-app-cors.png)
-  3. Generate a [developer token][token].
+1. [Create a Box app][box-app].
+2. Add the local development address in the CORS Domains:
+   ![CORS Domains](./images/box-app-cors.png)
+3. Generate a [developer token][token].
 
 ### Create a metadata template
 
@@ -299,58 +301,59 @@ The next step is to create a metadata template you will use to populate the Cont
 1. Create a metadata template. You can use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to do so.
 2. Apply an already created template to a Box folder. Make sure you enable the cascade policy. For detailed instructions, see [instructions on customizing and applying templates][apply-templates].
 
-### Display Metadata View
+### Display metadata view
 
 To make things easier, you can use a [sample project][metadata-project] to launch metadata view.
 
 1. Clone the metadata sample project.
 2. Update the placeholders in [`App.js`][appjs] with actual values:
 
-      | Parameter          |  Description |
-      |--------------------|-----------------|
-      |`DEVELOPER_TOKEN`   |[Developer token][token] generated in the the Developer Console. |
-      |`ENTERPRISE_ID`     |Enterprise ID copied from the **General Settings** tab of your application.|
-      |`METADATA_TEMPLATE_NAME`  |Name of your already created metadata template. The name must be lowercase, for example `mymetadatatemplate`.|
-      |`ROOTFOLDER_ID`   |  ID of Box folder to which you applied the metadata template. |
+   | Parameter                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+   | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `DEVELOPER_TOKEN`        | [Developer token][token] generated in the the Developer Console.                                                                                                                                                                                                                                                                                                                                                                                   |
+   | `ENTERPRISE_ID`          | Enterprise ID copied from the **General Settings** tab of your application.                                                                                                                                                                                                                                                                                                                                                                        |
+   | `METADATA_TEMPLATE_NAME` | Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the label only. The name to use in the component is always the you provided at the beginning. |
+   | `ROOTFOLDER_ID`          | ID of Box folder to which you applied the metadata template.                                                                                                                                                                                                                                                                                                                                                                                       |
 
 The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
 
-For additional information on metadata queries, see [this guide][metadata-query]
+For additional information on metadata queries, see [this guide][metadata-query].
 
 3. Pass the required parameters to the Content Explorer component.
 
 ```js
-[...]
 
-function App() {
   [...]
 
-  return (
-      <IntlProvider locale="en">
-        <div className="App">
-          <header className="App-header">
-            <h2>Metadata view in Content Explorer</h2>
-          </header>
-          <section>
-            <div className="metadata-based-view">
-              <ContentExplorer
-                rootFolderId={rootFolderID}
-                token={token}
-                metadataQuery={metadataQuery}
-                fieldsToShow={fieldsToShow}
-                defaultView={defaultView}
-              />
-            </div>
-          </section>
-        </div>
-      </IntlProvider>
-  );
-}
+    function App() {
+      [...]
 
-export default App;
+      return (
+          <IntlProvider locale="en">
+            <div className="App">
+              <header className="App-header">
+                <h2>Metadata view in Content Explorer</h2>
+              </header>
+              <section>
+                <div className="metadata-based-view">
+                  <ContentExplorer
+                    rootFolderId={rootFolderID}
+                    token={token}
+                    metadataQuery={metadataQuery}
+                    fieldsToShow={fieldsToShow}
+                    defaultView={defaultView}
+                  />
+                </div>
+              </section>
+            </div>
+          </IntlProvider>
+      );
+      }
+
+    export default App;
 ```
 
-A sample React component including metadata will look similar to the following:
+A sample code for a React component including the Content Explorer metadata view would look as follows:
 
 ```js
 function App() {
@@ -369,7 +372,7 @@ function App() {
 
 	// Define metadata source
 	// Example: enterprise_123456789.metadatatemplate
-	const metadataSource = `enterprise_${EID}.${templateName}`;
+	const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
 
 	const metadataQuery = {
 		from: metadataSource,
@@ -409,15 +412,15 @@ function App() {
 
 	return (
 		<IntlProvider locale="en">
-			  <div className="metadata-based-view">
-          <ContentExplorer
-            rootFolderId={rootFolderID}
-            token={token}
-            metadataQuery={metadataQuery}
-            fieldsToShow={fieldsToShow}
-            defaultView={defaultView}
-        />
-      </div>
+			<div className="metadata-based-view">
+				<ContentExplorer
+					rootFolderId={rootFolderID}
+					token={token}
+					metadataQuery={metadataQuery}
+					fieldsToShow={fieldsToShow}
+					defaultView={defaultView}
+				/>
+			</div>
 		</IntlProvider>
 	);
 }
@@ -443,3 +446,4 @@ export default App;
 [appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
 [blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
 [metadata-query]: g://metadata/queries
+[get-template]: g://metadata/templates/get/#get-a-metadata-template-by-name
