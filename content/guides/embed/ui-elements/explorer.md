@@ -412,14 +412,21 @@ function App() {
 
 	return (
 		<IntlProvider locale="en">
-			<div className="metadata-based-view">
-				<ContentExplorer
-					rootFolderId={rootFolderID}
-					token={token}
-					metadataQuery={metadataQuery}
-					fieldsToShow={fieldsToShow}
-					defaultView={defaultView}
-				/>
+			<div className="App">
+				<header className="App-header">
+					<h2>Metadata view in Content Explorer</h2>
+				</header>
+				<section>
+					<div className="metadata-based-view">
+						<ContentExplorer
+							rootFolderId={rootFolderID}
+							token={token}
+							metadataQuery={metadataQuery}
+							fieldsToShow={fieldsToShow}
+							defaultView={defaultView}
+						/>
+					</div>
+				</section>
 			</div>
 		</IntlProvider>
 	);
