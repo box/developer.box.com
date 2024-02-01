@@ -460,9 +460,11 @@ Additional resources
 
  -->
 
-<div style="display:flex; align-items: center; flex-wrap: wrap">
+<div class="teaserWrapper">
 
-<Teaser title="Box Youtube" href="https://www.youtube.com/@box/videos" type="youtube">
+<a href="https://www.youtube.com/@box/videos">
+
+<Teaser title="Box Youtube" type="youtube">
 
 Check out our channel for tutorials, training,
 product news, and more.
@@ -471,7 +473,11 @@ View Channel
 
 </Teaser>
 
-<Teaser title="Developer Newsletter" href="/newsletter/" type="newsletter">
+</a>
+
+<a href="/newsletter/">
+
+<Teaser title="Developer Newsletter" type="newsletter">
 
 Stay up to date with the top developer events,
 product releases, and community highlights.
@@ -480,7 +486,11 @@ Browse Newsletter
 
 </Teaser>
 
-<Teaser title="Box Developer Blog" href="https://medium.com/box-developer-blog" type="blog">
+</a>
+
+<a href="https://medium.com/box-developer-blog">
+
+<Teaser title="Box Developer Blog" type="blog">
 
 Read news, updates and tutorials on Box APIs, SDKs
 and gain useful developers' and admins' insights.
@@ -488,6 +498,8 @@ and gain useful developers' and admins' insights.
 Visit Box Developer Blog
 
 </Teaser>
+
+</a>
 
 </div>
 
