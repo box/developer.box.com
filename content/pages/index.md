@@ -17,7 +17,6 @@ alias_paths:
 # Box Platform
 
 <Banner>
-
   <BannerTitle>
     Start building with **Box Platform**
   </BannerTitle>
@@ -31,8 +30,7 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-All the developer resources to help you get the most from Box products
-
+  All the developer resources to help you get the most from Box products
 </Banner>
 
 <!-- <Centered wide>
@@ -40,8 +38,8 @@ All the developer resources to help you get the most from Box products
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box
-    Platform API with our comprehensive guides. Here are six of the most used
+    Get started, learn tips and tricks, and discover how to use the Box 
+    Platform API with our comprehensive guides. Here are six of the most used 
     guides to get you started.
 
     <GuideList href='/guides/authentication/'>
@@ -89,7 +87,7 @@ All the developer resources to help you get the most from Box products
       difference between the types.
     </Tile>
     <Tile type="apps" title="2. Understand application types"
-      href="/guides/applications/app-types/select/">
+      href="/guides/applications/select/">
       When creating applications, you can choose from several types.
       Read this guide to see which one fits your needs best.
     </Tile>
@@ -124,62 +122,6 @@ All the developer resources to help you get the most from Box products
       href="#sdks-and-tools">
       Finally, explore our developer toolkit: API Reference,
       SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
-    </Tile>
-  </TileGrid>
-</Centered>
-
-<Centered wide>
-  <Header to='/' centered>
-    I'm new to Box Platform. How do I start?
-  </Header>
-    So - you wanna use the Box API? We love to see it!
-    Follow along with the steps below to help get you up and running today.
-    Go from zero to BoxDev hero!
-
-  <TileGrid>
-    <Tile title="1. Explore user types"
-      href="/guides/getting-started/user-types/">
-      Box Platform has different user options depending on the use case.
-      Before developing, review this guide to understand the differences.
-    </Tile>
-    <Tile title="2. Understand application types"
-      href="/guides/applications/select/">
-      When creating applications, you can choose from several types.
-      Read this guide to see which one fits your needs best.
-    </Tile>
-    <Tile title="3. Learn authentication methods"
-      href="/guides/authentication/select/">
-      Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
-      Credentials, and App Token authentication. Check with method
-      applies to your application.
-    </Tile>
-    <Tile title="4. Setup the Box CLI"
-      href="/guides/cli/quick-start/">
-      Optionally, follow the Box CLI quickstart
-      guide to have an API testing space. It takes less than
-      five minutes to start developing!
-    </Tile>
-    <Tile title="5. Create an architecture pattern"
-      href="/guides/getting-started/architecture-patterns/">
-      We always recommended putting pen to paper and drawing out your solution.
-      Have a look at the most common architecture patterns to get inspired!
-    </Tile>
-    <Tile title="6. Create the application"
-      href="https://app.box.com/developers/console">
-      Now, you can start building! Launch the Developer Console and create an
-      application of your choice.
-    </Tile>
-    <Tile title="7. Authorize the application"
-      href="/guides/authorization/">
-      Read about the authorization requirements you have to
-      fulfill to start using you app.
-    </Tile>
-    <Tile title="8. Start coding"
-      href="/reference/">
-      Finally, explore the endpoints available to you in our API reference
-      pages. The site allows you to try out any of the endpoints, and you will
-      find code snippets from all of our SDKs directly embedded
-      in each page.
     </Tile>
   </TileGrid>
 </Centered>
@@ -388,27 +330,30 @@ All the developer resources to help you get the most from Box products
 
   <!-- <BlogCards /> -->
 
-  <div style="display:flex; align-items: center; flex-wrap: wrap">
-    <Teaser title="Box Youtube"
-      href="https://www.youtube.com/@box/videos" type="youtube">
-      Check out our channel for tutorials, training,
-      product news, and more.
+  <div class="teaserWrapper">
+    <a href="https://www.youtube.com/@box/videos">
+      <Teaser title="Box Youtube" type="youtube">
+        Check out our channel for tutorials, training,
+        product news, and more.
 
-      View Channel
-    </Teaser>
-    <Teaser title="Developer Newsletter" href="/newsletter/" type="newsletter">
-      Stay up to date with the top developer events,
-      product releases, and community highlights.
+        View Channel
+      </Teaser>
+    </a>
+    <a href="/newsletter/">
+      <Teaser title="Developer Newsletter" type="newsletter">
+        Stay up to date with the top developer events,
+        product releases, and community highlights.
 
-      Browse Newsletter
-    </Teaser>
-    <Teaser title="Box Developer Blog"
-      href="https://medium.com/box-developer-blog" type="blog">
-      Read news, updates and tutorials on Box APIs, SDKs
-      and gain useful developers' and admins' insights.
+        Browse Newsletter
+      </Teaser>
+    </a>
+    <a href="https://medium.com/box-developer-blog">
+      <Teaser title="Box Developer Blog" type="blog">
+        Read news, updates and tutorials on Box APIs, SDKs
+        and gain useful developers' and admins' insights.
 
-      Visit Box Developer Blog
-    </Teaser>
-
+        Visit Box Developer Blog
+      </Teaser>
+    </a>
   </div>
 </Centered>
