@@ -17,6 +17,7 @@ alias_paths:
 # Box Platform
 
 <Banner>
+
   <BannerTitle>
     Start building with **Box Platform**
   </BannerTitle>
@@ -30,7 +31,8 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-  All the developer resources to help you get the most from Box products
+All the developer resources to help you get the most from Box products
+
 </Banner>
 
 <!-- <Centered wide>
@@ -38,8 +40,8 @@ alias_paths:
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box 
-    Platform API with our comprehensive guides. Here are six of the most used 
+    Get started, learn tips and tricks, and discover how to use the Box
+    Platform API with our comprehensive guides. Here are six of the most used
     guides to get you started.
 
     <GuideList href='/guides/authentication/'>
@@ -76,18 +78,14 @@ alias_paths:
 
   <TileGrid>
     <Tile type="users" title="1. Explore user types"
-<<<<<<< HEAD
       href="platform/user-types/">
-=======
-      href="/guides/getting-started/user-types/">
->>>>>>> 85778ff4 ([DEVREL-235] Restore numbers in grid tiles)
       Box Platform covers many use cases
       that may require different user types.
       Learn more about the 
       difference between the types.
     </Tile>
     <Tile type="apps" title="2. Understand application types"
-      href="/guides/applications/select/">
+      href="/guides/applications/app-types/select/">
       When creating applications, you can choose from several types.
       Read this guide to see which one fits your needs best.
     </Tile>
@@ -122,6 +120,64 @@ alias_paths:
       href="#sdks-and-tools">
       Finally, explore our developer toolkit: API Reference,
       SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
+    </Tile>
+  </TileGrid>
+</Centered>
+
+<Centered wide>
+  <Header to='/' centered>
+    I'm new to Box Platform. How do I start?
+  </Header>
+    So - you wanna use the Box API? We love to see it!
+    Follow along with the steps below to help get you up and running today.
+    Go from zero to BoxDev hero!
+
+  <TileGrid>
+    <Tile title="1. Explore user types"
+      href="/guides/getting-started/user-types/">
+      Box Platform has different user options depending on the use case.
+      Before developing, review this guide to understand the differences.
+    </Tile>
+    <Tile title="2. Understand application types"
+      href="/guides/applications/select/">
+      When creating a new application, you have three choices: custom, limited
+      access, and skill. This section describes the differences between them.
+    </Tile>
+    <Tile title="3. Learn authentication methods"
+      href="/guides/authentication/select/">
+      Box Platform supports OAuth 2.0, JSON Web Token(JWT), Client
+      Credentials, and App Token authentication. The methods available are
+      based on the application type selected.
+    </Tile>
+    <Tile title="4. Setup the Box CLI"
+      href="/guides/cli/quick-start/">
+      Optionally, follow the Box CLI quick start
+      guide in order to have an API testing space. This tool can come to your
+      aide when you get stuck. It takes less than five minutes!
+    </Tile>
+    <Tile title="5. Create an architecture pattern"
+      href="/guides/getting-started/architecture-patterns/">
+      We always recommended putting pen to paper and drawing out your solution.
+      Checkout the most common architecture patterns in this guide.
+    </Tile>
+    <Tile title="6. Create the application"
+      href="https://app.box.com/developers/console">
+      Now, you can start building! Visit the Developer Console. Create an
+      application based on the choices
+      you've selected from the learnings in the other steps.
+    </Tile>
+    <Tile title="7. Authorize the application"
+      href="/guides/authorization/">
+      Depending on the authentication method selected, you may have to
+      have the primary administrator of your Box instance authorize
+      you new app. Check details here!
+    </Tile>
+    <Tile title="8. Start coding"
+      href="/reference/">
+      Finally, explore the endpoints available to you in our API reference
+      pages. The site allows you to try out any of the endpoints, and you will
+      find code snippets from all of our SDKs directly embedded
+      in each page.
     </Tile>
   </TileGrid>
 </Centered>
@@ -264,6 +320,10 @@ alias_paths:
       href="/guides/search/">
       Find relevant content in Box using full-text
       search queries. Box search API is supported
+      in all our SDKs and the CLI.
+    </Tile>
+    <Tile type="guide" title="Salesforce"
+      href="/guides/tooling/salesforce-toolkit/">
       Integrate Box and Salesforce! Most
       recently we launched support for Salesforce Flows, a low code/no code
       solution. 
