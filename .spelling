@@ -67,6 +67,8 @@ Gradle
 Nuget
 Precompiled
 precompiled
+pre-populated
+pre-populate
 macOS
 autocomplete
 deprovisions
@@ -253,6 +255,7 @@ update_shared_link
 skill_invocations
 web_links
 sign_requests
+sign_templates
 boxSkillsCards
 skill_id
 dl-frh
