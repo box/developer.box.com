@@ -30,7 +30,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-ファイルの場合、`can_edit`オプションには`true`しか指定できません。また、管理者が管理コンソールで共有リンクの編集アクセス権限を制限している場合は、`can_edit`を`true`に設定することはできません。
+ファイルの場合、`can_edit`オプションには`true`しか指定できません。また、管理者が管理コンソールで共有リンクの編集権限を制限している場合は、`can_edit`を`true`に設定することはできません。
 
 </Message>
 
