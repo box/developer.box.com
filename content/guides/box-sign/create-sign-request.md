@@ -11,11 +11,9 @@ document/[signing log][log], and signers.
 <Samples id='post_sign_requests' />
 
 <Message type='warning'>
-
 Creation of the CFR Part 11 signature requests with public API
 is not supported. See [21 CFR Part 11 Compliance Support][CFR]
 for more information.
-
 </Message>
 
 ## Document preparation
@@ -69,13 +67,13 @@ the original file type. As each signer completes the request, Box Sign will
 automatically add a new file version.
 
 File size limits are determined by your account type. Please see our
-[uploads guide][uploads] for more information. 
+[uploads guide][uploads] for more information.
 
 ## Parent folder
 
 The folder ID specified in the `parent_folder` body parameter determines the
 destination of the final signed document and [signing log][log]. This folder
-cannot be the All Files or root level, which is represented by folder ID `0`. 
+cannot be the All Files or root level, which is represented by folder ID `0`.
 
 ## Signers
 
@@ -87,14 +85,14 @@ signed document and [signing log][log].
 
 Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
-and not Box `user_id`. 
+and not Box `user_id`.
 
 If necessary, signers can log in to Box before signing the request. In such
 case set the parameter `login_required` to `true` for signers. If the signer
 does not have an existing account, they will have an option to create a free
 Box account.
 
-<Message type='warning'> 
+<Message type='warning'>
 Box Sign will only attempt to send signing emails to the email addresses
 provided for signers in the request. For Box users, this does not include email
 aliases unless specified. Please double check to ensure all provided signer
@@ -130,7 +128,7 @@ settings for the rest.
 If you don't configure any redirect URLs
 Box Sign will redirect signers to a default page.
 
-<Message type='warning'> 
+<Message type='warning'>
 The default page includes the following note:
 "Once the document has been completed by all parties,
 a limited-time link to a finalized copy will be be emailed to you,
@@ -148,7 +146,7 @@ request at the same time.
 Initially, only the signer(s) with the lowest assigned `order` number will
 receive a Box Sign request email. Once they sign, the following user(s) will
 an email and so on. Box Sign automatically adds a new version of the
-document to the `parent_folder` as each user signs.  
+document to the `parent_folder` as each user signs.
 
 If any signer declines, any remaining signers will not receive a Box Sign
 request email. The overall request is declined.
