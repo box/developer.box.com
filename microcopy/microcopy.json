@@ -195,6 +195,9 @@
   // The text for the link to the learn section
   "headers.primary.links.learn.text": "Box Platformについて",
   "headers.primary.links.learn.url": "\/platform\/",
+  // The text for the link to the learn section
+  "headers.primary.links.learn-sign.text": "Working with Box Sign",
+  "headers.primary.links.learn-sign.url": "\/sign\/",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "クイックスタート",
   // The URL to the old Get Started guides
