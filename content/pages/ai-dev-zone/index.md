@@ -34,15 +34,15 @@ centered: false
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
-    <Tile disabled type="document-qa" title="Ask a question"
-        href="/ai-dev-zone">
-        Ask questions related to content of a document
+    <Tile type="metadata" title="Extract metadata"
+        href="/ai-dev-zone-metadata">
+        Extract information from any document
 
         <strong>Coming soon</strong>
     </Tile>
-    <Tile disabled type="metadata" title="Extract metadata"
+    <Tile disabled type="document-qa" title="Ask a question"
         href="/ai-dev-zone">
-        Extract information from any document
+        Ask questions related to content of a document
 
         <strong>Coming soon</strong>
     </Tile>

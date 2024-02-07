@@ -13,7 +13,7 @@ alias_paths:
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
-<CTA to="guide://applications/select">
+<CTA to="guide://applications/app-types/select">
   Learn how to select the application type for your app
 </CTA>
 
@@ -23,7 +23,7 @@ The following authorization methods are available to each Box application type.
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         | 
+| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         |
 | [Limited Access App][la-app] | No                  | Yes  | No                  | Yes        |
 | [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
 
@@ -35,7 +35,7 @@ The following authorization methods are available to each Box application type.
 
 OAuth 2.0 requires the application to redirect end-users to their browser to
 login to Box and authorize the application to take actions on their
-behalf. 
+behalf.
 
 <ImageFrame center width="400" shadow border>
   ![Box OAuth 2.0 approval](./oauth2-grant.png)
@@ -64,7 +64,7 @@ Client-side authentication is the ideal authentication method for apps that:
 Server-side authentication using JSON Web Tokens (JWT) does not require end-user
 interaction and, if granted the proper privileges, can be used to act on behalf
 of any user in an enterprise. Identity is validated using a JWT assertion and
-public/private keypair. 
+public/private keypair.
 
 <ImageFrame center shadow border>
 
@@ -93,8 +93,8 @@ that:
 
 Server-side authentication using Client Credentials Grant does not require
 end-user interaction and, if granted the proper privileges, can be used to act
-on behalf of any user in an enterprise. Identity is validated using the 
-application's client ID and client secret. 
+on behalf of any user in an enterprise. Identity is validated using the
+application's client ID and client secret.
 
 <Message>
   # When to use a Client Credentials Grant?
@@ -167,6 +167,6 @@ authentication the token defaults to the application's Service Account.
 
 </Message>
 
-[custom-app]: g://applications/custom-apps
-[custom-skill]: g://applications/custom-skills
-[la-app]: g://applications/limited-access-apps
+[custom-app]: g://applications/app-types/custom-apps
+[custom-skill]: g://applications/app-types/custom-skills
+[la-app]: g://applications/app-types/limited-access-apps

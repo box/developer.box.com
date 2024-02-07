@@ -38,8 +38,8 @@ alias_paths:
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box 
-    Platform API with our comprehensive guides. Here are six of the most used 
+    Get started, learn tips and tricks, and discover how to use the Box
+    Platform API with our comprehensive guides. Here are six of the most used
     guides to get you started.
 
     <GuideList href='/guides/authentication/'>
@@ -83,7 +83,7 @@ alias_paths:
       difference between the types.
     </Tile>
     <Tile type="apps" title="2. Understand application types"
-      href="/guides/applications/select/">
+      href="/guides/applications/app-types/select/">
       When creating applications, you can choose from several types.
       Read this guide to see which one fits your needs best.
     </Tile>
@@ -326,26 +326,30 @@ alias_paths:
 
   <!-- <BlogCards /> -->
 
-  <div style="display:flex; align-items: center; flex-wrap: wrap">
-    <Teaser title="Box Youtube"
-      href="https://www.youtube.com/@box/videos" type="youtube">
-      Check out our channel for tutorials, training,
-      product news, and more.
+  <div class="teaserWrapper">
+    <a href="https://www.youtube.com/@box/videos">
+      <Teaser title="Box Youtube" type="youtube">
+        Check out our channel for tutorials, training,
+        product news, and more.
 
-      View Channel
-    </Teaser>
-    <Teaser title="Developer Newsletter" href="/newsletter/" type="newsletter">
-      Stay up to date with the top developer events,
-      product releases, and community highlights.
+        View Channel
+      </Teaser>
+    </a>
+    <a href="/newsletter/">
+      <Teaser title="Developer Newsletter" type="newsletter">
+        Stay up to date with the top developer events,
+        product releases, and community highlights.
 
-      Browse Newsletter
-    </Teaser>
-    <Teaser title="Box Developer Blog"
-      href="https://medium.com/box-developer-blog" type="blog">
-      Read news, updates and tutorials on Box APIs, SDKs
-      and gain useful developers' and admins' insights.
+        Browse Newsletter
+      </Teaser>
+    </a>
+    <a href="https://medium.com/box-developer-blog">
+      <Teaser title="Box Developer Blog" type="blog">
+        Read news, updates and tutorials on Box APIs, SDKs
+        and gain useful developers' and admins' insights.
 
-      Visit Box Developer Blog
-    </Teaser>
+        Visit Box Developer Blog
+      </Teaser>
+    </a>
   </div>
 </Centered>

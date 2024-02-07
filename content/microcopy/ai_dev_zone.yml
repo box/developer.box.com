@@ -6,19 +6,33 @@ title: Box AI Developer Zone
 files:
   headline: Sample files
   labels:
-    doc: Document
-    doc_name: Sample_Article.doc
-    pdf: Document
-    pdf_name: Sample_Document.pdf
-    presentation: Presentation
-    presentation_name: Sample_presentation.ppx
+    415542803939:
+      name: Sample_Document.pdf
+      description: Document
+    416044542013:
+      name: Sample_Article.doc
+      description: Document
+    1415911293122:
+      name: Sample_Powerpoint.ppx
+      description: Presentation
   go_back_button: AI Dev Zone
 
 sample_code:
-  headline: Box AI API
-  paragraph: Use the following endpoint to start working on
-    integrating Document Q&A into your application. This demo
-    is also using Content Preview Box UI Element.
+  summary:
+    headline: Box AI API
+    paragraph: Use the following endpoint to start working on
+      integrating document summary into your application. This demo
+      is also using Content Preview Box UI Element.
+  metadata:
+    headline: Box Metadata AI API
+    paragraph: Use the following endpoint to start working on
+      integrating document metadata extraction into your application. This demo
+      is also using Content Preview Box UI Element.
+  qa:
+    headline: Box AI API
+    paragraph: Use the following endpoint to start working on
+      integrating document Q&A into your application. This demo
+      is also using Content Preview Box UI Element.
 
 side_panel:
   summary: Document summarisation
