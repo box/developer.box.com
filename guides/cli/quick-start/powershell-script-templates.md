@@ -131,7 +131,7 @@ Isaac,Newton,abc@abc.local,INewton23
 
 #### JSONファイルを使用する
 
-`Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、このフォルダ構造を、指定した親フォルダ内の当該ユーザーの`Personal Folder`フォルダの下に配置します。
+`Folder_Structure.json`ファイルは、作成するフォルダ構造を含んでいます。たとえば、`Market Research`フォルダと`Sales Plays`フォルダを作成し、それぞれにサブフォルダ`Statistics`と`Big Pharma`を作成するとします。このスクリプトは、このフォルダ構造を、指定した親フォルダ内にある当該ユーザーの`Personal Folder`フォルダの下に配置します。
 
 `FolderStructureJSONPath`パラメータを使用して、`Folder_Structure.json`ファイルの場所を指定します。
 

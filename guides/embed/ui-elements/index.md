@@ -35,7 +35,7 @@ Boxには、アプリケーションでファイルやフォルダに共通す�
 
 <Message type="warning">
 
-We no longer support the `OpenWith` UI element for any new customers as of December 21, 2021.
+日本時間2021年12月22日をもって、新規のお客様に対する`OpenWith` UI Elementのサポートは終了しました。
 
 </Message>
 

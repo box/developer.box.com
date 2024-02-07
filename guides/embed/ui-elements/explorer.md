@@ -27,6 +27,8 @@ fullyTranslated: true
 
 Box Content Explorer UI Elementを使用すると、開発者は、Boxに保存されているコンテンツのフォルダビューをデスクトップまたはモバイルウェブアプリに埋め込むことができます。ライブラリはBox APIを介して指定されたフォルダに関する情報を取得した後、メインのBoxウェブアプリと同様にそのコンテンツをフォルダビューにレンダリングします。ユーザーは、そのフォルダ階層内を移動し、名前の変更、削除、共有などのファイル操作を実行できます。
 
+Content Explorer comes with a metadata view that uses metadata query to find files and folders based on their metadata. The data is then displayed in the embedded view.
+
 ## インストール
 
 NPMまたはBox CDN経由でBox UI Elementsをインストールする方法は、[こちら](g://embed/ui-elements/installation)を参照してください。
@@ -48,29 +50,28 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Box Content Explorer Demo</title>
+	<head>
+		<meta charset="utf-8" />
+		<title>Box Content Explorer Demo</title>
 
-    <!-- Latest version of the explorer css for your locale -->
-    <link
-      rel="stylesheet"
-      href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css"
-    />
-  </head>
-  <body>
-    <div class="container" style="height:600px"></div>
-    <!-- Latest version of the explorer js for your locale -->
-    <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
-    <script>
-      var folderId = "123";
-      var accessToken = "abc";
-      var contentExplorer = new Box.ContentExplorer();
-      contentExplorer.show(folderId, accessToken, {
-        container: ".container"
-      });
-    </script>
-  </body>
+		<!-- Latest version of the explorer css for your locale -->
+		<link
+			rel="stylesheet"
+			href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
+	</head>
+	<body>
+		<div class="container" style="height:600px"></div>
+		<!-- Latest version of the explorer js for your locale -->
+		<script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
+		<script>
+			var folderId = "123";
+			var accessToken = "abc";
+			var contentExplorer = new Box.ContentExplorer();
+			contentExplorer.show(folderId, accessToken, {
+				container: ".container",
+			});
+		</script>
+	</body>
 </html>
 
 ```
@@ -157,29 +158,33 @@ contentExplorer.removeAllListeners();
 
 ### オプション
 
-| パラメータ                  | 型        | デフォルト                                   | 説明                                                                                                                                                                                                               |
-| ---------------------- | -------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `container`            | String   | `document.body`                         | コンテンツエクスプローラが配置されるコンテナのCSSセレクタ。hide() を呼び出すと、このコンテナは空になります。                                                                                                                                                      |
-| `sortBy`               | String   | `name`                                  | コンテンツリストの最初の並べ替え基準オプション。値は`id`、`name`、`date`または`size`になります。                                                                                                                                                      |
-| `sortDirection`        | String   | `ASC`                                   | コンテンツリストの最初の並べ替え方向オプション。値は`ASC`または`DESC`になります。                                                                                                                                                                   |
-| `logoUrl`              | String   |                                         | ヘッダーに表示するカスタムロゴのURL。この値が「box」という文字列の場合は、Boxのロゴが表示されます。                                                                                                                                                           |
-| `canPreview`           | Boolean  | `true`                                  | このオプションが`true`に設定されていて、ファイルに対する`can_preview`権限が`true`の場合、コンテンツエクスプローラでファイルをクリックできます。ファイルをクリックするとそのファイルのプレビューが開始されます。ファイルに対する権限`can_preview`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、プレビュー可能なファイルのみに適用できます。 |
-| `canDownload`          | Boolean  | `true`                                  | これを`false`に設定すると、ダウンロードオプションが非表示になります。このオプションを非表示にするだけではダウンロードを防ぐことはできず、ファイルに対する権限でも`can_download`を`false`に設定する必要があります。ファイルに対する権限`can_download`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、ファイルのみに適用できます。     |
-| `canDelete`            | Boolean  | `true`                                  | これを`false`に設定すると、削除オプションが非表示になります。このオプションを非表示にするだけでは削除を防ぐことはできず、項目に対する権限でも`can_delete`を`false`に設定する必要があります。項目に対する権限`can_delete`が`false`に設定されている場合、このオプションによる効果はありません。                                            |
-| `canRename`            | Boolean  | `true`                                  | これを`false`に設定すると、名前の変更オプションが非表示になります。このオプションを非表示にするだけでは名前の変更を防ぐことはできず、項目に対する権限でも`can_rename`を`false`に設定する必要があります。                                                                                                |
-| `canUpload`            | Boolean  | `true`                                  | これを`false`に設定すると、アップロードオプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、現在のフォルダに対する権限でも`can_upload`を`false`に設定する必要があります。フォルダに対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                             |
-| `canCreateNewFolder`   | Boolean  | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                       |
-| `canShare`             | Boolean  | `true`                                  | `false`に設定すると、共有ボタンが非表示になります。このボタンを非表示にするだけでは共有を防ぐことはできず、項目の`permissions`でも`can_share`をfalseに設定する必要があります。項目に対する権限`can_share`が`false`に設定されている場合、このオプションによる効果はありません。                                               |
-| `canSetShareAccess`    | Boolean  | `true`                                  | `false`に設定すると、共有権限の変更を許可する共有ドロップダウン選択が非表示になります。この選択のドロップダウンを非表示にするだけでは共有権限の変更を防ぐことはできず、項目に対する権限でも`can_set_share_access`を`false`に設定する必要があります。項目に対する権限`can_set_share_access`が`false`に設定されている場合、このオプションによる効果はありません。 |
-| `sharedLink`           | String   |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                                 |
-| `sharedLinkPassword`   | String   |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                          |
-| `size`                 | String   | `undefined`                             | コンテンツエクスプローラがコンテナの幅の大小に合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動で`small`の幅と`large`の幅が切り替わります。                                                                       |
-| `isTouch`              | Boolean  | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | コンテンツエクスプローラがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                                         |
-| `autoFocus`            | Boolean  | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                           |
-| `defaultView`          | String   | `files`                                 | 値は`files`または`recents`になります。`recents`に設定すると、デフォルトで、通常のファイル/フォルダ構造ではなく最近使用した項目が表示されます。                                                                                                                             |
-| `requestInterceptor`   | Function |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                     |
-| `responseInterceptor`  | Function |                                         | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                     |
-| `ContentOpenWithProps` | Object   | `{ show: false }`                       | エクスプローラからプレビューする際にOpen With Elementを表示できます。                                                                                                                                                                      |
+| パラメータ                  | 型        | デフォルト                                   | 説明                                                                                                                                                                                                                                                                                             |
+| ---------------------- | -------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `container`            | String   | `document.body`                         | コンテンツエクスプローラが配置されるコンテナのCSSセレクタ。hide() を呼び出すと、このコンテナは空になります。                                                                                                                                                                                                                                    |
+| `sortBy`               | String   | `name`                                  | コンテンツリストの最初の並べ替え基準オプション。値は`id`、`name`、`date`または`size`になります。                                                                                                                                                                                                                                    |
+| `sortDirection`        | String   | `ASC`                                   | コンテンツリストの最初の並べ替え方向オプション。値は`ASC`または`DESC`になります。                                                                                                                                                                                                                                                 |
+| `logoUrl`              | String   |                                         | ヘッダーに表示するカスタムロゴのURL。この値が「box」という文字列の場合は、Boxのロゴが表示されます。                                                                                                                                                                                                                                         |
+| `canPreview`           | Boolean  | `true`                                  | このオプションが`true`に設定されていて、ファイルに対する`can_preview`権限が`true`の場合、コンテンツエクスプローラでファイルをクリックできます。ファイルをクリックするとそのファイルのプレビューが開始されます。ファイルに対する権限`can_preview`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、プレビュー可能なファイルのみに適用できます。                                                                               |
+| `canDownload`          | Boolean  | `true`                                  | これを`false`に設定すると、ダウンロードオプションが非表示になります。このオプションを非表示にするだけではダウンロードを防ぐことはできず、ファイルに対する権限でも`can_download`を`false`に設定する必要があります。ファイルに対する権限`can_download`が`false`に設定されている場合、このオプションによる効果はありません。このオプションは、ファイルのみに適用できます。                                                                                   |
+| `canDelete`            | Boolean  | `true`                                  | これを`false`に設定すると、削除オプションが非表示になります。このオプションを非表示にするだけでは削除を防ぐことはできず、項目に対する権限でも`can_delete`を`false`に設定する必要があります。項目に対する権限`can_delete`が`false`に設定されている場合、このオプションによる効果はありません。                                                                                                                          |
+| `canRename`            | Boolean  | `true`                                  | これを`false`に設定すると、名前の変更オプションが非表示になります。このオプションを非表示にするだけでは名前の変更を防ぐことはできず、項目に対する権限でも`can_rename`を`false`に設定する必要があります。                                                                                                                                                                              |
+| `canUpload`            | Boolean  | `true`                                  | これを`false`に設定すると、アップロードオプションが非表示になります。このオプションを非表示にするだけではアップロードを防ぐことはできず、現在のフォルダに対する権限でも`can_upload`を`false`に設定する必要があります。フォルダに対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                                                                                           |
+| `canCreateNewFolder`   | Boolean  | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`が`false`に設定されている場合、このオプションによる効果はありません。                                                                                                                     |
+| `canShare`             | Boolean  | `true`                                  | `false`に設定すると、共有ボタンが非表示になります。このボタンを非表示にするだけでは共有を防ぐことはできず、項目の`permissions`でも`can_share`をfalseに設定する必要があります。項目に対する権限`can_share`が`false`に設定されている場合、このオプションによる効果はありません。                                                                                                                             |
+| `canSetShareAccess`    | Boolean  | `true`                                  | `false`に設定すると、共有権限の変更を許可する共有ドロップダウン選択が非表示になります。この選択のドロップダウンを非表示にするだけでは共有権限の変更を防ぐことはできず、項目に対する権限でも`can_set_share_access`を`false`に設定する必要があります。項目に対する権限`can_set_share_access`が`false`に設定されている場合、このオプションによる効果はありません。                                                                               |
+| `sharedLink`           | String   |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                                                                                                               |
+| `sharedLinkPassword`   | String   |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                                                                                                        |
+| `size`                 | String   | `undefined`                             | コンテンツエクスプローラがコンテナの幅の大小に合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動で`small`の幅と`large`の幅が切り替わります。                                                                                                                                                     |
+| `isTouch`              | Boolean  | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | Indicates to the Content Explorer that it's is being rendered on a touch enabled device.                                                                                                                                                                                                       |
+| `autoFocus`            | Boolean  | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                                                                                                         |
+| `defaultView`          | String   | `files`                                 | Value can be either be `files`, `recents` or `metadata`. When set to `recents`, by default you will see recent items instead of the regular file/folder structure. `metadata` is required to display the metadata view in Content Explorer. If not provided, you'll get a regular folder view. |
+| `requestInterceptor`   | Function |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                                                                                                   |
+| `responseInterceptor`  | Function |                                         | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                                                                                                   |
+| `ContentOpenWithProps` | Object   | `{ show: false }`                       | エクスプローラからプレビューする際にOpen With Elementを表示できます。                                                                                                                                                                                                                                                    |
+| `token`                | String   |                                         | Developer token generated in the Developer Console.                                                                                                                                                                                                                                            |
+| `metadataQuery`        | Object   |                                         | Metadata query used to get the information for the metadata view.                                                                                                                                                                                                                              |
+| `rootFolderID`         | String   |                                         | Folder ID with a metadata template applied. `metadataQuery` will apply to this folder.                                                                                                                                                                                                         |
+| `fieldsToShow`         | Object   |                                         | The metadata fields/columns to view - must be valid field names from the metadata template.                                                                                                                                                                                                    |
 
 ### イベント
 
@@ -252,8 +257,198 @@ contentExplorer.removeAllListeners();
 | ユーザーが基本機能、プレビュー、ダウンロード、およびファイル/フォルダ名の変更を必要とする              | `base_explorer` + `item_preview` + `item_download` + `item_rename`                                                |
 | ユーザーがすべての機能 (基本、プレビュー、ダウンロード、名前の変更、共有、アップロード、および削除) を必要とする | `base_explorer` + `item_preview` + `item_download` + `item_rename` + `item_delete` + `item_share` + `item_upload` |
 
+## Metadata view
+
+With Content Explorer you can also display files and folders based on their metadata. This view is called the metadata view and uses metadata template and metadata query to find the data you want to display.
+
+### 前提条件
+
+Make sure you have the following installed:
+
+* Node version: `>=18.18.2 <20.11.0`
+* React version `>=17.0.2 <18.0.0`
+* BUIE version `19.0.0`
+
+### Create and configure an app
+
+1. [Create a Box app][box-app].
+2. Add the local development address in the CORS Domains:
+   ![CORSドメイン](./images/box-app-cors.png)
+3. Generate a [developer token][token].
+
+### メタデータテンプレートの作成
+
+The next step is to create a metadata template you will use to populate the Content Explorer.
+
+1. Create a metadata template. You can use [Metadata API][creating-templates-api] or [Admin Console][creating-templates-ui] to do so.
+2. Apply an already created template to a Box folder. Make sure you enable the cascade policy. For detailed instructions, see [instructions on customizing and applying templates][apply-templates].
+
+### Display metadata view
+
+To make things easier, you can use a [sample project][metadata-project] to launch metadata view.
+
+1. Clone the metadata sample project.
+2. Update the placeholders in [`App.js`][appjs] with actual values:
+
+| パラメータ                    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `DEVELOPER_TOKEN`        | [Developer token][token] generated in the the Developer Console.                                                                                                                                                                                                                                                                                                                                                                                   |
+| `ENTERPRISE_ID`          | Enterprise ID copied from the **General Settings** tab of your application.                                                                                                                                                                                                                                                                                                                                                                        |
+| `METADATA_TEMPLATE_NAME` | Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the label only. The name to use in the component is always the you provided at the beginning. |
+| `ROOTFOLDER_ID`          | ID of Box folder to which you applied the metadata template.                                                                                                                                                                                                                                                                                                                                                                                       |
+
+The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
+
+For additional information on metadata queries, see [this guide][metadata-query].
+
+3. Pass the required parameters to the Content Explorer component.
+
+```js
+
+[...]
+
+  function App() {
+    [...]
+
+    return (
+        <IntlProvider locale="en">
+          <div className="App">
+            <header className="App-header">
+              <h2>Metadata view in Content Explorer</h2>
+            </header>
+            <section>
+              <div className="metadata-based-view">
+                <ContentExplorer
+                  rootFolderId={rootFolderID}
+                  token={token}
+                  metadataQuery={metadataQuery}
+                  fieldsToShow={fieldsToShow}
+                  defaultView={defaultView}
+                />
+              </div>
+            </section>
+          </div>
+        </IntlProvider>
+    );
+    }
+
+  export default App;
+
+```
+
+A sample code for a React component including the Content Explorer metadata view would look as follows:
+
+```js
+function App() {
+	// Get the token from Developer Console (app's configuration tab)
+	const token = "<DEVELOPER_TOKEN>";
+
+	// Folder ID with a metadata template applied
+	// The metadataQuery will apply to this folder
+	const rootFolderID = "<ROOTFOLDER_ID>";
+
+	// Get ENTERPRISE_ID from Developer Console (app's general settings)
+	const EID = "<ENTERPRISE_ID>";
+
+	// Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
+	const templateName = "<METADATA_TEMPLATE_NAME>";
+
+	// Define metadata source
+	// Example: enterprise_123456789.metadatatemplate
+	const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
+
+	const metadataQuery = {
+		from: metadataSource,
+
+		// Filter items in the folder by existing metadata key
+		query: "key = :arg1",
+
+		// Display items with value
+		query_params: { arg1: "value" },
+
+		// Define the ancestor folder ID
+		ancestor_folder_id: 0,
+
+		// Define which other metadata fields you'd like to display
+		fields: [
+			`${metadataSource}.name`,
+			`${metadataSource}.last_contacted_at`,
+			`${metadataSource}.industry`,
+			`${metadataSource}.role`,
+		],
+	};
+
+	// The metadata fields/columns to view - must be valid field names from the metadata template
+	const fieldsToShow = [
+		// Determine if the user can edit the metadata directly from Content Explorer component
+		{ key: `${metadataSource}.name`, canEdit: false },
+
+		// Determine label alias on metadata column with displayName prop
+		{ key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
+		{ key: `${metadataSource}.last_contacted_at`, canEdit: true },
+		{ key: `${metadataSource}.role`, canEdit: true },
+	];
+
+	// defaultView - a required prop to paint the metadata view.
+	// If not provided, you'll get regular folder view.
+	const defaultView = "metadata";
+
+	return (
+		<IntlProvider locale="en">
+			<div className="App">
+				<header className="App-header">
+					<h2>Metadata view in Content Explorer</h2>
+				</header>
+				<section>
+					<div className="metadata-based-view">
+						<ContentExplorer
+							rootFolderId={rootFolderID}
+							token={token}
+							metadataQuery={metadataQuery}
+							fieldsToShow={fieldsToShow}
+							defaultView={defaultView}
+						/>
+					</div>
+				</section>
+			</div>
+		</IntlProvider>
+	);
+}
+
+export default App;
+
+```
+
+<Message type="notice">
+
+**TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
+
+</Message>
+
 <!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
+
+[box-app]: g:///applications/app-types
+
+[token]: g://authentication/tokens/developer-tokens
+
+[templates]: g://metadata/templates
+
+[metadata-project]: https://github.com/box-community/content-explorer-metadata/tree/main
+
+[creating-templates-api]: g:///metadata/templates/create
+
+[creating-templates-ui]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
+
+[apply-templates]: https://support.box.com/hc/en-us/articles/360044196173-Using-Metadata
+
+[appjs]: https://github.com/box-community/content-explorer-metadata/blob/main/src/App.js
+
+[blogpost]: https://medium.com/box-developer-blog/metadata-view-in-box-content-explorer-4978e47e97e9
+
+[metadata-query]: g://metadata/queries
+
+[get-template]: g://metadata/templates/get/#get-a-metadata-template-by-name

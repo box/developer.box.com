@@ -434,9 +434,11 @@ BoxとSalesforceを統合しましょう。最近、Boxでは、ローコード/
 
  -->
 
-<div style="display:flex; align-items: center; flex-wrap: wrap">
+<div class="teaserWrapper">
 
-<Teaser title="BoxのYouTube" href="https://www.youtube.com/@box/videos" type="youtube">
+<a href="https://www.youtube.com/@box/videos">
+
+<Teaser title="BoxのYouTube" type="youtube">
 
 Boxのチャンネルで、チュートリアル、トレーニング、製品ニュースなどをご確認ください (英語のみ)。
 
@@ -444,7 +446,11 @@ Boxのチャンネルで、チュートリアル、トレーニング、製品�
 
 </Teaser>
 
-<Teaser title="開発者向けニュースレター" href="/newsletter/" type="newsletter">
+</a>
+
+<a href="/newsletter/">
+
+<Teaser title="開発者向けニュースレター" type="newsletter">
 
 トップ開発者のイベント、製品リリース、コミュニティのハイライトに関する最新情報をお届けします (英語のみ)。
 
@@ -452,13 +458,19 @@ Boxのチャンネルで、チュートリアル、トレーニング、製品�
 
 </Teaser>
 
-<Teaser title="Box開発者向けブログ" href="https://medium.com/box-developer-blog" type="blog">
+</a>
+
+<a href="https://medium.com/box-developer-blog">
+
+<Teaser title="Box開発者向けブログ" type="blog">
 
 Box APIやSDKに関するニュース、最新情報、チュートリアルを確認し、開発者および管理者にとって役立つインサイトを得ましょう。
 
 Box開発者向けブログを参照
 
 </Teaser>
+
+</a>
 
 </div>
 
