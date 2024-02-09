@@ -21,10 +21,21 @@ sample_code:
     is also using Content Preview Box UI Element.
 
 side_panel:
-  summary: Document summarisation
-  cta: Learn more
+  summary:
+    title: Document summarisation
+    cta: Learn more
+    url: /
+  metadata:
+    title: Metadata extraction
+    cta: Learn more
+    url: /
+  qa:
+    title: Document Q&Q
+    cta: Learn more
+    url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
+
 
 document_summary:
   placeholder: Select value
@@ -33,7 +44,13 @@ document_summary:
   generate: Generate summary
   tone_of_voice: Tone of voice
   length: Length
-  summaryError: Please try again
+  error: Please try again
+
+document_metadata:
+  instruction: Extract metadata from the selected document
+  clear: Clear
+  extract: Extract
+  error: Please try again
 
 summary_filters:
   formal: Formal
