@@ -461,6 +461,18 @@
   "pages.featured_board.community.tag": "New",
   "pages.featured_board.community.headline": "Box Developer Community forum",
   "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
+  "pages.additionalResources.youtube.title": "Box Youtube",
+  "pages.additionalResources.youtube.text": "Check out our channel for tutorials, training, product news, and more.",
+  "pages.additionalResources.youtube.cta": "View Channel",
+  "pages.additionalResources.youtube.url": "https://www.youtube.com/@box/videos",
+  "pages.additionalResources.newsletter.title": "Developer Newsletter",
+  "pages.additionalResources.newsletter.text": "Stay up to date with the top developer events, product releases, and community highlights.",
+  "pages.additionalResources.newsletter.cta": "Browse Newsletter",
+  "pages.additionalResources.newsletter.url": "/newsletter/",
+  "pages.additionalResources.blog.title": "Box Developer Blog",
+  "pages.additionalResources.blog.text": "Read news, updates and tutorials on Box APIs, SDKs and gain useful developers' and admins' insights.",
+  "pages.additionalResources.blog.cta": "Visit Box Developer Blog",
+  "pages.additionalResources.blog.url": "https://medium.com/box-developer-blog",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
