@@ -283,31 +283,5 @@ All the developer resources to help you get the most from Box products
   </Header>
 
   <!-- <BlogCards /> -->
-
-  <div class="teaserWrapper">
-    <a href="https://www.youtube.com/@box/videos">
-      <Teaser title="Box Youtube" type="youtube">
-        Check out our channel for tutorials, training,
-        product news, and more.
-
-        View Channel
-      </Teaser>
-    </a>
-    <a href="/newsletter/">
-      <Teaser title="Developer Newsletter" type="newsletter">
-        Stay up to date with the top developer events,
-        product releases, and community highlights.
-
-        Browse Newsletter
-      </Teaser>
-    </a>
-    <a href="https://medium.com/box-developer-blog">
-      <Teaser title="Box Developer Blog" type="blog">
-        Read news, updates and tutorials on Box APIs, SDKs
-        and gain useful developers' and admins' insights.
-
-        Visit Box Developer Blog
-      </Teaser>
-    </a>
-  </div>
+  <Teaser />
 </Centered>
