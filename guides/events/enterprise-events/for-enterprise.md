@@ -182,7 +182,7 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `RENAME`                                                      | ファイルまたはフォルダの名前や説明の変更                                                                                          |
 | `RETENTION_POLICY_ASSIGNMENT_ADD`                             | リテンションポリシー割り当ての追加                                                                                             |
 | `SHARE`                                                       | 共有リンクの有効化                                                                                                     |
-| `SHARE_EXPIRATION`                                            | 共有リンクへの有効期限の設定                                                                                                |
+| `SHARE_EXPIRATION`                                            | 共有リンクの有効期限の設定                                                                                                 |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`                  | 共有リンクによって発生するリダイレクト                                                                                           |
 | `SHIELD_ALERT`                                                | 企業のShieldルールに基づいた、Shieldによる異常なダウンロード、セッション、場所、悪意のあるコンテンツの検出。詳細については、[Shieldアラートイベント][shield-events]を参照してください。 |
 | `SHIELD_DOWNLOAD_BLOCKED`                                     | Shieldアクセスポリシーに基づいた、エンドユーザーによるファイルのダウンロードのブロック                                                                |
@@ -215,7 +215,7 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `SIGN_DOCUMENT_VIEWED_BY_SIGNER`                              | 署名者による署名用メールの \[**ドキュメントをレビュー**] のクリックまたは署名用URLへのアクセス                                                         |
 | `SIGNER_DOWNLOADED`                                           | 署名者による署名用ドキュメントのダウンロード                                                                                        |
 | `SIGNER_FORWARDED`                                            | 署名者による署名用ドキュメントの転送                                                                                            |
-| `STORAGE_EXPIRATION`                                          | ファイルへの自動削除の設定                                                                                                 |
+| `STORAGE_EXPIRATION`                                          | ファイルの自動削除の設定                                                                                                  |
 | `TASK_ASSIGNMENT_UPDATE`                                      | タスク割り当ての更新                                                                                                    |
 | `TASK_ASSIGNMENT_CREATE`                                      | タスク割り当ての作成                                                                                                    |
 | `TASK_ASSIGNMENT_DELETE`                                      | タスク割り当ての削除                                                                                                    |
