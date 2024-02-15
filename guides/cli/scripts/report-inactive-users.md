@@ -39,7 +39,7 @@ fullyTranslated: true
 
    </message>
 2. [Box Events][boxevents]を使用して、そのユーザーが一定の日数の間に操作を行ったかどうかを確認します。\
-   デフォルトのイベントタイプのリストは、`LOGIN`、`UPLOAD`、`COPY`、`MOVE`、`PREVIEW`、`DOWNLOAD`、`EDIT`、`DELETE`、`UNDELETE`、`LOCK`、`UNLOCK`、`NEW_USER`です。このリストはスクリプトの設定で変更できます。
+   指定された日数の間。デフォルトのイベントタイプのリストは、`LOGIN`、`UPLOAD`、`COPY`、`MOVE`、`PREVIEW`、`DOWNLOAD`、`EDIT`、`DELETE`、`UNDELETE`、`LOCK`、`UNLOCK`、`NEW_USER`です。このリストはスクリプトの設定で変更できます。
 3. 操作を行わなかったユーザーを、非アクティブなユーザーが含まれている`.csv`ファイルに追加します。このファイルは他のスクリプト ([ユーザーのプロビジョニング解除][deprovisionscript]など) の入力として使用できます。
 
 ## 前提条件

@@ -524,7 +524,7 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 | パラメータ          | 型                            | 説明                                                                                                                                                          |
 | -------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`     | `string`                     | メタデータを更新するBoxフォルダのID。                                                                                                                                       |
-| `scope`        | `string`                     | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。                                                                                |
+| `scope`        | `string`                     | メタデータテンプレートのスコープ。値は[`global`、`enterprise`][`global`, `enterprise`]のいずれかです。                                                                                  |
 | `template_key` | `string`                     | メタデータテンプレートの名前。                                                                                                                                             |
 | `mdUpdates`    | `List<FolderMetadataUpdate>` | メタデータの更新。操作、パス、および値を指定します。メタデータの更新レコードは、[API][3]と同じパターンに従います。数値型 (`3000`) および`Customer;Order`などの複数選択値は、コードサンプルにおける通常のメタデータ値と同様に、`value`フィールドで文字列入力として表されます。 |
 
@@ -544,11 +544,11 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ          | 型        | 説明                                                                           |
-| -------------- | -------- | ---------------------------------------------------------------------------- |
-| `folderId`     | `string` | メタデータを更新するBoxフォルダのID。                                                        |
-| `scope`        | `string` | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。 |
-| `template_key` | `string` | メタデータテンプレートの名前。                                                              |
+| パラメータ          | 型        | 説明                                                                         |
+| -------------- | -------- | -------------------------------------------------------------------------- |
+| `folderId`     | `string` | メタデータを更新するBoxフォルダのID。                                                      |
+| `scope`        | `string` | メタデータテンプレートのスコープ。値は[`global`、`enterprise`][`global`, `enterprise`]のいずれかです。 |
+| `template_key` | `string` | メタデータテンプレートの名前。                                                            |
 
 <!-- markdownlint-enable line-length -->
 
@@ -682,7 +682,7 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 <Message type="notice">
 
-Slackチャンネルにマッピングする場合、`access_management_disabled`はデフォルトで`FALSE`に設定されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`setSlackChannelAccessManagementDisabled`メソッドを使用して`access_ management_disabled`を`TRUE`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
+Slackチャンネルにマッピングする場合、はデフォルト`FALSE`でに設定`access_management_disabled`されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`TRUE`メソッドを使用して`setSlackChannelAccessManagementDisabled`を`access_ management_disabled`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
 
 </Message>
 
@@ -729,7 +729,7 @@ Slackチャンネルにマッピングする場合、`access_management_disabled
 
 <Message type="notice">
 
- Slackチャンネルにマッピングする場合、`access_management_disabled`はデフォルトで`FALSE`に設定されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`setSlackChannelAccessManagementDisabled`メソッドを使用して`access_ management_disabled`を`TRUE`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
+ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`でに設定`access_management_disabled`されます。これにより、Slackチャンネルのメンバーリストに含まれていないコラボレータは自動的に削除されます。組織がBoxでの共有をどのように設定しているかに応じて、`TRUE`メソッドを使用して`setSlackChannelAccessManagementDisabled`を`access_ management_disabled`に設定するか、[グループ][12]を使用することをお勧めします。これにより、Slackの設定に関係なく、どのユーザーも削除されなくなります。ファイルがSlackチャンネルにアップロードされると、コラボレーションはSlackに追加されるかSlackから削除されます。
 
 </Message>
 
