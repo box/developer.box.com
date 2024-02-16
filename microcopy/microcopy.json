@@ -470,7 +470,7 @@
   "pages.additionalResources.newsletter.cta": "ニュースレターを表示",
   "pages.additionalResources.newsletter.url": "\/newsletter\/",
   "pages.additionalResources.blog.title": "Box開発者向けブログ",
-  "pages.additionalResources.blog.text": "Box APIやSDKに関するニュース、更新情報、チュートリアルに関する記事で、開発者や管理者に役立つインサイトを得ることができます。",
+  "pages.additionalResources.blog.text": "Box APIやSDKに関するニュース、更新情報、チュートリアルで、開発者や管理者に役立つインサイトを得ることができます。",
   "pages.additionalResources.blog.cta": "Box Developer Japan Blogにアクセス",
   "pages.additionalResources.blog.url": "https:\/\/medium.com\/box-developer-japan-blog",
   // The label for all things API
