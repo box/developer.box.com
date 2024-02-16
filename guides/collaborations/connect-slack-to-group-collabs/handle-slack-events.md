@@ -184,7 +184,7 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
 
 <Message type="notice">
 
-この例では、イベントが完全に処理される前に`HTTP 200`レスポンスが送信されます。その理由は、Slackではイベントの送信後3秒以内にレスポンスを必要とするためです。コードの実行時間が3秒を超える場合は、重複したイベントがSlackによって送信されます。
+この例では、イベントがすべて処理される前に`HTTP 200`レスポンスが送信されます。その理由は、Slackではイベントの送信後3秒以内にレスポンスを必要とするためです。コードの実行時間が3秒を超える場合は、重複したイベントがSlackによって送信されます。
 
 </Message>
 
