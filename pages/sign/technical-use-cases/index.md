@@ -15,21 +15,21 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-technical-use-cases/index.md
 fullyTranslated: true
 ---
-# Technical use cases
+# 技術的なユースケース
 
-In your application you will be signing different documents from many sources. How can your application process such documents in order for them to be recognized by the Box Sign service?
+アプリケーションでは、多くのソースからのさまざまなドキュメントに署名することになります。このようなドキュメントをBox Signサービスに認識させるためにアプリケーションでどのように処理すればよいのでしょうか。
 
-A signature request can have multiple requirements, or inputs, beyond the traditional signature, such as name, date, and initials. These inputs are called signature properties. The Box Sign service needs to know where to place these inputs in the document, and how to recognize them.
+署名リクエストには、従来の署名 (名前、日付、イニシャルなど) 以外に、複数の要件 (入力データ) を設定することができます。こうした入力データは署名プロパティと呼ばれます。Box Signサービスでは、これらの入力データをドキュメント内のどこに配置し、どのように認識するかを把握しておく必要があります。
 
-The first step is to consider if the document has the necessary information for the Box Sign service to recognize the signature properties.
+最初の手順として、Box Signサービスが署名プロパティを認識するために必要な情報をドキュメントに含めるかどうかを検討します。
 
-If not, then the [document is unstructured][unstructured-docs], and should be prepared before sending the signature request. This is called document preparation, and is an extra step automatically created by the Box Sign service.
+含めない場合、[ドキュメントは構造化されていない][unstructured-docs]ので、署名リクエストを送信する前に準備する必要があります。これはドキュメントの準備と呼ばれ、Box Signサービスによって自動的に作成される追加の手順です。
 
-There are two other types of documents that already have the necessary information for the Box Sign service to recognize the signature properties. The [sign templates][sign-templates], managed in the Box application, and the [structured documents][sign-structured-docs], which are typically generated documents, containing specific tags representing the signature properties.
+Box Signサービスが署名プロパティを認識するために必要な情報をすでに含んでいるドキュメントは、他に2種類あります。1つは、Boxアプリケーションで管理される[Signテンプレート][sign-templates]で、もう1つは[構造化されたドキュメント][sign-structured-docs]です。構造化されたドキュメントは、署名プロパティを表す特定のタグを含む、通常生成されるドキュメントです。
 
 <Next>
 
-Signing unstructured docs
+非構造化ドキュメントへの署名
 
 </Next>
 

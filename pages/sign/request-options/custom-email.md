@@ -15,30 +15,30 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/60-custom-email.md
 fullyTranslated: true
 ---
-# Custom email and notifications
+# カスタムメールと通知
 
-## Email subject and body
+## メールの件名と本文
 
-By default, the email sent to the signers contains a link to the document, a generic subject, and a generic message.
+署名者に送信されるメールには、デフォルトで、ドキュメントへのリンク、一般的な件名、一般的なメッセージが記載されています。
 
-If you are using templates managed within Box, the subject and message body can be set in the template itself.
+Box内で管理されているテンプレートを使用する場合、件名とメッセージ本文はテンプレート自体で設定できます。
 
-However, if you are not using templates, you can still customize the email messages sent to the signers by passing the `email_subject` and the `email_message` parameters.
+ただし、テンプレートを使用しない場合も、`email_subject`パラメータと`email_message`パラメータを渡すことで、署名者に送信されるメールメッセージをカスタマイズすることができます。
 
-Both parameters accept strings, but the `email_message` parameter also accepts HTML with some limitations.
+どちらのパラメータにも文字列を使用できますが、`email_message`パラメータには、いくつか制限はあるもののHTMLも使用できます。
 
-Only some HTML tags are allowed. Links included in the message are also converted to hyperlinks in the email.
+使用できるのは、一部のHTMLタグだけです。また、メッセージに含まれるリンクは、メールではハイパーリンクに変換されます。
 
-The message parameter may contain the following HTML tags:
+メッセージパラメータには、以下のHTMLタグを含めることができます。
 
 * `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`,
   `ol`, `strong`
 
-Custom styles on these tags are not allowed.
+これらのタグにカスタムスタイルを適用することはできません。
 
 <message size="small"></message>
 
-Be aware that when the text to HTML ratio is too high, the email may end up in spam filters or clipped.
+テキストとHTMLの比率が大きすぎると、メールがスパムフィルタに入ったり、切り取られたりする可能性があることにご注意ください。
 
 </Message>
 
@@ -77,7 +77,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -119,19 +119,19 @@ def main():
 
 </Tabs>
 
-## Manual notification
+## 手動による通知
 
-By now, you've noticed that the signature request sends an email notification to the signers by default. This email is sent from a `box.com` domain and email system.
+ここまでで、署名リクエストでは、デフォルトで署名者にメール通知が送信されることがわかりました。このメールは`box.com`ドメインおよびメールシステムから送信されます。
 
-You can take over the notification process by setting the `embed_url_external_user_id` parameter to an identifier of your choice for a specific signer.
+`embed_url_external_user_id`パラメータに特定の署名者を表す任意の識別子を設定することで、通知プロセスを引き継ぐことができます。
 
-By setting this parameter, the signer will not receive an email notification, and within the signature request, you get back both an `embed_url` and an `iframeable_embed_url`.
+このパラメータを設定すると、署名者にはメール通知が送信されず、署名リクエスト内で`embed_url`と`iframeable_embed_url`の両方が返されます。
 
-The `embed_url` can be opened directly, so it is suitable for your app to send it in an email, or by any other notifications system for the signer to open.
+`embed_url`は直接開くことができるので、アプリからメールで送信したり、署名者が開く他の通知システムで送信したりするのに適しています。
 
-The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign Client][embed], which allows you to embed the Box Sign client on an iframe within your web app.
+`iframeable_embed_url`は、[Box Signクライアントの埋め込み機能][embed]との併用に適しており、ウェブアプリ内のiframeにBox Signクライアントを埋め込むことができます。
 
-For example see this request:
+たとえば、次のリクエストを確認してください。
 
 <Tabs>
 
@@ -166,7 +166,7 @@ For example see this request:
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -218,7 +218,7 @@ def main():
 
 </Tabs>
 
-Returns (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -248,7 +248,7 @@ Returns (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -267,6 +267,6 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 
 </Tabs>
 
-You can now take the embedded URLs and use your own notification process or embed the signature client within your own app.
+これで、埋め込みURLを取得して、独自の通知プロセスを使用したり、自分のアプリ内に署名クライアントを埋め込んだりできるようになりました。
 
 [embed]: guide://box-sign/embedded-sign-client

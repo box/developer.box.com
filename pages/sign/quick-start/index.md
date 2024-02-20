@@ -17,13 +17,13 @@ fullyTranslated: true
 ---
 # クイックスタート
 
-Get a sense of how the [Box Sign API][api-basics] is structured and how to create your first signature request.
+[Box Sign API][api-basics]の構造と、最初の署名リクエストの作成方法の趣旨を把握しましょう。
 
-The Sign API does not follow the traditional CRUD model. You can create, resend, and cancel signature requests. You can also list all signature requests and get details of a specific signature request.
+Sign APIは従来のCRUDモデルに従っていません。署名リクエストは、作成、再送信、キャンセルできます。また、すべての署名リクエストのリストを取得したり、特定の署名リクエストの詳細を取得したりすることもできます。
 
-Sign Templates API is read-only. You can list all templates and get details of a specific template.
+SignテンプレートAPIは読み取り専用です。すべてのテンプレートのリストを取得したり、特定のテンプレートの詳細を取得したりすることができます。
 
-Once you get a sense of the API, you can create [your first signature request][quick-start].
+APIの趣旨を把握したら、[最初の署名リクエスト][quick-start]を作成できます。
 
 [api-basics]: page://sign/quick-start/api-basics
 

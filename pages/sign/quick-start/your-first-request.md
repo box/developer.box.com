@@ -15,13 +15,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/10-quick-start/20-your-first-request.md
 fullyTranslated: true
 ---
-# Your first request
+# 最初のリクエスト
 
-Imagine that you have a document stored in Box and you want to send it to a customer for signature. At a minimum your app needs to know what document to sign, where to store the signed document, and the signer email.
+Boxに保存されているドキュメントがあり、署名をもらうために顧客に送信することを想像してみてください。少なくとも、アプリでは、署名対象のドキュメント、署名済みドキュメントの保存先、署名者のメールアドレスを認識する必要があります。
 
-## Creating a signature request
+## 署名リクエストの作成
 
-You can use the Box Sign API or one of the available SDKs to create a signature request. See the example:
+署名リクエストの作成には、Box Sign APIまたは使用可能ないずれかのSDKを使用できます。次の例を参照してください。
 
 <Tabs>
 
@@ -56,7 +56,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -101,7 +101,7 @@ def main():
 
 </Tabs>
 
-This will result in a signature request with a prepare document URL (simplified):
+この結果、ドキュメント準備のURL (簡略化されています) を含む署名リクエストが作成されます。
 
 <Tabs>
 
@@ -152,7 +152,7 @@ This will result in a signature request with a prepare document URL (simplified)
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```YAML
 
@@ -167,52 +167,52 @@ Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 
 </Tabs>
 
-## Check the status of the signature request
+## 署名リクエストのステータスの確認
 
-Creating the signature request is an asynchronous process, and can generate errors. Your application should check the status of the request before proceeding, and handle any errors.
+署名リクエストの作成は非同期処理であり、エラーが発生する可能性があります。アプリケーションでは、処理を進める前にリクエストのステータスを確認し、エラーがあれば処理する必要があります。
 
-A signature request can have the following statuses:
+署名リクエストのステータスを以下に示します。
 
-![Signature flow](images/basic-sign-flow.png)
+![署名のフロー](images/basic-sign-flow.png)
 
 * `converting`: 署名リクエストが送信された後、ファイルが署名プロセスのために`.pdf`に変換されている。
-* `error_converting`: An issue occurred while converting the file to a `.pdf`.
-* `created`: When the `document_preparation_is_needed` is set to `true`, but the `prepare_url` has not yet been visited.
+* `error_converting`: ファイルを`.pdf`に変換中に問題が発生した。
+* `created`: `document_preparation_is_needed`が`true`に設定されているが、`prepare_url`がまだアクセスされていない。
 * `sent`: リクエストが正常に送信されたが、どの署名者も対応していない。
-* `error_sending`: An issue occurred while sending the request.
-* `viewed`: The first, or only, signer clicked on **Review document** in the signing email or visited the signing URL.
-* `downloaded`: The document was downloaded by the signer.
+* `error_sending`: リクエストの送信中に問題が発生した。
+* `viewed`: 最初 (または唯一) の署名者が署名用メールの \[**ドキュメントをレビュー**] をクリックするか、署名用URLにアクセスした。
+* `downloaded`: 署名者がドキュメントをダウンロードした。
 * `signed`: すべての署名者がリクエストの処理を完了した。
-* `signed and downloaded`: The document was signed and downloaded by the signer.
+* `signed and downloaded`: 署名者がドキュメントに署名してダウンロードした。
 * `declined`: いずれかの署名者がリクエストを拒否した。
 * `cancelled`: リクエストがUIまたはAPIを介してキャンセルされた。
 * `expired`: 署名が未完了、不十分のまま、有効期限が過ぎた。
-* `finalizing`: All signers have signed the request, but the final document with signatures and the signing log have not been generated yet.
-* `error_finalizing`: The `finalizing` phase did not complete successfully.
+* `finalizing`: すべての署名者がリクエストに署名済みでも、署名された最終的なドキュメントと署名ログがまだ生成されていない。
+* `error_finalizing`: `finalizing`フェーズが正常に完了しなかった。
 
-## Preparing the document
+## ドキュメントの準備
 
-Depending on your technical use case you may need to prepare the document. In this specific example, we are signing a PDF, and the Box Sign engine has no idea where to place the signature pad field or any other inputs. This is why we used the `is_document_preparation_needed` flag.
+技術的なユースケースによっては、ドキュメントの準備が必要になる場合があります。この具体的な例では、PDFに署名していますが、Box Signエンジンは、署名フィールドやその他の入力データの配置場所を認識しません。そのため、`is_document_preparation_needed`フラグを使用しました。
 
-If a prepare URL is present, then your application should open the prepare URL in a browser, where the requester can add the signature pad field and any other inputs needed for the signer to complete the document.
+準備のURLが存在する場合、アプリケーションはそのURLをブラウザで開く必要があります。そこで、リクエスト送信者は、署名者がドキュメントでの作業を完了するために必要な署名フィールドやその他の入力データを追加できます。
 
-Once the document is prepared, the requester can send the signature request to the signer.
+ドキュメントが準備できたら、リクエスト送信者は署名リクエストを署名者に送信できます。
 
-This preparation step is not always necessary. Take a look at the [technical use cases][technical-use-cases] for more information.
+この準備手順は必須ではありません。詳細については、[技術的なユースケース][technical-use-cases]を参照してください。
 
-## Completing the signature request
+## 署名リクエストの完了
 
-The signer then receives an email from Box with a link to the signature request. The signer can click the link and sign the document.
+署名者には、署名リクエストへのリンクが記載されたメールがBoxから届きます。署名者はリンクをクリックしてドキュメントに署名できます。
 
-When the process is completed, both a signature log containing metadata and the signed document are stored in the destination folder.
+処理が完了すると、メタデータを含む署名ログと署名済みドキュメントの両方が保存先フォルダに格納されます。
 
-Congratulations! You have successfully created your first signature request.
+これで、最初の署名リクエストを正常に作成できました。
 
 <Message type="notice">
 
-This represents the basic use case for Box Sign. The `create` method has many options that you can use to customize your signature request.
+これは、Box Signの基本的なユースケースを示しています。`create`メソッドには、署名リクエストのカスタマイズに使用できる多くのオプションがあります。
 
-Be sure to check the [request options][request-options], and the [technical use cases][technical-use-cases] sections for more information.
+詳細については、[リクエストのオプション][request-options]と[技術的なユースケース][technical-use-cases]のセクションをぜひ確認してください。
 
 </Message>
 

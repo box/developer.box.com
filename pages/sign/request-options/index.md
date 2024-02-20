@@ -15,6 +15,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/index.md
 fullyTranslated: true
 ---
-# Request options
+# リクエストのオプション
 
-The Box Sign API offers a wide range of customization and configuration options when sending signature requests. These options allow developers to tailor the user experience and workflow to match their application's specific requirements.
+Box Sign APIには、署名リクエストを送信する際のカスタマイズと構成のさまざまなオプションが用意されています。開発者はこれらのオプションを使用することで、アプリケーションに固有の要件に合わせてユーザーエクスペリエンスとワークフローをカスタマイズできます。

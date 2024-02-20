@@ -15,15 +15,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/20-extra-security.md
 fullyTranslated: true
 ---
-# Extra security (2FA)
+# セキュリティの強化 (2要素認証)
 
-Imagine you want an [additional layer of security][2FA] for your signature requests, by requesting the signer to use a password or a phone verification in the document signing step.
+ドキュメントへの署名手順で署名者に対してパスワードや電話認証を要求することで、署名リクエストの[セキュリティレベルを高める][2FA]ことを想像してみてください。
 
-![2FA Signature request](images/sign-flow-2fa.png)
+![2要素認証による署名リクエスト](images/sign-flow-2fa.png)
 
-## Phone verification
+## 電話認証
 
-You can require the signer to use 2FA through their mobile phone to complete the signature request by passing the `is_phone_verification_required_to_view` parameter.
+`is_phone_verification_required_to_view`パラメータを渡すことにより、署名リクエストを完了するために携帯電話から2要素認証を使用するよう署名者に要求することができます。
 
 例:
 
@@ -61,7 +61,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -113,23 +113,23 @@ def main():
 
 </Tabs>
 
-When the signer tries to complete the signature request a phone verification pops up:
+署名者が署名リクエストを完了しようとすると、電話認証を求めるポップアップが表示されます。
 
-![Phone verification](images/sign-simple-phone-verification.png)
+![電話認証](images/sign-simple-phone-verification.png)
 
-Then the signer is prompted to enter the code sent in a SMS:
+その後、署名者はSMSで送信されたコードを入力するよう求められます。
 
-![Entering the SMS code](images/sign-simple-phone-verification-enter-code.png)
+![SMSコードの入力](images/sign-simple-phone-verification-enter-code.png)
 
 <Message size="small">
 
-This check is done as the last step, so it does not prevent the signer from accessing the document.
+この確認は最後の手順として行われるため、署名者がドキュメントにアクセスできなくなることはありません。
 
 </Message>
 
-## Password verification
+## パスワード認証
 
-You can require the signer to use a password to open the signature request by passing the `password` parameter in the `signer` object. For example:
+`signer`オブジェクトに`password`パラメータを渡すことにより、署名リクエストを開くためにパスワードを使用するよう署名者に要求することができます。次に例を示します。
 
 <Tabs>
 
@@ -165,7 +165,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -216,13 +216,13 @@ def main():
 
 </Tabs>
 
-Once the signer opens the signature request they should see something like this:
+署名者が署名リクエストを開くと、次のような画面が表示されます。
 
-![Password verification pop-up](images/sign-simple-password.png)
+![パスワード認証のポップアップ](images/sign-simple-password.png)
 
 <Message size="small">
 
-As the password verification is done on the first step, it prevents the signer from accessing the document until the correct password is provided.
+パスワード認証は最初の手順で行われるため、正しいパスワードが入力されるまで、署名者はドキュメントにアクセスできません。
 
 </Message>
 

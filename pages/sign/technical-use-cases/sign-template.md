@@ -15,41 +15,41 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-technical-use-cases/20-sign-template.md
 fullyTranslated: true
 ---
-# Signing using templates
+# テンプレートを使用した署名
 
-A [Box Sign template][template] is a specific type of document that not only contains the text, but also the signature requirements and placement. It is prepared for signing in advance, and as such can be sent directly to the signer or signers.
+[Box Signテンプレート][template]は、テキストだけでなく、署名の要件や配置も含む特定の種類のドキュメントです。これは署名用に事前に準備されているため、署名者 (複数可) に直接送信できます。
 
-Required fields include, for example, the signature pad field, the full name, and the date.
+必須フィールドには、署名パッド、フルネーム、日付などがあります。
 
-These fields have an owner, meaning they are populated by a specific signer and cannot be shared between them. They can be `mandatory` or `optional` , and be pre-populated by your application. However even if pre-populated, they can always be changed by the `signer`.
+これらのフィールドには1人の所有者が設定されています。つまり、フィールドは特定の署名者が入力し、署名者間で共有することはできません。これらは、`mandatory`または`optional`にすることができるほか、アプリケーションによって事前入力することもできます。ただし、事前に入力されている場合でも、`signer`がいつでも変更できます。
 
-Within the Box web app, the template not only sets the signature fields, but also the number of signers, the order in which they sign, other roles and recipients such as `approver`, and `final_copy_recipient`, email notification settings, and a few more options.
+Boxウェブアプリ内では、テンプレートによって、署名フィールドだけでなく、署名者の数、署名の順序、他の役割と受信者 (`approver`や`final_copy_recipient`など)、メール通知の設定、その他いくつかのオプションも設定されます。
 
-For a complete set of options of the signature request please refer to the [request options][request-options] section.
+署名リクエストのオプションの詳細については、[リクエストのオプション][request-options]セクションを参照してください。
 
-These templates are exclusively created and managed in the Box Sign web app, and can be used to create signature requests using the API or the web app.
+これらのテンプレートは、Box Signウェブアプリでのみ作成および管理され、APIまたはウェブアプリを使用して署名リクエストを作成する際に使用できます。
 
-Let's start by creating a template.
+最初に、テンプレートを作成しましょう。
 
-## Creating a template
+## テンプレートの作成
 
-From the Box app navigate to the sign menu on the left, then select templates.
+Boxアプリで、左側の \[Sign] メニューに移動し、\[テンプレート] を選択します。
 
-![Navigating to templates under Box Sign](images/sign-template-navigate.png)
+![Box Signで \[テンプレート\] に移動する](images/sign-template-navigate.png)
 
-Then, click on the New Template button, and choose or upload the document from Box.
+次に、\[新しいテンプレート] ボタンをクリックし、Boxからドキュメントを選択またはアップロードします。
 
-![Selecting a document when creating a template](images/sign-template-selecting-template.png)
+![テンプレート作成時にドキュメントを選択する](images/sign-template-selecting-template.png)
 
-For example, drag and drop a date, a name and a signature pad to the template, like so:
+次のように、日付、名前、署名パッドをテンプレートにドラッグアンドドロップします。
 
-![Adding the signature, name, and date to the template](images/sign-template-signature-props.png)
+![テンプレートに署名、名前、日付を追加する](images/sign-template-signature-props.png)
 
-Save the template.
+テンプレートを保存します。
 
-## Identify the template
+## テンプレートの識別
 
-In order to work with templates in the Box Sign API we are going to need the `template_id` . Consider this method to list all the templates available to the user:
+Box Sign APIでテンプレートを使用するには、`template_id`が必要になります。ユーザーが利用できるすべてのテンプレートのリストを取得するための次のメソッドを考えてみます。
 
 <Tabs>
 
@@ -64,7 +64,7 @@ curl --location 'https://api.box.com/2.0/sign_templates' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -91,7 +91,7 @@ def main():
 
 </Tabs>
 
-Returns something similar to (simplified):
+次のような結果が返されます (簡略化されています)。
 
 <Tabs>
 
@@ -165,7 +165,7 @@ Returns something similar to (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -180,16 +180,16 @@ Sign templates: 1
 
 </Tabs>
 
-## Creating a signature request from a template
+## テンプレートからの署名リクエストの作成
 
-The big advantage of using templates is that we do not need to worry about document preparation. Most of the signature options can be set in the template itself.
+テンプレートを使用する大きなメリットは、ドキュメントの準備について心配する必要がないことです。ほとんどの署名オプションはテンプレート自体で設定できます。
 
-This is how the flow would look like:
+このフローは次のようになります。
 
-![Signing using a template](images/sign-flow-template.png)
-Using a signature template, create the signature request, and finally sign the document.
+![テンプレートを使用した署名](images/sign-flow-template.png)
+署名テンプレートを使って署名リクエストを作成し、最終的にドキュメントに署名します。
 
-See this example:
+次の例を確認してください。
 
 <Tabs>
 
@@ -218,7 +218,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -253,7 +253,7 @@ def main():
 
 </Tabs>
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -297,7 +297,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -314,35 +314,35 @@ Simple sign request: b25674a2-540b-4201-ae18-a78f05ef1a9a
 
 </Tabs>
 
-The signer receives an email from Box.com with a link to the document, and can sign it.
+署名者は、ドキュメントへのリンクが記載されたメールをBox.comから受信すると、そのドキュメントに署名できます。
 
 <Message size="small">
 
-Since the template already had the signature requirements, document preparation was not needed. Notice the date was automatically populated with the current date.
+テンプレートにはすでに署名要件が設定されているため、ドキュメントの準備は必要ありませんでした。日付には現在の日付が自動的に入力されていることに注意してください。
 
 </Message>
 
-## Pre-populate the signature attributes
+## 署名の属性の事前入力
 
-From a usability perspective, it is a good idea to pre-populate the inputs you require from your users.
+使いやすさの観点から、ユーザーに求める入力データを事前入力することをお勧めします。
 
 <Message size="small">
 
-Some inputs may be intentionally left unpopulated. For example, when your legal department specifies that the “Yes, I agree” field must be explicitly set by the signer.
+一部の入力データは意図的に入力されていない可能性があります。たとえば、法務部門では、署名者が明示的に「はい、同意します」と設定する必要があると規定している場合があります。
 
 </Message>
 
-Using the Box app sign template editor, you can assign an `external_id` to each of the inputs, and have the app populate them from any data source.
+BoxアプリのSignテンプレートエディタを使用すると、各入力データに`external_id`を割り当てて、アプリに任意のデータソースから入力データを入力させることができます。
 
-Let’s implement this for the name.
+これを名前に実装しましょう。
 
-Go back to the template design and add an id to the name field:
+テンプレートのデザインに戻り、名前フィールドにIDを追加します。
 
-![Assigning a tag id to a signature property input](images/sign-template-add-id-to-name-prop.png)
+![署名プロパティの入力データにタグIDを割り当てる](images/sign-template-add-id-to-name-prop.png)
 
-Save the template.
+テンプレートを保存します。
 
-Let’s create a new method to pre-populate the name:
+名前を事前入力する新しいメソッドを作成しましょう。
 
 <Tabs>
 
@@ -377,7 +377,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -419,7 +419,7 @@ def main():
 
 ```
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 </Tab>
 
@@ -473,7 +473,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -490,17 +490,17 @@ Simple sign request: adab1740-eeba-4392-a3f5-defddc79c946
 
 </Tabs>
 
-Open the signer inbox and complete the sign request.
+署名者の受信トレイを開き、署名リクエストを完了します。
 
-![Signing the document](images/sign-template-name-populated.png)
+![ドキュメントに署名する](images/sign-template-name-populated.png)
 
-When the signer views the document, the `signer` can still change it.
+`signer`はドキュメントを表示している場合、その名前を変更できます。
 
-## Get more information about a template
+## テンプレートに関する詳細情報の取得
 
-You've seen that you can list the templates available to a user. But you can also get more information about a specific template.
+ユーザーが利用できるテンプレートのリストを取得できることはわかりましたが、特定のテンプレートに関する詳細情報を取得することもできます。
 
-Let’s create a method that returns basic information of a template, but details all the signature requirements:
+テンプレートの基本情報を返すほか、署名要件をすべて列挙するメソッドを作成しましょう。
 
 <Tabs>
 
@@ -516,7 +516,7 @@ f2ec720d-47a6-4052-8210-9bfa8d6c349c' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -541,7 +541,7 @@ def main():
 
 ```
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 </Tab>
 
@@ -611,7 +611,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -632,19 +632,19 @@ Sign template: 94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
 
 <Message size="small">
 
-Notice that the `signer_full_name` is the `tag_id` we used to pre-populate the name.
+`signer_full_name`は、名前を事前に入力するために使用した`tag_id`であることに注意してください。
 
 </Message>
 
 ## まとめ
 
-Templates are a form of signing structured documents where the signature requirements are already defined and placed on the document.
+テンプレートは、署名用の構造化されたドキュメントの一種で、署名要件がすでに定義され、ドキュメントに配置されています。
 
-This not only keeps your contract management team happy, but it also creates a process which is consistent and requires a low level of effort from your users.
+これは、契約管理チームを満足させるだけでなく、ユーザーの労力をあまり必要としない一貫性のあるプロセスを構築します。
 
-Finally if your document signature requirements have a lot of options, you can pre-populate these from another data source and save the user some time. Remember that the user who owns these properties can always change them.
+さらに、ドキュメントの署名要件に多くのオプションがある場合は、別のデータソースからこれらを事前に入力して、ユーザーの時間を節約することができます。これらのプロパティを所有するユーザーはいつでもプロパティを変更できることを忘れないでください。
 
-There is no API entry point to create a template, so you will have to create and manage them manually from the Box app, unless the document already includes signature tags that can be used by the Box Sign engine. Take a look at our [Structured Docs][structured-docs] section for more information.
+テンプレートを作成するためのAPIエントリポイントはないため、Box Signエンジンで使用できる署名タグがすでにドキュメントに含まれている場合を除き、Boxアプリから手動でテンプレートを作成して管理する必要があります。詳細については、[構造化ドキュメント][structured-docs]のセクションを参照してください。
 
 [template]: https://support.box.com/hc/en-us/sections/21356768117651-Templates
 

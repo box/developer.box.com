@@ -15,15 +15,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/30-custom-urls.md
 fullyTranslated: true
 ---
-# Redirect URLs
+# リダイレクトURL
 
-Often after signing a document your company might want to redirect the user to a specific web page like a thank you or an onboarding page. There are two features to support these requirements.
+会社は、ドキュメントに署名したユーザーをお礼のページやオンボーディングページのような特定のウェブページにリダイレクトした方がよい場合もよくあります。このような要件をサポートする機能は2つあります。
 
-When the signer completes the signature process, they can be redirected to a web page. The same can happen when the signer declines the signature request.
+署名者が署名プロセスを完了したときに、その署名者をウェブページにリダイレクトできます。署名者が署名リクエストを拒否した場合も同様です。
 
-We can customize these pages by passing the `redirect_url` and `decline_redirect_url` parameters.
+`redirect_url`パラメータと`decline_redirect_url`パラメータを渡すことで、これらのページをカスタマイズできます。
 
-![Custom redirect pages](images/sign-flow-custom-url.png)
+![カスタムリダイレクトページ](images/sign-flow-custom-url.png)
 
 例:
 
@@ -62,7 +62,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -105,4 +105,4 @@ def main():
 
 </Tabs>
 
-If you sign you’ll be redirected to our forum page. If you decline you’ll be redirected to our developer page.
+署名した場合、フォーラムページにリダイレクトされます。拒否した場合は、開発者向けのページにリダイレクトされます。

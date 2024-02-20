@@ -15,42 +15,42 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/10-quick-start/10-api-basics.md
 fullyTranslated: true
 ---
-# API Basics
+# APIの基本
 
 ## Sign API
 
-The Sign request endpoint is used to create and manage signature requests. You can create, resend, and cancel signature requests. You can also list all signature requests and get details of a specific signature request.
+署名リクエストを作成して管理するには、署名リクエストのエンドポイントを使用します。署名リクエストは、作成、再送信、キャンセルできます。また、すべての署名リクエストのリストを取得したり、特定の署名リクエストの詳細を取得したりすることもできます。
 
-The endpoint is `https://{api.box.com}/2.0/sign_requests`. The following table lists the operations that you can perform on this endpoint.
+エンドポイントは`https://{api.box.com}/2.0/sign_requests`です。次の表に、このエンドポイントで実行できる操作を示します。
 
-| 操作   | エンドポイント                   | 説明                                           |
-| ---- | ------------------------- | -------------------------------------------- |
-| GET  | /sign_requests            | List all signature requests.                 |
-| GET  | /sign_requests/:id        | Get details of a specific signature request. |
-| POST | /sign_requests            | Create a signature request.                  |
-| POST | /sign_requests/:id/resend | Resend a signature request.                  |
-| POST | /sign_requests/:id/cancel | Cancel a signature request.                  |
+| 操作   | エンドポイント                   | 説明                     |
+| ---- | ------------------------- | ---------------------- |
+| GET  | /sign_requests            | すべての署名リクエストのリストを取得します。 |
+| GET  | /sign_requests/:id        | 特定の署名リクエストの詳細を取得します。   |
+| POST | /sign_requests            | 署名リクエストを作成します。         |
+| POST | /sign_requests/:id/resend | 署名リクエストを再送信します。        |
+| POST | /sign_requests/:id/cancel | 署名リクエストをキャンセルします。      |
 
-For full details on the request and response parameters, see the [Sign request API reference][sign-api-reference].
+リクエストとレスポンスのパラメータの詳細については、[署名リクエストAPIリファレンス][sign-api-reference]を参照してください。
 
-## Sign templates API
+## SignテンプレートAPI
 
-The Sign templates endpoint is used to list and get details of a template.
+テンプレートのリストと詳細を取得するには、Signテンプレートエンドポイントを使用します。
 
 <Message type="notice">
 
-You can not create, edit, or delete templates using the API. These templates are exclusively managed in the Box web application.
+このAPIを使用してテンプレートを作成、編集、削除することはできません。これらのテンプレートは、Boxウェブアプリでのみ管理されます。
 
 </Message>
 
-The endpoint is `https://{api.box.com}/2.0/sign_templates`. The following table lists the operations that you can perform on this endpoint.
+エンドポイントは`https://{api.box.com}/2.0/sign_templates`です。次の表に、このエンドポイントで実行できる操作を示します。
 
-| 操作  | エンドポイント             | 説明                                  |
-| --- | ------------------- | ----------------------------------- |
-| GET | /sign_templates     | List all templates.                 |
-| GET | /sign_templates/:id | Get details of a specific template. |
+| 操作  | エンドポイント             | 説明                    |
+| --- | ------------------- | --------------------- |
+| GET | /sign_templates     | すべてのテンプレートのリストを取得します。 |
+| GET | /sign_templates/:id | 特定のテンプレートの詳細を取得します。   |
 
-For a full details on the request and response parameters, see the [Sign template request API reference][sign-api-template-ref]
+リクエストとレスポンスのパラメータの詳細については、[SignテンプレートリクエストAPIリファレンス][sign-api-template-ref]を参照してください。
 
 [sign-api-reference]: https://developer.box.com/reference/resources/sign-request/
 

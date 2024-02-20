@@ -15,23 +15,23 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/70-in-person.md
 fullyTranslated: true
 ---
-# In person signatures
+# 対面での署名
 
-Imagine your application is used by a salesperson when they are face to face with a customer and an immediate signature is required, for example, to subscribe to a service or to confirm a purchase.
+営業担当者が顧客と対面していて、サービスへの加入や購入の確認など、即座に署名が必要になったときに、アプリケーションを使用する場合を考えてみましょう。
 
-In this case, the salesperson can use your application to create a signature request and then hand over the device to the customer to sign the document, immediately closing the deal.
+この場合、営業担当者はアプリケーションを使用して署名リクエストを作成した後、顧客にデバイスを手渡してドキュメントに署名してもらうことで、すぐに取引を成立させることができます。
 
-Doing this using the Box web application, for example from a template, is very straightforward. You set the signer or signers email so they can receive a copy of the signed document, flag them as in person, and as soon as you send the request, the Sign interface opens requesting the signature for the first signer, then for the second signer, and so on.
+Boxウェブアプリを使用して、例えばテンプレートからこの作業を行うことは非常に簡単です。署名者が署名済みドキュメントのコピーを受信できるように署名者 (複数可) のメールアドレスを設定し、対面での署名というフラグを設定します。また、リクエストを送信するとすぐに、Signのインターフェースが開き、最初の署名者に署名をリクエストし、その後、2番目の署名者、3番目の署名者のように続きます。
 
-In order to use this within your application, you need to create a signature request with the `is_in_person` flag set to `true` for each signer.
+アプリケーション内でこれを使用するには、署名者ごとに`is_in_person`フラグを`true`に設定して署名リクエストを作成する必要があります。
 
-However because your application needs to show the Sign interface to the signer, you also need to use the `embed_url_external_user_id`so that you get back the embedded URLs, and then either open a browser window or use an iframe to display the signature interface.
+ただし、アプリケーションではSignのインターフェースを署名者に表示する必要があるため、埋め込みURLが返されるように`embed_url_external_user_id`を使用してから、ブラウザウィンドウを開くか、iframeを使用して署名インターフェースを表示する必要があります。
 
-![In person signing loops through signers](images/sign-flow-in-person.png)
+![複数の署名者による対面での署名のループ](images/sign-flow-in-person.png)
 
-## Create an in person signature request
+## 対面での署名リクエストの作成
 
-Let's use a template with a single signer as an example:
+例として、1人の署名者を設定したテンプレートを使用します。
 
 <Tabs>
 
@@ -62,7 +62,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -115,7 +115,7 @@ def main():
 
 </Tabs>
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -155,7 +155,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -174,17 +174,17 @@ Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
 
 </Tabs>
 
-Notice the `embed_url` and `iframeable_embed_url` in the response. Now when we browse to the embed URL, you see the signature interface:
+レスポンスの`embed_url`と`iframeable_embed_url`に注目してください。埋め込みURLを参照すると、署名インターフェースが表示されます。
 
-![In person signing](images/sign-in-person.png)
+![対面での署名](images/sign-in-person.png)
 
-Once finished the signer will receive a copy of the signed document via their email.
+署名が完了すると、署名者には署名済みドキュメントのコピーがメールで送信されます。
 
-## Multiple in person signers
+## 複数の署名者による対面での署名
 
-As long as the signer is flagged as `is_in_person`, the signing interface cycles through all the signers in the request.
+署名者に`is_in_person`というフラグが設定されている限り、リクエストに含まれるすべての署名者に署名インターフェースが繰り返されます。
 
-For example, if you add a second signer to the request:
+たとえば、リクエストに2人目の署名者を追加する場合は、次のようになります。
 
 <Tabs>
 
@@ -220,7 +220,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -280,7 +280,7 @@ def main():
 
 </Tabs>
 
-Results in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -326,7 +326,7 @@ Results in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -349,10 +349,10 @@ Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
 
 </Tabs>
 
-Browsing to the embedded URL shows the signature interface for the first signer:
+埋め込みURLを参照すると、最初の署名者に署名インターフェースが表示されます。
 
-![First in person signer](images/sign-inperson-first.png)
+![最初の対面での署名者](images/sign-inperson-first.png)
 
-Once the first signer has signed, the signature interface automatically switches to the second signer:
+最初の署名者が署名すると、署名インターフェースは自動的に2番目の署名者に切り替わります。
 
-![Alt text](images/sign-inperson-second.png)
+![代替テキスト](images/sign-inperson-second.png)

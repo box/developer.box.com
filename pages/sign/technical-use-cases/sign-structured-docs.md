@@ -15,46 +15,46 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/20-technical-use-cases/30-sign-structured-docs.md
 fullyTranslated: true
 ---
-# Signing structured docs
+# 構造化されたドキュメントへの署名
 
-A structured document in the context of Box Sign is a document that includes specific tags that can be recognized by the Box Sign API. These tags are used to place the signature properties associated with a specific signer in the document, such as name, date, and signature.
+Box Signのコンテキストにおける構造化されたドキュメントとは、Box Sign APIが認識できる特殊なタグを含むドキュメントのことです。これらのタグは、特定の署名者に関連付けられた署名プロパティ (名前、日付、署名など) をドキュメント内に配置するために使用されます。
 
-This allows your app to handle a dynamic generated document that is ready to be signed, which has a couple of advantages:
+これにより、アプリでは、署名の準備が整った、動的に生成されたドキュメントを処理できます。これには、いくつかの利点があります。
 
-* The document can be dynamically generated, and the signature properties can be added to the document before creating the signature request, effectively bypassing the document preparation step.
+* ドキュメントを動的に生成できます。また、署名リクエストを作成する前に署名プロパティをドキュメントに追加できるため、実質的にドキュメントの準備手順を省略できます。
 
-* The document format can be handled outside of Box Sign templates, allowing higher flexibility and integration with external document management systems.
+* ドキュメントの形式はBox Signテンプレートの外部で処理できるため、柔軟性が高まり、外部のドキュメント管理システムとの統合が可能になります。
 
-## Anatomy of a structured document
+## 構造化されたドキュメントの詳細
 
-Here is an example of a structured document, showing the formatting used to place tags in a Microsoft Word document:
+構造化されたドキュメントの例を以下に示します。この例では、Microsoft Wordドキュメントにタグを配置する際に使用される書式を示しています。
 
-![Using tags in a Microsoft Word document](images/sing-structured-tags-sample.png)
+![Microsoft Wordドキュメントでのタグの使用](images/sing-structured-tags-sample.png)
 
-In the sample above `[[c|1]]` means a checkbox assigned to signer 1, and `[[s|
-1]]` means a signature pad assigned to signer 1. Notice how the signature pad is using font size 48 to reserve space vertically for the signature.
+上の例では、`[[c|1]]`は署名者1に割り当てられたチェックボックスを指し、`[[s|
+1]]`は署名者1に割り当てられた署名パッドを指します。署名パッドでフォントサイズ48を使用して、署名用のスペースを縦方向に確保していることに注目してください。
 
-The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag assigned to signer 1, with the label `enter your complete name`, and using an id of `tag_full_name`.
+`[[t|1|id:tag_full_name|n:enter your complete name]]`は、ラベル`enter your complete name`とID `tag_full_name`を使用して、署名者1に割り当てられた名前タグを指します。
 
-Check out this [document][support-tags] for a complete description of all the tags available.
+利用可能なすべてのタグの詳細な説明については、こちらの[ドキュメント][support-tags]を参照してください。
 
-Setting the tags to the same `color` as the background will make them invisible, but they will still be there.
+タグを背景と同じ`color`に設定すると、タグは見えなくなりますが、そこに存在はしています。
 
-The number in the tags refer to the signer number, not the signing order, so `[[c|1]]` is the checkbox for signer 1, `[[c|2]]` is the checkbox for signer 2, and so on.
+タグ内の番号は、署名順序ではなく、署名者の番号を指すため、`[[c|1]]`は署名者1のチェックボックス、`[[c|2]]`は署名者2のチェックボックスのようになります。
 
-Tag 0 is reserved for the sender, and always exists. So even if the sender does not need to input any data into the document, the other signers must start with 1.
+タグ0は送信者用に予約されており、必ず存在します。そのため、送信者がドキュメントにデータを入力する必要がない場合でも、他の署名者には1以降の番号を割り当てる必要があります。
 
-## Create a signature request from a structured document
+## 構造化されたドキュメントからの署名リクエストの作成
 
-This is the same as creating a signature request from an unstructured document. At minimum, you will need to specify the document, the receiving folder and the email of the `signer`.
+これは、非構造化ドキュメントから署名リクエストを作成する場合と同じです。少なくとも、ドキュメント、受信用フォルダ、および`signer`のメールアドレスを指定する必要があります。
 
-Since the structured document already contains the signature properties details and location, you can bypass the document preparation.
+構造化されたドキュメントにはすでに署名プロパティの詳細と場所が含まれているため、ドキュメントの準備は省略できます。
 
-This is how the flow would look like, from the generated document, create the signature request and finally sign the document:
+このフローは次のようになり、ドキュメントの生成から始まり、署名リクエストを作成して、最後にドキュメントに署名します。
 
-![Signing a structured document](images/sign-flow-tags.png)
+![構造化されたドキュメントへの署名](images/sign-flow-tags.png)
 
-Consider this method:
+次のメソッドを考えてみましょう。
 
 <Tabs>
 
@@ -88,7 +88,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -128,7 +128,7 @@ def main():
 
 </Tabs>
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -178,7 +178,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -195,19 +195,19 @@ Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
 
 </Tabs>
 
-If you go to the `signer` email inbox, open the email from Box Sign, click on the `Review and Sign` button, you'll see the document with the signature properties in place:
+`signer`のメールの受信トレイに移動し、Box Signからのメールを開き、\[`Review and Sign`] ボタンをクリックすると、署名プロパティが所定の位置に配置されているドキュメントが表示されます。
 
-![Document with the properties in place](images/sign-structured-signing-document.png)
+![プロパティが所定の位置に配置されているドキュメント](images/sign-structured-signing-document.png)
 
-After completing the process the signed document looks like this:
+処理を完了すると、署名済みドキュメントは次のようになります。
 
-![Signed document](images/sign-structured-doc-finished.png)
+![署名済みドキュメント](images/sign-structured-doc-finished.png)
 
-## Pre-populate the signature attributes
+## 署名の属性の事前入力
 
-If you have an external id in the document tags you can use it to pre-populate their values. For example, you can use the `tag_full_name` to pre-populate the name of the signer.
+ドキュメントのタグに外部IDが設定されている場合は、その外部IDを使用して値を事前入力できます。たとえば、`tag_full_name`を使用して署名者の名前を事前に入力できます。
 
-See this method:
+次のメソッドを確認してください。
 
 <Tabs>
 
@@ -246,7 +246,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -293,7 +293,7 @@ def main():
 
 </Tabs>
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -358,7 +358,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -375,15 +375,15 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
 
 </Tabs>
 
-The document now has the name pre-populated:
+これで、ドキュメントには名前が事前入力されるようになりました。
 
-![Document ready for sign with the name pre-populated](images/sign-structure-name-pre-pop.png)
+![名前が事前入力された、署名の準備が整っているドキュメント](images/sign-structure-name-pre-pop.png)
 
-## Extract information from a signed document
+## 署名済みドキュメントからの情報の抽出
 
-Let's say you want to extract the name of the signer and the other properties from the signed document. This is useful if you need to tie the information from the signature request back into your systems.
+たとえば、署名者の名前とその他のプロパティを署名済みドキュメントから抽出したいとします。これは、署名リクエストの情報を再度システムに紐付ける必要がある場合に便利です。
 
-Let's create a method to extract the information from the signed request:
+署名済みリクエストから情報を抽出するメソッドを作成しましょう。
 
 <Tabs>
 
@@ -399,7 +399,7 @@ curl --location 'https://api.box.com/2.0/sign_requests/
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -443,7 +443,7 @@ def main():
 
 </Tabs>
 
-Resulting in (simplified):
+結果は次のとおりです (簡略化されています)。
 
 <Tabs>
 
@@ -534,7 +534,7 @@ Resulting in (simplified):
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```yaml
 
@@ -557,10 +557,10 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
 
 ## まとめ
 
-Structured documents are a great way to integrate with external document management systems, creating dynamic documents that are ready for signature.
+構造化されたドキュメントの使用は、外部のドキュメント管理システムと統合して、署名可能な動的ドキュメントを作成するのに最適です。
 
-If your document signature requirements have a lot of options, you can pre-populate these from another data source and save the user's time, but remember that the user who owns these properties can always change them.
+ドキュメントの署名要件に多くの選択肢がある場合は、別のデータソースからこれらを事前に入力して、ユーザーの時間を節約することができます。ただし、これらのプロパティを所有するユーザーはいつでもプロパティを変更できることを忘れないでください。
 
-After the document is signed you can extract the information from the signature request, which is useful if you need to tie it back into your systems.
+ドキュメントが署名された後に署名リクエストから情報を抽出することができるので、その情報を再度システムに紐付ける必要がある場合に便利です。
 
 [support-tags]: https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags

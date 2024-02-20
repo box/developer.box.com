@@ -15,21 +15,21 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/10-multiple-signers.md
 fullyTranslated: true
 ---
-# Multiple signers and roles
+# 複数の署名者と役割
 
-## Multiple signers
+## 複数の署名者
 
-What if you have a document that needs to be signed by multiple people? This is typical for contracts between two or more entities.
+複数の人に署名してもらう必要があるドキュメントがある場合はどうなるでしょうか。これは、2つ以上の事業体の間で結ばれる契約でよく見られます。
 
-Having multiple signers introduces another dimension to the Box Sign process, the order in which the signers need to sign the document.
+複数の署名者を設定すると、Box Signのプロセスには、署名者がドキュメントに署名する順序という別の要素が導入されます。
 
-If you do not specify the order, the request is sent to everyone at the same time, and when all parties have signed the document, they each receive a copy with all signatures.
+順序を指定しない場合、リクエストは全員に同時に送信されます。さらに、関係者全員がドキュメントへの署名を完了すると、各関係者は、すべての署名を含むコピーを受け取ります。
 
-If you specify the signing order, the signature request is sent to the first signer. Only when the first signer signs the document, the request is sent to the second signer, and so on.
+署名の順序を指定すると、署名リクエストは最初の署名者に送信されます。最初の署名者がドキュメントに署名した場合にのみ、このリクエストは2番目の署名者に送信されます (それ以降も同様)。
 
-Let’s see this working with an example scholarship contract between a university and a student. In this case the institution/teacher must sign the document first.
+大学と学生の間で交わされる奨学金の契約の例を使用してこの仕組みを見てみましょう。この場合は、教育機関/教員が最初にドキュメントに署名する必要があります。
 
-Creating a method specific for this:
+このためのメソッドを作成します。
 
 <Tabs>
 
@@ -70,7 +70,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -134,47 +134,47 @@ def main():
 
 </Tabs>
 
-In this particular example the document needs to be prepared, so the browser to the prepare URL opens.
+この例では、ドキュメントを準備する必要があるため、ブラウザで準備のURLを開きます。
 
-Drag the signature pad, the full name and the date to the appropriate places in the document, and click Send Request:
+署名パッド、フルネーム、日付をドキュメント内の適切な場所にドラッグし、\[リクエストの送信] をクリックします。
 
-![Preparing the contract](images/sign-multi-prep.png)
+![契約書の準備](images/sign-multi-prep.png)
 
-Notice you now have two signers, with the order already specified. The `color` is also important to identify which signer is which (in this case the institution is blue and the student is green), determining which signature pad, name and date belongs to which signer.
+この時点で2人の署名者が設定され、順序もすでに指定されていることに注目してください。また、`color`は、署名者を識別するためにも重要であり (この場合、教育機関は青、教員は緑)、どの署名者にどの署名パッド、名前、日付が属しているかを特定します。
 
-If you look at the signature request details, you should see something like this:
+署名リクエストの詳細を確認すると、次のように表示されます。
 
-![Signature request details showing the document and signers](images/sign-multi-prep-details.png)
+![ドキュメントと署名者を示す署名リクエストの詳細](images/sign-multi-prep-details.png)
 
-Indicating that the first request was sent, but the second is waiting for the first to be completed.
+最初のリクエストは送信済みですが、2番目のリクエストは最初のリクエストが完了するのを待っていることを示します。
 
-Go ahead and complete the signature process for both signers.
+先に進み、両方の署名者の署名プロセスを完了します。
 
-Notice that when you get the second request it is already signed by the first signer.
+2番目のリクエストを受け取った時点で、すでに最初の署名者は署名済みであることに注意してください。
 
 ## ロール
 
-So far we have been working with the `signer` role. However there are [other roles][roles] that you can use to customize the signature process.
+ここまでは、役割として`signer`を使用してきましたが、署名プロセスのカスタマイズに使用できる[他の役割][roles]もあります。
 
-The available roles are, `signer`, `approver`, and `final copy reader`
+使用可能な役割は、`signer`、`approver`、`final copy reader`です。
 
-From a developer perspective, this means:
+開発者の視点から見ると、これは以下を意味します。
 
-* **Signer**: Any person who is allowed to add data to the document. This includes adding a signature, initials, date, but also filling out text fields, check boxes, and radio buttons, even if it does not include a signature.
+* **署名者**: ドキュメントにデータを追加できる人。これには、署名、イニシャル、日付の追加だけでなく、署名が含まれていなくても、テキストフィールド、チェックボックス、ラジオボタンへの入力も含まれます。
 
-* **Approver**: This role will be asked if they approve the signature request. This approval happens before the preparation step, if enabled, and before the request is sent to any of the signers. This role is useful if you need to get approval from someone before sending the document to the signers.
+* **承認者**: この役割は、署名リクエストを承認するかどうかを尋ねられます。この承認は、準備手順の前 (有効な場合) およびリクエストが署名者に送信される前に行われます。この役割は、ドキュメントを署名者に送信する前に誰かから承認を得る必要がある場合に便利です。
 
-* **Final copy reader**: This role does not interact with the signature process, but will receive a copy of the signed document.
+* **最終的なコピー受信者**: この役割は、署名プロセスには関与しませんが、署名済みドキュメントのコピーを受け取ります。
 
-Let's use roles to be a bit more creative in the scholarship example.
+役割を使用して、この奨学金の例ではもう少し工夫してみましょう。
 
-Imagine that the scholarship needs to be approved by the dean, and the legal department receives a final copy of the contract.
+奨学金は学部長による承認が必要であることと、法務部門が契約書の最終的なコピーを受け取ることを想像してみてください。
 
-The flow starts with the signature request, flowed by the dean approval, the institution signature, the student signature, and finally the legal department receives a copy of the signed document:
+フローは署名リクエストで始まり、学部長による承認、教育機関による署名、学生による署名と続き、最後に、法務部門が署名済みドキュメントのコピーを受け取ります。
 
-![Multiple signers and roles](images/sign-flow-multi-role.png)
+![複数の署名者と役割](images/sign-flow-multi-role.png)
 
-Let's create a method for this:
+このためのメソッドを作成しましょう。
 
 <Tabs>
 
@@ -223,7 +223,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -299,19 +299,19 @@ def main():
 
 </Tabs>
 
-Like before you need to prepare the document, so open the prepare URL in your browser.
+先ほどと同様、ドキュメントを準備する必要があるため、ブラウザで準備のURLを開きます。
 
-Notice in the example the institution is represented by blue on the left, and the student by green on the right, and both are signers.
+この例では、教育機関が左側に青で示され、学生が右側に緑で示されており、どちらも署名者であることに注目してください。
 
-Neither the `approver` nor the `final copy reader` can have inputs associated with them. If you do this, their roles will be adjusted to `signer`:
+`approver`にも`final copy reader`にも入力データを関連付けることはできません。関連付けると、その役割は`signer`に変更されます。
 
-![Multiple role preparation](images/sign_multi-steps-prep.png)
+![複数の役割の準備](images/sign_multi-steps-prep.png)
 
-Continuing the signature process:
+署名プロセスを続行します。
 
-* The dean approves the scholarship
-* The institution signs the scholarship
-* The student signs the scholarship
-* The legal department receives a copy of the signed document.
+* 学部長が奨学金を承認する
+* 教育機関が奨学金に署名する
+* 学生が奨学金に署名する
+* 法務部門が署名済みドキュメントのコピーを受け取る
 
 [roles]: https://support.box.com/hc/en-us/articles/4404105660947-Roles-for-signers

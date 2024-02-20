@@ -14,31 +14,31 @@ previous_page_id: ''
 source_url: 'https://github.com/box/developer.box.com/blob/main/content/pages/sign/index.md'
 fullyTranslated: true
 ---
-# Working with Box Sign
+# Box Signの使用
 
 <ImageFrame center>
 
-![Working with box sign image](images/working-with-box-sign.png)
+![Box Signの使用の画像](images/working-with-box-sign.png)
 
 </ImageFrame>
 
-This learning page provides developers with practical insights into working with [Box Sign][sign], aiming to facilitate the integration of the Box Platform Sign engine into their applications.
+この学習ページでは、アプリケーションへのBox Platform Signエンジンの統合を促進することを目的に、[Box Sign][sign]の使用に関する実践的なインサイトを開発者に提供します。
 
 ## クイックスタート
 
-Use the [Quick start][quick-start] to go straight into the creation of a signature request.
+[クイックスタート][quick-start]を使用すると、すぐに署名リクエストの作成に着手することができます。
 
-## Technical use cases
+## 技術的なユースケース
 
-In the [Technical use cases][technical-use-cases], you will learn how to handle the different types of documents that can be used in a signature request: from unstructured documents that require a preparation step, through templates, to generated ready to sign documents.
+[技術的なユースケース][technical-use-cases]では、準備手順が必要な非構造化ドキュメントから、テンプレート、署名する準備ができている生成済みドキュメントまで、署名リクエストで使用できるさまざまな種類のドキュメントを処理する方法について説明します。
 
-## Request Options
+## リクエストのオプション
 
-In the [Request options][request-options], you will find a detailed exploration of the available customization and configuration options when sending signing requests through the Box Sign API. Learn how to tailor the signing experience to match your application's user interface, workflow, and specific requirements.
+[リクエストのオプション][request-options]では、Box Sign APIを使用して署名リクエストを送信する際に利用できるカスタマイズと構成のオプションについて詳しく説明します。アプリケーションのユーザーインターフェース、ワークフロー、特定の要件に合うように署名エクスペリエンスを調整する方法を確認してください。
 
 <!-- ## Business Use Cases  The [Business use cases][[advanced-use-cases]] delves into a few of the business use cases, requirements, and workflows you may encounter. See how the Box Platform features come together to provide a seamless signing experience for your users.  -->
 
-Let's get started!
+それでは、始めましょう。
 
 [sign]: https://www.box.com/esignature
 

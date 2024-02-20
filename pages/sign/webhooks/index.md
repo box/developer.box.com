@@ -19,21 +19,21 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/40-webhooks/index.md
 fullyTranslated: true
 ---
-# Sign webhooks
+# Sign Webhook
 
-Sign webhooks allow you to receive notifications about events that happen with the signature requests. You can use them to trigger actions in your own application, or to notify your users about events that happen in Sign.
+Sign Webhookを使用すると、署名リクエストに伴って発生したイベントに関する通知を受信することができます。Sign Webhookを使用して、自分のアプリケーションで操作を開始したり、Signで発生したイベントについてユーザーに通知したりできます。
 
-This is particularly important since the signature requests are asynchronous, and the signers can interact with them at any time, possibly outside of your application.
+署名リクエストが非同期処理で、署名者はいつでも (場合によってはアプリケーション外部でも) 署名リクエストを操作できるので、これは特に重要になります。
 
-## Sign related events
+## Sign関連のイベント
 
-There are Sign related events that can trigger the webhooks. Like most of Box events the listeners are set at folder or document level.
+WebhookをトリガーできるSign関連のイベントがあります。Boxイベントの大半と同様、リスナーはフォルダレベルまたはドキュメントレベルで設定されます。
 
-The most common use case is to listen to the events at the folder where the sign requests are created. This way you can listen to all the signature requests created in that folder.
+最も一般的なユースケースでは、署名リクエストが作成されるフォルダでイベントをリッスンします。このように、そのフォルダに作成されるすべての署名リクエストをリッスンできます。
 
-Some examples of events that can be listened to are:
+リッスンできるイベントの例を以下に示します。
 
-* `SIGN_REQUEST.COMPLETED`, when a signature request is completed.
-* `SIGN_REQUEST.DECLINED`, when a signature request is declined.
-* `SIGN_REQUEST.EXPIRED`, when a signature request expires.
-* `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`, when a signer's email is bounced.
+* `SIGN_REQUEST.COMPLETED`: 署名リクエストが完了した。
+* `SIGN_REQUEST.DECLINED`: 署名リクエストが拒否された。
+* `SIGN_REQUEST.EXPIRED`: 署名リクエストの有効期限が切れた。
+* `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`: 署名者のメールが差し戻された。

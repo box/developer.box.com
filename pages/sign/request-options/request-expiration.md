@@ -15,13 +15,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/50-request-expiration.md
 fullyTranslated: true
 ---
-# Request expiration
+# リクエストの有効期限
 
-There are situations where you might need to [set an expiration date][exp-date] for the signature request.
+場合によっては、署名リクエストの[有効期限を設定する][exp-date]必要があります。
 
-For example, imagine a quote for a service that is valid for 30 days. This proposal has to be signed by a certain date, and if not, the signature request for the quote is no longer valid.
+たとえば、30日間有効なサービスの見積もりを想像してみてください。この提案書には期日までに署名する必要があり、署名しなかった場合、この見積もりに対する署名リクエストは無効になります。
 
-All you need to do is pass the `days_valid` parameter.
+必要なのは、`days_valid`パラメータを渡すことだけです。
 
 例:
 
@@ -58,7 +58,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 

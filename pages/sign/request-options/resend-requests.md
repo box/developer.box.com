@@ -15,17 +15,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/pages/sign/30-request-options/40-resend-requests.md
 fullyTranslated: true
 ---
-# Resend requests
+# リクエストの再送信
 
-What if the signer did not receive the email, the email was lost, or the signer deleted the email by mistake?
+署名者がメールを受信できなかった場合や、メールを紛失したり、署名者が誤ってメールを削除したりした場合はどうなるでしょうか。
 
-You can resend the signature request email to the `signer` , either manually or you can turn on the automatic resend option.
+署名リクエストメールは、手動で`signer`に再送信することも、自動再送信オプションをオンにすることもできます。
 
-## Manual resend
+## 手動による再送信
 
-To manually resend the signature request email to the signer, call the `resend_sign_request` method on the `sign_requests` object. You can only do it once every 10 minutes.
+署名リクエストメールを手動で署名者に再送信するには、`sign_requests`オブジェクトで`resend_sign_request`メソッドを呼び出します。この操作は、10分間に1回しか実行できません。
 
-Here is an example:
+以下に例を示します。
 
 <Tabs>
 
@@ -41,7 +41,7 @@ curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
@@ -56,11 +56,11 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 </Tabs>
 
-## Automatic resend
+## 自動再送信
 
-The automatic resend option sends a reminder email to signers that have not signed the document yet, after 3, 8, 13, and 18 days.
+自動再送信オプションを使用すると、ドキュメントにまだ署名していない署名者に対して3日後、8日後、13日後、18日後にリマインダメールが送信されます。
 
-To enable automatic resend set the `are_reminders_enabled` parameter to `true`. For example:
+自動再送信を有効にするには、`are_reminders_enabled`パラメータを`true`に設定します。たとえば、以下のようにします。以下に例を示します。
 
 <Tabs>
 
@@ -95,7 +95,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 </Tab>
 
-<Tab title="Python Gen SDK">
+<Tab title="Pythonの次世代SDK">
 
 ```python
 
