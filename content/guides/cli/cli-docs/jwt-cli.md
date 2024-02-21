@@ -213,7 +213,7 @@ Notification Email: []
 [dc]: https://account.box.com/developers/console
 <!-- i18n-disable localize-links -->
 [keypair]: g://authentication/jwt/jwt-setup/#public-and-private-key-pair
-[sa]: g://getting-started/user-types/service-account/
+[sa]: page://platform/user-types/#service-account/
 [scopes]: g://api-calls/permissions-and-errors/scopes/
 [ag]: g://authorization/custom-app-approval/
 <!-- i18n-enable localize-links -->

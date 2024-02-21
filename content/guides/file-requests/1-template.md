@@ -27,7 +27,7 @@ A folder can be created through the Box web or mobile interface, or through the
 
 When using server-side JWT authentication, we recommend creating folder that
 is owned by the application's
-[Service Account](g://getting-started/user-types/service-account/). This way,
+[Service Account](page://platform/user-types/#service-account/). This way,
 the folder can't be accidentally deleted by a regular Box user.
 
 </Message>

@@ -11,8 +11,9 @@ alias_paths: []
 
 # Shield Alert Events
 
-[Box Shield][box-shield] must be purchased and enabled on a Box enterprise in
-order to take advantage of the advanced security offerings outlined below. 
+[Box Shield][box-shield] must be purchased and enabled on a
+Box enterprise to take advantage of the advanced security
+offerings outlined below. 
 
 ## Threat detection alerts
 
@@ -54,14 +55,14 @@ standard event object schema and the `event_type` value is set to
 }
 ```
 
-Information about the specific type of shield alert that triggered the event
-will be supplied within the `additional_details` object.
+The `additional_details` object provides information
+about the specific type of shield alert that triggered the event.
 
 ### Suspicious locations alert
 
 <!--alex ignore-->
 
-A suspicious locations alert is produced when when Shield detects a user
+A suspicious locations alert is produced when Shield detects a user
 accessing content from an unusual, excluded geographic location, or 'host' IP
 address. It can be identified by the `Suspicious Locations` value
 within `additional_details.shield_alert.rule_category`.
@@ -76,6 +77,9 @@ The `additional_details` payload will provide the following details:
     "rule_category":"Suspicious Locations",
     "rule_id":123,
     "rule_name":"Suspicious Location",
+    "rule_response_action":{
+      "restrict_user": true
+        },
     "risk_score":60,
     "alert_summary":{
       "alert_activities":[
@@ -129,6 +133,7 @@ The `additional_details` payload will provide the following details:
     "rule_category":"Suspicious Sessions",
     "rule_id":123,
     "rule_name":"Suspicious Session",
+    "rule_response_action": null,
     "risk_score":77,
     "alert_summary":{
       "description":"First time in prior month user connected from ip 2.3.4.5 First time user agent Some User Agent (Some UA 4.5.6) appeared for user within prior month Apparent distance 9580.0 km between events 59 seconds apart is faster than possible",
@@ -210,6 +215,7 @@ The `additional_details` payload will provide the following details:
     "rule_category":"Anomalous Download",
     "rule_id":123,
     "rule_name":"Anomalous Download Rule",
+    "rule_response_action": null,
     "risk_score":77,
     "alert_summary":{
       "description":"Significant increase in download content week over week, 9200% (25.04 MB) more than last week 12 additional files downloaded week over week)",
@@ -266,6 +272,7 @@ The `additional_details` payload will provide the following details:
     "rule_category":"Malicious Content",
     "rule_id":123,
     "rule_name":"Viruses and stuff",
+    "rule_response_action": null,
     "risk_score":100,
     "alert_summary":{
       "upload_activity":{
