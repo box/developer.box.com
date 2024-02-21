@@ -60,7 +60,7 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 自動再送信オプションを使用すると、ドキュメントにまだ署名していない署名者に対して3日後、8日後、13日後、18日後にリマインダメールが送信されます。
 
-自動再送信を有効にするには、`are_reminders_enabled`パラメータを`true`に設定します。たとえば、以下のようにします。以下に例を示します。
+自動再送信を有効にするには、`are_reminders_enabled`パラメータを`true`に設定します。以下に例を示します。
 
 <Tabs>
 

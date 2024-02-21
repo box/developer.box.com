@@ -212,7 +212,7 @@ Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
 
 これは、Box Signの基本的なユースケースを示しています。`create`メソッドには、署名リクエストのカスタマイズに使用できる多くのオプションがあります。
 
-詳細については、[リクエストのオプション][request-options]と[技術的なユースケース][technical-use-cases]のセクションをぜひ確認してください。
+詳細については、[リクエストのオプション][request-options]と[技術的なユースケース][technical-use-cases]のセクションを確認してください。
 
 </Message>
 
