@@ -63,7 +63,7 @@ with the Box Content Cloud.
 
 <Message type='notice'>
 
-New Typescript and Python SDKs are in a Public Beta phase.
+New Typescript, .NET, and Python SDKs are in a Public Beta phase.
 
 </Message>
 
@@ -92,6 +92,7 @@ and much more.
 | --------------------------------- | ----------- | ------- |
 | [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
 | [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
 
 ### SDKs
 
@@ -245,6 +246,7 @@ for these tools.
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 [postman]: https://postman.com
 <!-- i18n-enable localize-links -->
 

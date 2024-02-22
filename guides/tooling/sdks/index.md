@@ -87,6 +87,7 @@ and much more.
 | --------------------------------- | ----------- | ------- |
 | [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
 | [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
 
 ## SDKs
 
@@ -127,6 +128,7 @@ Refer to [this][android-docs] documentation for more details.
 [androidsdk]: https://github.com/box/box-android-sdk
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
 <!-- i18n-disable localize-links -->

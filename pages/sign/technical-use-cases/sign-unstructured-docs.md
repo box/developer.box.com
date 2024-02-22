@@ -21,8 +21,9 @@ anyone to sign it. In this case your app will know what document to sign and
 who needs to sign, but it has no idea where to put the signature or its
 properties like name, date, initial, and so on.
 
-This contrasts with [using templates][sign-templates] or [structured documents]
-[sign-structured-docs] where your app knows what they are, and where the
+This contrasts with [using templates][sign-templates] or
+[structured documents][sign-structured-docs] where your
+app knows what they are, and where the
 signature properties go.
 
 In these cases, and because each document can have a different structure, it is

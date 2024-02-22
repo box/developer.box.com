@@ -28,11 +28,11 @@ source_url: >-
 Server authentication applications using [JWT][jwt] or
 [Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
 
-User authentication applications using [OAuth 2.0][oauth] may need to be
-enabled by a Box Admin depending on the [unpublished apps setting][upa].
+Unpublished applications using [OAuth 2.0][oauth] authentication may
+require enablement by a Box Admin if they are [inactive by default][upa].
 
-A Box Admin needs an application's Client ID in order to properly authorize or
-enable it in the Admin Console.
+A Box Admin needs an application's Client ID in order to properly
+authorize or enable it in the Admin Console.
 
 <Message>
 

@@ -28,11 +28,11 @@ The following table lists the operations that you can perform on this endpoint.
 
 | Operation | Endpoint | Description |
 | --- | --- | --- |
-| GET | /sign_requests | List all signature requests. |
-| GET | /sign_requests/:id | Get details of a specific signature request. |
-| POST | /sign_requests | Create a signature request. |
-| POST | /sign_requests/:id/resend | Resend a signature request. |
-| POST | /sign_requests/:id/cancel | Cancel a signature request. |
+| GET | `/sign_requests` | List all signature requests. |
+| GET | `/sign_requests/:id`| Get details of a specific signature request. |
+| POST | `/sign_requests`| Create a signature request. |
+| POST | `/sign_requests/:id/resend` | Resend a signature request. |
+| POST | `/sign_requests/:id/cancel` | Cancel a signature request. |
 
 For full details on the request and response parameters, see the [Sign
 request API reference][sign-api-reference].
@@ -53,11 +53,11 @@ The following table lists the operations that you can perform on this endpoint.
 
 | Operation | Endpoint | Description |
 | --- | --- | --- |
-| GET | /sign_templates | List all templates. |
-| GET | /sign_templates/:id | Get details of a specific template. |
+| GET | `/sign_templates` | List all templates. |
+| GET | `/sign_templates/:id` | Get details of a specific template. |
 
 For a full details on the request and response parameters, see the [Sign
-template request API reference][sign-api-template-ref]
+template request API reference][sign-api-template-ref].
 
 [sign-api-reference]:https://developer.box.com/reference/resources/sign-request/
 [sign-api-template-ref]:https://developer.box.com/reference/resources/sign-template/
