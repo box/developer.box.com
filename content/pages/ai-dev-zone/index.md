@@ -34,6 +34,12 @@ centered: false
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
+    <Tile type="metadata" title="Extract metadata"
+        href="/ai-dev-zone-metadata">
+        Extract information from any document
+
+        <strong style="background-color: #3B1E9B">New</strong>
+    </Tile>
     <Tile disabled type="document-qa" title="Ask a question"
         href="/ai-dev-zone">
         Ask questions related to content of a document

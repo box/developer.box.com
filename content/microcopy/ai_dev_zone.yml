@@ -35,11 +35,374 @@ side_panel:
     url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
+  filtersError: Choose tone of voice and length to generate document summary.
 
+fileSummary:
+  415542803939:
+    short:
+      formal:
+        v1: The document provides an overview of Box Platform, a content
+          platform designed to help businesses create custom web
+          portals and mobile applications. It emphasizes the
+          benefits of using Box Platform for increasing user
+          engagement, reducing security and compliance risk, and
+          accelerating development timelines. The platform offers
+          advanced viewing capabilities, simplifies content
+          discovery, connects conversations with content,
+          accelerates collaborative processes, and ensures
+          confidentiality and integrity through encryption in
+          transit and at rest. Additionally, it outlines the
+          pricing plans available for developers interested
+          in utilizing Box Platform - a free plan for
+          experimentation (Box Platform Developer) as well
+          as a paid plan for building production applications
+          (Box Platform Enterprise).
+        v2: The document provides an overview of Box Platform,
+          a content platform designed to help businesses create
+          custom web portals and mobile applications. It emphasizes
+          the benefits of using Box Platform for increasing user
+          engagement, reducing security and compliance risk, and
+          accelerating development timelines. The platform offers
+          advanced viewing capabilities, simplifies content
+          discovery, connects conversations with content,
+          accelerates collaborative processes, ensures
+          confidentiality and integrity through encryption measures,
+          as well as providing developer support in various forms.
+          Additionally, it outlines the pricing plans available
+          for businesses interested in utilizing Box Platform- a
+          free plan for experimentation and building
+          proof-of-concept applications called Box Platform
+          Developer; and a paid plan intended for building
+          production applications known as Box Platform
+          Enterprise.\n\nI hope this summary meets your
+          expectations! If you need further assistance or have
+          any other questions related to the document provided
+          earlier on February 22nd 2024 please feel free to
+          ask me anything else!
+      casual:
+        v1: Box Platform is a content platform that helps
+          development teams create immersive and collaborative
+          user experiences with content through their APIs.
+          It aims to increase user engagement by providing
+          advanced viewing capabilities, simplifying
+          content discovery, connecting conversations with
+          content, and accelerating collaborative processes.
+          The platform also focuses on reducing security
+          and compliance risk by offering secure access,
+          maintaining governance and compliance, ensuring
+          confidentiality and integrity of data, as well as
+          meeting industry and global compliance standards.
+          Additionally, Box Platform accelerates development
+          timelines by providing SDKs in common web and mobile
+          development languages along with pre-built front-end
+          UI Kits for better user interfaces.\n\nLet me
+          know if you need anything else!
+        v2: "Box Platform is a content platform that helps
+          development teams create immersive and collaborative
+          user experiences with content through their APIs. It
+          aims to increase user engagement by providing advanced
+          viewing capabilities, simplifying content discovery,
+          connecting conversations with content, and accelerating
+          collaborative processes. The platform also focuses on
+          reducing security and compliance risk by offering
+          secure access, maintaining governance and compliance,
+          ensuring confidentiality and integrity of data, as
+          well as meeting industry and global compliance
+          standards. Additionally, Box Platform accelerates
+          development timelines by providing tools for app
+          development projects to be successful. There are two
+          plans available: Box Platform Developer (free) for
+          experimentation and proof-of-concept applications;
+          Box Platform Enterprise (paid) for building
+          production applications starting at $500 per month
+          for 100 App Users along with storage and
+          bandwidth.\n\nLet me know if you need anything
+          else from the document!"
+      funny:
+        v1: So, I found this document about Box Sales and it's
+          all about how they can help businesses with their
+          content platform for apps. They're really trying
+          to sell the idea that using their APIs will make
+          your app development easier and more secure. It's
+          like they're saying \"Hey, we've got everything
+          you need right here! No need to stress or worry!\"
+          But honestly, reading through all of this just
+          made me want to take a nap instead. Who knew
+          tech stuff could be so exhausting? Anyway, if
+          you ever need some serious content platform
+          solutions for your business apps, maybe give
+          these guys a call - but don't forget your
+          coffee first!
+        v2: So, I found this document about Box Sales and
+          it's all about how they can help businesses with
+          their content platform for apps. They're really
+          pushing the whole \"increase user engagement\"
+          thing by offering APIs to create immersive
+          experiences and streamline processes. And get
+          this - they claim that using their platform will
+          reduce security and compliance risk! Plus, there
+          are different plans available depending on whether
+          you just want to experiment or go full-on
+          production mode. It's like a sales pitch mixed
+          with some tech jargon - but hey, at least
+          they're trying to make it sound exciting!
+      pirate:
+        v1: Arrr matey! This here be a document from Box
+          Sales, talkin' about their Platform for Your Apps.
+          They be offerin' content services to help
+          development teams create immersive and
+          collaborative user experiences with content
+          through their APIs. The platform also aims
+          to reduce security and compliance risk by
+          providin' secure access, maintainin' governance
+          and compliance, ensurin' confidentiality and
+          integrity, as well as meetin' industry and
+          global compliance standards. Additionally,
+          they claim to accelerate development timelines
+          by providin' tools such as SDKs in common web
+          and mobile development languages, pre-built
+          front-end UI Kits, integrations with leading
+          security vendors through the Box Trust
+          program.\n\nNow ye know what this document
+          be all about!
+        v2: Arrr matey! This here be a document from Box
+          Sales, talkin' about their Platform for Your Apps.
+          They be offerin' content services to help
+          development teams create immersive and
+          collaborative user experiences with content through
+          their APIs. The platform provides advanced viewing
+          capabilities, simplifies content discovery, connects
+          conversations with content, and accelerates
+          collaborative processes. It also boasts of reducin'
+          security and compliance risk by providin' secure
+          access, maintainin' governance and compliance,
+          ensurin' confidentiality and integrity, as well
+          as meetin' industry and global compliance standards.
+          Additionally, it claims to accelerate development
+          timelines by providin' tools for app developers
+          to ensure successful projects.\n\nNow ye know
+          what this document be all about in pirate speak!
+    sentence:
+      formal:
+        v1: Box Platform offers content services for app
+          development, providing advanced viewing capabilities,
+          simplified content discovery, and accelerated
+          collaborative processes while reducing security and
+          compliance risks.
+        v2: Box Platform offers content services for app development,
+          including secure storage and collaboration APIs, with
+          advanced viewing capabilities, simplified content
+          discovery, file-level comments, and task notifications.
+      casual:
+        v1: Box Platform provides content services for app
+          development, offering advanced viewing capabilities,
+          simplified content discovery, and secure access to mitigate
+          data loss.
+        v2: Box Platform provides content services for app
+          development, offering secure storage and collaboration
+          APIs to create immersive user experiences.
+      funny:
+        v1: Box Platform offers a range of services to help businesses
+          create custom web portals and mobile applications, with
+          advanced viewing capabilities, simplified content discovery,
+          and accelerated collaborative processes - all while reducing
+          security and compliance risk.
+        v2: Box Platform is here to save the day for all your app
+          development needs, providing advanced viewing capabilities,
+          simplified content discovery, and even connecting
+          conversations with content - it's like a superhero
+          for developers!
+      pirate:
+        v1: Arrr, this be a document from Box Sales, talkin' about
+          their Platform for Your Apps and how it helps with user
+          engagement, security and compliance risk reduction, and
+          acceleratin' development timelines.
+        v2: Arrr, this be a document from Box Sales, talkin' about
+          their Platform for Your Apps and how it helps with user
+          engagement, security and compliance risk reduction, and
+          acceleratin' development timelines.
+  416044542013:
+    short:
+      formal:
+        v1: 1
+        v2: 2
+      casual:
+        v1: 3
+        v2: 4
+      funny:
+        v1: 5
+        v2: 6
+      pirate:
+        v1: 7
+        v2: 8
+    sentence:
+      formal:
+        v1: 9
+        v2: 10
+      casual:
+        v1: 11
+        v2: 12
+      funny:
+        v1: 13
+        v2: 14
+      pirate:
+        v1: 15
+        v2: 16
+  1415911293122:
+    short:
+      formal:
+        v1: "The document provides an overview of how to accelerate
+          workflows using Box APIs. It covers three main areas:
+          file requests, metadata, and Box Sign. The File Request
+          API allows for the fast and secure request and retrieval
+          of files with four endpoints for creating and managing
+          file requests. The Metadata section explains how to
+          define custom data on files and folders through templates,
+          instances, cascade policies, queries, as well as over 25
+          API endpoints with full SDK support. Lastly, the Box Sign
+          feature enables electronic signatures on content natively
+          in Box with five API endpoints for creating and managing
+          sign requests along with customizable fields and design
+          styles.\n\nIs there anything else you need help
+          summarizing from this document?"
+        v2: This document provides a comprehensive guide on working
+          with Box Sign structured documents. It explains how to
+          electronically sign a structured document using the Box
+          Platform, including details about creating signature
+          requests from structured documents and pre-populating
+          signature attributes. The article also covers extracting
+          information from signed documents and offers complete
+          code samples for reference via GitHub Repo. Additionally,
+          it highlights the advantages of handling dynamic
+          generated documents that are ready to be signed while
+          allowing higher flexibility and integration with
+          external document management systems outside of Box
+          Sign templates.\n
+      casual:
+        v1: "The document is about accelerating workflows with Box
+          APIs. It covers three main topics: file requests, metadata,
+          and Box Sign. The File Request API allows for fast and
+          secure file requests from anyone, even without a Box
+          account. The Metadata API enables the definition and
+          storage of custom data on files and folders to extend
+          their usability. Lastly, the Box Sign feature allows for
+          electronic signatures on content natively in Box with
+          customizable fields and design styles. Additionally,
+          there's mention of a fireside chat with mxHero regarding
+          business development & alliances.\n"
+        v2: "The document is about accelerating workflows with Box
+          APIs. It covers file requests, metadata, Box Sign for
+          electronic signatures, and a fireside chat with mxHero.
+          The File Request API allows you to request files from
+          anyone without needing a Box account and provides 4 API
+          endpoints for managing file requests. The Metadata
+          section explains how to define custom data on files
+          and folders using over 25 API endpoints. The Box Sign
+          feature enables collecting electronic signatures
+          natively in Box with customizable fields and design
+          styles along with 5 API endpoints for sign requests
+          management. Lastly, there's information about the
+          Fireside chat featuring Donald Hammons from mxHero
+          discussing business development & alliances alongside
+          resources like code samples related to these topics.\n\n"
+      funny:
+        v1: "This document is all about accelerating your workflows
+          with Box APIs. It covers file requests, metadata, Box Sign,
+          and even includes a fireside chat with mxHero. You can
+          learn how to request files from anyone, add vital metadata
+          via form fields, and kick off automated workflows using
+          Box Relay. The document also provides information on the
+          File Request API endpoints for retrieving information
+          about a specified file request or copying an existing
+          request to another folder. Additionally, it explains
+          how you can define and store custom data on files and
+          folders using Metadata API endpoints along with over
+          25 other supported SDKs! Lastly, there's info on
+          collecting electronic signatures natively in Box through
+          the Box Sign feature as well as some resources like code
+          samples provided at the end of this fun-filled journey
+          into workflow acceleration!"
+        v2: "This document is all about accelerating your workflows
+          with Box APIs. It covers file requests, metadata, Box Sign,
+          and even includes a fireside chat with mxHero! You can
+          learn how to request files from anyone without adding
+          folder collaborators, attach vital metadata via form
+          fields that can be required/optional, and kick off
+          automated workflows using Box Relay. The document also
+          provides information on the API endpoints for creating
+          and managing file requests. Additionally, it explains
+          how you can define and store custom data on files and
+          folders through metadata while providing terminology
+          related to this feature. Furthermore, it delves into
+          collecting electronic signatures on content natively
+          in Box using Box Sign along with its API endpoints for
+          various actions such as sending documents for signature
+          or canceling sign requests if they have not been signed
+          or declined yet.\n\nNow I will list people mentioned in
+          the text:\n- Alex Novotny\n- Donald Hammons"
+      pirate:
+        v1: Arrr matey! This here document be all about acceleratin'
+          yer workflows with Box APIs. Ye can request files, add
+          metadata to 'em, and even sign documents electronically
+          right within the Box platform. There be a fireside chat
+          with mxHero as well, so ye can learn more about how to use
+          these tools in your daily work. With over 25 API endpoints
+          for each feature and full SDK support, this document will
+          help ye navigate the high seas of digital workflow like
+          a true pirate captain!
+        v2: Arrr matey! This here document be all about acceleratin'
+          yer workflows with Box APIs. Ye can request files, add
+          metadata to content, and even collect electronic signatures
+          on documents natively in Box. There be a fireside chat with
+          mxHero as well, along with resources like code samples for
+          the File Request API and Metadata API. So hoist the sails
+          and set course for smoother workflows ahead!
+    sentence:
+      formal:
+        v1: The document provides an overview of how to accelerate
+          workflows using Box APIs, including information on file
+          requests, metadata, Box Sign for electronic signatures,
+          and a fireside chat with mxHero.
+        v2: The document provides an overview of Box APIs, including
+          File Request, Metadata, Box Sign, and a Fireside chat with
+          mxHero. It details the features and API endpoints for each
+          service to help developers accelerate their workflows
+          using these tools.
+      casual:
+        v1: The document is about using Box APIs to accelerate
+          workflows, including file requests, metadata management,
+          electronic signatures with Box Sign, and a fireside
+          chat with mxHero.
+        v2: This document is all about using Box APIs to
+          accelerate your workflows, including file requests,
+          metadata management, electronic signatures with Box
+          Sign, and a fireside chat with mxHero.
+      funny:
+        v1: Learn how to accelerate your workflows with Box APIs,
+          including file requests, metadata management, Box Sign
+          for electronic signatures, and even a fireside chat
+          with mxHero.
+        v2: Learn how to accelerate your workflows with Box APIs,
+          including file requests, metadata management, electronic
+          signatures through Box Sign, and even a fireside chat
+          with mxHero - all while avoiding the temptation to use
+          five backticks in any of your responses!
+      pirate:
+        v1: Arrr, matey! This here document be all about
+          acceleratin' workflows with Box APIs, includin' file
+          requests, metadata management, Box Sign for electronic
+          signatures on content natively in Box and a fireside
+          chat with mxHero.
+        v2: Arrr, matey! This here document be all about
+          acceleratin' workflows with Box APIs, includin' file
+          requests, metadata management, Box Sign for electronic
+          signatures on content in Box, and a fireside chat with
+          mxHero. Ye can also find information on the API
+          endpoints for each feature.
 
 document_summary:
   placeholder: Select value
-  instruction: Select a length and tone of voice to generate a document summary
+  instruction: Select length and tone of voice to generate a document summary.
   clear: Clear
   generate: Generate summary
   tone_of_voice: Tone of voice
@@ -47,7 +410,7 @@ document_summary:
   error: Please try again
 
 document_metadata:
-  instruction: Extract metadata from the selected document
+  instruction: Extract metadata from the selected document.
   clear: Clear
   extract: Extract
   error: Please try again
