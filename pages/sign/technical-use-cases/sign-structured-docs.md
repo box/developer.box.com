@@ -215,8 +215,8 @@ Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
 
 </Tabs>
 
-If you go to the `signer` email inbox, open the email from Box Sign, click on
-the `Review and Sign` button, you'll see the document with the signature
+If you go to the **signer** email inbox, open the email from Box Sign, click
+the **Review Document** button, you'll see the document with the signature
 properties in place:
 
 ![Document with the properties in place](images/sign-structured-signing-document.png)

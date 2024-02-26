@@ -35,7 +35,7 @@ preparation, and is an extra step automatically created by the Box Sign service.
 There are two other types of documents that already have the necessary
 information for the Box Sign service to recognize the signature properties.
 The [sign templates][sign-templates], managed in the Box application, and the
-[structured documents][sign-structured-docs], which are typically generated
+[structured documents][sign-structured-docs], which are dynamically generated
 documents, containing specific tags representing the signature properties.
 
 <Next>
