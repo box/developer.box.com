@@ -7,6 +7,9 @@ alias_paths:
   - /docs/get-started-with-the-box-api
   - /docs/app-management
   - /docs/configuring-box-platform
+  - /guides/applications/custom-apps/
+  - /guides/applications/limited-access-apps/
+  - /guides/applications/custom-skills/
 category_id: applications
 subcategory_id: applications/app-types
 is_index: true
