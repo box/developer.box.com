@@ -29,7 +29,8 @@ The My Apps page allows you to:
 1. View application description using the `i` icon.
 1. Copy the Client ID using the `copy` icon.
 1. Check application [enablement][enablement]
-and [authorization][authorization] status.
+and [authorization][authorization] status. Apps published
+to App Center display status from App Center.
 1. Use a menu available for every entry to access
 the configuration details of your application or to generate a [Developer Token][token].
 
