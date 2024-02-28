@@ -10,11 +10,14 @@ files:
       name: Sample_Document.pdf
       description: Document
     416044542013:
-      name: Sample_Article.doc
+      name: Sample_Book.pdf
       description: Document
     1415911293122:
       name: Sample_Powerpoint.ppx
       description: Presentation
+    420985736453:
+      name: Long_sample.pdf
+      description: Document
   go_back_button: AI Dev Zone
 
 sample_code:
@@ -88,7 +91,7 @@ fileSummary:
           proof-of-concept applications called Box Platform
           Developer; and a paid plan intended for building
           production applications known as Box Platform
-          Enterprise.\n\nI hope this summary meets your
+          Enterprise. I hope this summary meets your
           expectations! If you need further assistance or have
           any other questions related to the document provided
           earlier on February 22nd 2024 please feel free to
@@ -109,7 +112,7 @@ fileSummary:
           Additionally, Box Platform accelerates development
           timelines by providing SDKs in common web and mobile
           development languages along with pre-built front-end
-          UI Kits for better user interfaces.\n\nLet me
+          UI Kits for better user interfaces. Let me
           know if you need anything else!
         v2: "Box Platform is a content platform that helps
           development teams create immersive and collaborative
@@ -130,36 +133,8 @@ fileSummary:
           Box Platform Enterprise (paid) for building
           production applications starting at $500 per month
           for 100 App Users along with storage and
-          bandwidth.\n\nLet me know if you need anything
+          bandwidth. Let me know if you need anything
           else from the document!"
-      funny:
-        v1: So, I found this document about Box Sales and it's
-          all about how they can help businesses with their
-          content platform for apps. They're really trying
-          to sell the idea that using their APIs will make
-          your app development easier and more secure. It's
-          like they're saying \"Hey, we've got everything
-          you need right here! No need to stress or worry!\"
-          But honestly, reading through all of this just
-          made me want to take a nap instead. Who knew
-          tech stuff could be so exhausting? Anyway, if
-          you ever need some serious content platform
-          solutions for your business apps, maybe give
-          these guys a call - but don't forget your
-          coffee first!
-        v2: So, I found this document about Box Sales and
-          it's all about how they can help businesses with
-          their content platform for apps. They're really
-          pushing the whole \"increase user engagement\"
-          thing by offering APIs to create immersive
-          experiences and streamline processes. And get
-          this - they claim that using their platform will
-          reduce security and compliance risk! Plus, there
-          are different plans available depending on whether
-          you just want to experiment or go full-on
-          production mode. It's like a sales pitch mixed
-          with some tech jargon - but hey, at least
-          they're trying to make it sound exciting!
       pirate:
         v1: Arrr matey! This here be a document from Box
           Sales, talkin' about their Platform for Your Apps.
@@ -177,7 +152,7 @@ fileSummary:
           and mobile development languages, pre-built
           front-end UI Kits, integrations with leading
           security vendors through the Box Trust
-          program.\n\nNow ye know what this document
+          program. Now ye know what this document
           be all about!
         v2: Arrr matey! This here be a document from Box
           Sales, talkin' about their Platform for Your Apps.
@@ -194,7 +169,7 @@ fileSummary:
           as meetin' industry and global compliance standards.
           Additionally, it claims to accelerate development
           timelines by providin' tools for app developers
-          to ensure successful projects.\n\nNow ye know
+          to ensure successful projects. Now ye know
           what this document be all about in pirate speak!
     sentence:
       formal:
@@ -215,17 +190,6 @@ fileSummary:
         v2: Box Platform provides content services for app
           development, offering secure storage and collaboration
           APIs to create immersive user experiences.
-      funny:
-        v1: Box Platform offers a range of services to help businesses
-          create custom web portals and mobile applications, with
-          advanced viewing capabilities, simplified content discovery,
-          and accelerated collaborative processes - all while reducing
-          security and compliance risk.
-        v2: Box Platform is here to save the day for all your app
-          development needs, providing advanced viewing capabilities,
-          simplified content discovery, and even connecting
-          conversations with content - it's like a superhero
-          for developers!
       pirate:
         v1: Arrr, this be a document from Box Sales, talkin' about
           their Platform for Your Apps and how it helps with user
@@ -238,30 +202,146 @@ fileSummary:
   416044542013:
     short:
       formal:
-        v1: 1
-        v2: 2
+        v1: "The Adventures of Huckleberry Finn\" by Mark Twain is
+          a classic novel set in the Mississippi Valley about forty
+          to fifty years ago. The story follows the adventures of
+          Huckleberry Finn, who was introduced as Tom Sawyer's
+          comrade in another book called \"The Adventures of Tom
+          Sawyer.\" In this document, Huck reflects on his
+          experiences after finding hidden money with Tom and
+          becoming rich. He describes how he ended up living with
+          Widow Douglas but eventually felt suffocated by her
+          attempts to civilize him. After reuniting with Tom,
+          they plan to start a band of robbers. The document
+          also touches upon Huck's interactions with Miss Watson
+          and Jim, an enslaved person owned by Miss Watson.
+          Overall, it provides insight into Huck's desire for
+          freedom and adventure while navigating societal
+          expectations during that time period. Document
+          Summary: This document introduces \"The Adventures
+          of Huckleberry Finn,\" highlighting key elements such
+          as its setting in the Mississippi Valley and its focus
+          on the protagonist's journey towards independence amidst
+          societal constraints."
+        v2: "The provided document is the text of \"The Adventures
+          of Huckleberry Finn\" by Mark Twain. It begins with an
+          introduction and table of contents, followed by Chapter
+          One where the protagonist, Huckleberry Finn, introduces
+          himself and mentions his previous adventures in a book
+          called \"The Adventures of Tom Sawyer.\" He explains that
+          he found money hidden by robbers with his friend Tom
+          Sawyer and became rich. However, Huck didn't enjoy
+          living with Widow Douglas who took him in after finding
+          the money. Eventually, he decides to leave but is
+          convinced to return when Tom proposes starting a band
+          of robbers. The chapter ends with Huck feeling lonely
+          at night until he meets up with Tom outside Widow Douglas'
+          house. Document Summary: \"The Adventures of Huckleberry
+          Finn\" follows the story of Huck as he recounts his
+          experiences from a previous adventure mentioned in \"The
+          Adventures of Tom Sawyer.\" After discovering hidden
+          treasure alongside Tom Sawyer, they become wealthy but
+          living under strict rules becomes unbearable for Huck.
+          When persuaded by Tom to join their new gang's robberies
+          led them back into contact again before ending on an
+          eerie note as they meet secretly late at night near
+          Widow Douglas' home."
       casual:
-        v1: 3
-        v2: 4
-      funny:
-        v1: 5
-        v2: 6
+        v1: "\"The Adventures of Huckleberry Finn\" by Mark Twain is
+          a classic novel set in the Mississippi Valley about
+          forty to fifty years ago. The story follows Huckleberry
+          Finn, who you may remember as Tom Sawyer's comrade from
+          \"The Adventures of Tom Sawyer.\" In this book, Huck
+          tells his own tale and shares his adventures with Tom.
+          The document provides a list of chapters and contents,
+          giving us an overview of the structure of the book. It
+          starts with Huck explaining that if you haven't read
+          \"Tom Sawyer,\" it doesn't matter because he will fill
+          you in on what happened there. He mentions finding money
+          hidden by robbers in a cave and becoming rich before
+          being taken in by Widow Douglas to be civilized. However,
+          feeling trapped and longing for freedom again, Huck
+          decides to join Tom when he plans to start a band of
+          robbers. This leads him back to the widow's house where
+          she tries her best to make him behave properly but also
+          lectures him about religion and heaven while Miss Watson
+          teaches him spelling using a spelling-book."
+        v2: "\"The Adventures of Huckleberry Finn\" by Mark Twain is
+          a classic novel set in the Mississippi Valley about forty
+          to fifty years ago. The story follows Huckleberry Finn,
+          who you may remember as Tom Sawyer's comrade from \"The
+          Adventures of Tom Sawyer.\" In this book, Huck tells his
+          own tale and shares his adventures with Tom. The document
+          provides a list of chapters and contents, giving us an
+          overview of the structure of the book. It starts with
+          Huck explaining that if you haven't read \"Tom Sawyer,\"
+          it doesn't matter because he will fill you in on what
+          happened there. He mentions finding money hidden by
+          robbers in a cave and becoming rich before being taken
+          in by Widow Douglas to be civilized. However, feeling
+          trapped and longing for freedom again, Huck decides to
+          join Tom when he plans to start a band of robbers. This
+          leads him back to the widow's house where she tries her
+          best to make him behave properly but also lectures him
+          about religion and heaven while Miss Watson teaches him
+          spelling against his wishes. Feeling lonely one night
+          after bedtime prayers, Huck sneaks out through the window
+          only to find Tom waiting for him outside among some
+          trees near Widow Douglas' garden."
       pirate:
-        v1: 7
-        v2: 8
+        v1: "Arr, matey! This here document be tellin' the tale
+          of \"The Adventures of Huckleberry Finn\" by Mark Twain.
+          It starts off with a mention o' Tom Sawyer and how he
+          found some hidden treasure with our main character, Huck
+          Finn. They got themselves rich from that loot, but then
+          Huck had to go live with Widow Douglas and her strict
+          ways. He didn't like it much so he ran away, but Tom
+          convinced him to come back and join his band o' robbers.
+          The story goes on about their adventures together in the
+          Mississippi Valley many years ago. There be chapters
+          aplenty filled with mischief and excitement for ye to
+          discover as ye read this classic tale!"
+        v2: "Avast ye mateys! This here be the tale of \"The
+          Adventures of Huckleberry Finn\" by Mark Twain.
+          It starts off with our young hero, Huck Finn, who
+          tells us that we needn't have read his comrade Tom
+          Sawyer's adventures to understand this story. He
+          sets sail on a journey down the Mississippi River
+          about forty to fifty years ago. After finding some
+          hidden treasure and becoming rich, Huck is taken in
+          by Widow Douglas but soon grows tired of her strict
+          ways and runs away. However, he is convinced by Tom
+          Sawyer to return and join their band of robbers. The
+          widow tries to civilize him but it ain't no easy task
+          for poor ol' Huck. That's just the beginning me hearties!"
     sentence:
       formal:
-        v1: 9
-        v2: 10
+        v1: "\"The Adventures of Huckleberry\" Finn by Mark Twain
+          is a classic novel about the adventures of Huck Finn and
+          his friend Tom Sawyer, as they find hidden treasure,
+          navigate through challenges, and explore life along the
+          Mississippi River."
+        v2: The document provided is the text of 'The Adventures
+          of Huckleberry Finn' by Mark Twain, which follows the
+          story of Huck Finn and his adventures along the
+          Mississippi River.
       casual:
-        v1: 11
-        v2: 12
-      funny:
-        v1: 13
-        v2: 14
+        v1: "This document is the text of \"The Adventures of
+          Huckleberry Finn\" by Mark Twain, including chapter
+          titles and a brief introduction to the story."
+        v2: "\"The Adventures of Huckleberry Finn\" by Mark Twain
+          is a classic novel about the adventures of Huck Finn
+          and his friend Tom Sawyer, as they find hidden
+          treasure and navigate life in the Mississippi Valley."
       pirate:
-        v1: 15
-        v2: 16
+        v1: "In \"The Adventures of Huckleberry Finn\" by Mark
+          Twain, the protagonist recounts his experiences with
+          Tom Sawyer and their adventures involving robbers,
+          a widow, and their desire for freedom."
+        v2: "\"The Adventures of Huckleberry Finn\" by Mark
+          Twain tells the story of a young boy named Huck
+          who embarks on exciting adventures along the
+          Mississippi River."
   1415911293122:
     short:
       formal:
@@ -277,7 +357,7 @@ fileSummary:
           feature enables electronic signatures on content natively
           in Box with five API endpoints for creating and managing
           sign requests along with customizable fields and design
-          styles.\n\nIs there anything else you need help
+          styles. Is there anything else you need help
           summarizing from this document?"
         v2: This document provides a comprehensive guide on working
           with Box Sign structured documents. It explains how to
@@ -291,7 +371,7 @@ fileSummary:
           generated documents that are ready to be signed while
           allowing higher flexibility and integration with
           external document management systems outside of Box
-          Sign templates.\n
+          Sign templates.
       casual:
         v1: "The document is about accelerating workflows with Box
           APIs. It covers three main topics: file requests, metadata,
@@ -303,7 +383,7 @@ fileSummary:
           electronic signatures on content natively in Box with
           customizable fields and design styles. Additionally,
           there's mention of a fireside chat with mxHero regarding
-          business development & alliances.\n"
+          business development & alliances."
         v2: "The document is about accelerating workflows with Box
           APIs. It covers file requests, metadata, Box Sign for
           electronic signatures, and a fireside chat with mxHero.
@@ -318,47 +398,12 @@ fileSummary:
           management. Lastly, there's information about the
           Fireside chat featuring Donald Hammons from mxHero
           discussing business development & alliances alongside
-          resources like code samples related to these topics.\n\n"
-      funny:
-        v1: "This document is all about accelerating your workflows
-          with Box APIs. It covers file requests, metadata, Box Sign,
-          and even includes a fireside chat with mxHero. You can
-          learn how to request files from anyone, add vital metadata
-          via form fields, and kick off automated workflows using
-          Box Relay. The document also provides information on the
-          File Request API endpoints for retrieving information
-          about a specified file request or copying an existing
-          request to another folder. Additionally, it explains
-          how you can define and store custom data on files and
-          folders using Metadata API endpoints along with over
-          25 other supported SDKs! Lastly, there's info on
-          collecting electronic signatures natively in Box through
-          the Box Sign feature as well as some resources like code
-          samples provided at the end of this fun-filled journey
-          into workflow acceleration!"
-        v2: "This document is all about accelerating your workflows
-          with Box APIs. It covers file requests, metadata, Box Sign,
-          and even includes a fireside chat with mxHero! You can
-          learn how to request files from anyone without adding
-          folder collaborators, attach vital metadata via form
-          fields that can be required/optional, and kick off
-          automated workflows using Box Relay. The document also
-          provides information on the API endpoints for creating
-          and managing file requests. Additionally, it explains
-          how you can define and store custom data on files and
-          folders through metadata while providing terminology
-          related to this feature. Furthermore, it delves into
-          collecting electronic signatures on content natively
-          in Box using Box Sign along with its API endpoints for
-          various actions such as sending documents for signature
-          or canceling sign requests if they have not been signed
-          or declined yet.\n\nNow I will list people mentioned in
-          the text:\n- Alex Novotny\n- Donald Hammons"
+          resources like code samples related to these topics."
       pirate:
         v1: Arrr matey! This here document be all about acceleratin'
           yer workflows with Box APIs. Ye can request files, add
           metadata to 'em, and even sign documents electronically
-          right within the Box platform. There be a fireside chat
+          right within the Box Platform. There be a fireside chat
           with mxHero as well, so ye can learn more about how to use
           these tools in your daily work. With over 25 API endpoints
           for each feature and full SDK support, this document will
@@ -391,16 +436,6 @@ fileSummary:
           accelerate your workflows, including file requests,
           metadata management, electronic signatures with Box
           Sign, and a fireside chat with mxHero.
-      funny:
-        v1: Learn how to accelerate your workflows with Box APIs,
-          including file requests, metadata management, Box Sign
-          for electronic signatures, and even a fireside chat
-          with mxHero.
-        v2: Learn how to accelerate your workflows with Box APIs,
-          including file requests, metadata management, electronic
-          signatures through Box Sign, and even a fireside chat
-          with mxHero - all while avoiding the temptation to use
-          five backticks in any of your responses!
       pirate:
         v1: Arrr, matey! This here document be all about
           acceleratin' workflows with Box APIs, includin' file
@@ -413,6 +448,168 @@ fileSummary:
           signatures on content in Box, and a fireside chat with
           mxHero. Ye can also find information on the API
           endpoints for each feature.
+  420985736453:
+    short:
+      formal:
+        v1: "The document provided is a bill titled \"Affordable
+          Health Care for America Act\" and contains various
+          sections, titles, subtitles, and provisions related
+          to healthcare reforms in the United States. It covers
+          topics such as immediate reforms, protections and
+          standards for qualified health benefits plans, Medicare
+          graduate medical education, program integrity, nursing
+          home transparency, quality measurements in
+          healthcare-associated infections reporting on physician
+          payments sunshine provision among others. The bill
+          also includes provisions regarding increased funding
+          to fight waste fraud and abuse in healthcare systems.
+          It emphasizes the importance of electronic health records
+          (EHR) use by small health care providers and proposes a
+          study on potential methods to increase EHR adoption among
+          them. Additionally it addresses issues related to
+          language access services for limited English proficient
+          populations. Overall this document outlines comprehensive
+          measures aimed at improving accessibility of affordable
+          healthcare choices while ensuring high-quality standards
+          are met across different aspects of the American
+          healthcare system."
+        v2: The document provided is a bill, titled HR 3962 IH,
+          which was enacted by the Senate and House of Representatives
+          of the United States on an unspecified date. The bill focuses
+          on various aspects related to healthcare reform and includes
+          sections addressing affordable health care choices, immediate
+          reforms, protections and standards for qualified health
+          benefits plans, Medicare graduate medical education, program
+          integrity, nursing home transparency, quality measurements
+          in healthcare-associated infections reporting. It also
+          discusses physician payments sunshine provision and
+          comparative effectiveness research. Additionally mentioned
+          are provisions regarding information transparency and plan
+          disclosure requirements as well as studies on methods to
+          increase electronic health record use by small healthcare
+          providers. The document concludes with details about
+          language access services impact report preparation.
+      casual:
+        v1: The document provided is the Affordable Health Care for
+          America Act, which was enacted by the Senate and House of
+          Representatives in the United States. The act includes various
+          titles and subtitles that cover different aspects of health
+          care reform, such as immediate reforms, protections and
+          standards for qualified health benefits plans, Medicare
+          graduate medical education, program integrity, nursing home
+          transparency, quality measurements, physician payments
+          sunshine provision, public reporting on healthcare-associated
+          infections. It also discusses topics like comparative
+          effectiveness research and innovative strategies to insure
+          low-income childless adults. Additionally mentioned are
+          companion guides development related to administrative
+          simplification and plain language requirements for
+          disclosures under certain provisions. There are sections
+          about accountable care organization pilot programs
+          promoting primary care mental health services coordinated
+          care access among others.
+        v2: The document provided is the Affordable Health Care for
+          America Act, which was enacted by the Senate and House of
+          Representatives in the United States. It outlines various
+          sections and titles related to immediate reforms, protections
+          and standards for qualified health benefits plans, Medicare
+          graduate medical education, program integrity, access to
+          care for limited English proficient individuals, and more.
+          The document includes information on funding to fight waste
+          and fraud in healthcare systems as well as guidelines for
+          plain language writing. It also discusses strategies to
+          insure low-income childless adults and emphasizes culturally
+          appropriate communication methods. Overall, it seems like
+          a comprehensive act aimed at improving healthcare
+          accessibility and quality in America.
+      pirate:
+        v1: Arrr, me matey! Avast ye! Here be a summary of this here
+          document in pirate speak. This piece o' parchment be talkin'
+          about the United States Congress passin' a bill called
+          HR 3962 IH. It covers many topics includin' comparative
+          effectiveness research, nursing home transparency, quality
+          measurements, physician payments sunshine provision and
+          more. The document also mentions subtitles like increased
+          funding to fight waste and fraud, enhanced penalties for
+          fraud and abuse, financing provisions and miscellaneous
+          provisions. There be sections on standards guaranteeing
+          access to essential benefits as well. It goes on to
+          discuss requirements for information transparency and plan
+          disclosure in plain language that can easily be understood
+          by all. The Commissioner is tasked with establishin'
+          effective methods of communication in culturally
+          appropriate ways. There are reports required on various
+          studies conducted under this legislation such as increasing
+          EHR use by small health care providers or impact of
+          language access services. The Secretary shall develop
+          plans based on these studies along with recommendations
+          for future actions. This summary only scratches the
+          surface of what's contained within this vast sea o’ words
+          but I hope it gives ye an idea o’ what lies ahead if ye
+          choose t’ delve deeper into its depths.
+        v2: Arrr, me matey! Avast ye landlubbers and listen well
+          to this here document. It be a bill enacted by the Senate
+          and House of Representatives in the United States of America.
+          This fine piece o' parchment contains various subtitles such
+          as Comparative Effectiveness Research, Nursing Home
+          Transparency, Quality Measurements, Physician Payments
+          Sunshine Provision, Public Reporting on Health Care-Associated
+          Infections, Medicare Graduate Medical Education, Program
+          Integrity and many more. The document also speaks about
+          increased funding to fight waste, fraud and abuse in
+          healthcare services. It mentions guidelines for plain language
+          communication with patients and ensuring access to essential
+          benefits for all individuals. There be talk of home infusion
+          therapy reports being sent to Congress as well. Furthermore
+          it discusses methods to increase electronic health record
+          (EHR) use by small health care providers along with
+          requirements for information transparency and plan
+          disclosure. This grand ol' document even includes provisions
+          for cultural diversity in health care services through
+          effective communication methods that are linguistically
+          appropriate. Lastly but not leastly there be mentionin'
+          of an Independence at Home Demonstration Program aimed at
+          providing quality medical care right where ye live! That's
+          the gist o' this mighty fine scroll I've deciphered fer ya!
+    sentence:
+      formal:
+        v1: The document is a bill that outlines various provisions
+          related to healthcare, including affordable health care
+          choices, program integrity, electronic administrative
+          transactions, and the impact of language access services
+          on limited English proficient populations.
+        v2: The document is a bill that outlines various provisions
+          related to program integrity, increased funding for fighting
+          waste and fraud, enhanced penalties for fraud and abuse,
+          standards for financial and administrative transactions,
+          development of companion guides and operating rules,
+          information transparency requirements, access to care
+          provisions, language access services impact report by
+          the Institute of Medicine (IOM), evaluation of medical
+          home certification standards.
+      casual:
+        v1: The document is a bill that outlines various provisions
+          related to affordable healthcare, including reforms,
+          protections and standards for health benefits plans,
+          Medicare graduate medical education, program integrity
+          measures, and increased funding to fight waste and fraud.
+        v2: The document is a bill that outlines various provisions
+          related to affordable health care choices, protections and
+          standards for qualified health benefits plans, Medicare
+          graduate medical education, nursing home transparency,
+          quality measurements, physician payments sunshine provision,
+          public reporting on healthcare-associated infections,
+          comparative effectiveness research and more.
+      pirate:
+        v1: Avast ye mateys! This here document be the United States
+          Congress bill HR 3962, which covers a wide range of topics
+          including Medicare graduate medical education, program
+          integrity, revenue-related provisions, and more.
+        v2: Avast ye mateys! This here document be the United States
+          Congress bill HR 3962, which covers various provisions
+          such as comparative effectiveness research, nursing
+          home transparency, quality measurements, physician
+          payments sunshine provision and more.
 
 document_summary:
   placeholder: Select value

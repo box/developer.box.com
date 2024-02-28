@@ -30,7 +30,7 @@ centered: false
   <TileGrid rows="3">
     <Tile type="summarisation" title="Get a summary"
         href="/ai-dev-zone-summary">
-        Get instant summary of any document
+        Generate instant summary of any document
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
@@ -57,7 +57,7 @@ centered: false
     Follow along with our featured guides to help get you up and running
   </p>
 
-  <TileGrid rows="3">
+  <TileGrid rows="4">
     <Tile type="pen" title="Text generation"
       href="/ai-dev-zone">
         AI API ask about document's content endpoint
@@ -65,6 +65,10 @@ centered: false
     <Tile type="speach-bubble" title="Q&A"
       href="/ai-dev-zone">
         AI API document Q&A endpoint
+    </Tile>
+    <Tile type="document" title="Metadata extraction"
+      href="/ai-dev-zone">
+        Metadata AI API for extrating metadata from a document
     </Tile>
     <Tile type="document" title="Metadata extraction"
       href="/ai-dev-zone">
