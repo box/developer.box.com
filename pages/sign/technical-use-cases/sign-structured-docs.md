@@ -195,7 +195,7 @@ Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
 
 </Tabs>
 
-`signer`のメールの受信トレイに移動し、Box Signからのメールを開き、\[`Review and Sign`] ボタンをクリックすると、署名プロパティが所定の位置に配置されているドキュメントが表示されます。
+If you go to the **signer** email inbox, open the email from Box Sign, click the **Review Document** button, you'll see the document with the signature properties in place:
 
 ![プロパティが所定の位置に配置されているドキュメント](images/sign-structured-signing-document.png)
 

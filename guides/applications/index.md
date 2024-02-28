@@ -34,7 +34,7 @@ Box開発者コンソールでは、後でBoxとの統合に使用できるア�
 1. [新しいアプリ][select]を作成する。
 2. `i`アイコンを使用してアプリケーションの説明を表示する。
 3. `copy`アイコンを使用してクライアントIDをコピーする。
-4. アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。
+4. Check application [enablement][enablement] and [authorization][authorization] status. Apps published to App Center display status from App Center.
 5. 各エントリに用意されているメニューを使用して、アプリケーションの構成の詳細にアクセスしたり、[開発者トークン][token]を生成したりする。
 
 ## アプリインサイト
