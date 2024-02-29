@@ -2,6 +2,7 @@
 rank: 190
 related_endpoints:
   - get_files_id_thumbnail_id
+  - get_files_id
 related_guides: []
 required_guides: []
 alias_paths: []

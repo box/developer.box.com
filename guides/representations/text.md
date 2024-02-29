@@ -1,6 +1,7 @@
 ---
 rank: 6
-related_endpoints: []
+related_endpoints:
+  - get_files_id
 related_guides:
   - representations/supported-file-types
 required_guides:

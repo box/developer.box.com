@@ -1,6 +1,7 @@
 ---
 rank: 10
-related_endpoints: []
+related_endpoints:
+  - get_files_id
 related_guides:
   - representations/pdf
   - representations/thumbnail-representation

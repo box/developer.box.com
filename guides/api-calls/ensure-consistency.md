@@ -11,6 +11,7 @@ related_endpoints:
   - get_folders_id
   - get_web_links_id
   - get_shared_items
+  - get_files_id
 related_guides: []
 required_guides: []
 alias_paths: []

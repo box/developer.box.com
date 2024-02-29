@@ -1,6 +1,7 @@
 ---
 rank: 1
-related_endpoints: []
+related_endpoints:
+  - get_files_id
 related_guides:
   - downloads/file
 required_guides: []

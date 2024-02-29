@@ -1,6 +1,7 @@
 ---
 rank: 5
-related_endpoints: []
+related_endpoints:
+  - get_files_id
 related_guides:
   - embed/box-view/setup
   - embed/box-view/upload-file
