@@ -2,12 +2,9 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - authentication/oauth2
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -57,7 +54,7 @@ Console][devconsole].
 Additionally, the authenticated user needs to be a user with admin permissions,
 meaning either an admin, co-admin, or service account. Co-admin users will also
 need the 'Manage Users' permission scope. See our guide on [User
-Types](g://getting-started/user-types) for more details.
+Types](page://platform/user-types) for more details.
 
 ## as-user using SDKs
 

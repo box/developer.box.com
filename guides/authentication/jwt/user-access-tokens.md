@@ -3,12 +3,10 @@ rank: 4
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
   - authentication/oauth2/without-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -43,7 +41,7 @@ This setting can be found in the **Configuration** tab of the
 
 Additionally, the authenticated user needs to be a user with Admin permissions,
 meaning either an Admin, Co-Admin, or Service Account. See our guide on
-[User Types](g://getting-started/user-types) for more details.
+[User Types](page://platform/user-types) for more details.
 
 ## User Access Tokens with SDKs
 
@@ -230,4 +228,4 @@ Learn more about manually using JWT authentication
 </CTA>
 
 [devconsole]: https://app.box.com/developers/console
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account

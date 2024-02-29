@@ -104,12 +104,12 @@ scenarios.
 [setting]: https://support.box.com/hc/en-us/articles/360044196653-Managing-custom-apps
 <!-- i18n-disable localize-links -->
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [ag]: g://applications/app-center
 [standauth]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
 [cc]: g://authentication/client-credentials
 [apptoken]: g://authentication/app-token
-[skill]: g://applications/custom-skills
+[skill]: g://applications/app-types/custom-skills
 [oauth]: g://authentication/oauth2

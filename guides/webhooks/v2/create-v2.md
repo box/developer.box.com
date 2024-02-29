@@ -125,5 +125,5 @@ You can find a list of available triggers [in this guide][4].
 [2]: g://authorization
 [3]: e://post_webhooks
 [4]: g://webhooks/triggers
-[sa]: g://getting-started/user-types/service-account
+[sa]:page://platform/user-types/#service-account
 [console]: https://app.box.com/developers/console

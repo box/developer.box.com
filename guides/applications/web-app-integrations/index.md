@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 20
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -15,8 +15,8 @@ type: guide
 total_steps: 3
 sibling_id: applications
 parent_id: applications
-next_page_id: applications/web-app-integrations/user-experience
-previous_page_id: ''
+next_page_id: ''
+previous_page_id: applications/web-app-integrations/configure
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/index.md
 ---
@@ -35,7 +35,7 @@ through [Recommended Apps][recommended-apps], which show up in Box Preview.
 
 <ImageFrame border shadow width='600' center>
 
-![Integration example](../images/recommended-apps-preview.png)
+![Integration example](./images/recommended-apps-preview.png)
 
 </ImageFrame>
 

@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -61,11 +61,11 @@ Use the drop-down list to select the app's purpose.
 Depending on the option chosen, you might
 need to specify further details.
 
-| Purpose | Details|
-|------| --------|
-|Automation, Custom Portal| Specify if the app is built by a customer or partner. |
-|Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
-|Other| Specify the app purpose and if it is built by a customer or partner. |
+| Purpose                   | Details                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Automation, Custom Portal | Specify if the app is built by a customer or partner.                                                |
+| Integration               | Specify the integration category, external system name if the app is built by a customer or partner. |
+| Other                     | Specify the app purpose and if it is built by a customer or partner.                                 |
 
 <ImageFrame border center width="300">
 
@@ -130,7 +130,7 @@ access. By default, an application can only successfully interact with the
 content of its [Service Account][sa] and any [App Users][user-types]. To also
 access existing Managed Users of an enterprise, navigate to the
 **Application Access** settings accessible via the **Configuration** tab of the
-[Developer console][devconsole] and set to **App + Enterprise Access**. 
+[Developer console][devconsole] and set to **App + Enterprise Access**.
 
 <ImageFrame border>
 
@@ -187,11 +187,10 @@ To learn more about Client Credentials Grant for each SDK head over to:
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#client-credentials-grant
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#client-credentials-grant-authentication
 [IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#client-credentials-grant
-
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[user-types]: g://getting-started/user-types
-[sa]: g://getting-started/user-types/service-account
+[user-types]: page://platform/user-types
+[sa]: page://platform/user-types/#service-account
 [app-auth]: g://authorization

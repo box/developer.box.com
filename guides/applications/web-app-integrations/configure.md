@@ -17,7 +17,7 @@ type: guide
 total_steps: 3
 sibling_id: applications/web-app-integrations
 parent_id: applications/web-app-integrations
-next_page_id: ''
+next_page_id: applications/web-app-integrations
 previous_page_id: applications/web-app-integrations/user-experience
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/web-app-integrations/configure.md
@@ -48,7 +48,7 @@ Then, navigate to the **Integrations** tab and click
 
 <ImageFrame center shadow border>
 
-![Integration Tab](../images/create_integration.png)
+![Integration Tab](./images/create_integration.png)
 
 </ImageFrame>
 
@@ -190,10 +190,10 @@ note that the URL must be publicly accessible on the internet.
 To make a Box integration publicly available it needs to be listed in the App
 Center. Follow the [App Center][app-center] guide for more details.
 
-[ca]: g://applications/custom-apps
+[ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
-[uid]: g://getting-started/locating-values/#user-ids
-[fid]: g://getting-started/locating-values/#content-ids
+[uid]:page://platform/appendix/locating-values/#user-ids
+[fid]:page://platform/appendix/locating-values/#content-ids
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console
