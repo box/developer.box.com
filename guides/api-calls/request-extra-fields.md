@@ -1,7 +1,6 @@
 ---
 rank: 3
 related_endpoints:
-  - get_files_id
   - get_folders_id
   - get_folders_id_items
   - get_users_id

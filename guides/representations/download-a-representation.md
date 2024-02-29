@@ -1,7 +1,6 @@
 ---
 rank: 3
-related_endpoints:
-  - get_files_id
+related_endpoints: []
 related_guides:
   - representations/thumbnail-representation
   - representations/supported-file-types

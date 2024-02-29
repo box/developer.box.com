@@ -1,7 +1,6 @@
 ---
 rank: 4
-related_endpoints:
-  - get_files_id
+related_endpoints: []
 related_guides:
   - representations/pdf
   - representations/supported-file-types

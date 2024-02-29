@@ -1,7 +1,6 @@
 ---
 rank: 2
-related_endpoints:
-  - get_files_id
+related_endpoints: []
 related_guides:
   - representations/download-a-representation
   - representations/supported-file-types
