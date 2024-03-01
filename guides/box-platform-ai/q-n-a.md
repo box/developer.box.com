@@ -12,7 +12,7 @@ id: box-platform-ai/q-n-a
 type: guide
 total_steps: 6
 sibling_id: box-platform-ai
-parent_id: ''
+parent_id: box-platform-ai
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
