@@ -1,13 +1,13 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/errors
 rank: 4
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries
@@ -78,19 +78,6 @@ The name of each argument can configured to your liking and does not need to
 match the field key. The only requirement is that it starts with a `:`.
 
 </Message>
-
-## Missing search index
-
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or
-folders. A search index can be created to resolve this error for a specific
-search query.
-
-<CTA to='g://metadata/queries/indexes'>
-
-Learn more about creating and using indices
-
-</CTA>
 
 ## Missing `ancestor_folder_id`
 
