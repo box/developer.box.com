@@ -42,7 +42,7 @@ account does not have access to files besides their own.
 If this user does not have access to the file the application will receive a
 `404 Not Found` error.
 
-<CTA to="page://platform/user-types">
+<CTA to="g://getting-started/user-types">
 
 Learn more about different User Types
 

@@ -2,8 +2,8 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - applications/app-types/select
-  - ../pages/platform/user-types
+  - applications/select
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/select
@@ -43,7 +43,7 @@ to act on behalf of any user in an enterprise.
 There are two ways you can verify an application's permissions:
 
 - using a public and private key pair
-- using a client id and client secret
+- using a client id and client secret 
   ([Client Credentials Grant][cca])
 
 To learn more about these options visit our guide on using
@@ -65,7 +65,7 @@ that:
 - Want to store data within the application's Box account and not within the the
   user's Box account
 
-[app-type]: g://applications/app-types/select
-[sa]: page://platform/user-types/#service-account
+[app-type]: g://applications/select
+[sa]: g://getting-started/user-types/service-account
 [jwtnosdk]: g://authentication/jwt/without-sdk
 [cca]: g://authentication/client-credentials

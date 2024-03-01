@@ -23,20 +23,18 @@ source_url: >-
 ---
 # SDKs
 
-Box offers a set of SDKs
-you can use to build your application.
-The next generation
-Python and Typescript SDKs are the
-newest addition to the set.
-They are still a beta feature, but you can
-give them a try to explore all the
-features they bring along.
+To make working with the Box API easier we provide the following SDKs and CLI.
+
+| Platform                          | Maintained? | Parity? |
+| --------------------------------- | ----------- | ------- |
+| [Java SDK][javasdk]               | Yes         | Full    |
+| [.NET SDK][dotnetsdk]             | Yes         | Full    |
+| [Python SDK][pythonsdk]           | Yes         | Full    |
+| [Node SDK][nodesdk]               | Yes         | Full    |
+| [iOS Content SDK][iossdk]         | Yes         | Full    |
+| [Android Content SDK][androidsdk] | Yes         | Partial |
 
 <Message type='notice'>
-
-The tables below list SDKs along with additional information
-telling you if the project is maintained and has API
-parity.
 
 **Maintained:** Fully maintained projects are actively developed by Box. They
 receive the latest security updates and new features. For support with these
@@ -49,75 +47,6 @@ these projects to full parity.
 
 </Message>
 
-## Next generation SDKs
-
-The latest generation Box Python SDK and Box Typescript
-SDK are designed to elevate the developer
-experience and streamline your integration
-with the Box Content Cloud.
-
-<Message type='notice'>
-
-New Typescript and Python SDKs are in a Public Beta phase.
-
-</Message>
-
-Here's what you can expect from the new SDKs:
-
-* **Full API Support**: New Box SDKs empower developers
- with complete coverage of the Box API ecosystem.
- You can access all the latest features and
-functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development
-approach allows for adding Box APIs to
-SDKs at a much faster pace (in a matter of days).
-This means you can leverage the most up-to-date
-features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters
-are documented directly in the source code of the SDK
-so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced
-convenience methods cover various aspects such as
-authentication, chunk uploads, exponential back-offs,
-automatic retries, type checkers which
-help to ensure that you’re using variables correctly,
-and much more.
-
-| Platform                          | Maintained?  | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
-| [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
-
-## SDKs
-
-The table lists Box SDKs that you can use
-when building your applications.
-
-| Platform                          | Maintained? | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | No          | Partial |
-
-<Message type='warning'>
-
-As of May 31, 2023 Android SDK is no
-longer supported. You can still
-use your existing Android SDK applications
-with no impact, but you won't receive new features,
-updates, or bug fixes.
-
-If you would like to continue getting the
-latest and greatest Android features, use Java SDK to
-build apps on Android.
-Refer to [this][android-docs] documentation for more details.
-
-</Message>
-
 <!-- i18n-enable localize-links -->
 
 [javasdk]: https://github.com/box/box-java-sdk
@@ -126,9 +55,5 @@ Refer to [this][android-docs] documentation for more details.
 [nodesdk]: https://github.com/box/box-node-sdk
 [iossdk]: https://github.com/box/box-ios-sdk
 [androidsdk]: https://github.com/box/box-android-sdk
-[pythongensdk]: https://github.com/box/box-python-sdk-gen
-[tsgensdk]: https://github.com/box/box-typescript-sdk-gen
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
-[android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
 <!-- i18n-disable localize-links -->

@@ -130,7 +130,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | Include the file metadata before the file's contents. |
 | **Error**    | `password_reset_required` |
 | **Message**  | User needs to reset password  |
-| **Solution** | The user has not yet completed account [setup steps](https://support.box.com/hc/en-us/articles/360043691614). |
+| **Solution** | The user has not yet completed account [setup steps](https://support.box.com/hc/en-us/articles/360044194453-Adding-New-Users-to-Your-Box-Account). |
 | | |
 | **Error**    | `requested_page_out_of_range`  |
 | **Message**  | Requested representation page out of range  |
@@ -222,7 +222,7 @@ for solution to common errors encountered when working with the Box APIs.
 |  |        |
 | **Error**    | `user_email_confirmation_required`         |
 | **Message**  | User needs to complete email confirmation         |
-| **Solution** | The user has not yet completed [steps](https://support.box.com/hc/en-us/articles/360043691614) for email confirmation.     |
+| **Solution** | The user has not yet completed [steps](https://support.box.com/hc/en-us/articles/360044194453-Adding-New-Users-to-Your-Box-Account) for email confirmation.     |
 |  |        |
 | **Error**    | `cors_origin_not_whitelisted`         |
 | **Message**  | Access denied - Did you forget to safelist your origin in the CORS configuration of your app?     |

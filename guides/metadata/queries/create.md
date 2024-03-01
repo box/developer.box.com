@@ -1,13 +1,13 @@
 ---
-related_endpoints: []
-required_guides: []
+related_endpoints:
+  - post_metadata_queries_execute_read
 category_id: metadata
 subcategory_id: metadata/5-queries
 is_index: false
 id: metadata/queries/create
 rank: 1
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: metadata/queries
 parent_id: metadata/queries
 next_page_id: metadata/queries/syntax

@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/app-types/select
+  - applications/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -118,7 +118,7 @@ var BoxSDK = require("box-node-sdk");
 
 var sdk = new BoxSDK({
   clientID: "[CLIENT_ID]",
-  clientSecret: "[CLIENT_SECRET]",
+  clientSecret: "[CLIENT_SECRET]"
 });
 ```
 
@@ -186,7 +186,7 @@ auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
-  response_type: "code",
+  response_type: "code"
 });
 
 // res.redirect(authorize_url)
@@ -296,7 +296,7 @@ client = Client(auth)
 ```js
 var code = "...";
 
-sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function (err, tokenInfo) {
+sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function(err, tokenInfo) {
   var client = sdk.getPersistentClient(tokenInfo);
 });
 ```
@@ -327,10 +327,9 @@ To learn more about OAuth 2.0 authentication for each SDK head over to:
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#traditional-3-legged-oauth2
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#traditional-3-legged-oauth2
 [IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#traditional-3-legged-oauth2
-[tokens]: g://authentication/tokens/access-tokens
 
+[tokens]: g://authentication/tokens/access-tokens
 <!-- i18n-enable localize-links -->
 
 [1]: https://support.box.com/hc/en-us/articles/360043693554-Box-Verified-Enterprise-Supported-Apps
-
 <!-- i18n-disable localize-links -->

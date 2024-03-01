@@ -2,7 +2,7 @@
 type: quick-start
 hide_in_page_nav: true
 related_guides:
-  - applications/app-types/custom-apps
+  - applications/custom-apps
 category_id: tooling
 subcategory_id: tooling/postman
 is_index: false

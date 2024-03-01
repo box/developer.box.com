@@ -7,7 +7,7 @@ related_guides:
   - authorization/limited-access-approval
 required_guides:
   - authorization
-  - skills/handle/setup/
+  - applications/custom-skills/setup/
 alias_paths: []
 category_id: authorization
 subcategory_id: null

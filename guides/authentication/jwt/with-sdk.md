@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/app-types/select
+  - applications/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -76,8 +76,8 @@ the application's private key and other details. The following is an example.
 {
   "boxAppSettings": {
     "clientID": "abc...123",
-   "clientSecret": "def...234",
-   "appAuth": {
+    "clientSecret": "def...234",
+    "appAuth": {
       "publicKeyID": "abcd1234",
       "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
       "passphrase": "ghi...345"
@@ -129,7 +129,7 @@ config = JWTAuth.from_settings_file('path/to/config.json')
 <Tab title='Node'>
 
 ```js
-var config = require("path/to/config.json");
+var config = require('path/to/config.json');
 ```
 
 </Tab>
@@ -183,7 +183,7 @@ client = Client(config)
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
-var client = sdk.getAppAuthClient("enterprise");
+var client = sdk.getAppAuthClient('enterprise');
 ```
 
 </Tab>
@@ -196,8 +196,10 @@ var client = sdk.getAppAuthClient("enterprise");
 
 At this point the application is authenticated as an application user, not as
 a managed or app user. Head over to our guide on [User
-Types](page://platform/user-types) to learn more about the different types
+Types](g://getting-started/user-types) to learn more about the different types
 of users.
+
+</Message>
 
 ## Summary
 

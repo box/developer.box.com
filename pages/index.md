@@ -132,7 +132,7 @@ new applications and discover Box Platform capabilities.
 
 <TileGrid>
 
-<Tile type="users" title="1. Explore user types" href="platform/user-types/">
+<Tile type="users" title="1. Explore user types" href="/guides/getting-started/user-types/">
 
 Box Platform covers many use cases
 that may require different user types.
@@ -141,7 +141,7 @@ difference between the types.
 
 </Tile>
 
-<Tile type="apps" title="2. Understand application types" href="/guides/applications/app-types/select/">
+<Tile type="apps" title="2. Understand application types" href="/guides/applications/select/">
 
 When creating applications, you can choose from several types.
 Read this guide to see which one fits your needs best.
@@ -164,7 +164,7 @@ five minutes to start developing!
 
 </Tile>
 
-<Tile type="architecture" title="5. Create an architecture pattern" href="/platform/appendix/architecture-patterns/">
+<Tile type="architecture" title="5. Create an architecture pattern" href="/guides/getting-started/architecture-patterns/">
 
 We always recommend putting pen to paper and drawing out your solution.
 Have a look at the most common architecture patterns to get inspired!
@@ -450,17 +450,18 @@ Browse all guides
 
 <Header to='https://medium.com/box-developer-blog' centered>
 
-Additional resources
+Developer News
 
 </Header>
 
-<!-- <BlogCards >
+<BlogCards >
 
 </BlogCards>
 
- -->
-<Teaser >
+<More to='https://medium.com/box-developer-blog' centered>
 
-</Teaser>
+Visit Box Developer Blog
+
+</More>
 
 </Centered>

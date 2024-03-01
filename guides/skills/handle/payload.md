@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides: []
 related_pages: []
 required_guides:
-  - applications/app-types/custom-skills
+  - applications/custom-skills
 related_resources:
   - skill_invocation
 alias_paths: []
@@ -13,7 +13,7 @@ subcategory_id: skills/handle
 is_index: false
 id: skills/handle/payload
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: skills/handle
 parent_id: skills/handle
 next_page_id: skills/handle/metadata

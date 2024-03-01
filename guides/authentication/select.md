@@ -24,7 +24,7 @@ source_url: >-
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
-<CTA to="guide://applications/app-types/select">
+<CTA to="guide://applications/select">
 
 Learn how to select the application type for your app
 
@@ -194,6 +194,6 @@ authentication the token defaults to the application's Service Account.
 
 </Message>
 
-[custom-app]: g://applications/app-types/custom-apps
-[custom-skill]: g://applications/app-types/custom-skills
-[la-app]: g://applications/app-types/limited-access-apps
+[custom-app]: g://applications/custom-apps
+[custom-skill]: g://applications/custom-skills
+[la-app]: g://applications/limited-access-apps

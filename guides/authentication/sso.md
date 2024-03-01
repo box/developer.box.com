@@ -5,8 +5,8 @@ related_guides:
   - authentication/oauth2
   - authentication/jwt
   - authentication/app-token
-  - applications/app-types/custom-apps
-  - applications/app-types/custom-skills
+  - applications/custom-apps
+  - applications/custom-skills
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -97,13 +97,13 @@ would require them to use SSO where needed.
 
 </Message>
 
-[mu]: page://platform/user-types/#managed-users
+[mu]: g://getting-started/user-types/managed-users
 [admin-approval]: g://authorization/custom-app-approval
 [jwt]: g://authentication/jwt
 [oauth2]: g://authentication/oauth2
 [ccg]: g:///authentication/client-credentials
 [la-app]: guide://applications/web-app-integrations
 [app_token]: g://authentication/app-token
-[custom_app]: g://applications/app-types/custom-apps
-[custom_skills]: g://applications/app-types/custom-skills
+[custom_app]: g://applications/custom-apps
+[custom_skills]: g://applications/custom-skills
 [jwt]: g://authentication/jwt/jwt-setup

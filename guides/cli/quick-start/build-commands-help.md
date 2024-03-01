@@ -134,5 +134,5 @@ I created my first folder
 
 [github]: https://github.com/box/boxcli#command-topics-1
 [custom]: https://github.com/box/boxcli/blob/master/docs/request.md
-[sa]: page://platform/user-types/#service-account
+[sa]: g://getting-started/user-types/service-account
 [four]: g://cli/quick-start/options-and-bulk-commands/#options

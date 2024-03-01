@@ -1,8 +1,8 @@
 ---
 rank: 5
 related_endpoints:
-  - put_files_id_watermark
   - get_files_id
+  - put_files_id_watermark
 related_guides:
   - representations/text
   - representations/supported-file-types

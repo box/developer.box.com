@@ -26,9 +26,7 @@ files, which may then be used to automated tasks and future processes.
 
 The end-to-end process of a Skills application is as follows.
 
-<!-- markdownlint-disable line-length -->
-
-1. [Setup up an app](guide://skills/handle/setup) - Create a
+1. [Setup up an app](guide://applications/custom-skills/setup) - Create a
    **Custom Skills**  Box application that listens for files being uploaded
    within the entire enterprise or one or more folders.   
 2. [Configure the `invocation_url`](guide://skills/invocation-url) - After
@@ -59,8 +57,6 @@ complexities of the above steps. The Skills Kit is currently only available in
 Node.
 
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 [1]: guide://webhooks/v2/signatures-v2
 [2]: https://github.com/box-community/Box-Custom-Skills-Starter

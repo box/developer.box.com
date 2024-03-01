@@ -9,11 +9,11 @@ related_guides:
   - authorization/custom-app-approval
 required_guides:
   - authentication/select
-  - applications/app-types/custom-apps
+  - applications/custom-apps
 related_resources: []
 alias_paths:
-  - /guides/applications/app-types/limited-access-apps
-  - /guides/applications/app-types/custom-apps/app-token-setup
+  - /guides/applications/limited-access-apps
+  - /guides/applications/custom-apps/app-token-setup
 category_id: authentication
 subcategory_id: authentication/app-token
 is_index: false

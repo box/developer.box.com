@@ -9,7 +9,7 @@ subcategory_id: skills/handle
 is_index: true
 id: skills/handle
 type: guide
-total_steps: 3
+total_steps: 2
 sibling_id: skills
 parent_id: skills
 next_page_id: skills/handle/payload

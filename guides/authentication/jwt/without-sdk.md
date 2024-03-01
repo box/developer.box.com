@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/app-types/select
+  - applications/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -54,7 +54,7 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the
+- A Custom Application using JWT authentication within the 
   [Developer Console][devconsole]
 - A private key configuration file named `config.json`, which can be downloaded
   from the configuration tab of the [Developer Console][devconsole]
@@ -346,7 +346,7 @@ key = load_pem_private_key(
 ```js
 let key = {
   key: config.boxAppSettings.appAuth.privateKey,
-  passphrase: config.boxAppSettings.appAuth.passphrase,
+  passphrase: config.boxAppSettings.appAuth.passphrase
 };
 ```
 
@@ -473,7 +473,7 @@ let claims = {
   box_sub_type: "enterprise",
   aud: authenticationUrl,
   jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45,
+  exp: Math.floor(Date.now() / 1000) + 45
 };
 ```
 
@@ -607,16 +607,16 @@ assertion = jwt.encode(
 <Tab title='Node'>
 
 ```js
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken')
 
-let keyId = config.boxAppSettings.appAuth.publicKeyID;
+let keyId = config.boxAppSettings.appAuth.publicKeyID
 
 let headers = {
-  algorithm: "RS512",
-  keyid: keyId,
-};
+  'algorithm': 'RS512',
+  'keyid': keyId,
+}
 
-let assertion = jwt.sign(claims, key, headers);
+let assertion = jwt.sign(claims, key, headers)
 ```
 
 </Tab>
@@ -646,10 +646,10 @@ For the header the following parameters are supported.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter             | Type   | Description                                                                                                                           |
-| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `algorithm`, required | String | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                       |
-| `keyid`, required     | String | The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application. |
+| Parameter                | Type    | Description                                                                                                                                                                  |
+| ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `algorithm`, required          | String  | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                                                                                                                     |
+| `keyid`, required          | String  |The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application.       |
 
 <!-- markdownlint-enable line-length -->
 
@@ -771,20 +771,19 @@ access_token = response.json()['access_token']
 <Tab title='Node'>
 
 ```js
-const axios = require("axios");
-const querystring = require("querystring");
+const axios = require('axios')
+const querystring = require('querystring');
 
-let accessToken = await axios
-  .post(
-    authenticationUrl,
-    querystring.stringify({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion: assertion,
-      client_id: config.boxAppSettings.clientID,
-      client_secret: config.boxAppSettings.clientSecret,
-    })
-  )
- .then((response) => response.data.access_token);
+let accessToken = await axios.post(
+  authenticationUrl,
+  querystring.stringify({
+    grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+    assertion: assertion,
+    client_id: config.boxAppSettings.clientID,
+    client_secret: config.boxAppSettings.clientSecret
+  })
+)
+.then(response => response.data.access_token)
 ```
 
 </Tab>

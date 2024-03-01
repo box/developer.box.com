@@ -46,12 +46,10 @@ still add the user as a collaborator on folders, add the user to groups, etc.
 ## Sample Overview
 
 In this scenario we'll focus on provisioning a new
-[Box Managed User][managed], as there
+[Box Managed User](guide://getting-started/user-types/managed-users), as there
 are very different considerations when provisioning Box App User accounts.
 
 We'll start with solving the most repeatable aspects of
 provisioning a user's account, creating a general folder and file structure
 that everyone will have on first login, using groups to control access to
 shared files and folders for users.
-
-[managed]:page://platform/user-types/#managed-users

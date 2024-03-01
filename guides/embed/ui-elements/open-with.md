@@ -23,10 +23,12 @@ source_url: >-
 ---
 # Content Open With
 
-<Message type='warning'>
+<Message warning>
+
+# End of Support
 
 We no longer support the `OpenWith` UI element for any new customers
-as of December 21, 2021.
+as of December 21, 2021. Please see the changelog for more information.
 
 </Message>
 
@@ -42,7 +44,7 @@ The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](page://platform/user-types)
+Currently, the element only supports [App Users](g://getting-started/user-types)
 for authentication.
 
 ## Installation
@@ -162,7 +164,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](page://platform/user-types/#service-account/)
+- A valid [Service Account](g://getting-started/user-types/service-account/)
   Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
@@ -425,4 +427,4 @@ using `openWith.addListener('execute', callback)` and
 [safari]: https://support.box.com/hc/en-us/articles/360043697334-Installing-Box-Tools
 <!-- i18n-disable localize-links -->
 
-[service-account]: page://platform/user-types/#service-account/
+[service-account]: g://getting-started/user-types/service-account/

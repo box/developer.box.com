@@ -3,9 +3,11 @@ rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
+  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
+  - getting-started/user-types
 related_resources: []
 alias_paths: []
 category_id: authentication
@@ -54,18 +56,12 @@ The application must be configured to perform actions as users in the
 
 Additionally, the authenticated user needs to be a user with Admin permissions,
 meaning either an Admin or Co-Admin. See our guide on
-[User Types](page://platform/user-types) for more details.
+[User Types](g://getting-started/user-types) for more details.
 
 <Message>
 
-You cannot use the `user_id` of Service Accounts.
-in the as-user header.
-
-</Message>
-
-<Message>
-
-You cannot use the `user_id` of Service Accounts.
+You cannot use the `user_id` of
+[Service Accounts](g://getting-started/user-types/service-account)
 in the as-user header.
 
 </Message>

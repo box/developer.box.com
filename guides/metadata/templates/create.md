@@ -115,5 +115,5 @@ For example, a metadata template that is named
 This template key is then used when making any API requests to get the
 template's information or assign it to an item.
 
-[user-types]: page://platform/user-types
+[user-types]: g://getting-started/user-types
 [e_create_template]: e://post_metadata_templates_schema
