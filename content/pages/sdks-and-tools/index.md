@@ -48,7 +48,7 @@ experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-New Typescript and Python SDKs are in a Public Beta phase.
+New Typescript, .NET, and Python SDKs are in a Public Beta phase.
 </Message>
 
 Here's what you can expect from the new SDKs:
@@ -76,6 +76,7 @@ and much more.
 | --------------------------------- | ----------- | ------- |
 | [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
 | [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
 
 ### SDKs
 
@@ -102,6 +103,51 @@ If you would like to continue getting the
 latest and greatest Android features, we
 recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
+</Message>
+
+## Box CLI
+
+Box CLI is a user-friendly command line tool which
+allows both technical and non-technical users to
+leverage Box API to perform routine or bulk actions.
+
+| Platform                          | Maintained?  | API Parity |
+| --------------------------------- | ----------- | ------- |
+| [CLI][cli]                        | Yes         | Full    |
+
+## Postman Collection
+
+[Postman][postman] is a tool that lets you build and test HTTP requests in an
+easy-to-use interface without configuring a full development environment. The
+**Box Postman Collection** is a set of preconfigured requests that make it
+possible to get started with the Box API without having to manually configure
+the requests.
+
+The simplest way to get started with Postman is with our Postman Quick Start guide.
+
+<CTA to='g://tooling/postman/quick-start'>
+  Get Started with the Box Postman Collection
+</CTA>
+
+## Salesforce Developer Toolkit
+
+The Box for Salesforce Developer Toolkit allows customers to programmatically
+customize the behavior of the Box for Salesforce integration. The Toolkit
+consists of several global APEX methods that can be used to trigger and extend
+the default behavior. The global methods can update the internal Salesforce
+record to Box folder mapping and handle permission management.
+
+<Message type='notice'>
+  This functionality is part of the latest Box for
+  [Salesforce package][sf-package].
+</Message>
+
+<Message type='warning'>
+  # What the Toolkit does NOT provide
+
+  The Toolkit is not a full-featured APEX wrapper for the BOX Content API. If
+  this is what you are looking for, have a look at the
+  [Box SDK for Salesforce][sf-sdk].
 </Message>
 
 ## Box CLI
@@ -184,3 +230,9 @@ for these tools.
 [jssdk]: https://github.com/allenmichael/box-javascript-sdk
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+[postman]: https://postman.com
+<!-- i18n-enable localize-links -->
+[sf-package]: https://support.box.com/hc/en-us/articles/360044195713-Installing-and-Configuring-Box-For-Salesforce
+[sf-sdk]: https://github.com/box/box-salesforce-sdk
+<!-- i18n-disable localize-links -->

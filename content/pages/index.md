@@ -31,7 +31,7 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-  All the developer resources to help you get the most from Box products
+All the developer resources to help you get the most from Box products
 
 </Banner>
 
@@ -40,8 +40,8 @@ alias_paths:
     Guides
   </Header>
   <GuidesList>
-    Get started, learn tips and tricks, and discover how to use the Box 
-    Platform API with our comprehensive guides. Here are six of the most used 
+    Get started, learn tips and tricks, and discover how to use the Box
+    Platform API with our comprehensive guides. Here are six of the most used
     guides to get you started.
 
     <GuideList href='/guides/authentication/'>
@@ -78,14 +78,14 @@ alias_paths:
 
   <TileGrid>
     <Tile type="users" title="1. Explore user types"
-      href="/guides/getting-started/user-types/">
+      href="platform/user-types/">
       Box Platform covers many use cases
       that may require different user types.
       Learn more about the 
       difference between the types.
     </Tile>
     <Tile type="apps" title="2. Understand application types"
-      href="/guides/applications/select/">
+      href="/guides/applications/app-types/select/">
       When creating applications, you can choose from several types.
       Read this guide to see which one fits your needs best.
     </Tile>
@@ -102,7 +102,7 @@ alias_paths:
       five minutes to start developing!
     </Tile>
     <Tile type="architecture" title="5. Create an architecture pattern"
-      href="/guides/getting-started/architecture-patterns/">
+      href="/platform/appendix/architecture-patterns/">
       We always recommend putting pen to paper and drawing out your solution.
       Have a look at the most common architecture patterns to get inspired!
     </Tile>
@@ -279,12 +279,9 @@ alias_paths:
 
 <Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
-    Developer News
+    Additional resources
   </Header>
 
-  <BlogCards />
-
-  <More to='https://medium.com/box-developer-blog' centered>
-    Visit Box Developer Blog
-  </More>
+  <!-- <BlogCards /> -->
+  <Teaser />
 </Centered>

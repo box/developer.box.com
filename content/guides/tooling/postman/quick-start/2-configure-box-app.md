@@ -2,7 +2,7 @@
 type: quick-start
 hide_in_page_nav: true
 related_guides:
-  - applications/custom-apps
+  - applications/app-types/custom-apps
 ---
 
 # Configure a Box App

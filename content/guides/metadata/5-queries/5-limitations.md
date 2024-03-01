@@ -1,8 +1,7 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
-
 # Limitations
 
 A few limits apply to the the metadata query APIs.
@@ -25,15 +24,6 @@ templates can not be used in metadata queries, as they will most likely run
 into issues regarding large results sets. More on this next.
 
 There are no immediate plans to start supporting these queries in the future.
-
-## Indices for large result sets
-
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
-
-<CTA to='g://metadata/queries/indexes'>
-  Learn about creating and using search indices
-</CTA>
 
 ## Recommended result set size
 

@@ -35,7 +35,7 @@ Then, navigate to the **Integrations** tab and click
 **Create a Web App Integration**.
 
 <ImageFrame center shadow border>
-  ![Integration Tab](../images/create_integration.png)
+  ![Integration Tab](./images/create_integration.png)
 </ImageFrame>
 
 ## Configure Integration
@@ -174,10 +174,10 @@ note that the URL must be publicly accessible on the internet.
 To make a Box integration publicly available it needs to be listed in the App
 Center. Follow the [App Center][app-center] guide for more details.
 
-[ca]: g://applications/custom-apps
+[ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
-[uid]: g://getting-started/locating-values/#user-ids
-[fid]: g://getting-started/locating-values/#content-ids
+[uid]:page://platform/appendix/locating-values/#user-ids
+[fid]:page://platform/appendix/locating-values/#content-ids
 [code]: g://authentication/oauth2/without-sdk/#3-user-grants-application-access
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console

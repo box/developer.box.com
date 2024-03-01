@@ -12,6 +12,20 @@ primary:
       //url:
       url: https://forum.box.com
 
+    learn:
+      // text: The text for the link to the learn section
+      text: Learn Box Platform
+
+      //url: The URL to the learn section
+      url: /platform/
+
+    learn-sign:
+      // text: The text for the link to the learn section
+      text: Working with Box Sign
+
+      //url: The URL to the learn section
+      url: /sign/
+
     get_started:
       // text: The text for the link to the old Get Started guides
       text: Quick Start
@@ -94,18 +108,17 @@ primary:
       text: Featured
 
     title:
-      text: Box AI API
+      text: Sample Code Catalog
 
     details:
       text: |-
-        All the power of Box AI from within your
-        application. Make the most of your valuable
-        content with questions and answers, text
-        generation and Metadata suggestions.
+        Find useful scripts, app examples, and inspiring
+        use cases! Browse 80+ open-source repositories
+        in various programming languages.
 
     cta:
       text:
-        Check out the Box AI API
+        Browse sample code
 
 secondary:
   images:

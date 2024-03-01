@@ -3,7 +3,7 @@ rank: 2
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -18,7 +18,7 @@ alias_paths:
 
 This guide takes you through JWT authentication without using a Box SDK.
 JWT does not require end-user interaction and is designed to authenticate
-directly with the Box API.  
+directly with the Box API.
 
 To learn how to use this token visit our guide on [making API
 calls](g://api-calls).
@@ -42,7 +42,7 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the 
+- A Custom Application using JWT authentication within the
   [Developer Console][devconsole]
 - A private key configuration file named `config.json`, which can be downloaded
   from the configuration tab of the [Developer Console][devconsole]
@@ -324,7 +324,7 @@ key = load_pem_private_key(
 ```js
 let key = {
   key: config.boxAppSettings.appAuth.privateKey,
-  passphrase: config.boxAppSettings.appAuth.passphrase
+  passphrase: config.boxAppSettings.appAuth.passphrase,
 };
 ```
 
@@ -366,7 +366,7 @@ the key.
 ### 3. Create JWT assertion
 
 To authenticate to the Box API the application needs to create a signed JWT
-assertion that can be exchanged for an Access Token. 
+assertion that can be exchanged for an Access Token.
 
 A JWT assertion is an encrypted JSON object, consisting of a
 `header`, `claims`, and `signature`. Let's start by creating the `claims`,
@@ -445,7 +445,7 @@ let claims = {
   box_sub_type: "enterprise",
   aud: authenticationUrl,
   jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45
+  exp: Math.floor(Date.now() / 1000) + 45,
 };
 ```
 
@@ -574,16 +574,16 @@ assertion = jwt.encode(
   <Tab title='Node'>
 
 ```js
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 
-let keyId = config.boxAppSettings.appAuth.publicKeyID
+let keyId = config.boxAppSettings.appAuth.publicKeyID;
 
 let headers = {
-  'algorithm': 'RS512',
-  'keyid': keyId,
-}
+  algorithm: "RS512",
+  keyid: keyId,
+};
 
-let assertion = jwt.sign(claims, key, headers)
+let assertion = jwt.sign(claims, key, headers);
 ```
 
   </Tab>
@@ -610,19 +610,19 @@ For the header the following parameters are supported.
 
 <!-- markdownlint-disable line-length -->
 
-| Parameter                | Type    | Description                                                                                                                                                                  |
-| ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `algorithm`, required          | String  | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                                                                                                                     |
-| `keyid`, required          | String  |The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application.       |
+| Parameter             | Type   | Description                                                                                                                           |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `algorithm`, required | String | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                       |
+| `keyid`, required     | String | The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application. |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
   Using JWT libraries
 
-  Signing your own JWT can be a complicated and painful process. Luckily, the
-  hard work has already been done for you and libraries exist in pretty much
-  every language. Head over to [JWT.io](https://jwt.io/) for an overview.
+Signing your own JWT can be a complicated and painful process. Luckily, the
+hard work has already been done for you and libraries exist in pretty much
+every language. Head over to [JWT.io](https://jwt.io/) for an overview.
 </Message>
 
 ### 4. Request Access Token
@@ -731,19 +731,20 @@ access_token = response.json()['access_token']
   <Tab title='Node'>
 
 ```js
-const axios = require('axios')
-const querystring = require('querystring');
+const axios = require("axios");
+const querystring = require("querystring");
 
-let accessToken = await axios.post(
-  authenticationUrl,
-  querystring.stringify({
-    grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-    assertion: assertion,
-    client_id: config.boxAppSettings.clientID,
-    client_secret: config.boxAppSettings.clientSecret
-  })
-)
-.then(response => response.data.access_token)
+let accessToken = await axios
+  .post(
+    authenticationUrl,
+    querystring.stringify({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: assertion,
+      client_id: config.boxAppSettings.clientID,
+      client_secret: config.boxAppSettings.clientSecret,
+    })
+  )
+ .then((response) => response.data.access_token);
 ```
 
   </Tab>
