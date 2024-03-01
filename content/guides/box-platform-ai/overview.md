@@ -13,8 +13,7 @@ rank: 1
 #
 # Endpoint IDs can be found in the OpenAPI spec
 # as "operationId".
-related_endpoints:
-  - get_files_id
+related_endpoints: []
 # TODO/CHANGE: Set to any number of resource IDs or []
 # to be shown at the end of a Guide as being related.
 #
