@@ -5,20 +5,20 @@ related_resources: []
 related_guides: []
 required_guides: []
 alias_paths: []
-category_id: box-ai-api
+category_id: box-ai
 subcategory_id: null
 is_index: false
-id: box-ai-api/text-gen
+id: box-ai/troubleshooting
 type: guide
 total_steps: 6
-sibling_id: box-ai-api
-parent_id: box-ai-api
-next_page_id: box-ai-api
+sibling_id: box-ai
+parent_id: box-ai
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai-api/text-gen.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/troubleshooting.md
 ---
-# Text Generation
+# Title
 
 From here everything is Markdown.
 

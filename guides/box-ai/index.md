@@ -6,24 +6,24 @@ related_resources:
   - folder
   - web_link
 related_guides:
-  - box-platform-ai/q-n-a
-  - box-platform-ai/text-gen
-  - box-platform-ai/metadata-suggestions
+  - box-ai/q-n-a
+  - box-ai/text-gen
+  - box-ai/metadata-suggestions
 required_guides: []
 alias_paths:
   - null
-category_id: box-platform-ai
+category_id: box-ai
 subcategory_id: null
-is_index: false
-id: box-platform-ai/overview
+is_index: true
+id: box-ai
 type: guide
 total_steps: 6
-sibling_id: box-platform-ai
-parent_id: ''
+sibling_id: guides
+parent_id: guides
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-platform-ai/overview.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/index.md
 ---
 # Box AI API
 
