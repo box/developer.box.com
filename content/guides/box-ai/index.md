@@ -33,9 +33,9 @@ related_resources:
 # For example, for the /content/guides/foo/bar/baz.md file,
 # the ID would be foo/bar/baz.
 related_guides:
-  - box-platform-ai/q-n-a
-  - box-platform-ai/text-gen
-  - box-platform-ai/metadata-suggestions
+  - box-ai/q-n-a
+  - box-ai/text-gen
+  - box-ai/metadata-suggestions
 # TODO/CHANGE: Set to any number of guides or []
 # to be shown at the end of a Guide as being related.
 #
