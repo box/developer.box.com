@@ -6,7 +6,7 @@ is_index: false
 id: internal-documentation/ui-elements/imageframe
 rank: 0
 type: guide
-total_steps: 9
+total_steps: 8
 sibling_id: internal-documentation/ui-elements
 parent_id: internal-documentation/ui-elements
 next_page_id: internal-documentation/ui-elements

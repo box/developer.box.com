@@ -1,18 +1,18 @@
 ---
 hide: true
-category_id: internal-documentation
-subcategory_id: internal-documentation/ui-elements
+category_id: internal
+subcategory_id: internal/ui-elements
 is_index: false
-id: internal-documentation/ui-elements/notification
+id: internal/ui-elements/notification
 rank: 0
 type: guide
-total_steps: 9
-sibling_id: internal-documentation/ui-elements
-parent_id: internal-documentation/ui-elements
-next_page_id: internal-documentation/ui-elements
+total_steps: 0
+sibling_id: internal/ui-elements
+parent_id: ''
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/internal-documentation/ui-elements/notification.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/internal/ui-elements/notification.md
 ---
 <!-- does not need translation -->
 

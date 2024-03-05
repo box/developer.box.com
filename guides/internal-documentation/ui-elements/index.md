@@ -6,7 +6,7 @@ subcategory_id: internal-documentation/ui-elements
 is_index: true
 id: internal-documentation/ui-elements
 type: guide
-total_steps: 9
+total_steps: 8
 sibling_id: internal-documentation
 parent_id: internal-documentation
 next_page_id: ''
