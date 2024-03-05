@@ -254,7 +254,7 @@ jobs:
       - name: "Trigger Netlify deployment"
         uses: joelwmale/webhook-action@2.0.2
         env:
-          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_ABTEST_WEBHOOK }}
+          WEBHOOK_URL: ${{ secrets.NETLIFY_BOXDEV_ABTEST_MAIN_WEBHOOK }}
           data: "{}"
 
       - name: Send Slack notification
