@@ -24,9 +24,6 @@ applications. Imagine the Box AI Q&A functionality built into your third party
 integration, or the ability to generate content like you can in Notes, right in
 your product’s content editor.
 
-The API is built with ease of use in mind. Call the API, provide your
-document(s) or content, and provide your prompt.
-
 ## Capabilities
 
 The API provides a number of capabilities designed to help you build LLM into
