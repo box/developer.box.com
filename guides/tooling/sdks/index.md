@@ -57,7 +57,7 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 | -------------------------------- | --------- | ------- |
 | [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
 | [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)  | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (ベータ)   | はい        | Full    |
 
 ## SDK
 

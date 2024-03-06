@@ -25,7 +25,7 @@ fullyTranslated: true
 
 含めない場合、[ドキュメントは構造化されていない][unstructured-docs]ので、署名リクエストを送信する前に準備する必要があります。これはドキュメントの準備と呼ばれ、Box Signサービスによって自動的に作成される追加の手順です。
 
-There are two other types of documents that already have the necessary information for the Box Sign service to recognize the signature properties. The [sign templates][sign-templates], managed in the Box application, and the [structured documents][sign-structured-docs], which are dynamically generated documents, containing specific tags representing the signature properties.
+Box Signサービスが署名プロパティを認識するために必要な情報をすでに含んでいるドキュメントは、他に2種類あります。1つは、Boxアプリケーションで管理される[Signテンプレート][sign-templates]で、もう1つは[構造化されたドキュメント][sign-structured-docs]です。構造化されたドキュメントは、署名プロパティを表す特定のタグを含む、動的に生成されるドキュメントです。
 
 <Next>
 

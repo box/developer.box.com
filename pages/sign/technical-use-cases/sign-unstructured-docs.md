@@ -19,7 +19,7 @@ fullyTranslated: true
 
 ユーザーがドキュメントをアップロードし、誰にでもそのドキュメントへの署名を依頼できるドキュメント管理アプリを想像してみてください。この場合、アプリは、署名対象のドキュメントと署名する必要がある人を認識しますが、署名やそのプロパティ (名前、日付、イニシャルなど) を配置する場所は認識しません。
 
-This contrasts with [using templates][sign-templates] or [structured documents][sign-structured-docs] where your app knows what they are, and where the signature properties go.
+これは、[テンプレート][sign-templates]や[構造化されたドキュメント][sign-structured-docs]を使用する場合とは対照的です。これらを使用する場合、アプリは、署名プロパティの内容や場所を認識します。
 
 このような場合、各ドキュメントに異なる構造を使用できるため、常に`is_document_preparation_needed`フラグを`true`に設定することをお勧めします。これにより、署名者がリクエストを受け取る前に、送信者は署名プロパティを選択してドキュメントに配置できるようになります。
 

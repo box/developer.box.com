@@ -45,15 +45,23 @@ Webhookを削除するには、以下の手順に従います。
 
 </Samples>
 
-## その他の削除の理由
+## Automatic webhook deletion
 
 [この][delete]エンドポイントを使用していなくても、Webhookが削除される場合があります。
 
 Webhookは以下の理由で削除される可能性があります。
 
-1. Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
-2. Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードが含まれます。
-3. 最後に成功した配信から30日が経過し、最後に配信が成功した日から最後のトリガーの日付までの期間が14日を超えた場合、Webhookは自動的に削除されます。
+* Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
+* Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードが含まれます。
+* The last successful notification was delivered 30 days ago to the set URL and the period between the last successful notification delivery and the last user trigger event date exceeds 14 days.
+
+  Let's go through a scenario in which the user downloads a file. This action triggers the webhook to use the set URL to delete a shared link. The diagram illustrates this scenario, showing when the webhook will be deleted.
+
+  ![Delete webhooks](../images/delete_webhooks.png)
+
+  * **User event trigger**: when the user initiated the event, for example downloaded a file.
+  * **Notification trigger**: when the notification was sent to the webhook, saying that the file was downloaded.
+  * **Last notification delivery**: when the webhook sent a message to a specific URL, for example to delete a shared link.
 
 これらのすべてのケースで、Boxは`WEBHOOK.DELETED`というイベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本文には以下の追加情報が含まれます。
 

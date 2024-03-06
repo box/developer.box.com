@@ -47,7 +47,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 <Message type="notice">
 
-New Typescript, .NET, and Python SDKs are in a Public Beta phase.
+新しいTypescript SDK、.NET SDK、およびPython SDKはパブリックベータ段階です。
 
 </Message>
 
@@ -62,7 +62,7 @@ New Typescript, .NET, and Python SDKs are in a Public Beta phase.
 | -------------------------------- | --------- | ------- |
 | [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
 | [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)  | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (ベータ)   | はい        | Full    |
 
 ### SDK
 

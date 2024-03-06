@@ -50,7 +50,7 @@ fullyTranslated: true
 | GET | `/sign_templates`     | すべてのテンプレートのリストを取得します。 |
 | GET | `/sign_templates/:id` | 特定のテンプレートの詳細を取得します。   |
 
-For a full details on the request and response parameters, see the [Sign template request API reference][sign-api-template-ref].
+リクエストとレスポンスのパラメータの詳細については、[SignテンプレートリクエストAPIリファレンス][sign-api-template-ref]を参照してください。
 
 [sign-api-reference]: https://developer.box.com/reference/resources/sign-request/
 
