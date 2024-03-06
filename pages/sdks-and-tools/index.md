@@ -47,7 +47,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 <Message type="notice">
 
-新しいTypescript SDKとPython SDKはパブリックベータ段階です。
+New Typescript, .NET, and Python SDKs are in a Public Beta phase.
 
 </Message>
 
@@ -62,6 +62,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 | -------------------------------- | --------- | ------- |
 | [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
 | [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)  | はい        | Full    |
 
 ### SDK
 
@@ -203,6 +204,8 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 
 [postman]: https://postman.com
 

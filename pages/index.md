@@ -54,7 +54,7 @@ fullyTranslated: true
 
 </BannerTitle>
 
-Box製品を最大限利用するのに役立つすべての開発者向けリソース
+Box製品を最大限利用するために役立つすべての開発者向けリソース
 
 </Banner>
 

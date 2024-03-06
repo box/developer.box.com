@@ -18,7 +18,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/0-index.md
 fullyTranslated: true
 ---
-# ウェブアプリ: BoxアプリユーザーへのOkta IDの関連付け
+# ウェブアプリ: Box App UserへのOkta IDの関連付け
 
 [Okta][okta]は、企業に広く採用されているアクセス管理およびIDプラットフォームです。資格情報一式と1つの安全なダッシュボードを使用して複数のアプリケーションを管理および認証するための統合された方法を提供しています。
 

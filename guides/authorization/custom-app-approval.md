@@ -28,7 +28,7 @@ fullyTranslated: true
 
 [JWT][jwt]または[クライアント資格情報許可][ccg]を使用するサーバー認証アプリケーションは、使用前にBox管理者が承認する必要があります。
 
-[OAuth 2.0][oauth]を使用したユーザー認証アプリケーションは、[未公開アプリの設定][upa]に応じて、Box管理者による有効化が必要な場合があります。
+Unpublished applications using [OAuth 2.0][oauth] authentication may require enablement by a Box Admin if they are [inactive by default][upa].
 
 Box管理者は、管理コンソールでアプリケーションを適切に承認または有効化するために、そのクライアントIDが必要になります。
 

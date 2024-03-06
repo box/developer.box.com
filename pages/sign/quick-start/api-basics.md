@@ -23,13 +23,13 @@ fullyTranslated: true
 
 エンドポイントは`https://{api.box.com}/2.0/sign_requests`です。次の表に、このエンドポイントで実行できる操作を示します。
 
-| 操作   | エンドポイント                   | 説明                     |
-| ---- | ------------------------- | ---------------------- |
-| GET  | /sign_requests            | すべての署名リクエストのリストを取得します。 |
-| GET  | /sign_requests/:id        | 特定の署名リクエストの詳細を取得します。   |
-| POST | /sign_requests            | 署名リクエストを作成します。         |
-| POST | /sign_requests/:id/resend | 署名リクエストを再送信します。        |
-| POST | /sign_requests/:id/cancel | 署名リクエストをキャンセルします。      |
+| 操作   | エンドポイント                     | 説明                     |
+| ---- | --------------------------- | ---------------------- |
+| GET  | `/sign_requests`            | すべての署名リクエストのリストを取得します。 |
+| GET  | `/sign_requests/:id`        | 特定の署名リクエストの詳細を取得します。   |
+| POST | `/sign_requests`            | 署名リクエストを作成します。         |
+| POST | `/sign_requests/:id/resend` | 署名リクエストを再送信します。        |
+| POST | `/sign_requests/:id/cancel` | 署名リクエストをキャンセルします。      |
 
 リクエストとレスポンスのパラメータの詳細については、[署名リクエストAPIリファレンス][sign-api-reference]を参照してください。
 
@@ -45,12 +45,12 @@ fullyTranslated: true
 
 エンドポイントは`https://{api.box.com}/2.0/sign_templates`です。次の表に、このエンドポイントで実行できる操作を示します。
 
-| 操作  | エンドポイント             | 説明                    |
-| --- | ------------------- | --------------------- |
-| GET | /sign_templates     | すべてのテンプレートのリストを取得します。 |
-| GET | /sign_templates/:id | 特定のテンプレートの詳細を取得します。   |
+| 操作  | エンドポイント               | 説明                    |
+| --- | --------------------- | --------------------- |
+| GET | `/sign_templates`     | すべてのテンプレートのリストを取得します。 |
+| GET | `/sign_templates/:id` | 特定のテンプレートの詳細を取得します。   |
 
-リクエストとレスポンスのパラメータの詳細については、[SignテンプレートリクエストAPIリファレンス][sign-api-template-ref]を参照してください。
+For a full details on the request and response parameters, see the [Sign template request API reference][sign-api-template-ref].
 
 [sign-api-reference]: https://developer.box.com/reference/resources/sign-request/
 

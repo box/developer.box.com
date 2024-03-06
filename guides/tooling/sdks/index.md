@@ -57,6 +57,7 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 | -------------------------------- | --------- | ------- |
 | [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
 | [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)  | はい        | Full    |
 
 ## SDK
 
@@ -96,6 +97,8 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
+
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 
