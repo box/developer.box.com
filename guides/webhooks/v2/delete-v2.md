@@ -45,7 +45,7 @@ Webhookを削除するには、以下の手順に従います。
 
 </Samples>
 
-## Automatic webhook deletion
+## Webhookの自動削除
 
 [この][delete]エンドポイントを使用していなくても、Webhookが削除される場合があります。
 
@@ -53,15 +53,15 @@ Webhookは以下の理由で削除される可能性があります。
 
 * Boxアプリケーションを削除すると、そのアプリケーションに関連付けられているすべてのWebhookが自動的に削除されます。
 * Webhookに関連付けられているアクティブなアクセストークンをすべて削除すると、そのWebhookが自動的に削除されます。これには、開発者トークンとパスワードが含まれます。
-* The last successful notification was delivered 30 days ago to the set URL and the period between the last successful notification delivery and the last user trigger event date exceeds 14 days.
+* 最後に成功した通知が設定したURLに配信されてから30日が経過し、最後に通知の配信が成功した日からユーザーが最後にイベントをトリガーした日までの期間が14日を超えた場合。
 
-  Let's go through a scenario in which the user downloads a file. This action triggers the webhook to use the set URL to delete a shared link. The diagram illustrates this scenario, showing when the webhook will be deleted.
+  ユーザーがファイルをダウンロードするシナリオを見てみましょう。この操作により、Webhookがトリガーされ、設定したURLを使用して共有リンクを削除します。次の図では、このシナリオを表し、Webhookが削除されるタイミングを示しています。
 
-  ![Delete webhooks](../images/delete_webhooks.png)
+  ![Webhookの削除](../images/delete_webhooks.png)
 
-  * **User event trigger**: when the user initiated the event, for example downloaded a file.
-  * **Notification trigger**: when the notification was sent to the webhook, saying that the file was downloaded.
-  * **Last notification delivery**: when the webhook sent a message to a specific URL, for example to delete a shared link.
+  * **ユーザーイベントトリガー**: ユーザーがイベント (例: ファイルのダウンロード) を開始したタイミング。
+  * **通知トリガー**: ファイルがダウンロードされたことを示す通知がWebhookに送信されたタイミング。
+  * **最終の通知配信**: Webhookが特定のURLにメッセージ (共有リンクの削除など) を送信したタイミング。
 
 これらのすべてのケースで、Boxは`WEBHOOK.DELETED`というイベント名を含むWebhookペイロードを通知URLに送信します。ペイロードの本文には以下の追加情報が含まれます。
 
