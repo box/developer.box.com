@@ -17,6 +17,7 @@ alias_paths:
 # Box Platform
 
 <Banner>
+
   <BannerTitle>
     Start building with **Box Platform**
   </BannerTitle>
@@ -30,7 +31,8 @@ alias_paths:
     Integrate apps with **Box Platform**
   </BannerTitle>
 
-  All the developer resources to help you get the most from Box products
+All the developer resources to help you get the most from Box products
+
 </Banner>
 
 <!-- <Centered wide>
@@ -260,6 +262,10 @@ alias_paths:
       href="/guides/search/">
       Find relevant content in Box using full-text
       search queries. Box search API is supported
+      in all our SDKs and the CLI.
+    </Tile>
+    <Tile type="guide" title="Salesforce"
+      href="/guides/tooling/salesforce-toolkit/">
       Integrate Box and Salesforce! Most
       recently we launched support for Salesforce Flows, a low code/no code
       solution. 
@@ -272,84 +278,10 @@ alias_paths:
 </section>
 
 <Centered wide>
-  <Header to='/' centered>
-    Browse by SDK and tools
-  </Header>
-    Development with Box Platform is made easier with SDKs,
-    a command line interface, Postman collection,
-    front-end UI elements, and much more.
-
-  <TileSlider>
-    <Tile type="tool" title="Java" href="https://github.com/box/box-java-sdk">
-      *box-java-sdk*
-    </Tile>
-    <Tile type="tool" title="Python"
-      href="https://github.com/box/box-python-sdk">
-      *box-python-sdk*
-    </Tile>
-    <Tile type="tool" title="Node" href="https://github.com/box/box-node-sdk">
-      *box-node-js-sdk*
-    </Tile>
-    <Tile type="tool" title=".NET"
-      href="https://github.com/box/box-windows-sdk-v2">
-      *box-windows-sdk-v2*
-    </Tile>
-    <Tile type="guide" title="Webhooks" href="/guides/webhooks/">
-      Webhooks allow you to monitor Box content for events,
-      and receive notifications to a URL of your choice when they occur.
-      This guide will help walk you through the options.
-    </Tile>
-    <Tile type="tool" title="Box CLI" href="/guides/cli/">
-      *box-cli*
-    </Tile>
-    <Tile type="tool" title="Box UI Elements" href="/guides/embed/ui-elements/">
-      *box-ui-elements*
-    </Tile>
-    <Tile type="tool" title="Box Embed" href="/guides/embed/box-embed/">
-      *Box Embed*
-    </Tile>
-    <Tile type="tool" title="Postman collection"
-      href="/guides/tooling/postman">
-      *Box Postman Collection*
-    </Tile>
-  </TileSlider>
-
-  <More to='/sdks-and-tools/' center>
-    Browse all SDKs and tools
-  </More>
-</Centered>
-
-<Centered wide>
   <Header to='https://medium.com/box-developer-blog' centered>
     Additional resources
   </Header>
 
   <!-- <BlogCards /> -->
-
-  <div class="teaserWrapper">
-    <a href="https://www.youtube.com/@box/videos">
-      <Teaser title="Box Youtube" type="youtube">
-        Check out our channel for tutorials, training,
-        product news, and more.
-
-        View Channel
-      </Teaser>
-    </a>
-    <a href="/newsletter/">
-      <Teaser title="Developer Newsletter" type="newsletter">
-        Stay up to date with the top developer events,
-        product releases, and community highlights.
-
-        Browse Newsletter
-      </Teaser>
-    </a>
-    <a href="https://medium.com/box-developer-blog">
-      <Teaser title="Box Developer Blog" type="blog">
-        Read news, updates and tutorials on Box APIs, SDKs
-        and gain useful developers' and admins' insights.
-
-        Visit Box Developer Blog
-      </Teaser>
-    </a>
-  </div>
+  <Teaser />
 </Centered>
