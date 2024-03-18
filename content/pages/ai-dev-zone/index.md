@@ -30,19 +30,26 @@ centered: false
   <TileGrid rows="3">
     <Tile type="summarisation" title="Get a summary"
         href="/ai-dev-zone-summary">
-        Generate instant summary of any document
+        Generate instant summary of any document with Box AI API. The Box
+        AI-driven API is only available in a private beta,
+        and capabilities are subject to change. This capability is avaliable
+        within Enterprise tier.
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
     <Tile type="metadata" title="Extract metadata"
         href="/ai-dev-zone-metadata">
-        Extract information from any document
+        Extract information from any document. The Box AI-driven metadata
+        extraction API is only available in a private beta, and
+        capabilities are subject to change. Stay tuned for more details!
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
     <Tile disabled type="document-qa" title="Ask a question"
         href="/ai-dev-zone">
-        Ask questions related to content of a document
+        Ask questions related to content of a document. The Box
+        AI-driven API is only available in a private beta,
+        and capabilities are subject to change.
 
         <strong>Coming soon</strong>
     </Tile>

@@ -16,7 +16,10 @@ files:
       name: Sample_Powerpoint.ppx
       description: Presentation
     420985736453:
-      name: Long_sample.pdf
+      name: Sample_long.pdf
+      description: Document
+    1472263705884:
+      name: Sample_article.docx
       description: Document
   go_back_button: AI Dev Zone
 
@@ -599,6 +602,110 @@ fileSummary:
           such as comparative effectiveness research, nursing
           home transparency, quality measurements, physician
           payments sunshine provision and more.
+  1472263705884:
+    short:
+      formal:
+        v1: "The document provides information about Box file requests
+          and how to work with them using the Box Platform Next Gen
+          Python SDK. File requests allow users to collect files from
+          others and store them in a designated Box folder. The document
+          explains that file requests can be customized by copying an
+          existing template, and it provides code examples for creating,
+          retrieving, printing, and deleting file requests using the API.
+          In summary, this document serves as a guide for developers who
+          want to implement file request functionality into their
+          applications using the Box Python Next Gen SDK. It covers
+          topics such as creating templates, customizing file requests,
+          querying details of existing requests, activating/deactivating
+          or deleting them if needed. Additionally mentioned is the
+          importance of keeping track of created file request IDs since
+          there is no built-in listing feature provided by the API."
+        v2: "The document provides information about Box file requests,
+          which allow users to collect files from others and store them
+          in a designated Box folder. The process involves creating
+          a file request template using the Box web application,
+          customizing it as needed, and obtaining the necessary IDs
+          for future reference. The document also explains how to
+          query and print file request details using the API. It further
+          demonstrates how to create personalized file requests by
+          copying an existing template through API calls. Additionally,
+          instructions are provided on deleting file requests when
+          necessary. Overall, this feature allows applications to
+          efficiently manage user-generated content while collecting
+          additional data such as email addresses and metadata
+          associated with each submission."
+      casual:
+        v1: "The document is about Box Python Next Gen SDK and how it
+          can be used to create file requests. File requests allow
+          users to collect files from others and store them in a Box
+          folder of their choice. The document provides code examples
+          on how to create, customize, and delete file requests using
+          the API. It also mentions that keeping track of the file
+          request IDs is important as there is no way to list them
+          through the API. Overall, file requests are a convenient
+          feature for collecting files with additional data like email,
+          description, and metadata."
+        v2: "The document is about Box Python Next Gen SDK and how it
+          can be used to create file requests. File requests allow
+          users to collect files from others and store them in a Box
+          folder of their choice. The document provides code examples
+          on how to create, customize, retrieve details, and delete
+          file requests using the API. It also mentions that keeping
+          track of the file request IDs is important since there is
+          no built-in way to list them through the API. Overall, file
+          requests are a convenient feature for collecting files with
+          additional data like email, description, and metadata."
+      pirate:
+        v1: "Arr, me hearties! Gather 'round and listen up. I've got
+          a tale to tell ye about Box Python Next Gen SDK's file
+          requests. These be a handy way to collect files from anyone
+          and stash 'em in yer very own Box folder. Ye can send the
+          URL to yer mates or embed it in yer application, savvy?
+          And that ain't all - ye can gather more data like email,
+          description, and metadata too. Now let me give ye the
+          lowdown on how this works. First off, ye need to create
+          a file request template using the Box web application.
+          Once that's done, copy it over using the API and customize
+          as ye please with details like title and description.
+          But beware! If ye want to delete a file request later
+          on, make sure ya keep track of their IDs since there be
+          no way for the API itself to list 'em out for ya. So there
+          ya have it mateys - an overview of these here file requests
+          from Box Python Next Gen SDK. Now go forth and plunder
+          those precious files!"
+        v2: "Arr, me hearties! Gather 'round and listen up. I be
+          tellin' ye about Box file requests, a fine way to collect
+          files from anyone and stash 'em in yer very own Box folder.
+          Ye can customize these requests with email, description,
+          and metadata. To create one o' these beauties, ye need to
+          copy an existin' request as a template using the API. Once
+          ye have yerself a template, ye can make changes or even
+          delete it if needed. Just remember to keep track of them
+          IDs like a true pirate keeps tabs on their treasures! So
+          set sail on this adventure with the complete code samples
+          provided in the document mateys!"
+    sentence:
+      formal:
+        v1: The document provides information on how to create,
+          customize, and delete file requests using the Box
+          Platform Next Gen Python SDK.
+        v2: The document provides information on how to create,
+          customize, and manage file requests using the Box
+          Platform Next Gen Python SDK.
+      casual:
+        v1: The document provides information on how to create,
+          customize, and delete file requests using the Box
+          Platform Next Gen Python SDK.
+        v2: The document provides information on how to create,
+          customize, and delete file requests using the Box
+          Platform Next Gen Python SDK.
+      pirate:
+        v1: Arr, matey! Box Python Next Gen SDK be providin' a way to
+          collect files from anyone and place 'em in a Box folder o'
+          yer choice through file requests.
+        v2: Arr, matey! Box Python Next Gen SDK be providin' a way to
+          collect files from anyone and place 'em in a Box folder o'
+          yer choice through file requests.
 
 document_summary:
   placeholder: Select value
