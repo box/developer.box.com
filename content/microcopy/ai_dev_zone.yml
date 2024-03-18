@@ -39,12 +39,12 @@ side_panel:
     cta: Learn more
     url: /
   qa:
-    title: Document Q&Q
+    title: Document Q&A
     cta: Learn more
     url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
-  filtersError: Choose tone of voice and length to generate document summary.
+  filtersError: Choose the tone of voice and length to generate a document summary.
 
 fileSummary:
   415542803939:
@@ -326,14 +326,14 @@ fileSummary:
           and his friend Tom Sawyer, as they find hidden
           treasure and navigate life in the Mississippi Valley."
       pirate:
-        v1: "In \"The Adventures of Huckleberry Finn\" by Mark
-          Twain, the protagonist recounts his experiences with
-          Tom Sawyer and their adventures involving robbers,
-          a widow, and their desire for freedom."
-        v2: "\"The Adventures of Huckleberry Finn\" by Mark
-          Twain tells the story of a young boy named Huck
-          who embarks on exciting adventures along the
-          Mississippi River."
+        v1: Avast ye matey! This here document be tellin' the
+          tale of Huckleberry Finn, who sets sail on a grand
+          adventure with his comrade Tom Sawyer in search
+          o' treasure and freedom. 
+        v2: Avast ye matey! This here document be tellin' the
+          tale of Huckleberry Finn, who sets sail on a grand
+          adventure with his comrade Tom Sawyer in search
+          o' treasure and freedom. 
   1415911293122:
     short:
       formal:
