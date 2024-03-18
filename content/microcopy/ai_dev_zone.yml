@@ -44,7 +44,8 @@ side_panel:
     url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
-  filtersError: Choose the tone of voice and length to generate a document summary.
+  filtersError: Choose the tone of voice and length to generate
+    a document summary.
 
 fileSummary:
   415542803939:
@@ -329,11 +330,11 @@ fileSummary:
         v1: Avast ye matey! This here document be tellin' the
           tale of Huckleberry Finn, who sets sail on a grand
           adventure with his comrade Tom Sawyer in search
-          o' treasure and freedom. 
+          o' treasure and freedom.
         v2: Avast ye matey! This here document be tellin' the
           tale of Huckleberry Finn, who sets sail on a grand
           adventure with his comrade Tom Sawyer in search
-          o' treasure and freedom. 
+          o' treasure and freedom.
   1415911293122:
     short:
       formal:
