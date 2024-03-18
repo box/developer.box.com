@@ -46,3 +46,13 @@ additionalResources:
       SDKs and gain useful developers' and admins' insights.
     cta: Visit Box Developer Blog
     url: https://medium.com/box-developer-blog
+  aiDevZone:
+    type: aiDevZone
+    cta: Explore AI Dev Zone
+    link: /ai-dev-zone
+    tag: Featured
+    headline: Box AI Developer Zone
+    text: |-
+      Explore interactive AI demos to view use
+      cases, prompts with AI responses, sample
+      code, documentation, and more!

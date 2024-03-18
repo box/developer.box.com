@@ -134,7 +134,7 @@ All the developer resources to help you get the most from Box products
 </Centered>
 
 <Centered wide>
-  <FeaturedBoard type="community" />
+  <FeaturedBoard type="aiDevZone" />
 </Centered>
 
 <section id="sdks-and-tools" style="background-color: #FBFBFB;">
@@ -230,7 +230,7 @@ All the developer resources to help you get the most from Box products
 </Dark> -->
 
 <Centered wide>
-  <FeaturedBoard type="sampleCode" />
+  <FeaturedBoard type="community" />
 </Centered>
 
 <section id="additional-box-platform-concepts"
@@ -287,7 +287,11 @@ All the developer resources to help you get the most from Box products
 </section>
 
 <Centered wide>
-  <Header to='https://medium.com/box-developer-blog' centered>
+  <FeaturedBoard type="sampleCode" />
+</Centered>
+
+<Centered wide>
+  <Header centered>
     Additional resources
   </Header>
 
