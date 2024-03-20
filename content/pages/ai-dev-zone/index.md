@@ -42,7 +42,8 @@ centered: false
     </Tile>
     <Tile type="document-qa" title="Ask questions
         related to content of a document" href="/">
-        Will link to documentation for now. TODO include information about pricing tier.
+        This tile will link to documentation for now.
+        TODO include information about pricing tier.
 
         <strong style="background-color: #909090">Demo comming soon</strong>
     </Tile>
