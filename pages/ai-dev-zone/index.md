@@ -52,7 +52,7 @@ Explore interactive demos
 
 <p style="text-align: left; margin-left: 0;">
 
-The Box AI API is available in beta, and capabilities may change.
+The Box AI API is available in beta version, and capabilities may change.
 
 </p>
 
@@ -64,7 +64,7 @@ TODO include information about pricing tier.
 
 <strong style="background-color: #3B1E9B">
 
-New
+Beta version
 
 </strong>
 
@@ -76,19 +76,20 @@ TODO include information about pricing tier.
 
 <strong style="background-color: #3B1E9B">
 
-New
+API comming soon
 
 </strong>
 
 </Tile>
 
-<Tile disabled type="document-qa" title="Ask questions related to content of a document" href="/ai-dev-zone">
+<Tile type="document-qa" title="Ask questions related to content of a document" href="/">
 
+This tile will link to documentation for now.
 TODO include information about pricing tier.
 
 <strong style="background-color: #909090">
 
-Coming soon
+Demo comming soon
 
 </strong>
 
