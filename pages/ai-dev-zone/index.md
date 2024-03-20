@@ -76,7 +76,7 @@ TODO include information about pricing tier.
 
 <strong style="background-color: #3B1E9B">
 
-API comming soon
+API coming soon
 
 </strong>
 
@@ -89,7 +89,7 @@ TODO include information about pricing tier.
 
 <strong style="background-color: #909090">
 
-Demo comming soon
+Demo coming soon
 
 </strong>
 
