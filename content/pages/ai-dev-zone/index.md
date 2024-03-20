@@ -22,27 +22,27 @@ centered: false
 
 <Centered mid>
   <Header>
-    Interactive Demos
+    Explore interactive demos
   </Header>
     <p style="text-align: left; margin-left: 0;">
-      Explore what’s possible with our interactive demos.
+      The Box AI API is available in beta, and capabilities may change.
     </p>
   <TileGrid rows="3">
-    <Tile type="summarisation" title="Get a summary"
-        href="/ai-dev-zone-summary">
-        Generate instant summary of any document with Box AI API.
+    <Tile type="summarisation" title="Generate instant
+      summary of any document" href="/ai-dev-zone-summary">
+        TODO include information about pricing tier.
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
-    <Tile type="metadata" title="Extract metadata"
-        href="/ai-dev-zone-metadata">
-        Extract information from any document.
+    <Tile type="metadata" title="Extract metadata
+      from any document" href="/ai-dev-zone-metadata">
+        TODO include information about pricing tier.
 
         <strong style="background-color: #3B1E9B">New</strong>
     </Tile>
-    <Tile disabled type="document-qa" title="Ask a question"
-        href="/ai-dev-zone">
-        Ask questions related to content of a document.
+    <Tile disabled type="document-qa" title="Ask questions
+        related to content of a document" href="/ai-dev-zone">
+        TODO include information about pricing tier.
 
         <strong style="background-color: #909090">Coming soon</strong>
     </Tile>

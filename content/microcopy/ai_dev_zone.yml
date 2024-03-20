@@ -42,7 +42,7 @@ sample_code:
 
 side_panel:
   summary:
-    title: Document summarisation
+    title: Document summary
     cta: Learn more
     url: /
   metadata:
