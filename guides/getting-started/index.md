@@ -18,7 +18,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
 fullyTranslated: true
 ---
-# ここからスタート
+# はじめに
 
 まずは、新しい[Box Platformについて][learn]セクションをご覧ください。
 
