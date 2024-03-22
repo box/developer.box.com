@@ -145,7 +145,7 @@ namespace BoxPlayground {
 ```
 </Tab>
 
-<tab title="Java"></tab>
+<tab title="Java">
 
 ```java
 public class UploadAllFilesInFolder {
