@@ -17,15 +17,16 @@ type: guide
 total_steps: 5
 sibling_id: authentication/jwt
 parent_id: authentication/jwt
-next_page_id: ''
+next_page_id: ""
 previous_page_id: authentication/jwt/as-user
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/user-access-tokens.md
 fullyTranslated: true
 ---
+
 # ユーザーアクセストークン
 
-JWTアプリケーションは、[サービスアカウント][sa]ではなく特定のユーザーに対してアクセストークンを作成できます。
+JWT アプリケーションは、[サービスアカウント][sa]ではなく特定のユーザーに対してアクセストークンを作成できます。
 
 ## 前提条件
 
@@ -39,15 +40,15 @@ JWTアプリケーションは、[サービスアカウント][sa]ではなく�
 
 さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、サービスアカウントのいずれかである必要があります。詳細については、[ユーザータイプ](page://platform/user-types)のガイドを参照してください。
 
-## SDKを使用したユーザーアクセストークン
+## SDK を使用したユーザーアクセストークン
 
-特定のユーザーとして認証するBox SDKクライアントを作成するには、[SDKを使用したJWTのガイド](g://authentication/jwt/with-sdk)で説明されている手順に従います。ただし、「Enterprise」クライアントではなく、ユーザークライアントを作成します。
+特定のユーザーとして認証する Box SDK クライアントを作成するには、[SDK を使用した JWT のガイド](g://authentication/jwt/with-sdk)で説明されている手順に従います。ただし、「Enterprise」クライアントではなく、ユーザークライアントを作成します。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var userId = "12345";
 var sdk = new BoxJWTAuth(config);
 var token = sdk.UserToken(appUserID);
@@ -95,8 +96,7 @@ user_client = Client(auth)
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
-var client = sdk.getAppAuthClient('user', '12345');
-
+var client = sdk.getAppAuthClient("user", "12345");
 ```
 
 </Tab>
@@ -105,19 +105,19 @@ var client = sdk.getAppAuthClient('user', '12345');
 
 <CTA to="g://authentication/jwt/with-sdk">
 
-Box SDKとJWTの使用の詳細を確認する
+Box SDK と JWT の使用の詳細を確認する
 
 </CTA>
 
-## SDKを使用しないユーザーアクセストークン
+## SDK を使用しないユーザーアクセストークン
 
-特定のユーザーとして認証するユーザーアクセストークンを作成するには、[SDKを使用しないJWTのガイド](g://authentication/jwt/without-sdk)で説明されている手順に従います。ただし、企業用のクレームを作成するのではなく、特定のユーザーID用のクレームを作成します。
+特定のユーザーとして認証するユーザーアクセストークンを作成するには、[SDK を使用しない JWT のガイド](g://authentication/jwt/without-sdk)で説明されている手順に従います。ただし、企業用のクレームを作成するのではなく、特定のユーザー ID 用のクレームを作成します。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var userId = "12345";
 
 var claims = new List<Claim>{
@@ -168,17 +168,16 @@ claims = {
 <Tab title="Node">
 
 ```js
-let user_id = '12345';
+let user_id = "12345";
 
 let claims = {
-  iss: config.boxAppSettings.clientID,
-  sub: user_id,
-  box_sub_type: "user",
-  aud: authenticationUrl,
-  jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45
+	iss: config.boxAppSettings.clientID,
+	sub: user_id,
+	box_sub_type: "user",
+	aud: authenticationUrl,
+	jti: crypto.randomBytes(64).toString("hex"),
+	exp: Math.floor(Date.now() / 1000) + 45,
 };
-
 ```
 
 </Tab>
@@ -224,10 +223,9 @@ $claims = [
 
 <CTA to="g://authentication/jwt/with-sdk">
 
-手動によるJWT認証の使用の詳細を確認する
+手動による JWT 認証の使用の詳細を確認する
 
 </CTA>
 
 [devconsole]: https://app.box.com/developers/console
-
 [sa]: page://platform/user-types/#service-account

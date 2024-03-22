@@ -22,9 +22,10 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/as-user.md
 fullyTranslated: true
 ---
-# as-userヘッダー
 
-`as-user`ヘッダーを利用すると、JWTアプリケーションは別のユーザーの代理になることができます。
+# as-user ヘッダー
+
+`as-user`ヘッダーを利用すると、JWT アプリケーションは別のユーザーの代理になることができます。
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -35,7 +36,7 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-この場合、ユーザーIDはユーザーのBox識別子です。どのユーザーでも、ユーザーIDは、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
+この場合、ユーザー ID はユーザーの Box 識別子です。どのユーザーでも、ユーザー ID は、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
 
 </Message>
 
@@ -53,19 +54,19 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-as-userヘッダーでは[サービスアカウント](page://platform/user-types/#service-account)の`user_id`を使用できません。
+as-user ヘッダーでは[サービスアカウント](page://platform/user-types/#service-account)の`user_id`を使用できません。
 
 </Message>
 
-## SDKを使用したas-user
+## SDK を使用した as-user
 
-すべての[Box公式SDK][sdk]では、`as-user`ヘッダーを使用してユーザーの代わりに処理を実行することがサポートされています。
+すべての[Box 公式 SDK][sdk]では、`as-user`ヘッダーを使用してユーザーの代わりに処理を実行することがサポートされています。
 
 <Tabs>
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 
 ```
@@ -95,9 +96,8 @@ user_client = client.as_user(user_to_impersonate)
 <Tab title="Node">
 
 ```js
-client.asUser('[USER_ID]');
+client.asUser("[USER_ID]");
 // client.asSelf();
-
 ```
 
 </Tab>
@@ -106,10 +106,9 @@ client.asUser('[USER_ID]');
 
 <Message warning>
 
-SDKには、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
+SDK には、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
 
 </Message>
 
 [devconsole]: https://app.box.com/developers/console
-
 [sdk]: g://tooling/sdks

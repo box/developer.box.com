@@ -15,15 +15,16 @@ type: guide
 total_steps: 4
 sibling_id: authentication/oauth2
 parent_id: authentication/oauth2
-next_page_id: ''
+next_page_id: ""
 previous_page_id: authentication/oauth2
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/oauth2/as-user.md
 fullyTranslated: true
 ---
-# as-userヘッダー
 
-`as-user`ヘッダーを使用すると、OAuth 2.0アプリケーションは別のユーザーの代理になることができます。
+# as-user ヘッダー
+
+`as-user`ヘッダーを使用すると、OAuth 2.0 アプリケーションは別のユーザーの代理になることができます。
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
@@ -34,7 +35,7 @@ curl https://api.box.com/2.0/folders/0 \
 
 <Message>
 
-この場合、ユーザーIDはユーザーのBox識別子です。どのユーザーでも、ユーザーIDは、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
+この場合、ユーザー ID はユーザーの Box 識別子です。どのユーザーでも、ユーザー ID は、管理者だけが利用可能な`GET /users`エンドポイントを介して確認できます。また、認証済みのユーザーセッションで`GET /users/me`エンドポイントを呼び出して確認することもできます。
 
 </Message>
 
@@ -50,13 +51,13 @@ curl https://api.box.com/2.0/folders/0 \
 
 さらに、認証済みユーザーは、管理者権限を持つユーザー、つまり、管理者、共同管理者、またはサービスアカウントのいずれかである必要があります。共同管理者にも、「ユーザーを管理する」権限のスコープが必要です。詳細については、[ユーザータイプ](page://platform/user-types)のガイドを参照してください。
 
-## SDKを使用したas-user
+## SDK を使用した as-user
 
 <Tabs>
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 
 ```
@@ -90,9 +91,8 @@ user_client = client.as_user(user_to_impersonate)
 <Tab title="Node">
 
 ```js
-client.asUser('[USER_ID]');
+client.asUser("[USER_ID]");
 // client.asSelf();
-
 ```
 
 </Tab>
@@ -101,7 +101,7 @@ client.asUser('[USER_ID]');
 
 <Message warning>
 
-SDKには、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
+SDK には、他のユーザーに対して新しいクライアントを作成するものもあれば、既存のクライアントを変更して、そのクライアントが元のユーザーに対して認証される状態に戻せるようにするものもあることに注意してください。
 
 </Message>
 

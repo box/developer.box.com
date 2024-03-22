@@ -15,32 +15,33 @@ total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security/cors
-previous_page_id: ''
+previous_page_id: ""
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp.md
 fullyTranslated: true
 ---
+
 # FedRAMP
 
 ## 概要
 
-FedRAMPとは、連邦政府機関が政府または行政機関の安全性/機密性が高まりつつあるデータにクラウドプロバイダを使用できるようにする認証プログラムです。
+FedRAMP とは、連邦政府機関が政府または行政機関の安全性/機密性が高まりつつあるデータにクラウドプロバイダを使用できるようにする認証プログラムです。
 
-FedRAMPでは、セキュリティのレベルについて、Low (低)、Moderate (中)、High (高) という3つのカテゴリを定義しています。
+FedRAMP では、セキュリティのレベルについて、Low (低)、Moderate (中)、High (高) という 3 つのカテゴリを定義しています。
 
 セキュリティレベルが高いほど、適用される制限が多くなります。
 
-Boxは、現在[FedRAMP Moderate][FedRAMPCert]として認定されています。
+Box は、現在[FedRAMP Moderate][FedRAMPCert]として認定されています。
 
 ## 留意事項
 
-FedRAMPに準拠するため、管理者は非常に特殊な方法でBoxを設定する必要があり、Boxの機能へのアクセスをさらに制限している可能性があります。
+FedRAMP に準拠するため、管理者は非常に特殊な方法で Box を設定する必要があり、Box の機能へのアクセスをさらに制限している可能性があります。
 
-APIの使用に影響する可能性があるセキュリティの制限を特定するには、管理者に相談してください。
+API の使用に影響する可能性があるセキュリティの制限を特定するには、管理者に相談してください。
 
-## FedRAMPでのAPIの使用
+## FedRAMP での API の使用
 
-FedRAMPに準拠するには、APIエントリポイントに以下のURLを使用できます。
+FedRAMP に準拠するには、API エントリポイントに以下の URL を使用できます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -123,7 +124,7 @@ console.log('!')
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 // some .NET code
 
 ```

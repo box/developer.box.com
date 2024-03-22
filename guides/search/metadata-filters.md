@@ -17,9 +17,10 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/5-metadata-filters.md
 fullyTranslated: true
 ---
+
 # メタデータクエリフィルタ
 
-[`GET /search`][search_api] APIでは、関連付けられたメタデータを使用して、検索結果にフィルタをかけることができます。`mdfilters`クエリパラメータを使用すると、開発者はメタデータテンプレートとクエリの対象となる値を指定できます。
+[`GET /search`][search_api] API では、関連付けられたメタデータを使用して、検索結果にフィルタをかけることができます。`mdfilters`クエリパラメータを使用すると、開発者はメタデータテンプレートとクエリの対象となる値を指定できます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -59,7 +60,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var filter = new
 {
   category = "online"
@@ -153,19 +154,18 @@ client.search.query(
 
 ## メタデータフィルタ構文
 
-`mdfilters`パラメータに現在指定できるフィルタは1つだけですが、今後拡張される可能性があります。
+`mdfilters`パラメータに現在指定できるフィルタは 1 つだけですが、今後拡張される可能性があります。
 
 各フィルタでは、フィルタをかけるメタデータテンプレートの`scope`および`templateKey`を定義します。
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {}
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {}
+	}
 ]
-
 ```
 
 <Message>
@@ -182,15 +182,14 @@ client.search.query(
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "category": "online"
-    }
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {
+			"category": "online"
+		}
+	}
 ]
-
 ```
 
 <Message info>
@@ -205,25 +204,24 @@ client.search.query(
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "amount": {
-        "gt": 10000,
-        "lt": 20000
-      }
-    }
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {
+			"amount": {
+				"gt": 10000,
+				"lt": 20000
+			}
+		}
+	}
 ]
-
 ```
 
 この例では、`enterprise.contract`テンプレートのインスタンスが適用されていて、キー`amount`のフィールドが`10000`以上`2000`以下の値に設定されているすべてのファイルおよびフォルダが検索されます。`gt`と`lt`はその値を含むことと、必ずしも両方を設定する必要がないことに注意してください。
 
 <Message info>
 
-数値に基づいてクエリを作成する場合は、-16777215～+16777215の範囲を超えないようにしてください。数値属性を使用したメタデータ検索では、インデックス値がFLOAT32として保存されます。結果として、-16777215～+16777215の整数は正確に表すことができます。この範囲外の数値を扱う処理では、精度が失われる場合があります。
+数値に基づいてクエリを作成する場合は、-16777215 ～+16777215 の範囲を超えないようにしてください。数値属性を使用したメタデータ検索では、インデックス値が FLOAT32 として保存されます。結果として、-16777215 ～+16777215 の整数は正確に表すことができます。この範囲外の数値を扱う処理では、精度が失われる場合があります。
 
 </Message>
 
@@ -233,18 +231,17 @@ client.search.query(
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "expirationDate": {
-        "gt": "2016-08-01T00:00:00Z",
-        "lt": "2017-08-01T00:00:00Z"
-      }
-    }
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {
+			"expirationDate": {
+				"gt": "2016-08-01T00:00:00Z",
+				"lt": "2017-08-01T00:00:00Z"
+			}
+		}
+	}
 ]
-
 ```
 
 <Message info>
@@ -259,15 +256,14 @@ client.search.query(
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "category": "online"
-    }
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {
+			"category": "online"
+		}
+	}
 ]
-
 ```
 
 <Message info>
@@ -282,18 +278,14 @@ client.search.query(
 
 ```json
 [
-  {
-    "scope": "enterprise",
-    "templateKey": "contract",
-    "filters": {
-      "category": [
-        "online",
-        "enterprise"
-      ]
-    }
-  }
+	{
+		"scope": "enterprise",
+		"templateKey": "contract",
+		"filters": {
+			"category": ["online", "enterprise"]
+		}
+	}
 ]
-
 ```
 
 <Message info>
@@ -303,7 +295,5 @@ client.search.query(
 </Message>
 
 [search_api]: e://get_search
-
 [g_list_templates]: g://metadata/templates/list
-
 [g_list_instances_item]: g://metadata/instances/list
