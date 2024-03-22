@@ -24,14 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/folder.md
 fullyTranslated: true
 ---
+# SDKを使用したフォルダ内のすべてのファイルのダウンロード
 
-# SDK を使用したフォルダ内のすべてのファイルのダウンロード
-
-アプリケーションによっては、1 つのフォルダのすべてのファイルをダウンロードできる場合もあります。SDK と CLI を使用してこの処理を実行するには、フォルダツリー内を移動してすべてのファイルを探し、そのファイルをダウンロードする必要があります。
+アプリケーションによっては、1つのフォルダのすべてのファイルをダウンロードできる場合もあります。SDKとCLIを使用してこの処理を実行するには、フォルダツリー内を移動してすべてのファイルを探し、そのファイルをダウンロードする必要があります。
 
 <Message type="notice">
 
-ZIP アーカイブをダウンロードするには、[こちら](g://downloads/zip-archive)のガイドに従ってください。
+ZIPアーカイブをダウンロードするには、[こちら](g://downloads/zip-archive)のガイドに従ってください。
 
 </Message>
 
@@ -41,7 +40,7 @@ ZIP アーカイブをダウンロードするには、[こちら](g://downloads
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -183,82 +182,83 @@ let folderId = "987654321";
 let folderName;
 let localFolderPath;
 client.folders
-	.get(folderId, null)
-	.then((folderInfo) => {
-		folderName = folderInfo.name;
+  .get(folderId, null)
+  .then(folderInfo => {
+    folderName = folderInfo.name;
 
-		return client.folders.getItems(folderId, { limit: 1000 });
-	})
-	.then((folderItemsIterator) => {
-		return autoPage(folderItemsIterator);
-	})
-	.then((folderItems) => {
-		console.log(folderName);
-		console.log(folderItems.length);
-		let files = folderItems.filter((item) => {
-			return item.type === "file";
-		});
-		console.log(files);
-		localFolderPath = createLocalFolder(folderName);
-		let downloadPromises = [];
-		files.forEach((file) => {
-			downloadPromises.push(
-				client.files.getReadStream(file.id, null).then((stream) => {
-					let output = fs.createWriteStream(
-						path.join(localFolderPath, file.name)
-					);
-					stream.pipe(output);
-				})
-			);
-		});
-		return Promise.all(downloadPromises);
-	})
-	.then(() => {
-		console.log("Downloaded all files...");
-		console.log(fs.readdirSync(localFolderPath));
-	});
+    return client.folders.getItems(folderId, { limit: 1000 });
+  })
+  .then(folderItemsIterator => {
+    return autoPage(folderItemsIterator);
+  })
+  .then(folderItems => {
+    console.log(folderName);
+    console.log(folderItems.length);
+    let files = folderItems.filter(item => {
+      return item.type === "file";
+    });
+    console.log(files);
+    localFolderPath = createLocalFolder(folderName);
+    let downloadPromises = [];
+    files.forEach(file => {
+      downloadPromises.push(
+        client.files.getReadStream(file.id, null).then(stream => {
+          let output = fs.createWriteStream(
+            path.join(localFolderPath, file.name)
+          );
+          stream.pipe(output);
+        })
+      );
+    });
+    return Promise.all(downloadPromises);
+  })
+  .then(() => {
+    console.log("Downloaded all files...");
+    console.log(fs.readdirSync(localFolderPath));
+  });
 
 function createLocalFolder(folderName) {
-	let localFolderName = path.join(__dirname, folderName);
-	try {
-		fs.mkdirSync(localFolderName);
-	} catch (e) {
-		if (e.code === "EEXIST") {
-			resetLocalFolder(localFolderName);
-			fs.mkdirSync(localFolderName);
-		} else {
-			throw e;
-		}
-	}
-	return localFolderName;
+  let localFolderName = path.join(__dirname, folderName);
+  try {
+    fs.mkdirSync(localFolderName);
+  } catch (e) {
+    if (e.code === "EEXIST") {
+      resetLocalFolder(localFolderName);
+      fs.mkdirSync(localFolderName);
+    } else {
+      throw e;
+    }
+  }
+  return localFolderName;
 }
 
 function resetLocalFolder(localFolderName) {
-	if (fs.existsSync(localFolderName)) {
-		fs.readdirSync(localFolderName).forEach((localFileName) => {
-			console.log(localFileName);
-			fs.unlinkSync(path.join(localFolderName, localFileName));
-		});
-		fs.rmdirSync(localFolderName);
-	}
+  if (fs.existsSync(localFolderName)) {
+    fs.readdirSync(localFolderName).forEach(localFileName => {
+      console.log(localFileName);
+      fs.unlinkSync(path.join(localFolderName, localFileName));
+    });
+    fs.rmdirSync(localFolderName);
+  }
 }
 
 function autoPage(iterator) {
-	let collection = [];
-	let moveToNextItem = () => {
-		return iterator.next().then((item) => {
-			if (item.value) {
-				collection.push(item.value);
-			}
-			if (item.done !== true) {
-				return moveToNextItem();
-			} else {
-				return collection;
-			}
-		});
-	};
-	return moveToNextItem();
+  let collection = [];
+  let moveToNextItem = () => {
+    return iterator.next().then(item => {
+      if (item.value) {
+        collection.push(item.value);
+      }
+      if (item.done !== true) {
+        return moveToNextItem();
+      } else {
+        return collection;
+      }
+    });
+  };
+  return moveToNextItem();
 }
+
 ```
 
 </Tab>

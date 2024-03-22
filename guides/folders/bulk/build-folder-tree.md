@@ -18,18 +18,17 @@ type: guide
 total_steps: 1
 sibling_id: folders/bulk
 parent_id: folders/bulk
-next_page_id: ""
+next_page_id: ''
 previous_page_id: folders/bulk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/bulk/build-folder-tree.md
 fullyTranslated: true
 ---
-
 # フォルダツリーの作成
 
-以下の例は、フォルダツリーの JSON レプリゼンテーションを作成する方法を示しています。フォルダツリーは、フォルダの名前とそのフォルダ内にあるすべてのサブフォルダで構成されます。
+以下の例は、フォルダツリーのJSONレプリゼンテーションを作成する方法を示しています。フォルダツリーは、フォルダの名前とそのフォルダ内にあるすべてのサブフォルダで構成されます。
 
-以下のサンプルでは、先頭の**ルート**フォルダと、コードでトラバースする最大深度を指定できます。また、初期化された SDK クライアントを渡すことができるため、どのユーザーが認証されるかを構成することもできます。
+以下のサンプルでは、先頭の**ルート**フォルダと、コードでトラバースする最大深度を指定できます。また、初期化されたSDKクライアントを渡すことができるため、どのユーザーが認証されるかを構成することもできます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -37,7 +36,7 @@ fullyTranslated: true
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -498,135 +497,131 @@ public class BoxFolderTreeBuilder {
 
 ```js
 class BoxFolderTreeBuilder {
-	constructor(boxClient, options) {
-		options = options || {};
-		boxClient._useIterators = true;
-		this.boxClient = boxClient;
-		this.maxDepth = options.maxDepth || -1;
-		this.rootFolderId = options.rootFolderId || "0";
-	}
+    constructor(boxClient, options) {
+        options = options || {};
+        boxClient._useIterators = true;
+        this.boxClient = boxClient;
+        this.maxDepth = options.maxDepth || -1;
+        this.rootFolderId = options.rootFolderId || "0";
+    }
 
-	async buildFolderTreeWithFlatLists() {
-		let tree = {
-			rootId: this.rootFolderId,
-			folders: [],
-			files: [],
-		};
-		let folderItemsIterator = await this.boxClient.folders.getItems(
-			this.rootFolderId
-		);
-		let collection = await BoxUtilities.autoPage(folderItemsIterator);
-		let rootFolderChildren = [];
+    async buildFolderTreeWithFlatLists() {
+        let tree = {
+            rootId: this.rootFolderId,
+            folders: [],
+            files: []
+        }
+        let folderItemsIterator = await this.boxClient.folders.getItems(this.rootFolderId);
+        let collection = await BoxUtilities.autoPage(folderItemsIterator);
+        let rootFolderChildren = [];
 
-		const path = `${this.rootFolderId}`;
-		collection.forEach((item) => {
-			if (item.type === "file") {
-				tree.files.push({
-					item,
-					path,
-				});
-			} else if (item.type === "folder") {
-				let folderTreeFolder = {
-					item,
-					path,
-					children: [],
-				};
-				tree.folders.push(folderTreeFolder);
-				rootFolderChildren.push(folderTreeFolder);
-			}
-		});
-		tree = await this.dive(tree, rootFolderChildren, 1);
-		return tree;
-	}
+        const path = `${this.rootFolderId}`;
+        collection.forEach((item) => {
+            if (item.type === "file") {
+                tree.files.push({
+                    item,
+                    path
+                })
+            } else if (item.type === "folder") {
+                let folderTreeFolder = {
+                    item,
+                    path,
+                    children: []
+                }
+                tree.folders.push(folderTreeFolder);
+                rootFolderChildren.push(folderTreeFolder);
+            }
+        });
+        tree = await this.dive(tree, rootFolderChildren, 1);
+        return tree;
+    }
 
-	async dive(tree, children, currentDepth) {
-		if (this.inTooDeep(currentDepth)) {
-			return tree;
-		} else {
-			currentDepth++;
-			let additionalChildren = [];
-			let childrenPromises = [];
-			children.forEach((child) => {
-				let foundFolder = -1;
-				childrenPromises.push(
-					this.boxClient.folders
-						.getItems(child.item.id)
-						.then((folderItemsIterator) => {
-							return BoxUtilities.autoPage(folderItemsIterator).then(
-								(collection) => {
-									for (let i = 0; i < tree.folders.length; i++) {
-										if (child.item.id === tree.folders[i].item.id) {
-											foundFolder = i;
-										}
-									}
+    async dive(tree, children, currentDepth) {
+        if (this.inTooDeep(currentDepth)) {
+            return tree;
+        } else {
+            currentDepth++;
+            let additionalChildren = [];
+            let childrenPromises = [];
+            children.forEach((child) => {
+                let foundFolder = -1;
+                childrenPromises.push(this.boxClient.folders.getItems(child.item.id)
+                    .then((folderItemsIterator) => {
+                        return BoxUtilities.autoPage(folderItemsIterator)
+                            .then((collection) => {
+                                for (let i = 0; i < tree.folders.length; i++) {
+                                    if (child.item.id === tree.folders[i].item.id) {
+                                        foundFolder = i;
+                                    }
+                                }
 
-									const path = `${child.path}/${child.item.id}`;
-									collection.forEach((item) => {
-										if (foundFolder >= 0) {
-											tree.folders[foundFolder].children.push(item);
-										}
+                                const path = `${child.path}/${child.item.id}`;
+                                collection.forEach((item) => {
+                                    if (foundFolder >= 0) {
+                                        tree.folders[foundFolder].children.push(item);
+                                    }
 
-										if (item.type === "file") {
-											tree.files.push({
-												item,
-												path,
-											});
-										} else if (item.type === "folder") {
-											let folderTreeFolder = {
-												item,
-												path,
-												children: [],
-											};
-											tree.folders.push(folderTreeFolder);
-											additionalChildren.push(folderTreeFolder);
-										}
-									});
-									return;
-								}
-							);
-						})
-				);
-			});
-			await Promise.all(childrenPromises);
-			if (additionalChildren.length === 0) {
-				return tree;
-			} else {
-				return this.dive(tree, additionalChildren, currentDepth);
-			}
-		}
-	}
+                                    if (item.type === "file") {
+                                        tree.files.push({
+                                            item,
+                                            path
+                                        })
+                                    } else if (item.type === "folder") {
+                                        let folderTreeFolder = {
+                                            item,
+                                            path,
+                                            children: []
+                                        }
+                                        tree.folders.push(folderTreeFolder);
+                                        additionalChildren.push(folderTreeFolder);
+                                    }
+                                });
+                                return;
+                            });
+                    }));
+            });
+            await Promise.all(childrenPromises);
+            if (additionalChildren.length === 0) {
+                return tree;
+            } else {
+                return this.dive(tree, additionalChildren, currentDepth);
+            }
+        }
+    }
 
-	inTooDeep(depthCount) {
-		if (this.maxDepth < 0) {
-			return false;
-		} else {
-			return depthCount >= this.maxDepth;
-		}
-	}
+    inTooDeep(depthCount) {
+        if (this.maxDepth < 0) {
+            return false;
+        } else {
+            return (depthCount >= this.maxDepth);
+        }
+    }
 }
 
 class BoxUtilities {
-	static async autoPage(iterator, collection = []) {
-		let moveToNextItem = async () => {
-			let item = await iterator.next();
-			if (item.value) {
-				collection.push(item.value);
-			}
+    static async autoPage(iterator, collection = []) {
+        let moveToNextItem = async () => {
+            let item = await iterator.next();
+            if (item.value) {
+                collection.push(item.value);
+            }
 
-			if (item.done !== true) {
-				return moveToNextItem();
-			} else {
-				return collection;
-			}
-		};
-		return moveToNextItem();
-	}
+            if (item.done !== true) {
+                return moveToNextItem();
+            } else {
+                return collection;
+            }
+        }
+        return moveToNextItem();
+    }
 }
 
 let folderTreeBuilder = new BoxFolderTreeBuilder(client);
-folderTreeBuilder.buildFolderTreeWithFlatLists().then((tree) => {
-	console.log(JSON.stringify(tree));
-});
+folderTreeBuilder.buildFolderTreeWithFlatLists()
+  .then((tree) => {
+    console.log(JSON.stringify(tree));
+  })
+
 ```
 
 </Tab>

@@ -18,21 +18,20 @@ total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
 next_page_id: authentication/app-token/without-sdk
-previous_page_id: ""
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/with-sdk.md
 fullyTranslated: true
 ---
+# SDKを使用したアプリトークン
 
-# SDK を使用したアプリトークン
+Box公式SDKには、アプリトークン認証のサポートが組み込まれています。
 
-Box 公式 SDK には、アプリトークン認証のサポートが組み込まれています。
-
-アプリトークン認証は、Box API を直接操作するよう設計されており、ユーザーがアプリケーションを承認するために Box を介してリダイレクトする必要はありません。ただし、この認証はアプリケーションのデータのみに制限されています。
+アプリトークン認証は、Box APIを直接操作するよう設計されており、ユーザーがアプリケーションを承認するためにBoxを介してリダイレクトする必要はありません。ただし、この認証はアプリケーションのデータのみに制限されています。
 
 <Message notice>
 
-JWT を使用した認証方法は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行される API コールはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
+JWTを使用した認証方法は、もともとアプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPIコールはどれも、このアプリケーションから実行されているように見えますが、明示的なアクセス権がなければ他のユーザーのファイルやフォルダにはアクセスできません。
 
 </Message>
 
@@ -40,19 +39,19 @@ JWT を使用した認証方法は、もともとアプリケーションのサ�
 
 開始する前に、以下の手順を完了しておく必要があります。
 
-- 開発者コンソール内で Box アプリケーションを作成する
-- アプリケーションがアプリトークン認証を使用するよう構成されていることを確認する
-- アプリケーションのプライマリアプリトークンとセカンダリアプリトークンを生成し、コード内のどこかにこれらのトークンを保存する
+* 開発者コンソール内でBoxアプリケーションを作成する
+* アプリケーションがアプリトークン認証を使用するよう構成されていることを確認する
+* アプリケーションのプライマリアプリトークンとセカンダリアプリトークンを生成し、コード内のどこかにこれらのトークンを保存する
 
-## SDK クライアントの初期化
+## SDKクライアントの初期化
 
-アプリトークン認証のために SDK クライアントを初期化するには、SDK がインストールされていることを確認してから、以下のように SDK を構成します。
+アプリトークン認証のためにSDKクライアントを初期化するには、SDKがインストールされていることを確認してから、以下のようにSDKを構成します。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
 var session = new OAuthSession("[APP_TOKEN]", "N/A", 3600, "bearer");
 var client = new BoxClient(config, session);
@@ -85,34 +84,38 @@ client = Client(auth)
 <Tab title="Node">
 
 ```js
-var BoxSDK = require("box-node-sdk");
+var BoxSDK = require('box-node-sdk');
 var sdk = new BoxSDK({
-	clientID: "[CLIENT_ID]",
-	clientSecret: "",
+  clientID: '[CLIENT_ID]',
+  clientSecret: ''
 });
 
-var client = sdk.getBasicClient("[APP_TOKEN]");
+var client = sdk.getBasicClient('[APP_TOKEN]');
+
 ```
 
 </Tab>
 
 </Tabs>
 
-これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかに API コールを実行できます。
+これを使用すると、アプリケーションは、アプリトークン認証に対して有効になっている[エンドポイント](g://authentication/app-token/endpoints)のいずれかにAPIコールを実行できます。
 
-## SDK とアプリケーショントークンの使用
+## SDKとアプリケーショントークンの使用
 
-各 SDK のアプリケーショントークンの詳細については、以下を参照してください。
+各SDKのアプリケーショントークンの詳細については、以下を参照してください。
 
-- [.Net][.Net]
+* [.Net][.Net]
 
-- [Java][Java]
+* [Java][Java]
 
-- [Python][Python]
+* [Python][Python]
 
-- [Node][Node]
+* [Node][Node]
 
 [.Net]: https://github.com/box/box-windows-sdk-v2/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens
+
 [Java]: https://github.com/box/box-java-sdk/blob/main/doc/authentication.md#box-view-authentication-with-app-token
+
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#box-view-authentication-with-app-tokens
+
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#box-view-authentication-with-app-tokens

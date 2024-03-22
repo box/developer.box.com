@@ -16,10 +16,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/1-scaffold-application-code.md
 fullyTranslated: true
 ---
-
 # アプリケーションコードのスキャフォールディング
 
-このガイドではまず、必要となる Okta と Box のアプリケーションを作成するにあたり、コードと構成データを格納するローカルアプリケーションを作成します。
+このガイドではまず、必要となるOktaとBoxのアプリケーションを作成するにあたり、コードと構成データを格納するローカルアプリケーションを作成します。
 
 言語/フレームワークの設定に応じて、空のアプリケーションを作成し、必要な依存関係のほか、すべての構成ファイルとプログラムファイルをインストールします。
 
@@ -31,7 +30,7 @@ fullyTranslated: true
 
 # Node
 
-Express.js フレームワークを使用します。
+Express.jsフレームワークを使用します。
 
 </Choose>
 
@@ -39,7 +38,7 @@ Express.js フレームワークを使用します。
 
 # Java
 
-Spring Boot フレームワークを使用します。
+Spring Bootフレームワークを使用します。
 
 </Choose>
 
@@ -51,7 +50,7 @@ Spring Boot フレームワークを使用します。
 
 # Python
 
-Flask フレームワークを使用します。
+Flaskフレームワークを使用します。
 
 </Choose>
 
@@ -59,7 +58,7 @@ Flask フレームワークを使用します。
 
 # .NET
 
-ASP.NET Core フレームワークを使用します。
+ASP.NET Coreフレームワークを使用します。
 
 </Choose>
 
@@ -67,8 +66,8 @@ ASP.NET Core フレームワークを使用します。
 
 <Choice option="programming.platform" value="node" color="none">
 
-- アプリケーション用にローカルディレクトリを作成します。
-- そのローカルディレクトリの中に`package.json`ファイルを作成し、お好みのエディタで開いたら、以下の内容をコピーして貼り付け、ファイルを保存して閉じます。
+* アプリケーション用にローカルディレクトリを作成します。
+* そのローカルディレクトリの中に`package.json`ファイルを作成し、お好みのエディタで開いたら、以下の内容をコピーして貼り付け、ファイルを保存して閉じます。
 
 ```js
 {
@@ -92,25 +91,26 @@ ASP.NET Core フレームワークを使用します。
 
 ```
 
-- ターミナル/コンソールから`npm init`を実行して依存関係をインストールします。
-- ローカルディレクトリに 2 つのファイル (`server.js`および`config.js`) を作成します。
-- `config.js`を開いて、以下のデフォルト構成を保存します。
+* ターミナル/コンソールから`npm init`を実行して依存関係をインストールします。
+* ローカルディレクトリに2つのファイル (`server.js`および`config.js`) を作成します。
+* `config.js`を開いて、以下のデフォルト構成を保存します。
 
 ```js
-const oktaClientId = (exports.oktaClientId = "");
-const oktaClientSecret = (exports.oktaClientSecret = "");
-const oktaOrgUrl = (exports.oktaOrgUrl = "");
-const oktaBaseUrl = (exports.oktaBaseUrl = "http://localhost:3000");
-const oktaRedirect = (exports.oktaRedirect = "/authorization-code/callback");
+const oktaClientId = exports.oktaClientId = '';
+const oktaClientSecret = exports.oktaClientSecret = '';
+const oktaOrgUrl = exports.oktaOrgUrl = '';
+const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
+const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
+
 ```
 
 </Choice>
 
 <Choice option="programming.platform" value="java" color="none">
 
-- Eclipse で新しいプロジェクトを作成します。求められたら、Gradle プロジェクトを選択します。
-- プロジェクトの一意の名前を入力します。このガイドでは`okta.sample`という名前を使用しています。
-- `build.gradle`ファイルを開いて以下の依存関係を追加します。保存したら、Gradle プロジェクトを更新します。
+* Eclipseで新しいプロジェクトを作成します。求められたら、Gradleプロジェクトを選択します。
+* プロジェクトの一意の名前を入力します。このガイドでは`okta.sample`という名前を使用しています。
+* `build.gradle`ファイルを開いて以下の依存関係を追加します。保存したら、Gradleプロジェクトを更新します。
 
 ```java
 dependencies {
@@ -126,7 +126,7 @@ dependencies {
 
 ```
 
-- `/src/main/resources/application.properties`ファイルを開いて以下のデフォルトを保存します。
+* `/src/main/resources/application.properties`ファイルを開いて以下のデフォルトを保存します。
 
 ```java
 okta.oauth2.redirect-uri=/authorization-code/callback
@@ -142,10 +142,10 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 
 <Choice option="programming.platform" value="python" color="none">
 
-- アプリケーション用にローカルディレクトリを作成します。
-- ターミナル/コマンドプロンプトで`pip`コマンド (`pip install flask flask_oidc okta boxsdk config`) を使用して、必要な依存関係をインストールします。
-- ローカルディレクトリに 3 つのファイル (`client_secrets.json`、`config.py`、`server.py`) を作成します。
-- `config.py`を開いて以下の内容を保存します。これは、必要となる Okta アプリの構成情報の一部です。残りの情報については、次の手順で設定します。
+* アプリケーション用にローカルディレクトリを作成します。
+* ターミナル/コマンドプロンプトで`pip`コマンド (`pip install flask flask_oidc okta boxsdk config`) を使用して、必要な依存関係をインストールします。
+* ローカルディレクトリに3つのファイル (`client_secrets.json`、`config.py`、`server.py`) を作成します。
+* `config.py`を開いて以下の内容を保存します。これは、必要となるOktaアプリの構成情報の一部です。残りの情報については、次の手順で設定します。
 
 ```python
 okta_client_secret = 'YOUR OKTA CLIENT SECRET'
@@ -155,7 +155,7 @@ okta_callback_route = '/oidc/callback'
 
 ```
 
-- `client_secrets.json`を開いて以下の内容を保存します。これは、構成時に Flask OpenID Connect 統合で使用される標準のオブジェクトです。残りの情報については、次の手順で設定します。
+* `client_secrets.json`を開いて以下の内容を保存します。これは、構成時にFlask OpenID Connect統合で使用される標準のオブジェクトです。残りの情報については、次の手順で設定します。
 
 ```js
 {
@@ -178,24 +178,24 @@ okta_callback_route = '/oidc/callback'
 
 <Choice option="programming.platform" value="cs" color="none">
 
-- アプリケーション用にローカルディレクトリを作成します。
-- コマンドプロンプト/ターミナルウィンドウを開いて、ローカルアプリケーションディレクトリに移動します。[.NET Core CLI][dotnet-cli]を使用して、`dotnet new mvc`と入力して Enter キーを押します。これにより、ASP.NET Core MVC (Model-View-Controller) ウェブアプリに主要なスキャフォールディングが作成されます。または、[Visual Studio から直接][vs-app-create]このアプリケーションを作成することもできます。
-- コマンドプロンプト/ターミナルウィンドウで、ローカルアプリケーションディレクトリに`dotnet add package Okta.AspNetCore`と入力して Okta ASP.NET Core の依存関係を追加し、`dotnet add package Box.V2.Core`と入力して Box の依存関係を追加します。
-- Visual Studio またはお好みのエディタに新しいアプリケーションを読み込みます。
-- プロジェクトのルート内で`Startup.cs`を開きます。
-- ファイルの先頭に以下のパッケージ宣言を追加します。
+* アプリケーション用にローカルディレクトリを作成します。
+* コマンドプロンプト/ターミナルウィンドウを開いて、ローカルアプリケーションディレクトリに移動します。[.NET Core CLI][dotnet-cli]を使用して、`dotnet new mvc`と入力してEnterキーを押します。これにより、ASP.NET Core MVC (Model-View-Controller) ウェブアプリに主要なスキャフォールディングが作成されます。または、[Visual Studioから直接][vs-app-create]このアプリケーションを作成することもできます。
+* コマンドプロンプト/ターミナルウィンドウで、ローカルアプリケーションディレクトリに`dotnet add package Okta.AspNetCore`と入力してOkta ASP.NET Coreの依存関係を追加し、`dotnet add package Box.V2.Core`と入力してBoxの依存関係を追加します。
+* Visual Studioまたはお好みのエディタに新しいアプリケーションを読み込みます。
+* プロジェクトのルート内で`Startup.cs`を開きます。
+* ファイルの先頭に以下のパッケージ宣言を追加します。
 
-```csharp
+```dotnet
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 
 ```
 
-- `ConfigureServices`メソッドの内容を以下の内容に置き換えます。具体的な Okta アプリケーションの値は次の手順で設定します。
+* `ConfigureServices`メソッドの内容を以下の内容に置き換えます。具体的なOktaアプリケーションの値は次の手順で設定します。
 
 <!-- markdownlint-disable line-length -->
 
-```csharp
+```dotnet
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
 {
@@ -218,7 +218,7 @@ services.AddAuthentication(options =>
 
 次の行を`Configure`メソッドの**先頭**に追加します。
 
-```csharp
+```dotnet
 app.UseAuthentication();
 
 ```
@@ -239,8 +239,8 @@ app.UseAuthentication();
 
 ## まとめ
 
-- 新しいローカルアプリケーション、ファイル、基本的な構成の詳細を作成しました。
-- プロジェクトの依存関係をすべてインストールしました。
+* 新しいローカルアプリケーション、ファイル、基本的な構成の詳細を作成しました。
+* プロジェクトの依存関係をすべてインストールしました。
 
 <Observe option="programming.platform" value="node,java,python">
 
@@ -253,4 +253,5 @@ app.UseAuthentication();
 </Observe>
 
 [dotnet-cli]: https://docs.microsoft.com/en-us/dotnet/core/tools/
+
 [vs-app-create]: https://docs.microsoft.com/en-us/visualstudio/ide/quickstart-aspnet-core

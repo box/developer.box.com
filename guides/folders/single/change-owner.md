@@ -22,7 +22,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/folders/single/change-owner.md
 fullyTranslated: true
 ---
-
 # フォルダ所有者の変更
 
 フォルダの所有者を変更するには、まず、フォルダの移行先となるユーザーをフォルダのコラボレータとして招待します。
@@ -51,7 +50,7 @@ curl -X PUT https://api.box.com/2.0/collaborations/1234 \
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 BoxCollaborationRequest requestParams = new BoxCollaborationRequest()
 {
     Id = "12345",
@@ -91,11 +90,11 @@ updated_collaboration = collaboration.update_info(CollaborationRole.OWNER)
 <Tab title="Node">
 
 ```js
-client.collaborations
-	.update("12345", { role: client.collaborationRoles.OWNER })
-	.then((collaboration) => {
-		// ...
-	});
+client.collaborations.update('12345', {role: client.collaborationRoles.OWNER})
+  .then(collaboration => {
+    // ...
+  });
+
 ```
 
 </Tab>

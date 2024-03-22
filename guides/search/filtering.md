@@ -17,10 +17,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/search/3-filtering.md
 fullyTranslated: true
 ---
-
 # 検索結果に対するフィルタ
 
-[`GET /search`](e://get_search) API では、API によって返された結果にフィルタをかけるためのさまざまな方法がサポートされています。
+[`GET /search`](e://get_search) APIでは、APIによって返された結果にフィルタをかけるためのさまざまな方法がサポートされています。
 
 ## コンテンツタイプによるフィルタ
 
@@ -63,7 +62,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 var contentTypes = new List<string>();
 contentTypes.Add("name");
 contentTypes.Add("tags");
@@ -87,26 +86,31 @@ client.search().query("sales", content_types=["name", "tags"])
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		content_types: ["name", "tags"],
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    content_types:  [
+      "name",
+      "tags"
+    ]
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
 
 </Tabs>
 
-| コンテンツタイプ |                                                          |
-| ---------------- | -------------------------------------------------------- |
-| `name`           | `name`フィールドで定義されている、項目の名前。           |
-| `description`    | `description`フィールドで定義されている、項目の説明。    |
-| `file_content`   | ファイルの実際のコンテンツ。                             |
-| `comments`       | ファイルまたはフォルダに対するコメントのコンテンツ。     |
-| `tags`           | `tags`フィールドで定義されている、項目に適用されるタグ。 |
+| コンテンツタイプ       |                                   |
+| -------------- | --------------------------------- |
+| `name`         | `name`フィールドで定義されている、項目の名前。        |
+| `description`  | `description`フィールドで定義されている、項目の説明。 |
+| `file_content` | ファイルの実際のコンテンツ。                    |
+| `comments`     | ファイルまたはフォルダに対するコメントのコンテンツ。        |
+| `tags`         | `tags`フィールドで定義されている、項目に適用されるタグ。   |
 
 <!-- markdownlint-enable line-length -->
 
@@ -158,7 +162,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 var createdAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var createdAtRangeToDate = new DateTime(2018, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var updatedAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
@@ -182,22 +186,24 @@ client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-0
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
-		updated_at_range: "2014-05-15T13:35:01Z,",
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
+    updated_at_range: "2014-05-15T13:35:01Z,"
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
 
 </Tabs>
 
-| クエリパラメータ   |                                                                                                                  |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| クエリパラメータ           |                                                                |
+| ------------------ | -------------------------------------------------------------- |
 | `created_at_range` | 結果を返す`created_at`の日付の範囲を定義します。上限または下限を空にすると、範囲を期限なしにすることができます。 |
 | `updated_at_range` | 結果を返す`updated_at`の日付の範囲を定義します。上限または下限を空にすると、範囲を期限なしにすることができます。 |
 
@@ -205,7 +211,7 @@ client.search
 
 ## ファイル拡張子によるフィルタ
 
-デフォルトでは、さまざまな種類のファイル拡張子の項目が返されます。`file_extensions`クエリパラメータを使用すると、指定した 1 つ以上のファイル拡張子のファイルのみが返されるよう、検索結果にフィルタをかけることができます。
+デフォルトでは、さまざまな種類のファイル拡張子の項目が返されます。`file_extensions`クエリパラメータを使用すると、指定した1つ以上のファイル拡張子のファイルのみが返されるよう、検索結果にフィルタをかけることができます。
 
 <!-- markdownlint-disable line-length -->
 
@@ -244,7 +250,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 var fileExtensions = new List<string>();
 fileExtensions.Add("pdf");
 fileExtensions.Add("txt");
@@ -268,13 +274,18 @@ client.search().query("sales", file_extensions=["pdf", "txt"])
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		file_extensions: ["pdf", "txt"],
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    file_extensions:  [
+      "pdf",
+      "txt"
+    ]
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
@@ -322,7 +333,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", sizeRangeLowerBoundBytes: 10000, sizeRangeUpperBoundBytes: 20000);
 
@@ -342,13 +353,15 @@ client.search().query("sales", size_range=[10000,20000])
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		size_range: "10000,20000",
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    size_range: '10000,20000'
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
@@ -359,7 +372,7 @@ client.search
 
 ## ファイルタイプによるフィルタ
 
-デフォルトでは、ファイル、フォルダ、およびウェブリンクがすべて返されます。結果をそのうちの 1 つだけに絞り込むには、`type`クエリパラメータを`file`、`folder`、`web_link`のいずれかに設定します。
+デフォルトでは、ファイル、フォルダ、およびウェブリンクがすべて返されます。結果をそのうちの1つだけに絞り込むには、`type`クエリパラメータを`file`、`folder`、`web_link`のいずれかに設定します。
 
 <!-- markdownlint-disable line-length -->
 
@@ -394,7 +407,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", type: "file");
 
@@ -414,13 +427,15 @@ client.search().query("sales", type="file")
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		type: "file",
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    type: "file"
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
@@ -480,7 +495,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 var userIds = new List<string>();
 userIds.Add("34446362");
 userIds.Add("462281242");
@@ -504,13 +519,15 @@ client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		owner_user_ids: "34446362,462281242",
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    owner_user_ids: "34446362,462281242"
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>
@@ -560,7 +577,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```csharp
+```dotnet
 var folderIds = new List<string>();
 folderIds.Add("45235463");
 folderIds.Add("73445321");
@@ -584,13 +601,15 @@ client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 <Tab title="Node">
 
 ```js
-client.search
-	.query("sales", {
-		ancestor_folder_ids: "45235463,73445321",
-	})
-	.then((results) => {
-		// ...
-	});
+client.search.query(
+  'sales',
+  {
+    ancestor_folder_ids: "45235463,73445321"
+  })
+  .then(results => {
+    // ...
+  });
+
 ```
 
 </Tab>

@@ -26,16 +26,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/jwt/without-sdk.md
 fullyTranslated: true
 ---
+# SDKを使用しないJWT
 
-# SDK を使用しない JWT
+このガイドでは、Box SDKを使用しないJWT認証について説明します。JWTはエンドユーザーによる操作を必要とせず、Box APIで直接認証するよう設計されています。
 
-このガイドでは、Box SDK を使用しない JWT 認証について説明します。JWT はエンドユーザーによる操作を必要とせず、Box API で直接認証するよう設計されています。
-
-このトークンの使用方法を確認するには、[API コールの実行](g://api-calls)に関するガイドを参照してください。
+このトークンの使用方法を確認するには、[APIコールの実行](g://api-calls)に関するガイドを参照してください。
 
 <Message notice>
 
-デフォルトでは、JWT を使用して取得したアクセストークンは、アプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行される API コールはすべて、このアプリケーションから実行されます。アプリケーションのサービスアカウントがコラボレータとして追加されるまで、このアカウントでは、既存のファイルやフォルダにアクセスできません。
+デフォルトでは、JWTを使用して取得したアクセストークンは、アプリケーションのサービスアカウントに関連付けられています。このトークンを使用して実行されるAPIコールはすべて、このアプリケーションから実行されます。アプリケーションのサービスアカウントがコラボレータとして追加されるまで、このアカウントでは、既存のファイルやフォルダにアクセスできません。
 
 `as-user`ヘッダーを使用するか[ユーザーアクセストークン](g://authentication/jwt/user-access-tokens)をリクエストして、[別のユーザーとして処理を実行](g://authentication/oauth2/as-user)できます。
 
@@ -43,15 +42,15 @@ fullyTranslated: true
 
 ## キーペアの使用
 
-公開キーと秘密キーのペアを使用してアプリケーションの ID を確認する場合は、以下の手順に従います。
+公開キーと秘密キーのペアを使用してアプリケーションのIDを確認する場合は、以下の手順に従います。
 
 ### 前提条件
 
-- [開発者コンソール][devconsole]で JWT 認証を使用するカスタムアプリケーション
-- `config.json`という名前の秘密キー構成ファイル ([開発者コンソール][devconsole]の \[構成] タブからダウンロード可能)
-- Box 管理コンソールでアプリケーションが[承認][auth]されていること
+* [開発者コンソール][devconsole]でJWT認証を使用するカスタムアプリケーション
+* `config.json`という名前の秘密キー構成ファイル ([開発者コンソール][devconsole]の \[構成] タブからダウンロード可能)
+* Box管理コンソールでアプリケーションが[承認][auth]されていること
 
-### 1. JSON 構成を読み取る
+### 1. JSON構成を読み取る
 
 `config.json`ファイルには、アプリケーションの秘密キーと、認証に必要なその他の詳細が含まれています。このファイルの例を以下に示します。
 
@@ -63,17 +62,18 @@ fullyTranslated: true
 
 ```json
 {
-	"boxAppSettings": {
-		"clientID": "abc...123",
-		"clientSecret": "def...234",
-		"appAuth": {
-			"publicKeyID": "abcd1234",
-			"privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
-			"passphrase": "ghi...345"
-		}
-	},
-	"enterpriseID": "1234567"
+  "boxAppSettings": {
+    "clientID": "abc...123",
+    "clientSecret": "def...234",
+    "appAuth": {
+      "publicKeyID": "abcd1234",
+      "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
+      "passphrase": "ghi...345"
+    }
+  },
+  "enterpriseID": "1234567"
 }
+
 ```
 
 <!-- markdownlint-enable line-length -->
@@ -88,7 +88,7 @@ fullyTranslated: true
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 using System;
 using System.IO;
 using Newtonsoft.Json;
@@ -171,6 +171,7 @@ config = json.load(open('config.json'))
 const fs = require("fs");
 
 const config = JSON.parse(fs.readFileSync("config.json"));
+
 ```
 
 </Tab>
@@ -202,21 +203,21 @@ $config = json_decode($json);
 
 <Message>
 
-# JSON の解析
+# JSONの解析
 
-プログラミング言語によっては、ファイルから JSON を読み取って解析する方法が複数ある場合があります。エラー処理など、さらに詳細な説明については、使用するプログラミング言語のガイドを参照してください。
+プログラミング言語によっては、ファイルからJSONを読み取って解析する方法が複数ある場合があります。エラー処理など、さらに詳細な説明については、使用するプログラミング言語のガイドを参照してください。
 
 </Message>
 
 ### 2. 秘密キーを復号する
 
-JWT アサーションを作成するために、アプリケーションでは構成オブジェクトにある秘密キーが必要になります。この秘密キーは暗号化されており、ロックを解除するにはパスコードが必要です。暗号化されたキーとパスコードは両方とも、構成オブジェクトで指定されています。
+JWTアサーションを作成するために、アプリケーションでは構成オブジェクトにある秘密キーが必要になります。この秘密キーは暗号化されており、ロックを解除するにはパスコードが必要です。暗号化されたキーとパスコードは両方とも、構成オブジェクトで指定されています。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 using System.Security.Cryptography;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -338,9 +339,10 @@ key = load_pem_private_key(
 
 ```js
 let key = {
-	key: config.boxAppSettings.appAuth.privateKey,
-	passphrase: config.boxAppSettings.appAuth.passphrase,
+  key: config.boxAppSettings.appAuth.privateKey,
+  passphrase: config.boxAppSettings.appAuth.passphrase,
 };
+
 ```
 
 </Tab>
@@ -381,17 +383,17 @@ $key = openssl_pkey_get_private($private_key, $passphrase);
 
 </Message>
 
-### 3. JWT アサーションを作成する
+### 3. JWTアサーションを作成する
 
-Box API で認証するために、アプリケーションは、アクセストークンと交換できる署名済みの JWT アサーションを作成する必要があります。
+Box APIで認証するために、アプリケーションは、アクセストークンと交換できる署名済みのJWTアサーションを作成する必要があります。
 
-JWT アサーションは、暗号化された JSON オブジェクトで、`header`、`claims`、および`signature`で構成されます。最初に`claims`を作成します。これは、`payload`とも呼ばれる場合もあります。
+JWTアサーションは、暗号化されたJSONオブジェクトで、`header`、`claims`、および`signature`で構成されます。最初に`claims`を作成します。これは、`payload`とも呼ばれる場合もあります。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Collections.Generic;
@@ -460,13 +462,14 @@ const crypto = require("crypto");
 const authenticationUrl = "https://api.box.com/oauth2/token";
 
 let claims = {
-	iss: config.boxAppSettings.clientID,
-	sub: config.enterpriseID,
-	box_sub_type: "enterprise",
-	aud: authenticationUrl,
-	jti: crypto.randomBytes(64).toString("hex"),
-	exp: Math.floor(Date.now() / 1000) + 45,
+  iss: config.boxAppSettings.clientID,
+  sub: config.enterpriseID,
+  box_sub_type: "enterprise",
+  aud: authenticationUrl,
+  jti: crypto.randomBytes(64).toString("hex"),
+  exp: Math.floor(Date.now() / 1000) + 45,
 };
+
 ```
 
 </Tab>
@@ -514,26 +517,26 @@ $claims = [
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ            | 型      | 説明                                                                                                                                                        |
-| --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `iss` (必須)          | String  | Box アプリケーションの OAuth クライアント ID                                                                                                                |
-| `sub` (必須)          | String  | Box Enterprise ID (このアプリがそのアプリケーションのサービスアカウントの代わりになる場合) またはユーザー ID (このアプリが別のユーザーの代わりになる場合)。 |
-| `box_sub_type` (必須) | String  | `enterprise`または`user` (`sub`クレームでリクエストされているトークンの種類に応じて決定)                                                                    |
-| `aud` (必須)          | String  | 常に`https://api.box.com/oauth2/token`                                                                                                                      |
-| `jti` (必須)          | String  | この JWT に対してアプリケーションで指定された UUID (Universally Unique Identifier)。16 文字以上 128 文字以下の一意の文字列です。                            |
-| `exp` (必須)          | Integer | この JWT が期限切れとなる Unix 時間。設定できる最大値は、発行時刻から 60 秒後です。許容される最大値よりも小さい値を設定することをお勧めします。             |
-| `iat` (省略可)        | Integer | 発行時刻。トークンは、この時刻より前に使用することはできません。                                                                                            |
-| `nbf` (省略可)        | Integer | 開始時刻。トークンの有効期間の開始時刻を指定します。                                                                                                        |
+| パラメータ               | 型       | 説明                                                                                         |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------ |
+| `iss` (必須)          | String  | BoxアプリケーションのOAuthクライアントID                                                                  |
+| `sub` (必須)          | String  | Box Enterprise ID (このアプリがそのアプリケーションのサービスアカウントの代わりになる場合) またはユーザーID (このアプリが別のユーザーの代わりになる場合)。 |
+| `box_sub_type` (必須) | String  | `enterprise`または`user` (`sub`クレームでリクエストされているトークンの種類に応じて決定)                                  |
+| `aud` (必須)          | String  | 常に`https://api.box.com/oauth2/token`                                                       |
+| `jti` (必須)          | String  | このJWTに対してアプリケーションで指定されたUUID (Universally Unique Identifier)。16文字以上128文字以下の一意の文字列です。        |
+| `exp` (必須)          | Integer | このJWTが期限切れとなるUnix時間。設定できる最大値は、発行時刻から60秒後です。許容される最大値よりも小さい値を設定することをお勧めします。                  |
+| `iat` (省略可)         | Integer | 発行時刻。トークンは、この時刻より前に使用することはできません。                                                           |
+| `nbf` (省略可)         | Integer | 開始時刻。トークンの有効期間の開始時刻を指定します。                                                                 |
 
 <!-- markdownlint-enable line-length -->
 
-次に、秘密キーを使用してこれらのクレームに署名する必要があります。使用する言語とライブラリに応じて、クレームの署名に使用する暗号化アルゴリズムと公開キーの ID を定義することで、JWT の`header`が構成されます。
+次に、秘密キーを使用してこれらのクレームに署名する必要があります。使用する言語とライブラリに応じて、クレームの署名に使用する暗号化アルゴリズムと公開キーのIDを定義することで、JWTの`header`が構成されます。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 using Microsoft.IdentityModel.Tokens;
 
 String authenticationUrl = "https://api.box.com/oauth2/token";
@@ -607,11 +610,12 @@ const jwt = require("jsonwebtoken");
 let keyId = config.boxAppSettings.appAuth.publicKeyID;
 
 let headers = {
-	algorithm: "RS512",
-	keyid: keyId,
+  algorithm: "RS512",
+  keyid: keyId,
 };
 
 let assertion = jwt.sign(claims, key, headers);
+
 ```
 
 </Tab>
@@ -643,30 +647,30 @@ $assertion = JWT::encode($claims, $key, 'RS512');
 
 <!-- markdownlint-disable line-length -->
 
-| パラメータ         | 型     | 説明                                                                                                                          |
-| ------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `algorithm` (必須) | String | JWT クレームへの署名に使用する暗号化アルゴリズム。RS256、RS384、RS512 のいずれかを指定できます。                              |
-| `keyid` (必須)     | String | JWT への署名に使用する公開キーの ID。必須ではありませんが、アプリケーションに対して複数のキーペアが定義される場合は必須です。 |
+| パラメータ            | 型      | 説明                                                               |
+| ---------------- | ------ | ---------------------------------------------------------------- |
+| `algorithm` (必須) | String | JWTクレームへの署名に使用する暗号化アルゴリズム。RS256、RS384、RS512のいずれかを指定できます。         |
+| `keyid` (必須)     | String | JWTへの署名に使用する公開キーのID。必須ではありませんが、アプリケーションに対して複数のキーペアが定義される場合は必須です。 |
 
 <!-- markdownlint-enable line-length -->
 
 <Message>
 
-JWT ライブラリの使用
+JWTライブラリの使用
 
-独自の JWT への署名は、複雑で手間のかかる処理になる可能性があります。そのようなことがないよう、事前にこの処理を済ませたライブラリがほぼすべての言語で用意されています。概要については、[JWT.io](https://jwt.io/)をご覧ください。
+独自のJWTへの署名は、複雑で手間のかかる処理になる可能性があります。そのようなことがないよう、事前にこの処理を済ませたライブラリがほぼすべての言語で用意されています。概要については、[JWT.io](https://jwt.io/)をご覧ください。
 
 </Message>
 
 ### 4. アクセストークンをリクエストする
 
-最後の手順として、有効期間の短い JWT アサーションを、より有効期間の長いアクセストークンと交換します。これには、アサーションをパラメータに指定してトークンエンドポイントを呼び出します。
+最後の手順として、有効期間の短いJWTアサーションを、より有効期間の長いアクセストークンと交換します。これには、アサーションをパラメータに指定してトークンエンドポイントを呼び出します。
 
 <Tabs>
 
 <Tab title=".Net">
 
-```csharp
+```dotnet
 using System.Net;
 using System.Net.Http;
 
@@ -771,16 +775,17 @@ const axios = require("axios");
 const querystring = require("querystring");
 
 let accessToken = await axios
-	.post(
-		authenticationUrl,
-		querystring.stringify({
-			grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-			assertion: assertion,
-			client_id: config.boxAppSettings.clientID,
-			client_secret: config.boxAppSettings.clientSecret,
-		})
-	)
-	.then((response) => response.data.access_token);
+  .post(
+    authenticationUrl,
+    querystring.stringify({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: assertion,
+      client_id: config.boxAppSettings.clientID,
+      client_secret: config.boxAppSettings.clientSecret,
+    })
+  )
+ .then((response) => response.data.access_token);
+
 ```
 
 </Tab>
@@ -842,7 +847,11 @@ $access_token = json_decode($data)->access_token;
 このガイドに記載されているコードは、[GitHub][samples]で入手できます。
 
 [samples]: https://github.com/box-community/samples-docs-authenticate-with-jwt-api
+
 [devconsole]: https://app.box.com/developers/console
+
 [configfile]: g://authentication/jwt/jwt-setup/#jwt-keypair
+
 [ccg]: g://authentication/jwt/without-sdk/#client-credentials-grant
+
 [auth]: g://authorization

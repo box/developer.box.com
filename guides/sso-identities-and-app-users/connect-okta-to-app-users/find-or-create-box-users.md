@@ -16,82 +16,82 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/sso-identities-and-app-users/connect-okta-to-app-users/5-find-or-create-box-users.md
 fullyTranslated: true
 ---
+# Box App Userの検索または作成
 
-# Box App User の検索または作成
+この時点で、アプリケーションコードが作成されています。このコードでは、ユーザーアクセスからのトラフィックを処理し、これらをログインのためにOktaに転送して、Oktaのユーザー情報を提供した後、最終的にはBoxのハンドラ (現時点で未作成) に渡します。
 
-この時点で、アプリケーションコードが作成されています。このコードでは、ユーザーアクセスからのトラフィックを処理し、これらをログインのために Okta に転送して、Okta のユーザー情報を提供した後、最終的には Box のハンドラ (現時点で未作成) に渡します。
+このセクションでは、以下のようにBoxの最終的なコンポーネントを取り上げます。
 
-このセクションでは、以下のように Box の最終的なコンポーネントを取り上げます。
-
-- Okta ユーザーに、関連付けられた Box App User アカウントがあるかどうかを検証します。
-- (関連付けられているアカウントがない場合は) 関連付けられている Okta レコードに新しいアプリユーザーを作成します。
-- Box ユーザーのトークンを取得してユーザー固有の API コールを実行します。
+* Oktaユーザーに、関連付けられたBox App Userアカウントがあるかどうかを検証します。
+* (関連付けられているアカウントがない場合は) 関連付けられているOktaレコードに新しいアプリユーザーを作成します。
+* Boxユーザーのトークンを取得してユーザー固有のAPIコールを実行します。
 
 ## 新しいアプリユーザーの作成
 
-ユーザーを検証する前に、関連付けられた Box ユーザーアカウントが Okta ユーザーにない場合のために、そのアカウントを作成する方法が必要です。
+ユーザーを検証する前に、関連付けられたBoxユーザーアカウントがOktaユーザーにない場合のために、そのアカウントを作成する方法が必要です。
 
 <Choice option="programming.platform" value="node" color="none">
 
-ローカルアプリケーションディレクトリで、手順 1 で作成した`server.js`ファイルを読み込みます。
+ローカルアプリケーションディレクトリで、手順1で作成した`server.js`ファイルを読み込みます。
 
-次の`box`オブジェクトをファイルに追加し、保存します。
+次の`box`オブジェクトをファイルに追加し、保存します。 
 
 ```js
 const box = (() => {
-	const configJSON = JSON.parse(
-		fs.readFileSync(path.resolve(__dirname, "./config.json"))
-	);
-	const sdk = boxSDK.getPreconfiguredInstance(configJSON);
-	const client = sdk.getAppAuthClient("enterprise");
+  const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
+  const sdk = boxSDK.getPreconfiguredInstance(configJSON);
+  const client = sdk.getAppAuthClient('enterprise');
 
-	let oktaRecord = {};
-	let userId = "";
-	let userClient;
+  let oktaRecord = {};
+  let userId = '';
+  let userClient;
 
-	function validateUser(userInfo, res) {
-		// TODO: VALIDATE USER
-	}
+  function validateUser(userInfo, res) {
+    // TODO: VALIDATE USER
+  }
 
-	function createUser(res) {
-		// TODO: CREATE USER
-	}
+  function createUser(res) {
+    // TODO: CREATE USER
+  }
 
-	return {
-		validateUser,
-		createUser,
-	};
+  return {
+    validateUser,
+    createUser
+  };
 })();
+
 ```
 
 このオブジェクトはいくつかの項目を定義します:
 
-- 構成: Box Node SDK の新しいインスタンスがインスタンス化され、多数の変数と共にオブジェクト関数で使用可能になります。
-- `validateUser`関数: 関連付けられた Okta ユーザーに Box ユーザーが存在するかどうかを検証するためのコードを保持します。
-- `createUser`関数: 関連付けられた Okta ユーザー ID にバインドされる新しい Box ユーザーを作成します。
+* 構成: Box Node SDKの新しいインスタンスがインスタンス化され、多数の変数と共にオブジェクト関数で使用可能になります。
+* `validateUser`関数: 関連付けられたOktaユーザーにBoxユーザーが存在するかどうかを検証するためのコードを保持します。
+* `createUser`関数: 関連付けられたOktaユーザーIDにバインドされる新しいBoxユーザーを作成します。
 
 この構造を定義したら、`// TODO: CREATE USER`セクションを以下のコードに置き換えます。
 
 ```js
-const spaceAmount = 1073741824; // ~ 1gb
+const spaceAmount = 1073741824;   // ~ 1gb
 
-client.enterprise
-	.addAppUser(this.oktaRecord.name, {
-		space_amount: spaceAmount,
-		external_app_user_id: this.oktaRecord.sub,
-	})
-	.then((appUser) => {
-		res.send(`New user created: ${appUser.name}`);
-	});
+client.enterprise.addAppUser(
+  this.oktaRecord.name, 
+  {
+    space_amount: spaceAmount,
+    external_app_user_id: this.oktaRecord.sub
+  }
+).then(appUser => {
+  res.send(`New user created: ${appUser.name}`);
+});
+
 ```
 
-このコードにより、新しい Box App User が作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意の Okta ユーザー ID に設定されます。これで、2 つのユーザーレコード間のバインドが定義されます。
+このコードにより、新しいBox App Userが作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意のOktaユーザーIDに設定されます。これで、2つのユーザーレコード間のバインドが定義されます。
 
 </Choice>
 
 <Choice option="programming.platform" value="java" color="none">
 
-ローカルアプリケーションディレクトリで、手順 1 で作成した`/src/main/java/com/box/sample/Application.java`ファイルを読み込みます。別のアプリケーション名を使用している場合は、同等のディレクトリを読み込みます。
+ローカルアプリケーションディレクトリで、手順1で作成した`/src/main/java/com/box/sample/Application.java`ファイルを読み込みます。別のアプリケーション名を使用している場合は、同等のディレクトリを読み込みます。
 
 `public class Application`の定義内に、以下のメソッドを追加します。
 
@@ -106,10 +106,10 @@ static String createUser(OidcUser user) {
 
 ```
 
-これらのメソッドは Box ユーザーの検証と作成を処理します。各メソッドの詳細は以下のとおりです。
+これらのメソッドはBoxユーザーの検証と作成を処理します。各メソッドの詳細は以下のとおりです。
 
-- `validateUser`: 関連付けられた Okta ユーザーに Box ユーザーが存在するかどうかを検証するためのコードを保持します。
-- `createUser`: 関連付けられた Okta ユーザー ID にバインドされる新しい Box ユーザーを作成します。
+* `validateUser`: 関連付けられたOktaユーザーにBoxユーザーが存在するかどうかを検証するためのコードを保持します。
+* `createUser`: 関連付けられたOktaユーザーIDにバインドされる新しいBoxユーザーを作成します。
 
 これらのメソッドを定義したら、`# TODO: CREATE USER`を以下のコードに置き換えます。
 
@@ -125,13 +125,13 @@ return "New User Created: " + createdUserInfo.getName();
 
 ```
 
-このコードにより、新しい Box App User が作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意の Okta ユーザー ID に設定されます。これで、2 つのユーザーレコード間のバインドが定義されます。
+このコードにより、新しいBox App Userが作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意のOktaユーザーIDに設定されます。これで、2つのユーザーレコード間のバインドが定義されます。
 
 </Choice>
 
 <Choice option="programming.platform" value="python" color="none">
 
-ローカルアプリケーションディレクトリで、手順 1 で作成した`server.py`ファイルを読み込みます。
+ローカルアプリケーションディレクトリで、手順1で作成した`server.py`ファイルを読み込みます。
 
 1.
 
@@ -157,9 +157,9 @@ class Box(object):
 
 このクラスで定義する内容は以下のとおりです。
 
-- `init`: 初期化時に、Box Python SDK の新しいインスタンスがインスタンス化され、オブジェクトのメソッドで使用可能になります。
-- `validateUser`メソッド: ユーザーオブジェクトを入力として受け取り、関連付けられた Okta ユーザーに Box ユーザーが存在するかどうかを検証するためのコードを保持します。
-- `createUser`メソッド: ユーザーオブジェクトを入力として受け取り、関連付けられた Okta ユーザー ID にバインドされる新しい Box ユーザーを作成します。
+* `init`: 初期化時に、Box Python SDKの新しいインスタンスがインスタンス化され、オブジェクトのメソッドで使用可能になります。
+* `validateUser`メソッド: ユーザーオブジェクトを入力として受け取り、関連付けられたOktaユーザーにBoxユーザーが存在するかどうかを検証するためのコードを保持します。
+* `createUser`メソッド: ユーザーオブジェクトを入力として受け取り、関連付けられたOktaユーザーIDにバインドされる新しいBoxユーザーを作成します。
 
 このクラスを定義したら、`# TODO: CREATE USER`セクションを以下のコードに置き換えます。
 
@@ -173,7 +173,7 @@ return f'New user created: {user_name}'
 
 ```
 
-このコードにより、新しい Box App User が作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意の Okta ユーザー ID に設定されます。これで、2 つのユーザーレコード間のバインドが定義されます。
+このコードにより、新しいBox App Userが作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意のOktaユーザーIDに設定されます。これで、2つのユーザーレコード間のバインドが定義されます。
 
 </Choice>
 
@@ -183,7 +183,7 @@ return f'New user created: {user_name}'
 
 <!-- markdownlint-disable line-length -->
 
-```csharp
+```dotnet
 static async Task validateUser(string name, string sub)
 {
   // Configure Box SDK instance
@@ -212,13 +212,13 @@ static async Task validateUser(string name, string sub)
 
 <!-- markdownlint-enable line-length -->
 
-このコードブロック内では、手順 2 でダウンロードした`config.json`ファイルを使用して新しい Box .NET SDK クライアントが作成されます。このコードサンプルの場合、その`config.json`ファイルはローカルアプリケーションディレクトリのルートに格納されます。
+このコードブロック内では、手順2でダウンロードした`config.json`ファイルを使用して新しいBox .NET SDKクライアントが作成されます。このコードサンプルの場合、その`config.json`ファイルはローカルアプリケーションディレクトリのルートに格納されます。
 
-その後、Okta の一意の ID `sub`が`externalAppUserId`検索パラメータとして渡され、クライアントを使用して、Box に登録されている会社内のすべてのユーザーが検索されます。その後、返されるユーザーの数を確認すると、有効なユーザーが検出されたかどうかがわかります。
+その後、Oktaの一意のID `sub`が`externalAppUserId`検索パラメータとして渡され、クライアントを使用して、Boxに登録されている会社内のすべてのユーザーが検索されます。その後、返されるユーザーの数を確認すると、有効なユーザーが検出されたかどうかがわかります。
 
-この構造を定義したら、// TODO: CREATE USER セクションを以下のコードに置き換えます。
+この構造を定義したら、// TODO: CREATE USERセクションを以下のコードに置き換えます。
 
-```csharp
+```dotnet
 var userRequest = new BoxUserRequest()
 {
   Name = name,
@@ -230,7 +230,7 @@ System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
 
 ```
 
-このコードにより、新しい Box App User が作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意の Okta ユーザー ID に設定されます。これで、2 つのユーザーレコード間のバインドが定義されます。
+このコードにより、新しいBox App Userが作成され、ユーザーオブジェクトの`external_app_user_id`パラメータが一意のOktaユーザーIDに設定されます。これで、2つのユーザーレコード間のバインドが定義されます。
 
 その後、新しいユーザーが作成されたことを示す診断メッセージが書き戻されます。
 
@@ -242,40 +242,40 @@ System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
 
 # 前の手順が完了していません
 
-最初に、手順 1 でお好みの言語/フレームワークを選択してください。
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## Okta ユーザーの検証
+## Oktaユーザーの検証
 
-ここまで、ユーザーを作成する機能を定義してきました。次に定義するコードでは、Box を使用する会社の全ユーザーを検索して関連付けられた`external_app_user_id`を探すことで、Okta ユーザーレコードに関連付けられた Box ユーザーレコードが存在するかどうかを検証します。
+ここまで、ユーザーを作成する機能を定義してきました。次に定義するコードでは、Boxを使用する会社の全ユーザーを検索して関連付けられた`external_app_user_id`を探すことで、Oktaユーザーレコードに関連付けられたBoxユーザーレコードが存在するかどうかを検証します。
 
 <Choice option="programming.platform" value="node" color="none">
 
 `// TODO: VALIDATE USER`コメントを以下の内容に置き換えます。
 
 ```js
-this.oktaRecord = userInfo;
+this.oktaRecord = userInfo
 
-client.enterprise
-	.getUsers({ external_app_user_id: this.oktaRecord.sub })
-	.then((result) => {
-		if (result.total_count > 0) {
-			// TODO: MAKE AUTHENTICATED USER CALL
-		} else {
-			// User not found - create user
-			this.createUser();
-		}
-	});
+client.enterprise.getUsers({ "external_app_user_id": this.oktaRecord.sub })
+.then((result) => {
+  if (result.total_count > 0) {
+    // TODO: MAKE AUTHENTICATED USER CALL
+  } else {
+    // User not found - create user
+    this.createUser();
+  }
+});
+
 ```
 
-Box Node SDK を使用した場合、`enterprise.getUsers`を呼び出して会社の全ユーザーを検索し、一意の Okta ユーザー ID を`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
+Box Node SDKを使用した場合、`enterprise.getUsers`を呼び出して会社の全ユーザーを検索し、一意のOktaユーザーIDを`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
 
-見つかった場合 (つまり、レコードの数が 1 以上だった場合) は、そのユーザーレコードを使用して、Box API に対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
+見つかった場合 (つまり、レコードの数が1以上だった場合) は、そのユーザーレコードを使用して、Box APIに対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
 
-見つからなかった場合は、1 つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しい Box ユーザーを作成します。
+見つからなかった場合は、1つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しいBoxユーザーを作成します。
 
 </Choice>
 
@@ -312,11 +312,11 @@ return outputString;
 
 ```
 
-Box Java SDK の汎用リクエストメソッドを使用した場合、`https://api.box.com/2.0/users`エンドポイントを直接呼び出して会社のユーザーを検索し、一意の Okta ユーザー ID を`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
+Box Java SDKの汎用リクエストメソッドを使用した場合、`https://api.box.com/2.0/users`エンドポイントを直接呼び出して会社のユーザーを検索し、一意のOktaユーザーIDを`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
 
-見つかった場合 (つまり、レコードの数が 1 以上だった場合) は、そのユーザーレコードを使用して、Box API に対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
+見つかった場合 (つまり、レコードの数が1以上だった場合) は、そのユーザーレコードを使用して、Box APIに対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
 
-見つからなかった場合は、1 つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しい Box ユーザーを作成します。
+見つからなかった場合は、1つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しいBoxユーザーを作成します。
 
 </Choice>
 
@@ -341,11 +341,11 @@ else:
 
 ```
 
-Box Python SDK の汎用リクエストメソッドを使用した場合、`https://api.box.com/2.0/users`エンドポイントを直接呼び出して会社のユーザーを検索し、一意の Okta ユーザー ID を`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
+Box Python SDKの汎用リクエストメソッドを使用した場合、`https://api.box.com/2.0/users`エンドポイントを直接呼び出して会社のユーザーを検索し、一意のOktaユーザーIDを`external_app_user_id`値として渡すことで、そのユーザーに特化した検索を行います。
 
-見つかった場合 (つまり、レコードの数が 1 以上だった場合) は、そのユーザーレコードを使用して、Box API に対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
+見つかった場合 (つまり、レコードの数が1以上だった場合) は、そのユーザーレコードを使用して、Box APIに対して認証済みの呼び出しを実行できます。これは次のセクションで定義します。
 
-見つからなかった場合は、1 つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しい Box ユーザーを作成します。
+見つからなかった場合は、1つ前のセクションで定義した`createUser`関数を呼び出して、その`external_app_user_id`と関連付けられた新しいBoxユーザーを作成します。
 
 </Choice>
 
@@ -353,7 +353,7 @@ Box Python SDK の汎用リクエストメソッドを使用した場合、`http
 
 `// TODO: VALIDATE USER`コメントを以下の内容に置き換えます。
 
-```csharp
+```dotnet
 var userId = users.Entries[0].Id;
 var userToken = sdk.UserToken(userId);
 BoxClient userClient = sdk.UserClient(userToken, userId);
@@ -362,7 +362,7 @@ BoxClient userClient = sdk.UserClient(userToken, userId);
 
 ```
 
-有効なユーザーが見つかった場合、Box ID が抽出されます。この ID は、アプリケーションではなく明確にそのユーザーのスコープに設定された Box SDK クライアントの生成に使用されます。
+有効なユーザーが見つかった場合、Box IDが抽出されます。このIDは、アプリケーションではなく明確にそのユーザーのスコープに設定されたBox SDKクライアントの生成に使用されます。
 
 </Choice>
 
@@ -372,32 +372,32 @@ BoxClient userClient = sdk.UserClient(userToken, userId);
 
 # 前の手順が完了していません
 
-最初に、手順 1 でお好みの言語/フレームワークを選択してください。
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
 </Choice>
 
-## 認証済みの Box ユーザーの呼び出し
+## 認証済みのBoxユーザーの呼び出し
 
-Okta ユーザーの関連付けられた Box ユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens/)アクセストークンを生成して Box API コールを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
+Oktaユーザーの関連付けられたBoxユーザーが検出されたら、明確に[そのユーザーのスコープに設定された](g://authentication/jwt/user-access-tokens/)アクセストークンを生成してBox APIコールを実行します。その後、現在のユーザーを取得するための呼び出しを実行して、すべてが機能していることと有効なユーザーアクセストークンがあることを確認します。
 
 <Choice option="programming.platform" value="node" color="none">
 
-1 つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
+1つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
 ```js
 this.userId = result.entries[0].id;
-this.userClient = sdk.getAppAuthClient("user", this.userId);
+this.userClient = sdk.getAppAuthClient('user', this.userId);
 
-this.userClient.users
-	.get(this.userClient.CURRENT_USER_ID)
-	.then((currentUser) => {
-		res.send(`Hello ${currentUser.name}`);
-	});
+this.userClient.users.get(this.userClient.CURRENT_USER_ID)
+.then(currentUser => {
+  res.send(`Hello ${currentUser.name}`);
+});
+
 ```
 
-見つかったユーザーの Box ユーザー ID をキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Okta に関連付けられた Box App User のユーザープロフィール情報が返されます。
+見つかったユーザーのBoxユーザーIDをキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Oktaに関連付けられたBox App Userのユーザープロフィール情報が返されます。
 
 </Choice>
 
@@ -405,7 +405,7 @@ this.userClient.users
 
 <!-- markdownlint-disable line-length -->
 
-1 つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
+1つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
 ```java
 // User found, authenticate as user
@@ -423,7 +423,7 @@ outputString = "Hello " + currentUserInfo.getName();
 
 ```
 
-見つかったユーザーの Box ユーザー ID をキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Okta に関連付けられた Box App User のユーザープロフィール情報が返されます。
+見つかったユーザーのBoxユーザーIDをキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Oktaに関連付けられたBox App Userのユーザープロフィール情報が返されます。
 
 <!-- markdownlint-enable line-length -->
 
@@ -431,7 +431,7 @@ outputString = "Hello " + currentUserInfo.getName();
 
 <Choice option="programming.platform" value="python" color="none">
 
-1 つ前のセクションの`# TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
+1つ前のセクションの`# TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
 ```python
 # Create user client based on discovered user
@@ -445,23 +445,23 @@ return f'Hello {current_user.name}'
 
 ```
 
-見つかったユーザーの Box ユーザー ID をキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Okta に関連付けられた Box App User のユーザープロフィール情報が返されます。
+見つかったユーザーのBoxユーザーIDをキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Oktaに関連付けられたBox App Userのユーザープロフィール情報が返されます。
 
 </Choice>
 
 <Choice option="programming.platform" value="cs" color="none">
 
-1 つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
+1つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
 <!-- markdownlint-disable line-length -->
 
-```csharp
+```dotnet
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 
 ```
 
-このユーザーのスコープに設定されたクライアントを使用すると、Box から現在のユーザーレコードが抽出され、現在のユーザー名を含む診断メッセージが書き戻されます。
+このユーザーのスコープに設定されたクライアントを使用すると、Boxから現在のユーザーレコードが抽出され、現在のユーザー名を含む診断メッセージが書き戻されます。
 
 </Choice>
 
@@ -471,7 +471,7 @@ System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 
 # 前の手順が完了していません
 
-最初に、手順 1 でお好みの言語/フレームワークを選択してください。
+最初に、手順1でお好みの言語/フレームワークを選択してください。
 
 </Message>
 
@@ -479,15 +479,15 @@ System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 
 ## まとめ
 
-- Okta ユーザーが Box ユーザーとして存在するかどうかを検証しました。
-- 存在しない場合は新しいアプリユーザーを作成しました。
-- 既存の Box ユーザーに対して Box API コールを実行しました。
+* OktaユーザーがBoxユーザーとして存在するかどうかを検証しました。
+* 存在しない場合は新しいアプリユーザーを作成しました。
+* 既存のBoxユーザーに対してBox APIコールを実行しました。
 
 <Observe option="box.app_type" value="use_own,create_new_">
 
 <Next>
 
-Box ユーザーの検証と作成を設定しました
+Boxユーザーの検証と作成を設定しました
 
 </Next>
 
