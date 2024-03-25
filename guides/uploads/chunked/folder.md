@@ -34,7 +34,7 @@ fullyTranslated: true
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -143,8 +143,9 @@ namespace BoxPlayground {
 }
 
 ```
+</Tab>
 
-<tab title="Java"></tab>
+<Tab title="Java">
 
 ```java
 public class UploadAllFilesInFolder {
