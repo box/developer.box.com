@@ -13,10 +13,13 @@ centered: false
       Developer Zone
     </Header>
 
-    Box AI natively integrates advanced AI models into the products and features
-    across the Box Content Cloud. With the Box AI Developer Zone, you can
-    explore interactive demos to view use cases, example prompts and responses,
-    and sample code.
+  Box AI natively integrates advanced AI models
+  into products available
+  across the Box Content Cloud. <br>
+  Box AI Developer Zone features interactive
+  demos you can use to try out prompts and
+  responses, view use cases, and 
+  explore the sample code.
   </HeroImage>
 </Centered>
 
@@ -25,23 +28,22 @@ centered: false
     Explore interactive demos
   </Header>
     <p style="text-align: left; margin-left: 0;">
-      The Box AI API is available in beta version, and capabilities may change.
+      Box AI API is a beta features. This means the available
+      capablitites can change.
     </p>
   <TileGrid rows="3">
-    <Tile type="summarisation" title="Generate instant
-      summary of any document" href="/ai-dev-zone-summary">
+    <Tile type="summarisation" title="Summarize a document" href="/ai-dev-zone-summary">
         TODO include information about pricing tier.
 
         <strong style="background-color: #3B1E9B">Beta version</strong>
     </Tile>
-    <Tile type="metadata" title="Extract metadata
-      from any document" href="/ai-dev-zone-metadata">
+    <Tile type="metadata" title="Extract document metadata" href="/ai-dev-zone-metadata">
         TODO include information about pricing tier.
 
         <strong style="background-color: #3B1E9B">API coming soon</strong>
     </Tile>
     <Tile type="document-qa" title="Ask questions
-        related to content of a document" href="/">
+        about content" href="/">
         This tile will link to documentation for now.
         TODO include information about pricing tier.
 
