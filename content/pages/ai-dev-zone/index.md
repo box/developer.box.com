@@ -15,8 +15,8 @@ centered: false
 
 Box AI Developer Zone features interactive
 demos you can use to try out Box AI API: 
-create prompts, explore use cases, and 
-play with the sample code
+create prompts, view use cases, and 
+explore sample code.
   </HeroImage>
 </Centered>
 
