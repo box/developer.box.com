@@ -24,10 +24,21 @@ files:
   go_back_button: AI Dev Zone
 
 sample_code:
-  headline: Box AI API
-  paragraph: Use the following endpoint to start working on
-    integrating Document Q&A into your application. This demo
-    is also using Content Preview Box UI Element.
+  summary:
+    headline: Box AI API
+    paragraph: Use this endpoint integrated
+     the document summary into your application.
+     This demo uses Content Preview Box UI Element.
+  metadata:
+    headline: Box Metadata AI API
+    paragraph: Use this endpoint to integrated
+     document metadata extraction into
+     your application. This demo uses Content Preview Box UI Element.
+  qa:
+    headline: Box AI API
+    paragraph: Use this endpoint to integrate
+     document Q&A into your application.
+     This demo uses Content Preview Box UI Element.
 
 side_panel:
   summary:
@@ -44,7 +55,7 @@ side_panel:
     url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
-  filtersError: Choose the tone of voice and length to generate
+  filtersError: Select the tone of voice and length to generate
     a document summary.
 
 fileSummary:
@@ -710,24 +721,26 @@ fileSummary:
 
 document_summary:
   placeholder: Select value
-  instruction: Select length and tone of voice to generate a document summary.
+  instruction: Select the tone of voice and
+   length to generate a document summary.
   clear: Clear
   generate: Generate summary
   tone_of_voice: Tone of voice
   length: Length
-  error: Please try again
+  error: Try again
 
 document_metadata:
-  instruction: Extract metadata from the selected document.
+  instruction: Extract metadata from
+   a selected document.
   clear: Clear
   extract: Extract
-  error: Please try again
+  error: Try again
 
 summary_filters:
   formal: Formal
   casual: Casual
   funny: Funny
-  pirate: Pirat
+  pirate: Pirate
   short: Short
   sentence: One sentence
   paragraph: One paragraph
