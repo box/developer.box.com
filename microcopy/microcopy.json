@@ -274,11 +274,11 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "false",
+  "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "Join the first BoxWorks Hackathon for Good - customers, partners, and the developer community are welcome to participate in the 48 hour Hack to benefit The Nature Conservancy.\n",
+  "headers.secondary.notifications.message": "Add the power of the Box AI API to your custom apps at Content Cloud Summit on May 15\n",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https://box.com/hack4good",
+  "headers.secondary.notifications.href": "https://events.box.com/series/content-cloud-summit-2024/landing_page",
   // The text of the CTA
   "headers.secondary.notifications.cta": "Learn more and register!",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
