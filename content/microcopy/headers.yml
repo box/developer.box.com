@@ -192,18 +192,17 @@ secondary:
     // display: |-
       A boolean that determines whether to show the orange notification bar
       in the header. Must be "true" or "false"
-    display: "false"
+    display: "true"
 
     // message: |-
       The content of the notification
     message: >
-      Join the first BoxWorks Hackathon for Good - customers,
-      partners, and the developer community are welcome to participate
-      in the 48 hour Hack to benefit The Nature Conservancy.
+      Add the power of the Box AI API to your custom apps at
+      Content Cloud Summit on May 15
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://box.com/hack4good"
+    href: "https://events.box.com/series/content-cloud-summit-2024/landing_page"
 
     // cta: |-
       The text of the CTA
