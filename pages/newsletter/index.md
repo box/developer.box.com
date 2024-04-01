@@ -45,6 +45,11 @@ Below is an archive of previous newsletters sent out.
 | 2022 | November  | [Preview][download-2022-q4] |
 | 2023 | February  | [Preview][download-2023-q1] |
 | 2023 | May       | [Preview][download-2023-q2] |
+| 2023 | June      | [Preview][download-2023-se] |
+| 2023 | August    | [Preview][download-2023-q3] |
+| 2023 | November  | [Preview][download-2023-q4] |
+| 2023 | December  | [Preview][download-2023-dec]|
+| 2024 | January   | [Preview][download-2024-jan]|
 
 [dc]: https://cloud.app.box.com/developers/console
 [download-2019-q3]: https://cloud.box.com/s/m7i1r21wudyl2cjnhotgvggou36w8rbx
@@ -62,3 +67,8 @@ Below is an archive of previous newsletters sent out.
 [download-2022-q4]: https://cloud.box.com/s/t78gw1xchnttuaj3hggq1lkas5nnn5hc
 [download-2023-q1]: https://cloud.box.com/s/lv72h8po58pci946e3fxoknvr17wihuh
 [download-2023-q2]: https://cloud.box.com/s/mjbim2keaxf5yalve6yxeihvttw749cq
+[download-2023-se]: https://cloud.box.com/s/jgt1wos3weang3bbls8qxpwphxehrnhz
+[download-2023-q3]: https://cloud.box.com/s/m479zexse7mbh1tx1et3hucmczc4dctc
+[download-2023-q4]: https://cloud.box.com/s/jb2v270xqyn72se2yqmb5m09hd31gebp
+[download-2023-dec]: https://cloud.box.com/s/rt0b6uif2xjw9fj8o409u4j2miarq4xr
+[download-2024-jan]: https://cloud.box.com/s/wo8tyu8c4yzv5ednqt4hyu8cdczkeyag
