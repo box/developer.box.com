@@ -72,8 +72,7 @@ code, or embed them straight into your page from the CDN.
     <!-- Latest version of the explorer css for your locale -->
     <link
       rel="stylesheet"
-      href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css"
-    />
+      href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
   </head>
   <body>
     <!-- Latest version of the explorer js for your locale -->
@@ -96,8 +95,7 @@ For Box Preview, the sample would look slightly different.
     <script src="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.css"
-    />
+      href="https://cdn01.boxcdn.net/platform/preview/{VERSION}/en-US/preview.css" />
   </head>
   <body>
     <div class="preview-container" style="height:400px; width:100%;"></div>
