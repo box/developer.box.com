@@ -43,8 +43,8 @@ sample_code:
 other_langs_info: Box AI works in a number of languages
   including English, Japanese, French, Spanish, and many more.
   However the underlying models are primarily trained on
-  English language documents. For more details
-  read documentation.
+  English language documents. For details, see Box AI
+  guides and API documentation.
 
 side_panel:
   summary:
