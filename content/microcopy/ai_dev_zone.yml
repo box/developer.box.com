@@ -40,18 +40,11 @@ sample_code:
      document Q&A into your application.
      This demo uses Content Preview Box UI Element.
 
-<<<<<<< HEAD
-other_langs_info: Currently English is the only language supported
-  by Box AI. Box AI may recognize questions in other languages
-  and will sometimes provide answers in those languages but we
-  have not evaluated the quality of such responses.
-=======
 other_langs_info: Box AI works in a number of languages
   including English, Japanese, French, Spanish, and many more.
   However the underlying models are primarily trained on
   English language documents. For details, see Box AI
   guides and API documentation.
->>>>>>> 605062dd2fd25c0405f2786332483371fc241635
 
 side_panel:
   summary:
