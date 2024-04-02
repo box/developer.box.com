@@ -112,17 +112,17 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Catalog
+      text: Box AI Developer Zone
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 80+ open-source repositories
-        in various programming languages.
+        Box AI Developer Zone features interactive demos
+        you can use to try out Box AI API: create prompts,
+        view use cases, and explore sample code.
 
     cta:
       text:
-        Browse sample code
+        Browse AI Developer Zone
 
 secondary:
   images:
