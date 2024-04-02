@@ -40,6 +40,11 @@ sample_code:
      document Q&A into your application.
      This demo uses Content Preview Box UI Element.
 
+other_langs_info: Currently English is the only language supported
+  by Box AI. Box AI may recognize questions in other languages
+  and will sometimes provide answers in those languages but we
+  have not evaluated the quality of responses in other languages.
+
 side_panel:
   summary:
     title: Document summary
@@ -57,10 +62,6 @@ side_panel:
   tab_sample_code: Sample Code
   filtersError: Select the tone of voice and length to generate
     a document summary.
-  other_langs_info: Currently English is the only language supported
-    by Box AI. Box AI may recognize questions in other languages
-    and will sometimes provide answers in those languages but we
-    have not evaluated the quality of responses in other languages.
 
 fileSummary:
   415542803939:
