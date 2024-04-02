@@ -14,37 +14,35 @@ centered: false
     </Header>
 
 Box AI Developer Zone features interactive
-demos you can use to try out Box AI API: 
-create prompts, view use cases, and 
-explore sample code.
+demos to give you hands-on experience with Box AI API.
+With a few clicks you can create prompts,
+view sample code, explore Box AI use cases, and more!
   </HeroImage>
 </Centered>
 
 <Centered mid>
   <Header>
-    Explore interactive demos
+    Try out interactive demos
   </Header>
     <p style="text-align: left; margin-left: 0;">
-      Box AI API is a beta feature. This means the available
-      capablitites can change.
+      Box AI API is currently a beta feature. Bear in mind that
+      the available capablitites can change.
     </p>
   <TileGrid rows="3">
-    <Tile type="summarisation" title="Summarize a document" href="/ai-dev-zone-summary">
-        TODO include information about pricing tier.
+    <Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
+        Summarize a document in a selected tone of voice. 
 
         <strong style="background-color: #e8e8e8">Beta</strong>
     </Tile>
-    <Tile type="metadata" title="Extract document metadata" href="/ai-dev-zone-metadata">
-        TODO include information about pricing tier.
+    <Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
+        Extract document metadata to use in your apps.
 
         <strong style="background-color: #e8e8e8">
           API coming soon
         </strong>
     </Tile>
-    <Tile type="document-qa" title="Ask questions
-        about content" href="/">
-        This tile will link to documentation for now.
-        TODO include information about pricing tier.
+    <Tile type="document-qa" title="Ask questions" href="/">
+        Ask Box AI about the document to get the details.
 
         <strong style="background-color: #e8e8e8">Demo coming soon</strong>
     </Tile>
@@ -62,25 +60,25 @@ explore sample code.
     AI API reference
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    Follow along with our featured guides to help get you up and running
+    Use the guides to help get you up and running.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="pen" title="Text generation"
+    <Tile type="pen" title="Generate text"
       href="/ai-dev-zone">
-        AI API ask about document's content endpoint
+        Use AI API to ask questions and receive tailored responses.
     </Tile>
     <Tile type="speach-bubble" title="Q&A"
       href="/ai-dev-zone">
-        AI API document Q&A endpoint
+        Use API AI to ask questions about the document.
     </Tile>
-    <Tile type="document" title="Metadata extraction"
+    <Tile type="document" title="Extract metadata"
       href="/ai-dev-zone">
-        Metadata AI API for extrating metadata from a document
+        Learn how to extract document metadata with AI API.
     </Tile>
-    <Tile type="document" title="Metadata extraction"
+    <Tile type="document" title="Extract metadata"
       href="/ai-dev-zone">
-        Metadata AI API for extrating metadata from a document
+        Learn how to extract document metadata with AI API.
     </Tile>
   </TileGrid>
 </Centered> -->

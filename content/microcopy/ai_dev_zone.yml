@@ -26,12 +26,12 @@ files:
 sample_code:
   summary:
     headline: Box AI API
-    paragraph: Use this endpoint integrated
+    paragraph: Use this endpoint to integrate
      the document summary into your application.
      This demo uses Content Preview Box UI Element.
   metadata:
     headline: Box Metadata AI API
-    paragraph: Use this endpoint to integrated
+    paragraph: Use this endpoint to integrate
      document metadata extraction into
      your application. This demo uses Content Preview Box UI Element.
   qa:
@@ -43,7 +43,7 @@ sample_code:
 other_langs_info: Currently English is the only language supported
   by Box AI. Box AI may recognize questions in other languages
   and will sometimes provide answers in those languages but we
-  have not evaluated the quality of responses in other languages.
+  have not evaluated the quality of such responses.
 
 side_panel:
   summary:
