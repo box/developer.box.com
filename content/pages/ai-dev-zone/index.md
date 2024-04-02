@@ -32,19 +32,21 @@ explore sample code.
     <Tile type="summarisation" title="Summarize a document" href="/ai-dev-zone-summary">
         TODO include information about pricing tier.
 
-        <strong style="background-color: #3B1E9B">Beta version</strong>
+        <strong style="background-color: #9f3fed">Beta</strong>
     </Tile>
     <Tile type="metadata" title="Extract document metadata" href="/ai-dev-zone-metadata">
         TODO include information about pricing tier.
 
-        <strong style="background-color: #3B1E9B">API coming soon</strong>
+        <strong class="dark" style="background-color: #e8e8e8">
+          API coming soon
+        </strong>
     </Tile>
     <Tile type="document-qa" title="Ask questions
         about content" href="/">
         This tile will link to documentation for now.
         TODO include information about pricing tier.
 
-        <strong style="background-color: #909090">Demo coming soon</strong>
+        <strong class="dark" style="background-color: #e8e8e8">Demo coming soon</strong>
     </Tile>
     <Tile disabled type="metadata" title="Extract metadata"
         href="/ai-dev-zone">
