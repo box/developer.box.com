@@ -7,16 +7,16 @@ files:
   headline: Sample files
   labels:
     415542803939:
-      name: Sample_Document.pdf
+      name: Sample_document_short.pdf
       description: Document
     416044542013:
-      name: Sample_Book.pdf
+      name: Sample_book.pdf
       description: Document
     1415911293122:
-      name: Sample_Powerpoint.ppx
+      name: Sample_powerpoint.ppx
       description: Presentation
     420985736453:
-      name: Sample_long.pdf
+      name: Sample_document_long.pdf
       description: Document
     1472263705884:
       name: Sample_article.docx
@@ -26,19 +26,25 @@ files:
 sample_code:
   summary:
     headline: Box AI API
-    paragraph: Use the following endpoint to start working on
-      integrating document summary into your application. This demo
-      is also using Content Preview Box UI Element.
+    paragraph: Use this endpoint to integrate
+     the document summary into your application.
+     This demo uses Content Preview Box UI Element.
   metadata:
     headline: Box Metadata AI API
-    paragraph: Use the following endpoint to start working on
-      integrating document metadata extraction into your application. This demo
-      is also using Content Preview Box UI Element.
+    paragraph: Use this endpoint to integrate
+     document metadata extraction into
+     your application. This demo uses Content Preview Box UI Element.
   qa:
     headline: Box AI API
-    paragraph: Use the following endpoint to start working on
-      integrating document Q&A into your application. This demo
-      is also using Content Preview Box UI Element.
+    paragraph: Use this endpoint to integrate
+     document Q&A into your application.
+     This demo uses Content Preview Box UI Element.
+
+other_langs_info: Box AI works in a number of languages
+  including English, Japanese, French, Spanish, and many more.
+  However the underlying models are primarily trained on
+  English language documents. For details, see Box AI
+  guides and API documentation.
 
 side_panel:
   summary:
@@ -55,7 +61,7 @@ side_panel:
     url: /
   tab_demo: Demo
   tab_sample_code: Sample Code
-  filtersError: Choose the tone of voice and length to generate
+  filtersError: Select the tone of voice and length to generate
     a document summary.
 
 fileSummary:
@@ -721,24 +727,26 @@ fileSummary:
 
 document_summary:
   placeholder: Select value
-  instruction: Select length and tone of voice to generate a document summary.
+  instruction: Select the tone of voice and
+   length to generate a document summary.
   clear: Clear
   generate: Generate summary
   tone_of_voice: Tone of voice
   length: Length
-  error: Please try again
+  error: Try again
 
 document_metadata:
-  instruction: Extract metadata from the selected document.
+  instruction: Extract metadata from
+   a selected document.
   clear: Clear
   extract: Extract
-  error: Please try again
+  error: Try again
 
 summary_filters:
   formal: Formal
   casual: Casual
   funny: Funny
-  pirate: Pirat
+  pirate: Pirate
   short: Short
   sentence: One sentence
   paragraph: One paragraph

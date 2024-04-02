@@ -116,20 +116,18 @@ primary:
       text: Featured
 
     title:
-      text: Box AI API
+      text: Box AI Developer Zone
 
     details:
       text: |-
-        All the power of Box AI from within your
-        application. Make the most of your valuable
-        content with questions and answers, text
-        generation and Metadata suggestions.
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
 
     cta:
-      text:
-        Check out the Box AI API
+      text: |-
+        Try it out!
       url:
-        /guides/box-ai-api/
+        /ai-dev-zone/
 
 secondary:
   images:
