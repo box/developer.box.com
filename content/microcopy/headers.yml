@@ -118,6 +118,8 @@ primary:
     cta:
       text: |-
         Try it out!
+      url:
+        /ai-dev-zone/
 
 secondary:
   images:
