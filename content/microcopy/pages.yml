@@ -30,11 +30,11 @@ featured_board:
 
   aiDevZone:
     type: aiDevZone
-    cta: Explore AI Dev Zone
+    cta: Try it out!
     link: /ai-dev-zone
     tag: Featured
     headline: Box AI Developer Zone
     text: |-
-      Explore interactive AI demos to view use
-      cases, prompts with AI responses, sample
-      code, documentation, and more!
+      Use our interactive AI demos to
+      try out prompts with AI responses,
+      view sample code, documentation and more!

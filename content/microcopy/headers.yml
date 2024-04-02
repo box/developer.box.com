@@ -112,13 +112,12 @@ primary:
 
     details:
       text: |-
-        Box AI Developer Zone features interactive demos
-        you can use to try out Box AI API: create prompts,
-        view use cases, and explore sample code.
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
 
     cta:
-      text:
-        Browse AI Developer Zone
+      text: |-
+        Try it out!
 
 secondary:
   images:
