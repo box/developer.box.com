@@ -55,30 +55,32 @@ view sample code, explore Box AI use cases, and more!
   </TileGrid>
 </Centered>
 
-<!-- <Centered mid>
+<Centered mid>
   <Header>
-    AI API reference
+    Box AI API resources
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    Use the guides to help get you up and running.
+    Use these self-paced materials and get you up and running with Box AI API.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="pen" title="Generate text"
-      href="/ai-dev-zone">
-        Use AI API to ask questions and receive tailored responses.
+    <Tile type="document" title="Intelligence API reference"
+      href="/reference/post-ai-ask/">
+        API reference for detailed information about enpoints.
     </Tile>
-    <Tile type="speach-bubble" title="Q&A"
-      href="/ai-dev-zone">
-        Use API AI to ask questions about the document.
+    <Tile type="leaflet" title="Developer guide"
+      href="/guides/box-ai/">
+        Comprehensive developer guide, learn about languages
+        support and more.
     </Tile>
-    <Tile type="document" title="Extract metadata"
-      href="/ai-dev-zone">
-        Learn how to extract document metadata with AI API.
+    <Tile type="pen"
+      title="AI-driven Metadata extraction"
+      href="https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83">
+        Blog post about extracting document metadata using Box AI API.
     </Tile>
-    <Tile type="document" title="Extract metadata"
-      href="/ai-dev-zone">
-        Learn how to extract document metadata with AI API.
+    <Tile type="speach-bubble" title="Support"
+      href="https://forum.box.com/">
+        Get support on Box Developer Community.
     </Tile>
   </TileGrid>
-</Centered> -->
+</Centered>

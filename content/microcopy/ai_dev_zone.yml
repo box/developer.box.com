@@ -39,6 +39,13 @@ sample_code:
     paragraph: Use this endpoint to integrate
      document Q&A into your application.
      This demo uses Content Preview Box UI Element.
+  developer_console:
+    headline: Box Developer Console
+    cta: Get started
+    info: In order to use the Box API, you first have to create
+      an application in Box. Visit the Box Developer Console to
+      get started creating, configuring, and monitoring apps on
+      the Box Platform.
 
 other_langs_info: Box AI works in a number of languages
   including English, Japanese, French, Spanish, and many more.
@@ -50,15 +57,16 @@ side_panel:
   summary:
     title: Document summary
     cta: Learn more
-    url: /
+    url: /guides/box-ai/
   metadata:
     title: Metadata extraction
     cta: Learn more
-    url: /
+    url:
+      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
   qa:
     title: Document Q&A
     cta: Learn more
-    url: /
+    url: /guides/box-ai/
   tab_demo: Demo
   tab_sample_code: Sample Code
   filtersError: Select the tone of voice and length to generate
