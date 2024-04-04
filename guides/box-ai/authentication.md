@@ -1,28 +1,39 @@
 ---
-rank: 1
-related_endpoints: []
-related_resources: []
-related_guides: []
-required_guides: []
-alias_paths: []
+rank: 2
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/authentication
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: ''
-previous_page_id: ''
+next_page_id: box-ai/ask-questions
+previous_page_id: box-ai
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/authentication.md
 ---
-# Title
+# Authentication
 
-From here everything is Markdown.
+<Message type="notice>
 
-The first title in the page will be used as the name of the guide everywhere in
-the site.
+This document is rendered for test purposes and contains content that
+will change.
 
-Additionally, wee have extended the markdown with React components.
+</Message>
+
+The easiest way to handle authentication is to
+use a developer token.
+
+<Message type="notice">
+
+Developer token is only valid for one hour.
+
+</Message>
+
+From your scope-enabled app, Box Platform will
+automatically include the appropriate scope,
+allowing you to begin testing and coding immediately.
+You can also use OAuth2.
+In this case, you must specifically request
+the `AI.readwrite` scope.

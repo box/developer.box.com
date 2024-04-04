@@ -1,60 +1,62 @@
 ---
 rank: 1
-related_endpoints: []
-related_resources:
-  - file
-  - folder
-  - web_link
-related_guides:
-  - box-ai/q-n-a
-  - box-ai/text-gen
-  - box-ai/metadata-suggestions
-required_guides: []
-alias_paths:
-  - null
+related_endpoints:
+  - post_ai_text_gen
+  - post_ai_ask
 category_id: box-ai
 subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: guides
 parent_id: guides
-next_page_id: ''
+next_page_id: box-ai/authentication
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/index.md
 ---
-# Box AI API
+# Box AI
 
-The Box AI API is a way to extend the power of Box AI to your custom
-applications. Imagine the Box AI Q&A functionality built into your third party
-integration, or the ability to generate content like you can in Notes, right in
+<Message type="notice>
+
+This document is rendered for test purposes and contains content that
+will change.
+
+</Message>
+
+The Box AI API extends Box AI to use in your custom
+applications. For example, you can use Box AI Q&A
+functionality in your third party integration,
+or generate content right in
 your product’s content editor.
 
-The API is built with ease of use in mind. Call the API, provide your
-document(s) or content, and provide your prompt.
+The API is built with ease of use in mind.
+Call the API, provide your
+document(s) or content, and
+provide your prompt.
 
 ## Capabilities
 
-The API provides a number of capabilities designed to help you build LLM into
-your customer applications work flows. You can build Q&A, generate text, and
-even provide a Metadata template and ask Box AI to suggest values. All within
-the Box Platform you are already using for your other content integrations.
+Box AI API provides a number of capabilities
+designed to help you build LLM into
+your customer applications work flows.
+You can build Q&A, generate text, and
+even provide a Metadata template and ask Box AI
+to suggest values. All within
+the Box Platform you are already using for your
+other content integrations.
 
 ### Q&A
 
-Think of Q&A as a chatbot. Provide the Box file ID(s) of the content you want
-to interact with, provide a prompt, and ask the Large Language Model (LLM).
+Think of Q&A as a chatbot. Provide the
+Box file ID(s) of the content you want
+to interact with, provide a prompt, and
+ask the Large Language Model (LLM).
 
 ### Text Generation
 
-Much like the functionality Box AI provides inside of Notes, generate text with
-the power of LLM. You must still provide a Box file ID and a prompt.
-
-### Metadata Suggestions
-
-With Metadata suggestions, you must provide a Metadata template key and a Box
-file ID and the LLM will evaluate your content against the template and make
-suggestions as to the values to apply. You can then evaluate the suggestions
-and use the Box Platform's Metadata API to apply if you so choose.
+Much like the functionality Box AI provides
+inside of Notes, generate text with
+the power of LLM. You must still provide
+a Box file ID and a prompt.
