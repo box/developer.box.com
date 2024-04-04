@@ -4,7 +4,7 @@ rank: 2
 
 # Authentication
 
-<Message type="notice>
+<Message type="notice">
 This document is rendered for test purposes and contains content that
 will change.
 

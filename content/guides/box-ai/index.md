@@ -7,7 +7,7 @@ related_endpoints:
 
 # Box AI
 
-<Message type="notice>
+<Message type="notice">
 This document is rendered for test purposes and contains content that
 will change.
 
