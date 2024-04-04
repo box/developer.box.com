@@ -7,7 +7,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/text-gen
 type: guide
-total_steps: 7
+total_steps: 3
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: ''
