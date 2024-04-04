@@ -298,3 +298,5 @@ automations
 invocable
 analytics
 ClientID
+chatbot
+OAuth2
