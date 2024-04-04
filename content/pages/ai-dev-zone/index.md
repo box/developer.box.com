@@ -60,27 +60,26 @@ view sample code, explore Box AI use cases, and more!
     Box AI API resources
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    Use these self-paced materials and get you up and running with Box AI API.
+    These resources will get you up and running with Box AI API
   </p>
 
   <TileGrid rows="4">
     <Tile type="document" title="Intelligence API reference"
       href="/reference/post-ai-ask/">
-        API reference for detailed information about enpoints.
+        Check the API reference for API specification details.
     </Tile>
     <Tile type="leaflet" title="Developer guide"
       href="/guides/box-ai/">
-        Comprehensive developer guide, learn about languages
-        support and more.
+        Browse the guides to learn how to use Box AI API.
     </Tile>
     <Tile type="pen"
       title="AI-driven Metadata extraction"
       href="https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83">
-        Blog post about extracting document metadata using Box AI API.
+        Read a blog post about extracting document metadata using Box AI API.
     </Tile>
-    <Tile type="speach-bubble" title="Support"
+    <Tile type="speech-bubble" title="Support"
       href="https://forum.box.com/">
-        Get support on Box Developer Community.
+        Visit Box Developer Community for support.
     </Tile>
   </TileGrid>
 </Centered>
