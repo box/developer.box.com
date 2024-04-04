@@ -15,7 +15,7 @@ source_url: >-
 ---
 # Authentication
 
-<Message type="notice>
+<Message type="warning">
 
 This document is rendered for test purposes and contains content that
 will change.
