@@ -59,7 +59,7 @@ view sample code, explore Box AI use cases, and more!
 
   <TileGrid rows="4">
     <Tile type="document" title="Intelligence API reference"
-      href="/reference/post-ai-ask/">
+      href="/reference/resources/intelligence/">
         Check the API reference for API specification details.
     </Tile>
     <Tile type="leaflet" title="Developer guide"
