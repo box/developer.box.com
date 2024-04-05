@@ -65,7 +65,19 @@ Summarize a document in a selected tone of voice.
 
 <strong style="background-color: #e8e8e8">
 
-Beta
+Public beta
+
+</strong>
+
+</Tile>
+
+<Tile type="document-qa" title="Ask questions" href="/guides/box-ai/ask-questions/" >
+
+Ask Box AI about the document to get the details. Demo coming soon!
+
+<strong style="background-color: #e8e8e8">
+
+Public beta
 
 </strong>
 
@@ -83,18 +95,6 @@ API coming soon
 
 </Tile>
 
-<Tile type="document-qa" title="Ask questions" href="/">
-
-Ask Box AI about the document to get the details.
-
-<strong style="background-color: #e8e8e8">
-
-Demo coming soon
-
-</strong>
-
-</Tile>
-
 </TileGrid>
 
 </Centered>
@@ -103,33 +103,27 @@ Demo coming soon
 
 <Header>
 
-Box AI API resources
+Box AI API documentation and support
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-These resources will get you up and running with Box AI API
+These resources will get you up and running with Box AI API.
 
 </p>
 
-<TileGrid rows="4">
+<TileGrid rows="3">
 
-<Tile type="document" title="Intelligence API reference" href="/reference/resources/intelligence/">
+<Tile type="document" title="AI API reference" href="/reference/resources/ai-response/">
 
 Check the API reference for API specification details.
 
 </Tile>
 
-<Tile type="leaflet" title="Developer guide" href="/guides/box-ai/">
+<Tile type="leaflet" title="Developer guides" href="/guides/box-ai/">
 
 Browse the guides to learn how to use Box AI API.
-
-</Tile>
-
-<Tile type="pen" title="AI-driven Metadata extraction" href="https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83">
-
-Read a blog post about extracting document metadata using Box AI API.
 
 </Tile>
 
