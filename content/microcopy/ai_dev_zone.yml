@@ -42,33 +42,29 @@ sample_code:
   developer_console:
     headline: Box Developer Console
     cta: Get started
-    info: In order to use the Box API, you first have to create
+    info: To use the Box API, you first have to create
       an application in Box. Visit the Box Developer Console to
-      get started creating, configuring, and monitoring apps on
-      the Box Platform.
+      start creating, configuring, and monitoring your apps.
 
-other_langs_info: Box AI works in a number of languages
-  including English, Japanese, French, Spanish, and many more.
-  However the underlying models are primarily trained on
-  English language documents. For details, see Box AI
-  guides and API documentation.
+other_langs_info: Box AI works in a number of languages, but is
+  primarily trained on English documents. See Box AI API
+  documentation for details on supported languages.
 
 side_panel:
   summary:
     title: Document summary
     cta: Learn more
-    url: /guides/box-ai/
+    url: /guides/box-ai/ask-questions/
   metadata:
     title: Metadata extraction
     cta: Learn more
-    url:
-      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
+    url: /
   qa:
     title: Document Q&A
     cta: Learn more
     url: /guides/box-ai/
   tab_demo: Demo
-  tab_sample_code: Sample Code
+  tab_sample_code: Sample code
   filtersError: Select the tone of voice and length to generate
     a document summary.
 
