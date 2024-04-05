@@ -32,7 +32,14 @@ view sample code, explore Box AI use cases, and more!
     <Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
         Summarize a document in a selected tone of voice. 
 
-        <strong style="background-color: #e8e8e8">Beta</strong>
+        <strong style="background-color: #e8e8e8">Public beta</strong>
+    </Tile>
+    <Tile type="document-qa"
+      title="Ask questions" href="/guides/box-ai/ask-questions/"
+    >
+        Ask Box AI about the document to get the details. Demo coming soon!
+
+        <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
     <Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
         Extract document metadata to use in your apps.
@@ -41,35 +48,25 @@ view sample code, explore Box AI use cases, and more!
           API coming soon
         </strong>
     </Tile>
-    <Tile type="document-qa" title="Ask questions" href="/">
-        Ask Box AI about the document to get the details.
-
-        <strong style="background-color: #e8e8e8">Demo coming soon</strong>
-    </Tile>
   </TileGrid>
 </Centered>
 
 <Centered mid>
   <Header>
-    Box AI API resources
+    Box AI API documentation and support
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    These resources will get you up and running with Box AI API
+    These resources will get you up and running with Box AI API.
   </p>
 
-  <TileGrid rows="4">
-    <Tile type="document" title="Intelligence API reference"
-      href="/reference/resources/intelligence/">
+  <TileGrid rows="3">
+    <Tile type="document" title="AI API reference"
+      href="/reference/resources/ai-response/">
         Check the API reference for API specification details.
     </Tile>
-    <Tile type="leaflet" title="Developer guide"
+    <Tile type="leaflet" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI API.
-    </Tile>
-    <Tile type="pen"
-      title="AI-driven Metadata extraction"
-      href="https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83">
-        Read a blog post about extracting document metadata using Box AI API.
     </Tile>
     <Tile type="speech-bubble" title="Support"
       href="https://forum.box.com/">
