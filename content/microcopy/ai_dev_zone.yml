@@ -21,6 +21,12 @@ files:
     1472263705884:
       name: Sample_article.docx
       description: Document
+    1495324886257:
+      name: Sample_invoice.docx
+      description: Document
+    1495321808917:
+      name: Sample_data.docx
+      description: Document
   go_back_button: AI Dev Zone
 
 sample_code:
