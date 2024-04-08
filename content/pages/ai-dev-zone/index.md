@@ -26,7 +26,7 @@ view sample code, explore Box AI use cases, and more!
   </Header>
     <p style="text-align: left; margin-left: 0;">
       Box AI API is currently a beta feature. Bear in mind that
-      the available capablitites can change.
+      the available capabilities can change.
     </p>
   <TileGrid rows="3">
     <Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
