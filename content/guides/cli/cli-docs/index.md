@@ -13,8 +13,7 @@ alias_paths:
 Here you can find guides on how 
 to use Box CLI features and capabilities.
 
-* Set up and test [Box CLI with
-  JWT authentication][1]. 
+* Set up and test [Box CLI with JWT authentication][1]. 
 * Set up and use [Box CLI bulk commands][2].
 
 [1]: g://cli/cli-docs/jwt-cli
