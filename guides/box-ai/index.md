@@ -25,38 +25,33 @@ will change.
 
 </Message>
 
-The Box AI API extends Box AI to use in your custom
-applications. For example, you can use Box AI Q&A
-functionality in your third party integration,
+The Box AI API allows you to use Box AI
+functionality
+in your custom applications. For example, you can
+implement Box AI question and answer
+functionality in your third party integration
 or generate content right in
 your product’s content editor.
-
-The API is built with ease of use in mind.
-Call the API, provide your
-document(s) or content, and
-provide your prompt.
 
 ## Capabilities
 
 Box AI API provides a number of capabilities
-designed to help you build LLM into
+designed to help you build Large
+Language Models (LLMs) into
 your customer applications work flows.
-You can build Q&A, generate text, and
-even provide a Metadata template and ask Box AI
-to suggest values. All within
-the Box Platform you are already using for your
-other content integrations.
+Currently, you can use Box AI to
+answer posted questions or generate text.
 
-### Q&A
+### Questions to Box AI
 
-Think of Q&A as a chatbot. Provide the
+To interact with Box AI, you need to
 Box file ID(s) of the content you want
-to interact with, provide a prompt, and
-ask the Large Language Model (LLM).
+to interact with, and a send a prompt.
+Box AI will come back with an answer.
 
-### Text Generation
+### Generating text
 
-Much like the functionality Box AI provides
-inside of Notes, generate text with
-the power of LLM. You must still provide
-a Box file ID and a prompt.
+You can use the power of LLM to
+generate text.
+For example, you can ask Box AI
+to summarize an article.

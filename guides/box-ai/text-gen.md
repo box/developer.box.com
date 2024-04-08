@@ -15,7 +15,7 @@ previous_page_id: box-ai/ask-questions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/text-gen.md
 ---
-# Text generation
+# Generate text with Box AI API
 
 <Message type="warning">
 
@@ -24,15 +24,37 @@ will change.
 
 </Message>
 
-The `POST /2.0/ai/text_gen` endpoint sends you prompt
-and your content or the text representation of your file
-to Box AI and return the value with an HTTP 200 response
-and a JSON object documented below. You must always provide
-a file ID, as this is how the Box AI API
-validates that you and your instance
-of Box have access to Box AI. You can optionally
-provide a string in the content object, however
-the content string will take precedence over
-the content of the file represented by the id.
-You can use `dialogue_history` parameter to keep track
-of previous text generation requests in a given session.
+## Endpoints
+
+The `POST /2.0/ai/text_gen` endpoint allows you to pass
+a prompt and input content to Box AI and receive a response to
+your question. Additionally, you can add a context
+to your question using your previous prompts.
+
+## Parameters
+
+<!-- markdownlint-disable line-length -->
+
+To make a call, you must pass the following parameters:
+
+| Parameter| Description|Values| Example|
+|--------|--------|-------|-------|
+|`items.id`|The Box file ID you want to supply as input. Box AI API will pull the text representation of this file.||`1233039227512`|
+|`items.type`|The type of the supplied input. | `file`, `folder`, `hub`|`file`|
+|`mode`| The type of request. It can be a question about a single file or a set of files. |`single_item_qa`, `multiple_item_qa`|`single_item_qa` |
+|`prompt`|The question about your document or content.||What is the document about?|
+
+<!-- markdownlint-enable line-length -->
+
+### Question context
+
+The `dialogue_history` parameter allows you
+to provide the context for your question by
+referring to a previous answer, prompt,
+or date when a an answer or prompt was created.
+
+## Sample call
+
+<Samples id='post_ai_text_gen' >
+
+</Samples>
