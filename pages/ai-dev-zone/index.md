@@ -53,7 +53,7 @@ Try out interactive demos
 <p style="text-align: left; margin-left: 0;">
 
 Box AI API is currently a beta feature. Bear in mind that
-the available capablitites can change.
+the available capabilities can change.
 
 </p>
 
