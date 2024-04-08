@@ -115,7 +115,7 @@ These resources will get you up and running with Box AI API.
 
 <TileGrid rows="3">
 
-<Tile type="document" title="AI API reference" href="/reference/resources/ai-response/">
+<Tile type="document" title="AI API reference" href="/reference/resources/intelligence/">
 
 Check the API reference for API specification details.
 
