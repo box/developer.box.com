@@ -28,8 +28,6 @@ to use Box CLI features and capabilities.
 * Set up and test [Box CLI with
 JWT authentication][1].
 * Set up and use [Box CLI bulk commands][2].
-* Set up and use [Box CLI bulk commands][2].
 
 [1]: g://cli/cli-docs/jwt-cli
-[2]: g://cli/cli-docs/bulk-commands
 [2]: g://cli/cli-docs/bulk-commands
