@@ -22,10 +22,10 @@ files:
       name: Sample_article.docx
       description: Document
     1495324886257:
-      name: Sample_invoice.docx
+      name: Sample_invoice.pdf
       description: Document
     1495321808917:
-      name: Sample_data.docx
+      name: Sample_data.pdf
       description: Document
   go_back_button: AI Dev Zone
 
