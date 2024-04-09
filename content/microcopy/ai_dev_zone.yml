@@ -27,6 +27,12 @@ files:
     1495321808917:
       name: Sample_data.pdf
       description: Document
+    1496370734082:
+      name: Sample_powerpoint.ppx
+      description: Presentation
+    1496435380115:
+      name: Sample_article.docx
+      description: Document
   go_back_button: AI Dev Zone
 
 sample_code:
