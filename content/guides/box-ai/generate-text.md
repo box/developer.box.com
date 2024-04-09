@@ -4,21 +4,23 @@ related_endpoints:
  - post_ai_text_gen
 
 ---
-# Generate text with Box AI API
+# Generate text with Box AI
 
 <Message type="warning">
-This document is rendered for test purposes and contains content that
-will change.
+Work in progress, content may change.
 </Message>
 
-## Endpoints
+You can use Box AI to generate text
+based on provided content.
 
-The `POST /2.0/ai/text_gen` endpoint allows you to pass
-a prompt and input content to Box AI and receive a response to
-your question. Additionally, you can add a context
-to your question using your previous prompts.
+## Send a request
 
-## Parameters 
+To send a request, use the
+`POST /2.0/ai/text_gen` endpoint.
+
+<Samples id='post_ai_text_gen' />
+
+### Parameters 
 
 <!-- markdownlint-disable line-length -->
 
@@ -36,10 +38,8 @@ To make a call, you must pass the following parameters:
 ### Question context
 
 The `dialogue_history` parameter allows you
-to provide the context for your question by
+to provide additional context for your question by
 referring to a previous answer, prompt,
 or date when a an answer or prompt was created.
 
-## Sample call
-
-<Samples id='post_ai_text_gen' />
+[boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
