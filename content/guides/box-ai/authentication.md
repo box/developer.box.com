@@ -7,16 +7,14 @@ related_guides:
 # Authentication
 
 <Message type="warning">
-This document is rendered for test purposes
-and contains content that
-will change.
+Work in progress, content may change.
 
 </Message>
 
 ## Developer token
 
 To use the Box AI API, you must authenticate.
-To do so, use the [developer token][token].
+To do so, generate a [developer token][token].
 
 <Message type="notice">
 A developer token is only valid for one hour.
@@ -26,14 +24,14 @@ A developer token is only valid for one hour.
 
 To work with Box AI API, you need the
 `AI.readwrite` [scope][scope]. You can
-configure it in the following ways:
+configure it in the Developer Console.
 
-* Enabling the scope for your app in the Developer Console.
-  To do so, go to  **Configuration** > **Application Scopes**
-  and select the scope. Box Platform will
-  automatically include the scope when making the call.
-* Use [OAuth2 authorization][oauthscopes] and
-specifically request the `AI.readwrite` scope.
+To do so:
+
+1. Open your application in Developer Console.
+1. Go to **Configuration** > **Application Scopes** > **Manage AI**
+1. Select the `AI.readwrite` scope. Box Platform will
+   automatically include the scope when making the call.
 
 [token]: g://authentication/tokens/developer-tokens/
 [scope]: g://api-calls/permissions-and-errors/scopes/
