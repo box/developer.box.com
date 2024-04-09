@@ -270,7 +270,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "その他のリソース",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "初のBoxWorks Hackathon for Goodにご参加ください - 48時間のハッカソンへのお客様、パートナー様、Developer Communityの皆様のご参加をお待ちしております。The Nature Conservancyのメリットにつながります。",
   // The link to navigate to when the CTA is clicked
