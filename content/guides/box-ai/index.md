@@ -59,7 +59,15 @@ For details, see [Box AI for Notes][boxainotes].
 
 ## Supported languages
 
-Box AI works in a number of languages including English, Japanese, French, Spanish, and many more. However, the underlying models are primarily trained on English language documents. This means that prompts in other languages may return answers of lower quality than in English. Tests have shown satisfactory results for summarizing, checking grammar and spelling, and answering questions, but bear in mind that the results may be different than in English.
+Box AI works in a number of languages including
+English, Japanese, French, Spanish, and many more.
+However, the underlying models are primarily
+trained on English language documents. This means
+that prompts in other languages may return answers
+of lower quality than in English. Tests have shown
+satisfactory results for summarizing, checking grammar
+and spelling, and answering questions, but bear in mind
+that the results may be different than in English.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents

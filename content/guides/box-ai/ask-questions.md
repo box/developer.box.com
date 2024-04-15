@@ -9,20 +9,22 @@ related_endpoints:
 <Message type="notice">
 Box AI API is a beta feature which means the
 available capabilities may change.
-Box AI API is to all Enterprise Plus customers.
+Box AI API is to all **Enterprise Plus** customers.
 
 </Message>
 
 Box AI API allows you to
-ask a question about a file or a set of files,
-and get a response based on this content.
+ask a question about a supplied file or
+a set of files, and get a response based on
+the content.
 For example, while viewing a document in Box,
 you can ask Box AI to summarize the content.
 
 ## Send a request
 
 To send a request containing your question,
-use the `POST /2.0/ai/ask` endpoint.
+use the `POST /2.0/ai/ask` endpoint and
+provide the mandatory parameters.
 
 <Samples id='post_ai_ask' />
 
@@ -34,8 +36,8 @@ To make a call, you need to pass the following parameters:
 
 | Parameter    | Description                                                                                             | Values                               | Example                     |
 | ------------ | ------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------- |
-| `items.id`   | The Box file ID you want to supply as input. Box AI API will pull the text representation of this file. |                                      | `112233445566`              |
-| `items.type` | The type of the supplied input.                                                                         | `file`, `folder`, `hub`              | `file`                      |
+| `items.id`   | The Box file ID you want to provide as input. |                                      | `112233445566`              |
+| `items.type` | The type of the provided input.            It can be a single files, a folder containing several files, or a hub with content.                                                              | `file`, `folder`, `hub`              | `file`                      |
 | `mode`       | The type of request. It can be a question about a single file or a set of files.                        | `single_item_qa`, `multiple_item_qa` | `single_item_qa`            |
 | `prompt`     | The question about your document or content.                                                            |                                      | What is the document about? |
 
