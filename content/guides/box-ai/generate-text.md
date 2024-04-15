@@ -6,8 +6,11 @@ related_endpoints:
 ---
 # Generate text with Box AI
 
-<Message type="warning">
-Work in progress, content may change.
+<Message type="notice">
+Box AI API is a beta feature which means the
+available capabilities may change.
+Box AI API is to all Enterprise Plus customers.
+
 </Message>
 
 You can use Box AI to generate text
@@ -28,7 +31,7 @@ To make a call, you must pass the following parameters:
 
 | Parameter| Description|Values| Example|
 |--------|--------|-------|-------|
-|`items.id`|The Box file ID you want to supply as input. Box AI API will pull the text representation of this file.||`1233039227512`|
+|`items.id`|Box file ID of the document you want to supply as input.||`1233039227512`|
 |`items.type`|The type of the supplied input. | `file`, `folder`, `hub`|`file`|
 |`mode`| The type of request. It can be a question about a single file or a set of files. |`single_item_qa`, `multiple_item_qa`|`single_item_qa` |
 |`prompt`|The question about your document or content.||What is the document about?|
@@ -40,6 +43,6 @@ To make a call, you must pass the following parameters:
 The `dialogue_history` parameter allows you
 to provide additional context for your question by
 referring to a previous answer, prompt,
-or date when a an answer or prompt was created.
+or date when an answer or prompt was created.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes

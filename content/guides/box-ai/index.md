@@ -10,12 +10,14 @@ related_guides:
 
 # Box AI
 
-<Message type="warning">
-Work in progress, content may change.
+<Message type="notice">
+Box AI API is a beta feature which means the
+available capabilities may change.
+Box AI API is to all Enterprise Plus customers.
 
 </Message>
 
-The Box AI API allows you to use Box AI
+Box AI API allows you to use Box AI
 functionality
 in your custom applications. For example, you can 
 implement Box AI question and answer
@@ -40,9 +42,9 @@ for example while working on documents stored in Box.
 Box AI can answer your questions about the content
 or generate a summary.
 
-For details, see [Box AI for documents][boxaidocs] 
+Read [Box AI for documents][boxaidocs] 
 to see how users can interact with Box AI while
-collaborating on files.
+working on their files.
 
 ### Generating text
 
@@ -54,6 +56,10 @@ or an email based on an article you supply.
 Box Notes uses Box AI to generate text
 and refine the already existing note content.
 For details, see [Box AI for Notes][boxainotes].
+
+## Supported languages
+
+Box AI works in a number of languages including English, Japanese, French, Spanish, and many more. However, the underlying models are primarily trained on English language documents. This means that prompts in other languages may return answers of lower quality than in English. Tests have shown satisfactory results for summarizing, checking grammar and spelling, and answering questions, but bear in mind that the results may be different than in English.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
