@@ -5,6 +5,10 @@ primary:
       // text:
       text: Documentation
 
+    quickstarts:
+      // text:
+      text: Getting Started
+
     community:
       // text:
       text: Community
@@ -21,14 +25,14 @@ primary:
 
     learn:
       // text: The text for the link to the learn section
-      text: Learn Box Platform
+      text: Box Platform
 
       //url: The URL to the learn section
       url: /platform/
 
     learn-sign:
       // text: The text for the link to the learn section
-      text: Working with Box Sign
+      text: Box Sign
 
       //url: The URL to the learn section
       url: /sign/
@@ -58,6 +62,12 @@ primary:
       text: Sample Code Catalog
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/sample-code/"
+
+    api-versioning-strategy:
+      // text: The text for api versioning documentation
+      text: API Versioning Strategy
+      // url: The url to the root of the reference - DO NOT TRANSLATE
+      url: "/api-versioning-strategy/"
 
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
