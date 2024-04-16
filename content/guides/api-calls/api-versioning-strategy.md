@@ -210,7 +210,6 @@ When building your request, consider that:
 
   - When the version header is missing, the default resource version is determined by the version in the URL.
   - When the version header is specified, but the requested version is unavailable, then the response will return an HTTP error code `404 - Not Found`.
-  - For example, when Box removes `2022.0`, API requests to version `2022.0` will be served version `2023.0`, because that will be the oldest supported stable version.
 
 When Box deprecates a resource or a property of a resource in the API, the change is communicated in one or more of the following ways:
 
