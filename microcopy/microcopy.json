@@ -220,10 +220,6 @@
   "headers.primary.links.sample_code.text": "Sample Code Catalog",
   // The url to the root of the reference - DO NOT TRANSLATE
   "headers.primary.links.sample_code.url": "/sample-code/",
-  // The text for api versioning documentation
-  "headers.primary.links.api-versioning-strategy.text": "API Versioning Strategy",
-  // The url to the root of the reference - DO NOT TRANSLATE
-  "headers.primary.links.api-versioning-strategy.url": "/api-versioning-strategy/",
   // The text for the link to the old page on SDKs
   "headers.primary.links.sdks_and_tools.text": "SDKs & Tools",
   // The URL to the new page on SDKs - DO NOT TRANSLATE

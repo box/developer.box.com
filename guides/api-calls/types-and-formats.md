@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/types-and-formats
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/status-codes

@@ -1,18 +1,20 @@
 ---
-centered: true
-rank: 0
-category_id: api-versioning-strategy
+rank: 8
+related_endpoints: []
+related_guides: []
+required_guides: []
+category_id: api-calls
 subcategory_id: null
-is_index: true
-id: api-versioning-strategy
-type: page
-total_steps: 0
-sibling_id: pages
-parent_id: pages
-next_page_id: ''
-previous_page_id: ''
+is_index: false
+id: api-calls/api-versioning-strategy
+type: guide
+total_steps: 9
+sibling_id: api-calls
+parent_id: api-calls
+next_page_id: api-calls
+previous_page_id: api-calls/language-codes
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/pages/api-versioning-strategy/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/api-versioning-strategy.md
 ---
 # API Versioning Strategy
 
@@ -22,50 +24,54 @@ Box provides versioning capabilities for selected API endpoints. The version con
 
 API versioning empowers Box to continually enhance its platform while also offering third-party developers a reliable avenue for feature updates and deprecations.
 
-To stay informed about the forthcoming API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain current contact information within the Developer Console's App Info section.
+To stay informed about the forthcoming API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain current email address in the Developer Console's App Info section.
 
 ## How Box API versioning works
 
+<Message type='notice'>
+
 Box API supports versioning in URL `path` and `header`. To determine which version to use, look at the API reference and follow the sample request instructions.
+
+</Message>
 
 The default version of the API used in any requests you make is specified in the URL of the endpoint you call. For example, calling the upload (`https://upload.box.com/api/2.0/files/content`) endpoint without any version header specified means that you hit the `2.0` version defined in the
 URL.
 
 The Box API processes header `Box-Version` which should:
 
-* contain a valid version name, that is `Box-Version: 2025.0` 
-* be directed at `https://api.box.com/2.0/files/:file_id/metadata`. 
+- contain a valid version name, that is `Box-Version: 2025.0`
+- be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
 
-If the provided version is correct, a response is sent back to the client. The response also contains the `Box-Version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client. 
+If the provided version is correct, a response is sent back to the client. The response also contains the `Box-Version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
 
-If there is a significant change to API behavior, the new endpoint will be exposed under the new URL. 
+If there is a significant change to API behavior, the new endpoint will be exposed under the new URL.
 For example, `https://upload.box.com/api/2.0/files/content` supports a multipart content type when uploading files to Box. If the new version of this API stops supporting this content type, it will be released under a new URL `https://upload.box.com/api/3.0/files/content`.
 
 ## Release schedule and naming convention
 
 Box can introduce a new breaking change to certain endpoints **once per year**. An endpoint encompasses all supported HTTP methods within a specific API root. For example, the Sign Request endpoints include:
 
-| Method     | Request URL| Description|
-|------------|------------|-------|
-|GET  |`https://api.box.com/2.0/sign_requests/:id`|Retrieves specific sign request details. |
-|GET  |`https://api.box.com/2.0/sign_requests/`|Retrieves all sign requests.|
-|POST |`https://api.box.com/2.0/sign_requests/`|Creates new sign requests. |
-|POST |`https://api.box.com/2.0/sign_requests/:id/resend` | Sends a specific sign request again.|
-|POST | `https://api.box.com/2.0/sign_requests/:id/cancel` |Cancels a specific sign request.|
+| Method | Request URL                                        | Description                              |
+| ------ | -------------------------------------------------- | ---------------------------------------- |
+| GET    | `https://api.box.com/2.0/sign_requests/:id`        | Retrieves specific sign request details. |
+| GET    | `https://api.box.com/2.0/sign_requests/`           | Retrieves all sign requests.             |
+| POST   | `https://api.box.com/2.0/sign_requests/`           | Creates new sign requests.               |
+| POST   | `https://api.box.com/2.0/sign_requests/:id/resend` | Sends a specific sign request again.     |
+| POST   | `https://api.box.com/2.0/sign_requests/:id/cancel` | Cancels a specific sign request.         |
 
 Introducing a new version of the sign request endpoint means that all paths and HTTP methods listed above will support it. You can find comprehensive information about the endpoint version in the [Box API Reference](https://developer.box.com/reference/).
 
-### Naming convention 
+### Naming convention
 
-New API versions are labeled according to the calendar year of their release. 
+New API versions are labeled according to the calendar year of their release.
 For example, if a new version of the Sign Requests endpoint is released in 2025, it will be named `2025.0`.
 
-Box can issue a new breaking change to API endpoints once per year, reserving the right to release an additional breaking change to address security or privacy concerns. In such cases, the new version will be incremented by one in the suffix. 
+Box can issue a new breaking change to API endpoints once per year, reserving the right to release an additional breaking change to address security or privacy concerns. In such cases, the new version will be incremented by one in the suffix.
 For example, if security issues need addressing in the previously released version `2025.0` of Sign Requests, the new version will be labeled `2025.1`.
 
 Each stable version is supported for a minimum of 12 months. This means that when a new version is released, the previous version becomes deprecated and will be available for usage, but no new features will be added.
 
-We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `404 - Not Found`. For details, see [Versioning Errors](#versioning-errors-and-fallbacks).
+We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `404 - Not Found`. For details, see [Versioning Errors](#versioning-errors-and-fallback).
 
 If your request doesn't include a version, then the API defaults to the `V2` Box API version. However, we do not recommend relying on this behavior for adopting deprecated changes. As you update your app, you should specify the API version with every request. By making your app version-aware, you anchor your code to a specific set of features that are guaranteed to behave in the same way for the supported timeframe.
 
@@ -94,71 +100,74 @@ Box documentation specifies API URLs. For instance, the Sign Requests endpoints 
 When a customer uses an API version that Box has marked as deprecated, the API will respond as usual. However, it will append a `Deprecation` header, stating the deprecation date, for example:
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2018 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
+Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
 Customers should monitor API responses and take note when this header appears, signaling the need to plan for the transition to a new API version.
 
 ### Calling a nonexistent version
 
-If a customer attempts to use an outdated API version, such as `2023.0`, which has reached its end-of-life, the response will return an `HTTP error code 404 - Not Found`. See [Calling an incorrect API version in the URL](#making-a-call-with-incorrect-api-version-in-the-url) for more information.
+If a customer attempts to use an outdated API version, such as `2023.0`, which has reached its end-of-life, the response will return an `HTTP error code 404 - Not Found`. See [Calling an incorrect API version in the URL](#calling-an-incorrect-api-version-in-the-url) for more information.
 
 ## How Box SDK versioning works
 
-The versioning strategy is only applied to [next generation generated SDKs](https://developer.box.com/sdks-and-tools/).
-Box SDKs support the “All Versions In” SDKs approach. 
+The versioning strategy is only applied to [next generation generated SDKs](https://developer.box.com/sdks-and-tools/#next-generation-sdks).
+Box SDKs support the **All Versions In** SDK approach.
 This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager. For example `FolderManager` contains methods to: `create_folder`, `get_folder_by_id`, `update_folder_by_id`, `delete_folder_by_id`, `get_folder_items` and `copy_folder`.This division is done based on the value of `x-box-tag` field, which is assigned to each method in Public API Service specification. It mostly corresponds to the root of the endpoint URL, but not necessarily. For example: `FolderManager` contains methods with `https://api.box.com/2.0/folders` root URL, but the same base URL is also used in some methods of `SharedLinkFoldersManager`. References to all managers are stored under one Box Client object.
 
 See an example of the endpoint's lifecycle:
 
 1. Initial state (only one version is available).
 
-    ```js
-    class FilesManager {
-    async updateFileById(
-            fileId: string,
-            requestBody: UpdateFileByIdRequestBody,
-            queryParams: UpdateFileByIdQueryParams,
-            headers: UpdateFileByIdHeaders
-    )     : Promise<FileFull> {}
+   ```js
+ class FilesManager {
+ async updateFileById(
+    fileId: string,
+    requestBody: UpdateFileByIdRequestBody,
+    queryParams: UpdateFileByIdQueryParams,
+    headers: UpdateFileByIdHeaders
+ ): Promise < FileFull > {}
 }
 ```
 
 2. A new `v2025_0` version of the endpoint is introduced (previous version is deprecated).
 
-    The SDK introduces a new method for each new version of an endpoint. These methods are stored in the same manager as the old ones, but their names and corresponding classes are suffixed with the version number. The old method is deprecated with a notice indicating the minimal maintenance date – this will be the date when the endpoint will be considered for end-of-life status (according to [API release schedule](https://account.box.com/integrations/googledss/openGoogleEditor?fileId=1343762694446&trackingId=3#heading=h.88huim44te1j)).
+   The SDK introduces a new method for each new version of an endpoint. These methods are stored in the same manager as the old ones, but their names and corresponding classes are suffixed with the version number. The old method is deprecated with a notice indicating the minimal maintenance date – this will be the date when the endpoint will be considered for end-of-life status.
 
-    ```js
-    class FilesManager {
-    @deprecated("This endpoint will be EOL'ed after 05-2026")
-    async updateFileById(
-        fileId: string,
-        requestBody: UpdateFileByIdRequestBody,
-        queryParams: UpdateFileByIdQueryParams,
-        headers: UpdateFileByIdHeaders
-    ): Promise<FileFull> {}
+   ```js
+   class FilesManager {
+	/**
+	 * @deprecated This endpoint will be EOL'ed after 05-2026.
+	 */
+	async updateFileById(
+	   fileId: string,
+    requestBody: UpdateFileByIdRequestBody,
+    queryParams: UpdateFileByIdQueryParams,
+    headers: UpdateFileByIdHeaders
+	): Promise<FileFull> {}
 
-    async updateFileById_2025_0(
-        fileId: string,
-        requestBody: UpdateFileByIdRequestBody_2025_0,
-        queryParams: UpdateFileByIdQueryParams_2025_0,
-        headers: UpdateFileByIdHeaders_2025_0
-    ): Promise<FileFull_2025_0> {}
+	async updateFileById_2025_0(
+    fileId: string,
+    requestBody: UpdateFileByIdRequestBody_2025_0,
+    queryParams: UpdateFileByIdQueryParams_2025_0,
+    headers: UpdateFileByIdHeaders_2025_0
+	): Promise<FileFull_2025_0> {}
 }
 ```
 
 3. The API endpoint is marked as End-of-Life (EOL)
 
-    The SDK releases a breaking change release with removed end-of-life (EOL) endpoints. Ideally, we should group the end-of-life dates for all endpoints into one date per quarter to avoid releasing numerous new major versions of SDKs.
+   The SDK releases a breaking change release with removed end-of-life (EOL) endpoints. Ideally, we should group the end-of-life dates for all endpoints into one date per quarter to avoid releasing numerous new major versions of SDKs.
 
-    ```js
-    class FilesManager {
-    async updateFileById_2025_0(
-            fileId: string,
-            requestBody: UpdateFileByIdRequestBody_2025_0,
-            queryParams: UpdateFileByIdQueryParams_2025_0,
-            headers: UpdateFileByIdHeaders_2025_0
-    ): Promise<FileFull_2025_0> {}
+   ```js
+ class FilesManager {
+ async updateFileById_2025_0(
+    fileId: string,
+    requestBody: UpdateFileByIdRequestBody_2025_0,
+    queryParams: UpdateFileByIdQueryParams_2025_0,
+    headers: UpdateFileByIdHeaders_2025_0
+ ): Promise < FileFull_2025_0 > {}
 }
 ```
 
@@ -166,25 +175,26 @@ See an example of the endpoint's lifecycle:
 
 Breaking changes in the Box API occur within versioned releases, typically accompanied by a new major API version. Minor adjustments, which do not disrupt existing functionality, can be integrated into an existing API version. The following table offers illustrations of both breaking and non-breaking changes.
 
-|API Change|Breaking change|
-|----------|---------------|
-|New endpoints |No |
-|New read-only or optional fields in request |No |
-|New required fields in Request | Yes |
-|New string constant |Yes |
-|Deprecation |No |
-|Retirement / End of Life |Yes |
-|Rename/reshape of a field, data type, or string constant |Yes |
-|More restrictive change to field validations |Yes |
-|Less restrictive change to field validations |No |
-|Change to the HTTP status code returned by an operation |Yes |
-|Removal of a declared property |Yes |
-|Removal or rename of APIs or API parameters |Yes |
-|Addition of a required request header |Yes |
-|Adding more error codes |No |
-|Removing or modifying error codes |Yes |
-|Addition of a member to an enumeration |Yes |
-|Changing existing error response codes |Yes |
+| API Change                                               | Breaking change |
+| -------------------------------------------------------- | --------------- |
+| New endpoints                                            | No              |
+| New [read-only](https://swagger.io/docs/specification/data-models/data-types/) or optional fields in request                 | No              |
+| New required fields in request                           | Yes             |
+| New string constant in request                           | Yes             |
+| Deprecation                                              | No              |
+| Retired / End-of-Life endpoints                          | Yes             |
+| Rename/reshape of a field, data type, or string constant | Yes             |
+| More restrictive change to field validations             | Yes             |
+| Less restrictive change to field validations             | No              |
+| Changing HTTP status code returned by an operation       | Yes             |
+| Removing a declared property                             | Yes             |
+| Removing or renaming APIs or API parameters              | Yes             |
+| Adding a required request header                         | Yes             |
+| Adding more error codes                                  | No              |
+| Removing or modifying error codes                        | Yes             |
+| Adding a member to an enumeration                        | Yes             |
+
+We use [oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGES-EXAMPLES.md) tool to detect most of the possible breaking changes.
 
 ## Support policy and deprecation information
 
@@ -197,7 +207,7 @@ When an API is marked as deprecated, we strongly recommend that you migrate to t
 When customer calls deprecated API endpoint, the response will contain a header:
 
 ```sh
-Deprecation: date="Fri, 11 Nov 2018 23:59:59 GMT"
+Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
 Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
@@ -207,29 +217,27 @@ The date tells clients when this version was marked as deprecated.
 
 When building your request, consider that:
 
-* If you do not specify a version, the service returns a default version that  may not be the latest one.
+- If you do not specify a version, the service returns a default version that may not be the latest one.
 
-* When the version header is missing, the default resource version is    determined by the version in the URL.
-* When the version header is specified, but the requested version is unavailable, then Box falls forward and responds to your request with the same behavior as the oldest supported stable version.
-* For example, when Box removes `2023.0`, API requests to version `2020.0` will be served version `2024.0`, because that will be the oldest supported stable version.
+- When the version header is missing, the default resource version is determined by the version in the URL.
+- When the version header is specified, but the requested version is unavailable, then the response will return an HTTP error code `404 - Not Found`.
 
 When Box deprecates a resource or a property of a resource in the API, the change is communicated in one or more of the following ways:
 
-* Calls that include the deprecated behavior return the response header   `Box-API-Deprecated-Reason` and a link to get more information:
+- Calls that include the deprecated behavior return the response header `Box-API-Deprecated-Reason` and a link to get more information:
 
 ```sh
-Box-Version → 2023.0
+Box-Version: 2023.0
 Deprecation: version="version", date="date"
-Box-API-Deprecated-Reason → https://developer.box.com/changelog/#2024-07-12-sign-request
+Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
-* A notice about the deprecation is posted in the developer changelog.
-* The API reference is updated to identify the affected resource and any action you need to take.
-* If there is an imminent backwards-incompatible change that affects your app, then the contact email for your app might be contacted about the deprecation.
+- A notice about the deprecation is posted in the developer changelog.
+- The API reference is updated to identify the affected resource and any action you need to take.
+- If there is an imminent backwards-incompatible change that affects your app, then the contact email for your app might be contacted about the deprecation.
 
 ## Additional resources
 
-* [API reference](https://developer.box.com/reference/)
-* [Deprecated API versions](https://developer.box.com/reference/)
+- [API reference](https://developer.box.com/reference/)
 
 <!-- markdownlint-enable line-length -->
