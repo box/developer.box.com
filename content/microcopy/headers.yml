@@ -56,12 +56,6 @@ primary:
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/sample-code/"
 
-    api-versioning-strategy:
-      // text: The text for api versioning documentation
-      text: API Versioning Strategy
-      // url: The url to the root of the reference - DO NOT TRANSLATE
-      url: "/api-versioning-strategy/"
-
     sdks_and_tools:
       // text: The text for the link to the old page on SDKs
       text: SDKs & Tools
