@@ -47,14 +47,11 @@ The response will include a list of representations in the following format
 Every representation will include a set of properties and the type of
 representation.
 
-* The optional `dimensions` field represents the file's dimensions in
-  pixels as width by height.
+* The optional `dimensions` field represents the file's dimensions in pixels as width by height.
 
-* The optional `paged` field specifies if this representation is a paged
-  document. Some images and PDFs will often be paged documents.
+* The optional `paged` field specifies if this representation is a paged document. Some images and PDFs will often be paged documents.
 
-* The optional `thumb` field specifies if this representation is suitable
-  as a file thumbnail.
+* The optional `thumb` field specifies if this representation is suitable as a file thumbnail.
 
 [get_files_id]: endpoint://get-files-id
 [file_representations]: resource://file#param-representations

@@ -5,60 +5,57 @@ rank: 3
 
 # Signing structured docs
 
-A structured document in the context of Box Sign is a document that includes 
-specific tags that can be recognized by the Box Sign API. These tags are used 
-to place the signature properties associated with a specific signer in the 
+A structured document in the context of Box Sign is a document that includes
+specific tags that can be recognized by the Box Sign API. These tags are used
+to place the signature properties associated with a specific signer in the
 document, such as name, date, and signature.
 
-This allows your app to handle a dynamic generated document that is ready to be 
+This allows your app to handle a dynamic generated document that is ready to be
 signed, which has a couple of advantages:
 
-* The document can be dynamically generated, and the signature properties can 
-be added to the document before creating the signature request, effectively 
-bypassing the document preparation step.
+* The document can be dynamically generated, and the signature properties can be added to the document before creating the signature request, effectively bypassing the document preparation step.
 
-* The document format can be handled outside of Box Sign templates, allowing 
-higher flexibility and integration with external document management systems.
+* The document format can be handled outside of Box Sign templates, allowing higher flexibility and integration with external document management systems.
 
 ## Anatomy of a structured document
 
-Here is an example of a structured document, showing the formatting used to 
+Here is an example of a structured document, showing the formatting used to
 place tags in a Microsoft Word document:
 
 ![Using tags in a Microsoft Word document](images/sing-structured-tags-sample.png)
 
 In the sample above `[[c|1]]` means a checkbox assigned to signer 1, and `[[s|
-1]]` means a signature pad assigned to signer 1. Notice how the signature pad 
+1]]` means a signature pad assigned to signer 1. Notice how the signature pad
 is using font size 48 to reserve space vertically for the signature.
 
-The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag 
-assigned to signer 1, with the label `enter your complete name`, and using an 
+The `[[t|1|id:tag_full_name|n:enter your complete name]]` means a name tag
+assigned to signer 1, with the label `enter your complete name`, and using an
 id of `tag_full_name`.
 
-Check out this [document][support-tags] for a complete description of all 
+Check out this [document][support-tags] for a complete description of all
 the tags available.
 
-Setting the tags to the same `color` as the background will make them 
+Setting the tags to the same `color` as the background will make them
 invisible, but they will still be there.
 
-The number in the tags refer to the signer number, not the signing order, so 
-`[[c|1]]` is the checkbox for signer 1, `[[c|2]]` is the checkbox for signer 2, 
+The number in the tags refer to the signer number, not the signing order, so
+`[[c|1]]` is the checkbox for signer 1, `[[c|2]]` is the checkbox for signer 2,
 and so on.
 
-Tag 0 is reserved for the sender, and always exists. So even if the sender 
-does not need to input any data into the document, the other signers must start 
+Tag 0 is reserved for the sender, and always exists. So even if the sender
+does not need to input any data into the document, the other signers must start
 with 1.
 
 ## Create a signature request from a structured document
 
-This is the same as creating a signature request from an unstructured document. 
-At minimum, you will need to specify the document, the receiving folder and 
+This is the same as creating a signature request from an unstructured document.
+At minimum, you will need to specify the document, the receiving folder and
 the email of the `signer`.
 
-Since the structured document already contains the signature properties details 
+Since the structured document already contains the signature properties details
 and location, you can bypass the document preparation.
 
-This is how the flow would look like, from the generated document, create the 
+This is how the flow would look like, from the generated document, create the
 signature request and finally sign the document:
 
 ![Signing a structured document](images/sign-flow-tags.png)
@@ -67,7 +64,7 @@ Consider this method:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -91,9 +88,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -127,7 +124,7 @@ def main():
     sign_request = create_sign_request_structured(
         client, STRUCTURED_DOC, SIGNER_A
     )
-    check_sign_request(sign_request)    
+    check_sign_request(sign_request)
 
 ```
 
@@ -138,7 +135,7 @@ Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```json
 {
     "is_document_preparation_needed": false,
@@ -178,9 +175,9 @@ Resulting in (simplified):
         ],
     },
 }
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -198,8 +195,8 @@ Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
 </Tab>
 </Tabs>
 
-If you go to the **signer** email inbox, open the email from Box Sign, click 
-the **Review Document** button, you'll see the document with the signature 
+If you go to the **signer** email inbox, open the email from Box Sign, click
+the **Review Document** button, you'll see the document with the signature
 properties in place:
 
 ![Document with the properties in place](images/sign-structured-signing-document.png)
@@ -210,15 +207,15 @@ After completing the process the signed document looks like this:
 
 ## Pre-populate the signature attributes
 
-If you have an external id in the document tags you can use it to pre-populate 
-their values. For example, you can use the `tag_full_name` to pre-populate the 
+If you have an external id in the document tags you can use it to pre-populate
+their values. For example, you can use the `tag_full_name` to pre-populate the
 name of the signer.
 
 See this method:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
@@ -247,9 +244,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -290,7 +287,7 @@ def main():
     sign_request_pre_pop = create_sign_request_structured_with_prefill(
         client, STRUCTURED_DOC, "Signer A", SIGNER_A
     )
-    check_sign_request(sign_request_pre_pop)    
+    check_sign_request(sign_request_pre_pop)
 
 ```
 
@@ -301,7 +298,7 @@ Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```json
 
 {
@@ -356,9 +353,9 @@ Resulting in (simplified):
         ],
     },
 }
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -382,23 +379,23 @@ The document now has the name pre-populated:
 
 ## Extract information from a signed document
 
-Let's say you want to extract the name of the signer and the other properties 
-from the signed document. This is useful if you need to tie the information 
+Let's say you want to extract the name of the signer and the other properties
+from the signed document. This is useful if you need to tie the information
 from the signature request back into your systems.
 
 Let's create a method to extract the information from the signed request:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location 'https://api.box.com/2.0/sign_requests/
 11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
 --header 'Authorization: Bearer nQ...xY'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -436,7 +433,7 @@ def main():
 
     # Latest sign request
     LATEST_SIGN_REQUEST = "7b86e46c-72ba-4568-a6ff-787077cca007"
-    check_sign_request_by_id(client, LATEST_SIGN_REQUEST)    
+    check_sign_request_by_id(client, LATEST_SIGN_REQUEST)
 
 ```
 
@@ -447,7 +444,7 @@ Resulting in (simplified):
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```json
 
 {
@@ -528,9 +525,9 @@ Resulting in (simplified):
         ],
     },
 }
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -554,14 +551,14 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
 
 ## Summary
 
-Structured documents are a great way to integrate with external document 
+Structured documents are a great way to integrate with external document
 management systems, creating dynamic documents that are ready for signature.
 
-If your document signature requirements have a lot of options, you can 
-pre-populate these from another data source and save the user's time, but 
+If your document signature requirements have a lot of options, you can
+pre-populate these from another data source and save the user's time, but
 remember that the user who owns these properties can always change them.
 
-After the document is signed you can extract the information from the signature 
+After the document is signed you can extract the information from the signature
 request, which is useful if you need to tie it back into your systems.
 
 [support-tags]:https://support.box.com/hc/en-us/articles/4404085855251-Creating-templates-using-tags

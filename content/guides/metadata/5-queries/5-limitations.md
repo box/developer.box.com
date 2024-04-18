@@ -17,7 +17,7 @@ A metadata query only works with metadata templates that have been created by
 that enterprise. A query will not return results based on the content of free
 form key-value pairs stored in the `​global.properties` template.
 
-## Classification metadata templates  
+## Classification metadata templates
 
 Box uses metadata templates to power its content classification. These metadata
 templates can not be used in metadata queries, as they will most likely run
@@ -37,8 +37,7 @@ When sending a metadata query request for which the result set exceeds 2,000
 items, the API can only guarantee that it returns all all matching results if
 both the following conditions are met.
 
-1. The requesting user has at least **​Previewer** ​permission to all items in
-   the result set
+1. The requesting user has at least **​Previewer** ​permission to all items in the result set
 2. The ancestor folder contains all of the files in the result set
 
 When sending a metadata query request for which the result set exceeds 2,000

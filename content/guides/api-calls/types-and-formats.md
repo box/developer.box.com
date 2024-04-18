@@ -17,12 +17,8 @@ that can be encountered within the Box APIs.
 The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
-- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens
-  and as per the OAuth 2.0 specification it accepts the body to be sent
-  with a content type of `application/x-www-form-urlencoded`.
-- Most of the APIs that are used to upload binary data, like the
-  [`POST /files/content`][post-files-content] endpoint, expect data to be sent
-  as form data with a content type of `multipart/form-data`.
+- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens and as per the OAuth 2.0 specification it accepts the body to be sent with a content type of `application/x-www-form-urlencoded`.
+- Most of the APIs that are used to upload binary data, like the [`POST /files/content`][post-files-content] endpoint, expect data to be sent as form data with a content type of `multipart/form-data`.
 
 <Message type='notice'>
   Although not required, we highly recommend passing a header with each API
@@ -34,9 +30,9 @@ to this rule:
 
 As per the HTTP specification, all request header names in the Box API are
 case-insensitive and can be provided in lowercase, uppercase, or any mixed case
-form. In other words, the content type header can be set as 
-`CONTENT-TYPE: application/json`, `content-type: application/json`, 
-`content-type: application/json` or even the slightly absurd 
+form. In other words, the content type header can be set as
+`CONTENT-TYPE: application/json`, `content-type: application/json`,
+`content-type: application/json` or even the slightly absurd
 `cOnTeNt-TyPe: application/json`.
 
 Header values **are** mostly case sensitive unless stated otherwise.
@@ -79,11 +75,8 @@ UTC` on January 1, 1970.
 The Box APIs generally returns JSON in the response body. There are a few notable
 exceptions to this rule as well.
 
-- APIs that delete items return an empty body with a `204 No Content` HTTP
-  status code.
-- APIs used to request binary data either return a `200 OK` status code with the
-  binary data attached, or a `202 Accepted`, or `302 Found` status code with no
-  body and a `location` header pointing to the actual binary file.
+- APIs that delete items return an empty body with a `204 No Content` HTTP status code.
+- APIs used to request binary data either return a `200 OK` status code with the binary data attached, or a `202 Accepted`, or `302 Found` status code with no body and a `location` header pointing to the actual binary file.
 
 <Message type='notice'>
   The `content-type` response header can be used to understand the type of
@@ -96,8 +89,8 @@ exceptions to this rule as well.
 As per the HTTP specification, all response header names in the Box API are
 case-insensitive and could change over time.
 
-This means that the API might return responses with a content type header of 
-`CONTENT-TYPE: application/json`, `content-type: application/json` or 
+This means that the API might return responses with a content type header of
+`CONTENT-TYPE: application/json`, `content-type: application/json` or
 `content-type: application/json`. Ideally your application should convert header
 names to a standard case upon request and then use that standardized set of
 headers to look up values of the headers.

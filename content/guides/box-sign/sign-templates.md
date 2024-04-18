@@ -126,141 +126,140 @@ Follow these steps to [create sign request][signrequest] using a template:
 
 1. In the request body, provide the `template_id`:
 
-   ```json
-   {
-     "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
-     "parent_folder": {
-       "id": "123456789",
-       "etag": "0",
-       "type": "folder",
-       "sequence_id": "0",
-       "name": "My Sign Requests"
-     },
-       ...
-   }
-   ```
+  ```json
+  {
+      "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
+      "parent_folder": {
+        "id": "123456789",
+        "etag": "0",
+        "type": "folder",
+        "sequence_id": "0",
+        "name": "My Sign Requests"
+      },
+      ...
+  }
+  ```
 
-1. Add the signer email addresses and roles:
+2. Add the signer email addresses and roles:
 
-   ```json
-   {
-     "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
-     "parent_folder": {
-       "id": "157064745449",
-       "etag": "0",
-       "type": "folder",
-       "sequence_id": "0",
-       "name": "My Sign Requests"
-     },
-     "signers": [
-       {
-         "email": "signer1@sample.com",
-         "role": "signer"
-       },
-       {
-         "email": "signer2@sample.com",
-         "role": "signer"
-       }
-     ]
-   }
-   ```
+  ```json
+  {
+      "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
+      "parent_folder": {
+        "id": "157064745449",
+        "etag": "0",
+        "type": "folder",
+        "sequence_id": "0",
+        "name": "My Sign Requests"
+      },
+      "signers": [
+        {
+          "email": "signer1@sample.com",
+          "role": "signer"
+        },
+        {
+          "email": "signer2@sample.com",
+          "role": "signer"
+        }
+      ]
+  }
+  ```
 
-1. Add the `prefill_tags` to populate the fields.
-   
-   <Message>
-   Make sure the signer order is the same as the one
-   displayed on the template. If the template had `signer1`
-   first and then `signer2`, the `POST` request must reflect
-   the same order to assign the proper signers.
-   </Message>
+3. Add the `prefill_tags` to populate the fields.
 
-   ```json
-   {
-     "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
-     "parent_folder": {
-       "id": "123456789000",
-       "etag": "0",
-       "type": "folder",
-       "sequence_id": "0",
-       "name": "My Sign Requests"
-     },
-     "signers": [
-       {
-         "email": "signer1@sample.com",
-         "role": "signer"
-       },
-       {
-         "email": "signer2@sample.com",
-         "role": "signer"
-       }
-     ],
-     "prefill_tags": [
-       {
-         "document_tag_id": "signer1_full_name",
-         "text_value": "Aaron Levie"
-       },
-       {
-         "document_tag_id": "signer2_full_name",
-         "text_value": "Albert Einstein"
-       }
-     ]
-   }
-   ```
+    <Message>
+      Make sure the signer order is the same as the one
+      displayed on the template. If the template had `signer1`
+      first and then `signer2`, the `POST` request must reflect
+      the same order to assign the proper signers.
+    </Message>
 
-1. Send the `POST` request. The response will be similar to the following:
+  ```json
+  {
+      "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361",
+      "parent_folder": {
+        "id": "123456789000",
+        "etag": "0",
+        "type": "folder",
+        "sequence_id": "0",
+        "name": "My Sign Requests"
+      },
+      "signers": [
+        {
+          "email": "signer1@sample.com",
+          "role": "signer"
+        },
+        {
+          "email": "signer2@sample.com",
+          "role": "signer"
+        }
+      ],
+      "prefill_tags": [
+        {
+          "document_tag_id": "signer1_full_name",
+          "text_value": "Aaron Levie"
+        },
+        {
+          "document_tag_id": "signer2_full_name",
+          "text_value": "Albert Einstein"
+        }
+      ]
+  }
+  ```
 
-   ```json
+4. Send the `POST` request. The response will be similar to the following:
 
-   {
-       "is_document_preparation_needed": false,
-       ...
-       "signers": [
-           {
-               "email": "reader@sample.com",
-               "role": "final_copy_reader",
-           },
-           {
-               "email": "signer1@sample.com",
-               "role": "signer",
-           },
-           {
-               "email": "signer2@sample.com",
-               "role": "signer",
-           }
-       ],
-       "id": "d02fefd2-15fa-431f-a127-2b4525616ae6",
-       "prefill_tags": [
-           {
-               "document_tag_id": "signer1_full_name",
-               "text_value": "Aaron Levie",
-           },
-           {
-               "document_tag_id": "signer2_full_name",
-               "text_value": "Albert Einstein",
-           }
-       ],
-       "source_files": [],
-       "parent_folder": {
-           "id": "123456789000",
-           "type": "folder",
-           "name": "My Sign Requests"
-       },
-       "name": "Contract.pdf",
-       "type": "sign-request",
-       "status": "created",
-       "sign_files": {
-           "files": [
-               {
-                   "id": "123456789",
-                   "type": "file",
-                   "name": "Contract.pdf",
-               }
-           ],
-           "is_ready_for_download": true
-       },
-       "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361"
-   }
-   ```
+  ```json
+  {
+      "is_document_preparation_needed": false,
+      ...
+      "signers": [
+          {
+              "email": "reader@sample.com",
+              "role": "final_copy_reader",
+          },
+          {
+              "email": "signer1@sample.com",
+              "role": "signer",
+          },
+          {
+              "email": "signer2@sample.com",
+              "role": "signer",
+          }
+      ],
+      "id": "d02fefd2-15fa-431f-a127-2b4525616ae6",
+      "prefill_tags": [
+          {
+              "document_tag_id": "signer1_full_name",
+              "text_value": "Aaron Levie",
+          },
+          {
+              "document_tag_id": "signer2_full_name",
+              "text_value": "Albert Einstein",
+          }
+      ],
+      "source_files": [],
+      "parent_folder": {
+          "id": "123456789000",
+          "type": "folder",
+          "name": "My Sign Requests"
+      },
+      "name": "Contract.pdf",
+      "type": "sign-request",
+      "status": "created",
+      "sign_files": {
+          "files": [
+              {
+                  "id": "123456789",
+                  "type": "file",
+                  "name": "Contract.pdf",
+              }
+          ],
+          "is_ready_for_download": true
+      },
+      "template_id": "6ae28666-03c4-4ac1-80db-06a90d3b1361"
+  }
+  ```
 
 [signrequest]: e://post-sign-requests
 [docuprep]: https://support.box.com/hc/en-us/articles/4404094944915-Creating-templates

@@ -21,8 +21,7 @@ cannot be refreshed programmatically.
 
 To create a Developer Token for an application:
 
-- Navigate to the Box [Developer Console][devconsole] and select the application
-  to create a Developer Token for.
+- Navigate to the Box [Developer Console][devconsole] and select the application to create a Developer Token for.
 - Select the **Configuration** tab.
 - Under Developer Token, select **Generate Developer Token**.
 

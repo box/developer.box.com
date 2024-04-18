@@ -7,29 +7,29 @@ rank: 1
 
 ## Multiple signers
 
-What if you have a document that needs to be signed by multiple people? This is 
+What if you have a document that needs to be signed by multiple people? This is
 typical for contracts between two or more entities.
 
-Having multiple signers introduces another dimension to the Box Sign process, 
+Having multiple signers introduces another dimension to the Box Sign process,
 the order in which the signers need to sign the document.
 
-If you do not specify the order, the request is sent to everyone at the same 
-time, and when all parties have signed the document, they each receive a copy 
+If you do not specify the order, the request is sent to everyone at the same
+time, and when all parties have signed the document, they each receive a copy
 with all signatures.
 
-If you specify the signing order, the signature request is sent to the first 
-signer. Only when the first signer signs the document, the request is sent to 
+If you specify the signing order, the signature request is sent to the first
+signer. Only when the first signer signs the document, the request is sent to
 the second signer, and so on.
 
-Let’s see this working with an example scholarship contract between a 
-university and a student. In this case the institution/teacher must sign the 
+Let’s see this working with an example scholarship contract between a
+university and a student. In this case the institution/teacher must sign the
 document first.
 
 Creating a method specific for this:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -60,9 +60,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         },
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -120,67 +120,61 @@ def main():
         prep_needed=True,
     )
     if sign_contract_multi.prepare_url is not None:
-        open_browser(sign_contract_multi.prepare_url)    
+        open_browser(sign_contract_multi.prepare_url)
 
 ```
 
 </Tab>
 </Tabs>
 
-In this particular example the document needs to be prepared, so the browser to 
+In this particular example the document needs to be prepared, so the browser to
 the prepare URL opens.
 
-Drag the signature pad, the full name and the date to the appropriate places in 
+Drag the signature pad, the full name and the date to the appropriate places in
 the document, and click Send Request:
 
 ![Preparing the contract](images/sign-multi-prep.png)
 
-Notice you now have two signers, with the order already specified. The `color` 
-is also important to identify which signer is which (in this case the 
-institution is blue and the student is green), determining which signature pad, 
+Notice you now have two signers, with the order already specified. The `color`
+is also important to identify which signer is which (in this case the
+institution is blue and the student is green), determining which signature pad,
 name and date belongs to which signer.
 
-If you look at the signature request details, you should see something like 
+If you look at the signature request details, you should see something like
 this:
 
 ![Signature request details showing the document and signers](images/sign-multi-prep-details.png)
 
-Indicating that the first request was sent, but the second is waiting for the 
+Indicating that the first request was sent, but the second is waiting for the
 first to be completed.
 
 Go ahead and complete the signature process for both signers.
 
-Notice that when you get the second request it is already signed by the first 
+Notice that when you get the second request it is already signed by the first
 signer.
 
 ## Roles
 
-So far we have been working with the `signer` role. However there are [other 
+So far we have been working with the `signer` role. However there are [other
 roles][roles] that you can use to customize the signature process.
 
 The available roles are, `signer`, `approver`, and `final copy reader`
 
 From a developer perspective, this means:
 
-- **Signer**: Any person who is allowed to add data to the document. This 
-includes adding a signature, initials, date, but also filling out text fields, 
-check boxes, and radio buttons, even if it does not include a signature.
+- **Signer**: Any person who is allowed to add data to the document. This includes adding a signature, initials, date, but also filling out text fields, check boxes, and radio buttons, even if it does not include a signature.
 
-- **Approver**: This role will be asked if they approve the signature request. 
-This approval happens before the preparation step, if enabled, and before the 
-request is sent to any of the signers. This role is useful if you need to get 
-approval from someone before sending the document to the signers.
+- **Approver**: This role will be asked if they approve the signature request. This approval happens before the preparation step, if enabled, and before the request is sent to any of the signers. This role is useful if you need to get approval from someone before sending the document to the signers.
 
-- **Final copy reader**: This role does not interact with the signature 
-process, but will receive a copy of the signed document.
+- **Final copy reader**: This role does not interact with the signature process, but will receive a copy of the signed document.
 
 Let's use roles to be a bit more creative in the scholarship example.
 
-Imagine that the scholarship needs to be approved by the dean, and the legal 
+Imagine that the scholarship needs to be approved by the dean, and the legal
 department receives a final copy of the contract.
 
-The flow starts with the signature request, flowed by the dean approval, the 
-institution signature, the student signature, and finally the legal 
+The flow starts with the signature request, flowed by the dean approval, the
+institution signature, the student signature, and finally the legal
 department receives a copy of the signed document:
 
 ![Multiple signers and roles](images/sign-flow-multi-role.png)
@@ -189,7 +183,7 @@ Let's create a method for this:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -228,9 +222,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -288,7 +282,7 @@ def sign_contract_step(
 
 def main():
     ...
-    
+
     # Multiple signers and steps
     sign_contract_multi_step = sign_contract_step(
         client,
@@ -307,13 +301,13 @@ def main():
 </Tab>
 </Tabs>
 
-Like before you need to prepare the document, so open the prepare URL in your 
+Like before you need to prepare the document, so open the prepare URL in your
 browser.
 
-Notice in the example the institution is represented by blue on the 
+Notice in the example the institution is represented by blue on the
 left, and the student by green on the right, and both are signers.
 
-Neither the `approver` nor the `final copy reader` can have inputs associated 
+Neither the `approver` nor the `final copy reader` can have inputs associated
 with them. If you do this, their roles will be adjusted to `signer`:
 
 ![Multiple role preparation](images/sign_multi-steps-prep.png)

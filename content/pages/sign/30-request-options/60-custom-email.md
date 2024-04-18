@@ -7,32 +7,31 @@ rank: 6
 
 ## Email subject and body
 
-By default, the email sent to the signers contains a link to the document, a 
+By default, the email sent to the signers contains a link to the document, a
 generic subject, and a generic message.
 
-If you are using templates managed within Box, the subject and message body can 
+If you are using templates managed within Box, the subject and message body can
 be set in the template itself.
 
-However, if you are not using templates, you can still customize the email 
-messages sent to the signers by passing the `email_subject` and the 
-`email_message` parameters. 
+However, if you are not using templates, you can still customize the email
+messages sent to the signers by passing the `email_subject` and the
+`email_message` parameters.
 
-Both parameters accept strings, but the `email_message` parameter 
+Both parameters accept strings, but the `email_message` parameter
 also accepts HTML with some limitations.
 
-Only some HTML tags are allowed. Links included in the message are also 
-converted to hyperlinks in the email. 
+Only some HTML tags are allowed. Links included in the message are also
+converted to hyperlinks in the email.
 
 The message parameter may contain the following HTML tags:
 
-- `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`,
- `ol`, `strong`
+- `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`, `ol`, `strong`
 
 Custom styles on these tags are not allowed.
 
 <Message size=small>
 
-Be aware that when the text to HTML ratio is too high, the email may end up in 
+Be aware that when the text to HTML ratio is too high, the email may end up in
 spam filters or clipped.
 
 </Message>
@@ -41,7 +40,7 @@ For example:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location 'https://api.box.com/2.0/sign_requests' \
@@ -66,9 +65,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -104,7 +103,7 @@ def main():
         SIGNER_A,
         prep_needed=False,
         email_subject="All we need is your signature to get started",
-    )  
+    )
 
 ```
 
@@ -113,34 +112,34 @@ def main():
 
 ## Manual notification
 
-By now, you've noticed that the signature request sends an email 
-notification to the signers by default. This email is sent from a `box.com` 
+By now, you've noticed that the signature request sends an email
+notification to the signers by default. This email is sent from a `box.com`
 domain and email system.
 
-You can take over the notification process by setting the 
-`embed_url_external_user_id` parameter to an identifier of your choice for a 
+You can take over the notification process by setting the
+`embed_url_external_user_id` parameter to an identifier of your choice for a
 specific signer.
 
-By setting this parameter, the signer will not receive an email notification, 
-and within the signature request, you get back both an `embed_url` and an 
+By setting this parameter, the signer will not receive an email notification,
+and within the signature request, you get back both an `embed_url` and an
 `iframeable_embed_url`.
 
-The `embed_url` can be opened directly, so it is suitable for your app to send 
+The `embed_url` can be opened directly, so it is suitable for your app to send
 it in an email, or by any other notifications system for the signer to open.
 
-The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign 
-Client][embed], which allows you to embed the Box Sign client on an iframe 
+The `iframeable_embed_url` is suited to be used with the [Box Embedded Sign
+Client][embed], which allows you to embed the Box Sign client on an iframe
 within your web app.
 
 For example see this request:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer fN...dD' 
+--header 'Authorization: Bearer fN...dD'
 --data-raw '{
     "is_document_preparation_needed": false,
     "parent_folder": {
@@ -161,9 +160,9 @@ For example see this request:
         }
     ]
 }'
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -209,7 +208,7 @@ def main():
         SIGNER_A,
         SIGNER_A_EXTERNAL_ID,
     )
-    check_sign_request(sign_with_embed_url)    
+    check_sign_request(sign_with_embed_url)
 
 ```
 
@@ -220,7 +219,7 @@ Returns (simplified):
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```json
 
 {
@@ -240,9 +239,9 @@ Returns (simplified):
     ],
     "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
 }
-    
+
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -262,7 +261,7 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
 </Tab>
 </Tabs>
 
-You can now take the embedded URLs and use your own notification process or 
+You can now take the embedded URLs and use your own notification process or
 embed the signature client within your own app.
 
 [embed]:guide://box-sign/embedded-sign-client

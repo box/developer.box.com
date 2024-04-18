@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-preview
   - /docs/content-preview
 ---
@@ -231,12 +231,8 @@ preview.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following:
 
-- `viewer` event will be triggered when we have the viewer instance first
-  available. This will be the same object that is also a property included in
-  the `load` event. Preview triggers this event before `load` so that clients
-  can attach their listeners before the `load` event is triggered.
-- `load` event will be triggered on every preview load when `show()` is called
-  or if inter-preview navigation occurs. The event data will contain:
+- `viewer` event will be triggered when we have the viewer instance first available. This will be the same object that is also a property included in the `load` event. Preview triggers this event before `load` so that clients can attach their listeners before the `load` event is triggered.
+- `load` event will be triggered on every preview load when `show()` is called or if inter-preview navigation occurs. The event data will contain:
 
 ```js
 error: 'message', // Error message if any error occurred while loading
@@ -245,22 +241,15 @@ metrics: {...},   // Performance metrics
 file: {...}       // Box file object with properties defined in file.js
 ```
 
-- `navigate` event will be triggered when navigation happens. The event includes
-  the file ID of the file being navigated to, and this event will trigger before
-  `load`.
-- `notification` event will be triggered when either the preview wrapper or one
-  of the viewers wants to notify something like a warning or non-fatal error. The
-  event data will contain:
+- `navigate` event will be triggered when navigation happens. The event includes the file ID of the file being navigated to, and this event will trigger before `load`.
+- `notification` event will be triggered when either the preview wrapper or one of the viewers wants to notify something like a warning or non-fatal error. The event data will contain:
 
 ```js
 message: 'message', // Message to show
 type: 'warning'    // 'warning', 'notice', or 'error'
 ```
 
-- `viewerevent` Each viewer will trigger its own sets of events. For example, the
-  Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger
-  another set of events. The preview wrapper will also re-emit events at the
-  preview level, with event data containing:
+- `viewerevent` Each viewer will trigger its own sets of events. For example, the Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger another set of events. The preview wrapper will also re-emit events at the preview level, with event data containing:
 
 ```js
 event: EVENTNAME,         // Event name
@@ -322,8 +311,7 @@ To add V4 annotations to preview:
     Box annotations version should be at least major version 4 and up.
     </Message>
 
-2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with
-  annotation related change.
+2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with annotation related change.
 
     <Message warning>
     Box UI elements should be the lowest working version that contains
@@ -342,26 +330,26 @@ var accessToken = 'YOUR ACCESS TOKEN';
 
 /* Enable annotations in sidebar */
 var contentSidebarProps = {
-   hasActivityFeed: true,
-   features: {
-      activityFeed: {
-         annotations: {
-            enabled: true
-         }
-      }
-   },
+  hasActivityFeed: true,
+  features: {
+    activityFeed: {
+        annotations: {
+          enabled: true
+        }
+    }
+  },
 }
 
 var options = {
-   container: '.previewer',
-   contentSidebarProps: contentSidebarProps,
+  container: '.previewer',
+  contentSidebarProps: contentSidebarProps,
 
-   /* Enable annotations in preview */
-   enableAnnotationsDiscoverability: true,
-   enableAnnotationsImageDiscoverability: true,
-   showAnnotations: true,
-   showAnnotationsControls: true,
-   showAnnotationsDrawingCreate: true,
+  /* Enable annotations in preview */
+  enableAnnotationsDiscoverability: true,
+  enableAnnotationsImageDiscoverability: true,
+  showAnnotations: true,
+  showAnnotationsControls: true,
+  showAnnotationsDrawingCreate: true,
 };
 
 /* BoxAnnotations */

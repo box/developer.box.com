@@ -122,7 +122,7 @@ Fill out the application details with the following configuration settings:
 Click the **Done** button to create the application and be dropped on to the
 general settings of the application.
 
-## Copy Application Credentials 
+## Copy Application Credentials
 
 Using the configuration files set up in the last step, we next have to add in
 the Okta application org and app details within the files.
@@ -141,14 +141,11 @@ appropriate configuration files.
 </ImageFrame>
 
 <Choice option='programming.platform' value='node' color='none'>
-* Open `config.json` within the local application directory in your preferred
- editor.
+* Open `config.json` within the local application directory in your preferred editor.
 * Update the following line items with the appropriate Okta configuration info:
-  * `oktaClientId`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `oktaClientSecret`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
+    * `oktaClientId`: Obtained from the **Client Credentials** section of the application general settings.
+    * `oktaClientSecret`: Obtained from the **Client Credentials** section of the application general settings.
+    * `oktaOrgUrl`: Obtained from the top right of the main admin dashboard page.
 * Save the file.
 
 Your `config.json` file should look similar to the following.
@@ -165,16 +162,10 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
-* Open the `/src/main/resources/application.properties` file and update the
- following lines:
-  * `okta.oauth2.issuer`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default`. For example, if your
-   Org URL was `https://dev-123456.okta.com`, the issuer string should be
-   `https://dev-123456.okta.com/oauth2/default`.
-  * `okta.oauth2.clientId`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `okta.oauth2.clientSecret`: Obtained from the **Client Credentials**
-   section of the application general settings.
+* Open the `/src/main/resources/application.properties` file and update the following lines:
+    * `okta.oauth2.issuer`: Your Org URL, obtained from the top right of the main admin dashboard page, followed by `/oauth2/default`. For example, if your Org URL was `https://dev-123456.okta.com`, the issuer string should be `https://dev-123456.okta.com/oauth2/default`.
+    * `okta.oauth2.clientId`: Obtained from the **Client Credentials** section of the application general settings.
+    * `okta.oauth2.clientSecret`: Obtained from the **Client Credentials** section of the application general settings.
 * Save the file
 
 Your `/src/main/resources/application.properties` file should look similar to
@@ -202,14 +193,11 @@ To create an auth token:
 
 Next, update the local application configuration file.
 
-* Open `config.py` within the local application directory in your preferred
- editor.
+* Open `config.py` within the local application directory in your preferred editor.
 * Update the following line items with the appropriate Okta configuration info:
-  * `okta_client_secret`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `okta_org_url`: Obtained from the top right of the main admin dashboard
-   page.
-  * `okta_auth_token`: The token created above.
+    * `okta_client_secret`: Obtained from the **Client Credentials** section of the application general settings.
+    * `okta_org_url`: Obtained from the top right of the main admin dashboard page.
+    * `okta_auth_token`: The token created above.
 * Save the file.
 
 Your `config.py` file should look similar to the following.
@@ -224,29 +212,14 @@ okta_callback_route = '/oidc/callback'
 
 Lastly, update the Flask configuration file
 
-* Open `client_secrets.json` within the local application directory in your
- preferred editor.
+* Open `client_secrets.json` within the local application directory in your preferred editor.
 * Update the following line items with the appropriate Okta configuration info:
-  * `client_id`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `client_secret`: Obtained from the **Client Credentials** section of
-   the application general settings.
-  * `auth_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/v1/authorize`. For
-   example, if your Org URL was `https://dev-123456.okta.com`, the issuer
-   string should be `https://dev-123456.okta.com/oauth2/default/v1/authorize`.
-  * `token_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/v1/token`. For example,
-   if your Org URL was `https://dev-123456.okta.com`, the issuer string should
-   be `https://dev-123456.okta.com/oauth2/default/v1/token`.
-  * `issuer`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default`. For example, if your
-   Org URL was `https://dev-123456.okta.com`, the issuer string should be
-   `https://dev-123456.okta.com/oauth2/default`.
-  * `userinfo_uri`: Your Org URL, obtained from the top right of the main
-   admin dashboard page, followed by `/oauth2/default/userinfo`. For example,
-   if your Org URL was `https://dev-123456.okta.com`, the issuer string should
-   be `https://dev-123456.okta.com/oauth2/default/userinfo`.
+    * `client_id`: Obtained from the **Client Credentials** section of the application general settings.
+    * `client_secret`: Obtained from the **Client Credentials** section of the application general settings.
+    * `auth_uri`: Your Org URL, obtained from the top right of the main admin dashboard page, followed by `/oauth2/default/v1/authorize`. For example, if your Org URL was `https://dev-123456.okta.com`, the issuer string should be `https://dev-123456.okta.com/oauth2/default/v1/authorize`.
+    * `token_uri`: Your Org URL, obtained from the top right of the main admin dashboard page, followed by `/oauth2/default/v1/token`. For example, if your Org URL was `https://dev-123456.okta.com`, the issuer string should be `https://dev-123456.okta.com/oauth2/default/v1/token`.
+    * `issuer`: Your Org URL, obtained from the top right of the main admin dashboard page, followed by `/oauth2/default`. For example, if your Org URL was `https://dev-123456.okta.com`, the issuer string should be `https://dev-123456.okta.com/oauth2/default`.
+    * `userinfo_uri`: Your Org URL, obtained from the top right of the main admin dashboard page, followed by `/oauth2/default/userinfo`. For example, if your Org URL was `https://dev-123456.okta.com`, the issuer string should be `https://dev-123456.okta.com/oauth2/default/userinfo`.
 * Save the file.
 
 Your `client_secrets.json` file should look similar to the following.
@@ -272,15 +245,11 @@ Your `client_secrets.json` file should look similar to the following.
 </Choice>
 
 <Choice option='programming.platform' value='cs' color='none'>
-* Open `Startup.cs` within the local application directory in your preferred
- editor.
-* Update the following line items within the `ConfigureServices` method with
- the appropriate Okta configuration info:
-  * `OktaDomain`: Obtained from the top right of the main admin dashboard page.
-  * `ClientId`: Obtained from the **Client Credentials** section of the
-   application general settings.
-  * `ClientSecret`: Obtained from the **Client Credentials** section of the
-   application general settings.
+* Open `Startup.cs` within the local application directory in your preferred editor.
+* Update the following line items within the `ConfigureServices` method with the appropriate Okta configuration info:
+    * `OktaDomain`: Obtained from the top right of the main admin dashboard page.
+    * `ClientId`: Obtained from the **Client Credentials** section of the application general settings.
+    * `ClientSecret`: Obtained from the **Client Credentials** section of the application general settings.
 * Save the file.
 
 Your `ConfigureServices` method should look similar to the following.
@@ -316,16 +285,12 @@ services.AddAuthentication(options =>
 ## Create a User
 
 Our last step in the Okta setup is to create a test user that we will use to
-log in to the application. 
+log in to the application.
 
 1. Go to the **Users** section of the Okta admin dashboard.
-1. Click on the **Add Person** button.
-1. Enter all appropriate user info. Under password, select **Set by admin** and
- input a password for the user. Also deselect the **User must change password
- on first login** option. You will use the username and password to log
- in. These settings will only be used for testing purposes and are not best
- practices for user creation and security.
-1. Click the **Save** button to create the user.
+2. Click on the **Add Person** button.
+3. Enter all appropriate user info. Under password, select **Set by admin** and input a password for the user. Also deselect the **User must change password on first login** option. You will use the username and password to log in. These settings will only be used for testing purposes and are not best practices for user creation and security.
+4. Click the **Save** button to create the user.
 
 ## Summary
 

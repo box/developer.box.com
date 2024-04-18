@@ -38,14 +38,9 @@ fields, as well as any metadata associated to the item.
 
 For example:
 
-* `created_by` will add the details of the user who created the item to
-the response.
-* `metadata.<scope>.<templateKey>` will return the base-representation
-of the metadata instance identified by the `scope` and `templateKey`.
-* `metadata.<scope>.<templateKey>.<field>` will return all fields in the
-  base-representation of the metadata instance identified by the `scope` and
-  `templateKey` plus the field specified by the `field` name. Multiple fields
-  for the same `scope` and `templateKey` can be defined.
+* `created_by` will add the details of the user who created the item to the response.
+* `metadata.<scope>.<templateKey>` will return the base-representation of the metadata instance identified by the `scope` and `templateKey`.
+* `metadata.<scope>.<templateKey>.<field>` will return all fields in the base-representation of the metadata instance identified by the `scope` and `templateKey` plus the field specified by the `field` name. Multiple fields for the same `scope` and `templateKey` can be defined.
 
 ## The `query` parameter
 
@@ -134,10 +129,8 @@ A query supports the following comparison operators.
 The `LIKE`, `NOT LIKE`, `ILIKE`, and `NOT ILIKE` operators match a string
 to a pattern. The pattern supports the following reserved characters.
 
-* `%` The percent sign represents zero, one, or multiple characters, for example
-  `%Contract` matches `Contract`, `Sales Contract`, but not `Contract (Sales)`,
-* `_` The underscore represents a single character, for example
-  `Bo_` matches `Box`, `Bot`, but not `Bots`,
+* `%` The percent sign represents zero, one, or multiple characters, for example `%Contract` matches `Contract`, `Sales Contract`, but not `Contract (Sales)`,
+* `_` The underscore represents a single character, for example `Bo_` matches `Box`, `Bot`, but not `Bots`,
 
 Both of these reserved characters can be used before, after, or in between other
 characters. A pattern can include multiple reserved characters, for example

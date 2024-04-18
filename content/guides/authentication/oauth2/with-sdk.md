@@ -187,16 +187,16 @@ https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=
 <!-- markdownlint-enable line-length -->
 
 <Message>
- Additional query parameters can be passed along when redirecting the user to
- limit down the scope, or pass along some extra state. See the [reference
- documentation](endpoint://get-authorize) for more information.
+  Additional query parameters can be passed along when redirecting the user to
+  limit down the scope, or pass along some extra state. See the [reference
+  documentation](endpoint://get-authorize) for more information.
 </Message>
 
 <Message type='tip'>
-  If you have [Box Verified Enterprise][1] for your Box 
-  instance turned on, you 
-  may encounter an issue using the standard 
-  `account.box.com` base URL. 
+  If you have [Box Verified Enterprise][1] for your Box
+  instance turned on, you
+  may encounter an issue using the standard
+  `account.box.com` base URL.
   Instead, use `ent.box.com` in place of `account.box.com`.
 </Message>
 

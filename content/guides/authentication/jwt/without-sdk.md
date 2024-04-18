@@ -42,10 +42,8 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the
-  [Developer Console][devconsole]
-- A private key configuration file named `config.json`, which can be downloaded
-  from the configuration tab of the [Developer Console][devconsole]
+- A Custom Application using JWT authentication within the [Developer Console][devconsole]
+- A private key configuration file named `config.json`, which can be downloaded from the configuration tab of the [Developer Console][devconsole]
 - Ensure your application is [authorized][auth] within the Box Admin Console
 
 ### 1. Read JSON configuration
@@ -744,7 +742,7 @@ let accessToken = await axios
       client_secret: config.boxAppSettings.clientSecret,
     })
   )
- .then((response) => response.data.access_token);
+  .then((response) => response.data.access_token);
 ```
 
   </Tab>

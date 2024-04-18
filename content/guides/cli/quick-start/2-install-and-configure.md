@@ -111,8 +111,7 @@ Notification Email: []
 
 * You installed the CLI
 * You configured the CLI to use the OAuth 2.0 Application created earlier
-* You **made your first Box CLI Box API call** confirmed the user associated
-  with your Access Token
+* You **made your first Box CLI Box API call** confirmed the user associated with your Access Token
 
 <Next>I installed and configured the CLI</Next>
 </Choice>

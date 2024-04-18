@@ -9,7 +9,7 @@ At this point we have application code that will handle traffic from users
 visiting, forward them to Okta to login, provide Okta user information, before
 finally handing off to a yet to be created handler for Box.
 
-This section will cover the final Box components: 
+This section will cover the final Box components:
 
 * Validating if an Okta user has an associated Box app user account.
 * Creating a new app user for the associated Okta record if they don't.
@@ -25,7 +25,7 @@ account if one doesn't already exist for the Okta user.
 In your local application directory, load the `server.js` file created in
 step 1.
 
-Add the following `box` object into the file and save. 
+Add the following `box` object into the file and save.
 
 ```js
   const box = (() => {
@@ -54,12 +54,9 @@ Add the following `box` object into the file and save.
 
 This object defines a number of items:
 
-* Configuration: A new instance of the Box Node SDK is instantiated and made
- available to the object functions, along with a number of variables.
-* `validateUser` function: Will house the code to validate whether a Box user
- exists for an associated Okta user.
-* `createUser` function: Creates a new Box user bound to the associated Okta
- user ID.
+* Configuration: A new instance of the Box Node SDK is instantiated and made available to the object functions, along with a number of variables.
+* `validateUser` function: Will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser` function: Creates a new Box user bound to the associated Okta user ID.
 
 With that structure defined, replace the `// TODO: CREATE USER` section with
 the following code.
@@ -68,7 +65,7 @@ the following code.
   const spaceAmount = 1073741824;   // ~ 1gb
 
   client.enterprise.addAppUser(
-    this.oktaRecord.name, 
+    this.oktaRecord.name,
     {
       space_amount: spaceAmount,
       external_app_user_id: this.oktaRecord.sub
@@ -102,12 +99,10 @@ Within the `public class Application` definition, add the following methods:
 ```
 
 These methods will handle the Box user validation and creation. Breaking them
-down: 
+down:
 
-* `validateUser`: Will house the code to validate whether a Box user
- exists for an associated Okta user.
-* `createUser`: Creates a new Box user bound to the associated Okta
- user ID.
+* `validateUser`: Will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser`: Creates a new Box user bound to the associated Okta user ID.
 
 With those methods defined, replace `# TODO: CREATE USER` with the following
 code:
@@ -155,12 +150,9 @@ definitions.
 
 This class defines:
 
-* `init`: When initialized, a new instance of the Box Python SDK is
- instantiated and made available to the object methods.
-* `validateUser` method: Accepting a user object as input, this will house the
- code to validate whether a Box user exists for an associated Okta user.
-* `createUser` method: Accepting a user object as input, this creates a new Box
- user bound to the associated Okta user ID.
+* `init`: When initialized, a new instance of the Box Python SDK is instantiated and made available to the object methods.
+* `validateUser` method: Accepting a user object as input, this will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser` method: Accepting a user object as input, this creates a new Box user bound to the associated Okta user ID.
 
 With that class defined, replace the `# TODO: CREATE USER` section with
 the following code.
@@ -278,7 +270,7 @@ to search specifically for that user.
 
 If found (number of records is greater than 0) we can make an
 authenticated call to the Box APIs using that user record, which will be
-defined in the next section. 
+defined in the next section.
 
 If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
@@ -323,7 +315,7 @@ specifically for that user.
 
 If found (number of records is greater than 0) we can make an
 authenticated call to the Box APIs using that user record, which will be
-defined in the next section. 
+defined in the next section.
 
 If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.
@@ -356,7 +348,7 @@ specifically for that user.
 
 If found (number of records is greater than 0) we can make an
 authenticated call to the Box APIs using that user record, which will be
-defined in the next section. 
+defined in the next section.
 
 If not found, we call the `createUser` function we defined in the last section
 to create a new Box user with that `external_app_user_id` association.

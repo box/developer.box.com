@@ -34,17 +34,12 @@ following scopes are set in the **Configuration** tab of your application:
 - Read all files and folders stored in Box
 - Write all files and folders stored in Box
 
-1. From the left-hand navigation panel on your All Files page, open the
-   [Developer Console][dc]. If this is your first time using the Box
-   API and this option is not already available, you can add it to your account
-   by clicking [here][dc].
+1. From the left-hand navigation panel on your All Files page, open the [Developer Console][dc]. If this is your first time using the Box API and this option is not already available, you can add it to your account by clicking [here][dc].
 
-2. Click **Create New App** > **Custom App** > **Server Authentication
-   (with JWT)** > name the application > **Create App**
+2. Click **Create New App** > **Custom App** > **Server Authentication (with JWT)** > name the application > **Create App**
 
 <Message warning>
-  Server Authentication (with JWT) always requires Admin authorization before
-  use.
+  Server Authentication (with JWT) always requires Admin authorization before use.
 </Message>
 
 ## Configure the application
@@ -75,8 +70,8 @@ and permissions work together, please see our article on understanding
 [Box's security mechanisms][blogpost].
 
 <Message warning>
-   If configuration changes are made to this application, it will need to be 
-   reauthorized in order for the changes to take effect.
+  If configuration changes are made to this application, it will need to be
+  reauthorized in order for the changes to take effect.
 </Message>
 
 You will know when an application is ready for use by visiting its Authorization
@@ -91,25 +86,25 @@ authorized.
 
 The CLI needs a configuration file stored locally in order to make API calls.
 
-To download the configuration file, visit the **Configuration** tab in the 
+To download the configuration file, visit the **Configuration** tab in the
 [Developer Console][dc]. Click **Generate a Public/Private Keypair**, which will
 send you through 2FA verification before automatically downloading the
 configuration file for your application. For more information see
-our [guide][keypair]. 
+our [guide][keypair].
 
 <Message warning>
-   For security reasons 2FA must be enabled on your Box account to successfully
-   generate a public/private keypair.
+  For security reasons 2FA must be enabled on your Box account to successfully
+  generate a public/private keypair.
 </Message>
 
 Locate the downloaded file on your machine which has a default name in the
 format: `EnterpriseID_publicKeyID_config.json`. You may leave this name or
-choose to rename it. This guide assumes the file is renamed to `config.json`. 
+choose to rename it. This guide assumes the file is renamed to `config.json`.
 
 <Message warning>
-   It is critical you place the file in a location where it will not be
-   inadvertently deleted or moved. If this occurs you will need to repeat the
-   step 2 to reconfigure the CLI. 
+  It is critical you place the file in a location where it will not be
+  inadvertently deleted or moved. If this occurs you will need to repeat the
+  step 2 to reconfigure the CLI.
 </Message>
 
 ## CLI Installation and Configuration
@@ -157,14 +152,14 @@ command: `box configure:environments:add PathToConfigFileHere`, replacing
 
 <!-- markdownlint-disable line-length -->
 
-For example: 
+For example:
 `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
 
 <!-- markdownlint-enable line-length -->
 
 <Message type='tip'>
-   You can drag the csv file from the Finder/File Explorer to the
-   terminal/command line window to auto-populate the path.
+  You can drag the csv file from the Finder/File Explorer to the
+  terminal/command line window to auto-populate the path.
 </Message>
 
 ## Confirm configuration
@@ -195,16 +190,15 @@ Notification Email: []
 ```
 
 <Message type='tip'>
-   By default, JWT applications automatically obtain an Access Token for the
-   Service Account. It is possible to change the default user, but this guide
-   assumes you do not do this. 
+  By default, JWT applications automatically obtain an Access Token for the
+  Service Account. It is possible to change the default user, but this guide
+  assumes you do not do this.
 </Message>
 
 ## Next Steps
 
 - You can checkout the [commands][commands] page on GitHub for example code.
-- You can also go to the second part of the [OAuth 2.0 Quick Start][three] for
-    a tutorial on how to use the commands.
+- You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
 
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/

@@ -3,18 +3,17 @@ rank: 0
 related_guides:
 - authentication
 - authorization
-- api-calls 
+- api-calls
 ---
 
 # Start Here
 
 To begin your journey, visit our new [Learn Box Platform][learn] section.
 
-Our documentation is divided into five main sections: 
+Our documentation is divided into five main sections:
 
 - **Learn Box Platform**: A getting started walk through of all things Platform
-- **Developer Guides**: Information about endpoint usage not covered by
-    reference documentation
+- **Developer Guides**: Information about endpoint usage not covered by reference documentation
 - **API Reference**: Endpoint documentation
 - **SDK and Tools**: Information about official Box SDKs and tooling
 - **Sample Code Catalog**: Consolidated list of several code repositories

@@ -14,7 +14,7 @@ related_resources: []
 ---
 # Update user zones
 
-This [script][script] provisions users to a specific 
+This [script][script] provisions users to a specific
 data residency zone within a Multizone Box tenant.
 It performs the following steps:
 
@@ -40,34 +40,34 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-   ```bash
-    pwsh 
-   ```
+  ```bash
+  pwsh
+  ```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-   ```bash
-   PowerShell 7.2.5
-   Copyright (c) Microsoft Corporation.
+  ```bash
+  PowerShell 7.2.5
+  Copyright (c) Microsoft Corporation.
 
-   https://aka.ms/powershell
-   Type 'help' to get help.
-     
-   PS /Users/user/repos/boxcli/examples> 
-   ```
+  https://aka.ms/powershell
+  Type 'help' to get help.
 
-   <message>
-      If you encounter issues make sure you installed both 
-      [dotnet core](https://dotnet.microsoft.com/download) and 
-      [PowerShell][pwsh].
-   </message>
+  PS /Users/user/repos/boxcli/examples>
+  ```
+
+  <message>
+    If you encounter issues make sure you installed both
+    [dotnet core](https://dotnet.microsoft.com/download) and
+    [PowerShell][pwsh].
+  </message>
 
 ### Set up application with JWT authentication
 
 To use the script, you will need the [Box CLI with JWT authentication][jwtapp]
-installed and configured. 
+installed and configured.
 
 When creating the app, use the **Configuration** tab
 to configure the following settings:
@@ -83,14 +83,14 @@ To check this setting:
 
 1. Go **Users & Groups** section in the Admin Console.
 2. Click the user account you want to verify.
-3. Go to **Edit User Access permissions** section to grant the administrative privileges for users and groups. 
+3. Go to **Edit User Access permissions** section to grant the administrative privileges for users and groups.
 
 ## Prepare the `.csv` file
 
-The `.csv` file must have two columns with the following headers: **Email** and **Region**. 
+The `.csv` file must have two columns with the following headers: **Email** and **Region**.
 
-* **Email** contains the primary email address of a Box user. 
-* **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone. 
+* **Email** contains the primary email address of a Box user.
+* **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone.
 
   ```bash
   $ZonesTable = @{
@@ -104,13 +104,12 @@ The `.csv` file must have two columns with the following headers: **Email** and 
   UK = "100009"             #UK with in region uploads/downloads/previews
   France = "100012"         #France
   }
-
   ```
-  
+
 <message>
   Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.
 </message>
- 
+
 A sample input `.csv` file containing emails and zone names is provided with this script. Its content looks as follows:
 
 | Email|Region|
@@ -127,7 +126,7 @@ Set the `UserZonesUpdatePath` to point to your `.csv` file.
 $UserZonesUpdatePath = "./your_file_name.csv"
 ```
 
-Update the `adminEmail` to the admin or `co-admin` login email address of the account the script will use to make zone assignments. 
+Update the `adminEmail` to the admin or `co-admin` login email address of the account the script will use to make zone assignments.
 If you don't specify this value, the script will prompt you for it.
 
 ```bash
@@ -137,20 +136,20 @@ $adminEmail = "john@box.com"
 ## Run the script
 
 Run the Powershell command.
-   
+
 ```bash
 pwsh
 ```
 
 Run the script.
-   
+
 ```bash
 ./Mass_Update_User_Zones.ps1
 ```
 
 ### Optional flags
 
-To run the script in a simulation mode, 
+To run the script in a simulation mode,
 add the `simulate` boolean flag.
 
 ```bash
@@ -159,7 +158,7 @@ add the `simulate` boolean flag.
 
 ## Logging
 
-Logs are stored in a `logs` folder located in the main folder. 
+Logs are stored in a `logs` folder located in the main folder.
 You have access to these log files:
 
 * `Mass_Update_User_Zones_all.txt` that contains all log entries.

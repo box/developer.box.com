@@ -33,19 +33,11 @@ When integrating SSO services into a Box application programmatically, we are
 referring to the following flow.
 
 1. A user accesses your web or mobile application in a logged out state.
-2. The user is redirected to your SSO provider to log in, typically via
-   `OAuth 2` and `OpenID Connect`.
-3. After login, the user is redirected back to your application along with
-   their SSO identity credentials.
-4. Your application does a check to see if an associated Box account already
-   exists for this user.
-5. If an existing Box account already exists for this user, the application
-   uses the SSO identity to make API calls on behalf of that user in Box.
-6. If there is not already an associated Box account for this user, a
-   new Box user account is created based on the SSO identity. The unique user ID
-   from the SSO service is then linked to the new Box user, creating an
-   association between the two accounts. This new Box user is then API calls on
-   behalf of that user in Box.
+2. The user is redirected to your SSO provider to log in, typically via `OAuth 2` and `OpenID Connect`.
+3. After login, the user is redirected back to your application along with their SSO identity credentials.
+4. Your application does a check to see if an associated Box account already exists for this user.
+5. If an existing Box account already exists for this user, the application uses the SSO identity to make API calls on behalf of that user in Box.
+6. If there is not already an associated Box account for this user, a new Box user account is created based on the SSO identity. The unique user ID from the SSO service is then linked to the new Box user, creating an association between the two accounts. This new Box user is then API calls on behalf of that user in Box.
 
 <Message notice>
   # Box web app and SSO

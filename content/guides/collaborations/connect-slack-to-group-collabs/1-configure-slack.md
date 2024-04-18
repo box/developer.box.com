@@ -13,11 +13,8 @@ allowing them to share Box files and folders with the group.
 This section will take you through the following steps.
 
 * Create a minimal Slack application within the Slack API dashboard
-* Configure the Slack application to send notifications to our application
-  whenever a user joins or leaves the channel - allowing our code to update the
-  Box Box group.
-* Configure a `/boxadd` **slash command** that will allow users to share a
-  Box file or folder with all the users in the channel.
+* Configure the Slack application to send notifications to our application whenever a user joins or leaves the channel - allowing our code to update the Box Box group.
+* Configure a `/boxadd` **slash command** that will allow users to share a Box file or folder with all the users in the channel.
 
 ## Create a minimal Slack app
 
@@ -40,15 +37,9 @@ Setting up an event listener for our Slack app will allow us to monitor for
 events within the channel. For this bot, we want to monitor three
 [Slack events][slack-events] in order to perform actions within Box.
 
-* [`bot_added`][slack-event-bot-added]: When the bot is first added to a
- channel, it will get a list of all users in the channel, then create a
- Box group for those users. We can then use this group later on to add that
- group to any content that is shared with the **slash command**.
-* [`member_joined_channel`][slack-event-member-joined]: When a new user
- joins a Slack channel they will be added to the Box group.
-* [`member_left_channel`][slack-event-member-left]: When a user leaves a
-  Slack channel, or the user is removed, they will be removed from the Box
-  group.
+* [`bot_added`][slack-event-bot-added]: When the bot is first added to a , it will get a list of all users in the channel, then create a group for those users. We can then use this group later on to add that to any content that is shared with the **slash command**.
+* [`member_joined_channel`][slack-event-member-joined]: When a new user a Slack channel they will be added to the Box group.
+* [`member_left_channel`][slack-event-member-left]: When a user leaves a Slack channel, or the user is removed, they will be removed from the Box group.
 
 To set up a notification URL to which these Slack event payloads will
 be sent, Slack requires a verification step. When you set an event listener URL
@@ -130,40 +121,37 @@ app.listen(port, function(err) {
 
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `slack.box` for this guide.
-* Open your `build.gradle` file and add the following. Ensure that the group
- matches the group that you used for the application. Once saved, refresh the
- Gradle project.
+* Open your `build.gradle` file and add the following. Ensure that the group matches the group that you used for the application. Once saved, refresh the Gradle project.
 
- ```java
- plugins {
-     id 'org.springframework.boot' version '2.3.1.RELEASE'
-     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-     id 'java'
- }
+  ```java
+  plugins {
+      id 'org.springframework.boot' version '2.3.1.RELEASE'
+      id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+      id 'java'
+  }
 
- group = 'com.box'
- version = '0.0.1-SNAPSHOT'
- sourceCompatibility = '1.8'
+  group = 'com.box'
+  version = '0.0.1-SNAPSHOT'
+  sourceCompatibility = '1.8'
 
- repositories {
-     mavenCentral()
- }
+  repositories {
+      mavenCentral()
+  }
 
- dependencies {
-     implementation 'org.springframework.boot:spring-boot-starter-web'
-     testImplementation('org.springframework.boot:spring-boot-starter-test') {
-         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-     }
-     compile 'com.box:box-java-sdk:2.44.1'
- }
+  dependencies {
+      implementation 'org.springframework.boot:spring-boot-starter-web'
+      testImplementation('org.springframework.boot:spring-boot-starter-test') {
+          exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+      }
+      compile 'com.box:box-java-sdk:2.44.1'
+  }
 
- test {
-     useJUnitPlatform()
- }
- ```
+  test {
+      useJUnitPlatform()
+  }
+  ```
 
-* Within your `src/main/java` path, create a new Java class file named
- `Application.java`.
+* Within your `src/main/java` path, create a new Java class file named `Application.java`.
 * Open the file, add the following code, and save.
 
 ```java
@@ -221,22 +209,14 @@ From your Slack application **Basic Information** tab, under
 **Event Subscriptions** and do the following.
 
 * Toggle **Enable Events** to **On**.
-* Under **Request URL** add in the public URL that you deployed the above code
- to, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as
- `https://myapp.com/event`). Once you add the URL and click outside the field,
- Slack will immediately send the challenge to the URL that you were hosting the
- code at above. If the code responds correctly, you will see a green verified
- note beside the **Request URL** header.
+* Under **Request URL** add in the public URL that you deployed the above code, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as `https://myapp.com/event`). Once you add the URL and click outside the field, will immediately send the challenge to the URL that you were hosting the at above. If the code responds correctly, you will see a green verified beside the **Request URL** header.
 
 <ImageFrame noborder center shadow>
   ![Enable Slack Event Subscriptions](./img/slack_1_create_event_sub.png)
 </ImageFrame>
 
-* Expand the **Subscribe to bot events** section and click on the
- **Add Bot User Event** button.
-* Add `member_joined_channel` and `member_left_channel` to the events the bot
- is subscribed to. These will send events when anyone new is added to the
- channel.
+* Expand the **Subscribe to bot events** section and click on the **Add Bot User Event** button.
+* Add `member_joined_channel` and `member_left_channel` to the events the bot subscribed to. These will send events when anyone new is added to the.
 * Click the **Save Changes** button at the bottom of the page.
 
 ## Configure the Slack app slash command
@@ -256,14 +236,10 @@ functionality**, click on the button titled **Slash Commands**. 
 
 In the page that comes up, click **Create New Command** and input the following:
 
-* **Command**: This is the command that a channel user will use to share
- a Box file / folder ID with the channel. Use `/boxadd` for this quick start.
-* **Request URL**: The URL that is listening for and responding to slash
- commands in our Slack bot. In this quick start we use the same event URL that
- was used for the app event listener section above.
+* **Command**: This is the command that a channel user will use to share Box file / folder ID with the channel. Use `/boxadd` for this quick start.
+* **Request URL**: The URL that is listening for and responding to slash in our Slack bot. In this quick start we use the same event URL that was used for the app event listener section above.
 * **Short Description**: A description of what the Slash command will do.
-* **Usage Hint**: Additional parameters that may be passed to the command. In
- our case, that's the Box file / folder ID and type of content.
+* **Usage Hint**: Additional parameters that may be passed to the command. In our case, that's the Box file / folder ID and type of content.
 
 <ImageFrame noborder center shadow>
   ![Create Slack Slash Command](./img/slack_1_create_slash_command.png)
@@ -275,9 +251,9 @@ Click **Save** to add the command to our Slack app.
 
 When slash commands or notifications are sent to our application from
 Slack they will contain a Slack user ID, which relates to the person that took
-or was affected by the action. To translate that ID to a Box user we need to 
-get the Slack user's email, which we can then use to associate that Slack user 
-to a corresponding Box user. This action requires two extra scopes in the Slack 
+or was affected by the action. To translate that ID to a Box user we need to
+get the Slack user's email, which we can then use to associate that Slack user
+to a corresponding Box user. This action requires two extra scopes in the Slack
 application configuration.
 
 From your Slack application configuration, click on **OAuth & Permissions** in
@@ -309,8 +285,7 @@ is now installed within the workplace.
 ## Summary
 
 * You've created your Slack application.
-* You've configured user event notifications, slash commands, and additional
-  scoping.
+* You've configured user event notifications, slash commands, and additional scoping.
 * You've deployed your Slack bot to your workspace.
 
 <Observe option='programming.platform' value='node,java'>

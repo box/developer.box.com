@@ -31,9 +31,9 @@ exist, or when the key is used within the wrong enterprise were the key does not
 exist.
 
 <Message notice>
- The [List all metadata templates for enterprise endpoint][get-templates]
- can be used to list all templates available in your enterprise,
- including their `scope` and `templateKey`.
+  The [List all metadata templates for enterprise endpoint][get-templates]
+  can be used to list all templates available in your enterprise,
+  including their `scope` and `templateKey`.
 </Message>
 
 ## Missing value in `query_param`

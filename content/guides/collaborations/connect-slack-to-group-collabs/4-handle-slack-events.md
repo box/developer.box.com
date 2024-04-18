@@ -15,8 +15,7 @@ functions will perform the following tasks.
 
 * Listen for new events and slash commands from Slack.
 * Process those events and commands to route to the appropriate function.
-* Process all Slack users in a channel to be added to a Box group when the
- bot is first added to a channel.
+* Process all Slack users in a channel to be added to a Box group when the bot is first added to a channel.
 * Fetch profile information for a Slack user to get their email.
 
 ## Listen for Slack events
@@ -264,11 +263,9 @@ appropriate function to process the results.
 If the payload is a user event, denoted by `data.type` being set to
 `event_callback`, we extract a few pieces of information.
 
-* `eventType`: The type of event to determine if a user is leaving
- (`member_left_channel`) or joining (`member_joined_channel`) the channel.
+* `eventType`: The type of event to determine if a user is leaving (`member_left_channel`) or joining (`member_joined_channel`) the channel.
 * `channel`: The channel ID, which will be used as the Box group name.
-* `userId`: The ID of the user, to look up their profile email which will bind
- to a user profile in Box that uses the same email.
+* `userId`: The ID of the user, to look up their profile email which will bind to a user profile in Box that uses the same email.
 
 The process function then fetches the profile of the user by calling
 `getSlackUser`, and once obtained that user profile is sent to the
@@ -334,10 +331,8 @@ appropriate method to process the results.
 If the payload is a user event, denoted by the event node being present in the
 JSON payload, we extract a few pieces of information.
 
-* `eventType`: The type of event to determine if a user is leaving
- (`member_left_channel`) or joining (`member_joined_channel`) the channel.
-* `eventUserId`: The ID of the user, to look up their profile email which will
- bind to a user profile in Box that uses the same email.
+* `eventType`: The type of event to determine if a user is leaving (`member_left_channel`) or joining (`member_joined_channel`) the channel.
+* `eventUserId`: The ID of the user, to look up their profile email which will bind to a user profile in Box that uses the same email.
 * `eventChannel`: The channel ID, which will be used as the Box group name.
 
 We then route to `processUser`, passing in the return value
@@ -349,8 +344,7 @@ in the JSON payload, we extract a few pieces of information.
 
 * `eventChannelId`: The Slack channel ID, to be used as the Box group name.
 * `eventUserId`: The ID of the user who issued the command.
-* `cInputParts`: The type and ID of the command input, from a string such as
- `file 1234`.
+* `cInputParts`: The type and ID of the command input, from a string such as `file 1234`.
 
 We then route to `processContent`, passing in the return value
 from the `getSlackUser` method (a user object), the channel ID, the content
@@ -440,10 +434,7 @@ public void processUser(JSONObject userResponse, String event, String channel) t
 The code starts by fetching the Box group ID for the channel, which will be
 defining in the next step. Once obtained, it processes users as follows.
 
-* If the user is a bot, it needs to initialize the Box group and add all current
- users of the channel as Box users in the group. This is to account for the bot
- being added to existing channels, and this is ignored if the bot
- is being re-added to a channel that they were already present in previously.
+* If the user is a bot, it needs to initialize the Box group and add all current users of the channel as Box users in the group. This is to account for the bot being added to existing channels, and this is ignored if the bot is being re-added to a channel that they were already present in previously.
 * If the user joined the channel it needs to add them to the group.
 * If the user left the channel it needs to remove them from the group.
 
@@ -523,9 +514,7 @@ This code runs a number of actions in sequence.
 
 * First, it calls the Slack APIs to fetch all members of the channel. The
 * `limit` can be adjusted to collect more users in the channel.
-* For every user that is found, it calls `getSlackUser` to get
- their profile, allow it to map their email address to a Box user's email
- address.
+* For every user that is found, it calls `getSlackUser` to get their profile, allow it to map their email address to a Box user's email address.
 * Each user is then sent to `addGroupUser` to add them into the group.
 
 ## Fetch Slack user profile
@@ -592,8 +581,7 @@ the response from that request, which should be a user profile JSON object.
 
 * You've verified incoming events and forwarded them to be processed.
 * You've processed events and routed to the appropriate function.
-* You've implemented functions for processing all users in a channel and for
-  fetching the Slack profile of a single user.
+* You've implemented functions for processing all users in a channel and for fetching the Slack profile of a single user.
 
 <Observe option='programming.platform' value='node,java'>
   <Next>I've set up my Slack functions</Next>

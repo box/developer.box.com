@@ -48,8 +48,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 - work with users who have existing Box accounts
 - use Box for identity management, so users know they are using Box
-- store data within each user account vs. within an application's Service
-  Account
+- store data within each user account vs. within an application's Service Account
 
 </Message>
 
@@ -127,8 +126,7 @@ application's Service Account.
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- work in an environment that either has no user model, or has users without Box
-  accounts
+- work in an environment that either has no user model, or has users without Box accounts
 - use their own identity management system
 - do not want users to know they are using Box
 - store data within the application's Service Account and not a user's account

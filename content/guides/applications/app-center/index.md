@@ -1,12 +1,12 @@
 ---
 rank: 1
 related_endpoints: []
-related_guides: 
+related_guides:
   - authentication/oauth2/oauth2-setup
   - authentication/oauth2
 required_guides: []
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/publishing-your-application
   - /guides/applications/app-gallery
   - /guides/applications/app-gallery/
@@ -18,8 +18,8 @@ The [Box App Center][app-center] is the first place for Box users to find out
 about applications that they can use in combination with Box. If your
 application is suited to be used by other enterprises, listing your service in
 the App Center can be a great way to find new users.
-App center groups apps into sections so that you can 
-quickly find featured, most popular, or recently added apps. 
+App center groups apps into sections so that you can
+quickly find featured, most popular, or recently added apps.
 
 <ImageFrame shadow center>
   ![App Center](./images/app-center.png)
@@ -41,10 +41,8 @@ Center][app-center].
 Your application must meet the following requirements:
 
 * The application is in a finished state and ready for production usage.
-* The application leverages OAuth 2.0 authentication, as the App Center does
-  not support any other authentication methods.
-* You are a developer with access to the application in the
-  [Developer Console][devconsole].
+* The application leverages OAuth 2.0 authentication, as the App Center does not support any other authentication methods.
+* You are a developer with access to the application in the [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
@@ -85,9 +83,9 @@ Approval" button.
   # Approval completion
 
   Once a request for approval is received, the Box Partner team will be
-  notified and review your request as soon as possible. 
+  notified and review your request as soon as possible.
 
-  For any questions, please email [`integrate@box.com`][email] or submit a 
+  For any questions, please email [`integrate@box.com`][email] or submit a
   support ticket.
 </Message>
 

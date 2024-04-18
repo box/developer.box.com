@@ -44,8 +44,7 @@ make API calls on behalf of the application.
 Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
-- Create and download the private key configuration file for your application
-  and save it as `config.json`
+- Create and download the private key configuration file for your application and save it as `config.json`
 - Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
@@ -62,8 +61,8 @@ the application's private key and other details. The following is an example.
 {
   "boxAppSettings": {
     "clientID": "abc...123",
-   "clientSecret": "def...234",
-   "appAuth": {
+    "clientSecret": "def...234",
+    "appAuth": {
       "publicKeyID": "abcd1234",
       "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
       "passphrase": "ghi...345"

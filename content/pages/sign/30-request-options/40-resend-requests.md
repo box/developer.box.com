@@ -5,23 +5,23 @@ rank: 4
 
 # Resend requests
 
-What if the signer did not receive the email, the email was lost, or the 
+What if the signer did not receive the email, the email was lost, or the
 signer deleted the email by mistake?
 
-You can resend the signature request email to the `signer` , either manually or 
+You can resend the signature request email to the `signer` , either manually or
 you can turn on the automatic resend option.
 
 ## Manual resend
 
-To manually resend the signature request email to the signer, call the 
-`resend_sign_request` method on the `sign_requests` object. You can only do it 
- once every 10 minutes.
+To manually resend the signature request email to the signer, call the
+`resend_sign_request` method on the `sign_requests` object. You can only do it
+once every 10 minutes.
 
 Here is an example:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
 
 curl --location --request POST 'https://api.box.com/2.0/sign_requests/
@@ -29,7 +29,7 @@ curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 --header 'Authorization: Bearer ej...3t'
 
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -47,17 +47,17 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 ## Automatic resend
 
-The automatic resend option sends a reminder email to signers that have 
+The automatic resend option sends a reminder email to signers that have
 not signed the document yet, after 3, 8, 13, and 18 days.
 
-To enable automatic resend set the `are_reminders_enabled` parameter to `true`. 
+To enable automatic resend set the `are_reminders_enabled` parameter to `true`.
 For example:
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```bash
-    
+
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <access token>'
@@ -82,7 +82,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 }'
 
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
@@ -120,7 +120,7 @@ def sign_doc_single_more_options(
 
 def main():
     ...
-    
+
     # Sign with redirects
     sign_with_auto_reminder = sign_doc_single_more_options(
         client,

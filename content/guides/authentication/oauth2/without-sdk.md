@@ -23,8 +23,7 @@ manually complete the OAuth 2.0 flow.
 
 1. Build the authorization URL
 2. Redirect the user to the authorization URL
-3. The user grants the application access to take actions on their behalf,
-   which, if successful, provides an authorization code
+3. The user grants the application access to take actions on their behalf, which, if successful, provides an authorization code
 4. Redirect the user back to the application
 5. Exchange the authorization code for an Access Token
 
@@ -43,12 +42,9 @@ using the `as-user` header.
 
 Before continuing you will need to complete the following steps:
 
-- Create a Custom App within the Box Developer Console, which leverages the
-  OAuth 2.0 authentication method.
-- Navigate to the configuration tab for the application to copy the `client_id`
-  and `client_secret` values.
-- Ensure at least one redirect URI is configured in the configuration tab for
-  the application.
+- Create a Custom App within the Box Developer Console, which leverages the OAuth 2.0 authentication method.
+- Navigate to the configuration tab for the application to copy the `client_id` and `client_secret` values.
+- Ensure at least one redirect URI is configured in the configuration tab for the application.
 
 ## 1. Build authorization URL
 
@@ -134,10 +130,10 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 </CTA>
 
 <Message type='tip'>
-  If you have [Box Verified Enterprise][1] for your Box 
-  instance turned on, you 
-  may encounter an issue using the standard 
-  `account.box.com` base URL. 
+  If you have [Box Verified Enterprise][1] for your Box
+  instance turned on, you
+  may encounter an issue using the standard
+  `account.box.com` base URL.
   Instead, use `ent.box.com` in place of `account.box.com`.
 </Message>
 
@@ -196,7 +192,7 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
 <Message>
   Additional query parameters can be passed along when redirecting the user to
-  limit down the scope, or pass along some extra state. See the authorization 
+  limit down the scope, or pass along some extra state. See the authorization
   reference documentation for more information.
 </Message>
 

@@ -40,8 +40,7 @@ This is the current process:
 
 - The Moji team once a month creates a snapshot of the `en` branch to the `en-snapshot` branch of the OpenAPI spec and markdown files.
 - The team parses the files and sends all tokens to our translation server, Mojito.
-- When all strings are translated, they are inserted to the snapshot and
-written to the `jp` branch, which triggers a rebuild of the Japan site.
+- When all strings are translated, they are inserted to the snapshot and written to the `jp` branch, which triggers a rebuild of the Japan site.
 
 <!-- markdownlint-enable line-length -->
 

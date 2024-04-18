@@ -44,8 +44,7 @@ support to request the required scopes to be enabled for your application.
 The following settings need to be configured for your application for this feature
 to properly work.
 
-* **Can suppress email notifications from API calls** - available on request
-  via support
+* **Can suppress email notifications from API calls** - available on request via support
 * **Manage Enterprise Properties** - available via the developer console
 * Co-admin permissions of **Edit settings for your company**.
 </Message>

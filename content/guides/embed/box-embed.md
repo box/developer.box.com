@@ -74,7 +74,7 @@ using the Box web app.
   ![Box Share](./embed-share.png)
 </ImageFrame>
 
-Another way is to create a shared link with API using the 
+Another way is to create a shared link with API using the
 [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
 
 Then you can find this shared link value using the
@@ -162,7 +162,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
           },
           "scope": "base_preview"
         },
-       ...
+        ...
       ],
       "token_type": "bearer"
     },
@@ -209,11 +209,11 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ## Cloud Game
 
-The cloud game is a widget created to prevent clickjacking. 
+The cloud game is a widget created to prevent clickjacking.
 It's shown for embedded sites that aren’t partner integrations.
 In cloud game, user must drag a cloud to the correct location before an
 interaction is allowed. It makes clickjacking difficult, as the
-position of the cloud and its destination are randomly generated. 
+position of the cloud and its destination are randomly generated.
 
 <ImageFrame border>
   ![Box Embed](./cloud-game.png)
@@ -221,10 +221,10 @@ position of the cloud and its destination are randomly generated.
 
 `postMessage()` is used on the iframe to retrieve both the embed and the
 `showCloudGame` status. If embedded, `document.hasStorageAccess()` shows
-if Box has access to cookies. If yes and the user is logged in, the cloud 
+if Box has access to cookies. If yes and the user is logged in, the cloud
 game is displayed.
 If the `showCloudGame` status is `false`, user is navigated to the login
-page. 
+page.
 
 ## Custom Logo
 

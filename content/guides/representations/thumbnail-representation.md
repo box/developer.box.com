@@ -33,18 +33,14 @@ An deprecated way to get a thumbnail for a file is using the
 To get a thumbnail representation follow the following steps
 
 - [List all representations][list-all-representations]
-- [Request a thumbnail][request-a-representation]
-  by passing the `x-rep-hints`-header for the desired thumbnail format
-  and size, for example `[jpg?dimensions=32x32]`.
-- [Download the thumbnail][download-a-representation]
-  by calling the `url_template`, replacing the `{+asset_path}` with an empty
-  string.
+- [Request a thumbnail][request-a-representation] by passing the `x-rep-hints`-header for the desired thumbnail format and size, for example `[jpg?dimensions=32x32]`.
+- [Download the thumbnail][download-a-representation] by calling the `url_template`, replacing the `{+asset_path}` with an empty string.
 
 <Message warning>
 
-Sometimes the thumbnail can not be created directly. Instead, 
-the API will return a `HTTP 202` with a `location` response header. 
-The location is for a temporary image that can be used while the thumbnail 
+Sometimes the thumbnail can not be created directly. Instead,
+the API will return a `HTTP 202` with a `location` response header.
+The location is for a temporary image that can be used while the thumbnail
 is being generated.
 
 </Message>

@@ -8,7 +8,7 @@ related_guides:
 - authentication/tokens
 - authorization
 - api-calls/permissions-and-errors/scopes
-alias_paths: 
+alias_paths:
   - /security-and-governance-apis
   - /docs/android-security-guidelines
 ---
@@ -17,7 +17,7 @@ alias_paths:
 
 Whether your are a developer getting started with the Box API or a Box Admin
 tasked with [authorizing][auth] applications, it is critical you understand the
-security mechanisms in place to protect content stored in Box. 
+security mechanisms in place to protect content stored in Box.
 
 The Box API follows the same security principals and restrictions as the Box web
 app. This means that you will not be able to bypass content [permissions][perm],
@@ -29,7 +29,7 @@ leveraging the Box API.
 At the core of every Box API call is an [Access Token][at]. Because a username
 and password cannot be used, the Box servers need a way of validating user
 identity. The full capability of an Access Token encompasses user permissions,
-token permissions, and application settings. 
+token permissions, and application settings.
 
 <ImageFrame center shadow border>
 ![Access Token Components](images/token_vendiagram.png)
@@ -37,7 +37,7 @@ token permissions, and application settings.
 
 Access Tokens represent the authenticated user and determine what content a
 user can successfully call. Similar to using the Box Web App, you will only be
-able to successfully interact with content the user, associated with the Access 
+able to successfully interact with content the user, associated with the Access
 Token, either owns or is a collaborator on. This can be further restricted by
 [downscoping][downscope] a token.
 
@@ -45,14 +45,14 @@ Token, either owns or is a collaborator on. This can be further restricted by
 earlier if needed. Once an Access Token expires, when using an OAuth 2.0
 application, a [Refresh Token][rt] can be [exchanged][exchange] for another
 Access Token. Refresh tokens are valid for 60 days or one use. Alternatively,
-when using a server authentication application, the 
+when using a server authentication application, the
 [request Access Token endpoint][gettoken] must be called for a new Access Token.
 For security reasons we do not allow long-lived access tokens.
 
 <Message type='tip'>
-   Unsure why you are receiving a 404 error? A great place to start is checking
-   to see what user is associated with your Access Token by using the get
-   current user endpoint.
+  Unsure why you are receiving a 404 error? A great place to start is checking
+  to see what user is associated with your Access Token by using the get
+  current user endpoint.
 </Message>
 
 ## Scopes
@@ -62,8 +62,8 @@ For security reasons we do not allow long-lived access tokens.
 </ImageFrame>
 
 [Scopes][scopes] are configured in the [Developer Console][dc] upon application
-creation. They determine which of the 150+ endpoints Access Tokens of an 
-application can successfully call. 
+creation. They determine which of the 150+ endpoints Access Tokens of an
+application can successfully call.
 
 Because scopes work in conjunction with user permissions, granting the write
 scope does not automatically provide a user with API access to all content in a
@@ -77,12 +77,12 @@ would receive a 403 error. This is because the read scope is required to
 preform this action. Access Tokens of this application could only receive
 successful responses on API calls related to users and groups.
 
-## Restricted endpoints 
+## Restricted endpoints
 
 There are some API endpoints that only Admins or Co-Admins, granted the
 appropriate [permissions][coadminperm], can successfully use. As a general rule
 of thumb, if only an Admin or Co-Admin can perform an action via the Box Admin
-Console, an Access Token associated with one of these users is required to 
+Console, an Access Token associated with one of these users is required to
 complete an API call for the same action. This is called out in our API
 [reference][reference] documentation for a given endpoint if it is required.
 
@@ -112,7 +112,7 @@ applications leveraging Server Authentication with [JWT)][jwt] or
 [types of users][usertypes] that can be used with the application. The two
 options are **app access only** or **app + enterprise access**.
 
-Upon [authorizing][auth] one of these applications in the Box Admin Console, a 
+Upon [authorizing][auth] one of these applications in the Box Admin Console, a
 [Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com)
 representing the application is automatically generated. This account is an
 Admin-like user that can only be accessed via the API and can then be used to
@@ -120,7 +120,7 @@ create user’s of the application called [App Users][appusers]. If an applicati
 only needs to interact with the Service Account and App Users,
 **app only access** must be selected. If an application needs to interact with
 [managed users][mu] and their existing Box content, app + enterprise access must
-be selected. 
+be selected.
 
 As an example, take a JWT application that has the read/write scopes,
 app only access, and is properly [authorized][auth] in the Admin console. If a
@@ -144,7 +144,7 @@ Published applications are found in the [Box App Center][appcenter]. Box
 Admins decide whether published and unpublished application are enabled by
 default and therefore can be used without approval. The status of these settings
 determines what actions are necessary to successfully [authorize][auth] an
-application for use. 
+application for use.
 
 <ImageFrame center shadow border>
 ![Admin Console Apps Tab](images/jwt_apps_cam.png)
@@ -155,7 +155,7 @@ Regardless of the settings above, in order for an application leveraging
 Admin must explicitly [authorize][auth] it via the Box Admin console. The
 authorization is a snapshot in time.  This means that if a developer revisits
 the Developer Console and changes the configuration, the Admin must re-authorize
-the application in order for generated Access Tokens to reflect the changes. 
+the application in order for generated Access Tokens to reflect the changes.
 
 If the setting **Disable unpublished apps by default** is turned on, an Admin
 must also explicitly [enable][auth] any application leveraging

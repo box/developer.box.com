@@ -17,7 +17,7 @@ troubleshooting purposes.
   This report will not include:
     * API calls made within the last 48 hours
     * Authorization and Token API calls
-  
+
   We are working on including the above and thereby making the report suitable
   for real-time troubleshooting in the future.
 </Message>
@@ -34,7 +34,7 @@ the [Developer Console][console].
 
 </ImageFrame>
 
- ## 2. Click **Run App Diagnostics Report** to configure your report
+## 2. Click **Run App Diagnostics Report** to configure your report
 
 Clicking **Run App Diagnostics Report** will display a popup to select report
 filters and parameters.
@@ -107,7 +107,7 @@ folder.
 
 You can open the file in your web browser or download it to view locally. If
 you need help from [Box Support][support], you can send in the report with your
-ticket by attaching a downloaded copy or via shared link. 
+ticket by attaching a downloaded copy or via shared link.
 
 <ImageFrame center shadow>
 

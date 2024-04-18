@@ -47,8 +47,7 @@ Parameters:
 Returns:
 
 - `true` if the user's account existed and was deleted.
-- `false` if the user's account was not deleted for any reason (including
-  because it didn't exist).
+- `false` if the user's account was not deleted for any reason (including because it didn't exist).
 
 ### `deleteUserAssociation`
 
@@ -63,8 +62,7 @@ Returns:
 Returns:
 
 - `true` if the user's account existed and was deleted.
-- `false` if the user's account was not deleted for any reason (including
-  because it didn't exist).
+- `false` if the user's account was not deleted for any reason (including because it didn't exist).
 
 ## Instance Methods - Constructors, Destructors
 
@@ -138,12 +136,9 @@ allowing you to focus on the business logic of your integration.
 
 Returns:
 
-- An [HttpResponse][sf-httpresponse] object with the response details from
-  calling Box's APIs.
-- `Toolkit.BoxApiException` if there is any missing information from the
-  HttpRequest input.
-- `null` if there was an issue getting the authentication details for the
-  Service Account. In this case, check `mostRecentError`.
+- An [HttpResponse][sf-httpresponse] object with the response details from calling Box's APIs.
+- `Toolkit.BoxApiException` if there is any missing information from the HttpRequest input.
+- `null` if there was an issue getting the authentication details for the Service Account. In this case, check `mostRecentError`.
 
 ## File Operations
 
@@ -186,8 +181,7 @@ Returns:
 
 Returns:
 
-- `string` returned is the Box folder id of the object root folder for the
-  record id passed in.
+- `string` returned is the Box folder id of the object root folder for the record id passed in.
 
 ## Folder Operations
 
@@ -213,15 +207,12 @@ Returns:
 
 Returns:
 
-- `string` returned is the Box folder id of the object root folder for the
-  record id passed in.
+- `string` returned is the Box folder id of the object root folder for the record id passed in.
 
 ### `getFolderUrl`
 
-- This method gets the embed widget URL for a particular record so customers
-  can use their own embed logic if desired.
-- This method respects seamless login settings so the URL will automatically
-  log the user in if seamless login is enabled.
+- This method gets the embed widget URL for a particular record so customers can use their own embed logic if desired.
+- This method respects seamless login settings so the URL will automatically log the user in if seamless login is enabled.
 
 <!-- markdownlint-disable line-length -->
 
@@ -234,9 +225,7 @@ Returns:
 
 Returns:
 
-- `string` returned is a URL that points to the folder associated with the
-  Salesforce record Id passed. This URL is for the Box Embed Widget and can be
-  embedded in any Visualforce page.
+- `string` returned is a URL that points to the folder associated with the Salesforce record Id passed. This URL is for the Box Embed Widget and can be embedded in any Visualforce page.
 
 ### `createObjectFolderForRecordId`
 
@@ -251,8 +240,7 @@ Returns:
 Returns:
 
 - `string` returned is the Box folder Id of the root folder that was created.
-- If the root folder already existed, the value returned is the Box folder id
-  of the root folder that already existed.
+- If the root folder already existed, the value returned is the Box folder id of the root folder that already existed.
 
 ### `createFolder`
 
@@ -269,8 +257,7 @@ Returns:
 Returns:
 
 - `string` returned is the Box folder id of the folder that was created.
-- `null` is returned if a folder is not created. In this case, check
-  `mostRecentError` for details.
+- `null` is returned if a folder is not created. In this case, check `mostRecentError` for details.
 
 ### `createFolderForRecordId`
 
@@ -287,10 +274,8 @@ Returns:
 Returns:
 
 - `string` returned is the Box folder id of the folder that was created.
-- `null` is returned if a folder is not created. In this case, check
-  `mostRecentError` for details.
-- If the Salesforce record was already associated with a Box folder, the
-  existing Box folder id is returned.
+- `null` is returned if a folder is not created. In this case, check `mostRecentError` for details.
+- If the Salesforce record was already associated with a Box folder, the existing Box folder id is returned.
 
 ### `moveFolder`
 
@@ -356,10 +341,8 @@ Returns:
 
 Returns:
 
-- List returned is a collection of all folder mapping entries associated with
-  this record.
-- Generally, it will be an empty list if no folder mapping entries exist, but
-  under some circumstances, it could be `null`.
+- List returned is a collection of all folder mapping entries associated with this record.
+- Generally, it will be an empty list if no folder mapping entries exist, but under some circumstances, it could be `null`.
 
 ### `getFolderIdByRecordId`
 
@@ -373,8 +356,7 @@ Returns:
 
 Returns:
 
-- `string` returned is the Box folder id associated with the Salesforce record
-  id passed in.
+- `string` returned is the Box folder id associated with the Salesforce record id passed in.
 
 ### `getRecordIdByFolderId`
 
@@ -388,8 +370,7 @@ Returns:
 
 Returns:
 
-- `id` returned is the Salesforce record id associated with the Box folder id
-  passed in.
+- `id` returned is the Salesforce record id associated with the Box folder id passed in.
 
 ### `createFolderAssociation`
 
@@ -404,11 +385,7 @@ Returns:
 
 Returns:
 
-- `box__FRUP__c` object - The FRUP object returned will be `null` if there was an
-  error (check `mostRecentError`). Upon calling the `commitChanges` method, this
-  FRUP entry will be inserted into the database. This method ensures consistency
-  with other folder associations by not allowing the same folder to be associated
-  with multiple records or vice versa.
+- `box__FRUP__c` object - The FRUP object returned will be `null` if there was an error (check `mostRecentError`). Upon calling the `commitChanges` method, this FRUP entry will be inserted into the database. This method ensures consistency with other folder associations by not allowing the same folder to be associated with multiple records or vice versa.
 
 ## Collaboration Methods
 
@@ -511,9 +488,7 @@ This method calls the [get metadata instance on folder endpoint][1].
 
 Returns:
 
-- `FolderMetadata` record associated with this folder, scope,
-  and template key. You can find the custom values in `keyValuePairs`
-  variable of this object.
+- `FolderMetadata` record associated with this folder, scope, and template key. You can find the custom values in `keyValuePairs` variable of this object.
 - `null`, if:
   - the parameters are incorrect,
   - access to the folder is missing,
@@ -582,8 +557,7 @@ This method call the [delete metadata instance from folder][4] endpoint.
 Returns:
 
 - Boolean based on the transaction success.
-- `false` can be returned if parameters are incorrect parameters or
-  metadata is not found.
+- `false` can be returned if parameters are incorrect parameters or metadata is not found.
 
 ### `getMetadataCascadePolicyById`
 
@@ -670,8 +644,7 @@ ID and calling the [delete metadata cascade policies ID][8] endpoint.
 Returns:
 
 - Boolean based on the transaction success.
-- `false` is returned if parameters are incorrect, access to the folder
-  is missing, or the metadata cascade policy is not found.
+- `false` is returned if parameters are incorrect, access to the folder is missing, or the metadata cascade policy is not found.
 
 ### `enableAppActivity`
 
@@ -710,8 +683,7 @@ existing mappings.
 Returns:
 
 - A list of `IntegrationMapping` objects,
-- `null` is returned if there are incorrect parameters,
-  the access is missing, or the integration mappings is not found.
+- `null` is returned if there are incorrect parameters, the access is missing, or the integration mappings is not found.
 
 ### `createIntegrationMapping`
 
@@ -767,18 +739,10 @@ Returns:
 This toolkit method uses the above integration mapping methods and
 provides a wrapper with four different use cases:
 
-1. If a mapping does not exist in Salesforce or Slack, it creates
-   a folder under the Box for Salesforce folder structure, and an integration
-   mapping to link it with the Slack channel.
-2. If a mapping only exists from Salesforce, it continues to use
-   the folder and does not change the location. Creates an integration mapping
-   to link it with the Slack Channel.
-3. If a mapping only exists from Slack, it continues to use the
-   folder and create an FRUP record for the Salesforce record to use the existing
-   folder. This folder is likely to be outside of the Salesforce root folder.
-4. If Salesforce and Slack have existing mappings but are not related to
-   each other, it throws an error through `Toolkit.mostRecentError` or within
-   a flow action, stating that the mappings already exist.
+1. If a mapping does not exist in Salesforce or Slack, it creates a folder under the Box for Salesforce folder structure, and an integration mapping to link it with the Slack channel.
+2. If a mapping only exists from Salesforce, it continues to use the folder and does not change the location. Creates an integration mapping to link it with the Slack Channel.
+3. If a mapping only exists from Slack, it continues to use the folder and create an FRUP record for the Salesforce record to use the existing folder. This folder is likely to be outside of the Salesforce root folder.
+4. If Salesforce and Slack have existing mappings but are not related to each other, it throws an error through `Toolkit.mostRecentError` or within a flow action, stating that the mappings already exist.
 
 This method/invocable is used in a flow template provided in the Box
 for Salesforce package `Create Box Folder/Slack Channel Mapping`.

@@ -13,7 +13,7 @@ alias_paths: []
 
 [Box Shield][box-shield] must be purchased and enabled on a
 Box enterprise to take advantage of the advanced security
-offerings outlined below. 
+offerings outlined below.
 
 ## Threat detection alerts
 
@@ -24,9 +24,9 @@ anomalous user behavior.
 The possible alerts produced by Shield are for:
 
 1. Suspicious locations
-1. Suspicious sessions
-1. Anomalous downloads
-1. Malicious content
+2. Suspicious sessions
+3. Anomalous downloads
+4. Malicious content
 
 All Shield threat detection alert events are produced within the
 [enterprise event][events] stream. These events follow the
@@ -260,7 +260,7 @@ The `additional_details` payload will provide the following details:
 ### Malicious content alert
 
 A malicious content alert is produced when Shield detects potential malware
-in content uploading to an account. It can be identified by the 
+in content uploading to an account. It can be identified by the
 `Malicious Content` value within
 `additional_details.shield_alert.rule_category`.
 

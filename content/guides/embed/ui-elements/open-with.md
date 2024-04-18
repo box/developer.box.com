@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-open-with
 ---
 
@@ -44,11 +44,8 @@ application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
-- The application's domain must be allowed by Box Tools. Instructions can be
-  found [here][custom-domains]. The ideal workflow is to bundle these steps
-  within an installer that also installs Box Tools.
-- Safari requires a browser extension to connect to box tools. More details can
-  be found [here][safari].
+- The application's domain must be allowed by Box Tools. Instructions can be found [here][custom-domains]. The ideal workflow is to bundle these steps within an installer that also installs Box Tools.
+- Safari requires a browser extension to connect to box tools. More details can be found [here][safari].
 
 ## G Suite
 
@@ -120,27 +117,27 @@ curl -X GET \
 
 ```json
 {
-   "type":"app_integration",
-   "id":"10897",
-   "app":{
-      "type":"app",
-      "id":"336417"
-   },
-   "name":"Edit with G Suite",
-   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
-   "executable_item_types":[
-      "file"
-   ],
-   "restricted_extensions":[
-      "docx",
-      "gdoc",
-      "xlsx",
-      "gsheet",
-      "pptx",
-      "gslides",
-      "gslide"
-   ],
-   "scoped_to":"parent"
+  "type":"app_integration",
+  "id":"10897",
+  "app":{
+    "type":"app",
+    "id":"336417"
+  },
+  "name":"Edit with G Suite",
+  "description":"Securely manage your Google Docs, Sheets and Slides in Box",
+  "executable_item_types":[
+    "file"
+  ],
+  "restricted_extensions":[
+    "docx",
+    "gdoc",
+    "xlsx",
+    "gsheet",
+    "pptx",
+    "gslides",
+    "gslide"
+  ],
+  "scoped_to":"parent"
 }
 ```
 
@@ -149,8 +146,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](page://platform/user-types/#service-account/)
-  Access Token.
+- A valid [Service Account](page://platform/user-types/#service-account/) Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
 
@@ -392,7 +388,7 @@ contentOpenWith.removeAllListeners();
 <!-- i18n-disable localize-links -->
 
 <Message warning>
-  
+
 Currently the `onError` and `onExecute` events are subject to a known bug. We recommend
 using `openWith.addListener('execute', callback)` and
 `openWith.addListener('error', callback)` as a temporary workaround.

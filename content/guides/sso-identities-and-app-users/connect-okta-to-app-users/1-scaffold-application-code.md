@@ -31,7 +31,7 @@ Choose your preferred language / framework below to get started.
     # Python
     Using the Flask framework.
   </Choose>
-  
+
   <Choose option='programming.platform' value='cs' color='blue'>
     # .NET
     Using the ASP.NET Core framework.
@@ -41,9 +41,7 @@ Choose your preferred language / framework below to get started.
 <Choice option='programming.platform' value='node' color='none'>
 
 * Create a local directory for your application.
-* Create a `package.json` file inside the local directory, open it in your
- preferred editor, copy / paste the following into it, and save / exit the
- file.
+* Create a `package.json` file inside the local directory, open it in your preferred editor, copy / paste the following into it, and save / exit the file.
 
 ```js
   {
@@ -82,8 +80,7 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 <Choice option='programming.platform' value='java' color='none'>
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `okta.sample` for this guide.
-* Open your `build.gradle` file and add the following dependencies. Once saved,
- refresh the Gradle project.
+* Open your `build.gradle` file and add the following dependencies. Once saved, refresh the Gradle project.
 
 ```java
 dependencies {
@@ -98,8 +95,7 @@ dependencies {
 }
 ```
 
-* Open your `/src/main/resources/application.properties` file and save the
- following defaults.
+* Open your `/src/main/resources/application.properties` file and save the following defaults.
 
 ```java
 okta.oauth2.redirect-uri=/authorization-code/callback
@@ -113,13 +109,9 @@ security.oauth2.sso.loginPath=/authorization-code/callback
 </Choice>
 <Choice option='programming.platform' value='python' color='none'>
 * Create a local directory for your application.
-* Install needed dependencies using the following `pip` command from your
- terminal / command prompt: `pip install flask flask_oidc okta boxsdk config`
-* Create three files in the local directory, `client_secrets.json`,
- `config.py`, and `server.py`.
-* Open `config.py` and save the following into it. This will be some of Okta
- app configuration information needed. We'll fill in the remaining information
- in the next step.
+* Install needed dependencies using the following `pip` command from your terminal / command prompt: `pip install flask flask_oidc okta boxsdk config`
+* Create three files in the local directory, `client_secrets.json`, `config.py`, and `server.py`.
+* Open `config.py` and save the following into it. This will be some of Okta app configuration information needed. We'll fill in the remaining information in the next step.
 
 ```python
 okta_client_secret = 'YOUR OKTA CLIENT SECRET'
@@ -128,9 +120,7 @@ okta_auth_token = 'YOUR OKTA APP TOKEN'
 okta_callback_route = '/oidc/callback'
 ```
 
-* Open `client_secrets.json` and save the following into it. This will be a
- standard object that the Flask OpenID Connect integration will use during
- configuration. We'll fill in the remaining information in the next step.
+* Open `client_secrets.json` and save the following into it. This will be a standard object that the Flask OpenID Connect integration will use during configuration. We'll fill in the remaining information in the next step.
 
 ```js
 {
@@ -151,15 +141,8 @@ okta_callback_route = '/oidc/callback'
 </Choice>
 <Choice option='programming.platform' value='cs' color='none'>
 * Create a local directory for your application.
-* Open a command prompt / terminal window and go to the local application
-directory. Using the [.NET Core CLI][dotnet-cli] type `dotnet new mvc` and hit
-enter. This will create the main scaffolding for a ASP.NET Core MVC
-(Model-View-Controller) web app. Alternately, create the application
-[directly from Visual Studio][vs-app-create].
-* From the command prompt / terminal window in the local application directory,
-add the Okta ASP.NET Core dependencies by typing
-`dotnet add package Okta.AspNetCore`and the Box dependencies by typing
-`dotnet add package Box.V2.Core`.
+* Open a command prompt / terminal window and go to the local application directory. Using the [.NET Core CLI][dotnet-cli] type `dotnet new mvc` and hit enter. This will create the main scaffolding for a ASP.NET Core MVC (Model-View-Controller) web app. Alternately, create the application [directly from Visual Studio][vs-app-create].
+* From the command prompt / terminal window in the local application directory, add the Okta ASP.NET Core dependencies by typing `dotnet add package Okta.AspNetCore`and the Box dependencies by typing `dotnet add package Box.V2.Core`.
 * Load your new application into Visual Studio or your preferred editor.
 * Within the root of the project, open `Startup.cs`.
 * Add the following package declarations to the top of the file.
@@ -169,8 +152,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 ```
 
-* Replace the content of the `ConfigureServices` method with the following. We
- will fill in the specific Okta application values in the next step.
+* Replace the content of the `ConfigureServices` method with the following. We will fill in the specific Okta application values in the next step.
 
 <!-- markdownlint-disable line-length -->
 ```dotnet

@@ -89,8 +89,7 @@ This viewer gives you an interactive view of the 360 degree video.
 
 ### Controls
 
-- Change the view direction with the left mouse button (single touch on
-  touch-enabled device).
+- Change the view direction with the left mouse button (single touch on touch-enabled device).
 
 ### VR button
 
@@ -188,8 +187,7 @@ is removed.
 
 - Zoom In
 - Zoom Out
-- Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+- Set Page: either with the up and down arrows, or by clicking the page number and entering text
 - Fullscreen: can be exited with the escape key
 
 ### Supported File Extensions
@@ -357,8 +355,7 @@ There are several limitations at the moment:
 
 - File must be downloadable
 - File size cannot be greater than 5MB
-- File cannot be shared via a Box shared link with a password (shared links
-  without passwords are okay)
+- File cannot be shared via a Box shared link with a password (shared links without passwords are okay)
 
 ### Supported File Extensions
 
@@ -456,17 +453,10 @@ focus.
 
 ### Controls
 
-- Zoom (change distance to the model) with the mouse wheel (or two-finger scroll
-  on a touch-enabled device).
-- Pan (lateral movement) with the right mouse button (or three-finger swipe on a
-  touch-enabled device).
-- Animation Selection: If the model that is being viewed contains animations,
-  two animation buttons will be visible in the toolbar. The first allows you to
-  play and pause the animation and the second allows the selection of the
-  current animation.
-- VR button: If using a browser that supports WebVR and a suitable VR device is
-  attached to your computer, the VR button will allow toggling in and out of VR
-  mode.
+- Zoom (change distance to the model) with the mouse wheel (or two-finger scroll on a touch-enabled device).
+- Pan (lateral movement) with the right mouse button (or three-finger swipe on a touch-enabled device).
+- Animation Selection: If the model that is being viewed contains animations, two animation buttons will be visible in the toolbar. The first allows you to play and pause the animation and the second allows the selection of the current animation.
+- VR button: If using a browser that supports WebVR and a suitable VR device is attached to your computer, the VR button will allow toggling in and out of VR mode.
 
 ### Settings
 
@@ -529,9 +519,7 @@ device).
 ### Controls
 
 - Fullscreen (can be exited with the escape key)
-- VR Button: When using a browser that supports WebVR and a suitable VR device
-  is attached to your computer, a VR button will be available to allow toggling
-  in and out of VR mode.
+- VR Button: When using a browser that supports WebVR and a suitable VR device is attached to your computer, a VR button will be available to allow toggling in and out of VR mode.
 
 ### Limitations
 
@@ -644,8 +632,7 @@ reached.
 - Zoom In
 - Zoom Out
 - Fullscreen: can be exited with the escape key
-- Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+- Set Page: either with the up and down arrows, or by clicking the page number and entering text
 
 ### Supported File Extensions
 
@@ -719,8 +706,7 @@ that page. Resizing the viewer window will cause the document to resize.
 
 - Zoom In
 - Zoom Out
-- Set Page: either with the up and down arrows, or by clicking the page number
-  and entering text
+- Set Page: either with the up and down arrows, or by clicking the page number and entering text
 - Fullscreen (can be exited with the escape key)
 
 ### Supported File Extensions
