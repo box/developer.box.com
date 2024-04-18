@@ -298,3 +298,7 @@ automations
 invocable
 analytics
 ClientID
+lifecycle
+Fallbacks
+deprecations
+oasdiff
