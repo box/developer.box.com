@@ -40,20 +40,18 @@ sample_code:
     headline: Box AI API
     paragraph: Use this endpoint to integrate
      the document summary into your application.
-     This demo uses Content Preview Box UI Element.
     pricing: Box AI API is available in public beta to all
       Enterprise Plus customers.
   metadata:
     headline: Box Metadata Suggestions API
     paragraph: Use this endpoint to integrate
      document metadata extraction into
-     your application. This demo uses Content Preview Box UI Element.
+     your application.
     pricing: Pricing and packaging to be announced.
   qa:
     headline: Box AI API
     paragraph: Use this endpoint to integrate
      document Q&A into your application.
-     This demo uses Content Preview Box UI Element.
     pricing: Box AI API is available in public beta to all
       Enterprise Plus customers.
   developer_console:
