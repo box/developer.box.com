@@ -654,7 +654,7 @@
   "ai_dev_zone.sample_code.summary.headline": "Box AI API",
   "ai_dev_zone.sample_code.summary.paragraph": "Use this endpoint to integrate the document summary into your application. This demo uses Content Preview Box UI Element.",
   "ai_dev_zone.sample_code.summary.pricing": "Box AI API is available in public beta to all Enterprise Plus customers.",
-  "ai_dev_zone.sample_code.metadata.headline": "Box Metadata AI API",
+  "ai_dev_zone.sample_code.metadata.headline": "Box Metadata Suggestions API",
   "ai_dev_zone.sample_code.metadata.paragraph": "Use this endpoint to integrate document metadata extraction into your application. This demo uses Content Preview Box UI Element.",
   "ai_dev_zone.sample_code.metadata.pricing": "Pricing and packaging to be announced.",
   "ai_dev_zone.sample_code.qa.headline": "Box AI API",

@@ -71,25 +71,25 @@ Public beta
 
 </Tile>
 
-<Tile type="document-qa" title="Ask questions" href="/guides/box-ai/ask-questions/" >
+<Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
+
+Extract document metadata suggestions to use in your apps.
+
+<strong style="background-color: #e8e8e8">
+
+API coming soon
+
+</strong>
+
+</Tile>
+
+<Tile disabled type="document-qa" title="Ask questions" >
 
 Ask Box AI about the document to get the details. Demo coming soon!
 
 <strong style="background-color: #e8e8e8">
 
 Public beta
-
-</strong>
-
-</Tile>
-
-<Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
-
-Extract document metadata to use in your apps.
-
-<strong style="background-color: #e8e8e8">
-
-API coming soon
 
 </strong>
 
