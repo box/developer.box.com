@@ -35,7 +35,7 @@ Then, navigate to the **Integrations** tab and click
 **Create a Web App Integration**.
 
 <ImageFrame center shadow border>
-  ![Integration Tab](../images/create_integration.png)
+  ![Integration Tab](./images/create_integration.png)
 </ImageFrame>
 
 ## Configure Integration

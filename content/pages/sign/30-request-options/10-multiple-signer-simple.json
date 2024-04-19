@@ -1,0 +1,115 @@
+{
+    "is_document_preparation_needed": true,
+    "redirect_url": null,
+    "declined_redirect_url": null,
+    "are_text_signatures_enabled": true,
+    "signature_color": null,
+    "is_phone_verification_required_to_view": false,
+    "email_subject": null,
+    "email_message": null,
+    "are_reminders_enabled": false,
+    "signers": [
+        {
+            "email": "myemail@example.com",
+            "role": "final_copy_reader",
+            "is_in_person": false,
+            "order": 0,
+            "verification_phone_number": null,
+            "embed_url_external_user_id": null,
+            "redirect_url": null,
+            "declined_redirect_url": null,
+            "login_required": false,
+            "has_viewed_document": false,
+            "signer_decision": null,
+            "signer_group_id": null,
+            "inputs": [],
+            "embed_url": null,
+            "iframeable_embed_url": null
+        },
+        {
+            "email": "institution@example.com",
+            "role": "signer",
+            "is_in_person": false,
+            "order": 1,
+            "verification_phone_number": null,
+            "embed_url_external_user_id": null,
+            "redirect_url": null,
+            "declined_redirect_url": null,
+            "login_required": false,
+            "has_viewed_document": false,
+            "signer_decision": null,
+            "signer_group_id": null,
+            "inputs": [],
+            "embed_url": null,
+            "iframeable_embed_url": null
+        },
+        {
+            "email": "student@example.com",
+            "role": "signer",
+            "is_in_person": false,
+            "order": 2,
+            "verification_phone_number": null,
+            "embed_url_external_user_id": null,
+            "redirect_url": null,
+            "declined_redirect_url": null,
+            "login_required": false,
+            "has_viewed_document": false,
+            "signer_decision": null,
+            "signer_group_id": null,
+            "inputs": [],
+            "embed_url": null,
+            "iframeable_embed_url": null
+        }
+    ],
+    "id": "74e96b70-9031-4435-8557-068eaf158785",
+    "prefill_tags": [],
+    "days_valid": null,
+    "prepare_url": "https://app.box.com/sign/document/74e96b70-9031-4435-8557-068eaf158785/3f96773974a15aedcb169ad1fa16434a74e25685a89e52a77a8860686be44094/prepare_doc/",
+    "source_files": [
+        {
+            "id": "1358047520478",
+            "etag": "6",
+            "type": "file",
+            "sequence_id": "6",
+            "name": "Scholarship-Contract-Prep.docx",
+            "sha1": "5030592c98bf3e117fadfbd3562f80c66f6caf10",
+            "file_version": {
+                "id": "1493068542102",
+                "type": "file_version",
+                "sha1": "5030592c98bf3e117fadfbd3562f80c66f6caf10"
+            }
+        }
+    ],
+    "parent_folder": {
+        "id": "234102987614",
+        "etag": "0",
+        "type": "folder",
+        "sequence_id": "0",
+        "name": "signed docs"
+    },
+    "name": "Scholarship-Contract-Prep.pdf",
+    "external_id": null,
+    "type": "sign-request",
+    "signing_log": null,
+    "status": "converting",
+    "sign_files": {
+        "files": [
+            {
+                "id": "1392052880648",
+                "etag": "0",
+                "type": "file",
+                "sequence_id": "0",
+                "name": "Scholarship-Contract-Prep.pdf",
+                "sha1": "1fd4699cfb0b931d0fc173e60cfbf81809321b91",
+                "file_version": {
+                    "id": "1525367845448",
+                    "type": "file_version",
+                    "sha1": "1fd4699cfb0b931d0fc173e60cfbf81809321b91"
+                }
+            }
+        ],
+        "is_ready_for_download": true
+    },
+    "auto_expire_at": null,
+    "template_id": null
+}

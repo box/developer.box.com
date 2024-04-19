@@ -12,11 +12,9 @@ alias_paths:
 
 # Content Open With
 
-<Message warning>
-  # End of Support
-
+<Message type='warning'>
   We no longer support the `OpenWith` UI element for any new customers
-  as of December 21, 2021. Please see the changelog for more information.
+  as of December 21, 2021.
 </Message>
 
 The Box Content Open With UI Element allows developers to embed a dropdown to
