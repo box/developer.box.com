@@ -9,7 +9,7 @@ related_endpoints:
 <Message type="notice">
 Box AI API is a beta feature which means the
 available capabilities may change.
-Box AI API is to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -32,7 +32,7 @@ To make a call, you must pass the following parameters:
 | Parameter| Description|Values| Example|
 |--------|--------|-------|-------|
 |`items.id`|Box file ID of the document you want to supply as input.||`1233039227512`|
-|`items.type`|The type of the supplied input. | `file`, `folder`, `hub`|`file`|
+|`items.type`|The type of the supplied input. | `file` |`file`|
 |`mode`| The type of request. It can be a question about a single file or a set of files. |`single_item_qa`, `multiple_item_qa`|`single_item_qa` |
 |`prompt`|The question about your document or content.||What is the document about?|
 
