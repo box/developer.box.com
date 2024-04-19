@@ -44,7 +44,7 @@ sample_code:
     pricing: Box AI API is available in public beta to all
       Enterprise Plus customers.
   metadata:
-    headline: Box Metadata AI API
+    headline: Box Metadata Suggestions API
     paragraph: Use this endpoint to integrate
      document metadata extraction into
      your application. This demo uses Content Preview Box UI Element.
