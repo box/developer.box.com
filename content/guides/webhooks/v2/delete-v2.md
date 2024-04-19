@@ -27,28 +27,48 @@ To delete a webhook follow the steps below.
 
 ## API
 
-To remove a webhook from a file or folder, you need to use the 
+To remove a webhook from a file or folder, you need to use the
 [remove webhook endpoint][delete] with the ID of the webhook. You can
 get this value using the [list all webhooks endpoint][list].
 
 <Samples id='delete_webhooks_id'></Samples>
 
-## Additional reasons for deletion
+## Automatic webhook deletion
 
 Using [this][delete] endpoint is not the only way a webhook can be deleted.
 
 The following reasons can cause webhooks to be deleted.
 
-1. Deleting a Box application automatically deletes all webhooks associated with
-   it.
-2. Deleting all active Access Tokens associated with a webhook
-   automatically deletes the webhook. This includes Developer Tokens and password.
-3. A webhook is automatically deleted if the last successful delivery was
-30 days ago and the period between the last successful delivery and
-the last trigger date is more than 14 days.
+- Deleting a Box application automatically deletes
+  all webhooks associated with it.
+- Deleting all active Access Tokens associated with a webhook
+  automatically deletes the webhook. This includes
+  Developer Tokens and password.
+- The last successful notification was delivered 30 days
+  ago to the set URL and the period between the last
+  successful notification delivery and the last user
+  trigger event date exceeds 14 days.
+
+  Let's go through a scenario
+  in which the user downloads a file. This action
+  triggers the webhook to use the set URL to
+  delete a shared link.
+  The diagram illustrates this scenario, showing
+  when the webhook will be deleted.
+
+  ![Delete webhooks](../images/delete_webhooks.png)
+
+  - **User event trigger**: when the user initiated
+    the event, for example downloaded a file.
+  - **Notification trigger**: when the notification
+    was sent to the webhook, saying that the file was downloaded.
+  - **Last notification delivery**: when the webhook sent
+    a message to a specific URL, for example to delete a
+    shared link.
 
 In all of these cases Box sends a webhook payload with the
-`WEBHOOK.DELETED` event name to the notification URL. The body of the payload
+`WEBHOOK.DELETED` event name to the notification URL. The body of
+the payload
 includes the following additional information.
 
 ```json
