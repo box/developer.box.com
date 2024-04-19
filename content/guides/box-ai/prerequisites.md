@@ -9,7 +9,7 @@ related_guides:
 <Message type="notice">
 Box AI API is a beta feature which means the
 available capabilities may change.
-Box AI API is to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 To start using Box AI API, you need to create a
