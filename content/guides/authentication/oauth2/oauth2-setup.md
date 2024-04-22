@@ -58,9 +58,9 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 
 <!-- markdownlint-enable line-length -->
 
-<ImageFrame border center width="300">
-  ![Auth selection screen](../images/custom-app-selection.png)
-</ImageFrame>
+
+[Auth selection screen](../images/custom-app-selection.png)
+
 
 ### Select application authentication
 
@@ -71,9 +71,9 @@ Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 
-<ImageFrame border center width="300">
-  ![Auth selection screen](../images/custom-app-authentication-oauth.png)
-</ImageFrame>
+
+![Auth selection screen](../images/custom-app-authentication-oauth.png)
+
 
 ## Basic configuration
 
@@ -139,9 +139,7 @@ To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 
-<ImageFrame border>
-  ![App name form](../images/app-cors.png)
-</ImageFrame>
+![App name form](../images/app-cors.png)
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer

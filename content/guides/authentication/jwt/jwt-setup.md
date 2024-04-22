@@ -192,9 +192,7 @@ An application's scopes determine which endpoints and resources an application
 can successfully call. See the [scopes guide][scopes] for detailed information
 on each option.
 
-<ImageFrame border width="600" center>
-  ![App scopes](../images/app-scopes.png)
-</ImageFrame>
+![App scopes](../images/app-scopes.png)
 
 ### CORS Domains
 
@@ -208,9 +206,8 @@ To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer console][devconsole].
 
-<ImageFrame border>
-  ![App CORS config](../images/app-cors.png)
-</ImageFrame>
+![App CORS config](../images/app-cors.png)
+
 
 <!-- i18n-enable localize-links -->
 [devconsole]: https://app.box.com/developers/console

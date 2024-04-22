@@ -20,9 +20,9 @@ to provide applications access to their data in other applications.
 If you've ever logged in to a website with Twitter, Facebook, or Google you've
 most likely used OAuth 2.0.
 
-<ImageFrame border>
-  ![the OAuth 2.0 flow](./oauth2-flow.png)
-</ImageFrame>
+
+![the OAuth 2.0 flow](./oauth2-flow.png)
+
 
 Client-side authentication on Box has a similar flow where a user is redirected
 from an application to the Box web app, required to log in, and grant the
