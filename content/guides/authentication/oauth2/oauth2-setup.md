@@ -123,9 +123,9 @@ permit duplicate URIs to be saved.
 Scopes define what permissions your application has in order to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
-<ImageFrame border width="600" center>
+
   ![App name form](../images/app-scopes.png)
-</ImageFrame>
+
 
 ### CORS Domains
 
