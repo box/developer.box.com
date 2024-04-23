@@ -191,8 +191,8 @@
   "guides.titles.on_this_page": "On this page",
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "Get started",
-  "headers.primary.links.documentation.text": "Documentation",
   "headers.primary.links.quickstarts.text": "Getting Started",
+  "headers.primary.links.documentation.text": "Documentation",
   "headers.primary.links.community.text": "Community",
   "headers.primary.links.community.url": "https://forum.box.com",
   // The text for the link to the partners section

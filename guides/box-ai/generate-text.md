@@ -21,7 +21,7 @@ source_url: >-
 
 Box AI API is a beta feature which means the
 available capabilities may change.
-Box AI API is to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -41,22 +41,18 @@ To send a request, use the
 
 <!-- markdownlint-disable line-length -->
 
-To make a call, you must pass the following parameters:
+To make a call, you must pass the following parameters. Mandatory parameters are in bold.
 
 | Parameter| Description|Values| Example|
 |--------|--------|-------|-------|
-|`items.id`|Box file ID of the document you want to supply as input.||`1233039227512`|
-|`items.type`|The type of the supplied input. | `file`, `folder`, `hub`|`file`|
-|`mode`| The type of request. It can be a question about a single file or a set of files. |`single_item_qa`, `multiple_item_qa`|`single_item_qa` |
-|`prompt`|The question about your document or content.||What is the document about?|
+|**`prompt`**|The question about your document or content.||What is the document about?|
+|**`items.id`**|Box file ID of the document you want to supply as input.||`1233039227512`|
+|**`items.type`**|The type of the supplied input. | `file` |`file`|
+| `items.content` | The content of the item, often the text representation.  |     |  This article is about Box AI.    |
+| `dialogue_history.prompt` | The prompt previously provided by the client and answered by the LLM. |     | "Make my email about public APIs sound more professional" |
+| `dialogue_history.answer` | The answer previously provided by the LLM. |     | Here is the first draft of your professional email about public APIs. |
+| `dialogue_history.created_at` | The ISO date formatted timestamp of when the previous answer to the prompt was created. |     | `2012-12-12T10:53:43-08:00` |
 
 <!-- markdownlint-enable line-length -->
-
-### Question context
-
-The `dialogue_history` parameter allows you
-to provide additional context for your question by
-referring to a previous answer, prompt,
-or date when an answer or prompt was created.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
