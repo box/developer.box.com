@@ -1,0 +1,8 @@
+content
+node_modules
+target
+build
+*.xliff
+.DS_Store
+yarn-error.log
+compiled
