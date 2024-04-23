@@ -182,9 +182,7 @@ settings accessible in the **Configuration** tab of the
 to **App + Enterprise Access**. Otherwise access to such
 Managed Users and groups will be blocked.
 
-<ImageFrame border>
-  ![App access level](../images/app-access-level.png)
-</ImageFrame>
+![App access level](../images/app-access-level.png)
 
 ### Application Scopes
 
@@ -192,9 +190,7 @@ An application's scopes determine which endpoints and resources an application
 can successfully call. See the [scopes guide][scopes] for detailed information
 on each option.
 
-<ImageFrame border width="600" center>
-  ![App scopes](../images/app-scopes.png)
-</ImageFrame>
+![App scopes](../images/app-scopes.png)
 
 ### CORS Domains
 
@@ -208,9 +204,7 @@ To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer console][devconsole].
 
-<ImageFrame border>
-  ![App CORS config](../images/app-cors.png)
-</ImageFrame>
+![App CORS config](../images/app-cors.png)
 
 <!-- i18n-enable localize-links -->
 [devconsole]: https://app.box.com/developers/console
