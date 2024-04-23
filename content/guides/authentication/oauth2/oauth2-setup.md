@@ -58,9 +58,7 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 
 <!-- markdownlint-enable line-length -->
 
-
 [Auth selection screen](../images/custom-app-selection.png)
-
 
 ### Select application authentication
 
@@ -121,9 +119,7 @@ permit duplicate URIs to be saved.
 Scopes define what permissions your application has in order to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
-
   ![App name form](../images/app-scopes.png)
-
 
 ### CORS Domains
 

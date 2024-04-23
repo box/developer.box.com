@@ -206,7 +206,6 @@ section at the bottom of the **Configuration** tab in the
 
 ![App CORS config](../images/app-cors.png)
 
-
 <!-- i18n-enable localize-links -->
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
