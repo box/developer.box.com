@@ -4,7 +4,7 @@ related_guides:
     - authentication/tokens/developer-tokens/
 ---
 
-# Prerequisites for Box AI
+# Getting Started with Box AI
 
 <Message type="notice">
 Box AI API is a beta feature, which means the
