@@ -19,13 +19,11 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is a beta feature which means the
+Box AI API is a beta feature, which means the
 available capabilities may change.
 Box AI API is available to all **Enterprise Plus** customers.
 
 </Message>
-
-## Endpoints
 
 Box AI API allows you to
 ask a question about a supplied file or
@@ -44,12 +42,18 @@ provide the mandatory parameters.
 
 </Samples>
 
+### Authentication
+
+Make sure you have generated the developer token
+to authorize your app. See [Prerequisites for Box AI][prereq]
+for details.
+
 ### Parameters
 
 <!-- markdownlint-disable line-length -->
 
 To make a call, you need to pass the following parameters.
-Mandatory parameters are in bold.
+Mandatory parameters are in **bold**.
 
 | Parameter    | Description                                                                                             | Values                               | Example                     |
 | ------------ | ------ | ----------- | --- |
@@ -57,6 +61,8 @@ Mandatory parameters are in bold.
 | **`prompt`**   | The question about your document or content. | What is the document about? |
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
-| `items.content` | The content of the item, often the text representation.  |     |  This article is about Box AI.    |
+| `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface……”    |
 
 <!-- markdownlint-enable line-length -->
+
+[prereq]: g://box-ai/prerequisites

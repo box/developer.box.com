@@ -24,17 +24,57 @@ source_url: >-
 ---
 # Content Preview
 
+<!-- markdownlint-disable line-length -->
+
 The Box Content Preview UI Element allows developers to embed high
 quality and interactive previews of Box files in their desktop or mobile web
-application. The library fetches information about the file and its converted
-representations through the Box API, chooses the appropriate viewer for the file
-type, dynamically loads the necessary static assets and file representations,
-and finally renders the file. This UI Element also allows previews of multiple
-files to be loaded in the same container and exposes arrows to navigate between
-those files.
+application.
 
-This UI Element powers Preview in the main Box web application as well as the
-'expiring embed' Box API endpoint.
+## Content Preview Element vs Content Preview Library
+
+The Content Preview UI Element works differently from the other UI Elements, as the React component is a wrapper for the [Box Content Preview library][previewlib]. It also requires passing a language (defaults to `en-US`) since the preview library bundles are localized.
+
+```js
+var ContentPreview = require('./ContentPreview').default;
+
+<IntlProvider locale="en">
+    <ContentPreview
+        contentSidebarProps={{
+            detailsSidebarProps: {
+                hasAccessStats: true,
+                hasClassification: true,
+                hasNotices: true,
+                hasProperties: true,
+                hasRetentionPolicy: true,
+                hasVersions: true,
+            },
+            features: FEATURES,
+            hasActivityFeed: true,
+            hasMetadata: true,
+            hasSkills: true,
+            hasVersions: true,
+        }}
+        hasHeader={true}
+        features={FEATURES}
+        fileId={FILE_ID}
+        token={TOKEN}
+        {...PROPS}
+    />
+</IntlProvider>
+```
+
+The Content Preview Library fetches information
+about the file and its converted representations
+through the Box API, chooses the appropriate
+viewer for the file type, dynamically loads
+the necessary static assets and file representations,
+and finally renders the file.
+
+This UI Element also allows loading previews of
+multiple files in the same container and exposes
+arrows to navigate between those files.
+It powers Preview in the main Box web application
+as well as the [expiring embed link object][expiredembed].
 
 ## Installation
 
@@ -43,12 +83,9 @@ either through NPM or the Box CDN.
 
 ## Authentication
 
-The UI Elements are designed in an authentication agnostic way so whether
-you are using UI Elements for users who have Box accounts (Managed Users) or
-non-Box accounts (App Users), UI Elements should work out of the box. The
-reason for this is that UI Elements only expect a "token" to be passed in for
-authentication, and Box provides two different ways to generate tokens - OAuth
-and JWT.
+UI Elements are designed in an authentication-agnostic way so whether
+they will work for Managed Box Users and non-Box users (App Users). The
+reason for this is that UI Elements only expect a [token][token] for authentication, and Box provides two different ways to generate tokens - OAuth and JWT.
 
 <CTA to="g://authentication/select">
 
@@ -64,7 +101,7 @@ find the full list of supported file types [here][filetypes].
 
 <Message warning>
 
-Please note that where supported file types contain references to other
+Note that where supported file types contain references to other
 objects, for example `DWG` files, those references are not supported in the
 Box preview. A notice will be displayed to all end users viewing a DWG file
 that contains unsupported references letting them know to take alternate steps
@@ -75,8 +112,6 @@ to complete their workflow.
 ## Demo
 
 Use the navigation arrows to preview different file types.
-
-<!-- markdownlint-disable line-length -->
 
 <iframe width="100%" height="560" scrolling="no" frameborder="no" title="Box Content Preview Demo" src="//codepen.io/box-platform/embed/rmZdjm/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
 
@@ -418,6 +453,50 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 <!-- markdownlint-enable line-length -->
 
+## Box AI UI Element
+
+The AI UI Element enhances the Content Preview UI Element
+with AI Q&A functionality. This allows the users to build
+AI-enabled, chatbot-like functionality in their custom app.
+Adding the element facilitates answering questions and
+taking actions like summarizing a document.
+
+To enable Box AI modal in content preview header, follow these steps:
+
+1. Make sure your Node version is `18.x` or higher.
+2. Download the [package that contains Box AI][aipackage]
+
+The functionality will be available to you out of the box.
+
+<Message type="notice">
+
+The AI UI Element is currently available only by
+installing the `npm package`. 
+The CDN version is not yet supported.
+
+</Message>
+
+### React component
+
+You can also add Box AI element to a header in a React component.
+To do so, add `contentAnswersProps` with the field `show` set to `true`:
+
+```js
+var ContentPreview = require('./ContentPreview').default;
+
+<IntlProvider locale="en">
+    <ContentPreview
+        contentAnswersProps={{
+          show: true,
+        }}
+        ...
+        fileId={FILE_ID}
+        token={TOKEN}
+        {...PROPS}
+    />
+</IntlProvider>
+```
+
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -458,7 +537,7 @@ token will need to include the `item_download` scope to enable highlighting.
 
 ### Sample Scenarios
 
-| Scenario                                                                                                                                                                       | Scopes                                                      |
+| Scenario  | Scopes                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
 | User should only be able to preview (not download/print, annotate)                                                                                                             | `base_preview`                                              |
 | User should be able to preview, download and print                                                                                                                             | `base_preview` + `item_download`                            |
@@ -466,6 +545,39 @@ token will need to include the `item_download` scope to enable highlighting.
 | User should be able to preview, and create annotations but only view their own.                                                                                                | `base_preview` + `annotation_view_self` + `annotation_edit` |
 | User should be able to preview, edit annotations and view all annotations                                                                                                      | `base_preview` + `annotation_view_all` + `annotation_edit`  |
 | User should be able to preview and only view their own annotations but not add/delete (ex: after review period has expired, all documents need to be stored in read only mode) | `base_preview` + `annotation_view_self`                     |
+
+## Box AI UI Element
+
+The AI UI Element enhances the Content Preview UI Element with AI Q&A functionality. This allows the users to build AI-enabled chatbot-type functionality in their custom portal. An embedded AI UI element can answer questions and take actions, for example, summarize a document.
+
+![AI element in Preview](./images/ai-icon.png)
+
+<Message type="notice">
+
+The AI UI Element is currently available only as an [npm package in version `19.0.0-beta`][ainpm]. The CDN version is not yet supported.
+
+</Message>
+
+### Adding AI UI Element to Content Preview header
+
+Add`contentAnswersProps` with the field `show` set to `true` to enable the AI UI Element button in `previewHeader`:
+
+```js
+/* Enable Box AI in header */
+var ContentPreview = require('./ContentPreview').default;
+
+<IntlProvider locale="en">
+    <ContentPreview
+        contentAnswersProps={{
+          show: true,
+        }}
+        ...
+        fileId={FILE_ID}
+        token={TOKEN}
+        {...PROPS}
+    />
+</IntlProvider>
+```
 
 <!-- markdownlint-enable line-length -->
 
@@ -479,3 +591,8 @@ token will need to include the `item_download` scope to enable highlighting.
 [annotations]: https://github.com/box/box-annotations
 [buie]: https://github.com/box/box-ui-elements/releases/tag/v16.0.0
 [annotationsguide]: g://embed/ui-elements/annotations.md
+[previewlib]: https://github.com/box/box-content-preview
+[ainpm]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34
+[expiredembed]: r://file--full/#param-expiring_embed_link
+[token]: g://authentication/tokens/developer-tokens
+[aipackage]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34.

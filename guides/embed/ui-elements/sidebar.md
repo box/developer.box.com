@@ -97,21 +97,48 @@ Learn about selecting an authentication method
 
 ### Stand-alone Sidebar
 
-<iframe height="800" scrolling="no" title="Box Content Sidebar" src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
-
-</iframe>
+```sh
+<iframe
+  height="800"
+  scrolling="no"
+  title="Box Content Sidebar"
+  src="//codepen.io/box-platform/embed/xjbBvv/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+  style="width: 100%;"
+></iframe>
+```
 
 ### Sidebar with Content Preview
 
-<iframe height="800" scrolling="no" title="Box Content Preview with Sidebar" src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
-
-</iframe>
+```sh
+<iframe
+  height="800"
+  scrolling="no"
+  title="Box Content Preview with Sidebar"
+  src="//codepen.io/box-platform/embed/pqBMgM/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+  style="width: 100%;"
+></iframe>
+```
 
 ### Sidebar with Content Explorer
 
-<iframe height="800" scrolling="no" title="Box Content Explorer with Sidebar" src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;" >
-
-</iframe>
+```sh
+<iframe
+  height="800"
+  scrolling="no"
+  title="Box Content Explorer with Sidebar"
+  src="//codepen.io/box-platform/embed/ERVXMa/?height=800&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+  style="width: 100%;"
+></iframe>
+```
 
 ## API
 
