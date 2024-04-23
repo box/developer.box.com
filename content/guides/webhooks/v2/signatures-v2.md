@@ -68,7 +68,7 @@ var expired = Date.now() - date > 10*60*1000;
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import dateutil.parser
 import pytz
 import datetime
@@ -117,7 +117,7 @@ hmac2.update(timestamp);
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import hmac
 import hashlib
 
@@ -150,7 +150,7 @@ var digest2 = hmac2.digest('base64');
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import base64
 
 digest1 = base64.b64encode(hmac1)
@@ -185,7 +185,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
 signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 

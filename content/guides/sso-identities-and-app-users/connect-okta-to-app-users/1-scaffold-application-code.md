@@ -43,7 +43,7 @@ Choose your preferred language / framework below to get started.
 * Create a local directory for your application.
 * Create a `package.json` file inside the local directory, open it in your preferred editor, copy / paste the following into it, and save / exit the file.
 
-```js
+```json
   {
     "name": "okta-box",
     "version": "1.0.0",
@@ -84,14 +84,14 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 
 ```java
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter-security'
-  implementation 'org.springframework.boot:spring-boot-starter-web'
-  implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
-  testImplementation('org.springframework.boot:spring-boot-starter-test') {
-    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-  }
-  testImplementation 'org.springframework.security:spring-security-test'
-  compile 'com.box:box-java-sdk:2.44.1'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+      exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'org.springframework.security:spring-security-test'
+    compile 'com.box:box-java-sdk:2.44.1'
 }
 ```
 
@@ -122,7 +122,7 @@ okta_callback_route = '/oidc/callback'
 
 * Open `client_secrets.json` and save the following into it. This will be a standard object that the Flask OpenID Connect integration will use during configuration. We'll fill in the remaining information in the next step.
 
-```js
+```json
 {
   "web": {
     "client_id": "OKTA CLIENT ID",
@@ -147,7 +147,7 @@ okta_callback_route = '/oidc/callback'
 * Within the root of the project, open `Startup.cs`.
 * Add the following package declarations to the top of the file.
 
-```dotnet
+```csharp
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 ```
@@ -155,29 +155,29 @@ using Okta.AspNetCore;
 * Replace the content of the `ConfigureServices` method with the following. We will fill in the specific Okta application values in the next step.
 
 <!-- markdownlint-disable line-length -->
-```dotnet
-  services.AddControllersWithViews();
-  services.AddAuthentication(options =>
-  {
+```csharp
+services.AddControllersWithViews();
+services.AddAuthentication(options =>
+{
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
-  })
-  .AddCookie()
-  .AddOktaMvc(new OktaMvcOptions
-  {
+})
+.AddCookie()
+.AddOktaMvc(new OktaMvcOptions
+{
     // Replace these values with your Okta configuration
     OktaDomain = "",
     ClientId = "",
     ClientSecret = ""
-  });
+});
 ```
 <!-- markdownlint-enable line-length -->
 
 Add the following line to the **top** of the `Configure` method.
 
-```dotnet
-  app.UseAuthentication();
+```csharp
+app.UseAuthentication();
 ```
 
 </Choice>

@@ -40,29 +40,29 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-  ```bash
-  pwsh
-  ```
+```bash
+pwsh
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-  ```bash
-  PowerShell 7.2.5
-  Copyright (c) Microsoft Corporation.
+```bash
+PowerShell 7.2.5
+Copyright (c) Microsoft Corporation.
 
-  https://aka.ms/powershell
-  Type 'help' to get help.
+https://aka.ms/powershell
+Type 'help' to get help.
 
-  PS /Users/user/repos/boxcli/examples>
-  ```
+PS /Users/user/repos/boxcli/examples>
+```
 
-  <message>
-    If you encounter issues make sure you installed both
-    [dotnet core](https://dotnet.microsoft.com/download) and
-    [PowerShell][pwsh].
-  </message>
+<message>
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
+[PowerShell][pwsh].
+</message>
 
 ### Set up application with JWT authentication
 
@@ -92,19 +92,19 @@ The `.csv` file must have two columns with the following headers: **Email** and 
 * **Email** contains the primary email address of a Box user.
 * **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone.
 
-  ```bash
-  $ZonesTable = @{
-  US = "100001"             #US
-  GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
-  Australia = "100003"      #Australia
-  Japan = "100004"          #Japan with in region uploads/downloads/previews
-  Canada = "100005"         #Canada
-  JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
-  UKGermany = "100008"      #UK/Germany
-  UK = "100009"             #UK with in region uploads/downloads/previews
-  France = "100012"         #France
-  }
-  ```
+```bash
+$ZonesTable = @{
+US = "100001"             #US
+GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
+Australia = "100003"      #Australia
+Japan = "100004"          #Japan with in region uploads/downloads/previews
+Canada = "100005"         #Canada
+JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
+UKGermany = "100008"      #UK/Germany
+UK = "100009"             #UK with in region uploads/downloads/previews
+France = "100012"         #France
+}
+```
 
 <message>
   Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.

@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: 
+alias_paths:
   - /guides/security/fedramp-high/
 ---
 
@@ -12,11 +12,11 @@ alias_paths:
 
 ## Overview
 
-FedRAMP is a certification program that allows federal agencies to use cloud 
-providers for increasingly secure/sensitive government or government-adjacent 
-data. 
+FedRAMP is a certification program that allows federal agencies to use cloud
+providers for increasingly secure/sensitive government or government-adjacent
+data.
 
-FedRAMP defines three categories regarding levels of security, Low, Moderate, 
+FedRAMP defines three categories regarding levels of security, Low, Moderate,
 and High.
 
 The higher the security level the more restrictions are in place.
@@ -25,11 +25,11 @@ Box is currently certified as [FedRAMP Moderate][FedRAMPCert].
 
 ## Considerations
 
-In order to be FedRAMP compliant, your administrator must setup Box in 
-very a very specific way. It is possible that the administrator has further 
+In order to be FedRAMP compliant, your administrator must setup Box in
+very a very specific way. It is possible that the administrator has further
 restricted access to Box functionalities.
 
-Consult with your administrator to identify security restrictions in place that 
+Consult with your administrator to identify security restrictions in place that
 might affect the usage of the API.
 
 ## API usage in FedRAMP
@@ -49,7 +49,7 @@ For FedRAMP compliance, you may use the below URLs for API entry points.
 
 <!-- ## API Restrictions
 
-The following API entry points are not yet available for usage under FedRAMP 
+The following API entry points are not yet available for usage under FedRAMP
 High configuration. -->
 
 <!-- markdownlint-disable line-length -->
@@ -114,7 +114,7 @@ console.log('!')
   </Tab>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 // some .NET code
 ```
 

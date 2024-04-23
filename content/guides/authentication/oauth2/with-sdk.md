@@ -62,7 +62,7 @@ your choice.
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var redirectUrl = "[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
 var sdk = new BoxClient(config);
@@ -100,8 +100,8 @@ auth = OAuth2(
 var BoxSDK = require("box-node-sdk");
 
 var sdk = new BoxSDK({
-  clientID: "[CLIENT_ID]",
-  clientSecret: "[CLIENT_SECRET]",
+    clientID: "[CLIENT_ID]",
+    clientSecret: "[CLIENT_SECRET]",
 });
 ```
 
@@ -128,7 +128,7 @@ the app after granting application access.
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 // redirectTo(authorizationUrl);
 ```
@@ -160,7 +160,7 @@ auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
-  response_type: "code",
+    response_type: "code",
 });
 
 // res.redirect(authorize_url)
@@ -227,7 +227,7 @@ The SDKs can be used to exchange the code for an actual Access Token.
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var session = await sdk.Auth.AuthenticateAsync("[CODE]");
 var client = new BoxClient(config, session);
 ```
@@ -237,9 +237,9 @@ var client = new BoxClient(config, session);
 
 ```java
 BoxAPIConnection client = new BoxAPIConnection(
-  "[CLIENT_ID]",
-  "[CLIENT_SECRET]",
-  "[CODE]"
+    "[CLIENT_ID]",
+    "[CLIENT_SECRET]",
+    "[CODE]"
 );
 ```
 
@@ -258,7 +258,7 @@ client = Client(auth)
 var code = "...";
 
 sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function (err, tokenInfo) {
-  var client = sdk.getPersistentClient(tokenInfo);
+    var client = sdk.getPersistentClient(tokenInfo);
 });
 ```
 

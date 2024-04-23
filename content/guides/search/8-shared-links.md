@@ -26,7 +26,7 @@ curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, include_recent_shared_links=True)
 ```
 
@@ -35,13 +35,13 @@ client.search().query("sales", metadata_filters=metadata_search_filters, include
 
 ```js
 client.search.query(
-  'sales',
-  {
-    include_recent_shared_links: true
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        include_recent_shared_links: true
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>

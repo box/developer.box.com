@@ -109,56 +109,56 @@ See an example of the endpoint's lifecycle:
 
 1. Initial state (only one version is available).
 
-  ```js
-  class FilesManager {
-    async updateFileById(
-        fileId: string,
-        requestBody: UpdateFileByIdRequestBody,
-        queryParams: UpdateFileByIdQueryParams,
-        headers: UpdateFileByIdHeaders
-    ): Promise < FileFull > {}
-  }
-  ```
+    ```js
+    class FilesManager {
+        async updateFileById(
+            fileId: string,
+            requestBody: UpdateFileByIdRequestBody,
+            queryParams: UpdateFileByIdQueryParams,
+            headers: UpdateFileByIdHeaders
+        ): Promise < FileFull > {}
+    }
+    ```
 
 2. A new `v2025_0` version of the endpoint is introduced (previous version is deprecated).
 
-  The SDK introduces a new method for each new version of an endpoint. These methods are stored in the same manager as the old ones, but their names and corresponding classes are suffixed with the version number. The old method is deprecated with a notice indicating the minimal maintenance date – this will be the date when the endpoint will be considered for end-of-life status.
+    The SDK introduces a new method for each new version of an endpoint. These methods are stored in the same manager as the old ones, but their names and corresponding classes are suffixed with the version number. The old method is deprecated with a notice indicating the minimal maintenance date – this will be the date when the endpoint will be considered for end-of-life status.
 
-  ```js
-  class FilesManager {
-  /**
-   * @deprecated This endpoint will be EOL'ed after 05-2026.
-    */
-  async updateFileById(
-      fileId: string,
-      requestBody: UpdateFileByIdRequestBody,
-      queryParams: UpdateFileByIdQueryParams,
-      headers: UpdateFileByIdHeaders
-  ): Promise<FileFull> {}
+    ```js
+    class FilesManager {
+        /**
+         * @deprecated This endpoint will be EOL'ed after 05-2026.
+            */
+        async updateFileById(
+            fileId: string,
+            requestBody: UpdateFileByIdRequestBody,
+            queryParams: UpdateFileByIdQueryParams,
+            headers: UpdateFileByIdHeaders
+        ): Promise<FileFull> {}
 
-  async updateFileById_2025_0(
-      fileId: string,
-      requestBody: UpdateFileByIdRequestBody_2025_0,
-      queryParams: UpdateFileByIdQueryParams_2025_0,
-      headers: UpdateFileByIdHeaders_2025_0
-  ): Promise<FileFull_2025_0> {}
-  }
-  ```
+        async updateFileById_2025_0(
+            fileId: string,
+            requestBody: UpdateFileByIdRequestBody_2025_0,
+            queryParams: UpdateFileByIdQueryParams_2025_0,
+            headers: UpdateFileByIdHeaders_2025_0
+        ): Promise<FileFull_2025_0> {}
+    }
+    ```
 
 3. The API endpoint is marked as End-of-Life (EOL)
 
-  The SDK releases a breaking change release with removed end-of-life (EOL) endpoints. Ideally, we should group the end-of-life dates for all endpoints into one date per quarter to avoid releasing numerous new major versions of SDKs.
+    The SDK releases a breaking change release with removed end-of-life (EOL) endpoints. Ideally, we should group the end-of-life dates for all endpoints into one date per quarter to avoid releasing numerous new major versions of SDKs.
 
-  ```js
-  class FilesManager {
-    async updateFileById_2025_0(
-        fileId: string,
-        requestBody: UpdateFileByIdRequestBody_2025_0,
-        queryParams: UpdateFileByIdQueryParams_2025_0,
-        headers: UpdateFileByIdHeaders_2025_0
-    ): Promise < FileFull_2025_0 > {}
-  }
-  ```
+    ```js
+    class FilesManager {
+        async updateFileById_2025_0(
+            fileId: string,
+            requestBody: UpdateFileByIdRequestBody_2025_0,
+            queryParams: UpdateFileByIdQueryParams_2025_0,
+            headers: UpdateFileByIdHeaders_2025_0
+        ): Promise < FileFull_2025_0 > {}
+    }
+    ```
 
 ## Breaking vs non-breaking changes
 

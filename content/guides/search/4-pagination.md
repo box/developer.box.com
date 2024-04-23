@@ -80,7 +80,7 @@ BoxCollection<BoxItem> page2 = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 page1 = client.search().query(query='sales', limit=50)
 page2 = client.search().query(query='sales', limit=50, offset=50)
 ```
@@ -90,11 +90,11 @@ page2 = client.search().query(query='sales', limit=50, offset=50)
 
 ```js
 const page1 = await client.search.query('sales', {
-  limit: 50
+    limit: 50
 })
 const page2 = await client.search.query('sales'. {
-  limit: 50,
-  offset: 50
+    limit: 50,
+    offset: 50
 })
 ```
 

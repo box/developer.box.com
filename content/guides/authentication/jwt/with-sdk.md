@@ -82,7 +82,7 @@ To use this object in the application it needs to be read from file.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var reader = new StreamReader("path/to/config.json");
 var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
@@ -135,7 +135,7 @@ initialize the client to connect as the application.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
 BoxClient client = sdk.AdminClient(token);

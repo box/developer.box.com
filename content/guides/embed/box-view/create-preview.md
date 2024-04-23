@@ -54,7 +54,7 @@ curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
   </Tab>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 String fileId = "12345678";
 Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 ```
@@ -82,7 +82,7 @@ embed_url = client.file(file_id).get_embed_url()
 ```js
 const fileId = '12345678';
 client.files.getEmbedLink(fileId).then(embedURL => {
-  // ...
+    // ...
 });
 ```
 
@@ -132,8 +132,8 @@ display a new previewer.
 ```js
 var preview = new Box.Preview();
 preview.show("FILE_ID", "ACCESS_TOKEN", {
-  container: ".preview-container",
-  showDownload: true
+    container: ".preview-container",
+    showDownload: true
 });
 ```
 

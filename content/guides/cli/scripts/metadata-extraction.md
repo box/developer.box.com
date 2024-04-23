@@ -28,29 +28,29 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-  ```bash
-    pwsh
-  ```
+```bash
+pwsh
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-  ```bash
-  PowerShell 7.2.5
-  Copyright (c) Microsoft Corporation.
+```bash
+PowerShell 7.2.5
+Copyright (c) Microsoft Corporation.
 
-  https://aka.ms/powershell
-  Type 'help' to get help.
+https://aka.ms/powershell
+Type 'help' to get help.
 
-  PS /Users/user/repos/boxcli/examples>
-  ```
+PS /Users/user/repos/boxcli/examples>
+```
 
-  <Message>
-    If you encounter issues make sure you installed both
-    [dotnet core](https://dotnet.microsoft.com/download) and
-    [PowerShell][pwsh].
-  </Message>
+<Message>
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
+[PowerShell][pwsh].
+</Message>
 
 ### Box CLI
 
@@ -62,49 +62,49 @@ our [quick start guide][quickstart].
 
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
-  ```bash
-    git clone https://github.com/box/boxcli.git
-    cd boxcli/examples/Metadata\ Extraction/
-  ```
+    ```bash
+        git clone https://github.com/box/boxcli.git
+        cd boxcli/examples/Metadata\ Extraction/
+    ```
 
 2. Specify the `folderID` and `userID` parameters to tell the script which folder to scan, and who is the user running the script.
 
-  ```bash
-  [string]$FolderID = "",
-  [string]$UserID = "",
-  ```
+    ```bash
+    [string]$FolderID = "",
+    [string]$UserID = "",
+    ```
 
-  If you don't want to specify the parameters directly in the script,
-  you can either pass them as flags or allow the script
-  to prompt you to enter them. A sample command with flags looks as follows:
+    If you don't want to specify the parameters directly in the script,
+    you can either pass them as flags or allow the script
+    to prompt you to enter them. A sample command with flags looks as follows:
 
-  ```bash
-  ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
-  ```
+    ```bash
+    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+    ```
 
 ## Run the script
 
 1. Run the Powershell command.
 
-  ```bash
-  pwsh
-  ```
+    ```bash
+    pwsh
+    ```
 
 2. Run the script.
 
-  ```bash
-  ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
-  ```
+    ```bash
+    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+    ```
 
-  When the script finishes, you will see the following
-  output or a similar one.
+    When the script finishes, you will see the following
+    output or a similar one.
 
-  ```bash
-  Pulling data from Folder ID: 173961139760
-  metadata as user ID: 20718545815
-  Reading Item ID: 1016853559790
-  Metadata saved to: MetadataTemplate_properties.csv
-  ```
+    ```bash
+    Pulling data from Folder ID: 173961139760
+    metadata as user ID: 20718545815
+    Reading Item ID: 1016853559790
+    Metadata saved to: MetadataTemplate_properties.csv
+    ```
 
 ## Logging
 

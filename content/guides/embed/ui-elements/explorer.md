@@ -49,28 +49,28 @@ and JWT.
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8" />
-		<title>Box Content Explorer Demo</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>Box Content Explorer Demo</title>
 
-		<!-- Latest version of the explorer css for your locale -->
-		<link
-			rel="stylesheet"
-			href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
-	</head>
-	<body>
-		<div class="container" style="height:600px"></div>
-		<!-- Latest version of the explorer js for your locale -->
-		<script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
-		<script>
-			var folderId = "123";
-			var accessToken = "abc";
-			var contentExplorer = new Box.ContentExplorer();
-			contentExplorer.show(folderId, accessToken, {
-				container: ".container",
-			});
-		</script>
-	</body>
+        <!-- Latest version of the explorer css for your locale -->
+        <link
+            rel="stylesheet"
+            href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
+    </head>
+    <body>
+        <div class="container" style="height:600px"></div>
+        <!-- Latest version of the explorer js for your locale -->
+        <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
+        <script>
+            var folderId = "123";
+            var accessToken = "abc";
+            var contentExplorer = new Box.ContentExplorer();
+            contentExplorer.show(folderId, accessToken, {
+                container: ".container",
+            });
+        </script>
+    </body>
 </html>
 ```
 
@@ -325,29 +325,29 @@ For additional information on metadata queries, see [this guide][metadata-query]
   [...]
 
     function App() {
-      [...]
+        [...]
 
-      return (
-          <IntlProvider locale="en">
-            <div className="App">
-              <header className="App-header">
-                <h2>Metadata view in Content Explorer</h2>
-              </header>
-              <section>
-                <div className="metadata-based-view">
-                  <ContentExplorer
-                    rootFolderId={rootFolderID}
-                    token={token}
-                    metadataQuery={metadataQuery}
-                    fieldsToShow={fieldsToShow}
-                    defaultView={defaultView}
-                  />
-                </div>
-              </section>
-            </div>
-          </IntlProvider>
-      );
-      }
+        return (
+            <IntlProvider locale="en">
+              <div className="App">
+                <header className="App-header">
+                  <h2>Metadata view in Content Explorer</h2>
+                </header>
+                <section>
+                  <div className="metadata-based-view">
+                    <ContentExplorer
+                      rootFolderId={rootFolderID}
+                      token={token}
+                      metadataQuery={metadataQuery}
+                      fieldsToShow={fieldsToShow}
+                      defaultView={defaultView}
+                    />
+                  </div>
+                </section>
+              </div>
+            </IntlProvider>
+        );
+    }
 
     export default App;
 ```
@@ -356,79 +356,79 @@ A sample code for a React component including the Content Explorer metadata view
 
 ```js
 function App() {
-	// Get the token from Developer Console (app's configuration tab)
-	const token = "<DEVELOPER_TOKEN>";
+    // Get the token from Developer Console (app's configuration tab)
+    const token = "<DEVELOPER_TOKEN>";
 
-	// Folder ID with a metadata template applied
-	// The metadataQuery will apply to this folder
-	const rootFolderID = "<ROOTFOLDER_ID>";
+    // Folder ID with a metadata template applied
+    // The metadataQuery will apply to this folder
+    const rootFolderID = "<ROOTFOLDER_ID>";
 
-	// Get ENTERPRISE_ID from Developer Console (app's general settings)
-	const EID = "<ENTERPRISE_ID>";
+    // Get ENTERPRISE_ID from Developer Console (app's general settings)
+    const EID = "<ENTERPRISE_ID>";
 
-	// Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
-	const templateName = "<METADATA_TEMPLATE_NAME>";
+    // Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
+    const templateName = "<METADATA_TEMPLATE_NAME>";
 
-	// Define metadata source
-	// Example: enterprise_123456789.metadatatemplate
-	const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
+    // Define metadata source
+    // Example: enterprise_123456789.metadatatemplate
+    const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
 
-	const metadataQuery = {
-		from: metadataSource,
+    const metadataQuery = {
+        from: metadataSource,
 
-		// Filter items in the folder by existing metadata key
-		query: "key = :arg1",
+        // Filter items in the folder by existing metadata key
+        query: "key = :arg1",
 
-		// Display items with value
-		query_params: { arg1: "value" },
+        // Display items with value
+        query_params: { arg1: "value" },
 
-		// Define the ancestor folder ID
-		ancestor_folder_id: 0,
+        // Define the ancestor folder ID
+        ancestor_folder_id: 0,
 
-		// Define which other metadata fields you'd like to display
-		fields: [
-			`${metadataSource}.name`,
-			`${metadataSource}.last_contacted_at`,
-			`${metadataSource}.industry`,
-			`${metadataSource}.role`,
-		],
-	};
+        // Define which other metadata fields you'd like to display
+        fields: [
+            `${metadataSource}.name`,
+            `${metadataSource}.last_contacted_at`,
+            `${metadataSource}.industry`,
+            `${metadataSource}.role`,
+        ],
+    };
 
-	// The metadata fields/columns to view - must be valid field names from the metadata template
-	const fieldsToShow = [
-		// Determine if the user can edit the metadata directly from Content Explorer component
-		{ key: `${metadataSource}.name`, canEdit: false },
+    // The metadata fields/columns to view - must be valid field names from the metadata template
+    const fieldsToShow = [
+        // Determine if the user can edit the metadata directly from Content Explorer component
+        { key: `${metadataSource}.name`, canEdit: false },
 
-		// Determine label alias on metadata column with displayName prop
-		{ key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
-		{ key: `${metadataSource}.last_contacted_at`, canEdit: true },
-		{ key: `${metadataSource}.role`, canEdit: true },
-	];
+        // Determine label alias on metadata column with displayName prop
+        { key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
+        { key: `${metadataSource}.last_contacted_at`, canEdit: true },
+        { key: `${metadataSource}.role`, canEdit: true },
+    ];
 
-	// defaultView - a required prop to paint the metadata view.
-	// If not provided, you'll get regular folder view.
-	const defaultView = "metadata";
+    // defaultView - a required prop to paint the metadata view.
+    // If not provided, you'll get regular folder view.
+    const defaultView = "metadata";
 
-	return (
-		<IntlProvider locale="en">
-			<div className="App">
-				<header className="App-header">
-					<h2>Metadata view in Content Explorer</h2>
-				</header>
-				<section>
-					<div className="metadata-based-view">
-						<ContentExplorer
-							rootFolderId={rootFolderID}
-							token={token}
-							metadataQuery={metadataQuery}
-							fieldsToShow={fieldsToShow}
-							defaultView={defaultView}
-						/>
-					</div>
-				</section>
-			</div>
-		</IntlProvider>
-	);
+    return (
+        <IntlProvider locale="en">
+            <div className="App">
+                <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                </header>
+                <section>
+                    <div className="metadata-based-view">
+                        <ContentExplorer
+                            rootFolderId={rootFolderID}
+                            token={token}
+                            metadataQuery={metadataQuery}
+                            fieldsToShow={fieldsToShow}
+                            defaultView={defaultView}
+                        />
+                    </div>
+                </section>
+            </div>
+        </IntlProvider>
+    );
 }
 
 export default App;

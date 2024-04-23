@@ -36,14 +36,14 @@ includes a mini `terms_of_service` object.
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": {
-            "type": "terms_of_service",
-            "id": 6766677
-        }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": {
+      "type": "terms_of_service",
+      "id": 6766677
     }
+  }
 }
 ```
 
@@ -61,11 +61,11 @@ result.
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": null
-    }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": null
+  }
 }
 ```
 

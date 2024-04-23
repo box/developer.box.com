@@ -47,7 +47,7 @@ for your bot application code, Slack will immediately send a challenge to that
 URL to verify that it's valid. This will be an HTTP POST with a payload that
 looks something like the following:
 
-```javascript
+```json
 { 
   "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl", 
   "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
@@ -59,7 +59,7 @@ To set up the URL for the event listener, that URL that is set needs
 to respond with a verification payload containing the challenge value back to
 Slack during this step. The payload will look similar to the following.
 
-```javascript
+```js
 HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P"}
 ```
 
@@ -81,7 +81,7 @@ Within the project directory, run `npm install express --save` to install the
 Express dependency, then deploy the following code to your public endpoint
 along with the appropriate Node modules.
 
-```javascript
+```js
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -90,23 +90,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.post('/event', (req, res) => {
-  if (
-    req.body &&
-    req.body.challenge &&
-    req.body.type === 'url_verification'
-  ) {
-    res.send({
-      challenge: req.body.challenge
-    });
-  } else {
-    res.status(400).send({
-      error: "Unrecognized request"
-    });
-  }
+    if (
+        req.body &&
+        req.body.challenge &&
+        req.body.type === 'url_verification'
+    ) {
+        res.send({
+          c hallenge: req.body.challenge
+        });
+    } else {
+        res.status(400).send({
+            error: "Unrecognized request"
+        });
+    }
 });
 
 app.listen(port, function(err) {
-  console.log("Server listening on PORT", port);
+    console.log("Server listening on PORT", port);
 });
 ```
 
@@ -123,33 +123,33 @@ app.listen(port, function(err) {
 * Enter a unique name for the project, we used `slack.box` for this guide.
 * Open your `build.gradle` file and add the following. Ensure that the group matches the group that you used for the application. Once saved, refresh the Gradle project.
 
-  ```java
-  plugins {
-      id 'org.springframework.boot' version '2.3.1.RELEASE'
-      id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-      id 'java'
-  }
+```java
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
 
-  group = 'com.box'
-  version = '0.0.1-SNAPSHOT'
-  sourceCompatibility = '1.8'
+group = 'com.box'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
 
-  repositories {
-      mavenCentral()
-  }
+repositories {
+    mavenCentral()
+}
 
-  dependencies {
-      implementation 'org.springframework.boot:spring-boot-starter-web'
-      testImplementation('org.springframework.boot:spring-boot-starter-test') {
-          exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-      }
-      compile 'com.box:box-java-sdk:2.44.1'
-  }
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compile 'com.box:box-java-sdk:2.44.1'
+}
 
-  test {
-      useJUnitPlatform()
-  }
-  ```
+test {
+    useJUnitPlatform()
+}
+```
 
 * Within your `src/main/java` path, create a new Java class file named `Application.java`.
 * Open the file, add the following code, and save.
@@ -168,27 +168,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class Application {
-  @PostMapping("/event")
-  public JSONObject challenge(@RequestBody String data) throws Exception {
-    JSONObject returnJSON = new JSONObject();
+    @PostMapping("/event")
+    public JSONObject challenge(@RequestBody String data) throws Exception {
+        JSONObject returnJSON = new JSONObject();
 
-    Object dataObj = new JSONParser().parse(data);
-    JSONObject inputJSON = (JSONObject) dataObj;
-    String challenge = (String) inputJSON.get("challenge");
-    String type = (String) inputJSON.get("type");
+        Object dataObj = new JSONParser().parse(data);
+        JSONObject inputJSON = (JSONObject) dataObj;
+        String challenge = (String) inputJSON.get("challenge");
+        String type = (String) inputJSON.get("type");
 
-    if (type.equals("url_verification")) {
-      returnJSON.put("challenge", challenge);
-    } else {
-      System.err.println("Invalid input");
+        if (type.equals("url_verification")) {
+            returnJSON.put("challenge", challenge);
+        } else {
+            System.err.println("Invalid input");
+        }
+
+        return returnJSON;
     }
 
-    return returnJSON;
-  }
-
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
 
 ```

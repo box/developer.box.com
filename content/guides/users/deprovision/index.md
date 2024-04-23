@@ -53,11 +53,11 @@ let serviceAccountClient = session.getAppAuthClient('enterprise');
 
 const transferUserID = '3278487052';
 (async () => {
-  let serviceAccount = await serviceAccountClient.users.get('me');
-  let transferredFolder = await serviceAccountClient.enterprise.transferUserContent(transferUserID,serviceAccount.id);
-  console.log(transferredFolder);
-  await serviceAccountClient.users.delete(transferUserID, null);
-  console.log('Completed');
+    let serviceAccount = await serviceAccountClient.users.get('me');
+    let transferredFolder = await serviceAccountClient.enterprise.transferUserContent(transferUserID,serviceAccount.id);
+    console.log(transferredFolder);
+    await serviceAccountClient.users.delete(transferUserID, null);
+    console.log('Completed');
 })();
 ```
 
@@ -67,20 +67,20 @@ const transferUserID = '3278487052';
 ```java
 Path configPath = Paths.get("config.json");
 try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName("UTF-8"))){
-  String transferUserId = "3277722534";
+    String transferUserId = "3277722534";
 
-  BoxConfig boxConfig = BoxConfig.readFrom(reader);
-  BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
-    .getAppEnterpriseConnection(boxConfig);
+    BoxConfig boxConfig = BoxConfig.readFrom(reader);
+    BoxDeveloperEditionAPIConnection serviceAccountClient = BoxDeveloperEditionAPIConnection
+      .getAppEnterpriseConnection(boxConfig);
 
-  BoxUser destinationUser = new BoxUser(serviceAccountClient,
-    BoxUser.getCurrentUser(serviceAccountClient).getID());
-  try {
-    destinationUser.moveFolderToUser(transferUserId);
-  } catch (BoxAPIException e) {}
+    BoxUser destinationUser = new BoxUser(serviceAccountClient,
+        BoxUser.getCurrentUser(serviceAccountClient).getID());
+    try {
+        destinationUser.moveFolderToUser(transferUserId);
+    } catch (BoxAPIException e) {}
 
-  BoxUser removeUser = new BoxUser(serviceAccountClient, transferUserId);
-  removeUser.delete(false, false);
+    BoxUser removeUser = new BoxUser(serviceAccountClient, transferUserId);
+    removeUser.delete(false, false);
 }
 ```
 
@@ -89,17 +89,17 @@ try (BufferedReader reader = Files.newBufferedReader(configPath,Charset.forName(
 
 ```csharp
 using(FileStream fs = new FileStream("./config.json", FileMode.Open)) {
-  var config = BoxConfig.CreateFromJsonFile(fs);
-  var session = new BoxJWTAuth(config);
-  var serviceAccountClient = session.AdminClient(session.AdminToken());
+    var config = BoxConfig.CreateFromJsonFile(fs);
+    var session = new BoxJWTAuth(config);
+    var serviceAccountClient = session.AdminClient(session.AdminToken());
 
-  var transferUserId = "3276247601";
+    var transferUserId = "3276247601";
 
-  var serviceAccount = await serviceAccountClient.UsersManager.GetCurrentUserInformationAsync();
-  var moveAction = await serviceAccountClient.UsersManager.MoveUserFolderAsync(transferUserId,serviceAccount.Id);
+    var serviceAccount = await serviceAccountClient.UsersManager.GetCurrentUserInformationAsync();
+    var moveAction = await serviceAccountClient.UsersManager.MoveUserFolderAsync(transferUserId,serviceAccount.Id);
 
-  System.Console.WriteLine(moveAction.Name);
-  await serviceAccountClient.UsersManager.DeleteEnterpriseUserAsync(transferUserId,false,false);
+    System.Console.WriteLine(moveAction.Name);
+    await serviceAccountClient.UsersManager.DeleteEnterpriseUserAsync(transferUserId,false,false);
 }
 ```
 

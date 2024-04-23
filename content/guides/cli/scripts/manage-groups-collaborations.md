@@ -40,6 +40,7 @@ The script consists of two parts described in detail in the sections below. You 
 ### Create or update collaborations
 
 1. The script uses the `.csv` file you specify for the `CollaborationsCreationPath` parameter. The file lists group names, folder IDs, and collaboration roles.
+
 2. For each row, the script checks if a group exists and if it's not already added as a collaborator to the corresponding folder. For example:
 
   |`GroupName`| `FolderId`| `CollaborationRole`|
@@ -96,49 +97,49 @@ be the main Box admin or co-admin.
 
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
-  ```bash
-    git clone https://github.com/box/boxcli.git boxcli
-    cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
-  ```
+    ```bash
+        git clone https://github.com/box/boxcli.git boxcli
+        cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
+    ```
 
 2. Set the path to the `.csv` file with the list of groups and user emails.
 
-  ```bash
-  $UserGroupAdditionPath = "./User_Group_Addition.csv"
-  ```
+    ```bash
+    $UserGroupAdditionPath = "./User_Group_Addition.csv"
+    ```
 
-  * `UserEmail` is the primary email address for the user in Box.
-  * `GroupName` is the name of the group.
+    * `UserEmail` is the primary email address for the user in Box.
+    * `GroupName` is the name of the group.
 
 3. Set your own path to the `.csv` file with the list groups and user emails.
 
-  ```bash
-  $CollaborationsCreationPath = "./Collaborations_Creation.csv"
-  ```
+    ```bash
+    $CollaborationsCreationPath = "./Collaborations_Creation.csv"
+    ```
 
-  * `GroupName` is name of the group the script will add as a collaborator to the folder.
-  * `FolderId` is the folder ID the collaborator will be added to.
-  * `CollaborationRole` is the name of the role used when creating a collaboration.
+    * `GroupName` is name of the group the script will add as a collaborator to the folder.
+    * `FolderId` is the folder ID the collaborator will be added to.
+    * `CollaborationRole` is the name of the role used when creating a collaboration.
 
-  You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
+    You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
 
-  ```bash
-  $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
-  ```
+    ```bash
+    $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
+    ```
 
 ## Run the script
 
 1. Run the Powershell command.
 
-  ```bash
-  pwsh
-  ```
+    ```bash
+    pwsh
+    ```
 
 2. Run the script.
 
-  ```bash
-  ./Mass_Groups_Collabs_Update.ps1
-  ```
+    ```bash
+    ./Mass_Groups_Collabs_Update.ps1
+    ```
 
 ### Optional flags
 
@@ -146,21 +147,21 @@ You can use flags to run run or skip specific parts of the script.
 
 * If a group already is set as a collaborator for a specific folder but with a role other than defined in the .`csv` file, the script will inform you about it. It will not make any changes to an existing collaboration. If you want to update an existing collaboration with role defined in `.csv` file, set an additional `-UpdateExistingCollabs` flag when running the script.
 
-  ```bash
-  Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
-  ```
+    ```bash
+    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
+    ```
 
 * To update groups without creating collaborations, add the `-SkipCollabsCreation` boolean flag when running the script:
 
-  ```bash
-  Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
-  ```
+    ```bash
+    Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
+    ```
 
 * To create collaborations without any group updates, add the `-SkipGroupsUpdate` boolean flag when running the script:
 
-  ```bash
-  Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
-  ```
+    ```bash
+    Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
+    ```
 
 ## Logging
 

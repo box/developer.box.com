@@ -35,8 +35,8 @@ service account has the necessary role to perform the mapping.
 
 ```json
 "context_info": {
-    "service_account_id": "12345678",
-    "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
+  "service_account_id": "12345678",
+  "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
 }
 ```
 

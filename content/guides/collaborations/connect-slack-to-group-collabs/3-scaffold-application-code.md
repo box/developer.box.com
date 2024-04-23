@@ -25,7 +25,7 @@ run the application.
 * Either create a new local directory for your application or load the existing code created for the Slack event URL challenge from [step 1][step1].
 * Create a new `package.json` file, or update the existing one, inside the local directory, open it in your preferred editor, copy / paste the following into it, and save / exit the file.
 
-```javascript
+```json
 {
   "name": "box-slack",
   "version": "1.0.0",
@@ -62,7 +62,7 @@ run the application.
     * `botToken`: Within your Slack application, go to the **OAuth & Permissions** page. The **Bot User OAuth Access Token** string is available at the top and was auto-populated once the bot was added to your Slack workspace.
 * Open up the blank `process.js` file, copy and paste the following code, and save the file.
 
-```javascript
+```js
 const box = require("box-node-sdk");
 
 const slackConfig = require("./slackConfig.json");
@@ -79,45 +79,45 @@ app.use(express.json());
 // INSTANTIATE BOX CLIENT
 
 app.post('/event', (req, res) => {
-  //HANDLE INCOMING EVENTS
+    //HANDLE INCOMING EVENTS
 });
 
 const handler = (() => {
-  function process(res, data) {
-    // PROCESS EVENTS
-  }
+    function process(res, data) {
+        // PROCESS EVENTS
+    }
 
-  function processUser(user, event, channel) {
-    // PROCESS USER ADD / REMOVE REQUEST
-  }
+    function processUser(user, event, channel) {
+        // PROCESS USER ADD / REMOVE REQUEST
+    }
 
-  function addGroupUser(groupId, email) {
-    // ADD USER TO BOX GROUP
-  }
+    function addGroupUser(groupId, email) {
+        // ADD USER TO BOX GROUP
+    }
 
-  function removeGroupUser(groupId, email) {
-    // REMOVE USER FROM BOX GROUP
-  }
+    function removeGroupUser(groupId, email) {
+        // REMOVE USER FROM BOX GROUP
+    }
 
-  function processContent(user, channel, type, fid) {
-    // COLLABORATE CONTENT WITH GROUP
-  }
+    function processContent(user, channel, type, fid) {
+        // COLLABORATE CONTENT WITH GROUP
+    }
 
-  function processSlackChannel(channel, gid) {
-    // ADD ALL SLACK CHANNEL USERS TO GROUP
-  }
+    function processSlackChannel(channel, gid) {
+        // ADD ALL SLACK CHANNEL USERS TO GROUP
+    }
 
-  function getSlackUser(userId, _callback) {
-    // GET SLACK USER PROFILE
-  }
+    function getSlackUser(userId, _callback) {
+        // GET SLACK USER PROFILE
+    }
 
-  function getGroupId(groupName, _callback) {
-    // GET AND CREATE BOX GROUP
-  }
+    function getGroupId(groupName, _callback) {
+        // GET AND CREATE BOX GROUP
+    }
 
-  return {
-    process
-  };
+    return {
+        process
+    };
 })();
 
 const port = process.env.PORT || 3000;
@@ -153,9 +153,9 @@ URLs.
 package com.box.slack.box;
 
 public class slackConfig {
-  public static String verificationToken = "TOKEN";
-  public static String botToken = "TOKEN";
-  public static String slackApiUrl = "https://slack.com/api";
+    public static String verificationToken = "TOKEN";
+    public static String botToken = "TOKEN";
+    public static String slackApiUrl = "https://slack.com/api";
 }
 ```
 
@@ -207,81 +207,81 @@ import com.box.sdk.BoxUser;
 @RestController
 @EnableAutoConfiguration
 public class Application extends slackConfig {
-  private Reader fileReader;
-  private BoxConfig boxConfig;
-  private BoxAPIConnection boxAPI;
+    private Reader fileReader;
+    private BoxConfig boxConfig;
+    private BoxAPIConnection boxAPI;
 
-  @PostMapping("/event")
-  @ResponseBody
-  public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
-    // HANDLE EVENTS
-  }
-
-  @Async
-  public void processEvent(String data) throws Exception {
-    // VERIFY EVENTS
-  }
-
-  public void process(JSONObject inputJSON) throws Exception {
-    // PROCESS EVENTS
-  }
-
-  public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
-    // PROCESS USER ADD / REMOVE REQUEST
-  }
-
-  public void addGroupUser(String groupId, String userEmail) {
-    // ADD USER TO BOX GROUP
-  }
-
-  public void removeGroupUser(String groupId, String userEmail) {
-    // REMOVE USER FROM BOX GROUP
-  }
-
-  public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
-    // COLLABORATE CONTENT WITH GROUP
-  }
-
-  public void processSlackChannel(String channel, String groupId) throws Exception {
-    // ADD ALL SLACK CHANNEL USERS TO GROUP
-  }
-
-  public JSONObject getSlackUser(String userId) throws Exception {
-    // GET SLACK USER PROFILE
-  }
-
-  public String getGroupId(String groupName) {
-    // GET AND CREATE BOX GROUP
-  }
-
-  public JSONObject sendGETRequest(String reqURL) throws Exception {
-    StringBuffer response = new StringBuffer();
-
-    URL obj = new URL(reqURL);
-    HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
-    httpURLConnection.setRequestMethod("GET");
-
-    int responseCode = httpURLConnection.getResponseCode();
-    if (responseCode == HttpURLConnection.HTTP_OK) {
-      BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-      String inputLine;
-
-      while ((inputLine = in .readLine()) != null) {
-        response.append(inputLine);
-      } in .close();
-    } else {
-      System.err.println("GET request failed");
+    @PostMapping("/event")
+    @ResponseBody
+    public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
+        // HANDLE EVENTS
     }
 
-    Object dataObj = new JSONParser().parse(response.toString());
-    JSONObject outputJSON = (JSONObject) dataObj;
+    @Async
+    public void processEvent(String data) throws Exception {
+        // VERIFY EVENTS
+    }
 
-    return outputJSON;
-  }
+    public void process(JSONObject inputJSON) throws Exception {
+        // PROCESS EVENTS
+    }
 
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
-  }
+    public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
+        // PROCESS USER ADD / REMOVE REQUEST
+    }
+
+    public void addGroupUser(String groupId, String userEmail) {
+        // ADD USER TO BOX GROUP
+    }
+
+    public void removeGroupUser(String groupId, String userEmail) {
+        // REMOVE USER FROM BOX GROUP
+    }
+
+    public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
+        // COLLABORATE CONTENT WITH GROUP
+    }
+
+    public void processSlackChannel(String channel, String groupId) throws Exception {
+        // ADD ALL SLACK CHANNEL USERS TO GROUP
+    }
+
+    public JSONObject getSlackUser(String userId) throws Exception {
+        // GET SLACK USER PROFILE
+    }
+
+    public String getGroupId(String groupName) {
+        // GET AND CREATE BOX GROUP
+    }
+
+    public JSONObject sendGETRequest(String reqURL) throws Exception {
+        StringBuffer response = new StringBuffer();
+
+        URL obj = new URL(reqURL);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
+        httpURLConnection.setRequestMethod("GET");
+
+        int responseCode = httpURLConnection.getResponseCode();
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            String inputLine;
+
+            while ((inputLine = in .readLine()) != null) {
+                response.append(inputLine);
+            } in .close();
+        } else {
+            System.err.println("GET request failed");
+        }
+
+        Object dataObj = new JSONParser().parse(response.toString());
+        JSONObject outputJSON = (JSONObject) dataObj;
+
+        return outputJSON;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
 ```
 <!-- markdownlint-enable line-length -->

@@ -42,10 +42,10 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var filter = new
 {
-  category = "online"
+    category = "online"
 };
 
 var filters = new List<BoxMetadataFilterRequest>()
@@ -64,7 +64,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 from boxsdk.object.search import MetadataSearchFilter, MetadataSearchFilters
 
 metadata_search_filter = MetadataSearchFilter(scope='enterprise', template_key='contract')
@@ -80,21 +80,21 @@ client.search().query("sales", metadata_filters=metadata_search_filters)
 
 ```js
 client.search.query(
-  'sales',
-  {
-    mdfilters: [
-      {
-        scope: 'enterprise',
-        templateKey: 'contract',
-        filters: {
-          category: 'online;
-        }
-      }
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        mdfilters: [
+            {
+                scope: 'enterprise',
+                templateKey: 'contract',
+                filters: {
+                    category: 'online'
+                }
+            }
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -186,9 +186,9 @@ key `category` is set to the value `online`.
 
 ### Filter by `float` field
 
-To filter by a field of type `float`, you will need to define define a range by 
-specifying a `gt` (greater-than) and/or `lt` (lower-than) value. To find an 
-exact value, you can input the same value for both `gt` and `lt`. 
+To filter by a field of type `float`, you will need to define define a range by
+specifying a `gt` (greater-than) and/or `lt` (lower-than) value. To find an
+exact value, you can input the same value for both `gt` and `lt`.
 
 ```json
 [
@@ -217,7 +217,7 @@ If you create a query based on numbers, do not
 exceed the range of -16777215 and +16777215.
 For metadata search using number attributes
 the index value is stored as FLOAT32. As a result,
-integers between -16777215 and +16777215 can be precisely represented. 
+integers between -16777215 and +16777215 can be precisely represented.
 Any operation with numbers beyond the range can lose its precision.
 
 </Message>

@@ -138,12 +138,12 @@ MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterp
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 from boxsdk.object.metadata_template import MetadataField, MetadataFieldType
 
 fields = [
-  MetadataField(MetadataFieldType.STRING, 'Name')
-  MetadataField(MetadataFieldType.ENUM, 'Industry', options=['Technology', 'Healthcare', 'Legal'])
+    MetadataField(MetadataFieldType.STRING, 'Name')
+    MetadataField(MetadataFieldType.ENUM, 'Industry', options=['Technology', 'Healthcare', 'Legal'])
 ]
 template = client.create_metadata_template('Customer Info', fields)
 ```
@@ -153,29 +153,29 @@ template = client.create_metadata_template('Customer Info', fields)
 
 ```js
 client.metadata.createTemplate(
-  'Customer Info',
-  [
-    {
-      type: 'string',
-      displayName: 'Name'
-    },
-    {
-      type: 'enum',
-      displayName: 'Industry',
-      options: [
-        {key: 'Technology'},
-        {key: 'Healthcare'},
-        {key: 'Legal'}
-      ]
-    },
-    {
-      type: 'float',
-      displayName: 'Total account value',
-      key: 'tav'
-    }
-  ]
+    'Customer Info',
+    [
+        {
+            type: 'string',
+            displayName: 'Name'
+        },
+        {
+            type: 'enum',
+            displayName: 'Industry',
+            options: [
+                {key: 'Technology'},
+                {key: 'Healthcare'},
+                {key: 'Legal'}
+            ]
+        },
+        {
+            type: 'float',
+            displayName: 'Total account value',
+            key: 'tav'
+        }
+    ]
 ).then(template => {
-  // ...
+    // ...
 });
 ```
 

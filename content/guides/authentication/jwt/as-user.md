@@ -55,7 +55,7 @@ All of the [official Box SDKs][sdk] support acting on behalf of a user using the
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 

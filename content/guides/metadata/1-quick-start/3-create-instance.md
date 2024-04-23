@@ -54,23 +54,23 @@ Dictionary<string, object> metadata = await client.MetadataManager
 BoxFile file = new BoxFile(api, "12345");
 
 file.createMetadata(
-  "customerInfo",
-  "enterprise",
-  new Metadata()
-    .add("name", "Box, Inc")
-    .add("industry", "Technology")
-    .add("tav", 100000)
+    "customerInfo",
+    "enterprise",
+    new Metadata()
+        .add("name", "Box, Inc")
+        .add("industry", "Technology")
+        .add("tav", 100000)
 );
 ```
 
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 metadata = {
-  'name': 'Box, Inc',
-  'industry': 'Technology',
-  'tav': 1000000
+    'name': 'Box, Inc',
+    'industry': 'Technology',
+    'tav': 1000000
 }
 
 client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo').set(metadata)
@@ -81,16 +81,16 @@ client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo
 
 ```js
 client.files.addMetadata(
-  '12345', 
-  client.metadata.scopes.ENTERPRISE, 
-  "customerInfo", 
-  {
-    name: "Box, Inc",
-    industry: "Technology",
-    tav: 1000000
-  }
+    '12345',
+    client.metadata.scopes.ENTERPRISE,
+    "customerInfo",
+    {
+        name: "Box, Inc",
+        industry: "Technology",
+        tav: 1000000
+    }
 ).then(metadata => {
-  // ...
+    // ...
 });
 ```
 

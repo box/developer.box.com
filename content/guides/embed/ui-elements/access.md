@@ -122,42 +122,42 @@ curl https://api.box.com/oauth2/token \
 
 ```json
 {
-    "access_token": "CHILD_TOKEN",
-    "expires_in": 4247,
-    "token_type": "bearer",
-    "restricted_to": [
-        {
-            "scope": "base_explorer",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        },
-        {
-            "scope": "item_download",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        },
-        {
-            "scope": "item_preview",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        }
-    ],
-    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
+  "access_token": "CHILD_TOKEN",
+  "expires_in": 4247,
+  "token_type": "bearer",
+  "restricted_to": [
+    {
+      "scope": "base_explorer",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_download",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_preview",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    }
+  ],
+  "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
 ```
 

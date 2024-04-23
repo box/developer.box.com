@@ -31,29 +31,29 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-  ```bash
-    pwsh
-  ```
+```bash
+pwsh
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-  ```bash
-  PowerShell 7.2.5
-  Copyright (c) Microsoft Corporation.
+```bash
+PowerShell 7.2.5
+Copyright (c) Microsoft Corporation.
 
-  https://aka.ms/powershell
-  Type 'help' to get help.
+https://aka.ms/powershell
+Type 'help' to get help.
 
-  PS /Users/user/repos/boxcli/examples>
-  ```
+PS /Users/user/repos/boxcli/examples>
+```
 
-  <message>
-    If you encounter issues make sure you installed both
-    [dotnet core](https://dotnet.microsoft.com/download) and
-    [PowerShell][pwsh].
-  </message>
+<message>
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
+[PowerShell][pwsh].
+</message>
 
 ### Box CLI
 
@@ -66,31 +66,31 @@ be the main Box admin or co-admin.
 
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
-  ```bash
-    git clone https://github.com/box/boxcli.git boxcli
-    cd boxcli/examples/User\ Deprovisioning/
-  ```
+    ```bash
+        git clone https://github.com/box/boxcli.git boxcli
+        cd boxcli/examples/User\ Deprovisioning/
+    ```
 
 2. Create the list of employees for deletion in `.csv`.
 
-  The header row should look like as follows:
+    The header row should look like as follows:
 
-  ```bash
-  name, email
-  ```
+    ```bash
+    name, email
+    ```
 
-  where:
+    where:
 
-  * `name` is the name of the user in Box.
-  * `email` is the primary email address of the user in Box.
+    * `name` is the name of the user in Box.
+    * `email` is the primary email address of the user in Box.
 
-  For example:
+    For example:
 
-  |`name`| `email`|
-  |------|--------|
-  |Managed User 1| ManagedUser1@test.com|
-  |Managed User 2| ManagedUser2@test.com|
-  |Managed User 3| ManagedUser3@test.com|
+    |`name`| `email`|
+    |------|--------|
+    |Managed User 1| ManagedUser1@test.com|
+    |Managed User 2| ManagedUser2@test.com|
+    |Managed User 3| ManagedUser3@test.com|
 
 ### List of parameters
 
@@ -108,36 +108,36 @@ You can the following options to pass parameters.
 
 * Use hardcoded value in script.
 
-  To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
+    To use this option, update all required parameters listed in the [script parameters section][parameters] before running.
 
 * Run script with parameters.
 
-  You can specify parameters while providing the command. For example:
+    You can specify parameters while providing the command. For example:
 
-  ```bash
-  PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
-  -NewFilesOwnerID  123456789
-  -EmployeeArchiveFolderName "Employee Archive"
-  ```
+    ```bash
+    PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+    -NewFilesOwnerID  123456789
+    -EmployeeArchiveFolderName "Employee Archive"
+    ```
 
-  or
+    or
 
-  ```bash
-  PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
-  -SkipTransferContent
-  ```
+    ```bash
+    PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+    -SkipTransferContent
+    ```
 
-  If you don't specify parameters, the script will prompt you to enter it.
+    If you don't specify parameters, the script will prompt you to enter it.
 
-  ```bash
-  PS > ./Users_Deprovision.ps1
-  Please enter the path to the employee list CSV file:
-  ./Employees_to_delete.csv
-  Please specify the user ID of the user who will own the files of the users being deprovisioned.
-  Press Enter if you want to use the current user as the new owner.
-  User ID: 1234567689
-  Starting User Deprovisioning script...
-  ```
+    ```bash
+    PS > ./Users_Deprovision.ps1
+    Please enter the path to the employee list CSV file:
+    ./Employees_to_delete.csv
+    Please specify the user ID of the user who will own the files of the users being deprovisioned.
+    Press Enter if you want to use the current user as the new owner.
+    User ID: 1234567689
+    Starting User Deprovisioning script...
+    ```
 
 ## Run the script
 
@@ -145,22 +145,22 @@ Now all you need to do is run the script.
 
 1. Run the Powershell command.
 
-  ```bash
-  pwsh
-  ```
+    ```bash
+    pwsh
+    ```
 
 2. Run the script:
 
-  ```bash
-  ./Users_Deprovision.ps1
-  ```
+    ```bash
+    ./Users_Deprovision.ps1
+    ```
 
-  When all parameters are defined, you will see following output to confirm the script started:
+    When all parameters are defined, you will see following output to confirm the script started:
 
-  ```bash
-  PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
-  Starting User Deprovisioning script...
-  ```
+    ```bash
+    PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
+    Starting User Deprovisioning script...
+    ```
 
 ## Logging
 

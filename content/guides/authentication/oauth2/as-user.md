@@ -46,7 +46,7 @@ Types](page://platform/user-types) for more details.
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 

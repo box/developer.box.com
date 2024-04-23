@@ -47,7 +47,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var contentTypes = new List<string>();
 contentTypes.Add("name");
 contentTypes.Add("tags");
@@ -59,7 +59,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", content_types=["name", "tags"])
 ```
 
@@ -68,16 +68,16 @@ client.search().query("sales", content_types=["name", "tags"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    content_types:  [
-      "name",
-      "tags"
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        content_types:  [
+            "name",
+            "tags"
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -138,7 +138,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var createdAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var createdAtRangeToDate = new DateTime(2018, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var updatedAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
@@ -150,7 +150,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-05-15T13:35:01Z"], updated_at_range=["2014-05-15T13:35:01Z", null])
 ```
 
@@ -159,14 +159,14 @@ client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-0
 
 ```js
 client.search.query(
-  'sales',
-  {
-    created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
-    updated_at_range: "2014-05-15T13:35:01Z,"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
+        updated_at_range: "2014-05-15T13:35:01Z,"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -216,7 +216,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var fileExtensions = new List<string>();
 fileExtensions.Add("pdf");
 fileExtensions.Add("txt");
@@ -228,7 +228,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", file_extensions=["pdf", "txt"])
 ```
 
@@ -237,16 +237,16 @@ client.search().query("sales", file_extensions=["pdf", "txt"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    file_extensions:  [
-      "pdf",
-      "txt"
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        file_extensions:  [
+            "pdf",
+            "txt"
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -289,7 +289,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", sizeRangeLowerBoundBytes: 10000, sizeRangeUpperBoundBytes: 20000);
 ```
@@ -297,7 +297,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", size_range=[10000,20000])
 ```
 
@@ -306,13 +306,13 @@ client.search().query("sales", size_range=[10000,20000])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    size_range: '10000,20000'
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        size_range: '10000,20000'
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -353,7 +353,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", type: "file");
 ```
@@ -361,7 +361,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", type="file")
 ```
 
@@ -370,13 +370,13 @@ client.search().query("sales", type="file")
 
 ```js
 client.search.query(
-  'sales',
-  {
-    type: "file"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        type: "file"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -431,7 +431,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var userIds = new List<string>();
 userIds.Add("34446362");
 userIds.Add("462281242");
@@ -443,7 +443,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 ```
 
@@ -452,13 +452,13 @@ client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    owner_user_ids: "34446362,462281242"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        owner_user_ids: "34446362,462281242"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
@@ -503,7 +503,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var folderIds = new List<string>();
 folderIds.Add("45235463");
 folderIds.Add("73445321");
@@ -515,7 +515,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 ```
 
@@ -524,13 +524,13 @@ client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    ancestor_folder_ids: "45235463,73445321"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        ancestor_folder_ids: "45235463,73445321"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>

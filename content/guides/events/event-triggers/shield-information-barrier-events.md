@@ -38,41 +38,41 @@ A `SHIELD_INFORMATION_BARRIER_ENABLED` event is triggered when
 the information barrier is enabled for a file or folder.
 For example:
 
-```js
+```json
 {
   "chunk_size": 1,
   "next_stream_position": "1152923169537420243",
   "entries": [
-      {
-          "source": {
-              "barrier_id": 123456,
-              "barrier_status": "ENABLED",
-              "barrier_segments": [
-                  {
-                      "name": "8",
-                      "member_count": 1
-                  },
-                  {
-                      "name": "9",
-                      "member_count": 1
-                  }
-              ]
+    {
+      "source": {
+        "barrier_id": 123456,
+        "barrier_status": "ENABLED",
+        "barrier_segments": [
+          {
+            "name": "8",
+            "member_count": 1
           },
-          "created_by": {
-              "type": "user",
-              "id": "12345667",
-              "name": "Unknown User",
-              "login": "user@email.com"
-          },
-          "action_by": null,
-          "created_at": "2022-10-04T17:42:53-07:00",
-          "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-          "event_type": "SHIELD_INFORMATION_BARRIER_ENABLED",
-          "ip_address": "Unknown IP",
-          "type": "event",
-          "session_id": null,
-          "additional_details": null
-      }
+          {
+            "name": "9",
+            "member_count": 1
+          }
+      ]
+      },
+      "created_by": {
+        "type": "user",
+        "id": "12345667",
+        "name": "Unknown User",
+        "login": "user@email.com"
+      },
+      "action_by": null,
+      "created_at": "2022-10-04T17:42:53-07:00",
+      "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+      "event_type": "SHIELD_INFORMATION_BARRIER_ENABLED",
+      "ip_address": "Unknown IP",
+      "type": "event",
+      "session_id": null,
+      "additional_details": null
+    }
   ]
 }
 
@@ -87,41 +87,41 @@ was triggered, but the information barrier is not yet
 in place.
 For example:
 
-```js
+```json
 {
   "chunk_size": 1,
   "next_stream_position": "1152923169531664551",
   "entries": [
-      {
-          "source": {
-              "barrier_id": 123456,
-              "barrier_status": "PENDING",
-              "barrier_segments": [
-                  {
-                      "name": "8",
-                      "member_count": 1
-                  },
-                  {
-                      "name": "9",
-                      "member_count": 1
-                  }
-              ]
+    {
+      "source": {
+        "barrier_id": 123456,
+        "barrier_status": "PENDING",
+        "barrier_segments": [
+          {
+            "name": "8",
+            "member_count": 1
           },
-          "created_by": {
-              "type": "user",
-              "id": "12345667",
-              "name": "Unknown User",
-              "login": "user@email.com"
-          },
-          "action_by": null,
-          "created_at": "2022-10-04T16:06:57-07:00",
-          "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-          "event_type": "SHIELD_INFORMATION_BARRIER_PENDING",
-          "ip_address": "Unknown IP",
-          "type": "event",
-          "session_id": null,
-          "additional_details": null
-      }
+          {
+            "name": "9",
+            "member_count": 1
+          }
+        ]
+      },
+      "created_by": {
+        "type": "user",
+        "id": "12345667",
+        "name": "Unknown User",
+        "login": "user@email.com"
+      },
+      "action_by": null,
+      "created_at": "2022-10-04T16:06:57-07:00",
+      "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+      "event_type": "SHIELD_INFORMATION_BARRIER_PENDING",
+      "ip_address": "Unknown IP",
+      "type": "event",
+      "session_id": null,
+      "additional_details": null
+    }
   ]
 }
 ```
@@ -133,41 +133,41 @@ the information barrier is deactivated
 for a particular file or folder.
 For example:
 
-```js
+```json
 {
   "chunk_size": 1,
   "next_stream_position": "1152923169767928414",
   "entries": [
-      {
-          "source": {
-              "barrier_id": 1234567,
-              "barrier_status": "DISABLED",
-              "barrier_segments": [
-                  {
-                      "name": "8",
-                      "member_count": 1
-                  },
-                  {
-                      "name": "9",
-                      "member_count": 1
-                  }
-              ]
+    {
+      "source": {
+        "barrier_id": 1234567,
+        "barrier_status": "DISABLED",
+        "barrier_segments": [
+          {
+            "name": "8",
+            "member_count": 1
           },
-          "created_by": {
-              "type": "user",
-              "id": "123435567",
-              "name": "Unknown User",
-              "login": "user@email.com"
-          },
-          "action_by": null,
-          "created_at": "2022-10-07T09:44:41-07:00",
-          "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-          "event_type": "SHIELD_INFORMATION_BARRIER_DISABLED",
-          "ip_address": "Unknown IP",
-          "type": "event",
-          "session_id": null,
-          "additional_details": null
-      }
+          {
+            "name": "9",
+            "member_count": 1
+          }
+        ]
+      },
+      "created_by": {
+        "type": "user",
+        "id": "123435567",
+        "name": "Unknown User",
+        "login": "user@email.com"
+      },
+      "action_by": null,
+      "created_at": "2022-10-07T09:44:41-07:00",
+      "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+      "event_type": "SHIELD_INFORMATION_BARRIER_DISABLED",
+      "ip_address": "Unknown IP",
+      "type": "event",
+      "session_id": null,
+      "additional_details": null
+    }
   ]
 }
 ```
@@ -197,31 +197,31 @@ adding a user to a specific group.
 The `additional_details` payload provides details of the
 restricted groups.
 
-```js
+```json
 {
-    "source": {
-        "type": "user",
-        "id": "123456677",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "created_by": {
-        "type": "user",
-        "id": "12345666",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-07T09:26:50-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED",
-    "ip_address": "10.1.2.3",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "group_id": "12345678",
-        "group_name": "Support"
-    }
+  "source": {
+    "type": "user",
+    "id": "123456677",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "created_by": {
+    "type": "user",
+    "id": "12345666",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-07T09:26:50-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED",
+  "ip_address": "10.1.2.3",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "group_id": "12345678",
+    "group_name": "Support"
+  }
 }
 
 ```
@@ -236,43 +236,43 @@ to a file or folder.
 The `additional_details` payload provides details of the restricted
 collaboration.
 
-```js
+```json
 {
-    "source": {
-        "folder_id": "12334556",
-        "folder_name": "Contracts",
-        "user_id": "1234567",
-        "user_name": "Unknown User",
-        "parent": {
-            "type": "folder",
-            "name": "All Files",
-            "id": "0"
-        },
-        "owned_by": {
-            "type": "user",
-            "id": "12345678",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        }
+  "source": {
+    "folder_id": "12334556",
+    "folder_name": "Contracts",
+    "user_id": "1234567",
+    "user_name": "Unknown User",
+    "parent": {
+      "type": "folder",
+      "name": "All Files",
+      "id": "0"
     },
-    "created_by": {
-        "type": "user",
-        "id": "16335351460",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-05T14:15:14-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED",
-    "ip_address": "Unknown IP",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "type": "box://event/additional_details/collaboration",
-        "collab_id": "0",
-        "is_performed_by_admin": false
+    "owned_by": {
+      "type": "user",
+      "id": "12345678",
+      "name": "Unknown User",
+      "login": "user@email.com"
     }
+  },
+  "created_by": {
+    "type": "user",
+    "id": "16335351460",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-05T14:15:14-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED",
+  "ip_address": "Unknown IP",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "type": "box://event/additional_details/collaboration",
+    "collab_id": "0",
+    "is_performed_by_admin": false
+  }
 }
 
 ```
@@ -283,49 +283,49 @@ A `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED` event is triggered whe
 
 The `additional_details` payload provides details of the shared link and additional security information.
 
-```js
+```json
 {
-    "source": {
-        "item_type": "folder",
-        "item_id": "123456789",
-        "item_name": "Contracts",
-        "parent": {
-            "type": "folder",
-            "name": "All Files",
-            "id": "0"
-        },
-        "owned_by": {
-            "type": "user",
-            "id": "123456789",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        }
+  "source": {
+    "item_type": "folder",
+    "item_id": "123456789",
+    "item_name": "Contracts",
+    "parent": {
+      "type": "folder",
+      "name": "All Files",
+      "id": "0"
     },
-    "created_by": {
-        "type": "user",
-        "id": "123456789",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-06T13:27:58-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED",
-    "ip_address": "Unknown IP",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "shared_link_id": "abcdefghijklm",
-        "security_information": {
-            "accessFromSharedObject": {
-                "sharedId": 123456789,
-                "sharedName": "abcdefghijklmnop",
-                "passwordSet": false,
-                "accessLevel": "open",
-                "createdAt": "2022-10-06T13:27:21-07:00"
-            }
-        }
+    "owned_by": {
+      "type": "user",
+      "id": "123456789",
+      "name": "Unknown User",
+      "login": "user@email.com"
     }
+  },
+  "created_by": {
+    "type": "user",
+    "id": "123456789",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-06T13:27:58-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED",
+  "ip_address": "Unknown IP",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "shared_link_id": "abcdefghijklm",
+    "security_information": {
+      "accessFromSharedObject": {
+        "sharedId": 123456789,
+        "sharedName": "abcdefghijklmnop",
+        "passwordSet": false,
+        "accessLevel": "open",
+        "createdAt": "2022-10-06T13:27:21-07:00"
+      }
+    }
+  }
 }
 
 ```
@@ -338,44 +338,44 @@ a folder the user has no access to.
 
 The `additional_details` payload provides details of the folder.
 
-```js
+```json
 {
-    "source": {
-        "item_type": "folder",
-        "item_id": "123456789",
-        "item_name": "Contracts",
-        "parent": {
-            "type": "folder",
-            "name": "All Files",
-            "id": "0"
-        },
-        "owned_by": {
-            "type": "user",
-            "id": "123456789",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        }
+  "source": {
+    "item_type": "folder",
+    "item_id": "123456789",
+    "item_name": "Contracts",
+    "parent": {
+      "type": "folder",
+      "name": "All Files",
+      "id": "0"
     },
-    "created_by": {
-        "type": "user",
-        "id": "123456789",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-06T13:26:58-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED",
-    "ip_address": "Unknown IP",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "destination_folder": {
-            "item_type": "folder",
-            "item_id": "123456789",
-            "item_name": "Contracts Signed"
-        }
+    "owned_by": {
+      "type": "user",
+      "id": "123456789",
+      "name": "Unknown User",
+      "login": "user@email.com"
     }
+  },
+  "created_by": {
+    "type": "user",
+    "id": "123456789",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-06T13:26:58-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED",
+  "ip_address": "Unknown IP",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "destination_folder": {
+      "item_type": "folder",
+      "item_id": "123456789",
+      "item_name": "Contracts Signed"
+    }
+  }
 }
 
 ```
@@ -389,44 +389,44 @@ a folder the user has no access to.
 The `additional_details` payload provides details of the destination
 folder.
 
-```js
+```json
 {
-    "source": {
-        "item_type": "folder",
-        "item_id": "123456789",
-        "item_name": "Contracts",
-        "parent": {
-            "type": "folder",
-            "name": "All Files",
-            "id": "0"
-        },
-        "owned_by": {
-            "type": "user",
-            "id": "123456789",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        }
+  "source": {
+    "item_type": "folder",
+    "item_id": "123456789",
+    "item_name": "Contracts",
+    "parent": {
+      "type": "folder",
+      "name": "All Files",
+      "id": "0"
     },
-    "created_by": {
-        "type": "user",
-        "id": "123456789",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-05T14:25:15-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED",
-    "ip_address": "Unknown IP",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "destination_folder": {
-            "item_type": "folder",
-            "item_id": "123456789",
-            "item_name": "Contracts Signed"
-        }
+    "owned_by": {
+      "type": "user",
+      "id": "123456789",
+      "name": "Unknown User",
+      "login": "user@email.com"
     }
+  },
+  "created_by": {
+    "type": "user",
+    "id": "123456789",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-05T14:25:15-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED",
+  "ip_address": "Unknown IP",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "destination_folder": {
+      "item_type": "folder",
+      "item_id": "123456789",
+      "item_name": "Contracts Signed"
+    }
+  }
 }
 ```
 
@@ -439,47 +439,47 @@ user that is subject to restrictions.
 The `additional_details` payload provides details of the user that cannot
 be set as the new owner.
 
-```js
+```json
 {
-    "source": {
-        "item_type": "folder",
-        "item_id": "",
-        "item_name": "All Files",
-        "parent": {
-            "type": "folder",
-            "name": "",
-            "id": ""
-        },
-        "owned_by": {
-            "type": "user",ts
-            "id": "123456789",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        }
+  "source": {
+    "item_type": "folder",
+    "item_id": "",
+    "item_name": "All Files",
+    "parent": {
+      "type": "folder",
+      "name": "",
+      "id": ""
     },
-    "created_by": {
-        "type": "user",
-        "id": "123456789",
-        "name": "Unknown User",
-        "login": "user@email.com"
-    },
-    "action_by": null,
-    "created_at": "2022-10-07T09:29:20-07:00",
-    "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
-    "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED",
-    "ip_address": "10.1.2.3",
-    "type": "event",
-    "session_id": null,
-    "additional_details": {
-        "restricted_user": {
-            "type": "user",
-            "id": "123456789",
-            "name": "Unknown User",
-            "login": "user@email.com"
-        },
-        "service_id": "123456789",
-        "service_name": "App"
+    "owned_by": {
+      "type": "user",
+      "id": "123456789",
+      "name": "Unknown User",
+      "login": "user@email.com"
     }
+  },
+  "created_by": {
+    "type": "user",
+    "id": "123456789",
+    "name": "Unknown User",
+    "login": "user@email.com"
+  },
+  "action_by": null,
+  "created_at": "2022-10-07T09:29:20-07:00",
+  "event_id": "f82c3ba03e41f7e8a7608363cc6c0390183c3f83",
+  "event_type": "SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED",
+  "ip_address": "10.1.2.3",
+  "type": "event",
+  "session_id": null,
+  "additional_details": {
+    "restricted_user": {
+      "type": "user",
+      "id": "123456789",
+      "name": "Unknown User",
+      "login": "user@email.com"
+    },
+    "service_id": "123456789",
+    "service_name": "App"
+  }
 }
 ```
 

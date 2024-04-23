@@ -221,25 +221,23 @@ Returns (simplified):
 <Tab title='cURL'>
 
 ```json
-
 {
-    "is_document_preparation_needed": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-            "embed_url_external_user_id": "1234",
-            "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
-            "iframeable_embed_url": "https://app.box.com/embed/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/"
-        }
-    ],
-    "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
+  "is_document_preparation_needed": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+      "embed_url_external_user_id": "1234",
+      "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
+      "iframeable_embed_url": "https://app.box.com/embed/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/"
+    }
+  ],
+  "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
 }
-
 ```
 
 </Tab>

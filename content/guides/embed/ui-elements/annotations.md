@@ -45,8 +45,8 @@ package](https://www.npmjs.com/package/box-annotations).
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
@@ -89,29 +89,29 @@ Elements](g://embed/ui-elements/scopes).
 
 ```js
 const annotator = new annotatorConf.CONSTRUCTOR({
-  annotator,
-  apiHost,
-  token,
-  container,
-  file: {
-    id,
-    file_version: {
-      id
+    annotator,
+    apiHost,
+    token,
+    container,
+    file: {
+        id,
+        file_version: {
+            id
+        },
+        permissions
     },
-    permissions
-  },
-  isMobile,
-  hasTouch,
-  locale,
-  modeButtons: {
-    // Annotation mode buttons, i.e. point, draw, etc
-    point: {
-      // Accessibilty message for the point annotation mode button
-      title: "Point annotation mode",
-      // CSS selector for the point annotation mode button
-      selector: ".bp-btn-annotate-point"
+    isMobile,
+    hasTouch,
+    locale,
+    modeButtons: {
+        // Annotation mode buttons, i.e. point, draw, etc
+        point: {
+          // Accessibilty message for the point annotation mode button
+          title: "Point annotation mode",
+          // CSS selector for the point annotation mode button
+          selector: ".bp-btn-annotate-point"
+        }
     }
-  }
 });
 ```
 
@@ -171,7 +171,7 @@ set up the Preview instances that are used with Box Annotations here.
 
 ```js
 preview.show(..., {
-  showAnnotations: Boolean
+    showAnnotations: Boolean
 });
 ```
 
@@ -202,20 +202,20 @@ annotations on Document viewer:
 
 ```js
 preview.show(fileId, token, {
-  showAnnotations: true,
-  viewers: {
-    Image: {
-      annotations: {
-        enabled: false
-      }
-    },
-    Document: {
-      annotations: {
-        enabled: true,
-        enabledTypes: ["point"]
-      }
+    showAnnotations: true,
+    viewers: {
+        Image: {
+            annotations: {
+                enabled: false
+            }
+        },
+        Document: {
+            annotations: {
+                enabled: true,
+                enabledTypes: ["point"]
+            }
+        }
     }
-  }
 });
 ```
 
@@ -255,14 +255,14 @@ called, otherwise events can be missed.
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
 const annotator = new annotatorConf.CONSTRUCTOR(options);
 var listener = value => {
-  // Do something with value
+    // Do something with value
 };
 
 // Attach listener before calling show otherwise events can be missed
@@ -443,56 +443,56 @@ at the Preview level in Box Content Preview, with event data containing:
 
 ```js
 preview.addListener("annotator", viewer => {
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to viewers
 preview.addListener("load", data => {
-  var viewer = data.viewer;
-  viewer.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var viewer = data.viewer;
+    viewer.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to annotators
 preview.addListener("load", data => {
-  var annotator = data.viewer.annotator;
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var annotator = data.viewer.annotator;
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.event === "annotationsfetched") {
-    // Do something when annotations are fetched on a preview
-  } else if (data.event === "annotationerror") {
-    // Do something different when an annotation error has occurred
-  } else {
-  }
+    if (data.event === "annotationsfetched") {
+        // Do something when annotations are fetched on a preview
+    } else if (data.event === "annotationerror") {
+        // Do something different when an annotation error has occurred
+    } else {
+    }
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.viewerName === "Image") {
-    if (data.event === "annotationsfetched") {
-      // Do something when annotations are fetched on an image preview
+    if (data.viewerName === "Image") {
+        if (data.event === "annotationsfetched") {
+            // Do something when annotations are fetched on an image preview
+        }
+    } else if (data.viewerName === "MultiImage") {
+        if (data.event === "annotationsfetched") {
+            // Do something different when annotations are fetched on a multi-page image
+        }
+    } else {
     }
-  } else if (data.viewerName === "MultiImage") {
-    if (data.event === "annotationsfetched") {
-      // Do something different when annotations are fetched on a multi-page image
-    }
-  } else {
-  }
 });
 
 preview.addListener("annotationsfetched", data => {
-  if (data.viewerName === "Image") {
-    // Do something when annotations are fetched on an image preview
-  } else if (data.viewerName === "MultiImage") {
-    // Do something different when annotations are fetched on a multi-page image
-  } else {
-  }
+    if (data.viewerName === "Image") {
+        // Do something when annotations are fetched on an image preview
+    } else if (data.viewerName === "MultiImage") {
+        // Do something different when annotations are fetched on a multi-page image
+    } else {
+    }
 });
 ```
 

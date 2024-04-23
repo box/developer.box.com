@@ -33,7 +33,7 @@ All Shield threat detection alert events are produced within the
 standard event object schema and the `event_type` value is set to
 `SHIELD_ALERT`.
 
-```js
+```json
 {
   "source":null,
   "created_by":{
@@ -71,7 +71,7 @@ within `additional_details.shield_alert.rule_category`.
 
 The `additional_details` payload will provide the following details:
 
-```js
+```json
 "additional_details":{
   "shield_alert":{
     "rule_category":"Suspicious Locations",
@@ -127,7 +127,7 @@ Sessions` value within `additional_details.shield_alert.rule_category`.
 The `additional_details` payload will provide the following details:
 
 <!-- markdownlint-disable line-length -->
-```js
+```json
 "additional_details":{
   "shield_alert":{
     "rule_category":"Suspicious Sessions",
@@ -209,7 +209,7 @@ who may be stealing sensitive content. It can be identified by the
 The `additional_details` payload will provide the following details:
 
 <!-- markdownlint-disable line-length -->
-```js
+```json
 "additional_details":{
   "shield_alert":{
     "rule_category":"Anomalous Download",
@@ -266,7 +266,7 @@ in content uploading to an account. It can be identified by the
 
 The `additional_details` payload will provide the following details:
 
-```js
+```json
 "additional_details":{
   "shield_alert":{
     "rule_category":"Malicious Content",

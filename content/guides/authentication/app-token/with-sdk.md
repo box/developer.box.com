@@ -42,7 +42,7 @@ then configure the SDK as follows.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
 var session = new OAuthSession("[APP_TOKEN]", "N/A", 3600, "bearer");
 var client = new BoxClient(config, session);
@@ -74,8 +74,8 @@ client = Client(auth)
 ```js
 var BoxSDK = require('box-node-sdk');
 var sdk = new BoxSDK({
-  clientID: '[CLIENT_ID]',
-  clientSecret: ''
+    clientID: '[CLIENT_ID]',
+    clientSecret: ''
 });
 
 var client = sdk.getBasicClient('[APP_TOKEN]');

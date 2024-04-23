@@ -225,7 +225,7 @@ Lastly, update the Flask configuration file
 Your `client_secrets.json` file should look similar to the following.
 
 <!-- markdownlint-disable line-length -->
-```js
+```json
 {
   "web": {
     "client_id": "0oa48567frkg5KW4x6",
@@ -255,20 +255,20 @@ Your `client_secrets.json` file should look similar to the following.
 Your `ConfigureServices` method should look similar to the following.
 
 <!-- markdownlint-disable line-length -->
-```dotnet
+```csharp
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
 {
-  options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
 })
 .AddCookie()
 .AddOktaMvc(new OktaMvcOptions
 {
-  OktaDomain = "https://YOURDOMAIN.okta.com",
-  ClientId = "0oa48567frkg5KW4x6",
-  ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
+    OktaDomain = "https://YOURDOMAIN.okta.com",
+    ClientId = "0oa48567frkg5KW4x6",
+    ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
 });
 ```
 <!-- markdownlint-enable line-length -->

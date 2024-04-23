@@ -43,7 +43,7 @@ If downloading is blocked, the `additional-details` payload of the
 For the Box Web App, the `additional_details` payload will
 provide the following details:
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -72,7 +72,7 @@ provide the following details:
 For the Box Desktop App, the `additional_details` payload will
 provide the following details:
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -106,7 +106,7 @@ provide the following details:
 For Box Mobile apps, the `additional_details` payload will
 provide the following details:
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -142,18 +142,18 @@ provide the following details:
 If an external collaboration invitation is restricted, an event is produced
 within the [enterprise event][events] stream. These events follow
 the standard event object schema, with the `event_type` value set
-to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`, 
-`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`, 
+to: `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`,
+`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`,
 `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`, or
-`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`. 
+`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`.
 
 If an external collaboration invitation is blocked, the `additional-details`
-payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED` or 
+payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED` or
 `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` event will provide
-the following details: 
+the following details:
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -191,7 +191,7 @@ If an external collaboration invitation is justified, the `additional_details`
 payload of the `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED` event will provide the
 following details:
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -262,11 +262,11 @@ following details:
 ```
 
 If external collaboration access is blocked, the `additional_details`
-payload of the `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED` or 
+payload of the `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED` or
 `SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION` event will provide
 the following details:
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -307,7 +307,7 @@ to `SHIELD_JUSTIFICATION_APPROVAL`.
 
 The `additional_details` payload will provide the following details:
 
-```js
+```json
 "additional_details": {
   "shield_justification": {
     "justification_id": "18428718",
@@ -360,16 +360,16 @@ The `additional_details` payload will provide the following details:
 
 If a 3rd-party application, including published custom applications with which
 your organization is integrated, is restricted from downloading a file or a
-folder, an event is produced within the [enterprise event][events] stream. 
+folder, an event is produced within the [enterprise event][events] stream.
 These events follow the standard event object schema, with the `event_type`
 value set to `SHIELD_DOWNLOAD_BLOCKED`.
 
 For 3rd-party applications, the `additional_details` payload will provide the
 following details:
 
-```js
+```json
 "additional_details": {
-  "shield_download_enforcement": {    
+  "shield_download_enforcement": {
     "item": {
       "type": "file",
       "id": 875644956551,
@@ -395,7 +395,7 @@ following details:
 For custom applications, the `additional_details` payload will provide the
 following details:
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -435,7 +435,7 @@ set to `SHIELD_DOWNLOAD_BLOCKED`.
 
 The `additional_details` payload will provide the following details:
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {

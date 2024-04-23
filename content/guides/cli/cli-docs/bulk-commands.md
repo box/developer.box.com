@@ -47,17 +47,17 @@ go to your [Developer Console][console], and follow the guide
 
 1. Clone the `boxcli` GitHub repository or download the files from [`Bulk actions`][bulkactions] directory.
 
-  ```bash
-  git clone https://github.com/box/boxcli.git
-  ```
+    ```bash
+    git clone https://github.com/box/boxcli.git
+    ```
 
 2. Adjust the `.csv` template to your needs. For example, if you want to create several folders, you can use the [`folders-create.csv`][folderstemplate] template as your starting point.
 
 3. Run the command.
 
-  ```bash
-  box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
-  ```
+    ```bash
+    box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
+    ```
 
 <!-- markdownlint-enable line-length -->
 [console]: https://app.box.com/developers/console

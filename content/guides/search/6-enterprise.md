@@ -46,7 +46,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, scope="enterprise_content")
 ```
 
@@ -55,13 +55,13 @@ client.search().query("sales", metadata_filters=metadata_search_filters, scope="
 
 ```js
 client.search.query(
-  'sales',
-  {
-    scope: "enterprise_content"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        scope: "enterprise_content"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>

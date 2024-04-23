@@ -38,29 +38,29 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-  ```bash
-    pwsh
-  ```
+```bash
+pwsh
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-  ```bash
-  PowerShell 7.2.5
-  Copyright (c) Microsoft Corporation.
+```bash
+PowerShell 7.2.5
+Copyright (c) Microsoft Corporation.
 
-  https://aka.ms/powershell
-  Type 'help' to get help.
+https://aka.ms/powershell
+Type 'help' to get help.
 
-  PS /Users/user/repos/boxcli/examples>
-  ```
+PS /Users/user/repos/boxcli/examples>
+```
 
-  <message>
-    If you encounter issues make sure you installed both
-    [dotnet core](https://dotnet.microsoft.com/download) and
-    [PowerShell][pwsh].
-  </message>
+<message>
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
+[PowerShell][pwsh].
+</message>
 
 ### Box CLI
 
@@ -73,52 +73,52 @@ be the main Box admin or co-admin.
 
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
-  ```bash
-    git clone https://github.com/box/boxcli.git
-    cd boxcli/examples/Inactive\ Users\ Report/
-  ```
+    ```bash
+        git clone https://github.com/box/boxcli.git
+        cd boxcli/examples/Inactive\ Users\ Report/
+    ```
 
 2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
 
-  ```bash
-    $daysInactive = "10"
-  ```
+    ```bash
+        $daysInactive = "10"
+    ```
 
 3. (Optional) To change the report output file name, define the `ReportOutputFile` parameter.
 
-  ```bash
-    $ReportOutputFile = $ReportName + ".csv"
-  ```
+    ```bash
+        $ReportOutputFile = $ReportName + ".csv"
+    ```
 
 4. (Optional) To change event types, define the list for `eventType` parameter.
 
-  ```bash
-    $eventType = "LOGIN,UPLOAD,COPY,MOVE"
-  ```
+    ```bash
+        $eventType = "LOGIN,UPLOAD,COPY,MOVE"
+    ```
 
 ## Run the script
 
 Run the Powershell command.
 
-  ```bash
-  pwsh
-  ```
+```bash
+pwsh
+```
 
 Run the script.
 
-  ```bash
-    ./Inactive_Users_Report.ps1
-  ```
+```bash
+./Inactive_Users_Report.ps1
+```
 
 When the script run is completed, you will see the following
 output or a similar one.
 
-  ```bash
-    Transfered employee content Managed User 1
-    with User ID: 19927131476 to Employee Archive Folder
-    Deleted user 19927131476
-    Deleted employee Managed User 1
-  ```
+```bash
+Transfered employee content Managed User 1
+with User ID: 19927131476 to Employee Archive Folder
+Deleted user 19927131476
+Deleted employee Managed User 1
+```
 
 ## Logging
 

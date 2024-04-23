@@ -82,7 +82,7 @@ MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updat
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 template = client.metadata_template('enterprise', 'customerData')
 updates = template.start_update()
 updates.edit_field('name', key='company_name', display_name="Company Name")
@@ -94,22 +94,22 @@ template.update_info(updates)
 
 ```js
 var operations = [
-  {
-    op: 'editField',
-    fieldKey: 'name',
-    data: { 
-      key: 'company_name',
-      displayName: "Company Name" 
+    {
+        op: 'editField',
+        fieldKey: 'name',
+        data: {
+            key: 'company_name',
+            displayName: "Company Name"
+        }
     }
-  }
 ];
 
 client.metadata.updateTemplate(
-  'enterprise', 
-  'customerData', 
-  operations
+    'enterprise',
+    'customerData',
+    operations
 ).then(template => {
-  //.. 
+    //..
 });
 ```
 

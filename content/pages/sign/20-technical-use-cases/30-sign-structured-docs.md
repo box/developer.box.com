@@ -138,44 +138,43 @@ Resulting in (simplified):
 
 ```json
 {
-    "is_document_preparation_needed": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "28199d6c-4662-471e-8426-4cbba9affcf1",
-    "source_files": [
-        {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "is_document_preparation_needed": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Box-Dive-Waiver.pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393138856442",
-                "type": "file",
-                "name": "Box-Dive-Waiver.pdf",
-            }
-        ],
-    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "28199d6c-4662-471e-8426-4cbba9affcf1",
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver.pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393138856442",
+        "type": "file",
+        "name": "Box-Dive-Waiver.pdf",
+      }
+    ],
+  },
 }
-
 ```
 
 </Tab>
@@ -300,60 +299,58 @@ Resulting in (simplified):
 <Tab title='cURL'>
 
 ```json
-
 {
-    "is_document_preparation_needed": false,
-    "redirect_url": null,
-    "declined_redirect_url": null,
-    "are_text_signatures_enabled": true,
-    "signature_color": null,
-    "is_phone_verification_required_to_view": false,
-    "email_subject": null,
-    "email_message": null,
-    "are_reminders_enabled": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
-    "prefill_tags": [
-        {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A",
-        }
-    ],
-    "source_files": [
-        {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "is_document_preparation_needed": false,
+  "redirect_url": null,
+  "declined_redirect_url": null,
+  "are_text_signatures_enabled": true,
+  "signature_color": null,
+  "is_phone_verification_required_to_view": false,
+  "email_subject": null,
+  "email_message": null,
+  "are_reminders_enabled": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Box-Dive-Waiver (1).pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393142670032",
-                "type": "file",
-                "name": "Box-Dive-Waiver (1).pdf",
-            }
-        ],
-    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+  "prefill_tags": [
+    {
+      "document_tag_id": "tag_full_name",
+      "text_value": "Signer A",
+    }
+  ],
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver (1).pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393142670032",
+        "type": "file",
+        "name": "Box-Dive-Waiver (1).pdf",
+      }
+    ],
+  },
 }
-
 ```
 
 </Tab>
@@ -446,86 +443,84 @@ Resulting in (simplified):
 <Tab title='cURL'>
 
 ```json
-
 {
-    "signers": [
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+      "signer_decision": {
+        "type": "signed",
+        "finalized_at": "2023-12-19T14:53:10.547Z",
+      },
+      "inputs": [
         {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
+          "document_tag_id": null,
+          "checkbox_value": true,
+          "type": "checkbox",
+          "content_type": "checkbox",
         },
         {
-            "email": "signer@example.com",
-            "role": "signer",
-            "signer_decision": {
-                "type": "signed",
-                "finalized_at": "2023-12-19T14:53:10.547Z",
-            },
-            "inputs": [
-                {
-                    "document_tag_id": null,
-                    "checkbox_value": true,
-                    "type": "checkbox",
-                    "content_type": "checkbox",
-                },
-                {
-                    "document_tag_id": "tag_full_name",
-                    "text_value": "Signer A",
-                    "type": "text",
-                    "content_type": "text",
-                },
-                {
-                    "document_tag_id": null,
-                    "text_value": "Dec 19, 2023",
-                    "date_value": "2023-12-19",
-                    "type": "date",
-                    "content_type": "date",
-                },
-                {
-                    "document_tag_id": null,
-                    "type": "signature",
-                    "content_type": "signature",
-                }
-            ],
-        }
-    ],
-    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
-    "prefill_tags": [
+          "document_tag_id": "tag_full_name",
+          "text_value": "Signer A",
+          "type": "text",
+          "content_type": "text",
+        },
         {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A",
-        }
-    ],
-    "source_files": [
+          "document_tag_id": null,
+          "text_value": "Dec 19, 2023",
+          "date_value": "2023-12-19",
+          "type": "date",
+          "content_type": "date",
+        },
         {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
+          "document_tag_id": null,
+          "type": "signature",
+          "content_type": "signature",
         }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
-    },
-    "name": "Box-Dive-Waiver (1).pdf",
-    "type": "sign-request",
-    "signing_log": {
-        "id": "1393140642252",
+      ],
+    }
+  ],
+  "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+  "prefill_tags": [
+    {
+      "document_tag_id": "tag_full_name",
+      "text_value": "Signer A",
+    }
+  ],
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver (1).pdf",
+  "type": "sign-request",
+  "signing_log": {
+    "id": "1393140642252",
+    "type": "file",
+    "name": "Box-Dive-Waiver (1) Signing Log.pdf",
+  },
+  "status": "signed",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393142670032",
         "type": "file",
-        "name": "Box-Dive-Waiver (1) Signing Log.pdf",
-    },
-    "status": "signed",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393142670032",
-                "type": "file",
-                "name": "Box-Dive-Waiver (1).pdf",
-            }
-        ],
-    },
+        "name": "Box-Dive-Waiver (1).pdf",
+      }
+    ],
+  },
 }
-
 ```
 
 </Tab>

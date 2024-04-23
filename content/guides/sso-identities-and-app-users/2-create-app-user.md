@@ -37,6 +37,7 @@ Once available, make a request to create a new app user, supplying the optional
 
 <Tabs>
   <Tab title='Node'>
+
     ```js
     const ssoName = 'SSO User Name';
     const ssoUID = 'SSO User Unique ID';
@@ -44,17 +45,19 @@ Once available, make a request to create a new app user, supplying the optional
 
     // Create app user
     client.enterprise.addAppUser(
-      ssoName,
-      {
-        space_amount: spaceAmount,
-        external_app_user_id: ssoUID
-      }
+        ssoName,
+        {
+          space_amount: spaceAmount,
+          external_app_user_id: ssoUID
+        }
     ).then(appUser => {
-      console.log(`New user created: ${appUser.name}`);
+        console.log(`New user created: ${appUser.name}`);
     });
     ```
+
   </Tab>
   <Tab title='Java'>
+
     ```java
     String ssoName = "SSO User Name";
     String ssoUID = "SSO User Unique ID";
@@ -66,8 +69,10 @@ Once available, make a request to create a new app user, supplying the optional
 
     outputString = "New user created: " + createdUserInfo.getName();
     ```
+
   </Tab>
   <Tab title='Python'>
+
     ```python
     sso_name = 'SSO User Name'
     sso_uid = 'SSO User Unique ID'
@@ -77,6 +82,7 @@ Once available, make a request to create a new app user, supplying the optional
     user = box_client.create_user(sso_name, None, space_amount=space, external_app_user_id=sso_uid)
     print('New user created: {name}')
     ```
+
   </Tab>
 </Tabs>
 
@@ -94,6 +100,7 @@ SSO user record email address for the login.
 
 <Tabs>
   <Tab title='Node'>
+
     ```js
     const ssoName = 'SSO User Name';
     const ssoEmail = 'ssouser@email.com';
@@ -101,17 +108,19 @@ SSO user record email address for the login.
 
     // Create app user
     client.enterprise.addUser(
-      ssoEmail,
-      ssoName,
-      {
-        space_amount: spaceAmount
-      }
+        ssoEmail,
+        ssoName,
+        {
+            space_amount: spaceAmount
+        }
     ).then(managedUser => {
-      console.log(`New user created: ${managedUser.name}`);
+        console.log(`New user created: ${managedUser.name}`);
     });
     ```
+
   </Tab>
   <Tab title='Java'>
+
     ```java
     String ssoName = "SSO User Name";
     String ssoEmail = "ssouser@email.com";
@@ -122,8 +131,10 @@ SSO user record email address for the login.
 
     outputString = "New user created: " + createdUserInfo.getName();
     ```
+
   </Tab>
   <Tab title='Python'>
+
     ```python
     sso_name = 'SSO User Name'
     sso_email = 'ssouser@email.com'
@@ -133,6 +144,7 @@ SSO user record email address for the login.
     user = box_client.create_user(sso_name, sso_email, space_amount=space)
     print('New user created: {name}')
     ```
+
   </Tab>
 </Tabs>
 

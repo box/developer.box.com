@@ -45,7 +45,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, trash_content="trashed_only")
 ```
 
@@ -54,13 +54,13 @@ client.search().query("sales", metadata_filters=metadata_search_filters, trash_c
 
 ```js
 client.search.query(
-  'sales',
-  {
-    trash_content: "trashed_only"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        trash_content: "trashed_only"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>

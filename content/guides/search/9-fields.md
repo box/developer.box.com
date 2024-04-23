@@ -51,7 +51,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, fields=["name", "tags"])
 ```
 
@@ -60,13 +60,13 @@ client.search().query("sales", metadata_filters=metadata_search_filters, fields=
 
 ```js
 client.search.query(
-  'sales',
-  {
-    fields: "name,tags"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        fields: "name,tags"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>

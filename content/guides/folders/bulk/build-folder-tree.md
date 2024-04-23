@@ -8,7 +8,7 @@ related_guides:
 required_guides: []
 related_resources:
   - folder
-alias_paths: 
+alias_paths:
   - /docs/build-a-folder-tree
 ---
 
@@ -27,7 +27,7 @@ is authenticated by allowing the passing in of an initialized SDK client.
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -605,9 +605,9 @@ class BoxUtilities {
 
 let folderTreeBuilder = new BoxFolderTreeBuilder(client);
 folderTreeBuilder.buildFolderTreeWithFlatLists()
-  .then((tree) => {
-    console.log(JSON.stringify(tree));
-  })
+    .then((tree) => {
+        console.log(JSON.stringify(tree));
+    })
 ```
 
   </Tab>

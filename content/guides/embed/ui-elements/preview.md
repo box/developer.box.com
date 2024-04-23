@@ -193,17 +193,17 @@ being previewed or a map of typed file IDs to access token for those files.
 ```js
 // Example token generator function that resolves to a single access token
 var singleTokenGenerator = function() {
-  return someApi.getToken().then(function(data) {
-    return data.token;
-  });
+    return someApi.getToken().then(function(data) {
+        return data.token;
+    });
 };
 
 // Example token generator function that resolves to a map of tokens
 var mapTokenGenerator = function() {
-  return Promise.resolve({
-    file_1234: "some_token_abcd",
-    file_2345: "some_token_bcde"
-  });
+    return Promise.resolve({
+        file_1234: "some_token_abcd",
+        file_2345: "some_token_bcde"
+    });
 };
 ```
 
@@ -215,7 +215,7 @@ events can be missed.
 
 ```js
 const listener = (value) => {
-  // Do something with value
+    // Do something with value
 };
 
 // Attach listener before calling show otherwise events can be missed
@@ -263,38 +263,38 @@ fileId: fileId            // The file ID
 ```js
 var preview = new Box.Preview();
 preview.addListener("viewer", viewer => {
-  viewer.addListener("rotate", () => {
-    // Do something when a viewer rotates a preview
-  });
+    viewer.addListener("rotate", () => {
+        // Do something when a viewer rotates a preview
+    });
 });
 
 preview.addListener("load", data => {
-  const viewer = data.viewer;
-  viewer.addListener("rotate", () => {
-    // Do something when a viewer rotates a preview
-  });
+    const viewer = data.viewer;
+    viewer.addListener("rotate", () => {
+        // Do something when a viewer rotates a preview
+    });
 });
 
 preview.addListener("viewerevent", data => {
-  if (data.viewerName === "Image") {
-    if (data.event === "rotate") {
-      // Do something when an image preview is rotated
+    if (data.viewerName === "Image") {
+        if (data.event === "rotate") {
+            // Do something when an image preview is rotated
+        }
+    } else if (data.viewerName === "Image360") {
+        if (data.event === "rotate") {
+            // Do something different when a 360-degree image is rotated
+        }
+    } else {
     }
-  } else if (data.viewerName === "Image360") {
-    if (data.event === "rotate") {
-      // Do something different when a 360-degree image is rotated
-    }
-  } else {
-  }
 });
 
 preview.addListener("rotate", data => {
-  if (data.viewerName === "Image") {
-    // Do something when an image preview is rotated
-  } else if (data.viewerName === "Image360") {
-    // Do something different when a 360-degree image is rotated
-  } else {
-  }
+    if (data.viewerName === "Image") {
+        // Do something when an image preview is rotated
+    } else if (data.viewerName === "Image360") {
+        // Do something different when a 360-degree image is rotated
+    } else {
+    }
 });
 ```
 
@@ -330,26 +330,26 @@ var accessToken = 'YOUR ACCESS TOKEN';
 
 /* Enable annotations in sidebar */
 var contentSidebarProps = {
-  hasActivityFeed: true,
-  features: {
-    activityFeed: {
-        annotations: {
-          enabled: true
+    hasActivityFeed: true,
+    features: {
+        activityFeed: {
+            annotations: {
+                enabled: true
+            }
         }
-    }
-  },
+    },
 }
 
 var options = {
-  container: '.previewer',
-  contentSidebarProps: contentSidebarProps,
+    container: '.previewer',
+    contentSidebarProps: contentSidebarProps,
 
-  /* Enable annotations in preview */
-  enableAnnotationsDiscoverability: true,
-  enableAnnotationsImageDiscoverability: true,
-  showAnnotations: true,
-  showAnnotationsControls: true,
-  showAnnotationsDrawingCreate: true,
+    /* Enable annotations in preview */
+    enableAnnotationsDiscoverability: true,
+    enableAnnotationsImageDiscoverability: true,
+    showAnnotations: true,
+    showAnnotationsControls: true,
+    showAnnotationsDrawingCreate: true,
 };
 
 /* BoxAnnotations */
