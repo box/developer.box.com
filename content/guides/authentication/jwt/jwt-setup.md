@@ -182,9 +182,7 @@ settings accessible in the **Configuration** tab of the
 to **App + Enterprise Access**. Otherwise access to such
 Managed Users and groups will be blocked.
 
-<ImageFrame border>
-  ![App access level](../images/app-access-level.png)
-</ImageFrame>
+![App access level](../images/app-access-level.png)
 
 ### Application Scopes
 

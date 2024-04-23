@@ -140,6 +140,7 @@ section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 
 ![App name form](../images/app-cors.png)
+![App name form](../images/app-cors.png)
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
