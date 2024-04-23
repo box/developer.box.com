@@ -7,26 +7,32 @@ related_guides:
 # Prerequisites for Box AI
 
 <Message type="notice">
-Box AI API is a beta feature which means the
+Box AI API is a beta feature, which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI API is available to all **Enterprise Plus** customers.
 </Message>
 
+To implement Box AI in your solutions, you need
+to make sure you have access to the functionality.
+You will also need a custom application with
+enabled Box AI scope, and a developer token to
+authenticate your calls.
+
+<Message type="notice">
 To use Box AI API, make sure it is enabled by an
 admin in the Admin Console. If you want to use
 the AI APIs in your sandbox, request access
 from the AI team using [this form][form].
+</Message>
 
 ## Create an application
 
-To start using Box AI API, you need to create a
-custom application first. You can then use the
-developer token available with the app to
-authenticate and send requests.
-To create an application, follow the guide
+First you need to create a custom application
+you will use to make calls. To create
+an application, follow the guide
 on [creating custom apps][createapps].
 
-## Add scopes
+## Add AI scope
 
 To work with Box AI API, you need the
 `AI.readwrite` [scope][scope] added for
@@ -39,25 +45,43 @@ To add a scope:
 1. Select the **Manage AI** scope. Box Platform will
    automatically include the scope when making the call.
 
-## Generate developer token
+![box ai scopes](./images/box-ai-app-scopes.png)
+
+<Message type="notice">
+If you are collaborated into an app but do not have
+AI access, you will see the Manage AI scope
+checked and grayed out.
+</Message>
+
+## Generate a developer token
 
 You need a developer token
 to authenticate your app when sending requests. 
 
 To generate a token:
 
-1. Open your application in the Developer Console.
-2. Go to **Configuration** > **Developer Token**.
-3. Click **Generate Developer Token**.
+1. Go to **Developer Console** > **My Apps**.
+2. Click the **Options menu** button (…) on the right.
+3. Select **Generate Developer Token**. The token
+will be automatically generated and saved to clipboard.
 
-After you generate the token, you can add it in cURL
-or use it in [Postman][postman] to make calls.
+![generate token](./images/developer-token.png)
 
-For additional details, see [developer token][token].
+You can also open your app, go to
+**Configuration** > **Developer Token**
+and generate the token. 
+
+After you generate the token, you can add
+it in cURL or use it in Postman to make calls.
 
 <Message type="notice">
 A developer token is only valid for one hour.
 </Message>
+
+For additional details, see [developer token][token].
+
+After you generate the token, you can add it in cURL
+or use it in [Postman][postman] to make calls.
 
 [token]: g://authentication/tokens/developer-tokens/
 [scope]: g://api-calls/permissions-and-errors/scopes/

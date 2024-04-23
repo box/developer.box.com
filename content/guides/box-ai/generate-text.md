@@ -15,6 +15,8 @@ Box AI API is available to all Enterprise Plus customers.
 
 You can use Box AI to generate text
 based on provided content.
+You will need to supply the input file (or files)
+Box AI will base the answer on. 
 
 ## Send a request
 
@@ -23,11 +25,15 @@ To send a request, use the
 
 <Samples id='post_ai_text_gen' />
 
+Make sure you have generated the developer token
+to authorize your app. See [Prerequisites for Box AI][prereq]
+for details.
+
 ### Parameters 
 
 <!-- markdownlint-disable line-length -->
 
-To make a call, you must pass the following parameters. Mandatory parameters are in bold.
+To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
 | Parameter| Description|Values| Example|
 |--------|--------|-------|-------|
@@ -41,4 +47,4 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 <!-- markdownlint-enable line-length -->
 
-[boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
+[prereq]: g://box-ai/prerequisites

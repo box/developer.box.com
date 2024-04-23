@@ -9,6 +9,10 @@ primary:
       // text:
       text: Documentation
 
+    quickstarts:
+      // text:
+      text: Getting Started
+
     community:
       // text:
       text: Community
