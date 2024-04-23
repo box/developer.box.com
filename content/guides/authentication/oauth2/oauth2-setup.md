@@ -71,9 +71,7 @@ Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 
-
 ![Auth selection screen](../images/custom-app-authentication-oauth.png)
-
 
 ## Basic configuration
 
