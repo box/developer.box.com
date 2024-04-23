@@ -34,18 +34,9 @@ which   can be added on to any Business Plus or Enterprise account.
 Working with Retention Policies requires a developer to work with three
 distinct resources.
 
-* **Policies:**  A [Retention Policy][policy] describes the general behavior
-  of the retention policy. It determines how long a retention should stay in
-  place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A [Retention Policy Assignment][assignment] is a relation
-  between a policy and folder or enterprise. Creating an assignment puts a
-  retention on all the file versions that belong to that folder or enterprise.
-  For example, if an assignment is created on a folder the policy is applied to
-  all file versions within that folder.
-* **Retentions**: A [File Version Retention][retention] represents all the
-  policies that are assigned to a specific file version. Note that every file
-  version can have a maximum of one file version retention and that this
-  resource contains a list of every assigned policy.
+* **Policies:**  A [Retention Policy][policy] describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
+* **Assignments:** A [Retention Policy Assignment][assignment] is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
+* **Retentions**: A [File Version Retention][retention] represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
 
 <Message type='warning'>
 

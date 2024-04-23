@@ -25,15 +25,11 @@ another user. Some API endpoints require admin level privileges - like events.
 
 The following authorization methods are available to each Box application type.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
 | Custom App     | Yes                 | Yes  | Yes                 | No         |
 | Limited Access App | No                  | Yes  | No                  | Yes        |
 | Custom Skill | No                  | No   | No                  | No         |
-
-<!-- markdownlint-enable line-length -->
 
 ## OAuth 2.0
 
@@ -54,8 +50,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 - Work with users who have existing Box accounts
 - Use Box for identity management, so users know they are using Box
-- Store data within each user account vs within an application's Service
-  Account
+- Store data within each user account vs within an application's Service Account
 
 </Message>
 
@@ -135,8 +130,7 @@ API [endpoints][app_ep].
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- Work in an environment that either has no user model, or has users without
-  Box accounts
+- Work in an environment that either has no user model, or has users without Box accounts
 - Use their own identity management system
 - Do not want users to know they are using Box
 - Store data within the application's Service Account and not a user's account
@@ -175,7 +169,7 @@ When an application is created in the Developer Console, the user must configure
 application scopes. Similar to how users have permissions to access files and
 folders within Box, applications have their own set of permissions to
 perform certain actions on behalf of a Box user or a Box enterprise. The name
-for a set of permissions for an application is a "scope". In short, an 
+for a set of permissions for an application is a "scope". In short, an
 application's scopes determine which [endpoints][reference] an application can
 successfully call and are reflected in the access provided by
 [Access Tokens][at] of the application.

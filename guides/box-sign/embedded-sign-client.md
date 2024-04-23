@@ -35,8 +35,6 @@ own website, you need the `iframable_embed_url`
 parameter that is specifically designed to allow
 signing documents within the HTML `iframe` tag.
 
-<!-- markdownlint-disable line-length -->
-
 A sample `iframable_embed_url` looks as follows:
 
 ```sh
@@ -61,8 +59,6 @@ use the URL within the `iframe` tag:
   msallowfullscreen
 ></iframe>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 

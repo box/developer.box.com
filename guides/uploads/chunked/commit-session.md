@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 related_endpoints:
   - post_files_upload_sessions_id_commit
 related_guides: []
@@ -20,7 +20,7 @@ total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked
 next_page_id: uploads/chunked/folder
-previous_page_id: uploads/chunked/create-session
+previous_page_id: uploads/chunked/upload-part
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/commit-session.md
 ---

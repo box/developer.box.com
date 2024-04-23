@@ -198,7 +198,7 @@ SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
 
 <Centered wide>
 
-<FeaturedBoard type="community" >
+<FeaturedBoard type="aiDevZone" >
 
 </FeaturedBoard>
 
@@ -224,61 +224,61 @@ front-end UI elements, and much more.
 
 <Tile type="box-orange" title="API Reference" href="/reference/">
 
-  *Box API Reference*
+*Box API Reference*
 
 </Tile>
 
 <Tile type="java" title="Java SDK" href="https://github.com/box/box-java-sdk#readme">
 
-  *box-java-sdk*
+*box-java-sdk*
 
 </Tile>
 
 <Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
 
-  *box-python-sdk*
+*box-python-sdk*
 
 </Tile>
 
 <Tile type="node" title="Node.js SDK" href="https://github.com/box/box-node-sdk#readme">
 
-  *box-node-js-sdk*
+*box-node-js-sdk*
 
 </Tile>
 
 <Tile type="net" title=".NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
 
-  *box-windows-sdk-v2*
+*box-windows-sdk-v2*
 
 </Tile>
 
 <Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
-  *box-ios-sdk*
+*box-ios-sdk*
 
 </Tile>
 
 <Tile type="tool" title="Postman collection" href="/guides/tooling/postman">
 
-  *Box Postman Collection*
+*Box Postman Collection*
 
 </Tile>
 
 <Tile type="box-orange" title="Box CLI" href="/guides/cli/">
 
-  *box-cli*
+*box-cli*
 
 </Tile>
 
 <Tile type="box-orange" title="Box UI Elements" href="/guides/embed/ui-elements/">
 
-  *box-ui-elements*
+*box-ui-elements*
 
 </Tile>
 
 <Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
 
-  *Box Embed*
+*Box Embed*
 
 </Tile>
 
@@ -360,7 +360,7 @@ More SDKs & Tools
 
 <Centered wide>
 
-<FeaturedBoard type="sampleCode" >
+<FeaturedBoard type="community" >
 
 </FeaturedBoard>
 
@@ -448,7 +448,15 @@ Browse all guides
 
 <Centered wide>
 
-<Header to='https://medium.com/box-developer-blog' centered>
+<FeaturedBoard type="sampleCode" >
+
+</FeaturedBoard>
+
+</Centered>
+
+<Centered wide>
+
+<Header centered>
 
 Additional resources
 

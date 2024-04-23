@@ -50,13 +50,9 @@ file rendering.
 
 ## How does Box View work
 
-1. Upload files into Box using our [secure upload API][upload]. All content is
-stored in Box's secure cloud storage infrastructure with virus scanning and
-256 bit encryption.
-2. Upon upload, files are converted into HTML5 compatible assets, which are
-designed to render crisply and responsively.
-3. An embeddable URL is requested to access the file rendering. Previews can be
-embedded directly in your application using an `<iframe>` URL.
+1. Upload files into Box using our [secure upload API][upload]. All content is stored in Box's secure cloud storage infrastructure with virus scanning and 256 bit encryption.
+2. Upon upload, files are converted into HTML5 compatible assets, which are designed to render crisply and responsively.
+3. An embeddable URL is requested to access the file rendering. Previews can be embedded directly in your application using an `<iframe>` URL.
 
 <ImageFrame border center shadow>
 
@@ -72,10 +68,8 @@ customized client-side experiences with the converted files.
 ## Use cases
 
 - Convert and display PDF resumes in a recruiter application
-- Convert and display course materials, including documents, videos, and PDFs in
-  a student portal
+- Convert and display course materials, including documents, videos, and PDFs in a student portal
 - Convert and display HD video in a media room
-- Convert and display sales collateral, including documents, videos, PDFs, and
-  3D models in a field sales enablement application
+- Convert and display sales collateral, including documents, videos, PDFs, and 3D models in a field sales enablement application
 
 [upload]: e://post-files-content

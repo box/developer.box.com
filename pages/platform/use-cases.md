@@ -30,9 +30,9 @@ Some questions to ask when assessing if a use case include:
 - Does the process involve administrative tasks that may be automated?
 
 If you answered **yes** to the above questions, you most likely have a great use
-case for Box Platform. 
+case for Box Platform.
 
-Some common customer solutions include: 
+Some common customer solutions include:
 
 - Marketing asset management
 - Secure document vaults

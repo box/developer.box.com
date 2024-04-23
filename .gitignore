@@ -5,4 +5,5 @@ build
 *.xliff
 .DS_Store
 yarn-error.log
+.idea
 compiled

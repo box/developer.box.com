@@ -57,15 +57,11 @@ folder the application tries to access with this token.
 
 ## Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter       | Description                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CLIENT_ID`     | The client ID or API key for the application                                                                                                                  |
 | `CLIENT_SECRET` | The client secret or API secret for the application                                                                                                           |
 | `REDIRECT_URI`  | The redirect URL for your application that a user will be sent to after they have authorized the application. This can be configured in the developer console |
-
-<!-- markdownlint-enable line-length -->
 
 ## 1. Configure SDK
 
@@ -76,7 +72,7 @@ your choice.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var redirectUrl = "[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
 var sdk = new BoxClient(config);
@@ -86,15 +82,11 @@ var sdk = new BoxClient(config);
 
 <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 import com.box.sdk.BoxAPIConnection;
 
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -117,8 +109,8 @@ auth = OAuth2(
 var BoxSDK = require("box-node-sdk");
 
 var sdk = new BoxSDK({
-  clientID: "[CLIENT_ID]",
-  clientSecret: "[CLIENT_SECRET]",
+    clientID: "[CLIENT_ID]",
+    clientSecret: "[CLIENT_SECRET]",
 });
 ```
 
@@ -151,7 +143,7 @@ the app after granting application access.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 // redirectTo(authorizationUrl);
 ```
@@ -160,15 +152,11 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
 
 <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 // response.redirect(authorizationUrl);
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -186,7 +174,7 @@ auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
-  response_type: "code",
+    response_type: "code",
 });
 
 // res.redirect(authorize_url)
@@ -207,13 +195,9 @@ this topic.
 The [authorization URL](endpoint://get-authorize) can also be created manually
 as follows.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=[REDIRECT_URI]&response_type=code
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -263,7 +247,7 @@ The SDKs can be used to exchange the code for an actual Access Token.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var session = await sdk.Auth.AuthenticateAsync("[CODE]");
 var client = new BoxClient(config, session);
 ```
@@ -274,9 +258,9 @@ var client = new BoxClient(config, session);
 
 ```java
 BoxAPIConnection client = new BoxAPIConnection(
-  "[CLIENT_ID]",
-  "[CLIENT_SECRET]",
-  "[CODE]"
+    "[CLIENT_ID]",
+    "[CLIENT_SECRET]",
+    "[CODE]"
 );
 ```
 
@@ -297,7 +281,7 @@ client = Client(auth)
 var code = "...";
 
 sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function (err, tokenInfo) {
-  var client = sdk.getPersistentClient(tokenInfo);
+    var client = sdk.getPersistentClient(tokenInfo);
 });
 ```
 

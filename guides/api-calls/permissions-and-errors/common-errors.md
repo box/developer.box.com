@@ -55,8 +55,6 @@ for solution to common errors encountered when working with the Box APIs.
 
 ### 400 Bad Request
 
-<!-- markdownlint-disable line-length -->
-
 <!-- i18n-enable localize-links -->
 
 | | |
@@ -159,11 +157,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 401 Unauthorized
-
-<!-- markdownlint-disable line-length -->
 
 |  |  |
 | ----- | ---- |
@@ -171,11 +165,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Unauthorized    |
 | **Solution** | Authorization token is not authorized, check extended error message in body for more details. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 403 Forbidden
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -230,11 +220,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 404 Not Found
-
-<!-- markdownlint-disable line-length -->
 
 |  |       |
 | ------- | ------------------ |
@@ -254,11 +240,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Item is trashed   |
 | **Solution** | The item that is to be accessed is in the trash and unavailable for modification. Move the item out of the trash and try again. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 405 Method Not Allowed
-
-<!-- markdownlint-disable line-length -->
 
 |  |     |
 | ------- | ------ |
@@ -266,11 +248,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Method Not Allowed     |
 | **Solution** | The HTTP method used for the API operation is not allowed. Check the API reference documentation for the HTTP verb needed for the API operation. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 409 Conflict
-
-<!-- markdownlint-disable line-length -->
 
 |  |   |
 | ------- | --------------- |
@@ -298,11 +276,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | User with the specified login already exists      |
 | **Solution** | A user with the same email already exists. Either refer to the existing user or specify a different email.      |
 
-<!-- markdownlint-enable line-length -->
-
 ### 410 Gone
-
-<!-- markdownlint-disable line-length -->
 
 |  |           |
 | ------- | --- |
@@ -314,11 +288,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  |    |
 | **Solution** | The upload session is in an unrecoverable state and cannot continue. This or other requests have resulted in the upload session reaching a bad state (for example parts overlapping). Possible situations where this may arise include when the maximum number of parts has been exceeded or when overlapping parts have been uploaded. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 411 Length Required
-
-<!-- markdownlint-disable line-length -->
 
 |  | |
 | ------- | -------------------- |
@@ -326,13 +296,9 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | content-length header was required, but not provided.   |
 | **Solution** | Supply a content-length header within your API request. |
 
-<!-- markdownlint-enable line-length -->
-
 <!--alex ignore failed-->
 
 ### 412 Precondition Failed
-
-<!-- markdownlint-disable line-length -->
 
 |  |   |
 | ------- | ------- |
@@ -344,11 +310,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | The resource has been modified. Please retrieve the resource again and retry |
 | **Solution** | Check the extended error message in the response body for more details.      |
 
-<!-- markdownlint-enable line-length -->
-
 ### 413 Request Entity Too Large
-
-<!-- markdownlint-disable line-length -->
 
 |  |      |
 | ------- | ----- |
@@ -356,11 +318,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Request Entity too Large     |
 | **Solution** | This error is produced when the size of the upload is more than the allowed maximum. Check the extended error message in the response body |
 
-<!-- markdownlint-enable line-length -->
-
 ### 415 Unsupported Media Type
-
-<!-- markdownlint-disable line-length -->
 
 |  |        |
 | ------- | ------------------- |
@@ -368,11 +326,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Previews for `boxnote` files are not yet supported.    |
 | **Solution** | This error is produced when requested an embed preview of a Box Note. Embedded previews are currently unsupported for Box Notes. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 429 Too Many requests
-
-<!-- markdownlint-disable line-length -->
 
 |  |   |
 | ---- | ---- |
@@ -380,11 +334,7 @@ for solution to common errors encountered when working with the Box APIs.
 | **Message**  | Request rate limit exceeded, please try again later           |
 | **Solution** | The client is performing operations too quickly and has been rate limited. Client is advised to retry their request after the amount of time specified by the `retry-after` header. There are [four rate limits](g://api-calls/permissions-and-errors/rate-limits) to be aware of. |
 
-<!-- markdownlint-enable line-length -->
-
 ### 500 Internal Service Error
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -396,11 +346,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 502 Bad Gateway
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -412,11 +358,7 @@ for solution to common errors encountered when working with the Box APIs.
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 503 Unavailable
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -427,8 +369,6 @@ for solution to common errors encountered when working with the Box APIs.
 | **Solution** | If a Retry-After header is provided in the response, the client should retry the request according to the header value. In rare situations, a write operation may eventually persist its changes after the 503 response is received by the client, so the client should handle this case upon retry. If the issue persists, please check our [Status Site](https://status.box.com/) for any known outage information. |
 
 <!-- i18n-disable localize-links -->
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 

@@ -24,11 +24,8 @@ allowing them to share Box files and folders with the group.
 This section will take you through the following steps.
 
 * Create a minimal Slack application within the Slack API dashboard
-* Configure the Slack application to send notifications to our application
-  whenever a user joins or leaves the channel - allowing our code to update the
-  Box Box group.
-* Configure a `/boxadd` **slash command** that will allow users to share a
-  Box file or folder with all the users in the channel.
+* Configure the Slack application to send notifications to our application whenever a user joins or leaves the channel - allowing our code to update the Box Box group.
+* Configure a `/boxadd` **slash command** that will allow users to share a Box file or folder with all the users in the channel.
 
 ## Create a minimal Slack app
 
@@ -53,15 +50,9 @@ Setting up an event listener for our Slack app will allow us to monitor for
 events within the channel. For this bot, we want to monitor three
 [Slack events][slack-events] in order to perform actions within Box.
 
-* [`bot_added`][slack-event-bot-added]: When the bot is first added to a
- channel, it will get a list of all users in the channel, then create a
- Box group for those users. We can then use this group later on to add that
- group to any content that is shared with the **slash command**.
-* [`member_joined_channel`][slack-event-member-joined]: When a new user
- joins a Slack channel they will be added to the Box group.
-* [`member_left_channel`][slack-event-member-left]: When a user leaves a
-  Slack channel, or the user is removed, they will be removed from the Box
-  group.
+* [`bot_added`][slack-event-bot-added]: When the bot is first added to a channel, it will get a list of all users in the channel, then create a Box group for those users. We can then use this group later on to add that group to any content that is shared with the **slash command**.
+* [`member_joined_channel`][slack-event-member-joined]: When a new user joins a Slack channel they will be added to the Box group.
+* [`member_left_channel`][slack-event-member-left]: When a user leaves a Slack channel, or the user is removed, they will be removed from the Box group.
 
 To set up a notification URL to which these Slack event payloads will
 be sent, Slack requires a verification step. When you set an event listener URL
@@ -69,11 +60,11 @@ for your bot application code, Slack will immediately send a challenge to that
 URL to verify that it's valid. This will be an HTTP POST with a payload that
 looks something like the following:
 
-```javascript
-{ 
-  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl", 
+```json
+{
+  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
   "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
-  "type": "url_verification" 
+  "type": "url_verification"
 }
 ```
 
@@ -81,7 +72,7 @@ To set up the URL for the event listener, that URL that is set needs
 to respond with a verification payload containing the challenge value back to
 Slack during this step. The payload will look similar to the following.
 
-```javascript
+```js
 HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P"}
 ```
 
@@ -110,7 +101,7 @@ Within the project directory, run `npm install express --save` to install the
 Express dependency, then deploy the following code to your public endpoint
 along with the appropriate Node modules.
 
-```javascript
+```js
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -119,23 +110,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.post('/event', (req, res) => {
-  if (
-    req.body &&
-    req.body.challenge &&
-    req.body.type === 'url_verification'
-  ) {
-    res.send({
-      challenge: req.body.challenge
-    });
-  } else {
-    res.status(400).send({
-      error: "Unrecognized request"
-    });
-  }
+    if (
+        req.body &&
+        req.body.challenge &&
+        req.body.type === 'url_verification'
+    ) {
+        res.send({
+            challenge: req.body.challenge
+        });
+    } else {
+        res.status(400).send({
+            error: "Unrecognized request"
+        });
+    }
 });
 
 app.listen(port, function(err) {
-  console.log("Server listening on PORT", port);
+    console.log("Server listening on PORT", port);
 });
 ```
 
@@ -153,12 +144,10 @@ This may be used instead of creating a blank Java application.
 
 * From Eclipse, create a new project. When prompted, select a Gradle project.
 * Enter a unique name for the project, we used `slack.box` for this guide.
-* Open your `build.gradle` file and add the following. Ensure that the group
- matches the group that you used for the application. Once saved, refresh the
- Gradle project.
+* Open your `build.gradle` file and add the following. Ensure that the group matches the group that you used for the application. Once saved, refresh the Gradle project.
 
- ```java
- plugins {
+```java
+plugins {
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
@@ -185,8 +174,7 @@ test {
 }
 ```
 
-* Within your `src/main/java` path, create a new Java class file named
- `Application.java`.
+* Within your `src/main/java` path, create a new Java class file named `Application.java`.
 * Open the file, add the following code, and save.
 
 ```java
@@ -203,29 +191,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class Application {
-  @PostMapping("/event")
-  public JSONObject challenge(@RequestBody String data) throws Exception {
-    JSONObject returnJSON = new JSONObject();
+    @PostMapping("/event")
+    public JSONObject challenge(@RequestBody String data) throws Exception {
+        JSONObject returnJSON = new JSONObject();
 
-    Object dataObj = new JSONParser().parse(data);
-    JSONObject inputJSON = (JSONObject) dataObj;
-    String challenge = (String) inputJSON.get("challenge");
-    String type = (String) inputJSON.get("type");
+        Object dataObj = new JSONParser().parse(data);
+        JSONObject inputJSON = (JSONObject) dataObj;
+        String challenge = (String) inputJSON.get("challenge");
+        String type = (String) inputJSON.get("type");
 
-    if (type.equals("url_verification")) {
-      returnJSON.put("challenge", challenge);
-    } else {
-      System.err.println("Invalid input");
+        if (type.equals("url_verification")) {
+            returnJSON.put("challenge", challenge);
+        } else {
+            System.err.println("Invalid input");
+        }
+
+        return returnJSON;
     }
 
-    return returnJSON;
-  }
-
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
-
 ```
 
 </Choice>
@@ -249,12 +236,7 @@ From your Slack application **Basic Information** tab, under
 **Event Subscriptions** and do the following.
 
 * Toggle **Enable Events** to **On**.
-* Under **Request URL** add in the public URL that you deployed the above code
- to, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as
- `https://myapp.com/event`). Once you add the URL and click outside the field,
- Slack will immediately send the challenge to the URL that you were hosting the
- code at above. If the code responds correctly, you will see a green verified
- note beside the **Request URL** header.
+* Under **Request URL** add in the public URL that you deployed the above code to, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as `https://myapp.com/event`). Once you add the URL and click outside the field, Slack will immediately send the challenge to the URL that you were hosting the code at above. If the code responds correctly, you will see a green verified note beside the **Request URL** header.
 
 <ImageFrame noborder center shadow>
 
@@ -262,11 +244,8 @@ From your Slack application **Basic Information** tab, under
 
 </ImageFrame>
 
-* Expand the **Subscribe to bot events** section and click on the
- **Add Bot User Event** button.
-* Add `member_joined_channel` and `member_left_channel` to the events the bot
- is subscribed to. These will send events when anyone new is added to the
- channel.
+* Expand the **Subscribe to bot events** section and click on the **Add Bot User Event** button.
+* Add `member_joined_channel` and `member_left_channel` to the events the bot is subscribed to. These will send events when anyone new is added to the channel.
 * Click the **Save Changes** button at the bottom of the page.
 
 ## Configure the Slack app slash command
@@ -282,18 +261,14 @@ the file is automatically collaborated with the Box group of users that are in
 that channel.
 
 From the **Basic Information** tab of your application, under **Add features and
-functionality**, click on the button titled **Slash Commands**. 
+functionality**, click on the button titled **Slash Commands**.
 
 In the page that comes up, click **Create New Command** and input the following:
 
-* **Command**: This is the command that a channel user will use to share
- a Box file / folder ID with the channel. Use `/boxadd` for this quick start.
-* **Request URL**: The URL that is listening for and responding to slash
- commands in our Slack bot. In this quick start we use the same event URL that
- was used for the app event listener section above.
+* **Command**: This is the command that a channel user will use to share a Box file / folder ID with the channel. Use `/boxadd` for this quick start.
+* **Request URL**: The URL that is listening for and responding to slash commands in our Slack bot. In this quick start we use the same event URL that was used for the app event listener section above.
 * **Short Description**: A description of what the Slash command will do.
-* **Usage Hint**: Additional parameters that may be passed to the command. In
- our case, that's the Box file / folder ID and type of content.
+* **Usage Hint**: Additional parameters that may be passed to the command. In our case, that's the Box file / folder ID and type of content.
 
 <ImageFrame noborder center shadow>
 
@@ -345,8 +320,7 @@ is now installed within the workplace.
 ## Summary
 
 * You've created your Slack application.
-* You've configured user event notifications, slash commands, and additional
-  scoping.
+* You've configured user event notifications, slash commands, and additional scoping.
 * You've deployed your Slack bot to your workspace.
 
 <Observe option='programming.platform' value='node,java'>

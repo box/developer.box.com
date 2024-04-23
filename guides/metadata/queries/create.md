@@ -25,28 +25,28 @@ for, the `ancestor_folder_id` to specify the folder to search in, and the
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-     -H 'Content-Type: application/json' \
-     -d '{
-       "from": "enterprise_123456.contractTemplate",
-       "query": "amount >= :value",
-       "query_params": {
-         "value": 100
-       },
-       "fields": [
-         "name",
-         "metadata.enterprise_123456.contractTemplate.customerName",
-         "metadata.enterprise_123456.contractTemplate.amount" 
-       ],
-       "ancestor_folder_id": "5555",
-       "order_by": [
-         {
-           "field_key": "amount",
-           "direction": "asc"
-         }
-       ],
-       "limit": 100
-     }'
+    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "from": "enterprise_123456.contractTemplate",
+      "query": "amount >= :value",
+      "query_params": {
+        "value": 100
+      },
+      "fields": [
+        "name",
+        "metadata.enterprise_123456.contractTemplate.customerName",
+        "metadata.enterprise_123456.contractTemplate.amount"
+      ],
+      "ancestor_folder_id": "5555",
+      "order_by": [
+        {
+          "field_key": "amount",
+          "direction": "asc"
+        }
+      ],
+      "limit": 100
+    }'
 ```
 
 For more details about all the available parameters, check out any of our other
@@ -70,27 +70,27 @@ folder that matched the query, and only any fields explicitly requested in the
 
 ```json
 {
-  "entries":[
+  "entries": [
     {
       "type": "file",
       "id": "1617554169109",
       "name": "My Contract.docx",
-      "metadata":{
-        "enterprise_123456":{
-          "contractTemplate":{
+      "metadata": {
+        "enterprise_123456": {
+          "contractTemplate": {
             "$parent": "file_161753469109",
             "$scope": "enterprise_123456",
             "$template": "contractTemplate",
-            "$version":0,
-            "customerName":"Phoenix Corp",
-            "amount":100
+            "$version": 0,
+            "customerName": "Phoenix Corp",
+            "amount": 100
           }
         }
       }
     }
   ],
   "limit": 20,
-  "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
+  "next_marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
 ```
 

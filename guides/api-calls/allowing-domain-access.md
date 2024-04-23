@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 6
 related_endpoints:
   - get_files_id_content
   - post_files_content

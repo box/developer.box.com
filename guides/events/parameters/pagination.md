@@ -33,7 +33,7 @@ First, send a request to the [`GET /events`](e://get_events) API without a
 
 ```curl
 curl https://api.box.com/2.0/events \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 The API will return all available events beginning with the oldest. The response
@@ -42,7 +42,7 @@ next API call for the next place in the stream.
 
 ```curl
 curl https://api.box.com/2.0/events?stream_position=388720462721 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 The `stream_position` can also be set to `now` to return the most recent stream
@@ -50,7 +50,7 @@ position.
 
 ```curl
 curl https://api.box.com/2.0/events?stream_position=now \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 In this case, the API returns an empty list and a `next_stream_position` that

@@ -25,9 +25,7 @@ Typically there are some common questions that may be asked about the user
 account to determine when standard setup may be needed for the account:
 
 * Will the user need access to standard company files or folders immediately?
-* Are collaborations associated individually or through groups? If through a
-group association, are there any standard groups that the user should be added
-to?
+* Are collaborations associated individually or through groups? If through a group association, are there any standard groups that the user should be added to?
 * Should the user be assigned any tasks to complete?
 * Would any instructional comments on any files be helpful?
 

@@ -28,12 +28,8 @@ that can be encountered within the Box APIs.
 The Box APIs use JSON in the requests bodies. There are a few notable exceptions
 to this rule:
 
-- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens
-  and as per the OAuth 2.0 specification it accepts the body to be sent
-  with a content type of `application/x-www-form-urlencoded`.
-- Most of the APIs that are used to upload binary data, like the
-  [`POST /files/content`][post-files-content] endpoint, expect data to be sent
-  as form data with a content type of `multipart/form-data`.
+- The [`POST /oauth2/token`][post-oauth2-token] is used to request access tokens and as per the OAuth 2.0 specification it accepts the body to be sent with a content type of `application/x-www-form-urlencoded`.
+- Most of the APIs that are used to upload binary data, like the [`POST /files/content`][post-files-content] endpoint, expect data to be sent as form data with a content type of `multipart/form-data`.
 
 <Message type='notice'>
 
@@ -88,11 +84,8 @@ UTC` on January 1, 1970.
 The Box APIs generally returns JSON in the response body. There are a few notable
 exceptions to this rule as well.
 
-- APIs that delete items return an empty body with a `204 No Content` HTTP
-  status code.
-- APIs used to request binary data either return a `200 OK` status code with the
-  binary data attached, or a `202 Accepted`, or `302 Found` status code with no
-  body and a `location` header pointing to the actual binary file.
+- APIs that delete items return an empty body with a `204 No Content` HTTP status code.
+- APIs used to request binary data either return a `200 OK` status code with the binary data attached, or a `202 Accepted`, or `302 Found` status code with no body and a `location` header pointing to the actual binary file.
 
 <Message type='notice'>
 
@@ -159,8 +152,6 @@ generally are formatted as follows.
 }
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | Field         | Always present? |                                                                                                                          |
 | ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `entries`     | Yes             | A list of entries in the collection                                                                                      |
@@ -170,8 +161,6 @@ generally are formatted as follows.
 | `order`       | No              | For endpoints that support sorting, this specifies the order the results are returned in                                 |
 | `next_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the next page that can be returned     |
 | `prev_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the previous page that can be returned |
-
-<!-- markdownlint-enable line-length -->
 
 ### Request IDs
 

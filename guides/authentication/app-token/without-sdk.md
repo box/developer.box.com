@@ -47,8 +47,7 @@ Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
 - Ensure the application is configured to use App Token authentication
-- Generate a primary and secondary App Token for the application and store the
-  tokens somewhere in your code.
+- Generate a primary and secondary App Token for the application and store the tokens somewhere in your code.
 
 ## Making API calls
 
@@ -57,5 +56,5 @@ it would use any Access Token.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+    -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```

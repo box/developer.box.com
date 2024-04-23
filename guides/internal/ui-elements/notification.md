@@ -29,7 +29,7 @@ does not recognize booleans in Microcopy, so you must provide the boolean in
 all lowercase and wrapped in double quotes; `"true"` or `"false"`.
 
 **Example**:
- 
+
 ```yaml
 display: "false"
 ```
@@ -45,7 +45,7 @@ Your best bet is to test locally and use the browser's responsive tester in the
 Chrome Developer Tools to decide if the notification is too long or not.
 
 **Example**:
- 
+
 ```yaml
 message: >
     Join the first BoxWorks Hackathon for Good - customers,
@@ -60,7 +60,7 @@ can be any fully qualified URL, i.e. `https://box.com`, `https://developer.box.
 com/guides`, or `https://github.com/box/sdks`.
 
 **Example**:
- 
+
 ```yaml
 href: "https://box.com/hack4good"
 ```
@@ -71,7 +71,7 @@ The CTA is a short slug that will link the the href above. It should be short
 and designed to convince the user they really want to click it.
 
 **Example**:
- 
+
 ```yaml
 cta: Learn more and register!
 ```

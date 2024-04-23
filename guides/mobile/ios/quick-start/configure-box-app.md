@@ -55,18 +55,14 @@ console.
 To create a new Box application that may be used to generate a developer
 token, use the following steps.
 
-  1. Go to the [Developer Console][devconsole]
-  1. Select **Create New App**
-  1. Select **Custom App** as the type of application to create, and click
-     **Next**
-  1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-     **Next**
-  1. Give your Box app a unique name and click **Create App**
-  1. Go to the app's configuration by clicking **View Your App**.
-  1. Optionally, scroll to the **Application Scopes** section of the same screen
-     and select any additional permissions you want to enable for this
-     application.
-  1. At the top of the page click the button to **Save Changes**
+1. Go to the [Developer Console][devconsole]
+2. Select **Create New App**
+3. Select **Custom App** as the type of application to create, and click **Next**
+4. Select **OAuth 2.0 with JWT** as the authentication method, and click **Next**
+5. Give your Box app a unique name and click **Create App**
+6. Go to the app's configuration by clicking **View Your App**.
+7. Optionally, scroll to the **Application Scopes** section of the same screen and select any additional permissions you want to enable for this application.
+8. At the top of the page click the button to **Save Changes**
 
 </Choice>
 
@@ -87,10 +83,10 @@ may be used to authenticate the Box iOS SDK to start making calls to the Box
 APIs.
 
 1. Go to the [Developer Console][devconsole]
-1. Load the application that you would like to use
-1. In the left navigation menu, click on **Configuration**
-1. Under **Developer Token**, click the **Generate Developer Token** button
-1. Copy the token for the next step to make an API call
+2. Load the application that you would like to use
+3. In the left navigation menu, click on **Configuration**
+4. Under **Developer Token**, click the **Generate Developer Token** button
+5. Copy the token for the next step to make an API call
 
 ## Summary
 

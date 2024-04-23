@@ -39,17 +39,15 @@ Learn about the different field types
 To create this template we need to pass in the configuration for the fields, as
 well as a display name for the field.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/metadata_templates/schema \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
       "scope": "enterprise",
       "displayName": "Customer Info",
       "fields": [
@@ -79,7 +77,7 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
 
 <Tab title='.NET'>
 
-```c#
+```csharp
 var templateParams = new BoxMetadataTemplate()
 {
   DisplayName = "Customer Info",
@@ -157,12 +155,12 @@ MetadataTemplate template = MetadataTemplate.createMetadataTemplate(api, "enterp
 
 <Tab title='Python'>
 
-```py
+```python
 from boxsdk.object.metadata_template import MetadataField, MetadataFieldType
 
 fields = [
-  MetadataField(MetadataFieldType.STRING, 'Name')
-  MetadataField(MetadataFieldType.ENUM, 'Industry', options=['Technology', 'Healthcare', 'Legal'])
+    MetadataField(MetadataFieldType.STRING, 'Name')
+    MetadataField(MetadataFieldType.ENUM, 'Industry', options=['Technology', 'Healthcare', 'Legal'])
 ]
 template = client.create_metadata_template('Customer Info', fields)
 ```
@@ -173,37 +171,35 @@ template = client.create_metadata_template('Customer Info', fields)
 
 ```js
 client.metadata.createTemplate(
-  'Customer Info',
-  [
-    {
-      type: 'string',
-      displayName: 'Name'
-    },
-    {
-      type: 'enum',
-      displayName: 'Industry',
-      options: [
-        {key: 'Technology'},
-        {key: 'Healthcare'},
-        {key: 'Legal'}
-      ]
-    },
-    {
-      type: 'float',
-      displayName: 'Total account value',
-      key: 'tav'
-    }
-  ]
+    'Customer Info',
+    [
+        {
+            type: 'string',
+            displayName: 'Name'
+        },
+        {
+            type: 'enum',
+            displayName: 'Industry',
+            options: [
+                {key: 'Technology'},
+                {key: 'Healthcare'},
+                {key: 'Legal'}
+            ]
+        },
+        {
+            type: 'float',
+            displayName: 'Total account value',
+            key: 'tav'
+        }
+    ]
 ).then(template => {
-  // ...
+    // ...
 });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

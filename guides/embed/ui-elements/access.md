@@ -52,30 +52,10 @@ application and example use cases.
 
 </ImageFrame>
 
-* **Making API calls from client more secure:** As a general security practice,
-  we recommend generating and sending downscoped tokens per every action
-  performed by the user to limit exposure on the client. For example, even if a
-  user should have preview and share access to a file, instead of sending the
-  user token to the client which would give them complete user-level access, we
-  suggest downscoping the token using Token Exchange and sending them a "preview
-  only" token when they wish to preview a file and a "share" token when they
-  want to share a file.
-* **Creating a custom permissions model:** If you are building an application
-  using UI Elements and the default Box access levels don't fit your permission
-  model, you can start out with a fully scoped token for all your users and trim
-  them down using Token Exchange on the fly to map to your custom permissions
-  model.
-* **Using Box services transactionally (no Box user accounts):** If you are not
-  creating users in Box and are using Box services transactionally, you won't
-  have access to user level tokens. In such cases, you can use Token Exchange to
-  scope down the Service Account token to an appropriately scoped token.
-* **Creating a user only to give them access to another user's content:** If you
-  need to provide an end user "one time" access to another app/managed user's
-  content, Token Exchange can be used to downscope the app/managed user token to
-  the specific permissions and file/folders you want to give the end user access
-  to, and pass it down to UI Elements to give them access to that content. For
-  example, using Token Exchange, you can downscope a user token to have
-  read-only access to content and pass it down to another user.
+* **Making API calls from client more secure:** As a general security practice, we recommend generating and sending downscoped tokens per every action performed by the user to limit exposure on the client. For example, even if a user should have preview and share access to a file, instead of sending the user token to the client which would give them complete user-level access, we suggest downscoping the token using Token Exchange and sending them a "preview only" token when they wish to preview a file and a "share" token when they want to share a file.
+* **Creating a custom permissions model:** If you are building an application using UI Elements and the default Box access levels don't fit your permission model, you can start out with a fully scoped token for all your users and trim them down using Token Exchange on the fly to map to your custom permissions model.
+* **Using Box services transactionally (no Box user accounts):** If you are not creating users in Box and are using Box services transactionally, you won't have access to user level tokens. In such cases, you can use Token Exchange to scope down the Service Account token to an appropriately scoped token.
+* **Creating a user only to give them access to another user's content:** If you need to provide an end user "one time" access to another app/managed user's content, Token Exchange can be used to downscope the app/managed user token to the specific permissions and file/folders you want to give the end user access to, and pass it down to UI Elements to give them access to that content. For example, using Token Exchange, you can downscope a user token to have read-only access to content and pass it down to another user.
 
 ## Implementation
 
@@ -116,28 +96,17 @@ Sharing should be turned off.
 
 **Steps:**
 
-* Create a Managed User, App User or Service Account depending on your use case.
-  You will use this user or application's token as the parent token for Token
-  Exchange. To generate the user token follow:
-  * Authentication with OAuth guide if you would like to create a Managed User
-  * Authentication with JWT guide if you would like to create an App User or
-    Service Account
-* Add the user you created above as a Collaborator to the content using the
-  Create Collaborator API as shown below. This step gives the user access to the
-  content if not already under the user's account. If the file/folder was
-  created under this user's account, then the user by default has "Owner" access
-  to the folder so you can skip the collaboration step.
-
-<!-- markdownlint-disable line-length -->
+* Create a Managed User, App User or Service Account depending on your use case. You will use this user or application's token as the parent token for Token Exchange. To generate the user token follow:
+    * Authentication with OAuth guide if you would like to create a Managed User
+    * Authentication with JWT guide if you would like to create an App User or Service Account
+* Add the user you created above as a Collaborator to the content using the Create Collaborator API as shown below. This step gives the user access to the content if not already under the user's account. If the file/folder was created under this user's account, then the user by default has "Owner" access to the folder so you can skip the collaboration step.
 
 ```curl
 curl https://api.box.com/2.0/collaborations \
-  -H "authorization: Bearer [ACCESS_TOKEN]" \
-  -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
-  -X POST
+    -H "authorization: Bearer [ACCESS_TOKEN]" \
+    -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
+    -X POST
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -150,10 +119,7 @@ default so you can skip the collaboration step.
 
 </Message>
 
-* Use the Token Exchange API to exchange the parent token for a child token that
-  contains the base scope for Content Explorer (`base_explorer`), `item_download`
-  and `item_preview` scopes enabled for the specific `folder_id` `123456`.  We
-  strongly recommend performing this step on the application server.
+* Use the Token Exchange API to exchange the parent token for a child token that contains the base scope for Content Explorer (`base_explorer`), `item_download` and `item_preview` scopes enabled for the specific `folder_id` `123456`.  We strongly recommend performing this step on the application server.
 
 ### Request
 
@@ -171,42 +137,42 @@ curl https://api.box.com/oauth2/token \
 
 ```json
 {
-    "access_token": "CHILD_TOKEN",
-    "expires_in": 4247,
-    "token_type": "bearer",
-    "restricted_to": [
-        {
-            "scope": "base_explorer",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        },
-        {
-            "scope": "item_download",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-       },
-       {
-            "scope": "item_preview",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        }
-    ],
-    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
+  "access_token": "CHILD_TOKEN",
+  "expires_in": 4247,
+  "token_type": "bearer",
+  "restricted_to": [
+    {
+      "scope": "base_explorer",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_download",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_preview",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    }
+  ],
+  "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
 ```
 
@@ -242,36 +208,12 @@ button as it would have with the parent (user) token.
 
 ## When NOT to use Token Exchange
 
-* **Does not replace Users or Groups in Box:** We recommend not using Token
-  Exchange as a replacement to creating users in Box. One way to determine
-  whether you should create Box users, is by doing an assessment to determine if
-  it makes logical sense for every end user of your application to have a copy
-  of their own content. Here are some benefits of maintaining user level
-  accounts in Box, which you wouldn't get by using Token Exchange alone.
-  * **Content isolation/security:** It's better to have user level accounts
-    since in the case of the parent token accidentally leaking, you would only
-    be compromising the content of a single user vs. all users of your
-    enterprise.
-  * **Performance:** Creating users/groups in Box is also useful as your
-    application does not have to determine the appropriate permissions at the
-    time of accessing content since that is likely to affect the performance
-    of your application.
-  * **User level tracking/auditing:** Several Box features such as auditing,
-    access stats, retention, etc. leverage Box's user model. If it is
-    essential for you to use those features for you then you would have to
-    create user-level accounts.
-* **Does not replace Collaborations in Box:** Collaborations is a more standard
-  and easier to scale way to provide Box users with access to content. Also,
-  managing content access through collaborations in Box requires your
-  application to manage lesser code/data on which user should have access to
-  what content. If you are using Token Exchange as a replacement to
-  Collaborations, you will need to keep a mapping of every user -> every file
-  and folder that they should have access to and that could get out of control
-  pretty quickly.
-* **Caching the downscoped tokens:** If performance is critical to your
-  application, you should pre-cache downscoped tokens on the server side. If you
-  are pre-caching tokens, we recommend implementing retries as the tokens expire
-  within 1 hour.
+* **Does not replace Users or Groups in Box:** We recommend not using Token Exchange as a replacement to creating users in Box. One way to determine whether you should create Box users, is by doing an assessment to determine if it makes logical sense for every end user of your application to have a copy of their own content. Here are some benefits of maintaining user level accounts in Box, which you wouldn't get by using Token Exchange alone.
+    * **Content isolation/security:** It's better to have user level accounts since in the case of the parent token accidentally leaking, you would only be compromising the content of a single user vs. all users of your enterprise.
+    * **Performance:** Creating users/groups in Box is also useful as your application does not have to determine the appropriate permissions at the time of accessing content since that is likely to affect the performance of your application.
+    * **User level tracking/auditing:** Several Box features such as auditing, access stats, retention, etc. leverage Box's user model. If it is essential for you to use those features for you then you would have to create user-level accounts.
+* **Does not replace Collaborations in Box:** Collaborations is a more standard and easier to scale way to provide Box users with access to content. Also, managing content access through collaborations in Box requires your application to manage lesser code/data on which user should have access to what content. If you are using Token Exchange as a replacement to Collaborations, you will need to keep a mapping of every user -> every file and folder that they should have access to and that could get out of control pretty quickly.
+* **Caching the downscoped tokens:** If performance is critical to your application, you should pre-cache downscoped tokens on the server side. If you are pre-caching tokens, we recommend implementing retries as the tokens expire within 1 hour.
 
 <Message>
 
@@ -322,8 +264,7 @@ collaborated as an "Editor" into other user's content (highly privileged).
 Instead, it uses Token Exchange using the app user token to generate a
 downscoped token that limits:
 
-* the scope of what the token can be used for (view, upload, download, browse,
-  share, etc.) and/or
+* the scope of what the token can be used for (view, upload, download, browse, share, etc.) and/or
 * the specific files that the user should have access to
 
 ### Scenario #3: Process Flows
@@ -333,13 +274,10 @@ Box's secure content layer to facilitate the sharing of documents between loan
 applicants and internal users (loan processors and underwriters). The basic
 process is as follows:
 
-* When customers apply for a loan they must submit documents through a
-  custom-built web portal as a part of the process (proof of income, identity
-  etc.)
+* When customers apply for a loan they must submit documents through a custom-built web portal as a part of the process (proof of income, identity etc.)
 * Box is used as the intermediary for sending/receiving docs
 * Internal employees need to upload files for customers
-* Internal employees can access documents through a custom web portal as well
-  as Box Web app
+* Internal employees can access documents through a custom web portal as well as Box Web app
 
 The application developers used Token Exchange along with UI Elements to build
 out a loan process management solution, where the application server downscopes

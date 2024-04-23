@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints: []
 related_guides: []
 required_guides:
@@ -14,8 +14,8 @@ type: guide
 total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
-next_page_id: authentication/app-token
-previous_page_id: authentication/app-token/app-token-setup
+next_page_id: ''
+previous_page_id: authentication/app-token/endpoints
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/rollover.md
 ---
@@ -42,14 +42,9 @@ App Token before and are ready to replace either of them.
 By following these steps you can configure your application with two new tokens
 without any issues.
 
-1. Assuming your application is using the Primary App Token, go to [developer
-   console][console] application. Head to the "Configuration" section of your
-   application "Generate Key" button for the Secondary App Token.
-2. Update your application with the Secondary Token. Ensure your application is
-   configured with this new token completely before moving on to the next step.
-3. Once you are confident that the Primary App token is no longer in use, head
-   over to the  [developer console][console] and click the "Revoke" button for
-   the Primary App Token.
+1. Assuming your application is using the Primary App Token, go to [developer console][console] application. Head to the "Configuration" section of your application "Generate Key" button for the Secondary App Token.
+2. Update your application with the Secondary Token. Ensure your application is configured with this new token completely before moving on to the next step.
+3. Once you are confident that the Primary App token is no longer in use, head over to the  [developer console][console] and click the "Revoke" button for the Primary App Token.
 
 <Message>
 

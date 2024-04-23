@@ -29,12 +29,12 @@ obtain an [Access Token][at] for an Admin or Co-Admin with permission to
 step 1, the easiest way to obtain a token meeting these requirements is to log
 in as an Admin or Co-Admin, pull up the application in the
 [Developer Console][dc], and click **Generate Developer Token** under the
-**Configuration** tab. 
+**Configuration** tab.
 
 Use this token to make an API call to the
 [list all metadata templates for enterprise endpoint][metadata-list], as shown
 below. You should be able to find information about your template in the
-response. Specifically, note the `scope` and `templateKey`. 
+response. Specifically, note the `scope` and `templateKey`.
 
 <ImageFrame center>
 

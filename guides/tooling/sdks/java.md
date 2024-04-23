@@ -84,8 +84,6 @@ page][java-sdk-releases].
 When using one of the precompiled JARs, it is important to also add the
 following additional dependencies to the project.
 
-<!-- markdownlint-disable line-length -->
-
 | Dependency                                               |
 | -------------------------------------------------------- |
 | [`minimal-json v0.9.1`][dependency-min-json]             |
@@ -93,8 +91,6 @@ following additional dependencies to the project.
 | [`bouncycastle bcprov-jdk15on v1.52`][dependency-bcprov] |
 | [`bouncycastle bcpkix-jdk15on v1.52`][dependency-bcpkix] |
 | [`Java Cryptography Extension (JCE)`][dependency-crypto] |
-
-<!-- markdownlint-enable line-length -->
 
 <CTA to="https://github.com/box/box-java-sdk">
 

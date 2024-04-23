@@ -97,13 +97,9 @@ after 1 hour.
 
 The following reasons can cause webhooks to be deleted.
 
-1. Deleting a Box application automatically deletes all webhooks associated with
-   it.
-2. Deleting all active Access Tokens associated with a webhook
-automatically deletes the webhook. This includes Developer Tokens and password.
-3. A webhook is automatically deleted if the last successful delivery was 30
-days ago and the period between the last successful delivery and the last
-trigger date is more than 14 days.
+1. Deleting a Box application automatically deletes all webhooks associated with it.
+2. Deleting all active Access Tokens associated with a webhook automatically deletes the webhook. This includes Developer Tokens and password.
+3. A webhook is automatically deleted if the last successful delivery was 30 days ago and the period between the last successful delivery and the last trigger date is more than 14 days.
 
 In all of these cases Box sends a webhook payload with the
 `WEBHOOK.DELETED` event name to the notification URL. The body of the payload

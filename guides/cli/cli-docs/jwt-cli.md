@@ -45,18 +45,13 @@ following scopes are set in the **Configuration** tab of your application:
 - Read all files and folders stored in Box
 - Write all files and folders stored in Box
 
-1. From the left-hand navigation panel on your All Files page, open the
-   [Developer Console][dc]. If this is your first time using the Box
-   API and this option is not already available, you can add it to your account
-   by clicking [here][dc].
+1. From the left-hand navigation panel on your All Files page, open the [Developer Console][dc]. If this is your first time using the Box API and this option is not already available, you can add it to your account by clicking [here][dc].
 
-2. Click **Create New App** > **Custom App** > **Server Authentication
-   (with JWT)** > name the application > **Create App**
+2. Click **Create New App** > **Custom App** > **Server Authentication (with JWT)** > name the application > **Create App**
 
 <Message warning>
 
-Server Authentication (with JWT) always requires Admin authorization before
-use.
+Server Authentication (with JWT) always requires Admin authorization before use.
 
 </Message>
 
@@ -180,12 +175,8 @@ Open your terminal or command line and execute the
 command: `box configure:environments:add PathToConfigFileHere`, replacing
 `PathToConfigHere` with the path to your `config.json` file.
 
-<!-- markdownlint-disable line-length -->
-
 For example:
 `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
-
-<!-- markdownlint-enable line-length -->
 
 <Message type='tip'>
 
@@ -232,8 +223,7 @@ assumes you do not do this.
 ## Next Steps
 
 - You can checkout the [commands][commands] page on GitHub for example code.
-- You can also go to the second part of the [OAuth 2.0 Quick Start][three] for
-    a tutorial on how to use the commands.
+- You can also go to the second part of the [OAuth 2.0 Quick Start][three] for a tutorial on how to use the commands.
 
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/

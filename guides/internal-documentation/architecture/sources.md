@@ -31,28 +31,18 @@ The sources are stored in GitHub repositories.
 
 ## Site sources managed by Tech Pubs and Dev Rel teams
 
-- [Box Platform API] - a set of files that represent the Open API 3.0
-specification for the Box Platform API. These files describe up-to-date
-contents of the API endpoints.
-- [developer.box.com, box.dev] - a set of files that represent the microcopy,
-locale configuration, guides, and pages for the developer documentation
-site.
-- [Framework] - source for the Gatsby templates and importers for the
-developer documentation site.
-- [Changelog] - markdown source for all release notes for Box Platform:
-APIs, SDKs, UI elements, and CLI.
+- [Box Platform API] - a set of files that represent the Open API 3.0 specification for the Box Platform API. These files describe up-to-date contents of the API endpoints.
+- [developer.box.com, box.dev] - a set of files that represent the microcopy, locale configuration, guides, and pages for the developer documentation site.
+- [Framework] - source for the Gatsby templates and importers for the developer documentation site.
+- [Changelog] - markdown source for all release notes for Box Platform: APIs, SDKs, UI elements, and CLI.
 
 ## Site sources managed by other teams
 
 - [CLI] - source code and documentation with code samples for the Box CLI.
-- [Python SDK] - source code and documentation with code samples for the Box
-Python SDK.
-- [Node SDK] - source code and documentation with code samples for the Box Node
-SDK.
-- [Java SDK] - source code and documentation with code samples for the Box Java
-SDK.
-- [.NET SDK] - source code and documentation with code samples for the Box .NET
-SDK.
+- [Python SDK] - source code and documentation with code samples for the Box Python SDK.
+- [Node SDK] - source code and documentation with code samples for the Box Node SDK.
+- [Java SDK] - source code and documentation with code samples for the Box Java SDK.
+- [.NET SDK] - source code and documentation with code samples for the Box .NET SDK.
 
 ## Source validation
 
@@ -65,8 +55,7 @@ For the OpenAPI 3.0 specification we ensure that:
 - files conform to the OpenAPI 3.0 specification,
 - all descriptions and titles pass spell checks for the `en-US` locale,
 - there is no insensitive language in the documentation,
-- the specification contains all the information necessary to
-build the site.
+- the specification contains all the information necessary to build the site.
 
 All validation is handled by using Jest, Spectral, AlexJS, and GitHub actions.
 The status of the build can be monitored on GitHub and in the `#devrel-build`

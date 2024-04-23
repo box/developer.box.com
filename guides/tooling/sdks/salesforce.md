@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -19,7 +19,7 @@ total_steps: 5
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks
-previous_page_id: tooling/sdks/python
+previous_page_id: tooling/sdks/node
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/salesforce.md
 ---

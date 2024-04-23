@@ -34,8 +34,7 @@ manually complete the OAuth 2.0 flow.
 
 1. Build the authorization URL
 2. Redirect the user to the authorization URL
-3. The user grants the application access to take actions on their behalf,
-   which, if successful, provides an authorization code
+3. The user grants the application access to take actions on their behalf, which, if successful, provides an authorization code
 4. Redirect the user back to the application
 5. Exchange the authorization code for an Access Token
 
@@ -56,18 +55,13 @@ using the `as-user` header.
 
 Before continuing you will need to complete the following steps:
 
-- Create a Custom App within the Box Developer Console, which leverages the
-  OAuth 2.0 authentication method.
-- Navigate to the configuration tab for the application to copy the `client_id`
-  and `client_secret` values.
-- Ensure at least one redirect URI is configured in the configuration tab for
-  the application.
+- Create a Custom App within the Box Developer Console, which leverages the OAuth 2.0 authentication method.
+- Navigate to the configuration tab for the application to copy the `client_id` and `client_secret` values.
+- Ensure at least one redirect URI is configured in the configuration tab for the application.
 
 ## 1. Build authorization URL
 
 An [authorization URL][auth] is comprised of the following parameters:
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter             | Status      | Description                                                                                            |
 | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------ |
@@ -86,43 +80,29 @@ the app.
 
 </Message>
 
-<!-- markdownlint-enable line-length -->
-
 At the minimum this URL will always use the format:
 
-<!-- markdownlint-disable line-length -->
-
 `https://account.box.com/api/oauth2/authorize`?`client_id=CLIENTIDHERE`&`response_type=code`
-
-<!-- markdownlint-enable line-length -->
 
 <Tabs>
 
 <Tab title='.Net'>
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
 var clientId = "[CLIENT_ID]";
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 ```
 
-<!-- markdownlint-enable line-length -->
-
 </Tab>
 
 <Tab title='Java'>
-
-<!-- markdownlint-disable line-length -->
 
 ```java
 String baseUrl = "https://account.box.com/api/oauth2/authorize";
 String clientId = "[CLIENT_ID]";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -179,7 +159,7 @@ configured for your app, the user will see a `redirect_uri_mismatch` error.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 // redirectTo(authorizationUrl);
 ```
@@ -188,15 +168,11 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 
 <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 
 // response.redirect(authorizationUrl);
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -219,8 +195,6 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -269,7 +243,7 @@ exchanged for an [Access Token][at] before expiration.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -279,17 +253,17 @@ var client = new HttpClient();
 
 var content = new FormUrlEncodedContent(new[]
 {
-  new KeyValuePair<string, string>("grant_type", "authorization_code"),
-  new KeyValuePair<string, string>("code", "[CODE]"),
-  new KeyValuePair<string, string>("client_id", "[CLIENT_ID]"),
-  new KeyValuePair<string, string>("client_secret", "[CLIENT_SECRET]")
+    new KeyValuePair<string, string>("grant_type", "authorization_code"),
+    new KeyValuePair<string, string>("code", "[CODE]"),
+    new KeyValuePair<string, string>("client_id", "[CLIENT_ID]"),
+    new KeyValuePair<string, string>("client_secret", "[CLIENT_SECRET]")
 });
 
 var response = client.PostAsync(authenticationUrl, content).Result;
 
 class Token
 {
-  public string access_token { get; set; }
+    public string access_token { get; set; }
 }
 
 var data = response.Content.ReadAsStringAsync().Result;
@@ -323,7 +297,7 @@ String response = EntityUtils.toString(entity);
 httpClient.close();
 
 class Token {
-  String access_token;
+    String access_token;
 }
 
 Token token = (Token) gson.fromJson(response, Token.class);
@@ -338,10 +312,10 @@ String accessToken = token.access_token;
 authentication_url = "https://api.box.com/oauth2/token";
 
 params = urlencode({
-  'grant_type': 'authorization_code',
-  'code': '[CODE]',
-  'client_id': '[CLIENT_ID]',
-  'client_secret': '[CLIENT_SECRET]'
+    'grant_type': 'authorization_code',
+    'code': '[CODE]',
+    'client_id': '[CLIENT_ID]',
+    'client_secret': '[CLIENT_SECRET]'
 }).encode()
 
 request = Request(authentication_url, params)
@@ -357,16 +331,16 @@ access_token = json.loads(response)['access_token']
 const authenticationUrl = "https://api.box.com/oauth2/token";
 
 let accessToken = await axios
-  .post(
-    authenticationUrl,
-    querystring.stringify({
-      grant_type: "authorization_code",
-      code: "[CODE]",
-      client_id: "[CLIENT_ID]",
-      client_secret: "[CLIENT_SECRET]",
-    })
-  )
-  .then((response) => response.data.access_token);
+    .post(
+        authenticationUrl,
+        querystring.stringify({
+            grant_type: "authorization_code",
+            code: "[CODE]",
+            client_id: "[CLIENT_ID]",
+            client_secret: "[CLIENT_SECRET]",
+        })
+    )
+    .then((response) => response.data.access_token);
 ```
 
 </Tab>

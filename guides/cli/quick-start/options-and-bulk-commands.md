@@ -64,10 +64,7 @@ To execute a bulk command, use the option `--bulk-file-path=<PATH_TO_CSV>`, wher
 `<PATH_TO_CSV>` is the local path of a CSV file containing the
 necessary information.
 
-<!-- markdownlint-disable line-length -->
-
 As an example, let's create folders using the command `box folders:create --bulk-file-path=pathtoacsv`
-<!-- markdownlint-enable line-length -->
 
 <Message type='tip'>
 
@@ -87,30 +84,21 @@ You can also use a CSV
 Executing the command below creates three folders at the root level, 0, of the
 Service Account's folder tree.
 
-<!-- markdownlint-disable line-length -->
-
 ```bash
 box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv
 ```
-<!-- markdownlint-enable line-length -->
 
 ## Bulk Commands with Options
-
-<!-- markdownlint-disable line-length -->
 
 Passing an option in a command will automatically apply to it to each row in
 the CSV file. For example,
 `box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`
 will create collaborations for each user in the csv as an editor.
-<!-- markdownlint-enable line-length -->
 
 However, you can also use options in the CSV file. Building on the last example,
 instead of using the `--role=editor` option in the command itself, it can be a
 column called `role`. The command itself becomes:
-<!-- markdownlint-disable line-length -->
-
 `box folders:collaborations:create --bulk-file-path=pathtocsv`
-<!-- markdownlint-enable line-length -->
 
 For more details on bulk commands read [this document][bulk].
 

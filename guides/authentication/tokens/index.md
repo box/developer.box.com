@@ -49,8 +49,6 @@ will not be successful if the read scope is not granted to the application.
 The following shows how each application type is expected to create an Access
 Token.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type                  | How to get Access Token                          |
 | ------------------------------------- | ------------------------------------------------ |
 | Custom App + OAuth 2.0                | [Explicit user grant][oauth2-with-sdk]           |
@@ -58,7 +56,6 @@ Token.
 | Custom App + Client Credentials Grant | [Use client ID and client secret][clientcred]    |
 | Limited Access App + App Token        | Configure token in [Developer Console][devcon]   |
 | Custom Skill                          | Access Token in event payload                    |
-<!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/oauth2/without-sdk
 [oauth2-with-sdk]: g://authentication/oauth2/without-sdk

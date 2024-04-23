@@ -38,7 +38,7 @@ To make calls to the Box APIs, you'll first need to set up a Box client.
 Within `process.js`, replace the `// INSTANTIATE BOX CLIENT` comment at the top
 with the following.
 
-```javascript
+```js
 const boxConfig = require("./boxConfig.json");
 const sdk = box.getPreconfiguredInstance(boxConfig);
 const client = sdk.getAppAuthClient("enterprise");
@@ -61,14 +61,11 @@ used to make API calls. At this point it is scoped to the
 Within `Application.java`, replace the `// INSTANTIATE BOX CLIENT` comment
 within the `processEvent` method with the following.
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 this.fileReader = new FileReader("boxConfig.json");
 this.boxConfig = BoxConfig.readFrom(fileReader);
 this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
 ```
-<!-- markdownlint-enable line-length -->
 
 The `boxConfig` assignment line will use the `boxConfig.json` file you
 downloaded from your Box app at the end of [step 2][step2]. The sample above is
@@ -104,34 +101,31 @@ that task.
 
 Replace the `addGroupUser` function with the following.
 
-<!-- markdownlint-disable line-length -->
-
-```javascript
+```js
 function addGroupUser(groupId, email) {
-  client.enterprise.getUsers({ filter_term: email }).then((users) => {
-    if (users.entries.length > 0) {
-      const userId = users.entries[0].id;
-      const groupRole = client.groups.userRoles.MEMBER;
+    client.enterprise.getUsers({ filter_term: email }).then((users) => {
+        if (users.entries.length > 0) {
+            const userId = users.entries[0].id;
+            const groupRole = client.groups.userRoles.MEMBER;
 
-      client.groups
-        .addUser(groupId, userId, { role: groupRole })
-        .then((membership) => {
-          if (membership.id) {
-            console.log(`Member added with membership ID: ${membership.id}`);
-          } else {
-            console.log(`Member not added`);
-          }
-        })
-        .catch(function (err) {
-          console.log(err.response.body);
-        });
-    } else {
-      console.log("No Box user found to add to group");
-    }
-  });
+            client.groups
+                .addUser(groupId, userId, { role: groupRole })
+                .then((membership) => {
+                    if (membership.id) {
+                        console.log(`Member added with membership ID: ${membership.id}`);
+                    } else {
+                        console.log(`Member not added`);
+                    }
+                })
+                .catch(function (err) {
+                    console.log(err.response.body);
+                });
+        } else {
+            console.log("No Box user found to add to group");
+        }
+    });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -141,19 +135,19 @@ Replace the `addGroupUser` method with the following.
 
 ```java
 public void addGroupUser(String groupId, String userEmail) {
-  Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
+    Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
 
-  for (BoxUser.Info user : users) {
-    if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
-      try {
-        BoxGroup group = new BoxGroup(boxAPI, groupId);
-        BoxUser boxUser = new BoxUser(this.boxAPI, user.getID());
-        BoxGroupMembership.Info groupMembershipInfo = group.addMembership(boxUser);
-      } catch (Exception ex) {
-        System.err.println("User already present");
-      }
+    for (BoxUser.Info user : users) {
+        if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
+            try {
+                BoxGroup group = new BoxGroup(boxAPI, groupId);
+                BoxUser boxUser = new BoxUser(this.boxAPI, user.getID());
+                BoxGroupMembership.Info groupMembershipInfo = group.addMembership(boxUser);
+            } catch (Exception ex) {
+                System.err.println("User already present");
+            }
+        }
     }
-  }
 }
 ```
 
@@ -194,20 +188,20 @@ content.
 
 Replace the `removeGroupUser` function with the following.
 
-```javascript
+```js
 function removeGroupUser(groupId, email) {
-  client.groups.getMemberships(groupId).then(memberships => {
-    for (let i = 0; i < memberships.entries.length; i++) {
-      if (memberships.entries[i].user.login === email) {
-        client.groups
-        .removeMembership(memberships.entries[i].id)
-        .then(() => {
-          console.log('Group user removed')
-        });
-        break;
-      }
-    }
-  });
+    client.groups.getMemberships(groupId).then(memberships => {
+        for (let i = 0; i < memberships.entries.length; i++) {
+            if (memberships.entries[i].user.login === email) {
+                client.groups
+                .removeMembership(memberships.entries[i].id)
+                .then(() => {
+                    console.log('Group user removed')
+                });
+                break;
+            }
+        }
+    });
 }
 ```
 
@@ -216,8 +210,6 @@ function removeGroupUser(groupId, email) {
 <Choice option='programming.platform' value='java' color='none'>
 
 Replace the `removeGroupUser` method with the following.
-
-<!-- markdownlint-disable line-length -->
 
 ```java
 public void removeGroupUser(String groupId, String userEmail) {
@@ -231,7 +223,6 @@ public void removeGroupUser(String groupId, String userEmail) {
   }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -275,32 +266,28 @@ The next Box function we need has two main purposes.
 
 <Choice option='programming.platform' value='node' color='none'>
 
-  
 Replace the `getGroupId` function with the following.
 
-<!-- markdownlint-disable line-length -->
-
-```javascript
+```js
 function getGroupId(groupName, callback) {
-  client.groups.getAll().then((groups) => {
-    const group = groups.entries.filter((g) => g.name === groupName)[0];
+    client.groups.getAll().then((groups) => {
+        const group = groups.entries.filter((g) => g.name === groupName)[0];
 
-    if (!group) {
-      client.groups
-        .create(groupName, {
-          description: "Slack channel collaboration group",
-          invitability_level: "all_managed_users",
-        })
-        .then((group) => {
-          callback(group.id);
-        });
-    } else {
-      callback(group.id);
-    }
-  });
+        if (!group) {
+            client.groups
+              .create(groupName, {
+                  description: "Slack channel collaboration group",
+                  invitability_level: "all_managed_users",
+              })
+              .then((group) => {
+                  callback(group.id);
+              });
+        } else {
+            callback(group.id);
+        }
+    });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -310,21 +297,21 @@ Replace the `getGroupId` method with the following.
 
 ```java
 public String getGroupId(String groupName) {
-  String groupId = new String();
+    String groupId = new String();
 
-  Iterable<BoxGroup.Info> groups = BoxGroup.getAllGroups(this.boxAPI);
-  for (BoxGroup.Info groupInfo : groups) {
-    if (groupInfo.getName().toUpperCase().equals(groupName)) {
-      groupId = groupInfo.getID();
+    Iterable<BoxGroup.Info> groups = BoxGroup.getAllGroups(this.boxAPI);
+    for (BoxGroup.Info groupInfo : groups) {
+        if (groupInfo.getName().toUpperCase().equals(groupName)) {
+            groupId = groupInfo.getID();
+        }
     }
-  }
 
-  if (groupId.isEmpty()) {
-    BoxGroup.Info groupInfo = BoxGroup.createGroup(boxAPI, groupName);
-    groupId = groupInfo.getID();
-  }
+    if (groupId.isEmpty()) {
+        BoxGroup.Info groupInfo = BoxGroup.createGroup(boxAPI, groupName);
+        groupId = groupInfo.getID();
+    }
 
-  return groupId;
+    return groupId;
 }
 ```
 
@@ -362,40 +349,37 @@ task.
 
 Replace the `processContent` function with the following.
 
-<!-- markdownlint-disable line-length -->
-
-```javascript
+```js
 function processContent(user, channel, itemType, itemId) {
-  getGroupId(channel, function (groupId) {
-    const email = user.profile.email;
+    getGroupId(channel, function (groupId) {
+        const email = user.profile.email;
 
-    client.enterprise.getUsers({ filter_term: email }).then((users) => {
-      if (users.entries.length > 0) {
-        client.asUser(users.entries[0].id);
-        const collabRole = client.collaborationRoles.VIEWER;
-        const collabOptions = { type: itemType };
+        client.enterprise.getUsers({ filter_term: email }).then((users) => {
+            if (users.entries.length > 0) {
+                client.asUser(users.entries[0].id);
+                const collabRole = client.collaborationRoles.VIEWER;
+                const collabOptions = { type: itemType };
 
-        client.collaborations
-          .createWithGroupID(groupId, itemId, collabRole, collabOptions)
-          .then((collaboration) => {
-            console.log(
-              `Content added with collaboration ID ${collaboration.id}`
-            );
-          })
-          .catch(function (err) {
-            console.log(
-              util.inspect(err.response.body, {
-                showHidden: false,
-                depth: null,
-              })
-            );
-          });
-      }
+                client.collaborations
+                    .createWithGroupID(groupId, itemId, collabRole, collabOptions)
+                    .then((collaboration) => {
+                        console.log(
+                            `Content added with collaboration ID ${collaboration.id}`
+                        );
+                    })
+                    .catch(function (err) {
+                        console.log(
+                          util.inspect(err.response.body, {
+                              showHidden: false,
+                              depth: null,
+                          })
+                        );
+                    });
+            }
+        });
     });
-  });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -403,43 +387,40 @@ function processContent(user, channel, itemType, itemId) {
 
 Replace the `processContent` method with the following.
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
-  String groupId = getGroupId(channel);
+    String groupId = getGroupId(channel);
 
-  JSONObject userObj = (JSONObject) userResponse.get("user");
-  JSONObject userProfile = (JSONObject) userObj.get("profile");
-  String userEmail = (String) userProfile.get("email");
+    JSONObject userObj = (JSONObject) userResponse.get("user");
+    JSONObject userProfile = (JSONObject) userObj.get("profile");
+    String userEmail = (String) userProfile.get("email");
 
-  Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
+    Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(this.boxAPI, userEmail);
 
-  for (BoxUser.Info user : users) {
-    if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
-      String uid = user.getID();
-      boxAPI.asUser(uid);
+    for (BoxUser.Info user : users) {
+        if (user.getLogin().toUpperCase().equals(userEmail.toUpperCase())) {
+            String uid = user.getID();
+            boxAPI.asUser(uid);
 
-      BoxCollaborator collabGroup = new BoxGroup(boxAPI, groupId);
+            BoxCollaborator collabGroup = new BoxGroup(boxAPI, groupId);
 
-      try {
-        if (fType.equals("file")) {
-          BoxFile file = new BoxFile(boxAPI, fId);
-          file.collaborate(collabGroup, BoxCollaboration.Role.VIEWER, false, false);
-        } else if (fType.equals("folder")) {
-          BoxFolder folder = new BoxFolder(boxAPI, fId);
-          folder.collaborate(collabGroup, BoxCollaboration.Role.VIEWER);
+            try {
+                if (fType.equals("file")) {
+                    BoxFile file = new BoxFile(boxAPI, fId);
+                    file.collaborate(collabGroup, BoxCollaboration.Role.VIEWER, false, false);
+                } else if (fType.equals("folder")) {
+                    BoxFolder folder = new BoxFolder(boxAPI, fId);
+                    folder.collaborate(collabGroup, BoxCollaboration.Role.VIEWER);
+                }
+            } catch (Exception ex) {
+                System.err.println("Collaboration failed");
+            }
+
+            boxAPI.asSelf();
         }
-      } catch (Exception ex) {
-        System.err.println("Collaboration failed");
-      }
-
-      boxAPI.asSelf();
     }
-  }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 

@@ -47,11 +47,9 @@ Learn more about authentication methods
 
 A Custom App is best used when the application:
 
-- Wants to use [OAuth 2.0][oauth2], [JWT][jwt] or 
- [Client Credentials Grant][cc] for authentication.
+- Wants to use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication.
 - Wants to upload and download files
-- Wants the freedom to access both their own files, as well as files owned by
-  [managed or external users][users].
+- Wants the freedom to access both their own files, as well as files owned by [managed or external users][users].
 - Wants the option to list the application in the Box App Center
 - Wants to provide integration into the Box Web App
 
@@ -59,17 +57,13 @@ A Custom App is best used when the application:
 
 Example use cases for a Custom App include:
 
-- A file vault in an application that allows an end user to access files that
-  have been shared with them, while also providing access for employees to the
-  same files through the Box Web app.
+- A file vault in an application that allows an end user to access files that have been shared with them, while also providing access for employees to the same files through the Box Web app.
 
   An example of this is financial advisor sharing statements and investment
-  prospectuses with investors that can be viewed and commented on within a 
+  prospectuses with investors that can be viewed and commented on within a
   custom application.
 
-- A file upload feature in an application that allows an end user to submit and
-  upload files from within a custom-built application to Box. These uploads then
-  initiate a business process with the Box Web app.
+- A file upload feature in an application that allows an end user to submit and upload files from within a custom-built application to Box. These uploads then initiate a business process with the Box Web app.
 
   An example of this is a candidate submitting a PDF of a resume to a
   recruiting portal then can then be routed to an appropriate employee for

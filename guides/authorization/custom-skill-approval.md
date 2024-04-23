@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 related_guides:
@@ -18,7 +18,7 @@ total_steps: 4
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization
-previous_page_id: authorization/limited-access-approval
+previous_page_id: authorization/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-skill-approval.md
 ---
@@ -63,11 +63,8 @@ operate.
 
 There are two options here:
 
-* **All content in your company** authorizes the Skill at the root folder of
-  every user. This results in every file uploaded to any folder being processed
-  by the Box Skill application.
-* **Select a list of folders** enables the application to a specific folder
-  or set of folders on which the Skill application operates.
+* **All content in your company** authorizes the Skill at the root folder of every user. This results in every file uploaded to any folder being processed by the Box Skill application.
+* **Select a list of folders** enables the application to a specific folder or set of folders on which the Skill application operates.
 
 <ImageFrame border>
 
