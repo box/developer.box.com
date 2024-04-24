@@ -275,7 +275,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "false",
+  "headers.secondary.notifications.display": "true",
   // The content of the notification
   "headers.secondary.notifications.message": "Add the power of the Box AI API to your custom apps at Content Cloud Summit on May 15\n",
   // The link to navigate to when the CTA is clicked
@@ -671,7 +671,7 @@
   "ai_dev_zone.side_panel.summary.url": "/guides/box-ai/ask-questions/",
   "ai_dev_zone.side_panel.metadata.title": "Metadata extraction",
   "ai_dev_zone.side_panel.metadata.cta": "Learn more",
-  "ai_dev_zone.side_panel.metadata.url": "/",
+  "ai_dev_zone.side_panel.metadata.url": "https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83",
   "ai_dev_zone.side_panel.qa.title": "Document Q&A",
   "ai_dev_zone.side_panel.qa.cta": "Learn more",
   "ai_dev_zone.side_panel.qa.url": "/guides/box-ai/",
