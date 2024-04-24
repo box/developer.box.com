@@ -144,10 +144,6 @@ request did not succeed).
 
 1. **使用するドメインが許可済みオリジンのリストに存在するかどうかを確認する** - 開発者コンソールに移動して、アプリケーションを開きます。\[**構成**] タブをクリックし、下にスクロールして、\[**CORSドメイン**] セクションでリストにドメインを追加できます。
 
-<ImageFrame border shadow center>
-
-![CORS許可リスト](./images/cors_allowed_origins.png)
-
-</ImageFrame>
+    ![CORS許可リスト](./images/cors_allowed_origins.png)
 
 2. **サーバーが正しく設定されているかどうかを確認する** - クロスドメインリクエストを処理するか、**No 'access-control-allow-origin' header is present on the requested resource (リクエストしたリソースには「access-control-allow-origin」ヘッダーが存在しません)** という警告が表示された場合は非クロスドメインリクエストを使用するようサーバーを構成します。
