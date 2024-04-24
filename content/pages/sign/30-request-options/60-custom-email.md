@@ -42,7 +42,6 @@ For example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -65,14 +64,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single_more_options(
     client: Client,
     ...
@@ -104,7 +101,6 @@ def main():
         prep_needed=False,
         email_subject="All we need is your signature to get started",
     )
-
 ```
 
 </Tab>
@@ -137,7 +133,6 @@ For example see this request:
 <Tab title='cURL'>
 
 ```bash
-
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer fN...dD'
 --data-raw '{
@@ -160,14 +155,12 @@ For example see this request:
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_embed_url(
     client: Client,
     document_id: str,
@@ -208,7 +201,6 @@ def main():
         SIGNER_A_EXTERNAL_ID,
     )
     check_sign_request(sign_with_embed_url)
-
 ```
 
 </Tab>
@@ -243,7 +235,6 @@ Returns (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
   Status: created
   Signers: 2
@@ -252,7 +243,6 @@ Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
     embed_url: https://app.box.com/sign/document/...
     iframeable_embed_url: https://app.box.com/embed/sign/document/...
   Prepare url: None
-
 ```
 
 </Tab>

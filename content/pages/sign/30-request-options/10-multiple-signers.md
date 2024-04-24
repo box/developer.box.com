@@ -31,7 +31,6 @@ Creating a method specific for this:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -60,14 +59,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         },
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_contract(
     client: Client,
     document_id: str,
@@ -121,7 +118,6 @@ def main():
     )
     if sign_contract_multi.prepare_url is not None:
         open_browser(sign_contract_multi.prepare_url)
-
 ```
 
 </Tab>
@@ -185,7 +181,6 @@ Let's create a method for this:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -222,14 +217,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_contract_step(
     client: Client,
     document_id: str,
@@ -295,7 +288,6 @@ def main():
     )
     if sign_contract_multi_step.prepare_url is not None:
         open_browser(sign_contract_multi_step.prepare_url)
-
 ```
 
 </Tab>

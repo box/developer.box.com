@@ -75,7 +75,6 @@ For example:
     }
   ]
 }
-
 ```
 
 ### Shield information barrier pending
@@ -223,7 +222,6 @@ restricted groups.
     "group_name": "Support"
   }
 }
-
 ```
 
 ### Collaboration blocked
@@ -274,7 +272,6 @@ collaboration.
     "is_performed_by_admin": false
   }
 }
-
 ```
 
 ### Shared item access blocked
@@ -327,7 +324,6 @@ The `additional_details` payload provides details of the shared link and additio
     }
   }
 }
-
 ```
 
 ### Moving item blocked
@@ -377,7 +373,6 @@ The `additional_details` payload provides details of the folder.
     }
   }
 }
-
 ```
 
 ### Copying item blocked

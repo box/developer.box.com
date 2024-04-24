@@ -66,7 +66,6 @@ Consider this method:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer nQ...xY'
@@ -88,14 +87,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request_structured(
     client: Client, file_id: str, signer_email: str
 ) -> SignRequest:
@@ -125,7 +122,6 @@ def main():
         client, STRUCTURED_DOC, SIGNER_A
     )
     check_sign_request(sign_request)
-
 ```
 
 </Tab>
@@ -181,14 +177,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
   Status: converting
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -243,14 +237,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request_structured_with_prefill(
     client: Client, file_id: str, signer_name, signer_email: str
 ) -> SignRequest:
@@ -287,7 +279,6 @@ def main():
         client, STRUCTURED_DOC, "Signer A", SIGNER_A
     )
     check_sign_request(sign_request_pre_pop)
-
 ```
 
 </Tab>
@@ -357,14 +348,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: converting
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -386,18 +375,15 @@ Let's create a method to extract the information from the signed request:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests/
 11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
 --header 'Authorization: Bearer nQ...xY'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def check_sign_request_by_id(client: Client, sign_request_id: str):
     """Check sign request by id"""
     sign_request = client.sign_requests.get_sign_request_by_id(sign_request_id)
@@ -431,7 +417,6 @@ def main():
     # Latest sign request
     LATEST_SIGN_REQUEST = "7b86e46c-72ba-4568-a6ff-787077cca007"
     check_sign_request_by_id(client, LATEST_SIGN_REQUEST)
-
 ```
 
 </Tab>
@@ -527,7 +512,6 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: signed
   Signers: 2
@@ -538,7 +522,6 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
       date: 2023-11-15
       signature: <other>
   Prepare url: None
-
 ```
 
 </Tab>

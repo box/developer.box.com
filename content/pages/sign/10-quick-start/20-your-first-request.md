@@ -18,7 +18,6 @@ signature request. See the example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <access token>'
@@ -41,14 +40,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single(
     client: Client,
     document_id: str,
@@ -83,7 +80,6 @@ def main():
 
     if sign_pdf_prep.prepare_url is not None:
         open_browser(sign_pdf_prep.prepare_url)
-
 ```
 
   </Tab>
@@ -140,12 +136,10 @@ This will result in a signature request with a prepare document URL
 <Tab title='Python Gen SDK'>
 
 ```YAML
-
 Simple sign request with prep: xyz-abc-123
   Status: converting
   Signers: signer@example.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
-
 ```
 
 </Tab>

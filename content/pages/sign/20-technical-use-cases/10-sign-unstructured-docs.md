@@ -59,7 +59,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
   <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single(
     client: Client,
     document_id: str,
@@ -94,7 +93,6 @@ def main():
 
     if sign_pdf_prep.prepare_url is not None:
         open_browser(sign_pdf_prep.prepare_url)
-
 ```
 
   </Tab>
@@ -150,12 +148,10 @@ This results in a signature request with a prepare document URL (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request with prep: xyz-abc-123
   Status: converting
   Signers: signer@example.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
-
 ```
 
 </Tab>

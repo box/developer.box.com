@@ -23,23 +23,19 @@ Here is an example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 52f6f86c-c0b3-401e-a4ec-1709f277c469/resend' \
 --header 'Authorization: Bearer ej...3t'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_send_reminder(client: Client, sign_request_id: str):
     """Send reminder to signers"""
     sign_request = client.sign_requests.resend_sign_request(sign_request_id)
     return sign_request
-
 ```
 
 </Tab>
@@ -57,7 +53,6 @@ For example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <access token>'
@@ -80,14 +75,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single_more_options(
     client: Client,
     document_id: str,
@@ -130,7 +123,6 @@ def main():
         prep_needed=False,
         auto_reminder = True,
     )
-
 ```
 
 </Tab>

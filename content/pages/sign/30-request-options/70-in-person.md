@@ -37,7 +37,6 @@ Let's use a template with a single signer as an example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Le...Cb'
@@ -56,14 +55,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_in_person(
     client: Client,
     document_id: str,
@@ -105,7 +102,6 @@ def main():
         SIGNER_A_EXTERNAL_ID,
     )
     check_sign_request(sign_with_embed_url)
-
 ```
 
 </Tab>
@@ -150,7 +146,6 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
   Status: created
   Signers: 2
@@ -159,7 +154,6 @@ Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
     embed_url: https://app.box.com/sign/document/...
     iframeable_embed_url: https://app.box.com/embed/sign/document/...
   Prepare url: None
-
 ```
 
 </Tab>
@@ -184,7 +178,6 @@ For example, if you add a second signer to the request:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer Le...Cb'
@@ -208,14 +201,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_in_person_multiple(
     client: Client,
     document_id: str,
@@ -264,7 +255,6 @@ def main():
         SIGNER_B
     )
     check_sign_request(sign_with_embed_url)
-
 ```
 
 </Tab>
@@ -315,7 +305,6 @@ Results in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
   Status: created
   Signers: 3
@@ -328,7 +317,6 @@ Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
     signer: signer_b@example.com
 
   Prepare url: None
-
 ```
 
 </Tab>

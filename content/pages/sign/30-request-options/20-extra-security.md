@@ -5,25 +5,24 @@ rank: 2
 
 # Extra security (2FA)
 
-Imagine you want an [additional layer of security][2FA] for your signature 
-requests, by requesting the signer to use a password or a  phone verification 
+Imagine you want an [additional layer of security][2FA] for your signature
+requests, by requesting the signer to use a password or a  phone verification
 in the document signing step.
 
 ![2FA Signature request](images/sign-flow-2fa.png)
 
 ## Phone verification
 
-You can require the signer to use 2FA through their mobile phone to complete 
-the signature request by passing the `is_phone_verification_required_to_view` 
-parameter. 
+You can require the signer to use 2FA through their mobile phone to complete
+the signature request by passing the `is_phone_verification_required_to_view`
+parameter.
 
 For example:
 
 <Tabs>
 <Tab title='cURL'>
-    
-```bash
 
+```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -47,14 +46,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_verify_phone(
     client: Client,
     document_id: str,
@@ -96,13 +93,12 @@ def main():
         SIGNER_A_PHONE,
     )
     check_sign_request(sign_with_phone_verification)
-
 ```
 
 </Tab>
 </Tabs>
 
-When the signer tries to complete the signature request a phone verification 
+When the signer tries to complete the signature request a phone verification
 pops up:
 
 ![Phone verification](images/sign-simple-phone-verification.png)
@@ -113,21 +109,20 @@ Then the signer is prompted to enter the code sent in a SMS:
 
 <Message  size='small'>
 
-This check is done as the last step, so it does not prevent the signer from 
+This check is done as the last step, so it does not prevent the signer from
 accessing the document.
 
 </Message>
 
 ## Password verification
 
-You can require the signer to use a password to open the signature request 
+You can require the signer to use a password to open the signature request
 by passing the `password` parameter in the `signer` object. For example:
 
 <Tabs>
 <Tab title='cURL'>
-    
-```bash
 
+```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -151,14 +146,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_verify_password(
     client: Client,
     document_id: str,
@@ -198,8 +191,7 @@ def main():
         SIGN_DOCS_FOLDER,
         SIGNER_A,
         "1234",
-    )    
-
+    )
 ```
 
 </Tab>
@@ -211,7 +203,7 @@ Once the signer opens the signature request they should see something like this:
 
 <Message  size='small'>
 
-As the password verification is done on the first step, it prevents the 
+As the password verification is done on the first step, it prevents the
 signer from accessing the document until the correct password is provided.
 
 </Message>

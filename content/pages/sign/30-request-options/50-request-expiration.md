@@ -5,11 +5,11 @@ rank: 5
 
 # Request expiration
 
-There are situations where you might need to [set an expiration date][exp-date] 
+There are situations where you might need to [set an expiration date][exp-date]
 for the signature request.
 
-For example, imagine a quote for a service that is valid for 30 days. This 
-proposal has to be signed by a certain date, and if not, the signature request 
+For example, imagine a quote for a service that is valid for 30 days. This
+proposal has to be signed by a certain date, and if not, the signature request
 for the quote is no longer valid.
 
 All you need to do is pass the `days_valid` parameter.
@@ -18,9 +18,8 @@ For example:
 
 <Tabs>
 <Tab title='cURL'>
-    
-```bash
 
+```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ej...3t'
@@ -43,14 +42,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-    
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single_more_options(
     ...
 
@@ -66,7 +63,6 @@ def sign_doc_single_more_options(
     )
 
     return sign_request
-
 ```
 
 </Tab>

@@ -198,7 +198,6 @@ Next, add a `before_request` definition to be run before route handling is
 engaged. We'll be using this to capture our Okta user information, if available.
 
 ```python
-
 # Fetch Okta user record if logged in
 @app.before_request
 def before_request():

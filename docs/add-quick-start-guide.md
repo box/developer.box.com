@@ -22,7 +22,6 @@ This would create a new markdown file based on a template in
 Next, take the new markdown file and copy it to create the pages needed. For
 example this is a quick-start with 3 steps, an overview, and a next steps page.
 The number in the path represents the order of the steps.
-
 ```
 webhooks/quick-start/0-index.md
 webhooks/quick-start/1-setup.md

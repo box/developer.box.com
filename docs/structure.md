@@ -57,7 +57,6 @@ rank: 123
 # Title
 
 Content
-
 ```
 
 Alternatively we support putting the rank in the filename, as this makes it

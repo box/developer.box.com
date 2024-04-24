@@ -311,7 +311,6 @@ For additional information on metadata queries, see [this guide][metadata-query]
 3. Pass the required parameters to the Content Explorer component.
 
 ```js
-
   [...]
 
     function App() {

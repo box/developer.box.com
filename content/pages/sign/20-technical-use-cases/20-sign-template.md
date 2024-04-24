@@ -58,17 +58,14 @@ In order to work with templates in the Box Sign API we are going to need the
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_templates' \
 --header 'Authorization: Bearer E9...Q0'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_templates_list(client: Client):
     """List all sign templates"""
     sign_templates = client.sign_templates.get_sign_templates()
@@ -85,7 +82,6 @@ def main():
     print(f"\nHello, I'm {user.name} ({user.login}) [{user.id}]")
 
     sign_templates_list(client)
-
 ```
 
 </Tab>
@@ -164,12 +160,10 @@ Returns something similar to (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Hello, I'm Rui Barbosa [18622116055]
 
 Sign templates: 1
   94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
-
 ```
 
 </Tab>
@@ -193,7 +187,6 @@ See this example:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer E9...Q0'
@@ -210,14 +203,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request(client: Client, template_id: str, signer_email: str):
     """Create sign request from template"""
     parent_folder = FolderMini(
@@ -242,7 +233,6 @@ def main():
     # Create sign request from template
     sign_request = create_sign_request(client, TEMPLATE_SIMPLE, SIGNER_A)
     check_sign_request(sign_request)
-
 ```
 
 </Tab>
@@ -291,14 +281,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: b25674a2-540b-4201-ae18-a78f05ef1a9a
   Status: created
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -345,7 +333,6 @@ Let’s create a new method to pre-populate the name:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_requests' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer E9..Q0'
@@ -368,14 +355,12 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
         }
     ]
 }'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request_name_default(
     client: Client, template_id: str, signer_name, signer_email: str
 ):
@@ -411,7 +396,6 @@ def main():
         client, TEMPLATE_SIMPLE, "Signer A", SIGNER_A
     )
     check_sign_request(sign_request_name)
-
 ```
 
 Resulting in (simplified):
@@ -467,14 +451,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: adab1740-eeba-4392-a3f5-defddc79c946
   Status: created
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -498,18 +480,15 @@ all the signature requirements:
 <Tab title='cURL'>
 
 ```bash
-
 curl --location 'https://api.box.com/2.0/sign_templates/
 f2ec720d-47a6-4052-8210-9bfa8d6c349c' \
 --header 'Authorization: Bearer OL..BQ'
-
 ```
 
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_template_print_info(client: Client, template_id: str):
     sign_template = client.sign_templates.get_sign_template_by_id(template_id)
     print(f"\nSign template: {sign_template.id} - {sign_template.name}")
@@ -528,7 +507,6 @@ def main():
 
     # Print sign template details
     sign_template_print_info(client, TEMPLATE_SIMPLE)
-
 ```
 
 Resulting in (simplified):
@@ -599,7 +577,6 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Sign template: 94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
   Signers: 2
     final_copy_reader
@@ -608,7 +585,6 @@ Sign template: 94e3815b-f7f5-4c2c-8a26-e9ba5c486031 - Simple-PDF.pdf
       None              date      True
       signer_full_name  text      True
       None              signature True
-
 ```
 
 </Tab>
