@@ -33,6 +33,9 @@ files:
     1496435380115:
       name: Sample_article.docx
       description: Document
+    1511804164480:
+      name: Sample_contract.docx
+      description: Document
   go_back_button: AI Dev Zone
 
 sample_code:
@@ -45,7 +48,7 @@ sample_code:
   metadata:
     headline: Box Metadata Suggestions API
     paragraph: Use this endpoint to integrate
-     document metadata extraction into
+     document metadata suggestions into
      your application.
     pricing: Pricing and packaging to be announced.
   qa:
