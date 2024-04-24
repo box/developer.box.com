@@ -41,8 +41,6 @@ including a co-owner collaboration of the
 service account on the Slack channel - Box folder mapping.
 To do so, use this script:
 
-<!-- markdownlint-disable line-length -->
-
 ```js
 const BoxSDK = require('box-node-sdk');
 const axios = require('axios');
@@ -110,7 +108,6 @@ async function createSlackIntegrationMapping() {
 
 module.exports = { createSlackIntegrationMapping }
 ```
-<!-- markdownlint-enable line-length -->
 
 <Message notice>
   Make sure to replace `PLACEHOLDER` with the logged value of

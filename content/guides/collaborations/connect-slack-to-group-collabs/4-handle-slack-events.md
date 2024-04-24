@@ -124,7 +124,6 @@ request, the event payload is sent to our event process function.
 Load `Application.java` in your preferred editor, then replace the
 `@PostMapping("/event")` block with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 @PostMapping("/event")
 @ResponseBody
@@ -164,7 +163,6 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
     processEvent(data);
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 When an event comes through, the handler will send an immediate 200 response
 back before code processing. Slash commands will be sent as URL encoded
@@ -224,7 +222,6 @@ right part of our application.
 
 Replace the `process` function with the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 function process(res, data) {
     if (data.type && data.type === "event_callback") {
@@ -254,7 +251,6 @@ function process(res, data) {
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 The purpose of this function is to figure out if the payload from Slack is a
 user event or a Slash command, fetch any needed information, then route to the
@@ -295,7 +291,6 @@ content in with the Box group so that everyone has access.
 
 Replace the `process` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public void process(JSONObject inputJSON) throws Exception {
     if (inputJSON.containsKey("event")) {
@@ -322,7 +317,6 @@ public void process(JSONObject inputJSON) throws Exception {
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 The purpose of this method is to figure out if the payload from Slack is a
 user event or a Slash command, fetch any needed information, then route to the
@@ -371,7 +365,6 @@ events that we need to account for:
 
 Replace the `processUser` function with the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 function processUser(user, event, channel) {
     getGroupId(channel, function (groupId) {
@@ -394,14 +387,12 @@ function processUser(user, event, channel) {
     });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
 Replace the `processUser` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
     String groupId = getGroupId(channel);
@@ -421,7 +412,6 @@ public void processUser(JSONObject userResponse, String event, String channel) t
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -470,7 +460,6 @@ function processSlackChannel(channel, groupId) {
 
 Replace the `processSlackChannel` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public void processSlackChannel(String channel, String groupId) throws Exception {
     String limit = "100";
@@ -500,7 +489,6 @@ public void processSlackChannel(String channel, String groupId) throws Exception
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -557,14 +545,12 @@ user profile information (if valid) to the specified callback.
 
 Replace the `getSlackUser` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public JSONObject getSlackUser(String userId) throws Exception {
     String usersPath = String.format("%s/users.info?token=%s&user=%s", slackConfig.slackApiUrl, slackConfig.botToken, userId);
     return sendGETRequest(usersPath);
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 This method sends a request to Slack to capture the user profile, then returns
 the response from that request, which should be a user profile JSON object.

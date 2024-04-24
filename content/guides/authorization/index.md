@@ -50,7 +50,6 @@ These [settings][setting] can be found by navigating to:
 To see what steps an Admin must complete for a given app, review the following
 scenarios.
 
-<!-- markdownlint-disable line-length -->
 <!--alex ignore-->
 **Disable published apps by default**:
 
@@ -80,7 +79,6 @@ scenarios.
 |[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
-<!-- markdownlint-enable line-length -->
 
 [auth]: g://authentication/select
 <!-- i18n-enable localize-links -->

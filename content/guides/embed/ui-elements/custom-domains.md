@@ -160,7 +160,7 @@ To **list** all domains, run the following command in a terminal:
 
 ### Notes
 
-* When safelisting domains ensure you are entering the domains without the HTTP protocol (for example without `https://`) or any trailing path like `yourdomain.com/page/3`).
+* When safelisting domains ensure you are entering the domains without the HTTP protocol (for example without `https://`) or any trailing path like `yourdomain.com/page/3`.
 * All requests most come from a secure origin via HTTPS.
 * Safelisting subdomains and ports is possible as the wildcard `*` is supported. For example, all subdomains could be safelisted by adding `*.yourdomain.com` to your list.
 

@@ -16,7 +16,6 @@ content, tags, or comments match the query provided. By setting the
 `content_types` parameter the search can be narrowed down to only the items that
 match the query for the content type defined.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -91,15 +90,11 @@ client.search.query(
 | `comments`     | The content of any of the comments on a file or folder.              |
 | `tags`          | Any tags that are applied to an item, as defined by its `tags` field. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by date
 
 By default, search returns files created at any time, and updated at any time.
 It is possible to filter results by both the date the file or folder was
 last updated or when it was created.
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
  <Tab title='cURL'>
@@ -177,15 +172,12 @@ client.search.query(
 | `created_at_range` | Defines a range of `created_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
 | `updated_at_range` | Defines a range of `updated_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by file extension
 
 By default, a search returns items with any kind of file extension. It is
 possible to filter search results to only files with one or more specific file
 extensions using the `file_extensions` query parameter.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -252,15 +244,12 @@ client.search.query(
  </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by file size
 
 By default, a search returns items of any file size. It is
 possible to filter search results to only files within a specific file
 size using the `size_range` query parameter.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -318,15 +307,12 @@ client.search.query(
  </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by file type
 
 By default, a search returns both files, folders, and web links. To narrow down
 the results to only one of these, a `type` query parameter can be set to either
 `file`, `folder` or `web_link`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -382,8 +368,6 @@ client.search.query(
  </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by metadata
 
 It is possible to filter search results by their associated metadata, or even
@@ -400,7 +384,6 @@ By default, a search returns all the items the authenticated user has access to,
 regardless of who owns the items. To narrow down to only items owned by specific
 users, use the `owner_user_ids` query parameter.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -464,15 +447,12 @@ client.search.query(
  </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by parent folder
 
 By default, a search returns all the items in any folder the user has access
 to. To narrow down the results to only items in specific folders, use the
 `ancestor_folder_ids` query parameter.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -535,5 +515,3 @@ client.search.query(
 
  </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

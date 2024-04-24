@@ -11,7 +11,6 @@ By default, the search API returns the **standard** format of a
 these resources supports additional fields that can be requested through the
 `fields` query parameter.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -71,7 +70,6 @@ client.search.query(
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 

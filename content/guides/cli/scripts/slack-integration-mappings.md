@@ -13,8 +13,6 @@ related_resources: []
 ---
 # Manage Slack integration folder mappings
 
-<!-- markdownlint-disable line-length -->
-
 This script helps manage the folder mappings between Slack and Box if using Box
 as the content store for Slack. It creates a list of current Slack channel and
 Box folder mappings and can create or update mappings based on input csv. This

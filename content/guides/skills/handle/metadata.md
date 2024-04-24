@@ -27,8 +27,6 @@ structure that will be stored on the associated files.
 
 Box currently supports 4 kinds of cards.
 
-<!-- markdownlint-disable line-length -->
-
 |                                         |                                                                                                                                 |                                        |
 |-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
 | [Keyword](r://keyword-skill-card)       | Displays a list of keywords next to the file.                                                                                   | ![Image](./images/skills-card-keyword.png)    |
@@ -36,15 +34,11 @@ Box currently supports 4 kinds of cards.
 | [Transcript](r://transcript-skill-card) | Displays a transcript with the corresponding timestamps.                                                                        | ![Image](./images/skills-card-transcript.png) |
 | [Status](r://status-skill-card)         | Displays a status to the user, which can be used to inform the user of the status of the Skill while it is processing the file. |                                        |
 
-<!-- markdownlint-enable line-length -->
-
 ## Write metadata cards to file
 
 To write one or more cards to a file, you can use the [`POST
 /files/:id/metadata/global/boxSkillsCards`](e://post_files_id_metadata_global_boxSkillsCards)
 API and pass along a list of Box Skill `cards`.
-
-<!-- markdownlint-enable line-length -->
 
 <Tabs>
   <Tab title='cURL'>
@@ -183,8 +177,6 @@ Dictionary<string, object> metadata = await client.MetadataManager
   </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 <Message warning>
   If Box Skill cards have already been applied to this file, this API call will
   return an error with a HTTP status code of `409`.
@@ -197,8 +189,6 @@ using the [`PUT
 /files/:id/metadata/global/boxSkillsCards`][update_skills]
 API. This API accepts a number of operations (`op`) to perform, and each
 operation can be used to replace a card at a position (`path`).
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='cURL'>
@@ -297,7 +287,6 @@ card = {
     }
 }
 
-
 updates = file_metadata.start_update()
 updates.replace('/cards/0', card)
 file_metadata.update(updates)
@@ -352,7 +341,5 @@ Dictionary<string, object> updatedMetadata = await client.MetadataManager
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 [update_skills]: e://put_files_id_metadata_global_boxSkillsCards

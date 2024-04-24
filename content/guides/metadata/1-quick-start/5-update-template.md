@@ -26,8 +26,6 @@ to `Company Name` instead. By using the `editField` operation we can change the
 `displayName` and the `key` of the field on the template and on every instance
 of the template that might be applied to a file or folder.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
@@ -177,7 +175,5 @@ created in previous steps would now look something like this.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've updated metadata to a file</Next>

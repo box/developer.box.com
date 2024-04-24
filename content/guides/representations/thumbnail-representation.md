@@ -64,19 +64,13 @@ The following a some example `x-rep-hints`-header values
 | --------------------------------------------------------------- |
 | Returns a `32x32` JPEG and a `2048x2048` PNG thumbnail          |
 
-<!-- markdownlint-disable line-length -->
-
 | `x-rep-hints: [jpg?dimensions=2048x2048,png?dimensions=2048x2048]`                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Returns a `2048x2048` JPEG or a `2048x2048` PNG thumbnail, returning the first representation that is available. If neither is available it returns no representations |
 
-<!-- markdownlint-enable line-length -->
-
 ## Supported file sizes
 
 The following formats and sizes of thumbnails are available.
-
-<!-- markdownlint-disable line-length -->
 
 | File Type | Dimensions                                                         |
 | --------- | ------------------------------------------------------------------ |
@@ -84,8 +78,6 @@ The following formats and sizes of thumbnails are available.
 | PNG       | `1024x1024`\*, `2048x2048`\*                                       |
 
 Some restrictions apply to the sizes marked as `*`.
-
-<!-- markdownlint-enable line-length -->
 
 ## File size restrictions
 
@@ -110,16 +102,12 @@ capped at the size of the original file.
 
 At this time the following file types are supported.
 
-<!-- markdownlint-disable line-length -->
-
 | File Type | File Extensions                                                                                                                                                 |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Documents | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
 | Images    | `ai`, `bmp`, `dcm`, `dicm`, `eps`, `gif`, `idml`, `indd`, `indt`, `inx`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `svs`, `tif`, `tiff`, `tga`                  |
 | Audio     | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
 | Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

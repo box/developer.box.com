@@ -13,8 +13,6 @@ related_resources: []
 ---
 # Deprovision users and archive folders
 
-<!-- markdownlint-disable line-length -->
-
 This script allows you to deprovision and delete a list of users.
 It performs the following steps:
 

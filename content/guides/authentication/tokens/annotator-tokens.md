@@ -151,15 +151,11 @@ $claims = [
   </Tab>
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter      | Type   | Description                                                                                             |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------- |
 | `sub`          | String | The external user ID to tie this annotation to. This can be any arbitrary ID tracked by the application |
 | `box_sub_type` | String | `external` to signify an external user ID                                                               |
 | `box_sub_type` | String | The external user name to tie this annotation to. This will be displayed in the Box UI                  |
-
-<!-- markdownlint-enable line-length -->
 
 Then, convert this claim to an assertion according to the guide and pass this
 assertion to the [`POST /oauth2/token`](e://post-oauth2-token)
@@ -281,15 +277,11 @@ $params = [
   </Tab>
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter          | Description                                                              |
 | ------------------ | ------------------------------------------------------------------------ |
 | `resource`         | An optional full URL path to the file the token should be restricted to. |
 | `actor_token`      | The JWT assertion created earlier                                        |
 | `actor_token_type` | Always set to `urn:ietf:params:oauth:token-type:id_token`                |
-
-<!-- markdownlint-enable line-length -->
 
 ## Create with SDKs
 

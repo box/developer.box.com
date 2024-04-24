@@ -27,8 +27,6 @@ In this case, let's assume we want to change the `name` of the customer from
 value of the name is still `Box, Inc` before we change it, and secondly we make
 the change.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
@@ -143,7 +141,5 @@ The API will return the updated metadata instance.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've updated metadata to a file</Next>

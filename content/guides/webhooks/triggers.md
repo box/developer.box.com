@@ -20,7 +20,6 @@ The following is a list of events that can be configured to trigger a V2
 webhook. Some events are only available for files, while others are only
 available for folders.
 
-<!-- markdownlint-disable line-length -->
 | Event                       | Triggered                                                                                                           | File? | Folder? |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------|-------|---------|
 | `COLLABORATION.CREATED`     | A collaboration is created.                                                                                          | No    | Yes     |
@@ -63,14 +62,11 @@ available for folders.
 | `SIGN_REQUEST.EXPIRED`      | A sign request is expired.                                                                                           | Yes   | Yes     |
 | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A signer's email is bounced. | Yes | Yes |
 | `WEBHOOK.DELETED`           | A webhook is deleted.                                                                                           | No    | No      |
-<!-- markdownlint-enable line-length -->
-<!-- markdownlint-disable line-length -->
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
-<!-- markdownlint-enable line-length -->
 
 ## V1
 
-Events that can be configured to trigger a v1 webhook: 
+Events that can be configured to trigger a v1 webhook:
 
 - Sent,
 - Created,

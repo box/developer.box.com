@@ -126,7 +126,6 @@ Sessions` value within `additional_details.shield_alert.rule_category`.
 
 The `additional_details` payload will provide the following details:
 
-<!-- markdownlint-disable line-length -->
 ```json
 "additional_details":{
   "shield_alert":{
@@ -197,7 +196,6 @@ The `additional_details` payload will provide the following details:
   }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 ### Anomalous download alert
 
@@ -208,7 +206,6 @@ who may be stealing sensitive content. It can be identified by the
 
 The `additional_details` payload will provide the following details:
 
-<!-- markdownlint-disable line-length -->
 ```json
 "additional_details":{
   "shield_alert":{
@@ -255,7 +252,6 @@ The `additional_details` payload will provide the following details:
   }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 ### Malicious content alert
 

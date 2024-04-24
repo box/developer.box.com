@@ -44,8 +44,6 @@ and JWT.
 
 ## Sample HTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -86,8 +84,6 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-
-<!-- markdownlint-enable line-length -->
 
 ## API
 
@@ -150,8 +146,6 @@ contentExplorer.removeListener(eventName, listener);
 contentExplorer.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                      |
@@ -203,8 +197,6 @@ contentExplorer.removeAllListeners();
 | `navigate` | `Folder`      | Will be fired when navigating into folders. |
 | `create`   | `Folder`      | Will be fired when a new folder is created  |
 
-<!-- markdownlint-enable line-length -->
-
 ## Keyboard Shortcuts
 
 When the item grid has focus, either manually by clicking on it or
@@ -244,8 +236,6 @@ configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
-
-<!-- markdownlint-disable line-length -->
 
 | Scope Name      | Permissions granted                                                               |
 | --------------- | --------------------------------------------------------------------------------- |
@@ -437,8 +427,6 @@ export default App;
 <Message type='notice'>
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

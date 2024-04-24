@@ -57,8 +57,6 @@ seconds.
 
 The text viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                                | Event Data                                                            |
 | -------------- | ------------------------------------------ | --------------------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed     |                                                                       |
@@ -75,8 +73,6 @@ The text viewer triggers the following events.
 |                |                                            | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
 |                |                                            | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
 | `printsuccess` | An attempt to print triggered successfully |                                                                       |
-
-<!-- markdownlint-enable line-length -->
 
 ## 360 Video Viewer
 
@@ -112,8 +108,6 @@ viewer rather than the standard video preview.
 
 The 360 video viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -126,8 +120,6 @@ The 360 video viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## SWF Viewer
 
@@ -151,8 +143,6 @@ be rendered.
 
 The SWF viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -165,8 +155,6 @@ The SWF viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Presentation viewer
 
@@ -196,19 +184,13 @@ is removed.
 
 ### Options
 
-<!-- markdownlint-disable line-length -->
-
 | Option        | Type    | Description                                                             |
 | ------------- | ------- | ----------------------------------------------------------------------- |
 | `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
 
-<!-- markdownlint-enable line-length -->
-
 ### Events
 
 The presentation viewer triggers the following events.
-
-<!-- markdownlint-disable line-length -->
 
 | Event Name     | Explanation                            | Event Data                                                                    |
 | -------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
@@ -231,8 +213,6 @@ The presentation viewer triggers the following events.
 |                |                                        | 2. `number` **`scrollLeft`**: number of pixels scrolled from left of viewport |
 | `scrollend`    | The viewer stops scrolling             | 1. `number` **`scrollTop`**: number of pixels scrolled from top of viewport   |
 |                |                                        | 2. `number` **`scrollLeft`**: number of pixels scrolled from left of viewport |
-
-<!-- markdownlint-enable line-length -->
 
 ## MP4 Viewer
 
@@ -268,8 +248,6 @@ Settings are available through the cog icon in the preview toolbar.
 
 The MP4 viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                             |
 | -------------- | -------------------------------------- | ------------------------------------------------------ |
 | `destroy`      | The preview is intentionally destroyed |                                                        |
@@ -286,8 +264,6 @@ The MP4 viewer triggers the following events.
 | `play`         | The video plays                        |                                                        |
 | `pause`        | The video pauses                       |                                                        |
 | `seek`         | The video skips to a time              | `number` time                                          |
-
-<!-- markdownlint-enable line-length -->
 
 ## MP3 Viewer
 
@@ -319,8 +295,6 @@ Settings are available through the cog icon in the preview toolbar.
 
 The MP3 viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                             |
 | -------------- | -------------------------------------- | ------------------------------------------------------ |
 | `destroy`      | The preview is intentionally destroyed |                                                        |
@@ -337,8 +311,6 @@ The MP3 viewer triggers the following events.
 | `play`         | The video plays                        |                                                        |
 | `pause`        | The video pauses                       |                                                        |
 | `seek`         | The video skips to a time              | `number` time                                          |
-
-<!-- markdownlint-enable line-length -->
 
 ## Office Viewer
 
@@ -365,8 +337,6 @@ There are several limitations at the moment:
 
 The Office viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -379,8 +349,6 @@ The Office viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Markdown Viewer
 
@@ -419,8 +387,6 @@ browsers to freeze for a few seconds.
 
 The Markdown viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                                | Event Data                                               |
 | -------------- | ------------------------------------------ | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed     |                                                          |
@@ -434,8 +400,6 @@ The Markdown viewer triggers the following events.
 | `resize`       | The preview resizes                        | 1. `{number}` **`height`**: window height                |
 |                |                                            | 2. `{number}` **`width`**: window width                  |
 | `printsuccess` | An attempt to print triggered successfully |                                                          |
-
-<!-- markdownlint-enable line-length -->
 
 ## `Model3D` viewer
 
@@ -486,8 +450,6 @@ within Box will be included in the resulting package.
 
 The `Model3D` viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -500,8 +462,6 @@ The `Model3D` viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## 360 Image viewer
 
@@ -537,8 +497,6 @@ viewer rather than the standard image viewer.
 
 The 360 image viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -551,8 +509,6 @@ The 360 image viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Image viewer
 
@@ -579,19 +535,13 @@ the document will zoom in until the original zoom level is reached.
 
 ### Options
 
-<!-- markdownlint-disable line-length -->
-
 | Option        | Type    | Description                                                             |
 | ------------- | ------- | ----------------------------------------------------------------------- |
 | `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
 
-<!-- markdownlint-enable line-length -->
-
 ### Events
 
 The image viewer triggers the following events.
-
-<!-- markdownlint-disable line-length -->
 
 | Event Name     | Explanation                                | Event Data                                                            |
 | -------------- | ------------------------------------------ | --------------------------------------------------------------------- |
@@ -613,8 +563,6 @@ The image viewer triggers the following events.
 | `panend`       | Panning ends                               |                                                                       |
 | `rotate`       | The image rotates                          |                                                                       |
 | `printsuccess` | An attempt to print triggered successfully |                                                                       |
-
-<!-- markdownlint-enable line-length -->
 
 ## Multi-image viewer
 
@@ -640,19 +588,13 @@ reached.
 
 ### Options
 
-<!-- markdownlint-disable line-length -->
-
 | Option        | Type    | Description                                                             |
 | ------------- | ------- | ----------------------------------------------------------------------- |
 | `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
 
-<!-- markdownlint-enable line-length -->
-
 ### Events
 
 The image viewer triggers the following events.
-
-<!-- markdownlint-disable line-length -->
 
 | Event Name     | Explanation                            | Event Data                                                            |
 | -------------- | -------------------------------------- | --------------------------------------------------------------------- |
@@ -674,13 +616,9 @@ The image viewer triggers the following events.
 | `panstart`     | Panning starts                         |                                                                       |
 | `panend`       | Panning ends                           |                                                                       |
 
-<!-- markdownlint-enable line-length -->
-
 ### Methods
 
 The following methods are available for the multi-page image viewer.
-
-<!-- markdownlint-disable line-length -->
 
 | Method Name        | Explanation                    | Method Parameters                  |
 | ------------------ | ------------------------------ | ---------------------------------- |
@@ -689,8 +627,6 @@ The following methods are available for the multi-page image viewer.
 | `nextPage`         | Navigates to the next page     |                                    |
 | `setPage`          | Navigates to a given page      | `{number}` page number             |
 | `toggleFullscreen` | Toggles full screen mode       |                                    |
-
-<!-- markdownlint-disable line-length -->
 
 ## Document viewer
 
@@ -721,19 +657,13 @@ that page. Resizing the viewer window will cause the document to resize.
 
 ### Options
 
-<!-- markdownlint-disable line-length -->
-
 | Option        | Type    | Description                                                             |
 | ------------- | ------- | ----------------------------------------------------------------------- |
 | `annotations` | boolean | Optional. Whether annotations on content are shown. Defaults to `false` |
 
-<!-- markdownlint-enable line-length -->
-
 ### Events
 
 The document viewer triggers the following events.
-
-<!-- markdownlint-disable line-length -->
 
 | Event Name     | Explanation                                | Event Data                                                                      |
 | -------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
@@ -759,11 +689,7 @@ The document viewer triggers the following events.
 | `printsuccess` | An attempt to print triggered successfully |                                                                                 |
 | `printsuccess` | An attempt to print failed                 |                                                                                 |
 
-<!-- markdownlint-enable line-length -->
-
 ### Annotations
-
-<!-- markdownlint-disable line-length -->
 
 | Event Name                 | Explanation                                                                                                                                | Event Data |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
@@ -772,8 +698,6 @@ The document viewer triggers the following events.
 | `annotationcreate`         | Annotation is created                                                                                                                      |            |
 | `annotationcancel`         | An annotation was started but then abandoned before it was created                                                                         |            |
 | `annotationdelete`         | Annotation with provided `AnnotationID` is deleted. If no ID is provided, deletes the first (and only remaining) annotation in the thread. |            |
-
-<!-- markdownlint-enable line-length -->
 
 ## `<iframe>` viewer
 
@@ -798,8 +722,6 @@ the Box Note file.
 
 The `<iframe>` viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                               |
 | -------------- | -------------------------------------- | -------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                          |
@@ -812,8 +734,6 @@ The `<iframe>` viewer triggers the following events.
 | `reload`       | The preview reloads                    |                                                          |
 | `resize`       | The preview resizes                    | 1. `{number}` **`height`**: window height                |
 |                |                                        | 2. `{number}` **`width`**: window width                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## DASH viewer
 
@@ -851,8 +771,6 @@ Settings are available through the cog icon in the preview toolbar.
 
 The DASH viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name         | Explanation                                                   | Event Data                                               |
 | ------------------ | ------------------------------------------------------------- | -------------------------------------------------------- |
 | `destroy`          | The preview is intentionally destroyed                        |                                                          |
@@ -873,8 +791,6 @@ The DASH viewer triggers the following events.
 | `play`             | The video plays                                               |                                                          |
 | `pause`            | The video pauses                                              |                                                          |
 | `seek`             | The video skips to a time                                     | `{number}` time                                          |
-
-<!-- markdownlint-enable line-length -->
 
 ## CSV viewer
 
@@ -904,8 +820,6 @@ This viewer does not support printing.
 
 The CSV viewer triggers the following events.
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name     | Explanation                            | Event Data                                                            |
 | -------------- | -------------------------------------- | --------------------------------------------------------------------- |
 | `destroy`      | The preview is intentionally destroyed |                                                                       |
@@ -921,8 +835,6 @@ The CSV viewer triggers the following events.
 | `zoom`         | The preview zooms in or out            | 1. `{number}` **`zoom`**: new zoom value                              |
 |                |                                        | 2. `{boolean}` **`canZoomIn`**: true if the viewer can zoom in more   |
 |                |                                        | 3. `{boolean}` **`canZoomOut`**: true if the viewer can zoom out more |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- markdownlint-enable no-duplicate-header -->
 

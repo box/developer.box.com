@@ -10,7 +10,6 @@ The [`GET /search`][search_api] API allows for filtering search results by their
 associated metadata. A `mdfilters` query parameter allows a developer to specify
 a metadata template and the desired values to query.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -99,7 +98,6 @@ client.search.query(
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 

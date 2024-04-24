@@ -11,7 +11,6 @@ authenticated user has access to. In some cases, administrators might want to
 search against all content owned by all users. For this use-case the `scope`
 query parameter can be set to a value of `enterprise_content`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -66,7 +65,6 @@ client.search.query(
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

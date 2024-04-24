@@ -164,7 +164,6 @@ public class slackConfig {
   * `botToken`: Within your Slack application, go to the **OAuth & Permissions** page. The **Bot User OAuth Access Token** string is available at the top and was auto-populated once the bot was added to your Slack workspace.
 * Open up the `Application.java` file that was created for the previous Slack event challenge setup and replace the content of the file with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 package com.box.slack.box;
 
@@ -284,7 +283,6 @@ public class Application extends slackConfig {
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 This code contains all of the main functions that will be needed to handle and
 process the communication between Slack and Box. From top to bottom, the

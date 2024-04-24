@@ -115,8 +115,6 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 });
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter              | Default | Description                                                                                            |
 | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
 | `annotator`            |         | Viewer-specific annotator configurations object                                                        |
@@ -159,8 +157,6 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | User wants basic preview functionality + ability to edit own annotations + ability to select text on documents | `base_preview` + `annotation_edit` + `item_download`       |
 | User wants basic preview functionality + ability to view all annotations + ability to edit own annotations     | `base_preview` + `annotation_view_all` + `annotation_edit` |
 | User wants basic preview functionality + ability to view only their own annotations                            | `base_preview` + `annotation_view_self`                    |
-
-<!-- markdownlint-enable line-length -->
 
 ## Enabling/Disabling Annotations and Annotation Types
 
@@ -227,8 +223,6 @@ possible annotators.
 
 ## Additional Methods
 
-<!-- markdownlint-disable line-length -->
-
 - `annotator.init()` initializes the annotator.
 - `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the current annotation mode is enabled for the current viewer/annotator.
 - `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the annotate button for the specified annotation mode.
@@ -242,8 +236,6 @@ possible annotators.
 - `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` enables the specified annotation mode.
 - `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the annotated element in the viewer.
 - `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])` creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
-
-<!-- markdownlint-enable line-length -->
 
 ## Events
 
@@ -502,8 +494,6 @@ preview.addListener("annotationsfetched", data => {
 
 The following methods are available for the annotation threads.
 
-<!-- markdownlint-disable line-length -->
-
 | Method Name        | Explanation                                     | Method Parameters                                                                  |
 | ------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `createDialog`     | Creates the dialog for the thread               |                                                                                    |
@@ -514,8 +504,6 @@ The following methods are available for the annotation threads.
 | `hideDialog`       | Hides the appropriate indicator for this thread |                                                                                    |
 | `saveAnnotation`   | Saves an annotation locally and on the server   | {string} annotation type, {text} text of annotation to save                        |
 | `deleteAnnotation` | Deletes an annotation                           | {string} annotation ID, {boolean} whether or not to delete on server, default true |
-
-<!-- markdownlint-enable line-length -->
 
 ### Thread Events
 
@@ -532,8 +520,6 @@ All annotation threads trigger the following events. The event data will contain
 }
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name                | Explanation                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `annotationpending`       | An annotation thread was created but has not yet been saved on the server.                                           |
@@ -545,8 +531,6 @@ All annotation threads trigger the following events. The event data will contain
 | `annotationdeleteerror`   | An error occurs while deleting an annotation on either a new or existing thread.                                     |
 | `annotationcreateerror`   | An error occurs while posting an annotation on either a new or existing thread.                                      |
 
-<!-- markdownlint-enable line-length -->
-
 See the **Events** section above for example event usage.
 
 ## Annotation Dialog
@@ -554,8 +538,6 @@ See the **Events** section above for example event usage.
 ### Dialog Methods
 
 The following methods are available for the annotation dialog.
-
-<!-- markdownlint-disable line-length -->
 
 | Method Name        | Explanation                               | Method Parameters                |
 | ------------------ | ----------------------------------------- | -------------------------------- |
@@ -566,8 +548,6 @@ The following methods are available for the annotation dialog.
 | `removeAnnotation` | Removes an annotation from the dialog     | {string} annotation ID           |
 | `postAnnotation`   | Posts an annotation in the dialog         | {string} annotation text to post |
 | `position`         | Positions the dialog                      |                                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Supported Annotation Types
 

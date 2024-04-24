@@ -15,15 +15,11 @@ alias_paths: []
 The number of fields returned for a resource can depend on the API endpoint used
 to request the resource.
 
-<!-- markdownlint-disable line-length -->
-
 | Variant  |                                                                                                                                                                                                                                                                  |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Standard | The standard set of fields returned when requesting a resource for its own endpoints, for example when requesting a file through the [`GET /files/:id`](endpoint://get_files_id) endpoint                                                                        |
 | Full     | The full set of fields that can be returned through a resource's own endpoints by using the `field` query parameter                                                                                                                                              |
 | Mini     | A subset of fields that is returned when a resource is returned as a nested part of another resource, for example when a file is returned when requesting all items in a folder through the [`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint |
-
-<!-- markdownlint-enable line-length -->
 
 The API reference documentation has each of these variations labeled in more
 detail. Most notably, the file, folder, web link, and user items have full and

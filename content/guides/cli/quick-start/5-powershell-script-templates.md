@@ -238,7 +238,6 @@ You have 3 ways to pass parameters before running the script:
     ```bash
     Starting User Creation & Provisioning script...
 
-
     firstName lastName email
     --------- -------- -----
     Isaac     Newton   abc@abc.local

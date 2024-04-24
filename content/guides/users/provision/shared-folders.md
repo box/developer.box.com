@@ -378,8 +378,6 @@ public class BoxPlayground {
   </Tab>
   <Tab title='.NET'>
 
-<!-- markdownlint-disable line-length -->
-
 ```csharp
 using System;
 using System.Collections;
@@ -549,8 +547,6 @@ namespace BoxPlayground {
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
   <Tab title='CLI'>
 
@@ -568,8 +564,6 @@ account.
 
 <Tabs>
   <Tab title='Node'>
-
-<!-- markdownlint-disable line-length -->
 
 ```js
 'use strict'
@@ -640,8 +634,6 @@ async function handleGroupMembershipConflictError(e,
     }
 }
 ```
-
-<!-- markdownlint-disable line-length -->
 
   </Tab>
   <Tab title='Java'>

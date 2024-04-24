@@ -55,8 +55,6 @@ the application's private key and other details. The following is an example.
 <Tabs>
   <Tab title='config.json'>
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "boxAppSettings": {
@@ -71,8 +69,6 @@ the application's private key and other details. The following is an example.
   "enterpriseID": "1234567"
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
 </Tabs>

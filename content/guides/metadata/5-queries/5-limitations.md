@@ -93,12 +93,9 @@ folders) which match the metadata query exclusively based on evaluating the
 `​from​`, `​query​`, and `​query_params` parameters before the requesting user’s
 permissions and the `​ancestor_folder​` scope are considered.
 
-<!-- markdownlint-disable line-length -->
-
 | Query                                                                                                      | Result Set  | Outcome  | Notes                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------|-------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
 | Select items with the `catalogImages` ​template where the ​photographer​ is `Mike`                            | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
 | Select items with the `catalogImages` ​template                                                             | 4,000 items | May fail | The result set exceeds 2,000 items. If the user does not have access to all of the files in the result set the query may fail |
 | Select items with the `catalogImages` ​template in the `Products​` folder                                    | 4,000 items | May fail | The result set exceeds 2,000 items and not all results are contained within the ancestor folder.                              |
 | Select items with the `catalogImages` ​template in the `Products` folder where the photographer​ is `Mike`   | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
-<!-- markdownlint-enable line-length -->

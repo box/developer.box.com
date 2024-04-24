@@ -141,8 +141,6 @@ record to Box folder mapping and handle permission management.
 Extend your application with pre-built UI components to browse, share, and
 preview files on Box.
 
-<!-- markdownlint-disable line-length -->
-
 |         |        |           |
 | ------- | ------ | --------- |
 | Browse  | Share  |Preview    |
@@ -155,22 +153,16 @@ preview files on Box.
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
 | Javascript | [Box UI Elements](guide://embed/ui-elements/)    |
 
-  <!-- markdownlint-enable line-length -->
-
 ## Unofficial & Community Tools
 
 The following tools are developed by Box and maintained by Box and its community
 members. These tools do not receive regular product updates or security updates.
-
-  <!-- markdownlint-disable line-length -->
 
 | Platform   | Maintained?    | API Parity  |
 | ---------- | ---------------| ------- |
 | [Salesforce SDK][salesforcesdk] | Limited, by Box and community members |Partial |
 | [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
-
-  <!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
 **Maintained:** Projects with limited maintenance are updated by Box in

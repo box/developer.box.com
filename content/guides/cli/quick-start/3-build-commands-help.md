@@ -63,11 +63,7 @@ object.
   ![Help](../images/folders-help.png)
 </ImageFrame>
 
-<!-- markdownlint-disable line-length -->
-
 Discover the required arguments for creating a folder: `box folders:create --help`
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
   ![Help](../images/folders-create-help.png)

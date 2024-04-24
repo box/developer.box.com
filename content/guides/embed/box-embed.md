@@ -48,8 +48,6 @@ and paste the embed code into your site or web application.
 If you want to add more customization to Box Embed, you have the ability to
 build it programmatically. The format for an embed snippet is as follows.
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <iframe
   src="https://{custom_domain}.app.box.com/embed/s/{shared link value}?view={list or icon}&sortColumn={name, date, or size}&sortDirection=ASC"
@@ -61,8 +59,6 @@ build it programmatically. The format for an embed snippet is as follows.
   msallowfullscreen
 ></iframe>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### Finding your shared link value
 
@@ -104,8 +100,6 @@ You can also set the page to Root Folder/All Files page. Set the URL to
 Next, you will want to choose your view customization options. The following is
 a list of optional parameters you can configure.
 
-<!-- markdownlint-disable line-length -->
-
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
 | `view`                | The view type for your files or folders. Can be `list` (default) or `icon`.                  |
@@ -113,8 +107,6 @@ a list of optional parameters you can configure.
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
 | `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
 | `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
-
-<!-- markdownlint-enable line-length -->
 
 ### Full Screen Capabilities
 
@@ -198,14 +190,10 @@ would look something like this.
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 ```
 
-<!-- markdownlint-disable line-length -->
-
 |                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
-
-<!-- markdownlint-enable line-length -->
 
 ## Cloud Game
 

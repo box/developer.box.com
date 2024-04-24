@@ -18,17 +18,15 @@ To move a folder, update the ID of its parent folder.
 
 ## Operation details
 
-<!-- markdownlint-disable line-length -->
-
-This call will return synchronously. This holds true even 
+This call will return synchronously. This holds true even
 for folder moves when the folder contains a large number
 of items in all of its descendants. For very large
-folders, this means the call could take 
+folders, this means the call could take
 minutes or hours to complete and
 some parts of the tree are locked during moves.
 
 When moving a folder, part of the file tree will
-be locked, mainly the source folder and all of its descendants, 
+be locked, mainly the source folder and all of its descendants,
 as well as the destination folder.
 
 For the duration of the move you cannot perform
@@ -37,8 +35,8 @@ on any of the locked folders.
 
 ## Moving a subfolder to a private folder
 
-When you attempt to move a collaborated subfolder 
-to a private one, you will get the [`cannot_make_collaborated_subfolder_private`](../../api-calls/permissions-and-errors/common-errors.md#400-bad-request) error. 
+When you attempt to move a collaborated subfolder
+to a private one, you will get the [`cannot_make_collaborated_subfolder_private`](../../api-calls/permissions-and-errors/common-errors.md#400-bad-request) error.
 In such a case, specify the ID of the user that folder
 belongs to setting the `owned_by.id` parameter in the request:
 

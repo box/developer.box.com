@@ -154,7 +154,6 @@ using Okta.AspNetCore;
 
 * Replace the content of the `ConfigureServices` method with the following. We will fill in the specific Okta application values in the next step.
 
-<!-- markdownlint-disable line-length -->
 ```csharp
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
@@ -172,7 +171,6 @@ services.AddAuthentication(options =>
     ClientSecret = ""
 });
 ```
-<!-- markdownlint-enable line-length -->
 
 Add the following line to the **top** of the `Configure` method.
 

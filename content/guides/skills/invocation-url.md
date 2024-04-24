@@ -12,8 +12,6 @@ alias_paths: []
 
 # Invocation URL
 
-<!-- markdownlint-disable line-length -->
-
 When creating a new
 [Box Skills application](guide://applications/app-types/custom-skills) you will be asked
 to supply an `invocation_url`. This URL is the public web address where Box will

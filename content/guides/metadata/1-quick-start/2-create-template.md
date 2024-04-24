@@ -24,8 +24,6 @@ operates in, and the final field represents the total annual contract value (`ta
 To create this template we need to pass in the configuration for the fields, as
 well as a display name for the field.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
@@ -181,8 +179,6 @@ client.metadata.createTemplate(
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
   # Admin permissions required

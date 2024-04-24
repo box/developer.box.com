@@ -61,7 +61,6 @@ If you would like to authenticate as a Managed User:
 
 During authentication, you can encounter the following error:
 
-<!-- markdownlint-disable line-length -->
 ```sh
 Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credentials are invalid
 ```

@@ -15,8 +15,6 @@ related_resources: []
 ---
 # Report inactive users
 
-<!-- markdownlint-disable line-length -->
-
 This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
 
 1. Looks for the users who have the role `user`.
@@ -127,8 +125,6 @@ You have access to these log files:
 
 * `Inactive_Users_Report_all.txt` that contains all log entries
 * `Inactive_Users_Report_errors.txt` that contains only errors.
-
-<!-- markdownlint-enable line-length -->
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2

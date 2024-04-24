@@ -150,12 +150,8 @@ Open your terminal or command line and execute the
 command: `box configure:environments:add PathToConfigFileHere`, replacing
 `PathToConfigHere` with the path to your `config.json` file.
 
-<!-- markdownlint-disable line-length -->
-
 For example:
 `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
-
-<!-- markdownlint-enable line-length -->
 
 <Message type='tip'>
   You can drag the csv file from the Finder/File Explorer to the

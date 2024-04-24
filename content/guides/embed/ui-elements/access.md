@@ -84,16 +84,12 @@ Sharing should be turned off.
     * Authentication with JWT guide if you would like to create an App User or Service Account
 * Add the user you created above as a Collaborator to the content using the Create Collaborator API as shown below. This step gives the user access to the content if not already under the user's account. If the file/folder was created under this user's account, then the user by default has "Owner" access to the folder so you can skip the collaboration step.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://api.box.com/2.0/collaborations \
   -H "authorization: Bearer [ACCESS_TOKEN]" \
   -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
   -X POST
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
   # Access Levels in Box

@@ -9,7 +9,6 @@ required_guides:
   - authentication/oauth2/oauth2-setup
 related_resources: []
 ---
-<!-- markdownlint-disable line-length -->
 
 # CLI bulk commands
 
@@ -59,7 +58,6 @@ go to your [Developer Console][console], and follow the guide
     box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
     ```
 
-<!-- markdownlint-enable line-length -->
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup
 [bulkactions]: https://github.com/box/boxcli/tree/main/docs/Bulk%20actions

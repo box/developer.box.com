@@ -13,7 +13,7 @@ When an application is created in the Developer Console, the user must configure
 application scopes. Similar to how users have permissions to access files and
 folders within Box, applications have their own set of permissions to
 perform certain actions on behalf of a Box user or a Box enterprise. The name
-for a set of permissions for an application is a "scope". In short, an 
+for a set of permissions for an application is a "scope". In short, an
 application's scopes determine which [endpoints][reference] an application can
 successfully call and are reflected in the access provided by
 [Access Tokens][at] of the application.
@@ -113,7 +113,7 @@ Additionally, for JWT applications, the application must be configured with
 | **OAuth Scope**       | `manage_app_users` |
 | **Application Scope** | Manage users       |
 
-Gives an application permission to manage [App Users][appu], which means this 
+Gives an application permission to manage [App Users][appu], which means this
 scope only applies to server-side authenticated (JWT) applications.
 
 ### Manage groups
@@ -254,7 +254,7 @@ calls are made.
 | **Application Scope** | Global Content Manager |
 
 Allows Admins and [Service Accounts][sa] to retrieve any content within their
-enterprise without having explicit ownership or collaboration permission. 
+enterprise without having explicit ownership or collaboration permission.
 This scope is also required to manage retention policies and legal holds.
 
 <Message type='danger'>
@@ -280,8 +280,6 @@ The following is a list of **additional** scopes that can be used with the
 [`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an
 existing access token.
 
-<!-- markdownlint-disable line-length -->
-
 | OAuth Scope            | UI Element affected | Description                                                                         |
 | ---------------------- | ------------------- | ----------------------------------------------------------------------------------- |
 | `annotation_edit`      | Preview             | Allow user to edit & delete annotations                                             |
@@ -299,11 +297,7 @@ existing access token.
 | `item_share`           | Explorer, Picker    | Allows the item specified under `resource` of the token exchange to be shared       |
 | `item_upload`          | Picker              | Allows upload in the content picker                                                 |
 
-<!-- markdownlint-enable line-length -->
-
 The standard OAuth scopes are also supported when downscoping.
-
-<!-- markdownlint-disable line-length -->
 
 | OAuth Scope                    | Description                                        |
 | ------------------------------ | -------------------------------------------------- |
@@ -316,8 +310,6 @@ The standard OAuth scopes are also supported when downscoping.
 | `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_data_retention`        | Manage retention policies                          |
 | `sign_requests.readwrite`      | Manage sign requests                               |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 [console]: https://app.box.com/developers/console

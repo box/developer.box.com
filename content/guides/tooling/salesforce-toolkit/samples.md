@@ -15,8 +15,6 @@ alias_paths: []
 The following code will create metadata on a Box folder in Salesforce using the
 generic Toolkit method:
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='Apex'>
 
@@ -52,13 +50,9 @@ HttpResponse response = toolkit.sendRequest(request);
   </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## New Folder Association
 
 The following code will create a folder for a specific Salesforce record Id:
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -83,14 +77,10 @@ boxToolkit.commitChanges();
   </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Folder Templates
 
 The following code will create a folder for a record, create subfolders (folder
 template), and collaborate the current user:
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -123,14 +113,10 @@ boxToolkit.commitChanges();
   </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## Metadata
 
 The following code will get, add, delete, and update Box folder metadata and
 cascade policies.
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -224,11 +210,7 @@ System.debug(tk.mostRecentError);
   </Tab>
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 More examples:
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -249,10 +231,6 @@ System.debug(tk.getBoxMetadataByFolderId('205776356105', 'global',
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -280,10 +258,6 @@ System.debug(tk.mostRecentError);
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
   <Tab title='Apex'>
@@ -316,5 +290,3 @@ System.debug(tk.mostRecentError);
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

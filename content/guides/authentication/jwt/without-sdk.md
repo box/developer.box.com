@@ -54,8 +54,6 @@ details necessary to authenticate. The following is an example of this file.
 <Tabs>
   <Tab title='config.json'>
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "boxAppSettings": {
@@ -70,8 +68,6 @@ details necessary to authenticate. The following is an example of this file.
   "enterpriseID": "1234567"
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
 </Tabs>
@@ -485,8 +481,6 @@ $claims = [
   </Tab>
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter                | Type    | Description                                                                                                                                                                  |
 | ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `iss`, required          | String  | The Box Application's OAuth client ID                                                                                                                                        |
@@ -497,8 +491,6 @@ $claims = [
 | `exp`, required          | Integer | The Unix time when this JWT is to expire. Can be set to a maximum value of 60 seconds beyond the issue time. It is recommended to set this to less than the maximum allowed. |
 | `iat`, optional          | Integer | Issued at time. The token cannot be used before this time.                                                                                                                   |
 | `nbf`, optional          | Integer | Not before. Not Specifies when the token will start being valid.                                                                                                             |
-
-<!-- markdownlint-enable line-length -->
 
 Next, these claims need to be signed using the private key. Depending on the
 language and library used, the `header` of the JWT is configured by defining the
@@ -606,14 +598,10 @@ $assertion = JWT::encode($claims, $key, 'RS512');
 
 For the header the following parameters are supported.
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter             | Type   | Description                                                                                                                           |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `algorithm`, required | String | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                       |
 | `keyid`, required     | String | The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application. |
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
   Using JWT libraries

@@ -50,8 +50,6 @@ Before continuing you will need to complete the following steps:
 
 An [authorization URL][auth] is comprised of the following parameters:
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter             | Status      | Description                                                                                            |
 | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------ |
 | [`CLIENT_ID`][ci]     | Required    | Obtained from the configuration tab of the Developer Console                                           |
@@ -67,20 +65,12 @@ user will see a `redirect_uri_missing` error and will not be redirected back to
 the app.
 </Message>
 
-<!-- markdownlint-enable line-length -->
-
 At the minimum this URL will always use the format:
-
-<!-- markdownlint-disable line-length -->
 
 `https://account.box.com/api/oauth2/authorize`?`client_id=CLIENTIDHERE`&`response_type=code`
 
-<!-- markdownlint-enable line-length -->
-
 <Tabs>
   <Tab title='.Net'>
-
-<!-- markdownlint-disable line-length -->
 
 ```csharp
 var baseUrl = "https://account.box.com/api/oauth2/authorize";
@@ -88,20 +78,14 @@ var clientId = "[CLIENT_ID]";
 var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
   <Tab title='Java'>
-
-<!-- markdownlint-disable line-length -->
 
 ```java
 String baseUrl = "https://account.box.com/api/oauth2/authorize";
 String clientId = "[CLIENT_ID]";
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>
@@ -159,15 +143,11 @@ var authorizationUrl = $"{baseUrl}?client_id={clientId}&response_type=code";
   </Tab>
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String authorizationUrl = String.format("%s?client_id=%s&response_type=code", baseUrl, clientId);
 
 // response.redirect(authorizationUrl);
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>
@@ -187,8 +167,6 @@ var authorizationUrl = `${baseUrl}?client_id=${clientId}&response_type=code`;
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
   Additional query parameters can be passed along when redirecting the user to

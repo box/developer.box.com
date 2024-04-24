@@ -53,14 +53,10 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
   </Tab>
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 client.asUser([USER_ID]");
 // client.asSelf();
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>

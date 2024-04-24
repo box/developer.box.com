@@ -9,7 +9,6 @@ required_guides: []
 alias_paths: []
 ---
 
-<!-- markdownlint-disable line-length -->
 # Download ZIP Archive
 
 To download all files in a folder or an entire folder structure, you have to create and download a ZIP archive.

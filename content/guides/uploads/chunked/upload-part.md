@@ -14,16 +14,14 @@ alias_paths: []
 
 # Upload Part
 
-When you want to upload a large file, 
-you can split it into smaller parts and 
+When you want to upload a large file,
+you can split it into smaller parts and
 upload them using the Upload Part API.
 
 ## Create Upload Session
 
 First, [create an upload session][createsession]. The resulting
 object defines the size of each part and the number of parts to upload.
-
-<!-- markdownlint-disable line-length -->
 
 ```json
 {
@@ -44,12 +42,10 @@ object defines the size of each part and the number of parts to upload.
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## Split File
 
-Split the file into parts to be uploaded. 
-If you want to use the command line, 
+Split the file into parts to be uploaded.
+If you want to use the command line,
 use the `split` command:
 
 ```bash
@@ -90,12 +86,12 @@ uploaded correctly.
 
 <Samples id='put_files_upload_sessions_id' />
 
-### Content Range 
+### Content Range
 
-Each part’s size must be exactly equal in size to the part size 
-specified in the upload session that you created. 
+Each part’s size must be exactly equal in size to the part size
+specified in the upload session that you created.
 One exception is the last part of the file, as
-this can be smaller. The `Content-Range` parameter 
+this can be smaller. The `Content-Range` parameter
 definition follows this pattern:
 
 ```yaml
@@ -105,9 +101,9 @@ definition follows this pattern:
 When providing the value for `Content-Range`, remember that:
 
 * The lower bound of each part's byte range must be a multiple of the part size.
-* The higher bound must be a multiple of the part size - 1.  
+* The higher bound must be a multiple of the part size - 1.
 
-For example, if the part size is `8388608`, 
+For example, if the part size is `8388608`,
 the content range for the first two parts will be:
 
 ```yaml
@@ -117,7 +113,7 @@ the content range for the first two parts will be:
 
 ## Response
 
-After each upload, the resulting response includes 
+After each upload, the resulting response includes
 the `ID` and `SHA` of the part uploaded.
 
 ```json
@@ -137,10 +133,10 @@ the `ID` and `SHA` of the part uploaded.
 ## Range Overlap
 
 If a part upload request fails with any error code
-`range_overlaps_existing_part` then the application 
-made a mistake in cutting up the file into parts 
+`range_overlaps_existing_part` then the application
+made a mistake in cutting up the file into parts
 and tried to upload a part into a range that already had
-content uploaded for it. The application should assume 
+content uploaded for it. The application should assume
 that this last part was not persisted to the session.
 
 ## Parallel uploads

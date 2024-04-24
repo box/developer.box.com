@@ -49,13 +49,11 @@ used to make API calls. At this point it is scoped to the
 Within `Application.java`, replace the `// INSTANTIATE BOX CLIENT` comment
 within the `processEvent` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 this.fileReader = new FileReader("boxConfig.json");
 this.boxConfig = BoxConfig.readFrom(fileReader);
 this.boxAPI = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
 ```
-<!-- markdownlint-enable line-length -->
 
 The `boxConfig` assignment line will use the `boxConfig.json` file you
 downloaded from your Box app at the end of [step 2][step2]. The sample above is
@@ -86,7 +84,6 @@ that task.
 
 Replace the `addGroupUser` function with the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 function addGroupUser(groupId, email) {
     client.enterprise.getUsers({ filter_term: email }).then((users) => {
@@ -112,7 +109,6 @@ function addGroupUser(groupId, email) {
     });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -189,7 +185,6 @@ function removeGroupUser(groupId, email) {
 
 Replace the `removeGroupUser` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public void removeGroupUser(String groupId, String userEmail) {
   BoxGroup boxGroup = new BoxGroup(this.boxAPI, groupId);
@@ -202,7 +197,6 @@ public void removeGroupUser(String groupId, String userEmail) {
   }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>
@@ -241,7 +235,6 @@ The next Box function we need has two main purposes.
 
 Replace the `getGroupId` function with the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 function getGroupId(groupName, callback) {
     client.groups.getAll().then((groups) => {
@@ -262,7 +255,6 @@ function getGroupId(groupName, callback) {
     });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -318,7 +310,6 @@ task.
 
 Replace the `processContent` function with the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 function processContent(user, channel, itemType, itemId) {
     getGroupId(channel, function (groupId) {
@@ -350,14 +341,12 @@ function processContent(user, channel, itemType, itemId) {
     });
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
 
 Replace the `processContent` method with the following.
 
-<!-- markdownlint-disable line-length -->
 ```java
 public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
     String groupId = getGroupId(channel);
@@ -392,7 +381,6 @@ public void processContent(JSONObject userResponse, String channel, String fType
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' unset color='none'>

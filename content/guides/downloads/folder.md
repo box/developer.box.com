@@ -22,8 +22,6 @@ file and downloading it accordingly.
 To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='.NET'>
 
@@ -245,8 +243,6 @@ function autoPage(iterator) {
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
   It is important to remember that an application needs to have the

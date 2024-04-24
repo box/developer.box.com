@@ -61,8 +61,6 @@ find the full list of supported file types [here][filetypes].
 
 Use the navigation arrows to preview different file types.
 
-<!-- markdownlint-disable line-length -->
-
 <iframe
   width="100%"
   height="560"
@@ -74,8 +72,6 @@ Use the navigation arrows to preview different file types.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-
-<!-- markdownlint-enable line-length -->
 
 ## API
 
@@ -153,19 +149,13 @@ preview.removeAllListeners();
 
 ### Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter     | Type   | Description                                                                                                                                                                      |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fileId`      | String | Box File ID.                                                                                                                                                                     |
 | `accessToken` | String | Box API access token to use. This should have read/write access to the folder above. The value passed in for the token is assumed to never expire while the explorer is visible. |
 | `options`     | Object | Optional options. See below for details. For example: `contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})` would be used to hide the delete option.                      |
 
-<!-- markdownlint-enable line-length -->
-
 ### Options
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter            | Type    | Default         | Description                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -177,8 +167,6 @@ preview.removeAllListeners();
 | `logoUrl`            | String  |                 | URL of custom logo to show in header. If this value is the string box then the box logo will show                                                                                                                                                                                                                         |
 | `showAnnotations`    | Boolean | `false`         | Whether annotation button in header and annotations on content are shown                                                                                                                                                                                                                                                  |
 | `showDownload`       | Boolean | `false`         | Whether download button is shown in header. Will also control print button visibility in viewers that support print. Note that this option will not override download permissions on the access token.                                                                                                                    |
-
-<!-- markdownlint-enable line-length -->
 
 ## Token Generator Function
 
@@ -320,8 +308,6 @@ To add V4 annotations to preview:
 
 3. Import content preview and box annotations into your application:
 
-<!-- markdownlint-disable line-length -->
-
 ```js
 import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
@@ -365,14 +351,10 @@ options['boxAnnotations'] = annotations;
 contentPreviewer.show(file_id, accessToken, options);
 ```
 
-<!-- markdownlint-enable line-length -->
-
 <Message warning>
 The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 ` is subject to change in the future.
 </Message>
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <link href="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.css" rel="stylesheet" type="text/css"></link>
@@ -391,8 +373,6 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 <script type="module" src="./script.js"></script>
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -407,8 +387,6 @@ configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
-
-<!-- markdownlint-disable line-length -->
 
 | Scope Name     | Permissions granted                               |
 | -------------- | ------------------------------------------------- |
@@ -439,8 +417,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | User should be able to preview, and create annotations but only view their own.                                                                                                | `base_preview` + `annotation_view_self` + `annotation_edit` |
 | User should be able to preview, edit annotations and view all annotations                                                                                                      | `base_preview` + `annotation_view_all` + `annotation_edit`  |
 | User should be able to preview and only view their own annotations but not add/delete (ex: after review period has expired, all documents need to be stored in read only mode) | `base_preview` + `annotation_view_self`                     |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 [filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview

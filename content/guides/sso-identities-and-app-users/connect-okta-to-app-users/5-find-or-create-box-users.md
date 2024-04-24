@@ -175,7 +175,6 @@ which will define the binding between the two user records.
 Within the `Controllers` > `AccountController.cs` file, inside the associated
 `AccountController` class, add the following method.
 
-<!-- markdownlint-disable line-length -->
 ```csharp
 static async Task validateUser(string name, string sub)
 {
@@ -201,7 +200,6 @@ static async Task validateUser(string name, string sub)
     }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 Within the code block a new Box .NET SDK client is created using the
 `config.json` file downloaded in step 2. In the case of this code sample, that
@@ -408,7 +406,6 @@ information for the Okta associated Box app user.
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
-<!-- markdownlint-disable line-length -->
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
@@ -433,7 +430,6 @@ object scoped for that user. We finish by making a call to fetch the current
 user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
 
-<!-- markdownlint-enable line-length -->
 </Choice>
 <Choice option='programming.platform' value='python' color='none'>
 
@@ -461,7 +457,6 @@ information for the Okta associated Box app user.
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
 
-<!-- markdownlint-disable line-length -->
 ```csharp
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);

@@ -48,14 +48,10 @@ To fetch the next page of entries the API needs to be called with
 an `marker` parameter that equals value of the `next_marker` value that was
 received in the API response.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker=true \
   -H "authorization: Bearer ACCESS_TOKEN"
 ```
-
-<!-- markdownlint-enable line-length -->
 
 The final page of items has been requested when the next `next_marker` value is
 `null` in the response object. At this point there are no more items to fetch.
@@ -71,30 +67,22 @@ The final page of items has been requested when the next `next_marker` value is
 
 The following query parameters are used to paginate a collection.
 
-<!-- markdownlint-disable line-length -->
-
 | Query parameter | Type    | Default        |                                                                                                                                                                                    |
 | --------------- | ------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `marker`        | String |             | The first position in the collection to return results from. This should be a value that was returned in a previous request.                                                       |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used.                                                                    |
 | `usemarker`     | Boolean |                | An optional query parameter that can be used with API endpoints that support both types of pagination to select pagination type. Set to `true` to enforce marker-based pagination. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Collections
 
 When paginating collections, the API returns an object that contains the set of
 results as an array, as well as some information about the current page of results.
-
-<!-- markdownlint-disable line-length -->
 
 | Field         | Type    |                                                                                                                                                                    |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                              |
 | `next_marker` | String | The value that can be used as the `marker` value to fetch the next page of results. If this value is `null` or an empty string there are no more results to fetch. |
 | `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint.  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Example endpoints
 

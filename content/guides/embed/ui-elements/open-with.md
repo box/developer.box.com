@@ -199,8 +199,6 @@ To remove an app integration from an app user, the following request may be made
 with a valid service access token and the app integration assignment ID from the
 previous step.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
@@ -210,11 +208,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 204 No Content
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## Sample HTML
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <!DOCTYPE html>
@@ -281,8 +275,6 @@ the JS tab of the demo. For the Open With element, you must provide a valid
 [Service Account][service-account] Access Token.
 
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 ## Authentication
 
@@ -362,8 +354,6 @@ contentOpenWith.removeListener(eventName, listener);
 contentOpenWith.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                      |
@@ -401,8 +391,6 @@ using `openWith.addListener('execute', callback)` and
 | ---------- | -------------- | --------------------------------------------------------- |
 | `execute`  | Integration ID | Will be fired when an integration invocation is executed. |
 | `error`    | Error          | Will be fired when an error occurs.                       |
-
-<!-- markdownlint-enable line-length -->
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 <!-- i18n-enable localize-links -->

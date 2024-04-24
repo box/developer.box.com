@@ -16,8 +16,6 @@ Information about the Terms of Service that is in effect for any
 [`GET /collaborations/:id`](e://get-collaborations-id) API and passing the query
 parameter `fields=acceptance_requirements_status`.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
@@ -28,8 +26,6 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 The resulting response will include a new `acceptance_requirements` object that
 includes a mini `terms_of_service` object.

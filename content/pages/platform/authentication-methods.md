@@ -14,15 +14,11 @@ another user. Some API endpoints require admin level privileges - like events.
 
 The following authorization methods are available to each Box application type.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
 | Custom App     | Yes                 | Yes  | Yes                 | No         |
 | Limited Access App | No                  | Yes  | No                  | Yes        |
 | Custom Skill | No                  | No   | No                  | No         |
-
-<!-- markdownlint-enable line-length -->
 
 ## OAuth 2.0
 

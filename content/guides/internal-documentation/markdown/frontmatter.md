@@ -17,8 +17,6 @@ id: 1
 Markdown content
 ```
 
-<!-- markdownlint-disable line-length -->
-
 We support the following frontmatter in our documentation:
 
 | Key                 | Description                                                                                                                                                                                              |
@@ -36,5 +34,3 @@ We support the following frontmatter in our documentation:
 | `related_resources` | A list of resource IDs (for example `file`) that are related to this guide/page. These are shown at the bottom of the page, after the markdown content.                                                  |
 | `required_guides`   | A list of prerequisite guide IDs (for example `tooling/postman`) that are required reading for this guide/page. These are shown at the top of the page, after the title but before the markdown content. |
 | `type`              | An optional type of guide / page that this represents. The only valid value for now is a `quick-start` guide.                                                                                            |
-
-<!-- markdownlint-enable line-length -->

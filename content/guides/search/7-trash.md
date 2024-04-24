@@ -10,7 +10,6 @@ By default, any content in the user's trash is ignored in the search results.
 To search the user's trash, the `trash_content` query parameter can be set to
 `trashed_only`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -65,7 +64,6 @@ client.search.query(
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 

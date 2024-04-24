@@ -41,8 +41,6 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose.
 Depending on the option chosen, you might
@@ -58,8 +56,6 @@ need to specify further details.
 ![Auth selection screen](../images/custom-app-selection.png)
 </ImageFrame>
 
-<!-- markdownlint-enable line-length -->
-
 ### Select application authentication
 
 Select **Server Authentication (with Client Credentials Grant)**
@@ -68,7 +64,7 @@ application identity with a client
 ID and client secret, and confirm with **Create App**.
 
 <Message warning>
-Once you make a selection, you will not be able to change to a different 
+Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 

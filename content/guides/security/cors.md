@@ -54,7 +54,6 @@ The Box API validates the `Origin` request header against the list of allowed
 domains set by the application developer. Multiple allowed origins can be set
 and any origin not on the list will return in a `HTTP 403` error.
 
-<!-- markdownlint-disable line-length -->
 ```json
 {
   "type":"error",
@@ -68,7 +67,6 @@ and any origin not on the list will return in a `HTTP 403` error.
   "request_id":"4dsdfsa832213"
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 If no origin is set, all requests to the Box API for this application return
 an error.

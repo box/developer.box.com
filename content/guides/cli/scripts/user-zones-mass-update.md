@@ -18,8 +18,6 @@ This [script][script] provisions users to a specific
 data residency zone within a Multizone Box tenant.
 It performs the following steps:
 
-<!-- markdownlint-disable line-length -->
-
 1. It uses admin or co-admin login email address to find the associated enterprise and the zone policy assigned to this enterprise. An assigned zone policy is inherited by all users unless specified otherwise. It is sometimes called the **default zone**.
 2. It performs zone assignment based on an input `.csv` file containing user email addresses and zone mappings.
 
@@ -163,8 +161,6 @@ You have access to these log files:
 
 * `Mass_Update_User_Zones_all.txt` that contains all log entries.
 * `Mass_Update_User_Zones_errors.txt` that contains only errors.
-
-<!-- markdownlint-enable line-length -->
 
 [zonesguide]: https://support.box.com/hc/en-us/articles/360044193533-Assigning-Zones-through-the-Admin-Console
 [script]: https://github.com/box/boxcli/tree/main/examples/Mass%20Update%20User%20Zones

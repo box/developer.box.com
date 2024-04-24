@@ -18,8 +18,6 @@ Sometimes an application might want to upload all files from a folder. To do so
 with the SDKs and the CLI requires traversing the folder tree, finding every
 file and uploading it accordingly.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='.NET'>
 
@@ -464,8 +462,6 @@ box folders:upload ./folder_name_to_upload --parent-folder=$folder_id
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 ## Breakdown
 

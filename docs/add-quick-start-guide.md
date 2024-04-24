@@ -48,7 +48,6 @@ icon: FiCpu
 
 Here are some of the frontmatter fields specifically relative to a quick start guide.
 
-<!-- markdownlint-disable line-length -->
 
 | Name                | Default      | Description                                                                                                                                                                                                                  |
 | ------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +57,6 @@ Here are some of the frontmatter fields specifically relative to a quick start g
 | `rank`              | `null`       | The numeric rank of a page, used to order a page or guide within its category. This overrides any rank in the filename (`1-test.md`).                                                                                        |
 | `type`              | `guide|page` | The type of the markdown file. This defaults to `page` for all markdown files in the `pages/` folder and `guide` for all markdown in the `guides/` folder. Additionally, guides can be marked as `quick-start` where needed. |
 
-<!-- markdownlint-enable line-length -->
 
 ## Lint a new quick start guide
 

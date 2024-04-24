@@ -7,8 +7,6 @@ required_guides: []
 
 # API Versioning Strategy
 
-<!-- markdownlint-disable line-length -->
-
 Box provides versioning capabilities for selected API endpoints. The version control system guarantees seamless functionality for existing endpoint versions, even if Box introduces new ones.
 
 API versioning empowers Box to continually enhance its platform while also offering third-party developers a reliable avenue for feature updates and deprecations.
@@ -103,7 +101,8 @@ If a customer attempts to use an outdated API version, such as `2023.0`, which h
 
 The versioning strategy is only applied to [next generation generated SDKs](https://developer.box.com/sdks-and-tools/#next-generation-sdks).
 Box SDKs support the **All Versions In** SDK approach.
-This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager. For example `FolderManager` contains methods to: `create_folder`, `get_folder_by_id`, `update_folder_by_id`, `delete_folder_by_id`, `get_folder_items` and `copy_folder`.This division is done based on the value of `x-box-tag` field, which is assigned to each method in Public API Service specification. It mostly corresponds to the root of the endpoint URL, but not necessarily. For example: `FolderManager` contains methods with `https://api.box.com/2.0/folders` root URL, but the same base URL is also used in some methods of `SharedLinkFoldersManager`. References to all managers are stored under one Box Client object.
+This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager. For example `FolderManager` contains methods to: `create_folder`, `get_folder_by_id`, `update_folder_by_id`, `delete_folder_by_id`, `get_folder_items` and `copy_folder`.This division is done based on the value of `x-box-tag` field, which is assigned to each method in Public API Service specification. It mostly corresponds to the root of the endpoint URL, but not necessarily. For example: `FolderManager` contains methods with `https://api.box.com/2.0/folders` root URL, but the same base URL is also used in some methods of `SharedLinkFoldersManager`.
+References to all managers are stored under one Box Client object.
 
 See an example of the endpoint's lifecycle:
 
@@ -228,5 +227,3 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ## Additional resources
 
 - [API reference](https://developer.box.com/reference/)
-
-<!-- markdownlint-enable line-length -->

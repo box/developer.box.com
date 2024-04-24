@@ -16,8 +16,6 @@ a file or folder. To apply this template you will need the `scope` and
 `templateKey` of the template, as well as the ID of the item to apply the
 template to.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
@@ -120,7 +118,5 @@ The API will return the newly created metadata instance.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've applied metadata to a file</Next>

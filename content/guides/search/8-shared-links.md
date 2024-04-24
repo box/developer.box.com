@@ -14,7 +14,6 @@ shared link.
 To enable shared links in the API, the `include_recent_shared_links` query
 parameter can be set to `true`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
@@ -46,7 +45,6 @@ client.search.query(
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

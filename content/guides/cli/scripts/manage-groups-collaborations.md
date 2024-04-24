@@ -13,11 +13,8 @@ required_guides:
   - authentication/oauth2/oauth2-setup
 related_resources: []
 
-
 ---
 # Manage groups and collaborations
-
-<!-- markdownlint-disable line-length -->
 
 ## Script structure
 
@@ -170,8 +167,6 @@ You have access to these log files:
 
 * `Mass_Groups_Collabs_Update_all.txt` that contains all log entries
 * `Mass_Groups_Collabs_Update_errors.txt` that contains only errors.
-
-<!-- markdownlint-enable line-length -->
 
 [examples]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2

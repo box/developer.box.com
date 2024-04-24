@@ -77,7 +77,6 @@ is specified like this needs a subsequent value with that key in the
 A query supports the following logical operators.
 
 <!-- i18n-enable localize-links -->
-<!-- markdownlint-disable line-length -->
 
 | Operator                |                                                                                                                                                                                                                                                       |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -93,7 +92,6 @@ A query supports the following logical operators.
 | `IS NULL`               | Matches when the template field value is `null`.                                                                                                                                                                                                      |
 | `IS NOT`                | Matches when the template field value is not `null` .                                                                                                                                                                                                 |
 
-<!-- markdownlint-enable line-length -->
 <!-- i18n-disable localize-links -->
 
 <Message notice>
@@ -107,8 +105,6 @@ the `ILIKE` operator.
 
 A query supports the following comparison operators.
 
-<!-- markdownlint-disable line-length -->
-
 | Operator |                                                                                    |
 |----------|------------------------------------------------------------------------------------|
 | `=`      | Ensures a template field value is **equal to** the specified value                 |
@@ -117,8 +113,6 @@ A query supports the following comparison operators.
 | `>=`     | Ensures a template field value is **greater than or equal to** the specified value |
 | `<=`     | Ensures a template field value is **less than or equal to** the a specified value  |
 | `<>`     | Ensures a template field value is **not equal to** the a specified value           |
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
   Bit-wise and arithmetic operators are not supported by the Metadata Query API.

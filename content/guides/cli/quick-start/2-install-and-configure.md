@@ -51,14 +51,10 @@ Currently you have provided us with the following information.
   Client Secret
 </Store>
 
-<!-- markdownlint-disable line-length -->
-
 <!--alex ignore execute-->
 Open your terminal or command line and execute the command: `box login -n example_name`.
 
 Copy the Client ID and Client Secret into the terminal window when prompted.
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
   ![CLI Login](../images/cli-login.png)

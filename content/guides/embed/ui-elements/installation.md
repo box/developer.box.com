@@ -40,8 +40,6 @@ The Box Content Preview library is currently not available via NPM.
 
 All the UI elements are also available directly from the Box CDN.
 
-<!-- markdownlint-disable line-length -->
-
 | Element                                              | Version  | File                                                                                                                                                                            |
 | ---------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Content Explorer](g://embed/ui-elements/explorer)   | `19.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/explorer.css)                              |
@@ -111,8 +109,6 @@ For Box Preview, the sample would look slightly different.
   </body>
 </html>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### Versions
 

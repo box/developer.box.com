@@ -49,7 +49,6 @@ items to fetch.
 Each of our SDKs has built-in support for API pagination. The following code
 samples show how to use pagination in the search API.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='Java'>
 
@@ -100,4 +99,3 @@ const page2 = await client.search.query('sales'. {
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->

@@ -141,8 +141,6 @@ generally are formatted as follows.
 }
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | Field         | Always present? |                                                                                                                          |
 | ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `entries`     | Yes             | A list of entries in the collection                                                                                      |
@@ -152,8 +150,6 @@ generally are formatted as follows.
 | `order`       | No              | For endpoints that support sorting, this specifies the order the results are returned in                                 |
 | `next_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the next page that can be returned     |
 | `prev_marker` | No              | For endpoints that support marker-based pagination, this specifies the marker for the previous page that can be returned |
-
-<!-- markdownlint-enable line-length -->
 
 ### Request IDs
 

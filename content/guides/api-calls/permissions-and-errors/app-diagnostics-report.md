@@ -117,8 +117,6 @@ ticket by attaching a downloaded copy or via shared link.
 
 The report has nine columns.
 
-<!-- markdownlint-disable line-length -->
-
 | Column | Description        |                                                                                                                                                                                    |
 | --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | App Name                  | The name of the application |

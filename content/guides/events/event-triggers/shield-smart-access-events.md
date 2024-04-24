@@ -11,7 +11,6 @@ alias_paths:
   - /guides/events/shield-alert-events/
 ---
 
-
 # Shield Smart Access Events
 
 [Smart Access][smartaccess] enables Box Admins to define and enforce

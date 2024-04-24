@@ -44,15 +44,11 @@ make API calls on behalf of this user.
 
 ## Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter       | Description                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CLIENT_ID`     | The client ID or API key for the application                                                                                                                  |
 | `CLIENT_SECRET` | The client secret or API secret for the application                                                                                                           |
 | `REDIRECT_URI`  | The redirect URL for your application that a user will be sent to after they have authorized the application. This can be configured in the developer console |
-
-<!-- markdownlint-enable line-length -->
 
 ## 1. Configure SDK
 
@@ -71,15 +67,11 @@ var sdk = new BoxClient(config);
   </Tab>
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 import com.box.sdk.BoxAPIConnection;
 
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>
@@ -136,15 +128,11 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
   </Tab>
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 // response.redirect(authorizationUrl);
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>
@@ -178,13 +166,9 @@ var authorize_url = sdk.getAuthorizeURL({
 The [authorization URL](endpoint://get-authorize) can also be created manually
 as follows.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=[REDIRECT_URI]&response_type=code
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
   Additional query parameters can be passed along when redirecting the user to

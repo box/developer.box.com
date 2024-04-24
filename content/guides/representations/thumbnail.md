@@ -50,16 +50,12 @@ an estimated amount of seconds before retrying this endpoint.
 
 The following formats and sizes of thumbnails are available.
 
-<!-- markdownlint-disable line-length -->
-
 | File Type | Dimensions                                                         |
 | --------- | ------------------------------------------------------------------ |
 | JPG       | `32x32`, `94x94`, `160x160`, `320x320`, `1024x1024`, `2048x2048`\* |
 | PNG       | `1024x1024`\*, `2048x2048`\*                                       |
 
 Some restrictions apply to the sizes marked as `*`.
-
-<!-- markdownlint-enable line-length -->
 
 ## File size restrictions
 
@@ -73,16 +69,12 @@ capped at the size of the original file.
 
 At this time the following file types are supported.
 
-<!-- markdownlint-disable line-length -->
-
 | File Type | File Extensions                                                                                                                                                 |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Documents | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
 | Images    | `ai`, `bmp`, `dcm`, `dicm`, `eps`, `gif`, `idml`, `indd`, `indt`, `inx`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `svs`, `tif`, `tiff`, `tga`                  |
 | Audio     | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
 | Video     | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `mts`, `ogg`, `qt`, `wmv`                                                        |
-
-<!-- markdownlint-enable line-length -->
 
 [get_files_id_thumbnail_id]: endpoint://get_files_id_thumbnail_id
 [thumb_representations]: guide://representations/thumbnail-representation

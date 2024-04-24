@@ -19,15 +19,11 @@ Box Application that you've configured in the developer console.
 
 The following authorization methods are available to each Box application type.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
 | [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         |
 | [Limited Access App][la-app] | No                  | Yes  | No                  | Yes        |
 | [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
-
-<!-- markdownlint-enable line-length -->
 
 ## Client-side
 
@@ -142,8 +138,6 @@ for apps that:
 The following is a quick overview of the key difference between client-side and
 server-side authentication.
 
-<!-- markdownlint-disable line-length -->
-
 |                                   | OAuth 2.0 | JWT | Client Credentials | App Tokens |
 | --------------------------------- | --------- | --- | ------------------ | ---------- |
 | Requires user involvement?        | Yes       | No  | No                 | No         |
@@ -151,8 +145,6 @@ server-side authentication.
 | Can act on behalf of other users? | Yes       | Yes | Yes                | No         |
 | Do users see Box?                 | Yes       | No  | No                 | No         |
 | Can create App Users?             | No        | Yes | Yes                | No         |
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 

@@ -150,7 +150,6 @@ appropriate configuration files.
 
 Your `config.json` file should look similar to the following.
 
-<!-- markdownlint-disable line-length -->
 ```js
 const oktaClientId = exports.oktaClientId = '0oa48567frkg5KW4x6';
 const oktaClientSecret = exports.oktaClientSecret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3';
@@ -158,7 +157,6 @@ const oktaOrgUrl = exports.oktaOrgUrl = 'YOURDOMAIN.okta.com';
 const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
 const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 <Choice option='programming.platform' value='java' color='none'>
@@ -224,7 +222,6 @@ Lastly, update the Flask configuration file
 
 Your `client_secrets.json` file should look similar to the following.
 
-<!-- markdownlint-disable line-length -->
 ```json
 {
   "web": {
@@ -240,7 +237,6 @@ Your `client_secrets.json` file should look similar to the following.
   }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -254,7 +250,6 @@ Your `client_secrets.json` file should look similar to the following.
 
 Your `ConfigureServices` method should look similar to the following.
 
-<!-- markdownlint-disable line-length -->
 ```csharp
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
@@ -271,7 +266,6 @@ services.AddAuthentication(options =>
     ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
 });
 ```
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 

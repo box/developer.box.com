@@ -195,7 +195,6 @@ def sign_doc_embed_url(
 
     return sign_request
 
-
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
     conf = ConfigOAuth()

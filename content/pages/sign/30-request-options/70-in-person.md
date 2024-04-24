@@ -92,7 +92,6 @@ def sign_doc_in_person(
 
     return sign_request
 
-
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
     conf = ConfigOAuth()
@@ -250,7 +249,6 @@ def sign_doc_in_person_multiple(
     )
 
     return sign_request
-
 
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
