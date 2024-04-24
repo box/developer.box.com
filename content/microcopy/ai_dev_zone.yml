@@ -76,7 +76,8 @@ side_panel:
   metadata:
     title: Metadata extraction
     cta: Learn more
-    url: /
+    url:
+      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
   qa:
     title: Document Q&A
     cta: Learn more
