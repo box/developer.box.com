@@ -290,6 +290,7 @@ You have 3 ways to pass parameters before running the script:
 
 ## Running the script again for new users
 
+<!--alex ignore -->
 It is common to run this script regularly as your company hires new employees.
 You can simply edit the `.csv` file, removing the previous rows of users and
 adding the information for the new users. Then, the script may be ran again.
