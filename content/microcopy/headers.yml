@@ -1,10 +1,6 @@
 ---
 primary:
   links:
-    quickstarts:
-      // text:
-      text: Getting Started
-
     documentation:
       // text:
       text: Documentation
