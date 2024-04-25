@@ -21,13 +21,13 @@ template to.
 
 ```sh
 curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
-       "name": "Box, Inc",
-       "industry": "Technology",
-       "tav": 1000000
-     }'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
+      "name": "Box, Inc",
+      "industry": "Technology",
+      "tav": 1000000
+    }'
 ```
 
   </Tab>

@@ -43,27 +43,27 @@ For example:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "email_subject":"All we need is your signature to get started",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "email_subject": "All we need is your signature to get started",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -133,28 +133,28 @@ For example see this request:
 <Tab title='cURL'>
 
 ```bash
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer fN...dD'
---data-raw '{
-    "is_document_preparation_needed": false,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer fN...dD' \
+    --data-raw '{
+      "is_document_preparation_needed": false,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "embed_url_external_user_id":"1234",
-            "role": "signer"
+          "email": "signer@example.com",
+          "embed_url_external_user_id": "1234",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>

@@ -68,8 +68,8 @@ Box API versions are explicitly declared in the `Box-Version` header that your a
 
 ```sh
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Box-Version: 2025.0' \
---header 'Authorization: Bearer …
+    --header 'Box-Version: 2025.0' \
+    --header 'Authorization: Bearer …
 ```
 
 The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `Box-Version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.

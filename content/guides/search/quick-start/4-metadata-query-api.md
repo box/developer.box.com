@@ -14,7 +14,7 @@ body of the API call looks like:
   "query": "departments = :departments",
   "query_params": {"departments": "legal"},
   "ancestor_folder_id": "0",
-  "fields":["id"]
+  "fields": ["id"]
 }
 ```
 

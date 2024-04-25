@@ -46,7 +46,7 @@ events will not be missed. Events can be deduplicated between `admin_logs` and
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 ### 2. Begin overlapping existing requests with `admin_logs_streaming`
@@ -71,7 +71,7 @@ or
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 ### 4. Continue to overlap until confident

@@ -21,7 +21,7 @@ parameter `fields=acceptance_requirements_status`.
 
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
-     -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 
   </Tab>

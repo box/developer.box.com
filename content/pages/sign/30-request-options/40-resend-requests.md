@@ -25,7 +25,7 @@ Here is an example:
 ```bash
 curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 52f6f86c-c0b3-401e-a4ec-1709f277c469/resend' \
---header 'Authorization: Bearer ej...3t'
+    --header 'Authorization: Bearer ej...3t'
 ```
 
 </Tab>
@@ -54,27 +54,27 @@ For example:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <access token>'
---data-raw '{
-    "are_reminders_enabled": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <access token>' \
+    --data-raw '{
+      "are_reminders_enabled": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>

@@ -67,26 +67,26 @@ Consider this method:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer nQ...xY'
---data-raw '{
-    "source_files": [
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer nQ...xY' \
+    --data-raw '{
+      "source_files": [
         {
-            "type": "file",
-            "id": "1363379762284"
+          "type": "file",
+          "id": "1363379762284"
         }
-    ],
-    "parent_folder": {
+      ],
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -211,32 +211,32 @@ See this method:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer nQ...xY'
---data-raw '{
-    "prefill_tags": [
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer nQ...xY' \
+    --data-raw '{
+      "prefill_tags": [
         {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A"
+          "document_tag_id": "tag_full_name",
+          "text_value": "Signer A"
         }
-    ],
-    "source_files": [
+      ],
+      "source_files": [
         {
-            "type": "file",
-            "id": "1363379762284"
+          "type": "file",
+          "id": "1363379762284"
         }
-    ],
-    "parent_folder": {
+      ],
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -377,7 +377,7 @@ Let's create a method to extract the information from the signed request:
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests/
 11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
---header 'Authorization: Bearer nQ...xY'
+    --header 'Authorization: Bearer nQ...xY'
 ```
 
 </Tab>

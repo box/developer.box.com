@@ -113,7 +113,7 @@ The`additional_details` payload will provide the following details:
       "name": "John Doe",
       "login": "johndoe@box.com"
     },
-    "signer":null,
+    "signer": null,
     "template": null,
     "batch_send": null,
     "redirection": {

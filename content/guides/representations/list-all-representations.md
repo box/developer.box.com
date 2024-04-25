@@ -17,7 +17,7 @@ To see what representations are available for a file you can call the
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 The response will include a list of representations in the following format

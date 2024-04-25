@@ -15,7 +15,7 @@ a metadata template and the desired values to query.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22scope%22%3A%22enterprise%22%2C%22templateKey%22%3A%22contract%22%2C%22filters%22%3A%7B%22category%22%3A%22online%22%7D%7D%5D" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

@@ -16,9 +16,9 @@ including a `box-notifications: off` header with the API call.
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
-  -H "box-notifications: off" \
-  -H "authorization: Bearer ACCESS_TOKEN" \
-  -d '{
+    -H "box-notifications: off" \
+    -H "authorization: Bearer ACCESS_TOKEN" \
+    -d '{
       "name": "New Folder",
       "parent": {
         "id": "0"

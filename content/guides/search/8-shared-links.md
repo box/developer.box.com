@@ -19,7 +19,7 @@ parameter can be set to `true`.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared_links=true" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

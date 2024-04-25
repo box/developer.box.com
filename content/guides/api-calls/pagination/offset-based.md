@@ -36,7 +36,7 @@ either without the `offset` parameter, or with the `offset` set to `0`. The
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 To fetch the next page of entries the API needs to be called with
@@ -45,7 +45,7 @@ limit returned in the previous result, `previous_offset + previous_limit`.
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='notice'>

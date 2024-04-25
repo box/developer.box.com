@@ -15,7 +15,7 @@ To search the user's trash, the `trash_content` query parameter can be set to
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&trash_content=trashed_only" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

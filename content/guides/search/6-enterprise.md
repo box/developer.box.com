@@ -16,7 +16,7 @@ query parameter can be set to a value of `enterprise_content`.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&scope=enterprise_content" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

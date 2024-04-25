@@ -59,7 +59,7 @@ In order to work with templates in the Box Sign API we are going to need the
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_templates' \
---header 'Authorization: Bearer E9...Q0'
+    --header 'Authorization: Bearer E9...Q0'
 ```
 
 </Tab>
@@ -188,21 +188,21 @@ See this example:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer E9...Q0'
---data-raw '{
-    "template_id":"f2ec720d-47a6-4052-8210-9bfa8d6c349c",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer E9...Q0' \
+    --data-raw '{
+      "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -334,27 +334,27 @@ Let’s create a new method to pre-populate the name:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer E9..Q0'
---data-raw '{
-    "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer E9..Q0' \
+    --data-raw '{
+      "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ],
-    "prefill_tags": [
+      ],
+      "prefill_tags": [
         {
-            "document_tag_id": "signer_full_name",
-            "text_value": "Signer A"
+          "document_tag_id": "signer_full_name",
+          "text_value": "Signer A"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -482,7 +482,7 @@ all the signature requirements:
 ```bash
 curl --location 'https://api.box.com/2.0/sign_templates/
 f2ec720d-47a6-4052-8210-9bfa8d6c349c' \
---header 'Authorization: Bearer OL..BQ'
+    --header 'Authorization: Bearer OL..BQ'
 ```
 
 </Tab>

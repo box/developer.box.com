@@ -38,23 +38,23 @@ Let's use a template with a single signer as an example:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer Le...Cb'
---data-raw '{
-    "template_id":"ee9a689e-96b6-4076-92a0-b9b765eb09ca",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer Le...Cb' \
+    --data-raw '{
+      "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer",
-            "is_in_person":true,
-            "embed_url_external_user_id":"1234"
+          "email": "signer@example.com",
+          "role": "signer",
+          "is_in_person": true,
+          "embed_url_external_user_id": "1234"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>
@@ -179,28 +179,28 @@ For example, if you add a second signer to the request:
 
 ```bash
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer Le...Cb'
---data-raw '{
-    "template_id":"ee9a689e-96b6-4076-92a0-b9b765eb09ca",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer Le...Cb' \
+    --data-raw '{
+      "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer_a@example.com",
-            "role": "signer",
-            "is_in_person":true,
-            "embed_url_external_user_id":"1234"
+          "email": "signer_a@example.com",
+          "role": "signer",
+          "is_in_person": true,
+          "embed_url_external_user_id": "1234"
         },
         {
-            "email": "signer_b@example.com",
-            "role": "signer",
-            "is_in_person":true
+          "email": "signer_b@example.com",
+          "role": "signer",
+          "is_in_person": true
         }
-    ]
-}'
+      ]
+    }'
 ```
 
 </Tab>

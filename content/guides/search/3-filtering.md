@@ -21,7 +21,7 @@ match the query for the content type defined.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&content_types=name,tags" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -101,7 +101,7 @@ last updated or when it was created.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&created_at_range=2014-05-15T13:35:01Z,2015-05-15T13:35:01&updated_at_range=2014-05-15T13:35:01," \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -183,7 +183,7 @@ extensions using the `file_extensions` query parameter.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&file_extensions=pdf,txt" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -255,7 +255,7 @@ size using the `size_range` query parameter.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&size_range=10000,20000" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -318,7 +318,7 @@ the results to only one of these, a `type` query parameter can be set to either
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&type=file" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -389,7 +389,7 @@ users, use the `owner_user_ids` query parameter.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&owner_user_ids=34446362,462281242" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -458,7 +458,7 @@ to. To narrow down the results to only items in specific folders, use the
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&ancestor_folder_ids=45235463,73445321" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

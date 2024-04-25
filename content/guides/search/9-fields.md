@@ -16,7 +16,7 @@ these resources supports additional fields that can be requested through the
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&fields=name,tags" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>

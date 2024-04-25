@@ -29,9 +29,9 @@ well as a display name for the field.
 
 ```sh
 curl -X POST https://api.box.com/2.0/metadata_templates/schema \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
       "scope": "enterprise",
       "displayName": "Customer Info",
       "fields": [

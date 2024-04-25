@@ -48,7 +48,7 @@ directly to the APIs.
 
 ```curl
 curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
-  -H "authorization: Bearer [APP_TOKEN]"
+    -H "authorization: Bearer [APP_TOKEN]"
 ```
 
   </Tab>

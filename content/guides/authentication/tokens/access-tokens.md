@@ -22,8 +22,8 @@ Token pair are returned.
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
-  -H "content-type: application/x-www-form-urlencoded" \
-  -d '...'
+    -H "content-type: application/x-www-form-urlencoded" \
+    -d '...'
 ```
 
 ```json
@@ -47,8 +47,8 @@ Access Token is returned:
 
 ```curl
 curl --location --request POST 'https://api.box.com/oauth2/token' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode '...'
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode '...'
 ```
 
 ```json

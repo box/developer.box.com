@@ -25,7 +25,7 @@ with the desired page number and the file extension, for example
 
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/pdf/content/3.pdf \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Non-paginated representations
@@ -35,7 +35,7 @@ an empty string.
 
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_32x32/content/ \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <!-- markdownlint-eable line-length -->

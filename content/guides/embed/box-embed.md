@@ -79,7 +79,7 @@ query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -127,7 +127,7 @@ and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

@@ -86,7 +86,7 @@ integrations that are available. This `GET` request can be made with the followi
 
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 ```
 
 ```json
@@ -111,24 +111,24 @@ following GET request may be made.
 
 ```curl
 curl -X GET \
-  https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 ```
 
 ```json
 {
-  "type":"app_integration",
-  "id":"10897",
-  "app":{
-    "type":"app",
-    "id":"336417"
+  "type": "app_integration",
+  "id": "10897",
+  "app": {
+    "type": "app",
+    "id": "336417"
   },
-  "name":"Edit with G Suite",
-  "description":"Securely manage your Google Docs, Sheets and Slides in Box",
-  "executable_item_types":[
+  "name": "Edit with G Suite",
+  "description": "Securely manage your Google Docs, Sheets and Slides in Box",
+  "executable_item_types": [
     "file"
   ],
-  "restricted_extensions":[
+  "restricted_extensions": [
     "docx",
     "gdoc",
     "xlsx",
@@ -137,7 +137,7 @@ curl -X GET \
     "gslides",
     "gslide"
   ],
-  "scoped_to":"parent"
+  "scoped_to": "parent"
 }
 ```
 
@@ -162,17 +162,17 @@ user:
 
 ```curl
 curl -X POST https://api.box.com/2.0/app_integration_assignments \
-  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
-  -d '{
-    "assignee": {
-      "type": "user",
-      "id": "[APP_USER_ID]"
-    },
-    "app_integration": {
-      "type": "app_integration",
-      "id": "[APP_INTEGRATION_ID]"
-    }
-  }'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
+    -d '{
+      "assignee": {
+        "type": "user",
+        "id": "[APP_USER_ID]"
+      },
+      "app_integration": {
+        "type": "app_integration",
+        "id": "[APP_INTEGRATION_ID]"
+      }
+    }'
 ```
 
 ```json

@@ -56,15 +56,15 @@ and any origin not on the list will return in a `HTTP 403` error.
 
 ```json
 {
-  "type":"error",
-  "status":403,
-  "code":"cors_origin_not_whitelisted",
-  "context_info":{
-    "origin":"https://company.com"
+  "type": "error",
+  "status": 403,
+  "code": "cors_origin_not_whitelisted",
+  "context_info": {
+    "origin": "https://company.com"
   },
-  "help_url":"https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
-  "message":"Access denied - Did you forget to safelist your origin in the CORS config of your app?",
-  "request_id":"4dsdfsa832213"
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
+  "message": "Access denied - Did you forget to safelist your origin in the CORS config of your app?",
+  "request_id": "4dsdfsa832213"
 }
 ```
 

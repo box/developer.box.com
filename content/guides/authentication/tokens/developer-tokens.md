@@ -41,7 +41,7 @@ header of an API call.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer [DEVELOPER_TOKEN]"
+    -H "authorization: Bearer [DEVELOPER_TOKEN]"
 ```
 
 <Message warning>

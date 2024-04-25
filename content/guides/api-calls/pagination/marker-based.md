@@ -35,7 +35,7 @@ either without the `marker` parameter, or with the `marker` set to `0`. The
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='notice'>
@@ -50,7 +50,7 @@ received in the API response.
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker=true \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 The final page of items has been requested when the next `next_marker` value is

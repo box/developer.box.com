@@ -32,20 +32,20 @@ the change.
 
 ```sh
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json-patch+json" \
-     -d '[
-        {
-          "op": "test",
-          "path": "/name",
-          "value": "Box, Inc"
-        },
-        {
-          "op": "replace",
-          "path": "/name",
-          "value": "Box"
-        }
-      ]'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json-patch+json" \
+    -d '[
+      {
+        "op": "test",
+        "path": "/name",
+        "value": "Box, Inc"
+      },
+      {
+        "op": "replace",
+        "path": "/name",
+        "value": "Box"
+      }
+    ]'
 ```
 
   </Tab>

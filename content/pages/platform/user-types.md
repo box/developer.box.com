@@ -126,7 +126,7 @@ General tab of the [Developer Console][dc] revealing the email address.
 If someone attempts to make API calls using a Service Account Access Token
 before the application is authorized in the Admin Console they will receive an
 error message:
-`"error":"unauthorized_client"`
+`"error": "unauthorized_client"`
 `"error_description": "This app is not authorized by the enterprise"`
 
 ### Use Cases
