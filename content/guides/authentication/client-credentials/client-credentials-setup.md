@@ -12,7 +12,6 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-  - /guides/authentication/client-credentials
 ---
 
 # Setup with Client Credentials Grant

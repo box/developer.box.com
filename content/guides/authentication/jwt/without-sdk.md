@@ -10,8 +10,7 @@ required_guides:
   - authentication/select
   - authentication/oauth2/oauth2-setup
 related_resources: []
-alias_paths:
-  - /guides/authentication/client-credentials
+alias_paths: []
 ---
 
 # JWT without SDKs
