@@ -6,8 +6,7 @@ related_guides:
 
 # Create your first application
 
-Once you have created the developer account and you have your
-Developer Enterprise set up, you can start creating applications.
+Once you have your Developer Enterprise set up, you can start creating applications.
 
 Click the [Dev Console][console] button once you're logged in to
 your Developer Enterprise.
