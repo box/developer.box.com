@@ -1,20 +1,16 @@
 ---
-rank: 1
 hide: true
-related_guides:
-  - authentication
-  - authorization
-  - api-calls
 category_id: getting-started
 subcategory_id: null
 is_index: false
 id: getting-started/developer-account
+rank: 0
 type: guide
 total_steps: 3
 sibling_id: getting-started
 parent_id: getting-started
 next_page_id: getting-started/first-application
-previous_page_id: getting-started
+previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/developer-account.md
 ---

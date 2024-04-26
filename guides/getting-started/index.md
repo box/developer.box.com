@@ -12,7 +12,7 @@ type: guide
 total_steps: 3
 sibling_id: guides
 parent_id: guides
-next_page_id: getting-started/developer-account
+next_page_id: getting-started/first-application
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/getting-started/index.md
