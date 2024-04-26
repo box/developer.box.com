@@ -36,6 +36,12 @@ files:
     1511804164480:
       name: Sample_contract.docx
       description: Document
+    1514387608242:
+      name: Sample_document.pdf
+      description: Document
+    733459462002:
+      name: Sample_document_short.pdf
+      description: Document
   go_back_button: AI Dev Zone
 
 sample_code:
