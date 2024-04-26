@@ -72,26 +72,26 @@ be the main Box admin or co-admin.
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
     ```bash
-        git clone https://github.com/box/boxcli.git
-        cd boxcli/examples/Inactive\ Users\ Report/
+    git clone https://github.com/box/boxcli.git
+    cd boxcli/examples/Inactive\ Users\ Report/
     ```
 
 2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
 
     ```bash
-        $daysInactive = "10"
+    $daysInactive = "10"
     ```
 
 3. (Optional) To change the report output file name, define the `ReportOutputFile` parameter.
 
     ```bash
-        $ReportOutputFile = $ReportName + ".csv"
+    $ReportOutputFile = $ReportName + ".csv"
     ```
 
 4. (Optional) To change event types, define the list for `eventType` parameter.
 
     ```bash
-        $eventType = "LOGIN,UPLOAD,COPY,MOVE"
+    $eventType = "LOGIN,UPLOAD,COPY,MOVE"
     ```
 
 ## Run the script

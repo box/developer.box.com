@@ -311,34 +311,34 @@ To make things easier, you can use a [sample project][metadata-project] to launc
 3. Pass the required parameters to the Content Explorer component.
 
     ```js
-      [...]
+    [...]
 
-        function App() {
-            [...]
+      function App() {
+          [...]
 
-            return (
-                <IntlProvider locale="en">
-                  <div className="App">
-                    <header className="App-header">
-                      <h2>Metadata view in Content Explorer</h2>
-                    </header>
-                    <section>
-                      <div className="metadata-based-view">
-                        <ContentExplorer
-                          rootFolderId={rootFolderID}
-                          token={token}
-                          metadataQuery={metadataQuery}
-                          fieldsToShow={fieldsToShow}
-                          defaultView={defaultView}
-                        />
-                      </div>
-                    </section>
-                  </div>
-                </IntlProvider>
-            );
-        }
+          return (
+              <IntlProvider locale="en">
+                <div className="App">
+                  <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                  </header>
+                  <section>
+                    <div className="metadata-based-view">
+                      <ContentExplorer
+                        rootFolderId={rootFolderID}
+                        token={token}
+                        metadataQuery={metadataQuery}
+                        fieldsToShow={fieldsToShow}
+                        defaultView={defaultView}
+                      />
+                    </div>
+                  </section>
+                </div>
+              </IntlProvider>
+          );
+      }
 
-        export default App;
+      export default App;
     ```
 
 A sample code for a React component including the Content Explorer metadata view would look as follows:

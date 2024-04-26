@@ -95,8 +95,8 @@ be the main Box admin or co-admin.
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
     ```bash
-        git clone https://github.com/box/boxcli.git boxcli
-        cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
+    git clone https://github.com/box/boxcli.git boxcli
+    cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
     ```
 
 2. Set the path to the `.csv` file with the list of groups and user emails.

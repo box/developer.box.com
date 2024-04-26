@@ -44,24 +44,24 @@ Choose your preferred language / framework below to get started.
 * Create a `package.json` file inside the local directory, open it in your preferred editor, copy / paste the following into it, and save / exit the file.
 
 ```json
-  {
-    "name": "okta-box",
-    "version": "1.0.0",
-    "description": "Box / Okta sample integration",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
-    },
-    "author": "Box",
-    "license": "ISC",
-    "dependencies": {
-      "@okta/oidc-middleware": "^4.0.0",
-      "@okta/okta-sdk-nodejs": "^3.2.0",
-      "box-node-sdk": "^1.31.0",
-      "express-session": "^1.17.0"
-    }
+{
+  "name": "okta-box",
+  "version": "1.0.0",
+  "description": "Box / Okta sample integration",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Box",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/oidc-middleware": "^4.0.0",
+    "@okta/okta-sdk-nodejs": "^3.2.0",
+    "box-node-sdk": "^1.31.0",
+    "express-session": "^1.17.0"
   }
+}
 ```
 
 * Run `npm init` from the terminal / console to install dependencies.
