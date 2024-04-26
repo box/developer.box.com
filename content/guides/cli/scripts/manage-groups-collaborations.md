@@ -25,12 +25,12 @@ The script consists of two parts described in detail in the sections below. You 
 
 1. The script uses the `.csv` file you specify for the `UserGroupAdditionPath` parameter. The file lists group names and user emails. When creating the file, you can use the same group name for several users, and assign one user to several groups. For example:
 
-  |`GroupName`| `UserEmail`|
-  |-----------|------------|
-  |Group1| ManagedUser1@test.com|
-  |Group1| ManagedUser2@test.com|
-  |Group2| ManagedUser3@test.com|
-  |Group3| ManagedUser1@test.com|
+    |`GroupName`| `UserEmail`|
+    |-----------|------------|
+    |Group1| `ManagedUser1@test.com`|
+    |Group1| `ManagedUser2@test.com`|
+    |Group2| `ManagedUser3@test.com`|
+    |Group3| `ManagedUser1@test.com`|
 
 2. If the group doesn't exist, the script creates it. If it does exist, the script can update the entries based on the provided data.
 
@@ -40,12 +40,12 @@ The script consists of two parts described in detail in the sections below. You 
 
 2. For each row, the script checks if a group exists and if it's not already added as a collaborator to the corresponding folder. For example:
 
-  |`GroupName`| `FolderId`| `CollaborationRole`|
-  |-----------|-----------|--------------------|
-  |Group1| 1111111| editor|
-  |Group2| 1111111| viewer_uploader|
-  |Group2| 2222222| viewer |
-  |Group3| 1111111| viewer_uploader|
+    |`GroupName`| `FolderId`| `CollaborationRole`|
+    |-----------|-----------|--------------------|
+    |Group1| 1111111| editor|
+    |Group2| 1111111| viewer_uploader|
+    |Group2| 2222222| viewer |
+    |Group3| 1111111| viewer_uploader|
 
 3. If both of these conditions are met, the script assigns the group to a folder using the role defined in the `CollaborationRole` column. Also, if a group already exists, but the `CollaborationRole` changed, the script will update it if you pass the `-UpdateExistingCollabs` flag when running the script.
 
@@ -77,11 +77,11 @@ Type 'help' to get help.
 PS /Users/user/repos/boxcli/examples>
 ```
 
-  <message>
-    If you encounter issues make sure you installed both
-    [dotnet core](https://dotnet.microsoft.com/download) and
-    [PowerShell][pwsh].
-  </message>
+<message>
+  If you encounter issues make sure you installed both
+  [dotnet core](https://dotnet.microsoft.com/download) and
+  [PowerShell][pwsh].
+</message>
 
 ### Box CLI
 

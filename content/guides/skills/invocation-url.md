@@ -54,4 +54,3 @@ following tasks.
 [firebase]: https://firebase.google.com/
 [aws]: https://aws.amazon.com/
 [gcp]: https://cloud.google.com/functions/
-<!-- markdownlint-enable line-length -->

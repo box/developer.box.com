@@ -19,9 +19,9 @@ This script generates a CSV file with a list of users who have been inactive for
 
 1. Looks for the users who have the role `user`.
 
-  <message>
-  The script does not consider other roles, such as `AppUser`.
-  </message>
+    <message>
+    The script does not consider other roles, such as `AppUser`.
+    </message>
 
 2. Uses [Box Events][boxevents] to check if the user performed any actions for a specified number of days. The default list of event types includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
 3. Adds users who didn't perform any actions to a `.csv` file with inactive users. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].

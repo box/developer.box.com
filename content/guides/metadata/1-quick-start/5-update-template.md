@@ -29,7 +29,7 @@ of the template that might be applied to a file or folder.
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTemplate/schema \
     -H "authorization: Bearer <ACCESS_TOKEN>" \
     -H "content-type: application/json" \
@@ -48,7 +48,7 @@ curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTempl
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var updates = new List<BoxMetadataTemplateUpdate>()
 {
   new BoxMetadataTemplateUpdate()

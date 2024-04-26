@@ -62,6 +62,7 @@ available for folders.
 | `SIGN_REQUEST.EXPIRED`      | A sign request is expired.                                                                                           | Yes   | Yes     |
 | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A signer's email is bounced. | Yes | Yes |
 | `WEBHOOK.DELETED`           | A webhook is deleted.                                                                                           | No    | No      |
+
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
 
 ## V1

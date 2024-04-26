@@ -222,29 +222,29 @@ preview.removeListener(EVENTNAME, listener);
 - `viewer` event will be triggered when we have the viewer instance first available. This will be the same object that is also a property included in the `load` event. Preview triggers this event before `load` so that clients can attach their listeners before the `load` event is triggered.
 - `load` event will be triggered on every preview load when `show()` is called or if inter-preview navigation occurs. The event data will contain:
 
-```js
-error: 'message', // Error message if any error occurred while loading
-viewer: {...},    // Instance of the current viewer object if no error occurred
-metrics: {...},   // Performance metrics
-file: {...}       // Box file object with properties defined in file.js
-```
+    ```js
+    error: 'message', // Error message if any error occurred while loading
+    viewer: {...},    // Instance of the current viewer object if no error occurred
+    metrics: {...},   // Performance metrics
+    file: {...}       // Box file object with properties defined in file.js
+    ```
 
 - `navigate` event will be triggered when navigation happens. The event includes the file ID of the file being navigated to, and this event will trigger before `load`.
 - `notification` event will be triggered when either the preview wrapper or one of the viewers wants to notify something like a warning or non-fatal error. The event data will contain:
 
-```js
-message: 'message', // Message to show
-type: 'warning'    // 'warning', 'notice', or 'error'
-```
+    ```js
+    message: 'message', // Message to show
+    type: 'warning'    // 'warning', 'notice', or 'error'
+    ```
 
 - `viewerevent` Each viewer will trigger its own sets of events. For example, the Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger another set of events. The preview wrapper will also re-emit events at the preview level, with event data containing:
 
-```js
-event: EVENTNAME,         // Event name
-data: DATA,               // Event data object
-viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
-fileId: fileId            // The file ID
-```
+    ```js
+    event: EVENTNAME,         // Event name
+    data: DATA,               // Event data object
+    viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
+    fileId: fileId            // The file ID
+    ```
 
 ### Example event usage
 
@@ -308,48 +308,48 @@ To add V4 annotations to preview:
 
 3. Import content preview and box annotations into your application:
 
-```js
-import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
+    ```js
+    import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
-var file_id = 'YOUR FILE ID';
-var accessToken = 'YOUR ACCESS TOKEN';
+    var file_id = 'YOUR FILE ID';
+    var accessToken = 'YOUR ACCESS TOKEN';
 
-/* Enable annotations in sidebar */
-var contentSidebarProps = {
-    hasActivityFeed: true,
-    features: {
-        activityFeed: {
-            annotations: {
-                enabled: true
+    /* Enable annotations in sidebar */
+    var contentSidebarProps = {
+        hasActivityFeed: true,
+        features: {
+            activityFeed: {
+                annotations: {
+                    enabled: true
+                }
             }
-        }
-    },
-}
+        },
+    }
 
-var options = {
-    container: '.previewer',
-    contentSidebarProps: contentSidebarProps,
+    var options = {
+        container: '.previewer',
+        contentSidebarProps: contentSidebarProps,
 
-    /* Enable annotations in preview */
-    enableAnnotationsDiscoverability: true,
-    enableAnnotationsImageDiscoverability: true,
-    showAnnotations: true,
-    showAnnotationsControls: true,
-    showAnnotationsDrawingCreate: true,
-};
+        /* Enable annotations in preview */
+        enableAnnotationsDiscoverability: true,
+        enableAnnotationsImageDiscoverability: true,
+        showAnnotations: true,
+        showAnnotationsControls: true,
+        showAnnotationsDrawingCreate: true,
+    };
 
-/* BoxAnnotations */
-var annotations = new BoxAnnotations();
+    /* BoxAnnotations */
+    var annotations = new BoxAnnotations();
 
-/* Box Preview */
-var contentPreviewer = new Box.ContentPreview();
+    /* Box Preview */
+    var contentPreviewer = new Box.ContentPreview();
 
-/* Set annotation into previewer */
-options['boxAnnotations'] = annotations;
+    /* Set annotation into previewer */
+    options['boxAnnotations'] = annotations;
 
-/* Show previewer */
-contentPreviewer.show(file_id, accessToken, options);
-```
+    /* Show previewer */
+    contentPreviewer.show(file_id, accessToken, options);
+    ```
 
 <Message warning>
 The property `features: { activityFeed: { annotations: { enabled: true  } } } }

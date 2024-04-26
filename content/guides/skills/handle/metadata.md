@@ -146,7 +146,7 @@ file.createMetadata("global", "boxSkillsCards", metadata);
   </Tab>
   <Tab title='.NET'>
 
-```cs
+```csharp
 var metadataValues = new Dictionary<string, object>()
 {
   cards: [{
@@ -304,7 +304,7 @@ file.updateMetadata("global", "boxSkillsCards", metadata);
   </Tab>
   <Tab title='.NET'>
 
-```cs
+```csharp
 var card = new Dictionary<string, object>()
 {
   "type": "skill_card",

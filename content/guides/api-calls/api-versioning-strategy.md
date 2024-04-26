@@ -66,7 +66,7 @@ If your request doesn't include a version, then the API defaults to the `V2` Box
 
 Box API versions are explicitly declared in the `Box-Version` header that your app makes requests to. For example:
 
-```sh
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Box-Version: 2025.0' \
     --header 'Authorization: Bearer …

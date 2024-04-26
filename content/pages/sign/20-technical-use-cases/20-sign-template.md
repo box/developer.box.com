@@ -57,7 +57,7 @@ In order to work with templates in the Box Sign API we are going to need the
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_templates' \
     --header 'Authorization: Bearer E9...Q0'
 ```
@@ -186,7 +186,7 @@ See this example:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer E9...Q0' \
@@ -245,35 +245,35 @@ Resulting in (simplified):
 
 ```json
 {
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "71e86670-5850-44cc-8b4d-9f5eab6c04de",
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Simple-DOC (1).pdf",
+  "type": "sign-request",
+  "status": "created",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393030489686",
+        "type": "file",
+        "name": "Simple-DOC (1).pdf",
+      }
     ],
-    "id": "71e86670-5850-44cc-8b4d-9f5eab6c04de",
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
-    },
-    "name": "Simple-DOC (1).pdf",
-    "type": "sign-request",
-    "status": "created",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393030489686",
-                "type": "file",
-                "name": "Simple-DOC (1).pdf",
-            }
-        ],
-    },
-    "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c"
+  },
+  "template_id": "f2ec720d-47a6-4052-8210-9bfa8d6c349c"
 }
 ```
 
@@ -332,7 +332,7 @@ Let’s create a new method to pre-populate the name:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer E9..Q0' \
@@ -479,7 +479,7 @@ all the signature requirements:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_templates/
 f2ec720d-47a6-4052-8210-9bfa8d6c349c' \
     --header 'Authorization: Bearer OL..BQ'

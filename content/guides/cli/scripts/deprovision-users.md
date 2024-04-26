@@ -65,8 +65,8 @@ be the main Box admin or co-admin.
 1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
     ```bash
-        git clone https://github.com/box/boxcli.git boxcli
-        cd boxcli/examples/User\ Deprovisioning/
+    git clone https://github.com/box/boxcli.git boxcli
+    cd boxcli/examples/User\ Deprovisioning/
     ```
 
 2. Create the list of employees for deletion in `.csv`.
@@ -86,19 +86,19 @@ be the main Box admin or co-admin.
 
     |`name`| `email`|
     |------|--------|
-    |Managed User 1| ManagedUser1@test.com|
-    |Managed User 2| ManagedUser2@test.com|
-    |Managed User 3| ManagedUser3@test.com|
+    |Managed User 1| `ManagedUser1@test.com`|
+    |Managed User 2| `ManagedUser2@test.com`|
+    |Managed User 3| `ManagedUser3@test.com`|
 
 ### List of parameters
 
-  |`Parameter`| `Description`| `Required` | `Default Value` |
-  |-----------|--------------|------------|-----------------|
-  |`EmployeeList`|  Path to Employee List CSV with employees to be deleted. | Yes | - |
-  |`SkipTransferContent`| Set this flag to skip transfer of user content before deletion when running the script. Otherwise user's content will be transferred. | No | `False` |
-  |`NewFilesOwnerID`|  The ID of the user to transfer files to before deleting the user. If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.| No | If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID. |
-  |`EmployeeArchiveFolderName`|The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `False`. If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created.|Yes|`Employee Archive`|
-  |`DryRun`|A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones. |No|`False`|
+|`Parameter`| `Description`| `Required` | `Default Value` |
+|-----------|--------------|------------|-----------------|
+|`EmployeeList`|  Path to Employee List CSV with employees to be deleted. | Yes | - |
+|`SkipTransferContent`| Set this flag to skip transfer of user content before deletion when running the script. Otherwise user's content will be transferred. | No | `False` |
+|`NewFilesOwnerID`|  The ID of the user to transfer files to before deleting the user. If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID to receive the content.| No | If not specified, the script will prompt to input in the interactive mode, or use the current authenticated user ID. |
+|`EmployeeArchiveFolderName`|The name of a folder, where users' content will be moved to if `SkipTransferContent` is set to `False`. If a folder with this name already exists in the user's `NewFilesOwnerID` root folder, it will be used. Otherwise, a new one will be created.|Yes|`Employee Archive`|
+|`DryRun`|A flag that determines the script should be run in a mode, where no delete/create/update calls will be made, only read ones. |No|`False`|
 
 ### Define script parameters
 

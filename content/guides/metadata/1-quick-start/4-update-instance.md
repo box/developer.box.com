@@ -30,7 +30,7 @@ the change.
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
     -H "authorization: Bearer <ACCESS_TOKEN>" \
     -H "content-type: application/json-patch+json" \
@@ -51,7 +51,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var updates = new List<BoxMetadataUpdate>()
 {
   new BoxMetadataUpdate()

@@ -113,7 +113,7 @@ applications leveraging Server Authentication with [JWT)][jwt] or
 options are **app access only** or **app + enterprise access**.
 
 Upon [authorizing][auth] one of these applications in the Box Admin Console, a
-[Service Account][serviceaccount] (AutomationUser_xxxx_@boxdevedition.com)
+[Service Account][serviceaccount] (`AutomationUser_xxxx_@boxdevedition.com`)
 representing the application is automatically generated. This account is an
 Admin-like user that can only be accessed via the API and can then be used to
 create user’s of the application called [App Users][appusers]. If an application

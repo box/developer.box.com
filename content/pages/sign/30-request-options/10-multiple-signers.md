@@ -30,7 +30,7 @@ Creating a method specific for this:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer ej...3t' \
@@ -180,7 +180,7 @@ Let's create a method for this:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer ej...3t' \

@@ -37,8 +37,8 @@ Setting up an event listener for our Slack app will allow us to monitor for
 events within the channel. For this bot, we want to monitor three
 [Slack events][slack-events] in order to perform actions within Box.
 
-* [`bot_added`][slack-event-bot-added]: When the bot is first added to a , it will get a list of all users in the channel, then create a group for those users. We can then use this group later on to add that to any content that is shared with the **slash command**.
-* [`member_joined_channel`][slack-event-member-joined]: When a new user a Slack channel they will be added to the Box group.
+* [`bot_added`][slack-event-bot-added]: When the bot is first added to a channel, it will get a list of all users in the channel, then create a Box group for those users. We can then use this group later on to add that group to any content that is shared with the **slash command**.
+* [`member_joined_channel`][slack-event-member-joined]: When a new user joins a Slack channel they will be added to the Box group.
 * [`member_left_channel`][slack-event-member-left]: When a user leaves a Slack channel, or the user is removed, they will be removed from the Box group.
 
 To set up a notification URL to which these Slack event payloads will
@@ -48,10 +48,10 @@ URL to verify that it's valid. This will be an HTTP POST with a payload that
 looks something like the following:
 
 ```json
-{ 
-  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl", 
+{
+  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
   "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
-  "type": "url_verification" 
+  "type": "url_verification"
 }
 ```
 
@@ -96,7 +96,7 @@ app.post('/event', (req, res) => {
         req.body.type === 'url_verification'
     ) {
         res.send({
-          c hallenge: req.body.challenge
+            challenge: req.body.challenge
         });
     } else {
         res.status(400).send({
@@ -208,14 +208,14 @@ From your Slack application **Basic Information** tab, under
 **Event Subscriptions** and do the following.
 
 * Toggle **Enable Events** to **On**.
-* Under **Request URL** add in the public URL that you deployed the above code, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as `https://myapp.com/event`). Once you add the URL and click outside the field, will immediately send the challenge to the URL that you were hosting the at above. If the code responds correctly, you will see a green verified beside the **Request URL** header.
+* Under **Request URL** add in the public URL that you deployed the above code to, and be aware that we are listening at `{YOUR_APP_DOMAIN}/event` (such as `https://myapp.com/event`). Once you add the URL and click outside the field, Slack will immediately send the challenge to the URL that you were hosting the code at above. If the code responds correctly, you will see a green verified note beside the **Request URL** header.
 
 <ImageFrame noborder center shadow>
   ![Enable Slack Event Subscriptions](./img/slack_1_create_event_sub.png)
 </ImageFrame>
 
 * Expand the **Subscribe to bot events** section and click on the **Add Bot User Event** button.
-* Add `member_joined_channel` and `member_left_channel` to the events the bot subscribed to. These will send events when anyone new is added to the.
+* Add `member_joined_channel` and `member_left_channel` to the events the bot is subscribed to. These will send events when anyone new is added to the channel.
 * Click the **Save Changes** button at the bottom of the page.
 
 ## Configure the Slack app slash command
@@ -231,12 +231,12 @@ the file is automatically collaborated with the Box group of users that are in
 that channel.
 
 From the **Basic Information** tab of your application, under **Add features and
-functionality**, click on the button titled **Slash Commands**. 
+functionality**, click on the button titled **Slash Commands**.
 
 In the page that comes up, click **Create New Command** and input the following:
 
-* **Command**: This is the command that a channel user will use to share Box file / folder ID with the channel. Use `/boxadd` for this quick start.
-* **Request URL**: The URL that is listening for and responding to slash in our Slack bot. In this quick start we use the same event URL that was used for the app event listener section above.
+* **Command**: This is the command that a channel user will use to share a Box file / folder ID with the channel. Use `/boxadd` for this quick start.
+* **Request URL**: The URL that is listening for and responding to slash commands in our Slack bot. In this quick start we use the same event URL that was used for the app event listener section above.
 * **Short Description**: A description of what the Slash command will do.
 * **Usage Hint**: Additional parameters that may be passed to the command. In our case, that's the Box file / folder ID and type of content.
 

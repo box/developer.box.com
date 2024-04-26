@@ -79,7 +79,6 @@ This error indicates either:
 Once you make changes to the app settings, don't forget to [reauthorize][reauth] the application in the Admin Console.
 </Message>
 
-<!-- markdownlint enable line-length -->
 <!-- i18n-enable localize-links -->
 
 [2fa]: https://support.box.com/hc/en-us/articles/360043697154-Two-Factor-Authentication-Set-Up-for-Your-Account

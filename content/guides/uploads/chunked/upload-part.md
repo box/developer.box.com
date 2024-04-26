@@ -95,7 +95,7 @@ this can be smaller. The `Content-Range` parameter
 definition follows this pattern:
 
 ```yaml
-    -H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
+-H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
 ```
 
 When providing the value for `Content-Range`, remember that:
@@ -107,8 +107,8 @@ For example, if the part size is `8388608`,
 the content range for the first two parts will be:
 
 ```yaml
-- H "Content-Range : bytes 0-8388607/32127641" \ ## first part
-- H "Content-Range : bytes 8388608-16777215/32127641" \ ## second part
+-H "Content-Range: bytes 0-8388607/32127641" \ ## first part
+-H "Content-Range: bytes 8388608-16777215/32127641" \ ## second part
 ```
 
 ## Response

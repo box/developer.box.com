@@ -65,7 +65,7 @@ Consider this method:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer nQ...xY' \
@@ -209,7 +209,7 @@ See this method:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer nQ...xY' \
@@ -374,7 +374,7 @@ Let's create a method to extract the information from the signed request:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests/
 11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
     --header 'Authorization: Bearer nQ...xY'

@@ -27,7 +27,7 @@ well as a display name for the field.
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/metadata_templates/schema \
     -H "authorization: Bearer <ACCESS_TOKEN>" \
     -H "content-type: application/json" \
@@ -60,7 +60,7 @@ curl -X POST https://api.box.com/2.0/metadata_templates/schema \
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var templateParams = new BoxMetadataTemplate()
 {
   DisplayName = "Customer Info",

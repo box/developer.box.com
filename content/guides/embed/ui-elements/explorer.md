@@ -186,16 +186,16 @@ contentExplorer.removeAllListeners();
 
 ### Events
 
-| Event Name | Event Data    | Description                                 |
-| ---------- | ------------- | ------------------------------------------- | -------- | ------------------------------------------ |
-| `select`   | `Array<File   | Web Link                                    | Folder>` | Will be fired when item rows are selected. |
-| `rename`   | `File         | Web Link                                    | Folder`  | Will be fired when an item is renamed.     |
-| `preview`  | `File`        | Will be fired when a file is previewed.     |
-| `download` | `Array<File>` | Will be fired when items are downloaded.    |
-| `delete`   | `Array<File>` | Will be fired when items are deleted.       |
-| `upload`   | `Array<File>` | Will be fired when items are uploaded.      |
-| `navigate` | `Folder`      | Will be fired when navigating into folders. |
-| `create`   | `Folder`      | Will be fired when a new folder is created  |
+| Event Name | Event Data                           | Description                                 |
+| ---------- | ------------------------------------ | ------------------------------------------- |
+| `select`   | `Array<File \| Web Link \| Folder>`  | Will be fired when item rows are selected.  |
+| `rename`   | `File \| Web Link \| Folder`         | Will be fired when an item is renamed.      |
+| `preview`  | `File`                               | Will be fired when a file is previewed.     |
+| `download` | `Array<File>`                        | Will be fired when items are downloaded.    |
+| `delete`   | `Array<File>`                        | Will be fired when items are deleted.       |
+| `upload`   | `Array<File>`                        | Will be fired when items are uploaded.      |
+| `navigate` | `Folder`                             | Will be fired when navigating into folders. |
+| `create`   | `Folder`                             | Will be fired when a new folder is created  |
 
 ## Keyboard Shortcuts
 
@@ -304,42 +304,42 @@ To make things easier, you can use a [sample project][metadata-project] to launc
    | `METADATA_TEMPLATE_NAME` | Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the label only. The name to use in the component is always the you provided at the beginning. |
    | `ROOTFOLDER_ID`          | ID of Box folder to which you applied the metadata template.                                                                                                                                                                                                                                                                                                                                                                                       |
 
-The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
+    The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
 
-For additional information on metadata queries, see [this guide][metadata-query].
+    For additional information on metadata queries, see [this guide][metadata-query].
 
 3. Pass the required parameters to the Content Explorer component.
 
-```js
-  [...]
+    ```js
+      [...]
 
-    function App() {
-        [...]
+        function App() {
+            [...]
 
-        return (
-            <IntlProvider locale="en">
-              <div className="App">
-                <header className="App-header">
-                  <h2>Metadata view in Content Explorer</h2>
-                </header>
-                <section>
-                  <div className="metadata-based-view">
-                    <ContentExplorer
-                      rootFolderId={rootFolderID}
-                      token={token}
-                      metadataQuery={metadataQuery}
-                      fieldsToShow={fieldsToShow}
-                      defaultView={defaultView}
-                    />
+            return (
+                <IntlProvider locale="en">
+                  <div className="App">
+                    <header className="App-header">
+                      <h2>Metadata view in Content Explorer</h2>
+                    </header>
+                    <section>
+                      <div className="metadata-based-view">
+                        <ContentExplorer
+                          rootFolderId={rootFolderID}
+                          token={token}
+                          metadataQuery={metadataQuery}
+                          fieldsToShow={fieldsToShow}
+                          defaultView={defaultView}
+                        />
+                      </div>
+                    </section>
                   </div>
-                </section>
-              </div>
-            </IntlProvider>
-        );
-    }
+                </IntlProvider>
+            );
+        }
 
-    export default App;
-```
+        export default App;
+    ```
 
 A sample code for a React component including the Content Explorer metadata view would look as follows:
 

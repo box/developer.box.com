@@ -22,7 +22,7 @@ Here is an example:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 52f6f86c-c0b3-401e-a4ec-1709f277c469/resend' \
     --header 'Authorization: Bearer ej...3t'
@@ -52,7 +52,7 @@ For example:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer <access token>' \

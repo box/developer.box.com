@@ -19,7 +19,7 @@ template to.
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
     -H "authorization: Bearer <ACCESS_TOKEN>" \
     -H "content-type: application/json" \
@@ -33,7 +33,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var metadataValues = new Dictionary<string, object>()
 {
     { "name", "Box, Inc" },

@@ -36,7 +36,7 @@ Let's use a template with a single signer as an example:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer Le...Cb' \
@@ -177,7 +177,7 @@ For example, if you add a second signer to the request:
 <Tabs>
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer Le...Cb' \

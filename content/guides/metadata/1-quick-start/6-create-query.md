@@ -23,24 +23,24 @@ value is more than $200,000.
 <Tabs>
   <Tab title='cURL'>
 
-    ```curl
-    curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-        -H 'Authorization: Bearer <ACCESS_TOKEN>" ' \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "from": "enterprise_123456.customerInfo",
-          "fields": [
-            "name",
-            "enterprise_123456.customerInfo.name"
-            "enterprise_123456.customerInfo.tav"
-          ],
-          "query": "tav >= :value",
-          "query_params": {
-            "value": 200000
-          },
-          "ancestor_folder_id": "0"
-        }'
-    ```
+```curl
+curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
+    -H 'Authorization: Bearer <ACCESS_TOKEN>" ' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "from": "enterprise_123456.customerInfo",
+      "fields": [
+        "name",
+        "enterprise_123456.customerInfo.name"
+        "enterprise_123456.customerInfo.tav"
+      ],
+      "query": "tav >= :value",
+      "query_params": {
+        "value": 200000
+      },
+      "ancestor_folder_id": "0"
+    }'
+```
 
   </Tab>
 </Tabs>

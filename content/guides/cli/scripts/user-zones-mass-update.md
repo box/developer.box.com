@@ -90,19 +90,19 @@ The `.csv` file must have two columns with the following headers: **Email** and 
 * **Email** contains the primary email address of a Box user.
 * **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone.
 
-```bash
-$ZonesTable = @{
-US = "100001"             #US
-GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
-Australia = "100003"      #Australia
-Japan = "100004"          #Japan with in region uploads/downloads/previews
-Canada = "100005"         #Canada
-JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
-UKGermany = "100008"      #UK/Germany
-UK = "100009"             #UK with in region uploads/downloads/previews
-France = "100012"         #France
-}
-```
+    ```bash
+    $ZonesTable = @{
+        US = "100001"             #US
+        GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
+        Australia = "100003"      #Australia
+        Japan = "100004"          #Japan with in region uploads/downloads/previews
+        Canada = "100005"         #Canada
+        JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
+        UKGermany = "100008"      #UK/Germany
+        UK = "100009"             #UK with in region uploads/downloads/previews
+        France = "100012"         #France
+    }
+    ```
 
 <message>
   Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.
@@ -112,9 +112,9 @@ A sample input `.csv` file containing emails and zone names is provided with thi
 
 | Email|Region|
 |------|-------|
-|betty@company.com|US|
-|roger@company.com|France|
-|sally@company.com|JapanSingapore|
+|`betty@company.com`|US|
+|`roger@company.com`|France|
+|`sally@company.com`|JapanSingapore|
 
 ## Configure the script
 

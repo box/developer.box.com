@@ -201,7 +201,7 @@ previous step.
 
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
- -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
 ```
 
 ```sh

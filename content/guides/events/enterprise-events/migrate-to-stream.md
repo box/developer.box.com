@@ -55,7 +55,7 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=16328
 
     ```curl
     curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
-      -H "authorization: Bearer <ACCESS_TOKEN>"
+        -H "authorization: Bearer <ACCESS_TOKEN>"
     ```
 
 or
@@ -64,7 +64,7 @@ or
 
     ```curl
     curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
-      -H "authorization: Bearer <ACCESS_TOKEN>"
+        -H "authorization: Bearer <ACCESS_TOKEN>"
     ```
 
 ### 3. Paginate through results until now and deduplicate with `admin_logs` events

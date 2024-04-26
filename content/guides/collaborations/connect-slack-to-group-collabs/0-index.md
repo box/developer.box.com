@@ -46,8 +46,8 @@ This guide will take you through the following steps.
 
 This quick start guide has two requirements that are worth noting before we proceed.
 
-1. **User emails need to match between Box and Slack**: We are connecting Slack user account to a Box user account by comparing the Slack user email. Therefore, a matching Box user account using the same email address be present in your Box enterprise.
-2. **You must have a publicly accessible server**: Slack will need to send and command notification data to a public URL for your application. This assumes that you have a public location where your application code will hosted, such as `https://mysite.com/`. If you don't have access to any hosting then application platforms like [Heroku][heroku], serverless like [AWS lambda][aws-lambda], or exposing localhost with services like [ngrok][ngrok] are all options that you might want to consider.
+1. **User emails need to match between Box and Slack**: We are connecting a Slack user account to a Box user account by comparing the Slack user email address. Therefore, a matching Box user account using the same email address must be present in your Box enterprise.
+2. **You must have a publicly accessible server**: Slack will need to send event and command notification data to a public URL for your application. This guide assumes that you have a public location where your application code will be hosted, such as `https://mysite.com/`. If you don't have access to any public hosting then application platforms like [Heroku][heroku], serverless options like [AWS lambda][aws-lambda], or exposing localhost with services like [ngrok][ngrok] are all options that you might want to consider.
 
 <Next>
   I am ready to get started

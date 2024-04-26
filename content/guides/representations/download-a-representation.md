@@ -38,8 +38,6 @@ curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representat
     -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
-<!-- markdownlint-eable line-length -->
-
 ## Optional query parameters
 
 When fetching the representation the following optional headers
