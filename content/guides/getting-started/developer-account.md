@@ -1,10 +1,5 @@
 ---
-rank: 1
 hide: true
-related_guides:
-- authentication
-- authorization
-- api-calls
 ---
 
 # Create a developer account
