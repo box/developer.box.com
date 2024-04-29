@@ -9,29 +9,35 @@ required_guides: []
 
 <!-- markdownlint-disable line-length -->
 
-Box provides versioning capabilities for selected API endpoints. The version control system guarantees seamless functionality for existing endpoint versions, even if Box introduces new ones.
+Box provides versioning capabilities for selected API endpoints. The version control system guarantees seamless functioning of existing endpoint versions, even if Box introduces new ones.
 
-API versioning empowers Box to continually enhance its platform while also offering third-party developers a reliable avenue for feature updates and deprecations.
+API versioning empowers Box to continually enhance its platform, while also offering third-party developers a reliable avenue for feature updates and deprecations.
 
-To stay informed about the forthcoming API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain current email address in the Developer Console's App Info section.
+<Message type='tip'>
+
+To stay informed about the forthcoming API modifications, monitor the [Changelog](https://developer.box.com/changelog/) and maintain a current email address in the Developer Console's App Info section.
+
+</Message>
 
 ## How Box API versioning works
 
 <Message type='notice'>
 
-Box API supports versioning in URL `path` and `header`. To determine which version to use, look at the API reference and follow the sample request instructions.
+Box API supports versioning in URL `path` and `header`. To determine which version to use, look at the API reference and included sample requests.
 
 </Message>
 
-The default version of the API used in any requests you make is specified in the URL of the endpoint you call. For example, calling the upload (`https://upload.box.com/api/2.0/files/content`) endpoint without any version header specified means that you hit the `2.0` version defined in the
-URL.
+The default version of the API used in any requests is specified in the URL of the endpoint you call.
+An example flow looks like this:
 
-The Box API processes header `Box-Version` which should:
+1. When calling the [upload](`https://upload.box.com/api/2.0/files/content`) endpoint without any version header specified, you hit the `2.0` version defined in the URL.
 
-- contain a valid version name, that is `Box-Version: 2025.0`
-- be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
+2. Box API processes the `Box-Version` header which should:
 
-If the provided version is correct, a response is sent back to the client. The response also contains the `Box-Version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
+   - contain a valid version name, that is `Box-Version: 2025.0`
+   - be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
+
+3. If the provided version is correct, a response is sent back to the client. The response also contains the `Box-Version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
 
 If there is a significant change to API behavior, the new endpoint will be exposed under the new URL.
 For example, `https://upload.box.com/api/2.0/files/content` supports a multipart content type when uploading files to Box. If the new version of this API stops supporting this content type, it will be released under a new URL `https://upload.box.com/api/3.0/files/content`.
@@ -58,9 +64,10 @@ For example, if a new version of the Sign Requests endpoint is released in 2025,
 Box can issue a new breaking change to API endpoints once per year, reserving the right to release an additional breaking change to address security or privacy concerns. In such cases, the new version will be incremented by one in the suffix.
 For example, if security issues need addressing in the previously released version `2025.0` of Sign Requests, the new version will be labeled `2025.1`.
 
-Each stable version is supported for a minimum of 12 months. This means that when a new version is released, the previous version becomes deprecated and will be available for usage, but no new features will be added.
+Each stable version is supported for a minimum of 12 months. This means that when a new version is released, the previous version becomes deprecated and will be available for use, but no new features will be added. 
+It also means, that a new version cannot be released sooner than every 12 months.
 
-We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `404 - Not Found`. For details, see [Versioning Errors](#versioning-errors-and-fallback).
+We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `404 - Not Found`. For details, see [Versioning Errors](#versioning-errors).
 
 If your request doesn't include a version, then the API defaults to the `V2` Box API version. However, we do not recommend relying on this behavior for adopting deprecated changes. As you update your app, you should specify the API version with every request. By making your app version-aware, you anchor your code to a specific set of features that are guaranteed to behave in the same way for the supported timeframe.
 
@@ -76,9 +83,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `Box-Version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.
 
-Box API responses contain the header `Box-Version`, which returns the API version that was used to perform the request. When you keep your app updated, this matches the API version that's specified in your request. If the returned version is different, then your app is out of date and is using the default API version.
-
-## Versioning errors and fallback
+## Versioning errors
 
 ### Calling an incorrect API version in the URL
 
@@ -183,11 +188,16 @@ Breaking changes in the Box API occur within versioned releases, typically accom
 | Removing or modifying error codes                        | Yes             |
 | Adding a member to an enumeration                        | Yes             |
 
+<Message type='tip'>
+
 We use [oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGES-EXAMPLES.md) tool to detect most of the possible breaking changes.
+</Message>
 
 ## Support policy and deprecation information
 
-As new versions of the Box APIs and Box SDKs are released, earlier versions will be retired. Box declares a version as deprecated at least 24 months in advance of retiring it. Similarly, for individual APIs that are generally available (GA), Box declares an API as deprecated at least 24 months in advance of removing it from the GA version.
+When new versions of the Box APIs and Box SDKs are released, earlier versions will be retired. Box marks a version as `deprecated` at least 24 months before retiring it. In other words, a deprecated version cannot become end-of-life 
+sooner than after 24 months.
+Similarly, for individual APIs that are generally available (GA), Box declares an API as `deprecated` at least 24 months in advance of removing it from the GA version.
 
 When we increment the major version of the API (for example, from `2024.0` to `2025.0`), we're announcing that the current version (in this example, `2024.0`) is immediately deprecated and we'll no longer support it 24 months after the announcement. We might make exceptions to this policy for service security or health reliability issues.
 
@@ -215,11 +225,11 @@ When Box deprecates a resource or a property of a resource in the API, the chang
 
 - Calls that include the deprecated behavior return the response header `Box-API-Deprecated-Reason` and a link to get more information:
 
-```sh
-Box-Version: 2023.0
-Deprecation: version="version", date="date"
-Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
-```
+   ```sh
+   Box-Version: 2023.0
+   Deprecation: version="version", date="date"
+   Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
+   ```
 
 - A notice about the deprecation is posted in the developer changelog.
 - The API reference is updated to identify the affected resource and any action you need to take.
