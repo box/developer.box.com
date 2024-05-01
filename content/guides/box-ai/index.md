@@ -34,7 +34,7 @@ in your application workflows.
 Currently, you can ask Box AI to answer
 user questions, summarize the document content,
 or generate text you can use in your documents.
-You can also use the [Box AI UI Element in Content Preview][boxaielement]
+You can also use [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your apps.
 
 ### Asking questions
@@ -70,12 +70,12 @@ For details, see [Box AI for Notes][boxainotes].
 
 ![box ai in notes](./images/box-ai-in-notes.png)
 
-### Box AI UI Element
+### Box AI for UI Elements
 
-The Box AI UI Element available in Content Preview
+Box AI for UI Elements is available in Content Preview
 allows asking questions about documents directly
 within custom applications.
-Check out how to use the [Box Preview UI Element][boxaielement]
+Check out how to use the [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your projects.
 
 <!--alex ignore-->

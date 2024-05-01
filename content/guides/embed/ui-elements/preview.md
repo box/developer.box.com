@@ -212,7 +212,7 @@ preview.removeAllListeners();
 | `logoUrl`            | String  |                 | URL of custom logo to show in header. If this value is the string box then the box logo will show                                                                                                                                                                                                                         |
 | `showAnnotations`    | Boolean | `false`         | Whether annotation button in header and annotations on content are shown                                                                                                                                                                                                                                                  |
 | `showDownload`       | Boolean | `false`         | Whether download button is shown in header. Will also control print button visibility in viewers that support print. Note that this option will not override download permissions on the access token.                                                                                                                    |
-| `contentAnswersProps`  | Array | `show: true`         | List of props for Box AI UI Element. Currently, it allows displaying the Box AI UI Element in the preview header.                                                                                                  |
+| `contentAnswersProps`  | Array | `show: true`         | List of props for Box AI for UI Elements. Currently, it allows displaying Box AI for UI Elements in the preview header.                                                                                                  |
 
 <!-- markdownlint-enable line-length -->
 
@@ -441,11 +441,11 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 <!-- markdownlint-enable line-length -->
 
-## Box AI UI Element
+## Box AI for UI Elements
 
 <Message type='notice'>
 
-The Box AI UI Element is a beta feature and
+Box AI for UI Elements is a beta feature and
 it is available to **Enterprise Plus** customers.
 </Message>
 
@@ -458,7 +458,7 @@ taking actions like summarizing a document.
 To enable Box AI modal in content preview header, follow these steps:
 
 1. Make sure your Node version is `18.x` or higher.
-2. Download the [package that contains Box UI AI Element][aipackage].
+2. Download the [package that contains Box AI for UI Elements][aipackage].
 3. Pass the `contentAnswersProps` prop in Preview element.
 
     ```js
@@ -474,7 +474,7 @@ To enable Box AI modal in content preview header, follow these steps:
     ```
 
 <Message type="notice">
-The Box AI UI Element is currently available only by
+Box AI for UI Elements is currently available only by
 installing the `npm` package. 
 The CDN version is not yet supported.
 </Message>
