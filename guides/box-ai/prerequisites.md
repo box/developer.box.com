@@ -2,6 +2,8 @@
 rank: 2
 related_guides:
   - authentication/tokens/developer-tokens/
+  - box-ai/ask-questions
+  - box-ai/generate-text
 category_id: box-ai
 subcategory_id: null
 is_index: false
@@ -15,7 +17,7 @@ previous_page_id: box-ai
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/prerequisites.md
 ---
-# Getting Started with Box AI
+# Getting started with Box AI
 
 <Message type="notice">
 
@@ -25,7 +27,7 @@ Box AI API is available to all **Enterprise Plus** customers.
 
 </Message>
 
-To implement Box AI in your solutions, you need
+To implement Box AI API in your solutions, you need
 to make sure you have access to the functionality.
 You will also need a custom application with
 enabled Box AI scope, and a developer token to
@@ -35,8 +37,8 @@ authenticate your calls.
 
 To use Box AI API, make sure it is enabled by an
 admin in the Admin Console. If you want to use
-the AI APIs in your sandbox, request access
-from the AI team using [this form][form].
+the Box AI APIs in your sandbox, request access
+from the Box AI team using [this form][form].
 
 </Message>
 
@@ -47,11 +49,16 @@ you will use to make calls. To create
 an application, follow the guide
 on [creating custom apps][createapps].
 
-## Add AI scope
+## Enable Box AI API access
 
-To work with Box AI API, you need the
-`AI.readwrite` [scope][scope] added for
-your application.
+To interact with Box AI API,
+you need the `AI.readwrite`[scope][scope]
+added for your application.
+Before you add the scope,
+make sure that the Box Admin has granted you
+the access to Box AI API. If you can't see the
+**Manage AI** option in your app configuration
+settings, contact your admin.
 
 To add a scope:
 
@@ -62,13 +69,12 @@ To add a scope:
 
 ![box ai scopes](./images/box-ai-app-scopes.png)
 
-<Message type="notice">
-
-If you are collaborated into an app but do not have
-AI access, you will see the Manage AI scope
+If you are added as an collaborator
+for a given app, but do not have
+Box AI API access, you will see the **Manage AI** scope
 checked and grayed out.
-
-</Message>
+This means, the app owner has the AI scope enabled
+but it is not available to you for any changes.
 
 ## Generate a developer token
 
@@ -88,9 +94,6 @@ You can also open your app, go to
 **Configuration** > **Developer Token**
 and generate the token.
 
-After you generate the token, you can add
-it in cURL or use it in Postman to make calls.
-
 <Message type="notice">
 
 A developer token is only valid for one hour.
@@ -98,13 +101,13 @@ A developer token is only valid for one hour.
 </Message>
 
 For additional details, see [developer token][token].
+After you generate the token, you can use it in cURL
+or other clients, such as [Postman][postman], to make
+calls.
 
-After you generate the token, you can add it in cURL
-or use it in [Postman][postman] to make calls.
-
-[token]: g://authentication/tokens/developer-tokens/
-[scope]: g://api-calls/permissions-and-errors/scopes/
-[oauthscopes]: g://api-calls/permissions-and-errors/scopes/#scopes-oauth-2-authorization
-[createapps]: g://applications/app-types/custom-apps/
-[postman]: g://tooling/postman/
+[token]: g://authentication/tokens/developer-tokens
+[scope]: g://api-calls/permissions-and-errors/scopes
+[oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
+[createapps]: g://applications/app-types/custom-apps
+[postman]: g://tooling/postman
 [form]: https://docs.google.com/forms/d/e/1FAIpQLScULnADtK7DtqXFrFFLJMoDAaFMFTOvPySHDtpKwNMe

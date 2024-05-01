@@ -2,6 +2,9 @@
 rank: 3
 related_endpoints:
   - post_ai_ask
+related_guides:
+  - box-ai/prerequisites
+  - box-ai/generate-text
 category_id: box-ai
 subcategory_id: null
 is_index: false
@@ -45,7 +48,7 @@ provide the mandatory parameters.
 ### Authentication
 
 Make sure you have generated the developer token
-to authorize your app. See [Prerequisites for Box AI][prereq]
+to authorize your app. See [Getting Started with Box AI][prereq]
 for details.
 
 ### Parameters
@@ -55,14 +58,13 @@ for details.
 To make a call, you need to pass the following parameters.
 Mandatory parameters are in **bold**.
 
-| Parameter    | Description                                                                                             | Values                               | Example                     |
+| Parameter    |Description                                                                                             | Available values                               | Example                     |
 | ------------ | ------ | ----------- | --- |
-| **`mode`** | The type of request. It can be a question about a single file or a set of files.  | `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
-| **`prompt`**   | The question about your document or content. | What is the document about? |
+| **`mode`** | The type of request. It can be a question about a single file or a set of files. For multiple files, Box AI API supports up to 1MB of text representation and up to 25 files. | `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
+| **`prompt`**   | The question about your document or content. | | "What is this document about?" |
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface……”    |
-
 <!-- markdownlint-enable line-length -->
 
 [prereq]: g://box-ai/prerequisites

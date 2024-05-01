@@ -218,11 +218,11 @@ enabled.
 
 |                       |                            |
 | --------------------- | -------------------------- |
-| **OAuth Scope**       | `as.readwrite`  |
+| **OAuth Scope**       | `AI.readwrite`  |
 | **Application Scope** | Manage AI  |
 
-Gives an application permission to send requests to Large
-Language Models (LLMs).
+Gives an application permission to send requests to
+Box AI API.
 
 ### Manage Box Relay
 
