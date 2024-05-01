@@ -1,10 +1,10 @@
 {
-  "allow": [
-    "postman-postwoman",
-    "reject",
-    "rejects",
-    "period",
-    "fire",
-    "attacks"
-  ]
+	"allow": [
+		"postman-postwoman",
+		"reject",
+		"rejects",
+		"period",
+		"fire",
+		"attacks"
+	]
 }

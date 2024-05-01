@@ -212,6 +212,7 @@ preview.removeAllListeners();
 | `logoUrl`            | String  |                 | URL of custom logo to show in header. If this value is the string box then the box logo will show                                                                                                                                                                                                                         |
 | `showAnnotations`    | Boolean | `false`         | Whether annotation button in header and annotations on content are shown                                                                                                                                                                                                                                                  |
 | `showDownload`       | Boolean | `false`         | Whether download button is shown in header. Will also control print button visibility in viewers that support print. Note that this option will not override download permissions on the access token.                                                                                                                    |
+| `contentAnswersProps`  | Array | `show: true`         | List of props for Box AI UI Element. Currently, it allows displaying the Box AI UI Element in the preview header.                                                                                                  |
 
 <!-- markdownlint-enable line-length -->
 
@@ -442,26 +443,43 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 ## Box AI UI Element
 
+<Message type='notice'>
+
+The Box AI UI Element is a beta feature and
+it is available to **Enterprise Plus** customers.
+</Message>
+
 The AI UI Element enhances the Content Preview UI Element
-with AI Q&A functionality. This allows the users to build
-AI-enabled, chatbot-like functionality in their custom app. 
+with the Box AI Q&A functionality. This allows the developers
+to add the AI features to their custom app. 
 Adding the element facilitates answering questions and
 taking actions like summarizing a document.
 
 To enable Box AI modal in content preview header, follow these steps:
 
 1. Make sure your Node version is `18.x` or higher.
-2. Download the [package that contains Box AI][aipackage]
+2. Download the [package that contains Box UI AI Element][aipackage].
+3. Pass the `contentAnswersProps` prop in Preview element.
 
-The functionality will be available to you out of the box.
+    ```js
+    var preview = new Box.Preview();
+
+    Preview.show(<FILE_ID>, <TOKEN>, {
+        container: '.preview-container',
+        contentAnswersProps: {
+            show: true,
+        },
+        hasHeader: true,
+    });
+    ```
 
 <Message type="notice">
-The AI UI Element is currently available only by
-installing the `npm package`. 
+The Box AI UI Element is currently available only by
+installing the `npm` package. 
 The CDN version is not yet supported.
 </Message>
 
-### React component
+### Using React component
 
 You can also add Box AI element to a header in a React component.
 To do so, add `contentAnswersProps` with the field `show` set to `true`:
@@ -490,7 +508,7 @@ appropriately downscope the Access Token to a resulting token that has the
 desired set of permissions, and can thus, be securely passed to the end user
 client initializing the Content Preview.
 
-Below are a set of UI Element-specific scopes to go alongside Downscoping. These
+Below is a set of UI Element-specific scopes to go alongside Downscoping. These
 allow developers to enable/disable UI controls on the Content Preview by
 configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
@@ -508,9 +526,9 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | Scope Name             | Permissions granted                                                                                                                                                                                                                                                                                                                             |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `item_download`        | Allows downloading/printing the content from the generated preview                                                                                                                                                                                                                                                                              |
-| `annotation_edit`      | Allow user to edit annotations (delete). Note: For highlight annotations to work, the text layer on the document needs to be enabled for the user. Text layer is disabled for all users that don't have download permissions on the file. To enable highlight annotations for a user, please ensure they have download permissions on the file. |
-| `annotation_view_all`  | Allows user to view all users' annotations.                                                                                                                                                                                                                                                                                                     |
-| `annotation_view_self` | Allows user to view their own annotations only.                                                                                                                                                                                                                                                                                                 |
+| `annotation_edit`      | Allows users to edit annotations (delete). Note: For highlight annotations to work, the text layer on the document needs to be enabled for the user. Text layer is disabled for all users that don't have download permissions on the file. To enable highlight annotations for a user, please ensure they have download permissions on the file. |
+| `annotation_view_all`  | Allows users to view all users' annotations.                                                                                                                                                                                                                                                                                                     |
+| `annotation_view_self` | Allows users to view their own annotations only.                                                                                                                                                                                                                                                                                                 |
 
 <Message>
   # Enable highlight annotations with scopes The highlight scope is not included
@@ -528,37 +546,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | User should be able to preview, and create annotations but only view their own.                                                                                                | `base_preview` + `annotation_view_self` + `annotation_edit` |
 | User should be able to preview, edit annotations and view all annotations                                                                                                      | `base_preview` + `annotation_view_all` + `annotation_edit`  |
 | User should be able to preview and only view their own annotations but not add/delete (ex: after review period has expired, all documents need to be stored in read only mode) | `base_preview` + `annotation_view_self`                     |
-
-## Box AI UI Element
-
-The AI UI Element enhances the Content Preview UI Element with AI Q&A functionality. This allows the users to build AI-enabled chatbot-type functionality in their custom portal. An embedded AI UI element can answer questions and take actions, for example, summarize a document.
-
-![AI element in Preview](./images/ai-icon.png)
-
-<Message type="notice">
-The AI UI Element is currently available only as an [npm package in version `19.0.0-beta`][ainpm]. The CDN version is not yet supported.
-</Message>
-
-### Adding AI UI Element to Content Preview header
-
-Add`contentAnswersProps` with the field `show` set to `true` to enable the AI UI Element button in `previewHeader`:
-
-```js
-/* Enable Box AI in header */
-var ContentPreview = require('./ContentPreview').default;
-
-<IntlProvider locale="en">
-    <ContentPreview
-        contentAnswersProps={{
-          show: true,
-        }}
-        ...
-        fileId={FILE_ID}
-        token={TOKEN}
-        {...PROPS}
-    />
-</IntlProvider>
-```
 
 <!-- markdownlint-enable line-length -->
 
