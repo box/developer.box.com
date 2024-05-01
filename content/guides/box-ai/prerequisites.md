@@ -48,18 +48,22 @@ settings, contact your admin.
 To add a scope:
 
 1. Open your application in Developer Console.
-1. Go to **Configuration** > **Application Scopes** > **Content Actions**
-1. Select the **Manage AI** scope. Box Platform will
+2. Go to **Configuration** > **Application Scopes** > **Content Actions**
+3. Select the **Manage AI** scope. Box Platform will
    automatically include the scope when making the call.
 
-![box ai scopes](./images/box-ai-app-scopes.png)
+    ![box ai scopes](./images/box-ai-app-scopes.png)
 
-If you are added as an collaborator 
-for a given app, but do not have
-Box AI API access, you will see the **Manage AI** scope
-checked and grayed out.
-This means, the app owner has the AI scope enabled
-but it is not available to you for any changes.
+    If you are added as an collaborator 
+    for a given app, but do not have
+    Box AI API access, you will see the **Manage AI** scope
+    checked and grayed out.
+    This means, the app owner has the AI scope enabled
+    but it is not available to you for any changes.
+
+4. Submit your app for [authorization][authorize].
+   If you want to enable Box AI API for an existing
+   application, you must re-authorize it.
 
 ## Generate a developer token
 
@@ -93,4 +97,5 @@ calls.
 [oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
 [createapps]: g://applications/app-types/custom-apps
 [postman]: g://tooling/postman
-[form]: https://docs.google.com/forms/d/e/1FAIpQLScULnADtK7DtqXFrFFLJMoDAaFMFTOvPySHDtpKwNMe
+[form]: https://forms.gle/Nsh3TwM3W8qg4U35A]
+[authorization]: g://authorization/custom-app-approval
