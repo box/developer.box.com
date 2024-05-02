@@ -148,11 +148,7 @@ service disruption is May 13, 2022.
 Scopes define what permissions your application has in order to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
-<ImageFrame border width="600" center>
-
 ![App name form](../images/app-scopes.png)
-
-</ImageFrame>
 
 ### CORS Domains
 
@@ -166,11 +162,7 @@ To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 
-<ImageFrame border>
-
 ![App name form](../images/app-cors.png)
-
-</ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
