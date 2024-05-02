@@ -1,13 +1,13 @@
 ---
 primary:
   links:
-    quickstarts:
-      // text:
-      text: Getting Started
-
     documentation:
       // text:
       text: Documentation
+
+    quickstarts:
+      // text:
+      text: Getting Started
 
     community:
       // text:
