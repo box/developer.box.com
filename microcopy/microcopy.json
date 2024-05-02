@@ -272,7 +272,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "false",
+  "headers.secondary.notifications.display": "true",
   // The content of the notification
   "headers.secondary.notifications.message": "Add the power of the Box AI API to your custom apps at Content Cloud Summit on May 15\n",
   // The link to navigate to when the CTA is clicked
@@ -465,6 +465,12 @@
   "pages.featured_board.community.tag": "New",
   "pages.featured_board.community.headline": "Box Developer Community forum",
   "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
+  "pages.featured_board.aiDevZone.type": "aiDevZone",
+  "pages.featured_board.aiDevZone.cta": "Try it out!",
+  "pages.featured_board.aiDevZone.link": "/ai-dev-zone",
+  "pages.featured_board.aiDevZone.tag": "Featured",
+  "pages.featured_board.aiDevZone.headline": "Box AI Developer Zone",
+  "pages.featured_board.aiDevZone.text": "Use our interactive AI demos to\ntry out prompts with AI responses,\nview sample code, documentation and more!",
   "pages.additionalResources.youtube.title": "Box Youtube",
   "pages.additionalResources.youtube.text": "Check out our channel for tutorials, training, product news, and more.",
   "pages.additionalResources.youtube.cta": "View Channel",
@@ -477,12 +483,6 @@
   "pages.additionalResources.blog.text": "Read news, updates and tutorials on Box APIs, SDKs and gain useful developers' and admins' insights.",
   "pages.additionalResources.blog.cta": "Visit Box Developer Blog",
   "pages.additionalResources.blog.url": "https://medium.com/box-developer-blog",
-  "pages.additionalResources.aiDevZone.type": "aiDevZone",
-  "pages.additionalResources.aiDevZone.cta": "Try it out!",
-  "pages.additionalResources.aiDevZone.link": "/ai-dev-zone",
-  "pages.additionalResources.aiDevZone.tag": "Featured",
-  "pages.additionalResources.aiDevZone.headline": "Box AI Developer Zone",
-  "pages.additionalResources.aiDevZone.text": "Use our interactive AI demos to\ntry out prompts with AI responses,\nview sample code, documentation and more!",
   // The label for all things API
   "changelog.labels.api": "API",
   // The label for all things SDKS
