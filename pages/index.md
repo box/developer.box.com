@@ -198,7 +198,7 @@ SDKS, Box CLI, Postman Collection, Box UI Elements and much more!
 
 <Centered wide>
 
-<FeaturedBoard type="community" >
+<FeaturedBoard type="aiDevZone" >
 
 </FeaturedBoard>
 
@@ -360,7 +360,7 @@ More SDKs & Tools
 
 <Centered wide>
 
-<FeaturedBoard type="sampleCode" >
+<FeaturedBoard type="community" >
 
 </FeaturedBoard>
 
@@ -448,7 +448,15 @@ Browse all guides
 
 <Centered wide>
 
-<Header to='https://medium.com/box-developer-blog' centered>
+<FeaturedBoard type="sampleCode" >
+
+</FeaturedBoard>
+
+</Centered>
+
+<Centered wide>
+
+<Header centered>
 
 Additional resources
 
