@@ -36,9 +36,9 @@ on [creating custom apps][createapps].
 
 ## Enable Box AI API access
 
-To interact with Box AI API, 
+To interact with Box AI API,
 you need the `AI.readwrite`[scope][scope]
-added for your application. 
+added for your application.
 Before you add the scope,
 make sure that the Box Admin has granted you
 the access to Box AI API. If you can't see the
@@ -48,36 +48,38 @@ settings, contact your admin.
 To add a scope:
 
 1. Open your application in Developer Console.
-1. Go to **Configuration** > **Application Scopes** > **Content Actions**
-1. Select the **Manage AI** scope. Box Platform will
+2. Go to **Configuration** > **Application Scopes** > **Content Actions**
+3. Select the **Manage AI** scope. Box Platform will
    automatically include the scope when making the call.
+   If you are added as an collaborator
+   for a given app, but do not have Box AI API access,
+   you will see the **Manage AI** scope checked and
+   grayed out. This means the app owner has the AI scope
+   enabled but you cannot change this setting.
 
-![box ai scopes](./images/box-ai-app-scopes.png)
+   ![box ai scopes](./images/box-ai-app-scopes.png)
 
-If you are added as an collaborator 
-for a given app, but do not have
-Box AI API access, you will see the **Manage AI** scope
-checked and grayed out.
-This means, the app owner has the AI scope enabled
-but it is not available to you for any changes.
+4. Submit your app for [authorization or enablement][authorization].
+   If you want to enable Box AI API for an existing
+   application, you must [re-authorize][reauthorization] it.
 
 ## Generate a developer token
 
 You need a developer token
-to authenticate your app when sending requests. 
+to authenticate your app when sending requests.
 
 To generate a token:
 
 1. Go to **Developer Console** > **My Apps**.
 2. Click the **Options menu** button (…) on the right.
 3. Select **Generate Developer Token**. The token
-will be automatically generated and saved to clipboard.
+   will be automatically generated and saved to clipboard.
 
 ![generate token](./images/developer-token.png)
 
 You can also open your app, go to
 **Configuration** > **Developer Token**
-and generate the token. 
+and generate the token.
 
 <Message type="notice">
 A developer token is only valid for one hour.
@@ -93,4 +95,6 @@ calls.
 [oauthscopes]: g://api-calls/permissions-and-errors/scopes#scopes-oauth-2-authorization
 [createapps]: g://applications/app-types/custom-apps
 [postman]: g://tooling/postman
-[form]: https://docs.google.com/forms/d/e/1FAIpQLScULnADtK7DtqXFrFFLJMoDAaFMFTOvPySHDtpKwNMe
+[form]: https://forms.gle/Nsh3TwM3W8qg4U35A
+[authorization]: g://authorization
+[reauthorization]: g://authorization/custom-app-approval#re-authorization-on-changes
