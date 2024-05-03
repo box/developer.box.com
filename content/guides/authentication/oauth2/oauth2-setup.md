@@ -119,7 +119,7 @@ permit duplicate URIs to be saved.
 Scopes define what permissions your application has in order to access data. See
 the [scopes guide][scopes] for detailed information on each option.
 
-  ![App name form](../images/app-scopes.png)
+![App name form](../images/app-scopes.png)
 
 ### CORS Domains
 
@@ -133,7 +133,6 @@ To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 
-![App name form](../images/app-cors.png)
 ![App name form](../images/app-cors.png)
 
 [devconsole]: https://app.box.com/developers/console
