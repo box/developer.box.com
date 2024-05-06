@@ -27,6 +27,16 @@ featured_board:
       Connect with other learners and experts on
       our Box community forum. Ask and answer
       questions, share resources, and learn together.
+  aiDevZone:
+    type: aiDevZone
+    cta: Try it out!
+    link: /ai-dev-zone
+    tag: Featured
+    headline: Box AI Developer Zone
+    text: |-
+      Use our interactive AI demos to
+      try out prompts with AI responses,
+      view sample code, documentation and more!
 
 additionalResources:
   youtube:

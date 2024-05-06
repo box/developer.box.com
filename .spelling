@@ -298,6 +298,10 @@ automations
 invocable
 analytics
 ClientID
+chatbot
+OAuth2
+LLMs
+npm
 lifecycle
 Fallbacks
 deprecations

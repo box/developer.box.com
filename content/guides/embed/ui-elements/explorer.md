@@ -74,6 +74,7 @@ and JWT.
 
 ## Demo
 
+```sh
 <iframe
   height="560"
   scrolling="no"
@@ -84,6 +85,7 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
+```
 
 ## API
 

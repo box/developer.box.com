@@ -1,13 +1,13 @@
 ---
 primary:
   links:
-    quickstarts:
-      // text:
-      text: Getting Started
-
     documentation:
       // text:
       text: Documentation
+
+    quickstarts:
+      // text:
+      text: Getting Started
 
     community:
       // text:
@@ -112,17 +112,18 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Catalog
+      text: Box AI Developer Zone
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 80+ open-source repositories
-        in various programming languages.
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
 
     cta:
-      text:
-        Browse sample code
+      text: |-
+        Try it out!
+      url:
+        /ai-dev-zone/
 
 secondary:
   images:

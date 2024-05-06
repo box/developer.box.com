@@ -30,10 +30,11 @@ npm install box-ui-elements
 </CTA>
 
 <Message warning>
-  # Content Preview
+  ## Content Preview
 
-The Box Content Preview library is currently not available via NPM.
-
+Use the Content Preview SDK if you need a specific
+version of the preview library. Otherwise,
+use Content Preview UI Element wrapper.
 </Message>
 
 ## Manual installation
@@ -57,8 +58,10 @@ All the UI elements are also available directly from the Box CDN.
 | [Content Uploader](g://embed/ui-elements/uploader)   | `19.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.css)                              |
 |                                                      |          | JS with React [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.js)                      |
 |                                                      |          | JS without React [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/uploader.no.react.js) |
-| [Content Preview](g://embed/ui-elements/preview)     | `2.93.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.93.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.93.0/en-US/preview.css)                                  |
-|                                                      |          | JS [`https://cdn01.boxcdn.net/platform/preview/2.93.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.93.0/en-US/preview.js)                                     |
+| [Content Preview UI Element](https://github.com/box/box-content-preview)     | `19.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/preview.css)                                  |
+|                                                      |    `19.0.0`       | JS [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/preview.js)                                     |
+| [Content Preview SDK](g://embed/ui-elements/preview)     | `2.103.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.103.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.103.0/en-US/preview.css)                                  |
+|                                                      |       | JS [`https://cdn01.boxcdn.net/platform/preview/2.103.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.103.0/en-US/preview.js)                                     |
 
 Use these links to either download the elements code to your application's
 code, or embed them straight into your page from the CDN.
