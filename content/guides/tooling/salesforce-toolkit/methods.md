@@ -410,9 +410,9 @@ Returns:
 
 - `FolderMetadata` record associated with this folder, scope, and template key. You can find the custom values in `keyValuePairs` variable of this object.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy is not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy is not found.
 
 ### `createBoxMetadataByFolderId`
 
@@ -429,9 +429,9 @@ Returns:
 
 - Newly created `FolderMetadata` object.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy is not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy is not found.
 
 ### `updateBoxMetadataByFolderId`
 
@@ -448,9 +448,9 @@ Returns:
 
 - Updated `FolderMetadata` object.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy is not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy is not found.
 
 ### `deleteBoxMetadataFolderId`
 
@@ -481,9 +481,9 @@ Returns:
 
 - `MetadataCascadePolicy` object retrieved from Box.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy is not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy is not found.
 
 ### `getMetadataCascadePoliciesByFolderId`
 
@@ -501,9 +501,9 @@ Returns:
 
 - List of `MetadataCascadePolicy` objects retrieved from Box.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy is not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy is not found.
 
 ### `createMetadataCascadePolicy`
 
@@ -520,9 +520,9 @@ Returns:
 
 - Newly generated `MetadataCascadePolicy`.
 - `null`, if:
-  - the parameters are incorrect,
-  - access to the folder is missing,
-  - metadata cascade policy details are not found.
+    - the parameters are incorrect,
+    - access to the folder is missing,
+    - metadata cascade policy details are not found.
 
 ### `deleteMetadataCascadePolicy`
 

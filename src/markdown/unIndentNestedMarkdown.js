@@ -49,6 +49,7 @@ const findBulletLists = (contents) => {
   const lists = []
   let currentList = []
   let lastPadding = 0
+  let lastBulletListPadding = 0
   let lastHasBullet = false
 
   const lines = contents.split('\n')
@@ -75,7 +76,10 @@ const findBulletLists = (contents) => {
     // https://framework-upgrade--boxdev-abtest.netlify.app/guides/cli/cli-docs/bulk-commands/
 
     // if this is a clear bullet, add to current position
-    if (!isInsideCodeBlock && (line.match(/^ *[\-*]/) || line.match(/^ *\d+\./))) {
+    if (!isInsideCodeBlock && (line.match(/^ *[\-*] /) || line.match(/^ *\d+\./))) {
+      if (!currentList.length) {
+        lastBulletListPadding = padDepth(line)
+      }
       currentList.push(line)
       lastPadding = padDepth(line)
       lastHasBullet = true
@@ -85,7 +89,7 @@ const findBulletLists = (contents) => {
       currentList.push(line)
     }
     // otherwise, if the previous line was a bullet check the indent
-    else if (lastHasBullet && currentList.length && padDepth(line)+2 >= lastPadding) {
+    else if (lastHasBullet && currentList.length && padDepth(line) >= lastBulletListPadding + 2) {
       currentList.push(line)
       lastPadding = padDepth(line)
       lastHasBullet = false
@@ -98,11 +102,17 @@ const findBulletLists = (contents) => {
     // otherwise, save this list
     else if (currentList.length) {
       lastPadding = 0
+      lastBulletListPadding = 0
       lastHasBullet = false
       lists.push(currentList.join('\n'))
       currentList = []
     }
   })
+
+  // add the last analysed list if it was at the end of file
+  if (currentList.length) {
+    lists.push(currentList.join('\n'))
+  }
 
   return lists
 }

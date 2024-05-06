@@ -43,8 +43,8 @@ system, and services:
 
 - [High level fireside chat],
 - In-depth technical analysis:
-  - [Screen recording],
-  - [Audio only].
+    - [Screen recording],
+    - [Audio only].
 
 [developer documentation]: https://developer.box.com
 [High level fireside chat]:
