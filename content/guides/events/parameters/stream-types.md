@@ -21,4 +21,3 @@ alias_paths: []
 | `all` (default) | A single user (for any user) | Near real time subscriptions | Returns everything for a user | 21 Days | Poll or long-poll using the `stream_position` |
 | `changes` | A single user (for any user) | Near real time subscriptions | Returns events that may cause file tree changes such as file updates or collaborations | 21 Days | Poll or long-poll using the `stream_position` |
 | `sync` | A single user (for any user) | Near real time subscriptions | Is similar to `changes` but only applies to synced folders | 31 Days | Poll or long-poll using the `stream_position` |
-
