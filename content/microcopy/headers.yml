@@ -16,6 +16,13 @@ primary:
       //url:
       url: https://forum.box.com
 
+    partners:
+      // text: The text for the link to the partners section
+      text: Partners
+
+      //url: The URL to the partners section
+      url: /guides/partners
+
     learn:
       // text: The text for the link to the learn section
       text: Box Platform
@@ -107,6 +114,7 @@ primary:
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
 
+  // featured: Featured section of the documentation menu
   featured:
     tag:
       text: Featured
@@ -186,7 +194,7 @@ secondary:
     // display: |-
       A boolean that determines whether to show the orange notification bar
       in the header. Must be "true" or "false"
-    display: "true"
+    display: "false"
 
     // message: |-
       The content of the notification
