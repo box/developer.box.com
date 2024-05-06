@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - get_files_id_thumbnail_id
 related_guides:

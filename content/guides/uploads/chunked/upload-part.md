@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - put_files_upload_sessions_id
 related_guides:

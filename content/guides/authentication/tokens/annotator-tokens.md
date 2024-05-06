@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 9
 related_endpoints:
   - post_oauth2_token
 related_guides:

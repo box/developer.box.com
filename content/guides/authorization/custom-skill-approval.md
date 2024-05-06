@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 related_guides:

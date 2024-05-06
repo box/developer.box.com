@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - post_files_id_content
   - put_files_id

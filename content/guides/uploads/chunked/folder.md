@@ -1,5 +1,5 @@
 ---
-rank: 100
+rank: 6
 related_endpoints:
   - options_files_content
   - post_files_content
