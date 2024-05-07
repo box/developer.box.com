@@ -16,12 +16,10 @@ total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads
-previous_page_id: downloads/folder
+previous_page_id: downloads/in-browser
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/zip-archive.md
 ---
-<!-- markdownlint-disable line-length -->
-
 # Download ZIP Archive
 
 To download all files in a folder or an entire folder structure, you have to create and download a ZIP archive.
@@ -38,10 +36,10 @@ The response will look similar to the following:
 
 ```json
 {
-"download_url":"https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
-"status_url":"https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
-"expires_at":"2023-02-28T10:23:54Z",
-"name_conflicts":[]
+  "download_url": "https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
+  "status_url": "https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
+  "expires_at": "2023-02-28T10:23:54Z",
+  "name_conflicts": []
 }
 ```
 

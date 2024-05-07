@@ -48,48 +48,48 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "sent",
-        "signer_ip_address": null,
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": null,
-        "template": {
-            "id": "987abC5423",
-            "template_type": "Signing",
-            "name": "Work Contact"
-        },
-        "batch_send": {
-            "id": "W23YVL46"
-        },
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "sender_message": {
-            "subject": "Can you please sign this document?",
-            "message": "This document shows the terms agreed to on the phone."
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "sent",
+    "signer_ip_address": null,
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": null,
+    "template": {
+      "id": "987abC5423",
+      "template_type": "Signing",
+      "name": "Work Contact"
+    },
+    "batch_send": {
+      "id": "W23YVL46"
+    },
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "sender_message": {
+      "subject": "Can you please sign this document?",
+      "message": "This document shows the terms agreed to on the phone."
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -102,43 +102,43 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "created",
-        "signer_ip_address": null,
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer":null,
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "created",
+    "signer_ip_address": null,
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": null,
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -151,43 +151,43 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "signed",
-        "signer_ip_address": null,
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": null,
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "signed",
+    "signer_ip_address": null,
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": null,
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -200,43 +200,43 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "cancelled",
-        "signer_ip_address": null,
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": null,
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "cancelled",
+    "signer_ip_address": null,
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": null,
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -249,43 +249,43 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "expired",
-        "signer_ip_address": null,
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": null,
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "expired",
+    "signer_ip_address": null,
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": null,
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -300,51 +300,51 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "sent",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "sent",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -358,51 +358,51 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "viewed",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "viewed",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -413,55 +413,55 @@ signing document.
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "viewed",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": {
-            "forwarded_to_email": "janedoe@box.com",
-            "forwarded_reason": "Please sign",
-            "forwarded_at": "2022-03-03T12:04:20-10:00"
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "viewed",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
         }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": {
+      "forwarded_to_email": "janedoe@box.com",
+      "forwarded_reason": "Please sign",
+      "forwarded_at": "2022-03-03T12:04:20-10:00"
     }
+  }
 }
 ```
 
@@ -472,55 +472,55 @@ signing document.
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "viewed",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "Can you please sign this document?",
-            "message": "This document shows the terms agreed to on the phone."
-        },
-        "forward": {
-            "forwarded_to_email": "somename@box.com",
-            "forwarded_reason": "I need to forward to my business partner.",
-            "forwarded_at": "2022-02-03T10:04:52-08:00",
-        },
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "viewed",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "Can you please sign this document?",
+      "message": "This document shows the terms agreed to on the phone."
+    },
+    "forward": {
+      "forwarded_to_email": "somename@box.com",
+      "forwarded_reason": "I need to forward to my business partner.",
+      "forwarded_at": "2022-02-03T10:04:52-08:00",
+    },
+  }
 }
 ```
 
@@ -533,51 +533,51 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "signed",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "Can you please sign this document?",
-            "message": "This document shows the terms agreed to on the phone."
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "signed",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "Can you please sign this document?",
+      "message": "This document shows the terms agreed to on the phone."
+    },
+    "forward": null
+  }
 }
 ```
 
@@ -590,51 +590,51 @@ The`additional_details` payload will provide the following details:
 
 ```json
 "additional_details": {
-    "sign_request": {
-        "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
-        "sign_request_short_id": "426614174000",
-        "status": "declined",
-        "signer_ip_address": "",
-        "requestor_ip_address": "",
-        "files": [
-            {
-                "id": "1234567890",
-                "type": "file",
-                "name": "example_doc.pdf",
-                "parent": {
-                    "id": "987654321",
-                    "type": "folder"
-                }
-            }
-        ],
-        "expires": null,
-        "requestor": {
-            "id": "13579246",
-            "type": "user",
-            "name": "John Doe",
-            "login": "johndoe@box.com"
-        },
-        "signer": {
-            "id": "246813579",
-            "type": "user",
-            "name": "Jane Doe",
-            "login": "janedoe@example.com"
-        },
-        "template": null,
-        "batch_send": null,
-        "redirection": {
-            "redirect_url": "https://www.google.com",
-            "declined_redirect_url": "https://www.googledecline.com"
-        },
-        "ready_sign_link": {
-            "id": "aaae45bb-e89b-12d3-a456-426614174000"
-        },
-        "sender_message": {
-            "subject": "",
-            "message": ""
-        },
-        "forward": null
-    }
+  "sign_request": {
+    "sign_request_id": "123e4567-e89b-12d3-a456-426614174000",
+    "sign_request_short_id": "426614174000",
+    "status": "declined",
+    "signer_ip_address": "",
+    "requestor_ip_address": "",
+    "files": [
+      {
+        "id": "1234567890",
+        "type": "file",
+        "name": "example_doc.pdf",
+        "parent": {
+          "id": "987654321",
+          "type": "folder"
+        }
+      }
+    ],
+    "expires": null,
+    "requestor": {
+      "id": "13579246",
+      "type": "user",
+      "name": "John Doe",
+      "login": "johndoe@box.com"
+    },
+    "signer": {
+      "id": "246813579",
+      "type": "user",
+      "name": "Jane Doe",
+      "login": "janedoe@example.com"
+    },
+    "template": null,
+    "batch_send": null,
+    "redirection": {
+      "redirect_url": "https://www.google.com",
+      "declined_redirect_url": "https://www.googledecline.com"
+    },
+    "ready_sign_link": {
+      "id": "aaae45bb-e89b-12d3-a456-426614174000"
+    },
+    "sender_message": {
+      "subject": "",
+      "message": ""
+    },
+    "forward": null
+  }
 }
 ```
 

@@ -21,8 +21,6 @@ source_url: >-
 This glossary includes terms and definitions used in Box Platform. If you need
 to find out what a term means, this is your one stop page.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Resource Type/Term | Also known as (AKA) | Description |
 | --- | --- | --- |
 | Admin | Superuser, administrator, supervisor | The main admin on an enterprise account. Admins can manage users and groups, view and edit all of their organization’s files and folders, log in to any user’s account within their organization, edit settings for their organization, and run or access reports. The Box Admin is the principal account administrator. |
@@ -80,8 +78,6 @@ to find out what a term means, this is your one stop page.
 | Version control | | The management and tracking of different versions of a document, ensuring that everyone is working on the most up-to-date version. |
 | [Webhook][webhook] | | A webhook is a way for an application to provide real-time data or notifications to another application by sending HTTP POST requests. |
 | Workflow | | Workflows within Box are automated sequences of tasks that help streamline and track the progress of document-centric processes, ensuring efficient collaboration and timely completion. |
-
-<!-- markdownlint-enable line-length -->
 
 <Next>
 

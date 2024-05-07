@@ -35,17 +35,11 @@ requests.
 
 This guide will take you through the following steps.
 
-1. [Install Postman](g://tooling/postman/quick-start/install-postman/)
-   on your device.
-2. [Configure a Box App](g://tooling/postman/quick-start/configure-box-app/) so
-   that Postman can access the Box API.
-3. [Log in](g://tooling/postman/quick-start/log-in-to-box/) to the Box App to
-   get the right API credentials.
-4. [Fork Box's Postman
-   collection](g://tooling/postman/quick-start/load-postman-collection/) into
-   Postman.
-5. [Make a first API call](g://tooling/postman/quick-start/make-api-call/)
-   to the Box API with Postman.
+1. [Install Postman](g://tooling/postman/quick-start/install-postman/) on your device.
+2. [Configure a Box App](g://tooling/postman/quick-start/configure-box-app/) so that Postman can access the Box API.
+3. [Log in](g://tooling/postman/quick-start/log-in-to-box/) to the Box App to get the right API credentials.
+4. [Fork Box's Postman collection](g://tooling/postman/quick-start/load-postman-collection/) into Postman.
+5. [Make a first API call](g://tooling/postman/quick-start/make-api-call/) to the Box API with Postman.
 
 <Next>
 

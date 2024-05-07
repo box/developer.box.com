@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - delete_webhooks_id
 required_guides:
@@ -13,7 +13,7 @@ total_steps: 2
 sibling_id: webhooks/v1
 parent_id: webhooks/v1
 next_page_id: ''
-previous_page_id: ''
+previous_page_id: webhooks/v1/create-v1
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/delete-v1.md
 ---

@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - put_files_upload_sessions_id
 related_guides:
@@ -19,7 +19,7 @@ total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked
 next_page_id: uploads/chunked/commit-session
-previous_page_id: ''
+previous_page_id: uploads/chunked/with-sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/upload-part.md
 ---
@@ -33,8 +33,6 @@ upload them using the Upload Part API.
 
 First, [create an upload session][createsession]. The resulting
 object defines the size of each part and the number of parts to upload.
-
-<!-- markdownlint-disable line-length -->
 
 ```json
 {
@@ -54,8 +52,6 @@ object defines the size of each part and the number of parts to upload.
   }
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## Split File
 
@@ -112,25 +108,25 @@ this can be smaller. The `Content-Range` parameter
 definition follows this pattern:
 
 ```yaml
-  -H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
+-H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
 ```
 
 When providing the value for `Content-Range`, remember that:
 
 * The lower bound of each part's byte range must be a multiple of the part size.
-* The higher bound must be a multiple of the part size - 1.  
+* The higher bound must be a multiple of the part size - 1.
 
-For example, if the part size is `8388608`, 
+For example, if the part size is `8388608`,
 the content range for the first two parts will be:
 
 ```yaml
-- H "Content-Range : bytes 0-8388607/32127641" \ ## first part
-- H "Content-Range : bytes 8388608-16777215/32127641" \ ## second part
+-H "Content-Range: bytes 0-8388607/32127641" \ ## first part
+-H "Content-Range: bytes 8388608-16777215/32127641" \ ## second part
 ```
 
 ## Response
 
-After each upload, the resulting response includes 
+After each upload, the resulting response includes
 the `ID` and `SHA` of the part uploaded.
 
 ```json

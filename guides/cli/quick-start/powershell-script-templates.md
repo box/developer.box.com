@@ -51,8 +51,7 @@ To automatically create users and folder structure, the script
 performs the following steps:
 
 1. Uses a `.csv` file to load employee data in bulk.
-2. Defines folder structure using a JSON file or uploads
-   the structure from the user's local directory.
+2. Defines folder structure using a JSON file or uploads the structure from the user's local directory.
 3. Creates each new managed user a predetermined personal folder structure
 
 ## Prerequisites
@@ -67,13 +66,13 @@ Install [PowerShell][pwsh]
 
 <message>
 
-If you encounter issues make sure you installed both 
-[dotnet core](https://dotnet.microsoft.com/download) and 
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
 [PowerShell][pwsh]
 
 </message>
 
-### Box CLI 
+### Box CLI
 
 To use the script, you will need the Box CLI
 installed and configured. If you haven't done so yet, see [step 1][step 1] of
@@ -120,17 +119,9 @@ with the script.
 There are a few parameters you need to supply before running the script:
 
 - `EmployeeList`: Path to `Employee List` CSV.
-- `PersonalFolderParentID`: Destination folder ID for all personal folders to
-be created in, either when using JSON file as input to create folder structure,
-or uploading local structure. This folder should be made prior to running the
-script the first time. It is not advised to make this value `0`, as this will
-create individual Personal folders in root of the account you set up the CLI
-with.
+- `PersonalFolderParentID`: Destination folder ID for all personal folders to be created in, either when using JSON file as input to create folder structure, or uploading local structure. This folder should be made prior to running the script the first time. It is not advised to make this value `0`, as this will create individual Personal folders in root of the account you set up the CLI with.
 - `FolderStructureJSONPath`: Your own folder structure JSON path.
-- `PersonalFolderSlug`: Ending name of the folder that will be created as
-parent for personal folders. It's set to `Personal Folder` by default, but feel
-free to set it to your needs. The username is concatenated with this value to
-create each user's personal folder name. ex - `rsmith2's Personal Folder`.
+- `PersonalFolderSlug`: Ending name of the folder that will be created as parent for personal folders. It's set to `Personal Folder` by default, but feel free to set it to your needs. The username is concatenated with this value to create each user's personal folder name. ex - `rsmith2's Personal Folder`.
 - `LocalUploadPath`: Local directory to upload folder structure directly.
 
 <Message>
@@ -195,138 +186,135 @@ You have 3 ways to pass parameters before running the script:
 
 - Use static values in the script
 
-<Message>
+    <Message>
 
-Remember to update all required parameters in the script before running.
+    Remember to update all required parameters in the script before running.
 
-</Message>
+    </Message>
 
-```bash
-# Set Employee List CSV Path
-# firstname, lastname, email, username
-$EmployeeList = ""
+    ```bash
+    # Set Employee List CSV Path
+    # firstname, lastname, email, username
+    $EmployeeList = ""
 
-# Personal Folder Structure: Set either path build off JSON or directly upload
-# a local folder
-$FolderStructureJSONPath = ""
-$LocalUploadPath = ""
+    # Personal Folder Structure: Set either path build off JSON or directly upload
+    # a local folder
+    $FolderStructureJSONPath = ""
+    $LocalUploadPath = ""
 
-# Ending slug of folder that will be used in creating personal folders for new
-# users. Value will get concatenated with username
-# If username is RSMITH, the personal folder name would be
-# RSMITH's Personal Folder
-$PersonalFolderSlug = ""
+    # Ending slug of folder that will be used in creating personal folders for new
+    # users. Value will get concatenated with username
+    # If username is RSMITH, the personal folder name would be
+    # RSMITH's Personal Folder
+    $PersonalFolderSlug = ""
 
-# ID of parent folder for created personal folders to be created in
-# This folder should be created before running the script the first time.
-# It is not advised to make this value 0, as this will create individual
-# Personal folders in root of the account you set up the cli with
-$PersonalFolderParentID = ""
-```
+    # ID of parent folder for created personal folders to be created in
+    # This folder should be created before running the script the first time.
+    # It is not advised to make this value 0, as this will create individual
+    # Personal folders in root of the account you set up the cli with
+    $PersonalFolderParentID = ""
+    ```
 
 - Run the script with parameters
 
-You can specify parameters while running the script, for example:
+    You can specify parameters while running the script, for example:
 
-```bash
-PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
-    -LocalUploadPath ./PersonalLocalUpload `
-    -PersonalFolderSlug "Personal Folder" `
-    -PersonalFolderParentID 123456789
+    ```bash
+    PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
+        -LocalUploadPath ./PersonalLocalUpload `
+        -PersonalFolderSlug "Personal Folder" `
+        -PersonalFolderParentID 123456789
 
-Starting User Creation & Provisioning script...
-```
+    Starting User Creation & Provisioning script...
+    ```
 
 - Provide the parameters when prompted
 
-  If some parameters are still missing at runtime,
-  the script will prompt you to provide them:
+    If some parameters are still missing at runtime, the script will prompt you to provide them:
 
-  ```bash
-  PS > ./Users_Create_Provision.ps1
-  Please enter the path to the employee list CSV file:
-  ./Employees_1.csv
-  Please enter the path to the folder structure JSON file or the local upload path:
-  Folder_Structure.json
-  Folder structure JSON path set to: Folder_Structure.json
-  Please enter the ID of the folder where you would like to create the personal folders:
-  0
-  Starting User Creation & Provisioning script...
-  ```
+    ```bash
+    PS > ./Users_Create_Provision.ps1
+    Please enter the path to the employee list CSV file:
+    ./Employees_1.csv
+    Please enter the path to the folder structure JSON file or the local upload path:
+    Folder_Structure.json
+    Folder structure JSON path set to: Folder_Structure.json
+    Please enter the ID of the folder where you would like to create the personal folders:
+    0
+    Starting User Creation & Provisioning script...
+    ```
 
 ## Run the script
 
-1. Change the directory to the folder containing the script.
-   In this example, it is the `User Creation & Provisioning`
-   folder.
+1. Change the directory to the folder containing the script. In this example, it is the `User Creation & Provisioning` folder.
 
-   ```bash
-   pwsh
-   ```
+    ```bash
+    pwsh
+    ```
 
 2. Run the script:
 
-   ```bash
-   PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
-   ```
+    ```bash
+    PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
+    ```
 
-   The response will be similar to the following:
+    The response will be similar to the following:
 
-   ```bash
-   Starting User Creation & Provisioning script...
+    ```bash
+    Starting User Creation & Provisioning script...
 
+    firstName lastName email
+    --------- -------- -----
+    Isaac     Newton   abc@abc.local
+    Extracting folder structure
+    Found current User ID: 18622116055
 
-   firstName lastName email
-   --------- -------- -----
-   Isaac     Newton   abc@abc.local
-   Extracting folder structure
-   Found current User ID: 18622116055
+    Created a user owned Onboarding folder with id: 164734146745
 
-   Created a user owned Onboarding folder with id: 164734146745
+    Created subfolder Market Research under Onboarding folder with id: 164735375585
 
-   Created subfolder Market Research under Onboarding folder with id: 164735375585
+    Created subfolder under Statistics folder with id: 164734956242
 
-   Created subfolder under Statistics folder with id: 164734956242
+    Created subfolder Sales Plays under Onboarding folder with id: 164735683001
 
-   Created subfolder Sales Plays under Onboarding folder with id: 164735683001
+    Created subfolder under Big Pharma folder with id: 164736160637
+    Creating employee Managed User account with first name:
+    Isaac, last name: Newton, email: abc@abc.local, and
 
-   Created subfolder under Big Pharma folder with id: 164736160637
-   Creating employee Managed User account with first name:
-   Isaac, last name: Newton, email: abc@abc.local, and
+    Created Managed user with id: 19605663027
 
-   Created Managed user with id: 19605663027
-
-   Type: collaboration
-    ID: '37250833128'
-Created By:
-    Type: user
-    ID: '18622116055'
-Name: Rui Barbosa
-Login: barduinor@gmail.com
-Created At: '2022-06-07T13:58:05-07:00'
-Modified At: '2022-06-07T13:58:05-07:00'
-Expires At: null
-Status: accepted
-Accessible By:
-    Type: user
-    ID: '19605663027'
-    Name: Isaac Newton
-    Login: abc@abc.local
-Invite Email: null
-Role: viewer uploader
-Acknowledged At: '2022-06-07T13:58:05-07:00'
-Item:
-    Type: folder
-    ID: '164734146745'
-    Sequence ID: '0'
-    ETag: '0'
-Name: Onboarding
-Collaborated Managed User Isaac Newton to current users
-Onboarding folder for provisioning
-```
+    Type: collaboration
+        ID: '37250833128'
+    Created By:
+        Type: user
+        ID: '18622116055'
+    Name: Rui Barbosa
+    Login: barduinor@gmail.com
+    Created At: '2022-06-07T13:58:05-07:00'
+    Modified At: '2022-06-07T13:58:05-07:00'
+    Expires At: null
+    Status: accepted
+    Accessible By:
+        Type: user
+        ID: '19605663027'
+        Name: Isaac Newton
+        Login: abc@abc.local
+    Invite Email: null
+    Role: viewer uploader
+    Acknowledged At: '2022-06-07T13:58:05-07:00'
+    Item:
+        Type: folder
+        ID: '164734146745'
+        Sequence ID: '0'
+        ETag: '0'
+    Name: Onboarding
+    Collaborated Managed User Isaac Newton to current users
+    Onboarding folder for provisioning
+    ```
 
 ## Running the script again for new users
 
+<!--alex ignore -->
 It is common to run this script regularly as your company hires new employees.
 You can simply edit the `.csv` file, removing the previous rows of users and
 adding the information for the new users. Then, the script may be ran again.

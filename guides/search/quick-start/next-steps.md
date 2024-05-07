@@ -20,8 +20,7 @@ You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
 1. [Created a metadata template][stepone]
-2. [Located information about the metadata template][stepthree] from step 1 via
-API
+2. [Located information about the metadata template][stepthree] from step 1 via API
 3. [Added a metadata template][steptwo] to at least one file
 4. [Used the metadata query API][stepfour] to locate the file(s) from step 3
 

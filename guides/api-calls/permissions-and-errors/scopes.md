@@ -126,7 +126,7 @@ Additionally, for JWT applications, the application must be configured with
 | **OAuth Scope**       | `manage_app_users` |
 | **Application Scope** | Manage users       |
 
-Gives an application permission to manage [App Users][appu], which means this 
+Gives an application permission to manage [App Users][appu], which means this
 scope only applies to server-side authenticated (JWT) applications.
 
 ### Manage groups
@@ -226,10 +226,10 @@ Box AI API.
 
 ### Manage Box Relay
 
-|                       |                            |
-| --------------------- | -------------------------- |
-| **OAuth Scope**       | `manage_triggers`  |
-| **Application Scope** | Manage Box Relay  |
+|                       |                             |
+| --------------------- | --------------------------- |
+| **OAuth Scope**       | `manage_triggers`           |
+| **Application Scope** | Manage Box Relay            |
 
 Gives an application permission to get workflows and start flows of type `WORKFLOW_MANUAL_START`
 
@@ -315,8 +315,6 @@ The following is a list of **additional** scopes that can be used with the
 [`POST /oauth2/token`](endpoint://post-oauth2-token) endpoint to downscope an
 existing access token.
 
-<!-- markdownlint-disable line-length -->
-
 | OAuth Scope            | UI Element affected | Description                                                                         |
 | ---------------------- | ------------------- | ----------------------------------------------------------------------------------- |
 | `annotation_edit`      | Preview             | Allow user to edit & delete annotations                                             |
@@ -334,11 +332,7 @@ existing access token.
 | `item_share`           | Explorer, Picker    | Allows the item specified under `resource` of the token exchange to be shared       |
 | `item_upload`          | Picker              | Allows upload in the content picker                                                 |
 
-<!-- markdownlint-enable line-length -->
-
 The standard OAuth scopes are also supported when downscoping.
-
-<!-- markdownlint-disable line-length -->
 
 | OAuth Scope                    | Description                                        |
 | ------------------------------ | -------------------------------------------------- |
@@ -351,8 +345,6 @@ The standard OAuth scopes are also supported when downscoping.
 | `manage_enterprise_properties` | Manage enterprise properties                       |
 | `manage_data_retention`        | Manage retention policies                          |
 | `sign_requests.readwrite`      | Manage sign requests                               |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 

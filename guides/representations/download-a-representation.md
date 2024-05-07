@@ -34,28 +34,20 @@ For paged representations like PDFs replace `{+asset_path}`
 with the desired page number and the file extension, for example
 `1.pdf`.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/pdf/content/3.pdf \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## Non-paginated representations
 
 For non-paged representations, replace the `{+asset_path}` with
 an empty string.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_32x32/content/ \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
-
-<!-- markdownlint-eable line-length -->
 
 ## Optional query parameters
 

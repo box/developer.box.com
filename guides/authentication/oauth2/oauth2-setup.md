@@ -60,8 +60,6 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
 
@@ -70,8 +68,6 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 |Automation, Custom Portal| Specify if the app is built by a customer or partner. |
 |Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame border center width="300">
 

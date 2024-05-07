@@ -14,7 +14,7 @@ type: guide
 total_steps: 8
 sibling_id: authentication/tokens
 parent_id: authentication/tokens
-next_page_id: authentication/tokens/downscope
+next_page_id: authentication/tokens/revoke
 previous_page_id: authentication/tokens/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/access-tokens.md
@@ -33,8 +33,8 @@ Token pair are returned.
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
-  -H "content-type: application/x-www-form-urlencoded" \
-  -d '...'
+    -H "content-type: application/x-www-form-urlencoded" \
+    -d '...'
 ```
 
 ```json
@@ -57,9 +57,9 @@ When an Access Token is requested using JWT or Client Credentials Grant, only an
 Access Token is returned:
 
 ```curl
-curl --location --request POST ‘https://api.box.com/oauth2/token’ \
---header ‘Content-Type: application/x-www-form-urlencoded’ \
---data-urlencode '...'
+curl --location --request POST 'https://api.box.com/oauth2/token' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode '...'
 ```
 
 ```json

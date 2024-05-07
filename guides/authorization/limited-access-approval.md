@@ -29,7 +29,7 @@ creation.
 
 However, if the enterprise setting to
 **Require manual admin authorization for transactional access apps** is enabled,
-an Admin must preform additional steps. 
+an Admin must preform additional steps.
 
 ## Approval Notifications
 

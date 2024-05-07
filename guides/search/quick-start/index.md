@@ -27,8 +27,7 @@ operators, such as equal to, greater-than, and less-than.
 
 Some benefits of the Metadata Query API include:
 
-* no indexing delay; query immediately after metadata creations, updates, and
-  deletions
+* no indexing delay; query immediately after metadata creations, updates, and deletions
 * ability to specify a sort order by one or more fields
 * no limitation on the number of characters that are queryable
 * queries return item properties and metadata instances
@@ -46,8 +45,7 @@ This guide will take you through the following steps.
 1. [Create a metadata template][stepone]
 2. [Locate information about the metadata template][steptwo] via API
 3. [Apply the metadata template][stepthree] to at least one file
-4. [Construct a metadata query API call][stepfour] to obtain the content
- from step 3
+4. [Construct a metadata query API call][stepfour] to obtain the content from step 3
 
 <Next>
 

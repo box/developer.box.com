@@ -22,10 +22,8 @@ source_url: >-
 Our documentation is divided into five main sections:
 
 - **Learn Box Platform**: A getting started walk through of all things Platform.
-- **Developer Guides**: In-depth documentation on developer portal, API working,
-usage of Box functionalities.
-- **API Reference**: A list of API endpoints and resources, with request
-and response examples.
+- **Developer Guides**: In-depth documentation on developer portal, API working, usage of Box functionalities.
+- **API Reference**: A list of API endpoints and resources, with request and response examples.
 - **SDK and Tools**: A list of official Box SDKs and tools.
 - **Sample Code Catalog**: Consolidated list of several code repositories.
 
@@ -38,8 +36,7 @@ In this section, you will:
 - evaluate if your [use case][use-case] is a good fit for Box,
 - understand the different [types of Box users][user-types],
 - select the applicable [application type][application-types],
-- check the available [authentication methods][authentication] and
-choose the best one for your use case,
+- check the available [authentication methods][authentication] and choose the best one for your use case,
 - find out where you can get [support][support],
 - check the [tools][tooling] needed for developing applications in Box.
 

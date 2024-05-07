@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_endpoints:
   - get_files_id
 related_guides:
@@ -40,9 +40,5 @@ megabytes.
 To get a text representation follow the following steps
 
 - [List all representations](guide://representations/list-all-representations)
-- [Request a text
-representation](guide://representations/request-a-representation)
-by passing the `x-rep-hints`-header with the value `[extracted_text]`.
-- [Download the text](guide://representations/download-a-representation)
-by calling the `url_template`, replacing the `{+asset_path}` with an
-empty string.
+- [Request a text representation](guide://representations/request-a-representation) by passing the `x-rep-hints`-header with the value `[extracted_text]`.
+- [Download the text](guide://representations/download-a-representation) by calling the `url_template`, replacing the `{+asset_path}` with an empty string.

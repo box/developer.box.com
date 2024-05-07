@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 9
 related_endpoints:
   - post_oauth2_token
 related_guides:
@@ -78,12 +78,12 @@ JWT claim with the following data.
 
 <Tab title='.Net'>
 
-```dotnet
+```csharp
 var claims = new List<Claim>{
-  new Claim("sub", '[EXTERNAL_USER_ID]'),
-  new Claim("name", '[EXTERNAL_USER_DISPLAY_NAME]'),
-  new Claim("box_sub_type", "external"),
-  new Claim("jti", jti),
+    new Claim("sub", '[EXTERNAL_USER_ID]'),
+    new Claim("name", '[EXTERNAL_USER_DISPLAY_NAME]'),
+    new Claim("box_sub_type", "external"),
+    new Claim("jti", jti),
 };
 ```
 
@@ -108,13 +108,13 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 
 ```python
 claims = {
-  'iss': config['boxAppSettings']['clientID'],
-  'sub': '[EXTERNAL_USER_ID]',
-  'name': '[EXTERNAL_USER_DISPLAY_NAME]',
-  'box_sub_type': 'external',
-  'aud': authentication_url,
-  'jti': secrets.token_hex(64),
-  'exp': round(time.time()) + 45
+    'iss': config['boxAppSettings']['clientID'],
+    'sub': '[EXTERNAL_USER_ID]',
+    'name': '[EXTERNAL_USER_DISPLAY_NAME]',
+    'box_sub_type': 'external',
+    'aud': authentication_url,
+    'jti': secrets.token_hex(64),
+    'exp': round(time.time()) + 45
 }
 ```
 
@@ -124,13 +124,13 @@ claims = {
 
 ```js
 let claims = {
-  iss: config.boxAppSettings.clientID,
-  sub: "[EXTERNAL_USER_ID]",
-  name: "[EXTERNAL_USER_DISPLAY_NAME]",
-  box_sub_type: "external",
-  aud: authenticationUrl,
-  jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45
+    iss: config.boxAppSettings.clientID,
+    sub: "[EXTERNAL_USER_ID]",
+    name: "[EXTERNAL_USER_DISPLAY_NAME]",
+    box_sub_type: "external",
+    aud: authenticationUrl,
+    jti: crypto.randomBytes(64).toString("hex"),
+    exp: Math.floor(Date.now() / 1000) + 45
 };
 ```
 
@@ -171,15 +171,11 @@ $claims = [
 
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter      | Type   | Description                                                                                             |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------- |
 | `sub`          | String | The external user ID to tie this annotation to. This can be any arbitrary ID tracked by the application |
 | `box_sub_type` | String | `external` to signify an external user ID                                                               |
 | `box_sub_type` | String | The external user name to tie this annotation to. This will be displayed in the Box UI                  |
-
-<!-- markdownlint-enable line-length -->
 
 Then, convert this claim to an assertion according to the guide and pass this
 assertion to the [`POST /oauth2/token`](e://post-oauth2-token)
@@ -190,23 +186,23 @@ as well as a set of scopes, and the resource for which to create the token.
 
 <Tab title='.Net'>
 
-```dotnet
+```csharp
 var content = new FormUrlEncodedContent(new[]
 {
-  new KeyValuePair<string, string>(
-    "grant_type", "urn:ietf:params:oauth:grant-type:token-exchange"),
-  new KeyValuePair<string, string>(
-    "resource", "https://api.box.com/2.0/files/123456"),
-  new KeyValuePair<string, string>(
-    "subject_token", "[ACCESS_TOKEN]"),
-  new KeyValuePair<string, string>(
-    "subject_token_type", "urn:ietf:params:oauth:token-type:access_token"),
-  new KeyValuePair<string, string>(
-    "scope", "item_preview"),
-  new KeyValuePair<string, string>(
-    "actor_token", "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]"),
-  new KeyValuePair<string, string>(
-    "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"),
+    new KeyValuePair<string, string>(
+        "grant_type", "urn:ietf:params:oauth:grant-type:token-exchange"),
+    new KeyValuePair<string, string>(
+        "resource", "https://api.box.com/2.0/files/123456"),
+    new KeyValuePair<string, string>(
+        "subject_token", "[ACCESS_TOKEN]"),
+    new KeyValuePair<string, string>(
+        "subject_token_type", "urn:ietf:params:oauth:token-type:access_token"),
+    new KeyValuePair<string, string>(
+        "scope", "item_preview"),
+    new KeyValuePair<string, string>(
+        "actor_token", "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]"),
+    new KeyValuePair<string, string>(
+        "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"),
 });
 ```
 
@@ -218,19 +214,19 @@ var content = new FormUrlEncodedContent(new[]
 List<NameValuePair> params = new ArrayList<NameValuePair>();
 
 params.add(new BasicNameValuePair(
-  "grant_type", "urn:ietf:params:oauth:grant-type:token-exchange"));
+    "grant_type", "urn:ietf:params:oauth:grant-type:token-exchange"));
 params.add(new BasicNameValuePair(
-  "resource", "https://api.box.com/2.0/files/123456"));
+    "resource", "https://api.box.com/2.0/files/123456"));
 params.add(new BasicNameValuePair(
-  "subject_token", "[ACCESS_TOKEN]"));
+    "subject_token", "[ACCESS_TOKEN]"));
 params.add(new BasicNameValuePair(
-  "subject_token_type", "urn:ietf:params:oauth:token-type:access_token"));
+    "subject_token_type", "urn:ietf:params:oauth:token-type:access_token"));
 params.add(new BasicNameValuePair(
-  "scope", "item_preview"));
+    "scope", "item_preview"));
 params.add(new BasicNameValuePair(
-  "actor_token", "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]"));
+    "actor_token", "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]"));
 params.add(new BasicNameValuePair(
-  "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"));
+    "actor_token_type", "urn:ietf:params:oauth:token-type:id_token"));
 ```
 
 </Tab>
@@ -239,13 +235,13 @@ params.add(new BasicNameValuePair(
 
 ```python
 params = urlencode({
-  'grant_type': 'urn:ietf:params:oauth:grant-type:token-exchange',
-  'resource': 'https://api.box.com/2.0/files/123456',
-  'subject_token': '[ACCESS_TOKEN]',
-  'subject_token_type': 'urn:ietf:params:oauth:token-type:access_token',
-  'scope': 'item_preview',
-  'actor_token': '[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]',
-  'actor_token_type': 'urn:ietf:params:oauth:token-type:id_token'
+    'grant_type': 'urn:ietf:params:oauth:grant-type:token-exchange',
+    'resource': 'https://api.box.com/2.0/files/123456',
+    'subject_token': '[ACCESS_TOKEN]',
+    'subject_token_type': 'urn:ietf:params:oauth:token-type:access_token',
+    'scope': 'item_preview',
+    'actor_token': '[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]',
+    'actor_token_type': 'urn:ietf:params:oauth:token-type:id_token'
 }).encode()
 ```
 
@@ -255,19 +251,19 @@ params = urlencode({
 
 ```js
 let accessToken = await axios
-  .post(
-    authenticationUrl,
-    querystring.stringify({
-      grant_type: "urn:ietf:params:oauth:grant-type:token-exchange",
-      resource: "https://api.box.com/2.0/files/123456",
-      subject_token: "[ACCESS_TOKEN]",
-      subject_token_type: "urn:ietf:params:oauth:token-type:access_token",
-      scope: "item_preview",
-      actor_token: "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]",
-      actor_token_type: "urn:ietf:params:oauth:token-type:id_token"
-    })
-  )
-  .then(response => response.data.access_token);
+    .post(
+        authenticationUrl,
+        querystring.stringify({
+            grant_type: "urn:ietf:params:oauth:grant-type:token-exchange",
+            resource: "https://api.box.com/2.0/files/123456",
+            subject_token: "[ACCESS_TOKEN]",
+            subject_token_type: "urn:ietf:params:oauth:token-type:access_token",
+            scope: "item_preview",
+            actor_token: "[JWT_ASSERTION_FOR_ANNOTATOR_TOKEN]",
+            actor_token_type: "urn:ietf:params:oauth:token-type:id_token"
+        })
+    )
+    .then(response => response.data.access_token);
 ```
 
 </Tab>
@@ -306,15 +302,11 @@ $params = [
 
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter          | Description                                                              |
 | ------------------ | ------------------------------------------------------------------------ |
 | `resource`         | An optional full URL path to the file the token should be restricted to. |
 | `actor_token`      | The JWT assertion created earlier                                        |
 | `actor_token_type` | Always set to `urn:ietf:params:oauth:token-type:id_token`                |
-
-<!-- markdownlint-enable line-length -->
 
 ## Create with SDKs
 
@@ -327,21 +319,21 @@ active token for another token.
 
 ```js
 var options = {
-  actor: {
-    id: "[EXTERNAL_USER_ID]",
-    name: "[EXTERNAL_USER_DISPLAY_NAME"
-  }
+    actor: {
+        id: "[EXTERNAL_USER_ID]",
+        name: "[EXTERNAL_USER_DISPLAY_NAME"
+    }
 };
 
 client
-  .exchangeToken(
-    "item_preview",
-    "https://api.box.com/2.0/files/123456",
-    options
-  )
-  .then(tokenInfo => {
-    //=> tokenInfo.accessToken
-  });
+    .exchangeToken(
+        "item_preview",
+        "https://api.box.com/2.0/files/123456",
+        options
+    )
+    .then(tokenInfo => {
+        //=> tokenInfo.accessToken
+    });
 ```
 
 </Tab>

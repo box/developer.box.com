@@ -37,7 +37,7 @@ Clear credentials
 
 Removing your API credentials from the browser storage ensures that no other
 script can read your **Client ID**, **Client Secret**, **Access Token** or
-  **Refresh Token**.
+**Refresh Token**.
 
 </Message>
 
@@ -114,8 +114,7 @@ an access token in Postman](g://tooling/postman/refresh) for more details.
 ## Summary
 
 * You selected the Postman environment to use for making API calls to Box
-* You made your first API call to Box, requesting the folder items for your
-  user's root folder.
+* You made your first API call to Box, requesting the folder items for your user's root folder.
 
 <Next>
 

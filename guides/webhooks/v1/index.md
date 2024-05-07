@@ -13,7 +13,7 @@ type: guide
 total_steps: 2
 sibling_id: webhooks
 parent_id: webhooks
-next_page_id: ''
+next_page_id: webhooks/v1/delete-v1
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/index.md

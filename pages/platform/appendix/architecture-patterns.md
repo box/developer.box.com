@@ -45,10 +45,8 @@ Components:
 
 - A server or local machine running a PowerShell script
 - An identity provider with a user provisioning/deprovisioning service
-- A [Service Account][sa] owned folder containing a personal folder for each
-  user
-- A PowerShell script based on a time that monitors the [event stream][events]
-  and creates/collaborates each user on their personal folder
+- A [Service Account][sa] owned folder containing a personal folder for each user
+- A PowerShell script based on a time that monitors the [event stream][events] and creates/collaborates each user on their personal folder
 
 ## Vault Portal
 
@@ -62,8 +60,7 @@ Components:
 
 - A custom portal allowing users to collaborate in a non-Box branded environment
 - A load balancer distributing users to a web server with the deployed portal
-- Users can login using credentials maintained in an identity provider, which
-are then mapped to [App User][au] information from Box within a data server.
+- Users can login using credentials maintained in an identity provider, which are then mapped to [App User][au] information from Box within a data server.
 - Other site data is stored on the data server
 
 ## Box Skill

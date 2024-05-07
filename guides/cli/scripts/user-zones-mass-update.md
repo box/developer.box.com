@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -29,8 +29,6 @@ This [script][script] provisions users to a specific
 data residency zone within a Multizone Box tenant.
 It performs the following steps:
 
-<!-- markdownlint-disable line-length -->
-
 1. It uses admin or co-admin login email address to find the associated enterprise and the zone policy assigned to this enterprise. An assigned zone policy is inherited by all users unless specified otherwise. It is sometimes called the **default zone**.
 2. It performs zone assignment based on an input `.csv` file containing user email addresses and zone mappings.
 
@@ -54,7 +52,7 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
 ```bash
-pwsh 
+pwsh
 ```
 
 Depending on the directory you are
@@ -67,8 +65,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 ```
 
 <message>
@@ -98,30 +96,29 @@ To check this setting:
 
 1. Go **Users & Groups** section in the Admin Console.
 2. Click the user account you want to verify.
-3. Go to **Edit User Access permissions** section to grant the administrative privileges for users and groups. 
+3. Go to **Edit User Access permissions** section to grant the administrative privileges for users and groups.
 
 ## Prepare the `.csv` file
 
-The `.csv` file must have two columns with the following headers: **Email** and **Region**. 
+The `.csv` file must have two columns with the following headers: **Email** and **Region**.
 
-* **Email** contains the primary email address of a Box user. 
-* **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone. 
+* **Email** contains the primary email address of a Box user.
+* **Region**  contains the user-friendly name for the zone to which the script will assign the user. This name is provided by the [ZonesTable][zonestable] that is a hash table used to define zones. The keys are the zone's user-friendly names, and the corresponding value is the global ID of the zone.
 
-  ```bash
-  $ZonesTable = @{
-  US = "100001"             #US
-  GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
-  Australia = "100003"      #Australia
-  Japan = "100004"          #Japan with in region uploads/downloads/previews
-  Canada = "100005"         #Canada
-  JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
-  UKGermany = "100008"      #UK/Germany
-  UK = "100009"             #UK with in region uploads/downloads/previews
-  France = "100012"         #France
-  }
+    ```bash
+    $ZonesTable = @{
+        US = "100001"             #US
+        GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
+        Australia = "100003"      #Australia
+        Japan = "100004"          #Japan with in region uploads/downloads/previews
+        Canada = "100005"         #Canada
+        JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
+        UKGermany = "100008"      #UK/Germany
+        UK = "100009"             #UK with in region uploads/downloads/previews
+        France = "100012"         #France
+    }
+    ```
 
-  ```
-  
 <message>
 
 Consult the Box Consulting or Customer Success manager to get the IDs corresponding to the zones enabled in a specific enterprise.
@@ -132,9 +129,9 @@ A sample input `.csv` file containing emails and zone names is provided with thi
 
 | Email|Region|
 |------|-------|
-|betty@company.com|US|
-|roger@company.com|France|
-|sally@company.com|JapanSingapore|
+|`betty@company.com`|US|
+|`roger@company.com`|France|
+|`sally@company.com`|JapanSingapore|
 
 ## Configure the script
 
@@ -181,8 +178,6 @@ You have access to these log files:
 
 * `Mass_Update_User_Zones_all.txt` that contains all log entries.
 * `Mass_Update_User_Zones_errors.txt` that contains only errors.
-
-<!-- markdownlint-enable line-length -->
 
 [zonesguide]: https://support.box.com/hc/en-us/articles/360044193533-Assigning-Zones-through-the-Admin-Console
 [script]: https://github.com/box/boxcli/tree/main/examples/Mass%20Update%20User%20Zones

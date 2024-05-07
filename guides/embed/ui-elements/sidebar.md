@@ -49,8 +49,6 @@ Learn about selecting an authentication method
 
 ## Sample HTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -90,8 +88,6 @@ Learn about selecting an authentication method
   </body>
 </html>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## Demo
 
@@ -206,19 +202,13 @@ sidebar.removeAllListeners();
 
 ### Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter | Type   | Description                                                                                                                                                               |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fileId`  | String | Box File ID. This will be the ID of the file for which you want the sidebar.                                                                                              |
 | `token`   | String | Box API access token to use. It can have read/write access to the file above. The value passed in for the token is assumed to never expire while the sidebar is visible. |
 | `options` | Object | Additional options. For example, `sidebar.show(FILE_ID, TOKEN, {hasProperties: true})` would be used to show file properties in the sidebar.                              |
 
-<!-- markdownlint-enable line-length -->
-
 ### Options
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter             | Type     | Default         | Description                                                                                                                                                                                                                                                |
 | --------------------- | -------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -239,8 +229,6 @@ sidebar.removeAllListeners();
 | `hasVersions`    | Boolean | `false` | Set to true to show file versions in the details sidebar.        |
 | `hasNotices`     | Boolean | `false` | Set to true to show file related notices in the details sidebar. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -256,8 +244,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 
-<!-- markdownlint-disable line-length -->
-
 | Scope Name     | Permissions granted                                            |
 | -------------- | -------------------------------------------------------------- |
 | `base_sidebar` | Allows the user to get basic file info needed for the sidebar. |
@@ -270,8 +256,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | `item_rename`  | Allows editing of file description.     |
 | `item_upload`  | Allows editing of file metadata.        |
 | `item_task`    | Allows creating and resolving of tasks. |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

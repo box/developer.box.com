@@ -54,10 +54,8 @@ Center][app-center].
 Your application must meet the following requirements:
 
 * The application is in a finished state and ready for production usage.
-* The application leverages OAuth 2.0 authentication, as the App Center does
-  not support any other authentication methods.
-* You are a developer with access to the application in the
-  [Developer Console][devconsole].
+* The application leverages OAuth 2.0 authentication, as the App Center does not support any other authentication methods.
+* You are a developer with access to the application in the [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 

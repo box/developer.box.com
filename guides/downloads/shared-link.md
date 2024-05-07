@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - get_files_id_content
 related_guides:
@@ -19,7 +19,7 @@ total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads/folder
-previous_page_id: downloads/file-version
+previous_page_id: downloads/get-url
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/shared-link.md
 ---

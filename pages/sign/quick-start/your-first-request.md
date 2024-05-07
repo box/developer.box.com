@@ -29,31 +29,29 @@ signature request. See the example:
 
 <Tab title='cURL'>
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <access token>'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <access token>' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
-
+      ]
+    }'
 ```
 
 </Tab>
@@ -61,7 +59,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single(
     client: Client,
     document_id: str,
@@ -96,7 +93,6 @@ def main():
 
     if sign_pdf_prep.prepare_url is not None:
         open_browser(sign_pdf_prep.prepare_url)
-
 ```
 
 </Tab>
@@ -111,46 +107,44 @@ This will result in a signature request with a prepare document URL
 <Tab title='cURL'>
 
 ```json
-
 {
-    "is_document_preparation_needed": true,
-    "signers": [
-        {
-            "email": "requester@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
-    "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
-    "source_files": [
-        {
-            "id": "1355143830404",
-            "type": "file",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
+  "is_document_preparation_needed": true,
+  "signers": [
+    {
+      "email": "requester@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Simple-PDF.pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1381301154812",
-                "type": "file",
-            }
-        ],
-        "is_ready_for_download": true
-    },
-    "template_id": null
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
+  "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
+  "source_files": [
+    {
+      "id": "1355143830404",
+      "type": "file",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+  },
+  "name": "Simple-PDF.pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1381301154812",
+        "type": "file",
+      }
+    ],
+    "is_ready_for_download": true
+  },
+  "template_id": null
 }
-
 ```
 
 </Tab>
@@ -158,12 +152,10 @@ This will result in a signature request with a prepare document URL
 <Tab title='Python Gen SDK'>
 
 ```YAML
-
 Simple sign request with prep: xyz-abc-123
   Status: converting
   Signers: signer@example.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
-
 ```
 
 </Tab>
@@ -180,28 +172,19 @@ A signature request can have the following statuses:
 
 ![Signature flow](images/basic-sign-flow.png)
 
-- `converting`: The file is converted to a `.pdf` for the signing process once
-the sign request is sent.
-- `error_converting`: An issue occurred while converting the file to a
-`.pdf`.
-- `created`: When the `document_preparation_is_needed` is set to `true`, but the
-`prepare_url` has not yet been visited.
-- `sent`: The request was successfully sent, but no signer has interacted with
-it.
+- `converting`: The file is converted to a `.pdf` for the signing process once the sign request is sent.
+- `error_converting`: An issue occurred while converting the file to a `.pdf`.
+- `created`: When the `document_preparation_is_needed` is set to `true`, but the `prepare_url` has not yet been visited.
+- `sent`: The request was successfully sent, but no signer has interacted with it.
 - `error_sending`: An issue occurred while sending the request.
-- `viewed`: The first, or only, signer clicked on **Review document** in
-the signing email or visited the signing URL.
+- `viewed`: The first, or only, signer clicked on **Review document** in the signing email or visited the signing URL.
 - `downloaded`: The document was downloaded by the signer.
 - `signed`: All signers completed the request.
-- `signed and downloaded`: The document was signed and downloaded by the
-signer.
+- `signed and downloaded`: The document was signed and downloaded by the signer.
 - `declined`: If any signer declines the request.
 - `cancelled`: If the request is cancelled via UI or API.
-- `expired`: The date of expiration has passed with outstanding, incomplete
-signatures.
-- `finalizing`: All signers have signed the request,
-but the final document with signatures and the signing
-log have not been generated yet.
+- `expired`: The date of expiration has passed with outstanding, incomplete signatures.
+- `finalizing`: All signers have signed the request, but the final document with signatures and the signing log have not been generated yet.
 - `error_finalizing`: The `finalizing` phase did not complete successfully.
 
 ## Preparing the document

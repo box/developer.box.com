@@ -14,7 +14,7 @@ type: guide
 total_steps: 3
 sibling_id: security
 parent_id: security
-next_page_id: security/cors
+next_page_id: security/device-pinners
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/fedramp.md
@@ -47,8 +47,6 @@ might affect the usage of the API.
 
 For FedRAMP compliance, you may use the below URLs for API entry points.
 
-<!-- markdownlint-disable line-length -->
-
 |FedRAMP Moderate |
 |-----------------|
 |account.box.com  |
@@ -57,15 +55,9 @@ For FedRAMP compliance, you may use the below URLs for API entry points.
 |dl.boxcloud.com  |
 |realtime.services.box.net|
 
-<!-- markdownlint-enable line-length -->
-
 <!-- ## API Restrictions  The following API entry points are not yet available for usage under FedRAMP High configuration. -->
 
-<!-- markdownlint-disable line-length -->
-
 <!-- |API Entry point | |----------------| |/sign_requests| |/sign_requests/{sign_request_id}| |/sign_requests/{sign_request_id}/cancel| |/sign_requests/{sign_request_id}/resend| -->
-
-<!-- markdownlint-enable line-length -->
 
 <!-- ## Code Samples  Code samples allow you to bring in SDK, CLI, and cURL code samples. The ID needs to be an endpoint ID.  <Samples id='get_files_id' >
 
@@ -127,7 +119,7 @@ console.log('!')
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 // some .NET code
 ```
 

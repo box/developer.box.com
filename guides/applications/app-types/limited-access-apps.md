@@ -46,7 +46,7 @@ A Limited Access App is best used when the application:
 
 ## Approval
 
-Limited Access Apps may require approval before use. 
+Limited Access Apps may require approval before use.
 
 <CTA to='g://authorization/limited-access-approval'>
 

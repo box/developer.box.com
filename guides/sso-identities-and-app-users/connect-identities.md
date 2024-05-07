@@ -89,15 +89,8 @@ Using the `external_app_user_id` field for associating the unique SSO user
 account with a Box user account is the preferred method of connecting the two
 accounts over email, for a number of reasons:
 
-* Email association is only viable for
- [managed users](page://platform/user-types/#managed-users).
- [App users](page://platform/user-types/#app-user) are
- automatically assigned an email address by Box, meaning that you cannot assign
- the `login` to be the email from the SSO service. 
-* Emails have to be unique in Box. This means that if your SSO service user
- signed up for Box using the same email address, which is not within your Box
- enterprise, then you will not be able to create a user with that email and
- won't be able to connect to that existing user.
+* Email association is only viable for [managed users](page://platform/user-types/#managed-users). [App users](page://platform/user-types/#app-user) are automatically assigned an email address by Box, meaning that you cannot assign the `login` to be the email from the SSO service.
+* Emails have to be unique in Box. This means that if your SSO service user signed up for Box using the same email address, which is not within your Box enterprise, then you will not be able to create a user with that email and won't be able to connect to that existing user.
 * The `external_app_user_id` field was designed for this purpose.
 
 ## Using `login` (alternative method)
@@ -105,13 +98,8 @@ accounts over email, for a number of reasons:
 Using the `login` field of a user object to create an account association is
 viable under a few conditions:
 
-* Only the 
- [managed users](getting-started://authentication/user-types/#managed-users/)
- type is being used, not
- [app users](page://platform/user-types/#app-user).
-* All email addresses and Box account creation requests are managed by your
- enterprise, meaning that users cannot independently create Box accounts with
- those email addresses.
+* Only the [managed users](getting-started://authentication/user-types/#managed-users/) type is being used, not [app users](page://platform/user-types/#app-user).
+* All email addresses and Box account creation requests are managed by your enterprise, meaning that users cannot independently create Box accounts with those email addresses.
 
 <Message warning>
 

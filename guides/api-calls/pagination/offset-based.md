@@ -47,7 +47,7 @@ either without the `offset` parameter, or with the `offset` set to `0`. The
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 To fetch the next page of entries the API needs to be called with
@@ -56,7 +56,7 @@ limit returned in the previous result, `previous_offset + previous_limit`.
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='notice'>
@@ -76,14 +76,10 @@ items to fetch.
 
 The following query parameters are used to paginate a collection.
 
-<!-- markdownlint-disable line-length -->
-
 | Query parameter | Type    | Default        |                                                                                                                 |
 | --------------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------- |
 | `offset`        | Integer | `0`            | The (zero-based) offset of the first item returned in the collection. In a zero-based offset `0` is a correct value. |
 | `limit`         | Integer | Depends on API | The maximum number of entries to return. If the value exceeds the maximum, then the maximum value will be used. |
-
-<!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
 
@@ -97,16 +93,12 @@ pagination is recommended when a higher offset is needed.
 When paginating collections, the API returns an object that contains the set of
 results as an array, as well as some information about the current page of results.
 
-<!-- markdownlint-disable line-length -->
-
 | Field         | Type    |                                                                                                                                                                   |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entries`     | Array   | The page of items for this page. This will be an empty array if there are no results.                                                                             |
 | `offset`      | Integer | The offset used for this page of results                                                                                                                          |
 | `limit`       | Integer | The limit used for this page of results. This will be the same as the `limit` query parameter unless it exceeded the maximum value allowed for this API endpoint. |
 | `total_count` | Integer | One greater than the offset of the last item in the entire collection. The total number of items in the collection may be less than `total_count`.                |
-
-<!-- markdownlint-enable line-length -->
 
 ## Example endpoints
 

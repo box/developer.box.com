@@ -37,8 +37,6 @@ You cannot change this selection later on.
 
 ## Custom App
 
-<!-- markdownlint-disable line-length -->
-
 |                            |                                                                              |
 | -------------------------- | ---------------------------------------------------------------------------- |
 | **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Authentication][ccg] |
@@ -88,8 +86,6 @@ from files uploaded to Box.
 Learn more about Custom Skills
 
 </CTA>
-
-<!-- markdownlint-enable line-length -->
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt

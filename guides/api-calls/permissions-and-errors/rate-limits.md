@@ -64,17 +64,17 @@ Pricing plans that increase their allocation.
 There are currently a few distinct rate limits in place within the Box API.
 
 * General API calls
-  * 1000 API requests per minute, per user
+    * 1000 API requests per minute, per user
 * Uploads
-  * 240 file upload requests per minute, per user
+    * 240 file upload requests per minute, per user
 * Search
-  * 6 searches per second, per user, to the [search endpoint][search]
-  * Two additional limits are applied on top of the basic rate limit
-    * 60 searches per minute, per user
-    * 12 searches per second, per enterprise
+    * 6 searches per second, per user, to the [search endpoint][search]
+    * Two additional limits are applied on top of the basic rate limit
+        * 60 searches per minute, per user
+        * 12 searches per second, per enterprise
 * Box Sign
-  * Create and resend sign request: 100 requests per minute, per user
-  * Get sign request: 1000 requests per minute, per user
+    * Create and resend sign request: 100 requests per minute, per user
+    * Get sign request: 1000 requests per minute, per user
 
 ## Rate limit error
 

@@ -58,7 +58,7 @@ Let's get started!
 <Tab title='cURL'>
 
 ```bash
-    
+
 ```
 
 </Tab>
@@ -66,7 +66,6 @@ Let's get started!
 <Tab title='Python Gen SDK'>
 
 ```python
-
 ```
 
 </Tab>

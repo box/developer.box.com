@@ -51,15 +51,11 @@ To create a webhook follow the steps below.
 
 ### Required fields
 
-<!-- markdownlint-disable line-length -->
-
 | Field name | Description | Required |
 | --- | --- | --- |
 | URL Address | URL address to be notified by the webhook. | Yes |
 | Content type | Type of content (file/folder) the webhook is configured for. | Yes |
 | Triggers | Different triggers that activate the webhook. | Yes |
-
-<!-- markdownlint-enable line-length -->
 
 ## API
 

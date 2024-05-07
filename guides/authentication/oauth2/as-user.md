@@ -27,8 +27,8 @@ through the `as-user` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
-  -H "as-user: [USER_ID]"
-  -H "authorization: Bearer [ACCESS_TOKEN]"
+    -H "as-user: [USER_ID]"
+    -H "authorization: Bearer [ACCESS_TOKEN]"
 ```
 
 <Message>
@@ -62,7 +62,7 @@ Types](page://platform/user-types) for more details.
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 
@@ -70,14 +70,10 @@ var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 
 <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 client.asUser([USER_ID]");
 // client.asSelf();
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 

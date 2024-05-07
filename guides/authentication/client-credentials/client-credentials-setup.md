@@ -12,7 +12,6 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-  - /guides/authentication/client-credentials
 category_id: authentication
 subcategory_id: authentication/client-credentials
 is_index: false
@@ -54,8 +53,6 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose.
 Depending on the option chosen, you might
@@ -73,8 +70,6 @@ need to specify further details.
 ![Auth selection screen](../images/custom-app-selection.png)
 
 </ImageFrame>
-
-<!-- markdownlint-enable line-length -->
 
 ### Select application authentication
 

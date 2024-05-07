@@ -13,7 +13,7 @@ total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: authorization/common-errors
+previous_page_id: authorization/custom-skill-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/index.md
 ---
@@ -34,21 +34,21 @@ authorization:
 
 These authentication methods automatically generate a [Service Account][sa].
 With the right [scopes][scopes] enabled, a Service Account can perform many
-Admin actions, thus requiring Admin authorization before use. 
+Admin actions, thus requiring Admin authorization before use.
 
 [OAuth 2.0][oauth] and [App Token][apptoken] apps may also require explicit
-Admin authorization based on enabled enterprise settings. 
+Admin authorization based on enabled enterprise settings.
 
 ## Enterprise settings
 
 Subsequent steps are required if any of the following enterprise settings are
-enabled: 
+enabled:
 
 - Disable published apps by default
 - Disable unpublished apps by default
 - Require manual admin authorization for transactional access apps
 
-These [settings][setting] can be found by navigating to: 
+These [settings][setting] can be found by navigating to:
 
 **Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
 
@@ -62,8 +62,6 @@ Published apps are any applications that can be found in our App Center.
 
 To see what steps an Admin must complete for a given app, review the following
 scenarios.
-
-<!-- markdownlint-disable line-length -->
 
 <!--alex ignore-->
 
@@ -95,8 +93,6 @@ scenarios.
 |[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
-
-<!-- markdownlint-enable line-length -->
 
 [auth]: g://authentication/select
 <!-- i18n-enable localize-links -->

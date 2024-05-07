@@ -29,7 +29,7 @@ either without the `offset` parameter, or with the `offset` set to `0`. The
 
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=0&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 To fetch the next page of entries the API needs to be called with
@@ -38,7 +38,7 @@ limit returned in the previous result, `previous_offset + previous_limit`.
 
 ```curl
 curl https://api.box.com/2.0/search?query=sales&offset=100&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='notice'>
@@ -64,8 +64,6 @@ Learn more about offset-based pagination
 
 Each of our SDKs has built-in support for API pagination. The following code
 samples show how to use pagination in the search API.
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -100,7 +98,7 @@ BoxCollection<BoxItem> page2 = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 page1 = client.search().query(query='sales', limit=50)
 page2 = client.search().query(query='sales', limit=50, offset=50)
 ```
@@ -111,16 +109,14 @@ page2 = client.search().query(query='sales', limit=50, offset=50)
 
 ```js
 const page1 = await client.search.query('sales', {
-  limit: 50
+    limit: 50
 })
 const page2 = await client.search.query('sales'. {
-  limit: 50,
-  offset: 50
+    limit: 50,
+    offset: 50
 })
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

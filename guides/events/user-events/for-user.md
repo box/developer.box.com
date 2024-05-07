@@ -45,15 +45,11 @@ header or an actual access token for that user.
 
 The user event stream support 3 types of stream.
 
-<!-- markdownlint-disable line-length -->
-
 | Stream Type |                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------|
 | `all`       | Returns everything for a user (default)                                                 |
 | `changes`   | Returns events that may cause file tree changes such as file updates or collaborations. |
 | `sync`      | Is similar to changes but only applies to synced folders                                |
-
-<!-- markdownlint-enable line-length -->
 
 ## Anonymous Users
 
@@ -85,8 +81,6 @@ The user event stream supports long-polling
 
 The following events can be triggered for a user. This list is not exhaustive,
 so it is possible events appear that are not listed.
-
-<!-- markdownlint-disable line-length -->
 
 The following events are available in all feeds.
 
@@ -130,7 +124,5 @@ The following events are only available in the `all` feed.
 | `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user.    |
 | `ACCESS_GRANTED`         | Granted Box access to account.                            |
 | `ACCESS_REVOKED`         | Revoke Box access to account.                             |
-
-<!-- markdownlint-enable line-length -->
 
 [longpoll]: g://events/user-events/polling

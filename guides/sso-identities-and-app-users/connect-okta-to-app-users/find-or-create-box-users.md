@@ -37,41 +37,38 @@ account if one doesn't already exist for the Okta user.
 In your local application directory, load the `server.js` file created in
 step 1.
 
-Add the following `box` object into the file and save. 
+Add the following `box` object into the file and save.
 
 ```js
 const box = (() => {
-  const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
-  const sdk = boxSDK.getPreconfiguredInstance(configJSON);
-  const client = sdk.getAppAuthClient('enterprise');
+    const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
+    const sdk = boxSDK.getPreconfiguredInstance(configJSON);
+    const client = sdk.getAppAuthClient('enterprise');
 
-  let oktaRecord = {};
-  let userId = '';
-  let userClient;
+    let oktaRecord = {};
+    let userId = '';
+    let userClient;
 
-  function validateUser(userInfo, res) {
-    // TODO: VALIDATE USER
-  }
+    function validateUser(userInfo, res) {
+        // TODO: VALIDATE USER
+    }
 
-  function createUser(res) {
-    // TODO: CREATE USER
-  }
+    function createUser(res) {
+        // TODO: CREATE USER
+    }
 
-  return {
-    validateUser,
-    createUser
-  };
+    return {
+        validateUser,
+        createUser
+    };
 })();
 ```
 
 This object defines a number of items:
 
-* Configuration: A new instance of the Box Node SDK is instantiated and made
- available to the object functions, along with a number of variables.
-* `validateUser` function: Will house the code to validate whether a Box user
- exists for an associated Okta user.
-* `createUser` function: Creates a new Box user bound to the associated Okta
- user ID.
+* Configuration: A new instance of the Box Node SDK is instantiated and made available to the object functions, along with a number of variables.
+* `validateUser` function: Will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser` function: Creates a new Box user bound to the associated Okta user ID.
 
 With that structure defined, replace the `// TODO: CREATE USER` section with
 the following code.
@@ -80,13 +77,13 @@ the following code.
 const spaceAmount = 1073741824;   // ~ 1gb
 
 client.enterprise.addAppUser(
-  this.oktaRecord.name, 
-  {
-    space_amount: spaceAmount,
-    external_app_user_id: this.oktaRecord.sub
-  }
+    this.oktaRecord.name,
+    {
+      space_amount: spaceAmount,
+      external_app_user_id: this.oktaRecord.sub
+    }
 ).then(appUser => {
-  res.send(`New user created: ${appUser.name}`);
+    res.send(`New user created: ${appUser.name}`);
 });
 ```
 
@@ -106,21 +103,19 @@ Within the `public class Application` definition, add the following methods:
 
 ```java
 static String validateUser(OidcUser user) throws IOException {
-  // TODO: VALIDATE USER
+    // TODO: VALIDATE USER
 }
 
 static String createUser(OidcUser user) {
-  // TODO: CREATE USER
+    // TODO: CREATE USER
 }
 ```
 
 These methods will handle the Box user validation and creation. Breaking them
 down:
 
-* `validateUser`: Will house the code to validate whether a Box user
- exists for an associated Okta user.
-* `createUser`: Creates a new Box user bound to the associated Okta
- user ID.
+* `validateUser`: Will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser`: Creates a new Box user bound to the associated Okta user ID.
 
 With those methods defined, replace `# TODO: CREATE USER` with the following
 code:
@@ -153,28 +148,25 @@ definitions.
 ```python
 # Box user class
 class Box(object):
-  def __init__(self):
-    # Instantiate Box Client instance
-    auth = JWTAuth.from_settings_file('../config.json')
-    self.box_client = Client(auth)
+    def __init__(self):
+        # Instantiate Box Client instance
+        auth = JWTAuth.from_settings_file('../config.json')
+        self.box_client = Client(auth)
 
-  # Validate if Box user exists
-  def validateUser(self, g):
-    # TODO: VALIDATE USER
+    # Validate if Box user exists
+    def validateUser(self, g):
+        # TODO: VALIDATE USER
 
-  # Create new Box user
-  def createUser(self, ouser):
-   # TODO: CREATE USER
+    # Create new Box user
+    def createUser(self, ouser):
+        # TODO: CREATE USER
 ```
 
 This class defines:
 
-* `init`: When initialized, a new instance of the Box Python SDK is
- instantiated and made available to the object methods.
-* `validateUser` method: Accepting a user object as input, this will house the
- code to validate whether a Box user exists for an associated Okta user.
-* `createUser` method: Accepting a user object as input, this creates a new Box
- user bound to the associated Okta user ID.
+* `init`: When initialized, a new instance of the Box Python SDK is instantiated and made available to the object methods.
+* `validateUser` method: Accepting a user object as input, this will house the code to validate whether a Box user exists for an associated Okta user.
+* `createUser` method: Accepting a user object as input, this creates a new Box user bound to the associated Okta user ID.
 
 With that class defined, replace the `# TODO: CREATE USER` section with
 the following code.
@@ -199,34 +191,31 @@ which will define the binding between the two user records.
 Within the `Controllers` > `AccountController.cs` file, inside the associated
 `AccountController` class, add the following method.
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 static async Task validateUser(string name, string sub)
 {
-  // Configure Box SDK instance
-  var reader = new StreamReader("config.json");
-  var json = reader.ReadToEnd();
-  var config = BoxConfig.CreateFromJsonString(json);
-  var sdk = new BoxJWTAuth(config);
-  var token = sdk.AdminToken();
-  BoxClient client = sdk.AdminClient(token);
+    // Configure Box SDK instance
+    var reader = new StreamReader("config.json");
+    var json = reader.ReadToEnd();
+    var config = BoxConfig.CreateFromJsonString(json);
+    var sdk = new BoxJWTAuth(config);
+    var token = sdk.AdminToken();
+    BoxClient client = sdk.AdminClient(token);
 
-  // Search for matching Box app user for Okta ID
-  BoxCollection<BoxUser> users = await client.UsersManager.GetEnterpriseUsersAsync(externalAppUserId:sub);
-  System.Diagnostics.Debug.WriteLine(users.TotalCount);
+    // Search for matching Box app user for Okta ID
+    BoxCollection<BoxUser> users = await client.UsersManager.GetEnterpriseUsersAsync(externalAppUserId:sub);
+    System.Diagnostics.Debug.WriteLine(users.TotalCount);
 
-  if (users.TotalCount > 0)
-  {
-     // TODO: VALIDATE USER
-  }
-  else
-  {
-    // TODO: CREATE USER
-  }
+    if (users.TotalCount > 0)
+    {
+         // TODO: VALIDATE USER
+    }
+    else
+    {
+        // TODO: CREATE USER
+    }
 }
 ```
-<!-- markdownlint-enable line-length -->
 
 Within the code block a new Box .NET SDK client is created using the
 `config.json` file downloaded in step 2. In the case of this code sample, that
@@ -239,12 +228,12 @@ number of users returned is then checked to see if a valid user was found.
 With that structure defined, replace the // TODO: CREATE USER section with the
 following code.
 
-```dotnet
+```csharp
 var userRequest = new BoxUserRequest()
 {
-  Name = name,
-  ExternalAppUserId = sub,
-  IsPlatformAccessOnly = true
+    Name = name,
+    ExternalAppUserId = sub,
+    IsPlatformAccessOnly = true
 };
 var user = await client.UsersManager.CreateEnterpriseUserAsync(userRequest);
 System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
@@ -284,14 +273,14 @@ Replace the `// TODO: VALIDATE USER` comment with the following:
 this.oktaRecord = userInfo
 
 client.enterprise.getUsers({ "external_app_user_id": this.oktaRecord.sub })
-.then((result) => {
-  if (result.total_count > 0) {
-    // TODO: MAKE AUTHENTICATED USER CALL
-  } else {
-    // User not found - create user
-    this.createUser();
-  }
-});
+    .then((result) => {
+        if (result.total_count > 0) {
+            // TODO: MAKE AUTHENTICATED USER CALL
+        } else {
+            // User not found - create user
+            this.createUser();
+        }
+    });
 ```
 
 Using the Box Node SDK, we call `enterprise.getUsers` to search all enterprise
@@ -331,9 +320,9 @@ JsonValue totalCount = jsonObj.get("total_count");
 String outputString = "";
 
 if (totalCount.asInt() > 0) {
-  // TODO: MAKE AUTHENTICATED USER CALL
+    // TODO: MAKE AUTHENTICATED USER CALL
 } else {
-  outputString = createUser(user);
+    outputString = createUser(user);
 }
 
 return outputString;
@@ -368,9 +357,9 @@ user_info = response.json()
 
 # If user not found, create user, otherwise fetch user token
 if (user_info['total_count'] == 0):
-  self.createUser(g.user)
+    self.createUser(g.user)
 else:
-  # TODO: MAKE AUTHENTICATED USER CALL
+    # TODO: MAKE AUTHENTICATED USER CALL
 ```
 
 Using the Box Python SDK generic request method, we make a call directly to the
@@ -391,7 +380,7 @@ to create a new Box user with that `external_app_user_id` association.
 
 Replace the `// TODO: VALIDATE USER` comment with the following:
 
-```dotnet
+```csharp
 var userId = users.Entries[0].Id;
 var userToken = sdk.UserToken(userId);
 BoxClient userClient = sdk.UserClient(userToken, userId);
@@ -434,9 +423,9 @@ this.userId = result.entries[0].id;
 this.userClient = sdk.getAppAuthClient('user', this.userId);
 
 this.userClient.users.get(this.userClient.CURRENT_USER_ID)
-.then(currentUser => {
-  res.send(`Hello ${currentUser.name}`);
-});
+    .then(currentUser => {
+        res.send(`Hello ${currentUser.name}`);
+    });
 ```
 
 With a user found we capture the Box user ID, then generate a user client
@@ -447,8 +436,6 @@ information for the Okta associated Box app user.
 </Choice>
 
 <Choice option='programming.platform' value='java' color='none'>
-
-<!-- markdownlint-disable line-length -->
 
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
@@ -472,8 +459,6 @@ With a user found we capture the Box user ID, then generate a user client
 object scoped for that user. We finish by making a call to fetch the current
 user with the user client object, which should return the user profile
 information for the Okta associated Box app user.
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -505,9 +490,7 @@ information for the Okta associated Box app user.
 Replace `// TODO: MAKE AUTHENTICATED USER CALL` from the previous section with
 the following:
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 ```
