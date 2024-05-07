@@ -27,8 +27,6 @@ parts:
 Below table contains an overview of all currently deployed stages, and where
 they pull their sources from.
 
-<!-- markdownlint-disable line-length -->
-
 | Sources | Production | Staging | Japan |
 | --- | --- | --- | --- |
 | | `developer.box.com`, `box.dev` | `staging.developer.box.com` | `ja.developer.box.com` | `box.dev` |
@@ -38,8 +36,6 @@ they pull their sources from.
 | Microcopy & Guides Compiled (EN) | `@box/developer.box.com#en` | `@box/developer.box.com#en-staging` | `@box/developer.box.com#jp` | |
 | Gatsby Site | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` | |
 
-<!-- markdownlint-enable line-length -->
-
 ## Video Overviews
 
 These videos contain an overview of the developer documentation site, build
@@ -47,11 +43,11 @@ system, and services:
 
 - [High level fireside chat],
 - In-depth technical analysis:
-  - [Screen recording],
-  - [Audio only].
+    - [Screen recording],
+    - [Audio only].
 
 [developer documentation]: https://developer.box.com
-[High level fireside chat]: 
+[High level fireside chat]:
 https://cloud.box.com/s/bf7yfygd56ffes5awyw7xr5n7hrg3tiz
 [Screen recording]: https://cloud.box.com/s/lmcj5kamjsxxwfad08d0iy78jmzsk7be
 [Audio only]: https://cloud.box.com/s/mtbfmfwgxm4sn0m0xfz92rzlrv3239bh

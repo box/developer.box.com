@@ -30,14 +30,10 @@ Supported [file types][file_types] can be found in our support article.
 
 **Which file types are not supported on mobile with Box View?**
 
-* All documents supported on web preview are supported on mobile browsers
-(Safari for iOS and Chrome).
-* Full annotations support is available for mobile via the
-[Content Preview UI Element](guide://embed/ui-elements/preview), which
-leverages Box Annotations.
+* All documents supported on web preview are supported on mobile browsers (Safari for iOS and Chrome).
+* Full annotations support is available for mobile via the [Content Preview UI Element](guide://embed/ui-elements/preview), which leverages Box Annotations.
 * Mobile SDKs (for iOS and Android) do not support 360 Videos/Images, and 3D.
-* Mobile SDKs (for iOS and Android) do not support annotations (both read and
-write).
+* Mobile SDKs (for iOS and Android) do not support annotations (both read and write).
 
 **What are annotations?**
 

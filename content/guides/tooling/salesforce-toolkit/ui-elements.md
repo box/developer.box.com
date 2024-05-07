@@ -19,8 +19,7 @@ Lightning Pages, or in Flows.
 
 [Options][6] available in picker with Box for Salesforce are:
 
-- `folderId` - if the lightning component is on a record page,
-it defaults to the record folder
+- `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `chooseButtonLabel`
 - `cancelButtonLabel`
 - `canSetShareAccess`
@@ -32,8 +31,7 @@ it defaults to the record folder
 
 [Options][7] available in explorer with Box for Salesforce are:
 
-- `folderId` - if the lightning component is on a record page,
-it defaults to the record folder
+- `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `canSetShareAccess`
 - `canCreateNewFolder`
 - `canUpload`
@@ -48,15 +46,13 @@ it defaults to the record folder
 [Options][8] available in preview with Box for Salesforce are:
 
 - `fileId` ([find your file ID][9])
-- **File Id API Field Name** - Salesforce specific; on a record page,
-you can use an API field name that holds the file ID to be displayed
+- **File Id API Field Name** - Salesforce specific; on a record page, you can use an API field name that holds the file ID to be displayed
 
 ## Content uploader
 
 [Options][10] available in uploader with Box for Salesforce are:
 
-- `folderId` - if the lightning component is on a record page,
-it defaults to the record folder
+- `folderId` - if the lightning component is on a record page, it defaults to the record folder
 - `fileLimit`
 
 [1]: g://embed/ui-elements

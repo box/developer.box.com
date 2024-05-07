@@ -22,24 +22,26 @@ value is more than $200,000.
 
 <Tabs>
   <Tab title='cURL'>
-    ```curl
-    curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-         -H 'Authorization: Bearer <ACCESS_TOKEN>" '
-         -H 'Content-Type: application/json'
-         -d '{
-           "from": "enterprise_123456.customerInfo",
-           "fields": [
-             "name",
-             "enterprise_123456.customerInfo.name"
-             "enterprise_123456.customerInfo.tav"
-           ],
-           "query": "tav >= :value",
-           "query_params": {
-             "value": 200000
-           },
-           "ancestor_folder_id": "0"
-         }'
-    ```
+
+```curl
+curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
+    -H 'Authorization: Bearer <ACCESS_TOKEN>" ' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "from": "enterprise_123456.customerInfo",
+      "fields": [
+        "name",
+        "enterprise_123456.customerInfo.name"
+        "enterprise_123456.customerInfo.tav"
+      ],
+      "query": "tav >= :value",
+      "query_params": {
+        "value": 200000
+      },
+      "ancestor_folder_id": "0"
+    }'
+```
+
   </Tab>
 </Tabs>
 
@@ -48,14 +50,14 @@ metadata that matched the query for that file.
 
 ```json
 {
-  "entries":[
+  "entries": [
     {
-      "type":"file",
-      "id":"11111",
-      "etag":"0",
-      "metadata":{
-        "enterprise_123456":{
-          "customerInfo":{
+      "type": "file",
+      "id": "11111",
+      "etag": "0",
+      "metadata": {
+        "enterprise_123456": {
+          "customerInfo": {
             "name": "Box",
             "tav": 1000000,
             "$parent": "folder_12345,",
@@ -68,7 +70,7 @@ metadata that matched the query for that file.
     }
   ],
   "limit": 20,
-  "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
+  "next_marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
 ```
 

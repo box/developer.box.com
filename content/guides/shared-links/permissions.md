@@ -25,15 +25,15 @@ The shared link resource has three permissions that can be updated using the
 
 ```curl
 curl -i -X PUT 'https://api.box.com/2.0/files/123456789?fields=shared_link' \
-        -H 'Content-Type: application/json' \
-        -H 'Authorization: Bearer [ACCESS TOKEN]' \
-        -d '{
-          "shared_link": {
-            "permissions": {
-              "can_preview": true,
-              "can_download": true,
-              "can_edit": true
-            }
-          }
-        }'
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer [ACCESS TOKEN]' \
+    -d '{
+      "shared_link": {
+        "permissions": {
+          "can_preview": true,
+          "can_download": true,
+          "can_edit": true
+        }
+      }
+    }'
 ```

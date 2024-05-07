@@ -8,16 +8,15 @@ icon: FiSearch
 # Search content using metadata
 
 The Box Metadata Query API enables programmatic search of Box content based
-strictly on applied custom metadata values. 
+strictly on applied custom metadata values.
 
 The structure of a metadata query is similar to that of a SQL query and allows
 for Boolean operators, such as AND, OR, and NOT, as well as comparison or range
-operators, such as equal to, greater-than, and less-than. 
+operators, such as equal to, greater-than, and less-than.
 
-Some benefits of the Metadata Query API include: 
+Some benefits of the Metadata Query API include:
 
-* no indexing delay; query immediately after metadata creations, updates, and
-  deletions
+* no indexing delay; query immediately after metadata creations, updates, and deletions
 * ability to specify a sort order by one or more fields
 * no limitation on the number of characters that are queryable
 * queries return item properties and metadata instances
@@ -26,15 +25,14 @@ Some benefits of the Metadata Query API include:
     ![Metadata](./images/metadata.png)
 </ImageFrame>
 
-## Overview 
+## Overview
 
 This guide will take you through the following steps.
 
 1. [Create a metadata template][stepone]
 2. [Locate information about the metadata template][steptwo] via API
 3. [Apply the metadata template][stepthree] to at least one file
-4. [Construct a metadata query API call][stepfour] to obtain the content
- from step 3
+4. [Construct a metadata query API call][stepfour] to obtain the content from step 3
 
 <Next>
   I am ready to get started

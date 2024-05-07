@@ -1,10 +1,10 @@
 ---
 rank: 0
 related_endpoints: []
-related_guides: 
+related_guides:
   - authentication/select
   - authentication/oauth2/oauth2-setup
-required_guides: 
+required_guides:
   - authentication/select
   - applications/app-types/custom-apps
 related_resources: []
@@ -24,14 +24,14 @@ A Custom App can be set up to use client-side [OAuth 2.0][oauth2] authentication
 ## Prerequisites
 
 To set up a Custom App using OAuth 2.0 authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise 
+you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
 ### Navigate to the Developer Console
 
-Log into Box and go to the 
+Log into Box and go to the
 [Developer Console][devconsole]. Select **Create New App**.
 
 ### Select application type
@@ -45,18 +45,14 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
 
 | Purpose | Details|
-|------| --------| 
+|------| --------|
 |Automation, Custom Portal| Specify if the app is built by a customer or partner. |
 |Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame border center width="300">
   ![Auth selection screen](../images/custom-app-selection.png)
@@ -67,7 +63,7 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 Select **User Authentication (OAuth 2.0)** and confirm with **Create App**.
 
 <Message warning>
-Once you make a selection, you will not be able to change to a different 
+Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 
@@ -103,9 +99,9 @@ permit duplicate URIs to be saved.
   strictly match the one used during redirect. In addition, both new and
   existing applications, will gain the ability to add multiple redirect URIs.
 
-  If you configured multiple redirect URIs for the application, 
+  If you configured multiple redirect URIs for the application,
   the authorization URL must include the `redirect_uri` parameter matching one
-  of the URIs configured in the developer console. 
+  of the URIs configured in the developer console.
   If the parameter is not specified, the user will see a `redirect_uri_missing`
   error and will not be redirected back to the app after granting application
   access.
@@ -133,7 +129,7 @@ added to an allow-list due to [Cross Origin Resource Sharing][cors],
 also known as CORS. If all requests will be made from server-side code,
 you may skip this section.
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain** 
+To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 

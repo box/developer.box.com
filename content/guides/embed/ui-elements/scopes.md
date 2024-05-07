@@ -40,22 +40,10 @@ the token. This allows you to make your application more secure.
 
 The new scopes have been designed keeping the following fundamentals in mind:
 
-* **All scopes should be modular and strictly additive:** So a developer can
-  combine multiple scopes in a token exchange request to generate a token with
-  the desired set of functionality. Also to avoid confusion, two scopes should
-  never have the same permission.
-* **Scopes should directly map to a specific action in the UI Element:** So
-  adding this scope to the token enables the specific action. Since some
-  actions can only be performed by specific UI Elements, some scopes may only
-  be meaningfully applicable to those UI Elements.
-* **Scope should contain the minimum set of permissions required to perform
-  the corresponding action:** So even if some end-user of your application
-  uses the token directly against the API, they can't gain access beyond what
-  you intended them to provide through the UI Element.
-* **Every UI Element should have a "base scope" that encapsulates all required
-  permissions for the UI Element to functionally work:** Any fewer permissions
-  on the token and the basic set of operations on the UI Element won't work.
-  This scope should always be included in the Token Exchange request.
+* **All scopes should be modular and strictly additive:** So a developer can combine multiple scopes in a token exchange request to generate a token with the desired set of functionality. Also to avoid confusion, two scopes should never have the same permission.
+* **Scopes should directly map to a specific action in the UI Element:** So adding this scope to the token enables the specific action. Since some actions can only be performed by specific UI Elements, some scopes may only be meaningfully applicable to those UI Elements.
+* **Scope should contain the minimum set of permissions required to perform the corresponding action:** So even if some end-user of your application uses the token directly against the API, they can't gain access beyond what you intended them to provide through the UI Element.
+* **Every UI Element should have a "base scope" that encapsulates all required permissions for the UI Element to functionally work:** Any fewer permissions on the token and the basic set of operations on the UI Element won't work. This scope should always be included in the Token Exchange request.
 
 With that said, for every UI Element, we are adding two types of scopes:
 

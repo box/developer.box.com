@@ -39,8 +39,6 @@ for details.
 
 ### Parameters
 
-<!-- markdownlint-disable line-length -->
-
 To make a call, you need to pass the following parameters.
 Mandatory parameters are in **bold**.
 
@@ -51,6 +49,5 @@ Mandatory parameters are in **bold**.
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface……”    |
-<!-- markdownlint-enable line-length -->
 
 [prereq]: g://box-ai/prerequisites

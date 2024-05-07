@@ -17,9 +17,9 @@ Box AI API is available to all Enterprise Plus customers.
 
 You can use Box AI to generate text
 based on provided content.
- For example, you can ask Box AI to 
- generate a template based 
- on the content you read or create in Box Notes. 
+ For example, you can ask Box AI to
+ generate a template based
+ on the content you read or create in Box Notes.
  Then you can embed the generated text
  directly into your document.
 
@@ -34,8 +34,8 @@ Make sure you have generated the developer token
 to authorize your app. See [Prerequisites for Box AI][prereq]
 for details.
 
-### Parameters 
-<!-- markdownlint-disable line-length -->
+### Parameters
+
 To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
 | Parameter| Description| Example|
@@ -47,6 +47,5 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | "Make my email about public APIs sound more professional" |
 | `dialogue_history.answer` | The answer previously provided by the LLM. |   "Here is a draft of your professional email about public APIs." |
 | `dialogue_history.created_at` | The ISO date formatted timestamp of when the previous answer to the prompt was created.   | `2012-12-12T10:53:43-08:00` |
-<!-- markdownlint-enable line-length -->
 
 [prereq]: g://box-ai/prerequisites

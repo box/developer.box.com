@@ -41,8 +41,6 @@ use Content Preview UI Element wrapper.
 
 All the UI elements are also available directly from the Box CDN.
 
-<!-- markdownlint-disable line-length -->
-
 | Element                                              | Version  | File                                                                                                                                                                            |
 | ---------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Content Explorer](g://embed/ui-elements/explorer)   | `19.0.0` | CSS [`https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/19.0.0/en-US/explorer.css)                              |
@@ -115,22 +113,16 @@ For Box Preview, the sample would look slightly different.
 </html>
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ### Versions
 
 Most of the UI elements have 2 distinct versions.
 
-- A standard `*.js` file (e.g. `explore.js`) that includes React and
-  ReactDOM in the bundle.
-  - Use this when you are not building a React based app or you don't want to
-    include the components as part of your app's build process.
+- A standard `*.js` file (e.g. `explore.js`) that includes React and ReactDOM in the bundle.
+  - Use this when you are not building a React based app or you don't want to include the components as part of your app's build process.
   - It includes React and ReactDOM libraries.
   - The file size of this asset will be larger than the one below.
-- A smaller `*.no.react.js` file (e.g. `explore.no.react.js`) that does
-  not get bundled with React and ReactDOM.
-  - Use this when both React and ReactDOM libraries are already loaded on the
-    application.
+- A smaller `*.no.react.js` file (e.g. `explore.no.react.js`) that does not get bundled with React and ReactDOM.
+  - Use this when both React and ReactDOM libraries are already loaded on the application.
   - These libraries expect a React and ReactDOM `>= 16.6` and `< 18`.
 
 <message>
@@ -158,8 +150,7 @@ Either fork the repository and check out the version you want to serve or
 download the specific version as a zip.
 
 - Check out a specific version with `git checkout v2.93.0`.
-- Download a specific version as a zip from the [releases][preview-releases]
-  page.
+- Download a specific version as a zip from the [releases][preview-releases] page.
 
 ### 2. Install dependencies
 

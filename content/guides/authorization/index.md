@@ -1,21 +1,21 @@
 ---
 rank: 25
-required_guides: 
+required_guides:
 - authorization/custom-app-approval
 - authorization/limited-access-approval
 - authorization/custom-skill-approval
 ---
 
-# Authorization 
+# Authorization
 
 Some applications require explicit Admin authorization before use with an
-enterprise. The steps an Admin needs to take are dependent on the 
-developer-selected authentication method and enabled enterprise settings. 
+enterprise. The steps an Admin needs to take are dependent on the
+developer-selected authentication method and enabled enterprise settings.
 
 ## Authentication methods
 
-The following [authentication methods][auth] always require explicit Admin 
-authorization: 
+The following [authentication methods][auth] always require explicit Admin
+authorization:
 
 - [Server Authentication (with JWT)][jwt]
 - [Server Authentication (with Client Credentials Grant)][cc]
@@ -23,34 +23,33 @@ authorization:
 
 These authentication methods automatically generate a [Service Account][sa].
 With the right [scopes][scopes] enabled, a Service Account can perform many
-Admin actions, thus requiring Admin authorization before use. 
+Admin actions, thus requiring Admin authorization before use.
 
 [OAuth 2.0][oauth] and [App Token][apptoken] apps may also require explicit
-Admin authorization based on enabled enterprise settings. 
+Admin authorization based on enabled enterprise settings.
 
 ## Enterprise settings
 
 Subsequent steps are required if any of the following enterprise settings are
-enabled: 
+enabled:
 
 - Disable published apps by default
 - Disable unpublished apps by default
 - Require manual admin authorization for transactional access apps
 
-These [settings][setting] can be found by navigating to: 
+These [settings][setting] can be found by navigating to:
 
 **Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
 
 <Message tip>
- Published apps are any applications that can be found in our App Center.
+  Published apps are any applications that can be found in our App Center.
 </Message>
 
 ## Required actions
 
 To see what steps an Admin must complete for a given app, review the following
-scenarios. 
+scenarios.
 
-<!-- markdownlint-disable line-length -->
 <!--alex ignore-->
 **Disable published apps by default**:
 
@@ -61,7 +60,7 @@ scenarios.
 |[Server Authentication (client credentials)][cc]  | N/A                                         | N/A            |
 |[App Token Authentication][apptoken]              | N/A                                         | N/A            |
 
-**Disable unpublished apps by default**: 
+**Disable unpublished apps by default**:
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
@@ -70,7 +69,7 @@ scenarios.
 |[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
 |[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | Ready for use                           |
 
-**Require manual admin authorization for transactional access apps**: 
+**Require manual admin authorization for transactional access apps**:
 
 | Authentication Method                            | Enabled                                                                  | Disabled                                             |
 | ------------------------------------------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- |
@@ -80,7 +79,6 @@ scenarios.
 |[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
-<!-- markdownlint-enable line-length -->
 
 [auth]: g://authentication/select
 <!-- i18n-enable localize-links -->
