@@ -27,8 +27,6 @@ Want to submit your project? Please review the
 
 ## SDKs and Wrappers
 
-<!-- markdownlint-disable line-length -->
-
 | Name                                         | Language     | Description                                                                                                                    |
 | -------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
 | [Box Java Wrapper][box-camel]         | `Java` | Java wrapper for the Box API written by [Claus Ibsen][claus]. The Github repo can be found [here][camel-repo]                                                |
@@ -40,11 +38,7 @@ Want to submit your project? Please review the
 | [Box PHP / Laravel Wrapper][sdk-php-laravel] | `PHP`        | PHP wrapper for the Box API.                                                                                                   |
 | [Box PHP Wrapper][sdk-ph]                    | `PHP`        | PHP wrapper for the Box API.                                                                                                   |
 
-<!-- markdownlint-enable line-length -->
-
 ## API Connectors
-
-<!-- markdownlint-disable line-length -->
 
 | Name                                       | Description                                                                                                                         |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,17 +52,11 @@ Want to submit your project? Please review the
 | [Stamplay][connector-stamplay]             | Build automated workflows to connect real business processes to Box.                                                                |
 | [Workato][connector-workato]               | Automate your document workflows by integrating Box with your CRM, marketing, ERP, support and accounting apps.                     |
 
-<!-- markdownlint-enable line-length -->
-
 ## Tools
-
-<!-- markdownlint-disable line-length -->
 
 | Name                   | Language | Description                                                 |
 | ---------------------- | -------- | ----------------------------------------------------------- |
 | [ShareX][tools-sharex] | `C#`     | Open source screen capture tool that lets you upload to Box |
-
-<!-- markdownlint-enable line-length -->
 
 [contribution-guidelines]: https://github.com/box-community/community-guidelines/blob/master/.github/CONTRIBUTING.md
 [email-developer]: mailto:developer@box.com

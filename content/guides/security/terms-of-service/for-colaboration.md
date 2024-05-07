@@ -16,34 +16,30 @@ Information about the Terms of Service that is in effect for any
 [`GET /collaborations/:id`](e://get-collaborations-id) API and passing the query
 parameter `fields=acceptance_requirements_status`.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
-     -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 ```
 
   </Tab>
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 The resulting response will include a new `acceptance_requirements` object that
 includes a mini `terms_of_service` object.
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": {
-            "type": "terms_of_service",
-            "id": 6766677
-        }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": {
+      "type": "terms_of_service",
+      "id": 6766677
     }
+  }
 }
 ```
 
@@ -61,11 +57,11 @@ result.
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": null
-    }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": null
+  }
 }
 ```
 

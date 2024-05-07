@@ -27,11 +27,11 @@ guide as well.
 <Tabs>
 
 <Tab title='Node'>
- Node
+  Node
 </Tab>
 
 <Tab title='.NET'>
- .NET
+  .NET
 </Tab>
 
 </Tabs>

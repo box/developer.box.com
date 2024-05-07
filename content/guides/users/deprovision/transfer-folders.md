@@ -19,10 +19,8 @@ account.
 
 There are two general methods that are employed to accomplish this within Box:
 
-* Using the direct [transfer owned folders](e://put_users_id_folders_0)
-API, which will move all content from one user directly to another.
-* Using the collaboration transfer method to change ownership of one file or
-folder at a time from one user to another.
+* Using the direct [transfer owned folders](e://put_users_id_folders_0) API, which will move all content from one user directly to another.
+* Using the collaboration transfer method to change ownership of one file or folder at a time from one user to another.
 
 <Message notice>
   Files owned by a user will be inaccessible while they are being transferred.

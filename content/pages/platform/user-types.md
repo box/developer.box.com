@@ -59,18 +59,18 @@ these users via the Admin Console.
 
 Each Box enterprise is assigned a unique enterprise ID. Managed Users are any
 users that belong to one enterprise ID.  Managed Users consume a standard Box
-license and often, but not 
+license and often, but not
 always, share the same email domain.
 
 <Message>
   # Log in as Admin User
 
-Some applications need permissions that only Admins have in order to 
-properly operate and therefore require an Admin to log in. 
+Some applications need permissions that only Admins have in order to
+properly operate and therefore require an Admin to log in.
 
 An example of this would be a security application that monitors enterprise
-events and takes action on suspicious events. The events endpoint can only 
-be used by Admins or a Co-Admin with permission to access reporting. 
+events and takes action on suspicious events. The events endpoint can only
+be used by Admins or a Co-Admin with permission to access reporting.
 
 </Message>
 
@@ -101,27 +101,27 @@ specific users, called App Users described further below.
 
 A unique Box Service Account is automatically generated as soon as an
 application, leveraging server authentication, is [authorized][auth] in the
-Admin Console. From that point forward, the Service Account represents the 
+Admin Console. From that point forward, the Service Account represents the
 application in the Box enterprise. Since every Box account must have an email
 address, Box assigns one. The format will always be
 `AutomationUser_AppServiceID_RandomString@boxdevedition.com`. For example:
 `AutomationUser_123456_6jCo6Pqwo@boxdevedition.com`. This is why you may
-sometimes hear the Service Account referred to as an Automation User. 
+sometimes hear the Service Account referred to as an Automation User.
 
 The numbers surrounded by underscores are also unique to the application and are
 called a Service ID. To locate a Service ID  in the [Developer Console][dc],
 click on the tile for an application and look at the URL. For example,
 `https://example.app.box.com/developers/console/app/123456`. As you can see,
 this application corresponds to the Service Account provided in the example
-above. 
+above.
 
 By default, most Service Accounts are allocated 10GB of storage. This is because
 they abide by the storage allocation set in the **New User Default Settings**
 found under the **User Settings** tab of the Admin Console. This amount may
-differ based on whether an enterprise updated this setting or not. To 
+differ based on whether an enterprise updated this setting or not. To
 update the amount of storage allocated to a Service Account after its creation,
 make an API call to the [update user][updateuser] endpoint and pass in the
-desired value, in bytes, using the `space_amount` body parameter. 
+desired value, in bytes, using the `space_amount` body parameter.
 
 Once the Service Account is generated, a section is automatically added to the
 General tab of the [Developer Console][dc] revealing the email address.
@@ -134,28 +134,24 @@ General tab of the [Developer Console][dc] revealing the email address.
 
 If someone attempts to make API calls using a Service Account Access Token
 before the application is authorized in the Admin Console they will receive an
-error message: 
-`"error":"unauthorized_client"`
-`"error_description": "This app is not authorized by the enterprise"` 
+error message:
+`"error": "unauthorized_client"`
+`"error_description": "This app is not authorized by the enterprise"`
 
 ### Use Cases
 
-- *Distribution Publishing*: upload and share files with any number of users 
-  whether or not they are authenticated
-- *On-Premises Systems and Devices*: programmatically ingest content from
-  on-premises systems and connected devices 
-- *Content Migration and Monitoring*: move content from on-premises to the cloud
-  or between cloud providers  
-- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or
-  trigger workflows based on actions
+- *Distribution Publishing*: upload and share files with any number of users whether or not they are authenticated
+- *On-Premises Systems and Devices*: programmatically ingest content from on-premises systems and connected devices
+- *Content Migration and Monitoring*: move content from on-premises to the cloud or between cloud providers
+- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or trigger workflows based on actions
 - *Content Archive*: house minimally accessed content
 
 ### Permissions
 
 The endpoints that a Service Account Access Token can successfully interact with
-are determined by the application [scopes][scopes] configured in the 
+are determined by the application [scopes][scopes] configured in the
 [Developer Console][dc]. Depending on the granted scopes, a Service Account may
-have the ability to perform Admin actions. 
+have the ability to perform Admin actions.
 
 <Message type='warning'>
   # Admin Approval
@@ -170,14 +166,14 @@ explicit [Admin approval][auth] before they can be used in an enterprise.
 Only Primary Admins have the ability to log in as a Service Account through the
 [Content Manager][cm] in the Admin Console. To do this, use the Content
 Manager's search bar to locate the name of the application, right click on it,
-and select “Log in to user’s account”. 
+and select “Log in to user’s account”.
 
 A Service Account can be thought of as having the permissions of a Box Co-Admin.
 Similar to co-admins being unable to manage each other, co-admins cannot log in
-as a Service Account user. 
+as a Service Account user.
 
 Service Accounts are not currently visible in the users and group tab of the
-Admin Console. 
+Admin Console.
 
 ### Folder Tree and Collaboration
 
@@ -185,7 +181,7 @@ Because a Service Account represents an application as a user within the
 enterprise, it has its own folder tree and content ownership capabilities. By
 default this folder tree is empty because the Service Account does not initially
 own or collaborate on content. This is similar to when you first land on your
-All Files page in a newly provisioned Box account. 
+All Files page in a newly provisioned Box account.
 
 To collaborate a Service Account on existing content use the assigned email
 address to invite them as you would any other user. If you are instead adding
@@ -207,12 +203,10 @@ A Service Account is also automatically generated when a Limited Access App is
 created in the [Developer Console][dc]. This Service Account has some additional
 restrictions that a Service Account associated with a Custom App does not.
 
-- All content used within the Limited Access App must be uploaded and owned by
-  the Service Account
+- All content used within the Limited Access App must be uploaded and owned by the Service Account
 - The Service Account can not access any other user's information or content
 - The Service Account can not create or otherwise manage any type of new user
-- The Service Account can only access a subset of APIs related to previewing
-  content
+- The Service Account can only access a subset of APIs related to previewing content
 
 ## App User
 
@@ -246,27 +240,16 @@ user, regardless of if they have an existing Box account. App users are often
 used by applications that manage their own user authentication, but want to
 store the data in unique Box user accounts.
 
-- *Customer Portals*: Websites or applications where clients or patients can log
-  in to access information provided by employees at a company and/or to store and
-  retrieve their own sensitive documents.
-- *Vendor Portals*: Content distribution sites for companies to provide materials
-  including marketing collateral, price lists, product information, sales
-  agreements or contracts, and other documents to vendors. Box's groups and
-  permission model allow for companies to organize content for partners based on
-  partner criteria and/or tier.
-- *Branded Customer Facing Applications*: The ability to create App Users on
- behalf of an end-user allows companies to build seamless customer-facing
- features such as permissions, auditing, and reporting. This is particularly
- valuable for regulated industries such as Financial Services and Healthcare.
- Moreover, user-based data from our [reporting capabilities][events] allows
- developers to leverage analytic tools to better understand user behavior.
+- *Customer Portals*: Websites or applications where clients or patients can log in to access information provided by employees at a company and/or to store and retrieve their own sensitive documents.
+- *Vendor Portals*: Content distribution sites for companies to provide materials including marketing collateral, price lists, product information, sales agreements or contracts, and other documents to vendors. Box's groups and permission model allow for companies to organize content for partners based on partner criteria and/or tier.
+- *Branded Customer Facing Applications*: The ability to create App Users on behalf of an end-user allows companies to build seamless customer-facing features such as permissions, auditing, and reporting. This is particularly valuable for regulated industries such as Financial Services and Healthcare. Moreover, user-based data from our [reporting capabilities][events] allows developers to leverage analytic tools to better understand user behavior.
 
-### Permissions 
+### Permissions
 
 App Users cannot see or interact any content in the folder tree of the Service
 Account unless explicitly added as a collaborator. Again, because App Users does
 not have login credentials, they cannot access content outside of the
-Custom Application. 
+Custom Application.
 
 ### UI Access
 
@@ -288,7 +271,7 @@ Console.
 Each App User has its own folder tree and content ownership capabilities. By
 default this folder tree is empty because they do not initially own or
 collaborate on content. This is similar to when you first land on your All Files
-page in a newly provisioned Box account. 
+page in a newly provisioned Box account.
 
 To collaborate an App User on existing content use the assigned email
 address to invite them as you would any other user. If you are instead adding

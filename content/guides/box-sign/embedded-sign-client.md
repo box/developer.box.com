@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides: []
 required_guides: []
 related_resources: []
-alias_paths: 
+alias_paths:
 - guides/box-sign/create-sign-request/#embedded-sign-client
 ---
 
@@ -23,8 +23,6 @@ To integrate Box Sign experience within your
 own website, you need the `iframable_embed_url`
 parameter that is specifically designed to allow
 signing documents within the HTML `iframe` tag.
-
-<!-- markdownlint-disable line-length -->
 
 A sample `iframable_embed_url` looks as follows:
 
@@ -50,8 +48,6 @@ use the URL within the `iframe` tag:
   msallowfullscreen
 ></iframe>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 For details on working with Box Embed, see [this guide][embedguide].

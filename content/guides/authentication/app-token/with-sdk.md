@@ -32,8 +32,7 @@ Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
 - Ensure the application is configured to use App Token authentication
-- Generate a primary and secondary App Token for the application and store the
-  tokens somewhere in your code.
+- Generate a primary and secondary App Token for the application and store the tokens somewhere in your code.
 
 ## Initializing an SDK client
 
@@ -43,7 +42,7 @@ then configure the SDK as follows.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var config = new BoxConfig("[CLIENT_ID]", "", new Uri("http://localhost"));
 var session = new OAuthSession("[APP_TOKEN]", "N/A", 3600, "bearer");
 var client = new BoxClient(config, session);
@@ -75,8 +74,8 @@ client = Client(auth)
 ```js
 var BoxSDK = require('box-node-sdk');
 var sdk = new BoxSDK({
-  clientID: '[CLIENT_ID]',
-  clientSecret: ''
+    clientID: '[CLIENT_ID]',
+    clientSecret: ''
 });
 
 var client = sdk.getBasicClient('[APP_TOKEN]');
