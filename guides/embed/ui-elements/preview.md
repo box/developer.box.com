@@ -544,4 +544,4 @@ token will need to include the `item_download` scope to enable highlighting.
 [ainpm]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34
 [expiredembed]: r://file--full/#param-expiring_embed_link
 [token]: g://authentication/tokens/developer-tokens
-[aipackage]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34.
+[aipackage]: https://github.com/box/box-ui-elements/releases/tag/v20.0.0-beta.17
