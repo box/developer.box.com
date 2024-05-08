@@ -1,6 +1,11 @@
 ---
-rank: 5
+rank: 4
+related_endpoints:
+  - get-sign-requests
+related_guides:
+  - box-sign/create-sign-request
 ---
+
 
 # List Box Sign Requests
 

@@ -1,6 +1,13 @@
 ---
 rank: 1
+related_endpoints:
+  - post-sign-requests
+related_guides:
+  - box-sign/resend-sign-request
+  - box-sign/cancel-sign-request
+  - box-sign/sign-templates
 ---
+
 
 # Create Box Sign Request
 
