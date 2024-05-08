@@ -42,37 +42,35 @@ Creating a method specific for this:
 
 <Tab title='cURL'>
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "institution@example.com",
-            "role": "signer",
-            "order":1
+          "email": "institution@example.com",
+          "role": "signer",
+          "order": 1
         },
         {
-            "email": "student@example.com",
-            "role": "signer",
-            "order":2
+          "email": "student@example.com",
+          "role": "signer",
+          "order": 2
         },
-    ]
-}'
-    
+      ]
+    }'
 ```
 
 </Tab>
@@ -80,7 +78,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_contract(
     client: Client,
     document_id: str,
@@ -133,8 +130,7 @@ def main():
         prep_needed=True,
     )
     if sign_contract_multi.prepare_url is not None:
-        open_browser(sign_contract_multi.prepare_url)    
-
+        open_browser(sign_contract_multi.prepare_url)
 ```
 
 </Tab>
@@ -176,17 +172,11 @@ The available roles are, `signer`, `approver`, and `final copy reader`
 
 From a developer perspective, this means:
 
-- **Signer**: Any person who is allowed to add data to the document. This
-includes adding a signature, initials, date, but also filling out text fields,
-check boxes, and radio buttons, even if it does not include a signature.
+- **Signer**: Any person who is allowed to add data to the document. This includes adding a signature, initials, date, but also filling out text fields, check boxes, and radio buttons, even if it does not include a signature.
 
-- **Approver**: This role will be asked if they approve the signature request.
-This approval happens before the preparation step, if enabled, and before the
-request is sent to any of the signers. This role is useful if you need to get
-approval from someone before sending the document to the signers.
+- **Approver**: This role will be asked if they approve the signature request. This approval happens before the preparation step, if enabled, and before the request is sent to any of the signers. This role is useful if you need to get approval from someone before sending the document to the signers.
 
-- **Final copy reader**: This role does not interact with the signature
-process, but will receive a copy of the signed document.
+- **Final copy reader**: This role does not interact with the signature process, but will receive a copy of the signed document.
 
 Let's use roles to be a bit more creative in the scholarship example.
 
@@ -205,45 +195,43 @@ Let's create a method for this:
 
 <Tab title='cURL'>
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "institution@example.com",
-            "role": "signer",
-            "order":1
+          "email": "institution@example.com",
+          "role": "signer",
+          "order": 1
         },
         {
-            "email": "student@example.com",
-            "role": "signer",
-            "order":2
+          "email": "student@example.com",
+          "role": "signer",
+          "order": 2
         },
         {
-            "email": "dean@example.com",
-            "role": "approver"
+          "email": "dean@example.com",
+          "role": "approver"
         },
         {
-            "email": "legal@example.com",
-            "role": "final_copy_reader"
+          "email": "legal@example.com",
+          "role": "final_copy_reader"
         }
-    ]
-}'
-    
+      ]
+    }'
 ```
 
 </Tab>
@@ -251,7 +239,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_contract_step(
     client: Client,
     document_id: str,
@@ -304,7 +291,7 @@ def sign_contract_step(
 
 def main():
     ...
-    
+
     # Multiple signers and steps
     sign_contract_multi_step = sign_contract_step(
         client,
@@ -317,7 +304,6 @@ def main():
     )
     if sign_contract_multi_step.prepare_url is not None:
         open_browser(sign_contract_multi_step.prepare_url)
-
 ```
 
 </Tab>

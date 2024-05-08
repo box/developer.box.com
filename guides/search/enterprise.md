@@ -23,15 +23,13 @@ authenticated user has access to. In some cases, administrators might want to
 search against all content owned by all users. For this use-case the `scope`
 query parameter can be set to a value of `enterprise_content`.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&scope=enterprise_content" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -63,7 +61,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, scope="enterprise_content")
 ```
 
@@ -73,20 +71,18 @@ client.search().query("sales", metadata_filters=metadata_search_filters, scope="
 
 ```js
 client.search.query(
-  'sales',
-  {
-    scope: "enterprise_content"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        scope: "enterprise_content"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

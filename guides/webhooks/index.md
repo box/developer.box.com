@@ -52,8 +52,6 @@ and automatic retries we recommend to use V2 webhooks.
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 | V1                                                                    | V2                                                                   |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Created in the [Developer Console][console].                                      | Created in the [Developer Console][console] or with an API call.                                             |
@@ -64,6 +62,5 @@ and automatic retries we recommend to use V2 webhooks.
 | Does not support payload verification.                                 | Supports payload verification.                                       |
 | Notification URL can be HTTP or HTTPS.                                 | Notification URL must be HTTPS.                                       |
 | Does not scale well.                                                   | Scales well and has increased reliability.                            |
-<!-- markdownlint-enable line-length -->
 
 [console]: https://app.box.com/developers/console

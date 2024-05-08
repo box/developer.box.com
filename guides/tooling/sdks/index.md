@@ -17,7 +17,7 @@ total_steps: 5
 sibling_id: tooling
 parent_id: tooling
 next_page_id: ''
-previous_page_id: tooling/sdks/node
+previous_page_id: tooling/sdks/salesforce
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/index.md
 ---
@@ -64,24 +64,10 @@ New Typescript and Python SDKs are in a Public Beta phase.
 
 Here's what you can expect from the new SDKs:
 
-* **Full API Support**: New Box SDKs empower developers
- with complete coverage of the Box API ecosystem.
- You can access all the latest features and
-functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development
-approach allows for adding Box APIs to
-SDKs at a much faster pace (in a matter of days).
-This means you can leverage the most up-to-date
-features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters
-are documented directly in the source code of the SDK
-so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced
-convenience methods cover various aspects such as
-authentication, chunk uploads, exponential back-offs,
-automatic retries, type checkers which
-help to ensure that you’re using variables correctly,
-and much more.
+* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded Documentation**:  All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 | Platform                          | Maintained?  | API Parity |
 | --------------------------------- | ----------- | ------- |

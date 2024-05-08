@@ -60,8 +60,7 @@ The list below contains all methods that can be invoked in
 - Get Root Folder ID (`getRootFolderId`)
 - Get URL For Folder (`getUrlForFolder`)
 - Move Folder (`moveFolder`)
-- Set Slack Channel Access Management Disabled
-(`setSlackChannelAccessManagementDisabled`)
+- Set Slack Channel Access Management Disabled (`setSlackChannelAccessManagementDisabled`)
 - Update Box Metadata by Folder Id (`updateBoxMetadataByFolderId`)
 
 <!--alex enable -->

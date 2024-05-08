@@ -22,8 +22,6 @@ might be represented as an `id` field on an `invoiceData` template.
 Every metadata template contains a list of `field` objects, and each field is of
 one of the following types:
 
-<!-- markdownlint-disable line-length -->
-
 |                                                   |                                               |
 |---------------------------------------------------|-----------------------------------------------|
 | [`string`](g://metadata/fields/string)            | A text field                                  |
@@ -31,8 +29,6 @@ one of the following types:
 | [`date`](g://metadata/fields/date)                | A date picker field                           |
 | [`enum`](g://metadata/fields/enum)                | A dropdown list for selecting 1 value         |
 | [`multiSelect`](g://metadata/fields/multi-select) | A dropdown list for selecting multiple values |
-
-<!-- markdownlint-enable line-length -->
 
 ## Basic field types
 

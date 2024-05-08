@@ -84,15 +84,10 @@ require a few settings to be set for this to work.
 
 1. Go to the [Developer Console][devconsole]
 2. Select your application
-3. Go to the application’s **Configuration** section 
-4. Make sure your application uses **Standard OAuth 2.0** as the
-   authentication method
-5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-   **Redirect URI** to the value `http://localhost:3000/callback`.
-6. Scroll down to the **Application Scopes** section to select your desired
-   [permissions][scopes]. **Your application must have at least one or more**
-   **of the following scopes:** read all files and folders
-   stored in Box, read and write all files and folders in Box.
+3. Go to the application’s **Configuration** section
+4. Make sure your application uses **Standard OAuth 2.0** as the authentication method
+5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `http://localhost:3000/callback`.
+6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** read all files and folders stored in Box, read and write all files and folders in Box.
 7. At the top of the page click the button to **Save Changes**
 
 Next, copy the values for the Client ID and Client Secret into these 2 fields.
@@ -133,10 +128,9 @@ this guide.
 ## Summary
 
 * You either selected to create a new **Box App**
-  * Signed up for a developer account (Optional)
-  * Had us create a **Custom App** for you that uses **OAuth 2.0**
-    authentication
-  * Had us set up the **redirect URL** for the application
+    * Signed up for a developer account (Optional)
+    * Had us create a **Custom App** for you that uses **OAuth 2.0** authentication
+    * Had us set up the **redirect URL** for the application
 * Or you selected to use an **existing Box App**
 
 </Choice>

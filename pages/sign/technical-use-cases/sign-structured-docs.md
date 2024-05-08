@@ -24,12 +24,9 @@ document, such as name, date, and signature.
 This allows your app to handle a dynamic generated document that is ready to be
 signed, which has a couple of advantages:
 
-* The document can be dynamically generated, and the signature properties can
-be added to the document before creating the signature request, effectively
-bypassing the document preparation step.
+* The document can be dynamically generated, and the signature properties can be added to the document before creating the signature request, effectively bypassing the document preparation step.
 
-* The document format can be handled outside of Box Sign templates, allowing
-higher flexibility and integration with external document management systems.
+* The document format can be handled outside of Box Sign templates, allowing higher flexibility and integration with external document management systems.
 
 ## Anatomy of a structured document
 
@@ -80,30 +77,28 @@ Consider this method:
 
 <Tab title='cURL'>
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer nQ...xY'
---data-raw '{
-    "source_files": [
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer nQ...xY' \
+    --data-raw '{
+      "source_files": [
         {
-            "type": "file",
-            "id": "1363379762284"
+          "type": "file",
+          "id": "1363379762284"
         }
-    ],
-    "parent_folder": {
+      ],
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
-    
+      ]
+    }'
 ```
 
 </Tab>
@@ -111,7 +106,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request_structured(
     client: Client, file_id: str, signer_email: str
 ) -> SignRequest:
@@ -140,8 +134,7 @@ def main():
     sign_request = create_sign_request_structured(
         client, STRUCTURED_DOC, SIGNER_A
     )
-    check_sign_request(sign_request)    
-
+    check_sign_request(sign_request)
 ```
 
 </Tab>
@@ -156,44 +149,43 @@ Resulting in (simplified):
 
 ```json
 {
-    "is_document_preparation_needed": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "28199d6c-4662-471e-8426-4cbba9affcf1",
-    "source_files": [
-        {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "is_document_preparation_needed": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Box-Dive-Waiver.pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393138856442",
-                "type": "file",
-                "name": "Box-Dive-Waiver.pdf",
-            }
-        ],
-    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "28199d6c-4662-471e-8426-4cbba9affcf1",
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver.pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393138856442",
+        "type": "file",
+        "name": "Box-Dive-Waiver.pdf",
+      }
+    ],
+  },
 }
-    
 ```
 
 </Tab>
@@ -201,14 +193,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 6878e048-e9bd-4fb1-88c6-8e502783e8d0
   Status: converting
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -237,35 +227,34 @@ See this method:
 
 <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer nQ...xY'
---data-raw '{
-    "prefill_tags": [
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer nQ...xY' \
+    --data-raw '{
+      "prefill_tags": [
         {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A"
+          "document_tag_id": "tag_full_name",
+          "text_value": "Signer A"
         }
-    ],
-    "source_files": [
+      ],
+      "source_files": [
         {
-            "type": "file",
-            "id": "1363379762284"
+          "type": "file",
+          "id": "1363379762284"
         }
-    ],
-    "parent_folder": {
+      ],
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
-    
+      ]
+    }'
 ```
 
 </Tab>
@@ -273,7 +262,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def create_sign_request_structured_with_prefill(
     client: Client, file_id: str, signer_name, signer_email: str
 ) -> SignRequest:
@@ -309,8 +297,7 @@ def main():
     sign_request_pre_pop = create_sign_request_structured_with_prefill(
         client, STRUCTURED_DOC, "Signer A", SIGNER_A
     )
-    check_sign_request(sign_request_pre_pop)    
-
+    check_sign_request(sign_request_pre_pop)
 ```
 
 </Tab>
@@ -324,60 +311,58 @@ Resulting in (simplified):
 <Tab title='cURL'>
 
 ```json
-
 {
-    "is_document_preparation_needed": false,
-    "redirect_url": null,
-    "declined_redirect_url": null,
-    "are_text_signatures_enabled": true,
-    "signature_color": null,
-    "is_phone_verification_required_to_view": false,
-    "email_subject": null,
-    "email_message": null,
-    "are_reminders_enabled": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
-    "prefill_tags": [
-        {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A",
-        }
-    ],
-    "source_files": [
-        {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "is_document_preparation_needed": false,
+  "redirect_url": null,
+  "declined_redirect_url": null,
+  "are_text_signatures_enabled": true,
+  "signature_color": null,
+  "is_phone_verification_required_to_view": false,
+  "email_subject": null,
+  "email_message": null,
+  "are_reminders_enabled": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Box-Dive-Waiver (1).pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393142670032",
-                "type": "file",
-                "name": "Box-Dive-Waiver (1).pdf",
-            }
-        ],
-    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+  "prefill_tags": [
+    {
+      "document_tag_id": "tag_full_name",
+      "text_value": "Signer A",
+    }
+  ],
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver (1).pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393142670032",
+        "type": "file",
+        "name": "Box-Dive-Waiver (1).pdf",
+      }
+    ],
+  },
 }
-    
 ```
 
 </Tab>
@@ -385,14 +370,12 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: converting
   Signers: 2
     final_copy_reader: sender@example.com
     signer: signer@example.com
   Prepare url: None
-
 ```
 
 </Tab>
@@ -415,12 +398,10 @@ Let's create a method to extract the information from the signed request:
 
 <Tab title='cURL'>
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests/
 11ecebc0-a2b2-4c14-a892-3f56333cc4fa' \
---header 'Authorization: Bearer nQ...xY'
-    
+    --header 'Authorization: Bearer nQ...xY'
 ```
 
 </Tab>
@@ -428,7 +409,6 @@ curl --location 'https://api.box.com/2.0/sign_requests/
 <Tab title='Python Gen SDK'>
 
 ```python
-
 def check_sign_request_by_id(client: Client, sign_request_id: str):
     """Check sign request by id"""
     sign_request = client.sign_requests.get_sign_request_by_id(sign_request_id)
@@ -461,8 +441,7 @@ def main():
 
     # Latest sign request
     LATEST_SIGN_REQUEST = "7b86e46c-72ba-4568-a6ff-787077cca007"
-    check_sign_request_by_id(client, LATEST_SIGN_REQUEST)    
-
+    check_sign_request_by_id(client, LATEST_SIGN_REQUEST)
 ```
 
 </Tab>
@@ -476,86 +455,84 @@ Resulting in (simplified):
 <Tab title='cURL'>
 
 ```json
-
 {
-    "signers": [
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+      "signer_decision": {
+        "type": "signed",
+        "finalized_at": "2023-12-19T14:53:10.547Z",
+      },
+      "inputs": [
         {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
+          "document_tag_id": null,
+          "checkbox_value": true,
+          "type": "checkbox",
+          "content_type": "checkbox",
         },
         {
-            "email": "signer@example.com",
-            "role": "signer",
-            "signer_decision": {
-                "type": "signed",
-                "finalized_at": "2023-12-19T14:53:10.547Z",
-            },
-            "inputs": [
-                {
-                    "document_tag_id": null,
-                    "checkbox_value": true,
-                    "type": "checkbox",
-                    "content_type": "checkbox",
-                },
-                {
-                    "document_tag_id": "tag_full_name",
-                    "text_value": "Signer A",
-                    "type": "text",
-                    "content_type": "text",
-                },
-                {
-                    "document_tag_id": null,
-                    "text_value": "Dec 19, 2023",
-                    "date_value": "2023-12-19",
-                    "type": "date",
-                    "content_type": "date",
-                },
-                {
-                    "document_tag_id": null,
-                    "type": "signature",
-                    "content_type": "signature",
-                }
-            ],
-        }
-    ],
-    "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
-    "prefill_tags": [
+          "document_tag_id": "tag_full_name",
+          "text_value": "Signer A",
+          "type": "text",
+          "content_type": "text",
+        },
         {
-            "document_tag_id": "tag_full_name",
-            "text_value": "Signer A",
-        }
-    ],
-    "source_files": [
+          "document_tag_id": null,
+          "text_value": "Dec 19, 2023",
+          "date_value": "2023-12-19",
+          "type": "date",
+          "content_type": "date",
+        },
         {
-            "id": "1363379762284",
-            "type": "file",
-            "name": "Box-Dive-Waiver.docx",
+          "document_tag_id": null,
+          "type": "signature",
+          "content_type": "signature",
         }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
-    },
-    "name": "Box-Dive-Waiver (1).pdf",
-    "type": "sign-request",
-    "signing_log": {
-        "id": "1393140642252",
+      ],
+    }
+  ],
+  "id": "11ecebc0-a2b2-4c14-a892-3f56333cc4fa",
+  "prefill_tags": [
+    {
+      "document_tag_id": "tag_full_name",
+      "text_value": "Signer A",
+    }
+  ],
+  "source_files": [
+    {
+      "id": "1363379762284",
+      "type": "file",
+      "name": "Box-Dive-Waiver.docx",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Box-Dive-Waiver (1).pdf",
+  "type": "sign-request",
+  "signing_log": {
+    "id": "1393140642252",
+    "type": "file",
+    "name": "Box-Dive-Waiver (1) Signing Log.pdf",
+  },
+  "status": "signed",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1393142670032",
         "type": "file",
-        "name": "Box-Dive-Waiver (1) Signing Log.pdf",
-    },
-    "status": "signed",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1393142670032",
-                "type": "file",
-                "name": "Box-Dive-Waiver (1).pdf",
-            }
-        ],
-    },
+        "name": "Box-Dive-Waiver (1).pdf",
+      }
+    ],
+  },
 }
-    
 ```
 
 </Tab>
@@ -563,7 +540,6 @@ Resulting in (simplified):
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
   Status: signed
   Signers: 2
@@ -574,7 +550,6 @@ Simple sign request: 7b86e46c-72ba-4568-a6ff-787077cca007
       date: 2023-11-15
       signature: <other>
   Prepare url: None
-
 ```
 
 </Tab>

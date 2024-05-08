@@ -41,8 +41,6 @@ allow for a buffer.
 When you need a token, first check the cache for a valid token. If the token
 expired, get a new one and store it in the cache for 50 minutes.
 
-<!-- markdownlint-disable line-length -->
-
 ```ruby
 def self.user_client(user_id)
     access_token=Rails.cache.fetch("box_tokens/user/#{user_id}", :expires_in => 50.minutes) do
@@ -54,7 +52,6 @@ def self.user_client(user_id)
     Boxr::Client.new(access_token)
 end
 ```
-<!-- markdownlint-enable line-length -->
 
 <Message tip>
 
@@ -75,14 +72,14 @@ a fully scoped Access Token is exchanged for a more restricted Access Token that
 can then be deployed to client-side code, mobile environments, or UI tools.
 
 ```java
-//Define resource/scopes that downscoped token has access to 
+//Define resource/scopes that downscoped token has access to
 String resource = "https://api.box.com/2.0/files/RESOURCE_ID";
 List<String> scopes = new ArrayList<String>();
 scopes.add("base_preview");
 scopes.add("item_download");
 
 //Preform token exchange
-ScopedToken downscopedToken = 
+ScopedToken downscopedToken =
     client.getLowerScopedToken(scopes,resource);
 
 //Downscoped token available in downscopedToken.getAccessToken()

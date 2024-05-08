@@ -60,8 +60,6 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
 
@@ -71,9 +69,11 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 |Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
 
-<!-- markdownlint-enable line-length -->
+<ImageFrame border center width="300">
 
-[Auth selection screen](../images/custom-app-selection.png)
+![Auth selection screen](../images/custom-app-selection.png)
+
+</ImageFrame>
 
 ### Select application authentication
 
@@ -86,7 +86,11 @@ authentication method without creating a new application.
 
 </Message>
 
+<ImageFrame border center width="300">
+
 ![Auth selection screen](../images/custom-app-authentication-oauth.png)
+
+</ImageFrame>
 
 ## Basic configuration
 

@@ -66,10 +66,8 @@ questions, and we’ll get you sorted out right away!
 
 In short though, this means:
 
-* Don't use our logo or any similar logo or part of our logo as the icon for your
-  application.
-* Don't use our name or logo in any way inside your application that would make
-  it look like it’s an official Box application.
+* Don't use our logo or any similar logo or part of our logo as the icon for your application.
+* Don't use our name or logo in any way inside your application that would make it look like it’s an official Box application.
 
 ### Don't alter Box logo
 

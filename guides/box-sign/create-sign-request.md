@@ -1,14 +1,20 @@
 ---
 rank: 1
+related_endpoints:
+  - post-sign-requests
+related_guides:
+  - box-sign/resend-sign-request
+  - box-sign/cancel-sign-request
+  - box-sign/sign-templates
 category_id: box-sign
 subcategory_id: null
 is_index: false
 id: box-sign/create-sign-request
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/sign-templates
+next_page_id: box-sign/resend-sign-request
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/create-sign-request.md
@@ -124,7 +130,7 @@ email addresses are valid.
 
 ### Inputs
 
-The `inputs` parameter represents placeholders that the user can interact with. 
+The `inputs` parameter represents placeholders that the user can interact with.
 The `document_tag_id` parameter can be populated with data you want to
 pass when creating a sign request.
 
@@ -133,7 +139,7 @@ pass when creating a sign request.
 You can create a sign request using a template.
 To do so, you must provide the `template_id` parameter.
 See [this guide][templates] to learn more about using templates
-when creating sign requests. 
+when creating sign requests.
 
 ## Redirects
 
@@ -184,28 +190,19 @@ request email. The overall request is declined.
 
 ## Request status
 
-- `converting`: The file is converted to a `.pdf` for the signing process once
-  the sign request is sent.
-- `error_converting`: An issue was encountered while converting the file to a
-  `.pdf`.
-- `created`: If `document_preparation_is_needed` is set to `true`, but the
-  `prepare_url` has not yet been visited.
-- `sent`: The request was successfully sent, but no signer has interacted with
- it.
+- `converting`: The file is converted to a `.pdf` for the signing process once the sign request is sent.
+- `error_converting`: An issue was encountered while converting the file to a `.pdf`.
+- `created`: If `document_preparation_is_needed` is set to `true`, but the `prepare_url` has not yet been visited.
+- `sent`: The request was successfully sent, but no signer has interacted with it.
 - `error_sending`: An issue was encountered while sending the request.
-- `viewed`: Once the first, or only, signer clicks on **Review document** in
-  the signing email or visits the signing URL.
+- `viewed`: Once the first, or only, signer clicks on **Review document** in the signing email or visits the signing URL.
 - `downloaded`: The signing document was downloaded by signer.
 - `signed`: All signers completed the request.
-- `signed and downloaded`: The signing document was signed and downloaded by
- signer.
+- `signed and downloaded`: The signing document was signed and downloaded by signer.
 - `declined`: If any signer declines the request.
 - `cancelled`: If the request is cancelled via UI or API.
-- `expired`: The date of expiration has passed with outstanding, incomplete
-  signatures.
-- `finalizing`: If all signers have signed the request,
-   but the final document with signatures and the signing
-   log has not been generated yet.
+- `expired`: The date of expiration has passed with outstanding, incomplete signatures.
+- `finalizing`: If all signers have signed the request, but the final document with signatures and the signing log has not been generated yet.
 - `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
 Encountering an error status requires creating a new sign request to retry.

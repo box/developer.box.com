@@ -21,8 +21,6 @@ previous_page_id: cli/cli-docs
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/bulk-commands.md
 ---
-<!-- markdownlint-disable line-length -->
-
 # CLI bulk commands
 
 The Box CLI bulk commands help you to automate repetitive tasks. By adding a `--bulk-file-path` flag to your command, you are able to perform actions for many items at once.
@@ -57,21 +55,19 @@ go to your [Developer Console][console], and follow the guide
 
 ## Set up and use bulk commands
 
-1. Clone the `boxcli` GitHub repository 
-   or download the files from [`Bulk actions`][bulkactions] directory.
+1. Clone the `boxcli` GitHub repository or download the files from [`Bulk actions`][bulkactions] directory.
 
-   ```bash
-git clone https://github.com/box/boxcli.git
-```
+    ```bash
+    git clone https://github.com/box/boxcli.git
+    ```
 
 2. Adjust the `.csv` template to your needs. For example, if you want to create several folders, you can use the [`folders-create.csv`][folderstemplate] template as your starting point.
+
 3. Run the command.
 
-   ```bash
-   box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
-   ```
-
-<!-- markdownlint-enable line-length -->
+    ```bash
+    box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
+    ```
 
 [console]: https://app.box.com/developers/console
 [auth]: g://authentication/oauth2/oauth2-setup

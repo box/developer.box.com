@@ -37,23 +37,16 @@ Make sure you have an Admin or a Co-admin role.
 
 ## Install and configure Box for Slack
 
-1. Install [Box for Slack][1] in the relevant Slack workspace or
-organizations.
+1. Install [Box for Slack][1] in the relevant Slack workspace or organizations.
 2. Enable the [Box as Content Layer for Slack][2].
-3. Make sure the service account you are using is
-a collaborator on the folder that will be mapped.
-To do so, use the `Invite People` folder
-option to invite the service account as a collaborator.
+3. Make sure the service account you are using is a collaborator on the folder that will be mapped. To do so, use the `Invite People` folder option to invite the service account as a collaborator.
 
 If you encounter any errors, see the [troubleshooting guide][3].
 
 ## Create Box application
 
-1. Create a [custom app with OAuth authentication][4]
-in the [Box developer console][5]
-2. Open the application and
-enable the **Manage enterprise properties** application
-scope under **Configuration** > **Application Scopes**. 
+1. Create a [custom app with OAuth authentication][4] in the [Box developer console][5]
+2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Application Scopes**.
 
 <Message info>
 
@@ -66,10 +59,8 @@ is calling the Slack API.
 
 To authorize your Integration Mappings requests:
 
-1. Navigate to the [custom app][7] that you
-have created as one of the prerequisites.
-2. Generate a [developer token][8] and add it to
-the HTTP header of each request: 
+1. Navigate to the [custom app][7] that you have created as one of the prerequisites.
+2. Generate a [developer token][8] and add it to the HTTP header of each request:
 
 ```bash
 Authorization: Bearer {developer_token}

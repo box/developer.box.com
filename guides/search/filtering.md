@@ -28,15 +28,13 @@ content, tags, or comments match the query provided. By setting the
 `content_types` parameter the search can be narrowed down to only the items that
 match the query for the content type defined.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&content_types=name,tags" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -63,7 +61,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var contentTypes = new List<string>();
 contentTypes.Add("name");
 contentTypes.Add("tags");
@@ -76,7 +74,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", content_types=["name", "tags"])
 ```
 
@@ -86,16 +84,16 @@ client.search().query("sales", content_types=["name", "tags"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    content_types:  [
-      "name",
-      "tags"
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        content_types:  [
+            "name",
+            "tags"
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
@@ -110,15 +108,11 @@ client.search.query(
 | `comments`     | The content of any of the comments on a file or folder.              |
 | `tags`          | Any tags that are applied to an item, as defined by its `tags` field. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by date
 
 By default, search returns files created at any time, and updated at any time.
 It is possible to filter results by both the date the file or folder was
 last updated or when it was created.
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -126,7 +120,7 @@ last updated or when it was created.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&created_at_range=2014-05-15T13:35:01Z,2015-05-15T13:35:01&updated_at_range=2014-05-15T13:35:01," \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -160,7 +154,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var createdAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var createdAtRangeToDate = new DateTime(2018, 11, 18, 9, 30, 0, DateTimeKind.Utc);
 var updatedAtRangeFromDate = new DateTime(1988, 11, 18, 9, 30, 0, DateTimeKind.Utc);
@@ -173,7 +167,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-05-15T13:35:01Z"], updated_at_range=["2014-05-15T13:35:01Z", null])
 ```
 
@@ -183,14 +177,14 @@ client.search().query("sales", created_at_range=["2014-05-15T13:35:01Z", "2015-0
 
 ```js
 client.search.query(
-  'sales',
-  {
-    created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
-    updated_at_range: "2014-05-15T13:35:01Z,"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        created_at_range: "2014-05-15T13:35:01Z,2015-05-15T13:35:01Z",
+        updated_at_range: "2014-05-15T13:35:01Z,"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
@@ -202,15 +196,11 @@ client.search.query(
 | `created_at_range` | Defines a range of `created_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
 | `updated_at_range` | Defines a range of `updated_at` dates for which to return results. The upper or lower bound can be left empty to create an open-ended range. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Filter by file extension
 
 By default, a search returns items with any kind of file extension. It is
 possible to filter search results to only files with one or more specific file
 extensions using the `file_extensions` query parameter.
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -218,7 +208,7 @@ extensions using the `file_extensions` query parameter.
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&file_extensions=pdf,txt" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -245,7 +235,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var fileExtensions = new List<string>();
 fileExtensions.Add("pdf");
 fileExtensions.Add("txt");
@@ -258,7 +248,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", file_extensions=["pdf", "txt"])
 ```
 
@@ -268,23 +258,21 @@ client.search().query("sales", file_extensions=["pdf", "txt"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    file_extensions:  [
-      "pdf",
-      "txt"
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        file_extensions:  [
+            "pdf",
+            "txt"
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 ## Filter by file size
 
@@ -292,15 +280,13 @@ By default, a search returns items of any file size. It is
 possible to filter search results to only files within a specific file
 size using the `size_range` query parameter.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&size_range=10000,20000" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -325,7 +311,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", sizeRangeLowerBoundBytes: 10000, sizeRangeUpperBoundBytes: 20000);
 ```
@@ -334,7 +320,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", size_range=[10000,20000])
 ```
 
@@ -344,20 +330,18 @@ client.search().query("sales", size_range=[10000,20000])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    size_range: '10000,20000'
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        size_range: '10000,20000'
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 ## Filter by file type
 
@@ -365,15 +349,13 @@ By default, a search returns both files, folders, and web links. To narrow down
 the results to only one of these, a `type` query parameter can be set to either
 `file`, `folder` or `web_link`.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&type=file" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -396,7 +378,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 BoxCollection<BoxItem> results = await client.SearchManager
     .QueryAsync("sales", type: "file");
 ```
@@ -405,7 +387,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", type="file")
 ```
 
@@ -415,20 +397,18 @@ client.search().query("sales", type="file")
 
 ```js
 client.search.query(
-  'sales',
-  {
-    type: "file"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        type: "file"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 ## Filter by metadata
 
@@ -448,15 +428,13 @@ By default, a search returns all the items the authenticated user has access to,
 regardless of who owns the items. To narrow down to only items owned by specific
 users, use the `owner_user_ids` query parameter.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&owner_user_ids=34446362,462281242" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -483,7 +461,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var userIds = new List<string>();
 userIds.Add("34446362");
 userIds.Add("462281242");
@@ -496,7 +474,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 ```
 
@@ -506,20 +484,18 @@ client.search().query("sales", owner_user_ids=["34446362", "462281242"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    owner_user_ids: "34446362,462281242"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        owner_user_ids: "34446362,462281242"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 ## Filter by parent folder
 
@@ -527,15 +503,13 @@ By default, a search returns all the items in any folder the user has access
 to. To narrow down the results to only items in specific folders, use the
 `ancestor_folder_ids` query parameter.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&ancestor_folder_ids=45235463,73445321" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 </Tab>
@@ -562,7 +536,7 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 var folderIds = new List<string>();
 folderIds.Add("45235463");
 folderIds.Add("73445321");
@@ -575,7 +549,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 ```
 
@@ -585,17 +559,15 @@ client.search().query("sales", ancestor_folder_ids=["45235463", "73445321"])
 
 ```js
 client.search.query(
-  'sales',
-  {
-    ancestor_folder_ids: "45235463,73445321"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        ancestor_folder_ids: "45235463,73445321"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

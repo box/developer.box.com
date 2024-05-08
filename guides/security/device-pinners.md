@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -14,7 +14,7 @@ total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security/cors
-previous_page_id: ''
+previous_page_id: security/fedramp
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/device-pinners.md
 ---
@@ -33,12 +33,9 @@ documentation][community].
 
 The Box API allows for device pins to be inspected and removed.
 
-* [`GET /enterprise/:id/device_pinners`](e://get-enterprises-id-device-pinners):
-  Retrieves all the device pins within an enterprise.
-* [`GET /device_pinners/:id`](e://get-device-pinners-id): Retrieves information
-  about an individual device pin.
-* [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): Deletes an
-  individual device pin.
+* [`GET /enterprise/:id/device_pinners`](e://get-enterprises-id-device-pinners): Retrieves all the device pins within an enterprise.
+* [`GET /device_pinners/:id`](e://get-device-pinners-id): Retrieves information about an individual device pin.
+* [`DELETE /device_pinners/:id`](e://delete-device-pinners-id): Deletes an individual device pin.
 
 <!-- i18n-enable localize-links -->
 

@@ -33,8 +33,6 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 The response will include a list of representations in the following format
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 ...
 {
@@ -51,21 +49,16 @@ The response will include a list of representations in the following format
 ...
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## Response fields
 
 Every representation will include a set of properties and the type of
 representation.
 
-* The optional `dimensions` field represents the file's dimensions in
-  pixels as width by height.
+* The optional `dimensions` field represents the file's dimensions in pixels as width by height.
 
-* The optional `paged` field specifies if this representation is a paged
-  document. Some images and PDFs will often be paged documents.
+* The optional `paged` field specifies if this representation is a paged document. Some images and PDFs will often be paged documents.
 
-* The optional `thumb` field specifies if this representation is suitable
-  as a file thumbnail.
+* The optional `thumb` field specifies if this representation is suitable as a file thumbnail.
 
 [get_files_id]: endpoint://get-files-id
 [file_representations]: resource://file#param-representations

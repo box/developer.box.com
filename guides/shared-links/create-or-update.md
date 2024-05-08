@@ -46,9 +46,9 @@ At minimum the information needed to create a shared link will be:
 Optionally when creating a shared link the following may be specified:
 
 * The access level, which may be one of:
-  * open: A public shared link. Anyone with the link may access the link.
-  * company: Anyone within your enterprise may access the link.
-  * collaborators: Anyone collaborated on the content may access the link.
+    * open: A public shared link. Anyone with the link may access the link.
+    * company: Anyone within your enterprise may access the link.
+    * collaborators: Anyone collaborated on the content may access the link.
 * An expiration time when the shared link will automatically disable.
 * A password required to access the resource.
 

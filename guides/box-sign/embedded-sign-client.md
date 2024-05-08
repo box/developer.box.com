@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -11,11 +11,11 @@ subcategory_id: null
 is_index: false
 id: box-sign/embedded-sign-client
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-sign
 parent_id: box-sign
 next_page_id: box-sign
-previous_page_id: box-sign/list-sign-requests
+previous_page_id: box-sign/sign-templates
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/embedded-sign-client.md
 ---
@@ -34,8 +34,6 @@ To integrate Box Sign experience within your
 own website, you need the `iframable_embed_url`
 parameter that is specifically designed to allow
 signing documents within the HTML `iframe` tag.
-
-<!-- markdownlint-disable line-length -->
 
 A sample `iframable_embed_url` looks as follows:
 
@@ -61,8 +59,6 @@ use the URL within the `iframe` tag:
   msallowfullscreen
 ></iframe>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 

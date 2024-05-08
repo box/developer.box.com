@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 4
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -26,24 +26,18 @@ source_url: >-
 ---
 # Report inactive users
 
-<!-- markdownlint-disable line-length -->
-
 This script generates a CSV file with a list of users who have been inactive for a number of days. It performs the following steps:
 
-1. Looks for the users who have the role `user`. 
+1. Looks for the users who have the role `user`.
 
-   <message>
+    <message>
 
-   The script does not consider other roles, such as `AppUser`.
+    The script does not consider other roles, such as `AppUser`.
 
-   </message>
+    </message>
 
-   
-2. Uses [Box Events][boxevents] to check if the user performed any actions   
-   for a specified number of days.
-   The default list of event types includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
-3. Adds users who didn't perform any actions to a `.csv` file with
-   inactive users. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
+2. Uses [Box Events][boxevents] to check if the user performed any actions for a specified number of days. The default list of event types includes: `LOGIN`,`UPLOAD`,`COPY`,`MOVE`,`PREVIEW`,`DOWNLOAD`,`EDIT`,`DELETE`,`UNDELETE`,`LOCK`,`UNLOCK`, `NEW_USER`. You can modify this list in the script settings.
+3. Adds users who didn't perform any actions to a `.csv` file with inactive users. You can use this file as input for other scripts, for example to [deprovision users][deprovisionscript].
 
 ## Prerequisites
 
@@ -56,7 +50,7 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
 ```bash
-pwsh 
+pwsh
 ```
 
 Depending on the directory you are
@@ -69,8 +63,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 ```
 
 <message>
@@ -90,32 +84,30 @@ be the main Box admin or co-admin.
 
 ## Configure the script
 
-1. Clone the `boxcli` GitHub repository and cd into this example's folder
-   or download the files from [`examples`][examples] directory.
+1. Clone the `boxcli` GitHub repository and cd into this example's folder or download the files from [`examples`][examples] directory.
 
-   ```bash
-git clone https://github.com/box/boxcli.git
-cd boxcli/examples/Inactive\ Users\ Report/
-```
+    ```bash
+    git clone https://github.com/box/boxcli.git
+    cd boxcli/examples/Inactive\ Users\ Report/
+    ```
 
 2. Set the number of days you want the script to scan for user events. If you   don't specify this value or leave the default, the script will prompt you to enter it.
 
-   ```bash
-$daysInactive = "10"
-```
+    ```bash
+    $daysInactive = "10"
+    ```
 
-3. (Optional) To change the report output file name, define the
-   `ReportOutputFile` parameter.
+3. (Optional) To change the report output file name, define the `ReportOutputFile` parameter.
 
-   ```bash
-$ReportOutputFile = $ReportName + ".csv"
-```
+    ```bash
+    $ReportOutputFile = $ReportName + ".csv"
+    ```
 
 4. (Optional) To change event types, define the list for `eventType` parameter.
 
-   ```bash
-$eventType = "LOGIN,UPLOAD,COPY,MOVE"
-```
+    ```bash
+    $eventType = "LOGIN,UPLOAD,COPY,MOVE"
+    ```
 
 ## Run the script
 
@@ -148,8 +140,6 @@ You have access to these log files:
 
 * `Inactive_Users_Report_all.txt` that contains all log entries
 * `Inactive_Users_Report_errors.txt` that contains only errors.
-
-<!-- markdownlint-enable line-length -->
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 [pwsh]: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.2

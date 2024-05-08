@@ -148,27 +148,23 @@ General tab of the [Developer Console][dc] revealing the email address.
 If someone attempts to make API calls using a Service Account Access Token
 before the application is authorized in the Admin Console they will receive an
 error message:
-`"error":"unauthorized_client"`
+`"error": "unauthorized_client"`
 `"error_description": "This app is not authorized by the enterprise"`
 
 ### Use Cases
 
-- *Distribution Publishing*: upload and share files with any number of users 
-  whether or not they are authenticated
-- *On-Premises Systems and Devices*: programmatically ingest content from
-  on-premises systems and connected devices 
-- *Content Migration and Monitoring*: move content from on-premises to the cloud
-  or between cloud providers  
-- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or
-  trigger workflows based on actions
+- *Distribution Publishing*: upload and share files with any number of users whether or not they are authenticated
+- *On-Premises Systems and Devices*: programmatically ingest content from on-premises systems and connected devices
+- *Content Migration and Monitoring*: move content from on-premises to the cloud or between cloud providers
+- *Event Monitoring*: monitors events in an enterprise to ensure compliance and or trigger workflows based on actions
 - *Content Archive*: house minimally accessed content
 
 ### Permissions
 
 The endpoints that a Service Account Access Token can successfully interact with
-are determined by the application [scopes][scopes] configured in the 
+are determined by the application [scopes][scopes] configured in the
 [Developer Console][dc]. Depending on the granted scopes, a Service Account may
-have the ability to perform Admin actions. 
+have the ability to perform Admin actions.
 
 <Message type='warning'>
 
@@ -224,12 +220,10 @@ A Service Account is also automatically generated when a Limited Access App is
 created in the [Developer Console][dc]. This Service Account has some additional
 restrictions that a Service Account associated with a Custom App does not.
 
-- All content used within the Limited Access App must be uploaded and owned by
-  the Service Account
+- All content used within the Limited Access App must be uploaded and owned by the Service Account
 - The Service Account can not access any other user's information or content
 - The Service Account can not create or otherwise manage any type of new user
-- The Service Account can only access a subset of APIs related to previewing
-  content
+- The Service Account can only access a subset of APIs related to previewing content
 
 ## App User
 
@@ -263,20 +257,9 @@ user, regardless of if they have an existing Box account. App users are often
 used by applications that manage their own user authentication, but want to
 store the data in unique Box user accounts.
 
-- *Customer Portals*: Websites or applications where clients or patients can log
-  in to access information provided by employees at a company and/or to store and
-  retrieve their own sensitive documents.
-- *Vendor Portals*: Content distribution sites for companies to provide materials
-  including marketing collateral, price lists, product information, sales
-  agreements or contracts, and other documents to vendors. Box's groups and
-  permission model allow for companies to organize content for partners based on
-  partner criteria and/or tier.
-- *Branded Customer Facing Applications*: The ability to create App Users on
- behalf of an end-user allows companies to build seamless customer-facing
- features such as permissions, auditing, and reporting. This is particularly
- valuable for regulated industries such as Financial Services and Healthcare.
- Moreover, user-based data from our [reporting capabilities][events] allows
- developers to leverage analytic tools to better understand user behavior.
+- *Customer Portals*: Websites or applications where clients or patients can log in to access information provided by employees at a company and/or to store and retrieve their own sensitive documents.
+- *Vendor Portals*: Content distribution sites for companies to provide materials including marketing collateral, price lists, product information, sales agreements or contracts, and other documents to vendors. Box's groups and permission model allow for companies to organize content for partners based on partner criteria and/or tier.
+- *Branded Customer Facing Applications*: The ability to create App Users on behalf of an end-user allows companies to build seamless customer-facing features such as permissions, auditing, and reporting. This is particularly valuable for regulated industries such as Financial Services and Healthcare. Moreover, user-based data from our [reporting capabilities][events] allows developers to leverage analytic tools to better understand user behavior.
 
 ### Permissions
 

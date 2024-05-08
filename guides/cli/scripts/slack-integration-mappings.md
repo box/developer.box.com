@@ -1,5 +1,5 @@
 ---
-rank: 9
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -23,8 +23,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/slack-integration-mappings.md
 ---
 # Manage Slack integration folder mappings
-
-<!-- markdownlint-disable line-length -->
 
 This script helps manage the folder mappings between Slack and Box if using Box
 as the content store for Slack. It creates a list of current Slack channel and
@@ -52,7 +50,7 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
 ```bash
-pwsh 
+pwsh
 ```
 
 Depending on the directory you are
@@ -65,8 +63,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 ```
 
 <message>

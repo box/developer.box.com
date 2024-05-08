@@ -24,15 +24,11 @@ a user. The type of authorization available to an application depends on the
 use-case as well as the type of application that has been created in the developer
 console.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Authentication methods                                              |
 | ---------------------------- | ------------------------------------------------------------------- |
 | [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
 | [Limited Access App][la]     | [App token][apptoken]                                               |
 | [Custom Skill][custom-skill] | No authentication method selection needed                           |
-
-<!-- markdownlint-enable line-length -->
 
 <CTA to="guide://authentication/select">
 

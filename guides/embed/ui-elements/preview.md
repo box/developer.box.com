@@ -24,8 +24,6 @@ source_url: >-
 ---
 # Content Preview
 
-<!-- markdownlint-disable line-length -->
-
 The Box Content Preview UI Element allows developers to embed high
 quality and interactive previews of Box files in their desktop or mobile web
 application.
@@ -117,8 +115,6 @@ Use the navigation arrows to preview different file types.
 
 </iframe>
 
-<!-- markdownlint-enable line-length -->
-
 ## API
 
 ```js
@@ -195,19 +191,13 @@ preview.removeAllListeners();
 
 ### Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter     | Type   | Description                                                                                                                                                                      |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fileId`      | String | Box File ID.                                                                                                                                                                     |
 | `accessToken` | String | Box API access token to use. This should have read/write access to the folder above. The value passed in for the token is assumed to never expire while the explorer is visible. |
 | `options`     | Object | Optional options. See below for details. For example: `contentExplorer.show(FOLDER_ID, TOKEN, {canDelete: false})` would be used to hide the delete option.                      |
 
-<!-- markdownlint-enable line-length -->
-
 ### Options
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter            | Type    | Default         | Description                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,9 +209,6 @@ preview.removeAllListeners();
 | `logoUrl`            | String  |                 | URL of custom logo to show in header. If this value is the string box then the box logo will show                                                                                                                                                                                                                         |
 | `showAnnotations`    | Boolean | `false`         | Whether annotation button in header and annotations on content are shown                                                                                                                                                                                                                                                  |
 | `showDownload`       | Boolean | `false`         | Whether download button is shown in header. Will also control print button visibility in viewers that support print. Note that this option will not override download permissions on the access token.                                                                                                                    |
-| `contentAnswersProps`  | Array | `show: true`         | List of props for Box AI for UI Elements. Currently, it allows displaying Box AI for UI Elements in the preview header.                                                                                                  |
-
-<!-- markdownlint-enable line-length -->
 
 ## Token Generator Function
 
@@ -236,17 +223,17 @@ being previewed or a map of typed file IDs to access token for those files.
 ```js
 // Example token generator function that resolves to a single access token
 var singleTokenGenerator = function() {
-  return someApi.getToken().then(function(data) {
-    return data.token;
-  });
+    return someApi.getToken().then(function(data) {
+        return data.token;
+    });
 };
 
 // Example token generator function that resolves to a map of tokens
 var mapTokenGenerator = function() {
-  return Promise.resolve({
-    file_1234: "some_token_abcd",
-    file_2345: "some_token_bcde"
-  });
+    return Promise.resolve({
+        file_1234: "some_token_abcd",
+        file_2345: "some_token_bcde"
+    });
 };
 ```
 
@@ -258,7 +245,7 @@ events can be missed.
 
 ```js
 const listener = (value) => {
-  // Do something with value
+    // Do something with value
 };
 
 // Attach listener before calling show otherwise events can be missed
@@ -274,81 +261,70 @@ preview.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following:
 
-- `viewer` event will be triggered when we have the viewer instance first
-  available. This will be the same object that is also a property included in
-  the `load` event. Preview triggers this event before `load` so that clients
-  can attach their listeners before the `load` event is triggered.
-- `load` event will be triggered on every preview load when `show()` is called
-  or if inter-preview navigation occurs. The event data will contain:
+- `viewer` event will be triggered when we have the viewer instance first available. This will be the same object that is also a property included in the `load` event. Preview triggers this event before `load` so that clients can attach their listeners before the `load` event is triggered.
+- `load` event will be triggered on every preview load when `show()` is called or if inter-preview navigation occurs. The event data will contain:
 
-```js
-error: 'message', // Error message if any error occurred while loading
-viewer: {...},    // Instance of the current viewer object if no error occurred
-metrics: {...},   // Performance metrics
-file: {...}       // Box file object with properties defined in file.js
-```
+    ```js
+    error: 'message', // Error message if any error occurred while loading
+    viewer: {...},    // Instance of the current viewer object if no error occurred
+    metrics: {...},   // Performance metrics
+    file: {...}       // Box file object with properties defined in file.js
+    ```
 
-- `navigate` event will be triggered when navigation happens. The event includes
-  the file ID of the file being navigated to, and this event will trigger before
-  `load`.
-- `notification` event will be triggered when either the preview wrapper or one
-  of the viewers wants to notify something like a warning or non-fatal error. The
-  event data will contain:
+- `navigate` event will be triggered when navigation happens. The event includes the file ID of the file being navigated to, and this event will trigger before `load`.
+- `notification` event will be triggered when either the preview wrapper or one of the viewers wants to notify something like a warning or non-fatal error. The event data will contain:
 
-```js
-message: 'message', // Message to show
-type: 'warning'    // 'warning', 'notice', or 'error'
-```
+    ```js
+    message: 'message', // Message to show
+    type: 'warning'    // 'warning', 'notice', or 'error'
+    ```
 
-- `viewerevent` Each viewer will trigger its own sets of events. For example, the
-  Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger
-  another set of events. The preview wrapper will also re-emit events at the
-  preview level, with event data containing:
+- `viewerevent` Each viewer will trigger its own sets of events. For example, the Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger another set of events. The preview wrapper will also re-emit events at the preview level, with event data containing:
 
-```js
-event: EVENTNAME,         // Event name
-data: DATA,               // Event data object
-viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
-fileId: fileId            // The file ID
-```
+    ```js
+    event: EVENTNAME,         // Event name
+    data: DATA,               // Event data object
+    viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
+    fileId: fileId            // The file ID
+    ```
 
 ### Example event usage
 
 ```js
 var preview = new Box.Preview();
 preview.addListener("viewer", viewer => {
-  viewer.addListener("rotate", () => {
-    // Do something when a viewer rotates a preview
-  });
+    viewer.addListener("rotate", () => {
+        // Do something when a viewer rotates a preview
+    });
 });
 
 preview.addListener("load", data => {
-  const viewer = data.viewer;
-  viewer.addListener("rotate", () => {
-    // Do something when a viewer rotates a preview
-  });
+    const viewer = data.viewer;
+    viewer.addListener("rotate", () => {
+        // Do something when a viewer rotates a preview
+    });
 });
 
 preview.addListener("viewerevent", data => {
-  if (data.viewerName === "Image") {
-    if (data.event === "rotate") {
-      // Do something when an image preview is rotated
+    if (data.viewerName === "Image") {
+        if (data.event === "rotate") {
+            // Do something when an image preview is rotated
+        }
+    } else if (data.viewerName === "Image360") {
+        if (data.event === "rotate") {
+            // Do something different when a 360-degree image is rotated
+        }
+    } else {
     }
-  } else if (data.viewerName === "Image360") {
-    if (data.event === "rotate") {
-      // Do something different when a 360-degree image is rotated
-    }
-  } else {
-  }
 });
 
 preview.addListener("rotate", data => {
-  if (data.viewerName === "Image") {
-    // Do something when an image preview is rotated
-  } else if (data.viewerName === "Image360") {
-    // Do something different when a 360-degree image is rotated
-  } else {
-  }
+    if (data.viewerName === "Image") {
+        // Do something when an image preview is rotated
+    } else if (data.viewerName === "Image360") {
+        // Do something different when a 360-degree image is rotated
+    } else {
+    }
 });
 ```
 
@@ -367,64 +343,59 @@ To add V4 annotations to preview:
 
     </Message>
 
-2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with
-  annotation related change.
+2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with annotation related change.
 
-<Message warning>
+    <Message warning>
 
-Box UI elements should be the lowest working version that contains
-fully working V4 annotations.
+    Box UI elements should be the lowest working version that contains
+    fully working V4 annotations.
 
-</Message>
+    </Message>
 
 3. Import content preview and box annotations into your application:
 
-<!-- markdownlint-disable line-length -->
+    ```js
+    import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
 
-```js
-import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
+    var file_id = 'YOUR FILE ID';
+    var accessToken = 'YOUR ACCESS TOKEN';
 
-var file_id = 'YOUR FILE ID';
-var accessToken = 'YOUR ACCESS TOKEN';
+    /* Enable annotations in sidebar */
+    var contentSidebarProps = {
+        hasActivityFeed: true,
+        features: {
+            activityFeed: {
+                annotations: {
+                    enabled: true
+                }
+            }
+        },
+    }
 
-/* Enable annotations in sidebar */
-var contentSidebarProps = {
-   hasActivityFeed: true,
-   features: {
-      activityFeed: {
-         annotations: {
-            enabled: true
-         }
-      }
-   },
-}
+    var options = {
+        container: '.previewer',
+        contentSidebarProps: contentSidebarProps,
 
-var options = {
-   container: '.previewer',
-   contentSidebarProps: contentSidebarProps,
+        /* Enable annotations in preview */
+        enableAnnotationsDiscoverability: true,
+        enableAnnotationsImageDiscoverability: true,
+        showAnnotations: true,
+        showAnnotationsControls: true,
+        showAnnotationsDrawingCreate: true,
+    };
 
-   /* Enable annotations in preview */
-   enableAnnotationsDiscoverability: true,
-   enableAnnotationsImageDiscoverability: true,
-   showAnnotations: true,
-   showAnnotationsControls: true,
-   showAnnotationsDrawingCreate: true,
-};
+    /* BoxAnnotations */
+    var annotations = new BoxAnnotations();
 
-/* BoxAnnotations */
-var annotations = new BoxAnnotations();
+    /* Box Preview */
+    var contentPreviewer = new Box.ContentPreview();
 
-/* Box Preview */
-var contentPreviewer = new Box.ContentPreview();
+    /* Set annotation into previewer */
+    options['boxAnnotations'] = annotations;
 
-/* Set annotation into previewer */
-options['boxAnnotations'] = annotations;
-
-/* Show previewer */
-contentPreviewer.show(file_id, accessToken, options);
-```
-
-<!-- markdownlint-enable line-length -->
+    /* Show previewer */
+    contentPreviewer.show(file_id, accessToken, options);
+    ```
 
 <Message warning>
 
@@ -432,8 +403,6 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 ` is subject to change in the future.
 
 </Message>
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <link href="https://cdn01.boxcdn.net/platform/elements/16.0.0/en-US/preview.css" rel="stylesheet" type="text/css"></link>
@@ -451,8 +420,6 @@ The property `features: { activityFeed: { annotations: { enabled: true  } } } }
 
 <script type="module" src="./script.js"></script>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## Box AI for UI Elements
 
@@ -479,13 +446,13 @@ To enable Box AI modal in content preview header, follow these steps:
     var preview = new Box.Preview();
 
     Preview.show(<FILE_ID>, <TOKEN>, {
-    container: '.preview-container',
-    contentAnswersProps: {
-        show: true,
-    },
-    hasHeader: true,
-});
-```
+        container: '.preview-container',
+        contentAnswersProps: {
+            show: true,
+        },
+        hasHeader: true,
+    });
+    ```
 
 <Message type="notice">
 
@@ -506,7 +473,7 @@ var ContentPreview = require('./ContentPreview').default;
 <IntlProvider locale="en">
     <ContentPreview
         contentAnswersProps={{
-          show: true,
+            show: true,
         }}
         ...
         fileId={FILE_ID}
@@ -530,8 +497,6 @@ configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
-
-<!-- markdownlint-disable line-length -->
 
 | Scope Name     | Permissions granted                               |
 | -------------- | ------------------------------------------------- |
@@ -564,8 +529,6 @@ token will need to include the `item_download` scope to enable highlighting.
 | User should be able to preview, and create annotations but only view their own.                                                                                                | `base_preview` + `annotation_view_self` + `annotation_edit` |
 | User should be able to preview, edit annotations and view all annotations                                                                                                      | `base_preview` + `annotation_view_all` + `annotation_edit`  |
 | User should be able to preview and only view their own annotations but not add/delete (ex: after review period has expired, all documents need to be stored in read only mode) | `base_preview` + `annotation_view_self`                     |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 

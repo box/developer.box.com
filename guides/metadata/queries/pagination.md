@@ -28,14 +28,14 @@ results per page the `limit` query parameter can be send with the request.
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-     -H 'Content-Type: application/json' \
-     -d '{
-       "from": "enterprise_123456.contractTemplate",
-       "fields": ["name"],
-       "ancestor_folder_id": "5555",
-       "limit": 100
-     }'
+    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "from": "enterprise_123456.contractTemplate",
+      "fields": ["name"],
+      "ancestor_folder_id": "5555",
+      "limit": 100
+    }'
 ```
 
 The maximum value for `limit` is 100. To return more pages of results each page
@@ -43,8 +43,8 @@ returns a `next_marker` value.
 
 ```json
 {
-  "entries":[...],
-  "next_marker":"AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
+  "entries": [...],
+  "next_marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
 }
 ```
 
@@ -53,15 +53,15 @@ results.
 
 ```curl
 curl -X POST https://api.box.com/2.0/metadata_queries/execute_read \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-     -H 'Content-Type: application/json' \
-     -d '{
-       "from": "enterprise_123456.contractTemplate",
-       "fields": ["name"], 
-       "ancestor_folder_id": "5555",
-       "limit": 100,
-       "marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
-     }'
+    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "from": "enterprise_123456.contractTemplate",
+      "fields": ["name"],
+      "ancestor_folder_id": "5555",
+      "limit": 100,
+      "marker": "AAAAAmVYB1FWec8GH6yWu2nwmanfMh07IyYInaa7DZDYjgO1H4KoLW29vPlLY173OKsci6h6xGh61gG73gnaxoS+o0BbI1/h6le6cikjlupVhASwJ2Cj0tOD9wlnrUMHHw3/ISf+uuACzrOMhN6d5fYrbidPzS6MdhJOejuYlvsg4tcBYzjauP3+VU51p77HFAIuObnJT0ff"
+    }'
 ```
 
 <Message notice>

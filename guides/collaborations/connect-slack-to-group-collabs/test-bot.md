@@ -19,14 +19,9 @@ source_url: >-
 In this last section we'll test the full range of functionality of the Slack
 bot.
 
-* **Group creation**: When a bot is added to a channel, a new Box group should
- be created with all of the current channel participants. Only those
- people in the channel with matching Box accounts (based on email address
- matching) should be added.
-* **User event functions**: When a user enters or leaves a channel, they should
- be added or removed from the channel group.
-* **Content add functions**: When a user enters a valid `/boxadd` slash command,
- that content should be shared with the group through a new collaboration.
+* **Group creation**: When a bot is added to a channel, a new Box group should be created with all of the current channel participants. Only those people in the channel with matching Box accounts (based on email address matching) should be added.
+* **User event functions**: When a user enters or leaves a channel, they should be added or removed from the channel group.
+* **Content add functions**: When a user enters a valid `/boxadd` slash command, that content should be shared with the group through a new collaboration.
 
 <Message type='notice'>
 
@@ -40,8 +35,7 @@ is deployed as an application that is publicly accessible.
 When a bot is first added to a channel, there are a number of expectations.
 
 * A new group is created with a name that matches the Slack channel ID.
-* All people currently in the channel are added to the group, as long as their
- Slack email address matches an enterprise account with the same email.
+* All people currently in the channel are added to the group, as long as their Slack email address matches an enterprise account with the same email.
 
 When the Slack bot was configured in [step 1][step1], we installed it within
 the Slack workspace. To test group creation we need to add it to a channel.
@@ -134,15 +128,9 @@ With our minima bot deployed we can now think about ways to improve the
 experience on top of what we've created so far. Next steps in this
 journey may include any number of different expansion areas.
 
-* Add new slash commands for [creating shared links][next-steps-shared-link]
- for the files and folders shared with the group, allowing you to share the
- content with others who are not in the group and people outside your
- enterprise.
-* [Creating retention policies][next-steps-retention-policy] and
- [assigning them][next-steps-policy-assign] to any content shared with the
- group, allowing you to control the lifespan and governance of shared content.
-* Adding new slash commands for allowing people in the channel to
- [comment on the files][next-steps-comment] that are shared with the group.
+* Add new slash commands for [creating shared links][next-steps-shared-link] for the files and folders shared with the group, allowing you to share the content with others who are not in the group and people outside your enterprise.
+* [Creating retention policies][next-steps-retention-policy] and [assigning them][next-steps-policy-assign] to any content shared with the group, allowing you to control the lifespan and governance of shared content.
+* Adding new slash commands for allowing people in the channel to [comment on the files][next-steps-comment] that are shared with the group.
 
 [step1]: g://collaborations/connect-slack-to-group-collabs/configure-slack
 [box-users-groups]: https://app.box.com/master/groups

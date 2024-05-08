@@ -39,18 +39,18 @@ that invited user to `owner`.
 
 ```curl
 curl -X PUT https://api.box.com/2.0/collaborations/1234 \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
-       "role": "owner"
-     }'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
+      "role": "owner"
+    }'
 ```
 
 </Tab>
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 BoxCollaborationRequest requestParams = new BoxCollaborationRequest()
 {
     Id = "12345",
@@ -75,7 +75,7 @@ for (BoxCollaboration.Info collabInfo : pendingCollaborations) {
 
 <Tab title='Python'>
 
-```py
+```python
 from boxsdk.object.collaboration import CollaborationRole, CollaborationStatus
 
 collaboration = client.collaboration(collab_id='12345')
@@ -88,9 +88,9 @@ updated_collaboration = collaboration.update_info(CollaborationRole.OWNER)
 
 ```js
 client.collaborations.update('12345', {role: client.collaborationRoles.OWNER})
-  .then(collaboration => {
-    // ...
-  });
+    .then(collaboration => {
+        // ...
+    });
 ```
 
 </Tab>

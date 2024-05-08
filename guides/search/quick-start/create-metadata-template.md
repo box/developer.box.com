@@ -60,17 +60,17 @@ later on in this quick-start.
 Creating a metadata template via the API requires an [Access Token][at]
 associated with a Box Admin or Co-Admin with permission to
 **create and edit metadata templates for your company**. If you are not sure
-who your token is associated with, make an API call to the 
+who your token is associated with, make an API call to the
 [get current user endpoint][current-user]. The easiest way to obtain a token
 meeting these requirements is to log in as an Admin or Co-Admin, pull up the
-application in the [Developer Console][dc], and click 
-**Generate Developer Token** under the **Configuration** tab. 
+application in the [Developer Console][dc], and click
+**Generate Developer Token** under the **Configuration** tab.
 [Developer tokens][dt] are always be associated with the user logged into the
 Developer Console when the button is clicked.
 
 Using [Postman][postman] and the [Box Postman Collection][post-collab], below is
 an example of what an API call looks like to create the same metadata template
-created above using the Admin Console. 
+created above using the Admin Console.
 
 <ImageFrame center>
 

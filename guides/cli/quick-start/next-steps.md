@@ -19,12 +19,10 @@ source_url: >-
 You've reached the end of this Quick Start guide. By now you should have taken
 the following steps.
 
-1. [Created and configured][one]
-an OAuth 2.0 application.
-2. [Installed and configured][two]
-the CLI
 <!--alex ignore executed-->
 
+1. [Created and configured][one]  an OAuth 2.0 application.
+2. [Installed and configured][two] the CLI
 3. [Built and executed CLI commands][three]
 4. Learned about [options and bulk commands][four]
 5. Explored using the CLI to [run a Powershell script][five]

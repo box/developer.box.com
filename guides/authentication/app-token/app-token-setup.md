@@ -12,7 +12,6 @@ required_guides:
   - applications/app-types/custom-apps
 related_resources: []
 alias_paths:
-  - /guides/applications/app-types/limited-access-apps
   - /guides/applications/app-types/custom-apps/app-token-setup
 category_id: authentication
 subcategory_id: authentication/app-token
@@ -21,7 +20,7 @@ id: authentication/app-token/app-token-setup
 total_steps: 5
 sibling_id: authentication/app-token
 parent_id: authentication/app-token
-next_page_id: authentication/app-token/rollover
+next_page_id: authentication/app-token/endpoints
 previous_page_id: authentication/app-token/without-sdk
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/app-token-setup.md

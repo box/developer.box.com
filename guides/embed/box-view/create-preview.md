@@ -27,8 +27,7 @@ Once a file is uploaded to an App Token application, it can be previewed
 using two different methods:
 
 * Direct embed: A standard HTML `<iframe>` component with a custom embed link.
-* Customized previewer: A fully customized preview widget using Box
-[UI Elements][uie].
+* Customized previewer: A fully customized preview widget using Box [UI Elements][uie].
 
 ## Direct Embed (`iframe`)
 
@@ -70,7 +69,7 @@ curl https://api.box.com/2.0/files/FILE_ID?fields=expiring_embed_link \
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 String fileId = "12345678";
 Uri embedUri = await client.FilesManager.GetPreviewLinkAsync(id: fileId);
 ```
@@ -101,7 +100,7 @@ embed_url = client.file(file_id).get_embed_url()
 ```js
 const fileId = '12345678';
 client.files.getEmbedLink(fileId).then(embedURL => {
-  // ...
+    // ...
 });
 ```
 
@@ -156,17 +155,15 @@ display a new previewer.
 ```js
 var preview = new Box.Preview();
 preview.show("FILE_ID", "ACCESS_TOKEN", {
-  container: ".preview-container",
-  showDownload: true
+    container: ".preview-container",
+    showDownload: true
 });
 ```
 
 Replace the placeholders in the code sample with the following:
 
-* `FILE_ID`: The ID of the file uploaded to the App Token application, which can
-be obtained from the object returned when uploading the file.
-* `ACCESS_TOKEN`: The primary Access Token set up when configuring the
-application or a downscoped version of the token.
+* `FILE_ID`: The ID of the file uploaded to the App Token application, which can be obtained from the object returned when uploading the file.
+* `ACCESS_TOKEN`: The primary Access Token set up when configuring the application or a downscoped version of the token.
 
 <Message type='warning'>
 

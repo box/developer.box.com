@@ -53,24 +53,24 @@ const path = require('path');
 const fs = require('fs');
 
 express.use(session({
-  secret: 'this should be secure',
-  resave: true,
-  saveUninitialized: false
+    secret: 'this should be secure',
+    resave: true,
+    saveUninitialized: false
 }));
 
 const oidc = new ExpressOIDC({
-  issuer: `https://${config.oktaOrgUrl}/oauth2/default`,
-  client_id: config.oktaClientId,
-  client_secret: config.oktaClientSecret,
-  appBaseUrl: config.oktaBaseUrl,
-  loginRedirectUri: `${config.oktaBaseUrl}${config.oktaRedirect}`,
-  scope: 'openid profile'
+    issuer: `https://${config.oktaOrgUrl}/oauth2/default`,
+    client_id: config.oktaClientId,
+    client_secret: config.oktaClientSecret,
+    appBaseUrl: config.oktaBaseUrl,
+    loginRedirectUri: `${config.oktaBaseUrl}${config.oktaRedirect}`,
+    scope: 'openid profile'
 });
 
 express.use(oidc.router);
 express.use(bodyParser.json());
 express.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 ```
 
@@ -84,7 +84,7 @@ Now add the routing details.
 ```js
 // Redirect to Okta login
 express.get('/', (req, res) => {
-  // TODO: HANDLE ROUTE
+    // TODO: HANDLE ROUTE
 });
 ```
 
@@ -97,7 +97,7 @@ Lastly, add the Express server initialization to listen for traffic.
 // Create server
 const port = process.env.PORT || 3000;
 http.createServer(express).listen(port, () => {
-  console.log(`Server started: Listening on port ${port}`);
+    console.log(`Server started: Listening on port ${port}`);
 });
 ```
 
@@ -139,11 +139,11 @@ import com.eclipsesource.json.JsonValue;
 @RestController
 @EnableAutoConfiguration
 public class Application {
-  static BoxDeveloperEditionAPIConnection api;
+    static BoxDeveloperEditionAPIConnection api;
 
-  // TODO: SET ROUTE
+    // TODO: SET ROUTE
 
-  // TODO: INITIALIZE SERVER
+    // TODO: INITIALIZE SERVER
 }
 ```
 
@@ -170,7 +170,7 @@ Spring Boot server to listen for traffic.
 
 ```java
 public static void main(String[] args) {
-  SpringApplication.run(Application.class, args);
+    SpringApplication.run(Application.class, args);
 }
 ```
 
@@ -194,12 +194,12 @@ import json
 
 app = Flask(__name__)
 app.config.update({
-  'SECRET_KEY': config.okta_client_secret,
-  'OIDC_CLIENT_SECRETS': './client_secrets.json',
-  'OIDC_DEBUG': True,
-  'OIDC_ID_TOKEN_COOKIE_SECURE': False,
-  'OIDC_SCOPES': ["openid", "profile"],
-  'OIDC_CALLBACK_ROUTE': config.okta_callback_route
+    'SECRET_KEY': config.okta_client_secret,
+    'OIDC_CLIENT_SECRETS': './client_secrets.json',
+    'OIDC_DEBUG': True,
+    'OIDC_ID_TOKEN_COOKIE_SECURE': False,
+    'OIDC_SCOPES': ["openid", "profile"],
+    'OIDC_CALLBACK_ROUTE': config.okta_callback_route
 })
 
 oidc = OpenIDConnect(app)
@@ -215,7 +215,6 @@ Next, add a `before_request` definition to be run before route handling is
 engaged. We'll be using this to capture our Okta user information, if available.
 
 ```python
-
 # Fetch Okta user record if logged in
 @app.before_request
 def before_request():
@@ -252,7 +251,7 @@ In your local application, load `Views` > `Shared` > `Layout.cshtml`. Once the
 ASP.NET application loads this will be the visual component that is rendered.
 At the top of the page, insert the following.
 
-```dotnet
+```csharp
 @using System.Security.Claims;
 
 @if (User.Identity.IsAuthenticated)
@@ -278,7 +277,7 @@ This will be the controller that is enacted when that sign in link is clicked.
 
 Copy the following basic application structure into the file.
 
-```dotnet
+```csharp
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -342,17 +341,17 @@ Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
 ```js
 if (req.userContext && req.userContext.userinfo) {
-  const tokenSet = req.userContext.tokens;
-  const userInfo = req.userContext.userinfo;
+    const tokenSet = req.userContext.tokens;
+    const userInfo = req.userContext.userinfo;
 
-  // If Okta ID is present, pass to Box user validation
-  if (userInfo.sub) {
-    box.validateUser(userInfo, res);
-  } else {
-    console.log('No Okta ID identified');
-  }
+    // If Okta ID is present, pass to Box user validation
+    if (userInfo.sub) {
+        box.validateUser(userInfo, res);
+    } else {
+        console.log('No Okta ID identified');
+    }
 } else {
-  res.redirect('/login');
+    res.redirect('/login');
 }
 ```
 
@@ -395,9 +394,9 @@ Replace `// TODO: HANDLE BEFORE REQUEST` in the main route with the following co
 
 ```python
 if oidc.user_loggedin:
-  g.user = okta_client.get_user(oidc.user_getfield('sub'))
+    g.user = okta_client.get_user(oidc.user_getfield('sub'))
 else:
-  g.user = None
+    g.user = None
 ```
 
 This will check if an OIDC user is available, meaning that the user has already
@@ -418,7 +417,7 @@ Finally, replace `// TODO: HANDLE BOX AUTH ROUTE` in the `box_auth` route with
 the following code.
 
 ```python
-box = Box();
+box = Box()
 return box.validateUser(g)
 ```
 
@@ -432,7 +431,7 @@ the next step.
 
 Replace `// TODO: HANDLE ROUTE` in the main route with the following code.
 
-```dotnet
+```csharp
 var subClaim = HttpContext.User.Claims.First(c => c.Type == "sub");
 var sub = subClaim.Value;
 

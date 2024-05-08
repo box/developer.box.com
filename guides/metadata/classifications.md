@@ -51,14 +51,5 @@ on [Metadata](g://metadata).
 Working with classifications requires a developer to work with metadata
 templates and instances.
 
-* **The Classification Template:**  to work with classifications, an enterprise
-needs to have a classification metadata template with at least one
-classification. This template needs to have a `scope`/`templateKey` of
-`enterprise.securityClassification-6VMVochwUWo`. This template will hold the
-possible classification levels, their label names, descriptions, and `colorID`
-values.
-* **Template Instances**: to apply a classification to a file or folder, a
-developer applies an instance of the
-`enterprise.securityClassification-6VMVochwUWo` template to the item. When the
-template is applied, one of the classifications is selected from the list of
-classifications on the template.
+* **The Classification Template:**  to work with classifications, an enterprise needs to have a classification metadata template with at least one classification. This template needs to have a `scope`/`templateKey` of `enterprise.securityClassification-6VMVochwUWo`. This template will hold the possible classification levels, their label names, descriptions, and `colorID` values.
+* **Template Instances**: to apply a classification to a file or folder, a developer applies an instance of the `enterprise.securityClassification-6VMVochwUWo` template to the item. When the template is applied, one of the classifications is selected from the list of classifications on the template.

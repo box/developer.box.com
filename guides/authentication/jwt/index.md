@@ -43,8 +43,7 @@ to act on behalf of any user in an enterprise.
 There are two ways you can verify an application's permissions:
 
 - using a public and private key pair
-- using a client id and client secret
-  ([Client Credentials Grant][cca])
+- using a client id and client secret ([Client Credentials Grant][cca])
 
 To learn more about these options visit our guide on using
 [JWT without SDKs][jwtnosdk].
@@ -62,8 +61,7 @@ that:
 - Work with users that don't have a Box account
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
-- Want to store data within the application's Box account and not within the the
-  user's Box account
+- Want to store data within the application's Box account and not within the the user's Box account
 
 [app-type]: g://applications/app-types/select
 [sa]: page://platform/user-types/#service-account

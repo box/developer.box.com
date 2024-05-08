@@ -27,8 +27,8 @@ troubleshooting purposes.
 <Message type='warning'>
 
 This report will not include:
-  * API calls made within the last 48 hours
-  * Authorization and Token API calls
+* API calls made within the last 48 hours
+* Authorization and Token API calls
 
 We are working on including the above and thereby making the report suitable
 for real-time troubleshooting in the future.
@@ -129,8 +129,6 @@ ticket by attaching a downloaded copy or via shared link.
 </ImageFrame>
 
 The report has nine columns.
-
-<!-- markdownlint-disable line-length -->
 
 | Column | Description        |                                                                                                                                                                                    |
 | --------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - get_files_id_content
 related_guides:
@@ -18,8 +18,8 @@ type: guide
 total_steps: 7
 sibling_id: downloads
 parent_id: downloads
-next_page_id: downloads/zip-archive
-previous_page_id: downloads/get-url
+next_page_id: downloads/in-browser
+previous_page_id: downloads/shared-link
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/folder.md
 ---
@@ -35,13 +35,11 @@ To download a ZIP archive, follow [this](g://downloads/zip-archive) guide.
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title='.NET'>
 
-```dotnet
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -51,46 +49,46 @@ using Box.V2.Config;
 using Box.V2.JWTAuth;
 
 namespace BoxDownloadAllFiles {
-  class Program {
-    static void Main (string[] args) {
-      ExecuteMainAsync ().Wait ();
-    }
-
-    private static async Task ExecuteMainAsync () {
-      using (FileStream fs = new FileStream ($"./config.json", FileMode.Open)) {
-        var session = new BoxJWTAuth (BoxConfig.CreateFromJsonFile (fs));
-        var client = session.AdminClient (session.AdminToken ());
-        var folderId = "987654321";
-        var folder = await client.FoldersManager.GetInformationAsync (folderId);
-        var folderName = folder.Name;
-        var localFolderPath = Path.Combine (Directory.GetCurrentDirectory (), folderName);
-        ResetLocalFolder (localFolderPath);
-
-        var items = await client.FoldersManager.GetFolderItemsAsync (folderId, 1000, autoPaginate : true);
-        var fileDownloadTasks = new List<Task> ();
-        var files = items.Entries.Where (i => i.Type == "file");
-        foreach (var file in files) {
-          fileDownloadTasks.Add (client.FilesManager.DownloadStreamAsync (file.Id).ContinueWith ((t) => {
-            var localFile = File.Create (Path.Combine (localFolderPath, file.Name));
-            return t.Result.CopyToAsync (localFile);
-          }));
+    class Program {
+        static void Main (string[] args) {
+            ExecuteMainAsync ().Wait ();
         }
-        await Task.WhenAll (fileDownloadTasks);
-      }
-    }
 
-    private static void ResetLocalFolder (string localFolderPath) {
-      if (!Directory.Exists (localFolderPath)) {
-        Directory.CreateDirectory (localFolderPath);
-      } else {
-        foreach (var file in Directory.EnumerateFiles (localFolderPath)) {
-          File.Delete (Path.Combine (localFolderPath, file));
+        private static async Task ExecuteMainAsync () {
+            using (FileStream fs = new FileStream ($"./config.json", FileMode.Open)) {
+                var session = new BoxJWTAuth (BoxConfig.CreateFromJsonFile (fs));
+                var client = session.AdminClient (session.AdminToken ());
+                var folderId = "987654321";
+                var folder = await client.FoldersManager.GetInformationAsync (folderId);
+                var folderName = folder.Name;
+                var localFolderPath = Path.Combine (Directory.GetCurrentDirectory (), folderName);
+                ResetLocalFolder (localFolderPath);
+
+                var items = await client.FoldersManager.GetFolderItemsAsync (folderId, 1000, autoPaginate : true);
+                var fileDownloadTasks = new List<Task> ();
+                var files = items.Entries.Where (i => i.Type == "file");
+                foreach (var file in files) {
+                    fileDownloadTasks.Add (client.FilesManager.DownloadStreamAsync (file.Id).ContinueWith ((t) => {
+                        var localFile = File.Create (Path.Combine (localFolderPath, file.Name));
+                        return t.Result.CopyToAsync (localFile);
+                    }));
+                }
+                await Task.WhenAll (fileDownloadTasks);
+            }
         }
-        Directory.Delete (localFolderPath);
-        Directory.CreateDirectory (localFolderPath);
-      }
+
+        private static void ResetLocalFolder (string localFolderPath) {
+            if (!Directory.Exists (localFolderPath)) {
+                Directory.CreateDirectory (localFolderPath);
+            } else {
+                foreach (var file in Directory.EnumerateFiles (localFolderPath)) {
+                    File.Delete (Path.Combine (localFolderPath, file));
+                }
+                Directory.Delete (localFolderPath);
+                Directory.CreateDirectory (localFolderPath);
+            }
+        }
     }
-  }
 }
 ```
 
@@ -116,47 +114,47 @@ import java.nio.file.Paths;
 
 public class Playground {
 
- public static void main(String[] args) throws Exception {
-  Path configPath = Paths.get("config.json");
-  Path currentDir = Paths.get("").toAbsolutePath();
-  try (BufferedReader reader = Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
-   BoxConfig boxConfig = BoxConfig.readFrom(reader);
-   BoxDeveloperEditionAPIConnection client = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
-   String folderId = "987654321";
-   BoxFolder folder = new BoxFolder(client, folderId);
-   String folderName = folder.getInfo().getName();
-   Path localFolderPath = currentDir.resolve(Paths.get(folderName));
-   if (!Files.exists(localFolderPath)) {
-    localFolderPath = Files.createDirectory(localFolderPath);
-   } else {
-    localFolderPath = resetLocalFolder(localFolderPath);
-   }
+    public static void main(String[] args) throws Exception {
+        Path configPath = Paths.get("config.json");
+        Path currentDir = Paths.get("").toAbsolutePath();
+        try (BufferedReader reader = Files.newBufferedReader(configPath, Charset.forName("UTF-8"))) {
+            BoxConfig boxConfig = BoxConfig.readFrom(reader);
+            BoxDeveloperEditionAPIConnection client = BoxDeveloperEditionAPIConnection.getAppEnterpriseConnection(boxConfig);
+            String folderId = "987654321";
+            BoxFolder folder = new BoxFolder(client, folderId);
+            String folderName = folder.getInfo().getName();
+            Path localFolderPath = currentDir.resolve(Paths.get(folderName));
+            if (!Files.exists(localFolderPath)) {
+                localFolderPath = Files.createDirectory(localFolderPath);
+            } else {
+                localFolderPath = resetLocalFolder(localFolderPath);
+            }
 
-   for (BoxItem.Info itemInfo: folder) {
-    if (itemInfo instanceof BoxFile.Info) {
-     BoxFile.Info fileInfo = (BoxFile.Info) itemInfo;
-     BoxFile file = new BoxFile(client, fileInfo.getID());
-     String localFilePath = localFolderPath.resolve(Paths.get(fileInfo.getName())).toAbsolutePath().toString();
-     FileOutputStream stream = new FileOutputStream(localFilePath);
-     file.download(stream);
-     stream.close();
+            for (BoxItem.Info itemInfo: folder) {
+                if (itemInfo instanceof BoxFile.Info) {
+                    BoxFile.Info fileInfo = (BoxFile.Info) itemInfo;
+                    BoxFile file = new BoxFile(client, fileInfo.getID());
+                    String localFilePath = localFolderPath.resolve(Paths.get(fileInfo.getName())).toAbsolutePath().toString();
+                    FileOutputStream stream = new FileOutputStream(localFilePath);
+                    file.download(stream);
+                    stream.close();
+                }
+            }
+
+        }
     }
-   }
 
-  }
- }
-
- static Path resetLocalFolder(Path localFolderPath) throws IOException {
-  Files.list(localFolderPath).forEach(file -> {
-   System.out.println(file.getFileName());
-   try {
-    Files.delete(file.toAbsolutePath());
-   } catch (IOException e) {}
-  });
-  Files.delete(localFolderPath);
-  localFolderPath = Files.createDirectory(localFolderPath);
-  return localFolderPath;
- }
+    static Path resetLocalFolder(Path localFolderPath) throws IOException {
+        Files.list(localFolderPath).forEach(file -> {
+            System.out.println(file.getFileName());
+            try {
+                Files.delete(file.toAbsolutePath());
+            } catch (IOException e) {}
+        });
+        Files.delete(localFolderPath);
+        localFolderPath = Files.createDirectory(localFolderPath);
+        return localFolderPath;
+    }
 }
 ```
 
@@ -181,89 +179,87 @@ let folderId = "987654321";
 let folderName;
 let localFolderPath;
 client.folders
-  .get(folderId, null)
-  .then(folderInfo => {
-    folderName = folderInfo.name;
+    .get(folderId, null)
+    .then(folderInfo => {
+        folderName = folderInfo.name;
 
-    return client.folders.getItems(folderId, { limit: 1000 });
-  })
-  .then(folderItemsIterator => {
-    return autoPage(folderItemsIterator);
-  })
-  .then(folderItems => {
-    console.log(folderName);
-    console.log(folderItems.length);
-    let files = folderItems.filter(item => {
-      return item.type === "file";
+        return client.folders.getItems(folderId, { limit: 1000 });
+    })
+    .then(folderItemsIterator => {
+        return autoPage(folderItemsIterator);
+    })
+    .then(folderItems => {
+          console.log(folderName);
+          console.log(folderItems.length);
+          let files = folderItems.filter(item => {
+              return item.type === "file";
+          });
+          console.log(files);
+          localFolderPath = createLocalFolder(folderName);
+          let downloadPromises = [];
+          files.forEach(file => {
+              downloadPromises.push(
+                  client.files.getReadStream(file.id, null).then(stream => {
+                      let output = fs.createWriteStream(
+                        path.join(localFolderPath, file.name)
+                      );
+                      stream.pipe(output);
+                  })
+              );
+          });
+          return Promise.all(downloadPromises);
+    })
+    .then(() => {
+        console.log("Downloaded all files...");
+        console.log(fs.readdirSync(localFolderPath));
     });
-    console.log(files);
-    localFolderPath = createLocalFolder(folderName);
-    let downloadPromises = [];
-    files.forEach(file => {
-      downloadPromises.push(
-        client.files.getReadStream(file.id, null).then(stream => {
-          let output = fs.createWriteStream(
-            path.join(localFolderPath, file.name)
-          );
-          stream.pipe(output);
-        })
-      );
-    });
-    return Promise.all(downloadPromises);
-  })
-  .then(() => {
-    console.log("Downloaded all files...");
-    console.log(fs.readdirSync(localFolderPath));
-  });
 
 function createLocalFolder(folderName) {
-  let localFolderName = path.join(__dirname, folderName);
-  try {
-    fs.mkdirSync(localFolderName);
-  } catch (e) {
-    if (e.code === "EEXIST") {
-      resetLocalFolder(localFolderName);
-      fs.mkdirSync(localFolderName);
-    } else {
-      throw e;
+    let localFolderName = path.join(__dirname, folderName);
+    try {
+        fs.mkdirSync(localFolderName);
+    } catch (e) {
+        if (e.code === "EEXIST") {
+            resetLocalFolder(localFolderName);
+            fs.mkdirSync(localFolderName);
+        } else {
+            throw e;
+        }
     }
-  }
-  return localFolderName;
+    return localFolderName;
 }
 
 function resetLocalFolder(localFolderName) {
-  if (fs.existsSync(localFolderName)) {
-    fs.readdirSync(localFolderName).forEach(localFileName => {
-      console.log(localFileName);
-      fs.unlinkSync(path.join(localFolderName, localFileName));
-    });
-    fs.rmdirSync(localFolderName);
-  }
+    if (fs.existsSync(localFolderName)) {
+        fs.readdirSync(localFolderName).forEach(localFileName => {
+            console.log(localFileName);
+            fs.unlinkSync(path.join(localFolderName, localFileName));
+        });
+        fs.rmdirSync(localFolderName);
+    }
 }
 
 function autoPage(iterator) {
-  let collection = [];
-  let moveToNextItem = () => {
-    return iterator.next().then(item => {
-      if (item.value) {
-        collection.push(item.value);
-      }
-      if (item.done !== true) {
-        return moveToNextItem();
-      } else {
-        return collection;
-      }
-    });
-  };
-  return moveToNextItem();
+    let collection = [];
+    let moveToNextItem = () => {
+        return iterator.next().then(item => {
+            if (item.value) {
+                collection.push(item.value);
+            }
+            if (item.done !== true) {
+                return moveToNextItem();
+            } else {
+                return collection;
+            }
+        });
+    };
+    return moveToNextItem();
 }
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

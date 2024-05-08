@@ -152,14 +152,10 @@ These changes will be logged as template changes but not as file changes.
 The operation `editField` option edits any number of the base properties of a
 field like the `displayName`, `description`, `key`, and `hidden` state.
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter  |                                                                |
 |------------|----------------------------------------------------------------|
 | `data`     | An object representing the new properties to set for the field |
 | `fieldKey` | The key of the field to be edited                              |
-
-<!-- markdownlint-enable line-length -->
 
 ```json
 {
@@ -186,13 +182,9 @@ This may affect existing instances of this template.
 
 The operation `removeField` removes an field from a template.
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter  |                                                  |
 |------------|--------------------------------------------------|
 | `fieldKey` | The key of the field to remove from the template |
-
-<!-- markdownlint-enable line-length -->
 
 ```json
 {
@@ -217,8 +209,6 @@ Both the [`enum`](g://metadata/fields/enum) and
 [`multiSelect`](g://metadata/fields/multi-select) metadata field types support
 some additional operations to change the options of the fields.
 
-<!-- markdownlint-disable line-length -->
-
 | Operation                                                                       |                                                 |
 |---------------------------------------------------------------------------------|-------------------------------------------------|
 | [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | Adds an option to an `enum` field               |
@@ -229,7 +219,5 @@ some additional operations to change the options of the fields.
 | [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | Edits a `multiSelect` field option             |
 | [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | Re-orders the options on a `multiSelect` field |
 | [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field options          |
-
-<!-- markdownlint-enable line-length -->
 
 [endpoint]: e://put_metadata_templates_id_id_schema
