@@ -25,7 +25,7 @@ parameters:
 
 1. Set the `suppress_notification` parameter in
    the [`signers`][signers] object to `true` to turn the notifications off.
-2. Set the the [`embed_url_external_user_id` parameter][externalid]
+2. Set the [`embed_url_external_user_id` parameter][externalid]
    to specify the user who will not receive notifications.
 
 This configuration turns off the
