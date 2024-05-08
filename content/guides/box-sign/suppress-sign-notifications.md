@@ -8,15 +8,15 @@ related_guides:
 
 # Suppress default Box Sign notifications
 
-Box Sign allows you to suppress the **default** Box email
-notifications during Sign workflow.​​ This feature gives you
-the ownership of your notifications, allowing you to decide
-who should receive the notification, and how such notification
-will look like.
-Suppressing default notifications means new options, such as:
+Box Sign API allows you to suppress the **default** Box email
+notifications sent during the Sign workflow.​​ 
+This feature gives you the ownership of your Sign notifications,
+by giving you the following options:
 
-* using a fully-customized email notification template to send emails from your domain
-* trigger messages using different notification mechanisms like push notifications or text messages.​
+* You can use a fully-customized email notification
+template to send emails from your domain.
+* You can trigger notifications using various
+notification mechanisms like push notifications or text messages.​
 
 ## Using API to suppress default Box notifications
 
