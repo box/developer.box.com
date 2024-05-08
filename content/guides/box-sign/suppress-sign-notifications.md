@@ -8,22 +8,27 @@ related_guides:
 
 # Suppress default Box Sign notifications
 
-Box Sign API allows you to suppress the **default** Box email
-notifications sent during the Sign workflow.​​ 
-This feature gives you the ownership of your Sign notifications,
-by giving you the following options:
+Box Sign API allows you to suppress the default Box
+email notifications sent during the Sign workflow.
+​​This feature gives you the ownership of your Sign notifications, by giving you the following options:
 
 * You can use a fully-customized email notification
-template to send emails from your domain.
+  template to send emails from your domain.
 * You can trigger notifications using various
-notification mechanisms like push notifications or text messages.​
+  notification mechanisms like push notifications or text messages.​
 
 ## Using API to suppress default Box notifications
 
-You can control sending default Box email notification with the `suppress_notification` parameter in the [`signers`][signers] object. 
-If you set it  to `true` for a particular signer, 
-automatic Box Sign emails are turned off, allowing
-you to send your own notifications.
+To suppress Box email notifications, you must set the following
+parameters:
+
+1. Set the `suppress_notification` parameter in the [`signers`][signers] object to `true` to turn the notifications off.
+2. Set the the [`embed_url_external_user_id` parameter][externalid] to specify the user who will not receive notifications.
+
+This configuration turns off the
+automatic Box Sign email notifications for a given user.
+As a result, you can configure 
+and send your own notifications.
 
 ```curl
 curl -i -X POST "https://api.box.com/2.0/sign_requests" \
@@ -34,6 +39,7 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
             "role": "signer",
             "email": "example_email@box.com"
             "suppress_notifications": true
+            "embed_url_external_user_id": "1234"
           }
         ],
        "source_files": [
@@ -51,3 +57,4 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
 ```
 
 [signers]: e://post-sign-requests/#param-signers
+[externalid]: e://post-sign-requests/#param-signers-embed_url_external_user_id
