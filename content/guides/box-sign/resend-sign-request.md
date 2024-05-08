@@ -1,5 +1,11 @@
 ---
-rank: 3
+rank: 2
+related_endpoints:
+  - post-sign-requests-id-resend
+related_guides:
+  - box-sign/create-sign-request
+  - box-sign/cancel-sign-request
+  - box-sign/sign-templates
 ---
 
 # Resend Box Sign Request
