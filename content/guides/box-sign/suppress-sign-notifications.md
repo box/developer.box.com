@@ -10,7 +10,8 @@ related_guides:
 
 Box Sign API allows you to suppress the default Box
 email notifications sent during the Sign workflow.
-​​This feature gives you the ownership of your Sign notifications, by giving you the following options:
+​​This feature facilitates the ownership of Box Sign notifications,
+by giving you the following options:
 
 * You can use a fully-customized email notification
   template to send emails from your domain.
@@ -22,12 +23,14 @@ email notifications sent during the Sign workflow.
 To suppress Box email notifications, you must set the following
 parameters:
 
-1. Set the `suppress_notification` parameter in the [`signers`][signers] object to `true` to turn the notifications off.
-2. Set the the [`embed_url_external_user_id` parameter][externalid] to specify the user who will not receive notifications.
+1. Set the `suppress_notification` parameter in
+   the [`signers`][signers] object to `true` to turn the notifications off.
+2. Set the the [`embed_url_external_user_id` parameter][externalid]
+   to specify the user who will not receive notifications.
 
 This configuration turns off the
 automatic Box Sign email notifications for a given user.
-As a result, you can configure 
+As a result, you can configure
 and send your own notifications.
 
 ```curl
