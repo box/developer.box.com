@@ -1,7 +1,6 @@
 ---
 hide_title: true
-alias_paths:
-  - /ai-dev-zone
+alias_paths: []
 centered: false
 ---
 # Box AI Developer Zone
@@ -30,7 +29,7 @@ view sample code, explore Box AI use cases, and more!
     </p>
   <TileGrid rows="3">
     <Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
-        Summarize a document in a selected tone of voice. 
+        Summarize a document in a selected tone of voice.
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
