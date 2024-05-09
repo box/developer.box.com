@@ -34,4 +34,4 @@ Some examples of events that can be listened to are:
 - `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED`, when a signer's email is bounced.
 - `SIGN_REQUEST.SIGNER_SIGNED`, when the signature request is signed.
 - `SIGN_REQUEST.SIGNATURE_REQUESTED`, when the signature is requested from the signer.
-- `SIGN_REQUEST.ERROR_FINALIZING`, when the signature request could not be processes.
+- `SIGN_REQUEST.ERROR_FINALIZING`, when the signature request could not be processed.
