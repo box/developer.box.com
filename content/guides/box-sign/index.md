@@ -16,7 +16,7 @@ To locate your account type, navigate to **Account Settings** and scroll down
 to the **Account Details** section of the **Account** tab. For Admin details on
 restricting access, please see our [support article][restrict].
 
-## Required Scopes
+## Required scopes
 
 The following [scopes][scopes] must be enabled for an application before use of
 Box Sign's endpoints.

@@ -10,8 +10,8 @@ related_guides:
 # Sign webhooks
 
 Sign webhooks allow you to receive notifications about events that happen with 
-the signature requests. You can use them to trigger actions in your own 
-application, or to notify your users about events that happen in Sign.
+Box Sign signature requests. You can use them to trigger actions in your own 
+application, or to notify your users about events that happen in Box Sign.
 
 This is particularly important since the signature requests are asynchronous, 
 and the signers can interact with them at any time, possibly outside of your 
@@ -19,11 +19,10 @@ application.
 
 ## Sign related events
 
-There are Sign related events that can trigger the webhooks. Like most of Box 
-events the listeners are set at folder or document level.
+There are Box Sign-related events that can trigger the webhooks. Like most of Box events the listeners are set at the folder or document level.
 
 The most common use case is to listen to the events at the folder where the 
-sign requests are created. This way you can listen to all the signature 
+signature requests are created. This way you can listen to all the signature 
 requests created in that folder.
 
 Some examples of events that can be listened to are:
