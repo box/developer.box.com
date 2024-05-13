@@ -29,6 +29,12 @@ notifications with the following options:
 * Apart from emails, you can send push notifications
   or text messages.​
 
+<Message type="notice">
+
+When you choose to suppress Box email notifications, your organization assumes responsibility for ensuring the delivery to Signers of all notifications at the appropriate time in the signing process and with the appropriate content, in compliance with all applicable laws and regulations, including with respect to obtaining Signer consent to the delivery methods used, if applicable.
+
+</Message>
+
 ## Using Box Sign API to suppress default notifications
 
 To suppress Box Sign email notifications, you must
@@ -70,6 +76,10 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
           }
      }'
 ```
+
+## Signing Log Changes
+
+When Box Sign default notifications are suppressed, the Signing Log will indicate that the Sender has suppressed all Box Sign notifications and will provide additional information on the system used for purposes of notification delivery and the user ID of the Signer on your organization’s system, as provided to Box Sign through your API integration.
 
 [signers]: e://post-sign-requests/#param-signers
 [externalid]: e://post-sign-requests/#param-signers-embed_url_external_user_id
