@@ -22,15 +22,15 @@ Box iOS SDK with a new blank application.
 1. Start Xcode
 2. From the top menu, select **File** -> **New** -> **Project...**
 3. Select the option for **Single View App**
-  <ImageFrame center>
-    ![Select iOS application type](./create-app-type.png)
-  </ImageFrame>
-4. Enter your application configuration information, including the
-  `Product Name`, `Organization Identifier`, and `Organization Name`.
-   <ImageFrame center>
-     ![Configure iOS application](./create-app-config.png)
-   </ImageFrame>
+    <ImageFrame center>
+      ![Select iOS application type](./create-app-type.png)
+    </ImageFrame>
+4. Enter your application configuration information, including the `Product Name`, `Organization Identifier`, and `Organization Name`.
+    <ImageFrame center>
+      ![Configure iOS application](./create-app-config.png)
+    </ImageFrame>
 5. Select a local storage location for the application and click **Create**
+
 </Choice>
 
 ## Summary

@@ -18,8 +18,8 @@ required representation format.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [pdf]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [pdf]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Multiple dimensions
@@ -30,8 +30,8 @@ header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [jpg?dimensions=94x94]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [jpg?dimensions=94x94]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## Multiple representations
@@ -41,8 +41,8 @@ types in the `x-rep-hints`-header.
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ## API Response

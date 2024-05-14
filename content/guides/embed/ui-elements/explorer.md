@@ -44,38 +44,37 @@ and JWT.
 
 ## Sample HTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8" />
-		<title>Box Content Explorer Demo</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>Box Content Explorer Demo</title>
 
-		<!-- Latest version of the explorer css for your locale -->
-		<link
-			rel="stylesheet"
-			href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
-	</head>
-	<body>
-		<div class="container" style="height:600px"></div>
-		<!-- Latest version of the explorer js for your locale -->
-		<script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
-		<script>
-			var folderId = "123";
-			var accessToken = "abc";
-			var contentExplorer = new Box.ContentExplorer();
-			contentExplorer.show(folderId, accessToken, {
-				container: ".container",
-			});
-		</script>
-	</body>
+        <!-- Latest version of the explorer css for your locale -->
+        <link
+            rel="stylesheet"
+            href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
+    </head>
+    <body>
+        <div class="container" style="height:600px"></div>
+        <!-- Latest version of the explorer js for your locale -->
+        <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
+        <script>
+            var folderId = "123";
+            var accessToken = "abc";
+            var contentExplorer = new Box.ContentExplorer();
+            contentExplorer.show(folderId, accessToken, {
+                container: ".container",
+            });
+        </script>
+    </body>
 </html>
 ```
 
 ## Demo
 
+```sh
 <iframe
   height="560"
   scrolling="no"
@@ -86,8 +85,7 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-
-<!-- markdownlint-enable line-length -->
+```
 
 ## API
 
@@ -150,8 +148,6 @@ contentExplorer.removeListener(eventName, listener);
 contentExplorer.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                      |
@@ -192,18 +188,16 @@ contentExplorer.removeAllListeners();
 
 ### Events
 
-| Event Name | Event Data    | Description                                 |
-| ---------- | ------------- | ------------------------------------------- | -------- | ------------------------------------------ |
-| `select`   | `Array<File   | Web Link                                    | Folder>` | Will be fired when item rows are selected. |
-| `rename`   | `File         | Web Link                                    | Folder`  | Will be fired when an item is renamed.     |
-| `preview`  | `File`        | Will be fired when a file is previewed.     |
-| `download` | `Array<File>` | Will be fired when items are downloaded.    |
-| `delete`   | `Array<File>` | Will be fired when items are deleted.       |
-| `upload`   | `Array<File>` | Will be fired when items are uploaded.      |
-| `navigate` | `Folder`      | Will be fired when navigating into folders. |
-| `create`   | `Folder`      | Will be fired when a new folder is created  |
-
-<!-- markdownlint-enable line-length -->
+| Event Name | Event Data                           | Description                                 |
+| ---------- | ------------------------------------ | ------------------------------------------- |
+| `select`   | `Array<File \| Web Link \| Folder>`  | Will be fired when item rows are selected.  |
+| `rename`   | `File \| Web Link \| Folder`         | Will be fired when an item is renamed.      |
+| `preview`  | `File`                               | Will be fired when a file is previewed.     |
+| `download` | `Array<File>`                        | Will be fired when items are downloaded.    |
+| `delete`   | `Array<File>`                        | Will be fired when items are deleted.       |
+| `upload`   | `Array<File>`                        | Will be fired when items are uploaded.      |
+| `navigate` | `Folder`                             | Will be fired when navigating into folders. |
+| `create`   | `Folder`                             | Will be fired when a new folder is created  |
 
 ## Keyboard Shortcuts
 
@@ -244,8 +238,6 @@ configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
-
-<!-- markdownlint-disable line-length -->
 
 | Scope Name      | Permissions granted                                                               |
 | --------------- | --------------------------------------------------------------------------------- |
@@ -290,8 +282,7 @@ Make sure you have the following installed:
 ### Create and configure an app
 
 1. [Create a Box app][box-app].
-2. Add the local development address in the CORS Domains:
-   ![CORS Domains](./images/box-app-cors.png)
+2. Add the local development address in the CORS Domains: ![CORS Domains](./images/box-app-cors.png)
 3. Generate a [developer token][token].
 
 ### Create a metadata template
@@ -315,121 +306,120 @@ To make things easier, you can use a [sample project][metadata-project] to launc
    | `METADATA_TEMPLATE_NAME` | Name of your already created metadata template. **Note**: To make sure you provided the proper name, use the [metadata API][get-template] to retrieve the name, or copy it from the URL in the Admin Console. ![Metadata name in Admin Console](./images/metadata-template-name.png) If you decide to change the template name in the UI, you change the label only. The name to use in the component is always the you provided at the beginning. |
    | `ROOTFOLDER_ID`          | ID of Box folder to which you applied the metadata template.                                                                                                                                                                                                                                                                                                                                                                                       |
 
-The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
+    The `defaultView`, `fieldsToShow`, and `metadataQuery` parameters are already defined in the sample project, as in the example below.
 
-For additional information on metadata queries, see [this guide][metadata-query].
+    For additional information on metadata queries, see [this guide][metadata-query].
 
 3. Pass the required parameters to the Content Explorer component.
 
-```js
+    ```js
+    [...]
 
-  [...]
+      function App() {
+          [...]
 
-    function App() {
-      [...]
-
-      return (
-          <IntlProvider locale="en">
-            <div className="App">
-              <header className="App-header">
-                <h2>Metadata view in Content Explorer</h2>
-              </header>
-              <section>
-                <div className="metadata-based-view">
-                  <ContentExplorer
-                    rootFolderId={rootFolderID}
-                    token={token}
-                    metadataQuery={metadataQuery}
-                    fieldsToShow={fieldsToShow}
-                    defaultView={defaultView}
-                  />
+          return (
+              <IntlProvider locale="en">
+                <div className="App">
+                  <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                  </header>
+                  <section>
+                    <div className="metadata-based-view">
+                      <ContentExplorer
+                        rootFolderId={rootFolderID}
+                        token={token}
+                        metadataQuery={metadataQuery}
+                        fieldsToShow={fieldsToShow}
+                        defaultView={defaultView}
+                      />
+                    </div>
+                  </section>
                 </div>
-              </section>
-            </div>
-          </IntlProvider>
-      );
+              </IntlProvider>
+          );
       }
 
-    export default App;
-```
+      export default App;
+    ```
 
 A sample code for a React component including the Content Explorer metadata view would look as follows:
 
 ```js
 function App() {
-	// Get the token from Developer Console (app's configuration tab)
-	const token = "<DEVELOPER_TOKEN>";
+    // Get the token from Developer Console (app's configuration tab)
+    const token = "<DEVELOPER_TOKEN>";
 
-	// Folder ID with a metadata template applied
-	// The metadataQuery will apply to this folder
-	const rootFolderID = "<ROOTFOLDER_ID>";
+    // Folder ID with a metadata template applied
+    // The metadataQuery will apply to this folder
+    const rootFolderID = "<ROOTFOLDER_ID>";
 
-	// Get ENTERPRISE_ID from Developer Console (app's general settings)
-	const EID = "<ENTERPRISE_ID>";
+    // Get ENTERPRISE_ID from Developer Console (app's general settings)
+    const EID = "<ENTERPRISE_ID>";
 
-	// Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
-	const templateName = "<METADATA_TEMPLATE_NAME>";
+    // Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
+    const templateName = "<METADATA_TEMPLATE_NAME>";
 
-	// Define metadata source
-	// Example: enterprise_123456789.metadatatemplate
-	const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
+    // Define metadata source
+    // Example: enterprise_123456789.metadatatemplate
+    const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
 
-	const metadataQuery = {
-		from: metadataSource,
+    const metadataQuery = {
+        from: metadataSource,
 
-		// Filter items in the folder by existing metadata key
-		query: "key = :arg1",
+        // Filter items in the folder by existing metadata key
+        query: "key = :arg1",
 
-		// Display items with value
-		query_params: { arg1: "value" },
+        // Display items with value
+        query_params: { arg1: "value" },
 
-		// Define the ancestor folder ID
-		ancestor_folder_id: 0,
+        // Define the ancestor folder ID
+        ancestor_folder_id: 0,
 
-		// Define which other metadata fields you'd like to display
-		fields: [
-			`${metadataSource}.name`,
-			`${metadataSource}.last_contacted_at`,
-			`${metadataSource}.industry`,
-			`${metadataSource}.role`,
-		],
-	};
+        // Define which other metadata fields you'd like to display
+        fields: [
+            `${metadataSource}.name`,
+            `${metadataSource}.last_contacted_at`,
+            `${metadataSource}.industry`,
+            `${metadataSource}.role`,
+        ],
+    };
 
-	// The metadata fields/columns to view - must be valid field names from the metadata template
-	const fieldsToShow = [
-		// Determine if the user can edit the metadata directly from Content Explorer component
-		{ key: `${metadataSource}.name`, canEdit: false },
+    // The metadata fields/columns to view - must be valid field names from the metadata template
+    const fieldsToShow = [
+        // Determine if the user can edit the metadata directly from Content Explorer component
+        { key: `${metadataSource}.name`, canEdit: false },
 
-		// Determine label alias on metadata column with displayName prop
-		{ key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
-		{ key: `${metadataSource}.last_contacted_at`, canEdit: true },
-		{ key: `${metadataSource}.role`, canEdit: true },
-	];
+        // Determine label alias on metadata column with displayName prop
+        { key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
+        { key: `${metadataSource}.last_contacted_at`, canEdit: true },
+        { key: `${metadataSource}.role`, canEdit: true },
+    ];
 
-	// defaultView - a required prop to paint the metadata view.
-	// If not provided, you'll get regular folder view.
-	const defaultView = "metadata";
+    // defaultView - a required prop to paint the metadata view.
+    // If not provided, you'll get regular folder view.
+    const defaultView = "metadata";
 
-	return (
-		<IntlProvider locale="en">
-			<div className="App">
-				<header className="App-header">
-					<h2>Metadata view in Content Explorer</h2>
-				</header>
-				<section>
-					<div className="metadata-based-view">
-						<ContentExplorer
-							rootFolderId={rootFolderID}
-							token={token}
-							metadataQuery={metadataQuery}
-							fieldsToShow={fieldsToShow}
-							defaultView={defaultView}
-						/>
-					</div>
-				</section>
-			</div>
-		</IntlProvider>
-	);
+    return (
+        <IntlProvider locale="en">
+            <div className="App">
+                <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                </header>
+                <section>
+                    <div className="metadata-based-view">
+                        <ContentExplorer
+                            rootFolderId={rootFolderID}
+                            token={token}
+                            metadataQuery={metadataQuery}
+                            fieldsToShow={fieldsToShow}
+                            defaultView={defaultView}
+                        />
+                    </div>
+                </section>
+            </div>
+        </IntlProvider>
+    );
 }
 
 export default App;
@@ -438,8 +428,6 @@ export default App;
 <Message type='notice'>
 **TIP**: For a detailed flow, see [Metadata view blog post][blogpost].
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

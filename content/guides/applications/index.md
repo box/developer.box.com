@@ -1,12 +1,12 @@
 ---
-rank: 1
+rank: 10
 alias_paths:
   - /docs/usage-patterns
   - /docs/quickstart-guides
   - /docs/getting-started-box-integration
   - /docs/get-started-with-the-box-api
   - /docs/app-management
-  - /docs/configuring-box-platform 
+  - /docs/configuring-box-platform
 ---
 
 # Applications
@@ -26,19 +26,16 @@ a Developer Token or copy the Client ID.
 The My Apps page allows you to:
 
 1. Create [a new app][select].
-1. View application description using the `i` icon.
-1. Copy the Client ID using the `copy` icon.
-1. Check application [enablement][enablement]
-and [authorization][authorization] status. Apps published
-to App Center display status from App Center.
-1. Use a menu available for every entry to access
-the configuration details of your application or to generate a [Developer Token][token].
+2. View application description using the `i` icon.
+3. Copy the Client ID using the `copy` icon.
+4. Check application [enablement][enablement] and [authorization][authorization] status. Apps published to App Center display status from App Center.
+5. Use a menu available for every entry to access the configuration details of your application or to generate a [Developer Token][token].
 
 ## App Insights
 
 Admins and co-admins can access the Platform Insights
 dashboard that provides a comprehensive
-view of the organization’s platform usage. 
+view of the organization’s platform usage.
 This includes app-related data, such as:
 
 * The total number of API calls per application.

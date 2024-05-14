@@ -9,7 +9,6 @@ required_guides: []
 alias_paths: []
 ---
 
-<!-- markdownlint-disable line-length -->
 # Download ZIP Archive
 
 To download all files in a folder or an entire folder structure, you have to create and download a ZIP archive.
@@ -24,10 +23,10 @@ The response will look similar to the following:
 
 ```json
 {
-"download_url":"https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
-"status_url":"https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
-"expires_at":"2023-02-28T10:23:54Z",
-"name_conflicts":[]
+  "download_url": "https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
+  "status_url": "https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
+  "expires_at": "2023-02-28T10:23:54Z",
+  "name_conflicts": []
 }
 ```
 
@@ -47,7 +46,7 @@ Download URL is valid only for a the time specified in `expires_at` parameter.
 </Message>
 
 ## Download files
- 
+
 Place the download ID in the file location URL as in the sample below
 to point to the right files.
 

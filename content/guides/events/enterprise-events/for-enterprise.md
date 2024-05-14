@@ -28,14 +28,10 @@ a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 
 ## Stream Types
 
-<!-- markdownlint-disable line-length -->
-
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
 | `admin_logs_streaming`   | Enables subscribing to live events in near real time                      |
-
-<!-- markdownlint-enable line-length -->
 
 ## Live Monitoring
 
@@ -95,10 +91,8 @@ A full list of event types can be found below.
 
 ## Event Types
 
-The following events can be triggered for an enterprise. This list is not 
+The following events can be triggered for an enterprise. This list is not
 exhaustive, so it is possible events appear that are not listed.
-
-<!-- markdownlint-disable line-length -->
 
 | Event name                                     | Description                                                                                     |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -240,7 +234,6 @@ exhaustive, so it is possible events appear that are not listed.
 | `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE` | An OAuth 2.0 access token has been created                                                      |
 | `WATERMARK_LABEL_CREATE`                       | A watermark is added to a file                                                                  |
 | `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
-<!-- markdownlint-enable line-length -->
 
 [shield-events]: g://events/event-triggers/shield-alert-events
 [reports]:https://support.box.com/hc/en-us/articles/360043696534-Running-Reports

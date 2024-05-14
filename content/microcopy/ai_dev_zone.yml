@@ -1,0 +1,121 @@
+---
+// title: title of the page
+title: Box AI Developer Zone
+
+// files: labels
+files:
+  headline: Sample files
+  labels:
+    415542803939:
+      name: Sample_document_short.pdf
+      description: Document
+    416044542013:
+      name: Sample_book.pdf
+      description: Document
+    1415911293122:
+      name: Sample_powerpoint.ppx
+      description: Presentation
+    420985736453:
+      name: Sample_document_long.pdf
+      description: Document
+    1472263705884:
+      name: Sample_article.docx
+      description: Document
+    1495324886257:
+      name: Sample_invoice.pdf
+      description: Document
+    1495321808917:
+      name: Sample_data.pdf
+      description: Document
+    1496370734082:
+      name: Sample_powerpoint.ppx
+      description: Presentation
+    1496435380115:
+      name: Sample_article.docx
+      description: Document
+    1511804164480:
+      name: Sample_contract.docx
+      description: Document
+    1514387608242:
+      name: Sample_document.pdf
+      description: Document
+    733459462002:
+      name: Sample_document_short.pdf
+      description: Document
+  go_back_button: AI Dev Zone
+
+sample_code:
+  summary:
+    headline: Box AI API
+    paragraph: Use this endpoint to integrate
+     the document summary into your application.
+    pricing: Box AI API is available in public beta to all
+      Enterprise Plus customers.
+  metadata:
+    headline: Box Metadata Suggestions API
+    paragraph: Use this endpoint to integrate
+     document metadata suggestions into
+     your application.
+    pricing: Pricing and packaging to be announced.
+  qa:
+    headline: Box AI API
+    paragraph: Use this endpoint to integrate
+     document Q&A into your application.
+    pricing: Box AI API is available in public beta to all
+      Enterprise Plus customers.
+  developer_console:
+    headline: Box Developer Console
+    cta: Get started
+    info: To use the Box API, you first have to create
+      an application in Box. Visit the Box Developer Console to
+      start creating, configuring, and monitoring your apps.
+
+other_langs_info: Box AI works in a number of languages, but is
+  primarily trained on English documents. See Box AI API
+  documentation for details on supported languages.
+
+side_panel:
+  summary:
+    title: Document summary
+    cta: Learn more
+    url: /guides/box-ai/ask-questions/
+  metadata:
+    title: Metadata extraction
+    cta: Learn more
+    url:
+      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
+  qa:
+    title: Document Q&A
+    cta: Learn more
+    url: /guides/box-ai/
+  tab_demo: Demo
+  tab_sample_code: Sample code
+  filtersError: Select the tone of voice and length to generate
+    a document summary.
+
+document_summary:
+  placeholder: Select value
+  instruction: Select the tone of voice and
+   length to generate a document summary.
+  clear: Clear
+  generate: Generate summary
+  tone_of_voice: Tone of voice
+  length: Length
+  error: Try again
+
+document_metadata:
+  instruction: Extract metadata from
+   a selected document.
+  clear: Clear
+  extract: Extract
+  error: Try again
+
+summary_filters:
+  formal: Formal
+  casual: Casual
+  funny: Funny
+  pirate: Pirate
+  short: Short
+  sentence: One sentence
+  paragraph: One paragraph
+  characters: 500 characters

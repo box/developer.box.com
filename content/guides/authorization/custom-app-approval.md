@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides:
 - authorization/limited-access-approval
 - authorization/custom-skill-approval
-required_guides: 
+required_guides:
 - authorization
 - authentication/oauth2/oauth2-setup
 - authentication/jwt/jwt-setup
@@ -21,7 +21,7 @@ Unpublished applications using [OAuth 2.0][oauth] authentication may
 require enablement by a Box Admin if they are [inactive by default][upa].
 
 A Box Admin needs an application's Client ID in order to properly
-authorize or enable it in the Admin Console. 
+authorize or enable it in the Admin Console.
 
 <Message>
 You can use [My Apps][apps] view to quickly look up
@@ -51,8 +51,8 @@ Navigate to the **Enablement** tab for your application in the [Developer Consol
 </ImageFrame>
 
 Submitting the application for approval will send an email to your
-enterprise's Primary Admin to approve the application. 
-When a Box Admin approves or declines your request, 
+enterprise's Primary Admin to approve the application.
+When a Box Admin approves or declines your request,
 you will get an email with the decision.
 More information on this process is available in our [support article on app authorization][app-auth].
 
@@ -63,11 +63,8 @@ application.
 
 ### As a developer
 
-1. Navigate to the **Configuration** tab for your application
-in the [Developer Console][devconsole]. 
-2. Scroll down to the OAuth 2.0 Credentials
-section and copy the **Client ID** value to provide
-to a Box Admin. 
+1. Navigate to the **Configuration** tab for your application in the [Developer Console][devconsole].
+2. Scroll down to the OAuth 2.0 Credentials section and copy the **Client ID** value to provide to a Box Admin.
 
 Alternatively, hover over the application in the
 [My Apps][apps] view to look up the **ClientID** and then
@@ -83,14 +80,10 @@ copy it using the `copy` button.
 
 ### As an Admin
 
-1. Navigate to the [Admin Console][adminconsole] and
-select the **Apps** tab (1) from the left navigation panel. 
-2. Click the
-**Custom Apps Manager** tab (2) at the top of your screen. 
-3. For both Server and User Authentication Apps screens, click
-the **Add App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Custom Apps Manager table menu (4)
-to authorize and enable apps.
+1. Navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel.
+2. Click the **Custom Apps Manager** tab (2) at the top of your screen.
+3. For both Server and User Authentication Apps screens, click the **Add App** (3) button in the top right corner to add a new app.
+4. Alternatively, you can use the Custom Apps Manager table menu (4) to authorize and enable apps.
 
 #### Server Authentication Apps
 

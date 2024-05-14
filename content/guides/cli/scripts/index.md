@@ -12,15 +12,15 @@ alias_paths: []
 
 Box CLI scripts are designed to help you
 automate your tasks. Currently,
-the sample scripts library 
+the sample scripts library
 provides several PowerShell scripts you can use
 and customize. In order to run them, you will need to have the Box CLI
 installed and configured. You can follow the [quick start guide][quickstart] to
-get that done. 
+get that done.
 
 <Message type='warning'>
-   Most of the below scripts require the user you run commands with to
-   have Box [administrative privileges][7].
+  Most of the below scripts require the user you run commands with to
+  have Box [administrative privileges][7].
 </Message>
 
 ## PowerShell scripts

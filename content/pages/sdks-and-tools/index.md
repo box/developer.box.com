@@ -3,7 +3,7 @@ alias_paths:
   - /sdks
   - /docs/sdks-and-tools
   - /docs/sdks
-  - /docs/box-sdks 
+  - /docs/box-sdks
   - /docs/mobile-sdks
   - /page/sdks
   - /docs/box-sdk-license
@@ -53,24 +53,10 @@ New Typescript, .NET, and Python SDKs are in a Public Beta phase.
 
 Here's what you can expect from the new SDKs:
 
-* **Full API Support**: New Box SDKs empower developers
- with complete coverage of the Box API ecosystem.
- You can access all the latest features and
-functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development
-approach allows for adding Box APIs to
-SDKs at a much faster pace (in a matter of days). 
-This means you can leverage the most up-to-date
-features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters
-are documented directly in the source code of the SDK
-so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced
-convenience methods cover various aspects such as
-authentication, chunk uploads, exponential back-offs, 
-automatic retries, type checkers which
-help to ensure that you’re using variables correctly, 
-and much more.
+* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded Documentation**:  All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 | Platform                          | Maintained?  | API Parity |
 | --------------------------------- | ----------- | ------- |
@@ -155,8 +141,6 @@ record to Box folder mapping and handle permission management.
 Extend your application with pre-built UI components to browse, share, and
 preview files on Box.
 
-<!-- markdownlint-disable line-length -->
-
 |         |        |           |
 | ------- | ------ | --------- |
 | Browse  | Share  |Preview    |
@@ -167,24 +151,18 @@ preview files on Box.
 | ---------- | ---------------- |
 | iOS  | [Browse SDK][iosbrowsesdk], [Share SDK][iossharesdk], [Preview SDK][iospreviewsdk]                                                                                                    |
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk), [Share SDK](https://github.com/box/box-android-share-sdk), [Preview SDK](https://github.com/box/box-android-preview-sdk) |
-| Javascript | [Box UI Elements](guide://embed/ui-elements/)    |  
-
-  <!-- markdownlint-enable line-length -->
+| Javascript | [Box UI Elements](guide://embed/ui-elements/)    |
 
 ## Unofficial & Community Tools
 
 The following tools are developed by Box and maintained by Box and its community
 members. These tools do not receive regular product updates or security updates.
 
-  <!-- markdownlint-disable line-length -->
-
 | Platform   | Maintained?    | API Parity  |
 | ---------- | ---------------| ------- |
 | [Salesforce SDK][salesforcesdk] | Limited, by Box and community members |Partial |
 | [Ruby SDK][rubysdk]             | Limited, by Box and community members | Partial |
 | [Client-side JS SDK][jssdk]     | Limited, by Box and community members | Partial |
-
-  <!-- markdownlint-enable line-length -->
 
 <Message type='notice'>
 **Maintained:** Projects with limited maintenance are updated by Box in

@@ -48,8 +48,6 @@ and paste the embed code into your site or web application.
 If you want to add more customization to Box Embed, you have the ability to
 build it programmatically. The format for an embed snippet is as follows.
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <iframe
   src="https://{custom_domain}.app.box.com/embed/s/{shared link value}?view={list or icon}&sortColumn={name, date, or size}&sortDirection=ASC"
@@ -62,8 +60,6 @@ build it programmatically. The format for an embed snippet is as follows.
 ></iframe>
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ### Finding your shared link value
 
 The first step to building an embed `iframe` programmatically is to generate
@@ -74,7 +70,7 @@ using the Box web app.
   ![Box Share](./embed-share.png)
 </ImageFrame>
 
-Another way is to create a shared link with API using the 
+Another way is to create a shared link with API using the
 [`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
 
 Then you can find this shared link value using the
@@ -83,7 +79,7 @@ query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -104,8 +100,6 @@ You can also set the page to Root Folder/All Files page. Set the URL to
 Next, you will want to choose your view customization options. The following is
 a list of optional parameters you can configure.
 
-<!-- markdownlint-disable line-length -->
-
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
 | `view`                | The view type for your files or folders. Can be `list` (default) or `icon`.                  |
@@ -113,8 +107,6 @@ a list of optional parameters you can configure.
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
 | `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
 | `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
-
-<!-- markdownlint-enable line-length -->
 
 ### Full Screen Capabilities
 
@@ -135,7 +127,7 @@ and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -162,7 +154,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
           },
           "scope": "base_preview"
         },
-       ...
+        ...
       ],
       "token_type": "bearer"
     },
@@ -198,22 +190,18 @@ would look something like this.
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 ```
 
-<!-- markdownlint-disable line-length -->
-
 |                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Cloud Game
 
-The cloud game is a widget created to prevent clickjacking. 
+The cloud game is a widget created to prevent clickjacking.
 It's shown for embedded sites that aren’t partner integrations.
 In cloud game, user must drag a cloud to the correct location before an
 interaction is allowed. It makes clickjacking difficult, as the
-position of the cloud and its destination are randomly generated. 
+position of the cloud and its destination are randomly generated.
 
 <ImageFrame border>
   ![Box Embed](./cloud-game.png)
@@ -221,10 +209,10 @@ position of the cloud and its destination are randomly generated.
 
 `postMessage()` is used on the iframe to retrieve both the embed and the
 `showCloudGame` status. If embedded, `document.hasStorageAccess()` shows
-if Box has access to cookies. If yes and the user is logged in, the cloud 
+if Box has access to cookies. If yes and the user is logged in, the cloud
 game is displayed.
 If the `showCloudGame` status is `false`, user is navigated to the login
-page. 
+page.
 
 ## Custom Logo
 

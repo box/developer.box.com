@@ -10,8 +10,7 @@ required_guides:
   - authentication/select
   - authentication/oauth2/oauth2-setup
 related_resources: []
-alias_paths:
-  - /guides/authentication/client-credentials
+alias_paths: []
 ---
 
 # JWT without SDKs
@@ -42,10 +41,8 @@ using a public and private key pair.
 
 ### Prerequisites
 
-- A Custom Application using JWT authentication within the
-  [Developer Console][devconsole]
-- A private key configuration file named `config.json`, which can be downloaded
-  from the configuration tab of the [Developer Console][devconsole]
+- A Custom Application using JWT authentication within the [Developer Console][devconsole]
+- A private key configuration file named `config.json`, which can be downloaded from the configuration tab of the [Developer Console][devconsole]
 - Ensure your application is [authorized][auth] within the Box Admin Console
 
 ### 1. Read JSON configuration
@@ -55,8 +52,6 @@ details necessary to authenticate. The following is an example of this file.
 
 <Tabs>
   <Tab title='config.json'>
-
-<!-- markdownlint-disable line-length -->
 
 ```json
 {
@@ -73,8 +68,6 @@ details necessary to authenticate. The following is an example of this file.
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
 </Tabs>
 
@@ -83,7 +76,7 @@ To use this object in the application it needs to be read from file.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 using System;
 using System.IO;
 using Newtonsoft.Json;
@@ -122,20 +115,20 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 class Config {
-  class BoxAppSettings {
-    class AppAuth {
-      String privateKey;
-      String passphrase;
-      String publicKeyID;
+    class BoxAppSettings {
+        class AppAuth {
+            String privateKey;
+            String passphrase;
+            String publicKeyID;
+        }
+
+        String clientID;
+        String clientSecret;
+        AppAuth appAuth;
     }
 
-    String clientID;
-    String clientSecret;
-    AppAuth appAuth;
-  }
-
-  BoxAppSettings boxAppSettings;
-  String enterpriseID;
+    BoxAppSettings boxAppSettings;
+    String enterpriseID;
 }
 
 FileReader reader = new FileReader("config.json");
@@ -205,7 +198,7 @@ object.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 using System.Security.Cryptography;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -214,9 +207,9 @@ using Org.BouncyCastle.Math;
 // https://www.bouncycastle.org/csharp/index.html
 class PasswordFinder : IPasswordFinder
 {
-  private string password;
-  public PasswordFinder(string _password) { password = _password; }
-  public char[] GetPassword() { return password.ToCharArray(); }
+    private string password;
+    public PasswordFinder(string _password) { password = _password; }
+    public char[] GetPassword() { return password.ToCharArray(); }
 }
 
 var appAuth = config.boxAppSettings.appAuth;
@@ -227,35 +220,35 @@ var keyParams = (RsaPrivateCrtKeyParameters) pemReader.ReadObject();
 
 public RSA CreateRSAProvider(RSAParameters rp)
 {
-  var rsaCsp = RSA.Create();
-  rsaCsp.ImportParameters(rp);
-  return rsaCsp;
+    var rsaCsp = RSA.Create();
+    rsaCsp.ImportParameters(rp);
+    return rsaCsp;
 }
 
 public RSAParameters ToRSAParameters(RsaPrivateCrtKeyParameters privKey)
 {
-  RSAParameters rp = new RSAParameters();
-  rp.Modulus = privKey.Modulus.ToByteArrayUnsigned();
-  rp.Exponent = privKey.PublicExponent.ToByteArrayUnsigned();
-  rp.P = privKey.P.ToByteArrayUnsigned();
-  rp.Q = privKey.Q.ToByteArrayUnsigned();
-  rp.D = ConvertRSAParametersField(privKey.Exponent, rp.Modulus.Length);
-  rp.DP = ConvertRSAParametersField(privKey.DP, rp.P.Length);
-  rp.DQ = ConvertRSAParametersField(privKey.DQ, rp.Q.Length);
-  rp.InverseQ = ConvertRSAParametersField(privKey.QInv, rp.Q.Length);
-  return rp;
+    RSAParameters rp = new RSAParameters();
+    rp.Modulus = privKey.Modulus.ToByteArrayUnsigned();
+    rp.Exponent = privKey.PublicExponent.ToByteArrayUnsigned();
+    rp.P = privKey.P.ToByteArrayUnsigned();
+    rp.Q = privKey.Q.ToByteArrayUnsigned();
+    rp.D = ConvertRSAParametersField(privKey.Exponent, rp.Modulus.Length);
+    rp.DP = ConvertRSAParametersField(privKey.DP, rp.P.Length);
+    rp.DQ = ConvertRSAParametersField(privKey.DQ, rp.Q.Length);
+    rp.InverseQ = ConvertRSAParametersField(privKey.QInv, rp.Q.Length);
+    return rp;
 }
 
 public byte[] ConvertRSAParametersField(BigInteger n, int size)
 {
-  byte[] bs = n.ToByteArrayUnsigned();
-  if (bs.Length == size)
-      return bs;
-  if (bs.Length > size)
-      throw new ArgumentException("Specified size too small", "size");
-  byte[] padded = new byte[size];
-  Array.Copy(bs, 0, padded, size - bs.Length, bs.Length);
-  return padded;
+    byte[] bs = n.ToByteArrayUnsigned();
+    if (bs.Length == size)
+        return bs;
+    if (bs.Length > size)
+        throw new ArgumentException("Specified size too small", "size");
+    byte[] padded = new byte[size];
+    Array.Copy(bs, 0, padded, size - bs.Length, bs.Length);
+    return padded;
 }
 
 var key = CreateRSAProvider(ToRSAParameters(keyParams));
@@ -282,18 +275,18 @@ import org.bouncycastle.pkcs.PKCS8EncryptedPrivateKeyInfo;
 Security.addProvider(new BouncyCastleProvider());
 
 PEMParser pemParser = new PEMParser(
-  new StringReader(config.boxAppSettings.appAuth.privateKey)
+    new StringReader(config.boxAppSettings.appAuth.privateKey)
 );
 Object keyPair = pemParser.readObject();
 pemParser.close();
 
 char[] passphrase = config.boxAppSettings.appAuth.passphrase.toCharArray();
 JceOpenSSLPKCS8DecryptorProviderBuilder decryptBuilder =
-  new JceOpenSSLPKCS8DecryptorProviderBuilder().setProvider("BC");
+    new JceOpenSSLPKCS8DecryptorProviderBuilder().setProvider("BC");
 InputDecryptorProvider decryptProvider
-  = decryptBuilder.build(passphrase);
+    = decryptBuilder.build(passphrase);
 PrivateKeyInfo keyInfo
-  = ((PKCS8EncryptedPrivateKeyInfo) keyPair).decryptPrivateKeyInfo(decryptProvider);
+    = ((PKCS8EncryptedPrivateKeyInfo) keyPair).decryptPrivateKeyInfo(decryptProvider);
 
 PrivateKey key = (new JcaPEMKeyConverter()).getPrivateKey(keyInfo);
 ```
@@ -312,9 +305,9 @@ passphrase = appAuth["passphrase"]
 
 # https://cryptography.io/en/latest/
 key = load_pem_private_key(
-  data=privateKey.encode('utf8'),
-  password=passphrase.encode('utf8'),
-  backend=default_backend(),
+    data=privateKey.encode('utf8'),
+    password=passphrase.encode('utf8'),
+    backend=default_backend(),
 )
 ```
 
@@ -323,8 +316,8 @@ key = load_pem_private_key(
 
 ```js
 let key = {
-  key: config.boxAppSettings.appAuth.privateKey,
-  passphrase: config.boxAppSettings.appAuth.passphrase,
+    key: config.boxAppSettings.appAuth.privateKey,
+    passphrase: config.boxAppSettings.appAuth.passphrase,
 };
 ```
 
@@ -375,7 +368,7 @@ sometimes also referred to as the `payload`.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Collections.Generic;
@@ -387,9 +380,9 @@ var jti = Convert.ToBase64String(randomNumber);
 DateTime expirationTime = DateTime.UtcNow.AddSeconds(45);
 
 var claims = new List<Claim>{
-  new Claim("sub", config.enterpriseID),
-  new Claim("box_sub_type", "enterprise"),
-  new Claim("jti", jti),
+    new Claim("sub", config.enterpriseID),
+    new Claim("box_sub_type", "enterprise"),
+    new Claim("jti", jti),
 };
 ```
 
@@ -422,12 +415,12 @@ import secrets
 authentication_url = 'https://api.box.com/oauth2/token'
 
 claims = {
-  'iss': config['boxAppSettings']['clientID'],
-  'sub': config['enterpriseID'],
-  'box_sub_type': 'enterprise',
-  'aud': authentication_url,
-  'jti': secrets.token_hex(64),
-  'exp': round(time.time()) + 45
+    'iss': config['boxAppSettings']['clientID'],
+    'sub': config['enterpriseID'],
+    'box_sub_type': 'enterprise',
+    'aud': authentication_url,
+    'jti': secrets.token_hex(64),
+    'exp': round(time.time()) + 45
 }
 ```
 
@@ -440,12 +433,12 @@ const crypto = require("crypto");
 const authenticationUrl = "https://api.box.com/oauth2/token";
 
 let claims = {
-  iss: config.boxAppSettings.clientID,
-  sub: config.enterpriseID,
-  box_sub_type: "enterprise",
-  aud: authenticationUrl,
-  jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45,
+    iss: config.boxAppSettings.clientID,
+    sub: config.enterpriseID,
+    box_sub_type: "enterprise",
+    aud: authenticationUrl,
+    jti: crypto.randomBytes(64).toString("hex"),
+    exp: Math.floor(Date.now() / 1000) + 45,
 };
 ```
 
@@ -487,8 +480,6 @@ $claims = [
   </Tab>
 </Tabs>
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter                | Type    | Description                                                                                                                                                                  |
 | ------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `iss`, required          | String  | The Box Application's OAuth client ID                                                                                                                                        |
@@ -500,8 +491,6 @@ $claims = [
 | `iat`, optional          | Integer | Issued at time. The token cannot be used before this time.                                                                                                                   |
 | `nbf`, optional          | Integer | Not before. Not Specifies when the token will start being valid.                                                                                                             |
 
-<!-- markdownlint-enable line-length -->
-
 Next, these claims need to be signed using the private key. Depending on the
 language and library used, the `header` of the JWT is configured by defining the
 encryption algorithm and the ID of the public key used to sign the claims.
@@ -509,22 +498,22 @@ encryption algorithm and the ID of the public key used to sign the claims.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 using Microsoft.IdentityModel.Tokens;
 
 String authenticationUrl = "https://api.box.com/oauth2/token";
 
 var payload = new JwtPayload(
-  config.boxAppSettings.clientID,
-  authenticationUrl,
-  claims,
-  null,
-  expirationTime
+    config.boxAppSettings.clientID,
+    authenticationUrl,
+    claims,
+    null,
+    expirationTime
 );
 
 var credentials = new SigningCredentials(
-  new RsaSecurityKey(key),
-  SecurityAlgorithms.RsaSha512
+    new RsaSecurityKey(key),
+    SecurityAlgorithms.RsaSha512
 );
 var header = new JwtHeader(signingCredentials: credentials);
 
@@ -561,12 +550,12 @@ import jwt
 keyId = config['boxAppSettings']['appAuth']['publicKeyID']
 
 assertion = jwt.encode(
-  claims,
-  key,
-  algorithm='RS512',
-  headers={
-    'kid': keyId
-  }
+    claims,
+    key,
+    algorithm='RS512',
+    headers={
+        'kid': keyId
+    }
 )
 ```
 
@@ -579,8 +568,8 @@ const jwt = require("jsonwebtoken");
 let keyId = config.boxAppSettings.appAuth.publicKeyID;
 
 let headers = {
-  algorithm: "RS512",
-  keyid: keyId,
+    algorithm: "RS512",
+    keyid: keyId,
 };
 
 let assertion = jwt.sign(claims, key, headers);
@@ -608,14 +597,10 @@ $assertion = JWT::encode($claims, $key, 'RS512');
 
 For the header the following parameters are supported.
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter             | Type   | Description                                                                                                                           |
 | --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `algorithm`, required | String | The encryption algorithm used to sign the JWT claim. This can be one of RS256, RS384, or RS512.                                       |
 | `keyid`, required     | String | The ID of the public key used to sign the JWT. Not required, though essential when multiple key pairs are defined for an application. |
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
   Using JWT libraries
@@ -634,20 +619,20 @@ assertion as a parameter.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 using System.Net;
 using System.Net.Http;
 
 var content = new FormUrlEncodedContent(new[]
 {
-  new KeyValuePair<string, string>(
-    "grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer"),
-  new KeyValuePair<string, string>(
-    "assertion", assertion),
-  new KeyValuePair<string, string>(
-    "client_id", config.boxAppSettings.clientID),
-  new KeyValuePair<string, string>(
-    "client_secret", config.boxAppSettings.clientSecret)
+    new KeyValuePair<string, string>(
+        "grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer"),
+    new KeyValuePair<string, string>(
+        "assertion", assertion),
+    new KeyValuePair<string, string>(
+        "client_id", config.boxAppSettings.clientID),
+    new KeyValuePair<string, string>(
+        "client_secret", config.boxAppSettings.clientSecret)
 });
 
 var client = new HttpClient();
@@ -655,7 +640,7 @@ var response = client.PostAsync(authenticationUrl, content).Result;
 
 class Token
 {
-  public string access_token { get; set; }
+    public string access_token { get; set; }
 }
 
 var data = response.Content.ReadAsStringAsync().Result;
@@ -684,16 +669,16 @@ import org.apache.http.util.EntityUtils;
 List<NameValuePair> params = new ArrayList<NameValuePair>();
 
 params.add(new BasicNameValuePair(
-  "grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer"));
+    "grant_type", "urn:ietf:params:oauth:grant-type:jwt-bearer"));
 params.add(new BasicNameValuePair(
-  "assertion", assertion));
+    "assertion", assertion));
 params.add(new BasicNameValuePair(
-  "client_id", config.boxAppSettings.clientID));
+    "client_id", config.boxAppSettings.clientID));
 params.add(new BasicNameValuePair(
-  "client_secret", config.boxAppSettings.clientSecret));
+    "client_secret", config.boxAppSettings.clientSecret));
 
 CloseableHttpClient httpClient =
-  HttpClientBuilder.create().disableCookieManagement().build();
+    HttpClientBuilder.create().disableCookieManagement().build();
 HttpPost request = new HttpPost(authenticationUrl);
 request.setEntity(new UrlEncodedFormEntity(params));
 CloseableHttpResponse httpResponse = httpClient.execute(request);
@@ -702,7 +687,7 @@ String response = EntityUtils.toString(entity);
 httpClient.close();
 
 class Token {
-  String access_token;
+    String access_token;
 }
 
 Token token = (Token) gson.fromJson(response, Token.class);
@@ -735,16 +720,16 @@ const axios = require("axios");
 const querystring = require("querystring");
 
 let accessToken = await axios
-  .post(
-    authenticationUrl,
-    querystring.stringify({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion: assertion,
-      client_id: config.boxAppSettings.clientID,
-      client_secret: config.boxAppSettings.clientSecret,
-    })
-  )
- .then((response) => response.data.access_token);
+    .post(
+        authenticationUrl,
+        querystring.stringify({
+            grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            assertion: assertion,
+            client_id: config.boxAppSettings.clientID,
+            client_secret: config.boxAppSettings.clientSecret,
+        })
+    )
+    .then((response) => response.data.access_token);
 ```
 
   </Tab>

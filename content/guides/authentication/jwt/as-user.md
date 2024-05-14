@@ -17,8 +17,8 @@ by leveraging the `as-user` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
-  -H "as-user: [USER_ID]"
-  -H "authorization: Bearer [ACCESS_TOKEN]"
+    -H "as-user: [USER_ID]"
+    -H "authorization: Bearer [ACCESS_TOKEN]"
 ```
 
 <Message>
@@ -55,7 +55,7 @@ All of the [official Box SDKs][sdk] support acting on behalf of a user using the
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 

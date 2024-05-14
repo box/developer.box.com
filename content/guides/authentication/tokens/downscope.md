@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_endpoints:
   - post_oauth2_token
 related_resources:
@@ -48,8 +48,6 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 
 <Samples id="post_oauth2_token" variant="downscope_token" />
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter            | Description                                                                                                                                                                                                                                |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `subject_token`      | The original token to downscope. This can be a token that was acquired through OAuth 2.0, JWT token exchange, or as an App Token.                                                                                                          |
@@ -58,8 +56,6 @@ Token, a list of scopes, as well as an optional file URL to restrict the token t
 | `box_shared_link`    | An optional [shared link](g://shared-links) URL for a file or folder on Box. Password protected links are not supported. This option cannot be used in addition to the `resource` option nor can it be a shared link created on a weblink. |
 | `subject_token_type` | Always set to `urn:ietf:params:oauth:token-type:access_token`                                                                                                                                                                              |
 | `grant_type`         | Always set to `urn:ietf:params:oauth:grant-type:token-exchange`                                                                                                                                                                            |
-
-<!-- markdownlint-enable line-length -->
 
 ## Downscoped Access Token Object
 
