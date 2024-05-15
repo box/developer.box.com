@@ -66,9 +66,9 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
      }'
 ```
 
-## Signing Log Changes
+## Signing Log entries
 
-When Box Sign default notifications are suppressed, the Signing Log will indicate that the Sender has suppressed all Box Sign notifications and will provide additional information on the system used for purposes of notification delivery and the user ID of the Signer on your organization’s system, as provided to Box Sign through your API integration. 
+When Box Sign default notifications are suppressed, the Signing Log will indicate that the sender has suppressed all Box Sign notifications. The log will also provide information on the system used for purposes of notification delivery and the user ID of the signer on your organization’s system, as provided to Box Sign through your API integration. 
 
 [signers]: e://post-sign-requests/#param-signers
 [externalid]: e://post-sign-requests/#param-signers-embed_url_external_user_id
