@@ -1,15 +1,21 @@
 ---
-rank: 3
+rank: 2
+related_endpoints:
+  - post-sign-requests-id-resend
+related_guides:
+  - box-sign/create-sign-request
+  - box-sign/cancel-sign-request
+  - box-sign/sign-templates
 category_id: box-sign
 subcategory_id: null
 is_index: false
 id: box-sign/resend-sign-request
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-sign
 parent_id: box-sign
 next_page_id: box-sign/cancel-sign-request
-previous_page_id: box-sign/sign-templates
+previous_page_id: box-sign/create-sign-request
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/resend-sign-request.md
 ---

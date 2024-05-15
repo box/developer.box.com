@@ -1,15 +1,20 @@
 ---
-rank: 2
+rank: 6
+related_endpoints:
+  - get-sign-templates
+  - get-sign-templates-id
+related_guides:
+  - box-sign/create-sign-request
 category_id: box-sign
 subcategory_id: null
 is_index: false
 id: box-sign/sign-templates
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-sign
 parent_id: box-sign
-next_page_id: box-sign/resend-sign-request
-previous_page_id: box-sign/create-sign-request
+next_page_id: box-sign/embedded-sign-client
+previous_page_id: box-sign/suppress-sign-notifications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-sign/sign-templates.md
 ---
