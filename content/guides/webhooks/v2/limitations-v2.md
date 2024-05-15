@@ -46,6 +46,8 @@ The IP address of the server must be publicly accessible from the internet and
 cannot be a `(*.)box.com` address. The port used in the URL must be the
 standard HTTPS port (`443`). Notifications will not be delivered to other ports.
 
+The supported TLS protocol versions are `TLS 1.2` and `TLS 1.3` with FIPS compliant cipher suites.
+
 ## No webhooks on root folder
 
 V2 webhooks cannot be created on the root folder, which is the folder with ID
