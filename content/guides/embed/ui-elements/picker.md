@@ -241,7 +241,7 @@ filePicker.removeAllListeners();
 
 | Event Name | Event Data                    | Description                                                                                                                                                                                         |
 | ---------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `choose`   | `Array<File|Web Link|Folder>` | Will be fired when the Choose button is pressed. Event data will be an array of Folder Object or File Object or Web Link object depending upon whether it was a file selection or folder selection. |
+| `choose`   | `Array<File \| Web Link \| Folder>` | Will be fired when the Choose button is pressed. Event data will be an array of Folder Object or File Object or Web Link object depending upon whether it was a file selection or folder selection. |
 | `cancel`   |                               | Will be fired when the Cancel button is pressed                                                                                                                                                     |
 
 ## Keyboard Shortcuts
