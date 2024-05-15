@@ -1,5 +1,10 @@
 ---
-rank: 2
+rank: 6
+related_endpoints:
+  - get-sign-templates
+  - get-sign-templates-id
+related_guides:
+  - box-sign/create-sign-request
 ---
 
 # Create Sign Request with Sign Template
