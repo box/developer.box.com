@@ -10,7 +10,7 @@ type: guide
 total_steps: 1
 sibling_id: mobile/android
 parent_id: mobile/android
-next_page_id: ''
+next_page_id: mobile/android
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/android/install.md

@@ -1,7 +1,6 @@
 ---
 hide_title: true
-alias_paths:
-  - /ai-dev-zone
+alias_paths: []
 centered: false
 category_id: ai-dev-zone
 subcategory_id: null
