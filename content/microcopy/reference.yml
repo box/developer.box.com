@@ -172,37 +172,38 @@ enum:
 
 environments:
   // node: |-
-    A label for Node JS
-    code sample - DO NOT TRANSLATE
+    Describes the Node JS programming language when selecting
+    a code sample - DO NOT TRANSLATE
   node: Node
 
   // dotnet: |-
-    A label for .NET
-    code sample - DO NOT TRANSLATE
+    Describes the .NET programming language when selecting
+    a code sample - DO NOT TRANSLATE
   dotnet: .NET
 
   // java: |-
-    A label for Java
-    code sample - DO NOT TRANSLATE
+    Describes the Java programming language when selecting
+    a code sample - DO NOT TRANSLATE
   java: Java
 
   // python: |-
-    A label for Python
-    code sample - DO NOT TRANSLATE
+    Describes the Python programming language when
+    selecting a code sample - DO NOT TRANSLATE
   python: Python
 
   // cli: |-
-    A label for command line interface
-    code sample - DO NOT TRANSLATE
+    Describes the command line interface when
+    selecting a code sample - DO NOT TRANSLATE
   cli: CLI
 
   // curl: |-
-    A label for cURL
-    code sample
+    Describes the cURL tool when
+    selecting a code sample
   curl: cURL
 
   // ios: |-
-    A label for iOS code sample - DO NOT TRANSLATE
+    Describes the iOS programming language when
+    selecting a code sample - DO NOT TRANSLATE
   ios: iOS
 
   // ts_gen: |-

@@ -9,7 +9,7 @@ featured_board:
   sampleCode:
     type: sampleCode
     cta: Browse sample code
-    link: /sample-code/
+    link: /guides/box-ai-api
     tag: Featured
     headline: Kickstart your project
     text: |-
