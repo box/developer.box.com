@@ -49,8 +49,8 @@ official. For example, "Unofficial Box Client" is certainly clear enough, while
 "Box App for Android" is not.
 
 If you include your own brand name (for example,
-"My Company Box Client"), you’re probably fine. Nonetheless, this is probably the
-most ambiguous guideline, so please [contact us][contact] if you have any
+"My Company Box Client"), you’re probably fine. Nonetheless, this is probably
+the most ambiguous guideline, so please [contact us][contact] if you have any
 questions, and we’ll get you sorted out right away!
 
 In short though, this means:
@@ -64,10 +64,10 @@ Don't alter the 'Box' logo in any way when using it in your application.
 
 ### Don't use older names
 
-Don't refer to us as `Box.net` or `Boxnet`. Our company is now known as
+Don't refer to us as `Box.net` or `Boxnet`. Our company is known as
 "Box" only.
 
 <!-- i18n-enable localize-links -->
-[logos]: https://cloud.box.com/s/v1yn0eyqpxx657brrgcn
+[logos]: https://cloud.app.box.com/v/BoxCorporateLogo
 [contact]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-enable localize-links -->
