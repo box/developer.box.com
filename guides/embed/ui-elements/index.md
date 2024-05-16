@@ -37,7 +37,7 @@ The available UI Elements are:
 * [Content Explorer][explorer]- Allow users to search and browse through files and folders
 * [Content Open With][openwith] - Allow users to open content stored in box with a partner application using an embedded dropdown
 
-    <Message type='warning'>
+<Message type='warning'>
 
 We no longer support the `OpenWith` UI element for any new customers as of December 21, 2021.
 
