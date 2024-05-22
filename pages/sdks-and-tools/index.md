@@ -63,7 +63,7 @@ with the Box Content Cloud.
 
 <Message type='notice'>
 
-.NET SDK is still in a Public Beta phase.
+.NET SDK is in a Public Beta phase.
 
 </Message>
 
