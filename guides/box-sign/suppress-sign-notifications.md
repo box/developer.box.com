@@ -56,7 +56,7 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
      -H "authorization: Bearer <ACCESS_TOKEN>" \
      -d '{
        "signers": [
-          {
+          {    
             "role": "signer",
             "email": "example_email@box.com"
             "suppress_notifications": true
@@ -69,7 +69,7 @@ curl -i -X POST "https://api.box.com/2.0/sign_requests" \
             "id": "123456789"
           }
        ],
-       "parent_folder":
+       "parent_folder": 
           {
             "type": "folder",
             "id": "0987654321"

@@ -31,10 +31,10 @@ The following SDKs and tools are developed and supported by Box.
 Here you will find a list of SDKs
 you can use to build your application.
 Separately, we have listed the next generation
-Python and Typescript SDKs, which are the
+Python, Typescript, and .NET SDKs, which are the
 newest addition.
-They are still a beta feature, but we encourage
-you to give them a try and explore all the
+.NET is still a beta feature, but we encourage
+you to give it a try and explore all the
 features they bring along.
 
 <Message type='notice'>
@@ -63,7 +63,7 @@ with the Box Content Cloud.
 
 <Message type='notice'>
 
-New Typescript, .NET, and Python SDKs are in a Public Beta phase.
+.NET SDK is still in a Public Beta phase.
 
 </Message>
 
@@ -76,8 +76,8 @@ Here's what you can expect from the new SDKs:
 
 | Platform                          | Maintained?  | API Parity |
 | --------------------------------- | ----------- | ------- |
-| [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
-| [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
+| [Python Gen SDK][pythongensdk]    | Yes         | Full    |
+| [Typescript Gen SDK][tsgensdk]     | Yes         | Full    |
 | [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
 
 ### SDKs
