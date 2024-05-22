@@ -48,7 +48,7 @@ experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-.NET SDK is still in a Public Beta phase.
+.NET SDK is in a Public Beta phase.
 </Message>
 
 Here's what you can expect from the new SDKs:
