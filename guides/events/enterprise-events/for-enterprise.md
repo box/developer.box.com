@@ -156,12 +156,12 @@ exhaustive, so it is possible events appear that are not listed.
 | `DOWNLOAD`                                     | Downloaded                                                                                      |
 | `EDIT`                                         | Edited                                                                                          |
 | `EDIT_USER`                                    | Edited user                                                                                     |
-| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                                    | Device detected by CrowdStrike Falcon platform                                                                                     |
-| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                    | No Box Tools detected in device for CrowdStrike Falcon platform support                                                                           |
-| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                                    | Box Tools outdated in device for CrowdStrike Falcon platform support                                                                                     |
-| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                                    | Box Drive outdated in device for CrowdStrike Falcon platform support                                                                                     |
-| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`                                    | Access allowed to device not identified by CrowdStrike Falcon platform                                                                                   |
-| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                                    | Access revoked to device identified by CrowdStrike Falcon platform                                                                                     |
+| `EDR_CROWDSTRIKE_DEVICE_DETECTED`                                    | Device detected by the CrowdStrike Falcon platform                                                                                     |
+| `EDR_CROWDSTRIKE_NO_BOX_TOOLS`                                    | Box Tools package not detected on device with CrowdStrike Falcon platform support                                                                           |
+| `EDR_CROWDSTRIKE_BOX_TOOLS_OUTDATED`                                    | Box Tools package outdated on device with CrowdStrike Falcon platform support                                                                                     |
+| `EDR_CROWDSTRIKE_DRIVE_OUTDATED`                                    | Box Drive application outdated on device with CrowdStrike Falcon platform support                                                                                     |
+| `EDR_CROWDSTRIKE_ACCESS_ALLOWED_NO_CROWDSTRIKE_DEVICE`                                    | Access allowed to a device not identified by the CrowdStrike Falcon platform                                                                                   |
+| `EDR_CROWDSTRIKE_ACCESS_REVOKED`                                    | Access revoked to a device identified by the CrowdStrike Falcon platform                                                                                     |
 | `EMAIL_ALIAS_CONFIRM`                          | A user email alias is confirmed                                                                 |
 | `EMAIL_ALIAS_REMOVE`                           | A user email alias is removed                                                                   |
 | `ENABLE_MULTI_FACTOR_AUTH`                           | When multifactor authentication has been enabled                      |
