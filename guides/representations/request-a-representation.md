@@ -28,8 +28,8 @@ fullyTranslated: true
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [pdf]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [pdf]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -39,8 +39,8 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [jpg?dimensions=94x94]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [jpg?dimensions=94x94]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -50,8 +50,8 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 ```curl
 curl https://api.box.com/2.0/files/123?fields=representations \
-  -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "x-rep-hints: [pdf][jpg?dimensions=94x94]" \
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 

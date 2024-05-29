@@ -102,7 +102,7 @@ fullyTranslated: true
 
 これにより、値が`Model 3`の`name`フィールドが追加されます。この操作の前は、テンプレートの`name`フィールドに値がありませんでした。
 
-```js
+```json
 {
   // "name": null, // old value
   "name": "Model 3", // new value
@@ -143,7 +143,7 @@ fullyTranslated: true
 これにより、`name`フィールドの値`Model 3`が新しい値`Model
 4`に置き換えられます。
 
-```js
+```json
 {
   // "name": "Model 3", # Old value
   "name": "Model 3", // new value
@@ -183,7 +183,7 @@ fullyTranslated: true
 
 これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。
 
-```js
+```json
 {
   "name": "Model 3",
   "displayName": "Model 3", // new value, copied from the name
@@ -223,7 +223,7 @@ fullyTranslated: true
 
 これにより、`name`フィールドの値と一致する値が設定された`displayName`フィールドが追加されます。この操作の前は、テンプレートの`displayName`フィールドに値がありませんでした。この操作の後、`name`フィールドはすでに存在しません。
 
-```js
+```json
 {
   // "name": "Model 3", // old value, no longer present now
   "displayName": "Model 3", // new value, copied from the name
@@ -262,7 +262,7 @@ fullyTranslated: true
 
 これにより、`name`フィールドがメタデータインスタンスから完全に削除されます。
 
-```js
+```json
 {
   // "name": "Model 3", // old value, no longer present now
   "category": "SUVs",

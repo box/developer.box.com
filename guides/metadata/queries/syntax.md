@@ -77,8 +77,6 @@ fullyTranslated: true
 
 <!-- i18n-enable localize-links -->
 
-<!-- markdownlint-disable line-length -->
-
 | 演算子         |                                                                                                                                             |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `AND`       | `AND`で区切られたすべての条件が`TRUE`の場合に一致となります。                                                                                                        |
@@ -93,8 +91,6 @@ fullyTranslated: true
 | `IS NULL`   | テンプレートフィールドの値が`null`の場合に一致となります。                                                                                                            |
 | `IS NOT`    | テンプレートフィールドの値が`null`でない場合に一致となります。                                                                                                          |
 
-<!-- markdownlint-enable line-length -->
-
 <!-- i18n-disable localize-links -->
 
 <Message notice>
@@ -107,8 +103,6 @@ fullyTranslated: true
 
 クエリでは、以下の比較演算子がサポートされます。
 
-<!-- markdownlint-disable line-length -->
-
 | 演算子  |                                        |
 | ---- | -------------------------------------- |
 | `=`  | テンプレートフィールドの値が、指定した値と**等しい**ことを表します。   |
@@ -117,8 +111,6 @@ fullyTranslated: true
 | `>=` | テンプレートフィールドの値が、指定した値**以上**であることを表します。  |
 | `<=` | テンプレートフィールドの値が、指定した値**以下**であることを表します。  |
 | `<>` | テンプレートフィールドの値が、指定した値と**等しくない**ことを表します。 |
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

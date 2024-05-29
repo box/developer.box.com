@@ -116,13 +116,13 @@ Slackアプリケーションを構成したときに、3つのイベントの�
 
 これらのイベントの処理を開始するには、任意のエディタに`process.js`を読み込み、`app.post("/event" ...`リスナーを次の内容に置き換えます。
 
-```javascript
+```js
 app.post("/event", (req, res) => {
-  if (req.body.token !== slackConfig.verificationToken) {
-    res.send("Slack Verification Failed");
-  }
+    if (req.body.token !== slackConfig.verificationToken) {
+        res.send("Slack Verification Failed");
+    }
 
-  handler.process(res, req.body);
+    handler.process(res, req.body);
 });
 
 ```
@@ -135,50 +135,46 @@ app.post("/event", (req, res) => {
 
 任意のエディタに`Application.java`を読み込み、`@PostMapping("/event")`ブロックを次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 @PostMapping("/event")
 @ResponseBody
 public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
-  int code = HttpServletResponse.SC_OK;
-  java.io.PrintWriter wr = response.getWriter();
-  response.setStatus(code);
+    int code = HttpServletResponse.SC_OK;
+    java.io.PrintWriter wr = response.getWriter();
+    response.setStatus(code);
 
-  if (contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
-    wr.write("Adding content to group");
-  } else {
-    wr.print(response);
-  }
-
-  wr.flush();
-  wr.close();
-
-  if (! contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
-    JSONObject returnJSON = new JSONObject();
-    String[] inputParts = data.split("&");
-
-    for (String part: inputParts) {
-      String[] keyval = part.split("=");
-
-      try {
-        keyval[1] = java.net.URLDecoder.decode(keyval[1], StandardCharsets.UTF_8.name());
-      } catch (UnsupportedEncodingException e) {
-        System.err.println(e);
-      }
-
-      returnJSON.put(keyval[0], keyval[1]);
+    if (contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
+        wr.write("Adding content to group");
+    } else {
+        wr.print(response);
     }
 
-    data = returnJSON.toString();
-  }
+    wr.flush();
+    wr.close();
 
-  processEvent(data);
+    if (! contentType.startsWith(MediaType.APPLICATION_JSON_VALUE)) {
+        JSONObject returnJSON = new JSONObject();
+        String[] inputParts = data.split("&");
+
+        for (String part: inputParts) {
+            String[] keyval = part.split("=");
+
+            try {
+                keyval[1] = java.net.URLDecoder.decode(keyval[1], StandardCharsets.UTF_8.name());
+            } catch (UnsupportedEncodingException e) {
+                System.err.println(e);
+            }
+
+            returnJSON.put(keyval[0], keyval[1]);
+        }
+
+        data = returnJSON.toString();
+    }
+
+    processEvent(data);
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 イベントが成功すると、ハンドラは、コードを処理する前に、直ちにHTTP200レスポンスを返します。スラッシュコマンドはURLでエンコードされた文字列として送信されるのに対し、メンバーの参加/退出イベントはJSONとして送信されます。スラッシュコマンドが検出されると、処理中のメッセージで応答します。それ以外の場合は、`HttpServletResponse`レスポンスを送信します。
 
@@ -195,17 +191,17 @@ public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type")
 ```java
 @Async
 public void processEvent(String data) throws Exception {
-  Object dataObj = new JSONParser().parse(data);
-  JSONObject inputJSON = (JSONObject) dataObj;
-  String token = (String) inputJSON.get("token");
+    Object dataObj = new JSONParser().parse(data);
+    JSONObject inputJSON = (JSONObject) dataObj;
+    String token = (String) inputJSON.get("token");
 
-  if (token.equals(slackConfig.verificationToken)) {
-    // INSTANTIATE BOX CLIENT
+    if (token.equals(slackConfig.verificationToken)) {
+        // INSTANTIATE BOX CLIENT
 
-    process(inputJSON);
-  } else {
-    System.err.println("Invalid event source");
-  }
+        process(inputJSON);
+    } else {
+        System.err.println("Invalid event source");
+    }
 }
 
 ```
@@ -234,40 +230,36 @@ public void processEvent(String data) throws Exception {
 
 `process`関数を次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
-```javascript
+```js
 function process(res, data) {
-  if (data.type && data.type === "event_callback") {
-    const eventType = data.event.type;
-    const channel = data.event.channel;
-    const userId = data.event.user;
+    if (data.type && data.type === "event_callback") {
+        const eventType = data.event.type;
+        const channel = data.event.channel;
+        const userId = data.event.user;
 
-    getSlackUser(userId, function (user) {
-      processUser(user, eventType, channel);
-    });
+        getSlackUser(userId, function (user) {
+            processUser(user, eventType, channel);
+        });
 
-    res.send();
-  } else if (data.command && data.command === "/boxadd") {
-    const [itemType, itemId] = data.text.split(" ");
-    if (["file", "folder"].includes(itemType) && !isNaN(itemId)) {
-      const userId = data.user_id;
+        res.send();
+    } else if (data.command && data.command === "/boxadd") {
+        const [itemType, itemId] = data.text.split(" ");
+        if (["file", "folder"].includes(itemType) && !isNaN(itemId)) {
+            const userId = data.user_id;
 
-      getSlackUser(userId, function (user) {
-        processContent(user, data.channel_id, itemType, itemId);
-      });
-      res.send("Adding content");
+            getSlackUser(userId, function (user) {
+                processContent(user, data.channel_id, itemType, itemId);
+            });
+            res.send("Adding content");
+        } else {
+            res.send("Invalid input. Example usage: /boxadd file 123456");
+        }
     } else {
-      res.send("Invalid input. Example usage: /boxadd file 123456");
+        res.send("Invalid action");
     }
-  } else {
-    res.send("Invalid action");
-  }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 この関数の目的は、SlackからのペイロードがUser Eventとスラッシュコマンドのどちらであるかを判断し、必要な情報をすべて取得して、結果を処理するために適切な関数に転送することです。
 
@@ -295,37 +287,33 @@ function process(res, data) {
 
 `process`メソッドを次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 public void process(JSONObject inputJSON) throws Exception {
-  if (inputJSON.containsKey("event")) {
-    JSONObject event = (JSONObject) inputJSON.get("event");
-    String eventType = (String) event.get("type");
-    String eventUserId = (String) event.get("user");
-    String eventChannel = (String) event.get("channel");
+    if (inputJSON.containsKey("event")) {
+        JSONObject event = (JSONObject) inputJSON.get("event");
+        String eventType = (String) event.get("type");
+        String eventUserId = (String) event.get("user");
+        String eventChannel = (String) event.get("channel");
 
-    processUser(getSlackUser(eventUserId), eventType, eventChannel);
-  } else if (inputJSON.containsKey("command")) {
-    String eventCommand = (String) inputJSON.get("command");
-    if (eventCommand.equals("/boxadd")) {
-      String eventChannelId = (String) inputJSON.get("channel_id");
-      String eventUserId = (String) inputJSON.get("user_id");
-      String cInput = (String) inputJSON.get("text");
-      String[] cInputParts = cInput.split(" ");
+        processUser(getSlackUser(eventUserId), eventType, eventChannel);
+    } else if (inputJSON.containsKey("command")) {
+        String eventCommand = (String) inputJSON.get("command");
+        if (eventCommand.equals("/boxadd")) {
+            String eventChannelId = (String) inputJSON.get("channel_id");
+            String eventUserId = (String) inputJSON.get("user_id");
+            String cInput = (String) inputJSON.get("text");
+            String[] cInputParts = cInput.split(" ");
 
-      if (cInputParts[0].matches("file|folder")) {
-        processContent(getSlackUser(eventUserId), eventChannelId, cInputParts[0], cInputParts[1]);
-      }
+            if (cInputParts[0].matches("file|folder")) {
+                processContent(getSlackUser(eventUserId), eventChannelId, cInputParts[0], cInputParts[1]);
+            }
+        }
+    } else {
+        System.err.println("Invalid event action");
     }
-  } else {
-    System.err.println("Invalid event action");
-  }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 このメソッドの目的は、SlackからのペイロードがUser Eventとスラッシュコマンドのどちらであるかを判断し、必要な情報をすべて取得して、結果を処理するために適切なメソッドに転送することです。
 
@@ -371,33 +359,29 @@ public void process(JSONObject inputJSON) throws Exception {
 
 `processUser`関数を次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
-```javascript
+```js
 function processUser(user, event, channel) {
-  getGroupId(channel, function (groupId) {
-    // if bot was added, add all channel users
-    if (user.is_bot) {
-      processSlackChannel(channel, groupId);
-    } else if (
-      user.profile &&
-      user.profile.email &&
-      event === "member_joined_channel"
-    ) {
-      addGroupUser(groupId, user.profile.email);
-    } else if (
-      user.profile &&
-      user.profile.email &&
-      event === "member_left_channel"
-    ) {
-      removeGroupUser(groupId, user.profile.email);
-    }
-  });
+    getGroupId(channel, function (groupId) {
+        // if bot was added, add all channel users
+        if (user.is_bot) {
+            processSlackChannel(channel, groupId);
+        } else if (
+            user.profile &&
+            user.profile.email &&
+            event === "member_joined_channel"
+        ) {
+            addGroupUser(groupId, user.profile.email);
+        } else if (
+            user.profile &&
+            user.profile.email &&
+            event === "member_left_channel"
+        ) {
+            removeGroupUser(groupId, user.profile.email);
+        }
+    });
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -405,30 +389,26 @@ function processUser(user, event, channel) {
 
 `processUser`メソッドを次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
-  String groupId = getGroupId(channel);
+    String groupId = getGroupId(channel);
 
-  JSONObject userObj = (JSONObject) userResponse.get("user");
+    JSONObject userObj = (JSONObject) userResponse.get("user");
 
-  Boolean isBot = (Boolean) userObj.get("is_bot");
-  JSONObject userProfile = (JSONObject) userObj.get("profile");
-  String userEmail = (String) userProfile.get("email");
+    Boolean isBot = (Boolean) userObj.get("is_bot");
+    JSONObject userProfile = (JSONObject) userObj.get("profile");
+    String userEmail = (String) userProfile.get("email");
 
-  if (isBot) {
-    processSlackChannel(channel, groupId);
-  } else if (event.equals("member_joined_channel")) {
-    addGroupUser(groupId, userEmail);
-  } else if (event.equals("member_left_channel")) {
-    removeGroupUser(groupId, userEmail);
-  }
+    if (isBot) {
+        processSlackChannel(channel, groupId);
+    } else if (event.equals("member_joined_channel")) {
+        addGroupUser(groupId, userEmail);
+    } else if (event.equals("member_left_channel")) {
+        removeGroupUser(groupId, userEmail);
+    }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -458,20 +438,20 @@ public void processUser(JSONObject userResponse, String event, String channel) t
 
 `processSlackChannel`関数を次の内容に置き換えます。
 
-```javascript
+```js
 function processSlackChannel(channel, groupId) {
-  const limit = 100;
-  const channelUsersPath = `https://slack.com/api/conversations.members?token=${slackConfig.botToken}&channel=${channel}&limit=${limit}`;
+    const limit = 100;
+    const channelUsersPath = `https://slack.com/api/conversations.members?token=${slackConfig.botToken}&channel=${channel}&limit=${limit}`;
 
-  axios.get(channelUsersPath).then((response) => {
-    response.data.members.forEach((uid) => {
-      getSlackUser(uid, function (user) {
-        if (user.profile.email && !user.is_bot) {
-          addGroupUser(groupId, user.profile.email);
-        }
-      });
+    axios.get(channelUsersPath).then((response) => {
+        response.data.members.forEach((uid) => {
+            getSlackUser(uid, function (user) {
+                if (user.profile.email && !user.is_bot) {
+                    addGroupUser(groupId, user.profile.email);
+                }
+            });
+        });
     });
-  });
 }
 
 ```
@@ -482,40 +462,36 @@ function processSlackChannel(channel, groupId) {
 
 `processSlackChannel`メソッドを次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 public void processSlackChannel(String channel, String groupId) throws Exception {
-  String limit = "100";
-  String channelUsersPath = String.format("%s/conversations.members?token=%s&channel=%s&limit=%s", slackConfig.slackApiUrl, slackConfig.botToken, channel, limit);
+    String limit = "100";
+    String channelUsersPath = String.format("%s/conversations.members?token=%s&channel=%s&limit=%s", slackConfig.slackApiUrl, slackConfig.botToken, channel, limit);
 
-  JSONObject channelUserList = sendGETRequest(channelUsersPath);
-  JSONArray channelUserIds = (JSONArray) channelUserList.get("members");
+    JSONObject channelUserList = sendGETRequest(channelUsersPath);
+    JSONArray channelUserIds = (JSONArray) channelUserList.get("members");
 
-  @SuppressWarnings("rawtypes")
-  Iterator i = channelUserIds.iterator();
-  while(i.hasNext()) {
-    String uid = (String)i.next();
+    @SuppressWarnings("rawtypes")
+    Iterator i = channelUserIds.iterator();
+    while(i.hasNext()) {
+        String uid = (String)i.next();
 
-    JSONObject userResponse = (JSONObject) getSlackUser(uid.toString());
-    JSONObject userObj = (JSONObject) userResponse.get("user");
-    JSONObject userProfile = (JSONObject) userObj.get("profile");
-    Boolean isBot = (Boolean) userObj.get("is_bot");
+        JSONObject userResponse = (JSONObject) getSlackUser(uid.toString());
+        JSONObject userObj = (JSONObject) userResponse.get("user");
+        JSONObject userProfile = (JSONObject) userObj.get("profile");
+        Boolean isBot = (Boolean) userObj.get("is_bot");
 
-    String userEmail = new String();
-    if (!isBot) {
-      userEmail = (String) userProfile.get("email");
+        String userEmail = new String();
+        if (!isBot) {
+            userEmail = (String) userProfile.get("email");
+        }
+
+        if (!userEmail.isEmpty() && !isBot) {
+            addGroupUser(groupId, userEmail);
+        }
     }
-
-    if (!userEmail.isEmpty() && !isBot) {
-      addGroupUser(groupId, userEmail);
-    }
-  }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -552,17 +528,17 @@ Boxのメールアドレスは一意であり、複数のアカウントに使�
 
 `getSlackUser`関数を次の内容に置き換えます。
 
-```javascript
+```js
 function getSlackUser(userId, callback) {
-  const userPath = `https://slack.com/api/users.info?token=${slackConfig.botToken}&user=${userId}`;
+    const userPath = `https://slack.com/api/users.info?token=${slackConfig.botToken}&user=${userId}`;
 
-  axios.get(userPath).then((response) => {
-    if (response.data.user && response.data.user.profile) {
-      callback(response.data.user);
-    } else {
-      console.log("No user data found");
-    }
-  });
+    axios.get(userPath).then((response) => {
+        if (response.data.user && response.data.user.profile) {
+            callback(response.data.user);
+        } else {
+            console.log("No user data found");
+        }
+    });
 }
 
 ```
@@ -575,17 +551,13 @@ function getSlackUser(userId, callback) {
 
 `getSlackUser`メソッドを次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 public JSONObject getSlackUser(String userId) throws Exception {
-  String usersPath = String.format("%s/users.info?token=%s&user=%s", slackConfig.slackApiUrl, slackConfig.botToken, userId);
-  return sendGETRequest(usersPath);
+    String usersPath = String.format("%s/users.info?token=%s&user=%s", slackConfig.slackApiUrl, slackConfig.botToken, userId);
+    return sendGETRequest(usersPath);
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 このメソッドでは、ユーザープロフィールを取得するようSlackにリクエストを送信した後、そのリクエストのレスポンスを返します。このレスポンスはユーザープロフィールJSONオブジェクトになります。
 

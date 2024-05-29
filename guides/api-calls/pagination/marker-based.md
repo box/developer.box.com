@@ -54,15 +54,11 @@ curl https://api.box.com/2.0/folders/0/items?limit=100&usemarker=true \
 
 エントリの次のページを取得するには、APIレスポンスで受け取った`next_marker`値の値に等しい`marker`パラメータを指定して、APIを呼び出す必要があります。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker=true \
     -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 次の`next_marker`値がレスポンスオブジェクト内で`null`になっている場合、項目の最終ページはリクエスト済みです。この時点では、これ以上取得する項目がありません。
 
@@ -76,29 +72,21 @@ curl https://api.box.com/2.0/folders/0/items?marker=34332423&limit=100&usemarker
 
 以下のクエリパラメータは、コレクションのページ割りに使用されます。
 
-<!-- markdownlint-disable line-length -->
-
 | クエリパラメータ    | 型       | デフォルト      |                                                                                                      |
 | ----------- | ------- | ---------- | ---------------------------------------------------------------------------------------------------- |
 | `marker`    | String  |            | コレクション内で最初に結果を返す位置。これは前のリクエストで返された値です。                                                               |
 | `limit`     | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。                                                                 |
 | `usemarker` | Boolean |            | ページ割りのタイプを選択するために、両タイプのページ割りをサポートするAPIエンドポイントで使用可能なクエリパラメータ (省略可)。`true`に設定すると、マーカーベースのページ割りが適用されます。 |
 
-<!-- markdownlint-enable line-length -->
-
 ## コレクション
 
 コレクションのページ割りを行うと、APIによって、結果のセットを配列として含むオブジェクトのほか、結果の現在のページに関する情報が返されます。
-
-<!-- markdownlint-disable line-length -->
 
 | フィールド         | 型       |                                                                                 |
 | ------------- | ------- | ------------------------------------------------------------------------------- |
 | `entries`     | Array   | このページの項目を含むページ。結果がない場合は空の配列になります。                                               |
 | `next_marker` | String  | 結果の次のページを取得するために`marker`値として使用できる値。この値が`null`または空の文字列の場合は、これ以上取得する結果がありません。     |
 | `limit`       | Integer | 結果の現在のページに使用される制限。この制限は、このAPIエンドポイントに許可されている最大値を超えない限り、`limit`クエリパラメータと同じになります。 |
-
-<!-- markdownlint-enable line-length -->
 
 ## エンドポイントの例
 

@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_endpoints:
   - post_oauth2_token
 related_resources:
@@ -20,7 +20,7 @@ total_steps: 8
 sibling_id: authentication/tokens
 parent_id: authentication/tokens
 next_page_id: authentication/tokens/annotator-tokens
-previous_page_id: authentication/tokens/access-tokens
+previous_page_id: authentication/tokens/revoke
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/downscope.md
 fullyTranslated: true
@@ -55,8 +55,6 @@ fullyTranslated: true
 
 </Samples>
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ                | 説明                                                                                                                                                           |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `subject_token`      | ダウンスコープする元のトークン。これには、OAuth 2.0やJWTトークン交換で取得したトークン、またはアプリトークンとして取得されたトークンを使用できます。                                                                             |
@@ -65,8 +63,6 @@ fullyTranslated: true
 | `box_shared_link`    | Box上のファイルまたはフォルダの[共有リンク](g://shared-links)URL (省略可)。パスワード保護されているリンクはサポートされていません。このオプションは、`resource`オプションに追加して使用することができません。また、ウェブリンクに作成された共有リンクを指定することもできません。 |
 | `subject_token_type` | 常に`urn:ietf:params:oauth:token-type:access_token`に設定します。                                                                                                     |
 | `grant_type`         | 常に`urn:ietf:params:oauth:grant-type:token-exchange`に設定します。                                                                                                   |
-
-<!-- markdownlint-enable line-length -->
 
 ## ダウンスコープされたアクセストークンオブジェクト
 

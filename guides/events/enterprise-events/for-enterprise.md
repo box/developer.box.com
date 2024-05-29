@@ -41,14 +41,10 @@ Enterprise Eventを取得するには、`stream_type`を`admin_logs`または`ad
 
 ## ストリームタイプ
 
-<!-- markdownlint-disable line-length -->
-
 | ストリームタイプ               |                                   |
 | ---------------------- | --------------------------------- |
 | `admin_logs`           | イベントの履歴を最大1年分照会できるようにします          |
 | `admin_logs_streaming` | ほぼリアルタイムでライブイベントにサブスクライブできるようにします |
-
-<!-- markdownlint-enable line-length -->
 
 ## ライブで監視
 
@@ -89,8 +85,6 @@ Enterprise Eventフィードでは、イベントタイプによるフィルタ�
 ## イベントタイプ
 
 Enterpriseに対して、以下のイベントがトリガーされます。このリストですべてを網羅しているわけではないため、記載されていないイベントが表示される可能性もあります。
-
-<!-- markdownlint-disable line-length -->
 
 | イベント名                                                         | 説明                                                                                                            |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -232,8 +226,6 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE`                | OAuth 2.0アクセストークンの作成                                                                                          |
 | `WATERMARK_LABEL_CREATE`                                      | ファイルへの電子すかしの追加                                                                                                |
 | `WATERMARK_LABEL_DELETE`                                      | ファイルからの電子すかしの削除                                                                                               |
-
-<!-- markdownlint-enable line-length -->
 
 [shield-events]: g://events/event-triggers/shield-alert-events
 

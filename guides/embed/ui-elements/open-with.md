@@ -78,7 +78,7 @@ Open With UI Elementを使用する前に、アプリケーションを許可し
 
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
-      -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 
 ```
 
@@ -104,34 +104,34 @@ IDに基づいて、特定の統合に関する追加情報を取得するには
 
 ```curl
 curl -X GET \
-  https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 
 ```
 
 ```json
 {
-   "type":"app_integration",
-   "id":"10897",
-   "app":{
-      "type":"app",
-      "id":"336417"
-   },
-   "name":"Edit with G Suite",
-   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
-   "executable_item_types":[
-      "file"
-   ],
-   "restricted_extensions":[
-      "docx",
-      "gdoc",
-      "xlsx",
-      "gsheet",
-      "pptx",
-      "gslides",
-      "gslide"
-   ],
-   "scoped_to":"parent"
+  "type": "app_integration",
+  "id": "10897",
+  "app": {
+    "type": "app",
+    "id": "336417"
+  },
+  "name": "Edit with G Suite",
+  "description": "Securely manage your Google Docs, Sheets and Slides in Box",
+  "executable_item_types": [
+    "file"
+  ],
+  "restricted_extensions": [
+    "docx",
+    "gdoc",
+    "xlsx",
+    "gsheet",
+    "pptx",
+    "gslides",
+    "gslide"
+  ],
+  "scoped_to": "parent"
 }
 
 ```
@@ -154,17 +154,17 @@ curl -X GET \
 
 ```curl
 curl -X POST https://api.box.com/2.0/app_integration_assignments \
-  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
-  -d '{
-    "assignee": {
-      "type": "user",
-      "id": "[APP_USER_ID]"
-    },
-    "app_integration": {
-      "type": "app_integration",
-      "id": "[APP_INTEGRATION_ID]"
-    }
-  }'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
+    -d '{
+      "assignee": {
+        "type": "user",
+        "id": "[APP_USER_ID]"
+      },
+      "app_integration": {
+        "type": "app_integration",
+        "id": "[APP_INTEGRATION_ID]"
+      }
+    }'
 
 ```
 
@@ -190,11 +190,9 @@ JSONレスポンスに含まれるIDは、割り当て後にアプリ統合を�
 
 App Userからアプリ統合を削除するには、有効なサービスのアクセストークンと、前の手順で取得したアプリ統合割り当てIDを使用して次のリクエストを実行できます。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
-  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
 
 ```
 
@@ -203,11 +201,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## サンプルHTML
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <!DOCTYPE html>
@@ -260,8 +254,6 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
 上記のデモは、デモの \[JS] タブで有効なアクセストークンを指定しなければ、十分に機能しない可能性があります。Open With Elementの場合は、有効な[サービスアカウント][service-account]アクセストークンを指定する必要があります。
 
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 ## 認証
 
@@ -337,8 +329,6 @@ contentOpenWith.removeAllListeners();
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### パラメータ
 
 | パラメータ         | 型      | 説明                                                                                                                  |
@@ -375,8 +365,6 @@ contentOpenWith.removeAllListeners();
 | --------- | ------- | ---------------------- |
 | `execute` | 統合ID    | 統合の呼び出しが実行されたときに発生します。 |
 | `error`   | エラー     | エラーが発生したときに発生します。      |
-
-<!-- markdownlint-enable line-length -->
 
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 

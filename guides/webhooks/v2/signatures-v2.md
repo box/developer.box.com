@@ -37,7 +37,7 @@ Webhook署名は、Boxから送信されたWebhookペイロードが改ざんさ
 1. 開発者コンソールでアプリケーションに移動します。
 2. \[**Webhook**] タブをクリックします。
 3. \[**署名キーを管理**] ボタンをクリックします。
-4. \[**キーを生成**] ボタンをクリックして、キーを構成します。 
+4. \[**キーを生成**] ボタンをクリックして、キーを構成します。
 
 プライマリキーまたはセカンダリキーを生成したら、その値をコピーします。この値は、Webhookペイロードの検証で必要になります。これで、すべてのWebhookに`BOX-SIGNATURE-PRIMARY`および`BOX-SIGNATURE-SECONDARY`ヘッダーペイロードが含まれるようになります。
 
@@ -72,7 +72,7 @@ var expired = Date.now() - date > 10*60*1000;
 
 <Tab title="Python">
 
-```py
+```python
 import dateutil.parser
 import pytz
 import datetime
@@ -124,7 +124,7 @@ hmac2.update(timestamp);
 
 <Tab title="Python">
 
-```py
+```python
 import hmac
 import hashlib
 
@@ -162,7 +162,7 @@ var digest2 = hmac2.digest('base64');
 
 <Tab title="Python">
 
-```py
+```python
 import base64
 
 digest1 = base64.b64encode(hmac1)
@@ -199,7 +199,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
 
 <Tab title="Python">
 
-```py
+```python
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
 signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 

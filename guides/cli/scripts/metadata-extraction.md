@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 6
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -18,7 +18,7 @@ total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/deprovision-users
-previous_page_id: cli/scripts/report-inactive-users
+previous_page_id: cli/scripts/manage-groups-collaborations
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/metadata-extraction.md
 fullyTranslated: true
@@ -33,12 +33,12 @@ fullyTranslated: true
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -50,8 +50,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 
@@ -70,23 +70,25 @@ PS /Users/user/repos/boxcli/examples>
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
 ```bash
-git clone https://github.com/box/boxcli.git
-cd boxcli/examples/Metadata\ Extraction/
+    git clone https://github.com/box/boxcli.git
+    cd boxcli/examples/Metadata\ Extraction/
 
 ```
 
 2. `folderID`および`userID`パラメータを指定して、スキャンするフォルダとスクリプトを実行するユーザーをスクリプトに指示します。
 
 ```bash
-   [string]$FolderID = "",
-   [string]$UserID = "",
+    [string]$FolderID = "",
+    [string]$UserID = "",
 
 ```
 
-   パラメータをスクリプトで直接指定しない場合は、フラグとして渡すか、スクリプトで入力を求めるプロンプトを表示することができます。フラグを使用したコマンドのサンプルは次のようになります。
+    If you don't want to specify the parameters directly in the script,
+    you can either pass them as flags or allow the script
+    to prompt you to enter them. A sample command with flags looks as follows:
 
 ```bash
-   ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
 
 ```
 
@@ -95,24 +97,25 @@ cd boxcli/examples/Metadata\ Extraction/
 1. PowerShellコマンドを実行します。
 
 ```bash
-   pwsh
+    pwsh
 
 ```
 
 2. スクリプトを実行します。
 
 ```bash
-   ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
+    ./Metadata-extraction.ps1 -folderId 123456789 -userId 123456789
 
 ```
 
-   スクリプトが終了すると、以下のような出力が表示されます。
+    When the script finishes, you will see the following
+    output or a similar one.
 
 ```bash
-   Pulling data from Folder ID: 173961139760
-   metadata as user ID: 20718545815
-   Reading Item ID: 1016853559790
-   Metadata saved to: MetadataTemplate_properties.csv
+    Pulling data from Folder ID: 173961139760
+    metadata as user ID: 20718545815
+    Reading Item ID: 1016853559790
+    Metadata saved to: MetadataTemplate_properties.csv
 
 ```
 

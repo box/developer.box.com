@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - put_files_upload_sessions_id
 related_guides:
@@ -19,7 +19,7 @@ total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked
 next_page_id: uploads/chunked/commit-session
-previous_page_id: ''
+previous_page_id: uploads/chunked/with-sdks
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/upload-part.md
 fullyTranslated: true
@@ -31,8 +31,6 @@ fullyTranslated: true
 ## アップロードセッションの作成
 
 最初に[アップロードセッションを作成][createsession]します。結果のオブジェクトにより、各パーツのサイズとアップロードするパーツの数が定義されます。
-
-<!-- markdownlint-disable line-length -->
 
 ```json
 {
@@ -53,8 +51,6 @@ fullyTranslated: true
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## ファイルの分割
 
@@ -105,20 +101,20 @@ openssl sha1 -binary videoparta | base64
 各パーツのサイズは、作成したアップロードセッションで指定されているパーツサイズとまったく同じサイズである必要があります。ただし、ファイルの最後のパーツは小さくなる可能性があるため、例外となります。`Content-Range`パラメータの定義は、次のパターンに従います。
 
 ```yaml
-  -H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
+-H "Content-Range: bytes <LOWER_BOUND>-<HIGHER_BOUND>/<TOTAL_SIZE>"
 
 ```
 
 `Content-Range`の値を指定する際は、以下の点に注意してください。
 
 * 各パーツのバイト範囲の下限は、パーツサイズの倍数にする必要があります。
-* 上限は、パーツサイズの倍数から1を引いた値にする必要があります。  
+* 上限は、パーツサイズの倍数から1を引いた値にする必要があります。
 
 たとえば、パーツサイズが`8388608`の場合、最初の2つのパーツのコンテンツの範囲は次のようになります。
 
 ```yaml
-- H "Content-Range : bytes 0-8388607/32127641" \ ## first part
-- H "Content-Range : bytes 8388608-16777215/32127641" \ ## second part
+-H "Content-Range: bytes 0-8388607/32127641" \ ## first part
+-H "Content-Range: bytes 8388608-16777215/32127641" \ ## second part
 
 ```
 

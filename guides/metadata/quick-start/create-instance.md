@@ -25,21 +25,19 @@ fullyTranslated: true
 
 新しい`customerData`テンプレートが完成したら、このテンプレートをファイルまたはフォルダに適用できます。このテンプレートを適用するには、テンプレートの`scope`と`templateKey`のほか、テンプレートの適用先となる項目のIDが必要になります。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
-       "name": "Box, Inc",
-       "industry": "Technology",
-       "tav": 1000000
-     }'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
+      "name": "Box, Inc",
+      "industry": "Technology",
+      "tav": 1000000
+    }'
 
 ```
 
@@ -47,7 +45,7 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInf
 
 <Tab title=".NET">
 
-```c#
+```csharp
 var metadataValues = new Dictionary<string, object>()
 {
     { "name", "Box, Inc" },
@@ -68,12 +66,12 @@ Dictionary<string, object> metadata = await client.MetadataManager
 BoxFile file = new BoxFile(api, "12345");
 
 file.createMetadata(
-  "customerInfo",
-  "enterprise",
-  new Metadata()
-    .add("name", "Box, Inc")
-    .add("industry", "Technology")
-    .add("tav", 100000)
+    "customerInfo",
+    "enterprise",
+    new Metadata()
+        .add("name", "Box, Inc")
+        .add("industry", "Technology")
+        .add("tav", 100000)
 );
 
 ```
@@ -82,11 +80,11 @@ file.createMetadata(
 
 <Tab title="Python">
 
-```py
+```python
 metadata = {
-  'name': 'Box, Inc',
-  'industry': 'Technology',
-  'tav': 1000000
+    'name': 'Box, Inc',
+    'industry': 'Technology',
+    'tav': 1000000
 }
 
 client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo').set(metadata)
@@ -99,16 +97,16 @@ client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo
 
 ```js
 client.files.addMetadata(
-  '12345', 
-  client.metadata.scopes.ENTERPRISE, 
-  "customerInfo", 
-  {
-    name: "Box, Inc",
-    industry: "Technology",
-    tav: 1000000
-  }
+    '12345',
+    client.metadata.scopes.ENTERPRISE,
+    "customerInfo",
+    {
+        name: "Box, Inc",
+        industry: "Technology",
+        tav: 1000000
+    }
 ).then(metadata => {
-  // ...
+    // ...
 });
 
 ```
@@ -141,8 +139,6 @@ client.files.addMetadata(
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>
 

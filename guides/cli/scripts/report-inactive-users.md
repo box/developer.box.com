@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 4
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -27,19 +27,18 @@ fullyTranslated: true
 ---
 # 非アクティブなユーザーのレポート
 
-<!-- markdownlint-disable line-length -->
-
 このスクリプトは、一定の日数の間非アクティブであったユーザーのリストをCSVファイルで生成します。スクリプトによって以下の手順が実行されます。
 
-1. `user`ロールを持つユーザーを探します。 
+1. `user`ロールを持つユーザーを探します。
 
    <message>
 
    このスクリプトでは、他のロール (`AppUser`など) は考慮していません。
 
    </message>
-2. [Box Events][boxevents]を使用して、そのユーザーが一定の日数の間に操作を行ったかどうかを確認します。\
-   指定された日数の間。デフォルトのイベントタイプのリストは、`LOGIN`、`UPLOAD`、`COPY`、`MOVE`、`PREVIEW`、`DOWNLOAD`、`EDIT`、`DELETE`、`UNDELETE`、`LOCK`、`UNLOCK`、`NEW_USER`です。このリストはスクリプトの設定で変更できます。
+
+2. [Box Events][boxevents]を使用して、そのユーザーが一定の日数の間に操作を行ったかどうかを確認します。デフォルトのイベントタイプのリストは、`LOGIN`、`UPLOAD`、`COPY`、`MOVE`、`PREVIEW`、`DOWNLOAD`、`EDIT`、`DELETE`、`UNDELETE`、`LOCK`、`UNLOCK`、`NEW_USER`です。このリストはスクリプトの設定で変更できます。
+
 3. 操作を行わなかったユーザーを、非アクティブなユーザーが含まれている`.csv`ファイルに追加します。このファイルは他のスクリプト ([ユーザーのプロビジョニング解除][deprovisionscript]など) の入力として使用できます。
 
 ## 前提条件
@@ -48,12 +47,12 @@ fullyTranslated: true
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -65,8 +64,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 
@@ -85,29 +84,29 @@ PS /Users/user/repos/boxcli/examples>
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
 ```bash
-git clone https://github.com/box/boxcli.git
-cd boxcli/examples/Inactive\ Users\ Report/
+    git clone https://github.com/box/boxcli.git
+    cd boxcli/examples/Inactive\ Users\ Report/
 
 ```
 
 2. スクリプトでUser Eventをスキャンする日数を設定します。この値を指定しなかった場合やデフォルト設定のままにした場合は、スクリプトによって入力するよう求められます。
 
 ```bash
-$daysInactive = "10"
+    $daysInactive = "10"
 
 ```
 
 3. (省略可) レポート出力ファイル名を変更するには、`ReportOutputFile`パラメータを定義します。
 
 ```bash
-$ReportOutputFile = $ReportName + ".csv"
+    $ReportOutputFile = $ReportName + ".csv"
 
 ```
 
 4. (省略可) イベントタイプを変更するには、`eventType`パラメータのリストを定義します。
 
 ```bash
-$eventType = "LOGIN,UPLOAD,COPY,MOVE"
+    $eventType = "LOGIN,UPLOAD,COPY,MOVE"
 
 ```
 
@@ -143,8 +142,6 @@ Deleted employee Managed User 1
 
 * `Inactive_Users_Report_all.txt`: すべてのログエントリが含まれています。
 * `Inactive_Users_Report_errors.txt`: エラーのみが含まれています。
-
-<!-- markdownlint-enable line-length -->
 
 [scripts]: https://github.com/box/boxcli/tree/main/examples
 

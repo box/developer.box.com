@@ -16,13 +16,11 @@ total_steps: 7
 sibling_id: downloads
 parent_id: downloads
 next_page_id: downloads
-previous_page_id: downloads/folder
+previous_page_id: downloads/in-browser
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/downloads/zip-archive.md
 fullyTranslated: true
 ---
-<!-- markdownlint-disable line-length -->
-
 # ZIPアーカイブのダウンロード
 
 フォルダ内のすべてのファイル、またはフォルダ構造全体をダウンロードするには、ZIPアーカイブを作成してダウンロードする必要があります。
@@ -39,10 +37,10 @@ fullyTranslated: true
 
 ```json
 {
-"download_url":"https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
-"status_url":"https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
-"expires_at":"2023-02-28T10:23:54Z",
-"name_conflicts":[]
+  "download_url": "https://dl.boxcloud.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/content",
+  "status_url": "https://api.box.com/2.0/zip_downloads/25gvaXcIE4QJlinNiw2oHAQ==ZFs3Q2Xpd7pKBz7OyzXNrUaoW3aJxQRN5znAvyM-KpdEEPdWcQDKU-Dl85Ew/status",
+  "expires_at": "2023-02-28T10:23:54Z",
+  "name_conflicts": []
 }
 
 ```

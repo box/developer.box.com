@@ -54,8 +54,6 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 
 ### 400 Bad Request
 
-<!-- markdownlint-disable line-length -->
-
 <!-- i18n-enable localize-links -->
 
 |           |                                                                                                                                                                                                                |                                                                               |
@@ -158,11 +156,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 401 Unauthorized
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                  |
 | --------- | ------------------------------------------------ |
@@ -170,11 +164,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | 許可なし                                             |
 | **解決策**   | 承認トークンは承認されていません。詳細については、本文の拡張エラーメッセージを確認してください。 |
 
-<!-- markdownlint-enable line-length -->
-
 ### 403 Forbidden
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -229,11 +219,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 404 Not Found
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                      |
 | --------- | ---------------------------------------------------- |
@@ -253,11 +239,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | Item is trashed (項目はごみ箱に移動されました)                     |
 | **解決策**   | アクセス対象の項目がごみ箱にあり、変更できません。項目をごみ箱から移動してやり直してください。      |
 
-<!-- markdownlint-enable line-length -->
-
 ### 405 Method Not Allowed
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                          |
 | --------- | ------------------------------------------------------------------------ |
@@ -265,11 +247,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | Method Not Allowed (メソッドが許可されていません)                                      |
 | **解決策**   | API操作に使用されるHTTPメソッドは許可されていません。APIリファレンスドキュメントで、API操作に必要なHTTP動詞を確認してください。 |
 
-<!-- markdownlint-enable line-length -->
-
 ### 409 Conflict
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                                                                                                                                                                               |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -297,11 +275,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | User with the specified login already exists (指定のログインを持つユーザーがすでに存在します)                                                                                                                                                                        |
 | **解決策**   | 同じメールアドレスのユーザーがすでに存在します。既存ユーザーを参照するか、別のメールアドレスを指定してください。                                                                                                                                                                                      |
 
-<!-- markdownlint-enable line-length -->
-
 ### 410 Gone
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                                                                                       |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -313,11 +287,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** |                                                                                                                                                       |
 | **解決策**   | アップロードセッションで回復不能な状態になり、続行できません。このリクエストまたはその他のリクエストのアップロードセッションは、結果として、不適切な状態 (パーツ重複など) になりました。この状態の原因として、パーツの上限を超過しているか、重複するパーツがアップロード済みであることが考えられます。 |
 
-<!-- markdownlint-enable line-length -->
-
 ### 411 Length Required
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                                |
 | --------- | ---------------------------------------------------------------------------------------------- |
@@ -325,13 +295,9 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | content-length header was required, but not provided. (content-lengthヘッダーが要求されましたが、指定されていません。) |
 | **解決策**   | APIリクエストでContent-Lengthヘッダーを指定してください。                                                          |
 
-<!-- markdownlint-enable line-length -->
-
 <!--alex ignore failed-->
 
 ### 412 Precondition Failed
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                                                         |
 | --------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -343,11 +309,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | The resource has been modified. Please retrieve the resource again and retry (このリソースは変更されています。リソースをもう一度取得してから再試行してください) |
 | **解決策**   | 詳細については、レスポンス本文の拡張エラーメッセージを確認してください。                                                                                    |
 
-<!-- markdownlint-enable line-length -->
-
 ### 413 Request Entity Too Large
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                  |
 | --------- | ---------------------------------------------------------------- |
@@ -355,11 +317,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | Request Entity too Large (リクエストのエンティティが大きすぎます)                   |
 | **解決策**   | アップロードのサイズが許容された上限を超えると、このエラーが発生します。レスポンス本文の拡張エラーメッセージを確認してください。 |
 
-<!-- markdownlint-enable line-length -->
-
 ### 415 Unsupported Media Type
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                        |
 | --------- | -------------------------------------------------------------------------------------- |
@@ -367,11 +325,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | Previews for `boxnote` files are not yet supported. (`boxnote`ファイルのプレビューはサポートされていません。) |
 | **解決策**   | このエラーは、Box Noteの埋め込みプレビューをリクエストしたときに発生します。現時点では、埋め込みプレビューがBox Notesでサポートされていません。       |
 
-<!-- markdownlint-enable line-length -->
-
 ### 429 Too Many requests
-
-<!-- markdownlint-disable line-length -->
 
 |           |                                                                                                                                                                   |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -379,11 +333,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **メッセージ** | Request rate limit exceeded, please try again later (リクエストのレート制限を超えました。後でもう一度やり直してください)                                                                           |
 | **解決策**   | クライアントの処理が速すぎて、レート制限を受けました。クライアントでは、`retry-after`ヘッダーで指定された時間が経過してからリクエストをやり直すことが推奨されます。[4つのレート制限](g://api-calls/permissions-and-errors/rate-limits)に注意する必要があります。 |
 
-<!-- markdownlint-enable line-length -->
-
 ### 500 Internal Service Error
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -395,11 +345,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 502 Bad Gateway
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -411,11 +357,7 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 
 <!-- i18n-disable localize-links -->
 
-<!-- markdownlint-enable line-length -->
-
 ### 503 Unavailable
-
-<!-- markdownlint-disable line-length -->
 
 <!-- i18n-enable localize-links -->
 
@@ -426,8 +368,6 @@ Box APIの使用時に発生した一般的なエラーの解決策について�
 | **解決策**   | Retry-Afterヘッダーがレスポンスで返された場合、クライアントは、そのヘッダーの値に従ってリクエストを再試行する必要があります。稀に、クライアントが503のレスポンスを受け取った後も、書き込み操作が最終的にその変更を保持する可能性があるため、クライアントは、再試行時にこのケースを処理する必要があります。問題が引き続き発生する場合は、Boxの[Statusサイト](https://status.box.com/)で、機能停止に関する既知の情報を確認してください。 |
 
 <!-- i18n-disable localize-links -->
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 

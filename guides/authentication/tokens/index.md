@@ -42,8 +42,6 @@ fullyTranslated: true
 
 それぞれのアプリケーションの種類でどのようにアクセストークンが作成されるのかを以下に示します。
 
-<!-- markdownlint-disable line-length -->
-
 | Boxアプリケーションの種類       | アクセストークンの取得方法                          |
 | -------------------- | -------------------------------------- |
 | カスタムアプリとOAuth 2.0    | [明示的なユーザーによる付与][oauth2-with-sdk]       |
@@ -51,8 +49,6 @@ fullyTranslated: true
 | カスタムアプリとクライアント資格情報許可 | [クライアントIDとクライアントシークレットの使用][clientcred] |
 | アクセス制限付きアプリとアプリトークン  | [開発者コンソール][devcon]でのトークンの構成            |
 | カスタムスキル              | イベントペイロードのアクセストークン                     |
-
-<!-- markdownlint-enable line-length -->
 
 [jwt-with-sdk]: g://authentication/oauth2/without-sdk
 

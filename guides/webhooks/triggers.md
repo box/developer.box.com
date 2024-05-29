@@ -30,8 +30,6 @@ fullyTranslated: true
 
 以下は、V2 Webhookをトリガーするよう構成できるイベントのリストです。ファイルに対してのみ使用できるイベントや、フォルダに対してのみ使用できるイベントもあります。
 
-<!-- markdownlint-disable line-length -->
-
 | イベント                                | トリガー                                                        | ファイルに使用可能か | フォルダに使用可能か |
 | ----------------------------------- | ----------------------------------------------------------- | ---------- | ---------- |
 | `COLLABORATION.CREATED`             | コラボレーションが作成される。                                             | いいえ        | はい         |
@@ -75,13 +73,7 @@ fullyTranslated: true
 | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | 署名者のメールが差し戻される。                                             | はい         | はい         |
 | `WEBHOOK.DELETED`                   | Webhookが削除される。                                              | いいえ        | いいえ        |
 
-<!-- markdownlint-enable line-length -->
-
-<!-- markdownlint-disable line-length -->
-
 <!-- | `SIGN_REQUEST.SIGNER_EMAIL_BOUNCED` | A sign request recipient email notification was not delivered | -->
-
-<!-- markdownlint-enable line-length -->
 
 ## V1
 

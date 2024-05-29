@@ -31,32 +31,31 @@ fullyTranslated: true
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "redirect_url": "https://forum.box.com/",
-    "declined_redirect_url":"https://developer.box.com/",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "redirect_url": "https://forum.box.com/",
+      "declined_redirect_url": "https://developer.box.com/",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -65,7 +64,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_single_more_options(
     ...
 
@@ -86,7 +84,7 @@ def sign_doc_single_more_options(
 
 def main():
     ...
-    
+
     # Sign with redirects
     sign_with_redirects = sign_doc_single_more_options(
         client,
@@ -97,7 +95,7 @@ def main():
         redirect_url="https://forum.box.com/",
         declined_redirect_url="https://developer.box.com/",
     )
-    check_sign_request(sign_with_redirects)    
+    check_sign_request(sign_with_redirects)
 
 ```
 

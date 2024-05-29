@@ -31,15 +31,11 @@ User Eventは、現在認証されているユーザーに関連する、低レ�
 
 Enterprise Event Streamとは異なり、User Event Streamは、特定のイベントのフィルタをサポートしません。User Eventの3つのstream_typeで返されるUser Eventデータセットのサブセットは、目的に応じて若干異なります。
 
-<!-- markdownlint-disable line-length -->
-
 | ストリームタイプ  |                                                |
 | --------- | ---------------------------------------------- |
 | `all`     | ユーザーに関するすべてのイベントを返します (デフォルト)。                 |
 | `changes` | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します |
 | `sync`    | 変更に似ていますが、同期対象フォルダにのみ適用されます。                   |
-
-<!-- markdownlint-enable line-length -->
 
 ### Enterprise Event
 
@@ -47,14 +43,10 @@ Enterprise Eventは、企業のBoxインスタンスにあるすべてのユー�
 
 User Event Streamとは異なり、Enterprise Event Streamは、イベントタイプに基づくフィルタをサポートしますが、Long pollingをサポートしません。2つのストリームタイプでのデータセットはまったく同じです。イベントIDを使用すると、2つのストリームタイプでのイベントの重複を排除できます。
 
-<!-- markdownlint-disable line-length -->
-
 | ストリームタイプ               |                                   |
 | ---------------------- | --------------------------------- |
 | `admin_logs`           | イベントの履歴を最大1年分照会できるようにします          |
 | `admin_logs_streaming` | ほぼリアルタイムでライブイベントにサブスクライブできるようにします |
-
-<!-- markdownlint-enable line-length -->
 
 #### ライブで監視
 

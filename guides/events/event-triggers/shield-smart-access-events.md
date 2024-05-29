@@ -37,7 +37,7 @@ Box管理者は、[スマートアクセス][smartaccess]を使用すると、�
 
 Boxウェブアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -66,7 +66,7 @@ Boxウェブアプリの場合、`additional_details`ペイロードは以下の
 
 Boxデスクトップアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -100,7 +100,7 @@ Boxデスクトップアプリの場合、`additional_details`ペイロードは
 
 Box Mobileアプリの場合、`additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -138,7 +138,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
 
 外部コラボレーションの招待がブロックされている場合、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED`または`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントの`additional-details`ペイロードによって以下の詳細が示されます。
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -175,7 +175,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
 
 外部コラボレーションの招待が正当な理由で認められている場合、`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -248,7 +248,7 @@ Box Mobileアプリの場合、`additional_details`ペイロードは以下の�
 
 外部コラボレーションのアクセスがブロックされている場合、`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED`または`SHIELD_EXTERNAL_COLLAB_ACCESS_BLOCKED_MISSING_JUSTIFICATION`イベントの`additional_details`ペイロードによって以下の詳細が示されます。
 
-```js
+```json
 "additional_details": {
   "shield_external_collab_enforcement": {
     "item": {
@@ -287,7 +287,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 `additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_justification": {
     "justification_id": "18428718",
@@ -342,9 +342,9 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 サードパーティ製アプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
-  "shield_download_enforcement": {    
+  "shield_download_enforcement": {
     "item": {
       "type": "file",
       "id": 875644956551,
@@ -370,7 +370,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 カスタムアプリケーションの場合、`additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {
@@ -408,7 +408,7 @@ FTPプロトコルを介したファイルまたはフォルダのダウンロ�
 
 `additional_details`ペイロードは以下の詳細を示します。
 
-```js
+```json
 "additional_details": {
   "shield_download_enforcement": {
     "item": {

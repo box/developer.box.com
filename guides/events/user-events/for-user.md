@@ -43,15 +43,11 @@ User Eventを取得するには、任意のユーザーとして認証し、[`GE
 
 User Event Streamでは、3つのタイプのストリームがサポートされます。
 
-<!-- markdownlint-disable line-length -->
-
 | ストリームタイプ  |                                                 |
 | --------- | ----------------------------------------------- |
 | `all`     | ユーザーに関するすべてのイベントを返します (デフォルト)。                  |
 | `changes` | ファイルの更新やコラボレーションなど、ファイルツリーを変更する可能性があるイベントを返します。 |
 | `sync`    | 変更に似ていますが、同期対象フォルダにのみ適用されます。                    |
-
-<!-- markdownlint-enable line-length -->
 
 ## 匿名ユーザー
 
@@ -74,8 +70,6 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 ## イベントタイプ
 
 ユーザーに対して、以下のイベントがトリガーされます。このリストですべてを網羅しているわけではないため、記載されていないイベントが表示される可能性もあります。
-
-<!-- markdownlint-disable line-length -->
 
 以下のイベントは、すべてのフィードで使用できます。
 
@@ -119,7 +113,5 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 | `MASTER_INVITE_REJECT`   | 管理対象ユーザーになるための招待が無料ユーザーによって拒否されました。  |
 | `ACCESS_GRANTED`         | アカウントに対するBoxのアクセス権限が付与されました。         |
 | `ACCESS_REVOKED`         | アカウントに対するBoxのアクセス権限が取り消されました。        |
-
-<!-- markdownlint-enable line-length -->
 
 [longpoll]: g://events/user-events/polling

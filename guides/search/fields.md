@@ -21,15 +21,13 @@ fullyTranslated: true
 
 デフォルトでは、検索APIによって**標準**形式の[ファイル](r://file)、[フォルダ](r://folder)、または[ウェブリンク](r://web_link)が返されます。これらの各リソースでは、`fields`クエリパラメータを使用してリクエストできる追加のフィールドがサポートされています。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&fields=name,tags" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 
 ```
 
@@ -69,7 +67,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title="Python">
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, fields=["name", "tags"])
 
 ```
@@ -80,21 +78,19 @@ client.search().query("sales", metadata_filters=metadata_search_filters, fields=
 
 ```js
 client.search.query(
-  'sales',
-  {
-    fields: "name,tags"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        fields: "name,tags"
+    })
+    .then(results => {
+        // ...
+    });
 
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 

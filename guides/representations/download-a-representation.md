@@ -30,29 +30,21 @@ fullyTranslated: true
 
 PDFのようにページ割りされたレプリゼンテーションでは、`{+asset_path}`を目的のページ番号とファイル拡張子に置き換えます (例: `1.pdf`)。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/pdf/content/3.pdf \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## ページ割りされていないレプリゼンテーション
 
 ページ割りされていないレプリゼンテーションでは、`{+asset_path}`を空の文字列に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://dl.boxcloud.com/api/2.0/internal_files/123/versions/345/representations/jpg_32x32/content/ \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
-
-<!-- markdownlint-eable line-length -->
 
 ## 省略可能なクエリパラメータ
 

@@ -29,8 +29,6 @@ Markdown content
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 Boxのドキュメントでは以下のFrontmatterがサポートされています。
 
 | キー                  | 説明                                                                                             |
@@ -48,5 +46,3 @@ Boxのドキュメントでは以下のFrontmatterがサポートされていま
 | `related_resources` | このガイド/ページに関連するリソースID (`file`など) のリスト。これらは、ページ下部で、マークダウンコンテンツの後に表示されます。                         |
 | `required_guides`   | このガイド/ページの前に読む必要がある前提条件ガイドID (`tooling/postman`など) のリスト。これらは、ページ上部で、タイトルとマークダウンコンテンツの間に表示されます。 |
 | `type`              | これが表すガイド/ページのタイプ (省略可)。現時点で有効な値は`quick-start`ガイドのみです。                                          |
-
-<!-- markdownlint-enable line-length -->

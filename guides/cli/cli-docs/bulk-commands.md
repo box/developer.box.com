@@ -22,8 +22,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/cli-docs/bulk-commands.md
 fullyTranslated: true
 ---
-<!-- markdownlint-disable line-length -->
-
 # CLIの一括コマンド
 
 Box CLIの一括コマンドを使用すると、反復タスクを自動化できます。コマンドに`--bulk-file-path`フラグを追加すると、多数の項目に対して操作を一度に実行できます。
@@ -59,19 +57,18 @@ box folders:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 1. `boxcli` GitHubリポジトリを複製するか、[`Bulk actions`][bulkactions]ディレクトリからファイルをダウンロードします。
 
 ```bash
-git clone https://github.com/box/boxcli.git
+    git clone https://github.com/box/boxcli.git
 
 ```
 
 2. 必要に応じて`.csv`テンプレートを調整します。たとえば、複数のフォルダを作成する場合は、出発点として[`folders-create.csv`][folderstemplate]テンプレートを使用できます。
+
 3. コマンドを実行します。
 
 ```bash
-   box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
+    box users:create --bulk-file-path <PATH_TO_CSV>/folders-create.csv
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 [console]: https://app.box.com/developers/console
 

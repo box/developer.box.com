@@ -26,8 +26,6 @@ fullyTranslated: true
 
 以下のコードは、汎用Toolkitメソッドを使用してSalesforceのBoxフォルダにメタデータを作成します。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="Apex">
@@ -66,13 +64,9 @@ HttpResponse response = toolkit.sendRequest(request);
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## 新しいフォルダの関連付け
 
 以下のコードは、特定のSalesforceレコードID用のフォルダを作成します。
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -100,13 +94,9 @@ boxToolkit.commitChanges();
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## フォルダテンプレート
 
 以下のコードは、レコード用のフォルダを作成し、サブフォルダ (フォルダテンプレート) を作成して現在のユーザーとコラボレーションします。
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -142,13 +132,9 @@ boxToolkit.commitChanges();
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 ## メタデータ
 
 以下のコードでは、Boxフォルダのメタデータとカスケードポリシーを取得、追加、削除、更新します。
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -211,7 +197,7 @@ Boolean fmd = tk.deleteBoxMetadataByFolderId('193488737189', 'global',
 System.debug(tk.mostRecentError);
 System.debug(fmd);
 
-// Get Cascade Policy List 
+// Get Cascade Policy List
 Box.Toolkit tk = new Box.Toolkit();
 List<Box.MetadataCascadePolicy> mcp =
 tk.getMetadataCascadePoliciesByFolderId('193488737189', null, 0, null);
@@ -225,7 +211,7 @@ tk.getMetadataCascadePolicyById('MTkzNDg4NzM3MTg5I2cjbG9iU2FsZXNmb3JjZVJlY29yZC0
 System.debug(mcp);
 System.debug(tk.mostRecentError);
 
-// Create Cascade Policy 
+// Create Cascade Policy
 Box.Toolkit tk = new Box.Toolkit();
 Box.MetadataCascadePolicy mcp = tk.createMetadataCascadePolicy('193488737189', 'global',
 'lobSalesforceRecord');
@@ -245,11 +231,7 @@ System.debug(tk.mostRecentError);
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 その他の例:
-
-<!-- markdownlint-disable line-length -->
 
 <Tabs>
 
@@ -274,16 +256,12 @@ System.debug(tk.getBoxMetadataByFolderId('205776356105', 'global',
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="Apex">
 
 ```java
-// Create metadata 
+// Create metadata
 Box.toolkit tk = new Box.Toolkit();
 List<Box.KeyValuePair> kvps = new List<Box.KeyValuePair>();
 Box.KeyValuePair kvp1 = new Box.KeyValuePair();
@@ -308,10 +286,6 @@ System.debug(tk.mostRecentError);
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="Apex">
@@ -325,7 +299,7 @@ List<Box.FolderMetadataUpdate> fmus = new List<Box.FolderMetadataUpdate>();
 Box.FolderMetadataUpdate fmu = new Box.FolderMetadataUpdate();
 fmu.op = 'replace';
 fmu.path = '/name';
-fmu.value = ‘Test 2';
+fmu.value = 'Test 2';
 fmus.add(fmu);
 Box.FolderMetadataUpdate fmu2 = new Box.FolderMetadataUpdate();
 fmu2.op = 'replace';
@@ -335,7 +309,7 @@ fmus.add(fmu2);
 Box.FolderMetadataUpdate fmu3 = new Box.FolderMetadataUpdate();
 fmu3.op = 'add';
 fmu3.path = '/typeMulti';
-fmu3.value = ‘Customer’;
+fmu3.value = 'Customer';
 fmus.add(fmu3);
 System.debug(tk.updateBoxMetadataByFolderId('205776356105', 'enterprise',
 'testTemplate', fmus));
@@ -346,5 +320,3 @@ System.debug(tk.mostRecentError);
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

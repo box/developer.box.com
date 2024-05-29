@@ -51,15 +51,11 @@ OAuth 2.0を介して取得したアクセストークンは、もともとア�
 
 ## パラメータ
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ           | 説明                                                              |
 | --------------- | --------------------------------------------------------------- |
 | `CLIENT_ID`     | アプリケーションのクライアントIDまたはAPIキー                                       |
 | `CLIENT_SECRET` | アプリケーションのクライアントシークレットまたはAPIシークレット                               |
 | `REDIRECT_URI`  | ユーザーがアプリケーションを承認した後に送信されるアプリケーションのリダイレクトURL。これは開発者コンソールで構成できます。 |
-
-<!-- markdownlint-enable line-length -->
 
 ## 1. SDKを構成する
 
@@ -69,7 +65,7 @@ OAuth 2.0を介して取得したアクセストークンは、もともとア�
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var redirectUrl = "[REDIRECT_URI]";
 var config = new BoxConfig("[CLIENT_ID]", "[CLIENT_SECRET]", new Uri(redirectUrl));
 var sdk = new BoxClient(config);
@@ -80,16 +76,12 @@ var sdk = new BoxClient(config);
 
 <Tab title="Java">
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 import com.box.sdk.BoxAPIConnection;
 
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -113,8 +105,8 @@ auth = OAuth2(
 var BoxSDK = require("box-node-sdk");
 
 var sdk = new BoxSDK({
-  clientID: "[CLIENT_ID]",
-  clientSecret: "[CLIENT_SECRET]",
+    clientID: "[CLIENT_ID]",
+    clientSecret: "[CLIENT_SECRET]",
 });
 
 ```
@@ -143,7 +135,7 @@ var sdk = new BoxSDK({
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 // redirectTo(authorizationUrl);
 
@@ -153,16 +145,12 @@ var authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[
 
 <Tab title="Java">
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String authorizationUrl = "https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&response_type=code";
 
 // response.redirect(authorizationUrl);
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -181,7 +169,7 @@ auth_url, csrf_token = auth.get_authorization_url('[REDIRECT_URL]')
 
 ```js
 var authorize_url = sdk.getAuthorizeURL({
-  response_type: "code",
+    response_type: "code",
 });
 
 // res.redirect(authorize_url)
@@ -200,14 +188,10 @@ var authorize_url = sdk.getAuthorizeURL({
 
 [承認URL](endpoint://get-authorize)は、以下のように手動でも作成できます。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 https://account.box.com/api/oauth2/authorize?client_id=[CLIENT_ID]&redirect_uri=[REDIRECT_URI]&response_type=code
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -248,7 +232,7 @@ https://your.domain.com/path?code=1234567
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var session = await sdk.Auth.AuthenticateAsync("[CODE]");
 var client = new BoxClient(config, session);
 
@@ -260,9 +244,9 @@ var client = new BoxClient(config, session);
 
 ```java
 BoxAPIConnection client = new BoxAPIConnection(
-  "[CLIENT_ID]",
-  "[CLIENT_SECRET]",
-  "[CODE]"
+    "[CLIENT_ID]",
+    "[CLIENT_SECRET]",
+    "[CODE]"
 );
 
 ```
@@ -285,7 +269,7 @@ client = Client(auth)
 var code = "...";
 
 sdk.getTokensAuthorizationCodeGrant("[CODE]", null, function (err, tokenInfo) {
-  var client = sdk.getPersistentClient(tokenInfo);
+    var client = sdk.getPersistentClient(tokenInfo);
 });
 
 ```

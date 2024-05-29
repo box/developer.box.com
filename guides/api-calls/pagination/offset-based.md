@@ -44,7 +44,7 @@ fullyTranslated: true
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -52,7 +52,7 @@ curl https://api.box.com/2.0/folders/0/items?offset=0&limit=100 \
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -68,14 +68,10 @@ curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
 
 以下のクエリパラメータは、コレクションのページ割りに使用されます。
 
-<!-- markdownlint-disable line-length -->
-
 | クエリパラメータ | 型       | デフォルト      |                                                            |
 | -------- | ------- | ---------- | ---------------------------------------------------------- |
 | `offset` | Integer | `0`        | コレクションで最初に返される項目の (ゼロベースの) オフセット。ゼロベースのオフセットでは、`0`は適切な値です。 |
 | `limit`  | Integer | APIによって異なる | 返される最大エントリ数。値が最大値を超える場合は、最大値が使用されます。                       |
-
-<!-- markdownlint-enable line-length -->
 
 <Message type="notice">
 
@@ -87,16 +83,12 @@ curl https://api.box.com/2.0/folders/0/items?offset=100&limit=100 \
 
 コレクションのページ割りを行うと、APIによって、結果のセットを配列として含むオブジェクトのほか、結果の現在のページに関する情報が返されます。
 
-<!-- markdownlint-disable line-length -->
-
 | フィールド         | 型       |                                                                                 |
 | ------------- | ------- | ------------------------------------------------------------------------------- |
 | `entries`     | Array   | このページの項目を含むページ。結果がない場合は空の配列になります。                                               |
 | `offset`      | Integer | 結果の現在のページに使用されるオフセット                                                            |
 | `limit`       | Integer | 結果の現在のページに使用される制限。この制限は、このAPIエンドポイントに許可されている最大値を超えない限り、`limit`クエリパラメータと同じになります。 |
 | `total_count` | Integer | コレクション全体の最後の項目のオフセットに1を加算した値。コレクション内の項目の合計数は、`total_count`よりも少ない場合があります。        |
-
-<!-- markdownlint-enable line-length -->
 
 ## エンドポイントの例
 

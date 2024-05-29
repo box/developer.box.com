@@ -21,11 +21,11 @@ fullyTranslated: true
 
 ```json
 {
-   "from": "enterprise_22201764.contact_role",
-   "query": "departments = :departments",
-   "query_params": {"departments": "legal"},
-   "ancestor_folder_id": "0",
-   "fields":["id"]
+  "from": "enterprise_22201764.contact_role",
+  "query": "departments = :departments",
+  "query_params": {"departments": "legal"},
+  "ancestor_folder_id": "0",
+  "fields": ["id"]
 }
 
 ```

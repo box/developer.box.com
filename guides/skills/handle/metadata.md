@@ -36,8 +36,6 @@ Skillsメタデータは、グローバルに利用可能な`boxSkillsCards`と�
 
 Boxでは現在、4種類のカードがサポートされています。
 
-<!-- markdownlint-disable line-length -->
-
 |                                       |                                                             |                                            |
 | ------------------------------------- | ----------------------------------------------------------- | ------------------------------------------ |
 | [キーワード](r://keyword-skill-card)       | ファイルの横にキーワードのリストを表示します。                                     | ![画像](./images/skills-card-keyword.png)    |
@@ -45,14 +43,10 @@ Boxでは現在、4種類のカードがサポートされています。
 | [トランスクリプト](r://transcript-skill-card) | トランスクリプトと、それに対応するタイムスタンプを表示します。                             | ![画像](./images/skills-card-transcript.png) |
 | [ステータス](r://status-skill-card)        | ユーザーにステータスを表示します。これは、ファイルの処理中にスキルのステータスをユーザーに通知するために使用できます。 |                                            |
 
-<!-- markdownlint-enable line-length -->
-
 ## ファイルへのメタデータカードの書き込み
 
 ファイルに1つ以上のカードを書き込むには、[`POST
 /files/:id/metadata/global/boxSkillsCards`](e://post_files_id_metadata_global_boxSkillsCards) APIを使用して、Box Skill `cards`のリストを渡します。
-
-<!-- markdownlint-enable line-length -->
 
 <Tabs>
 
@@ -60,30 +54,30 @@ Boxでは現在、4種類のカードがサポートされています。
 
 ```curl
 curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>'
-     -H 'Content-Type: application/json'
-     -d '{
-       "cards": [{
-         "type": "skill_card",
-         "skill_card_type": "keyword",
-         "skill_card_title": {
-           "code": "license-plates",
-           "message": "Licence Plates"
-         },
-         "skill": {
-           "type": "service"
-           "id": "license-plates-service"
-         },
-         "invocation": {
-           "type": "skill_invocation"
-           "id": "license-plates-service-123"
-         },
-         "entries": {
-           { "text": "DD-26-YT" },
-           { "text": "DN86 BOX" }
-         }
-       }],
-     }'
+    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    -H 'Content-Type: application/json' \
+    -d '{
+      "cards": [{
+        "type": "skill_card",
+        "skill_card_type": "keyword",
+        "skill_card_title": {
+          "code": "license-plates",
+          "message": "Licence Plates"
+        },
+        "skill": {
+          "type": "service"
+          "id": "license-plates-service"
+        },
+        "invocation": {
+          "type": "skill_invocation"
+          "id": "license-plates-service-123"
+        },
+        "entries": {
+          { "text": "DD-26-YT" },
+          { "text": "DN86 BOX" }
+        }
+      }],
+    }'
 
 ```
 
@@ -92,33 +86,33 @@ curl -X POST https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards 
 <Tab title="Node">
 
 ```js
-const metadata = { 
-  cards: [{
-    "type": "skill_card",
-    "skill_card_type": "keyword",
-    "skill_card_title": {
-      "code": "license-plates",
-      "message": "Licence Plates"
-    },
-    "skill": {
-      "type": "service"
-      "id": "license-plates-service"
-    },
-    "invocation": {
-      "type": "skill_invocation"
-      "id": "license-plates-service-123"
-    },
-    "entries": {
-      { "text": "DD-26-YT" },
-      { "text": "DN86 BOX" }
-    }
-  }] 
+const metadata = {
+    cards: [{
+        "type": "skill_card",
+        "skill_card_type": "keyword",
+        "skill_card_title": {
+            "code": "license-plates",
+            "message": "Licence Plates"
+        },
+        "skill": {
+            "type": "service"
+            "id": "license-plates-service"
+        },
+        "invocation": {
+            "type": "skill_invocation"
+            "id": "license-plates-service-123"
+        },
+        "entries": {
+            { "text": "DD-26-YT" },
+            { "text": "DN86 BOX" }
+        }
+    }]
 }
 
 client.files.addMetadata('12345', 'global', 'boxSkillsCards', metadata)
-  .then(metadata => { 
-    // ...
-  })
+    .then(metadata => {
+      // ...
+    })
 
 ```
 
@@ -126,28 +120,28 @@ client.files.addMetadata('12345', 'global', 'boxSkillsCards', metadata)
 
 <Tab title="Python">
 
-```py
-metadata = { 
-  cards: [{
-    "type": "skill_card",
-    "skill_card_type": "keyword",
-    "skill_card_title": {
-      "code": "license-plates",
-      "message": "Licence Plates"
-    },
-    "skill": {
-      "type": "service"
-      "id": "license-plates-service"
-    },
-    "invocation": {
-      "type": "skill_invocation"
-      "id": "license-plates-service-123"
-    },
-    "entries": {
-      { "text": "DD-26-YT" },
-      { "text": "DN86 BOX" }
-    }
-  }] 
+```python
+metadata = {
+    cards: [{
+        "type": "skill_card",
+        "skill_card_type": "keyword",
+        "skill_card_title": {
+            "code": "license-plates",
+            "message": "Licence Plates"
+        },
+        "skill": {
+            "type": "service"
+            "id": "license-plates-service"
+        },
+        "invocation": {
+            "type": "skill_invocation"
+            "id": "license-plates-service-123"
+        },
+        "entries": {
+          { "text": "DD-26-YT" },
+          { "text": "DN86 BOX" }
+        }
+    }]
 }
 
 client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards').create(metadata)
@@ -169,9 +163,9 @@ file.createMetadata("global", "boxSkillsCards", metadata);
 
 <Tab title=".NET">
 
-```cs
+```csharp
 var metadataValues = new Dictionary<string, object>()
-{ 
+{
   cards: [{
     "type": "skill_card",
     "skill_card_type": "keyword",
@@ -191,7 +185,7 @@ var metadataValues = new Dictionary<string, object>()
       { "text": "DD-26-YT" },
       { "text": "DN86 BOX" }
     }
-  }] 
+  }]
 };
 Dictionary<string, object> metadata = await client.MetadataManager
     .CreateFileMetadataAsync(fileId: "12345", metadataValues, "global", "boxSkillsCards");
@@ -201,8 +195,6 @@ Dictionary<string, object> metadata = await client.MetadataManager
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 
@@ -215,40 +207,38 @@ Box Skillカードがすでにこのファイルに適用されている場合�
 Box Skillカードがすでにファイルに適用されている場合、[`PUT
 /files/:id/metadata/global/boxSkillsCards`][update_skills] APIを使用して更新することができます。このAPIは、実行する多数の操作 (`op`) を受け取り、各操作を使用すると、特定の位置 (`path`) のカードを置き換えることができます。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
 ```curl
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
-     -H 'Authorization: Bearer <ACCESS_TOKEN>'
-     -H 'Content-Type: application/json-patch+json'
-     -d '[
-       "op": "replace",
-       "path": "/cards/0",
-       "value": {
-         "type": "skill_card",
-         "skill_card_type": "keyword",
-         "skill_card_title": {
-           "code": "license-plates",
-           "message": "Licence Plates"
-         },
-         "skill": {
-           "type": "service"
-           "id": "license-plates-service"
-         },
-         "invocation": {
-           "type": "skill_invocation"
-           "id": "license-plates-service-123"
-         },
-         "entries": {
-           { "text": "DD-26-YT" },
-           { "text": "DN86 BOX" }
-         }
-       }
-     ]'
+    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    -H 'Content-Type: application/json-patch+json' \
+    -d '[
+      "op": "replace",
+      "path": "/cards/0",
+      "value": {
+        "type": "skill_card",
+        "skill_card_type": "keyword",
+        "skill_card_title": {
+          "code": "license-plates",
+          "message": "Licence Plates"
+        },
+        "skill": {
+          "type": "service"
+          "id": "license-plates-service"
+        },
+        "invocation": {
+          "type": "skill_invocation"
+          "id": "license-plates-service-123"
+        },
+        "entries": {
+          { "text": "DD-26-YT" },
+          { "text": "DN86 BOX" }
+        }
+      }
+    ]'
 
 ```
 
@@ -258,36 +248,36 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/global/boxSkillsCards \
 
 ```js
 const updates = [
-  { 
-    'op': 'replace', 
-    'path': '/cards/0',
-    'value': {
-      "type": "skill_card",
-      "skill_card_type": "keyword",
-      "skill_card_title": {
-        "code": "license-plates",
-        "message": "Licence Plates"
-      },
-      "skill": {
-        "type": "service"
-        "id": "license-plates-service"
-      },
-      "invocation": {
-        "type": "skill_invocation"
-        "id": "license-plates-service-123"
-      },
-      "entries": {
-        { "text": "DD-26-YT" },
-        { "text": "DN86 BOX" }
-      }
+    {
+        'op': 'replace',
+        'path': '/cards/0',
+        'value': {
+            "type": "skill_card",
+            "skill_card_type": "keyword",
+            "skill_card_title": {
+                "code": "license-plates",
+                "message": "Licence Plates"
+            },
+            "skill": {
+                "type": "service"
+                "id": "license-plates-service"
+            },
+            "invocation": {
+                "type": "skill_invocation"
+                "id": "license-plates-service-123"
+            },
+            "entries": {
+                { "text": "DD-26-YT" },
+                { "text": "DN86 BOX" }
+            }
+        }
     }
-  }
 ]
 
 client.files.updateMetadata('12345', 'global', 'boxSkillsCards', updates)
-  .then(metadata => { 
-    // ...
-  })
+    .then(metadata => {
+      // ...
+    })
 
 ```
 
@@ -295,30 +285,29 @@ client.files.updateMetadata('12345', 'global', 'boxSkillsCards', updates)
 
 <Tab title="Python">
 
-```py
+```python
 file_metadata = client.file(file_id='12345').metadata(scope='global', template='boxSkillsCards')
 
 card = {
-  "type": "skill_card",
-  "skill_card_type": "keyword",
-  "skill_card_title": {
-    "code": "license-plates",
-    "message": "Licence Plates"
-  },
-  "skill": {
-    "type": "service"
-    "id": "license-plates-service"
-  },
-  "invocation": {
-    "type": "skill_invocation"
-    "id": "license-plates-service-123"
-  },
-  "entries": {
-    { "text": "DD-26-YT" },
-    { "text": "DN86 BOX" }
-  }
+    "type": "skill_card",
+    "skill_card_type": "keyword",
+    "skill_card_title": {
+        "code": "license-plates",
+        "message": "Licence Plates"
+    },
+    "skill": {
+        "type": "service"
+        "id": "license-plates-service"
+    },
+    "invocation": {
+        "type": "skill_invocation"
+        "id": "license-plates-service-123"
+    },
+    "entries": {
+        { "text": "DD-26-YT" },
+        { "text": "DN86 BOX" }
+    }
 }
-
 
 updates = file_metadata.start_update()
 updates.replace('/cards/0', card)
@@ -341,7 +330,7 @@ file.updateMetadata("global", "boxSkillsCards", metadata);
 
 <Tab title=".NET">
 
-```cs
+```csharp
 var card = new Dictionary<string, object>()
 {
   "type": "skill_card",
@@ -380,7 +369,5 @@ Dictionary<string, object> updatedMetadata = await client.MetadataManager
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 [update_skills]: e://put_files_id_metadata_global_boxSkillsCards

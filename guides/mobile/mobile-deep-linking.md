@@ -28,8 +28,6 @@ Boxのモバイルアプリでは、フォルダオブジェクトとファイ�
 
 Boxのモバイルアプリでは、以下のURLがサポートされています。
 
-<!-- markdownlint-disable line-length -->
-
 | アプリケーション        | オブジェクトタイプ | ディープリンクのURL                            | iOSおよびAndroid |
 | --------------- | --------- | -------------------------------------- | ------------- |
 | **Box**         | フォルダ      | `boxapp://folder?id=[folderid]`        | バージョン3.7以降    |
@@ -39,5 +37,3 @@ Boxのモバイルアプリでは、以下のURLがサポートされていま�
 | **Box for EMM** | フォルダ      | `boxemm://folder?id=[folderid]`        | バージョン3.7以降    |
 |                 | ファイル      | `boxemm://file?id=[fileid]`            |               |
 |                 | 共有リンク     | `boxemm://sharedlink?url=[sharedlink]` |               |
-
-<!-- markdownlint-enable line-length -->

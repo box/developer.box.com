@@ -53,8 +53,8 @@ Boxの注釈は、[NPMパッケージ](https://www.npmjs.com/package/box-annotat
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
@@ -84,34 +84,32 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 
 ```js
 const annotator = new annotatorConf.CONSTRUCTOR({
-  annotator,
-  apiHost,
-  token,
-  container,
-  file: {
-    id,
-    file_version: {
-      id
+    annotator,
+    apiHost,
+    token,
+    container,
+    file: {
+        id,
+        file_version: {
+            id
+        },
+        permissions
     },
-    permissions
-  },
-  isMobile,
-  hasTouch,
-  locale,
-  modeButtons: {
-    // Annotation mode buttons, i.e. point, draw, etc
-    point: {
-      // Accessibilty message for the point annotation mode button
-      title: "Point annotation mode",
-      // CSS selector for the point annotation mode button
-      selector: ".bp-btn-annotate-point"
+    isMobile,
+    hasTouch,
+    locale,
+    modeButtons: {
+        // Annotation mode buttons, i.e. point, draw, etc
+        point: {
+          // Accessibilty message for the point annotation mode button
+          title: "Point annotation mode",
+          // CSS selector for the point annotation mode button
+          selector: ".bp-btn-annotate-point"
+        }
     }
-  }
 });
 
 ```
-
-<!-- markdownlint-disable line-length -->
 
 | パラメータ                  | デフォルト | 説明                                                     |
 | ---------------------- | ----- | ------------------------------------------------------ |
@@ -156,15 +154,13 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | ユーザーが基本的なプレビュー機能、すべての注釈の表示機能、および自分の注釈の編集機能を必要とする      | `base_preview` + `annotation_view_all` + `annotation_edit` |
 | ユーザーが基本的なプレビュー機能と自分の注釈のみを表示する機能を必要とする                 | `base_preview` + `annotation_view_self`                    |
 
-<!-- markdownlint-enable line-length -->
-
 ## 注釈の有効化/無効化と注釈の種類
 
 注釈の種類は、プレビューオプションで選択して無効にすることができます。ビューアーオプションによって、そのビューアーに対してグローバルな`showAnnotations`の値が上書きされます。ここでBoxの注釈とともに使用するプレビューインスタンスを設定する方法の詳細については、[Box Content Preview](g://embed/ui-elements/preview)を参照してください。
 
 ```js
 preview.show(..., {
-  showAnnotations: Boolean
+    showAnnotations: Boolean
 });
 
 ```
@@ -193,20 +189,20 @@ preview.show(..., {
 
 ```js
 preview.show(fileId, token, {
-  showAnnotations: true,
-  viewers: {
-    Image: {
-      annotations: {
-        enabled: false
-      }
-    },
-    Document: {
-      annotations: {
-        enabled: true,
-        enabledTypes: ["point"]
-      }
+    showAnnotations: true,
+    viewers: {
+        Image: {
+            annotations: {
+                enabled: false
+            }
+        },
+        Document: {
+            annotations: {
+                enabled: true,
+                enabledTypes: ["point"]
+            }
+        }
     }
-  }
 });
 
 ```
@@ -216,8 +212,6 @@ preview.show(fileId, token, {
 注釈者の名前には、`DocAnnotator`と`ImageAnnotator`のいずれかを指定することができます。`boxAnnotations.getAnnotators()`を呼び出すと、使用できる注釈のリストを取得できます。
 
 ## その他のメソッド
-
-<!-- markdownlint-disable line-length -->
 
 * `annotator.init()`: 注釈者を初期化します。
 * `annotator.isModeAnnotatable(/* String */ type)`: 現在のビューアー/注釈者で現在の注釈モードが有効になっているかどうかを返します。
@@ -233,8 +227,6 @@ preview.show(fileId, token, {
 * `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)`: ビューアー内の注釈付きの要素を特定します。
 * `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`: 適切な種類の注釈スレッドを作成し、インメモリのマップに追加して返します。
 
-<!-- markdownlint-enable line-length -->
-
 ## イベント
 
 イベントは、`addListener`を使用して注釈者オブジェクトにバインドし、`removeListener`を使用して削除することができます。イベントリスナーは`showAnnotations()`が呼び出される前にバインドする必要があります。そうしないと、イベントが見つからない可能性があります。
@@ -243,14 +235,14 @@ preview.show(fileId, token, {
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
 const annotator = new annotatorConf.CONSTRUCTOR(options);
 var listener = value => {
-  // Do something with value
+    // Do something with value
 };
 
 // Attach listener before calling show otherwise events can be missed
@@ -430,56 +422,56 @@ annotator.removeListener(EVENTNAME, listener);
 
 ```js
 preview.addListener("annotator", viewer => {
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to viewers
 preview.addListener("load", data => {
-  var viewer = data.viewer;
-  viewer.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var viewer = data.viewer;
+    viewer.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to annotators
 preview.addListener("load", data => {
-  var annotator = data.viewer.annotator;
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var annotator = data.viewer.annotator;
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.event === "annotationsfetched") {
-    // Do something when annotations are fetched on a preview
-  } else if (data.event === "annotationerror") {
-    // Do something different when an annotation error has occurred
-  } else {
-  }
+    if (data.event === "annotationsfetched") {
+        // Do something when annotations are fetched on a preview
+    } else if (data.event === "annotationerror") {
+        // Do something different when an annotation error has occurred
+    } else {
+    }
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.viewerName === "Image") {
-    if (data.event === "annotationsfetched") {
-      // Do something when annotations are fetched on an image preview
+    if (data.viewerName === "Image") {
+        if (data.event === "annotationsfetched") {
+            // Do something when annotations are fetched on an image preview
+        }
+    } else if (data.viewerName === "MultiImage") {
+        if (data.event === "annotationsfetched") {
+            // Do something different when annotations are fetched on a multi-page image
+        }
+    } else {
     }
-  } else if (data.viewerName === "MultiImage") {
-    if (data.event === "annotationsfetched") {
-      // Do something different when annotations are fetched on a multi-page image
-    }
-  } else {
-  }
 });
 
 preview.addListener("annotationsfetched", data => {
-  if (data.viewerName === "Image") {
-    // Do something when annotations are fetched on an image preview
-  } else if (data.viewerName === "MultiImage") {
-    // Do something different when annotations are fetched on a multi-page image
-  } else {
-  }
+    if (data.viewerName === "Image") {
+        // Do something when annotations are fetched on an image preview
+    } else if (data.viewerName === "MultiImage") {
+        // Do something different when annotations are fetched on a multi-page image
+    } else {
+    }
 });
 
 ```
@@ -489,8 +481,6 @@ preview.addListener("annotationsfetched", data => {
 ### スレッドのメソッド
 
 注釈スレッドには、以下のメソッドを使用できます。
-
-<!-- markdownlint-disable line-length -->
 
 | メソッド名              | 説明                          | メソッドのパラメータ                                          |
 | ------------------ | --------------------------- | --------------------------------------------------- |
@@ -502,8 +492,6 @@ preview.addListener("annotationsfetched", data => {
 | `hideDialog`       | このスレッドに適切なダイアログを非表示にします。    |                                                     |
 | `saveAnnotation`   | 注釈をローカルとサーバーに保存します。         | {string} 注釈の種類、{text} 保存する注釈のテキスト                   |
 | `deleteAnnotation` | 注釈を削除します。                   | {string} 注釈ID、{boolean} サーバー上で削除するかどうか (デフォルトはtrue) |
-
-<!-- markdownlint-enable line-length -->
 
 ### スレッドのイベント
 
@@ -521,8 +509,6 @@ preview.addListener("annotationsfetched", data => {
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | イベント名                     | 説明                                                |
 | ------------------------- | ------------------------------------------------- |
 | `annotationpending`       | 注釈スレッドは作成されましたが、まだサーバーに保存されていません。                 |
@@ -534,8 +520,6 @@ preview.addListener("annotationsfetched", data => {
 | `annotationdeleteerror`   | 新しいスレッドまたは既存のスレッドで注釈の削除中にエラーが発生しました。              |
 | `annotationcreateerror`   | 新しいスレッドまたは既存のスレッドで注釈の投稿中にエラーが発生しました。              |
 
-<!-- markdownlint-enable line-length -->
-
 イベントの使用例については、上記の「**イベント**」セクションを参照してください。
 
 ## 注釈ダイアログ
@@ -543,8 +527,6 @@ preview.addListener("annotationsfetched", data => {
 ### ダイアログのメソッド
 
 注釈ダイアログには、以下のメソッドを使用できます。
-
-<!-- markdownlint-disable line-length -->
 
 | メソッド名              | 説明                         | メソッドのパラメータ          |
 | ------------------ | -------------------------- | ------------------- |
@@ -555,8 +537,6 @@ preview.addListener("annotationsfetched", data => {
 | `removeAnnotation` | 注釈をダイアログから削除します。           | {string} 注釈ID       |
 | `postAnnotation`   | 注釈をダイアログで投稿します。            | {string} 投稿する注釈テキスト |
 | `position`         | ダイアログを配置します。               |                     |
-
-<!-- markdownlint-enable line-length -->
 
 ## サポートされている注釈の種類
 

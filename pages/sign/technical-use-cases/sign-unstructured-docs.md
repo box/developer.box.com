@@ -32,29 +32,29 @@ fullyTranslated: true
 
 <Tab title="cURL">
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <access token>'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <access token>' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -63,7 +63,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_single(
     client: Client,
     document_id: str,
@@ -112,44 +111,43 @@ def main():
 <Tab title="cURL">
 
 ```json
-
 {
-    "is_document_preparation_needed": true,
-    "signers": [
-        {
-            "email": "requester@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
-    "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
-    "source_files": [
-        {
-            "id": "1355143830404",
-            "type": "file",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
+  "is_document_preparation_needed": true,
+  "signers": [
+    {
+      "email": "requester@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Simple-PDF.pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1381301154812",
-                "type": "file",
-            }
-        ],
-        "is_ready_for_download": true
-    },
-    "template_id": null
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
+  "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
+  "source_files": [
+    {
+      "id": "1355143830404",
+      "type": "file",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+  },
+  "name": "Simple-PDF.pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1381301154812",
+        "type": "file",
+      }
+    ],
+    "is_ready_for_download": true
+  },
+  "template_id": null
 }
 
 ```
@@ -159,7 +157,6 @@ def main():
 <Tab title="Pythonの次世代SDK">
 
 ```yaml
-
 Simple sign request with prep: xyz-abc-123
   Status: converting
   Signers: signer@example.com

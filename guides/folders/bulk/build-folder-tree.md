@@ -30,13 +30,11 @@ fullyTranslated: true
 
 以下のサンプルでは、先頭の**ルート**フォルダと、コードでトラバースする最大深度を指定できます。また、初期化されたSDKクライアントを渡すことができるため、どのユーザーが認証されるかを構成することもできます。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -618,14 +616,12 @@ class BoxUtilities {
 
 let folderTreeBuilder = new BoxFolderTreeBuilder(client);
 folderTreeBuilder.buildFolderTreeWithFlatLists()
-  .then((tree) => {
-    console.log(JSON.stringify(tree));
-  })
+    .then((tree) => {
+        console.log(JSON.stringify(tree));
+    })
 
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->

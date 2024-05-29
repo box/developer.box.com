@@ -79,8 +79,6 @@ GitHubの[リリースに関するページ][java-sdk-releases]からJava SDK用
 
 プリコンパイル済みJARを使用する際は、以下の依存関係をプロジェクトに追加することが重要です。
 
-<!-- markdownlint-disable line-length -->
-
 | 依存関係                                                     |
 | -------------------------------------------------------- |
 | [`minimal-json v0.9.1`][dependency-min-json]             |
@@ -88,8 +86,6 @@ GitHubの[リリースに関するページ][java-sdk-releases]からJava SDK用
 | [`bouncycastle bcprov-jdk15on v1.52`][dependency-bcprov] |
 | [`bouncycastle bcpkix-jdk15on v1.52`][dependency-bcpkix] |
 | [`Java Cryptography Extension (JCE)`][dependency-crypto] |
-
-<!-- markdownlint-enable line-length -->
 
 <CTA to="https://github.com/box/box-java-sdk">
 

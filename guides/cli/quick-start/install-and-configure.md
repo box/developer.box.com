@@ -66,15 +66,11 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 </Store>
 
-<!-- markdownlint-disable line-length -->
-
 <!--alex ignore execute-->
 
 ターミナルまたはコマンドラインを開き、`box login -n example_name`コマンドを実行します。
 
 求められたら、ターミナルウィンドウにクライアントIDとクライアントシークレットをコピーします。
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
 

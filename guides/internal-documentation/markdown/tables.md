@@ -68,22 +68,16 @@ fullyTranslated: true
 画面に対してテーブルの幅が広い場合、テーブルは水平方向にスクロールするよう自動的に設定されます。コード内で長いテーブルを可能にするには、長い行が可能になるようマークダウンのリンターにヒントを追加できます。
 
 ```md
-<!-- markdownlint-disable line-length -->
 | Header                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
-<!-- markdownlint-enable line-length -->
 
 ```
 
 <H>
 
-<!-- markdownlint-disable line-length -->
-
 | ヘッダー                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
-
-<!-- markdownlint-enable line-length -->
 
 </H>

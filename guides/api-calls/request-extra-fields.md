@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - get_files_id
   - get_folders_id
@@ -13,11 +13,11 @@ subcategory_id: null
 is_index: false
 id: api-calls/request-extra-fields
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/ensure-consistency
-previous_page_id: api-calls/status-codes
+previous_page_id: api-calls/sorting
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/request-extra-fields.md
 fullyTranslated: true
@@ -26,15 +26,11 @@ fullyTranslated: true
 
 リソースに対して返されるフィールドの数は、リソースのリクエストに使用されるAPIエンドポイントに応じて異なります。
 
-<!-- markdownlint-disable line-length -->
-
 | バリアント    |                                                                                                                                                            |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Standard | [`GET /files/:id`](endpoint://get_files_id)エンドポイントを介してファイルをリクエストする場合など、リソースを固有のエンドポイントに対してリクエストしたときに返される標準のフィールドセット                                        |
 | Full     | `field`クエリパラメータを使用して、リソースの固有のエンドポイントを介して返すことができる詳細なフィールドセット                                                                                                |
 | Mini     | [`GET /folders/:id/items`](endpoint://get_folders_id_items)エンドポイントを介してフォルダ内にあるすべての項目をリクエストしたときにファイルが返される場合など、リソースが別のリソースのネストされた部分として返されたときに返されるフィールドのサブセット |
-
-<!-- markdownlint-enable line-length -->
 
 APIリファレンスドキュメントでは、このようにラベルの付いたバリエーションを詳しく説明しています。特に、ファイル、フォルダ、ウェブリンク、およびユーザー項目には詳細と簡易というバリエーションがあります。
 
@@ -44,7 +40,7 @@ APIリファレンスドキュメントでは、このようにラベルの付�
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-          -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -75,7 +71,7 @@ APIレスポンスで返されるデフォルトのフィールドセットは�
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -114,7 +110,7 @@ curl https://api.box.com/2.0/files/12345 \
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -162,7 +158,7 @@ APIレスポンスで返すことができるフィールドセット全体は�
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 

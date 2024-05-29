@@ -49,7 +49,7 @@ CLIスクリプトのしくみを説明するため、ユーザーのプロビ�
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]のインストール
 
@@ -145,64 +145,64 @@ Isaac,Newton,abc@abc.local,INewton23
 
 * スクリプトで静的な値を使用する
 
-<Message>
+  <Message>
 
-実行する前に、スクリプト内のすべての必須パラメータを忘れずに更新してください。
+    実行する前に、スクリプト内のすべての必須パラメータを忘れずに更新してください。
 
-</Message>
+    </Message>
 
 ```bash
-# Set Employee List CSV Path
-# firstname, lastname, email, username
-$EmployeeList = ""
+    # Set Employee List CSV Path
+    # firstname, lastname, email, username
+    $EmployeeList = ""
 
-# Personal Folder Structure: Set either path build off JSON or directly upload
-# a local folder
-$FolderStructureJSONPath = ""
-$LocalUploadPath = ""
+    # Personal Folder Structure: Set either path build off JSON or directly upload
+    # a local folder
+    $FolderStructureJSONPath = ""
+    $LocalUploadPath = ""
 
-# Ending slug of folder that will be used in creating personal folders for new
-# users. Value will get concatenated with username
-# If username is RSMITH, the personal folder name would be
-# RSMITH's Personal Folder
-$PersonalFolderSlug = ""
+    # Ending slug of folder that will be used in creating personal folders for new
+    # users. Value will get concatenated with username
+    # If username is RSMITH, the personal folder name would be
+    # RSMITH's Personal Folder
+    $PersonalFolderSlug = ""
 
-# ID of parent folder for created personal folders to be created in
-# This folder should be created before running the script the first time.
-# It is not advised to make this value 0, as this will create individual
-# Personal folders in root of the account you set up the cli with
-$PersonalFolderParentID = ""
+    # ID of parent folder for created personal folders to be created in
+    # This folder should be created before running the script the first time.
+    # It is not advised to make this value 0, as this will create individual
+    # Personal folders in root of the account you set up the cli with
+    $PersonalFolderParentID = ""
 
 ```
 
 * パラメータを指定してスクリプトを実行する
 
-スクリプトの実行中にパラメータを指定できます。以下に例を示します。
+    スクリプトの実行中にパラメータを指定できます。以下に例を示します。
 
 ```bash
-PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
-    -LocalUploadPath ./PersonalLocalUpload `
-    -PersonalFolderSlug "Personal Folder" `
-    -PersonalFolderParentID 123456789
+    PS > ./Users_Create_Provision.ps1 -EmployeeList ./Employees_1.csv `
+        -LocalUploadPath ./PersonalLocalUpload `
+        -PersonalFolderSlug "Personal Folder" `
+        -PersonalFolderParentID 123456789
 
-Starting User Creation & Provisioning script...
+    Starting User Creation & Provisioning script...
 
 ```
 
 * 求められたときにパラメータを指定する
 
-  実行時に指定されていないパラメータがある場合は、スクリプトにより、指定するよう求められます。
+    実行時に指定されていないパラメータがある場合は、スクリプトにより、指定するよう求められます。
 
 ```bash
-  PS > ./Users_Create_Provision.ps1
-  Please enter the path to the employee list CSV file:
-  ./Employees_1.csv
-  Please enter the path to the folder structure JSON file or the local upload path:
-  Folder_Structure.json
-  Folder structure JSON path set to: Folder_Structure.json
-  Please enter the ID of the folder where you would like to create the personal folders:
-  0
-  Starting User Creation & Provisioning script...
+    PS > ./Users_Create_Provision.ps1
+    Please enter the path to the employee list CSV file:
+    ./Employees_1.csv
+    Please enter the path to the folder structure JSON file or the local upload path:
+    Folder_Structure.json
+    Folder structure JSON path set to: Folder_Structure.json
+    Please enter the ID of the folder where you would like to create the personal folders:
+    0
+    Starting User Creation & Provisioning script...
 
 ```
 
@@ -211,74 +211,75 @@ Starting User Creation & Provisioning script...
 1. ディレクトリを、スクリプトが格納されているフォルダに変更します。この例では、`User Creation & Provisioning`フォルダになります。
 
 ```bash
-   pwsh
+    pwsh
 
 ```
 
 2. スクリプトを実行します:
 
 ```bash
-   PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
+    PS /home/rvb/box-cli/examples/User Creation & Provisioning> ./Users_Create_Provision.ps1
 
 ```
 
-   レスポンスは以下のようになります。
+    The response will be similar to the following:
 
 ```bash
-   Starting User Creation & Provisioning script...
+    Starting User Creation & Provisioning script...
 
+    firstName lastName email
+    --------- -------- -----
+    Isaac     Newton   abc@abc.local
+    Extracting folder structure
+    Found current User ID: 18622116055
 
-   firstName lastName email
-   --------- -------- -----
-   Isaac     Newton   abc@abc.local
-   Extracting folder structure
-   Found current User ID: 18622116055
+    Created a user owned Onboarding folder with id: 164734146745
 
-   Created a user owned Onboarding folder with id: 164734146745
+    Created subfolder Market Research under Onboarding folder with id: 164735375585
 
-   Created subfolder Market Research under Onboarding folder with id: 164735375585
+    Created subfolder under Statistics folder with id: 164734956242
 
-   Created subfolder under Statistics folder with id: 164734956242
+    Created subfolder Sales Plays under Onboarding folder with id: 164735683001
 
-   Created subfolder Sales Plays under Onboarding folder with id: 164735683001
+    Created subfolder under Big Pharma folder with id: 164736160637
+    Creating employee Managed User account with first name:
+    Isaac, last name: Newton, email: abc@abc.local, and
 
-   Created subfolder under Big Pharma folder with id: 164736160637
-   Creating employee Managed User account with first name:
-   Isaac, last name: Newton, email: abc@abc.local, and
+    Created Managed user with id: 19605663027
 
-   Created Managed user with id: 19605663027
-
-   Type: collaboration
-    ID: '37250833128'
-Created By:
-    Type: user
-    ID: '18622116055'
-Name: Rui Barbosa
-Login: barduinor@gmail.com
-Created At: '2022-06-07T13:58:05-07:00'
-Modified At: '2022-06-07T13:58:05-07:00'
-Expires At: null
-Status: accepted
-Accessible By:
-    Type: user
-    ID: '19605663027'
-    Name: Isaac Newton
-    Login: abc@abc.local
-Invite Email: null
-Role: viewer uploader
-Acknowledged At: '2022-06-07T13:58:05-07:00'
-Item:
-    Type: folder
-    ID: '164734146745'
-    Sequence ID: '0'
-    ETag: '0'
-Name: Onboarding
-Collaborated Managed User Isaac Newton to current users
-Onboarding folder for provisioning
+    Type: collaboration
+        ID: '37250833128'
+    Created By:
+        Type: user
+        ID: '18622116055'
+    Name: Rui Barbosa
+    Login: barduinor@gmail.com
+    Created At: '2022-06-07T13:58:05-07:00'
+    Modified At: '2022-06-07T13:58:05-07:00'
+    Expires At: null
+    Status: accepted
+    Accessible By:
+        Type: user
+        ID: '19605663027'
+        Name: Isaac Newton
+        Login: abc@abc.local
+    Invite Email: null
+    Role: viewer uploader
+    Acknowledged At: '2022-06-07T13:58:05-07:00'
+    Item:
+        Type: folder
+        ID: '164734146745'
+        Sequence ID: '0'
+        ETag: '0'
+    Name: Onboarding
+    Collaborated Managed User Isaac Newton to current users
+    Onboarding folder for provisioning
 
 ```
 
 ## 新規ユーザーに対するスクリプトの再実行
+
+<!--alex ignore -->
 
 会社で新しい従業員を雇用するたび、このスクリプトを定期的に実行することは一般的です。単に`.csv`ファイルを編集し、前の行のユーザーを削除して新規ユーザーの情報を追加するだけです。その後、スクリプトを再度実行できます。
 

@@ -25,15 +25,13 @@ fullyTranslated: true
 
 [コラボレーション](r://collaboration)に効力のあるサービス利用規約に関する情報を調べるには、[`GET /collaborations/:id`](e://get-collaborations-id) APIを呼び出してクエリパラメータ`fields=acceptance_requirements_status`を渡します。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
 ```curl
 curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_requirements_status \
-     -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 
 ```
 
@@ -41,20 +39,18 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
 </Tabs>
 
-<!-- markdownlint-enable line-length -->
-
 返されるレスポンスには、簡易版の`terms_of_service`オブジェクトを含む新しい`acceptance_requirements`オブジェクトが含まれます。
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": {
-            "type": "terms_of_service",
-            "id": 6766677
-        }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": {
+      "type": "terms_of_service",
+      "id": 6766677
     }
+  }
 }
 
 ```
@@ -69,11 +65,11 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
 ```json
 {
-    "type": "collaboration",
-    "id": 2342342>,
-    "acceptance_requirements": {
-        "terms_of_service": null
-    }
+  "type": "collaboration",
+  "id": 2342342>,
+  "acceptance_requirements": {
+    "terms_of_service": null
+  }
 }
 
 ```

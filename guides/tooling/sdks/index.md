@@ -17,14 +17,14 @@ total_steps: 5
 sibling_id: tooling
 parent_id: tooling
 next_page_id: ''
-previous_page_id: tooling/sdks/node
+previous_page_id: tooling/sdks/salesforce
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/index.md
 fullyTranslated: true
 ---
 # SDK
 
-Boxには、アプリケーションの作成に使用できる一連のSDKが用意されています。次世代のPython SDKおよびTypescript SDKもここに新しく追加されました。これらはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することができます。
+Box offers a set of SDKs you can use to build your application. The next generation .NET SDK is the newest addition to the set. It is still a beta feature, but you can give them a try to explore all the features they bring along.
 
 <Message type="notice">
 
@@ -38,11 +38,11 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 ## 次世代のSDK
 
-最新世代のBox Python SDKとBox Typescript SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
+The latest generation Box Python SDK, Box Typescript SDK and .NET SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
 
 <Message type="notice">
 
-新しいTypescript SDKとPython SDKはパブリックベータ段階です。
+.NET SDK is in a Public Beta phase.
 
 </Message>
 
@@ -53,11 +53,11 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 * **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
 * **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-| プラットフォーム                         | メンテナンスの有無 | APIパリティ |
-| -------------------------------- | --------- | ------- |
-| [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
-| [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (ベータ)   | はい        | Full    |
+| プラットフォーム                       | メンテナンスの有無 | APIパリティ |
+| ------------------------------ | --------- | ------- |
+| [Python Gen SDK][pythongensdk] | はい        | Full    |
+| [Typescript Gen SDK][tsgensdk] | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
 
 ## SDK
 

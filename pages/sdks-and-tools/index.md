@@ -29,7 +29,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ## SDK
 
-アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDKおよびTypescript SDKも記載しています。これらはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
+Here you will find a list of SDKs you can use to build your application. Separately, we have listed the next generation Python, Typescript, and .NET SDKs, which are the newest addition. .NET is still a beta feature, but we encourage you to give it a try and explore all the features they bring along.
 
 <Message type="notice">
 
@@ -47,7 +47,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 <Message type="notice">
 
-新しいTypescript SDK、.NET SDK、およびPython SDKはパブリックベータ段階です。
+.NET SDK is in a Public Beta phase.
 
 </Message>
 
@@ -58,11 +58,11 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 * **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
 * **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-| プラットフォーム                         | メンテナンスの有無 | APIパリティ |
-| -------------------------------- | --------- | ------- |
-| [Python SDK][pythongensdk] (ベータ) | はい        | Full    |
-| [Typescript SDK][tsgensdk] (ベータ) | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (ベータ)   | はい        | Full    |
+| プラットフォーム                       | メンテナンスの有無 | APIパリティ |
+| ------------------------------ | --------- | ------- |
+| [Python Gen SDK][pythongensdk] | はい        | Full    |
+| [Typescript Gen SDK][tsgensdk] | はい        | Full    |
+| [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
 
 ### SDK
 
@@ -127,8 +127,6 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 
 組み込みのUIコンポーネントを使用してアプリケーションを拡張することで、Box上のファイルを参照、共有、プレビューできるようになります。
 
-<!-- markdownlint-disable line-length -->
-
 |                                        |                                                             |                                                        |
 | -------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------ |
 | 参照                                     | 共有                                                          | プレビュー                                                  |
@@ -141,21 +139,15 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 | Android    | [Browse SDK](https://github.com/box/box-android-browse-sdk)、[Share SDK](https://github.com/box/box-android-share-sdk)、[Preview SDK](https://github.com/box/box-android-preview-sdk) |
 | JavaScript | [Box UI Elements](guide://embed/ui-elements/)                                                                                                                                       |
 
-<!-- markdownlint-enable line-length -->
-
 ## 非公式およびコミュニティツール
 
 以下のツールは、Boxで開発され、Boxとそのコミュニティメンバーによって管理されています。このツールについては、定期的な製品更新やセキュリティ更新は提供されません。
-
-<!-- markdownlint-disable line-length -->
 
 | プラットフォーム                        | メンテナンスの有無             | APIパリティ |
 | ------------------------------- | --------------------- | ------- |
 | [Salesforce SDK][salesforcesdk] | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
 | [Ruby SDK][rubysdk]             | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
 | [クライアント側JS SDK][jssdk]          | Boxとコミュニティメンバーが限定的に実施 | 部分的     |
-
-<!-- markdownlint-enable line-length -->
 
 <Message type="notice">
 

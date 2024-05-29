@@ -1,5 +1,5 @@
 ---
-rank: 8
+rank: 7
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -18,14 +18,12 @@ total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
 next_page_id: cli/scripts/slack-integration-mappings
-previous_page_id: cli/scripts/manage-groups-collaborations
+previous_page_id: cli/scripts/metadata-extraction
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/deprovision-users.md
 fullyTranslated: true
 ---
 # ユーザーのプロビジョニング解除とフォルダのアーカイブ
-
-<!-- markdownlint-disable line-length -->
 
 このスクリプトを使用すると、ユーザーのリストによるプロビジョニング解除と削除が可能です。スクリプトでは以下の手順が実行されます。
 
@@ -38,12 +36,12 @@ fullyTranslated: true
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -55,8 +53,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 
@@ -75,8 +73,8 @@ PS /Users/user/repos/boxcli/examples>
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
 ```bash
-git clone https://github.com/box/boxcli.git boxcli
-cd boxcli/examples/User\ Deprovisioning/
+    git clone https://github.com/box/boxcli.git boxcli
+    cd boxcli/examples/User\ Deprovisioning/
 
 ```
 
@@ -85,22 +83,22 @@ cd boxcli/examples/User\ Deprovisioning/
    ヘッダー行は次のようになります。
 
 ```bash
-   name, email
+    name, email
 
 ```
 
-   この場合
+    where:
 
-* `name`は、Boxにおけるユーザーの名前です。 
-* `email`は、Boxにおけるこのユーザーのプライマリメールアドレスです。
+    * `name` is the name of the user in Box.
+    * `email` is the primary email address of the user in Box.
 
-   例:
+    For example:
 
-| `name`    | `email`                                               |
-| --------- | ----------------------------------------------------- |
-| 管理対象ユーザー1 | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
-| 管理対象ユーザー2 | [ManagedUser2@test.com](mailto:ManagedUser2@test.com) |
-| 管理対象ユーザー3 | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
+    |`name`| `email`|
+    |------|--------|
+    |Managed User 1| `ManagedUser1@test.com`|
+    |Managed User 2| `ManagedUser2@test.com`|
+    |Managed User 3| `ManagedUser3@test.com`|
 
 ### パラメータのリスト
 
@@ -122,33 +120,33 @@ cd boxcli/examples/User\ Deprovisioning/
 
 * パラメータを指定してスクリプトを実行します。
 
-  コマンドを指定するときにパラメータを指定できます。以下に例を示します。
+    コマンドを指定するときにパラメータを指定できます。以下に例を示します。
 
 ```bash
-PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
- -NewFilesOwnerID  123456789
- -EmployeeArchiveFolderName "Employee Archive"
+    PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+    -NewFilesOwnerID  123456789
+    -EmployeeArchiveFolderName "Employee Archive"
 
 ```
 
-または
+    or
 
 ```bash
-PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
- -SkipTransferContent
+    PS > ./Users_Deprovision.ps1 -EmployeeList ./Employees_to_delete.csv `
+    -SkipTransferContent
 
 ```
 
-パラメータを指定しなかった場合は、スクリプトによって、パラメータを入力するよう求められます。
+    If you don't specify parameters, the script will prompt you to enter it.
 
 ```bash
-PS > ./Users_Deprovision.ps1
-Please enter the path to the employee list CSV file:
-./Employees_to_delete.csv
-Please specify the user ID of the user who will own the files of the users being deprovisioned.
-Press Enter if you want to use the current user as the new owner.
-User ID: 1234567689
-Starting User Deprovisioning script...
+    PS > ./Users_Deprovision.ps1
+    Please enter the path to the employee list CSV file:
+    ./Employees_to_delete.csv
+    Please specify the user ID of the user who will own the files of the users being deprovisioned.
+    Press Enter if you want to use the current user as the new owner.
+    User ID: 1234567689
+    Starting User Deprovisioning script...
 
 ```
 
@@ -159,22 +157,22 @@ Starting User Deprovisioning script...
 1. PowerShellコマンドを実行します。
 
 ```bash
-   pwsh
+    pwsh
 
 ```
 
 2. スクリプトを実行します:
 
 ```bash
-   ./Users_Deprovision.ps1
+    ./Users_Deprovision.ps1
 
 ```
 
-   すべてのパラメータが定義されると、以下の出力が表示され、スクリプトが開始されたことを確認できます。
+    When all parameters are defined, you will see following output to confirm the script started:
 
 ```bash
-   PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
-   Starting User Deprovisioning script...
+    PS /home/rvb/box-cli/examples/User Deprovisioning> ./Users_Deprovision.ps1
+    Starting User Deprovisioning script...
 
 ```
 

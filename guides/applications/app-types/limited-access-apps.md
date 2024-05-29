@@ -45,7 +45,7 @@ fullyTranslated: true
 
 ## 承認
 
-アクセス制限付きアプリは、使用前に承認が必要になる場合があります。 
+アクセス制限付きアプリは、使用前に承認が必要になる場合があります。
 
 <CTA to="g://authorization/limited-access-approval">
 

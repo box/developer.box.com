@@ -41,8 +41,6 @@ fullyTranslated: true
 
 Webhookによって送信されたペイロードには、以下のBox固有のヘッダーが含まれます。
 
-<!-- markdownlint-disable line-length -->
-
 | ヘッダー                      | 説明                                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------- |
 | `BOX-DELIVERY-ID`         | 配信されたWebhookペイロードを識別する、Boxによって割り当てられた一意のID。BoxがWebhookを再試行すると、このIDは変わりますが、ペイロード本文のIDは変わりません。 |
@@ -51,8 +49,6 @@ Webhookによって送信されたペイロードには、以下のBox固有の�
 | `BOX-SIGNATURE-SECONDARY` | このWebhook用に設定されたセカンダリ署名キーを使用して作成された[署名][verify_sigs]。                                        |
 | `BOX-SIGNATURE-VERSION`   | 値は常に`1`。                                                                                     |
 | `BOX-SIGNATURE-ALGORITHM` | 値は常に`HmacSHA256`。                                                                            |
-
-<!-- markdownlint-enable line-length -->
 
 例:
 
@@ -83,8 +79,6 @@ HTTPヘッダー名では大文字と小文字が区別されません。クラ�
 
 Webhookペイロードの本文は、Webhookをトリガーしたファイルまたはフォルダ (ターゲット)、およびトリガーされたイベントを記述するJSONオブジェクトです。
 
-<!-- markdownlint-disable line-length -->
-
 | フィールド        | 説明                                                                                   |
 | ------------ | ------------------------------------------------------------------------------------ |
 | `type`       | 値は常に`webhook_event`。                                                                 |
@@ -94,8 +88,6 @@ Webhookペイロードの本文は、Webhookをトリガーしたファイルま
 | `webhook`    | イベントがトリガーされたWebhook ID。                                                              |
 | `created_by` | イベントをトリガーしたユーザー。                                                                     |
 | `source`     | イベントをトリガーした項目 (例: ターゲットフォルダにアップロードされたファイル)。                                          |
-
-<!-- markdownlint-enable line-length -->
 
 例:
 

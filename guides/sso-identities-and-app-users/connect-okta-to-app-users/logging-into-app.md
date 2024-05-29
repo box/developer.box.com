@@ -48,24 +48,24 @@ const path = require('path');
 const fs = require('fs');
 
 express.use(session({
-  secret: 'this should be secure',
-  resave: true,
-  saveUninitialized: false
+    secret: 'this should be secure',
+    resave: true,
+    saveUninitialized: false
 }));
 
 const oidc = new ExpressOIDC({
-  issuer: `https://${config.oktaOrgUrl}/oauth2/default`,
-  client_id: config.oktaClientId,
-  client_secret: config.oktaClientSecret,
-  appBaseUrl: config.oktaBaseUrl,
-  loginRedirectUri: `${config.oktaBaseUrl}${config.oktaRedirect}`,
-  scope: 'openid profile'
+    issuer: `https://${config.oktaOrgUrl}/oauth2/default`,
+    client_id: config.oktaClientId,
+    client_secret: config.oktaClientSecret,
+    appBaseUrl: config.oktaBaseUrl,
+    loginRedirectUri: `${config.oktaBaseUrl}${config.oktaRedirect}`,
+    scope: 'openid profile'
 });
 
 express.use(oidc.router);
 express.use(bodyParser.json());
 express.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 
 ```
@@ -77,7 +77,7 @@ express.use(bodyParser.urlencoded({
 ```js
 // Redirect to Okta login
 express.get('/', (req, res) => {
-  // TODO: HANDLE ROUTE
+    // TODO: HANDLE ROUTE
 });
 
 ```
@@ -90,7 +90,7 @@ express.get('/', (req, res) => {
 // Create server
 const port = process.env.PORT || 3000;
 http.createServer(express).listen(port, () => {
-  console.log(`Server started: Listening on port ${port}`);
+    console.log(`Server started: Listening on port ${port}`);
 });
 
 ```
@@ -131,11 +131,11 @@ import com.eclipsesource.json.JsonValue;
 @RestController
 @EnableAutoConfiguration
 public class Application {
-  static BoxDeveloperEditionAPIConnection api;
+    static BoxDeveloperEditionAPIConnection api;
 
-  // TODO: SET ROUTE
+    // TODO: SET ROUTE
 
-  // TODO: INITIALIZE SERVER
+    // TODO: INITIALIZE SERVER
 }
 
 ```
@@ -158,7 +158,7 @@ String home(@AuthenticationPrincipal OidcUser user) throws IOException {
 
 ```java
 public static void main(String[] args) {
-  SpringApplication.run(Application.class, args);
+    SpringApplication.run(Application.class, args);
 }
 
 ```
@@ -183,12 +183,12 @@ import json
 
 app = Flask(__name__)
 app.config.update({
-  'SECRET_KEY': config.okta_client_secret,
-  'OIDC_CLIENT_SECRETS': './client_secrets.json',
-  'OIDC_DEBUG': True,
-  'OIDC_ID_TOKEN_COOKIE_SECURE': False,
-  'OIDC_SCOPES': ["openid", "profile"],
-  'OIDC_CALLBACK_ROUTE': config.okta_callback_route
+    'SECRET_KEY': config.okta_client_secret,
+    'OIDC_CLIENT_SECRETS': './client_secrets.json',
+    'OIDC_DEBUG': True,
+    'OIDC_ID_TOKEN_COOKIE_SECURE': False,
+    'OIDC_SCOPES': ["openid", "profile"],
+    'OIDC_CALLBACK_ROUTE': config.okta_callback_route
 })
 
 oidc = OpenIDConnect(app)
@@ -201,7 +201,6 @@ okta_client = UsersClient(config.okta_org_url, config.okta_auth_token)
 次に、ルート処理が行われる前に実行する`before_request`定義を追加します。ここでは、この定義を使用してOktaのユーザー情報 (存在する場合) をキャプチャします。
 
 ```python
-
 # Fetch Okta user record if logged in
 @app.before_request
 def before_request():
@@ -235,7 +234,7 @@ return 'Complete'
 
 ローカルアプリケーションで、`Views` > `Shared` > `Layout.cshtml`を読み込みます。これは、ASP.NETアプリケーションが読み込まれるとレンダリングされるビジュアルコンポーネントになります。ページの先頭に以下のコードを挿入します。
 
-```dotnet
+```csharp
 @using System.Security.Claims;
 
 @if (User.Identity.IsAuthenticated)
@@ -257,7 +256,7 @@ Oktaにログインしているユーザーがアクセスすると、Helloと�
 
 以下の基本的なアプリケーション構造をファイルにコピーします。
 
-```dotnet
+```csharp
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -317,17 +316,17 @@ public class AccountController : Controller
 
 ```js
 if (req.userContext && req.userContext.userinfo) {
-  const tokenSet = req.userContext.tokens;
-  const userInfo = req.userContext.userinfo;
+    const tokenSet = req.userContext.tokens;
+    const userInfo = req.userContext.userinfo;
 
-  // If Okta ID is present, pass to Box user validation
-  if (userInfo.sub) {
-    box.validateUser(userInfo, res);
-  } else {
-    console.log('No Okta ID identified');
-  }
+    // If Okta ID is present, pass to Box user validation
+    if (userInfo.sub) {
+        box.validateUser(userInfo, res);
+    } else {
+        console.log('No Okta ID identified');
+    }
 } else {
-  res.redirect('/login');
+    res.redirect('/login');
 }
 
 ```
@@ -360,9 +359,9 @@ Java OIDCコネクタは、手間のかかる部分のほとんどを代わり�
 
 ```python
 if oidc.user_loggedin:
-  g.user = okta_client.get_user(oidc.user_getfield('sub'))
+    g.user = okta_client.get_user(oidc.user_getfield('sub'))
 else:
-  g.user = None
+    g.user = None
 
 ```
 
@@ -380,7 +379,7 @@ return redirect(url_for(".box_auth"))
 最後に、`box_auth`ルート内の`// TODO: HANDLE BOX AUTH ROUTE`を以下のコードに置き換えます。
 
 ```python
-box = Box();
+box = Box()
 return box.validateUser(g)
 
 ```
@@ -393,7 +392,7 @@ return box.validateUser(g)
 
 メインのルート内の`// TODO: HANDLE ROUTE`を以下のコードに置き換えます。
 
-```dotnet
+```csharp
 var subClaim = HttpContext.User.Claims.First(c => c.Type == "sub");
 var sub = subClaim.Value;
 

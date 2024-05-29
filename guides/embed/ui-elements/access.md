@@ -78,17 +78,13 @@ Boxでは、UI Elementとシームレスに連動する一連のスコープを�
   * App Userまたはサービスアカウントを作成する場合は、JWTを使用した認証のガイド
 * 以下に示すようにコラボレータの作成APIを使用して、上で作成したユーザーをコラボレータとしてコンテンツに追加します。この手順では、ユーザーアカウントでユーザーにコンテンツに対するアクセス権限が与えられていない場合は、アクセス権限が与えられます。このユーザーのアカウントでファイル/フォルダが作成されている場合は、ユーザーはデフォルトでフォルダに対する「所有者」アクセス権限を持っているため、このコラボレーションの手順をスキップしてかまいません。
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://api.box.com/2.0/collaborations \
-  -H "authorization: Bearer [ACCESS_TOKEN]" \
-  -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
-  -X POST
+    -H "authorization: Bearer [ACCESS_TOKEN]" \
+    -d '{"item": { "id": "123456", "type": "folder"}, "accessible_by": { "id": "USER_ID", "type": "user" }, "role": "editor"}' \
+    -X POST
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -117,42 +113,42 @@ curl https://api.box.com/oauth2/token \
 
 ```json
 {
-    "access_token": "CHILD_TOKEN",
-    "expires_in": 4247,
-    "token_type": "bearer",
-    "restricted_to": [
-        {
-            "scope": "base_explorer",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        },
-        {
-            "scope": "item_download",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-       },
-       {
-            "scope": "item_preview",
-            "object": {
-                "type": "folder",
-                "id": "123456",
-                "sequence_id": "0",
-                "etag": "0",
-                "name": "FOLDER_NAME"
-            }
-        }
-    ],
-    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
+  "access_token": "CHILD_TOKEN",
+  "expires_in": 4247,
+  "token_type": "bearer",
+  "restricted_to": [
+    {
+      "scope": "base_explorer",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_download",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    },
+    {
+      "scope": "item_preview",
+      "object": {
+        "type": "folder",
+        "id": "123456",
+        "sequence_id": "0",
+        "etag": "0",
+        "name": "FOLDER_NAME"
+      }
+    }
+  ],
+  "issued_token_type": "urn:ietf:params:oauth:token-type:access_token"
 }
 
 ```
@@ -212,7 +208,7 @@ curl https://api.box.com/oauth2/token \
 
 ある大規模なフィンテック企業では、クライアントへの投資を管理するために、クライアントのセキュアな格納庫を構築しています。また、Box UI Elementsを使用してアプリケーションのコンテンツ管理フロントエンドも構築しています。
 
-この会社では、通常どおりクライアントとアプリアドバイザーごとにApp Userを作成します。App User間でコンテンツを共有する場合は、App Userを「編集者」ロール (Boxのロール) としてコラボレーションさせます。こうすることで、各App Userは自分以外のすべてのユーザーのコンテンツすべてにアクセスできるようになります。
+この会社では、通常どおりクライアントとアプリアドバイザごとにApp Userを作成します。App User間でコンテンツを共有する場合は、App Userを「編集者」ロール (Boxのロール) としてコラボレーションさせます。こうすることで、各App Userは自分以外のすべてのユーザーのコンテンツすべてにアクセスできるようになります。
 
 ユーザーがUI Elementを介してコンテンツにアクセスできるように、アプリケーションがクライアントに直接App Userトークンを提供することはありません。これは、App Userが他のユーザーのコンテンツで「編集者」としてコラボレーションしている (強い権限を持っている) 可能性があるためです。代わりに、App Userトークンを使用したトークン交換により、ダウンスコープされたトークンが生成され、以下が制限されます。
 

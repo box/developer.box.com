@@ -1,5 +1,5 @@
 ---
-rank: 9
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -25,8 +25,6 @@ fullyTranslated: true
 ---
 # Slack統合フォルダマッピングの管理
 
-<!-- markdownlint-disable line-length -->
-
 このスクリプトは、BoxをSlackのコンテンツストアとして使用している場合に、SlackとBox間のフォルダマッピングの管理に役立ちます。現在のSlackチャンネルとBoxフォルダのマッピングのリストが作成されるため、入力用のcsvに基づいてマッピングを作成または更新できます。このスクリプトではすべての権限が維持されます。
 
 詳細については、[GitHubリポジトリ][1]で確認できます。
@@ -46,12 +44,12 @@ git clone https://github.com/box/boxcli.git
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -63,8 +61,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 

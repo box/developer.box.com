@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/types-and-formats
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/status-codes
@@ -125,8 +125,6 @@ APIレスポンスで複数の項目が返される場合は、コレクショ�
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | フィールド         | 必須かどうか? |                                                           |
 | ------------- | ------- | --------------------------------------------------------- |
 | `entries`     | はい      | コレクション内のエントリのリスト                                          |
@@ -136,8 +134,6 @@ APIレスポンスで複数の項目が返される場合は、コレクショ�
 | `order`       | いいえ     | 並べ替えをサポートするエンドポイントに対して、結果が返される順番を指定します。                   |
 | `next_marker` | いいえ     | マーカーベースのページ割りをサポートするエンドポイントに対して、返すことができる次のページのマーカーを指定します。 |
 | `prev_marker` | いいえ     | マーカーベースのページ割りをサポートするエンドポイントに対して、返すことができる前のページのマーカーを指定します。 |
-
-<!-- markdownlint-enable line-length -->
 
 ### リクエストID
 

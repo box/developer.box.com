@@ -64,11 +64,11 @@ Boxに接続していることをユーザー自身が認識できるように�
 
 ### 古い名称を使用しない
 
-当社を`Box.net`または`Boxnet`と呼ばないでください。現在、当社は「Box」としてのみ認知されています。
+当社について言及する場合に、`Box.net`または`Boxnet`を使用しないでください。当社は「Box」としてのみ認知されています。
 
 <!-- i18n-enable localize-links -->
 
-[logos]: https://cloud.box.com/s/v1yn0eyqpxx657brrgcn
+[logos]: https://cloud.app.box.com/v/BoxCorporateLogo
 
 [contact]: https://support.box.com/hc/requests/new
 

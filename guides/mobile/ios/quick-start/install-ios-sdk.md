@@ -56,9 +56,9 @@ Swift Package Managerは、ソースコードの配布を管理するための�
 1. ターミナルウィンドウから`brew install carthage`を実行して、Carthageをインストールします。他のインストール方法については、[Carthageのドキュメント][carthage-docs]を参照してください。
 2. `{APPNAME}.xcodeproj`がある、iOSアプリケーションフォルダのルートに、`Cartfile`という名前の新しいファイルを拡張子なしで作成します。
 3. `Cartfile`を開き、`git "https://github.com/box/box-ios-sdk.git" ~> 3.0`を使用して**Box iOS SDK**の依存関係を追加した後、ファイルを保存して閉じます。
-4. ターミナルから、`Cartfile`が存在するフォルダで、`carthage update --platform iOS`を実行してすべての依存関係を更新します。このディレクトリに`Cartfile.resolved`ファイルと`Carthage`ディレクトリが作成されます。 
+4. ターミナルから、`Cartfile`が存在するフォルダで、`carthage update --platform iOS`を実行してすべての依存関係を更新します。このディレクトリに`Cartfile.resolved`ファイルと`Carthage`ディレクトリが作成されます。
 5. Finderまたはエクスプローラウィンドウで、**Carthage** -> **Build** -> **iOS**ディレクトリを読み込みます。ここには、`BoxSDK.framework`という名前のフレームワークファイルがあります。このウィンドウは、次の手順でこのフレームワークをプロジェクトに追加する際に使用するため、開いたままにしておきます。
-6. Xcodeプロジェクトで、左側のプロジェクトナビゲータの上部にあるアプリケーションの名前をクリックします。表示されるコンテンツで、\[**TARGETS (ターゲット)**] オプションの下にあるプロジェクトの名前をクリックします。\[**Frameworks, Libraries, and Embedded Content (フレームワーク、ライブラリ、埋め込みコンテンツ)**] まで下にスクロールします。 
+6. Xcodeプロジェクトで、左側のプロジェクトナビゲータの上部にあるアプリケーションの名前をクリックします。表示されるコンテンツで、\[**TARGETS (ターゲット)**] オプションの下にあるプロジェクトの名前をクリックします。\[**Frameworks, Libraries, and Embedded Content (フレームワーク、ライブラリ、埋め込みコンテンツ)**] まで下にスクロールします。
 7. Finderウィンドウから`BoxSDK.framework`をフレームワークセクション上にドラッグします。
 
 <ImageFrame center>

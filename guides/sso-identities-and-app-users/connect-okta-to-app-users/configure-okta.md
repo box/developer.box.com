@@ -167,8 +167,6 @@ Oktaアプリケーションの情報はほとんどが一般設定ページに�
 
 `config.json`ファイルは次のようになります。
 
-<!-- markdownlint-disable line-length -->
-
 ```js
 const oktaClientId = exports.oktaClientId = '0oa48567frkg5KW4x6';
 const oktaClientSecret = exports.oktaClientSecret = 'cugDJy2ERfIQHDXv-j2134DfTTes-Sa3';
@@ -177,8 +175,6 @@ const oktaBaseUrl = exports.oktaBaseUrl = 'http://localhost:3000';
 const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -248,9 +244,7 @@ okta_callback_route = '/oidc/callback'
 
 `client_secrets.json`ファイルは次のようになります。
 
-<!-- markdownlint-disable line-length -->
-
-```js
+```json
 {
   "web": {
     "client_id": "0oa48567frkg5KW4x6",
@@ -267,8 +261,6 @@ okta_callback_route = '/oidc/callback'
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 </Choice>
 
 <Choice option="programming.platform" value="cs" color="none">
@@ -282,27 +274,23 @@ okta_callback_route = '/oidc/callback'
 
 `ConfigureServices`メソッドは次のようになります。
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
 {
-  options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
 })
 .AddCookie()
 .AddOktaMvc(new OktaMvcOptions
 {
-  OktaDomain = "https://YOURDOMAIN.okta.com",
-  ClientId = "0oa48567frkg5KW4x6",
-  ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
+    OktaDomain = "https://YOURDOMAIN.okta.com",
+    ClientId = "0oa48567frkg5KW4x6",
+    ClientSecret = "cugDJy2ERfIQHDXv-j2134DfTTes-Sa3"
 });
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 

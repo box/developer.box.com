@@ -34,26 +34,24 @@ fullyTranslated: true
 
 この場合は、`Name`フィールドが少しあいまいであることを認識しているため、`customerInfo`テンプレートの`Name`フィールドを`Company Name`に変更したいとしましょう。`editField`操作を使用することで、テンプレートと、ファイルまたはフォルダに適用されている可能性のあるテンプレートのすべてのインスタンスのフィールドの`displayName`および`key`を変更できます。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTemplate/schema \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '[
-       {
-         "op": "editField",
-         "fieldKey": "name",
-         "data": {
-           "key": "company_name",
-           "displayName": "Company Name"
-         }
-       }
-     ]'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '[
+      {
+        "op": "editField",
+        "fieldKey": "name",
+        "data": {
+          "key": "company_name",
+          "displayName": "Company Name"
+        }
+      }
+    ]'
 
 ```
 
@@ -61,7 +59,7 @@ curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTempl
 
 <Tab title=".NET">
 
-```c#
+```csharp
 var updates = new List<BoxMetadataTemplateUpdate>()
 {
   new BoxMetadataTemplateUpdate()
@@ -97,7 +95,7 @@ MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updat
 
 <Tab title="Python">
 
-```py
+```python
 template = client.metadata_template('enterprise', 'customerData')
 updates = template.start_update()
 updates.edit_field('name', key='company_name', display_name="Company Name")
@@ -111,22 +109,22 @@ template.update_info(updates)
 
 ```js
 var operations = [
-  {
-    op: 'editField',
-    fieldKey: 'name',
-    data: { 
-      key: 'company_name',
-      displayName: "Company Name" 
+    {
+        op: 'editField',
+        fieldKey: 'name',
+        data: {
+            key: 'company_name',
+            displayName: "Company Name"
+        }
     }
-  }
 ];
 
 client.metadata.updateTemplate(
-  'enterprise', 
-  'customerData', 
-  operations
+    'enterprise',
+    'customerData',
+    operations
 ).then(template => {
-  //.. 
+    //..
 });
 
 ```
@@ -196,8 +194,6 @@ client.metadata.updateTemplate(
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>
 

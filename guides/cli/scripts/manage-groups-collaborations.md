@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 5
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -20,15 +20,13 @@ type: guide
 total_steps: 7
 sibling_id: cli/scripts
 parent_id: cli/scripts
-next_page_id: cli/scripts/deprovision-users
+next_page_id: cli/scripts/metadata-extraction
 previous_page_id: cli/scripts/report-inactive-users
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/cli/scripts/manage-groups-collaborations.md
 fullyTranslated: true
 ---
 # グループとコラボレーションの管理
-
-<!-- markdownlint-disable line-length -->
 
 ## スクリプト構造
 
@@ -38,18 +36,18 @@ fullyTranslated: true
 
 1. このスクリプトでは、`UserGroupAdditionPath`パラメータに指定した`.csv`ファイルを使用します。このファイルには、グループ名とユーザーのメールアドレスが記載されています。このファイルを作成する際には、複数のユーザーに同じグループ名を使用することも、1人のユーザーを複数のグループに割り当てることもできます。以下に例を示します。
 
-   | `GroupName` | `UserEmail`                                           |
-   | ----------- | ----------------------------------------------------- |
-   | Group1      | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
-   | Group1      | [ManagedUser2@test.com](mailto:ManagedUser2@test.com) |
-   | Group2      | [ManagedUser3@test.com](mailto:ManagedUser3@test.com) |
-   | Group3      | [ManagedUser1@test.com](mailto:ManagedUser1@test.com) |
+   | `GroupName` | `UserEmail`             |
+   | ----------- | ----------------------- |
+   | Group1      | `ManagedUser1@test.com` |
+   | Group1      | `ManagedUser2@test.com` |
+   | Group2      | `ManagedUser3@test.com` |
+   | Group3      | `ManagedUser1@test.com` |
 
 2. グループが存在しない場合は、スクリプトによってそのグループが作成されます。グループが存在する場合は、指定したデータに基づいてエントリが更新されます。
 
 ### コラボレーションの作成または更新
 
-1. このスクリプトでは、`CollaborationsCreationPath`パラメータに指定した`.csv`ファイルを使用します。このファイルには、グループ名、フォルダID、コラボレーションロールが記載されています。 
+1. このスクリプトでは、`CollaborationsCreationPath`パラメータに指定した`.csv`ファイルを使用します。このファイルには、グループ名、フォルダID、コラボレーションロールが記載されています。
 
 2. スクリプトでは、行ごとに、グループが存在するかどうか、そのグループがすでに対応するフォルダにコラボレータとして追加されていないかどうかを確認します。以下に例を示します。
 
@@ -68,12 +66,12 @@ fullyTranslated: true
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -85,8 +83,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-    
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 
@@ -105,8 +103,8 @@ PS /Users/user/repos/boxcli/examples>
 1. `boxcli` GitHubリポジトリを複製してこの例のフォルダにcdコマンドで移動するか、[`examples`][examples]ディレクトリからファイルをダウンロードします。
 
 ```bash
-git clone https://github.com/box/boxcli.git boxcli
-cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
+    git clone https://github.com/box/boxcli.git boxcli
+    cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 ```
 
@@ -117,7 +115,7 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 ```
 
-    * `UserEmail` is the primary email address for the user in Box. 
+    * `UserEmail` is the primary email address for the user in Box.
     * `GroupName` is the name of the group.
 
 3. グループとユーザーのメールアドレスのリストが含まれる`.csv`ファイルに独自のパスを設定します。
@@ -127,14 +125,14 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 ```
 
-    * `GroupName` is name of the group the script will add as a collaborator to the folder. 
+    * `GroupName` is name of the group the script will add as a collaborator to the folder.
     * `FolderId` is the folder ID the collaborator will be added to.
     * `CollaborationRole` is the name of the role used when creating a collaboration.
 
-     You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
+    You can configure the available roles by setting the `AvailableCollaborationRoles` parameter:
 
 ```bash
-     $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
+    $AvailableCollaborationRoles = @("editor", "viewer", "previewer", "uploader", "previewer_uploader", "viewer_uploader", "co-owner")
 
 ```
 
@@ -143,14 +141,14 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 1. PowerShellコマンドを実行します。
 
 ```bash
-   pwsh
+    pwsh
 
 ```
 
 2. スクリプトを実行します。
 
 ```bash
-./Mass_Groups_Collabs_Update.ps1
+    ./Mass_Groups_Collabs_Update.ps1
 
 ```
 
@@ -161,21 +159,21 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 * グループがすでに特定のフォルダのコラボレータとして設定されているものの、その役割が.`csv`ファイルで定義されたものとは異なる場合は、スクリプトによってそのことが通知されます。スクリプトによって既存のコラボレーションが変更されることはありません。`.csv`ファイルで定義された役割で既存のコラボレーションを更新するには、スクリプトを実行する際に追加の`-UpdateExistingCollabs`フラグを設定します。
 
 ```bash
-   Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
+    Mass_Groups_Collabs_Update.ps1 -UpdateExistingCollabs
 
 ```
 
 * コラボレーションを作成せずにグループを更新するには、スクリプトの実行時に`-SkipCollabsCreation`ブール値フラグを追加します。
 
 ```bash
-   Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
+    Mass_Groups_Collabs_Update.ps1 -SkipCollabsCreation
 
 ```
 
 * グループを更新せずにコラボレーションを作成するには、スクリプトの実行時に`-SkipGroupsUpdate`ブール値フラグを追加します。
 
 ```bash
-   Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
+    Mass_Groups_Collabs_Update.ps1 -SkipGroupsUpdate
 
 ```
 
@@ -185,8 +183,6 @@ cd boxcli/examples/Mass\ Groups\ \&\ Collaborations\ Update/
 
 * `Mass_Groups_Collabs_Update_all.txt`: すべてのログエントリが含まれています。
 * `Mass_Groups_Collabs_Update_errors.txt`: エラーのみが含まれています。
-
-<!-- markdownlint-enable line-length -->
 
 [examples]: https://github.com/box/boxcli/tree/main/examples
 

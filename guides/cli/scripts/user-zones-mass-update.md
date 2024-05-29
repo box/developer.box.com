@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 3
 related_endpoints: []
 related_guides:
   - authentication/jwt
@@ -28,8 +28,6 @@ fullyTranslated: true
 
 この[スクリプト][script]は、マルチゾーンのBoxテナント内の特定のデータ保管場所のゾーンにユーザーをプロビジョニングします。スクリプトによって以下の手順が実行されます。
 
-<!-- markdownlint-disable line-length -->
-
 1. 管理者または共同管理者のログインメールアドレスを使用して、関連付けられた企業とその企業に割り当てられているゾーンポリシーを検索します。割り当てられているゾーンポリシーは、特に指定がない限り、すべてのユーザーが継承します。これは、**デフォルトゾーン**とも呼ばれることもあります。
 2. ユーザーのメールアドレスとゾーンマッピングが含まれる入力`.csv`ファイルに基づいて、ゾーン割り当てを行います。
 
@@ -47,12 +45,12 @@ fullyTranslated: true
 
 [.NET Core](https://dotnet.microsoft.com/download)の最新バージョンのインストール
 
-### MacOSおよびLinux
+### macOSおよびLinux
 
 [PowerShell][pwsh]をインストールします。`pwsh`コマンドを実行して、インストール結果をテストします。
 
 ```bash
-pwsh 
+pwsh
 
 ```
 
@@ -64,8 +62,8 @@ Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
-  
-PS /Users/user/repos/boxcli/examples> 
+
+PS /Users/user/repos/boxcli/examples>
 
 ```
 
@@ -91,27 +89,27 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
 
 1. 管理コンソールの \[**ユーザーとグループ**] セクションに移動します。
 2. 確認するユーザーアカウントをクリックします。
-3. \[**ユーザーアクセス権限を編集**] セクションに移動して、ユーザーとグループに管理者権限を付与します。 
+3. \[**ユーザーアクセス権限を編集**] セクションに移動して、ユーザーとグループに管理者権限を付与します。
 
 ## `.csv`ファイルの準備
 
-`.csv`ファイルには、**Email**と**Region**というヘッダーを設定した2つの列が必要です。 
+`.csv`ファイルには、**Email**と**Region**というヘッダーを設定した2つの列が必要です。
 
-* **Email**列には、Boxユーザーのプライマリメールアドレスを含めます。 
-* **Region**列には、スクリプトでユーザーを割り当てるゾーンのユーザーフレンドリ名 (ユーザーが理解しやすい名前) を含めます。この名前は、ゾーンの定義に使用する[ZonesTable][zonestable]というハッシュテーブルで指定します。キーはゾーンのユーザーフレンドリ名であり、対応する値はゾーンのグローバルIDです。 
+* **Email**列には、Boxユーザーのプライマリメールアドレスを含めます。
+* **Region**列には、スクリプトでユーザーを割り当てるゾーンのユーザーフレンドリ名 (ユーザーが理解しやすい名前) を含めます。この名前は、ゾーンの定義に使用する[ZonesTable][zonestable]というハッシュテーブルで指定します。キーはゾーンのユーザーフレンドリ名であり、対応する値はゾーンのグローバルIDです。
 
 ```bash
-  $ZonesTable = @{
-  US = "100001"             #US
-  GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
-  Australia = "100003"      #Australia
-  Japan = "100004"          #Japan with in region uploads/downloads/previews
-  Canada = "100005"         #Canada
-  JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
-  UKGermany = "100008"      #UK/Germany
-  UK = "100009"             #UK with in region uploads/downloads/previews
-  France = "100012"         #France
-  }
+    $ZonesTable = @{
+        US = "100001"             #US
+        GermanyIreland = "100002" #Germany/Ireland with in region uploads/downloads/previews
+        Australia = "100003"      #Australia
+        Japan = "100004"          #Japan with in region uploads/downloads/previews
+        Canada = "100005"         #Canada
+        JapanSingapore = "100007" #Japan/Singapore with in region uploads/downloads/previews
+        UKGermany = "100008"      #UK/Germany
+        UK = "100009"             #UK with in region uploads/downloads/previews
+        France = "100012"         #France
+    }
 
 ```
 
@@ -123,11 +121,11 @@ Boxの管理者または共同管理者に`Manage Users`以上の権限がある
 
 このスクリプトには、以下のようなメールアドレスとゾーン名が含まれているサンプル入力`.csv`ファイルが用意されています。
 
-| Email                                         | Region         |
-| --------------------------------------------- | -------------- |
-| [betty@company.com](mailto:betty@company.com) | US             |
-| [roger@company.com](mailto:roger@company.com) | France         |
-| [sally@company.com](mailto:sally@company.com) | JapanSingapore |
+| Email               | Region         |
+| ------------------- | -------------- |
+| `betty@company.com` | US             |
+| `roger@company.com` | France         |
+| `sally@company.com` | JapanSingapore |
 
 ## スクリプトの構成
 
@@ -176,8 +174,6 @@ pwsh
 
 * `Mass_Update_User_Zones_all.txt`: すべてのログエントリが含まれています。
 * `Mass_Update_User_Zones_errors.txt`: エラーのみが含まれています。
-
-<!-- markdownlint-enable line-length -->
 
 [zonesguide]: https://support.box.com/hc/en-us/articles/360044193533-Assigning-Zones-through-the-Admin-Console
 

@@ -14,7 +14,7 @@ type: guide
 total_steps: 8
 sibling_id: authentication/tokens
 parent_id: authentication/tokens
-next_page_id: authentication/tokens/downscope
+next_page_id: authentication/tokens/revoke
 previous_page_id: authentication/tokens/refresh
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/access-tokens.md
@@ -32,8 +32,8 @@ OAuth 2.0を使用してアクセストークンをリクエストすると、�
 
 ```curl
 curl -X POST https://api.box.com/oauth2/token \
-  -H "content-type: application/x-www-form-urlencoded" \
-  -d '...'
+    -H "content-type: application/x-www-form-urlencoded" \
+    -d '...'
 
 ```
 
@@ -55,9 +55,9 @@ curl -X POST https://api.box.com/oauth2/token \
 JWTまたはクライアント資格情報許可を使用してアクセストークンをリクエストすると、アクセストークンのみが返されます。
 
 ```curl
-curl --location --request POST ‘https://api.box.com/oauth2/token’ \
---header ‘Content-Type: application/x-www-form-urlencoded’ \
---data-urlencode '...'
+curl --location --request POST 'https://api.box.com/oauth2/token' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode '...'
 
 ```
 

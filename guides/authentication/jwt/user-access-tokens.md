@@ -47,7 +47,7 @@ JWTアプリケーションは、[サービスアカウント][sa]ではなく�
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var userId = "12345";
 var sdk = new BoxJWTAuth(config);
 var token = sdk.UserToken(appUserID);
@@ -59,15 +59,11 @@ BoxClient client = sdk.UserClient(userToken, userId);
 
 <Tab title="Java">
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String userId = "12345";
 BoxDeveloperEditionAPIConnection api = new BoxDeveloperEditionAPIConnection.getAppUserConnection(userId, config)
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -117,13 +113,13 @@ Box SDKとJWTの使用の詳細を確認する
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var userId = "12345";
 
 var claims = new List<Claim>{
-  new Claim("sub", userid),
-  new Claim("box_sub_type", "user"),
-  new Claim("jti", jti),
+    new Claim("sub", userid),
+    new Claim("box_sub_type", "user"),
+    new Claim("jti", jti),
 };
 
 ```
@@ -150,15 +146,15 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
 <Tab title="Python">
 
 ```python
-user_id = '12345';
+user_id = '12345'
 
 claims = {
-  'iss': config['boxAppSettings']['clientID'],
-  'sub': user_id,
-  'box_sub_type': 'user',
-  'aud': authentication_url,
-  'jti': secrets.token_hex(64),
-  'exp': round(time.time()) + 45
+    'iss': config['boxAppSettings']['clientID'],
+    'sub': user_id,
+    'box_sub_type': 'user',
+    'aud': authentication_url,
+    'jti': secrets.token_hex(64),
+    'exp': round(time.time()) + 45
 }
 
 ```
@@ -171,12 +167,12 @@ claims = {
 let user_id = '12345';
 
 let claims = {
-  iss: config.boxAppSettings.clientID,
-  sub: user_id,
-  box_sub_type: "user",
-  aud: authenticationUrl,
-  jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45
+    iss: config.boxAppSettings.clientID,
+    sub: user_id,
+    box_sub_type: "user",
+    aud: authenticationUrl,
+    jti: crypto.randomBytes(64).toString("hex"),
+    exp: Math.floor(Date.now() / 1000) + 45
 };
 
 ```

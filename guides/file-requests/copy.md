@@ -45,17 +45,17 @@ fullyTranslated: true
 
 ```curl
 curl -i -X POST "https://api.box.com/2.0/file_requests/2342235/copy" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>" \
-     -d '{
-       "title": "Please upload required documents",
-       "description": "Please upload required documents",
-       "status": "active",
-       "is_email_required": true,
-       "is_description_required": false,
-       "folder": {
-         "id": "342323423"
-       }
-     }'
+    -H "Authorization: Bearer <ACCESS_TOKEN>" \
+    -d '{
+      "title": "Please upload required documents",
+      "description": "Please upload required documents",
+      "status": "active",
+      "is_email_required": true,
+      "is_description_required": false,
+      "folder": {
+        "id": "342323423"
+      }
+    }'
 
 ```
 

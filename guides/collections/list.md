@@ -44,17 +44,17 @@ APIを介して使用できるコレクションは「お気に入り」コレ�
 
 ```json
 {
-    "entries": [
-        {
-            "collection_type": "favorites",
-            "id": "12345678",
-            "name": "Favorites",
-            "type": "collection"
-        }
-    ],
-    "limit": 100,
-    "offset": 0,
-    "total_count": 1
+  "entries": [
+    {
+      "collection_type": "favorites",
+      "id": "12345678",
+      "name": "Favorites",
+      "type": "collection"
+    }
+  ],
+  "limit": 100,
+  "offset": 0,
+  "total_count": 1
 }
 
 ```

@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - get_files_id_thumbnail_id
 related_guides:
@@ -19,7 +19,7 @@ total_steps: 8
 sibling_id: representations
 parent_id: representations
 next_page_id: representations/pdf
-previous_page_id: representations/download-a-representation
+previous_page_id: representations/thumbnail-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/representations/thumbnail.md
 fullyTranslated: true
@@ -55,16 +55,12 @@ fullyTranslated: true
 
 以下のサムネイルの形式とサイズが使用可能です。
 
-<!-- markdownlint-disable line-length -->
-
 | ファイルの種類 | サイズ                                                                |
 | ------- | ------------------------------------------------------------------ |
 | JPG     | `32x32`, `94x94`, `160x160`, `320x320`, `1024x1024`, `2048x2048`\* |
 | PNG     | `1024x1024`\*, `2048x2048`\*                                       |
 
 `*`が付いているサイズには、いくつかの制限があります。
-
-<!-- markdownlint-enable line-length -->
 
 ## ファイルサイズの制限
 
@@ -76,16 +72,12 @@ fullyTranslated: true
 
 現時点でサポートされているファイルの種類は以下のとおりです。
 
-<!-- markdownlint-disable line-length -->
-
 | ファイルの種類 | ファイル拡張子                                                                                                                                                         |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ドキュメント  | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
 | 画像      | `ai`, `bmp`, `dcm`, `dicm`, `eps`, `gif`, `idml`, `indd`, `indt`, `inx`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `svs`, `tif`, `tiff`, `tga`                  |
 | オーディオ   | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
 | 動画      | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `mts`, `ogg`, `qt`, `wmv`                                                        |
-
-<!-- markdownlint-enable line-length -->
 
 [get_files_id_thumbnail_id]: endpoint://get_files_id_thumbnail_id
 

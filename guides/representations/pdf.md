@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 6
 related_endpoints:
   - get_files_id
   - put_files_id_watermark
@@ -20,7 +20,7 @@ total_steps: 8
 sibling_id: representations
 parent_id: representations
 next_page_id: representations/text
-previous_page_id: representations/thumbnail-representation
+previous_page_id: representations/thumbnail
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/representations/pdf.md
 fullyTranslated: true

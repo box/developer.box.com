@@ -33,8 +33,6 @@ fullyTranslated: true
 
 トークンが必要になったら、まずキャッシュに有効なトークンがあるかどうかを確認します。トークンの有効期限が切れている場合は、新しいトークンを取得し、キャッシュに50分間保存します。
 
-<!-- markdownlint-disable line-length -->
-
 ```ruby
 def self.user_client(user_id)
     access_token=Rails.cache.fetch("box_tokens/user/#{user_id}", :expires_in => 50.minutes) do
@@ -47,8 +45,6 @@ def self.user_client(user_id)
 end
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message tip>
 
@@ -65,14 +61,14 @@ Box公式SDKでは、トークンのキャッシュが使用されています�
 アクセストークンについて考えるとき際は、最小権限の原則に従うことが重要です。そのためには、[ダウンスコープ][downscope]を行います。ダウンスコープでは、すべてのスコープが設定されたアクセストークンがより厳しく制限されたアクセストークンと交換され、そのトークンがクライアント側のコード、モバイル環境、またはUIツールに展開されます。
 
 ```java
-//Define resource/scopes that downscoped token has access to 
+//Define resource/scopes that downscoped token has access to
 String resource = "https://api.box.com/2.0/files/RESOURCE_ID";
 List<String> scopes = new ArrayList<String>();
 scopes.add("base_preview");
 scopes.add("item_download");
 
 //Preform token exchange
-ScopedToken downscopedToken = 
+ScopedToken downscopedToken =
     client.getLowerScopedToken(scopes,resource);
 
 //Downscoped token available in downscopedToken.getAccessToken()

@@ -12,7 +12,6 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-  - /guides/authentication/client-credentials
 category_id: authentication
 subcategory_id: authentication/client-credentials
 is_index: false
@@ -51,8 +50,6 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 ### アプリケーションの基本情報の指定
 
-<!-- markdownlint-disable line-length -->
-
 アプリを説明するために、アプリの名前と説明を指定します。アプリの目的を選択するには、ドロップダウンリストを使用します。選択したオプションに応じて、さらに詳細を指定することが必要になる場合があります。
 
 | 目的                 | 詳細                                               |
@@ -66,8 +63,6 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 > ![認証の選択画面](../images/custom-app-selection.png)
 
 </ImageFrame>
-
-<!-- markdownlint-enable line-length -->
 
 ### アプリケーションの認証の選択
 

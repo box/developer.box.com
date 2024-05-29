@@ -37,26 +37,25 @@ Boxウェブアプリを使用して、例えばテンプレートからこの�
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer Le...Cb'
---data-raw '{
-    "template_id":"ee9a689e-96b6-4076-92a0-b9b765eb09ca",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer Le...Cb' \
+    --data-raw '{
+      "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer",
-            "is_in_person":true,
-            "embed_url_external_user_id":"1234"
+          "email": "signer@example.com",
+          "role": "signer",
+          "is_in_person": true,
+          "embed_url_external_user_id": "1234"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -65,7 +64,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_in_person(
     client: Client,
     document_id: str,
@@ -94,7 +92,6 @@ def sign_doc_in_person(
 
     return sign_request
 
-
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
     conf = ConfigOAuth()
@@ -107,7 +104,7 @@ def main():
         SIGNER_A,
         SIGNER_A_EXTERNAL_ID,
     )
-    check_sign_request(sign_with_embed_url)    
+    check_sign_request(sign_with_embed_url)
 
 ```
 
@@ -122,33 +119,32 @@ def main():
 <Tab title="cURL">
 
 ```json
-
 {
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-            "is_in_person": false,
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-            "is_in_person": true,
-            "embed_url_external_user_id": "1234",
-            "embed_url": "https://app.box.com/sign/document/...",
-            "iframeable_embed_url": "https://app.box.com/embed/sign/document/..."
-        }
-    ],
-    "id": "a9159d31-d2fb-4e88-9306-02c00de013d1",
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+      "is_in_person": false,
     },
-    "name": "Simple-PDF (1).pdf",
-    "type": "sign-request",
-    "status": "created",
-    "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca"
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+      "is_in_person": true,
+      "embed_url_external_user_id": "1234",
+      "embed_url": "https://app.box.com/sign/document/...",
+      "iframeable_embed_url": "https://app.box.com/embed/sign/document/..."
+    }
+  ],
+  "id": "a9159d31-d2fb-4e88-9306-02c00de013d1",
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Simple-PDF (1).pdf",
+  "type": "sign-request",
+  "status": "created",
+  "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca"
 }
 
 ```
@@ -158,7 +154,6 @@ def main():
 <Tab title="Pythonの次世代SDK">
 
 ```yaml
-
 Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
   Status: created
   Signers: 2
@@ -190,31 +185,30 @@ Simple sign request: a9159d31-d2fb-4e88-9306-02c00de013d1
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer Le...Cb'
---data-raw '{
-    "template_id":"ee9a689e-96b6-4076-92a0-b9b765eb09ca",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer Le...Cb' \
+    --data-raw '{
+      "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "signers": [
+      },
+      "signers": [
         {
-            "email": "signer_a@example.com",
-            "role": "signer",
-            "is_in_person":true,
-            "embed_url_external_user_id":"1234"
+          "email": "signer_a@example.com",
+          "role": "signer",
+          "is_in_person": true,
+          "embed_url_external_user_id": "1234"
         },
         {
-            "email": "signer_b@example.com",
-            "role": "signer",
-            "is_in_person":true
+          "email": "signer_b@example.com",
+          "role": "signer",
+          "is_in_person": true
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -223,7 +217,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_in_person_multiple(
     client: Client,
     document_id: str,
@@ -258,7 +251,6 @@ def sign_doc_in_person_multiple(
 
     return sign_request
 
-
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
     conf = ConfigOAuth()
@@ -272,7 +264,7 @@ def main():
         SIGNER_A_EXTERNAL_ID,
         SIGNER_B
     )
-    check_sign_request(sign_with_embed_url)   
+    check_sign_request(sign_with_embed_url)
 
 ```
 
@@ -287,39 +279,38 @@ def main():
 <Tab title="cURL">
 
 ```json
-
 {
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-            "is_in_person": false,
-        },
-        {
-            "email": "signer_a@example.com",
-            "role": "signer",
-            "is_in_person": true,
-            "embed_url": "https://app.box.com/sign/document/...",
-            "iframeable_embed_url": "https://app.box.com/embed/sign/document/..."
-        },
-        {
-            "email": "signer_b@example.com",
-            "role": "signer",
-            "is_in_person": true,
-            "embed_url": null,
-            "iframeable_embed_url": null
-        }
-    ],
-    "id": "d066575f-f22b-42fc-b9e2-701468776475",
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
-        "name": "signed docs"
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+      "is_in_person": false,
     },
-    "name": "Simple-PDF (3).pdf",
-    "type": "sign-request",
-    "status": "created",
-    "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca"
+    {
+      "email": "signer_a@example.com",
+      "role": "signer",
+      "is_in_person": true,
+      "embed_url": "https://app.box.com/sign/document/...",
+      "iframeable_embed_url": "https://app.box.com/embed/sign/document/..."
+    },
+    {
+      "email": "signer_b@example.com",
+      "role": "signer",
+      "is_in_person": true,
+      "embed_url": null,
+      "iframeable_embed_url": null
+    }
+  ],
+  "id": "d066575f-f22b-42fc-b9e2-701468776475",
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+    "name": "signed docs"
+  },
+  "name": "Simple-PDF (3).pdf",
+  "type": "sign-request",
+  "status": "created",
+  "template_id": "ee9a689e-96b6-4076-92a0-b9b765eb09ca"
 }
 
 ```
@@ -329,12 +320,11 @@ def main():
 <Tab title="Pythonの次世代SDK">
 
 ```yaml
-
 Simple sign request: d066575f-f22b-42fc-b9e2-701468776475
   Status: created
   Signers: 3
     final_copy_reader: sender@example.com
-    
+
     signer: signer_a@example.com
     embed_url: https://app.box.com/sign/document/...
     iframeable_embed_url: https://app.box.com/embed/sign/document/...

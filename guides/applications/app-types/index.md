@@ -34,23 +34,17 @@ fullyTranslated: true
 
 </ImageFrame>
 
-<!-- markdownlint-disable line-length -->
-
 | アプリケーションの種類              | 認証方法                                                  |
 | ------------------------ | ----------------------------------------------------- |
 | [カスタムアプリ][custom-apps]   | [OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報許可][ccg] |
 | [アクセス制限付きアプリ][laa]       | [アプリトークン][apptoken]                                   |
 | [カスタムスキル][custom-skills] | 選択不要                                                  |
 
-<!-- markdownlint-enable line-length -->
-
 <CTA to="guide://applications/app-types/select">
 
 アプリケーションの種類の選択方法を確認する
 
 </CTA>
-
-<!-- markdownlint-enable line-length -->
 
 [oauth2]: g://authentication/oauth2
 

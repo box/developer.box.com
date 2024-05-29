@@ -31,11 +31,10 @@ fullyTranslated: true
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 52f6f86c-c0b3-401e-a4ec-1709f277c469/resend' \
---header 'Authorization: Bearer ej...3t'
+    --header 'Authorization: Bearer ej...3t'
 
 ```
 
@@ -44,7 +43,6 @@ curl --location --request POST 'https://api.box.com/2.0/sign_requests/
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_send_reminder(client: Client, sign_request_id: str):
     """Send reminder to signers"""
     sign_request = client.sign_requests.resend_sign_request(sign_request_id)
@@ -66,30 +64,29 @@ def sign_send_reminder(client: Client, sign_request_id: str):
 
 <Tab title="cURL">
 
-```bash
-    
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <access token>'
---data-raw '{
-    "are_reminders_enabled": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <access token>' \
+    --data-raw '{
+      "are_reminders_enabled": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -98,7 +95,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_single_more_options(
     client: Client,
     document_id: str,
@@ -131,7 +127,7 @@ def sign_doc_single_more_options(
 
 def main():
     ...
-    
+
     # Sign with redirects
     sign_with_auto_reminder = sign_doc_single_more_options(
         client,

@@ -35,36 +35,35 @@ fullyTranslated: true
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "institution@example.com",
-            "role": "signer",
-            "order":1
+          "email": "institution@example.com",
+          "role": "signer",
+          "order": 1
         },
         {
-            "email": "student@example.com",
-            "role": "signer",
-            "order":2
+          "email": "student@example.com",
+          "role": "signer",
+          "order": 2
         },
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -73,7 +72,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_contract(
     client: Client,
     document_id: str,
@@ -126,7 +124,7 @@ def main():
         prep_needed=True,
     )
     if sign_contract_multi.prepare_url is not None:
-        open_browser(sign_contract_multi.prepare_url)    
+        open_browser(sign_contract_multi.prepare_url)
 
 ```
 
@@ -180,44 +178,43 @@ def main():
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "institution@example.com",
-            "role": "signer",
-            "order":1
+          "email": "institution@example.com",
+          "role": "signer",
+          "order": 1
         },
         {
-            "email": "student@example.com",
-            "role": "signer",
-            "order":2
+          "email": "student@example.com",
+          "role": "signer",
+          "order": 2
         },
         {
-            "email": "dean@example.com",
-            "role": "approver"
+          "email": "dean@example.com",
+          "role": "approver"
         },
         {
-            "email": "legal@example.com",
-            "role": "final_copy_reader"
+          "email": "legal@example.com",
+          "role": "final_copy_reader"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -226,7 +223,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_contract_step(
     client: Client,
     document_id: str,
@@ -279,7 +275,7 @@ def sign_contract_step(
 
 def main():
     ...
-    
+
     # Multiple signers and steps
     sign_contract_multi_step = sign_contract_step(
         client,

@@ -141,11 +141,7 @@ CLIのソースコードは、[GitHub][cli]で提供されています。
 
 ターミナルまたはコマンドラインを開き、`box configure:environments:add PathToConfigFileHere`コマンドを実行します。ここでは、`PathToConfigHere`を`config.json`ファイルのパスに置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
 例: `box configure:environments:add /Users/ExampleUser/Documents/CLI/config.json`
-
-<!-- markdownlint-enable line-length -->
 
 <Message type="tip">
 

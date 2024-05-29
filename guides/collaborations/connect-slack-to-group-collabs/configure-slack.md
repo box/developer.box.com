@@ -47,18 +47,18 @@ Slackアプリ用のイベントリスナーを設定すると、チャンネル
 
 このようなSlackのイベントペイロードの送信先となる通知URLを設定するために、Slackでは確認手順が必要になります。ボットアプリケーションコードのイベントリスナーURLを設定すると、Slackは即座にそのURLにチャレンジを送信し、そのURLが有効かどうかを確認します。これは、次のようなペイロードを含むHTTP POSTです。
 
-```javascript
-{ 
-  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl", 
+```json
+{
+  "token": "Jhj5dZrVaK7ZwHHjRyZWjbDl",
   "challenge": "3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P",
-  "type": "url_verification" 
+  "type": "url_verification"
 }
 
 ```
 
 イベントリスナーのURLを設定するには、この手順の間に、設定するURLが、チャレンジ値を含む確認用ペイロードを使用してSlackに応答する必要があります。ペイロードは次のようになります。
 
-```javascript
+```js
 HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV2595E9CY3gmdALWMmHkvFXO7tYXAYM8P"}
 
 ```
@@ -85,7 +85,7 @@ HTTP 200 OK Content-type: application/json {"challenge":"3eZbrw1aBm2rZgRNFdxV259
 
 プロジェクトディレクトリ内で`npm install express --save`を実行してExpressの依存関係をインストールし、次のコードを適切なNodeモジュールとともに公開エンドポイントに展開します。
 
-```javascript
+```js
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -94,23 +94,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.post('/event', (req, res) => {
-  if (
-    req.body &&
-    req.body.challenge &&
-    req.body.type === 'url_verification'
-  ) {
-    res.send({
-      challenge: req.body.challenge
-    });
-  } else {
-    res.status(400).send({
-      error: "Unrecognized request"
-    });
-  }
+    if (
+        req.body &&
+        req.body.challenge &&
+        req.body.type === 'url_verification'
+    ) {
+        res.send({
+            challenge: req.body.challenge
+        });
+    } else {
+        res.status(400).send({
+            error: "Unrecognized request"
+        });
+    }
 });
 
 app.listen(port, function(err) {
-  console.log("Server listening on PORT", port);
+    console.log("Server listening on PORT", port);
 });
 
 ```
@@ -130,7 +130,7 @@ app.listen(port, function(err) {
 * `build.gradle`ファイルを開いて以下を追加します。アプリケーションに使用したグループとこのグループが一致することを確認します。保存したら、Gradleプロジェクトを更新します。
 
 ```java
- plugins {
+plugins {
     id 'org.springframework.boot' version '2.3.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
@@ -175,27 +175,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class Application {
-  @PostMapping("/event")
-  public JSONObject challenge(@RequestBody String data) throws Exception {
-    JSONObject returnJSON = new JSONObject();
+    @PostMapping("/event")
+    public JSONObject challenge(@RequestBody String data) throws Exception {
+        JSONObject returnJSON = new JSONObject();
 
-    Object dataObj = new JSONParser().parse(data);
-    JSONObject inputJSON = (JSONObject) dataObj;
-    String challenge = (String) inputJSON.get("challenge");
-    String type = (String) inputJSON.get("type");
+        Object dataObj = new JSONParser().parse(data);
+        JSONObject inputJSON = (JSONObject) dataObj;
+        String challenge = (String) inputJSON.get("challenge");
+        String type = (String) inputJSON.get("type");
 
-    if (type.equals("url_verification")) {
-      returnJSON.put("challenge", challenge);
-    } else {
-      System.err.println("Invalid input");
+        if (type.equals("url_verification")) {
+            returnJSON.put("challenge", challenge);
+        } else {
+            System.err.println("Invalid input");
+        }
+
+        return returnJSON;
     }
 
-    return returnJSON;
-  }
-
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
 
 ```
@@ -237,7 +237,7 @@ Slackチャンネルの各ユーザーにBox内のファイルやフォルダへ
 
 このコマンドを使用すると、チャンネルのメンバーはチャネルに`/boxadd [file / folder] [id]` (`boxadd file 1459732312`など) を入力してファイル/フォルダをそのチャンネルのすべてのユーザーと共有できます。そのために、ファイルはそのチャンネル内に存在するBoxグループのユーザーと自動的にコラボレーションされます。
 
-作成したアプリケーションの \[**Basic Information (基本情報)**] タブの \[**Add features and functionality (機能の追加)**] で \[**Slash Commands (スラッシュコマンド)**] というタイトルのボタンをクリックします。 
+作成したアプリケーションの \[**Basic Information (基本情報)**] タブの \[**Add features and functionality (機能の追加)**] で \[**Slash Commands (スラッシュコマンド)**] というタイトルのボタンをクリックします。
 
 表示されるページで、\[**Create New Command (新しいコマンドの作成)**] をクリックして、以下の項目を入力します。
 

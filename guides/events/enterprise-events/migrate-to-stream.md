@@ -52,37 +52,29 @@ Boxでは、`admin_logs`を使用してライブイベントを登録してい�
 
 ### 1. 既存のリクエストは以下のようになります
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs&stream_position=1632893855 \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### 2. `admin_logs_streaming`を使用して重複する既存のリクエストを開始します
 
 * 2週間前に開始し、埋め戻しする:
-  <!-- markdownlint-disable line-length -->
 
 ```curl
-curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=0 \
+        -H "authorization: Bearer <ACCESS_TOKEN>"
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 または
 
 * 今すぐ開始し、並行して実行する:
-  <!-- markdownlint-disable line-length -->
 
 ```curl
-curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=now \
+        -H "authorization: Bearer <ACCESS_TOKEN>"
 
 ```
 
@@ -90,11 +82,9 @@ curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_posi
 
 ```curl
 curl https://api.box.com/2.0/events?stream_type=admin_logs_streaming&stream_position=1632893855 \
-  -H "authorization: Bearer <ACCESS_TOKEN>"
+    -H "authorization: Bearer <ACCESS_TOKEN>"
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### 4. 確信できるまで重複に進みます
 

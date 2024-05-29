@@ -21,15 +21,13 @@ fullyTranslated: true
 
 [`GET /search`][search_api] APIでは、関連付けられたメタデータを使用して、検索結果にフィルタをかけることができます。`mdfilters`クエリパラメータを使用すると、開発者はメタデータテンプレートとクエリの対象となる値を指定できます。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22scope%22%3A%22enterprise%22%2C%22templateKey%22%3A%22contract%22%2C%22filters%22%3A%7B%22category%22%3A%22online%22%7D%7D%5D" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 
 ```
 
@@ -59,10 +57,10 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
 
 <Tab title=".NET">
 
-```dotnet
+```csharp
 var filter = new
 {
-  category = "online"
+    category = "online"
 };
 
 var filters = new List<BoxMetadataFilterRequest>()
@@ -83,7 +81,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
 
 <Tab title="Python">
 
-```py
+```python
 from boxsdk.object.search import MetadataSearchFilter, MetadataSearchFilters
 
 metadata_search_filter = MetadataSearchFilter(scope='enterprise', template_key='contract')
@@ -101,29 +99,27 @@ client.search().query("sales", metadata_filters=metadata_search_filters)
 
 ```js
 client.search.query(
-  'sales',
-  {
-    mdfilters: [
-      {
-        scope: 'enterprise',
-        templateKey: 'contract',
-        filters: {
-          category: 'online;
-        }
-      }
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        mdfilters: [
+            {
+                scope: 'enterprise',
+                templateKey: 'contract',
+                filters: {
+                    category: 'online'
+                }
+            }
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 
 ```
 
 </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 

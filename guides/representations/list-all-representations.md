@@ -33,8 +33,6 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 
 このレスポンスには、次の形式でレプリゼンテーションのリストが含まれます。
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 ...
 {
@@ -51,8 +49,6 @@ curl https://api.box.com/2.0/files/123?fields=representations \
 ...
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## レスポンスのフィールド
 

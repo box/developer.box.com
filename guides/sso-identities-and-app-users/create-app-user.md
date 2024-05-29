@@ -51,13 +51,13 @@ const spaceAmount = 1073741824;
 
 // Create app user
 client.enterprise.addAppUser(
-  ssoName,
-  {
-    space_amount: spaceAmount,
-    external_app_user_id: ssoUID
-  }
+    ssoName,
+    {
+      space_amount: spaceAmount,
+      external_app_user_id: ssoUID
+    }
 ).then(appUser => {
-  console.log(`New user created: ${appUser.name}`);
+    console.log(`New user created: ${appUser.name}`);
 });
 
 ```
@@ -103,7 +103,7 @@ print('New user created: {name}')
 `external_app_user_id`によってSSOユーザーレコードに関連付けられた新しい管理対象ユーザーを作成するには、SSOプロバイダから以下の2つの情報が必要になります。
 
 * メールアドレス (必須): SSOユーザーレコードの一意のメールアドレスです。
-* 名前 (省略可): レコードの一貫性を保つために、Boxユーザーレコードと関連付けるSSOユーザー名を抽出します。
+* 名前 (省略可): レコードの一貫性を保つために、Boxユーザーレコードと関連付けるSSOユーザーを抽出します。
 
 取得したら、ログイン用のSSOユーザーレコードのメールアドレスを指定して、新しい管理対象ユーザーを作成するリクエストを実行します。
 
@@ -118,13 +118,13 @@ const spaceAmount = 1073741824;
 
 // Create app user
 client.enterprise.addUser(
-  ssoEmail,
-  ssoName,
-  {
-    space_amount: spaceAmount
-  }
+    ssoEmail,
+    ssoName,
+    {
+        space_amount: spaceAmount
+    }
 ).then(managedUser => {
-  console.log(`New user created: ${managedUser.name}`);
+    console.log(`New user created: ${managedUser.name}`);
 });
 
 ```
@@ -138,7 +138,7 @@ String ssoName = "SSO User Name";
 String ssoEmail = "ssouser@email.com";
 
 // Create managed user
-BoxUser.Info createdUserInfo = 
+BoxUser.Info createdUserInfo =
   BoxUser.createEnterpriseUser(client, ssoEmail, ssoName);
 
 outputString = "New user created: " + createdUserInfo.getName();

@@ -114,80 +114,80 @@ const fs = require("fs");
 const box = require("box-node-sdk");
 
 class BoxFolderTreeCreator {
-  constructor(boxClient, options) {
-    options = options || {};
-    if (options.boxClient) {
-      throw new Error("Must include a boxClient field.");
-    }
-
-    options.boxFolderTreeName = options.boxFolderTreeName || "tree.json";
-
-    this.boxClient = boxClient;
-    this.boxFolderTree = JSON.parse(fs.readFileSync(options.boxFolderTreeName));
-    this.createdBoxFolders = [];
-  }
-
-  async createFolderTree(branch = null, parentFolderId = "0") {
-    this.createdBoxFolders = [];
-    if (Array.isArray(this.boxFolderTree)) {
-      let folderTasks = [];
-      this.boxFolderTree.forEach(folder => {
-        folderTasks.push(this._createFolder(folder, ""));
-      });
-      await Promise.all(folderTasks);
-      return this.createdBoxFolders;
-    } else if (typeof this.boxFolderTree === "object") {
-      console.log("Is object");
-      await this._createFolders(this.boxFolderTree, "");
-      return this.createdBoxFolders;
-    } else {
-      throw new Error("Incorrectly formatted JSON folder tree.");
-    }
-  }
-
-  async _createFolders(branch, parentFolderId = "0") {
-    if (branch.parent != null && branch.parent.id != null) {
-      parentFolderId = branch.parent.id;
-    }
-    let folder;
-    try {
-      folder = await this.boxClient.folders.create(parentFolderId, branch.name);
-    } catch (e) {
-      let existingFolderId = BoxFolderTreeCreator.handleFolderConflictError(e);
-      folder = await this.boxClient.folders.get(existingFolderId);
-    }
-    this.createdBoxFolders.push(folder);
-    if (branch.children.length <= 0) {
-      console.log("No more folders to create...");
-      return;
-    } else {
-      let createFolderTasks = [];
-      branch.children.forEach(child => {
-        console.log("Creating folder...");
-        console.log(child.name);
-        createFolderTasks.push(this._createFolders(child, folder.id));
-      });
-      return await Promise.all(createFolderTasks);
-    }
-  }
-
-  static handleFolderConflictError(e) {
-    if (e && e.response && e.response.body) {
-      let errorBody = e.response.body;
-      if (errorBody.status === 409) {
-        if (
-          errorBody.context_info &&
-          errorBody.context_info.conflicts &&
-          errorBody.context_info.conflicts.length > 0
-        ) {
-          let conflict = errorBody.context_info.conflicts[0];
-          if (conflict && conflict.id) {
-            return conflict.id;
-          }
+    constructor(boxClient, options) {
+        options = options || {};
+        if (options.boxClient) {
+            throw new Error("Must include a boxClient field.");
         }
-      }
+
+        options.boxFolderTreeName = options.boxFolderTreeName || "tree.json";
+
+        this.boxClient = boxClient;
+        this.boxFolderTree = JSON.parse(fs.readFileSync(options.boxFolderTreeName));
+        this.createdBoxFolders = [];
     }
-  }
+
+    async createFolderTree(branch = null, parentFolderId = "0") {
+        this.createdBoxFolders = [];
+        if (Array.isArray(this.boxFolderTree)) {
+            let folderTasks = [];
+            this.boxFolderTree.forEach(folder => {
+                folderTasks.push(this._createFolder(folder, ""));
+            });
+            await Promise.all(folderTasks);
+            return this.createdBoxFolders;
+        } else if (typeof this.boxFolderTree === "object") {
+            console.log("Is object");
+            await this._createFolders(this.boxFolderTree, "");
+            return this.createdBoxFolders;
+        } else {
+            throw new Error("Incorrectly formatted JSON folder tree.");
+        }
+    }
+
+    async _createFolders(branch, parentFolderId = "0") {
+        if (branch.parent != null && branch.parent.id != null) {
+            parentFolderId = branch.parent.id;
+        }
+        let folder;
+        try {
+            folder = await this.boxClient.folders.create(parentFolderId, branch.name);
+        } catch (e) {
+            let existingFolderId = BoxFolderTreeCreator.handleFolderConflictError(e);
+            folder = await this.boxClient.folders.get(existingFolderId);
+        }
+        this.createdBoxFolders.push(folder);
+        if (branch.children.length <= 0) {
+            console.log("No more folders to create...");
+            return;
+        } else {
+            let createFolderTasks = [];
+            branch.children.forEach(child => {
+                console.log("Creating folder...");
+                console.log(child.name);
+                createFolderTasks.push(this._createFolders(child, folder.id));
+            });
+            return await Promise.all(createFolderTasks);
+        }
+    }
+
+    static handleFolderConflictError(e) {
+        if (e && e.response && e.response.body) {
+            let errorBody = e.response.body;
+            if (errorBody.status === 409) {
+                if (
+                    errorBody.context_info &&
+                    errorBody.context_info.conflicts &&
+                    errorBody.context_info.conflicts.length > 0
+                ) {
+                    let conflict = errorBody.context_info.conflicts[0];
+                    if (conflict && conflict.id) {
+                        return conflict.id;
+                    }
+                }
+            }
+        }
+    }
 }
 
 let configFile = fs.readFileSync("config.json");
@@ -199,8 +199,8 @@ let serviceAccountClient = session.getAppAuthClient("enterprise");
 let treeCreator = new BoxFolderTreeCreator(serviceAccountClient);
 
 (async () => {
-  let createdFolders = await treeCreator.createFolderTree();
-  console.log(createdFolders);
+    let createdFolders = await treeCreator.createFolderTree();
+    console.log(createdFolders);
 })();
 
 ```

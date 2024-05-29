@@ -44,8 +44,8 @@ Box as File Storage for Slack and retry.`
 
 ```json
 "context_info": {
-    "service_account_id": "12345678",
-    "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
+  "service_account_id": "12345678",
+  "service_account_email": "AutomationUser_12345678_gdueygwe@boxdevedition.com",
 }
 
 ```
@@ -70,20 +70,14 @@ Channel: example123 is already mapped to a folder in Box.
 
 統合に関連付けられているSlackボットでチャンネルに関する情報を取得できない場合は、APIから次のエラーが返されます。
 
-<!-- markdownlint-disable line-length -->
-
 ```sh
 Channel: example123 was not found. If it is a private channel, ensure that Box has been added to the channel.
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 `partner_item`が正しいことを確認します。オーガナイゼーションでのインストールの場合は`slack_org_id`、ワークスペースでのインストールの場合は`slack_workspace_id`を指定していることを確認してください。チャンネルがプライベートの場合は、Slackボットがそのチャンネルに追加されていることを確認します。
 
 ## チャンネルがカスタムファイルストレージ (CFS) に適していない
-
-<!-- markdownlint-disable line-length -->
 
 ```sh
 Channel: example123 is not suitable for CFS. Slack Connect channels with
@@ -91,22 +85,16 @@ a pending Connect status can not be mapped to Box folders.
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 Slackコネクトチャンネル (企業間チャンネル) は、現在、SlackのコンテンツレイヤーとしてBoxを使用する場合にサポートされていません。
 
 ## Boxフォルダが外部で所有されている
 
 マッピングに選択したBoxフォルダは、管理者が所属する企業で所有している必要があります。
 
-<!-- markdownlint-disable line-length -->
-
 ```sh
 Box folder: example123 cannot be mapped, because it is externally owned. Mapped folder must belong to the enterprise: example_enterprise.
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## カスタムファイルストレージ (CFS) が無効になっている
 

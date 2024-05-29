@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - post_files_upload_sessions
   - put_files_upload_sessions_id
@@ -17,8 +17,8 @@ type: guide
 total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked
-next_page_id: uploads/chunked/commit-session
-previous_page_id: ''
+next_page_id: uploads/chunked/upload-part
+previous_page_id: uploads/chunked/create-session
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/with-sdks.md
 fullyTranslated: true

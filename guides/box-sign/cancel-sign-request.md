@@ -1,11 +1,15 @@
 ---
-rank: 4
+rank: 3
+related_endpoints:
+  - post-sign-requests-id-cancel
+related_guides:
+  - box-sign/create-sign-request
 category_id: box-sign
 subcategory_id: null
 is_index: false
 id: box-sign/cancel-sign-request
 type: guide
-total_steps: 6
+total_steps: 7
 sibling_id: box-sign
 parent_id: box-sign
 next_page_id: box-sign/list-sign-requests

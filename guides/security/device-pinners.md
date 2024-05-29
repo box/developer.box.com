@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 2
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -14,7 +14,7 @@ total_steps: 3
 sibling_id: security
 parent_id: security
 next_page_id: security/cors
-previous_page_id: ''
+previous_page_id: security/fedramp
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/security/device-pinners.md
 fullyTranslated: true

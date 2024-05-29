@@ -141,14 +141,10 @@ fullyTranslated: true
 
 `editField`操作オプションでは、`displayName`、`description`、`key`、`hidden`状態など、フィールドの基本プロパティをいくつでも編集できます。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      |                             |
 | ---------- | --------------------------- |
 | `data`     | フィールドに設定する新しいプロパティを表すオブジェクト |
 | `fieldKey` | 編集するフィールドのキー                |
-
-<!-- markdownlint-enable line-length -->
 
 ```json
 {
@@ -173,13 +169,9 @@ fullyTranslated: true
 
 `removeField`操作では、テンプレートからフィールドを削除します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      |                      |
 | ---------- | -------------------- |
 | `fieldKey` | テンプレートから削除するフィールドのキー |
-
-<!-- markdownlint-enable line-length -->
 
 ```json
 {
@@ -201,8 +193,6 @@ fullyTranslated: true
 
 [`enum`](g://metadata/fields/enum)および[`multiSelect`](g://metadata/fields/multi-select)メタデータフィールドタイプはどちらも、フィールドのオプションを変更するための追加操作をサポートしています。
 
-<!-- markdownlint-disable line-length -->
-
 | 操作                                                                              |                                 |
 | ------------------------------------------------------------------------------- | ------------------------------- |
 | [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | `enum`フィールドにオプションを追加します         |
@@ -213,7 +203,5 @@ fullyTranslated: true
 | [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | `multiSelect`フィールドのオプションを編集します  |
 | [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | `multiSelect`フィールドのオプションを並べ替えます |
 | [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | `multiSelect`フィールドのオプションを削除します  |
-
-<!-- markdownlint-enable line-length -->
 
 [endpoint]: e://put_metadata_templates_id_id_schema

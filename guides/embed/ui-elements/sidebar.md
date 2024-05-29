@@ -42,8 +42,6 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 
 ## サンプルHTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -84,8 +82,6 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 </html>
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## デモ
 
@@ -174,19 +170,13 @@ sidebar.removeAllListeners();
 
 ### パラメータ
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ     | 型      | 説明                                                                                                                 |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
 | `fileId`  | String | BoxファイルID。サイドバーが必要なファイルのIDです。                                                                                      |
 | `token`   | String | 使用するBox APIアクセストークン。このトークンには、上記のファイルに対する読み取り/書き込みアクセス権限を指定できます。このトークンのために渡される値は、サイドバーの表示中は有効期限切れにならないことが前提となっています。 |
 | `options` | Object | 追加のオプション。たとえば、`sidebar.show(FILE_ID, TOKEN, {hasProperties: true})`を使用すると、サイドバーにファイルのプロパティが表示されます。                 |
 
-<!-- markdownlint-enable line-length -->
-
 ### オプション
-
-<!-- markdownlint-disable line-length -->
 
 | パラメータ                 | 型        | デフォルト           | 説明                                                                                                                                                                                           |
 | --------------------- | -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -207,8 +197,6 @@ sidebar.removeAllListeners();
 | `hasVersions`    | Boolean | `false` | trueに設定すると、詳細サイドバーにファイルのバージョンが表示されます。    |
 | `hasNotices`     | Boolean | `false` | trueに設定すると、詳細サイドバーにファイル関連の通知が表示されます。     |
 
-<!-- markdownlint-enable line-length -->
-
 ##  スコープ 
 
 アプリケーションで、エンドユーザーがContent Sidebar機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、Content Sidebarを初期化するエンドユーザークライアントに安全に渡すことができます。
@@ -216,8 +204,6 @@ sidebar.removeAllListeners();
 以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、Content SidebarのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
 
 ### 基本スコープ
-
-<!-- markdownlint-disable line-length -->
 
 | スコープ名          | 付与される権限                           |
 | -------------- | --------------------------------- |
@@ -231,8 +217,6 @@ sidebar.removeAllListeners();
 | `item_rename`  | ファイルの説明の編集を許可します。    |
 | `item_upload`  | ファイルのメタデータの編集を許可します。 |
 | `item_task`    | タスクの作成と解決を許可します。     |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 

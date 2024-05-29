@@ -120,8 +120,6 @@ uploader.removeAllListeners();
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### パラメータ
 
 | パラメータ         | 型      | 説明                                                                                            |
@@ -163,8 +161,6 @@ uploader.removeAllListeners();
 | `upload`   | ファイル          | 1つのファイルが正常にアップロードされたときに発生します。イベントデータはファイルオブジェクトになります。                                     |
 | `error`    | Object        | 1つのファイルでアップロードエラーが生じたときに発生します。イベントデータはFile Web APIのプロパティファイルとエラーオブジェクトのエラーを含むオブジェクトになります。 |
 
-<!-- markdownlint-enable line-length -->
-
 ##  スコープ 
 
 アプリケーションで、エンドユーザーがコンテンツアップローダー機能のサブセットのみにアクセスできるようにする必要がある場合は、[ダウンスコープ][downscope]を使用して、アクセストークンを適切にダウンスコープして必要な権限のセットを含むトークンを生成し、コンテンツアップローダーを初期化するエンドユーザークライアントに安全に渡すことができます。
@@ -172,8 +168,6 @@ uploader.removeAllListeners();
 以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、コンテンツアップローダーのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
 
 ### 基本スコープ
-
-<!-- markdownlint-disable line-length -->
 
 | スコープ名         | 付与される権限                                         |
 | ------------- | ----------------------------------------------- |
@@ -184,8 +178,6 @@ uploader.removeAllListeners();
 | シナリオ                       |  スコープ         |
 | -------------------------- | ------------- |
 | ユーザーがファイルをBoxフォルダにアップロードする | `base_upload` |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 

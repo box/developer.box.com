@@ -186,7 +186,7 @@ Boxでは、ペンを使って紙にソリューションを書き出すこと�
 
 <Centered wide>
 
-<FeaturedBoard type="community">
+<FeaturedBoard type="aiDevZone">
 
 </FeaturedBoard>
 
@@ -210,61 +210,61 @@ Box Platformを使用した開発は、SDK、Box CLI、Postmanコレクション
 
 <Tile type="box-orange" title="APIリファレンス" href="/reference/">
 
-  _Box APIリファレンス_
+_Box APIリファレンス_
 
 </Tile>
 
 <Tile type="java" title="Java SDK" href="https://github.com/box/box-java-sdk#readme">
 
-  _box-java-sdk_
+_box-java-sdk_
 
 </Tile>
 
 <Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
 
-  _box-python-sdk_
+_box-python-sdk_
 
 </Tile>
 
 <Tile type="node" title="Node.js SDK" href="https://github.com/box/box-node-sdk#readme">
 
-  _box-node-js-sdk_
+_box-node-js-sdk_
 
 </Tile>
 
 <Tile type="net" title=".NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
 
-  _box-windows-sdk-v2_
+_box-windows-sdk-v2_
 
 </Tile>
 
 <Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
-  _box-ios-sdk_
+_box-ios-sdk_
 
 </Tile>
 
 <Tile type="tool" title="Postmanコレクション" href="/guides/tooling/postman">
 
-  _Box Postmanコレクション_
+_Box Postmanコレクション_
 
 </Tile>
 
 <Tile type="box-orange" title="Box CLI" href="/guides/cli/">
 
-  _box-cli_
+_box-cli_
 
 </Tile>
 
 <Tile type="box-orange" title="Box UI Elements" href="/guides/embed/ui-elements/">
 
-  _box-ui-elements_
+_box-ui-elements_
 
 </Tile>
 
 <Tile type="box-orange" title="Box Embed" href="/guides/embed/box-embed/">
 
-  _Box Embed_
+_Box Embed_
 
 </Tile>
 
@@ -346,7 +346,7 @@ More SDKs & Tools
 
 <Centered wide>
 
-<FeaturedBoard type="sampleCode">
+<FeaturedBoard type="community">
 
 </FeaturedBoard>
 
@@ -422,7 +422,15 @@ BoxとSalesforceを統合しましょう。最近、Boxでは、ローコード/
 
 <Centered wide>
 
-<Header to="https://medium.com/box-developer-blog" centered>
+<FeaturedBoard type="sampleCode">
+
+</FeaturedBoard>
+
+</Centered>
+
+<Centered wide>
+
+<Header centered>
 
 その他のリソース
 

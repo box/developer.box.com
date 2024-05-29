@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_endpoints:
   - post_oauth2_revoke
 related_resources: []
@@ -17,7 +17,7 @@ total_steps: 8
 sibling_id: authentication/tokens
 parent_id: authentication/tokens
 next_page_id: authentication/tokens/downscope
-previous_page_id: authentication/tokens/refresh
+previous_page_id: authentication/tokens/access-tokens
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/tokens/revoke.md
 fullyTranslated: true

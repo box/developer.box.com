@@ -48,8 +48,6 @@ WebhookにはV1とV2の2種類があります。この2つの比較を以下に�
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 | V1                      | V2                                      |
 | ----------------------- | --------------------------------------- |
 | [開発者コンソール][console]で作成。 | [開発者コンソール][console]またはAPIコールで作成。        |
@@ -60,7 +58,5 @@ WebhookにはV1とV2の2種類があります。この2つの比較を以下に�
 | ペイロード検証をサポートしない。        | ペイロード検証をサポート。                           |
 | 通知URLはHTTPまたはHTTPSを指定可。 | 通知URLはHTTPSのみ指定可。                       |
 | 拡張性が低い。                 | 拡張性に優れ、信頼性が高い。                          |
-
-<!-- markdownlint-enable line-length -->
 
 [console]: https://app.box.com/developers/console

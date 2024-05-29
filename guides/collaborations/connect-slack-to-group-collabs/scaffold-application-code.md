@@ -34,7 +34,7 @@ SlackおよびBoxアプリケーションを構成したら、Slackから送信�
 * アプリケーション用に新しいローカルディレクトリを作成するか、[手順1][step1]のSlackイベントURLチャレンジ用に作成した既存のコードを読み込みます。
 * ローカルディレクトリ内で新しい`package.json`ファイルを作成するか既存のファイルを更新します。任意のエディタでそのファイルを開き、以下の内容をコピーして貼り付け、ファイルを保存して終了します。
 
-```javascript
+```json
 {
   "name": "box-slack",
   "version": "1.0.0",
@@ -58,7 +58,7 @@ SlackおよびBoxアプリケーションを構成したら、Slackから送信�
 
 * ターミナル/コンソールから`npm install`を実行し、依存関係をインストールします。
 * ローカルディレクトリに2つのファイル (`process.js`および`slackConfig.json`) を作成します。
-* `slackConfig.json`を開いて、以下のデフォルト構成を保存します。 
+* `slackConfig.json`を開いて、以下のデフォルト構成を保存します。
 
 ```json
 {
@@ -73,7 +73,7 @@ SlackおよびBoxアプリケーションを構成したら、Slackから送信�
   * `botToken`: Slackアプリケーションで、\[**OAuth & Permissions (OAuthと権限)**] ページに移動し、上部にある \[**Bot User OAuth Access Token (ボットユーザーOAuthアクセストークン)**] の文字列を使用できます。この文字列は、ボットがSlackワークスペースに追加されたときに自動入力されています。
 * 空の`process.js`ファイルを開き、次のコードをコピーして貼り付け、ファイルを保存します。
 
-```javascript
+```js
 const box = require("box-node-sdk");
 
 const slackConfig = require("./slackConfig.json");
@@ -90,50 +90,50 @@ app.use(express.json());
 // INSTANTIATE BOX CLIENT
 
 app.post('/event', (req, res) => {
-  //HANDLE INCOMING EVENTS
+    //HANDLE INCOMING EVENTS
 });
 
 const handler = (() => {
-  function process(res, data) {
-    // PROCESS EVENTS
-  }
+    function process(res, data) {
+        // PROCESS EVENTS
+    }
 
-  function processUser(user, event, channel) {
-    // PROCESS USER ADD / REMOVE REQUEST
-  }
+    function processUser(user, event, channel) {
+        // PROCESS USER ADD / REMOVE REQUEST
+    }
 
-  function addGroupUser(groupId, email) {
-    // ADD USER TO BOX GROUP
-  }
+    function addGroupUser(groupId, email) {
+        // ADD USER TO BOX GROUP
+    }
 
-  function removeGroupUser(groupId, email) {
-    // REMOVE USER FROM BOX GROUP
-  }
+    function removeGroupUser(groupId, email) {
+        // REMOVE USER FROM BOX GROUP
+    }
 
-  function processContent(user, channel, type, fid) {
-    // COLLABORATE CONTENT WITH GROUP
-  }
+    function processContent(user, channel, type, fid) {
+        // COLLABORATE CONTENT WITH GROUP
+    }
 
-  function processSlackChannel(channel, gid) { 
-    // ADD ALL SLACK CHANNEL USERS TO GROUP
-  }
-  
-  function getSlackUser(userId, _callback) {
-    // GET SLACK USER PROFILE
-  }
+    function processSlackChannel(channel, gid) {
+        // ADD ALL SLACK CHANNEL USERS TO GROUP
+    }
 
-  function getGroupId(groupName, _callback) {
-    // GET AND CREATE BOX GROUP
-  }
+    function getSlackUser(userId, _callback) {
+        // GET SLACK USER PROFILE
+    }
 
-  return {
-    process
-  };
+    function getGroupId(groupName, _callback) {
+        // GET AND CREATE BOX GROUP
+    }
+
+    return {
+        process
+    };
 })();
 
 const port = process.env.PORT || 3000;
-app.listen(port, function(err) { 
-  console.log("Server listening on PORT", port); 
+app.listen(port, function(err) {
+  console.log("Server listening on PORT", port);
 });
 
 ```
@@ -144,7 +144,7 @@ app.listen(port, function(err) {
 * `process`: Slackイベントを解析し、Boxグループの処理 (ユーザーチャンネルイベント) またはグループへのBoxコンテンツの追加 (スラッシュコマンド) のいずれかにそのイベントを転送します。
 * `processUser`: 適切な関数に転送することでBoxグループのユーザーを追加または削除して、User Eventを処理します。
 * `addGroupUser`: Boxグループにユーザーを追加します。
-* `removeGroupUser`: Boxグループからユーザーを削除します。 
+* `removeGroupUser`: Boxグループからユーザーを削除します。
 * `processContent`: BoxグループとBoxコンテンツのコラボレーションを行います。
 * `processSlackChannel`: すべてのSlackチャンネルユーザーをBoxグループに追加します。
 * `getSlackUser`: SlackユーザーのプロフィールをSlackユーザーIDから取得します (ユーティリティ関数)。
@@ -163,9 +163,9 @@ Slackの資格情報とURLを保持するための構成ファイルを作成す
 package com.box.slack.box;
 
 public class slackConfig {
-  public static String verificationToken = "TOKEN";
-  public static String botToken = "TOKEN";
-  public static String slackApiUrl = "https://slack.com/api";
+    public static String verificationToken = "TOKEN";
+    public static String botToken = "TOKEN";
+    public static String slackApiUrl = "https://slack.com/api";
 }
 
 ```
@@ -174,8 +174,6 @@ public class slackConfig {
   * `verificationToken`: Slackアプリケーションの構成ページを読み込みます。\[**Basic Information (基本情報)**] ページで、\[**App Credentials (アプリの資格情報)**] セクションまで下にスクロールし、\[**Verification Token (確認トークン)**] の文字列を使用できます。
   * `botToken`: Slackアプリケーションで、\[**OAuth & Permissions (OAuthと権限)**] ページに移動し、上部にある \[**Bot User OAuth Access Token (ボットユーザーOAuthアクセストークン)**] の文字列を使用できます。この文字列は、ボットがSlackワークスペースに追加されたときに自動入力されています。
 * 以前のSlackイベントチャレンジの設定で作成した`Application.java`ファイルを開き、ファイルの内容を次の内容に置き換えます。
-
-<!-- markdownlint-disable line-length -->
 
 ```java
 package com.box.slack.box;
@@ -219,86 +217,84 @@ import com.box.sdk.BoxUser;
 @RestController
 @EnableAutoConfiguration
 public class Application extends slackConfig {
-  private Reader fileReader;
-  private BoxConfig boxConfig;
-  private BoxAPIConnection boxAPI;
+    private Reader fileReader;
+    private BoxConfig boxConfig;
+    private BoxAPIConnection boxAPI;
 
-  @PostMapping("/event")
-  @ResponseBody
-  public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
-    // HANDLE EVENTS
-  }
-
-  @Async
-  public void processEvent(String data) throws Exception {
-    // VERIFY EVENTS
-  }
-
-  public void process(JSONObject inputJSON) throws Exception {
-    // PROCESS EVENTS
-  }
-
-  public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
-    // PROCESS USER ADD / REMOVE REQUEST
-  }
-
-  public void addGroupUser(String groupId, String userEmail) {
-    // ADD USER TO BOX GROUP
-  }
-
-  public void removeGroupUser(String groupId, String userEmail) {
-    // REMOVE USER FROM BOX GROUP
-  }
-
-  public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
-    // COLLABORATE CONTENT WITH GROUP
-  }
-
-  public void processSlackChannel(String channel, String groupId) throws Exception {
-    // ADD ALL SLACK CHANNEL USERS TO GROUP
-  }
-
-  public JSONObject getSlackUser(String userId) throws Exception {
-    // GET SLACK USER PROFILE
-  }
-
-  public String getGroupId(String groupName) {
-    // GET AND CREATE BOX GROUP
-  }
-
-  public JSONObject sendGETRequest(String reqURL) throws Exception {
-    StringBuffer response = new StringBuffer();
-
-    URL obj = new URL(reqURL);
-    HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
-    httpURLConnection.setRequestMethod("GET");
-
-    int responseCode = httpURLConnection.getResponseCode();
-    if (responseCode == HttpURLConnection.HTTP_OK) {
-      BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-      String inputLine;
-
-      while ((inputLine = in .readLine()) != null) {
-        response.append(inputLine);
-      } in .close();
-    } else {
-      System.err.println("GET request failed");
+    @PostMapping("/event")
+    @ResponseBody
+    public void handleEvent(@RequestBody String data, @RequestHeader("Content-Type") String contentType, HttpServletResponse response) throws Exception {
+        // HANDLE EVENTS
     }
 
-    Object dataObj = new JSONParser().parse(response.toString()); 
-    JSONObject outputJSON = (JSONObject) dataObj;
+    @Async
+    public void processEvent(String data) throws Exception {
+        // VERIFY EVENTS
+    }
 
-    return outputJSON;
-  }
+    public void process(JSONObject inputJSON) throws Exception {
+        // PROCESS EVENTS
+    }
 
-  public static void main(String[] args) {
-    SpringApplication.run(Application.class, args);
-  }
+    public void processUser(JSONObject userResponse, String event, String channel) throws Exception {
+        // PROCESS USER ADD / REMOVE REQUEST
+    }
+
+    public void addGroupUser(String groupId, String userEmail) {
+        // ADD USER TO BOX GROUP
+    }
+
+    public void removeGroupUser(String groupId, String userEmail) {
+        // REMOVE USER FROM BOX GROUP
+    }
+
+    public void processContent(JSONObject userResponse, String channel, String fType, String fId) {
+        // COLLABORATE CONTENT WITH GROUP
+    }
+
+    public void processSlackChannel(String channel, String groupId) throws Exception {
+        // ADD ALL SLACK CHANNEL USERS TO GROUP
+    }
+
+    public JSONObject getSlackUser(String userId) throws Exception {
+        // GET SLACK USER PROFILE
+    }
+
+    public String getGroupId(String groupName) {
+        // GET AND CREATE BOX GROUP
+    }
+
+    public JSONObject sendGETRequest(String reqURL) throws Exception {
+        StringBuffer response = new StringBuffer();
+
+        URL obj = new URL(reqURL);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) obj.openConnection();
+        httpURLConnection.setRequestMethod("GET");
+
+        int responseCode = httpURLConnection.getResponseCode();
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            String inputLine;
+
+            while ((inputLine = in .readLine()) != null) {
+                response.append(inputLine);
+            } in .close();
+        } else {
+            System.err.println("GET request failed");
+        }
+
+        Object dataObj = new JSONParser().parse(response.toString());
+        JSONObject outputJSON = (JSONObject) dataObj;
+
+        return outputJSON;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 このコードには、SlackとBox間の通信を処理するのに必要となる主要な関数がすべて含まれています。これらの関数について、上から順に説明します。
 
@@ -307,7 +303,7 @@ public class Application extends slackConfig {
 * `process`: Slackイベントを解析し、Boxグループの処理 (ユーザーチャンネルイベント) またはグループへのBoxコンテンツの追加 (スラッシュコマンド) のいずれかに転送します。
 * `processUser`: 適切な関数に転送することで、Boxグループのユーザーを追加または削除するためのUser Eventの要件を処理します。
 * `addGroupUser`: Boxグループにユーザーを追加します。
-* `removeGroupUser`: Boxグループからユーザーを削除します。 
+* `removeGroupUser`: Boxグループからユーザーを削除します。
 * `processContent`: BoxグループとBoxコンテンツのコラボレーションを行います。
 * `processSlackChannel`: すべてのSlackチャンネルユーザーをBoxグループに追加します。
 * `getSlackUser`: SlackユーザープロフィールをSlackユーザーIDから取得するユーティリティ関数。
@@ -330,7 +326,7 @@ public class Application extends slackConfig {
 
 ## まとめ
 
-* 最小限のアプリケーションスキャフォールドを作成し、基本的な構成の詳細を指定しました。 
+* 最小限のアプリケーションスキャフォールドを作成し、基本的な構成の詳細を指定しました。
 * プロジェクトの依存関係をすべてインストールしました。
 
 <Observe option="programming.platform" value="node,java">

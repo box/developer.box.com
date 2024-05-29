@@ -69,7 +69,7 @@ ASP.NET Coreフレームワークを使用します。
 * アプリケーション用にローカルディレクトリを作成します。
 * そのローカルディレクトリの中に`package.json`ファイルを作成し、お好みのエディタで開いたら、以下の内容をコピーして貼り付け、ファイルを保存して閉じます。
 
-```js
+```json
 {
   "name": "okta-box",
   "version": "1.0.0",
@@ -114,14 +114,14 @@ const oktaRedirect = exports.oktaRedirect = '/authorization-code/callback';
 
 ```java
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter-security'
-  implementation 'org.springframework.boot:spring-boot-starter-web'
-  implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
-  testImplementation('org.springframework.boot:spring-boot-starter-test') {
-    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-  }
-  testImplementation 'org.springframework.security:spring-security-test'
-  compile 'com.box:box-java-sdk:2.44.1'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.okta.spring:okta-spring-boot-starter:1.4.0'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+      exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    testImplementation 'org.springframework.security:spring-security-test'
+    compile 'com.box:box-java-sdk:2.44.1'
 }
 
 ```
@@ -157,7 +157,7 @@ okta_callback_route = '/oidc/callback'
 
 * `client_secrets.json`を開いて以下の内容を保存します。これは、構成時にFlask OpenID Connect統合で使用される標準のオブジェクトです。残りの情報については、次の手順で設定します。
 
-```js
+```json
 {
   "web": {
     "client_id": "OKTA CLIENT ID",
@@ -185,7 +185,7 @@ okta_callback_route = '/oidc/callback'
 * プロジェクトのルート内で`Startup.cs`を開きます。
 * ファイルの先頭に以下のパッケージ宣言を追加します。
 
-```dotnet
+```csharp
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Okta.AspNetCore;
 
@@ -193,32 +193,28 @@ using Okta.AspNetCore;
 
 * `ConfigureServices`メソッドの内容を以下の内容に置き換えます。具体的なOktaアプリケーションの値は次の手順で設定します。
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 services.AddControllersWithViews();
 services.AddAuthentication(options =>
 {
-  options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-  options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = OktaDefaults.MvcAuthenticationScheme;
 })
 .AddCookie()
 .AddOktaMvc(new OktaMvcOptions
 {
-  // Replace these values with your Okta configuration
-  OktaDomain = "",
-  ClientId = "",
-  ClientSecret = ""
+    // Replace these values with your Okta configuration
+    OktaDomain = "",
+    ClientId = "",
+    ClientSecret = ""
 });
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 次の行を`Configure`メソッドの**先頭**に追加します。
 
-```dotnet
+```csharp
 app.UseAuthentication();
 
 ```

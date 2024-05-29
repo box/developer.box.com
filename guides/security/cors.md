@@ -53,24 +53,20 @@ Boxは、`Origin`リクエストヘッダーと`Access-Control-Allow-Origin`レ�
 
 Box APIは、アプリケーション開発者が設定した、許可されたドメインのリストに対して`Origin`リクエストヘッダーを検証します。許可されたオリジンは複数設定でき、リストにないオリジンは`HTTP 403`エラーで返されます。
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
-  "type":"error",
-  "status":403,
-  "code":"cors_origin_not_whitelisted",
-  "context_info":{
-    "origin":"https://company.com"
+  "type": "error",
+  "status": 403,
+  "code": "cors_origin_not_whitelisted",
+  "context_info": {
+    "origin": "https://company.com"
   },
-  "help_url":"https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
-  "message":"Access denied - Did you forget to safelist your origin in the CORS config of your app?",
-  "request_id":"4dsdfsa832213"
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/common-errors/",
+  "message": "Access denied - Did you forget to safelist your origin in the CORS config of your app?",
+  "request_id": "4dsdfsa832213"
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 オリジンが設定されていない場合は、このアプリケーションのBox APIに対するすべてのリクエストでエラーが返されます。
 
@@ -144,6 +140,10 @@ request did not succeed).
 
 1. **使用するドメインが許可済みオリジンのリストに存在するかどうかを確認する** - 開発者コンソールに移動して、アプリケーションを開きます。\[**構成**] タブをクリックし、下にスクロールして、\[**CORSドメイン**] セクションでリストにドメインを追加できます。
 
-    ![CORS許可リスト](./images/cors_allowed_origins.png)
+<ImageFrame border shadow center>
+
+![CORS許可リスト](./images/cors_allowed_origins.png)
+
+</ImageFrame>
 
 2. **サーバーが正しく設定されているかどうかを確認する** - クロスドメインリクエストを処理するか、**No 'access-control-allow-origin' header is present on the requested resource (リクエストしたリソースには「access-control-allow-origin」ヘッダーが存在しません)** という警告が表示された場合は非クロスドメインリクエストを使用するようサーバーを構成します。

@@ -13,7 +13,7 @@ total_steps: 4
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
-previous_page_id: authorization/common-errors
+previous_page_id: authorization/custom-skill-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/index.md
 fullyTranslated: true
@@ -30,19 +30,19 @@ fullyTranslated: true
 * [サーバー認証 (クライアント資格情報許可使用)][cc]
 * [カスタムスキル][skill]
 
-これらの認証方法では、[サービスアカウント][sa]が自動的に生成されます。適切な[スコープ][scopes]が有効になっていると、サービスアカウントは管理者の多くの操作を実行できるため、使用する前に管理者の承認が必要になります。 
+これらの認証方法では、[サービスアカウント][sa]が自動的に生成されます。適切な[スコープ][scopes]が有効になっていると、サービスアカウントは管理者の多くの操作を実行できるため、使用する前に管理者の承認が必要になります。
 
-[OAuth 2.0][oauth]アプリと[アプリトークン][apptoken]も、有効になっているEnterprise設定に基づき、管理者の明示的な承認が必要になる場合があります。 
+[OAuth 2.0][oauth]アプリと[アプリトークン][apptoken]も、有効になっているEnterprise設定に基づき、管理者の明示的な承認が必要になる場合があります。
 
 ## Enterprise設定
 
-以下のEnterprise設定のいずれかが有効になっている場合は、後続の手順が必要です。 
+以下のEnterprise設定のいずれかが有効になっている場合は、後続の手順が必要です。
 
 * デフォルトで公開アプリを無効にする
 * デフォルトで未公開アプリを無効にする
 * アプリトークンを使用する場合に管理者の承認を要求する
 
-これらの[設定][setting]は、次のように移動すると見つかります。 
+これらの[設定][setting]は、次のように移動すると見つかります。
 
 **管理コンソール** > \[**アプリ**] > \[**カスタムアプリ**] > ⚙ アイコンをクリック
 
@@ -55,8 +55,6 @@ fullyTranslated: true
 ## 必要なアクション
 
 特定のアプリに対して管理者がどのような手順を完了する必要があるかについては、以下のシナリオを確認してください。
-
-<!-- markdownlint-disable line-length -->
 
 <!--alex ignore-->
 
@@ -88,8 +86,6 @@ fullyTranslated: true
 | [アプリトークン認証][apptoken]     | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] で承認 | 作成時に自動的に承認して有効化 |
 
 <!--alex enable-->
-
-<!-- markdownlint-enable line-length -->
 
 [auth]: g://authentication/select
 

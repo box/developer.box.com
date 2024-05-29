@@ -34,30 +34,30 @@ fullyTranslated: true
 
 ローカルアプリケーションディレクトリで、手順1で作成した`server.js`ファイルを読み込みます。
 
-次の`box`オブジェクトをファイルに追加し、保存します。 
+次の`box`オブジェクトをファイルに追加し、保存します。
 
 ```js
 const box = (() => {
-  const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
-  const sdk = boxSDK.getPreconfiguredInstance(configJSON);
-  const client = sdk.getAppAuthClient('enterprise');
+    const configJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, './config.json')));
+    const sdk = boxSDK.getPreconfiguredInstance(configJSON);
+    const client = sdk.getAppAuthClient('enterprise');
 
-  let oktaRecord = {};
-  let userId = '';
-  let userClient;
+    let oktaRecord = {};
+    let userId = '';
+    let userClient;
 
-  function validateUser(userInfo, res) {
-    // TODO: VALIDATE USER
-  }
+    function validateUser(userInfo, res) {
+        // TODO: VALIDATE USER
+    }
 
-  function createUser(res) {
-    // TODO: CREATE USER
-  }
+    function createUser(res) {
+        // TODO: CREATE USER
+    }
 
-  return {
-    validateUser,
-    createUser
-  };
+    return {
+        validateUser,
+        createUser
+    };
 })();
 
 ```
@@ -74,13 +74,13 @@ const box = (() => {
 const spaceAmount = 1073741824;   // ~ 1gb
 
 client.enterprise.addAppUser(
-  this.oktaRecord.name, 
-  {
-    space_amount: spaceAmount,
-    external_app_user_id: this.oktaRecord.sub
-  }
+    this.oktaRecord.name,
+    {
+      space_amount: spaceAmount,
+      external_app_user_id: this.oktaRecord.sub
+    }
 ).then(appUser => {
-  res.send(`New user created: ${appUser.name}`);
+    res.send(`New user created: ${appUser.name}`);
 });
 
 ```
@@ -97,11 +97,11 @@ client.enterprise.addAppUser(
 
 ```java
 static String validateUser(OidcUser user) throws IOException {
-  // TODO: VALIDATE USER
+    // TODO: VALIDATE USER
 }
 
 static String createUser(OidcUser user) {
-  // TODO: CREATE USER
+    // TODO: CREATE USER
 }
 
 ```
@@ -140,18 +140,18 @@ return "New User Created: " + createdUserInfo.getName();
 ```python
 # Box user class
 class Box(object):
-  def __init__(self):
-    # Instantiate Box Client instance
-    auth = JWTAuth.from_settings_file('../config.json')
-    self.box_client = Client(auth)
+    def __init__(self):
+        # Instantiate Box Client instance
+        auth = JWTAuth.from_settings_file('../config.json')
+        self.box_client = Client(auth)
 
-  # Validate if Box user exists
-  def validateUser(self, g):
-    # TODO: VALIDATE USER
+    # Validate if Box user exists
+    def validateUser(self, g):
+        # TODO: VALIDATE USER
 
-  # Create new Box user
-  def createUser(self, ouser):
-   # TODO: CREATE USER
+    # Create new Box user
+    def createUser(self, ouser):
+        # TODO: CREATE USER
 
 ```
 
@@ -181,36 +181,32 @@ return f'New user created: {user_name}'
 
 `Controllers` > `AccountController.cs`ファイル内で、関連付けられた`AccountController`クラスの中に以下のメソッドを追加します。
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 static async Task validateUser(string name, string sub)
 {
-  // Configure Box SDK instance
-  var reader = new StreamReader("config.json");
-  var json = reader.ReadToEnd();
-  var config = BoxConfig.CreateFromJsonString(json);
-  var sdk = new BoxJWTAuth(config);
-  var token = sdk.AdminToken();
-  BoxClient client = sdk.AdminClient(token);
+    // Configure Box SDK instance
+    var reader = new StreamReader("config.json");
+    var json = reader.ReadToEnd();
+    var config = BoxConfig.CreateFromJsonString(json);
+    var sdk = new BoxJWTAuth(config);
+    var token = sdk.AdminToken();
+    BoxClient client = sdk.AdminClient(token);
 
-  // Search for matching Box app user for Okta ID
-  BoxCollection<BoxUser> users = await client.UsersManager.GetEnterpriseUsersAsync(externalAppUserId:sub);
-  System.Diagnostics.Debug.WriteLine(users.TotalCount);
+    // Search for matching Box app user for Okta ID
+    BoxCollection<BoxUser> users = await client.UsersManager.GetEnterpriseUsersAsync(externalAppUserId:sub);
+    System.Diagnostics.Debug.WriteLine(users.TotalCount);
 
-  if (users.TotalCount > 0)
-  {
-     // TODO: VALIDATE USER
-  }
-  else
-  {
-    // TODO: CREATE USER
-  }
+    if (users.TotalCount > 0)
+    {
+         // TODO: VALIDATE USER
+    }
+    else
+    {
+        // TODO: CREATE USER
+    }
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 このコードブロック内では、手順2でダウンロードした`config.json`ファイルを使用して新しいBox .NET SDKクライアントが作成されます。このコードサンプルの場合、その`config.json`ファイルはローカルアプリケーションディレクトリのルートに格納されます。
 
@@ -218,12 +214,12 @@ static async Task validateUser(string name, string sub)
 
 この構造を定義したら、// TODO: CREATE USERセクションを以下のコードに置き換えます。
 
-```dotnet
+```csharp
 var userRequest = new BoxUserRequest()
 {
-  Name = name,
-  ExternalAppUserId = sub,
-  IsPlatformAccessOnly = true
+    Name = name,
+    ExternalAppUserId = sub,
+    IsPlatformAccessOnly = true
 };
 var user = await client.UsersManager.CreateEnterpriseUserAsync(userRequest);
 System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
@@ -260,14 +256,14 @@ System.Diagnostics.Debug.WriteLine("New user created: " + user.Name);
 this.oktaRecord = userInfo
 
 client.enterprise.getUsers({ "external_app_user_id": this.oktaRecord.sub })
-.then((result) => {
-  if (result.total_count > 0) {
-    // TODO: MAKE AUTHENTICATED USER CALL
-  } else {
-    // User not found - create user
-    this.createUser();
-  }
-});
+    .then((result) => {
+        if (result.total_count > 0) {
+            // TODO: MAKE AUTHENTICATED USER CALL
+        } else {
+            // User not found - create user
+            this.createUser();
+        }
+    });
 
 ```
 
@@ -303,9 +299,9 @@ JsonValue totalCount = jsonObj.get("total_count");
 String outputString = "";
 
 if (totalCount.asInt() > 0) {
-  // TODO: MAKE AUTHENTICATED USER CALL
+    // TODO: MAKE AUTHENTICATED USER CALL
 } else {
-  outputString = createUser(user);
+    outputString = createUser(user);
 }
 
 return outputString;
@@ -335,9 +331,9 @@ user_info = response.json()
 
 # If user not found, create user, otherwise fetch user token
 if (user_info['total_count'] == 0):
-  self.createUser(g.user)
+    self.createUser(g.user)
 else:
-  # TODO: MAKE AUTHENTICATED USER CALL
+    # TODO: MAKE AUTHENTICATED USER CALL
 
 ```
 
@@ -353,7 +349,7 @@ Box Python SDKの汎用リクエストメソッドを使用した場合、`https
 
 `// TODO: VALIDATE USER`コメントを以下の内容に置き換えます。
 
-```dotnet
+```csharp
 var userId = users.Entries[0].Id;
 var userToken = sdk.UserToken(userId);
 BoxClient userClient = sdk.UserClient(userToken, userId);
@@ -391,9 +387,9 @@ this.userId = result.entries[0].id;
 this.userClient = sdk.getAppAuthClient('user', this.userId);
 
 this.userClient.users.get(this.userClient.CURRENT_USER_ID)
-.then(currentUser => {
-  res.send(`Hello ${currentUser.name}`);
-});
+    .then(currentUser => {
+        res.send(`Hello ${currentUser.name}`);
+    });
 
 ```
 
@@ -402,8 +398,6 @@ this.userClient.users.get(this.userClient.CURRENT_USER_ID)
 </Choice>
 
 <Choice option="programming.platform" value="java" color="none">
-
-<!-- markdownlint-disable line-length -->
 
 1つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
@@ -424,8 +418,6 @@ outputString = "Hello " + currentUserInfo.getName();
 ```
 
 見つかったユーザーのBoxユーザーIDをキャプチャし、そのユーザーのスコープに設定されたユーザークライアントオブジェクトを生成します。最後に、このユーザークライアントオブジェクトを使用して現在のユーザーを取得する呼び出しを実行すると、Oktaに関連付けられたBox App Userのユーザープロフィール情報が返されます。
-
-<!-- markdownlint-enable line-length -->
 
 </Choice>
 
@@ -453,9 +445,7 @@ return f'Hello {current_user.name}'
 
 1つ前のセクションの`// TODO: MAKE AUTHENTICATED USER CALL`を次の内容に置き換えます。
 
-<!-- markdownlint-disable line-length -->
-
-```dotnet
+```csharp
 BoxUser currentUser = await userClient.UsersManager.GetCurrentUserInformationAsync();
 System.Diagnostics.Debug.WriteLine("Current user name: " + currentUser.Name);
 

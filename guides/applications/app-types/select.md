@@ -34,8 +34,6 @@ fullyTranslated: true
 
 ## カスタムアプリ
 
-<!-- markdownlint-disable line-length -->
-
 |             |                                                       |
 | ----------- | ----------------------------------------------------- |
 | **認証方法**    | [OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報認証][ccg] |
@@ -78,8 +76,6 @@ fullyTranslated: true
 カスタムスキルの詳細を確認する
 
 </CTA>
-
-<!-- markdownlint-enable line-length -->
 
 [oauth2]: g://authentication/oauth2
 

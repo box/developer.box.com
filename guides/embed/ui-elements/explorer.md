@@ -45,44 +45,50 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 
 ## サンプルHTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8" />
-		<title>Box Content Explorer Demo</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>Box Content Explorer Demo</title>
 
-		<!-- Latest version of the explorer css for your locale -->
-		<link
-			rel="stylesheet"
-			href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
-	</head>
-	<body>
-		<div class="container" style="height:600px"></div>
-		<!-- Latest version of the explorer js for your locale -->
-		<script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
-		<script>
-			var folderId = "123";
-			var accessToken = "abc";
-			var contentExplorer = new Box.ContentExplorer();
-			contentExplorer.show(folderId, accessToken, {
-				container: ".container",
-			});
-		</script>
-	</body>
+        <!-- Latest version of the explorer css for your locale -->
+        <link
+            rel="stylesheet"
+            href="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.css" />
+    </head>
+    <body>
+        <div class="container" style="height:600px"></div>
+        <!-- Latest version of the explorer js for your locale -->
+        <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/explorer.js"></script>
+        <script>
+            var folderId = "123";
+            var accessToken = "abc";
+            var contentExplorer = new Box.ContentExplorer();
+            contentExplorer.show(folderId, accessToken, {
+                container: ".container",
+            });
+        </script>
+    </body>
 </html>
 
 ```
 
 ## デモ
 
-<iframe height="560" scrolling="no" title="Box Content Explorer" src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
+```sh
+<iframe
+  height="560"
+  scrolling="no"
+  title="Box Content Explorer"
+  src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+  style="width: 100%;"
+></iframe>
 
-</iframe>
-
-<!-- markdownlint-enable line-length -->
+```
 
 ## API
 
@@ -146,8 +152,6 @@ contentExplorer.removeAllListeners();
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### パラメータ
 
 | パラメータ         | 型      | 説明                                                                                                                  |
@@ -188,18 +192,16 @@ contentExplorer.removeAllListeners();
 
 ### イベント
 
-| イベント名      | イベントデータ       | 説明                     |           |                      |
-| ---------- | ------------- | ---------------------- | --------- | -------------------- |
-| `select`   | \`Array\<File | ウェブリンク                 | Folder>\` | 項目行が選択されたときに発生します。   |
-| `rename`   | \`File        | ウェブリンク                 | Folder\`  | 項目の名前が変更されたときに発生します。 |
-| `preview`  | `File`        | ファイルがプレビューされたときに発生します。 |           |                      |
-| `download` | `Array<File>` | 項目がダウンロードされたときに発生します。  |           |                      |
-| `delete`   | `Array<File>` | 項目が削除されたときに発生します。      |           |                      |
-| `upload`   | `Array<File>` | 項目がアップロードされたときに発生します。  |           |                      |
-| `navigate` | `Folder`      | フォルダ内に移動したときに発生します。    |           |                      |
-| `create`   | `Folder`      | 新しいフォルダが作成されたときに発生します。 |           |                      |
-
-<!-- markdownlint-enable line-length -->
+| イベント名      | イベントデータ                             | 説明                     |
+| ---------- | ----------------------------------- | ---------------------- |
+| `select`   | `Array<File \| Web Link \| Folder>` | 項目行が選択されたときに発生します。     |
+| `rename`   | `File \| Web Link \| Folder`        | 項目の名前が変更されたときに発生します。   |
+| `preview`  | `File`                              | ファイルがプレビューされたときに発生します。 |
+| `download` | `Array<File>`                       | 項目がダウンロードされたときに発生します。  |
+| `delete`   | `Array<File>`                       | 項目が削除されたときに発生します。      |
+| `upload`   | `Array<File>`                       | 項目がアップロードされたときに発生します。  |
+| `navigate` | `Folder`                            | フォルダ内に移動したときに発生します。    |
+| `create`   | `Folder`                            | 新しいフォルダが作成されたときに発生します。 |
 
 ## キーボードショートカット
 
@@ -230,8 +232,6 @@ contentExplorer.removeAllListeners();
 以下は、ダウンスコープと一緒に使用する、UI Element固有の新しいスコープのセットです。こうしたスコープにより、開発者は、ダウンスコープされたトークンに適切なスコープを構成して、コンテンツエクスプローラのUIコントロールを有効/無効にすることができます。詳細については、[Box UI Elementsの専用スコープ][scopes]を参照してください。
 
 ### 基本スコープ
-
-<!-- markdownlint-disable line-length -->
 
 | スコープ名           | 付与される権限                                            |
 | --------------- | -------------------------------------------------- |
@@ -272,8 +272,7 @@ contentExplorer.removeAllListeners();
 ### アプリの作成と構成
 
 1. [Boxアプリを作成します][box-app]。
-2. \[CORSドメイン] にローカルでの開発用のアドレスを追加します。
-   ![CORSドメイン](./images/box-app-cors.png)
+2. \[CORSドメイン] にローカルでの開発用のアドレスを追加します。 ![CORSドメイン](./images/box-app-cors.png)
 3. [開発者トークン][token]を生成します。
 
 ### メタデータテンプレートの作成
@@ -290,12 +289,12 @@ contentExplorer.removeAllListeners();
 1. メタデータのサンプルプロジェクトを複製します。
 2. [`App.js`][appjs]内のプレースホルダを実際の値で更新します。
 
-| パラメータ                    | 説明                                                                                                                                                                                                                                         |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `DEVELOPER_TOKEN`        | 開発者コンソールで生成された[開発者トークン][token]。                                                                                                                                                                                                            |
-| `ENTERPRISE_ID`          | アプリケーションの \[**一般設定**] タブからコピーしたEnterprise ID。                                                                                                                                                                                              |
-| `METADATA_TEMPLATE_NAME` | 作成済みのメタデータテンプレートの名前。**注**: 適切な名前を指定済みであることを確認するには、[メタデータAPI][get-template]を使用して名前を取得するか、管理コンソールでURLから名前をコピーします。![管理コンソールにおけるメタデータ名](./images/metadata-template-name.png) UIでテンプレート名を変更しても、変更されるのはラベルのみです。コンポーネントで使用する名前は、常に最初に指定した名前になります。 |
-| `ROOTFOLDER_ID`          | メタデータテンプレートを適用したBoxフォルダのID。                                                                                                                                                                                                                |
+   | パラメータ                    | 説明                                                                                                                                                                                                                                         |
+   | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | `DEVELOPER_TOKEN`        | 開発者コンソールで生成された[開発者トークン][token]。                                                                                                                                                                                                            |
+   | `ENTERPRISE_ID`          | アプリケーションの \[**一般設定**] タブからコピーしたEnterprise ID。                                                                                                                                                                                              |
+   | `METADATA_TEMPLATE_NAME` | 作成済みのメタデータテンプレートの名前。**注**: 適切な名前を指定済みであることを確認するには、[メタデータAPI][get-template]を使用して名前を取得するか、管理コンソールでURLから名前をコピーします。![管理コンソールにおけるメタデータ名](./images/metadata-template-name.png) UIでテンプレート名を変更しても、変更されるのはラベルのみです。コンポーネントで使用する名前は、常に最初に指定した名前になります。 |
+   | `ROOTFOLDER_ID`          | メタデータテンプレートを適用したBoxフォルダのID。                                                                                                                                                                                                                |
 
 `defaultView`、`fieldsToShow`、`metadataQuery`の各パラメータは、以下の例に示すように、すでにサンプルプロジェクトで定義されています。
 
@@ -304,35 +303,34 @@ contentExplorer.removeAllListeners();
 3. コンテンツエクスプローラコンポーネントに必須パラメータを渡します。
 
 ```js
-
-[...]
-
-  function App() {
     [...]
 
-    return (
-        <IntlProvider locale="en">
-          <div className="App">
-            <header className="App-header">
-              <h2>Metadata view in Content Explorer</h2>
-            </header>
-            <section>
-              <div className="metadata-based-view">
-                <ContentExplorer
-                  rootFolderId={rootFolderID}
-                  token={token}
-                  metadataQuery={metadataQuery}
-                  fieldsToShow={fieldsToShow}
-                  defaultView={defaultView}
-                />
-              </div>
-            </section>
-          </div>
-        </IntlProvider>
-    );
-    }
+      function App() {
+          [...]
 
-  export default App;
+          return (
+              <IntlProvider locale="en">
+                <div className="App">
+                  <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                  </header>
+                  <section>
+                    <div className="metadata-based-view">
+                      <ContentExplorer
+                        rootFolderId={rootFolderID}
+                        token={token}
+                        metadataQuery={metadataQuery}
+                        fieldsToShow={fieldsToShow}
+                        defaultView={defaultView}
+                      />
+                    </div>
+                  </section>
+                </div>
+              </IntlProvider>
+          );
+      }
+
+      export default App;
 
 ```
 
@@ -340,79 +338,79 @@ contentExplorer.removeAllListeners();
 
 ```js
 function App() {
-	// Get the token from Developer Console (app's configuration tab)
-	const token = "<DEVELOPER_TOKEN>";
+    // Get the token from Developer Console (app's configuration tab)
+    const token = "<DEVELOPER_TOKEN>";
 
-	// Folder ID with a metadata template applied
-	// The metadataQuery will apply to this folder
-	const rootFolderID = "<ROOTFOLDER_ID>";
+    // Folder ID with a metadata template applied
+    // The metadataQuery will apply to this folder
+    const rootFolderID = "<ROOTFOLDER_ID>";
 
-	// Get ENTERPRISE_ID from Developer Console (app's general settings)
-	const EID = "<ENTERPRISE_ID>";
+    // Get ENTERPRISE_ID from Developer Console (app's general settings)
+    const EID = "<ENTERPRISE_ID>";
 
-	// Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
-	const templateName = "<METADATA_TEMPLATE_NAME>";
+    // Get templatekey from Admin Console (Content -> Metadata -> check url for ID)
+    const templateName = "<METADATA_TEMPLATE_NAME>";
 
-	// Define metadata source
-	// Example: enterprise_123456789.metadatatemplate
-	const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
+    // Define metadata source
+    // Example: enterprise_123456789.metadatatemplate
+    const metadataSource = `metadata.enterprise_${EID}.${templateName}`;
 
-	const metadataQuery = {
-		from: metadataSource,
+    const metadataQuery = {
+        from: metadataSource,
 
-		// Filter items in the folder by existing metadata key
-		query: "key = :arg1",
+        // Filter items in the folder by existing metadata key
+        query: "key = :arg1",
 
-		// Display items with value
-		query_params: { arg1: "value" },
+        // Display items with value
+        query_params: { arg1: "value" },
 
-		// Define the ancestor folder ID
-		ancestor_folder_id: 0,
+        // Define the ancestor folder ID
+        ancestor_folder_id: 0,
 
-		// Define which other metadata fields you'd like to display
-		fields: [
-			`${metadataSource}.name`,
-			`${metadataSource}.last_contacted_at`,
-			`${metadataSource}.industry`,
-			`${metadataSource}.role`,
-		],
-	};
+        // Define which other metadata fields you'd like to display
+        fields: [
+            `${metadataSource}.name`,
+            `${metadataSource}.last_contacted_at`,
+            `${metadataSource}.industry`,
+            `${metadataSource}.role`,
+        ],
+    };
 
-	// The metadata fields/columns to view - must be valid field names from the metadata template
-	const fieldsToShow = [
-		// Determine if the user can edit the metadata directly from Content Explorer component
-		{ key: `${metadataSource}.name`, canEdit: false },
+    // The metadata fields/columns to view - must be valid field names from the metadata template
+    const fieldsToShow = [
+        // Determine if the user can edit the metadata directly from Content Explorer component
+        { key: `${metadataSource}.name`, canEdit: false },
 
-		// Determine label alias on metadata column with displayName prop
-		{ key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
-		{ key: `${metadataSource}.last_contacted_at`, canEdit: true },
-		{ key: `${metadataSource}.role`, canEdit: true },
-	];
+        // Determine label alias on metadata column with displayName prop
+        { key: `${metadataSource}.industry`, canEdit: false, displayName: "alias" },
+        { key: `${metadataSource}.last_contacted_at`, canEdit: true },
+        { key: `${metadataSource}.role`, canEdit: true },
+    ];
 
-	// defaultView - a required prop to paint the metadata view.
-	// If not provided, you'll get regular folder view.
-	const defaultView = "metadata";
+    // defaultView - a required prop to paint the metadata view.
+    // If not provided, you'll get regular folder view.
+    const defaultView = "metadata";
 
-	return (
-		<IntlProvider locale="en">
-			<div className="App">
-				<header className="App-header">
-					<h2>Metadata view in Content Explorer</h2>
-				</header>
-				<section>
-					<div className="metadata-based-view">
-						<ContentExplorer
-							rootFolderId={rootFolderID}
-							token={token}
-							metadataQuery={metadataQuery}
-							fieldsToShow={fieldsToShow}
-							defaultView={defaultView}
-						/>
-					</div>
-				</section>
-			</div>
-		</IntlProvider>
-	);
+    return (
+        <IntlProvider locale="en">
+            <div className="App">
+                <header className="App-header">
+                    <h2>Metadata view in Content Explorer</h2>
+                </header>
+                <section>
+                    <div className="metadata-based-view">
+                        <ContentExplorer
+                            rootFolderId={rootFolderID}
+                            token={token}
+                            metadataQuery={metadataQuery}
+                            fieldsToShow={fieldsToShow}
+                            defaultView={defaultView}
+                        />
+                    </div>
+                </section>
+            </div>
+        </IntlProvider>
+    );
 }
 
 export default App;
@@ -424,8 +422,6 @@ export default App;
 **ヒント**: 詳細なフローについては、[メタデータビューに関するブログ記事][blogpost]を参照してください。
 
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 

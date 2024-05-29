@@ -39,8 +39,6 @@ Developerドキュメントのビルドアーキテクチャは、3つの部分�
 
 以下の表に、現在展開されているすべてのステージの概要と、各ステージでのソースの取得元を示します。
 
-<!-- markdownlint-disable line-length -->
-
 | ソース                             | 実稼動環境                                   | ステージング                                     | 日本                                      |           |
 | ------------------------------- | --------------------------------------- | ------------------------------------------ | --------------------------------------- | --------- |
 |                                 | `developer.box.com`, `box.dev`          | `staging.developer.box.com`                | `ja.developer.box.com`                  | `box.dev` |
@@ -50,16 +48,14 @@ Developerドキュメントのビルドアーキテクチャは、3つの部分�
 | MicrocopyとGuides (コンパイル済み) (英語) | `@box/developer.box.com#en`             | `@box/developer.box.com#en-staging`        | `@box/developer.box.com#jp`             |           |
 | Gatsbyサイト                       | `@box/developer.box.com-framework#main` | `@box/developer.box.com-framework#staging` | `@box/developer.box.com-framework#main` |           |
 
-<!-- markdownlint-enable line-length -->
-
 ## 概要ビデオ
 
 以下のビデオでは、Developerドキュメントサイト、ビルドシステム、およびサービスの概要を紹介しています。
 
 * [概要に関する座談会][High level fireside chat]
 * 詳細な技術分析:
-* [録画][Screen recording]
-* [音声のみ][Audio only]
+  * [録画][Screen recording]
+  * [音声のみ][Audio only]
 
 [developer documentation]: https://developer.box.com
 

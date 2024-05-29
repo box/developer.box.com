@@ -19,7 +19,7 @@ total_steps: 5
 sibling_id: authentication
 parent_id: authentication
 next_page_id: ''
-previous_page_id: authentication/app-token/rollover
+previous_page_id: authentication/app-token/endpoints
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authentication/app-token/index.md
 fullyTranslated: true

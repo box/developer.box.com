@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - post_files_id_content
   - put_files_id
@@ -20,7 +20,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/ensure-consistency
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/allowing-domain-access
@@ -63,8 +63,8 @@ curl https://api.box.com/2.0/files/12345 \
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN" \
-  -H "if-none-match: 1"
+    -H "authorization: Bearer ACCESS_TOKEN" \
+    -H "if-none-match: 1"
 
 ```
 
@@ -76,8 +76,6 @@ curl https://api.box.com/2.0/files/12345 \
 
 このヘッダーは、以下のエンドポイントでサポートされます。
 
-<!-- markdownlint-disable line-length -->
-
 | `if-match`対応のエンドポイント                                          |                     |
 | ------------------------------------------------------------- | ------------------- |
 | [`POST /files/:id/content`](endpoint://post_files_id_content) | 新しいファイルバージョンをアップロード |
@@ -87,8 +85,6 @@ curl https://api.box.com/2.0/files/12345 \
 | [`DELETE /folders/:id`](endpoint://delete_folders_id)         | フォルダを削除             |
 | [`PUT /web_links/:id`](endpoint://put_web_links_id)           | ウェブリンクの情報を更新        |
 | [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | ウェブリンクを削除           |
-
-<!-- markdownlint-enable line-length -->
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
@@ -111,16 +107,12 @@ curl https://api.box.com/2.0/files/12345 \
 
 `if-none-match`ヘッダーを使用すると、アプリケーションは、最後に調べてから変更されていない項目の情報がダウンロードされないようにすることができます。これにより、不要な情報がダウンロードされなくなるため、アプリケーションの速度が向上し、帯域幅が節約されます。
 
-<!-- markdownlint-disable line-length -->
-
 | `if-none-match`対応のエンドポイント                           |              |
 | --------------------------------------------------- | ------------ |
 | [`GET /files/:id`](endpoint://get_files_id)         | ファイルの情報を取得   |
 | [`GET /folders/:id`](endpoint://get_folder_id)      | フォルダの情報を取得   |
 | [`GET /web_links/:id`](endpoint://get_web_links_id) | ウェブリンクの情報を取得 |
 | [`GET /shared_items`](endpoint://get_shared_items)  | 共有項目の情報を取得   |
-
-<!-- markdownlint-enable line-length -->
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 

@@ -24,7 +24,7 @@ fullyTranslated: true
 ---
 # Box Editのカスタムドメイン
 
-サードパーティ製ウェブアプリとBox Toolsを統合するには、アプリケーションのURLを明示的に追加する必要があります。Windowsでは、そのためにレジストリキーを追加します。MacOSでは、ターミナルコマンドをいくつか実行してドメインの追加と削除を実行する必要があります。
+サードパーティ製ウェブアプリとBox Toolsを統合するには、アプリケーションのURLを明示的に追加する必要があります。Windowsでは、そのためにレジストリキーを追加します。macOSでは、ターミナルコマンドをいくつか実行してドメインの追加と削除を実行する必要があります。
 
 <Message>
 
@@ -147,7 +147,7 @@ reg import "Add_OpenWith_WhiteListed_Domain.reg"
 * すべてのドメインを一度に削除するには、`Remove_ALL_OpenWith_WhiteListed_Domain.reg`を実行します。
 * 特定のドメインを削除するには、`Remove_OpenWith_WhiteListed_Domain.reg`を実行します。上記の手順に従ってこの.regにドメインに追加すると、ドメインが削除されます。
 
-## セーフリストへの追加 (MacOSの場合)
+## セーフリストへの追加 (macOSの場合)
 
 ### 手順
 

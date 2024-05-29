@@ -18,7 +18,7 @@ type: guide
 total_steps: 8
 sibling_id: representations
 parent_id: representations
-next_page_id: representations/pdf
+next_page_id: representations/thumbnail
 previous_page_id: representations/download-a-representation
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/representations/thumbnail-representation.md
@@ -68,19 +68,13 @@ fullyTranslated: true
 | --------------------------------------------------------------- |
 | `32x32`のJPEGサムネイルおよび`2048x2048`のPNGサムネイルを返します。                  |
 
-<!-- markdownlint-disable line-length -->
-
 | `x-rep-hints: [jpg?dimensions=2048x2048,png?dimensions=2048x2048]`                                        |
 | --------------------------------------------------------------------------------------------------------- |
 | `2048x2048`のJPEGサムネイルおよび`2048x2048`のPNGサムネイルを返し、使用可能な最初のレプリゼンテーションを返します。どちらも使用可能でない場合は、レプリゼンテーションは返されません。 |
 
-<!-- markdownlint-enable line-length -->
-
 ## サポートされているファイルサイズ
 
 以下のサムネイルの形式とサイズが使用可能です。
-
-<!-- markdownlint-disable line-length -->
 
 | ファイルの種類 | サイズ                                                                |
 | ------- | ------------------------------------------------------------------ |
@@ -88,8 +82,6 @@ fullyTranslated: true
 | PNG     | `1024x1024`\*, `2048x2048`\*                                       |
 
 `*`が付いているサイズには、いくつかの制限があります。
-
-<!-- markdownlint-enable line-length -->
 
 ## ファイルサイズの制限
 
@@ -109,16 +101,12 @@ fullyTranslated: true
 
 現時点でサポートされているファイルの種類は以下のとおりです。
 
-<!-- markdownlint-disable line-length -->
-
 | ファイルの種類 | ファイル拡張子                                                                                                                                                         |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ドキュメント  | `doc`, `docx`, `gdoc`, `gsheet`, `gslide`, `gslides`, `odp`, `ods`, `odt`, `pdf`, `ppt`, `pptx`, `rtf`, `wpd`, `xls`, `xlsm`, `xlsx`, `key`, `pages`, `numbers` |
 | 画像      | `ai`, `bmp`, `dcm`, `dicm`, `eps`, `gif`, `idml`, `indd`, `indt`, `inx`, `jpeg`, `jpg`, `png`, `ps`, `psd`, `svg`, `svs`, `tif`, `tiff`, `tga`                  |
 | オーディオ   | `aac`, `aifc`, `aiff`, `amr`, `au`, `flac`, `m4a`, `mp3`, `ogg`, `ra`, `wav`, `wma`                                                                             |
 | 動画      | `3g2`, `3gp`, `avi`, `m2v`, `m2ts`, `m4v`, `mkv`, `mov`, `mp4`, `mpeg`, `mpg`, `ogg`, `mts`, `qt`, `wmv`                                                        |
-
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

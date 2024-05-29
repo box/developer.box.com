@@ -56,11 +56,7 @@ CSVファイルを使用すると、コマンドを一括して実行できま�
 
 一括コマンドを実行するには、`--bulk-file-path=<PATH_TO_CSV>`オプションを使用します。ここで、`<PATH_TO_CSV>`は、必要な情報が記載されているCSVファイルのローカルパスになります。
 
-<!-- markdownlint-disable line-length -->
-
 たとえば、コマンド`box folders:create --bulk-file-path=pathtoacsv`を使用して、フォルダを作成してみましょう。
-
-<!-- markdownlint-enable line-length -->
 
 <Message type="tip">
 
@@ -74,30 +70,16 @@ CSVファイルの列名を指定する際は、[GitHubリポジトリ][github]�
 
 以下のコマンドを実行すると、サービスアカウントのフォルダツリーのルートレベル (0) に3つのフォルダが作成されます。
 
-<!-- markdownlint-disable line-length -->
-
 ```bash
 box folders:create --bulk-file-path=/Users/ExampleUser/Desktop/bulkcreatefolders.csv
 
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## オプションを使用した一括コマンド
-
-<!-- markdownlint-disable line-length -->
 
 コマンドでオプションを渡すと、そのオプションがCSVファイルの各行に自動的に適用されます。たとえば、`box folders:collaborations:create --bulk-file-path=pathtocsv --role=editor`を実行すると、CSV内の各ユーザーに編集者としてコラボレーションが作成されます。
 
-<!-- markdownlint-enable line-length -->
-
-ただし、CSVファイルでオプションを使用することもできます。前の例を基に、コマンド自体で`--role=editor`オプションを使用する代わりに、CSVで`role`という名前の列を指定することができます。コマンド自体は次のようになります。
-
-<!-- markdownlint-disable line-length -->
-
-`box folders:collaborations:create --bulk-file-path=pathtocsv`
-
-<!-- markdownlint-enable line-length -->
+CSVファイルでオプションを使用することもできます。前の例を基に、コマンド自体で`--role=editor`オプションを使用する代わりに、CSVで`role`という名前の列を指定できます。コマンド自体は`box folders:collaborations:create --bulk-file-path=pathtocsv`となります。
 
 一括コマンドの詳細については、[このドキュメント][bulk]を参照してください。
 

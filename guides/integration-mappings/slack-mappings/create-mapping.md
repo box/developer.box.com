@@ -44,8 +44,6 @@ fullyTranslated: true
 
 Box SDKを使用すると、SlackチャンネルとBoxフォルダのマッピングでのサービスアカウントによる共同所有者のコラボレーションなど、統合マッピングを自動的に作成できます。それには、次のスクリプトを使用します。
 
-<!-- markdownlint-disable line-length -->
-
 ```js
 const BoxSDK = require('box-node-sdk');
 const axios = require('axios');
@@ -61,65 +59,59 @@ let serviceAccountId = '<PLACEHOLDER>';
 const client = BoxSDK.getBasicClient(developerToken);
 
 async function postIntegrationMappingSlack(){
-
- return axios.post(integrationMappingsApiUrl, {
-  partner_item: {
-   id: slackChannelId,
-   slack_org_id: slackOrgId, // change slack_org_id to slack_workspace_id if Box for Slack is installed on the workspace level
-   type: "channel"
-  },
-  box_item: {
-   id: boxFolderId,
-   type: "folder"
-  }
- }, {
-  headers: {
-   'Authorization': `Bearer ${developerToken}`
-  }
- });
-
+    return axios.post(integrationMappingsApiUrl, {
+        partner_item: {
+            id: slackChannelId,
+            slack_org_id: slackOrgId, // change slack_org_id to slack_workspace_id if Box for Slack is installed on the workspace level
+            type: "channel"
+        },
+        box_item: {
+            id: boxFolderId,
+            type: "folder"
+        }
+    }, {
+        headers: {
+            'Authorization': `Bearer ${developerToken}`
+        }
+    });
 }
 
 function isPlaceholder(str){
- return str === '<PLACEHOLDER>';
+    return str === '<PLACEHOLDER>';
 }
 
 async function addCoowner(serviceAccountId, folderId){
- try {
-  await client.collaborations.createWithUserID(serviceAccountId, folderId, 'co-owner')
- } catch (error){
-  if(error.response.body.code === 'user_already_collaborator'){
-   console.log('Service account already collaborated in the co-owner role.')
-  } else {
-   throw error;
-  }
- }
+    try {
+        await client.collaborations.createWithUserID(serviceAccountId, folderId, 'co-owner')
+    } catch (error){
+        if(error.response.body.code === 'user_already_collaborator'){
+            console.log('Service account already collaborated in the co-owner role.')
+        } else {
+            throw error;
+        }
+    }
 }
 
 async function logServiceAccountId() {
- try {
-  await postIntegrationMappingSlack();
- } catch (error) {
-  console.log(`Replace the value of serviceAccountId with: ${error.response.data.context_info.service_account_id} and re-run the script.`)
- }
+    try {
+        await postIntegrationMappingSlack();
+    } catch (error) {
+        console.log(`Replace the value of serviceAccountId with: ${error.response.data.context_info.service_account_id} and re-run the script.`)
+    }
 }
 
 async function createSlackIntegrationMapping() {
-
- if(isPlaceholder(serviceAccountId)){
-  await logServiceAccountId();
- } else {
-  await addCoowner(serviceAccountId, boxFolderId);
-  await postIntegrationMappingSlack();
- }
-
+    if(isPlaceholder(serviceAccountId)){
+        await logServiceAccountId();
+    } else {
+        await addCoowner(serviceAccountId, boxFolderId);
+        await postIntegrationMappingSlack();
+    }
 }
 
 module.exports = { createSlackIntegrationMapping }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Message notice>
 

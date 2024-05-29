@@ -13,7 +13,7 @@ type: guide
 total_steps: 4
 sibling_id: authorization
 parent_id: authorization
-next_page_id: authorization
+next_page_id: authorization/custom-skill-approval
 previous_page_id: authorization/limited-access-approval
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/common-errors.md

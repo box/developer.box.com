@@ -62,14 +62,12 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
 
 <Tab title="config.json">
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "boxAppSettings": {
     "clientID": "abc...123",
-   "clientSecret": "def...234",
-   "appAuth": {
+    "clientSecret": "def...234",
+    "appAuth": {
       "publicKeyID": "abcd1234",
       "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
       "passphrase": "ghi...345"
@@ -79,8 +77,6 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 </Tab>
 
@@ -92,7 +88,7 @@ Boxアプリケーションを作成すると、アプリケーションの秘�
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var reader = new StreamReader("path/to/config.json");
 var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
@@ -149,7 +145,7 @@ var config = require("path/to/config.json");
 
 <Tab title=".Net">
 
-```dotnet
+```csharp
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
 BoxClient client = sdk.AdminClient(token);

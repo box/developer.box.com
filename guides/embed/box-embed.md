@@ -57,8 +57,6 @@ BoxウェブアプリからBox Embedのコードを取得するには:
 
 Box Embedをさらにカスタマイズする場合は、プログラムを使用してカスタマイズできます。埋め込みのスニペットの形式は次のとおりです。
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <iframe
   src="https://{custom_domain}.app.box.com/embed/s/{shared link value}?view={list or icon}&sortColumn={name, date, or size}&sortDirection=ASC"
@@ -71,8 +69,6 @@ Box Embedをさらにカスタマイズする場合は、プログラムを使�
 ></iframe>
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ### 共有リンクの値の検索
 
@@ -110,8 +106,6 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 次に、表示のカスタマイズオプションを選択します。構成可能なパラメータ (省略可) のリストを以下に示します。
 
-<!-- markdownlint-disable line-length -->
-
 |                       |                                                                |
 | --------------------- | -------------------------------------------------------------- |
 | `view`                | ファイルまたはフォルダの表示方法の種類。`list` (デフォルト) または`icon`を指定できます。           |
@@ -119,8 +113,6 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 | `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。            |
 | `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。 |
 | `showItemFeedActions` | ファイルのコメントまたはタスクを非表示または表示します。true (デフォルト) またはfalseを指定できます。      |
-
-<!-- markdownlint-enable line-length -->
 
 ### 全画面表示機能
 
@@ -138,7 +130,7 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 
 ```
 
@@ -166,7 +158,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
           },
           "scope": "base_preview"
         },
-       ...
+        ...
       ],
       "token_type": "bearer"
     },
@@ -202,14 +194,10 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 
 ```
 
-<!-- markdownlint-disable line-length -->
-
 |                   |                                                                                                                                                                                                     |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `showDownload`    | ファイルをダウンロードするための権限がビューアーにある場合は、埋め込まれたヘッダーバーにダウンロードボタンが表示されます。また、印刷とダウンロードが同じ権限で管理されているため、ドキュメントのファイルタイプには印刷ボタンも表示されます。デフォルトでは`false`になります。                                                          |
 | `showAnnotations` | プレビュー以上の権限を持つユーザーは、ドキュメントと画像のプレビューに注釈を付けることができます。また、すでにドキュメントに付けられている注釈も表示されます。注釈が利用可能なファイルタイプおよび注釈の種類の詳細については、注釈ページを参照してください。現在、注釈はウェブブラウザでのみ使用できます。モバイルブラウザでは、ユーザーは注釈を表示できますが、新しい注釈を作成することはできません。 |
-
-<!-- markdownlint-enable line-length -->
 
 ## クラウド (雲) ゲーム
 

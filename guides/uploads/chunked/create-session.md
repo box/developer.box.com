@@ -19,7 +19,7 @@ type: guide
 total_steps: 5
 sibling_id: uploads/chunked
 parent_id: uploads/chunked
-next_page_id: uploads/chunked/commit-session
+next_page_id: uploads/chunked/with-sdks
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/uploads/chunked/create-session.md
@@ -47,8 +47,6 @@ fullyTranslated: true
 
 セッションが正常に作成されると、レスポンスには、セッションID、パーツ数、パーツサイズ、および使用する関連する次のAPIエンドポイントへのリンクを含む[アップロードセッション][uploadsession]が含まれます。
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "id": "F971964745A5CD0C001BBE4E58196BFD",
@@ -68,8 +66,6 @@ fullyTranslated: true
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 アップロードセッションは、個々のパーツをアップロードするときに使用するパーツのサイズを定義します。
 

@@ -75,11 +75,7 @@ API資格情報をブラウザのストレージから削除すると、**クラ
 
 </ImageFrame>
 
-<!-- markdownlint-disable line-length -->
-
 フォルダの作成に必要な引数を調べるためのコマンド: `box folders:create --help`
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
 

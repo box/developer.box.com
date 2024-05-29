@@ -17,7 +17,7 @@ type: guide
 total_steps: 2
 sibling_id: webhooks/v1
 parent_id: webhooks/v1
-next_page_id: ''
+next_page_id: webhooks/v1/delete-v1
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/webhooks/v1/create-v1.md
@@ -30,7 +30,7 @@ V1 Webhookを作成するには、[開発者コンソール][devconsole]で以�
 1. [開発者コンソール][devconsole]で、目的のアプリケーションに移動します。
 2. \[**Webhook**] タブを選択します。
 3. \[**新規Webhookの作成**] ボタンをクリックします。
-4. イベントトリガー、エンドポイントURL、1つ以上のコールバックパラメータなどをフォームに入力します。 
+4. イベントトリガー、エンドポイントURL、1つ以上のコールバックパラメータなどをフォームに入力します。
 5. \[**Webhookの保存**] をクリックします。
 
 <Message type="warning">

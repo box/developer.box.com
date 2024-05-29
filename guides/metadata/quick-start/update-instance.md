@@ -35,28 +35,26 @@ fullyTranslated: true
 
 この場合、顧客の`name`を`Box, Inc`から`Box`に変更するとします。適用できる操作は2つあり、まず、変更前に名前の値がまだ`Box, Inc`であることを確認し、次に変更を行います。
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
 
 <Tab title="cURL">
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json-patch+json" \
-     -d '[
-        {
-          "op": "test",
-          "path": "/name",
-          "value": "Box, Inc"
-        },
-        {
-          "op": "replace",
-          "path": "/name",
-          "value": "Box"
-        }
-      ]'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json-patch+json" \
+    -d '[
+      {
+        "op": "test",
+        "path": "/name",
+        "value": "Box, Inc"
+      },
+      {
+        "op": "replace",
+        "path": "/name",
+        "value": "Box"
+      }
+    ]'
 
 ```
 
@@ -64,7 +62,7 @@ curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo
 
 <Tab title=".NET">
 
-```c#
+```csharp
 var updates = new List<BoxMetadataUpdate>()
 {
   new BoxMetadataUpdate()
@@ -104,13 +102,13 @@ file.updateMetadata(
 
 <Tab title="Python">
 
-```py
+```python
 file = client.file(file_id='12345')
 metadata = file.metadata(scope='enterprise', template='customerInfo')
 
 updates = metadata.start_update()
 updates.test('/name', 'Box, Inc')
-updates.replace('/name', 'Box') 
+updates.replace('/name', 'Box')
 
 file.update(updates)
 
@@ -122,17 +120,17 @@ file.update(updates)
 
 ```js
 var updates = [
-  { op: 'test', path: '/name', value: 'Box, Inc' },
-  { op: 'replace', path: '/name', value: 'Box' }
+    { op: 'test', path: '/name', value: 'Box, Inc' },
+    { op: 'replace', path: '/name', value: 'Box' }
 ];
 
 client.files.updateMetadata(
-  '12345', 
-  client.metadata.scopes.ENTERPRISE, 
-  "customerInfo", 
-  updates
+    '12345',
+    client.metadata.scopes.ENTERPRISE,
+    "customerInfo",
+    updates
 ).then(metadata => {
-  //...
+    //...
 });
 
 ```
@@ -165,8 +163,6 @@ client.files.updateMetadata(
 }
 
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>
 

@@ -166,6 +166,15 @@ GET https://account.box.com/api/oauth2/authorize?scope=root_readonly&client_id=.
 
 このスコープでは、アプリケーションに読み取り/書き込みスコープも設定する必要があります。これらのスコープは、有効にしたときに自動的に選択されます。さらに、企業ではSignが有効になっている必要があります。
 
+### Box AI APIを管理する
+
+|                  |                |
+| ---------------- | -------------- |
+| **OAuthスコープ**    | `AI.readwrite` |
+| **アプリケーションスコープ** | AIを管理する        |
+
+アプリケーションには、Box AI APIにリクエストを送信するための権限が付与されます。
+
 ### Box Relayを管理する
 
 |                  |                   |
@@ -236,8 +245,6 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 
 既存のアクセストークンをダウンスコープするために[`POST /oauth2/token`](endpoint://post-oauth2-token)エンドポイントで使用できる**追加**のスコープのリストを以下に示します。
 
-<!-- markdownlint-disable line-length -->
-
 | OAuthスコープ              | 影響を受けるUI Element | 説明                                                   |
 | ---------------------- | ---------------- | ---------------------------------------------------- |
 | `annotation_edit`      | プレビュー            | 注釈の編集と削除をユーザーに許可します。                                 |
@@ -255,11 +262,7 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 | `item_share`           | Explorer、Picker  | トークン交換の`resource`で指定された項目の共有を許可します。                  |
 | `item_upload`          | Picker           | Content Pickerでのアップロードを許可します。                        |
 
-<!-- markdownlint-enable line-length -->
-
 また、ダウンスコープ時には標準OAuthスコープもサポートされます。
-
-<!-- markdownlint-disable line-length -->
 
 | OAuthスコープ                      | 説明                                 |
 | ------------------------------ | ---------------------------------- |
@@ -272,8 +275,6 @@ APIコールが行われるときに、一部の種類の[メール通知][suppr
 | `manage_enterprise_properties` | Enterpriseのプロパティを管理する              |
 | `manage_data_retention`        | リテンションポリシーを管理する                    |
 | `sign_requests.readwrite`      | 署名リクエストを管理する                       |
-
-<!-- markdownlint-enable line-length -->
 
 <!-- i18n-enable localize-links -->
 

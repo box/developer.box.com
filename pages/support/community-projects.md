@@ -36,8 +36,6 @@ fullyTranslated: true
 
 ## SDKとラッパー
 
-<!-- markdownlint-disable line-length -->
-
 | 名前                                     | 言語           | 説明                                                                                           |
 | -------------------------------------- | ------------ | -------------------------------------------------------------------------------------------- |
 | [Box Javaラッパー][box-camel]              | `Java`       | [Claus Ibsen][claus]によって作成された、Box API用のJavaラッパー。GitHubリポジトリについては、[こちら][camel-repo]を参照してください。 |
@@ -49,11 +47,7 @@ fullyTranslated: true
 | [Box PHP/Laravelラッパー][sdk-php-laravel] | `PHP`        | Box API用のPHPラッパー                                                                             |
 | [Box PHPラッパー][sdk-ph]                  | `PHP`        | Box API用のPHPラッパー                                                                             |
 
-<!-- markdownlint-enable line-length -->
-
 ## APIコネクタ
-
-<!-- markdownlint-disable line-length -->
 
 | 名前                                         | 説明                                                                    |
 | ------------------------------------------ | --------------------------------------------------------------------- |
@@ -67,17 +61,11 @@ fullyTranslated: true
 | [Stamplay][connector-stamplay]             | 実際のビジネスプロセスをBoxに接続する自動化ワークフローを構築できます。                                 |
 | [Workato][connector-workato]               | BoxをCRM、マーケティング、ERP、サポート、会計アプリと統合することで、ドキュメントワークフローを自動化できます。          |
 
-<!-- markdownlint-enable line-length -->
-
 ## ツール
-
-<!-- markdownlint-disable line-length -->
 
 | 名前                     | 言語   | 説明                                 |
 | ---------------------- | ---- | ---------------------------------- |
 | [ShareX][tools-sharex] | `C#` | Boxにアップロードできるオープンソースのスクリーンキャプチャツール |
-
-<!-- markdownlint-enable line-length -->
 
 [contribution-guidelines]: https://github.com/box-community/community-guidelines/blob/master/.github/CONTRIBUTING.md
 

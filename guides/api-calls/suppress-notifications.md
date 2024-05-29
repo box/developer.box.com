@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: false
 id: api-calls/suppress-notifications
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/language-codes
@@ -28,9 +28,9 @@ fullyTranslated: true
 
 ```curl
 curl -X POST https://api.box.com/2.0/folders \
-  -H "box-notifications: off" \
-  -H "authorization: Bearer ACCESS_TOKEN" \
-  -d '{
+    -H "box-notifications: off" \
+    -H "authorization: Bearer ACCESS_TOKEN" \
+    -d '{
       "name": "New Folder",
       "parent": {
         "id": "0"

@@ -57,13 +57,9 @@ fullyTranslated: true
 
 ### `deleteUserAssociation`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ    | 型  | 説明                  |
 | -------- | -- | ------------------- |
 | `userId` | id | 資格情報がクリアされるユーザーのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -104,13 +100,9 @@ Salesforceではデータベースの更新/挿入/削除の後の呼び出し�
 
 このメソッドは、上記の`commitChanges`とよく似ています。ただし、別のトランザクションでDMLステートメントを実行し、一部のシナリオでガバナ制限を回避するために、プラットフォームイベントを使用してデータベースに変更をコミットします。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ              | 型         | 説明                                                |
 | ------------------ | --------- | ------------------------------------------------- |
 | `usePlatformEvent` | `boolean` | プラットフォームイベントを使用する場合は`true`。元のメソッドを呼び出す場合は`false`。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -122,13 +114,9 @@ Box for Salesforce Developer Toolkitは、パラメータとして[HttpRequest][
 
 ### `sendRequest`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ     | 型                             | 説明                                   |
 | --------- | ----------------------------- | ------------------------------------ |
 | `request` | [HttpRequest][sf-httprequest] | エンドポイントとメソッドが設定されたHttpRequestオブジェクト。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -148,16 +136,12 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ              | 型            | 説明                                                                                                                           |
 | ------------------ | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | `att`              | `Attachment` | Box内のファイルに変換される添付ファイル。                                                                                                       |
 | `fileNameOverride` | `string`     | 省略可 - 新しいファイルの名前。値が渡されなかった場合、添付ファイルの名前が使用されます。                                                                               |
 | `folderIdOverride` | `string`     | 省略可 - この添付ファイルの配置先であるBoxフォルダID。値が渡されなかった場合、ファイルは添付ファイルの`parentId`に当たるレコードに関連付けられているフォルダに配置されます。レコード固有のフォルダが存在していない場合は作成されます。 |
 | `accessToken`      | `string`     | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトアカウントの資格情報が使用されます。                                          |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -166,13 +150,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getObjectFolderByRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明                                    |
 | ---------- | ---- | ------------------------------------- |
 | `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -192,13 +172,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getObjectFolderByRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明                                    |
 | ---------- | ---- | ------------------------------------- |
 | `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -209,14 +185,10 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 * このメソッドは、特定のレコードの埋め込みウィジェットURLを取得します。このため、必要に応じて独自の埋め込みロジックを使用できます。
 * このメソッドではシームレスログインの設定が優先されます。このため、シームレスログインが有効になっている場合、ユーザーはURLに自動的にログインされます。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ             | 型         | 説明                                       |
 | ----------------- | --------- | ---------------------------------------- |
 | `recordId`        | `id`      | ルートフォルダIDを取得する必要があるSalesforceレコードのID。    |
 | `isMobileContext` | `boolean` | URLがモバイル (true) か、それ以外 (false) かを示すブール値。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -224,13 +196,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `createObjectFolderForRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明                                    |
 | ---------- | ---- | ------------------------------------- |
 | `recordId` | `id` | ルートフォルダIDを取得する必要があるSalesforceレコードのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -239,15 +207,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `createFolder`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ            | 型        | 説明                                                                                       |
 | ---------------- | -------- | ---------------------------------------------------------------------------------------- |
 | `folderName`     | `string` | 作成するフォルダの名前。フォルダ名には制限があります。詳細は[こちら](endpoint://post_folders)を参照してください。                   |
 | `parentFolderId` | `string` | このフォルダが作成される親Boxフォルダ。                                                                    |
 | `accessToken`    | `string` | 省略可 - `accessToken`が送信された場合は、Box APIコールにその値が使用されます。そうでない場合は、デフォルトのサービスアカウントの資格情報が使用されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -256,15 +220,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `createFolderForRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ                 | 型         | 説明                                                                                |
 | --------------------- | --------- | --------------------------------------------------------------------------------- |
 | `recordId`            | `id`      | Boxフォルダの作成に使用されるSalesforceレコードID。                                                 |
 | `folderNameOverride`  | `string`  | デフォルトでは、レコード名がフォルダ名になります。別の名前を付ける場合は、ここでその値を送信します。                                |
 | `optCreateRootFolder` | `boolean` | オブジェクトのルートフォルダが存在しない場合に、それを作成するかどうかを示すブール値。falseを送信した場合、ルートフォルダが存在しないと呼び出しは失敗します。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -274,15 +234,11 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `moveFolder`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ               | 型        | 説明                                                                                  |
 | ------------------- | -------- | ----------------------------------------------------------------------------------- |
 | `folderId`          | `string` | 移動するフォルダのBoxフォルダID。                                                                 |
 | `newParentFolderId` | `string` | 新しい親フォルダになるフォルダのBoxフォルダID。                                                          |
 | `accessToken`       | `string` | 省略可 - `accessToken`を送信すると、その値がBox APIコールに使用されます。そうでない場合、デフォルトのサービスアカウント資格情報が使用されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -291,13 +247,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getUrlForFolder`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明       |
 | ---------- | ---- | -------- |
 | `recordId` | `id` | レコードのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -306,16 +258,12 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `createFolderForRecordIdFromTemplate`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ                 | 型         | 説明                                |
 | --------------------- | --------- | --------------------------------- |
 | `recordId`            | `id`      | SalesforceレコードID。                 |
 | `templateFolderId`    | `string`  | テンプレートにするソースフォルダ。                 |
 | `folderNameOverride`  | `string`  | 新しいフォルダの名前の上書き。                   |
 | `optCreateRootFolder` | `boolean` | ルートフォルダが存在しない場合に作成するかどうかを決定するフラグ。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -326,13 +274,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getFolderAssociationsByRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明                                         |
 | ---------- | ---- | ------------------------------------------ |
 | `recordId` | `id` | 返されるフォルダマッピングエントリが関連付けられるSalesforceレコードID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -341,13 +285,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getFolderIdByRecordId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型    | 説明                           |
 | ---------- | ---- | ---------------------------- |
 | `recordId` | `id` | フォルダIDを取得するSalesforceレコードID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -355,13 +295,9 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `getRecordIdByFolderId`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型        | 説明         |
 | ---------- | -------- | ---------- |
 | `folderId` | `string` | BoxフォルダID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -369,14 +305,10 @@ Salesforceの文字列長の上限は600万文字です。base64エンコード/
 
 ### `createFolderAssociation`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型        | 説明                             |
 | ---------- | -------- | ------------------------------ |
 | `recordId` | `id`     | Boxフォルダに関連付けるSalesforceレコードID。 |
 | `folderId` | `string` | Salesforceレコードに関連付けるBoxフォルダID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -392,8 +324,6 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 ### `createCollaboration`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ          | 型                               | 説明                                                                     |
 | -------------- | ------------------------------- | ---------------------------------------------------------------------- |
 | `folderId`     | `string`                        | コラボレーションを作成するBoxフォルダのID。                                               |
@@ -402,8 +332,6 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 | `collabType`   | `string`                        | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                           |
 | `accessToken`  | `string`                        | 省略可 - 送信した場合、この値はBox APIコールの認証に使用されます。`null`の場合、サービスアカウントの資格情報が使用されます。 |
 
-<!-- markdownlint-enable line-length -->
-
 戻り値:
 
 * `string`。作成されたBoxコラボレーションのIDが返されます。
@@ -411,16 +339,12 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 ### `createCollaborationOnRecord`
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ             | 型                               | 説明                                                                                                                                    |
 | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `userId`          | `id`                            | コラボレーションするSalesforceユーザーID。                                                                                                           |
 | `recordId`        | `id`                            | コラボレーションするレコードフォルダのSalesforceレコードID。                                                                                                  |
 | `collabType`      | `box.Toolkit.CollaborationType` | コラボレーションのタイプ (`CollaborationType`列挙型の定義を参照)。                                                                                          |
 | `optCreateFolder` | `boolean`                       | SalesforceレコードIDに関連付けられたBoxフォルダがまだ存在しない場合に、それを作成するかどうかを示すブール値。ルートフォルダが存在しない場合は、ルートフォルダも作成されます。`false`に設定した場合、フォルダがまだ存在しないと呼び出しが失敗します。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -474,15 +398,11 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、[フォルダのメタデータインスタンスを取得エンドポイント][1]を呼び出します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ          | 型        | 説明                                                |
 | -------------- | -------- | ------------------------------------------------- |
 | `folderId`     | `string` | メタデータを作成するBoxフォルダのID。                             |
 | `scope`        | `string` | メタデータテンプレートのスコープ。値は`[global, enterprise]`のいずれかです。 |
 | `template_key` | `string` | メタデータテンプレートの名前。                                   |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -496,16 +416,12 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、[フォルダにメタデータインスタンスを作成][2]エンドポイントを呼び出します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ           | 型                    | 説明                                                                                                                                                                                   |
 | --------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `folderId`      | `string`             | メタデータを作成するBoxフォルダのID。                                                                                                                                                                |
 | `scope`         | `string`             | メタデータテンプレートのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。                                                                                                         |
 | `template_key`  | `string`             | メタデータテンプレートの名前。                                                                                                                                                                      |
 | `keyValuePairs` | `List<KeyValuePair>` | このクラスはマップとして機能します。Boxメタデータに送信する属性のキー/値ペアをリストとして指定します。キー/値のマッピングは[API][2]と同じパターンに従います。数値型`'3000'`および`'Customer;Order'`などの複数選択値は、コードサンプルに見られる通常のメタデータ値と同様に、`value`フィールドで文字列入力として表されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -519,16 +435,12 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 [フォルダのメタデータインスタンスを更新][3]エンドポイントを呼び出します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ          | 型                            | 説明                                                                                                                                                          |
 | -------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `folderId`     | `string`                     | メタデータを更新するBoxフォルダのID。                                                                                                                                       |
 | `scope`        | `string`                     | メタデータテンプレートのスコープ。値は[`global`、`enterprise`][`global`, `enterprise`]のいずれかです。                                                                                  |
 | `template_key` | `string`                     | メタデータテンプレートの名前。                                                                                                                                             |
 | `mdUpdates`    | `List<FolderMetadataUpdate>` | メタデータの更新。操作、パス、および値を指定します。メタデータの更新レコードは、[API][3]と同じパターンに従います。数値型 (`3000`) および`Customer;Order`などの複数選択値は、コードサンプルにおける通常のメタデータ値と同様に、`value`フィールドで文字列入力として表されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -542,15 +454,11 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、[フォルダからメタデータインスタンスを削除][4]エンドポイントを呼び出します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ          | 型        | 説明                                                                         |
 | -------------- | -------- | -------------------------------------------------------------------------- |
 | `folderId`     | `string` | メタデータを更新するBoxフォルダのID。                                                      |
 | `scope`        | `string` | メタデータテンプレートのスコープ。値は[`global`、`enterprise`][`global`, `enterprise`]のいずれかです。 |
 | `template_key` | `string` | メタデータテンプレートの名前。                                                            |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -561,13 +469,9 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、[フォルダからメタデータカスケードポリシーを取得][5]エンドポイントを呼び出します。このメソッドはIDを必要とするため、最初に`getMetadataCascadePoliciesByFolderId`メソッドを呼び出す必要があります。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型        | 説明                |
 | ---------- | -------- | ----------------- |
 | `policyId` | `string` | 取得するカスケードポリシーのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -581,16 +485,12 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、フォルダIDを指定し、[メタデータカスケードポリシーを取得][6]エンドポイントを呼び出すことで、カスケードポリシーを取得します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ               | 型         | 説明                                                                       | 必須  |
 | ------------------- | --------- | ------------------------------------------------------------------------ | --- |
 | `folderId`          | `string`  | どのフォルダのポリシーを返すかを指定します。これは、IDが0のルートフォルダでは使用できません。                         | はい  |
 | `paginationMarker`  | `string`  | 結果が返される開始位置のマーカー。マーカーベースのページ割りに使用されます。                                   | いいえ |
 | `Offset`            | `integer` | レスポンスが開始される項目のオフセット。                                                     | いいえ |
 | `ownerEnterpriseId` | `string`  | メタデータカスケードポリシーを検索するEnterprise ID。指定されていない場合は、デフォルトで現在のEnterpriseに設定されます。 | いいえ |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -604,15 +504,11 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、BoxフォルダID、スコープ、テンプレートキーを指定し、[メタデータカスケードポリシーを投稿][7]エンドポイントを呼び出すことで、カスケードポリシーを作成します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ          | 型        | 説明                                                                              |
 | -------------- | -------- | ------------------------------------------------------------------------------- |
 | `folderId`     | `string` | メタデータカスケードポリシーを作成するBoxフォルダのID。                                                  |
 | `scope`        | `string` | メタデータカスケードポリシーのスコープ。値は [`global`、`enterprise`][`global`, `enterprise`] のいずれかです。 |
 | `template_key` | `string` | テンプレートキーの名前。                                                                    |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -626,13 +522,9 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、カスケードポリシーIDを指定し、[メタデータカスケードポリシーIDを削除][8]エンドポイントを呼び出すことで、カスケードポリシーを削除します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型        | 説明                |
 | ---------- | -------- | ----------------- |
 | `policyId` | `string` | 削除するカスケードポリシーのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -643,13 +535,9 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このメソッドでは、アプリアクティビティに指定されたフォルダにメタデータを適用してカスケードすることで、そのフォルダを有効にします。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ      | 型        | 説明                    |
 | ---------- | -------- | --------------------- |
 | `folderId` | `string` | メタデータを削除するBoxフォルダのID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -662,14 +550,10 @@ Box for Salesforce Developer Toolkitによって作成されたコラボレー�
 
 このツールキットのメソッドでは、[統合マッピングを取得][9]エンドポイントを呼び出して既存のマッピングを取得します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ           | 型      | 説明                                        |
 | --------------- | ------ | ----------------------------------------- |
 | `integration`   | String | `Slack`は、現在唯一サポートされている値です。                |
 | `partnerItemId` | String | 指定された統合側でマッピングされている項目のID。例: SlackチャンネルID。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -686,14 +570,10 @@ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`�
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ         | 型                    | 説明                             |
 | ------------- | -------------------- | ------------------------------ |
 | `integration` | String               | `Slack`は、現在唯一サポートされている値です。     |
 | `mapping`     | `IntegrationMapping` | Apex定義タイプ`IntegrationMapping`。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -703,14 +583,10 @@ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`�
 
 このツールキットのメソッドでは、[統合マッピングを削除][10]エンドポイントを呼び出してマッピングを削除します。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ                  | 型      | 説明                                |
 | ---------------------- | ------ | --------------------------------- |
 | `integration`          | String | `Slack`は、現在唯一サポートされている値です。        |
 | `integrationMappingId` | String | `getIntegrationMappings`から取得されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -733,15 +609,11 @@ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`�
 
 </Message>
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ                   | 型      | 説明                                                                                            |
 | ----------------------- | ------ | --------------------------------------------------------------------------------------------- |
 | `recordId`              | ID     | SalesforceレコードID。                                                                             |
 | `slackChanneld`         | String |                                                                                               |
 | `slackWorkspaceOrOrgId` | String | Box for Slackが組織全体でインストールされている場合は、オーガナイゼーションID (E1234567など) またはワークスペースID (T5555555など) を指定します。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 
@@ -753,14 +625,10 @@ Slackチャンネルにマッピングする場合、はデフォルト`FALSE`�
 
 このメソッド/呼び出し可能なアクションは、Box for Salesforceパッケージの`Create Box Folder/Slack Channel Mapping`で提供されるフローテンプレートで使用されています。
 
-<!-- markdownlint-disable line-length -->
-
 | パラメータ       | 型       | 説明                                                                                                  |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | `channelId` | String  |                                                                                                     |
 | `disabled`  | Boolean | 基になるBox項目に対するチャンネルメンバーのアクセスを自動で管理する必要があるかどうかを示します。チャンネルのタイプによっては、アクセスがコラボレーションまたは共有リンクの作成により管理されます。 |
-
-<!-- markdownlint-enable line-length -->
 
 戻り値:
 

@@ -25,12 +25,9 @@ fullyTranslated: true
 
 Box CLIの機能の使用方法のガイドを以下に示します。
 
-* [JWT認証を使用したBox CLI][1]を設定してテストする。
-* [Box CLI一括コマンド][2]を設定してテストする。
+* [JWT認証を使用したBox CLI][1]を設定してテストする。 
 * [Box CLI一括コマンド][2]を設定してテストする。
 
 [1]: g://cli/cli-docs/jwt-cli
-
-[2]: g://cli/cli-docs/bulk-commands
 
 [2]: g://cli/cli-docs/bulk-commands

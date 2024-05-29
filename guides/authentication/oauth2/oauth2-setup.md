@@ -57,8 +57,6 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 ### アプリケーションの基本情報の指定
 
-<!-- markdownlint-disable line-length -->
-
 アプリを説明するために、アプリの名前と説明を指定します。アプリの目的を選択するには、ドロップダウンリストを使用します。選択したオプションに応じて、さらに詳細を指定することが必要になる場合があります。
 
 | 目的                 | 詳細                                               |
@@ -66,8 +64,6 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 | \[自動化]、\[カスタムポータル] | アプリの作成者 (お客様またはパートナー) を指定します。                    |
 | \[統合]              | 統合のカテゴリ、外部システム名のほか、アプリの作成者 (お客様またはパートナー) を指定します。 |
 | \[その他]             | アプリの目的と、アプリの作成者 (お客様またはパートナー) を指定します。            |
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame border center width="300">
 
@@ -123,11 +119,7 @@ Boxでは、ユーザーをリダイレクトする前に、[承認URL][url-redi
 
 スコープを使用して、アプリケーションがデータにアクセスするために必要な権限を定義します。各オプションの詳細については、[スコープのガイド][scopes]を参照してください。
 
-<ImageFrame border width="600" center>
-
 ![アプリ名のフォーム](../images/app-scopes.png)
-
-</ImageFrame>
 
 ### CORSドメイン
 
@@ -135,11 +127,7 @@ Boxでは、ユーザーをリダイレクトする前に、[承認URL][url-redi
 
 許可リストにすべてのURIを追加するには、[開発者コンソール][devconsole]の \[**構成**] タブの下部にある \[**CORSドメイン**] セクションに移動します。
 
-<ImageFrame border>
-
 ![アプリ名のフォーム](../images/app-cors.png)
-
-</ImageFrame>
 
 [devconsole]: https://app.box.com/developers/console
 

@@ -1,5 +1,5 @@
 ---
-rank: 7
+rank: 8
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -10,10 +10,10 @@ subcategory_id: null
 is_index: false
 id: api-calls/language-codes
 type: guide
-total_steps: 8
+total_steps: 9
 sibling_id: api-calls
 parent_id: api-calls
-next_page_id: api-calls
+next_page_id: api-calls/api-versioning-strategy
 previous_page_id: api-calls/suppress-notifications
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/language-codes.md

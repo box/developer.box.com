@@ -31,8 +31,7 @@ Box内で管理されているテンプレートを使用する場合、件名�
 
 メッセージパラメータには、以下のHTMLタグを含めることができます。
 
-* `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`,
-  `ol`, `strong`
+* `a`, `abbr`, `acronym`, `b`, `blockquote`, `code`, `em`, `i`, `ul`, `li`, `ol`, `strong`
 
 これらのタグにカスタムスタイルを適用することはできません。
 
@@ -48,30 +47,29 @@ Box内で管理されているテンプレートを使用する場合、件名�
 
 <Tab title="cURL">
 
-```bash
-
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer ej...3t'
---data-raw '{
-    "email_subject":"All we need is your signature to get started",
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer ej...3t' \
+    --data-raw '{
+      "email_subject": "All we need is your signature to get started",
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1358047520478",
-            "type": "file"
+          "id": "1358047520478",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 
 ```
 
@@ -80,7 +78,6 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_single_more_options(
     client: Client,
     ...
@@ -111,7 +108,7 @@ def main():
         SIGNER_A,
         prep_needed=False,
         email_subject="All we need is your signature to get started",
-    )  
+    )
 
 ```
 
@@ -138,28 +135,27 @@ def main():
 <Tab title="cURL">
 
 ```bash
-
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer fN...dD' 
+--header 'Authorization: Bearer fN...dD' \
 --data-raw '{
-    "is_document_preparation_needed": false,
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder"
-    },
-    "source_files": [
-        {
-            "id": "1355143830404",
-            "type": "file"
-        }
-    ],
-    "signers": [
-        {
-            "email": "signer@example.com",
-            "embed_url_external_user_id":"1234",
-            "role": "signer"
-        }
-    ]
+  "is_document_preparation_needed": false,
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder"
+  },
+  "source_files": [
+    {
+      "id": "1355143830404",
+      "type": "file"
+    }
+  ],
+  "signers": [
+    {
+      "email": "signer@example.com",
+      "embed_url_external_user_id": "1234",
+      "role": "signer"
+    }
+  ]
 }'
 
 ```
@@ -169,7 +165,6 @@ def main():
 <Tab title="Pythonの次世代SDK">
 
 ```python
-
 def sign_doc_embed_url(
     client: Client,
     document_id: str,
@@ -197,7 +192,6 @@ def sign_doc_embed_url(
 
     return sign_request
 
-
 def main():
     """Simple script to demonstrate how to use the Box SDK"""
     conf = ConfigOAuth()
@@ -210,7 +204,7 @@ def main():
         SIGNER_A,
         SIGNER_A_EXTERNAL_ID,
     )
-    check_sign_request(sign_with_embed_url)    
+    check_sign_request(sign_with_embed_url)
 
 ```
 
@@ -225,23 +219,22 @@ def main():
 <Tab title="cURL">
 
 ```json
-
 {
-    "is_document_preparation_needed": false,
-    "signers": [
-        {
-            "email": "sender@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-            "embed_url_external_user_id": "1234",
-            "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
-            "iframeable_embed_url": "https://app.box.com/embed/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/"
-        }
-    ],
-    "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
+  "is_document_preparation_needed": false,
+  "signers": [
+    {
+      "email": "sender@example.com",
+      "role": "final_copy_reader",
+    },
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+      "embed_url_external_user_id": "1234",
+      "embed_url": "https://app.box.com/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/",
+      "iframeable_embed_url": "https://app.box.com/embed/sign/document/22a990ce-4e24-463b-b2f4-124820fe161a/9331fe9ac85650d61645d4b0fd30fe3e0ebee7921720ab6ecca587654d3cd875/"
+    }
+  ],
+  "id": "22a990ce-4e24-463b-b2f4-124820fe161a",
 }
 
 ```
@@ -251,7 +244,6 @@ def main():
 <Tab title="Pythonの次世代SDK">
 
 ```yaml
-
 Simple sign request: 22a990ce-4e24-463b-b2f4-124820fe161a-defddc79c946
   Status: created
   Signers: 2
