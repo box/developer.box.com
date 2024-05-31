@@ -29,7 +29,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ## SDK
 
-Here you will find a list of SDKs you can use to build your application. Separately, we have listed the next generation Python, Typescript, and .NET SDKs, which are the newest addition. .NET is still a beta feature, but we encourage you to give it a try and explore all the features they bring along.
+アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDK、Typescript SDK、.NET SDKも記載しています。.NET SDKはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
 
 <Message type="notice">
 
@@ -47,7 +47,7 @@ Here you will find a list of SDKs you can use to build your application. Separat
 
 <Message type="notice">
 
-.NET SDK is in a Public Beta phase.
+.NET SDKはパブリックベータ段階です。
 
 </Message>
 
@@ -60,8 +60,8 @@ Here you will find a list of SDKs you can use to build your application. Separat
 
 | プラットフォーム                       | メンテナンスの有無 | APIパリティ |
 | ------------------------------ | --------- | ------- |
-| [Python Gen SDK][pythongensdk] | はい        | Full    |
-| [Typescript Gen SDK][tsgensdk] | はい        | Full    |
+| [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
+| [Typescriptの次世代SDK][tsgensdk]  | はい        | Full    |
 | [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
 
 ### SDK

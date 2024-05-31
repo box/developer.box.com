@@ -24,7 +24,7 @@ fullyTranslated: true
 ---
 # SDK
 
-Box offers a set of SDKs you can use to build your application. The next generation .NET SDK is the newest addition to the set. It is still a beta feature, but you can give them a try to explore all the features they bring along.
+Boxには、アプリケーションの作成に使用できる一連のSDKが用意されています。次世代の.NET SDKもここに新しく追加されました。これはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することができます。
 
 <Message type="notice">
 
@@ -38,11 +38,11 @@ Box offers a set of SDKs you can use to build your application. The next generat
 
 ## 次世代のSDK
 
-The latest generation Box Python SDK, Box Typescript SDK and .NET SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+最新世代のBox Python SDK、Box Typescript SDK、.NET SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 <Message type="notice">
 
-.NET SDK is in a Public Beta phase.
+.NET SDKはパブリックベータ段階です。
 
 </Message>
 
@@ -55,8 +55,8 @@ The latest generation Box Python SDK, Box Typescript SDK and .NET SDK are design
 
 | プラットフォーム                       | メンテナンスの有無 | APIパリティ |
 | ------------------------------ | --------- | ------- |
-| [Python Gen SDK][pythongensdk] | はい        | Full    |
-| [Typescript Gen SDK][tsgensdk] | はい        | Full    |
+| [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
+| [Typescriptの次世代SDK][tsgensdk]  | はい        | Full    |
 | [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
 
 ## SDK
