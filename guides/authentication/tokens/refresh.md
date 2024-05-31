@@ -31,16 +31,9 @@ Access Token. This can be done before or after the Access Token expires.
 To do this, the application passes the `refresh_token` to the [`POST
 /oauth2/token`](endpoint://post-oauth2-token) endpoint as follows.
 
-```curl
-curl -X POST https://api.box.com/oauth2/token \
-    -H "content-type: application/x-www-form-urlencoded" \
-    -d '{
-      "client_id": "[CLIENT_ID]",
-      "client_secret": "[CLIENT_SECRET]",
-      "refresh_token": "[REFRESH_TOKEN]",
-      "grant_type": "refresh_token"
-    }'
-```
+<Samples id="post_oauth2_token" variant="refresh" >
+
+</Samples>
 
 <Message>
 

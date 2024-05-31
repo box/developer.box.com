@@ -445,13 +445,13 @@ To enable Box AI modal in content preview header, follow these steps:
     ```js
     var preview = new Box.Preview();
 
-    Preview.show(<FILE_ID>, <TOKEN>, {
+    preview.show(<FILE_ID>, <TOKEN>, {
         container: '.preview-container',
         contentAnswersProps: {
             show: true,
         },
         hasHeader: true,
-    });
+    }); 
     ```
 
 <Message type="notice">
