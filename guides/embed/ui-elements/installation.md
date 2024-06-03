@@ -42,7 +42,7 @@ Learn more on the NPM website
 
 </CTA>
 
-<Message warning>
+<Message type='warning'>
 
 ## Content Preview
 
