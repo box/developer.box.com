@@ -80,7 +80,6 @@ and JWT.
 
 ### Stand-alone Sidebar
 
-```sh
 <iframe
   height="800"
   scrolling="no"
@@ -91,11 +90,9 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-```
 
 ### Sidebar with Content Preview
 
-```sh
 <iframe
   height="800"
   scrolling="no"
@@ -106,11 +103,9 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-```
 
 ### Sidebar with Content Explorer
 
-```sh
 <iframe
   height="800"
   scrolling="no"
@@ -121,7 +116,6 @@ and JWT.
   allowfullscreen="true"
   style="width: 100%;"
 ></iframe>
-```
 
 ## API
 

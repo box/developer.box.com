@@ -26,11 +26,9 @@ distinct resources.
 * **Retentions**: A [File Version Retention][retention] represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
 
 <Message type='warning'>
-  The above [file version retention][retention] section of the Box API
-  will soon be deprecated. The date of the deprecation will be announced at a
-  later date. If you wish to use the new endpoints, you may do so by referring
-  to [files under retention][files-under] or
-  [file versions under retention][file-versions-under] in the reference section.
+  The [file version retention][retention] section of the Box API
+  is now deprecated. Instead, you can use [files under retention][files-under] or
+  [file versions under retention][file-versions-under] endpoints.
 </Message>
 
 ## File Deletion with Retention Policies
