@@ -45,6 +45,8 @@ Webhookの通知URL (`address`) は、有効なIPアドレスに解決される�
 
 サーバーのIPアドレスは、インターネットからパブリックにアクセスできる必要があり、`(*.)box.com`アドレスにすることはできません。URLで使用されるポートは、標準HTTPSポート (`443`) でなければなりません。通知は他のポートには配信されません。
 
+The supported TLS protocol versions are `TLS 1.2` and `TLS 1.3` with FIPS-compliant cipher suites.
+
 ## Webhookはルートフォルダに追加不可
 
 V2 Webhookをルートフォルダ (IDが`0`のフォルダ) に作成することはできません。代わりに[V1 Webhook][v1]を使用する必要があります。

@@ -76,19 +76,9 @@ UI Elementは認証に依存しない方法で設計されているため、Box�
 
 ## デモ
 
-```sh
-<iframe
-  height="560"
-  scrolling="no"
-  title="Box Content Explorer"
-  src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
-  style="width: 100%;"
-></iframe>
+<iframe height="560" scrolling="no" title="Box Content Explorer" src="//codepen.io/box-platform/embed/wdWWdN/?height=560&theme-id=27216&default-tab=result&embed-version=2&editable=true" frameborder="no" allowtransparency allowfullscreen style="width: 100%;">
 
-```
+</iframe>
 
 ## API
 

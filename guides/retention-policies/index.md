@@ -35,7 +35,7 @@ fullyTranslated: true
 
 <Message type="warning">
 
-Box APIの上記の[ファイルバージョンリテンション][retention]セクションは、まもなく公式サポートが終了する予定です。公式サポート終了日については、後日お知らせいたします。新しいエンドポイントを使用する場合は、リファレンスセクションの[リテンションの対象となるファイル][files-under]または[リテンションの対象となるファイルバージョン][file-versions-under]を参照してください。
+The [file version retention][retention] section of the Box API is now deprecated. Instead, you can use [files under retention][files-under] or [file versions under retention][file-versions-under] endpoints.
 
 </Message>
 

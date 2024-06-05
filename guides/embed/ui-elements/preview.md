@@ -421,13 +421,13 @@ Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**をご利
 ```js
     var preview = new Box.Preview();
 
-    Preview.show(<FILE_ID>, <TOKEN>, {
+    preview.show(<FILE_ID>, <TOKEN>, {
         container: '.preview-container',
         contentAnswersProps: {
             show: true,
         },
         hasHeader: true,
-    });
+    }); 
 
 ```
 

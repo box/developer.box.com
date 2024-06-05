@@ -41,7 +41,7 @@ NPMウェブサイトの詳細を確認する
 
 </CTA>
 
-<Message warning>
+<Message type="warning">
 
 ## コンテンツプレビュー
 
