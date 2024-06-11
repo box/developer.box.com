@@ -53,9 +53,11 @@ for details.
 
 To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
+**Note**: The `items` array can have exactly one element.
+
 | Parameter| Description| Example|
 |--------|--------|-------|
-|**`prompt`**| The request for Box AI to generate or refine the text.|Create a meeting agenda for a weekly sales meeting.|
+|**`prompt`**| The request for Box AI to generate or refine the text. The prompt's length cannot exceed 10000 characters.|Create a meeting agenda for a weekly sales meeting.|
 |**`items.id`**|Box file ID of the document. |`1233039227512`|
 |**`items.type`**|The type of the supplied input. | `file`|
 | `items.content` | The content of the item, often the text representation.  |     This article is about Box AI.    |
