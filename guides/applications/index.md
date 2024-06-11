@@ -24,23 +24,31 @@ source_url: >-
 
 Box Developer Console allows you to create applications
 you can then use to integrate with Box.
-My Apps view displays a list of already created applications
-and gives you quick access to their configuration details
-and additional options. This way, you don't need to open
+**My Apps** view displays a list of already created applications
+and gives you quick access to their configuration details.
+This way, you don't need to open
 the app each time you want to generate
-a Developer Token or copy the Client ID.
+a Developer Token, copy the Client ID, or generate a report.
 
 ![My apps](./images/my-apps-page.png)
 
 ## Features
 
-The My Apps page allows you to:
+**My Apps** page allows you to:
 
-1. Create [a new app][select].
-2. View application description using the `i` icon.
-3. Copy the Client ID using the `copy` icon.
-4. Check application [enablement][enablement] and [authorization][authorization] status. Apps published to App Center display status from App Center.
-5. Use a menu available for every entry to access the configuration details of your application or to generate a [Developer Token][token].
+* Search through the list of already created apps.
+* Filter the apps by **Enablement Status** and **Authentication Type**.
+* Create [a new app][select].
+* Copy the app's [Client ID][clientcredentials].
+* Rename the app and access its details with one click.
+* Check application [enablement][enablement] and [authorization][authorization] status. Apps published to App Center display status from App Center.
+
+The **Options menu** available for every entry allows you to:
+
+* Access the configuration details of your application.
+* Generate a [Developer Token][token].
+* Add collaborators to your application.
+* Run the [App Diagnostics Report][report].
 
 ## App Insights
 
@@ -70,4 +78,6 @@ and view Platform Insights:
 [authorization]: g://authorization
 [enablement]: g://authorization/custom-app-approval#user-authentication-apps
 [select]: g://applications/app-types/select
-[insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights
+[report]: g://api-calls/permissions-and-errors/app-diagnostics-report
+[clientcredentials]: g://authentication/client-credentials
+[insights]: https://support.box.com/hc/en-us/articles20738406915219-Platform-Insights
