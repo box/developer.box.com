@@ -29,8 +29,8 @@ npm install box-ui-elements
   Learn more on the NPM website
 </CTA>
 
-<Message warning>
-  ## Content Preview
+<Message type='warning'>
+## Content Preview
 
 Use the Content Preview SDK if you need a specific
 version of the preview library. Otherwise,
