@@ -58,8 +58,8 @@ Mandatory parameters are in **bold**.
 
 | Parameter    |Description                                                                                             | Available values                               | Example                     |
 | ------------ | ------ | ----------- | --- |
-| **`mode`** | The type of request. It can be a question about a single file or a set of files. For multiple files, Box AI API supports up to 1MB of text representation and up to 25 files. | `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
-| **`prompt`**   | The question about your document or content. | | "What is this document about?" |
+| **`mode`** | The type of request. It can be a question about a single file or a set of files. For a single file, Box AI API supports up to 1MB of text representation. If the file size exceeds 1MB, the first 1MB of text representation will be processed. If you want to list multiple files, the limit is 25 files. If you set `mode` to `single_item_qa`, the `items` array can list only one element.| `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
+| **`prompt`**   | The question about your document or content. The prompt's length cannot exceed 10000 characters. | | "What is this document about?" |
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface……”    |
