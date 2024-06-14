@@ -9,43 +9,42 @@ rank: 1
 
 ## What is Box
 
-[Box][box] is a cloud-based content management
-and file sharing platform that enables
-individuals and businesses to store, access, and collaborate on documents and
-files from anywhere. It offers features like secure file storage, real-time
-collaboration, and integrations with various productivity tools, enhancing team
-efficiency and data accessibility. Known for its focus on security and
-user-friendly interface, Box is widely used for managing digital assets and
-fostering collaboration within organizations.
+[Box][box] is a cloud-based content management and file sharing platform that
+enables individuals and businesses to store, access, and collaborate on
+content from anywhere. Known for its focus on security and user-friendly
+interface, Box is widely used for managing digital assets and fostering
+collaboration within organizations.
+Box [integrates with various productivity tools][integrations], enhancing team
+efficiency and data accessibility.
 
 ## What is Box Platform
 
-[Box Platform][platform] is a set of tools and APIs offered by Box that
-allows developers to integrate and
-customize the capabilities of the Box cloud content
-management system into their own applications and services. It enables
-businesses and developers to build
-secure and scalable content-centric applications,
-leveraging features like file storage, sharing, and collaboration while
-maintaining control over data and access. With Box Platform, developers can
-create tailored solutions that enhance productivity and streamline content
-management workflows.
+[Box Platform][platform] is a set of tools and APIs offered by Box. It
+allows developers to integrate and customize the capabilities of the Box cloud
+content management system into their own applications and services. 
+With Box Platform, businesses and developers can build secure and scalable
+content-centric applications. Leverage features like file storage,
+sharing, and collaboration while maintaining control over data and access.
+You can create tailored solutions that enhance productivity and streamline
+content management workflows.
 
 ## How do I make applications
 
-In order to use the [Box API][api], you first have to create an application in
-Box. This application serves as the gateway for any API call made to the
-platform. You can use two websites to accomplish this task: the Box Developer
-Site and the Box Developer Console. Let's take a closer look at what those are.
+In order to use the [Box API][api], you first have to
+[create an application][app] in Box. This application serves as the gateway for
+any API call made to the platform. 
+Create your app in the Developer Console while using the resources available on
+the Box developer site. Let's take a closer look at what those two websites are.
 
-### Box Developer Site
+### Box developer site
 
-The Box Developer Site is this website you are reading right now. It is a
+The Box developer site is the website you're browsing right now. It is a
 comprehensive resource for developers building solutions on top of Box, and
 should be used alongside the developer console to create applications and make
-API calls. You can
-find a multitude of guides, the full OpenAPI spec, quick starts, sample code,
-etc all within its pages.
+API calls. You can browse the [guides][guides], full OpenAPI specs, quick
+starts, [sample code][samples], all within its pages. Check the
+[getting started][getting-started] page to learn about sections of our
+documentation.
 
 <ImageFrame center>
 ![Box Developer Site](images/developer_site.png)
@@ -119,14 +118,19 @@ to successfully make an API call to Box.
   Next step
 </Next>
 
+[integrations]: https://www.box.com/integrations
+[app]:g://getting-started/first-application
 [box]: https://www.box.com
 [platform]: https://www.box.com/platform
-[apptypes]: g://applications/app-types/select/
-[authmethods]: g://authentication/select/
+[apptypes]: g://applications/app-types/select
+[authmethods]: g://authentication/select
 [api]: https://developer.box.com/reference/
 [change]: page://changelog
 [dc]: https://app.box.com/developers/console
-[at]: g://authentication/tokens/
+[at]: g://authentication/tokens
+[guides]: https://developer.box.com/guides/
+[samples]: https://developer.box.com/sample-code/
+[getting-started]: g://getting-started
 <!-- i18n-enable localize-links -->
 [ut]: https://support.box.com/hc/en-us/articles/4636533822483-Box-User-Types
 <!-- i18n-disable localize-links -->
