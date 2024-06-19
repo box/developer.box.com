@@ -23,19 +23,27 @@ fullyTranslated: true
 ---
 # アプリケーション
 
-Box開発者コンソールでは、後でBoxとの統合に使用できるアプリケーションを作成できます。\[マイアプリ] ビューには、すでに作成済みのアプリケーションのリストが表示されるので、ここから構成の詳細や追加オプションにすばやくアクセスできます。そのため、毎回アプリを開かなくても、開発者トークンを生成したり、クライアントIDをコピーしたりできます。
+Box Developer Console allows you to create applications you can then use to integrate with Box. **My Apps** view displays a list of already created applications and gives you quick access to their configuration details. This way, you don't need to open the app each time you want to generate a Developer Token, copy the Client ID, or generate a report.
 
 ![マイアプリ](./images/my-apps-page.png)
 
 ## 機能
 
-\[マイアプリ] ページでは、以下の操作を行うことができます。
+**My Apps** page allows you to:
 
-1. [新しいアプリ][select]を作成する。
-2. `i`アイコンを使用してアプリケーションの説明を表示する。
-3. `copy`アイコンを使用してクライアントIDをコピーする。
-4. アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。App Centerに公開されたアプリには、App Centerでのステータスが表示されます。
-5. 各エントリに用意されているメニューを使用して、アプリケーションの構成の詳細にアクセスしたり、[開発者トークン][token]を生成したりする。
+* Search through the list of already created apps.
+* Filter the apps by **Enablement Status** and **Authentication Type**.
+* [新しいアプリ][select]を作成する。
+* Copy the app's [Client ID][clientcredentials].
+* Rename the app and access its details with one click.
+* アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。App Centerに公開されたアプリには、App Centerでのステータスが表示されます。
+
+The **Options menu** available for every entry allows you to:
+
+* Access the configuration details of your application.
+* Generate a [Developer Token][token].
+* Add collaborators to your application.
+* Run the [App Diagnostics Report][report].
 
 ## アプリインサイト
 
@@ -66,4 +74,8 @@ Platformインサイトにアクセスして表示するには、以下の権限
 
 [select]: g://applications/app-types/select
 
-[insights]: https://support.box.com/hc/en-us/articles/20738406915219-Platform-Insights
+[report]: g://api-calls/permissions-and-errors/app-diagnostics-report
+
+[clientcredentials]: g://authentication/client-credentials
+
+[insights]: https://support.box.com/hc/en-us/articles20738406915219-Platform-Insights
