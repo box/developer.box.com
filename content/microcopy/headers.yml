@@ -5,6 +5,10 @@ primary:
       // text:
       text: Documentation
 
+    quickstarts:
+      // text:
+      text: Getting Started
+
     community:
       // text:
       text: Community
@@ -14,14 +18,14 @@ primary:
 
     learn:
       // text: The text for the link to the learn section
-      text: Learn Box Platform
+      text: Box Platform
 
       //url: The URL to the learn section
       url: /platform/
 
     learn-sign:
       // text: The text for the link to the learn section
-      text: Working with Box Sign
+      text: Box Sign
 
       //url: The URL to the learn section
       url: /sign/
@@ -108,17 +112,18 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Catalog
+      text: Box AI Developer Zone
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 80+ open-source repositories
-        in various programming languages.
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
 
     cta:
-      text:
-        Browse sample code
+      text: |-
+        Try it out!
+      url:
+        /ai-dev-zone/
 
 secondary:
   images:
@@ -181,7 +186,7 @@ secondary:
     // display: |-
       A boolean that determines whether to show the orange notification bar
       in the header. Must be "true" or "false"
-    display: "true"
+    display: "false"
 
     // message: |-
       The content of the notification

@@ -12,7 +12,7 @@ related_guides:
 # Update metadata on a file
 
 Once metadata has been applied to a file or folder there is often a need to
-update the metadata at a later date. 
+update the metadata at a later date.
 
 Updating a metadata instance is done by applying a set of operations to the
 original data. These operations are performed atomically, ensuring that the
@@ -22,38 +22,36 @@ changes are either all applied or not applied at all.
   Learn more about updating instances
 </CTA>
 
-In this case, let's assume we want to change the `name` of the customer from 
+In this case, let's assume we want to change the `name` of the customer from
 `Box, Inc` to `Box`. We can apply two operations, firstly, we ensure the
 value of the name is still `Box, Inc` before we change it, and secondly we make
 the change.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json-patch+json" \
-     -d '[
-        {
-          "op": "test",
-          "path": "/name",
-          "value": "Box, Inc"
-        },
-        {
-          "op": "replace",
-          "path": "/name",
-          "value": "Box"
-        }
-      ]'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json-patch+json" \
+    -d '[
+      {
+        "op": "test",
+        "path": "/name",
+        "value": "Box, Inc"
+      },
+      {
+        "op": "replace",
+        "path": "/name",
+        "value": "Box"
+      }
+    ]'
 ```
 
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var updates = new List<BoxMetadataUpdate>()
 {
   new BoxMetadataUpdate()
@@ -89,13 +87,13 @@ file.updateMetadata(
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 file = client.file(file_id='12345')
 metadata = file.metadata(scope='enterprise', template='customerInfo')
 
 updates = metadata.start_update()
 updates.test('/name', 'Box, Inc')
-updates.replace('/name', 'Box') 
+updates.replace('/name', 'Box')
 
 file.update(updates)
 ```
@@ -105,17 +103,17 @@ file.update(updates)
 
 ```js
 var updates = [
-  { op: 'test', path: '/name', value: 'Box, Inc' },
-  { op: 'replace', path: '/name', value: 'Box' }
+    { op: 'test', path: '/name', value: 'Box, Inc' },
+    { op: 'replace', path: '/name', value: 'Box' }
 ];
 
 client.files.updateMetadata(
-  '12345', 
-  client.metadata.scopes.ENTERPRISE, 
-  "customerInfo", 
-  updates
+    '12345',
+    client.metadata.scopes.ENTERPRISE,
+    "customerInfo",
+    updates
 ).then(metadata => {
-  //...
+    //...
 });
 ```
 
@@ -143,7 +141,5 @@ The API will return the updated metadata instance.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've updated metadata to a file</Next>

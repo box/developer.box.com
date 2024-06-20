@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/specifying-a-logo-for-box-ui-elements
 ---
 

@@ -8,7 +8,7 @@ related_guides:
   - webhooks/v2/list-v2
 required_guides:
   - webhooks/v2/list-v2
-related_resources: 
+related_resources:
   - webhook
 alias_paths:
   - /webhooks/manage/update
@@ -22,8 +22,7 @@ You can update a webhook using the [Developer Console][console] or API.
 
 To update a webhook in the [Developer Console][console], follow the steps below.
 
-1. Go to the **Webhooks** tab in the [Developer Console][console] to display
-all webhooks.
+1. Go to the **Webhooks** tab in the [Developer Console][console] to display all webhooks.
 2. Select the webhook you want to update by clicking on its ID.
 3. Click the **Edit webhook** button.
 4. Fill in the data you want to update.

@@ -4,7 +4,7 @@ alias_paths:
   - /docs/box-skills
   - /page/box-skills-kit
   - /docs/getting-started-with-box-skills
-  - /docs/box-skills-1 
+  - /docs/box-skills-1
   - /skills
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
@@ -46,18 +46,15 @@ A Custom Skill is best used when the application:
 
 - Wants to only add metadata to files uploaded to Box
 - Does not want to upload new files or perform any other API calls
-- Wants to have way to pass files to Machine Learning services without
-  having to handle authentication
+- Wants to have way to pass files to Machine Learning services without having to handle authentication
 
 ## Use cases
 
 Example use cases for Custom Skills include:
 
-- A process that automatically extracts license plate details from images and
-  writes the details back to the file as keywords.
+- A process that automatically extracts license plate details from images and writes the details back to the file as keywords.
 
-- A process that automatically detects faces in videos, and writes the timestamps
-  at which these faces occur back to the file as a timeline.
+- A process that automatically detects faces in videos, and writes the timestamps at which these faces occur back to the file as a timeline.
 
 ## Approval
 

@@ -1,5 +1,5 @@
 ---
-rank: 6
+rank: 7
 related_endpoints:
   - post_oauth2_revoke
 related_resources: []

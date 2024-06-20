@@ -1,4 +1,5 @@
 ---
+rank: 10
 related_pages:
  - sdks-and-tools
 ---
@@ -17,10 +18,10 @@ but you won't receive new features,
 updates, or bug fixes.
 
 If you would like to continue getting
-the latest and greatest Android features, 
+the latest and greatest Android features,
 we recommend using Java SDK to build apps on Android.
 Refer to [this][android-docs] documentation for more details.
 </Message>
 
-[android-sdk]: https://github.com/box/box-android-sdk 
+[android-sdk]: https://github.com/box/box-android-sdk
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md

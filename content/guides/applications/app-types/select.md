@@ -12,8 +12,8 @@ alias_paths:
 
 # Select App Type
 
-Upon creating a new Box application in the [Developer Console][dev-console], 
-you must first select one of the following types of applications. The type of 
+Upon creating a new Box application in the [Developer Console][dev-console],
+you must first select one of the following types of applications. The type of
 application you select is dependent on the use case for your project and only
 impacts the available authentication methods when configuring your application.
 You cannot change this selection later on.
@@ -23,8 +23,6 @@ You cannot change this selection later on.
 </ImageFrame>
 
 ## Custom App
-
-<!-- markdownlint-disable line-length -->
 
 |                            |                                                                              |
 | -------------------------- | ---------------------------------------------------------------------------- |
@@ -46,7 +44,7 @@ For example, downloading/uploading, searching, applying metadata and more.
 
 A Limited Access App is best for leveraging [Box View][view-app] or previewing
 Box content within another application. This type of application can only
-interact with a limited number of endpoints. 
+interact with a limited number of endpoints.
 
 <CTA to="g://applications/app-types/limited-access-apps">Learn more about Limited Access Apps</CTA>
 
@@ -63,8 +61,6 @@ use third-party Machine Learning services to automatically extract information
 from files uploaded to Box.
 
 <CTA to="g://applications/app-types/custom-skills">Learn more about Custom Skills</CTA>
-  
-<!-- markdownlint-enable line-length -->
 
 [oauth2]: g://authentication/oauth2
 [jwt]: g://authentication/jwt
