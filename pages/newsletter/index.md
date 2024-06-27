@@ -27,33 +27,33 @@ fullyTranslated: true
 
 これまでに送信されたニュースレターのアーカイブを以下に示します。
 
-| 年    | 月       | アーカイブ                        |
-| ---- | ------- | ---------------------------- |
-| 2019 | 9月      | [Preview][download-2019-q3]  |
-| 2019 | 12月     | [Preview][download-2019-q4]  |
-| 2020 | 4月      | [Preview][download-2020-q1]  |
-| 2020 | 7月      | [Preview][download-2020-q2]  |
-| 2020 | 12月     | [Preview][download-2020-q4]  |
-| 2021 | 4月      | [Preview][download-2021-q1]  |
-| 2021 | 8月      | [Preview][download-2021-q3]  |
-| 2021 | 11月     | [Preview][download-2021-q4]  |
-| 2022 | 2月      | [Preview][download-2022-q1]  |
-| 2022 | 6月      | [Preview][download-2022-q2]  |
-| 2022 | 8月      | [Preview][download-2022-q3]  |
-| 2022 | 9月      | [Preview][download-2022-se]  |
-| 2022 | 11月     | [Preview][download-2022-q4]  |
-| 2023 | 2月      | [Preview][download-2023-q1]  |
-| 2023 | 5月      | [Preview][download-2023-q2]  |
-| 2023 | 6月      | [Preview][download-2023-se]  |
-| 2023 | 8月      | [Preview][download-2023-q3]  |
-| 2023 | 11月     | [Preview][download-2023-q4]  |
-| 2023 | 12月     | [Preview][download-2023-dec] |
-| 2024 | January | [Preview][download-2024-jan] |
-| 2024 | 2月      | [Preview][download-2024-feb] |
-| 2024 | March   | [Preview][download-2024-mar] |
-| 2024 | 4月      | [Preview][download-2024-apr] |
-| 2024 | 5月      | [Preview][download-2024-may] |
-| 2024 | 6月      | [Preview][download-2024-jun] |
+| 年    | 月   | アーカイブ                        |
+| ---- | --- | ---------------------------- |
+| 2019 | 9月  | [Preview][download-2019-q3]  |
+| 2019 | 12月 | [Preview][download-2019-q4]  |
+| 2020 | 4月  | [Preview][download-2020-q1]  |
+| 2020 | 7月  | [Preview][download-2020-q2]  |
+| 2020 | 12月 | [Preview][download-2020-q4]  |
+| 2021 | 4月  | [Preview][download-2021-q1]  |
+| 2021 | 8月  | [Preview][download-2021-q3]  |
+| 2021 | 11月 | [Preview][download-2021-q4]  |
+| 2022 | 2月  | [Preview][download-2022-q1]  |
+| 2022 | 6月  | [Preview][download-2022-q2]  |
+| 2022 | 8月  | [Preview][download-2022-q3]  |
+| 2022 | 9月  | [Preview][download-2022-se]  |
+| 2022 | 11月 | [Preview][download-2022-q4]  |
+| 2023 | 2月  | [Preview][download-2023-q1]  |
+| 2023 | 5月  | [Preview][download-2023-q2]  |
+| 2023 | 6月  | [Preview][download-2023-se]  |
+| 2023 | 8月  | [Preview][download-2023-q3]  |
+| 2023 | 11月 | [Preview][download-2023-q4]  |
+| 2023 | 12月 | [Preview][download-2023-dec] |
+| 2024 | 1月  | [Preview][download-2024-jan] |
+| 2024 | 2月  | [Preview][download-2024-feb] |
+| 2024 | 3月  | [Preview][download-2024-mar] |
+| 2024 | 4月  | [Preview][download-2024-apr] |
+| 2024 | 5月  | [Preview][download-2024-may] |
+| 2024 | 6月  | [Preview][download-2024-jun] |
 
 [dc]: https://cloud.app.box.com/developers/console
 
