@@ -15,7 +15,7 @@ on:
       - jp-staging
   # Run for PRs on main and staging
   pull_request:
-    branches: [main, staging, abtest]
+    branches: [main, staging, abtest, jp-staging]
 
 jobs:
   # The lint job checks that all content is sanitized,
@@ -309,7 +309,7 @@ jobs:
         uses: s0/git-publish-subdir-action@v2.4.0
         env:
           REPO: self
-          BRANCH: en-abtest
+          BRANCH: jp-staging
           FOLDER: compiled
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
