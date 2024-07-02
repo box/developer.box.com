@@ -44,8 +44,7 @@ make API calls on behalf of the application.
 Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
-- Create and download the private key configuration file for your application
-  and save it as `config.json`
+- Create and download the private key configuration file for your application and save it as `config.json`
 - Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
@@ -56,14 +55,12 @@ the application's private key and other details. The following is an example.
 <Tabs>
   <Tab title='config.json'>
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "boxAppSettings": {
     "clientID": "abc...123",
-   "clientSecret": "def...234",
-   "appAuth": {
+    "clientSecret": "def...234",
+    "appAuth": {
       "publicKeyID": "abcd1234",
       "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\n....\n-----END ENCRYPTED PRIVATE KEY-----\n",
       "passphrase": "ghi...345"
@@ -73,8 +70,6 @@ the application's private key and other details. The following is an example.
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
 </Tabs>
 
@@ -83,7 +78,7 @@ To use this object in the application it needs to be read from file.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var reader = new StreamReader("path/to/config.json");
 var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
@@ -136,7 +131,7 @@ initialize the client to connect as the application.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
 BoxClient client = sdk.AdminClient(token);

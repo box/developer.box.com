@@ -12,7 +12,6 @@ required_guides:
 related_resources: []
 alias_paths:
   - /docs/construct-jwt-claim-manually
-  - /guides/authentication/client-credentials
 ---
 
 # Setup with Client Credentials Grant
@@ -20,7 +19,7 @@ alias_paths:
 ## Prerequisites
 
 To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
+you have access to the [Developer Console][devconsole] from your Box enterprise 
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
@@ -41,8 +40,6 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose.
 Depending on the option chosen, you might
@@ -58,8 +55,6 @@ need to specify further details.
 ![Auth selection screen](../images/custom-app-selection.png)
 </ImageFrame>
 
-<!-- markdownlint-enable line-length -->
-
 ### Select application authentication
 
 Select **Server Authentication (with Client Credentials Grant)**
@@ -68,7 +63,7 @@ application identity with a client
 ID and client secret, and confirm with **Create App**.
 
 <Message warning>
-Once you make a selection, you will not be able to change to a different 
+Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 

@@ -20,7 +20,7 @@ Once a webhook is attached to an item, no second webhook can be attached,
 even if the second webhook would respond to a different trigger event.
 
 Example: a webhook is set up by `John Doe` to watch
-`FILE.UPLOADED` events in a folder with the name `Junk`, for an application 
+`FILE.UPLOADED` events in a folder with the name `Junk`, for an application
 named `CleanupApp`. At that point, no second webhook can
 be added to the `Junk` folder by the `CleanupApp` by `John Doe`, even if it
 is to trigger for an `FILE.DOWNLOADED` event.
@@ -45,6 +45,8 @@ certificates.
 The IP address of the server must be publicly accessible from the internet and
 cannot be a `(*.)box.com` address. The port used in the URL must be the
 standard HTTPS port (`443`). Notifications will not be delivered to other ports.
+
+The supported TLS protocol versions are `TLS 1.2` and `TLS 1.3` with FIPS-compliant cipher suites.
 
 ## No webhooks on root folder
 
@@ -84,13 +86,9 @@ after 1 hour.
 
 The following reasons can cause webhooks to be deleted.
 
-1. Deleting a Box application automatically deletes all webhooks associated with
-   it.
-2. Deleting all active Access Tokens associated with a webhook
-automatically deletes the webhook. This includes Developer Tokens and password.
-3. A webhook is automatically deleted if the last successful delivery was 30
-days ago and the period between the last successful delivery and the last
-trigger date is more than 14 days.
+1. Deleting a Box application automatically deletes all webhooks associated with it.
+2. Deleting all active Access Tokens associated with a webhook automatically deletes the webhook. This includes Developer Tokens and password.
+3. A webhook is automatically deleted if the last successful delivery was 30 days ago and the period between the last successful delivery and the last trigger date is more than 14 days.
 
 In all of these cases Box sends a webhook payload with the
 `WEBHOOK.DELETED` event name to the notification URL. The body of the payload

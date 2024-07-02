@@ -1,12 +1,19 @@
 ---
 rank: 1
+related_endpoints:
+  - post-sign-requests
+related_guides:
+  - box-sign/resend-sign-request
+  - box-sign/cancel-sign-request
+  - box-sign/sign-templates
 ---
+
 
 # Create Box Sign Request
 
 At minimum, to [create Box Sign request][create] you need
 the a file you want to be signed, a destination folder for the signed
-document/[signing log][log], and signers. 
+document/[signing log][log], and signers.
 
 <Samples id='post_sign_requests' />
 
@@ -25,11 +32,11 @@ add date, text, checkbox, and/or signature placeholders for signers. This can be
 done with UI or [tags][tags] directly in the document. If this is not done,
 signers receive an unprepared document and can place signatures and fields at
 their own discretion. However, developers can leverage controls in the request
-that allow them to turn features for the unprepared document on and off. 
+that allow them to turn features for the unprepared document on and off.
 
 Setting `is_document_preparation_needed` to `true` provides a `prepare_url` in
 the response. Visiting this link in your browser allows you to complete document
-preparation and send the request in the UI. 
+preparation and send the request in the UI.
 
 To learn more about document tags, please see our [support article][tags].
 
@@ -69,13 +76,13 @@ the original file type. As each signer completes the request, Box Sign will
 automatically add a new file version.
 
 File size limits are determined by your account type. Please see our
-[uploads guide][uploads] for more information. 
+[uploads guide][uploads] for more information.
 
 ## Parent folder
 
 The folder ID specified in the `parent_folder` body parameter determines the
 destination of the final signed document and [signing log][log]. This folder
-cannot be the All Files or root level, which is represented by folder ID `0`. 
+cannot be the All Files or root level, which is represented by folder ID `0`.
 
 ## Signers
 
@@ -87,14 +94,14 @@ signed document and [signing log][log].
 
 Signers do not need to have an existing Box account, nor create one, in order to
 sign documents. Unlike other API endpoints, signers are invited by email address
-and not Box `user_id`. 
+and not Box `user_id`.
 
 If necessary, signers can log in to Box before signing the request. In such
 case set the parameter `login_required` to `true` for signers. If the signer
 does not have an existing account, they will have an option to create a free
 Box account.
 
-<Message type='warning'> 
+<Message type='warning'>
 Box Sign will only attempt to send signing emails to the email addresses
 provided for signers in the request. For Box users, this does not include email
 aliases unless specified. Please double check to ensure all provided signer
@@ -103,7 +110,7 @@ email addresses are valid.
 
 ### Inputs
 
-The `inputs` parameter represents placeholders that the user can interact with. 
+The `inputs` parameter represents placeholders that the user can interact with.
 The `document_tag_id` parameter can be populated with data you want to
 pass when creating a sign request.
 
@@ -112,7 +119,7 @@ pass when creating a sign request.
 You can create a sign request using a template.
 To do so, you must provide the `template_id` parameter.
 See [this guide][templates] to learn more about using templates
-when creating sign requests. 
+when creating sign requests.
 
 ## Redirects
 
@@ -130,7 +137,7 @@ settings for the rest.
 If you don't configure any redirect URLs
 Box Sign will redirect signers to a default page.
 
-<Message type='warning'> 
+<Message type='warning'>
 The default page includes the following note:
 "Once the document has been completed by all parties,
 a limited-time link to a finalized copy will be be emailed to you,
@@ -148,7 +155,7 @@ request at the same time.
 Initially, only the signer(s) with the lowest assigned `order` number will
 receive a Box Sign request email. Once they sign, the following user(s) will
 an email and so on. Box Sign automatically adds a new version of the
-document to the `parent_folder` as each user signs.  
+document to the `parent_folder` as each user signs.
 
 If any signer declines, any remaining signers will not receive a Box Sign
 request email. The overall request is declined.
@@ -159,28 +166,19 @@ request email. The overall request is declined.
 
 ## Request status
 
-- `converting`: The file is converted to a `.pdf` for the signing process once
-  the sign request is sent.
-- `error_converting`: An issue was encountered while converting the file to a
-  `.pdf`.
-- `created`: If `document_preparation_is_needed` is set to `true`, but the
-  `prepare_url` has not yet been visited.
-- `sent`: The request was successfully sent, but no signer has interacted with
- it.
+- `converting`: The file is converted to a `.pdf` for the signing process once the sign request is sent.
+- `error_converting`: An issue was encountered while converting the file to a `.pdf`.
+- `created`: If `document_preparation_is_needed` is set to `true`, but the `prepare_url` has not yet been visited.
+- `sent`: The request was successfully sent, but no signer has interacted with it.
 - `error_sending`: An issue was encountered while sending the request.
-- `viewed`: Once the first, or only, signer clicks on **Review document** in
-  the signing email or visits the signing URL.
+- `viewed`: Once the first, or only, signer clicks on **Review document** in the signing email or visits the signing URL.
 - `downloaded`: The signing document was downloaded by signer.
 - `signed`: All signers completed the request.
-- `signed and downloaded`: The signing document was signed and downloaded by
- signer.
+- `signed and downloaded`: The signing document was signed and downloaded by signer.
 - `declined`: If any signer declines the request.
 - `cancelled`: If the request is cancelled via UI or API.
-- `expired`: The date of expiration has passed with outstanding, incomplete
-  signatures.
-- `finalizing`: If all signers have signed the request,
-   but the final document with signatures and the signing
-   log has not been generated yet.
+- `expired`: The date of expiration has passed with outstanding, incomplete signatures.
+- `finalizing`: If all signers have signed the request, but the final document with signatures and the signing log has not been generated yet.
 - `error_finalizing`: If the `finalizing` phase did not complete successfully.
 
 Encountering an error status requires creating a new sign request to retry.

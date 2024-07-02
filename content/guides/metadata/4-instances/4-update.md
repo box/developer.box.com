@@ -96,7 +96,7 @@ To add a new value on a template, use the `add` operation.
 This will add the `name` field with a value of `Model 3` . Before this
 operation, the template did not have a value for the `name` field.
 
-```js
+```json
 {
   // "name": null, // old value
   "name": "Model 3", // new value
@@ -134,7 +134,7 @@ To replace a value on a template, use the `replace` operation.
 This will replace the `name` field value `Model 3` with a new value of `Model
 4`.
 
-```js
+```json
 {
   // "name": "Model 3", # Old value
   "name": "Model 3", // new value
@@ -173,7 +173,7 @@ This will add the `displayName` field with a value that matches the value of the
 `name` field. Before this operation, the template did not have a value for the
 `displayName` field.
 
-```js
+```json
 {
   "name": "Model 3",
   "displayName": "Model 3", // new value, copied from the name
@@ -212,7 +212,7 @@ This will add the `displayName` field with a value that matches the value of the
 `name` field. Before this operation, the template did not have a value for the
 `displayName` field. After this operation, the `name` field no longer exists.
 
-```js
+```json
 {
   // "name": "Model 3", // old value, no longer present now
   "displayName": "Model 3", // new value, copied from the name
@@ -248,7 +248,7 @@ To remove a value from the metadata instance, use the `remove` operation.
 
 This will remove the `name` field completely from the metadata instance.
 
-```js
+```json
 {
   // "name": "Model 3", // old value, no longer present now
   "category": "SUVs",

@@ -16,26 +16,24 @@ a file or folder. To apply this template you will need the `scope` and
 `templateKey` of the template, as well as the ID of the item to apply the
 template to.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X POST https://api.box.com/2.0/files/12345/metadata/enterprise/customerInfo \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '{
-       "name": "Box, Inc",
-       "industry": "Technology",
-       "tav": 1000000
-     }'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '{
+      "name": "Box, Inc",
+      "industry": "Technology",
+      "tav": 1000000
+    }'
 ```
 
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var metadataValues = new Dictionary<string, object>()
 {
     { "name", "Box, Inc" },
@@ -54,23 +52,23 @@ Dictionary<string, object> metadata = await client.MetadataManager
 BoxFile file = new BoxFile(api, "12345");
 
 file.createMetadata(
-  "customerInfo",
-  "enterprise",
-  new Metadata()
-    .add("name", "Box, Inc")
-    .add("industry", "Technology")
-    .add("tav", 100000)
+    "customerInfo",
+    "enterprise",
+    new Metadata()
+        .add("name", "Box, Inc")
+        .add("industry", "Technology")
+        .add("tav", 100000)
 );
 ```
 
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 metadata = {
-  'name': 'Box, Inc',
-  'industry': 'Technology',
-  'tav': 1000000
+    'name': 'Box, Inc',
+    'industry': 'Technology',
+    'tav': 1000000
 }
 
 client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo').set(metadata)
@@ -81,16 +79,16 @@ client.file(file_id='11111').metadata(scope='enterprise', template='customerInfo
 
 ```js
 client.files.addMetadata(
-  '12345', 
-  client.metadata.scopes.ENTERPRISE, 
-  "customerInfo", 
-  {
-    name: "Box, Inc",
-    industry: "Technology",
-    tav: 1000000
-  }
+    '12345',
+    client.metadata.scopes.ENTERPRISE,
+    "customerInfo",
+    {
+        name: "Box, Inc",
+        industry: "Technology",
+        tav: 1000000
+    }
 ).then(metadata => {
-  // ...
+    // ...
 });
 ```
 
@@ -120,7 +118,5 @@ The API will return the newly created metadata instance.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've applied metadata to a file</Next>

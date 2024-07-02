@@ -6,7 +6,7 @@ required_guides: []
 related_resources: []
 alias_paths:
   - /docs/install-the-sdk
-  - /docs/open-source-projects	
+  - /docs/open-source-projects
   - /docs/community-supported-projects
 ---
 
@@ -14,10 +14,9 @@ alias_paths:
 
 Box offers a set of SDKs
 you can use to build your application.
-The next generation
-Python and Typescript SDKs are the
+The next generation .NET SDK is the
 newest addition to the set.
-They are still a beta feature, but you can
+It is still a beta feature, but you can
 give them a try to explore all the
 features they bring along.
 
@@ -38,41 +37,27 @@ these projects to full parity.
 
 ## Next generation SDKs
 
-The latest generation Box Python SDK and Box Typescript
-SDK are designed to elevate the developer
+The latest generation Box Python SDK, Box Typescript
+SDK and .NET SDK are designed to elevate the developer
 experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-New Typescript and Python SDKs are in a Public Beta phase.
+.NET SDK is in a Public Beta phase.
 </Message>
 
 Here's what you can expect from the new SDKs:
 
-* **Full API Support**: New Box SDKs empower developers
- with complete coverage of the Box API ecosystem.
- You can access all the latest features and
-functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development
-approach allows for adding Box APIs to
-SDKs at a much faster pace (in a matter of days). 
-This means you can leverage the most up-to-date
-features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters
-are documented directly in the source code of the SDK
-so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced
-convenience methods cover various aspects such as
-authentication, chunk uploads, exponential back-offs, 
-automatic retries, type checkers which
-help to ensure that you’re using variables correctly, 
-and much more.
+* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+* **Embedded Documentation**:  All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 | Platform                          | Maintained?  | API Parity |
 | --------------------------------- | ----------- | ------- |
-| [Python SDK][pythongensdk] (Beta)      | Yes         | Full    |
-| [Typescript SDK][tsgensdk] (Beta)      | Yes         | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)      | Yes         | Full    |
+| [Python Gen SDK][pythongensdk]        | Yes         | Full    |
+| [Typescript Gen SDK][tsgensdk]        | Yes         | Full    |
+| [.NET SDK][dotnetgensdk] (Beta)   | Yes         | Full    |
 
 ## SDKs
 

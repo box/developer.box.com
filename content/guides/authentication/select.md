@@ -19,15 +19,11 @@ Box Application that you've configured in the developer console.
 
 The following authorization methods are available to each Box application type.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
-| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         |
-| [Limited Access App][la-app] | No                  | Yes  | No                  | Yes        |
+| [Custom App][custom-app]     | Yes                 | Yes  | Yes                 | No         | 
+| [Limited Access App][la-app] | No                  | No  | No                  | Yes        |
 | [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
-
-<!-- markdownlint-enable line-length -->
 
 ## Client-side
 
@@ -48,8 +44,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 - work with users who have existing Box accounts
 - use Box for identity management, so users know they are using Box
-- store data within each user account vs. within an application's Service
-  Account
+- store data within each user account vs. within an application's Service Account
 
 </Message>
 
@@ -127,8 +122,7 @@ application's Service Account.
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- work in an environment that either has no user model, or has users without Box
-  accounts
+- work in an environment that either has no user model, or has users without Box accounts
 - use their own identity management system
 - do not want users to know they are using Box
 - store data within the application's Service Account and not a user's account
@@ -144,8 +138,6 @@ for apps that:
 The following is a quick overview of the key difference between client-side and
 server-side authentication.
 
-<!-- markdownlint-disable line-length -->
-
 |                                   | OAuth 2.0 | JWT | Client Credentials | App Tokens |
 | --------------------------------- | --------- | --- | ------------------ | ---------- |
 | Requires user involvement?        | Yes       | No  | No                 | No         |
@@ -153,8 +145,6 @@ server-side authentication.
 | Can act on behalf of other users? | Yes       | Yes | Yes                | No         |
 | Do users see Box?                 | Yes       | No  | No                 | No         |
 | Can create App Users?             | No        | Yes | Yes                | No         |
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 

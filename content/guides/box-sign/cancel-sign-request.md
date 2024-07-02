@@ -1,7 +1,10 @@
 ---
-rank: 4
+rank: 3
+related_endpoints:
+  - post-sign-requests-id-cancel
+related_guides:
+  - box-sign/create-sign-request
 ---
-
 # Cancel Box Sign Request
 
 A Box Sign request, that has not yet been signed or declined, can be cancelled

@@ -26,31 +26,29 @@ to `Company Name` instead. By using the `editField` operation we can change the
 `displayName` and the `key` of the field on the template and on every instance
 of the template that might be applied to a file or folder.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='cURL'>
 
-```sh
+```curl
 curl -X PUT https://api.box.com/2.0/metadata_templates/enterprise/blueprintTemplate/schema \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -H "content-type: application/json" \
-     -d '[
-       {
-         "op": "editField",
-         "fieldKey": "name",
-         "data": {
-           "key": "company_name",
-           "displayName": "Company Name"
-         }
-       }
-     ]'
+    -H "authorization: Bearer <ACCESS_TOKEN>" \
+    -H "content-type: application/json" \
+    -d '[
+      {
+        "op": "editField",
+        "fieldKey": "name",
+        "data": {
+          "key": "company_name",
+          "displayName": "Company Name"
+        }
+      }
+    ]'
 ```
 
   </Tab>
   <Tab title='.NET'>
 
-```c#
+```csharp
 var updates = new List<BoxMetadataTemplateUpdate>()
 {
   new BoxMetadataTemplateUpdate()
@@ -82,7 +80,7 @@ MetadataTemplate.updateMetadataTemplate(api, "enterprise", "customerData", updat
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 template = client.metadata_template('enterprise', 'customerData')
 updates = template.start_update()
 updates.edit_field('name', key='company_name', display_name="Company Name")
@@ -94,22 +92,22 @@ template.update_info(updates)
 
 ```js
 var operations = [
-  {
-    op: 'editField',
-    fieldKey: 'name',
-    data: { 
-      key: 'company_name',
-      displayName: "Company Name" 
+    {
+        op: 'editField',
+        fieldKey: 'name',
+        data: {
+            key: 'company_name',
+            displayName: "Company Name"
+        }
     }
-  }
 ];
 
 client.metadata.updateTemplate(
-  'enterprise', 
-  'customerData', 
-  operations
+    'enterprise',
+    'customerData',
+    operations
 ).then(template => {
-  //.. 
+    //..
 });
 ```
 
@@ -177,7 +175,5 @@ created in previous steps would now look something like this.
   "$canEdit": true
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 <Next>I've updated metadata to a file</Next>

@@ -45,8 +45,8 @@ package](https://www.npmjs.com/package/box-annotations).
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
@@ -89,33 +89,31 @@ Elements](g://embed/ui-elements/scopes).
 
 ```js
 const annotator = new annotatorConf.CONSTRUCTOR({
-  annotator,
-  apiHost,
-  token,
-  container,
-  file: {
-    id,
-    file_version: {
-      id
+    annotator,
+    apiHost,
+    token,
+    container,
+    file: {
+        id,
+        file_version: {
+            id
+        },
+        permissions
     },
-    permissions
-  },
-  isMobile,
-  hasTouch,
-  locale,
-  modeButtons: {
-    // Annotation mode buttons, i.e. point, draw, etc
-    point: {
-      // Accessibilty message for the point annotation mode button
-      title: "Point annotation mode",
-      // CSS selector for the point annotation mode button
-      selector: ".bp-btn-annotate-point"
+    isMobile,
+    hasTouch,
+    locale,
+    modeButtons: {
+        // Annotation mode buttons, i.e. point, draw, etc
+        point: {
+          // Accessibilty message for the point annotation mode button
+          title: "Point annotation mode",
+          // CSS selector for the point annotation mode button
+          selector: ".bp-btn-annotate-point"
+        }
     }
-  }
 });
 ```
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter              | Default | Description                                                                                            |
 | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
@@ -160,8 +158,6 @@ const annotator = new annotatorConf.CONSTRUCTOR({
 | User wants basic preview functionality + ability to view all annotations + ability to edit own annotations     | `base_preview` + `annotation_view_all` + `annotation_edit` |
 | User wants basic preview functionality + ability to view only their own annotations                            | `base_preview` + `annotation_view_self`                    |
 
-<!-- markdownlint-enable line-length -->
-
 ## Enabling/Disabling Annotations and Annotation Types
 
 Annotation types can be selectively turned off through preview options. Viewer
@@ -171,7 +167,7 @@ set up the Preview instances that are used with Box Annotations here.
 
 ```js
 preview.show(..., {
-  showAnnotations: Boolean
+    showAnnotations: Boolean
 });
 ```
 
@@ -202,20 +198,20 @@ annotations on Document viewer:
 
 ```js
 preview.show(fileId, token, {
-  showAnnotations: true,
-  viewers: {
-    Image: {
-      annotations: {
-        enabled: false
-      }
-    },
-    Document: {
-      annotations: {
-        enabled: true,
-        enabledTypes: ["point"]
-      }
+    showAnnotations: true,
+    viewers: {
+        Image: {
+            annotations: {
+                enabled: false
+            }
+        },
+        Document: {
+            annotations: {
+                enabled: true,
+                enabledTypes: ["point"]
+            }
+        }
     }
-  }
 });
 ```
 
@@ -227,31 +223,19 @@ possible annotators.
 
 ## Additional Methods
 
-<!-- markdownlint-disable line-length -->
-
 - `annotator.init()` initializes the annotator.
-- `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the
-  current annotation mode is enabled for the current viewer/annotator.
-- `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the
-  annotate button for the specified annotation mode.
-- `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the
-  annotation button element.
+- `annotator.isModeAnnotatable(/* String */ type)` returns whether or not the current annotation mode is enabled for the current viewer/annotator.
+- `annotator.showModeAnnotateButton(/* String */ currentMode)` shows the annotate button for the specified annotation mode.
+- `annotator.getAnnotateButton(/* String */ annotatorSelector)` gets the annotation button element.
 - `annotator.showAnnotations()` fetches and shows saved annotations.
 - `annotator.hideAnnotations()` hides annotations.
-- `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a
-  specified page.
+- `annotator.hideAnnotationsOnPage(/* number */ pageNum)` hides annotations on a specified page.
 - `annotator.setScale()` sets the zoom scale.
-- `annotator.toggleAnnotationHandler()` toggles annotation modes on and off.
-  When an annotation mode is on, annotation threads will be created at that
-  location.
+- `annotator.toggleAnnotationHandler()` toggles annotation modes on and off. When an annotation mode is on, annotation threads will be created at that location.
 - `annotator.disableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` disables the specified annotation mode.
 - `annotator.enableAnnotationMode(/* String */ mode, /* HTMLElement */ buttonEl)` enables the specified annotation mode.
-- `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the
-  annotated element in the viewer.
-- `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])`
-  creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
-
-<!-- markdownlint-enable line-length -->
+- `annotator.getAnnotatedEl(/* HTMLElement */ containerEl)` determines the annotated element in the viewer.
+- `annotator.createAnnotationThread(/* Annotation[] */ annotations, /* Object */ location, /* String */ [annotation type])` creates the proper type of annotation thread, adds it to the in-memory map, and returns it.
 
 ## Events
 
@@ -263,14 +247,14 @@ called, otherwise events can be missed.
 /* global BoxAnnotations */
 const boxAnnotations = new BoxAnnotations();
 const annotatorConf = boxAnnotations.determineAnnotator(
-  options,
-  disabledAnnotationTypes
+    options,
+    disabledAnnotationTypes
 );
 
 // Construct and init annotator
 const annotator = new annotatorConf.CONSTRUCTOR(options);
 var listener = value => {
-  // Do something with value
+    // Do something with value
 };
 
 // Attach listener before calling show otherwise events can be missed
@@ -285,14 +269,9 @@ annotator.removeListener(EVENTNAME, listener);
 
 `EVENTNAME` can be one of the following
 
-- `annotator` event will be triggered when we have the annotator instance first
-  available. Box Annotations trigger this event before `load` so that clients can
-  attach their listeners before the `load` event is triggered from Box Content
-  Preview.
-- `annotationsfetched` event will be triggered when annotations have been fetched
-  from the Box API.
-- `annotationmodeenter` event will be triggered on when an annotation mode is
-  entered. The event data will contain:
+- `annotator` event will be triggered when we have the annotator instance first available. Box Annotations trigger this event before `load` so that clients can attach their listeners before the `load` event is triggered from Box Content Preview.
+- `annotationsfetched` event will be triggered when annotations have been fetched from the Box API.
+- `annotationmodeenter` event will be triggered on when an annotation mode is entered. The event data will contain:
 
 ```js
 {
@@ -456,56 +435,56 @@ at the Preview level in Box Content Preview, with event data containing:
 
 ```js
 preview.addListener("annotator", viewer => {
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to viewers
 preview.addListener("load", data => {
-  var viewer = data.viewer;
-  viewer.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var viewer = data.viewer;
+    viewer.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 // Event listeners can be attached to annotators
 preview.addListener("load", data => {
-  var annotator = data.viewer.annotator;
-  annotator.addListener("annotationsfetched", () => {
-    // Do something when annotations are fetched on a preview
-  });
+    var annotator = data.viewer.annotator;
+    annotator.addListener("annotationsfetched", () => {
+        // Do something when annotations are fetched on a preview
+    });
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.event === "annotationsfetched") {
-    // Do something when annotations are fetched on a preview
-  } else if (data.event === "annotationerror") {
-    // Do something different when an annotation error has occurred
-  } else {
-  }
+    if (data.event === "annotationsfetched") {
+        // Do something when annotations are fetched on a preview
+    } else if (data.event === "annotationerror") {
+        // Do something different when an annotation error has occurred
+    } else {
+    }
 });
 
 preview.addListener("annotatorevent", data => {
-  if (data.viewerName === "Image") {
-    if (data.event === "annotationsfetched") {
-      // Do something when annotations are fetched on an image preview
+    if (data.viewerName === "Image") {
+        if (data.event === "annotationsfetched") {
+            // Do something when annotations are fetched on an image preview
+        }
+    } else if (data.viewerName === "MultiImage") {
+        if (data.event === "annotationsfetched") {
+            // Do something different when annotations are fetched on a multi-page image
+        }
+    } else {
     }
-  } else if (data.viewerName === "MultiImage") {
-    if (data.event === "annotationsfetched") {
-      // Do something different when annotations are fetched on a multi-page image
-    }
-  } else {
-  }
 });
 
 preview.addListener("annotationsfetched", data => {
-  if (data.viewerName === "Image") {
-    // Do something when annotations are fetched on an image preview
-  } else if (data.viewerName === "MultiImage") {
-    // Do something different when annotations are fetched on a multi-page image
-  } else {
-  }
+    if (data.viewerName === "Image") {
+        // Do something when annotations are fetched on an image preview
+    } else if (data.viewerName === "MultiImage") {
+        // Do something different when annotations are fetched on a multi-page image
+    } else {
+    }
 });
 ```
 
@@ -514,8 +493,6 @@ preview.addListener("annotationsfetched", data => {
 ### Thread Methods
 
 The following methods are available for the annotation threads.
-
-<!-- markdownlint-disable line-length -->
 
 | Method Name        | Explanation                                     | Method Parameters                                                                  |
 | ------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -527,8 +504,6 @@ The following methods are available for the annotation threads.
 | `hideDialog`       | Hides the appropriate indicator for this thread |                                                                                    |
 | `saveAnnotation`   | Saves an annotation locally and on the server   | {string} annotation type, {text} text of annotation to save                        |
 | `deleteAnnotation` | Deletes an annotation                           | {string} annotation ID, {boolean} whether or not to delete on server, default true |
-
-<!-- markdownlint-enable line-length -->
 
 ### Thread Events
 
@@ -545,8 +520,6 @@ All annotation threads trigger the following events. The event data will contain
 }
 ```
 
-<!-- markdownlint-disable line-length -->
-
 | Event Name                | Explanation                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `annotationpending`       | An annotation thread was created but has not yet been saved on the server.                                           |
@@ -558,8 +531,6 @@ All annotation threads trigger the following events. The event data will contain
 | `annotationdeleteerror`   | An error occurs while deleting an annotation on either a new or existing thread.                                     |
 | `annotationcreateerror`   | An error occurs while posting an annotation on either a new or existing thread.                                      |
 
-<!-- markdownlint-enable line-length -->
-
 See the **Events** section above for example event usage.
 
 ## Annotation Dialog
@@ -567,8 +538,6 @@ See the **Events** section above for example event usage.
 ### Dialog Methods
 
 The following methods are available for the annotation dialog.
-
-<!-- markdownlint-disable line-length -->
 
 | Method Name        | Explanation                               | Method Parameters                |
 | ------------------ | ----------------------------------------- | -------------------------------- |
@@ -580,8 +549,6 @@ The following methods are available for the annotation dialog.
 | `postAnnotation`   | Posts an annotation in the dialog         | {string} annotation text to post |
 | `position`         | Positions the dialog                      |                                  |
 
-<!-- markdownlint-enable line-length -->
-
 ## Supported Annotation Types
 
 Point annotations are supported on both document and image formats. Highlight
@@ -592,7 +559,7 @@ Supported document file extensions: `pdf`, `doc`, `docx`, `ppt`, `pptx`, `xlsx`,
 `xls`, `xlsm`.
 
 Supported image file extensions: `ai`, `bmp`, `dcm`, `eps`, `gif`, `idml`,
-`indd`, `indt`, `inx``png`, `ps`, `psd`, `svs`, `tga`, `tif`, `tiff`. 
+`indd`, `indt`, `inx``png`, `ps`, `psd`, `svs`, `tga`, `tif`, `tiff`.
 
 <!-- i18n-enable localize-links -->
 [filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview

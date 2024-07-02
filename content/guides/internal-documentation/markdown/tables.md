@@ -51,17 +51,13 @@ allow for long tables in code you might want to add some hints to the markdown
 linter to allow for long lines.
 
 ```md
-<!-- markdownlint-disable line-length -->
 | Header                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
-<!-- markdownlint-enable line-length -->
 ```
 
 <H>
-<!-- markdownlint-disable line-length -->
 | Header                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890abcdefghijklmnopqrstuvwxyz01234567890` |
-<!-- markdownlint-enable line-length -->
 </H>

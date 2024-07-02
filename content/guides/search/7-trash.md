@@ -10,13 +10,12 @@ By default, any content in the user's trash is ignored in the search results.
 To search the user's trash, the `trash_content` query parameter can be set to
 `trashed_only`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&trash_content=trashed_only" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -45,7 +44,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, trash_content="trashed_only")
 ```
 
@@ -54,18 +53,17 @@ client.search().query("sales", metadata_filters=metadata_search_filters, trash_c
 
 ```js
 client.search.query(
-  'sales',
-  {
-    trash_content: "trashed_only"
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        trash_content: "trashed_only"
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 
