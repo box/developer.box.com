@@ -13,13 +13,11 @@ alias_paths:
 The type of authorization your application can use depends on the type of
 Box Application that you've configured in the developer console.
 
-<CTA to="guide://applications/select">
+<CTA to="guide://applications/app-types/select">
   Learn how to select the application type for your app
 </CTA>
 
 The following authorization methods are available to each Box application type.
-
-<!-- markdownlint-disable line-length -->
 
 | Box Application Type         | Supports OAuth 2.0? | JWT? | Client Credentials? | App Token? |
 | ---------------------------- | ------------------- | ---- | ------------------- | ---------- |
@@ -27,15 +25,13 @@ The following authorization methods are available to each Box application type.
 | [Limited Access App][la-app] | No                  | No  | No                  | Yes        |
 | [Custom Skill][custom-skill] | No                  | No   | No                  | No         |
 
-<!-- markdownlint-enable line-length -->
-
 ## Client-side
 
 ### OAuth 2.0
 
 OAuth 2.0 requires the application to redirect end-users to their browser to
 login to Box and authorize the application to take actions on their
-behalf. 
+behalf.
 
 <ImageFrame center width="400" shadow border>
   ![Box OAuth 2.0 approval](./oauth2-grant.png)
@@ -48,8 +44,7 @@ Client-side authentication is the ideal authentication method for apps that:
 
 - work with users who have existing Box accounts
 - use Box for identity management, so users know they are using Box
-- store data within each user account vs. within an application's Service
-  Account
+- store data within each user account vs. within an application's Service Account
 
 </Message>
 
@@ -64,7 +59,7 @@ Client-side authentication is the ideal authentication method for apps that:
 Server-side authentication using JSON Web Tokens (JWT) does not require end-user
 interaction and, if granted the proper privileges, can be used to act on behalf
 of any user in an enterprise. Identity is validated using a JWT assertion and
-public/private keypair. 
+public/private keypair.
 
 <ImageFrame center shadow border>
 
@@ -93,8 +88,8 @@ that:
 
 Server-side authentication using Client Credentials Grant does not require
 end-user interaction and, if granted the proper privileges, can be used to act
-on behalf of any user in an enterprise. Identity is validated using the 
-application's client ID and client secret. 
+on behalf of any user in an enterprise. Identity is validated using the
+application's client ID and client secret.
 
 <Message>
   # When to use a Client Credentials Grant?
@@ -127,8 +122,7 @@ application's Service Account.
 Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
-- work in an environment that either has no user model, or has users without Box
-  accounts
+- work in an environment that either has no user model, or has users without Box accounts
 - use their own identity management system
 - do not want users to know they are using Box
 - store data within the application's Service Account and not a user's account
@@ -144,8 +138,6 @@ for apps that:
 The following is a quick overview of the key difference between client-side and
 server-side authentication.
 
-<!-- markdownlint-disable line-length -->
-
 |                                   | OAuth 2.0 | JWT | Client Credentials | App Tokens |
 | --------------------------------- | --------- | --- | ------------------ | ---------- |
 | Requires user involvement?        | Yes       | No  | No                 | No         |
@@ -153,8 +145,6 @@ server-side authentication.
 | Can act on behalf of other users? | Yes       | Yes | Yes                | No         |
 | Do users see Box?                 | Yes       | No  | No                 | No         |
 | Can create App Users?             | No        | Yes | Yes                | No         |
-
-<!-- markdownlint-enable line-length -->
 
 <Message>
 
@@ -167,6 +157,6 @@ authentication the token defaults to the application's Service Account.
 
 </Message>
 
-[custom-app]: g://applications/custom-apps
-[custom-skill]: g://applications/custom-skills
-[la-app]: g://applications/limited-access-apps
+[custom-app]: g://applications/app-types/custom-apps
+[custom-skill]: g://applications/app-types/custom-skills
+[la-app]: g://applications/app-types/limited-access-apps

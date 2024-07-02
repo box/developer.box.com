@@ -3,43 +3,54 @@ rank: 0
 related_guides:
 - authentication
 - authorization
-- api-calls 
+- api-calls
 ---
 
-# Getting Started
+# Start Here
 
-Our documentation is divided into four main sections: 
+Our documentation is divided into five main sections:
 
-- **API Reference**: Endpoint documentation
-- **Guides**: Information about endpoint usage not covered by reference
-    documentation
-- **Quick Starts**: Step by step tutorials for specific API features
-- **SDK and Tools**: Information about official Box SDKs and tooling
+- **Learn Box Platform**: A getting started walk through of all things Platform.
+- **Developer Guides**: In-depth documentation on developer portal, API working, usage of Box functionalities.
+- **API Reference**: A list of API endpoints and resources, with request and response examples.
+- **SDK and Tools**: A list of official Box SDKs and tools.
+- **Sample Code Catalog**: Consolidated list of several code repositories.
 
-If you are new to development with the Box API, we recommend following the steps
-below to guide you through the main concepts and content.
+If you are new to development with the Box API, first familiarize
+yourself with the content in the [Learn Box Platform][learn] section.
 
-If you have questions, checkout our [forum][forum-link].
+In this section, you will:
 
-1. Evaluate if your [use case][use-case] is a good fit for Box
-2. Understand the different [types of Box users][users]
-3. Explore [user models][user-model]
-4. Explore common [architecture patterns][patterns]
-5. Select the proper [application type][app-type] for your use case
-6. Select the proper [authentication method][authentication] for your use case
-7. Configure your application
-8. Obtain Admin [authorization][authorize] of your application (if applicable)
-9. Explore development [tools][tools] 
-10. Explore [endpoints][endpoints] and make API calls using [common values][cv]
+- learn the [Box Platform concepts][box-platform-101],
+- evaluate if your [use case][use-case] is a good fit for Box,
+- understand the different [types of Box users][user-types],
+- select the applicable [application type][application-types],
+- check the available [authentication methods][authentication] and choose the best one for your use case,
+- find out where you can get [support][support],
+- check the [tools][tooling] needed for developing applications in Box.
 
-[use-case]: g://getting-started/use-cases
-[users]: g://getting-started/user-types
-[patterns]: g://getting-started/architecture-patterns
-[user-model]: g://getting-started/user-models
-[app-type]: g://applications
-[authentication]: g://authentication
-[authorize]: g://authorization/custom-app-approval
-[tools]: g://tooling
-[endpoints]: https://developer.box.com/reference
-[cv]: g://getting-started/locating-values
-[forum-link]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+After learning the basics, we recommend you to follow the steps
+below.
+
+1. Create your first [Box application][box-app].
+2. Configure your application.
+3. Explore [endpoints][endpoints] and make API calls using [common values][cv].
+4. [Publish][publish-app] your application.
+
+If you have any questions, checkout our [forum][forum-link].
+
+[learn]: page://platform
+<!-- i18n-enable localize-links -->
+[box-platform-101]: p://platform/box-platform-101
+[use-case]: p://platform/use-cases
+[user-types]: p://platform/user-types
+[application-types]: p://platform/application-types
+[authentication]: p://platform/authentication-methods
+[support]: p://platform/support
+[tooling]: p://platform/tools
+[box-app]: g://getting-started/first-application
+[endpoints]: https://developer.box.com/reference/
+[cv]: p://platform/appendix/locating-values
+[publish-app]: g://getting-started/publish-app
+<!-- i18n-disable localize-links -->
+[forum-link]: https://forum.box.com

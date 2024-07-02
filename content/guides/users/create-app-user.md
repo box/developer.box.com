@@ -28,13 +28,9 @@ not have credentials to log in to `box.com` directly.
 
 Typically app users are created for a number of different patterns:
 
-* To represent a single application user or group of users without a
-`box.com` account.
-* To represent an application process, such as having the app user monitor all
-events within an enterprise.
-* To provide the application with the ability to completely control the file
-and folder structure of a user account without the possibility of that content
-being modified through the `box.com` web app.
+* To represent a single application user or group of users without a `box.com` account.
+* To represent an application process, such as having the app user monitor all events within an enterprise.
+* To provide the application with the ability to completely control the file and folder structure of a user account without the possibility of that content being modified through the `box.com` web app.
 
 ## Creating a New App User
 

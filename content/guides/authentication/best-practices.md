@@ -9,28 +9,27 @@ alias_paths: []
 
 # Best Practices
 
-## Client secret security 
+## Client secret security
 
 Your client secret is confidential and needs to be protected. Because this is
 how we securely identify an application's identity when obtaining an
 Access Token, you do not want to freely distribute a client secret. This
 includes via email, public forums and code repositories, distributed native
-applications, or client-side code. 
+applications, or client-side code.
 
 ## Cache tokens
 
 Because fetching new tokens is expensive, we recommend using a token cache
-to prevent unnecessary requests. 
+to prevent unnecessary requests.
 
 After retrieving a token, store it in an in-memory cache, like Memcached, or a
 built-in ASP.NET cache service. By default, Access Tokens are valid for 60
 minutes, but we recommend setting the expiration time to around 50 minutes to
-allow for a buffer. 
+allow for a buffer.
 
-When you need a token, first check the cache for a valid token. If the token 
-expired, get a new one and store it in the cache for 50 minutes. 
+When you need a token, first check the cache for a valid token. If the token
+expired, get a new one and store it in the cache for 50 minutes.
 
-<!-- markdownlint-disable line-length -->
 ```ruby
 def self.user_client(user_id)
     access_token=Rails.cache.fetch("box_tokens/user/#{user_id}", :expires_in => 50.minutes) do
@@ -42,33 +41,32 @@ def self.user_client(user_id)
     Boxr::Client.new(access_token)
 end
 ```
-<!-- markdownlint-enable line-length -->
 
 <Message tip>
-  Official Box SDKs use token caching. 
+  Official Box SDKs use token caching.
 </Message>
 
 ## Expired tokens
 
 Expired tokens return a 401: Unauthorized error. This error should be handled
-to refresh the token. 
+to refresh the token.
 
 ## Downscope tokens
 
 It is important to follow the principle of least privilege when thinking about
 Access Tokens. This can be accomplished through [downscoping][downscope], where
 a fully scoped Access Token is exchanged for a more restricted Access Token that
-can then be deployed to client-side code, mobile environments, or UI tools. 
+can then be deployed to client-side code, mobile environments, or UI tools.
 
 ```java
-//Define resource/scopes that downscoped token has access to 
+//Define resource/scopes that downscoped token has access to
 String resource = "https://api.box.com/2.0/files/RESOURCE_ID";
 List<String> scopes = new ArrayList<String>();
 scopes.add("base_preview");
 scopes.add("item_download");
 
 //Preform token exchange
-ScopedToken downscopedToken = 
+ScopedToken downscopedToken =
     client.getLowerScopedToken(scopes,resource);
 
 //Downscoped token available in downscopedToken.getAccessToken()

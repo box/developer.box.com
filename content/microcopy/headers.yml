@@ -5,12 +5,30 @@ primary:
       // text:
       text: Documentation
 
+    quickstarts:
+      // text:
+      text: Getting Started
+
     community:
       // text:
       text: Community
 
       //url:
       url: https://forum.box.com
+
+    learn:
+      // text: The text for the link to the learn section
+      text: Box Platform
+
+      //url: The URL to the learn section
+      url: /platform/
+
+    learn-sign:
+      // text: The text for the link to the learn section
+      text: Box Sign
+
+      //url: The URL to the learn section
+      url: /sign/
 
     get_started:
       // text: The text for the link to the old Get Started guides
@@ -94,17 +112,18 @@ primary:
       text: Featured
 
     title:
-      text: Sample Code Catalog
+      text: Box AI Developer Zone
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 80+ open-source repositories
-        in various programming languages.
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
 
     cta:
-      text:
-        Browse sample code
+      text: |-
+        Try it out!
+      url:
+        /ai-dev-zone/
 
 secondary:
   images:
@@ -172,13 +191,12 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Join the first BoxWorks Hackathon for Good - customers,
-      partners, and the developer community are welcome to participate
-      in the 48 hour Hack to benefit The Nature Conservancy.
+      Add the power of the Box AI API to your custom apps at
+      Content Cloud Summit on May 15
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://box.com/hack4good"
+    href: "https://events.box.com/series/content-cloud-summit-2024/landing_page"
 
     // cta: |-
       The text of the CTA

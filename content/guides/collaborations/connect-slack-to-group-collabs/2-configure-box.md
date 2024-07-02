@@ -32,22 +32,15 @@ collaborators to files and folders in Box.
   the following steps.
 
   1. Go to the [Developer Console][devconsole]
-  1. Select **Create New App**
-  1. Select **Custom App** as the type of application to create, and click
-     **Next**
-  1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-     **Next**
-  1. Give your Box app a unique name and click **Create App**
-  1. Go to the app's configuration by clicking **View Your App**.
-  1. Scroll down to **Application Access** and ensure that **Enterprise** is
-     selected.
-  1. Scroll to the **Application Scopes** section of the same screen
-     and ensure that at least the following scopes are enabled:
-     **Read and write all files and folders stored in Box**, **Manage users**,
-     and **Manage groups**.
-  1. Under **Advanced Features** ensure that **Perform Actions as Users** is
-     enabled to perform actions on behalf of Box users.
-  1. At the top of the page click the button to **Save Changes**
+  2. Select **Create New App**
+  3. Select **Custom App** as the type of application to create, and click **Next**
+  4. Select **OAuth 2.0 with JWT** as the authentication method, and click **Next**
+  5. Give your Box app a unique name and click **Create App**
+  6. Go to the app's configuration by clicking **View Your App**.
+  7. Scroll down to **Application Access** and ensure that **Enterprise** is selected.
+  8. Scroll to the **Application Scopes** section of the same screen and ensure that at least the following scopes are enabled: **Read and write all files and folders stored in Box**, **Manage users**, and **Manage groups**.
+  9. Under **Advanced Features** ensure that **Perform Actions as Users** is enabled to perform actions on behalf of Box users.
+  10. At the top of the page click the button to **Save Changes**
 
   <Message type='warning'>
     # App approval
@@ -69,20 +62,18 @@ collaborators to files and folders in Box.
   following options are set in the **Configuration** section of your
   application.
 
-* Authentication Method: Should be set to OAuth 2.0 with JWT (Server
-Authentication).
+* Authentication Method: Should be set to OAuth 2.0 with JWT (Server Authentication).
 * Application Scopes: Set at least the following scopes.
-  * Read and write all files and folders stored in Box
-  * Manage users
-  * Manage groups
-* Advanced Features: Both options should be enabled to
-  perform actions as users and generate user access tokens.
+    * Read and write all files and folders stored in Box
+    * Manage users
+    * Manage groups
+* Advanced Features: Both options should be enabled to perform actions as users and generate user access tokens.
 
   <Message type='warning'>
     # App approval
 
     Once the application is updated it will need to be re-approved by an
-    enterprise admin before you will be able to make calls to any of the Box 
+    enterprise admin before you will be able to make calls to any of the Box
     APIs that need any of the new permissions.
 
     Follow [this guide](g://authorization/custom-app-approval/) to have the
@@ -108,10 +99,8 @@ application.
 
 ## Summary
 
-* You created a new, or are using an existing, Box app which is approved by an
- enterprise admin.
-* You downloaded your application configuration file and stored it in a location
- accessible by your application.
+* You created a new, or are using an existing, Box app which is approved by an enterprise admin.
+* You downloaded your application configuration file and stored it in a location accessible by your application.
 
 <Observe option='box.app_type' value='use_own,create_new'>
   <Next>I downloaded my application configuration file</Next>

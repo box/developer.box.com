@@ -2,8 +2,8 @@
 rank: 5
 related_endpoints: []
 related_guides:
-  - applications/select
-  - getting-started/user-types
+  - applications/app-types/select
+  - ../pages/platform/user-types
   - authentication/select
 required_guides:
   - authentication/app-token/app-token-setup
@@ -33,12 +33,10 @@ Server-side authentication with App Tokens is the ideal authentication method
 for apps that:
 
 - Want to leverage Box's preview services via [Box View][box-view]
-- Work in an environment that either has no user model, or has users that don't
-  have Box accounts
+- Work in an environment that either has no user model, or has users that don't have Box accounts
 - Want to use their own identity system
 - Don't want users to have to know that they are using Box
-- Want to store data in the application's Service Account and not a user's
-  account
+- Want to store data in the application's Service Account and not a user's account
 
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account
 [box-view]: g://embed/box-view
