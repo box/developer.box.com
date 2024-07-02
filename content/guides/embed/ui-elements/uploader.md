@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-uploader
   - /docs/content-uploader
 ---
@@ -22,14 +22,6 @@ Upload](e://post-files-upload-sessions) API.
 
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
-
-<Message>
-  # Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
 
 ## Authentication
 
@@ -137,8 +129,6 @@ uploader.removeListener(eventName, listener);
 uploader.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                  |
@@ -180,8 +170,6 @@ uploader.removeAllListeners();
 | `upload`   | File          | Fired when a single file is successfully uploaded. Event data will be a File Object.                                                              |
 | `error`    | Object        | Fired when a single file has an upload error. Event data will be an object with properties file from the File Web API and the error object error. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -197,8 +185,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 
-<!-- markdownlint-disable line-length -->
-
 | Scope Name    | Permissions granted                                                                    |
 | ------------- | -------------------------------------------------------------------------------------- |
 | `base_upload` | Allows upload into the folder specific under "resource" of the Token Exchange request. |
@@ -208,8 +194,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | Scenario                                   | Scopes        |
 | ------------------------------------------ | ------------- |
 | User wants to upload files to a Box folder | `base_upload` |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

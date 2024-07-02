@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - delete_webhooks_id
 required_guides:

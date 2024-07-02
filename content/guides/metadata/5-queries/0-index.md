@@ -1,8 +1,7 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
-
 # Metadata queries
 
 A metadata query provides a way to find files and

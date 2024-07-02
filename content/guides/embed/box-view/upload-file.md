@@ -23,13 +23,13 @@ the APIs, you need to use the client ID and App Token that are generated
 during [application setup](guide://embed/box-view/setup) to authenticate your
 application.
 
-<CTA to='guide://authentication/app-token/'>
+<CTA to='guide://authentication/app-token'>
   Authenticate your application
 </CTA>
 
 Once an authenticated client has been created, it may be used to upload files
 directly to the App Token application for conversion.
 
-<CTA to='guide://uploads/direct/file/'>
+<CTA to='guide://uploads/direct/file'>
   Upload files to Box
 </CTA>

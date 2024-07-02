@@ -86,7 +86,6 @@ in your folder in the response **Body** tab in the bottom half of the screen.
 ## Summary
 
 * You selected the Postman environment to use for making API calls to Box
-* You made your first API call to Box, requesting the folder items for your
-  user's root folder.
+* You made your first API call to Box, requesting the folder items for your user's root folder.
 
 <Next>I made an API call</Next>

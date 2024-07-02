@@ -77,147 +77,147 @@ const marketingManagersGroupName = "Marketing Managers";
 const marketingProjectManagersGroupName = "Marketing Project Managers";
 
 (async () => {
-  let marketingManagerGroup;
-  try {
-    marketingManagerGroup = await serviceAccountClient.groups.create(
-      marketingManagersGroupName,
-      {
-        description: "For Marketing department leadership team.",
-        invitability_level: "admins_only",
-        member_viewability_level: "admins_only"
-      }
-    );
-  } catch (e) {
-    marketingManagerGroup = await handleGroupConflictError(
-      e,
-      marketingManagersGroupName,
-      serviceAccountClient
-    );
-  }
+    let marketingManagerGroup;
+    try {
+        marketingManagerGroup = await serviceAccountClient.groups.create(
+            marketingManagersGroupName,
+            {
+                description: "For Marketing department leadership team.",
+                invitability_level: "admins_only",
+                member_viewability_level: "admins_only"
+            }
+        );
+    } catch (e) {
+      marketingManagerGroup = await handleGroupConflictError(
+          e,
+          marketingManagersGroupName,
+          serviceAccountClient
+      );
+    }
 
-  console.log(marketingManagerGroup);
+    console.log(marketingManagerGroup);
 
-  let marketingProjectManagerGroup;
-  try {
-    marketingProjectManagerGroup = await serviceAccountClient.groups.create(
-      marketingProjectManagersGroupName,
-      {
-        description: "All team members who manage Marketing projects.",
-        invitability_level: "admins_and_members",
-        member_viewability_level: "admins_and_members"
-      }
-    );
-  } catch (e) {
-    marketingProjectManagerGroup = await handleGroupConflictError(
-      e,
-      marketingProjectManagersGroupName,
-      serviceAccountClient
-    );
-  }
+    let marketingProjectManagerGroup;
+    try {
+        marketingProjectManagerGroup = await serviceAccountClient.groups.create(
+            marketingProjectManagersGroupName,
+            {
+                description: "All team members who manage Marketing projects.",
+                invitability_level: "admins_and_members",
+                member_viewability_level: "admins_and_members"
+            }
+        );
+    } catch (e) {
+        marketingProjectManagerGroup = await handleGroupConflictError(
+            e,
+            marketingProjectManagersGroupName,
+            serviceAccountClient
+        );
+    }
 
-  console.log(marketingProjectManagerGroup);
+    console.log(marketingProjectManagerGroup);
 
-  let collabMarketingManagers;
-  try {
-    collabMarketingManagers = await serviceAccountClient.collaborations.createWithGroupID(
-      marketingManagerGroup.id,
-      marketingDeptFolderID,
-      serviceAccountClient.collaborationRoles.EDITOR
-    );
-  } catch (e) {
-    collabMarketingManagers = await handleFolderCollaborationConflictError(
-      e,
-      marketingDeptFolderID,
-      marketingManagerGroup.id,
-      serviceAccountClient
-    );
-  }
-  console.log(collabMarketingManagers);
+    let collabMarketingManagers;
+    try {
+        collabMarketingManagers = await serviceAccountClient.collaborations.createWithGroupID(
+            marketingManagerGroup.id,
+            marketingDeptFolderID,
+            serviceAccountClient.collaborationRoles.EDITOR
+        );
+    } catch (e) {
+        collabMarketingManagers = await handleFolderCollaborationConflictError(
+            e,
+            marketingDeptFolderID,
+            marketingManagerGroup.id,
+            serviceAccountClient
+        );
+    }
+    console.log(collabMarketingManagers);
 
-  let collabMarketingProjectManagers;
-  try {
-    collabMarketingProjectManagers = await serviceAccountClient.collaborations.createWithGroupID(
-      marketingProjectManagerGroup.id,
-      marketingProjectsFolderID,
-      serviceAccountClient.collaborationRoles.EDITOR
-    );
-  } catch (e) {
-    collabMarketingProjectManagers = await handleFolderCollaborationConflictError(
-      e,
-      marketingProjectsFolderID,
-      marketingProjectManagerGroup.id,
-      serviceAccountClient
-    );
-  }
-  console.log(collabMarketingProjectManagers);
+    let collabMarketingProjectManagers;
+    try {
+        collabMarketingProjectManagers = await serviceAccountClient.collaborations.createWithGroupID(
+            marketingProjectManagerGroup.id,
+            marketingProjectsFolderID,
+            serviceAccountClient.collaborationRoles.EDITOR
+        );
+    } catch (e) {
+        collabMarketingProjectManagers = await handleFolderCollaborationConflictError(
+            e,
+            marketingProjectsFolderID,
+            marketingProjectManagerGroup.id,
+            serviceAccountClient
+        );
+    }
+    console.log(collabMarketingProjectManagers);
 })();
 
 async function autoPage(iterator, collection = []) {
-  let moveToNextItem = async () => {
-    let item = await iterator.next();
-    if (item.value) {
-      collection.push(item.value);
-    }
+    let moveToNextItem = async () => {
+        let item = await iterator.next();
+        if (item.value) {
+            collection.push(item.value);
+        }
 
-    if (item.done !== true) {
-      return moveToNextItem();
-    } else {
-      return collection;
-    }
-  };
-  return moveToNextItem();
+        if (item.done !== true) {
+            return moveToNextItem();
+        } else {
+            return collection;
+        }
+    };
+    return moveToNextItem();
 }
 
 async function handleGroupConflictError(e, groupName, boxClient) {
-  let storeIteratorSetting = boxClient._useIterators;
-  if (e && e.response && e.response.body && e.response.body.status === 409) {
-    boxClient._useIterators = true;
-    let groupsIterator = await boxClient.groups.getAll({
-      name: groupName
-    });
-    let groups = await autoPage(groupsIterator);
-    let results = groups.filter(group => {
-      return group.name === groupName;
-    });
-    if (results.length > 0) {
-      boxClient._useIterators = storeIteratorSetting;
-      return results[0];
+    let storeIteratorSetting = boxClient._useIterators;
+    if (e && e.response && e.response.body && e.response.body.status === 409) {
+        boxClient._useIterators = true;
+        let groupsIterator = await boxClient.groups.getAll({
+            name: groupName
+        });
+        let groups = await autoPage(groupsIterator);
+        let results = groups.filter(group => {
+            return group.name === groupName;
+        });
+        if (results.length > 0) {
+            boxClient._useIterators = storeIteratorSetting;
+            return results[0];
+        } else {
+            throw new Error("Couldn't create group or find existing group.");
+        }
     } else {
-      throw new Error("Couldn't create group or find existing group.");
+        throw e;
     }
-  } else {
-    throw e;
-  }
 }
 
 async function handleFolderCollaborationConflictError(
-  e,
-  folderID,
-  groupID,
-  boxClient
+    e,
+    folderID,
+    groupID,
+    boxClient
 ) {
-  let storeIteratorSetting = boxClient._useIterators;
-  if (e && e.response && e.response.body && e.response.body.status === 409) {
-    boxClient._useIterators = true;
-    let collaborationsIterator = await boxClient.folders.getCollaborations(
-      folderID
-    );
-    let collaborations = await autoPage(collaborationsIterator);
-    let results = collaborations.filter(collaboration => {
-      return collaboration.accessible_by.id === groupID;
-    });
-    console.log(results);
-    if (results.length > 0) {
-      boxClient._useIterators = storeIteratorSetting;
-      return results[0];
+    let storeIteratorSetting = boxClient._useIterators;
+    if (e && e.response && e.response.body && e.response.body.status === 409) {
+        boxClient._useIterators = true;
+        let collaborationsIterator = await boxClient.folders.getCollaborations(
+            folderID
+        );
+        let collaborations = await autoPage(collaborationsIterator);
+        let results = collaborations.filter(collaboration => {
+            return collaboration.accessible_by.id === groupID;
+        });
+        console.log(results);
+        if (results.length > 0) {
+            boxClient._useIterators = storeIteratorSetting;
+            return results[0];
+        } else {
+            throw new Error(
+                "Couldn't create new collaboration or located existing collaboration."
+            );
+        }
     } else {
-      throw new Error(
-        "Couldn't create new collaboration or located existing collaboration."
-      );
+        throw e;
     }
-  } else {
-    throw e;
-  }
 }
 ```
 
@@ -377,8 +377,6 @@ public class BoxPlayground {
 
   </Tab>
   <Tab title='.NET'>
-
-<!-- markdownlint-disable line-length -->
 
 ```csharp
 using System;
@@ -549,8 +547,6 @@ namespace BoxPlayground {
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
   <Tab title='CLI'>
 
@@ -568,8 +564,6 @@ account.
 
 <Tabs>
   <Tab title='Node'>
-
-<!-- markdownlint-disable line-length -->
 
 ```js
 'use strict'
@@ -640,8 +634,6 @@ async function handleGroupMembershipConflictError(e,
     }
 }
 ```
-
-<!-- markdownlint-disable line-length -->
 
   </Tab>
   <Tab title='Java'>

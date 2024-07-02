@@ -64,7 +64,6 @@ yarn lint
 
 Additionally, each of the lint steps can be run individually.
 
-<!-- markdownlint-disable line-length -->
 
 ```sh
 lint:markdown # runs markdownlint to validate the markdown syntax
@@ -74,7 +73,6 @@ lint:yaml # validates that the microcopy files are valuid Yaml
 lint:links # runs some basic linting on the links in the guides
 ```
 
-<!-- markdownlint-enable line-length -->
 
 ## Transpiled the markdown and microcopy
 

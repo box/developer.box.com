@@ -31,10 +31,8 @@ Box APIs from your terminal window or command prompt.
 
 ## CLI setup and use
 
-- To use [server authentication][jwt] method, check
-out [this][jwt-page] guide.
-- To use [CCG authentication][ccg] method, check out
-[this][ccg-page] guide.
+- To use [server authentication][jwt] method, check out [this][jwt-page] guide.
+- To use [CCG authentication][ccg] method, check out [this][ccg-page] guide.
 - To perform bulk actions using CLI commands, check out [this][bulk] guide.
 
 ## Sample scripts

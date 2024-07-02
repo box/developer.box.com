@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-picker
   - /docs/content-picker
 ---
@@ -24,14 +24,6 @@ content information is then passed to another part of the application.
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
 
-<Message>
-  # Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
-
 ## Authentication
 
 The UI Elements are designed in an authentication agnostic way so whether
@@ -47,20 +39,12 @@ and JWT.
 
 ## Sample HTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>Box File Selection</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
 
     <!-- Latest version of the picker css for your locale -->
     <link
@@ -147,8 +131,6 @@ to be updated under the JS tab in the demo.
 
 </Message>
 
-<!-- markdownlint-enable line-length -->
-
 ## API
 
 ```js
@@ -213,8 +195,6 @@ filePicker.removeListener(eventName, listener);
 filePicker.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                      |
@@ -261,10 +241,8 @@ filePicker.removeAllListeners();
 
 | Event Name | Event Data                    | Description                                                                                                                                                                                         |
 | ---------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `choose`   | `Array<File|Web Link|Folder>` | Will be fired when the Choose button is pressed. Event data will be an array of Folder Object or File Object or Web Link object depending upon whether it was a file selection or folder selection. |
+| `choose`   | `Array<File \| Web Link \| Folder>` | Will be fired when the Choose button is pressed. Event data will be an array of Folder Object or File Object or Web Link object depending upon whether it was a file selection or folder selection. |
 | `cancel`   |                               | Will be fired when the Cancel button is pressed                                                                                                                                                     |
-
-<!-- markdownlint-enable line-length -->
 
 ## Keyboard Shortcuts
 
@@ -303,8 +281,6 @@ allow developers to enable/disable UI controls on the Content Picker by
 configuring the appropriate scopes on the downscoped token. To learn
 more, see [Dedicated Scopes for Box UI Elements][scopes].
 
-<!-- markdownlint-disable line-length -->
-
 | Scope Name    | Permissions granted                                                              |
 | ------------- | -------------------------------------------------------------------------------- |
 | `base_picker` | Allows access to content in the folder tree based on user/file/token permissions |
@@ -324,8 +300,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | User wants to navigate a folder structure, pick a file / folder and also set access level                                                        | `base_picker` + `item_share`                 |
 | User wants to navigate a folder structure, pick a file / folder and also upload a file / folder                                                  | `base_picker` + `item_upload`                |
 | User should be able to navigate a folder structure and pick a file / folder, upload a file / folder, and also set access level for a file/folder | `base_picker` + `item_share` + `item_upload` |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

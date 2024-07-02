@@ -2,12 +2,9 @@
 rank: 3
 related_endpoints: []
 related_guides:
-  - authentication/oauth2
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 ---
@@ -19,8 +16,8 @@ through the `as-user` header.
 
 ```curl
 curl https://api.box.com/2.0/folders/0 \
-  -H "as-user: [USER_ID]"
-  -H "authorization: Bearer [ACCESS_TOKEN]"
+    -H "as-user: [USER_ID]"
+    -H "authorization: Bearer [ACCESS_TOKEN]"
 ```
 
 <Message>
@@ -42,28 +39,24 @@ Console][devconsole].
 Additionally, the authenticated user needs to be a user with admin permissions,
 meaning either an admin, co-admin, or service account. Co-admin users will also
 need the 'Manage Users' permission scope. See our guide on [User
-Types](g://getting-started/user-types) for more details.
+Types](page://platform/user-types) for more details.
 
 ## as-user using SDKs
 
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 var user_client = new BoxClient(config, session, asUser: '[USER_ID]');
 ```
 
   </Tab>
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 client.asUser([USER_ID]");
 // client.asSelf();
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
   <Tab title='Python'>

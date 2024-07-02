@@ -2,7 +2,7 @@
 rank: 5
 related_endpoints:
   - post_webhooks
-alias_paths: 
+alias_paths:
   - /guides/webhooks/handle/setup-signatures
   - /guides/webhooks/handle/verify-signatures
   - /guides/webhooks/handle/rotate-signatures
@@ -34,7 +34,7 @@ To configure your application's keys follow the steps below.
 1. Navigate to the application in the developer console.
 2. Click on the **Webhooks** tab.
 3. Click the **Manage signature keys** button.
-4. Click the **Generate Key** button to configure your keys. 
+4. Click the **Generate Key** button to configure your keys.
 
 Once generating the primary or secondary key, copy the value. You will need
 it to verify the webhook payloads. Every webhook will now include a
@@ -68,7 +68,7 @@ var expired = Date.now() - date > 10*60*1000;
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import dateutil.parser
 import pytz
 import datetime
@@ -88,7 +88,7 @@ expired = date >= expiry_date
 
 ### Calculate HMAC signature
 
-Calculate the HMAC of the payload using either one of the two configured 
+Calculate the HMAC of the payload using either one of the two configured
 signatures for the application in the [Developer Console][console].
 
 Ensure you append the bytes of the payload body first, and then the bytes
@@ -117,7 +117,7 @@ hmac2.update(timestamp);
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import hmac
 import hashlib
 
@@ -150,7 +150,7 @@ var digest2 = hmac2.digest('base64');
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import base64
 
 digest1 = base64.b64encode(hmac1)
@@ -185,7 +185,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
 signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 
@@ -223,11 +223,8 @@ without any conflicts.
 1. Go to the **Webhooks** tab in the [Developer Console][console].
 2. Click the **Manage signatures keys**.
 3. Click the **Reset** button to change the primary key.
-4. Update your application with the new primary key. Your application can
-still receive notifications with the old primary key, but your webhooks should
-be processed correctly since the secondary key is still valid.
-5. Once you are confident that no webhooks with the old primary key are
-   in-flight, you can update the secondary key using the same process.
+4. Update your application with the new primary key. Your application can still receive notifications with the old primary key, but your webhooks should be processed correctly since the secondary key is still valid.
+5. Once you are confident that no webhooks with the old primary key are in-flight, you can update the secondary key using the same process.
 
 [sdks]: g://tooling/sdks
 [console]: https://app.box.com/developers/console

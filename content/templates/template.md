@@ -121,7 +121,7 @@ console.log('!')
   </Tab>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 // some .NET code
 ```
 

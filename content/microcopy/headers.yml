@@ -1,6 +1,35 @@
 ---
 primary:
   links:
+    documentation:
+      // text:
+      text: Documentation
+
+    quickstarts:
+      // text:
+      text: Getting Started
+
+    community:
+      // text:
+      text: Community
+
+      //url:
+      url: https://forum.box.com
+
+    learn:
+      // text: The text for the link to the learn section
+      text: Box Platform
+
+      //url: The URL to the learn section
+      url: /platform/
+
+    learn-sign:
+      // text: The text for the link to the learn section
+      text: Box Sign
+
+      //url: The URL to the learn section
+      url: /sign/
+
     get_started:
       // text: The text for the link to the old Get Started guides
       text: Quick Start
@@ -10,7 +39,7 @@ primary:
 
     guides:
       // text: The text for the link to the old generic guides
-      text: Guides
+      text: Developer Guides
 
       // url: The URL to the old generic guides
       url: /guides/
@@ -23,7 +52,7 @@ primary:
 
     sample_code:
       // text: The text for the link the Sample Code App
-      text: Sample Code
+      text: Sample Code Catalog
       // url: The url to the root of the reference - DO NOT TRANSLATE
       url: "/sample-code/"
 
@@ -40,6 +69,21 @@ primary:
 
       // url: The URL to the old page on SDKs - DO NOT TRANSLATE
       url: "/support/"
+
+    additional_resouces:
+      text: Additional resources
+
+    blog:
+      // text: The text for the Medium Dev Blog
+      text: Box Developer Blog
+
+      // url: The URL to Medium bev blog
+      url: https://medium.com/box-developer-blog
+      # events_and_workshops:
+      #   // text: The text for the link to events and workshops
+      #   text: Events & Workshops
+      #   // url: The URL to the developer blog
+      #   url: TBD
 
   buttons:
     dashboard:
@@ -63,6 +107,24 @@ primary:
       // url: The URL to the developer signup - DO NOT TRANSLATE
       url: https://account.box.com/signup/n/developer#ty9l3
 
+  featured:
+    tag:
+      text: Featured
+
+    title:
+      text: Box AI Developer Zone
+
+    details:
+      text: |-
+        Box AI Developer Zone features interactive
+        demos to give you hands-on experience with Box AI API
+
+    cta:
+      text: |-
+        Try it out!
+      url:
+        /ai-dev-zone/
+
 secondary:
   images:
     logo:
@@ -73,43 +135,52 @@ secondary:
     // new: A short label to signify that this page is new
     new: new
 
-  links:
+  support_links:
+    community_forum:
+      // text: The text for the link to the developer community forum
+      text: Community Forum
+
+      // url: The URL to the developer forum
+      url: "https://forum.box.com"
+
+    changelog:
+      // text: The text for the link to the changelog
+      text: Changelog
+
+      // url: The URL to the changelog
+      url: "/changelog/"
+
+  additional_resources:
     blog:
       // text: The text for the link to the developer blog
       text: Blog
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
+      # events_and_workshops:
+      #   // text: The text for the link to events and workshops
+      #   text: Events & Workshops
 
-    forum:
-      // text: The text for the link to the developer forum
-      text: Forum
-
-      // url: The URL to the developer forum
-      url: "https://community.box.com/t5/Platform-and-Development\
-        -Forum/bd-p/DeveloperForum"
-
-    feedback:
-      // text: The text for the link to the developer feedback site
-      text: Feedback
-
-      // url: The URL to the developer feedback site
-      url: "https://box.uservoice.com/forums/909778-product\
-        -feedback?category_id=330838"
+      #   // url: The URL to the developer blog
+      #   url: TBD
 
   dropdowns:
     // docs: |-
       A short title for the dropdown to select a documentation type on mobile
-    docs: Docs
+    docs: Documentation
 
     // api_reference: |-
       A title for the dropdown to select a sub-page of the API reference
       on mobile
     api_reference: API Reference
 
-    // elsewhere: |-
-      A short title for the dropdown to select an external link on mobile
-    elsewhere: Elsewhere
+    // support: |-
+      A short title for the dropdown to select an support menu item
+    support: Support
+
+    // additional_resources: |-
+      A short title for the dropdown to select an support menu item
+    additional_resources: Additional Resources
 
   notifications:
     // display: |-
@@ -120,13 +191,12 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Join the first BoxWorks Hackathon for Good - customers,
-      partners, and the developer community are welcome to participate
-      in the 48 hour Hack to benefit The Nature Conservancy.
+      Add the power of the Box AI API to your custom apps at
+      Content Cloud Summit on May 15
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://box.com/hack4good"
+    href: "https://events.box.com/series/content-cloud-summit-2024/landing_page"
 
     // cta: |-
       The text of the CTA

@@ -36,32 +36,18 @@ fie or folder with the entire group of users in the channel.
 
 This guide will take you through the following steps.
 
-1. [Setup and configure your Slack app][step1] to handle the event notification
- and Slash command structures.
-1. [Setup and configure your Box application][step2] to connect the web
- application to Box.
-1. [Listen for Slack events and commands][step3] when users join and leave
- channels, or share a Box file or folder with the group.
-1. [Structure Box groups and file / folder collaborations][step4] based on the
- Slack events or slash commands.
-1. [And finally, deploy the application to your workspace][step5] and invite
- the Slack app bot to your channels to begin listening for events.
+1. [Setup and configure your Slack app][step1] to handle the event notification and Slash command structures.
+2. [Setup and configure your Box application][step2] to connect the web application to Box.
+3. [Listen for Slack events and commands][step3] when users join and leave channels, or share a Box file or folder with the group.
+4. [Structure Box groups and file / folder collaborations][step4] based on the Slack events or slash commands.
+5. [And finally, deploy the application to your workspace][step5] and invite the Slack app bot to your channels to begin listening for events.
 
 ## Requirements
 
 This quick start guide has two requirements that are worth noting before we proceed.
 
-1. **User emails need to match between Box and Slack**: We are connecting
- a Slack user account to a Box user account by comparing the Slack user email
- address. Therefore, a matching Box user account using the same email address
- must be present in your Box enterprise.
-1. **You must have a publicly accessible server**: Slack will need to send
- event and command notification data to a public URL for your application. This
- guide assumes that you have a public location where your application code will
- be hosted, such as `https://mysite.com/`. If you don't have access to any
- public hosting then application platforms like [Heroku][heroku], serverless
- options like [AWS lambda][aws-lambda], or exposing localhost with services like
- [ngrok][ngrok] are all options that you might want to consider.
+1. **User emails need to match between Box and Slack**: We are connecting a Slack user account to a Box user account by comparing the Slack user email address. Therefore, a matching Box user account using the same email address must be present in your Box enterprise.
+2. **You must have a publicly accessible server**: Slack will need to send event and command notification data to a public URL for your application. This guide assumes that you have a public location where your application code will be hosted, such as `https://mysite.com/`. If you don't have access to any public hosting then application platforms like [Heroku][heroku], serverless options like [AWS lambda][aws-lambda], or exposing localhost with services like [ngrok][ngrok] are all options that you might want to consider.
 
 <Next>
   I am ready to get started

@@ -33,20 +33,16 @@ create users that are associated with the Okta user account.
   the following steps.
 
   1. Go to the [Developer Console][devconsole]
-  1. Select **Create New App**
-  1. Select **Custom App** as the type of application to create, and click
-     **Next**
-  1. Select **OAuth 2.0 with JWT** as the authentication method, and click
-     **Next**
-  1. Give your Box app a unique name and click **Create App**
-  1. Go to the app's configuration by clicking **View Your App**.
-  1. Scroll to the **Application Scopes** section of the same screen
-     and ensure that at least the following scopes are enabled:
-    * Read and write all files and folders stored in Box
-    * Manage Users
-  1. Under **Advanced Features** ensure that both options are enabled to
-    perform actions as users and generate user access tokens.
-  1. At the top of the page click the button to **Save Changes**
+  2. Select **Create New App**
+  3. Select **Custom App** as the type of application to create, and click **Next**
+  4. Select **OAuth 2.0 with JWT** as the authentication method, and click **Next**
+  5. Give your Box app a unique name and click **Create App**
+  6. Go to the app's configuration by clicking **View Your App**.
+  7. Scroll to the **Application Scopes** section of the same screen and ensure that at least the following scopes are enabled:
+      * Read and write all files and folders stored in Box
+      * Manage Users
+  8. Under **Advanced Features** ensure that both options are enabled to perform actions as users and generate user access tokens.
+  9. At the top of the page click the button to **Save Changes**
 
   <Message type='warning'>
     Once the application is created it will still need to be approved by an
@@ -65,13 +61,11 @@ create users that are associated with the Okta user account.
   following options are set in the **Configuration** section of your
   application.
 
-* Authentication Method: Should be set to OAuth 2.0 with JWT (Server
-Authentication).
+* Authentication Method: Should be set to OAuth 2.0 with JWT (Server Authentication).
 * Application Scopes: Set at least the following scopes.
-  * Read and write all files and folders stored in Box
-  * Manage Users
-* Advanced Features: Both options should be enabled to
-  perform actions as users and generate user access tokens.
+    * Read and write all files and folders stored in Box
+    * Manage Users
+* Advanced Features: Both options should be enabled to perform actions as users and generate user access tokens.
 
 </Choice>
 
@@ -91,10 +85,8 @@ Store that file as `config.json` in a location accessible by your application.
 
 ## Summary
 
-* You created a new, or are using an existing, Box app which is approved by an
- enterprise admin.
-* You downloaded your application configuration file and stored it in a location
- accessible by your application.
+* You created a new, or are using an existing, Box app which is approved by an enterprise admin.
+* You downloaded your application configuration file and stored it in a location accessible by your application.
 
 <Observe option='box.app_type' value='use_own,create_new'>
   <Next>I downloaded my application configuration file</Next>

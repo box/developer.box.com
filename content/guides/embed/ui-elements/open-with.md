@@ -6,18 +6,15 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-open-with
 ---
 
 # Content Open With
 
-<Message warning>
-  # End of Support
-
-  We will no longer support the `OpenWith` UI element for any new customers
-  beginning on December 21, 2021. Please see the changelog for more
-  information.
+<Message type='warning'>
+  We no longer support the `OpenWith` UI element for any new customers
+  as of December 21, 2021.
 </Message>
 
 The Box Content Open With UI Element allows developers to embed a dropdown to
@@ -32,21 +29,13 @@ The integrations included in the Open With Element are Google Suite,
 and Box Edit. Additional information on the Google Suite integration can be
 found on the [Box Community site][community].
 
-Currently, the element only supports [App Users](g://getting-started/user-types)
+Currently, the element only supports [App Users](page://platform/user-types)
 for authentication.
 
 ## Installation
 
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
-
-<Message>
-  # Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
 
 ## Box Edit
 
@@ -55,11 +44,8 @@ application. Box Edit uses the desktop application [Box Tools][tools] in order
 to open content locally.
 
 - Requests must use a secure connection (from an `https` domain)
-- The application's domain must be allowed by Box Tools. Instructions can be
-  found [here][custom-domains]. The ideal workflow is to bundle these steps
-  within an installer that also installs Box Tools.
-- Safari requires a browser extension to connect to box tools. More details can
-  be found [here][safari].
+- The application's domain must be allowed by Box Tools. Instructions can be found [here][custom-domains]. The ideal workflow is to bundle these steps within an installer that also installs Box Tools.
+- Safari requires a browser extension to connect to box tools. More details can be found [here][safari].
 
 ## G Suite
 
@@ -100,7 +86,7 @@ integrations that are available. This `GET` request can be made with the followi
 
 ```curl
 curl -X GET https://api.box.com/2.0/app_integrations \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 ```
 
 ```json
@@ -125,33 +111,33 @@ following GET request may be made.
 
 ```curl
 curl -X GET \
-  https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
-  -H 'Authorization: Bearer [ACCESS_TOKEN]'
+    https://api.box.com/2.0/app_integrations/[APP_INTEGRATION_ID] \
+    -H 'Authorization: Bearer [ACCESS_TOKEN]'
 ```
 
 ```json
 {
-   "type":"app_integration",
-   "id":"10897",
-   "app":{
-      "type":"app",
-      "id":"336417"
-   },
-   "name":"Edit with G Suite",
-   "description":"Securely manage your Google Docs, Sheets and Slides in Box",
-   "executable_item_types":[
-      "file"
-   ],
-   "restricted_extensions":[
-      "docx",
-      "gdoc",
-      "xlsx",
-      "gsheet",
-      "pptx",
-      "gslides",
-      "gslide"
-   ],
-   "scoped_to":"parent"
+  "type": "app_integration",
+  "id": "10897",
+  "app": {
+    "type": "app",
+    "id": "336417"
+  },
+  "name": "Edit with G Suite",
+  "description": "Securely manage your Google Docs, Sheets and Slides in Box",
+  "executable_item_types": [
+    "file"
+  ],
+  "restricted_extensions": [
+    "docx",
+    "gdoc",
+    "xlsx",
+    "gsheet",
+    "pptx",
+    "gslides",
+    "gslide"
+  ],
+  "scoped_to": "parent"
 }
 ```
 
@@ -160,8 +146,7 @@ curl -X GET \
 To add an app integration to a valid app user, three pieces of information are
 required:
 
-- A valid [Service Account](g://getting-started/user-types/service-account/)
-  Access Token.
+- A valid [Service Account](page://platform/user-types/#service-account/) Access Token.
 - The ID of the app user to be assigned the integration
 - The ID of the app integration to assign to the user
 
@@ -177,17 +162,17 @@ user:
 
 ```curl
 curl -X POST https://api.box.com/2.0/app_integration_assignments \
-  -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
-  -d '{
-    "assignee": {
-      "type": "user",
-      "id": "[APP_USER_ID]"
-    },
-    "app_integration": {
-      "type": "app_integration",
-      "id": "[APP_INTEGRATION_ID]"
-    }
-  }'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]' \
+    -d '{
+      "assignee": {
+        "type": "user",
+        "id": "[APP_USER_ID]"
+      },
+      "app_integration": {
+        "type": "app_integration",
+        "id": "[APP_INTEGRATION_ID]"
+      }
+    }'
 ```
 
 ```json
@@ -214,22 +199,16 @@ To remove an app integration from an app user, the following request may be made
 with a valid service access token and the app integration assignment ID from the
 previous step.
 
-<!-- markdownlint-disable line-length -->
-
 ```curl
 curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRATION_ASSIGNMENT_ID] \
- -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
+    -H 'Authorization: Bearer [SERVICE_ACCOUNT_TOKEN]'
 ```
 
 ```sh
 204 No Content
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ## Sample HTML
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <!DOCTYPE html>
@@ -237,12 +216,6 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
   <head>
     <meta charset="utf-8" />
     <title>Box Content Open With Demo</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
 
     <!-- Latest version of the open with css for your locale -->
     <link
@@ -252,8 +225,7 @@ curl -X DELETE https://api.box.com/2.0/app_integration_assignments/[APP_INTEGRAT
   </head>
   <body>
     <div class="container" style="height:600px"></div>
-    <!-- Latest version of the core and open with js for your locale -->
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
+    <!-- Latest version of the open with js for your locale -->
     <script src="https://cdn01.boxcdn.net/platform/elements/{VERSION}/en-US/openwith.js"></script>
     <script>
       var fileId = "123";
@@ -303,8 +275,6 @@ the JS tab of the demo. For the Open With element, you must provide a valid
 [Service Account][service-account] Access Token.
 
 </Message>
-
-<!-- markdownlint-enable line-length -->
 
 ## Authentication
 
@@ -384,8 +354,6 @@ contentOpenWith.removeListener(eventName, listener);
 contentOpenWith.removeAllListeners();
 ```
 
-<!-- markdownlint-disable line-length -->
-
 ### Parameters
 
 | Parameter     | Type   | Description                                                                                                                                                                      |
@@ -410,7 +378,7 @@ contentOpenWith.removeAllListeners();
 <!-- i18n-disable localize-links -->
 
 <Message warning>
-  
+
 Currently the `onError` and `onExecute` events are subject to a known bug. We recommend
 using `openWith.addListener('execute', callback)` and
 `openWith.addListener('error', callback)` as a temporary workaround.
@@ -424,8 +392,6 @@ using `openWith.addListener('execute', callback)` and
 | `execute`  | Integration ID | Will be fired when an integration invocation is executed. |
 | `error`    | Error          | Will be fired when an error occurs.                       |
 
-<!-- markdownlint-enable line-length -->
-
 [scopes]: guide://api-calls/permissions-and-errors/scopes
 <!-- i18n-enable localize-links -->
 [community]: https://support.box.com/hc/en-us/articles/360043696994-Introducing-Box-for-G-Suite
@@ -435,4 +401,4 @@ using `openWith.addListener('execute', callback)` and
 <!-- i18n-enable localize-links -->
 [safari]: https://support.box.com/hc/en-us/articles/360043697334-Installing-Box-Tools
 <!-- i18n-disable localize-links -->
-[service-account]: g://getting-started/user-types/service-account/
+[service-account]: page://platform/user-types/#service-account/
