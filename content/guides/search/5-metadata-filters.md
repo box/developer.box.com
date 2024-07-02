@@ -10,13 +10,12 @@ The [`GET /search`][search_api] API allows for filtering search results by their
 associated metadata. A `mdfilters` query parameter allows a developer to specify
 a metadata template and the desired values to query.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&mdfilters=%5B%7B%22scope%22%3A%22enterprise%22%2C%22templateKey%22%3A%22contract%22%2C%22filters%22%3A%7B%22category%22%3A%22online%22%7D%7D%5D" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
@@ -42,10 +41,10 @@ PartialCollection<BoxItem.Info> searchResults = boxSearch.searchRange(offsetValu
  </Tab>
  <Tab title='.NET'>
 
-```dotnet
+```csharp
 var filter = new
 {
-  category = "online"
+    category = "online"
 };
 
 var filters = new List<BoxMetadataFilterRequest>()
@@ -64,7 +63,7 @@ BoxCollection<BoxItem> results = await client.SearchManager
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 from boxsdk.object.search import MetadataSearchFilter, MetadataSearchFilters
 
 metadata_search_filter = MetadataSearchFilter(scope='enterprise', template_key='contract')
@@ -80,26 +79,25 @@ client.search().query("sales", metadata_filters=metadata_search_filters)
 
 ```js
 client.search.query(
-  'sales',
-  {
-    mdfilters: [
-      {
-        scope: 'enterprise',
-        templateKey: 'contract',
-        filters: {
-          category: 'online;
-        }
-      }
-    ]
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        mdfilters: [
+            {
+                scope: 'enterprise',
+                templateKey: 'contract',
+                filters: {
+                    category: 'online'
+                }
+            }
+        ]
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message info>
 
@@ -186,9 +184,9 @@ key `category` is set to the value `online`.
 
 ### Filter by `float` field
 
-To filter by a field of type `float`, you will need to define define a range by 
-specifying a `gt` (greater-than) and/or `lt` (lower-than) value. To find an 
-exact value, you can input the same value for both `gt` and `lt`. 
+To filter by a field of type `float`, you will need to define define a range by
+specifying a `gt` (greater-than) and/or `lt` (lower-than) value. To find an
+exact value, you can input the same value for both `gt` and `lt`.
 
 ```json
 [
@@ -205,13 +203,20 @@ exact value, you can input the same value for both `gt` and `lt`.
 ]
 ```
 
-<Message info>
-
 This example will find all files and folders that have an instance of the
 `enterprise.contract` template applied to it, and for which the field with the
 key `amount` is set to a value equal or higher than `10000` and equal or lower
-than `2000`. Please note that `gt` and `lt` are inclusive and do not need to
+than `2000`. Note that `gt` and `lt` are inclusive and do not need to
 both be set.
+
+<Message info>
+
+If you create a query based on numbers, do not
+exceed the range of -16777215 and +16777215.
+For metadata search using number attributes
+the index value is stored as FLOAT32. As a result,
+integers between -16777215 and +16777215 can be precisely represented.
+Any operation with numbers beyond the range can lose its precision.
 
 </Message>
 

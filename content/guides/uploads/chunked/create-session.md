@@ -40,8 +40,6 @@ When a session is created successfully the response includes an [Upload
 Session][uploadsession] that includes a session ID, the number of parts, the
 part sizes, as well as links to the relevant next API endpoints to use.
 
-<!-- markdownlint-disable line-length -->
-
 ```json
 {
   "id": "F971964745A5CD0C001BBE4E58196BFD",
@@ -60,8 +58,6 @@ part sizes, as well as links to the relevant next API endpoints to use.
   }
 }
 ```
-
-<!-- markdownlint-enable line-length -->
 
 The upload session defines the size of the parts to use when uploading the
 individual parts.

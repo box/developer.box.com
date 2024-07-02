@@ -3,7 +3,7 @@ rank: 2
 related_endpoints: []
 related_guides:
   - webhooks/triggers
-related_resources: 
+related_resources:
   - webhook
 required_guides:
   - webhooks/triggers
@@ -19,8 +19,7 @@ the steps below.
 1. Navigate to your application in the [Developer Console][devconsole]
 2. Select the **Webhooks** tab.
 3. Click the **Create a new Webhook** button.
-4. Fill in the form, including event triggers, an endpoint URL and one or more
-callback parameters. 
+4. Fill in the form, including event triggers, an endpoint URL and one or more callback parameters.
 5. Click **Save Webhook**.
 
 <Message type='warning'>
@@ -43,13 +42,11 @@ After creating a webhook, the application must be added to the user's account
 to begin use.
 
 To obtain the URL to add the app, follow the directions below for OAuth 2.0
-authentication apps: 
+authentication apps:
 
-1. Navigate to the **App Center** tab for the application in the
-  [Developer Console][devconsole].
-2. Click **Submit My App**. Do not worry, you will not be completing the
-  submission process!
-3. At the bottom of the page, click **Preview**. 
+1. Navigate to the **App Center** tab for the application in the [Developer Console][devconsole].
+2. Click **Submit My App**. Do not worry, you will not be completing the submission process!
+3. At the bottom of the page, click **Preview**.
 4. Click **Add**
 
 <Message type='warning'>

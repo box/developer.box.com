@@ -27,3 +27,32 @@ featured_board:
       Connect with other learners and experts on
       our Box community forum. Ask and answer
       questions, share resources, and learn together.
+  aiDevZone:
+    type: aiDevZone
+    cta: Try it out!
+    link: /ai-dev-zone
+    tag: Featured
+    headline: Box AI Developer Zone
+    text: |-
+      Use our interactive AI demos to
+      try out prompts with AI responses,
+      view sample code, documentation and more!
+
+additionalResources:
+  youtube:
+    title: Box Youtube
+    text: Check out our channel for tutorials, training, product news, and more.
+    cta: View Channel
+    url: https://www.youtube.com/@box/videos
+  newsletter:
+    title: Developer Newsletter
+    text: Stay up to date with the top developer events,
+      product releases, and community highlights.
+    cta: Browse Newsletter
+    url: /newsletter/
+  blog:
+    title: Box Developer Blog
+    text: Read news, updates and tutorials on Box APIs,
+      SDKs and gain useful developers' and admins' insights.
+    cta: Visit Box Developer Blog
+    url: https://medium.com/box-developer-blog

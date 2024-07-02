@@ -1,19 +1,19 @@
 ---
 rank: 0
 related_endpoints: []
-related_guides: 
-  - authentication/jwt 
-required_guides: 
+related_guides:
+  - authentication/jwt
+required_guides:
   - authentication/select
-  - applications/custom-apps
+  - applications/app-types/custom-apps
   - authorization/custom-app-approval
 related_resources: []
 alias_paths:
   - /docs/setting-up-a-jwt-app
   - /docs/authentication-with-jwt
   - /docs/app-auth
-  - /guides/applications/custom-apps/jwt-setup/
-  - /guides/applications/custom-apps/jwt-setup/#generate-a-keypair-recommended
+  - /guides/applications/app-types/custom-apps/jwt-setup/
+  - /guides/applications/app-types/custom-apps/jwt-setup/#generate-a-keypair-recommended
 ---
 
 # Setup with JWT
@@ -28,14 +28,14 @@ A Custom App can be set up to use server-side authentication with
 ## Prerequisites
 
 To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise 
+you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
 ### Navigate to the Developer Console
 
-Log into Box and go to the [Developer Console][devconsole]. 
+Log into Box and go to the [Developer Console][devconsole].
 Select **Create New App**.
 
 ### Select application type
@@ -49,18 +49,14 @@ prompt a selection for the next step.
 
 ### Provide basic application information
 
-<!-- markdownlint-disable line-length -->
-
 To describe your app, provide an app name and description.
 Use the drop-down list to select the app's purpose. Depending on the option chosen, you might need to specify further details.
 
 | Purpose | Details|
-|------| --------| 
+|------| --------|
 |Automation, Custom Portal| Specify if the app is built by a customer or partner. |
 |Integration|  Specify the integration category, external system name if the app is built by a customer or partner. |
 |Other| Specify the app purpose and if it is built by a customer or partner. |
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame border center width="300">>
   ![Auth selection screen](../images/custom-app-selection.png)
@@ -68,11 +64,11 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 
 ### Select application authentication
 
-Select **Server Authentication (with JWT)** if you would like to verify 
+Select **Server Authentication (with JWT)** if you would like to verify
 application identity [with a key pair][kp] and confirm with **Create App**.
 
 <Message warning>
-Once you make a selection, you will not be able to change to a different 
+Once you make a selection, you will not be able to change to a different
 authentication method without creating a new application.
 </Message>
 
@@ -87,7 +83,7 @@ authentication method without creating a new application.
   (Client Credentials Grant) as your authentication method.
 </Message>
 
-Once a Custom App is created leveraging Server Authentication with JWT, a key 
+Once a Custom App is created leveraging Server Authentication with JWT, a key
 pair can be generated via the configuration tab within the
 [Developer Console][devconsole]. Alternatively, you can generate your
 own and supply Box with the public key. Regardless of the method you select,
@@ -109,11 +105,11 @@ To generate this file, navigate to the **Configuration** tab of the
 </ImageFrame>
 
 Click the **Generate a Public/Private Keypair** button to have Box generate a
-keypair you. This will trigger the download of a JSON configuration file that 
+keypair you. This will trigger the download of a JSON configuration file that
 you can move to your application code.
 
 <Message danger>
-  For security reasons, Box will not store your private key. If you lose your 
+  For security reasons, Box will not store your private key. If you lose your
   private key, you will need to reset the entire keypair.
 </Message>
 
@@ -131,9 +127,9 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 ```
 
 <Message>
- # For Windows Systems
+  # For Windows Systems
 
- Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
+  Windows users can install and use the [Cygwin][cygwin] package to run OpenSSL.
 </Message>
 
 Then, navigate to the configuration tab for your application within the
@@ -160,7 +156,7 @@ Navigate to the **Authorization** tab for your application within the
 </ImageFrame>
 
 Click **Review and Submit** to send an email to your Box enterprise Admin for
-approval. More information on this process is available in our 
+approval. More information on this process is available in our
 [support article for app authorization][app-auth].
 
 <CTA to='g://authorization/custom-app-approval'>
@@ -173,7 +169,7 @@ approval. More information on this process is available in our
 
 An application's access level determines which users and content your app may
 access. By default, an application can only successfully interact with the
-content of its [Service Account][sa] and any [App Users][user-types]. 
+content of its [Service Account][sa] and any [App Users][user-types].
 To access existing Managed Users of an
 enterprise and groups that were not created by
 the app itself, navigate to the **Application Access**
@@ -182,9 +178,7 @@ settings accessible in the **Configuration** tab of the
 to **App + Enterprise Access**. Otherwise access to such
 Managed Users and groups will be blocked.
 
-<ImageFrame border>
-  ![App access level](../images/app-access-level.png)
-</ImageFrame>
+![App access level](../images/app-access-level.png)
 
 ### Application Scopes
 
@@ -192,9 +186,7 @@ An application's scopes determine which endpoints and resources an application
 can successfully call. See the [scopes guide][scopes] for detailed information
 on each option.
 
-<ImageFrame border width="600" center>
-  ![App scopes](../images/app-scopes.png)
-</ImageFrame>
+![App scopes](../images/app-scopes.png)
 
 ### CORS Domains
 
@@ -204,13 +196,11 @@ added to an allow-list due to [Cross Origin Resource Sharing][cors],
 also known as CORS. If all requests will be made from server-side code,
 you may skip this section.
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain** 
+To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer console][devconsole].
 
-<ImageFrame border>
-  ![App CORS config](../images/app-cors.png)
-</ImageFrame>
+![App CORS config](../images/app-cors.png)
 
 <!-- i18n-enable localize-links -->
 [devconsole]: https://app.box.com/developers/console
@@ -221,8 +211,8 @@ section at the bottom of the **Configuration** tab in the
 <!-- i18n-enable localize-links -->
 [cors]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 <!-- i18n-disable localize-links -->
-[user-types]: g://getting-started/user-types
-[sa]: g://getting-started/user-types/service-account
+[user-types]: page://platform/user-types
+[sa]: page://platform/user-types/#service-account
 <!-- i18n-enable localize-links -->
 [cygwin]: http://www.cygwin.com/
 [app-auth]: https://community.box.com/t5/Managing-Developer-Sandboxes/Authorizing-Apps-in-the-Box-App-Approval-Process/ta-p/77293

@@ -13,15 +13,11 @@ a user. The type of authorization available to an application depends on the
 use-case as well as the type of application that has been created in the developer
 console.
 
-<!-- markdownlint-disable line-length -->
-
 | Box Application Type         | Authentication methods                                              |
 | ---------------------------- | ------------------------------------------------------------------- |
 | [Custom App][custom-app]     | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Grant][ccg] |
 | [Limited Access App][la]     | [App token][apptoken]                                               |
 | [Custom Skill][custom-skill] | No authentication method selection needed                           |
-
-<!-- markdownlint-enable line-length -->
 
 <CTA to="guide://authentication/select">
   Learn how to select an authorization type
@@ -35,7 +31,7 @@ user to the API endpoints.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+    -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
 <CTA to="guide://authentication/tokens">
@@ -46,7 +42,7 @@ curl https://api.box.com/2.0/users/me \
 [jwt]: g://authentication/jwt
 [apptoken]: g://authentication/app-token
 [devtoken]: g://authentication/tokens/developer-tokens
-[custom-app]: g://applications/custom-apps
-[custom-skill]: g://applications/custom-skills
-[la]: g://applications/select/#limited-access-app
+[custom-app]: g://applications/app-types/custom-apps
+[custom-skill]: g://applications/app-types/custom-skills
+[la]: g://applications/app-types/select/#limited-access-app
 [ccg]: g://authentication/client-credentials

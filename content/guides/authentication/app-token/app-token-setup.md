@@ -3,17 +3,16 @@ rank: 3
 type: guide
 hide_step_number: false
 related_endpoints: []
-related_guides: 
+related_guides:
   - authentication/select
   - authentication/oauth2
   - authorization/custom-app-approval
-required_guides: 
+required_guides:
   - authentication/select
-  - applications/custom-apps
+  - applications/app-types/custom-apps
 related_resources: []
 alias_paths:
-  - /guides/applications/limited-access-apps
-  - /guides/applications/custom-apps/app-token-setup
+  - /guides/applications/app-types/custom-apps/app-token-setup
 ---
 
 # Setup with App Token Auth
@@ -28,19 +27,19 @@ for authentication.
 ## Prerequisites
 
 To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise 
+you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps
 
 ### 1. Log in to the Developer Console
 
-Log into Box and navigate to the [Developer Console][devconsole]. 
+Log into Box and navigate to the [Developer Console][devconsole].
 Select **Create New App**.
 
 ### 2. Create a Custom App
 
-Select **Limited Access App** from the list of application types. 
+Select **Limited Access App** from the list of application types.
 A modal will appear to prompt the next step.
 
 <ImageFrame border>
@@ -69,7 +68,7 @@ section.
 </ImageFrame>
 
 Click **Submit and Review** to send an email to your Box enterprise Admin for
-approval. More information on this process is available in our 
+approval. More information on this process is available in our
 [authorization guide][auth].
 
 ## Basic configuration
@@ -81,7 +80,7 @@ required.
 
 Authentication with Limited Access Apps is done through preconfigured [App
 Tokens][app-token]. To configure an app token, navigate to the **Configuration**
-tab for your application within the [Developer Console][devconsole]. 
+tab for your application within the [Developer Console][devconsole].
 
 Scroll down to the **Primary Access Token** section and click the
 **Generate Key** button.
@@ -96,7 +95,7 @@ After creation, the key can be used to make [API calls][api-calls].
 <Message warning>
   # App authorization
 
-  App Tokens can not be generated until the application is successfully 
+  App Tokens can not be generated until the application is successfully
   authorized within the Box Admin Console.
 </Message>
 
@@ -108,7 +107,7 @@ added to an allow-list due to [Cross Origin Resource Sharing][cors],
 also known as CORS. If all requests will be made from server-side code,
 you may skip this section.
 
-To add the full URI(s) to the allow-list, navigate to the **CORS Domain** 
+To add the full URI(s) to the allow-list, navigate to the **CORS Domain**
 section at the bottom of the **Configuration** tab in the
 [Developer Console][devconsole].
 

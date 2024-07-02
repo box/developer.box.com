@@ -18,8 +18,6 @@ directly in Box.
 
 The following URLs are supported in Box’s mobile applications:
 
-<!-- markdownlint-disable line-length -->
-
 | Application     | Object Type | Deep Link URL                          | iOS & Android |
 | --------------- | ----------- | -------------------------------------- | ------------- |
 | **Box**         | Folder      | `boxapp://folder?id=[folderid]`        | Version 3.7+  |
@@ -29,5 +27,3 @@ The following URLs are supported in Box’s mobile applications:
 | **Box for EMM** | Folder      | `boxemm://folder?id=[folderid]`        | Version 3.7+  |
 |                 | File        | `boxemm://file?id=[fileid]`            |               |
 |                 | Shared Link | `boxemm://sharedlink?url=[sharedlink]` |               |
-
-<!-- markdownlint-enable line-length -->

@@ -5,7 +5,7 @@ related_resources: []
 related_guides:
   - authentication/select
 required_guides:
-  - applications/select
+  - applications/app-types/select
 alias_paths:
   - /docs/authenticate-with-developer-token
   - /authentication/access-tokens/developer-tokens
@@ -15,16 +15,20 @@ alias_paths:
 
 A Developer Token is an Access Token available to developers during development
 and testing. These tokens are short lived, as they expire after 60 minutes, and
-cannot be refreshed programmatically. 
+cannot be refreshed programmatically.
 
 ## Create Developer Token
 
 To create a Developer Token for an application:
 
-- Navigate to the Box [Developer Console][devconsole] and select the application
-  to create a Developer Token for.
+- Navigate to the Box [Developer Console][devconsole] and select the application to create a Developer Token for.
 - Select the **Configuration** tab.
 - Under Developer Token, select **Generate Developer Token**.
+
+<Message>
+You can also generate a Developer Token directly from [My Apps][apps] view,
+using the menu available for each app.
+</Message>
 
 <ImageFrame border center shadow>
   ![Generating a Developer Token](../images/developer-token.png)
@@ -37,7 +41,7 @@ header of an API call.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer [DEVELOPER_TOKEN]"
+    -H "authorization: Bearer [DEVELOPER_TOKEN]"
 ```
 
 <Message warning>
@@ -52,7 +56,7 @@ Our SDKs can be initialized with a Developer Token to create a basic API client.
 <Message type='danger'>
   # Developer tokens should not be used in production environments
 
-  Developer Tokens should only be used for development or testing purposes.
+Developer Tokens should only be used for development or testing purposes.
 </Message>
 
 <Message warning>
@@ -81,3 +85,4 @@ To learn more about Developer Tokens for each SDK head over to:
 [Python]: https://github.com/box/box-python-sdk/blob/main/docs/usage/authentication.md#developer-token
 [Node]: https://github.com/box/box-node-sdk/blob/main/docs/authentication.md#developer-token
 [IOS]: https://github.com/box/box-ios-sdk/blob/main/docs/usage/authentication.md#developer-token
+[apps]: g://applications

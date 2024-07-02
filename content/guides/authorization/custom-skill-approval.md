@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - post_files_id_metadata_global_boxSkillsCards
 related_guides:
@@ -7,7 +7,7 @@ related_guides:
 - authorization/limited-access-approval
 required_guides:
 - authorization
-- applications/custom-skills/setup/
+- skills/handle/setup/
 alias_paths: []
 ---
 
@@ -18,7 +18,7 @@ before use.
 
 ## As a developer
 
-As the developer, navigate to the application in the 
+As the developer, navigate to the application in the
 [Developer Console][devconsole] and copy the application's Client ID to provide
 to your admin.
 
@@ -48,11 +48,8 @@ operate.
 
 There are two options here:
 
-* **All content in your company** authorizes the Skill at the root folder of
-  every user. This results in every file uploaded to any folder being processed
-  by the Box Skill application.
-* **Select a list of folders** enables the application to a specific folder
-  or set of folders on which the Skill application operates.
+* **All content in your company** authorizes the Skill at the root folder of every user. This results in every file uploaded to any folder being processed by the Box Skill application.
+* **Select a list of folders** enables the application to a specific folder or set of folders on which the Skill application operates.
 
 <ImageFrame border>
   ![Select a skill to add](images/skills-confirm.png)

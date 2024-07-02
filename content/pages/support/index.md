@@ -1,5 +1,5 @@
 ---
-alias_paths: 
+alias_paths:
   - /page/support
 centered: true
 rank: 0
@@ -12,18 +12,15 @@ and integrations with Box Platform are answered.
 
 For developer support, please reach out to us via one of our channels:
 
-- [Box Developer Community][forum]: For support with code, technical
-  integrations, and general requests.
+- [Box Developer Community][forum]: For support with code, technical integrations, and general requests.
 - [Twitter][twitter]: For general questions and support.
 - [File a support ticket][support]: For account specific questions and support.
 
-For to keep up to date with community projects and Platform changes, please use
+To keep up to date with community projects and Platform changes, please use
 one of these available channels:
 
-- [Changelog](page://changelog): For API changes, deprecated services, and
-  releases.
-- [Developer Newsletter](page://newsletter): For regular notifications of
-major events, projects, and releases.
+- [Changelog](page://changelog): For API changes, deprecated services, and releases.
+- [Developer Newsletter](page://newsletter): For regular notifications of major events, projects, and releases.
 
 <!-- i18n-enable localize-links -->
 [forum]: https://forum.box.com/

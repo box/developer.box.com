@@ -3,7 +3,7 @@ rank: 1
 related_endpoints:
   - get_authorize
 related_guides:
-  - applications/select
+  - applications/app-types/select
   - authentication/select
   - authentication/oauth2/oauth2-setup
 required_guides:
@@ -44,8 +44,7 @@ make API calls on behalf of the application.
 Before we can get started, you will need to have completed the following steps.
 
 - Create a Box Application within the developer console
-- Create and download the private key configuration file for your application
-  and save it as `config.json`
+- Create and download the private key configuration file for your application and save it as `config.json`
 - Ensure your Box Application is approved for usage within your enterprise
 
 ## 1. Read JSON configuration
@@ -55,8 +54,6 @@ the application's private key and other details. The following is an example.
 
 <Tabs>
   <Tab title='config.json'>
-
-<!-- markdownlint-disable line-length -->
 
 ```json
 {
@@ -73,8 +70,6 @@ the application's private key and other details. The following is an example.
 }
 ```
 
-<!-- markdownlint-enable line-length -->
-
   </Tab>
 </Tabs>
 
@@ -83,7 +78,7 @@ To use this object in the application it needs to be read from file.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var reader = new StreamReader("path/to/config.json");
 var json = reader.ReadToEnd();
 var config = BoxConfig.CreateFromJsonString(json);
@@ -113,7 +108,7 @@ config = JWTAuth.from_settings_file('path/to/config.json')
   <Tab title='Node'>
 
 ```js
-var config = require('path/to/config.json');
+var config = require("path/to/config.json");
 ```
 
   </Tab>
@@ -136,7 +131,7 @@ initialize the client to connect as the application.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var sdk = new BoxJWTAuth(config);
 var token = sdk.AdminToken();
 BoxClient client = sdk.AdminClient(token);
@@ -164,7 +159,7 @@ client = Client(config)
 
 ```js
 var sdk = BoxSDK.getPreconfiguredInstance(config);
-var client = sdk.getAppAuthClient('enterprise');
+var client = sdk.getAppAuthClient("enterprise");
 ```
 
   </Tab>
@@ -173,11 +168,10 @@ var client = sdk.getAppAuthClient('enterprise');
 <Message warning>
   # Service Accounts
 
-  At this point the application is authenticated as an application user, not as
-  a managed or app user. Head over to our guide on [User
-  Types](g://getting-started/user-types) to learn more about the different types
-  of users.
-</Message>
+At this point the application is authenticated as an application user, not as
+a managed or app user. Head over to our guide on [User
+Types](page://platform/user-types) to learn more about the different types
+of users.
 
 ## Summary
 

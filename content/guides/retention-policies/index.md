@@ -21,25 +21,14 @@ permanently when the data can no longer be legally held.
 Working with Retention Policies requires a developer to work with three
 distinct resources.
 
-* **Policies:**  A [Retention Policy][policy] describes the general behavior
-  of the retention policy. It determines how long a retention should stay in
-  place, if it can be extended, and what happens when the retention policy ends.
-* **Assignments:** A [Retention Policy Assignment][assignment] is a relation
-  between a policy and folder or enterprise. Creating an assignment puts a
-  retention on all the file versions that belong to that folder or enterprise.
-  For example, if an assignment is created on a folder the policy is applied to
-  all file versions within that folder.
-* **Retentions**: A [File Version Retention][retention] represents all the
-  policies that are assigned to a specific file version. Note that every file
-  version can have a maximum of one file version retention and that this
-  resource contains a list of every assigned policy.
+* **Policies:**  A [Retention Policy][policy] describes the general behavior of the retention policy. It determines how long a retention should stay in place, if it can be extended, and what happens when the retention policy ends.
+* **Assignments:** A [Retention Policy Assignment][assignment] is a relation between a policy and folder or enterprise. Creating an assignment puts a retention on all the file versions that belong to that folder or enterprise. For example, if an assignment is created on a folder the policy is applied to all file versions within that folder.
+* **Retentions**: A [File Version Retention][retention] represents all the policies that are assigned to a specific file version. Note that every file version can have a maximum of one file version retention and that this resource contains a list of every assigned policy.
 
 <Message type='warning'>
-  The above [file version retention][retention] section of the Box API
-  will soon be deprecated. The date of the deprecation will be announced at a
-  later date. If you wish to use the new endpoints, you may do so by referring
-  to [files under retention][files-under] or
-  [file versions under retention][file-versions-under] in the reference section.
+  The [file version retention][retention] section of the Box API
+  is now deprecated. Instead, you can use [files under retention][files-under] or
+  [file versions under retention][file-versions-under] endpoints.
 </Message>
 
 ## File Deletion with Retention Policies

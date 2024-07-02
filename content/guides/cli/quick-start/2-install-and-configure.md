@@ -51,14 +51,10 @@ Currently you have provided us with the following information.
   Client Secret
 </Store>
 
-<!-- markdownlint-disable line-length -->
-
 <!--alex ignore execute-->
 Open your terminal or command line and execute the command: `box login -n example_name`.
 
 Copy the Client ID and Client Secret into the terminal window when prompted.
-
-<!-- markdownlint-enable line-length -->
 
 <ImageFrame center>
   ![CLI Login](../images/cli-login.png)
@@ -111,8 +107,7 @@ Notification Email: []
 
 * You installed the CLI
 * You configured the CLI to use the OAuth 2.0 Application created earlier
-* You **made your first Box CLI Box API call** confirmed the user associated
-  with your Access Token
+* You **made your first Box CLI Box API call** confirmed the user associated with your Access Token
 
 <Next>I installed and configured the CLI</Next>
 </Choice>
@@ -128,6 +123,6 @@ Notification Email: []
 
 [cli]: https://github.com/box/boxcli
 [auth]: g://authentication/jwt/without-sdk/
-[sa]: g://getting-started/user-types/service-account/
+[sa]: page://platform/user-types/#service-account/
 [at]: g://authentication/tokens/
 [dc]: https://app.box.com/developers/console

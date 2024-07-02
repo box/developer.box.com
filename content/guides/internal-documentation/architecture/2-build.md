@@ -34,10 +34,8 @@ templates that are build out to static HTML, CSS, and JavaScript.
 There are 3 phases of a Gatsby build:
 
 1. The local and remote sources tare imported to GraphQL nodes.
-2. Nodes are transformed to add further information, parse content
-(such as Markdown), and link nodes together.
-3. Data is passed to the page template to compile the site to HTML, CSS
-and JS.
+2. Nodes are transformed to add further information, parse content (such as Markdown), and link nodes together.
+3. Data is passed to the page template to compile the site to HTML, CSS and JS.
 
 ## Site compilation
 

@@ -1,8 +1,7 @@
 ---
-related_endpoints:
-  - post_metadata_queries_execute_read
+related_endpoints: []
+required_guides: []
 ---
-
 # Limitations
 
 A few limits apply to the the metadata query APIs.
@@ -18,22 +17,13 @@ A metadata query only works with metadata templates that have been created by
 that enterprise. A query will not return results based on the content of free
 form key-value pairs stored in the `​global.properties` template.
 
-## Classification metadata templates  
+## Classification metadata templates
 
 Box uses metadata templates to power its content classification. These metadata
 templates can not be used in metadata queries, as they will most likely run
 into issues regarding large results sets. More on this next.
 
 There are no immediate plans to start supporting these queries in the future.
-
-## Indices for large result sets
-
-Due to scale considerations a metadata query might return a `HTTP 403` error
-when the metadata template has been applied to more than 10,000 files or folders.
-
-<CTA to='g://metadata/queries/indexes'>
-  Learn about creating and using search indices
-</CTA>
 
 ## Recommended result set size
 
@@ -47,8 +37,7 @@ When sending a metadata query request for which the result set exceeds 2,000
 items, the API can only guarantee that it returns all all matching results if
 both the following conditions are met.
 
-1. The requesting user has at least **​Previewer** ​permission to all items in
-   the result set
+1. The requesting user has at least **​Previewer** ​permission to all items in the result set
 2. The ancestor folder contains all of the files in the result set
 
 When sending a metadata query request for which the result set exceeds 2,000
@@ -104,12 +93,9 @@ folders) which match the metadata query exclusively based on evaluating the
 `​from​`, `​query​`, and `​query_params` parameters before the requesting user’s
 permissions and the `​ancestor_folder​` scope are considered.
 
-<!-- markdownlint-disable line-length -->
-
 | Query                                                                                                      | Result Set  | Outcome  | Notes                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------|-------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
 | Select items with the `catalogImages` ​template where the ​photographer​ is `Mike`                            | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
 | Select items with the `catalogImages` ​template                                                             | 4,000 items | May fail | The result set exceeds 2,000 items. If the user does not have access to all of the files in the result set the query may fail |
 | Select items with the `catalogImages` ​template in the `Products​` folder                                    | 4,000 items | May fail | The result set exceeds 2,000 items and not all results are contained within the ancestor folder.                              |
 | Select items with the `catalogImages` ​template in the `Products` folder where the photographer​ is `Mike`   | 200 items   | Success  | By only selecting items for `Mike` the result set is constrained to only 400 files                                            |
-<!-- markdownlint-enable line-length -->
