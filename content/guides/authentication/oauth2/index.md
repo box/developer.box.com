@@ -2,8 +2,8 @@
 rank: 2
 related_endpoints: []
 related_guides:
-  - applications/select
-  - getting-started/user-types
+  - applications/app-types/select
+  - ../pages/platform/user-types
 required_guides:
   - authentication/select
 related_resources: []
@@ -34,5 +34,4 @@ Client-side authentication is the ideal authentication method for apps that:
 
 - Work with users that already have existing Box accounts
 - Want or require users to know that they are using Box
-- Want to store data within the user's Box account and not within the the
-  application's Box account
+- Want to store data within the user's Box account and not within the the application's Box account

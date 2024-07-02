@@ -1,18 +1,18 @@
 ---
 rank: 280
-related_endpoints: 
+related_endpoints:
   - get_webhooks
   - get_webhooks_id
   - post_webhooks
   - put_webhooks_id
   - delete_webhooks_id
-related_resources: 
+related_resources:
   - webhook
 required_guides: []
-alias_paths: 
-  - /docs/work-with-webhooks	
+alias_paths:
+  - /docs/work-with-webhooks
   - /docs/file-workflow-with-webhooks
-  - /docs/webhooks 
+  - /docs/webhooks
   - /docs/getting-started-with-webhooks-v2
 ---
 
@@ -37,18 +37,15 @@ There are two types of webhooks: V1 and V2, which are compared below.
   and automatic retries we recommend to use V2 webhooks.
 </Message>
 
-<!-- markdownlint-disable line-length -->
-    
 | V1                                                                    | V2                                                                   |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Created in the [Developer Console][console].                                      | Created in the [Developer Console][console] or with an API call.                                             |
-| Set at the root level.                                                 | Set on specific files/folders, but cannot set at the root.            | 
+| Set at the root level.                                                 | Set on specific files/folders, but cannot set at the root.            |
 | Select from 14 event triggers.                                         | Select from 30+ event triggers.                                       |
 | Provides selected callback parameters.                                 | Payload includes full object response & additional context info.      |
 | No retry mechanism after notification delivery failure.                | Retries up to 10 times after notification delivery failure.           |
 | Does not support payload verification.                                 | Supports payload verification.                                       |
 | Notification URL can be HTTP or HTTPS.                                 | Notification URL must be HTTPS.                                       |
 | Does not scale well.                                                   | Scales well and has increased reliability.                            |
-<!-- markdownlint-enable line-length -->
 
 [console]: https://app.box.com/developers/console

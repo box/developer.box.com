@@ -44,7 +44,6 @@ good tips and best practices.
 <Message tip>
   A tip message
 </Message>
-
 ```
 
 <H>
@@ -66,7 +65,6 @@ but would not break anything for the user if ignored.
 <Message notice>
   A notice message
 </Message>
-
 ```
 
 <H>

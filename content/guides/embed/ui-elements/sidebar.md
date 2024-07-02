@@ -6,7 +6,7 @@ related_guides:
 required_guides:
   - embed/ui-elements/installation
 related_resources: []
-alias_paths: 
+alias_paths:
   - /docs/box-content-sidebar
 ---
 
@@ -20,14 +20,6 @@ comments and tasks) in their desktop or mobile web application.
 
 [Learn how to install](g://embed/ui-elements/installation) Box UI elements
 either through NPM or the Box CDN.
-
-<Message>
-  # Browser support
-
-UI elements have [limited support](g://embed/ui-elements/browser) for
-older browsers. Make sure to add the right polyfills for your targeted browsers.
-
-</Message>
 
 ## Authentication
 
@@ -44,20 +36,12 @@ and JWT.
 
 ## Sample HTML
 
-<!-- markdownlint-disable line-length -->
-
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>Box Content Sidebar</title>
-
-    <!-- polyfill.io only loads the polyfills your browser needs -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
-    <!-- Alternatively, use polyfill hosted on the Box CDN
-    <script src="https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js"></script>
-    -->
 
     <!-- Latest version of the sidebar css for your locale -->
     <link
@@ -91,8 +75,6 @@ and JWT.
   </body>
 </html>
 ```
-
-<!-- markdownlint-enable line-length -->
 
 ## Demo
 
@@ -201,19 +183,13 @@ sidebar.removeAllListeners();
 
 ### Parameters
 
-<!-- markdownlint-disable line-length -->
-
 | Parameter | Type   | Description                                                                                                                                                               |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fileId`  | String | Box File ID. This will be the ID of the file for which you want the sidebar.                                                                                              |
 | `token`   | String | Box API access token to use. It can have read/write access to the file above. The value passed in for the token is assumed to never expire while the sidebar is visible. |
 | `options` | Object | Additional options. For example, `sidebar.show(FILE_ID, TOKEN, {hasProperties: true})` would be used to show file properties in the sidebar.                              |
 
-<!-- markdownlint-enable line-length -->
-
 ### Options
-
-<!-- markdownlint-disable line-length -->
 
 | Parameter             | Type     | Default         | Description                                                                                                                                                                                                                                                |
 | --------------------- | -------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -234,8 +210,6 @@ sidebar.removeAllListeners();
 | `hasVersions`    | Boolean | `false` | Set to true to show file versions in the details sidebar.        |
 | `hasNotices`     | Boolean | `false` | Set to true to show file related notices in the details sidebar. |
 
-<!-- markdownlint-enable line-length -->
-
 ## Scopes
 
 If your application requires the end user to only be able to access a subset of
@@ -251,8 +225,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Base Scope
 
-<!-- markdownlint-disable line-length -->
-
 | Scope Name     | Permissions granted                                            |
 | -------------- | -------------------------------------------------------------- |
 | `base_sidebar` | Allows the user to get basic file info needed for the sidebar. |
@@ -265,8 +237,6 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 | `item_rename`  | Allows editing of file description.     |
 | `item_upload`  | Allows editing of file metadata.        |
 | `item_task`    | Allows creating and resolving of tasks. |
-
-<!-- markdownlint-enable line-length -->
 
 [downscope]: guide://authentication/tokens/downscope
 [scopes]: guide://api-calls/permissions-and-errors/scopes

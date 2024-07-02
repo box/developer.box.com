@@ -14,19 +14,18 @@ shared link.
 To enable shared links in the API, the `include_recent_shared_links` query
 parameter can be set to `true`.
 
-<!-- markdownlint-disable line-length -->
 <Tabs>
  <Tab title='cURL'>
 
 ```curl
 curl -i -X GET "https://api.box.com/2.0/search?query=sales&include_recent_shared_links=true" \
-     -H "Authorization: Bearer <ACCESS_TOKEN>"
+    -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
  </Tab>
  <Tab title='Python'>
 
-```py
+```python
 client.search().query("sales", metadata_filters=metadata_search_filters, include_recent_shared_links=True)
 ```
 
@@ -35,18 +34,17 @@ client.search().query("sales", metadata_filters=metadata_search_filters, include
 
 ```js
 client.search.query(
-  'sales',
-  {
-    include_recent_shared_links: true
-  })
-  .then(results => {
-    // ...
-  });
+    'sales',
+    {
+        include_recent_shared_links: true
+    })
+    .then(results => {
+        // ...
+    });
 ```
 
  </Tab>
 </Tabs>
-<!-- markdownlint-enable line-length -->
 
 <Message warning>
 

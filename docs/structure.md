@@ -57,7 +57,6 @@ rank: 123
 # Title
 
 Content
-
 ```
 
 Alternatively we support putting the rank in the filename, as this makes it
@@ -88,7 +87,6 @@ between two lines containing triple dashes (`---`).
 Frontmatter is used to provide extra details to the Box build system. We
 currently support the following fields.
 
-<!-- markdownlint-disable line-length -->
 
 | Name                | Default      | Description                                                                                                                                                                                                                  |
 | ------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,7 +106,6 @@ currently support the following fields.
 | `required_guides`   | `[]`         | A list (array) of guides (their paths) that are a prerequisite to this page. This is used to add links to those guides at the botton of this page, as well as add links to this page at the bottom of those guides.          |
 | `type`              | `guide|page` | The type of the markdown file. This defaults to `page` for all markdown files in the `pages/` folder and `guide` for all markdown in the `guides/` folder. Additionally, guides can be marked as `quick-start` where needed. |
 
-<!-- markdownlint-enable line-length -->
 
 ---
 

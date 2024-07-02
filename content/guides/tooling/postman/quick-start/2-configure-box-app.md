@@ -2,7 +2,7 @@
 type: quick-start
 hide_in_page_nav: true
 related_guides:
-  - applications/custom-apps
+  - applications/app-types/custom-apps
 ---
 
 # Configure a Box App
@@ -71,16 +71,9 @@ extra steps to set up.
   1. Go to the [Developer Console][devconsole]
   2. Select your application
   3. Go to the app's configuration section
-  4. Make sure your application uses **Standard OAuth 2.0** as the
-     authentication method
-  5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the
-     **Redirect URI** to the value `https://developer.box.com/auth/callback`. It
-     is important to note, if you visited this tutorial at `box.dev` your
-     **Redirect URI** should be `https://box.dev/auth/callback`.
-  6. Scroll down to the **Application Scopes** section to select your desired
-     [permissions][scopes]. **Your application must have at least one or more**
-     **of the following scopes:** manage users, read all files and folders
-     stored in Box, read and write all files and folders in Box.
+  4. Make sure your application uses **Standard OAuth 2.0** as the authentication method
+  5. Scroll down to the **OAuth 2.0 redirect URI** configuration and set the **Redirect URI** to the value `https://developer.box.com/auth/callback`. It is important to note, if you visited this tutorial at `box.dev` your **Redirect URI** should be `https://box.dev/auth/callback`.
+  6. Scroll down to the **Application Scopes** section to select your desired [permissions][scopes]. **Your application must have at least one or more** **of the following scopes:** manage users, read all files and folders stored in Box, read and write all files and folders in Box.
   7. At the top of the page click the button to **Save Changes**
 
   Next, copy the values for the Client ID and Client Secret into these 2 fields.
@@ -114,9 +107,9 @@ extra steps to set up.
 ## Summary
 
 * You either selected to create a new **Box App**
-  * Signed up for a developer account (Optional)
-  * Had us create **Custom App** for you that uses **OAuth 2.0** authentication
-  * Had us set up the **redirect URL** for the application
+    * Signed up for a developer account (Optional)
+    * Had us create **Custom App** for you that uses **OAuth 2.0** authentication
+    * Had us set up the **redirect URL** for the application
 * Or you selected to use an **existing Box App**
 
 </Choice>

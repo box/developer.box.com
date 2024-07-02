@@ -10,14 +10,17 @@ issues.
 
 ## Limit line length
 
+<!-- TODO: Determine new line length limit -->
+
 We enforce a maximum line length of 80 characters. In general this is enough for
 most people to easily read the content. Most advanced code editors allow for
 automatic wrapping of content at the 80 character mark. Check your code editor
-for details.
+for details. Line length limit is disabled for tables and code blocks.
 
-In the extreme case that a line can not be kept under 80 characters, for example
-when creating markdown tables, you can use the following syntax to make an
-exception.
+[!NOTE] Given that text editors support line wrapping, we are currently working on deciding on a new line length limit.
+
+In the extreme case that a line can not be kept under the length limit,
+for example, you can use the following syntax to make an exception.
 
 ```md
 <!-- markdownlint-disable line-length -->
@@ -37,6 +40,16 @@ the tags below to ensure they are localized for our Japan customers.
 [view-app]: https://developer.box.com/guides/embed/box-view/
 <!-- i18n-disable localize-links -->
 ```
+
+## Indentation
+
+### Ordered and unordered lists
+
+If a list element contains more elements (e.g., an extra paragraph, a block of code, a nested list), these elements should have 4 extra spaces added at the beginning of each line to ensure proper rendering.
+
+### Code blocks
+
+Code blocks should use standard idnentation for used programming language. For most programming language like Java, C# or Python it's 4 spaces per tab. Code blocks containg json data should use 2 spaces as the unit of indentation.
 
 ## Escape any code and brand names
 

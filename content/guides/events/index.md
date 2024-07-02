@@ -28,15 +28,11 @@ Unlike the enterprise events streams, the user events stream does not support
 filtering for specific events. The three user events stream_types return
 slightly different subsets of the user events dataset for different purposes.
 
-<!-- markdownlint-disable line-length -->
-
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `all`       | Returns everything for a user (default)                                                 |
 | `changes`   | Returns events that may cause file tree changes such as file updates or collaborations |
 | `sync`      | Is similar to changes but only applies to synced folders                                |
-
-<!-- markdownlint-enable line-length -->
 
 ### Enterprise events
 
@@ -51,14 +47,10 @@ based on event type but does not support long polling. Across the two
 stream types the dataset is exactly the same. Events can be deduplicated across
 the two stream types using their event IDs.
 
-<!-- markdownlint-disable line-length -->
-
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
 | `admin_logs_streaming`   | Enables subscribing to live events in near real time                     |
-
-<!-- markdownlint-enable line-length -->
 
 #### Live Monitoring
 

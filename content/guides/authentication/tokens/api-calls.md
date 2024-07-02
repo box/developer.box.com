@@ -2,12 +2,12 @@
 rank: 2
 related_endpoints: []
 related_resources: []
-related_guides: 
+related_guides:
   - authentication
 required_guides:
-  - applications/select
-alias_paths: 
-  - /docs/how-to-get-an-api-key 
+  - applications/app-types/select
+alias_paths:
+  - /docs/how-to-get-an-api-key
   - /authentication/access-tokens/api-calls
 ---
 
@@ -19,7 +19,7 @@ HTTP status.
 
 ```curl
 curl https://api.box.com/2.0/users/me \
-  -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
+    -H "authorization: Bearer EGmDmRVfhfHsqesn5yVYHAqUkD0dyDfk"
 ```
 
 <Message>

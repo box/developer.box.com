@@ -8,7 +8,7 @@ related_guides:
 required_guides: []
 related_resources:
   - folder
-alias_paths: 
+alias_paths:
   - /docs/build-a-folder-tree
 ---
 
@@ -22,12 +22,10 @@ The sample below allows for specifying the starting **root** folder and the
 maximum depth the code should traverse. It also allows for configuring what user
 is authenticated by allowing the passing in of an initialized SDK client.
 
-<!-- markdownlint-disable line-length -->
-
 <Tabs>
   <Tab title='.NET'>
 
-```dotnet
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -605,13 +603,11 @@ class BoxUtilities {
 
 let folderTreeBuilder = new BoxFolderTreeBuilder(client);
 folderTreeBuilder.buildFolderTreeWithFlatLists()
-  .then((tree) => {
-    console.log(JSON.stringify(tree));
-  })
+    .then((tree) => {
+        console.log(JSON.stringify(tree));
+    })
 ```
 
   </Tab>
 
 </Tabs>
-
-<!-- markdownlint-enable line-length -->
