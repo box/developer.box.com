@@ -2,7 +2,7 @@
 rank: 5
 related_endpoints:
   - post_webhooks
-alias_paths: 
+alias_paths:
   - /guides/webhooks/handle/setup-signatures
   - /guides/webhooks/handle/verify-signatures
   - /guides/webhooks/handle/rotate-signatures
@@ -11,36 +11,39 @@ alias_paths:
 # Signature Verification
 
 Webhook signatures help ensure that a webhook payload was sent by Box and was
-not tampered with in transit. Signatures greatly reduce the likelihood of
-successful man-in-the-middle or replay attacks.
+not tampered with. Signatures greatly reduce the likelihood of
+a successful man-in-the-middle or replay attacks.
 
-When configured, Box generates a cryptographic digest of the notification's
-body and attaches it the header of the webhook payload. When your application
-receives the payload, it is advised to verify the signatures by calculating the
+When signatures are configured, Box generates a cryptographic digest of the
+notification's body and attaches it to the header of the webhook payload. When
+your application receives the payload, verify the signatures by calculating the
 same digest and comparing it to the one received. If the digests do not match,
 the payload should not be trusted.
 
-An extra level of protection can be achieved by frequently changing the
-signature keys. To enable a smooth transition between the old and new keys, we
-support two simultaneous signature keys.
+You can achieve an extra level of protection by frequently changing the
+signature keys. To enable a smooth transition between the old and new keys,
+Box supports two simultaneous signature keys.
 
 ## Signature configuration
 
 In order to attach signatures to an application's notifications, you must first
 generate signature keys for the application.
 
-To configure your application's keys, navigate to the application in the 
-Developer Console. Click on the **Webhooks** tab and locate the 
-**Generate Key** buttons. 
+To configure your application's keys follow the steps below.
 
-Once generating the primary or secondary key, copy the value, as you will need
+1. Navigate to the application in the developer console.
+2. Click on the **Webhooks** tab.
+3. Click the **Manage signature keys** button.
+4. Click the **Generate Key** button to configure your keys.
+
+Once generating the primary or secondary key, copy the value. You will need
 it to verify the webhook payloads. Every webhook will now include a
 `BOX-SIGNATURE-PRIMARY` and `BOX-SIGNATURE-SECONDARY` header payload.
 
 ## Signature verification with SDKs
 
 Although it is possible to verify signatures manually, methods are provided for
-your convenience in our [official Box SDKs][sdks].
+your convenience in the [official Box SDKs][sdks].
 
 <Samples id='x_webhooks' variant='validate_signatures' />
 
@@ -50,7 +53,7 @@ The following steps describe the basics of how to verify a signature.
 
 ### Timestamp validation
 
-Validate the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the payload is
+Check if the timestamp in the `BOX-DELIVERY-TIMESTAMP` header of the payload is
 not older than ten minutes.
 
 <Tabs>
@@ -65,7 +68,7 @@ var expired = Date.now() - date > 10*60*1000;
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import dateutil.parser
 import pytz
 import datetime
@@ -85,10 +88,10 @@ expired = date >= expiry_date
 
 ### Calculate HMAC signature
 
-Calculate the HMAC of the payload using either of the two configured 
+Calculate the HMAC of the payload using either one of the two configured
 signatures for the application in the [Developer Console][console].
 
-Ensure you append the bytes of the body of the payload first and then the bytes
+Ensure you append the bytes of the payload body first, and then the bytes
 of the timestamp found in the `BOX-DELIVERY-TIMESTAMP` header.
 
 <Tabs>
@@ -114,7 +117,7 @@ hmac2.update(timestamp);
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import hmac
 import hashlib
 
@@ -147,7 +150,7 @@ var digest2 = hmac2.digest('base64');
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 import base64
 
 digest1 = base64.b64encode(hmac1)
@@ -162,8 +165,8 @@ digest2 = base64.b64encode(hmac2)
 Compare the encoded digest with the value of the
 `BOX-SIGNATURE-PRIMARY` or `BOX-SIGNATURE-SECONDARY` headers.
 
-Ensure the value of the `BOX-SIGNATURE-PRIMARY` header
-to the digest created with the primary key and the value of the
+Compare the value of the `BOX-SIGNATURE-PRIMARY` header
+to the digest created with the primary key, and the value of the
 `BOX-SIGNATURE-SECONDARY` header to the digest created with the secondary key.
 
 <Tabs>
@@ -182,7 +185,7 @@ var valid = !expired && (primarySignatureValid || secondarySignatureValid)
   </Tab>
   <Tab title='Python'>
 
-```py
+```python
 signature1 = headers["BOX-SIGNATURE-SECONDARY"]
 signature2 = headers["BOX-SIGNATURE-PRIMARY"]
 
@@ -196,14 +199,14 @@ valid = !expired && (primary_sig_valid || secondary_sig_valid)
 </Tabs>
 
 <Message warning>
-  HTTP header names are case insensitive and your client should ideally convert
+  HTTP header names are case insensitive. Your client should convert
   all header names to a standardized lowercase or uppercase format before trying
   to determine the value of a header.
 </Message>
 
 ## Rotate signatures
 
-When enabled, Box will always sends two signatures with every webhook payload.
+When enabled, Box sends two signatures with every webhook payload.
 Your application can trust a payload as long as at least one of its signatures
 is valid. When updating one signature key at a time your application will always
 receive a payload with at least one valid signature.
@@ -211,18 +214,17 @@ receive a payload with at least one valid signature.
 ### Rotation steps
 
 These instructions assume that you have already created a primary and secondary
-key in the [Developer Console][console] and are ready to replace either of them.
+key in the [Developer Console][console] and you are ready to replace either of
+them.
 
 By following these steps you can configure your application with two new keys
 without any conflicts.
 
-1. Change the primary key in the [Developer Console][console] by clicking the
-  "Reset" button.
-2. Update your application with the new primary key. Your application might
-   still receive notifications with the old primary key but your webhooks should
-   still be processed correctly since the secondary key is still valid.
-3. Once you are confident that no webhooks with the old primary key are
-   in-flight, you can update the secondary key with the same process.
+1. Go to the **Webhooks** tab in the [Developer Console][console].
+2. Click the **Manage signatures keys**.
+3. Click the **Reset** button to change the primary key.
+4. Update your application with the new primary key. Your application can still receive notifications with the old primary key, but your webhooks should be processed correctly since the secondary key is still valid.
+5. Once you are confident that no webhooks with the old primary key are in-flight, you can update the secondary key using the same process.
 
 [sdks]: g://tooling/sdks
 [console]: https://app.box.com/developers/console

@@ -8,7 +8,7 @@ related_endpoints:
 Your SSO service will have a unique user record for each person using it within
 your company. When accessing a Box application through this SSO service, if
 we're creating a Box user for each SSO user, then we need to create an
-association between the SSO user and Box user records. 
+association between the SSO user and Box user records.
 
 When a user logs in to Box through the SSO service we will first search for the
 user by the association. If a Box user record is found we can begin making
@@ -17,7 +17,7 @@ a new Box user with the association to the unique SSO user account.
 
 Exploring the top level of a Box [user object](r://user) we can see
 the available options for adding the unique identifier from the SSO service
-user object into the Box user object to bind the two together. 
+user object into the Box user object to bind the two together.
 
 ```json
 {
@@ -61,22 +61,22 @@ as the login email for the new user.
 ## Using `external_app_user_id` (recommended method)
 
 The `external_app_user_id` field was designed to hold a string identifier to
-associate a Box user record with some external service, such as an SSO provider
+associate a Box user record with an external service, such as an SSO provider
 user record.
+
+<message type='warning'>
+You can retrieve app users for a specific application only if such app
+users were created by this application.
+If you use one application to search for users
+created by a different one, no data will be returned.
+</message>
 
 Using the `external_app_user_id` field for associating the unique SSO user
 account with a Box user account is the preferred method of connecting the two
 accounts over email, for a number of reasons:
 
-* Email association is only viable for
- [managed users](guide://getting-started/user-types/managed-users/).
- [App users](guide://getting-started/user-types/app-users/) are
- automatically assigned an email address by Box, meaning that you cannot assign
- the `login` to be the email from the SSO service. 
-* Emails have to be unique in Box. This means that if your SSO service user
- signed up for Box using the same email address, which is not within your Box
- enterprise, then you will not be able to create a user with that email and
- won't be able to connect to that existing user.
+* Email association is only viable for [managed users](page://platform/user-types/#managed-users). [App users](page://platform/user-types/#app-user) are automatically assigned an email address by Box, meaning that you cannot assign the `login` to be the email from the SSO service.
+* Emails have to be unique in Box. This means that if your SSO service user signed up for Box using the same email address, which is not within your Box enterprise, then you will not be able to create a user with that email and won't be able to connect to that existing user.
 * The `external_app_user_id` field was designed for this purpose.
 
 ## Using `login` (alternative method)
@@ -84,13 +84,8 @@ accounts over email, for a number of reasons:
 Using the `login` field of a user object to create an account association is
 viable under a few conditions:
 
-* Only the 
- [managed users](getting-started://authentication/user-types/managed-users/)
- type is being used, not
- [app users](guide://getting-started/user-types/app-users/).
-* All email addresses and Box account creation requests are managed by your
- enterprise, meaning that users cannot independently create Box accounts with
- those email addresses.
+* Only the [managed users](getting-started://authentication/user-types/#managed-users/) type is being used, not [app users](page://platform/user-types/#app-user).
+* All email addresses and Box account creation requests are managed by your enterprise, meaning that users cannot independently create Box accounts with those email addresses.
 
 <Message warning>
   Email addresses used for users in Box, under the `login` field, must be

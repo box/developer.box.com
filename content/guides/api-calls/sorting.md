@@ -17,7 +17,7 @@ ascending or descending order.
 
 ```curl
 curl https://api.box.com/2.0/folders/0/items?sort=size&direction=DESC \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 <Message type='warning'>

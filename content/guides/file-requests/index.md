@@ -17,10 +17,8 @@ Box File Request gives you a fast and secure way to request files and
 associated metadata from anyone.  Using a drag-and-drop graphic
 interface, you can create a web form that enables you to:
 
-* Securely request files from anyone, no matter whether they have
-  a Box account, without adding collaborators on a folder.
-* Solicit additional information with metadata form fields, which
-  you can set as required/optional.
+* Securely request files from anyone, no matter whether they have a Box account, without adding collaborators on a folder.
+* Solicit additional information with metadata form fields, which you can set as required/optional.
 * Enable extra security and tracking with link settings.
 * Kick off automated workflows using Box Relay.
 
@@ -38,19 +36,9 @@ project.
 
 For example.
 
-* **Case management** - In this situation each customer support case has its
-own associated folder and a new file request can be sent out to a customer,
-requesting them to submit case related documents to the folder.
-* **Project management** - In this situation each project has its own
-associated folder for each project defined in an external system. The API can
-be used to automatically create a **"Client Documents"** folder within this
-folder, and a link can be sent to the client to allow them to upload documents
-on demand.
-* **Employee "drop" folder** - In this situation every new loan advisor in a
-bank has a personal folder in Box. To help them work with their clients a
-"drop" subfolder is automatically generated for them with an associated file
-request, allowing their clients to automatically upload documents to their
-advisor's personal folder.
+* **Case management** - In this situation each customer support case has its own associated folder and a new file request can be sent out to a customer, requesting them to submit case related documents to the folder.
+* **Project management** - In this situation each project has its own associated folder for each project defined in an external system. The API can be used to automatically create a **"Client Documents"** folder within this folder, and a link can be sent to the client to allow them to upload documents on demand.
+* **Employee "drop" folder** - In this situation every new loan advisor in a bank has a personal folder in Box. To help them work with their clients a "drop" subfolder is automatically generated for them with an associated file request, allowing their clients to automatically upload documents to their advisor's personal folder.
 
 ## Limitations
 

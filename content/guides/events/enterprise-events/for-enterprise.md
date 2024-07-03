@@ -28,14 +28,10 @@ a call to the [`GET /events`](e://get_events) API with the `stream_type` set to
 
 ## Stream Types
 
-<!-- markdownlint-disable line-length -->
-
 | Stream Type |                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------- |
 | `admin_logs`       | Enables querying historical events up to one year                                                 |
 | `admin_logs_streaming`   | Enables subscribing to live events in near real time                      |
-
-<!-- markdownlint-enable line-length -->
 
 ## Live Monitoring
 
@@ -95,10 +91,8 @@ A full list of event types can be found below.
 
 ## Event Types
 
-The following events can be triggered for an enterprise. This list is not 
+The following events can be triggered for an enterprise. This list is not
 exhaustive, so it is possible events appear that are not listed.
-
-<!-- markdownlint-disable line-length -->
 
 | Event name                                     | Description                                                                                     |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -155,6 +149,9 @@ exhaustive, so it is possible events appear that are not listed.
 | `FILE_WATERMARKED_DOWNLOAD`                    | A watermarked file is downloaded                                                                |
 | `GROUP_ADD_ITEM`                               | An item is added to a group                                                                     |
 | `GROUP_ADD_USER`                               | Added user to group                                                                             |
+| `GROUP_ADMIN_CREATED` | Group admin is created |
+| `GROUP_ADMIN_DELETED` | Group admin is deleted |
+| `GROUP_ADMIN_PERMISSIONS_UPDATED` | Group admin permissions are updated |
 | `GROUP_CREATION`                               | Created new group                                                                               |
 | `GROUP_DELETION`                               | Deleted group                                                                                   |
 | `GROUP_EDITED`                                 | Edited group                                                                                    |
@@ -197,6 +194,18 @@ exhaustive, so it is possible events appear that are not listed.
 | `SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION` | An invite to externally collaborate is blocked due to missing a justification    |
 | `SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`      | An invite to externally collaborate is justified                                                |
 | `SHIELD_JUSTIFICATION_APPROVAL`                | A Shield justification is approved                                                              |
+| `SHIELD_SHARED_LINK_ACCESS_BLOCKED` | Access to a shared link is blocked |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_CREATE` | A shared link is created and access to the content is restricted |
+| `SHIELD_SHARED_LINK_STATUS_RESTRICTED_ON_UPDATE` | A shared link is updated and access to the content is restricted |
+| `SHIELD_INFORMATION_BARRIER_ENABLED`           | A Shield information barrier is enabled                                                              |
+| `SHIELD_INFORMATION_BARRIER_DISABLED`           | A Shield information barrier is deactivated                                                       |
+| `SHIELD_INFORMATION_BARRIER_PENDING`           | A Shield information barrier is not yet active                                                              |
+| `SHIELD_INFORMATION_BARRIER_GROUP_ADD_USER_BLOCKED`           | Adding user blocked due to information barrier restrictions                        |
+| `SHIELD_INFORMATION_BARRIER_COLLAB_BLOCKED`           | Creating collaborations for users blocked due to information barrier restrictions   |
+| `SHIELD_INFORMATION_BARRIER_SHARED_ITEM_ACCESS_BLOCKED`   | Access to shared items blocked for users due to information barrier restrictions           |
+| `SHIELD_INFORMATION_BARRIER_ITEM_MOVE_BLOCKED`   | Moving items blocked due to information barrier restrictions           |
+| `SHIELD_INFORMATION_BARRIER_ITEM_COPY_BLOCKED`   | Copying items blocked due to information barrier restrictions                   |
+| `SHIELD_INFORMATION_BARRIER_ITEM_OWNER_TRANSFER_BLOCKED`   | Transferring items blocked due to information barrier restrictions                   |
 | `SIGN_DOCUMENT_ASSIGNED`                       | A sign request was sent to a signer                                                             |
 | `SIGN_DOCUMENT_CANCELLED`                      | A sign request was cancelled via API or UI                                                      |
 | `SIGN_DOCUMENT_COMPLETED`                      | A sign request was signed by all signers                                                        |
@@ -225,7 +234,6 @@ exhaustive, so it is possible events appear that are not listed.
 | `USER_AUTHENTICATE_OAUTH2_ACCESS_TOKEN_CREATE` | An OAuth 2.0 access token has been created                                                      |
 | `WATERMARK_LABEL_CREATE`                       | A watermark is added to a file                                                                  |
 | `WATERMARK_LABEL_DELETE`                       | A watermark is removed from a file                                                              |
-<!-- markdownlint-enable line-length -->
 
 [shield-events]: g://events/event-triggers/shield-alert-events
 [reports]:https://support.box.com/hc/en-us/articles/360043696534-Running-Reports

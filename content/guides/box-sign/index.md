@@ -10,20 +10,13 @@ cancel sign requests.
 
 ## Enablement
 
-<Message type='warning'>
-Box Sign is now available on all business (Business , Business Plus) and
-enterprise (Enterprise, Enterprise Plus, Enterprise Suites) plans. Box will
-notify customers before Box Sign becomes available on Starter plans.
-</Message>
+The following account types support requests through the Box Sign API:
+Business, Business Plus, Enterprise, Enterprise Suites, and Enterprise Plus.
+To locate your account type, navigate to **Account Settings** and scroll down
+to the **Account Details** section of the **Account** tab. For Admin details on
+restricting access, please see our [support article][restrict].
 
-If your account type supports access to Box Sign, you will be able to make
-requests via the Box Sign API. Supported tariffs include: Business, Business
-Plus, Enterprise, Enterprise Suites, Enterprise Plus, or Starter. To locate your
-account type, navigate to **Account Settings** and scroll down to the
-**Account Details** section of the **Account** tab. For Admin details on
-restricting access, please see our [support article][restrict].  
-
-## Required Scopes
+## Required scopes
 
 The following [scopes][scopes] must be enabled for an application before use of
 Box Sign's endpoints.
@@ -71,4 +64,4 @@ production content.
 [sandbox]: https://support.box.com/hc/en-us/articles/360043697274-Managing-developer-sandboxes-for-Box-admins 
 <!-- i18n-disable localize-links -->
 [eg]: g://events/event-triggers/sign-events
-[wh]: g://webhooks/triggers#sign-request
+[wh]: g://webhooks/triggers

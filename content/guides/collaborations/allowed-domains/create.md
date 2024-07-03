@@ -17,7 +17,7 @@ alias_paths:
 
 An enterprise that normally restricts creating collaborations can
 add domains, such as `example.com`, to a list for which collaborations may be
-created within the enterprise. 
+created within the enterprise.
 
 <Samples id='post_collaboration_whitelist_entries' />
 
@@ -26,10 +26,8 @@ The
 will require the `domain` to allow the collaborations between, and a
 `direction`, which may be set to:
 
-* `inbound`: Whether external users may be collaborated in on content in your
-enterprise.
-* `outbound`: Whether your enterprise managed users may be collaborated in on
-content owned within an external enterprise.
+* `inbound`: Whether external users may be collaborated in on content in your enterprise.
+* `outbound`: Whether your enterprise managed users may be collaborated in on content owned within an external enterprise.
 * `both`: Both of the above.
 
 Supply both parameter to set up the new allowed domain.

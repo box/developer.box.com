@@ -11,36 +11,42 @@ alias_paths:
 # Box Embed
 
 Box Embed is a HTML-based framework that makes it possible to embed the entire
-Box experience anywhere people work. Box Embed provides the ability to upload,
-search, comment, share, tag, and most importantly edit files using Box Edit.
+Box Web App experience anywhere people work. Box Embed provides the ability to
+upload, search, comment, share, tag, and edit files using Box Edit.
 
 ## Configure
 
+To create the widget, you need to set the folder for sharing and you
+need to have at least **Viewer** [permissions][5].
+
 ### From the web
 
-To grab your Box Embed code from the Box web app, navigate to the folder of
-choice, click on the ellipsis beside the folder, go to More Actions, and click
-Embed Widget.
+To grab your Box Embed code from the Box web app:
+
+- navigate to the folder of choice,
+- click on the ellipsis beside the folder,
+- go to **More Actions**,
+- click **Embed Widget**.
 
 <ImageFrame border>
-  ![Box Embed](./box-embed.png)
+  ![Box Embed](./box-embed-new.png)
 </ImageFrame>
 
-You are presented with options to adjust the size, view, and sorting.
+The next screen allows you to configure the size, sorting, and view of
+the widget. You can also choose to hide the folder path, and to expand
+the navigation & sidebar by default.
 
 <ImageFrame border>
-  ![Box Embed Configuration](./box-embed-2.png)
+  ![Box Embed Configuration](./embed-configuration.png)
 </ImageFrame>
 
-Once you are done customizing the embed widget, all you will need to do is copy
+Once you are done customizing the embed widget, you need to copy
 and paste the embed code into your site or web application.
 
 ## Programmatically
 
 If you want to add more customization to Box Embed, you have the ability to
 build it programmatically. The format for an embed snippet is as follows.
-
-<!-- markdownlint-disable line-length -->
 
 ```html
 <iframe
@@ -54,25 +60,26 @@ build it programmatically. The format for an embed snippet is as follows.
 ></iframe>
 ```
 
-<!-- markdownlint-enable line-length -->
-
 ### Finding your shared link value
 
-The first step to building an embed `iframe` programmatically is to generate or
-find the value for the shared link. One way to find this value is by using the Box
-web app.
+The first step to building an embed `iframe` programmatically is to generate
+or find the value for the shared link. One way to find this value is by
+using the Box web app.
 
 <ImageFrame border>
-  ![Box Share](./box-share.png)
+  ![Box Share](./embed-share.png)
 </ImageFrame>
 
-Additionally, you can also find this shared link value through the API using the
-[`GET /files/:id`](e://get-files-id) or [`GET /folders/:id`](e://get-folders-id)
-endpoint and passing in the query parameter `fields=shared_link`.
+Another way is to create a shared link with API using the
+[`PUT /files/:file_id`][3] or [`PUT /files/:file_id`][4].
+
+Then you can find this shared link value using the
+[`GET /files/:id`][1] or [`GET /folders/:id`][2] endpoint and passing in the
+query parameter `fields=shared_link`.
 
 ```curl
 curl https://api.box.com/2.0/folders/12345?fields=shared_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -84,12 +91,14 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 }
 ```
 
+You can also set the page to Root Folder/All Files page. Set the URL to
+`/folder/0` instead of the share link:
+`<iframe src=“https://app.box.com/embed/folder/0”….></iframe>`
+
 ### Parameters
 
 Next, you will want to choose your view customization options. The following is
 a list of optional parameters you can configure.
-
-<!-- markdownlint-disable line-length -->
 
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
@@ -98,8 +107,6 @@ a list of optional parameters you can configure.
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
 | `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
 | `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
-
-<!-- markdownlint-enable line-length -->
 
 ### Full Screen Capabilities
 
@@ -115,12 +122,12 @@ within an `<iframe>`:
 
 ## Expiring Embed Links
 
-For files, another option is to call the [`GET /files/:id`](e://get-files-id)
+For files, another option is to call the [`GET /files/:id`][1]
 and request an `expiring_embed_link` using the `fields` query parameter.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -147,7 +154,7 @@ curl https://api.box.com/2.0/files/12345?fields=expiring_embed_link \
           },
           "scope": "base_preview"
         },
-       ...
+        ...
       ],
       "token_type": "bearer"
     },
@@ -163,7 +170,7 @@ Embed interface.
 
 ```html
 <iframe
-  src="<YOUR-GENERATED-BOX-EMBED-LINK"
+  src="YOUR-GENERATED-BOX-EMBED-LINK"
   width="{pixels}"
   height="{pixels}"
   frameborder="0"
@@ -183,14 +190,29 @@ would look something like this.
 https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 ```
 
-<!-- markdownlint-disable line-length -->
-
 |                   |                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `showDownload`    | Shows the download button in the embedded header bar if the viewer has permissions to download the file. Document file types will also show a print button since print and download are governed by the same permissions. Defaults to `false`.                                                                                                                                                                                              |
 | `showAnnotations` | Enables users with permission Preview and above to annotate document and image previews. Also shows annotations that are already on the document. To learn more about the file types that annotations is available on as well as the types of annotations, you can refer to our Annotations page. Annotations are available today on web browsers only. On mobile browsers, users will be able to view annotations but not create new ones. |
 
-<!-- markdownlint-enable line-length -->
+## Cloud Game
+
+The cloud game is a widget created to prevent clickjacking.
+It's shown for embedded sites that aren’t partner integrations.
+In cloud game, user must drag a cloud to the correct location before an
+interaction is allowed. It makes clickjacking difficult, as the
+position of the cloud and its destination are randomly generated.
+
+<ImageFrame border>
+  ![Box Embed](./cloud-game.png)
+</ImageFrame>
+
+`postMessage()` is used on the iframe to retrieve both the embed and the
+`showCloudGame` status. If embedded, `document.hasStorageAccess()` shows
+if Box has access to cookies. If yes and the user is logged in, the cloud
+game is displayed.
+If the `showCloudGame` status is `false`, user is navigated to the login
+page.
 
 ## Custom Logo
 
@@ -208,3 +230,9 @@ and **print** options might not show in mobile browsers.
 <!-- i18n-enable localize-links -->
 [logo]: https://support.box.com/hc/en-us/articles/360044193633-Customize-Your-Account-s-Branding
 <!-- i18n-enable localize-links -->
+
+[1]: e://get-files-id
+[2]: e://get-folders-id
+[3]: e://put-files-id--add-shared-link
+[4]: e://put-folders-id--add-shared-link
+[5]: https://support.box.com/hc/en-us/articles/360044196413-Understanding-Collaborator-Permission-Levels

@@ -24,15 +24,9 @@ categories:
         // url: A link to our developer blog
         url: https://medium.com/box-developer-blog
 
-      engblog:
-        // text: Text for a link to the engineering blog
-        text: Engineering Blog
-        // url: A link to our engineering blog
-        url: https://blog.box.com/category/engineering
-
       newsletter:
         // text: Text for a link to the newsletter page
-        text: Newsletter
+        text: Developer Newsletter
         // url: A link to the newsletter page
         url: /newsletter/
 
@@ -84,6 +78,12 @@ categories:
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
 
+      ios_sdk:
+        // text: Text for link to the iOS SDK
+        text: iOS Content SDK
+        // url: link to the iOS Content SDK
+        url: https://github.com/box/box-ios-sdk
+
       cli:
         // text: Text for link to the Box CLI
         text: Box CLI
@@ -112,8 +112,8 @@ categories:
         // text: Text for link to our Box skills code samples
         text: Skills Samples
         // url: Link to our Box skills code samples
-        url: https://github.com/box-community?utf8=%E2%9C%93&q=\
-          sample-*-skills&type=&language=
+        url: "https://github.com/box-community?utf8=%E2%9C%93&q=\
+          sample-*-skills&type=&language="
 
   support:
     // title: |-
@@ -131,8 +131,8 @@ categories:
         // text: Text for link to create a support ticket
         text: Create a ticket
         // url: Link to create a support ticket
-        url: https://community.box.com/t5/custom/page/page-id\
-          /BoxSearchLithiumTKB
+        url: "https://community.box.com/t5/custom/page/page-id\
+          /BoxSearchLithiumTKB"
 
       forum:
         // text: Text for link to go to our support forum
@@ -145,8 +145,8 @@ categories:
         // text: Text for link to go to our feedback site
         text: Product Feedback
         // url: Link to go to our feedback site
-        url: https://pulse.box.com/forums/\
-          909778-product-feedback?category_id=330838
+        url: "https://pulse.box.com/forums/\
+          909778-product-feedback?category_id=330838"
 
       status:
         // text: Text for link to go to our status page
@@ -170,7 +170,7 @@ bottom:
 
     subscriptions:
       // text: Text for link to update user notification preferences
-      text: Subscriptions
+      text: Newsletter Unsubscribe
       // url: Link to update user notification preferences
       url: https://go.box.com/preferences.html
 

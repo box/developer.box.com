@@ -1,0 +1,52 @@
+---
+// title: title of the page
+title: Sample Code Catalog
+
+// labels: labels in filter dropdowns
+labels:
+  languages:
+    all_languages: All languages
+    universal: Universal samples
+    android: Android
+    react: React
+    java: Java
+    powershell: PowerShell
+    dotNet: .NET
+    python: Python
+    node: Node.js
+    angular: Angular
+    angularjs: AngularJS
+    curl: cURL
+    vue: Vue.js
+    r: R
+    ruby: Ruby
+    javascript: JavaScript
+    apex: APEX
+    swift: Swift
+    perl: Perl
+    php: PHP
+    cSharp: C#
+    ts: TypeScript
+
+  tags:
+    all_tags: All tags
+    ui_elements: UI Elements
+    salesforce: Salesforce
+    skills: Skills
+    api: API
+    sdk: SDK
+    cli: CLI
+    webhooks: Webhooks
+    provisioning: Provisioning
+    mobile: Mobile
+    frontend: Frontend
+
+resetBtn: Reset filters
+
+noResults:
+  title: Sorry, we couldn't find what you are looking for.
+  message: |-
+    Try using a different filter or filter combination.
+    Still can't find it?
+  link: Contact us
+  suggestSample: to suggest a new code sample.

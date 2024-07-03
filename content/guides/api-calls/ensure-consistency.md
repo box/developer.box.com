@@ -1,5 +1,5 @@
 ---
-rank: 4
+rank: 5
 related_endpoints:
   - post_files_id_content
   - put_files_id
@@ -31,7 +31,7 @@ For example, a file resource returns an `etag` in the JSON response.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -54,8 +54,8 @@ value in a `if-none-match` header.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN" \
-  -H "if-none-match: 1"
+    -H "authorization: Bearer ACCESS_TOKEN" \
+    -H "if-none-match: 1"
 ```
 
 This API call would result in an empty response if the file had not changed.
@@ -70,8 +70,6 @@ same time.
 
 The following endpoints support this header.
 
-<!-- markdownlint-disable line-length -->
-
 | `if-match` capable endpoints                                  |                                 |
 | ------------------------------------------------------------- | ------------------------------- |
 | [`POST /files/:id/content`](endpoint://post_files_id_content) | Upload a new file version       |
@@ -81,8 +79,6 @@ The following endpoints support this header.
 | [`DELETE /folders/:id`](endpoint://delete_folders_id)         | Delete a folder                 |
 | [`PUT /web_links/:id`](endpoint://put_web_links_id)           | Update a web link's information |
 | [`DELETE /web_links/:id`](endpoint://delete_web_links_id)     | Delete a web link               |
-
-<!-- markdownlint-enable line-length -->
 
 The response of these APIs calls depends on the existence of the item,
 and whether the `etag` value matches the most recent version.
@@ -109,16 +105,12 @@ is downloaded for items that have not changed since your application last
 inspected it. This helps ensure no unnecessary information is downloaded,
 speeding up your application and saving on bandwidth.
 
-<!-- markdownlint-disable line-length -->
-
 | `if-none-match` capable endpoints                   |                                 |
 | --------------------------------------------------- | ------------------------------- |
 | [`GET /files/:id`](endpoint://get_files_id)         | Get a file's information        |
 | [`GET /folders/:id`](endpoint://get_folder_id)      | Get a folder's information      |
 | [`GET /web_links/:id`](endpoint://get_web_links_id) | Get a web link's information    |
 | [`GET /shared_items`](endpoint://get_shared_items)  | Get a shared item's information |
-
-<!-- markdownlint-enable line-length -->
 
 The response of these APIs calls depends on the existence of the item,
 and whether the `etag` value matches the most recent version.

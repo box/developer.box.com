@@ -19,6 +19,9 @@ titles:
   // related: A title for generic related content
   related: Related
 
+  // required_guides: A title for required guides
+  required_guides: Required Guides
+
   // quick_start_guide: A title for a quick start guide
   quick_start_guide: Quick Start
 
@@ -52,6 +55,10 @@ titles:
   // edit_source: The text for a link to edit the source of the page
   edit_source: Edit this page
 
+  // send_feedback: |-
+    The text for a link to give feedback on an API Reference page
+  send_feedback: Send feedback
+
   // next: The text for a link to the next step in a multi-step guide
   next: Next
 
@@ -66,3 +73,6 @@ titles:
 
   // on_this_page: The text for list that represent the sections on this page
   on_this_page: On this page
+
+  // get_started: The text for a link that tells a user to get started
+  get_started: Get started

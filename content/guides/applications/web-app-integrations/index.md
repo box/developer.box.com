@@ -1,5 +1,5 @@
 ---
-rank: 1
+rank: 20
 related_endpoints: []
 related_guides: []
 required_guides: []
@@ -11,10 +11,10 @@ alias_paths:
 
 # Web App Integration
 
-Box Platform enables an application to provide features to Box users directly
-within the Box web application. Web App Integrations allow applications to
-become part of the Box user experience by allowing users to share and edit files
-with third-party applications.
+Web App Integrations allow third-party applications to
+become part of the Box user experience by 
+allowing users to use such third-party applications
+when editing or sharing files.
 
 ## Features
 
@@ -23,7 +23,7 @@ Box using a third-party application. It can also offer new features to Box users
 through [Recommended Apps][recommended-apps], which show up in Box Preview.
 
 <ImageFrame border shadow width='600' center>
-  ![Integration example](../images/recommended-apps-preview.png)
+  ![Integration example](./images/recommended-apps-preview.png)
 </ImageFrame>
 
 By enabling a Web App Integration, an application can be added to Recommended

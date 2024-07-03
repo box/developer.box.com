@@ -46,7 +46,7 @@ related_endpoints:
     ## You are now logged in
 
     We just sent your browser to the [Box Authorization](e://get-authorize)
-    screen where you granted your application access to your user account. Ater
+    screen where you granted your application access to your user account. After
     you granted it access the browser redirected back to this site with a `code`.
 
     We then [exchanged](e://post-oauth2-token) this short-lived `code` for a
@@ -88,11 +88,9 @@ related_endpoints:
 
 ## Summary
 
-* You logged into your **Box account** using your own **Box App** or our
-  preconfigured app
+* You logged into your **Box account** using your own **Box App** or our preconfigured app
 * You granted the **Box App** access to your account
-* You are able to see your account's **Access Token** and **Refresh Token**
-  on this page
+* You are able to see your account's **Access Token** and **Refresh Token** on this page
 
 </Choice>
 

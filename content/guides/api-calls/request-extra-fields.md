@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 4
 related_endpoints:
   - get_files_id
   - get_folders_id
@@ -15,15 +15,11 @@ alias_paths: []
 The number of fields returned for a resource can depend on the API endpoint used
 to request the resource.
 
-<!-- markdownlint-disable line-length -->
-
 | Variant  |                                                                                                                                                                                                                                                                  |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Standard | The standard set of fields returned when requesting a resource for its own endpoints, for example when requesting a file through the [`GET /files/:id`](endpoint://get_files_id) endpoint                                                                        |
 | Full     | The full set of fields that can be returned through a resource's own endpoints by using the `field` query parameter                                                                                                                                              |
 | Mini     | A subset of fields that is returned when a resource is returned as a nested part of another resource, for example when a file is returned when requesting all items in a folder through the [`GET /folders/:id/items`](endpoint://get_folders_id_items) endpoint |
-
-<!-- markdownlint-enable line-length -->
 
 The API reference documentation has each of these variations labeled in more
 detail. Most notably, the file, folder, web link, and user items have full and
@@ -37,7 +33,7 @@ value of this parameter is a comma separated list of field names.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -50,7 +46,7 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 }
 ```
 
-<Message type="notice">
+<Message type='notice'>
   It is important to note that when a specific field is requested no other
   fields are returned except for those requested and the "base" set of fields.
   For a file, this base set is comprised of the `etag`, `id`, and `type` values.
@@ -70,7 +66,7 @@ the standard variation of a file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -111,7 +107,7 @@ will return a mini variation of files and folders nested within the `item_collec
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json
@@ -163,7 +159,7 @@ specified plus the basic fields for the file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
-  -H "authorization: Bearer ACCESS_TOKEN"
+    -H "authorization: Bearer ACCESS_TOKEN"
 ```
 
 ```json

@@ -13,7 +13,7 @@ alias_paths:
 Box offers several options for using our APIs, including the [Box CLI][cli],
 [Postman][postman], [Salesforce Developer Toolkit][sdt], and [various SDKs][sdks].
 
-[cli]: g://tooling/cli
+[cli]: g://cli
 [postman]: g://tooling/postman
 [sdt]: g://tooling/salesforce-toolkit
 [sdks]: g://tooling/sdks

@@ -3,12 +3,10 @@ rank: 4
 related_endpoints: []
 related_guides:
   - authentication/jwt
-  - getting-started/user-types
   - authentication/select
 required_guides:
   - authentication/oauth2/with-sdk
   - authentication/oauth2/without-sdk
-  - getting-started/user-types
 related_resources: []
 alias_paths: []
 ---
@@ -22,7 +20,7 @@ user instead of for the [Service Account][sa].
 
 The application must be configured to allow the creation of user Access Tokens.
 This setting can be found in the **Configuration** tab of the
-[Developer Console][devconsole]. 
+[Developer Console][devconsole].
 
 <ImageFrame border center>
   ![Advanced Features](./enable-user-access-tokens.png)
@@ -30,7 +28,7 @@ This setting can be found in the **Configuration** tab of the
 
 Additionally, the authenticated user needs to be a user with Admin permissions,
 meaning either an Admin, Co-Admin, or Service Account. See our guide on
-[User Types](g://getting-started/user-types) for more details.
+[User Types](page://platform/user-types) for more details.
 
 ## User Access Tokens with SDKs
 
@@ -41,7 +39,7 @@ but create a user client instead of an "Enterprise" client.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var userId = "12345";
 var sdk = new BoxJWTAuth(config);
 var token = sdk.UserToken(appUserID);
@@ -52,14 +50,10 @@ BoxClient client = sdk.UserClient(userToken, userId);
 
   <Tab title='Java'>
 
-<!-- markdownlint-disable line-length -->
-
 ```java
 String userId = "12345";
 BoxDeveloperEditionAPIConnection api = new BoxDeveloperEditionAPIConnection.getAppUserConnection(userId, config)
 ```
-
-<!-- markdownlint-enable line-length -->
 
   </Tab>
 
@@ -106,13 +100,13 @@ a claim for the enterprise, create one for a specific user ID.
 <Tabs>
   <Tab title='.Net'>
 
-```dotnet
+```csharp
 var userId = "12345";
 
 var claims = new List<Claim>{
-  new Claim("sub", userid),
-  new Claim("box_sub_type", "user"),
-  new Claim("jti", jti),
+    new Claim("sub", userid),
+    new Claim("box_sub_type", "user"),
+    new Claim("jti", jti),
 };
 ```
 
@@ -137,15 +131,15 @@ claims.setExpirationTimeMinutesInTheFuture(0.75f);
   <Tab title='Python'>
 
 ```python
-user_id = '12345';
+user_id = '12345'
 
 claims = {
-  'iss': config['boxAppSettings']['clientID'],
-  'sub': user_id,
-  'box_sub_type': 'user',
-  'aud': authentication_url,
-  'jti': secrets.token_hex(64),
-  'exp': round(time.time()) + 45
+    'iss': config['boxAppSettings']['clientID'],
+    'sub': user_id,
+    'box_sub_type': 'user',
+    'aud': authentication_url,
+    'jti': secrets.token_hex(64),
+    'exp': round(time.time()) + 45
 }
 ```
 
@@ -156,12 +150,12 @@ claims = {
 let user_id = '12345';
 
 let claims = {
-  iss: config.boxAppSettings.clientID,
-  sub: user_id,
-  box_sub_type: "user",
-  aud: authenticationUrl,
-  jti: crypto.randomBytes(64).toString("hex"),
-  exp: Math.floor(Date.now() / 1000) + 45
+    iss: config.boxAppSettings.clientID,
+    sub: user_id,
+    box_sub_type: "user",
+    aud: authenticationUrl,
+    jti: crypto.randomBytes(64).toString("hex"),
+    exp: Math.floor(Date.now() / 1000) + 45
 };
 ```
 
@@ -206,4 +200,4 @@ $claims = [
 </CTA>
 
 [devconsole]: https://app.box.com/developers/console
-[sa]: g://getting-started/user-types/service-account
+[sa]: page://platform/user-types/#service-account

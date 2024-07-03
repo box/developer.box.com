@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 3
 related_endpoints:
   - post_files_upload_sessions
   - put_files_upload_sessions_id
