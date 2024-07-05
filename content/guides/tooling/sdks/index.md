@@ -48,30 +48,30 @@ with the Box Content Cloud.
 
 Here's what you can expect from the new SDKs:
 
-* **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
-* **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
-* **Embedded Documentation**:  All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
-* **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
+- **Full API Support**: New Box SDKs empower developers with complete coverage of the Box API ecosystem. You can access all the latest features and functionalities offered by Box and build feature-rich applications.
+- **Rapid API Updates**: The new auto-generation development approach allows for adding Box APIs to SDKs at a much faster pace (in a matter of days). This means you can leverage the most up-to-date features in your applications without delay.
+- **Embedded Documentation**: All objects and parameters are documented directly in the source code of the SDK so all the necessary information is stored in one place.
+- **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
-| Platform                          | Maintained?  | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Python Gen SDK][pythongensdk]        | Yes         | Full    |
-| [Typescript Gen SDK][tsgensdk]        | Yes         | Full    |
-| [.NET SDK][dotnetgensdk] (Beta)   | Yes         | Full    |
+| Platform                        | Maintained? | API Parity |
+| ------------------------------- | ---------| -------- |
+| [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
+| [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
+| [.NET SDK][dotnetgensdk] (Beta) |     Yes     |    Full    |
 
 ## SDKs
 
 The table lists Box SDKs that you can use
 when building your applications.
 
-| Platform                          | Maintained? | API Parity |
-| --------------------------------- | ----------- | ------- |
-| [Java SDK][javasdk]               | Yes         | Full    |
-| [.NET SDK][dotnetsdk]             | Yes         | Full    |
-| [Python SDK][pythonsdk]           | Yes         | Full    |
-| [Node SDK][nodesdk]               | Yes         | Full    |
-| [iOS Content SDK][iossdk]         | Yes         | Full    |
-| [Android Content SDK][androidsdk] | No          | Partial |
+| Platform   |  Maintained?  | API Parity |
+| --- | ------- |-------- |
+| [Java SDK][javasdk]   | |    Full    |
+| [.NET SDK][dotnetsdk]  | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
+| [Python SDK][pythonsdk]   | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
+| [Node SDK][nodesdk]  |   Yes      |    Full    |
+| [iOS Content SDK][iossdk]   |   Yes    |    Full    |
+| [Android Content SDK][androidsdk] |   No   |  Partial   |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -87,6 +87,7 @@ Refer to [this][android-docs] documentation for more details.
 </Message>
 
 <!-- i18n-enable localize-links -->
+
 [javasdk]: https://github.com/box/box-java-sdk
 [dotnetsdk]: https://github.com/box/box-windows-sdk-v2
 [pythonsdk]: https://github.com/box/box-python-sdk
@@ -98,4 +99,5 @@ Refer to [this][android-docs] documentation for more details.
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
+
 <!-- i18n-disable localize-links -->
