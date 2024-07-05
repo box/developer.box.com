@@ -30,7 +30,7 @@ source_url: >-
 ## Prerequisites
 
 To set up a Custom App using server-side authentication, you will need to ensure
-you have access the [Developer Console][devconsole] from your Box enterprise
+you have access to the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## App creation steps

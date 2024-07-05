@@ -15,7 +15,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/salesforce
 type: guide
-total_steps: 5
+total_steps: 7
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks
