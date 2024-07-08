@@ -14,7 +14,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/python
 type: guide
-total_steps: 5
+total_steps: 7
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/node
@@ -24,12 +24,21 @@ source_url: >-
 ---
 # Install Python SDK
 
-The Box Python SDK can be used to make API calls to the Box APIs in a Python
-project.
+You can use Box Python SDK to call Box APIs in a Python project.
+
+<Message type='notice'>
+
+[Python SDK](https://github.com/box/box-python-sdk)
+is currently in maintenance mode and will be deprecated soon.
+This means only critical security updates and bug fixes will be
+implemented.
+It is recommended to use the [auto-generated Python SDK][python-gen].
+
+</Message>
 
 <CTA to="https://github.com/box/box-python-sdk">
 
-Learn more about the Python SDK on GitHub
+Learn more about Python SDK on GitHub
 
 </CTA>
 
@@ -44,18 +53,12 @@ pip install boxsdk
 
 ## JWT application
 
-When working with a Box App that uses server-side [JWT authentication][jwt], the
-following additional module needs to be installed.
+When working with a Box App that uses server-side [JWT authentication][jwt], install the following additional module:
 
 ```shell
 pip install "boxsdk[jwt]"
 ```
 
-<CTA to="https://github.com/box/box-python-sdk">
-
-Learn more about the Python SDK on GitHub
-
-</CTA>
-
 [pip]: https://pypi.org/project/pip/
 [jwt]: g://authentication/jwt
+[python-gen]: g://tooling/sdks/python-gen
