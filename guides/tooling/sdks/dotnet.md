@@ -14,7 +14,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/dotnet
 type: guide
-total_steps: 5
+total_steps: 7
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/java
@@ -25,13 +25,13 @@ fullyTranslated: true
 ---
 # .NET SDKのインストール
 
-.NETプロジェクトでは、Box .NET SDKを使用してBox APIへのAPIコールを行うことができます。
+You can use Box .NET SDK to call Box APIs in a .NET project.
 
 このSDKは、.NET Framework 4.5以上および.NET Core 1.0以上の両方で利用できます。SDKのインストール方法は、使用しているフレームワークによって異なります。
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
 
-GitHubで.NET SDKの詳細を確認する
+Learn more about .NET SDK on GitHub
 
 </CTA>
 
@@ -52,11 +52,5 @@ PM> Install-Package Box.V2
 PM> Install-Package Box.V2.Core
 
 ```
-
-<CTA to="https://github.com/box/box-windows-sdk-v2">
-
-GitHubで.NET SDKの詳細を確認する
-
-</CTA>
 
 [nuget]: https://www.nuget.org/

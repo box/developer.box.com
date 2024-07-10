@@ -88,6 +88,8 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 </Message>
 
+* your application has not been authorized in the Box Admin Console
+
 <!-- i18n-enable localize-links -->
 
 [2fa]: https://support.box.com/hc/ja/articles/360043697154-アカウントの多要素認証の設定

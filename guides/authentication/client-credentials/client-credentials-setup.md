@@ -30,7 +30,7 @@ fullyTranslated: true
 
 ## 前提条件
 
-サーバー側認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
+To set up a Custom App using server-side authentication, you will need to ensure you have access to the [Developer Console][devconsole] from your Box enterprise account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## アプリの作成手順
 
