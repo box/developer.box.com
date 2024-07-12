@@ -88,7 +88,7 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 </Message>
 
-* your application has not been authorized in the Box Admin Console
+* アプリケーションがBox管理コンソールで承認されていない
 
 <!-- i18n-enable localize-links -->
 

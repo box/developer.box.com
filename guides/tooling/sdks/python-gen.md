@@ -23,19 +23,19 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/python-gen.md
 fullyTranslated: true
 ---
-# Install Python SDK (Generated)
+# Python SDK (Generated) のインストール
 
-You can use the **auto-generated** Box Python SDK to call Box APIs in a Python project. This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+Pythonプロジェクトでは、**自動生成された**Box Python SDKを使用してBox APIを呼び出すことができます。この[次世代のSDK][next-gen]には、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的とした新機能が備わっています。
 
 <CTA to="https://github.com/box/box-python-sdk-gen">
 
-Learn more about auto-generated Python SDK on GitHub
+GitHubで自動生成されたPython SDKの詳細を確認する
 
 </CTA>
 
 ## インストール
 
-To install the auto-generated Python SDK run the following command from your terminal window or command prompt using [pip][pip].
+自動生成されたPython SDKをインストールするには、[pip][pip]を使用してターミナルウィンドウまたはコマンドプロンプトから以下のコマンドを実行します。
 
 ```shell
 pip install box-sdk-gen
@@ -44,7 +44,7 @@ pip install box-sdk-gen
 
 ## JWTアプリケーション
 
-When working with a Box App that uses server-side [JWT authentication][jwt], install the following additional module:
+サーバー側[JWT認証][jwt]を使用するBoxアプリを使用する場合、次の追加モジュールをインストールします。
 
 ```shell
 pip install "box-sdk-gen[jwt]"

@@ -23,19 +23,19 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/typescript-gen.md
 fullyTranslated: true
 ---
-# Install Typescript SDK (Generated)
+# Typescript SDK (Generated) のインストール
 
-You can use the **auto-generated** Box Typescript SDK to call Box APIs in a Typescript project. This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+Typescriptプロジェクトでは、**自動生成された**Box Typescript SDKを使用してBox APIを呼び出すことができます。この[次世代のSDK][next-gen]には、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的とした新機能が備わっています。
 
 <CTA to="https://github.com/box/box-typescript-sdk-gen">
 
-Learn more about auto-generated Typescript SDK on GitHub
+GitHubで自動生成されたTypescript SDKの詳細を確認する
 
 </CTA>
 
 ## NPMのインストール
 
-To install the Typescript SDK run the following command from your terminal window or command prompt using the [Node Package Manager][npm].
+Typescript SDKをインストールするには、[Nodeパッケージマネージャ][npm]を使用してターミナルウィンドウまたはコマンドプロンプトから以下のコマンドを実行します。
 
 ```shell
 npm install box-typescript-sdk-gen

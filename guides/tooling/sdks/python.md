@@ -25,17 +25,17 @@ fullyTranslated: true
 ---
 # Python SDKのインストール
 
-You can use Box Python SDK to call Box APIs in a Python project.
+Pythonプロジェクトでは、Box Python SDKを使用してBox APIを呼び出すことができます。
 
 <Message type="notice">
 
-[Python SDK](https://github.com/box/box-python-sdk) is currently in maintenance mode and will be deprecated soon. This means only critical security updates and bug fixes will be implemented. It is recommended to use the [auto-generated Python SDK][python-gen].
+[Python SDK](https://github.com/box/box-python-sdk)は、現在メンテナンスモードであり、まもなく公式サポートが終了する予定です。つまり、実装されるのは重要なセキュリティ更新プログラムとバグ修正のみになります。[自動生成されたPython SDK][python-gen]を使用することをお勧めします。
 
 </Message>
 
 <CTA to="https://github.com/box/box-python-sdk">
 
-Learn more about Python SDK on GitHub
+GitHubでPython SDKの詳細を確認する
 
 </CTA>
 
@@ -50,7 +50,7 @@ pip install boxsdk
 
 ## JWTアプリケーション
 
-When working with a Box App that uses server-side [JWT authentication][jwt], install the following additional module:
+サーバー側[JWT認証][jwt]を使用するBoxアプリを使用する場合、次の追加モジュールをインストールします。
 
 ```shell
 pip install "boxsdk[jwt]"

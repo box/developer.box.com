@@ -25,17 +25,17 @@ fullyTranslated: true
 ---
 # Node SDKのインストール
 
-You can use Box Node SDK to call Box APIs in a Node project.
+Nodeプロジェクトでは、Box Node SDKを使用してBox APIを呼び出すことができます。
 
 <Message type="notice">
 
-[Node SDK][node] is currently in maintenance mode and will be deprecated soon. This means only critical security updates and bug fixes will be implemented. It is recommended to use the [auto-generated Typescript SDK][ts-gen].
+[Node SDK][node]は、現在メンテナンスモードであり、まもなく公式サポートが終了する予定です。つまり、実装されるのは重要なセキュリティ更新プログラムとバグ修正のみになります。[自動生成されたTypescript SDK][ts-gen]を使用することをお勧めします。
 
 </Message>
 
 <CTA to="https://github.com/box/box-node-sdk">
 
-Learn more about Node SDK on GitHub
+GitHubでNode SDKの詳細を確認する
 
 </CTA>
 

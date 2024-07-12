@@ -25,13 +25,13 @@ fullyTranslated: true
 ---
 # Java SDKのインストール
 
-You can use Box Java SDK to call Box APIs in a Java project.
+Javaプロジェクトでは、Box Java SDKを使用してBox APIを呼び出すことができます。
 
-To install Java SDK, add a Gradle dependency or Maven dependency, or clone the source into a project. Additionally, you can download one of the precompiled JARs from the releases page on GitHub.
+Java SDKをインストールするには、Gradle依存関係またはMaven依存関係を追加するか、ソースをプロジェクトに複製します。また、GitHubのリリースページからプリコンパイル済みJARのいずれかをダウンロードすることもできます。
 
 <CTA to="https://github.com/box/box-java-sdk">
 
-Learn more about Java SDK on GitHub
+GitHubでJava SDKの詳細を確認する
 
 </CTA>
 
