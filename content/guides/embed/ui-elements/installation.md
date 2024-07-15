@@ -20,7 +20,7 @@ Elements require their corresponding CSS stylesheet to render properly.
 To use Box UI Elements, you need the following Node and React versions:
 
 - Node version: `>=18.18.2 <20.11.0`
-- React version `>=18.0.0`
+- React version `>=18.3.0`
 
 The available versions of UI elements are listed in the [manual installation][manual-installation] section.
 
@@ -39,7 +39,7 @@ yarn add box-ui-elements
 This should result in updated version in the `package.json` file:
 
 ```json
-"box-ui-elements": "^20.0.0"
+"box-ui-elements": "^21.0.0"
 ```
 
 No additional changes related to Box UI elements are required in your code. 
