@@ -53,7 +53,7 @@ components directly into your app at build time.
 
 ```sh
 npm install box-ui-elements
-# yarn add box-ui-elements
+yarn add box-ui-elements
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
