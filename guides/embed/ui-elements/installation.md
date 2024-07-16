@@ -26,6 +26,37 @@ UI Elements can be used either by downloading the Javascript libraries
 directly from the Box CDN or by installing our [NPM package][npm]. All UI
 Elements require their corresponding CSS stylesheet to render properly.
 
+## Prerequisites
+
+To use Box UI Elements, you need the following Node and React versions:
+
+- Node version: `>=18.18.2 <20.11.0`
+- React version `>=18.3.0`
+
+The available versions of UI elements are listed in the [manual installation][manual-installation] section.
+
+### Migration to React 18
+
+For existing projects based on React 17 or below, check the [React 18 migration guide][react-migration].
+
+Once you upgrade React in your project, update the `box-ui-elements` package with `npm` or `yarn`:
+
+```shell
+npm install box-ui-elements
+
+yarn add box-ui-elements
+```
+
+This should result in updated version in the `package.json` file:
+
+```json
+"box-ui-elements": "^21.0.0"
+```
+
+No additional changes related to Box UI elements are required in your code.
+
+For more information, check the blog post about React 18 upgrade for UI elements.
+
 ## NPM installation
 
 Use this when you are building a React based app and would like to import the
@@ -33,7 +64,7 @@ components directly into your app at build time.
 
 ```sh
 npm install box-ui-elements
-# yarn add box-ui-elements
+yarn add box-ui-elements
 ```
 
 <CTA to="https://www.npmjs.com/package/box-ui-elements">
@@ -229,3 +260,5 @@ repository also holds a list of [releases][releases].
 [downscope]: g://authentication/tokens/downscope
 [scopes]: g://api-calls/permissions-and-errors/scopes
 [preview-releases]: https://github.com/box/box-content-preview/releases
+[manual-installation]: #manual-installation
+[react-migration]: https://react.dev/blog/2022/03/08/react-18-upgrade-guide
