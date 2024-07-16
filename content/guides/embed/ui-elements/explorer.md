@@ -269,14 +269,6 @@ This view is called the metadata view and uses
 metadata template and metadata query to find the data you
 want to display.
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node version: `>=18.18.2 <20.11.0`
-- React version `>=17.0.2 <18.0.0`
-- BUIE version `19.0.0`
-
 ### Create and configure an app
 
 1. [Create a Box app][box-app].
