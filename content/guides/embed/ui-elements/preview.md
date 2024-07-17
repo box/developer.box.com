@@ -424,7 +424,7 @@ taking actions like summarizing a document.
 
 To enable Box AI modal in content preview header, follow these steps:
 
-1. Make sure your Node version is `18.x` or higher.
+1. Make sure your Node and React versions are `18.x` or higher.
 2. Download the [package that contains Box AI for UI Elements][aipackage].
 3. Pass the `contentAnswersProps` prop in Preview element.
 
