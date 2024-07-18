@@ -42,7 +42,7 @@ For existing projects based on React 17 or below, check the [React 18 migration 
 Once you upgrade React in your project, update the `box-ui-elements` package with `npm` or `yarn`:
 
 ```shell
-npm install box-ui-elements
+npm install box-ui-elements --legacy-peer-deps
 
 yarn add box-ui-elements
 ```
@@ -62,8 +62,10 @@ For more information, check the blog post about React 18 upgrade for UI elements
 Use this when you are building a React based app and would like to import the
 components directly into your app at build time.
 
+>**Note** The `--legacy-peer-deps` flag is necessary when installing UI elements with `npm` due to library dependencies.
+
 ```sh
-npm install box-ui-elements
+npm install box-ui-elements --legacy-peer-deps
 yarn add box-ui-elements
 ```
 
