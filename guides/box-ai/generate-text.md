@@ -5,15 +5,16 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
+  - box-ai/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/generate-text
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: ''
+next_page_id: box-ai/get-agent-default-config
 previous_page_id: box-ai/ask-questions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/generate-text.md
@@ -64,5 +65,7 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | "Make my email about public APIs sound more professional" |
 | `dialogue_history.answer` | The answer previously provided by the LLM. |   "Here is a draft of your professional email about public APIs." |
 | `dialogue_history.created_at` | The ISO date formatted timestamp of when the previous answer to the prompt was created.   | `2012-12-12T10:53:43-08:00` |
+|`ai_agent` | The AI agent used to override the default agent configuration. To get the default settings, use the [`GET 2.0/ai_agent_default` endpoint][agent].| |
 
 [prereq]: g://box-ai/prerequisites
+[agent]: e://get_ai_agent_default

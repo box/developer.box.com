@@ -1,0 +1,62 @@
+---
+rank: 7
+related_endpoints:
+  - get_ai_agent_default
+  - post_ai_text_gen
+  - post_ai_ask
+related_guides:
+  - box-ai/prerequisites
+  - box-ai/ask-questions
+category_id: box-ai
+subcategory_id: null
+is_index: false
+id: box-ai/get-agent-default-config
+type: guide
+total_steps: 5
+sibling_id: box-ai
+parent_id: box-ai
+next_page_id: box-ai/supported-models
+previous_page_id: box-ai/generate-text
+source_url: >-
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/get-agent-default-config.md
+---
+# Get AI agent default configuration
+
+<Message type="notice">
+
+Box AI API is a beta feature which means the
+available capabilities may change.
+Box AI API is available to all Enterprise Plus customers.
+
+</Message>
+
+The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services.
+You can then override this configuration using the `ai_agent` parameter available in the `POST /2.0/ai/ask` and `POST /2.0/ai/text_gen` endpoints to [ask questions][ask] or [generate text][text-gen].
+
+## Send a request
+
+To send a request, use the
+`GET /2.0/ai/text_gen` endpoint.
+
+<Samples id='get_ai_agent_default'>
+
+</Samples>
+
+Make sure you have generated the developer token
+to authorize your app. See [Prerequisites for Box AI][prereq]
+for details.
+
+### Parameters
+
+To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
+
+| Parameter| Description| Example|
+|--------|--------|-------|
+|`language`| The language code the agent configuration is returned for. If the language is not supported, the default configuration is returned. | `ja-JP`|
+|**`mode`**|The mode used to filter the agent configuration. The value can be `ask` or `text_gen` |`ask`|
+|`model`|The model you want to get the configuration for. To make sure your chosen model is supported, see the [list of models][models].| `openai__gpt_3_5_turbo`|
+
+[prereq]: g://box-ai/prerequisites
+[ask]: g://box-ai/ask-questions
+[text-gen]: g://box-ai/generate-text
+[models]: g://box-ai/supported-models

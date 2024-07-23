@@ -4,12 +4,13 @@ related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/prerequisites
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ask-questions
