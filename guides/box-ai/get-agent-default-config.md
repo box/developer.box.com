@@ -36,9 +36,9 @@ You can then override this configuration using the `ai_agent` parameter availabl
 ## Send a request
 
 To send a request, use the
-`GET /2.0/ai/text_gen` endpoint.
+`GET /2.0/ai_agent_default` endpoint.
 
-<Samples id='get_ai_agent_default'>
+<Samples id='get_ai_agent_default' >
 
 </Samples>
 
