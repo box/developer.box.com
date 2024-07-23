@@ -4,6 +4,7 @@ related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/get-agent-default-config
 ---
 
 # Getting started with Box AI
