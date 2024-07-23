@@ -5,6 +5,7 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/generate-text
+  - box-ai/get-agent-default-config
 ---
 
 # Ask questions to Box AI
@@ -48,6 +49,8 @@ Mandatory parameters are in **bold**.
 | **`prompt`**   | The question about your document or content. The prompt's length cannot exceed 10000 characters. | | "What is this document about?" |
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
-| `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface……”    |
+| `items.content` | The content of the item, often the text representation.  |     |  “An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...”    |
+|`ai_agent` | The AI agent used to override the default agent configuration settings. To get the default settings, use the [`GET 2.0/ai_agent_default` endpoint][agent].| |
 
 [prereq]: g://box-ai/prerequisites
+[agent]: e://get_ai_agent_default
