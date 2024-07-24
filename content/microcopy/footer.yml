@@ -83,6 +83,12 @@ categories:
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
 
+      dotnet_gen_sdk:
+        // text: Text for link to the .NET (Generated) SDK
+        text: .NET SDK (Generated)
+        // url: link to the .Net SDK (Generated)
+        url: https://github.com/box/box-dotnet-sdk-gen
+
       node_sdk:
         // text: Text for link to the Node SDK
         text: Node SDK
