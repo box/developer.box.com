@@ -136,7 +136,7 @@ Mandatory parameters are in **bold**.
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item, often the text representation.  |     |  `An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...`    |
-|`ai_agent` | The AI agent used to override the default agent configuration. You can use this parameter replace the default LLM with a custom one using the [`model`][model-param] parameter for shorter and longer texts, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request.|||
+|`ai_agent` | The AI agent used to override the default agent configuration. This parameter allows you to, for example, replace the default LLM with a custom one using the [`model`][model-param] parameter for shorter and longer texts, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request.|||
 
 [prereq]: g://box-ai/prerequisites
 [agent]: e://get_ai_agent_default
