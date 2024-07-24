@@ -196,7 +196,7 @@ environments:
   // dotnet_gen: |-
     A label for .NET code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  dotnet_gen: .NET Gen (Beta)
+  dotnet_gen: .NET Gen
 
 resource_variants:
   // base: |-
