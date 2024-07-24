@@ -19,7 +19,13 @@ Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. 
-You can then override this configuration using the `ai_agent` parameter available in the `POST /2.0/ai/ask` and `POST /2.0/ai/text_gen` endpoints to [ask questions][ask] or [generate text][text-gen].
+Once you get the configuration details, you can override them using the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests.
+
+Override examples include:
+
+* Replacing the default LLM with a custom one based on your organization's needs.
+* Tweaking the base prompt to allow a more customized user experience.
+* Changing a parameter, such as `temperature`, to make the results more or less creative.
 
 ## Send a request
 
@@ -29,7 +35,7 @@ To send a request, use the
 <Samples id='get_ai_agent_default' />
 
 Make sure you have generated the developer token
-to authorize your app. See [Prerequisites for Box AI][prereq]
+to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
 
 ### Parameters
@@ -39,10 +45,10 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | Parameter| Description| Example|
 |--------|--------|-------|
 |`language`| The language code the agent configuration is returned for. If the language is not supported, the default configuration is returned. | `ja-JP`| 
-|**`mode`**|The mode used to filter the agent configuration. The value can be `ask` or `text_gen` |`ask`|
+|**`mode`**|The mode used to filter the agent configuration. The value can be `ask` or `text_gen`. |`ask`|
 |`model`|The model you want to get the configuration for. To make sure your chosen model is supported, see the [list of models][models].| `openai__gpt_3_5_turbo`|
 
 [prereq]: g://box-ai/prerequisites
-[ask]: g://box-ai/ask-questions
-[text-gen]: g://box-ai/generate-text
+[ask]: e://post_ai_ask#param_ai_agent
+[text-gen]: e://post_ai_text_gen#param_ai_agent
 [models]: g://box-ai/supported-models
