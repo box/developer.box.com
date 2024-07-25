@@ -83,12 +83,12 @@ categories:
         text: .NET SDK
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
-      
-      swift_sdk:
+
+      swift_gen_sdk:
         // text: Text for link to the Swift SDK (Generated)
         text: Swift SDK (Generated)
         // url: link to the Swift SDK (Generated)
-        url: 
+        url: https://github.com/box/box-swift-sdk-gen
 
       dotnet_gen_sdk:
         // text: Text for link to the .NET (Generated) SDK

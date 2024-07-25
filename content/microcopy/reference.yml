@@ -200,7 +200,7 @@ environments:
   // swift_gen: |-
     A label for Swift code sample from
     auto-generated SDK - DO NOT TRANSLATE
-  swift_gen: Swift Gen
+  swift_gen: Swift Gen (Beta)
 
 resource_variants:
   // base: |-

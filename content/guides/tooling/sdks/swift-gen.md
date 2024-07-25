@@ -9,7 +9,7 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install Swift SDK
+# Install Swift SDK (Generated)
 
 You can use Box Swift SDK to call Box APIs in a Swift
 project.
@@ -30,7 +30,7 @@ To add a dependency to your Xcode project:
 
 1. Select **File** > **Add Package Dependency** in your Xcode project.
 2. Click the **plus** icon > **Add Package Collection**.
-2. Enter the following repository url `https://github.com/box/box-swift-sdk-gen.git` and click **Load**.
+2. Enter the following repository URL: `https://github.com/box/box-swift-sdk-gen.git` and click **Load**.
 
 Alternatively you can add a dependency to the dependencies value of your `Package.swift`.
 
