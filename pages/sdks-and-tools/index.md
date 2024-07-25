@@ -63,7 +63,7 @@ with the Box Content Cloud.
 
 <Message type='notice'>
 
-.NET SDK is in a Public Beta phase.
+Swift SDK is in a Public Beta phase.
 
 </Message>
 
@@ -78,7 +78,8 @@ Here's what you can expect from the new SDKs:
 | ------------------------------- | --------- | -------- |
 | [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
 | [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
-| [.NET SDK][dotnetgensdk] (Beta) |     Yes     |    Full    |
+| [.NET SDK][dotnetgensdk]        |     Yes     |    Full    |
+| [Swift SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
 
 ### SDKs
 
@@ -86,13 +87,13 @@ The table lists Box SDKs that you can use
 when building your applications.
 
 | Platform                          |                                     Maintained?                                      | API Parity |
-| --------------------------------- | ---------------------------------------------------------------------------------- | -------- |
+| --------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
 | [Java SDK][javasdk]               |                                         Yes                                          |    Full    |
-| [.NET SDK][dotnetsdk]             | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
-| [Python SDK][pythonsdk]           | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
-| [Node SDK][nodesdk]               |                                         Yes                                          |    Full    |
 | [iOS Content SDK][iossdk]         |                                         Yes                                          |    Full    |
 | [Android Content SDK][androidsdk] |                                          No                                          |  Partial   |
+| [.NET SDK][dotnetsdk]             | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Python SDK][pythonsdk]           | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Node SDK][nodesdk]               | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
 
 <Message type='warning'>
 
@@ -225,6 +226,7 @@ for these tools.
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 [postman]: https://postman.com
 
 <!-- i18n-enable localize-links -->
