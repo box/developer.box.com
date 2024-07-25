@@ -197,6 +197,10 @@ environments:
     A label for .NET code sample from
     auto-generated SDK - DO NOT TRANSLATE
   dotnet_gen: .NET Gen
+  // swift_gen: |-
+    A label for Swift code sample from
+    auto-generated SDK - DO NOT TRANSLATE
+  swift_gen: Swift Gen (Beta)
 
 resource_variants:
   // base: |-
