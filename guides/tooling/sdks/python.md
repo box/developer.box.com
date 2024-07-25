@@ -14,7 +14,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/python
 type: guide
-total_steps: 7
+total_steps: 9
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/node
@@ -22,7 +22,7 @@ previous_page_id: tooling/sdks/java
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/python.md
 ---
-# Install Python SDK
+# Install Python SDK (Deprecated)
 
 You can use Box Python SDK to call Box APIs in a Python project.
 

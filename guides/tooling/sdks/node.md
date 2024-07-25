@@ -14,7 +14,7 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/node
 type: guide
-total_steps: 7
+total_steps: 9
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/salesforce
@@ -22,7 +22,7 @@ previous_page_id: tooling/sdks/python-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/node.md
 ---
-# Install Node SDK
+# Install Node SDK (Deprecated)
 
 You can use Box Node SDK to call Box APIs in a Node
 project.

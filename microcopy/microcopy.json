@@ -130,7 +130,9 @@
   // A label for Python code sample fromauto-generated SDK - DO NOT TRANSLATE
   "reference.environments.python_gen": "Python Gen",
   // A label for .NET code sample fromauto-generated SDK - DO NOT TRANSLATE
-  "reference.environments.dotnet_gen": ".NET Gen (Beta)",
+  "reference.environments.dotnet_gen": ".NET Gen",
+  // A label for Swift code sample fromauto-generated SDK - DO NOT TRANSLATE
+  "reference.environments.swift_gen": "Swift Gen (Beta)",
   // Describes the smallest set of fields that are returnedfor a resource in an API response
   "reference.resource_variants.base": "Base",
   // Describes the set of fields that can be returnedfor a resource when embedded in another resource
@@ -388,6 +390,14 @@
   "footer.categories.tooling.links.dotnet_sdk.text": ".NET SDK",
   // link to the .Net SDK
   "footer.categories.tooling.links.dotnet_sdk.url": "https://github.com/box/box-windows-sdk-v2",
+  // Text for link to the Swift SDK (Generated)
+  "footer.categories.tooling.links.swift_gen_sdk.text": "Swift SDK (Generated)",
+  // link to the Swift SDK (Generated)
+  "footer.categories.tooling.links.swift_gen_sdk.url": "https://github.com/box/box-swift-sdk-gen",
+  // Text for link to the .NET (Generated) SDK
+  "footer.categories.tooling.links.dotnet_gen_sdk.text": ".NET SDK (Generated)",
+  // link to the .Net SDK (Generated)
+  "footer.categories.tooling.links.dotnet_gen_sdk.url": "https://github.com/box/box-dotnet-sdk-gen",
   // Text for link to the Node SDK
   "footer.categories.tooling.links.node_sdk.text": "Node SDK",
   // link to the Node SDK

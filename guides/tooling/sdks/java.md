@@ -14,11 +14,11 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/java
 type: guide
-total_steps: 7
+total_steps: 9
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/python-gen
-previous_page_id: tooling/sdks/dotnet
+previous_page_id: tooling/sdks/dotnet-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/java.md
 ---
