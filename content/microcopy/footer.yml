@@ -77,11 +77,24 @@ categories:
         text: Python SDK (Generated)
         // url: link to the Python SDK (Generated)
         url: https://github.com/box/box-python-sdk-gen
+
       dotnet_sdk:
         // text: Text for link to the .NET SDK
         text: .NET SDK
         // url: link to the .Net SDK
         url: https://github.com/box/box-windows-sdk-v2
+
+      swift_gen_sdk:
+        // text: Text for link to the Swift SDK (Generated)
+        text: Swift SDK (Generated)
+        // url: link to the Swift SDK (Generated)
+        url: https://github.com/box/box-swift-sdk-gen
+
+      dotnet_gen_sdk:
+        // text: Text for link to the .NET (Generated) SDK
+        text: .NET SDK (Generated)
+        // url: link to the .Net SDK (Generated)
+        url: https://github.com/box/box-dotnet-sdk-gen
 
       node_sdk:
         // text: Text for link to the Node SDK

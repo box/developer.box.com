@@ -38,12 +38,12 @@ these projects to full parity.
 ## Next generation SDKs
 
 The latest generation Box Python SDK, Box Typescript
-SDK and .NET SDK are designed to elevate the developer
+SDK, .NET SDK, and Swift SDK are designed to elevate the developer
 experience and streamline your integration
 with the Box Content Cloud.
 
 <Message type='notice'>
-.NET SDK is in a Public Beta phase.
+Swift SDK is in a Public Beta phase.
 </Message>
 
 Here's what you can expect from the new SDKs:
@@ -54,10 +54,11 @@ Here's what you can expect from the new SDKs:
 - **Enhanced Convenience Methods**: The newly introduced convenience methods cover various aspects such as authentication, chunk uploads, exponential back-offs, automatic retries, type checkers which help to ensure that you’re using variables correctly, and much more.
 
 | Platform                        | Maintained? | API Parity |
-| ------------------------------- | ---------| -------- |
+| ------------------------------- | ------------| -------- |
 | [Python Gen SDK][pythongensdk]  |     Yes     |    Full    |
 | [Typescript Gen SDK][tsgensdk]  |     Yes     |    Full    |
-| [.NET SDK][dotnetgensdk] (Beta) |     Yes     |    Full    |
+| [.NET Gen SDK][dotnetgensdk]        |     Yes     |    Full    |
+| [Swift Gen SDK][swiftgensdk] (Beta) |     Yes     |    Full    |
 
 ## SDKs
 
@@ -66,12 +67,12 @@ when building your applications.
 
 | Platform   |  Maintained?  | API Parity |
 | --- | ------- |-------- |
-| [Java SDK][javasdk]   | |    Full    |
-| [.NET SDK][dotnetsdk]  | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
-| [Python SDK][pythonsdk]   | Soon to be deprecated. Only critical security updates and bug fixes are implemented. |    Full    |
-| [Node SDK][nodesdk]  |   Yes      |    Full    |
+| [Java SDK][javasdk]   | Yes |    Full    |
 | [iOS Content SDK][iossdk]   |   Yes    |    Full    |
 | [Android Content SDK][androidsdk] |   No   |  Partial   |
+| [.NET SDK][dotnetsdk]             | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Python SDK][pythonsdk]           | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
+| [Node SDK][nodesdk]               | Deprecated. Only critical security updates and bug fixes are implemented.            |    Full    |
 
 <Message type='warning'>
 As of May 31, 2023 Android SDK is no
@@ -97,6 +98,7 @@ Refer to [this][android-docs] documentation for more details.
 [pythongensdk]: https://github.com/box/box-python-sdk-gen
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [forum]: https://support.box.com/hc/en-us/community/topics/360001932973-Platform-and-Developer-Forum
 
