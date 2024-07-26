@@ -121,7 +121,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 ### Authentication
 
 Make sure you have generated the developer token
-to authorize your app. See [prerequisites for using Box A][prereq]
+to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
 
 ### Parameters
