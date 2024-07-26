@@ -8,15 +8,21 @@ related_guides:
 
 # Supported AI models
 
+<Message type="notice">
+Box AI Platform API is currently in beta which means the
+available capabilities may change.
+Box AI Platform API is available to all Enterprise Plus customers.
+</Message>
+
 The table list the supported AI models you can use to:
 
-* get the [default AI agent configuration][agent],
-* override the AI agent configuration used in [`POST 2.0/ai/ask`][ask] and [`POST 2.0/ai/text_gen`][text-gen] endpoints.
+  * get the [default AI agent configuration][agent],
+  * override the AI agent configuration used in [`POST 2.0/ai/ask`][ask] and [`POST 2.0/ai/text_gen`][text-gen] endpoints.
 
 <Message type='notice'>
-The list is subject to changes depending on the model availability.
-**Preview** means you can use the model, but its full availability
-is not guaranteed.
+The list may change depending on the model availability.
+**Preview** means you can use the model, but the access to all features
+may be limited.
 </Message>
 
 |Provider | Family | Model | Availability|
