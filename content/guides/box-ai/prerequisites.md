@@ -4,14 +4,15 @@ related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/get-agent-default-config
 ---
 
 # Getting started with Box AI
 
 <Message type="notice">
-Box AI API is a beta feature, which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all **Enterprise Plus** customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 </Message>
 
 To implement Box AI API in your solutions, you need
