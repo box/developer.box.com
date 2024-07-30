@@ -35,7 +35,7 @@ one of these available channels:
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 [twitter]: https://twitter.com/BoxPlatform
 [support]: https://support.box.com/hc/en-us/requests/new
 <!-- i18n-disable localize-links -->

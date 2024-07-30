@@ -256,7 +256,7 @@
   // The text for the link to the developer community forum
   "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.support_links.community_forum.url": "https://forum.box.com",
+  "headers.secondary.support_links.community_forum.url": "https://community.box.com/",
   // The text for the link to the changelog
   "headers.secondary.support_links.changelog.text": "Changelog",
   // The URL to the changelog
@@ -479,7 +479,7 @@
   "pages.featured_board.sampleCode.text": "Use Box Sample Code Catalog to find useful scripts,\napp examples, and inspiring use cases! Browse\n80+ open-source repositories in various programming languages.",
   "pages.featured_board.community.type": "community",
   "pages.featured_board.community.cta": "Join the Community",
-  "pages.featured_board.community.link": "https://forum.box.com/",
+  "pages.featured_board.community.link": "https://community.box.com/",
   "pages.featured_board.community.tag": "New",
   "pages.featured_board.community.headline": "Box Developer Community forum",
   "pages.featured_board.community.text": "Connect with other learners and experts on\nour Box community forum. Ask and answer\nquestions, share resources, and learn together.",
