@@ -126,7 +126,7 @@ Browse the guides to learn how to use Box AI API.
 
 </Tile>
 
-<Tile type="speech-bubble" title="Support" href="https://forum.box.com/">
+<Tile type="speech-bubble" title="Support" href="https://community.box.com/">
 
 Visit Box Developer Community for support.
 
