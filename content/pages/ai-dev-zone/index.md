@@ -68,7 +68,7 @@ view sample code, explore Box AI use cases, and more!
         Browse the guides to learn how to use Box AI API.
     </Tile>
     <Tile type="speech-bubble" title="Support"
-      href="https://forum.box.com/">
+      href="https://community.box.com/">
         Visit Box Developer Community for support.
     </Tile>
   </TileGrid>

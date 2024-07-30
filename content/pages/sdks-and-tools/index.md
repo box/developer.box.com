@@ -187,7 +187,7 @@ for these tools.
 [androidsdk]: https://github.com/box/box-android-sdk
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 [cli]: https://github.com/box/boxcli
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 [browseimg]: ./browse.jpg
 [shareimg]: ./share.jpg
 [previewimg]: ./preview.jpg

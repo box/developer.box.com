@@ -141,7 +141,7 @@ secondary:
       text: Community Forum
 
       // url: The URL to the developer forum
-      url: "https://forum.box.com"
+      url: "https://community.box.com/"
 
     changelog:
       // text: The text for the link to the changelog

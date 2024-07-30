@@ -28,7 +28,7 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
     --header 'Authorization: Bearer ej...3t' \
     --data-raw '{
       "is_document_preparation_needed": true,
-      "redirect_url": "https://forum.box.com/",
+      "redirect_url": "https://community.box.com/",
       "declined_redirect_url": "https://developer.box.com/",
       "parent_folder": {
         "id": "234102987614",
@@ -81,7 +81,7 @@ def main():
         SIGN_DOCS_FOLDER,
         SIGNER_A,
         prep_needed=False,
-        redirect_url="https://forum.box.com/",
+        redirect_url="https://community.box.com/",
         declined_redirect_url="https://developer.box.com/",
     )
     check_sign_request(sign_with_redirects)
