@@ -187,16 +187,9 @@ Delivery of a webhook payload fails when Box does not receive a response with a
 HTTP status code in the `200` to `299` range within 30 seconds of sending the
 payload.
 
-<!--alex ignore failure-->
-When delivery of a webhook fails, Box will resend it up to 10 times. The
-initial retry takes place 5 minutes after the failure. From there, an
-exponential back-off strategy is used to avoid overloading the destination
-server. By using exponential back- off, Box will wait an increasingly longer
-time for every retry.
-
 <Message type='notice'>
-  Box will retry webhook deliveries up to 10 times. This number could be subject
-  to change.
+  Box will retry webhook deliveries up to 12 times over a period of 2 hours.
+  These numbers could be subject to change.
 </Message>
 
 [setup_sigs]: g://webhooks/v2/signatures-v2

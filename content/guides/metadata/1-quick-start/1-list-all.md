@@ -13,7 +13,7 @@ related_endpoints:
 It's likely your enterprise already has a list of metadata templates that you
 can use right off-the-shelve without having to create your own.
 
-In general, metadata templates are either available to only your enterprise o
+In general, metadata templates are either available to only your enterprise or
 to every enterprise using Box. The `scope` of a template defines if a template
 is available to everyone (`global`) or only to your enterprise (`enterprise`).
 

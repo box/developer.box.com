@@ -12,9 +12,9 @@ related_guides:
 # Box AI
 
 <Message type="notice">
-Box AI API is a beta feature, which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all **Enterprise Plus** customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 </Message>
 
 Box AI API allows you to use Box AI
@@ -37,7 +37,7 @@ or generate text you can use in your documents.
 You can also use [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your apps.
 
-### Asking questions
+### Ask questions to Box AI
 
 You can use Box AI API to ask questions about
 the content, for example, while working
@@ -54,7 +54,7 @@ to see an example of how users can interact
 with Box AI while
 working with their documents.
 
-### Generating text
+### Generate text with Box AI
 
 You can use Box AI API to generate text
 from scratch, from existing text within a Box Note, or
@@ -69,6 +69,12 @@ and refine the already existing note content.
 For details, see [Box AI for Notes][boxainotes].
 
 ![box ai in notes](./images/box-ai-in-notes.png)
+
+## Configuration overrides
+
+You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
+
+For details, see [AI agent default configuration](agent-default).
 
 ### Box AI for UI Elements
 
@@ -103,16 +109,19 @@ better results for this language.
 
 [User Activity Reports][uar] provide an overview of the
 actions the users are taking in Box. Box Admins
-use this report to view the actions made by their
+use this report to view the actions taken by their
 users within a given time period, and this
 includes interactions with Box AI. The report
-contains the following action types Box admins can
+contains the following action types that Box admins can
 select to get details for Box AI:
 
-- `AI query`: User queried Box AI and received a response.
-- `Failed AI query`: User queried Box AI but did not receive a response.
+- `AI query`: The user queried Box AI and received a response.
+- `Failed AI query`: The user queried Box AI but did not receive a response.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
+[agent-default]: g://box-ai/get-agent-default-config
+[ask]: e://post_ai_ask#param_ai_agent
+[text-gen]: e://post_ai_text_gen#param_ai_agent
