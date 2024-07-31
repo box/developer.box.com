@@ -24,7 +24,7 @@ fullyTranslated: true
 
 会社には、ユーザーが独自に作成しなくてもすぐに使用できるメタデータテンプレートのリストがすでに存在することがよくあります。
 
-一般に、メタデータテンプレートには、自社のみで使用できるものと、Boxを使用するすべての会社が使用できるものがあります。テンプレートの`scope`により、テンプレートはすべての人が利用可能か (`global`)、自社のみで利用可能か (`enterprise`) が定義されます。
+In general, metadata templates are either available to only your enterprise or to every enterprise using Box. The `scope` of a template defines if a template is available to everyone (`global`) or only to your enterprise (`enterprise`).
 
 <CTA to="g://metadata/scopes">
 

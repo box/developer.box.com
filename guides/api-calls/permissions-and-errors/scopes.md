@@ -10,7 +10,7 @@ subcategory_id: api-calls/permissions-and-errors
 is_index: false
 id: api-calls/permissions-and-errors/scopes
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors
 next_page_id: api-calls/permissions-and-errors/expiration

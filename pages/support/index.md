@@ -34,7 +34,7 @@ Boxのコミュニティおよびサポートでは、お客様の質問に答�
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 
 [twitter]: https://twitter.com/BoxPlatform
 

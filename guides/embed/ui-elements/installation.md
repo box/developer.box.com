@@ -25,13 +25,48 @@ fullyTranslated: true
 
 UI Elementを使用するには、Box CDNから直接JavaScriptライブラリをダウンロードするか、[NPMパッケージ][npm]をインストールします。すべてのUI Elementは、正しくレンダリングするために対応するCSSスタイルシートが必要です。
 
+## 前提条件
+
+To use Box UI Elements, you need the following Node and React versions:
+
+* Nodeのバージョン: `>=18.18.2 <20.11.0`
+* Reactのバージョン: `>=18.0.0`
+
+The available versions of UI elements are listed in the [manual installation][manual-installation] section.
+
+### Migration to React 18
+
+For existing projects based on React 17 or below, check the [React 18 migration guide][react-migration].
+
+Once you upgrade React in your project, update the `box-ui-elements` package with `npm` or `yarn`:
+
+```shell
+npm install box-ui-elements --legacy-peer-deps
+
+yarn add box-ui-elements
+
+```
+
+This should result in updated version in the `package.json` file:
+
+```json
+"box-ui-elements": "^21.0.0"
+
+```
+
+No additional changes related to Box UI elements are required in your code.
+
+For more information, check the blog post about React 18 upgrade for UI elements.
+
 ## NPMのインストール
 
 Reactベースのアプリを構築し、構築時にアプリに直接コンポーネントをインポートする場合は、この方法を使用します。
 
+> **Note** The `--legacy-peer-deps` flag is necessary when installing UI elements with `npm` due to library dependencies.
+
 ```sh
-npm install box-ui-elements
-# yarn add box-ui-elements
+npm install box-ui-elements --legacy-peer-deps
+yarn add box-ui-elements
 
 ```
 
@@ -55,23 +90,23 @@ NPMウェブサイトの詳細を確認する
 
 | Element                                                            | バージョン     | ファイル                                                                                                                                                                         |
 | ------------------------------------------------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [コンテンツエクスプローラ](g://embed/ui-elements/explorer)                     | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.css)                           |
-|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.js)                    |
-|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.no.react.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/explorer.no.react.js) |
-| [Content Open With](g://embed/ui-elements/open-with)               | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.css)                           |
-|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.js)                    |
-|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.no.react.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/openwith.no.react.js) |
-| [Content Picker](g://embed/ui-elements/picker)                     | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.css)                               |
-|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.js)                        |
-|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.no.react.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/picker.no.react.js)     |
-| [Content Sidebar](g://embed/ui-elements/sidebar)                   | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.css)                             |
-|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.js)                      |
-|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.no.react.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/sidebar.no.react.js)   |
-| [コンテンツアップローダー](g://embed/ui-elements/uploader)                     | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.css)                           |
-|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.js)                    |
-|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/uploader.no.react.js) |
-| [コンテンツプレビューUI Element](https://github.com/box/box-content-preview) | `20.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/preview.css)                             |
-|                                                                    | `20.0.0`  | JS [`https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/20.0.0/en-US/preview.js)                                |
+| [コンテンツエクスプローラ](g://embed/ui-elements/explorer)                     | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.css)                           |
+|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.js)                    |
+|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/explorer.no.react.js) |
+| [Content Open With](g://embed/ui-elements/open-with)               | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.css)                           |
+|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.js)                    |
+|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/openwith.no.react.js) |
+| [Content Picker](g://embed/ui-elements/picker)                     | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.css)                               |
+|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.js)                        |
+|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/picker.no.react.js)     |
+| [Content Sidebar](g://embed/ui-elements/sidebar)                   | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.css)                             |
+|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.js)                      |
+|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/sidebar.no.react.js)   |
+| [コンテンツアップローダー](g://embed/ui-elements/uploader)                     | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.css)                           |
+|                                                                    |           | Reactを使用するJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.js)                    |
+|                                                                    |           | Reactを使用しないJS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.no.react.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/uploader.no.react.js) |
+| [コンテンツプレビューUI Element](https://github.com/box/box-content-preview) | `21.0.0`  | CSS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.css)                             |
+|                                                                    | `21.0.0`  | JS [`https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/elements/21.0.0/en-US/preview.js)                                |
 | [コンテンツプレビューSDK](g://embed/ui-elements/preview)                     | `2.106.0` | CSS [`https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.css`](https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.css)                             |
 |                                                                    |           | JS [`https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.js`](https://cdn01.boxcdn.net/platform/preview/2.106.0/en-US/preview.js)                                |
 
@@ -222,3 +257,7 @@ Box UI Elementsのソースコードは[GitHubでホストされています][gh
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
 [preview-releases]: https://github.com/box/box-content-preview/releases
+
+[manual-installation]: #manual-installation
+
+[react-migration]: https://react.dev/blog/2022/03/08/react-18-upgrade-guide

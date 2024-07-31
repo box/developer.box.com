@@ -12,7 +12,7 @@ alias_paths: []
 category_id: tooling
 subcategory_id: tooling/sdks
 is_index: false
-id: tooling/sdks/dotnet
+id: tooling/sdks/dotnet-gen
 type: guide
 total_steps: 9
 sibling_id: tooling/sdks
@@ -20,45 +20,26 @@ parent_id: tooling/sdks
 next_page_id: tooling/sdks/java
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet-gen.md
 fullyTranslated: true
 ---
-# Install .NET SDK (Deprecated)
+# Install .NET SDK (Generated)
 
 .NETプロジェクトでは、Box .NET SDKを使用してBox APIを呼び出すことができます。
 
-<Message type="notice">
-
-[.NET SDK](https://github.com/box/box-windows-sdk-v2) is currently in maintenance mode and will be deprecated soon. This means only critical security updates and bug fixes will be implemented. It is recommended to use the [auto-generated .NET SDK][dotnetgensdk].
-
-</Message>
-
 このSDKは、.NET Framework 4.5以上および.NET Core 1.0以上の両方で利用できます。SDKのインストール方法は、使用しているフレームワークによって異なります。
 
-<CTA to="https://github.com/box/box-windows-sdk-v2">
+<CTA to="https://github.com/box/box-dotnet-sdk-gen">
 
 GitHubで.NET SDKの詳細を確認する
 
 </CTA>
 
-## .NET Framework
-
 .NET Frameworkに.NET SDKをインストールするには、[Nuget][nuget]パッケージマネージャを使用して以下のコマンドを実行します。
 
 ```shell
-PM> Install-Package Box.V2
-
-```
-
-## .NET Core
-
-.NET Coreフレームワークに.NET SDKをインストールするには、[Nuget][nuget]パッケージマネージャを使用して以下のコマンドを実行します。
-
-```shell
-PM> Install-Package Box.V2.Core
+PM> Install-Package Box.Sdk.Gen
 
 ```
 
 [nuget]: https://www.nuget.org/
-
-[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen

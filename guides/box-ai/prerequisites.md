@@ -4,12 +4,13 @@ related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/prerequisites
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ask-questions
@@ -22,7 +23,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI APIはベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、**Enterprise Plus**をご利用のすべてのお客様が利用できます。
+Box AI Platform API is currently in beta which means the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
