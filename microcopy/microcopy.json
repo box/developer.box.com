@@ -256,7 +256,7 @@
   // The text for the link to the developer community forum
   "headers.secondary.support_links.community_forum.text": "コミュニティフォーラム",
   // The URL to the developer forum
-  "headers.secondary.support_links.community_forum.url": "https:\/\/forum.box.com",
+  "headers.secondary.support_links.community_forum.url": "https:\/\/community.box.com\/",
   // The text for the link to the changelog
   "headers.secondary.support_links.changelog.text": "変更ログ",
   // The URL to the changelog
@@ -479,7 +479,7 @@
   "pages.featured_board.sampleCode.text": "Boxのサンプルコードカタログを使用して、便利なスクリプト、サンプルアプリ、ヒントになるユースケースを見つけましょう。さまざまなプログラミング言語の80以上のオープンソースリポジトリをご覧ください。",
   "pages.featured_board.community.type": "community",
   "pages.featured_board.community.cta": "コミュニティに参加",
-  "pages.featured_board.community.link": "https:\/\/forum.box.com\/",
+  "pages.featured_board.community.link": "https:\/\/community.box.com\/",
   "pages.featured_board.community.tag": "新着情報",
   "pages.featured_board.community.headline": "Box Developer Communityフォーラム",
   "pages.featured_board.community.text": "Boxのコミュニティフォーラムで他の学習者やエキスパートとつながりましょう。質問のやり取りやリソースの共有のほか、一緒に学ぶことができます。",
