@@ -23,7 +23,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/node.md
 fullyTranslated: true
 ---
-# Install Node SDK (Deprecated)
+# Node SDK (公式サポート終了) のインストール
 
 Nodeプロジェクトでは、Box Node SDKを使用してBox APIを呼び出すことができます。
 

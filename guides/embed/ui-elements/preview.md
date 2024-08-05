@@ -414,7 +414,7 @@ Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**をご利
 
 コンテンツプレビューのヘッダーでBox AIモーダルを有効にするには、以下の手順に従います。
 
-1. Make sure your Node and React versions are `18.x` or higher.
+1. NodeおよびReactのバージョンが`18.x`以上であることを確認します。
 2. [Box AI for UI Elementsを含むパッケージ][aipackage]をダウンロードします。
 3. プレビューElementに`contentAnswersProps`プロパティを渡します。
 

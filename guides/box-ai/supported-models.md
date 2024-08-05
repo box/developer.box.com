@@ -18,36 +18,36 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/supported-models.md
 fullyTranslated: true
 ---
-# Supported AI models
+# サポートされているAIモデル
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
+Box AIのPlatform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AIのPlatform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-The table list the supported AI models you can use to:
+この表は、以下の操作に使用できる、サポートされているAIモデルのリストです。
 
-* get the [default AI agent configuration][agent],
-* override the AI agent configuration used in [`POST 2.0/ai/ask`][ask] and [`POST 2.0/ai/text_gen`][text-gen] endpoints.
+* [AIエージェントのデフォルト構成][agent]を取得する
+* [`POST 2.0/ai/ask`][ask]エンドポイントおよび[`POST 2.0/ai/text_gen`][text-gen]エンドポイントで使用されるAIエージェントの構成を上書きする
 
 <Message type="notice">
 
-The list may change depending on the model availability. **Preview** means you can use the model, but the access to all features may be limited.
+このリストはモデルの提供状況により変更される可能性があります。**プレビュー**の場合、そのモデルを使用することはできるものの、一部の機能へのアクセスが制限される可能性があります。
 
 </Message>
 
-| Provider        | Family | Model                     | Availability |
-| --------------- | ------ | ------------------------- | ------------ |
-| OpenAI          | GPT    | `gpt-3.5-turbo`           | available    |
-| Microsoft Azure | GPT    | `gpt-3.5-turbo`           | available    |
-| GCP Vertex      | Gecko  | `textembedding-gecko`     | available    |
-| GCP Vertex      | Gecko  | `textembedding-gecko@002` | available    |
-| GCP Vertex      | Gecko  | `textembedding-gecko@003` | available    |
-| GCP Vertex      | Gemini | `gemini 1.0 pro`          | preview      |
-| GCP Vertex      | Gemini | `gemini 1.5 flash`        | preview      |
-| GCP Vertex      | PaLM   | `text-unicorn`            | available    |
-| GCP Vertex      | PaLM   | `text-bison`              | available    |
+| プロバイダ           | ファミリ   | モデル                       | 提供状況  |
+| --------------- | ------ | ------------------------- | ----- |
+| OpenAI          | GPT    | `gpt-3.5-turbo`           | 利用可能  |
+| Microsoft Azure | GPT    | `gpt-3.5-turbo`           | 利用可能  |
+| GCP Vertex      | Gecko  | `textembedding-gecko`     | 利用可能  |
+| GCP Vertex      | Gecko  | `textembedding-gecko@002` | 利用可能  |
+| GCP Vertex      | Gecko  | `textembedding-gecko@003` | 利用可能  |
+| GCP Vertex      | Gemini | `gemini 1.0 pro`          | プレビュー |
+| GCP Vertex      | Gemini | `gemini 1.5 flash`        | プレビュー |
+| GCP Vertex      | PaLM   | `text-unicorn`            | 利用可能  |
+| GCP Vertex      | PaLM   | `text-bison`              | 利用可能  |
 
 [ask]: e://post_ai_ask
 

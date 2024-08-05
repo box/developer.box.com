@@ -22,21 +22,21 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/get-agent-default-config.md
 fullyTranslated: true
 ---
-# Get AI agent default configuration
+# AIエージェントのデフォルト構成の取得
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
+Box AIのPlatform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AIのPlatform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. Once you get the configuration details, you can override them using the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests.
+`GET /2.0/ai_agent_default`エンドポイントを使用すると、AIサービスのデフォルト構成を取得できます。構成の詳細を取得したら、[`POST /2.0/ai/ask`][ask]および[`POST /2.0/ai/text_gen`][text-gen]リクエストで利用可能な`ai_agent`パラメータを使用して構成を上書きできます。
 
-Override examples include:
+上書きの例を以下に示します。
 
-* Replacing the default LLM with a custom one based on your organization's needs.
-* Tweaking the base prompt to allow a more customized user experience.
-* Changing a parameter, such as `temperature`, to make the results more or less creative.
+* 組織のニーズに基づいて、デフォルトのLLMをカスタムのLLMに置き換える。
+* ベースとなるプロンプトを微調整し、よりカスタマイズされたユーザーエクスペリエンスを実現する。
+* `temperature`などのパラメータを変更して、結果の創造性を調整する。
 
 ## リクエストの送信
 
@@ -46,17 +46,17 @@ Override examples include:
 
 </Samples>
 
-Make sure you have generated the developer token to authorize your app. See [prerequisites for using Box AI][prereq] for details.
+アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AIを使用するための前提条件][prereq]を確認してください。
 
 ### パラメータ
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ      | 説明                                                                                                                                  | 例                       |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| `language` | The language code the agent configuration is returned for. If the language is not supported, the default configuration is returned. | `ja-JP`                 |
-| **`mode`** | The mode used to filter the agent configuration. The value can be `ask` or `text_gen`.                                              | `ask`                   |
-| `model`    | The model you want to get the configuration for. To make sure your chosen model is supported, see the [list of models][models].     | `openai__gpt_3_5_turbo` |
+| パラメータ      | 説明                                                                     | 例                       |
+| ---------- | ---------------------------------------------------------------------- | ----------------------- |
+| `language` | 返されるエージェントの構成の言語コード。その言語がサポートされていない場合は、デフォルト構成が返されます。                  | `ja-JP`                 |
+| **`mode`** | エージェントの構成にフィルタをかけるためのモード。値は`ask`または`text_gen`になります。                    | `ask`                   |
+| `model`    | 構成を取得する対象となるモデル。選択したモデルがサポートされていることを確認するには、[モデルのリスト][models]を参照してください。 | `openai__gpt_3_5_turbo` |
 
 [prereq]: g://box-ai/prerequisites
 

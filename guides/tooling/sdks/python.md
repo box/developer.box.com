@@ -23,7 +23,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/python.md
 fullyTranslated: true
 ---
-# Install Python SDK (Deprecated)
+# Python SDK (公式サポート終了) のインストール
 
 Pythonプロジェクトでは、Box Python SDKを使用してBox APIを呼び出すことができます。
 

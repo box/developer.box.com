@@ -23,7 +23,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet-gen.md
 fullyTranslated: true
 ---
-# Install .NET SDK (Generated)
+# .NET SDK (Generated) のインストール
 
 .NETプロジェクトでは、Box .NET SDKを使用してBox APIを呼び出すことができます。
 

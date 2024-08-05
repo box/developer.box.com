@@ -23,13 +23,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/dotnet.md
 fullyTranslated: true
 ---
-# Install .NET SDK (Deprecated)
+# .NET SDK (公式サポート終了) のインストール
 
 .NETプロジェクトでは、Box .NET SDKを使用してBox APIを呼び出すことができます。
 
 <Message type="notice">
 
-[.NET SDK](https://github.com/box/box-windows-sdk-v2) is currently in maintenance mode and will be deprecated soon. This means only critical security updates and bug fixes will be implemented. It is recommended to use the [auto-generated .NET SDK][dotnetgensdk].
+[.NET SDK](https://github.com/box/box-windows-sdk-v2)は、現在メンテナンスモードであり、まもなく公式サポートが終了する予定です。つまり、実装されるのは重要なセキュリティ更新プログラムとバグ修正のみになります。[自動生成された.NET SDK][dotnetgensdk]を使用することをお勧めします。
 
 </Message>
 
