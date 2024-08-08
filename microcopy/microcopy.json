@@ -715,5 +715,9 @@
   "ai_dev_zone.summary_filters.short": "Short",
   "ai_dev_zone.summary_filters.sentence": "One sentence",
   "ai_dev_zone.summary_filters.paragraph": "One paragraph",
-  "ai_dev_zone.summary_filters.characters": "500 characters"
+  "ai_dev_zone.summary_filters.characters": "500 characters",
+  "versions.version_options.v_2024_0": "2024.0",
+  "versions.version_options.v_2024_1": "2024.1",
+  "versions.version_options.v_2025_0": "2025.0",
+  "versions.placeholder": "Select API version"
 }
