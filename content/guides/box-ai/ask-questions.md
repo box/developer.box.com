@@ -11,9 +11,9 @@ related_guides:
 # Ask questions to Box AI
 
 <Message type="notice">
-Box AI API is a beta feature, which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all **Enterprise Plus** customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -121,7 +121,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 ### Authentication
 
 Make sure you have generated the developer token
-to authorize your app. See [prerequisites for using Box A][prereq]
+to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
 
 ### Parameters

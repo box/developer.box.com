@@ -12,9 +12,9 @@ related_guides:
 # Box AI
 
 <Message type="notice">
-Box AI API is a beta feature, which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all **Enterprise Plus** customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 </Message>
 
 Box AI API allows you to use Box AI
@@ -37,7 +37,7 @@ or generate text you can use in your documents.
 You can also use [Box AI for UI Elements][boxaielement]
 to embed Box AI functionality in your apps.
 
-### Ask questions to AI
+### Ask questions to Box AI
 
 You can use Box AI API to ask questions about
 the content, for example, while working
@@ -54,7 +54,7 @@ to see an example of how users can interact
 with Box AI while
 working with their documents.
 
-### Generate text with AI
+### Generate text with Box AI
 
 You can use Box AI API to generate text
 from scratch, from existing text within a Box Note, or
