@@ -43,3 +43,6 @@ sample_code_catalog:
 
 ai_dev_zone:
   $ref: "content/microcopy/ai_dev_zone.yml"
+
+versions:
+  $ref: "content/microcopy/versions.yml"
