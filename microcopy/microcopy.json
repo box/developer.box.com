@@ -259,7 +259,7 @@
   // The text for the link to the developer community forum
   "headers.secondary.support_links.community_forum.text": "Community Forum",
   // The URL to the developer forum
-  "headers.secondary.support_links.community_forum.url": "https://forum.box.com",
+  "headers.secondary.support_links.community_forum.url": "https://community.box.com/",
   // The text for the link to the changelog
   "headers.secondary.support_links.changelog.text": "Changelog",
   // The URL to the changelog
@@ -718,5 +718,9 @@
   "ai_dev_zone.summary_filters.short": "Short",
   "ai_dev_zone.summary_filters.sentence": "One sentence",
   "ai_dev_zone.summary_filters.paragraph": "One paragraph",
-  "ai_dev_zone.summary_filters.characters": "500 characters"
+  "ai_dev_zone.summary_filters.characters": "500 characters",
+  "versions.version_options.v_2024_0": "2024.0",
+  "versions.version_options.v_2024_1": "2024.1",
+  "versions.version_options.v_2025_0": "2025.0",
+  "versions.placeholder": "Select API version"
 }

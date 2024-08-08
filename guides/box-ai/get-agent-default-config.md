@@ -7,6 +7,7 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
+  - box-ai/generate-text
 category_id: box-ai
 subcategory_id: null
 is_index: false

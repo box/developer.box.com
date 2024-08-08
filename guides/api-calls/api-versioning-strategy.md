@@ -41,12 +41,12 @@ An example flow looks like this:
 
 1. When calling the [upload](`https://upload.box.com/api/2.0/files/content`) endpoint without any version header specified, you hit the `2.0` version defined in the URL.
 
-2. Box API processes the `Box-Version` header which should:
+2. Box API processes the `box-version` header which should:
 
-    - contain a valid version name, that is `Box-Version: 2025.0`
+    - contain a valid version name, that is `box-version: 2025.0`
     - be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
 
-3. If the provided version is correct, a response is sent back to the client. The response also contains the `Box-Version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
+3. If the provided version is correct, a response is sent back to the client. The response also contains the `box-version` header if it was provided in the request. By default, this header is not present in the response. If the version is wrong, an error with the HTTP code `400` is returned to the client.
 
 If there is a significant change to API behavior, the new endpoint will be exposed under the new URL.
 For example, `https://upload.box.com/api/2.0/files/content` supports a multipart content type when uploading files to Box. If the new version of this API stops supporting this content type, it will be released under a new URL `https://upload.box.com/api/3.0/files/content`.
@@ -82,15 +82,15 @@ If your request doesn't include a version, then the API defaults to the `V2` Box
 
 ## Calling an API version
 
-Box API versions are explicitly declared in the `Box-Version` header that your app makes requests to. For example:
+Box API versions are explicitly declared in the `box-version` header that your app makes requests to. For example:
 
 ```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
-    --header 'Box-Version: 2025.0' \
+    --header 'box-version: 2025.0' \
     --header 'Authorization: Bearer …
 ```
 
-The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `Box-Version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.
+The client gets a list of all created sign requests and asks for version `2025.0`. There are several supported versions of the APIs available, and you specify the version that you want to use with the `box-version` header. There are three types of API versions: **stable**, **deprecated**, and **unstable**.
 
 ## Versioning errors
 
@@ -237,7 +237,7 @@ When Box deprecates a resource or a property of a resource in the API, the chang
 - Calls that include the deprecated behavior return the response header `Box-API-Deprecated-Reason` and a link to get more information:
 
     ```sh
-    Box-Version: 2023.0
+    box-version: 2023.0
     Deprecation: version="version", date="date"
     Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
     ```
