@@ -14,12 +14,14 @@ available capabilities may change.
 Box AI API is available to all Enterprise Plus customers.
 </Message>
 
-The table lists the supported AI models to provide in the `model` parameter to:
+The table lists the supported AI models you can use to:
 
   * get the [default AI agent configuration][agent],
   * override the AI agent configuration used in [`POST 2.0/ai/ask`][ask] and [`POST 2.0/ai/text_gen`][text-gen] endpoints.
 
-When using the models in your API calls, use the **API Name** as listed in the table.
+When using `model` parameter your API calls, use the **API Name** listed in the table.
+For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `openai__gpt_3_5_turbo_16k` API name.
+Make sure you use **two underscores** after the provider name.
 
 <Message type='notice'>
 The list may change depending on the model availability.
@@ -56,3 +58,4 @@ may be limited.
 [openai-gpt-4-models]: https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
 [openai-embeddings]: https://platform.openai.com/docs/models/embeddings
+[ai-model]: e://get-ai-agent-default#param-model
