@@ -53,7 +53,7 @@ on [creating custom apps][createapps].
 ## Enable Box AI API access
 
 To interact with Box AI API,
-you need the `ai.readwrite`[scope][scope]
+you need the `ai.readwrite` [scope][scope]
 added for your application.
 Before you add the scope,
 make sure that the Box Admin has granted you
