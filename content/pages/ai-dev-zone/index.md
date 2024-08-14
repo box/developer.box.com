@@ -65,7 +65,7 @@ view sample code, explore Box AI use cases, and more!
   <TileGrid rows="4">
     <Tile type="document" title="AI API reference"
       href="/reference/resources/ai-response/">
-        Check the API reference for API specification details.
+        Check the API reference for specification details.
     </Tile>
     <Tile type="leaflet" title="Developer guides"
       href="/guides/box-ai/">
@@ -73,7 +73,7 @@ view sample code, explore Box AI use cases, and more!
     </Tile>
     <Tile type="tuning" title="Supported AI models"
       href="/guides/box-ai/supported-models/">
-        Check table list of the supported AI models
+        Check table list of the supported AI models.
     </Tile>
     <Tile type="speech-bubble" title="Support"
       href="https://forum.box.com/">
