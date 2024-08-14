@@ -57,6 +57,12 @@ sample_code:
      document metadata suggestions into
      your application.
     pricing: Pricing and packaging to be announced.
+  metadata-unstructured:
+    headline: Box Metadata Suggestions API
+    paragraph: Use this endpoint to integrate
+     document metadata suggestions into
+     your application.
+    pricing: Pricing and packaging to be announced.
   qa:
     headline: Box AI API
     paragraph: Use this endpoint to integrate
@@ -80,14 +86,17 @@ side_panel:
     cta: Learn more
     url: /guides/box-ai/ask-questions/
   metadata:
+    title: Structured metadata extraction
+    cta: Learn more
+    url: /
+  metadata-unstructured:
     title: Metadata extraction
     cta: Learn more
-    url:
-      https://medium.com/box-developer-blog/box-ai-driven-metadata-extraction-4af9f52feb83
+    url: /
   qa:
     title: Document Q&A
     cta: Learn more
-    url: /guides/box-ai/
+    url: /guides/box-ai/generate-text/
   tab_demo: Demo
   tab_sample_code: Sample code
   filtersError: Select the tone of voice and length to generate
@@ -110,6 +119,12 @@ document_metadata:
   extract: Extract
   error: Try again
 
+document_unstructured_metadata:
+  placeholder: Select value
+  instruction: Select the initial prompt format
+  input_type: Input type
+  error: Try again
+
 summary_filters:
   formal: Formal
   casual: Casual
@@ -119,3 +134,8 @@ summary_filters:
   sentence: One sentence
   paragraph: One paragraph
   characters: 500 characters
+
+unstructured_metadata_filters:
+  json: JSON
+  natural: Natural language
+  yaml: YAML
