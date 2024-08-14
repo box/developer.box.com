@@ -58,7 +58,7 @@ the available capabilities can change.
 
 <TileGrid rows="3">
 
-<Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
+<Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
 
 Summarize a document in a selected tone of voice.
 
@@ -70,19 +70,31 @@ Public beta
 
 </Tile>
 
-<Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
+<Tile type="ai" title="Metadata extraction" href="/ai-dev-zone-metadata">
 
-Extract document metadata suggestions to use in your apps.
+Extract document metadata suggestions in free mode.
 
 <strong style="background-color: #e8e8e8">
 
-API coming soon
+Public beta
 
 </strong>
 
 </Tile>
 
-<Tile disabled type="document-qa" title="Ask questions" >
+<Tile type="ai" title="Structured metadata extraction" href="/ai-dev-zone-metadata-structured">
+
+Extract document metadata suggestions in structured mode.
+
+<strong style="background-color: #e8e8e8">
+
+Public beta
+
+</strong>
+
+</Tile>
+
+<!-- <Tile disabled type="ai" title="Ask questions" >
 
 Ask Box AI about the document to get the details. Demo coming soon!
 
@@ -93,6 +105,8 @@ Public beta
 </strong>
 
 </Tile>
+
+ -->
 
 </TileGrid>
 
@@ -112,17 +126,23 @@ These resources will get you up and running with Box AI API.
 
 </p>
 
-<TileGrid rows="3">
+<TileGrid rows="4">
 
 <Tile type="document" title="AI API reference" href="/reference/resources/ai-response/">
 
-Check the API reference for API specification details.
+Check the API reference for specification details.
 
 </Tile>
 
 <Tile type="leaflet" title="Developer guides" href="/guides/box-ai/">
 
 Browse the guides to learn how to use Box AI API.
+
+</Tile>
+
+<Tile type="tuning" title="Supported AI models" href="/guides/box-ai/supported-models/">
+
+Check table list of the supported AI models.
 
 </Tile>
 
