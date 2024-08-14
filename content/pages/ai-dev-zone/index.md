@@ -76,7 +76,7 @@ view sample code, explore Box AI use cases, and more!
         Check table list of the supported AI models.
     </Tile>
     <Tile type="speech-bubble" title="Support"
-      href="https://forum.box.com/">
+      href="https://community.box.com/">
         Visit Box Developer Community for support.
     </Tile>
   </TileGrid>
