@@ -28,25 +28,29 @@ view sample code, explore Box AI use cases, and more!
       the available capabilities can change.
     </p>
   <TileGrid rows="3">
-    <Tile type="summarisation" title="Get a summary" href="/ai-dev-zone-summary">
+    <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
         Summarize a document in a selected tone of voice.
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
-    <Tile type="metadata" title="Extract metadata" href="/ai-dev-zone-metadata">
-        Extract document metadata suggestions to use in your apps.
+    <Tile type="ai" title="Metadata extraction"
+      href="/ai-dev-zone-metadata">
+        Extract document metadata suggestions in free mode.
 
-        <strong style="background-color: #e8e8e8">
-          API coming soon
-        </strong>
+        <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
-    <Tile disabled type="document-qa"
+    <Tile type="ai" title="Structured metadata extraction" href="/ai-dev-zone-metadata-structured">
+        Extract document metadata suggestions in structured mode.
+
+        <strong style="background-color: #e8e8e8">Public beta</strong>
+    </Tile>
+    <!-- <Tile disabled type="ai"
       title="Ask questions"
     >
         Ask Box AI about the document to get the details. Demo coming soon!
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
-    </Tile>
+    </Tile> -->
   </TileGrid>
 </Centered>
 
