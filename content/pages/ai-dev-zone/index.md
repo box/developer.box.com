@@ -62,7 +62,7 @@ view sample code, explore Box AI use cases, and more!
     These resources will get you up and running with Box AI API.
   </p>
 
-  <TileGrid rows="3">
+  <TileGrid rows="4">
     <Tile type="document" title="AI API reference"
       href="/reference/resources/ai-response/">
         Check the API reference for API specification details.
@@ -70,6 +70,10 @@ view sample code, explore Box AI use cases, and more!
     <Tile type="leaflet" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI API.
+    </Tile>
+    <Tile type="tuning" title="Supported AI models"
+      href="/guides/box-ai/supported-models/">
+        Check table list of the supported AI models
     </Tile>
     <Tile type="speech-bubble" title="Support"
       href="https://forum.box.com/">
