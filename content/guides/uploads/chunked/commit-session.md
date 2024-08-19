@@ -1,5 +1,5 @@
 ---
-rank: 3
+rank: 5
 related_endpoints:
   - post_files_upload_sessions_id_commit
 related_guides: []

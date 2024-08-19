@@ -6,7 +6,7 @@ related_guides:
   - webhooks/triggers
   - webhooks/v2
   - webhooks/v2/delete-v2
-related_resources: 
+related_resources:
   - webhook
 required_guides: []
 alias_paths:
@@ -17,7 +17,7 @@ alias_paths:
 # Create Webhooks
 
 V2 webhooks can monitor specific files or folders. They can be
-created in the [Developer Console][console] and with API. 
+created in the [Developer Console][console] and with API.
 
 ## Developer console
 
@@ -38,15 +38,11 @@ To create a webhook follow the steps below.
 
 ### Required fields
 
-<!-- markdownlint-disable line-length -->
-
 | Field name | Description | Required |
 | --- | --- | --- |
 | URL Address | URL address to be notified by the webhook. | Yes |
 | Content type | Type of content (file/folder) the webhook is configured for. | Yes |
 | Triggers | Different triggers that activate the webhook. | Yes |
-
-<!-- markdownlint-enable line-length -->
 
 ## API
 
@@ -62,7 +58,7 @@ a list of [triggers][4].
 
 To attach a webhook to a folder, call the [create webhook][3] endpoint with the
 type of `folder`, the ID of the folder, a URL to send webhook notifications to,
-and a list of [triggers][4]. 
+and a list of [triggers][4].
 
 <Samples id='post_webhooks' variant='for_folder' />
 
@@ -71,11 +67,11 @@ and a list of [triggers][4].
   it will also monitor sub-folders for the selected triggers.
 </Message>
 
-## Ownership 
+## Ownership
 
-It is best practice and strongly recommended to create webhooks with a 
+It is best practice and strongly recommended to create webhooks with a
 [Service Account][sa], or user that will not be deleted, to avoid potential
-issues with webhook delivery due to loss of access to content. 
+issues with webhook delivery due to loss of access to content.
 
 Similar to files and folders, webhooks are owned by a user. If a user who owns a
 webhook is deleted, they will lose access to all files and folders that they

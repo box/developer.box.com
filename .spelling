@@ -298,7 +298,17 @@ automations
 invocable
 analytics
 ClientID
+chatbot
+OAuth2
+LLMs
+npm
 lifecycle
 Fallbacks
 deprecations
 oasdiff
+FIPS
+OpenAI
+XCode
+embeddings
+GPT-4
+GPT-3

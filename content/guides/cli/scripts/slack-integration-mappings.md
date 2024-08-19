@@ -1,5 +1,5 @@
 ---
-rank: 9
+rank: 8
 related_endpoints: []
 related_guides:
   - authentication/oauth2
@@ -12,8 +12,6 @@ related_resources: []
 
 ---
 # Manage Slack integration folder mappings
-
-<!-- markdownlint-disable line-length -->
 
 This script helps manage the folder mappings between Slack and Box if using Box
 as the content store for Slack. It creates a list of current Slack channel and
@@ -28,9 +26,9 @@ For more details, you can checkout the [Github repo][1].
 
 Clone this GitHub repo or download files from the `/examples` directory
 
-   ```bash
-   git clone https://github.com/box/boxcli.git
-   ```
+```bash
+git clone https://github.com/box/boxcli.git
+```
 
 ### Windows
 
@@ -40,29 +38,29 @@ Install the latest version of [dotnet core](https://dotnet.microsoft.com/downloa
 
 Install [PowerShell][pwsh]. Run the `pwsh` command to test the installation.
 
-   ```bash
-    pwsh 
-   ```
+```bash
+pwsh
+```
 
 Depending on the directory you are
 running the command in, the output may differ.
 For example:
 
-   ```bash
-   PowerShell 7.2.5
-   Copyright (c) Microsoft Corporation.
+```bash
+PowerShell 7.2.5
+Copyright (c) Microsoft Corporation.
 
-   https://aka.ms/powershell
-   Type 'help' to get help.
-     
-   PS /Users/user/repos/boxcli/examples> 
-   ```
+https://aka.ms/powershell
+Type 'help' to get help.
 
-   <message>
-      If you encounter issues make sure you installed both 
-      [dotnet core](https://dotnet.microsoft.com/download) and 
-      [PowerShell][pwsh].
-   </message>
+PS /Users/user/repos/boxcli/examples>
+```
+
+<message>
+If you encounter issues make sure you installed both
+[dotnet core](https://dotnet.microsoft.com/download) and
+[PowerShell][pwsh].
+</message>
 
 ### Box CLI Install
 

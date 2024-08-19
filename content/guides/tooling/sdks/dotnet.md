@@ -11,16 +11,24 @@ related_resources: []
 alias_paths: []
 ---
 
-# Install .NET SDK
+# Install .NET SDK (Deprecated)
 
-The Box .NET SDK can be used to make API calls to the Box APIs in a .NET
+You can use Box .NET SDK to call Box APIs in a .NET
 project.
+
+<Message type='notice'>
+ [.NET SDK](https://github.com/box/box-windows-sdk-v2)
+ is currently in maintenance mode and will be deprecated soon.
+ This means only critical security updates and bug fixes will be
+ implemented.
+ It is recommended to use the [auto-generated .NET SDK][dotnetgensdk].
+</Message>
 
 The SDK is available for both .NET Framework 4.5 and .NET Core 1.0 or
 above. The installation of the SDK depends on the framework used.
 
 <CTA to="https://github.com/box/box-windows-sdk-v2">
-  Learn more about the .NET SDK on GitHub
+  Learn more about .NET SDK on GitHub
 </CTA>
 
 ## .NET Framework
@@ -41,8 +49,5 @@ using the [Nuget][nuget] package manager.
 PM> Install-Package Box.V2.Core
 ```
 
-<CTA to="https://github.com/box/box-windows-sdk-v2">
-  Learn more about the .NET SDK on GitHub
-</CTA>
-
 [nuget]: https://www.nuget.org/
+[dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen

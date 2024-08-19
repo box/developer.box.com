@@ -1,5 +1,5 @@
 ---
-rank: 5
+rank: 6
 related_endpoints:
   - get_files_id
   - put_files_id_watermark
@@ -28,11 +28,8 @@ the first time.
 To get a PDF representation follow the following steps
 
 - [List all representations](guide://representations/list-all-representations)
-- [Request a PDF](guide://representations/request-a-representation) by passing the
-  `x-rep-hints`-header for the desired file type `[pdf]`.
-- [Download the PDF](guide://representations/download-a-representation) by
-  calling the `url_template`, replacing the `{+asset_path}` with an the page
-  of the PDF to request, for example `1.pdf`.
+- [Request a PDF](guide://representations/request-a-representation) by passing the `x-rep-hints`-header for the desired file type `[pdf]`.
+- [Download the PDF](guide://representations/download-a-representation) by calling the `url_template`, replacing the `{+asset_path}` with an the page of the PDF to request, for example `1.pdf`.
 
 ## Watermarked PDFs
 

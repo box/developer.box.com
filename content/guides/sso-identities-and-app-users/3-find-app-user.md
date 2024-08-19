@@ -9,7 +9,7 @@ related_guides:
 
 When a user logs into a Box custom application with their SSO provider, the
 first step that should be taken is to see if that user already exists from a
-previous login attempt where a Box user record was already created. 
+previous login attempt where a Box user record was already created.
 
 If a Box user is found you should
 [create a user access token](guide://authentication/jwt/user-access-tokens/),
@@ -17,7 +17,7 @@ or make [as user calls](guide://authentication/jwt/as-user/), to access Box
 APIs as that user.
 
 If a Box user is not found you should create a new user with an association to
-the SSO user record. 
+the SSO user record.
 
 To search for existing users the [List Enterprise Users](e://get-users)
 endpoint may be used. Depending on whether you're using the
@@ -35,7 +35,7 @@ Once available, make a request to the list enterprise users endpoint, supplying
 the `external_app_user_id` definition in the parameters.
 
 <message type='warning'>
-You can retrieve app users for a specific application only if 
+You can retrieve app users for a specific application only if
 such app users were created by this application.
 If you use one application to search for users
 created by a different one, no data will be returned.
@@ -43,22 +43,25 @@ created by a different one, no data will be returned.
 
 <Tabs>
   <Tab title='Node'>
+
     ```js
     const ssoUID = 'SSO User Unique ID';
 
     // Check enterprise users for matching external_app_user_id against SSO UID
     client.enterprise.getUsers({ "external_app_user_id": ssoUID })
     .then((users) => {
-      if (users.total_count > 0) {
-        // User found, fetch user ID
-        const userId = users.entries[0].id;
-      } else {
-        // User not found - create new user record
-      }
+        if (users.total_count > 0) {
+            // User found, fetch user ID
+            const userId = users.entries[0].id;
+        } else {
+            // User not found - create new user record
+        }
     });
     ```
+
   </Tab>
   <Tab title='Java'>
+
     ```java
     String ssoUID = "SSO User Unique ID";
 
@@ -70,17 +73,19 @@ created by a different one, no data will be returned.
     JsonValue totalCount = jsonObj.get("total_count");
 
     if (totalCount.asInt() > 0) {
-      // User found, fetch 
-      // Fetch user ID
-      JsonArray entries = (JsonArray) jsonObj.get("entries");
-      JsonObject userRecord = (JsonObject) entries.get(0);
-      JsonValue userId = userRecord.get("id");
+        // User found, fetch
+        // Fetch user ID
+        JsonArray entries = (JsonArray) jsonObj.get("entries");
+        JsonObject userRecord = (JsonObject) entries.get(0);
+        JsonValue userId = userRecord.get("id");
     } else {
-      // User not found - create new user record
+        // User not found - create new user record
     }
     ```
+
   </Tab>
   <Tab title='Python'>
+
     ```python
     sso_uid = 'SSO User Unique ID'
 
@@ -91,12 +96,13 @@ created by a different one, no data will be returned.
     user_info = response.json()
 
     if (user_info['total_count'] == 0):
-      # User not found - create new user record
+        # User not found - create new user record
     else:
-      # User found, fetch user ID
-      user = user_info['entries'][0]
-      user_id = user['id']
+        # User found, fetch user ID
+        user = user_info['entries'][0]
+        user_id = user['id']
     ```
+
   </Tab>
 </Tabs>
 
@@ -113,38 +119,44 @@ email or name.
 
 <Tabs>
   <Tab title='Node'>
+
     ```js
     const ssoEmail = 'ssouser@email.com';
 
     client.enterprise.getUsers({filter_term: ssoEmail})
-    .then(users => {
-      if (users.total_count > 0) {
-        // User found, fetch user ID
-        const userId = users.entries[0].id;
-      } else {
-        // User not found - create new user record
-      }
-    });
+        .then(users => {
+            if (users.total_count > 0) {
+                // User found, fetch user ID
+                const userId = users.entries[0].id;
+            } else {
+                // User not found - create new user record
+            }
+        });
     ```
+
   </Tab>
   <Tab title='Java'>
+
     ```java
     String ssoEmail = "ssouser@email.com";
 
     Iterable<BoxUser.Info> users = BoxUser.getAllEnterpriseUsers(client, ssoEmail);
     ```
+
   </Tab>
   <Tab title='Python'>
+
     ```python
     sso_email = 'ssouser@email.com'
 
     users = client.users(user_type='all', filter_term=ssoEmail)
     if (users['total_count'] == 0):
-      # User not found - create new user record
+        # User not found - create new user record
     else:
-      # User found, fetch user ID
-      user = users['entries'][0]
-      user_id = user['id']
+        # User found, fetch user ID
+        user = users['entries'][0]
+        user_id = user['id']
     ```
+
   </Tab>
 </Tabs>

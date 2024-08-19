@@ -8,7 +8,7 @@ related_guides:
 required_guides:
   - webhooks/v2/create-v2
   - webhooks/v2/signatures-v2
-alias_paths: 
+alias_paths:
   - /webhooks/handle/retries
   - /webhooks/handle/payload
 ---
@@ -29,8 +29,6 @@ The payload of this call contains some request headers, and a JSON body.
 
 The payload sent by a webhook has the following Box-specific headers.
 
-<!-- markdownlint-disable line-length -->
-
 | Header                    | Description                                                                                                                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `BOX-DELIVERY-ID`         | A unique ID assigned by Box that identifies the delivered webhook payload. When Box retries a webhook this ID will change, while the ID in the payload body remains the same. |
@@ -39,8 +37,6 @@ The payload sent by a webhook has the following Box-specific headers.
 | `BOX-SIGNATURE-SECONDARY` | A [signature][verify_sigs] created using the secondary signature key configured for this webhook.                                                                                                   |
 | `BOX-SIGNATURE-VERSION`   | Value is always `1`.                                                                                                                                                                 |
 | `BOX-SIGNATURE-ALGORITHM` | Value is always `HmacSHA256` .                                                                                                                                                       |
-
-<!-- markdownlint-enable line-length -->
 
 For example:
 
@@ -71,8 +67,6 @@ The body of a webhook payload is a JSON object that describes the file or folder
 (target) that triggered the webhook, as well as the event that has been
 triggered.
 
-<!-- markdownlint-disable line-length -->
-
 | Field        | Description                                                                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `type`       | Value is always `webhook_event`.                                                                                                                             |
@@ -82,8 +76,6 @@ triggered.
 | `webhook`    | The webhook ID for which an event triggered.                                                                                                                  |
 | `created_by` | The user that triggered an event.                                                                                                                          |
 | `source`     | The item that triggered an event, for example the file that was uploaded to the target folder.                                                             |
-
-<!-- markdownlint-enable line-length -->
 
 Example:
 
@@ -195,16 +187,9 @@ Delivery of a webhook payload fails when Box does not receive a response with a
 HTTP status code in the `200` to `299` range within 30 seconds of sending the
 payload.
 
-<!--alex ignore failure-->
-When delivery of a webhook fails, Box will resend it up to 10 times. The
-initial retry takes place 5 minutes after the failure. From there, an
-exponential back-off strategy is used to avoid overloading the destination
-server. By using exponential back- off, Box will wait an increasingly longer
-time for every retry.
-
 <Message type='notice'>
-  Box will retry webhook deliveries up to 10 times. This number could be subject
-  to change.
+  Box will retry webhook deliveries up to 12 times over a period of 2 hours.
+  These numbers could be subject to change.
 </Message>
 
 [setup_sigs]: g://webhooks/v2/signatures-v2

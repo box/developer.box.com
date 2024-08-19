@@ -88,11 +88,9 @@ related_endpoints:
 
 ## Summary
 
-* You logged into your **Box account** using your own **Box App** or our
-  preconfigured app
+* You logged into your **Box account** using your own **Box App** or our preconfigured app
 * You granted the **Box App** access to your account
-* You are able to see your account's **Access Token** and **Refresh Token**
-  on this page
+* You are able to see your account's **Access Token** and **Refresh Token** on this page
 
 </Choice>
 

@@ -5,22 +5,22 @@ rank: 1
 
 # Signing unstructured docs
 
-Imagine a document management app, where users can upload a document and ask 
-anyone to sign it. In this case your app will know what document to sign and 
-who needs to sign, but it has no idea where to put the signature or its 
+Imagine a document management app, where users can upload a document and ask
+anyone to sign it. In this case your app will know what document to sign and
+who needs to sign, but it has no idea where to put the signature or its
 properties like name, date, initial, and so on.
 
 This contrasts with [using templates][sign-templates] or
 [structured documents][sign-structured-docs] where your
-app knows what they are, and where the 
+app knows what they are, and where the
 signature properties go.
 
-In these cases, and because each document can have a different structure, it is 
-a good idea to always set the `is_document_preparation_needed` flag set to 
-`true`, so that the sender has a chance to select and place the signature 
+In these cases, and because each document can have a different structure, it is
+a good idea to always set the `is_document_preparation_needed` flag set to
+`true`, so that the sender has a chance to select and place the signature
 properties in the document before the signer gets the request.
 
-There are three steps to this flow, creating the signature request, then 
+There are three steps to this flow, creating the signature request, then
 preparing the document, and finally signing it.
 This is how the flow looks like:
 ![Sign unstructured docs flow](images/unstructured-docs-flow.png)
@@ -30,36 +30,35 @@ Consider this example:
 <Tabs>
   <Tab title='cURL'>
 
-```bash
+```curl
 curl --location 'https://api.box.com/2.0/sign_requests' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <access token>'
---data-raw '{
-    "is_document_preparation_needed": true,
-    "parent_folder": {
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <access token>' \
+    --data-raw '{
+      "is_document_preparation_needed": true,
+      "parent_folder": {
         "id": "234102987614",
         "type": "folder"
-    },
-    "source_files": [
+      },
+      "source_files": [
         {
-            "id": "1355143830404",
-            "type": "file"
+          "id": "1355143830404",
+          "type": "file"
         }
-    ],
-    "signers": [
+      ],
+      "signers": [
         {
-            "email": "signer@example.com",
-            "role": "signer"
+          "email": "signer@example.com",
+          "role": "signer"
         }
-    ]
-}'
+      ]
+    }'
 ```
 
   </Tab>
   <Tab title='Python Gen SDK'>
 
 ```python
-
 def sign_doc_single(
     client: Client,
     document_id: str,
@@ -94,7 +93,6 @@ def main():
 
     if sign_pdf_prep.prepare_url is not None:
         open_browser(sign_pdf_prep.prepare_url)
-
 ```
 
   </Tab>
@@ -104,84 +102,80 @@ This results in a signature request with a prepare document URL (simplified):
 
 <Tabs>
 <Tab title='cURL'>
-    
+
 ```json
-
 {
-    "is_document_preparation_needed": true,
-    "signers": [
-        {
-            "email": "requester@example.com",
-            "role": "final_copy_reader",
-        },
-        {
-            "email": "signer@example.com",
-            "role": "signer",
-        }
-    ],
-    "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
-    "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
-    "source_files": [
-        {
-            "id": "1355143830404",
-            "type": "file",
-        }
-    ],
-    "parent_folder": {
-        "id": "234102987614",
-        "type": "folder",
+  "is_document_preparation_needed": true,
+  "signers": [
+    {
+      "email": "requester@example.com",
+      "role": "final_copy_reader",
     },
-    "name": "Simple-PDF.pdf",
-    "type": "sign-request",
-    "status": "converting",
-    "sign_files": {
-        "files": [
-            {
-                "id": "1381301154812",
-                "type": "file",
-            }
-        ],
-        "is_ready_for_download": true
-    },
-    "template_id": null
+    {
+      "email": "signer@example.com",
+      "role": "signer",
+    }
+  ],
+  "id": "348decab-48a8-4f2c-9436-8967afebf7bb",
+  "prepare_url": "https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/",
+  "source_files": [
+    {
+      "id": "1355143830404",
+      "type": "file",
+    }
+  ],
+  "parent_folder": {
+    "id": "234102987614",
+    "type": "folder",
+  },
+  "name": "Simple-PDF.pdf",
+  "type": "sign-request",
+  "status": "converting",
+  "sign_files": {
+    "files": [
+      {
+        "id": "1381301154812",
+        "type": "file",
+      }
+    ],
+    "is_ready_for_download": true
+  },
+  "template_id": null
 }
-
 ```
-    
+
 </Tab>
 <Tab title='Python Gen SDK'>
 
 ```yaml
-
 Simple sign request with prep: xyz-abc-123
   Status: converting
   Signers: signer@example.com
 Prepare url: https://app.box.com/sign/document/xyz-abc-123/.../prepare_doc/
-
 ```
 
 </Tab>
 </Tabs>
 
-Notice in the above script that, if a prepare document URL was generated by the 
-signature request, then the app opens a browser for it. The requester can 
+Notice in the above script that, if a prepare document URL was generated by the
+signature request, then the app opens a browser for it. The requester can
 then apply the different signature properties, for example:
 
 ![Preparing the document using drag and drop on the template editor](images/sign-pdf-prep-doc.png)
 
-Once the document is prepared, the requester can send the signature request to 
+Once the document is prepared, the requester can send the signature request to
 the signer.
 
 Back in the Box app you can see the status `In Progress`.
 
 ![Pending signature request](images/sign-request-pending.png)
 
-The signer then receives an email from Box with a link to the signature 
+The signer then receives an email from Box with a link to the signature
 request.
 
 ![Signing the document](images/sign-pdf-prep-finish-sign.png)
 
-When the process is completed, both a signature log containing metadata and 
+When the process is completed, both a signature log containing metadata and
 the signed document are stored in the destination folder.
 
 ![Log and signed document](images/sign-pdf-signed-docs.png)
