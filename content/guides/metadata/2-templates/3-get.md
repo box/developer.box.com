@@ -41,7 +41,7 @@ template's `scope` and `templateKey`.
 
 ## Get a metadata template by ID
 
-To get a metadata template by ID, you will need to pass both the template's
+To get a metadata template by ID, you will need to pass the template's
 `id` to the [`GET
 /metadata_templates/:id`][e_by_id] API endpoint.
 
