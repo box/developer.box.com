@@ -9,10 +9,10 @@ subcategory_id: api-calls/permissions-and-errors
 is_index: false
 id: api-calls/permissions-and-errors/app-diagnostics-report
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: api-calls/permissions-and-errors
 parent_id: api-calls/permissions-and-errors
-next_page_id: ''
+next_page_id: api-calls/permissions-and-errors/versioning-errors
 previous_page_id: api-calls/permissions-and-errors/expiration
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/app-diagnostics-report.md

@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 3
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: box-ai/prerequisites
@@ -25,7 +25,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI APIはベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、**Enterprise Plus**をご利用のすべてのお客様が利用できます。
+Box AIのPlatform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AIのPlatform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
@@ -37,7 +37,7 @@ Box AI APIには、アプリケーションのワークフローで大規模言�
 
 現在は、Box AIに対して、ユーザーの質問への回答、ドキュメントの内容の要約、ドキュメントで使用できるテキストの生成を求めることができます。また、[Box AI for UI Elements][boxaielement]を使用してBox AI機能をアプリに埋め込むこともできます。
 
-### 質問する
+### Box AIに質問する
 
 Boxに保存しているドキュメントで作業している間など、Box AI APIを使用して、そのコンテンツについて質問することができます。
 
@@ -47,13 +47,19 @@ Box AIは、指定されたファイルに基づいて、コンテンツに関�
 
 ユーザーがドキュメントでの作業中にBox AIを操作する方法の例については、[Box AI for Documents][boxaidocs]を参照してください。
 
-### テキストを生成する
+### Box AIを使用してテキストを生成する
 
 Box AI APIを使用すると、テキストをゼロから生成したり、Box Note内の既存のテキストから生成したり、プレビュー内の特定のドキュメントに基づいて生成したりすることができます。たとえば、プレビュー表示している記事に基づいてテンプレートや議題を作成するようBox AIに求めることができます。
 
 また、もう1つの例として、Box Notesでは、テキストの生成や既存メモのコンテンツのリファインにBox AIを使用します。詳細については、[Box AI for Notes][boxainotes]を参照してください。
 
 ![Notes内の \[Box AI\]](./images/box-ai-in-notes.png)
+
+## 構成の上書き
+
+デフォルトのエージェント構成を上書きし、独自のカスタム設定を導入するには、[`POST /2.0/ai/ask`][ask]リクエストおよび[`POST /2.0/ai/text_gen`][text-gen]リクエストで利用可能な`ai_agent`パラメータを使用できます。
+
+詳細については、[AIエージェントのデフォルト構成][agent-default]を参照してください。
 
 ### Box AI for UI Elements
 
@@ -75,8 +81,8 @@ Box AIは、英語、日本語、フランス語、スペイン語など、多�
 
 [\[ユーザーアクティビティ\] レポート][uar]には、ユーザーがBoxで実行している操作の概要が示されます。Box管理者は、このレポートを使用して、所定の期間内にユーザーが行った操作を確認できますが、これにはBox AIに対する操作も含まれます。レポートには、Box管理者がBox AIの詳細を取得するために選択できる以下の操作が用意されています。
 
-* `AI query`: ユーザーがBox AIに対してクエリを実行し、応答を受け取りました。
-* `Failed AI query`: ユーザーがBox AIに対してクエリを実行しましたが、応答がありませんでした。
+* `AI query`: ユーザーがBox AIに対してクエリを実行し、レスポンスを受け取りました。
+* `Failed AI query`: ユーザーがBox AIに対してクエリを実行しましたが、レスポンスがありませんでした。
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 
@@ -85,3 +91,9 @@ Box AIは、英語、日本語、フランス語、スペイン語など、多�
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
+
+[agent-default]: g://box-ai/get-agent-default-config
+
+[ask]: e://post_ai_ask#param_ai_agent
+
+[text-gen]: e://post_ai_text_gen#param_ai_agent

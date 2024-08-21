@@ -123,7 +123,7 @@ Box AI APIの使用方法については、ガイドをご覧ください。
 
 </Tile>
 
-<Tile type="speech-bubble" title="サポート" href="https://forum.box.com/">
+<Tile type="speech-bubble" title="サポート" href="https://community.box.com/">
 
 サポートが必要な場合は、Box Developer Community (英語のみ) にアクセスしてください。
 

@@ -9,7 +9,7 @@ subcategory_id: api-calls/permissions-and-errors
 is_index: true
 id: api-calls/permissions-and-errors
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: api-calls
 parent_id: api-calls
 next_page_id: api-calls/permissions-and-errors/scopes

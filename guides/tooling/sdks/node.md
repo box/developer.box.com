@@ -14,18 +14,24 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/node
 type: guide
-total_steps: 5
+total_steps: 9
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
 next_page_id: tooling/sdks/salesforce
-previous_page_id: tooling/sdks/python
+previous_page_id: tooling/sdks/python-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/node.md
 fullyTranslated: true
 ---
-# Node SDKのインストール
+# Node SDK (公式サポート終了) のインストール
 
-Nodeプロジェクトでは、Box Node SDKを使用してBox APIへのAPIコールを行うことができます。
+Nodeプロジェクトでは、Box Node SDKを使用してBox APIを呼び出すことができます。
+
+<Message type="notice">
+
+[Node SDK][node]は、現在メンテナンスモードであり、まもなく公式サポートが終了する予定です。つまり、実装されるのは重要なセキュリティ更新プログラムとバグ修正のみになります。[自動生成されたTypescript SDK][ts-gen]を使用することをお勧めします。
+
+</Message>
 
 <CTA to="https://github.com/box/box-node-sdk">
 
@@ -51,12 +57,10 @@ yarn add box-node-sdk
 
 ```
 
-<CTA to="https://github.com/box/box-node-sdk">
-
-GitHubでNode SDKの詳細を確認する
-
-</CTA>
-
 [npm]: https://www.npmjs.com/
 
 [yarn]: https://yarnpkg.com/
+
+[ts-gen]: g://tooling/sdks/typescript-gen
+
+[node]: https://github.com/box/box-node-sdk

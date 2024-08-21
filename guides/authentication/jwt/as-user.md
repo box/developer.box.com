@@ -57,7 +57,7 @@ as-userヘッダーでは[サービスアカウント](page://platform/user-type
 
 </Message>
 
-## SDKを使用したas-user
+## as-userを使用できるSDK
 
 すべての[Box公式SDK][sdk]では、`as-user`ヘッダーを使用してユーザーの代わりに処理を実行することがサポートされています。
 

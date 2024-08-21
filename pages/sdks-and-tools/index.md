@@ -43,11 +43,11 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ### 次世代のSDK
 
-最新世代のBox Python SDKとBox Typescript SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
+最新世代のBox Python SDK、Box Typescript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 <Message type="notice">
 
-.NET SDKはパブリックベータ段階です。
+Swift SDKはパブリックベータ段階です。
 
 </Message>
 
@@ -62,20 +62,21 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 | ------------------------------ | --------- | ------- |
 | [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
 | [Typescriptの次世代SDK][tsgensdk]  | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
+| [.NET SDK][dotnetgensdk]       | はい        | Full    |
+| [Swift SDK][swiftgensdk] (ベータ) | はい        | Full    |
 
 ### SDK
 
 次の表に、アプリケーションの作成時に使用できるBox SDKを示します。
 
-| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
-| --------------------------------- | --------- | ------- |
-| [Java SDK][javasdk]               | はい        | Full    |
-| [.NET SDK][dotnetsdk]             | はい        | Full    |
-| [Python SDK][pythonsdk]           | はい        | Full    |
-| [Node SDK][nodesdk]               | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | Full    |
-| [Android Content SDK][androidsdk] | いいえ       | 部分的     |
+| プラットフォーム                          | メンテナンスの有無                               | APIパリティ |
+| --------------------------------- | --------------------------------------- | ------- |
+| [Java SDK][javasdk]               | はい                                      | Full    |
+| [iOS Content SDK][iossdk]         | はい                                      | Full    |
+| [Android Content SDK][androidsdk] | いいえ                                     | 部分的     |
+| [.NET SDK][dotnetsdk]             | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| [Python SDK][pythonsdk]           | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| [Node SDK][nodesdk]               | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
 
 <Message type="warning">
 
@@ -173,7 +174,7 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 
 [cli]: https://github.com/box/boxcli
 
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 
 [browseimg]: ./browse.jpg
 
@@ -198,6 +199,8 @@ Salesforce Developer Toolkitを使用すると、Box for Salesforce統合の動�
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+
+[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 
 [postman]: https://postman.com
 

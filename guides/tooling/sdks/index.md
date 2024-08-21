@@ -13,7 +13,7 @@ subcategory_id: tooling/sdks
 is_index: true
 id: tooling/sdks
 type: guide
-total_steps: 5
+total_steps: 9
 sibling_id: tooling
 parent_id: tooling
 next_page_id: ''
@@ -38,11 +38,11 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 ## 次世代のSDK
 
-最新世代のBox Python SDK、Box Typescript SDK、.NET SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
+最新世代のBox Python SDK、Box Typescript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 <Message type="notice">
 
-.NET SDKはパブリックベータ段階です。
+Swift SDKはパブリックベータ段階です。
 
 </Message>
 
@@ -53,24 +53,25 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 * **ドキュメントへの埋め込み**: 必要な情報すべてが1か所に保存されるように、すべてのオブジェクトおよびパラメータはSDKのソースコードに直接記述されます。
 * **便利なメソッドの強化**: 新しく導入された便利なメソッドは、認証、分割アップロード、指数バックオフ、自動再試行、型チェック (変数を正しく使用しているかどうかの確認に役立ちます) など、さまざまな側面をカバーします。
 
-| プラットフォーム                       | メンテナンスの有無 | APIパリティ |
-| ------------------------------ | --------- | ------- |
-| [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
-| [Typescriptの次世代SDK][tsgensdk]  | はい        | Full    |
-| [.NET SDK][dotnetgensdk] (ベータ) | はい        | Full    |
+| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
+| --------------------------------- | --------- | ------- |
+| [Pythonの次世代SDK][pythongensdk]     | はい        | Full    |
+| [Typescriptの次世代SDK][tsgensdk]     | はい        | Full    |
+| [.NETの次世代SDK][dotnetgensdk]       | はい        | Full    |
+| [Swiftの次世代SDK][swiftgensdk] (ベータ) | はい        | Full    |
 
 ## SDK
 
 次の表に、アプリケーションの作成時に使用できるBox SDKを示します。
 
-| プラットフォーム                          | メンテナンスの有無 | APIパリティ |
-| --------------------------------- | --------- | ------- |
-| [Java SDK][javasdk]               | はい        | Full    |
-| [.NET SDK][dotnetsdk]             | はい        | Full    |
-| [Python SDK][pythonsdk]           | はい        | Full    |
-| [Node SDK][nodesdk]               | はい        | Full    |
-| [iOS Content SDK][iossdk]         | はい        | Full    |
-| [Android Content SDK][androidsdk] | いいえ       | 部分的     |
+| プラットフォーム                          | メンテナンスの有無                               | APIパリティ |
+| --------------------------------- | --------------------------------------- | ------- |
+| [Java SDK][javasdk]               | はい                                      | Full    |
+| [iOS Content SDK][iossdk]         | はい                                      | Full    |
+| [Android Content SDK][androidsdk] | いいえ                                     | 部分的     |
+| [.NET SDK][dotnetsdk]             | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| [Python SDK][pythonsdk]           | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
+| [Node SDK][nodesdk]               | 公式サポート終了。重要なセキュリティ更新プログラムとバグ修正のみ実装されます。 | Full    |
 
 <Message type="warning">
 
@@ -99,6 +100,8 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 [tsgensdk]: https://github.com/box/box-typescript-sdk-gen
 
 [dotnetgensdk]: https://github.com/box/box-dotnet-sdk-gen
+
+[swiftgensdk]: https://github.com/box/box-swift-sdk-gen
 
 [android-docs]: https://github.com/box/box-java-sdk/blob/main/doc/android.md
 

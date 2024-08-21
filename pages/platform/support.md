@@ -59,7 +59,7 @@ Developerドキュメントの変更ログと同様に、Box Platformの更新�
 
 <!-- i18n-enable localize-links -->
 
-[forum]: https://forum.box.com/
+[forum]: https://community.box.com/
 
 [medium]: https://medium.com/box-developer-japan-blog
 

@@ -14,20 +14,20 @@ subcategory_id: tooling/sdks
 is_index: false
 id: tooling/sdks/java
 type: guide
-total_steps: 5
+total_steps: 9
 sibling_id: tooling/sdks
 parent_id: tooling/sdks
-next_page_id: tooling/sdks/python
-previous_page_id: tooling/sdks/dotnet
+next_page_id: tooling/sdks/python-gen
+previous_page_id: tooling/sdks/dotnet-gen
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/tooling/sdks/java.md
 fullyTranslated: true
 ---
 # Java SDKのインストール
 
-Javaプロジェクトでは、Box Java SDKを使用してBox APIへのAPIコールを行うことができます。
+Javaプロジェクトでは、Box Java SDKを使用してBox APIを呼び出すことができます。
 
-SDKは、Gradle依存関係またはMaven依存関係を追加するか、ソースをプロジェクトに複製することでインストールできます。また、GitHubのリリースページからプリコンパイル済みJARのいずれかをダウンロードすることでもインストールできます。
+Java SDKをインストールするには、Gradle依存関係またはMaven依存関係を追加するか、ソースをプロジェクトに複製します。また、GitHubのリリースページからプリコンパイル済みJARのいずれかをダウンロードすることもできます。
 
 <CTA to="https://github.com/box/box-java-sdk">
 
@@ -86,12 +86,6 @@ GitHubの[リリースに関するページ][java-sdk-releases]からJava SDK用
 | [`bouncycastle bcprov-jdk15on v1.52`][dependency-bcprov] |
 | [`bouncycastle bcpkix-jdk15on v1.52`][dependency-bcpkix] |
 | [`Java Cryptography Extension (JCE)`][dependency-crypto] |
-
-<CTA to="https://github.com/box/box-java-sdk">
-
-GitHubでJava SDKの詳細を確認する
-
-</CTA>
 
 [npm]: https://www.npmjs.com/
 
