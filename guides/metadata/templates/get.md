@@ -50,8 +50,8 @@ fullyTranslated: true
 
 ## IDを指定してメタデータテンプレートを取得
 
-To get a metadata template by ID, you will need to pass the template's `id` to the [`GET
-/metadata_templates/:id`][e_by_id] API endpoint.
+IDを指定してメタデータテンプレートを取得するには、テンプレートの`id`を[`GET
+/metadata_templates/:id`][e_by_id] APIエンドポイントに渡す必要があります。
 
 <Samples id="get_metadata_templates_id">
 
