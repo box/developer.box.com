@@ -165,6 +165,6 @@ The API will return the updated metadata instance.
 
 <Next>
 
-I've updated metadata to a file
+I've updated metadata on a file
 
 </Next>

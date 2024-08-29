@@ -197,6 +197,6 @@ created in previous steps would now look something like this.
 
 <Next>
 
-I've updated metadata to a file
+I've updated metadata template
 
 </Next>
