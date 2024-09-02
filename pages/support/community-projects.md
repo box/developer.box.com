@@ -56,7 +56,7 @@ fullyTranslated: true
 | [IBM Bluemix][connector-bluemix]           | BoxをIBM Bluemixアプリケーションに統合して、コンテンツとデータを活用できます。                        |
 | [Kloudless][connector-kloudless]           | アプリをBoxやその他のCRM、カレンダー、ITSMソフトウェアサービスに統合して、機能を強化できます。                  |
 | [Mendix][connector-mendix]                 | Mendixアプリケーションプラットフォームで作成したアプリにBoxを接続できます。                            |
-| [Microsoft Flow][connector-ms-flow]        | お好きなアプリとサービスを結んで自動化するワークフローを作成して、通知の取得、ファイル同期、データ収集などに利用できます。         |
+| [Microsoft Flow][connector-ms-flow]        | お好きなアプリとサービスを結ぶ自動化ワークフローを作成して、通知の取得、ファイル同期、データ収集などに利用できます。            |
 | [Mulesoft][connector-mulesoft]             | BoxとサードパーティCRM、CMS、モバイルアプリケーション、ソーシャルアプリケーションとのデータ同期とプロセス自動化を実現します。   |
 | [Stamplay][connector-stamplay]             | 実際のビジネスプロセスをBoxに接続する自動化ワークフローを構築できます。                                 |
 | [Workato][connector-workato]               | BoxをCRM、マーケティング、ERP、サポート、会計アプリと統合することで、ドキュメントワークフローを自動化できます。          |

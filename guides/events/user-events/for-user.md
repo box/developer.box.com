@@ -88,7 +88,7 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 | `COLLAB_INVITE_COLLABORATOR` | コラボレータがフォルダに招待されました。                                 |
 | `COLLAB_REMOVE_COLLABORATOR` | コラボレータがフォルダから削除されました。                                |
 | `ITEM_SYNC`                  | フォルダが同期対象としてマークされました。                                |
-| `ITEM_UNSYNC`                | フォルダが同期対象のマークを解除されました。                               |
+| `ITEM_UNSYNC`                | フォルダの同期対象のマークが解除されました。                               |
 | `ITEM_RENAME`                | ファイルまたはフォルダの名前が変更されました。                              |
 | `ITEM_MAKE_CURRENT_VERSION`  | 前のバージョンのファイルが現在のバージョンに昇格されました。                       |
 | `GROUP_ADD_USER`             | グループへのユーザーの追加                                        |
