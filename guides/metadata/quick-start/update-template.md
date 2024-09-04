@@ -197,6 +197,6 @@ client.metadata.updateTemplate(
 
 <Next>
 
-ファイルのメタデータを更新しました
+I've updated metadata template
 
 </Next>

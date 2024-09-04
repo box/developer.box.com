@@ -166,6 +166,6 @@ client.files.updateMetadata(
 
 <Next>
 
-ファイルのメタデータを更新しました
+I've updated metadata on a file
 
 </Next>

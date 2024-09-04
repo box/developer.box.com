@@ -50,7 +50,7 @@ fullyTranslated: true
 
 [メタデータテンプレート][template]には、ファイルまたはフォルダに割り当てることができる一連のキー/値ペアが記載されています。
 
-たとえば、`customerInfo`テンプレートは顧客に関するデータを保持しており、顧客名と顧客の業種のフィールドがあるとします。
+For example, a `customerInfo` template might hold data about a customer, having a field for the customer name as well as the customer's industry.
 
 ```json
 {
