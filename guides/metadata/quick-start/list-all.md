@@ -57,7 +57,7 @@ specific to your enterprise's needs.
 A [metadata template][template] describes a set of key/value
 pairs that can be assigned to a file or folder.
 
-For example, an `customerInfo` template might hold data about an customer,
+For example, a `customerInfo` template might hold data about a customer,
 having a field for the customer name as well as the customer's industry.
 
 ```json
