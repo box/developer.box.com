@@ -157,6 +157,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `GROUP_EDITED`                                 | Edited group                                                                                    |
 | `GROUP_REMOVE_ITEM`                            | Folders were removed from a group in the Admin console                                          |
 | `GROUP_REMOVE_USER`                            | Removed user from group                                                                         |
+| `ITEM_EMAIL_SEND` | An email is sent to a collaborator on an item |
 | `ITEM_MODIFY`                                  | Item is modified                                                                                |
 | `ITEM_OPEN`                                    | Item is opened                                                                                  |
 | `ITEM_SHARED_UPDATE`                           | Share links settings updated                                                                    |
@@ -185,6 +186,7 @@ exhaustive, so it is possible events appear that are not listed.
 | `RETENTION_POLICY_ASSIGNMENT_ADD`              | A retention policy assignment is added                                                          |
 | `SHARE`                                        | Enabled shared links                                                                            |
 | `SHARE_EXPIRATION`                             | Set shared link expiration                                                                      |
+| `SHARED_LINK_SEND` | An email is sent with a shared link and an optional message |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`   | Shared link causes a redirect                                                                   |
 | `SHIELD_ALERT`                                 | Shield detected an anomalous  download, session, location, or malicious content based on enterprise Shield rules. See [shield alert events][shield-events] for more information. |
 | `SHIELD_DOWNLOAD_BLOCKED`                                 | End user blocked from downloading a file based on a shield access policy |
