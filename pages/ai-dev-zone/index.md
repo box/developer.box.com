@@ -33,7 +33,7 @@ Developer Zone
 </Header>
 
 Box AI Developer Zone features interactive
-demos to give you hands-on experience with Box AI API.
+demos to give you hands-on experience with Box AI Platform API.
 With a few clicks you can create prompts,
 view sample code, explore Box AI use cases, and more!
 
@@ -51,7 +51,7 @@ Try out interactive demos
 
 <p style="text-align: left; margin-left: 0;">
 
-Box AI API is currently a beta feature. Bear in mind that
+Box AI Platform API is currently a beta feature. Bear in mind that
 the available capabilities can change.
 
 </p>
@@ -70,9 +70,9 @@ Public beta
 
 </Tile>
 
-<Tile type="ai" title="Metadata extraction" href="/ai-dev-zone-metadata">
+<Tile type="ai" title="Extract metadata" href="/ai-dev-zone-metadata">
 
-Extract document metadata suggestions in free mode.
+Extract document metadata suggestions in the freeform mode.
 
 <strong style="background-color: #e8e8e8">
 
@@ -82,9 +82,9 @@ Public beta
 
 </Tile>
 
-<Tile type="ai" title="Structured metadata extraction" href="/ai-dev-zone-metadata-structured">
+<Tile type="ai" title="Extract strucurted metadata" href="/ai-dev-zone-metadata-structured">
 
-Extract document metadata suggestions in structured mode.
+Extract document metadata suggestions in the structured mode.
 
 <strong style="background-color: #e8e8e8">
 
@@ -116,13 +116,13 @@ Public beta
 
 <Header>
 
-Box AI API documentation and support
+Box AI Platform API documentation and support
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-These resources will get you up and running with Box AI API.
+These resources will get you up and running with Box AI Platform API.
 
 </p>
 
@@ -136,7 +136,13 @@ Check the API reference for specification details.
 
 <Tile type="leaflet" title="Developer guides" href="/guides/box-ai/">
 
-Browse the guides to learn how to use Box AI API.
+Browse the guides to learn how to use Box AI Platform API.
+
+</Tile>
+
+<Tile type="tuning" title="Supported AI models" href="/guides/box-ai/supported-models/">
+
+Check table list of the supported AI models.
 
 </Tile>
 
