@@ -125,7 +125,7 @@ primary:
     details:
       text: |-
         Box AI Developer Zone features interactive
-        demos to give you hands-on experience with Box AI API
+        demos to give you hands-on experience with Box AI Platform API
 
     cta:
       text: |-
@@ -199,7 +199,7 @@ secondary:
     // message: |-
       The content of the notification
     message: >
-      Add the power of the Box AI API to your custom apps at
+      Add the power of the Box AI Platform API to your custom apps at
       Content Cloud Summit on May 15
 
     // href: |-

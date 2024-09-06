@@ -42,33 +42,28 @@ files:
     733459462002:
       name: Sample_document_short.pdf
       description: Document
-  go_back_button: AI Dev Zone
+  go_back_button: Box AI Developer Zone
 
 sample_code:
   summary:
-    headline: Box AI API
+    headline: Box AI Platform API
     paragraph: Use this endpoint to integrate
      the document summary into your application.
-    pricing: Box AI API is available in public beta to all
+    pricing: Box AI Platform API is available in public beta to all
       Enterprise Plus customers.
   metadata:
     headline: Box Metadata Suggestions API
-    paragraph: Use this endpoint to integrate
-     document metadata suggestions into
-     your application.
+    paragraph: Use this endpoint to include
+     document structured metadata extraction into
+     your application. Pass either Box metadata template
+     ID or your own metadata strcuture as a parameter.
     pricing: Pricing and packaging to be announced.
   metadata-unstructured:
     headline: Box Metadata Suggestions API
-    paragraph: Use this endpoint to integrate
-     document metadata suggestions into
-     your application.
+    paragraph: Use this endpoint to include
+     document freeform metadata extraction into
+     your application. The endpoint allows various prompt format.
     pricing: Pricing and packaging to be announced.
-  qa:
-    headline: Box AI API
-    paragraph: Use this endpoint to integrate
-     document Q&A into your application.
-    pricing: Box AI API is available in public beta to all
-      Enterprise Plus customers.
   developer_console:
     headline: Box Developer Console
     cta: Get started
@@ -77,7 +72,7 @@ sample_code:
       start creating, configuring, and monitoring your apps.
 
 other_langs_info: Box AI works in a number of languages, but is
-  primarily trained on English documents. See Box AI API
+  primarily trained on English documents. See Box AI Platform API
   documentation for details on supported languages.
 
 side_panel:
@@ -138,4 +133,4 @@ summary_filters:
 unstructured_metadata_filters:
   json: JSON
   natural: Natural language
-  yaml: YAML
+  other: Other
