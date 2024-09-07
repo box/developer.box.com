@@ -36,7 +36,7 @@ fullyTranslated: true
 * **フィールド:** [メタデータテンプレートフィールド][field]には、メタデータテンプレート内の特定のデータが記載されています。たとえば、請求書のIDを`invoiceData`テンプレートの`id`フィールドとして表すことができます。
 * **インスタンス:** [メタデータインスタンス][instance]には、各フィールドに割り当てられている値など、テンプレートとファイルやフォルダ間の関係が記載されています。たとえば、ユーザーは、`invoiceData`メタデータテンプレートをファイルに割り当て、2つの値を指定しています (1つは請求書ID、もう1つは顧客ID)。特定のファイルまたはフォルダには最大100個のテンプレートを割り当てることができます。
 * **カスケードポリシー**: [メタデータカスケードポリシー][cascade]には、フォルダに適用されているメタデータインスタンスを、そのフォルダ内の項目にどのように適用するかが記載されています。たとえば、ユーザーは、同じ`invoiceData`メタデータテンプレートをプロジェクトフォルダに割り当てると (2つの値を含む)、そのプロジェクトフォルダ内のすべてのファイルとフォルダに自動的に適用できます。
-* **Queries:** A [metadata query][query] provides a way to find files and folders by searching for the metadata attached to them. For example, to find all the files for an invoice with a certain ID, the query would look for all files and folders with the `invoiceData` template attached to it and a value of `id = :id`, where `:id` would be the value of the invoice.
+* **クエリ:** [メタデータクエリ][query]を使用すると、ファイルやフォルダに設定されているメタデータを検索して、そのファイルやフォルダを見つけることができます。たとえば、特定のIDが付いた請求書についてすべてのファイルを検索するには、クエリで、その請求書に適用されている`invoiceData`テンプレートと値`id = :id` (ここで、`:id`は請求書の値) が設定されたすべてのファイルとフォルダを検索することができます。
 
 ## メタデータの目的
 
