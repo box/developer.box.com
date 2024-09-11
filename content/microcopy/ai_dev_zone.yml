@@ -55,7 +55,7 @@ sample_code:
     headline: Box AI API - extract structured
     paragraph: Use this endpoint to add
      document structured metadata extraction to
-     your applications. You can pass Box metadata template
+     your applications. Pass a Box metadata template
      ID or your own metadata structure as a parameter.
     pricing: Pricing and packaging to be announced.
   metadata-unstructured:
@@ -83,11 +83,11 @@ side_panel:
   metadata:
     title: Structured metadata extraction
     cta: Learn more
-    url: /
+    url: /guides/box-ai/extract-metadata-structured
   metadata-unstructured:
     title: Metadata extraction
     cta: Learn more
-    url: /
+    url: /guides/box-ai/extract-metadata
   qa:
     title: Document Q&A
     cta: Learn more
