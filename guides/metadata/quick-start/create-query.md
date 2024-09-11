@@ -1,10 +1,16 @@
 ---
+type: quick-start
+hide_in_page_nav: true
+related_endpoints:
+  - post_metadata_queries_execute_read
+related_guides:
+  - metadata/queries/create
+  - metadata/queries/syntax
 category_id: metadata
 subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/create-query
 rank: 6
-type: guide
 total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
@@ -22,12 +28,6 @@ A [metadata query][query] provides a way to find files and
 folders by searching for the metadata attached to them. The search syntax
 is similar to SQL and it supports boolean operations and comparative operators
 to perform powerful searches.
-
-<CTA to='g://metadata/queries'>
-
-Learn more about creating queries
-
-</CTA>
 
 In our case, let's create a query to find any files or folders that have an
 instance of the `customerInfo` metadata template attached to them. We will
