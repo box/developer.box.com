@@ -1,25 +1,24 @@
 ---
-rank: 6
+rank: 8
 related_endpoints:
-  - post_ai_text_gen
+  - post-ai-extract-structured
 related_guides:
+  - box-ai/extract-metadata-structured
   - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
-id: box-ai/generate-text
+id: box-ai/extract-metadata
 type: guide
 total_steps: 7
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/get-agent-default-config
-previous_page_id: box-ai/ask-questions
+next_page_id: box-ai/extract-metadata-structured
+previous_page_id: box-ai/get-agent-default-config
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/generate-text.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/extract-metadata.md
 ---
-# Generate text with Box AI
+# Extract metadata from file (freeform)
 
 <Message type="notice">
 
@@ -29,24 +28,21 @@ Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
-You can use Box AI to generate text
-based on provided content.
-For example, you can ask Box AI to
-generate a template based
-on the content you read or create in Box Notes.
-Then you can embed the generated text
-directly into your document.
+Box AI API allows you to extract metadata in a freeform way
+from the provided file and return it in the form of key-value pairs.
+To use this endpoint, you don't need any metadata templates,
+as providing the prompt and the input file is enough to get the answer.
 
 ## Send a request
 
 To send a request, use the
-`POST /2.0/ai/text_gen` endpoint.
+`POST /2.0/ai/extract` endpoint.
 
 Make sure you have generated the developer token
 to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
 
-<Samples id='post_ai_text_gen' >
+<Samples id='post_ai_extract' >
 
 </Samples>
 

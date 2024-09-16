@@ -13,15 +13,15 @@ subcategory_id: null
 is_index: false
 id: box-ai/get-agent-default-config
 type: guide
-total_steps: 5
+total_steps: 7
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/supported-models
+next_page_id: box-ai/extract-metadata
 previous_page_id: box-ai/generate-text
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/get-agent-default-config.md
 ---
-# Get AI agent default configuration
+# Get default AI agent configuration
 
 <Message type="notice">
 
@@ -45,13 +45,13 @@ Override examples include:
 To send a request, use the
 `GET /2.0/ai_agent_default` endpoint.
 
-<Samples id='get_ai_agent_default' >
-
-</Samples>
-
 Make sure you have generated the developer token
 to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
+
+<Samples id='get_ai_agent_default' >
+
+</Samples>
 
 ### Parameters
 

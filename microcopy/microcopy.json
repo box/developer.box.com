@@ -277,13 +277,13 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "Additional Resources",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "false",
+  "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "Add the power of the Box AI Platform API to your custom apps at Content Cloud Summit on May 15\n",
+  "headers.secondary.notifications.message": "Join BoxWorks 2024 to discover what's possible with content and AI!\n",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https://events.box.com/series/content-cloud-summit-2024/landing_page",
+  "headers.secondary.notifications.href": "https://boxworks.box.com/boxworks",
   // The text of the CTA
-  "headers.secondary.notifications.cta": "Learn more and register!",
+  "headers.secondary.notifications.cta": "Register now!",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
   "headers.secondary.notifications.ttl": "0",
   // Label for the log in button

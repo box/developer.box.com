@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/prerequisites
 type: guide
-total_steps: 5
+total_steps: 7
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ask-questions
@@ -22,9 +22,9 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the
+Box AI API is currently in beta which means the
 available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
