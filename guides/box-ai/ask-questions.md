@@ -23,13 +23,13 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is currently in beta which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
-Box AI API allows you to
+Box AI Platform API allows you to
 ask a question about a supplied file or
 a set of files, and get a response based on
 the content.
@@ -59,7 +59,7 @@ Mandatory parameters are in **bold**.
 
 | Parameter    |Description                                                                                             | Available values                               | Example                     |
 | ------------ | ------ | ----------- | --- |
-| **`mode`** | The type of request. It can be a question about a single file or a set of files. For a single file, Box AI API supports up to 1MB of text representation. If the file size exceeds 1MB, the first 1MB of text representation will be processed. If you want to list multiple files, the limit is 25 files. If you set `mode` to `single_item_qa`, the `items` array can list only one element.| `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
+| **`mode`** | The type of request. It can be a question about a single file or a set of files. For a single file, Box AI Platform API supports up to 1MB of text representation. If the file size exceeds 1MB, the first 1MB of text representation will be processed. If you want to list multiple files, the limit is 25 files. If you set `mode` to `single_item_qa`, the `items` array can list only one element.| `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
 | **`prompt`**   | The question about your document or content. The prompt's length cannot exceed 10000 characters. | | `What is this document about?` |
 | `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | `Make my email about public APIs sound more professional` |
 | `dialogue_history.answer` | The answer previously provided by the LLM. |   `Here is a draft of your professional email about public APIs.` |

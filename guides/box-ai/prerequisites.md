@@ -22,13 +22,13 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is currently in beta which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
-To implement Box AI API in your solutions, you need
+To implement Box AI Platform API in your solutions, you need
 to make sure you have access to the functionality.
 You will also need a custom application with
 enabled Box AI scope, and a developer token to
@@ -36,9 +36,9 @@ authenticate your calls.
 
 <Message type="notice">
 
-To use Box AI API, make sure it is enabled by an
+To use Box AI Platform API, make sure it is enabled by an
 admin in the Admin Console. If you want to use
-the Box AI APIs in your sandbox, request access
+the Box AI Platform APIs in your sandbox, request access
 from the Box AI team using [this form][form].
 
 </Message>
@@ -50,14 +50,14 @@ you will use to make calls. To create
 an application, follow the guide
 on [creating custom apps][createapps].
 
-## Enable Box AI API access
+## Enable Box AI Platform API access
 
-To interact with Box AI API,
+To interact with Box AI Platform API,
 you need the `ai.readwrite` [scope][scope]
 added for your application.
 Before you add the scope,
 make sure that the Box Admin has granted you
-the access to Box AI API. If you can't see the
+the access to Box AI Platform API. If you can't see the
 **Manage AI** option in your app configuration
 settings, contact your admin.
 
@@ -65,11 +65,11 @@ To add a scope:
 
 1. Open your application in Developer Console.
 2. Go to **Configuration** > **Application Scopes** > **Content Actions**
-3. Select the **Manage AI** scope. Box Platform will automatically include the scope when making the call. If you are added as an collaborator for a given app, but do not have Box AI API access, you will see the **Manage AI** scope checked and grayed out. This means the app owner has the AI scope enabled but you cannot change this setting.
+3. Select the **Manage AI** scope. Box Platform will automatically include the scope when making the call. If you are added as an collaborator for a given app, but do not have Box AI Platform API access, you will see the **Manage AI** scope checked and grayed out. This means the app owner has the AI scope enabled but you cannot change this setting.
 
     ![box ai scopes](./images/box-ai-app-scopes.png)
 
-4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI API for an existing application, you must [re-authorize][reauthorization] it.
+4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI Platform API for an existing application, you must [re-authorize][reauthorization] it.
 
 ## Generate a developer token
 

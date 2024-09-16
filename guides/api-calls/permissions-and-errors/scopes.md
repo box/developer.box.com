@@ -214,7 +214,7 @@ This scope requires the application to also have read/write scopes, which are
 automatically selected when enabled. In addition, an enterprise must have Sign
 enabled.
 
-### Manage Box AI API
+### Manage Box AI Platform API
 
 |                       |                            |
 | --------------------- | -------------------------- |
@@ -222,7 +222,7 @@ enabled.
 | **Application Scope** | Manage AI  |
 
 Gives an application permission to send requests to
-Box AI API.
+Box AI Platform API.
 
 ### Manage Box Relay
 
