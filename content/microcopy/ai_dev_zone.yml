@@ -52,17 +52,17 @@ sample_code:
     pricing: Box AI Platform API is available in public beta to all
       Enterprise Plus customers.
   metadata:
-    headline: Box Metadata Suggestions API
-    paragraph: Use this endpoint to include
-     document structured metadata extraction into
-     your application. Pass either Box metadata template
-     ID or your own metadata strcuture as a parameter.
+    headline: Box AI API - extract structured
+    paragraph: Use this endpoint to add
+     document structured metadata extraction to
+     your applications. Pass a Box metadata template
+     ID or your own metadata structure as a parameter.
     pricing: Pricing and packaging to be announced.
   metadata-unstructured:
-    headline: Box Metadata Suggestions API
-    paragraph: Use this endpoint to include
-     document freeform metadata extraction into
-     your application. The endpoint allows various prompt format.
+    headline: Box AI API - extract
+    paragraph: Use this endpoint to add
+     document freeform metadata extraction to
+     your applications. The endpoint allows various prompt formats.
     pricing: Pricing and packaging to be announced.
   developer_console:
     headline: Box Developer Console
@@ -83,11 +83,11 @@ side_panel:
   metadata:
     title: Structured metadata extraction
     cta: Learn more
-    url: /
+    url: /reference/post-ai-extract-structured/
   metadata-unstructured:
     title: Metadata extraction
     cta: Learn more
-    url: /
+    url: /reference/post-ai-extract/
   qa:
     title: Document Q&A
     cta: Learn more
