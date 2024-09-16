@@ -11,9 +11,9 @@ related_guides:
 # Extract metadata from file (structured)
 
 <Message type="notice">
-Box AI API is currently in beta which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 

@@ -10,13 +10,13 @@ related_guides:
 # Extract metadata from file (freeform)
 
 <Message type="notice">
-Box AI API is currently in beta which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
-Box AI API allows you to extract metadata in a freeform way
+Box AI Platform API allows you to extract metadata in a freeform way
 from the provided file and return it in the form of key-value pairs.
 To use this endpoint, you don't need any metadata templates,
 as providing the prompt and the input file is enough to get the answer.
