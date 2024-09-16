@@ -10,9 +10,9 @@ related_guides:
 # Getting started with Box AI
 
 <Message type="notice">
-Box AI Platform API is currently in beta which means the
+Box AI API is currently in beta which means the
 available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 To implement Box AI API in your solutions, you need
