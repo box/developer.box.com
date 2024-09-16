@@ -41,7 +41,7 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 | Parameter| Description| Example|
 |--------|--------|-------|
 |**`prompt`**| The request for Box AI to generate or refine the text. The prompt's length cannot exceed 10000 characters.|Create a meeting agenda for a weekly sales meeting.|
-|**`items.id`**|Box file ID of the document. |`1233039227512`|
+|**`items.id`**|Box file ID of the document. The ID must reference an actual file with an extension. |`1233039227512`|
 |**`items.type`**|The type of the supplied input. | `file`|
 | `items.content` | The content of the item, often the text representation.  |    `This article is about Box AI`.    |
 | `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | `Make my email about public APIs sound more professional` |
