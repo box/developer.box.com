@@ -9,9 +9,9 @@ related_guides:
 # Supported AI models
 
 <Message type="notice">
-Box AI API is currently in beta which means the
+Box AI Platform API is currently in beta which means the
 available capabilities may change.
-Box AI API is available to all Enterprise Plus customers.
+Box AI Platform API is available to all Enterprise Plus customers.
 </Message>
 
 The table lists the supported AI models you can use to:
