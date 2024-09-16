@@ -7,7 +7,7 @@ related_guides:
   - box-ai/prerequisites
 ---
 
-# Extract metadata with Box AI API (freeform)
+# Extract metadata from file (freeform)
 
 <Message type="notice">
 Box AI API is currently in beta which means the
@@ -17,8 +17,9 @@ Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 Box AI API allows you to extract metadata in a freeform way
-from the provided input and return them in the form of key-value pairs.
-To use this endpoint, you need to provide the file.
+from the provided file and return it in the form of key-value pairs.
+To use this endpoint, you don't need any metadata templates,
+as providing the prompt and the input file is enough to get the answer.
 
 ## Send a request
 

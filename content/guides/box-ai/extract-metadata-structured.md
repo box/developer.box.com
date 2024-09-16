@@ -4,11 +4,11 @@ related_endpoints:
   - post-ai-extract
 related_guides:
   - box-ai/prerequisites
-  - box-ai/ask-questions
+  - box-ai/extract-metadata
   - box-ai/get-agent-default-config
 ---
 
-# Extract metadata with Box AI API (structured)
+# Extract metadata from file (structured)
 
 <Message type="notice">
 Box AI API is currently in beta which means the
