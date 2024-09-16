@@ -10,12 +10,12 @@ related_guides:
   - box-ai/generate-text
 ---
 
-# Get AI agent default configuration
+# Get default AI agent configuration
 
 <Message type="notice">
-Box AI Platform API is currently in beta which means the
+Box AI API is currently in beta which means the
 available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -33,11 +33,11 @@ Override examples include:
 To send a request, use the
 `GET /2.0/ai_agent_default` endpoint.
 
-<Samples id='get_ai_agent_default' />
-
 Make sure you have generated the developer token
 to authorize your app. See [prerequisites for using Box AI][prereq]
 for details.
+
+<Samples id='get_ai_agent_default' />
 
 ### Parameters
 
