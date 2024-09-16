@@ -83,11 +83,11 @@ side_panel:
   metadata:
     title: Structured metadata extraction
     cta: Learn more
-    url: /guides/box-ai/extract-metadata-structured
+    url: /reference/post-ai-extract-structured/
   metadata-unstructured:
     title: Metadata extraction
     cta: Learn more
-    url: /guides/box-ai/extract-metadata
+    url: /reference/post-ai-extract/
   qa:
     title: Document Q&A
     cta: Learn more
