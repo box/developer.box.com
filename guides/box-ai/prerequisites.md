@@ -23,7 +23,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AIのPlatform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AIのPlatform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI Platform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AI Platform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 

@@ -149,6 +149,7 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `GROUP_EDITED`                                                | グループの編集                                                                                                       |
 | `GROUP_REMOVE_ITEM`                                           | 管理コンソールを使用したグループからのフォルダの削除                                                                                    |
 | `GROUP_REMOVE_USER`                                           | グループからのユーザーの削除                                                                                                |
+| `ITEM_EMAIL_SEND`                                             | An email is sent to a collaborator on an item                                                                 |
 | `ITEM_MODIFY`                                                 | 変更した項目                                                                                                        |
 | `ITEM_OPEN`                                                   | 開いた項目                                                                                                         |
 | `ITEM_SHARED_UPDATE`                                          | 共有リンク設定の更新                                                                                                    |
@@ -177,6 +178,7 @@ Enterpriseに対して、以下のイベントがトリガーされます。こ�
 | `RETENTION_POLICY_ASSIGNMENT_ADD`                             | リテンションポリシー割り当ての追加                                                                                             |
 | `SHARE`                                                       | 共有リンクの有効化                                                                                                     |
 | `SHARE_EXPIRATION`                                            | 共有リンクの有効期限の設定                                                                                                 |
+| `SHARED_LINK_SEND`                                            | An email is sent with a shared link and an optional message                                                   |
 | `SHARED_LINK_REDIRECT_OUT_OF_SHARED_CONTEXT`                  | 共有リンクによって発生するリダイレクト                                                                                           |
 | `SHIELD_ALERT`                                                | 企業のShieldルールに基づいた、Shieldによる異常なダウンロード、セッション、場所、悪意のあるコンテンツの検出。詳細については、[Shieldアラートイベント][shield-events]を参照してください。 |
 | `SHIELD_DOWNLOAD_BLOCKED`                                     | Shieldアクセスポリシーに基づいた、エンドユーザーによるファイルのダウンロードのブロック                                                                |

@@ -1,10 +1,16 @@
 ---
+type: quick-start
+hide_in_page_nav: true
+related_endpoints:
+  - post_metadata_queries_execute_read
+related_guides:
+  - metadata/queries/create
+  - metadata/queries/syntax
 category_id: metadata
 subcategory_id: metadata/1-quick-start
 is_index: false
 id: metadata/quick-start/create-query
 rank: 6
-type: guide
 total_steps: 7
 sibling_id: metadata/quick-start
 parent_id: metadata/quick-start
@@ -19,12 +25,6 @@ fullyTranslated: true
 最後の手順として、ファイル/フォルダに追加されているメタデータに基づいてそのファイルおよびフォルダを見つけるためのクエリを作成する方法を見てみましょう。
 
 [メタデータクエリ][query]を使用すると、ファイルやフォルダに追加されているメタデータを検索して、そのファイルやフォルダを見つけることができます。この検索構文はSQLに似ており、強力な検索を実行するためにブール演算と比較演算子をサポートしています。
-
-<CTA to="g://metadata/queries">
-
-クエリの作成の詳細を確認する
-
-</CTA>
 
 この例では、`customerInfo`メタデータテンプレートのインスタンスが適用されているファイルまたはファイルを検索するクエリを作成します。このリストを、預金総額が200,000ドルを超える顧客に属しているファイルに絞り込みます。
 
