@@ -186,21 +186,20 @@ secondary:
     // display: |-
       A boolean that determines whether to show the orange notification bar
       in the header. Must be "true" or "false"
-    display: "false"
+    display: "true"
 
     // message: |-
       The content of the notification
     message: >
-      Add the power of the Box AI Platform API to your custom apps at
-      Content Cloud Summit on May 15
+      Join BoxWorks 2024 to discover what's possible with content and AI!
 
     // href: |-
       The link to navigate to when the CTA is clicked
-    href: "https://events.box.com/series/content-cloud-summit-2024/landing_page"
+    href: "https://boxworks.box.com/boxworks"
 
     // cta: |-
       The text of the CTA
-    cta: Learn more and register!
+    cta: Register now!
 
     // ttl: |-
       The number of seconds to display the message. Should always
