@@ -39,7 +39,7 @@ view sample code, explore Box AI use cases, and more!
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
-    <Tile type="ai" title="Extract strucurted metadata" href="/ai-dev-zone-metadata-structured">
+    <Tile type="ai" title="Extract structured metadata" href="/ai-dev-zone-metadata-structured">
         Extract document metadata suggestions in the structured mode.
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
@@ -70,10 +70,6 @@ view sample code, explore Box AI use cases, and more!
     <Tile type="leaflet" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI Platform API.
-    </Tile>
-    <Tile type="tuning" title="Supported AI models"
-      href="/guides/box-ai/supported-models/">
-        Check table list of the supported AI models.
     </Tile>
     <Tile type="tuning" title="Supported AI models"
       href="/guides/box-ai/supported-models/">
