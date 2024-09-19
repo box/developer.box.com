@@ -39,23 +39,23 @@ APIコールで`model`パラメータを使用する際は、表に示されて�
 
 </Message>
 
-| プロバイダ           | ファミリ   | 提供状況                   | API名                                    | 外部のドキュメント                                                       | 機能   |
-| --------------- | ------ | ---------------------- | --------------------------------------- | --------------------------------------------------------------- | ---- |
-| Microsoft Azure | GPT    | 利用可能                   | `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5モデルに関するドキュメント][azure-ai-model]             | チャット |
-| Microsoft Azure | GPT    | 利用可能                   | `azure__openai__text_embedding_ada_002` | [Azure OpenAIの埋め込みモデルに関するドキュメント][azure-ai-embeddings]           | 埋め込み |
-| GCP Vertex      | Gecko  | 利用可能                   | `google__textembedding_gecko`           | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
-| GCP Vertex      | Gecko  | 利用可能                   | `google__textembedding_gecko_002`       | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
-| GCP Vertex      | Gecko  | 利用可能                   | `google__textembedding_gecko_003`       | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
-| GCP Vertex      | Gemini | プレビュー                  | `google__gemini_1_5_pro_001`            | [Google Vertex AIのGeminiモデルに関するドキュメント][vertex-ai-gemini-models] | チャット |
-| GCP Vertex      | Gemini | プレビュー                  | `google__gemini_1_5_flash_001`          | [Google Vertex AIのGeminiモデルに関するドキュメント][vertex-ai-gemini-models] | チャット |
-| GCP Vertex      | PaLM   | 利用可能                   | `google__text_unicorn`                  | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
-| GCP Vertex      | PaLM   | 利用可能                   | `google__text_bison`                    | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
-| GCP Vertex      | PaLM   | 利用可能                   | `google__text_bison_32k`                | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
-| OpenAI          | GPT    | available in Beta only | `openai__gpt_3_5_turbo_16k`             | [OpenAI GPT-3.5モデルに関するドキュメント][openai-gpt-3-5-model]             | チャット |
-| OpenAI          | GPT    | available in Beta only | `openai__gpt_4_1106_preview`            | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
-| OpenAI          | GPT    | available in Beta only | `openai__gpt_4_turbo_preview`           | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
-| OpenAI          | GPT    | available in Beta only | `openai__gpt_4o_2024_05_13`             | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
-| OpenAI          | GPT    | available in Beta only | `openai__text_embedding_ada_002`        | [Azure OpenAIの埋め込みモデルに関するドキュメント][openai-embeddings]             | 埋め込み |
+| プロバイダ           | ファミリ   | 提供状況        | API名                                    | 外部のドキュメント                                                       | 機能   |
+| --------------- | ------ | ----------- | --------------------------------------- | --------------------------------------------------------------- | ---- |
+| Microsoft Azure | GPT    | 利用可能        | `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5モデルに関するドキュメント][azure-ai-model]             | チャット |
+| Microsoft Azure | GPT    | 利用可能        | `azure__openai__text_embedding_ada_002` | [Azure OpenAIの埋め込みモデルに関するドキュメント][azure-ai-embeddings]           | 埋め込み |
+| GCP Vertex      | Gecko  | 利用可能        | `google__textembedding_gecko`           | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
+| GCP Vertex      | Gecko  | 利用可能        | `google__textembedding_gecko_002`       | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
+| GCP Vertex      | Gecko  | 利用可能        | `google__textembedding_gecko_003`       | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
+| GCP Vertex      | Gemini | プレビュー       | `google__gemini_1_5_pro_001`            | [Google Vertex AIのGeminiモデルに関するドキュメント][vertex-ai-gemini-models] | チャット |
+| GCP Vertex      | Gemini | プレビュー       | `google__gemini_1_5_flash_001`          | [Google Vertex AIのGeminiモデルに関するドキュメント][vertex-ai-gemini-models] | チャット |
+| GCP Vertex      | PaLM   | 利用可能        | `google__text_unicorn`                  | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
+| GCP Vertex      | PaLM   | 利用可能        | `google__text_bison`                    | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
+| GCP Vertex      | PaLM   | 利用可能        | `google__text_bison_32k`                | [Googleのテキスト用PaLM 2モデルに関するドキュメント][vertex-text-models]           | チャット |
+| OpenAI          | GPT    | ベータ版でのみ利用可能 | `openai__gpt_3_5_turbo_16k`             | [OpenAI GPT-3.5モデルに関するドキュメント][openai-gpt-3-5-model]             | チャット |
+| OpenAI          | GPT    | ベータ版でのみ利用可能 | `openai__gpt_4_1106_preview`            | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
+| OpenAI          | GPT    | ベータ版でのみ利用可能 | `openai__gpt_4_turbo_preview`           | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
+| OpenAI          | GPT    | ベータ版でのみ利用可能 | `openai__gpt_4o_2024_05_13`             | [OpenAI GPT-4モデルに関するドキュメント][openai-gpt-4-models]                | チャット |
+| OpenAI          | GPT    | ベータ版でのみ利用可能 | `openai__text_embedding_ada_002`        | [Azure OpenAIの埋め込みモデルに関するドキュメント][openai-embeddings]             | 埋め込み |
 
 [ask]: e://post_ai_ask
 
