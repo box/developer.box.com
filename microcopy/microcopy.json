@@ -278,7 +278,7 @@
   // The content of the notification
   "headers.secondary.notifications.message": "日本時間5月16日のContent Cloud Summitで、カスタムアプリにBox AI APIを活用する方法を紹介します。",
   // The link to navigate to when the CTA is clicked
-  "headers.secondary.notifications.href": "https:\/\/events.box.com\/series\/content-cloud-summit-2024\/landing_page",
+  "headers.secondary.notifications.href": "https:\/\/boxworks.box.com\/boxworks",
   // The text of the CTA
   "headers.secondary.notifications.cta": "詳細を表示",
   // The number of seconds to display the message. Should alwaysbe 0 unless you want to autohide.
