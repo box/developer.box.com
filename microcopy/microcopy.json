@@ -276,7 +276,7 @@
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
   "headers.secondary.notifications.display": "true",
   // The content of the notification
-  "headers.secondary.notifications.message": "日本時間5月16日のContent Cloud Summitで、カスタムアプリにBox AI APIを活用する方法を紹介します。",
+  "headers.secondary.notifications.message": "BoxWorks 2024でコンテンツとAIの可能性について紹介します。",
   // The link to navigate to when the CTA is clicked
   "headers.secondary.notifications.href": "https:\/\/boxworks.box.com\/boxworks",
   // The text of the CTA
