@@ -1,4 +1,5 @@
 ---
+stability_level: beta
 rank: 9
 related_endpoints:
   - post-ai-extract
@@ -11,9 +12,7 @@ related_guides:
 # Extract metadata from file (structured)
 
 <Message type="notice">
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI Platform API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -38,7 +37,9 @@ for details.
 
 To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
-**Note**: The `items` array can have exactly one element.
+<Message type='notice'>
+The `items` array can have exactly one element.
+</Message>
 
 | Parameter                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Example                                                  |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
