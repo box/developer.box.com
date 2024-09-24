@@ -91,7 +91,7 @@ users) and those without admin privileges (Managed or External Users).
 Additionally, there are platform-only users, which are categorized as Service
 Accounts and App Users. Each user type has specific roles and access levels
 within the Box environment, impacting how they interact with applications and
-content. At the core, if a use can access a piece of content from the main Box
+content. At the core, if a user can access a piece of content from the main Box
 web app, they should be able to access it using the API.
 
 ### Application Type
