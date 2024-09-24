@@ -27,6 +27,7 @@ framework-agnostic JavaScript libraries.
   <p style="text-align: left; margin-left: 0;">
     Try out our interactive demos of featured Box UI Elements.
   </p>
+  <BuieDemo></BuieDemo>
 
   <More to='/guides/embed/ui-elements/installation/' center>
     Get started
