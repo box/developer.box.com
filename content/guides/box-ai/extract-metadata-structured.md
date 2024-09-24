@@ -1,5 +1,4 @@
 ---
-stability_level: beta
 rank: 9
 related_endpoints:
   - post-ai-extract

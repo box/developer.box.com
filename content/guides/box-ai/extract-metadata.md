@@ -34,7 +34,6 @@ for details.
 
 To make a call, you must pass the following parameters. Mandatory parameters are in **bold**.
 
-
 <Message type='notice'>
 The `items` array can have exactly one element.
 
