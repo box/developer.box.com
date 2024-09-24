@@ -86,7 +86,7 @@ to help get you up and running.
 
 <Tile type="document" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
 
-Allow users to answer questions and taking actions like summarizing a document with Box AI for Box Preview.
+Enable Box AI for Box Preview to allow the users interact with Box AI.
 
 </Tile>
 
