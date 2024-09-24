@@ -45,7 +45,7 @@ framework-agnostic JavaScript libraries.
   <TileGrid rows="4">
     <Tile type="document" title="Box AI for UI Elements"
       href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
-        Allow users to answer questions and taking actions like summarizing a document with Box AI for Box Preview. 
+        Allow developers to use Box AI for Box Preview to query Box AI and take actions such as summarizing a document. 
     </Tile>
     <Tile type="leaflet" title="Content Uploader"
       href="/guides/embed/ui-elements/uploader/">
