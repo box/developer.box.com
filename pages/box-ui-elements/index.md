@@ -59,6 +59,10 @@ Try out our interactive demos of featured Box UI Elements.
 
 </p>
 
+<BuieDemo>
+
+</BuieDemo>
+
 <More to='/guides/embed/ui-elements/installation/' center>
 
 Get started
@@ -84,27 +88,27 @@ to help get you up and running.
 
 <TileGrid rows="4">
 
-<Tile type="document" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
+<Tile type="ai" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
 
 Enable Box AI for Box Preview to allow the users interact with Box AI.
 
 </Tile>
 
-<Tile type="leaflet" title="Content Uploader" href="/guides/embed/ui-elements/uploader/">
+<Tile type="upload" title="Content Uploader" href="/guides/embed/ui-elements/uploader/">
 
-Browse the guides to learn how to use Box AI Platform API.
-
-</Tile>
-
-<Tile type="tuning" title="Metadata view" href="/guides/embed/ui-elements/explorer/#metadata-view">
-
-Display files and folders based on their metadata with Content Explorer.
+Embed this component and allow users to upload files.
 
 </Tile>
 
-<Tile type="speech-bubble" title="Annotations" href="/guides/embed/ui-elements/annotations/">
+<Tile type="ui-metadata" title="Metadata view" href="/guides/embed/ui-elements/explorer/#metadata-view">
 
-Provide collaboration capabilities within the Box Preview.
+Display files based on specified metadata with Content Explorer.
+
+</Tile>
+
+<Tile type="annotations" title="Annotations" href="/guides/embed/ui-elements/annotations/">
+
+Provide collaboration capabilities within the Content Preview.
 
 </Tile>
 
