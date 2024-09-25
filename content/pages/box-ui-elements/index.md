@@ -44,19 +44,19 @@ framework-agnostic JavaScript libraries.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="document" title="Box AI for UI Elements"
+    <Tile type="ai" title="Box AI for UI Elements"
       href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
         Enable Box AI for Box Preview to allow the users interact with Box AI.
     </Tile>
-    <Tile type="leaflet" title="Content Uploader"
+    <Tile type="upload" title="Content Uploader"
       href="/guides/embed/ui-elements/uploader/">
         Browse the guides to learn how to use Box AI Platform API.
     </Tile>
-    <Tile type="tuning" title="Metadata view"
+    <Tile type="ui-metadata" title="Metadata view"
       href="/guides/embed/ui-elements/explorer/#metadata-view">
         Display files and folders based on their metadata with Content Explorer.
     </Tile>
-    <Tile type="speech-bubble" title="Annotations"
+    <Tile type="annotations" title="Annotations"
       href="/guides/embed/ui-elements/annotations/">
         Provide collaboration capabilities within the Box Preview.
     </Tile>
