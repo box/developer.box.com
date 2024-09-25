@@ -59,19 +59,19 @@ view sample code, explore Box AI use cases, and more!
       href="/reference/resources/ai-response/">
         Check the API reference for specification details.
 
-        <strong style="background-color: #e8e8e8">AI API</strong>
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI Platform API.
 
-        <strong style="background-color: #e8e8e8">AI API</strong>
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Supported AI models"
       href="/guides/box-ai/supported-models/">
         Check table list of the supported AI models.
 
-        <strong style="background-color: #e8e8e8">AI API</strong>
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Support"
       href="https://community.box.com/">
