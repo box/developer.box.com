@@ -50,15 +50,15 @@ framework-agnostic JavaScript libraries.
     </Tile>
     <Tile type="upload" title="Content Uploader"
       href="/guides/embed/ui-elements/uploader/">
-        Browse the guides to learn how to use Box AI Platform API.
+        Embed this component and allow users to upload files.
     </Tile>
     <Tile type="ui-metadata" title="Metadata view"
       href="/guides/embed/ui-elements/explorer/#metadata-view">
-        Display files and folders based on their metadata with Content Explorer.
+        Display files based on specified metadata with Content Explorer.
     </Tile>
     <Tile type="annotations" title="Annotations"
       href="/guides/embed/ui-elements/annotations/">
-        Provide collaboration capabilities within the Box Preview.
+        Provide collaboration capabilities within the Content Preview.
     </Tile>
   </TileGrid>
 </Centered>
