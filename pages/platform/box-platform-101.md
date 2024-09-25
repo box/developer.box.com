@@ -73,7 +73,7 @@ Box Developerドキュメントポータルとは、現在ご覧になってい�
 
 ### ユーザータイプ
 
-Box Platformで開発を行う際に注意すべき[ユーザータイプ][ut]がいくつかあります。ユーザータイプには、管理者権限を持つユーザー (管理者ユーザーや共同管理者ユーザーなど) と管理者権限を持たないユーザー (管理対象ユーザーまたは外部ユーザー) があります。さらに、サービスアカウントとApp Userに分類される、Platform専用のユーザーもあります。各ユーザータイプには、Box環境内での特定のロールとアクセスレベルが割り当てられており、アプリケーションやコンテンツの操作方法に影響します。基本的には、メインのBoxウェブアプリからコンテンツにアクセスできるユーザーは、APIを使用してコンテンツにアクセスすることもできます。
+There are several [user types][ut] to keep in mind when developing on Box Platform. These include users with admin privileges (such as Admin or Co-Admin users) and those without admin privileges (Managed or External Users). Additionally, there are platform-only users, which are categorized as Service Accounts and App Users. Each user type has specific roles and access levels within the Box environment, impacting how they interact with applications and content. At the core, if a user can access a piece of content from the main Box web app, they should be able to access it using the API.
 
 ### アプリケーションの種類
 
