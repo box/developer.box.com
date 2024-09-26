@@ -46,10 +46,10 @@ files:
 
 sample_code:
   summary:
-    headline: Box AI Platform API
+    headline: Box AI API
     paragraph: Use this endpoint to integrate
      the document summary into your application.
-    pricing: Box AI Platform API is available in public beta to all
+    pricing: Box AI API is available in public beta to all
       Enterprise Plus customers.
   metadata:
     headline: Box AI API - extract structured
@@ -72,7 +72,7 @@ sample_code:
       start creating, configuring, and monitoring your apps.
 
 other_langs_info: Box AI works in a number of languages, but is
-  primarily trained on English documents. See Box AI Platform API
+  primarily trained on English documents. See Box AI API
   documentation for details on supported languages.
 
 side_panel:
