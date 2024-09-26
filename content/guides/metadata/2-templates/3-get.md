@@ -26,7 +26,7 @@ and scope, or the template's identifier.
 ## Get a metadata template by name
 
 To get a metadata template by name, call the [`GET
-/metadata_templates/:scope/:templateKey`][e_by_name] API endpoint with the
+/metadata_templates/:scope/:templateKey/schema`][e_by_name] API endpoint with the
 template's `scope` and `templateKey`.
 
 <Samples id='get_metadata_templates_id_id_schema' />
