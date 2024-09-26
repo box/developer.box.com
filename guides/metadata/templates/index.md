@@ -16,7 +16,7 @@ source_url: >-
 ---
 # Metadata templates
 
-A [metadata template][template] describes a set of key/value
+A metadata template describes a set of key/value
 pairs that can be assigned to a file or folder.
 
 For example, an `invoiceData` template might hold data about an invoice, having

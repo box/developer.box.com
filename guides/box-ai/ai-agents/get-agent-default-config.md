@@ -9,25 +9,23 @@ related_guides:
   - box-ai/ask-questions
   - box-ai/generate-text
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-agents
 is_index: false
-id: box-ai/get-agent-default-config
+id: box-ai/ai-agents/get-agent-default-config
 type: guide
-total_steps: 7
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/extract-metadata
-previous_page_id: box-ai/generate-text
+total_steps: 1
+sibling_id: box-ai/ai-agents
+parent_id: box-ai/ai-agents
+next_page_id: ''
+previous_page_id: box-ai/ai-agents
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/get-agent-default-config.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/get-agent-default-config.md
 ---
 # Get default AI agent configuration
 
 <Message type="notice">
 
-Box AI Platform API is a beta feature which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 

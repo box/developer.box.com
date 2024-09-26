@@ -7,12 +7,14 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata-structured
+  - box-ai/extract-metadata
 category_id: box-ai
 subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: guides
 parent_id: guides
 next_page_id: box-ai/prerequisites
@@ -24,9 +26,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -145,7 +145,7 @@ select to get details for Box AI:
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
-[agent-default]: g://box-ai/get-agent-default-config
+[agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [ask]: e://post_ai_ask#param_ai_agent
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract

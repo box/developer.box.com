@@ -5,16 +5,16 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
-  - box-ai/get-agent-default-config
+  - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/generate-text
 type: guide
-total_steps: 7
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/get-agent-default-config
+next_page_id: box-ai/extract-metadata
 previous_page_id: box-ai/ask-questions
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/generate-text.md
@@ -23,9 +23,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
