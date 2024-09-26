@@ -77,8 +77,8 @@ For details, see [Box AI for Notes][boxainotes].
 
 The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
 
-* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template.
-* Use the `extract` endpoint to extract data from a file in a freeform way, using a prompt.
+* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields.
+* Use the `extract` endpoint to extract data from a file using a prompt that can include any type of data: JSON, XML, YAML, or even plain text.
 
 ### Configuration overrides
 
