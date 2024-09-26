@@ -58,14 +58,14 @@ Let's assume you want to extract the vendor name, invoice number, and a few more
 
 To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the following parameters:
 
-  * A `prompt` that can be a structured or unstructured list of fields to extract or a query. 
-  * The `type` and `id` of the file to extract the data from.
+  * `prompt` that can be a query, or a structured or unstructured list of fields to extract.
+  * `type` and `id` of the file to extract the data from.
 
 ### Create the prompt
 
 Depending on the use case and the level of detail, you can construct various prompts.
 
-#### Keywords
+#### Using keywords
 
 The prompt can include a list of keywords that you expect to find in an invoice:
 
@@ -84,7 +84,7 @@ The prompt can include a list of keywords that you expect to find in an invoice:
   }'
 ```
 
-Using this approach results in a list of keywords 
+Using this approach results in a list of keywords provided in the request and their values:
 
 ```bash
 {
@@ -94,7 +94,7 @@ Using this approach results in a list of keywords
 }
 ```
 
-#### Key-value pairs
+#### Using key-value pairs
 
 The prompt can be a list of key-value pairs that helps Box AI to come up with the metadata structure:
 
@@ -123,7 +123,7 @@ The response includes the fields present in the file, along with their values:
 }
 ```
 
-#### Plain text
+#### Using plain text
 
 You can also use plain text:
 

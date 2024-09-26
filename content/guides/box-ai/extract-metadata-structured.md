@@ -16,8 +16,8 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
 </Message>
 
 With Box AI API, you can extract metadata from the provided file
-and return the result in the form of key-value pairs.
-As input, you can either create a structure using the `fields` parameter, or an already defined metadata template.
+and get the result in the form of key-value pairs. 
+As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
 To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
 
 ## Send a request
@@ -77,7 +77,7 @@ You can use either `fields` or `metadata_template` to specify your structure, bu
 
 </Message>
 
-### Use `fields` parameter
+### Using `fields` parameter
 
 The `fields` parameter allows you to specify the data you want to extract. Each `fields` object has a subset of parameters you can use to add more information about the searched data. 
 For example, you can add the field type, description, or even a prompt with some additional context.
@@ -133,13 +133,13 @@ The response lists the specified fields and their values:
 ```bash
 {
     "document_date": "2024-02-13",
-    "vendor": "Quantum Quirks Co.",
-    "document_total": 45,
+    "vendor": "Quasar Innovations",
+    "document_total": $1050,
     "document_type": "Purchase Order"
 }
 ```
 
-### Use metadata template
+### Using metadata template
 
 If you prefer to use a metadata template, you can provide its `template_key`, `type`, and `scope`.
 
@@ -167,10 +167,10 @@ The response lists the fields included in the metadata template and their values
 ```bash
 {
   "documentDate": "February 13, 2024",
-  "total": "$45",
+  "total": "$1050",
   "documentType": "Purchase Order",
-  "vendor": "Quantum Quirks Co.",
-  "purchaseOrderNumber": "005"
+  "vendor": "Quasar Innovations",
+  "purchaseOrderNumber": "003"
 }
 ```
 

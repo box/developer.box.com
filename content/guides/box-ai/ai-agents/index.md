@@ -6,7 +6,7 @@ related_guides:
   - box-ai/index
 ---
 
-# Configuration overrides
+# AI agent configuration
 
 You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
 
