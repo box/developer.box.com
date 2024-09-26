@@ -7,15 +7,17 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata-structured
+  - box-ai/extract-metadata
 ---
 
 # Box AI
 
 <Message type="notice">
-Box AI Platform API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
-Box AI Platform API allows you to use Box AI
+Box AI API allows you to use Box AI
 functionality
 in your custom applications. For example, you can
 implement Box AI question and answer
@@ -23,9 +25,9 @@ functionality in your third party application,
 or generate content right in
 your product’s content editor.
 
-## Box AI Platform API capabilities
+## Box AI API capabilities
 
-Box AI Platform API provides a number of capabilities
+Box AI API provides a number of capabilities
 designed to help you leverage Large Language Models (LLMs)
 in your application workflows.
 
@@ -40,7 +42,7 @@ allows embedding Box AI in your apps.
 
 ### Ask questions to Box AI
 
-You can use Box AI Platform API to ask questions about
+You can use Box AI API to ask questions about
 the content, for example, while working
 on documents you store in Box.
 
@@ -57,7 +59,7 @@ working with their documents.
 
 ### Generate text with Box AI
 
-You can use Box AI Platform API to generate text
+You can use Box AI API to generate text
 from scratch, from existing text within a Box Note, or
 based on a given document in Preview.
 For example, you can ask Box AI to create a template
@@ -113,7 +115,7 @@ better results for this language.
 
 </Message>
 
-## Box AI Platform API in User Activity Report (UAR)
+## Box AI API in User Activity Report (UAR)
 
 [User Activity Reports][uar] provide an overview of the
 actions the users are taking in Box. Box Admins
@@ -130,7 +132,7 @@ select to get details for Box AI:
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
-[agent-default]: g://box-ai/get-agent-default-config
+[agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [ask]: e://post_ai_ask#param_ai_agent
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract

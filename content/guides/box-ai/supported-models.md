@@ -3,13 +3,13 @@ rank: 12
 related_guides:
   - box-ai/ask-questions
   - box-ai/generate-text
-  - box-ai/get-agent-default-config
+  - box-ai/ai-agents/get-agent-default-config
 ---
 
 # Supported AI models
 
 <Message type="notice">
-Box AI Platform API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 The table lists the supported AI models you can use to:
