@@ -34,7 +34,7 @@ Learn more about updating templates
 </CTA>
 
 In this case, let's assume that we realized that having a `Name` field is a bit
-ambiguous, and so we to change the `Name` field of the `customerInfo` template
+ambiguous, and therefore, we want to change the `Name` field of the `customerInfo` template
 to `Company Name` instead. By using the `editField` operation we can change the
 `displayName` and the `key` of the field on the template and on every instance
 of the template that might be applied to a file or folder.
