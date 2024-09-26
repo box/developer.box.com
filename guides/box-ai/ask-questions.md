@@ -5,13 +5,13 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/generate-text
-  - box-ai/get-agent-default-config
+  - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/ask-questions
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/generate-text
@@ -23,9 +23,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -42,93 +40,9 @@ To send a request containing your question,
 use the `POST /2.0/ai/ask` endpoint and
 provide the mandatory parameters.
 
-```curl
-curl -i -L POST "https://api.box.com/2.0/ai/ask" \
-     -H "content-type: application/json" \
-     -H "authorization: Bearer <ACCESS_TOKEN>" \
-     -d '{
-         "mode": "single_item_qa",
-         "prompt": "What is the value provided by public APIs based on this document?",
-         "items": [
-        {
-            "type": "file",
-            "id": "9842787262"
-        }
-       ],
-          "ai_agent": {
-            "type": "ai_agent_ask",
-            "long_text": {
-              "model": "openai__gpt_3_5_turbo",
-              "system_message": "You are a helpful travel assistant specialized in budget travel",
-              "prompt_template": "It is `{current_date}`, and I have $8000 and want to spend a week in the Azores. What should I see?",
-              "num_tokens_for_completion": 8400,
-              "llm_endpoint_params": {
-                "type": "openai_params",
-                "temperature": 0.0,
-                "top_p": 1.0,
-                "frequency_penalty": 1.5,
-                "presence_penalty": 1.5,
-                "stop": "<|im_end|>"
-              },
-              "embeddings": {
-                "model": "openai__text_embedding_ada_002",
-                "strategy": {
-                  "id": "basic",
-                  "num_tokens_per_chunk": 8400
-                }
-              }
-            },
-            "basic_text": {
-              "model": ""openai__gpt_3_5_turbo"",
-              "system_message": "You are a helpful travel assistant specialized in budget travel",
-              "prompt_template": "It is `{current_date}`, and I have $8000 and want to spend a week in the Azores. What should I see?",
-              "num_tokens_for_completion": 8400,
-              "llm_endpoint_params": {
-                "type": "openai_params",
-                "temperature": 0.0,
-                "top_p": 1.0,
-                "frequency_penalty": 1.5,
-                "presence_penalty": 1.5,
-                "stop": "<|im_end|>"
-              }
-            },
-              "long_text_multi": {
-                "model": "openai__gpt_3_5_turbo",
-                "system_message": "You are a helpful travel assistant specialized in budget travel",
-                "prompt_template": "It is `{current_date}`, and I have $8000 and want to spend a week in the Azores. What should I see?",
-                "num_tokens_for_completion": 8400,
-                "llm_endpoint_params": {
-                  "type": "openai_params",
-                  "temperature": 0.0,
-                  "top_p": 1.0,
-                  "frequency_penalty": 1.5,
-                  "presence_penalty": 1.5,
-                  "stop": "<|im_end|>"
-                },
-                "embeddings": {
-                  "model": "openai__text_embedding_ada_002",
-                  "strategy": {
-                    "id": "basic",
-                    "num_tokens_per_chunk": 8400
-                  }
-                }
-              },
-              "basic_text_multi": {
-                "model": ""openai__gpt_3_5_turbo"",
-                "system_message": "You are a helpful travel assistant specialized in budget travel",
-                "prompt_template": "It is `{current_date}`, and I have $8000 and want to spend a week in the Azores. What should I see?",
-                "num_tokens_for_completion": 8400,
-                  "llm_endpoint_params": {
-                    "type": "openai_params",
-                    "temperature": 0.0,
-                    "top_p": 1.0,
-                    "frequency_penalty": 1.5,
-                    "presence_penalty": 1.5,
-                    "stop": "<|im_end|>"
-                  }
-        }
-      }'
-```
+<Samples id='post_ai_ask' >
+
+</Samples>
 
 ### Authentication
 
@@ -145,6 +59,10 @@ Mandatory parameters are in **bold**.
 | ------------ | ------ | ----------- | --- |
 | **`mode`** | The type of request. It can be a question about a single file or a set of files. For a single file, Box AI API supports up to 1MB of text representation. If the file size exceeds 1MB, the first 1MB of text representation will be processed. If you want to list multiple files, the limit is 25 files. If you set `mode` to `single_item_qa`, the `items` array can list only one element.| `single_item_qa`, `multiple_item_qa` | `single_item_qa`   |
 | **`prompt`**   | The question about your document or content. The prompt's length cannot exceed 10000 characters. | | `What is this document about?` |
+| `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | `Make my email about public APIs sound more professional` |
+| `dialogue_history.answer` | The answer previously provided by the LLM. |   `Here is a draft of your professional email about public APIs.` |
+| `dialogue_history.created_at` | The ISO date formatted timestamp of when the previous answer to the prompt was created.   | `2012-12-12T10:53:43-08:00` |
+|`include_citations`| Specifies if the citations should be returned in the answer.| `true`, `false`| `true`|
 |**`items.id`**  | The Box file ID you want to provide as input. | | `112233445566`|
 | **`items.type`** | The type of the provided input. Currently, it can be a single file or multiple files.  | `file`          | `file`   |
 | `items.content` | The content of the item, often the text representation.  |     |  `An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...`    |

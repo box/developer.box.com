@@ -4,13 +4,13 @@ related_guides:
   - authentication/tokens/developer-tokens/
   - box-ai/ask-questions
   - box-ai/generate-text
-  - box-ai/get-agent-default-config
+  - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: null
 is_index: false
 id: box-ai/prerequisites
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ask-questions
@@ -18,13 +18,11 @@ previous_page_id: box-ai
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/prerequisites.md
 ---
-# Getting started with Box AI
+# Get started with Box AI
 
 <Message type="notice">
 
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
