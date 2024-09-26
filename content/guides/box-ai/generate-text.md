@@ -5,14 +5,12 @@ related_endpoints:
 related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
-  - box-ai/get-agent-default-config
+  - box-ai/ai-agents/get-agent-default-config
 ---
 # Generate text with Box AI
 
 <Message type="notice">
-Box AI Platform API is currently in beta which means the
-available capabilities may change.
-Box AI Platform API is available to all Enterprise Plus customers.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
