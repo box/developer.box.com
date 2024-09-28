@@ -66,7 +66,7 @@ This will update the template to have a new display name of Client.
 
 ### Add a field to a template
 
-The operation `addField` adds an field to a template.
+The operation `addField` adds a field to a template.
 
 | Parameter |                                     |
 |-----------|-------------------------------------|
