@@ -17,7 +17,7 @@ fullyTranslated: true
 ---
 # Box Platformについて
 
-If you are new to Box, **start here**! In the following pages, you'll learn how all the Box Platform concepts and components work together to help you create an application quickly.
+Boxを初めて使用する場合は、**ここから始めてください**。以降のページでは、アプリケーションをより短時間で作成できるようにBox Platformのすべての概念とコンポーネントがどのように連携しているかを学べます。
 
 <!-- To kick off your learning journey, checkout this video for an overview on everything Box Platform. -->
 

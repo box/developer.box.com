@@ -33,7 +33,7 @@ Developer Zone
 
 </Header>
 
-Box AI Developer Zone features interactive demos to give you hands-on experience with Box AI Platform API. With a few clicks you can create prompts, view sample code, explore Box AI use cases, and more!
+Box AI Developer Zoneでは、Box AI Platform APIを実際に体験できる対話型のデモを紹介します。数回クリックするだけで、プロンプトの作成、サンプルコードの表示、Box AIのユースケースの確認などが可能です。
 
 </HeroImage>
 
@@ -49,7 +49,7 @@ Box AI Developer Zone features interactive demos to give you hands-on experience
 
 <p style="text-align: left; margin-left: 0;">
 
-Box AI Platform API is currently a beta feature. Bear in mind that the available capabilities can change.
+Box AI Platform APIは現在、ベータ機能です。利用可能な機能は変更される可能性があることにご注意ください。
 
 </p>
 
@@ -69,7 +69,7 @@ Box AI Platform API is currently a beta feature. Bear in mind that the available
 
 <Tile type="ai" title="メタデータの抽出" href="/ai-dev-zone-metadata">
 
-Extract document metadata suggestions in the freeform mode.
+ドキュメントのメタデータの候補を自由形式モードで抽出します。
 
 <strong style="background-color: #e8e8e8">
 
@@ -79,9 +79,9 @@ Extract document metadata suggestions in the freeform mode.
 
 </Tile>
 
-<Tile type="ai" title="Extract structured metadata" href="/ai-dev-zone-metadata-structured">
+<Tile type="ai" title="構造化メタデータの抽出" href="/ai-dev-zone-metadata-structured">
 
-Extract document metadata suggestions in the structured mode.
+ドキュメントのメタデータの候補を構造化モードで抽出します。
 
 <strong style="background-color: #e8e8e8">
 
@@ -113,13 +113,13 @@ Public beta
 
 <Header>
 
-Box AI Platform API documentation and support
+Box AI Platform APIのドキュメントとサポート
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-These resources will get you up and running with Box AI Platform API.
+Box AI Platform APIを使用する際は、以下のリソースが参考になります。
 
 </p>
 
@@ -127,19 +127,19 @@ These resources will get you up and running with Box AI Platform API.
 
 <Tile type="document" title="AI APIリファレンス" href="/reference/resources/ai-response/">
 
-Check the API reference for specification details.
+仕様の詳細については、APIリファレンスをご確認ください。
 
 </Tile>
 
 <Tile type="leaflet" title="開発者向けガイド" href="/guides/box-ai/">
 
-Browse the guides to learn how to use Box AI Platform API.
+Box AI Platform APIの使用方法については、ガイドをご覧ください。
 
 </Tile>
 
 <Tile type="tuning" title="サポートされているAIモデル" href="/guides/box-ai/supported-models/">
 
-Check table list of the supported AI models.
+サポートされているAIモデルのリストを確認できます。
 
 </Tile>
 
