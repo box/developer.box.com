@@ -87,6 +87,32 @@ The client gets a list of all created sign requests and asks for version `2025.0
 
 Box documentation specifies API URLs. For instance, the Sign Requests endpoints are accessed via: `https://api.box.com/2.0/sign_requests/`. If a customer mistakenly makes a call to an incorrect version, such as `https://api.box.com/3.0/sign_requests/`, the response returns an `HTTP error code 404 - Not Found` error.
 
+### Calling an incorrect API version in the header
+
+If the API version provided in the `box-version` header is incorrect, the response will return an `HTTP 400 - Bad Request error`.
+The error response will have the following structure:
+
+```json
+{
+  "type": "error",
+  "status": 400,
+  "code": "invalid_api_version",
+  "message":  "Some error message",
+  "context_info": {
+    "conflicts": [
+      "box_version value must be in the format of YYYY.MM"
+    ]
+  },
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/versioning-errors/"
+}
+```
+
+The error message will contain information about the error and possible correct values for the `box-version` header. For example:
+
+ - `The 'box-version' header supports only one header value per request, do not use comas.` - when the header contains multiple values separated by commas.
+ - `Missing required box-version header.` - when the header is missing but required.
+ - `Unsupported API version specified in 'box-version' header. Supported API versions: [LIST_OF_SUPPORTED_VERSIONS_COMA_SEPARATED]` - when the version specified is not supported by the API.
+
 ### Calling a deprecated API
 
 When a customer uses an API version that Box has marked as deprecated, the API will respond as usual. However, it will append a `Deprecation` header, stating the deprecation date, for example:
