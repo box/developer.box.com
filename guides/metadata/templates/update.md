@@ -139,7 +139,7 @@ fullyTranslated: true
 
 ### フィールドの編集
 
-`editField`操作オプションでは、`displayName`、`description`、`key`、`hidden`状態など、フィールドの基本プロパティをいくつでも編集できます。
+The operation `editField` edits any number of the base properties of a field like the `displayName`, `description`, `key`, and `hidden` state.
 
 | パラメータ      |                             |
 | ---------- | --------------------------- |
@@ -157,7 +157,7 @@ fullyTranslated: true
 
 ```
 
-これにより、新しい表示名が**Customer Group**になるようにフィールド`category`が更新されます。このキーが変更された場合、指定されたフィールドの既存の値は新しいキーに移行されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
+This will update the field `category` to have a new display name of **Customer Group**. If the key is changed, existing values of the specified field are migrated to the new key. The search index will be updated, yet it may take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -167,7 +167,7 @@ fullyTranslated: true
 
 ### フィールドの削除
 
-`removeField`操作では、テンプレートからフィールドを削除します。
+The operation `removeField` removes a field from a template.
 
 | パラメータ      |                      |
 | ---------- | -------------------- |
@@ -181,7 +181,7 @@ fullyTranslated: true
 
 ```
 
-これにより、フィールド`brand`は、テンプレートに加えて、テンプレートのすべてのインスタンスから削除されます。検索インデックスは更新されますが、更新にかかる時間は、この変更の対象となるファイルの数によって異なります。
+This will remove the field `brand` from the template as well as all instances of the template. The search index will be updated, yet it may take time depending on how many files are affected by the change.
 
 <Message warning>
 
@@ -193,15 +193,15 @@ fullyTranslated: true
 
 [`enum`](g://metadata/fields/enum)および[`multiSelect`](g://metadata/fields/multi-select)メタデータフィールドタイプはどちらも、フィールドのオプションを変更するための追加操作をサポートしています。
 
-| 操作                                                                              |                                 |
-| ------------------------------------------------------------------------------- | ------------------------------- |
-| [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | `enum`フィールドにオプションを追加します         |
-| [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | `enum`フィールドのオプションを編集します         |
-| [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | `enum`フィールドのオプションを並べ替えます        |
-| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | `enum`フィールドのオプションを削除します         |
-| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | `multiSelect`フィールドにオプションを追加します  |
-| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | `multiSelect`フィールドのオプションを編集します  |
-| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | `multiSelect`フィールドのオプションを並べ替えます |
-| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | `multiSelect`フィールドのオプションを削除します  |
+| 操作                                                                              |                                      |
+| ------------------------------------------------------------------------------- | ------------------------------------ |
+| [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | `enum`フィールドにオプションを追加します              |
+| [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | `enum`フィールドのオプションを編集します              |
+| [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | `enum`フィールドのオプションを並べ替えます             |
+| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | Removes an `enum` field option       |
+| [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | `multiSelect`フィールドにオプションを追加します       |
+| [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | `multiSelect`フィールドのオプションを編集します       |
+| [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | `multiSelect`フィールドのオプションを並べ替えます      |
+| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field option |
 
 [endpoint]: e://put_metadata_templates_id_id_schema

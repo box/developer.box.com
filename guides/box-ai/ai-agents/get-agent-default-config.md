@@ -9,24 +9,24 @@ related_guides:
   - box-ai/ask-questions
   - box-ai/generate-text
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-agents
 is_index: false
-id: box-ai/get-agent-default-config
+id: box-ai/ai-agents/get-agent-default-config
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/supported-models
-previous_page_id: box-ai/generate-text
+total_steps: 1
+sibling_id: box-ai/ai-agents
+parent_id: box-ai/ai-agents
+next_page_id: ''
+previous_page_id: box-ai/ai-agents
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/get-agent-default-config.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/get-agent-default-config.md
 fullyTranslated: true
 ---
-# AIエージェントのデフォルト構成の取得
+# Get default AI agent configuration
 
 <Message type="notice">
 
-Box AI Platform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AI Platform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -42,11 +42,11 @@ Box AI Platform APIは、現在ベータ版のため、利用可能な機能が�
 
 リクエストを送信するには、`GET /2.0/ai_agent_default`エンドポイントを使用します。
 
+アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AIを使用するための前提条件][prereq]を確認してください。
+
 <Samples id="get_ai_agent_default">
 
 </Samples>
-
-アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AIを使用するための前提条件][prereq]を確認してください。
 
 ### パラメータ
 

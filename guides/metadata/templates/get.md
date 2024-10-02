@@ -36,7 +36,7 @@ fullyTranslated: true
 ## 名前を指定してメタデータテンプレートを取得
 
 名前を指定してメタデータテンプレートを取得するには、テンプレートの`scope`と`templateKey`を指定して[`GET
-/metadata_templates/:scope/:templateKey`][e_by_name] APIエンドポイントを呼び出します。
+/metadata_templates/:scope/:templateKey/schema`][e_by_name] APIエンドポイントを呼び出します。
 
 <Samples id="get_metadata_templates_id_id_schema">
 

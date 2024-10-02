@@ -28,7 +28,7 @@ fullyTranslated: true
 メタデータテンプレートは、2つの異なるグループ、つまり**スコープ**にグループ化されます。
 
 * **`global`**: 所属する会社に関係なく、Boxを使用するすべてのユーザーが使用できるテンプレートのグループ。たとえば、追加のスキーマを関連付けずに自由形式のキー/値の`string`ペアを配置する場所として使用される`global.properties`テンプレートがあります。
-* **`enterprise`**または**`enterprise_*`**: 社内のユーザーによって定義されたテンプレートのグループ。これらのテンプレートは、管理者がウェブアプリケーションで作成したものか、アプリケーションがAPIを使用して作成したものです。認証済みユーザーの会社内用のテンプレートにアクセスまたは作成する場合は、省略形の`enterprise`を使用できます。別の会社に属するテンプレートにアクセスする場合は (例: 他の企業に属するファイルのメタデータにアクセスする場合)、`enterprise_*`スコープを使用します (`*`はテンプレートが属する会社のIDです)。
+* **`enterprise`** or **`enterprise_*`**: a group of templates defined by a user within an enterprise. These templates are either created by admin's in the web application, or by applications using the API. When accessing or creating templates within the authenticated user's enterprise a short-hand of `enterprise` can be used. When accessing templates that belong to another enterprise - for example when accessing metadata on files belonging to other enterprises - the scope `enterprise_*` is used where `*` is the ID of the enterprise the template belongs to.
 
 <Message warning>
 

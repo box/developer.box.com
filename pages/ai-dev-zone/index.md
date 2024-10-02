@@ -33,7 +33,7 @@ Developer Zone
 
 </Header>
 
-Box AI Developer Zoneでは、Box AI Platform APIを実際に体験できる対話型のデモを紹介します。数回クリックするだけで、プロンプトの作成、サンプルコードの表示、Box AIのユースケースの確認などが可能です。
+Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型のデモを紹介します。数回クリックするだけで、プロンプトの作成、サンプルコードの表示、Box AIのユースケースの確認などが可能です。
 
 </HeroImage>
 
@@ -49,7 +49,7 @@ Box AI Developer Zoneでは、Box AI Platform APIを実際に体験できる対�
 
 <p style="text-align: left; margin-left: 0;">
 
-Box AI Platform APIは現在、ベータ機能です。利用可能な機能は変更される可能性があることにご注意ください。
+Box AI APIは現在、ベータ機能です。利用可能な機能は変更される可能性があることにご注意ください。
 
 </p>
 
@@ -113,13 +113,13 @@ Public beta
 
 <Header>
 
-Box AI Platform APIのドキュメントとサポート
+Box AI APIのドキュメントとサポート
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-Box AI Platform APIを使用する際は、以下のリソースが参考になります。
+Box AI APIを使用する際は、以下のリソースが参考になります。
 
 </p>
 
@@ -133,7 +133,7 @@ Box AI Platform APIを使用する際は、以下のリソースが参考にな�
 
 <Tile type="leaflet" title="開発者向けガイド" href="/guides/box-ai/">
 
-Box AI Platform APIの使用方法については、ガイドをご覧ください。
+Box AI APIの使用方法については、ガイドをご覧ください。
 
 </Tile>
 

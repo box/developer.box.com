@@ -7,12 +7,14 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata-structured
+  - box-ai/extract-metadata
 category_id: box-ai
 subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: guides
 parent_id: guides
 next_page_id: box-ai/prerequisites
@@ -25,7 +27,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI Platform APIは、現在ベータ版のため、利用可能な機能が変更される可能性があります。Box AI Platform APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -35,7 +37,9 @@ Box AI APIを使用すると、カスタムアプリケーション内でBox AI�
 
 Box AI APIには、アプリケーションのワークフローで大規模言語モデル (LLM) を利用できるように設計された多数の機能が用意されています。
 
-現在は、Box AIに対して、ユーザーの質問への回答、ドキュメントの内容の要約、ドキュメントで使用できるテキストの生成を求めることができます。また、[Box AI for UI Elements][boxaielement]を使用してBox AI機能をアプリに埋め込むこともできます。
+Currently, you can ask Box AI to answer user questions, summarize the document content, or generate text you can use in your documents. You can also use Box AI to extract metadata from the provided input, such as a schema or metadata template.
+
+The [Box AI for UI Elements][boxaielement] functionality allows embedding Box AI in your apps.
 
 ### Box AIに質問する
 
@@ -55,7 +59,14 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 ![Notes内の \[Box AI\]](./images/box-ai-in-notes.png)
 
-## 構成の上書き
+### Metadata extraction
+
+The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
+
+* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields.
+* Use the `extract` endpoint to extract data from a file using a prompt that can include a stringified version of formats such as JSON or XML, or even plain text.
+
+### 構成の上書き
 
 デフォルトのエージェント構成を上書きし、独自のカスタム設定を導入するには、[`POST /2.0/ai/ask`][ask]リクエストおよび[`POST /2.0/ai/text_gen`][text-gen]リクエストで利用可能な`ai_agent`パラメータを使用できます。
 
@@ -92,8 +103,12 @@ Box AIは、英語、日本語、フランス語、スペイン語など、多�
 
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
 
-[agent-default]: g://box-ai/get-agent-default-config
+[agent-default]: g://box-ai/ai-agents/get-agent-default-config
 
 [ask]: e://post_ai_ask#param_ai_agent
 
 [text-gen]: e://post_ai_text_gen#param_ai_agent
+
+[extract]: e://post_ai_extract
+
+[extract-structured]: e://post_ai_extract_structured
