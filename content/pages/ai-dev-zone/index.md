@@ -23,8 +23,7 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-  Box AI API is currently a beta feature. Bear in mind that
-  the available capabilities can change.
+Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
   
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
@@ -93,7 +92,7 @@ view sample code, explore Box AI use cases, and more!
   <TileGrid rows="4">
     <Tile type="box-brown" title="LlamaIndex"
       href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
-        Enable access of Box content within LLM workflows with Box reader suite for LlamaIndex.
+        Enable access to Box content within LLM workflows with Box reader suite for LlamaIndex.
 
         <strong style="background-color: #e8e8e8">New</strong>
     </Tile>
@@ -115,7 +114,7 @@ view sample code, explore Box AI use cases, and more!
   <TileGrid rows="3">
     <Tile image="AI-API" title="AI API overview"
       href="https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Checkout the high level features of the Box AI API in one minute.
+        Check out the high-level features of the Box AI API in one minute.
 
     </Tile>
     <Tile image="API-text-gen" title="Endpoint overivew"
@@ -125,7 +124,7 @@ view sample code, explore Box AI use cases, and more!
     </Tile>
     <Tile image="API-q&a" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        See a demo of the Box AI API text generation endpoint.
+        See a demo of the Box AI API Q&A endpoint.
 
     </Tile>
     <Tile image="API-extract" title="Endpoint overivew"
