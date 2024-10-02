@@ -65,7 +65,7 @@ For example, if security issues need addressing in the previously released versi
 Each stable version is supported for a minimum of 12 months. This means that when a new version is released, the previous version becomes deprecated and will be available for use, but no new features will be added.
 It also means, that a new version cannot be released sooner than every 12 months.
 
-We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `404 - Not Found`. For details, see [Versioning Errors](#versioning-errors).
+We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](#versioning-errors).
 
 If your request doesn't include a version, then the API defaults to the `V2` Box API version. However, we do not recommend relying on this behavior for adopting deprecated changes. As you update your app, you should specify the API version with every request. By making your app version-aware, you anchor your code to a specific set of features that are guaranteed to behave in the same way for the supported timeframe.
 
