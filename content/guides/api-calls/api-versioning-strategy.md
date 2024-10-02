@@ -83,10 +83,6 @@ The client gets a list of all created sign requests and asks for version `2025.0
 
 ## Versioning errors
 
-### Calling an incorrect API version in the URL
-
-Box documentation specifies API URLs. For instance, the Sign Requests endpoints are accessed via: `https://api.box.com/2.0/sign_requests/`. If a customer mistakenly makes a call to an incorrect version, such as `https://api.box.com/3.0/sign_requests/`, the response returns an `HTTP error code 404 - Not Found` error.
-
 ### Calling an incorrect API version in the header
 
 If the API version provided in the `box-version` header is incorrect, the response will return an `HTTP 400 - Bad Request error`.
@@ -123,10 +119,6 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
 Customers should monitor API responses and take note when this header appears, signaling the need to plan for the transition to a new API version.
-
-### Calling a nonexistent version
-
-If a customer attempts to use an outdated API version, such as `2023.0`, which has reached its end-of-life, the response will return an `HTTP error code 404 - Not Found`. See [Calling an incorrect API version in the URL](#calling-an-incorrect-api-version-in-the-url) for more information.
 
 ## How Box SDK versioning works
 
@@ -241,10 +233,10 @@ The date tells clients when this version was marked as deprecated.
 
 When building your request, consider that:
 
-- If you do not specify a version, the service returns a default version that may not be the latest one.
+- If you do not specify a version, the service returns an initial version - version that existed before year based versioning was introduced. If the initial version doesn't exist, then the response will return an HTTP error code `400 - Bad Request`.
+- When the version header is specified, but the requested version is unavailable, then the response will return an HTTP error code `400 - Bad Request`.
 
-    - When the version header is missing, the default resource version is determined by the version in the URL.
-    - When the version header is specified, but the requested version is unavailable, then the response will return an HTTP error code `404 - Not Found`.
+You can check [Versioning Errors](#versioning-errors) for more information.
 
 When Box deprecates a resource or a property of a resource in the API, the change is communicated in one or more of the following ways:
 
