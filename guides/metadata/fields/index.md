@@ -27,7 +27,7 @@ one of the following types:
 | [`string`](g://metadata/fields/string)            | A text field                                  |
 | [`float`](g://metadata/fields/float)              | A numeric input field                         |
 | [`date`](g://metadata/fields/date)                | A date picker field                           |
-| [`enum`](g://metadata/fields/enum)                | A dropdown list for selecting 1 value         |
+| [`enum`](g://metadata/fields/enum)                | A dropdown list for selecting a single value         |
 | [`multiSelect`](g://metadata/fields/multi-select) | A dropdown list for selecting multiple values |
 
 ## Basic field types

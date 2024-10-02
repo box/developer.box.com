@@ -34,8 +34,8 @@ list. The user can select multiple items from the list.
 
 <Message notice>
 
-A `multiSelect` field allows a user to select zero, 1, or more values. To force
-a user to select only 1 value at most, use the [`enum`][g_enum_field] template
+A `multiSelect` field allows a user to select zero, one, or more values. To force
+a user to select only one value at most, use the [`enum`][g_enum_field] template
 field.
 
 </Message>
@@ -70,7 +70,7 @@ a `key`, and a list of options.
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
+Optionally, a `description` can be provided that is shown to a user in the UI,
 and the field can be set to `hidden` to hide it from users in the web and mobile
 apps.
 
@@ -83,9 +83,9 @@ folder is updated as well.
 
 ### Change basic field values
 
-When updating a `multiSelect` metadata field one of the possible operations is
-the `editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+When updating a `multiSelect` metadata field, one of the possible operations is
+the `editField` operation, which can be used to change the field's `key`,
+`displayName`, `description`, and `hidden` values.
 
 ```json
 [
@@ -155,7 +155,7 @@ This will affect existing instances of this template.
 
 Reordering the options in a `multiSelect` field can be achieved through the
 `reorderMultiSelectOptions` operation. The operation expects the `fieldKey` to
-be set to the key of the `multiSelect` field to change, and an
+be set to the key of the `multiSelect` field to change, and a
 `multiSelectOptionKeys` array with the keys of the options in order.
 
 ```json
@@ -179,8 +179,8 @@ The list of options should now be as follows.
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box (NL) BV"},
   {"key": "Box.com (UK) Ltd."},
+  {"key": "Box (NL) BV"},
   {"key": "KK Box Japan"}
 ]
 ...
@@ -197,7 +197,7 @@ instances of this template.
 
 Editing an option of a `multiSelect` field can be achieved through the
 `editMultiSelectOption` operation. The operation expects the `fieldKey` to be
-set  to the key of the `multiSelect` field to change, and an
+set  to the key of the `multiSelect` field to change, and a
 `multiSelectOptionKey` to be set to the key of the field option. Finally, it
 expects a `data` object with the new `key` of the field option.
 
@@ -220,8 +220,8 @@ The list of options should now be as follows.
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box.nl BV"},
   {"key": "Box.com (UK) Ltd."},
+  {"key": "Box.nl BV"},
   {"key": "KK Box Japan"}
 ]
 ...
@@ -236,7 +236,7 @@ This will affect existing instances of this template.
 ### Remove an option
 
 Removing an option from a `multiSelect` field can be achieved through the
-`removeMultiSelectOption` operation. The operation expects `fieldKey` to be set
+`removeMultiSelectOption` operation. The operation expects the `fieldKey` to be set
 to the key of the `multiSelect` field to change, and a `multiSelectOptionKey`
 to be set to the key of the field option to remove.
 
@@ -256,8 +256,8 @@ The list of options should now be as follows.
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box.nl BV"},
-  {"key": "Box.com (UK) Ltd."}
+  {"key": "Box.com (UK) Ltd."},
+  {"key": "Box.nl BV"}
 ]
 ...
 ```
