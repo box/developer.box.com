@@ -67,7 +67,11 @@ It also means, that a new version cannot be released sooner than every 12 months
 
 We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](#versioning-errors).
 
-If your request doesn't include a version, then the API defaults to the `V2` Box API version. However, we do not recommend relying on this behavior for adopting deprecated changes. As you update your app, you should specify the API version with every request. By making your app version-aware, you anchor your code to a specific set of features that are guaranteed to behave in the same way for the supported timeframe.
+If your request doesn't include a version, the API defaults to the initial Box API version—the version available before 
+year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated 
+changes. To ensure consistency, always specify the API version with each request. By making your application 
+version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported 
+timeframe.
 
 ## Calling an API version
 
@@ -231,10 +235,10 @@ The date tells clients when this version was marked as deprecated.
 
 ## Versioning considerations
 
-When building your request, consider that:
+When building your request, consider the following:
 
-- If you do not specify a version, the service returns an initial version - version that existed before year based versioning was introduced. If the initial version doesn't exist, then the response will return an HTTP error code `400 - Bad Request`.
-- When the version header is specified, but the requested version is unavailable, then the response will return an HTTP error code `400 - Bad Request`.
+ - If you do not specify a version, the service will return the initial version—the version that existed before year-based versioning was introduced. If the initial version does not exist, the response will return an HTTP error code 400 - Bad Request.
+ - If the version header is specified but the requested version is unavailable, the response will return an HTTP error code 400 - Bad Request.
 
 You can check [Versioning Errors](#versioning-errors) for more information.
 
