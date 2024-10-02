@@ -87,7 +87,7 @@ view sample code, explore Box AI use cases, and more!
     Box for AI Integrations
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    Expand the capabilities of your applications beyond the models’ existing knowledge bases.
+    Use Box for AI Integrations to extend LLM models' existing knowledge bases.
   </p>
 
   <TileGrid rows="4">
@@ -113,34 +113,34 @@ view sample code, explore Box AI use cases, and more!
   Watch the latest Box AI Platform API tutorials and demos.
 
   <TileGrid rows="3">
-    <Tile image="AI-API" title="Quick overview"
+    <Tile image="AI-API" title="AI API overview"
       href="https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API - In One Minute
+        Checkout the high level features of the Box AI API in one minute.
 
     </Tile>
-    <Tile image="API-q&a" title="Document Q&A"
-      href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API - Document Q&A
-
-    </Tile>
-    <Tile image="API-text-gen" title="Text generation"
+    <Tile image="API-text-gen" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API - Text generation
+        See a demo of the Box AI API text generation endpoint. 
 
     </Tile>
-    <Tile image="API-extract" title="Metadata extraction"
+    <Tile image="API-q&a" title="Endpoint overivew"
+      href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        See a demo of the Box AI API text generation endpoint.
+
+    </Tile>
+    <Tile image="API-extract" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API Demo - Metadata extraction - Freeform
+        Extract metadata with various prompt formats with Box AI API.
 
     </Tile>
-    <Tile image="API-extract-structured" title="Metadata structured extraction"
+    <Tile image="API-extract-structured" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API - Metadata extraction - Structured
+        Extract metadata with predefined structure with Box AI API.
 
     </Tile>
-    <Tile image="AI-BUIE" title="Box AI for Box UI Elements"
-      href="https://www.youtube.com/watch?v=8DmMgkm-6Tw&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        Box AI Platform API - Preview UI element
+    <Tile image="API-interview" title="Hear from Box CPO Diego Dugatkin"
+      href="https://www.youtube.com/watch?v=NA4NiqBdSg4&t=2s">
+        Learn why Box chose to expose Box AI via our public API.
 
     </Tile>
   </TileGrid>
