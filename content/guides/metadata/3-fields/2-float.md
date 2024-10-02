@@ -26,7 +26,7 @@ A `float` field can be added to a metadata template either when [creating a
 metadata template][g_create_template], or when [updating a
 template][g_update_template] with the `addField` operation.
 
-The required attributes for a `float` field are a `type`, a `displayName` and a
+The required attributes for a `float` field are a `type`, a `displayName`, and a
 `key`.
 
 ```json
@@ -45,7 +45,7 @@ The required attributes for a `float` field are a `type`, a `displayName` and a
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
+Optionally, a `description` can be provided that is shown to a user in the UI,
 and the field can be set to `hidden` to hide it from users in the web and mobile
 apps.
 
@@ -56,9 +56,9 @@ template][g_update_template] it belongs to. Updates to templates happen through
 **operations** to ensure that any template that is already assigned to a file or
 folder is updated as well.
 
-When updating a `float` metadata field the only relevant operation is the
-`editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+When updating a `float` metadata field, the only relevant operation is the
+`editField` operation, which can be used to change the field's `key`,
+`displayName`, `description`, and `hidden` values.
 
 ```json
 [

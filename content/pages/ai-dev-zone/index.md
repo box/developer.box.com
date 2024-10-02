@@ -13,7 +13,7 @@ centered: false
     </Header>
 
 Box AI Developer Zone features interactive
-demos to give you hands-on experience with Box AI Platform API.
+demos to give you hands-on experience with Box AI API.
 With a few clicks you can create prompts,
 view sample code, explore Box AI use cases, and more!
   </HeroImage>
@@ -23,7 +23,7 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-  Box AI Platform API is currently a beta feature. Bear in mind that
+  Box AI API is currently a beta feature. Bear in mind that
   the available capabilities can change.
   
   <TileGrid rows="4">
@@ -51,7 +51,7 @@ view sample code, explore Box AI use cases, and more!
     Documentation and support
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    These resources will get you up and running with Box AI Platform API.
+    These resources will get you up and running with Box AI API.
   </p>
 
   <TileGrid rows="4">
@@ -63,7 +63,7 @@ view sample code, explore Box AI use cases, and more!
     </Tile>
     <Tile type="code-new" title="Developer guides"
       href="/guides/box-ai/">
-        Browse the guides to learn how to use Box AI Platform API.
+        Browse the guides to learn how to use Box AI API.
 
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
@@ -110,7 +110,7 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Videos
   </Header>
-  Watch the latest Box AI Platform API tutorials and demos.
+  Watch the latest Box AI API tutorials and demos.
 
   <TileGrid rows="3">
     <Tile image="AI-API" title="AI API overview"
