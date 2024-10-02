@@ -84,7 +84,7 @@ This will affect existing instances of this template.
 
 ### Add a field to a template
 
-The operation `addField` adds an field to a template.
+The operation `addField` adds a field to a template.
 
 | Parameter |                                     |
 |-----------|-------------------------------------|

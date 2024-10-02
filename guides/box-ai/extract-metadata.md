@@ -27,7 +27,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
 </Message>
 
 Box AI API allows you to query a document and extract metadata based on a provided prompt.
-**Freeform** means that the prompt can include any type of data: JSON, XML, YAML, or even plain text.
+**Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
 
 ## Send a request
 
