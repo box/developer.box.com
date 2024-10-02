@@ -82,9 +82,7 @@ This error indicates either:
 
 - the client ID and client secret passed are incorrect or are not for the same application,
 
-- the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned. Exception: a CCG app with App Access Only can
-send in the `box_subject_type` of `enterprise` to authenticate as its service
-account, but it can't authenticate as a managed user or an admin.
+- the `box_subject_id` cannot be used based on the selected [application access][aa]. For example, if you send in a `box_subject_type` of `enterprise` and your application is configured for App Access Only, the `grant credentials are invalid` error will be returned. Exception: a CCG app with App Access Only can send in the `box_subject_type` of `enterprise` to authenticate as its service account, but it can't authenticate as a managed user or an admin.
 
 - to use a `box_subject_type` of `user`, your application should be configured to generate user access tokens in the **Advanced Features** section of the **Configuration tab**.
 
