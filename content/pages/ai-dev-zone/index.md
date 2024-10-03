@@ -124,7 +124,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     </Tile>
     <Tile image="API-q&a" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        See a demo of the Box AI API Q&A endpoint.
+        See a demo of the Box AI API document Q&A endpoint.
 
     </Tile>
     <Tile image="API-extract" title="Endpoint overivew"
