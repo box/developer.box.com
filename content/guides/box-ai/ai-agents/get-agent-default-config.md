@@ -50,4 +50,4 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 [prereq]: g://box-ai/prerequisites
 [ask]: e://post_ai_ask#param_ai_agent
 [text-gen]: e://post_ai_text_gen#param_ai_agent
-[models]: g://box-ai/supported-models
+[models]: g://box-ai/ai-models/index
