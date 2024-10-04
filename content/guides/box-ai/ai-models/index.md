@@ -28,14 +28,14 @@ may be limited.
 </Message>
 
 <TileGrid rows="2">
-    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-openai-gpt-3-5-turbo-16k/">
         GPT-3.5 Turbo models can understand and generate natural language or code.
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="model" title="google__textembedding_gecko" href="/">
+    <Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
         Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
         The Gecko model features enhanced AI quality.
         <div>
