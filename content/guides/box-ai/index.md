@@ -9,6 +9,8 @@ related_guides:
   - box-ai/generate-text
   - box-ai/extract-metadata-structured
   - box-ai/extract-metadata
+alias_paths:
+  - /guides/box-ai/supported-models
 ---
 
 # Box AI
