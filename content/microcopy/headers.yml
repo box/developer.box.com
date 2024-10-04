@@ -5,6 +5,14 @@ primary:
       // text:
       text: Documentation
 
+    develop:
+      // text:
+      text: Develop
+
+    connect:
+      // text:
+      text: Connect
+
     explore:
       // text:
       text: Explore
@@ -18,7 +26,10 @@ primary:
       text: Community
 
       //url:
-      url: https://forum.box.com
+      url: https://community.box.com/
+
+    events:
+      text: Events
 
     learn:
       // text: The text for the link to the learn section
@@ -84,6 +95,9 @@ primary:
 
     additional_resouces:
       text: Additional resources
+    
+    overview:
+      text: Overview
 
     blog:
       // text: The text for the Medium Dev Blog
@@ -91,11 +105,6 @@ primary:
 
       // url: The URL to Medium bev blog
       url: https://medium.com/box-developer-blog
-      # events_and_workshops:
-      #   // text: The text for the link to events and workshops
-      #   text: Events & Workshops
-      #   // url: The URL to the developer blog
-      #   url: TBD
 
   buttons:
     dashboard:
@@ -121,7 +130,7 @@ primary:
 
   featured:
     tag:
-      text: Featured
+      text: New
 
     title:
       text: Box AI Developer Zone
@@ -129,13 +138,43 @@ primary:
     details:
       text: |-
         Box AI Developer Zone features interactive
-        demos to give you hands-on experience with Box AI Platform API
+        demos to give you hands-on experience with Box AI API
 
     cta:
       text: |-
         Try it out!
-      url:
-        /ai-dev-zone/
+
+  develop_featured:
+    tag:
+      text: Featured
+
+    title:
+      text: Box Sample Code Catalog
+
+    details:
+      text: |-
+        Find useful scripts, app examples, and inspiring
+        use cases! Browse 90+ open-source repositories
+        in various programming languages.
+
+    cta:
+      text: |-
+        Browse sample code
+
+  connect_featured:
+    tag:
+      text: Event
+
+    title:
+      text: BoxWorks
+
+    details:
+      text: |-
+        Join BoxWorks 2024 to discover what's possible with content and AI!
+
+    cta:
+      text: |-
+        Register now
 
 secondary:
   images:
@@ -169,12 +208,6 @@ secondary:
 
       // url: The URL to the developer blog
       url: https://medium.com/box-developer-blog
-      # events_and_workshops:
-      #   // text: The text for the link to events and workshops
-      #   text: Events & Workshops
-
-      #   // url: The URL to the developer blog
-      #   url: TBD
 
   dropdowns:
     // docs: |-
