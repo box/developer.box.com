@@ -36,7 +36,7 @@ may be limited.
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+    <Tile type="ai" title="google__textembedding_gecko" href="/">
         Lorem ipsum dolor set
 
         <div>
@@ -44,7 +44,7 @@ may be limited.
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+    <Tile type="ai" title="google__gemini_1_5_pro_001" href="/">
         Lorem ipsum dolor set
 
         <div>
@@ -52,7 +52,7 @@ may be limited.
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-     <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+     <Tile type="ai" title="google__text_unicorn" href="/">
         Lorem ipsum dolor set
 
         <div>
