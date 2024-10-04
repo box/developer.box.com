@@ -27,6 +27,41 @@ The list may change depending on the model availability.
 may be limited.
 </Message>
 
+<TileGrid rows="2">
+    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+        Lorem ipsum dolor set
+
+        <div>
+          <strong style="background-color: #e8e8e8">Chat</strong>
+          <strong style="background-color: #e1ffe7">Available</strong>
+        </div>
+    </Tile>
+    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+        Lorem ipsum dolor set
+
+        <div>
+          <strong style="background-color: #e8e8e8">Chat</strong>
+          <strong style="background-color: #e1ffe7">Available</strong>
+        </div>
+    </Tile>
+    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+        Lorem ipsum dolor set
+
+        <div>
+          <strong style="background-color: #e8e8e8">Chat</strong>
+          <strong style="background-color: #e1ffe7">Available</strong>
+        </div>
+    </Tile>
+     <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+        Lorem ipsum dolor set
+
+        <div>
+          <strong style="background-color: #e8e8e8">Chat</strong>
+          <strong style="background-color: #e1ffe7">Available</strong>
+        </div>
+    </Tile>
+  </TileGrid>
+
 | Provider        | Family |Availability| API Name                                | External documentation                                                  | Capability | 
 | --------------- | ------ |-----| --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
 | Microsoft Azure | GPT    |available| `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-model]              | Chat       | 
