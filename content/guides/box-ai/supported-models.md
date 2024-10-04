@@ -28,7 +28,7 @@ may be limited.
 </Message>
 
 <TileGrid rows="2">
-    <Tile type="ai" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/">
         Lorem ipsum dolor set
 
         <div>
@@ -36,28 +36,28 @@ may be limited.
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="ai" title="google__textembedding_gecko" href="/">
+    <Tile type="model" title="google__textembedding_gecko" href="/">
         Lorem ipsum dolor set
 
         <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
+          <strong style="background-color: #e8e8e8">Embeddings</strong>
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="ai" title="google__gemini_1_5_pro_001" href="/">
+    <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
         Lorem ipsum dolor set
 
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
+          <strong style="background-color: #fffbf3">Preview</strong>
         </div>
     </Tile>
-     <Tile type="ai" title="google__text_unicorn" href="/">
+     <Tile type="model" title="google__text_unicorn" href="/">
         Lorem ipsum dolor set
 
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
+          <strong style="background-color: #fff6ff">Beta only</strong>
         </div>
     </Tile>
   </TileGrid>
