@@ -27,7 +27,6 @@ The list may change depending on the model availability.
 may be limited.
 </Message>
 
-  </TileGrid>
 <TileGrid rows="2">
     <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/">
         GPT-3.5 Turbo models can understand and generate natural language or code.
@@ -58,7 +57,7 @@ may be limited.
           <strong style="background-color: #fff6ff">Beta only</strong>
         </div>
     </Tile>
-  </TileGrid>
+</TileGrid>
 
 | Provider        | Family | Availability           | API Name                                | External documentation                                                  | Capability |
 | --------------- | ------ | ---------------------- | --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
