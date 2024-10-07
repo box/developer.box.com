@@ -18,7 +18,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
 fullyTranslated: true
 ---
-# AI agent configuration
+# AIエージェントの構成
 
 デフォルトのエージェント構成を上書きし、独自のカスタム設定を導入するには、[`POST /2.0/ai/ask`][ask]リクエストおよび[`POST /2.0/ai/text_gen`][text-gen]リクエストで利用可能な`ai_agent`パラメータを使用できます。
 

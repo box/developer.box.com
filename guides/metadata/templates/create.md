@@ -97,7 +97,7 @@ fullyTranslated: true
 
 ## テンプレートキー
 
-When a metadata template is created, a `templateKey` is automatically generated from the `displayName` of the template unless a `templateKey` is explicitly provided. When creating the template key, any spaces and irregular characters in the name are removed, and the string is transformed to camel case.
+メタデータテンプレートが作成されると、`templateKey`を明示的に指定した場合を除き、テンプレートの`displayName`から自動的に`templateKey`が生成されます。テンプレートキーを作成する際に、名前に含まれるスペースと規格外の文字は削除され、文字列はキャメルケースに変換されます。
 
 たとえば、`Test Name (with-special_) Characters`という名前のメタデータテンプレートの`templateKey`は`testNameWithspecialCharacters`になります。
 

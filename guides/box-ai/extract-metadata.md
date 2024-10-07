@@ -19,15 +19,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/extract-metadata.md
 fullyTranslated: true
 ---
-# Extract metadata from file (freeform)
+# ファイルからメタデータを抽出する (自由形式)
 
 <Message type="notice">
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-Box AI API allows you to query a document and extract metadata based on a provided prompt. **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
+Box AI APIを使用すると、ドキュメントを照会し、指定したプロンプトに基づいてメタデータを抽出できます。**自由形式**とは、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストをプロンプトに含めることができるという意味です。
 
 ## リクエストの送信
 
@@ -45,14 +45,14 @@ Box AI API allows you to query a document and extract metadata based on a provid
 
 <Message type="notice">
 
-The `items` array can have exactly one element.
+`items`配列に含めることができる要素は1つだけです。
 
 </Message>
 
 | パラメータ                         | 説明                                                                                                                                                                                                                                                                                                                             | 例                                                               |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
 | **`prompt`**                  | Box AIに対するテキストの生成またはリファインのリクエスト。プロンプトの長さは10000文字以内にする必要があります。                                                                                                                                                                                                                                                                  | 週1回の営業会議の議題を作成してください。                                           |
-| **`items.id`**                | Box file ID of the document. The ID must reference an actual file with an extension.                                                                                                                                                                                                                                           | `1233039227512`                                                 |
+| **`items.id`**                | ドキュメントのBoxファイルID。IDは、拡張子が付いている実際のファイルを参照する必要があります。                                                                                                                                                                                                                                                                             | `1233039227512`                                                 |
 | **`items.type`**              | 指定した入力データのタイプ。                                                                                                                                                                                                                                                                                                                 | `file`                                                          |
 | `items.content`               | 項目のコンテンツ (多くの場合はテキストレプリゼンテーション)。                                                                                                                                                                                                                                                                                               | `This article is about Box AI`.                                 |
 | `dialogue_history.prompt`     | 以前にクライアントによって提供され、大規模言語モデル (LLM) が回答したプロンプト。                                                                                                                                                                                                                                                                                   | `Make my email about public APIs sound more professional`       |
@@ -62,24 +62,24 @@ The `items` array can have exactly one element.
 
 ## ユースケース
 
-Let's assume you want to extract the vendor name, invoice number, and a few more details from the following sample invoice:
+以下のサンプル請求書から、ベンダー名、請求書番号などの詳細情報を抽出する必要があるとします。
 
-![sample invoice](./images/sample-invoice.png)
+![サンプル請求書](./images/sample-invoice.png)
 
-### Create the request
+### リクエストの作成
 
-To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the following parameters:
+Box AIから応答を取得するには、以下のパラメータを使用して、`POST /2.0/ai/extract`エンドポイントを呼び出します。
 
-* `prompt` that can be a query, or a structured or unstructured list of fields to extract.
-* `type` and `id` of the file to extract the data from.
+* クエリか、抽出するフィールドの構造化リストまたは非構造化リストを指定できる`prompt`。
+* データの抽出元となるファイルの`type`および`id`。
 
-### Create the prompt
+### プロンプトの作成
 
-Depending on the use case and the level of detail, you can construct various prompts.
+ユースケースや詳細度に応じて、さまざまなプロンプトを作成できます。
 
-#### Using keywords
+#### キーワードを使用する
 
-The prompt can include a list of keywords that you expect to find in an invoice:
+プロンプトには、請求書内で見つかると予想されるキーワードのリストを含めることができます。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -97,7 +97,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-Using this approach results in a list of keywords provided in the request and their values:
+このアプローチを使用すると、以下のように、リクエストで指定したキーワードのリストとその値が返されます。
 
 ```bash
 {
@@ -108,9 +108,9 @@ Using this approach results in a list of keywords provided in the request and th
 
 ```
 
-#### Using key-value pairs
+#### キー/値ペアを使用する
 
-The prompt can be a list of key-value pairs that helps Box AI to come up with the metadata structure:
+プロンプトには、Box AIがメタデータの構造を認識するのに役立つキー/値ペアのリストを指定することができます。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -128,7 +128,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-The response includes the fields present in the file, along with their values:
+レスポンスには、以下のように、ファイル内に存在するフィールドとその値が含まれます。
 
 ```bash
 {
@@ -139,9 +139,9 @@ The response includes the fields present in the file, along with their values:
 
 ```
 
-#### Using plain text
+#### プレーンテキストを使用する
 
-You can also use plain text:
+以下のように、プレーンテキストを使用することもできます。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -159,7 +159,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-In such a case, the response will be based on the keywords included in the query:
+その場合、レスポンスは、クエリに含まれているキーワードに基づいて作成されます。
 
 ```bash
 {

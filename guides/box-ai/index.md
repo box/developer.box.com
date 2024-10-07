@@ -27,7 +27,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
@@ -37,9 +37,9 @@ Box AI APIを使用すると、カスタムアプリケーション内でBox AI�
 
 Box AI APIには、アプリケーションのワークフローで大規模言語モデル (LLM) を利用できるように設計された多数の機能が用意されています。
 
-Currently, you can ask Box AI to answer user questions, summarize the document content, or generate text you can use in your documents. You can also use Box AI to extract metadata from the provided input, such as a schema or metadata template.
+現在は、Box AIに対して、ユーザーの質問への回答、ドキュメントの内容の要約、ドキュメントで使用できるテキストの生成を求めることができます。また、Box AIを使用して、スキーマやメタデータテンプレートなど、指定した入力データからメタデータを抽出することもできます。
 
-The [Box AI for UI Elements][boxaielement] functionality allows embedding Box AI in your apps.
+[Box AI for UI Elements][boxaielement]機能を使用すると、アプリにBox AIを組み込むことができます。
 
 ### Box AIに質問する
 
@@ -59,12 +59,12 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 ![Notes内の \[Box AI\]](./images/box-ai-in-notes.png)
 
-### Metadata extraction
+### メタデータの抽出
 
-The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][extract-structured] endpoints allow you to extract data from the provided input and return them in a form of key-value pairs.
+[`POST /2.0/ai/extract`][extract]および[`POST /2.0/ai/extract_structured`][extract-structured]エンドポイントを使用すると、指定した入力からデータを抽出し、キー/値ペアの形式で返すことができます。
 
-* Use the `extract_structured` endpoint to extract data according to a pre-defined structure obtained from the metadata template, or a set of fields.
-* Use the `extract` endpoint to extract data from a file using a prompt that can include a stringified version of formats such as JSON or XML, or even plain text.
+* `extract_structured`エンドポイントは、メタデータテンプレートから取得したあらかじめ定義された構造、または一連のフィールドに従ってデータを抽出する場合に使用します。
+* `extract`エンドポイントは、プロンプトを使用してファイルからデータを抽出する場合に使用します。プロンプトには、JSONやXMLなどの形式の文字列化バージョン、またはプレーンテキストを含めることができます。
 
 ### 構成の上書き
 

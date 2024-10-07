@@ -17,7 +17,7 @@ fullyTranslated: true
 ---
 # メタデータテンプレート
 
-A metadata template describes a set of key/value pairs that can be assigned to a file or folder.
+メタデータテンプレートには、ファイルまたはフォルダに割り当てることができる一連のキー/値ペアが記載されています。
 
 たとえば、`invoiceData`テンプレートでは、請求書に関するデータを保持するため、請求書IDと顧客IDのフィールドが設定されています。
 
