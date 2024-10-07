@@ -24,7 +24,7 @@ primary:
     community:
       // text:
       text: Community
-    
+
     community_forum:
       // text:
       text: Box Developer Community
@@ -48,11 +48,11 @@ primary:
 
       //url: The URL to the learn section
       url: /sign/
-    
+
     ai_dev_zone:
       text: Box AI Developer Zone
       url: /sign/
-    
+
     buie:
       text: Box UI Elements
       url: /box-ui-elements
@@ -99,7 +99,7 @@ primary:
 
     additional_resouces:
       text: Additional resources
-    
+
     overview:
       text: Overview
 
