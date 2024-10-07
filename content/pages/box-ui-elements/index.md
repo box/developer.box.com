@@ -13,10 +13,7 @@ centered: false
       Box UI Elements
     </Header>
 
-Box UI Elements are pre-built UI components that allow to 
-add elements of the main Box web application into custom web 
-applications. They are available both as React components and
-framework-agnostic JavaScript libraries.
+Box UI Elements are pre-built UI components that allow extending custom portals with the elements of the main Box web application. They are available both as React components and framework-agnostic JavaScript libraries.
   </HeroImage>
 </Centered>
 
@@ -46,7 +43,7 @@ framework-agnostic JavaScript libraries.
   <TileGrid rows="4">
     <Tile type="ai" title="Box AI for UI Elements"
       href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
-        Enable Box AI for Box Preview to allow the users interact with Box AI.
+        See how to embed Box AI in Content Preview UI Element.
     </Tile>
     <Tile type="upload" title="Content Uploader"
       href="/guides/embed/ui-elements/uploader/">
@@ -62,3 +59,28 @@ framework-agnostic JavaScript libraries.
     </Tile>
   </TileGrid>
 </Centered>
+
+<!-- <Centered mid>
+  <Header centered>
+    Build interactive portals
+  </Header>
+  Learn more from videos, blog posts and sample code related to Box UI Elements.
+
+  <TileGrid rows="3">
+    <Tile image="BUIE-portal" title="Read more about creating custom portals"
+      href="https://medium.com/box-developer-blog/build-a-content-portal-using-box-ui-elements-react-tailwind-css-vercel-part-1-f1c509621ceb">
+        Build a content portal with customized experience using Box UI Elements.
+
+    </Tile>
+    <Tile image="BUIE-sample" title="Clone and deploy a demo project"
+      href="https://github.com/box-community/box-custom-portal-demo?tab=readme-ov-file#box-custom-portal-demo">
+        Featuring Box APIs, Box UI Elements, React, Tailwind CSS, and Vercel.
+
+    </Tile>
+    <Tile image="BUIE-AI" title="Box AI for Box UI Elements"
+      href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
+        See a demo of the Box AI API document Q&A endpoint.
+
+    </Tile>
+  </TileGrid>
+</Centered> -->
