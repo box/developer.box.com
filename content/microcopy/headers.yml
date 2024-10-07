@@ -23,6 +23,10 @@ primary:
 
     community:
       // text:
+      text: Community
+    
+    community_forum:
+      // text:
       text: Box Developer Community
 
       //url:
