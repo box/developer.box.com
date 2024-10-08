@@ -20,8 +20,6 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. 
 Once you get the configuration details you can override them using the [`ai_agent`][ai-agent-config] parameter.
 
-For details and override use cases, see the [tutorials][override-tutorials].
-
 ## Send a request
 
 To send a request, use the
@@ -256,6 +254,5 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 </Tabs>
 
 [prereq]: g://box-ai/prerequisites
-[models]: g://box-ai/supported-models
 [ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
-[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial
+[models]: g://box-ai/ai-models/index
