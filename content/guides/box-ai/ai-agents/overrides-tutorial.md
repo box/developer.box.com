@@ -173,7 +173,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
      }'
 ```
 
-The response is as follows:
+You will get a response similar to the following:
 
 ```curl
 {
@@ -302,7 +302,7 @@ curl -i -L 'https://api.box.com/2.0/ai/extract' \
       }'
 ```
 
-The response comes with a set of metadata.
+The response is a set of metadata:
 
 ```curl
 {
@@ -335,7 +335,7 @@ curl -i -L 'https://api.box.com/2.0/ai/extract' \
       }'
 ```
 
-Using this model results in a response listing more metadata entries.
+Using this model results in a response listing more metadata entries:
 
 ```curl
 {
