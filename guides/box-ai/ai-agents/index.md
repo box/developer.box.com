@@ -2,14 +2,19 @@
 rank: 1
 related_endpoints:
   - get_ai_agent_default
+  - post_ai_text_gen
+  - post_ai_ask
+  - post_ai_extract
+  - post_ai_extract_structured
 related_guides:
-  - box-ai/index
+  - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-agents/overrides-tutorial
 category_id: box-ai
 subcategory_id: box-ai/ai-agents
 is_index: true
 id: box-ai/ai-agents
 type: guide
-total_steps: 1
+total_steps: 2
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-agents/get-agent-default-config
@@ -17,12 +22,20 @@ previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
 ---
-# AI agent configuration
+# AI model overrides
 
-You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
+Box updates the default models across the endpoints on a regular basis to stay up to date with the most advanced options.
 
-For details, see [AI agent default configuration][agent-default].
+If your implementation is based on Box AI, a new default model might alter the results in a way that could break or change a downstream process. Switching to a specific version may prevent encountering any issues.
+
+Selecting a specific model may also bring better results to your use case. This is why, you can switch to any model included in the [supported models][models] list.
+
+Apart from switching models, you can pass options to further customize the agents used in Box AI implementation and get the responses that suit your use case.
+
+To see specific use cases, check the [overrides tutorial][overrides].
 
 [ask]: e://post_ai_ask#param_ai_agent
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
+[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[models]: g://box-ai/ai-models/index
