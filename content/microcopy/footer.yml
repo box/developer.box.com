@@ -55,9 +55,9 @@ categories:
 
     links:
       ts_gen_sdk:
-        // text: Text for link to the Typescript SDK (Generated)
-        text: Typescript SDK (Generated)
-        // url: link to the Typescript SDK (Generated)
+        // text: Text for link to the TypeScript SDK (Generated)
+        text: TypeScript SDK (Generated)
+        // url: link to the TypeScript SDK (Generated)
         url: https://github.com/box/box-typescript-sdk-gen
 
       java_sdk:

@@ -110,7 +110,7 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
       *box-typescript-sdk-gen*
     </Tile>
-    <Tile type="net" title="Box .NET SDK"
+    <Tile type="net" title="Box .NET Gen SDK"
     href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
       *box-dotnet-sdk-gen*
     </Tile>
@@ -118,7 +118,7 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
     </Tile>
-    <Tile type="tool" title="Box Swift SDK (beta)"
+    <Tile type="tool" title="Box Swift Gen SDK (beta)"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-swift-sdk-gen*
     </Tile>
