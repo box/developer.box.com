@@ -17,21 +17,10 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
 
 </Message>
 
-<!-- markdownlint-disable -->
-
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. 
-Once you get the configuration details you can override them using the `ai_agent` parameter available in the following 
+Once you get the configuration details you can override them using the [`ai_agent`][ai-agent-config] parameter.
 
-* [`POST ai/ask`][ask]
-* [`POST ai/text_gen`][text-gen]
-* [`POST ai/extract`][extract]
-* [`POST ai/extract_structured`][extract-structured]
-
-The override examples include:
-
-* Replacing the default LLM with a custom one based on your organization's needs.
-* Tweaking the base prompt to allow a more customized user experience.
-* Changing a parameter, such as `temperature`, to make the results more or less creative.
+For details and override use cases see the [tutorials][override-tutorials].
 
 ## Send a request
 
@@ -141,6 +130,7 @@ When you set the `mode` parameter to `ask` the response will be as follows:
      }
 }
 ```
+
 </Tab>
 
 <Tab title='Text gen'>
@@ -238,7 +228,7 @@ When you set the `mode` parameter to `extract_structured` the response will be a
                "top_k": null,
                "type": "google_params"
           }
-     },
+       },
      "long_text": {
           "model": "google__gemini_1_5_flash_001",
           "system_message": "Respond only in valid json. You are extracting metadata that is name, value pairs from a document. Only output the metadata in valid json form, as {\"name1\":\"value1\",\"name2\":\"value2\"} and nothing else. You will be given the document data and the schema for the metadata, that defines the name, description and type of each of the fields you will be extracting. Schema is of the form {\"fields\": [{\"key\": \"key_name\", \"prompt\": \"prompt to extract the value\", \"type\": \"date\"}]}. Leverage prompt for each key to identify where the key and value pairs are in the document. In certain cases, prompt can also indicate the instructions to perform on the document to obtain the value. Prompt will be in the form of Schema is ``schema`` \n document is ````document````",
@@ -265,11 +255,7 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 
 </Tabs>
 
-<!-- markdownlint-enable-->
-
 [prereq]: g://box-ai/prerequisites
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
 [models]: g://box-ai/supported-models
-[extract]: e://post_ai_extract#param_ai_agent
-[extract-structured]: e://post_ai_extract_structured#param_ai_agent
+[ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
+[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial
