@@ -57,25 +57,21 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     <Tile type="code-new" title="AI API reference"
       href="/reference/resources/ai-response/">
         Check the API reference for specification details.
-
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI API.
-
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Supported AI models"
-      href="/guides/box-ai/ai-models/supported-models/">
+      href="/guides/box-ai/ai-models/index/">
         Check table list of the supported AI models.
-
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Support"
       href="https://community.box.com/">
         Visit Box Developer Community for support and knowledge sharing.
-
         <strong style="background-color: #e8e8e8">Community</strong>
     </Tile>
   </TileGrid>
