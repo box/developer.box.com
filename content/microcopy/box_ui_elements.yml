@@ -15,5 +15,5 @@ demoTiles:
       file types.
   contentSidebar:
     title: Content Sidebar
-    description: Implement viewing file-related metadata, Box Skills,
-      and Activity Feed including versions, comments and tasks.
+    description: Implement viewing file-related activity, metadata, details
+      including versions, comments and tasks.
