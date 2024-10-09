@@ -28,23 +28,23 @@ may be limited.
 </Message>
 
 <TileGrid rows="2">
-    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/">
-        GPT-3.5 Turbo models can understand and generate natural language or code.
+    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
+        `azure-gpt-3.5-turbo` models understand and generate natural language or code.
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
-    <Tile type="model" title="google__textembedding_gecko" href="/">
+    <Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
         Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
-        The Gecko model features enhanced AI quality.
+        The `google-textembedding-gecko` model features enhanced AI quality.
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
           <strong style="background-color: #e1ffe7">Available</strong>
         </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
-        Gemini 1.5 Pro is a foundation model that performs well at a variety of multimodal tasks.
+        `google__gemini_1_5_pro_001` is a foundation model that performs well at a variety of multimodal tasks.
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
           <strong style="background-color: #fffbf3">Preview</strong>
