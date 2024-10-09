@@ -29,34 +29,119 @@ may be limited.
 
 <TileGrid rows="2">
     <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
-        `azure-gpt-3.5-turbo` models understand and generate natural language or code.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
-        </div>
+      `azure-gpt-3.5-turbo` models understand and generate natural language or code.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Notes</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
-        Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
-        The `google-textembedding-gecko` model features enhanced AI quality.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
-        </div>
+      Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
+      The `google-textembedding-gecko` model features enhanced AI quality.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="google__textembedding_gecko_002" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="google__textembedding_gecko_003" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
-        `google__gemini_1_5_pro_001` is a foundation model that performs well at a variety of multimodal tasks.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #fffbf3">Preview</strong>
-        </div>
+      `google__gemini_1_5_pro_001` is a foundation model that performs well at a variety of multimodal tasks.
+      <div>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
     </Tile>
-     <Tile type="model" title="google__text_unicorn" href="/">
-        PaLM 2 for Text `text-unicorn` foundation model is optimized for a variety of natural language tasks such as sentiment analysis, entity extraction, and content creation.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #fff6ff">Beta only</strong>
-        </div>
+    <Tile type="palm" title="google__text_unicorn" href="/">
+      PaLM 2 for Text `text-unicorn` foundation model is optimized for a variety of natural language tasks such as sentiment analysis, entity extraction, and content creation.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
+    <Tile type="palm" title="google__text_bison" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="palm" title="google__text_bison_32k" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_3_5_turbo_16k" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4_1106_preview" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4_turbo_preview" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__text_embedding_ada_002" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <!-- <Tile type="model" title="aws__claude_3_haiku" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="aws__titan_text_lite" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile> -->
 </TileGrid>
 
 | Provider        | Family | Availability           | API Name                                | External documentation                                                  | Capability |
