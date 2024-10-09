@@ -133,7 +133,7 @@ Documentation
 
 </Tile>
 
-<Tile type="code-new" title="Supported AI models" href="/guides/box-ai/supported-models/">
+<Tile type="code-new" title="Supported AI models" href="/guides/box-ai/ai-models/supported-models/">
 
 Check table list of the supported AI models.
 

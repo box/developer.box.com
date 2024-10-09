@@ -46,7 +46,7 @@ may be limited.
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
+<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card">
 
 A model primarily designed for chat-related tasks but not exclusively.
 The model demonstrates high accuracy at responding in requested formats.
