@@ -19,7 +19,7 @@ previous_page_id: box-ai/ai-models/azure-gpt-3-5-turbo-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/google-textembedding-gecko-model-card.md
 ---
-# Google textembedding Gecko model card
+# Model card: Google textembedding Gecko
 
 ## Overview
 
