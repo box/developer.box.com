@@ -117,7 +117,7 @@ Provide collaboration capabilities within the Content Preview.
 
 <Header centered>
 
-Build interactive portals
+Build custom portals
 
 </Header>
 
