@@ -62,7 +62,7 @@ Box UI Elements are pre-built UI components that allow extending custom portals 
 
 <Centered mid>
   <Header centered>
-    Build interactive portals
+    Build custom portals
   </Header>
   Learn more from videos, blog posts and sample code related to Box UI Elements.
 
@@ -70,17 +70,14 @@ Box UI Elements are pre-built UI components that allow extending custom portals 
     <Tile image="BUIE-portal" title="Read more about creating custom portals"
       href="https://medium.com/box-developer-blog/build-a-content-portal-using-box-ui-elements-react-tailwind-css-vercel-part-1-f1c509621ceb">
         Build a content portal with customized experience using Box UI Elements.
-
     </Tile>
     <Tile image="BUIE-sample" title="Clone and deploy a demo project"
       href="https://github.com/box-community/box-custom-portal-demo?tab=readme-ov-file#box-custom-portal-demo">
         Featuring Box APIs, Box UI Elements, React, Tailwind CSS, and Vercel.
-
     </Tile>
     <Tile image="BUIE-AI" title="Box AI for Box UI Elements"
       href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
         See a demo of the Box AI API document Q&A endpoint.
-
     </Tile>
   </TileGrid>
 </Centered>
