@@ -42,7 +42,7 @@ Boxウェブアプリでは日付が日付選択機能として表示されま�
 
 `date`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-`date`フィールドの必須属性は、`type`、`displayName`、および`key`です。
+The required attributes for a `date` field are a `type`, a `displayName`, and a `key`.
 
 ```json
 {
@@ -61,13 +61,13 @@ Boxウェブアプリでは日付が日付選択機能として表示されま�
 
 ```
 
-必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
+Optionally, a `description` can be provided that is shown to a user in the UI, and the field can be set to `hidden` to hide it from users in the web and mobile apps.
 
 ## 日付フィールドの更新
 
 `date`テンプレートフィールドは、このフィールドが属する[テンプレートを更新][g_update_template]することで更新できます。テンプレートの更新は、ファイルまたはフォルダにすでに割り当てられているテンプレートも確実に更新される**操作**によって行われます。
 
-`date`メタデータフィールドを更新する際、関連する操作は、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作のみです。
+When updating a `date` metadata field, the only relevant operation is the `editField` operation, which can be used to change the field's `key`, `displayName`, `description`, and `hidden` values.
 
 ```json
 [

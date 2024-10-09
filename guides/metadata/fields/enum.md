@@ -34,7 +34,7 @@ fullyTranslated: true
 
 <Message notice>
 
-`enum`を使用すると、ユーザーは0個または1個の値を選択できます。ユーザーが複数の値を選択できるようにするには、[`multiSelect`][g_multi_select]テンプレートフィールドを使用します。
+An `enum` allows a user to select zero or a single value. To allow a user to select multiple values, use the [`multiSelect`][g_multi_select] template field.
 
 </Message>
 
@@ -42,7 +42,7 @@ fullyTranslated: true
 
 `enum`フィールドは、[メタデータテンプレートの作成][g_create_template]時、または`addField`操作による[テンプレートの更新][g_update_template]時にメタデータテンプレートに追加できます。
 
-`enum`フィールドの必須属性は、`type`、`displayName`、`key`、およびオプションのリストです。
+The required attributes for an `enum` field are a `type`, a `displayName`, a `key`, and a list of options.
 
 ```json
 {
@@ -66,7 +66,7 @@ fullyTranslated: true
 
 ```
 
-必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
+Optionally, a `description` can be provided that is shown to a user in the UI, and the field can be set to `hidden` to hide it from users in the web and mobile apps.
 
 ## `enum`フィールドの更新
 
@@ -74,7 +74,7 @@ fullyTranslated: true
 
 ### 基本的なフィールド値の変更
 
-`enum`メタデータフィールドを更新する際に可能な操作の1つとして、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作があります。
+When updating an `enum` metadata field, one of the possible operations is the `editField` operation, which can be used to change the field's `key`, `displayName`, `description`, and `hidden` values.
 
 ```json
 [
@@ -219,7 +219,7 @@ fullyTranslated: true
 
 ### オプションの削除
 
-`enum`フィールドからオプションを削除するには、`removeEnumOption`操作を使用します。この操作では、`fieldKey`に、変更する`enum`フィールドのキーを設定し、`enumOptionKey`に、削除するフィールドオプションのキーを設定します。
+Removing an option from an `enum` field can be achieved through the `removeEnumOption` operation. The operation expects the `fieldKey` to be set to the key of the `enum` field to change, and an `enumOptionKey` to be set to the key of the field option to remove.
 
 ```json
 [

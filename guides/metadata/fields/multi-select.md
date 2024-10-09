@@ -34,7 +34,7 @@ fullyTranslated: true
 
 <Message notice>
 
-`multiSelect`フィールドを使用すると、ユーザーは0個、1個、または複数個の値を選択できます。ユーザーが選択できる値を1つだけに制限するには、[`enum`][g_enum_field]テンプレートフィールドを使用します。
+A `multiSelect` field allows a user to select zero, one, or more values. To force a user to select only one value at most, use the [`enum`][g_enum_field] template field.
 
 </Message>
 
@@ -66,7 +66,7 @@ fullyTranslated: true
 
 ```
 
-必要に応じて、UIでユーザーに表示される`description`を指定できます。また、このフィールドを`hidden`に設定して、ウェブアプリとモバイルアプリでユーザーに表示されないようにすることもできます。
+Optionally, a `description` can be provided that is shown to a user in the UI, and the field can be set to `hidden` to hide it from users in the web and mobile apps.
 
 ## `multiSelect`フィールドの更新
 
@@ -74,7 +74,7 @@ fullyTranslated: true
 
 ### 基本的なフィールド値の変更
 
-`multiSelect`メタデータフィールドを更新する際に可能な操作の1つとして、フィールドの`key`、`displayName`、`description`、および`hidden`の値を変更するのに使用できる`editField`操作があります。
+When updating a `multiSelect` metadata field, one of the possible operations is the `editField` operation, which can be used to change the field's `key`, `displayName`, `description`, and `hidden` values.
 
 ```json
 [
@@ -141,7 +141,7 @@ fullyTranslated: true
 
 ### オプションの並べ替え
 
-`multiSelect`フィールドでオプションを並べ替えるには、`reorderMultiSelectOptions`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定するほか、`multiSelectOptionKeys`配列にはオプションのキーを順番に指定する必要があります。
+Reordering the options in a `multiSelect` field can be achieved through the `reorderMultiSelectOptions` operation. The operation expects the `fieldKey` to be set to the key of the `multiSelect` field to change, and a `multiSelectOptionKeys` array with the keys of the options in order.
 
 ```json
 [
@@ -165,8 +165,8 @@ fullyTranslated: true
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box (NL) BV"},
   {"key": "Box.com (UK) Ltd."},
+  {"key": "Box (NL) BV"},
   {"key": "KK Box Japan"}
 ]
 ...
@@ -181,7 +181,7 @@ fullyTranslated: true
 
 ### オプションの編集
 
-`multiSelect`フィールドのオプションを編集するには、`editMultiSelectOption`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定し、`multiSelectOptionKey`に、フィールドオプションのキーを設定する必要があります。最後に、`data`オブジェクトには、フィールドオプションの新しい`key`を指定する必要があります。
+Editing an option of a `multiSelect` field can be achieved through the `editMultiSelectOption` operation. The operation expects the `fieldKey` to be set to the key of the `multiSelect` field to change, and a `multiSelectOptionKey` to be set to the key of the field option. Finally, it expects a `data` object with the new `key` of the field option.
 
 ```json
 [
@@ -203,8 +203,8 @@ fullyTranslated: true
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box.nl BV"},
   {"key": "Box.com (UK) Ltd."},
+  {"key": "Box.nl BV"},
   {"key": "KK Box Japan"}
 ]
 ...
@@ -219,7 +219,7 @@ fullyTranslated: true
 
 ### オプションの削除
 
-`multiSelect`フィールドからオプションを削除するには、`removeMultiSelectOption`操作を使用します。この操作では、`fieldKey`に、変更する`multiSelect`フィールドのキーを設定し、`multiSelectOptionKey`に、削除するフィールドオプションのキーを設定します。
+Removing an option from a `multiSelect` field can be achieved through the `removeMultiSelectOption` operation. The operation expects the `fieldKey` to be set to the key of the `multiSelect` field to change, and a `multiSelectOptionKey` to be set to the key of the field option to remove.
 
 ```json
 [
@@ -238,8 +238,8 @@ fullyTranslated: true
 ...
 "options": [
   {"key": "Box, Inc"},
-  {"key": "Box.nl BV"},
-  {"key": "Box.com (UK) Ltd."}
+  {"key": "Box.com (UK) Ltd."},
+  {"key": "Box.nl BV"}
 ]
 ...
 

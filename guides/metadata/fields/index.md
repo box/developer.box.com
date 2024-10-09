@@ -20,13 +20,13 @@ fullyTranslated: true
 
 すべてのメタデータテンプレートには`field`オブジェクトのリストが含まれており、各フィールドは次のいずれかのタイプになります。
 
-|                                                   |                        |
-| ------------------------------------------------- | ---------------------- |
-| [`string`](g://metadata/fields/string)            | テキストフィールド              |
-| [`float`](g://metadata/fields/float)              | 数値入力フィールド              |
-| [`date`](g://metadata/fields/date)                | 日付選択フィールド              |
-| [`enum`](g://metadata/fields/enum)                | 1つの値を選択するためのドロップダウンリスト |
-| [`multiSelect`](g://metadata/fields/multi-select) | 複数の値を選択するためのドロップダウンリスト |
+|                                                   |                                              |
+| ------------------------------------------------- | -------------------------------------------- |
+| [`string`](g://metadata/fields/string)            | テキストフィールド                                    |
+| [`float`](g://metadata/fields/float)              | 数値入力フィールド                                    |
+| [`date`](g://metadata/fields/date)                | 日付選択フィールド                                    |
+| [`enum`](g://metadata/fields/enum)                | A dropdown list for selecting a single value |
+| [`multiSelect`](g://metadata/fields/multi-select) | 複数の値を選択するためのドロップダウンリスト                       |
 
 ## 基本的なフィールドタイプ
 

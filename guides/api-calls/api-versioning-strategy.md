@@ -72,9 +72,9 @@ Boxは、1年に1回、APIエンドポイントに新しく重大な変更を行
 
 安定した各バージョンは最低12か月間サポートされます。つまり、新しいバージョンがリリースされると、以前のバージョンは非推奨となり、使用することはできますが、新機能が追加されなくなります。また、12か月経たずに新しいバージョンがリリースされることはありません。
 
-アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`404 - Not Found`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
+アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`400 - Bad Request`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
 
-リクエストにバージョンが含まれていない場合、APIはデフォルトのBox APIバージョン`V2`になります。ただし、非推奨の変更を適用するためにこの動作を利用することはお勧めしません。アプリを更新する際は、リクエストごとにAPIのバージョンを指定してください。アプリにバージョンを認識させることで、サポートされている期間中は同じように動作することが保証される特定の機能セットにコードを固定します。
+If your request doesn't include a version, the API defaults to the initial Box API version—the version available before year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated changes. To ensure consistency, always specify the API version with each request. By making your application version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported timeframe.
 
 ## APIバージョンの呼び出し
 
@@ -91,9 +91,31 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 ## バージョン管理のエラー
 
-### URLでの正しくないAPIバージョンの呼び出し
+### Calling an incorrect API version in the header
 
-Boxのドキュメントでは、APIのURLが示されています。たとえば、署名リクエストのエンドポイントへのアクセスには`https://api.box.com/2.0/sign_requests/`を使用します。お客様が誤って`https://api.box.com/3.0/sign_requests/`のような正しくないバージョンを呼び出すと、レスポンスでは`HTTP error code 404 - Not Found`エラーが返されます。
+If the API version provided in the `box-version` header is incorrect, the response will return an `HTTP 400 - Bad Request error`. The error response will have the following structure:
+
+```json
+{
+  "type": "error",
+  "status": 400,
+  "code": "invalid_api_version",
+  "message":  "Some error message",
+  "context_info": {
+    "conflicts": [
+      "box_version value must be in the format of YYYY.MM"
+    ]
+  },
+  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/versioning-errors/"
+}
+
+```
+
+The error message will contain information about the error and possible correct values for the `box-version` header. For example:
+
+* `The 'box-version' header supports only one header value per request, do not use comas.` - when the header contains multiple values separated by commas.
+* `Missing required box-version header.` - when the header is missing but required.
+* `Unsupported API version specified in 'box-version' header. Supported API versions: [LIST_OF_SUPPORTED_VERSIONS_COMA_SEPARATED]` - when the version specified is not supported by the API.
 
 ### 非推奨のAPIの呼び出し
 
@@ -106,10 +128,6 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 ```
 
 お客様はAPIレスポンスを監視し、このヘッダーが表示されたら新しいAPIバージョンへの移行を計画する必要があることに留意する必要があります。
-
-### 存在しないバージョンの呼び出し
-
-公式サポートが終了した古いAPIバージョン (`2023.0`など) をお客様が使用しようとすると、レスポンスでは`HTTP error code 404 - Not Found`が返されます。詳細については、[URLでの正しくないAPIバージョンの呼び出し](#calling-an-incorrect-api-version-in-the-url)を参照してください。
 
 ## Box SDKのバージョン管理の仕組み
 
@@ -222,12 +240,12 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 ## バージョン管理に関する考慮事項
 
-リクエストの作成時には、以下の点を考慮してください。
+When building your request, consider the following:
 
-* バージョンを指定しないと、サービスによってデフォルトのバージョンが返されますが、これは最新バージョンではない場合があります。
+* If you do not specify a version, the service will return the initial version—the version that existed before year-based versioning was introduced. If the initial version does not exist, the response will return an HTTP error code 400 - Bad Request.
+* If the version header is specified but the requested version is unavailable, the response will return an HTTP error code 400 - Bad Request.
 
-  * バージョンヘッダーがない場合、デフォルトのリソースバージョンは、URLに含まれるバージョンによって決まります。
-  * バージョンヘッダーが指定されていても、リクエストされたバージョンを利用できない場合、レスポンスではHTTPエラーコード`404 - Not Found`が返されます。
+You can check [Versioning Errors](#versioning-errors) for more information.
 
 APIに含まれるリソースまたはリソースのプロパティが非推奨になると、その変更は以下の1つ以上の方法で伝えられます。
 
