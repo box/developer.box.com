@@ -28,7 +28,7 @@ may be limited.
 </Message>
 
 <TileGrid rows="2">
-    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-openai-gpt-3-5-turbo-16k/">
+    <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
         `azure-gpt-3.5-turbo` models understand and generate natural language or code.
         <div>
           <strong style="background-color: #e8e8e8">Chat</strong>
