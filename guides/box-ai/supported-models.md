@@ -44,7 +44,8 @@ may be limited.
 
 | Provider        | Family |Availability| API Name                                | External documentation                                                  | Capability |
 | --------------- | ------ |-----| --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
-| Microsoft Azure | GPT    |available| `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-model]              | Chat       |
+| Microsoft Azure | GPT    |available| `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-model-gpt35]              | Chat       |
+| Microsoft Azure | GPT    |available| `azure__openai__gpt_4o_mini`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-model-gpt40]              | Chat       |
 | Microsoft Azure | GPT    |available| `azure__openai__text_embedding_ada_002` | [Azure OpenAI embeddings models documentation][azure-ai-embeddings]     | Embeddings |
 | GCP Vertex      | Gecko  | available |`google__textembedding_gecko`           | [Google Vertex AI embeddings models documentation][vertex-ai-model]     | Embeddings |
 | GCP Vertex      | Gecko  | available |`google__textembedding_gecko_002`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
@@ -64,7 +65,8 @@ may be limited.
 [text-gen]: e://post_ai_text_gen
 [agent]: e://get_ai_agent_default
 [openai-gpt-3-5-model]: https://platform.openai.com/docs/models/gpt-3-5-turbo
-[azure-ai-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
+[azure-ai-model-gpt35]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
+[azure-ai-model-gpt40]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
 [vertex-text-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text
