@@ -12,14 +12,16 @@ related_guides:
 Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
-The table lists the supported AI models you can use to:
+You can use the supported AI models:
 
 - get the [default AI agent configuration][agent],
-- override the AI agent configuration used in [`POST 2.0/ai/ask`][ask] and [`POST 2.0/ai/text_gen`][text-gen] endpoints.
+- override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
 
-When using `model` parameter your API calls, use the **API Name** listed in the table.
-For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `openai__gpt_3_5_turbo_16k` API name.
-Make sure you use **two underscores** after the provider name.
+## Using models
+
+When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
+
+For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `openai__gpt_3_5_turbo_16k` API name. Make sure you use **two underscores** after the provider name.
 
 <Message type='notice'>
 The list may change depending on the model availability.
@@ -29,34 +31,122 @@ may be limited.
 
 <TileGrid rows="2">
     <Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
-        `azure-gpt-3.5-turbo` models understand and generate natural language or code.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
-        </div>
+      A model primarily designed for chat-related tasks but not exclusively.
+      The model demonstrates high accuracy at responding in requested formats.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Notes</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/">
+      A multimodal model designed to handle lightweight tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/">
+      A multimodal model, highly efficient in handling complex, multi-step tasks.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/">
+      The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
+      <div>
+        <strong style="background-color: #e8e8e8">Default for Box AI Extract</strong>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/">
+      A most capable 2nd generation text embedding model. Skilled in
+      text search, code search, and sentence similarity.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
-        Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
-        The `google-textembedding-gecko` model features enhanced AI quality.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #e1ffe7">Available</strong>
-        </div>
+      A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
+      <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="google__textembedding_gecko_002" href="/">
+       A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="google__textembedding_gecko_003" href="/">
+      A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
     <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
-        `google__gemini_1_5_pro_001` is a foundation model that performs well at a variety of multimodal tasks.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #fffbf3">Preview</strong>
-        </div>
+      A foundation model that performs well at a variety of multimodal tasks.
+      <div>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
     </Tile>
-     <Tile type="model" title="google__text_unicorn" href="/">
-        PaLM 2 for Text `text-unicorn` foundation model is optimized for a variety of natural language tasks such as sentiment analysis, entity extraction, and content creation.
-        <div>
-          <strong style="background-color: #e8e8e8">Chat</strong>
-          <strong style="background-color: #fff6ff">Beta only</strong>
-        </div>
+    <Tile type="palm" title="google__text_unicorn" href="/">
+       A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
     </Tile>
+    <Tile type="palm" title="google__text_bison" href="/">
+      A model capable of creating document summaries, answers to questions, and content classification labels.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="palm" title="google__text_bison_32k" href="/">
+      An enhanced text-bison model capable of creating document summaries, answers to questions, and content classification labels.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_3_5_turbo_16k" href="/">
+      A model primarily designed for chat-related tasks, but not exclusively.
+      This model demonstrates high accuracy at responding in requested formats.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4_1106_preview" href="/">
+      A most advanced GPT multimodal model equipped with improved instruction following, JSON mode, reproducible outputs, and more.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__gpt_4_turbo_preview" href="/">
+      A large multimodal model that completes complex tasks (like code generation) with high accuracy.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="gpt" title="openai__text_embedding_ada_002" href="/">
+      A most capable 2nd generation text embedding model. Skilled in
+      text search, code search, and sentence similarity.
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <!-- <Tile type="model" title="aws__claude_3_haiku" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile>
+    <Tile type="model" title="aws__titan_text_lite" href="/">
+      Lorem ipsum
+      <div>
+        <strong style="background-color: #e1ffe7">Available</strong>
+      </div>
+    </Tile> -->
 </TileGrid>
 
 | Provider        | Family | Availability           | API Name                                | External documentation                                                  | Capability |
@@ -79,6 +169,8 @@ may be limited.
 
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
+[extract]: e://post_ai_extract
+[extract-structured]: e://post_ai_extract_structured
 [agent]: e://get_ai_agent_default
 [openai-gpt-3-5-model]: https://platform.openai.com/docs/models/gpt-3-5-turbo
 [azure-ai-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
