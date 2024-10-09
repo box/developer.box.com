@@ -36,7 +36,7 @@ Box UI Elements
 
 </Header>
 
-Box UI Elements are pre-built UI components that allow extending custom portals with the elements of the main Box web application. They are available both as React components and framework-agnostic JavaScript libraries.
+Box UI Elements are pre-built UI components that allow extending custom portals with the elements of the main Box web application.
 
 </HeroImage>
 
@@ -52,7 +52,7 @@ Interactive Demos
 
 <p style="text-align: left; margin-left: 0;">
 
-Try out our interactive demos of featured Box UI Elements.
+Box UI Elements are available both as React components and framework-agnostic JavaScript libraries.
 
 </p>
 
@@ -113,7 +113,7 @@ Provide collaboration capabilities within the Content Preview.
 
 </Centered>
 
-<!-- <Centered mid>
+<Centered mid>
 
 <Header centered>
 
@@ -146,5 +146,3 @@ See a demo of the Box AI API document Q&A endpoint.
 </TileGrid>
 
 </Centered>
-
- -->

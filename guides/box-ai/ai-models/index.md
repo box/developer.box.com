@@ -9,10 +9,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 2
+total_steps: 4
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-openai-gpt-3-5-turbo-16k
+next_page_id: box-ai/ai-models/azure-gpt-3-5-turbo-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -44,9 +44,9 @@ may be limited.
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/">
+<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card/">
 
-GPT-3.5 Turbo models can understand and generate natural language or code.
+`azure-gpt-3.5-turbo` models understand and generate natural language or code.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -65,10 +65,10 @@ Available
 
 </Tile>
 
-<Tile type="model" title="google__textembedding_gecko" href="/">
+<Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
 
 Text embedding models convert textual data into numerical vectors that can be processed by machine learning algorithms.
-The Gecko model features enhanced AI quality.
+The `google-textembedding-gecko` model features enhanced AI quality.
 <div>
 
 <strong style="background-color: #e8e8e8">
@@ -89,7 +89,7 @@ Available
 
 <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
 
-Gemini 1.5 Pro is a foundation model that performs well at a variety of multimodal tasks.
+`google__gemini_1_5_pro_001` is a foundation model that performs well at a variety of multimodal tasks.
 <div>
 
 <strong style="background-color: #e8e8e8">
