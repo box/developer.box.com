@@ -7,7 +7,7 @@ related_guides:
   - box-ai/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
-# Google textembedding Gecko model card
+# Model card: Google textembedding Gecko
 
 ## Overview
 
