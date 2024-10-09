@@ -67,7 +67,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Supported AI models"
-      href="/guides/box-ai/supported-models/">
+      href="/guides/box-ai/ai-models/supported-models/">
         Check table list of the supported AI models.
 
         <strong style="background-color: #e8e8e8">Documentation</strong>
