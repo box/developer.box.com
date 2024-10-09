@@ -22,8 +22,7 @@ Box UI Elements are pre-built UI components that allow extending custom portals 
     Interactive Demos
   </Header>
   <p style="text-align: left; margin-left: 0;">
-    Try out our interactive demos of featured Box UI Elements.<br/>
-    <span>They are available both as React components and framework-agnostic JavaScript libraries.</span>
+    Box UI Elements are available both as React components and framework-agnostic JavaScript libraries.
   </p>
   <BuieDemo></BuieDemo>
 
