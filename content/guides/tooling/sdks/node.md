@@ -20,7 +20,7 @@ project.
  [Node SDK][node] is currently in maintenance mode and will be deprecated soon.
  This means only critical security updates and bug fixes will be
  implemented.
- It is recommended to use the [auto-generated Typescript SDK][ts-gen].
+ It is recommended to use the [auto-generated TypeScript SDK][ts-gen].
 </Message>
 
 <CTA to="https://github.com/box/box-node-sdk">
