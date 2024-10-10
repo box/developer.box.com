@@ -139,7 +139,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     </Tile>
     <Tile image="API-interview" title="Hear from Box CPO Diego Dugatkin"
       href="https://www.youtube.com/watch?v=NA4NiqBdSg4&t=2s">
-        Learn why Box chose to expose Box AI via our public API.
+        Learn why Box chose to expose Box AI through our public API.
 
     </Tile>
   </TileGrid>
