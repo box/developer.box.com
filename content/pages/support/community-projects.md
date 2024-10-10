@@ -64,7 +64,7 @@ Want to submit your project? Please review the
 [sdk-ruby]: https://github.com/cburnette/boxr
 [sdk-r]: https://github.com/brendan-r/boxr
 [sdk-powershell]: https://github.com/box-community/box-powershell-sdk-v2
-[sdk-poshbox]: https://github.com/thelastofreed/PoshBox
+[sdk-poshbox]: https://github.com/enthusedcoder/poshbox
 [sdk-php-laravel]: https://github.com/maengkom/boxapi
 [sdk-ph]: https://github.com/golchha21/BoxPHPAPI
 [connector-azure]: https://docs.microsoft.com/en-us/azure/connectors/connectors-create-api-box
