@@ -28,6 +28,10 @@ titles:
     The title for the section of a resource that shows
     what a typical resource looks like
   resource_example: Response Example
+  // deprecated_entries: |-
+    The title for the section of an endpoint that shows
+    deprecated entries
+  deprecated_entries: Deprecated
 
 buttons:
   // copy: |-
@@ -225,3 +229,25 @@ tooltips:
     Describes how a request header name is not case sensitive
   header: |-
     Header names are never case sensitive
+
+pill:
+  // beta: |-
+    Pill added to beta endpoints and resources
+  beta: Beta
+  // latest_version: |-
+    Pill added to the latest version of an endpoint or resources
+  latest_version: Latest version
+  // deprecated: |-
+    Pill added to deprecated endpoints and resources
+  deprecated: Deprecated
+
+sidebar:
+  titles:
+    // deprecated_entries: |-
+      The title for the sidebar section of an endpoint that shows
+      deprecated entries
+    deprecated_entries: Deprecated
+
+  filter:
+    // placeholder: Placeholder text for the search filter in the sidebar
+    placeholder: "Filter by name"
