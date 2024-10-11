@@ -49,8 +49,6 @@ sample_code:
     headline: Box AI API
     paragraph: Use this endpoint to integrate
      the document summary into your application.
-    pricing: Box AI API is available in public beta to all
-      Enterprise Plus customers.
   metadata:
     headline: Box AI API - extract structured
     paragraph: Use this endpoint to add
