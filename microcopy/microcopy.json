@@ -206,15 +206,24 @@
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "Get started",
   "headers.primary.links.documentation.text": "Documentation",
+  "headers.primary.links.develop.text": "Develop",
+  "headers.primary.links.connect.text": "Connect",
+  "headers.primary.links.explore.text": "Explore",
   "headers.primary.links.quickstarts.text": "Getting Started",
   "headers.primary.links.community.text": "Community",
-  "headers.primary.links.community.url": "https://forum.box.com",
+  "headers.primary.links.community_forum.text": "Box Developer Community",
+  "headers.primary.links.community_forum.url": "https://community.box.com/",
+  "headers.primary.links.events.text": "Events",
   // The text for the link to the learn section
   "headers.primary.links.learn.text": "Box Platform",
   "headers.primary.links.learn.url": "/platform/",
   // The text for the link to the learn section
   "headers.primary.links.learn-sign.text": "Box Sign",
   "headers.primary.links.learn-sign.url": "/sign/",
+  "headers.primary.links.ai_dev_zone.text": "Box AI Developer Zone",
+  "headers.primary.links.ai_dev_zone.url": "/sign/",
+  "headers.primary.links.buie.text": "Box UI Elements",
+  "headers.primary.links.buie.url": "/box-ui-elements",
   // The text for the link to the old Get Started guides
   "headers.primary.links.get_started.text": "Quick Start",
   // The URL to the old Get Started guides
@@ -240,6 +249,7 @@
   // The URL to the old page on SDKs - DO NOT TRANSLATE
   "headers.primary.links.support.url": "/support/",
   "headers.primary.links.additional_resouces.text": "Additional resources",
+  "headers.primary.links.overview.text": "Overview",
   // The text for the Medium Dev Blog
   "headers.primary.links.blog.text": "Box Developer Blog",
   // The URL to Medium bev blog
@@ -256,11 +266,18 @@
   "headers.primary.buttons.signup.text": "Sign up",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https://account.box.com/signup/n/developer#ty9l3",
-  "headers.primary.featured.tag.text": "Featured",
+  "headers.primary.featured.tag.text": "New",
   "headers.primary.featured.title.text": "Box AI Developer Zone",
   "headers.primary.featured.details.text": "Box AI Developer Zone features interactive\ndemos to give you hands-on experience with Box AI API",
   "headers.primary.featured.cta.text": "Try it out!",
-  "headers.primary.featured.cta.url": "/ai-dev-zone/",
+  "headers.primary.develop_featured.tag.text": "Featured",
+  "headers.primary.develop_featured.title.text": "Box Sample Code Catalog",
+  "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
+  "headers.primary.develop_featured.cta.text": "Browse sample code",
+  "headers.primary.connect_featured.tag.text": "Event",
+  "headers.primary.connect_featured.title.text": "BoxWorks",
+  "headers.primary.connect_featured.details.text": "Join BoxWorks 2024 to discover what's possible with content and AI!",
+  "headers.primary.connect_featured.cta.text": "Register now",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
   // A short label to signify that this page is new
@@ -738,6 +755,14 @@
   "ai_dev_zone.unstructured_metadata_filters.json": "JSON",
   "ai_dev_zone.unstructured_metadata_filters.natural": "Natural language",
   "ai_dev_zone.unstructured_metadata_filters.other": "Other",
+  "box_ui_elements.demoTiles.contentExplorer.title": "Content Explorer",
+  "box_ui_elements.demoTiles.contentExplorer.description": "Embed a folder view of content stored in Box in your web applications. Allow users to navigate through the folder hierarchy and rename, delete, or share files.",
+  "box_ui_elements.demoTiles.contentPicker.title": "Content Picker",
+  "box_ui_elements.demoTiles.contentPicker.description": "Add support for selecting Box files and folders in your web applications.",
+  "box_ui_elements.demoTiles.contentPreview.title": "Content Preview",
+  "box_ui_elements.demoTiles.contentPreview.description": "Embed high quality and interactive previews of over 120 file types.",
+  "box_ui_elements.demoTiles.contentSidebar.title": "Content Sidebar",
+  "box_ui_elements.demoTiles.contentSidebar.description": "Implement viewing file-related activity, metadata, and details including versions, comments, and tasks.",
   // The prefix for the selected API version
   "versions.label": "API version"
 }
