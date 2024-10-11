@@ -77,7 +77,7 @@ Box UI Elements are pre-built UI components that allow you to extend custom port
     </Tile>
     <Tile image="BUIE-AI" title="Box AI for Box UI Elements"
       href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
-        See a demo of the Box AI API document Q&A endpoint.
+        See how to embed Box AI in the Content Preview UI Element.
     </Tile>
   </TileGrid>
 </Centered>
