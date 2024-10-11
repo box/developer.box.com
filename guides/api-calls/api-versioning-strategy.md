@@ -74,7 +74,7 @@ Boxは、1年に1回、APIエンドポイントに新しく重大な変更を行
 
 アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`400 - Bad Request`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
 
-If your request doesn't include a version, the API defaults to the initial Box API version—the version available before year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated changes. To ensure consistency, always specify the API version with each request. By making your application version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported timeframe.
+リクエストにバージョンが含まれていない場合、APIはデフォルトで、最初のBox APIバージョン (年ベースのバージョン管理が導入される前のバージョン) になります。ただし、非推奨の変更を適用する際にこの動作を利用することはお勧めしません。一貫性を確保するために、リクエストごとに必ずAPIバージョンを指定してください。アプリケーションにバージョンを認識させることで、アプリケーションを特定の機能セットに固定し、サポートされている期間中は一貫した動作が保証されます。
 
 ## APIバージョンの呼び出し
 
@@ -91,9 +91,9 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 ## バージョン管理のエラー
 
-### Calling an incorrect API version in the header
+### ヘッダーでの正しくないAPIバージョンの呼び出し
 
-If the API version provided in the `box-version` header is incorrect, the response will return an `HTTP 400 - Bad Request error`. The error response will have the following structure:
+`box-version`ヘッダーで指定されたAPIバージョンが正しくない場合、レスポンスでは`HTTP 400 - Bad Request error`が返されます。このエラーレスポンスの構造は次のようになります。
 
 ```json
 {
@@ -111,11 +111,11 @@ If the API version provided in the `box-version` header is incorrect, the respon
 
 ```
 
-The error message will contain information about the error and possible correct values for the `box-version` header. For example:
+エラーメッセージには、エラーに関する情報のほか、`box-version`ヘッダーに適切と思われる値が含まれます。以下に例を示します。
 
-* `The 'box-version' header supports only one header value per request, do not use comas.` - when the header contains multiple values separated by commas.
-* `Missing required box-version header.` - when the header is missing but required.
-* `Unsupported API version specified in 'box-version' header. Supported API versions: [LIST_OF_SUPPORTED_VERSIONS_COMA_SEPARATED]` - when the version specified is not supported by the API.
+* `The 'box-version' header supports only one header value per request, do not use comas.` - ヘッダーに複数の値がコンマで区切って含まれている場合。
+* `Missing required box-version header.` - ヘッダーが存在しないものの、必要な場合。
+* `Unsupported API version specified in 'box-version' header. Supported API versions: [LIST_OF_SUPPORTED_VERSIONS_COMA_SEPARATED]` - 指定されたバージョンがAPIでサポートされていない場合。
 
 ### 非推奨のAPIの呼び出し
 
@@ -240,12 +240,12 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 ## バージョン管理に関する考慮事項
 
-When building your request, consider the following:
+リクエストの作成時には、以下の点を考慮してください。
 
-* If you do not specify a version, the service will return the initial version—the version that existed before year-based versioning was introduced. If the initial version does not exist, the response will return an HTTP error code 400 - Bad Request.
-* If the version header is specified but the requested version is unavailable, the response will return an HTTP error code 400 - Bad Request.
+* バージョンを指定しないと、サービスによって最初のバージョン (年ベースのバージョン管理が導入される前に存在していたバージョン) が返されます。最初のバージョンが存在しない場合、レスポンスでは、HTTPエラーコード400 - Bad Requestが返されます。
+* バージョンヘッダーが指定されていても、リクエストされたバージョンを利用できない場合、レスポンスではHTTPエラーコード400 - Bad Requestが返されます。
 
-You can check [Versioning Errors](#versioning-errors) for more information.
+詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
 
 APIに含まれるリソースまたはリソースのプロパティが非推奨になると、その変更は以下の1つ以上の方法で伝えられます。
 

@@ -78,7 +78,7 @@ fullyTranslated: true
 
 ### テンプレートへのフィールドの追加
 
-The operation `addField` adds a field to a template.
+`addField`操作では、テンプレートにフィールドを追加します。
 
 | パラメータ  |                    |
 | ------ | ------------------ |
