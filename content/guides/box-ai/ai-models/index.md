@@ -14,12 +14,16 @@ alias_paths:
 Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
+## Using models
+
+<Message type="tip">
+Some of the AI models mentioned in this document support specific Box products. See details in model cards below.
+</Message>
+
 You can use the supported AI models:
 
 - get the [default AI agent configuration][agent],
 - override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
-
-## Using models
 
 When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
 
