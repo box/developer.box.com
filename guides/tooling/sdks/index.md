@@ -50,7 +50,7 @@ these projects to full parity.
 
 ## Next generation SDKs
 
-The latest generation Box Python SDK, Box Typescript
+The latest generation Box Python SDK, Box TypeScript
 SDK, .NET SDK, and Swift SDK are designed to elevate the developer
 experience and streamline your integration
 with the Box Content Cloud.

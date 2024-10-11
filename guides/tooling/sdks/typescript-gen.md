@@ -24,18 +24,18 @@ source_url: >-
 ---
 # Install Typescript SDK (Generated)
 
-You can use the **auto-generated** Box Typescript SDK to call Box APIs in a Typescript project.
+You can use the **auto-generated** Box TypeScript SDK to call Box APIs in a TypeScript project.
 This [next generation SDK][next-gen] brings along new functionality to designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
 
 <CTA to="https://github.com/box/box-typescript-sdk-gen">
 
-Learn more about auto-generated Typescript SDK on GitHub
+Learn more about auto-generated TypeScript SDK on GitHub
 
 </CTA>
 
 ## NPM installation
 
-To install the Typescript SDK run the following command from your terminal
+To install the TypeScript SDK run the following command from your terminal
 window or command prompt using the [Node Package Manager][npm].
 
 ```shell
