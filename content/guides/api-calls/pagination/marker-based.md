@@ -3,6 +3,7 @@ rank: 2
 related_endpoints:
   - get_folders_id_items
   - get_files_id_collaborations
+  - get-folders-id-collaborations
   - get_webhooks
   - get_metadata_templates_enterprise
   - get_recent_items
