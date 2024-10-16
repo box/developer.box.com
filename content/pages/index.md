@@ -98,7 +98,7 @@ All the developer resources to help you get the most from Box products
       href="/reference/">
       *Box API Reference*
     </Tile>
-    <Tile type="python" title="Box Python SDK"
+    <Tile type="python" title="Python Gen SDK"
     href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
       *box-python-sdk-gen*
     </Tile>
@@ -106,11 +106,11 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-java-sdk#readme">
       *box-java-sdk*
     </Tile>
-    <Tile type="box-orange" title="Box TypeScript"
+    <Tile type="box-orange" title="TypeScript Gen SDK"
     href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
       *box-typescript-sdk-gen*
     </Tile>
-    <Tile type="net" title="Box .NET SDK"
+    <Tile type="net" title="Box .NET Gen SDK"
     href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
       *box-dotnet-sdk-gen*
     </Tile>
@@ -118,7 +118,7 @@ All the developer resources to help you get the most from Box products
     href="https://github.com/box/box-ios-sdk#readme">
       *box-ios-sdk*
     </Tile>
-    <Tile type="tool" title="Box Swift SDK (beta)"
+    <Tile type="tool" title="Box Swift Gen SDK (beta)"
     href="https://github.com/box/box-ios-sdk#readme">
       *box-swift-sdk-gen*
     </Tile>

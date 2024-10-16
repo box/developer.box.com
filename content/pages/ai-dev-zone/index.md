@@ -67,7 +67,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Supported AI models"
-      href="/guides/box-ai/ai-models/index/">
+      href="/guides/box-ai/supported-models/">
         Check table list of the supported AI models.
 
         <strong style="background-color: #e8e8e8">Documentation</strong>
@@ -124,7 +124,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     </Tile>
     <Tile image="API-q&a" title="Endpoint overivew"
       href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
-        See a demo of the Box AI API Q&A endpoint.
+        See a demo of the Box AI API document Q&A endpoint.
 
     </Tile>
     <Tile image="API-extract" title="Endpoint overivew"
@@ -139,7 +139,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     </Tile>
     <Tile image="API-interview" title="Hear from Box CPO Diego Dugatkin"
       href="https://www.youtube.com/watch?v=NA4NiqBdSg4&t=2s">
-        Learn why Box chose to expose Box AI via our public API.
+        Learn why Box chose to expose Box AI through our public API.
 
     </Tile>
   </TileGrid>

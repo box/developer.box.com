@@ -254,7 +254,6 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 </Tabs>
 
 [prereq]: g://box-ai/prerequisites
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
-[models]: g://box-ai/ai-models/index
+[models]: g://box-ai/supported-models
 [ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
+[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial

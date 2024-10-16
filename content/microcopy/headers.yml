@@ -35,13 +35,6 @@ primary:
     events:
       text: Events
 
-    partners:
-      // text: The text for the link to the partners section
-      text: Partners
-
-      //url: The URL to the partners section
-      url: /guides/partners
-
     learn:
       // text: The text for the link to the learn section
       text: Box Platform
@@ -165,9 +158,9 @@ primary:
 
     details:
       text: |-
-        Find useful scripts, app examples, and inspiring
-        use cases! Browse 90+ open-source repositories
-        in various programming languages.
+        Browse 90+ open-source repositories
+        in various programming languages to find useful scripts,
+        app examples, and inspiring use cases!
 
     cta:
       text: |-

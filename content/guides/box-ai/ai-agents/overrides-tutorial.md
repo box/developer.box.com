@@ -131,9 +131,9 @@ The `llm_endpoint_params` configuration options differ depending on the overall 
 
 For example, both `llm_endpoint_params` objects accept a `temperature` parameter, but the outcome differs depending on the model.
 
-For Google models, the temperature is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
+For Google models, the [`temperature`][google-temp] is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
 
-For OpenAI models, temperature is the sampling temperature with values between 0 and 2. Higher values like 0.8 make the output more random, while lower values like 0.2 make it more focused and deterministic. When introducing your own configuration, use `temperature` or or `top_p` but not both.
+For OpenAI models, [`temperature`][openai-temp] is the sampling temperature with values between 0 and 2. Higher values like 0.8 make the output more random, while lower values like 0.2 make it more focused and deterministic. When introducing your own configuration, use `temperature` or or `top_p` but not both.
 
 ### System message
 
@@ -353,3 +353,5 @@ Using this model results in a response listing more metadata entries:
 [openai-params]: r://ai-llm-endpoint-params-openai
 [openai-tokens]: https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them
 [agent]: e://get_ai_agent_default
+[google-temp]: https://ai.google.dev/gemini-api/docs/models/generative-models#model-parameters
+[openai-temp]: https://community.openai.com/t/temperature-top-p-and-top-k-for-chatbot-responses/295542
