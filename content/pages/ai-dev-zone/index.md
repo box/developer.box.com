@@ -58,6 +58,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
       href="/reference/resources/ai-response/">
         Check the API reference for specification details.
 
+<<<<<<< HEAD
         <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
     <Tile type="code-new" title="Developer guides"
@@ -65,12 +66,25 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
         Browse the guides to learn how to use Box AI API.
 
         <strong style="background-color: #e8e8e8">Documentation</strong>
+=======
+        <strong style="background-color: #e8e8e8">AI API</strong>
+    </Tile>
+    <Tile type="code-new" title="Developer guides"
+      href="/guides/box-ai/">
+        Browse the guides to learn how to use Box AI Platform API.
+
+        <strong style="background-color: #e8e8e8">AI API</strong>
+>>>>>>> d527af77d (Add video section in the AI Dev zone)
     </Tile>
     <Tile type="code-new" title="Supported AI models"
       href="/guides/box-ai/supported-models/">
         Check table list of the supported AI models.
 
+<<<<<<< HEAD
         <strong style="background-color: #e8e8e8">Documentation</strong>
+=======
+        <strong style="background-color: #e8e8e8">AI API</strong>
+>>>>>>> d527af77d (Add video section in the AI Dev zone)
     </Tile>
     <Tile type="code-new" title="Support"
       href="https://community.box.com/">
@@ -86,13 +100,21 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     Box for AI Integrations
   </Header>
   <p style="text-align: left; margin-left: 0;">
+<<<<<<< HEAD
     Use Box for AI Integrations to extend LLM models' existing knowledge bases.
+=======
+    Expand the capabilities of your applications beyond the models’ existing knowledge bases.
+>>>>>>> d527af77d (Add video section in the AI Dev zone)
   </p>
 
   <TileGrid rows="4">
     <Tile type="box-brown" title="LlamaIndex"
       href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
+<<<<<<< HEAD
         Enable access to Box content within LLM workflows with Box reader suite for LlamaIndex.
+=======
+        Enable access of Box content within LLM workflows with Box reader suite for LlamaIndex.
+>>>>>>> d527af77d (Add video section in the AI Dev zone)
 
         <strong style="background-color: #e8e8e8">New</strong>
     </Tile>
@@ -109,6 +131,7 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
   <Header centered>
     Videos
   </Header>
+<<<<<<< HEAD
   Watch the latest Box AI API tutorials and demos.
 
   <TileGrid rows="3">
@@ -140,6 +163,39 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     <Tile image="API-interview" title="Hear from Box CPO Diego Dugatkin"
       href="https://www.youtube.com/watch?v=NA4NiqBdSg4&t=2s">
         Learn why Box chose to expose Box AI through our public API.
+=======
+  Watch the latest Box AI Platform API tutorials and demos.
+
+  <TileGrid rows="3">
+    <Tile image="AI-API" title="Quick overview"
+      href="https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API - In One Minute
+
+    </Tile>
+    <Tile image="API-q&a" title="Document Q&A"
+      href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API - Document Q&A
+
+    </Tile>
+    <Tile image="API-text-gen" title="Text generation"
+      href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API - Text generation
+
+    </Tile>
+    <Tile image="API-extract" title="Metadata extraction"
+      href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API Demo - Metadata extraction - Freeform
+
+    </Tile>
+    <Tile image="API-extract-structured" title="Metadata structured extraction"
+      href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API - Metadata extraction - Structured
+
+    </Tile>
+    <Tile image="AI-BUIE" title="Box AI for Box UI Elements"
+      href="https://www.youtube.com/watch?v=8DmMgkm-6Tw&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Box AI Platform API - Preview UI element
+>>>>>>> d527af77d (Add video section in the AI Dev zone)
 
     </Tile>
   </TileGrid>
