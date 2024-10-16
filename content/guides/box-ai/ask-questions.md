@@ -11,6 +11,11 @@ related_guides:
 
 # Ask questions to Box AI
 
+<Message type="notice">
+Box AI API is available to all Enterprise Plus customers.
+
+</Message>
+
 Box AI API allows you to
 ask a question about a supplied file or
 a set of files, and get a response based on
