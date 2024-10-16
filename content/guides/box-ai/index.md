@@ -14,7 +14,7 @@ related_guides:
 # Box AI
 
 <Message type="notice">
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 Box AI API allows you to use Box AI
@@ -114,19 +114,6 @@ Switch the language to Japanese to get
 better results for this language.
 
 </Message>
-
-## Box AI API in User Activity Report (UAR)
-
-[User Activity Reports][uar] provide an overview of the
-actions the users are taking in Box. Box Admins
-use this report to view the actions taken by their
-users within a given time period, and this
-includes interactions with Box AI. The report
-contains the following action types that Box admins can
-select to get details for Box AI:
-
-* `AI query`: The user queried Box AI and received a response.
-* `Failed AI query`: The user queried Box AI but did not receive a response.
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
