@@ -201,3 +201,5 @@ may be limited.
 [ai-model]: e://get-ai-agent-default#param-model
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 [aws-titan]: https://aws.amazon.com/bedrock/titan/
+[extract]: e://post_ai_extract
+[extract-structured]: e://post_ai_extract_structured
