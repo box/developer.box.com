@@ -33,32 +33,32 @@ application.
 The Content Preview UI Element works differently from the other UI Elements, as the React component is a wrapper for the [Box Content Preview library][previewlib]. It also requires passing a language (defaults to `en-US`) since the preview library bundles are localized.
 
 ```js
-var ContentPreview = require('./ContentPreview').default;
+var ContentPreview = require("./ContentPreview").default;
 
 <IntlProvider locale="en">
-    <ContentPreview
-        contentSidebarProps={{
-            detailsSidebarProps: {
-                hasAccessStats: true,
-                hasClassification: true,
-                hasNotices: true,
-                hasProperties: true,
-                hasRetentionPolicy: true,
-                hasVersions: true,
-            },
-            features: FEATURES,
-            hasActivityFeed: true,
-            hasMetadata: true,
-            hasSkills: true,
-            hasVersions: true,
-        }}
-        hasHeader={true}
-        features={FEATURES}
-        fileId={FILE_ID}
-        token={TOKEN}
-        {...PROPS}
-    />
-</IntlProvider>
+  <ContentPreview
+    contentSidebarProps={{
+      detailsSidebarProps: {
+        hasAccessStats: true,
+        hasClassification: true,
+        hasNotices: true,
+        hasProperties: true,
+        hasRetentionPolicy: true,
+        hasVersions: true,
+      },
+      features: FEATURES,
+      hasActivityFeed: true,
+      hasMetadata: true,
+      hasSkills: true,
+      hasVersions: true,
+    }}
+    hasHeader={true}
+    features={FEATURES}
+    fileId={FILE_ID}
+    token={TOKEN}
+    {...PROPS}
+  />
+</IntlProvider>;
 ```
 
 The Content Preview Library fetches information
@@ -222,18 +222,18 @@ being previewed or a map of typed file IDs to access token for those files.
 
 ```js
 // Example token generator function that resolves to a single access token
-var singleTokenGenerator = function() {
-    return someApi.getToken().then(function(data) {
-        return data.token;
-    });
+var singleTokenGenerator = function () {
+  return someApi.getToken().then(function (data) {
+    return data.token;
+  });
 };
 
 // Example token generator function that resolves to a map of tokens
-var mapTokenGenerator = function() {
-    return Promise.resolve({
-        file_1234: "some_token_abcd",
-        file_2345: "some_token_bcde"
-    });
+var mapTokenGenerator = function () {
+  return Promise.resolve({
+    file_1234: "some_token_abcd",
+    file_2345: "some_token_bcde",
+  });
 };
 ```
 
@@ -264,67 +264,67 @@ preview.removeListener(EVENTNAME, listener);
 - `viewer` event will be triggered when we have the viewer instance first available. This will be the same object that is also a property included in the `load` event. Preview triggers this event before `load` so that clients can attach their listeners before the `load` event is triggered.
 - `load` event will be triggered on every preview load when `show()` is called or if inter-preview navigation occurs. The event data will contain:
 
-    ```js
-    error: 'message', // Error message if any error occurred while loading
-    viewer: {...},    // Instance of the current viewer object if no error occurred
-    metrics: {...},   // Performance metrics
-    file: {...}       // Box file object with properties defined in file.js
-    ```
+  ```js
+  error: 'message', // Error message if any error occurred while loading
+  viewer: {...},    // Instance of the current viewer object if no error occurred
+  metrics: {...},   // Performance metrics
+  file: {...}       // Box file object with properties defined in file.js
+  ```
 
 - `navigate` event will be triggered when navigation happens. The event includes the file ID of the file being navigated to, and this event will trigger before `load`.
 - `notification` event will be triggered when either the preview wrapper or one of the viewers wants to notify something like a warning or non-fatal error. The event data will contain:
 
-    ```js
-    message: 'message', // Message to show
-    type: 'warning'    // 'warning', 'notice', or 'error'
-    ```
+  ```js
+  message: 'message', // Message to show
+  type: 'warning'    // 'warning', 'notice', or 'error'
+  ```
 
 - `viewerevent` Each viewer will trigger its own sets of events. For example, the Image viewer will trigger `rotate` or `resize`, etc. while other viewers may trigger another set of events. The preview wrapper will also re-emit events at the preview level, with event data containing:
 
-    ```js
-    event: EVENTNAME,         // Event name
-    data: DATA,               // Event data object
-    viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
-    fileId: fileId            // The file ID
-    ```
+  ```js
+  event: EVENTNAME,         // Event name
+  data: DATA,               // Event data object
+  viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
+  fileId: fileId            // The file ID
+  ```
 
 ### Example event usage
 
 ```js
 var preview = new Box.Preview();
-preview.addListener("viewer", viewer => {
-    viewer.addListener("rotate", () => {
-        // Do something when a viewer rotates a preview
-    });
+preview.addListener("viewer", (viewer) => {
+  viewer.addListener("rotate", () => {
+    // Do something when a viewer rotates a preview
+  });
 });
 
-preview.addListener("load", data => {
-    const viewer = data.viewer;
-    viewer.addListener("rotate", () => {
-        // Do something when a viewer rotates a preview
-    });
+preview.addListener("load", (data) => {
+  const viewer = data.viewer;
+  viewer.addListener("rotate", () => {
+    // Do something when a viewer rotates a preview
+  });
 });
 
-preview.addListener("viewerevent", data => {
-    if (data.viewerName === "Image") {
-        if (data.event === "rotate") {
-            // Do something when an image preview is rotated
-        }
-    } else if (data.viewerName === "Image360") {
-        if (data.event === "rotate") {
-            // Do something different when a 360-degree image is rotated
-        }
-    } else {
+preview.addListener("viewerevent", (data) => {
+  if (data.viewerName === "Image") {
+    if (data.event === "rotate") {
+      // Do something when an image preview is rotated
     }
+  } else if (data.viewerName === "Image360") {
+    if (data.event === "rotate") {
+      // Do something different when a 360-degree image is rotated
+    }
+  } else {
+  }
 });
 
-preview.addListener("rotate", data => {
-    if (data.viewerName === "Image") {
-        // Do something when an image preview is rotated
-    } else if (data.viewerName === "Image360") {
-        // Do something different when a 360-degree image is rotated
-    } else {
-    }
+preview.addListener("rotate", (data) => {
+  if (data.viewerName === "Image") {
+    // Do something when an image preview is rotated
+  } else if (data.viewerName === "Image360") {
+    // Do something different when a 360-degree image is rotated
+  } else {
+  }
 });
 ```
 
@@ -337,65 +337,65 @@ To add V4 annotations to preview:
 
 1. Run `npm i box-annotations@latest`to install [box annotations][annotations].
 
-    <Message warning>
+<Message warning>
 
-    Box annotations version should be at least major version 4 and up.
+Box annotations version should be at least major version 4 and up.
 
-    </Message>
+</Message>
 
 2. Run `npm i box-ui-elements@16.0.0` to install [BUIE][buie] version with annotation related change.
 
-    <Message warning>
+<Message warning>
 
-    Box UI elements should be the lowest working version that contains
-    fully working V4 annotations.
+Box UI elements should be the lowest working version that contains
+fully working V4 annotations.
 
-    </Message>
+</Message>
 
 3. Import content preview and box annotations into your application:
 
-    ```js
-    import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
+   ```js
+   import boxAnnotations from "https://cdn.skypack.dev/box-annotations@latest";
 
-    var file_id = 'YOUR FILE ID';
-    var accessToken = 'YOUR ACCESS TOKEN';
+   var file_id = "YOUR FILE ID";
+   var accessToken = "YOUR ACCESS TOKEN";
 
-    /* Enable annotations in sidebar */
-    var contentSidebarProps = {
-        hasActivityFeed: true,
-        features: {
-            activityFeed: {
-                annotations: {
-                    enabled: true
-                }
-            }
-        },
-    }
+   /* Enable annotations in sidebar */
+   var contentSidebarProps = {
+     hasActivityFeed: true,
+     features: {
+       activityFeed: {
+         annotations: {
+           enabled: true,
+         },
+       },
+     },
+   };
 
-    var options = {
-        container: '.previewer',
-        contentSidebarProps: contentSidebarProps,
+   var options = {
+     container: ".previewer",
+     contentSidebarProps: contentSidebarProps,
 
-        /* Enable annotations in preview */
-        enableAnnotationsDiscoverability: true,
-        enableAnnotationsImageDiscoverability: true,
-        showAnnotations: true,
-        showAnnotationsControls: true,
-        showAnnotationsDrawingCreate: true,
-    };
+     /* Enable annotations in preview */
+     enableAnnotationsDiscoverability: true,
+     enableAnnotationsImageDiscoverability: true,
+     showAnnotations: true,
+     showAnnotationsControls: true,
+     showAnnotationsDrawingCreate: true,
+   };
 
-    /* BoxAnnotations */
-    var annotations = new BoxAnnotations();
+   /* BoxAnnotations */
+   var annotations = new BoxAnnotations();
 
-    /* Box Preview */
-    var contentPreviewer = new Box.ContentPreview();
+   /* Box Preview */
+   var contentPreviewer = new Box.ContentPreview();
 
-    /* Set annotation into previewer */
-    options['boxAnnotations'] = annotations;
+   /* Set annotation into previewer */
+   options["boxAnnotations"] = annotations;
 
-    /* Show previewer */
-    contentPreviewer.show(file_id, accessToken, options);
-    ```
+   /* Show previewer */
+   contentPreviewer.show(file_id, accessToken, options);
+   ```
 
 <Message warning>
 
@@ -430,58 +430,121 @@ it is available to **Enterprise Plus** customers.
 
 </Message>
 
-The AI UI Element enhances the Content Preview UI Element
-with the Box AI Q&A functionality. This allows the developers
-to add the AI features to their custom app.
-Adding the element facilitates answering questions and
-taking actions like summarizing a document.
+Box AI for UI Elements enhances the Content Preview UI Element
+with additional features, allowing the developers
+to add the Box Q&A AI functionality to their custom app.
+Enriched with Box AI features, the Preview UI element brings the following functionality:
 
-To enable Box AI modal in content preview header, follow these steps:
+- Q&A and document summaries.
+- A **clear conversation** button that resets the conversation with Box AI.
+- Citations that, if present, appear below the answer.
+- Markdown support that allows you to ask AI to respond in Markdown format, including bullet points or tables
+- Question history that is kept under the hood so that both users and the AI can refer to previous context to achieve the best answer possible.
+- Suggested questions that appear at the top of the chat to assist with the conversation.
+
+![Box UI Element with Box AI options enabled](./images/box-ai-ui-element.jpg)
+
+### Enable Box AI for UI Elements
+
+To enable the Box AI modal in content preview header, follow these steps:
 
 1. Make sure your Node and React versions are `18.x` or higher.
-2. Download the [package that contains Box AI for UI Elements][aipackage].
-3. Pass the `contentAnswersProps` prop in Preview element.
+2. Download the [npm package that contains Box AI for UI Elements][aipackage] or directly from [Box CDN][installation].
+3. Install the peer dependencies:
 
-    ```js
-    var preview = new Box.Preview();
+   - [`box-ai-content-answers`][box-ai-content-answers]
+   - [`blueprint-web`][blueprint-web]
+   - [`blueprint-web-assets`][blueprint-web-assets]
 
-    preview.show(<FILE_ID>, <TOKEN>, {
-        container: '.preview-container',
-        contentAnswersProps: {
-            show: true,
-        },
-        hasHeader: true,
-    }); 
-    ```
+   To do so, run the following command:
 
-<Message type="notice">
+   ```sh
+   npx install-peerdeps box-ui-elements
+   ```
 
-Box AI for UI Elements is currently available only by
-installing the `npm` package.
-The CDN version is not yet supported.
+### Using JavaScript
 
-</Message>
+To enable Box AI features, pass the `contentAnswersProps` prop in the Preview element. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+
+```js
+const preview = new Box.Preview();
+const suggestedQuestions = [
+ {
+   label: 'What are the key takeaways?',
+   prompt: 'What are the key takeaways?',
+   id: '1234',
+ },
+ {
+   label: 'Summarize this document',
+   prompt: 'Summarize this document',
+   id: '5678',
+ },
+];
+
+preview.show(<FILE_ID>, <TOKEN>, {
+   container: '.preview-container',
+   contentAnswersProps={
+     show: true,
+     isCitationsEnabled: true,
+     isMarkdownEnabled: true,
+     isResetChatEnabled: true,
+     suggestedQuestions={suggestedQuestions}
+       }
+   hasHeader: true,
+});
+```
 
 ### Using React component
 
 You can also add Box AI element to a header in a React component.
-To do so, add `contentAnswersProps` with the field `show` set to `true`:
+To do so, add `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+
+<Message type='notice'>
+
+To localize the `suggestedQuestions` properly, make sure that the prompts are translated. The optional `label` property is for screen readers, while the `prompt` property is the text displayed to the user in the AI modal.
+
+</Message>
 
 ```js
-var ContentPreview = require('./ContentPreview').default;
+import ContentPreview from 'box-ui-elements/es/elements/content-preview';
+import { IntlProvider } from "react-intl";
 
-<IntlProvider locale="en">
-    <ContentPreview
-        contentAnswersProps={{
-            show: true,
-        }}
-        ...
-        fileId={FILE_ID}
-        token={TOKEN}
-        {...PROPS}
-    />
-</IntlProvider>
+const suggestedQuestions = [
+  {
+    label: 'What are the key takeaways?',
+    prompt: 'What are the key takeaways?',
+    id: '1234',
+  },
+  {
+    label: 'Summarize this document',
+    prompt: 'Summarize this document',
+    id: '5678',
+  },
+];
+
+export default () => {
+    const token = process.env.REACT_APP_BOX_DEVELOPER_TOKEN
+    let folderID = process.env.REACT_APP_BOX_PREVIEW_FILE_ID
+    return (
+      <IntlProvider locale="en">
+         <ContentPreview
+            contentAnswersProps={{
+              show: true,
+              isCitationsEnabled: true,
+              isMarkdownEnabled: true,
+              isResetChatEnabled: true,
+              suggestedQuestions={suggestedQuestions}
+            }}
+            fileId={FILE_ID}
+            token={TOKEN}
+            {...PROPS}
+         />
+      </IntlProvider>
+  );
+};
 ```
+
+You can further customize your apps using the following event listeners for Content Preview available with this release: `onAsk`, `onClearConversations`, and `onRequestClose`.
 
 ## Scopes
 
@@ -504,12 +567,12 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 
 ### Feature Scopes
 
-| Scope Name             | Permissions granted                                                                                                                                                                                                                                                                                                                             |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `item_download`        | Allows downloading/printing the content from the generated preview                                                                                                                                                                                                                                                                              |
+| Scope Name             | Permissions granted                                                                                                                                                                                                                                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `item_download`        | Allows downloading/printing the content from the generated preview                                                                                                                                                                                                                                                                                |
 | `annotation_edit`      | Allows users to edit annotations (delete). Note: For highlight annotations to work, the text layer on the document needs to be enabled for the user. Text layer is disabled for all users that don't have download permissions on the file. To enable highlight annotations for a user, please ensure they have download permissions on the file. |
-| `annotation_view_all`  | Allows users to view all users' annotations.                                                                                                                                                                                                                                                                                                     |
-| `annotation_view_self` | Allows users to view their own annotations only.                                                                                                                                                                                                                                                                                                 |
+| `annotation_view_all`  | Allows users to view all users' annotations.                                                                                                                                                                                                                                                                                                      |
+| `annotation_view_self` | Allows users to view their own annotations only.                                                                                                                                                                                                                                                                                                  |
 
 <Message>
 
@@ -521,7 +584,7 @@ token will need to include the `item_download` scope to enable highlighting.
 
 ### Sample Scenarios
 
-| Scenario  | Scopes                                                      |
+| Scenario                                                                                                                                                                       | Scopes                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
 | User should only be able to preview (not download/print, annotate)                                                                                                             | `base_preview`                                              |
 | User should be able to preview, download and print                                                                                                                             | `base_preview` + `item_download`                            |
@@ -533,6 +596,7 @@ token will need to include the `item_download` scope to enable highlighting.
 <!-- i18n-enable localize-links -->
 
 [filetypes]: https://support.box.com/hc/en-us/articles/360043695794-Viewing-Different-File-Types-Supported-in-Box-Content-Preview
+
 <!-- i18n-disable localize-links -->
 
 [downscope]: guide://authentication/tokens/downscope
@@ -545,3 +609,7 @@ token will need to include the `item_download` scope to enable highlighting.
 [expiredembed]: r://file--full/#param-expiring_embed_link
 [token]: g://authentication/tokens/developer-tokens
 [aipackage]: https://github.com/box/box-ui-elements/releases/tag/v20.0.0-beta.17
+[installation]: g://embed/ui-elements/installation
+[blueprint-web]: https://www.npmjs.com/package/@box/blueprint-web
+[box-ai-content-answers]: https://www.npmjs.com/package/@box/box-ai-content-answers
+[blueprint-web-assets]: https://www.npmjs.com/package/@box/blueprint-web-assets

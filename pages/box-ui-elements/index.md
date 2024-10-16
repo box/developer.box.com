@@ -36,7 +36,7 @@ Box UI Elements
 
 </Header>
 
-Box UI Elements are pre-built UI components that allow extending custom portals with the elements of the main Box web application.
+Box UI Elements are pre-built UI components that allow you to extend custom portals with the elements of the main Box web application.
 
 </HeroImage>
 
@@ -78,7 +78,7 @@ Explore more Box UI Elements
 
 <p style="text-align: left; margin-left: 0;">
 
-Follow along with additional guides and documentation
+Follow more guides and documentation
 to help get you up and running.
 
 </p>
@@ -87,19 +87,19 @@ to help get you up and running.
 
 <Tile type="ai" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
 
-See how to embed Box AI in Content Preview UI Element.
+See how to embed Box AI in the Content Preview UI Element.
 
 </Tile>
 
 <Tile type="upload" title="Content Uploader" href="/guides/embed/ui-elements/uploader/">
 
-Embed this component and allow users to upload files.
+Embed the Content Uploader and allow users to upload files.
 
 </Tile>
 
 <Tile type="ui-metadata" title="Metadata view" href="/guides/embed/ui-elements/explorer/#metadata-view">
 
-Display files based on specified metadata with Content Explorer.
+Display files based on specified metadata with the Content Explorer.
 
 </Tile>
 
@@ -127,7 +127,7 @@ Learn more from videos, blog posts and sample code related to Box UI Elements.
 
 <Tile image="BUIE-portal" title="Read more about creating custom portals" href="https://medium.com/box-developer-blog/build-a-content-portal-using-box-ui-elements-react-tailwind-css-vercel-part-1-f1c509621ceb">
 
-Build a content portal with customized experience using Box UI Elements.
+Build a content portal with a customized experience using Box UI Elements.
 
 </Tile>
 
@@ -139,7 +139,7 @@ Featuring Box APIs, Box UI Elements, React, Tailwind CSS, and Vercel.
 
 <Tile image="BUIE-AI" title="Box AI for Box UI Elements" href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
 
-See a demo of the Box AI API document Q&A endpoint.
+See how to embed Box AI in the Content Preview UI Element.
 
 </Tile>
 

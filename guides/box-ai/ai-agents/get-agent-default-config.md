@@ -25,7 +25,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -268,7 +268,6 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 </Tabs>
 
 [prereq]: g://box-ai/prerequisites
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
-[models]: g://box-ai/ai-models/index
+[models]: g://box-ai/supported-models
 [ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
+[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial

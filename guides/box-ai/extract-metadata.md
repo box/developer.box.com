@@ -10,7 +10,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/extract-metadata
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/extract-metadata-structured
@@ -22,7 +22,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -58,9 +58,6 @@ The `items` array can have exactly one element.
 |**`items.id`**|Box file ID of the document. The ID must reference an actual file with an extension. |`1233039227512`|
 |**`items.type`**|The type of the supplied input. | `file`|
 | `items.content` | The content of the item, often the text representation.  |    `This article is about Box AI`.    |
-| `dialogue_history.prompt` | The prompt previously provided by the client and answered by the Large Language Model (LLM).  | `Make my email about public APIs sound more professional` |
-| `dialogue_history.answer` | The answer previously provided by the LLM. |   `Here is a draft of your professional email about public APIs.` |
-| `dialogue_history.created_at` | The ISO date formatted timestamp of when the previous answer to the prompt was created.   | `2012-12-12T10:53:43-08:00` |
 |`ai_agent` | The AI agent used to override the default agent configuration. This parameter allows you to, for example, replace the default LLM with a custom one using the [`model`][model-param] parameter, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request. For specific use cases, see the [AI model overrides tutorial][overrides].| |
 
 ## Use case

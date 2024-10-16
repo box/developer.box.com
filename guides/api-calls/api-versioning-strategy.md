@@ -226,6 +226,14 @@ We use [oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGES-EXA
 
 </Message>
 
+## AI agent configuration versioning
+
+The aim of [AI agent](g://box-ai/ai-agents) versioning is to provide developers with more control of model version management and to ensure the consistency of the responses.
+The following points apply regarding the agent versioning:
+
+- Each model snapshot is supported for 12 months, unless there are factors outside of Box's control. For example, a Large Language Model may get deprecated.
+- A model snapshot is available unless a new, stable model version is released A 6-month window is provided to test and transition to the new snapshot.
+
 ## Support policy and deprecation information
 
 When new versions of the Box APIs and Box SDKs are released, earlier versions will be retired. Box marks a version as `deprecated` at least 24 months before retiring it. In other words, a deprecated version cannot become end-of-life

@@ -31,7 +31,7 @@ The following SDKs and tools are developed and supported by Box.
 Here you will find a list of SDKs
 you can use to build your application.
 Separately, we have listed the next generation
-Python, Typescript, and .NET SDKs, which are the
+Python, TypeScript, and .NET SDKs, which are the
 newest addition.
 .NET is still a beta feature, but we encourage
 you to give it a try and explore all the
@@ -56,7 +56,7 @@ these projects to full parity.
 
 ### Next generation SDKs
 
-The latest generation Box Python SDK, Box Typescript
+The latest generation Box Python SDK, Box TypeScript
 SDK, .NET SDK, and Swift SDK are designed to elevate the developer
 experience and streamline your integration
 with the Box Content Cloud.

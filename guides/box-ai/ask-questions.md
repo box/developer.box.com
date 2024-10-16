@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/ask-questions
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/generate-text
@@ -22,13 +22,7 @@ source_url: >-
 ---
 # Ask questions to Box AI
 
-<Message type="notice">
-
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-
-</Message>
-
-Box AI Platform API allows you to
+Box AI API allows you to
 ask a question about a supplied file or
 a set of files, and get a response based on
 the content.

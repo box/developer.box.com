@@ -151,7 +151,7 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="python" title="Box Python SDK" href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
+<Tile type="python" title="Python Gen SDK" href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
 
 *box-python-sdk-gen*
 
@@ -163,13 +163,13 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="box-orange" title="Box TypeScript" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
+<Tile type="box-orange" title="TypeScript Gen SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
 
 *box-typescript-sdk-gen*
 
 </Tile>
 
-<Tile type="net" title="Box .NET SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
+<Tile type="net" title="Box .NET Gen SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
 
 *box-dotnet-sdk-gen*
 
@@ -181,7 +181,7 @@ front-end UI elements, and much more.
 
 </Tile>
 
-<Tile type="tool" title="Box Swift SDK (beta)" href="https://github.com/box/box-ios-sdk#readme">
+<Tile type="tool" title="Box Swift Gen SDK (beta)" href="https://github.com/box/box-ios-sdk#readme">
 
 *box-swift-sdk-gen*
 
