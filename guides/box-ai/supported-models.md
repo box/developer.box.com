@@ -41,7 +41,8 @@ APIコールで`model`パラメータを使用する際は、表に示されて�
 
 | プロバイダ           | ファミリ   | 提供状況        | API名                                    | 外部のドキュメント                                                       | 機能   |
 | --------------- | ------ | ----------- | --------------------------------------- | --------------------------------------------------------------- | ---- |
-| Microsoft Azure | GPT    | 利用可能        | `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5モデルに関するドキュメント][azure-ai-model]             | チャット |
+| Microsoft Azure | GPT    | 利用可能        | `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5モデルに関するドキュメント][azure-ai-model-gpt35]       | チャット |
+| Microsoft Azure | GPT    | 利用可能        | `azure__openai__gpt_4o_mini`            | [Azure OpenAI GPT-3.5モデルに関するドキュメント][azure-ai-model-gpt40]       | チャット |
 | Microsoft Azure | GPT    | 利用可能        | `azure__openai__text_embedding_ada_002` | [Azure OpenAIの埋め込みモデルに関するドキュメント][azure-ai-embeddings]           | 埋め込み |
 | GCP Vertex      | Gecko  | 利用可能        | `google__textembedding_gecko`           | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
 | GCP Vertex      | Gecko  | 利用可能        | `google__textembedding_gecko_002`       | [Google Vertex AIの埋め込みモデルに関するドキュメント][vertex-ai-model]           | 埋め込み |
@@ -65,7 +66,9 @@ APIコールで`model`パラメータを使用する際は、表に示されて�
 
 [openai-gpt-3-5-model]: https://platform.openai.com/docs/models/gpt-3-5-turbo
 
-[azure-ai-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
+[azure-ai-model-gpt35]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
+
+[azure-ai-model-gpt40]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4o-and-gpt-4-turbo
 
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 

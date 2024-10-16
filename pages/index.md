@@ -58,68 +58,6 @@ Box製品を最大限利用するために役立つすべての開発者向け�
 
 </Banner>
 
-<!-- <Centered wide>
-
-<Header to='/guides' centered>
-
-Guides
-
-</Header>
-
-<GuidesList>
-
-Get started, learn tips and tricks, and discover how to use the Box
-Platform API with our comprehensive guides. Here are six of the most used
-guides to get you started.
-
-<GuideList href='/guides/authentication/'>
-
-Authentication
-
-</GuideList>
-
-<GuideList href='/guides/cli/quick-start/'>
-
-CLI Quick Start
-
-</GuideList>
-
-<GuideList href='/guides/tooling/postman/quick-start/'>
-
-Postman Quick Start
-
-</GuideList>
-
-<GuideList href='/guides/api-calls/permissions-and-errors/common-errors/'>
-
-Common Errors
-
-</GuideList>
-
-<GuideList href='/guides/api-calls/pagination/offset-based/'>
-
-API Pagination
-
-</GuideList>
-
-<GuideList href='/guides/embed/ui-elements/'>
-
-UI Elements
-
-</GuideList>
-
-</GuidesList>
-
-<More to='/guides' right>
-
-More Guides
-
-</More>
-
-</Centered>
-
- -->
-
 <Centered wide id="start-with-box-platform">
 
 <Header centered>
@@ -130,7 +68,7 @@ Box Platformを初めて使用する場合は、どのように始めればよ�
 
 こちらにまとめました。以下の手順に従って、新しいアプリケーションを作成したり、Box Platformの機能を確認したりしましょう。
 
-<TileGrid>
+<TileGrid rows="3">
 
 <Tile type="users" title="1. ユーザータイプを確認する" href="platform/user-types/">
 
@@ -150,31 +88,19 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 </Tile>
 
-<Tile type="cli" title="4. Box CLIを設定する" href="/guides/cli/quick-start/">
-
-必要に応じて、Box CLIクイックスタートガイドに従って、APIをテストする場所を用意します。開発を始めるまでに5分もかかりません。
-
-</Tile>
-
-<Tile type="architecture" title="5. アーキテクチャパターンを作成する" href="/platform/appendix/architecture-patterns/">
-
-Boxでは、ペンを使って紙にソリューションを書き出すことを常にお勧めしています。インスピレーションを得るために最も一般的なアーキテクチャパターンを見てみましょう。
-
-</Tile>
-
-<Tile type="create" title="6. アプリケーションを作成する" href="https://app.box.com/developers/console">
+<Tile type="create" title="4. Create the application" href="https://app.box.com/developers/console">
 
 これで、アプリケーションの作成を開始できるようになりました。開発者コンソールを起動して、お好みのアプリケーションを作成してください。
 
 </Tile>
 
-<Tile type="authorize" title="7. アプリケーションを承認する" href="/guides/authorization/">
+<Tile type="authorize" title="5. Authorize the application" href="/guides/authorization/">
 
 アプリの使用を開始するために満たすべき承認の要件を確認してください。
 
 </Tile>
 
-<Tile type="code" title="8. コーディングを開始する" href="#sdks-and-tools">
+<Tile type="code" title="6. Start coding" href="#sdks-and-tools">
 
 最後に、APIリファレンス、SDK、Box CLI、Postmanコレクション、Box UI Elementsなど、Boxの開発者向けツールキットを確認します。
 
@@ -214,33 +140,39 @@ _Box APIリファレンス_
 
 </Tile>
 
-<Tile type="java" title="Java SDK" href="https://github.com/box/box-java-sdk#readme">
+<Tile type="python" title="Pythonの次世代SDK" href="https://github.com/box/box-python-sdk-gen?tab=readme-ov-file#box-python-sdk-generated">
+
+_box-python-sdk-gen_
+
+</Tile>
+
+<Tile type="java" title="Box Java SDK" href="https://github.com/box/box-java-sdk#readme">
 
 _box-java-sdk_
 
 </Tile>
 
-<Tile type="python" title="Python SDK" href="https://github.com/box/box-python-sdk#readme">
+<Tile type="box-orange" title="TypeScript Gen SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
 
-_box-python-sdk_
-
-</Tile>
-
-<Tile type="node" title="Node.js SDK" href="https://github.com/box/box-node-sdk#readme">
-
-_box-node-js-sdk_
+_box-typescript-sdk-gen_
 
 </Tile>
 
-<Tile type="net" title=".NET SDK" href="https://github.com/box/box-windows-sdk-v2#readme">
+<Tile type="net" title="Box .NET Gen SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
 
-_box-windows-sdk-v2_
+_box-dotnet-sdk-gen_
 
 </Tile>
 
-<Tile type="tool" title="iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
+<Tile type="tool" title="Box iOS SDK" href="https://github.com/box/box-ios-sdk#readme">
 
 _box-ios-sdk_
+
+</Tile>
+
+<Tile type="tool" title="Box Swift Gen SDK (beta)" href="https://github.com/box/box-ios-sdk#readme">
+
+_box-swift-sdk-gen_
 
 </Tile>
 
@@ -277,72 +209,6 @@ _Box Embed_
 </More>
 
 </section>
-
-<!-- <Dark>
-
-<Centered wide>
-
-<Header to='/sdks-and-tools' centered>
-
-SDKS & Tools
-
-</Header>
-
-<SDKS>
-
-Development with Box Platform is made easier with SDKs for your
-programming language, a command line interface, front-end UI elements,
-and much more.
-
-<SDK language='python' href='https://github.com/box/box-python-sdk'>
-
-Python SDK
-
-</SDK>
-
-<SDK language='java' href='https://github.com/box/box-java-sdk'>
-
-Java SDK
-
-</SDK>
-
-<SDK language='node' href='https://github.com/box/box-node-sdk'>
-
-Node SDK
-
-</SDK>
-
-<SDK language='dotnet' href='https://github.com/box/box-windows-sdk'>
-
-Windows .NET SDK
-
-</SDK>
-
-<SDK language='cli' href='https://github.com/box/boxcli'>
-
-Box CLI
-
-</SDK>
-
-<SDK language='uielements' href='https://github.com/box/box-ui-elements'>
-
-UI Elements
-
-</SDK>
-
-</SDKS>
-
-<More to='/sdks-and-tools' right>
-
-More SDKs & Tools
-
-</More>
-
-</Centered>
-
-</Dark>
-
- -->
 
 <Centered wide>
 

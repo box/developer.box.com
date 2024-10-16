@@ -79,7 +79,7 @@ fullyTranslated: true
 
 [sdk-powershell]: https://github.com/box-community/box-powershell-sdk-v2
 
-[sdk-poshbox]: https://github.com/thelastofreed/PoshBox
+[sdk-poshbox]: https://github.com/enthusedcoder/poshbox
 
 [sdk-php-laravel]: https://github.com/maengkom/boxapi
 

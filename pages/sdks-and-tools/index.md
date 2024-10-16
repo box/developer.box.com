@@ -29,7 +29,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ## SDK
 
-アプリケーションの作成に使用できるSDKの一覧を以下に示します。これとは別に、新しく追加された次世代のPython SDK、Typescript SDK、.NET SDKも記載しています。.NET SDKはまだベータ機能ですが、試しに使用して、備わっているすべての機能を確認することをお勧めします。
+Here you will find a list of SDKs you can use to build your application. Separately, we have listed the next generation Python, TypeScript, and .NET SDKs, which are the newest addition. .NET is still a beta feature, but we encourage you to give it a try and explore all the features they bring along.
 
 <Message type="notice">
 
@@ -43,7 +43,7 @@ Boxで開発およびサポートされているSDKおよびツールは以下�
 
 ### 次世代のSDK
 
-最新世代のBox Python SDK、Box Typescript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
+The latest generation Box Python SDK, Box TypeScript SDK, .NET SDK, and Swift SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
 
 <Message type="notice">
 
