@@ -1,0 +1,19 @@
+---
+demoTiles:
+  contentExplorer:
+    title: Content Explorer
+    description: Embed a folder view of content stored in Box in your
+      web applications. Allow users to navigate through the folder hierarchy
+      and rename, delete, or share files.
+  contentPicker:
+    title: Content Picker
+    description: Add support for selecting Box files and folders in your
+      web applications.
+  contentPreview:
+    title: Content Preview
+    description: Embed high quality and interactive previews of over 120
+      file types.
+  contentSidebar:
+    title: Content Sidebar
+    description: Implement viewing file-related activity, metadata, and details
+      including versions, comments, and tasks.

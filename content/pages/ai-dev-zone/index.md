@@ -6,7 +6,7 @@ centered: false
 # Box AI Developer Zone
 
 <Centered wide id="ai-developer-zone" >
-  <HeroImage type="AiDevZone" imageWidth="548" imageHeight="493">
+  <HeroImage type="AiDevZone" imageWidth="600" imageHeight="400">
     <Header>
       Box AI</br>
       Developer Zone
@@ -20,13 +20,13 @@ view sample code, explore Box AI use cases, and more!
 </Centered>
 
 <Centered mid>
-  <Header>
+  <Header centered>
     Try out interactive demos
   </Header>
     <p style="text-align: left; margin-left: 0;">
       Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
     </p>
-  <TileGrid rows="3">
+  <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
         Summarize a document in a selected tone of voice.
 
@@ -43,40 +43,109 @@ view sample code, explore Box AI use cases, and more!
 
         <strong style="background-color: #e8e8e8">Public beta</strong>
     </Tile>
-    <!-- <Tile disabled type="ai"
-      title="Ask questions"
-    >
-        Ask Box AI about the document to get the details. Demo coming soon!
-
-        <strong style="background-color: #e8e8e8">Public beta</strong>
-    </Tile> -->
   </TileGrid>
 </Centered>
 
 <Centered mid>
   <Header>
-    Box AI API documentation and support
+    Documentation and support
   </Header>
   <p style="text-align: left; margin-left: 0;">
     These resources will get you up and running with Box AI API.
   </p>
 
   <TileGrid rows="4">
-    <Tile type="document" title="AI API reference"
+    <Tile type="code-new" title="AI API reference"
       href="/reference/resources/ai-response/">
         Check the API reference for specification details.
+
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
-    <Tile type="leaflet" title="Developer guides"
+    <Tile type="code-new" title="Developer guides"
       href="/guides/box-ai/">
         Browse the guides to learn how to use Box AI API.
+
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
-    <Tile type="tuning" title="Supported AI models"
+    <Tile type="code-new" title="Supported AI models"
       href="/guides/box-ai/supported-models/">
         Check table list of the supported AI models.
+
+        <strong style="background-color: #e8e8e8">Documentation</strong>
     </Tile>
-    <Tile type="speech-bubble" title="Support"
+    <Tile type="code-new" title="Support"
       href="https://community.box.com/">
-        Visit Box Developer Community for support.
+        Visit Box Developer Community for support and knowledge sharing.
+
+        <strong style="background-color: #e8e8e8">Community</strong>
     </Tile>
   </TileGrid>
+</Centered>
+
+<Centered mid>
+  <Header>
+    Box for AI Integrations
+  </Header>
+  <p style="text-align: left; margin-left: 0;">
+    Use Box for AI Integrations to extend LLM models' existing knowledge bases.
+  </p>
+
+  <TileGrid rows="4">
+    <Tile type="box-brown" title="LlamaIndex"
+      href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-box#readme">
+        Enable access to Box content within LLM workflows with Box reader suite for LlamaIndex.
+
+        <strong style="background-color: #e8e8e8">New</strong>
+    </Tile>
+    <Tile type="box-brown" title="LangChain"
+      href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
+        Include Box content in your LLM workflows with Box loader for LangChain.
+
+        <strong style="background-color: #e8e8e8">New</strong>
+    </Tile>
+  </TileGrid>
+</Centered>
+
+<Centered mid>
+  <Header centered>
+    Videos
+  </Header>
+  Watch the latest Box AI API tutorials and demos.
+
+  <TileGrid rows="3">
+    <Tile image="AI-API" title="AI API overview"
+      href="https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Check out the high-level features of the Box AI API in one minute.
+
+    </Tile>
+    <Tile image="API-text-gen" title="Endpoint overivew"
+      href="https://www.youtube.com/watch?v=xxR8aF4r3g8&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        See a demo of the Box AI API text generation endpoint. 
+
+    </Tile>
+    <Tile image="API-q&a" title="Endpoint overivew"
+      href="https://www.youtube.com/watch?v=UyKfacz6G9g&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        See a demo of the Box AI API document Q&A endpoint.
+
+    </Tile>
+    <Tile image="API-extract" title="Endpoint overivew"
+      href="https://www.youtube.com/watch?v=fijj0CX67c4&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Extract metadata with various prompt formats with Box AI API.
+
+    </Tile>
+    <Tile image="API-extract-structured" title="Endpoint overivew"
+      href="https://www.youtube.com/watch?v=dU3oo4sHZt0&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q">
+        Extract metadata with predefined structure with Box AI API.
+
+    </Tile>
+    <Tile image="API-interview" title="Hear from Box CPO Diego Dugatkin"
+      href="https://www.youtube.com/watch?v=NA4NiqBdSg4&t=2s">
+        Learn why Box chose to expose Box AI through our public API.
+
+    </Tile>
+  </TileGrid>
+
+  <More secondary="true" to='https://www.youtube.com/watch?v=amhOj0YRVRQ&list=PLCSEWOlbcUyI2ta24oRr75_4igvMzKJ9q' center>
+    View all videos
+  </More>
 </Centered>
