@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/azure-gpt-3-5-turbo-model-card
 type: guide
-total_steps: 4
+total_steps: 2
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/google-textembedding-gecko-model-card

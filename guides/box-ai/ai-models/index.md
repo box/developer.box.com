@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 4
+total_steps: 2
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-models/azure-gpt-3-5-turbo-model-card
