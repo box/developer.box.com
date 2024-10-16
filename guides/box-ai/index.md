@@ -16,7 +16,7 @@ subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: box-ai/prerequisites
@@ -130,6 +130,13 @@ better results for this language.
 
 </Message>
 
+## Box AI API in User Activity Report (UAR)
+
+[User Activity Reports][uar] provide an overview of the actions the users are taking in Box. Box Admins use this report to view the actions taken by their users within a given time period, and this includes interactions with Box AI. The report contains the following action types that Box admins can select to get details for Box AI:
+
+* **AI query**: The user queried Box AI and received a response.
+* **Failed AI query**: The user queried Box AI but did not receive a response.
+
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 [boxaidocs]: https://support.box.com/hc/en-us/articles/22158484213267-Box-AI-for-Documents
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
@@ -139,3 +146,4 @@ better results for this language.
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
+[uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
