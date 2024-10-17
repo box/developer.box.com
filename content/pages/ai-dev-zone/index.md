@@ -23,9 +23,8 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-    <p style="text-align: left; margin-left: 0;">
-      Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
-    </p>
+    Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
         Summarize a document in a selected tone of voice.
