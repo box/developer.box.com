@@ -459,12 +459,15 @@ To enable the Box AI modal in content preview header, follow these steps:
    To do so, run the following command:
 
    ```sh
-   npx install-peerdeps box-ui-elements
+   npx install-peerdeps box-ui-elements@^22.0.0
    ```
 
 ### Using JavaScript
 
-To enable Box AI features, pass the `contentAnswersProps` prop in the Preview element. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+To enable Box AI features, pass the following:
+
+- `hasHeader` prop set to `true`,
+- `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
 
 ```js
 const preview = new Box.Preview();
@@ -488,7 +491,7 @@ preview.show(<FILE_ID>, <TOKEN>, {
      isCitationsEnabled: true,
      isMarkdownEnabled: true,
      isResetChatEnabled: true,
-     suggestedQuestions={suggestedQuestions}
+     suggestedQuestions
        }
    hasHeader: true,
 });
@@ -497,7 +500,10 @@ preview.show(<FILE_ID>, <TOKEN>, {
 ### Using React component
 
 You can also add Box AI element to a header in a React component.
-To do so, add `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+To do so, add:
+
+- `hasHeader` prop set to `true`,
+- `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
 
 <Message type='notice'>
 
@@ -511,33 +517,35 @@ import { IntlProvider } from "react-intl";
 
 const suggestedQuestions = [
   {
-    label: 'What are the key takeaways?',
-    prompt: 'What are the key takeaways?',
+    label: 'Key takeaways',
+    prompt: 'What are the key takeaways from this document?',
     id: '1234',
   },
   {
-    label: 'Summarize this document',
+    label: 'Summarize',
     prompt: 'Summarize this document',
     id: '5678',
   },
 ];
 
 export default () => {
-    const token = process.env.REACT_APP_BOX_DEVELOPER_TOKEN
-    let folderID = process.env.REACT_APP_BOX_PREVIEW_FILE_ID
+    // Storing variables in the front end is not secure.
+    // You will want to grab this value from a database for production
+    const TOKEN = process.env.REACT_APP_BOX_DEVELOPER_TOKEN
+    const FILE_ID = process.env.REACT_APP_BOX_PREVIEW_FILE_ID
     return (
       <IntlProvider locale="en">
-         <ContentPreview
+         <ContentPreview 
             contentAnswersProps={{
               show: true,
               isCitationsEnabled: true,
               isMarkdownEnabled: true,
               isResetChatEnabled: true,
-              suggestedQuestions={suggestedQuestions}
+              suggestedQuestions
             }}
             fileId={FILE_ID}
             token={TOKEN}
-            {...PROPS}
+            hasHeader=true
          />
       </IntlProvider>
   );

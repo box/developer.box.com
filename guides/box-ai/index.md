@@ -146,4 +146,4 @@ better results for this language.
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
-[uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
+[uar]:https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report

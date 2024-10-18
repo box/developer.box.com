@@ -8,12 +8,14 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata
+  - box-ai/extract-metadata-structured
 category_id: box-ai
 subcategory_id: box-ai/ai-agents
 is_index: false
 id: box-ai/ai-agents/get-agent-default-config
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
 next_page_id: box-ai/ai-agents/overrides-tutorial

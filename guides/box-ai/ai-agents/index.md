@@ -14,10 +14,10 @@ subcategory_id: box-ai/ai-agents
 is_index: true
 id: box-ai/ai-agents
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-agents/get-agent-default-config
+next_page_id: box-ai/ai-agents/ai-agent-versioning
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
