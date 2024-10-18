@@ -57,14 +57,14 @@ sample_code:
      document structured metadata extraction to
      your applications. Pass a Box metadata template
      ID or your own metadata structure as a parameter.
-    pricing: Pricing and packaging to be announced. This endpoint is
+    pricing: This endpoint is
       available in public beta to all Enterprise Plus customers.
   metadata-unstructured:
     headline: Box AI API - extract
     paragraph: Use this endpoint to add
      document freeform metadata extraction to
      your applications. The endpoint allows various prompt formats.
-    pricing: Pricing and packaging to be announced. This endpoint is
+    pricing: This endpoint is
       available in public beta to all Enterprise Plus customers.
   developer_console:
     headline: Box Developer Console
