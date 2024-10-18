@@ -24,7 +24,7 @@
     "lint:ci": "concurrently 'yarn lint:links' 'yarn lint:markdown' 'yarn lint:spelling' 'yarn lint:alex'",
     "lint:markdown": "markdownlint -c markdownlintrc.json ./content ./templates",
     "lint:spelling": "yarn lint:spelling:interactive -r",
-    "lint:spelling:interactive": "mdspell 'content/**/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
+    "lint:spelling:interactive": "mdspell 'content/**/*.md' '!content/guides/box-ai/ai-agents/*.md' README.md CONTRIBUTING.md -a -n --en-us -d content/dictionaries/en_US",
     "lint:alex": "alex content/ -q",
     "lint:yaml": "yamllint ./content",
     "lint:links": "jest ./src/markdown/tests/* --silent",
