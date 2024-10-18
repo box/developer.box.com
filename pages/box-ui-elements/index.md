@@ -25,11 +25,11 @@ fullyTranslated: true
 
 <Header>
 
-Create
+エクスペリエンスを
 
 </br>
 
-experiences with
+構築:
 
 </br>
 
@@ -37,7 +37,7 @@ Box UI Elements
 
 </Header>
 
-Box UI Elements are pre-built UI components that allow you to extend custom portals with the elements of the main Box web application.
+Box UI Elementsは、メインのBoxウェブアプリの要素を使用してカスタムポータルを拡張できるようにする、組み込みのUIコンポーネントです。
 
 </HeroImage>
 
@@ -47,13 +47,13 @@ Box UI Elements are pre-built UI components that allow you to extend custom port
 
 <Header>
 
-Interactive Demos
+対話型のデモ
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-Box UI Elements are available both as React components and framework-agnostic JavaScript libraries.
+Box UI Elementsは、Reactコンポーネントとしても、フレームワークに依存しないJavaScriptライブラリとしても使用できます。
 
 </p>
 
@@ -63,7 +63,7 @@ Box UI Elements are available both as React components and framework-agnostic Ja
 
 <More to="/guides/embed/ui-elements/installation/" center>
 
-Get started
+開始する
 
 </More>
 
@@ -73,13 +73,13 @@ Get started
 
 <Header>
 
-Explore more Box UI Elements
+Box UI Elementsの詳細を確認する
 
 </Header>
 
 <p style="text-align: left; margin-left: 0;">
 
-Follow more guides and documentation to help get you up and running.
+すぐに使用できるように、さらに多くのガイドやドキュメントを参照しましょう。
 
 </p>
 
@@ -87,25 +87,25 @@ Follow more guides and documentation to help get you up and running.
 
 <Tile type="ai" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
 
-See how to embed Box AI in the Content Preview UI Element.
+コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認します。
 
 </Tile>
 
 <Tile type="upload" title="コンテンツアップローダー" href="/guides/embed/ui-elements/uploader/">
 
-Embed the Content Uploader and allow users to upload files.
+コンテンツアップローダーを埋め込み、ユーザーがファイルをアップロードできるようにします。
 
 </Tile>
 
 <Tile type="ui-metadata" title="メタデータビュー" href="/guides/embed/ui-elements/explorer/#metadata-view">
 
-Display files based on specified metadata with the Content Explorer.
+コンテンツエクスプローラーを使用して、指定されたメタデータに基づいたファイルを表示します。
 
 </Tile>
 
 <Tile type="annotations" title="注釈" href="/guides/embed/ui-elements/annotations/">
 
-Provide collaboration capabilities within the Content Preview.
+コンテンツプレビュー内にコラボレーション機能を提供します。
 
 </Tile>
 
@@ -117,29 +117,29 @@ Provide collaboration capabilities within the Content Preview.
 
 <Header centered>
 
-Build custom portals
+カスタムポータルの構築
 
 </Header>
 
-Learn more from videos, blog posts and sample code related to Box UI Elements.
+Box UI Elementsに関連した動画、ブログ記事、サンプルコードで詳細を確認しましょう。
 
 <TileGrid rows="3">
 
-<Tile image="BUIE-portal" title="Read more about creating custom portals" href="https://medium.com/box-developer-blog/build-a-content-portal-using-box-ui-elements-react-tailwind-css-vercel-part-1-f1c509621ceb">
+<Tile image="BUIE-portal" title="カスタムポータルの作成の詳細を確認する" href="https://medium.com/box-developer-blog/build-a-content-portal-using-box-ui-elements-react-tailwind-css-vercel-part-1-f1c509621ceb">
 
-Build a content portal with a customized experience using Box UI Elements.
+Box UI Elementsを使用して、エクスペリエンスをカスタマイズしたコンテンツポータルを構築します。
 
 </Tile>
 
-<Tile image="BUIE-sample" title="Clone and deploy a demo project" href="https://github.com/box-community/box-custom-portal-demo?tab=readme-ov-file#box-custom-portal-demo">
+<Tile image="BUIE-sample" title="デモプロジェクトを複製して展開する" href="https://github.com/box-community/box-custom-portal-demo?tab=readme-ov-file#box-custom-portal-demo">
 
-Featuring Box APIs, Box UI Elements, React, Tailwind CSS, and Vercel.
+Box API、Box UI Elements、React、Tailwind CSS、Vercelについて説明します。
 
 </Tile>
 
 <Tile image="BUIE-AI" title="Box AI for Box UI Elements" href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
 
-See how to embed Box AI in the Content Preview UI Element.
+コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認します。
 
 </Tile>
 

@@ -29,7 +29,7 @@ Nodeプロジェクトでは、Box Node SDKを使用してBox APIを呼び出す
 
 <Message type="notice">
 
-[Node SDK][node] is currently in maintenance mode and will be deprecated soon. This means only critical security updates and bug fixes will be implemented. It is recommended to use the [auto-generated TypeScript SDK][ts-gen].
+[Node SDK][node]は、現在メンテナンスモードであり、まもなく公式サポートが終了する予定です。つまり、実装されるのは重要なセキュリティ更新プログラムとバグ修正のみになります。[自動生成されたTypeScript SDK][ts-gen]を使用することをお勧めします。
 
 </Message>
 

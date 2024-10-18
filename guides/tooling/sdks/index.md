@@ -38,7 +38,7 @@ Boxには、アプリケーションの作成に使用できる一連のSDKが�
 
 ## 次世代のSDK
 
-The latest generation Box Python SDK, Box TypeScript SDK, .NET SDK, and Swift SDK are designed to elevate the developer experience and streamline your integration with the Box Content Cloud.
+最新世代のBox Python SDK、Box TypeScript SDK、.NET SDK、Swift SDKは、開発者エクスペリエンスを向上させ、Boxコンテンツクラウドとの統合を効率化することを目的としています。
 
 <Message type="notice">
 

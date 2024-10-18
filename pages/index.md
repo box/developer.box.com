@@ -88,19 +88,19 @@ Box Platformでは、OAuth 2.0、JSONウェブトークン (JWT)、クライア�
 
 </Tile>
 
-<Tile type="create" title="4. Create the application" href="https://app.box.com/developers/console">
+<Tile type="create" title="4. アプリケーションを作成する" href="https://app.box.com/developers/console">
 
 これで、アプリケーションの作成を開始できるようになりました。開発者コンソールを起動して、お好みのアプリケーションを作成してください。
 
 </Tile>
 
-<Tile type="authorize" title="5. Authorize the application" href="/guides/authorization/">
+<Tile type="authorize" title="5. アプリケーションを承認する" href="/guides/authorization/">
 
 アプリの使用を開始するために満たすべき承認の要件を確認してください。
 
 </Tile>
 
-<Tile type="code" title="6. Start coding" href="#sdks-and-tools">
+<Tile type="code" title="6. コーディングを開始する" href="#sdks-and-tools">
 
 最後に、APIリファレンス、SDK、Box CLI、Postmanコレクション、Box UI Elementsなど、Boxの開発者向けツールキットを確認します。
 
@@ -152,13 +152,13 @@ _box-java-sdk_
 
 </Tile>
 
-<Tile type="box-orange" title="TypeScript Gen SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
+<Tile type="box-orange" title="Typescriptの次世代SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
 
 _box-typescript-sdk-gen_
 
 </Tile>
 
-<Tile type="net" title="Box .NET Gen SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
+<Tile type="net" title="Box .NETの次世代SDK" href="https://github.com/box/box-dotnet-sdk-gen?tab=readme-ov-file#box-dotnet-sdk-generated">
 
 _box-dotnet-sdk-gen_
 
@@ -170,7 +170,7 @@ _box-ios-sdk_
 
 </Tile>
 
-<Tile type="tool" title="Box Swift Gen SDK (beta)" href="https://github.com/box/box-ios-sdk#readme">
+<Tile type="tool" title="Box Swiftの次世代SDK (ベータ)" href="https://github.com/box/box-ios-sdk#readme">
 
 _box-swift-sdk-gen_
 
