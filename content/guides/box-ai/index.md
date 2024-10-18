@@ -82,7 +82,7 @@ The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][ex
 
 ### Configuration overrides
 
-You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
+You can use the `ai_agent` parameter available in the Box AI API requests to override the default agent configuration and introduce your own custom settings.
 
 For details, see [AI agent default configuration][agent-default].
 
@@ -127,8 +127,5 @@ better results for this language.
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
-[uar]:https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
