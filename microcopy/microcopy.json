@@ -44,7 +44,7 @@
   // The title for the section of a resource that showswhat a typical resource looks like
   "reference.titles.resource_example": "レスポンスの例",
   // The title for the section of an endpoint that showsdeprecated entries
-  "reference.titles.deprecated_entries": "Deprecated",
+  "reference.titles.deprecated_entries": "非推奨",
   // The label for a button that allows a user tocopy (and then paste) a value
   "reference.buttons.copy": "コピー",
   // Describes all endpoint parameters that are partof the URL path
@@ -146,15 +146,15 @@
   // Describes how a request header name is not case sensitive
   "reference.tooltips.header": "ヘッダー名は大文字と小文字が区別されません",
   // Pill added to beta endpoints and resources
-  "reference.pill.beta": "Beta",
+  "reference.pill.beta": "ベータ",
   // Pill added to the latest version of an endpoint or resources
-  "reference.pill.latest_version": "Latest version",
+  "reference.pill.latest_version": "最新バージョン",
   // Pill added to deprecated endpoints and resources
-  "reference.pill.deprecated": "Deprecated",
+  "reference.pill.deprecated": "非推奨",
   // The title for the sidebar section of an endpoint that showsdeprecated entries
-  "reference.sidebar.titles.deprecated_entries": "Deprecated",
+  "reference.sidebar.titles.deprecated_entries": "非推奨",
   // Placeholder text for the search filter in the sidebar
-  "reference.sidebar.filter.placeholder": "Filter by name",
+  "reference.sidebar.filter.placeholder": "名前でフィルタ",
   // The title for the guides section
   "guides.titles.guides": "ガイド",
   // A title for a set of links describing things to read before
@@ -206,14 +206,14 @@
   // The text for a link that tells a user to get started
   "guides.titles.get_started": "入門ガイド",
   "headers.primary.links.documentation.text": "ドキュメント",
-  "headers.primary.links.develop.text": "Develop",
-  "headers.primary.links.connect.text": "Connect",
-  "headers.primary.links.explore.text": "Explore",
+  "headers.primary.links.develop.text": "開発",
+  "headers.primary.links.connect.text": "つながる",
+  "headers.primary.links.explore.text": "学ぶ",
   "headers.primary.links.quickstarts.text": "はじめに",
   "headers.primary.links.community.text": "コミュニティ",
   "headers.primary.links.community_forum.text": "Box Developer Community",
   "headers.primary.links.community_forum.url": "https:\/\/community.box.com\/",
-  "headers.primary.links.events.text": "Events",
+  "headers.primary.links.events.text": "イベント",
   // The text for the link to the learn section
   "headers.primary.links.learn.text": "Box Platform",
   "headers.primary.links.learn.url": "\/platform\/",
@@ -266,18 +266,18 @@
   "headers.primary.buttons.signup.text": "サインアップ",
   // The URL to the developer signup - DO NOT TRANSLATE
   "headers.primary.buttons.signup.url": "https:\/\/account.box.com\/signup\/n\/developer#ty9l3",
-  "headers.primary.featured.tag.text": "おすすめ",
+  "headers.primary.featured.tag.text": "新着情報",
   "headers.primary.featured.title.text": "Box AI Developer Zone",
   "headers.primary.featured.details.text": "Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型のデモを紹介します。",
   "headers.primary.featured.cta.text": "使用してみる",
   "headers.primary.develop_featured.tag.text": "おすすめ",
-  "headers.primary.develop_featured.title.text": "Box Sample Code Catalog",
-  "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
+  "headers.primary.develop_featured.title.text": "Boxサンプルコードカタログ",
+  "headers.primary.develop_featured.details.text": "さまざまなプログラミング言語の90以上の\nオープンソースリポジトリを参照して、便利なスクリプト、\nサンプルアプリ、ヒントになるユースケースを見つけましょう。",
   "headers.primary.develop_featured.cta.text": "サンプルコードを参照",
-  "headers.primary.connect_featured.tag.text": "Event",
+  "headers.primary.connect_featured.tag.text": "イベント",
   "headers.primary.connect_featured.title.text": "BoxWorks",
-  "headers.primary.connect_featured.details.text": "Join BoxWorks 2024 to discover what's possible with content and AI!",
-  "headers.primary.connect_featured.cta.text": "Register now",
+  "headers.primary.connect_featured.details.text": "BoxWorks 2024でコンテンツとAIの可能性について紹介します。",
+  "headers.primary.connect_featured.cta.text": "今すぐ登録",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developerドキュメント",
   // A short label to signify that this page is new
@@ -397,7 +397,7 @@
   // A title for a footer section on our tooling options
   "footer.categories.tooling.title": "ツール",
   // Text for link to the TypeScript SDK (Generated)
-  "footer.categories.tooling.links.ts_gen_sdk.text": "Typescript SDK (Generated)",
+  "footer.categories.tooling.links.ts_gen_sdk.text": "TypeScript SDK (Generated)",
   // link to the TypeScript SDK (Generated)
   "footer.categories.tooling.links.ts_gen_sdk.url": "https:\/\/github.com\/box\/box-typescript-sdk-gen",
   // Text for link to the Java SDK
@@ -755,14 +755,14 @@
   "ai_dev_zone.unstructured_metadata_filters.json": "JSON",
   "ai_dev_zone.unstructured_metadata_filters.natural": "自然言語",
   "ai_dev_zone.unstructured_metadata_filters.other": "その他",
-  "box_ui_elements.demoTiles.contentExplorer.title": "Content Explorer",
-  "box_ui_elements.demoTiles.contentExplorer.description": "Embed a folder view of content stored in Box in your web applications. Allow users to navigate through the folder hierarchy and rename, delete, or share files.",
+  "box_ui_elements.demoTiles.contentExplorer.title": "コンテンツエクスプローラ",
+  "box_ui_elements.demoTiles.contentExplorer.description": "Boxに保存されているコンテンツのフォルダビューをウェブアプリに埋め込みます。ユーザーは、フォルダ階層内を移動し、ファイルの名前変更、削除、共有を実行できるようになります。",
   "box_ui_elements.demoTiles.contentPicker.title": "Content Picker",
-  "box_ui_elements.demoTiles.contentPicker.description": "Add support for selecting Box files and folders in your web applications.",
+  "box_ui_elements.demoTiles.contentPicker.description": "ウェブアプリ内でBoxのファイルやフォルダを選択できるようサポートを追加します。",
   "box_ui_elements.demoTiles.contentPreview.title": "コンテンツプレビュー",
-  "box_ui_elements.demoTiles.contentPreview.description": "Embed high quality and interactive previews of over 120 file types.",
+  "box_ui_elements.demoTiles.contentPreview.description": "120種類以上のファイルの高品質でインタラクティブなプレビューを埋め込みます。",
   "box_ui_elements.demoTiles.contentSidebar.title": "Content Sidebar",
-  "box_ui_elements.demoTiles.contentSidebar.description": "Implement viewing file-related activity, metadata, and details including versions, comments, and tasks.",
+  "box_ui_elements.demoTiles.contentSidebar.description": "ファイル関連のアクティビティ、メタデータ、詳細 (バージョン、コメント、タスクを含む) の表示を実装します。",
   // The prefix for the selected API version
-  "versions.label": "API version"
+  "versions.label": "APIバージョン"
 }
