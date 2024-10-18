@@ -8,6 +8,8 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata
+  - box-ai/extract-metadata-structured
 ---
 
 # Get default AI agent configuration
