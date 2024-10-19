@@ -19,7 +19,7 @@ alias_paths:
 Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
-Box AI Platform API allows you to use Box AI
+Box AI API allows you to use Box AI
 functionality
 in your custom applications. For example, you can
 implement Box AI question and answer
@@ -29,7 +29,7 @@ your product’s content editor.
 
 ## Box AI Platform API capabilities
 
-Box AI Platform API provides a number of capabilities
+Box AI API provides a number of capabilities
 designed to help you leverage Large Language Models (LLMs)
 in your application workflows.
 
@@ -84,7 +84,7 @@ The [`POST /2.0/ai/extract`][extract] and [`POST /2.0/ai/extract_structured`][ex
 
 ### Configuration overrides
 
-You can use the `ai_agent` parameter available in the [`POST /2.0/ai/ask`][ask] and [`POST /2.0/ai/text_gen`][text-gen] requests to override the default agent configuration and introduce your own custom settings.
+You can use the `ai_agent` parameter available in the Box AI API requests to override the default agent configuration and introduce your own custom settings.
 
 For details, see [AI agent default configuration][agent-default].
 
@@ -129,8 +129,6 @@ better results for this language.
 [boxaielement]: g://embed/ui-elements/preview#box-ai-ui-element
 [uar]: https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
-[ask]: e://post_ai_ask#param_ai_agent
-[text-gen]: e://post_ai_text_gen#param_ai_agent
 [extract]: e://post_ai_extract
 [extract-structured]: e://post_ai_extract_structured
 [uar]:https://support.box.com/hc/en-us/articles/4415012490387-User-Activity-Report
