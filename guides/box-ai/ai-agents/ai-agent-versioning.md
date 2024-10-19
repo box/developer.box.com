@@ -1,5 +1,5 @@
 ---
-rank: 2
+rank: 4
 related_endpoints:
   - get_ai_agent_default
   - post_ai_text_gen
@@ -18,27 +18,34 @@ type: guide
 total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
-next_page_id: box-ai/ai-agents/overrides-tutorial
-previous_page_id: box-ai/ai-agents
+next_page_id: ''
+previous_page_id: box-ai/ai-agents/get-agent-default-config
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/ai-agent-versioning.md
 ---
 # AI agent configuration versioning
 
-AI agent configuration versioning gives the developers more control over model version management and ensures consistent responses.
+<Message type='notice'>
+
+Box updates the default models across the endpoints on a regular basis in order to stay up to date with the most advanced options. If a default model is updated, it will be posted in the developer changelog.
+
+</Message>
+
+AI agent configuration versioning gives the developers more control over AI agent versioning and ensures consistent responses.
 
 AI agent configuration versioning adopts the following principles:
 
-* Each model snapshot is supported for 12 months, unless there are factors outside of Box's control. For example, a Large Language Model may get deprecated.
-* A model snapshot is available unless a new, stable model version is released * A 6-month window is provided to test and transition to the new snapshot.
+* Each AI agent snapshot is supported for 12 months, unless there are factors outside of Box's control. For example, a Large Language Model may get deprecated.
+* An AI agent snapshot is available unless a new, stable agent version is released
+* A 6-month window is provided to test and transition to the new snapshot.
 
 ## Historical AI agent configuration
 
 The values in the [default agent configuration][default-config] used by the LLM gateway often change to achieve the best possible answer quality.
 
-To make sure your configurations are not affected in a negative way, you can use the historical agent configuration provided below to [override the default one][overrides].
+To make sure your configurations are not affected in a negative way, you can use the historical AI agent configuration provided below to [override the default one][overrides].
 
-```sh
+```json
 {
     "ask": {
         "type": "ai_agent_ask",

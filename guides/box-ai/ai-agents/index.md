@@ -17,7 +17,7 @@ type: guide
 total_steps: 3
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-agents/ai-agent-versioning
+next_page_id: box-ai/ai-agents/get-agent-default-config
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md

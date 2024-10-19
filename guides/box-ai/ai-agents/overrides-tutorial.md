@@ -17,7 +17,7 @@ total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
 next_page_id: ''
-previous_page_id: box-ai/ai-agents/ai-agent-versioning
+previous_page_id: box-ai/ai-agents/get-agent-default-config
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/overrides-tutorial.md
 ---
