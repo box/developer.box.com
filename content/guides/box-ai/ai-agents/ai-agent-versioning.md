@@ -33,7 +33,7 @@ The values in the [default agent configuration][default-config] used by the LLM 
 
 To make sure your configurations are not affected in a negative way, you can use the historical AI agent configuration provided below to [override the default one][overrides].
 
-```sh
+```json
 {
     "ask": {
         "type": "ai_agent_ask",
