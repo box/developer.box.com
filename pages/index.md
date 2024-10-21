@@ -152,7 +152,7 @@ _box-java-sdk_
 
 </Tile>
 
-<Tile type="box-orange" title="Typescriptの次世代SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
+<Tile type="box-orange" title="TypeScriptの次世代SDK" href="https://github.com/box/box-typescript-sdk-gen?tab=readme-ov-file#box-typescript-sdk-generated">
 
 _box-typescript-sdk-gen_
 

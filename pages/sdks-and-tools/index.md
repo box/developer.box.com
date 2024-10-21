@@ -61,7 +61,7 @@ Swift SDKはパブリックベータ段階です。
 | プラットフォーム                       | メンテナンスの有無 | APIパリティ |
 | ------------------------------ | --------- | ------- |
 | [Pythonの次世代SDK][pythongensdk]  | はい        | Full    |
-| [Typescriptの次世代SDK][tsgensdk]  | はい        | Full    |
+| [TypeScriptの次世代SDK][tsgensdk]  | はい        | Full    |
 | [.NET SDK][dotnetgensdk]       | はい        | Full    |
 | [Swift SDK][swiftgensdk] (ベータ) | はい        | Full    |
 

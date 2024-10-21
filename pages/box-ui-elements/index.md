@@ -87,7 +87,7 @@ Box UI Elementsの詳細を確認する
 
 <Tile type="ai" title="Box AI for UI Elements" href="/guides/embed/ui-elements/preview/#box-ai-for-ui-elements">
 
-コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認します。
+コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認できます。
 
 </Tile>
 
@@ -139,7 +139,7 @@ Box API、Box UI Elements、React、Tailwind CSS、Vercelについて説明し�
 
 <Tile image="BUIE-AI" title="Box AI for Box UI Elements" href="https://www.youtube.com/watch?v=8DmMgkm-6Tw">
 
-コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認します。
+コンテンツプレビューUI ElementにBox AIを埋め込む方法を確認できます。
 
 </Tile>
 
