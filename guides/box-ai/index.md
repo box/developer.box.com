@@ -16,7 +16,7 @@ subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: box-ai/prerequisites

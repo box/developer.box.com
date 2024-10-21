@@ -385,11 +385,6 @@ may be limited.
 | GCP Vertex      | PaLM   | available |`google__text_unicorn`                  | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
 | GCP Vertex      | PaLM   | available |`google__text_bison`                    | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
 | GCP Vertex      | PaLM   |available| `google__text_bison_32k`                | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| OpenAI          | GPT    | available in Beta only|`openai__gpt_3_5_turbo_16k`             | [OpenAI GPT-3.5 model documentation][openai-gpt-3-5-model]              | Chat       |
-| OpenAI          | GPT    |available in Beta only| `openai__gpt_4_1106_preview`            | [OpenAI GPT-4 models documentation][openai-gpt-4-models]                | Chat       |
-| OpenAI          | GPT    | available in Beta only|`openai__gpt_4_turbo_preview`           | [OpenAI GPT-4 models documentation][openai-gpt-4-models]                | Chat       |
-| OpenAI          | GPT    | available in Beta only |`openai__gpt_4o_2024_05_13`             | [OpenAI GPT-4 models documentation][openai-gpt-4-models]                | Chat       |
-| OpenAI          | GPT    |available in Beta only| `openai__text_embedding_ada_002`        | [Azure OpenAI embeddings models documentation][openai-embeddings]       | Embeddings |
 | AWS          | Claude    |available | `aws__claude_3_haiku`        | [Amazon Claude model documentation][aws-claude]       | Chat |
 | AWS          | Claude    |available | `aws__claude_3_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
 | AWS          | Claude    |available | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
