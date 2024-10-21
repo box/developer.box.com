@@ -12,7 +12,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/ask-questions
 type: guide
-total_steps: 5
+total_steps: 6
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/generate-text
