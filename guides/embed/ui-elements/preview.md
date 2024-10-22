@@ -437,10 +437,10 @@ Enriched with Box AI features, the Preview UI element brings the following funct
 
 - Q&A and document summaries.
 - A **clear conversation** button that resets the conversation with Box AI.
-- Citations that, if present, appear below the answer.
-- Markdown support that allows you to ask AI to respond in Markdown format, including bullet points or tables
-- Question history that is kept under the hood so that both users and the AI can refer to previous context to achieve the best answer possible.
-- Suggested questions that appear at the top of the chat to assist with the conversation.
+- Citations that appear below the answer if included in the answer.
+- Formatting support that allows requesting Markdown-formatted response, including bullet points or tables.
+- Question history that allows referencing the context to achieve the best responses possible.
+- Suggested questions that appear at the top of the chat by default to assist with the conversation.
 
 ![Box UI Element with Box AI options enabled](./images/box-ai-ui-element.jpg)
 
