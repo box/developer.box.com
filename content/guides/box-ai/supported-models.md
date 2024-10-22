@@ -36,10 +36,6 @@ may be limited.
 | GCP Vertex      | PaLM   | available |`google__text_unicorn`                  | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
 | GCP Vertex      | PaLM   | available |`google__text_bison`                    | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
 | GCP Vertex      | PaLM   |available| `google__text_bison_32k`                | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| AWS          | Claude    |available | `aws__claude_3_haiku`        | [Amazon Claude model documentation][aws-claude]       | Chat | 
-| AWS          | Claude    |available | `aws__claude_3_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
-| AWS          | Claude    |available | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat | 
-| AWS          | Titan    |available | `aws__titan_text_lite`        | [Amazon Titan model documentation][aws-titan]       | Chat | 
 
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
@@ -54,5 +50,3 @@ may be limited.
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
 [openai-embeddings]: https://platform.openai.com/docs/models/embeddings
 [ai-model]: e://get-ai-agent-default#param-model
-[aws-claude]: https://aws.amazon.com/bedrock/claude/
-[aws-titan]: https://aws.amazon.com/bedrock/titan/
