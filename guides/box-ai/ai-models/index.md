@@ -11,10 +11,10 @@ subcategory_id: box-ai/ai-models
 is_index: true
 id: box-ai/ai-models
 type: guide
-total_steps: 2
+total_steps: 16
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/ai-models/azure-gpt-3-5-turbo-model-card
+next_page_id: box-ai/ai-models/azure-openai-gpt-3-5-turbo-model-card
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/index.md
@@ -38,7 +38,7 @@ Some of the AI models mentioned in this document support specific Box products. 
 You can use the supported AI models:
 
 - get the [default AI agent configuration][agent],
-- override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
+- override the AI agent configuration used in the Box AI API endpoints.
 
 When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
 
@@ -52,11 +52,11 @@ may be limited.
 
 </Message>
 
-> Note: The tiles are currently a draft and might not be included in the release. The model table is the source of truth.
+**Note: The tiles are a prototype, subject to changes.**
 
 <TileGrid rows="2">
 
-<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-gpt-3-5-turbo-model-card">
+<Tile type="gpt" title="azure__openai__gpt_3_5_turbo_16k" href="/guides/box-ai/ai-models/azure-openai-gpt-3-5-turbo-model-card">
 
 A model primarily designed for chat-related tasks but not exclusively.
 The model demonstrates high accuracy at responding in requested formats.
@@ -78,7 +78,7 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/">
+<Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
 
 A multimodal model designed to handle lightweight tasks.
 <div>
@@ -99,7 +99,7 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/">
+<Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
 
 A multimodal model, highly efficient in handling complex, multi-step tasks.
 <div>
@@ -120,7 +120,7 @@ Available
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/">
+<Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
 
 The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
 <div>
@@ -141,7 +141,7 @@ Preview
 
 </Tile>
 
-<Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/">
+<Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 
 A most capable 2nd generation text embedding model. Skilled in
 text search, code search, and sentence similarity.
@@ -157,7 +157,7 @@ Available
 
 </Tile>
 
-<Tile type="model" title="google__textembedding_gecko" href="google-textembedding-gecko/">
+<Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
 
 A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
 <div>
@@ -178,7 +178,7 @@ Available
 
 </Tile>
 
-<Tile type="model" title="google__textembedding_gecko_002" href="/">
+<Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
 
 A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
 <div>
@@ -193,7 +193,7 @@ Available
 
 </Tile>
 
-<Tile type="model" title="google__textembedding_gecko_003" href="/">
+<Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
 
 A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
 <div>
@@ -208,7 +208,7 @@ Available
 
 </Tile>
 
-<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/">
+<Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
 
 A foundation model that performs well at a variety of multimodal tasks.
 <div>
@@ -223,7 +223,7 @@ Preview
 
 </Tile>
 
-<Tile type="palm" title="google__text_unicorn" href="/">
+<Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
 
 A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
 <div>
@@ -238,7 +238,7 @@ Available
 
 </Tile>
 
-<Tile type="palm" title="google__text_bison" href="/">
+<Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
 
 A model capable of creating document summaries, answers to questions, and content classification labels.
 <div>
@@ -253,7 +253,7 @@ Available
 
 </Tile>
 
-<Tile type="palm" title="google__text_bison_32k" href="/">
+<Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
 
 An enhanced text-bison model capable of creating document summaries, answers to questions, and content classification labels.
 <div>
@@ -268,15 +268,14 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="openai__gpt_3_5_turbo_16k" href="/">
+<Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
 
-A model primarily designed for chat-related tasks, but not exclusively.
-This model demonstrates high accuracy at responding in requested formats.
+This model is tailored for various language tasks, including creative writing and conversational AI.
 <div>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+Preview
 
 </strong>
 
@@ -284,14 +283,14 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="openai__gpt_4_1106_preview" href="/">
+<Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
 
-A most advanced GPT multimodal model equipped with improved instruction following, JSON mode, reproducible outputs, and more.
+This model is designed for advanced language tasks, focusing on comprehension and context handling.
 <div>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+Preview
 
 </strong>
 
@@ -299,14 +298,14 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="openai__gpt_4_turbo_preview" href="/">
+<Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
 
-A large multimodal model that completes complex tasks (like code generation) with high accuracy.
+This model is designed to enhance language understanding and generation tasks.
 <div>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+Preview
 
 </strong>
 
@@ -314,96 +313,50 @@ Available
 
 </Tile>
 
-<Tile type="gpt" title="openai__text_embedding_ada_002" href="/">
+<Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
 
-A most capable 2nd generation text embedding model. Skilled in
-text search, code search, and sentence similarity.
+model is designed for advanced language processing, capable of handling extensive contexts, making it suitable for complex tasks.
 <div>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+Preview
 
 </strong>
 
 </div>
 
 </Tile>
-
-<!-- <Tile type="model" title="aws__claude_3_haiku" href="/">
-
-Lorem ipsum
-<div>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
-<Tile type="model" title="aws__titan_text_lite" href="/">
-
-Lorem ipsum
-<div>
-
-<strong style="background-color: #e1ffe7">
-
-Available
-
-</strong>
-
-</div>
-
-</Tile>
-
- -->
 
 </TileGrid>
 
-<Message type='notice'>
-
-The list may change depending on the model availability.
-**Preview** means you can use the model, but the access to all its features
-may be limited.
-
-</Message>
-
-| Provider        | Family |Availability| API Name                                | External documentation                                                  | Capability |
-| --------------- | ------ |-----| --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
-| Microsoft Azure | GPT    |available| `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-model-gpt35]              | Chat       |
-| Microsoft Azure | GPT    |available| `azure__openai__gpt_4o_mini`      | [Azure OpenAI GPT-4o-mini model documentation][azure-ai-model-gpt40]              | Chat       |
-| Microsoft Azure | GPT    |available| `azure__openai__text_embedding_ada_002` | [Azure OpenAI embeddings models documentation][azure-ai-embeddings]     | Embeddings |
-| GCP Vertex      | Gecko  | available |`google__textembedding_gecko`           | [Google Vertex AI embeddings models documentation][vertex-ai-model]     | Embeddings |
-| GCP Vertex      | Gecko  | available |`google__textembedding_gecko_002`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
-| GCP Vertex      | Gecko  | available|`google__textembedding_gecko_003`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
-| GCP Vertex      | Gemini |preview| `google__gemini_1_5_pro_001`            | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
-| GCP Vertex      | Gemini | preview |`google__gemini_1_5_flash_001`          | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
-| GCP Vertex      | PaLM   | available |`google__text_unicorn`                  | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| GCP Vertex      | PaLM   | available |`google__text_bison`                    | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| GCP Vertex      | PaLM   |available| `google__text_bison_32k`                | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| AWS          | Claude    |preview | `aws__claude_3_haiku`        | [Amazon Claude model documentation][aws-claude]       | Chat |
-| AWS          | Claude    |preview | `aws__claude_3_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
-| AWS          | Claude    |preview | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
-| AWS          | Titan    |preview | `aws__titan_text_lite`        | [Amazon Titan model documentation][aws-titan]       | Chat |
+| Provider        | Family | Availability           | API Name                                | External documentation                                                  | Capability |
+| --------------- | ------ | ---------------------- | --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
+| Microsoft Azure | GPT    | available              | `azure__openai__gpt_3_5_turbo_16k`      | [Azure OpenAI GPT-3.5 model documentation][azure-ai-gpt-3-5-model]              | Chat       |
+| Microsoft Azure | GPT    | available              | `azure__openai__gpt_4o_mini`      | [Azure OpenAI GPT-4o mini model documentation][azure-ai-mini-4o-model]              | Chat       |
+| Microsoft Azure | GPT    | available              | `azure__openai__text_embedding_ada_002` | [Azure OpenAI embeddings models documentation][azure-ai-embeddings]     | Embeddings |
+| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko`           | [Google Vertex AI embeddings models documentation][vertex-ai-model]     | Embeddings |
+| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko_002`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
+| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko_003`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
+| GCP Vertex      | Gemini | preview                | `google__gemini_1_5_pro_001`            | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
+| GCP Vertex      | Gemini | preview                | `google__gemini_1_5_flash_001`          | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
+| GCP Vertex      | PaLM   | available              | `google__text_unicorn`                  | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
+| GCP Vertex      | PaLM   | available              | `google__text_bison`                    | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
+| GCP Vertex      | PaLM   | available              | `google__text_bison_32k`                | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
+| AWS          | Claude    |available | `aws__claude_3_haiku`        | [Amazon Claude model documentation][aws-claude]       | Chat |
+| AWS          | Claude    |available | `aws__claude_3_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
+| AWS          | Claude    |available | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
+| AWS          | Titan    |available | `aws__titan_text_lite`        | [Amazon Titan model documentation][aws-titan]       | Chat |
 
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
 [agent]: e://get_ai_agent_default
-[openai-gpt-3-5-model]: https://platform.openai.com/docs/models/gpt-3-5-turbo
-[azure-ai-model-gpt35]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
-[azure-ai-model-gpt40]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4o-and-gpt-4-turbo
+[azure-ai-gpt-3-5-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
+[azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
 [vertex-text-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text
-[openai-gpt-4-models]: https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
-[openai-embeddings]: https://platform.openai.com/docs/models/embeddings
 [ai-model]: e://get-ai-agent-default#param-model
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 [aws-titan]: https://aws.amazon.com/bedrock/titan/
-[extract]: e://post_ai_extract
-[extract-structured]: e://post_ai_extract_structured
