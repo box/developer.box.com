@@ -13,7 +13,7 @@ subcategory_id: box-ai/ai-agents
 is_index: false
 id: box-ai/ai-agents/overrides-tutorial
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
 next_page_id: ''
@@ -25,7 +25,7 @@ source_url: >-
 
 <Message type="notice">
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 

@@ -14,7 +14,7 @@ subcategory_id: box-ai/ai-agents
 is_index: true
 id: box-ai/ai-agents
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/ai-agents/get-agent-default-config
@@ -23,6 +23,12 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
 ---
 # AI model overrides
+
+<Message type="notice">
+
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+
+</Message>
 
 Box updates the default models across the endpoints on a regular basis to stay up to date with the most advanced options.
 
