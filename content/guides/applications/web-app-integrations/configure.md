@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
   - authentication/tokens
-  - applications/app-center
+  - applications/integrations
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -139,7 +139,7 @@ note that the URL must be publicly accessible on the internet.
 ## Making Integration Publicly Available
 
 To make a Box integration publicly available it needs to be listed in the App
-Center. Follow the [Integrations][app-center] guide for more details.
+Center. Follow the [Integrations][integrations] guide for more details.
 
 [ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
@@ -149,4 +149,4 @@ Center. Follow the [Integrations][app-center] guide for more details.
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations

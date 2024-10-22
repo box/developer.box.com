@@ -60,7 +60,7 @@ features, and add CORS domains.
 
 In the next tabs you can create webhooks, web app integrations,
 submit app for enablement for access to the Enterprise, submit your app
-to the [Box Integrations][app-center], and generate a report to view this application’s
+to the [Box Integrations][integrations], and generate a report to view this application’s
 activity.
 
 ## Test your app
@@ -84,7 +84,7 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [console]: https://cloud.app.box.com/developers/console
 [auth]: g://authentication/select
 [oauth2]: g://authentication/oauth2
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
 [app-center]: https://cloud.app.box.com/app-center
 [dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token
