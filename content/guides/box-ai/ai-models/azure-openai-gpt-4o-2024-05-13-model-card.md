@@ -28,6 +28,8 @@ related_guides:
 
 ## Usage
 
+(TO BE ADDED)
+
 ## Additional documentation
 
 For additional information, see [official Azure OpenAI GPT-4o-2024-05-13 documentation][azure-ai-mini-4o-model].

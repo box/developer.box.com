@@ -30,6 +30,8 @@ Text embedding models convert textual data into numerical vectors that can be pr
 
 ## Usage
 
+(TO BE ADDED)
+
 ## Additional documentation
 
 For additional information, see [official Google textembedding models documentation][vertex-ai-model].

@@ -28,20 +28,7 @@ related_guides:
 
 ## Usage
 
-Box Webapp uses this model to cover the following use cases:
-
-* Creating content
-* Editing content
-* Creating summaries
-* Single doc Q&A on text
-
-Box AI API uses this model to cover the following use cases:
-
-* Creating content
-* Editing content
-* Creating summaries
-* Single doc Q&A on text
-* Extracting metadata
+(TO BE ADDED)
 
 ## Additional documentation
 
