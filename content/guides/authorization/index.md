@@ -39,10 +39,10 @@ enabled:
 
 These [settings][setting] can be found by navigating to:
 
-**Admin Console** > **Apps** > **Custom Apps** > click the ⚙ icon
+**Admin Console** > **Apps** > **Platform Apps** > click the ⚙ icon
 
 <Message tip>
-  Published apps are any applications that can be found in our App Center.
+  Published apps are any applications that can be found in our Integrations.
 </Message>
 
 ## Required actions
@@ -64,10 +64,10 @@ scenarios.
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |
-|[OAuth 2.0][standauth]                            | Enable in **Apps** > **Custom Apps Manager** > **User Authentication Apps** > **Add App** | Ready for use                           |
-|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Add App** |
-|[App Token Authentication][apptoken]              | Authorize and enable in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add App** | Ready for use                           |
+|[OAuth 2.0][standauth]                            | Enable in **Apps** > **Platform Apps Manager** > **User Authentication Apps** > **Platform App** | Ready for use                           |
+|[Server Authentication (with JWT)][jwt]           | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App** | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App** |
+|[Server Authentication (client credentials)][cc]  | Authorize and enable in **Apps** > **Platform Apps Manager** > **Server Authentication Apps** | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App** |
+|[App Token Authentication][apptoken]              | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add Platform App** | Ready for use                           |
 
 **Require manual admin authorization for transactional access apps**:
 
@@ -76,7 +76,7 @@ scenarios.
 |[OAuth 2.0][standauth]                            | N/A                                                                      | N/A                                                  |
 |[Server Authentication (with JWT)][jwt]           | N/A                                                                      | N/A                                                  |
 |[Server Authentication (client credentials)][cc]  | N/A                                                                      | N/A                                                  |
-|[App Token Authentication][apptoken]              | Authorize in **Apps** > **Custom Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
+|[App Token Authentication][apptoken]              | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** | Automatically authorized and enabled upon creation   |
 
 <!--alex enable-->
 

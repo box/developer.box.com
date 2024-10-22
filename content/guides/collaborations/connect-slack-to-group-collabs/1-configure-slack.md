@@ -18,7 +18,7 @@ This section will take you through the following steps.
 
 ## Create a minimal Slack app
 
-Go to the **[Slack apps page][slack-apps]** and click **Create New App**. Add
+Go to the **[Slack apps page][slack-apps]** and click **Create Platform App**. Add
 an **App Name**, select your **Development Slack Workspace** from the dropdown
 list where the bot will be deployed to, then click **Create App**.
 
