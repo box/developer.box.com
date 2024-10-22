@@ -19,7 +19,7 @@ previous_page_id: box-ai/ai-models/aws-claude-3-haiku-model-card
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card.md
 ---
-# Model card: AWS Claude 3 Sonnet
+# AWS Claude 3 Sonnet
 
 **AWS Claude 3 Sonnet** model is designed for advanced language tasks, focusing on comprehension and context handling.
 
