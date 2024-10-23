@@ -76,7 +76,7 @@ PS /Users/user/repos/boxcli/examples>
 
 OAuth [CLIの設定クイックスタート][oauth-guide]を使用して、Box CLIを構成してインストールします。使用しているユーザーが管理者または共同管理者であることを確認してください。
 
-### エンタープライズ設定
+### Enterprise構成
 
 * 適切なSlackワークスペースやオーガナイゼーションで[Box for Slackを構成してインストール][install-slack]します
 * [Slackのコンテンツレイヤー][content-layer]としてのBoxが有効になっています
