@@ -35,7 +35,7 @@ AI agent configuration versioning gives the developers more control over AI agen
 
 AI agent configuration versioning adopts the following principles:
 
-* Each AI agent snapshot is supported for 12 months, unless there are factors outside of Box's control. For example, a Large Language Model may get deprecated.
+* Each AI agent snapshot is supported for at least 12 months, unless there are factors outside of Box's control. For example, a Large Language Model (LLM) may get deprecated.
 * An AI agent snapshot is available unless a new, stable agent version is released
 * A 6-month window is provided to test and transition to the new snapshot.
 
