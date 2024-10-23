@@ -40,7 +40,6 @@ may be limited.
 | AWS          | Claude    |preview | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat | 
 | AWS          | Titan    |preview | `aws__titan_text_lite`        | [Amazon Titan model documentation][aws-titan]       | Chat | 
 
-
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
 [agent]: e://get_ai_agent_default
