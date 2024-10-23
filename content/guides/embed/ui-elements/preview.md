@@ -425,7 +425,7 @@ Enriched with Box AI features, the Preview UI element brings the following funct
 - A **clear conversation** button that resets the conversation with Box AI.
 - Citations that appear below the answer if included in the answer.
 - Formatting support that allows requesting Markdown-formatted response, including bullet points or tables.
-- Question history that allows referencing the context to achieve the best responses possible.
+- Question history that allows referencing previous context to achieve the best response possible. The question history is kept only during the current session.
 - Suggested questions that appear at the top of the chat by default to assist with the conversation.
 
 ![Box UI Element with Box AI options enabled](./images/box-ai-ui-element.jpg)
@@ -597,10 +597,9 @@ more, see [Dedicated Scopes for Box UI Elements][scopes].
 [buie]: https://github.com/box/box-ui-elements/releases/tag/v16.0.0
 [annotationsguide]: g://embed/ui-elements/annotations.md
 [previewlib]: https://github.com/box/box-content-preview
-[ainpm]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34
 [expiredembed]: r://file--full/#param-expiring_embed_link
 [token]: g://authentication/tokens/developer-tokens
-[aipackage]: https://github.com/box/box-ui-elements/releases/tag/v20.0.0-beta.17
+[aipackage]: https://www.npmjs.com/package/box-ui-elements/v/22.0.0
 [installation]: g://embed/ui-elements/installation
 [blueprint-web]: https://www.npmjs.com/package/@box/blueprint-web
 [box-ai-content-answers]: https://www.npmjs.com/package/@box/box-ai-content-answers
