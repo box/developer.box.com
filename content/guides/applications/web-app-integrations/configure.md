@@ -4,7 +4,7 @@ related_endpoints: []
 related_guides:
   - authentication/oauth2/oauth2-setup
   - authentication/tokens
-  - applications/app-center
+  - applications/integrations
 required_guides: []
 related_resources: []
 alias_paths: []
@@ -47,7 +47,7 @@ To configure the integration, follow the guidance below for each value.
 | Field | Description |
 |--------------------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration name | The name of your integration, which users see in the Box Web App when they select the **More Options** > **Integrations** menu on a file or folder. |
-| Description | The description of the integration displayed in the Box App Center. |
+| Description | The description of the integration displayed in the Box Integrations. |
 | Supported file extensions | The integration will only appear as an option in the **More Options** > **Integrations** menu for the selected file extensions. |
 | Permissions requirement | Determines what permissions level users need to see the integration. **Download permissions are required** allows users to download the file - they will not be able to update it. **Full permissions are required** allows users to download and update the file. |
 | Integration scopes | Specifies the scope of your integration - either the file/folder from which integration is invoked, or its parent folder. |
@@ -95,8 +95,8 @@ The following parameter values are available.
 ### Integration Status
 
 - **Development**: The integration is visible and available only to application collaborators listed under the **General Settings** tab. This option is best used when the application is still in development and undergoing testing.
-- **Online**: The integration is visible and available to all Box users. This option is best used when development is complete and the application is ready to publish in the App Center.
-- **Maintenance**: The integration is visible and available only to application collaborators listed under the **General Settings** tab. This option is best used after the integration is published in the App Center, but needs to perform maintenance updates or troubleshoot issues. Use this option to temporarily take the integration offline for everyone except the application's collaborators.
+- **Online**: The integration is visible and available to all Box users. This option is best used when development is complete and the application is ready to publish in the Integrations.
+- **Maintenance**: The integration is visible and available only to application collaborators listed under the **General Settings** tab. This option is best used after the integration is published in the Integrations, but needs to perform maintenance updates or troubleshoot issues. Use this option to temporarily take the integration offline for everyone except the application's collaborators.
 
 ## Example Use Cases of Box Integrations
 
@@ -139,7 +139,7 @@ note that the URL must be publicly accessible on the internet.
 ## Making Integration Publicly Available
 
 To make a Box integration publicly available it needs to be listed in the App
-Center. Follow the [App Center][app-center] guide for more details.
+Center. Follow the [Integrations][integrations] guide for more details.
 
 [ca]: g://applications/app-types/custom-apps
 [pu]: g://applications/web-app-integrations/types
@@ -149,4 +149,4 @@ Center. Follow the [App Center][app-center] guide for more details.
 [custom-oauth2]: g://authentication/oauth2/oauth2-setup
 [devconsole]: https://app.box.com/developers/console
 [devaccount]: https://account.box.com/signup/n/developer
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations

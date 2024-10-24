@@ -120,7 +120,7 @@ primary:
 
     console:
       // text: The text for the link to the developer console
-      text: My Apps
+      text: My Platform Apps
 
       // url: The URL to the developer console
       url: https://cloud.app.box.com/developers/console

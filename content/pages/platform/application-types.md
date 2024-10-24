@@ -18,7 +18,7 @@ provides customizable UI Elements for tasks like browsing, searching, and
 previewing content. These apps support OAuth 2.0, JWT, and Client Credentials
 Grant for authentication. Custom Apps are ideal for applications that need to
 access both their own and others' files, upload and download files, and
-potentially be listed in the Box App Center.
+potentially be listed in the Box Integrations.
 
 ## Limited Access App
 
@@ -51,17 +51,17 @@ add new features to Box users and be added to Recommended Apps in Box Preview,
 enhancing the user experience by integrating with various content types and
 file extensions.
 
-## App Center Publication
+## Integrations Publication
 
-The [Box App Center][app_center] is a platform for Box users to discover
+The [Box Integrations][integrations] is a platform for Box users to discover
 applications that
 can be used in conjunction with Box. For developers, listing their application
-in the App Center is an effective way to reach new users, particularly for
-applications suited for use by other enterprises. The process for App Center
+in the Integrations is an effective way to reach new users, particularly for
+applications suited for use by other enterprises. The process for Integrations
 publication involves ensuring the app is production-ready, leverages OAuth 2.0
 authentication, and submitting it for approval through the Developer Console.
 Once approved, applications can be featured, most popular, or recently added
-sections in the App Center, and they can also be unpublished if necessary.
+sections in the Integrations, and they can also be unpublished if necessary.
 
 <Next>
   Next step
@@ -71,4 +71,4 @@ sections in the App Center, and they can also be unpublished if necessary.
 [limited_app]: g://applications/app-types/limited-access-apps/
 [skills]: g://applications/app-types/custom-skills/
 [web_app]: g://applications/web-app-integrations/
-[app_center]: g://applications/app-center/
+[integrations]: g://applications/integrations/

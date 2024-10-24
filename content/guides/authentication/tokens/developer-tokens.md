@@ -26,8 +26,8 @@ To create a Developer Token for an application:
 - Under Developer Token, select **Generate Developer Token**.
 
 <Message>
-You can also generate a Developer Token directly from [My Apps][apps] view,
-using the menu available for each app.
+You can also generate a Developer Token directly from [My Platform Apps][apps]
+view, using the menu available for each app.
 </Message>
 
 <ImageFrame border center shadow>

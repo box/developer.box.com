@@ -27,7 +27,7 @@ You cannot change this selection later on.
 |                            |                                                                              |
 | -------------------------- | ---------------------------------------------------------------------------- |
 | **Authentication methods** | [OAuth 2.0][oauth2], [JWT][jwt], or [Client Credentials Authentication][ccg] |
-| **Notable Features**        | Webhooks, App Center, and Web App Integrations                             |
+| **Notable Features**        | Webhooks, Integrations, and Web App Integrations                             |
 
 Custom App encompasses most use cases and is the most flexible option.
 This application type allows for interaction with our 150+ endpoints.

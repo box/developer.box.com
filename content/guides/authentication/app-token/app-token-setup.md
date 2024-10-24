@@ -26,7 +26,7 @@ for authentication.
 
 ## Prerequisites
 
-To set up a Custom App using server-side authentication, you will need to ensure
+To set up a Platform App using server-side authentication, you will need to ensure
 you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -35,9 +35,9 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### 1. Log in to the Developer Console
 
 Log into Box and navigate to the [Developer Console][devconsole].
-Select **Create New App**.
+Select **Create Platform App**.
 
-### 2. Create a Custom App
+### 2. Create a Platform App
 
 Select **Limited Access App** from the list of application types.
 A modal will appear to prompt the next step.

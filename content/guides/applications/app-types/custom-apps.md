@@ -37,7 +37,7 @@ A Custom App is best used when the application:
 - Wants to use [OAuth 2.0][oauth2], [JWT][jwt] or [Client Credentials Grant][cc] for authentication.
 - Wants to upload and download files
 - Wants the freedom to access both their own files, as well as files owned by [managed or external users][users].
-- Wants the option to list the application in the Box App Center
+- Wants the option to list the application in the Box Integrations
 - Wants to provide integration into the Box Web App
 
 ## Use cases
