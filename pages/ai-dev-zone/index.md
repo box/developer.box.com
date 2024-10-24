@@ -49,7 +49,7 @@ Try out interactive demos
 
 </Header>
 
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
 
 <TileGrid rows="4">
 
@@ -57,9 +57,9 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
 
 Summarize a document in a selected tone of voice.
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-Public beta
+New
 
 </strong>
 
