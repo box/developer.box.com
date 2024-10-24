@@ -19,8 +19,7 @@ Make sure you use **two underscores** after the provider name.
 
 <Message type='notice'>
 The list may change depending on the model availability.
-**Preview** means you can use the model, but the access to all its features
-may be limited.
+Models offered in **Preview** moe have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy
 </Message>
 
 | Provider        | Family |Availability| API Name                                | External documentation                                                  | Capability | 
