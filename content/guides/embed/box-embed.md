@@ -10,31 +10,55 @@ alias_paths:
 
 # Box Embed
 
-Box Embed is a HTML-based framework that makes it possible to embed the entire
-Box Web App experience anywhere people work. Box Embed provides the ability to
-upload, search, comment, share, tag, and edit files using Box Edit.
+Box Embed is a HTML-based framework that allows embedding the entire
+Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
 
-## Configure
+## Configuration
 
-To create the widget, you need to set the folder for sharing and you
+To create the widget, you need to set embeddable element, such as a **folder**, **Hub** or **file** sharing and you
 need to have at least **Viewer** [permissions][5].
 
-### From the web
+### Using web app
 
-To grab your Box Embed code from the Box web app:
+To fetch the Box Embed code from the Box web app, perform the following steps, depending on the item.
 
-- navigate to the folder of choice,
-- click on the ellipsis beside the folder,
-- go to **More Actions**,
-- click **Embed Widget**.
+<Tabs>
+<Tab title="Files and folders">
+1. Navigate to the chosen file or folder.
+2. Click on the ellipsis next to the folder.
+3. Go to  **More Actions** >  **Embed Widget**.
+</Tab>
+<Tab title="Hubs">
+1. Navigate to the chosen Hub.
+2. Click on the ellipsis menu in the top right corner.
+3. Click **Embed Widget**.
+</Tab>
+</Tabs>
 
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
 </ImageFrame>
 
-The next screen allows you to configure the size, sorting, and view of
-the widget. You can also choose to hide the folder path, and to expand
-the navigation & sidebar by default.
+The next screen allows you to configure the parameters of an embeddable element.
+
+<Tabs>
+<Tab title="Files">
+You can specify the size of the widget.
+</Tab>
+<Tab title="Folders">
+You can specify:
+
+* the size of the widget
+* sorting of the files in a folder
+* the option to hide the parent navigation path and sidebar
+</Tab>
+<Tab title="Hubs">
+You can specify:
+
+* the size of the widget
+* the option to hide the parent navigation path and sidebar
+</Tab>
+</Tabs>
 
 <ImageFrame border>
   ![Box Embed Configuration](./embed-configuration.png)
@@ -102,11 +126,13 @@ a list of optional parameters you can configure.
 
 |                       |                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------- |
-| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`.                  |
+| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence.                  |
 | `sortColumn`          | The order the files or folders are sorted in. Can be `name`, `date` (default), or `size`.    |
 | `sortDirection`       | The sort direction of files or folders. Can be `ASC` (default) or `DESC`.                    |
 | `showParentPath`      | Hide or show the folder path in the header of the frame. Can be `true` or `false` (default). |
-| `showItemFeedActions` | Hide or show file comments or tasks. Can be true (default) or false.                         |
+| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                         |
+| `hideHubsGallery` | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                         |
+| `uxLite` | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files.                     |
 
 ### Full Screen Capabilities
 
@@ -114,11 +140,11 @@ To enable full screen capabilities for the Box Embed snippet, include one or mor
 of the following parameters if you want the object to be viewable in full screen
 within an `<iframe>`:
 
-- `allowfullscreen`
-- `webkitallowfullscreen`
-- `mozallowfullscreen`
-- `oallowfullscreen`
-- `msallowfullscreen`
+* `allowfullscreen`
+* `webkitallowfullscreen`
+* `mozallowfullscreen`
+* `oallowfullscreen`
+* `msallowfullscreen`
 
 ## Expiring Embed Links
 
