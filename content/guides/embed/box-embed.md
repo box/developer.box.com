@@ -20,20 +20,19 @@ need to have at least **Viewer** [permissions][5].
 
 ### Using web app
 
-To fetch the Box Embed code from the Box web app, perform the following steps, depending on the item.
+To fetch the Box Embed code from the Box web app, perform the following steps depending on the item.
 
-<Tabs>
-<Tab title="Files and folders">
-1. Navigate to the chosen file or folder.
-2. Click on the ellipsis next to the folder.
+#### Files and folders
+
+1. Navigate to the chosen file or folder. 
+2. Click on the ellipsis next to the folder. 
 3. Go to  **More Actions** >  **Embed Widget**.
-</Tab>
-<Tab title="Hubs">
-1. Navigate to the chosen Hub.
-2. Click on the ellipsis menu in the top right corner.
-3. Click **Embed Widget**.
-</Tab>
-</Tabs>
+
+#### Hubs
+
+1. Navigate to the chosen Hub. 
+2. Click on the ellipsis menu in the top right corner. 
+3. Click **Embed Widget**.|
 
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
@@ -41,24 +40,9 @@ To fetch the Box Embed code from the Box web app, perform the following steps, d
 
 The next screen allows you to configure the parameters of an embeddable element.
 
-<Tabs>
-<Tab title="Files">
-You can specify the size of the widget.
-</Tab>
-<Tab title="Folders">
-You can specify:
-
-* the size of the widget
-* sorting of the files in a folder
-* the option to hide the parent navigation path and sidebar
-</Tab>
-<Tab title="Hubs">
-You can specify:
-
-* the size of the widget
-* the option to hide the parent navigation path and sidebar
-</Tab>
-</Tabs>
+| Files | Folders  | Hubs  |
+|----------|----------|------------------------|
+|Size of the widget.| Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar | Size of the widget,  hiding the parent navigation path and sidebar. |
 
 <ImageFrame border>
   ![Box Embed Configuration](./embed-configuration.png)
