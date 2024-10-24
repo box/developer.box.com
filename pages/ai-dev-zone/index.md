@@ -201,6 +201,18 @@ New
 
 </Tile>
 
+<Tile type="box-brown" title="Pinecone" href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
+
+Connect Box and Pinecone to customize vector embeddings and get more relevant answers from LLM.
+
+<strong style="background-color: #e8e8e8">
+
+New
+
+</strong>
+
+</Tile>
+
 </TileGrid>
 
 </Centered>
