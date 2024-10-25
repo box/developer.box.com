@@ -22,15 +22,15 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/overrides-tutorial.md
 fullyTranslated: true
 ---
-# Override AI model configuration
+# AIモデルの構成の上書き
 
 <Message type="notice">
 
-Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-The `agent_ai` configuration allows you to override the default AI model configuration. It is available for the following endpoints:
+`agent_ai`構成を使用すると、デフォルトのAIモデルの構成を上書きできます。これは、以下のエンドポイントで使用できます。
 
 * [`POST ai/ask`][ask]
 * [`POST ai/text_gen`][text-gen]
@@ -39,19 +39,19 @@ The `agent_ai` configuration allows you to override the default AI model configu
 
 <Message type="tip">
 
-Use the [`GET ai_agent_default`][agent] endpoint to fetch the default configuration.
+デフォルト構成を取得するには、[`GET ai_agent_default`][agent]エンドポイントを使用してください。
 
 </Message>
 
-The override examples include:
+上書きの例を以下に示します。
 
-* Replacing the default AI model with a custom one based on your organization's needs.
-* Tweaking the base `prompt` to allow a more customized user experience.
+* 組織のニーズに基づいて、デフォルトのAIモデルをカスタムのAIモデルに置き換える。
+* ベースとなる`prompt`を微調整し、よりカスタマイズされたユーザーエクスペリエンスを実現する。
 * `temperature`などのパラメータを変更して、結果の創造性を調整する。
 
-## Sample configuration
+## 構成のサンプル
 
-A sample configuration for `ai/ask` is as follows:
+`ai/ask`の場合の構成のサンプルは以下のとおりです。
 
 ```sh
 {
@@ -130,42 +130,42 @@ A sample configuration for `ai/ask` is as follows:
 
 ```
 
-### Differences in parameter sets
+### パラメータセットの相違点
 
-The set of parameters available for `ask`, `text_gen`, `extract`, `extract_structured` differs slightly, depending on the API call.
+`ask`、`text_gen`、`extract`、`extract_structured`に使用できるパラメータのセットは、APIコールに応じて若干異なります。
 
-* The agent configuration for the `ask` endpoint includes `basic_text`, `basic_text_multi`, `long_text` and `long_text_multi` parameters. This is because of the `mode` parameter you use to specify if the request is for a single item or multiple items. If you selected `multiple_item_qa` as the `mode`, you can also use `multi` parameters for overrides.
+* `ask`エンドポイントのエージェント構成には、`basic_text`、`basic_text_multi`、`long_text`、`long_text_multi`パラメータが含まれます。これは、リクエストの対象となる項目を単一にするか複数にするかを指定するために使用する`mode`パラメータが原因です。`mode`として`multiple_item_qa`を選択した場合は、上書き用に`multi`パラメータも使用できます。
 
-* The agent configuration for `text_gen` includes the `basic_gen` parameter that is used to generate text.
+* `text_gen`のエージェント構成には、テキストの生成に使用される`basic_gen`パラメータが含まれます。
 
-### LLM endpoint params
+### LLMエンドポイントパラメータ
 
-The `llm_endpoint_params` configuration options differ depending on the overall AI model being [Google][google-params] or [OpenAI][openai-params] based.
+`llm_endpoint_params`構成のオプションは、全体的なAIモデルが[Google][google-params]ベースか[OpenAI][openai-params]ベースかによって異なります。
 
-For example, both `llm_endpoint_params` objects accept a `temperature` parameter, but the outcome differs depending on the model.
+たとえば、どちらの`llm_endpoint_params`オブジェクトも`temperature`パラメータを受け入れますが、モデルによって結果が異なります。
 
-For Google models, the [`temperature`][google-temp] is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
+Googleモデルの場合、[`temperature`][google-temp]はレスポンス生成時のサンプリングに使用されます。レスポンス生成は`top-P`と`top-K`が適用された場合に発生します。temperatureは、トークン選択におけるランダム性の程度を制御します。
 
-For OpenAI models, [`temperature`][openai-temp] is the sampling temperature with values between 0 and 2. Higher values like 0.8 make the output more random, while lower values like 0.2 make it more focused and deterministic. When introducing your own configuration, use `temperature` or or `top_p` but not both.
+OpenAIモデルの場合、[`temperature`][openai-temp]は、値が0～2の間のサンプリングtemperatureとなります。0.8のような高い値を指定すると、出力がよりランダムになるのに対し、0.2のような低い値を指定すると、出力はより焦点を絞った、決定的なものになります。独自の構成を導入する場合は、`temperature`と`top_p`の両方ではなく、いずれかを使用してください。
 
-### System message
+### システムメッセージ
 
-The `system_message` parameter's aim is to help the LLM understand its role and what it’s supposed to do. For example, if your solution is processing travel itineraries, you can add a system message saying:
+`system_message`パラメータの目的は、LLMがその役割と実行するべき内容を理解するのを支援することです。たとえば、旅行日程を処理するソリューションの場合は、次のようなシステムメッセージを追加できます。
 
 ```sh
 You are a travel agent aid. You are going to help support staff process large amounts of schedules, tickets, etc.
 
 ```
 
-This message is separate from the content you send in, but it can improve the results.
+このメッセージは、送信するコンテンツとは別ですが、結果を改善できます。
 
-### Number of tokens for completion
+### 完了に必要なトークンの数
 
-The `num_tokens_for_completion` parameter represents the number of [tokens][openai-tokens] Box AI can return. This number can vary based on the model used.
+`num_tokens_for_completion`パラメータは、Box AIが返すことのできる[トークン][openai-tokens]の数を表します。この数値は、使用されるモデルによって異なる場合があります。
 
-## Use case: Box AI Q&A
+## ユースケース: Box AI Q&A
 
-This example shows how to use the `prompt_template` parameter to change the query result. The first step is to ask Box AI to summarize a document about Box AI for Documents. The `mode` parameter is set to `single_item_qa` because only one document is supplied.
+この例では、`prompt_template`パラメータを使用してクエリの結果を変更する方法を示します。最初の手順として、Box AIに対し、Box AI for Documentsに関するドキュメントの要約を依頼します。指定されているドキュメントは1つだけなので、`mode`パラメータは`single_item_qa`に設定されています。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/ask" \
@@ -184,7 +184,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-You will get a response similar to the following:
+次のようなレスポンスが返されます。
 
 ```sh
 {
@@ -195,7 +195,7 @@ You will get a response similar to the following:
 
 ```
 
-To further improve the result, you can use the `prompt_template` parameter to add some more instructions for Box AI. In this example, let's change the tone of the response.
+結果をさらに改善するには、`prompt_template`パラメータを使用して、Box AIに対する指示をさらに追加できます。この例では、レスポンスの語調を変更しましょう。
 
 ```sh
 {
@@ -218,7 +218,7 @@ To further improve the result, you can use the `prompt_template` parameter to ad
 
 ```
 
-The response would be slightly less formal:
+レスポンスは若干砕けた表現になります。
 
 ```sh
 {
@@ -229,11 +229,11 @@ The response would be slightly less formal:
 
 ```
 
-## Use case: Generating text
+## ユースケース: テキストの生成
 
-This example shows you how changing the AI model in the `ai_agent` options can influence the way the text is generated.
+この例では、`ai_agent`のオプションでAIモデルを変更した場合にテキストの生成方法にどのような影響があるかを示します。
 
-First let's generate some text using the `POST ai/text_gen` endpoint. This endpoint is using the OpenAI 3.5 turbo model by default.
+最初に、`POST ai/text_gen`エンドポイントを使用してテキストを生成しましょう。このエンドポイントは、デフォルトで、OpenAI 3.5 turboモデルを使用しています。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
@@ -251,7 +251,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
 
 ```
 
-The response is as follows:
+レスポンスは次のようになります。
 
 ```sh
 {
@@ -262,7 +262,7 @@ The response is as follows:
 
 ```
 
-Let's change the model using the `ai_agent` configuration:
+`ai_agent`構成を使用してモデルを変更しましょう。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
@@ -286,7 +286,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
 
 ```
 
-After the model switch, the response is slightly different:
+モデルを切り替えた後は、レスポンスが若干異なります。
 
 ```sh
 {
@@ -297,11 +297,11 @@ After the model switch, the response is slightly different:
 
 ```
 
-As you can see the responses differ to some extent. Thanks to the model switch, you can optimize your interaction with Box AI and choose the most suitable model for your needs.
+ご覧のとおり、ある程度異なったレスポンスになったことがわかります。モデルの切り替えにより、Box AIに対する操作を最適化し、ニーズに最適なモデルを選択できます。
 
-## Use case: Metadata extraction
+## ユースケース: メタデータ抽出
 
-Switching models can also give us different results for metadata extraction. Let's use a sample contract to extract the metadata. In this example, the model used is Google Gemini.
+モデルを切り替えると、メタデータ抽出の結果も異なる場合があります。契約書のサンプルを使用して、メタデータを抽出しましょう。この例で使用されているモデルはGoogle Geminiです。
 
 ```sh
 curl -i -L 'https://api.box.com/2.0/ai/extract' \
@@ -319,7 +319,7 @@ curl -i -L 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-The response is a set of metadata:
+レスポンスは一連のメタデータになります。
 
 ```sh
 {
@@ -330,7 +330,7 @@ The response is a set of metadata:
 
 ```
 
-Let's change the model to the most recent OpenAI option:
+モデルを最新のOpenAIオプションに変更しましょう。
 
 ```sh
 curl -i -L 'https://api.box.com/2.0/ai/extract' \
@@ -354,7 +354,7 @@ curl -i -L 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-Using this model results in a response listing more metadata entries:
+このモデルを使用すると、結果として、レスポンスにはさらに多くのメタデータエントリが列挙されます。
 
 ```sh
 {

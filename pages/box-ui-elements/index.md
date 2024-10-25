@@ -73,7 +73,7 @@ Box UI Elementsは、Reactコンポーネントとしても、フレームワー
 
 <Header>
 
-Box UI Elementsの詳細を確認する
+Box UI Elementsの詳細を確認
 
 </Header>
 

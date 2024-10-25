@@ -23,17 +23,17 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/index.md
 fullyTranslated: true
 ---
-# AI model overrides
+# AIモデルの上書き
 
-Box updates the default models across the endpoints on a regular basis to stay up to date with the most advanced options.
+Boxでは、常に最先端のオプションに対応するため、定期的にデフォルトモデルをエンドポイント全体で更新しています。
 
-If your implementation is based on Box AI, a new default model might alter the results in a way that could break or change a downstream process. Switching to a specific version may prevent encountering any issues.
+Box AIに基づいた実装の場合、新しいデフォルトモデルによって、ダウンストリームプロセスを中断または変更するように結果が変更される可能性があります。特定のバージョンに切り替えることで、問題の発生を防止できる場合があります。
 
-Selecting a specific model may also bring better results to your use case. This is why, you can switch to any model included in the [supported models][models] list.
+また、特定のモデルを選択すると、ユースケースに対してより適切な結果が得られる場合もあります。このような理由で、[サポートされているモデル][models]のリストに含まれる任意のモデルに切り替えることが可能です。
 
-Apart from switching models, you can pass options to further customize the agents used in Box AI implementation and get the responses that suit your use case.
+モデルの切り替えとは別に、オプションを渡すことで、Box AIの実装で使用されるエージェントをさらにカスタマイズし、ユースケースに合ったレスポンスを取得することもできます。
 
-To see specific use cases, check the [overrides tutorial][overrides].
+具体的なユースケースを確認するには、[上書きに関するチュートリアル][overrides]を参照してください。
 
 [ask]: e://post_ai_ask#param_ai_agent
 

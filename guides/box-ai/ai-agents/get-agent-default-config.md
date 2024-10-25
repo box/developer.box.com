@@ -26,11 +26,11 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. Once you get the configuration details you can override them using the [`ai_agent`][ai-agent-config] parameter.
+`GET /2.0/ai_agent_default`エンドポイントを使用すると、AIサービスのデフォルト構成を取得できます。構成の詳細を取得したら、[`ai_agent`][ai-agent-config]パラメータを使用して構成を上書きできます。
 
 ## リクエストの送信
 
@@ -46,21 +46,21 @@ The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configu
 
 コールを実行するには、以下のパラメータを渡す必要があります。必須のパラメータは**太字**で示されています。
 
-| パラメータ      | 説明                                                                                                                                                                   | 例                                  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `language` | 返されるエージェントの構成の言語コード。その言語がサポートされていない場合は、デフォルト構成が返されます。                                                                                                                | `ja-JP`                            |
-| **`mode`** | The mode used to filter the agent configuration. The value can be `ask`, `text_gen`, `extract`, or `extract_structured` depending on the result you want to achieve. | `ask`                              |
-| `model`    | 構成を取得する対象となるモデル。選択したモデルがサポートされていることを確認するには、[モデルのリスト][models]を参照してください。                                                                                               | `azure__openai__gpt_3_5_turbo_16k` |
+| パラメータ      | 説明                                                                                              | 例                                  |
+| ---------- | ----------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `language` | 返されるエージェントの構成の言語コード。その言語がサポートされていない場合は、デフォルト構成が返されます。                                           | `ja-JP`                            |
+| **`mode`** | エージェントの構成にフィルタをかけるためのモード。値は、取得したい結果に応じて、`ask`、`text_gen`、`extract`、または`extract_structured`にします。 | `ask`                              |
+| `model`    | 構成を取得する対象となるモデル。選択したモデルがサポートされていることを確認するには、[モデルのリスト][models]を参照してください。                          | `azure__openai__gpt_3_5_turbo_16k` |
 
 ## レスポンス
 
-The responses to the call may vary depending on the `mode` parameter value you choose.
+コールに対するレスポンスは、選択した`mode`パラメータ値によって異なる場合があります。
 
 <Tabs>
 
-<Tab title="Ask">
+<Tab title="質問">
 
-When you set the `mode` parameter to `ask` the response will be as follows:
+`mode`パラメータを`ask`に設定すると、レスポンスは次のようになります。
 
 ```sh
 {
@@ -143,9 +143,9 @@ When you set the `mode` parameter to `ask` the response will be as follows:
 
 </Tab>
 
-<Tab title="Text gen">
+<Tab title="テキスト生成">
 
-When you set the `mode` parameter to `text_gen` the response will be as follows:
+`mode`パラメータを`text_gen`に設定すると、レスポンスは次のようになります。
 
 ``````sh
 {
@@ -178,9 +178,9 @@ When you set the `mode` parameter to `text_gen` the response will be as follows:
 
 </Tab>
 
-<Tab title="Extract">
+<Tab title="抽出">
 
-When you set the `mode` parameter to `extract` the response will be as follows:
+`mode`パラメータを`extract`に設定すると、レスポンスは次のようになります。
 
 `````sh
 {
@@ -222,9 +222,9 @@ When you set the `mode` parameter to `extract` the response will be as follows:
 
 </Tab>
 
-<Tab title="Extract structured">
+<Tab title="抽出 (構造化)">
 
-When you set the `mode` parameter to `extract_structured` the response will be as follows:
+`mode`パラメータを`extract_structured`に設定すると、レスポンスは次のようになります。
 
 `````sh
 {
