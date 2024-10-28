@@ -73,61 +73,70 @@ may be limited.
     <Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
       A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
-        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
        A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
+      <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
       A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
+      <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
        A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
       <div>
+      <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
       A model capable of creating document summaries, answers to questions, and content classification labels.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
       An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
       A model tailored for various language tasks, including creative writing and conversational AI.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
        A model designed for advanced language tasks, focusing on comprehension and context handling.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
       A model designed to enhance language understanding and generation tasks.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
       A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>

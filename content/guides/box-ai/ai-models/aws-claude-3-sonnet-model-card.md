@@ -7,7 +7,7 @@ related_guides:
   - box-ai/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
-# Model card: AWS Claude 3 Sonnet
+# AWS Claude 3 Sonnet
 
 **AWS Claude 3 Sonnet** model is designed for advanced language tasks, focusing on comprehension and context handling.
 
