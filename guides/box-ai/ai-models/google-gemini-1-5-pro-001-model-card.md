@@ -11,7 +11,7 @@ subcategory_id: box-ai/ai-models
 is_index: false
 id: box-ai/ai-models/google-gemini-1-5-pro-001-model-card
 type: guide
-total_steps: 16
+total_steps: 15
 sibling_id: box-ai/ai-models
 parent_id: box-ai/ai-models
 next_page_id: box-ai/ai-models/google-text-bison-32-model-card
@@ -28,7 +28,7 @@ source_url: >-
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**Google Gemini 1.5 Pro 001**| The name of the model. |
-|API model name|`google__gemini_1_5_pro_001`| The name of the model that is used in the Box AI API for model overrides. The user must provide this exact name for the API to work. |
+|API model name|`google__gemini_1_5_pro_001`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |
 |Release date|**February 15th 2024** | The release date for the model.|
@@ -38,12 +38,9 @@ source_url: >-
 |Empirical throughput| **45.5** | The number of tokens the model can generate per second.|
 |Open source | **No** | Specifies if the model's code is available for public use.|
 
-## Usage
-
-(TO BE ADDED)
-
 ## Additional documentation
 
 For additional information, see [official Google Gemini 1.5 Pro documentation][vertex-ai-gemini-models].
 
 [vertex-ai-gemini-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
+[overrides]: g://box-ai/ai-agents/overrides-tutorial
