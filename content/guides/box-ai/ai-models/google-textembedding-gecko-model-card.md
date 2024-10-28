@@ -26,7 +26,6 @@ Text embedding models convert textual data into numerical vectors that can be pr
 |Empirical throughput| **Not specified** | The number of tokens the model can generate per second.|
 |Open source | **No** | Specifies if the model's code is available for public use.|
 
-
 ## Additional documentation
 
 For additional information, see [official Google textembedding models documentation][vertex-ai-model].

@@ -31,4 +31,4 @@ To see specific use cases, check the [overrides tutorial][overrides].
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [overrides]: g://box-ai/ai-agents/overrides-tutorial
-[models]: g://box-ai/supported-models
+[models]: g://box-ai/ai-models

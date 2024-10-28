@@ -4,6 +4,8 @@ related_guides:
   - box-ai/ask-questions
   - box-ai/generate-text
   - box-ai/ai-agents/get-agent-default-config
+alias_paths:
+  - guides/box-ai/supported-models
 ---
 
 # Supported AI models

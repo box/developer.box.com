@@ -26,7 +26,6 @@ related_guides:
 |Empirical throughput| **49.8** | The number of tokens the model can generate per second.|
 |Open source | **No** | Specifies if the model's code is available for public use.|
 
-
 ## Additional documentation
 
 For additional information, see [official AWS Claude 3 Sonnet documentation][aws-claude].
