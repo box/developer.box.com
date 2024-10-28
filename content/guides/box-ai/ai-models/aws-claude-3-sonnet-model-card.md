@@ -16,7 +16,7 @@ related_guides:
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**AWS Claude 3 Sonnet**| The name of the model. | 
-|API model name|`aws__claude_3_sonnet`| The name of the model that is used in the Box AI API for model overrides. The user must provide this exact name for the API to work. |
+|API model name|`aws__claude_3_sonnet`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer|  **Amazon Web Services (AWS)** | The trusted organization that securely hosts LLM. |
 |Model provider|**Anthropic**| The organization that provides this model. |
 |Release date| **March 4th 2024** | The release date for the model.|
@@ -26,12 +26,10 @@ related_guides:
 |Empirical throughput| **49.8** | The number of tokens the model can generate per second.|
 |Open source | **No** | Specifies if the model's code is available for public use.|
 
-## Usage
-
-(TO BE ADDED)
 
 ## Additional documentation
 
 For additional information, see [official AWS Claude 3 Sonnet documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
+[overrides]: g://box-ai/ai-agents/overrides-tutorial

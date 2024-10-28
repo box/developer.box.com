@@ -17,7 +17,7 @@ related_guides:
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**Google Text Unicorn**| The specific name of the model. | 
-|API model name|`google__text_unicorn`| The name of the model that is used in the Box AI API for model overrides. The user must provide this exact name for the API to work. |
+|API model name|`google__text_unicorn`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Google** | The trusted organization that securely hosts LLM. |
 |Model provider|**Google**| The organization that provides this model. |
 |Release date|**June 2023** | The release date for the model.|
@@ -27,12 +27,9 @@ related_guides:
 |Empirical throughput| **Not specified, similar models offer up to 100 tokens per second** | The number of tokens the model can generate per second.|
 |Open source | **No** | Specifies if the model's code is available for public use. |
 
-## Usage
-
-(TO BE ADDED)
-
 ## Additional documentation
 
 For additional information, see [official Google Text Unicorn documentation][vertex-text-models].
 
 [vertex-text-models]: https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text
+[overrides]: g://box-ai/ai-agents/overrides-tutorial

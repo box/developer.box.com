@@ -16,7 +16,7 @@ related_guides:
 | Item  | Value | Description |
 |-----------|----------|----------|
 |Model name|**GPT-4o Mini**| The name of the model. | 
-|API model name|`azure__openai__gpt_4o_mini`| The name of the model that is used in the Box AI API for model overrides. The user must provide this exact name for the API to work. |
+|API model name|`azure__openai__gpt_4o_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
 |Model provider|**OpenAI**| The organization that provides this model. |
 |Release date|**July 18th, 2024** | The release date for the model.|
@@ -48,3 +48,4 @@ Box AI API uses this model to cover the following use cases:
 For additional information, see [official Azure OpenAI GPT-4o Mini documentation][azure-ai-mini-4o-model].
 
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
+[overrides]: g://box-ai/ai-agents/overrides-tutorial
