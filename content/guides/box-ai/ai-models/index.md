@@ -27,7 +27,7 @@ You can use the supported AI models:
 
 When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
 
-For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `openai__gpt_3_5_turbo_16k` API name. Make sure you use **two underscores** after the provider name.
+For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `azure__openai__gpt_4o_mini` API name. Make sure you use **two underscores** after the provider name.
 
 <Message type='notice'>
 The list may change depending on the model availability.
@@ -35,10 +35,7 @@ The list may change depending on the model availability.
 may be limited.
 </Message>
 
-**Note: The tiles are a prototype, subject to changes.**
-
 <TileGrid rows="2">
-    </Tile>
     <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
       A multimodal model designed to handle lightweight tasks.
       <div>
@@ -60,6 +57,12 @@ may be limited.
         <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
+        <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
+      A foundation model that performs well at a variety of multimodal tasks.
+      <div>
+        <strong style="background-color: #fffbf3">Preview</strong>
+      </div>
+    </Tile>
     <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
       A most capable 2nd generation text embedding model. Skilled in
       text search, code search, and sentence similarity.
@@ -70,88 +73,74 @@ may be limited.
     <Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
       A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
-        <strong style="background-color: #e8e8e8">Chat</strong>
+        <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
        A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
+      <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
       A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
       <div>
+      <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
-      </div>
-    </Tile>
-    <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
-      A foundation model that performs well at a variety of multimodal tasks.
-      <div>
-        <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
        A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
       <div>
+      <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
       A model capable of creating document summaries, answers to questions, and content classification labels.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
-      An enhanced text-bison model capable of creating document summaries, answers to questions, and content classification labels.
+      An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
-      This model is tailored for various language tasks, including creative writing and conversational AI.
+      A model tailored for various language tasks, including creative writing and conversational AI.
       <div>
+        <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
     <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
-       This model is designed for advanced language tasks, focusing on comprehension and context handling.
+       A model designed for advanced language tasks, focusing on comprehension and context handling.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
-      This model is designed to enhance language understanding and generation tasks.
+      A model designed to enhance language understanding and generation tasks.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
      <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
-      model is designed for advanced language processing, capable of handling extensive contexts, making it suitable for complex tasks.
+      A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
       <div>
+         <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #e1ffe7">Preview</strong>
       </div>
     </Tile>
 </TileGrid>
-
-| Provider        | Family | Availability           | API Name                                | External documentation                                                  | Capability |
-| --------------- | ------ | ---------------------- | --------------------------------------- | ----------------------------------------------------------------------- | ---------- |
-| Microsoft Azure | GPT    | available              | `azure__openai__gpt_4o_mini`      | [Azure OpenAI GPT-4o mini model documentation][azure-ai-mini-4o-model]              | Chat       |
-| Microsoft Azure | GPT    | available              | `azure__openai__text_embedding_ada_002` | [Azure OpenAI embeddings models documentation][azure-ai-embeddings]     | Embeddings |
-| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko`           | [Google Vertex AI embeddings models documentation][vertex-ai-model]     | Embeddings |
-| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko_002`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
-| GCP Vertex      | Gecko  | available              | `google__textembedding_gecko_003`       | [Google Vertex AI embeddings model documentation][vertex-ai-model]      | Embeddings |
-| GCP Vertex      | Gemini | preview                | `google__gemini_1_5_pro_001`            | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
-| GCP Vertex      | Gemini | preview                | `google__gemini_1_5_flash_001`          | [Google Vertex AI Gemini models documentation][vertex-ai-gemini-models] | Chat       |
-| GCP Vertex      | PaLM   | available              | `google__text_unicorn`                  | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| GCP Vertex      | PaLM   | available              | `google__text_bison`                    | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| GCP Vertex      | PaLM   | available              | `google__text_bison_32k`                | [Google PaLM 2 for Text model documentation][vertex-text-models]        | Chat       |
-| AWS          | Claude    |preview | `aws__claude_3_haiku`        | [Amazon Claude model documentation][aws-claude]       | Chat | 
-| AWS          | Claude    |preview | `aws__claude_3_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat |
-| AWS          | Claude    |preview | `aws__claude_3_5_sonnet`        | [Amazon Claude model documentation][aws-claude]       | Chat | 
-| AWS          | Titan    |preview | `aws__titan_text_lite`        | [Amazon Titan model documentation][aws-titan]       | Chat | 
 
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
