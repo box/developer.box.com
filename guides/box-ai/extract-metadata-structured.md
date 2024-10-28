@@ -12,10 +12,10 @@ subcategory_id: null
 is_index: false
 id: box-ai/extract-metadata-structured
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: box-ai
 parent_id: box-ai
-next_page_id: box-ai/supported-models
+next_page_id: ''
 previous_page_id: box-ai/extract-metadata
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/extract-metadata-structured.md
