@@ -195,7 +195,7 @@ filePicker.removeAllListeners();
 | `canCreateNewFolder`  | `Boolean`       | `true`                                  | フォルダの新規作成オプションが非表示になります。このオプションを非表示にするだけではフォルダの新規作成を防ぐことはできず、フォルダ項目に対する権限でも`can_upload`を`false`に設定する必要があります。フォルダ項目に対する権限`can_upload`がfalseに設定されている場合、このオプションによる効果はありません。                                     |   |
 | `sharedLink`          | `String`        |                                         | 共有リンクのURL。フォルダが共有されており、アクセストークンがファイルの所有者またはコラボレータに属していない場合は必須です。                                                                                                                                             |   |
 | `sharedLinkPassword`  | `String`        |                                         | 共有リンクのパスワード。共有リンクにパスワードが設定されている場合は必須です。                                                                                                                                                                      |   |
-| `modal`               | `Object`        |                                         | モーダル属性を指定すると、Content Pickerは所定の位置に作成されません。代わりに、コンテナ内にボタンが作成され、そのボタンをクリックすると、モーダルポップアップでContent Pickerが起動します。                                                                                                 |   |
+| `modal`               | `Object`        |                                         | ウィンドウ属性を指定すると、Content Pickerは所定の位置に作成されません。代わりに、コンテナ内にボタンが作成され、そのボタンをクリックすると、ウィンドウポップアップでContent Pickerが起動します。                                                                                               |   |
 | `size`                | `String`        | `undefined`                             | Content Pickerが、幅が`small`または`large`のコンテナに合わせて表示されるように示します。値には空白か、`small`または`large`を指定できます。空白にした場合、UI Elementはそのコンテナに合わせて調整され、自動でsmallの幅とlargeの幅が切り替わります。                                                     |   |
 | `isTouch`             | Boolean         | デフォルトでは、ブラウザとデバイスのデフォルトのタッチサポートが設定されます。 | コンテンツエクスプローラがタッチ対応デバイスにレンダリングされることを示します。                                                                                                                                                                     |   |
 | `autoFocus`           | `Boolean`       | `false`                                 | `true`に設定すると、初回読み込み時に項目グリッドに焦点が当てられます。                                                                                                                                                                       |   |
@@ -205,14 +205,14 @@ filePicker.removeAllListeners();
 | `requestInterceptor`  | `Function`      |                                         | リクエストをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                 |   |
 | `responseInterceptor` | `Function`      |                                         | レスポンスをインターセプトする関数。例については、[このCodePen](https://codepen.io/box-platform/pen/jLdxEv)を参照してください。基盤となるXHRライブラリは`axios.js`で、[インターセプタでは同様のアプローチ](https://github.com/axios/axios#interceptors)に従っています。                 |   |
 
-### モーダルオプション
+### ウィンドウオプション
 
-| パラメータ              | 型        | デフォルト     | 説明                             |
-| ------------------ | -------- | --------- | ------------------------------ |
-| `buttonLabel`      | `String` |           | ボタンのラベル                        |
-| `buttonClassName`  | `String` | Boxの青いボタン | ボタンを装飾するためのCSSクラス              |
-| `modalClassName`   | `String` |           | モーダルポップアップコンテンツを装飾するためのCSSクラス  |
-| `overlayClassName` | `String` |           | モーダルポップアップオーバーレイを装飾するためのCSSクラス |
+| パラメータ              | 型        | デフォルト     | 説明                              |
+| ------------------ | -------- | --------- | ------------------------------- |
+| `buttonLabel`      | `String` |           | ボタンのラベル                         |
+| `buttonClassName`  | `String` | Boxの青いボタン | ボタンを装飾するためのCSSクラス               |
+| `modalClassName`   | `String` |           | ウィンドウポップアップコンテンツを装飾するためのCSSクラス  |
+| `overlayClassName` | `String` |           | ウィンドウポップアップオーバーレイを装飾するためのCSSクラス |
 
 ### イベント
 

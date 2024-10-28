@@ -332,7 +332,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 <Message>
 
-管理者は、共有のモーダルから正当な理由が選択されたときに1つではなく2つのEnterprise Eventが表示される可能性があることに注意してください。たとえば、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントと`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントが1つずつ表示されます。
+管理者は、共有ウィンドウから正当な理由が選択されたときに1つではなく2つのEnterprise Eventが表示される可能性があることに注意してください。たとえば、`SHIELD_EXTERNAL_COLLAB_INVITE_BLOCKED_MISSING_JUSTIFICATION`イベントと`SHIELD_EXTERNAL_COLLAB_INVITE_JUSTIFIED`イベントが1つずつ表示されます。
 
 </Message>
 
