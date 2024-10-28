@@ -60,6 +60,7 @@ may be limited.
         <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
       A foundation model that performs well at a variety of multimodal tasks.
       <div>
+      <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
@@ -67,6 +68,7 @@ may be limited.
       A most capable 2nd generation text embedding model. Skilled in
       text search, code search, and sentence similarity.
       <div>
+       <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
