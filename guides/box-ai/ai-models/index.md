@@ -122,6 +122,12 @@ Preview
 A foundation model that performs well at a variety of multimodal tasks.
 <div>
 
+<strong style="background-color: #e8e8e8">
+
+Chat
+
+</strong>
+
 <strong style="background-color: #fffbf3">
 
 Preview
@@ -137,6 +143,12 @@ Preview
 A most capable 2nd generation text embedding model. Skilled in
 text search, code search, and sentence similarity.
 <div>
+
+<strong style="background-color: #e8e8e8">
+
+Embeddings
+
+</strong>
 
 <strong style="background-color: #e1ffe7">
 
