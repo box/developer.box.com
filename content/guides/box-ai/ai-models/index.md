@@ -11,14 +11,10 @@ alias_paths:
 # Supported AI models
 
 <Message type="notice">
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 ## Using models
-
-<Message type="tip">
-Some of the AI models mentioned in this document support specific Box products. See details in model cards below.
-</Message>
 
 You can use the supported AI models:
 
@@ -31,8 +27,7 @@ For example, to get the AI agent configuration for a specific model, use the [mo
 
 <Message type='notice'>
 The list may change depending on the model availability.
-**Preview** means you can use the model, but the access to all its features
-may be limited.
+Models offered in **Preview** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 </Message>
 
 <TileGrid rows="2">
