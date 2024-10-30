@@ -11,7 +11,7 @@ subcategory_id: null
 is_index: false
 id: box-ai/generate-text
 type: guide
-total_steps: 6
+total_steps: 5
 sibling_id: box-ai
 parent_id: box-ai
 next_page_id: box-ai/extract-metadata
@@ -24,7 +24,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 

@@ -47,7 +47,7 @@ Box AI Developer Zoneでは、Box AI APIを実際に体験できる対話型の�
 
 </Header>
 
-Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
 
 <TileGrid rows="4">
 
@@ -55,9 +55,9 @@ Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベー
 
 選択した語調でドキュメントを要約します。
 
-<strong style="background-color: #e8e8e8">
+<strong style="background-color: #92e0c0">
 
-パブリックベータ
+新着情報
 
 </strong>
 
@@ -190,6 +190,18 @@ LlamaIndex用のBox reader一式を使用して、LLMワークフロー内での
 <Tile type="box-brown" title="LangChain" href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
 
 LangChain向けのBox loaderを使用して、BoxコンテンツをLLMワークフローに含めます。
+
+<strong style="background-color: #e8e8e8">
+
+新着情報
+
+</strong>
+
+</Tile>
+
+<Tile type="box-brown" title="Pinecone" href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
+
+Connect Box and Pinecone to customize vector embeddings and get more relevant answers from LLM.
 
 <strong style="background-color: #e8e8e8">
 

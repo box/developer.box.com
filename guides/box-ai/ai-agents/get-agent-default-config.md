@@ -8,15 +8,17 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata
+  - box-ai/extract-metadata-structured
 category_id: box-ai
 subcategory_id: box-ai/ai-agents
 is_index: false
 id: box-ai/ai-agents/get-agent-default-config
 type: guide
-total_steps: 2
+total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
-next_page_id: box-ai/ai-agents/overrides-tutorial
+next_page_id: box-ai/ai-agents/ai-agent-versioning
 previous_page_id: box-ai/ai-agents
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/get-agent-default-config.md
@@ -26,7 +28,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能は変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 
 </Message>
 
@@ -270,7 +272,7 @@ Box AI APIは、現在、BoxのMain Beta Agreementに従い提供されるベー
 
 [prereq]: g://box-ai/prerequisites
 
-[models]: g://box-ai/supported-models
+[models]: g://box-ai/ai-models
 
 [ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
 

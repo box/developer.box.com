@@ -220,6 +220,10 @@ Boxでは、[oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGE
 
 </Message>
 
+## AI agent configuration versioning
+
+[AI agent](g://box-ai/ai-agents) versioning gives the developers more control over model version management and ensures consistent responses. For details, see [AI agent configuration versioning guide](g://box-ai/ai-agents/ai-agent-versioning).
+
 ## サポートポリシーと非推奨情報
 
 Box APIとBox SDKの新しいバージョンがリリースされると、それより前のバージョンは廃止されます。Boxでは、バージョンを廃止する少なくとも24か月前に、そのバージョンを`deprecated`とマークします。つまり、非推奨バージョンの公式サポートが24か月経たずに終了することはありません。同様に、正式リリース (GA) されている個々のAPIについても、GAバージョンから削除する少なくとも24か月前にそのAPIを`deprecated`として宣言します。

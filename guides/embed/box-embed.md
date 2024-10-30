@@ -22,20 +22,30 @@ fullyTranslated: true
 ---
 # Box Embed
 
-Box EmbedはHTMLベースのフレームワークで、Boxウェブアプリの機能全体を埋め込み、場所を問わずに使えるようにします。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、Box Editを使用したファイルの編集も可能になります。
+Box Embed is a HTML-based framework that allows embedding the entire Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
 
-## 構成
+## Before you start
 
-ウィジェットを作成するには、共有用のフォルダを設定する必要があるほか、**ビューアー**以上の[権限][5]が必要です。
+To create a widget, you need to:
 
-### ウェブから構成
+* Set an embeddable element, such as a **folder**, **file**, or **Hub** for sharing. 
+* Have at least **Viewer** [permissions][5].
 
-BoxウェブアプリからBox Embedのコードを取得するには:
+## Using web app
 
-* 任意のフォルダに移動します。
-* そのフォルダの横にある省略記号をクリックします。
-* \[**その他の操作**] に移動します。
-* \[**埋め込みウィジェット**] をクリックします。
+To fetch the Box Embed widget code from the Box web app, perform the following steps.
+
+### ファイルとフォルダ
+
+1. Navigate to the chosen file or folder. 
+2. Click on the ellipsis next to the folder. 
+3. Go to **More Actions** > **Embed Widget**.
+
+### Hubs
+
+1. Navigate to the chosen Hub. 
+2. Click on the ellipsis menu in the top right corner. 
+3. Click **Embed Widget**.
 
 <ImageFrame border>
 
@@ -43,7 +53,11 @@ BoxウェブアプリからBox Embedのコードを取得するには:
 
 </ImageFrame>
 
-次の画面で、ウィジェットのサイズ、並べ替え、表示を設定できます。また、\[フォルダパスを非表示] や \[ナビゲーションとサイドバーを展開する] をデフォルトでオンにするよう選択することもできます。
+In the next step, configure the parameters of an embeddable element.
+
+| ファイル                | フォルダ                                                                                         | Hubs                                                               |
+| ------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Size of the widget. | Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar | Size of the widget, hiding the parent navigation path and sidebar. |
 
 <ImageFrame border>
 
@@ -51,11 +65,11 @@ BoxウェブアプリからBox Embedのコードを取得するには:
 
 </ImageFrame>
 
-埋め込みウィジェットのカスタマイズが完了したら、埋め込みコードをコピーしてサイトまたはウェブアプリケーションに貼り付ける必要があります。
+When you are done customizing the embed widget, copy and paste the embed code into your site or web application.
 
 ## プログラムを使用して構成
 
-Box Embedをさらにカスタマイズする場合は、プログラムを使用してカスタマイズできます。埋め込みのスニペットの形式は次のとおりです。
+If you want to customize Box Embed even further, you can do it programmatically. The format for an embed snippet is as follows:
 
 ```html
 <iframe
@@ -106,15 +120,17 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 次に、表示のカスタマイズオプションを選択します。構成可能なパラメータ (省略可) のリストを以下に示します。
 
-|                       |                                                                |
-| --------------------- | -------------------------------------------------------------- |
-| `view`                | ファイルまたはフォルダの表示方法の種類。`list` (デフォルト) または`icon`を指定できます。           |
-| `sortColumn`          | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。   |
-| `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。            |
-| `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。 |
-| `showItemFeedActions` | ファイルのコメントまたはタスクを非表示または表示します。true (デフォルト) またはfalseを指定できます。      |
+|                       |                                                                                                                                                       |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence. |
+| `sortColumn`          | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。                                                                                          |
+| `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。                                                                                                   |
+| `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                                                                                        |
+| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                                                                              |
+| `hideHubsGallery`     | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                                                |
+| `uxLite`              | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files.                                                    |
 
-### 全画面表示機能
+### Full screen capabilities
 
 Box Embedスニペットの全画面表示機能を有効にするために、オブジェクトを全画面に表示可能にする場合は、以下のパラメータの1つ以上を`<iframe>`に含めてください。
 
@@ -124,7 +140,7 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 * `oallowfullscreen`
 * `msallowfullscreen`
 
-## 有効期限付き埋め込みリンク
+## Expiring embed links
 
 ファイルの場合、[`GET /files/:id`][1]を呼び出し、`fields`クエリパラメータを使用して`expiring_embed_link`をリクエストすることもできます。
 
@@ -199,7 +215,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 | `showDownload`    | ファイルをダウンロードするための権限がビューアーにある場合は、埋め込まれたヘッダーバーにダウンロードボタンが表示されます。また、印刷とダウンロードが同じ権限で管理されているため、ドキュメントのファイルタイプには印刷ボタンも表示されます。デフォルトでは`false`になります。                                                          |
 | `showAnnotations` | プレビュー以上の権限を持つユーザーは、ドキュメントと画像のプレビューに注釈を付けることができます。また、すでにドキュメントに付けられている注釈も表示されます。注釈が利用可能なファイルタイプおよび注釈の種類の詳細については、注釈ページを参照してください。現在、注釈はウェブブラウザでのみ使用できます。モバイルブラウザでは、ユーザーは注釈を表示できますが、新しい注釈を作成することはできません。 |
 
-## クラウド (雲) ゲーム
+## Cloud game
 
 クラウド (雲) ゲームとは、クリックジャッキングを防ぐために作成されたウィジェットです。これは、パートナー統合ではない埋め込みサイトに表示されます。クラウド (雲) ゲームでは、ユーザーは、操作の許可を得るためにクラウド (雲) を適切な場所にドラッグする必要があります。このゲームでは、クラウド (雲) の位置とそのドラッグ先がランダムに生成されるため、クリックジャッキングが難しくなります。
 

@@ -32,32 +32,32 @@ Box Content Preview UI Elementを使用すると、開発者は、Boxファイ�
 Reactコンポーネントは[Box Content Previewライブラリ][previewlib]のラッパーであるため、コンテンツプレビューUI Elementの動作は、他のUI Elementsとは異なります。また、プレビューライブラリのバンドルはローカライズされているため、コンテンツプレビューUI Elementでは言語 (デフォルトは`en-US`) を渡す必要もあります。
 
 ```js
-var ContentPreview = require('./ContentPreview').default;
+var ContentPreview = require("./ContentPreview").default;
 
 <IntlProvider locale="en">
-    <ContentPreview
-        contentSidebarProps={{
-            detailsSidebarProps: {
-                hasAccessStats: true,
-                hasClassification: true,
-                hasNotices: true,
-                hasProperties: true,
-                hasRetentionPolicy: true,
-                hasVersions: true,
-            },
-            features: FEATURES,
-            hasActivityFeed: true,
-            hasMetadata: true,
-            hasSkills: true,
-            hasVersions: true,
-        }}
-        hasHeader={true}
-        features={FEATURES}
-        fileId={FILE_ID}
-        token={TOKEN}
-        {...PROPS}
-    />
-</IntlProvider>
+  <ContentPreview
+    contentSidebarProps={{
+      detailsSidebarProps: {
+        hasAccessStats: true,
+        hasClassification: true,
+        hasNotices: true,
+        hasProperties: true,
+        hasRetentionPolicy: true,
+        hasVersions: true,
+      },
+      features: FEATURES,
+      hasActivityFeed: true,
+      hasMetadata: true,
+      hasSkills: true,
+      hasVersions: true,
+    }}
+    hasHeader={true}
+    features={FEATURES}
+    fileId={FILE_ID}
+    token={TOKEN}
+    {...PROPS}
+  />
+</IntlProvider>;
 
 ```
 
@@ -199,18 +199,18 @@ preview.removeAllListeners();
 
 ```js
 // Example token generator function that resolves to a single access token
-var singleTokenGenerator = function() {
-    return someApi.getToken().then(function(data) {
-        return data.token;
-    });
+var singleTokenGenerator = function () {
+  return someApi.getToken().then(function (data) {
+    return data.token;
+  });
 };
 
 // Example token generator function that resolves to a map of tokens
-var mapTokenGenerator = function() {
-    return Promise.resolve({
-        file_1234: "some_token_abcd",
-        file_2345: "some_token_bcde"
-    });
+var mapTokenGenerator = function () {
+  return Promise.resolve({
+    file_1234: "some_token_abcd",
+    file_2345: "some_token_bcde",
+  });
 };
 
 ```
@@ -242,10 +242,10 @@ preview.removeListener(EVENTNAME, listener);
 * `load`イベントは、`show()`が呼び出されたときかプレビュー間の移動が発生したときに、プレビューが読み込まれるたびにトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
-    error: 'message', // Error message if any error occurred while loading
-    viewer: {...},    // Instance of the current viewer object if no error occurred
-    metrics: {...},   // Performance metrics
-    file: {...}       // Box file object with properties defined in file.js
+  error: 'message', // Error message if any error occurred while loading
+  viewer: {...},    // Instance of the current viewer object if no error occurred
+  metrics: {...},   // Performance metrics
+  file: {...}       // Box file object with properties defined in file.js
 
 ```
 
@@ -253,18 +253,18 @@ preview.removeListener(EVENTNAME, listener);
 * `notification`イベントは、プレビューラッパーまたはいずれかのビューアーで警告や致命的ではないエラーなどの通知を表示する場合にトリガーされます。イベントデータには以下の内容が含まれます。
 
 ```js
-    message: 'message', // Message to show
-    type: 'warning'    // 'warning', 'notice', or 'error'
+  message: 'message', // Message to show
+  type: 'warning'    // 'warning', 'notice', or 'error'
 
 ```
 
 * `viewerevent`: ビューアーごとに、一連の独自のイベントがトリガーされます。たとえば、画像ビューアーでは`rotate`や`resize`などがトリガーされるのに対し、別のビューアーでは別の一連のイベントがトリガーされる場合があります。プレビューラッパーは、以下を含むイベントデータとともに、プレビューレベルでイベントを再発行します。
 
 ```js
-    event: EVENTNAME,         // Event name
-    data: DATA,               // Event data object
-    viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
-    fileId: fileId            // The file ID
+  event: EVENTNAME,         // Event name
+  data: DATA,               // Event data object
+  viewerName: VIEWERNAME,   // Name of the viewer. See VIEWERNAME above
+  fileId: fileId            // The file ID
 
 ```
 
@@ -272,39 +272,39 @@ preview.removeListener(EVENTNAME, listener);
 
 ```js
 var preview = new Box.Preview();
-preview.addListener("viewer", viewer => {
-    viewer.addListener("rotate", () => {
-        // Do something when a viewer rotates a preview
-    });
+preview.addListener("viewer", (viewer) => {
+  viewer.addListener("rotate", () => {
+    // Do something when a viewer rotates a preview
+  });
 });
 
-preview.addListener("load", data => {
-    const viewer = data.viewer;
-    viewer.addListener("rotate", () => {
-        // Do something when a viewer rotates a preview
-    });
+preview.addListener("load", (data) => {
+  const viewer = data.viewer;
+  viewer.addListener("rotate", () => {
+    // Do something when a viewer rotates a preview
+  });
 });
 
-preview.addListener("viewerevent", data => {
-    if (data.viewerName === "Image") {
-        if (data.event === "rotate") {
-            // Do something when an image preview is rotated
-        }
-    } else if (data.viewerName === "Image360") {
-        if (data.event === "rotate") {
-            // Do something different when a 360-degree image is rotated
-        }
-    } else {
+preview.addListener("viewerevent", (data) => {
+  if (data.viewerName === "Image") {
+    if (data.event === "rotate") {
+      // Do something when an image preview is rotated
     }
+  } else if (data.viewerName === "Image360") {
+    if (data.event === "rotate") {
+      // Do something different when a 360-degree image is rotated
+    }
+  } else {
+  }
 });
 
-preview.addListener("rotate", data => {
-    if (data.viewerName === "Image") {
-        // Do something when an image preview is rotated
-    } else if (data.viewerName === "Image360") {
-        // Do something different when a 360-degree image is rotated
-    } else {
-    }
+preview.addListener("rotate", (data) => {
+  if (data.viewerName === "Image") {
+    // Do something when an image preview is rotated
+  } else if (data.viewerName === "Image360") {
+    // Do something different when a 360-degree image is rotated
+  } else {
+  }
 });
 
 ```
@@ -317,63 +317,63 @@ V4の注釈をプレビューに追加するには、以下の手順に従いま
 
 1. `npm i box-annotations@latest`を実行し、[Boxの注釈][annotations]をインストールします。
 
-   <Message warning>
+<Message warning>
 
-   Boxの注釈のバージョンは、メジャーバージョン4以上である必要があります。
+Boxの注釈のバージョンは、メジャーバージョン4以上である必要があります。
 
-   </Message>
+</Message>
 
 2. `npm i box-ui-elements@16.0.0`を実行し、注釈に関連した変更を含む[BUIE][buie]バージョンをインストールします。
 
-   <Message warning>
+<Message warning>
 
-   Box UI Elementsは、V4の注釈が十分に機能している、使用可能な最小バージョンである必要があります。
+Box UI Elementsは、V4の注釈が十分に機能している、使用可能な最小バージョンである必要があります。
 
-   </Message>
+</Message>
 
 3. 次のように、コンテンツプレビューとBoxの注釈をアプリケーションにインポートします。
 
 ```js
-    import boxAnnotations from 'https://cdn.skypack.dev/box-annotations@latest';
+   import boxAnnotations from "https://cdn.skypack.dev/box-annotations@latest";
 
-    var file_id = 'YOUR FILE ID';
-    var accessToken = 'YOUR ACCESS TOKEN';
+   var file_id = "YOUR FILE ID";
+   var accessToken = "YOUR ACCESS TOKEN";
 
-    /* Enable annotations in sidebar */
-    var contentSidebarProps = {
-        hasActivityFeed: true,
-        features: {
-            activityFeed: {
-                annotations: {
-                    enabled: true
-                }
-            }
-        },
-    }
+   /* Enable annotations in sidebar */
+   var contentSidebarProps = {
+     hasActivityFeed: true,
+     features: {
+       activityFeed: {
+         annotations: {
+           enabled: true,
+         },
+       },
+     },
+   };
 
-    var options = {
-        container: '.previewer',
-        contentSidebarProps: contentSidebarProps,
+   var options = {
+     container: ".previewer",
+     contentSidebarProps: contentSidebarProps,
 
-        /* Enable annotations in preview */
-        enableAnnotationsDiscoverability: true,
-        enableAnnotationsImageDiscoverability: true,
-        showAnnotations: true,
-        showAnnotationsControls: true,
-        showAnnotationsDrawingCreate: true,
-    };
+     /* Enable annotations in preview */
+     enableAnnotationsDiscoverability: true,
+     enableAnnotationsImageDiscoverability: true,
+     showAnnotations: true,
+     showAnnotationsControls: true,
+     showAnnotationsDrawingCreate: true,
+   };
 
-    /* BoxAnnotations */
-    var annotations = new BoxAnnotations();
+   /* BoxAnnotations */
+   var annotations = new BoxAnnotations();
 
-    /* Box Preview */
-    var contentPreviewer = new Box.ContentPreview();
+   /* Box Preview */
+   var contentPreviewer = new Box.ContentPreview();
 
-    /* Set annotation into previewer */
-    options['boxAnnotations'] = annotations;
+   /* Set annotation into previewer */
+   options["boxAnnotations"] = annotations;
 
-    /* Show previewer */
-    contentPreviewer.show(file_id, accessToken, options);
+   /* Show previewer */
+   contentPreviewer.show(file_id, accessToken, options);
 
 ```
 
@@ -410,53 +410,128 @@ Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**をご利
 
 </Message>
 
-このAI UI Elementは、Box AI Q&A機能によってコンテンツプレビューUI Elementを強化します。これにより、開発者はカスタムアプリにAI機能を追加できます。このElementを追加すると、質問への回答のほか、ドキュメントの要約のような操作が容易になります。
+Box AI for UI Elements enhances the Content Preview UI Element with additional features, allowing the developers to add the Box Q&A AI functionality to their custom app. Enriched with Box AI features, the Preview UI element brings the following functionality:
 
-コンテンツプレビューのヘッダーでBox AIウィンドウを有効にするには、以下の手順に従います。
+* Q&A and document summaries.
+* A **clear conversation** button that resets the conversation with Box AI.
+* Citations that appear below the answer if included in the answer.
+* Formatting support that allows requesting Markdown-formatted response, including bullet points or tables.
+* Question history that allows referencing previous context to achieve the best response possible. The question history is kept only during the current session.
+* Suggested questions that appear at the top of the chat by default to assist with the conversation.
+
+![Box UI Element with Box AI options enabled](./images/box-ai-ui-element.jpg)
+
+### Enable Box AI for UI Elements
+
+To enable the Box AI modal in content preview header, follow these steps:
 
 1. NodeおよびReactのバージョンが`18.x`以上であることを確認します。
-2. [Box AI for UI Elementsを含むパッケージ][aipackage]をダウンロードします。
-3. プレビューElementに`contentAnswersProps`プロパティを渡します。
+2. Download the [npm package that contains Box AI for UI Elements][aipackage] or directly from [Box CDN][installation].
+3. Install the peer dependencies:
 
-```js
-    var preview = new Box.Preview();
+   * [`box-ai-content-answers`][box-ai-content-answers]
+   * [`blueprint-web`][blueprint-web]
+   * [`blueprint-web-assets`][blueprint-web-assets]
 
-    preview.show(<FILE_ID>, <TOKEN>, {
-        container: '.preview-container',
-        contentAnswersProps: {
-            show: true,
-        },
-        hasHeader: true,
-    }); 
+   To do so, run the following command:
+
+```sh
+   npx install-peerdeps box-ui-elements@^22.0.0
 
 ```
 
-<Message type="notice">
+### Using JavaScript
 
-現在、Box AI for UI Elementsを使用するには、`npm`パッケージをインストールする必要があります。CDNバージョンはまだサポートされていません。
+To enable Box AI features, pass the following:
 
-</Message>
+* `hasHeader` prop set to `true`,
+* `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+
+```js
+const preview = new Box.Preview();
+const suggestedQuestions = [
+ {
+   label: 'What are the key takeaways?',
+   prompt: 'What are the key takeaways?',
+   id: '1234',
+ },
+ {
+   label: 'Summarize this document',
+   prompt: 'Summarize this document',
+   id: '5678',
+ },
+];
+
+preview.show(<FILE_ID>, <TOKEN>, {
+   container: '.preview-container',
+   contentAnswersProps={
+     show: true,
+     isCitationsEnabled: true,
+     isMarkdownEnabled: true,
+     isResetChatEnabled: true,
+     suggestedQuestions
+       }
+   hasHeader: true,
+});
+
+```
 
 ### Reactコンポーネントの使用
 
-ReactコンポーネントのヘッダーにBox AI要素を追加することもできます。そのためには、`contentAnswersProps`を追加してその`show`フィールドを`true`に設定します。
+You can also add Box AI element to a header in a React component. To do so, add:
+
+* `hasHeader` prop set to `true`,
+* `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+
+<Message type="notice">
+
+To localize the `suggestedQuestions` properly, make sure that the prompts are translated. The optional `label` property is for screen readers, while the `prompt` property is the text displayed to the user in the AI modal.
+
+</Message>
 
 ```js
-var ContentPreview = require('./ContentPreview').default;
+import ContentPreview from 'box-ui-elements/es/elements/content-preview';
+import { IntlProvider } from "react-intl";
 
-<IntlProvider locale="en">
-    <ContentPreview
-        contentAnswersProps={{
-            show: true,
-        }}
-        ...
-        fileId={FILE_ID}
-        token={TOKEN}
-        {...PROPS}
-    />
-</IntlProvider>
+const suggestedQuestions = [
+  {
+    label: 'Key takeaways',
+    prompt: 'What are the key takeaways from this document?',
+    id: '1234',
+  },
+  {
+    label: 'Summarize',
+    prompt: 'Summarize this document',
+    id: '5678',
+  },
+];
+
+export default () => {
+    // Storing variables in the front end is not secure.
+    // You will want to grab this value from a database for production
+    const TOKEN = process.env.REACT_APP_BOX_DEVELOPER_TOKEN
+    const FILE_ID = process.env.REACT_APP_BOX_PREVIEW_FILE_ID
+    return (
+      <IntlProvider locale="en">
+         <ContentPreview 
+            contentAnswersProps={{
+              show: true,
+              isCitationsEnabled: true,
+              isMarkdownEnabled: true,
+              isResetChatEnabled: true,
+              suggestedQuestions
+            }}
+            fileId={FILE_ID}
+            token={TOKEN}
+            hasHeader=true
+         />
+      </IntlProvider>
+  );
+};
 
 ```
+
+You can further customize your apps using the following event listeners for Content Preview available with this release: `onAsk`, `onClearConversations`, and `onRequestClose`.
 
 ##  スコープ 
 
@@ -516,10 +591,16 @@ var ContentPreview = require('./ContentPreview').default;
 
 [previewlib]: https://github.com/box/box-content-preview
 
-[ainpm]: https://www.npmjs.com/package/box-ui-elements/v/19.0.0-beta.34
-
 [expiredembed]: r://file--full/#param-expiring_embed_link
 
 [token]: g://authentication/tokens/developer-tokens
 
-[aipackage]: https://github.com/box/box-ui-elements/releases/tag/v20.0.0-beta.17
+[aipackage]: https://www.npmjs.com/package/box-ui-elements/v/22.0.0
+
+[installation]: g://embed/ui-elements/installation
+
+[blueprint-web]: https://www.npmjs.com/package/@box/blueprint-web
+
+[box-ai-content-answers]: https://www.npmjs.com/package/@box/box-ai-content-answers
+
+[blueprint-web-assets]: https://www.npmjs.com/package/@box/blueprint-web-assets
