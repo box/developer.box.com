@@ -22,7 +22,7 @@ user can select one item from the list.
 
 <Message notice>
 
-An `enum` allows a user to select zero or 1 value. To allow a user to select
+An `enum` allows a user to select zero or a single value. To allow a user to select
 multiple values, use the [`multiSelect`][g_multi_select] template field.
 
 </Message>
@@ -33,7 +33,7 @@ An `enum` field can be added to a metadata template either when [creating a
 metadata template][g_create_template], or when [updating a
 template][g_update_template] with the `addField` operation.
 
-The required attributes for a `enum` field are a `type`, a `displayName`, a
+The required attributes for an `enum` field are a `type`, a `displayName`, a
 `key`, and a list of options.
 
 ```json
@@ -57,7 +57,7 @@ The required attributes for a `enum` field are a `type`, a `displayName`, a
 }
 ```
 
-Optionally a `description` can be provided that is shown to a user in the UI,
+Optionally, a `description` can be provided that is shown to a user in the UI,
 and the field can be set to `hidden` to hide it from users in the web and mobile
 apps.
 
@@ -70,9 +70,9 @@ folder is updated as well.
 
 ### Change basic field values
 
-When updating an `enum` metadata field one of the possible operations is the
-`editField` operation which can be used to change the field's `key`,
-`displayName`, `description` and `hidden` values.
+When updating an `enum` metadata field, one of the possible operations is the
+`editField` operation, which can be used to change the field's `key`,
+`displayName`, `description`, and `hidden` values.
 
 ```json
 [
@@ -221,7 +221,7 @@ This will affect existing instances of this template.
 ### Remove an option
 
 Removing an option from an `enum` field can be achieved through the
-`removeEnumOption` operation. The operation expects `fieldKey` to be set to the
+`removeEnumOption` operation. The operation expects the `fieldKey` to be set to the
 key of the `enum` field to change, and an `enumOptionKey` to be set to the key
 of the field option to remove.
 

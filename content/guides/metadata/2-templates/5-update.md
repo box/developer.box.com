@@ -66,7 +66,7 @@ This will update the template to have a new display name of Client.
 
 ### Add a field to a template
 
-The operation `addField` adds an field to a template.
+The operation `addField` adds a field to a template.
 
 | Parameter |                                     |
 |-----------|-------------------------------------|
@@ -127,7 +127,7 @@ These changes will be logged as template changes but not as file changes.
 
 ### Edit a field
 
-The operation `editField` option edits any number of the base properties of a
+The operation `editField` edits any number of the base properties of a
 field like the `displayName`, `description`, `key`, and `hidden` state.
 
 | Parameter  |                                                                |
@@ -147,7 +147,7 @@ field like the `displayName`, `description`, `key`, and `hidden` state.
 
 This will update the field `category` to have a new display name of
 **Customer Group**. If the key is changed, existing values of the specified
-field are migrated to the new key. The search index will be updated yet it can
+field are migrated to the new key. The search index will be updated, yet it may
 take time depending on how many files are affected by the change.
 
 <Message warning>
@@ -156,7 +156,7 @@ take time depending on how many files are affected by the change.
 
 ### Remove a field
 
-The operation `removeField` removes an field from a template.
+The operation `removeField` removes a field from a template.
 
 | Parameter  |                                                  |
 |------------|--------------------------------------------------|
@@ -170,7 +170,7 @@ The operation `removeField` removes an field from a template.
 ```
 
 This will remove the field `brand` from the template as well as all instances of
-the template. The search index will be updated yet it can take time depending on
+the template. The search index will be updated, yet it may take time depending on
 how many files are affected by the change.
 
 <Message warning>
@@ -188,10 +188,10 @@ some additional operations to change the options of the fields.
 | [`addEnumOption`](g://metadata/fields/enum#add-an-option)                       | Adds an option to an `enum` field               |
 | [`editEnumOption`](g://metadata/fields/enum#edit-an-option)                     | Edits an `enum` field option                    |
 | [`reorderEnumOptions`](g://metadata/fields/enum#reorder-options)                | Re-orders the options on an `enum` field        |
-| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | Removes an `enum` field options                 |
+| [`removeEnumOption`](g://metadata/fields/enum#remove-an-option)                 | Removes an `enum` field option                 |
 | [`addMultiSelectOption`](g://metadata/fields/multi-select#add-an-option)        | Adds an option to a `multiSelect` field        |
 | [`editMultiSelectOption`](g://metadata/fields/multi-select#edit-an-option)      | Edits a `multiSelect` field option             |
 | [`reorderMultiSelectOptions`](g://metadata/fields/multi-select#reorder-options) | Re-orders the options on a `multiSelect` field |
-| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field options          |
+| [`removeMultiSelectOption`](g://metadata/fields/multi-select#remove-an-option)  | Removes a `multiSelect` field option          |
 
 [endpoint]: e://put_metadata_templates_id_id_schema
