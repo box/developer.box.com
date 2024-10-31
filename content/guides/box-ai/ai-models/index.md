@@ -11,19 +11,15 @@ alias_paths:
 # Supported AI models
 
 <Message type="notice">
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 ## Using models
 
-<Message type="tip">
-Some of the AI models mentioned in this document support specific Box products. See details in model cards below.
-</Message>
-
 You can use the supported AI models:
 
 - get the [default AI agent configuration][agent],
-- override the AI agent configuration used in the Box AI API endpoints.
+- override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
 
 When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
 
@@ -31,8 +27,7 @@ For example, to get the AI agent configuration for a specific model, use the [mo
 
 <Message type='notice'>
 The list may change depending on the model availability.
-**Preview** means you can use the model, but the access to all its features
-may be limited.
+Models offered in **Preview** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
 </Message>
 
 <TileGrid rows="2">
@@ -60,6 +55,7 @@ may be limited.
         <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
       A foundation model that performs well at a variety of multimodal tasks.
       <div>
+      <strong style="background-color: #e8e8e8">Chat</strong>
         <strong style="background-color: #fffbf3">Preview</strong>
       </div>
     </Tile>
@@ -67,6 +63,7 @@ may be limited.
       A most capable 2nd generation text embedding model. Skilled in
       text search, code search, and sentence similarity.
       <div>
+       <strong style="background-color: #e8e8e8">Embeddings</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
@@ -144,6 +141,8 @@ may be limited.
 
 [ask]: e://post_ai_ask
 [text-gen]: e://post_ai_text_gen
+[extract]: e://post_ai_extract
+[extract-structured]: e://post_ai_extract_structured
 [agent]: e://get_ai_agent_default
 [azure-ai-gpt-3-5-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-35
 [azure-ai-mini-4o-model]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models?tabs=python-secure#gpt-4o-and-gpt-4-turbo
