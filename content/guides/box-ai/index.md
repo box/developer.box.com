@@ -9,6 +9,7 @@ related_guides:
   - box-ai/generate-text
   - box-ai/extract-metadata-structured
   - box-ai/extract-metadata
+
 ---
 
 # Box AI
