@@ -9,8 +9,6 @@ related_guides:
   - box-ai/generate-text
   - box-ai/extract-metadata-structured
   - box-ai/extract-metadata
-alias_paths:
-  - /guides/box-ai/supported-models
 category_id: box-ai
 subcategory_id: null
 is_index: true
