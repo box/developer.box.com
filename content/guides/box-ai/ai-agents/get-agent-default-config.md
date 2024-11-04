@@ -8,13 +8,14 @@ related_guides:
   - box-ai/prerequisites
   - box-ai/ask-questions
   - box-ai/generate-text
+  - box-ai/extract-metadata
+  - box-ai/extract-metadata-structured
 ---
 
 # Get default AI agent configuration
 
 <Message type="notice">
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 The `GET /2.0/ai_agent_default` endpoint allows you to fetch the default configuration for AI services. 
@@ -254,6 +255,6 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 </Tabs>
 
 [prereq]: g://box-ai/prerequisites
-[models]: g://box-ai/supported-models
+[models]: g://box-ai/ai-models
 [ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
 [override-tutorials]: g://box-ai/ai-agents/overrides-tutorial

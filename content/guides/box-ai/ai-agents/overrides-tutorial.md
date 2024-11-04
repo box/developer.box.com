@@ -13,8 +13,7 @@ related_guides:
 # Override AI model configuration
 
 <Message type="notice">
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
 </Message>
 
 The `agent_ai` configuration allows you to override the default AI model configuration. It is available for the following endpoints:
@@ -127,11 +126,11 @@ The set of parameters available for `ask`, `text_gen`, `extract`, `extract_struc
 
 ### LLM endpoint params
 
-The `llm_endpoint_params` configuration options differ depending on the overall AI model being [Google][google-params] or [OpenAI][openai-params] based.
+The `llm_endpoint_params` configuration options differ depending on the overall AI model being [Google][google-params], [OpenAI][openai-params] or [AWS][aws-params] based.
 
 For example, both `llm_endpoint_params` objects accept a `temperature` parameter, but the outcome differs depending on the model.
 
-For Google models, the [`temperature`][google-temp] is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
+For Google and AWS models, the [`temperature`][google-temp] is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
 
 For OpenAI models, [`temperature`][openai-temp] is the sampling temperature with values between 0 and 2. Higher values like 0.8 make the output more random, while lower values like 0.2 make it more focused and deterministic. When introducing your own configuration, use `temperature` or or `top_p` but not both.
 
@@ -355,3 +354,4 @@ Using this model results in a response listing more metadata entries:
 [agent]: e://get_ai_agent_default
 [google-temp]: https://ai.google.dev/gemini-api/docs/models/generative-models#model-parameters
 [openai-temp]: https://community.openai.com/t/temperature-top-p-and-top-k-for-chatbot-responses/295542
+[aws-params]: r://ai-llm-endpoint-params-aws

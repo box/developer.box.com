@@ -13,6 +13,10 @@ related_guides:
 
 # AI model overrides
 
+<Message type="notice">
+Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+</Message>
+
 Box updates the default models across the endpoints on a regular basis to stay up to date with the most advanced options. 
 
 If your implementation is based on Box AI, a new default model might alter the results in a way that could break or change a downstream process. Switching to a specific version may prevent encountering any issues.
@@ -27,4 +31,4 @@ To see specific use cases, check the [overrides tutorial][overrides].
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
 [overrides]: g://box-ai/ai-agents/overrides-tutorial
-[models]: g://box-ai/supported-models
+[models]: g://box-ai/ai-models

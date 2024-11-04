@@ -23,13 +23,13 @@ view sample code, explore Box AI use cases, and more!
   <Header centered>
     Try out interactive demos
   </Header>
-Box AI API is currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
-  
+    Box AI API is available to all Enterprise Plus customers. Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change.
+
   <TileGrid rows="4">
     <Tile type="ai" title="Get a summary" href="/ai-dev-zone-summary">
         Summarize a document in a selected tone of voice.
 
-        <strong style="background-color: #e8e8e8">Public beta</strong>
+        <strong style="background-color: #92e0c0">New</strong>
     </Tile>
     <Tile type="ai" title="Extract metadata"
       href="/ai-dev-zone-metadata">
@@ -99,6 +99,12 @@ Box AI API is currently a beta feature offered subject to Box’s Main Beta Agre
     <Tile type="box-brown" title="LangChain"
       href="https://python.langchain.com/v0.2/docs/integrations/providers/box/">
         Include Box content in your LLM workflows with Box loader for LangChain.
+
+        <strong style="background-color: #e8e8e8">New</strong>
+    </Tile>
+    <Tile type="box-brown" title="Pinecone"
+      href="https://medium.com/box-developer-blog/demo-box-pinecone-f03783c412bb">
+        Connect Box and Pinecone to customize vector embeddings and get more relevant answers from LLM.
 
         <strong style="background-color: #e8e8e8">New</strong>
     </Tile>
