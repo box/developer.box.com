@@ -8,7 +8,7 @@ related_endpoints:
   - post_ai_extract_structured
 related_guides:
   - box-ai/ai-agents/get-agent-default-config
-  - box-ai/ai-agents/overrides-tutorial
+  - box-ai/ai-agents/ai-agent-overrides
 ---
 
 # AI model overrides
@@ -30,5 +30,5 @@ To see specific use cases, check the [overrides tutorial][overrides].
 [ask]: e://post_ai_ask#param_ai_agent
 [text-gen]: e://post_ai_text_gen#param_ai_agent
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
 [models]: g://box-ai/ai-models

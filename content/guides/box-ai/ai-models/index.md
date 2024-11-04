@@ -1,9 +1,10 @@
 ---
 rank: 1
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
   - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/default-agent-overrides
 alias_paths:
   - guides/box-ai/supported-models
 ---
