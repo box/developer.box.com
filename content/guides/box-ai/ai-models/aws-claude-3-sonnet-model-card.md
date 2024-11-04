@@ -1,10 +1,10 @@
 ---
 rank: 16
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
 # AWS Claude 3 Sonnet
@@ -31,4 +31,4 @@ related_guides:
 For additional information, see [official AWS Claude 3 Sonnet documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
