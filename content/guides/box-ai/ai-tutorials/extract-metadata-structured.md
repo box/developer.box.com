@@ -59,13 +59,14 @@ The `items` array can have exactly one element.
 | `fields.prompt`                      | Additional context about the key (identifier) that may include how to find and format it.                                                                                                                                                                                                                                                                                                                                                                                                                                 | `Name is the first and last name from the email address` |
 | `ai_agent`                           | The AI agent used to override the default agent configuration. This parameter allows you to, for example, replace the default LLM with a custom one using the [`model`][model-param] parameter, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request. For specific use cases, see the [AI model overrides tutorial][overrides]. |                                                          |
 
-## Use case
+## Use cases
 
-Let's assume you want to extract the vendor name, invoice number, and a few more details from the following sample invoice:
+This example shows you how to extract metadata from a sample invoice.
+Let's assume you want to extract the vendor name, invoice number, and a few more details.
 
-![sample invoice](./images/sample-invoice.png)
+![sample invoice](../images/sample-invoice.png)
 
-## Create the request
+### Create the request
 
 To get the response from Box AI, call `POST /2.0/ai/extract_structured` endpoint with the following parameters:
 
@@ -79,7 +80,7 @@ You can use either `fields` or `metadata_template` to specify your structure, bu
 
 </Message>
 
-## Use `fields` parameter
+### Use `fields` parameter
 
 The `fields` parameter allows you to specify the data you want to extract. Each `fields` object has a subset of parameters you can use to add more information about the searched data. 
 For example, you can add the field type, description, or even a prompt with some additional context.
@@ -141,7 +142,7 @@ The response lists the specified fields and their values:
 }
 ```
 
-## Use metadata template
+### Use metadata template
 
 If you prefer to use a metadata template, you can provide its `template_key`, `type`, and `scope`.
 
