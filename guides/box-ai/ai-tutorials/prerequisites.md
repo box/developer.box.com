@@ -1,22 +1,23 @@
 ---
-rank: 2
+rank: 1
 related_guides:
-  - authentication/tokens/developer-tokens/
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/prerequisites
+id: box-ai/ai-tutorials/prerequisites
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/ask-questions
-previous_page_id: box-ai
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
+next_page_id: box-ai/ai-tutorials/ask-questions
+previous_page_id: box-ai/ai-tutorials
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/prerequisites.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/prerequisites.md
 ---
 # Get started with Box AI
 

@@ -3,20 +3,23 @@ rank: 8
 related_endpoints:
   - post-ai-extract-structured
 related_guides:
-  - box-ai/extract-metadata-structured
-  - box-ai/prerequisites
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/extract-metadata-structured
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/extract-metadata
+id: box-ai/ai-tutorials/extract-metadata
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/extract-metadata-structured
-previous_page_id: box-ai/generate-text
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
+next_page_id: box-ai/ai-tutorials/extract-metadata-structured
+previous_page_id: box-ai/ai-tutorials/default-agent-overrides
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/extract-metadata.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/extract-metadata.md
 ---
 # Extract metadata from file (freeform)
 
@@ -29,14 +32,14 @@ Endpoints related to metadata extraction are currently a beta feature offered su
 Box AI API allows you to query a document and extract metadata based on a provided prompt.
 **Freeform** means that the prompt can include a stringified version of formats such as JSON or XML, or even plain text.
 
+## Before you start
+
+Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+
 ## Send a request
 
 To send a request, use the
 `POST /2.0/ai/extract` endpoint.
-
-Make sure you have generated the developer token
-to authorize your app. See [prerequisites for using Box AI][prereq]
-for details.
 
 <Samples id='post_ai_extract' >
 
@@ -62,10 +65,6 @@ The `items` array can have exactly one element.
 
 ## Use case
 
-Let's assume you want to extract the vendor name, invoice number, and a few more details from the following sample invoice:
-
-![sample invoice](./images/sample-invoice.png)
-
 ### Create the request
 
 To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the following parameters:
@@ -77,7 +76,7 @@ To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the f
 
 Depending on the use case and the level of detail, you can construct various prompts.
 
-#### Using keywords
+#### Use keywords
 
 The prompt can include a list of keywords that you expect to find in an invoice:
 
@@ -106,7 +105,7 @@ Using this approach results in a list of keywords provided in the request and th
 }
 ```
 
-#### Using key-value pairs
+### Using key-value pairs
 
 The prompt can be a list of key-value pairs that helps Box AI to come up with the metadata structure:
 
@@ -135,7 +134,7 @@ The response includes the fields present in the file, along with their values:
 }
 ```
 
-#### Using plain text
+#### Use plain text
 
 You can also use plain text:
 
@@ -164,8 +163,8 @@ In such a case, the response will be based on the keywords included in the query
 }
 ```
 
-[prereq]: g://box-ai/prerequisites
+[prereq]: g://box-ai/ai-tutorials/prerequisites
 [agent]: e://get_ai_agent_default
 [model-param]: r://ai_agent_text_gen#param_basic_gen_model
 [prompt-param]: r://ai_agent_text_gen#param_basic_gen_prompt_template
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides

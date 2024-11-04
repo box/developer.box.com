@@ -1,10 +1,10 @@
 ---
 rank: 12
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: box-ai/ai-models
@@ -43,4 +43,4 @@ Text embedding models convert textual data into numerical vectors that can be pr
 For additional information, see [official Google textembedding models documentation][vertex-ai-model].
 
 [vertex-ai-model]: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#models
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides

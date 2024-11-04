@@ -4,20 +4,20 @@ related_endpoints:
   - post_ai_text_gen
   - post_ai_ask
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata-structured
-  - box-ai/extract-metadata
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata-structured
+  - box-ai/ai-tutorials/extract-metadata
 category_id: box-ai
 subcategory_id: null
 is_index: true
 id: box-ai
 type: guide
-total_steps: 5
+total_steps: 0
 sibling_id: guides
 parent_id: guides
-next_page_id: box-ai/prerequisites
+next_page_id: ''
 previous_page_id: ''
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/index.md
