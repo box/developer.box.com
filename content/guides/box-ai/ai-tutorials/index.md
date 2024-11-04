@@ -9,6 +9,6 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
 ---
 
-# Box AI API tutorials
+# Box AI tutorials
 
 The listed tutorials provide you with an overview and use cases for Q&A and text generation, metadata extraction, and AI model configuration overrides.

@@ -54,6 +54,8 @@ To make a call, you must pass the following parameters. Mandatory parameters are
 
 ## Use case
 
+Generate text based on the provided file content and a prompt.
+
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
      -H "content-type: application/json" \
