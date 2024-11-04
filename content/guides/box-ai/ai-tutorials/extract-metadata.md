@@ -48,7 +48,9 @@ The `items` array can have exactly one element.
 | `items.content` | The content of the item, often the text representation.  |    `This article is about Box AI`.    |
 |`ai_agent` | The AI agent used to override the default agent configuration. This parameter allows you to, for example, replace the default LLM with a custom one using the [`model`][model-param] parameter, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request. For specific use cases, see the [AI model overrides tutorial][overrides].| | 
 
-## Use case
+## Use cases
+
+This example shows you how to extract metadata from a sample invoice.
 
 ### Create the request
 
