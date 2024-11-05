@@ -86,7 +86,7 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [oauth2]: g://authentication/oauth2
 [app-center]: g://applications/app-center
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
-[app-center]: https://cloud.app.box.com/app-center
+[integrations]: https://cloud.app.box.com/integrations
 [dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token
 [postman-collection]: g://tooling/postman
 [api-ref]: https://developer.box.com/reference/

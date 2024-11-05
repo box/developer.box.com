@@ -88,7 +88,7 @@ copy it using the `copy` button.
 #### Server Authentication Apps
 
 <ImageFrame border center>
-  ![Server Apps tab](images/jwt_app_approval_flow.png)
+  ![Server tab](images/jwt_app_approval_flow.png)
 </ImageFrame>
 
 #### User Authentication Apps
