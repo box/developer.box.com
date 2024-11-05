@@ -78,67 +78,9 @@ To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the f
 
 Depending on the use case and the level of detail, you can construct various prompts.
 
-#### Use keywords
-
-The prompt can include a list of keywords that you expect to find in an invoice:
-
-```bash
-curl --location 'https://api.box.com/2.0/ai/extract' \
---header 'Content-Type: application/json' \
---header 'Authorization: <ACCESS_TOKEN>' \
---data '{
-    "prompt": "{\"vendor\",\"total\",\"doctype\",\"date\",\"PO\"}",
-    "items": [
-        {
-            "type": "file",
-            "id": "1443721424754"
-        }
-    ]
-}'
-```
-
-Using this approach results in a list of keywords provided in the request and their values:
-
-```bash
-{
-    "answer": "{\"vendor\": \"Quasar Innovations\", \"total\": \"$1,050\", \"doctype\": \"Invoice\", \"PO\": \"003\"}",
-    "created_at": "2024-05-31T10:28:51.906-07:00",
-    "completion_reason": "done"
-}
-```
-
-### Using key-value pairs
-
-The prompt can be a list of key-value pairs that helps Box AI to come up with the metadata structure:
-
-```bash
-curl --location 'https://api.box.com/2.0/ai/extract' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer <ACCESS_TOKEN>' \
---data '{
-          "prompt": "{\"fields\":   [{\"key\":\"vendor\",\"displayName\":\"Vendor\",\"type\":\"string\",\"description\":\ "Vendorname\"},{\"key\":\"documentType\",\"displayName\":\"Type\",\"type\":\"string\",\"description\":\"\"}]}",
-    "items": [
-        {
-            "type": "file",
-            "id": "1443721424754"
-        }
-    ]
-}'
-```
-
-The response includes the fields present in the file, along with their values:
-
-```bash
-{
-    "answer": "{\"vendor\": \"Quasar Innovations\", \"documentType\": \"Invoice\"}",
-    "created_at": "2024-05-31T10:15:38.17-07:00",
-    "completion_reason": "done"
-}
-```
-
 #### Use plain text
 
-You can also use plain text:
+Because this endpoint allows freeform prompts, you can use plain text to get the information.
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -155,12 +97,70 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 }'
 ```
 
-In such a case, the response will be based on the keywords included in the query:
+In such a case, the response will be based on the keywords included in the text:
 
 ```bash
 {
     "answer": "{\"Document Type\": \"Invoice\", \"Vendor\": \"Quasar Innovations\", \"Total\": \"$1,050\", \"PO Number\": \"003\"}",
     "created_at": "2024-05-31T10:30:51.223-07:00",
+    "completion_reason": "done"
+}
+```
+
+#### Use specific terms
+
+If you don't want to write the entire sentence, the prompt can consist of terms that you expect to find in an invoice:
+
+```bash
+curl --location 'https://api.box.com/2.0/ai/extract' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <ACCESS_TOKEN>' \
+--data '{
+    "prompt": "{\"vendor\",\"total\",\"doctype\",\"date\",\"PO\"}",
+    "items": [
+        {
+            "type": "file",
+            "id": "1443721424754"
+        }
+    ]
+}'
+```
+
+Using this approach results in a list of terms provided in the request and their values:
+
+```bash
+{
+    "answer": "{\"vendor\": \"Quasar Innovations\", \"total\": \"$1,050\", \"doctype\": \"Invoice\", \"PO\": \"003\"}",
+    "created_at": "2024-05-31T10:28:51.906-07:00",
+    "completion_reason": "done"
+}
+```
+
+#### Use key-value pairs
+
+The prompt can also be a list of key-value pairs that helps Box AI to come up with the metadata structure. This approach requires listing the key-value pairs within a  `fields` array.
+
+```bash
+curl --location 'https://api.box.com/2.0/ai/extract' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <ACCESS_TOKEN>' \
+--data '{
+          "prompt": "{\"fields\":   [{\"key\":\"vendor\",\"displayName\":\"Vendor\",\"type\":\"string\",\"description\":\ "Vendorname\"},{\"key\":\"documentType\",\"displayName\":\"Type\",\"type\":\"string\",\"description\":\"\"}]}",
+    "items": [
+        {
+            "type": "file",
+            "id": "1443721424754"
+        }
+    ]
+}'
+```
+
+The response includes the `fields` present in the file, along with their values:
+
+```bash
+{
+    "answer": "{\"vendor\": \"Quasar Innovations\", \"documentType\": \"Invoice\"}",
+    "created_at": "2024-05-31T10:15:38.17-07:00",
     "completion_reason": "done"
 }
 ```
