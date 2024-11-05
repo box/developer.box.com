@@ -64,7 +64,7 @@ The `items` array can have exactly one element.
 This example shows you how to extract metadata from a sample invoice in a structured way.
 Let's assume you want to extract the vendor name, invoice number, and a few more details.
 
-![sample invoice](./images/sample-invoice.png)
+![sample invoice](../images/sample-invoice.png)
 
 ### Create the request
 
