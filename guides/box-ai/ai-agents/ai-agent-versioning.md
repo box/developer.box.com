@@ -24,27 +24,27 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/ai-agent-versioning.md
 fullyTranslated: true
 ---
-# AI agent configuration versioning
+# AIエージェントの構成のバージョン管理
 
 <Message type="notice">
 
-Box updates the default models across the endpoints on a regular basis in order to stay up to date with the most advanced options. If a default model is updated, it will be posted in the developer changelog.
+Boxでは、常に最先端のオプションに対応するため、定期的にデフォルトモデルをエンドポイント全体で更新しています。デフォルトモデルが更新されると、開発者向け変更ログに掲載されます。
 
 </Message>
 
-AI agent configuration versioning gives the developers more control over AI agent versioning and ensures consistent responses.
+AIエージェントの構成のバージョン管理により、開発者はAIエージェントのバージョン管理をより詳細に制御できるようになり、レスポンスの一貫性が確保されます。
 
-AI agent configuration versioning adopts the following principles:
+AIエージェントの構成のバージョン管理には、以下の原則が採用されています。
 
-* Each AI agent snapshot is supported for at least 12 months, unless there are factors outside of Box's control. For example, a Large Language Model (LLM) may get deprecated.
-* An AI agent snapshot is available unless a new, stable agent version is released
-* A 6-month window is provided to test and transition to the new snapshot.
+* 各AIエージェントのスナップショットは、Box側では制御できない要因がない限り、少なくとも12か月間サポートされます。この要因には、大規模言語モデル (LLM) の廃止などがあります。
+* AIエージェントのスナップショットは、安定したエージェントバージョンが新しくリリースされない限り、使用できます。
+* 新しいスナップショットをテストして移行するために、6か月の猶予期間が設けられています。
 
-## Historical AI agent configuration
+## AIエージェントの構成の履歴
 
-The values in the [default agent configuration][default-config] used by the LLM gateway often change to achieve the best possible answer quality.
+LLMゲートウェイで使用される[デフォルトのエージェント構成][default-config]の値は、可能な限り高品質の回答を得られるように変更されることがよくあります。
 
-To make sure your configurations are not affected in a negative way, you can use the historical AI agent configuration provided below to [override the default one][overrides].
+使用中の構成への悪影響を避けるために、以下に示すAIエージェントの構成の履歴を使用して[デフォルト構成を上書きする][overrides]ことができます。
 
 ``````json
 {

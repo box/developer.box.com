@@ -26,7 +26,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
@@ -140,11 +140,11 @@ Endpoints related to metadata extraction are currently a beta feature offered su
 
 ### LLMエンドポイントパラメータ
 
-The `llm_endpoint_params` configuration options differ depending on the overall AI model being [Google][google-params], [OpenAI][openai-params] or [AWS][aws-params] based.
+`llm_endpoint_params`構成のオプションは、全体的なAIモデルが[Google][google-params]ベースか、[OpenAI][openai-params]ベースか、[AWS][aws-params]ベースかによって異なります。
 
 たとえば、どちらの`llm_endpoint_params`オブジェクトも`temperature`パラメータを受け入れますが、モデルによって結果が異なります。
 
-For Google and AWS models, the [`temperature`][google-temp] is used for sampling during response generation, which occurs when `top-P` and `top-K` are applied. Temperature controls the degree of randomness in the token selection.
+GoogleモデルとAWSモデルの場合、[`temperature`][google-temp]はレスポンス生成時のサンプリングに使用されます。レスポンス生成は`top-P`と`top-K`が適用された場合に発生します。temperatureは、トークン選択におけるランダム性の程度を制御します。
 
 OpenAIモデルの場合、[`temperature`][openai-temp]は、値が0～2の間のサンプリングtemperatureとなります。0.8のような高い値を指定すると、出力がよりランダムになるのに対し、0.2のような低い値を指定すると、出力はより焦点を絞った、決定的なものになります。独自の構成を導入する場合は、`temperature`と`top_p`の両方ではなく、いずれかを使用してください。
 

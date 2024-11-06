@@ -27,7 +27,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
@@ -68,7 +68,7 @@ Box AI APIを使用すると、テキストをゼロから生成したり、Box 
 
 ### 構成の上書き
 
-You can use the `ai_agent` parameter available in the Box AI API requests to override the default agent configuration and introduce your own custom settings.
+デフォルトのエージェント構成を上書きし、独自のカスタム設定を導入するには、Box AI APIリクエストで利用可能な`ai_agent`パラメータを使用できます。
 
 詳細については、[AIエージェントのデフォルト構成][agent-default]を参照してください。
 
@@ -92,8 +92,8 @@ Box AIは、英語、日本語、フランス語、スペイン語など、多�
 
 [\[ユーザーアクティビティ\] レポート][uar]には、ユーザーがBoxで実行している操作の概要が示されます。Box管理者は、このレポートを使用して、所定の期間内にユーザーが行った操作を確認できますが、これにはBox AIに対する操作も含まれます。レポートには、Box管理者がBox AIの詳細を取得するために選択できる以下の操作が用意されています。
 
-* **AI query**: The user queried Box AI and received a response.
-* **Failed AI query**: The user queried Box AI but did not receive a response.
+* **AIクエリ**: ユーザーがBox AIに対してクエリを実行し、レスポンスを受け取りました。
+* **AIクエリの失敗**: ユーザーがBox AIに対してクエリを実行したが、レスポンスがありませんでした。
 
 [boxainotes]: https://support.box.com/hc/en-us/articles/22198577315347-Box-AI-for-Notes
 

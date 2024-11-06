@@ -410,42 +410,42 @@ Box AI for UI Elementsはベータ機能であり、**Enterprise Plus**をご利
 
 </Message>
 
-Box AI for UI Elements enhances the Content Preview UI Element with additional features, allowing the developers to add the Box Q&A AI functionality to their custom app. Enriched with Box AI features, the Preview UI element brings the following functionality:
+Box AI for UI Elementsは、追加機能によってコンテンツプレビューUI Elementを強化するため、開発者はカスタムアプリにBox Q&A AI機能を追加できるようになります。Box AIの機能で強化されたプレビューUI Elementでは、以下の機能を提供します。
 
-* Q&A and document summaries.
-* A **clear conversation** button that resets the conversation with Box AI.
-* Citations that appear below the answer if included in the answer.
-* Formatting support that allows requesting Markdown-formatted response, including bullet points or tables.
-* Question history that allows referencing previous context to achieve the best response possible. The question history is kept only during the current session.
-* Suggested questions that appear at the top of the chat by default to assist with the conversation.
+* Q&Aとドキュメントの要約。
+* Box AIとの会話をリセットする \[**会話をクリア**] ボタン。
+* 回答の下に表示される引用情報 (回答に含まれる場合)。
+* 箇条書きや表などのマークダウン形式の応答のリクエストを可能にする、書式設定サポート。
+* 可能な限り最適な応答を得られるように以前のコンテキストの参照を可能にする、質問履歴。質問履歴は現在のセッションの間のみ保持されます。
+* 会話をサポートするために、デフォルトでチャットの先頭に表示される質問の候補。
 
-![Box UI Element with Box AI options enabled](./images/box-ai-ui-element.jpg)
+![Box AIのオプションが有効になっているBox UI Element](./images/box-ai-ui-element.jpg)
 
-### Enable Box AI for UI Elements
+### Box AI for UI Elementsの有効化
 
-To enable the Box AI modal in content preview header, follow these steps:
+コンテンツプレビューのヘッダーでBox AIウィンドウを有効にするには、以下の手順に従います。
 
 1. NodeおよびReactのバージョンが`18.x`以上であることを確認します。
-2. Download the [npm package that contains Box AI for UI Elements][aipackage] or directly from [Box CDN][installation].
-3. Install the peer dependencies:
+2. [Box AI for UI Elementsを含むnpmパッケージ][aipackage]をダウンロードするか、[Box CDN][installation]から直接ダウンロードします。
+3. 以下のピア依存関係をインストールします。
 
    * [`box-ai-content-answers`][box-ai-content-answers]
    * [`blueprint-web`][blueprint-web]
    * [`blueprint-web-assets`][blueprint-web-assets]
 
-   To do so, run the following command:
+   そのためには、次のコマンドを実行します。
 
 ```sh
    npx install-peerdeps box-ui-elements@^22.0.0
 
 ```
 
-### Using JavaScript
+### JavaScriptの使用
 
-To enable Box AI features, pass the following:
+Box AIの機能を有効にするには、以下を渡します。
 
-* `hasHeader` prop set to `true`,
-* `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+* `true`に設定した`hasHeader`プロパティ
+* `contentAnswersProps`プロパティ。デフォルトで`show`、`isCitationsEnabled`、`isMarkdownEnabled`、`isResetChatEnabled`、`suggestedQuestions`の各フィールドが含まれています。
 
 ```js
 const preview = new Box.Preview();
@@ -478,14 +478,14 @@ preview.show(<FILE_ID>, <TOKEN>, {
 
 ### Reactコンポーネントの使用
 
-You can also add Box AI element to a header in a React component. To do so, add:
+ReactコンポーネントのヘッダーにBox AI要素を追加することもできます。そのためには、以下を追加します。
 
-* `hasHeader` prop set to `true`,
-* `contentAnswersProps` prop. The fields `show`, `isCitationsEnabled`, `isMarkdownEnabled`, `isResetChatEnabled` and `suggestedQuestions` are included by default.
+* `true`に設定した`hasHeader`プロパティ
+* `contentAnswersProps`プロパティ。デフォルトで`show`、`isCitationsEnabled`、`isMarkdownEnabled`、`isResetChatEnabled`、`suggestedQuestions`の各フィールドが含まれています。
 
 <Message type="notice">
 
-To localize the `suggestedQuestions` properly, make sure that the prompts are translated. The optional `label` property is for screen readers, while the `prompt` property is the text displayed to the user in the AI modal.
+`suggestedQuestions`を適切にローカライズするには、プロンプトが翻訳されていることを確認してください。省略可能な`label`プロパティはスクリーンリーダー用であるのに対し、`prompt`プロパティはAIモーダルでユーザーに表示されるテキストです。
 
 </Message>
 
@@ -531,7 +531,7 @@ export default () => {
 
 ```
 
-You can further customize your apps using the following event listeners for Content Preview available with this release: `onAsk`, `onClearConversations`, and `onRequestClose`.
+今回のリリースで提供されるコンテンツプレビュー用のイベントリスナー (`onAsk`、`onClearConversations`、`onRequestClose`) を使用して、さらにアプリをカスタマイズできます。
 
 ##  スコープ 
 

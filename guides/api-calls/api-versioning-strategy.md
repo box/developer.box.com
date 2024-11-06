@@ -220,9 +220,9 @@ Boxでは、[oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGE
 
 </Message>
 
-## AI agent configuration versioning
+## AIエージェントの構成のバージョン管理
 
-[AI agent](g://box-ai/ai-agents) versioning gives the developers more control over model version management and ensures consistent responses. For details, see [AI agent configuration versioning guide](g://box-ai/ai-agents/ai-agent-versioning).
+[AIエージェント](g://box-ai/ai-agents)のバージョン管理により、開発者はモデルのバージョン管理をより詳細に制御できるようになり、レスポンスの一貫性が確保されます。詳細については、[AIエージェントの構成のバージョン管理ガイド](g://box-ai/ai-agents/ai-agent-versioning)を参照してください。
 
 ## サポートポリシーと非推奨情報
 

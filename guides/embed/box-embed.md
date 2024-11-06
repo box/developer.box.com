@@ -22,30 +22,30 @@ fullyTranslated: true
 ---
 # Box Embed
 
-Box Embed is a HTML-based framework that allows embedding the entire Box Web App experience in a custom-made application. Box Embed provides the ability to upload, search, comment, share, tag, and edit files using Box Edit.
+Box EmbedはHTMLベースのフレームワークで、これにより、独自に作成したアプリケーションにBoxウェブアプリの機能全体を埋め込むことができます。Box Embedを使用すると、ファイルのアップロード、検索、コメント付け、共有、タグ付けに加え、Box Editを使用したファイルの編集も可能になります。
 
-## Before you start
+## 開始する前に
 
-To create a widget, you need to:
+ウィジェットを作成するには、以下のことが必要です。
 
-* Set an embeddable element, such as a **folder**, **file**, or **Hub** for sharing. 
-* Have at least **Viewer** [permissions][5].
+* 共有用の埋め込み可能な要素 (**フォルダ**、**ファイル**、**Hub**など) を設定する。 
+* **ビューアー**以上の[権限][5]を所有する。
 
-## Using web app
+## ウェブアプリの使用
 
-To fetch the Box Embed widget code from the Box web app, perform the following steps.
+BoxウェブアプリからBox埋め込みウィジェットのコードを取得するには、以下の手順を実行します。
 
 ### ファイルとフォルダ
 
-1. Navigate to the chosen file or folder. 
-2. Click on the ellipsis next to the folder. 
-3. Go to **More Actions** > **Embed Widget**.
+1. 選択したファイルまたはフォルダに移動します。 
+2. そのフォルダの横にある省略記号をクリックします。 
+3. \[**その他の操作**] > \[**埋め込みウィジェット**] に移動します。
 
-### Hubs
+### Hub
 
-1. Navigate to the chosen Hub. 
-2. Click on the ellipsis menu in the top right corner. 
-3. Click **Embed Widget**.
+1. 選択したHubに移動します。 
+2. 右上にある省略記号メニューをクリックします。 
+3. \[**埋め込みウィジェット**] をクリックします。
 
 <ImageFrame border>
 
@@ -53,11 +53,11 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 </ImageFrame>
 
-In the next step, configure the parameters of an embeddable element.
+次の手順では、埋め込み可能な要素のパラメータを構成します。
 
-| ファイル                | フォルダ                                                                                         | Hubs                                                               |
-| ------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Size of the widget. | Size of the widget, sorting of the files in a folder, hiding the navigation path and sidebar | Size of the widget, hiding the parent navigation path and sidebar. |
+| ファイル       | フォルダ                                           | Hub                              |
+| ---------- | ---------------------------------------------- | -------------------------------- |
+| ウィジェットのサイズ | ウィジェットのサイズ、フォルダ内のファイルの並べ替え、ナビゲーションパスとサイドバーの非表示 | ウィジェットのサイズ、親のナビゲーションパスとサイドバーの非表示 |
 
 <ImageFrame border>
 
@@ -65,11 +65,11 @@ In the next step, configure the parameters of an embeddable element.
 
 </ImageFrame>
 
-When you are done customizing the embed widget, copy and paste the embed code into your site or web application.
+埋め込みウィジェットのカスタマイズが完了したら、埋め込みコードをコピーして自分のサイトまたはウェブアプリに貼り付けます。
 
 ## プログラムを使用して構成
 
-If you want to customize Box Embed even further, you can do it programmatically. The format for an embed snippet is as follows:
+Box Embedをさらにカスタマイズする場合は、プログラムを使用して実行できます。埋め込みのスニペットの形式は次のとおりです。
 
 ```html
 <iframe
@@ -120,17 +120,17 @@ curl https://api.box.com/2.0/folders/12345?fields=shared_link \
 
 次に、表示のカスタマイズオプションを選択します。構成可能なパラメータ (省略可) のリストを以下に示します。
 
-|                       |                                                                                                                                                       |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `view`                | The view type for your files or folders. Can be `list` (default) or `icon`. For logged-in users the view type from user preferences takes precedence. |
-| `sortColumn`          | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。                                                                                          |
-| `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。                                                                                                   |
-| `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                                                                                        |
-| `showItemFeedActions` | Hide or show file comments or tasks. Can be `true` (default) or `false`.                                                                              |
-| `hideHubsGallery`     | Hide or show navigation chevron button to go back to Hubs gallery. Can be `true` or `false` (default).                                                |
-| `uxLite`              | Show the limited content preview (Preview Light), with no cloud game. Works only for shared files.                                                    |
+|                       |                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| `view`                | ファイルまたはフォルダの表示方法の種類。`list` (デフォルト) または`icon`を指定できます。ログインユーザーの場合は、ユーザー設定の表示方法が優先されます。 |
+| `sortColumn`          | ファイルまたはフォルダを並べ替える順番。`name`、`date` (デフォルト)、または、`size`を指定できます。                         |
+| `sortDirection`       | ファイルまたはフォルダの並べ替えの方向。`ASC` (デフォルト) または`DESC`を指定できます。                                  |
+| `showParentPath`      | フレームのヘッダーにフォルダパスを非表示または表示します。`true`または`false` (デフォルト) を指定できます。                       |
+| `showItemFeedActions` | ファイルのコメントまたはタスクを非表示または表示します。`true` (デフォルト) または`false`を指定できます。                        |
+| `hideHubsGallery`     | Hubsギャラリーに戻るためのナビゲーションの山括弧ボタンを非表示または表示します。`true`または`false` (デフォルト) を指定できます。          |
+| `uxLite`              | クラウド (雲) ゲームを使用せず、制限付きコンテンツプレビュー (Preview Light) を表示します。共有ファイルのみに有効です。               |
 
-### Full screen capabilities
+### 全画面表示機能
 
 Box Embedスニペットの全画面表示機能を有効にするために、オブジェクトを全画面に表示可能にする場合は、以下のパラメータの1つ以上を`<iframe>`に含めてください。
 
@@ -140,7 +140,7 @@ Box Embedスニペットの全画面表示機能を有効にするために、�
 * `oallowfullscreen`
 * `msallowfullscreen`
 
-## Expiring embed links
+## 有効期限付き埋め込みリンク
 
 ファイルの場合、[`GET /files/:id`][1]を呼び出し、`fields`クエリパラメータを使用して`expiring_embed_link`をリクエストすることもできます。
 
@@ -215,7 +215,7 @@ https://app.box.com/preview/expiring_embed/[HASH]?[parameterName]=true
 | `showDownload`    | ファイルをダウンロードするための権限がビューアーにある場合は、埋め込まれたヘッダーバーにダウンロードボタンが表示されます。また、印刷とダウンロードが同じ権限で管理されているため、ドキュメントのファイルタイプには印刷ボタンも表示されます。デフォルトでは`false`になります。                                                          |
 | `showAnnotations` | プレビュー以上の権限を持つユーザーは、ドキュメントと画像のプレビューに注釈を付けることができます。また、すでにドキュメントに付けられている注釈も表示されます。注釈が利用可能なファイルタイプおよび注釈の種類の詳細については、注釈ページを参照してください。現在、注釈はウェブブラウザでのみ使用できます。モバイルブラウザでは、ユーザーは注釈を表示できますが、新しい注釈を作成することはできません。 |
 
-## Cloud game
+## クラウド (雲) ゲーム
 
 クラウド (雲) ゲームとは、クリックジャッキングを防ぐために作成されたウィジェットです。これは、パートナー統合ではない埋め込みサイトに表示されます。クラウド (雲) ゲームでは、ユーザーは、操作の許可を得るためにクラウド (雲) を適切な場所にドラッグする必要があります。このゲームでは、クラウド (雲) の位置とそのドラッグ先がランダムに生成されるため、クリックジャッキングが難しくなります。
 

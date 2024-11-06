@@ -24,24 +24,24 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Endpoints related to metadata extraction are currently a beta feature offered subject to Box’s Main Beta Agreement, and the available capabilities may change. Box AI API is available to all Enterprise Plus customers.
+メタデータ抽出に関連するエンドポイントは、現在、BoxのMain Beta Agreementに従い提供されるベータ機能のため、利用可能な機能が変更される可能性があります。Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
-## Using models
+## モデルの使用
 
-You can use the supported AI models:
+サポートされているAIモデルを使用できます。
 
 * [AIエージェントのデフォルト構成][agent]を取得する
-* override the AI agent configuration used in [`POST 2.0/ai/ask`][ask], [`POST 2.0/ai/text_gen`][text-gen], [`POST 2.0/ai/extract`][extract], [`POST 2.0/ai/extract_structured`][extract-structured] endpoints.
+* [`POST 2.0/ai/ask`][ask]、[`POST 2.0/ai/text_gen`][text-gen]、[`POST 2.0/ai/extract`][extract]、[`POST 2.0/ai/extract_structured`][extract-structured]の各エンドポイントで使用されるAIエージェントの構成を上書きする
 
-When using the `model` parameter your API calls, use the **API Name** visible on each tile and model card.
+APIコールで`model`パラメータを使用する際は、各タイルおよびモデルカードに表示されている**API名**を使用します。
 
-For example, to get the AI agent configuration for a specific model, use the [model][ai-model] parameter and provide the `azure__openai__gpt_4o_mini` API name. Make sure you use **two underscores** after the provider name.
+たとえば、特定のモデルのAIエージェントの構成を取得するには、[model][ai-model]パラメータを使用して、API名`azure__openai__gpt_4o_mini`を指定します。プロバイダ名の後に**2つのアンダースコア**を使用していることを確認してください。
 
 <Message type="notice">
 
-The list may change depending on the model availability. Models offered in **Preview** mode have not been fully performance-tested at scale and are made available on an as-is basis. You may experience variability in model/output quality, availability, and accuracy.
+このリストはモデルの提供状況により変更される可能性があります。**プレビュー**モードで提供されているモデルはパフォーマンスが大規模にテストされておらず、現状のままの利用となるため、モデル/出力の品質、可用性、精度には変動がある可能性があります。
 
 </Message>
 
@@ -49,19 +49,19 @@ The list may change depending on the model availability. Models offered in **Pre
 
 <Tile type="gpt" title="azure__openai__gpt_4o_mini" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-mini-model-card">
 
-A multimodal model designed to handle lightweight tasks.
+軽量のタスクを処理するように設計されたマルチモーダルモデル。
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Docs
+Box AI for Documentsのデフォルト
 
 </strong>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -71,19 +71,19 @@ Available
 
 <Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
 
-A multimodal model, highly efficient in handling complex, multi-step tasks.
+複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI for Box Hubs
+Box AI for Hubsのデフォルト
 
 </strong>
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -93,13 +93,13 @@ Available
 
 <Tile type="gemini" title="google__gemini_1_5_flash_001" href="/guides/box-ai/ai-models/google-gemini-1-5-flash-001-model-card">
 
-The fastest Gemini multimodal model, built for high volume tasks and latency-sensitive applications.
+大量のタスクやレイテンシの影響を受けやすいアプリケーション向けに構築された、最速のGeminiマルチモーダルモデル。
 
 <div>
 
 <strong style="background-color: #e8e8e8">
 
-Default for Box AI Extract
+Box AI Extractのデフォルト
 
 </strong>
 
@@ -115,7 +115,7 @@ Default for Box AI Extract
 
 <Tile type="gemini" title="google__gemini_1_5_pro_001" href="/guides/box-ai/ai-models/google-gemini-1-5-pro-001-model-card">
 
-A foundation model that performs well at a variety of multimodal tasks.
+さまざまなマルチモーダルタスクで優れたパフォーマンスを発揮する基本モデル。
 
 <div>
 
@@ -137,7 +137,7 @@ A foundation model that performs well at a variety of multimodal tasks.
 
 <Tile type="gpt" title="azure__openai__text_embedding_ada_002" href="/guides/box-ai/ai-models/azure-text-embedding-ada-002-model-card">
 
-A most capable 2nd generation text embedding model. Skilled in text search, code search, and sentence similarity.
+最も優れた第2世代のテキスト埋め込みモデル。テキスト検索、コード検索、文の類似性判定に優れています。
 
 <div>
 
@@ -149,7 +149,7 @@ A most capable 2nd generation text embedding model. Skilled in text search, code
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -159,7 +159,7 @@ Available
 
 <Tile type="model" title="google__textembedding_gecko" href="/guides/box-ai/ai-models/google-textembedding-gecko-model-card">
 
-A text embedding model, converting textual data into numerical vectors that machine learning algorithms can process.
+テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
 
 <div>
 
@@ -171,7 +171,7 @@ A text embedding model, converting textual data into numerical vectors that mach
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -181,7 +181,7 @@ Available
 
 <Tile type="model" title="google__textembedding_gecko_002" href="/guides/box-ai/ai-models/google-textembedding-gecko-002-model-card">
 
-A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
 
 <div>
 
@@ -193,7 +193,7 @@ A text embedding model converting textual data into numerical vectors that machi
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -203,7 +203,7 @@ Available
 
 <Tile type="model" title="google__textembedding_gecko_003" href="/guides/box-ai/ai-models/google-textembedding-gecko-003-model-card">
 
-A text embedding model converting textual data into numerical vectors that machine learning algorithms can process.
+テキスト埋め込みモデル。テキストデータを、機械学習アルゴリズムで処理できる数値ベクトルに変換します。
 
 <div>
 
@@ -215,7 +215,7 @@ A text embedding model converting textual data into numerical vectors that machi
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -225,7 +225,7 @@ Available
 
 <Tile type="palm" title="google__text_unicorn" href="/guides/box-ai/ai-models/google-text-unicorn-model-card">
 
-A model that can handle complex tasks, such as coding, due to the extensive embedded knowledge.
+広範な埋め込み知により、コーディングなどの複雑なタスクを処理できるモデル。
 
 <div>
 
@@ -237,7 +237,7 @@ A model that can handle complex tasks, such as coding, due to the extensive embe
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -247,7 +247,7 @@ Available
 
 <Tile type="palm" title="google__text_bison" href="/guides/box-ai/ai-models/google-text-bison-model-card">
 
-A model capable of creating document summaries, answers to questions, and content classification labels.
+ドキュメントの要約、質問への回答、コンテンツ分類ラベルの作成が可能なモデル。
 
 <div>
 
@@ -259,7 +259,7 @@ A model capable of creating document summaries, answers to questions, and conten
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -269,7 +269,7 @@ Available
 
 <Tile type="palm" title="google__text_bison_32k" href="/guides/box-ai/ai-models/google-text-bison-32-model-card">
 
-An enhanced **text-bison** model capable of creating document summaries, answers to questions, and content classification labels.
+ドキュメントの要約、質問への回答、コンテンツ分類ラベルの作成が可能な、強化された**text-bison**モデル。
 
 <div>
 
@@ -281,7 +281,7 @@ An enhanced **text-bison** model capable of creating document summaries, answers
 
 <strong style="background-color: #e1ffe7">
 
-Available
+利用可能
 
 </strong>
 
@@ -291,7 +291,7 @@ Available
 
 <Tile type="model" title="aws__claude_3_haiku" href="/guides/box-ai/ai-models/aws-claude-3-haiku-model-card">
 
-A model tailored for various language tasks, including creative writing and conversational AI.
+創造性豊かな文章作成AIや会話AIなど、さまざまな言語タスク向けにカスタマイズされたモデル。
 
 <div>
 
@@ -313,7 +313,7 @@ A model tailored for various language tasks, including creative writing and conv
 
 <Tile type="model" title="aws__claude_3_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-sonnet-model-card">
 
-A model designed for advanced language tasks, focusing on comprehension and context handling.
+高度な言語タスク向けに設計されており、理解とコンテキスト処理に重点が置かれているモデル。
 
 <div>
 
@@ -335,7 +335,7 @@ A model designed for advanced language tasks, focusing on comprehension and cont
 
 <Tile type="model" title="aws__claude_3_5_sonnet" href="/guides/box-ai/ai-models/aws-claude-3-5-sonnet-model-card">
 
-A model designed to enhance language understanding and generation tasks.
+言語の理解と生成のタスクを強化するよう設計されたモデル。
 
 <div>
 
@@ -357,7 +357,7 @@ A model designed to enhance language understanding and generation tasks.
 
 <Tile type="model" title="aws__titan_text_lite" href="/guides/box-ai/ai-models/aws-titan-text-lite-model-card">
 
-A model capable of advanced language processing, handling extensive contexts, making it suitable for complex tasks.
+高度な言語処理が可能なモデル。幅広いコンテキストを処理できるため、複雑なタスクに適しています。
 
 <div>
 

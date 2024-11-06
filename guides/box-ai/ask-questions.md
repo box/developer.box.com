@@ -25,7 +25,7 @@ fullyTranslated: true
 
 <Message type="notice">
 
-Box AI API is available to all Enterprise Plus customers.
+Box AI APIは、Enterprise Plusをご利用のすべてのお客様が利用できます。
 
 </Message>
 
