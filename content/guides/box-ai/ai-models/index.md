@@ -38,7 +38,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
-    <Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+    <Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
       A multimodal model, highly efficient in handling complex, multi-step tasks.
       <div>
         <strong style="background-color: #e8e8e8">Default for Box AI for Box Hubs</strong>
