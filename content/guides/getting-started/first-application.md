@@ -41,7 +41,7 @@ Begin with the most basic settings. Open the **General Settings** tab
 and check or fill in below fields:
 
 - **App Name** - the name you set up during the app creation, you can change it here if needed;
-- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [App Center][app-center]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
+- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [Integrations][app-center]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
 - **Collaborators** - add other developers that can work on this integration, so that they can access the developer interface in case they need to adjust any settings.
 
 <Message type='notice'>
@@ -60,7 +60,7 @@ features, and add CORS domains.
 
 In the next tabs you can create webhooks, web app integrations,
 submit app for enablement for access to the Enterprise, submit your app
-to the [Box App Center][app-center], and generate a report to view this application’s
+to the [Box Integrations][integrations], and generate a report to view this application’s
 activity.
 
 ## Test your app
@@ -84,7 +84,7 @@ You can also use [Box CLI tool][box-cli] if you prefer to use the terminal.
 [console]: https://cloud.app.box.com/developers/console
 [auth]: g://authentication/select
 [oauth2]: g://authentication/oauth2
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations
 [add-users]: https://support.box.com/hc/en-us/articles/360043694594-Add-Users
 [integrations]: https://cloud.app.box.com/integrations
 [dev-token]: g://authentication/tokens/developer-tokens/#create-developer-token

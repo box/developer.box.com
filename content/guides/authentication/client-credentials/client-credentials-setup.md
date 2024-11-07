@@ -27,7 +27,7 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### Navigate to the Developer Console
 
 Log into Box and go to the [Developer Console][devconsole].
-Select **Create New App**.
+Select **Create Platform App**.
 
 ### Select application type
 
