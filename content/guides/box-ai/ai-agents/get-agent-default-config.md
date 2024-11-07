@@ -5,11 +5,11 @@ related_endpoints:
   - post_ai_text_gen
   - post_ai_ask
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 ---
 
 # Get default AI agent configuration
@@ -254,7 +254,7 @@ When you set the `mode` parameter to `extract_structured` the response will be a
 
 </Tabs>
 
-[prereq]: g://box-ai/prerequisites
+[prereq]: g://box-ai/ai-tutorials/prerequisites
 [models]: g://box-ai/ai-models
-[ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
-[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial
+[ai-agent-config]: g://box-ai/ai-agents/ai-agent-overrides
+[override-tutorials]: g://box-ai/ai-agents/ai-agent-overrides
