@@ -8,7 +8,7 @@ alias_paths: []
 
 # Suppress Notifications
 
-For some API calls, email and webhook notifications can be prevented by
+For some API calls, you can block email and webhook notifications by
 including a `box-notifications: off` header with the API call.
 
 <Tabs>
