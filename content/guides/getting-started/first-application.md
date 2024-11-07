@@ -41,7 +41,7 @@ Begin with the most basic settings. Open the **General Settings** tab
 and check or fill in below fields:
 
 - **App Name** - the name you set up during the app creation, you can change it here if needed;
-- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [Integrations][app-center]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
+- **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [Integrations][integrations]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
 - **Collaborators** - add other developers that can work on this integration, so that they can access the developer interface in case they need to adjust any settings.
 
 <Message type='notice'>
