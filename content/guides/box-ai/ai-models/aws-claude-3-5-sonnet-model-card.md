@@ -1,10 +1,10 @@
 ---
 rank: 14
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 ---
 # AWS Claude 3.5 Sonnet
@@ -20,7 +20,7 @@ related_guides:
 |Model name|**AWS Claude 3.5 Sonnet**| The name of the model. | 
 |API model name|`aws__claude_3_5_sonnet`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer|  **Amazon Web Services (AWS)** | The trusted organization that securely hosts LLM. |
-|Model provider|**AWS Bedrock**| The organization that provides this model. |
+|Model provider|**Anthropic**| The organization that provides this model. |
 |Release date| **June 20th, 2024** | The release date for the model.|
 |Knowledge cutoff date| **April 2024**| The date after which the model does not get any information updates. |
 |Input context window |**200k tokens**| The number of tokens supported by the input context window.| 
@@ -33,4 +33,4 @@ related_guides:
 For additional information, see [official AWS Claude 3.5 Sonnet documentation][aws-claude].
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
