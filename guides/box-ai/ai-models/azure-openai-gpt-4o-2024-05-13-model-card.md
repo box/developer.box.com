@@ -30,7 +30,7 @@ source_url: >-
 |Model name|**GPT-4o 2024-05-13**| The name of the model. |
 |API model name|`azure__openai__gpt_4o_2024-05-13`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
-|Model provider|**OpenAI**| The organization that provides this model. |
+|Model provider|**Microsoft Azure**| The organization that provides this model. |
 |Release date|**May 13th, 2024** | The release date for the model.|
 |Knowledge cutoff date| **September 2023**| The date after which the model does not get any information updates. |
 |Input context window |**128k tokens**| The number of tokens supported by the input context window.|

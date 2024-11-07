@@ -17,7 +17,7 @@ previous_page_id: api-calls/permissions-and-errors/common-errors
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/index.md
 ---
-# Permissions & Errors
+# Permissions and errors
 
 The following guides provide information on the permissions or errors related to
 the Box API. It includes pages on [Common Errors][1], [Rate Limits][2],

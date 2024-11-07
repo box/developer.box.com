@@ -17,9 +17,9 @@ previous_page_id: api-calls/allowing-domain-access
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/suppress-notifications.md
 ---
-# Suppress Notifications
+# Suppress notifications
 
-For some API calls, email and webhook notifications can be prevented by
+For some API calls, you can block email and webhook notifications by
 including a `box-notifications: off` header with the API call.
 
 <Tabs>
