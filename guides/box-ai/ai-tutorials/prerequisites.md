@@ -1,22 +1,23 @@
 ---
-rank: 2
+rank: 1
 related_guides:
-  - authentication/tokens/developer-tokens/
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/prerequisites
+id: box-ai/ai-tutorials/prerequisites
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/ask-questions
-previous_page_id: box-ai
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
+next_page_id: box-ai/ai-tutorials/ask-questions
+previous_page_id: box-ai/ai-tutorials
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/prerequisites.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/prerequisites.md
 ---
 # Get started with Box AI
 
@@ -65,7 +66,7 @@ To add a scope:
 2. Go to **Configuration** > **Application Scopes** > **Content Actions**
 3. Select the **Manage AI** scope. Box Platform will automatically include the scope when making the call. If you are added as an collaborator for a given app, but do not have Box AI API access, you will see the **Manage AI** scope checked and grayed out. This means the app owner has the AI scope enabled but you cannot change this setting.
 
-    ![box ai scopes](./images/box-ai-app-scopes.png)
+    ![box ai scopes](../images/box-ai-app-scopes.png)
 
 4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI API for an existing application, you must [re-authorize][reauthorization] it.
 
@@ -80,7 +81,7 @@ To generate a token:
 2. Click the **Options menu** button (…) on the right.
 3. Select **Generate Developer Token**. The token will be automatically generated and saved to clipboard.
 
-![generate token](./images/developer-token.png)
+![generate token](../images/developer-token.png)
 
 You can also open your app, go to
 **Configuration** > **Developer Token**
