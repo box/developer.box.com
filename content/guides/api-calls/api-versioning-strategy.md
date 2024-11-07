@@ -77,7 +77,7 @@ timeframe.
 
 ### Endpoint marking
 
-To improve readability of the versioned API reference, the endpoints are marked with pills specifying the lifecycle stage they are currently in. 
+To keep you informed about the current API state, and improve the readability of the versioned API reference, the affected endpoints are marked with the following terms: 
 
 * **Beta**: Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle.
 
