@@ -34,7 +34,7 @@ restricted to certain content types and file extensions.
   Learn how to create a Web App Integration
 </CTA>
 
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations
 [custom-app]: g://authentication/oauth2/oauth2-setup
 [oauth2]: g://authentication/oauth2
 <!-- i18n-enable localize-links -->
