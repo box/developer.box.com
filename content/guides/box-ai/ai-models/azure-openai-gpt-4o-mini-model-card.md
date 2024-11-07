@@ -18,7 +18,7 @@ related_guides:
 |Model name|**GPT-4o Mini**| The name of the model. | 
 |API model name|`azure__openai__gpt_4o_mini`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
-|Model provider|**OpenAI**| The organization that provides this model. |
+|Model provider|**Microsoft Azure**| The organization that provides this model. |
 |Release date|**July 18th, 2024** | The release date for the model.|
 |Knowledge cutoff date| **October 2023**| The date after which the model does not get any information updates. |
 |Input context window |**128k tokens**| The number of tokens supported by the input context window.| 
