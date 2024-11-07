@@ -30,7 +30,7 @@ source_url: >-
 ---
 # Setup with JWT
 
-A Custom App can be set up to use server-side authentication with
+A Platform App can be set up to use server-side authentication with
 [JWT][jwt].
 
 <CTA to='g://authentication/jwt'>
@@ -41,7 +41,7 @@ Learn how JWT authentication works
 
 ## Prerequisites
 
-To set up a Custom App using server-side authentication, you will need to ensure
+To set up a Platform App using server-side authentication, you will need to ensure
 you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -50,11 +50,11 @@ account. Alternatively, you may sign up for a [developer account][devaccount].
 ### Navigate to the Developer Console
 
 Log into Box and go to the [Developer Console][devconsole].
-Select **Create New App**.
+Select **Create Platform App**.
 
 ### Select application type
 
-Select **Custom App** from the list of application types. A modal will appear to
+Select **Platform App** from the list of application types. A modal will appear to
 prompt a selection for the next step.
 
 <ImageFrame border>
@@ -84,7 +84,7 @@ Use the drop-down list to select the app's purpose. Depending on the option chos
 ### Select application authentication
 
 Select **Server Authentication (with JWT)** if you would like to verify
-application identity [with a key pair][kp] and confirm with **Create App**.
+application identity [with a key pair][kp] and confirm with **Create Platform App**.
 
 <Message warning>
 
@@ -108,7 +108,7 @@ This section can be skipped if you selected Server Authentication
 
 </Message>
 
-Once a Custom App is created leveraging Server Authentication with JWT, a key
+Once a Platform App is created leveraging Server Authentication with JWT, a key
 pair can be generated via the configuration tab within the
 [Developer Console][devconsole]. Alternatively, you can generate your
 own and supply Box with the public key. Regardless of the method you select,
@@ -196,7 +196,7 @@ approval. More information on this process is available in our
 
 <CTA to='g://authorization/custom-app-approval'>
 
-Learn how to authorize a Custom Application
+Learn how to authorize a Platform Application
 
 </CTA>
 

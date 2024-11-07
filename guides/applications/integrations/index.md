@@ -11,9 +11,9 @@ alias_paths:
   - /guides/applications/app-gallery
   - /guides/applications/app-gallery/
 category_id: applications
-subcategory_id: applications/app-center
+subcategory_id: applications/integrations
 is_index: true
-id: applications/app-center
+id: applications/integrations
 type: guide
 total_steps: 0
 sibling_id: applications
@@ -21,20 +21,20 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-center/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/integrations/index.md
 ---
-# App Center
+# Integrations
 
-The [Box App Center][app-center] is the first place for Box users to find out
+The [Box Integrations][app-center] is the first place for Box users to find out
 about applications that they can use in combination with Box. If your
 application is suited to be used by other enterprises, listing your service in
-the App Center can be a great way to find new users.
-App center groups apps into sections so that you can
+the Integrations can be a great way to find new users.
+Integrations groups apps into sections so that you can
 quickly find featured, most popular, or recently added apps.
 
 <ImageFrame shadow center>
 
-![App Center](./images/app-center.png)
+![Integrations](./images/app-center.png)
 
 </ImageFrame>
 
@@ -54,21 +54,21 @@ Center][app-center].
 Your application must meet the following requirements:
 
 * The application is in a finished state and ready for production usage.
-* The application leverages OAuth 2.0 authentication, as the App Center does not support any other authentication methods.
+* The application leverages OAuth 2.0 authentication, as the Integrations does not support any other authentication methods.
 * You are a developer with access to the application in the [Developer Console][devconsole].
 
 ### 1. Log in to the Developer Console
 
 Navigate to the [Developer Console][devconsole] and select your application to
-submit to the App Center.
+submit to the Integrations.
 
 ### 2. Fill in the form
 
-Select the **App Center** tab from the top menu.
+Select the **Integrations** tab from the top menu.
 
 <ImageFrame center border shadow>
 
-![App Center panel](./images/app-center.png)
+![Integrations panel](./images/app-center.png)
 
 </ImageFrame>
 
@@ -114,7 +114,7 @@ support ticket.
 
 Once approved and published, an application can be unpublished from the same
 control panel. Navigate to the [Developer Console][devconsole] and select
-your application. Then, select the "App Center" panel from the left-hand
+your application. Then, select the "Integrations" panel from the left-hand
 sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
