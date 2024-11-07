@@ -18,7 +18,7 @@ related_guides:
 |Model name|**text-embedding-ada-002**| The name of the model. | 
 |API model name|`azure__openai__text_embedding_ada_002`| The name of the model that is used in the [Box AI API for model overrides][overrides]. The user must provide this exact name for the API to work. |
 |Hosting layer| **Microsoft Azure** | The trusted organization that securely hosts LLM. |
-|Model provider|**OpenAI**| The organization that provides this model. |
+|Model provider|**Microsoft Azure**| The organization that provides this model. |
 |Release date|**December 2022** | The release date for the model.|
 |Knowledge cutoff date| **September 2021**| The date after which the model does not get any information updates. |
 |Input context window |**8k tokens**| The number of tokens supported by the input context window.| 
