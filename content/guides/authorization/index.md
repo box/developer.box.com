@@ -33,8 +33,8 @@ Admin authorization based on enabled enterprise settings.
 Subsequent steps are required if any of the following enterprise settings are
 enabled:
 
-- Disable published apps by default
-- Disable unpublished apps by default
+- Disable published Integrations by default
+- Disable unpublished Integrations by default
 - Require manual admin authorization for transactional access apps
 
 These [settings][setting] can be found by navigating to:
@@ -42,7 +42,7 @@ These [settings][setting] can be found by navigating to:
 **Admin Console** > **Apps** > **Platform Apps** > click the ⚙ icon
 
 <Message tip>
-  Published apps are any applications that can be found in our Integrations.
+  Published integrations are any applications that can be found in our App Center.
 </Message>
 
 ## Required actions
@@ -51,7 +51,7 @@ To see what steps an Admin must complete for a given app, review the following
 scenarios.
 
 <!--alex ignore-->
-**Disable published apps by default**:
+**Disable Integrations by default**:
 
 | Authentication Method                            | Enabled                                     | Disabled
 | ------------------------------------------------ | ------------------------------------------- | -------------- |
@@ -60,7 +60,7 @@ scenarios.
 |[Server Authentication (client credentials)][cc]  | N/A                                         | N/A            |
 |[App Token Authentication][apptoken]              | N/A                                         | N/A            |
 
-**Disable unpublished apps by default**:
+**Disable unpublished integrations by default**:
 
 | Authentication Method                            | Enabled                                                                             | Disabled
 | ------------------------------------------------ | ----------------------------------------------------------------------------------- | --------------------------------------- |

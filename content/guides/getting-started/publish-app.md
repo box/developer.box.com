@@ -5,7 +5,7 @@ rank: 3
 # Publish your application
 
 When you finish the app configuration and testing, you can publish
-it in the [Box Integrations][app-center]. It allows customers to find
+it in the [Box Integrations][integrations]. It allows customers to find
 your application and add it to their Box accounts.
 
 <Message type='warning'>
@@ -45,4 +45,4 @@ and publish it in the Integrations.
 In case of any questions or issues, contact the Partners team:
 integrate@box.com
 
-[app-center]: https://cloud.app.box.com/app-center
+[integrations]: https://cloud.app.box.com/integrations
