@@ -7,10 +7,9 @@ alias_paths:
   - /docs/api-language-codes
 ---
 
-# Language Codes
+# Language codes
 
-The Box API uses a modified version of the ISO 639-1 Language Code to specify a
-user's language.
+The Box API uses a modified version of the **ISO 639-1 Language Code** to specify a user's language.
 
 The following is a list of language codes used when [creating][create_user] or [updating][update_user].
 
