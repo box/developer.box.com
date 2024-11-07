@@ -156,7 +156,7 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 
 <ImageFrame center shadow border>
 
-![Global App Settings](images/global_apps_settings.png)
+![Global Integration Settings](images/global_integration_settings.png)
 
 </ImageFrame>
 

@@ -58,7 +58,7 @@ handling authentication.
 seamlessly
 with the Box user experience. They enable users to edit, share, or modify
 content stored in Box using a third-party application. Such integrations can
-add new features to Box users and be added to Recommended Apps in Box Preview,
+add new features to Box users and be added to Recommended Web Integrations in Box Preview,
 enhancing the user experience by integrating with various content types and
 file extensions.
 

@@ -48,7 +48,7 @@ The list below contains all methods that can be invoked in
 - Delete Collaboration (`deleteCollaboration`)
 - Delete Metadata Cascade Policy (`deleteMetadataCascadePolicyById`)
 - Edit Collaboration (`editCollaboration`)
-- Enable App Activity (`enableAppActivity`)
+- Enable Integration Activity (`enableAppActivity`)
 - Get Box Metadata by Folder Id (`getBoxMetadataByFolderId`)
 - Get Folder Associations By Salesforce Record ID (`getFolderAssociationsByRecordId`)
 - Get Folder ID By Record ID (`getFolderIdByRecordId`)

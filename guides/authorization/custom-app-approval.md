@@ -108,7 +108,7 @@ you should see their contact information under "Admin Contact".
 
 <ImageFrame border center>
 
-![Server Apps tab](images/jwt_app_approval_flow.png)
+![Server tab](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 
