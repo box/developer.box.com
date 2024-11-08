@@ -1,10 +1,11 @@
 ---
-rank: 2
+rank: 1
 related_guides:
-  - authentication/tokens/developer-tokens/
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 ---
 
 # Get started with Box AI
@@ -47,10 +48,10 @@ settings, contact your admin.
 To add a scope:
 
 1. Open your application in Developer Console.
-2. Go to **Configuration** > **Application Scopes** > **Content Actions**
+2. Go to **Configuration** > **Required Access Scopes** > **Content Actions**
 3. Select the **Manage AI** scope. Box Platform will automatically include the scope when making the call. If you are added as an collaborator for a given app, but do not have Box AI API access, you will see the **Manage AI** scope checked and grayed out. This means the app owner has the AI scope enabled but you cannot change this setting.
 
-    ![box ai scopes](./images/box-ai-app-scopes.png)
+    ![box ai scopes](../images/box-ai-app-scopes.png)
 
 4. Submit your app for [authorization or enablement][authorization]. If you want to enable Box AI API for an existing application, you must [re-authorize][reauthorization] it.
 
@@ -61,11 +62,11 @@ to authenticate your app when sending requests.
 
 To generate a token:
 
-1. Go to **Developer Console** > **My Apps**.
+1. Go to **Developer Console** > **My Platform Apps**.
 2. Click the **Options menu** button (…) on the right.
 3. Select **Generate Developer Token**. The token will be automatically generated and saved to clipboard.
 
-![generate token](./images/developer-token.png)
+![generate token](../images/developer-token.png)
 
 You can also open your app, go to
 **Configuration** > **Developer Token**
