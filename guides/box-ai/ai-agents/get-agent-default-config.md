@@ -5,11 +5,11 @@ related_endpoints:
   - post_ai_text_gen
   - post_ai_ask
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 category_id: box-ai
 subcategory_id: box-ai/ai-agents
 is_index: false
@@ -18,7 +18,7 @@ type: guide
 total_steps: 3
 sibling_id: box-ai/ai-agents
 parent_id: box-ai/ai-agents
-next_page_id: box-ai/ai-agents/ai-agent-versioning
+next_page_id: box-ai/ai-agents/ai-agent-overrides
 previous_page_id: box-ai/ai-agents
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/get-agent-default-config.md
@@ -270,10 +270,10 @@ fullyTranslated: true
 
 </Tabs>
 
-[prereq]: g://box-ai/prerequisites
+[prereq]: g://box-ai/ai-tutorials/prerequisites
 
 [models]: g://box-ai/ai-models
 
-[ai-agent-config]: g://box-ai/ai-agents/overrides-tutorial
+[ai-agent-config]: g://box-ai/ai-agents/ai-agent-overrides
 
-[override-tutorials]: g://box-ai/ai-agents/overrides-tutorial
+[override-tutorials]: g://box-ai/ai-agents/ai-agent-overrides

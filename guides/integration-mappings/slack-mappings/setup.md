@@ -46,7 +46,7 @@ fullyTranslated: true
 ## Boxアプリケーションの作成
 
 1. [Box開発者コンソール][5]で、[OAuth認証を使用するカスタムアプリ][4]を作成します。
-2. アプリケーションを開き、\[**構成**] > \[**アプリケーションスコープ**] で \[**Enterpriseのプロパティを管理する**] アプリケーションスコープを有効にします。
+2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Required Access Scopes**.
 
 <Message info>
 

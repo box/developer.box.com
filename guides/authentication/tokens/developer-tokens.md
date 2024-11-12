@@ -37,7 +37,7 @@ fullyTranslated: true
 
 <Message>
 
-\[[マイアプリ][apps]] ビューから直接、各アプリに用意されているメニューを使用して、開発者トークンを生成することもできます。
+You can also generate a Developer Token directly from [My Platform Apps][apps] view, using the menu available for each app.
 
 </Message>
 

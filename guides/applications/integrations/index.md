@@ -11,9 +11,9 @@ alias_paths:
   - /guides/applications/app-gallery
   - /guides/applications/app-gallery/
 category_id: applications
-subcategory_id: applications/app-center
+subcategory_id: applications/integrations
 is_index: true
-id: applications/app-center
+id: applications/integrations
 type: guide
 total_steps: 0
 sibling_id: applications
@@ -21,16 +21,16 @@ parent_id: applications
 next_page_id: ''
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/applications/app-center/index.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/applications/integrations/index.md
 fullyTranslated: true
 ---
-# App Center
+# Integrations
 
-[Box App Center][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に確認できる場所です。アプリケーションが他の企業での使用にも適している場合は、App Centerにサービスを登録すると、新しいユーザーを見つけるのに役立ちます。App Centerでは、ユーザーが見つけやすいように、アプリが \[おすすめ]、\[人気]、\[新着] セクションに分類されています。
+The [Box Integrations][app-center] is the first place for Box users to find out about applications that they can use in combination with Box. If your application is suited to be used by other enterprises, listing your service in the Integrations can be a great way to find new users. Integrations groups apps into sections so that you can quickly find featured, most popular, or recently added apps.
 
 <ImageFrame shadow center>
 
-![App Center](./images/app-center.png)
+![Integrations](./images/app-center.png)
 
 </ImageFrame>
 
@@ -47,20 +47,20 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 アプリケーションは、以下の要件を満たす必要があります。
 
 * アプリケーションは完成した状態で、実稼働環境での使用準備ができていること。
-* App CenterではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
+* The application leverages OAuth 2.0 authentication, as the Integrations does not support any other authentication methods.
 * 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
 
 ### 1. 開発者コンソールにログインする
 
-[開発者コンソール][devconsole]に移動して、App Centerに送信するアプリケーションを選択します。
+Navigate to the [Developer Console][devconsole] and select your application to submit to the Integrations.
 
 ### 2. フォームに入力する
 
-上部のメニューで \[**App Center**] タブを選択します。
+Select the **Integrations** tab from the top menu.
 
 <ImageFrame center border shadow>
 
-![\[App Center\] パネル](./images/app-center.png)
+![Integrations panel](./images/app-center.png)
 
 </ImageFrame>
 
@@ -100,7 +100,7 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 
 ## アプリケーションを未公開にする
 
-承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[App Center] パネルを選択します。このページからアプリを未公開にすることができます。
+Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the "Integrations" panel from the left-hand sidebar. The app can be unpublished from this page.
 
 [app-center]: https://app.box.com/services
 

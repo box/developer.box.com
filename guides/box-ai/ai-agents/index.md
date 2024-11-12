@@ -8,7 +8,7 @@ related_endpoints:
   - post_ai_extract_structured
 related_guides:
   - box-ai/ai-agents/get-agent-default-config
-  - box-ai/ai-agents/overrides-tutorial
+  - box-ai/ai-agents/ai-agent-overrides
 category_id: box-ai
 subcategory_id: box-ai/ai-agents
 is_index: true
@@ -47,6 +47,6 @@ Box AIに基づいた実装の場合、新しいデフォルトモデルによ�
 
 [agent-default]: g://box-ai/ai-agents/get-agent-default-config
 
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
 
 [models]: g://box-ai/ai-models

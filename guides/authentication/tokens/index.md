@@ -26,7 +26,7 @@ fullyTranslated: true
 
 <Message warning>
 
-アプリケーションスコープ、アプリケーションアクセス、有効化された詳細設定、ユーザー権限、およびエンドポイント固有の制限は、すべてが合わさることで、どのAPIコールが成功するかが決まります。たとえば、フォルダに対するコラボレータアクセス権限がユーザーにある場合でも、読み取りスコープがアプリケーションに許可されていなければ、そのフォルダに関する情報を取得するコールは失敗します。
+Required access scopes, application access, enabled advanced settings, user permissions, and endpoint-specific restrictions all work together to determine which API calls will be successful. For example, even if a user has collaborator access to a folder, a call to get information about the folder will not be successful if the read scope is not granted to the application.
 
 </Message>
 

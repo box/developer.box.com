@@ -1,22 +1,23 @@
 ---
-rank: 2
+rank: 1
 related_guides:
-  - authentication/tokens/developer-tokens/
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/prerequisites
+id: box-ai/ai-tutorials/prerequisites
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
-next_page_id: box-ai/ask-questions
-previous_page_id: box-ai
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
+next_page_id: box-ai/ai-tutorials/ask-questions
+previous_page_id: box-ai/ai-tutorials
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/prerequisites.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/prerequisites.md
 fullyTranslated: true
 ---
 # Box AIの使い方
@@ -47,11 +48,11 @@ Box AI APIを操作するには、アプリケーションに`ai.readwrite`[ス�
 
 1. 開発者コンソールで、目的のアプリケーションを開きます。
 
-2. \[**構成**] > \[**アプリケーションスコープ**] > \[**コンテンツ操作**] に移動します。
+2. Go to **Configuration** > **Required Access Scopes** > **Content Actions**
 
 3. \[**AIを管理する**] スコープを選択します。Box Platformでは、コールを実行すると自動的にこのスコープが含まれます。あるアプリのコラボレータとして追加されているのにBox AI APIにアクセスできない場合は、\[**AIを管理する**] スコープのチェックボックスがオンになった状態で、グレー表示になっています。つまり、アプリの所有者のAIのスコープは有効になっていますが、この設定を変更することはできません。
 
-   ![Box AIのスコープ](./images/box-ai-app-scopes.png)
+   ![Box AIのスコープ](../images/box-ai-app-scopes.png)
 
 4. [承認または有効化][authorization]のためにアプリを送信します。既存のアプリケーションに対してBox AI APIを有効にする場合は、アプリケーションを[再承認][reauthorization]する必要があります。
 
@@ -61,11 +62,11 @@ Box AI APIを操作するには、アプリケーションに`ai.readwrite`[ス�
 
 トークンを生成するには、以下の手順を実行します。
 
-1. \[**開発者コンソール**] > \[**マイアプリ**] に移動します。
+1. Go to **Developer Console** > **My Platform Apps**.
 2. 右側の**オプションメニュー**ボタン (\[…]) をクリックします。
 3. \[**開発者トークンを生成**] を選択します。トークンが自動的に生成され、クリップボードに保存されます。
 
-![トークンの生成](./images/developer-token.png)
+![トークンの生成](../images/developer-token.png)
 
 アプリを開いて、\[**構成**] > \[**開発者トークン**] に移動してトークンを生成することもできます。
 

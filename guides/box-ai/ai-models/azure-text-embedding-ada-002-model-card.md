@@ -1,10 +1,10 @@
 ---
 rank: 5
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: box-ai/ai-models
@@ -31,7 +31,7 @@ fullyTranslated: true
 | モデル名          | **text-embedding-ada-002**              | モデルの名前。                                                                            |
 | APIモデル名       | `azure__openai__text_embedding_ada_002` | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Microsoft Azure**                     | LLMを安全にホストする、信頼できる組織。                                                              |
-| モデルプロバイダ      | **OpenAI**                              | このモデルを提供する組織。                                                                      |
+| モデルプロバイダ      | **Microsoft Azure**                     | このモデルを提供する組織。                                                                      |
 | リリース日         | **2022年12月**                            | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2021年9月**                             | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **8,000トークン**                           | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
@@ -45,4 +45,4 @@ fullyTranslated: true
 
 [azure-ai-embeddings]: https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#embeddings
 
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides

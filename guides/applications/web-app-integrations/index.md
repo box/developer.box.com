@@ -27,7 +27,7 @@ fullyTranslated: true
 
 ## 機能
 
-ウェブアプリ統合を使用した場合、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを変更、共有、または編集できます。また、ウェブアプリ統合では、Boxプレビューに表示される[推奨アプリ][recommended-apps]を通じて、Boxユーザーに新しい機能を提供することもできます。
+Using a Web App Integration, a user can modify, share, or edit content stored in Box using a third-party application. It can also offer new features to Box users through [Recommended Web Integrations][recommended-web-integrations], which show up in Box Preview.
 
 <ImageFrame border shadow width="600" center>
 
@@ -43,7 +43,7 @@ fullyTranslated: true
 
 </CTA>
 
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations
 
 [custom-app]: g://authentication/oauth2/oauth2-setup
 
@@ -53,6 +53,6 @@ fullyTranslated: true
 
 [devconsole]: https://app.box.com/developers/console
 
-[recommended-apps]: https://support.box.com/hc/ja/articles/360044195533-推奨アプリをEnterpriseに導入する
+[recommended-web-integrations]: https://support.box.com/hc/ja/articles/360044195533-推奨アプリをEnterpriseに導入する
 
 <!-- i18n-disable localize-links -->

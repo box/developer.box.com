@@ -5,21 +5,24 @@ related_endpoints:
   - post_ai_text_gen
   - post_ai_ask
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/ask-questions
-  - box-ai/generate-text
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
+  - box-ai/ai-agents/ai-agent-overrides
 category_id: box-ai
-subcategory_id: box-ai/ai-agents
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/ai-agents/overrides-tutorial
+id: box-ai/ai-tutorials/default-agent-overrides
 type: guide
-total_steps: 3
-sibling_id: box-ai/ai-agents
-parent_id: box-ai/ai-agents
-next_page_id: ''
-previous_page_id: box-ai/ai-agents/get-agent-default-config
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
+next_page_id: box-ai/ai-tutorials/extract-metadata
+previous_page_id: box-ai/ai-tutorials/generate-text
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-agents/overrides-tutorial.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/default-agent-overrides.md
 fullyTranslated: true
 ---
 # AIモデルの構成の上書き
@@ -30,140 +33,11 @@ fullyTranslated: true
 
 </Message>
 
-`agent_ai`構成を使用すると、デフォルトのAIモデルの構成を上書きできます。これは、以下のエンドポイントで使用できます。
+## 開始する前に
 
-* [`POST ai/ask`][ask]
-* [`POST ai/text_gen`][text-gen]
-* [`POST ai/extract`][extract]
-* [`POST ai/extract_structured`][extract-structured]
+Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate. To get more context, read about [agent overrides][agent-overrides].
 
-<Message type="tip">
-
-デフォルト構成を取得するには、[`GET ai_agent_default`][agent]エンドポイントを使用してください。
-
-</Message>
-
-上書きの例を以下に示します。
-
-* 組織のニーズに基づいて、デフォルトのAIモデルをカスタムのAIモデルに置き換える。
-* ベースとなる`prompt`を微調整し、よりカスタマイズされたユーザーエクスペリエンスを実現する。
-* `temperature`などのパラメータを変更して、結果の創造性を調整する。
-
-## 構成のサンプル
-
-`ai/ask`の場合の構成のサンプルは以下のとおりです。
-
-```sh
-{
-  "type": "ai_agent_ask",
-  "basic_text": {
-    "llm_endpoint_params": {
-      "type": "openai_params",
-      "frequency_penalty": 1.5,
-      "presence_penalty": 1.5,
-      "stop": "<|im_end|>",
-      "temperature": 0,
-      "top_p": 1
-    },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
-    "num_tokens_for_completion": 8400,
-    "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
-    "system_message": "You are a helpful travel assistant specialized in budget travel"
-  },
-  "basic_text_multi": {
-    "llm_endpoint_params": {
-      "type": "openai_params",
-      "frequency_penalty": 1.5,
-      "presence_penalty": 1.5,
-      "stop": "<|im_end|>",
-      "temperature": 0,
-      "top_p": 1
-    },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
-    "num_tokens_for_completion": 8400,
-    "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
-    "system_message": "You are a helpful travel assistant specialized in budget travel"
-  },
-  "long_text": {
-    "embeddings": {
-      "model": "openai__text_embedding_ada_002",
-      "strategy": {
-        "id": "basic",
-        "num_tokens_per_chunk": 64
-      }
-    },
-    "llm_endpoint_params": {
-      "type": "openai_params",
-      "frequency_penalty": 1.5,
-      "presence_penalty": 1.5,
-      "stop": "<|im_end|>",
-      "temperature": 0,
-      "top_p": 1
-    },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
-    "num_tokens_for_completion": 8400,
-    "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
-    "system_message": "You are a helpful travel assistant specialized in budget travel"
-  },
-  "long_text_multi": {
-    "embeddings": {
-      "model": "openai__text_embedding_ada_002",
-      "strategy": {
-        "id": "basic",
-        "num_tokens_per_chunk": 64
-      }
-    },
-    "llm_endpoint_params": {
-      "type": "openai_params",
-      "frequency_penalty": 1.5,
-      "presence_penalty": 1.5,
-      "stop": "<|im_end|>",
-      "temperature": 0,
-      "top_p": 1
-    },
-    "model": "azure__openai__gpt_3_5_turbo_16k",
-    "num_tokens_for_completion": 8400,
-    "prompt_template": "It is `{current_date}`, consider these travel options `{content}` and answer the `{user_question}`.",
-    "system_message": "You are a helpful travel assistant specialized in budget travel"
-  }
-}
-
-```
-
-### パラメータセットの相違点
-
-`ask`、`text_gen`、`extract`、`extract_structured`に使用できるパラメータのセットは、APIコールに応じて若干異なります。
-
-* `ask`エンドポイントのエージェント構成には、`basic_text`、`basic_text_multi`、`long_text`、`long_text_multi`パラメータが含まれます。これは、リクエストの対象となる項目を単一にするか複数にするかを指定するために使用する`mode`パラメータが原因です。`mode`として`multiple_item_qa`を選択した場合は、上書き用に`multi`パラメータも使用できます。
-
-* `text_gen`のエージェント構成には、テキストの生成に使用される`basic_gen`パラメータが含まれます。
-
-### LLMエンドポイントパラメータ
-
-`llm_endpoint_params`構成のオプションは、全体的なAIモデルが[Google][google-params]ベースか、[OpenAI][openai-params]ベースか、[AWS][aws-params]ベースかによって異なります。
-
-たとえば、どちらの`llm_endpoint_params`オブジェクトも`temperature`パラメータを受け入れますが、モデルによって結果が異なります。
-
-GoogleモデルとAWSモデルの場合、[`temperature`][google-temp]はレスポンス生成時のサンプリングに使用されます。レスポンス生成は`top-P`と`top-K`が適用された場合に発生します。temperatureは、トークン選択におけるランダム性の程度を制御します。
-
-OpenAIモデルの場合、[`temperature`][openai-temp]は、値が0～2の間のサンプリングtemperatureとなります。0.8のような高い値を指定すると、出力がよりランダムになるのに対し、0.2のような低い値を指定すると、出力はより焦点を絞った、決定的なものになります。独自の構成を導入する場合は、`temperature`と`top_p`の両方ではなく、いずれかを使用してください。
-
-### システムメッセージ
-
-`system_message`パラメータの目的は、LLMがその役割と実行するべき内容を理解するのを支援することです。たとえば、旅行日程を処理するソリューションの場合は、次のようなシステムメッセージを追加できます。
-
-```sh
-You are a travel agent aid. You are going to help support staff process large amounts of schedules, tickets, etc.
-
-```
-
-このメッセージは、送信するコンテンツとは別ですが、結果を改善できます。
-
-### 完了に必要なトークンの数
-
-`num_tokens_for_completion`パラメータは、Box AIが返すことのできる[トークン][openai-tokens]の数を表します。この数値は、使用されるモデルによって異なる場合があります。
-
-## ユースケース: Box AI Q&A
+## Override prompt
 
 この例では、`prompt_template`パラメータを使用してクエリの結果を変更する方法を示します。最初の手順として、Box AIに対し、Box AI for Documentsに関するドキュメントの要約を依頼します。指定されているドキュメントは1つだけなので、`mode`パラメータは`single_item_qa`に設定されています。
 
@@ -229,7 +103,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-## ユースケース: テキストの生成
+## Override AI model (text generation)
 
 この例では、`ai_agent`のオプションでAIモデルを変更した場合にテキストの生成方法にどのような影響があるかを示します。
 
@@ -299,7 +173,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
 
 ご覧のとおり、ある程度異なったレスポンスになったことがわかります。モデルの切り替えにより、Box AIに対する操作を最適化し、ニーズに最適なモデルを選択できます。
 
-## ユースケース: メタデータ抽出
+## Override AI model (metadata extraction)
 
 モデルを切り替えると、メタデータ抽出の結果も異なる場合があります。契約書のサンプルを使用して、メタデータを抽出しましょう。この例で使用されているモデルはGoogle Geminiです。
 
@@ -365,24 +239,6 @@ curl -i -L 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-[ask]: e://post_ai_ask#param_ai_agent
+[agent-overrides]: g://box-ai/ai-agents/ai-agent-overrides
 
-[text-gen]: e://post_ai_text_gen#param_ai_agent
-
-[extract]: e://post_ai_extract#param_ai_agent
-
-[extract-structured]: e://post_ai_extract_structured#param_ai_agent
-
-[google-params]: r://ai-llm-endpoint-params-google
-
-[openai-params]: r://ai-llm-endpoint-params-openai
-
-[openai-tokens]: https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them
-
-[agent]: e://get_ai_agent_default
-
-[google-temp]: https://ai.google.dev/gemini-api/docs/models/generative-models#model-parameters
-
-[openai-temp]: https://community.openai.com/t/temperature-top-p-and-top-k-for-chatbot-responses/295542
-
-[aws-params]: r://ai-llm-endpoint-params-aws
+[prereq]: g://box-ai/ai-tutorials/prerequisites

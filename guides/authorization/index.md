@@ -9,7 +9,7 @@ subcategory_id: null
 is_index: true
 id: authorization
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: guides
 parent_id: guides
 next_page_id: ''
@@ -38,17 +38,17 @@ fullyTranslated: true
 
 以下のEnterprise設定のいずれかが有効になっている場合は、後続の手順が必要です。
 
-* デフォルトで公開アプリを無効にする
-* デフォルトで未公開アプリを無効にする
+* Disable published Integrations by default
+* Disable unpublished Integrations by default
 * アプリトークンを使用する場合に管理者の承認を要求する
 
 これらの[設定][setting]は、次のように移動すると見つかります。
 
-**管理コンソール** > \[**アプリ**] > \[**カスタムアプリ**] > ⚙ アイコンをクリック
+**Admin Console** > **Apps** > **Platform Apps** > click the ⚙ icon
 
 <Message tip>
 
-公開アプリとは、App Centerで見つかるアプリケーションのことです。
+Published integrations are any applications that can be found in our App Center.
 
 </Message>
 
@@ -58,7 +58,7 @@ fullyTranslated: true
 
 <!--alex ignore-->
 
-\[**デフォルトで公開アプリを無効にする**]:
+**Disable Integrations by default**:
 
 | 認証方法                      | 有効                   | 無効     |
 | ------------------------- | -------------------- | ------ |
@@ -67,23 +67,23 @@ fullyTranslated: true
 | [サーバー認証 (クライアント資格情報)][cc] | なし                   | なし     |
 | [アプリトークン認証][apptoken]     | なし                   | なし     |
 
-\[**デフォルトで未公開アプリを無効にする**]:
+**Disable unpublished integrations by default**:
 
-| 認証方法                      | 有効                                                                                              | 無効                                                                      |
-| ------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [OAuth 2.0][standauth]    | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**ユーザー認証アプリ**] > \[**アプリの追加**] で有効化                        | 使用準備完了                                                                  |
-| [サーバー認証 (JWT使用)][jwt]     | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] > \[**アプリの追加**] で承認して有効化                    | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] > \[**アプリの追加**] で承認 |
-| [サーバー認証 (クライアント資格情報)][cc] | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] で承認して有効化                                    | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] > \[**アプリの追加**] で承認 |
-| [アプリトークン認証][apptoken]     | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] > \[**サーバー認証アプリ**] > **\[アプリの追加]** で承認して有効化 | 使用準備完了                                                                  |
+| 認証方法                      | 有効                                                                                                                                                            | 無効                                                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [OAuth 2.0][standauth]    | Enable in **Apps** > **Platform Apps Manager** > **User Authentication Apps** > **Platform App**                                                              | 使用準備完了                                                                                                            |
+| [サーバー認証 (JWT使用)][jwt]     | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App**                                  | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App** |
+| [サーバー認証 (クライアント資格情報)][cc] | Authorize and enable in **Apps** > **Platform Apps Manager** > **Server Authentication Apps**                                                                 | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Add Platform App** |
+| [アプリトークン認証][apptoken]     | Authorize and enable in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** > **Server Authentication Apps** > **Add Platform App** | 使用準備完了                                                                                                            |
 
 \[**アプリトークンを使用する場合に管理者の承認を要求する**]:
 
-| 認証方法                      | 有効                                                      | 無効              |
-| ------------------------- | ------------------------------------------------------- | --------------- |
-| [OAuth 2.0][standauth]    | なし                                                      | なし              |
-| [サーバー認証 (JWT使用)][jwt]     | なし                                                      | なし              |
-| [サーバー認証 (クライアント資格情報)][cc] | なし                                                      | なし              |
-| [アプリトークン認証][apptoken]     | \[**アプリ**] > \[**カスタムアプリマネージャ**] > \[**サーバー認証アプリ**] で承認 | 作成時に自動的に承認して有効化 |
+| 認証方法                      | 有効                                                                                         | 無効              |
+| ------------------------- | ------------------------------------------------------------------------------------------ | --------------- |
+| [OAuth 2.0][standauth]    | なし                                                                                         | なし              |
+| [サーバー認証 (JWT使用)][jwt]     | なし                                                                                         | なし              |
+| [サーバー認証 (クライアント資格情報)][cc] | なし                                                                                         | なし              |
+| [アプリトークン認証][apptoken]     | Authorize in **Integrations** > **Platform Apps Manager** > **Server Authentication Apps** | 作成時に自動的に承認して有効化 |
 
 <!--alex enable-->
 
@@ -99,7 +99,7 @@ fullyTranslated: true
 
 [scopes]: g://api-calls/permissions-and-errors/scopes
 
-[ag]: g://applications/app-center
+[ag]: g://applications/integrations
 
 [standauth]: g://authentication/oauth2
 

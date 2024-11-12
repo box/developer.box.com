@@ -3,22 +3,23 @@ rank: 9
 related_endpoints:
   - post-ai-extract
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/extract-metadata
-  - box-ai/ai-agents/get-agent-default-config
-  - box-ai/ai-agents/overrides-tutorial
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/extract-metadata
 category_id: box-ai
-subcategory_id: null
+subcategory_id: box-ai/ai-tutorials
 is_index: false
-id: box-ai/extract-metadata-structured
+id: box-ai/ai-tutorials/extract-metadata-structured
 type: guide
-total_steps: 5
-sibling_id: box-ai
-parent_id: box-ai
+total_steps: 6
+sibling_id: box-ai/ai-tutorials
+parent_id: box-ai/ai-tutorials
 next_page_id: ''
-previous_page_id: box-ai/extract-metadata
+previous_page_id: box-ai/ai-tutorials/extract-metadata
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/extract-metadata-structured.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/extract-metadata-structured.md
 fullyTranslated: true
 ---
 # ファイルからメタデータを抽出する (構造化)
@@ -31,11 +32,13 @@ fullyTranslated: true
 
 Box AI APIを使用すると、指定したファイルからメタデータを抽出し、結果をキー/値ペアの形式で取得することができます。入力には、`fields`パラメータを使用して構造を作成するか、すでに定義済みのメタデータテンプレートを使用できます。テンプレートの作成の詳細については、[メタデータテンプレートのカスタマイズ][templates-console]を参照するか、[メタデータテンプレートAPI][templates-api]を使用してください。
 
+## 開始する前に
+
+Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+
 ## リクエストの送信
 
 リクエストを送信するには、`POST /2.0/ai/extract_structured`エンドポイントを使用します。
-
-アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AIを使用するための前提条件][prereq]を確認してください。
 
 <Samples id="post_ai_extract_structured">
 
@@ -71,13 +74,13 @@ Box AI APIを使用すると、指定したファイルからメタデータを�
 
 ## ユースケース
 
-以下のサンプル請求書から、ベンダー名、請求書番号などの詳細情報を抽出する必要があるとします。
+This example shows you how to extract metadata from a sample invoice in a structured way. Let's assume you want to extract the vendor name, invoice number, and a few more details.
 
-![サンプル請求書](./images/sample-invoice.png)
+![サンプル請求書](../images/sample-invoice.png)
 
 ### リクエストの作成
 
-Box AIから応答を取得するには、以下のパラメータを使用して、`POST /2.0/ai/extract`エンドポイントを呼び出します。
+Box AIから応答を取得するには、以下のパラメータを使用して、`POST /2.0/ai/extract_structured`エンドポイントを呼び出します。
 
 * `items.type`および`items.id`: データの抽出元となるファイルを指定します。
 * `fields`: 指定したファイルから抽出するデータを指定します。
@@ -89,7 +92,7 @@ Box AIから応答を取得するには、以下のパラメータを使用し�
 
 </Message>
 
-### `fields`パラメータの使用
+### Use `fields` parameter
 
 `fields`パラメータを使用すると、抽出するデータを指定できます。各`fields`オブジェクトにはパラメータのサブセットがあり、それを使用して、検索対象のデータに関する情報を追加できます。たとえば、フィールドのタイプや説明、さらには追加のコンテキストを含めたプロンプトを追加することができます。
 
@@ -152,7 +155,7 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ```
 
-### メタデータテンプレートの使用
+### Use metadata template
 
 メタデータテンプレートを使用する場合は、その`template_key`、`type`、`scope`を指定します。
 
@@ -189,7 +192,7 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ```
 
-[prereq]: g://box-ai/prerequisites
+[prereq]: g://box-ai/ai-tutorials/prerequisites
 
 [agent]: e://get_ai_agent_default
 
@@ -201,4 +204,4 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 [templates-api]: g://metadata/templates/create
 
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides

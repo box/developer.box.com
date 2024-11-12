@@ -43,7 +43,7 @@ OAuth 2.0認証を使用してカスタムアプリを設定するには、Box E
 
 ### 開発者コンソールへの移動
 
-Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
+Log into Box and go to the [Developer Console][devconsole]. Select **Create Platform App**.
 
 ### アプリケーションの種類の選択
 

@@ -38,15 +38,15 @@ fullyTranslated: true
 
 ## 前提条件
 
-サーバー側認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
+To set up a Platform App using server-side authentication, you will need to ensure you have access the [Developer Console][devconsole] from your Box enterprise account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## アプリの作成手順
 
 ### 1. 開発者コンソールにログインする
 
-Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**アプリの新規作成**] を選択します。
+Log into Box and navigate to the [Developer Console][devconsole]. Select **Create Platform App**.
 
-### 2. カスタムアプリを作成する
+### 2. Create a Platform App
 
 アプリケーションの種類のリストから \[**アクセス制限付きアプリ**] を選択します。次の手順を促すウィンドウが表示されます。
 

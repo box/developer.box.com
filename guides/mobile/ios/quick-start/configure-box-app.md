@@ -15,9 +15,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/mobile/ios/quick-start/3-configure-box-app.md
 fullyTranslated: true
 ---
-# Boxアプリの設定
+# Configure a Box Platform App
 
-**Box iOS SDK**を使用してBox APIに対する認証済みAPIコールを開始するには、**アクセストークン**が必要になります。有効なトークンを生成するには、新しい**Boxアプリ**を生成し、有効期間が短い開発者トークンを手動で生成するのが最も簡単な方法です。
+To start making authenticated API calls to the Box API with the **Box iOS SDK**, an **Access Token** will be needed. The simplest way to generate a valid token is to generate a new **Box Platform App** and manually generate a short lived developer token.
 
 開発者トークンは、開発者コンソールのUIを介して生成されます。有効期間は1時間で、その後は手動で更新する必要があります。
 
@@ -50,12 +50,12 @@ Box開発者コンソールから既存のBox JWTアプリケーションのい�
 開発者トークンの生成に使用できる新しいBoxアプリケーションを作成するには、以下の手順に従います。
 
 1. [開発者コンソール][devconsole]に移動します。
-2. \[**アプリの新規作成**] を選択します。
-3. 作成するアプリケーションの種類として \[**カスタムアプリ**] を選択し、\[**次へ**] をクリックします。
+2. Select **Create Platform App**
+3. Select **Platform App** as the type of application to create, and click **Next**
 4. 認証方法として \[**JWTを使用したOAuth 2.0**] を選択し、\[**次へ**] をクリックします。
-5. Boxアプリに一意の名前を付け、\[**アプリの作成**] をクリックします。
-6. \[**アプリの表示**] をクリックしてアプリの設定に移動します。
-7. 必要に応じて、同じ画面の \[**アプリケーションスコープ**] セクションまでスクロールし、このアプリケーションに対して有効にする必要がある追加の権限を選択します。
+5. Give your Box app a unique name and click **Create Platform App**
+6. Go to the app's configuration by clicking **View Your Platform App**.
+7. Optionally, scroll to the **Required Access Scopes** section of the same screen and select any additional permissions you want to enable for this application.
 8. ページ上部にある \[**変更を保存**] ボタンをクリックします。
 
 </Choice>

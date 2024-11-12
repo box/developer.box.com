@@ -1,9 +1,10 @@
 ---
 rank: 1
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
   - box-ai/ai-agents/get-agent-default-config
+  - box-ai/ai-tutorials/default-agent-overrides
 alias_paths:
   - guides/box-ai/supported-models
 category_id: box-ai
@@ -69,7 +70,7 @@ Box AI for Documentsのデフォルト
 
 </Tile>
 
-<Tile type="gpt" title="openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
+<Tile type="gpt" title="azure_openai__gpt_4o_2024_05_13" href="/guides/box-ai/ai-models/azure-openai-gpt-4o-2024-05-13-model-card">
 
 複雑なマルチステップタスクの処理で非常に効率的なマルチモーダルモデル。
 

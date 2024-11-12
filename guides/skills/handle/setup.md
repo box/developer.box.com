@@ -27,7 +27,7 @@ fullyTranslated: true
 
 ## 前提条件
 
-OAuth 2.0認証を使用してカスタムアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
+To set up a Platform App using OAuth 2.0 authentication, you will need to ensure you have access the [Developer Console][devconsole] from your Box enterprise account. Alternatively, you may sign up for a [developer account][devaccount].
 
 ## アプリの作成手順
 
@@ -47,7 +47,7 @@ Boxにログインし、[開発者コンソール][devconsole]に移動して、
 
 ### 3. 名前を入力する
 
-最後に、アプリケーションの一意の名前を選択し、\[**アプリの作成**] をクリックします。
+Finally, select a unique name for your application and click **Create Platform App**.
 
 <ImageFrame border width="600" center>
 

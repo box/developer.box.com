@@ -39,7 +39,7 @@ fullyTranslated: true
 
 1. \[すべてのファイル] ページの左側にあるナビゲーションパネルから、[開発者コンソール][dc]を開きます。今回Box APIを使用するのが初めてで、このオプションがまだ使用できない場合は、[こちら][dc]をクリックするとこのオプションをアカウントに追加できます。
 
-2. \[**アプリの新規作成**] > \[**カスタムアプリ**] > \[**サーバー認証 (JWT使用)**] の順にクリックし、アプリケーションに名前を付けて、\[**アプリの作成**] をクリックします。
+2. Click **Create Platform App** > **Platform App** > **Server Authentication (with JWT)** > name the application > **Create App**
 
 <Message warning>
 

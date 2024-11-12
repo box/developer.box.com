@@ -34,7 +34,7 @@ V2 Webhookは、特定のファイルまたはフォルダを監視でき、[開
 
 <Message type="warning">
 
-V2 Webhookを作成できるのは、\[**Webhookを管理する**] というスコープが選択され、アプリケーションが承認されている場合のみです。[アプリケーションスコープ][1]と[承認][2]の詳細を参照してください。
+V2 webhooks can be created only when the scope **Manage Webhooks** is selected and the application is authorized. See more about [Required Access Scopes][1] and [authorization][2].
 
 </Message>
 

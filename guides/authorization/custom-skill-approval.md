@@ -14,7 +14,7 @@ subcategory_id: null
 is_index: false
 id: authorization/custom-skill-approval
 type: guide
-total_steps: 4
+total_steps: 5
 sibling_id: authorization
 parent_id: authorization
 next_page_id: authorization

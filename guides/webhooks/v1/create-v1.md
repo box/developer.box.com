@@ -51,7 +51,7 @@ Webhookを作成した後、使用を開始するには、アプリケーショ�
 
 アプリを追加するためのURLを取得するには、OAuth 2.0認証アプリで以下の手順に従います。
 
-1. [開発者コンソール][devconsole]で、アプリケーションの \[**App Center**] タブに移動します。
+1. Navigate to the **Integrations** tab for the application in the [Developer Console][devconsole].
 2. \[**アプリを送信**] をクリックします。心配しないでください。送信プロセスは完了しません。
 3. ページ下部で \[**プレビュー**] をクリックします。
 4. \[**追加**] をクリックします。

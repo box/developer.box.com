@@ -27,7 +27,7 @@ fullyTranslated: true
 
 ## 最小限のSlackアプリの作成
 
-**[Slackアプリのページ][slack-apps]**に移動し、\[**Create New App (アプリの新規作成)**] をクリックします。\[**App Name (アプリ名)**] を追加し、ボットの展開先となる \[**Development Slack Workspace (開発Slackワークスペース)**] をドロップダウンリストから選択し、\[**Create App (アプリの作成)**] をクリックします。
+Go to the **[Slack apps page][slack-apps]** and click **Create Platform App**. Add an **App Name**, select your **Development Slack Workspace** from the dropdown list where the bot will be deployed to, then click **Create App**.
 
 <ImageFrame noborder center shadow>
 

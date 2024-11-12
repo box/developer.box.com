@@ -1,10 +1,10 @@
 ---
 rank: 14
 related_guides:
-  - box-ai/ask-questions
-  - box-ai/generate-text
-  - box-ai/extract-metadata
-  - box-ai/extract-metadata-structured
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/extract-metadata
+  - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/get-agent-default-config
 category_id: box-ai
 subcategory_id: box-ai/ai-models
@@ -33,7 +33,7 @@ fullyTranslated: true
 | モデル名          | **AWS Claude 3.5 Sonnet**     | モデルの名前。                                                                            |
 | APIモデル名       | `aws__claude_3_5_sonnet`      | [Box AI APIでのモデルの上書き][overrides]に使用されるモデルの名前。APIを動作させるには、ユーザーがこの名前を正確に指定する必要があります。 |
 | ホスティングレイヤー    | **Amazon Web Services (AWS)** | LLMを安全にホストする、信頼できる組織。                                                              |
-| モデルプロバイダ      | **AWS Bedrock**               | このモデルを提供する組織。                                                                      |
+| モデルプロバイダ      | **Anthropic**                 | このモデルを提供する組織。                                                                      |
 | リリース日         | **2024年6月20日**                | モデルのリリース日。                                                                         |
 | ナレッジカットオフ日    | **2024年4月**                   | モデルが情報の更新を取得しなくなった日付。                                                              |
 | 入力コンテキストウィンドウ | **200,000トークン**               | 入力コンテキストウィンドウでサポートされるトークン数。                                                        |
@@ -47,4 +47,4 @@ fullyTranslated: true
 
 [aws-claude]: https://aws.amazon.com/bedrock/claude/
 
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
