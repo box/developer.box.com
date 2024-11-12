@@ -275,8 +275,8 @@
   "headers.primary.develop_featured.details.text": "Browse 90+ open-source repositories\nin various programming languages to find useful scripts,\napp examples, and inspiring use cases!",
   "headers.primary.develop_featured.cta.text": "Browse sample code",
   "headers.primary.connect_featured.tag.text": "Event",
-  "headers.primary.connect_featured.title.text": "BoxWorks",
-  "headers.primary.connect_featured.details.text": "Join BoxWorks 2024 to discover what's possible with content and AI!",
+  "headers.primary.connect_featured.title.text": "Box Developer Day Toronto",
+  "headers.primary.connect_featured.details.text": "Join the upcoming Box Platform Developer Day in Toronto on November 20!",
   "headers.primary.connect_featured.cta.text": "Register now",
   // The HTML alt-text for the site logo
   "headers.secondary.images.logo.alt_text": "Box Developer Documentation",
