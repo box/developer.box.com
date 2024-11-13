@@ -24,7 +24,7 @@ To learn more about creating templates, see [Creating metadata templates in the 
 
 ## Before you start
 
-Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
 
 ## Send a request
 
