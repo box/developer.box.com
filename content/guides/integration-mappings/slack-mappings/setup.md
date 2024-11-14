@@ -34,7 +34,7 @@ If you encounter any errors, see the [troubleshooting guide][3].
 ## Create Box application
 
 1. Create a [custom app with OAuth authentication][4] in the [Box developer console][5]
-2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Application Scopes**.
+2. Open the application and enable the **Manage enterprise properties** application scope under **Configuration** > **Required Access Scopes**.
 
 <Message info>
   For Slack-side channel validation, the [Integration Mappings API][6]

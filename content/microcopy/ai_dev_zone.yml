@@ -81,7 +81,7 @@ side_panel:
   summary:
     title: Document summary
     cta: Learn more
-    url: /guides/box-ai/ask-questions/
+    url: /guides/box-ai/ai-tutorials/ask-questions/
   metadata:
     title: Structured metadata extraction
     cta: Learn more
@@ -93,7 +93,7 @@ side_panel:
   qa:
     title: Document Q&A
     cta: Learn more
-    url: /guides/box-ai/generate-text/
+    url: /guides/box-ai/ai-tutorials/generate-text/
   tab_demo: Demo
   tab_sample_code: Sample code
   filtersError: Select the tone of voice and length to generate

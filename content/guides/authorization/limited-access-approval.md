@@ -13,7 +13,7 @@ alias_paths: []
 
 # Limited Access App Approval
 
-Limited Access Apps are automatically authorized for use in an enterprise upon
+Limited Access Integrations are automatically authorized for use in an enterprise upon
 creation. 
 
 However, if the enterprise setting to
@@ -58,8 +58,8 @@ section and copy the Client ID value to provide to a Box Admin.
 ### As an Admin
 
 As a Box Admin, navigate to the [Admin Console][adminconsole] and
-select the **Apps** tab (1) from the left navigation panel. Then, click the
-**Custom Apps** tab (2) at the top of your screen. On this screen, you will
+select the **Integrations** tab (1) from the left navigation panel. Then, click the
+**Platform Apps** tab (2) at the top of your screen. On this screen, you will
 see a **+** button in the top right corner to add a new app authorization.
 
 <ImageFrame border center>

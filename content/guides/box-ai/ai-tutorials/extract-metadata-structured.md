@@ -3,10 +3,13 @@ rank: 9
 related_endpoints:
   - post-ai-extract
 related_guides:
-  - box-ai/prerequisites
-  - box-ai/extract-metadata
-  - box-ai/ai-agents/get-agent-default-config
-  - box-ai/ai-agents/overrides-tutorial
+  - box-ai/ai-tutorials/prerequisites
+  - box-ai/ai-tutorials/default-agent-overrides
+  - box-ai/ai-tutorials/generate-text
+  - box-ai/ai-tutorials/ask-questions
+  - box-ai/ai-tutorials/extract-metadata
+alias_paths:
+  - guides/box-ai/extract-metadata-structured
 ---
 
 # Extract metadata from file (structured)
@@ -21,14 +24,14 @@ and get the result in the form of key-value pairs.
 As input, you can either create a structure using the `fields` parameter, or use an already defined metadata template.
 To learn more about creating templates, see [Creating metadata templates in the Admin Console][templates-console] or use the [metadata template API][templates-api].
 
+## Before you start
+
+Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+
 ## Send a request
 
 To send a request, use the
 `POST /2.0/ai/extract_structured` endpoint.
-
-Make sure you have generated the developer token
-to authorize your app. See [prerequisites for using Box AI][prereq]
-for details.
 
 <Samples id='post_ai_extract_structured' />
 
@@ -58,15 +61,16 @@ The `items` array can have exactly one element.
 | `fields.prompt`                      | Additional context about the key (identifier) that may include how to find and format it.                                                                                                                                                                                                                                                                                                                                                                                                                                 | `Name is the first and last name from the email address` |
 | `ai_agent`                           | The AI agent used to override the default agent configuration. This parameter allows you to, for example, replace the default LLM with a custom one using the [`model`][model-param] parameter, tweak the base [`prompt`][prompt-param] to allow for a more customized user experience, or change an LLM parameter, such as `temperature`, to make the results more or less creative. Before you use the `ai_agent` parameter, you can get the default configuration using the [`GET 2.0/ai_agent_default`][agent] request. For specific use cases, see the [AI model overrides tutorial][overrides]. |                                                          |
 
-## Use case
+## Use cases
 
-Let's assume you want to extract the vendor name, invoice number, and a few more details from the following sample invoice:
+This example shows you how to extract metadata from a sample invoice in a structured way.
+Let's assume you want to extract the vendor name, invoice number, and a few more details.
 
-![sample invoice](./images/sample-invoice.png)
+![sample invoice](../images/sample-invoice.png)
 
 ### Create the request
 
-To get the response from Box AI, call `POST /2.0/ai/extract` endpoint with the following parameters:
+To get the response from Box AI, call `POST /2.0/ai/extract_structured` endpoint with the following parameters:
 
 - `items.type` and `items.id` to specify the file to extract the data from.
 - `fields` to specify the data that you want to extract from the given file.
@@ -78,7 +82,7 @@ You can use either `fields` or `metadata_template` to specify your structure, bu
 
 </Message>
 
-### Using `fields` parameter
+### Use `fields` parameter
 
 The `fields` parameter allows you to specify the data you want to extract. Each `fields` object has a subset of parameters you can use to add more information about the searched data. 
 For example, you can add the field type, description, or even a prompt with some additional context.
@@ -140,7 +144,7 @@ The response lists the specified fields and their values:
 }
 ```
 
-### Using metadata template
+### Use metadata template
 
 If you prefer to use a metadata template, you can provide its `template_key`, `type`, and `scope`.
 
@@ -175,10 +179,10 @@ The response lists the fields included in the metadata template and their values
 }
 ```
 
-[prereq]: g://box-ai/prerequisites
+[prereq]: g://box-ai/ai-tutorials/prerequisites
 [agent]: e://get_ai_agent_default
 [model-param]: r://ai_agent_text_gen#param_basic_gen_model
 [prompt-param]: r://ai_agent_text_gen#param_basic_gen_prompt_template
 [templates-console]: https://support.box.com/hc/en-us/articles/360044194033-Customizing-Metadata-Templates
 [templates-api]: g://metadata/templates/create
-[overrides]: g://box-ai/ai-agents/overrides-tutorial
+[overrides]: g://box-ai/ai-agents/ai-agent-overrides
