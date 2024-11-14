@@ -27,7 +27,7 @@ To send a request, use the
 `GET /2.0/ai_agent_default` endpoint.
 
 Make sure you have generated the developer token
-to authorize your app. See [prerequisites for using Box AI][prereq]
+to authorize your app. See [getting started with Box AI][prereq]
 for details.
 
 <Samples id='get_ai_agent_default' />
