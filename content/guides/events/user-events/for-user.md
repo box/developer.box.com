@@ -114,11 +114,11 @@ The following events are only available in the `all` feed.
 
 ## Event notifications
 
-To reduce the noise of the event stream and streamline event consumption, the following event types have optimized notification behavior.
+To reduce the noise of the event stream and optimize event consumption, the  event types listed in the table trigger a limited number of notifications.
 
 | Event type | Notification behavior|
 |-----------|--------------|
-|`COLLAB_ADD_COLLABORATOR`, `COLLAB_REMOVE_COLLABORATOR`, `COLLAB_INVITE_COLLABORATOR`, `COLLAB_ROLE_CHANGE` |When this event takes place, the content owner on the `changes` event stream is notified. Collaboration owners will see an additional event that matches what they see on the `all` stream.|
+|`COLLAB_ADD_COLLABORATOR`, `COLLAB_REMOVE_COLLABORATOR`, `COLLAB_INVITE_COLLABORATOR`, `COLLAB_ROLE_CHANGE` | When these events take place, the content owner on the `changes` event stream is notified. Collaborators see an additional event that matches what they see on the `all` stream.|
 | `ITEM_DOWNLOAD` | When an item is downloaded, only the content owner gets the notification. Collaborators are not notified.|
 | `ITEM_PREVIEW` | When an item is previewed, only the content owner gets the notification. Collaborators are not notified. |
 
