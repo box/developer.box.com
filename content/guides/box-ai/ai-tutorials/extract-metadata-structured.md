@@ -8,6 +8,8 @@ related_guides:
   - box-ai/ai-tutorials/generate-text
   - box-ai/ai-tutorials/ask-questions
   - box-ai/ai-tutorials/extract-metadata
+alias_paths:
+  - guides/box-ai/extract-metadata-structured
 ---
 
 # Extract metadata from file (structured)
