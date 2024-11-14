@@ -156,12 +156,12 @@ There are a few enterprise settings to be aware of when it comes to the Box API.
 
 <ImageFrame center shadow border>
 
-![Global App Settings](images/global_apps_settings.png)
+![Global Integration Settings](images/global_integration_settings.png)
 
 </ImageFrame>
 
 Custom applications fall into two categories: published and unpublished.
-Published applications are found in the [Box App Center][appcenter]. Box
+Published applications are found in the [Box Integrations][appcenter]. Box
 Admins decide whether published and unpublished application are enabled by
 default and therefore can be used without approval. The status of these settings
 determines what actions are necessary to successfully [authorize][auth] an

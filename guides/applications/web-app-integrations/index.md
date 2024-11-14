@@ -31,7 +31,7 @@ when editing or sharing files.
 
 Using a Web App Integration, a user can modify, share, or edit content stored in
 Box using a third-party application. It can also offer new features to Box users
-through [Recommended Apps][recommended-apps], which show up in Box Preview.
+through [Recommended Web Integrations][recommended-web-integrations], which show up in Box Preview.
 
 <ImageFrame border shadow width='600' center>
 
@@ -49,11 +49,11 @@ Learn how to create a Web App Integration
 
 </CTA>
 
-[app-center]: g://applications/app-center
+[integrations]: g://applications/integrations
 [custom-app]: g://authentication/oauth2/oauth2-setup
 [oauth2]: g://authentication/oauth2
 <!-- i18n-enable localize-links -->
 
 [devconsole]: https://app.box.com/developers/console
-[recommended-apps]: https://support.box.com/hc/en-us/articles/360044195533-Installing-Recommended-Apps-in-your-Enterprise
+[recommended-web-integrations]: https://support.box.com/hc/en-us/articles/360044195533-Installing-Recommended-Apps-in-your-Enterprise
 <!-- i18n-disable localize-links -->

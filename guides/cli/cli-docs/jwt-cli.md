@@ -47,7 +47,7 @@ following scopes are set in the **Configuration** tab of your application:
 
 1. From the left-hand navigation panel on your All Files page, open the [Developer Console][dc]. If this is your first time using the Box API and this option is not already available, you can add it to your account by clicking [here][dc].
 
-2. Click **Create New App** > **Custom App** > **Server Authentication (with JWT)** > name the application > **Create App**
+2. Click **Create Platform App** > **Platform App** > **Server Authentication (with JWT)** > name the application > **Create App**
 
 <Message warning>
 

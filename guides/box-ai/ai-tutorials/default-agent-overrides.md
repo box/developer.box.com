@@ -11,6 +11,8 @@ related_guides:
   - box-ai/ai-tutorials/extract-metadata
   - box-ai/ai-tutorials/extract-metadata-structured
   - box-ai/ai-agents/ai-agent-overrides
+alias_paths:
+  - guides/box-ai/ai-agent-overrides
 category_id: box-ai
 subcategory_id: box-ai/ai-tutorials
 is_index: false

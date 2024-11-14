@@ -27,7 +27,7 @@ This section will cover the final Box components:
 * Creating a new app user for the associated Okta record if they don't.
 * Fetching tokens for the Box user to make user-specific API calls.
 
-## Create New App Users
+## Create Platform App Users
 
 Before validating users we need a method for creating an associated Box user
 account if one doesn't already exist for the Okta user.

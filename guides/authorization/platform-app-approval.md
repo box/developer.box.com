@@ -13,7 +13,7 @@ alias_paths:
 category_id: authorization
 subcategory_id: null
 is_index: false
-id: authorization/custom-app-approval
+id: authorization/platform-app-approval
 type: guide
 total_steps: 5
 sibling_id: authorization
@@ -21,9 +21,9 @@ parent_id: authorization
 next_page_id: authorization/limited-access-approval
 previous_page_id: ''
 source_url: >-
-  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/custom-app-approval.md
+  https://github.com/box/developer.box.com/blob/main/content/guides/authorization/platform-app-approval.md
 ---
-# Custom App Approval
+# Platform App Approval
 
 Server authentication applications using [JWT][jwt] or
 [Client Credentials Grant][ccg] must be authorized by a Box Admin before use.
@@ -36,7 +36,7 @@ authorize or enable it in the Admin Console.
 
 <Message>
 
-You can use [Integrations][apps] view to quickly look up
+You can use [My Platform Apps][apps] view to quickly look up
 the authorization and enablement status of your application.
 
 </Message>
@@ -99,16 +99,16 @@ you should see their contact information under "Admin Contact".
 
 ### As an Admin
 
-1. Navigate to the [Admin Console][adminconsole] and select the **Integrations** tab (1) from the left navigation panel.
-2. Click the **Platform Apps Manager** tab (2) at the top of your screen.
-3. For both Server and User Authentication Apps screens, click the **Add Platform App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Platform Apps Manager table menu (4) to authorize and enable apps.
+1. Navigate to the [Admin Console][adminconsole] and select the **Apps** tab (1) from the left navigation panel.
+2. Click the **Custom Apps Manager** tab (2) at the top of your screen.
+3. For both Server and User Authentication Apps screens, click the **Add App** (3) button in the top right corner to add a new app.
+4. Alternatively, you can use the Custom Apps Manager table menu (4) to authorize and enable apps.
 
 #### Server Authentication Apps
 
 <ImageFrame border center>
 
-![Server tab](images/jwt_app_approval_flow.png)
+![Server Apps tab](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 

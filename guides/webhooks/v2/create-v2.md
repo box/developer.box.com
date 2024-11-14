@@ -36,7 +36,7 @@ created in the [Developer Console][console] and with API.
 
 V2 webhooks can be created only when the scope **Manage Webhooks**
 is selected and the application is authorized. See more about
-[application scopes][1] and [authorization][2].
+[Required Access Scopes][1] and [authorization][2].
 
 </Message>
 

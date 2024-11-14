@@ -26,7 +26,7 @@ Setting up a Custom Skill is a multi-step process.
 
 ## Prerequisites
 
-To set up a Custom App using OAuth 2.0 authentication, you will need to ensure
+To set up a Platform App using OAuth 2.0 authentication, you will need to ensure
 you have access the [Developer Console][devconsole] from your Box enterprise
 account. Alternatively, you may sign up for a [developer account][devaccount].
 
@@ -50,7 +50,7 @@ will appear to prompt the next step.
 
 ### 3. Provide a name
 
-Finally, select a unique name for your application and click **Create App**.
+Finally, select a unique name for your application and click **Create Platform App**.
 
 <ImageFrame border width="600" center>
 

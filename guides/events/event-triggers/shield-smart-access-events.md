@@ -368,7 +368,7 @@ a justification is chosen from the share modal. For example, one
 
 </Message>
 
-## Application Restriction
+## Integration Restriction
 
 If a 3rd-party application, including published custom applications with which
 your organization is integrated, is restricted from downloading a file or a
