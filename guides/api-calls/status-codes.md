@@ -19,9 +19,9 @@ previous_page_id: api-calls/types-and-formats
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/status-codes.md
 ---
-# Status Codes
+# Status codes
 
-In general, the following rules can be applied to interpret the HTTP status
+The following rules can be applied to interpret the HTTP status
 codes received when using the Box API.
 
 | HTTP Status |                                                                                                                                                                                                                               |

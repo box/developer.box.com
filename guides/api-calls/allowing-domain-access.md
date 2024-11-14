@@ -22,12 +22,12 @@ previous_page_id: api-calls/ensure-consistency
 source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/allowing-domain-access.md
 ---
-# Allowing Domain Access
+# Allow domain access
 
 To use the Box APIs it is important that your application and users have access
 to the following domains, where needed.
 
-## File Preview
+## File preview
 
 To enable file preview, your application might need to load javascript file from
 the Box content delivery network (CDN). This file is loaded from the following
