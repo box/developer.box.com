@@ -79,10 +79,12 @@ The following events are available in all feeds.
 | `LOCK_DESTROY`               | A file was unlocked. If a locked file is deleted, the source file will be null. |
 | `ITEM_TRASH`                 | A file or folder was marked as deleted                                          |
 | `ITEM_UNDELETE_VIA_TRASH`    | A file or folder was recovered out of the trash                                 |
-| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder                                            |
+| `COLLAB_ADD_COLLABORATOR`    | A collaborator was added to a folder
+
+                                            |
 | `COLLAB_ROLE_CHANGE`         | A collaborator had their role changed                                           |
 | `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder                                          |
-| `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                        |
+| `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder                                    |
 | `ITEM_SYNC`                  | A folder was marked for sync                                                    |
 | `ITEM_UNSYNC`                | A folder was unmarked for sync                                                  |
 | `ITEM_RENAME`                | A file or folder was renamed                                                    |
@@ -96,18 +98,28 @@ The following events are only available in the `all` feed.
 |--------------------------|-----------------------------------------------------------|
 | `COMMENT_CREATE`         | A comment was created on a folder, file, or other comment |
 | `COMMENT_DELETE`         | A comment was deleted on folder, file, or other comment   |
-| `ITEM_DOWNLOAD`          | A file or folder was downloaded                           |
-| `ITEM_PREVIEW`           | A file was previewed                                      |
+| `ITEM_DOWNLOAD`          | A file or folder was downloaded                        |
+| `ITEM_PREVIEW`           | A file was previewed                                    |
 | `TASK_ASSIGNMENT_CREATE` | A task was assigned                                       |
 | `TASK_CREATE`            | A task was created                                        |
 | `ITEM_SHARED_CREATE`     | A file or folder was enabled for sharing                  |
 | `ITEM_SHARED_UNSHARE`    | A file or folder was disabled for sharing                 |
 | `ITEM_SHARED`            | A folder was shared                                       |
 | `TAG_ITEM_CREATE`        | A Tag was added to a file or folder                       |
-| `ENABLE_TWO_FACTOR_AUTH` | 2 factor authentication enabled by user.                  |
-| `MASTER_INVITE_ACCEPT`   | Free user accepts invitation to become a managed user.    |
-| `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user.    |
-| `ACCESS_GRANTED`         | Granted Box access to account.                            |
-| `ACCESS_REVOKED`         | Revoke Box access to account.                             |
+| `ENABLE_TWO_FACTOR_AUTH` | 2 factor authentication enabled by user                  |
+| `MASTER_INVITE_ACCEPT`   | Free user accepts invitation to become a managed user    |
+| `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user    |
+| `ACCESS_GRANTED`         | Granted Box access to account                            |
+| `ACCESS_REVOKED`         | Revoke Box access to account                             |
+
+## Event notifications
+
+To reduce the noise of the event stream and optimize event consumption, the event types listed in the table trigger a limited number of notifications.
+
+| Event type | Notification behavior|
+|-----------|--------------|
+|`COLLAB_ADD_COLLABORATOR`, `COLLAB_REMOVE_COLLABORATOR`, `COLLAB_INVITE_COLLABORATOR`, `COLLAB_ROLE_CHANGE` | When these events take place, the content owner on the `changes` event stream is notified. Collaborators see an additional event that matches what they see on the `all` stream.|
+| `ITEM_DOWNLOAD` | When an item is downloaded, only the content owner gets the notification. Collaborators are not notified.|
+| `ITEM_PREVIEW` | When an item is previewed, only the content owner gets the notification. Collaborators are not notified. |
 
 [longpoll]: g://events/user-events/polling

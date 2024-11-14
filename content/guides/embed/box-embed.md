@@ -34,7 +34,7 @@ To fetch the Box Embed widget code from the Box web app, perform the following s
 
 1. Navigate to the chosen Hub. 
 2. Click on the ellipsis menu in the top right corner. 
-3. Click **Embed Widget**.
+3. Click **Embed Hub**.
 
 <ImageFrame border>
   ![Box Embed](./box-embed-new.png)
