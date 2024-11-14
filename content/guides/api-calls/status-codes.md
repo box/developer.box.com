@@ -8,9 +8,9 @@ required_guides: []
 alias_paths: []
 ---
 
-# Status Codes
+# Status codes
 
-In general, the following rules can be applied to interpret the HTTP status
+The following rules can be applied to interpret the HTTP status
 codes received when using the Box API.
 
 | HTTP Status |                                                                                                                                                                                                                               |

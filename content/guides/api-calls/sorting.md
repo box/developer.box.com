@@ -7,7 +7,7 @@ required_guides: []
 alias_paths: []
 ---
 
-# Sorting Responses
+# Sorting responses
 
 Where an API returns a collection of items it often supports sorting of API
 responses.
