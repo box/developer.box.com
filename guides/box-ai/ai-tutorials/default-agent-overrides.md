@@ -36,7 +36,7 @@ Endpoints related to metadata extraction are currently a beta feature offered su
 
 ## Before you start
 
-Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
 To get more context, read about [agent overrides][agent-overrides].
 
 ## Override prompt
