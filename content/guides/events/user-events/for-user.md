@@ -114,7 +114,7 @@ The following events are only available in the `all` feed.
 
 ## Event notifications
 
-To reduce the noise of the event stream and optimize event consumption, the  event types listed in the table trigger a limited number of notifications.
+To reduce the noise of the event stream and optimize event consumption, the event types listed in the table trigger a limited number of notifications.
 
 | Event type | Notification behavior|
 |-----------|--------------|
