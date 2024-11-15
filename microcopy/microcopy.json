@@ -259,7 +259,7 @@
   // The URL to the developer console
   "headers.primary.buttons.dashboard.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer console
-  "headers.primary.buttons.console.text": "マイアプリ",
+  "headers.primary.buttons.console.text": "マイPlatformアプリ",
   // The URL to the developer console
   "headers.primary.buttons.console.url": "https:\/\/cloud.app.box.com\/developers\/console",
   // The text for the link to the developer signup
@@ -716,7 +716,7 @@
   "ai_dev_zone.other_langs_info": "Box AIは多くの言語で使用できますが、トレーニングには主に英語のドキュメントが使用されています。サポートされている言語の詳細については、Box AI APIのドキュメントを参照してください。",
   "ai_dev_zone.side_panel.summary.title": "ドキュメントの要約",
   "ai_dev_zone.side_panel.summary.cta": "詳細を表示",
-  "ai_dev_zone.side_panel.summary.url": "\/guides\/box-ai\/ask-questions\/",
+  "ai_dev_zone.side_panel.summary.url": "\/guides\/box-ai\/ai-tutorials\/ask-questions\/",
   "ai_dev_zone.side_panel.metadata.title": "構造化メタデータの抽出",
   "ai_dev_zone.side_panel.metadata.cta": "詳細を表示",
   "ai_dev_zone.side_panel.metadata.url": "\/reference\/post-ai-extract-structured\/",
@@ -725,7 +725,7 @@
   "ai_dev_zone.side_panel.metadata-unstructured.url": "\/reference\/post-ai-extract\/",
   "ai_dev_zone.side_panel.qa.title": "ドキュメントのQ&A",
   "ai_dev_zone.side_panel.qa.cta": "詳細を表示",
-  "ai_dev_zone.side_panel.qa.url": "\/guides\/box-ai\/generate-text\/",
+  "ai_dev_zone.side_panel.qa.url": "\/guides\/box-ai\/ai-tutorials\/generate-text\/",
   "ai_dev_zone.side_panel.tab_demo": "デモ",
   "ai_dev_zone.side_panel.tab_sample_code": "サンプルコード",
   "ai_dev_zone.side_panel.filtersError": "語調や長さを選択して、ドキュメントの要約を生成します。",
