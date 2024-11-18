@@ -303,7 +303,7 @@
   // A short title for the dropdown to select an support menu item
   "headers.secondary.dropdowns.additional_resources": "その他のリソース",
   // A boolean that determines whether to show the orange notification barin the header. Must be "true" or "false"
-  "headers.secondary.notifications.display": "true",
+  "headers.secondary.notifications.display": "false",
   // The content of the notification
   "headers.secondary.notifications.message": "BoxWorks 2024でコンテンツとAIの可能性について紹介します。",
   // The link to navigate to when the CTA is clicked
