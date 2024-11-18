@@ -73,45 +73,48 @@ User Event Streamでは、[`OPTIONS /events` APIを介して][longpoll]Long poll
 
 以下のイベントは、すべてのフィードで使用できます。
 
-| イベント名                        | 説明                                                   |
-| ---------------------------- | ---------------------------------------------------- |
-| `ITEM_CREATE`                | フォルダまたはファイルが作成されました。                                 |
-| `ITEM_UPLOAD`                | フォルダまたはファイルがアップロードされました。                             |
-| `ITEM_MOVE`                  | ファイルまたはフォルダが移動されました。                                 |
-| `ITEM_COPY`                  | ファイルまたはフォルダがコピーされました。                                |
-| `LOCK_CREATE`                | ファイルがロックされました。                                       |
-| `LOCK_DESTROY`               | ファイルがロック解除されました。ロックされたファイルが削除されると、ソースファイルはnullになります。 |
-| `ITEM_TRASH`                 | ファイルまたはフォルダが削除済みとしてマークされました。                         |
-| `ITEM_UNDELETE_VIA_TRASH`    | ファイルまたはフォルダがごみ箱から戻されました。                             |
-| `COLLAB_ADD_COLLABORATOR`    | コラボレータがフォルダに追加されました。                                 |
-| `COLLAB_ROLE_CHANGE`         | コラボレータの役割が変更されました。                                   |
-| `COLLAB_INVITE_COLLABORATOR` | コラボレータがフォルダに招待されました。                                 |
-| `COLLAB_REMOVE_COLLABORATOR` | コラボレータがフォルダから削除されました。                                |
-| `ITEM_SYNC`                  | フォルダが同期対象としてマークされました。                                |
-| `ITEM_UNSYNC`                | フォルダの同期対象のマークが解除されました。                               |
-| `ITEM_RENAME`                | ファイルまたはフォルダの名前が変更されました。                              |
-| `ITEM_MAKE_CURRENT_VERSION`  | 前のバージョンのファイルが現在のバージョンに昇格されました。                       |
-| `GROUP_ADD_USER`             | グループへのユーザーの追加                                        |
-| `GROUP_REMOVE_USER`          | グループからのユーザーの削除                                       |
+| イベント名                     | 説明                                                   |
+| ------------------------- | ---------------------------------------------------- |
+| `ITEM_CREATE`             | フォルダまたはファイルが作成されました。                                 |
+| `ITEM_UPLOAD`             | フォルダまたはファイルがアップロードされました。                             |
+| `ITEM_MOVE`               | ファイルまたはフォルダが移動されました。                                 |
+| `ITEM_COPY`               | ファイルまたはフォルダがコピーされました。                                |
+| `LOCK_CREATE`             | ファイルがロックされました。                                       |
+| `LOCK_DESTROY`            | ファイルがロック解除されました。ロックされたファイルが削除されると、ソースファイルはnullになります。 |
+| `ITEM_TRASH`              | ファイルまたはフォルダが削除済みとしてマークされました。                         |
+| `ITEM_UNDELETE_VIA_TRASH` | ファイルまたはフォルダがごみ箱から戻されました。                             |
+| `COLLAB_ADD_COLLABORATOR` | コラボレータがフォルダに追加されました。                                 |
+
+\| \| `COLLAB_ROLE_CHANGE` | A collaborator had their role changed | | `COLLAB_INVITE_COLLABORATOR` | A collaborator was invited on a folder | | `COLLAB_REMOVE_COLLABORATOR` | A collaborator was removed from a folder | | `ITEM_SYNC` | A folder was marked for sync | | `ITEM_UNSYNC` | A folder was unmarked for sync | | `ITEM_RENAME` | A file or folder was renamed | | `ITEM_MAKE_CURRENT_VERSION` | A previous version of a file was promoted to the current version | | `GROUP_ADD_USER` | Added user to group | | `GROUP_REMOVE_USER` | Removed user from group |
 
 以下のイベントは、`all`フィードでのみ使用できます。
 
-| イベント名                    | 説明                                   |
-| ------------------------ | ------------------------------------ |
-| `COMMENT_CREATE`         | フォルダ、ファイル、または他のコメントに対するコメントが作成されました。 |
-| `COMMENT_DELETE`         | フォルダ、ファイル、または他のコメントに対するコメントが削除されました。 |
-| `ITEM_DOWNLOAD`          | ファイルまたはフォルダがダウンロードされました。             |
-| `ITEM_PREVIEW`           | ファイルがプレビューされました。                     |
-| `TASK_ASSIGNMENT_CREATE` | タスクが割り当てられました。                       |
-| `TASK_CREATE`            | タスクが作成されました。                         |
-| `ITEM_SHARED_CREATE`     | ファイルまたはフォルダの共有が有効化されました。             |
-| `ITEM_SHARED_UNSHARE`    | ファイルまたはフォルダの共有が無効化されました。             |
-| `ITEM_SHARED`            | フォルダが共有されました。                        |
-| `TAG_ITEM_CREATE`        | タグがファイルまたはフォルダに追加されました。              |
-| `ENABLE_TWO_FACTOR_AUTH` | ユーザーによって2要素認証が有効化されました。              |
-| `MASTER_INVITE_ACCEPT`   | 管理対象ユーザーになるための招待が無料ユーザーによって承認されました。  |
-| `MASTER_INVITE_REJECT`   | 管理対象ユーザーになるための招待が無料ユーザーによって拒否されました。  |
-| `ACCESS_GRANTED`         | アカウントに対するBoxのアクセス権限が付与されました。         |
-| `ACCESS_REVOKED`         | アカウントに対するBoxのアクセス権限が取り消されました。        |
+| イベント名                    | 説明                                                    |
+| ------------------------ | ----------------------------------------------------- |
+| `COMMENT_CREATE`         | フォルダ、ファイル、または他のコメントに対するコメントが作成されました。                  |
+| `COMMENT_DELETE`         | フォルダ、ファイル、または他のコメントに対するコメントが削除されました。                  |
+| `ITEM_DOWNLOAD`          | ファイルまたはフォルダがダウンロードされました。                              |
+| `ITEM_PREVIEW`           | ファイルがプレビューされました。                                      |
+| `TASK_ASSIGNMENT_CREATE` | タスクが割り当てられました。                                        |
+| `TASK_CREATE`            | タスクが作成されました。                                          |
+| `ITEM_SHARED_CREATE`     | ファイルまたはフォルダの共有が有効化されました。                              |
+| `ITEM_SHARED_UNSHARE`    | ファイルまたはフォルダの共有が無効化されました。                              |
+| `ITEM_SHARED`            | フォルダが共有されました。                                         |
+| `TAG_ITEM_CREATE`        | タグがファイルまたはフォルダに追加されました。                               |
+| `ENABLE_TWO_FACTOR_AUTH` | 2 factor authentication enabled by user               |
+| `MASTER_INVITE_ACCEPT`   | Free user accepts invitation to become a managed user |
+| `MASTER_INVITE_REJECT`   | Free user rejects invitation to become a managed user |
+| `ACCESS_GRANTED`         | Granted Box access to account                         |
+| `ACCESS_REVOKED`         | Revoke Box access to account                          |
+
+## Event notifications
+
+To reduce the noise of the event stream and optimize event consumption, the event types listed in the table trigger a limited number of notifications.
+
+| Event type                                                                                                  | Notification behavior                                                                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `COLLAB_ADD_COLLABORATOR`, `COLLAB_REMOVE_COLLABORATOR`, `COLLAB_INVITE_COLLABORATOR`, `COLLAB_ROLE_CHANGE` | When these events take place, the content owner on the `changes` event stream is notified. Collaborators see an additional event that matches what they see on the `all` stream. |
+| `ITEM_DOWNLOAD`                                                                                             | When an item is downloaded, only the content owner gets the notification. Collaborators are not notified.                                                                        |
+| `ITEM_PREVIEW`                                                                                              | When an item is previewed, only the content owner gets the notification. Collaborators are not notified.                                                                         |
 
 [longpoll]: g://events/user-events/polling

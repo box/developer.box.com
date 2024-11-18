@@ -22,21 +22,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/request-extra-fields.md
 fullyTranslated: true
 ---
-# 追加フィールドのリクエスト
+# Request extra fields
 
-リソースに対して返されるフィールドの数は、リソースのリクエストに使用されるAPIエンドポイントに応じて異なります。
+The number of fields returned for a resource depends on the API endpoint used to request the resource.
 
-| バリアント    |                                                                                                                                                            |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standard | [`GET /files/:id`](endpoint://get_files_id)エンドポイントを介してファイルをリクエストする場合など、リソースを固有のエンドポイントに対してリクエストしたときに返される標準のフィールドセット                                        |
-| Full     | `field`クエリパラメータを使用して、リソースの固有のエンドポイントを介して返すことができる詳細なフィールドセット                                                                                                |
-| Mini     | [`GET /folders/:id/items`](endpoint://get_folders_id_items)エンドポイントを介してフォルダ内にあるすべての項目をリクエストしたときにファイルが返される場合など、リソースが別のリソースのネストされた部分として返されたときに返されるフィールドのサブセット |
+## Use the `fields` query parameter
 
-APIリファレンスドキュメントでは、このようにラベルの付いたバリエーションを詳しく説明しています。特に、ファイル、フォルダ、ウェブリンク、およびユーザー項目には詳細と簡易というバリエーションがあります。
-
-## フィールドクエリパラメータの使用
-
-標準のレスポンスにデフォルトでは含まれない、リソースの特定のフィールドをリクエストするには、`field`クエリパラメータをリクエストに追加します。このパラメータの値は、フィールド名のコンマ区切りリストです。
+標準のレスポンスにデフォルトでは含まれない、リソースの特定のフィールドをリクエストするには、`fields`クエリパラメータをリクエストに追加します。このパラメータの値は、フィールド名のコンマ区切りリストです。
 
 ```curl
 curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
@@ -57,17 +49,17 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 <Message type="notice">
 
-特定のフィールドがリクエストされると、リクエストされたフィールドとフィールドの「基本」のフィールド以外のフィールドが返されない点に注意してください。ファイルの場合、この基本セットは`etag`、`id`、および`type`値で構成されます。
+It is important to note that when a specific field is requested no other fields are returned except for those requested and the **base** set of fields. For a file, this base set is comprised of the `etag`, `id`, and `type` values.
 
 </Message>
 
-## リソース
+## Resource variants
 
-以下のリソースバリアントは、BoxのAPIで使用できます。
+The following resource variants are available in the Box API.
 
 ### Standard
 
-APIレスポンスで返されるデフォルトのフィールドセットは、一般に、標準リソースバリアントと呼ばれます。通常、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
+The default set of fields returned in an API response. The standard variant is returned when requesting a resource through the main APIs available for that resource. For example, when requesting the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return the standard variation of a file.
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -152,7 +144,7 @@ curl https://api.box.com/2.0/files/12345 \
 
 ### Full
 
-APIレスポンスで返すことができるフィールドセット全体は、一般に、詳細リソースバリアントと呼ばれます。通常、リソースに対して使用できるメインのAPIを介し、`fields`クエリパラメータを追加してそのリソースをリクエストしたときに返されます。
+The total set of fields that can be returned in an API response. The full variant is returned when requesting a resource through the main APIs available for that resource and by appending the `fields` query parameter.
 
 たとえば、`fields=is_package,lock`パラメータを指定して[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIは、指定されたフィールドに加えて、そのファイルの基本的なフィールドを返します。
 

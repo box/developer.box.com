@@ -19,9 +19,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/language-codes.md
 fullyTranslated: true
 ---
-# 言語コード
+# Language codes
 
-Box APIでは、ISO 639-1言語コードの修正版を使用して、ユーザーの言語を指定します。
+The Box API uses a modified version of the **ISO 639-1 Language Code** to specify a user's language.
 
 以下は、[作成][create_user]または[更新][update_user]時に使用する言語コードのリストです。
 

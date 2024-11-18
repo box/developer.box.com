@@ -19,7 +19,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/sorting.md
 fullyTranslated: true
 ---
-# レスポンスの並べ替え
+# Sorting responses
 
 APIから項目のコレクションが返される場合は、APIレスポンスの並べ替えがサポートされることがよくあります。
 

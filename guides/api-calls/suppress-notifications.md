@@ -18,9 +18,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/suppress-notifications.md
 fullyTranslated: true
 ---
-# 通知の抑制
+# Suppress notifications
 
-一部のAPIコールでは、APIコールに`box-notifications: off`ヘッダーを指定することで、メール通知およびWebhook通知を抑制できます。
+For some API calls, you can block email and webhook notifications by including a `box-notifications: off` header with the API call.
 
 <Tabs>
 

@@ -18,7 +18,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/permissions-and-errors/index.md
 fullyTranslated: true
 ---
-# 権限とエラー
+# Permissions and errors
 
 以下のガイドでは、Box APIに関連した権限やエラーについて説明します。[一般的なエラー][1]、[レート制限][2]、[スコープ][3]、[トークンおよびURLの有効期限][4]、[App Diagnosticsレポート][5]に関するページが用意されています。
 

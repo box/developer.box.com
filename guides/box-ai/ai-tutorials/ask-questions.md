@@ -8,6 +8,8 @@ related_guides:
   - box-ai/ai-tutorials/generate-text
   - box-ai/ai-tutorials/extract-metadata
   - box-ai/ai-tutorials/extract-metadata-structured
+alias_paths:
+  - guides/box-ai/ask-questions
 category_id: box-ai
 subcategory_id: box-ai/ai-tutorials
 is_index: false
@@ -34,7 +36,7 @@ Box AI APIを使用すると、指定した1ファイルまたは一連のファ
 
 ## 開始する前に
 
-Make sure you followed the steps listed in [prerequisites for using Box AI][prereq] to create a custom app and authenticate.
+Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
 
 ## リクエストの送信
 

@@ -23,11 +23,11 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/allowing-domain-access.md
 fullyTranslated: true
 ---
-# ドメインへのアクセスの許可
+# Allow domain access
 
 Box APIを使用する際に重要なのは、必要に応じてアプリケーションとユーザーが以下のドメインにアクセスできることです。
 
-## ファイルのプレビュー
+## File preview
 
 ファイルプレビュー機能を有効にするために、アプリケーションは、Boxコンテンツ配信ネットワーク (CDN) からJavaScriptファイルを読み込むことが必要になる場合があります。このファイルは、以下のドメインから読み込まれます。
 

@@ -17,7 +17,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/api-versioning-strategy.md
 fullyTranslated: true
 ---
-# APIのバージョン戦略
+# API versioning strategy
 
 Boxでは、特定のAPIエンドポイントに対してバージョン管理機能を提供しています。このバージョン管理システムにより、Boxがエンドポイントのバージョンを新しく導入した場合でも、既存のエンドポイントのバージョンに対してシームレスな機能が保証されます。
 
@@ -37,22 +37,23 @@ Box APIは、URLの`path`と`header`でバージョン管理をサポートし�
 
 </Message>
 
-リクエストで使用されるAPIのデフォルトのバージョンは、呼び出すエンドポイントのURLで指定します。フローの例を以下に示します。
+### Versioning in `path`
 
-1. バージョンヘッダーを指定せずに[アップロード](`https://upload.box.com/api/2.0/files/content`)エンドポイントを呼び出すと、URLで定義されている`2.0`バージョンが使用されます。
-
-2. Box APIでは、以下に該当する`box-version`ヘッダーを処理します。
-
-   * `box-version: 2025.0`のような有効なバージョン名を含む
-   * `https://api.box.com/2.0/files/:file_id/metadata`に送信される
-
-3. 指定したバージョンが正しい場合は、クライアントにレスポンスが返されます。リクエストで`box-version`ヘッダーを指定した場合、レスポンスにはこのヘッダーも含まれます。デフォルトでは、このヘッダーはレスポンスに存在しません。バージョンが正しくない場合は、HTTPコード`400`のエラーがクライアントに返されます。
+The default version of the API used in any requests is specified in the URL of the endpoint you call. For example, when calling the `https://upload.box.com/api/2.0/files/content` endpoint without any version header specified, you reach the `2.0` version defined in the URL.
 
 APIの動作に大きな変更があると、新しいエンドポイントは新しいURLで公開されます。たとえば、`https://upload.box.com/api/2.0/files/content`では、Boxにファイルをアップロードする際にマルチパートのコンテンツタイプをサポートしています。このAPIの新しいバージョンでこのコンテンツタイプがサポートされなくなると、新しいバージョンは新しいURL`https://upload.box.com/api/3.0/files/content`でリリースされます。
 
+### Versioning in `header`
+
+Box API processes the `box-version` header which should contain a valid version name, that is `box-version: 2025.0` and be directed at `https://api.box.com/2.0/files/:file_id/metadata`.
+
+指定したバージョンが正しい場合は、クライアントにレスポンスが返されます。リクエストで`box-version`ヘッダーを指定した場合、レスポンスにはこのヘッダーも含まれます。デフォルトでは、このヘッダーはレスポンスに存在しません。バージョンが正しくない場合は、HTTPコード`400`のエラーがクライアントに返されます。
+
 ## リリーススケジュールと命名規則
 
-Boxでは、**1年に1回**、特定のエンドポイントに新しく重大な変更を行う場合があります。エンドポイントは、特定のAPIルート内でサポートされているすべてのHTTPメソッドに対応しています。たとえば、署名リクエストのエンドポイントには以下のメソッドが含まれます。
+Box can introduce a new breaking change to certain endpoints **once per year**. Introducing a new version of the Sign Request endpoint means that **all paths and HTTP methods** of an endpoint will support it.
+
+For example, if Sign Request endpoints receive a new version it will apply to all endpoints listed in the table:
 
 | メソッド | リクエストURL                                           | 説明                   |
 | ---- | -------------------------------------------------- | -------------------- |
@@ -62,19 +63,33 @@ Boxでは、**1年に1回**、特定のエンドポイントに新しく重大�
 | POST | `https://api.box.com/2.0/sign_requests/:id/resend` | 特定の署名リクエストを再度送信します。  |
 | POST | `https://api.box.com/2.0/sign_requests/:id/cancel` | 特定の署名リクエストをキャンセルします。 |
 
-署名リクエストエンドポイントの新しいバージョンを導入すると、上記のすべてのパスとHTTPメソッドでそのバージョンがサポートされるようになります。エンドポイントのバージョンに関する包括的な情報については、[Box APIリファレンス](https://developer.box.com/reference/)を参照してください。
-
 ### 命名規則
 
-APIの新しいバージョンは、リリースされた暦年に従ってラベルが付けられます。たとえば、署名リクエストのエンドポイントの新しいバージョンが2025年にリリースされた場合、その名前は`2025.0`となります。
+New API versions are labeled according to the calendar year of their release.
 
-Boxは、1年に1回、APIエンドポイントに新しく重大な変更を行う場合がありますが、セキュリティやプライバシーに関する懸念に対処するためにさらに重大な変更をリリースする権利を留保します。このような場合、新しいバージョンではサフィックスが1ずつ増加します。たとえば、以前にリリースされた署名リクエストのバージョン`2025.0`でセキュリティの問題に対処する必要がある場合、新しいバージョンには`2025.1`というラベルが付きます。
+**Example**: If a new version of the Sign Requests endpoint is released in 2025, it will be named `2025.0`.
+
+Box can issue a new breaking change to API endpoints **once** per year, reserving the right to release an additional breaking change to address security or privacy concerns. In such cases, the new version will be incremented by one in the suffix.
+
+**Example**: If security issues need addressing in the previously released version `2025.0` of Sign Requests, the new version will be labeled `2025.1`.
 
 安定した各バージョンは最低12か月間サポートされます。つまり、新しいバージョンがリリースされると、以前のバージョンは非推奨となり、使用することはできますが、新機能が追加されなくなります。また、12か月経たずに新しいバージョンがリリースされることはありません。
 
-アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`400 - Bad Request`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
+アプリを更新して最新の安定したAPIバージョンにリクエストを実行することを強くお勧めします。ただし、アプリで使用している安定したバージョンがサポートされなくなると、HTTPエラーコード`400 - Bad Request`を含むレスポンスが返されます。詳細については、[バージョン管理のエラー](g://api-calls/permissions-and-errors/versioning-errors)を参照してください。
 
-リクエストにバージョンが含まれていない場合、APIはデフォルトで、最初のBox APIバージョン (年ベースのバージョン管理が導入される前のバージョン) になります。ただし、非推奨の変更を適用する際にこの動作を利用することはお勧めしません。一貫性を確保するために、リクエストごとに必ずAPIバージョンを指定してください。アプリケーションにバージョンを認識させることで、アプリケーションを特定の機能セットに固定し、サポートされている期間中は一貫した動作が保証されます。
+If your request doesn't include a version, the API defaults to the initial Box API version—the version available before year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated changes. To ensure consistency, always specify the API version, with each request. By making your application version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported timeframe.
+
+### Endpoint versioning indication
+
+To keep you informed about the current API state, and improve the readability of the versioned API reference, the affected endpoints are marked with a pill based on the `x-stability-level` tag or `deprecated` attribute.
+
+![An example of a beta pill used for API reference endpoints](./images/api-versioning-pills.png)
+
+| Schema element                                            | Pill name      | 説明                                                                                                                                                                                                                                          |
+| --------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `x-stability-level: beta`                                 | Beta           | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle. |
+| `x-stability-level: stable` or no `x-stability-level` tag | Latest version | The latest version applies to APIs that are already versioned. **Latest version** marks the most recent stable API version of an endpoint.                                                                                                  |
+| `deprecated: true`                                        | Deprecated     | An endpoint is deprecated, which means it is still available for use, but no new features are added. Such an endpoint is annotated with the `deprecated` attribute set to `true`.                                                           |
 
 ## APIバージョンの呼び出し
 
@@ -91,47 +106,17 @@ curl --location 'https://api.box.com/2.0/sign_requests' \
 
 ## バージョン管理のエラー
 
-### ヘッダーでの正しくないAPIバージョンの呼び出し
+When using versioned API actions such as calling an incorrect API version in header or a deprecated version can lead to errors.
 
-`box-version`ヘッダーで指定されたAPIバージョンが正しくない場合、レスポンスでは`HTTP 400 - Bad Request error`が返されます。このエラーレスポンスの構造は次のようになります。
-
-```json
-{
-  "type": "error",
-  "status": 400,
-  "code": "invalid_api_version",
-  "message":  "Some error message",
-  "context_info": {
-    "conflicts": [
-      "box_version value must be in the format of YYYY.MM"
-    ]
-  },
-  "help_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/versioning-errors/"
-}
-
-```
-
-エラーメッセージには、エラーに関する情報のほか、`box-version`ヘッダーに適切と思われる値が含まれます。以下に例を示します。
-
-* `The 'box-version' header supports only one header value per request, do not use comas.` - ヘッダーに複数の値がコンマで区切って含まれている場合。
-* `Missing required box-version header.` - ヘッダーが存在しないものの、必要な場合。
-* `Unsupported API version specified in 'box-version' header. Supported API versions: [LIST_OF_SUPPORTED_VERSIONS_COMA_SEPARATED]` - 指定されたバージョンがAPIでサポートされていない場合。
-
-### 非推奨のAPIの呼び出し
-
-Boxで非推奨としてマークされたAPIバージョンをお客様が使用した場合も、APIは通常どおり応答します。ただし、非推奨になった日付を示す`Deprecation`ヘッダーが追加されます。次に例を示します。
-
-```sh
-Deprecation: date="Fri, 11 Nov 2023 23:59:59 GMT"
-Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
-
-```
-
-お客様はAPIレスポンスを監視し、このヘッダーが表示されたら新しいAPIバージョンへの移行を計画する必要があることに留意する必要があります。
+For details on possible errors, see [versioning errors](g://api-calls/permissions-and-errors/versioning-errors).
 
 ## Box SDKのバージョン管理の仕組み
 
-このバージョン戦略は、[次世代のSDK](https://developer.box.com/sdks-and-tools/#next-generation-sdks)にのみ適用されます。Box SDKは**すべてのバージョンに対応**というSDKのアプローチをサポートしています。つまり、SDKの各リリースでは、現在サポートされている任意のバージョンのすべてのエンドポイントにアクセスできます。生成されたすべてのSDKはマネージャのアプローチを使用します。このアプローチでは、同じドメインを使用するすべてのエンドポイントを1つのマネージャにグループ化します。たとえば、`FolderManager`には、`create_folder`、`get_folder_by_id`、`update_folder_by_id`、`delete_folder_by_id`、`get_folder_items`、`copy_folder`のメソッドが含まれます。この分割は`x-box-tag`フィールドの値に基づいて行われます (このフィールドは公開APIサービスの仕様で各メソッドに割り当てられています)。ほとんどの場合、これはエンドポイントURLのルートに対応していますが、必ずしもそうとは限りません。たとえば、`FolderManager`には`https://api.box.com/2.0/folders`というルートURLを使用するメソッドが含まれますが、同じベースURLは`SharedLinkFoldersManager`のいくつかのメソッドでも使用されています。すべてのマネージャへの参照は、1つのBoxクライアントオブジェクトの下に保存されます。
+The versioning strategy applies only to [next generation generated SDKs](https://developer.box.com/sdks-and-tools/#next-generation-sdks).
+
+Box SDKs support the **All Versions In** SDK approach. This means that every release of SDK provides access to all endpoints in any version which is currently live. All generated SDKs use manager's approach - they group all endpoints with the same domain in one manager.
+
+For example `FolderManager` contains methods to: `create_folder`, `get_folder_by_id`, `update_folder_by_id`, `delete_folder_by_id`, `get_folder_items` and `copy_folder`. This division is done based on the value of `x-box-tag` field, which is assigned to each method in Public API Service specification. It mostly corresponds to the root of the endpoint URL, but not necessarily. For example: `FolderManager` contains methods with `https://api.box.com/2.0/folders` root URL, but the same base URL is also used in some methods of `SharedLinkFoldersManager`. References to all managers are stored under one Box Client object.
 
 エンドポイントのライフサイクルの例を見てみましょう。
 
@@ -193,7 +178,7 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 ## 重大な変更と重大ではない変更
 
-Box APIにおける重大な変更は、バージョン管理されたリリースの中で行われ、通常は新しいメジャーAPIバージョンを伴います。既存の機能を損なわない程度の微調整であれば、既存のAPIバージョンに統合できます。次の表では、重大な変更と重大ではない変更の例を示します。
+Breaking changes in the Box API occur within versioned releases, typically accompanied by a new major API version. Minor adjustments, which do not disrupt existing functionality, can be integrated into an existing API version. The following table lists both breaking and non-breaking changes.
 
 | APIの変更                                                                                           | 重大な変更 |
 | ------------------------------------------------------------------------------------------------ | ----- |
@@ -216,7 +201,7 @@ Box APIにおける重大な変更は、バージョン管理されたリリー�
 
 <Message type="tip">
 
-Boxでは、[oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGES-EXAMPLES.md)ツールを使用して、重大と思われる変更の大半を検出します。
+The [oasdiff](https://github.com/Tufin/oasdiff/blob/main/BREAKING-CHANGES-EXAMPLES.md) tool allows detecting most of the possible breaking changes.
 
 </Message>
 
@@ -246,10 +231,10 @@ Box-API-Deprecated-Reason: https://developer.box.com/reference/deprecated
 
 リクエストの作成時には、以下の点を考慮してください。
 
-* バージョンを指定しないと、サービスによって最初のバージョン (年ベースのバージョン管理が導入される前に存在していたバージョン) が返されます。最初のバージョンが存在しない場合、レスポンスでは、HTTPエラーコード400 - Bad Requestが返されます。
-* バージョンヘッダーが指定されていても、リクエストされたバージョンを利用できない場合、レスポンスではHTTPエラーコード400 - Bad Requestが返されます。
+* If you do not specify a version, the service will return the initial version that existed before year-based versioning was introduced. If the initial version does not exist, the response will return an HTTP error code `400 - Bad Request`.
+* If the version header is specified but the requested version is unavailable, the response will return an HTTP error code `400 - Bad Request`.
 
-詳細については、[バージョン管理のエラー](#versioning-errors)を参照してください。
+For details, see [versioning errors](g://api-calls/permissions-and-errors/versioning-errors).
 
 APIに含まれるリソースまたはリソースのプロパティが非推奨になると、その変更は以下の1つ以上の方法で伝えられます。
 
@@ -262,8 +247,8 @@ APIに含まれるリソースまたはリソースのプロパティが非推�
 
 ```
 
-* 非推奨に関するお知らせが開発者向け変更ログに掲載されます。
-* 影響を受けるリソースと必要な対応を特定できるように、APIリファレンスが更新されます。
+* A deprecation announcement is posted in the developer changelog.
+* The API reference is updated to identify the affected resource and any action you need to take. Affected endpoints are marked with **deprecated** pill.
 * アプリに影響する後方互換性のない変更が差し迫っている場合は、その非推奨についてアプリの連絡先メールアドレスに問い合わせることがあります。
 
 ## その他のリソース

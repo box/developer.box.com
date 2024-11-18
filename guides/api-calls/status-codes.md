@@ -20,9 +20,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/status-codes.md
 fullyTranslated: true
 ---
-# ステータスコード
+# Status codes
 
-一般的には、Box APIの使用時に受信したHTTPステータスコードの解釈に以下のルールを適用できます。
+The following rules can be applied to interpret the HTTP status codes received when using the Box API.
 
 | HTTPステータス |                                                                                                                 |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
