@@ -78,7 +78,7 @@ Box can issue a new breaking change to API endpoints **once** per year, reservin
 Each stable version is supported for a minimum of 12 months. This means that when a new version is released, the previous version becomes deprecated and will be available for use, but no new features will be added.
 It also means, that a new version cannot be released sooner than every 12 months.
 
-We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](#versioning-errors).
+We strongly recommend updating your apps to make requests to the latest stable API version. However, if your app uses a stable version that is no longer supported, then you will get a response with an HTTP error code `400 - Bad Request`. For details, see [Versioning Errors](g://api-calls/permissions-and-errors/versioning-errors).
 
 If your request doesn't include a version, the API defaults to the initial Box API version—the version available before
 year-based versioning was introduced. However, relying on this behavior is not recommended when adopting deprecated
@@ -86,15 +86,17 @@ changes. To ensure consistency, always specify the API version, with each reques
 version-aware, you anchor it to a specific set of features, ensuring consistent behavior throughout the supported
 timeframe.
 
-### Endpoint marking
+### Endpoint versioning indication
 
-To keep you informed about the current API state, and improve the readability of the versioned API reference, the affected endpoints are marked with the following terms:
+To keep you informed about the current API state, and improve the readability of the versioned API reference, the affected endpoints are marked with a pill based on the `x-stability-level` tag or `deprecated` attribute.
 
-* **Beta**: Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle.
+![An example of a beta pill used for API reference endpoints](./images/api-versioning-pills.png)
 
-* **Latest version**: The latest version applies to APIs that are already versioned. **Latest version** marks the most recent API version of an endpoint.
-
-* **Deprecated**: If a version is deprecated, it is still available for use, but no new features are added. Such a version is marked with **Deprecated**.
+|    Schema element   | Pill name | Description|
+|---------------------|-----------|------------|
+| `x-stability-level: beta` | Beta | Endpoints marked with **beta**, are offered subject to Box’s Main Beta Agreement, meaning the available capabilities may change at any time. Although beta endpoints not the same as versioned endpoints, they are a part of API lifecycle. |
+|`x-stability-level: stable` or no `x-stability-level` tag  | Latest version | The latest version applies to APIs that are already versioned. **Latest version** marks the most recent stable API version of an endpoint.|
+| `deprecated: true` | Deprecated |  An endpoint is deprecated, which means it is still available for use, but no new features are added. Such an endpoint is annotated with the `deprecated` attribute set to `true`.|
 
 ## Calling an API version
 
