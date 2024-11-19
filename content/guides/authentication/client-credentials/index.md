@@ -46,12 +46,23 @@ If you would like to authenticate as the application's [Service Account][sa]:
 - set `box_subject_type` to `enterprise`
 - set `box_subject_id` to the enterprise ID
 
-If you would like to authenticate as a Managed User:
+<Samples id='x_auth' variant='with_client_credentials' ></Samples>
+
+If you would like to authenticate as an admin or a managed user:
 
 - set `box_subject_type` to `user`
 - set `box_subject_id` to the user ID
+- enable **Generate User Access Tokens** in the Box [Developer Console][devconsole]
 
-<Samples id='x_auth' variant='with_client_credentials' ></Samples>
+<Samples id='x_auth' variant='with_ccg_admin_managed_user' ></Samples>
+
+If you would like to authenticate as any application user:
+
+- set `box_subject_type` to `user`
+- set `box_subject_id` to the user ID
+- enable **App + Enterprise Access** and **Generate User Access Tokens** Box [Developer Console][devconsole]
+
+<Samples id='x_auth' variant='with_ccg_app_user' ></Samples>
 
 ## Common Errors
 
