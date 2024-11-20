@@ -45,7 +45,7 @@ Salesforceツールキットには、管理者が以下の[メソッド][methods
 * コラボレーションを削除する (`deleteCollaboration`)
 * メタデータカスケードポリシーを削除する (`deleteMetadataCascadePolicyById`)
 * コラボレーションを編集する (`editCollaboration`)
-* Enable Integration Activity (`enableAppActivity`)
+* 統合アクティビティを有効にする (`enableAppActivity`)
 * フォルダIDでBoxメタデータを取得する (`getBoxMetadataByFolderId`)
 * SalesforceレコードIDでフォルダの関連付けを取得する (`getFolderAssociationsByRecordId`)
 * レコードIDでフォルダIDを取得する (`getFolderIdByRecordId`)

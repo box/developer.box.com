@@ -21,7 +21,7 @@ Boxには、アプリケーション開発におけるさまざまなニーズ�
 
 ## カスタムアプリ
 
-[Custom Apps][custom_app] are versatile and can accommodate most use cases. They allow developers to present Box functionalities within a custom interface. Box provides customizable UI Elements for tasks like browsing, searching, and previewing content. These apps support OAuth 2.0, JWT, and Client Credentials Grant for authentication. Custom Apps are ideal for applications that need to access both their own and others' files, upload and download files, and potentially be listed in the Box Integrations.
+[カスタムアプリ][custom_app]は汎用性があるため、ほとんどのユースケースに対応可能です。開発者はカスタムアプリを使用することで、Boxの機能をカスタムインターフェース内に表示できます。Boxでは、コンテンツの閲覧、検索、プレビューなどのタスク向けにカスタマイズ可能なUI Elementsを提供しています。このようなアプリでは、認証用にOAuth 2.0、JWT、クライアント資格情報許可をサポートしています。カスタムアプリは、自分のファイルと他のユーザーのファイル両方へのアクセス、ファイルのアップロードとダウンロード、Box統合への掲載が必要なアプリケーションに最適です。
 
 ## アクセス制限付きアプリ
 
@@ -33,11 +33,11 @@ Boxには、アプリケーション開発におけるさまざまなニーズ�
 
 ## ウェブアプリ統合
 
-[Web App Integrations][web_app] allow third-party applications to integrate seamlessly with the Box user experience. They enable users to edit, share, or modify content stored in Box using a third-party application. Such integrations can add new features to Box users and be added to Recommended Web Integrations in Box Preview, enhancing the user experience by integrating with various content types and file extensions.
+[ウェブアプリ統合][web_app]を使用すると、サードパーティ製アプリケーションはBoxのユーザーエクスペリエンスとシームレスに統合できます。これにより、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを編集、共有、変更することができます。このような統合は、Boxユーザーに新機能を追加したり、Boxプレビューの \[推奨ウェブ統合] に追加したりできるため、さまざまなコンテンツタイプやファイル拡張子と統合され、ユーザーエクスペリエンスが向上します。
 
-## Integrations Publication
+## 統合での公開
 
-The [Box Integrations][integrations] is a platform for Box users to discover applications that can be used in conjunction with Box. For developers, listing their application in the Integrations is an effective way to reach new users, particularly for applications suited for use by other enterprises. The process for Integrations publication involves ensuring the app is production-ready, leverages OAuth 2.0 authentication, and submitting it for approval through the Developer Console. Once approved, applications can be featured, most popular, or recently added sections in the Integrations, and they can also be unpublished if necessary.
+[Box統合][integrations]は、BoxユーザーがBoxと連携して使用できるアプリケーションを見つけるためのプラットフォームです。開発者にとって、統合へのアプリケーションの掲載は、特に他の企業での使用に適したアプリケーションの場合、新規ユーザーにリーチを広げるのに効果的な手段となります。統合での公開プロセスでは、アプリケーションが本番環境に対応していることとOAuth 2.0認証を利用していることを確認し、開発者コンソールから承認を得るためにそのアプリケーションを送信する必要があります。承認されると、アプリケーションは統合の \[おすすめ]、\[人気]、\[新着] セクションに分類されます。また、必要に応じて公開を取り消すこともできます。
 
 <Next>
 

@@ -21,6 +21,6 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/box-ai/ai-tutorials/index.md
 fullyTranslated: true
 ---
-# Box AI tutorials
+# Box AIのチュートリアル
 
-The listed tutorials provide you with an overview and use cases for Q&A and text generation, metadata extraction, and AI model configuration overrides.
+掲載されているチュートリアルには、Q&Aとテキスト生成、メタデータ抽出、AIモデルの構成の上書きに関する概要とユースケースが示されています。

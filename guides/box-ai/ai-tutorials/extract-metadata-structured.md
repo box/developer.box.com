@@ -76,7 +76,7 @@ Make sure you followed the steps listed in [getting started with Box AI][prereq]
 
 ## ユースケース
 
-This example shows you how to extract metadata from a sample invoice in a structured way. Let's assume you want to extract the vendor name, invoice number, and a few more details.
+この例では、サンプル請求書から構造化された形でメタデータを抽出する方法を示します。ベンダー名、請求書番号などの詳細情報を抽出する必要があるとします。
 
 ![サンプル請求書](../images/sample-invoice.png)
 
@@ -94,7 +94,7 @@ Box AIから応答を取得するには、以下のパラメータを使用し�
 
 </Message>
 
-### Use `fields` parameter
+### `fields`パラメータの使用
 
 `fields`パラメータを使用すると、抽出するデータを指定できます。各`fields`オブジェクトにはパラメータのサブセットがあり、それを使用して、検索対象のデータに関する情報を追加できます。たとえば、フィールドのタイプや説明、さらには追加のコンテキストを含めたプロンプトを追加することができます。
 
@@ -157,7 +157,7 @@ curl --location 'https://api.box.com/2.0/ai/extract_structured' \
 
 ```
 
-### Use metadata template
+### メタデータテンプレートの使用
 
 メタデータテンプレートを使用する場合は、その`template_key`、`type`、`scope`を指定します。
 

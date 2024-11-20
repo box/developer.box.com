@@ -47,7 +47,7 @@ fullyTranslated: true
 * 認証に[OAuth 2.0][oauth2]、[JWT][jwt]、または[クライアント資格情報許可][cc]を使用する
 * ファイルをアップロードおよびダウンロードする
 * 自分が所有するファイルにも、[管理対象ユーザーまたは外部ユーザー][users]が所有するファイルにも自由にアクセスしたい
-* Wants the option to list the application in the Box Integrations
+* Box統合にアプリケーションを掲載する
 * Boxウェブアプリとの統合を可能にする
 
 ## ユースケース

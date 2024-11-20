@@ -60,14 +60,14 @@ Make sure you followed the steps listed in [getting started with Box AI][prereq]
 | `include_citations`           | 回答で引用情報を返すかどうかを指定します。                                                                                                                                                                                                                                                                                                                                                                                | `true`, `false`                                                 | `true`                                                                                                                                                                      |
 | **`items.id`**                | 入力データとして指定するBoxファイルID。                                                                                                                                                                                                                                                                                                                                                                               |                                                                 | `112233445566`                                                                                                                                                              |
 | **`items.type`**              | 指定した入力データのタイプ。現在は、1つのファイルまたは複数のファイルを指定できます。                                                                                                                                                                                                                                                                                                                                                          | `file`                                                          | `file`                                                                                                                                                                      |
-| `items.content`               | The content of the item. Usually it is the text representation.                                                                                                                                                                                                                                                                                                                                      |                                                                 | `An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...` |
+| `items.content`               | 項目のコンテンツ。通常はテキストレプリゼンテーションです。                                                                                                                                                                                                                                                                                                                                                                        |                                                                 | `An application programming interface (API) is a way for two or more computer programs or components to communicate with each other. It is a type of software interface...` |
 | `ai_agent`                    | デフォルトのエージェント構成を上書きするために使用されるAIエージェント。このパラメータを使用すると、短いテキストや長いテキストを表す[`model`][model-param]パラメータを使用してデフォルトのLLMをカスタムのLLMに置き換えたり、よりカスタマイズされたユーザーエクスペリエンスを実現できるようにベースとなる[`prompt`][prompt-param]を微調整したり、`temperature`などのLLMパラメータを変更して結果の創造性を調整したりすることができます。`ai_agent`パラメータを使用する前に、[`GET 2.0/ai_agent_default`][agent]リクエストを使用してデフォルト構成を取得できます。具体的なユースケースについては、[AIモデルの上書きに関するチュートリアル][overrides]を参照してください。 |                                                                 |                                                                                                                                                                             |
 
 ## ユースケース
 
-## Ask questions about an item
+## 項目について質問する
 
-This example shows how to ask a question about one or more items using the `POST ask/ai` API. When using this endpoint, remember to specify the `mode` parameter depending on the number of items you want to supply.
+この例では、`POST ask/ai` APIを使用して1つ以上の項目について質問する方法を示します。このエンドポイントを使用する際は、指定する項目の数に応じて、忘れずに`mode`パラメータを指定してください。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/ask" \
@@ -86,7 +86,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-The response will be as follows:
+レスポンスは次のようになります。
 
 ```sh
 {
@@ -97,9 +97,9 @@ The response will be as follows:
 
 ```
 
-## Ask questions with `content` parameter
+## `content`パラメータを使用して質問する
 
-If you use the `content` parameter as the source of input for Box AI, it will use it as the primary source.
+Box AIへの入力のソースとして`content`パラメータを使用すると、それがプライマリソースとして使用されます。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/ask" \
@@ -119,7 +119,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-The response to this request is based on the `content` parameter instead of the file's content:
+このリクエストに対するレスポンスは、ファイルのコンテンツではなく`content`パラメータに基づきます。
 
 ```sh
 {
@@ -130,9 +130,9 @@ The response to this request is based on the `content` parameter instead of the 
 
 ```
 
-## Ask questions with `citations` parameter
+## `citations`パラメータを使用して質問する
 
-Setting the `citations` parameter to `true` causes the response to include excerpts from source file or files Box AI used to compile the answer.
+`citations`パラメータを`true`に設定すると、レスポンスには、ソースファイルまたはBox AIが回答をまとめるのに使用したファイルからの抜粋が含まれます。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/ask" \
@@ -152,7 +152,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-The resulting answer includes the source file and direct content citations.
+その結果の回答には、ソースファイルとコンテンツの直接引用が含まれます。
 
 ```sh
 {

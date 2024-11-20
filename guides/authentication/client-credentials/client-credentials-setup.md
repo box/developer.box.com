@@ -36,7 +36,7 @@ fullyTranslated: true
 
 ### 開発者コンソールへの移動
 
-Log into Box and go to the [Developer Console][devconsole]. Select **Create Platform App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**Platformアプリの作成**] を選択します。
 
 ### アプリケーションの種類の選択
 

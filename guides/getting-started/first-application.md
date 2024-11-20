@@ -41,7 +41,7 @@ fullyTranslated: true
 最も基本的な設定から始めます。\[**一般設定**] タブを開き、以下のフィールドでチェックボックスをオンにしたり、入力したりします。
 
 * \[**アプリ名**] - アプリ作成時に設定する名前。ここで必要に応じて変更できます。
-* **Contact Email** - this is set to the developer of the application by default. Keep in mind that once you publish your app, this email is publicly visible to Box users who view your app in the [Integrations][integrations]. We recommend to change it to a support email address, so that users can reach out to support in case of any issues with the integration;
+* \[**連絡先メール**] - デフォルトでアプリケーションの開発者のアドレスに設定されます。アプリを公開すると、[統合][integrations]でアプリを表示したBoxユーザーにこのアドレスが表示されることに注意してください。統合に問題があった場合にユーザーがサポートに連絡できるよう、サポートのメールアドレスに変更することをお勧めします。
 * \[**コラボレータ**] - この統合の作成に取り組むことができる他の開発者を追加します。追加された開発者は、設定を調整する必要があるときに開発者インターフェースにアクセスできるようになります。
 
 <Message type="notice">
@@ -54,7 +54,7 @@ fullyTranslated: true
 
 \[**構成**] タブに移動します。ここでは、アプリの詳細の指定、開発者トークンの生成、OAuth 2.0資格情報の確認、OAuth 2.0リダイレクトURIの追加と編集、アプリケーションスコープの選択、アプリの高度な機能の設定、CORSドメインの追加を行うことができます。
 
-In the next tabs you can create webhooks, web app integrations, submit app for enablement for access to the Enterprise, submit your app to the [Box Integrations][integrations], and generate a report to view this application’s activity.
+その後のタブでは、Webhookやウェブアプリ統合を作成する、Enterpriseへのアクセスを有効化するためにアプリを送信する、[Box統合][integrations]にアプリを送信する、このアプリケーションのアクティビティを確認できるレポートを生成することができます。
 
 ## アプリのテスト
 

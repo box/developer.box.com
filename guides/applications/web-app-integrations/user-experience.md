@@ -23,9 +23,9 @@ fullyTranslated: true
 
 以下に、ユーザーの視点からウェブアプリ統合がどのように見えるかについて説明します。
 
-1. Box users can discover applications in the Box Integrations. They can visit the Integrations directly, or select the **Integrations** menu from the Box Web App UI.
-2. In the Integrations they select the application they would like to add. Every published Box application has a public profile page, which provides details including the integrations it provides.
-3. They user adds the application to their account by clicking the **Add** button in the Integrations listing. Once an application is added to an account, all its integrations become available to the user.
+1. Boxユーザーは、Box統合でアプリケーションを見つけることができます。直接統合にアクセスするか、BoxウェブアプリのUIで \[**統合**] メニューを選択できます。
+2. ユーザーは統合で、追加したいアプリケーションを選択します。公開されているどのBoxアプリケーションにも公開プロフィールページが用意されており、提供する統合などの詳細が示されています。
+3. ユーザーは統合のリストで \[**追加**] ボタンをクリックすることで、自分のアカウントにアプリケーションを追加します。アプリケーションがアカウントに追加されると、ユーザーはそのすべての統合を使用できるようになります。
 4. ファイルまたはフォルダの \[**その他の操作**] メニューで、統合を選択します。
 5. ユーザーは、Boxから、ファイルまたはフォルダをアプリケーションと共有してよいか許可を求められます。統合を問題なく使用できるようにするには、確認プロンプトを受け入れる必要があります。
 6. アクセスを許可すると、Boxからアプリケーションにデータが渡されます。その後、統合の種類に応じて、アプリケーションはポップアップパネルを表示したり、サーバーベースのプロセスを実行したりします。

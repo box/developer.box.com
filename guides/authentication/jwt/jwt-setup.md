@@ -31,7 +31,7 @@ fullyTranslated: true
 ---
 # JWTを使用した設定
 
-A Platform App can be set up to use server-side authentication with [JWT][jwt].
+Platformアプリは、[JWT][jwt]によるサーバー側認証を使用するよう設定できます。
 
 <CTA to="g://authentication/jwt">
 
@@ -41,17 +41,17 @@ JWT認証のしくみを確認する
 
 ## 前提条件
 
-To set up a Platform App using server-side authentication, you will need to ensure you have access the [Developer Console][devconsole] from your Box enterprise account. Alternatively, you may sign up for a [developer account][devaccount].
+サーバー側認証を使用してPlatformアプリを設定するには、Box Enterpriseアカウントから[開発者コンソール][devconsole]にアクセスできることを確認する必要があります。または、[Developerアカウント][devaccount]にサインアップすることもできます。
 
 ## アプリの作成手順
 
 ### 開発者コンソールへの移動
 
-Log into Box and go to the [Developer Console][devconsole]. Select **Create Platform App**.
+Boxにログインし、[開発者コンソール][devconsole]に移動して、\[**Platformアプリの作成**] を選択します。
 
 ### アプリケーションの種類の選択
 
-Select **Platform App** from the list of application types. A modal will appear to prompt a selection for the next step.
+アプリケーションの種類のリストから \[**Platformアプリ**] を選択します。次の手順を促すウィンドウが表示されます。
 
 <ImageFrame border>
 
@@ -77,7 +77,7 @@ Select **Platform App** from the list of application types. A modal will appear 
 
 ### アプリケーションの認証の選択
 
-Select **Server Authentication (with JWT)** if you would like to verify application identity [with a key pair][kp] and confirm with **Create Platform App**.
+[キーペアを使用して][kp]アプリケーションIDを確認する場合は \[**サーバー認証 (JWT使用)**] を選択し、\[**Platformアプリの作成**] で確定します。
 
 <Message warning>
 
@@ -99,7 +99,7 @@ Select **Server Authentication (with JWT)** if you would like to verify applicat
 
 </Message>
 
-Once a Platform App is created leveraging Server Authentication with JWT, a key pair can be generated via the configuration tab within the [Developer Console][devconsole]. Alternatively, you can generate your own and supply Box with the public key. Regardless of the method you select, your Box account will need to have [2FA][2fa] enabled for security purposes.
+\[サーバー認証 (JWT使用)] を利用してPlatformアプリを作成すると、[開発者コンソール][devconsole]の \[構成] タブでキーペアを生成できます。また、独自のキーペアを生成して、その公開キーをBoxに提供することもできます。選択する方法に関係なく、セキュリティの目的で、Boxアカウントでは[2要素認証][2fa]を有効にしておく必要があります。
 
 ### キーペアの生成 (推奨)
 
@@ -167,7 +167,7 @@ Windowsユーザーは、[Cygwin][cygwin]パッケージをインストールし
 
 <CTA to="g://authorization/custom-app-approval">
 
-Learn how to authorize a Platform Application
+Platformアプリケーションの承認方法を確認する
 
 </CTA>
 

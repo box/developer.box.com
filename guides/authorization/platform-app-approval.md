@@ -24,7 +24,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/authorization/platform-app-approval.md
 fullyTranslated: true
 ---
-# Platform App Approval
+# Platformアプリの承認
 
 [JWT][jwt]または[クライアント資格情報許可][ccg]を使用するサーバー認証アプリケーションは、使用前にBox管理者が承認する必要があります。
 
@@ -34,7 +34,7 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 <Message>
 
-You can use [My Platform Apps][apps] view to quickly look up the authorization and enablement status of your application.
+\[[マイPlatformアプリ][apps]] ビューを使用すると、アプリケーションの承認ステータスと有効化ステータスをすばやく確認できます。
 
 </Message>
 
@@ -73,7 +73,7 @@ You can use [My Platform Apps][apps] view to quickly look up the authorization a
 1. [開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。
 2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。
 
-Alternatively, hover over the application in the [My Platform Apps][apps] view to look up the **ClientID** and then copy it using the `copy` button.
+また、\[[マイPlatformアプリ][apps]] ビューでアプリケーションにカーソルを合わせて**クライアントID**を調べ、`copy`ボタンを使用してそのIDをコピーすることもできます。
 
 <Message>
 

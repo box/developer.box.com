@@ -27,7 +27,7 @@ fullyTranslated: true
 
 ## 機能
 
-Using a Web App Integration, a user can modify, share, or edit content stored in Box using a third-party application. It can also offer new features to Box users through [Recommended Web Integrations][recommended-web-integrations], which show up in Box Preview.
+ウェブアプリ統合を使用した場合、ユーザーはサードパーティ製アプリケーションを使用して、Boxに保存されているコンテンツを変更、共有、または編集できます。また、ウェブアプリ統合では、Boxプレビューに表示される[推奨ウェブ統合][recommended-web-integrations]を通じて、Boxユーザーに新しい機能を提供することもできます。
 
 <ImageFrame border shadow width="600" center>
 

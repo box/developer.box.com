@@ -39,7 +39,7 @@ fullyTranslated: true
 
 Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate. To get more context, read about [agent overrides][agent-overrides].
 
-## Override prompt
+## 上書き用のプロンプト
 
 この例では、`prompt_template`パラメータを使用してクエリの結果を変更する方法を示します。最初の手順として、Box AIに対し、Box AI for Documentsに関するドキュメントの要約を依頼します。指定されているドキュメントは1つだけなので、`mode`パラメータは`single_item_qa`に設定されています。
 
@@ -105,7 +105,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/ask" \
 
 ```
 
-## Override AI model (text generation)
+## AIモデルの上書き (テキスト生成)
 
 この例では、`ai_agent`のオプションでAIモデルを変更した場合にテキストの生成方法にどのような影響があるかを示します。
 
@@ -175,7 +175,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
 
 ご覧のとおり、ある程度異なったレスポンスになったことがわかります。モデルの切り替えにより、Box AIに対する操作を最適化し、ニーズに最適なモデルを選択できます。
 
-## Override AI model (metadata extraction)
+## AIモデルの上書き (メタデータ抽出)
 
 モデルを切り替えると、メタデータ抽出の結果も異なる場合があります。契約書のサンプルを使用して、メタデータを抽出しましょう。この例で使用されているモデルはGoogle Geminiです。
 

@@ -66,7 +66,7 @@ Make sure you followed the steps listed in [getting started with Box AI][prereq]
 
 ## ユースケース
 
-This example shows you how to extract metadata from a sample invoice.
+この例では、サンプル請求書からメタデータを抽出する方法を示します。
 
 ### リクエストの作成
 
@@ -79,9 +79,9 @@ Box AIから応答を取得するには、以下のパラメータを使用し�
 
 ユースケースや詳細度に応じて、さまざまなプロンプトを作成できます。
 
-#### Use plain text
+#### プレーンテキストを使用する
 
-Because this endpoint allows freeform prompts, you can use plain text to get the information.
+このエンドポイントでは自由形式のプロンプトが許可されているため、プレーンテキストを使用して情報を取得できます。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -99,7 +99,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-In such a case, the response will be based on the keywords included in the text:
+その場合、レスポンスは、テキストに含まれているキーワードに基づいて作成されます。
 
 ```bash
 {
@@ -110,9 +110,9 @@ In such a case, the response will be based on the keywords included in the text:
 
 ```
 
-#### Use specific terms
+#### 特定の用語を使用する
 
-If you don't want to write the entire sentence, the prompt can consist of terms that you expect to find in an invoice:
+文全体を書かなくても、請求書に含まれることが予想される用語でプロンプトを構成できます。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -130,7 +130,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-Using this approach results in a list of terms provided in the request and their values:
+このアプローチを使用すると、以下のように、リクエストで指定した用語のリストとその値が返されます。
 
 ```bash
 {
@@ -141,9 +141,9 @@ Using this approach results in a list of terms provided in the request and their
 
 ```
 
-#### Use key-value pairs
+#### キー/値ペアを使用する
 
-The prompt can also be a list of key-value pairs that helps Box AI to come up with the metadata structure. This approach requires listing the key-value pairs within a `fields` array.
+プロンプトには、Box AIがメタデータの構造を認識するのに役立つキー/値ペアのリストを指定することができます。このアプローチでは、`fields`配列内にキー/値ペアを列挙する必要があります。
 
 ```bash
 curl --location 'https://api.box.com/2.0/ai/extract' \
@@ -161,7 +161,7 @@ curl --location 'https://api.box.com/2.0/ai/extract' \
 
 ```
 
-The response includes the `fields` present in the file, along with their values:
+レスポンスには、以下のように、ファイル内に存在する`fields`とその値が含まれます。
 
 ```bash
 {

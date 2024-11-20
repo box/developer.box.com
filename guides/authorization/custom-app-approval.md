@@ -34,7 +34,7 @@ Box管理者は、管理コンソールでアプリケーションを適切に�
 
 <Message>
 
-You can use [Integrations][apps] view to quickly look up the authorization and enablement status of your application.
+\[[統合][apps]] ビューを使用すると、アプリケーションの承認ステータスと有効化ステータスをすばやく確認できます。
 
 </Message>
 
@@ -73,7 +73,7 @@ You can use [Integrations][apps] view to quickly look up the authorization and e
 1. [開発者コンソール][devconsole]で、目的のアプリケーションの \[**構成**] タブに移動します。
 2. \[OAuth 2.0資格情報] セクションまで下にスクロールし、Box管理者に提出する \[**クライアントID**] の値をコピーします。
 
-Alternatively, hover over the application in the [My Platform Apps][apps] view to look up the **ClientID** and then copy it using the `copy` button.
+また、\[[マイPlatformアプリ][apps]] ビューでアプリケーションにカーソルを合わせて**クライアントID**を調べ、`copy`ボタンを使用してそのIDをコピーすることもできます。
 
 <Message>
 
@@ -85,16 +85,16 @@ Alternatively, hover over the application in the [My Platform Apps][apps] view t
 
 ### 管理者の場合
 
-1. Navigate to the [Admin Console][adminconsole] and select the **Integrations** tab (1) from the left navigation panel.
-2. Click the **Platform Apps Manager** tab (2) at the top of your screen.
-3. For both Server and User Authentication Apps screens, click the **Add Platform App** (3) button in the top right corner to add a new app.
-4. Alternatively, you can use the Platform Apps Manager table menu (4) to authorize and enable apps.
+1. [管理コンソール][adminconsole]に移動し、左側のナビゲーションパネルで \[**統合**] タブ (1) を選択します。
+2. 画面上部にある \[**Platformアプリマネージャ**] タブ (2) をクリックします。
+3. \[サーバー認証アプリ] 画面と \[ユーザー認証アプリ] 画面のどちらでも、右上にある \[**Platformアプリの追加**] ボタン (3) をクリックして新しいアプリを追加します。
+4. または、\[Platformアプリマネージャ] の表メニュー (4) を使用してアプリを承認および有効化することもできます。
 
 #### サーバー認証アプリ
 
 <ImageFrame border center>
 
-![Server tab](images/jwt_app_approval_flow.png)
+![サーバーのタブ](images/jwt_app_approval_flow.png)
 
 </ImageFrame>
 

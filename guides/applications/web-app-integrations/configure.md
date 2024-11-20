@@ -56,7 +56,7 @@ fullyTranslated: true
 | フィールド                                         | 説明                                                                                                                                              |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | 統合名                                           | 統合の名前。ユーザーがファイルまたはフォルダの \[**その他のオプション**] > \[**統合**] メニューを選択したときにBoxウェブアプリに表示されます。                                                              |
-| 説明                                            | The description of the integration displayed in the Box Integrations.                                                                           |
+| 説明                                            | Box統合に表示される統合の説明。                                                                                                                               |
 | サポートされているファイル拡張子                              | 統合は、選択されているファイル拡張子の \[**その他のオプション**] > \[**統合**] メニューのオプションとしてのみ表示されます。                                                                         |
 | 必要な権限                                         | ユーザーが統合を表示するために必要な権限を決定します。\[**ダウンロードの権限が必要**] にした場合、ユーザーはファイルをダウンロードできますが、そのファイルを更新することはできません。\[**すべての権限が必要**] にした場合、ユーザーはファイルのダウンロードと更新を行えます。 |
 | 統合の範囲                                         | 統合の範囲を指定します。統合の呼び出し元となるファイル/フォルダ、またはその親フォルダを指定します。                                                                                              |
@@ -99,8 +99,8 @@ fullyTranslated: true
 ### 統合ステータス
 
 * **開発**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示および使用できます。このオプションは、アプリケーションがまだ開発中でテストの実施中である場合に最もよく使用されます。
-* **Online**: The integration is visible and available to all Box users. This option is best used when development is complete and the application is ready to publish in the Integrations.
-* **Maintenance**: The integration is visible and available only to application collaborators listed under the **General Settings** tab. This option is best used after the integration is published in the Integrations, but needs to perform maintenance updates or troubleshoot issues. Use this option to temporarily take the integration offline for everyone except the application's collaborators.
+* **オンライン**: 統合は、すべてのBoxユーザーが表示し、使用できます。このオプションは、開発が完了し、アプリケーションを統合で公開する準備ができている場合に最もよく使用されます。
+* **メンテナンス**: 統合は、\[**一般設定**] タブで表示されるアプリケーションコラボレータのみが表示および使用できます。このオプションは、統合が \[統合] で公開された後、メンテナンスでの更新を実行したり問題をトラブルシューティングしたりする必要がある場合に最もよく使用されます。このオプションを使用すると、アプリケーションのコラボレータ以外のすべてのユーザーに対して統合が一時的にオフラインになります。
 
 ## Box統合のユースケースの例
 
@@ -134,7 +134,7 @@ BoxからクライアントコールバックのURLに送信されるPOSTリク�
 
 ## 統合の一般公開
 
-To make a Box integration publicly available it needs to be listed in the App Center. Follow the [Integrations][integrations] guide for more details.
+Box統合を一般公開するには、統合をApp Centerに掲載する必要があります。詳細については、[統合][integrations]ガイドに従ってください。
 
 [ca]: g://applications/app-types/custom-apps
 

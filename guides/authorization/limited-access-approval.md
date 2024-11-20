@@ -25,7 +25,7 @@ fullyTranslated: true
 ---
 # アクセス制限付きアプリの承認
 
-Limited Access Integrations are automatically authorized for use in an enterprise upon creation.
+アクセス制限付き統合は、作成時に企業での使用について自動的に承認されます。
 
 ただし、Enterprise設定の \[**アプリトークンを使用する場合に管理者の承認を要求する**] が有効になっている場合、管理者は追加の手順を行う必要があります。
 
@@ -61,7 +61,7 @@ Limited Access Integrations are automatically authorized for use in an enterpris
 
 ### 管理者の場合
 
-As a Box Admin, navigate to the [Admin Console][adminconsole] and select the **Integrations** tab (1) from the left navigation panel. Then, click the **Platform Apps** tab (2) at the top of your screen. On this screen, you will see a **+** button in the top right corner to add a new app authorization.
+Box管理者の場合、\[[管理コンソール][adminconsole]] に移動し、左側のナビゲーションパネルで \[**統合**] タブ (1) を選択して、画面上部にある \[**Platformアプリ**] タブ (2) をクリックします。この画面では、新しいアプリ承認を追加するための \[**+**] ボタンが右上隅に表示されます。
 
 <ImageFrame border center>
 

@@ -23,27 +23,27 @@ fullyTranslated: true
 ---
 # アプリケーション
 
-Box Developer Console allows you to create applications you can then use to integrate with Box. **My Platform Apps** view displays a list of already created applications and gives you quick access to their configuration details. This way, you don't need to open the app each time you want to generate a Developer Token, copy the Client ID, or generate a report.
+Box開発者コンソールでは、後でBoxとの統合に使用できるアプリケーションを作成できます。\[**マイPlatformアプリ**] ビューには、すでに作成済みのアプリケーションのリストが表示されるので、ここから構成の詳細にすばやくアクセスできます。そのため、毎回アプリを開かなくても、開発者トークンを生成したり、クライアントIDをコピーしたり、レポートを生成したりできます。
 
 ## 機能
 
-**My Platform Apps** page allows you to:
+\[**マイPlatformアプリ**] ページでは、以下の操作を行うことができます。
 
 * 作成済みのアプリのリストを検索する。
 * \[**有効化ステータス**] および \[**認証タイプ**] でアプリにフィルタをかける。
 * [新しいアプリ][select]を作成する。
 * アプリの[クライアントID][clientcredentials]をコピーする。
 * アプリの名前を変更し、1回のクリックでその詳細にアクセスする。
-* Check application [enablement][enablement] and [authorization][authorization] status. Apps published to Integrations display status from Integrations.
+* アプリケーションの[有効化][enablement]ステータスと[承認][authorization]ステータスを確認する。統合に公開されたアプリには、統合でのステータスが表示されます。
 
 各エントリに用意されている**オプションメニュー**を使用すると、以下の操作を行うことができます。
 
 * アプリケーションの構成の詳細にアクセスする。
 * [開発者トークン][token]を生成する。
 * アプリケーションにコラボレータを追加する。
-* Run the [Platform App Diagnostics Report][report].
+* [Platform App Diagnosticsレポート][report]を実行する。
 
-## Platform App Insights
+## Platformアプリインサイト
 
 管理者と共同管理者は、組織におけるプラットフォームの利用状況を集約した、Platformインサイトのダッシュボードにアクセスできます。これには、以下のような、アプリ関連のデータが含まれます。
 

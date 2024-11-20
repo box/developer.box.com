@@ -16,11 +16,11 @@ fullyTranslated: true
 ---
 # アプリケーションの公開
 
-When you finish the app configuration and testing, you can publish it in the [Box Integrations][integrations]. It allows customers to find your application and add it to their Box accounts.
+アプリの構成とテストが完了したら、[Box統合][integrations]でアプリを公開できます。公開すると、お客様がアプリケーションを見つけて、自分のBoxアカウントに追加できるようになります。
 
 <Message type="warning">
 
-Only applications that use the OAuth 2.0 authentication have a built-in publication option. You can use other user authentication types, but such app can only serve as a marketing listing in the Integrations and redirect customers to your website.
+公開オプションが組み込まれるのは、OAuth 2.0認証を使用するアプリケーションのみです。他の種類のユーザー認証を使用することもできますが、そうしたアプリは統合ではマーケティングリストとしてのみ機能し、お客様は開発元のウェブサイトにリダイレクトされます。
 
 </Message>
 
@@ -28,11 +28,11 @@ Only applications that use the OAuth 2.0 authentication have a built-in publicat
 
 1. **開発者コンソール**を開きます。
 2. 公開するアプリケーションを選択します。
-3. Go to the **Integrations** tab and submit your app.
+3. \[**統合**] タブに移動し、アプリを送信します。
 
 そうすると、アプリケーションのマーケティングセクションにアクセスできるようになります。そこで、アプリに関する以下の情報を追加する必要があります。
 
-* **General App Info** - choose correct categories and platforms for your application to make it easier to find in the Integrations,
+* \[**一般的なアプリ情報**] - 統合で見つけやすくするために、アプリケーションに適したカテゴリとプラットフォームを選択します。
 * \[**アプリの説明**] - お客様の役に立つと思われるアプリケーションに関するすべての情報を必ず含めます。
   * \[**簡単な説明**] は、アプリのロゴの横にアプリ名と一緒に表示されます。
   * \[**詳しい説明**] は、ユーザーがアプリを選択してその詳細を表示すると表示される内容です。詳しい説明へのクリック可能なリンクを追加できます。
@@ -43,7 +43,7 @@ Only applications that use the OAuth 2.0 authentication have a built-in publicat
 
 </Message>
 
-When you're finished with providing the details about your app, submit your app for approval. Box will review your application and publish it in the Integrations.
+アプリの詳細を指定し終わったら、承認を得るためにアプリを送信します。Boxがアプリケーションをレビューし、統合で公開します。
 
 ご不明な点や問題がありましたら、パートナーチーム ([integrate@box.com](mailto:integrate@box.com)) までお問い合わせください。
 

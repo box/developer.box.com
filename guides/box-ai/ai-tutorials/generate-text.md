@@ -65,7 +65,7 @@ Make sure you followed the steps listed in [getting started with Box AI][prereq]
 
 ## ユースケース
 
-Generate text based on the provided file content and a prompt.
+指定されたファイルコンテンツとプロンプトに基づいてテキストを生成します。
 
 ```sh
 curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
@@ -83,7 +83,7 @@ curl -i -L POST "https://api.box.com/2.0/ai/text_gen" \
 
 ```
 
-The result will be as follows:
+結果は次のようになります。
 
 ```sh
 {

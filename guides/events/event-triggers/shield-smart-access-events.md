@@ -336,7 +336,7 @@ Shieldの正当な理由が承認されると、イベントが[Enterprise Event
 
 </Message>
 
-## Integration Restriction
+## 統合の制限
 
 サードパーティ製アプリケーション (組織と統合されている公開カスタムアプリケーションなど) がファイルまたはフォルダのダウンロードを制限されている場合は、[Enterprise Event][events] Stream内でイベントが生成されます。これらのイベントは標準のイベントオブジェクトスキーマに従い、`event_type`値は`SHIELD_DOWNLOAD_BLOCKED`に設定されます。
 

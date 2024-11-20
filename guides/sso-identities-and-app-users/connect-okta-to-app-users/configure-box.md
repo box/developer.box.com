@@ -48,12 +48,12 @@ Box開発者コンソールから、管理者が承認した既存のBox JWTア�
 Box APIの呼び出しに使用できる新しいBoxアプリケーションを作成するには、以下の手順に従います。
 
 1. [開発者コンソール][devconsole]に移動します。
-2. Select **Create Platform App**
-3. Select **Platform App** as the type of application to create, and click **Next**
+2. \[**Platformアプリの作成**] を選択します。
+3. 作成するアプリケーションの種類として \[**Platformアプリ**] を選択し、\[**次へ**] をクリックします。
 4. 認証方法として \[**JWTを使用したOAuth 2.0**] を選択し、\[**次へ**] をクリックします。
 5. Boxアプリに一意の名前を付け、\[**アプリの作成**] をクリックします。
 6. \[**アプリの表示**] をクリックしてアプリの設定に移動します。
-7. Scroll to the **Required Access Scopes** section of the same screen and ensure that at least the following scopes are enabled:
+7. 同じ画面の \[**必須のアクセススコープ**] セクションまでスクロールし、少なくとも以下のスコープが有効になっていることを確認します。
    * Boxに格納されているすべてのファイルとフォルダの読み取りと書き込み
    * ユーザーを管理する
 8. \[**高度な機能**] で、ユーザーとして操作を実行するオプションとユーザーアクセストークンを生成するオプションの両方が有効になっていることを確認します。

@@ -52,7 +52,7 @@ fullyTranslated: true
 
 ## 構成のサンプル
 
-A complete configuration for `ai/ask` is as follows:
+`ai/ask`の場合の構成全体は以下のとおりです。
 
 ```sh
 {

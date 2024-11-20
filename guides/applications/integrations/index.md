@@ -24,13 +24,13 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/applications/integrations/index.md
 fullyTranslated: true
 ---
-# Integrations
+# 統合
 
-The [Box Integrations][app-center] is the first place for Box users to find out about applications that they can use in combination with Box. If your application is suited to be used by other enterprises, listing your service in the Integrations can be a great way to find new users. Integrations groups apps into sections so that you can quickly find featured, most popular, or recently added apps.
+[Box統合][app-center]は、BoxユーザーがBoxと組み合わせて使用できるアプリケーションについて最初に確認できる場所です。アプリケーションが他の企業での使用にも適している場合は、統合にサービスを登録すると、新しいユーザーを見つけるのに役立ちます。統合では、ユーザーが見つけやすいように、アプリが \[おすすめ]、\[人気]、\[新着] セクションに分類されています。
 
 <ImageFrame shadow center>
 
-![Integrations](./images/app-center.png)
+![統合](./images/app-center.png)
 
 </ImageFrame>
 
@@ -47,20 +47,20 @@ Box App Center用のアプリケーションの開発またはBoxパートナー
 アプリケーションは、以下の要件を満たす必要があります。
 
 * アプリケーションは完成した状態で、実稼働環境での使用準備ができていること。
-* The application leverages OAuth 2.0 authentication, as the Integrations does not support any other authentication methods.
+* 統合ではOAuth 2.0以外の認証方法がサポートされていないため、アプリケーションではOAuth 2.0認証を利用すること。
 * 開発者として、[開発者コンソール][devconsole]でそのアプリケーションにアクセスできること。
 
 ### 1. 開発者コンソールにログインする
 
-Navigate to the [Developer Console][devconsole] and select your application to submit to the Integrations.
+[開発者コンソール][devconsole]に移動して、統合に送信するアプリケーションを選択します。
 
 ### 2. フォームに入力する
 
-Select the **Integrations** tab from the top menu.
+上部のメニューで \[**統合**] タブを選択します。
 
 <ImageFrame center border shadow>
 
-![Integrations panel](./images/app-center.png)
+![\[統合\] パネル](./images/app-center.png)
 
 </ImageFrame>
 
@@ -100,7 +100,7 @@ Select the **Integrations** tab from the top menu.
 
 ## アプリケーションを未公開にする
 
-Once approved and published, an application can be unpublished from the same control panel. Navigate to the [Developer Console][devconsole] and select your application. Then, select the "Integrations" panel from the left-hand sidebar. The app can be unpublished from this page.
+承認されて公開されたアプリケーションは、同じコントロールパネルから未公開にすることができます。[開発者コンソール][devconsole]に移動して、アプリケーションを選択した後、左側のサイドバーから \[統合] パネルを選択します。このページからアプリを未公開にすることができます。
 
 [app-center]: https://app.box.com/services
 
