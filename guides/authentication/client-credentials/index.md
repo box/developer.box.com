@@ -50,12 +50,27 @@ APIコールを実行して[アクセストークン][accesstoken]を取得す�
 * `box_subject_type`を`enterprise`に設定する
 * `box_subject_id`をEnterprise IDに設定する
 
-管理対象ユーザーとして認証する場合は、以下のようにします。
+<Samples id="x_auth" variant="with_client_credentials">
+
+</Samples>
+
+If you would like to authenticate as an admin or a managed user:
 
 * `box_subject_type`を`user`に設定する
 * `box_subject_id`をユーザーIDに設定する
+* enable **App + Enterprise Access** and **Generate User Access Tokens** Box [Developer Console][devconsole]
 
-<Samples id="x_auth" variant="with_client_credentials">
+<Samples id="x_auth" variant="with_ccg_admin_managed_user">
+
+</Samples>
+
+If you would like to authenticate as any application user:
+
+* `box_subject_type`を`user`に設定する
+* `box_subject_id`をユーザーIDに設定する
+* enable **Generate User Access Tokens** in the Box [Developer Console][devconsole]
+
+<Samples id="x_auth" variant="with_ccg_app_user">
 
 </Samples>
 
@@ -76,7 +91,13 @@ Grant credentials are invalid [400 Bad Request] invalid_grant - Grant credential
 
 * 渡されたクライアントIDとクライアントシークレットが正しくないか、同じアプリケーションのものではない。
 
-* 選択した[アプリケーションアクセス][aa]に基づいて`box_subject_id`を使用できない。たとえば、送信時に`enterprise`を`box_subject_type`に設定し、アプリケーションが \[アプリアクセスのみ] に設定されている場合、`grant credentials are invalid`エラーが返されます。
+* the `box_subject_id` cannot be used based on the selected [application access][aa]. 
+
+<Message warning>
+
+A CCG app with App Access Only can send in the `box_subject_type` of `enterprise` to authenticate as its service account, but it can't authenticate as a managed user or an admin.
+
+</Message>
 
 * `box_subject_type`を`user`に設定して使用するには、\[**構成**] タブの \[**高度な機能**] セクションでユーザーアクセストークンを生成するようアプリケーションを構成する必要があります。
 
