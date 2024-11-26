@@ -97,7 +97,7 @@ web app, they should be able to access it using the API.
 ### Application Type
 
 There are three main types of applications that can be created in the developer
-console. They include platform app, limited access app, and custom skills. You
+console. They include Custom App, Limited Access App, and Box Custom Skills. You
 can also create third party and web app integrations.
 
 <ImageFrame center>
