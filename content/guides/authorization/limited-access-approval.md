@@ -50,10 +50,6 @@ Alternatively, hover over the application in the
 [My Platform Apps][apps] view to look up the **ClientID** and then
 copy it using the `copy` button.
 
-<ImageFrame border center>
-  ![Copy feature for Client ID in Platform Apps Manager](images/copy_client_id.png)
-</ImageFrame>
-
 <Message>
   # Finding a Box Admin
 
