@@ -7,7 +7,7 @@ alias_paths:
   - /docs/object-model
 ---
 
-# Types & Formats
+# Types and formats
 
 The following sections explain some basic concepts about the types and formats
 that can be encountered within the Box APIs.

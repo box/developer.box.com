@@ -11,12 +11,12 @@ alias_paths:
   - /guides/api-calls/domain-whitelisting
 ---
 
-# Allowing Domain Access
+# Allow domain access
 
 To use the Box APIs it is important that your application and users have access
 to the following domains, where needed.
 
-## File Preview
+## File preview
 
 To enable file preview, your application might need to load javascript file from
 the Box content delivery network (CDN). This file is loaded from the following
