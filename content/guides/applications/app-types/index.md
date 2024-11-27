@@ -17,9 +17,7 @@ alias_paths:
 The following is an overview of the different Box Application types you can
 create.
 
-<ImageFrame border center>
-  ![Application Types](./images/select-app-type.png)
-</ImageFrame>
+![Application Types](./images/select-app-type.png)
 
 | Application Type              | Authentication Methods                                              |
 | ----------------------------- | ------------------------------------------------------------------- |
