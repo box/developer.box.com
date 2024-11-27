@@ -44,40 +44,17 @@ Your application must meet the following requirements:
 * The application leverages OAuth 2.0 authentication, as the Integrations does not support any other authentication methods.
 * You are a developer with access to the application in the [Developer Console][devconsole].
 
-### 1. Log in to the Developer Console
+### Steps
 
-Navigate to the [Developer Console][devconsole] and select your application to
-submit to the Integrations.
+1. Navigate to the [Developer Console][devconsole] and select your application to submit.
+2. Select the **Publishing** tab from the top menu.
 
-### 2. Fill in the form
+    ![Integrations panel](./images/publishing-app.png)
 
-Select the **Integrations** tab from the top menu.
-
-<ImageFrame center border shadow>
-  ![Integrations panel](./images/app-center.png)
-</ImageFrame>
-
-Click the button to "Submit My App".
-
-<ImageFrame center border shadow width='400'>
-  ![Submit My App button](./images/submit-app.png)
-</ImageFrame>
-
-Then, fill in the form with your application's categories, a short and a long
+3. Fill in the form with your application's categories, a short and a long
 description, screenshots and an app icon.
-
-### 3. Preview the listing
-
-Select the "Preview" button to see a preview of your application listing.
-
-<ImageFrame center border shadow>
-  ![Preview and Submit](./images/submit-and-approve.png)
-</ImageFrame>
-
-### 4. Submit for approval
-
-Finally, submit the application for approval by clicking the "Submit for
-Approval" button.
+4. Click **Preview** to see a preview of your application listing.
+5. Finally, submit the application for approval by clicking the **Submit for Approval** button.
 
 <Message>
   # Approval completion
