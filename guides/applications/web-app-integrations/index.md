@@ -33,11 +33,7 @@ Using a Web App Integration, a user can modify, share, or edit content stored in
 Box using a third-party application. It can also offer new features to Box users
 through [Recommended Web Integrations][recommended-web-integrations], which show up in Box Preview.
 
-<ImageFrame border shadow width='600' center>
-
 ![Integration example](./images/recommended-apps-preview.png)
-
-</ImageFrame>
 
 By enabling a Web App Integration, an application can be added to Recommended
 Apps, allowing users to use their files in the application. Integrations can be

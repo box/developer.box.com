@@ -28,11 +28,7 @@ source_url: >-
 The following is an overview of the different Box Application types you can
 create.
 
-<ImageFrame border center>
-
 ![Application Types](./images/select-app-type.png)
-
-</ImageFrame>
 
 | Application Type              | Authentication Methods                                              |
 | ----------------------------- | ------------------------------------------------------------------- |
