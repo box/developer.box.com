@@ -29,9 +29,9 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/ensure-consistency.md
 fullyTranslated: true
 ---
-# Ensure consistency with headers
+# ヘッダーによる一貫性の確保
 
-Some Box APIs support headers used to ensure consistency between your application and Box.
+一部のBox APIでは、アプリケーションとBox間の一貫性を確保するために使用されるヘッダーがサポートされています。
 
 ## `etag`、`if-match`、および`if-none-match`
 
@@ -88,12 +88,12 @@ curl https://api.box.com/2.0/files/12345 \
 
 これらのAPIコールのレスポンスは、項目が存在するかどうか、および`etag`値が最新バージョンと一致するかどうかによって異なります。
 
-| 項目があるか? | Etagが一致するか? | HTTP status |
-| ------- | ----------- | ----------- |
-| はい      | はい          | 200         |
-| はい      | いいえ         | 412         |
-| いいえ     | はい          | 412         |
-| いいえ     | いいえ         | 404         |
+| 項目があるか? | Etagが一致するか? | HTTPステータス |
+| ------- | ----------- | --------- |
+| はい      | はい          | 200       |
+| はい      | いいえ         | 412       |
+| いいえ     | はい          | 412       |
+| いいえ     | いいえ         | 404       |
 
 <Message type="warning">
 

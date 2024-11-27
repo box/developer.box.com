@@ -19,7 +19,7 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/types-and-formats.md
 fullyTranslated: true
 ---
-# Types and formats
+# タイプと形式
 
 以下のセクションでは、Box API内で使用される可能性があるタイプと形式に関する基本的なコンセプトについて説明します。
 

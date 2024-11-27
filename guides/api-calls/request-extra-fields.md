@@ -22,11 +22,11 @@ source_url: >-
   https://github.com/box/developer.box.com/blob/main/content/guides/api-calls/request-extra-fields.md
 fullyTranslated: true
 ---
-# Request extra fields
+# 追加フィールドのリクエスト
 
-The number of fields returned for a resource depends on the API endpoint used to request the resource.
+リソースに対して返されるフィールドの数は、リソースのリクエストに使用されるAPIエンドポイントに応じて異なります。
 
-## Use the `fields` query parameter
+## `fields`クエリパラメータの使用
 
 標準のレスポンスにデフォルトでは含まれない、リソースの特定のフィールドをリクエストするには、`fields`クエリパラメータをリクエストに追加します。このパラメータの値は、フィールド名のコンマ区切りリストです。
 
@@ -49,17 +49,17 @@ curl https://api.box.com/2.0/files/12345?fields=is_package,lock \
 
 <Message type="notice">
 
-It is important to note that when a specific field is requested no other fields are returned except for those requested and the **base** set of fields. For a file, this base set is comprised of the `etag`, `id`, and `type` values.
+特定のフィールドがリクエストされると、リクエストされたフィールドとフィールドの**基本**セット以外のフィールドが返されない点に注意してください。ファイルの場合、この基本セットは`etag`、`id`、および`type`値で構成されます。
 
 </Message>
 
-## Resource variants
+## リソースバリアント
 
-The following resource variants are available in the Box API.
+以下のリソースバリアントは、Box APIで使用できます。
 
 ### Standard
 
-The default set of fields returned in an API response. The standard variant is returned when requesting a resource through the main APIs available for that resource. For example, when requesting the [`GET /files/:id`](endpoint://get_files_id) endpoint the API will return the standard variation of a file.
+APIレスポンスで返されるデフォルトのフィールドセットです。Standardバリアントは、リソースに対して使用できるメインのAPIを介してそのリソースがリクエストされたときに返されます。たとえば、[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIはファイルの標準バリエーションを返します。
 
 ```curl
 curl https://api.box.com/2.0/files/12345 \
@@ -144,7 +144,7 @@ curl https://api.box.com/2.0/files/12345 \
 
 ### Full
 
-The total set of fields that can be returned in an API response. The full variant is returned when requesting a resource through the main APIs available for that resource and by appending the `fields` query parameter.
+APIレスポンスで返すことができるフィールドセット全体です。Fullバリアントは、リソースに対して使用できるメインのAPIを介し、`fields`クエリパラメータを追加してそのリソースをリクエストしたときに返されます。
 
 たとえば、`fields=is_package,lock`パラメータを指定して[`GET /files/:id`](endpoint://get_files_id)エンドポイントをリクエストすると、APIは、指定されたフィールドに加えて、そのファイルの基本的なフィールドを返します。
 

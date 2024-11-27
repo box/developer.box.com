@@ -37,7 +37,7 @@ fullyTranslated: true
 
 ## 開始する前に
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate. To get more context, read about [agent overrides][agent-overrides].
+カスタムアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。さらにコンテキストを取得するには、[エージェントの上書き][agent-overrides]を参照してください。
 
 ## 上書き用のプロンプト
 

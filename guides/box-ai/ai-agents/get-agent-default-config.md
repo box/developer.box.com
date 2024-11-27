@@ -38,7 +38,7 @@ fullyTranslated: true
 
 リクエストを送信するには、`GET /2.0/ai_agent_default`エンドポイントを使用します。
 
-Make sure you have generated the developer token to authorize your app. See [getting started with Box AI][prereq] for details.
+アプリを承認するための開発者トークンを生成済みであることを確認します。詳細については、[Box AIの使い方][prereq]を参照してください。
 
 <Samples id="get_ai_agent_default">
 

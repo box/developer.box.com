@@ -36,7 +36,7 @@ Box AI APIを使用すると、ドキュメントを照会し、指定したプ�
 
 ## 開始する前に
 
-Make sure you followed the steps listed in [getting started with Box AI][prereq] to create a custom app and authenticate.
+カスタムアプリを作成して認証するには、[Box AIの使い方][prereq]に記載されている手順に従っていることを確認してください。
 
 ## リクエストの送信
 
