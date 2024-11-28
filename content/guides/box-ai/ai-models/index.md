@@ -36,6 +36,7 @@ Models offered in **Preview** mode have not been fully performance-tested at sca
       A multimodal model designed to handle lightweight tasks.
       <div>
         <strong style="background-color: #e8e8e8">Default for Box AI for Docs</strong>
+        <strong style="background-color: #e8e8e8">Default for Box AI for Box Notes Q&A</strong>
         <strong style="background-color: #e1ffe7">Available</strong>
       </div>
     </Tile>
