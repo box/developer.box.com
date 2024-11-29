@@ -39,7 +39,7 @@ curl -X GET https://api.box.com/2.0/collaborations/2342342?fields=acceptance_req
 
 </Tabs>
 
-返されるレスポンスには、簡易版の`terms_of_service`オブジェクトを含む新しい`acceptance_requirements`オブジェクトが含まれます。
+返されるレスポンスには、Mini版の`terms_of_service`オブジェクトを含む新しい`acceptance_requirements`オブジェクトが含まれます。
 
 ```json
 {
